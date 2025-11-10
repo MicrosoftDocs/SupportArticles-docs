@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot AKS control plane authentication using external identity providers
-description: Helps you troubleshoot authentication issues when accessing the Azure Kubernetes Service control plane using external identity providers like Google Identity or GitHub Actions OIDC.
+description: Helps you troubleshoot authentication issues when accessing the Azure Kubernetes Service control plane using external identity providers
 ms.reviewer: shasb
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
@@ -16,11 +16,11 @@ zone_pivot_group_filename: aks-external-identity-provider
 :::
 -->
 
-This article helps you troubleshoot authentication issues when accessing the Azure Kubernetes Service (AKS) control plane using external identity providers such as Google Identity or GitHub Actions OIDC through the JWT authenticator feature.
+This article helps you troubleshoot authentication issues when accessing the Azure Kubernetes Service (AKS) control plane using external identity providers.
 
 ## Prerequisites
 
-- Azure CLI version 2.61.0 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
+- Azure CLI version 2.61.0 or later. To find the version run `az --version` . If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The JWT authenticator configuration file used for your AKS cluster.
 - Access to [jwt.ms][jwt-ms] or a similar JWT token decoder tool for debugging tokens.
@@ -34,7 +34,7 @@ Ensure your identity provider is correctly configured and accessible:
 ::: zone pivot="github"
 
 1. Verify your GitHub repository has Actions enabled.
-2. Confirm the OIDC provider settings are correctly configured in your workflow.
+2. Confirm the OpenID Connect (OIDC) provider settings are correctly configured in your workflow.
 3. Ensure the audience claim in your workflow matches the authenticator configuration.
 
 ::: zone-end
@@ -175,7 +175,7 @@ Example configuration:
 
 ### Step 4: Decode and verify JWT tokens
 
-Obtain and inspect the JWT token to verify claims:
+To verify claims obtain and inspect the JWT token:
 
 ::: zone pivot="github"
 
@@ -206,7 +206,7 @@ Obtain and inspect the JWT token to verify claims:
 2. Decode the token at [jwt.ms][jwt-ms] and verify:
    - The `iss` claim matches your issuer URL exactly
    - The `aud` claim matches your configured audience
-   - The token is not expired (`exp` claim)
+   - The token isn't expired (`exp` claim)
    - Required claims for username and groups are present
    - Claims match the format expected by your CEL expressions
 
