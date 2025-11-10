@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting tool for Resetting Windows Update Servicing Stack
-description: Troubleshooting tool for Resetting Windows Update Servicing Stack
+title: Azure VM Windows Servicing Stack Reset Tool
+description: Azure VM Windows Servicing Stack Reset Tool
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Resetting Windows Update servicing stack
+# Azure VM Windows Servicing Stack Reset Tool
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
