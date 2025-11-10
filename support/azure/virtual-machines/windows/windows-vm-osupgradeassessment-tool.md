@@ -1,12 +1,12 @@
 ---
-title: Azure VM Windows OS Upgraade Assessment Tool
-description: Azure VM Windows OS Upgraade Assessment Tool
+title: Azure VM Windows OS Upgrade Assessment Tool
+description: Azure VM Windows OS Upgrade Assessment Tool
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Azure VM Windows OS Upgraade Assessment Tool
+# Azure VM Windows OS Upgrade Assessment Tool
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
@@ -32,7 +32,7 @@ This PowerShell script is designed to assess the readiness of a Windows machine 
 - **Upgrade Recommendations**
   - Outputs supported upgrade paths or relevant upgrade guidance.
 
-- [Azure VM Windows OS Upgraade Assessment Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_OSUpgrade_Assessment_Validation).
+- [Azure VM Windows OS Upgrade Assessment Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_OSUpgrade_Assessment_Validation).
 
 ## How to run the tool
 

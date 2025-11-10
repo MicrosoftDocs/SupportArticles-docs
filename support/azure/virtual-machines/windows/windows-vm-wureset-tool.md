@@ -12,18 +12,18 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 ## Overview
 
-This article offers you steps to run a script that will try to reset the Windows Servicing stack for a virtual machine running in Azure. Running the tool may fix problems that prevent Windows Update from installing successfully. \
+This article offers you steps to run a script that resets the Windows Servicing stack for a virtual machine running in Azure. Running the tool can fix most general problems that prevent Windows Update from installing successfully. \
 
 This script is designed for troubleshooting update failures on Windows Server or Windows client systems.
 
 > [!NOTE]
-> This article is intended for use by support agents and IT professionals. If you're home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
+> This article is intended for use with support agents and IT professionals. If you're a home user and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
 
 ## Features  
 This PowerShell script automates the process by:
 
-- Stopping key services: **wuauserv**, **cryptsvc**, and **BITS**
+- Stopping key services: `**wuauserv**`, `**crypts**`, and `**BITS**`
 - Renaming critical folders:  
   - `%SystemRoot%\SoftwareDistribution`  
   - `%SystemRoot%\System32\catroot2`  
@@ -37,7 +37,7 @@ This PowerShell script automates the process by:
 
 For more information, see: 
 
-- [Resetting Windowsu Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
+- [Resetting Windows Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 
 
@@ -66,7 +66,7 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 ### **Additional resources**
 
 
-- [Resetting Windowsu Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
+- [Resetting Window Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]

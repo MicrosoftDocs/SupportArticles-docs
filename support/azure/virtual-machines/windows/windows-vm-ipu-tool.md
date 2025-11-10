@@ -1,5 +1,5 @@
 ---
-title: AAzure VM Windows Update Error Detection script
+title: Azure VM Windows Update Error Detection script
 description: Scan CBS Logs for Windows Servicing Errors
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
@@ -13,13 +13,13 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 # Azure VM Windows Update Error Detection script 
 
 ## Overview
-This PowerShell script scans **CBS logs** for known Windows servicing error codes that may indicate issues requiring an **In-Place Upgrade (IPU)** or repair. It counts occurrences of each error code and provides a summary at the end. If any errors are found, a remediation link to Microsoft documentation is displayed.
+This PowerShell script scans **CBS logs** for known Windows servicing error codes that indicate issues requiring an **In-Place Upgrade (IPU)** or repair. It counts occurrences of each error code and provides a summary at the end. If any errors are found, a remediation link to Microsoft documentation is displayed.
 
 ## Features
 
 - Scans CBS logs and archived `.zip` logs in `C:\Windows\Logs\CBS\`.
-- Filters logs based on a configurable date range (default: last 30 days).
-- Categorizes errors by severity: **Critical**, **High**, **Medium**, **Low**.
+- Filters based on a configurable date range (default: last 30 days).
+- Categorizes errors by severity: `**Critical**`, `**High**`, `**Medium**`, `**Low**`.
 - Displays a summary of error occurrences.
 - Provides remediation guidance link if errors are detected.
 
