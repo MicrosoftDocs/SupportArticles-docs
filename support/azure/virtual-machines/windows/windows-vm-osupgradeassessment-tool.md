@@ -64,8 +64,8 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 
 ### **Additional resources**
 
-- [In-place upgrade (server) for VMs running Windows Server in Azure](https://learn.microsoft.com/azure/virtual-machines/windows-in-place-upgrade)
-- [In-place upgrade (client) for VMs running Windows in Azure](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/in-place-system-upgrade)
+- [In-place upgrade (server) for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+- [In-place upgrade (client) for VMs running Windows in Azure](/azure/virtual-machines/windows/in-place-system-upgrade)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
