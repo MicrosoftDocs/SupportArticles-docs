@@ -22,7 +22,7 @@ This article helps you troubleshoot authentication issues when accessing the Azu
 
 - Azure CLI version 2.61.0 or later. To find the version run `az --version` . If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The JWT authenticator configuration file used for your AKS cluster.
+- The JSON Web Token (JWT) authenticator configuration file used for your AKS cluster.
 - Access to [jwt.ms][jwt-ms] or a similar JWT token decoder tool for debugging tokens.
 
 ## Troubleshooting checklist
@@ -263,7 +263,7 @@ The OAuth client or OIDC provider settings are incorrect.
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com).
 2. Navigate to **APIs & Services** > **Credentials**.
-3. Verify the OAuth 2.0 client ID and ensure redirect URIs are correct.
+3. Verify the OAuth 2.0 client ID and secrets.
 
 ::: zone-end
 
@@ -294,7 +294,7 @@ CEL expressions might have syntax errors or return unexpected data types.
 
 **Cause: Cluster nodes cannot reach the identity provider**
 
-Network security groups, firewalls, or DNS issues prevent the cluster from accessing the identity provider.
+Network security groups, firewalls, or Domain Name System (DNS) issues prevent the cluster from accessing the identity provider.
 
 #### Solution 1: Verify DNS resolution
 
