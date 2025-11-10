@@ -56,9 +56,9 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 ### **Additional resources**
 
 - [Azure VM Windows Update Error Detection script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/windows-vm-ipu-tool).
-- [Windows Update errors that require in-place upgrades for Azure VMs](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/windows-update-errors-requiring-in-place-upgrade)
-- [In-place upgrade (server) for VMs running Windows Server in Azure](https://learn.microsoft.com/azure/virtual-machines/windows-in-place-upgrade)
-- [In-place upgrade (client) for VMs running Windows in Azure](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/in-place-system-upgrade)
+- [Windows Update errors that require in-place upgrades for Azure VMs](windows-update-errors-requiring-in-place-upgrade)
+- [In-place upgrade (server) for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+- [In-place upgrade (client) for VMs running Windows in Azure](in-place-system-upgrade)
 
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
