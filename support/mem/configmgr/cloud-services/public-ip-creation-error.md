@@ -1,5 +1,5 @@
 ---
-title: CMG Maintenance Task Error: Public IP Update Issue
+title: CMG Maintenance Task Fails to Update After Installaing KB32851084
 description: Troubleshoot the CMG Maintenance Task failure caused by Availability Zone conflicts in Public IP Resource updates for Configuration Manager version 2503.
 ms.service: configuration-manager
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.date: 11/11/2025
 ms.reviewer: kaushika, payur
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ---
-# CMG maintenance task fails to update public IP resource after installing the update rollup for Microsoft Configuration Manager version 2503 (KB32851084)
+# CMG maintenance task fails to update public IP resource after installing KB32851084
 
 *Applies to*: Configuration Manager (current branch)
 
