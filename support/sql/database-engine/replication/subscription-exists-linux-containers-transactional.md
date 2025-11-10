@@ -34,7 +34,7 @@ To successfully add multiple subscribers on the same computer but in different c
 
 1. Install [Cumulative Update 20 (CU20) for SQL Server 2022](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5059390).
 
-1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables using a subscriber with a nondefault port for transactional replication.
+1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables you to use a subscriber that has a nondefault port for transactional replication.
 
 1. Perform the following manual cleanup and configuration steps in Transact-SQL. In this script, replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values that are specific to your environment:
 
