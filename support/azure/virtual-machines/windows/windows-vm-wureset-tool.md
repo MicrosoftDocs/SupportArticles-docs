@@ -21,24 +21,22 @@ This script is designed for troubleshooting update failures on Windows Server or
 
 
 ## Features  
-This PowerShell script automates the process by:
 
-- Stopping key services: `**wuauserv**`, `**crypts**`, and `**BITS**`
-- Renaming critical folders:  
+- Stopps key services: `**wuauserv**`, `**crypts**`, and `**BITS**`
+- Renames critical folders:  
   - `%SystemRoot%\SoftwareDistribution`  
   - `%SystemRoot%\System32\catroot2`  
   (with a timestamp for backup)
-- Re-registering core update-related DLLs (skipping any missing files)
-- Restarting services
-- Generating a summary of actions performed
-
-
-:::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-imds-tool/windows-vm-wureset-tool/windows-vm-wureset-tool.pmg":::   
+- Re-registers core update-related DLLs (skipping any missing files)
+- Restarts services
+- Generates a summary of actions performed
 
 For more information, see: 
 
 - [Resetting Windows Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
+
+:::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-imds-tool/windows-vm-wureset-tool/windows-vm-wureset-tool.pmg":::   
 
 
 ## Requirements
@@ -60,8 +58,8 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 
 ## Recommended workflow
 
-1. Run **IMDS Cert Check** to verify activation status and detect common issues.
-2. Apply the suggested fixes or refer to the official documentation for advanced troubleshooting.
+1. Run **Windows_Update_Reset** to reset the servicing stack.
+2. 
 
 ### **Additional resources**
 

@@ -34,6 +34,15 @@ This PowerShell script is designed to assess the readiness of a Windows machine 
 
 - [Azure VM Windows OS Upgrade Assessment Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_OSUpgrade_Assessment_Validation).
 
+
+:::image type="content" source="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png":::   
+
+
+## Requirements
+
+- PowerShell 5.1 or later.
+- Script must be run with administrative privileges.
+
 ## How to run the tool
 
 You can run the tool in any of the following manners.
@@ -42,18 +51,7 @@ You can run the tool in any of the following manners.
 
 Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
 
-
-### 2. Use Azure Run Command
-   
-- Navigate to your VM in the Azure portal: > **Operations** > **Run Command**.
-- Select the script from the list (see the following screenshot).
-
-:::image type="content" source="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png":::   
-  
-> [!NOTE]
-> Alternatively, you can run these commands by using a command-line interface (CLI) tool, Windows PowerShell, or Windows on ARM.
-
-### 3. Use prepackaged Run Command scripts
+### 2. Use prepackaged Run Command scripts
 
 For more information, see [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command).
 
