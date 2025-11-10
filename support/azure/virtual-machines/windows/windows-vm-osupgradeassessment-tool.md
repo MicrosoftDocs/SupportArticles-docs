@@ -37,12 +37,6 @@ This PowerShell script is designed to assess the readiness of a Windows machine 
 
 :::image type="content" source="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-osupgradeassessment-tool/windows-vm-osupgradeassessment-tool.png":::   
 
-
-## Requirements
-
-- PowerShell 5.1 or later.
-- Script must be run with administrative privileges.
-
 ## How to run the tool
 
 You can run the tool in any of the following manners.
@@ -57,11 +51,10 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 
 ## Recommended workflow
 
-1. Run **IMDS Cert Check** to verify activation status and detect common issues.
-2. Apply the suggested fixes or refer to the official documentation for advanced troubleshooting.
+1. Run **Windows_OSUpgrade_Assessment_Validation** to validate if the OS can be upgraded
+2. Apply the suggested fixes or refer to the official documentation.
 
-### **Additional resources**
-
+## **Additional resources**
 - [In-place upgrade (server) for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
 - [In-place upgrade (client) for VMs running Windows in Azure](/azure/virtual-machines/windows/in-place-system-upgrade)
 

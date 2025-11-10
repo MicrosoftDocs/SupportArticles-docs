@@ -38,12 +38,6 @@ For more information, see:
 
 :::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-imds-tool/windows-vm-wureset-tool/windows-vm-wureset-tool.png":::   
 
-
-## Requirements
-
-- PowerShell 5.1 or later.
-- Script must be run with administrative privileges.
-
 ## How to run the tool
 
 You can run the tool in any of the following manners.
@@ -59,11 +53,9 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 ## Recommended workflow
 
 1. Run **Windows_Update_Reset** to reset the servicing stack.
-2. 
+2. Try to install the Windows Update(s) that previously failed
 
-### **Additional resources**
-
-
+## **Additional resources**
 - [Resetting Window Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 

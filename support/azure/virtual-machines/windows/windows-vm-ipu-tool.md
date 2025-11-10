@@ -24,11 +24,6 @@ This PowerShell script scans **CBS logs** for known Windows servicing error code
 - [Azure VM Windows Update Error Detection script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/windows-vm-ipu-tool).
 
 :::image type="content" source="media/windows-vm-ipu-tool/windows-vm-ipu-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-ipu-tool/windows-vm-ipu-tool.png":::   
-  
-## Requirements
-
-- PowerShell 5.1 or later.
-- Script must be run with administrative privileges.
 
 ## How to run the tool
 
