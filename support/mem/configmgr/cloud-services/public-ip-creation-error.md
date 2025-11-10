@@ -13,7 +13,7 @@ ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 
 ## Symptoms
 
-After installing the [Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)](https://learn.microsoft.com/intune/configmgr/hotfix/2503/32851084), CloudMgr.log on the Service Connection Point may display the error message resembling the following:
+After installing the [Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)](/intune/configmgr/hotfix/2503/32851084), CloudMgr.log on the Service Connection Point may display the error message resembling the following:
 
 ```output
 Resource Manager - Creating Public IP Address <Name of CMG> with deployment CreatePublicIPAddressXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX~~
@@ -67,7 +67,7 @@ The error messages are likely to repeat every 20 mins aligning with the Deployme
 
 Once the Update Rollup is installed, it triggers a setup maintenance task for the CMG. This maintenance task launches deployments for CMG Resources in Azure. In the deployment associated to the Public IP Address, the maintenance task attempts to update its "Availability Zone" configuration property to **"No zone"**. If the existing Public IP resource already has "Availability Zone" property configured (for example, to "Zone 1", "Zone 2" or "Zone 3"), the deployment fails.
 
-The issue then affects the Azure regions where [Availability Zones](https://learn.microsoft.com/azure/reliability/availability-zones-overview?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=azure-cli) are supported. The current list is available at [Azure regions list](https://learn.microsoft.com/azure/reliability/regions-list#azure-regions-list-1).
+The issue then affects the Azure regions where [Availability Zones](/azure/reliability/availability-zones-overview?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=azure-cli) are supported. The current list is available at [Azure regions list](/azure/reliability/regions-list#azure-regions-list-1).
 
 Current Configuration Manager releases don't specify Availability Zone when creating a new Public IP Address Resource for CMG. Hence, this issue doesn't affect new CMG deployments.
 
@@ -79,4 +79,4 @@ Microsoft plans resolving this problem in the future release of Microsoft Config
 
 ## More information
 
-For more information about CMG monitoring, see [Monitor the CMG](https://learn.microsoft.com/intune/configmgr/core/clients/manage/cmg/monitor-clients-cloud-management-gateways) article.
+For more information about CMG monitoring, see [Monitor the CMG](/intune/configmgr/core/clients/manage/cmg/monitor-clients-cloud-management-gateways) article.
