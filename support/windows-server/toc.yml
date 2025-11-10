@@ -3226,8 +3226,6 @@ items:
       href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md    
     - name: Troubleshoot Windows Update error 0x80072f8f
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
-    - name: Troubleshoot Windows Update error 0x80070bc9
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
