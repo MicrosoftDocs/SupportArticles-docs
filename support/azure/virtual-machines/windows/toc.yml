@@ -42,7 +42,7 @@ items:
     - name: How to upgrade
       href: in-place-system-upgrade.md
     - name: OS Upgrade assessment tool
-    href: windows-vm-osupgradeassessment-tool.md
+      href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2012 R2 (EOS)
     items:
     - name: Extended Security Updates (ESU)
