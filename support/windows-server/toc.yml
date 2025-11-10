@@ -3222,6 +3222,8 @@ items:
       href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Troubleshoot Windows Update download errors associated with error 8024A000
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000.md
     - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
       href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md    
     - name: Troubleshoot Windows Update error 0x8024002E
