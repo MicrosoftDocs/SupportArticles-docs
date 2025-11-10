@@ -221,7 +221,7 @@ To check the trigger wake-up frequency, follow these steps:
 
 Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
-# [New designer](#tab/new-designer)
+### [New designer](#tab/new-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. On the left-side menu, select **My flows**, and then select a flow.
@@ -232,7 +232,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
     :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="The frequency element in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
-# [Classic designer](#tab/classic-designer)
+### [Classic designer](#tab/classic-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. On the left-side menu, select **My flows**, and then select a flow.
