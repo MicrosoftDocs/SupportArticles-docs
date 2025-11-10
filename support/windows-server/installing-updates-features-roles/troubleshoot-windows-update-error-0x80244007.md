@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Error 0x80244007
-description: Learn how to resolve the Windows Update error 0x80244007, which occurs during update scans.
+description: Learn how to resolve Windows Update error 0x80244007 that occurs during update scans.
 manager: dcscontentpm
 audience: itpro
 ms.date: 11/7/2025
@@ -19,19 +19,19 @@ appliesto:
 
 ## Summary
 
-The Windows Update error 0x80244007 normally occurs when Windows clients or virtual machines (VMs) attempt to scan and download updates from Windows Server Update Services (WSUS) or Configuration Manager endpoints. This error is commonly linked to Simple Object Access Protocol (SOAP) faults returned by the server during the update process. This indicates issues with communication or configuration between the client and the update service.
+Windows Update error 0x80244007 typically occurs when Windows clients or virtual machines (VMs) try to scan and download updates from Windows Server Update Services (WSUS) or Configuration Manager endpoints. This error is commonly linked to Simple Object Access Protocol (SOAP) faults that are returned by the server during the update process. This error indicates issues that affect communication or configuration between the client and the update service.
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80244007/error0x80244007.png" alt-text="Windows Update error 0x80244007" lightbox="media/troubleshoot-windows-update-error-0x80244007/error0x80244007.png":::
 
 ## Prerequisites
 
-For VMs running Windows in Azure, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+For Microsoft Azure VMs that are running Windows, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
 ### Symptom 1
 
-When a WSUS client computer scans for updates on the WSUS server, you might see the following error message in the `WindowsUpdate.log` file on the client computer:
+When a WSUS client computer scans for updates on the WSUS server, the following error entry is logged in the `WindowsUpdate.log` file on the client computer:
 
 ```output
 WS error: <detail><ErrorCode>InvalidParameters</ErrorCode><Message>parameters.InstalledNonLeafUpdateIDs</Message><ID>GUID</ID><Method> http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates"</Method></detail>"
@@ -42,7 +42,7 @@ This issue occurs when the number of updates to be synchronized exceeds the maxi
 
 ### Symptom 2
 
-Updates fail to install, and the scan itself fails due to an issue with `OtherCachedUpdateIDs`. You might see similar log entries in *C:\Windows\Logs\WindowsUpdate.log* as shown in the following example:
+Updates don't install, and the scan itself fails because of an issue that affects the `OtherCachedUpdateIDs` parameter. You might see log entries in *C:\Windows\Logs\WindowsUpdate.log* that resemble the following example:
 
 ```output
 2015-10-30 17:12:53:980 880 1160 IdleTmr WU operation (CAgentProtocolTalker::SyncUpdates_WithRecover) started; operation # 584; does use network; is at background priority
@@ -61,7 +61,7 @@ Updates fail to install, and the scan itself fails due to an issue with `OtherCa
 
 ### Symptom 3
 
-The check for updates fails with the internal server `error code: 0x80244007` along with `error code: 0x803d0013`. These are caused by a missing WSUS client entry used for authentication and authorization of client access. The `Windows Update` log shows:
+The check for updates fails and generates internal server `error code: 0x80244007` together with `error code: 0x803d0013`. These error codes are caused by a missing WSUS client entry that's used for authentication and authorization of client access. The `Windows Update` log shows:
 
 ```output
 2017-05-04 18:00:07:807 1676 117c PT +++++++++++ PT : Synchronizing server updates +++++++++++
@@ -85,42 +85,48 @@ The check for updates fails with the internal server `error code: 0x80244007` al
 2017-05-04 18:00:07:854 1676 117c WS FATAL: NwsCallWithRetries<Functor>( Functor(_clientId, _targetGroupName, _dnsName, &_result)) failed with hr=0x80244007
 ```
 
-## Root cause 
+## Cause 
 
-This error is primarily caused by SOAP faults returned by the server during the update process. This can occur due to:
+This error is primarily caused by SOAP faults that are returned by the server during the update process. This issue can occur because of the following conditions:
 
-- Exceeding the maximum number of installed prerequisites that a WSUS client can pass to `SyncUpdates`.
-- Issues with `OtherCachedUpdateIDs` during the update scan.
-- A missing WSUS client entry used for authentication and authorization of client access.
+- The client exceeded the maximum number of installed prerequisites that a WSUS client can pass to the `SyncUpdates` method.
+- Issues that affect `OtherCachedUpdateIDs` during the update scan.
+- A missing WSUS client entry that's used for authentication and authorization of client access.
 
 ## Resolution or troubleshooting steps
 
-### Mitigation 1:  Increase `maxInstalledPrerequisites` in WSUS configuration
+### Resolution 1: Increase `maxInstalledPrerequisites` in WSUS configuration
 
-Edit the `web.config` file on the WSUS server located at *%programfiles%\Update Services\WebServices\ClientWebService\web.config*. Change the value for **maxInstalledPrerequisites** from **400** to **800**.
+Edit the `web.config` file on the WSUS server. The file is located at *%programfiles%\Update Services\WebServices\ClientWebService\web.config*. Change the value for **maxInstalledPrerequisites** from **400** to **800**.
 
 For more information, see [Error 80244007 when a WSUS client scans for updates](/mem/configmgr/update-management/error-80244007-when-wsus-client-scans-updates).
 
-### Mitigation 2: Decline superseded updates in WSUS
+### Resolution 2: Decline superseded updates in WSUS
 
-Decline all superseded updates on the WSUS server. Detailed instruction on how to do this can be found at [PowerShell script to decline superseded updates in WSUS](/mem/configmgr/update-management/decline-superseded-updates).
+Decline all superseded updates on the WSUS server. For detailed instruction to do this procedure, see [PowerShell script to decline superseded updates in WSUS](/mem/configmgr/update-management/decline-superseded-updates).
 
 For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](/mem/configmgr/update-management/wsus-maintenance-guide).
 
-### Mitigation 2.1: Increase `maxCachedUpdate` in WSUS configuration
+### Resolution 2.1: Increase `maxCachedUpdate` in WSUS configuration
 
-Edit the `web.config` file on the WSUS server at *C:\Program Files\Update Services\WebServices\ClientWebService\web.config*. Change the **maxCachedUpdate** value to a larger number.
+Edit the `web.config` file on the WSUS server at *C:\Program Files\Update Services\WebServices\ClientWebService\web.config*. Increase the **maxCachedUpdate** value.
 
-### Mitigation 3: Resetthe WSUS client
+### Resolution 3: Reset the WSUS client
 
-Open an elevated command prompt on the affected WSUS client and run the following commands in this order:
+Open an elevated Command Prompt window on the affected WSUS client, and run the following commands in the given order:
 
-1. `net stop wuauserv`
-2. `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f`
-3. `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f`
-4. `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f`
-5. `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f`
-6. `net start wuauserv`
-7. `wuauclt.exe /resetauthorization /detectnow`
+- `net stop wuauserv`
+- `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f`
+- `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f`
+- `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f`
+- reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f`
+- `net start wuauserv`
+- `wuauclt.exe /resetauthorization /detectnow`
 
-Messages like **ERROR: The system was unable to find the specified registry key or value** are normal and don't need mitigation. Once all the commands are run, wait for 10-15 minutes, go to **Control Panel > All Control Panel Items > Windows Update**, check for updates, and monitor the status.
+You might receive messages such as the following message:
+
+> **ERROR: The system was unable to find the specified registry key or value**
+
+These messages are expected and don't require mitigation. 
+
+After all the commands are run, wait 10-15 minutes, go to **Control Panel** > **All Control Panel Items** > **Windows Update**, check for updates, and monitor the status.
