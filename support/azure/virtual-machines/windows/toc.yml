@@ -94,7 +94,7 @@ items:
     
 - name: Windows Update (WU)
   items:
-  - name: Windows Update errors that require in-place upgrades
+  - name: WU errors that require in-place upgrades
     href: windows-update-errors-requiring-in-place-upgrade.md
   - name: WU Error Detection tool
     href: windows-vm-ipu-tool.md
@@ -118,7 +118,7 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8000ffff
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0x8007000d after installing Windows updates
+    - name: Error code 0x8007000d
       href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
    
 - name: Uploading a VHD to Azure
