@@ -82,6 +82,8 @@ Example of error 0x80073712 - ERROR_SXS_COMPONENT_STORE_CORRUPT
 
 The Azure VM is experiencing internal corruption in the Windows servicing stack. This stack is responsible for managing updates and system components. When it becomes damaged because of missing files, an invalid configuration, or corrupted metadata, Windows can no longer apply updates or service the OS correctly.
 
+[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/runcmd-wu-tools.md)]
+
 ## Resolution for Azure VMs
 
 To resolve this issue, we recommend that you perform an in-place upgrade of Windows Server within the Azure VM. This process reinstalls the OS while preserving your data, apps, and settings.

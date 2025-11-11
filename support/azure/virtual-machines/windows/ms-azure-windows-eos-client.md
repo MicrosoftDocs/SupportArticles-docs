@@ -22,6 +22,9 @@ This article provides information about Windows Client 10 support and answers so
 >
 >Machines running the above listed operating systems will no longer receive Microsoft support and may not receive further security updates. Additionally, many compliance requirements include being on a currently supported operating system.
 
+
+[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/runcmd-wu-tools.md)]
+
 ## Microsoft 10 (EOS)
 
 Windows 10 is no longer supported except under the Extended Security Updates (ESU) program.  ESU only includes critical and important security updates and does not cover new features or non-security fixes. Support only covers enabling and ensuring ESU is functional. For workloads running on Azure Virtual Machines, ESU is automatically included at no additional cost—no MAK keys or manual activation required.

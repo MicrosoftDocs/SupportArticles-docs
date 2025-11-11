@@ -19,7 +19,7 @@ ms.author: axelg
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 The [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) enables a virtual machine (VM) to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16.
 

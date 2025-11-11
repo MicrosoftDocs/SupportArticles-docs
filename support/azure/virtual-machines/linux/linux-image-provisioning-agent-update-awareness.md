@@ -16,7 +16,7 @@ ms.reviewer:
 _Original KB number:_ &nbsp; 4538386
 
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Summary
 
