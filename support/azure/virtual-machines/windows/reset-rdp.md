@@ -22,17 +22,18 @@ ms.reviewer: herensin, v-monicaba
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
-[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
-
-> [!NOTE]
-> The steps in this article don't apply to Windows domain controllers.
-
 If you can't connect to a Windows virtual machine (VM), you can reset Remote Desktop Services and credentials by using the 'VM Access extension. Here are the available methods to do this:
 
 - [Reset by using the Azure portal](#reset-by-using-the-azure-portal)
 - [Reset by using the Azure PowerShell](#reset-by-using-the-azure-powershell)
 
 If you're using PowerShell, make sure that you have the [latest PowerShell module installed and configured](/powershell/azure/) and are signed in to your Azure subscription. You can also [perform these steps for VMs created with the classic deployment model](/previous-versions/azure/virtual-machines/windows/classic/reset-rdp).
+
+
+> [!NOTE]
+> The steps in this article don't apply to Windows domain controllers.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Reset by using the Azure portal
 

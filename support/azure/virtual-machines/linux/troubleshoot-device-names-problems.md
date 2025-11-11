@@ -21,9 +21,9 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
-
 This article explains why device names change after you restart a Linux VM or reattach the data disks. The article also provides solutions for this problem.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptoms
 
