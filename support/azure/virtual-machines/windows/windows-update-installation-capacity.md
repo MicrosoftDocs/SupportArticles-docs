@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot OS start up – Windows Update installation capacity
+title: Troubleshoot OS startup – Windows Update installation capacity
 description: Steps to resolve issues where Windows Update (KB) gets an error and becomes unresponsive in an Azure VM.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -15,7 +15,7 @@ ms.date: 06/13/2024
 ms.author: jarrettr
 ms.custom: sap:My VM is not booting
 ---
-# Troubleshoot OS start up – Windows Update installation capacity
+# Troubleshoot OS startup – Windows Update installation capacity
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
@@ -25,7 +25,7 @@ This article provides steps to resolve issues in an Azure virtual machine (VM) w
 
 ## Symptom
 
-When you use Boot diagnostics to view the screenshot of the VM, you will see that the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
+When you use Boot diagnostics to view the screenshot of the VM, the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
 
 :::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Screenshot of error code: C01A001D when applying Windows Update.":::
 
@@ -38,7 +38,7 @@ In this situation, the operating system (OS) is unable to complete a Windows Upd
 ### Process Overview
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you could try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 1. Create and access a Repair VM.
 1. Free space on disk.
@@ -46,31 +46,31 @@ In this situation, the operating system (OS) is unable to complete a Windows Upd
 1. Rebuild the VM.
 
 > [!NOTE]
-> When encountering this error, the Guest OS is not operational. Troubleshoot this issue in offline mode to resolve this issue.
+> When this error is encountered, the Guest OS isn't operational. Troubleshoot this issue in offline mode to resolve this issue.
 
 ### Create and Access a Repair VM
 
 1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-1. Using Remote Desktop Connection, connect to the Repair VM.
+1. Using a `Remote Desktop Connection`, connect to the `Repair VM`.
 
 ### Free Up Space on the disk
 
 To solve the issue:
 
-- Resize the disk up to 1 TB if it is not already at the maximum size of 1 TB.
+- Resize the disk up to 1 TB if it isn't already at the maximum size of 1 TB.
 - Perform a disk cleanup.
-- De-fragment the drive.
+- Defragment the drive.
 
 1. Check if the disk is full. If the disk size is below 1 TB, expand it up to a maximum of 1 TB [using PowerShell](/azure/virtual-machines/windows/expand-os-disk).
-1. If the disk is already 1 TB, you will need to perform a disk cleanup.
+1. If the disk is already 1 TB, free space must be made by performing a disk cleanup.
    1. Use the [Disk Cleanup tool](https://support.microsoft.com/help/4026616/windows-10-disk-cleanup) to free up space.
-1. Once resizing and clean-up are finished, de-fragment the drive using the following command:
+1. Once resizing and clean-up are finished, defragment the drive using the following command:
 
    ```console
    defrag <LETTER ASSIGN TO THE OS DISK>: /u /x /g
    ```
 
-Depending upon the level of fragmentation, de-fragmentation could take several hours.
+Depending upon the level of fragmentation, defragmentation could take several hours.
 
 ### Enable the Serial Console and memory dump collection
 
