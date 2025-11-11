@@ -93,6 +93,10 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80244007
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context   
+    - name: Error code 0x80072f8f
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8000ffff
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
       
