@@ -48,7 +48,7 @@ You run a Windows feature update or an in-place upgrade on a Windows computer. T
    ```setup.exe /auto upgrade /noreboot /eula accept /compat scanonly /compat ignorewarning 
    ```
 
-   For more information, see [Windows Setup Command-Line Options: /Compat](/windows-hardware/manufacture/desktop/windows-setup-command-line-options?view=windows-11#compat).
+   For more information, see [Windows Setup Command-Line Options: /Compat](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).
 
 1. Recheck the logs to make sure that the issue doesn't recur, and that Setup generated the `0xC1900210` code. If it generated the `0xC1900208` code, review the logs for further compatibility issues.
 1. When the compatibility checks pass, retry the upgrade.
@@ -124,5 +124,5 @@ Windows inbox and appraiser processes and Dynamic update processes write and ref
 
 ## References
 
-- [Windows 10 upgrade resolution procedures](/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures?toc=%2Fwindows%2Fdeployment#0xc1900101)
+- [Windows 10 upgrade resolution procedures](windows-10-upgrade-resolution-procedures.md?toc=%2Fwindows%2Fdeployment#0xc1900101)
 - [Windows upgrade log files](/windows/deployment/upgrade/log-files)
