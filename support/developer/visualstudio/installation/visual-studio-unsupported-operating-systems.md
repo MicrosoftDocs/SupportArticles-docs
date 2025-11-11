@@ -1,6 +1,6 @@
 ---
-title: Workarounds for Visual Studio on unsupported operating systems
-description: This article describes known issues and workarounds for Visual Studio when installed on unsupported operating systems.
+title: Workarounds for Visual Studio on Unsupported Operating Systems
+description: This article describes known issues and workarounds for Visual Studio if it's installed on unsupported operating systems.
 ms.date: 11/11/2025
 ms.reviewer: pchapman, jagbal, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
@@ -11,37 +11,37 @@ _Applies to:_ &nbsp; Visual Studio
 
 ## Summary
 
-Visual Studio is only supported on only 64-bit editions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher that are still within their support lifecycle. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this article provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
+Microsoft Visual Studio is supported on only 64-bit editions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and later versions that are still within their support lifecycle. We recommend that you don't run Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/vs18/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this article provides known issues and potential workarounds when you use Visual Studio on an unsupported operating system.
 
 > [!NOTE]
-> Microsoft can't provide support or fixes for issues that arise from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
+> Microsoft can't provide support or fixes for issues that occur if you use Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
 
 ## Arm-based operating systems
 
-Arm64 Visual Studio is supported only on Windows 11 on Arm. X64 Visual Studio isn't supported on ARM operating systems, so performance might not meet your expectations.
+Arm64 Visual Studio is supported on only Windows 11 on Arm. 64-bit Visual Studio isn't supported on ARM operating systems. Therefore, the performance of that setup might not meet your expectations.
 
-The following workloads and components aren't supported by Visual Studio ARM64 running on ARM64 operating systems:
+The following workloads and components aren't supported by Arm64 Visual Studio running on ARM64 operating systems:
 
-- Azure development (with the exception of the Container development tools, which are supported).
-- Data storage and processing (with the exception of the SQL Server Data Tools, which are supported).
-- Data science and analytical applications.
-- Python development.
-- Mobile development with C++.
-- Office/SharePoint development.
-- Microsoft Blend.
-- The XAML designer runs in an x86 process on ARM64.
+- Azure development (except for the Container development tools that are supported)
+- Data storage and processing (except for the SQL Server Data Tools that are supported)
+- Data science and analytical applications
+- Python development
+- Mobile development with C++
+- Office/SharePoint development
+- Microsoft Blend
+- XAML Designer (runs in an x86 process on ARM64)
 
 ## Windows LTSC
 
-The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. Use it only for special-purpose devices. Visual Studio isn't intended to run on [Windows Long-term Servicing channel](/windows/deployment/update/waas-overview#long-term-servicing-channel). Building apps that run on Windows LTSC is supported.
+The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. Use it only for special-purpose devices. Visual Studio isn't intended to run on [the Windows Long-term Servicing Channel (LTSC)](/windows/deployment/update/waas-overview#long-term-servicing-channel). however, building apps that run on Windows LTSC is supported.
 
 ## Application Virtualization
 
-Visual Studio doesn't support Application Virtualization (App-V) solutions. For example, Microsoft App-V for Windows or third-party app virtualization technologies.
+Visual Studio doesn't support Application Virtualization (App-V) solutions. For example, Microsoft App-V for Windows or third-party app virtualization technologies isn't supported by Visual Studio.
 
 ## Azure Virtual Desktops
 
-Running Visual Studio in a virtual machine environment requires a full Windows operating system. Visual Studio doesn't support multiple simultaneous users using the software on the same machine, including shared virtual desktop infrastructure machines or a pooled Windows Virtual Desktop host pool.
+Running Visual Studio in a virtual machine (VM) environment requires a full Windows operating system. Visual Studio doesn't support multiple simultaneous users using the software on the same computer, including shared virtual desktop infrastructure computers or a pooled Windows Virtual Desktop host pool.
 
 ## Windows containers
 
@@ -63,14 +63,14 @@ Visual Studio doesn't install on Windows 8 and Windows Server 2012.
 
 Visual Studio doesn't install on Windows 8.1 and Windows Server 2012 R2.
 
-## Windows 10 versions 1507 and 1511
+## Windows 10, versions 1507 and 1511
 
-Visual Studio doesn't install on Windows 10 versions 1507 or 1511.
+Visual Studio doesn't install on Windows 10, versions 1507 or 1511.
 
-## Windows 10 versions 1607 through 1903
+## Windows 10, versions 1607 through 1903
 
-.NET 4.8.1 isn't supported on Windows 10 versions 1607 through 1903 and doesn't install.
+.NET 4.8.1 doesn't install and isn't supported on Windows 10, versions 1607 through 1903.
 
-## Windows 10 versions 1909 through 2004
+## Windows 10, versions 1909 through 2004
 
-.NET 4.8.1 isn't supported on Windows 10 versions 1909 through 2004 and doesn't install.
+.NET 4.8.1 doesn't install and isn't supported on Windows 10, versions 1909 through 2004.
