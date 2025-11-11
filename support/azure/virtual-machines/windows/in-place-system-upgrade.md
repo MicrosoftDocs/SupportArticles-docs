@@ -11,11 +11,11 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based Azure VMs. This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
+This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VM). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
 
 > [!NOTE]  
 > **Looking for Windows Server?**  
-> For the in-place system upgrade procedure for VMs running in Azure that are running Windows Server, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+> For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
 
 > [!CAUTION]
 > Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.

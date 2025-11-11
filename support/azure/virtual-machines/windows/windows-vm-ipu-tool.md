@@ -6,7 +6,7 @@ ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Azure VM Windows Update Error Detection script
+# Azure VM Windows Update Error Detection Tool
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
