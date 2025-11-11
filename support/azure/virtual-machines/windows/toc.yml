@@ -100,7 +100,7 @@ items:
     - name: Error code 0x8000ffff
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800f0920
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-update-installation-error-0x800f0920.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Uploading a VHD to Azure
   items:
