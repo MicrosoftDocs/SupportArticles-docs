@@ -27,7 +27,7 @@ ms.reviewer: herensin, v-monicaba
 > [!NOTE]
 > The steps in this article don't apply to Windows domain controllers.
 
-If you can't connect to a Windows virtual machine (VM), you can reset Remote Desktop Services and credentials by using the VMAccess extension. Here are the available methods to do this:
+If you can't connect to a Windows virtual machine (VM), you can reset Remote Desktop Services and credentials by using the 'VM Access extension. Here are the available methods to do this:
 
 - [Reset by using the Azure portal](#reset-by-using-the-azure-portal)
 - [Reset by using the Azure PowerShell](#reset-by-using-the-azure-powershell)
@@ -44,7 +44,7 @@ First, sign in to the [Azure portal](https://portal.azure.com) and then select *
 
 2. Select **Reset password**, enter a username and a password, and then select **Update**.
     > [!TIP]
-    > If you enter a different name than the current local administrator account on your VM, the VMAccess extension will add a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, the VMAccess extension will reset the password. If the account is disabled, the VMAccess extension will enable it.
+    > If you enter a different name than the current local administrator account on your VM, the VMAccess extension adds a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, the VMAccess extension resets the password. If the account is disabled, the VMAccess extension enables it.
 3. Try connecting to your VM again.
 
 ### **Reset the Remote Desktop Services configuration**
@@ -89,9 +89,9 @@ First, make sure that you have  the [latest PowerShell module installed and conf
     ```
 
     > [!TIP]
-    > At any point, a VM can have only a single VM access agent. To set the VM access agent properties, use the `-ForceRerun` option. When you use `-ForceRerun`, ensure you use the same name for the VM access agent that you might have used in any previous commands.
+    > At any point, a VM can have only a single VM access agent. To set the VM access agent properties, use the `-ForceRerun` option. When you use `-ForceRerun`, ensure you use the same name for the VM access agent that you used in any previous commands.
 
-1. If you still can't connect remotely to your virtual machine, see [Troubleshoot Remote Desktop connections to a Windows-based Azure virtual machine](troubleshoot-rdp-connection.md). If you lose the connection to the Windows domain controller, you will need to restore it from a domain controller backup.
+1. If you still can't connect remotely to your virtual machine, see [Troubleshoot Remote Desktop connections to a Windows-based Azure virtual machine](troubleshoot-rdp-connection.md). If you lose the connection to the Windows domain controller, restore it from a domain controller backup.
 
 ## Troubleshoot and support
 
