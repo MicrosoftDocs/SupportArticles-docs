@@ -879,6 +879,8 @@ items:
       href: ./setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
     - name: You can't access an EFI system partition
       href: ./setup-upgrade-and-drivers/cant-access-efi-system-partition.md
+    - name: How to use the Windows Setup compatibility scan logs to identify blocking issues
+      href: ./setup-upgrade-and-drivers/use-windows-setup-compatibility-scan-logs-to-identify-blocking-issues.md
   - name: Power management
     items:
     - name: Desktop wakes up unexpectedly from sleep or hibernation
