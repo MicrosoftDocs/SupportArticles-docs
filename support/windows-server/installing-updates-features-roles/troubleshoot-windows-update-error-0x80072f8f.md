@@ -65,14 +65,8 @@ When you check for updates from Windows Update, you see no progress. The `Window
 This error is usually caused by one of the following issues:
 
 - **Out-of-sync clock**: If the clock settings on the computer are incorrect, SSL negotiation fails. You can quickly verify clock accuracy from `WindowsUpdate.log` that always prints traces in local time.
-- **Untrusted SSL certificate**: This issue occurs in the following managed scenarios:
-    -  For Windows Server Update Services (WSUS).
-    -  For Configuration Manager that's configured over SSL and includes self-generated or signed SSL certificates.
-
-In these scenarios, the scan fails if the client doesn't trust the certificate chain.
+- **Untrusted SSL certificate**:  In managed scenarios for Windows Server Update Services (WSUS) or Configuration Manager that's configured over SSL and includes self-generated or signed SSL certificates, the scan fails if the client doesn't trust the certificate chain.
 
 ## Resolution
 
-For Windows-based computers, perform an [in-place upgrade](/windows-server/get-started/perform-in-place-upgrade#perform-the-in-place-upgrade). 
-
-For VMs running Windows in Azure, see [in-place upgrade on the Windows virtual machine](/azure/virtual-machines/windows-in-place-upgrade).
+Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine (VM).
