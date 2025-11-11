@@ -33,7 +33,7 @@ The following workloads and components aren't supported by Arm64 Visual Studio r
 
 ## Windows LTSC
 
-The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. Use it only for special-purpose devices. Visual Studio isn't intended to run on [the Windows Long-term Servicing Channel (LTSC)](/windows/deployment/update/waas-overview#long-term-servicing-channel). however, building apps that run on Windows LTSC is supported.
+The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. Use it only for special-purpose devices. Visual Studio isn't intended to run on [the Windows Long-term Servicing Channel (LTSC)](/windows/deployment/update/waas-overview#long-term-servicing-channel). However, building apps that run on Windows LTSC is supported.
 
 ## Application Virtualization
 
