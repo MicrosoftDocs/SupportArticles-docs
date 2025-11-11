@@ -48,12 +48,19 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 ](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
    > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
 
-### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
+### Azure Virtual Desktop Single-Session Vs. Multi-Session Scenarios
 
-- Windows 10 and 11 Enterprise multi-session, all versions (upgrade from single-session)
-- Windows 8.1
-- Windows 7 Enterprise
-   
+| **Scenario** | **Single-Session** | **Multi-Session** |
+|:-----|:-----|:-----|
+| Windows 10 *(Ex: 21H2 → 22H2)* | Supported     | Supported | It is recommended to create a new AVD environment | 
+| Windows 10 → Windows 11      | Not Supported | Not Supported | It is recommended to create a new AVD environment |
+| Windows 11 *(Ex: 24H2 → 25H2)* | Supported | Supported | It is recommended to create a new AVD environment |
+
+### Windows versions out of support for in-place system upgrades
+
+- Windows 8.1 (End Of Service)
+- Windows 7 Enterprise (End Of Service)
+
 ## In-place system upgrade process for a Windows 10 VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
