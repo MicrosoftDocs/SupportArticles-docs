@@ -21,7 +21,7 @@ ms.custom: sap:My VM is not booting
 
 This article provides steps to resolve issues in an Azure virtual machine (VM) where Windows Update (KB) gets an error and becomes unresponsive.
 
-[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/runcmd-wu-tools.md)]
+[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 ## Symptom
 

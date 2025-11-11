@@ -21,7 +21,7 @@ This article describes how to do an in-place system upgrade of supported Windows
 > For the in-place system upgrade procedure for VMs that are running Windows Server, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 
-[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/runcmd-wu-tools.md)]
+[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 _Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997

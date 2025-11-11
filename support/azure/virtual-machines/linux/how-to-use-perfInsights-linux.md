@@ -19,8 +19,6 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
-
 [PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes: 
 
 - **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
@@ -30,6 +28,8 @@ ms.author: jarrettr
 This article explains how to download the Performance Diagnostics extension to your Linux VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Supported troubleshooting scenarios
 
