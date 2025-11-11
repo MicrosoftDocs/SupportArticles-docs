@@ -27,7 +27,7 @@ Validates the activation status of your Windows VM and checks for common issues 
   - Detects misconfigurations.
   - Provides actionable guidance.
 
-For more information, see [Windows activation validation](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/WindowsActivationValidation/README.md).
+For more information, see [Windows activation validation](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Activation_Validation).
 
 ### 2. Azure Instance Metadata Service certificate check
 
@@ -44,7 +44,7 @@ Verifies the integrity and availability of certificates that are required for ac
 For more information, see: 
 
 - [Cause: Azure Instance Metadata Service connection issue](activation-watermark-appears.md#cause-1-azure-instance-metadata-service-connection-issue).
-- [Azure VM Attested Metadata Verification Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/IMDSCertCheck/README.md).
+- [Azure VM Attested Metadata Verification Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_IMDSValidation).
 
 ## How to run these tools
 
