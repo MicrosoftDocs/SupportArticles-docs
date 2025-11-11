@@ -34,7 +34,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|3/15/2023||[https://aka.ms/AAhdpvb](https://aka.ms/AAhdpvb)|
+|3/15/2023|4/12/2025|[https://aka.ms/AAhdpvb](https://aka.ms/AAhdpvb)|
 
 
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
@@ -54,7 +54,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|8/24/2022||[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
+|8/24/2022|11/30/2022|[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
 
 ## Windows Update troubleshooter for repairing .NET framework components
 
@@ -72,7 +72,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|5/31/2022||[https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409)|
+|5/31/2022|10/30/2022|[https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409)|
 
 ## Windows Update troubleshooter for file or metadata corruption
 
@@ -208,7 +208,7 @@ This troubleshooter automatically runs two times. It runs the first time on all 
   
 |Activation date|Retirement date|More information|
 |---|---|---|
-|2/7/2020|\-|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|
+|2/7/2020|11/28/2020|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|
 
 ## Troubleshooter for Windows logon
 
@@ -234,4 +234,4 @@ The Windows User Profile troubleshooter addresses issues with opening the Window
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|5/29/2025||[https://Aka.ms/AAwe51y](https://Aka.ms/AAwe51y)|
+|5/29/2025|8/27/2025|[https://Aka.ms/AAwe51y](https://Aka.ms/AAwe51y)|
