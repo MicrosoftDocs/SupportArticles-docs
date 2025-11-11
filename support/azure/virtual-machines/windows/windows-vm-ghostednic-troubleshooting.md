@@ -75,7 +75,7 @@ This behavior is **by design** due to the architecture of Accelerated Networking
 
 ### **1. Detect the Scenario**
 Use **RunCommand** to check for ghosted NICs:  
-[Ghosted NIC Check Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/GhostedNIC_Check_Time_warning)
+[Ghosted NIC Check Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows_GhostedNIC_Detection)
 
 ### **2. Clean Up Ghosted NICs**
 
@@ -84,8 +84,8 @@ Use **RunCommand** to check for ghosted NICs:
 
 **Option B: Force Removal via RunCommand**
 - Use RunCommands to check then remove ghosted NICs:  
-  - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/GhostedNIC_Check_Time_warning)
-  - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
+  - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
+  - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal)
 
 
 ### **3. Plan for Design Behavior**
