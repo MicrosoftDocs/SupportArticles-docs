@@ -1,5 +1,5 @@
 ---
-title: Azure VM Windows OS Upgrade Assessment Tool
+title: Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool
 description: Azure VM Windows OS Upgrade Assessment Tool
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024

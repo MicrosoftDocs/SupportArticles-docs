@@ -1,5 +1,5 @@
 ---
-title: Azure VM Windows Update Error Detection tool
+title: Azure Virtual Machine (VM) Windows Update Error Detection tool
 description: Scan CBS Logs for Windows Servicing Errors
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024

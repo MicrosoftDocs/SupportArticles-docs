@@ -94,7 +94,7 @@ This article provides details about the applicable processors for Microsoft Azur
 >
 > - You currently can't upgrade to Windows 11, version 22H2 on Azure VMs that were deployed without trusted launch.
 >
-> - You can set trusted launch only during VM creation and only on Azure generation 2 VMs. There's no option to set trusted launch after you create the VM.
+> - You can set trusted launch only during VM creation and only on Azure generation 2 VMs. There is no option to set trusted launch after you create the VM.
 
 ## Criteria for Windows 11 eligibility
 
@@ -114,11 +114,11 @@ VMs must be generation 2. You can upgrade VMs from Generation 1 to Generation 2 
 
 ### Trusted launch
 
-VMs must be enabled for Trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to Trusted launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) is supported. Many VMs are affected by this requirement. This is because before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Windows Azure.
+VMs must be enabled for Trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to Trusted launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) is supported. Many VMs are affected by this requirement. Before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Microsoft Azure.
 
 ### CPU
 
-The CPU requirements for Windows 11 have evolved. For an up-to-date list of supported processors, see [Windows processor requirements](/windows-hardware/design/minimum/windows-processor-requirements). The listed processors represent the processor models that meet the minimum floor for the supported processor generations through the latest processors at the time of publication. These processors meet the design principles regarding security and reliability, and they meet the minimum system requirements for Windows 11. Subsequently released and future generations of processors that meet the same principles are considered as supported, even if they aren't explicitly listed.
+With CPU requirements for Windows 11 evolving, review the up-to-date list of supported [Windows processor requirements](/windows-hardware/design/minimum/windows-processor-requirements). The listed processors represent the processor models that meet the minimum floor for the supported processor generations through the latest processors at the time of publication. These processors meet the design principles regarding security and reliability, and they meet the minimum system requirements for Windows 11. Subsequently released and future generations of processors that meet the same principles are considered as supported, even if they aren't explicitly listed.
 
 The processor list might specify the latest offerings from processor manufacturers between updates. In the [Windows 11 Minimum Hardware Requirements download file](https://download.microsoft.com/download/7/8/8/788bf5ab-0751-4928-a22c-dffdc23c27f2/Minimum%20Hardware%20Requirements%20for%20Windows%2011.pdf#page=12), the *Processor* section (section 3.5) specifies a 1 GHz or faster processor that conforms to the following requirements:
 
