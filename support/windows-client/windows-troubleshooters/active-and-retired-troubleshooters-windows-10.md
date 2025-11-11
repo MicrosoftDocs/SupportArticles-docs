@@ -1,11 +1,11 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 06/04/2025
+ms.date: 11/11/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, fangmikko
+ms.reviewer: kaushika, grahamm
 ms.custom: sap:Support Tools\Windows Troubleshooters, csstroubleshoot
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -13,8 +13,6 @@ appliesto:
 # Active and retired troubleshooters for Windows 10 and Windows 11
 
 This article provides a list of active and retired troubleshooters for Windows 10 and Windows 11, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
-
-_Applies to:_ &nbsp; Windows 10, Windows 11
 
 ## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
 
