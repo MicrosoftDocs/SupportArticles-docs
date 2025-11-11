@@ -50,7 +50,7 @@ This action uses Optical Character Recognition (OCR) to locate text on the scree
 1. Start recording and perform the click action on the desired UI element in your desktop application.
 1. Stop the recording.
 
-The recorder creates a **Click UI element in window** action with coordinate-based input parameters populated with the respective values from your click action.
+The recorder creates a **Click UI element in window** action with coordinate-based input parameters populated by using the respective values from your click action.
 
 ## Solution 4: Use Move mouse and Send mouse click actions
 
