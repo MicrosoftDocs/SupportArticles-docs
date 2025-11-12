@@ -67,3 +67,7 @@ To check this setting, and disable it if it's necessary, follow these steps:
    - Hyper-V Services
 
 1. To apply the changes, select **OK**, and then restart your Cloud PC.
+
+## Additional help for AI-enabled cloud PC issues
+
+For issues that aren't covered by this article, Windows Insider Program members can go to [Get more help](/windows-insider/troubleshooting#get-more-help) in the Windows Insider Program "Troubleshooting" article.
