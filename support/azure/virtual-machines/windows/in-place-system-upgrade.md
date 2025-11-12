@@ -56,6 +56,10 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 | Windows 10 → Windows 11      | Not Supported | Not Supported | It is recommended to create a new AVD environment |
 | Windows 11 *(Ex: 24H2 → 25H2)* | Supported | Supported | It is recommended to create a new AVD environment |
 
+#### Can Windows Enterprise multi-session receive feature updates through Windows Server Update Services (WSUS)?
+Yes, you can update [Windows Enterprise multi-session with the appropriate feature updates published to WSUS](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system), the same as a single-session version of Windows. The underlying VM must meet the hardware requirements for the operating system you're using, such as the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support). In-place upgrade of Windows, for example from Windows 10 to Windows 11, isn't supported for session hosts in a pooled host pool. For more information, see [Can I do an in-place upgrade of a session host's operating system](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system).
+
+
 ### Windows versions out of support for in-place system upgrades
 
 - Windows 8.1 (End Of Service)
