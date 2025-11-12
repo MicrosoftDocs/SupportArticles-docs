@@ -5,7 +5,7 @@ description: Provides guidance around the impact of the new identity used by ser
 
 # SSSAdminProd user and server-side sync operations
 
-This article provides an overview of the changes customers can expect and observe when server-side sync transitions to a new identity when communicating with Dataverse.
+This article provides an overview of the changes customers can expect and will observe when server-side sync transitions to a new identity to communicate with Dataverse.
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ Server-side sync is changing the the identity used for its operations against Da
 
 These are the key differences you can expect:
 1. For records created or updated by server-side sync, the delegate auditing fields "Created By (delegate)" and "Mofieid By (delegate)" will start showing the '# SSSAdminProd' user instead of being empty. The content of the "Created By" and "Modified By" fields remains unchanged.
-2. For records created by synchronous customizations (such as workflows or plug-inss) running upon server-side sync operations and using the calling identity, the "Created By (delegate)" field will start showing the '# SSSAdminProd' user instead of being empty.
+2. For records created by synchronous customizations (such as workflows or plug-ins) running upon server-side sync operations and using the calling identity, the "Created By (delegate)" field will start showing the '# SSSAdminProd' user instead of being empty.
 3. The audit log entries for server-side sync operations that do not impersonate a system user will change from SYSTEM to '# SSSAdminProd'
 
 Below are a few sample scenarios to demonstrate what is changing and what is not. This is not a comprehensive list of scenarios.
