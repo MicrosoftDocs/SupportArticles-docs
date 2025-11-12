@@ -93,8 +93,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Errors associated with error code 8024A000
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error codes associated with download errors
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-download-error-codes.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80244007
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context   
     - name: Error code 0x80072f8f
