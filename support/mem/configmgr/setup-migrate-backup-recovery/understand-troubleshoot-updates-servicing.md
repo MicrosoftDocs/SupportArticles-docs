@@ -1,7 +1,7 @@
 ---
 title: Understand and Troubleshoot Updates and Servicing
 description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
-ms.date: 10/17/2025
+ms.date: 11/17/2025
 ms.reviewer: kaushika, payur
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
@@ -10,15 +10,15 @@ ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Rec
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4490424
 
-This article helps administrators understand the **Updates and Servicing** process in Configuration Manager (current branch). It can also help you troubleshoot common issues that you might encounter while you install updates.
+This article helps administrators understand the Updates and Servicing process in Configuration Manager (current branch). This article can also help you troubleshoot common issues that you might encounter when you install updates.
 
-Configuration Manager synchronizes with the Microsoft cloud service to get updates that apply to your infrastructure and version. You can install these updates from within the Configuration Manager console.
+Configuration Manager synchronizes with the Microsoft Cloud service to get updates that apply to your infrastructure and version. You can use the Configuration Manager console to install these updates.
 
 To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/mem/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Best practices for updates
 
-Before you install updates from within the Configuration Manager console, review the following steps.
+Before you install updates by using the Configuration Manager console, review the following steps.
 
 ### Step 1: Review the update checklists
 
@@ -55,7 +55,7 @@ Before you install an update, consider running the prerequisite check for that u
 ## Prepare to troubleshoot Updates and Servicing issues
 
 > [!IMPORTANT]  
-> When dealing with an update or servicing issue, avoid the following actions:
+> When you troubleshoot an update or servicing issue, avoid the following actions:
 >
 > - Manually cleaning up any related folders (\EasySetupPayload, \CMUStaging). Only manually change these if Microsoft Support instructs you to.
 > - Manually cleaning up any SQL tables. Only manually change these if Microsoft Support instructs you to.
@@ -64,7 +64,7 @@ Before you install an update, consider running the prerequisite check for that u
 > - Restarting the Configuration Manager Update service during the installation.
 > - Keeping the \CMUStaging\ folder open during the installation.
 
-> [!NOTE]
+> [!NOTE]  
 > After an update package starts installing, don't use [CMUpdateReset.exe](/mem/configmgr/core/servers/manage/update-reset-tool).
 
 ### Identify the update package GUID
@@ -118,21 +118,21 @@ Knowing the stage at which the update failed gives you a starting point for trou
 
 Select one of the following links to troubleshoot a particular stage, or work through the sections for each stage.
 
-- [Investigate the Synchronization and Applicability stages]()
-- [Investigate the Download stage]()
-- [Investigate the Replication, Prerequisite Check, or Installation stages]()
+- [Investigate the Synchronization and Applicability stages](#investigate-the-synchronization-and-applicability-stages)
+- [Investigate the Download stage](#investigate-the-download-stage)
+- [Investigate the Replication, Prerequisite Check, or Installation stages](#investigate-the-replication-prerequisite-check-or-installation-stages)
 
 ## Investigate the Synchronization and Applicability stages
 
-The [SCP](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
+The [SCP](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
 
-The following steps provide an overview of the process that an online Service Connection Point uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/mem/configmgr/core/servers/manage/download-updates-flowchart).
-  
-<details><summary>To view the detailed steps, select here.</summary>
+The following steps provide an overview of the process that an online SCP uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/mem/configmgr/core/servers/manage/download-updates-flowchart).
+
+<details><summary>Select here to see the Synchronization and Applicablity steps.</summary>
 
 ### Process step 1: DMPDownloader: Synchronize
 
-Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs the following entries in DMPDownloader.log:
+Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs entries in DMPDownloader.log that resemble the following excerpt:
 
 ```output
 Hasn't synced recently.
@@ -141,9 +141,9 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 0~~
 ```
 
-DMPDownloader sends high-priority state message `0 (START_PROCESS)` to the Site Server to indicate that the synchronization process is starting.
+DMPDownloader sends the `0 (START_PROCESS)` high-priority state message to the Site Server to indicate that the synchronization process is starting.
 
-Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released ConfigMgr updates and their metadata. During this process, DMPDownloader logs entries that resemble the following excerpt in DMPDownloader.log:
+Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released ConfigMgr updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following excerpt:
 
 ```output
 Checking for preview version~~
@@ -162,7 +162,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 1~~
 ```
 
-DMPDownloader sends state message `1 (START_VERIFY_MANIFEST)` to the Site Server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader sends the `1 (START_VERIFY_MANIFEST)` state message to the Site Server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Download manifest.cab~~
@@ -174,7 +174,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 2~~
 ```
 
-DMPDownloader sends state message `2 (START_VERIFY_MANIFESTFILE_TRUSTED)` to indicate that DMPDownloader is about to verify the digital signature of the ConfigMgr.Update.Manifest.cab file. As it verifies the signature, DMPDownloader generates log entries that resemble the following excerpt:
+DMPDownloader sends the `2 (START_VERIFY_MANIFESTFILE_TRUSTED)` state message to indicate that DMPDownloader is about to verify the digital signature of the ConfigMgr.Update.Manifest.cab file. As it verifies the signature, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 File 'E:\ConfigMgr\EasySetupPayload\ConfigMgr.Update.Manifest.cab' is signed and trusted.
@@ -185,12 +185,12 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 3~~
 ```
 
-DMPDownloader sends state message `3 (VERIFIED_MANIFEST)` to confirm that the file has a trusted signature.
+DMPDownloader sends the `3 (VERIFIED_MANIFEST)` state message to confirm that the file has a trusted signature.
 
-Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab  to ___CABConfigMgr.Update.Manifest.MCM, and then moves the renamed file to one of the following locations:
+Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.MCM, and then moves the renamed file to one of the following locations:
 
-- If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\OUTBOXES\MCM.box. The MPFDM component moves the file to the Site Server.
-- If the SCP is co-located with the Site Server, the file is saved directly to inboxes\hman.box\ForwardingMsg.
+- If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MPFDM component moves the file to the Site Server.
+- If the SCP is co-located with the Site Server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
 
 During this process, DMPDownloader logs entries that resemble the following excerpt:
 
@@ -201,20 +201,20 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 4~~
 ```
 
-DMPDownloader sends state message `4 (MANIFEST_DOWNLOADED)` to indicate that this process has finished.
+DMPDownloader sends the`4 (MANIFEST_DOWNLOADED)` state message to indicate that this process has finished.
 
-A message forwarding thread in Hierarchy Manager (HMAN) moves the incoming MCM file to hman.box\CFD\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
+In Hierarchy Manager (HMAN), a message forwarding thread moves the incoming MCM file to hman.box\\CFD\\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
 
 ### Process step 2: HMAN: Check applicability
 
-Hierarchy Manager (HMAN) checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
+HMAN checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
 
 The SMSDBMon component drops a blank file that's named \<SiteCode>.SCU to the \<ConfigMgr installation Directory>\\inboxes\\hman.box folder.
 
 > [!NOTE]  
-> \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
+> In these file and path names, \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
 
-This event triggers HMAN to start processing. It logs entries that resemble the following excerpt in HMAN.log:
+This event triggers HMAN to start processing. It logs entries in HMAN.log that resemble the following excerpt:
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
@@ -229,7 +229,7 @@ File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed
 Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
 ```
 
-The extracted files include a the ApplicabilityChecks folder, which contains SQL query files. HMAN runs these queries to assess the applicability of the update packages in the manifest. During this process, HMAN logs entries that resemble the following excerpt:
+The extracted files include an ApplicabilityChecks folder, which contains SQL query files. HMAN runs these queries to assess the applicability of the update packages in the manifest. During this process, HMAN logs entries that resemble the following excerpt:
 
 ```output
 Extracted C:\Program Files\Microsoft Configuration Manager\CMUStaging\Manifest.xml  
@@ -238,7 +238,7 @@ C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\
 Configuration Manager Update (PackageGuid=10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C) is applicable
 ```
 
-If a package isn't applicable, the HMAN logs entries that resemble the following excerpt:
+If a package doesn't apply, the HMAN logs entries that resemble the following excerpt:
 
 ```output
 C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1610-KB3211925_AppCheck_9390F966.sql has hash value SHA256:048DA8137C249AAD11340A855FF7E0E8568F5325FED5F503C4D9C329E73AD464  
@@ -250,14 +250,12 @@ Configuration Manager Update (PackageGuid=9390F966-F1D0-42B8-BDC1-8853883E704A) 
 
 ### Results of the Synchronization and Applicability processes
 
-The console displays new update packages and labels their state as **Available to Download**. The applicability check might hide some update packages.
-
-Applicable updates are visible as **Available to Install** or **Ready to Install**. You can verify an update's state by checking the **State** column in the CM_UpdatePackages table. The following state entries describe an update as available within the console:
+The console displays new applicable updates and labels their state as **Available to Download** or **Ready to Install**. The applicability check might hide some update packages. To verify an update's state, check the **State** column in the CM_UpdatePackages table. In the table, available updates have entries in this column that resemble the following excerpts:
 
 - `APPLICABILITY_SUCCESS  =  327682`
 - `DOWNLOAD_SUCCESS  =  262146`
 
-Updates that have the following states are typically hidden from the console:
+Updates that aren't applicable (and aren't visible in the console) have entries in this column that resemble the following excerpts:
 
 - `APPLICABILITY_HIDE  =  393213`
 - `APPLICABILITY_NA  =  393214`
@@ -561,7 +559,7 @@ Once replicated, the Easy Setup Package is extracted back from Content Library o
 
 The following steps explain the [flow](/mem/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
 
-<details><Summary>Select here to see the Replication steps</summary>
+<details><Summary>Select here to see the Replication steps.</summary>
 
 ### Step 1: Initialization
 
