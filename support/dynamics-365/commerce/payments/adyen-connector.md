@@ -66,15 +66,19 @@ The Store Commerce app also displays the following error dialog to the point of 
 
 ### Cause
 
-This issue can occur when you don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station. It can also occur if you set the value but don't correctly sync it to the POS terminal, or when the value is cached.
+This issue can occur in one of the following scenarios:
+
+1. You don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station.
+1. You configure the **EFT POS Register Number** value in Finance and Operations (F&O), but the Commerce Data Exchange (CDX) job for syncing data from F&O to the channel database hasn't run yet.
+1. An outdated **EFT POS Register Number** is cached in the retail server.
 
 ### Solution
 
 To solve this issue, follow these steps:
 
 1. Follow the instructions in [Set up a Dynamics 365 register](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-dynamics-365-register).
-1. Run the 1070 and 1090 distribution schedule jobs.
-1. If the issue isn't resolved, consider reactivating the Store Commerce app. The value of the **EFT POS Register Number** field might be cached and needs to be reset.
+1. On the **Distribution schedule** page, run the **1070** and **1090** jobs.
+1. If the issue isn't resolved, consider reactivating the Store Commerce app. The previous value of the **EFT POS Register Number** field might be cached and needs to be reset by reactivating the Store Commerce App.
 
 ## Related content
 
