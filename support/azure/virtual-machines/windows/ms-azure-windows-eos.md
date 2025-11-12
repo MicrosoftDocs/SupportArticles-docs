@@ -24,7 +24,7 @@ This article provides information about Windows Server support and answers some 
 >Machines running the above listed operating systems will no longer receive Microsoft support and may not receive further security updates. Additionally, many compliance requirements include being on a currently supported operating system.
 
 
-[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
+[!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 Migrating your applications to Azure instances running a newer version of Windows Server is the recommended approach to ensure that you are effectively leveraging the flexibility and reliability of the Azure cloud. Pre-configured images with different combinations of Windows and SQL Server are available in the Marketplace and enable you to run any compatible solution on our cost-effective, high-performance, reliable cloud computing platform. For more information, see [Windows Server 2012 migration strategy](/windows-server/get-started/upgrade-migrate-roles-features).
 

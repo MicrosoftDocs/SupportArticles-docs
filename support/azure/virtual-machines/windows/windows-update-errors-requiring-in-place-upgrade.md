@@ -22,7 +22,7 @@ ms.custom:
 > This article doesn't cover Windows Client scenarios.
 
 
-[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
+[!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 For Virtual Machines (VMs) that are running on Azure, certain Windows Update errors require an in-place upgrade of the OS to restore the servicing stack to a healthy condition in which updates can be installed. Other options, such as WinRE, are available to possibly mitigate this issue. However, such processes aren't possible unless the VM is connected to a nested virtualization environment, as described in [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md). Although you do an in-place upgrade, you use the installation media of the current OS to reinstall the system. This article provides the steps to identify the specific upgrade errors that require this action.
 
@@ -85,7 +85,7 @@ Example of error 0x80073712 - ERROR_SXS_COMPONENT_STORE_CORRUPT
 
 The Azure VM is experiencing internal corruption in the Windows servicing stack. This stack is responsible for managing updates and system components. When it becomes damaged because of missing files, an invalid configuration, or corrupted metadata, Windows can no longer apply updates or service the OS correctly.
 
-[!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
+[!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 ## Resolution for Azure VMs
 
