@@ -65,7 +65,7 @@ Resolve-DnsName -Name <domain-name> -Server <dns-server-ip>
 
 If these commands don't succeed, see [DNS troubleshooting guidance](../../windows-server/networking/troubleshoot-dns-guidance.md).
 
-After these commands resolve successfully, check the end-to-end connectivity by pinging the resolved IP address.
+After these commands run successfully, check the end-to-end connectivity by pinging the resolved IP address.
 
 ### Step 3: Test domain name resolution
 
@@ -75,7 +75,7 @@ To use the Windows DNS client to test DNS resolution, go to a client computer, a
 ping <allowed-domain-name>
 ```
 
-This command uses the Windows DNS client and trusted DNS server for name resolution, testing both DNS server connectivity and endpoint reachability. Resolve any issues that you find, and then check whether these changes have resolved your issue. If the issue remains, continue to the more advanced troubleshooting steps.
+This command uses the Windows DNS client and trusted DNS server for name resolution, testing both DNS server connectivity and endpoint reachability. Resolve any DNS issues that you find, and then check whether these changes resolve your primary issue. If the issue remains, continue to the more advanced troubleshooting steps.
 
 ### Step 4 (Advanced): Review the ZTDNS configuration
 
@@ -120,7 +120,7 @@ To identify services that need exceptions, review the BlockedConnections log. Fo
 
 ### Step 6 (Advanced): Disable ZTDNS
 
-If you still can't resolve the issue, or if you can't configure an appropriate exception for a blocked service, disable ZTDNS. To disable ZTDNS enforcement and restore normal network connectivity, run the following command:
+If you still can't resolve your primary issue, or if you can't configure an appropriate exception for a blocked service, disable ZTDNS. To disable ZTDNS enforcement and restore normal network connectivity, run the following command:
 
 ```console
 netsh ztdns set state enable=no audit=no
