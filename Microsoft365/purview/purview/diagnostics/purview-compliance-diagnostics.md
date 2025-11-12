@@ -51,11 +51,11 @@ You can find these diagnostics on the following portal pages:
 
 ### Available diagnostics
 
-The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
+The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the fourth column. When you're prompted, sign in to the Microsoft Purview portal.
 
 **Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
-When you run diagnostics from the Solution page, it executes the [Check-PurviewConfig](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/check-purviewconfig?view=exchange-ps) cmdlet in the background to perform the necessary checks and displays the results.
+When you run diagnostics from the Solution page, it executes the [Check-PurviewConfig](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/check-purviewconfig?view=exchange-ps) cmdlet in the background to perform the necessary checks and displays the results.This cmdlet also calls the cmdlets listed below when specific diagnostics are executed.
 
 | **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
 |-|-|-|-|
