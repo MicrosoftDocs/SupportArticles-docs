@@ -26,8 +26,15 @@ Below are a few sample scenarios to demonstrate what is changing and what is not
 
 ### Scenario 1: an email in 'Pending Send' state is picked up by server-side sync, sent out, and moved to 'Sent' state. A synchronous workflow runs on email update to create a contact using the calling identity
 
-|Scenario|Email Modified By|Email Modified By (delegate)|Email audit log|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|Scenario|Email Modified By|Email Modified By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|
 |Before|SYSTEM|**Empty**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
+
+### Scenario 2: an  email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
+
+|Scenario|Email Created By|Email Created By (delegate)|Email Mofieid By|Email Modified By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|-|-|-|-|-|-|-|-|-|-|
+|Before|SYSTEM|**SYSTEM**|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
+|After|SYSTEM|**'# SSSAdminProd'**|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
 
