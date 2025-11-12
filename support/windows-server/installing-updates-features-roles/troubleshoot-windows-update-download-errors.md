@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows Update download error codes
+title: Troubleshoot Windows Update download errors
 description: Learn how to troubleshoot Windows Update download error codes 0x80D02002, 0x80072EFD, and 0x80072EFE in Windows.
 manager: dcscontentpm
 audience: itpro
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Windows Update download error codes
+# Troubleshoot Windows Update download errors
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
