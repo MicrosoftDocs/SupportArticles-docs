@@ -68,9 +68,9 @@ The Store Commerce app also displays the following error dialog to the point of 
 
 This issue can occur in one of the following scenarios:
 
-1. You don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station.
-1. You configure the **EFT POS Register Number** value in Finance and Operations (F&O), but the Commerce Data Exchange (CDX) job for syncing data from F&O to the channel database hasn't run yet.
-1. An outdated **EFT POS Register Number** is cached in the retail server.
+- You don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station.
+- You configure the **EFT POS Register Number** value in Finance and Operations (F&O), but the Commerce Data Exchange (CDX) job for syncing data from F&O to the channel database hasn't run yet.
+- An outdated **EFT POS Register Number** is cached in the retail server.
 
 ### Solution
 
