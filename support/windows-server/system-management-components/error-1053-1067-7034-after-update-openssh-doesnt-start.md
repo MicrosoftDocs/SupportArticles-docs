@@ -43,15 +43,15 @@ The exact behavior and messages vary based on your situation. The following scen
 
 - **Scenario 2**. OpenSSH 9.5 doesn't start. Windows generates a "Verify that you have sufficient privileges to start system services." message. The full text of this message resembles the following excerpt:
 
-> Service 'OpenSSH SSH Server' (sshd) failed to start. Verify that you have sufficient privileges to start system services.
+  > Service 'OpenSSH SSH Server' (sshd) failed to start. Verify that you have sufficient privileges to start system services.
 
 - **Scenario 3**. You try to manually start the OpenSSH 9.5 Server service by using the Services MMC (Microsoft Management Console) snap-in (Services.msc). The service doesn't start. You receive "Error 1067: The process terminated unexpectedly." The full text of this message resembles the following excerpt:
 
-> Windows could not start the OpenSSH SSH Server service on Local computer. Error 1067. The process terminated unexpectedly.
+  > Windows could not start the OpenSSH SSH Server service on Local computer. Error 1067. The process terminated unexpectedly.
 
 - **Scenario 4**. You try to manually start the OpenSSH 9.5 Server service by running `sc query ssh-agent` at the Windows command prompt. The service doesn't start. You receive the following message:
 
-> StartService FAILED 1053: The service did not respond to the start or control request in a timely fashion.
+  > StartService FAILED 1053: The service did not respond to the start or control request in a timely fashion.
 
 ## Cause
 
@@ -59,9 +59,9 @@ This issue occurs when the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folder
 
 | Security principal | Allowed | Denied |
 | - | - | - |
-| SYSTEM | Read/Write | All other permissions. |
-| Administrator (and other administrative accounts) | Read/Write | All other permissions. |
-| All other accounts | Read | All other permissions. |
+| SYSTEM account | Read/Write | All other permissions. |
+| Administrators group | Read/Write | All other permissions. |
+| All other accounts and groups | Read | All other permissions. |
 
 ## Resolution
 
@@ -95,15 +95,13 @@ Get-Acl C:\ProgramData | Select-Object -Property AccessToString | fl *
 
 ### Method 3: Workaround: Install updates that allow the service to start when the permissions aren't correct
 
-Install Windows updates that allow the OpenSSH service to start even if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders don't have correct permissions. When you use this workaround, Windows logs Event ID 4. The following table shows an example of this event:
+Install Windows updates that allow the OpenSSH service to start even if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders don't have correct permissions. When you use this workaround, Windows logs Event ID 4. The description of Event ID 4 resembles the following excerpt:
 
-| Event ID 4, in Event Viewer | Event description |
-|----|----|
-| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/event-id-4-openssh-permissions-issue.png" alt-text="Screenshot of Windows Event Viewer showing an informational message about folder permissions for the ssh directory." lightbox="media/error-1053-1067-7034-after-update-openssh-doesnt-start/event-id-4-openssh-permissions-issue.png"::: | sshd: For '%programdata\\ssh' folder, write access is granted to the following users: NT AUTHORITY\\Authenticated Users. Consider reviewing users to ensure that only NT AUTHORITY\\SYSTEM, AND THE BUILTIN\\Administrators group and its members have write access. |
+> For '%programdata\\ssh' folder, write access is granted to the following users: NT AUTHORITY\\Authenticated Users. Consider reviewing users to ensure that only NT AUTHORITY\\SYSTEM, AND THE BUILTIN\\Administrators group and its members have write access.
 
 > [!NOTE]  
 > This message provides information only.
-
+>
 > - The list of users in this message might include users that belong to the local Administrators group. These users have valid reasons for having permissions for the C:\ProgramData\ssh folder.
 > - The list of security principals that follows "granted to the following users:" (in the preceding example, "NT AUTHORITY\\Authenticated User) changes based on the actual folder permissions.
 
