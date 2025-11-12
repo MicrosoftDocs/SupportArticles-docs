@@ -51,7 +51,7 @@ To resolve this issue, take the following steps:
 
 For more information about how to configure the payment connector for Adyen, see [Set up Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-processor-for-new-credit-cards).
 
-## Store Commerce app or IIS Hardware Station configuration isn't updated
+## EFT Terminal ID isn't set
 
 ### Symptoms
 
@@ -66,20 +66,15 @@ The Store Commerce app also displays the following error dialog to the point of 
 
 ### Cause
 
-This issue might occur if you redeploy the POS, but the `dllhost.config` file isn't updated.
+This issue can occur when you don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station. It can also occur if you set the value but don't correctly sync it to the POS terminal, or when the value is cached.
 
 ### Solution
 
-To resolve this issue, follow these steps:
+To solve this issue, follow these steps:
 
-1. Follow the instructions in [Update the Store Commerce app or IIS Hardware Station configuration](/dynamics365/commerce/dev-itpro/adyen-connector-setup#update-the-store-commerce-app-or-iis-hardware-station-configuration).
-1. In Task Manager, open the **Details** tab, and stop the `dllhost.exe` task.
-1. Reopen the Store Commerce app.
-1. If you're using an Internet Information Services (IIS) Hardware Station, reset IIS by running the following command in a Command Prompt window or PowerShell terminal:
-
-   ```powershell
-   iisreset
-   ```
+1. Follow the instructions in [Set up a Dynamics 365 register](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-dynamics-365-register).
+1. Run the 1070 and 1090 distribution schedule jobs.
+1. If the issue isn't resolved, consider reactivating the Store Commerce app. The value of the **EFT POS Register Number** field might be cached and needs to be reset.
 
 ## Related content
 
