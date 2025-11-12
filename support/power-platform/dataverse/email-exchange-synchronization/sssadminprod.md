@@ -22,7 +22,7 @@ These are the key differences you can expect:
 2. For records created by synchronous customizations (such as workflows or plug-inss) running upon server-side sync operations and using the calling identity, the "Created By (delegate)" field will start showing the '# SSSAdminProd' user instead of being empty.
 3. The audit log entries for server-side sync operations that do not impersonate a system user will change from SYSTEM to '# SSSAdminProd'
 
-Below are a few sample scenarios to demonstrate what is changing and what is not:
+Below are a few sample scenarios to demonstrate what is changing and what is not. This is not a comprehensive list of scenarios.
 
 ### Scenario 1: an email in 'Pending Send' state is picked up by server-side sync, sent out, and moved to 'Sent' state. A synchronous workflow runs on email update to create a contact using the calling identity
 
@@ -31,10 +31,38 @@ Below are a few sample scenarios to demonstrate what is changing and what is not
 |Before|SYSTEM|**Empty**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
 
-### Scenario 2: an  email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
+### Scenario 2: an email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
 
 |Scenario|Email Created By|Email Created By (delegate)|Email Mofieid By|Email Modified By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|-|-|
 |Before|SYSTEM|**SYSTEM**|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
+
+### Scenario 3: an  email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A synchronous plug-in runs on email create to create a contact using the calling identity
+
+|Scenario|Email Created By|Email Created By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|-|-|-|-|-|-|-|-|
+|Before|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
+|After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
+
+### Scenario 4: an email is manually tracked into Dynamics, for which server-side sync uses the DeliverPromote SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
+
+|Scenario|Email Created By|Email Created By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|-|-|-|-|-|-|-|-|
+|Before|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
+|After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
+
+### Scenario 5: a task is tracked into Dynamics by server-side sync, which impersonates the actual user. A synchronous workflow runs on task create to create a contact using the calling identity
+
+|Scenario|Task Created By|Task Created By (delegate)|Task Modified By|Task Modified By (delegate)|Task audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|-|-|-|-|-|-|-|-|-|-|
+|Before|User|**Empty**|User|**Empty**|User|User|User|**Empty**|User|
+|After|User|**'# SSSAdminProd'**|User|**'# SSSAdminProd'**|User|User|User|**'# SSSAdminProd'**|User|
+
+### Scenario 6: an appointment is tracked into Dynamics through server-side sync by a mailbox belonging to a user that is different from the appointment organizer, for which server-side sync does not use impersonation. A synchronous workflow runs on appointment create to create a contact using the calling identity
+
+|Scenario|Appointment Created By|Appointment Created By (delegate)|Appointment Modified By|Appointment Modified By (delegate)|Appointment audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
+|-|-|-|-|-|-|-|-|-|-|
+|Before|SYSTEM|**Empty**|SYSTEM|**Empty**|**SYSTEM**|SYSTEM|SYSTEM|Empty|SYSTEM|
+|After|SYSTEM|**'# SSSAdminProd'**|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|Empty|SYSTEM|
 
