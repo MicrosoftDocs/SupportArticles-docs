@@ -12,7 +12,7 @@ This article provides troubleshooting guidance for common errors that affect the
 
 The Dynamics 365 Payment Connector for Adyen takes advantage of the device-agnostic [Adyen Terminal API](https://www.adyen.com/knowledge-hub/introducing-the-terminal-api). It supports all payment terminals that this application programming interface (API) supports. For a complete list of Adyen payment terminals, see [Adyen POS terminals](https://www.adyen.com/pos-payments/terminals).
 
-## Issue 1: Invoicing sales orders fails because of stale authorization
+## Invoicing sales orders fails because of stale authorization
 
 ### Symptoms
 
@@ -45,22 +45,24 @@ To resolve this issue, take the following steps:
 
       :::image type="content" source="./media/adyen-connector/authorization-stale-period.png" alt-text="The payment services configuration menu that shows the Authorization stale period in days highlighted":::
 
+      :::image type="content" source="./media/adyen-connector/days-before-expired.png" alt-text="The accounts receivable parameters menu that shows the Number of days before expired highlighted":::
+
 1. Retry invoicing.
 
 For more information about how to configure the payment connector for Adyen, see [Set up Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-processor-for-new-credit-cards).
 
-## Issue 2: Store Commerce app or IIS Hardware Station configuration isn't updated
+## Store Commerce app or IIS Hardware Station configuration isn't updated
 
 ### Symptoms
 
-The Store Commerce app returns the following error message to the point of sale (POS) user:
-
-> Sign in Error. The initialization data couldn't be loaded.
-
-The following underlying error is also logged in the event log:
+The following error is logged in EventViewer:
 
 > Hardware station an exception occurred when trying to open a payment device and begin a transaction.. Exception: System.ArgumentNullException: Value cannot be null.
 > Parameter name: terminalSettings.TerminalId
+
+The Store Commerce app also displays the following error dialog to the point of sale (POS) user:
+
+:::image type="content" source="./media/adyen-connector/hardware-station-config-error.png" alt-text="The error dialog for a hardware station error":::
 
 ### Cause
 
