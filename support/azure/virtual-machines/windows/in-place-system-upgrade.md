@@ -11,6 +11,9 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+_Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
+_Original KB number:_ &nbsp; 4014997
+
 This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VM). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
 
 > [!NOTE]  
@@ -20,11 +23,7 @@ This article describes how to do an in-place system upgrade of supported Windows
 > [!CAUTION]
 > Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.
 
-
 [!INCLUDE [Azure VM Windows Update Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
-
-_Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
-_Original KB number:_ &nbsp; 4014997
 
 ## Symptoms
 
