@@ -285,14 +285,14 @@ items:
       href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Best practices for Active Directory domains that use single-label DNS names
+      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Create an Active Directory server
       href: ./active-directory/create-an-active-directory-server.md
     - name: DCPROMO demotion fails
       href: ./active-directory/dcpromo-demotion-fails.md
     - name: DC promotion stops responding
       href: ./active-directory/dc-promotion-not-respond-netbios-disabled.md
-    - name: Deployment and operation of Active Directory domains
-      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
       href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
     - name: Domain controllers don't demote
@@ -3226,8 +3226,12 @@ items:
       href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md   
     - name: Troubleshoot Windows Update error 0x80244007
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md   
-    - name: Troubleshoot Windows Update error 0x80072f8f
+    - name: Troubleshoot Windows Update error 0x80072f8f    
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
+    - name: Troubleshoot Windows Update error 0x800f0920
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
+    - name: Troubleshoot Windows Update error 0x80070bc9
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
