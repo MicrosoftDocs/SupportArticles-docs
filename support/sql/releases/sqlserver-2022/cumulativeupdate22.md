@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 22 for SQL Server 2022 (KB5068450)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 cumulative update 22 (KB5068450).
-ms.date: 10/23/2025
+ms.date: 11/13/2025
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5068450
 ms.reviewer: v-shaywood

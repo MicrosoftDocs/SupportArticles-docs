@@ -285,14 +285,14 @@ items:
       href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Best practices for Active Directory domains that use single-label DNS names
+      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Create an Active Directory server
       href: ./active-directory/create-an-active-directory-server.md
     - name: DCPROMO demotion fails
       href: ./active-directory/dcpromo-demotion-fails.md
     - name: DC promotion stops responding
       href: ./active-directory/dc-promotion-not-respond-netbios-disabled.md
-    - name: Deployment and operation of Active Directory domains
-      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
       href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
     - name: Domain controllers don't demote
@@ -2608,6 +2608,8 @@ items:
       href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
+    - name: Troubleshoot common SFTP issues when using OpenSSH
+      href: ./system-management-components/troubleshoot-sftp-issues-using-openssh.md
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
@@ -3072,6 +3074,8 @@ items:
       href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
     - name: DCs can't be located and high-rate outbound sessions
       href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
+    - name: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
+      href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
     - name: Gather information for secure channel issues
       href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
     - name: Troubleshoot domain controller location issues
@@ -3219,7 +3223,11 @@ items:
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
-      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md    
+      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md   
+    - name: Troubleshoot Windows Update error 0x80244007
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md   
+    - name: Troubleshoot Windows Update error 0x80072f8f
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
