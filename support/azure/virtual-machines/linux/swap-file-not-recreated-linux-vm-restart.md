@@ -5,8 +5,8 @@ ms.date: 04/15/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
-ms.author: srijangupta
-author: srijang
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.reviewer: danis
 ---
 # Swap file isn't  re-created after a Linux VM restarts
@@ -130,8 +130,8 @@ Now, create a VM with [az vm create](/cli/azure/vm) and specify the cloud-init f
 ```azurecli-interactive
 az vm create \
   --resource-group myResourceGroup \
-  --name centos74 \
-  --image OpenLogic:CentOS:7-CI:latest \
+  --name redhat810 \
+  --image  RedHat:RHEL:8_10:latest \
   --custom-data cloud_init_swappart.txt \
   --generate-ssh-keys 
 ```
@@ -154,7 +154,7 @@ The output from this command should look like this:
 
 ```output
 Filename                Type        Size    Used    Priority
-/dev/sdb2  partition   2494440 0   -1
+/dev/sdb2             partition   2494440     0      -1
 ```
 
 > [!NOTE]

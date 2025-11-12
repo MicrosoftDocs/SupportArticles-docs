@@ -2,9 +2,7 @@
 title: Web Automation Fails in Unattended Mode
 description: Works around an issue where a web automation action fail in unattended environment during runtime.
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: amitrou
+ms.reviewer: v-shaywood
 ms.date: 04/09/2025
 ---
 # Web automation action fails in unattended mode
@@ -71,6 +69,8 @@ To check the browser extension installation, you can go through the **Tools** > 
 #### The machine's CPU usage reaches 100%, preventing the service worker of the web extension from starting
 
 To work around this issue, provide more CPU resources to the machine where the flow is executed. For more information, see [Prerequisites](/power-automate/desktop-flows/requirements#prerequisites).
+
+Starting in version 2.62, Power Automate for desktop supports [WebDriver](/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. WebDriver provides a more resilient communication channel that does not rely on the browser extension.
 
 ### Scenario 2: Other web automation actions fail with the "Element not found" error
 

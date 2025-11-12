@@ -19,6 +19,8 @@ ms.custom: sap:VM Extensions not operating correctly
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+
 Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address `168.63.129.16`. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 The VM that's migrated to Azure from an on-premises environment or created by using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install VM Agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows).
@@ -107,9 +109,6 @@ Compare any errors that you find to the following common scenarios that can caus
 
 ### Can't connect to WireServer IP (168.63.129.16)
 
-<details>
-<summary>Click here for troubleshooting details</summary>
-
 The following error entries are logged in the *WaAppAgent.log* file:
 
 ```output
@@ -131,7 +130,7 @@ at Microsoft.WindowsAzure.GuestAgent.ContainerStateMachine.HostGAPluginUtility.U
 
 These error entries indicate that the VM can't reach the WireServer IP address, 168.63.129.16.
 
-### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
+#### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
 
 1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](/azure/virtual-network/what-is-ip-address-168-63-129-16?tabs=windows#troubleshoot-azure-ip-connectivity) section of [Azure IP address 168.63.129.16 overview](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 1. If you have only one private IP on your VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. To make sure that the IP configuration always matches the configuration on the VM in Azure, [learn how to set up a static IP address](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) by using PowerShell.
@@ -139,12 +138,7 @@ These error entries indicate that the VM can't reach the WireServer IP address, 
 1. Check for any issues that a firewall, a proxy, or another source might cause that could block access to IP address `168.63.129.16`.
 1. Check whether Windows Firewall or a third-party firewall is blocking access to ports `80` and `32526`. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
-</details>
-
 ### Guest Agent is stuck in the "Stopping" process  
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 The following error entries are logged in the *WaAppAgent.log* file:
 
@@ -162,20 +156,15 @@ at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentService.<>c__DisplayClass2.<
 
 These error entries indicate that the Azure VM Agent is stuck in the "Stopping" process.
 
-### Solution A: Start WaAppAgent.exe and stop WindowsAzureGuest.exe
+#### Solution A: Start WaAppAgent.exe and stop WindowsAzureGuest.exe
 
 Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the RdAgent service, and then wait five minutes. After *WaAppAgent.exe* starts running, end the *WindowsAzureGuest.exe* process.
 
-### Solution B: Upgrade Azure VM Agent
+#### Solution B: Upgrade Azure VM Agent
 
 If Solution A doesn't resolve the issue, remove the currently installed version, and then [install the latest version of the agent manually](/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
-</details>
-
 ### The Npcap loopback adapter is installed
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 The following error entries are logged in the *WaAppAgent.log* file:
 
@@ -187,16 +176,11 @@ The following error entries are logged in the *WaAppAgent.log* file:
 
 These error entries indicate that [Wireshark](https://www.wireshark.org) installed the packet capture ([Npcap](https://npcap.com)) loopback adapter of the Network Mapper ([Nmap](https://nmap.org)) Project on the VM. Wireshark is an open source tool for profiling network traffic and analyzing packets. Such a tool is often referred to as a network analyzer, network protocol analyzer, or sniffer.
 
-### Solution: Disable the Npcap loopback adapter
+#### Solution: Disable the Npcap loopback adapter
 
 Try to disable the Npcap loopback adapter, and then check whether the problem is resolved.
 
-</details>
-
 ### Remote Procedure Call (RPC) issues - RdCrypt Initialization failed
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 The following error entries are logged in the *WaAppAgent.log* file:
 
@@ -211,7 +195,7 @@ Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 
 These errors probably occur because of Remote Procedure Call (RPC) issues. For example, the RPC endpoint might not be listening, or the RPC process might be missing on the opposite end.
 
-### Solution: Start the CNG Key Isolation service
+#### Solution: Start the CNG Key Isolation service
 
 Check whether the [Cryptography Next Generation (CNG) Key Isolation](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#cng-key-isolation) (`CNGKEYISO`) Windows service is in the list of RPC endpoints. To do this, run the following [portqry](../../../windows-server/networking/portqry-command-line-port-scanner-v2.md) command:
 
@@ -221,12 +205,7 @@ portqry -n <VMName> -e 135
 
 If you don't see the `CNGKEYISO` process, start it from the Windows Services console (CNG Key Isolation = `KeyIso`), and then restart *WaAppAgent.exe* or *WindowsAzureGuestAgent.exe*.
 
-</details>
-
 ### PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 Windows Guest Agent is running, but extensions aren't working. The following error entries are logged in the *WaAppAgent.log* file:
 
@@ -239,7 +218,7 @@ PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
 
 These errors probably occur because of a lack of permissions on the *Crypto* folders for the SYSTEM account. If you collect a [Process Monitor](/sysinternals/downloads/procmon) (ProcMon) trace while you restart the Guest Agent services (RdAgent or WindowsAzureGuestAgent), you should be able to see some "Access Denied" errors.
 
-### Solution: Add full control of Crypto folders to the SYSTEM account
+#### Solution: Add full control of Crypto folders to the SYSTEM account
 
 Make sure that the SYSTEM account has **Full Control** permissions on the following folders:
 
@@ -249,12 +228,7 @@ Make sure that the SYSTEM account has **Full Control** permissions on the follow
 
 - *C:\\ProgramData\\Microsoft\\Crypto\\SystemKeys*
 
-</details>
-
 ### System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 The following error entries are logged in the *WaAppAgent.log* file to indicate that Guest Agent isn't responding:
 
@@ -270,7 +244,7 @@ Most likely, these errors occur because a third-party application was installed 
 
 A `BadImageFormatException` error occurs when a 64-bit application is loading a 32-bit DLL.
 
-### Solution: Set the Enable64Bit registry entry for .NET Framework and restart the VM
+#### Solution: Set the Enable64Bit registry entry for .NET Framework and restart the VM
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
@@ -280,12 +254,7 @@ If the **Enable64Bit** registry entry is set to **0**, then 64-bit .NET applicat
 
 The solution is to set the **Enable64Bit** key to **1**, and then restart the VM.
 
-</details>
-
 ### Windows Guest Agent doesn't start because of a ConfigurationErrorsException or TypeInitializationException error
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 Windows Guest Agent stops responding upon startup, and the following application log entries are logged:
 
@@ -332,7 +301,7 @@ Exception Info: System.TypeInitializationException
 
 This issue might occur if the *C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\Config\\machine.config* file is missing or corrupted.
 
-### Solution: Copy a working Machine.config file to the VM, and then restart the Guest Agent services
+#### Solution: Copy a working Machine.config file to the VM, and then restart the Guest Agent services
 
 To resolve the issue, follow these steps:
 
@@ -347,16 +316,11 @@ To resolve the issue, follow these steps:
    net start WindowsAzureGuestAgent
    ```
 
-</details>
-
 ### Installing Guest Agent fails
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 If trying to install Guest Agent fails, make sure that all [prerequisites for Guest Agent](/azure/virtual-machines/extensions/agent-windows#prerequisites) are satisfied.
 
-### Uninstall and reinstall Windows Guest Agent
+#### Solution: Uninstall and reinstall Windows Guest Agent
 
 1. Check in Add/Remove Programs whether Guest Agent is installed. 
 
@@ -390,12 +354,7 @@ If trying to install Guest Agent fails, make sure that all [prerequisites for Gu
     - C:\Windows\Panther\msiexec.log
     - C:\Windows\Panther\VmAgentInstaller.xml
 
-</details>
-
 ### Guest Agent installation fails because of faulty WMI
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 1. Download the latest [.msi file](https://github.com/Azure/WindowsVMAgent/releases) from the GitHub Releases for Windows Guest Agent.
 1. Install Guest Agent by using the msiexec command line + arguments
@@ -432,7 +391,7 @@ Event time="2019-12-12T12:49:05.123Z" category="INFO" source="GuestAgent"><SetRd
 
 The VM agent .msi file uses WMI StdRegProv to access the registry. If WMI isn't working correctly, the .msi file can't set the RdAgent service path from the registry. Therefore, the .msi file installation fails.
 
-### Solution
+#### Solution
 
 1. Open an elevated Command Prompt window.
 2. To test whether WMI StdRegProv is working, run the following WMIC command, and copy the output to a text file:
@@ -488,12 +447,7 @@ wmic service rdagent list brief
 
 10. At this point, if the **WMIC** command fails or still doesn't show that **RdAgent** is running, send the **C:\Windows\Panther\VMAgentInstall.xml** file to Microsoft Support for review.
 
-</details>
-
 ### Windows Azure Guest Agent service or the RdAgent service stops responding on startup 
-
-<details>
-<summary>Click here for troubleshooting details</summary>
 
 System event error 7031 or 7034 is logged, and the C:\WindowsAzure\logs\TransparentInstaller.log shows the following entry:
 
@@ -503,7 +457,7 @@ System event error 7031 or 7034 is logged, and the C:\WindowsAzure\logs\Transpar
 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config line 242)
 ```
 
-### Solution
+#### Solution
 
 This issue might occur if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should be enabled only while you debug a WCF issue. It shouldn't be left enabled while you run a production workload.
 
@@ -541,8 +495,6 @@ net start WindowsAzureGuestAgent
 ```
 
  - In some cases, the VM might have to be restarted for the WCF disablement to take effect.
-
-</details>
 
 ## Next steps
 

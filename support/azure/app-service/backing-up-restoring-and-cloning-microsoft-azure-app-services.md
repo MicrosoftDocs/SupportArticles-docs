@@ -6,6 +6,7 @@ ms.service: azure-app-service
 ms.author: shwagarwal
 author: ShwetaAgarwal-MS
 ms.reviewer: 
+ms.custom: sap:Configuration and Management
 ---
 # Backing up, restoring, and cloning Microsoft Azure App Service
 

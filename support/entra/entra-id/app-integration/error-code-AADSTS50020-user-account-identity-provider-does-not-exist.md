@@ -132,9 +132,8 @@ Use a tenant-specific endpoint (`https://login.microsoftonline.com/<TenantIDOrNa
 
 Error `AADSTS50020` might occur if the name of a guest user who was deleted in a resource tenant is re-created by the administrator of the home tenant. To verify that the guest user account in the resource tenant isn't associated with a user account in the home tenant, use one of the following options:
 
-### Verification: Check whether the resource tenant's guest user is older than the home tenant's user account
-
-To check the creation date of the guest user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
+### Verification: Use the following tools to verify Guest User status in Microsoft Entra ID
+To check whether the resource tenant's guest user is older than the home tenant's user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
 
 #### Microsoft Graph
 

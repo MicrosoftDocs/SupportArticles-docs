@@ -44,8 +44,10 @@ items:
       href: app-insights/telemetry/enable-self-diagnostics.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/telemetry/investigate-missing-telemetry.md
-    - name: Troubleshoot auto-instrumentation issues
+    - name: Troubleshoot autoinstrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot App Service monitoring issues
+      href: app-insights/telemetry/troubleshoot-app-service-issues.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
@@ -74,34 +76,36 @@ items:
             href: app-insights/data/how-to-update-third-party-server-configuration.md
           - name: Node.js
             href: app-insights/data/troubleshoot-app-insights-nodejs.md
-  - name: Application Insights experiences
+  - name: Application Insights portal experiences
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
-    - name: Troubleshoot Azure Application Insights availability monitoring
-      items:
-      - name: Availability monitoring common issues FAQ
-        href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
-      - name: Diagnose ping test failures
-        href: app-insights/availability/diagnose-ping-test-failure.md              
-      - name: Intermittent test failure and protocol violation error
-        href: app-insights/availability/intermittent-test-failure-protocol-error.md
-      - name: Use availability tests on an internal server behind a firewall
-        href: app-insights/availability/internal-server-availability-tests-firewall.md     
-      - name: Daily cap unexpected behaviors
-        href: app-insights/availability/daily-cap-unexpected-behaviors.md              
-      - name: Missing CPU Total and Committed Memory metrics
-        href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
-      - name: Portal connectivity issues
-        href: app-insights/availability/troubleshoot-portal-connectivity.md
-      - name: Troubleshoot user behavior analytics tools in Azure Application Insights
-        href: app-insights/availability/usage-troubleshoot.md
-  - name: Status Monitor and Change Analysis
+    - name: Troubleshoot Live Metrics issues
+      href: app-insights/troubleshoot-live-metrics.md
+    - name: Troubleshoot work item integration
+      href: app-insights/troubleshoot-work-item-integration.md
+  - name: Availability Tests
+    items:
+    - name: Availability monitoring common issues FAQ
+      href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
+    - name: Diagnose ping test failures
+      href: app-insights/availability/diagnose-ping-test-failure.md              
+    - name: Intermittent test failure and protocol violation error
+      href: app-insights/availability/intermittent-test-failure-protocol-error.md
+    - name: Use availability tests on an internal server behind a firewall
+      href: app-insights/availability/internal-server-availability-tests-firewall.md     
+    - name: Daily cap unexpected behaviors
+      href: app-insights/availability/daily-cap-unexpected-behaviors.md              
+    - name: Missing CPU Total and Committed Memory metrics
+      href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
+    - name: Portal connectivity issues
+      href: app-insights/availability/troubleshoot-portal-connectivity.md
+    - name: Troubleshoot user behavior analytics tools in Azure Application Insights
+      href: app-insights/availability/usage-troubleshoot.md
+  - name: Status Monitor
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
-    - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/agent/change-analysis-troubleshoot.md
 - name: Log Analytics
   items:
   - name: Configure and Manage Log analytics tables

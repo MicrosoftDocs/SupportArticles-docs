@@ -11,6 +11,7 @@ ms.custom:
 ---
 # Windows 365 Link connection fails with error "an interactive window could not be shown"
 
+
 This article helps resolve the connection error "an interactive window could not be shown."
 
 After you authenticate on the sign-in screen, you might encounter the following error message when connecting to your Cloud PC:

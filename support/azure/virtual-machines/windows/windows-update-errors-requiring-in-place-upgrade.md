@@ -1,6 +1,9 @@
 ---
 title: Troubleshoot Windows Update Errors That Require In-Place Upgrades for Azure VMs
 description: Learn how to resolve Windows Update errors that require in-place upgrades for Azure VMs.
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.service: azure-virtual-machines
 ms.date: 08/08/2025
 manager: dcscontentpm
 audience: itpro

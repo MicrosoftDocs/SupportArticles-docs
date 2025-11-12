@@ -4,13 +4,13 @@ description: This article shows how to resolve the error "Failed to start Switch
 services: virtual-machines
 documentationcenter: ''
 author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 tags: top-support-issue
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 09/15/2025
-ms.author: tibasham
 ---
 # Resolve "Failed to start Switch Root" for an Azure Linux VM
 

@@ -1,11 +1,11 @@
-items: 
+items:
 - name: 102 and incorrect syntax error with peer-to-peer replication
   href: peer-to-peer-replication-fails.md
 - name: 1205 error when you configure transactional replication
   href: error-1205-configure-transactional-replication.md
 - name: 20011 error the process could not execute sp_replcmds
   href: error-replication-log-reader-agent-fails.md
-- name: 20598 error the row was not found at the Subscriber when applying the replicated command 
+- name: 20598 error the row was not found at the Subscriber when applying the replicated command
   href: troubleshoot-error-20598.md
 - name: 213 error when attaching CDC enabled database
   href: attach-change-data-capture-database.md
@@ -15,6 +15,8 @@ items:
   href: cdc-capture-job-fails-processing-changes-table.md
 - name: CDC for Oracle results in transaction log growth
   href: sql-transaction-log-grows.md
+- name: Configuring transactional replication on multiple SQL Server Linux containers might fail
+  href: subscription-exists-linux-containers-transactional.md
 - name: Error message when you run the Distribution Agent
   href: error-run-distribution-agent.md
 - name: Fail to enumerate subscription properties
