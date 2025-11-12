@@ -14,7 +14,7 @@ appliesto:
 
 # AI-enabled Cloud PC known issues
 
-If your Cloud PC isn't working correctly, review the following topics to learn whether your issue is documented.
+If your Cloud PC isn't working correctly, first make sure that you've satisfied all the [minimum requirements for artificial intelligence (AI) features](/windows-365/enterprise/ai-enabled-cloud-pcs#requirements). If your account and your device meet those requirements, review the following topics to learn whether your issue is documented.
 
 ## AI-enabled status activation time
 
