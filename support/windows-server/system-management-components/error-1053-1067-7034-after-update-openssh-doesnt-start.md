@@ -97,7 +97,7 @@ Get-Acl C:\ProgramData | Select-Object -Property AccessToString | fl *
 
 Install Windows updates that allow the OpenSSH service to start even if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders don't have correct permissions. When you use this workaround, Windows logs Event ID 4. The description of Event ID 4 resembles the following excerpt:
 
-> For '%programdata\\ssh' folder, write access is granted to the following users: NT AUTHORITY\\Authenticated Users. Consider reviewing users to ensure that only NT AUTHORITY\\SYSTEM, AND THE BUILTIN\\Administrators group and its members have write access.
+> For '%programdata\\ssh' folder, write access is granted to the following users: NT AUTHORITY\\Authenticated Users. Consider reviewing users to ensure that only NT AUTHORITY\\SYSTEM, and the BUILTIN\\Administrators group and its members have write access.
 
 > [!NOTE]  
 > This message provides information only.
