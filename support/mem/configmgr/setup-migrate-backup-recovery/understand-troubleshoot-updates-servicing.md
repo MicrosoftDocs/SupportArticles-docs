@@ -14,7 +14,7 @@ This article helps administrators understand the **Updates and Servicing** proce
 
 Configuration Manager synchronizes with the Microsoft cloud service to get updates that apply to your infrastructure and version. You can install these updates from within the Configuration Manager console.
 
-To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing**  For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
+To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/mem/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Best practices for updates
 
@@ -24,13 +24,13 @@ Before you install updates from within the Configuration Manager console, review
 
 Review the following update checklists for actions to take before you start the update:
 
-- [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
-- [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
-- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
+- [Checklist for installing update 2503](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2503)
+- [Checklist for installing update 2409](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2409)
+- [Checklist for installing update 2403](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2403)
 
 ### Step 2: Run the prerequisite checker before you install an update
 
-Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
+Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/mem/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
 
 ## Glossary
 
@@ -64,8 +64,8 @@ Before you install an update, consider running the prerequisite check for that u
 > - Restarting the Configuration Manager Update service during the installation.
 > - Keeping the \CMUStaging\ folder open during the installation.
 
-> [!NOTE]  
-> After an update package starts installing, don't use [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-tool).
+> [!NOTE]
+> After an update package starts installing, don't use [CMUpdateReset.exe](/mem/configmgr/core/servers/manage/update-reset-tool).
 
 ### Identify the update package GUID
 
@@ -124,9 +124,9 @@ Select one of the following links to troubleshoot a particular stage, or work th
 
 ## Investigate the Synchronization and Applicability stages
 
-The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
+The [SCP](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
 
-The following steps provide an overview of the process that an online Service Connection Point uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/intune/configmgr/core/servers/manage/download-updates-flowchart).
+The following steps provide an overview of the process that an online Service Connection Point uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/mem/configmgr/core/servers/manage/download-updates-flowchart).
   
 <details><summary>To view the detailed steps, select here.</summary>
 
@@ -306,7 +306,7 @@ Use the flowchart to narrow down the issue at Applicability step. Accessing top-
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
 ```
 
-![Troubleshoot Applicability Graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Screenshot of the Troubleshoot Applicability flowchart.":::
 
 The main log to check is **HMAN.log**.
 
@@ -508,7 +508,7 @@ At this stage, the DMPDownloader component is responsible for downloading the Ea
 
 Use the flowchart to narrow down the issue at Download stage.
 
-![Troubleshoot Download graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg" alt-text="Screenshot of the Troubleshoot Download flowchart.":::
 
 #### Approaching Download Issues
 
@@ -520,10 +520,10 @@ If a specific URL found to be failing the download, the error resembling the fol
 
 In this case:
 
-1. Verify [Internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/intune/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
-2. Follow up on the proxy usage - and verify the site system configuration.
-3. Copy-paste URL to a browser and make sure the file downloads successfully with its digital signature being valid.
-4. Collect the network trace with any convenient tool and analyze the outcome.
+1. Verify [Internet access requirements](/mem/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/mem/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
+1. Follow up on the proxy usage - and verify the site system configuration.
+1. Copy-paste URL to a browser and make sure the file downloads successfully with its digital signature being valid.
+1. Collect the network trace with any convenient tool and analyze the outcome.
 
 See also the following article: [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
 
@@ -533,7 +533,7 @@ There are rare cases when DMPDownloader fails to unpack incoming files even if t
 
 #### Restarting update sync and download
 
-If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
+If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/mem/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
 
 
 ## Investigate the Replication, Prerequisite Check, or Installation stages
@@ -551,7 +551,7 @@ Best place to start with is **\Monitoring\Overview\Site Servicing\update package
 
 Use flowchart to narrow down the section responsible for the issue.
 
-![Replication and Installation graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Screenshot of the Replication and Installation flowchart.":::
 
 ## Replication
 
@@ -559,9 +559,9 @@ Once update package is downloaded, it must be replicated to other sites before i
 
 Once replicated, the Easy Setup Package is extracted back from Content Library of the Site Server into `\CMUStaging` folder to be used during the installation process.
 
-The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
+The following steps explain the [flow](/mem/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
 
-<details><Summary>Click here to expand Replication Steps</summary>
+<details><Summary>Select here to see the Replication steps</summary>
 
 ### Step 1: Initialization
 
@@ -703,7 +703,7 @@ Successfully created/updated the package CAS10001
 Then, HMAN creates a `<Update GUID>.CMI` file for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see HMAN.log:
 
 ```output
-Created notification file (E8E74B72-504A-4202-9167-8749C223D2A5.CMI) for CONFIGURATION_MANAGER_UPDATE
+Created notification file (E8E74B72-504A-4202-9167-8749c223d2a5.CMI) for CONFIGURATION_MANAGER_UPDATE
 ```
 
 The later moves the update package further to Prerequisite Check phase.
@@ -720,21 +720,21 @@ The first component involved is **HMAN**, which must detect a new package to be 
 
 Use flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check was triggered.
 
-![Replication graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Screenshot of the Replication troubleshooting flowchart.":::
 
-For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
+For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/mem/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
 
 #### Troubleshoot update package staying in State=2 (Enabled)
 
 If the **State** stays in 2 (Enabled), it likely identifies the **HMAN** component as unable to perform its job. Check **HMAN.log** for the following:
 
 1. Look for 2.ESC file processing.
-2. Filter by respective thread.
-3. Alternatively, look for the last SubstageID recorded in the message similar to the following: IsComplete=2 means Success and IsComplete=4 means Failure.
+1. Filter by respective thread.
+1. Alternatively, look for the last SubstageID recorded in the message similar to the following: IsComplete=2 means Success and IsComplete=4 means Failure.
 
     >Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 
-4. If the **HMAN.log** rolled over, attempt recreating the empty `2.ESC` file in `HMAN.box\CFD` manually. It should trigger the same process again.
+1. If the **HMAN.log** rolled over, attempt recreating the empty `2.ESC` file in `HMAN.box\CFD` manually. It should trigger the same process again.
 
 Note **HMAN** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails to access the share, the following error is logged:
 
@@ -939,8 +939,6 @@ Check Type: Easy Update ~ Site Server: BIG-CS1SITE.biglab.net,~ SQL Server: BIG-
 ...
 ```
 
-Note it logs also the **Check Type: Configuration Manager Update**. It defines the list of checks being performed.
-
 ### Step 6: Prerequisite checker performs the checks
 
 Once the checker is loaded, it goes through the actual checklist by spawning another thread. The checks are run for each role targeted - and also sorted by categories.
@@ -1045,7 +1043,7 @@ The update package is marked as "Prerequisite check passed" in the console. The 
 
 The flowchart assumes that the Prerequisite Check is either in progress for a long time - or failed. It applies to all Primary Sites and Central Administration Site (CAS) in multi-tier environments.
 
-![Prerequisite Check graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg" alt-text="Screenshot of the Prerequisite Check troubleshooting flowchart.":::
 
 There are two main kinds of issues with the prerequisite check.
 
@@ -1244,41 +1242,7 @@ INFO: Attempting to export arm64 boot image from ADK installation source
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001a, IsComplete=3, Progress=100, Applicable=1)
 ```
 
-Then it creates SMS_SITE_COMPONENT_MANAGER service (SiteComp) and drops the signal file resetall.trn to reinstall all site components:
-
-```output
-INFO: Checking Post-Upgrade script from update manifest ...
-Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001b, IsComplete=1, Progress=1, Applicable=1)
-INFO: Installing Site Component Manager ...
-Drop site role reset trnfile: E:\ConfigMgr\inboxes\sitecomp.box\resetall.trn
-INFO: Installing Site Component Manager...
-INFO: Installing Site Component Manager under acct <NT AUTHORITY\SYSTEM> path <E:\ConfigMgr\bin\x64\sitecomp.exe>~
-INFO: Running Post Auto Upgrade script.
-INFO: Starting Site Component Manager...
-INFO: Started Site Component Manager service
-INFO: Site Component Manager installation completed.
-Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001b, IsComplete=2, Progress=100, Applicable=1)
-```
-
-It updates the console and its bits:
-
-```output
-Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001d, IsComplete=1, Progress=1, Applicable=1)
-INFO: Required File list found in admin console UI manifest. Will update existing OSD Binaries cabs.
-INFO: Updating AdminUI manifest xml with AC_Extension cab file configmgr.ac_extension.amd64.cab.
-INFO: Upsert Console Version Data into Console_Files table.
-Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001d, IsComplete=1, Progress=75, Applicable=1)
-INFO: E:\ConfigMgr\bin\i386\ConsoleSetup.exe will be copied to E:\ConfigMgr\Tools\ConsoleSetup\ConsoleSetup.exe.
-INFO: E:\ConfigMgr\bin\i386\AdminConsole.msi will be copied to E:\ConfigMgr\Tools\ConsoleSetup\AdminConsole.msi.
-INFO: E:\ConfigMgr\bin\i386\ConfigMgr.AC_Extension.i386.cab will be copied to E:\ConfigMgr\Tools\ConsoleSetup\ConfigMgr.AC_Extension.i386.cab.
-INFO: E:\ConfigMgr\bin\i386\ConfigMgr.AC_Extension.amd64.cab will be copied to E:\ConfigMgr\Tools\ConsoleSetup\ConfigMgr.AC_Extension.amd64.cab.
-INFO: 0 language packs are selected. Admin Console language pack files will be copyed to E:\ConfigMgr\Tools\ConsoleSetup\.
-Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001d, IsComplete=2, Progress=100, Applicable=1)
-INFO: Existing console product code is '{C7A4084C-57A8-4BB8-AE7F-6B28088007DA}'.
-INFO: There were no applicable admin console patches found on this site server.
-```
-
-Once done, the CMUpdate service asynchronously waits for multiple processes to complete, including Sitecomp:
+Then, CMUpdate service asynchronously waits for multiple processes to complete, including Sitecomp:
 
 ```output
 ~   Starting ConfigMgr Update post installation monitor thread...
@@ -1353,7 +1317,7 @@ HMAN is also responsible of enabling new features after the upgrade.
 ### Installation result
 
 The update package is marked as "Installed" in the console. The `CM_UpdatePackages` table has the state set to **196612** for the update package of interest.
-Older packages are usually hidden from the console due to the Applicability check performed by HMAN after installation.
+Older packages are usually hidden from the console due to the Applicability check performed by HMAN.
 
 ### Troubleshoot Installation and Failures
 
