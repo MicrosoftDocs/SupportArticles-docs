@@ -857,6 +857,8 @@ items:
       href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
     - name: Upgrade fails and generates error code 0xC1900101-0x20017
       href: ./setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md
+    - name: Use the Windows Setup compatibility scan logs to identify blocking issues
+      href: ./setup-upgrade-and-drivers/use-windows-setup-compatibility-scan-logs-to-identify-blocking-issues.md
     - name: Windows 10 upgrade error codes
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
     - name: Windows 10 upgrade issues troubleshooting
@@ -879,8 +881,6 @@ items:
       href: ./setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
     - name: You can't access an EFI system partition
       href: ./setup-upgrade-and-drivers/cant-access-efi-system-partition.md
-    - name: How to use the Windows Setup compatibility scan logs to identify blocking issues
-      href: ./setup-upgrade-and-drivers/use-windows-setup-compatibility-scan-logs-to-identify-blocking-issues.md
   - name: Power management
     items:
     - name: Desktop wakes up unexpectedly from sleep or hibernation
