@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Error 0x800f0920
-description: Learn how to resolve Windows Update error 0x800f0920, caused by a hang in the Trusted Installer service.
+description: Learn how to resolve Windows Update error 0x800f0920 that occurs when the Trusted Installer service fails.
 manager: dcscontentpm
 audience: itpro
 ms.date: 11/11/2025
@@ -19,15 +19,15 @@ appliesto:
 
 ## Summary
 
-Error code 0x800f0920 indicates a hang was detected during the Windows Update installation process. This issue arises when the Trusted Installer service doesn't complete the installation within the default timeout period of 15 minutes.
+Error code 0x800f0920 indicates that the Windows Update installation process stopped responding. This issue occurs if the Trusted Installer service doesn't complete the installation within the default timeout period of 15 minutes.
 
 ## Prerequisites
 
-For virtual machines (VMs) running Windows in Azure, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+For Microsoft Azure virtual machines (VMs) that run Windows, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
-Check the `CBS.log` for entries similar to the following ones:
+Check the `CBS.log` for entries that resemble the following example:
 
 ```output
 2023-09-17 22:48:16, Info                  CBS    Startup: SC autostart event signaled
@@ -42,13 +42,12 @@ Check the `CBS.log` for entries similar to the following ones:
 2023-09-17 22:48:16, Info                  CBS    Setting original failure status: 0x800f0920, last forward execute state: CbsExecuteStateResolvePending
 ```
 
-## Root cause
+## Cause
 
-The error occurs because the Trusted Installer service doesn't finish the installation process within the default timeout period of 15 minutes. This can lead to a rollback and cancellation of the transaction.
+This error occurs because the Trusted Installer service doesn't complete the installation process within the default timeout period of 15 minutes. This failure can cause a rollback and cancellation of the transaction.
 
 ## Resolution
 
 For Windows-based computers, perform an [in-place upgrade](/windows-server/get-started/perform-in-place-upgrade#perform-the-in-place-upgrade). 
 
-For VMs running Windows in Azure, see [in-place upgrade on the Windows virtual machine](/azure/virtual-machines/windows-in-place-upgrade).
-
+For VMs that run Windows in Azure, see [in-place upgrade on the Windows virtual machine](/azure/virtual-machines/windows-in-place-upgrade).
