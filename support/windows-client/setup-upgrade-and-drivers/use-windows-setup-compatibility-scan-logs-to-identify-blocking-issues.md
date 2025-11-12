@@ -124,5 +124,5 @@ Windows inbox and appraiser processes and Dynamic update processes write and ref
 
 ## References
 
-- [Windows 10 upgrade resolution procedures](windows-10-upgrade-resolution-procedures.md?toc=%2Fwindows%2Fdeployment#0xc1900101)
+- [Windows 10 upgrade resolution procedures](windows-10-upgrade-resolution-procedures.md#0xc1900101)
 - [Windows upgrade log files](/windows/deployment/upgrade/log-files)
