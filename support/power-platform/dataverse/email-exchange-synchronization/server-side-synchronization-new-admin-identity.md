@@ -23,7 +23,7 @@ The key differences customers can expect are:
 2. For records created by synchronous customizations (such as workflows or plug-ins) running upon server-side sync operations and using the calling identity, the "Created By (delegate)" field will start showing the '# SSSAdminProd' user instead of being empty.
 3. The audit log entries for server-side sync operations that don't impersonate a system user will change from SYSTEM to '# SSSAdminProd'
 
-The following are a few sample scenarios to demonstrate what is changing and what is not (not a comprehensive list):
+The following are a few sample scenarios to demonstrate what is changing and what isn't (not a comprehensive list):
 
 ### Scenario 1: server-side sync picks up an email in 'Pending Send' state, sends it out, and moves it to 'Sent' state through a 'SetState' operation. A synchronous workflow runs on email update to create a contact using the calling identity
 
