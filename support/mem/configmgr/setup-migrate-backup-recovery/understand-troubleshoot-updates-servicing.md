@@ -491,7 +491,7 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 Note the notification file is just an XML that contains the update package GUID and its new State="262146" that marks that the update package is Downloaded.
 
-HMAN converts the file back to `.CMU` and moves it to `HMAN.box\CFD` similar to Manifest CAB file at [Synchronization](#step-1-dmpdownloader-sync). Then the following entry is logged in `HMAN.log` by CMUHandler thread:
+HMAN converts the file back to `.CMU` and moves it to `HMAN.box\CFD` similar to Manifest CAB file at [Synchronization](#process-step-1-dmpdownloader-download). Then the following entry is logged in `HMAN.log` by CMUHandler thread:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
