@@ -1,7 +1,7 @@
 ---
 title: SSSAdminProd user and server-side sync operations
 description: Provides guidance around the impact of the new identity used by server-side sync in Dynamics
-ms.date: 13/11/2025
+ms.date: 11/13/2025
 ---
 
 # SSSAdminProd user and server-side sync operations
