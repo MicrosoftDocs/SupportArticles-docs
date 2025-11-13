@@ -16,7 +16,7 @@ This article provides an overview of the changes customers can expect when serve
 
 ## Cause
 
-Server-side sync is changing the identity used for its operations against Dataverse. Historically, server-side sync would simply use the user named SYSTEM that all environments have. Moving forward, server-side sync operations will transition to use the '# SSSAdminProd' user. However, to preserve backward compatibility, the SYSTEM identity will still be used for some key server-side sync operations, which ensures that this change does not impact customer dependencies built around this identity.
+Server-side sync is changing the identity used for its operations against Dataverse. Historically, server-side sync would simply use the user named SYSTEM that all environments have. Server-side sync operations will transition to use the '# SSSAdminProd' user moving forward. However, to preserve backward compatibility, the SYSTEM identity will still be used for some key server-side sync operations, which ensures that this change does not impact customer dependencies built around this identity.
 
 The key differences customers can expect are:
 1. For records created or updated by server-side sync, the delegate auditing fields "Created By (delegate)" and "Mofieid By (delegate)" will start showing the '# SSSAdminProd' user instead of being empty. The content of the "Created By" and "Modified By" fields remains unchanged.
@@ -81,13 +81,13 @@ This transition is currently planned to happen somewhere between November 2025 a
 
 There is no way to opt out of this change, but you should contact support if anything breaks after transition.
 
-### 3. Moving forward, can we build dependencies (in the form of customizations, processes, etc.) around the fact that server-side sync performs its operations using '# SSSAdminProd'?
+### 3. In the future, can we build dependencies (in the form of customizations, processes, etc.) around the fact that server-side sync performs its operations using the '# SSSAdminProd' user?
 
 No. Much like the identity is changing now, it is also subject to changing again in the future, so any such dependencies could break.
 
-### 4. We built dependencies or processes around the identities that show up in the audit log or the delegate auditing fields when operations are performed by server-side sync. These identities are now changing. What should we do?
+### 4. We built dependencies or processes around the identities that show up in the audit log or the delegate auditing fields when server-side sync performs certain operations. These identities are now changing. What should we do?
 
-As these identities can and will be changing, we advise against building dependencies around observations and assumptions about how the system behaves at a particular point in time. Instead, refer to publicly documented system behaviors.
+As these identities can change, we advise against building dependencies around observations and assumptions about how the system behaves at a particular point in time. Instead, refer to publicly documented system behaviors.
 
 ### 5. We are not using server-side sync. Why is this user present? Can we disable it?
 
