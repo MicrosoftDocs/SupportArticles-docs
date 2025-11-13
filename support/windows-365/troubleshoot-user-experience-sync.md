@@ -22,7 +22,7 @@ This article provides troubleshooting steps for the most common issues related t
 Users might use a temporary profile to sign in, resulting in a temporary user experience. During the sign in process, users receive a notification. Windows displays another notification that states "We can't sign into your account."
 
 > [!NOTE]  
-> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality but any changes made during the session (settings, files, customizations) are discarded when the user signs out. Users see a notification that they've signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
+> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they've signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
 
 ### Individual user storage failed to attach to their session
 
@@ -53,7 +53,7 @@ Under normal conditions, the pooled user storage is consumed as users create ind
 
 - **Total size** and **Used size** are equal
 - **Available size** shows **0 GB**
-- The User Storage tab displays these metrics in the provisioning policy
+- The **User Storage** tab displays these metrics in the provisioning policy
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-full-storage-limit.png" alt-text="Figure 2: Pooled user storage that is at the policy limit":::
 
@@ -76,23 +76,23 @@ When pooled user storage is *near* capacity and multiple users sign in simultane
 When pooled user storage exceeds its limit, the provisioning policy enters a tolerance period to prevent further storage growth. During this period:
 
 - **Duration**: The tolerance period lasts for **7 days** from when the exceeded condition first occurs.
-- **User impact**: Existing users with individual storage can continue to sign in and access their personalized user experience.
+- **User impact**: Existing users who have individual storage can continue to sign in and access their personalized user experience.
 - **New user restrictions**: New users that attempt to sign in receive a temporary user experience until storage is freed up.
 - **Administrator actions**: Manually delete individual user storage or increase the Cloud PC count for the assignment.
 - **Automatic resolution**: If storage usage drops below the limit during the tolerance period, normal operations resume immediately.
 
 After the seven-day tolerance period expires:
 
-- **Service protection**: The service begins deleting individual user storage starting with the oldest based on the last attach timestamp. The quantity of individual user storage that's deleted is determined by the amount of space that's required for the policy to be under the policy limit.
+- **Service protection**: The service begins deleting individual user storage starting at the oldest (based on the last attach timestamp). The quantity of individual user storage that's deleted is determined by the amount of space that's required for the policy to be under the policy limit.
 
 > [!NOTE]  
 > Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
 
-## Resolve low or full user storage issues
+## Users experience low or full user storage issues
 
 When individual user storage becomes low or full, users might experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
-- [Free up space in OneDrive](/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
+- [Free up space in OneDrive](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
 - Review contents of the Downloads folder and delete files and folders that aren't needed
 - Manually run [Storage Sense](/windows/configuration/storage/storage-sense?tabs=settings)
 - Delete user storage (administrative action)
@@ -100,7 +100,7 @@ When individual user storage becomes low or full, users might experience perform
   > [!WARNING]  
   > Deleting user storage permanently removes all user data and settings. Before you proceed, make sure that the user backed up important data.
 
-  Administrators can delete user storage from the Windows 365 management portal:
+  Administrators can follow these steps to delete user storage by using the Windows 365 management portal:
 
   1. Sign in to the **Microsoft Intune admin center**.
   1. Navigate to **Devices** > **Windows 365** > **Provisioning policies**.
