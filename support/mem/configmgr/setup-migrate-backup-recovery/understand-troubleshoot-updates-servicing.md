@@ -122,7 +122,7 @@ Select one of the following links to troubleshoot a particular stage, or work th
 - [Investigate the Download stage](#investigate-the-download-stage)
 - [Investigate the Replication, Prerequisite Check, or Installation stages](#investigate-the-replication-prerequisite-check-or-installation-stages)
 
-## Investigate the Synchronization and Applicability stages
+## Investigate the Synchronization and Applicability check stages
 
 The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
 
@@ -248,7 +248,7 @@ Configuration Manager Update (PackageGuid=9390F966-F1D0-42B8-BDC1-8853883E704A) 
 
 </details>
 
-### Results of the Synchronization and Applicability processes
+### Results of the Synchronization and Applicability check processes
 
 The console displays new applicable updates and labels their state as **Available to Download** or **Ready to Install**. The applicability check might hide some update packages. To verify an update's state, check the **State** column in the CM_UpdatePackages table. In the table, available updates have entries in this column that resemble the following excerpts:
 
@@ -282,78 +282,91 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 - **SCP in Offline mode**
 
-  1. 
-  1. Check the data that you downloaded in the [Import](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#import) step, and verify that the the ConfigMgr.Update.Manifest.enc file is present.
-     1. If the file is missing, explore **ServiceConnectionTool.log** from Connect step for any errors related to **ConfigMgr.Update.Manifest.ENC** file download.
-     1. If the file is present, verify the **ServiceConnectionTool.log** generated at Import step.
+  > [!NOTE]  
+  > The following steps refer to the ServiceConnectionTool.log file, which resides in the same directory as the service connection tool. For more information about this file, see the [Log files](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#log-files) section of "Use the service connection tool for Configuration Manager."
 
-     After performing the Import step, the DMPDownloader on SCP should submit the State Message with the State=4.
+  1. Check the data that you downloaded in the [Import](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#import) step, and verify that the the ConfigMgr.Update.Manifest.enc file is present.
+     1. If the file is missing, review the entries in ServiceConnectionTool.log that were recorded during the [Connect](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#connect) step. Check for any errors that relate to downloading ConfigMgr.Update.Manifest.enc.
+     1. If the file is present, review the ServiceConnectionTool.log that were recorded during the Import step. If the file downloaded successfully, the log contains a state message 4 entry that resembles the following excerpt:
 
      ```output
      Successfully Dropped the state message 4~~
      ```
 
-### Troubleshoot the Applicability stage
+### Troubleshoot the Applicability check stage
 
+> [!NOTE]  
+> An issue in the Applicability check stage typically indicates that the Site Version information is in an inconsistent state because of a manual database change or a previous failed update. Under such circumstances, the check determines that the update doesn't apply.
+>
+> If a more recent update is available in the console, try to install it. A more recent update (that has a higher version number) might bypass the issue.
 
-The usual cause here is manual database manipulation or update failure that leaves the Site Version in inconsistent state; therefore, the specific update isn't found applicable.
-One may want to install a newer update if it's available in the console.
+If you suspect that your issue occurs in the Applicability check stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-Use the flowchart to narrow down the issue at Applicability step. Accessing top-level Site SQL Database required, same query as above identifies the State to start with:
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Screenshot of the Troubleshoot Applicability flowchart.":::
+
+ Additionally, you also need information from the top-level Site SQL Database. Use the following query:
 
 ```sql
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
 ```
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Screenshot of the Troubleshoot Applicability flowchart.":::
-
-The main log to check is **HMAN.log**.
+For the relevant log entries, see the HMAN.log file.
 
 #### Verify site database functions
 
-The site database functions must return the correct Site Version that correlates to other sources (like **smsexec.exe** binary version). Use the following SQL syntax to check the scalar function output:
+As part of troubleshooting the Applicability check stage, verify that the site database functions work correctly. The site database functions must return the correct Site Version. To check the scalar function output, run the following SQL query:
 
 ```sql
 SELECT dbo.fnCurrentSiteVersion()
 ```
 
-Note only _nnnn_ is the build number to look at. Minor build number _mm_ isn't used for the applicability purposes. If you spot a discrepancy, submit a ticket to Microsoft Support.
+Correlate the returned version information to other sources such as the version of the smsexec.exe binary file. The following table lists multiple sources of these values.
+
+> [!NOTE]  
+> The values might include both regular build numbers (expressed as *nnnn*) and minor build numbers (expressed as *mm*). Only the regular build numbers (*nnnn*) are relevant to troubleshooting this issue.
 
 | Location | Function/Value | Expected value |
 |---|---|---|
-| SQL DB | fnCurrentSiteVersion | 5.00.nnnn.1000 |
-| SQL DB | fnSetupFullVersion | 5.00.nnnn.10mm |
-| SQL DB | fnCurrentSiteVersion_INT/fnCurrentSiteVersion_INT_TABLE | 500nnnn |
-| Registry | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Setup\Full Version | 5.00.nnnn.1000 |
-| SQL DB | Sites.Version | 5.00.nnnn.1000 |
-| SMSExec.exe | Product Version | 5.00.nnnn.10mm |
+| SQL DB | fnCurrentSiteVersion | 5.00.*nnnn*.1000 |
+| SQL DB | fnSetupFullVersion | 5.00.*nnnn*.10*mm* |
+| SQL DB | fnCurrentSiteVersion_INT/fnCurrentSiteVersion_INT_TABLE | 500*nnnn* |
+| Registry | `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Setup\Full Version` | 5.00.*nnnn*.1000 |
+| SQL DB | Sites.Version | 5.00.*nnnn*.1000 |
+| SMSExec.exe | Product Version | 5.00.*nnnn*.10*mm* |
+
+If you spot a discrepancy, submit a ticket to Microsoft Support.
 
 ## Investigate the Download stage
 
-Each update package has a unique GUID (further referred as `Update GUID`). You can either explore the `manifest.xml` from unpacked `ConfigMgr.Update.Manifest.cab` or add "Package GUID" column to `\Administration\Overview\Updates and Servicing` node of the Console to identify the GUID of the update package you're interested in. Use it to follow all the later steps of update package processing.
+As described earlier, each update package has a unique GUID (also known as the update GUID or package GUID). To identify the GUID of the update package that you're interested in, you can either search for it in the Manifest.xml file (from the unpacked ConfigMgr.Update.Manifest.cab file) or add the **Package GUID** column to the **Administration** > **Overview** > **Updates and Servicing** node of the console . Use the package GUID to follow all the later processing steps for update packages.
 
-<details><summary>Click to expand the steps</summary>
+<details><summary>Select here to see the Download steps.</summary>
 
 ### Process step 1: DMPDownloader Download
 
-By default, DMPDownloader automatically initiates the download of the latest applicable update package.
+By default, DMPDownloader automatically initiates the download of the latest applicable update package. Alternatively, an Administrator can manually download any other applicable update package by selecting it in the console and then selecting **Download**.
 
-Administrator can opt in to download any other applicable  update package by selecting it in the console and clicking "Download" button. SMS Provider calls `spAddPackageToDownload` Stored Procedure to add the Package GUID to `CM_UpdatePackagesToDownload` table in SQL database for DMPDownloader to pick up.
+In either case, after the process starts, the SMS provider calls the `spAddPackageToDownload` stored procedure. The stored procedure adds the package GUID to the `CM_UpdatePackagesToDownload` table in the SQL database.
 
-DMPDownloader picks up the packages to download by running `spCMUCheckAvailableUpdates` stored procedure. The following entries are logged in DMPDownloader.log if a new update requires to be downloaded:
+DMPDownloader runs the `spCMUCheckAvailableUpdates` stored procedure to pick up the list of package GUIDs. If the list contains at least one package GUID, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high priority [State Messages](../update-management/state-messaging-description.md) to report the progress to the site server. The following entries are logged in DMPDownloader.log referring the  update package GUID (for example, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e`):
+DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the Site Server. DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
 Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\___CMUaxxtrjtn.SMX~~
 Successfully Dropped the state message 6~~
 ```
+
+> [!NOTE]  
+> In this excerpt, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e` is an example of a package GUID.
+
+
 
 Then DMPDownloader performs the actual download by the Payload URL from the manifest. The following entries are logged in DMPDownloader.log, note the State Message changes from 6 (FOUND_NEW_PACKAGE) to 10 (PAYLOAD_DOWNLOADED):
 
@@ -497,11 +510,11 @@ The update package GUID is also removed from `CM_UpdatePackagesToDownload` table
 
 </details>
 
-### Download Result
+### Result of the Download processes
 
-Admin Console displays the list of update packages with their states. The downloaded package content resides on SCP in the `EasySetupPayload` folder. The update package is marked as "Ready to Install" in the console.
+The console displays the list of update packages and their status as **Ready to Install**. The downloaded package content resides on the SCP in the EasySetupPayload folder.
 
-### Troubleshoot Download
+### Troubleshoot the Download stage
 
 At this stage, the DMPDownloader component is responsible for downloading the Easy Setup Payload and Redistributable files (Redists). In Offline mode, these files are imported by the Service Connection Tool (SCT). Then DMPDownloader must verify the files and inform the site server about their availability. Hence, the main log to check is **DMPDownloader.log**.
 
