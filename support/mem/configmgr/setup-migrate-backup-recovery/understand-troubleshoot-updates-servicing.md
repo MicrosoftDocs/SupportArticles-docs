@@ -55,7 +55,7 @@ Before you install an update, consider running the prerequisite check for that u
 ## Prepare to troubleshoot Updates and Servicing issues
 
 > [!IMPORTANT]  
-> When you troubleshoot an update or servicing issue, avoid the following actions:
+> When you troubleshoot an Updates and Servicing issue, avoid the following actions:
 >
 > - Manually cleaning up any related folders (\\EasySetupPayload, \\CMUStaging). Only manually change these if Microsoft Support instructs you to.
 > - Manually cleaning up any SQL tables. Only manually change these if Microsoft Support instructs you to.
@@ -69,7 +69,7 @@ Before you install an update, consider running the prerequisite check for that u
 
 ### Identify the update package GUID
 
-Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration\Update and Servicing** node.
+Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
 
 Sometimes, the console doesn't list the affected update package. In this case, you can find the GUID in the ConfigMgr database. To find the GUID, run a SQL query that resembles the following excerpt:
 
@@ -118,7 +118,7 @@ Knowing the stage at which the update failed gives you a starting point for trou
 
 Select one of the following links to troubleshoot a particular stage, or work through the sections for each stage.
 
-- [Investigate the Synchronization and Applicability stages](#investigate-the-synchronization-and-applicability-stages)
+- [Investigate the Synchronization and Applicability check stages](#investigate-the-synchronization-and-applicability-check-stages)
 - [Investigate the Download stage](#investigate-the-download-stage)
 - [Investigate the Replication, Prerequisite Check, or Installation stages](#investigate-the-replication-prerequisite-check-or-installation-stages)
 
