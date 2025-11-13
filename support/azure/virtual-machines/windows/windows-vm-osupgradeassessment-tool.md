@@ -1,12 +1,12 @@
 ---
 title: Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool
-description: Azure VM Windows OS Upgrade Assessment Tool
+description: Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Azure VM Windows OS Upgrade Assessment Tool
+# Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool
 
 **Applies to:** :heavy_check_mark: Windows VMs
 

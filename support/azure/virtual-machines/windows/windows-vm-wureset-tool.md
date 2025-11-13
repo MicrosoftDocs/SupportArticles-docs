@@ -12,9 +12,7 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 ## Overview
 
-This article offers you steps to run a script that resets the Windows Servicing stack for a virtual machine running in Azure. Running the tool can fix most general problems that prevent Windows Update from installing successfully. 
-
-This script is designed for troubleshooting update failures on Windows Server or Windows client systems.
+This PowerShell script is designed to resets the Windows Servicing stack for a virtual machine running in Azure. This article offers you steps to run a script that resets the Windows Servicing stack for a virtual machine running in Azure. Running the tool can fix most problems that prevent Windows Updates from installing successfully. 
 
 > [!NOTE]
 > This article is intended for use with support agents and IT professionals. If you're a home user and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
