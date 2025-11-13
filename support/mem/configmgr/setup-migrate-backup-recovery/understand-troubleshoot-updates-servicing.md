@@ -338,7 +338,7 @@ If you spot a discrepancy, submit a ticket to Microsoft Support.
 
 ## Investigate the Download stage
 
-As described earlier, each update package has a unique GUID (also known as the update GUID or package GUID). To identify the GUID of the update package that you're interested in, you can either search for it in the Manifest.xml file (from the unpacked ConfigMgr.Update.Manifest.cab file) or add the **Package GUID** column to the **Administration** > **Overview** > **Updates and Servicing** node of the console . Use the package GUID to follow all the later processing steps for update packages.
+As described earlier, each update package has a unique GUID (also known as the update GUID or package GUID). To identify the GUID of the update package that you're interested in, you can either search for it in the Manifest.xml file (from the unpacked ConfigMgr.Update.Manifest.cab file) or add the **Package GUID** column to the **Administration** > **Overview** > **Updates and Servicing** node of the console. Use the package GUID to follow all the later processing steps for update packages.
 
 <details><summary>Select here to see the Download steps.</summary>
 
