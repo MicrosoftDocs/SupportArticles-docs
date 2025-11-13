@@ -6,6 +6,7 @@ ms.service: azure-app-service
 ms.author: shwagarwal
 author: ShwetaAgarwal-MS
 ms.reviewer: 
+ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # How to troubleshoot temporary storage on Azure App Service
 

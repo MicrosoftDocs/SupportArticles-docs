@@ -3,7 +3,7 @@ title: Troubleshoot Intermittent Outbound Connection Errors
 description: Learn how to troubleshoot intermittent connection errors and related performance issues in Azure App Service.
 ms.topic: troubleshooting-general
 ms.date: 10/14/2025
-ms.custom: security-recommendations,fasttrack-edit
+ms.custom: sap:security-recommendations,fasttrack-edit,Networking
 ms.author: msangapu
 author: msangapu-msft
 manager: dcscontentpm
@@ -114,7 +114,7 @@ HTTP connection pooling
 
 ### Reuse connections
 
-For more pointers and examples on managing connections in Azure functions, see [Manage connections in Azure Functions](/azure/azure-functions/manage-connections).
+For more pointers and examples on managing connections in Azure Functions, see [Manage connections in Azure Functions](/azure/azure-functions/manage-connections).
 
 ### Use less aggressive retry logic
 

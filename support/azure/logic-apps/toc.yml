@@ -1,7 +1,11 @@
+items:
+
 - name: Welcome
   href: index.yml
 
 - name: Troubleshoot logic apps with connectors
   items:
-    - name:  Can't access the storage account services
+    - name: Can't access the storage account services
       href: common-error-deploy-logic-apps-private-storage-account.md
+    - name: Troubleshoot Azure Logic Apps setup and connectivity
+      href: troubleshoot-logic-apps-setup-connectivity.md

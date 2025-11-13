@@ -44,8 +44,10 @@ items:
       href: app-insights/telemetry/enable-self-diagnostics.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/telemetry/investigate-missing-telemetry.md
-    - name: Troubleshoot auto-instrumentation issues
+    - name: Troubleshoot autoinstrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot App Service monitoring issues
+      href: app-insights/telemetry/troubleshoot-app-service-issues.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
@@ -78,6 +80,10 @@ items:
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
+    - name: Troubleshoot Live Metrics issues
+      href: app-insights/troubleshoot-live-metrics.md
+    - name: Troubleshoot work item integration
+      href: app-insights/troubleshoot-work-item-integration.md
   - name: Availability Tests
     items:
     - name: Availability monitoring common issues FAQ

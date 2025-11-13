@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.service: azure-cloud-services-classic
 ms.date: 03/09/2022
 ms.reviewer: toan, shrahman
+ms.custom: sap:Application Code Deployment   
 ---
 # Deployment FAQs for Web Apps in Azure
 
