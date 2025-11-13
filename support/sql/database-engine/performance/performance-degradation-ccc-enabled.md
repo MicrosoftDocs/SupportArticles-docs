@@ -54,7 +54,7 @@ RECONFIGURE
 GO
 ```
 
-After modifying the configuration, restart the SQL Server services for the changes to take effect.
+After you modify the configuration, restart the SQL Server services for the changes to take effect.
 
 ## More information
 
