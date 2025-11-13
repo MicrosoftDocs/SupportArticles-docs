@@ -182,16 +182,18 @@ This change lets the web client or Safari browser store and use the `microsoft.u
 
 ## Windows 365 Authentication Issues in Government Environments Using Windows App on macOS
 
+- Government customers (GCC, GCC High) using **Windows 365** on macOS might encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
+- **Web browser access** to Windows 365 remains unaffected.
+- The Windows App on macOS doesn't properly detect the GCC High Windows 365 environment during discovery.
+- Required workspace URL (`https://rdweb.wvd.azure.us/api/arm/feeddiscovery`) isn't automatically identified during authentication.
+
 ### Possible Cause
 
-- Government customers (GCC, GCC High) using **Windows 365** on macOS may encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
-- **Web browser access** to Windows 365 remains unaffected.
-- The Windows App on macOS does not properly detect the GCC High Windows 365 environment during discovery.
-- Required workspace URL (`https://rdweb.wvd.azure.us/api/arm/feeddiscovery`) is not automatically identified during authentication.
-- This is by design and requires to choose **Add workspace** instead of **Work or School Account** for government customers.
+This behavior is by design and requires to choose **Add workspace** instead of **Work or School Account** for government customers.
 
 ### Solution
-- Instead of selecting **Add Account**, choose **Add Workspace**.
+
+- Instead of selecting **Add Account**, select **Add Workspace**.
 - Manually enter the following URL: `https://rdweb.wvd.azure.us/api/arm/feeddiscovery`.
 - The Windows 365 devices should now be discovered and added.
 
@@ -323,7 +325,7 @@ Delete individual user storage to be under the new limit. The new limit can be d
 
 ### Autopilot Device Preparation (DPP) initially shows as failed if timeout limit is reached
 
-Once you create the provisioning policy and you receive the error code `DevicePreparationProfileTimeout`, then the time-out limit has been reached and the Cloud PCs are provisioned without applying the Autopilot Device Preparation successfully.
+Once you create the provisioning policy and you receive the error code `DevicePreparationProfileTimeout`, then the timeout limit has been reached and the Cloud PCs are provisioned without applying the Autopilot Device Preparation successfully.
 
 #### Solution
 
@@ -331,7 +333,7 @@ Continue to wait as the Autopilot Device Preparation will continue to install in
 
 ### Cloud PC serial numbers don't show immediately in Windows Autopilot Device Preparation deployment status
 
-When monitoring the status of the Autopilot Device Preparation profile immediately after provisioning, the Cloud PC serial numbers are not available.
+When monitoring the status of the Autopilot Device Preparation profile immediately after provisioning, the Cloud PC serial numbers aren't available.
 
 #### Solution
 
