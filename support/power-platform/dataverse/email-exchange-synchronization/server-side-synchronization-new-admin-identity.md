@@ -32,21 +32,21 @@ The following are a few sample scenarios to demonstrate what is changing and wha
 |Before|SYSTEM|**Empty**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
 
-### Scenario 2: an email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
+### Scenario 2: an email is automatically tracked into Dynamics. A synchronous workflow runs on email create to create a contact using the calling identity
 
 |Scenario|Email Created By|Email Created By (delegate)|Email Mofieid By|Email Modified By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|-|-|
 |Before|SYSTEM|**SYSTEM**|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
 
-### Scenario 3: an  email is automatically tracked into Dynamics, for which server-side sync uses the DeliverIncoming SDK message. A plug-in runs synchronously on email creation to create a contact using the calling identity
+### Scenario 3: an  email is automatically tracked into Dynamics. A plug-in runs synchronously on email creation to create a contact using the calling identity
 
 |Scenario|Email Created By|Email Created By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|
 |Before|SYSTEM|**SYSTEM**|**SYSTEM**|SYSTEM|SYSTEM|**Empty**|SYSTEM|
 |After|SYSTEM|**'# SSSAdminProd'**|**'# SSSAdminProd'**|SYSTEM|SYSTEM|**'# SSSAdminProd'**|SYSTEM|
 
-### Scenario 4: an email is manually tracked into Dynamics, for which server-side sync uses the DeliverPromote SDK message. A synchronous workflow runs on email create to create a contact using the calling identity
+### Scenario 4: an email is manually tracked into Dynamics. A synchronous workflow runs on email create to create a contact using the calling identity
 
 |Scenario|Email Created By|Email Created By (delegate)|Email audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|
