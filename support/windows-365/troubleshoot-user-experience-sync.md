@@ -21,8 +21,7 @@ This article provides troubleshooting steps for the most common issues related t
 
 Users may be signed in with a temporary profile, resulting in a temporary user experience. Users will receive a notification during the sign in process. Windows displays another notification stating, "We can't sign into your account".
 
-> [!NOTE]
->
+> [!NOTE]  >
 > A temporary profile is a non-persistent Windows user profile created when the system cannot load or create the user's regular profile. The temporary profile provides basic functionality but any changes made during the session (settings, files, customizations) are discarded when the user signs out. Users will see a notification that they're signed in with a temporary profile, and their desktop and Start menu will appear with default Windows settings rather than their personalized configuration.
 
 ### Individual user storage failed to attach to their session
@@ -86,26 +85,26 @@ After the 7 day tolerance period expires:
 
 - **Service protection**: The service will begin deleting individual user storage starting with the oldest based on the last attach timestamp. The number of individual user storage deleted will be determined by the amount of space required for the policy to be under the policy limit.
 
-> [!NOTE]
+> [!NOTE]  
 > Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
 
 ## Resolve low or full user storage issues
 
 When individual user storage becomes low or full, users may experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
-- [Free up space in OneDrive](https://support.microsoft.com/en-us/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
+- [Free up space in OneDrive](/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
 - Review contents of the Downloads folder and delete files and folders that are not needed
 - Manually run [Storage Sense](/windows/configuration/storage/storage-sense?tabs=settings)
 - Delete user storage (administrative action)
 
-> [!WARNING]
-> Deleting user storage permanently removes all user data and settings. Ensure the user has backed up important data before proceeding.
+  > [!WARNING]  
+  > Deleting user storage permanently removes all user data and settings. Ensure the user has backed up important data before proceeding.
 
   Administrators can delete user storage from the Windows 365 management portal:
 
   1. Sign in to the **Microsoft Intune admin center**.
-  2. Navigate to **Devices** > **Windows 365** > **Provisioning policies**.
-  3. Select the appropriate provisioning policy.
-  4. Go to the **User Storage** tab.
-  5. Locate the user storage to delete.
-  6. Select **Delete** and confirm the action.
+  1. Navigate to **Devices** > **Windows 365** > **Provisioning policies**.
+  1. Select the appropriate provisioning policy.
+  1. Go to the **User Storage** tab.
+  1. Locate the user storage to delete.
+  1. Select **Delete** and confirm the action.
