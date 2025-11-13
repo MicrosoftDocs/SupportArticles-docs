@@ -73,18 +73,19 @@ In-place upgrade of Windows, for example from Windows 10 to Windows 11, isn't su
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
-1. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
-2. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
-3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
-4. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
+1. Run [Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool](windows-vm-osupgradeassessment-tool.md) to validate the OS upgrade path and any known issues.
+2. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
+3. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
+4. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+5. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
    > [!NOTE]  
    > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. Both VMs cannot run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
   
-5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
-6. In Windows Update, select **Check for updates**.
-7. When the Feature Update item appears, select **Download and install now**.
-8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
+6. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
+7. In Windows Update, select **Check for updates**.
+8. When the Feature Update item appears, select **Download and install now**.
+9. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
 If you have general questions about this procedure, post to [Microsoft Q&A](/answers/topics/azure-virtual-machines.html) and add the `azure-virtual-machines` tag to your question.
 
