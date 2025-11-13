@@ -2,7 +2,7 @@
 title: Windows 365 Enterprise and Frontline Known issues
 description: Learn about known issues for Windows 365 Enterprise.
 manager: dcscontentpm
-ms.date: 10/29/2025
+ms.date: 11/17/2025
 ms.topic: troubleshooting
 ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:
@@ -17,7 +17,7 @@ ms.collection:
 
 The following items are known issues for Windows 365 Enterprise.
 
-## First-time Cloud PC sign-in triggers Impossible Travel Location alert
+## First-time Cloud PC sign-in triggers an impossible travel location alert
 
 When you use Conditional Access, a user who signs in to a Cloud PC for the first time might trigger an impossible travel location alert.
 
@@ -27,11 +27,11 @@ When you use Conditional Access, a user who signs in to a Cloud PC for the first
 
 ## Watermarking support in Windows 365
 
-Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
+Watermarking support is configured on session hosts and enforced by the Remote Desktop client. You can configure Watermarking support by configuring a Group Policy Object (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
 
 ### Solution
 
-Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
+Check the GPO or the Intune Settings Catalog for the Intune Configuration profile that you used to configure Watermarking support. Make sure that the QR code embedded content setting is configured to **Device ID**.
 
 For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
@@ -39,7 +39,7 @@ For more information, see [Administrative template for Azure Virtual Desktop](/a
 
 ## In-place Windows upgrade might change the computer name
 
-Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 might cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
+Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 might cause the computer name to change to a name that has a prefix of "pps." The Intune device name remains unchanged.
 
 ### Solution
 
@@ -47,7 +47,7 @@ Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune d
 
 ## Windows 365 provisioning fails<!--38483005-->
 
-Windows 365 provisioning failures might occur if both of the following conditions are met:
+Windows 365 provisioning might fail if both of the following conditions are met:
 
 - The Desired State Configuration (DSC) extension isn't signed.
 - The PowerShell Execution policy is set to **AllSigned** in the GPO.
@@ -72,19 +72,19 @@ The following device compliance settings might report as **Not Compliant** when 
 
 ### Solution
 
-To enable secure boot on the Cloud PC, see [Reprovision](/windows-365/enterprise/reprovision-cloud-pc) the specific Cloud PC.
+To enable secure boot on the Cloud PC, reprovision the specific Cloud PC. for more information, see see [Reprovision a Cloud PC](/windows-365/enterprise/reprovision-cloud-pc)
 
-To remove not compliant settings:
+To remove "not compliant" settings:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
-2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
-3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
+1. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
+1. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When you enable single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When you enable single sign-on, you see a prompt to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
-To prevent this dialog from appearing, you can create a preconsented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
+To prevent this dialog from appearing, you can create a preconsented device group. To get started, fFollow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups).
 
 <a name='single-sign-on-user-connections-are-being-denied-through-azure-ad-conditional-access---42317382--'></a>
 
