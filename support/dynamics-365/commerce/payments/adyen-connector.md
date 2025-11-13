@@ -55,30 +55,32 @@ For more information about how to configure the payment connector for Adyen, see
 
 ### Symptoms
 
-The following error is logged in EventViewer:
+The following error is logged in Event Viewer:
 
 > Hardware station an exception occurred when trying to open a payment device and begin a transaction.. Exception: System.ArgumentNullException: Value cannot be null.
 > Parameter name: terminalSettings.TerminalId
 
-The Store Commerce app also displays the following error dialog to the point of sale (POS) user:
+The Store Commerce app also displays the following error message to the point of sale (POS) user:
 
-:::image type="content" source="./media/adyen-connector/hardware-station-config-error.png" alt-text="The error dialog for a hardware station error":::
+> There was an error communicating with the hardware station.
+
+:::image type="content" source="./media/adyen-connector/hardware-station-config-error.png" alt-text="Message about a hardware station error":::
 
 ### Cause
 
-This issue can occur in one of the following scenarios:
+This issue might occur in one of the following scenarios:
 
 - You don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station.
 - You configure the **EFT POS Register Number** value in Finance and Operations (F&O), but the Commerce Data Exchange (CDX) job for syncing data from F&O to the channel database hasn't run yet.
-- An outdated **EFT POS Register Number** is cached in the retail server.
+- An outdated **EFT POS Register Number** is cached on the retail server.
 
 ### Solution
 
-To solve this issue, follow these steps:
+To fix this issue, follow these steps:
 
 1. Follow the instructions in [Set up a Dynamics 365 register](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-dynamics-365-register).
 1. On the **Distribution schedule** page, run the **1070** and **1090** jobs.
-1. If the issue isn't resolved, consider reactivating the Store Commerce app. The previous value of the **EFT POS Register Number** field might be cached and needs to be reset by reactivating the Store Commerce App.
+1. If the issue isn't resolved, consider reactivating the Store Commerce app. The previous value of the **EFT POS Register Number** field might be cached and have to be reset by reactivating the Store Commerce App.
 
 ## Related content
 
