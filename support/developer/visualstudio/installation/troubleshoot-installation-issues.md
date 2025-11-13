@@ -85,7 +85,7 @@ To rollback with the Visual Studio Installer, follow these steps:
 
 To rollback with the command line:
 
-You can rollback the update programmatically by using the installer on the client machine and passing in the rollback command alongside the installation path instance. For more information, please visit [Use command-line parameters to install Visual Studio | Microsoft Learn.](/visualstudio/install/use-command-line-parameters-to-install-visual-studio)
+You can rollback the update programmatically by using the installer on the client machine and passing in the rollback command alongside the installation path instance. For more information, visit [Use command-line parameters to install Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio)
 
 #### 8. Contact our live chat
 
