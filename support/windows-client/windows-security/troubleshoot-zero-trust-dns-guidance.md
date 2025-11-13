@@ -31,7 +31,7 @@ After you deploy Zero Trust Domain Name System (ZTDNS) services, use this guidan
   - Deploy and test ZTDNS on pilot devices.
 
 - **Maintaining the ZTDNS deployment**
-  - When you add IP exceptions, document what exception was made and why.
+  - When you add an IP exception, document what exception was made and why.
   - To understand traffic patterns and identify issues early, monitor the Event Viewer logs.
   - To optimize ZTDNS deployment, conduct periodical reviews of the cofiguration and logs.
 
