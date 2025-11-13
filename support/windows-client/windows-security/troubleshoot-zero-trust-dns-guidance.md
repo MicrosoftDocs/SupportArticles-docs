@@ -41,13 +41,13 @@ If you experience connectivity issues after you deploy and enforce ZTDNS, follow
 
 ### Step 1: Verify that the trusted DNS servers are configured correctly
 
-Make sure that at least one trusted DNS server uses ZTDNS. Open a Windows Command Prompt window, and then run the following command:
+Make sure that at least one trusted DNS server is configured for ZTDNS. Open a Windows Command Prompt window, and then run the following command:
 
 ```console
 netsh ztdns show server
 ```
 
-This command displays all the trusted DNS servers that use Zero Trust DNS, including their protocol (DoH or DoT), IP address, and priority settings.
+This command displays all the trusted DNS servers that are configured for Zero Trust DNS, including their protocol (DoH or DoT), IP address, and priority settings.
 
 ### Step 2: Test the connectivity to the trusted DNS servers
 
@@ -120,7 +120,7 @@ To identify services that need exceptions, review the BlockedConnections log. Fo
 
 ### Step 6 (Advanced): Disable ZTDNS
 
-If you still can't resolve your primary issue, or if you can't configure an appropriate exception for a blocked service, disable ZTDNS. To disable ZTDNS enforcement and restore normal network connectivity, run the following command:
+If you still can't resolve your primary issue, disable ZTDNS. To disable ZTDNS enforcement and restore normal network connectivity, run the following command:
 
 ```console
 netsh ztdns set state enable=no audit=no
@@ -159,7 +159,7 @@ To troubleshoot these issues, follow these steps:
 
 ## How to find ZTDNS logs
 
-On Windows devices in a ZTDNS environment, you can use Event Viewer to monitor all attempted connections and configuration changes. To locate the ZTDNS logs in Event Viewer, follow these steps:
+On Windows devices that're configured to use ZTDNS, you can use Event Viewer to monitor all attempted connections and configuration changes. To locate the ZTDNS logs in Event Viewer, follow these steps:
 
 1. In the Search bar, enter **Event Viewer**, and then select it from the search results.
 1. In the left panel of Event Viewer, navigate to **Applications and Service Logs** > **Microsoft** > **Windows** > **ZTDNS**.
