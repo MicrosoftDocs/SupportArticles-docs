@@ -1,5 +1,5 @@
 ---
-title: Known issues for Windows 365 Enterprise
+title: Windows 365 Enterprise and Frontline Known issues
 description: Learn about known issues for Windows 365 Enterprise.
 manager: dcscontentpm
 ms.date: 10/29/2025
@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ---
 
-# Known issues: Windows 365 Enterprise and Frontline
+# Windows 365 Enterprise and Frontline known issues
 
 The following items are known issues for Windows 365 Enterprise.
 
