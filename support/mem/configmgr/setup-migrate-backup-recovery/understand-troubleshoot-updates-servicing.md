@@ -14,7 +14,7 @@ This article helps administrators understand the Updates and Servicing process i
 
 Configuration Manager synchronizes with the Microsoft Cloud service to get updates that apply to your infrastructure and version. You can use the Configuration Manager console to install these updates.
 
-To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/mem/configmgr/core/servers/manage/install-in-console-updates).
+To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Best practices for updates
 
@@ -24,13 +24,13 @@ Before you install updates by using the Configuration Manager console, review th
 
 Review the following update checklists for actions to take before you start the update:
 
-- [Checklist for installing update 2503](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2503)
-- [Checklist for installing update 2409](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2409)
-- [Checklist for installing update 2403](/mem/configmgr/core/servers/manage/checklist-for-installing-update-2403)
+- [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
+- [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
+- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
 
 ### Step 2: Run the prerequisite checker before you install an update
 
-Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/mem/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
+Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
 
 ## Glossary
 
@@ -57,7 +57,7 @@ Before you install an update, consider running the prerequisite check for that u
 > [!IMPORTANT]  
 > When you troubleshoot an update or servicing issue, avoid the following actions:
 >
-> - Manually cleaning up any related folders (\EasySetupPayload, \CMUStaging). Only manually change these if Microsoft Support instructs you to.
+> - Manually cleaning up any related folders (\\EasySetupPayload, \\CMUStaging). Only manually change these if Microsoft Support instructs you to.
 > - Manually cleaning up any SQL tables. Only manually change these if Microsoft Support instructs you to.
 > - Restoring the Configuration Manager database and/or Configuration Manager Site Server if there's an error during the upgrade. Instead, fix the issue, and then try again to install.
 > - Reinstalling a Service Connection Point during the installation.
@@ -65,7 +65,7 @@ Before you install an update, consider running the prerequisite check for that u
 > - Keeping the \CMUStaging\ folder open during the installation.
 
 > [!NOTE]  
-> After an update package starts installing, don't use [CMUpdateReset.exe](/mem/configmgr/core/servers/manage/update-reset-tool).
+> After an update package starts installing, don't use [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-tool).
 
 ### Identify the update package GUID
 
@@ -124,11 +124,11 @@ Select one of the following links to troubleshoot a particular stage, or work th
 
 ## Investigate the Synchronization and Applicability stages
 
-The [SCP](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
+The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
 
-The following steps provide an overview of the process that an online SCP uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/mem/configmgr/core/servers/manage/download-updates-flowchart).
+The following steps provide an overview of the process that an online SCP uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/intune/configmgr/core/servers/manage/download-updates-flowchart).
 
-<details><summary>Select here to see the Synchronization and Applicablity steps.</summary>
+<details><summary>Select here to see the Synchronization and Applicability steps for an online SCP.</summary>
 
 ### Process step 1: DMPDownloader: Synchronize
 
@@ -262,7 +262,7 @@ Updates that aren't applicable (and aren't visible in the console) have entries 
 
 ### Troubleshoot the Synchronization stage
 
-Use the following flowchart to investigate issues that might occur during the Synchronization stage.
+If you suspect that your issue occurs in the Synchronization stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg" alt-text="Diagram of a decision tree to determine whether an issue occurs during the Synchronization stage.":::
 
@@ -270,8 +270,8 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 - **SCP in Online mode**
 
-  1. On the SCP, check **DMPDownloader.log** for any error messages that the DMPDownloader generated while it downloaded and processed the manifest .cab file.
-  1. Verify that **HMAN.log** includes entries that resemble the following excerpt:
+  1. On the SCP, check the DMPDownloader.log file for any error messages that the DMPDownloader generated while it downloaded and processed the manifest .cab file.
+  1. Verify that  the HMAN.log file contains entries that resemble the following excerpt:
 
      ```output
      Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
@@ -282,9 +282,10 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 - **SCP in Offline mode**
 
-  1. Verify the presence of **ConfigMgr.Update.Manifest.ENC** in the downloaded data used for Import step.
-     1. If missing, explore **ServiceConnectionTool.log** from Connect step for any errors related to **ConfigMgr.Update.Manifest.ENC** file download.
-     1. If present, verify the **ServiceConnectionTool.log** generated at Import step.
+  1. 
+  1. Check the data that you downloaded in the [Import](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#import) step, and verify that the the ConfigMgr.Update.Manifest.enc file is present.
+     1. If the file is missing, explore **ServiceConnectionTool.log** from Connect step for any errors related to **ConfigMgr.Update.Manifest.ENC** file download.
+     1. If the file is present, verify the **ServiceConnectionTool.log** generated at Import step.
 
      After performing the Import step, the DMPDownloader on SCP should submit the State Message with the State=4.
 
@@ -518,7 +519,7 @@ If a specific URL found to be failing the download, the error resembling the fol
 
 In this case:
 
-1. Verify [Internet access requirements](/mem/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/mem/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
+1. Verify [Internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/intune/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
 1. Follow up on the proxy usage - and verify the site system configuration.
 1. Copy-paste URL to a browser and make sure the file downloads successfully with its digital signature being valid.
 1. Collect the network trace with any convenient tool and analyze the outcome.
@@ -531,7 +532,7 @@ There are rare cases when DMPDownloader fails to unpack incoming files even if t
 
 #### Restarting update sync and download
 
-If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/mem/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
+If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
 
 
 ## Investigate the Replication, Prerequisite Check, or Installation stages
@@ -557,7 +558,7 @@ Once update package is downloaded, it must be replicated to other sites before i
 
 Once replicated, the Easy Setup Package is extracted back from Content Library of the Site Server into `\CMUStaging` folder to be used during the installation process.
 
-The following steps explain the [flow](/mem/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
+The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
 
 <details><Summary>Select here to see the Replication steps.</summary>
 
@@ -720,7 +721,7 @@ Use flowchart to narrow down the issue at Replication step. Note it assumes that
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Screenshot of the Replication troubleshooting flowchart.":::
 
-For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/mem/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
+For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
 
 #### Troubleshoot update package staying in State=2 (Enabled)
 
@@ -786,7 +787,7 @@ Refer to **DistMgr.log** to track reprocessing of the Easy Setup Package.
 
 The following steps explain the process of extracting the update to run prerequisite checks before installing update packages at a Central Administration Site and Child Primary Sites.
 
-The current set of rules in the Prerequisite checks can be found in the [list of Prerequisite Checks](/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks). Updating a site causes only SOME checks to be performed.
+The current set of rules in the Prerequisite checks can be found in the [list of Prerequisite Checks](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks). Updating a site causes only SOME checks to be performed.
 
 <details><Summary>Prerequisite Check Steps</summary>
 
@@ -1113,7 +1114,7 @@ Cloud Management Gateway deployed as a Classic Cloud service blocks the upgrade.
 >**Check for a cloud management gateway (CMG) as a cloud service (classic)**
 >The option to deploy a cloud management gateway (CMG) as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. For more information, see [Process to convert a CMG to a virtual machine scale set](https://go.microsoft.com/fwlink/?linkid=2187166).
 
-Follow the public guidance on [moving to CMGv2](/mem/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
+Follow the public guidance on [moving to CMGv2](/intune/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
 
 ##### Only enhanced HTTP or HTTPS communication is allowed
 
@@ -1124,7 +1125,7 @@ The Prerequisite Check error text:
 >HTTPS or Enhanced HTTP are not enabled for client communication. HTTP-only communication is deprecated, and support is removed in this version of Configuration Manager.
 >To proceed with the upgrade, enable a more secure communication method for the site either by enabling HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
 
-You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with the Upgrade. Follow the official guidance on [Enable the site for HTTPS-only or enhanced HTTP](/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
+You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with the Upgrade. Follow the official guidance on [Enable the site for HTTPS-only or enhanced HTTP](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
 
 ## Installation
 
