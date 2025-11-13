@@ -263,7 +263,7 @@ If your flow takes longer than expected to trigger, the delay is likely caused b
 
       1. Use **Save As** on the flow to create several instances that process their own data. Because the quota is per flow, this approach serves as a workaround.
 
-1. A communication issue prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar issue caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try again.
+1. A communication issue prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar issue caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try triggering the flow again.
 
 ## Power Apps trigger issues
 
