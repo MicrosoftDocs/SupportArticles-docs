@@ -60,7 +60,7 @@ The following are a few sample scenarios to demonstrate what is changing and wha
 |Before|User|**Empty**|User|**Empty**|User|User|User|**Empty**|User|
 |After|User|**'# SSSAdminProd'**|User|**'# SSSAdminProd'**|User|User|User|**'# SSSAdminProd'**|User|
 
-### Scenario 6: an appointment is tracked into Dynamics through server-side sync. The tracking mailbox belongs to a user that's different from the appointment organizer, so which server-side sync doesn't use impersonation. A synchronous workflow runs on appointment create to create a contact using the calling identity
+### Scenario 6: an appointment is tracked into Dynamics through server-side sync. The tracking mailbox belongs to a user that's different from the appointment organizer, so server-side sync doesn't use impersonation. A synchronous workflow runs on appointment create to create a contact using the calling identity
 
 |Scenario|Appointment Created By|Appointment Created By (delegate)|Appointment Modified By|Appointment Modified By (delegate)|Appointment audit log identity|Contact owner|Contact Created By|Contact Created By (delegate)|Contact audit log identity|
 |-|-|-|-|-|-|-|-|-|-|
