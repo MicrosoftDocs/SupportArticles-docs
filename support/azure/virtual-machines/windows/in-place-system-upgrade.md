@@ -49,7 +49,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 ](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
    > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
 
-### Azure Virtual Desktop Single-Session Vs. Multi-Session Scenarios
+### Single-Session Vs. Multi-Session Scenarios Suport
 
 | **Scenario** | **Single-Session** | **Multi-Session** |
 |:-----|:-----|:-----|
@@ -60,7 +60,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 #### Can Windows Enterprise multi-session receive feature updates through Windows Server Update Services (WSUS)?
 You can update [Windows Enterprise multi-session with the appropriate feature updates published to WSUS](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system), the same as a single-session version of Windows. The underlying VM must meet the hardware requirements for the operating system you're using, such as the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support). 
 
-#### Can session hosts in a hostpool be upgraded?
+#### Can session hosts in a hostpool be upgraded (Azure Virtual Desktop)?
 In-place upgrade of Windows, for example from Windows 10 to Windows 11, isn't supported for session hosts in a pooled host pool. For more information, see [Can I do an in-place upgrade of a session host's operating system](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system).
 
 
