@@ -49,25 +49,11 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 ](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
    > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
 
-### Single-Session Vs. Multi-Session Scenarios Suport
+### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-| **Scenario** | **Single-Session** | **Multi-Session** |
-|:-----|:-----|:-----|
-| Windows 10 *(Ex: 21H2 → 22H2)* | Supported     | Supported | It is recommended to create a new AVD environment | 
-| Windows 10 → Windows 11      | Not Supported | Not Supported | It is recommended to create a new AVD environment |
-| Windows 11 *(Ex: 24H2 → 25H2)* | Supported | Supported | It is recommended to create a new AVD environment |
-
-#### Can Windows Enterprise multi-session receive feature updates through Windows Server Update Services (WSUS)?
-You can update [Windows Enterprise multi-session with the appropriate feature updates published to WSUS](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system), the same as a single-session version of Windows. The underlying VM must meet the hardware requirements for the operating system you're using, such as the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support). 
-
-#### Can session hosts in a hostpool be upgraded (Azure Virtual Desktop)?
-In-place upgrade of Windows, for example from Windows 10 to Windows 11, isn't supported for session hosts in a pooled host pool. For more information, see [Can I do an in-place upgrade of a session host's operating system](/azure/virtual-desktop/faq#can-i-do-an-in-place-upgrade-of-a-session-host-s-operating-system).
-
-
-### Windows versions out of support for in-place system upgrades
-
-- Windows 8.1 (End Of Service)
-- Windows 7 Enterprise (End Of Service)
+- Windows 10 and 11 single-session -> Enterprise multi-session, all versions
+- Windows 8.1
+- Windows 7 Enterprise
 
 ## In-place system upgrade process for a Windows 10 VM
 
