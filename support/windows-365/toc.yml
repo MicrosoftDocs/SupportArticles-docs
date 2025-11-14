@@ -33,7 +33,7 @@ items:
       href: troubleshoot-windows-365-app.md
   - name: Onboarding issues
     items:
-    - name: Known issues with Windows 365 Enterprise
+    - name: Windows 365 Enterprise known issues
       href: known-issues-enterprise.md
   - name: Partner Solutions for W365
     items:
