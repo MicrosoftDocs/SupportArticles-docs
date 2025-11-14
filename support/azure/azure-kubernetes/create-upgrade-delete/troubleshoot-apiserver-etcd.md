@@ -110,7 +110,7 @@ AzureDiagnostics
 | limit 100
 | project TimeGenerated, event, Category
 ```
-
+---
 In this example, the validating webhook is blocking the creation of some API server objects. Because this scenario might occur during bootstrap time, the API server and Konnectivity pods can't be created. Therefore, the webhook can't connect to those pods. This sequence of events causes the deadlock and the error message.
 
 ### Solution 2: Delete webhook configurations
@@ -194,7 +194,7 @@ kubectl delete flowschema aks-managed-apiserver-guard
 kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 ```
 > [!WARNING]
-> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-clients#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
+> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure/aks/best-practices-performance-scale-large#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
 
 - You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This is relevant if you are applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster’s requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and do not want AKS to automatically manage client throttling.
 
