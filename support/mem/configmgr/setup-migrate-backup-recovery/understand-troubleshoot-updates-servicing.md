@@ -342,7 +342,7 @@ As described earlier, each update package has a unique GUID (also known as the u
 
 <details><summary>Select here to see the Download steps.</summary>
 
-### Process step 1: DMPDownloader Download
+### Process step 1: DMPDownloader downloads the update and any supporting files
 
 By default, DMPDownloader automatically initiates the download of the latest applicable update package. Alternatively, an Administrator can manually download any other applicable update package by selecting it in the console and then selecting **Download**.
 
@@ -366,9 +366,7 @@ Successfully Dropped the state message 6~~
 > [!NOTE]  
 > In this excerpt, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e` is an example of a package GUID.
 
-
-
-Then DMPDownloader performs the actual download by the Payload URL from the manifest. The following entries are logged in DMPDownloader.log, note the State Message changes from 6 (FOUND_NEW_PACKAGE) to 10 (PAYLOAD_DOWNLOADED):
+Then DMPDownloader gets the payload URL from the manifest and then downloads the actual update. DMPDownloader logs entries that resemble the following excerpt, and changes the state message from `6 (FOUND_NEW_PACKAGE)` to `10 (PAYLOAD_DOWNLOADED)`.
 
 ```output
 EasySetupMaintenance - Redownload packages if needed~~
@@ -402,7 +400,7 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 Successfully write the update meta into outbox for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
 ```
 
-DMPDownloader places the CAB file to `\EasySetupPayload\<Update GUID>.cab` file on SCP. Then it extracts the contents of the file to the folder with the same name. The following entries are logged in DMPDownloader.log:
+DMPDownloader downloads the update to \\EasySetupPayload\\\<Update GUID>.cab` on the SCP, where \<Update GUID> represents the GUID of the update. Then it extracts the contents of the file to the folder that has the same name. DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Verify the payload signature, hash value and extract the payload~~
@@ -416,7 +414,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 25~~
 ```
 
-DMPDownloader then checks if the update contains fresh redistributable files. The following entries are logged in DMPDownloader.log:
+DMPDownloader then checks whether the update contains fresh redistributable files. DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Check if there is redist to download for update, 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -438,7 +436,7 @@ Successfully Dropped the state message 13~~
 EasySetupDownloadSinglePackage finishes downloading 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e. ~~
 ```
 
-To download the redistributable files, DMPDownloader reads the same `Manifest.xml` file that was used for Update Detection, since it contains Redist and LanguagePack URLs. For example:
+To download the redistributable files, DMPDownloader reads the same `Manifest.xml` file that it used to detect the update. The manifest contains Redist and LanguagePack URLs, as shown in the following excerpt:
 
 ```xml
 <Manifest>
@@ -454,7 +452,7 @@ To download the redistributable files, DMPDownloader reads the same `Manifest.xm
 </Content>
 ```
 
-Then DMPDownloader engages the usual ConfigMgr Redist Downloader `SetupDL.exe`. The following entries are logged in its log `ConfigMgrSetup.log` when `SetupDL.exe` downloads the redistributable files and language manifests:
+Then DMPDownloader engages the usual ConfigMgr Redist Downloader, SetupDL.exe. SetupDL.exe downloads the redistributable files and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
 
 ```output
 INFO: Attempting to load resource DLL...
@@ -466,7 +464,7 @@ INFO: Downloading https://go.microsoft.com/fwlink/?LinkID=2298749 as ConfigMgr.M
 INFO: Extracted file C:\Windows\TEMP\ConfigMgr.LN.Manifest.xml
 ```
 
-The manifest XMLs contain the list of redistributable files to download with download links and expected hashes. `SetupDL.exe` downloads the files, verifies the hashes and unpacks the files to `\EasySetupPayload\<Update GUID>\redist\` folder:
+The manifest XMLs contain the list of redistributable files to download, the download links, and expected hashes. SetupDL.exe downloads the files, verifies the hashes, and then unpacks the files to the \EasySetupPayload\<Update GUID>\redist\` folder. SetupDL.exe logs entries that resemble the following excerpt:
 
 ```output
 INFO: Verify directory E:\ConfigMgr\EasySetupPayload\3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e\redist\LanguagePack\MobileDevice\SMSSETUP\BIN\X64\
@@ -475,29 +473,29 @@ INFO: Setup downloader setupdl.exe: FINISHED
 
 ### Process step 2: Completing the Download
 
-As a result of the previous processing, the `\EasySetupPayload` share should contain a folder `\<Update GUID>` with integrated `\<Update GUID>\Redists`.
+As a result of the previous step, the \\EasySetupPayload shared folder contains a folder \\\<Update GUID> that has an integrated \\Redists folder.
 
-DMPDownloader puts a so-called CMU file to the one of the following locations:
+Depending on the SCP configuration, DMPDownloader puts a so-called CMU file in one of the following locations:
 
-- If the SCP is remote from the Site Server, the file is stored at `MP\OUTBOXES\MCM.box` to be moved by the MP File Dispatch manager (MPFDM) to `inboxes\hman.box\ForwardingMsg` for the Site Server.
-- If the SCP is collocated with the Site Server, the file is saved directly to located at `inboxes\hman.box\ForwardingMsg`.
+- If the SCP is remote from the Site Server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, the MP File Dispatch manager (MPFDM) moves the file to inboxes\\hman.box\\ForwardingMsg for the Site Server.
+- If the SCP is collocated with the Site Server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
-The file has MCM extension and contains the information to mark the update package as State="262146" aka "DOWNLOAD_SUCCESS":
+The file has a .mcm extension, and contains the information that marks the state of the update package as `State="262146"` (also known as `"DOWNLOAD_SUCCESS"`). The corresponding log entries resemble the following excerpt:
 
 ```output
 The CMU file name is E:\ConfigMgr\inboxes\hman.box\ForwardingMsg\___CMU3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e.MCM~~
 outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e" State="262146" ReportTime="2024-12-17T15:10:03" />~~
 ```
 
-Note the notification file is just an XML that contains the update package GUID and its new State="262146" that marks that the update package is Downloaded.
+Note the notification file is just an XML that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to `.CMU` and moves it to `HMAN.box\CFD` similar to Manifest CAB file at [Synchronization](#process-step-1-dmpdownloader-download). Then the following entry is logged in `HMAN.log` by CMUHandler thread:
+HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the Manifest .cab file during the [Synchronization stage](#process-step-1-dmpdownloader-download). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following exerpt:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
 ```
 
-The CMUHandler thread in HMAN processes the file and updates the `State` in `CM_UpdatePackages` table to "262146" (DOWNLOAD_SUCCESS) by calling `spCMUSetUpdatePackageState` SQL Stored Procedure. At Verbose logging level, the following entries are logged in HMAN.log:
+The CMUHandler thread processes the file and uses the `spCMUSetUpdatePackageState` stored procedure to update the State information in the `CM_UpdatePackages` table to `**"262146" (DOWNLOAD_SUCCESS)**. If HMAN is configured to log data at the Verbose logging level, it logs entries that resemble the following excerpt:
 
 ```output
 INFO: File without BOM : (E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU)
@@ -506,7 +504,7 @@ Updated CMUpdatePackage state to 262146 (PackageGuid=e8e74b72-504a-4202-9167-874
 deleted file E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU
 ```
 
-The update package GUID is also removed from `CM_UpdatePackagesToDownload` table upon receiving both "262146" (DOWNLOAD_SUCCESS) and "327679" (DOWNLOAD_FAILED) states.
+If the new State value is `"262146" (DOWNLOAD_SUCCESS)` or `"327679" (DOWNLOAD_FAILED)`, the update package GUID is removed from `CM_UpdatePackagesToDownload` table.
 
 </details>
 
@@ -516,36 +514,36 @@ The console displays the list of update packages and their status as **Ready to 
 
 ### Troubleshoot the Download stage
 
-At this stage, the DMPDownloader component is responsible for downloading the Easy Setup Payload and Redistributable files (Redists). In Offline mode, these files are imported by the Service Connection Tool (SCT). Then DMPDownloader must verify the files and inform the site server about their availability. Hence, the main log to check is **DMPDownloader.log**.
+During stage, the DMPDownloader component is responsible for downloading the Easy Setup Payload and Redistributable files (Redists). In Offline mode, these files are imported by the Service Connection Tool (SCT). Then DMPDownloader must verify the files and inform the site server about their availability. Hence, the main log to check is **DMPDownloader.log**.
 
-Use the flowchart to narrow down the issue at Download stage.
+Use the following flowchart to narrow down issues that might occur at the Download stage.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg" alt-text="Screenshot of the Troubleshoot Download flowchart.":::
 
-#### Approaching Download Issues
+#### How to approach download issues
 
-Make sure Redists are downloaded by "SetupDL.exe" by inspecting **ConfigMgrSetup.log**. This applies for both Online and Offline modes.
+Whether you use an online or offline SCP, to make sure that SetupDL.exe downloads Redists, review the ConfigMgrSetup.log file. If you find that a download from a specific URL failed, look for an entry that resembles the following in either DMPDownloader.log (online mode) or ServiceConnectionTool.log (offline mode):
 
-If a specific URL found to be failing the download, the error resembling the following is logged in DMPDownloader.log or ServiceConnectionTool.log:
+```output
+ERROR: Failed to download Admin UI content payload with exception: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.  
+```
 
-> ERROR: Failed to download Admin UI content payload with exception: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.  
+Then, follow these steps:
 
-In this case:
+1. Verify that the computer that hosts the SCP meets all [internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 requirements](/intune/configmgr/core/plan-design/security/enable-tls-1-2).
+1. If the site system configuration uses a proxy for connections, verify the proxy configuration.
+1. Copy the affected URL, and paste it in a browser to make sure that the file downloads successfully, and make sure that it has a valid digital signature.
+1. Use a network tracing tool to collect network traces of the download operation, and then review the results.
 
-1. Verify [Internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/intune/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
-1. Follow up on the proxy usage - and verify the site system configuration.
-1. Copy-paste URL to a browser and make sure the file downloads successfully with its digital signature being valid.
-1. Collect the network trace with any convenient tool and analyze the outcome.
+For more information about troubleshooting issues that affect specific downloads, see [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
 
-See also the following article: [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
+#### How to approach extraction issues
 
-#### Approaching extraction issues
-
-There are rare cases when DMPDownloader fails to unpack incoming files even if the content itself is fine. The usual cause is Anti-malware scan. Make sure the [Configuration Manager anti-malware exclusions](../endpoint-protection/recommended-antivirus-exclusions.md) are properly configured.
+There are rare cases when DMPDownloader fails to unpack incoming files even if the content itself is fine. Anti-malware scans can cause this issue. Make sure the [Configuration Manager anti-malware exclusions](../endpoint-protection/recommended-antivirus-exclusions.md) are properly configured.
 
 #### Restarting update sync and download
 
-If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
+If you suspect that the download has completed, but the content has been tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
 
 
 ## Investigate the Replication, Prerequisite Check, or Installation stages
