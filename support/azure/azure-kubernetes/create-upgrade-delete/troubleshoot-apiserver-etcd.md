@@ -86,6 +86,7 @@ Check the events that are related to your API server. You might see event messag
 
 > Internal error occurred: failed calling webhook "mutate.kyverno.svc-fail": failed to call webhook: Post "https\://kyverno-system-kyverno-system-svc.kyverno-system.svc:443/mutate/fail?timeout=10s": write unix @->/tunnel-uds/proxysocket: write: broken pipe
 
+#### Retrieve API Server Logs
 ##### [**Resource-specific**](#tab/resource-specific)
 
 ```kusto
