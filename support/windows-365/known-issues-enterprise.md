@@ -55,10 +55,10 @@ Windows 365 provisioning might fail if both of the following conditions are met:
 ### Solution
 
 1. Check if the Azure network connection (ANC) fails with the error "An internal error occurred. The virtual machine deployment timed out." If yes, review the related GPO.
-2. Check if the PowerShell Execution policy is set to **AllSigned**. If it is, either remove the GPO or reset the PowerShell Execution policy to **Unrestricted**.
-3. Retry the ANC health check. If the check succeeds, retry provisioning.
+1. Check if the PowerShell Execution policy is set to **AllSigned**. If it is, either remove the GPO or reset the PowerShell Execution policy to **Unrestricted**.
+1. Retry the ANC health check. If the check succeeds, retry provisioning.
 
-## Cloud PC reports as not compliant with compliance policy
+## Cloud PC reports as not compliant with the compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:
 
@@ -74,7 +74,7 @@ The following device compliance settings might report as **Not Compliant** when 
 
 To enable secure boot on the Cloud PC, reprovision the specific Cloud PC. for more information, see see [Reprovision a Cloud PC](/windows-365/enterprise/reprovision-cloud-pc)
 
-To remove "not compliant" settings:
+To remove the "not compliant" settings:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 1. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
@@ -82,9 +82,9 @@ To remove "not compliant" settings:
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When you enable single sign-on, you see a prompt to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When you enable single sign-on, users see a prompt to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. To connect, users select **Yes** in this dialog.
 
-To prevent this dialog from appearing, you can create a preconsented device group. To get started, fFollow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups).
+To prevent this dialog from appearing, you can create a preconsented device group. To get started, follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups).
 
 <a name='single-sign-on-user-connections-are-being-denied-through-azure-ad-conditional-access---42317382--'></a>
 
@@ -92,22 +92,22 @@ To prevent this dialog from appearing, you can create a preconsented device grou
 
 ### Possible cause
 
-To sign in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which might be the cause of the failed connection.
+To sign in by using single sign-on, the Remote Desktop client requests an access token to the Microsoft Remote Desktop app from Microsoft Entra. In issue in this request process might cause the failed connection.
 
 ### Troubleshooting steps
 
 Follow the steps in [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
-## Single sign-on users are immediately disconnected when the Cloud PC locks
+## When a Cloud PC locks, it immediately disconnects single sign-on users
 
-When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
+When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session to enable the following capabilities:
 
 - Users can use passwordless authentication to unlock their Cloud PC.
 - Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
-## Single sign-on users aren't asked to reauthenticate to Microsoft Entra ID when connecting from an unmanaged device <!--35593334-->
+## When single sign-on users connect from an unmanaged device, they aren't asked to reauthenticate to Microsoft Entra ID <!--35593334-->
 
 When you use single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
 
@@ -121,13 +121,13 @@ If you turn on the **Use Devices preview** setting in the Intune admin center, t
 
 ### Solution
 
-Turn off the **Use Devices preview** toggle in the upper-right corner of the **Devices** > **Overview** page.
+In the upper-right corner of the **Devices** > **Overview** page, turn off **Use Devices preview**.
 
 ## Cloud PC is stuck in a restart loop after a restore or resize action
 
 ### Possible cause
 
-This issue might occur for Cloud PCs provisioned before July 2022 that use either:
+This issue might occur for Cloud PCs provisioned before July 2022 that use either of the following mechanisms:
 
 - Microsoft Attack Surface Reduction rules (for example, [Manage attack surface reduction settings with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-asr-policy)), or
 - Third-party solutions that block the install language script execution during the post-provisioning process.  
@@ -140,15 +140,15 @@ Determine the root cause:
 
 1. Search the Windows Event log. If the system shows the following reboot event (1074), continue to step 2.
 
-    ```output
-    The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
-    Reason Code: 0x80040001
-    Shutdown Type: restart
-    Comment: DSC is restarting the computer.
-    ```
+   ```output
+   The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
+   Reason Code: 0x80040001
+   Shutdown Type: restart
+   Comment: DSC is restarting the computer.
+   ```
 
-2. Run `Get-DscConfigurationStatus` in an elevated command window. If the result shows a reboot pending for a job, continue to step 3.
-3. Run `Get-DscConfiguration` in an elevated command window. If the results show the DSC that installs the language, continue to the next section.
+1. In an administrative Windows PowerShell Command Prompt window, run `Get-DscConfigurationStatus`. If the result shows that a restart is pending for a job, continue to step 3.
+1. At the administrative command prompt, run `Get-DscConfiguration`. If the results show the DSC that installs the language, continue to the "Solution" section.
 
 ### Solution
 
@@ -157,22 +157,21 @@ To stop the restart loop, try either of these options:
 - Remove the Azure Site Recovery policies or switch the policies to Audit mode, and then apply the new policies to the Cloud PC.
 - In an elevated command window, run the following command to reboot the job:
 
-    `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
+  ```powershell
+  `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
+  ```
 
 ## Cloud PC connection issues for GCC High government customers<!--47633105-->
 
-Some GCC High government customers whose resources are deployed to `microsoft.us` environments might encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+Some GCC High government customers, whose resources are deployed to the `microsoft.us` environments, might encounter issues connecting to their Cloud PC when they use web clients or the Safari browser.
 
 ### Possible cause
 
 The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
 
-For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client or Safari browser uses the Cloud PC's domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client or Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
+For GCC High customers whose resources are deployed to `microsoft.us` environments, the web client or Safari browser uses the Cloud PC's domain name, which is different from `microsoft.us`, to determine the first-party domain. As a result, the web client or the Safari browser considers the `microsoft.us` cookies to be third-party cookies. If the web client or Safari browser blocks third-party cookies, it can't store the `microsoft.us` cookies or use them for authentication and authorization.
 
-- Being stored.
-- Used for authentication and authorization.
-
-As a result, you can't connect to your Cloud PC session.
+As a result, the affected customers can't connect to their Cloud PC sessions.
 
 ### Solution
 
@@ -180,22 +179,23 @@ Allow third-party cookies from `microsoft.us` in your Web client settings, Safar
 
 This change lets the web client or Safari browser store and use the `microsoft.us` cookies to connect to your Cloud PC session.  
 
-## Windows 365 Authentication Issues in Government Environments Using Windows App on macOS
+## Windows 365 authentication issues that occur in government environments when clients use Windows App on macOS
 
-- Government customers (GCC, GCC High) using **Windows 365** on macOS might encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
-- **Web browser access** to Windows 365 remains unaffected.
+- Government customers (GCC, GCC High) who use Windows 365 on macOS might encounter authentication failures when they use the Windows App to add a work or school account.
+- Web browser access to Windows 365 remains unaffected.
 - The Windows App on macOS doesn't properly detect the GCC High Windows 365 environment during discovery.
 - Required workspace URL (`https://rdweb.wvd.azure.us/api/arm/feeddiscovery`) isn't automatically identified during authentication.
 
 ### Possible Cause
 
-This behavior is by design and requires to choose **Add workspace** instead of **Work or School Account** for government customers.
+This behavior is by design. To add a device, government customers have to select **Add workspace** instead of **Work or School Account**.
 
 ### Solution
 
-- Instead of selecting **Add Account**, select **Add Workspace**.
-- Manually enter the following URL: `https://rdweb.wvd.azure.us/api/arm/feeddiscovery`.
-- The Windows 365 devices should now be discovered and added.
+1. Instead of selecting **Add Account**, select **Add Workspace**.
+1. Manually enter the following URL: `https://rdweb.wvd.azure.us/api/arm/feeddiscovery`.
+
+The Windows 365 devices should now be discovered and added.
 
 ## Windows Security reports "Memory Integrity is off. Your device may be vulnerable." <!--48643259-->
 
@@ -203,30 +203,28 @@ Windows Security reports "Memory Integrity is off. Your device may be vulnerable
 
 In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
-This issue can be caused when nested virtualization is turned on. When nested virtualization is turned on, it requires a running nested hypervisor, which inhibits Direct Memory Access (DMA) protections. DMA protections are required when running VBS.
+This issue can occur when nested virtualization is turned on. Nested virtualization requires a running nested hypervisor, which inhibits Direct Memory Access (DMA) protections. DMA protections are required when running VBS.
 
 ### Solution
 
-Make sure that:
-
-- Nested virtualization was turned off for the Cloud PC.
-- Policies have VBS enabled with DMA protection.
+1. For each Cloud PC, turn off nested virtualization.
+1. Policies that enforce VBS also enforce DMA protection.
 
 Another option is to not require DMA for VBS because they're incompatible with each other.
 
 ## Microsoft Teams isn't enforcing screen capture protection<!-- 49423094 -->
 
-When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud PCs isn't enforcing screen capture protection.
+When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud PCs doesn't enforce screen capture protection.
 
 ### Troubleshooting steps
 
 - Confirm that the WebRTC version is up-to-date.
-- Confirm that the screen capture protection policy is configured correctly to have the client and server selected:
+- Confirm that the screen capture protection policy is configured correctly to protect both the client and server:
 
-  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**, and then choose the policy.
-  2. Under  **Configuration settings**, select **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**, and then make sure the following is set:
-      - **Enable screen capture protection** = **Enable**
-      - **Screen Capture Protection Options** = **Block screen capture on client and server**
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**, and then select the policy.
+  1. Under **Configuration settings**, select **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**, and then configure the following settings:
+     - **Enable screen capture protection** = **Enable**
+     - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
 ## Windows 365 scope tags and nested groups
 
@@ -242,17 +240,17 @@ The Windows 365 user interface and Graph API don't support the editing of scope 
 
 ### Solution
 
-Edit scope tags for individual Cloud PCs on Intune's **All Devices** blade to sync the scope tag associations to the Windows 365 service.
+To sync the scope tag associations to the Windows 365 service, edit scope tags for individual Cloud PCs on Intune's **All Devices** blade.
 
-## Scope tags for custom images can't be edited
+## Can't edit scope tags for custom images
 
-Scope tags applied to custom images can't be edited or directly added by top-level admins.
+Top-level administrators can't add or edit scope tags that are applied to custom images.
 
 ### Solution
 
-When scoped admins create custom images, those custom images are tagged with the same scope tags that are associated with the scoped admin.  
+When a scoped admin creates a custom image, the custom image is tagged with the same scope tags that are associated with the scoped admin.  
 
-For example, if an admin scoped with the scope tag "Scope Tag A" creates a custom image, the created custom image is automatically tagged with "Scope Tag A."  
+For example, if a scoped admin who's associated with the "Scope Tag A" scope tag creates a custom image, the created custom image is automatically tagged by using "Scope Tag A."  
 
 ## WebRTC Redirector Service is missing from the latest Windows 365 Cloud PC gallery images
 
@@ -269,75 +267,76 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps in [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
-- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
+- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, see [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
 
 ## Windows 365 Frontline issues
 
-The following are issues for Windows 365 Frontline:
+The following items are known issues for Windows 365 Frontline.
 
-### Users can't access Frontline Cloud PCs in shared mode
+### Users can't access Frontline Cloud PCs that are in shared mode
 
-When Frontline Cloud PCs in shared mode are assigned to a Microsoft Entra ID group with more than 10,000 members, some users might not receive access and won't see the Cloud PC cards in the Windows app client.
+When Frontline Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
 
 #### Solution
 
 Reduce the Microsoft Entra ID group membership to fewer than 10,000 users.
 
-### Can't decrease Cloud PC count when all Cloud PCs fail provisioning
+### Can't decrease the Cloud PC count when all Cloud PCs fail provisioning
 
-If provisioning fails due to a Windows Autopilot Device Preparation Profile (DPP) failure and all Cloud PCs show no successfully provisioned devices, administrators can't decrease the number of Cloud PCs in the assignment configuration.
+If a Windows Autopilot Device Preparation Profile (DPP) failure causes Cloud PC provisioning to fail, and all Cloud PCs show no successfully provisioned devices, administrators can't decrease the number of Cloud PCs in the assignment configuration.
 
 #### Solution
 
 Perform a reprovisioning action in the provisioning policy:
 
-   1. Navigate to **Microsoft Intune admin center** > **Devices** > **Windows 365**
-   2. Select **Provisioning policies**
-   3. Choose the affected provisioning policy
-   4. Select **Reprovision** to reset the deployment state
-   5. After reprovisioning completes, you can adjust the Cloud PC count as needed
+1. Go to **Microsoft Intune admin center** > **Devices** > **Windows 365**.
+1. Select **Provisioning policies**.
+1. Select the affected provisioning policy.
+1. To reset the deployment state, elect **Reprovision**.
+1. After the reprovisioning process completes, you can adjust the Cloud PC count as needed.
 
 ### Scheduled reprovisioning doesn't recover after license changes
 
-When Frontline Cloud PCs are provisioned in shared mode and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned until valid licenses are restored. After licenses are added back, Cloud PCs provision according to the policy configurations, but both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
+When Frontline Cloud PCs are provisioned in shared mode, and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned. After you add back valid licenses, Cloud PCs provision according to the policy configurations. However, both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
 
 #### Solution
 
-To restore full reprovisioning functionality after license expiration:
+To restore full reprovisioning functionality after you restore expired licenses:
 
-   1. **Remove the provisioning policy assignment:**
-      - Navigate to the affected provisioning policy
-      - Go to the **Assignments** tab
-      - Remove all group assignments
+1. **Remove the provisioning policy assignment:**
+   1. Go to the affected provisioning policy.
+   1. Go to the **Assignments** tab, and the remove all group assignments.
 
-   2. **Re-add the assignment:**
-      - Wait 5-10 minutes for the removal to process
-      - Add the group assignments back to the policy
-      - Verify that reprovisioning options are now available
+
+1. **Re-add the assignment:**
+   1. Wait 5-10 minutes for the removal to process.
+   1. Add the group assignments back to the policy.
+   1. Verify that the reprovisioning options are now available.
 
 ### Can't decrease Cloud PC count due to pooled user storage limits
 
-The number of Cloud PCs for Frontline Cloud PCs in shared mode can't be decreased when it would cause the pooled user storage limit to be exceeded.
+You can't reduce the number of Cloud PCs for Frontline Cloud PCs in shared mode if the operation would cause the amount of pooled user storage to exceed its limit.
 
 #### Solution
 
-Delete individual user storage to be under the new limit. The new limit can be determined by multiplying the new Cloud PC count by the OS disk size in GB.
+1. To determine a new pooled user storage limit, multiply the number of Cloud PCs that you want by the size of the operating system disks (in GB) that you want to use.
+1. Delete individual user storage to comply with new limit.
 
 ### Autopilot Device Preparation (DPP) initially shows as failed if timeout limit is reached
 
-Once you create the provisioning policy and you receive the error code `DevicePreparationProfileTimeout`, then the timeout limit has been reached and the Cloud PCs are provisioned without applying the Autopilot Device Preparation successfully.
+After you create the provisioning policy, you receive the `DevicePreparationProfileTimeout` error code. This means that the Cloud PC provisioning process reached the initial DPP timeout but hasn't successfully applied Autopilot Device Preparation.
 
 #### Solution
 
-Continue to wait as the Autopilot Device Preparation will continue to install in the background after the initial timeout period.
+Wait for the process to continue. Autopilot Device Preparation continues to install in the background after the initial timeout period.
 
-### Cloud PC serial numbers don't show immediately in Windows Autopilot Device Preparation deployment status
+### Windows Autopilot Device Preparation deployment status doesn't immediately show Cloud PC serial numbers
 
-When monitoring the status of the Autopilot Device Preparation profile immediately after provisioning, the Cloud PC serial numbers aren't available.
+Immediately after provisioning, the status information for the Autopilot Device Preparation profile doesn't include the Cloud PC serial numbers.
 
 #### Solution
 
-Cloud PC serial numbers can take up to 30 minutes.
+Wait for the process to continue. Cloud PC serial numbers can take up to 30 minutes to appear in the status information.
 
 ## Next steps
 
