@@ -187,7 +187,7 @@ kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 
 - Scale down the cluster to reduce the load on the API server. 
 - If Step 1 identifies a recently added controller, CRD, or DaemonSet as the primary driver of API server overload, remove the associated object from the cluster.
-- Use [Control Plane Metrics](/azure/aks/control-plane-metrics-monitor.md) to monitor the load on the API server. Refer the [blog](https://techcommunity.microsoft.com/blog/appsonazureblog/azure-platform-metrics-for-aks-control-plane-monitoring/4385770) for more details.
+- Use [Control Plane Metrics](/azure/aks/control-plane-metrics-monitor) to monitor the load on the API server. Refer the [blog](https://techcommunity.microsoft.com/blog/appsonazureblog/azure-platform-metrics-for-aks-control-plane-monitoring/4385770) for more details.
 - Once the above steps are complete, delete aks-managed-apiserver-guard
 ```bash
 kubectl delete flowschema aks-managed-apiserver-guard
