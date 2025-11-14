@@ -163,7 +163,7 @@ kubectl get prioritylevelconfigurations
 
 <br>
 
-<img src="media/troubleshoot-apiserver-etcd/priority-level-configuration.png" alt="FlowSchema" width="600">
+<img src="media/troubleshoot-apiserver-etcd/priority-level-configuration.png" alt="PriorityLevelConfiguration" width="600">
 
 <br>
 
@@ -178,20 +178,20 @@ kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 
 #### Step 1: Identify unoptimized clients
 
-- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients) for further guidance on client optimization.
+- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure/aks/best-practices-performance-scale-large.md#kubernetes-clients) for further guidance on client optimization.
 
 #### Step 2: Mitigation
 
 - Scale down the cluster to reduce the load on the API server. 
 - If Step 1 identifies a recently added controller, CRD, or DaemonSet as the primary driver of API server overload, remove the associated object from the cluster.
-- Use [Control Plane Metrics](/azure-aks-docs-pr/articles/aks/control-plane-metrics-monitor.md) to monitor the load on the API server. Refer the [blog](https://techcommunity.microsoft.com/blog/appsonazureblog/azure-platform-metrics-for-aks-control-plane-monitoring/4385770) for more details.
+- Use [Control Plane Metrics](/azure/aks/control-plane-metrics-monitor.md) to monitor the load on the API server. Refer the [blog](https://techcommunity.microsoft.com/blog/appsonazureblog/azure-platform-metrics-for-aks-control-plane-monitoring/4385770) for more details.
 - Once the above steps are complete, delete aks-managed-apiserver-guard
 ```bash
 kubectl delete flowschema aks-managed-apiserver-guard
 kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 ```
 > [!WARNING]
-> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
+> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure/aks/best-practices-performance-scale-large.md#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
 
 - You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This is relevant if you are applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster’s requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and do not want AKS to automatically manage client throttling.
 
@@ -332,29 +332,29 @@ AKSAudit
 
 ##### [**Azure diagnostics**](#tab/azure-diagnostics)
 
-    ```kusto
-    AzureDiagnostics
-    | where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
-    | where Category == "kube-audit" 
-    | extend event = parse_json(log_s) 
-    | extend HttpMethod = tostring(event.verb) 
-    | extend Resource = tostring(event.objectRef.resource) 
-    | extend User = tostring(event.user.username) 
-    | where User == "DUMMYUSERAGENT"  // Filter by name of the useragent you are interested in
-    | where Resource != ""
-    | extend start_time = todatetime(event.requestReceivedTimestamp)
-    | extend end_time = todatetime(event.stageTimestamp)
-    | extend latency = datetime_diff('millisecond', end_time, start_time)
-    | summarize p99latency=percentile(latency, 99) by HttpMethod, Resource 
-    | render table  
-    ```
+```kusto
+AzureDiagnostics
+| where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
+| where Category == "kube-audit" 
+| extend event = parse_json(log_s) 
+| extend HttpMethod = tostring(event.verb) 
+| extend Resource = tostring(event.objectRef.resource) 
+| extend User = tostring(event.user.username) 
+| where User == "DUMMYUSERAGENT"  // Filter by name of the useragent you are interested in
+| where Resource != ""
+| extend start_time = todatetime(event.requestReceivedTimestamp)
+| extend end_time = todatetime(event.stageTimestamp)
+| extend latency = datetime_diff('millisecond', end_time, start_time)
+| summarize p99latency=percentile(latency, 99) by HttpMethod, Resource 
+| render table  
+```
 ---
 
 The results from this query can be useful to identify the kinds of API calls that fail the upstream Kubernetes SLOs. In most cases, an offending client might be making too many `LIST` calls on a large set of objects or objects that are too large. API server or etcd scalability limits is multi dimensionsal and are explained in [Kubernetes Scalability thresholds](https://github.com/kubernetes/community/blob/master/sig-scalability/configs-and-limits/thresholds.md).
 
 ### Solution 5a: Tune your API call pattern
 
-To reduce the pressure on the control plane, consider tuning your client's API server call pattern. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients).
+To reduce the pressure on the control plane, consider tuning your client's API server call pattern. Refer to [best practices](/azure/aks/best-practices-performance-scale-large.md#kubernetes-clients).
 
 ### Solution 5b: Throttle a client that's overwhelming the control plane
 
