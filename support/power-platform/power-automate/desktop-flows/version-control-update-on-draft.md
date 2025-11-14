@@ -1,8 +1,8 @@
 ---
 title: Handle version control error when saving as draft or publishing a flow in an unmodified context when there is an unpublished active row
 description: Provides a resolution for the attempting to do a published update of a component in an unmodified context when there is an unpublished active row error when using version control in Power Automate for desktop.
-author: nimoutzo
-ms.author: nimoutzo
+author: Nikos.Moutzourakis
+ms.author: Nikos.Moutzourakis
 ms.date: 11/13/2025
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
