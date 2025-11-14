@@ -19,10 +19,12 @@ This article provides troubleshooting steps for the most common issues related t
 
 ## Users receive a warning about a temporary user experience
 
-Users might use a temporary profile to sign in, resulting in a temporary user experience. During the sign in process, users receive a notification. Windows displays another notification that states "We can't sign into your account."
+When a user signs in, Windows might notify them that they've signed in by using a temporary profile instead of the user's regular profile. Windows also displays another notification that states "We can't sign into your account." As a result, the user has a temporary user experience.
 
 > [!NOTE]  
 > A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they've signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
+
+To start troubleshooting this issue, check the status of the user's individual user storage as described in the following sections.
 
 ### Individual user storage failed to attach to their session
 
