@@ -86,6 +86,27 @@ Check the events that are related to your API server. You might see event messag
 
 > Internal error occurred: failed calling webhook "mutate.kyverno.svc-fail": failed to call webhook: Post "https\://kyverno-system-kyverno-system-svc.kyverno-system.svc:443/mutate/fail?timeout=10s": write unix @->/tunnel-uds/proxysocket: write: broken pipe
 
+##### [**Resource-specific**](#tab/resource-specific)
+
+```kusto
+AKSControlPlane
+| where Category=="kube-apiserver"
+| where Message contains "Failed calling webhook, failing closed"
+| limit 100
+| project TimeGenerated, Level, Message
+```
+##### [**Azure diagnostics**](#tab/azure-diagnostics)
+
+```kusto
+AzureDiagnostics
+| where TimeGenerated between(now(-1h)..now())  // When you experienced the problem
+| where Category == "kube-apiserver" 
+| where log_s  contains "Failed calling webhook, failing closed"
+| extend event = parse_json(log_s) 
+| limit 100
+| project TimeGenerated, event, Category
+```
+
 In this example, the validating webhook is blocking the creation of some API server objects. Because this scenario might occur during bootstrap time, the API server and Konnectivity pods can't be created. Therefore, the webhook can't connect to those pods. This sequence of events causes the deadlock and the error message.
 
 ### Solution 2: Delete webhook configurations
@@ -96,9 +117,9 @@ To fix this problem, delete the validating and mutating webhook configurations. 
 
 A common situation is that objects are continuously created even though existing unused objects in the etcd database aren't removed. This situation can cause performance problems if etcd handles too many objects (more than 10,000) of any type. A rapid increase of changes on such objects could also cause the default size of the etcd database (by default, 8 gigabytes) to be exceeded.
 
-To check the etcd database usage, navigate to **Diagnose and Solve problems** in the Azure portal. Run the **Etcd Availability Issues** diagnosis tool by searching for "_etcd_" in the Search box. The diagnosis tool shows the usage breakdown and the total database size.
+To check the etcd database usage, navigate to **Diagnose and Solve problems** -> **Cluster and Control Plane Availability and Performance** in the Azure portal. Run the **Etcd Capacity Issues** and **Etcd Performance Issues** diagnosis tool. The diagnosis tool shows the usage breakdown and the total database size.
 
-:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Azure portal screenshot that shows the Etcd Availability Diagnosis for Azure Kubernetes Service (AKS)." lightbox="media/troubleshoot-apiserver-etcd/etcd-detector.png":::
+:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-detector.png" alt-text="Azure portal screenshot that shows the Etcd Capacity Issues Diagnosis Tool for Azure Kubernetes Service (AKS)." lightbox="media/troubleshoot-apiserver-etcd/etcd-detector.png":::
 
 To get a quick view of the current size of your etcd database in bytes, run the following command:
 
@@ -107,7 +128,8 @@ kubectl get --raw /metrics | grep -E "etcd_db_total_size_in_bytes|apiserver_stor
 ```
 
 > [!NOTE]
-> The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`. An Etcd database with size > 2 gigabytes is considered a large etcd db.
+> - If your Control Plane is unavailable, the kubectl commands will not work. Please use **Diagnose and Solve problems** in Azure portal as shown in the section above. 
+ - The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`. An Etcd database with size > 2 gigabytes is considered a large etcd db.
 
 ### Solution 3: Define quotas for object creation, delete objects, or limit object lifetime in etcd
 
@@ -136,11 +158,13 @@ If you're experiencing a high rate of HTTP 429 errors, one possible cause is tha
 kubectl get flowschemas
 kubectl get prioritylevelconfigurations
 ```
-<img src="image-4.png" alt="FlowSchema" width="600">
+<img src="media/troubleshoot-apiserver-etcd/flow-schema.png" alt="FlowSchema" width="600">
 
 <br>
 
-<img src="image-5.png" alt="PriorityLevelConfiguration" width="600">
+<img src="media/troubleshoot-apiserver-etcd/priority-level-configuration.png" alt="FlowSchema" width="600">
+
+<br>
 
 - Check Kubernetes Events 
 
@@ -171,8 +195,8 @@ kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 - You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This is relevant if you are applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster’s requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and do not want AKS to automatically manage client throttling.
 
 ```bash
-kubectl label prioritylevelconfiguration aks-managed-apiserver-guard
-kubectl label flowschema aks-managed-apiserver-guard
+kubectl label prioritylevelconfiguration aks-managed-apiserver-guard aks-managed-skip-update-operation=true
+kubectl label flowschema aks-managed-apiserver-guard aks-managed-skip-update-operation=true
 ```
 
 
@@ -185,7 +209,7 @@ If you experience high latency or frequent timeouts, follow these steps to pinpo
 
 To identify which clients generate the most requests (and potentially the most API server load), run a query that resembles the following code. This query lists the top 10 user agents by the number of API server requests sent.
 
-[**Resource-specific**](#tab/resource-specific)
+##### [**Resource-specific**](#tab/resource-specific)
 
 ```kusto
 AKSAudit
@@ -195,7 +219,7 @@ AKSAudit
 | project UserAgent, count_
 ```
 
-[**Azure diagnostics**](#tab/azure-diagnostics)
+##### [**Azure diagnostics**](#tab/azure-diagnostics)
 
 ```kusto
 AzureDiagnostics
@@ -252,7 +276,7 @@ The detector analyzes recent API server activity and highlights agents or worklo
 
 To identify the average latency of API server requests per user agent, as plotted on a time chart, run the following query.
 
-[**Resource-specific**](#tab/resource-specific)
+##### [**Resource-specific**](#tab/resource-specific)
 
 ```kusto
 AKSAudit
@@ -264,7 +288,7 @@ AKSAudit
 | render timechart
 ```
 
-[**Azure diagnostics**](#tab/azure-diagnostics)
+##### [**Azure diagnostics**](#tab/azure-diagnostics)
 
 ```kusto
 AzureDiagnostics
@@ -289,7 +313,7 @@ This query is a follow-up to the query in the ["Identify top user agents by the 
 
 Run the following query to tabulate the 99th percentile (P99) latency of API calls across different resource types for a given client.
 
-[**Resource-specific**](#tab/resource-specific)
+##### [**Resource-specific**](#tab/resource-specific)
 
 ```kusto
 AKSAudit
@@ -305,7 +329,7 @@ AKSAudit
 | render table
 ```
 
-[**Azure diagnostics**](#tab/azure-diagnostics)
+##### [**Azure diagnostics**](#tab/azure-diagnostics)
 
     ```kusto
     AzureDiagnostics
