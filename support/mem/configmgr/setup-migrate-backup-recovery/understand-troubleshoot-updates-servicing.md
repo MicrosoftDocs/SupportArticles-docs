@@ -344,9 +344,8 @@ As described earlier, each update package has a unique GUID (also known as the u
 
 ### Process step 1: DMPDownloader downloads the update and any supporting files
 
-By default, DMPDownloader automatically initiates the download of the latest applicable update package. Alternatively, an Administrator can manually download any other applicable update package by selecting it in the console and then selecting **Download**.
 
-In either case, after the process starts, the SMS provider calls the `spAddPackageToDownload` stored procedure. The stored procedure adds the package GUID to the `CM_UpdatePackagesToDownload` table in the SQL database.
+In either case, after the process starts, the SMS provider calls the `spAddPackageToDownload` stored procedure. This stored procedure adds the package GUID to the `CM_UpdatePackagesToDownload` table in the SQL database.
 
 DMPDownloader runs the `spCMUCheckAvailableUpdates` stored procedure to pick up the list of package GUIDs. If the list contains at least one package GUID, DMPDownloader logs entries that resemble the following excerpt:
 
@@ -545,29 +544,26 @@ There are rare cases when DMPDownloader fails to unpack incoming files even if t
 
 If you suspect that the download has completed, but the content has been tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
 
+## Review progress through the Replication, Prerequisite check, and Installation stages
 
-## Investigate the Replication, Prerequisite Check, or Installation stages
+After an update package downloads, the console automatically lists it as **Ready to Install**. The next stage for the update is either Prerequisite check or Installation. In both cases, the update package payload content replicates to all primary site content libraries. After replication, the payload content is extracted for installation.
 
-Identify Replication and Installation Troubleshooting Path
-
-After an update package is Downloaded, it's automatically moves to "Ready to Install" state in the Console. Then, once installation or prerequisite check is triggered, the update package payload content is replicated all (Primary) Sites Content Libraries and extracted to be further used for installation itself.
-
-Best place to start with is **\Monitoring\Overview\Site Servicing\update packages** node in the Console. The **"Show Status"** button should display the progress of each step in the process divided into categories:
+The best place to start troubleshooting is in the **Monitoring** > **Overview** > **Site Servicing** > **Update packages** node in the console. If you don't see the current status of the updates, select **Show Status**. The console displays the progress of each update through the following stages:
 
 - Replication
 - Prerequisite check
 - Installation
 - Post-installation
 
-Use flowchart to narrow down the section responsible for the issue.
+Use the following flowchart to narrow down the stage in which your issue occurs.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Screenshot of the Replication and Installation flowchart.":::
 
-## Replication
+## Investigate the Replication stage
 
-Once update package is downloaded, it must be replicated to other sites before installation can occur. Configuration Manager reuses the Package concept to facilitate this process by creating and maintaining a hidden Easy Setup Package. The Easy Setup Package is configured to replicate only to Primary Site Servers.
+After an update package downloads, it has to replicate through the site topology before it can install. Configuration Manager reuses the Package concept for this process by creating and maintaining a hidden Easy Setup Package. The Easy Setup Package replicates only to primary site servers.
 
-Once replicated, the Easy Setup Package is extracted back from Content Library of the Site Server into `\CMUStaging` folder to be used during the installation process.
+After the Easy Setup Package replicates, Configuration Manager extracts the update from the site server content library to the CMUStaging folder to be used during the installation process.
 
 The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
 
