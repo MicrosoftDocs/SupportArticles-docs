@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2019 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/09/2025
+ms.date: 11/13/2025
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2019
@@ -23,58 +23,82 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
-| [CU 32 GDR 3](#CU32-GDR3) | 15.0.4445.1 | 2025-09-09 |
-| [CU 32 GDR 2](#CU32-GDR2) | 15.0.4440.1 | 2025-08-12 |
-| [CU 32 GDR 1](#CU32-GDR1) | 15.0.4435.7 | 2025-07-08 |
-| [CU 32](#CU32) | 15.0.4430.1 | 2025-02-27 |
-| [CU 31](#CU31) | 15.0.4420.2 | 2025-02-13 |
-| [CU 30](#CU30) | 15.0.4415.2 | 2024-12-12 |
-| [CU 29 GDR](#CU29-GDR) | 15.0.4410.1 | 2024-11-12 |
-| [CU 29](#CU29) | 15.0.4405.4 | 2024-10-31 |
-| [CU 28 GDR 2](#CU28-GDR2) | 15.0.4395.2 | 2024-10-08 |
-| [CU 28 GDR 1](#CU28-GDR1) | 15.0.4390.2 | 2024-09-10 |
-| [CU 28](#CU28) | 15.0.4385.2 | 2024-08-01 |
-| [CU 27](#CU27) | 15.0.4375.4 | 2024-06-13 |
-| [CU 26](#CU26) | 15.0.4365.2 | 2024-04-11 |
-| [CU 25 GDR](#CU25-GDR) | 15.0.4360.2 | 2024-04-09 |
-| [CU 25](#CU25) | 15.0.4355.3 | 2024-02-15 |
-| [CU 24](#CU24) | 15.0.4345.5 | 2023-12-14 |
-| [CU 23](#CU23) | 15.0.4335.1 | 2023-10-12 |
-| [CU 22 GDR](#CU22-GDR) | 15.0.4326.1 | 2023-10-10 |
-| [CU 22](#CU22) | 15.0.4322.2 | 2023-08-14 |
-| [CU 21](#CU21) | 15.0.4316.3 | 2023-06-15 |
-| [CU 20](#CU20) | 15.0.4312.2 | 2023-04-13 |
-| [CU 19](#CU19) | 15.0.4298.1 | 2023-02-16 |
-| [CU 18 GDR](#CU18-GDR) | 15.0.4280.7 | 2023-02-14 |
-| [CU 18](#CU18) | 15.0.4261.1 | 2022-09-28 |
-| [CU 17](#CU17) | 15.0.4249.2 | 2022-08-11 |
-| [CU 16 GDR](#CU16-GDR) | 15.0.4236.7 | 2022-06-14 |
-| [CU 16](#CU16) | 15.0.4223.1 | 2022-04-18 |
-| [CU 15](#CU15) | 15.0.4198.2 | 2022-01-27 |
-| [CU 14](#CU14) | 15.0.4188.2 | 2021-11-22 |
-| [CU 13](#CU13) | 15.0.4178.1 | 2021-10-05 |
-| [CU 12](#CU12) | 15.0.4153.1 | 2021-08-04 |
-| [CU 11](#CU11) | 15.0.4138.2 | 2021-06-10 |
-| [CU 10](#CU10) | 15.0.4123.1 | 2021-04-06 |
-| [CU 9](#CU9) | 15.0.4102.2 | 2021-02-10 |
-| [CU 8 GDR](#CU8-GDR) | 15.0.4083.2 | 2021-01-12 |
-| [GDR 2](#GDR2) | 15.0.2080.9 | 2021-01-12 |
-| [CU 8](#CU8) | 15.0.4073.23 | 2020-10-07 |
+| [CU 32 GDR (Nov 2025)](#15-0-4455) | 15.0.4455.2 | 2025-11-11 |
+| [CU 32 GDR (Sep 2025)](#15-0-4445) | 15.0.4445.1 | 2025-09-09 |
+| [CU 32 GDR (Aug 2025)](#15-0-4440) | 15.0.4440.1 | 2025-08-12 |
+| [CU 32 GDR (Jul 2025)](#15-0-4435) | 15.0.4435.7 | 2025-07-08 |
+| [CU 32](#15-0-4430) | 15.0.4430.1 | 2025-02-27 |
+| [CU 31](#15-0-4420) | 15.0.4420.2 | 2025-02-13 |
+| [CU 30](#15-0-4415) | 15.0.4415.2 | 2024-12-12 |
+| [CU 29 GDR (Nov 2024)](#15-0-4410) | 15.0.4410.1 | 2024-11-12 |
+| [CU 29](#15-0-4405) | 15.0.4405.4 | 2024-10-31 |
+| [CU 28 GDR (Oct 2024)](#15-0-4395) | 15.0.4395.2 | 2024-10-08 |
+| [CU 28 GDR (Sep 2024)](#15-0-4390) | 15.0.4390.2 | 2024-09-10 |
+| [CU 28](#15-0-4385) | 15.0.4385.2 | 2024-08-01 |
+| [CU 27](#15-0-4375) | 15.0.4375.4 | 2024-06-13 |
+| [CU 26](#15-0-4365) | 15.0.4365.2 | 2024-04-11 |
+| [CU 25 GDR (Apr 2024)](#15-0-4360) | 15.0.4360.2 | 2024-04-09 |
+| [CU 25](#15-0-4355) | 15.0.4355.3 | 2024-02-15 |
+| [CU 24](#15-0-4345) | 15.0.4345.5 | 2023-12-14 |
+| [CU 23](#15-0-4335) | 15.0.4335.1 | 2023-10-12 |
+| [CU 22 GDR (Oct 2023)](#15-0-4326) | 15.0.4326.1 | 2023-10-10 |
+| [CU 22](#15-0-4322) | 15.0.4322.2 | 2023-08-14 |
+| [CU 21](#15-0-4316) | 15.0.4316.3 | 2023-06-15 |
+| [CU 20](#15-0-4312) | 15.0.4312.2 | 2023-04-13 |
+| [CU 19](#15-0-4298) | 15.0.4298.1 | 2023-02-16 |
+| [CU 18 GDR (Feb 2023)](#15-0-4280) | 15.0.4280.7 | 2023-02-14 |
+| [CU 18](#15-0-4261) | 15.0.4261.1 | 2022-09-28 |
+| [CU 17](#15-0-4249) | 15.0.4249.2 | 2022-08-11 |
+| [CU 16 GDR (Jun 2022)](#15-0-4236) | 15.0.4236.7 | 2022-06-14 |
+| [CU 16](#15-0-4223) | 15.0.4223.1 | 2022-04-18 |
+| [CU 15](#15-0-4198) | 15.0.4198.2 | 2022-01-27 |
+| [CU 14](#15-0-4188) | 15.0.4188.2 | 2021-11-22 |
+| [CU 13](#15-0-4178) | 15.0.4178.1 | 2021-10-05 |
+| [CU 12](#15-0-4153) | 15.0.4153.1 | 2021-08-04 |
+| [CU 11](#15-0-4138) | 15.0.4138.2 | 2021-06-10 |
+| [CU 10](#15-0-4123) | 15.0.4123.1 | 2021-04-06 |
+| [CU 9](#15-0-4102) | 15.0.4102.2 | 2021-02-10 |
+| [CU 8 GDR (Jan 2021)](#15-0-4083) | 15.0.4083.2 | 2021-01-12 |
+| [GDR (Jan 2021)](#15-0-2080) | 15.0.2080.9 | 2021-01-12 |
+| [CU 8](#15-0-4073) | 15.0.4073.23 | 2020-10-07 |
 | [CU 7 (Removed)](../sqlserver-2019/cumulativeupdate7.md) | 15.0.4063.15 | 2020-09-02 |
-| [CU 6](#CU6) | 15.0.4053.23 | 2020-08-04 |
-| [CU 5](#CU5) | 15.0.4043.16 | 2020-06-22 |
-| [CU 4](#CU4) | 15.0.4033.1 | 2020-03-31 |
-| [CU 3](#CU3) | 15.0.4023.6 | 2020-03-12 |
+| [CU 6](#15-0-4053) | 15.0.4053.23 | 2020-08-04 |
+| [CU 5](#15-0-4043) | 15.0.4043.16 | 2020-06-22 |
+| [CU 4](#15-0-4033) | 15.0.4033.1 | 2020-03-31 |
+| [CU 3](#15-0-4023) | 15.0.4023.6 | 2020-03-12 |
 | [CU 2 (Removed)](../sqlserver-2019/cumulativeupdate2.md) | 15.0.4013.40 | 2020-02-13 |
-| [CU 1](#CU1) | 15.0.4003.23 | 2020-01-07 |
-| [GA](#GA) | 15.0.2000.5 | 2019-11-04 |
-| [GDR 1](#GDR1) | 15.0.2070.41 | 2019-11-04 |
+| [CU 1](#15-0-4003) | 15.0.4003.23 | 2020-01-07 |
+| [GA](#15-0-2000) | 15.0.2000.5 | 2019-11-04 |
+| [GDR (Nov 2019)](#15-0-2070) | 15.0.2070.41 | 2019-11-04 |
 
-<a id="CU32-GDR3"></a>
+<a id="15-0-4455"></a>
 
-## CU 32 GDR 3 (September 2025)
+## CU 32 GDR (November 2025)
 
-This is the Cumulative Update 32-GDR3 (CU 32 GDR 3) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4445.1. For information about the fixes and improvements in this release, see [KB 5065222](https://support.microsoft.com/help/5065222).
+This is the Cumulative Update 32-GDR (CU 32 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4455.2. For information about the fixes and improvements in this release, see [KB 5068404](https://support.microsoft.com/help/5068404).
+
+Owing to a technical issue, the container tag for [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] `CU32-GDR4` isn't available. Use `CU32-GDR5` or a later tag instead.
+
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)].
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages** | 15.0.4455.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-15.0.4455.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-15.0.4455.2-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-extensibility-java-15.0.4455.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4455.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4455.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4455.2-1.x86_64.rpm) |
+| **SLES 15 RPM packages**<br /><br />(Get RPM packages for [SLES 12](https://packages.microsoft.com/sles/12/mssql-server-2019/Packages/m/)) | 15.0.4455.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-15.0.4455.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-extensibility-15.0.4455.2-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-extensibility-java-15.0.4455.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-fts-15.0.4455.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-ha-15.0.4455.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/Packages/m/mssql-server-polybase-15.0.4455.2-1.x86_64.rpm) |
+| **Ubuntu 20.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 18.04](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/)) | 15.0.4455.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4455.2-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4455.2-1_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4455.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4455.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4455.2-1_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4455.2-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
+<a id="15-0-4445"></a>
+
+## CU 32 GDR (September 2025)
+
+This is the Cumulative Update 32-GDR (CU 32 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4445.1. For information about the fixes and improvements in this release, see [KB 5065222](https://support.microsoft.com/help/5065222).
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)].
@@ -91,11 +115,11 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU32-GDR2"></a>
+<a id="15-0-4440"></a>
 
-## CU 32 GDR 2 (August 2025)
+## CU 32 GDR (August 2025)
 
-This is the Cumulative Update 32-GDR2 (CU 32 GDR 2) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4440.1. For information about the fixes and improvements in this release, see [KB 5063757](https://support.microsoft.com/help/5063757).
+This is the Cumulative Update 32-GDR (CU 32 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4440.1. For information about the fixes and improvements in this release, see [KB 5063757](https://support.microsoft.com/help/5063757).
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)].
@@ -112,11 +136,11 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU32-GDR1"></a>
+<a id="15-0-4435"></a>
 
-## CU 32 GDR 1 (July 2025)
+## CU 32 GDR (July 2025)
 
-This is the Cumulative Update 32-GDR1 (CU 32 GDR 1) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4435.7. For information about the fixes and improvements in this release, see [KB 5058722](https://support.microsoft.com/help/5058722).
+This is the Cumulative Update 32-GDR (CU 32 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 32). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4435.7. For information about the fixes and improvements in this release, see [KB 5058722](https://support.microsoft.com/help/5058722).
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)].
@@ -133,7 +157,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU32"></a>
+<a id="15-0-4430"></a>
 
 ## CU 32 (February 2025)
 
@@ -154,7 +178,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU31"></a>
+<a id="15-0-4420"></a>
 
 ## CU 31 (February 2025)
 
@@ -172,7 +196,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU30"></a>
+<a id="15-0-4415"></a>
 
 ## CU 30 (December 2024)
 
@@ -190,7 +214,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU29-GDR"></a>
+<a id="15-0-4410"></a>
 
 ## CU 29 GDR (November 2024)
 
@@ -208,7 +232,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU29"></a>
+<a id="15-0-4405"></a>
 
 ## CU 29 (October 2024)
 
@@ -226,11 +250,11 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU28-GDR2"></a>
+<a id="15-0-4395"></a>
 
-## CU 28 GDR 2 (October 2024)
+## CU 28 GDR (October 2024)
 
-This is the Cumulative Update 28-GDR2 (CU 28 GDR 2) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 28). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4395.2. For information about the fixes and improvements in this release, see [KB 5046060](https://support.microsoft.com/help/5046060).
+This is the Cumulative Update 28-GDR (CU 28 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 28). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4395.2. For information about the fixes and improvements in this release, see [KB 5046060](https://support.microsoft.com/help/5046060).
 
 ### Package details
 
@@ -244,11 +268,11 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU28-GDR1"></a>
+<a id="15-0-4390"></a>
 
-## CU 28 GDR 1 (September 2024)
+## CU 28 GDR (September 2024)
 
-This is the Cumulative Update 28-GDR1 (CU 28 GDR 1) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 28). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4390.2. For information about the fixes and improvements in this release, see [KB 5042749](https://support.microsoft.com/help/5042749).
+This is the Cumulative Update 28-GDR (CU 28 GDR) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that also includes the previously released CU (CU 28). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4390.2. For information about the fixes and improvements in this release, see [KB 5042749](https://support.microsoft.com/help/5042749).
 
 ### Package details
 
@@ -262,7 +286,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU28"></a>
+<a id="15-0-4385"></a>
 
 ## CU 28 (August 2024)
 
@@ -280,7 +304,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU27"></a>
+<a id="15-0-4375"></a>
 
 ## CU 27 (June 2024)
 
@@ -301,7 +325,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU26"></a>
+<a id="15-0-4365"></a>
 
 ## CU 26 (April 2024)
 
@@ -319,7 +343,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU25-GDR"></a>
+<a id="15-0-4360"></a>
 
 ## CU 25 GDR (April 2024)
 
@@ -337,7 +361,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU25"></a>
+<a id="15-0-4355"></a>
 
 ## CU 25 (February 2024)
 
@@ -355,7 +379,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU24"></a>
+<a id="15-0-4345"></a>
 
 ## CU 24 (December 2023)
 
@@ -373,7 +397,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU23"></a>
+<a id="15-0-4335"></a>
 
 ## CU 23 (October 2023)
 
@@ -391,7 +415,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU22-GDR"></a>
+<a id="15-0-4326"></a>
 
 ## CU 22 GDR (October 2023)
 
@@ -409,7 +433,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU22"></a>
+<a id="15-0-4322"></a>
 
 ## CU 22 (August 2023)
 
@@ -427,7 +451,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU21"></a>
+<a id="15-0-4316"></a>
 
 ## CU 21 (June 2023)
 
@@ -445,7 +469,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU20"></a>
+<a id="15-0-4312"></a>
 
 ## CU 20 (April 2023)
 
@@ -463,7 +487,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU19"></a>
+<a id="15-0-4298"></a>
 
 ## CU 19 (February 2023)
 
@@ -481,7 +505,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU18-GDR"></a>
+<a id="15-0-4280"></a>
 
 ## CU 18 GDR (February 2023)
 
@@ -499,7 +523,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU18"></a>
+<a id="15-0-4261"></a>
 
 ## CU 18 (September 2022)
 
@@ -517,7 +541,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU17"></a>
+<a id="15-0-4249"></a>
 
 ## CU 17 (August 2022)
 
@@ -535,7 +559,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU16-GDR"></a>
+<a id="15-0-4236"></a>
 
 ## CU 16 GDR (June 2022)
 
@@ -547,7 +571,7 @@ This is the Cumulative Update 16-GDR (CU 16 GDR) release of [!INCLUDE [sql-serve
 > Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] can still be restored by using [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] on Linux for CU 16. You can [install **adutil** manually](/sql/linux/sql-server-linux-ad-auth-adutil-introduction#install-adutil).
+> The **adutil** tool is removed from [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] on Linux for CU 16. You can [install **adutil** manually](/sql/linux/sql-server-linux-ad-auth-adutil-introduction#install-adutil).
 
 ### Package details
 
@@ -561,7 +585,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU16"></a>
+<a id="15-0-4223"></a>
 
 ## CU 16 (April 2022)
 
@@ -573,7 +597,7 @@ This is the Cumulative Update 16 (CU 16) release of [!INCLUDE [sql-server-2019](
 > Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] can still be restored by using [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] on Linux for CU 16. You can [install **adutil** manually](/sql/linux/sql-server-linux-ad-auth-adutil-introduction#install-adutil).
+> The **adutil** tool is removed from [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)] on Linux for CU 16. You can [install **adutil** manually](/sql/linux/sql-server-linux-ad-auth-adutil-introduction#install-adutil).
 
 ### Package details
 
@@ -587,7 +611,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU15"></a>
+<a id="15-0-4198"></a>
 
 ## CU 15 (January 2022)
 
@@ -605,7 +629,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU14"></a>
+<a id="15-0-4188"></a>
 
 ## CU 14 (November 2021)
 
@@ -626,7 +650,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU13"></a>
+<a id="15-0-4178"></a>
 
 ## CU 13 (October 2021)
 
@@ -644,7 +668,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU12"></a>
+<a id="15-0-4153"></a>
 
 ## CU 12 (August 2021)
 
@@ -662,7 +686,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU11"></a>
+<a id="15-0-4138"></a>
 
 ## CU 11 (June 2021)
 
@@ -680,7 +704,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU10"></a>
+<a id="15-0-4123"></a>
 
 ## CU 10 (April 2021)
 
@@ -701,7 +725,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU9"></a>
+<a id="15-0-4102"></a>
 
 ## CU 9 (February 2021)
 
@@ -719,7 +743,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU8-GDR"></a>
+<a id="15-0-4083"></a>
 
 ## CU 8 GDR (January 2021)
 
@@ -737,11 +761,11 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="GDR2"></a>
+<a id="15-0-2080"></a>
 
-## GDR 2 (January 2021)
+## GDR (January 2021)
 
-This is the General Distribution Release GDR2 (GDR 2) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2080.9. For information about the fixes and improvements in this release, see [KB 4583458](https://support.microsoft.com/help/4583458).
+This is the General Distribution Release (GDR) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2080.9. For information about the fixes and improvements in this release, see [KB 4583458](https://support.microsoft.com/help/4583458).
 
 ### Package details
 
@@ -755,7 +779,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU8"></a>
+<a id="15-0-4073"></a>
 
 ## CU 8 (October 2020)
 
@@ -773,7 +797,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU6"></a>
+<a id="15-0-4053"></a>
 
 ## CU 6 (August 2020)
 
@@ -791,7 +815,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU5"></a>
+<a id="15-0-4043"></a>
 
 ## CU 5 (June 2020)
 
@@ -809,7 +833,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU4"></a>
+<a id="15-0-4033"></a>
 
 ## CU 4 (March 2020)
 
@@ -827,7 +851,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU3"></a>
+<a id="15-0-4023"></a>
 
 ## CU 3 (March 2020)
 
@@ -848,7 +872,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU2"></a>
+<a id="15-0-4013"></a>
 
 ## CU 2 (February 2020)
 
@@ -866,7 +890,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="CU1"></a>
+<a id="15-0-4003"></a>
 
 ## CU 1 (January 2020)
 
@@ -887,7 +911,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-<a id="GA"></a>
+<a id="15-0-2000"></a>
 
 ## GA (November 2019)
 
@@ -899,7 +923,7 @@ Package details and download locations for the RPM and Debian packages are liste
 
 - [Install SQL Server package](/sql/linux/sql-server-linux-setup)
 - [Install SQL Server Full-Text Search on Linux](/sql/linux/sql-server-linux-setup-full-text-search)
-- [Install SQL Server Agent package](/sql/linux/sql-server-linux-setup-sql-agent)
+- [Install SQL Server Agent on Linux](/sql/linux/sql-server-linux-setup-sql-agent)
 - [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/sql-server-linux-setup-ssis)
 
 | Distribution | Package version | Downloads |
@@ -912,11 +936,11 @@ Package details and download locations for the RPM and Debian packages are liste
 
 Go back to the [release history](#release-history).
 
-<a id="GDR1"></a>
+<a id="15-0-2070"></a>
 
-## GDR 1 (November 2019)
+## GDR (November 2019)
 
-This is the General Distribution Release GDR1 (GDR 1) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2070.41. For information about the fixes and improvements in this release, see [KB 4517790](https://support.microsoft.com/help/4517790).
+This is the General Distribution Release (GDR) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2070.41. For information about the fixes and improvements in this release, see [KB 4517790](https://support.microsoft.com/help/4517790).
 
 ### Package details
 
