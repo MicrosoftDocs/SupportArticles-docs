@@ -54,6 +54,8 @@ RECONFIGURE
 GO
 ```
 
+After you modify the configuration, restart the SQL Server services for the changes to take effect.
+
 ## More information
 
 [Common Criteria Compliance Enabled Server Configuration](/sql/database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option)

@@ -89,7 +89,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|4/19/2021||[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
+|4/19/2021|10/30/2025|[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
 
 ## Windows Update troubleshooter for repairing system files
 
