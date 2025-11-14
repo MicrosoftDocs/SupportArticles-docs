@@ -90,7 +90,7 @@ productDirectory:
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.png
+      imageSrc: /support/media/hub-landing/logo-viva.svg
       links:
         - url: /troubleshoot/viva/glint/viva-glint-welcome
           text: Microsoft Viva Glint
