@@ -162,6 +162,8 @@ If you're experiencing a high rate of HTTP 429 errors, one possible cause is tha
 kubectl get flowschemas
 kubectl get prioritylevelconfigurations
 ```
+<br>
+
 <img src="media/troubleshoot-apiserver-etcd/flow-schema.png" alt="FlowSchema" width="600">
 
 <br>
