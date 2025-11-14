@@ -90,6 +90,7 @@ Check the events that are related to your API server. You might see event messag
 
 ```kusto
 AKSControlPlane
+| where TimeGenerated between(now(-1h)..now())
 | where Category=="kube-apiserver"
 | where Message contains "Failed calling webhook, failing closed"
 | limit 100
