@@ -545,39 +545,39 @@ There are rare cases when DMPDownloader fails to unpack incoming files even if t
 
 If you suspect that the download has completed, but the content has been tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
 
+## Review progress through the Replication, Prerequisite check, and Installation stages
 
-## Investigate the Replication, Prerequisite Check, or Installation stages
+After an update package downloads, the console automatically lists it as **Ready to Install**. The next stage for the update is either Prerequisite check or Installation. In both cases, the update package payload content replicates to all primary site content libraries. After the package replicates, Configuration Manager extracts the payload so that it can install the update.
 
-Identify Replication and Installation Troubleshooting Path
-
-After an update package is Downloaded, it's automatically moves to "Ready to Install" state in the Console. Then, once installation or prerequisite check is triggered, the update package payload content is replicated all (Primary) Sites Content Libraries and extracted to be further used for installation itself.
-
-Best place to start with is **\Monitoring\Overview\Site Servicing\update packages** node in the Console. The **"Show Status"** button should display the progress of each step in the process divided into categories:
+The best place to start troubleshooting is in the **Monitoring** > **Overview** > **Site Servicing** > **Update packages** node in the console. If you don't see the current status of the updates, select **Show Status**. The console displays the progress of each update through the following stages:
 
 - Replication
 - Prerequisite check
 - Installation
 - Post-installation
 
-Use flowchart to narrow down the section responsible for the issue.
+Use the following flowchart to narrow down the stage in which your issue occurs.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Screenshot of the Replication and Installation flowchart.":::
 
-## Replication
+## Investigate the Replication stage
 
-Once update package is downloaded, it must be replicated to other sites before installation can occur. Configuration Manager reuses the Package concept to facilitate this process by creating and maintaining a hidden Easy Setup Package. The Easy Setup Package is configured to replicate only to Primary Site Servers.
+After an update package downloads, it has to replicate through the site topology before it can install. Configuration Manager reuses the Package concept for this process by creating and maintaining a hidden Easy Setup Package. The Easy Setup Package replicates only to primary site servers.
 
-Once replicated, the Easy Setup Package is extracted back from Content Library of the Site Server into `\CMUStaging` folder to be used during the installation process.
+After the Easy Setup Package replicates, Configuration Manager extracts the update from the site server content library to the CMUStaging folder to be used during the installation process.
 
-The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
+The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the update replicates to other sites.
 
-<details><Summary>Select here to see the Replication steps.</summary>
+<details><Summary>Select here to see the Download steps.</summary>
 
-### Step 1: Initialization
+### Step 1: Start the replication process and identify the update
 
-The process starts at the top-level site when the administrator selects **Install** to start the update installation or runs a prerequisite check. Hierarchy manager (HMAN) creates or updates the package by using the shared folder `\\[servername]\EasySetupPayload\<Update GUID>` as the source.
+At the top-level site, you take one of the following actions:
 
-Changing the update package state fires the trigger `CM_UpdatePackages_UPD_HMAN` and SMSDBMON drops a file `HMAN.box\CFD\2.ESC` waking up HMAN to begin processing. The following entries are logged in Smsdbmon.log (verbose logging level):
+- To install the update, select **Install**.
+- Start a prerequisite check.
+
+Using the shared folder \\\\[servername]\\EasySetupPayload\\\<Update GUID> as the source, HMAN creates or updates the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file named HMAN.box\CFD\2.ESC. This action wakes up HMAN, and it starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in Smsdbmon.log that resemble the following excerpt:
 
 ```output
 RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2  ]
@@ -585,26 +585,26 @@ Modified trigger definition for Hierarchy Manager[CM_UpdatePackages_UPD_HMAN]: t
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\2.ESC
 ```
 
-Upon detecting this file, HMAN runs the following query to check which update package was selected to install:
+When it detects the 2.esc file, HMAN runs the following query to check which update package is selected to install:
 
 ```sql
 SELECT TOP 1 convert(NVARCHAR(40), PackageGuid) FROM CM_UpdatePackages WHERE State=2
 ```
 
-The following entries are logged in HMAN.log:
+HMAN logs entries that resemble the following excerpt:
 
 ```output
 INFO: 2.ESC file was found. Easy setup package needs to be updated.  
 Get  Update Pack E8E74B72-504A-4202-9167-8749C223D2A5, \\<SCP.FQDN>\EasySetupPayLoad\E8E74B72-504A-4202-9167-8749C223D2A5
 ```
 
-If the package was replicated before, the following entry is logged:
+If the package was previously replicated, HMAN logs an entry that resembles the following excerpt:
 
 ```output
 Easy setup source folder hash is not changed. Skip updating.
 ```
 
-Otherwise, the following entries are logged:
+Otherwise, HMAN logs entries that resemble the following excerpt:
 
 ```output
 INFO: Successfully requested package CAS10001 to be updated from its source.  
@@ -612,35 +612,35 @@ Info: Updated package CAS10001 and SMS_DISTRIBUTION_MANAGER will replicate the c
 Successfully reported ConfigMgr update status (SiteCode=CAS, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-### Step 2: HMAN: Updating the Easy Setup Package
+### Step 2: HMAN: Update the Easy Setup Package
 
-HMAN updates the EasySetupSettings table to have the Package GUID of the update package.
+HMAN adds the package GUID of the update package to the `EasySetupSettings` table.
 
-The following entries are logged:
+HMAN logs entries that resemble the following excerpt:
 
 ```output
 Updating easy setup settings with EXEC sp_UpdateEasySetupSettings N'CAS10001','2',N'561BE7B704CA99A8DB6697886E75BD7C4812324D0A637708E863EC9DF97EFB94'
 ```
 
-You can find the `PackageID` value of the Easy Setup Package by running the following SQL query (available also via TSS):
+If you want to find the **PackageID** value of the Easy Setup Package, run the following SQL query (you can also use TSS for this purpose):
 
 ```sql
 Select * from vEasySetupPackage
 ```
 
-SMSDBMon drops `<PackageGUID>.CME` in `HMAN.box\CFD` to keep HMAN busy so that other files aren't processed. The following entry is logged in the Smsdbmon.log at the verbose logging level:
+To keep HMAN busy and keep it from processing other files, SMSDBMon drops the \<PackageGUID>.cme file in the HMAN.box\\CFD folder.  If the verbose logging option is turned on, SMSDBMON logs entries that resemble the following excerpt:
 
 ```output
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C.CME
 ```
 
-### Step 3: Content Distribution
+### Step 3: Distribute content
 
-These steps are essentially the same as for any InterSite Content Replication, however the Easy Setup Package isn't replicated to Secondary Sites and Distribution Points.
+This step is essentially the same as for any intersite content replication process. However the Easy Setup Package isn't replicated to secondary sites or distribution points.
 
-Distribution Manager (DistMgr) creates Easy Setup Package snapshot from `\\<SCP.FQDN>\EasySetupPayLoad\<Update GUID>` to the Content Library of the top level site.
+Distribution Manager (DistMgr) uses \\\\\<SCP.FQDN>\\EasySetupPayLoad\\\<Update GUID> to create a snapshot of the Easy Setup Package and send it to the content library of the top-level site.
 
-The following entries are logged in DistMgr.log:
+DistMgr logs the entries to DistMgr.log that resemble the following excerpt:
 
 ```output
 Found package properties updated notification for package 'CAS10001'  
@@ -648,16 +648,16 @@ Info: package 'CAS10001' is set to replicate to site servers only.
 Taking package snapshot for package CAS10001 from source \\<SCP.FQDN>\EasySetupPayLoad\E8E74B72-504A-4202-9167-8749C223D2A5
 ```
 
-You can filter DistMgr.log for the thread ID to check the status. To get the thread ID, examine the **Package Processing Queue** value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_DISTRIBUTION_MANAGER` registry key.
+To check the status of this process, you can filter DistMgr.log for the thread ID. To get the thread ID, examine the **Package Processing Queue** value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_DISTRIBUTION_MANAGER` registry subkey.
 
-Distribution Manager also creates a minijob to replicate content to Child Primary Sites if they exist. The following entries are logged in DistMgr.log:
+DistMgr also creates a minijob that replicates content to child primary sites (if they exist). It logs entries that resemble the following excerpt:
 
 ```output
 Setting CMiniJob transfer root to C:\SMSPKG\CAS10001.PCK.1  
 Created minijob to send compressed copy of package CAS10001 to site XXX.  Transfer root = C:\SMSPKG\CAS10001 .PCK.1
 ```
 
-Scheduler schedules a file replication job to transfer the content to Child Primary Sites. The following entries are logged in Scheduler.log:
+The Scheduler component schedules a file replication job to transfer the content to any child primary sites. Scheduler logs entries in Scheduler.log that resemble the following excerpt:
 
 ```output
 1 jobs found in memory, 10 jobs found in job source.  
@@ -666,7 +666,7 @@ Scheduler schedules a file replication job to transfer the content to Child Prim
 <JOB STATUS - COMPLETE>~
 ```
 
-Sender manages the actual content transfer. The following entries are logged in Sender.log:
+The Sender component manages the actual content transfer. It logs entries in Sender.log that resemble the following excerpt:
 
 ```output
 ~Package file = C:\SMSPKG\CAS10001.DLT.5.6  
@@ -676,7 +676,7 @@ Sender manages the actual content transfer. The following entries are logged in 
 ~Sending completed successfully
 ```
 
-The replication process continues at the Primary site. After the Sender completes the transfer of the Easy Setup Package, the Despooler of the Child Primary Site unpacks the content of Easy Setup Package to a Content Library of a receiving Site. The following entries are logged in Despool.log:  
+The replication process continues at the primary site. After  Sender transfers the Easy Setup Package, the Despooler component of the child primary site unpacks the package content to a content library of the receiving site. Despooler logs entries in Despool.log that resemble the following excerpt:
 
 ```output
 Received package CAS10001 version 1. Compressed file -  C:\SMSPKG\CAS10001.PCK.1 as C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive\ds_r7or9.pkg  
@@ -689,7 +689,7 @@ Package CAS10001 (version 0) exists in the distribution source, save the newer v
 Stored Package CAS10001. Stored Package Version = 1
 ```
 
-Each Content Distribution component updates `ObjectDistributionState` table on its way. This table has a trigger `ObjectDistributionState_ins_updMon` that's responsible for storing the replication stages to `CM_UpdatePackage_MonitoringStatus` table. The following SQL query can be used to further detail the Replication and Installation state:
+Each Content Distribution component updates its `ObjectDistributionState` table as it processes the package. This table's `ObjectDistributionState_ins_updMon` trigger saves the the replication stages to the `CM_UpdatePackage_MonitoringStatus` table. If you want to see more details of the Replication and Installation stages, run following SQL query:
 
 ```sql
 select ServerData.SiteCode, cmums.* from CM_UpdatePackage_MonitoringStatus cmums
@@ -697,7 +697,7 @@ Left join serverdata on cmums.SiteNumber=ServerData.ID
 where PackageGUID='<Package GUID>'
 ```
 
-### Step 4: Content Distribution completion
+### Step 4: Finish replicating the package
 
 Distribution Manager marks the process for the package as successful
 The following entries are logged in DistMgr.log:
