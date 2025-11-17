@@ -805,15 +805,15 @@ For more information about the current set of Prerequisite check rules, see [Lis
 
 <details><Summary>Select here to see the Prerequisite check steps.</summary>
 
-### Process step 1: Initiating the check
+### Process step 1: Trigger the check
 
-After you select the update package and select **Run prerequisite check**, the console calls `InitiateUpgrade` method on the instance of `SMS_CM_UpdatePackages` WMI class of SMS Provider namespace. The parameter `Flag` is set to 1 (PREREQ_ONLY).
+After you select the update package and select **Run prerequisite check**, the console calls the `InitiateUpgrade` WMI method (from the `SMS_CM_UpdatePackages` WMI class of the SMS Provider namespace). The console sets the method's `Flag` parameter to `1 (PREREQ_ONLY)`.
 
 If Configuration Manager hasn't yet [replicated the update package](#investigate-the-replication-stage), it does so now.
 
-### Step 2: HMAN: Starting the check
+### Process step 2: HMAN notifies CMUpdate of the requested check
 
-Once HMAN updates the Easy Setup Package, it verifies the state of `CONFIGURATION_MANAGER_UPDATE` service and creates the notification (`<Update GUID>.CMI`) in `CMUpdate.box` inbox. The following entries are logged in HMAN.log
+After HMAN updates the Easy Setup Package, it verifies the state of the CONFIGURATION_MANAGER_UPDATE service, and then creates the `<Update GUID>.cmi` notification in the CMUpdate.box inbox. HMAN logs entries that resemble the following excerpt:
 
 ```output
 INFO: Starting service CONFIGURATION_MANAGER_UPDATE
@@ -822,17 +822,17 @@ Successfully checking Site server readiness for update.
 There are update package in progress. Cleanup will skip this time.
 ```
 
-### Step 3: CMUpdate: Extracting the update
+### Process step 3: CMUpdate extracts the update
 
-Either once in 10 minutes or on receiving an inbox trigger to `CMUpdate.box`, CMUpdate.exe runs the following SQL Stored Procedure:
+After 10 minutes elapses or after CMUpdate.box receives an inbox trigger, CMUpdate.exe runs the following SQL stored procedure:
 
 ```sql
 exec spCMUGetPendingUpdatePackage
 ```
 
-The later collects the information from `CM_UpdatePackages` and `CM_UpdatePackageSiteStatus` tables for the site running the check. As soon as CMUpdate thread detects an update package with State = 65538 (CONTENT_REPLICATION_SUCCESS), it extracts the Easy Setup Package Content to `\CMUStaging\<Update GUID>` folder.
+This stored procedure collects the information from the `CM_UpdatePackages` and `CM_UpdatePackageSiteStatus` tables for the site that's running the check. As soon as the CMUpdate thread detects an update package that has the `State = 65538 (CONTENT_REPLICATION_SUCCESS)` status, it extracts the Easy Setup Package content to the \\CMUStaging\\\<Update GUID>` folder.
 
-The following entries are logged in CMUpdate.log: note `SubStageID=0xd0005` being mentioned.
+CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`.
 
 ```output
 Detected a change to the "E:\ConfigMgr\inboxes\cmupdate.box" directory.
@@ -856,13 +856,13 @@ Successfully read file \\?\E:\ConfigMgr\CMUStaging\8576527E-DDE9-4146-8ED9-DB910
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-Same happens on other primary sites.
+The same process occurs on the other primary sites.
 
-Besides, CMUpdate verifies the signature and extracts the `update.map.cab` file that contains `update.map` file defining the hashes and locations for the files being updated.
+Additionally, CMUpdate verifies the signature and extracts the update.map.cab file. This file contains update.map file, which defines the hashes and the locations for the files that the update affects.
 
-### Step 4: CMUpdate: Prerequisite Check start
+### Process step 4: CMUpdate starts the check
 
-Once the content is extracted, CMUpdate.exe starts the prerequisite check:
+After the content is extracted, CMUpdate.exe starts the prerequisite check:
 
 ```output
 ~FQDN for server BIG-CS1SITE is BIG-CS1SITE.biglab.net
@@ -884,9 +884,9 @@ INFO: Configuration Manager Minimum Build Number = 800
 Preparing prereq check for site server [BIG-CS1SITE.BIGLAB.NET]...~
 ```
 
-During this action, CMUpdate.exe silently sets Update State in the `CM_UpdatePackages` table to 131073 (PREREQ_IN_PROGRESS).
+During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
 
-Then CMUpdate.exe looks for `Update.map` file in `\CMUStaging\<PackageGUID>\SMSSetup` and looks up for the `CONFIGURATION_MANAGER_UPDATE` section that contains the hashes of the files needed for the prerequisite check:
+Then CMUpdate looks for the Update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section, which contains the hashes of the files that it needs. This section of the file resembles the following excerpt:
 
 ```xml
 BEGIN_COMPONENT_FILELIST
@@ -913,29 +913,28 @@ BEGIN_COMPONENT_FILELIST
 END_COMPONENT_FILELIST
 ```
 
-The file of particular interest is `prereqcore.dll` that contains the actual prerequisite check logic. CMUpdate.exe calculates the hash of the file present in `\CMUStaging\<PackageGUID>\SMSSetup\BIN\X64` and compares it with the one in the `Update.map` file. If they match, the check continues. The usual logging is:
+The file of particular interest is prereqcore.dll, which contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64 and compares it to the hash in the `Update.map` file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
 
 ```output
 prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2391119281E0ECA43E
 ```
 
-Then CMUpdate.exe loads `prereqcore.dll` and calls the entry point `RunPrereqChecks`:
+Then CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
 
 ```output
 Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
 ```
 
-For the hotfixes, usually, there's no specific section in the `Update.map` file:
+> [!NOTE]  
+> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of ConfigMgr, and the log entry resembles the followig excerpt:
+>
+> ```output
+>update.map has no update for CONFIGURATION_MANAGER_UPDATE
+> ```
 
-```output
-update.map has no update for CONFIGURATION_MANAGER_UPDATE
-```
+### Process step 5: The Prerequisite checker component starts up
 
-In this case, CMUpdate.exe uses the `prereqcore.dll` from the installed version of ConfigMgr.
-
-### Step 5: Prerequisite checker starts up
-
-Prerequisite checker starts up within the same thread as CMUpdate.exe (note the command line), however logs to `C:\ConfigMgrPrereq.LOG`. It passes the list of relevant Site Roles to the actual worker:
+Prerequisite checker starts up within the same thread as CMUpdate. (note the command line). However, Prerequisite checker has its own log file (C:\ConfigMgrPrereq.log). Prerequisite checker passes the list of relevant site roles to the actual worker, and logs entries that resemble the following excerpt:
 
 ```output
 ********************************************
@@ -952,11 +951,11 @@ Check Type: Easy Update ~ Site Server: BIG-CS1SITE.biglab.net,~ SQL Server: BIG-
 ...
 ```
 
-### Step 6: Prerequisite checker performs the checks
+### Process tep 6: Prerequisite checker performs the checks
 
-Once the checker is loaded, it goes through the actual checklist by spawning another thread. The checks are run for each role targeted - and also sorted by categories.
+After the Prerequisite checker loads, it spawns another thread to go through the actual checklist. The thread sorts the check rules by category, and runs them for each of the targeted roles.
 
-Site Server checks:
+For a site server, Prerequisite checker logs entries that resemble the following excerpt:
 
 ```output
 INFO: Prerequisite rules for CAS site update are being run.
@@ -973,7 +972,7 @@ INFO: Executing prerequisite functions...
 ...
 ```
 
-Site Database Server checks: note the bootstrap being spawned
+For a site database server, Prerequisite checker logs entries that resemble the following excerpt. Note that the thread spawns a bootstrap.
 
 ```output
 ===== INFO: Prerequisite Type & Server: SQL:BIG-ALWAYSON.biglab.net =====
@@ -992,7 +991,7 @@ Site Database Server checks: note the bootstrap being spawned
 ...
 ```
 
-And, finally, SMS Provider (also known as SDK) checks:
+For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following excerpt.
 
 ```output
 ===== INFO: Prerequisite Type & Server: SDK:BIG-CS1SITE.biglab.net =====
@@ -1013,7 +1012,7 @@ And, finally, SMS Provider (also known as SDK) checks:
 ***************************************************
 ```
 
-During the check, each rule calls SQL Stored Procedure `spCMUAddPrereqMessage` to update the database `CM_UpdatePackagePrereqStatus` table with the results of each check (Passed, Warning, Failed) for specific Site.
+During the check, each rule calls the `spCMUAddPrereqMessage` SQL stored procedure. The stored procedure updates the `CM_UpdatePackagePrereqStatus` database table to record the results of each check (`Passed`, `Warning`, or `Failed`) for the specific site.
 
 ### Step 7: CMUpdate: Completing the check
 
