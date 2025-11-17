@@ -41,7 +41,7 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 
 1. Close the Visual Studio Installer.
 1. Delete the Visual Studio Installer folder. Typically, the folder path is _C:\Program Files (x86)\Microsoft Visual Studio\Installer_.
-1. Run the Visual Studio Installer bootstrapper. You can get the bootstrapper from the [download page](https://visualstudio.microsoft.com/downloads), for previous bootstrapper versions see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads), you can also find the bootstrapper manually in your _Downloads_ folder with a file name _VisualStudioSetup.exe_ or _vs\_\<edition>*.exe_. Then, run the executable to reset your installation metadata.
+1. Run the Visual Studio Installer bootstrapper. You can get the bootstrapper from the [downloads page](https://visualstudio.microsoft.com/downloads), for previous bootstrapper versions see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads), you can also find the bootstrapper manually in your _Downloads_ folder with a file name _VisualStudioSetup.exe_, for VIsual Studio 2019 and earlier _vs\_\<edition>*.exe_. Then, run the executable to reset your installation metadata.
 1. Try to install or update Visual Studio again. If the Visual Studio Installer continues to fail, [report a problem to support](#5-report-the-problem-to-support).
 
 #### 5. Report the problem to support
