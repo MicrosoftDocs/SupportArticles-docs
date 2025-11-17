@@ -68,6 +68,10 @@ To check this setting, and disable it if it's necessary, follow these steps:
 
 1. To apply the changes, select **OK**, and then restart your Cloud PC.
 
+## Click to Do doesn't work when Cloud PC is in windowed mode
+
+Click to Do might not work if your Cloud PC isn't in full-screen mode. Try maximizing your Cloud PC window (to full screen) before you use Click to Do.
+
 ## Additional help for AI-enabled Cloud PC issues
 
 For issues that aren't covered by this article, Windows Insider Program members can go to [Get more help](/windows-insider/troubleshooting#get-more-help) in the Windows Insider Program "Troubleshooting" article.
