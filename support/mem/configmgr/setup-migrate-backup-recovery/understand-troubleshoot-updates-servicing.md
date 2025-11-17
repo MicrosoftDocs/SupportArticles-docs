@@ -312,7 +312,7 @@ SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GU
 
 For the relevant log entries, see the HMAN.log file.
 
-#### Verify site database functions
+#### Verify the site database functions
 
 As part of troubleshooting the Applicability check stage, verify that the site database functions work correctly. The site database functions must return the correct Site Version. To check the scalar function output, run the following SQL query:
 
@@ -514,7 +514,7 @@ The console displays the list of update packages and their status as **Ready to 
 
 ### Troubleshoot the Download stage
 
-During stage, the DMPDownloader component is responsible for downloading the Easy Setup Payload and Redistributable files (Redists). In Offline mode, these files are imported by the Service Connection Tool (SCT). Then DMPDownloader must verify the files and inform the site server about their availability. Hence, the main log to check is **DMPDownloader.log**.
+During the Download stage, the DMPDownloader component downloads the Easy Setup Payload and Redistributable files (Redists). In Offline mode, Service Connection Tool (SCT) imports these files, and then DMPDownloader verifies the files and informs the site server about their availability. Hence, **DMPDownloader.log** is the primary log to check.
 
 Use the following flowchart to narrow down issues that might occur at the Download stage.
 
@@ -568,9 +568,9 @@ After the Easy Setup Package replicates, Configuration Manager extracts the upda
 
 The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the update replicates to other sites.
 
-<details><Summary>Select here to see the Download steps.</summary>
+<details><Summary>Select here to see the Replication steps.</summary>
 
-### Step 1: Start the replication process and identify the update
+### Process step 1: Start the replication process and identify the update
 
 At the top-level site, you take one of the following actions:
 
@@ -612,7 +612,7 @@ Info: Updated package CAS10001 and SMS_DISTRIBUTION_MANAGER will replicate the c
 Successfully reported ConfigMgr update status (SiteCode=CAS, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-### Step 2: HMAN: Update the Easy Setup Package
+### Process step 2: HMAN: Update the Easy Setup Package
 
 HMAN adds the package GUID of the update package to the `EasySetupSettings` table.
 
@@ -634,7 +634,7 @@ To keep HMAN busy and keep it from processing other files, SMSDBMon drops the \<
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C.CME
 ```
 
-### Step 3: Distribute content
+### Process step 3: Distribute content
 
 This step is essentially the same as for any intersite content replication process. However the Easy Setup Package isn't replicated to secondary sites or distribution points.
 
@@ -689,7 +689,7 @@ Package CAS10001 (version 0) exists in the distribution source, save the newer v
 Stored Package CAS10001. Stored Package Version = 1
 ```
 
-Each Content Distribution component updates its `ObjectDistributionState` table as it processes the package. This table's `ObjectDistributionState_ins_updMon` trigger saves the the replication stages to the `CM_UpdatePackage_MonitoringStatus` table. If you want to see more details of the Replication and Installation stages, run following SQL query:
+Each content distribution component updates its `ObjectDistributionState` table as it processes the package. This table's `ObjectDistributionState_ins_updMon` trigger saves the the replication stages to the `CM_UpdatePackage_MonitoringStatus` table. If you want to see more details of the Replication and Installation stages, run following SQL query:
 
 ```sql
 select ServerData.SiteCode, cmums.* from CM_UpdatePackage_MonitoringStatus cmums
@@ -697,10 +697,9 @@ Left join serverdata on cmums.SiteNumber=ServerData.ID
 where PackageGUID='<Package GUID>'
 ```
 
-### Step 4: Finish replicating the package
+### Process step 4: Finish replicating the package
 
-Distribution Manager marks the process for the package as successful
-The following entries are logged in DistMgr.log:
+After the replication completes, DistMgr marks the process as successful and logs entries that resemble the following excerpt:
 
 ```output
 Found package properties updated notification for package 'CAS10001'  
@@ -710,74 +709,75 @@ Start updating the package CAS10001...
 Successfully created/updated the package CAS10001
 ```
 
-Then, HMAN creates a `<Update GUID>.CMI` file for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see HMAN.log:
+At the child primary sites, HMAN creates a file that's named \<Update GUID>.cmi for Configuration Manager Update Service (CMUpdate.exe). HMAN logs an entry that resembles the following excerpt:
 
 ```output
 Created notification file (E8E74B72-504A-4202-9167-8749c223d2a5.CMI) for CONFIGURATION_MANAGER_UPDATE
 ```
 
-The later moves the update package further to Prerequisite Check phase.
+CMUpdate.exe moves the update package to the Prerequisite Check phase.
 
 </details>
 
-### Replication Result
+### Result of the Replication processes
 
-update package content (EasySetup Package) is replicated to all Child Primary Sites and present in the Content Library.
+The content of the Update package (also known as the EasySetup Package) resides in the content library of each child primary site.
 
-### Troubleshoot Replication
+### Troubleshoot the Replication stage
 
-The first component involved is **HMAN**, which must detect a new package to be processed and update the EasySetupSettings SQL table settings accordingly. Then **DistMgr** takes over to create the **Easy Setup Package** snapshot from `\EasySetupPayload\` share into Content Library as **Easy Setup Package**. This package follows usual Inter-site Content Replication flow to replicate to Child Primary Sites like any other classic Package. The best place to start with is **CM_UpdatePackages** in SQL filtered by specific update package GUID.
+To summarise the detailed description of the steps, the replication process starts when HMAN detects a new update package and updates the `EasySetupSettings` SQL table settings. DistMgr takes over to create the Easy Setup Package snapshot from the `\EasySetupPayload\` share and saves it into the content library as the Easy Setup Package. This package follows the usual inter-site content replication flow, and replicates to child primary sites like any other classic Package. The best place to start troubleshooting issues in this stage is by filtering the `CM_UpdatePackages` table for the specific update package GUID.
 
-Use flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check was triggered.
+Use the following flowchart to narrow down issues that might occur at the Replication stage. This flowchart applies whether the Installation stage or the Prerequisite check stage triggered the Replication stage.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Screenshot of the Replication troubleshooting flowchart.":::
 
-For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
+In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Package from their parent site. The flow is exactly the same as for any other classic Package. For more information, see [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart).
 
-#### Troubleshoot update package staying in State=2 (Enabled)
+#### Troubleshoot issue: Status of the update package remains State=2 (Enabled)
 
-If the **State** stays in 2 (Enabled), it likely identifies the **HMAN** component as unable to perform its job. Check **HMAN.log** for the following:
+If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish it's task. To troubleshoot this issue, analyze HMAN.log.
 
-1. Look for 2.ESC file processing.
-1. Filter by respective thread.
-1. Alternatively, look for the last SubstageID recorded in the message similar to the following: IsComplete=2 means Success and IsComplete=4 means Failure.
+1. Look for entries that mention processing the 2.ESC file.
+1. Filter the log by the respective thread.
+1. Alternatively, look for the last **SubstageID** value that's recorded in the log. The data that's associated with this value should include either `IsComplete=2` (Success) or `IsComplete=4` (Failure). This information should resemble the following excerpt:
 
-    >Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
+   ```output
+   Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
+   ```
 
-1. If the **HMAN.log** rolled over, attempt recreating the empty `2.ESC` file in `HMAN.box\CFD` manually. It should trigger the same process again.
+1. If the HMAN.log file rolled over (removing older entries), try to manually recreate the empty 2.ESC file in the HMAN.box\CFD folder. This operation should trigger the same process again.
 
-Note **HMAN** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails to access the share, the following error is logged:
+   > [!NOTE]  
+   > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following excerpt:
+   >
+   > ```output
+   > Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
+   > Failed to calculate hash
+   > ```
+   >
+   > Make sure that the computer account that the site server uses can access this share.
 
-```output
-Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
-Failed to calculate hash
-```
+#### Troubleshoot issue: Status of the update package has changed from State=2 (Enabled)
 
-Verify the access to this share for the Site Server computer account.
-
-#### Explore vEasySetupPackage SQL view
-
-If the **State** is different, investigate **vEasySetupPackage** view in SQL.
-
-Sample view content includes:
+If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt:
 
 | PackageID | PackageVersion | PackageHash | PackageGUID | StoredPkgHash | Source | SourceSite | LastRefresh | StoredPkgVersion | StorePkgFlag | SourceDate | SourceVersion | SourceSize |
 |-----------|----------------|-------------|-------------|---------------|--------|-----------|-------------|------------------|--------------|------------|---------------|------------|
 | CS10001F | 1 | E53E...1F25 | C00DC5CD-0955-418F-9F32-F54016659FFF | E53E...1F25 | \\\\SCP.FQDN.COM\\EasySetupPayLoad\\C00DC5CD-0955-418F-9F32-F54016659FFF | CS1 | 2025-09-02 13:05:10.000 | 1 | 2 | 2025-09-02 13:04:42.000 | 1 | 150676 |
 
-Verify the Source, Package Version, and PackageID. Use PackageID to trace the Easy Setup Package further to **DistMgr.log** and other Content Replication logs.
+Verify the **Source**, **Package Version**, and **PackageID** values. To trace the Easy Setup Package further, check DistMgr.log and the other content replication logs for mentions of the **PackageID** value.
 
-#### Investigate Content Distribution failures
+#### Troubleshoot issue: Packages aren't distributed
 
-The rest of the troubleshooting is the same as for any [Classic Package replicated between Sites](../content-management/understand-package-actions.md#distribute-a-package-to-dp-across-sites). If the flow failed or the logs were rolled over, use the **RetryContentReplication WMI Method** of the SMS provider of the top-level site to force the Easy Setup Package update:
+The rest of the troubleshooting is the same as for typical replicated package. For more information, see [Distribute a package to DP across sites](../content-management/understand-package-actions.md#distribute-a-package-to-dp-across-sites). If the flow failed or the logs rolled over, use the [RetryContentReplication](/intune/configmgr/develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages) Windows Management Instrumentation (WMI) method to force the Easy Setup Package information to update. This method is associated with the SMS provider of the top-level site, and you can invoke it by running the following command at a PowerShell command prompt:
 
- ```powershell
- (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
- ```
-
-The output should look like this example:
-    
 ```powershell
+(gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
+```
+
+The output should resemble the following excerpt:
+
+```output
     __GENUS          : 2
     __CLASS          : __PARAMETERS
     __SUPERCLASS     : 
@@ -792,21 +792,24 @@ The output should look like this example:
     PSComputerName   : 
 ```
 
-Refer to **DistMgr.log** to track reprocessing of the Easy Setup Package.
+As the the Easy Setup Package is reprocessed, you can track its progress in the DistMgr.log file.
 
-## Prerequisite check
+## Investigate the Prerequisite check stage
 
-The following steps explain the process of extracting the update to run prerequisite checks before installing update packages at a Central Administration Site and Child Primary Sites.
+The following steps explain the process of extracting the update to run prerequisite checks. These steps occur on the central administration site and child primary sites before the update installs.
 
-The current set of rules in the Prerequisite checks can be found in the [list of Prerequisite Checks](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks). Updating a site causes only SOME checks to be performed.
+For more information about the current set of Prerequisite check rules, see [List of prerequisite checks for Configuration Manager](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks).
 
-<details><Summary>Prerequisite Check Steps</summary>
+> [!NOTE]  
+> Only a subset of the prerequisite checks occur before an update installs.
 
-### Step 1: Initiating the check
+<details><Summary>Select here to see the Prerequisite check steps.</summary>
 
-After one selects the update package and selects **Run prerequisite check**, the Console calls `InitiateUpgrade` method on the instance of `SMS_CM_UpdatePackages` WMI class of SMS Provider namespace. The parameter `Flag` is set to 1 (PREREQ_ONLY).
+### Process step 1: Initiating the check
 
-This action initiates the [Content Replication](#replication) if it hasn't completed before.
+After you select the update package and select **Run prerequisite check**, the console calls `InitiateUpgrade` method on the instance of `SMS_CM_UpdatePackages` WMI class of SMS Provider namespace. The parameter `Flag` is set to 1 (PREREQ_ONLY).
+
+If Configuration Manager hasn't yet [replicated the update package](#investigate-the-replication-stage), it does so now.
 
 ### Step 2: HMAN: Starting the check
 
