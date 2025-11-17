@@ -336,12 +336,8 @@
           href: ../excel/update-external-links.md
         - name: Large Address Aware capability change
           href: ../excel/laa-capability-change.md
-        - name: Last digits are changed to zeros
-          href: ../excel/last-digits-changed-to-zeros.md
         - name: Link a Visio drawing to a specific region
           href: ../excel/link-visio-drawing-to-a-specific-region.md
-        - name: Long numbers are displayed incorrectly
-          href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
         - name: Memory usage in the 32-bit edition of Excel
