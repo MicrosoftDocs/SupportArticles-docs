@@ -6,8 +6,8 @@ ms.date: 11/17/2025
 ms.topic: troubleshooting
 ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:
-- pcy:Onboarding issues
-- sap:WinComm User Experience
+- pcy:WinComm User Experience
+- sap:Onboarding issues
 ms.collection:
 - M365-identity-device-management
 - tier2
