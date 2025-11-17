@@ -951,7 +951,7 @@ Check Type: Easy Update ~ Site Server: BIG-CS1SITE.biglab.net,~ SQL Server: BIG-
 ...
 ```
 
-### Process tep 6: Prerequisite checker performs the checks
+### Process step 6: Prerequisite checker performs the checks
 
 After the Prerequisite checker loads, it spawns another thread to go through the actual checklist. The thread sorts the check rules by category, and runs them for each of the targeted roles.
 
@@ -1014,9 +1014,9 @@ For an SMS provider (also known as SDK), Prerequisite checker logs entries that 
 
 During the check, each rule calls the `spCMUAddPrereqMessage` SQL stored procedure. The stored procedure updates the `CM_UpdatePackagePrereqStatus` database table to record the results of each check (`Passed`, `Warning`, or `Failed`) for the specific site.
 
-### Step 7: CMUpdate: Completing the check
+### Process step 7: CMUpdate completes the check
 
-CMUpdate.exe waits for the Prerequisite Checker thread to return the information about the result of the check and updates the `CM_UpdatePackagesSiteStatus` table with the latest State (for example, PREREQ_SUCCESS). `State` and `Flag` combination from the SQL Stored Procedure `spCMUGetPendingUpdatePackage` define the further action, for example, continue while having warnings or stop on errors:
+CMUpdate waits for the Prerequisite checker thread to return the results of the checks, and adds the latet state information to the `CM_UpdatePackagesSiteStatus` table (for example, `PREREQ_SUCCESS`). The `State` and `Flag` combination from the `spCMUGetPendingUpdatePackage` SQL stored procedure define further actions (for example, whether to stop continue if errors occur). CMUpdate logs entries that resemble the following excerpt:
 
 ```output
 INFO: SQL Connection succeeded. Connection: SMS ACCESS, Type: Secure
@@ -1024,79 +1024,68 @@ INFO: setup type: 8, top level: 1.
 Continue configuration manager update as it is configured to ignore prereq warnings.
 ```
 
-The change in `CM_UpdatePackagesSiteStatus` table triggers a `<PackageGUID>.CME` file creation in `HMAN.box\CFD` inbox:
+The change in the `CM_UpdatePackagesSiteStatus` table triggers an operation on the \<PackageGUID>.cme file in the HMAN.box\\CFD inbox. The corresponding log entry resembles the following excerpt:
 
 ```output
 Check CMU status...
 deleted notification file E:\ConfigMgr\inboxes\hman.box\CFD\8576527E-DDE9-4146-8ED9-DB91091C38EF.CME
 ```
 
-HMAN then calls the SQL Stored Procedure `spProcessCMUPackages`:
+Then, HMAN calls the `spProcessCMUPackages` SQL stored procedure by using a command that resembles the following command:
 
 ```sql
 exec spProcessCMUPackages
 ```
 
-That further calls `spProcessCMU` SQL Stored Procedure to update general `CM_UpdatePackages` table with the latest state.
+That stored procedure, in turn, calls the `spProcessCMU` SQL stored procedure. This stored procedure updates the state infomration in the `CM_UpdatePackages` table.
 
-In multi-site environments, the worst state for all sites is considered. For example, if CAS passed the check, but Primary has warnings, the overall result is PREREQ_WARNING.
+In multi-site environments, final result of the prerequisite checks is the worst for for all the sites that were checked. For example, if the central administration site (CAS) passed the check, but the primary site didn't pass and generated warnings, the overall result is `PREREQ_WARNING`.
 
 </details>
 
-### Prerequisite Check Result
+### Result of the Prerequisite check processes
 
-The update package is marked as "Prerequisite check passed" in the console. The `CM_UpdatePackages` table has the state set one of the values for the update package of interest:
+The console labels the update package as **Prerequisite check passed**, and the `CM_UpdatePackages` table lists the state of the update package by using one of the following values:
 
-- PREREQ_SUCCESS  131074
-- PREREQ_WARNING  131075
-- PREREQ_ERROR    196607
+- `PREREQ_SUCCESS  131074`
+- `PREREQ_WARNING  131075`
+- `PREREQ_ERROR    196607`
 
 ### Troubleshoot Prerequisite Check
 
-The flowchart assumes that the Prerequisite Check is either in progress for a long time - or failed. It applies to all Primary Sites and Central Administration Site (CAS) in multi-tier environments.
+If the Prerequisite check takes a long time or fails completely, use the following flow chart to help identify the issue. In multi-tier environments, the chart applies to all primary sites and the CAS.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg" alt-text="Screenshot of the Prerequisite Check troubleshooting flowchart.":::
 
-There are two main kinds of issues with the prerequisite check.
+Typically, Prerequisite check issues belong to one of the following categories:
 
-1. The check gets stuck in the **Checking Prerequisites** state. In most cases, the real issue is [Replication](#replication).
-2. The check completes with **Prerequisites Failed** state. It does mean that the check was able to run and **excludes** the [Replication](#replication) part.
+- The check gets stuck in the **Checking Prerequisites** state. In most cases, the real issue occurred during the [Replication stage](#investigate-the-replication-stage).
+- The check completes, but the final state is **Prerequisites Failed**. In this case, the check ran successfully and no issues occured during the [Replication stage](#investigate-the-replication-stage).
   
-In the latter case, the real issue is found in **ConfigMgrPrereq.log** or in the Console: **\Monitoring\Overview\Updates and Servicing Status** node per site.
+In the **Prerequisites Failed** case, to find the real issue, review the following resources:
 
-Follow the guidance listed in **Description** for the failing check and the detailed log entries in **ConfigMgrPrereq.log** to resolve the failure.
+- ConfigMgrPrereq.log.
+- The console, in  **Monitoring** > **Overview** > **Updates and Servicing Status** > **Description** for each site.
 
-#### SQL client prerequisites
+#### Troubleshooting SQL Client prerequisites
 
-The latest versions of Configuration Manager introduced various SQL client prerequisites. Current update package installation process doesn't automatically upgrade them. Hence, it makes sense to install the SQL Clients before attempting the installation.
+The latest versions of Configuration Manager introduced various SQL client prerequisites. The current installation process for update packages doesn't automatically update these clients. As a result, it makes sense to install up-to-date SQL Clients before you install updates.
 
-Since 1810, ConfigMgr requires SQL Native Client version 11.4.7001.0 or later. The actual requirement is the registry value:
+Since version 1810, ConfigMgr requires SQL Native Client version 11.4.7001.0 or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQLNCLI11\InstalledVersion` registry entry.
 
-```reg
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQLNCLI11]
-"InstalledVersion"="11.4.7001.0"
-```
+Similarly, since version 2303, ConfigMgr requires ODBC Driver 18 for SQL Server or a later version. Since version 2503, ConfigMgr reqires ODBC Driver 18.4.1.1 for SQL Server or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSODBCSQL18\InstalledVersion` registry entry.
 
-Also, since 2303, ConfigMgr requires ODBC Driver 18 for SQL Server or later. The actual check is also the registry value:
-
-```reg
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSODBCSQL18]
-"InstalledVersion"="18.4.1.1"
-```
-
-Starting from 2503, the required version is at least 18.4.1.1, so the corresponding check was updated.
-
-To meet both prerequisites, consider manually installing the following MSIs from `\EasySetupPayload\<Update GUID>\redist\` folder (available only for major releases):
+To meet both SQL Server prerequisites, consider manually installing the following msi files from the \\EasySetupPayload\\\<Update GUID>\\redist folder (only available for major releases):
 
 - sqlncli.msi
 - msodbcsql.msi
 
-Alternatively, download latest binaries from Microsoft Download Center:
+Alternatively, download the latest binaries from the following URLs in the Microsoft Download Center:
 
 - [SQL Server 2012 Native Client 11.0.7001.0](https://www.microsoft.com/download/details.aspx?id=50402) or [SQL Server 2012 Feature Pack (scroll to Native Client)](https://www.microsoft.com/download/details.aspx?id=29065)
 - [ODBC Driver 18 for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server)
 
-#### Frequently blocking checks
+#### Troubleshooting blocking checks that frequently recur
 
 The following checks are known to frequently block the Upgrade Package Setup. There's no way to bypass them but resolving the blocking condition. In case of any doubts, consider opening a ticket with Microsoft Support.
 
