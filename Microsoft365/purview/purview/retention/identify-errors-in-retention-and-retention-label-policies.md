@@ -79,15 +79,15 @@ Use the following steps to check for errors in policies that target:
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Get policy information by using the [Get-AppRetentionCompliancePolicy cmdlet](/powershell/module/exchange/get-appretentioncompliancepolicy). Run the following commands:
+1. Get policy information by using the [Get-AppRetentionCompliancePolicy cmdlet](/powershell/module/exchange/get-appretentioncompliancepolicy). Run the following commands:
 
-   ```powershell
+      ```powershell
    Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | FL DistributionStatus
    Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
-   If there are policy errors, the value returned by the `DistributionResults` property contains more information about the errors.
-
+   If there are policy errors, the value returned by the `DistributionResults` property contains more information about the errors. Check for `DistributionResults`only when `DistributionStatus` shows an error. If there are no errors, then users can ignore warnings in `DistributionResults.`
+   
 ## Recommended practices
 
 To minimize retention policy errors, follow these practices:
