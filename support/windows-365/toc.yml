@@ -29,6 +29,8 @@ items:
       href: oobe-fails-error-has-occurred.md
     - name: OOBE fails with "Something went wrong"
       href: oobe-fails-error-something-wrong.md
+    - name: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+      href: troubleshoot-user-experience-sync.md
     - name: Troubleshoot Windows 365 app
       href: troubleshoot-windows-365-app.md
   - name: Onboarding issues
