@@ -21,7 +21,7 @@ Try the following possible resolutions that apply to a typical online installati
 
 #### 1. Check whether the problem is a known issue
 
-The first thing to check is whether or not the issue you're encountering is a known issue with the Visual Studio Installer that Microsoft is working on fixing.
+Check if the issue you're encountering is a known issue with the Visual Studio Installer that Microsoft is working on fixing.
 
 To see if there's a workaround for your problem, check:
 
@@ -31,7 +31,7 @@ To see if there's a workaround for your problem, check:
 
 #### 2. Try repairing Visual Studio
 
-Try to [repair your installation](/visualstudio/install/repair-visual-studio). It may fix many common update issues.
+Try to [repair your installation](/visualstudio/install/repair-visual-studio). It might fix many common update issues.
 
 #### 3. See what the developer community says about the error
 
@@ -39,25 +39,25 @@ If repairing didn't fix the issue, search for your error message in the [Visual 
 
 #### 4. Delete the installer folder (update issues)
 
-If you encountered an issue when updating, try deleting the Visual Studio Installer folder, and then rerunning the installation bootstrapper can solve certain update failures. Doing so reinstalls the Visual Studio Installer files and resets the installation metadata.
+If you encounter an issue when updating, try deleting the Visual Studio Installer folder, then rerun the installation bootstrapper. This action can solve certain update failures. It reinstalls the Visual Studio Installer files and resets the installation metadata.
 
 1. Close the Visual Studio Installer.
 1. Delete the Visual Studio Installer folder. Typically, the folder path is _C:\Program Files (x86)\Microsoft Visual Studio\Installer_.
 1. Run the Visual Studio Installer bootstrapper.
-    1. You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads), for previous Visual Studio versions see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
-    1. You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper will be named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
+    1. You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads). For previous Visual Studio versions, see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
+    1. You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper is named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
 1. Try to install or update Visual Studio again. If the Visual Studio Installer continues to fail, [report a problem to support](#5-report-the-problem-to-support).
 
 #### 5. Report the problem to support
 
-In some situations, when there are corrupted files, issues might require case-by-case troubleshooting.
+In some situations, corrupted files cause issues that require case-by-case troubleshooting.
 
 Follow these steps to submit the problem to Microsoft Support:
 
 ##### [Visual Studio 2022 and later](#tab/vs-2022-older)
 
 1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
-1. Open the Visual Studio Installer, and then choose **Report a problem** to open the Visual Studio Feedback tool.
+1. Open the Visual Studio Installer, then choose **Report a problem** to open the Visual Studio Feedback tool.
 
     :::image type="content" source="media/troubleshoot-installation-issues/vs-installer-report-problem.png" alt-text="Screenshot showing the Provide feedback button in the Visual Studio Installer." lightbox="media/troubleshoot-installation-issues/vs-installer-report-problem.png":::
 
@@ -67,9 +67,9 @@ Follow these steps to submit the problem to Microsoft Support:
 ##### [Visual Studio 2019 and earlier](#tab/vs-2019-earlier)
 
 1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
-1. Open the Visual Studio Installer, and then select **Report a problem** to open the Visual Studio Feedback tool.
-1. Give your problem report a title, and provide relevant details. Select **Next** to go to the **Attachments** section, and then attach the generated log file (typically, the file is at `%TEMP%\vslogs.zip`).
-1. Select **Next** to review your problem report, and then select **Submit**.
+1. Open the Visual Studio Installer, then select **Report a problem** to open the Visual Studio Feedback tool.
+1. Give your problem report a title, and provide relevant details. Select **Next** to go to the **Attachments** section, then attach the generated log file (typically, the file is at `%TEMP%\vslogs.zip`).
+1. Select **Next** to review your problem report, then select **Submit**.
 
 ---
 
@@ -79,18 +79,16 @@ As a last resort, you can remove all Visual Studio installation files and produc
 
 1. [Remove all with InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove).
 1. Rerun the Visual Studio Installer bootstrapper.
-    1. You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads), for previous Visual Studio versions see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
-    1. You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper will be named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
+    1. You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads). For previous Visual Studio versions, see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
+    1. You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper is named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
 1. Try to reinstall Visual Studio.
 
 #### 7. Rollback to a previous install (Visual Studio 2022 and newer)
 
-If none of the previous steps helped you successfully update Visual Studio, you can rollback to your previously installed version by using the Visual Studio Installer or the command line.
-
-Since Visual Studio 2022 version 17.4, you can roll back to your previously installed version if your original version was on the current channel version 17.1.7 or higher, or on the 17.0 Fall 2021 LTSC channel 17.0.10 or higher.
+If none of the previous steps help you successfully update Visual Studio, you can rollback to your previously installed version by using the Visual Studio Installer or the command line.
 
 > [!IMPORTANT]
-> If you're in an organization and are using a layout to update Visual Studio, your IT Administrator is expected to maintain the previous packages in the layout if the client is expected to be able to roll back. Also, rollback may be disabled or your rollback attempt may be undone if you're in an organization that has security compliance or software updating requirements. Contact your IT Administrator for further details.
+> If you're in an organization and are using a layout to update Visual Studio, your IT Administrator is expected to maintain the previous packages in the layout if the client is expected to be able to roll back. Also, rollback might be disabled or your rollback attempt might be undone if you're in an organization that has security compliance or software updating requirements. Contact your IT Administrator for further details.
 
 ##### Rollback using the Visual Studio Installer
 
@@ -110,7 +108,7 @@ You can rollback the update programmatically by using the installer on the clien
 VisualStudioSetup.exe rollback --installPath <VisualStudioInstallPath>
 ```
 
-For more information, see [Use command-line parameters to install Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio)
+For more information, see [Use command-line parameters to install Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio).
 
 #### 8. Contact our live chat
 
@@ -122,9 +120,9 @@ To resolve issues with a [network installation](/visualstudio/install/create-a-n
 
 ## Administrator updates
 
-Administrator updates may not be applied correctly due to various situations. For more information, see [Administrator updates troubleshooting error codes](/visualstudio/install/applying-administrator-updates#verification-reports-and-troubleshooting-error-codes).
+Various situations can prevent administrator updates from applying correctly. For more information, see [Administrator updates troubleshooting error codes](/visualstudio/install/applying-administrator-updates#verification-reports-and-troubleshooting-error-codes).
 
-You can use the following methods to provide feedback about Visual Studio administrator updates or report issues that affect the updates:
+Use the following methods to provide feedback about Visual Studio administrator updates or report issues that affect the updates:
 
 - Ask questions to the community at the [Visual Studio Setup Q&A Forum](/answers/topics/vs-setup.html).
 - Go to the [Visual Studio support page](https://visualstudio.microsoft.com/vs/support/), and check whether your issue is listed in the FAQ.
@@ -133,7 +131,7 @@ You can use the following methods to provide feedback about Visual Studio admini
 
 ## Collect installation logs for Microsoft Support
 
-If you contact Microsoft Support, you might be asked to collect setup logs by using the [Microsoft Visual Studio and .NET Framework log collection tool](https://aka.ms/vscollect). The log collection tool collects setup logs from all components installed by Visual Studio, including .NET Framework, Windows SDK, and SQL Server. It also collects computer information, a Windows Installer inventory, and Windows event log information for the Visual Studio Installer, Windows Installer, and System Restore.
+If you contact Microsoft Support, they might ask you to collect setup logs by using the [Microsoft Visual Studio and .NET Framework log collection tool](https://aka.ms/vscollect). The log collection tool collects setup logs from all components installed by Visual Studio, including .NET Framework, Windows SDK, and SQL Server. It also collects computer information, a Windows Installer inventory, and Windows event log information for the Visual Studio Installer, Windows Installer, and System Restore.
 
 To collect the logs, follow these steps:
 
@@ -141,18 +139,18 @@ To collect the logs, follow these steps:
 1. Open an administrative command prompt.
 1. Run `Collect.exe` in the folder where you saved the tool.
 
-   The tool must be run under the same user account that the failed installation was run under. If you're running the tool from a different user account, set the `-user:<name>` option to specify the user account under which the failed installation was run. Run `Collect.exe -?` from an administrator command prompt for more options and usage information.
+   You must run the tool under the same user account that you used for the failed installation. If you run the tool from a different user account, set the `-user:<name>` option to specify the user account for the failed installation. Run `Collect.exe -?` from an administrator command prompt for more options and usage information.
 
 The tool generates a _vslogs.zip_ file in your _%TEMP%_ folder, typically at _C:\Users\YourName\AppData\Local\Temp\vslogs.zip_.
 
-Report product issues to us using the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you are an IT Administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
+Report product issues by using the [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE. If you're an IT administrator and don't have Visual Studio installed, you can submit [IT Admin feedback here](https://aka.ms/vs/admin/feedback).
 
 ## Problems installing WebView2
 
-If your organization's Group policies block the installation of the WebView2 component, you won't be able to install Visual Studio because the installer requires WebView2 to be installed. If this happens, check these policies:
+If your organization's Group policies block the installation of the WebView2 component, you can't install Visual Studio because the installer requires WebView2. If this issue occurs, check these policies:
 
-- If the [Microsoft Edge 'Install (WebView)'](/deployedge/microsoft-edge-update-policies#install-webview) is configured, it determines whether WebView2 can be installed.
+- If the [Microsoft Edge 'Install (WebView)'](/deployedge/microsoft-edge-update-policies#install-webview) policy is configured, it determines whether WebView2 can be installed.
 - If the Microsoft Edge 'Install (WebView)' policy isn't configured, the [Microsoft Edge 'InstallDefault'](/deployedge/microsoft-edge-update-policies#installdefault) policy determines whether WebView2 can be installed.
 
 > [!WARNING]
-> If neither policy is configured, WebView2 installation is allowed by your organization.
+> If neither policy is configured, your organization allows WebView2 installation.
