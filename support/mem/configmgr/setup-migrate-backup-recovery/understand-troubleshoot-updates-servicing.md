@@ -1381,20 +1381,24 @@ A specific global replication group, **CMUpdates**, replicates the installation 
 
 In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each llink for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
 
-
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 
-"CMUpdate.exe" process hosting this service is the main driver of update package installation. If it crashes, the installation hangs at a certain stage - and you may notice CMUpdate.log repeatedly recording the same activity. Investigate Windows Application Log in the Event Viewer to confirm the Process Crash (Event ID 1000).
+The CMUpdate process, the main driver of update package installation, hosts the CONFIGURATION_MANAGER_UPDATE service. If CMUpdate fails, the installation hangs at a specific stage. CMUpdate.log might repeatedly record the same activity. To investigate this issue, open Event Viewer and review the Windows Application log for Event ID 1000 (Process crash).
 
-The alternate usual cause is **security software** preventing the updated "CMUpdate.exe" binary from running or killing the process. If the "CMUpdate.exe" process still crashes while security software is turned off, collect Process Memory Dump with [ProcDump](/sysinternals/downloads/procdump) and submit a ticket to Microsoft Support to understand the cause:
+Security software can also cause this behavior by preventing the updated CMUpdate binary from running, or by stopping the process. To investigate this issue, turn off the security software and then try to update again. If the issue persists, use the [ProcDump](/sysinternals/downloads/procdump) tool to collect a process memory dump. Download and install the tool, and at a command prompt, run the following command:
 
->`procdump -ma -e cmupdate.exe`
+```console
+procdump -ma -e cmupdate.exe
+```
 
-##### Issue 4: CMUpdate fails to update the database objects
+Create a support ticket, attach the dump file, and then submit it to Microsoft Support.
 
-The first usual cause is _third-party_ objects created in ConfigMgr SQL DB. Remove them before attempting the installation again.
+##### Issue 4: CMUpdate doesn't update the database objects
 
-The alternate cause is _third-party software_ accessing ConfigMgr SQL DB and locking _first-party_ objects; for example, external CMDB connector. Make sure no other software interferes while CMUpdate.exe performs database changes.
+If this issue occurs, look for the following typical causes:
+
+- Third-party objects in the Configuration Manager SQL Server database. Remove the third-party objects, and then install the update again.
+- Third-party software that accesses the Configuration Manager SQL Server database, and locks first-party database objects. For example, an external Configuration Manager database might behave this way. Make sure that other software doesn't lock database objects while CMUpdate works in the database.
 
 ## Reference
 
@@ -1403,15 +1407,15 @@ The alternate cause is _third-party software_ accessing ConfigMgr SQL DB and loc
 | Folder | Location | Description |
 |--------|---|-------------|
 | \EasySetupPayload | SCP |  This shared folder contains the actual installation files for an update. There's no Setup.exe file. Instead, an Install.map file is used for installing. |
-| \CMUStaging | Site Server | This folder holds unpacked ConfigMgr manifest cab that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored there during the installation of the Update Pack. |
-| \CMUClient | Site Server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
-| \PilotingUpgrade | Site Server | Client Piloting Package source. |
-| \ClientUpgrade | Site Server | Client Upgrade Package source. |
+| \CMUStaging | Site server | This folder contains unpacked ConfigMgr manifest cab that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored in this folder while the update installs. |
+| \CMUClient | Site server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
+| \PilotingUpgrade | Site server | This folder contains the source content for the Client Piloting Package. |
+| \ClientUpgrade | Site server | This folder contains the source content for the Client Upgrade Package. |
 | \cd.latest | Site Server | This folder contains the latest version of the Configuration Manager client installation files. |
 
 ### Update Pack State codes
 
-The following are the state codes and the states that they represent:
+The following table lists the state codes and the states that they represent.
 
 | State | Value |
 |---|---|
@@ -1456,7 +1460,7 @@ The following are the state codes and the states that they represent:
 | INSTALL_UPGRADEDATABASE | 196628 |
 | INSTALL_UPDATEADMINCONSOLE | 196629 |
 
-Available Flags are the following:
+The following table lists the available flags.
 
 | Flag | Value |
 |--|--|
