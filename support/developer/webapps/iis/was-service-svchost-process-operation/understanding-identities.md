@@ -3,7 +3,7 @@ title: Understanding identities in IIS
 description: This article provides background information about identities in Internet Information Services.
 ms.date: 04/17/2025
 ms.custom: sap:WAS Service and Svchost Process Operation\Application pool identity
-ms.reviewer: prchanda, jarrettr
+ms.reviewer: prchanda, jarrettr, v-shaywood
 ---
 # Understanding identities in IIS
 
@@ -91,7 +91,8 @@ To understand application pool identities, you have to understand what an identi
     ```console
     setspn -a HTTP/MyWebAppZone.com Server1$
     ```
-    This situation results in duplicate SPNs for the same service (in this case, HTTP), where each server account has its own SPN — a configuration you should avoid.
+
+    This scenario results in duplicate SPNs for the same service (in this case HTTP), where each server account has its own SPN. Avoid this type of configuration.
   
     To overcome this disadvantage, you can run the application under a custom Windows (domain) identity, and then set the SPN to only that specific domain account in the domain controller.
 
