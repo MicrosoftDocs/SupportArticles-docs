@@ -105,7 +105,7 @@ Knowing the stage at which the update failed gives you a starting point for trou
 > [!NOTE]  
 > The Replication stage is part of either the Prerequisite check stage or the Installation stage, so it's not listed separately in the diagram.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg" alt-text="Diagram of a decision tree to identify the installation state.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg":::
 
 > [!IMPORTANT]  
 > If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following excerpt:
@@ -264,7 +264,7 @@ Updates that aren't applicable (and aren't visible in the console) have entries 
 
 If you suspect that your issue occurs in the Synchronization stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg" alt-text="Diagram of a decision tree to determine whether an issue occurs during the Synchronization stage.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Synchronization stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg":::
 
 The following steps summarize this troubleshooting process. The steps vary depending on whether your SCP is configured in Online mode or Offline mode.
 
@@ -302,7 +302,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 If you suspect that your issue occurs in the Applicability check stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Screenshot of the Troubleshoot Applicability flowchart.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Applicability check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg":::
 
  Additionally, you also need information from the top-level Site SQL Database. Use the following query:
 
@@ -518,7 +518,7 @@ During the Download stage, the DMPDownloader component downloads the Easy Setup 
 
 Use the following flowchart to narrow down issues that might occur at the Download stage.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg" alt-text="Screenshot of the Troubleshoot Download flowchart.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Download stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg":::
 
 #### How to approach download issues
 
@@ -558,7 +558,7 @@ The best place to start troubleshooting is in the **Monitoring** > **Overview** 
 
 Use the following flowchart to narrow down the stage in which your issue occurs.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Screenshot of the Replication and Installation flowchart.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication or Installation stages." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg":::
 
 ## Investigate the Replication stage
 
@@ -729,7 +729,7 @@ To summarize the detailed description of the steps, the replication process star
 
 Use the following flowchart to narrow down issues that might occur at the Replication stage. This flowchart applies whether the Installation stage or the Prerequisite check stage triggered the Replication stage.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Screenshot of the Replication troubleshooting flowchart.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg":::
 
 In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Package from their parent site. The flow is exactly the same as for any other classic Package. For more information, see [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart).
 
@@ -1055,7 +1055,7 @@ The console labels the update package as **Prerequisite check passed**, and the 
 
 If the Prerequisite check takes a long time or fails completely, use the following flow chart to help identify the issue. In multi-tier environments, the chart applies to all primary sites and the CAS.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg" alt-text="Screenshot of the Prerequisite Check troubleshooting flowchart.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Prerequisite check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg":::
 
 Typically, Prerequisite check issues belong to one of the following categories:
 
@@ -1346,7 +1346,7 @@ If the Installation stage is stuck in the **Installing** state or fails complete
 
 Use the following flow chart to help identify the issue.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg" alt-text="Flowchart that helps identify the cause of an installation issue.":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Installation stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg":::
 
 The following issues can cause an update package to appear to be stuck during the Installation stage:
 
