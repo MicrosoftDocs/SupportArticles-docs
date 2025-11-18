@@ -69,9 +69,9 @@ Before you install an update, consider running the prerequisite check for that u
 
 ### Identify the update package GUID
 
-Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
+Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the Configuration Manager Console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
 
-Sometimes, the console doesn't list the affected update package. In this case, you can find the GUID in the ConfigMgr database. To find the GUID, run a SQL query that resembles the following excerpt:
+Sometimes, the console doesn't list the affected update package. In this case, you can find the GUID in the Configuration Manager database. To find the GUID, run a SQL query that resembles the following excerpt:
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
@@ -120,7 +120,7 @@ Select one of the following links to troubleshoot a particular stage, or work th
 
 - [Investigate the Synchronization and Applicability check stages](#investigate-the-synchronization-and-applicability-check-stages)
 - [Investigate the Download stage](#investigate-the-download-stage)
-- [Investigate the Replication, Prerequisite Check, or Installation stages](#investigate-the-replication-prerequisite-check-or-installation-stages)
+- [Review progress through the Replication, Prerequisite check, and Installation stages](#review-progress-through-the-replication-prerequisite-check-and-installation-stages)
 
 ## Investigate the Synchronization and Applicability check stages
 
@@ -143,7 +143,7 @@ Successfully Dropped the state message 0~~
 
 DMPDownloader sends the `0 (START_PROCESS)` high-priority state message to the Site Server to indicate that the synchronization process is starting.
 
-Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released ConfigMgr updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following excerpt:
+Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released Configuration Manager updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following excerpt:
 
 ```output
 Checking for preview version~~
@@ -452,7 +452,7 @@ To download the redistributable files, DMPDownloader reads the same `Manifest.xm
 </Content>
 ```
 
-Then DMPDownloader engages the usual ConfigMgr Redist Downloader, SetupDL.exe. SetupDL.exe downloads the redistributable files and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
+Then DMPDownloader engages the usual Configuration Manager redist downloading process, SetupDL.exe. SetupDL.exe downloads the redistributable files and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
 
 ```output
 INFO: Attempting to load resource DLL...
@@ -926,7 +926,7 @@ Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
 ```
 
 > [!NOTE]  
-> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of ConfigMgr, and the log entry resembles the following excerpt:
+> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
 >
 > ```output
 >update.map has no update for CONFIGURATION_MANAGER_UPDATE
@@ -1071,9 +1071,9 @@ In the **Prerequisites Failed** case, to find the real issue, review the followi
 
 The latest versions of Configuration Manager introduced various SQL client prerequisites. The current installation process for update packages doesn't automatically update these clients. As a result, it makes sense to install up-to-date SQL Clients before you install updates.
 
-Since version 1810, ConfigMgr requires SQL Native Client version 11.4.7001.0 or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQLNCLI11\InstalledVersion` registry entry.
+Since version 1810, Configuration Manager requires SQL Native Client version 11.4.7001.0 or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQLNCLI11\InstalledVersion` registry entry.
 
-Similarly, since version 2303, ConfigMgr requires ODBC Driver 18 for SQL Server or a later version. Since version 2503, ConfigMgr requires ODBC Driver 18.4.1.1 for SQL Server or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSODBCSQL18\InstalledVersion` registry entry.
+Similarly, since version 2303, Configuration Manager requires ODBC Driver 18 for SQL Server or a later version. Since version 2503, Configuration Manager requires ODBC Driver 18.4.1.1 for SQL Server or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSODBCSQL18\InstalledVersion` registry entry.
 
 To meet both SQL Server prerequisites, consider manually installing the following msi files from the \\EasySetupPayload\\\<Update GUID>\\redist folder (only available for major releases):
 
@@ -1105,7 +1105,7 @@ If you recently performed an in-place upgrade to Windows Server on a remote site
 
 ##### Deprecated features: Resource access profiles or the certificate registration point role
 
-Resource access profiles and their related features and deployments are deprecated. If Prerequisite checker detects any of these features, it blocks the update. It also blocks the update if it detects any existing co-managed device that has an RA Profile workload that's set toward ConfigMgr.
+Resource access profiles and their related features and deployments are deprecated. If Prerequisite checker detects any of these features, it blocks the update. It also blocks the update if it detects any existing co-managed device that has an RA Profile workload that's set toward Configuration Manager.
 
 To pass the check, follow the official guidance in [Co-management workloads](/intune/configmgr/comanage/workloads) to move the **Resource Access Policies workload** slider to **Intune only**. If co-management isn't configured, you have to configure it at least temporarily to move the slider.
 
@@ -1131,7 +1131,7 @@ In the console, you see the following message:
 >
 >To proceed with the upgrade, enable a more secure communication method for the site either by enabling HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
 
-Currently, ConfigMgr sites only support Enhanced HTTP or HTTPS for communication. Other options that were supported previously were deprecated in ConfigMgr version 2409 and later versions. 
+Currently, Configuration Manager sites only support Enhanced HTTP or HTTPS for communication. Other options that were supported previously were deprecated in Configuration Manager version 2409 and later versions. 
 
 To resolve this issue, switch the Site Communication to Enhanced HTTP or HTTPS. For official guidance, see [Enable the site for HTTPS-only or enhanced HTTP](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
 
@@ -1214,7 +1214,7 @@ From here the real update starts. CMUpdate follows these steps:
 1. Update the Admin console binaries.
 1. Turn on SQL Server Service Broker.
 
-During this step, CMUpdate also copies the redists from the \\CMUStaging\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
+During this step, CMUpdate also copies the redists from the \\CMUStaging\\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
 
 CMUpdate logs entries that resemble the following excerpt:
 
@@ -1407,7 +1407,7 @@ If this issue occurs, look for the following typical causes:
 | Folder | Location | Description |
 |--------|---|-------------|
 | \EasySetupPayload | SCP |  This shared folder contains the actual installation files for an update. There's no Setup.exe file. Instead, an Install.map file is used for installing. |
-| \CMUStaging | Site server | This folder contains unpacked ConfigMgr manifest cab that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored in this folder while the update installs. |
+| \CMUStaging | Site server | This folder contains unpacked Configuration Manager manifest cab file that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored in this folder while the update installs. |
 | \CMUClient | Site server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
 | \PilotingUpgrade | Site server | This folder contains the source content for the Client Piloting Package. |
 | \ClientUpgrade | Site server | This folder contains the source content for the Client Upgrade Package. |
