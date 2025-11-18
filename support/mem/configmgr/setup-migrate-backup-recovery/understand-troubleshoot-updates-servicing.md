@@ -127,7 +127,7 @@ Select one of the following links to troubleshoot a particular stage, or work th
 The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
 
 The following steps provide an overview of the process that an online SCP uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/intune/configmgr/core/servers/manage/download-updates-flowchart).  
-
+<br/>
 <details>
    <summary>Select here to see the Synchronization and Applicability steps for an online SCP.</summary>
 
