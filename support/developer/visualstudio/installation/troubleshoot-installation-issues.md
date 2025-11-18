@@ -67,8 +67,11 @@ Follow these steps to submit the problem to Microsoft Support:
 ##### [Visual Studio 2019 and earlier](#tab/vs-2019-earlier)
 
 1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
+
 1. Open the Visual Studio Installer, then select **Report a problem** to open the Visual Studio Feedback tool.
+
 1. Give your problem report a title, and provide relevant details. Select **Next** to go to the **Attachments** section, then attach the generated log file (typically, the file is at `%TEMP%\vslogs.zip`).
+
 1. Select **Next** to review your problem report, then select **Submit**.
 
 ---
