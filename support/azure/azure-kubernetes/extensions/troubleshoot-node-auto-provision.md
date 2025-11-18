@@ -78,11 +78,11 @@ Common causes include:
 
 Solutions include:
 
-- Adding proper tolerations to pods.
-- Reviewing DaemonSet configurations.  
-- Adjusting PDBs to allow disruption
-- Removing `do-not-disrupt` annotations if appropriate.
-- Reviewing lock configurations.
+- Add proper tolerations to pods.
+- Review `DaemonSet` configurations.  
+- Adjust PDBs to allow disruption
+- Remove `do-not-disrupt` annotations if appropriate.
+- Review lock configurations.
 
 ## Networking issues
 
@@ -188,7 +188,7 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 
 Common causes include:
 
-- Network security group rules.
+- Network security group (NSG) rules.
 - Incorrect subnet configuration.
 - CNI plugin issues.
 - DNS resolution problems.
@@ -197,21 +197,26 @@ Common causes include:
 
 Solutions include:
 
-- Reviewing [Network Sescurity Group][network-security-group-docs] rules for required traffic.
-- Verifying subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation][aksnodeclass-subnet-config].
-- Restarting CNI plugin pods.
-- Checking `CoreDNS` configuration. For more information, see [CoreDNS documentation][coredns-troubleshoot].
+- Review [Network Sescurity Group][network-security-group-docs] rules for required traffic.
+- Verify subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation][aksnodeclass-subnet-config].
+- Restart CNI plugin pods.
+- Check `CoreDNS` configuration. For more information, see [CoreDNS documentation][coredns-troubleshoot].
 
 ### DNS service IP issues
 
 >[!NOTE]
->The `--dns-service-ip` parameter is only supported for NAP (Node Auto Provisioning) clusters and is not available for self-hosted Karpenter installations.
+>The `--dns-service-ip` parameter is only supported for NAP clusters and isn't available for self-hosted Karpenter installations.
 
-**Symptoms**: Pods can't resolve DNS names or kubelet fails to register with API server due to DNS resolution failures.
+**Symptoms**
 
-**Debugging Steps**:
+Pods can't resolve DNS names or kubelet fails to register with API server due to DNS resolution failures.
 
-1. **Check kubelet DNS configuration**:
+**Debugging steps**
+
+1. **Check kubelet DNS configuration**
+
+Run the following command:
+
 ```azurecli-interactive
 # SSH to the Karpenter node and check kubelet config
 sudo cat /var/lib/kubelet/config.yaml | grep -A 5 clusterDNS
@@ -221,7 +226,10 @@ sudo cat /var/lib/kubelet/config.yaml | grep -A 5 clusterDNS
 # - "10.0.0.10"  # This should match your cluster's DNS service IP
 ```
 
-2. **Verify DNS service IP matches cluster configuration**:
+2. **Verify DNS service IP matches cluster configuration**
+
+Run the following command:
+
 ```azurecli-interactive
 # Get the actual DNS service IP from your cluster
 kubectl get service -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
@@ -230,7 +238,10 @@ kubectl get service -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
 az aks show --resource-group <rg> --name <cluster-name> --query "networkProfile.dnsServiceIp" -o tsv
 ```
 
-3. **Test DNS resolution from the node**:
+3. **Test DNS resolution from the node**
+
+Run the following command:
+
 ```azurecli-interactive
 # SSH to the Karpenter node and test DNS resolution
 # Test using the DNS service IP directly
@@ -243,7 +254,10 @@ nslookup kubernetes.default.svc.cluster.local
 dig azure.com
 ```
 
-4. **Check DNS pods status**:
+4. **Check DNS pods status**
+
+Run the following command:
+
 ```azurecli-interactive
 # Verify CoreDNS pods are running
 kubectl get pods -n kube-system -l k8s-app=kube-dns
@@ -252,7 +266,10 @@ kubectl get pods -n kube-system -l k8s-app=kube-dns
 kubectl logs -n kube-system -l k8s-app=kube-dns --tail=50
 ```
 
-5. **Validate network connectivity to DNS service**:
+5. **Validate network connectivity to DNS service**
+
+Run the following command:
+
 ```azurecli-interactive
 # From the Karpenter node, test connectivity to DNS service
 telnet 10.0.0.10 53  # Replace with your actual DNS service IP
@@ -260,74 +277,84 @@ telnet 10.0.0.10 53  # Replace with your actual DNS service IP
 nc -zv 10.0.0.10 53
 ```
 
-**Common Causes**:
-- Incorrect `--dns-service-ip` parameter in AKSNodeClass
-- DNS service IP not in the service CIDR range
-- Network connectivity issues between node and DNS service
-- CoreDNS pods not running or misconfigured
-- Firewall rules blocking DNS traffic
+**Common causes**
 
-**Solutions**:
-- Verify `--dns-service-ip` matches the actual DNS service: `kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'`
-- Ensure DNS service IP is within the service CIDR range specified during cluster creation
-- Check that Karpenter nodes can reach the service subnet
-- Restart CoreDNS pods if they're in error state: `kubectl rollout restart deployment/coredns -n kube-system`
-- Verify NSG rules allow traffic on port 53 (TCP/UDP)
-- Run a connectivity analysis with the [Azure Virtual Network Verifier][connectivity-tool] tool to validate outbound connectivity
+Common causes include:
 
-## Azure-Specific Issues
+- Incorrect `--dns-service-ip` parameter in `AKSNodeClass`.
+- DNS service IP isn't in the service Classless Inter-Domain Routing (CIDR) range.
+- Network connectivity issues between node and DNS service.
+- `CoreDNS` pods not running or misconfigured.
+- Firewall rules block DNS traffic.
 
-### Spot VM Issues
+**Solutions**
 
-**Symptoms**: Unexpected node terminations when using spot instances.
+Solutions include:
 
-**Debugging Steps**:
+- Verify `--dns-service-ip` matches the actual DNS service. Do this with the following command: `kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'`
+- Ensure DNS service IP is within the service CIDR range specified during cluster creation.
+- Check Karpenter nodes can reach the service subnets
+- Restart `CoreDNS pods` if they're in error state. Do this with the following command:  `kubectl rollout restart deployment/coredns -n kube-system`
+- Verify NSG rules allow traffic on port 53 (TCP/User Datagram Protocol (UDP)).
+- Run a connectivity analysis with [Azure Virtual Network Verifier](/azure/virtual-network-manager/overview) to validate outbound connectivity.
 
-1. **Check node events**:
+## Azure-specific issues
+
+### Spot virtual machine (VM) issues
+
+**Symptoms**
+
+Unexpected node terminations occur when using spot instances.
+
+**Debugging steps**
+
+1. **Check node events**
+
+Run the following command:
 
 ```azurecli-interactive
 kubectl get events | grep -i "spot\|evict"
 ```
 
-2. **Monitor spot VM pricing**:
+2. **Monitor spot VM pricing**
+
+Run the following command:
 
 ```azurecli-interactive
 az vm list-sizes --location <region> --query "[?contains(name, 'Standard_D2s_v3')]"
 ```
 
-**Solutions**:
-- Use diverse instance types for better availability
-- Implement proper pod disruption budgets
-- Consider mixed spot/on-demand strategies
-- Use workloads tolerant of node preemption
+**Solutions**
 
-### Quota Exceeded
+Solutions include:
 
-**Symptoms**: VM creation fails with quota exceeded errors.
+- Use diverse instance types for better availability.
+- Implement proper pod disruption budgets.
+- Consider mixed spot and on-demand strategies.
+- Use workloads tolerant of node preemption.
 
-**Debugging Steps**:
+### Quota exceeded
 
-1. **Check current quota usage**:
+**Symptoms**
+
+VM creation fails with quota exceeded errors.
+
+**Debugging steps**
+
+1. **Check current quota usage**
+
+Run the following command:
+ 
 ```azurecli-interactive
 az vm list-usage --location <region> --query "[?currentValue >= limit]"
 ```
 
-**Solutions**:
-- Request quota increases through Azure portal
-- Expand NodePool CRD to more VM sizes. See [NodePool configuration documentation][nap-nodepool-docs] for details. For example, A NodePool specification which allows for D-family virtual machines is less likely to hit quota errors that stop VM creation, compared to a NodePool specification specific to only one exact VM Size. 
+**Solutions**
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+Solutions include:
 
+- Request quota increases through Azure portal.
+- Expand nodepool custom resource definitions (CRDs) to more VM sizes. For more information, see [NodePool configuration documentation][nap-nodepool-docs]. For example, a nodepool specification that allows for D-family VM is less likely to hit quota errors that stop VM creation compared to a nodepool specification specific to only one exact VM size. 
 
-[aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
-[karpenter-troubleshooting]: https://karpenter.sh/docs/troubleshooting/
-[karpenter-faq]: https://karpenter.sh/docs/faq/
-[network-security-group-docs]: /azure/virtual-network/network-security-groups-overview
-[aksnodeclass-subnet-config]: /azure/aks/node-autoprovision-aksnodeclass#virtual-network-subnet-configuration
-[nap-nodepool-docs]: /azure/aks/node-autoprovision-node-pools
-[nap-main-docs]: /azure/aks/node-autoprovision
-[coredns-troubleshoot]: /azure/aks/coredns-custom#troubleshooting
-[aks-container-metrics]: /azure/aks/container-network-observability-metrics
-[advanced-container-network-metrics]: /azure/aks/advanced-container-networking-services-overview
-[connectivity-tool]: /azure/azure-kubernetes/connectivity/basic-troubleshooting-outbound-connections#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint
-
+[!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
