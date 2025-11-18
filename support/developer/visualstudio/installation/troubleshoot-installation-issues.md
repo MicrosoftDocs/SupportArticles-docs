@@ -33,7 +33,7 @@ Try to [repair your installation](/visualstudio/install/repair-visual-studio). A
 
 #### Learn what the developer community says about the error
 
-If a repair doesn't fix your issue, search for your error message in the [Visual Studio Developer Community](https://developercommunity.visualstudio.com/search?space=8). Other members of the community might have found a solution or workaround to your problem.
+If a repair doesn't fix your issue, search for your error message in the [Visual Studio Developer Community](https://developercommunity.visualstudio.com/search?space=8). Other members of the community might find a solution or workaround to your problem.
 
 #### Delete the Installer folder (update issues)
 
@@ -87,12 +87,12 @@ As a last resort, you can remove all Visual Studio installation files and produc
 If none of the previous steps help you to successfully update Visual Studio, you can roll back the program to your previously installed version by using the Visual Studio Installer or the command line.
 
 > [!IMPORTANT]
-> If you're in an organization, and you use a layout to update Visual Studio, your IT Administrator is expected to maintain the previous packages in the layout if the client is expected to be able to roll back. Also, the rollback process might be disabled or your rollback attempt might be undone if you're in an organization that has security compliance or software updating requirements. Contact your IT Administrator for more details.
+> If you're in an organization that uses a layout to update Visual Studio, your IT administrator typically maintains the previous packages in the layout. Those packages enable the client to roll back the installation. Also, the rollback process might be disabled or your rollback attempt might be undone. This could occur if your organization has security compliance or software update requirements. For more details, contact your IT administrator.
 
 ##### Roll back by using the Visual Studio Installer
 
 1. Start **Visual Studio Installer** on your computer.
-1. In the installer, look for the edition of Visual Studio that you have installed.
+1. In the installer, look for the edition of Visual Studio to match the installed edition.
 1. Select **More**.
 1. Select **Rollback to previous version**.
 
@@ -101,7 +101,7 @@ If none of the previous steps help you to successfully update Visual Studio, you
 
 ##### Roll back by using the command line
 
-You can roll back the update programmatically by using the installer on the client computer and passing in the rollback command alongside the installation path instance. For example:
+You can roll back the update programmatically. Use the installer on the client computer, and pass in the rollback command together with the installation path instance. For example:
 
 ```powershell
 VisualStudioSetup.exe rollback --installPath <VisualStudioInstallPath>
