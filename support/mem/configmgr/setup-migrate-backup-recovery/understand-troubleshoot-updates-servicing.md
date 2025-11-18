@@ -803,6 +803,7 @@ For more information about the current set of Prerequisite check rules, see [Lis
 
 > [!NOTE]  
 > Only a subset of the prerequisite checks occur before an update installs.  
+
 <br/>
 <details><Summary>Select here to see the Prerequisite check steps.</summary>
 
