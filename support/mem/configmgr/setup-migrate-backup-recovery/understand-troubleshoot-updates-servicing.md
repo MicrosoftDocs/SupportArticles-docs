@@ -105,7 +105,7 @@ Knowing the stage at which the update failed gives you a starting point for trou
 > [!NOTE]  
 > The Replication stage is part of either the Prerequisite check stage or the Installation stage, so it's not listed separately in the diagram.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png":::
 
 > [!IMPORTANT]  
 > If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following excerpt:
