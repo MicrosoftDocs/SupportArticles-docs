@@ -71,6 +71,8 @@ Follow these steps to submit the problem to Microsoft Support:
 1. Give your problem report a title, and provide relevant details. Select **Next** to go to the **Attachments** section, and then attach the generated log file (typically, the file is at `%TEMP%\vslogs.zip`).
 1. Select **Next** to review your problem report, and then select **Submit**.
 
+---
+
 #### 6. Remove all Visual Studio installation files
 
 As a last resort, you can remove all Visual Studio installation files and product information:
@@ -83,7 +85,7 @@ As a last resort, you can remove all Visual Studio installation files and produc
 
 #### 7. Rollback to a previous install (Visual Studio 2022 and newer)
 
-If none of the previous steps helped you successfully update Visual Studio, you can rollback to your previously installed version by using the Visual Studio Installer or the command line. 
+If none of the previous steps helped you successfully update Visual Studio, you can rollback to your previously installed version by using the Visual Studio Installer or the command line.
 
 Since Visual Studio 2022 version 17.4, you can roll back to your previously installed version if your original version was on the current channel version 17.1.7 or higher, or on the 17.0 Fall 2021 LTSC channel 17.0.10 or higher.
 
