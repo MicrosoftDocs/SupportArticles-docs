@@ -150,7 +150,7 @@ Report product issues by using the [Report a Problem](/visualstudio/ide/how-to-r
 If your organization's Group policies block the installation of the WebView2 component, you can't install Visual Studio because the installer requires WebView2. If this issue occurs, check these policies:
 
 - If the [Microsoft Edge 'Install (WebView)'](/deployedge/microsoft-edge-update-policies#install-webview) policy is configured, it determines whether WebView2 can be installed.
-- If the Microsoft Edge 'Install (WebView)' policy isn't configured, the [Microsoft Edge 'InstallDefault'](/deployedge/microsoft-edge-update-policies#installdefault) policy determines whether WebView2 can be installed.
+- If the _Microsoft Edge 'Install (WebView)' policy_ isn't configured, the [Microsoft Edge 'InstallDefault'](/deployedge/microsoft-edge-update-policies#installdefault) policy determines whether WebView2 can be installed.
 
 > [!WARNING]
 > If neither policy is configured, your organization allows WebView2 installation.
