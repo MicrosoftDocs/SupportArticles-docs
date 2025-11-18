@@ -54,7 +54,7 @@ In some situations, when there are corrupted files, issues might require case-by
 
 Follow these steps to submit the problem to Microsoft Support:
 
-##### Visual Studio 2022 and later
+##### [Visual Studio 2022 and later](#tab/vs-2022-older)
 
 1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
 1. Open the Visual Studio Installer, and then choose **Report a problem** to open the Visual Studio Feedback tool.
@@ -64,7 +64,7 @@ Follow these steps to submit the problem to Microsoft Support:
 1. Give your problem report a title, and provide the relevant details. The most recent setup log for the Visual Studio Installer is automatically added to the **Additional attachments** section of your problem report.
 1. Choose **Submit**.
 
-##### Visual Studio 2019 and earlier
+##### [Visual Studio 2019 and earlier](#tab/vs-2019-earlier)
 
 1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
 1. Open the Visual Studio Installer, and then select **Report a problem** to open the Visual Studio Feedback tool.
