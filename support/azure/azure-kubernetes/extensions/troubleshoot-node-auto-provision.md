@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Node Auto-Provisioning Managed Add-on
-description: Learn how to troubleshoot node auto-provisisioning (NAP) in Azure Kubernetes Service (AKS).
+description: Learn how to troubleshoot node auto-provisioning (NAP) in Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -24,7 +24,7 @@ When you enable NAP, you can experience problems associated with the configurati
 Ensure the following tools are installed and configured. They're used in the following sections.
 
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli). To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the `[az aks install-cli](/cli/azure/aks#az-aks-install-cli)` command.
-- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, a Kubernetes command-line client. This is available with Azure CLI.
+- The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, a Kubernetes command-line client available with Azure CLI.
 - Confirm you have NAP enabled on your cluster. For more information, see [node auto provisioning documentation][nap-main-docs].
 
 ## Common issues
@@ -119,7 +119,7 @@ Run the following command:
 kubectl get pods -n kube-system | grep -E "azure-cni|kube-proxy"
 ```
 
-If you're using Azure Container Networking Interface (CNI) with overlay, verfify your nodes have these labels: 
+If you're using Azure Container Networking Interface (CNI) with overlay, verify your nodes have these labels: 
 
 ```azurecli-interactive
     kubernetes.azure.com/azure-cni-overlay: "true"
@@ -181,7 +181,7 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 
 **CNI-to-ACNS troubleshooting**
 
-- **If ACNS logs show "no IPs available"**: This indicates an ACNS or AKS watch on the Neural Network Coding (NNC).
+- **If ACNS logs show "no IPs available"**: Indicates an ACNS or AKS watch on the Neural Network Coding (NNC).
 - **If CNI calls don't appear in ACNS logs**: You likely have the wrong CNI installed. Verify the correct CNI plugin is deployed.
 
 **Common causes**
@@ -197,7 +197,7 @@ Common causes include:
 
 Solutions include:
 
-- Review [Network Sescurity Group][network-security-group-docs] rules for required traffic.
+- Review [Network Security Group][network-security-group-docs] rules for required traffic.
 - Verify subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation][aksnodeclass-subnet-config].
 - Restart CNI plugin pods.
 - Check `CoreDNS` configuration. For more information, see [CoreDNS documentation][coredns-troubleshoot].
