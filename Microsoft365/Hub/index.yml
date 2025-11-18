@@ -21,7 +21,7 @@ productDirectory:
     # Card
     - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /media/logos/logo-ms-social.png
+      imageSrc: /media/logos/logo-ms-social.svg
       links:
         - url: ../admin/o365-admin-welcome.yml
           text: Microsoft 365 admin center
