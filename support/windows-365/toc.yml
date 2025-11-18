@@ -17,6 +17,10 @@ items:
       href: how-to-deprovision-business-grace-with-graph-explorer.md
 - name: Windows 365 Enterprise
   items:
+  - name: AI-enabled Windows 365
+    items:
+    - name: AI-enabled Cloud PC known issues
+      href: windows-365-ai-enabled-cloud-pc-known-issues.md
   - name: Azure Network Connection
     items:
     - name: Azure network connection health checklist
