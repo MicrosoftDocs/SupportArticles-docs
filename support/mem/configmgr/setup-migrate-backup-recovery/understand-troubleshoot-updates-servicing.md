@@ -14,7 +14,7 @@ This article helps administrators understand the Updates and Servicing process i
 
 Configuration Manager synchronizes with the Microsoft Cloud service to get updates that apply to your infrastructure and version. You can use the Configuration Manager console to install these updates.
 
-To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
+To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, go to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Best practices for updates
 
@@ -130,7 +130,7 @@ The following steps provide an overview of the process that an online SCP uses t
 
 <details><summary>Select here to see the Synchronization and Applicability steps for an online SCP.</summary>
 
-### Process step 1: DMPDownloader: Synchronize
+### Process step 1: DMPDownloader synchronizes the latest update information
 
 Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs entries in DMPDownloader.log that resemble the following excerpt:
 
@@ -205,7 +205,7 @@ DMPDownloader sends the`4 (MANIFEST_DOWNLOADED)` state message to indicate that 
 
 In Hierarchy Manager (HMAN), a message forwarding thread moves the incoming MCM file to hman.box\\CFD\\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
 
-### Process step 2: HMAN: Check applicability
+### Process step 2: HMAN checks whether any new updates apply
 
 HMAN checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
 
