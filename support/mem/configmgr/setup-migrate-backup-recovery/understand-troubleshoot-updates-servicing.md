@@ -339,8 +339,8 @@ If you spot a discrepancy, submit a ticket to Microsoft Support.
 
 ## Investigate the Download stage
 
-As described earlier, each update package has a unique GUID (also known as the update GUID or package GUID). To identify the GUID of the update package that you're interested in, you can either search for it in the Manifest.xml file (from the unpacked ConfigMgr.Update.Manifest.cab file) or add the **Package GUID** column to the **Administration** > **Overview** > **Updates and Servicing** node of the console. Use the package GUID to follow all the later processing steps for update packages.
-
+As described earlier, each update package has a unique GUID (also known as the update GUID or package GUID). To identify the GUID of the update package that you're interested in, you can either search for it in the Manifest.xml file (from the unpacked ConfigMgr.Update.Manifest.cab file) or add the **Package GUID** column to the **Administration** > **Overview** > **Updates and Servicing** node of the console. Use the package GUID to follow all the later processing steps for update packages.  
+<br/>
 <details><summary>Select here to see the Download steps.</summary>
 
 ### Process step 1: DMPDownloader downloads the update and any supporting files
@@ -567,8 +567,8 @@ After an update package downloads, it has to replicate through the site topology
 
 After the Easy Setup Package replicates, Configuration Manager extracts the update from the site server content library to the CMUStaging folder to be used during the installation process.
 
-The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the update replicates to other sites.
-
+The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the update replicates to other sites.  
+<br/>
 <details><Summary>Select here to see the Replication steps.</summary>
 
 ### Process step 1: Start the replication process and identify the update
@@ -802,8 +802,8 @@ The following steps explain the process of extracting the update to run prerequi
 For more information about the current set of Prerequisite check rules, see [List of prerequisite checks for Configuration Manager](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks).
 
 > [!NOTE]  
-> Only a subset of the prerequisite checks occur before an update installs.
-
+> Only a subset of the prerequisite checks occur before an update installs.  
+<br/>
 <details><Summary>Select here to see the Prerequisite check steps.</summary>
 
 ### Process step 1: Trigger the check
@@ -1138,8 +1138,8 @@ To resolve this issue, switch the Site Communication to Enhanced HTTP or HTTPS. 
 
 ## Investigate the Installation stage
 
-When you select an update in the console and then select **Install Update** (and if applicable, you ignore any warning that appears), the actual site update starts. First, to ensure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the check fails, the update stops.
-
+When you select an update in the console and then select **Install Update** (and if applicable, you ignore any warning that appears), the actual site update starts. First, to ensure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the check fails, the update stops.  
+<br/>
 <details><Summary>Select here to see the Installation steps.</summary>
 
 ### Process step 1: CMUpdate checks the readiness of the site server
