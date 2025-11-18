@@ -1402,7 +1402,7 @@ If this issue occurs, look for the following typical causes:
 
 ## Reference
 
-### Relevant folders
+### Relevant folders for installing Configuration Manager updates
 
 | Folder | Location | Description |
 |--------|---|-------------|
@@ -1413,7 +1413,7 @@ If this issue occurs, look for the following typical causes:
 | \ClientUpgrade | Site server | This folder contains the source content for the Client Upgrade Package. |
 | \cd.latest | Site Server | This folder contains the latest version of the Configuration Manager client installation files. |
 
-### Update Pack State codes
+### State codes and flags for update packages
 
 The following table lists the state codes and the states that they represent.
 
