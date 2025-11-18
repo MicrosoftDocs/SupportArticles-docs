@@ -489,7 +489,7 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 Note the notification file is just an XML that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the Manifest .cab file during the [Synchronization stage](#process-step-1-dmpdownloader-download). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following exerpt:
+HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the Manifest .cab file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following exerpt:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
@@ -1051,7 +1051,7 @@ The console labels the update package as **Prerequisite check passed**, and the 
 - `PREREQ_WARNING  131075`
 - `PREREQ_ERROR    196607`
 
-### Troubleshoot Prerequisite Check
+### Troubleshoot the Prerequisite check stage
 
 If the Prerequisite check takes a long time or fails completely, use the following flow chart to help identify the issue. In multi-tier environments, the chart applies to all primary sites and the CAS.
 
@@ -1087,64 +1087,70 @@ Alternatively, download the latest binaries from the following URLs in the Micro
 
 #### Troubleshooting blocking checks that frequently recur
 
-The following checks are known to frequently block the Upgrade Package Setup. There's no way to bypass them but resolving the blocking condition. In case of any doubts, consider opening a ticket with Microsoft Support.
+The following issues are known to frequently cause failures in the prerequisite checks. There's no way to bypass these checks, so you have to resolve the blocking condition. If you're not sure how to resolve an issue, consider opening a ticket with Microsoft Support.
 
-##### Site System Server with Windows Server 2012 or 2012 R2
+##### Site system server runs on Windows Server 2012 or 2012 R2
 
-A Site Server or a Site System Server running on Windows Server 2012 or 2012 R2 blocks the upgrade. Distribution Points (DPs) are temporarily exempted: having such a DP throws the **warning**. The check also doesn't apply for the Secondary Site remote roles.
-
-The following message is displayed in the Console:
+You see the following message in the console:
 
 > **Windows Server 2012 and 2012 R2 lifecycle**
 > Support for Windows Server 2012 and 2012 R2 ends on October 9, 2023. Plan to upgrade your site servers to a supported operating system. For more information, see [New options for SQL Server 2012 and Windows Server 2012 end of support](https://go.microsoft.com/fwlink/?linkid=2186091).
 
-If you just in-place upgraded the OS on remote site system, restart the site server machine or its "SMS_Executive" service to ensure that the new OS version is detected correctly.
+This message means that the Prerequisite checker detects a site server or a site system server that runs on Windows Server 2012 or 2012 R2. The check failed and you can't install the update.
 
-##### Resource access profiles and/or certificate registration point role
+> [!NOTE]  
+> This check doesn't apply to secondary site remote roles, and temporarily doesn't apply to Distribution Points (DPs) If the prerequisite check finds a DP that's running on Windows Server 2012 or Windos Server 2012 R2, you receive a warning but the check doesn't fail.
 
-Having any resource access profile or its deployment configured in earlier version of ConfigMgr also creates a block. Besides, any existing co-managed device with 'RA Profile' workload set toward ConfigMgr blocks the upgrade too.
+If you recently performed an in-place upgrade to Windows Server on a remote site system, restart the affected computer or its SMS_Executive service. The restart ensures that the Prerequisite checker correctly detects the new operating system version.
 
-To pass the check, move the Resource Access Policies workload slider to Intune only. Follow the official guidance on [Co-management workloads](/intune/configmgr/comanage/workloads).
-If there's no co-management configured, you have to configure it at least temporarily to move the slider.
+##### Deprecated features: Resource access profiles or the certificate registration point role
 
-This check also fires when Certificate Registration Point role is installed. Navigate to **\Administration\Overview\Site Configuration\Servers and Site System Roles** node in the Console, select the site system hosting CRP role and remove it.
+Resource access profiles and their related features and deployments are deprecated. If Prerequisite checker detects any of these features, it blocks the update. It also blocks the update if it detects any existing co-managed device that has an RA Profile workload that's set toward ConfigMgr.
 
-##### Cloud Management Gateway (CMG) as a cloud service (classic) deprecation
+To pass the check, follow the official guidance in [Co-management workloads](/intune/configmgr/comanage/workloads) to move the **Resource Access Policies workload** slider to **Intune only**.  If co-management isn't configured, you have to configure it at least temporarily to move the slider.
 
-Cloud Management Gateway deployed as a Classic Cloud service blocks the upgrade. Rule name and message are:
+This check might also fail if it detects the Certificate Registration Point role. In the console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, select the site system that hosts the CRP role, and remove the role.
 
->**Check for a cloud management gateway (CMG) as a cloud service (classic)**
->The option to deploy a cloud management gateway (CMG) as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. For more information, see [Process to convert a CMG to a virtual machine scale set](https://go.microsoft.com/fwlink/?linkid=2187166).
+##### Deprecated features: Cloud Management Gateway (CMG) as a classic cloud service
 
-Follow the public guidance on [moving to CMGv2](/intune/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
+In the console, you see the following message:
+
+> The option to deploy a cloud management gateway (CMG) as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. For more information, see [Process to convert a CMG to a virtual machine scale set](https://go.microsoft.com/fwlink/?linkid=2187166).
+
+Cloud Management Gateway deployed as a classic cloud service is deprecated. If Prerequisite checker detects this configuration, it blocks the update. Prerequisite checker applies the following rule:
+
+> Check for a cloud management gateway (CMG) as a cloud service (classic)
+
+To resolve this issue, follow the official guidance for [moving to CMGv2](/intune/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
 
 ##### Only enhanced HTTP or HTTPS communication is allowed
 
-ConfigMgr sites now only allow Enhanced HTTP as a supported option after the deprecation in ConfigMgr 2409.
+In the console, you see the following message:
 
-The Prerequisite Check error text:
-
->HTTPS or Enhanced HTTP are not enabled for client communication. HTTP-only communication is deprecated, and support is removed in this version of Configuration Manager.
+> HTTPS or Enhanced HTTP are not enabled for client communication. HTTP-only communication is deprecated, and support is removed in this version of Configuration Manager.
+>
 >To proceed with the upgrade, enable a more secure communication method for the site either by enabling HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
 
-You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with the Upgrade. Follow the official guidance on [Enable the site for HTTPS-only or enhanced HTTP](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
+Currently, ConfigMgr sites only support Enhanced HTTP or HTTPS for communication. Other options that were supported previously were deprecated in ConfigMgr version 2409 and later versions. 
 
-## Installation
+To resolve this issue, switch the Site Communication to Enhanced HTTP or HTTPS. For official guidance, see [Enable the site for HTTPS-only or enhanced HTTP](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
 
-Once the Administrator selects "Install Update" in the Console, or chooses to ignore the warning, the actual site upgrade is initiated. First, it always reruns the [Prerequisite Check](#prerequisite-check) to ensure that the site is ready for the upgrade. If the check fails, the upgrade is aborted.
+## Investigate the Installation stage
 
-<details><Summary>Installation Steps</summary>
+When you select an update in the console and then select **Install Update** (and if applicable, you ignore any warning that appears), the actual site update starts. First, to ensure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the check fails, the update stops.
 
-### Step 1: CMUpdate: Check site server readiness
+<details><Summary>Select here to see the Installation steps.</summary>
 
-Once Prerequisite Check is passed, CMUpdate assesses the readiness of sites and Service Windows configured.
+### Process step 1: CMUpdate checks the readiness of the site server
+
+After the deployment passes the prerequisite checks, CMUpdate assesses the readiness of the sites and the configured Service Windows. CMUpdate logs entries that resemble the following excerpt:
 
 ```output
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0007, IsComplete=1, Progress=1, Applicable=1)
 INFO: Waiting for CONFIGURATION_MANAGER_SERVICE to be ready to apply update: 3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E
 ```
 
-CMUpdate upgrades itself to the new version:
+CMUpdate upgrades itself to the new version, and logs entries that resemble the following excerpt:
 
 ```output
 CONFIGURATION_MANAGER_UPDATE service is stopping...
@@ -1153,15 +1159,15 @@ CONFIGURATION_MANAGER_UPDATE service is starting...
 Microsoft Microsoft Configuration Manager v5.00 (Build 9132)
 ```
 
-And looks for the Service Window set for the site:
+CMUpdate looks for the Service Window that are configured for the site, and logs entries that resemble the following excerpt:
 
 ```output
 There is no service window defined for the site server to apply the CM server updates.
 ```
 
-### Step 2: CMUpdate: Content and Redist verification
+### Process step 2: CMUpdate verifies the state of the update and redist content
 
-CMUpdate then verifies that CMUStaging content is intact and reads update.map file:
+CMUpdate verifies that the CMUStaging content is intact, and then reads update.map file. It logs entries that resemble the following excerpt:
 
 ```output
 Checking if the CMU Staging folder already has the content extracted.
@@ -1173,7 +1179,7 @@ Successfully read file \\?\E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-Then it proceeds to Redists and creates in-memory list of files to be copied:
+CMUpdate processes the redists and creates an in-memory list of files to be copied. It logs entries that resemble the following excerpt:
 
 ```output
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0006, IsComplete=1, Progress=1, Applicable=1)
@@ -1187,28 +1193,30 @@ INFO: File for NDP462-KB3151800-x86-x64-AllOS-ENU.exe [.NET Framework Extended 4
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0006, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-### Step 3: CMUpdate: Installation begins
+### Process step 3: CMUpdate installs the update
 
-From here the real upgrade starts. The following steps are performed:
+From here the real update starts. CMUpdate follows these steps:
 
-- CMUpdate unpacks and runs Pre-upgrade SQL scripts from `\CMUStaging\<Update GUID>\redist\ConfigMgr.AutoUpgradeScripts.cab`.
-- Turns off SQL Server Service Broker.
-- Stops Configuration Manager Services.
-- Unloads WMI providers.
-- Deletes SMSDBMON triggers.
-- Saves site control settings.
-- Upgrades the Configuration Manager database.
-- Updates SQL registry.
-- Updates RCM registry.
-- Installs files, language packs, components, and controls.
-- Upgrades site control settings.
-- Configures SQL Server Service Broker.
-- Starts WMI, and installs services.
-- Updates the site table.
-- Updates Admin console binaries.
-- Turns on SQL Server Service Broker.
+1. Unpack and run the pre-upgrade SQL scripts from the \\CMUStaging\\\<Update GUID>\\redist\\ConfigMgr.AutoUpgradeScripts.cab folder.
+1. Turn off SQL Server Service Broker.
+1. Stop the Configuration Manager services.
+1. Unload the WMI providers.
+1. Delete the SMSDBMON triggers.
+1. Save the site control settings.
+1. Update the Configuration Manager database.
+1. Update the SQL registry entries.
+1. Update the RCM registry entries.
+1. Install files, language packs, components, and controls.
+1. Update the site control settings.
+1. Configure SQL Server Service Broker.
+1. Start WMI, and then install services.
+1. Update the site table.
+1. Update the Admin console binaries.
+1. Turn on SQL Server Service Broker.
 
-At "Install Files" phase, the Redists are also copied. The usual logging is as follows. Note it takes the files from `\CMUStaging\<Update GUID>\redist\` folder:
+During this step, CMUpdate also copies the redists from the \\CMUStaging\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
+
+CMUpdate logs entries that resemble the following excerpt:
 
 ```output
 INFO: Checking media: E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E\SMSSetup\bin\x64\NDP462-KB3151800-X86-X64-ALLOS-ENU.EXE
@@ -1227,11 +1235,9 @@ Per digital signature signing time E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8
 File E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E\redist\NDP462-KB3151800-X86-X64-ALLOS-ENU.EXE has newer modification time than (e:\configmgr\bin\x64\ndp462-kb3151800-x86-x64-allos-enu.exe) but they have the same hash. It will be skipped.
 ```
 
-The files provided in `\CMUStaging\<Update GUID>\SMSSetup\*` folders are just 0-byte placeholders to be replaced from Redists.
+### Process step 4: CMUpdate updates the OSD packages
 
-### Step 4: CMUpdate: Later installation stages
-
-Once the files are installed, CMUpdate updates the OSD packages:
+After CMUpdate installs the files, it updates the OSD packages and logs entries that resemble the following excerpt:
 
 ```output
 INFO: Adding default USMT package ...
@@ -1243,17 +1249,17 @@ INFO: Attempting to export arm64 boot image from ADK installation source
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001a, IsComplete=3, Progress=100, Applicable=1)
 ```
 
-Then, CMUpdate service asynchronously waits for multiple processes to complete, including Sitecomp:
+Then CMUpdate asynchronously waits for multiple processes (including Sitecomp) to complete. It logs entries that resemble the following excerpt:
 
 ```output
 ~   Starting ConfigMgr Update post installation monitor thread...
 ```
 
-The component reinstallation is visible in SiteComp.log.
+You can review additional entries regarding component reinstallation in the SiteComp.log file.
 
-### Step 5: CMUpdate: CD.Latest update
+### Process step 5: CMUpdate updates CD.Latest
 
-CMUpdate updates the CD.Latest file to reflect the new version:
+CMUpdate updates the CD.Latest file to reflect the new version of Configuration Manager. It logs entries that resemble the following excerpt:
 
 ```output
 Creating cd backup location at E:\ConfigMgr\cd.latest
@@ -1262,25 +1268,28 @@ Copying contents of update package from E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4E
 successfully updated setup registry to have new external files stored at E:\ConfigMgr\cd.latest\redist
 ```
 
-At the last step, it creates a notification file `196612.ESC` for the HMAN and starts the post-install tasks:
+Finally, CMUpdate creates a notification file that's named 196612.esc for HMAN, and then starts the post-installation tasks.  It logs entries that resemble the following excerpt:
 
 ```output
 INFO: Successfully dropped update pack installed notification to HMAN CFD box.
 ```
 
-### Step 6: Post installation tasks
+### Process step 6: Post installation tasks
 
-Here are the detailed steps:
+CMUpdate performs most of the following post-installation tasks:
 
-1. Verify that SMS_Executive service is installed.
-2. Verify that the SMSDBMon component is installed.
-3. Verify that the SMSHMAN component is installed.
-4. Verify that the RCM component is installed.
-5. Monitor replication initialization.
-6. Update Configuration Manager client preproduction package.
-7. Update client folder on the site server.
-8. Update Configuration Manager client package.
-9. Turn on features that are specified in the upgrade wizard. Then reopen the console to display the features.
+1. Verify that the SMS_Executive service is installed.
+1. Verify that the SMSDBMon component is installed.
+1. Verify that the SMSHMAN component is installed.
+1. Verify that the RCM component is installed.
+1. Monitor the start of replication.
+1. Update the Configuration Manager client preproduction package.
+1. Update the client folder on the site server.
+
+HMAN performs the following post-installation tasks:
+
+1. Update the Configuration Manager client package.
+1. Turn on features that are specified in the upgrade or update wizard. Then reopen the console to display the features.
 
 > [!NOTE]
 >
@@ -1288,7 +1297,7 @@ Here are the detailed steps:
 > - Install.map contains the list of steps that the installation process runs. It serves as a workflow for Cmupdate.exe that provides the steps and parameters to run in order.
 > - For minor upgrades, check CMUpdate.log for details.
 
-HMAN performs the tasks starting from updating the Client Packages. The usual logging is:
+HMAN logs entries that resemble the following excerpt:
 
 ```output
 INFO: 196612.ESC file was found. Updating client packages. InteropMode = 0
@@ -1311,22 +1320,18 @@ Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xe0009,
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xe0008, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-HMAN is also responsible of enabling new features after the upgrade.
-
 </details>
 
-### Installation result
+### Results of the Installation stage
 
-The update package is marked as "Installed" in the console. The `CM_UpdatePackages` table has the state set to **196612** for the update package of interest.
-Older packages are usually hidden from the console due to the Applicability check performed by HMAN.
+The console labels the update package as **Installed**. In the `CM_UpdatePackages` table, the state value for the update package is `196612`.
 
-### Troubleshoot Installation and Failures
+> [!NOTE]  
+> Because of the Applicability checks, the console typically hides older update packages.
 
-The flowchart assumes the installation is either stuck in "Installing" state or "Failed" in **\Administration\Overview\Updates and Servicing** console node. The first thing to check should be the update package state at **\Monitoring\Overview\Updates and Servicing Status** node and identify the Site being stuck.
+### Troubleshoot the Installation stage
 
-![Installation and Failures](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg)
-
-Alternatively, the following SQL Query can be used to fetch update package States per a Site:
+To review the status of the Installation stage, in the console, go to **Administration** > **Overview** > **Updates and Servicing**. Alternatively, you can use the following SQL query to fetch update package states for each a site:
 
 ```sql
 -- Use Update GUID parameter for monitoring status query
@@ -1337,36 +1342,45 @@ Left join serverdata on cmupss.SiteNumber=ServerData.ID
 where cmupss.PackageGUID = @UpdateGUID and cmupss.state<>196612
 ```
 
-When an update package gets stuck in the **Installing** state in the console, it may be caused by one of the following reasons:
+If the Installation stage is stuck in the **Installing** state or fails completely, go to **Monitoring** > **Overview** > **Updates and Servicing Status** and review the update package state. You should be able to identify the site that has an issue.
 
-- Installation is actually progressing. Investigate **CMUpdate.log** for progress.
-- Content Replication wasn't finished. In this case, proceed to [Replication](#replication) section.
-- One of the Sites is waiting for a Service Window. In this case, verify the Service Window created.
-- Installation can't continue of because "CMUpdate.exe" process crash.
-- Database Replication Service (DRS) issue prevents replicating the information between CAS and Primary Sites.
+Use the following flow chart to help identify the issue.
 
-Failures can occur at any Installation stage. **CMUpdate.log** is the primary log to investigate the installation issues. However, if the failure occurs at Post-Installation steps, verify that **SiteComp.log** managed to install and **SMSExec.log** managed to start up all components.
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg" alt-text="Flowchart that helps identify the cause of an installation issue.":::
 
-#### Installation: Case Studies
+The following issues can cause an update package to appear to be stuck during the Installation stage:
+
+- Installation is actually progressing. To review the current progress, see the CMUpdate.log file.
+- The update content didn't finish replicating, or didn't replicate correctly. For assistance, see [Troubleshoot the Replication stage](#troubleshoot-the-replication-stage) earlier in this article.
+- One of the sites is waiting for a service window. Make sure that the service window exists and is correctly configured.
+- CMUpdate has stopped, so the installation process can't continue.
+- The update package content can't replicate between the CAS and the primary sites because of a Database Replication Service (DRS) issue.
+
+Failures can occur at any step of the Installation stage. CMUpdate.log is the primary log to use for investigating installation issues. However, if the failure occurs at any of the post-installation steps, review the SiteComp.log file for information about component reinstallations and the SMSExec.logfile for information about component startup.
+
+#### Case studies of Installation stage issues
 
 ##### Issue 1: Error in verifying the trust of file \\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab**
 
-You receive an error that resembles the following example in CMUpdate.log:
+In CMUpdate.log, you find an error message that resembles the following excerpt:
 
-> update package content 79FB5420-BB10-44FF-81BA-7BB53D4EE22F has been expanded to folder \\\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\
-> Error in verifying the trust of file '\\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab'.
+```output
+update package content 79FB5420-BB10-44FF-81BA-7BB53D4EE22F has been expanded to folder \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\
+Error in verifying the trust of file \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab.
+```
 
-This issue occurs because the files aren't downloaded correctly. To fix it, follow these steps:
+This issue occurs because the files aren't downloaded correctly. To fix this issue, follow these steps:
 
 1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. Switch SCP to offline mode if necessary.
-2. Run [RetryContentReplication WMI Method](#investigate-content-distribution-failures) to force the Easy Setup Package update and wait for Replication to finish.
-3. Attempt installation again.
+1. Run the RetryContentReplication WMI method. This method forces the Easy Setup Package to update. Wait for replication to finish.
+1. Try to install the update again.
 
-##### Issue 2: Update is installed on CAS and Primary Sites, but Console still displays Installing
+##### Issue 2: Update installs on the CAS and primary sites, but the console still displays "Installing"
 
-The installation completion information is replicated via specific global replication group **CMUpdates** every 1 minute. If the replication is broken, the Console may keep displaying "Installing" state even if the installation has completed successfully on all Sites.
+A specific global replication group, **CMUpdates**, replicates the installation completion information once per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on  all sites.
 
-Investigate the Console node "\Monitoring\Overview\Database Replication" and inspect Initialization and Replication tabs for each link for "CMUpdates" replication group states. If you find it failing, proceed with troubleshooting [Database Replication Service (DRS)](../data-transfer-sites/troubleshoot-database-replication-service-issues.md).
+In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each llink for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
+
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 
