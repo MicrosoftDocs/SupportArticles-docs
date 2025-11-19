@@ -86,7 +86,7 @@ Possible solutions include:
 
 ## Networking issues
 
-For most networking-related issues, use either of the available levels of networking observability:
+For most networking-related issues, you can use either of the available levels of networking observability:
 
 - [Container network metrics][aks-container-metrics] (default): Enables observation of node-level metrics. 
 - [Advanced container network metrics][advanced-container-network-metrics]: Enables observation of pod-level metrics, including fully qualified domain name (FQDN) metrics for troubleshooting.
