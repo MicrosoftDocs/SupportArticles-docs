@@ -2,6 +2,8 @@
 title: SSSAdminProd user and server-side sync operations
 description: Provides guidance around the impact of the new identity used by server-side sync in Dynamics
 ms.date: 11/13/2025
+ms.reviewer: FERNAN.OVIEDO, v-shaywood
+ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronizatio
 ---
 
 # SSSAdminProd user and server-side sync operations
