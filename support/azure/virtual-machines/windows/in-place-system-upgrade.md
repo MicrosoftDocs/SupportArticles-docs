@@ -66,21 +66,21 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 5. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
    > [!NOTE]  
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. Both VMs can't run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
+   > You can use either the original Windows 10 VM or the restored VM as a source for an in-place system upgrade. The VMs can't run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
   
-6. Connect to the Windows 10 VM and then go to **Settings** > **Updates & Security** > **Windows Update**.
+6. Connect to the Windows 10 VM, and then go to **Settings** > **Updates & Security** > **Windows Update**.
 7. In Windows Update, select **Check for updates**.
 8. When the Feature Update item appears, select **Download and install now**.
 
-The update downloads and installs. User settings and data will be preserved, and the VM will restart automatically.
+The update downloads and installs. User settings and data are preserved, and the VM restarts automatically.
 
-If you have general questions about this procedure, post to [Microsoft Q&A](/answers/topics/azure-virtual-machines.html) and add the `azure-virtual-machines` tag to your question.
+If you have general questions about this procedure, post them to [Microsoft Q&A](/answers/topics/azure-virtual-machines.html). Add the `azure-virtual-machines` tag to your questions.
 
 ## Workaround
 
 To work around this issue, create an Azure VM that's running a supported version. Download and upgrade the VHD of the VM.
 
-To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or, use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 
 ### Download and upgrade the VHD  
 
@@ -98,7 +98,7 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
 
 > [!NOTE]  
-> When performing an in-place upgrade on Azure Windows VMs, the VM properties on the Azure portal aren't updated; the changes are only reflected within the OS. This means that the source image information in the VM properties, including the publisher, offer, and plan, remains unchanged. The image used to deploy the VM remains the same, and only the OS is upgraded.
+> When you perform an in-place upgrade on Azure Windows VMs, the VM properties on the Azure portal aren't updated. The changes are reflected only within the OS. This means that the source image information in the VM properties (including the publisher, offer, and plan) remains unchanged. The image that's used to deploy the VM remains the same. Only the OS is upgraded.
 
 ## References
 
