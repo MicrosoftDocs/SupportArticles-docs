@@ -265,7 +265,7 @@ Updates that aren't applicable (and aren't visible in the console) have entries 
 
 If you suspect that your issue occurs in the Synchronization stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Synchronization stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Synchronization stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage.png":::
 
 The following steps summarize this troubleshooting process. The steps vary depending on whether your SCP is configured in Online mode or Offline mode.
 
