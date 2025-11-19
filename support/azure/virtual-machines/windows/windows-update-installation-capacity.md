@@ -31,29 +31,29 @@ When you use boot diagnostics to view the screenshot of the VM, the screenshot d
 
 ## Cause
 
-In this situation, the operating system (OS) is unable to complete a Windows Update (KB) installation as a core file can't be created on the file system. Based on this error code, the operating system is unable to write any files to the disk.
+In this situation, the operating system (OS) can't complete a Windows Update (KB) installation because a core file can't be created on the file system. Based on this error code, the operating system can't write any files to the disk.
 
 ## Solution
 
 ### Process overview
 
 > [!TIP]
-> If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup issue.
 
 1. Create and access a repair VM.
 1. Free space on disk.
-1. Enable serial console and memory dump collection.
+1. Enable serial console and memory dump file collection.
 1. Rebuild the VM.
 
 > [!NOTE]
-> When this error is encountered, the guest OS isn't operational. Troubleshoot this issue in offline mode to resolve this issue.
+> When this error occurs, the guest OS isn't operational. Troubleshoot this issue in offline mode.
 
 ### Create and access a repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a repair VM.
-1. Using a `Remote Desktop connection`, connect to the `repair VM`.
+1. To prepare a repair VM, perform steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
+1. Connect to the `repair VM` by using a `Remote Desktop connection`.
 
-### Free Up Space on the disk
+### Free up space on the disk
 
 To solve the issue:
 
@@ -61,10 +61,9 @@ To solve the issue:
 - Perform a disk cleanup.
 - Defragment the drive.
 
-1. Check if the disk is full. If the disk size is below 1 TB, expand it up to a maximum of 1 TB [using PowerShell](/azure/virtual-machines/windows/expand-os-disk).
-1. If the disk is already 1 TB, free space must be made by performing a disk cleanup.
-   1. Use the [Disk Cleanup tool](https://support.microsoft.com/help/4026616/windows-10-disk-cleanup) to free up space.
-1. Once resizing and clean-up are finished, defragment the drive using the following command:
+1. Check whether the disk is full. If the disk size is less than 1 TB, expand it to a maximum of 1 TB [using PowerShell](/azure/virtual-machines/windows/expand-os-disk).
+1. If the disk already contains 1 TB of data, you must perform a disk cleanup to free up space. Use the [Disk Cleanup tool](https://support.microsoft.com/help/4026616/windows-10-disk-cleanup).
+1. After resizing and cleanup are finished, defragment the drive by running the following command:
 
    ```console
    defrag <LETTER ASSIGN TO THE OS DISK>: /u /x /g
@@ -72,9 +71,9 @@ To solve the issue:
 
 Depending upon the level of fragmentation, defragmentation could take several hours.
 
-### Enable the Serial Console and memory dump collection
+### Enable the Serial Console and memory dump file collection
 
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by following these steps:
+**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump file collection by following these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
