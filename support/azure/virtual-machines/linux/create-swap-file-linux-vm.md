@@ -49,7 +49,7 @@ You can create a SWAP partition by using one of the following options.
 <summary>Option 1: Create a SWAP partition under the resource or custom disk path by using scripts</summary>
 
 > [!NOTE]
-> When a SWAP partition is created, a swap file is also created on it.
+> When a SWAP partition is created, a SWAP file is also created on it.
 
 1. Create a SWAP creation script named *swap.sh* under */var/lib/cloud/scripts/per-boot* with the following script:
 
