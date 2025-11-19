@@ -160,7 +160,8 @@ To collect the logs, follow these steps:
 
 1. Run `Collect.exe` in the folder where you saved the tool.
 
-   You must run the tool under the same user account that you used for the failed installation attempt. If you run the tool from a different user account, set the `-user:<name>` option to specify the user account for the failed installation. For more options and usage information, run `Collect.exe -?` at an elevated command prompt.
+   > [!NOTE]
+   > You must run the tool under the same user account that you used for the failed installation attempt. If you run the tool from a different user account, set the `-user:<name>` option to specify the user account for the failed installation. For more options and usage information, run `Collect.exe -?` at an elevated command prompt.
 
 The collection tool generates a _vslogs.zip_ file in your _%TEMP%_ folder, typically at _C:\Users\YourName\AppData\Local\Temp\vslogs.zip_.
 
