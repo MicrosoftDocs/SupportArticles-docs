@@ -6491,6 +6491,10 @@
         {
         "source_path": "virtual-machines/windows/run-win-server-2003.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ms-azure-windows-eos"
+      },        
+        {
+        "source_path": "virtual-machines/windows/vm-stops-at-please-wait-for-group-policy-client.md",
+        "redirect_url": "/troubleshoot/virtual-machines/windows/please-wait-for-the-group-policy-client"
       }
   ]
 }
