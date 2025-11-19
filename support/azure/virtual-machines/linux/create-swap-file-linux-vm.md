@@ -43,7 +43,7 @@ If the SWAP creation is configured in */etc/waagent.conf*, you must disable it.
 You can create a SWAP partition by using one of the following options.
 
 > [!NOTE]
-> On VM SKUs that have large temporary disks, we strongly recommend changing the following variables to create smaller files and swap partitions. For example, some VMs have 2 TB or greater temporary disks.
+> On VM SKUs that have large temporary disks, we strongly recommend changing the following variables to create smaller files and SWAP partitions. For example, some VMs have 2 TB or greater temporary disks.
 
 <details>
 <summary>Option 1: Create a SWAP partition under the resource or custom disk path by using scripts</summary>
