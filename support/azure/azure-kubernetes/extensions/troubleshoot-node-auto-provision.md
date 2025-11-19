@@ -109,7 +109,7 @@ kubectl exec -it <pod-name> -- ping <target-ip>
 kubectl exec -it <pod-name> -- nslookup kubernetes.default
 ```
 
-Another option to test node-to-node or pod-to-pod connectivity is to use the open-source [goldpinger](https://github.com/bloomberg/goldpinger) tool. 
+Another option is to use the open-source [goldpinger](https://github.com/bloomberg/goldpinger) tool. 
 
 2. **Check network plugin status**
 
@@ -291,10 +291,20 @@ Common causes include:
 
 Possible solutions include:
 
-- Verify that the `--dns-service-ip` value matches the actual DNS service. To verify, run the following command: `kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'`.
+- Verify that the `--dns-service-ip` value matches the actual DNS service. To verify, run the following command: 
+
+```powershell
+kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
+```
+
 - Make sure that the DNS service IP is within the service CIDR range specified during cluster creation.
 - Check whether Karpenter nodes can reach the service subnets
-- Restart `CoreDNS pods` if they're in an error state. To restart, run the following command: `kubectl rollout restart deployment/coredns -n kube-system`
+- Restart `CoreDNS pods` if they're in an error state. To restart, run the following command: 
+
+```powershell
+kubectl rollout restart deployment/coredns -n kube-system
+```
+
 - Verify that NSG rules allow traffic on port 53 (TCP/User Datagram Protocol (UDP)).
 - Run a connectivity analysis by using the [Azure Virtual Network Verifier](/azure/virtual-network-manager/overview) to verify outbound connectivity.
 
