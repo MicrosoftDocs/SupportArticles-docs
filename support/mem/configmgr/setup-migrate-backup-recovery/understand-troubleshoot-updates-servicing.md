@@ -49,7 +49,7 @@ Before you install an update, consider running the prerequisite check for that u
 |---|---|---|---|---|
 | DMP Downloader | SMS_DMP_DOWNLOADER | DmpDownloader | Dmpdownloader.dll | Part of the Service Connection Point role. Responsible for synchronizing and downloading update packages. |
 | Service Connection Tool | - | SCT | ServiceConnectionTool.exe | Tool that's used for Offline Site Servicing. |
-| Hierarchy Manager | SMS_HIERARCHY_MANAGER | HMAN | HMAN.dll | Site Server component that processes update packages. |
+| Hierarchy Manager | SMS_HIERARCHY_MANAGER | HMAN | HMAN.dll | Site server component that processes update packages. |
 | Configuration Manager Update | CONFIGURATION_MANAGER_UPDATE | CMUpdate | CMUpdate.exe | Service that installs update packages. |
 
 ## Prepare to troubleshoot Updates and Servicing issues
@@ -59,7 +59,7 @@ Before you install an update, consider running the prerequisite check for that u
 >
 > - Manually cleaning up any related folders (\\EasySetupPayload, \\CMUStaging). Only manually change these folder locations if Microsoft Support instructs you to.
 > - Manually cleaning up any SQL tables. Only manually change information in these tables if Microsoft Support instructs you to.
-> - Restoring the Configuration Manager database and/or Configuration Manager Site Server if there's an error during the upgrade. Instead, fix the issue, and then try again to install.
+> - Restoring the Configuration Manager database and/or Configuration Manager site server if there's an error during the upgrade. Instead, fix the issue, and then try again to install.
 > - Reinstalling a Service Connection Point during the installation.
 > - Restarting the Configuration Manager Update service during the installation.
 > - Keeping the \CMUStaging\ folder open during the installation.
@@ -142,7 +142,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 0~~
 ```
 
-DMPDownloader sends the `0 (START_PROCESS)` high-priority state message to the Site Server to indicate that the synchronization process is starting.
+DMPDownloader sends the `0 (START_PROCESS)` high-priority state message to the site server to indicate that the synchronization process is starting.
 
 Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released Configuration Manager updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following excerpt:
 
@@ -163,7 +163,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 1~~
 ```
 
-DMPDownloader sends the `1 (START_VERIFY_MANIFEST)` state message to the Site Server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader sends the `1 (START_VERIFY_MANIFEST)` state message to the site server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Download manifest.cab~~
@@ -190,7 +190,7 @@ DMPDownloader sends the `3 (VERIFIED_MANIFEST)` state message to confirm that th
 
 Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.MCM, and then moves the renamed file to one of the following locations:
 
-- If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
+- If the SCP is remote from the site server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
 - If the SCP is co-located with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
 
 During this process, DMPDownloader logs entries that resemble the following excerpt:
@@ -222,7 +222,7 @@ STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
 SYS=<SiteServerFQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
-HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the Site Server. During this process, HMAN logs entries that resemble the following excerpt:
+HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the site server. During this process, HMAN logs entries that resemble the following excerpt:
 
 ```output
 File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed and trusted.
@@ -356,7 +356,7 @@ Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the Site Server. DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -478,8 +478,8 @@ As a result of the previous step, the \\EasySetupPayload shared folder contains 
 
 Depending on the SCP configuration, DMPDownloader puts a so-called CMU file in one of the following locations:
 
-- If the SCP is remote from the Site Server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the Site Server.
-- If the SCP is collocated with the Site Server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
+- If the SCP is remote from the site server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the site server.
+- If the SCP is collocated with the site server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
 The file has a .mcm extension, and contains the information that marks the state of the update package as `State="262146"` (also known as `"DOWNLOAD_SUCCESS"`). The corresponding log entries resemble the following excerpt:
 
@@ -1413,7 +1413,7 @@ If this issue occurs, look for the following typical causes:
 | \CMUClient | Site server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
 | \PilotingUpgrade | Site server | This folder contains the source content for the Client Piloting Package. |
 | \ClientUpgrade | Site server | This folder contains the source content for the Client Upgrade Package. |
-| \cd.latest | Site Server | This folder contains the latest version of the Configuration Manager client installation files. |
+| \cd.latest | Site server | This folder contains the latest version of the Configuration Manager client installation files. |
 
 ### State codes and flags for update packages
 
