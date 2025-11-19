@@ -1,6 +1,6 @@
 ---
-title: SSSAdminProd user and server-side sync operations
-description: Provides guidance around the impact of the new identity used by server-side sync in Dynamics
+title: Upcoming Changes to Server-Side Sync Identity in Dynamics
+description: Learn about the upcoming changes to the identity used by server-side sync in Dynamics 365, including impacts on audit logs and delegate fields.
 ms.date: 11/13/2025
 ms.reviewer: FERNAN.OVIEDO, v-shaywood
 ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronizatio
