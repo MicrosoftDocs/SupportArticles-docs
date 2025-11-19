@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4538386
 
 Many Linux Azure Marketplace images contain an **Azure Linux Agent** that's responsible for completing the setup of the newly created virtual machine (VM). The setup includes setting the hostname, username, and password/ ssh keys, and mounting an ephemeral disk. This setup process is known as 'provisioning'. Additionally, the agent provides support for Azure VM extensions.
 
-The images themselves are updated to be provisioned by using an open source provisioning agent, [cloud-init](/azure/virtual-machines/linux/using-cloud-init). The cloud- init agent offers many additional benefits over the Linux agent, including:
+The images themselves are updated to be provisioned by using an open source provisioning agent, [cloud-init](/azure/virtual-machines/linux/using-cloud-init). The cloud- init agent offers many additional benefits over the Linux Agent, including:
 
 - Performance - Using cloud-init with Azure, you can see improved reduced VM creation times in most cases.
 - VM customization - cloud-init enables you to pass down VM configurations to cloud-init through [custom-data](/azure/virtual-machines/linux/using-cloud-init#deploying-a-cloud-init-enabled-virtual-machine). This process includes such actions as running scripts, installing packages, and adding users.
