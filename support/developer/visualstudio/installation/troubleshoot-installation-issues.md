@@ -40,10 +40,15 @@ If a repair doesn't fix your issue, search for your error message in the [Visual
 If you encounter an issue when you try to update the program, try deleting the Visual Studio Installer folder, and then rerun the installation bootstrapper. This action can solve certain update failures. It reinstalls the Visual Studio Installer files and resets the installation metadata. To delete the folder, follow these steps:
 
 1. Close the Visual Studio Installer.
+
 1. Delete the Visual Studio Installer folder. Typically, the folder path is _C:\Program Files (x86)\Microsoft Visual Studio\Installer_.
+
 1. Run the Visual Studio Installer bootstrapper.
+
     - You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads). For previous Visual Studio versions, see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
+
     - You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper is named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
+
 1. Try again to install or update Visual Studio. If the Visual Studio Installer continues to fail, go to the next section.
 
 #### 5. Report the problem to Microsoft Support
@@ -53,11 +58,13 @@ In some situations, corrupted files cause issues that require case-by-case troub
 ##### [Visual Studio 2022 and later](#tab/vs-2022-older)
 
 1. Collect your setup logs. For details, see [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support).
+
 1. Open the Visual Studio Installer. Then, select **Report a problem** to open the Visual Studio Feedback tool.
 
     :::image type="content" source="media/troubleshoot-installation-issues/vs-installer-report-problem.png" alt-text="The Provide feedback button in the Visual Studio Installer." lightbox="media/troubleshoot-installation-issues/vs-installer-report-problem.png":::
 
 1. Give your problem report a title, and provide the relevant details. The most recent setup log for the Visual Studio Installer is automatically added to the **Additional attachments** section of your problem report.
+
 1. Select **Submit**.
 
 ##### [Visual Studio 2019 and earlier](#tab/vs-2019-earlier)
@@ -79,9 +86,13 @@ In some situations, corrupted files cause issues that require case-by-case troub
 As a last resort, you can remove all Visual Studio installation files and product information:
 
 1. [Remove all files by using InstallCleanup.exe](/visualstudio/install/uninstall-visual-studio#remove).
+
 1. Rerun the Visual Studio Installer bootstrapper.
+
     - You can get the bootstrapper for the latest version of Visual Studio from the [downloads page](https://visualstudio.microsoft.com/downloads). For previous Visual Studio versions, see the [older downloads page](https://visualstudio.microsoft.com/vs/older-downloads).
+
     - You can also find the bootstrapper in your _Downloads_ folder. The bootstrapper is named `VisualStudioSetup.exe` for Visual Studio 2022 and later, or `vs_<edition>.exe` for Visual Studio 2019 and earlier.
+
 1. Try again to reinstall Visual Studio.
 
 #### 7. Roll back to a previous install (Visual Studio 2022 and later)
@@ -94,11 +105,15 @@ If none of the previous steps help you to successfully update Visual Studio, you
 ##### Roll back by using the Visual Studio Installer
 
 1. Start **Visual Studio Installer** on your computer.
+
 1. In the installer, look for the edition of Visual Studio to match the installed edition.
+
 1. Select **More**.
+
 1. Select **Rollback to previous version**.
 
     :::image type="content" source="media/troubleshoot-installation-issues/rollback-from-previous-version.png" alt-text="Option to roll back to a previous program version." lightbox="media/troubleshoot-installation-issues/rollback-from-previous-version.png":::
+
 1. To confirm the action, select **OK**.
 
 ##### Roll back by using the command line
@@ -126,8 +141,11 @@ Various situations can prevent administrator updates from applying correctly. Fo
 To provide feedback about Visual Studio administrator updates, or to report issues that affect the updates, use the following methods:
 
 - Ask questions of the user community at the [Visual Studio Setup Q&A Forum](/answers/topics/vs-setup.html).
+
 - Go to the [Visual Studio support page](https://visualstudio.microsoft.com/vs/support/), and check whether your issue is listed in the FAQ.
+
 - [Provide feature feedback or report a problem](https://aka.ms/vs/wsus/feedback) to the Visual Studio team about your experience.
+
 - Contact your organization's technical accounts manager for Microsoft.
 
 ## Collect installation logs for Microsoft Support
@@ -137,7 +155,9 @@ A Microsoft Support agent might ask you to collect setup logs by using the [Micr
 To collect the logs, follow these steps:
 
 1. [Download the tool](https://aka.ms/vscollect).
+
 1. Open an elevated Command Prompt window.
+
 1. Run `Collect.exe` in the folder where you saved the tool.
 
    You must run the tool under the same user account that you used for the failed installation attempt. If you run the tool from a different user account, set the `-user:<name>` option to specify the user account for the failed installation. For more options and usage information, run `Collect.exe -?` at an elevated command prompt.
@@ -151,6 +171,7 @@ Report product issues by using the [Report a Problem](/visualstudio/ide/how-to-r
 If your organization's Group Policy settings block the installation of the WebView2 component, you can't install Visual Studio because the installer requires WebView2. If this issue occurs, check these policies:
 
 - If the [Microsoft Edge 'Install (WebView)'](/deployedge/microsoft-edge-update-policies#install-webview) policy is configured, that policy determines whether WebView2 can be installed.
+
 - If the _Microsoft Edge 'Install (WebView)' policy_ isn't configured, the [Microsoft Edge 'InstallDefault'](/deployedge/microsoft-edge-update-policies#installdefault) policy determines whether WebView2 can be installed.
 
 > [!WARNING]
