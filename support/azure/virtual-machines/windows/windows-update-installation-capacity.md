@@ -19,15 +19,17 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides steps to resolve issues in an Azure virtual machine (VM) where Windows Update (KB) gets an error and becomes unresponsive.
+This article provides steps to resolve issues in a Microsoft Azure virtual machine (VM) if Windows Update (KB) experiences an error and becomes unresponsive.
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 ## Symptom
 
-When you use boot diagnostics to view the screenshot of the VM, the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
+When you use boot diagnostics to view the screenshot of the VM, the screenshot displays Windows Update (WU) in progress, but also shows it as failing by returning the **C01A001D** error code. The following image shows Windows Update (KB) as unresponsive after it returns the following error message:
 
-:::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Screenshot of error code: C01A001D when applying Windows Update." lightbox="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png":::
+> Error C01A001D applying update operation ##### of ##### (######)
+
+:::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Error code C01A001D when applying Windows Update." lightbox="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png":::
 
 ## Cause
 
