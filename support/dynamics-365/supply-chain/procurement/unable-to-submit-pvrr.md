@@ -1,46 +1,60 @@
 ---
-title: Unable to Submit Prospective Vendor Registration Request
-description: Provides steps to resolve issues when submitting a Prospective Vendor Registration Request (PVRR) in Dynamics 365 Finance and Operations.
+title: Troubleshoot Failures When Submitting a Prospective Vendor Registration Request
+description: Learn how to fix errors when submitting a Prospective Vendor Registration Request (PVRR). Identify causes like duplicate vendors or missing contact info.
 ms.reviewer: sugaur
 ms.date: 11/10/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 
-# Troubleshooting: Unable to Submit Prospective Vendor Registration Request
+# Troubleshoot failures when submitting a Prospective Vendor Registration Request
+
+This article provides troubleshooting guidance for failures that might occur when submitting a Prospective Vendor Registration Request (PVRR).
 
 ## Symptoms
-- Users cannot submit a **Prospective Vendor Registration Request (PVRR)** in Dynamics 365 Finance and Operations.
-- The Vendor Registration Wizard does not complete or fails to progress.
 
-## Possible Causes
-- The vendor already exists in the system, causing duplication.
-- Missing vendor contact information in **Vendor collaboration > All contacts**.
-- Incorrect user provisioning steps.
+You might experience one or more of the following symptoms:
 
-## Resolution
+- You can't submit a _Prospective Vendor Registration Request (PVRR)_ in Dynamics 365 Finance and Operations.
+- The _Vendor Registration Wizard_ doesn't complete or fails to progress.
 
-### 1. Vendor Already Exists
+## Cause 1: The vendor already exists
+
+A PVRR can fail to submit if the vendor already exists in the system, causing duplication.
+
+### Solution
+
 To avoid duplicate records:
 
-1. Navigate to **Vendor collaboration > All contacts**.
-2. Find the correct vendor contact.
-3. Select **Provision vendor user** to link the existing vendor without creating a new PVRR.
+1. Go to **Vendor collaboration > All contacts**.
 
-   ![Provision vendor user](https://github.com/user-attachments/assets/578d30d4-4c77-4a86-85d6-e639360dfd4f)
+1. Find the correct vendor contact.
 
-### 2. Vendor Contact Does Not Exist
-If no vendor contact is found:
+1. Select **Provision vendor user** to link the existing vendor without creating a new PVRR.
+
+   :::image type="content" source="./media/unable-to-submit-pvrr/provision-vendor-user.png" alt-text="The vendor contact page with the provision vendor user button highlighted.":::
+
+## Cause 2: Missing vendor contact information
+
+A PVRR can fail to submit if the vendor contact information is missing in **Vendor collaboration > All contacts**.
+
+### Solution
+
+To add the required vendor contact info:
 
 1. Go to **System administration > Users** and delete the existing user record.
-2. Re-invite the vendor via **Procurement and Sourcing > Vendor collaboration requests > Prospective vendor request registration**.
-3. This process creates both the user and vendor contact.
 
+   :::image type="content" source="./media/unable-to-submit-pvrr/delete-vendor.png" alt-text="The users page with the delete button highlighted.":::
 
-   ![Invite vendor](https://github.com/user-attachments/assets/f4239479-e861-4467-8317-2cb31777b112)  
-   ![New vendor contact](https://github.com/user-attachments/assets/f7f2e07f-c017-47fb-a63a-9fc03d2cb0d3)
+1. Re-invite the vendor via **Procurement and Sourcing > Vendor collaboration requests > Prospective vendor request registration**.
 
-### 3. After Recreating the Vendor
-Follow your configured vendor request approval process (automatic or manual).
+   :::image type="content" source="./media/unable-to-submit-pvrr/invite-user.png" alt-text="The Prospective vendor request registration page with the Invite user button highlighted.":::
 
-For more details, see:  
-[Onboard Vendors - Supply Chain Management | Dynamics 365 | Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/vendor-onboarding)
+This process creates both the user and vendor contact.
+
+## Cause 3: Incorrect user provisioning steps
+
+A PVRR can fail to submit if the user provisioning steps aren't followed correctly.
+
+### Solution
+
+Follow your configured vendor request approval process (automatic or manual). For more details, see: [Onboard vendors](/dynamics365/supply-chain/procurement/vendor-onboarding)
