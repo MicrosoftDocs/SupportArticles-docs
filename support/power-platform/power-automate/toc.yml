@@ -84,6 +84,8 @@
       items:
         - name: Can't open SAP
           href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
+        - name: SAP UI element click issue
+          href: desktop-flows/sap-automation/sap-click-element-dpi.md
     - name: UI automation
       items:    
         - name: A desktop application crashes due to UI automation
@@ -100,8 +102,6 @@
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
         - name: Interactions with RDP or Citrix applications take a long time and fail
           href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
-        - name: SAP UI element click issue
-          href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
         - name: Set drop-down list value in window/on web page action fails
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
