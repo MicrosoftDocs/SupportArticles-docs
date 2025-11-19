@@ -190,8 +190,8 @@ DMPDownloader sends the `3 (VERIFIED_MANIFEST)` state message to confirm that th
 
 Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.MCM, and then moves the renamed file to one of the following locations:
 
-- If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MPFDM component moves the file to the Site Server.
-- If the SCP is co-located with the Site Server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
+- If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
+- If the SCP is co-located with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
 
 During this process, DMPDownloader logs entries that resemble the following excerpt:
 
@@ -272,7 +272,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 - **SCP in Online mode**
 
   1. On the SCP, check the DMPDownloader.log file for any error messages that the DMPDownloader generated while it downloaded and processed the manifest .cab file.
-  1. Verify that  the HMAN.log file contains entries that resemble the following excerpt:
+  1. Verify that the HMAN.log file contains entries that resemble the following excerpt:
 
      ```output
      Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
@@ -478,7 +478,7 @@ As a result of the previous step, the \\EasySetupPayload shared folder contains 
 
 Depending on the SCP configuration, DMPDownloader puts a so-called CMU file in one of the following locations:
 
-- If the SCP is remote from the Site Server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, the MP File Dispatch manager (MPFDM) moves the file to inboxes\\hman.box\\ForwardingMsg for the Site Server.
+- If the SCP is remote from the Site Server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the Site Server.
 - If the SCP is collocated with the Site Server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
 The file has a .mcm extension, and contains the information that marks the state of the update package as `State="262146"` (also known as `"DOWNLOAD_SUCCESS"`). The corresponding log entries resemble the following excerpt:
