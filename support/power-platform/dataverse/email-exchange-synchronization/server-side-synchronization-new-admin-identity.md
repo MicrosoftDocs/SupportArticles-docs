@@ -82,7 +82,7 @@ No, the new identity is also subject to potential change in the future. Any depe
 
 ### We built dependencies or processes around the identities that show up in the audit log or the delegate auditing fields when server-side sync performs certain operations. These identities are now changing. What should we do?
 
-As these identities can change in the future, only build dependencies on the publicly documented system behavior rather than observed system behaviors.
+As these identities can change in the future, only build dependencies on the publicly documented system behavior rather than observed system behaviors. For more information, see [Server-side synchronization](/power-platform/admin/server-side-synchronization)
 
 ### We're not using server-side sync. Why is this user present? Can we disable it?
 
