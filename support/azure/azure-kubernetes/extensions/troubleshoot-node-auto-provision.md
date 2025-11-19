@@ -293,7 +293,7 @@ Possible solutions include:
 
 - Verify that the `--dns-service-ip` value matches the actual DNS service. To verify, run the following command: 
 
-```powershell
+```azurecli-interactive
 kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
 ```
 
@@ -301,7 +301,7 @@ kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
 - Check whether Karpenter nodes can reach the service subnets
 - Restart `CoreDNS pods` if they're in an error state. To restart, run the following command: 
 
-```powershell
+```azurecli-interactive
 kubectl rollout restart deployment/coredns -n kube-system
 ```
 
