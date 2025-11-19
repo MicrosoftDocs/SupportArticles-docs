@@ -7,21 +7,21 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 ---
-# In-place upgrade for supported VMs running Windows in Azure (Windows Client)
+# In-place upgrade for supported VMs running Windows in Azure (Windows client)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 _Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VM). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
+This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
 
 > [!NOTE]  
 > **Looking for Windows Server?**  
 > For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
 
 > [!CAUTION]
-> Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.
+> Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the VM. Azure capabilities like [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.
 
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
@@ -51,7 +51,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 single-session -> Enterprise multi-session, all versions
+- Windows 10 and 11 single-session (includes Enterprise multi-session, all versions)
 - Windows 8.1
 - Windows 7 Enterprise
 
@@ -62,16 +62,17 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 1. Run [Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool](windows-vm-osupgradeassessment-tool.md) to validate the OS upgrade path and any known issues.
 2. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
 3. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
-4. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+4. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). You can also use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 5. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
    > [!NOTE]  
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. Both VMs cannot run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. Both VMs can't run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
   
-6. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
+6. Connect to the Windows 10 VM and then go to **Settings** > **Updates & Security** > **Windows Update**.
 7. In Windows Update, select **Check for updates**.
 8. When the Feature Update item appears, select **Download and install now**.
-9. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
+
+The update downloads and installs. User settings and data will be preserved, and the VM will restart automatically.
 
 If you have general questions about this procedure, post to [Microsoft Q&A](/answers/topics/azure-virtual-machines.html) and add the `azure-virtual-machines` tag to your question.
 
@@ -99,9 +100,10 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 > [!NOTE]  
 > When performing an in-place upgrade on Azure Windows VMs, the VM properties on the Azure portal aren't updated; the changes are only reflected within the OS. This means that the source image information in the VM properties, including the publisher, offer, and plan, remains unchanged. The image used to deploy the VM remains the same, and only the OS is upgraded.
 
-
 ## References
 
 [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

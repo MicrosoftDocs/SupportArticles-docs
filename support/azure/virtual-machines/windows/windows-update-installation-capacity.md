@@ -25,9 +25,9 @@ This article provides steps to resolve issues in an Azure virtual machine (VM) w
 
 ## Symptom
 
-When you use Boot diagnostics to view the screenshot of the VM, the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
+When you use boot diagnostics to view the screenshot of the VM, the screenshot displays Windows Update (KB) in progress, but failing with the error code: **C01A001D**. The following image shows Windows Update (KB) stuck with the message "Error C01A001D applying update operation ##### of ##### (######)":
 
-:::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Screenshot of error code: C01A001D when applying Windows Update.":::
+:::image type="content" source="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png" alt-text="Screenshot of error code: C01A001D when applying Windows Update." lightbox="media/troubleshoot-windows-update-installation-capacity/error-code-c01a001d.png":::
 
 ## Cause
 
@@ -35,23 +35,23 @@ In this situation, the operating system (OS) is unable to complete a Windows Upd
 
 ## Solution
 
-### Process Overview
+### Process overview
 
 > [!TIP]
-> If you have a recent backup of the VM, you could try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-1. Create and access a Repair VM.
+1. Create and access a repair VM.
 1. Free space on disk.
 1. Enable serial console and memory dump collection.
 1. Rebuild the VM.
 
 > [!NOTE]
-> When this error is encountered, the Guest OS isn't operational. Troubleshoot this issue in offline mode to resolve this issue.
+> When this error is encountered, the guest OS isn't operational. Troubleshoot this issue in offline mode to resolve this issue.
 
-### Create and Access a Repair VM
+### Create and access a repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-1. Using a `Remote Desktop Connection`, connect to the `Repair VM`.
+1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a repair VM.
+1. Using a `Remote Desktop connection`, connect to the `repair VM`.
 
 ### Free Up Space on the disk
 
