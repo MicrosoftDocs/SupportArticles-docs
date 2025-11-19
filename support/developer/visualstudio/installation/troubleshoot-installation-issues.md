@@ -72,6 +72,8 @@ In some situations, corrupted files cause issues that require case-by-case troub
 
 1. Select **Next** to review your problem report, then select **Submit**.
 
+---
+
 #### Remove all Visual Studio installation files
 
 As a last resort, you can remove all Visual Studio installation files and product information:
