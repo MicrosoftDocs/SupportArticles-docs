@@ -490,13 +490,13 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 The notification file is just an XML file that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
+HMAN converts the file back to CMU format, and then moves it to HMAN.box\\CFD. This process resembles that applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
 ```
 
-The CMUHandler thread processes the file and uses the `spCMUSetUpdatePackageState` stored procedure to update the State information in the `CM_UpdatePackages` table to **"262146" (DOWNLOAD_SUCCESS)**. If HMAN is configured to log data at the verbose logging level, it logs entries that resemble the following excerpt:
+The CMUHandler thread processes the file and uses the `spCMUSetUpdatePackageState` stored procedure to update the state information in the `CM_UpdatePackages` table to **"262146" (DOWNLOAD_SUCCESS)**. If HMAN is configured to log data at the verbose logging level, it logs entries that resemble the following excerpt:
 
 ```output
 INFO: File without BOM : (E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU)
@@ -505,7 +505,7 @@ Updated CMUpdatePackage state to 262146 (PackageGuid=e8e74b72-504a-4202-9167-874
 deleted file E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU
 ```
 
-If the new State value is **"262146" (DOWNLOAD_SUCCESS)** or **"327679" (DOWNLOAD_FAILED)**, the update package GUID is removed from `CM_UpdatePackagesToDownload` table.
+If the new state value is **"262146" (DOWNLOAD_SUCCESS)** or **"327679" (DOWNLOAD_FAILED)**, the update package GUID is removed from `CM_UpdatePackagesToDownload` table.
 
 </details>
 
@@ -519,7 +519,7 @@ During the Download stage, the DMPDownloader component downloads the Easy Setup 
 
 Use the following flowchart to isolate issues that might occur at the Download stage.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Download stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Download stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download-stage-expanded.png":::
 
 #### How to approach download issues
 
