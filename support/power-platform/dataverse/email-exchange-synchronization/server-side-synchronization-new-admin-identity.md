@@ -12,7 +12,7 @@ This article provides an overview of the upcoming changes to the identity that's
 
 ## Expected changes
 
-Server-side sync is changing the identity that's used for Dataverse communications. Previously, server-side sync used the `SYSTEM` identity that all environments have. Server-side sync operations will transition to using the `# SSSAdminProd` identity moving forward. This transition is currently planned to occur between November 2025 and March 2026.
+Server-side sync is changing the identity that's used for Dataverse communications. Previously, server-side sync used the `SYSTEM` identity that all environments have. Server-side sync operations are transitioning to using the `# SSSAdminProd` identity moving forward. This transition is currently planned to occur between November 2025 and March 2026.
 
 > [!IMPORTANT]
 > To preserve backward compatibility, the `SYSTEM` identity will continue to be used for some key server-side sync operations. This approach makes sure that the identity transition doesn't affect users that built dependencies around the `SYSTEM` identity.
@@ -29,7 +29,7 @@ The key differences that you can expect to see after the identity transition are
 
 ## Example scenarios
 
-The following example scenarios demonstrate which record fields will change. (This is not a comprehensive list.)
+The following example scenarios demonstrate which record fields are changing. (This is not a comprehensive list.)
 
 #### Scenario 1
 
