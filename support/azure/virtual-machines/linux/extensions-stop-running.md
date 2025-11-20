@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 4099558
 
 ## Symptoms
 
-The Linux VM Agent fails to process extensions. This causes some extensions to stop running, which affects some dependent Azure services, such as Azure Backup Azure Site Recovery.
+The Linux VM Agent doesn't process extensions. Because of this failure, some extensions stop running. This issue affects some dependent Azure services, such as Azure Backup Azure Site Recovery.
 
-You will see extension downgrade errors similar to this recorded in /var/log/waagent.log:
+When this issue occurs, you see extension downgrade error entries in /var/log/waagent.log that resemble the following example:
 
 > 2018/03/16 12:00:46.196121 ERROR Event: name=extensionName, op=None, message=[ExtensionError] Downgrade not allowed, duration=0
 
@@ -28,7 +28,7 @@ You will see extension downgrade errors similar to this recorded in /var/log/wa
 
 ## Status
 
-Microsoft is taking steps to automatically resolve this issue for affected VMs. On those VMs you will see an additional Microsoft extension installed:  
+Microsoft is taking steps to automatically resolve this issue for affected VMs. On those VMs, an additional Microsoft extension is being installed:
 
 - Extension Publisher: Microsoft.CPlat.Core
 - Extension Type: RunCommandLinux  

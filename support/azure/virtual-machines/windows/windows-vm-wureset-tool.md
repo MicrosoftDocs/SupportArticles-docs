@@ -31,7 +31,7 @@ This article covers steps to run a PowerShell script that resets the Windows ser
 - Restarts services.
 - Generates a summary of actions performed.
 
-For more information, see [Resetting Windows Update servicing stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
+For more information, see [Resetting Windows Update servicing stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_WUA_Update_Reset?).
 
 
 :::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png":::   
