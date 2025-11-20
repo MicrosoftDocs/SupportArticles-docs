@@ -1,7 +1,7 @@
 ---
 title: Required fields are missing error in Sales app
 description: Resolves the Required fields are missing error that occurs when creating a contact or record in the Sales app in Outlook.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

@@ -1,7 +1,7 @@
 ---
 title: You don't have permission for this when opening Sales app
 description: Resolves the You don't have permission for this error that occurs in Sales app when a user tries to open the app.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

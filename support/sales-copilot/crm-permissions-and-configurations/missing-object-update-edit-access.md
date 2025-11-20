@@ -1,7 +1,7 @@
 ---
 title: Can't update records due to missing object access in Salesforce CRM
 description: Resolves an error that occurs when users can't update CRM records in Sales app because of missing object access in Salesforce CRM.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

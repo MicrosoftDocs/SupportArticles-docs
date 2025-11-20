@@ -1,7 +1,7 @@
 ---
 title: Sales app team creation error ContainsBlockedWord
 description: Resolves an error that occurs when creating a team for an account or opportunity in Sales app due to naming policy restrictions.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom:

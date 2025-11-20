@@ -1,7 +1,7 @@
 ---
 title: Errors When Disabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Sales app.
-ms.date: 05/29/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi

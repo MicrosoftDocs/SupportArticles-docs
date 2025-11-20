@@ -1,7 +1,7 @@
 ---
 title: Add-in update error in Sales app for Outlook
 description: Resolves an error message that repeatedly prompts users to update Sales app for Outlook.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

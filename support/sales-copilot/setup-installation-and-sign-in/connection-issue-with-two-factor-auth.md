@@ -1,7 +1,7 @@
 ---
 title: Sales app doesn't connect to Dynamics 365 with multifactor authentication enabled
 description: Resolves an issue where the Sales app for Microsoft Teams doesn't connect to Dynamics 365 when multifactor authentication is enabled.
-ms.date: 01/25/2024
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

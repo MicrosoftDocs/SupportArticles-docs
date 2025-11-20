@@ -1,7 +1,7 @@
 ---
 title: Access needed error when signing in to Dynamics 365 
 description: Resolves the Access needed error in Sales app when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
-ms.date: 01/10/2024
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out

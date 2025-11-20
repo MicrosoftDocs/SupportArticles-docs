@@ -1,7 +1,7 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
 description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Sales app.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

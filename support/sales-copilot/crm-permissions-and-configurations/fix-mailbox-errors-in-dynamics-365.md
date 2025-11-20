@@ -1,7 +1,7 @@
 ---
 title: Fix mailbox errors in Dynamics 365
 description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Sales app in Outlook.
-ms.date: 03/26/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

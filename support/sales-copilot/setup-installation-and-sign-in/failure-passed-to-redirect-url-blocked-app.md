@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce CRM when the Power Platform app is blocked
 description: Resolves the Failure passed to redirect url error that occurs when the Power Platform app is blocked in Sales app.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

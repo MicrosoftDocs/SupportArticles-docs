@@ -1,7 +1,7 @@
 ---
 title: First Salesforce CRM user can't access Sales app
 description: Resolves an error message that occurs in Sales app related to signing in to Salesforce.
-ms.date: 01/10/2024
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

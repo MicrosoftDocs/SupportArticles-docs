@@ -1,7 +1,7 @@
 ---
 title: Align missing fields error in Sales app
 description: Resolves an error that occurs due to field mismatching between Microsoft Dynamics 365 and Sales app.
-ms.date: 01/16/2024
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

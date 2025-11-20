@@ -1,7 +1,7 @@
 ---
 title: No default BAP location found for this tenant error
 description: Resolves issues in Sales app when users can't use Sales app due to missing a default environment.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

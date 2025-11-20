@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Sales app.
-ms.date: 08/12/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

@@ -1,7 +1,7 @@
 ---
 title: Connection lost due to an expired or invalid session or a bad OAuth token
 description: Resolves the Connection lost error in Sales app when you're logged out due to an expired or invalid session or a bad OAuth token.
-ms.date: 02/05/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

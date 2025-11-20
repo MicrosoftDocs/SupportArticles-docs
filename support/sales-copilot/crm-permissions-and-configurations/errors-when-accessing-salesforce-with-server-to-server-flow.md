@@ -1,7 +1,7 @@
 ---
 title: Errors When Accessing Salesforce with Server-to-Server Flow
 description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Sales app.
-ms.date: 05/29/2025
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi

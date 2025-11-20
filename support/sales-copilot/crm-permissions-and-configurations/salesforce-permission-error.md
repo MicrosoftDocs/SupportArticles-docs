@@ -1,7 +1,7 @@
 ---
 title: Salesforce CRM users can't view, edit, or save data in Sales app
 description: Resolves an issue where users are unable to view, edit, or save data in Sales app.
-ms.date: 05/07/2024
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
