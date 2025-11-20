@@ -1,8 +1,11 @@
 ---
-title: Windows Client EOS Timeline: Key Dates and Impact for Azure Virtual Machines
+title: Windows Client EOS Timeline - Key Dates and Impact for Azure Virtual Machines
 description: Provides information about Windows Client End of Support (EOS).
+author: JarrettRenshaw
+ms.author: scotro
+manager: dcscontentpm
 ms.date: 08/26/2025
-ms.reviewer: v-liuamson 
+ms.reviewer: v-liuamson, v-ryanberg, v-gsitser 
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)

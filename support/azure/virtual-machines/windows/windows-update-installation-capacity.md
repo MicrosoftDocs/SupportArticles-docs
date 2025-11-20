@@ -39,13 +39,15 @@ In this situation, the operating system (OS) can't complete a Windows Update (KB
 
 ### Process overview
 
-> [!TIP]
-> If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup issue.
+To fix this issue, follow these steps:
 
 1. Create and access a repair VM.
 1. Free space on disk.
 1. Enable serial console and memory dump file collection.
 1. Rebuild the VM.
+
+> [!TIP]
+> If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup issue.
 
 > [!NOTE]
 > When this error occurs, the guest OS isn't operational. Troubleshoot this issue in offline mode.
