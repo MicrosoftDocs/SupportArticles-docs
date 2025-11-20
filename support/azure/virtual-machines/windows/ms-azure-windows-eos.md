@@ -1,13 +1,13 @@
 ---
-title: 'Windows Server EOS Timeline: Key Dates and Impact for Azure Virtual Machines'
-description: Provides information about Windows Server 2003 and later versions End of Support (EOS).
+title: Windows Server EOS Timeline: Key Dates and Impact for Azure Virtual Machines
+description: Provides information about Windows Server 2003 and later versions that are in End of Support (EOS).
 ms.date: 08/26/2025
 ms.reviewer: v-liuamson 
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
-# Windows Server EOS timeline: Key dates and impact for Azure virtual machines
+# Windows Server EOS timeline for Azure VMs
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
