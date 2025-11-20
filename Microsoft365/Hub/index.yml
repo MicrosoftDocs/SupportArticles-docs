@@ -24,7 +24,7 @@ productDirectory:
       imageSrc: /media/logos/logo-ms-social.svg
       links:
         - url: ../admin/o365-admin-welcome.yml
-          text: Microsoft 365 admin center
+          text: Microsoft 365 Administration
         - url: ../purview/microsoft-purview-welcome.yml
           text: Microsoft Purview
     # Card
