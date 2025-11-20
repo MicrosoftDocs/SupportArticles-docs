@@ -105,7 +105,7 @@ Knowing the stage at which the update failed gives you a starting point for trou
 > [!NOTE]  
 > The Replication stage is part of either the Prerequisite check stage or the Installation stage, so it's not listed separately in the diagram.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage-expanded.png":::
 
 > [!IMPORTANT]  
 > If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following excerpt:
@@ -265,7 +265,7 @@ Updates that aren't applicable (and aren't visible in the console) have entries 
 
 If you suspect that your issue occurs in the Synchronization stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Synchronization stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage.png":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Synchronization stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization-stage-expanded.png":::
 
 The following steps summarize this troubleshooting process. The steps vary depending on whether your SCP is configured in Online mode or Offline mode.
 
@@ -303,7 +303,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 If you suspect that your issue occurs in the Applicability check stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-application-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Applicability check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-application-stage.png":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Applicability check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability-stage-expanded.png":::
 
  Additionally, you also need information from the top-level Site SQL Database. Use the following query:
 
