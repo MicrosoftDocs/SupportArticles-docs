@@ -17,7 +17,7 @@
     - name: Issue with reset admin password
       href: ../access-management/issue-with-reset-admin-password.md
     - name: Microsoft 365 apps on App-V enabled devices
-      href: ../access-management/resolve-issues-m365-apps-on-app-v-devices.md        
+      href: ../access-management/resolve-issues-m365-apps-on-appv-devices.md        
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
   - name: Account Security
