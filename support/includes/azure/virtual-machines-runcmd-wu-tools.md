@@ -1,11 +1,3 @@
----
-author: JarrettRenshaw
-manager: dcscontentpm
-ms.service: azure-virtual-machines
-ms.topic: include
-ms.date: 11/19/25
-ms.author: scotro
----
 >[!Important]
 >**Virtual machine (VM)** running in Azure and experiencing Windows Update issues?
 
