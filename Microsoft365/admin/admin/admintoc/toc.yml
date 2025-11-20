@@ -16,6 +16,8 @@
       href: ../access-management/grant-everyone-claim-to-external-users.md
     - name: Issue with reset admin password
       href: ../access-management/issue-with-reset-admin-password.md
+    - name: Microsoft 365 apps on App-V enabled devices
+      href: ../access-management/resolve-issues-m365-apps-on-appv-devices.md        
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
   - name: Account Security
@@ -104,6 +106,8 @@
       href: /microsoft-365/troubleshoot/installation/cannot-install-office-add-in
     - name: Error when uninstalling Microsoft 365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
+    - name: Error when uninstalling Microsoft 365 Pro Plus
+      href: ../installation/something-went-wrong-30016-4-error.md      
   - name: Miscellaneous
     items:
     - name: Enterprise version of Microsoft Support and Recovery Assistant

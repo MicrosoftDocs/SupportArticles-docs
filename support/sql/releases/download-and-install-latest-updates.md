@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 11/13/2025
+ms.date: 11/19/2025
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
@@ -37,6 +37,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Version|Latest service pack|Latest GDR|Latest cumulative update|
 |---|---|---|---|
+|**SQL Server 2025**<br/><br/>- [Build information](#sql-server-2025)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver17&preserve-view=true)|None|None|None|
 |**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5068407) <br/>(16.0.1160.1 - November 2025) |[CU22 for 2022](sqlserver-2022/cumulativeupdate22.md) <br/>(16.0.4225.2 - November 2025) <br/><br/>[CU21 + GDR](https://support.microsoft.com/help/5068406) <br/>(16.0.4222.2 - November 2025)|
 |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5068405) <br/>(15.0.2155.2 - November 2025)|[CU32 for 2019](sqlserver-2019/cumulativeupdate32.md) <br/>(15.0.4430.1 - February 2025)<br/><br/>[CU32 + GDR](https://support.microsoft.com/help/5068404) <br/>(15.0.4455.2 - November 2025)|
 |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-2017&preserve-view=true)|[Azure Connect pack](sqlserver-2017/azureconnect.md) <br/>(14.0.3490.10 - March 2025)|[GDR](https://support.microsoft.com/help/5068403) <br/>(14.0.2095.1 - November 2025)|[CU31 for 2017](sqlserver-2017/cumulativeupdate31.md) <br/>(14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5068402) <br/>(14.0.3515.1 - November 2025)|
@@ -53,6 +54,13 @@ Each of the following links provides information for all of the applicable produ
 
 > [!NOTE]
 > These tables use the following format and are ordered by the build number.
+
+### SQL Server 2025
+
+| Build number or version | Service pack | Update    | Knowledge Base number                                 | Release date       |
+|-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
+| 17.0.1000.7             | None         | RTM/GA    | NA                                                    | November 18, 2025  |
+
 
 ### SQL Server 2022
 
