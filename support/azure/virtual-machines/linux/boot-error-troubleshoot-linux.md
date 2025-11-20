@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.workload: infrastructure
-ms.date: 09/15/2025
+ms.date: 11/20/2025
 ms.author: divargas
 ---
 # Troubleshoot Azure Linux virtual machine boot errors
