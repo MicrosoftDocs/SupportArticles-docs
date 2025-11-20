@@ -170,13 +170,15 @@
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
 - name: Unified routing
   items:
+    - name: Troubleshoot failures in enabling of unified routing
+      href: unified-routing/troubleshoot-enabling-unified-routing.md
     - name: Troubleshoot issues with automatic assignment
       href: unified-routing/troubleshoot-assignment-issues.md
 - name: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
   items:
-    - name: Agent Scripts and Macros
+    - name: Agent scripts and macros
       items:
-        - name: Can't deploy a custom Agent script solution
+        - name: Can't deploy a custom agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
     - name: Customer summary and Closed conversation form
       items:  

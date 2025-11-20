@@ -5,8 +5,16 @@
       "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeonline/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly"
     },
     {
+      "source_path": "Exchange/ExchangeServer/Administration/exchange-2013-end-of-support.md",
+      "redirect_url": "exchange-2016-2019-end-of-support"
+    },
+    {
       "source_path": "Exchange/ExchangeOnline/outlook-on-the-web-issues/archive-mailbox-not-visible.md",
       "redirect_url": "/troubleshoot/outlook/profiles-and-accounts/archive-mailbox-not-visible"
+    },
+    {
+      "source_path": "Exchange/ExchangeOnline/groups-and-distribution-lists/cannot-reply-all-with-microsoft-365-groups.md",
+      "redirect_url": "https://support.microsoft.com/office/ac19ad14-a3c5-4638-a0d3-21a49d5294af"
     }
   ]
 }

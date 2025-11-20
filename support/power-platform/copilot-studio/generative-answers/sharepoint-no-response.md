@@ -1,13 +1,12 @@
 ---
 title: "Generative answers pointing to SharePoint sources don't return results"
 description: "Troubleshoot why generative answers nodes configured to use SharePoint knowledge sources don't return results."
-author: adilei
 ms.date: 07/01/2025
-ms.topic: troubleshooting
-ms.author: adileibowitz
-ms.reviewer: erickinser
+ms.reviewer: 
+  - adileibowitz
+  - erickinser
+  - v-shaywood
 ms.custom:
-  - guidance
   - sfi-image-nochange
   - sap:Generative Answers\Generative answers do not return a response
 ---
@@ -106,6 +105,6 @@ In the following example, the KQL query highlights an attempt to use generative 
 
 ### How to fix
 
-- Try to adjust [content moderation](/microsoft-copilot-studio/nlu-boost-conversations#content-moderation), but keep in mind that a lower level of content moderation might result in answers that are less accurate or relevant.
+- Try to adjust [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation), but keep in mind that a lower level of content moderation might result in answers that are less accurate or relevant.
 
 - If you think your content shouldn't be moderated, [raise a case with customer support](/power-platform/admin/get-help-support).

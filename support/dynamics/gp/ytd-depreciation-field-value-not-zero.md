@@ -34,6 +34,4 @@ To prevent this problem in the future, close the year in Fixed Asset Management 
 
 ## More information
 
-For more information about the year-end closing procedures for Fixed Asset Management, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[865653](https://support.microsoft.com/help/865653) The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP
+For more information about the year-end closing procedures for Fixed Asset Management, see [The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP](./the-year-end-closing-procedures.md).

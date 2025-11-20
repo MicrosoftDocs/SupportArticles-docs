@@ -10,12 +10,12 @@ ms.custom:
   - sap:Microsoft Purview Compliance
   - Microsoft Purview
   - CSSTroubleshoot
-  - CI 2772, 1283, 5607
+  - CI 2772, 1283, 5607, 8191
 ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 09/11/2025
+ms.date: 11/19/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -51,15 +51,20 @@ You can find these diagnostics on the following portal pages:
 
 ### Available diagnostics
 
-The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
+The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the fourth column. When you're prompted, sign in to the Microsoft Purview portal.
 
 **Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
-| **Issue** | **Checks performed** | **Solutions page** |
-|-|-|-|
-| Email encryption isn't working as expected. Are there any issues with my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Validates encryption settings. | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
-| A user can't find the sensitivity label they need. Does the label policy apply to them? | Checks which sensitivity labels are available to the user. Diagnostic results include information such as the label names, settings, and where the labels are available. | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
-| A DLP rule isn't enforced for a particular user. Is this user included in the DLP policy? | Checks which DLP policies apply to a user. Diagnostic results include the policy names and where the policies apply. | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfi) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
+
+| **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
+|-|-|-|-|
+| Email encryption isn't working as expected. Are there any issues with my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Validates encryption settings. | [Test-IrmConfiguration](/powershell/module/exchangepowershell/test-irmconfiguration)| [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
+| A user can't find the sensitivity label they need. Does the label policy apply to them? | Checks which sensitivity labels are available to the user. Diagnostic results include information such as the label names, settings, and where the labels are available. | [Get-label](/powershell/module/exchangepowershell/get-label) <br> [Get-LabelPolicy](/powershell/module/exchangepowershell/get-labelpolicy) | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
+| A DLP rule isn't enforced for a particular user. Is this user included in the DLP policy? | Checks which DLP policies apply to a user. Diagnostic results include the policy names and where the policies apply.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Endpoint DLP isn’t working as expected. Are there any issues with policy sync on the device? | Check for policy sync issues and provide recommendations on how to resolve them. |[Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Alerts not working for a DLP rule. Are there any issues with the DLP rule configuration? | Check for alerts and identify whether there are issues with the DLP rule configuration.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) | 
+| Can't find an alert for an activity or an audit event ? | Check for the alert related to an activity or audit event and investigate why the alert could be missing | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 
 ## Diagnostics on the Help pane
 

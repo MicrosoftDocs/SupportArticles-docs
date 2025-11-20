@@ -1,20 +1,20 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 09/15/2025
+ms.date: 10/22/2025
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Assistance with disk operations, linux-related-content
 ms.collection: linux
-ms.author: mabicca
-author: mabicca
-ms.reviewer: v-weizhu
+ms.author: jarrettr
+author: JarrettRenshaw
+ms.reviewer: mabicca
 ---
 
 # Create a SWAP partition for an Azure Linux VM
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-To create a SWAP partition on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It's located on the physical server where the Linux VM is hosted and has lower latency. It isn't recommended to create SWAP partitions on OS disks or data disks that might impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. It's recommended to use the resource disk only for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
+To create a SWAP partition on Azure Linux virtual machines (VMs), you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It's located on the physical server where the Linux VM is hosted and has lower latency. It isn't recommended to create SWAP partitions on OS disks or data disks that might impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. It's recommended to use the resource disk only for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
 
 ## Disable SWAP creation in waagent configuration
 
@@ -43,10 +43,13 @@ If the SWAP creation is configured in */etc/waagent.conf*, you must disable it.
 You can create a SWAP partition by using one of the following options.
 
 > [!NOTE]
-> When a SWAP partition is created, a swap file is also created on it.
+> On VM SKUs that have large temporary disks, we strongly recommend changing the following variables to create smaller files and SWAP partitions. For example, some VMs have 2 TB or greater temporary disks.
 
 <details>
 <summary>Option 1: Create a SWAP partition under the resource or custom disk path by using scripts</summary>
+
+> [!NOTE]
+> When a SWAP partition is created, a SWAP file is also created on it.
 
 1. Create a SWAP creation script named *swap.sh* under */var/lib/cloud/scripts/per-boot* with the following script:
 
@@ -87,7 +90,7 @@ You can create a SWAP partition by using one of the following options.
 1. Make the script executable:
 
     ```bash
-    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
+    sudo chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
 
 1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.

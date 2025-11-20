@@ -25,7 +25,19 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
-  - title:  Informatica
+  - title: Astro 
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Can't create Astro resources in Azure  
+          url: astro/resource-creation.md
+        - text: Can't install Astro using a personal email
+          url: astro/personal-email.md
+        - text: Unable to use single sign-on in Astronomer portal
+          url: astro/single-sign-on.md
+
+# Card
+  - title: Informatica
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -51,5 +63,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text:  Can't install or uninstall the agent on a VM
+            url:  new-relic/install-uninstall-extension-vm.md
           - text:  Update ingestion key after rotation
             url: ingestion-key-rotation-log-flow.md
+          - text: Resource monitoring stopped working
+            url: new-relic/resource-monitoring-troubleshoot.md

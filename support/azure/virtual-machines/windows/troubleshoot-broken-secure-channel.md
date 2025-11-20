@@ -4,6 +4,7 @@ description: This article shows how to troubleshoot a failed trust relationship 
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: azure-virtual-machines
@@ -12,8 +13,6 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/03/2021
-ms.author: tibasham
-
 ms.custom: sap:Cannot connect to my VM
 ---
 

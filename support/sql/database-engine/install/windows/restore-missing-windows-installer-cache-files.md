@@ -143,8 +143,6 @@ FixMissingMSI is a graphical user interface (GUI) tool that enables you to ident
 
 1. If you want to fix all missing MSIs or MSPs, select the **Fix** menu and then **Fix All**.
 
-For more information, see [SQL Setup ToolSuite Introduction (1) -FixMissingMSI](/archive/blogs/psssql/sql-setup-toolsuite-introduction-1-fixmissingmsi).
-
 One of the benefits of the FixMissingMSI tool is that you can use it to fix missing MSIs or MSPs for all products on Windows, not just SQL Server.
 
 ## Solution 3: Use the FindSQLInstalls.vbs script

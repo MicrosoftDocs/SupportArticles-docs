@@ -33,9 +33,9 @@ In the prior experience, a directory (for example: UserNamehotmail735.onmicrosof
 
 If you aim to have a directory, you must create an Azure account and a new tenant: 
 
-1.    Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
-2.    Follow the instructions to create an Azure account.
-3.    A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
+1. Browse to [the Azure account website](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn), and then select **Try Azure for free**.
+2. Follow the instructions to create an Azure account.
+3. A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
 
 ## Cause 2: Used unsupported account type (multitenant and personal accounts)
 
@@ -104,7 +104,7 @@ Make sure that you follow the steps in [Quickstart: Add guest users to your dire
 
 If your application is an enterprise application that requires user assignment, error `AADSTS50020` occurs if the user isn't on the list of allowed users who are assigned access to the application. To check whether your enterprise application requires user assignment:
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Enterprise applications**.
+1. In [the Azure portal](https://portal.azure.com), search for and select **Enterprise applications**.
 
 1. Select your enterprise application.
 
@@ -132,9 +132,8 @@ Use a tenant-specific endpoint (`https://login.microsoftonline.com/<TenantIDOrNa
 
 Error `AADSTS50020` might occur if the name of a guest user who was deleted in a resource tenant is re-created by the administrator of the home tenant. To verify that the guest user account in the resource tenant isn't associated with a user account in the home tenant, use one of the following options:
 
-### Verification: Check whether the resource tenant's guest user is older than the home tenant's user account
-
-To check the creation date of the guest user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
+### Verification: Use the following tools to verify Guest User status in Microsoft Entra ID
+To check whether the resource tenant's guest user is older than the home tenant's user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
 
 #### Microsoft Graph
 
@@ -157,7 +156,7 @@ Then, check the creation date of the guest user in the resource tenant against t
 
 #### Microsoft Entra PowerShell
 
-Run the [Get-EntraUser](/powershell/module/microsoft.entra/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
+Run the [Get-EntraUser](/powershell/module/microsoft.entra.users/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
 
 ```powershell
 Get-EntraUser -UserId {id | userPrincipalName} | Select-Object id, userPrincipalName, createdDateTime

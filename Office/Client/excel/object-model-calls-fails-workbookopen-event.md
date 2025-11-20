@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six
+ms.author: 
 ms.date: 05/26/2025
 ---
 # Object Model calls may fail from WorkbookOpen event when exiting Protected View

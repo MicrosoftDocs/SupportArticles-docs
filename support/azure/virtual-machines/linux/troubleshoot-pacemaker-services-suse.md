@@ -453,7 +453,7 @@ Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the 
       site id: 2
       site name: node-2
       active primary site: 1
-      primary masters: node-1
+      primary master: node-1
       ```
 
 5. You can also verify the SAP HANA system replication by running the following command:

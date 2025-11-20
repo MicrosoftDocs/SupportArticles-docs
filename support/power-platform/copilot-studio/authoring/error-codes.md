@@ -1,12 +1,11 @@
 ---
 title: "Understand error codes"
 description: "Understand error codes to troubleshoot issues in your agent design with Microsoft Copilot Studio."
-ms.date: 09/09/2025
-ms.topic: troubleshooting
-author: jameslew
-ms.reviewer: erickinser
-manager: kjette
-ms.author: jameslew
+ms.date: 10/02/2025
+ms.reviewer:
+  - jameslew
+  - erickinser
+  - v-shaywood
 ms.custom: sap:Authoring
 ---
 
@@ -25,12 +24,14 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 
 | Error code                                                        | Description                                                         |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [AIModelActionRequestTimout](#aimodelactionrequesttimeout)        | There's a timeout error related to a call to an AI Builder model. |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)     | There's an error related to the output of a connector.              |
+| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)             | A user interacting with an agent rejects the agent's SSO request. |
 | [ContentError](#contenterror)                                     | There's an error in the topic content.                              |
 | [DataLossPreventionViolation](#datalosspreventionviolation)       | There was a data policy violation.                                  |
 | [EnforcementMessageC2](#enforcementmessagec2)                     | Not enough prepaid capacity was available.                          |
-| [FlowActionException](#flowactionexception)                       | An error occurred while executing a [agent flow][1].                |
-| [FlowActionBadRequest](#flowactionbadrequest)                     | A request made to a [agent flow][1] was malformed.                  |
+| [FlowActionException](#flowactionexception)                       | An error occurred while executing an [agent flow][1].                |
+| [FlowActionBadRequest](#flowactionbadrequest)                     | A request made to an [agent flow][1] was malformed.                  |
 | [FlowActionTimedOut](#flowactiontimedout)                         | An [agent flow][1] took more than 100 seconds to run and timed out. |
 | [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)         | An [agent flow][1] invoked with unauthorized maker credentials in connection |
 | [GenAISearchandSummarizeRateLimitReached](#genaisearchandsummarizeratelimitreached) | The usage limit for generative AI was reached.    |
@@ -48,11 +49,23 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 [1]: /microsoft-copilot-studio/advanced-flow
 [2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
 
+#### AIModelActionRequestTimeout
+
+**Error message:** The prompt `prompt-name` execution timed out.
+
+**Resolution:** Ensure that the call to the AI Builder model doesn't exceed 100 seconds.
+
 #### AsyncResponsePayloadTooLarge
 
 **Error message:** The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
 **Resolution:** One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information regarding the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
+
+#### ConsentNotProvidedByUser
+
+**Error message:** No consent provided for SSO connection.
+
+**Resolution:** The user interacting with the agent must confirm the connection using the agent's single sign-on connection prompt.
 
 #### ContentError
 
@@ -80,7 +93,7 @@ Common problems include:
 
 **Error message:** This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Within 5 minutes the agent chat will work again. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within 5 minutes. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionException
 
