@@ -21,7 +21,7 @@ productDirectory:
     # Card
     - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /media/logos/logo-ms-social.png
+      imageSrc: /media/logos/logo-ms-social.svg
       links:
         - url: /troubleshoot/microsoft-365/admin/o365-admin-welcome
           text: Microsoft 365 admin center
@@ -36,7 +36,7 @@ productDirectory:
     # Card      
     - title: Microsoft 365 Apps
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /support/media/hub-landing/logo-m365-app.png
+      imageSrc: /media/logos/logo-ms-social.svg
       links:
         - url: /troubleshoot/office/office-client-welcome
           text: Microsoft 365 Apps
@@ -90,7 +90,7 @@ productDirectory:
           text: OneDrive for Business
     # Card
     - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.png
+      imageSrc: /support/media/hub-landing/logo-viva.svg
       links:
         - url: ./glint/viva-glint-welcome.yml
           text: Microsoft Viva Glint
