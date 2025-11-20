@@ -1,7 +1,7 @@
 ---
 title: Can't Delete a Confluent Cloud Resource in Azure
 description: Resolve problems with deleting a Confluent Cloud resource in Azure, including permission and retention policy problems.
-author:  
+author:  praveenrajap
 ms.author: jarrettr
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution

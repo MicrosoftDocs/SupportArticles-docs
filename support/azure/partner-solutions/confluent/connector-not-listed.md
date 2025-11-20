@@ -1,7 +1,7 @@
 ---
 title: Confluent connector isn't in the list of connectors
 description: Troubleshoot the scenario in which the Confluent connector isn't in the list of connectors in Azure.
-author:
+author: praveenrajap
 ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-general

@@ -1,7 +1,7 @@
 ---
 title: Confluent Cloud Resource Not Displayed in the Azure Portal
 description: Troubleshoot issues in which a Confluent Cloud resource or its Overview/Delete panes aren't visible in the Azure portal.
-author:  
+author:  praveenrajap
 ms.author: jarrettr 
 ms.service: partner-services 
 ms.topic: troubleshooting-general

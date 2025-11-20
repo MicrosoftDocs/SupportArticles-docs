@@ -1,7 +1,7 @@
 ---
 title: Can't Find Apache Kafka & Apache Flink Offer in Azure Marketplace
 description: Resolve problems with finding the Apache Kafka & Apache Flink on Confluent Cloud offer in Azure Marketplace.
-author:  
+author:  praveenrajap
 ms.author: jarrettr 
 ms.service: partner-services
 ms.topic: troubleshooting-general

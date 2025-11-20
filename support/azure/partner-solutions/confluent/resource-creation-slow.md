@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Slow or Failed Confluent Cloud Resource Creation in Azure
 description: Troubleshoot slow or failed resource creation for Confluent Cloud in Azure.
-author:  
+author:  praveenrajap
 ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-general

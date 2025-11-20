@@ -1,7 +1,7 @@
 ---
 title: Single Sign-on Doesn't Work for the Confluent Cloud SaaS Portal
 description: Resolve problems with single sign-on (SSO) for the Confluent Cloud SaaS portal.
-author: 
+author: praveenrajap
 ms.author: jarrettr
 ms.service: partner-services  
 ms.topic: troubleshooting-problem-resolution

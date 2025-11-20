@@ -1,7 +1,7 @@
 ---
 title: Can't Create a Service Connection by Using Service Connector
 description: Troubleshoot problems with creating a service connection for Confluent Cloud by using Service Connector in Azure.
-author:  
+author:  praveenrajap
 ms.author: jarrettr  
 ms.service: partner-services 
 ms.topic: troubleshooting-general

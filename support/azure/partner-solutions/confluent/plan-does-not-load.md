@@ -1,7 +1,7 @@
 ---
 title: Offer Plan Doesn't Load in Azure Marketplace for Confluent Cloud
 description: Troubleshoot problems in which the offer plan doesn't load for a Confluent Cloud resource.
-author: 
+author: praveenrajap
 ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-general
