@@ -188,7 +188,7 @@ Successfully Dropped the state message 3~~
 
 DMPDownloader sends the `3 (VERIFIED_MANIFEST)` state message to confirm that the file has a trusted signature.
 
-Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.MCM, and then moves the renamed file to one of the following locations:
+Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.mcm, and then moves the renamed file to one of the following locations:
 
 - If the SCP is remote from the site server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
 - If the SCP is co-located with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
@@ -210,7 +210,7 @@ In Hierarchy Manager (HMAN), a message forwarding thread moves the incoming MCM 
 
 HMAN checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
 
-The SMSDBMon component drops a blank file that's named \<SiteCode>.SCU to the \<ConfigMgr installation Directory>\\inboxes\\hman.box folder.
+The SMSDBMon component drops a blank file that's named \<SiteCode>.scu to the \<ConfigMgr installation Directory>\\inboxes\\hman.box folder.
 
 > [!NOTE]  
 > In these file and path names, \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
@@ -271,7 +271,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 - **SCP in Online mode**
 
-  1. On the SCP, check the DMPDownloader.log file for any error messages that the DMPDownloader generated while it downloaded and processed the manifest .cab file.
+  1. On the SCP, check the DMPDownloader.log file for any error messages that the DMPDownloader generated while it downloaded and processed the manifest CAB file.
   1. Verify that the HMAN.log file contains entries that resemble the following excerpt:
 
      ```output
@@ -279,7 +279,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
      Extracted E:\ConfigMgr\CMUStaging\Manifest.xml
      ```
 
-     These log entries indicate that DMPDownloader successfully downloaded and processed the .cab file.
+     These log entries indicate that DMPDownloader successfully downloaded and processed the CAB file.
 
 - **SCP in Offline mode**
 
@@ -321,7 +321,7 @@ As part of troubleshooting the Applicability check stage, verify that the site d
 SELECT dbo.fnCurrentSiteVersion()
 ```
 
-Correlate the returned version information to other sources such as the version of the smsexec.exe binary file. The following table lists multiple sources of these values.
+Correlate the returned version information to other sources such as the version of the SMSExec.exe binary file. The following table lists multiple sources of these values.
 
 > [!NOTE]  
 > The values might include both regular build numbers (expressed as *nnnn*) and minor build numbers (expressed as *mm*). Only the regular build numbers (*nnnn*) are relevant to troubleshooting this issue.
@@ -345,7 +345,7 @@ As described earlier, each update package has a unique GUID (also known as the u
 
 ### Process step 1: DMPDownloader downloads the update and any supporting files
 
-By default, DMPDownloader automatically initiates the download of the latest applicable update package. Alternatively, an Administrator can manually download any other applicable update package by selecting it in the console and then selecting **Download**.
+By default, DMPDownloader automatically starts downloading the latest applicable update package. Alternatively, an Administrator can manually download any other applicable update package by selecting it in the console and then selecting **Download**.
 
 In either case, after the process starts, the SMS provider calls the `spAddPackageToDownload` stored procedure. The stored procedure adds the package GUID to the `CM_UpdatePackagesToDownload` table in the SQL database.
 
@@ -453,7 +453,7 @@ To download the redists, DMPDownloader reads the same Manifest.xml file that it 
 </Content>
 ```
 
-Then DMPDownloader engages the usual Configuration Manager redist downloading process, SetupDL.exe. SetupDL.exe downloads the redists and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
+Then DMPDownloader engages SetupDL.exe, the usual Configuration Manager redist downloading process. SetupDL.exe downloads the redists and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
 
 ```output
 INFO: Attempting to load resource DLL...
@@ -474,14 +474,14 @@ INFO: Setup downloader setupdl.exe: FINISHED
 
 ### Process step 2: Completing the Download
 
-As a result of the previous step, the \\EasySetupPayload shared folder contains a folder \\\<Update GUID> that has an integrated \\Redists folder.
+As a result of the previous step, the \\EasySetupPayload shared folder contains the \\\<Update GUID> folder, which has an integrated \\Redists folder.
 
-Depending on the SCP configuration, DMPDownloader puts a so-called CMU file in one of the following locations:
+Depending on the SCP configuration, DMPDownloader puts a file that's referred to as the CMU file in one of the following locations:
 
 - If the SCP is remote from the site server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the site server.
 - If the SCP is collocated with the site server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
-The file has a .mcm extension, and contains the information that marks the state of the update package as `State="262146"` (also known as `"DOWNLOAD_SUCCESS"`). The corresponding log entries resemble the following excerpt:
+The file has a .mcm extension, and contains the information that marks the state of the update package as **State="262146"** (also known as **"DOWNLOAD_SUCCESS"**). The corresponding log entries resemble the following excerpt:
 
 ```output
 The CMU file name is E:\ConfigMgr\inboxes\hman.box\ForwardingMsg\___CMU3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e.MCM~~
@@ -490,7 +490,7 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 The notification file is just an XML file that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the Manifest .cab file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
+HMAN converts the file back to .cmu, and then moves it to HMAN.box\\CFD. This process resembles that applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
@@ -578,7 +578,7 @@ At the top-level site, you take one of the following actions:
 - To install the update, select **Install**.
 - Start a prerequisite check.
 
-HMAN uses the shared folder \\\\[servername]\\EasySetupPayload\\\<Update GUID> as the source to create or update the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file named HMAN.box\CFD\2.ESC. This action wakes up HMAN, and it starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in Smsdbmon.log that resemble the following excerpt:
+HMAN uses the shared folder \\\\[servername]\\EasySetupPayload\\\<Update GUID> as the source to create or update the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file that's named 2.esc in the HMAN.box\\CFD folder. This action wakes up HMAN, and it starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in SMSDBMon.log that resemble the following excerpt:
 
 ```output
 RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2  ]
@@ -738,15 +738,15 @@ In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Pack
 
 If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log.
 
-1. Look for entries that mention processing the 2.ESC file.
+1. Look for entries that mention processing the 2.esc file.
 1. Filter the log by the respective thread.
-1. Alternatively, look for the last **SubstageID** value that's recorded in the log. The data that's associated with this value should include either `IsComplete=2` (Success) or `IsComplete=4` (Failure). This information should resemble the following excerpt:
+1. Alternatively, look for the last `SubstageID` value that's recorded in the log. The data that's associated with this value should include either `IsComplete=2 (Success)` or `IsComplete=4 (Failure)`. This information should resemble the following excerpt:
 
    ```output
    Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
    ```
 
-1. If the HMAN.log file rolled over (removing older entries), try to manually recreate the empty 2.ESC file in the HMAN.box\CFD folder. This operation should trigger the same process again.
+1. If the HMAN.log file rolled over (removing older entries), try to manually recreate the empty 2.esc file in the HMAN.box\\CFD folder. This operation should trigger the same process again.
 
    > [!NOTE]  
    > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following excerpt:
@@ -888,7 +888,7 @@ Preparing prereq check for site server [BIG-CS1SITE.BIGLAB.NET]...~
 
 During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
 
-Then CMUpdate looks for the Update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section, which contains the hashes of the files that it needs. This section of the file resembles the following excerpt:
+Then CMUpdate looks for the update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section, which contains the hashes of the files that it needs. This section of the file resembles the following excerpt:
 
 ```xml
 BEGIN_COMPONENT_FILELIST
@@ -915,7 +915,7 @@ BEGIN_COMPONENT_FILELIST
 END_COMPONENT_FILELIST
 ```
 
-The file of particular interest is prereqcore.dll, which contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64 and compares it to the hash in the `Update.map` file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
+The file of particular interest is prereqcore.dll, which contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64 and compares it to the hash in the update.map file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
 
 ```output
 prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2391119281E0ECA43E
@@ -928,7 +928,7 @@ Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
 ```
 
 > [!NOTE]  
-> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
+> Hotfixes typically don't have a specific section in the update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
 >
 > ```output
 >update.map has no update for CONFIGURATION_MANAGER_UPDATE
@@ -1077,10 +1077,13 @@ Since version 1810, Configuration Manager requires SQL Native Client version 11.
 
 Similarly, since version 2303, Configuration Manager requires ODBC Driver 18 for SQL Server or a later version. Since version 2503, Configuration Manager requires ODBC Driver 18.4.1.1 for SQL Server or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSODBCSQL18\InstalledVersion` registry entry.
 
-To meet both SQL Server prerequisites, consider manually installing the following msi files from the \\EasySetupPayload\\\<Update GUID>\\redist folder (only available for major releases):
+To meet both SQL Server prerequisites, consider manually installing the following MSI files from the \\EasySetupPayload\\\<Update GUID>\\redist folder:
 
 - sqlncli.msi
 - msodbcsql.msi
+
+> [!NOTE]  
+> These files are only available for major releases.
 
 Alternatively, download the latest binaries from the following URLs in the Microsoft Download Center:
 
@@ -1169,7 +1172,7 @@ There is no service window defined for the site server to apply the CM server up
 
 ### Process step 2: CMUpdate verifies the state of the update and redist content
 
-CMUpdate verifies that the CMUStaging content is intact, and then reads update.map file. It logs entries that resemble the following excerpt:
+CMUpdate verifies that the CMUStaging content is intact, and then reads the update.map file. It logs entries that resemble the following excerpt:
 
 ```output
 Checking if the CMU Staging folder already has the content extracted.
@@ -1270,7 +1273,7 @@ Copying contents of update package from E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4E
 successfully updated setup registry to have new external files stored at E:\ConfigMgr\cd.latest\redist
 ```
 
-Finally, CMUpdate creates a notification file that's named 196612.esc for HMAN, and then starts the post-installation tasks. It logs entries that resemble the following excerpt:
+Finally, CMUpdate creates a notification file for HMAN that's named 196612.esc, and then starts the post-installation tasks. It logs entries that resemble the following excerpt:
 
 ```output
 INFO: Successfully dropped update pack installed notification to HMAN CFD box.
@@ -1358,11 +1361,11 @@ The following issues can cause an update package to appear to be stuck during th
 - CMUpdate has stopped, so the installation process can't continue.
 - The update package content can't replicate between the CAS and the primary sites because of a Database Replication Service (DRS) issue.
 
-Failures can occur at any step of the Installation stage. CMUpdate.log is the primary log to use for investigating installation issues. However, if the failure occurs at any of the post-installation steps, review the SiteComp.log file for information about component reinstallations and the SMSExec.logfile for information about component startup.
+Failures can occur at any step of the Installation stage. CMUpdate.log is the primary log to use for investigating installation issues. However, if the failure occurs at any of the post-installation steps, review the SiteComp.log file for information about component reinstallations and the SMSExec.log file for information about component startup.
 
 #### Case studies of Installation stage issues
 
-##### Issue 1: Error in verifying the trust of file \\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab**
+##### Issue 1: "Error in verifying the trust of file \\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab"
 
 In CMUpdate.log, you find an error message that resembles the following excerpt:
 
@@ -1409,7 +1412,7 @@ If this issue occurs, look for the following typical causes:
 | Folder | Location | Description |
 |--------|---|-------------|
 | \EasySetupPayload | SCP |  This shared folder contains the actual installation files for an update. There's no Setup.exe file. Instead, an Install.map file is used for installing. |
-| \CMUStaging | Site server | This folder contains unpacked Configuration Manager manifest cab file that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored in this folder while the update installs. |
+| \CMUStaging | Site server | This folder contains unpacked Configuration Manager manifest CAB file that HMAN downloaded and extracted to perform applicability checks. The installation files are temporarily stored in this folder while the update installs. |
 | \CMUClient | Site server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
 | \PilotingUpgrade | Site server | This folder contains the source content for the Client Piloting Package. |
 | \ClientUpgrade | Site server | This folder contains the source content for the Client Upgrade Package. |
