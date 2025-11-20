@@ -22,10 +22,10 @@ The key differences that you can expect to see after the identity transition are
 - A new Dynamics 365 system user that's named `# SSSAdminProd` is added.
 - The audit log entries for server-side sync operations that don't impersonate a system user are shown as performed by `# SSSAdminProd` instead of `SYSTEM`.
 - For records that are created or updated by server-side sync:
-   - The delegate auditing fields _Created By (delegate)_ and _Modified By (delegate)_ now shows `# SSSAdminProd` instead of being empty.
-   - The content of the _Created By_ and _Modified By_ fields remains unchanged.
+  - The delegate auditing fields _Created By (delegate)_ and _Modified By (delegate)_ now shows `# SSSAdminProd` instead of being empty.
+  - The content of the _Created By_ and _Modified By_ fields remains unchanged.
 - For records that are created by synchronous customizations, such as workflows or plug-ins, and that run on server-side sync operations and use the calling identity:
-   - The _Created By (delegate)_ field now shows `# SSSAdminProd` instead of being empty.
+  - The _Created By (delegate)_ field now shows `# SSSAdminProd` instead of being empty.
 
 ## Example scenarios
 
@@ -33,7 +33,7 @@ The following example scenarios demonstrate which record fields are changing. (T
 
 #### Scenario 1
 
-Server-side sync picks up an email message in 'Pending Send' state, sends it, and then moves it to the 'Sent' state through a 'SetState' operation. A synchronous workflow runs on email updates to create a contact using the calling identity.
+Server-side sync picks up an email message in 'Pending Send' state, sends it, and then moves it to the 'Sent' state through a 'SetState' operation. A synchronous workflow runs on email updates to create a contact by using the calling identity.
 
 | Scenario | Email Modified By | Email Modified By (delegate) | Email audit log identity | Contact owner | Contact Created By | Contact Created By (delegate) | Contact audit log identity |
 | -------- | ----------------- | ---------------------------- | ------------------------ | ------------- | ------------------ | ----------------------------- | -------------------------- |
