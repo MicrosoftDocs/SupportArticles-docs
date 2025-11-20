@@ -1,5 +1,5 @@
 ---
-title: Istio service mesh add-on Gateway API ingress troubleshooting
+title: Istio Service Mesh Add-on Gateway API ingress Troubleshooting
 description: Learn how to do Gateway API ingress troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
 ms.date: 08/26/2025
 author: nshankar13
@@ -13,24 +13,24 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 # Istio service mesh add-on gateway api ingress troubleshooting
 
-This article discusses how to troubleshoot ingress gateways configured with the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) for the Istio service mesh add-on.
+This article discusses how to troubleshoot ingress gateways that are configured by using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) for the Istio service mesh add-on.
 
 ## Overview
 
-Like the [classic Istio ingress gateways](./istio-add-on-ingress-gateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster first before using the Istio add-on for Gateway API-based ingress.
+Similar to the [classic Istio ingress gateways](./istio-add-on-ingress-gateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster before thay can use the Istio add-on for Gateway API-based ingress.
 
 ## Before troubleshooting
 
-Before proceeding, take the following actions:
+Before you proceed, take the following actions:
 
 - Install the [Managed Gateway API CRDs](/azure/aks/managed-gateway-api) on your cluster.
-- Ensure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or higher. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you are on a lower minor revision.
+- Make sure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or a later revision. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you are on an earlier revision.
 
 ## Networking, firewall, and load balancer errors troubleshooting
 
 ### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment is blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
 Gateway customization:
 
@@ -65,9 +65,9 @@ You can also see whether health probes are failing by inspecting the `LoadBalanc
 
 ### Step 2: Make sure no firewall or NSG rules block ingress traffic
 
-Verify that the there aren't any [firewall](/azure/firewall/protect-azure-kubernetes-service) or [Network Security Group (NSG) rules](/azure/virtual-network/network-security-groups-overview) that block traffic to the ingress gateway.
+Verify that no [firewall](/azure/firewall/protect-azure-kubernetes-service) or [Network Security Group (NSG) rules](/azure/virtual-network/network-security-groups-overview) rules block traffic to the ingress gateway.
 
-Double check if you have set restrictions to only allow traffic to the subnet(s) of your user node pool(s). If the Gateway API pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), then incoming traffic to these pods could be blocked. You can address this by allowing traffic to the subnet(s) of your system node pool(s).
+Double check whether you set restrictions to allow traffic to only the subnets of your user node pools. If the Gateway API pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), incoming traffic to these pods could be blocked. You can address this issue by allowing traffic to the subnets of your system node pools.
 
 ## Gateway configuration troubleshooting
 
@@ -77,19 +77,19 @@ Verify that all `Gateways` you created have the `spec.gatewayClassName` set to `
 
 ### Step 2: Verify cross-namespace references
 
-Depending on the namespace the `Gateway` and respective Routes are deployed in, the `Gateway` `spec.listeners.allowedRoutes` should be set accordingly to allow Routes only from the same namespace or across different namespaces. Likewise, the `spec.parentRefs` for Routes should a reference the correct `Gateway` and provide the appropriate namespace for cross-namespace `Gateway` references. See the Gateway API docs on [cross-namespace routing](https://gateway-api.sigs.k8s.io/guides/multiple-ns/) for more information.
+Depending on the namespace that the `Gateway` and respective Routes are deployed in, the `Gateway` `spec.listeners.allowedRoutes` value should be set accordingly to allow Routes from only the same namespace or across different namespaces. Likewise, the `spec.parentRefs` value for Routes should reference the correct `Gateway` and provide the appropriate namespace for cross-namespace `Gateway` references. For more information, see the Gateway API docs on [cross-namespace routing](https://gateway-api.sigs.k8s.io/guides/multiple-ns/).
 
 ### Step 3: Inspect the `Gateway` for programming errors
 
-If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can do this by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `.
+If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `.
 
 ### Step 4: Inspect `istiod` and `Gateway` logs for errors
 
-The `istiod` logs may also have additional details on `Gateway` programming-related errors. If the `Gateway` is programmed successfully and the Pod/Deployment are created, but is running into other issues, then you should try inspecting the `Gateway` Pod logs for any potential errors. The `Gateway` pod / deployment name follow the format `<gateway-name>-istio`.
+The `istiod` logs may have additional details about `Gateway` programming-related errors. If the gateway is programmed successfully, and the pod deployments are created, but other issues occur, try inspecting the `Gateway` pod logs for any potential errors. The `Gateway` pod deployment name follows the format, `<gateway-name>-istio`.
 
 ## Minor revision upgrades and revision label troubleshooting
 
-During an [Istio add-on minor revision upgrade](/azure/aks/istio-upgrade) when two control planes are deployed on the cluster simultaneously, the higher revision will by default take ownership of the `Gateway` resources if the `Gateways` are not labeled with a specific ASM revision as such:
+By default during an [Istio add-on minor revision upgrade](/azure/aks/istio-upgrade), if two control planes are deployed on the cluster simultaneously, the higher revision takes ownership of the `Gateway` resources if the gateways are not labeled with a specific ASM revision:
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -102,34 +102,35 @@ spec:
   gatewayClassName: istio
 ```
 
-During the minor revision upgrade, you should verify that the Pods/Deployments for the `Gateway` are automatically updated with the new proxy minor image version corresponding to the higher control plane minor revision. If not, you should try restarting the Deployment. 
+During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition is not true, try to restart the Deployment. 
 
-If your `Gateways` are labeled explicitly with an ASM revision, you should relabel them accordingly before completing or rolling back the upgrade operation.
+If your gateways are labeled explicitly with an ASM revision, relabel them accordingly before you finish or roll back the upgrade operation.
 
 ## Gateway resource customization troubleshooting
 
-The Istio add-on supports [customization of the resources](/azure/aks/istio-gateway-api#resource-customizations) created for the `Gateways`, namely the:
-* Deployment
-* Service
-* Horizontal Pod Autoscaler (HPA)
-* PodDisruptionBudget (PDB)
+The Istio add-on supports [customization of the resources](/azure/aks/istio-gateway-api#resource-customizations) that are created for the gateways, as follows:
 
-The following are some troubleshooting steps for issues relating to configuration of the `Gateway` resources.
+- Deployment
+- Service
+- Horizontal Pod Autoscaler (HPA)
+- PodDisruptionBudget (PDB)
 
-### Step 1: Ensure customization fields are allowlisted
+Follow these troubleshooting steps for issues that relate to configuring the `Gateway` resources.
 
-Ensure that the customizations for both `GatewayClass`-level ConfigMaps and `Gateway`-level ConfigMaps only include fields in the [allowlist](/azure/aks/istio-gateway-api#resource-customization-allowlist) for the specific resource.
+### Step 1: Make sure that customization fields are on the allowlist
 
-### Step 2: Ensure GatewayClass-level ConfigMap is configured correctly
+Make sure that the customizations for both `GatewayClass`-level ConfigMaps and `Gateway`-level ConfigMaps include only fields that are on the [allowlist](/azure/aks/istio-gateway-api#resource-customization-allowlist) for the specific resource.
 
-The `GatewayClass`-level ConfigMap `istio-gateway-class-defaults` is automatically deployed in the `aks-istio-system` namespace by the Istio add-on when the Managed Gateway API installation is enabled on the cluster. Note that it could take up to ~5 minutes for the `istio-gateway-class-defaults` ConfigMap to get deployed after installing the Managed Gateway API CRDs. 
+### Step 2: Make sure that GatewayClass-level ConfigMap is configured correctly
 
-If you are editing this ConfigMap, ensure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can only have one `GatewayClass`-level ConfigMap deployed at a time.
+`GatewayClass`-level ConfigMap `istio-gateway-class-defaults` is automatically deployed in the `aks-istio-system` namespace by the Istio add-on when the Managed Gateway API installation is enabled on the cluster. Notice that it could take up to five minutes for the `istio-gateway-class-defaults` ConfigMap to be deployed after you install the Managed Gateway API CRDs. 
 
-### Step 3: Verify Gateway-level ConfigMap customizations
+If you are editing this ConfigMap, make sure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can have only one `GatewayClass`-level ConfigMap deployed at a time.
 
-If both the `GatewayClass`-level ConfigMap and a `Gateway`-level ConfigMap are deployed, the `Gateway`-level ConfigMap customizations will take precedence. Ensure that the desired resource customizations for the `Gateway` are set in the `Gateway`-level ConfigMap. Also verify that the ensure that the `spec.infrastructure.parametersRef` field references the correct ConfigMap for that `Gateway`.
+### Step 3: Verify gateway-level ConfigMap customizations
 
-### Step 4: Inspect Gateway resource propogation errors
+If both the `GatewayClass`-level ConfigMap and a `Gateway`-level ConfigMap are deployed, the `Gateway`-level ConfigMap customizations take precedence. Make sure that the desired resource customizations for the `Gateway are set in the `Gateway`-level ConfigMap. Also, verify that the `spec.infrastructure.parametersRef` field references the correct ConfigMap for that gateway.
 
-If the `Gateway` customizations fail to propagate to their respective resources, verify that the ConfigMap spec is valid in terms of indentation, correct field names, spelling, and so-on. You should also inspect the `istiod` logs to see if there are any issues with template rendering or resource creation for the `Gateways`.
+### Step 4: Inspect gateway resource propogation errors
+
+If the `Gateway` customizations don't propagate to their respective resources, verify that the ConfigMap spec is valid in terms of indentation, correct field names, spelling, and so on. You should also inspect the `istiod` logs to see whether any issues affect template rendering or resource creation for the gateways.
