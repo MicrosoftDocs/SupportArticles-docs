@@ -303,7 +303,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
 If you suspect that your issue occurs in the Applicability check stage, use the following flowchart to investigate which components might be involved and which processes the issue affects.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Applicability check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-application-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Applicability check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-application-stage.png":::
 
  Additionally, you also need information from the top-level Site SQL Database. Use the following query:
 
