@@ -31,10 +31,9 @@ This article helps you resolve failures that might occur when you try to create 
 - One or more required values on the connector creation page are incorrect.
 - The Azure service you're trying to connect to isn't configured correctly.
 
-## Solution 1: Verify permissions and required values
+## Solution 1: Verify permissions 
 
-1. Ensure that you have the required permissions to create Confluent connectors. You need to have an Owner or Contributor role in the Azure subscription and appropriate permissions on the Confluent Kafka cluster.  
-1. Ensure that all required fields on the connector creation form contain the correct values.
+- Ensure that you have the required permissions to create Confluent connectors. You need to have an Owner or Contributor role in the Azure subscription and appropriate permissions on the Confluent Kafka cluster.  
 
 ## Solution 2: Check Azure service configuration
 
