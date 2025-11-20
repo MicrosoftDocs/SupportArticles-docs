@@ -613,7 +613,7 @@ Info: Updated package CAS10001 and SMS_DISTRIBUTION_MANAGER will replicate the c
 Successfully reported ConfigMgr update status (SiteCode=CAS, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-### Process step 2: HMAN: Update the Easy Setup Package
+### Process step 2: HMAN updates the Easy Setup Package
 
 HMAN adds the package GUID of the update package to the `EasySetupSettings` table.
 
@@ -635,7 +635,7 @@ To keep HMAN busy and keep it from processing other files, SMSDBMon drops the \<
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C.CME
 ```
 
-### Process step 3: Distribute content
+### Process step 3: DistMgr distributes the content
 
 This step is essentially the same as for any intersite content replication process. However the Easy Setup Package isn't replicated to secondary sites or distribution points.
 
@@ -677,7 +677,7 @@ The Sender component manages the actual content transfer. It logs entries in Sen
 ~Sending completed successfully
 ```
 
-The replication process continues at the primary site. After  Sender transfers the Easy Setup Package, the Despooler component of the child primary site unpacks the package content to a content library of the receiving site. Despooler logs entries in Despool.log that resemble the following excerpt:
+The replication process continues at the primary site. After Sender transfers the Easy Setup Package, the Despooler component of the child primary site unpacks the package content to a content library of the receiving site. Despooler logs entries in Despool.log that resemble the following excerpt:
 
 ```output
 Received package CAS10001 version 1. Compressed file -  C:\SMSPKG\CAS10001.PCK.1 as C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive\ds_r7or9.pkg  
@@ -716,13 +716,13 @@ At the child primary sites, HMAN creates a file that's named \<Update GUID>.cmi 
 Created notification file (E8E74B72-504A-4202-9167-8749c223d2a5.CMI) for CONFIGURATION_MANAGER_UPDATE
 ```
 
-CMUpdate.exe moves the update package to the Prerequisite Check phase.
+CMUpdate moves the update package to the Prerequisite check phase.
 
 </details>
 
 ### Result of the Replication processes
 
-The content of the Update package (also known as the EasySetup Package) resides in the content library of each child primary site.
+The content of the update package (also known as the EasySetup Package) resides in the content library of each child primary site.
 
 ### Troubleshoot the Replication stage
 
@@ -730,7 +730,7 @@ To summarize the detailed description of the steps, the replication process star
 
 Use the following flowchart to narrow down issues that might occur at the Replication stage. This flowchart applies whether the Installation stage or the Prerequisite check stage triggered the Replication stage.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-stage-expanded.png":::
 
 In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Package from their parent site. The flow is exactly the same as for any other classic Package. For more information, see [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart).
 
