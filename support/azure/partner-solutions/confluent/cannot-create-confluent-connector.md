@@ -16,7 +16,9 @@ This article helps you resolve failures that might occur when you try to create 
 
 ## Prerequisites
 
-- Access to the Azure portal.
+- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free).
+- An existing Confluent organization. If you don't have one, see [Create a Confluent organization](/azure/partner-solutions/apache-kafka-confluent-cloud/create).
+- An app deployed to [Azure App Service](/azure/app-service/quickstart-dotnetcore), [Azure Container Apps](/azure/container-apps/quickstart-portal), [Azure Spring Apps], or [Azure Kubernetes Service (AKS)](/azure/aks/learn/quick-kubernetes-deploy-portal).
 
 ## Symptoms
 
@@ -31,7 +33,7 @@ This article helps you resolve failures that might occur when you try to create 
 
 ## Solution 1: Verify permissions and required values
 
-1. Ensure that you have the required permissions to create Confluent connectors.
+1. Ensure that you have the required permissions to create Confluent connectors. You need to have an Owner or Contributor role in the Azure subscription and appropriate permissions on the Confluent Kafka cluster.  
 1. Ensure that all required fields on the connector creation form contain the correct values.
 
 ## Solution 2: Check Azure service configuration
