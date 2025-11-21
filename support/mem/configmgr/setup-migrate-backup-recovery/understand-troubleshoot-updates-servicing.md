@@ -1299,8 +1299,8 @@ HMAN performs the following post-installation tasks:
 > [!NOTE]
 >
 > - Update.map contains the list of updates and files to be replaced and added. To review the list of files, open update.map in Notepad.
-> - Install.map contains the list of steps that the installation process runs. It serves as a workflow for Cmupdate.exe that provides the steps and parameters to run in order.
-> - For minor upgrades, check CMUpdate.log for details.
+> - Install.map contains the list of steps that the installation process runs. It serves as a workflow for CMUpdate.exe that provides the steps and parameters to run in order.
+> - For minor updates, check CMUpdate.log for details.
 
 HMAN logs entries that resemble the following excerpt:
 
@@ -1351,7 +1351,7 @@ If the Installation stage is stuck in the **Installing** state or fails complete
 
 Use the following flow chart to help identify the issue.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Installation stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Installation stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-stage-expanded.png":::
 
 The following issues can cause an update package to appear to be stuck during the Installation stage:
 
@@ -1376,13 +1376,13 @@ Error in verifying the trust of file \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-
 
 This issue occurs because the files aren't downloaded correctly. To fix this issue, follow these steps:
 
-1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. Switch SCP to offline mode if necessary.
+1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. If needed, switch the SCP to Offline mode .
 1. Run the RetryContentReplication WMI method. This method forces the Easy Setup Package to update. Wait for replication to finish.
 1. Try to install the update again.
 
 ##### Issue 2: Update installs on the CAS and primary sites, but the console still displays "Installing"
 
-A specific global replication group, **CMUpdates**, replicates the installation completion information once per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on  all sites.
+A specific global replication group, **CMUpdates**, replicates the installation completion information once per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on all sites.
 
 In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
 
