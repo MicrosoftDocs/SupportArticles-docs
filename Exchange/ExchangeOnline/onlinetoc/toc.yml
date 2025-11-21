@@ -364,8 +364,6 @@ items:
           href: ../groups-and-distribution-lists/cannot-manage-hidden-group.md
         - name: Can't remove members that exceed the limit
           href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
-        - name: Can't use reply all with Microsoft 365 groups 
-          href: ../groups-and-distribution-lists/cannot-reply-all-with-microsoft-365-groups.md
         - name: Can't upgrade distribution lists to Microsoft 365 groups
           href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
         - name: Common tasks to manage Microsoft 365 groups

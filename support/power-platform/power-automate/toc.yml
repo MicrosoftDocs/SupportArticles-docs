@@ -17,7 +17,7 @@ items:
         href: approvals/flow-approval-cds-provisioning-errors.md
       - name: Power Automate Approval Email delivery information
         href: approvals/power-automate-approval-email-information.md
-      - name: "\"The remote endpoint returned an error HTTP 403\" approval email error"
+      - name: '"The remote endpoint returned an error HTTP 403" approval email error'
         href: approvals/guest-approval-email-error.md
   - name: Authentication or Sign-in
     items:
@@ -36,7 +36,7 @@ items:
       - name: Missing on-premises data gateway
         href: connections/check-if-gateway-is-the-right-region.md
       - name: Troubleshoot broken connections
-        href: connections/troubleshoot-broken-connections.md
+        href: connections/troubleshoot-broken-connections.md 
       - name: Troubleshoot Flow Connections
         href: connections/troubleshooting-flow-connections.md
       - name: Troubleshoot Flow Custom Connectors
@@ -55,10 +55,10 @@ items:
             href: desktop-flows/browser-automation/web-automation-action-fails-runtime.md
           - name: Can't automate "Save as," "Open" or "Upload" dialog boxes in web browser
             href: desktop-flows/browser-automation/automate-save-as-open-upload-dialog-box-web-browser.md
-          - name: "\"Failed to assume control of Microsoft Edge/Chrome/Firefox\" error"
+          - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
             href: desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error.md
           - name: Security update for the browser automation component
-            href: desktop-flows/browser-automation/automation-browser-security-update.md
+            href: desktop-flows/browser-automation/automation-browser-security-update.md  
           - name: Troubleshoot issues with Power Automate browser extensions
             href: desktop-flows/browser-automation/web-extensions-policies.md
           - name: Web automation fails when machine runtime and MSIX versions are different
@@ -85,8 +85,10 @@ items:
         items:
           - name: Can't open SAP
             href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
+          - name: SAP UI element click issue
+            href: desktop-flows/sap-automation/sap-click-element-dpi.md
       - name: UI automation
-        items:
+        items:    
           - name: A desktop application crashes due to UI automation
             href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
           - name: Can't access the elements of a Java application
@@ -101,24 +103,22 @@ items:
             href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
           - name: Interactions with RDP or Citrix applications take a long time and fail
             href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
-          - name: SAP UI element click issue
-            href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
           - name: Set drop-down list value in window/on web page action fails
             href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
           - name: UI element highlighting or hovering issues in virtual desktops
             href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
-          - name: "\"The remote desktop was not found\" error"
+          - name: '"The remote desktop was not found" error'
             href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
           - name: UI element picker or recorder can't view UI elements in desktop applications
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions
             href: desktop-flows/ui-automation/uipi-issues.md
-      - name: "\"Could not read the application certificate\" error when creating a connection"
+      - name: '"Could not read the application certificate" error when creating a connection'
         href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows
         href: desktop-flows/agent-connectivity-issues-pad.md
       - name: Can't connect to an IBM Personal Communications session
-        href: desktop-flows/cannot-connect-to-ibm-personal-communications.md
+        href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
       - name: Can't silently join a machine group
         href: desktop-flows/silent-join-machine-group-troubleshoot.md
       - name: Can't create a connection from a shared canvas app
@@ -131,7 +131,7 @@ items:
         href: desktop-flows/enable-webview-pad-login.md
       - name: Can't access the parent flow
         href: desktop-flows/cannot-access-parent-flow.md
-      - name: "\"Could not establish trust relationship for the SSL/TLS secure channel\" error"
+      - name: '"Could not establish trust relationship for the SSL/TLS secure channel" error'
         href: desktop-flows/could-not-establish-trust-relationship-ssl-tls-secure-channel.md
       - name: Can't interact with desktop application without an error
         href: desktop-flows/cannot-interact-with-desktop-application.md
@@ -144,12 +144,12 @@ items:
       - name: Cloud flow is suspended due to missing the attended RPA capability
         href: desktop-flows/cloud-flow-suspended-missing-attended-rpa-capability.md
       - name: Cloud flow is suspended due to missing the unattended RPA capability
-        href: desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability.md
+        href: desktop-flows/cloud-flow-suspended-missing-unattended-rpa-capability.md 
       - name: Communication error when launching Power Automate for desktop
         href: desktop-flows/communication-error-console.md
-      - name: "\"MissingOnPremSidForMachineDomainJoined\" in connection creation"
+      - name: '"MissingOnPremSidForMachineDomainJoined" in connection creation' 
         href: desktop-flows/troubleshoot-domain-joined-error.md
-      - name: "\"Computer not joined Microsoft Entra or domain\" in connection creation"
+      - name: '"Computer not joined Microsoft Entra or domain" in connection creation'
         href: desktop-flows/machine-not-joined-error.md
       - name: Desktop flows don't show in console if license expired or unassigned
         href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
@@ -161,7 +161,7 @@ items:
         href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
       - name: Desktop flow fails with the SessionCreationTimeout error code
         href: desktop-flows/sessioncreationtimeout-error-code.md
-      - name: "\"ExpiredDesktopFlowConnection\" error when using or testing a desktop flow connection"
+      - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
         href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
       - name: Environment load fails with insufficient permissions in the v2 schema
         href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
@@ -171,21 +171,21 @@ items:
         href: desktop-flows/error-expression-could-not-be-evaluated.md
       - name: Errors when running attended or unattended desktop flows
         href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
-      - name: "\"Failed to run PowerShell script\" error"
+      - name: '"Failed to run PowerShell script" error'
         href: desktop-flows/failed-to-run-powershell-script-error.md
-      - name: "\"Failed to take screenshot\" error in unattended desktop flow run"
+      - name: '"Failed to take screenshot" error in unattended desktop flow run'
         href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
       - name: Failed connection between Power Automate components
         href: desktop-flows/failed-connection-between-power-automate-components.md
       - name: Failed license check on a desktop flow run
         href: desktop-flows/desktop-flow-run-time-license-check.md
-      - name: "\"Invalid Private key file\" error in Open secure FTP connection action"
+      - name: '"Invalid Private key file" error in Open secure FTP connection action'
         href: desktop-flows/invalid-private-key-file-error.md
       - name: Invalid credentials error when creating connection or running desktop flow
         href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
       - name: Invalid credentials error using Microsoft Entra account
         href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-      - name: "\"Logon type not granted\" error when creating connection or running desktop flow"
+      - name: '"Logon type not granted" error when creating connection or running desktop flow'
         href: desktop-flows/logon-type-has-not-been-granted.md
       - name: Machine registration failure
         href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
@@ -193,7 +193,7 @@ items:
         href: desktop-flows/desktop-flow-max-session-duration-error.md
       - name: Power Automate for desktop installation logs
         href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
-      - name: "\"Power Automate needs an update\" occurs when opening Power Automate for desktop"
+      - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
         href: desktop-flows/cannot-update-power-automate-for-desktop.md
       - name: Power Automate for desktop console doesn't show any flows
         href: desktop-flows/console-not-show-desktop-flows.md
@@ -203,15 +203,15 @@ items:
         href: desktop-flows/verify-dataverse-process-registerflowmachine.md
       - name: SessionHasLoggedOff occurs during a desktop flow run connected with the cloud
         href: desktop-flows/session-has-logged-off-troubleshooting.md
-      - name: Security update for "connect with sign-in" connections on AD domain-joined machines
+      - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
         href: desktop-flows/connect-with-sign-in-security-update.md
       - name: Some actions appear to be missing or aren't visible
         href: desktop-flows/actions-not-available.md
       - name: Session creation errors for unattended desktop flow runs
         href: desktop-flows/troubleshoot-session-creation-errrors.md
       - name: Tenant restrictions for machine registration
-        href: desktop-flows/tenant-restictions-machine-registration.md
-      - name: "\"The specified module could not be found\" error with terminal emulation action"
+        href: desktop-flows/tenant-restictions-machine-registration.md  
+      - name: '"The specified module could not be found" error with terminal emulation action'
         href: desktop-flows/terminal-emulation-module-not-found.md
       - name: Troubleshoot failed unattended runs using screenshots
         href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
@@ -225,9 +225,9 @@ items:
         href: desktop-flows/power-automate-desktop-installation-issues.md
       - name: Temporary profile error during machine registration
         href: desktop-flows/temporary-profile-error-machine-registration.md
-      - name: UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"
+      - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
         href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
-      - name: Your machine doesn't appear when creating a desktop flow connection
+      - name: Your machine doesn't appear when creating a desktop flow connection 
         href: desktop-flows/machine-not-shown-in-list.md
       - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
         href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
@@ -283,7 +283,7 @@ items:
         href: flow-run-issues/triggers-troubleshoot.md
   - name: Process Mining
     items:
-      - name: "\"The user has not been assigned any license\" error when accessing a process"
+      - name: '"The user has not been assigned any license" error when accessing a process'
         href: process-mining/process-mining-license-error.md
   - name: Solutions
     items:

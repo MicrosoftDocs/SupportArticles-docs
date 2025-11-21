@@ -7,7 +7,7 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 # Workarounds and operating system requirements for Visual Studio
 
-_Applies to:_ &nbsp; Visual Studio  
+_Applies to:_ &nbsp; Visual Studio 2026 and later versions  
 
 ## Summary
 
