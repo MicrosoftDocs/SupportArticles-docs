@@ -94,7 +94,7 @@ Make sure that the `StaticGatewayConfiguration` resource for the Istio add-on eg
 
 ### Step 2: Make sure that an egressIpPrefix is provisioned for the StaticGatewayConfiguration
 
-If the Istio egress gateway pods are stuck in `ContainerCreating`, the `kube-egress-gateway-cni-manager` pod might prevent the `istio-proxy` container from being created because the `StaticGatewayConfiguration` resource doesn't have an `egressIpPrefix` assigned to it yet. To verify whether it's assigned an `egressIpPrefix`, check the `status` value of `StaticGatewayConfiguration` for that Istio egress gateway. To determine whether any errors affect the `egressIpPrefix` provisioning, run the `kubectl describe` command against `StaticGatewayConfiguration`.
+If the Istio egress gateway pods are stuck in `ContainerCreating`, the `kube-egress-gateway-cni-manager` pod might prevent the `istio-proxy` container from being created because the `StaticGatewayConfiguration` resource doesn't have an `egressIpPrefix` assigned to it yet. To verify whether an `egressIpPrefix` is assigned to the resource, check the `status` value of `StaticGatewayConfiguration` for that Istio egress gateway. To determine whether any errors affect the `egressIpPrefix` provisioning, run the `kubectl describe` command against `StaticGatewayConfiguration`.
 
 > [!NOTE]
 > The process to assign an `egressIpPrefix` to a Static Egress Gateway `StaticGatewayConfiguration` can take up to five minutes.
@@ -104,7 +104,7 @@ kubectl get staticgatewayconfiguration $ISTIO_SGC_NAME -n $ISTIO_EGRESS_NAMESPAC
 kubectl describe staticgatewayconfiguration $ISTIO_SGC_NAME -n $ISTIO_EGRESS_NAMESPACE
 ```
 
-You can also check the logs of the `kube-egress-gateway-cni-manager` podthat runs on the node of the failing Istio egress pod. If any issues affect `egressIpPrefix` provisioning, or if an IP prefix still isn't assigned after approximately five minutes, you might have to further [debug the Static Egress Gateway](#step-8-debug-the-static-egress-gateway).
+You can also check the logs of the `kube-egress-gateway-cni-manager` pod that runs on the node of the failing Istio egress pod. If any issues affect `egressIpPrefix` provisioning, or if an IP prefix still isn't assigned after approximately five minutes, you might have to further [debug the Static Egress Gateway](#step-8-debug-the-static-egress-gateway).
 
 ### Step 3: Make sure that the StaticGatewayConfiguration references a valid gateway agent pool
 
@@ -217,7 +217,7 @@ If you try to configure the Istio egress gateway to perform mutual TLS (mTLS) or
 
 ### Step 6: Make sure that applications send plaintext HTTP requests for egress gateway TLS origination and authorization policies
 
-To originate TLS and apply authorization policies at the egress gateway, workloads in the mesh must send HTTP requests. The sidecar proxies can then use mTLS when they forward requests to the egress gateway. The egress gateway terminate the mTLS connection, and it originate a TLS/HTTPS connection to the destination host.
+To originate TLS and apply authorization policies at the egress gateway, workloads in the mesh must send HTTP requests. The sidecar proxies can then use mTLS when they forward requests to the egress gateway. The egress gateway terminates the mTLS connection, and it originate a TLS/HTTPS connection to the destination host.
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
