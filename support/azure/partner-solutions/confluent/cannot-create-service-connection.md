@@ -3,6 +3,8 @@ title: Can't Create a Service Connection by Using Service Connector
 description: Troubleshoot problems with creating a service connection for Confluent Cloud by using Service Connector in Azure.
 author:  praveenrajap
 ms.author: jarrettr  
+ms.reviewer: v-ryanberg
+ms.custom: support topic
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/24/2025
@@ -41,7 +43,13 @@ This article helps you troubleshoot issues with creating a service connection fo
 
 - If you use schema-based data types (for example, Avro), make sure that you configured the schema registry.
 
-## Related content
+## Resources
 
-- [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
 - [Service Connector documentation](/azure/service-connector/overview)
+- [Confluent support](https://support.confluent.io)
+- [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
+
+
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

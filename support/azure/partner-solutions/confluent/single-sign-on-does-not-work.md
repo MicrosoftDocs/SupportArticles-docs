@@ -3,6 +3,8 @@ title: Single Sign-on Doesn't Work for the Confluent Cloud SaaS Portal
 description: Resolve problems with single sign-on (SSO) for the Confluent Cloud SaaS portal.
 author: praveenrajap
 ms.author: jarrettr
+ms.reviewer: v-ryanberg
+ms.custom: support topic
 ms.service: partner-services  
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/24/2025
@@ -11,13 +13,13 @@ ai-usage: ai-assisted
 
 ---
 
-# Single sign-on doesn't work for the Confluent SaaS portal
+# Single sign-on (SSO) doesn't work for the Confluent SaaS portal
 
-This article helps you resolve problems with single sign-on (SSO) for the Confluent Cloud SaaS portal.
+This article helps you resolve problems with SSO for the Confluent Cloud software-as-a-service (SaaS) portal.
 
 ## Prerequisites
 
-- Access to the Confluent Cloud SaaS portal and 
+- Access to the Confluent Cloud SaaS portal. 
 - Your Microsoft Entra ID email.
 
 ## Symptoms
@@ -37,7 +39,13 @@ This article helps you resolve problems with single sign-on (SSO) for the Conflu
 
 If SSO still doesn't work after you verify your email and provide consent, contact [Confluent support](https://support.confluent.io).
 
-## Related content
+## Resources
 
 - [Microsoft Entra ID documentation](/entra/identity/index)
+- [Confluent support](https://support.confluent.io)
+- [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
+ 
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)] 
  

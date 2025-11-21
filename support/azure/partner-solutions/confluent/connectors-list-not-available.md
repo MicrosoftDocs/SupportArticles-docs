@@ -3,6 +3,8 @@ title: List of Confluent Connectors Isn't Available
 description: Troubleshoot missing Confluent connectors list in the Azure portal.
 author: praveenrajap
 ms.author: jarrettr 
+ms.reviewer: v-ryanberg
+ms.custom: support topic
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/25/2025
@@ -16,7 +18,7 @@ This article helps you troubleshoot the problem in which the list of Confluent c
 
 ## Prerequisites
 
-- Access to the Azure portal.
+- Access to the [Azure portal](https://portal.azure.com).
 
 ## Symptoms
 
@@ -29,9 +31,14 @@ This article helps you troubleshoot the problem in which the list of Confluent c
 ## Solution
 
 - Ensure you're assigned the Owner or Contributor role for the Azure subscription.
-- If you aren't, contact your Azure subscription administrator to update your role assignments.
+- If you aren't, contact your Azure subscription admin to update your role assignments.
 
-## Related content
+## Resources
 
 - [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview)
+- [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
+
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

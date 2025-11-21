@@ -3,6 +3,8 @@ title: Conflict Error When Creating a Confluent Cloud Organization Resource
 description: Resolve the Conflict error that can appear when you create a Confluent Cloud organization resource in Azure.
 author:  praveenrajap
 ms.author: jarrettr
+ms.reviewer: v-ryanberg
+ms.custom: support topic
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
@@ -18,7 +20,7 @@ This article helps you resolve the Conflict error that appears when you try to c
 
 ## Prerequisites
 
-- Access to the Azure portal and the Confluent integration page.
+- Access to the [Azure portal](https://portal.azure.com) and the Confluent integration page.
 - An email address that hasn't been used to register a Confluent Cloud organization resource.
 
 ## Symptoms
@@ -33,8 +35,11 @@ If you previously registered for Confluent Cloud, you must use a different email
 
 When you create the new Confluent Cloud organization resource, use an email address that hasn't been registered with Confluent Cloud.
 
-## Related content
+## Resources
 
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
