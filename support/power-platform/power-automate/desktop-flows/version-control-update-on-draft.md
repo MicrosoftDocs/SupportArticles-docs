@@ -8,7 +8,7 @@ ms.custom: sap:Desktop flows\List, create, open, save or delete flows
 
 # Version control error when publishing a flow or saving it as draft
 
-This article provides troubleshooting guidance for an error that you encounter in Microsoft Power Automate for Desktop when you try to publish a flow or save it as a draft in an unmodified context if an active row is unpublished. This issue might occur if the *Desktop flow version control* feature is enabled. For more information about the version control feature, see [Version control in Power Automate for desktop](/power-automate/desktop-flows/version-control)
+This article provides troubleshooting guidance for an error that you encounter in Microsoft Power Automate for Desktop when you try to publish a flow or save it as a draft. This issue might occur if the *Desktop flow version control* feature is enabled. For more information about the version control feature, see [Version control in Power Automate for desktop](/power-automate/desktop-flows/version-control)
 
 ## Symptoms
 
