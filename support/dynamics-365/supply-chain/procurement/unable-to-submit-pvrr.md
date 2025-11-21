@@ -41,7 +41,7 @@ A PVRR can fail to submit if the vendor contact information is missing in **Vend
 
 To add the required vendor contact info:
 
-1. Go to **System administration > Users** and delete the existing user record.
+1. Go to **System administration > Users** and delete the existing user record associated with the vendor.
 
    :::image type="content" source="./media/unable-to-submit-pvrr/delete-vendor.png" alt-text="The users page with the delete button highlighted.":::
 
