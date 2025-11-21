@@ -301,7 +301,7 @@
         "power-platform/dataverse/**/*.md": "Microsoft Dataverse",
         "power-platform/ai-builder/**/*.md": "AI Builder",
         "power-platform/power-pages/*.md": "Power Pages",
-        "sales-copilot/**/*.md": "Copilot for Sales",
+        "sales-copilot/**/*.md": "Sales in Microsoft 365 Copilot",
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
