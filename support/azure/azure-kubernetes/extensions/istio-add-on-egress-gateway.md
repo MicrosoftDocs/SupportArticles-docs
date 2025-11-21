@@ -110,7 +110,7 @@ You can also check the logs of the `kube-egress-gateway-cni-manager` pod that ru
 
 Verify that the `spec.gatewayNodepoolName` for the `StaticGatewayConfiguration` for each Istio egress gateway references a valid agent pool of the mode type `Gateway` on the cluster. If any Istio add-on egress gateway `StaticGatewayConfiguration` references an agent pool through the `spec.gatewayNodepoolName`, you shouldn't delete a `Gateway` agent pool.
 
-### Step 4: Try sending an external request from the Istio egress gateway
+### Step 4: Try to send an external request from the Istio egress gateway
 
 Verify that requests from the Istio egress gateway are routed correctly through the Static Egress Gateway node pool. To take this action, use the `kubectl debug` command to create a Kubernetes ephemeral container and verify the source IP of requests from the Istio egress pod. Make sure that you temporarily set `outboundTrafficPolicy.mode` to `ALLOW_ANY` so that the egress gateway can access `ifconfig.me`. As a security best practice, we recommend that you revert `outboundTrafficPolicy.mode` to `REGISTRY_ONLY` after you finish debugging.
 
@@ -118,15 +118,15 @@ Verify that requests from the Istio egress gateway are routed correctly through 
 kubectl debug -it --image curlimages/curl $ISTIO_EGRESS_POD_NAME -n $ISTIO_EGRESS_NAMESPACE -- curl ifconfig.me
 ```
 
-The source IP address that's returned should match the `egressIpPrefix` value of the `StaticGatewayConfiguration` that's associated with that Istio egress gateway. If the request fails or the source IP address returned doesn't match the `egressIpPrefix`, try [restarting the Istio egress gateway deployment](#step-6-try-restarting-the-istio-egress-gateway-deployment) or debugging potential issues by using [Static Egress Gateway](#step-8-debug-the-static-egress-gateway).
+The source IP address that's returned should match the `egressIpPrefix` value of the `StaticGatewayConfiguration` that's associated with that Istio egress gateway. If the request fails or the source IP address returned doesn't match the `egressIpPrefix`, try [to restart the Istio egress gateway deployment](#step-6-try-to-restart-the-istio-egress-gateway-deployment) or debugging potential issues by using [Static Egress Gateway](#step-8-debug-the-static-egress-gateway).
 
-### Step 5: Try sending a request from an uninjected pod to the external service
+### Step 5: Try to send a request from an uninjected pod to the external service
 
 Another way to identify whether the issue is caused by the Istio add-on egress gateway or the Static Egress Gateway is to send a request directly from an uninjected pod (outside of the Istio mesh). You can use the [curl sample application](https://raw.githubusercontent.com/istio/istio/release-1.25/samples/curl/curl.yaml). Under `spec.template.metadata.annotations`, set the `kubernetes.azure.com/static-gateway-configuration` annotation to the same `gatewayConfigurationName` for the Istio add-on egress gateway.
 
-If the requests from the uninjected pod fail, try debugging potential issues that affect the [Static Egress Gateway](#step-8-debug-the-static-egress-gateway). If the requests from the uninjected pod succeed, verify your [Istio egress gateway configurations](#istio-egress-configuration-and-custom-resources-troubleshooting).
+If the requests from the uninjected pod fail, try to debug potential issues that affect the [Static Egress Gateway](#step-8-debug-the-static-egress-gateway). If the requests from the uninjected pod succeed, verify your [Istio egress gateway configurations](#istio-egress-configuration-and-custom-resources-troubleshooting).
 
-### Step 6: Try restarting the Istio egress gateway deployment
+### Step 6: Try to restart the Istio egress gateway deployment
 
 For changes to take effect to certain `StaticGatewayConfiguration` fields such as `defaultRoute` and `excludeCidrs`, you must restart the Istio add-on egress gateway pods.
 
@@ -136,7 +136,7 @@ You can bounce the pod by triggering a restart of the egress gateway deployment:
 kubectl rollout restart deployment $ISTIO_EGRESS_DEPLOYMENT_NAME -n $ISTIO_EGRESS_NAMESPACE
 ```
 
-### Step 7: Try creating a new StaticGatewayConfiguration for the Istio add-on egress gateway
+### Step 7: Try to create a new StaticGatewayConfiguration for the Istio add-on egress gateway
 
 If the `StaticGatewayConfiguration` for the Istio add-on egress gateway has an error, try to create a new `StaticGatewayConfiguration` custom resource in the same namespace. Then, run the following `az aks mesh enable-egress-gateway` command to update the `gatewayConfigurationName`. We recommend that you wait until the newly created `StaticGatewayConfiguration` is assigned an `egressIpPrefix`:
 
