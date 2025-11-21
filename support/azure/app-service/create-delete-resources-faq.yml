@@ -46,14 +46,14 @@ sections:
           * *West US 2* ↔ *West Central US*
           * *East Asia (Hong Kong SAR)* ↔ *Southeast Asia (Singapore)*
 
-            Each Azure region has unique characteristics that affect performance, availability, and regulatory requirements. Selecting the right region is critical for your workload. For more information, see:
+          Each Azure region has unique characteristics that affect performance, availability, and regulatory requirements. Selecting the right region is critical for your workload. For more information, see:
 
           * [Azure region pairs and nonpaired regions](/azure/reliability/regions-paired#azure-cross-region-replication-pairings-for-all-geographies)
           * [Azure regions decision guide - Select Azure regions](/azure/cloud-adoption-framework/ready/azure-setup-guide/regions)
 
           2. Request additional quota for your App Service plan.
 
-            Use the [App Service quota self-service experience](https://portal.azure.com/?feature.customportal=false#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/overview) in the Azure portal. This provides a dedicated quota blade where you can:
+          Use the [App Service quota self-service experience](https://portal.azure.com/?feature.customportal=false#view/Microsoft_Azure_Capacity/QuotaMenuBlade/~/overview) in the Azure portal. This provides a dedicated quota blade where you can:
 
           * View current usage and limits across SKUs.
           * Set custom quotas tailored to your plan.
