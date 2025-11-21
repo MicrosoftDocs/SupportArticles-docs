@@ -1,7 +1,7 @@
 ---
 title: Error 1053, Error 1067, or Event ID 7034 and OpenSSH Server Service Doesn't Start after You Install a Windows Update
 description: Explains how to resolve an issue that prevents the OpenSSH Server service from starting after you install specific Windows updates.
-ms.date: 11/14/2025
+ms.date: 11/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -55,27 +55,9 @@ The exact behavior and messages vary based on your situation. The following scen
 
 ## Cause
 
-This issue occurs when the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders have incorrect permissions. The permissions might be too limited or too open. OpenSSH version 9.5.2.1 requires these folders to have the permissions listed in the following table:
+This issue occurs when the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders have incorrect permissions. The permissions might be too limited or too open. For example, the SYSTEM account or the Administrators group might not have write permissions. On the other hand, regular users might have write or full control permissions.
 
-| Security principal | Allowed | Denied |
-| - | - | - |
-| SYSTEM account | Read/Write | All other permissions. |
-| Administrators group | Read/Write | All other permissions. |
-| All other accounts and groups | Read | All other permissions. |
-
-## Resolution
-
-On devices that this issue affects, use one of the following three methods to set up the correct permissions or work around the issue.
-
-### Method 1: Use File Explorer to configure permissions
-
-| Allowed permissions for SYSTEM and Administrators security principals | Allowed permissions for all other security principals |
-|-----|-----|
-| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows full control access for SYSTEM and Administrators accounts."::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows read and execute permissions for non-administrator accounts."::: |
-
-### Method 2: Use Windows PowerShell to configure permissions
-
-Open a Windows PowerShell Command Prompt window, and then run the following commands:
+You can use Windows PowerShell to review the permissions in the current access control list (ACL) configuration. Open a PowerShell Command Prompt window, and then run the following commands:
 
 ```powershell
 Get-Acl C:\ProgramData | Select-Object -Property AccessToString | fl *
@@ -93,7 +75,15 @@ Get-Acl C:\ProgramData | Select-Object -Property AccessToString | fl *
 - Get-Acl "C:\ProgramData\ssh\sshd_config" | Select-Object -Property AccessToString | fl *
 ```
 
-### Method 3: Workaround: Install updates that allow the service to start when the permissions aren't correct
+## Resolution
+
+On devices that this issue affects, in File Explorer, open the **Properties** dialog boxes for each of the ssh folders (C:\ProgramData\ssh and C:\ProgramData\ssh\logs). In each dialog box, select **Security** and set the permissions shown in the following table:
+
+| Allowed permissions for SYSTEM and Administrators security principals | Allowed permissions for all other security principals |
+|-----|-----|
+| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows full control access for SYSTEM and Administrators accounts."::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows read and execute permissions for non-administrator accounts."::: |
+
+## Workaround: Install updates that allow the service to start when the permissions aren't correct
 
 Install Windows updates that allow the OpenSSH service to start even if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders don't have correct permissions. When you use this workaround, Windows logs Event ID 4. The description of Event ID 4 resembles the following excerpt:
 
