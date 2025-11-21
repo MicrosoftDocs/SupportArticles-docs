@@ -45,7 +45,7 @@ To add the required vendor contact info:
 
    :::image type="content" source="./media/unable-to-submit-pvrr/delete-vendor.png" alt-text="The users page that has the delete button highlighted.":::
 
-1. Re-invite the vendor by selecting **Procurement and Sourcing** > **Vendor collaboration requests** > **Prospective vendor request registration**.
+1. Reinvite the vendor by selecting **Procurement and Sourcing** > **Vendor collaboration requests** > **Prospective vendor request registration**.
 
    :::image type="content" source="./media/unable-to-submit-pvrr/invite-user.png" alt-text="The Prospective vendor request registration page that has the Invite user button highlighted.":::
 
@@ -57,4 +57,4 @@ A PVRR submission might fail if the user provisioning steps aren't followed corr
 
 ### Solution
 
-Follow your configured vendor request approval process (automatic or manual). For more details, see: [Onboard vendors](/dynamics365/supply-chain/procurement/vendor-onboarding)
+Follow your configured vendor request approval process (automatic or manual). For more information, see: [Onboard vendors](/dynamics365/supply-chain/procurement/vendor-onboarding)
