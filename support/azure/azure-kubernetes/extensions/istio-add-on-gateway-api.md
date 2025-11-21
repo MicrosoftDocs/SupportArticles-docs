@@ -17,14 +17,14 @@ This article discusses how to troubleshoot ingress gateways that are configured 
 
 ## Overview
 
-Similar to the [classic Istio ingress gateways](./istio-add-on-ingress-gateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster before thay can use the Istio add-on for Gateway API-based ingress.
+Similar to the [classic Istio ingress gateways](./istio-add-on-ingress-gateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster before they can use the Istio add-on for Gateway API-based ingress.
 
 ## Before troubleshooting
 
 Before you proceed, take the following actions:
 
 - Install the [Managed Gateway API CRDs](/azure/aks/managed-gateway-api) on your cluster.
-- Make sure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or a later revision. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you are on an earlier revision.
+- Make sure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or a later revision. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you're on an earlier revision.
 
 ## Networking, firewall, and load balancer errors troubleshooting
 
@@ -89,7 +89,7 @@ The `istiod` logs may have additional details about `Gateway` programming-relate
 
 ## Minor revision upgrades and revision label troubleshooting
 
-By default during an [Istio add-on minor revision upgrade](/azure/aks/istio-upgrade), if two control planes are deployed on the cluster simultaneously, the higher revision takes ownership of the `Gateway` resources if the gateways are not labeled with a specific ASM revision:
+By default during an [Istio add-on minor revision upgrade](/azure/aks/istio-upgrade), if two control planes are deployed on the cluster simultaneously, the higher revision takes ownership of the `Gateway` resources if the gateways aren't labeled with a specific ASM revision:
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -102,7 +102,7 @@ spec:
   gatewayClassName: istio
 ```
 
-During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition is not true, try to restart the Deployment. 
+During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition isn't true, try to restart the Deployment. 
 
 If your gateways are labeled explicitly with an ASM revision, relabel them accordingly before you finish or roll back the upgrade operation.
 
@@ -125,12 +125,12 @@ Make sure that the customizations for both `GatewayClass`-level ConfigMaps and `
 
 `GatewayClass`-level ConfigMap `istio-gateway-class-defaults` is automatically deployed in the `aks-istio-system` namespace by the Istio add-on when the Managed Gateway API installation is enabled on the cluster. Notice that it could take up to five minutes for the `istio-gateway-class-defaults` ConfigMap to be deployed after you install the Managed Gateway API CRDs. 
 
-If you are editing this ConfigMap, make sure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can have only one `GatewayClass`-level ConfigMap deployed at a time.
+If you're editing this ConfigMap, make sure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can have only one `GatewayClass`-level ConfigMap deployed at a time.
 
 ### Step 3: Verify gateway-level ConfigMap customizations
 
-If both the `GatewayClass`-level ConfigMap and a `Gateway`-level ConfigMap are deployed, the `Gateway`-level ConfigMap customizations take precedence. Make sure that the desired resource customizations for the `Gateway are set in the `Gateway`-level ConfigMap. Also, verify that the `spec.infrastructure.parametersRef` field references the correct ConfigMap for that gateway.
+If both the `GatewayClass`-level ConfigMap and a `Gateway`-level ConfigMap are deployed, the `Gateway`-level ConfigMap customizations take precedence. Make sure that the desired resource customizations for the gateway are set in the `Gateway`-level ConfigMap. Also, verify that the `spec.infrastructure.parametersRef` field references the correct ConfigMap for that gateway.
 
-### Step 4: Inspect gateway resource propogation errors
+### Step 4: Inspect gateway resource propagation errors
 
 If the `Gateway` customizations don't propagate to their respective resources, verify that the ConfigMap spec is valid in terms of indentation, correct field names, spelling, and so on. You should also inspect the `istiod` logs to see whether any issues affect template rendering or resource creation for the gateways.
