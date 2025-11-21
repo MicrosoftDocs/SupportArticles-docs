@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Failures When Submitting a Prospective Vendor Registration Request
-description: Learn how to fix errors when submitting a Prospective Vendor Registration Request (PVRR). Identify causes like duplicate vendors or missing contact info.
+description: Learn how to fix errors when you submit a Prospective Vendor Registration Request (PVRR). Identify causes such as duplicate vendors or missing contact info.
 ms.reviewer: sugaur
 ms.date: 11/10/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
@@ -8,18 +8,18 @@ ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orde
 
 # Troubleshoot failures when submitting a Prospective Vendor Registration Request
 
-This article provides troubleshooting guidance for failures that might occur when submitting a Prospective Vendor Registration Request (PVRR).
+This article provides troubleshooting guidance for failures that occur when you submit a Prospective Vendor Registration Request (PVRR).
 
 ## Symptoms
 
-You might experience one or more of the following symptoms:
+You experience one or more of the following symptoms:
 
-- You can't submit a _Prospective Vendor Registration Request (PVRR)_ in Dynamics 365 Finance and Operations.
-- The _Vendor Registration Wizard_ doesn't complete or fails to progress.
+- You can't submit a PVRR in Microsoft Dynamics 365 Finance and Operations.
+- The _Vendor Registration Wizard_ doesn't finish or progress.
 
 ## Cause 1: The vendor already exists
 
-A PVRR can fail to submit if the vendor already exists in the system, causing duplication.
+A PVRR submission might fail if the vendor already exists in the system. In this situation, the submission creates duplicate records.
 
 ### Solution
 
@@ -29,31 +29,31 @@ To avoid duplicate records:
 
 1. Find the correct vendor contact.
 
-1. Select **Provision vendor user** to link the existing vendor without creating a new PVRR.
+1. To link the existing vendor without creating a new PVRR, select **Provision vendor user**.
 
-   :::image type="content" source="./media/unable-to-submit-pvrr/provision-vendor-user.png" alt-text="The vendor contact page with the provision vendor user button highlighted.":::
+   :::image type="content" source="./media/unable-to-submit-pvrr/provision-vendor-user.png" alt-text="The vendor contact page that has the provision vendor user button highlighted.":::
 
 ## Cause 2: Missing vendor contact information
 
-A PVRR can fail to submit if the vendor contact information is missing in **Vendor collaboration > All contacts**.
+A PVRR submission might fail if the vendor contact information is missing in the **Vendor collaboration** > **All contacts** screen.
 
 ### Solution
 
 To add the required vendor contact info:
 
-1. Go to **System administration > Users** and delete the existing user record associated with the vendor.
+1. Go to **System administration** > **Users**, and delete the existing user record that's associated with the vendor.
 
-   :::image type="content" source="./media/unable-to-submit-pvrr/delete-vendor.png" alt-text="The users page with the delete button highlighted.":::
+   :::image type="content" source="./media/unable-to-submit-pvrr/delete-vendor.png" alt-text="The users page that has the delete button highlighted.":::
 
-1. Re-invite the vendor via **Procurement and Sourcing > Vendor collaboration requests > Prospective vendor request registration**.
+1. Re-invite the vendor by selecting **Procurement and Sourcing** > **Vendor collaboration requests** > **Prospective vendor request registration**.
 
-   :::image type="content" source="./media/unable-to-submit-pvrr/invite-user.png" alt-text="The Prospective vendor request registration page with the Invite user button highlighted.":::
+   :::image type="content" source="./media/unable-to-submit-pvrr/invite-user.png" alt-text="The Prospective vendor request registration page that has the Invite user button highlighted.":::
 
-This process creates both the user and vendor contact.
+This process creates both the user and vendor contacts.
 
 ## Cause 3: Incorrect user provisioning steps
 
-A PVRR can fail to submit if the user provisioning steps aren't followed correctly.
+A PVRR submission might fail if the user provisioning steps aren't followed correctly.
 
 ### Solution
 
