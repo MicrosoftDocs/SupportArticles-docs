@@ -4,7 +4,7 @@ metadata:
   description: Common questions and answers about creating or deleting Resources in Azure App Service
   services: active-directory
   author: auolivei
-  ms.reviewer: amehrot, rimarr,jarrettr, v-ryanberg
+  ms.reviewer: amehrot, rimarr, jarrettr, v-ryanberg
   ms.topic: faq
   ms.date: 06/21/2022
   ms.author: auolivei
@@ -30,7 +30,7 @@ sections:
       - question: |
           What if the requested SKU of the App Service plan isn't available in the resource group?
         answer: |
-          Your App Service deployments might not have specific SKUs available due to constraints (for example, the SKU isn't available in the region or country). 
+          Your App Service deployments might not have specific SKUs available due to constraints (for example, the SKU isn't available in the region). 
           
           If the requested SKU isn't available in the resource group, you must create a new App Service Plan in a new resource group in the same region or in the same resource group using a different region.
           
@@ -44,7 +44,7 @@ sections:
           1. Create your web app in a different region. If possible, choose a geographically paired region for better resiliency and compliance. Examples include:
 
             * *West US 2* ↔ *West Central US*
-            * *East Asia (Hong Kong)* ↔ *Southeast Asia (Singapore)*
+            * *East Asia (Hong Kong SAR)* ↔ *Southeast Asia (Singapore)*
 
             Each Azure region has unique characteristics that affect performance, availability, and regulatory requirements. Selecting the right region is critical for your workload. For more information, see:
 
