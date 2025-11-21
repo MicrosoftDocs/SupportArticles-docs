@@ -1,14 +1,14 @@
 ---
 title: The rate type ID is missing 
-description: Provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0.
-ms.reviewer: theley, lmuelle
+description: Provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP.
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/17/2025
+ms.date: 10/7/2025
 ms.custom: sap:Financial - General Ledger
 ---
-# "The rate type ID is missing. The exchange table ID is missing." Error message when you print an edit list in General Ledger in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0
+# "The rate type ID is missing. The exchange table ID is missing." Error message when you print an edit list in General Ledger in Microsoft Dynamics GP.
 
-This article provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0.
+This article provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 922872
@@ -17,13 +17,17 @@ _Original KB number:_ &nbsp; 922872
 
 When you print an edit list for a purchase order return transaction, you receive the following error message:
 > The rate type ID is missing.  
-The exchange table ID is missing.This problem occurs when you use the originating currency.
-
-This problem occurs in General Ledger in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0.
+The exchange table ID is missing.This problem occurs when you use the originating currency and have Use rates without adding table marked in Multicurrency setup.
+This can by found by going to Tools >> Setup >> Financial >> Multicurrency
 
 ## Cause
 
-This problem occurs because more than one multicurrency rate type is selected for an exchange table identifier (ID).
+This problem occurs because more than one multicurrency rate type is selected for an exchange table identifier.
+When you post a PO return the transaction doesn´t have a RATETPID,XCHGRATE, EXGTBLID in the POP10300, and when you try to post it in GL you receive the following error:
+The Exchange Table ID is missing
+The Exchange Rate is missing
+
+And you cannot post the journal because the GL10000 table has RATETPID,XCHGRATE are blank.
 
 ## Resolution
 
@@ -40,3 +44,9 @@ To resolve this problem, follow these steps:
 9. In the Transaction Entry window, select the General Ledger transaction that generated the error message, and then select **Yes** when you're prompted to create the rate type ID.
 10. Select **Save** to save the transaction.
 11. Print the edit list again. The error message doesn't appear.
+
+Other options for the General Ledger batch:
+1. If you see this error, in SQL, you can update the GL10000 table with the RATETPID,XCHGRATE, and EXGTBLID.
+2. You could also just create a new GL batch an copy the transactions into the new batch which allows you to choose the information on entry.
+3. Setup the Exchange rate to teh table so the problem does not exist, see steps above.
+
