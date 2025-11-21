@@ -1057,7 +1057,7 @@ The console labels the update package as **Prerequisite check passed**, and the 
 
 If the Prerequisite check takes a long time or fails completely, use the following flow chart to help identify the issue. In multi-tier environments, the chart applies to all primary sites and the CAS.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Prerequisite check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prereq-check-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Prerequisite check stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prereq-check-stage-expanded.png":::
 
 Typically, Prerequisite check issues belong to one of the following categories:
 
