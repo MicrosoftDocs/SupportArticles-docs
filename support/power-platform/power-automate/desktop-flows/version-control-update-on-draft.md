@@ -8,11 +8,11 @@ ms.custom: sap:Desktop flows\List, create, open, save or delete flows
 
 # Version control error when publishing a flow or saving it as draft
 
-This article provides troubleshooting guidance for an error that you encounter in Microsoft Power Automate for Desktop when you try to publish a flow or save it as a draft. This issue might occur if the *Desktop flow version control* feature is enabled. For more information about the version control feature, see [Version control in Power Automate for desktop](/power-automate/desktop-flows/version-control)
+This article provides troubleshooting guidance for an error you might encounter in Power Automate for desktop when you try to publish a flow or save it as a draft in an environment where [version control](/power-automate/desktop-flows/version-control) is enabled.
 
 ## Symptoms
 
-After you enable version control for desktop flows, and then you try to publish a flow or save it as a draft, you receive the following error message:
+When you try to publish a flow or save it as a draft in an environment where version control is enabled, you receive the following error message:
 
 > You are attempting to do a published update of a component in an unmodified context when there is an unpublished active row.
 
@@ -20,8 +20,8 @@ After you enable version control for desktop flows, and then you try to publish 
 
 This error might occur in the following scenarios:
 
-- You create or edit the flow by using a newer version of Power Automate for Desktop than the version that your device is running.
-- A newer version of Power Automate for Desktop is scheduled or announced but isn’t available yet for installation on your device.
+- You initially created or edited the flow using a newer version of Power Automate for desktop than the one you are currently running.
+- The newer version of Power Automate for desktop hasn't rolled out or installed yet on your device.
 - You switch from an environment that has version control enabled to an environment that doesn't.
 
 ## Resolution
