@@ -734,7 +734,7 @@ Use the following flowchart to narrow down issues that might occur at the Replic
 
 In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Package from their parent site. The flow is exactly the same as for any other classic Package. For more information, see [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart).
 
-#### Troubleshoot issue: Status of the update package remains State=2 (Enabled)
+#### Troubleshoot issue: Status of the update package remains "State=2 (Enabled)"
 
 If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log.
 
@@ -758,7 +758,7 @@ If the state of the package doesn't change from `State=2 (Enabled)`, this typica
    >
    > Make sure that the computer account that the site server uses can access this share.
 
-#### Troubleshoot issue: Status of the update package has changed from State=2 (Enabled)
+#### Troubleshoot issue: Status of the update package has changed from "State=2 (Enabled)"
 
 If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt:
 
