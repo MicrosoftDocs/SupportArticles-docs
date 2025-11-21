@@ -81,7 +81,7 @@ On devices that this issue affects, in File Explorer, open the **Properties** di
 
 | Allowed permissions for SYSTEM and Administrators security principals | Allowed permissions for all other security principals |
 |-----|-----|
-| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows full control access for SYSTEM and Administrators accounts."::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows read and execute permissions for non-administrator accounts."::: |
+| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows full control access for SYSTEM and Administrators accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png"::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Screenshot of Windows permissions dialog that shows read and execute permissions for non-administrator accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png::: |
 
 ## Workaround: Install updates that allow the service to start when the permissions aren't correct
 
