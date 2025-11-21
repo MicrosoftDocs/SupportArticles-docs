@@ -52,7 +52,7 @@ The first step is to identify if the Sales app in Outlook is admin-managed or us
 
 2. Select **Get Add-Ins** on the **Home** tab in the ribbon.
 
-3. In the **Add-Ins for Outlook** window, check if the **`Sales for Microsoft Outlook add-in** is listed under the **Admin-managed** section.
+3. In the **Add-Ins for Outlook** window, check if the **Sales for Microsoft Outlook add-in** is listed under the **Admin-managed** section.
 
     :::image type="content" source="media/update-add-in-error/add-in-admin-managed.png" alt-text="Screenshot that shows the Admin-managed section where you can check if the Sales app for Microsoft Outlook add-in is listed.":::
 
