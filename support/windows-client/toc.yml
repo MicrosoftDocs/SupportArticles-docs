@@ -855,6 +855,10 @@ items:
       href: ./setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps.md
     - name: System restore points are disabled after upgrade
       href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
+    - name: Upgrade fails and generates error code 0xC1900101-0x20017
+      href: ./setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md
+    - name: Use the Windows Setup compatibility scan logs to identify blocking issues
+      href: ./setup-upgrade-and-drivers/use-windows-setup-compatibility-scan-logs-to-identify-blocking-issues.md
     - name: Windows 10 upgrade error codes
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
     - name: Windows 10 upgrade issues troubleshooting
@@ -1085,6 +1089,12 @@ items:
       href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
+    - name: OpenSSH Server Service Doesn't Start and Generates Error 1053
+      href: ../windows-server/system-management-components/openssh-server-service-wont-start-error-1053.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot common SFTP issues when using OpenSSH
+      href: ../windows-server/system-management-components/troubleshoot-sftp-issues-using-openssh.md?context=/troubleshoot/windows-client/context/context
+    - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+      href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
@@ -1327,6 +1337,10 @@ items:
     items:
     - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+  - name: Zero Trust DNS
+    items:
+    - name: 'Troubleshooting Guidance: Zero Trust DNS'
+      href: ./windows-security/troubleshoot-zero-trust-dns-guidance.md
 - name: Windows Servicing, Updates and Features on Demand
   items:
   - name: Windows Servicing, Updates and Features on Demand
@@ -1403,6 +1417,8 @@ items:
       href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
     - name: System Error 126 when you start TrustedInstaller
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+      href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
     - name: Troubleshoot Windows Update error 0x80072EFE
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation
@@ -1451,9 +1467,9 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
     - name: Collect data to analyze and troubleshoot system management components scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
-    - name: Gather information for Hyper-V related issues
-      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
+    - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md

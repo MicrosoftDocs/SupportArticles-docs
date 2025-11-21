@@ -28,7 +28,7 @@ A3: The SQL Server Reporting Services Wizard is available in Microsoft Dynamics 
 
 Q4: Can I install and run the SQL Server Reporting Services Wizard on a 64-bit server?  
 
-A4: The SQL Server Reporting Wizard for Microsoft Dynamics GP 10.0 is supported on 64-bit operating systems. For more information, see [Description of the 64-bit operating systems that are supported together with Microsoft Dynamics GP](https://support.microsoft.com/help/918983).
+A4: The SQL Server Reporting Wizard for Microsoft Dynamics GP 10.0 is supported on 64-bit operating systems. For more information, see [System Requirements for Microsoft Dynamics GP](/dynamics/s-e/gp/mdgp2018_system_requirements).
 
 > [!NOTE]
 > The x64 Dexterity Common Components are required to be installed before you install the SQL Server Reporting Services Wizard on an x64 operating system.
@@ -43,7 +43,7 @@ SQL Server Reporting Services 2008 and SQL Server Reporting Services 2008 R2 are
 
 - If the User Account Control (UAC) is enabled on the Windows Server 2008-based server, you must right-click the SQL Server Reporting Services Wizard in the program group, and then select **Run as Administrator** to obtain the permissions that you need.
 
-    For more information, see [Description of the 64-bit operating systems that are supported together with Microsoft Dynamics GP](https://support.microsoft.com/help/918983). If you want to list the SSRS SQL Server Reporting Services 2008 reports in the Custom Report List in Microsoft Dynamics GP 10.0, you must consider the following conditions:
+    For more information, see [System Requirements for Microsoft Dynamics GP](/dynamics/s-e/gp/mdgp2018_system_requirements). If you want to list the SSRS SQL Server Reporting Services 2008 reports in the Custom Report List in Microsoft Dynamics GP 10.0, you must consider the following conditions:
   - You must be using Microsoft Dynamics GP 10.0 with Service Pack 3 or a later version to be compatible with SQL Server 2008. You must be using Microsoft Dynamics GP 10.0 with Service Pack 5 or later to be compatible with SQL Server 2008 R2To download the latest update release for Microsoft Dynamics GP 10.0.
 
   - In the Reporting Tools Setup window, you've to use the following syntax in the Report Server URL field on the SQL Reporting Services tab if you're using a Native Mode SSRS deployment:  

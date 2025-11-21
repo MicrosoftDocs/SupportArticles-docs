@@ -64,4 +64,4 @@ If the REPORTS.DIC file doesn't exist in that location, use one of the following
 
 Re-create the REPORTS.DIC file.
 
-For more information about how to do it, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](https://support.microsoft.com/help/850465).
+For more information about how to do it, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](./how-to-re-create-the-reports-dot-dic-file.md).

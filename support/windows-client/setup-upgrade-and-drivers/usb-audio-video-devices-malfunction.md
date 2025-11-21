@@ -44,9 +44,9 @@ This problem occurs because of delays that occur on an internal hardware bus whe
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-The October 2025 update for Windows 24H2 introduces a fix for this hardware issue. To use this fix, follow these steps:
+The October 2025 update for Windows 11, version 24H2, and the November 2025 update for Windows 11, version 23H2, introduce a fix for this hardware issue. To use this fix, follow these steps:
 
-1. On the affected device, install the October 2025 update. Restart the device, if it's necessary.
+1. On the affected device, install the most recent update. Restart the device, if it's necessary.
 
 1. Verify that the device uses a dTPM instead of an fTPM. To find this information, check the device BIOS settings or contact the device manufacturer.
 

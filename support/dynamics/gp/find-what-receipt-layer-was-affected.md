@@ -30,7 +30,7 @@ Typically, a journal entry is created with a **GLTRX** prefixed batch and when y
 
 It can make hard to determine what exact receipt layer this cost adjustment affected. In the Reference field, you'll find what document caused the cost adjustment but not the receiving layer affected. The following article goes through why these Cost Adjustments are created.
 
-- [An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP](https://support.microsoft.com/en-US/help/2448193)
+- [An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP](./gltrx-batch-not-originate-in-general-ledger.md)
 
 > [!NOTE]
 > You would have to have theHistorical Inventory Trial BalanceInstalled, running and recording information in theSEE30303table before you can use this method to identify the receipt layer that was affected by the cost adjustment.
@@ -69,4 +69,4 @@ If you want to drill down on the Document Number that depleted the layer go to I
 
 ## More information
 
-For more information on GLTRX batches, see [An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP](https://support.microsoft.com/help/2448193).
+For more information on GLTRX batches, see [An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP](./gltrx-batch-not-originate-in-general-ledger.md).

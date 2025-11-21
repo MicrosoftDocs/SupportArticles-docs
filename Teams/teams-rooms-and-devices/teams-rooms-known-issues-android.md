@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/06/2025
+ms.date: 11/20/2025
 ---
 # Known issues with Teams on Android devices
 
@@ -33,8 +33,6 @@ ms.date: 10/06/2025
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Unable to pair Yealink MeetingBar A40 device with CTP25 touch panel.|You might experience intermittent or failed pairing attempts between a Yealink MeetingBar A40 device and a CTP25 touch panel that are running the following firmware versions:<br/><br/>A40 device: 289.320.0.60<br/>CTP25 touch panel: 311.320.0.55<br/><br/>In some instances, the device might revert to an unpaired state shortly after initialization, or the touch panel might remain stuck on the pairing screen without displaying a code.|No workaround is available at this time.|
-|Logitech Rally Bar device is failing during remote login authentication.|You're able to sign in to a LogiTech VR1009 Rally Bar device locally but it signs out if an attempt is made to log in remotely. In this situation you might see Entra ID error codes 530003, 530002, and others.|No workaround is available at this time.|
 |Touch console not able to pair with Teams Rooms device.|The touch console that is paired with a Teams Rooms for Android device is unable to stay paired with the Front of Room device, and keeps re-trying the pairing process in a loop. Occasionally, you might see the following error message:<br/><br/>**Can't connect to device**|To fix the issue, make sure that the Teams Rooms for Android device has the latest updates installed, and both the device and the touch console are running the same version of the Teams Rooms for Android app.|
 
 ## Issues affecting multiple devices
@@ -51,10 +49,10 @@ ms.date: 10/06/2025
 |Sign in loops or fails for Teams phones |You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. |The combination of MFA CA and ToU CA isn't supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the Mobile Device Management (MDM) CA is used. When only the MFA CA is used, make sure that it is enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions).|
 |Can't add, delete, or edit contacts on Teams phones|You can't perform the add, delete, and edit operations on contacts from Teams phones.|Use either the Teams desktop or the Teams web client to perform these actions.|
 |Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
-|Unable to assign speed dial to line keys on a sidecar|When you assign speed dial contacts to line keys on the sidecar that is connected to a touch phone device, they don't work.|No workaround is available for the speed dial contacts that you assigned by using the sidecar. However the speed dial contacts that're already set up and shared line delegates and other groups are automatically pinned on the sidecar.|
 |Speed dial line key doesn't transfer an active call.|In older Teams Phones versions, you could transfer an active call by selecting a line key that is configured as a speed dial for a specific contact.<br/><br/>Beginning with Teams Phones version 1.7.0 1449/1.0.94.2025165302, you're only able to make an outgoing call to the speed dial after you select it from the **Transfer** menu.|If you want to transfer active calls to specific contacts, configure line keys as speed dials for those contacts and assign the **Transfer** and **Consult Transfer** menu options to the appropriate line keys.|
 |The screen hangs on Yealink phones when the headset is picked up.|On Yealink MP56 phones that are running version 1449/1.0.94.2025248901 of the Teams for Android app, the screen hangs or crashes when you pick up the headset to make an outbound call.|No workaround is available at this time.|
 |Can't see line keys on the home screen.|After you update your Teams Phones to version 1449/1.0.94.2025264001 of the Teams for Android app, you don't see any assigned line keys on the home screen.<br/><br/>This behavior is seen on non-touch phones such as Poly CCX 350 that have either the CAP or Premium CAP licenses.|No workaround is available at this time.|
+|Incoming calls generate a "Just me" chat automatically.|When you receive a call from a main call queue on a Teams phone, a "Just Me" chat is generated automatically in the Teams desktop app. This chat only includes you and it remains in the chat notifications list until you delete it manually. A new chat is generated with each incoming call.<br/><br/>The problem occurs specifically when answering calls from a call queue on a Teams Phone device, but not when they are answered by using the Teams desktop app.|To work around the issue, turn on Conference mode for the call queue. Use the following steps:<br/><ol><li>In the Microsoft Teams admin center, select **Call queues**.</li><li>Select **Edit a call queue** > **Call answering**.</li><li>On the Call answering page, toggle the **Conference mode** button to turn it on.</li></ol>|
 
 ## Limitations
 

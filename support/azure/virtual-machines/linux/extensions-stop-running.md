@@ -13,6 +13,8 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 4099558
 
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+
 ## Symptoms
 
 The Linux VM Agent fails to process extensions. This causes some extensions to stop running, which affects some dependent Azure services, such as Azure Backup Azure Site Recovery.

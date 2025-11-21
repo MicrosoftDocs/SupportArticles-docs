@@ -64,14 +64,14 @@ items:
   - name: Identify nodes and containers utilizing high CPU
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Improve container image pull performance in AKS
-    href: availability-performance/container-image-pull-performance.md      
+    href: availability-performance/container-image-pull-performance.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot high memory consumption in disk-intensive applications
     href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot OOMkilled in AKS clusters
-    href: availability-performance/troubleshoot-oomkilled-aks-clusters.md    
-  - name: Troubleshoot pod scheduler errors 
+    href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
+  - name: Troubleshoot pod scheduler errors
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
   - name: Troubleshoot node not ready
     items:
@@ -106,7 +106,7 @@ items:
     - name: Basic troubleshooting
       href: connectivity/troubleshoot-cluster-connection-issues-api-server.md
     - name: Can't access the cluster API server using authorized IP ranges
-      href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md      
+      href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
     - name: Client IP address can't access API server
       href: connectivity/client-ip-address-cannot-access-api-server.md
     - name: Config file isn't available when connecting
@@ -130,7 +130,7 @@ items:
       - name: Can't connect to endpoints outside virtual network (public internet)
         href: connectivity/troubleshoot-connections-endpoints-outside-virtual-network.md
       - name: Can't connect to pods and services in same cluster
-        href: connectivity/troubleshoot-connection-pods-services-same-cluster.md        
+        href: connectivity/troubleshoot-connection-pods-services-same-cluster.md
       - name: Can't view resources in Kubernetes resource viewer on Azure portal
         href: connectivity/cannot-view-resources-kubernetes-resource-viewer-portal.md
       - name: TCP times out when kubectl or other third-party tools connect
@@ -169,12 +169,12 @@ items:
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
-  - name: Mount failures  
+  - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
       href: storage/failure-setting-azure-disk-mount-options-uid-gid.md
     - name: Errors when mounting Blob container
-      href: storage/mounting-azure-blob-storage-container-fail.md 
+      href: storage/mounting-azure-blob-storage-container-fail.md
     - name: Errors when mounting Disk volumes
       href: storage/fail-to-mount-azure-disk-volume.md
     - name: Errors when mounting File share
@@ -233,12 +233,14 @@ items:
       href: extensions/istio-add-on-minor-revision-upgrade.md
     - name: Istio add-on plug-in CA certificate troubleshooting
       href: extensions/istio-add-on-plug-in-ca-certificate.md
+    - name: Istio add-on CNI troubleshooting
+      href: extensions/istio-add-on-cni-troubleshooting.md
   - name: Other extensions and add-ons
     items:
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
     - name: Can't pull images from container registry to cluster
-      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md  
+      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
     - name: Troubleshoot AI toolchain operator add-on errors
       href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
     - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
@@ -248,21 +250,25 @@ items:
     - name: Troubleshoot Dapr extension installation errors
       href: extensions/troubleshoot-dapr-extension-installation-errors.md
     - name: Troubleshoot deployment failures of Azure Marketplace offers
-      href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md      
+      href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
     - name: Troubleshoot installation errors in the Azure App Configuration extension
       href: extensions/troubleshoot-app-configuration-extension-installation-errors.md
     - name: Troubleshoot managed namespaces
       href: extensions/troubleshoot-managed-namespaces.md
     - name: Troubleshoot network isolated clusters
       href: extensions/troubleshoot-network-isolated-cluster.md
+    - name: Troubleshoot node auto provisioning
+      href: extensions/troubleshoot-node-auto-provision.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
     - name: Troubleshoot KEDA add-on
-      href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md      
+      href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 - name: Troubleshoot error codes
   items:
+  - name: Common error codes
+    href: error-codes/aks-error-code-page.md
   - name: 429 Too Many Requests errors
     href: create-upgrade-delete/429-too-many-requests-errors.md
   - name: A-K
@@ -292,9 +298,9 @@ items:
     - name: CreateOrUpdateVirtualNetworkLinkFailed error
       href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
     - name: CustomPrivateDNSZoneMissingPermissionError error
-      href: error-codes/customprivatednszonemissingpermissions-error.md   
+      href: error-codes/customprivatednszonemissingpermissions-error.md
     - name: DnsServiceIpOutOfServiceCidr error
-      href: error-codes/dnsserviceipoutofservicecidr-error.md 
+      href: error-codes/dnsserviceipoutofservicecidr-error.md
     - name: ERR_VHD_FILE_NOT_FOUND error (65)
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
@@ -320,7 +326,7 @@ items:
     - name: Known issues - Custom kubelet configuration on Windows
       href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
   - name: L-S
-    items:   
+    items:
     - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
     - name: LinkedAuthorizationFailed error
@@ -330,23 +336,23 @@ items:
     - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
     - name: Missing or invalid service principal
-      href: create-upgrade-delete/missing-or-invalid-service-principal.md        
+      href: create-upgrade-delete/missing-or-invalid-service-principal.md
     - name: MissingSubscriptionRegistration error
       href: error-codes/missingsubscriptionregistration-error.md
     - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
     - name: NodePoolMcVersionIncompatible error
-      href: error-codes/nodepoolmcversionincompatible-error.md 
+      href: error-codes/nodepoolmcversionincompatible-error.md
     - name: OperationIsNotAllowed errors
       href: create-upgrade-delete/operationnotallowed.md
     - name: OperationNotAllowed or PublicIPCountLimitReached error
-      href: error-codes/operationnotallowed-publicipcountlimitreached-error.md        
+      href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
     - name: OrasPullNetworkTimeoutVMExtensionError
       href: error-codes/vmextensionerror-oraspullnetworktimeout.md
     - name: OrasPullUnauthorizedVMExtensionError
       href: error-codes/vmextensionerror-oraspullunauthorized.md
     - name: OutboundConnFailVMExtensionError error (50)
-      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md  
+      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
@@ -358,7 +364,7 @@ items:
     - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
     - name: RequestDisallowedByPolicy error
-      href: error-codes/requestdisallowedbypolicy-error.md 
+      href: error-codes/requestdisallowedbypolicy-error.md
     - name: ServiceCidrOverlapExistingSubnetsCidr error
       href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
     - name: ServicePrincipalValidationClientError error
@@ -375,8 +381,8 @@ items:
       href: error-codes/subscriptionrequeststhrottled.md
     - name: SubscriptionRequestsThrottled error (429)
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
-  - name: T-Z   
-    items:      
+  - name: T-Z
+    items:
     - name: TCP time-outs such as 10250 I/O
       href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
     - name: Throttled error
@@ -393,7 +399,7 @@ items:
       href: error-codes/unsatisfiablepdb-error.md
     - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
       href: create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
-    - name: VirtualNetworkNotInSucceededState error 
+    - name: VirtualNetworkNotInSucceededState error
       href: error-codes/virtualnetworknotinsucceededstate-error.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md

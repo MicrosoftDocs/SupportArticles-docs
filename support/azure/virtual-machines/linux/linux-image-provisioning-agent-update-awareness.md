@@ -15,6 +15,9 @@ ms.reviewer:
 
 _Original KB number:_ &nbsp; 4538386
 
+
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+
 ## Summary
 
 Many Linux Azure Marketplace images contain an **Azure Linux Agent**, which is responsible for completing the setup of the newly created Virtual Machine (VM), such as setting the hostname, username, password/ ssh keys, and mounting an ephemeral disk. This setup process is known as 'provisioning'. In addition, the agent provides support for Azure VM Extensions.

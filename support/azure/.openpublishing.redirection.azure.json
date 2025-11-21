@@ -6351,6 +6351,16 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "app-service/ase-migration-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
+        "redirect_url": "/azure/azure-monitor/change/change-analysis",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
         "redirect_url": "/azure/storage/files/files-monitoring-alerts",
         "redirect_document_id": false
@@ -6379,6 +6389,10 @@
         "source_path": "general/support-policy-containers.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "app-service/app-service-compliance-wit.md",
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service"
       },
       {
         "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
@@ -6477,6 +6491,10 @@
         {
         "source_path": "virtual-machines/windows/run-win-server-2003.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ms-azure-windows-eos"
+      },        
+        {
+        "source_path": "virtual-machines/windows/vm-stops-at-please-wait-for-group-policy-client.md",
+        "redirect_url": "/troubleshoot/virtual-machines/windows/please-wait-for-the-group-policy-client"
       }
   ]
 }

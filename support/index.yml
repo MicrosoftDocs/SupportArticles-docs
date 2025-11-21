@@ -54,7 +54,7 @@ productDirectory:
     url: developer/webapps/iis/iis-welcome.yml
 
   - title: Microsoft 365
-    imageSrc: "media/hub-landing/microsoft-365-logo.png"
+    imageSrc: "/media/logos/logo-ms-social.svg"
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 

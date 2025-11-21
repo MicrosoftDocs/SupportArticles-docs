@@ -40,20 +40,14 @@ When you try to mount a file share, you might receive the following error:
 
 ### Cause: Share-level permissions are incorrect
 
-If end users are accessing the Azure file share using Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
+If end users are accessing the Azure file share using identity-based authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
 
 > [!NOTE]
 > This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
 
 ### Solution
 
-Validate that permissions are configured correctly:
-
-- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-assign-share-level-permissions).
-
-    Share-level permission assignments are supported for groups and users that are synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
-
-- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+Validate that permissions are configured correctly. See [Assign share-level permissions](/azure/storage/files/storage-files-identity-assign-share-level-permissions).
 
 <a name='error-aaddstenantnotfound-in-enabling-azure-ad-ds-authentication-for-azure-files-unable-to-locate-active-tenants-with-tenant-id-aad-tenant-id'></a>
 
@@ -183,7 +177,7 @@ If you just want to run a subselection of the previous checks, you can use the `
 
 ### Symptom
 
-You may experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
+You might experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
 - After you click on **Edit permission** under the Security tab, the Permission wizard doesn't load. 
 - When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
@@ -307,9 +301,9 @@ After enabling Microsoft Entra Kerberos authentication, you must explicitly gran
 
 <a name='potential-errors-when-enabling-azure-ad-kerberos-authentication-for-hybrid-users'></a>
 
-## Potential errors when enabling Microsoft Entra Kerberos authentication for hybrid users
+## Potential errors when enabling Microsoft Entra Kerberos authentication
 
-You might encounter the following errors when enabling Microsoft Entra Kerberos authentication for hybrid user accounts.
+You might encounter the following errors when enabling Microsoft Entra Kerberos authentication.
 
 ### Error - Grant admin consent disabled
 

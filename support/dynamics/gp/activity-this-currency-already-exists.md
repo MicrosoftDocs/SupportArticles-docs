@@ -29,7 +29,7 @@ To resolve this issue, follow these steps:
 1. Create a backup of the company database.
 
     > [!NOTE]
-    > If you want to, you can try the steps in a test company database, and then implement them in the company database. For more information, see [KB - Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](https://support.microsoft.com/help/871973).
+    > If you want to, you can try the steps in a test company database, and then implement them in the company database. For more information, see [Set up a test company that has a copy of live company data by using Microsoft Dynamics GP on MSDE 2000, SQL Server 2005 Express, SQL Server 2008 Express, or SQL Server 2012 Express](./how-to-set-up-test-company-that-has-copy-of-live-company.md).
 
 2. Run **Check Links** on the Multicurrency tables. To do it in Microsoft Dynamics 10.0, follow these steps:
 
