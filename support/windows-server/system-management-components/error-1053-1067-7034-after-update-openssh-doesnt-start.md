@@ -57,7 +57,7 @@ The exact behavior and messages vary based on your situation. The following scen
 
 ## Cause
 
-This issue occurs if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders have incorrect permissions. The permissions might be too limited or too open. For example, the SYSTEM account or the Administrators group might not have write permissions even though regular users might have write or full control permissions.
+This issue occurs if the C:\ProgramData\ssh and C:\ProgramData\ssh\logs folders have incorrect permissions. The permissions might be too limited or too open. For example, the SYSTEM account or the Administrators group might not have write permissions. For a second example, regular users might have write or full control permissions.
 
 You can use Windows PowerShell to review the permissions in the current access control list (ACL) configuration. Open a PowerShell Command Prompt window, and then run the following commands:
 
