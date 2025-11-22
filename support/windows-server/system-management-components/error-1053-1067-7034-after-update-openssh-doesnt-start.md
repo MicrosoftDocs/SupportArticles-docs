@@ -81,10 +81,10 @@ Get-Acl "C:\ProgramData\ssh\sshd_config" | Select-Object -Property AccessToStrin
 
 On devices that this issue affects, start File Explorer, and then open the **Properties** dialog boxes for each of the ssh folders (C:\ProgramData\ssh and C:\ProgramData\ssh\logs). In each dialog box, select **Security**, and set the permissions that are shown in the following table.
 
-| Allowed permissions for SYSTEM and Administrators security principals | Allowed permissions for all other security principals |
+| Allowed permissions on SYSTEM and Administrators security principals | Allowed permissions on all other security principals |
 |-----|-----|
 | **Group**: Administrators <br /> **Permissions**: Full control, Modify, Read & execute, List folder contents, Read, Write | **Group**: Authenticated Users <br /> **Permissions**: Read & execute, List folder contents, Read |
-| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Windows permissions dialog box that shows full control access for SYSTEM and Administrators accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png"::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Windows permissions dialog box that shows read and execute permissions for non-administrator accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png"::: |
+| :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png" alt-text="Windows permissions dialog box that shows full control access for SYSTEM and Administrators accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-administrative-permissions.png"::: | :::image type="content" source="media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png" alt-text="Windows permissions dialog box that shows read and execute permissions on non-administrator accounts." lightbox="./media/error-1053-1067-7034-after-update-openssh-doesnt-start/openssh-nonadministrative-permissions.png"::: |
 
 ## Workaround
 
