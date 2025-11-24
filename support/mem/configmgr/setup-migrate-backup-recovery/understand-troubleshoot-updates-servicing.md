@@ -559,7 +559,7 @@ To start troubleshooting issues at this point in the Updates and Servicing proce
 
 Use the following flowchart to narrow down the stage in which your issue occurs.
 
-:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication or Installation stages." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg":::
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-replication-installation-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication or Installation stages." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-replication-installation-stage-expanded.png":::
 
 ## Investigate the Replication stage
 
