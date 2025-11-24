@@ -20,8 +20,8 @@ This article helps you troubleshoot authentication issues when accessing the Azu
 
 ## Prerequisites
 
-- Azure CLI version 2.61.0 or later. To find the version run `az --version` . If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
-- A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- Azure CLI version 2.61.0 or later. To determine the version, run `az --version`. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
+- A tool to connect to the Kubernetes cluster, like the `kubectl` tool. To install `kubectl` using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The JSON Web Token (JWT) authenticator configuration file used for your AKS cluster.
 - Access to [jwt.ms][jwt-ms] or a similar JWT token decoder tool for debugging tokens.
 
@@ -29,11 +29,11 @@ This article helps you troubleshoot authentication issues when accessing the Azu
 
 ### Step 1: Verify identity provider configuration
 
-Ensure your identity provider is correctly configured and accessible:
+Ensure your identity provider is correctly configured and accessible. Use the following steps.
 
 ::: zone pivot="github"
 
-1. Verify your GitHub repository has Actions enabled.
+1. Verify your GitHub repository has **Actions** enabled.
 2. Confirm the OpenID Connect (OIDC) provider settings are correctly configured in your workflow.
 3. Ensure the audience claim in your workflow matches the authenticator configuration.
 
@@ -47,9 +47,9 @@ Verify the OAuth 2.0 client ID and client secret are correct.
 
 ### Step 2: Validate the issuer URL
 
-The issuer URL must be accessible from the AKS cluster nodes:
+The issuer URL must be accessible from the AKS cluster nodes. Use the following steps.
 
-1. Verify DNS resolution for the issuer URL:
+1. Verify DNS resolution for the issuer URL.
 
    ::: zone pivot="github"
    
@@ -67,7 +67,7 @@ The issuer URL must be accessible from the AKS cluster nodes:
    
    ::: zone-end
 
-2. Test network connectivity from a cluster node:
+2. Test network connectivity from a cluster node.
 
    ::: zone pivot="github"
    
@@ -89,11 +89,11 @@ The issuer URL must be accessible from the AKS cluster nodes:
 
 ### Step 3: Inspect the JWT authenticator configuration
 
-Review your JWT authenticator configuration for common issues:
+Review your JWT authenticator configuration for common issues. Use the following steps.
 
 1. Verify the issuer URL exactly matches the `iss` claim in your tokens.
 2. Check that the audience claim in the configuration matches the `aud` claim in your tokens.
-3. Ensure CEL (Common Expression Language) expressions in claim mappings are syntactically correct.
+3. Ensure Common Expression Language (CEL) expressions in claim mappings are syntactically correct.
 4. Confirm that all username and group mappings include the `aks:jwt:` prefix.
 
 Example configuration:
@@ -175,11 +175,11 @@ Example configuration:
 
 ### Step 4: Decode and verify JWT tokens
 
-To verify claims obtain and inspect the JWT token:
+Verify claims and obtain and inspect the JWT token. Use the following steps.
 
 ::: zone pivot="github"
 
-1. For GitHub Actions OIDC, tokens are typically obtained within a workflow. You can obtain a token for testing using:
+1. For GitHub Actions OIDC, tokens are typically obtained within a workflow. Obtain a token.
 
    ```bash
    # This is typically done within a GitHub Actions workflow
@@ -192,7 +192,7 @@ To verify claims obtain and inspect the JWT token:
 
 ::: zone pivot="google-identity"
 
-1. Get a token from Google Identity:
+1. Get a token from Google Identity.
 
    ```bash
    kubectl oidc-login get-token \
@@ -203,19 +203,20 @@ To verify claims obtain and inspect the JWT token:
 
 ::: zone-end
 
-2. Decode the token at [jwt.ms][jwt-ms] and verify:
-   - The `iss` claim matches your issuer URL exactly
-   - The `aud` claim matches your configured audience
-   - The token isn't expired (`exp` claim)
-   - Required claims for username and groups are present
-   - Claims match the format expected by your CEL expressions
+2. Decode the token at [jwt.ms][jwt-ms] and verify the following:
+   
+   - The `iss` claim matches your issuer URL exactly.
+   - The `aud` claim matches your configured audience.
+   - The token isn't expired (`exp` claim).
+   - Required claims for username and groups are present.
+   - Claims match the format expected by your CEL expressions.
 
 ### Step 5: Check AKS API server logs
 
-Review the AKS API server logs for authentication errors:
+Review the AKS API server logs for authentication errors. Use the following steps.
 
-1. Use diagnostic settings to [enable resource logs][aks-resource-logs] for your AKS cluster. Choose 'Kubernetes API Server' when creating the diagnostic setting.
-2. Check logs in Azure Monitor or Log Analytics for authentication failures.
+1. Use diagnostic settings to [enable resource logs][aks-resource-logs] for your AKS cluster. Choose **Kubernetes API Server** when creating the diagnostic setting.
+2. Check logs in Azure Monitor or Azure Log Analytics for authentication failures.
 3. Look for error messages related to JWT validation or claim mapping.
 
 ## Common issues and solutions
@@ -226,9 +227,9 @@ Review the AKS API server logs for authentication errors:
 
 The audience claim in the token doesn't match the configured audience in the JWT authenticator.
 
-#### Solution: Update the authenticator configuration
+### Solution: Update the authenticator configuration
 
-Verify the audience claim in your token and update the JWT authenticator configuration:
+Verify the audience claim in your token and update the JWT authenticator configuration.
 
 ```azurecli-interactive
 az aks jwtauthenticator update \
@@ -242,7 +243,7 @@ az aks jwtauthenticator update \
 
 The issuer URL in the configuration doesn't exactly match the `iss` claim in the token.
 
-#### Solution: Correct the issuer URL
+### Solution: Correct the issuer URL
 
 Update the issuer URL in your JWT authenticator configuration file to match the exact issuer in your tokens, including the protocol (https://) and any trailing slashes.
 
@@ -250,7 +251,7 @@ Update the issuer URL in your JWT authenticator configuration file to match the 
 
 The OAuth client or OIDC provider settings are incorrect.
 
-#### Solution: Verify identity provider settings
+### Solution: Verify identity provider settings
 
 ::: zone pivot="github"
 
@@ -273,13 +274,13 @@ The OAuth client or OIDC provider settings are incorrect.
 
 CEL expressions might have syntax errors or return unexpected data types.
 
-#### Solution: Validate CEL expressions
+### Solution: Validate CEL expressions
 
 1. Review the CEL expressions in your configuration.
 2. Test expressions using a CEL evaluator to ensure they return strings for username and arrays of strings for groups.
 3. Update the configuration with corrected expressions:
 
-   Example of a valid CEL expression for extracting groups:
+The following is an example of a valid CEL expression for extracting groups:
    
    ```json
    {
@@ -296,15 +297,15 @@ CEL expressions might have syntax errors or return unexpected data types.
 
 Network security groups, firewalls, or Domain Name System (DNS) issues prevent the cluster from accessing the identity provider.
 
-#### Solution 1: Verify DNS resolution
+### Solution 1: Verify DNS resolution
 
-1. Connect to a cluster node using `kubectl debug`:
+1. Connect to a cluster node using `kubectl debug`.
 
    ```bash
    kubectl debug node/<node-name> -it --image=mcr.microsoft.com/azurelinux/base/core:3.0
    ```
 
-2. Test DNS resolution:
+2. Test DNS resolution.
 
    ::: zone pivot="github"
    
@@ -322,19 +323,19 @@ Network security groups, firewalls, or Domain Name System (DNS) issues prevent t
    
    ::: zone-end
 
-#### Solution 2: Update network security rules
+### Solution 2: Update network security rules
 
-1. Review network security group (NSG) rules associated with your AKS cluster.
+1. Review network security group rules associated with your AKS cluster.
 2. Ensure outbound HTTPS (port 443) traffic is allowed to your identity provider's domain.
 3. If using Azure Firewall, add application rules for the identity provider URLs.
 
-### Issue 4: Missing aks:jwt: prefix in username or groups
+### Issue 4: Missing `aks:jwt:` prefix in username or groups
 
 **Cause: Claim mappings don't include the required prefix**
 
 All usernames and groups must be prefixed with `aks:jwt:` to prevent conflicts with other authentication methods.
 
-#### Solution: Add the required prefix
+### Solution: Add the required prefix
 
 Update your JWT authenticator configuration to include the `aks:jwt:` prefix. For example:
 
@@ -419,7 +420,7 @@ Create a file named `jwt-config.json` with the following configuration:
 
 ::: zone-end
 
-Then update the authenticator:
+Then update the authenticator.
 
 ```azurecli-interactive
 az aks jwtauthenticator update \
@@ -436,13 +437,14 @@ az aks jwtauthenticator update \
 To get more detailed information about authentication failures:
 
 1. Enable diagnostic settings on your AKS cluster.
-2. Configure Log Analytics workspace to capture 'Kubernetes API Server' logs.
-3. Check API server logs for any JWT authenticator related issue such as incorrect claim mappings leading to validation errors.
+2. Configure the Log Analytics workspace to capture `Kubernetes API Server` logs.
+3. Check API server logs for any JWT authenticator-related issue like incorrect claim mappings leading to validation errors.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+### Resources
 
-<!-- LINKS - external -->
-[jwt-ms]: https://jwt.ms
+- [jwt-ms]: https://jwt.ms
+- [aks-resource-logs](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
 
-<!-- LINKS - internal -->
-[aks-resource-logs](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
+[!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
