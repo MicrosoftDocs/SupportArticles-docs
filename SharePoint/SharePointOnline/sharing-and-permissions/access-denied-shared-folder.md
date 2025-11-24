@@ -37,6 +37,10 @@ In this scanario, the other user receives one of the following error messages:
 - Access Denied
 - You need permission to access this resource
 
+- You can't access this item
+
+- You don't have permission to access this item.
+
 ## Cause
 
 When you share a folder with a user who can't access the parent folder or site, SharePoint assigns the user [Limited Access](/sharepoint/understanding-permission-levels#default-permission-levels) to the parent items. Specifically, SharePoint allows the user to access the folder without obtaining permission to access the parent folder and other items (other than limited access). However, when **Limited-access user permission lockdown mode** is enabled, the user doesn't have access to the folder because the necessary limited access permission on other items no longer works correctly.
