@@ -219,7 +219,7 @@ This event triggers HMAN to start processing. It logs entries in HMAN.log that r
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
-SYS=<SiteServerFQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
+SYS=<Site Server FQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
 HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the site server. During this process, HMAN logs entries that resemble the following excerpt:
@@ -867,23 +867,23 @@ Additionally, CMUpdate verifies the signature and extracts the update.map.cab fi
 After the content is extracted, CMUpdate.exe starts the prerequisite check:
 
 ```output
-~FQDN for server BIG-CS1SITE is BIG-CS1SITE.biglab.net
+~FQDN for server <Site Server> is <Site Server FQDN>
 INFO: Target computer is a 64 bit operating system.
 INFO: Checking for existing setup information.
 INFO: Setting setup type to  8.
 INFO: Checking for existing SQL information.
-INFO: 'BIG-ALWAYSON.biglab.net' is a valid FQDN.
+INFO: '<Site Database Server>' is a valid FQDN.
 INFO: Verifying the registry entry for Asset Intelligence installation
 INFO: Setup detected an existing Configuration Manager installation. Currently installed version is 9132~
 INFO: Phase is 1C7~
-INFO: SDK Provider is on BIG-CS1SITE.biglab.net.
+INFO: SDK Provider is on <SMS Provider>.
 Set working directory to the staging folder E:\ConfigMgr\CMUStaging\8576527E-DDE9-4146-8ED9-DB91091C38EF\SMSSetup
 INFO: Setting the default CSV folder path
 INFO: Language: Mobile Device (INTL), LangPack: 0.
 INFO: Configuration Manager Build Number = 9135
 INFO: Configuration Manager Version = 5.0
 INFO: Configuration Manager Minimum Build Number = 800
-Preparing prereq check for site server [BIG-CS1SITE.BIGLAB.NET]...~
+Preparing prereq check for site server [<Site Server FQDN>]...~
 ```
 
 During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
@@ -924,7 +924,7 @@ prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2
 Then CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
 
 ```output
-Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
+Running prereq checking against Server [<Site Server>] ...~
 ```
 
 > [!NOTE]  
@@ -944,12 +944,12 @@ Prerequisite checker starts up within the same thread as CMUpdate. (note the com
 ********************************************
 INFO: PrereqCoreRes.dll source path is set to E:\CONFIGMGR\CMUSTAGING\8576527E-DDE9-4146-8ED9-DB91091C38EF\SMSSETUP\BIN\X64
 Commandline :~"E:\ConfigMgr\bin\x64\cmupdate.exe"
-INFO: Checking SQLNCli version on ServerName BIG-CS1SITE
+INFO: Checking SQLNCli version on ServerName <Site Server>
 INFO: SQLNCli version is 11.4.7001.0
 ...
-INFO: SDK Provider is on BIG-CS1SITE.biglab.net.
+INFO: SDK Provider is on <SMS Provider>.
 Check Type: Configuration Manager Update
-Check Type: Easy Update ~ Site Server: BIG-CS1SITE.biglab.net,~ SQL Server: BIG-ALWAYSON.biglab.net
+Check Type: Easy Update ~ Site Server: <Site Server>,~ SQL Server: <Site Database Server>
 ...
 ```
 
