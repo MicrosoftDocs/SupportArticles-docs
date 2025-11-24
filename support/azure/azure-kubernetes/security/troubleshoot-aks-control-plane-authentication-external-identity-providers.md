@@ -5,7 +5,7 @@ ms.reviewer: shasb
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
 ms.date: 11/09/2025
-ms.custom: sap:security and identity
+ms.custom: sap:Identity and Security Management
 zone_pivot_groups: aks-external-identity-provider
 #customer intent: As a DevOps Engineer or cluster administrator, I want to troubleshoot authentication issues with external identity providers so that I can successfully authenticate to the AKS control plane.
 ---
