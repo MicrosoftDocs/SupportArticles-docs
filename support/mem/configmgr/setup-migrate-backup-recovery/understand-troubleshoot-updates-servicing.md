@@ -40,7 +40,7 @@ Before you install an update, consider running the prerequisite check for that u
 | Service Connection Point (SCP) | A site system role that connects Configuration Manager to the Microsoft cloud to synchronize updates. |
 | Service Connection Tool (SCT) | A tool that's used to synchronize and download update packages offline. |
 | Easy setup payload | The actual payload of an update package. |
-| Redist | A set of redistributable software components that are required to install updates. |
+| Redists | A set of redistributable software components that are required to install updates. |
 | Easy setup package | A hidden Configuration Manager package that's used to replicate the payload and redists of an update package. |
 
 ## List of primary components
@@ -834,7 +834,7 @@ exec spCMUGetPendingUpdatePackage
 
 This stored procedure collects the information from the `CM_UpdatePackages` and `CM_UpdatePackageSiteStatus` tables for the site that's running the check. As soon as the CMUpdate thread detects an update package that has the `State = 65538 (CONTENT_REPLICATION_SUCCESS)` status, it extracts the Easy Setup Package content to the \\CMUStaging\\\<Update GUID>` folder.
 
-CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`.
+CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`, which tracks the status of the extraction process (the check starts when the extraction is complete).
 
 ```output
 Detected a change to the "E:\ConfigMgr\inboxes\cmupdate.box" directory.
@@ -962,7 +962,7 @@ For a site server, Prerequisite checker logs entries that resemble the following
 ```output
 INFO: Prerequisite rules for CAS site update are being run.
 INFO: Executing prerequisite functions...
-===== INFO: Prerequisite Type & Server: SITE_PRI:BIG-CS1SITE.biglab.net =====
+===== INFO: Prerequisite Type & Server: SITE_PRI:<Site Server> =====
 <<<RuleCategory: Access Permissions>>>
 <<<CategoryDesc: Checking access permissions...>>>
 ...
@@ -977,7 +977,7 @@ INFO: Executing prerequisite functions...
 For a site database server, Prerequisite checker logs entries that resemble the following excerpt. Note that the thread spawns a bootstrap.
 
 ```output
-===== INFO: Prerequisite Type & Server: SQL:BIG-ALWAYSON.biglab.net =====
+===== INFO: Prerequisite Type & Server: SQL:<Site Database Server> =====
 <<<RuleCategory: Access Permissions>>>
 <<<CategoryDesc: Checking access permissions...>>>
 ...
@@ -996,7 +996,7 @@ For a site database server, Prerequisite checker logs entries that resemble the 
 For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following excerpt.
 
 ```output
-===== INFO: Prerequisite Type & Server: SDK:BIG-CS1SITE.biglab.net =====
+===== INFO: Prerequisite Type & Server: SDK:<SMS Provider Server> =====
 <<<RuleCategory: Access Permissions>>>
 <<<CategoryDesc: Checking access permissions...>>>
 ...
@@ -1285,7 +1285,7 @@ CMUpdate performs most of the following post-installation tasks:
 
 1. Verify that the SMS_Executive service is installed.
 1. Verify that the SMSDBMon component is installed.
-1. Verify that the SMSHMAN component is installed.
+1. Verify that the HMAN component is installed.
 1. Verify that the RCM component is installed.
 1. Monitor the start of replication.
 1. Update the Configuration Manager client preproduction package.
