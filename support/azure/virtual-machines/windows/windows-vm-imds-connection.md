@@ -22,7 +22,7 @@ The Azure Instance Metadata Service (IMDS) is a REST API that's available at a w
 The Azure Virtual Machine cannot establish a connection with the Azure Instance Metadata Service (IMDS) endpoint. 
 
 * Applications/Clients dependent on the IMDS Service to be functioning are not working as expected
-* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](./activation-watermark-appears.md)
+* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](activation-watermark-appears.md)
 * Extended Security Updates for Windows EOS versions may not install or function correctly
 
 
