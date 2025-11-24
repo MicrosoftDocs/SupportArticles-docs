@@ -278,7 +278,7 @@ CEL expressions might have syntax errors or return unexpected data types.
 
 1. Review the CEL expressions in your configuration.
 2. Test expressions by using a CEL evaluator to make sure that they return strings for username and arrays of strings for groups.
-3. Update the configuration to correct the expressions:
+3. Update the configuration to have the corrected expressions.
 
 The following code is an example of a valid CEL expression for extracting groups:
    
