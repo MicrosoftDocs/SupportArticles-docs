@@ -75,7 +75,7 @@ This behavior is **by design** due to the architecture of Accelerated Networking
 
 ### **1. Detect the Scenario**
 Use **RunCommand** to check for ghosted NICs:  
-[Ghosted NIC Check Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows_GhostedNIC_Detection)
+[Ghosted NIC Check Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
 
 ### **2. Clean Up Ghosted NICs**
 

@@ -11,10 +11,9 @@ ms.custom: sap:VM Extensions not operating correctly
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 This article discusses how to handle an issue in which multiple certificates are generated on a Microsoft Azure infrastructure as a service (IaaS) virtual machine (VM) that uses extensions.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptoms
 
