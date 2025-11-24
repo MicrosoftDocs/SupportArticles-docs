@@ -1,30 +1,36 @@
 ---
-title: 'Windows Client EOS Timeline: Key Dates and Impact for Azure Virtual Machines'
+title: Windows Client EOS Timeline - Key Dates and Impact for Azure Virtual Machines
 description: Provides information about Windows Client End of Support (EOS).
+author: JarrettRenshaw
+ms.author: scotro
+manager: dcscontentpm
 ms.date: 08/26/2025
-ms.reviewer: v-liuamson 
+ms.reviewer: v-liuamson, v-ryanberg, v-gsitser 
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
-# Windows Client EOS timeline: Key dates and impact for Azure Virtual Machines
+# Windows Client EOS timeline for Azure VMs
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 _Original KB number:_ &nbsp; 4010166
 
-This article provides information about Windows Client 10 support and answers some of the most common questions about around End of Support (EOS) for Azure Virtual Machines (VMs) running Windows Client operating systems.
+This article provides information about Windows Client 10 support, and answers some of the most common questions about End of Support (EOS) for Azure virtual machines (VMs) that run on Windows Client operating systems.
 
 > [!IMPORTANT]
-> This article applies to Windows Client versions that have reached End of Support (EOS). Microsoft has officially ended support for the following operating systems:
+> This article applies to Windows Client versions that reached End of Support (EOS). Microsoft officially ended support for the following operating systems:
 >
 > - Windows 10
 >
->Machines running the above listed operating systems will no longer receive Microsoft support and may not receive further security updates. Additionally, many compliance requirements include being on a currently supported operating system.
+> Computers that run the listed operating systems no longer receive Microsoft support and might not receive further security updates. Additionally, many compliance requirements include being on a currently supported operating system.
+
+
+[!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
 
 ## Microsoft 10 (EOS)
 
-Windows 10 is no longer supported except under the Extended Security Updates (ESU) program.  ESU only includes critical and important security updates and does not cover new features or non-security fixes. Support only covers enabling and ensuring ESU is functional. For workloads running on Azure Virtual Machines, ESU is automatically included at no additional cost—no MAK keys or manual activation required.
+Windows 10 is no longer supported except under the Extended Security Updates (ESU) program. ESU includes only critical and important security updates. It doesn't cover new features or non-security fixes. Support covers only enabling and ensuring that ESU is functional. For workloads that run on Azure VMs, ESU is automatically included at no additional cost. No MAK keys or manual activation is required.
 
 - [Extended Security Updates (ESU) program for Windows 10](/windows/whats-new/extended-security-updates)
 - [Enable Extended Security Updates (ESU)](/windows/whats-new/enable-extended-security-updates)
