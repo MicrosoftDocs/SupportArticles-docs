@@ -25,6 +25,10 @@ When an existing user in an organization tries to access a SharePoint Online res
 - **Sorry, this site hasn't been shared with you.**
 - **Error: Access Denied**
 
+- **You can't access this item**
+
+- **You don't have permission to access this item.**
+
 This message is expected. However, in this scenario, users don't have an option to request access to the resource and you want users who receive the message to have an option to request access.
 
 ## Solution
