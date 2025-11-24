@@ -25,16 +25,18 @@ ms.date: 12/17/2023
 
 You have a Microsoft SharePoint Online site on which the **Allow access requests** setting is enabled.
 
-When users who have **Full Control** permissions to the site clicks **Access requests and invitations in Site Settings**, they receive the following error message:
+When users who have **Full Control** permissions to the site clicks **Access requests and invitations in Site Settings**, they receive one of the following error messages:
 
 **Access Denied.**
 
+**You can't access this item.**
+
+**You don't have permission to access this item.**
+
 Also, when users browse to the **Access Requests** list and then click **Approve** or **Decline** for a pending request, they receive the following error message:
 
->Sending approval<br>
-Request approval failed
-
-
+> Sending approval
+> Request approval failed
 ## Solution
 
 To resolve this issue, users must be either site collection administrators or be members of the Owners group for the site. The Owners group must also have permissions to access the **Access Requests** list. Use the following solutions as appropriate for your specific configuration.
