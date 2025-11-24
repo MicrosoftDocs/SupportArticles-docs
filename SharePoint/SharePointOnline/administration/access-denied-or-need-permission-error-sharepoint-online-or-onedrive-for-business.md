@@ -29,6 +29,12 @@ appliesto:
 When users try to access a SharePoint Online or OneDrive for Business site, they receive one of the following error messages:
 
 - Access Denied
+- You can't access this item
+
+- You don't have permission to access this item
+
+- You don't have access to this file
+
 - You need permission to access this site
 - User not found in the directory
 
