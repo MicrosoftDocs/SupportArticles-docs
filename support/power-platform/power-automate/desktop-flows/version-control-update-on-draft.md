@@ -2,7 +2,7 @@
 title: Troubleshoot Version Control Errors When Publishing or Saving a Flow
 description: Learn how to resolve version control errors in Power Automate for Desktop. Fix unpublished active row issues when saving or publishing flows.
 ms.reviewer: Nikos.Moutzourakis, v-shaywood
-ms.date: 11/13/2025
+ms.date: 11/24/2025
 ms.custom: sap:Desktop flows\List, create, open, save or delete flows
 ---
 
