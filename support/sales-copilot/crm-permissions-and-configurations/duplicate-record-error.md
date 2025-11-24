@@ -1,27 +1,27 @@
 ---
 title: Contact already exists error when creating a CRM record
-description: Resolves an error that occurs due to a duplicate detection rule in CRM when a user tries to create a record from Copilot for Sales.
-ms.date: 02/05/2025
+description: Resolves an error that occurs due to a duplicate detection rule in CRM when a user tries to create a record from Sales app.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Record creation error due to duplicate detection rules in CRM
 
-This article provides a resolution for an error message that occurs when a user tries to create a record from Microsoft Copilot for Sales.
+This article provides a resolution for an error message that occurs when a user tries to create a record from Sales app.
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365 and Salesforce       |
-|**Users**     | Users who try to create a CRM record from Copilot for Sales   |
+|**Users**     | Users who try to create a CRM record from Sales app   |
 
 ## Symptoms
 
-When a user tries to [create a new record in your CRM from Copilot for Sales](/microsoft-sales-copilot/create-new-record), the following error is displayed. It indicates that the record creation failed due to a [duplicate detection rule in CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
+When a user tries to [create a new record in your CRM from Sales app](/microsoft-sales-copilot/create-new-record), the following error is displayed. It indicates that the record creation failed due to a [duplicate detection rule in CRM](/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 > This contact already exists. To create a duplicate contact, try adding it in Salesforce.
 
@@ -29,7 +29,7 @@ When a user tries to [create a new record in your CRM from Copilot for Sales](/m
 
 ## Cause
 
-A duplicate detection rule in CRM is configured to prevent specific fields from having duplicate values across multiple records. When a user tries to create a record that contains a duplicate field from Copilot for Sales, the duplicate detection rule in CRM prevents the record from being created.
+A duplicate detection rule in CRM is configured to prevent specific fields from having duplicate values across multiple records. When a user tries to create a record that contains a duplicate field from Sales app, the duplicate detection rule in CRM prevents the record from being created.
 
 For example, if a duplicate detection rule is configured to prevent the creation of a record with the same email address as an existing record, the record creation fails if the new record's email address matches the existing record's email address.
 
@@ -47,6 +47,6 @@ For information about duplicate detection rules in CRM, see:
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

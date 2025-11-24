@@ -1,4 +1,4 @@
-- name: Microsoft Copilot for Sales
+- name: Sales in Microsoft 365 Copilot
   href: welcome-sales-copilot.yml
 - name: CRM permissions and configurations
   items:
@@ -26,9 +26,9 @@
       href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
     - name: '"Required fields are missing" error'
       href: crm-permissions-and-configurations/required-fields-missing.md
-    - name: Salesforce CRM users can't see data in Copilot for Sales
+    - name: Salesforce CRM users can't see data in Sales app
       href: crm-permissions-and-configurations/no-column-error.md
-    - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
+    - name: Salesforce CRM users can't view, edit, or save data in Sales app
       href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
@@ -36,7 +36,7 @@
       href: crm-permissions-and-configurations/no-admin-exists-error.md
 - name: Outlook side panel
   items:
-    - name: Sign-in issue when opening the Copilot for Sales pane in Outlook
+    - name: Sign-in issue when opening the Sales pane in Outlook
       href: outlook-side-panel/problem-starting-copilot-for-sales.md
 - name: Setup, installation, and sign-in
   items:
@@ -54,7 +54,7 @@
       href: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
     - name: '"Failure passed to redirect url" error when signing in'
       href: setup-installation-and-sign-in/failure-passed-to-redirect-url-blocked-app.md
-    - name: First Salesforce CRM user can't access Copilot for Sales
+    - name: First Salesforce CRM user can't access Sales app
       href: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
     - name: Incorrect custom domain in Salesforce
       href: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
@@ -62,7 +62,7 @@
       href: setup-installation-and-sign-in/no-default-bap-location-found-error.md
     - name: '"Request administrator permissions to access Salesforce using APIs" error'
       href: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
-    - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+    - name: Update add-in error in Sales app for Microsoft Outlook
       href: setup-installation-and-sign-in/update-add-in-error.md  
     - name: '"User does not have required privileges to access the org" error'
       href: setup-installation-and-sign-in/user-does-not-have-required-privileges-error.md
