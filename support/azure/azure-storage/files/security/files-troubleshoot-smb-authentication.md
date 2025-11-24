@@ -177,7 +177,7 @@ If you just want to run a subselection of the previous checks, you can use the `
 
 ### Symptom
 
-You may experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
+You might experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
 - After you click on **Edit permission** under the Security tab, the Permission wizard doesn't load. 
 - When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
@@ -301,9 +301,9 @@ After enabling Microsoft Entra Kerberos authentication, you must explicitly gran
 
 <a name='potential-errors-when-enabling-azure-ad-kerberos-authentication-for-hybrid-users'></a>
 
-## Potential errors when enabling Microsoft Entra Kerberos authentication for hybrid users
+## Potential errors when enabling Microsoft Entra Kerberos authentication
 
-You might encounter the following errors when enabling Microsoft Entra Kerberos authentication for hybrid user accounts.
+You might encounter the following errors when enabling Microsoft Entra Kerberos authentication.
 
 ### Error - Grant admin consent disabled
 
