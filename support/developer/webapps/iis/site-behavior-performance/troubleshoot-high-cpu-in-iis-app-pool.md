@@ -21,6 +21,7 @@ An application pool in IIS is experiencing a prolonged period of high CPU that e
 
 - [Debug Diagnostics (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=103453)
 - Performance Monitor (Perfmon)
+- [Perfview](https://github.com/microsoft/perfview/releases)
 
 ## Data collection
 
@@ -36,9 +37,20 @@ You can also use Performance Monitor to determine what process is using CPU. For
 Once you have confirmed that a w3wp.exe process is experiencing high CPU, you will need to collect the following information in order to determine what is causing the problem:
 
 - A Performance Monitor data collector set.
-- A user-mode memory dump of the w3wp.exe process.
+- A user-mode memory dump of the w3wp.exe process or/and
+- A ETW Trace
 
-Both of these will need to be collected during the high CPU event.
+In general, ETW tracing does not impact performance, which makes it useful in production scenarios where we would be very concerned about the period during which logs are collected. For example, during memory dump collection threads are paused, so ETW traces are a good alternative.
+
+In most cases, when there's a high CPU issue with normal memory consumption, either ETW trace or memory dumps can be collected. Even though ETW trace can hold more information related to CPU consumption over time, for most cases both should be sufficient. We mentioned "normal memory consumption”, because ETW trace doesn't provide an in-depth view of objects, their values and their roots as a memory dump do.
+
+The goal is to get data that enable us to watch the operations on the same non-waiting threads over the portion time where w3wp.exe CPU is highest as possible, therefore:
+- Multiple dumps are needed (3 is usually a good number).
+- Dumps should be taken from the same process ID. 
+- Dumps should be close enough that these threads are still alive and perhaps a thread in each dump is still carrying related operations. Usually dumps spaced 10 seconds apart are okay.
+- Dumps should be collected within a CPU usage that is considered high and abnormal. Be cautious that we are talking here about the w3wp.exe consumption of CPU, not the total server CPU usage.
+
+All of these will need to be collected during the high CPU event.
 
 ### Collecting a Performance Monitor data collector set
 
@@ -92,7 +104,7 @@ The easiest way to collect user-mode process dumps when a high CPU condition occ
 1. Select **Performance** -> **Next**.
 1. Select **Performance Counters** -> **Next**.
 1. Select **Add Perf Triggers**.
-1. Expand the **Processor** (not the Process) object and select **% Processor Time**. Note that if you are on Windows Server 2008 R2 and you have more than 64 processors, choose the **Processor Information** object instead of the **Processor** object.
+1. Expand the **Processor** (not the Process) object and select **% Processor Time**.
 1. In the list of instances, select **\_Total**.
 1. Select **Add** -> **OK**.
 1. Select the newly added trigger, and then select **Edit Thresholds**.
@@ -118,6 +130,15 @@ The easiest way to collect user-mode process dumps when a high CPU condition occ
 This rule will create 11 dump files. The first 10 will be "mini dumps" which will be fairly small in size. The final dump will be a dump with full memory, and that dumps will be much larger.
 
 Once the high CPU problem has occurred, you will want to stop the Perfmon data collector set from collecting data. To do that, right-click on the **High CPU** data collector set listed under the **User Defined** node and select **Stop**.
+
+### Collecting ETW Tracing with Perfview
+
+- Download [Perfview](https://github.com/microsoft/perfview/releases) and run it as administrator.
+- Click at Collect menu and select Collect option (shortcut: ALT+C)
+- Check Zip, Merge, Thread Time checkboxes
+- Expand the Advanced Options tab and select IIS checkbox
+- Press Start Collection button. 
+- PerfView will start collecting the data. Once done, hit Stop collection. PerfView will merge various ETL files into a ZIP file and that will be stored in the same folder with PerfView.exe. This is the zip to be shared for analysis.
 
 ## Data analysis
 
@@ -175,7 +196,7 @@ Notice that the top of the report tells that high CPU was detected. In the right
 
 In this sample, the _default.aspx_ page in the FastApp application is running. If you look further down the call stack (at the bottom of the page), you can see that this thread is doing string concatenation. (Notice the call to `System.String.Concat` on the call stack.) If you analyze the other top CPU threads, you see the same pattern.
 
-The next step is to review the `Page_Load` event in the _default.aspx_ page of the FastApp application. When I do that, I find the following code.
+The next step is to review the `Page_Load` event in the _default.aspx_ page of the FastApp application. When we do that, we find the following code.
 
 ```html
 htmlTable += "<table>";
