@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 11/25/2025
 ---
 # Issues that affect call transfers
 
@@ -37,7 +37,7 @@ All transfers that use an SIP Refer message must go through the Microsoft Teams 
 
 - The strings could be either x-* strings or custom strings in the Referred-By and Refer-To headers. 
 
-- When the transfer is handled by the internal Microsoft Teams infrastructure, the transferee may hear an international ringtone.
+- When the transfer is handled by the internal Microsoft Teams infrastructure, the transferee might hear an international ringtone.
 
 ## Auto attendant does not transfer calls to an external PSTN number
 
