@@ -544,7 +544,7 @@ There are rare cases when DMPDownloader doesn't unpack incoming files even if th
 
 #### When to restart the update synchronization and download processes
 
-If you suspect that the download is finished, but the content was tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
+If you suspect that the download is finished, but the content was tampered with, delete the affected update, and retry the operation. To take this step, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
 
 ## Review progress through the Replication, Prerequisite check, and Installation stages
 
@@ -736,7 +736,7 @@ In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Pack
 
 #### Troubleshoot issue: Status of the update package remains "State=2 (Enabled)"
 
-If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log:
+The state of the package might not change from `State=2 (Enabled)`. This condition typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log:
 
 1. Look for entries that mention processing the 2.esc file.
 1. Filter the log by the respective thread.
@@ -758,7 +758,7 @@ If the state of the package doesn't change from `State=2 (Enabled)`, this typica
    >
    > Make sure that the computer account that the site server uses can access this share.
 
-#### Troubleshoot issue: Status of the update package has changed from "State=2 (Enabled)"
+#### Troubleshoot issue: Status of the update package changed from "State=2 (Enabled)"
 
 If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt.
 
