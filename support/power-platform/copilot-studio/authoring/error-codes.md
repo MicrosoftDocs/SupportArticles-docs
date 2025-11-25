@@ -130,7 +130,7 @@ Common problems include:
 
 #### FlowMakerConnectionBlocked
 
-**Error message**: The flow with name `{FlowName}` is using a maker connection, which is not allowed. Error Code: `{FlowMakerConnectionBlocked}`
+**Error message**: The flow with name `{FlowName}` is using a maker connection, which isn't allowed. Error Code: `{FlowMakerConnectionBlocked}`
 
 **Resolution**: The administrator prevents using maker credentials in a connection invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow with run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
 
@@ -168,7 +168,7 @@ Common problems include:
 
 **Error message**: The content was blocked by a Responsible AI check for hateful content. Hate harms refer to any content that attacks or uses discriminatory language with reference to a person or identity group based on certain differentiating attributes of these groups.
 
-This includes, but is not limited to:
+This includes, but isn't limited to:
 
 - Race, ethnicity, nationality
 - Gender identity groups and expression
@@ -182,7 +182,7 @@ This includes, but is not limited to:
 
 #### OpenAIJailBreak
 
-**Error message**: The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that is ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+**Error message**: The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that's ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 **Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent content moderation policies.
 
@@ -263,7 +263,7 @@ For more information, see [Maximum channel data message size limits when using C
 
 #### RedirectToNonExistentDialog
 
-**Error message**: The Dialog with Id {DialogId} was not found in the definition. Please check that the Dialog is present and that the Id is correct.
+**Error message**: The Dialog with Id {DialogId} wasn't found in the definition. Please check that the Dialog is present and that the Id is correct.
 
 **Resolution**: [Create a new topic](/microsoft-copilot-studio/authoring-create-edit-topics#create-a-topic) to redirect to, or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).
 
@@ -277,7 +277,7 @@ For more information, see [Maximum channel data message size limits when using C
 
 **Error message**: The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution**: This indicates the request being sent to OpenAI is exceeding the maximum request size allowed. There are a number of things that make up the request including the user input, output from previous actions, tools called, and conversation history. Review the tools you are using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
+**Resolution**: This indicates the request being sent to OpenAI is exceeding the maximum request size allowed. There are a number of things that make up the request including the user input, output from previous actions, tools called, and conversation history. Review the tools you're using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
@@ -296,7 +296,7 @@ For more information, see [Maximum channel data message size limits when using C
 | **2010** | "We can't retrieve your bot content." | Content couldn't be found because it was deleted. To configure a new agent, see [Create and delete agents][10]. To configure a new environment, see [Work with Power Platform environments][11]. |
 | **2011** | "We couldn't find `{Skill Name}` in `{Topic Name}`. Please check your content." | Skill couldn't be found because it was deleted. To create a new skill, see [Configure a Bot Framework skill][15]. |
 | **2012** | "We couldn't find `{Flow Name}` in `{Topic Name}`. Please check your content." | Your Power Automate Flow couldn't be found because it was deleted. To create a new flow, see [Create a flow][16]. |
-| **2014** | "The translation service did not respond." | Try again later. If the issue persists, [contact customer support][17]. |
+| **2014** | "The translation service didn't respond." | Try again later. If the issue persists, [contact customer support][17]. |
 | **2015** | "You're not authorized to call `{Skill Name}`. Please check the skill and its usage for any issues." | Check your [skill's configuration][15] and ensure your bot is [added to the skill's allowlist][18]. |
 | **2016** | "Sorry, we couldn't find your bot." | There was a problem with an [Azure Bot Service channel][19]. The channel might have been deleted or configured incorrectly. |
 | **2017** | "Sorry, we couldn't access your bot." | The [Azure Bot Service channel][19] couldn't be accessed. Check the channel configuration for authentication issues. |
