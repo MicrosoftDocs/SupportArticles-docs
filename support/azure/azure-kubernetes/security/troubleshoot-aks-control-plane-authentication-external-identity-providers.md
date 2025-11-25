@@ -442,8 +442,8 @@ To get more detailed information about authentication failures:
 
 ### Resources
 
-[jwt.ms site](https://jwt.ms)
-[Supported resource logs for Microsoft.ContainerService/managedClusters](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
+- [jwt.ms site](https://jwt.ms)
+- [Supported resource logs for Microsoft.ContainerService/managedClusters](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
 
 [!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
 
