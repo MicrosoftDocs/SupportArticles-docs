@@ -49,7 +49,7 @@ Verify that the OAuth 2.0 client ID and client secret are correct.
 
 The issuer URL must be accessible from the AKS cluster nodes. Follow these steps.
 
-1. Verify DNS resolution for the issuer URL:
+1. Verify Domain Name System (DNS) resolution for the issuer URL:
 
    ::: zone pivot="github"
    
@@ -295,7 +295,7 @@ The following code is an example of a valid CEL expression for extracting groups
 
 **Cause: Cluster nodes cannot reach the identity provider**
 
-Issues that affect network security groups, firewalls, or the Domain Name System (DNS) prevent the cluster from accessing the identity provider.
+Issues that affect network security groups, firewalls, or the DNS prevent the cluster from accessing the identity provider.
 
 ### Solution 1: Verify DNS resolution
 
