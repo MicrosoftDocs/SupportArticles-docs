@@ -39,7 +39,7 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 | [InfiniteLoopInBotContent](#infiniteloopinbotcontent)             | A node was executed too many times.                                 |
 | [InvalidContent](#invalidcontent)                                 | Invalid content was added to the code editor.                       |
 | [LatestPublishedVersionNotFound](#latestpublishedversionnotfound) | Unable to retrieve the published version of the agent.              |
-| [OpenAIHate](#openaihate)                                        | Hate content was detected.                                          |
+| [OpenAIHate](#openaihate)                                         | Hate content was detected.                                          |
 | [OpenAIJailBreak](#openaijailbreak)                               | Jailbreak content was detected.                                     |
 | [OpenAIndirectAttack](#openaindirectattack)                       | Indirect attack content was detected.                               |
 | [OpenAISelfHarm](#openaiselfharm)                                 | Self-harm content was detected.                                     |
