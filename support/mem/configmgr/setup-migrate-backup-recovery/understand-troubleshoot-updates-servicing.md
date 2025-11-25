@@ -1,6 +1,6 @@
 ---
 title: Understand and Troubleshoot the Updates and Servicing process
-description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
+description: This article helps administrators understand Updates and Servicing, and troubleshoot some common issues in Configuration Manager.
 ms.date: 11/17/2025
 ms.reviewer: kaushika, payur
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
@@ -14,7 +14,7 @@ This article helps administrators understand the Updates and Servicing process i
 
 Configuration Manager synchronizes with the Microsoft Cloud service to get updates that apply to your infrastructure and version. You can use the Configuration Manager console to install these updates.
 
-To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, go to **Administration** > **Cloud Services** > **Updates and Servicing** For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
+To view and manage the updates, open the Configuration Manager console that's connected to the top-level site, and then go to **Administration** > **Cloud Services** > **Updates and Servicing**. For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Best practices for updates
 
@@ -55,11 +55,11 @@ Before you install an update, consider running the prerequisite check for that u
 ## Prepare to troubleshoot Updates and Servicing issues
 
 > [!IMPORTANT]  
-> When you troubleshoot an Updates and Servicing issue, avoid the following actions:
+> When you troubleshoot an Updates and Servicing issue, avoid taking the following actions:
 >
 > - Manually cleaning up any related folders (\\EasySetupPayload, \\CMUStaging). Only manually change these folder locations if Microsoft Support instructs you to.
-> - Manually cleaning up any SQL tables. Only manually change information in these tables if Microsoft Support instructs you to.
-> - Restoring the Configuration Manager database and/or Configuration Manager site server if there's an error during the upgrade. Instead, fix the issue, and then try again to install.
+> - Manually cleaning up any SQL tables. Don't manually change information in these tables unless a Microsoft Support agent instructs you to.
+> - Restoring the Configuration Manager database or Configuration Manager site server if an error occurs during the upgrade. Instead, fix the issue, and then try again to install.
 > - Reinstalling a Service Connection Point during the installation.
 > - Restarting the Configuration Manager Update service during the installation.
 > - Keeping the \CMUStaging\ folder open during the installation.
@@ -69,9 +69,9 @@ Before you install an update, consider running the prerequisite check for that u
 
 ### Identify the update package GUID
 
-Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the Configuration Manager Console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
+Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID of an update package that's visible in the Configuration Manager console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
 
-Sometimes, the console doesn't list the affected update package. In this case, you can find the GUID in the Configuration Manager database. To find the GUID, run a SQL query that resembles the following excerpt:
+If the console doesn't list the affected update package, you can find the GUID in the Configuration Manager database. To find the GUID, run a SQL query that resembles the following excerpt:
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
@@ -103,7 +103,7 @@ During the update process, an update package passes through the following stages
 Knowing the stage at which the update failed gives you a starting point for troubleshooting the issue. Use the following diagram to identify the stage of the update package installation.
 
 > [!NOTE]  
-> The Replication stage is part of either the Prerequisite check stage or the Installation stage, so it's not listed separately in the diagram.
+> The Replication stage is part of either the Prerequisite check stage or the Installation stage. Therefore, it's not shown separately in the diagram.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage-expanded.png":::
 
@@ -219,7 +219,7 @@ This event triggers HMAN to start processing. It logs entries in HMAN.log that r
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
-SYS=<SiteServerFQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
+SYS=<Site Server FQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
 HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the site server. During this process, HMAN logs entries that resemble the following excerpt:
@@ -867,23 +867,23 @@ Additionally, CMUpdate verifies the signature and extracts the update.map.cab fi
 After the content is extracted, CMUpdate.exe starts the prerequisite check:
 
 ```output
-~FQDN for server BIG-CS1SITE is BIG-CS1SITE.biglab.net
+~FQDN for server <Site Server> is <Site Server FQDN>
 INFO: Target computer is a 64 bit operating system.
 INFO: Checking for existing setup information.
 INFO: Setting setup type to  8.
 INFO: Checking for existing SQL information.
-INFO: 'BIG-ALWAYSON.biglab.net' is a valid FQDN.
+INFO: '<Site Database Server>' is a valid FQDN.
 INFO: Verifying the registry entry for Asset Intelligence installation
 INFO: Setup detected an existing Configuration Manager installation. Currently installed version is 9132~
 INFO: Phase is 1C7~
-INFO: SDK Provider is on BIG-CS1SITE.biglab.net.
+INFO: SDK Provider is on <SMS Provider>.
 Set working directory to the staging folder E:\ConfigMgr\CMUStaging\8576527E-DDE9-4146-8ED9-DB91091C38EF\SMSSetup
 INFO: Setting the default CSV folder path
 INFO: Language: Mobile Device (INTL), LangPack: 0.
 INFO: Configuration Manager Build Number = 9135
 INFO: Configuration Manager Version = 5.0
 INFO: Configuration Manager Minimum Build Number = 800
-Preparing prereq check for site server [BIG-CS1SITE.BIGLAB.NET]...~
+Preparing prereq check for site server [<Site Server FQDN>]...~
 ```
 
 During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
@@ -924,7 +924,7 @@ prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2
 Then CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
 
 ```output
-Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
+Running prereq checking against Server [<Site Server>] ...~
 ```
 
 > [!NOTE]  
@@ -944,12 +944,12 @@ Prerequisite checker starts up within the same thread as CMUpdate. (note the com
 ********************************************
 INFO: PrereqCoreRes.dll source path is set to E:\CONFIGMGR\CMUSTAGING\8576527E-DDE9-4146-8ED9-DB91091C38EF\SMSSETUP\BIN\X64
 Commandline :~"E:\ConfigMgr\bin\x64\cmupdate.exe"
-INFO: Checking SQLNCli version on ServerName BIG-CS1SITE
+INFO: Checking SQLNCli version on ServerName <Site Server>
 INFO: SQLNCli version is 11.4.7001.0
 ...
-INFO: SDK Provider is on BIG-CS1SITE.biglab.net.
+INFO: SDK Provider is on <SMS Provider>.
 Check Type: Configuration Manager Update
-Check Type: Easy Update ~ Site Server: BIG-CS1SITE.biglab.net,~ SQL Server: BIG-ALWAYSON.biglab.net
+Check Type: Easy Update ~ Site Server: <Site Server>,~ SQL Server: <Site Database Server>
 ...
 ```
 
