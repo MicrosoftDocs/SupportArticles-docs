@@ -71,7 +71,7 @@ Before you install an update, consider running the prerequisite check for that u
 
 Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID of an update package that's visible in the Configuration Manager console, add the **Package Guid** column to the **Administration** > **Update and Servicing** node.
 
-If the console doesn't list the affected update package, you can find the GUID in the Configuration Manager database. To find the GUID, run a SQL query that resembles the following excerpt:
+If the console doesn't list the affected update package, you can find the GUID in the Configuration Manager database. To find the GUID, run a SQL query that resembles the following example:
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
@@ -108,7 +108,7 @@ Knowing the stage at which the update failed gives you a starting point for trou
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage.png" alt-text="Diagram of a decision tree to identify the installation state." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-issue-to-stage-expanded.png":::
 
 > [!IMPORTANT]  
-> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following excerpt:
+> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following example:
 >
 > ```sql
 > SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
@@ -133,7 +133,7 @@ The following steps provide an overview of the process that an online SCP uses t
 
 ### Process step 1: DMPDownloader synchronizes the latest update information
 
-Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs entries in DMPDownloader.log that resemble the following excerpt:
+Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs entries in DMPDownloader.log that resemble the following example:
 
 ```output
 Hasn't synced recently.
@@ -144,7 +144,7 @@ Successfully Dropped the state message 0~~
 
 DMPDownloader sends the `0 (START_PROCESS)` high-priority state message to the site server to indicate that the synchronization process is starting.
 
-Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released Configuration Manager updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following excerpt:
+Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released Configuration Manager updates and their metadata. During this process, DMPDownloader logs entries in DMPDownloader.log that resemble the following example:
 
 ```output
 Checking for preview version~~
@@ -163,7 +163,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 1~~
 ```
 
-DMPDownloader sends the `1 (START_VERIFY_MANIFEST)` state message to the site server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader sends the `1 (START_VERIFY_MANIFEST)` state message to the site server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following example:
 
 ```output
 Download manifest.cab~~
@@ -175,7 +175,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 2~~
 ```
 
-DMPDownloader sends the `2 (START_VERIFY_MANIFESTFILE_TRUSTED)` state message to indicate that DMPDownloader is about to verify the digital signature of the ConfigMgr.Update.Manifest.cab file. As it verifies the signature, DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader sends the `2 (START_VERIFY_MANIFESTFILE_TRUSTED)` state message to indicate that DMPDownloader is about to verify the digital signature of the ConfigMgr.Update.Manifest.cab file. As it verifies the signature, DMPDownloader logs entries that resemble the following example:
 
 ```output
 File 'E:\ConfigMgr\EasySetupPayload\ConfigMgr.Update.Manifest.cab' is signed and trusted.
@@ -193,7 +193,7 @@ Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.
 - If the SCP is remote from the site server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
 - If the SCP is co-located together with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
 
-During this process, DMPDownloader logs entries that resemble the following excerpt:
+During this process, DMPDownloader logs entries that resemble the following example:
 
 ```output
 Manifest.cab was successfully moved to the connector outbox~~
@@ -215,14 +215,14 @@ The SMSDBMon component drops a blank file that's named \<SiteCode>.scu to the \<
 > [!NOTE]  
 > In these file and path names, \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
 
-This event triggers HMAN to start processing. It logs entries in HMAN.log that resemble the following excerpt:
+This event triggers HMAN to start processing. It logs entries in HMAN.log that resemble the following example:
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
 SYS=<Site Server FQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
-HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the site server. During this process, HMAN logs entries that resemble the following excerpt:
+HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the site server. During this process, HMAN logs entries that resemble the following example:
 
 ```output
 File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed and trusted.
@@ -230,7 +230,7 @@ File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed
 Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
 ```
 
-The extracted files include an ApplicabilityChecks folder, which contains SQL query files. HMAN runs these queries to assess the applicability of the update packages in the manifest. During this process, HMAN logs entries that resemble the following excerpt:
+The extracted files include an ApplicabilityChecks folder, which contains SQL query files. HMAN runs these queries to assess the applicability of the update packages in the manifest. During this process, HMAN logs entries that resemble the following example:
 
 ```output
 Extracted C:\Program Files\Microsoft Configuration Manager\CMUStaging\Manifest.xml  
@@ -239,7 +239,7 @@ C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\
 Configuration Manager Update (PackageGuid=10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C) is applicable
 ```
 
-If a package doesn't apply, the HMAN logs entries that resemble the following excerpt:
+If a package doesn't apply, the HMAN logs entries that resemble the following example:
 
 ```output
 C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1610-KB3211925_AppCheck_9390F966.sql has hash value SHA256:048DA8137C249AAD11340A855FF7E0E8568F5325FED5F503C4D9C329E73AD464  
@@ -251,12 +251,12 @@ Configuration Manager Update (PackageGuid=9390F966-F1D0-42B8-BDC1-8853883E704A) 
 
 ### Results of the Synchronization and Applicability check processes
 
-The console displays new applicable updates and labels their state as **Available to Download** or **Ready to Install**. The applicability check might hide some update packages. To verify an update's state, check the **State** column in the CM_UpdatePackages table. In the table, available updates have entries in this column that resemble the following excerpts:
+The console displays new applicable updates and labels their state as **Available to Download** or **Ready to Install**. The applicability check might hide some update packages. To verify an update's state, check the **State** column in the CM_UpdatePackages table. In the table, available updates have entries in this column that resemble the following examples:
 
 - `APPLICABILITY_SUCCESS  =  327682`
 - `DOWNLOAD_SUCCESS  =  262146`
 
-Updates that aren't applicable (and aren't visible in the console) have entries in this column that resemble the following excerpts:
+Updates that aren't applicable (and aren't visible in the console) have entries in this column that resemble the following examples:
 
 - `APPLICABILITY_HIDE  =  393213`
 - `APPLICABILITY_NA  =  393214`
@@ -272,7 +272,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 - **SCP in Online mode**
 
   1. On the SCP, check the DMPDownloader.log file for any error messages that the DMPDownloader generated while it downloaded and processed the manifest CAB file.
-  1. Verify that the HMAN.log file contains entries that resemble the following excerpt:
+  1. Verify that the HMAN.log file contains entries that resemble the following example:
 
      ```output
      Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
@@ -288,7 +288,7 @@ The following steps summarize this troubleshooting process. The steps vary depen
 
   1. Check the data that you downloaded in the [Import](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#import) step, and verify that the ConfigMgr.Update.Manifest.enc file is present.
      1. If the file is missing, review the entries in ServiceConnectionTool.log that were recorded during the [Connect](/intune/configmgr/core/servers/manage/use-the-service-connection-tool#connect) step. Check for any errors that relate to downloading ConfigMgr.Update.Manifest.enc.
-     1. If the file is present, review the ServiceConnectionTool.log that were recorded during the Import step. If the file downloaded successfully, the log contains a state message 4 entry that resembles the following excerpt:
+     1. If the file is present, review the ServiceConnectionTool.log that were recorded during the Import step. If the file downloaded successfully, the log contains a state message 4 entry that resembles the following example:
 
      ```output
      Successfully Dropped the state message 4~~
@@ -349,14 +349,14 @@ By default, DMPDownloader automatically starts downloading the latest applicable
 
 In either case, after the process starts, the SMS provider calls the `spAddPackageToDownload` stored procedure. The stored procedure adds the package GUID to the `CM_UpdatePackagesToDownload` table in the SQL database.
 
-DMPDownloader runs the `spCMUCheckAvailableUpdates` stored procedure to pick up the list of package GUIDs. If the list contains at least one package GUID, DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader runs the `spCMUCheckAvailableUpdates` stored procedure to pick up the list of package GUIDs. If the list contains at least one package GUID, DMPDownloader logs entries that resemble the following example:
 
 ```output
 Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following example:
 
 ```output
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -365,9 +365,9 @@ Successfully Dropped the state message 6~~
 ```
 
 > [!NOTE]  
-> In this excerpt, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e` is an example of a package GUID.
+> In this example, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e` is an example of a package GUID.
 
-Then DMPDownloader gets the payload URL from the manifest and then downloads the actual update. DMPDownloader logs entries that resemble the following excerpt, and changes the state message from `6 (FOUND_NEW_PACKAGE)` to `10 (PAYLOAD_DOWNLOADED)`.
+Then DMPDownloader gets the payload URL from the manifest and then downloads the actual update. DMPDownloader logs entries that resemble the following example, and changes the state message from `6 (FOUND_NEW_PACKAGE)` to `10 (PAYLOAD_DOWNLOADED)`.
 
 ```output
 EasySetupMaintenance - Redownload packages if needed~~
@@ -401,7 +401,7 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 Successfully write the update meta into outbox for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
 ```
 
-DMPDownloader downloads the update to \\EasySetupPayload\\\<Update GUID>.cab on the SCP, where \<Update GUID> represents the GUID of the update. Then it extracts the contents of the file to the folder that has the same name. DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader downloads the update to \\EasySetupPayload\\\<Update GUID>.cab on the SCP, where \<Update GUID> represents the GUID of the update. Then it extracts the contents of the file to the folder that has the same name. DMPDownloader logs entries that resemble the following example:
 
 ```output
 Verify the payload signature, hash value and extract the payload~~
@@ -415,7 +415,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 25~~
 ```
 
-DMPDownloader then checks whether the update contains fresh redists. DMPDownloader logs entries that resemble the following excerpt:
+DMPDownloader then checks whether the update contains fresh redists. DMPDownloader logs entries that resemble the following example:
 
 ```output
 Check if there is redist to download for update, 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -437,7 +437,7 @@ Successfully Dropped the state message 13~~
 EasySetupDownloadSinglePackage finishes downloading 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e. ~~
 ```
 
-To download the redists, DMPDownloader reads the same Manifest.xml file that it used to detect the update. The manifest contains redist and language pack URLs, as the following excerpt shows:
+To download the redists, DMPDownloader reads the same Manifest.xml file that it used to detect the update. The manifest contains redist and language pack URLs, as the following example shows:
 
 ```xml
 <Manifest>
@@ -453,7 +453,7 @@ To download the redists, DMPDownloader reads the same Manifest.xml file that it 
 </Content>
 ```
 
-Then DMPDownloader engages SetupDL.exe, the usual Configuration Manager redist downloading process. SetupDL.exe downloads the redists and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following excerpt:
+Then DMPDownloader engages SetupDL.exe, the usual Configuration Manager redist downloading process. SetupDL.exe downloads the redists and language manifests, and logs this information in ConfigMgrSetup.log. The entries resemble the following example:
 
 ```output
 INFO: Attempting to load resource DLL...
@@ -465,7 +465,7 @@ INFO: Downloading https://go.microsoft.com/fwlink/?LinkID=2298749 as ConfigMgr.M
 INFO: Extracted file C:\Windows\TEMP\ConfigMgr.LN.Manifest.xml
 ```
 
-The manifest XML contains the list of redists to download, the download links, and the expected hashes. SetupDL.exe downloads the files, verifies the hashes, and then unpacks the files to the \\EasySetupPayload\\\<Update GUID>\\redist folder. SetupDL.exe logs entries that resemble the following excerpt:
+The manifest XML contains the list of redists to download, the download links, and the expected hashes. SetupDL.exe downloads the files, verifies the hashes, and then unpacks the files to the \\EasySetupPayload\\\<Update GUID>\\redist folder. SetupDL.exe logs entries that resemble the following example:
 
 ```output
 INFO: Verify directory E:\ConfigMgr\EasySetupPayload\3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e\redist\LanguagePack\MobileDevice\SMSSETUP\BIN\X64\
@@ -481,7 +481,7 @@ Depending on the SCP configuration, DMPDownloader puts a file that's referred to
 - If the SCP is remote from the site server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the site server.
 - If the SCP is collocated together with the site server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
-The file has an .mcm extension, and contains the information that marks the state of the update package as **State="262146"** (also known as **"DOWNLOAD_SUCCESS"**). The corresponding log entries resemble the following excerpt:
+The file has an .mcm extension, and contains the information that marks the state of the update package as **State="262146"** (also known as **"DOWNLOAD_SUCCESS"**). The corresponding log entries resemble the following example:
 
 ```output
 The CMU file name is E:\ConfigMgr\inboxes\hman.box\ForwardingMsg\___CMU3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e.MCM~~
@@ -490,13 +490,13 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 The notification file is simply an XML file that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to CMU format, and then moves it to HMAN.box\\CFD. This process resembles the process that's applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
+HMAN converts the file back to CMU format, and then moves it to HMAN.box\\CFD. This process resembles the process that's applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following example:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
 ```
 
-The CMUHandler thread processes the file and uses the `spCMUSetUpdatePackageState` stored procedure to update the state information in the `CM_UpdatePackages` table to **"262146" (DOWNLOAD_SUCCESS)**. If HMAN is configured to log data at the verbose logging level, it logs entries that resemble the following excerpt:
+The CMUHandler thread processes the file and uses the `spCMUSetUpdatePackageState` stored procedure to update the state information in the `CM_UpdatePackages` table to **"262146" (DOWNLOAD_SUCCESS)**. If HMAN is configured to log data at the verbose logging level, it logs entries that resemble the following example:
 
 ```output
 INFO: File without BOM : (E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU)
@@ -578,7 +578,7 @@ At the top-level site, you take one of the following actions:
 - Install the update (select **Install**).
 - Start a prerequisite check.
 
-HMAN uses the shared folder, \\\\[servername]\\EasySetupPayload\\\<Update GUID>, as the source to create or update the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file that's named 2.esc in the HMAN.box\\CFD folder. This action wakes up HMAN, and HMAN starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in SMSDBMon.log that resemble the following excerpt:
+The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file that's named 2.esc in the HMAN.box\\CFD folder. This action wakes up HMAN, and HMAN starts processing the update. HMAN uses the  \\\\\<ServerName>\\EasySetupPayload\\\<Update GUID> shared folder as the source to create or update the package. If the verbose logging option is turned on, SMSDBMON logs entries in SMSDBMon.log that resemble the following example:
 
 ```output
 RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2  ]
@@ -592,20 +592,20 @@ When it detects the 2.esc file, HMAN runs the following query to check which upd
 SELECT TOP 1 convert(NVARCHAR(40), PackageGuid) FROM CM_UpdatePackages WHERE State=2
 ```
 
-HMAN logs entries that resemble the following excerpt:
+HMAN logs entries that resemble the following example:
 
 ```output
 INFO: 2.ESC file was found. Easy setup package needs to be updated.  
 Get  Update Pack E8E74B72-504A-4202-9167-8749C223D2A5, \\<SCP.FQDN>\EasySetupPayLoad\E8E74B72-504A-4202-9167-8749C223D2A5
 ```
 
-If the package was previously replicated, HMAN logs an entry that resembles the following excerpt:
+If the package was previously replicated, HMAN logs an entry that resembles the following example:
 
 ```output
 Easy setup source folder hash is not changed. Skip updating.
 ```
 
-Otherwise, HMAN logs entries that resemble the following excerpt:
+Otherwise, HMAN logs entries that resemble the following example:
 
 ```output
 INFO: Successfully requested package CAS10001 to be updated from its source.  
@@ -617,7 +617,7 @@ Successfully reported ConfigMgr update status (SiteCode=CAS, SubStageID=0xb0001,
 
 HMAN adds the package GUID of the update package to the `EasySetupSettings` table.
 
-HMAN logs entries that resemble the following excerpt:
+HMAN logs entries that resemble the following example:
 
 ```output
 Updating easy setup settings with EXEC sp_UpdateEasySetupSettings N'CAS10001','2',N'561BE7B704CA99A8DB6697886E75BD7C4812324D0A637708E863EC9DF97EFB94'
@@ -629,7 +629,7 @@ If you want to find the **PackageID** value of the Easy Setup Package, run the f
 Select * from vEasySetupPackage
 ```
 
-To keep HMAN busy and keep it from processing other files, SMSDBMon drops the \<PackageGUID>.cme file in the HMAN.box\\CFD folder. If the verbose logging option is turned on, SMSDBMON logs entries that resemble the following excerpt:
+To keep HMAN busy and keep it from processing other files, SMSDBMon drops the \<PackageGUID>.cme file in the HMAN.box\\CFD folder. If the verbose logging option is turned on, SMSDBMON logs entries that resemble the following example:
 
 ```output
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C.CME
@@ -641,7 +641,7 @@ This step is essentially the same as for any intersite content replication proce
 
 Distribution Manager (DistMgr) uses \\\\\<SCP.FQDN>\\EasySetupPayLoad\\\<Update GUID> to create a snapshot of the Easy Setup Package and send it to the content library of the top-level site.
 
-DistMgr logs the entries to DistMgr.log that resemble the following excerpt:
+DistMgr logs the entries to DistMgr.log that resemble the following example:
 
 ```output
 Found package properties updated notification for package 'CAS10001'  
@@ -651,14 +651,14 @@ Taking package snapshot for package CAS10001 from source \\<SCP.FQDN>\EasySetupP
 
 To check the status of this process, you can filter DistMgr.log for the thread ID. To get the thread ID, examine the **Package Processing Queue** value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_DISTRIBUTION_MANAGER` registry subkey.
 
-DistMgr also creates a minijob that replicates content to child primary sites (if they exist). It logs entries that resemble the following excerpt:
+DistMgr also creates a minijob that replicates content to child primary sites (if they exist). It logs entries that resemble the following example:
 
 ```output
 Setting CMiniJob transfer root to C:\SMSPKG\CAS10001.PCK.1  
 Created minijob to send compressed copy of package CAS10001 to site XXX.  Transfer root = C:\SMSPKG\CAS10001 .PCK.1
 ```
 
-The Scheduler component schedules a file replication job to transfer the content to any child primary sites. Scheduler logs entries in Scheduler.log that resemble the following excerpt:
+The Scheduler component schedules a file replication job to transfer the content to any child primary sites. Scheduler logs entries in Scheduler.log that resemble the following example:
 
 ```output
 1 jobs found in memory, 10 jobs found in job source.  
@@ -667,7 +667,7 @@ The Scheduler component schedules a file replication job to transfer the content
 <JOB STATUS - COMPLETE>~
 ```
 
-The Sender component manages the actual content transfer. It logs entries in Sender.log that resemble the following excerpt:
+The Sender component manages the actual content transfer. It logs entries in Sender.log that resemble the following example:
 
 ```output
 ~Package file = C:\SMSPKG\CAS10001.DLT.5.6  
@@ -677,7 +677,7 @@ The Sender component manages the actual content transfer. It logs entries in Sen
 ~Sending completed successfully
 ```
 
-The replication process continues at the primary site. After Sender transfers the Easy Setup Package, the Despooler component of the child primary site unpacks the package content to a content library of the receiving site. Despooler logs entries in Despool.log that resemble the following excerpt:
+The replication process continues at the primary site. After Sender transfers the Easy Setup Package, the Despooler component of the child primary site unpacks the package content to a content library of the receiving site. Despooler logs entries in Despool.log that resemble the following example:
 
 ```output
 Received package CAS10001 version 1. Compressed file -  C:\SMSPKG\CAS10001.PCK.1 as C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive\ds_r7or9.pkg  
@@ -700,7 +700,7 @@ where PackageGUID='<Package GUID>'
 
 ### Process step 4: Finish replicating the package
 
-After the replication finishes, DistMgr marks the process as successful, and logs entries that resemble the following excerpt:
+After the replication finishes, DistMgr marks the process as successful, and logs entries that resemble the following example:
 
 ```output
 Found package properties updated notification for package 'CAS10001'  
@@ -710,7 +710,7 @@ Start updating the package CAS10001...
 Successfully created/updated the package CAS10001
 ```
 
-At the child primary sites, HMAN creates a file that's named \<Update GUID>.cmi for Configuration Manager Update Service (CMUpdate.exe). HMAN logs an entry that resembles the following excerpt:
+At the child primary sites, HMAN creates a file that's named \<Update GUID>.cmi for Configuration Manager Update Service (CMUpdate.exe). HMAN logs an entry that resembles the following example:
 
 ```output
 Created notification file (E8E74B72-504A-4202-9167-8749c223d2a5.CMI) for CONFIGURATION_MANAGER_UPDATE
@@ -740,7 +740,7 @@ The state of the package might not change from `State=2 (Enabled)`. This conditi
 
 1. Look for entries that mention processing the 2.esc file.
 1. Filter the log by the respective thread.
-1. Alternatively, look for the last `SubstageID` value that's recorded in the log. The data that's associated with this value should include either `IsComplete=2 (Success)` or `IsComplete=4 (Failure)`. This information should resemble the following excerpt:
+1. Alternatively, look for the last `SubstageID` value that's recorded in the log. The data that's associated with this value should include either `IsComplete=2 (Success)` or `IsComplete=4 (Failure)`. This information should resemble the following example:
 
    ```output
    Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
@@ -749,7 +749,7 @@ The state of the package might not change from `State=2 (Enabled)`. This conditi
 1. If the HMAN.log file rolled over (removing older entries), try to manually re-create the empty 2.esc file in the HMAN.box\\CFD folder. This operation should trigger the same process again.
 
    > [!NOTE]  
-   > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) in order to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following excerpt:
+   > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) in order to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following example:
    >
    > ```output
    > Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
@@ -760,7 +760,7 @@ The state of the package might not change from `State=2 (Enabled)`. This conditi
 
 #### Troubleshoot issue: Status of the update package changed from "State=2 (Enabled)"
 
-If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt.
+If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following example.
 
 | PackageID | PackageVersion | PackageHash | PackageGUID | StoredPkgHash | Source | SourceSite | LastRefresh | StoredPkgVersion | StorePkgFlag | SourceDate | SourceVersion | SourceSize |
 |-----------|----------------|-------------|-------------|---------------|--------|-----------|-------------|------------------|--------------|------------|---------------|------------|
@@ -776,7 +776,7 @@ The rest of the troubleshooting is the same as for typical replicated package. F
 (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
 ```
 
-The output should resemble the following excerpt:
+The output should resemble the following example:
 
 ```output
     __GENUS          : 2
@@ -815,7 +815,7 @@ If Configuration Manager didn't yet [replicate the update package](#investigate-
 
 ### Process step 2: HMAN notifies CMUpdate of the requested check
 
-After HMAN updates the Easy Setup Package, it verifies the state of the CONFIGURATION_MANAGER_UPDATE service, and then creates the `<Update GUID>.cmi` notification in the CMUpdate.box inbox. HMAN logs entries that resemble the following excerpt:
+After HMAN updates the Easy Setup Package, it verifies the state of the CONFIGURATION_MANAGER_UPDATE service, and then creates the `<Update GUID>.cmi` notification in the CMUpdate.box inbox. HMAN logs entries that resemble the following example:
 
 ```output
 INFO: Starting service CONFIGURATION_MANAGER_UPDATE
@@ -834,7 +834,7 @@ exec spCMUGetPendingUpdatePackage
 
 This stored procedure collects the information from the `CM_UpdatePackages` and `CM_UpdatePackageSiteStatus` tables for the site that's running the check. As soon as the CMUpdate thread detects an update package that has the `State = 65538 (CONTENT_REPLICATION_SUCCESS)` status, it extracts the Easy Setup Package content to the \\CMUStaging\\\<Update GUID>` folder.
 
-CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`. This reference tracks the status of the extraction process (the check starts when the extraction is complete).
+CMUpdate logs entries to CMUpdate.log that resemble the following example. The example entries include a reference to `SubStageID=0xd0005`. This value tracks the status of the extraction process (the check starts when the extraction is complete).
 
 ```output
 Detected a change to the "E:\ConfigMgr\inboxes\cmupdate.box" directory.
@@ -888,7 +888,7 @@ Preparing prereq check for site server [<Site Server FQDN>]...~
 
 During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
 
-Then, CMUpdate looks for the Update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section for the hashes of the files that it needs. This section of the file resembles the following excerpt:
+Then, CMUpdate looks for the Update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section for the hashes of the files that it needs. This section of the file resembles the following example:
 
 ```xml
 BEGIN_COMPONENT_FILELIST
@@ -915,20 +915,20 @@ BEGIN_COMPONENT_FILELIST
 END_COMPONENT_FILELIST
 ```
 
-The file of particular interest is Prereqcore.dll. This file contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64, and compares it to the hash in the Update.map file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
+The file of particular interest is Prereqcore.dll. This file contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64, and compares it to the hash in the Update.map file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following example:
 
 ```output
 prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2391119281E0ECA43E
 ```
 
-Then, CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
+Then, CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following example:
 
 ```output
 Running prereq checking against Server [<Site Server>] ...~
 ```
 
 > [!NOTE]  
-> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the Prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
+> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the Prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following example:
 >
 > ```output
 >update.map has no update for CONFIGURATION_MANAGER_UPDATE
@@ -936,7 +936,7 @@ Running prereq checking against Server [<Site Server>] ...~
 
 ### Process step 5: The Prerequisite checker component starts
 
-Prerequisite checker starts up within the same thread as CMUpdate (notice the command line). However, Prerequisite checker has its own log file (C:\ConfigMgrPrereq.log). Prerequisite checker passes the list of relevant site roles to the actual worker, and logs entries that resemble the following excerpt:
+Prerequisite checker starts up within the same thread as CMUpdate (notice the command line). However, Prerequisite checker has its own log file (C:\ConfigMgrPrereq.log). Prerequisite checker passes the list of relevant site roles to the actual worker, and logs entries that resemble the following example:
 
 ```output
 ********************************************
@@ -957,7 +957,7 @@ Check Type: Easy Update ~ Site Server: <Site Server>,~ SQL Server: <Site Databas
 
 After the Prerequisite checker loads, it spawns another thread to go through the actual checklist. The thread sorts the check rules by category, and runs them for each of the targeted roles.
 
-For a site server, Prerequisite checker logs entries that resemble the following excerpt:
+For a site server, Prerequisite checker logs entries that resemble the following example:
 
 ```output
 INFO: Prerequisite rules for CAS site update are being run.
@@ -974,7 +974,7 @@ INFO: Executing prerequisite functions...
 ...
 ```
 
-For a site database server, Prerequisite checker logs entries that resemble the following excerpt. Notice that the thread spawns a bootstrap.
+For a site database server, Prerequisite checker logs entries that resemble the following example. Notice that the thread spawns a bootstrap.
 
 ```output
 ===== INFO: Prerequisite Type & Server: SQL:<Site Database Server> =====
@@ -993,7 +993,7 @@ For a site database server, Prerequisite checker logs entries that resemble the 
 ...
 ```
 
-For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following excerpt:
+For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following example:
 
 ```output
 ===== INFO: Prerequisite Type & Server: SDK:<SMS Provider Server> =====
@@ -1018,7 +1018,7 @@ During the check, each rule calls the `spCMUAddPrereqMessage` SQL stored procedu
 
 ### Process step 7: CMUpdate completes the check
 
-CMUpdate waits for the Prerequisite checker thread to return the results of the checks, and adds the latest state information to the `CM_UpdatePackagesSiteStatus` table (for example, `PREREQ_SUCCESS`). The `State` and `Flag` combination from the `spCMUGetPendingUpdatePackage` SQL stored procedure define further actions (for example, whether to stop or continue if errors occur). CMUpdate logs entries that resemble the following excerpt:
+CMUpdate waits for the Prerequisite checker thread to return the results of the checks, and adds the latest state information to the `CM_UpdatePackagesSiteStatus` table (for example, `PREREQ_SUCCESS`). The `State` and `Flag` combination from the `spCMUGetPendingUpdatePackage` SQL stored procedure define further actions (for example, whether to stop or continue if errors occur). CMUpdate logs entries that resemble the following example:
 
 ```output
 INFO: SQL Connection succeeded. Connection: SMS ACCESS, Type: Secure
@@ -1026,7 +1026,7 @@ INFO: setup type: 8, top level: 1.
 Continue configuration manager update as it is configured to ignore prereq warnings.
 ```
 
-The change in the `CM_UpdatePackagesSiteStatus` table triggers an operation on the \<PackageGUID>.cme file in the HMAN.box\\CFD inbox. The corresponding log entry resembles the following excerpt:
+The change in the `CM_UpdatePackagesSiteStatus` table triggers an operation on the \<PackageGUID>.cme file in the HMAN.box\\CFD inbox. The corresponding log entry resembles the following example:
 
 ```output
 Check CMU status...
@@ -1142,20 +1142,20 @@ To resolve this issue, switch the Site Communication to Enhanced HTTP or HTTPS. 
 
 ## Investigate the Installation stage
 
-Select an update in the console, and then select **Install Update**. (If applicable, ignore any warning that appears.) After you take this action, the actual site update starts. To make sure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the checks fail, the update stops.  
+Unlike most of the other stages, the Installation stage can start manually. When you select an update in the console and then select **Install Update** (and if applicable, you ignore any warning that appears), the actual site update starts. To make sure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the checks fail, the update stops.  
 <br/>
 <details><Summary>Select here to see the Installation steps.</summary>
 
 ### Process step 1: CMUpdate checks the readiness of the site server
 
-After the deployment passes the prerequisite checks, CMUpdate assesses the readiness of the sites and the configured Service Windows. CMUpdate logs entries that resemble the following excerpt:
+After the deployment passes the prerequisite checks, CMUpdate assesses the readiness of the sites and the configured Service Windows. CMUpdate logs entries that resemble the following example:
 
 ```output
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0007, IsComplete=1, Progress=1, Applicable=1)
 INFO: Waiting for CONFIGURATION_MANAGER_SERVICE to be ready to apply update: 3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E
 ```
 
-CMUpdate upgrades itself to the new version, and logs entries that resemble the following excerpt:
+CMUpdate upgrades itself to the new version, and logs entries that resemble the following example:
 
 ```output
 CONFIGURATION_MANAGER_UPDATE service is stopping...
@@ -1164,7 +1164,7 @@ CONFIGURATION_MANAGER_UPDATE service is starting...
 Microsoft Microsoft Configuration Manager v5.00 (Build 9132)
 ```
 
-CMUpdate looks for the service window that's configured for the site, and logs entries that resemble the following excerpt:
+CMUpdate looks for the service window that's configured for the site, and logs entries that resemble the following example:
 
 ```output
 There is no service window defined for the site server to apply the CM server updates.
@@ -1172,7 +1172,7 @@ There is no service window defined for the site server to apply the CM server up
 
 ### Process step 2: CMUpdate verifies the state of the update and redist content
 
-CMUpdate verifies that the CMUStaging content is intact, and then reads the Update.map file. It logs entries that resemble the following excerpt:
+CMUpdate verifies that the CMUStaging content is intact, and then reads the Update.map file. It logs entries that resemble the following example:
 
 ```output
 Checking if the CMU Staging folder already has the content extracted.
@@ -1184,7 +1184,7 @@ Successfully read file \\?\E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-CMUpdate processes the redists, and creates an in-memory list of files to be copied. It logs entries that resemble the following excerpt:
+CMUpdate processes the redists, and creates an in-memory list of files to be copied. It logs entries that resemble the following example:
 
 ```output
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0006, IsComplete=1, Progress=1, Applicable=1)
@@ -1221,7 +1221,7 @@ At this point, the actual update starts. CMUpdate follows these steps:
 
 During this process, CMUpdate also copies the redists from the \\CMUStaging\\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
 
-CMUpdate logs entries that resemble the following excerpt:
+CMUpdate logs entries that resemble the following example:
 
 ```output
 INFO: Checking media: E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E\SMSSetup\bin\x64\NDP462-KB3151800-X86-X64-ALLOS-ENU.EXE
@@ -1242,7 +1242,7 @@ File E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E\redist\NDP462-
 
 ### Process step 4: CMUpdate updates the OSD packages
 
-After CMUpdate installs the files, it updates the OSD packages, and logs entries that resemble the following excerpt:
+After CMUpdate installs the files, it updates the OSD packages, and logs entries that resemble the following example:
 
 ```output
 INFO: Adding default USMT package ...
@@ -1254,7 +1254,7 @@ INFO: Attempting to export arm64 boot image from ADK installation source
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001a, IsComplete=3, Progress=100, Applicable=1)
 ```
 
-Then, CMUpdate asynchronously waits for multiple processes (including SiteComp) to finish. It logs entries that resemble the following excerpt:
+Then, CMUpdate asynchronously waits for multiple processes (including SiteComp) to finish. It logs entries that resemble the following example:
 
 ```output
 ~   Starting ConfigMgr Update post installation monitor thread...
@@ -1264,7 +1264,7 @@ You can review other entries regarding component reinstallation in the SiteComp.
 
 ### Process step 5: CMUpdate updates CD.Latest
 
-CMUpdate updates the CD.Latest file to reflect the new version of Configuration Manager. It logs entries that resemble the following excerpt:
+CMUpdate updates the CD.Latest file to reflect the new version of Configuration Manager. It logs entries that resemble the following example:
 
 ```output
 Creating cd backup location at E:\ConfigMgr\cd.latest
@@ -1273,7 +1273,7 @@ Copying contents of update package from E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4E
 successfully updated setup registry to have new external files stored at E:\ConfigMgr\cd.latest\redist
 ```
 
-Finally, CMUpdate creates a notification file for HMAN that's named 196612.esc, and then starts the post-installation tasks. It logs entries that resemble the following excerpt:
+Finally, CMUpdate creates a notification file for HMAN that's named 196612.esc, and then starts the post-installation tasks. It logs entries that resemble the following example:
 
 ```output
 INFO: Successfully dropped update pack installed notification to HMAN CFD box.
@@ -1281,7 +1281,7 @@ INFO: Successfully dropped update pack installed notification to HMAN CFD box.
 
 ### Process step 6: Post installation tasks
 
-CMUpdate performs most of the following post-installation tasks:
+CMUpdate performs the following post-installation tasks:
 
 1. Verify that the SMS_Executive service is installed.
 1. Verify that the SMSDBMon component is installed.
@@ -1302,7 +1302,7 @@ HMAN performs the following post-installation tasks:
 > - Install.map contains the list of steps that the installation process runs. It serves as a workflow for CMUpdate.exe that provides the steps and parameters to run in order.
 > - For minor updates, check CMUpdate.log for details.
 
-HMAN logs entries that resemble the following excerpt:
+HMAN logs entries that resemble the following example:
 
 ```output
 INFO: 196612.ESC file was found. Updating client packages. InteropMode = 0
@@ -1367,7 +1367,7 @@ Failures can occur at any step of the Installation stage. CMUpdate.log is the pr
 
 ##### Issue 1: "Error in verifying the trust of file \\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab"
 
-In CMUpdate.log, you find an error entry that resembles the following excerpt:
+In CMUpdate.log, you find an error entry that resembles the following example:
 
 ```output
 update package content 79FB5420-BB10-44FF-81BA-7BB53D4EE22F has been expanded to folder \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\
