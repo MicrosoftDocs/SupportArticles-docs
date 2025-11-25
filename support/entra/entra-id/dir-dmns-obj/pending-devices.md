@@ -65,7 +65,6 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
    
    ```powershell
    Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{(-not $_.AlternativeSecurityIds)} | select-object -Property AccountEnabled, Id, DeviceId, DisplayName, OperatingSystem, OperatingSystemVersion, TrustType | export-csv pendingdevicelist-summary.csv -NoTypeInformation
-   
    ```
     
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
