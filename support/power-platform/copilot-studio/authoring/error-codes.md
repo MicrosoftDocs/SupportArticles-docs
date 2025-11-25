@@ -39,7 +39,7 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 | [InfiniteLoopInBotContent](#infiniteloopinbotcontent)             | A node was executed too many times.                                 |
 | [InvalidContent](#invalidcontent)                                 | Invalid content was added to the code editor.                       |
 | [LatestPublishedVersionNotFound](#latestpublishedversionnotfound) | Unable to retrieve the published version of the agent.              |
-| [OpenAIHate](#openaiahate)                                        | Hate content was detected.                                          |
+| [OpenAIHate](#openaihate)                                        | Hate content was detected.                                          |
 | [OpenAIJailBreak](#openaijailbreak)                               | Jailbreak content was detected.                                     |
 | [OpenAIndirectAttack](#openaindirectattack)                       | Indirect attack content was detected.                               |
 | [OpenAISelfHarm](#openaiselfharm)                                 | Self-harm content was detected.                                     |
@@ -182,7 +182,7 @@ This includes, but is not limited to:
 
 #### OpenAIJailBreak
 
-**Error message**: The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that is ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](azure/ai-services/content-safety/concepts/jailbreak-detection).
+**Error message**: The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that is ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 **Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent content moderation policies.
 
@@ -197,7 +197,7 @@ This includes, but is not limited to:
 - Fraud
 - Code execution and infecting other systems
 
-For more information, see [Prompt Shields for documents](azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-documents).
+For more information, see [Prompt Shields for documents](/azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-documents).
 
 **Resolution**: If you're testing and didn't mean it to be an attack, make sure your instructions are in line with what you want the agent to be able to do. Otherwise, you can reinforce responsible AI guidelines with your agent users to avoid this situation.
 
