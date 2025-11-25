@@ -295,7 +295,7 @@ The following code is an example of a valid CEL expression for extracting groups
 
 **Cause: Cluster nodes cannot reach the identity provider**
 
-Issues that affect network security groups, firewalls, or Domain Name System prevent the cluster from accessing the identity provider.
+Issues that affect network security groups, firewalls, or the Domain Name System (DNS) prevent the cluster from accessing the identity provider.
 
 ### Solution 1: Verify DNS resolution
 
