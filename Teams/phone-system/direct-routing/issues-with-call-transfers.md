@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 11/25/2025
 ---
 # Issues that affect call transfers
 
@@ -33,7 +33,11 @@ A call transfer can be made by using any of the following methods, in order of p
 
 All transfers that use an SIP Refer message must go through the Microsoft Teams infrastructure. When the Microsoft SIP proxy sends an SIP Refer message to SBC, an SIP Invite message should be returned to the SIP proxy, not to PSTN or to any other destination. It is true even if the call is transferred to an external PSTN number. SBC doesn't have to parse the SIP Refer message to look for the transfer target. SBC should send the SIP Invite message together with the Request-URI (RURI) setting only to contents of the Refer-To header. It also should include the Referred-By header from the SIP Refer message. Make sure that the strings of the SIP Invite message are not changed, and that they are sent as the exact same strings that are provided in the SIP Refer message (especially in the Referred-By header). This is because these strings are used to identify calls, targets, and other important parts of a call transfer.
 
-**Note:** The strings could be either x-* strings or custom strings in the Referred-By and Refer-To headers.
+**Note:** 
+
+- The strings could be either x-* strings or custom strings in the Referred-By and Refer-To headers. 
+
+- When the transfer is handled by the internal Microsoft Teams infrastructure, the transferee might hear an international ringtone.
 
 ## Auto attendant does not transfer calls to an external PSTN number
 
