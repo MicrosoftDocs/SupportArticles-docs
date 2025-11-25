@@ -37,8 +37,8 @@ Before you install an update, consider running the prerequisite check for that u
 | Term | Explanation |
 |---|---|
 | Update package | A collection of files and metadata that are used to update the Configuration Manager infrastructure. |
-| Service Connection Point (SCP) | A site system role that connects Configuration Manager to the Microsoft cloud to synchronize updates. |
-| Service Connection Tool (SCT) | A tool that's used to synchronize and download update packages offline. |
+| Service connection point (SCP) | A site system role that connects Configuration Manager to the Microsoft cloud to synchronize updates. |
+| Service connection tool (SCT) | A tool that's used to synchronize and download update packages offline. |
 | Easy setup payload | The actual payload of an update package. |
 | Redists | A set of redistributable software components that are required to install updates. |
 | Easy setup package | A hidden Configuration Manager package that's used to replicate the payload and redists of an update package. |
@@ -48,7 +48,7 @@ Before you install an update, consider running the prerequisite check for that u
 | Name | Component name | Friendly name | Binary | Description |
 |---|---|---|---|---|
 | DMP Downloader | SMS_DMP_DOWNLOADER | DmpDownloader | Dmpdownloader.dll | Part of the Service Connection Point role. Responsible for synchronizing and downloading update packages. |
-| Service Connection Tool | - | SCT | ServiceConnectionTool.exe | Tool that's used for Offline Site Servicing. |
+| Service connection tool | - | SCT | ServiceConnectionTool.exe | Tool that's used for Offline Site Servicing. |
 | Hierarchy Manager | SMS_HIERARCHY_MANAGER | HMAN | HMAN.dll | Site server component that processes update packages. |
 | Configuration Manager Update | CONFIGURATION_MANAGER_UPDATE | CMUpdate | CMUpdate.exe | Service that installs update packages. |
 
@@ -124,7 +124,7 @@ Select one of the following links to troubleshoot a particular stage, or work th
 
 ## Investigate the Synchronization and Applicability check stages
 
-The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
+The [service connection point (SCP)](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually download updates.
 
 The following steps provide an overview of the process that an online SCP uses to download in-console updates. For a diagram of this process, see [Flowchart - Download updates for Configuration Manager](/intune/configmgr/core/servers/manage/download-updates-flowchart).  
 <br/>
@@ -191,7 +191,7 @@ DMPDownloader sends the `3 (VERIFIED_MANIFEST)` state message to confirm that th
 Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab to ___CABConfigMgr.Update.Manifest.mcm, and then moves the renamed file to one of the following locations:
 
 - If the SCP is remote from the site server, DMPDownloader stores the file at MP\\OUTBOXES\\MCM.box. The MP File Dispatch manager (MPFDM) moves the file to the site server.
-- If the SCP is co-located with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
+- If the SCP is co-located together with the site server, the file is saved directly to inboxes\\hman.box\\ForwardingMsg.
 
 During this process, DMPDownloader logs entries that resemble the following excerpt:
 
@@ -202,7 +202,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 4~~
 ```
 
-DMPDownloader sends the`4 (MANIFEST_DOWNLOADED)` state message to indicate that this process has finished.
+DMPDownloader sends the`4 (MANIFEST_DOWNLOADED)` state message to indicate that this process finished.
 
 In Hierarchy Manager (HMAN), a message forwarding thread moves the incoming MCM file to hman.box\\CFD\\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
 
@@ -472,25 +472,25 @@ INFO: Verify directory E:\ConfigMgr\EasySetupPayload\3b7d84fa-eccc-4ea0-b8ab-abb
 INFO: Setup downloader setupdl.exe: FINISHED
 ```
 
-### Process step 2: Completing the Download
+### Process step 2: Completing the download
 
-As a result of the previous step, the \\EasySetupPayload shared folder contains the \\\<Update GUID> folder, which has an integrated \\Redists folder.
+After step 1 is completed, the \\EasySetupPayload shared folder contains the \\\<Update GUID> folder. The new folder contains an integrated \\Redists folder.
 
-Depending on the SCP configuration, DMPDownloader puts a file that's referred to as the CMU file in one of the following locations:
+Depending on the SCP configuration, DMPDownloader puts a file that's referred to as the *CMU file* in one of the following locations:
 
 - If the SCP is remote from the site server, DMPDownloader puts the file in MP\\OUTBOXES\\MCM.box. Afterwards, MPFDM moves the file to inboxes\\hman.box\\ForwardingMsg for the site server.
-- If the SCP is collocated with the site server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
+- If the SCP is collocated together with the site server, DMPDownloader saves the file directly to the inboxes\\hman.box\\ForwardingMsg folder.
 
-The file has a .mcm extension, and contains the information that marks the state of the update package as **State="262146"** (also known as **"DOWNLOAD_SUCCESS"**). The corresponding log entries resemble the following excerpt:
+The file has an .mcm extension, and contains the information that marks the state of the update package as **State="262146"** (also known as **"DOWNLOAD_SUCCESS"**). The corresponding log entries resemble the following excerpt:
 
 ```output
 The CMU file name is E:\ConfigMgr\inboxes\hman.box\ForwardingMsg\___CMU3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e.MCM~~
 outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e" State="262146" ReportTime="2024-12-17T15:10:03" />~~
 ```
 
-The notification file is just an XML file that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
+The notification file is simply an XML file that contains the update package GUID and its status. `State="262146"` means that the update package was downloaded.
 
-HMAN converts the file back to CMU format, and then moves it to HMAN.box\\CFD. This process resembles that applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
+HMAN converts the file back to CMU format, and then moves it to HMAN.box\\CFD. This process resembles the process that's applied to the manifest CAB file during the [Synchronization stage](#process-step-1-dmpdownloader-downloads-the-update-and-any-supporting-files). The CMUHandler thread in HMAN logs an entry to HMAN.log that resembles the following excerpt:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
@@ -523,7 +523,7 @@ Use the following flowchart to isolate issues that might occur at the Download s
 
 #### How to approach download issues
 
-Whether you use an online or offline SCP, to make sure that SetupDL.exe downloads redists, review the ConfigMgrSetup.log file. If you find that a download from a specific URL failed, look for an entry that resembles the following in either DMPDownloader.log (Online mode) or ServiceConnectionTool.log (Offline mode):
+Whether you use an online or offline SCP, review the ConfigMgrSetup.log file to make sure that SetupDL.exe downloads redists. If you find that a download from a specific URL failed, look for an entry that resembles the following entry in either DMPDownloader.log (Online mode) or ServiceConnectionTool.log (Offline mode):
 
 ```output
 ERROR: Failed to download Admin UI content payload with exception: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.  
@@ -533,18 +533,18 @@ Then, follow these steps:
 
 1. Verify that the computer that hosts the SCP meets all [internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 requirements](/intune/configmgr/core/plan-design/security/enable-tls-1-2).
 1. If the site system configuration uses a proxy for connections, verify the proxy configuration.
-1. to make sure that the file downloads successfully, copy the affected URL and paste it in a browser. Make sure that it has a valid digital signature.
+1. To make sure that the file downloads successfully, copy the affected URL, and paste it into a browser. Make sure that it has a valid digital signature.
 1. Use a network tracing tool to collect network traces of the download operation, and then review the results.
 
-For more information about troubleshooting issues that affect specific downloads, see [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
+For more information about how to troubleshoot issues that affect specific downloads, see [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
 
 #### How to approach extraction issues
 
-There are rare cases when DMPDownloader fails to unpack incoming files even if the content itself is fine. Anti-malware scans can cause this issue. Make sure the [Configuration Manager anti-malware exclusions](../endpoint-protection/recommended-antivirus-exclusions.md) are properly configured.
+There are rare cases when DMPDownloader doesn't unpack incoming files even if the content itself is fine. Antimalware scans can cause this issue. Make sure that the [Configuration Manager anti-malware exclusions](../endpoint-protection/recommended-antivirus-exclusions.md) are configured correctly.
 
 #### When to restart the update synchronization and download processes
 
-If you suspect that the download has completed, but the content has been tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
+If you suspect that the download is finished, but the content was tampered with, delete the affected update and retry the operation. To do this, use the [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from the Synchronization stage.
 
 ## Review progress through the Replication, Prerequisite check, and Installation stages
 
@@ -557,7 +557,7 @@ To start troubleshooting issues at this point in the Updates and Servicing proce
 - Installation
 - Post-installation
 
-Use the following flowchart to narrow down the stage in which your issue occurs.
+Use the following flowchart to narrow the stage in which your issue occurs.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-replication-installation-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication or Installation stages." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scope-replication-installation-stage-expanded.png":::
 
@@ -565,7 +565,7 @@ Use the following flowchart to narrow down the stage in which your issue occurs.
 
 After an update package downloads, it has to replicate through the site topology before it can install. Configuration Manager reuses the Package concept for this process by creating and maintaining a hidden Easy Setup Package. The Easy Setup Package replicates only to primary site servers.
 
-After the Easy Setup Package replicates, Configuration Manager extracts the update from the site server content library to the CMUStaging folder to be used during the installation process.
+After the Easy Setup Package replicates, Configuration Manager extracts the update from the site server content library to the CMUStaging folder that's to be used during the installation process.
 
 The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the update replicates to other sites.  
 <br/>
@@ -575,10 +575,10 @@ The following steps explain the [flow](/intune/configmgr/core/servers/manage/upd
 
 At the top-level site, you take one of the following actions:
 
-- To install the update, select **Install**.
+- Install the update (select **Install**).
 - Start a prerequisite check.
 
-HMAN uses the shared folder \\\\[servername]\\EasySetupPayload\\\<Update GUID> as the source to create or update the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file that's named 2.esc in the HMAN.box\\CFD folder. This action wakes up HMAN, and it starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in SMSDBMon.log that resemble the following excerpt:
+HMAN uses the shared folder, \\\\[servername]\\EasySetupPayload\\\<Update GUID>, as the source to create or update the package. The change in the update package state fires the `CM_UpdatePackages_UPD_HMAN` trigger. The SMSDBMON component drops a file that's named 2.esc in the HMAN.box\\CFD folder. This action wakes up HMAN, and HMAN starts processing the update. If the verbose logging option is turned on, SMSDBMON logs entries in SMSDBMon.log that resemble the following excerpt:
 
 ```output
 RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2  ]
@@ -637,7 +637,7 @@ SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\C
 
 ### Process step 3: DistMgr distributes the content
 
-This step is essentially the same as for any intersite content replication process. However the Easy Setup Package isn't replicated to secondary sites or distribution points.
+This step is essentially the same as for any intersite content replication process. However, the Easy Setup Package isn't replicated to secondary sites or distribution points.
 
 Distribution Manager (DistMgr) uses \\\\\<SCP.FQDN>\\EasySetupPayLoad\\\<Update GUID> to create a snapshot of the Easy Setup Package and send it to the content library of the top-level site.
 
@@ -700,7 +700,7 @@ where PackageGUID='<Package GUID>'
 
 ### Process step 4: Finish replicating the package
 
-After the replication completes, DistMgr marks the process as successful and logs entries that resemble the following excerpt:
+After the replication finishes, DistMgr marks the process as successful, and logs entries that resemble the following excerpt:
 
 ```output
 Found package properties updated notification for package 'CAS10001'  
@@ -726,9 +726,9 @@ The content of the update package (also known as the EasySetup Package) resides 
 
 ### Troubleshoot the Replication stage
 
-To summarize the detailed description of the steps, the replication process starts when HMAN detects a new update package and updates the `EasySetupSettings` SQL table settings. DistMgr takes over to create the Easy Setup Package snapshot from the `\EasySetupPayload\` share and saves it into the content library as the Easy Setup Package. This package follows the usual inter-site content replication flow, and replicates to child primary sites like any other classic Package. The best place to start troubleshooting issues in this stage is by filtering the `CM_UpdatePackages` table for the specific update package GUID.
+To summarize the detailed description of the steps, the replication process starts when HMAN detects a new update package and updates the `EasySetupSettings` SQL table settings. DistMgr takes over to create the Easy Setup Package snapshot from the `\EasySetupPayload\` share, and saves it to the content library as the Easy Setup Package. This package follows the usual intersite content replication flow, and replicates to child primary sites in the same manner as any other classic Package. The best place to start troubleshooting issues in this stage is by filtering the `CM_UpdatePackages` table for the specific update package GUID.
 
-Use the following flowchart to narrow down issues that might occur at the Replication stage. This flowchart applies whether the Installation stage or the Prerequisite check stage triggered the Replication stage.
+Use the following flowchart to narrow issues that might occur at the Replication stage. This flowchart applies whether the Installation stage or the Prerequisite check stage triggered the Replication stage.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-stage.png" alt-text="Diagram of a decision tree to isolate an issue that might occur during the Replication stage." lightbox="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-stage-expanded.png":::
 
@@ -736,7 +736,7 @@ In a multi-tier hierarchy, the child primary sites replicate the Easy Setup Pack
 
 #### Troubleshoot issue: Status of the update package remains "State=2 (Enabled)"
 
-If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log.
+If the state of the package doesn't change from `State=2 (Enabled)`, this typically means that HMAN can't finish its task. To troubleshoot this issue, analyze HMAN.log:
 
 1. Look for entries that mention processing the 2.esc file.
 1. Filter the log by the respective thread.
@@ -746,10 +746,10 @@ If the state of the package doesn't change from `State=2 (Enabled)`, this typica
    Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
    ```
 
-1. If the HMAN.log file rolled over (removing older entries), try to manually recreate the empty 2.esc file in the HMAN.box\\CFD folder. This operation should trigger the same process again.
+1. If the HMAN.log file rolled over (removing older entries), try to manually re-create the empty 2.esc file in the HMAN.box\\CFD folder. This operation should trigger the same process again.
 
    > [!NOTE]  
-   > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following excerpt:
+   > Even if SCP is local to the site server, HMAN has to use a share path (such as \\\\\<SCP FQDN>\\EasySetupPayLoad\\\<PackageGUID>) in order to calculate the hash for the Easy Setup Package and to update the `EasySetupSettings` table. If HMAN can't access the share, it logs an error message that resembles the following excerpt:
    >
    > ```output
    > Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
@@ -760,7 +760,7 @@ If the state of the package doesn't change from `State=2 (Enabled)`, this typica
 
 #### Troubleshoot issue: Status of the update package has changed from "State=2 (Enabled)"
 
-If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt:
+If the state of the package isn't `State=2 (Enabled)`, review the **vEasySetupPackage** SQL view of the Easy Setup Package information. The data that this view shows should resemble the following excerpt.
 
 | PackageID | PackageVersion | PackageHash | PackageGUID | StoredPkgHash | Source | SourceSite | LastRefresh | StoredPkgVersion | StorePkgFlag | SourceDate | SourceVersion | SourceSize |
 |-----------|----------------|-------------|-------------|---------------|--------|-----------|-------------|------------------|--------------|------------|---------------|------------|
@@ -811,7 +811,7 @@ For more information about the current set of Prerequisite check rules, see [Lis
 
 After you select the update package and select **Run prerequisite check**, the console calls the `InitiateUpgrade` WMI method (from the `SMS_CM_UpdatePackages` WMI class of the SMS Provider namespace). The console sets the method's `Flag` parameter to `1 (PREREQ_ONLY)`.
 
-If Configuration Manager hasn't yet [replicated the update package](#investigate-the-replication-stage), it does so now.
+If Configuration Manager didn't yet [replicate the update package](#investigate-the-replication-stage), it does that step now.
 
 ### Process step 2: HMAN notifies CMUpdate of the requested check
 
@@ -826,7 +826,7 @@ There are update package in progress. Cleanup will skip this time.
 
 ### Process step 3: CMUpdate extracts the update
 
-After 10 minutes elapses or after CMUpdate.box receives an inbox trigger, CMUpdate.exe runs the following SQL stored procedure:
+After 10 minutes elapses, or after CMUpdate.box receives an inbox trigger, CMUpdate.exe runs the following SQL stored procedure:
 
 ```sql
 exec spCMUGetPendingUpdatePackage
@@ -834,7 +834,7 @@ exec spCMUGetPendingUpdatePackage
 
 This stored procedure collects the information from the `CM_UpdatePackages` and `CM_UpdatePackageSiteStatus` tables for the site that's running the check. As soon as the CMUpdate thread detects an update package that has the `State = 65538 (CONTENT_REPLICATION_SUCCESS)` status, it extracts the Easy Setup Package content to the \\CMUStaging\\\<Update GUID>` folder.
 
-CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`, which tracks the status of the extraction process (the check starts when the extraction is complete).
+CMUpdate logs entries to CMUpdate.log that resemble the following excerpt. The example entries include a reference to `SubStageID=0xd0005`. This reference tracks the status of the extraction process (the check starts when the extraction is complete).
 
 ```output
 Detected a change to the "E:\ConfigMgr\inboxes\cmupdate.box" directory.
@@ -860,7 +860,7 @@ Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005,
 
 The same process occurs on the other primary sites.
 
-Additionally, CMUpdate verifies the signature and extracts the update.map.cab file. This file contains update.map file, which defines the hashes and the locations for the files that the update affects.
+Additionally, CMUpdate verifies the signature and extracts the Update.map.cab file. This file contains update.map file. This file defines the hashes and the locations for the files that the update affects.
 
 ### Process step 4: CMUpdate starts the check
 
@@ -888,7 +888,7 @@ Preparing prereq check for site server [<Site Server FQDN>]...~
 
 During this process, CMUpdate silently sets the `Update State` in the `CM_UpdatePackages` table to `131073 (PREREQ_IN_PROGRESS)`.
 
-Then CMUpdate looks for the update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section, which contains the hashes of the files that it needs. This section of the file resembles the following excerpt:
+Then, CMUpdate looks for the Update.map file in the \\CMUStaging\\\<PackageGUID>\\SMSSetup folder. In the file, CMUpdate looks for the `CONFIGURATION_MANAGER_UPDATE` section for the hashes of the files that it needs. This section of the file resembles the following excerpt:
 
 ```xml
 BEGIN_COMPONENT_FILELIST
@@ -915,28 +915,28 @@ BEGIN_COMPONENT_FILELIST
 END_COMPONENT_FILELIST
 ```
 
-The file of particular interest is prereqcore.dll, which contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64 and compares it to the hash in the update.map file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
+The file of particular interest is Prereqcore.dll. This file contains the actual prerequisite check logic. CMUpdate calculates the hash of the file that resides in \\CMUStaging\\\<PackageGUID>\\SMSSetup\\BIN\\X64, and compares it to the hash in the Update.map file. If the hashes match, the check continues. CMUpdate logs an entry that resembles the following excerpt:
 
 ```output
 prereqcore has hash value SHA256:48899098998C712DDF097638B281D5620D8C511FB9B51E2391119281E0ECA43E
 ```
 
-Then CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
+Then, CMUpdate loads prereqcore.dll, and calls the entry point `RunPrereqChecks`. The corresponding log entry resembles the following excerpt:
 
 ```output
 Running prereq checking against Server [<Site Server>] ...~
 ```
 
 > [!NOTE]  
-> Hotfixes typically don't have a specific section in the update.map file. In such cases, CMUpdate uses the prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
+> Hotfixes typically don't have a specific section in the Update.map file. In such cases, CMUpdate uses the Prereqcore.dll file that's associated with the installed version of Configuration Manager, and the log entry resembles the following excerpt:
 >
 > ```output
 >update.map has no update for CONFIGURATION_MANAGER_UPDATE
 > ```
 
-### Process step 5: The Prerequisite checker component starts up
+### Process step 5: The Prerequisite checker component starts
 
-Prerequisite checker starts up within the same thread as CMUpdate. (note the command line). However, Prerequisite checker has its own log file (C:\ConfigMgrPrereq.log). Prerequisite checker passes the list of relevant site roles to the actual worker, and logs entries that resemble the following excerpt:
+Prerequisite checker starts up within the same thread as CMUpdate (notice the command line). However, Prerequisite checker has its own log file (C:\ConfigMgrPrereq.log). Prerequisite checker passes the list of relevant site roles to the actual worker, and logs entries that resemble the following excerpt:
 
 ```output
 ********************************************
@@ -974,7 +974,7 @@ INFO: Executing prerequisite functions...
 ...
 ```
 
-For a site database server, Prerequisite checker logs entries that resemble the following excerpt. Note that the thread spawns a bootstrap.
+For a site database server, Prerequisite checker logs entries that resemble the following excerpt. Notice that the thread spawns a bootstrap.
 
 ```output
 ===== INFO: Prerequisite Type & Server: SQL:<Site Database Server> =====
@@ -993,7 +993,7 @@ For a site database server, Prerequisite checker logs entries that resemble the 
 ...
 ```
 
-For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following excerpt.
+For an SMS provider (also known as SDK), Prerequisite checker logs entries that resemble the following excerpt:
 
 ```output
 ===== INFO: Prerequisite Type & Server: SDK:<SMS Provider Server> =====
@@ -1062,16 +1062,16 @@ If the Prerequisite check takes a long time or fails completely, use the followi
 Typically, Prerequisite check issues belong to one of the following categories:
 
 - The check gets stuck in the **Checking Prerequisites** state. In most cases, the real issue occurred during the [Replication stage](#investigate-the-replication-stage).
-- The check completes, but the final state is **Prerequisites Failed**. In this case, the check ran successfully and no issues occurred during the [Replication stage](#investigate-the-replication-stage).
+- The check finishes, but the final state is **Prerequisites Failed**. In this case, the check ran successfully, and no issues occurred during the [Replication stage](#investigate-the-replication-stage).
   
-In the **Prerequisites Failed** case, to find the real issue, review the following resources:
+In the **Prerequisites Failed** case, review the following resources to find the real issue:
 
-- ConfigMgrPrereq.log.
-- The console, in  **Monitoring** > **Overview** > **Updates and Servicing Status** > **Description** for each site.
+- ConfigMgrPrereq.log
+- The console, in  **Monitoring** > **Overview** > **Updates and Servicing Status** > **Description** for each site
 
 #### Troubleshooting SQL Client prerequisites
 
-The latest versions of Configuration Manager introduced various SQL client prerequisites. The current installation process for update packages doesn't automatically update these clients. As a result, it makes sense to install up-to-date SQL Clients before you install updates.
+The latest versions of Configuration Manager introduced various SQL client prerequisites. The current installation process for update packages doesn't automatically update these clients. Therefore, it makes sense to install up-to-date SQL clients before you install updates.
 
 Since version 1810, Configuration Manager requires SQL Native Client version 11.4.7001.0 or a later version. To view the current requirement, check the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQLNCLI11\InstalledVersion` registry entry.
 
@@ -1083,7 +1083,7 @@ To meet both SQL Server prerequisites, consider manually installing the followin
 - msodbcsql.msi
 
 > [!NOTE]  
-> These files are only available for major releases.
+> These files are available for only major releases.
 
 Alternatively, download the latest binaries from the following URLs in the Microsoft Download Center:
 
@@ -1092,7 +1092,7 @@ Alternatively, download the latest binaries from the following URLs in the Micro
 
 #### Troubleshooting blocking checks that frequently recur
 
-The following issues are known to frequently cause failures in the prerequisite checks. There's no way to bypass these checks, so you have to resolve the blocking condition. If you're not sure how to resolve an issue, consider opening a ticket with Microsoft Support.
+The following issues are known to frequently cause failures in the prerequisite checks. It's not possible to bypass these checks. Therefore, you have to resolve the blocking condition. If you're not sure how to resolve an issue, consider contacting Microsoft Support.
 
 ##### Site system server runs on Windows Server 2012 or 2012 R2
 
@@ -1101,18 +1101,18 @@ You see the following message in the console:
 > **Windows Server 2012 and 2012 R2 lifecycle**
 > Support for Windows Server 2012 and 2012 R2 ends on October 9, 2023. Plan to upgrade your site servers to a supported operating system. For more information, see [New options for SQL Server 2012 and Windows Server 2012 end of support](https://go.microsoft.com/fwlink/?linkid=2186091).
 
-This message means that the Prerequisite checker detects a site server or a site system server that runs on Windows Server 2012 or 2012 R2. The check failed and you can't install the update.
+This message means that the Prerequisite checker detects a site server or a site system server that runs on Windows Server 2012 or 2012 R2. The check failed, and you can't install the update.
 
 > [!NOTE]  
-> This check doesn't apply to secondary site remote roles, and temporarily doesn't apply to Distribution Points (DPs) If the prerequisite check finds a DP that's running on Windows Server 2012 or Windows Server 2012 R2, you receive a warning but the check doesn't fail.
+> This check doesn't apply to secondary site remote roles, and temporarily doesn't apply to Distribution Points (DPs). If the prerequisite check finds a DP that's running on Windows Server 2012 or Windows Server 2012 R2, you receive a warning, but the check doesn't fail.
 
-If you recently performed an in-place upgrade to Windows Server on a remote site system, restart the affected computer or its SMS_Executive service. The restart ensures that the Prerequisite checker correctly detects the new operating system version.
+If you recently performed an in-place upgrade to Windows Server on a remote site system, restart the affected computer or its SMS_Executive service. The restart makes sure that the Prerequisite checker correctly detects the new operating system version.
 
 ##### Deprecated features: Resource access profiles or the certificate registration point role
 
 Resource access profiles and their related features and deployments are deprecated. If Prerequisite checker detects any of these features, it blocks the update. It also blocks the update if it detects any existing co-managed device that has an RA Profile workload that's set toward Configuration Manager.
 
-To pass the check, follow the official guidance in [Co-management workloads](/intune/configmgr/comanage/workloads) to move the **Resource Access Policies workload** slider to **Intune only**. If co-management isn't configured, you have to configure it at least temporarily to move the slider.
+To pass the check, follow the official guidance in [Co-management workloads](/intune/configmgr/comanage/workloads) to move the **Resource Access Policies workload** slider to **Intune only**. If co-management isn't configured, you have to configure it at least temporarily to be able to move the slider.
 
 This check might also fail if it detects the Certificate Registration Point role. In the console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, select the site system that hosts the CRP role, and remove the role.
 
@@ -1134,15 +1134,15 @@ In the console, you see the following message:
 
 > HTTPS or Enhanced HTTP are not enabled for client communication. HTTP-only communication is deprecated, and support is removed in this version of Configuration Manager.
 >
->To proceed with the upgrade, enable a more secure communication method for the site either by enabling HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
+> To proceed with the upgrade, enable a more secure communication method for the site by enabling either HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
 
-Currently, Configuration Manager sites only support Enhanced HTTP or HTTPS for communication. Other options that were supported previously were deprecated in Configuration Manager version 2409 and later versions. 
+Currently, Configuration Manager sites support only Enhanced HTTP or HTTPS for communication. Other options that were supported previously were deprecated in Configuration Manager version 2409 and later versions. 
 
 To resolve this issue, switch the Site Communication to Enhanced HTTP or HTTPS. For official guidance, see [Enable the site for HTTPS-only or enhanced HTTP](/intune/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
 
 ## Investigate the Installation stage
 
-When you select an update in the console and then select **Install Update** (and if applicable, you ignore any warning that appears), the actual site update starts. First, to ensure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the check fails, the update stops.  
+Select an update in the console, and then select **Install Update**. (If applicable, ignore any warning that appears.) After you take this action, the actual site update starts. To make sure that the site is ready for the update, Configuration Manager always reruns the [Prerequisite checks](#investigate-the-prerequisite-check-stage). If the checks fail, the update stops.  
 <br/>
 <details><Summary>Select here to see the Installation steps.</summary>
 
@@ -1172,7 +1172,7 @@ There is no service window defined for the site server to apply the CM server up
 
 ### Process step 2: CMUpdate verifies the state of the update and redist content
 
-CMUpdate verifies that the CMUStaging content is intact, and then reads the update.map file. It logs entries that resemble the following excerpt:
+CMUpdate verifies that the CMUStaging content is intact, and then reads the Update.map file. It logs entries that resemble the following excerpt:
 
 ```output
 Checking if the CMU Staging folder already has the content extracted.
@@ -1184,7 +1184,7 @@ Successfully read file \\?\E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-CMUpdate processes the redists and creates an in-memory list of files to be copied. It logs entries that resemble the following excerpt:
+CMUpdate processes the redists, and creates an in-memory list of files to be copied. It logs entries that resemble the following excerpt:
 
 ```output
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0006, IsComplete=1, Progress=1, Applicable=1)
@@ -1200,7 +1200,7 @@ Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0006,
 
 ### Process step 3: CMUpdate installs the update
 
-From here the real update starts. CMUpdate follows these steps:
+At this point, the actual update starts. CMUpdate follows these steps:
 
 1. Unpack and run the pre-upgrade SQL scripts from the \\CMUStaging\\\<Update GUID>\\redist\\ConfigMgr.AutoUpgradeScripts.cab folder.
 1. Turn off SQL Server Service Broker.
@@ -1219,7 +1219,7 @@ From here the real update starts. CMUpdate follows these steps:
 1. Update the Admin console binaries.
 1. Turn on SQL Server Service Broker.
 
-During this step, CMUpdate also copies the redists from the \\CMUStaging\\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
+During this process, CMUpdate also copies the redists from the \\CMUStaging\\\<Update GUID>\\redist` folder. CMUpdate uses the copied files to replace 0-byte placeholder files in the \\CMUStaging\\\<Update GUID>\\SMSSetup\\\* folders.
 
 CMUpdate logs entries that resemble the following excerpt:
 
@@ -1242,7 +1242,7 @@ File E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E\redist\NDP462-
 
 ### Process step 4: CMUpdate updates the OSD packages
 
-After CMUpdate installs the files, it updates the OSD packages and logs entries that resemble the following excerpt:
+After CMUpdate installs the files, it updates the OSD packages, and logs entries that resemble the following excerpt:
 
 ```output
 INFO: Adding default USMT package ...
@@ -1254,7 +1254,7 @@ INFO: Attempting to export arm64 boot image from ADK installation source
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd001a, IsComplete=3, Progress=100, Applicable=1)
 ```
 
-Then CMUpdate asynchronously waits for multiple processes (including SiteComp) to complete. It logs entries that resemble the following excerpt:
+Then, CMUpdate asynchronously waits for multiple processes (including SiteComp) to finish. It logs entries that resemble the following excerpt:
 
 ```output
 ~   Starting ConfigMgr Update post installation monitor thread...
@@ -1294,11 +1294,11 @@ CMUpdate performs most of the following post-installation tasks:
 HMAN performs the following post-installation tasks:
 
 1. Update the Configuration Manager client package.
-1. Turn on features that are specified in the upgrade or update wizard. Then reopen the console to display the features.
+1. Turn on features that are specified in the upgrade or update wizard. Then, reopen the console to display the features.
 
 > [!NOTE]
 >
-> - Update.map contains the list of updates and files to be replaced and added. To review the list of files, open update.map in Notepad.
+> - Update.map contains the list of updates and files to be replaced and added. To review the list of files, open Update.map in Notepad.
 > - Install.map contains the list of steps that the installation process runs. It serves as a workflow for CMUpdate.exe that provides the steps and parameters to run in order.
 > - For minor updates, check CMUpdate.log for details.
 
@@ -1347,7 +1347,7 @@ Left join serverdata on cmupss.SiteNumber=ServerData.ID
 where cmupss.PackageGUID = @UpdateGUID and cmupss.state<>196612
 ```
 
-If the Installation stage is stuck in the **Installing** state or fails completely, go to **Monitoring** > **Overview** > **Updates and Servicing Status** and review the update package state. You should be able to identify the site that has an issue.
+If the Installation stage is stuck in the **Installing** state or fails completely, go to **Monitoring** > **Overview** > **Updates and Servicing Status** to review the update package state. You should be able to identify the site that has an issue.
 
 Use the following flow chart to help identify the issue.
 
@@ -1357,8 +1357,8 @@ The following issues can cause an update package to appear to be stuck during th
 
 - Installation is actually progressing. To review the current progress, see the CMUpdate.log file.
 - The update content didn't finish replicating, or didn't replicate correctly. For assistance, see [Troubleshoot the Replication stage](#troubleshoot-the-replication-stage) earlier in this article.
-- One of the sites is waiting for a service window. Make sure that the service window exists and is correctly configured.
-- CMUpdate has stopped, so the installation process can't continue.
+- One of the sites is waiting for a service window. Make sure that the service window exists and is configured correctly.
+- CMUpdate stopped. Therefore, the installation process can't continue.
 - The update package content can't replicate between the CAS and the primary sites because of a Database Replication Service (DRS) issue.
 
 Failures can occur at any step of the Installation stage. CMUpdate.log is the primary log to use for investigating installation issues. However, if the failure occurs at any of the post-installation steps, review the SiteComp.log file for information about component reinstallations and the SMSExec.log file for information about component startup.
@@ -1367,7 +1367,7 @@ Failures can occur at any step of the Installation stage. CMUpdate.log is the pr
 
 ##### Issue 1: "Error in verifying the trust of file \\\\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab"
 
-In CMUpdate.log, you find an error message that resembles the following excerpt:
+In CMUpdate.log, you find an error entry that resembles the following excerpt:
 
 ```output
 update package content 79FB5420-BB10-44FF-81BA-7BB53D4EE22F has been expanded to folder \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\
@@ -1376,21 +1376,21 @@ Error in verifying the trust of file \\?\...\CMUStaging\79FB5420-BB10-44FF-81BA-
 
 This issue occurs because the files aren't downloaded correctly. To fix this issue, follow these steps:
 
-1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. If needed, switch the SCP to Offline mode .
+1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. If it's necessary, switch the SCP to Offline mode.
 1. Run the RetryContentReplication WMI method. This method forces the Easy Setup Package to update. Wait for replication to finish.
-1. Try to install the update again.
+1. Try again to install the update.
 
-##### Issue 2: Update installs on the CAS and primary sites, but the console still displays "Installing"
+##### Issue 2: Update installs on the CAS and primary sites, but console still displays "Installing"
 
-A specific global replication group, **CMUpdates**, replicates the installation completion information once per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on all sites.
+A specific global replication group, **CMUpdates**, replicates the installation completion information one time per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on all sites.
 
 In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 
-The CMUpdate process, the main driver of update package installation, hosts the CONFIGURATION_MANAGER_UPDATE service. If CMUpdate fails, the installation hangs at a specific stage. CMUpdate.log might repeatedly record the same activity. To investigate this issue, open Event Viewer and review the Windows Application log for Event ID 1000 (Process crash).
+The CMUpdate process is the main driver of update package installation. It hosts the CONFIGURATION_MANAGER_UPDATE service. If CMUpdate fails, the installation stops responding at a specific stage, and CMUpdate.log might repeatedly record the same activity. To investigate this issue, open Event Viewer, and review the Windows Application log for Event ID 1000 (Process crash).
 
-Security software can also cause this behavior by preventing the updated CMUpdate binary from running, or by stopping the process. To investigate this issue, turn off the security software and then try to update again. If the issue persists, use the [ProcDump](/sysinternals/downloads/procdump) tool to collect a process memory dump. Download and install the tool, and at a command prompt, run the following command:
+Security software can also cause this behavior by preventing the updated CMUpdate binary from running, or by stopping the process. To investigate this issue, turn off the security software, and then try again to update. If the issue persists, use the [ProcDump](/sysinternals/downloads/procdump) tool to collect a process memory dump file. Download and install the tool, and then run the following command at a command prompt:
 
 ```console
 procdump -ma -e cmupdate.exe
@@ -1403,7 +1403,7 @@ Create a support ticket, attach the dump file, and then submit it to Microsoft S
 If this issue occurs, look for the following typical causes:
 
 - Third-party objects in the Configuration Manager SQL Server database. Remove the third-party objects, and then install the update again.
-- Third-party software that accesses the Configuration Manager SQL Server database, and locks first-party database objects. For example, an external Configuration Manager database might behave this way. Make sure that other software doesn't lock database objects while CMUpdate works in the database.
+- Third-party software that accesses the Configuration Manager SQL Server database, and locks first-party database objects. For example, an external Configuration Manager database might behave in this manner. Make sure that other software doesn't lock database objects while CMUpdate works in the database.
 
 ## Reference
 
