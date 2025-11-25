@@ -35,9 +35,13 @@ Insufficient system resources exist to complete the requested service.
 > [!NOTE]  
 > The second message typically occurs when you use `dism /online /add-package /packagepath:<path of .cab file>`to install the update.
 
+When you review events in Event Viewer, you might also find Event ID 2004. The description of this event resembles the following example:
+
+> Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory: java.exe (1152) consumed 33821605888 bytes, java.exe (6316) consumed 5259997184 bytes, and java.exe (12536) consumed 1569894400 bytes.
+
 ## Cause
 
-This issue occurs if the computer doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
+This issue occurs if the computer or virtual machine (VM) doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
 
 - Third-party applications are consuming lots of virtual memory.
 - The computer's virtual memory isn't managed automatically. Instead, it's manually configured.
@@ -61,6 +65,9 @@ After the computer restarts, try again to update it.
 
 ## Resolution
 
+> [!NOTE]  
+> If the affected computer is a VM, consider upgrading the virtual hardware of the VM to increase its available memory resources.
+
 To configure the computer to automatically manage its virtual memory, follow these steps.
 
 1. To open **System Properties**, select Search and then enter **sysdm.cpl**.
@@ -68,6 +75,7 @@ To configure the computer to automatically manage its virtual memory, follow the
 1. In **Performance Options**, select **Advanced**, and then under **Virtual memory**, select **Change**.
 1. Make sure that **Automatically manage paging file size for all drives** is selected, and then select **OK**.
 1. Restart the computer.
+1. To make sure that this issue doesn't recur, monitor the computer's available memory resources.
 
 ## More information
 
