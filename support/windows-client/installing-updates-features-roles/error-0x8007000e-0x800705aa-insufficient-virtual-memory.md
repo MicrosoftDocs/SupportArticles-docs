@@ -65,6 +65,9 @@ After the computer restarts, try again to update it.
 
 ## Resolution
 
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, se [Backup OS Disk](https://learn.microsoft.com/azure/backup/about-azure-vm-restore).
+
 > [!NOTE]  
 > If the affected computer is a VM, consider upgrading the virtual hardware of the VM to increase its available memory resources.
 
