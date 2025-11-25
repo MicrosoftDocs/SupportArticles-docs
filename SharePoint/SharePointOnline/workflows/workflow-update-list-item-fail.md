@@ -18,6 +18,9 @@ ms.date: 12/17/2023
 
 # SharePoint Online workflow that uses the Update List Item action fails to update a Person or Group column
 
+> [!CAUTION]
+> SharePoint 2013 workflows are scheduled for retirement in April 2024. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+
 ## Problem
 
 Consider the following scenario:

@@ -20,6 +20,9 @@ ms.date: 12/17/2023
 
 # SharePoint 2013 Workflow Error: "To try again, reload the page and then start the workflow"
 
+> [!CAUTION]
+> SharePoint 2013 workflows are scheduled for retirement in April 2024. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+
 ## Symptoms
 
 When starting a SharePoint 2013 Workflow, you encounter the following error message displayed in an alert:

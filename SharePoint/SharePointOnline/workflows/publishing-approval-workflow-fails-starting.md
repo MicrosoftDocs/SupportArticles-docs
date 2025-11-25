@@ -19,6 +19,9 @@ ms.date: 12/17/2023
 
 # Publishing Approval workflow doesn't automatically start in SharePoint Online or in SharePoint Server on-premises
 
+> [!CAUTION]
+> SharePoint 2013 workflows are scheduled for retirement in April 2024. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+
 ## Problem
 
 A Publishing Approval workflow that uses the Microsoft SharePoint 2010 Workflow platform doesn't start automatically in SharePoint Online or in an on-premises installation of SharePoint Server. On the Workflow Status page, you receive the following error message:

@@ -18,6 +18,9 @@ ms.date: 12/17/2023
 
 # A Workflow Status error is reported when a SharePoint 2010 workflow stops
 
+> [!CAUTION]
+> SharePoint 2013 workflows are scheduled for retirement in April 2024. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+
 ## Symptoms
 
 As you create a Microsoft SharePoint 2010 workflow in Microsoft SharePoint Designer 2013, one of the available workflow actions is **Stop Workflow**. The **Stop Workflow** action sets the status of the workflow instance to **Completed** and optionally logs a custom message to the **Workflow History** list.
