@@ -33,9 +33,9 @@ Insufficient system resources exist to complete the requested service.
 ```
 
 > [!NOTE]  
-> The second message typically occurs when you use `dism /online /add-package /packagepath:<path of .cab file>`to install the update.
+> The second message typically occurs if you use `dism /online /add-package /packagepath:<path of .cab file>`to install the update.
 
-When you review events in Event Viewer, you might also find Event ID 2004. The description of this event resembles the following example:
+When you review events in Event Viewer, you might also find Event ID 2004 recorded. The description of this event resembles the following example:
 
 > Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory: java.exe (1152) consumed 33821605888 bytes, java.exe (6316) consumed 5259997184 bytes, and java.exe (12536) consumed 1569894400 bytes.
 
@@ -71,14 +71,14 @@ After the computer restarts, try again to update it.
 > [!NOTE]  
 > If the affected computer is a VM, consider upgrading the virtual hardware of the VM to increase its available memory resources.
 
-To configure the computer to automatically manage its virtual memory, follow these steps.
+To configure the computer to automatically manage its virtual memory, follow these steps:
 
-1. To open **System Properties**, select Search and then enter **sysdm.cpl**.
-1. In **System Properties**, select **Advanced**, and then under **Performance**, select **Settings**.
-1. In **Performance Options**, select **Advanced**, and then under **Virtual memory**, select **Change**.
+1. Open **System Properties**: Select **Search**, and enter **sysdm.cpl**.
+1. In **System Properties**, select **Advanced** > **Performance** > **Settings**.
+1. In **Performance Options**, select **Advanced** > **Virtual memory** > **Change**.
 1. Make sure that **Automatically manage paging file size for all drives** is selected, and then select **OK**.
 1. Restart the computer.
-1. To make sure that this issue doesn't recur, monitor the computer's available memory resources.
+1. To make sure that this issue doesn't reoccur, monitor the computer's available memory resources.
 
 ## More information
 
