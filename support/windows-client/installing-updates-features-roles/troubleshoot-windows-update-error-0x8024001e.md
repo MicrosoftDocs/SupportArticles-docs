@@ -3,6 +3,7 @@ title: Troubleshoot Windows Update Error 0x8024001E
 description: Learn how to fix Windows Update error 0x8024001E on Windows Client computers or Azure Windows VMs.
 ms.date: 12/01/2025
 manager: dcscontentpm
+ai-usage: ai-generated
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dougking, v-appelgatet
@@ -64,7 +65,7 @@ Use this event information to identify which scheduled task interfered with the 
 
 ### Symptom 4: Windows Server Update Service (WSUS) issue, and secondary error code 0x800f0821
 
-In WSUS environments, a WSUS issue might prevent an update from installing. It might also generate error code 0x8024001E plus secondary error code (0x800f0821). To learn whether this issue occurred, use Event Viewer to review the System event logs. Look for sequences of events that resemble the following example:
+In WSUS environments, a WSUS issue might prevent an update from installing. It might also generate error code 0x8024001E plus secondary error code 0x800f0821. To learn whether this issue occurred, use Event Viewer to review the System event logs. Look for sequences of events that resemble the following example:
 
 ```output
 Error Installation Failure: Windows failed to install the following update with error 0x8024001E: 2023-11 Cumulative Update for Windows
@@ -91,7 +92,7 @@ Follow these steps:
 1. If you identify a scheduled task that disrupts the update, disable that scheduled task.
 1. If you're using WSUS, make sure that WSUS is working correctly. For more information about how to manage WSUS, see [Windows Server Update Services best practices](../../mem/configmgr/update-management/windows-server-update-services-best-practices.md).
 1. Make sure that drive C has at least 10 GB of free space.
-1. Rename the software distribution folder. Open a Windows Command Prompt window, and then run the following command:
+1. Rename the software distribution folder. Open a Windows Command Prompt window, and then run the following set of commands (in sequence):
 
    ```console
    net stop wuauserv
@@ -108,7 +109,7 @@ Follow these steps:
 1. Try again to install the update. Use one of the following methods:
 
    - Open **Windows Settings**, and select **Windows Update**. Follow the prompts to check for and install updates.
-   - Manually download updates from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/). At the command prompt, run the following command:
+   - Manually download updates from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/). At the command prompt, run the following set of commands (in sequence):
 
      ```console
      expand -f:*x64.cab c:\temp\filename.msu c:\temp
@@ -119,7 +120,3 @@ Follow these steps:
    > Make sure that the computer or VM doesn't restart during the update process unless the update process requires a restart.
 
 If the issue persists, contact Microsoft Support.
-
-**Partial Use of AI disclaimer**
-
-Certain sections of this document were generated or enhanced by using artificial intelligence (AI) technology.
