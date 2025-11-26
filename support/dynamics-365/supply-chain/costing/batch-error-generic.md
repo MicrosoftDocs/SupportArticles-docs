@@ -1,5 +1,5 @@
 ---
-title: Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
+title: Batch task failed: Cannot select a record in Current client sessions
 description: Error during inventory closing, recalculation or reverse -- Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
 author: soumyamoydas
 ms.date: 11/26/2025
@@ -11,7 +11,7 @@ ms.search.region: Global
 ms.author: soumyamoydas
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.43
-ms.custom: sap:Cost management\Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
+ms.custom: sap:Cost management\Batch task failed: Cannot select a record in Current client sessions
 ---
 
 # Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
