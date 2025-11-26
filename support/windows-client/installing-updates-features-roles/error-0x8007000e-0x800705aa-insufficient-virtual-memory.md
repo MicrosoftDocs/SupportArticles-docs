@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows servicing, updates and features on demand\windows update - install errors unknown or code not listed
+- sap:windows servicing, updates and features on demand\windows update - install errors starting with 0x8007 (error)
 - pcy:WinComm Devices Deploy
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
