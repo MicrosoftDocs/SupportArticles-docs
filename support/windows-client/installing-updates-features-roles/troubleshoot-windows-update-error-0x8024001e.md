@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error 0x8024001E
 description: Learn how to fix Windows Update error 0x8024001E on Windows Client computers or Azure Windows VMs.
-ms.date: 11/26/2024
+ms.date: 12/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -88,7 +88,7 @@ The following conditions can cause error code 0x8024001E:
 Follow these steps:
 
 1. If you identify a scheduled task that disrupts the update, disable that scheduled task.
-1. If you're using WSUS, make sure that WSUS is working correctly. For more information about managing WSUS, see [Windows Server Update Services best practices](../mem/configmgr/update-management/windows-server-update-services-best-practices.md).
+1. If you're using WSUS, make sure that WSUS is working correctly. For more information about managing WSUS, see [Windows Server Update Services best practices](../../mem/configmgr/update-management/windows-server-update-services-best-practices.md).
 1. Make sure that the C:/ drive has at least 10-15 GB of free space.
 1. Rename the software distribution folder. Open a Windows Command Prompt window, and then run the following commands:
 
