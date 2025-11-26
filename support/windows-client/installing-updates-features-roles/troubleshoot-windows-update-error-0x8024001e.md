@@ -119,4 +119,4 @@ Follow these steps:
    > [!IMPORTANT]  
    > Make sure that the computer or VM doesn't restart during the update process unless the update process requires a restart.
 
-If the issue persists, contact Microsoft Support.
+If the issue persists, see [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md), and then contact Microsoft Support.
