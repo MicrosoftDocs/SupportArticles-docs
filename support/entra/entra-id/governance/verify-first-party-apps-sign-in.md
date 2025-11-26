@@ -95,7 +95,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 ## Application IDs of Microsoft tenant-owned applications
 
-The following table lists some, but not all, Microsoft tenant-owned applications (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47).
+The following table lists some, but not all, Microsoft tenant-owned applications (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47 and 33e01921-4d64-4f8c-a055-5bdaffd5e33d).
 
 |Application Name|Application IDs|
 |--|--|
