@@ -64,7 +64,7 @@ Use this event information to identify which scheduled task interfered with the 
 
 ### Symptom 4: Windows Server Update Service (WSUS) issue, and secondary error code 0x800f0821
 
-In WSUS environments, a WSUS issue might prevent an update from installing. It might also generate error code 0x8024001E plus a secondary error code, (0x800f0821). To learn whether this issue occurred, use Event Viewer to review the System event logs. Look for sequences of events that resemble the following example:
+In WSUS environments, a WSUS issue might prevent an update from installing. It might also generate error code 0x8024001E plus secondary error code (0x800f0821). To learn whether this issue occurred, use Event Viewer to review the System event logs. Look for sequences of events that resemble the following example:
 
 ```output
 Error Installation Failure: Windows failed to install the following update with error 0x8024001E: 2023-11 Cumulative Update for Windows
@@ -76,7 +76,7 @@ Information The Windows Update service entered the running state.
 
 The following conditions can cause error code 0x8024001E to occur:
 
-- The update source files on the computer is corrupted or incomplete.
+- The update source files on the computer are corrupted or incomplete.
 - The computer doesn't have enough available disk space to install the update.
 - Intermittent connectivity disrupts the update process.
 - Server maintenance, scheduled tasks, or other server outages disrupt the update process.
