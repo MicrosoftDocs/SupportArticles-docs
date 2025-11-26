@@ -28,11 +28,11 @@ Before you proceed, take the following actions:
 - Install the [Managed Gateway API CRDs](/azure/aks/managed-gateway-api) on your cluster.
 - Make sure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or a later revision. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you're on an earlier revision.
 
-## Application routing Gateway API implementation compatibility and migration
+## Application routing Gateway API Implementation compatibility and migration
 
 Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. Users must first disable one in order to enable the other.
 
-If you were previously using application routing Istio Gateway API implementation and migrated to the Istio add-on, and are experiencing issues with the Istio add-on control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` and `Gateway` deployments. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
+If you were previously using application routing Istio Gateway API Implementation and migrated to the Istio add-on, and are experiencing issues with the Istio add-on control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` and `Gateway` deployments. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
 
 ## Networking, firewall, and load balancer errors troubleshooting
 

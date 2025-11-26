@@ -15,7 +15,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 ## Overview
 
-The [application routing add-on](/azure/aks/app-routing-gateway-api) supports using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) to manage ingress traffic to AKS cluster workloads. If you are using [managed NGINX](/azure/aks/app-routing-nginx-configuration) with the legacy Ingress API, we strongly recommend migrating to using the Kubernetes Gateway API implementation. 
+The [application routing add-on](/azure/aks/app-routing-gateway-api) supports using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) to manage ingress traffic to AKS cluster workloads. If you are using [managed NGINX](/azure/aks/app-routing-nginx-configuration) with the legacy Ingress API, we strongly recommend migrating to using the Kubernetes Gateway API Implementation. 
 
 The application routing Gateway API Implementation deploys an Istio control plane to reconcile Kubernetes Gateway API resources. However, the application routing Gateway API Implementation is distinct from the [Istio add-on](./istio-add-on-general-troubleshooting.md), which is a full, end-to-end service mesh solution for AKS users to manage east-west and egress traffic in addition to ingress traffic. Moreover, the application routing Gateway API Istio control plane is not revisioned and is upgraded in-place, whereas the Istio add-on uses [canary upgrades](/azure/aks/istio-gateway-api) for minor revision upgrades.
 
@@ -25,7 +25,7 @@ The application routing Gateway API Implementation deploys an Istio control plan
 
 Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. Users must first disable one in order to enable the other.
 
-If you were previously using the Istio add-on and migrated to the application routing Gateway API implementation, make sure that all Istio Custom Resource Definitions (CRDs) and other resources have been cleaned up from the prior installation. You may also need to manually restart Pods that were previously part of the mesh for Envoy sidecars to be un-injected from applications.
+If you were previously using the Istio add-on and migrated to the application routing Gateway API Implementation, make sure that all Istio Custom Resource Definitions (CRDs) and other resources have been cleaned up from the prior installation. You may also need to manually restart Pods that were previously part of the mesh for Envoy sidecars to be un-injected from applications.
 
 If there are issues with the new application routing Istio control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` and `Gateway` deployments. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
 
