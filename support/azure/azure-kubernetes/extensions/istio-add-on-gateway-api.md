@@ -38,7 +38,7 @@ If you were previously using application routing Istio Gateway API Implementatio
 
 ### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment is blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+The Istio add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes. You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
 Gateway customization:
 
@@ -110,7 +110,7 @@ spec:
   gatewayClassName: istio
 ```
 
-During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition isn't true, try to restart the Deployment. 
+During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition isn't true, try to restart the deployment. 
 
 If your gateways are labeled explicitly with an ASM revision, relabel them accordingly before you finish or roll back the upgrade operation.
 

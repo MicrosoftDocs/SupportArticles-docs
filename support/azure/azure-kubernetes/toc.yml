@@ -231,6 +231,8 @@ items:
       href: extensions/runtime-host-incidents-third-party-scanner.md
   - name: Troubleshoot the AKS Managed Gateway API installation
     href: extensions/managed-gateway-api.md
+  - name: Troubleshoot the Application Routing Gateway API Implementation
+    href: extensions/application-routing-gateway-api.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting

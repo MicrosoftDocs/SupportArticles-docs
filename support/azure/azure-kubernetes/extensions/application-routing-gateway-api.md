@@ -33,7 +33,7 @@ If there are issues with the new application routing Istio control plane taking 
 
 #### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment is blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+The application routing add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes. You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-traffic-management-and-resource-customization-issues) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
 Gateway customization:
 
