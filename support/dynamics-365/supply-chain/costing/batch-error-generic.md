@@ -1,6 +1,6 @@
 ---
 title: Batch task failed. Cannot select a record in Current client sessions
-description: Error during inventory closing, recalculation or reverse -- Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
+description: Error during inventory closing, recalculation or reverse -- Batch task failed. Cannot select a record in Current client sessions (SysClientSessions). Sessionld. 0, 0. The SQL database has issued an error.
 author: soumyamoydas
 ms.date: 11/26/2025
 ms.topic: troubleshooting
