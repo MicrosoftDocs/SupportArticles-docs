@@ -20,7 +20,7 @@ This article describes how to troubleshoot Windows Update error code 0x8024001E.
 
 ## Symptoms
 
-You install a Windows update, but the installation fails and you see error code 0x8024001E. You might see additional symptoms as well. Review the following list of symptoms to see if they apply to your issue. If so, they might provide insight into the cause of your specific issue.
+You install a Windows update, but the installation fails and you see error code 0x8024001E. You might see other symptoms as well. Review the following list of symptoms to see if they apply to your issue. If so, they might provide insight into the cause of your specific issue.
 
 - [Symptom 1: Security update doesn't install](#symptom-1-security-update-doesnt-install)
 - [Symptom 2: An unexpected system restart disrupts installation](#symptom-2-an-unexpected-system-restart-disrupts-installation)
