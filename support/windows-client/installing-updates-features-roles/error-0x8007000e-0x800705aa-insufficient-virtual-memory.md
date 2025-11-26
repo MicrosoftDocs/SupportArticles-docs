@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
 description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
-ms.date: 10/15/2025
+ms.date: 11/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,6 +12,7 @@ ms.custom:
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
 
 # Troubleshoot Windows Update error code 0x8007000e or 0x800705aa
