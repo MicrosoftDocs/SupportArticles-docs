@@ -11,7 +11,7 @@ ms.search.region: Global
 ms.author: soumyamoydas
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.43
-ms.custom: sap:Cost management\Batch task failed: Cannot select a record in Current client sessions
+ms.custom: sap:Cost management\Batch task failed. Cannot select a record in Current client sessions
 ---
 
 # Batch task failed. Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
