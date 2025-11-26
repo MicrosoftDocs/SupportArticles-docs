@@ -11,7 +11,7 @@ ms.search.region: Global
 ms.author: soumyamoydas
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.43
-ms.custom: sap:Cost management\Issues with inventory value and aging report
+ms.custom: sap:Cost management\Duplicate reverse is not allowed
 ---
 
 # Duplicate reverse is not allowed
