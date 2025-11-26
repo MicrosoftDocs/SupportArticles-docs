@@ -22,7 +22,7 @@ Upon checking the inventory value and trial balance reports, it is observed that
 
 ## Resolution
 
-Normally this issue is resolved after rebuilding the Trial Balance for the corresponding Main Accounts from General Ledger -> Trial Balance.
+Normally this issue is resolved after rebuilding the Trial Balance for the corresponding Main Accounts from General Ledger -> Inquiries and reports -> Trial Balance.
 
 Verify whether inventory closing, recalculation or reverse execution has been completed successfully and whether voucher postings are present. Cross check the status of batch job with the voucher execution status. Check the logs in the Closing and Adjustment form for the correponding voucher. Once verified, rebuild the trial balance for the specific account where you are observing the differences. 
 
