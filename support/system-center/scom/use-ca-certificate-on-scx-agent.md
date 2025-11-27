@@ -143,23 +143,23 @@ Use one of the following methods to configure the certificate on the the Unix/Li
       exit 1
     fi
      
-    echo "🔐 Extracting private key..."
+    echo "Extracting private key..."
     openssl pkcs12 -in "$PFX_FILE" -nocerts -out "$KEY_FILE" -nodes -passin pass:"$PFX_PASS"
      
-    echo "📄 Extracting certificate..."
+    echo "Extracting certificate..."
     openssl pkcs12 -in "$PFX_FILE" -clcerts -nokeys -out "$CERT_FILE" -passin pass:"$PFX_PASS"
      
-    echo "🔗 Creating symbolic link..."
+    echo "Creating symbolic link..."
     rm -f "$SYMLINK_FILE"
     ln -s "$CERT_FILE" "$SYMLINK_FILE"
      
-    echo "🔧 Setting permissions..."
+    echo "Setting permissions..."
     chmod 600 "$KEY_FILE"
     chmod 640 "$CERT_FILE" "$SYMLINK_FILE"
     chown root:omi "$CERT_FILE" "$SYMLINK_FILE"
     chown omi:omi "$KEY_FILE"
      
-    echo "🔄 Restarting omid service..."
+    echo "Restarting omid service..."
     systemctl restart omid
     ```
 
