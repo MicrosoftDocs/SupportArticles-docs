@@ -1475,5 +1475,7 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
     - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
       href: ./windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md
+    - name: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
