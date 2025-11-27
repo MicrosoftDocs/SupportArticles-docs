@@ -71,4 +71,4 @@ For best results, your operating system disk should have at least 20 GB of avail
    - For a VM, extend the operating system disk.
    - For a physical computer, use an external drive during the update process. For more information, see [Updating Windows using an external storage device](https://support.microsoft.com/windows/updating-windows-using-an-external-storage-device-f980fac4-91b8-4225-b076-f66c28f21768).
 
-If the issue persists, see [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md), and then contact Microsoft Support.
+If the issue persists, see [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md), and then contact Microsoft Support.
