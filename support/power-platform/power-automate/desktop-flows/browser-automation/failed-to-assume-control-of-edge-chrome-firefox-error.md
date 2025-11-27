@@ -163,6 +163,29 @@ This issue can occur in attended and unattended desktop flow modes.
 
 To resolve the issue, ensure that the browser is launched using the same system user account that's being used to run Power Automate for desktop.
 
+## Cause 4: Browser doesn't open due to profile conflicts
+
+The browser doesn't launch, or it launches once but fails to open in subsequent attempts.
+
+### Verifying issue for cause 4
+
+Execution of a desktop flow with a Launch Browser action fails, and the browser either doesn't appear or terminates immediately after launch.
+
+### Resolution for cause 4
+
+Another session might be using the same browser profile. When you launch a Chromium-based browser (such as Microsoft Edge or Chrome), the browser checks if another instance is already using the same profile on disk. If another instance exists, the browser terminates immediately.
+
+This issue can occur when the same user is logged in to multiple sessions on the same machine, and each session attempts to open the browser. Only one session can successfully launch the browser; the others terminate on launch.
+
+To work around this issue, manually launch the browser from Power Automate for desktop with a different profile on disk. Use the following example:
+
+```ps
+Folder.GetSpecialFolder SpecialFolder: Folder.SpecialFolder.DesktopDirectory SpecialFolderPath=> SpecialFolderPath  
+System.RunApplication.RunApplication ApplicationPath: $'''msedge.exe''' CommandLineArguments: $'''--user-data-dir=\"%SpecialFolderPath%\\test-profile\"''' WindowStyle: System.ProcessWindowStyle.Normal
+```
+
+This command launches the browser with a unique profile directory, preventing conflicts with other browser instances.
+
 ## General checks
 
 If the preceding actions don't resolve the issue, ensure the following:
