@@ -110,6 +110,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8007000d
       href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8007000e or 0x800705aa
+      href: ../../../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x8007045b
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490
