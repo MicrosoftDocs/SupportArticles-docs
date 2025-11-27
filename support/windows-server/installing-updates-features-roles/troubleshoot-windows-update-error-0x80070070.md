@@ -25,7 +25,7 @@ When you try to install an update, the update process stops before Windows Updat
 
 > Updates are available, but we currently require additional space for downloading. Let's clear some space by removing any unnecessary files and apps, and we'll try again.
 
-If you review the Microsoft-Windows-WindowsUpdateClient/Operational log in Event Viewer, you find an event that lists the same message.
+If you use Event Viewer to review the Microsoft-Windows-WindowsUpdateClient/Operational log, you find an event that lists the same message.
 
 If you're working with an Azure virtual machine (VM), you can use Azure PowerShell cmdlets to collect Windows Update log information.
 
