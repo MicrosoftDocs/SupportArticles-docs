@@ -22,4 +22,4 @@ Inventory closing or recalculation errors out with "Only users in user group x c
 
 ## Resolution
 
-Please verify the ledger calendar period access level from General Ledger -> Calendars -> Ledger calendars -> Select the required ledger period and then verify the access level for specific modules and legal entities. Default access level for all the modules is _All_. 
+Please verify the ledger calendar period access level from General Ledger -> Calendars -> Ledger calendars -> Select the required ledger period and then verify the access level for specific modules and legal entities. Default access level for all the modules is \<All>\. 
