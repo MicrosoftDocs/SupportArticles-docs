@@ -30,4 +30,4 @@ Estimated price = (Physical amount + Financial amount) ÷ (Physical quantity + F
 
 If the “Include physical value” option isn't selected for an item in its Item Model Group, the system uses 0 (zero) for both the physical amount and the physical quantity. 
 
-For more understanding, [this](https://learn.microsoft.com/en-us/dynamics365/supply-chain/cost-management/running-average-cost-price) can be referred.
+For more understanding, [this](/dynamics365/supply-chain/cost-management/running-average-cost-price) can be referred.
