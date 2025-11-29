@@ -1,19 +1,19 @@
 ---
-title: Troubleshoot failed requests using tracing in IIS 8.5
-description: Describes request-based tracing and how to troubleshoot failed requests with tracing in IIS 8.5.
+title: Troubleshoot failed requests using tracing in IIS
+description: Describes request-based tracing and how to troubleshoot failed requests with tracing in IIS.
 ms.date: 10/05/2023
 ms.author: aartigoyle
 author: aartig13
 ms.reviewer: johnhart, riande,
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
-# Troubleshoot failed requests using tracing in IIS 8.5
+# Troubleshoot failed requests using tracing in IIS
 
-_Applies to:_ &nbsp; Internet Information Services 8.5
+_Applies to:_ &nbsp; Internet Information Services 8.5 and above
 
 ## Introduction
 
-Request-based tracing is available both in stand-alone IIS Servers and on Microsoft Azure Web Sites (WAWS). If you can reproduce the problem that you're experiencing, Request-based tracing provides a way to determine what exactly is happening with your requests and why it's happening. Problems such as poor performance on some requests, authentication-related failures on other requests, or the server 500 error from ASP or ASP.NET can often be difficult to troubleshoot, unless you have captured the trace of the problem when it occurs. This article discusses Failed Request Tracing on IIS Server. For information about doing this with Microsoft Azure Web Sites, see [Troubleshoot an app in Azure App Service using Visual Studio](/azure/app-service/troubleshoot-dotnet-visual-studio).
+Request-based tracing is available both in stand-alone IIS Servers and on Azure App Service. If you can reproduce the problem that you're experiencing, Request-based tracing provides a way to determine what exactly is happening with your requests and why it's happening. Problems such as poor performance on some requests, authentication-related failures on other requests, or the server 500 error from ASP or ASP.NET can often be difficult to troubleshoot, unless you have captured the trace of the problem when it occurs. This article discusses Failed Request Tracing on IIS Server.
 
 Failed Request Tracing is designed to buffer the trace events for a request and only flush them to disk if the request fails, where you provide the definition of _failure_. If you want to know why your requests are returning a specific HTTP status code, for example, 401 or 404, or if a request is taking a while to process or isn't responding, then you can use Failed Request Tracing.
 
@@ -26,9 +26,9 @@ The tasks that are explained in this article include:
 
 ## Prerequisites
 
-### Install IIS
+### Install Tracing Feature in IIS
 
-Install IIS 8.5 before you can perform the tasks described in this article. Browse to `http://localhost/` and verify that the Internet Information Services splash screen is displayed. If IIS isn't installed, see [Installing IIS 8.5 on Windows Server 2012 R2](/iis//install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2) for installation instructions. When installing IIS, make sure that you also install the following features:
+Install the beloe features of IIS before you can perform the tasks described in this article. 
 
 - ASP.NET 3.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 3.5**)
 - ASP.NET 4.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 4.5**)
@@ -126,7 +126,7 @@ After you enable Failed Request Tracing, you need to configure the path of the l
 
 ### Step 2: Configure your failure definitions
 
-In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that's returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable. For more information, see [HTTP status codes in IIS](../www-administration-management/http-status-code.md).
+In this step, configure the failure definitions for your URL, including what areas to trace. You will troubleshoot a 404.2 status code that's returned by IIS for any requests to extensions that haven't yet been enabled. It helps you determine which particular extensions you need to enable.
 
 1. Open a command prompt with administrator user rights, and navigate to _%systemdrive%\\windows\\system32\\inetsrv_.
 1. Run `inetmgr` to open IIS Manager.
