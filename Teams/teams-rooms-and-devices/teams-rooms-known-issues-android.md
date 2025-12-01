@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/20/2025
+ms.date: 12/01/2025
 ---
 # Known issues with Teams on Android devices
 
@@ -34,6 +34,8 @@ ms.date: 11/20/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Touch console not able to pair with Teams Rooms device.|The touch console that is paired with a Teams Rooms for Android device is unable to stay paired with the Front of Room device, and keeps re-trying the pairing process in a loop. Occasionally, you might see the following error message:<br/><br/>**Can't connect to device**|To fix the issue, make sure that the Teams Rooms for Android device has the latest updates installed, and both the device and the touch console are running the same version of the Teams Rooms for Android app.|
+|Unable to join E2EE meeting using Teams Rooms on Android device.|You're not able use a Teams Rooms on Android device that is paired with a console to join a Teams meeting that is set up with end-to-end encryption (E2EE).|No workaround is available at this time.|
+|Custom background is removed after updating to new version of Teams Rooms app.|After updating to the 1449/1.0.96.2025208203 version of the Teams Rooms on Android app, the custom background is replaced by a purple gradient.|No workaround is available at this time.|
 
 ## Issues affecting multiple devices
 
