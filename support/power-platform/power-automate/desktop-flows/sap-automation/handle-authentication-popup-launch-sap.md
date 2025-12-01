@@ -1,10 +1,9 @@
 ---
-title: Authentication popup appears when launching SAP
-description: Resolves an issue where an authentication popup appears when you use the Launch SAP action in Power Automate for desktop, even though credentials are provided.
-ms.reviewer: ststavri, nimoutzo
-ms.author: iomimtso
+title: Handle Authentication Popup When Launching SAP
+description: Handle SAP authentication popups in Power Automate for desktop. Follow our step-by-step guide to handle popups and ensure smooth SAP automation.
+ms.reviewer: iomimtso, ststavri, nimoutzo, v-shaywood
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 11-19-2025
+ms.date: 11/19/2025
 ---
 # Authentication popup appears when launching SAP
 
