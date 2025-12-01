@@ -19,8 +19,8 @@ To handle the authentication popup, use UI automation actions instead of the **L
 
 1. Use the **Run application** action to start the SAP GUI application.
 1. Use UI automation actions to interact with the authentication popup:
-   - Use the **Populate text field in window** action to enter credentials.
-   - Use the **Click UI element in window** action to submit the credentials.
+   1. Use the **Populate text field in window** action to enter credentials.
+   1. Use the **Click UI element in window** action to submit the credentials.
 1. After you handle the popup, use the **Attach to running SAP** action to connect to the active SAP instance.
 1. After the SAP instance is attached, you can use any other SAP actions as needed.
 
