@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot high CPU usage in an IIS application pool
-description: Helps you to identify the cause of sustained high CPU usage in an IIS app pool with Debug Diagnostics and Performance Monitor.
+title: Troubleshoot High CPU Usage in an IIS Application Pool
+description: Helps you to identify the cause of sustained high CPU usage in an IIS app pool by using Debug Diagnostics and Performance Monitor.
 ms.date: 04/17/2025
 ms.author: aartigoyle
 author: aartig13
@@ -11,11 +11,11 @@ ms.custom: sap:Site Behavior and Performance\High CPU usage
 
 _Applies to:_ &nbsp; Internet Information Services
 
-This troubleshooter will help you to identify the cause of sustained high CPU in an Internet Information Services (IIS) application pool. It's important to keep in mind that it is normal for CPU usage to increase as a web application serves requests. However, if you consistently see CPU remain at a high level (in the area of 80% or greater) for prolonged periods, the performance of your application will suffer. For that reason, it's important to understand the cause of sustained high CPU so that it can be addressed and corrected if possible.
+This troubleshooter will help you to identify the cause of sustained high CPU in an Internet Information Services (IIS) application pool. It's important to keep in mind that CPU usage typically increases when a web application serves requests. However, if you consistently see CPU remain at a high level for a prolonged period (approximately 80 percent or greater), you can expect the performance of your application to suffer. Therefore, it's important to understand the cause of sustained high CPU to be able to diagnose and correct it.
 
 ## Scenario
 
-An application pool in IIS is experiencing a prolonged period of high CPU that exceeds 90%. When the application is tested, no problems are encountered. However, once the application experiences actual user load, CPU climbs to a high percentage and remains. To recover, the application pool must be restarted, but after doing so, CPU again climbs to a high level.
+An application pool in IIS experiences a prolonged period of high CPU that exceeds 90 percent of the time. When the application is tested, no problems occur. However, after the application experiences actual user load, CPU usage climbs to a high percentage and remains there. To recover the application pool, must be restarted, but after doing so, CPU again climbs to a high level.
 
 ## Tools
 
@@ -25,22 +25,21 @@ An application pool in IIS is experiencing a prolonged period of high CPU that e
 
 ## Data collection
 
-The first thing you should do when you encounter high CPU usage issues is to determine the process that is consuming CPU. You can use **Processes** tab in Task Manager to do this. Make sure that you select the **Show processes from all users** checkbox. The following image shows this box checked and shows the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
+In a high CPU scenario, begin by determining the process that is consuming CPU. You can use the **Processes** tab in Task Manager. Make sure that you select the **Show processes from all users** checkbox. The following image shows this box selected, and the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
 
-:::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/windows-task-manager-w3wp.png" alt-text="Screenshot shows Windows Task Manager. Under the C P U column, 85 is highlighted on the w 3 w p executable row. Show processes from all users is selected.":::
+:::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/windows-task-manager-w3wp.png" alt-text="Windows Task Manager showing the C P U column in which 85 is highlighted on the w 3 w p executable row. The show processes from all users option is selected.":::
 
-You can also use Performance Monitor to determine what process is using CPU. For more information on using Performance Monitor, see [Analyzing performance data](#analyzing-performance-data).
+You can also use Performance Monitor to determine which process is using CPU. For more information about how to use Performance Monitor, see [Analyzing performance data](#analyzing-performance-data).
 
 > [!TIP]
-> If you need to identify which application pool is associated with a particular w3wp.exe process, open an Administrative Command Prompt, switch into the `%windir%\System32\inetsrv` folder `cd %windir%\System32\inetsrv` and run `appcmd list wp`. This will show the process identifier (PID) of the w3wp.exe process in quotes. You can match that PID with the PID available in Task Manager.
+> If you have to identify which application pool is associated with a particular w3wp.exe process, open an administrative Command Prompt window, switch into the `%windir%\System32\inetsrv` folder (`cd %windir%\System32\inetsrv`), and then run `appcmd list wp`. This command shows the process identifier (PID) of the w3wp.exe process in quotation marks. You can match that PID to the PID that's available in Task Manager.
 
-Once you have confirmed that a w3wp.exe process is experiencing high CPU, you will need to collect the following information in order to determine what is causing the problem:
+After you verify that a w3wp.exe process is experiencing high CPU, you have to collect the following information in order to determine what is causing the problem:
 
-- A Performance Monitor data collector set.
-- A user-mode memory dump of the w3wp.exe process or/and
-- A ETW Trace
+- A Performance Monitor data collector set
+- A user-mode memory dump file of the w3wp.exe process or a ETW trace
 
-In general, ETW tracing does not impact performance, which makes it useful in production scenarios where we would be very concerned about the period during which logs are collected. For example, during memory dump collection threads are paused, so ETW traces are a good alternative.
+In general, ETW tracing does not affect performance. This feature makes it useful in production scenarios where the primary concern is the period during which logs are collected. For example, threads are paused during memory dump file collection. This condition makes ETW traces a good alternative method.
 
 In most cases, when there's a high CPU issue with normal memory consumption, either ETW trace or memory dumps can be collected. Even though ETW trace can hold more information related to CPU consumption over time, for most cases both should be sufficient. We mentioned "normal memory consumption”, because ETW trace doesn't provide an in-depth view of objects, their values and their roots as a memory dump do.
 
