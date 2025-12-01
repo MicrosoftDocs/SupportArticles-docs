@@ -32,25 +32,27 @@ The first thing you should do when you encounter high CPU usage issues is to det
 You can also use Performance Monitor to determine what process is using CPU. For more information on using Performance Monitor, see [Analyzing performance data](#analyzing-performance-data).
 
 > [!TIP]
-> If you need to identify which application pool is associated with a particular w3wp.exe process, open an Administrative Command Prompt, switch into the `%windir%\System32\inetsrv` folder `cd %windir%\System32\inetsrv` and run `appcmd list wp`. This will show the process identifier (PID) of the w3wp.exe process in quotes. You can match that PID with the PID available in Task Manager.
+> If you need to identify which application pool is associated with a particular `w3wp.exe` process, open an Administrative Command Prompt, switch into the `%windir%\System32\inetsrv` folder `cd %windir%\System32\inetsrv` and run `appcmd list wp`. This will show the process identifier (PID) of the `w3wp.exe` process in quotes. You can match that PID with the PID available in Task Manager.
 
-Once you have confirmed that a w3wp.exe process is experiencing high CPU, you will need to collect the following information in order to determine what is causing the problem:
+Once you have confirmed that a `w3wp.exe` process is experiencing high CPU, you will need to collect the following information in order to determine what is causing the problem:
 
 - A Performance Monitor data collector set.
-- A user-mode memory dump of the w3wp.exe process or/and
-- A ETW Trace
+- Either or both:
+  - A user-mode memory dump of the `w3wp.exe` process
+  - A ETW Trace
 
-In general, ETW tracing does not impact performance, which makes it useful in production scenarios where we would be very concerned about the period during which logs are collected. For example, during memory dump collection threads are paused, so ETW traces are a good alternative.
+> [!NOTE]
+> In general, ETW tracing does not impact performance, this makes it useful in production scenarios when server performance must be maintained during log collection. In comparison, threads are paused during memory dump collection, so the server performance may be reduced during dump collection.
+>
+> An ETW trace contains detailed information related to CPU consumption over time. However, an ETW trace does not provide an in-depth view of objects, their values, and their roots like a memory dump will. Therefore, an ETW trace is most helpful for scenarios where the CPU usage is high but memory consumptions is normal.
 
-In most cases, when there's a high CPU issue with normal memory consumption, either ETW trace or memory dumps can be collected. Even though ETW trace can hold more information related to CPU consumption over time, for most cases both should be sufficient. We mentioned "normal memory consumption”, because ETW trace doesn't provide an in-depth view of objects, their values and their roots as a memory dump do.
+The goal of this data collection is to observe the operations on the non-waiting threads when the `w3wp.exe` CPU usage is highest. Follow these recommendations when collecting data:
 
-The goal is to get data that enable us to watch the operations on the same non-waiting threads over the portion time where w3wp.exe CPU is highest as possible, therefore:
-- Multiple dumps are needed (3 is usually a good number).
-- Dumps should be taken from the same process ID. 
-- Dumps should be close enough that these threads are still alive and perhaps a thread in each dump is still carrying related operations. Usually dumps spaced 10 seconds apart are okay.
-- Dumps should be collected within a CPU usage that is considered high and abnormal. Be cautious that we are talking here about the w3wp.exe consumption of CPU, not the total server CPU usage.
-
-All of these will need to be collected during the high CPU event.
+- Collect multiple traces or dumps, 3 is usually good enough.
+- Collect traces or dumps from the same process ID.
+- Collect traces or dumps with minimal time in between each, 10 seconds is usually good.
+  - This approach helps ensure that the same threads are still alive in each trace or dump so you can better identify which threads are consuming the most CPU.
+- Collect dumps when the CPU usage of `w3wp.exe` is high or abnormal, not just when the total server CPU usage is high.
 
 ### Collecting a Performance Monitor data collector set
 
@@ -131,14 +133,16 @@ This rule will create 11 dump files. The first 10 will be "mini dumps" which wil
 
 Once the high CPU problem has occurred, you will want to stop the Perfmon data collector set from collecting data. To do that, right-click on the **High CPU** data collector set listed under the **User Defined** node and select **Stop**.
 
-### Collecting ETW Tracing with Perfview
+### Collecting ETW Traces with Perfview
 
-- Download [Perfview](https://github.com/microsoft/perfview/releases) and run it as administrator.
-- Click at Collect menu and select Collect option (shortcut: ALT+C)
-- Check Zip, Merge, Thread Time checkboxes
-- Expand the Advanced Options tab and select IIS checkbox
-- Press Start Collection button. 
-- PerfView will start collecting the data. Once done, hit Stop collection. PerfView will merge various ETL files into a ZIP file and that will be stored in the same folder with PerfView.exe. This is the zip to be shared for analysis.
+1. Download [Perfview](https://github.com/microsoft/perfview/blob/main/documentation/Downloading.md) and run it as an administrator.
+1. Select **Collect** > **Collect**.
+1. Check the **Zip**, **Merge**, and **Thread Time** boxes.
+1. Expand the **Advanced Options** and check the **IIS** box.
+1. Select **Start Collection**.
+1. PerfView will begin collecting the data. Once done, hit **Stop Collection**.
+1. PerfView will merge multiple ETL files into a ZIP file and store the ZIP file in the same folder as `PerfView.exe`.
+   1. This ZIP file will be shared for analysis.
 
 ## Data analysis
 
@@ -165,7 +169,7 @@ You will now have a display that shows a graph of processor time used by each pr
 
 To do that, select the first counter in the list and then press Ctrl + H. After you've done this, the selected process will show as a bolded black line on the graph.
 
-Use the down arrow on your keyboard to move down through the list of processes until you find the process that shows the most CPU usage. In the following screenshot, you can clearly see that the w3wp.exe process was using a large amount of CPU on the machine. This confirms that the IIS application pool is causing high CPU utilization on the computer.
+Use the down arrow on your keyboard to move down through the list of processes until you find the process that shows the most CPU usage. In the following screenshot, you can clearly see that the `w3wp.exe` process was using a large amount of CPU on the machine. This confirms that the IIS application pool is causing high CPU utilization on the computer.
 
 :::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/perf-monitor-w3wp-cpu-usage.png" alt-text="Screenshot that shows the Performance Monitor window. Perfmon shows the C P U usage of the w 3 w p executable.":::
 
