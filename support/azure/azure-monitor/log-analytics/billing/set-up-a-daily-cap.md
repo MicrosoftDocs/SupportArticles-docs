@@ -15,7 +15,7 @@ This article helps you learn how to set up a daily cap limit for a Log Analytics
 
 ## Strategies for safeguarding against unexpected data ingestion surges
 
-The daily cap on a Log Analytics workspace enables you to avoid unexpected increases in charges for data ingestion by stopping the collection of billable data for the rest of the day whenever a specified threshold is reached. Daily caps are typically used by organizations that are particularly cost-conscious. They shouldn't be used as a method to reduce costs but, instead, as a preventative measure to make sure that you don't exceed a particular budget.
+The daily cap on a Log Analytics workspace enables you to avoid unexpected increases in charges for data ingestion by stopping the collection of billable data for the rest of the day whenever a specified threshold is reached. Daily caps are typically used by organizations that are particularly cost-conscious. They shouldn't be used as a method to reduce costs but, instead, as a preventative measure to make sure that you don't exceed a particular budget. Learn more in the Log Analytics Daily Cap documentation.
 
 When data collection stops, you effectively have no monitoring of features or resources that rely on that workspace. Instead of relying on the daily cap alone, you can create an alert rule to notify yourself when data collection reaches a specified level before the daily cap is reached. Notification enables you to address any increases before data collection shuts down, or even to temporarily disable collection for less critical resources.
 
@@ -37,9 +37,9 @@ When data collection stops, you effectively have no monitoring of features or re
 1. On the **Usage and estimated costs** page, select **Daily Cap** at the top of the page.
 
     :::image type="content" source="media/set-up-a-daily-cap/open-daily-cap.png" alt-text="Screenshot that shows how to open Daily Cap." lightbox="media/set-up-a-daily-cap/open-daily-cap.png":::
-1. Configure the Daily Cap settings. Notice that security data types aren't affected by the daily cap. 
+1. Configure the Daily Cap settings.  
 
-    1. Select **ON** to enable the daily cap.
+1. Select **ON** to enable the daily cap.
     1. Set the data volume limit (in GB per day). 
 
     :::image type="content" source="media/set-up-a-daily-cap/configure-daily-cap.png" alt-text="Screenshot that shows how to configure Daily Cap settings." lightbox="media/set-up-a-daily-cap/configure-daily-cap.png":::

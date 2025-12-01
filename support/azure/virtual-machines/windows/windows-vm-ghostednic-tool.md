@@ -1,14 +1,16 @@
 ---
-title: Azure VM Ghosted Nic Cleanup Script
-description: Azure VM Ghosted Nic Cleanup Script
+title: Azure VM Ghosted Nic Validation and Cleanup Tools
+description: Azure VM Ghosted Nic Validation and Cleanup Tools
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Troubleshooting tools for Azure VM Ghosted Nic issues
+# Azure VM Ghosted Nic Validation and Cleanup Tools
 
 **Applies to:** :heavy_check_mark: Windows VMs
+
+## Overview
 
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 
@@ -21,19 +23,13 @@ When an Azure Virtual Machine running Windows Server or Windows Client with **Ac
 
 `Ghosted nics` can happen to Azure virtual machines (VMs) causing connectivity, performance, Windows Update, and other issues. Microsoft provides a script-based tool to help diagnose and clean-up the ghost-nic issues.
 
-## Tool overview
-
-### Azure VM Ghosted Nic Validation and Cleanup Scripts
-
-**Purpose**  
+## Purpose
 There two scripts that can be used to detect if there are 'ghosted nics' inside of the VM. A VM that has one ore more could experience issues.This script detects ghosted (disconnected) network interface cards (NICs) and remove them from the registry.
 
 - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
 - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal)
 
-
-
-**Key features**  
+## Key features  
 
 * Detects for Ghosted Nics
 * Removes Ghosted Nics
@@ -79,7 +75,7 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 1. Run **[Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)** to verify activation status and detect common issues.
 2. If ghost-nics are detected, run [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal) to remove them.
 
-### **Additional resources**
+## Additional resources
 
 - [Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)](./windows-vm-ghostednic-troubleshooting.md)
 - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
