@@ -27,12 +27,19 @@ When _SAP GUI Scripting_ is enabled  the element picker might not maintain the S
 To ensure the element picker can capture elements from the SAP _Save As_ dialog:
 
 1. Open the element picker.
+
 1. Before the _Save As_ dialog appears, hover over an SAP GUI element in the main SAP window.
+
    1. This action keeps the element picker in SAP context and lets it capture elements from the custom SAP dialog.
+
 1. If available, turn off the **Show native Microsoft Windows dialogs** option in the SAP GUI:
+
    1. Go to **Options** > **Accessibility & Scripting** > **Scripting**.
+
    1. Uncheck the **Show native Microsoft Windows dialogs** box.
+
        :::image type="content" source="media/cant-capture-element-from-save-as-popup/sap-disable-windows-dialogs.png" alt-text="Show native Microsoft Windows dialogs in SAP Settings.":::
+
    1. Restart SAP after you change this setting.
 
 ## Solution 2: SAP GUI Scripting is disabled
