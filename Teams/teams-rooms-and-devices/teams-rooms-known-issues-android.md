@@ -76,6 +76,5 @@ For issues with Teams devices offered by providers other than Microsoft, contact
 - Logitech: [Logitech Support](https://support.logi.com/hc/)
 - Crestron: [Crestron Support](https://support.crestron.com/)
 - Poly: [Poly Support](https://www.poly.com/us/support)
-- Yealink: [Yealink Support](https://support.yealink.com/us/portal/home)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
