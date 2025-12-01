@@ -2,9 +2,7 @@
 title: Troubleshoot failed requests using tracing in IIS
 description: Describes request-based tracing and how to troubleshoot failed requests with tracing in IIS.
 ms.date: 10/05/2023
-ms.author: aartigoyle
-author: aartig13
-ms.reviewer: johnhart, riande,
+ms.reviewer: johnhart, riande, v-shaywood
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Troubleshoot failed requests by using tracing in IIS
