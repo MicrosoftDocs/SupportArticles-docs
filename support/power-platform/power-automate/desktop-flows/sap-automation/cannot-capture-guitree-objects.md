@@ -1,9 +1,9 @@
 ---
-title: "Workarounds for SAP GuiTree Capture Issues in Power Automate"
+title: Workarounds for SAP GuiTree Capture Issues in Power Automate
 ms.topic: concept-article
 ms.author: v-shaywood
 author: haywoodsloan
-description: "Learn how to resolve issues with capturing SAP GuiTree objects in Power Automate for desktop. Explore UI automation and SAP GUI scripting as workarounds."
+description: Learn how to resolve issues with capturing SAP GuiTree objects in Power Automate for desktop. Explore UI automation and SAP GUI scripting as workarounds.
 ms.reviewer: iomimtso, ststavri, v-shaywood
 ms.custom: sap:Desktop flows\SAP automation
 ms.date: 11/18/2025
