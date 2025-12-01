@@ -20,7 +20,7 @@ SAP displays different _Save As_ dialogs depending on whether SAP GUI Scripting 
 - _SAP GUI Scripting disabled_: SAP uses the standard Windows _Save As_ dialog, which doesn't support SAP-specific automation.
 - _SAP GUI Scripting enabled_: SAP displays a custom dialog that supports automation through SAP-specific actions.
 
-When _SAP GUI Scripting_ is enabled  the element picker might not maintain the SAP context when the dialog opens, preventing it from capturing elements from the custom SAP dialog.
+When you enable _SAP GUI Scripting_, the element picker might not maintain the SAP context when the _Save As_ dialog opens. This issue prevents the element picker from capturing elements from the custom SAP dialog.
 
 ## Solution 1: SAP GUI Scripting is enabled
 
