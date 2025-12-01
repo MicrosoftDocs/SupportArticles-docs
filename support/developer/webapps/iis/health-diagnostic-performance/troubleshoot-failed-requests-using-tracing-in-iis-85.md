@@ -26,13 +26,16 @@ The tasks that are explained in this article include:
 
 ## Prerequisites
 
-### Install Tracing Feature in IIS
+### Install tracing feature for IIS
 
-Install the beloe features of IIS before you can perform the tasks described in this article. 
+Install the following IIS features before you continue:
 
-- ASP.NET 3.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 3.5**)
-- ASP.NET 4.5 (under **Web Server (IIS)**/**Web Server**/**Application Development Features**/**ASP.NET 4.5**)
-- Tracing (under **Web Server (IIS)**/**Web Server**/**Health and Diagnostics - Tracing**)
+- ASP.NET 3.5
+  - **Web Server (IIS)** > **Web Server** > **Application Development Features** > **ASP.NET 3.5**
+- ASP.NET 4.5
+  - **Web Server (IIS)** > **Web Server** > **Application Development Features** > **ASP.NET 4.5**
+- Tracing
+  - **Web Server (IIS)** > **Web Server** > **Health and Diagnostics - Tracing**
 
 ### Sign in as administrator
 
