@@ -290,4 +290,14 @@ Follow these steps:
 
 Try disabling all other web extensions except the Power Automate extension to see whether the issue persists.
 
+### Disable browser background settings
+
+Some browser settings can interfere with the Power Automate extension. To resolve this issue, disable the following settings in your browser:
+
+1. Open Microsoft Edge or Google Chrome.
+1. Go to **Settings** > **System and performance**.
+1. Turn off the following settings:
+   - **Continue running background extensions and apps when Microsoft Edge is closed** (or **Continue running background apps when Google Chrome is closed**).
+   - **Startup boost** (Microsoft Edge only).
+
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
