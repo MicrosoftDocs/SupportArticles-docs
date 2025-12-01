@@ -3222,6 +3222,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
+    - name: Troubleshoot Windows Update error code 0x80070070
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Troubleshoot Windows Update download errors
