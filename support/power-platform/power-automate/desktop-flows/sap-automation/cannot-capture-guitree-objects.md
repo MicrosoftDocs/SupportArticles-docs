@@ -1,8 +1,10 @@
 ---
-title: Can't capture SAP GuiTree objects in Power Automate for desktop
-description: Power Automate for desktop doesn't capture SAP GuiTree objects. Use UI automation or enable SAP GUI scripting as workarounds.
-ms.reviewer: ststavri
-ms.author: iomimtso
+title: "Workarounds for SAP GuiTree Capture Issues in Power Automate"
+ms.topic: concept-article
+ms.author: v-shaywood
+author: haywoodsloan
+description: "Learn how to resolve issues with capturing SAP GuiTree objects in Power Automate for desktop. Explore UI automation and SAP GUI scripting as workarounds."
+ms.reviewer: iomimtso, ststavri, v-shaywood
 ms.custom: sap:Desktop flows\SAP automation
 ms.date: 11/18/2025
 ---
@@ -13,7 +15,7 @@ Power Automate for desktop doesn't currently support capturing SAP GuiTree objec
 
 ## Symptoms
 
-Power Automate for desktop doesn't capture SAP GuiTree objects when using SAP automation actions.
+Power Automate for desktop doesn't capture SAP GuiTree objects when you use SAP automation actions.
 
 ## Workaround 1: Use UI automation
 
