@@ -219,12 +219,16 @@ items:
       href: extensions/retain-privileged-mode-add-capabilities.md
     - name: Third-party scanner detects run-time host incident
       href: extensions/runtime-host-incidents-third-party-scanner.md
+  - name: Troubleshoot the AKS Managed Gateway API installation
+    href: extensions/managed-gateway-api.md
   - name: Troubleshoot the Istio-based service mesh add-on
     items:
     - name: General Istio add-on troubleshooting
       href: extensions/istio-add-on-general-troubleshooting.md
     - name: Istio add-on egress gateway troubleshooting
       href: extensions/istio-add-on-egress-gateway.md
+    - name: Istio add-on Gateway API ingress troubleshooting
+      href: extensions/istio-add-on-gateway-api.md
     - name: Istio add-on ingress gateway troubleshooting
       href: extensions/istio-add-on-ingress-gateway.md
     - name: Istio add-on MeshConfig troubleshooting
@@ -257,6 +261,8 @@ items:
       href: extensions/troubleshoot-managed-namespaces.md
     - name: Troubleshoot network isolated clusters
       href: extensions/troubleshoot-network-isolated-cluster.md
+    - name: Troubleshoot node auto provisioning
+      href: extensions/troubleshoot-node-auto-provision.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14

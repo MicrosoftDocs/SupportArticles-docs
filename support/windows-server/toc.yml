@@ -2606,6 +2606,8 @@ items:
       href: ./system-management-components/enable-openssh-verbose-logging.md
     - name: Error 1053 and OpenSSH Server service doesn't start
       href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
+    - name: Error 1053, Error 1067, or Event ID 7034 and OpenSSH Server service doesn't start after you install a Windows update
+      href: ./system-management-components/error-1053-1067-7034-after-update-openssh-doesnt-start.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
     - name: Troubleshoot common SFTP issues when using OpenSSH

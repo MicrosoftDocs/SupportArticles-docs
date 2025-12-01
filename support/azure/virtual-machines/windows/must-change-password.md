@@ -21,7 +21,7 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptom
 

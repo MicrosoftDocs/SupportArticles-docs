@@ -28,6 +28,8 @@ This issue occurs because the SAP application isn't fully DPI aware and might no
 
    :::image type="content" source="media/sap-click-element-dpi/mutli-monitor-scaling-awareness.png" alt-text="Screenshot of the Multi-monitor scaling awareness option in SAP Theme Settings.":::
 
-2. On Windows, go to **System** > **Display** and set the **Scale** to 100%.
+1. Terminate all SAP processes.
 
-[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
+1. On Windows, go to **System** > **Display** and set the **Scale** to 100%.
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

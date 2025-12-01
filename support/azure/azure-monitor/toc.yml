@@ -21,7 +21,6 @@ items:
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
       - name: Configuring Azure Activity Log Export
         href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
-
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -142,30 +141,7 @@ items:
       href: log-analytics/billing/why-daily-cap-exceeded.md
     - name: Configure data retention
       href: log-analytics/billing/configure-data-retention.md
-
-
-
-  - name: Azure Monitor Agent (AMA) on Linux machine
-    items:
-    - name: Missing heartbeats in the Linux agent
-      href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
-    - name: Missing Linux performance counters
-      href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
-
-  - name: Azure Monitor Agent (AMA) on Windows machine
-    items:
-    - name: Basic troubleshooting of Microsoft Monitoring Agent
-      href: log-analytics/windows-agents/mma-troubleshoot-basics.md
-    - name: Check SSL connectivity for Microsoft Monitoring Agent
-      href: log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell.md
-    - name: Microsoft Monitoring Agent couldn't start
-      href: log-analytics/windows-agents/windows-could-not-start-mma.md
-    - name: Resolve Windows Agent installation issues
-      href: log-analytics/windows-agents/resolve-windows-agent-installation-issues.md
-    - name: Troubleshoot erased proxy settings
-      href: log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md
-
-- name: Azure Monitor Agent
+- name: Azure Monitor Agent (Linux and Windows)
   items:
   - name: Azure Monitor Agent migration
     items:
@@ -179,16 +155,33 @@ items:
       href: azure-monitor-agent/migration/step-3-configure-data-collections.md
     - name: Step 4 - Test data collections in Azure Monitor Agent
       href: azure-monitor-agent/migration/step-4-test-data-collections-azure-monitor-agent.md
-  - name: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
+  - name: Azure Monitor Agent (AMA) on Linux machine
     items:
-    - name: Preparation for troubleshooting
-      href: azure-monitor-agent/ama-windows-installation-issues-prepare-troubleshooting.md
-    - name: Detailed troubleshooting steps
-      href: azure-monitor-agent/ama-windows-installation-issues-detailed-troubleshooting-steps.md
-    - name: Advanced troubleshooting steps
-      href: azure-monitor-agent/ama-windows-installation-issues-advanced-troubleshooting-steps.md
-
-- name: Diagnostic settings
+    - name: Missing heartbeats in the Linux agent
+      href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
+    - name: Missing Linux performance counters
+      href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
+  - name: Azure Monitor Agent (AMA) on Windows machine
+    items:
+    - name: Basic troubleshooting of Microsoft Monitoring Agent
+      href: log-analytics/windows-agents/mma-troubleshoot-basics.md
+    - name: Check SSL connectivity for Microsoft Monitoring Agent
+      href: log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell.md
+    - name: Microsoft Monitoring Agent couldn't start
+      href: log-analytics/windows-agents/windows-could-not-start-mma.md
+    - name: Resolve Windows Agent installation issues
+      href: log-analytics/windows-agents/resolve-windows-agent-installation-issues.md
+    - name: Troubleshoot erased proxy settings
+      href: log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md
+    - name: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
+      items:
+      - name: Preparation for troubleshooting
+        href: azure-monitor-agent/ama-windows-installation-issues-prepare-troubleshooting.md
+      - name: Detailed troubleshooting steps
+        href: azure-monitor-agent/ama-windows-installation-issues-detailed-troubleshooting-steps.md
+      - name: Advanced troubleshooting steps
+        href: azure-monitor-agent/ama-windows-installation-issues-advanced-troubleshooting-steps.md
+- name: Event Hubs
   items:
   - name: Deleted event hub is automatically re-created
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
