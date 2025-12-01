@@ -31,7 +31,7 @@ To ensure the element picker can capture elements from the SAP **Save As** dialo
 2. Before the **Save As** dialog appears, hover over an SAP GUI element in the main SAP window. This keeps the element picker in SAP context and lets it capture elements from the custom SAP dialog.
 3. If available, turn off the "Show native Microsoft Windows dialogs" option in SAP GUI: go to **Options** > **Accessibility & Scripting** > **Scripting**. Restart SAP after you change this setting.
 
- :::image type="content" source="media/sap_disable_windows_dialogs.png" alt-text="Show native Microsoft Windows dialogs in SAP Settings.":::
+ :::image type="content" source="media/cant-capture-element-from-save-as-popup/sap_disable_windows_dialogs.png" alt-text="Show native Microsoft Windows dialogs in SAP Settings.":::
 
 ### Alternative solution
 
