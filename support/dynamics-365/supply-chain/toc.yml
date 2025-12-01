@@ -151,6 +151,8 @@ items:
         href: procurement/default-tax-group-and-discount.md
       - name: Error "Object reference not set" occurs during purchase order confirmation
         href: procurement/object-reference-not-set.md
+      - name: Failures when submitting a Prospective Vendor Registration Request
+        href: procurement/unable-to-submit-pvrr.md
       - name: Imported purchase orders show incorrect line numbers
         href: procurement/line-number-increments.md
       - name: Order taker not auto-filled when creating purchase or sales orders
