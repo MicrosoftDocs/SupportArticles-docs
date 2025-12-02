@@ -221,3 +221,5 @@ By using Perfmon, DebugDiag, and PerfView you can easily collect data that helps
 - [Troubleshooting High CPU Utilization](/previous-versions/windows/it-pro/windows-2000-server/bb742546(v=technet.10))
 - [What to Gather to Troubleshoot High CPU or Hang](https://blogs.iis.net/tomchris/asp-net-tips-what-to-gather-to-troubleshoot-part-1-high-cpu)
 - [.NET Debugging Demos](https://www.tessferrandez.com/blog/2008/02/04/debugging-demos-setup-instructions.html)
+
+[!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
