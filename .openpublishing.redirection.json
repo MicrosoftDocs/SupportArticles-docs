@@ -13923,6 +13923,10 @@
     {
       "source_path": "support/dynamics-365/commerce/payments/adyen-support.md",
       "redirect_url": "/dynamics365/commerce/dev-itpro/payments-retail#what-is-the-service-level-agreement-sla-for-out-of-box-payment-connectors-like-adyen"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/sap-automation/sap-click-element-dpi"
     }
   ]
 }

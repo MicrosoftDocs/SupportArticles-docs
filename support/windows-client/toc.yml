@@ -1087,6 +1087,10 @@ items:
       href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
     - name: Enable OpenSSH verbose logging
       href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 1053 and OpenSSH Server service doesn't start
+      href: ../windows-server/system-management-components/openssh-server-service-wont-start-error-1053.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 1053, Error 1067, or Event ID 7034 and OpenSSH Server service doesn't start after you install a Windows update
+      href: ../windows-server/system-management-components/error-1053-1067-7034-after-update-openssh-doesnt-start.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH Server Service Doesn't Start and Generates Error 1053
@@ -1337,6 +1341,10 @@ items:
     items:
     - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+  - name: Zero Trust DNS
+    items:
+    - name: 'Troubleshooting Guidance: Zero Trust DNS'
+      href: ./windows-security/troubleshoot-zero-trust-dns-guidance.md
 - name: Windows Servicing, Updates and Features on Demand
   items:
   - name: Windows Servicing, Updates and Features on Demand
@@ -1415,6 +1423,8 @@ items:
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
+    - name: Troubleshoot Windows Update error code 0x80070070
+      href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot Windows Update error 0x80072EFE
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation

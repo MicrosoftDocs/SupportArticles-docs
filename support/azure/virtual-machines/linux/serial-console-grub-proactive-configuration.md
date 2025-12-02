@@ -19,7 +19,7 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 
