@@ -1,17 +1,18 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
 description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
-ms.date: 10/15/2025
+ms.date: 11/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows servicing, updates and features on demand\windows update - install errors unknown or code not listed
+- sap:windows servicing, updates and features on demand\windows update - install errors starting with 0x8007 (error)
 - pcy:WinComm Devices Deploy
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
 
 # Troubleshoot Windows Update error code 0x8007000e or 0x800705aa
@@ -33,11 +34,15 @@ Insufficient system resources exist to complete the requested service.
 ```
 
 > [!NOTE]  
-> The second message typically occurs when you use `dism /online /add-package /packagepath:<path of .cab file>`to install the update.
+> The second message typically occurs if you use `dism /online /add-package /packagepath:<path of .cab file>`to install the update.
+
+When you review events in Event Viewer, you might also find Event ID 2004 recorded. The description of this event resembles the following example:
+
+> Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory: java.exe (1152) consumed 33821605888 bytes, java.exe (6316) consumed 5259997184 bytes, and java.exe (12536) consumed 1569894400 bytes.
 
 ## Cause
 
-This issue occurs if the computer doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
+This issue occurs if the computer or virtual machine (VM) doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
 
 - Third-party applications are consuming lots of virtual memory.
 - The computer's virtual memory isn't managed automatically. Instead, it's manually configured.
@@ -61,13 +66,20 @@ After the computer restarts, try again to update it.
 
 ## Resolution
 
-To configure the computer to automatically manage its virtual memory, follow these steps.
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-1. To open **System Properties**, select Search and then enter **sysdm.cpl**.
-1. In **System Properties**, select **Advanced**, and then under **Performance**, select **Settings**.
-1. In **Performance Options**, select **Advanced**, and then under **Virtual memory**, select **Change**.
+> [!NOTE]  
+> If the affected computer is a VM, consider upgrading the virtual hardware of the VM to increase its available memory resources.
+
+To configure the computer to automatically manage its virtual memory, follow these steps:
+
+1. Open **System Properties**: Select **Search**, and enter **sysdm.cpl**.
+1. In **System Properties**, select **Advanced** > **Performance** > **Settings**.
+1. In **Performance Options**, select **Advanced** > **Virtual memory** > **Change**.
 1. Make sure that **Automatically manage paging file size for all drives** is selected, and then select **OK**.
 1. Restart the computer.
+1. To make sure that this issue doesn't reoccur, monitor the computer's available memory resources.
 
 ## More information
 

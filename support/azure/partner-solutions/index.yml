@@ -23,6 +23,31 @@ landingContent:
         links:
           - text:  Resolve Azure Native Integrations Purchase Errors
             url: marketplace-purchases-errors.md
+# Card       
+  - title:  Confluent
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't create a service connection by using Service Connector
+            url: confluent/cannot-create-service-connection.md
+          - text: Can't create a Confluent connector
+            url: confluent/cannot-create-confluent-connector.md
+          - text: Can't delete a resource
+            url: confluent/cannot-delete-resource.md
+          - text: Can't find the offer in Azure Marketplace
+            url: confluent/cant-find-offer.md
+          - text: Conflict error
+            url: confluent/conflict-error.md
+          - text: Confluent connector isn't in the list of connectors
+            url: confluent/connector-not-listed.md
+          - text: DeploymentFailed error
+            url: confluent/deploymentfailed-error.md
+          - text: Resource creation is slow or fails
+            url: confluent/resource-creation-slow.md
+          - text: Resource isn't displayed
+            url: confluent/resource-not-displayed.md
+          - text: Single sign-on doesn't work for the Confluent SaaS portal
+            url: confluent/single-sign-on-does-not-work.md   
 
 # Card
   - title: Astro 
