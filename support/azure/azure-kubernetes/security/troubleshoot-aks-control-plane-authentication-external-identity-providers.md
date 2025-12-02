@@ -23,7 +23,7 @@ This article helps you troubleshoot authentication issues when you access the Az
 - Azure CLI version 2.61.0 or later. To determine the version, run `az --version`. If you have to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The JSON Web Token (JWT) authenticator configuration file that's used for your AKS cluster.
-- Access to [jwt.ms][jwt-ms] or a similar JWT token decoder tool for debugging tokens.
+- Access to [jwt.ms](https://jwt.ms) or a similar JWT token decoder tool for debugging tokens.
 
 ## Troubleshooting checklist
 
@@ -227,7 +227,7 @@ Review the AKS API server logs for authentication errors. Follow these steps:
 
 The audience claim in the token doesn't match the configured audience in the JWT authenticator.
 
-### Solution: Update the authenticator configuration
+**Solution: Update the authenticator configuration**
 
 Verify the audience claim in your token, and update the JWT authenticator configuration.
 
@@ -243,7 +243,7 @@ az aks jwtauthenticator update \
 
 The issuer URL in the configuration doesn't exactly match the `iss` claim in the token.
 
-### Solution: Correct the issuer URL
+**Solution: Correct the issuer URL**
 
 Update the issuer URL in your JWT authenticator configuration file to match the exact issuer in your tokens, including the protocol (https://) and any trailing slashes.
 
@@ -251,7 +251,7 @@ Update the issuer URL in your JWT authenticator configuration file to match the 
 
 The OAuth client or OIDC provider settings are incorrect.
 
-### Solution: Verify identity provider settings
+**Solution: Verify identity provider settings**
 
 ::: zone pivot="github"
 
@@ -274,7 +274,7 @@ The OAuth client or OIDC provider settings are incorrect.
 
 CEL expressions might have syntax errors or return unexpected data types.
 
-### Solution: Verify CEL expressions
+**Solution: Verify CEL expressions**
 
 1. Review the CEL expressions in your configuration.
 2. Test expressions by using a CEL evaluator to make sure that they return strings for username and arrays of strings for groups.
@@ -297,7 +297,7 @@ The following code is an example of a valid CEL expression for extracting groups
 
 Issues that affect network security groups, firewalls, or the DNS prevent the cluster from accessing the identity provider.
 
-### Solution 1: Verify DNS resolution
+**Solution 1: Verify DNS resolution**
 
 1. Connect to a cluster node by using `kubectl debug`:
 
@@ -323,7 +323,7 @@ Issues that affect network security groups, firewalls, or the DNS prevent the cl
    
    ::: zone-end
 
-### Solution 2: Update network security rules
+**Solution 2: Update network security rules**
 
 1. Review network security group rules that are associated with your AKS cluster.
 2. Make sure that outbound HTTPS (port 443) traffic is allowed to your identity provider's domain.
@@ -335,7 +335,7 @@ Issues that affect network security groups, firewalls, or the DNS prevent the cl
 
 To prevent conflicts with other authentication methods, all usernames and groups must be prefixed by using `aks:jwt:`.
 
-### Solution: Add the required prefix
+**Solution: Add the required prefix**
 
 Update your JWT authenticator configuration to include the `aks:jwt:` prefix. For example:
 
@@ -420,7 +420,7 @@ For GitHub Actions OIDC, create a file that's named `jwt-config.json` that has t
 
 ::: zone-end
 
-1. Update the authenticator:
+Update the authenticator:
 
 ```azurecli-interactive
 az aks jwtauthenticator update \
@@ -442,7 +442,7 @@ To get more detailed information about authentication failures:
 
 ### Resources
 
-- [jwt.ms site](https://jwt.ms)
+- [jwt-ms token decoder tool](https://jwt.ms)
 - [Supported resource logs for Microsoft.ContainerService/managedClusters](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
 
 [!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
