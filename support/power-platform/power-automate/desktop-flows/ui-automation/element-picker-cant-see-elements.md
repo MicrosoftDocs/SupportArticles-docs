@@ -31,7 +31,7 @@ Certain background processes interfere with UI automation functionality in Power
 Some desktop applications use custom UI frameworks or rendering methods that aren't compatible with the standard accessibility APIs that Power Automate for desktop relies on. This incompatibility can make certain elements invisible to the element picker.
 
 > [!IMPORTANT]
-> For coordinate-based solutions (Solutions [3](#solution-3-use-the-recorder-with-coordinates) and [4](#solution-4-use-move-mouse-and-send-mouse-click-actions)) to work reliably:
+> For coordinate-based solutions (Solutions [4](#solution-4-use-the-recorder-with-coordinates) and [5](#solution-5-use-move-mouse-and-send-mouse-click-actions)) to work reliably:
 >
 > - The screen configuration (resolution, DPI settings, scaling) must remain static at runtime and match the configuration used during development.
 > - Changes to the application's user interface structure might affect the effectiveness of these workarounds.
