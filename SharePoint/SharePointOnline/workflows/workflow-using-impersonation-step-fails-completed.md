@@ -15,13 +15,13 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - SharePoint Server 2010
-ms.date: 12/17/2023
+ms.date: 12/02/2025
 ---
 
 # A SharePoint workflow that uses an impersonation step doesn't complete when you return field values for a user account as something other than "As a string"
 
-> [!CAUTION]
-> SharePoint 2013 workflows are scheduled for retirement in April 2024. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+> [!IMPORTANT]
+> SharePoint 2013 workflow has been turned off on all newly created tenants since April 2, 2024. It will be removed from all existing tenants on April 2, 2026. See [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e) for more information.
 
 ## Problem
 
