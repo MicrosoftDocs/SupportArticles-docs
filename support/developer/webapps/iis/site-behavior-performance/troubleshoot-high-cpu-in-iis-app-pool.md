@@ -36,8 +36,8 @@ After you verify that a `w3wp.exe` process is experiencing high CPU, determine t
 
 - [A Performance Monitor data collector set](#collecting-a-performance-monitor-data-collector-set)
 - Either or both:
-  - [A user-mode memory dump of the `w3wp.exe` process](#collect-user-mode-memory-dump-using-debug-diagnostics)
-  - [An ETW trace](#collecting-etw-traces-with-perfview)
+  - [A user-mode memory dump of the `w3wp.exe` process](#collect-a-user-mode-memory-dump-file-by-using-debug-diagnostics)
+  - [An ETW trace](#collecting-etw-traces-by-using-perfview)
 
 > [!NOTE]
 > In general, ETW tracing doesn't affect performance. This feature makes it useful in production scenarios in which server performance must be maintained during log collection. In comparison, threads pause during memory dump file collection. Therefore, server performance might be reduced during dump file collection.
