@@ -4,7 +4,7 @@ description: Resolve common access and permission errors.
 ms.author: meerak
 author: Cloud-Writer
 manager: dcscontentpm
-ms.date: 05/15/2025
+ms.date: 12/02/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -16,25 +16,22 @@ search.appverid:
   - SPO160
   - MET150
 ms.assetid: 
-ms.reviewer: salarson, prbalusu
+ms.reviewer: salarson, prbalusu, nirupme
 appliesto: 
   - SharePoint Online
-  - OneDrive for Business
+  - OneDrive 
 ---
 
 # Access Denied or You need permission errors in SharePoint Online and OneDrive
 
 ## Symptoms
 
-When users try to access a SharePoint Online or OneDrive for Business site, they receive one of the following error messages:
+When users try to access a SharePoint Online or OneDrive site, they receive one of the following error messages:
 
 - Access Denied
 - You can't access this item
-
 - You don't have permission to access this item
-
 - You don't have access to this file
-
 - You need permission to access this site
 - User not found in the directory
 
