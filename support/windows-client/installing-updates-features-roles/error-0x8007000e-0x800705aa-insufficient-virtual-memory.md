@@ -105,11 +105,9 @@ To configure the computer to automatically manage its virtual memory, follow the
 
 ### Registry size limit issue
 
-
-
 ## More information
 
-The following example shows how error code 0x800705aa appears in the CBS.log file when the issue doesn't involve the registry:
+The following example shows how error code 0x800705aa might appear in the CBS.log file when the issue doesn't involve the registry size limit:
 
 ```output
 2024-02-06 02:20:51, Info          
