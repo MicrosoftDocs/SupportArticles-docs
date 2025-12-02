@@ -45,7 +45,7 @@ If possible, design your flow without the Block Input action to prevent this iss
 
 ## Solution 2: Use alternative mouse and keyboard actions
 
-If you need to use Block Input and perform mouse actions, use one of the following actions from the **Mouse and keyboard** category instead of UI automation actions. For more information, see [Mouse and keyboard actions reference](/power-automate/desktop-flows/actions-reference/mouseandkeyboard).
+If you need to use Block Input and perform mouse actions, use one of the following actions from the _Mouse and keyboard_ category instead of UI automation actions. For more information, see [Mouse and keyboard actions reference](/power-automate/desktop-flows/actions-reference/mouseandkeyboard).
 
 ### Alternative A: Use Move mouse and Send mouse click actions
 
