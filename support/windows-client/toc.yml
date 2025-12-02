@@ -1427,6 +1427,8 @@ items:
       href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot Windows Update error 0x80072EFE
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
+    - name: Troubleshoot Windows Update error 0x8024001E
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md
     - name: Windows Update common errors and mitigation
       href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Windows Troubleshooters
