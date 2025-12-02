@@ -17,6 +17,10 @@ items:
       href: how-to-deprovision-business-grace-with-graph-explorer.md
 - name: Windows 365 Enterprise
   items:
+  - name: AI-enabled Windows 365
+    items:
+    - name: AI-enabled Cloud PC known issues
+      href: windows-365-ai-enabled-cloud-pc-known-issues.md
   - name: Azure Network Connection
     items:
     - name: Azure network connection health checklist
@@ -29,11 +33,13 @@ items:
       href: oobe-fails-error-has-occurred.md
     - name: OOBE fails with "Something went wrong"
       href: oobe-fails-error-something-wrong.md
+    - name: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
+      href: troubleshoot-user-experience-sync.md
     - name: Troubleshoot Windows 365 app
       href: troubleshoot-windows-365-app.md
   - name: Onboarding issues
     items:
-    - name: Known issues with Windows 365 Enterprise and Frontline
+    - name: Windows 365 Enterprise known issues
       href: known-issues-enterprise.md
   - name: Partner Solutions for W365
     items:
