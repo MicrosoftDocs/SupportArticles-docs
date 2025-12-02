@@ -13,7 +13,7 @@ This article helps you resolve an issue where an authentication popup appears wh
 
 When you use the **Launch SAP** action with login credentials, an authentication popup window appears unexpectedly. This issue causes the action to fail and prevents other SAP actions from running.
 
-## Resolution
+## Solution
 
 To handle the authentication popup, use UI automation actions instead of the **Launch SAP** action. Follow these steps:
 
