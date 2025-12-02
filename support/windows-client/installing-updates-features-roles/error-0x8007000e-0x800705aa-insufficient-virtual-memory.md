@@ -42,7 +42,7 @@ When you review events in Event Viewer, you might also find Event ID 2004 record
 
 ### Special case of error code 0x800705aa - Registry size limit
 
-Error code 0x800705aa might indicate an issue that involves the registry instead of a general virtual memory issue. To see if this is the case, check the CBS.log file for entries that resemble the following example:
+Error code 0x800705aa might indicate an issue that involves the registry instead of a general virtual memory issue. To see if so, check the CBS.log file for entries that resemble the following example:
 
 ```output
 2024-05-13 22:31:56, Info                  CBS    Failed to load the COMPONENTS hive from 'C:\Windows\System32\config\COMPONENTS' into registry key 'HKLM\COMPONENTS'. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
