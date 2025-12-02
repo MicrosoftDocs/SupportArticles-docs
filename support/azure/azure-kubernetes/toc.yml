@@ -185,6 +185,8 @@ items:
       href: storage/mountoptions-settings-azure-files.md
 - name: Security
   items:
+  - name: Troubleshoot AKS control plane authentication using external identity providers
+    href: security/troubleshoot-aks-control-plane-authentication-external-identity-providers.md
   - name: Troubleshoot seccomp profiles in AKS
     href: security/troubleshoot-seccomp-profiles.md
 - name: Extensions, policies, and add-ons
@@ -425,5 +427,3 @@ items:
       href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
     - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
       href: error-codes/zonalallocation-allocationfailed-error.md
-
-

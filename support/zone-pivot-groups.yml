@@ -11,3 +11,12 @@ groups:
     title: Windows Server 2012 or Windows Server 2012 R2
   - id: windows-11-or-server-2025
     title: Windows 11 or Windows Server 2025
+#Owner: shashankbarsin
+- id: aks-external-identity-provider
+  title: Identity Provider
+  prompt: Choose an identity provider
+  pivots:
+  - id: github
+    title: GitHub Actions OIDC
+  - id: google-identity
+    title: Google Identity
