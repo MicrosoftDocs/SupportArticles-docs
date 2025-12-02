@@ -95,6 +95,8 @@ items:
             href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
           - name: Clicking elements doesn't work during runtime
             href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
+          - name: CyberArk connections aren't supported for RDP automation
+            href: desktop-flows/ui-automation/ui-rdp-automation/cyberark-connection-not-supported.md
           - name: Focus window action can't bring a window to focus
             href: desktop-flows/ui-automation/focus-window-action-not-working.md
           - name: Failed to get UI element
