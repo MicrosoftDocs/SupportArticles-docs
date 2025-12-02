@@ -59,7 +59,7 @@ The following table summarizes the behavior across different client and server v
 
 ### Example - Operations on confidential attributes fail
 
-In this example, you create a LDIFDE file (named update.txt) that modifies the value of a confidential attribute. For convenience, this example refers to the same legacy LAPS password as the previous example (we don't recommend this type of change in practice). The file text resembles the following example:
+In this example, you create an LDIFDE file (named update.txt) that modifies the value of a confidential attribute. For convenience, this example refers to the same legacy LAPS password as the previous example (we don't recommend this type of change in practice). The file text resembles the following example:
 
 ```console
 dn: CN=test-comp01,OU=New-Computers,DC=contoso,DC=com
@@ -97,7 +97,7 @@ The extended server error is:
 00002098: SecErr: DSID-03153BAC, problem 4003 (INSUFF_ACCESS_RIGHTS), data 0
 ```
 
-As in the case of the query in the previous example, the operations succeed or fail depending on the client and server versions. The following table summarizes these interactions.
+Similarly to the query in the previous example, the operations succeed or fail depending on the client and server versions. The following table summarizes these interactions.
 
 | Client | Target DC | Operation result |
 | --- | --- | --- |
@@ -243,7 +243,7 @@ In this context, the information in these events indicates the following behavio
 - The request attempted to inspect a confidential attribute on each of eight AD DS objects.
 - For each of the eight objects, the query results omit the confidential attribute.
 
-To identify clients that used an unencrypted sessions, cross-reference the user details from Event ID 3079 to the query, client IP address, and port details from Event ID 1644.
+To identify clients that used an unencrypted session, cross-reference the user details from Event ID 3079 to the query, client IP address, and port details from Event ID 1644.
 
 To turn off verbose logging when you're done investigating, run the following commands:
 
