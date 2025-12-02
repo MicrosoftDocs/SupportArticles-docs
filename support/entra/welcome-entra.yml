@@ -17,7 +17,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: Microsoft Entra ID
+  - title: Microsoft Entra ID troubleshooting documentation
     linkLists:
       - linkListType: reference
         links:
@@ -25,11 +25,11 @@ landingContent:
             url: entra-id/welcome-entra-id.yml
 
  # Card
-  - title: Global Secure Access
+  - title: Global Secure Access troubleshooting documentation
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Global Secure Access troubleshooting documentation
+          - text: Global Secure Access 
             url: global-secure-access/welcome-global-secure-access.yml
 
  # Card
