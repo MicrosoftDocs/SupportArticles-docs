@@ -13,7 +13,7 @@ This article provides a solution for an issue where Power Automate for desktop i
 
 When you run a desktop flow that includes UI automation actions such as _Click UI element in window_ or _Populate text field in window_, the flow interacts with a different UI element than the one you originally captured.
 
-You might observe the following:
+You might observe the following symptoms:
 
 - The action executes without errors but targets an unexpected element
 - The wrong element receives the click or text input during runtime
@@ -27,20 +27,20 @@ This issue occurs when the target application handles focus, enable, or disable 
 
 To resolve this issue, use a combination of UI automation along with mouse and keyboard actions to ensure proper element targeting. Choose one of the following methods based on whether you need to click or populate text.
 
-### Click an element using hover and mouse click
+### Click an element by using hover and mouse click
 
-Instead of using the **Click UI element in window** action, use this:
+Instead of using the **Click UI element in window** action, use the following steps:
 
 1. Add a **Hover mouse over UI element in window** action and select the target UI element.
 1. Add a **Send mouse click** action immediately after to click the element.
 
 This approach ensures the element receives focus through the hover action before the click is sent, preventing focus-related issues.
 
-### Populate a text field using focus and send keys
+### Populate a text field by using focus and send keys
 
-Instead of using the **Populate text field in window** action, use this:
+Instead of using the **Populate text field in window** action, use the following steps:
 
 1. Add a **Focus text field in window** action and select the target text field.
-2. Add a **Send keys** action to input the desired text.
+1. Add a **Send keys** action to input the desired text.
 
 This approach explicitly sets focus to the correct text field before sending keystrokes, ensuring text is entered in the intended field.
