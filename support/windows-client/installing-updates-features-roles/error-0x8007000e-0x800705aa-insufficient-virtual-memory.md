@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
 description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
-ms.date: 11/26/2025
+ms.date: 12/03/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -101,13 +101,26 @@ To configure the computer to automatically manage its virtual memory, follow the
 1. In **Performance Options**, select **Advanced** > **Virtual memory** > **Change**.
 1. Make sure that **Automatically manage paging file size for all drives** is selected, and then select **OK**.
 1. Restart the computer.
-1. To make sure that this issue doesn't reoccur, monitor the computer's available memory resources.
+1. To make sure that this issue doesn't occur again, monitor the computer's available memory resources.
 
 ### Registry size limit issue
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
+To reset the registry size limit, follow these steps:
 
+1. In the search bar of the affected computer or VM, type **regedit**, and then in the search results, right-click **Registry Editor**.
+1. Select **Run as administrator**.
+1. Select `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`.
+1. Right-click `RegistrySizeLimit`, and then do one of the following actions:
+
+   - Select **Delete**.
+   - Select **Modify**, and then in **Value data**, enter **0**. Select **OK**.
+
+1. Restart the physical computer or VM.
+1. On the affected computer or VM, try again to update Windows.
+
+If the issue persists, contact Microsoft Support for further assistance. Attach copies of any relevant CBS.log data to your support request.
 
 ## More information
 
