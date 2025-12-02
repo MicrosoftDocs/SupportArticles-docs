@@ -3112,6 +3112,8 @@ items:
       href: ./windows-security/mark-attribute-as-confidential.md
     - name: Maximum number of access control entries
       href: ./windows-security/error-add-user-to-security-permissions.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ./windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md
     - name: Security auditing settings aren't applied when you deploy domain-based policy
       href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
     - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
