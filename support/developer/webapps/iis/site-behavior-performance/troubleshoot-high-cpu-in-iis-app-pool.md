@@ -34,10 +34,10 @@ You can also use Performance Monitor to determine what process uses the most CPU
 
 Once you confirm that a `w3wp.exe` process is experiencing high CPU, collect the following information to determine the cause of the problem:
 
-- A Performance Monitor data collector set.
+- [A Performance Monitor data collector set](#collecting-a-performance-monitor-data-collector-set)
 - Either or both:
-  - A user-mode memory dump of the `w3wp.exe` process
-  - An ETW Trace
+  - [A user-mode memory dump of the `w3wp.exe` process](#creating-a-debug-diagnostics-rule)
+  - [An ETW Trace](#collecting-etw-traces-with-perfview)
 
 > [!NOTE]
 > In general, ETW tracing doesn't impact performance, which makes it useful in production scenarios when server performance must be maintained during log collection. In comparison, threads pause during memory dump collection, so server performance might be reduced during dump collection.
@@ -95,7 +95,7 @@ Select **OK** -> **Next**. Make note of where the data collector set is saved. (
 
 The data collector set isn't running yet. To start it, right-click **High CPU** under the **User Defined** node and select **Start** from the menu.
 
-### Creating a Debug Diagnostics rule
+### Collect user-mode memory dump using Debug Diagnostics
 
 The easiest way to collect user-mode process dumps when a high CPU condition occurs is to use Debug Diagnostics.
 
@@ -214,7 +214,7 @@ This kind of code causes high CPU.
 
 ## Conclusion
 
-By using Perfmon and DebugDiag, you can easily collect data that helps you determine the cause of high CPU usage in application pools. If you can't find the root cause with these techniques, contact Microsoft support for further assistance. Microsoft support engineers can help you determine the cause of your issue. When you open a case, having the Perfmon data and dumps ready dramatically reduces the time necessary for the engineers to assist you.
+By using Perfmon, DebugDiag, and PerfView you can easily collect data that helps you determine the cause of high CPU usage in application pools. If you can't find the root cause with these techniques, contact Microsoft support for further assistance. Microsoft support engineers can help you determine the cause of your issue. When you open a case, having the Perfmon data, memory dumps, and ETW traces ready dramatically reduces the time necessary for the engineers to assist you.
 
 ### Other resources
 
