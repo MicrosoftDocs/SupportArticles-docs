@@ -23,7 +23,7 @@ You might observe the following symptoms:
 
 This issue occurs when the target application handles focus, enable, or disable events in an unexpected way. Some applications dynamically change element focus or states, which can cause UI automation actions to interact with the wrong element.
 
-## Resolution
+## Solution
 
 To resolve this issue, use a combination of UI automation along with mouse and keyboard actions to ensure proper element targeting. Choose one of the following methods based on whether you need to click or populate text.
 
