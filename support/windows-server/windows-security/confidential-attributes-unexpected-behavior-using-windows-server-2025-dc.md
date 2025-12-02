@@ -20,9 +20,9 @@ This article discusses new requirements for using LDAP clients to access confide
 
 When you search for or edit Active Directory Domain Services (AD DS) objects, you notice the following behaviors:
 
-- When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a Windows Server 2022-based DC (or an older DC), you obtain a full attribute list in the response.
+- When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), you obtain a full attribute list in the response.
 
-- When you run an LDAP request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP request against a Windows Server 2022-based DC (or an older DC), the request succeeds.
+- When you run an LDAP request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP request against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), the request succeeds.
 
 ### Example - Missing confidential attributes
 
