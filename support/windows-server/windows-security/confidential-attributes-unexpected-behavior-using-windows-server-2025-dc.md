@@ -24,7 +24,7 @@ When you search for or edit Active Directory Domain Services (AD DS) objects, yo
 
 - When you run an LDAP request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP request against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), the request succeeds.
 
-### Example - Missing confidential attributes
+### Example - Search results omit confidential attributes
 
 In this example, you run an [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) query try to read the legacy Local Administrator Password Solution (LAPS) password attribute. The query resembles the following example:
 
