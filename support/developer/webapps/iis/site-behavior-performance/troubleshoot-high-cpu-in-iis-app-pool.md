@@ -36,7 +36,7 @@ Once you confirm that a `w3wp.exe` process is experiencing high CPU, collect the
 
 - [A Performance Monitor data collector set](#collecting-a-performance-monitor-data-collector-set)
 - Either or both:
-  - [A user-mode memory dump of the `w3wp.exe` process](#creating-a-debug-diagnostics-rule)
+  - [A user-mode memory dump of the `w3wp.exe` process](#collect-user-mode-memory-dump-using-debug-diagnostics)
   - [An ETW Trace](#collecting-etw-traces-with-perfview)
 
 > [!NOTE]
