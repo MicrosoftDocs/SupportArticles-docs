@@ -99,7 +99,7 @@ Common problems include:
 
 **Error message**: This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution**: This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within 5 minutes. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution**: This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within 5 minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionBadRequest
 
@@ -207,7 +207,7 @@ For more information, see [Prompt Shields for documents](/azure/ai-services/cont
 
 This includes, but isn't limited to:
 
-- Eating Disorder
+- Eating disorder
 - Bullying and intimidation
 
 **Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
@@ -220,7 +220,7 @@ This includes, but isn't limited to:
 
 - Vulgar content
 - Prostitution
-- Nudity and Pornography
+- Nudity and pornography
 - Abuse
 - Child exploitation, child abuse, child grooming
 
