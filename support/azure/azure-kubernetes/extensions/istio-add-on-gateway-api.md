@@ -30,17 +30,29 @@ Before you proceed, take the following actions:
 
 ## Application routing Gateway API Implementation compatibility and migration
 
-Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. Users must first disable one in order to enable the other.
+Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. You must disable one first and enable the other in a separate operation.
 
-If you were previously using application routing Istio Gateway API Implementation and migrated to the Istio add-on, and are experiencing issues with the Istio add-on control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` and `Gateway` deployments. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
+If you were previously using application routing Istio Gateway API Implementation and migrated to the Istio add-on, and are experiencing issues with the Istio add-on control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` deployment. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
 
 ## Networking, firewall, and load balancer errors troubleshooting
 
 ### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-The Istio add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes. You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+The Istio add-on adds [Azure Load Balancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) to the `Gateway` service to configure health probes, namely:
 
-Gateway customization:
+```
+service.beta.kubernetes.io/port_<gateway_port>_health-probe_port: "10256"
+
+service.beta.kubernetes.io/port_<gateway_port>_health-probe_protocol: http
+
+service.beta.kubernetes.io/port_<gateway_port>_health-probe_request-path: /healthz
+```
+
+These annotations tell Azure Load Balancer the path, protocol, and port for health probing the node or backend pods before forwarding traffic to the pod. By default, this is set to the port that `kube-proxy` is listening on to ensure that the `kube-proxy` instance on the node is healthy and can forward traffic to the destination pods. Note that these health probes only take effect when the `externalTrafficPolicy` is set to `cluster` - when the `externalTrafficPolicy` is set to `local`, Azure Load Balancer will use the `healthCheckNodePort` for health probing the node.
+
+You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+
+`Gateway` customization (ex - for `Gateway` listening on port `80`):
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
@@ -50,9 +62,9 @@ kind: Gateway
 spec:
   infrastructure:
     annotations:
-      service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
+      service.beta.kubernetes.io/port_80_health-probe_port: "10256"
       service.beta.kubernetes.io/port_80_health-probe_protocol: http
-      service.beta.kubernetes.io/port_80_health-probe_port: "15021"
+      service.beta.kubernetes.io/port_80_health-probe_request-path: /healthz
 ```
 
 ConfigMap customization:
@@ -64,9 +76,9 @@ data:
   service: |
     metadata:
       annotations:
-        service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
+        service.beta.kubernetes.io/port_80_health-probe_port: "10256"
         service.beta.kubernetes.io/port_80_health-probe_protocol: http
-        service.beta.kubernetes.io/port_80_health-probe_port: "15021"
+        service.beta.kubernetes.io/port_80_health-probe_request-path: /healthz
 ```
 
 You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster on Azure Portal under `Settings/Properties`.
@@ -87,11 +99,15 @@ Verify that all `Gateways` you created have the `spec.gatewayClassName` set to `
 
 Depending on the namespace that the `Gateway` and respective Routes are deployed in, the `Gateway` `spec.listeners.allowedRoutes` value should be set accordingly to allow Routes from only the same namespace or across different namespaces. Likewise, the `spec.parentRefs` value for Routes should reference the correct `Gateway` and provide the appropriate namespace for cross-namespace `Gateway` references. For more information, see the Gateway API docs on [cross-namespace routing](https://gateway-api.sigs.k8s.io/guides/multiple-ns/).
 
-### Step 3: Inspect the `Gateway` for programming errors
+### Step 3: Verify routing rules don't conflict
+
+While multiple Routes can be attached to a single `Gateway` resources, only one Route rule may match each request. Overlapping rules can lead to conflicts and merging issues.
+
+### Step 4: Inspect the `Gateway` for programming errors
 
 If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `.
 
-### Step 4: Inspect `istiod` and `Gateway` logs for errors
+### Step 5: Inspect `istiod` and `Gateway` logs for errors
 
 The `istiod` logs may have additional details about `Gateway` programming-related errors. If the gateway is programmed successfully, and the pod deployments are created, but other issues occur, try inspecting the `Gateway` pod logs for any potential errors. The `Gateway` pod deployment name follows the format, `<gateway-name>-istio`.
 
@@ -110,7 +126,7 @@ spec:
   gatewayClassName: istio
 ```
 
-During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If this condition isn't true, try to restart the deployment. 
+During the minor revision upgrade, verify that the pods and deployments for the gateway are automatically updated to have the new proxy minor image version that corresponds to the later control plane minor revision. If the versions aren't updated, try to restart the `istiod` deployment. 
 
 If your gateways are labeled explicitly with an ASM revision, relabel them accordingly before you finish or roll back the upgrade operation.
 
