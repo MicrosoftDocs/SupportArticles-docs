@@ -27,7 +27,7 @@ When you encounter high CPU usage issues, first determine the process that consu
 
 :::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/windows-task-manager-w3wp.png" alt-text="Windows Task Manager showing the C P U column in which 85 is highlighted on the w 3 w p executable row. The show processes from all users option is selected.":::
 
-You can also use Performance Monitor to determine which process uses the most CPU. For more information about how to use Performance Monitor, see [Analyzing performance data](#analyzing-performance-data).
+You can also use Performance Monitor to determine which process uses the most CPU. For more information about how to use Performance Monitor, see [Analyzing performance data](#analyze-performance-data).
 
 > [!TIP]
 > To identify which application pool is associated with a particular `w3wp.exe` process, open an administrative Command Prompt window, switch into the `%windir%\System32\inetsrv` folder (`cd %windir%\System32\inetsrv`), and then run `appcmd list wp`. This command shows the process identifier (PID) of the `w3wp.exe` process in quotation marks. You can match that PID to the PID that's available in Task Manager.
@@ -46,7 +46,7 @@ After you verify that a `w3wp.exe` process is experiencing high CPU, determine t
 
 The goal of this data collection is to observe the operations on the non-waiting threads when the `w3wp.exe` CPU usage is highest. When you collect data, follow these recommendations:
 
-- Collect multiple traces or dump files (three is usually sufficient.
+- Collect multiple traces or dump files (three is usually sufficient).
 - Collect traces or dump files from the same process ID.
 - Collect traces or dump files 10 seconds apart to minimize the time in between each. (This method helps make sure that the same threads are still alive in each trace or dump file so that you can better identify which threads are consuming the most CPU.)
 - Collect dump files when the CPU usage of `w3wp.exe` is high or abnormal, not only when the total server CPU usage is high.
