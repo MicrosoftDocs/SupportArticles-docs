@@ -31,7 +31,7 @@ When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automa
 
 ### Scenario 2
 
-The error also occurs when you run a Launch Browser action, and the browser is launched by using a different system user than the one used to run Power Automate for desktop. For the recommended workaround, see [Cause 3](#cause-3-the-browser-is-launched-using-a-different-system-user-than-the-one-used-to-run-power-automate-for-desktop-version-238-or-higher) in this article.
+The error also occurs when you run a Launch Browser action, and the browser is launched by using a different system user than the one used to run Power Automate for desktop. For the recommended workaround, see [Cause 3](#cause-3-you-launch-the-browser-by-using-a-different-system-user-than-the-one-you-use-to-run-power-automate-for-desktop-version-238-or-higher) in this article.
 
 ## Cause 1: Web extension isn't installed properly or enabled
 
