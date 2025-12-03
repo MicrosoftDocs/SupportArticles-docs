@@ -25,13 +25,13 @@ When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automa
 > [!IMPORTANT]
 > To resolve the error:
 >
-> 1. First run the **Troubleshoot UI/Web automation issues** diagnostic using the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).  
-> 2. When the diagnostic runs, a report is generated that identifies issues. These issues can be resolved by pressing the **Fix** button that appears after the diagnostics check completes.  
-> 3. If the troubleshooter doesn't resolve the error, proceed to the potential causes and solutions provided in this article.
+> 1. Run the **Troubleshoot UI/Web automation issues** diagnostic by using the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).  
+> 1. When the diagnostic runs, it generates a report that identifies issues. Resolve these issues by pressing the **Fix** button that appears after the diagnostics check completes.  
+> 1. If the troubleshooter doesn't resolve the error, proceed to the potential causes and solutions provided in this article.
 
 ### Scenario 2
 
-The error also occurs when you run a Launch Browser action, and the browser is launched using a different system user than the one used to run Power Automate for desktop. For the recommended workaround, see [Cause 3](#cause-3-the-browser-is-launched-using-a-different-system-user-than-the-one-used-to-run-power-automate-for-desktop-version-238-or-higher) in this article.
+The error also occurs when you run a Launch Browser action, and the browser is launched by using a different system user than the one used to run Power Automate for desktop. For the recommended workaround, see [Cause 3](#cause-3-the-browser-is-launched-using-a-different-system-user-than-the-one-used-to-run-power-automate-for-desktop-version-238-or-higher) in this article.
 
 ## Cause 1: Web extension isn't installed properly or enabled
 
@@ -52,12 +52,12 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed prop
 
    :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/browser-extensions.png" alt-text="Screenshot that shows how to install the web extension from the list.":::
 
-2. Even if the extension seems installed and enabled, you need to remove it and reinstall it.
-3. Restart the browser.
+1. Even if the extension seems installed and enabled, remove it and reinstall it.
+1. Restart the browser.
 
 ## Cause 2: Launch Browser action takes longer than the default timeout
 
-Launch of the browser takes longer than the default timeout (**30** seconds) of the action. The automation tries to assume control of the browser before opening and as a result the Launch Browser action fails.
+Launching the browser takes longer than the default timeout (30 seconds) of the action. The automation tries to assume control of the browser before opening it and as a result the Launch Browser action fails.
 
 ### Additional symptoms
 
@@ -67,128 +67,128 @@ Execution of a desktop flow with one of the respective actions fails with the er
 
 In the **Launch new Edge**, **Launch new Chrome**, or **Launch new Firefox** action, increase the values of **Timeout on webpage load** and **Timeout** parameters located in the **Advanced** section. For example, set these values to **120** seconds.
 
-If this adjustment doesn't resolve the issue, follow the steps outlined in [Solution 2](#solution-2-use-a-go-to-web-page-action) or [Solution 3](#solution-3-use-a-wait-action).
+If this adjustment doesn't resolve the issue, try the steps outlined in [Solution 2](#solution-2-use-a-go-to-web-page-action) or [Solution 3](#solution-3-use-a-wait-action).
 
 ### Solution 2: Use a Go to web page action
 
-Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a [Go to web page](/power-automate/desktop-flows/actions-reference/webautomation#gotowebpagebase) action afterwards can be used to resolve the issue.
+Use the **Launch Browser** action to start the process of the corresponding browser. Then use a combination of an additional **Launch Browser** action with mode set to **Attach to running instance** and a [Go to web page](/power-automate/desktop-flows/actions-reference/webautomation#gotowebpagebase) action to resolve the issue.
 
-1. Insert a new Launch Browser action as:
+1. Insert a new **Launch Browser** action as:
     - **Launch new Microsoft Edge**
     - **Launch new Chrome**
     - **Launch new Firefox**
     - **Launch new Internet Explorer**
 
-2. Set up the parameters of the action:
-    - Launch mode: Launch new Instance
+1. Set up the parameters of the action:
+    - Launch mode: **Launch new Instance**
     - Initial URL: A default URL
     - The remaining parameters can be set as desired.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/parameters-of-launch-new-browser-action.png" alt-text="Screenshot that shows how to set up the parameters of the Launch new browser action.":::
 
-3. Insert an error handling policy:
+1. Insert an error handling policy:
     - Select the **On error** option in the action window:
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/insert-error-handling-policy-for-action.png" alt-text="Screenshot that shows how to insert an error handling policy by using the On error option.":::
 
-    - Select **Continue flow run** > **Go to next action** in the dropdown list, and then select **Save**.
+    - Select **Continue flow run** > **Go to next action** in the dropdown list, then select **Save**.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Screenshot that shows how to select the Continue flow run and Go to next action options and then save the settings.":::
 
-4. Insert a new Launch Browser action of the same browser as step 1 and set up the parameters of the action:
-    - Launch mode: Attach to running instance
-    - Attach to browser tab: By URL
+1. Insert a new **Launch Browser** action of the same browser as step 1 and set up the parameters of the action:
+    - Launch mode: **Attach to running instance**
+    - Attach to browser tab: **By URL**
     - Tab URL: The URL inserted in step 1.
     - Variables produced: Replace the new browser variable with the name of the variable produced in step 1.
 
         :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="Screenshot that shows how to replace the new browser variable with the name of the variable produced in step 1.":::
 
-5. Select the **On error** option and take the following steps:
+1. Select the **On error** option and take the following steps:
     1. Enable the **Retry action if an error occurs** option.
 
        :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/enable-retry-action-if-an-error-occurs.png" alt-text="Screenshot that shows how to enable the Retry action if an error occurs option.":::
 
-    2. Set the number of times to **20** by selecting the number of times.
-    3. Set the interval in seconds to **5** by selecting the number of seconds.
-    4. Select **Save**.
+    1. Set the number of times to **20** by selecting the number of times.
+    1. Set the interval in seconds to **5** by selecting the number of seconds.
+    1. Select **Save**.
 
-6. Insert a **Go to web page** action and set up the parameters of the action:
-    - Web browser instance: The variable produced by the Launch Browser action.
+1. Insert a **Go to web page** action and set up the parameters of the action:
+    - Web browser instance: The variable produced by the **Launch Browser** action.
     - Navigate: To URL
-    - URL: The URL you would like to navigate to.
+    - URL: The URL you want to navigate to.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Screenshot that shows how to configure the parameters of the Go to web page action.":::
 
 ### Solution 3: Use a Wait action
 
-Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a **Wait** action set to a duration afterwards can be used to resolve the issue.
+Use the **Launch Browser** action to start the process of the corresponding browser. Then use a combination of an additional **Launch Browser** action with mode set to **Attach to running instance** and a **Wait** action set to a duration afterwards to resolve the issue.
 
-1. Insert a new Launch Browser action as:
+1. Insert a new **Launch Browser** action as:
     - **Launch new Microsoft Edge**
     - **Launch new Chrome**
     - **Launch new Firefox**
     - **Launch new Internet Explorer**
 
-2. Set up the parameters of the action:
-    - Launch mode: Launch new Instance
+1. Set up the parameters of the action:
+    - Launch mode: **Launch new Instance**
     - Initial URL: A default URL
     - Rest parameters can be set as desired.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/parameters-of-launch-new-browser-action.png" alt-text="Screenshot that shows how to set up the parameters of the Launch new browser action.":::
 
-3. Insert an error handling policy:
+1. Insert an error handling policy:
     - Select the **On error** option in the action window:
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/insert-error-handling-policy-for-action.png" alt-text="Screenshot that shows how to insert an error handling policy by using the On error option.":::
 
-    - Select **Continue flow run** > **Go to next action** in the dropdown list, and then select **Save**.
+    - Select **Continue flow run** > **Go to next action** in the dropdown list, then select **Save**.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Screenshot that shows how to select the Continue flow run and Go to next action options and then save the settings.":::
 
-4. Insert a **Wait** action and set its duration to **90** seconds (adjust duration as needed).
+1. Insert a **Wait** action and set its duration to **90** seconds (adjust duration as needed).
 
      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/wait-action.png" alt-text="Screenshot that shows how to insert a Wait action with value set to 90.":::
 
-5. Insert another Launch Browser action for the same browser used in step 1, and configure the parameters:
-    - Launch mode: Attach to running instance
-    - Attach to browser tab: By URL
+1. Insert another **Launch Browser** action for the same browser used in step 1, and configure the parameters:
+    - Launch mode: **Attach to running instance**
+    - Attach to browser tab: **By URL**
     - Tab URL: The URL inserted in step 1.
     - Variables produced: Replace the new browser variable with the name of the variable produced in step 1.
 
         :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="Screenshot that shows how to replace the new browser variable with the name of the variable produced in step 1.":::
 
-## Cause 3: The browser is launched using a different system user than the one used to run Power Automate for desktop (version 2.38 or higher)
+## Cause 3: You launch the browser by using a different system user than the one you use to run Power Automate for desktop (version 2.38 or higher)
 
 This issue can occur in attended and unattended desktop flow modes.
 
-To resolve the issue, ensure that the browser is launched using the same system user account that's being used to run Power Automate for desktop.
+To resolve the issue, make sure you launch the browser by using the same system user account that you use to run Power Automate for desktop.
 
 ## Cause 4: Browser doesn't open due to profile conflicts
 
 The browser doesn't launch, or it launches once but fails to open in subsequent attempts.
 
-### Verify cause
+### Additional symptoms
 
-Execution of a desktop flow with a Launch Browser action fails, and the browser either doesn't appear or terminates immediately after launch.
+Execution of a desktop flow with a **Launch Browser** action fails, and the browser either doesn't appear or terminates immediately after launch.
 
 ### Solution
 
-Another session might be using the same browser profile. When you launch a Chromium-based browser (such as Microsoft Edge or Chrome), the browser checks if another instance is already using the same profile on disk. If another instance exists, the browser terminates immediately.
+Another session might be using the same browser profile. When you launch a Chromium-based browser (such as Microsoft Edge or Chrome), the browser checks if another instance is already using the same profile on disk. If another instance is using the same profile, the browser terminates immediately.
 
-This issue can occur when the same user is logged in to multiple sessions on the same machine, and each session attempts to open the browser. Only one session can successfully launch the browser; the others terminate on launch.
+This issue can occur when the same user signs in to multiple sessions on the same machine, and each session attempts to open the browser. Only one session can successfully launch the browser; the others terminate on launch.
 
 To work around this issue, manually launch the browser from Power Automate for desktop with a different profile on disk. Use the following example:
 
-```ps
+```powershell
 Folder.GetSpecialFolder SpecialFolder: Folder.SpecialFolder.DesktopDirectory SpecialFolderPath=> SpecialFolderPath  
-System.RunApplication.RunApplication ApplicationPath: $'''msedge.exe''' CommandLineArguments: $'''--user-data-dir=\"%SpecialFolderPath%\\test-profile\"''' WindowStyle: System.ProcessWindowStyle.Normal
+System.RunApplication.RunApplication ApplicationPath: $'''msedge.exe''' CommandLineArguments: $'''--user-data-dir=\"%SpecialFolderPath%\\<ProfileFolder>\"''' WindowStyle: System.ProcessWindowStyle.Normal
 ```
 
 This command launches the browser with a unique profile directory, preventing conflicts with other browser instances.
 
 ## General checks
 
-If the preceding actions don't resolve the issue, ensure the following:
+If the preceding actions don't resolve the issue, ensure the following checks:
 
 - Make sure that the environmental variable `ComSpec` with value `C:\WINDOWS\system32\cmd.exe` exists on the machine.
 - (Chrome only) Check and set the `exit_type` parameter to `normal` at _%localappdata%\Google\Chrome\User Data\Default\Preferences_.
