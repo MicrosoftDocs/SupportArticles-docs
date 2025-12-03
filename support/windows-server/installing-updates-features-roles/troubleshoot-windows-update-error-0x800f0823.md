@@ -21,7 +21,7 @@ This article discusses how to resolve an issue that prevents Windows updates fro
 
 ## Symptoms
 
-When you try to install a Windows update, the installation fails and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur whether you're installing updates by using a direct connection to Windows Update, or by using an offline MSI file. To confirm the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
+When you try to install a Windows update, the installation fails, and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur when you install updates whether you use a direct connection to Windows Update or an offline .msi file. To verify the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
 
 ```output
 2023-09-04 15:01:53, Error                 CBS    Package "Package_for_KB5012170~31bf3856ad364e35~amd64~~14393.5285.1.4" requires Servicing Stack v10.0.14393.5285 but current Servicing Stack is v10.0.14393.4349. [HRESULT = 0x800f0823 - CBS_E_NEW_SERVICING_STACK_REQUIRED]
@@ -31,9 +31,9 @@ For more information about the CBS log, see [Windows Update log files](/windows/
 
 ## Cause
 
-This error code means that the affected computer's [servicing stack](/windows/deployment/update/servicing-stack-updates)--the component that installs Windows updates--is out of date. The computer can't correctly process new updates.
+This error code means that the affected computer's [servicing stack](/windows/deployment/update/servicing-stack-updates) is out of date. The servicing stack is the component that installs Windows updates. If this error occurs, the computer can't process new updates correctly.
 
-Typically, Windows Update automatically keeps the servicing stack up-to-date by installing [servicing stack updates (SSUs)](/windows/deployment/update/servicing-stack-updates). However, it's possible for a physical computer or virtual machine (VM) to fall out of sync by skipping updates.
+Typically, Windows Update automatically keeps the servicing stack up to date by installing [servicing stack updates (SSUs)](/windows/deployment/update/servicing-stack-updates). However, it's possible for a physical computer or virtual machine (VM) to fall out of sync by skipping updates.
 
 ## Resolution
 
@@ -45,17 +45,19 @@ Typically, Windows Update automatically keeps the servicing stack up-to-date by 
 
 ### Step 1: Get the most recent SSU
 
-For older versions of Windows, you can search specifically for SSUs in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com). For example, depending on the operating system that you're using, search for the following strings:
+For earlier versions of Windows, you can search for specific SSUs in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com). For example, depending on the operating system that you're using, search for the following strings:
 
-- Windows 10, version 1607, and older versions: **ssu "Windows 10"**
+- Windows 10, version 1607, and earlier versions: **ssu "Windows 10"**
 - Windows Server 2016: **ssu "Windows Server 2016"**
 
 Identify the update that has the latest release date.
 
 > [!NOTE]  
-> You can also confirm the latest SSU for those Windows versions by reviewing the [MSRC Servicing Stack Update](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001) page. In the Frequently Asked Questions list, look for "When was the most recent SSU released for each version of Microsoft Windows?".
+> You can also verify the latest SSU for those Windows versions by reviewing the [MSRC Servicing Stack Update](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001) page. In the Frequently Asked Questions list, look for the following question:
+>
+> "When was the most recent SSU released for each version of Microsoft Windows?"
 
-For newer versions of Windows and Windows Server, security updates include both SSUs and the latest cumulative updates (LCUs). Before you try to locate the security update that you need in the catalog, use the update history listings to identify the appropriate KB number. The following table provides links to these listings.
+For later versions of Windows and Windows Server, security updates include both SSUs and the latest cumulative updates (LCUs). Before you try to locate the security update that you need in the catalog, use the update history listings to identify the appropriate KB number. The following table provides links to these listings.
 
 | Windows version | Update history |
 | --- | --- |
@@ -65,16 +67,14 @@ For newer versions of Windows and Windows Server, security updates include both 
 | Windows 10, version 2004, and later versions | [Windows 10 update history](https://support.microsoft.com/help/5018682) |
 | Windows 10, version 1809, and Window Server 2019, all versions | [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) |
 
-After you identify the update that you want, search for the update's KB number in the Microsoft Update Catalog.
+After you locate the update that you want, search for the update's KB number in the Microsoft Update Catalog.
 
 > [!NOTE]  
-> The text of an update's KB article might refer to its associated SSU by using a KB number that's different from the main article number. However, in the catalog you can only search for the main article's KB number. The catalog doesn't have separate entries for these SSU numbers.
+> The text of an update's KB article might refer to its associated SSU by using a KB number that's different from the main article number. However, in the catalog, you can search for only the main article's KB number. The catalog doesn't have separate entries for these SSU numbers.
 
 ### Step 2: Download and install the update
 
-Typically, your update search results include more than one update for a single KB number. Check the update title to identify the update that applies to the affected computer's architecture. Identify the appropriate update, and then select **Download**.
-
-Download the update to the affected physical computer or VM, and then install it. Afterwards, restart the physical computer or VM.
+Typically, your update search results include more than one update for a single KB number. Check the update title to identify the update that applies to the affected computer's architecture. Select **Download** to download the appropriate file to the affected physical computer or VM. After you install the update, restart the physical computer or VM.
 
 ### Step 3: Install the update that failed
 
