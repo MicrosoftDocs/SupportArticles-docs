@@ -54,7 +54,7 @@ Error code 0x800705aa might indicate a registry issue instead of a general virtu
 2024-05-13 22:31:56, Info                  CBS    Failed to get Transaction State for package: Microsoft-Windows-NetFx4-OC-Package~31bf3856ad364e35~amd64~~10.0.17763.1, update: NetFx4 [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
 ```
 
-For a contrasting example of CBS log entries that indicate a non-registry cause, see [More information](#more-information).
+For a contrasting example of CBS log entries that indicate a nonregistry cause, see [More information](#more-information).
 
 For more information about how to use the CBS log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
