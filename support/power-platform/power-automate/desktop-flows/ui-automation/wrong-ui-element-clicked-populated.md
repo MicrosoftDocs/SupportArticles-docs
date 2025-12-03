@@ -7,17 +7,17 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Wrong UI element is clicked or populated in desktop flow
 
-This article resolves an issue in which Power Automate for desktop interacts with the wrong UI element instead of the element that you captured during flow design. This issue occurs even though the Test Selector tool detects the right element.
+This article resolves an issue in which Power Automate for desktop interacts with the wrong UI element instead of the element that you captured during flow design. This issue occurs even though the [Test Selector](/power-automate/desktop-flows/test-selectors) tool detects the right element.
 
 ## Symptoms
 
-When you run a desktop flow that includes UI automation actions such as _Click UI element in window_ or _Populate text field in window_, the flow interacts with a different UI element than the one that you originally captured.
+When you run a desktop flow that includes UI automation actions such as [Click UI element in window](/power-automate/desktop-flows/actions-reference/uiautomation#click) or [Populate text field in window](/power-automate/desktop-flows/actions-reference/uiautomation#populatetextfield), the flow interacts with a different UI element than the one that you originally captured.
 
 You might observe the following symptoms:
 
 - The action runs without errors but targets an unexpected element.
 - The wrong element receives the click or text input during runtime.
-- The _Test Selector_ tool successfully identifies the correct element during design time.
+- The [Test Selector](/power-automate/desktop-flows/test-selectors) tool successfully identifies the correct element during design time.
 
 ## Cause
 
@@ -29,18 +29,18 @@ To resolve this issue, use a combination of UI automation and mouse and keyboard
 
 ### Click an element by using hover and mouse click
 
-Instead of using the **Click UI element in window** action, follow these steps:
+Instead of using the [Click UI element in window](/power-automate/desktop-flows/actions-reference/uiautomation#click) action, follow these steps:
 
-1. Add a **Hover mouse over UI element in window** action, and select the target UI element.
-1. Add a **Send mouse click** action immediately after to click the element.
+1. Add a [Hover mouse over UI element in window](/power-automate/desktop-flows/actions-reference/uiautomation#hoveronelement) action, and select the target UI element.
+1. Add a [Send mouse click](/power-automate/desktop-flows/actions-reference/mouseandkeyboard#sendmouseclick) action, placed immediately after the hover action, to click the element.
 
 To prevent focus-related issues, this approach makes sure that the element receives focus through the hover action before the click is sent.
 
 ### Populate a text field by using focus and send keys
 
-Instead of using the **Populate text field in window** action, follow these steps:
+Instead of using the [Populate text field in window](/power-automate/desktop-flows/actions-reference/uiautomation#populatetextfield) action, follow these steps:
 
-1. Add a **Focus text field in window** action, and select the target text field.
-1. Add a **Send keys** action to input the desired text.
+1. Add a [Focus text field in window](/power-automate/desktop-flows/actions-reference/uiautomation#focustextfield) action, and select the target text field.
+1. Add a [Send keys](/power-automate/desktop-flows/actions-reference/mouseandkeyboard#sendkeys) action to input the desired text.
 
 To make sure that text is entered in the intended field, this approach explicitly sets the focus to the correct text field before the keystrokes are sent.
