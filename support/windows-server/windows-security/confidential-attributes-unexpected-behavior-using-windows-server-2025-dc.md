@@ -20,9 +20,9 @@ This article discusses new requirements for using LDAP clients to access confide
 
 When you search for or edit Active Directory Domain Services (AD DS) objects, you notice the following behaviors:
 
-- When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), you obtain a full attribute list in the response.
+- When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a DC that runs on Windows Server 2022 or earlier, you obtain a full attribute list in the response.
 
-- When you run an LDAP update request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the update request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP update request against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), the update request succeeds.
+- When you run an LDAP update request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the update request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP update request against a DC that runs on Windows Server 2022 or earlier, the update request succeeds.
 
 ### Example - Search results omit confidential attributes
 
@@ -48,7 +48,7 @@ Writing out entries.
 
 However, when you review the exported list, you find the "cn" attribute but not the "ms-Mcs-AdmPwd" attribute.
 
-When you target the query to a DC that runs an older version of Windows, the resulting exported list includes both "cn" and "ms-Mcs-AdmPwd."
+When you target the query to a DC that runs an earlier version of Windows, the resulting exported list includes both "cn" and "ms-Mcs-AdmPwd."
 
 The following table summarizes the behavior across different client and server versions.
 
@@ -224,7 +224,7 @@ Client:
 Starting node:
 DC=contoso,DC=com
 Filter:
-(objectCategory=CN=Computer,CN=Schema,CN=Configuration,DC=herbertm1,DC=lab)
+(objectCategory=CN=Computer,CN=Schema,CN=Configuration,DC=contoso,DC=com)
 Search scope:
 subtree
 Attribute selection:
