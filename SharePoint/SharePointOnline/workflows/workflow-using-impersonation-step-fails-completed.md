@@ -1,6 +1,6 @@
 ---
 title: SharePoint workflow using an impersonation step doesn't complete
-description: SharePoint workflow with an impersonation step that you return field values for a user account as something other than As a string does not finish when you run it.
+description: SharePoint workflow with an impersonation step that you return field values for a user account as something other than a string doesn't finish when run.
 author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
@@ -33,9 +33,9 @@ Consider the following scenario:
   - Return a field that has a value other than **As a string**.
   - Use the value in that field to change permissions.
 
-- The field that you are trying to collect information from contains user accounts.
+- The field that you're trying to collect information from contains user accounts.
 
-In this scenario, when you run the workflow, the workflow does not finish, and the status is displayed as **Error Occurred**.
+In this scenario, when you run the workflow, the workflow doesn't finish, and the status is displayed as **Error Occurred**.
 
 ## Solution
 
