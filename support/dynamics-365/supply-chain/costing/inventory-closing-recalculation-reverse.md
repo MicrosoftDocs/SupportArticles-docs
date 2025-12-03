@@ -13,6 +13,24 @@ ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 
 This article provides troubleshooting guidance for common errors that might occur during inventory close, recalculation, or reverse in Microsoft Dynamics 365 Supply Chain Management.
 
+## Another closing or adjustment has not finished yet
+
+### Symptoms
+
+An inventory closing or recalculation fails with the following error message:
+
+> Another closing or adjustment has not finished yet
+
+Also, a new closing or recalculation voucher isn't created in the _Closing and Adjustment_ form.
+
+### Cause
+
+This issue occurs when you attempt to execute a new closing or recalculation while a previous closing or voucher execution is still in progress.
+
+### Solution
+
+Wait for the previous closing or voucher execution to complete, then you can execute a new closing or recalculation.
+
 ## Batch task failed: Cannot select a record in Current client sessions
 
 ### Symptoms
