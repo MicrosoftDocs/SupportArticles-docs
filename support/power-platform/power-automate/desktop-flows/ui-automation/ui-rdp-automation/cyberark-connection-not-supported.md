@@ -11,20 +11,23 @@ This article helps you resolve an issue where you can't connect to a machine thr
 
 ## Symptoms
 
-When you try to connect to a machine through CyberArk by using RDP automation, the connection fails and you receive the following error message:
+When you try to connect to a machine through CyberArk by using RDP automation, the Power Automate agent for virtual desktops fails to establish communication with PAD and you receive the following error message:
 
 > A device attached to the system is not functioning.
 
 :::image type="content" source="media/cyberark-connection-not-supported/rdp-connection-failed.png" alt-text="Screenshot showing the error message when attempting to connect through CyberArk.":::
 
-However, when you connect directly to the machine by using RDP without CyberArk, the connection works as expected.
+However, when you connect directly to the machine by using RDP without CyberArk, the connection works as expected and PAD successfully communicates with the agent.
 
 ## Cause
 
-CyberArk creates a nested remote connection path. Power Automate for desktop doesn't support nested remote connections.
+CyberArk creates a nested remote connection path, which interferes with the agent-to-desktop communication required for UI and browser automation. Power Automate for desktop doesn't support nested remote connections.
 
 ## Solution
 
-Use a direct RDP connection to the target machine instead of connecting through CyberArk.
+To resolve this issue:
+
+- Use a direct RDP connection to the target machine instead of connecting through CyberArk.
+- Ensure that the Power Automate agent for virtual desktops is running and properly registered on the machine.
 
 [!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
