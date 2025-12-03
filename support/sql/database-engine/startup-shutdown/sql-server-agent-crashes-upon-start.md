@@ -1,8 +1,8 @@
 ---
 title: SQL Server agent crashes when you try to start it
 description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
-ms.date: 11/08/2022
-ms.reviewer: ramakoni1, v-jayaramanp
+ms.date: 12/03/2025
+ms.reviewer: ramakoni1, v-jayaramanp, v-shaywood
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
@@ -69,23 +69,54 @@ EXECUTE msdb.dbo.sp_sqlagent_refresh_job
    > [!NOTE]
    > The SPID is in the RUNNABLE state and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type, or the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
-## Cause
+## Cause 1: Multiple job entries
 
 This issue occurs because there are multiple job entries in SQL Server.
 
 > [!NOTE]
 > The issue can also occur if you unintentionally set up multiple subscriptions for your reports in the Reporting Services Configuration Manager.
 
-## Workaround
+### Workaround
 
 To work around this issue, delete the jobs that you don't require.
 
 > [!NOTE]
 > If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
 
+## Cause 2: ODBC driver missing or corrupted
+
+This issue can occur if the Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server requires the ODBC driver as a core dependency. For info on the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
+
+### Solution
+
+1. To verify that the ODBC driver is missing, run one of the following commands from an elevated command prompt or PowerShell:
+   1. Command prompt:
+
+      ```cli
+      odbcconf /L
+      ```
+
+   1. PowerShell:
+
+      ```powershell
+      Get-OdbcDriver
+      ```
+
+1. Confirm that the ODBC driver for SQL Server is missing. <!-- Need to confirm with SME what the user should look for to confirm the driver is missing -->
+   1. If the driver is missing continue to the next step.
+   1. If the driver is not missing, see [Cause 1](#cause-1-multiple-job-entries)
+1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server)
+1. Install the driver using the GUI or a silent install.
+   1. You can perform a silent install by using the following command:
+
+      ```cli
+      msiexec /i <ODBD_Driver_MSI> /qn
+      ```
+
+1. After the driver installation completes, restart the SQL Server Agent and confirm the _SQL SERVER AGENT_ service is running.
+
 ## More information
 
 - For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs).
 - For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN).
 - For more information about various wait types, see [SQL Server wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).
-
