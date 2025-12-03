@@ -22,7 +22,7 @@ When you search for or edit Active Directory Domain Services (AD DS) objects, yo
 
 - When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), you obtain a full attribute list in the response.
 
-- When you run an LDAP request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP request against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), the request succeeds.
+- When you run an LDAP update request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the update request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP update request against a Windows Server 2022-based DC (or a DC that runs an older version of Windows Server), the update request succeeds.
 
 ### Example - Search results omit confidential attributes
 
@@ -37,10 +37,14 @@ The client connects and exports a list of the object's attributes, and generates
 ```output
 Connecting to "dc25"
 Logging in as current user using SSPI
-Exporting directory to file con
+Exporting directory to file test-comp01.txt
 Searching for entries...
 Writing out entries.
+1 entries exported
 ```
+
+> [!NOTE]  
+> This example text results from using an LDAP client on Windows 11, 23H2, or an older version of Windows.
 
 However, when you review the exported list, you find the "cn" attribute but not the "ms-Mcs-AdmPwd" attribute.
 
@@ -53,9 +57,9 @@ The following table summarizes the behavior across different client and server v
 | Windows 11, version 24H2 | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
 | Windows Server 2025 (member server) | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
 | Windows version older than Windows 11, version 24H2 | Windows Server 2025 | "cn" |
-| Non-Windows operating system (for example, ldifde on UNIX) | Windows Server 2025 | "cn" |
+| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2025 | "cn" |
 | Windows version older than Windows 11, version 24H2 | Windows Server 2022 or an older version | "cn"<br />"ms-Mcs-AdmPwd" |
-| Non-Windows operating system (for example, ldifde on UNIX) | Windows Server 2022 or an older version | "cn"<br />"ms-Mcs-AdmPwd" |
+| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2022 or an older version | "cn"<br />"ms-Mcs-AdmPwd" |
 
 ### Example - Operations on confidential attributes fail
 
@@ -114,11 +118,13 @@ Because of new functionality in Windows Server 2025 DCs, your administrative cli
 
 - **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
 
+This behavior doesn't affect LDAP clients that run on Windows Server 2025-based member servers or Windows 11, version 24H2-based computers. On these operating system versions, LDAP clients use encrypted sessions by default.
+
 ## Workaround
 
 To work around this issue, use one of the following methods:
 
-- Configure your LDAP client to use the [**LDAP_OPT_ENCRYPT**](/previous-versions/windows/desktop/ldap/session-options) session option (or update to a client that supports this option).
+- Configure your LDAP client to use the [**LDAP_OPT_ENCRYPT**](/previous-versions/windows/desktop/ldap/session-options) session option (or update to a client that supports this option). If you're using ldifde on Windows, use the `/h` switch (for example, run `ldifde /h /s dc25 -i /f .\update.txt`).
 
 - Use Windows Server 2025 or Windows 11 24H2, or a newer version, as an LDAP client. These operating systems encrypt LDAP sessions by default. For more information about this feature, see [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services).
 
@@ -136,7 +142,8 @@ Several new Directory Service events document this behavior. The following table
 
 ### Details for Event ID 3079
 
-> Log Name: Directory Service
+```output
+Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Event ID: 3079
 Task Category: Security
@@ -146,10 +153,12 @@ User: contoso\admin
 Computer: dc25.contoso.com
 Description:
 The directory blocked access to one or more confidential attributes on one or more LDAP search requests because one or more clients were using an unencrypted LDAP connection.
+```
 
 ### Details for Event ID 3080
 
-> Log Name: Directory Service
+```output
+Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Event ID: 3080
 Task Category: Security
@@ -158,10 +167,12 @@ User: contoso\admin
 Computer: dc25.contoso.com
 Description:
 The directory blocked one or more LDAP modify requests including changes to one or more confidential attributes because one or more clients were using an unencrypted LDAP connection.
+```
 
 ### Details for Event ID 3081
 
-> Log Name: Directory Service
+```output
+Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Event ID: 3081
 Task Category: Security
@@ -170,6 +181,7 @@ User: contoso\admin
 Computer: dc25.contoso.com
 Description:
 The directory blocked one or more LDAP add requests including changes to one or more confidential attributes because one or more clients were using an unencrypted LDAP connection.
+```
 
 ### Deeper investigation
 
@@ -197,7 +209,8 @@ When these settings take effect, all LDAP queries to AD DS generate instances of
 
 To continue the previous example, the query for "cn" and "ms-Mcs-AdmPwd" generates Event ID 3079, followed by Event ID 1644. Event ID 1544 resembles the following example:
 
-> Log Name: Directory Service
+```output
+Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Event ID: 1644
 Task Category: Field Engineering
@@ -205,8 +218,8 @@ Level: Information
 Computer: dc25.contoso.com
 Description:
 Internal event: A client issued a search operation with the following options.
->
-> Client:
+
+Client:
 10.32.51.5:54994
 Starting node:
 DC=contoso,DC=com
@@ -219,10 +232,12 @@ ms-Mcs-AdmPwd,cn
 ...
 User:
 Contoso\Admin
+```
 
 You might also see Event ID 2041, which indicates that duplicate log entries are suppressed. The event content resembles the following example:
 
-> Log Name: Directory Service
+```output
+Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Event ID: 2041
 Task Category: Internal Processing
@@ -230,13 +245,14 @@ Level: Information
 Computer: dc25.contoso.com
 Description:
 Duplicate event log entries were suppressed.
->
-> See the previous event log entry for details. An entry is considered a duplicate if the event code and all of its insertion parameters are identical. The time period for this run of duplicates is from the time of the previous event to the time of this event.
->
-> Event Code:
+
+See the previous event log entry for details. An entry is considered a duplicate if the event code and all of its insertion parameters are identical. The time period for this run of duplicates is from the time of the previous event to the time of this event.
+
+Event Code:
 80000c07
 Number of duplicate entries:
 7
+```
 
 In this context, the information in these events indicates the following behavior:
 
