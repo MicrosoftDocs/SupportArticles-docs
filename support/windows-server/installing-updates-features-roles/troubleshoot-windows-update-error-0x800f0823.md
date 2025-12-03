@@ -47,7 +47,7 @@ Typically, Windows Update automatically keeps the servicing stack up-to-date by 
 
 For older versions of Windows, you can search specifically for SSUs in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com). For example, depending on the operating system that you're using, search for the following strings:
 
-- Windows 10, version 1607 and older versions: **ssu "Windows 10"**
+- Windows 10, version 1607, and older versions: **ssu "Windows 10"**
 - Windows Server 2016: **ssu "Windows Server 2016"**
 
 Identify the update that has the latest release date.
@@ -62,8 +62,8 @@ For newer versions of Windows and Windows Server, security updates include both 
 | Windows Server 2025, all versions | [Windows Server 2025 update history](https://support.microsoft.com/help/5047442) |
 | Windows Server 2022, all versions | [Windows Server 2022 update history](https://support.microsoft.com/help/5005454) |
 | Windows 11, all versions | [Windows 11 update history](https://support.microsoft.com/help/5065323) |
-| Windows 10, version 2004 and later versions | [Windows 10 update history](https://support.microsoft.com/help/5018682) |
-| Windows 10, version 1809 and Window Server 2019, all versions | [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) |
+| Windows 10, version 2004, and later versions | [Windows 10 update history](https://support.microsoft.com/help/5018682) |
+| Windows 10, version 1809, and Window Server 2019, all versions | [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) |
 
 After you identify the update that you want, search for the update's KB number in the Microsoft Update Catalog.
 
