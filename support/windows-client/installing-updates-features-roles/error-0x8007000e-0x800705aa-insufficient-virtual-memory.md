@@ -42,7 +42,7 @@ When you review events in Event Viewer, you might also find Event ID 2004 record
 
 ### Special case of error code 0x800705aa - Registry size limit
 
-Error code 0x800705aa might indicate an issue that involves the registry instead of a general virtual memory issue. To see if so, check the CBS.log file for entries that resemble the following example:
+Error code 0x800705aa might indicate a registry issue instead of a general virtual memory issue. To determine the source of the issue, check the CBS.log file for entries that resemble the following example:
 
 ```output
 2024-05-13 22:31:56, Info                  CBS    Failed to load the COMPONENTS hive from 'C:\Windows\System32\config\COMPONENTS' into registry key 'HKLM\COMPONENTS'. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
@@ -109,22 +109,22 @@ To configure the computer to automatically manage its virtual memory, follow the
 
 To reset the registry size limit, follow these steps:
 
-1. In the search bar of the affected computer or VM, type **regedit**, and then in the search results, right-click **Registry Editor**.
+1. In the search bar of the affected computer or VM, type **regedit**, and then right-click **Registry Editor** in the search results.
 1. Select **Run as administrator**.
 1. Select `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`.
 1. Right-click `RegistrySizeLimit`, and then do one of the following actions:
 
    - Select **Delete**.
-   - Select **Modify**, and then in **Value data**, enter **0**. Select **OK**.
+   - Select **Modify**, enter **0** in the **Value data** field, and then select **OK**.
 
 1. Restart the physical computer or VM.
 1. On the affected computer or VM, try again to update Windows.
 
-If the issue persists, contact Microsoft Support for further assistance. Attach copies of any relevant CBS.log data to your support request.
+If the issue persists, contact Microsoft Support for more assistance. Attach copies of any relevant CBS.log data to your support request.
 
 ## More information
 
-The following example shows how error code 0x800705aa might appear in the CBS.log file when the issue doesn't involve the registry size limit.
+The following example shows how error code 0x800705aa might appear in the CBS.log file if the issue doesn't involve the registry size limit:
 
 ```output
 2024-02-06 02:20:51, Info          
