@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows Update Installation Error  Code 0x800f0823
+title: Troubleshoot Windows Update Error Code 0x800f0823
 description: Discusses how to resolve an issue that prevents Windows updates from installing.
 ai-usage: ai-assisted
 ms.date: 12/03/2025
@@ -14,15 +14,14 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
   - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
-
 ---
-# Troubleshoot Windows Update installation error code 0x800f0823
+# Troubleshoot Windows Update error code 0x800f0823
 
 This article discusses how to resolve an issue that prevents Windows updates from installing.
 
 ## Symptoms
 
-When you try to install a Windows update, the installation fails and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur whether you are installing updates by using a direct connection to Windows Update, or by using an offline MSI file. To confirm the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
+When you try to install a Windows update, the installation fails and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur whether you're installing updates by using a direct connection to Windows Update, or by using an offline MSI file. To confirm the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
 
 ```output
 2023-09-04 15:01:53, Error                 CBS    Package "Package_for_KB5012170~31bf3856ad364e35~amd64~~14393.5285.1.4" requires Servicing Stack v10.0.14393.5285 but current Servicing Stack is v10.0.14393.4349. [HRESULT = 0x800f0823 - CBS_E_NEW_SERVICING_STACK_REQUIRED]
@@ -32,9 +31,9 @@ For more information about the CBS log, see [Windows Update log files](/windows/
 
 ## Cause
 
-This error code means that the affected computer's [servicing stack](/windows/deployment/update/servicing-stack-updates)--the component that installs Windows updates--is out of date. The computer cannot correctly process new updates.
+This error code means that the affected computer's [servicing stack](/windows/deployment/update/servicing-stack-updates)--the component that installs Windows updates--is out of date. The computer can't correctly process new updates.
 
-Typically, Windows Update automatically keeps the servicing stack up-to-date by installing [servicing stack updates (SSUs)](/windows/deployment/update/servicing-stack-updates). However, it is possible for a physical computer or virtual machine (VM) to fall out of sync by skipping updates.
+Typically, Windows Update automatically keeps the servicing stack up-to-date by installing [servicing stack updates (SSUs)](/windows/deployment/update/servicing-stack-updates). However, it's possible for a physical computer or virtual machine (VM) to fall out of sync by skipping updates.
 
 ## Resolution
 
@@ -73,7 +72,7 @@ After you identify the update that you want, search for the update's KB number i
 
 ### Step 2: Download and install the update
 
-Typically, your update search results include more than one update for a single KB number. check the update title to identify the update that applies to the affected computer's architecture. Identify the appropriate update, and then select **Download**.
+Typically, your update search results include more than one update for a single KB number. Check the update title to identify the update that applies to the affected computer's architecture. Identify the appropriate update, and then select **Download**.
 
 Download the update to the affected physical computer or VM, and then install it. Afterwards, restart the physical computer or VM.
 
@@ -83,6 +82,6 @@ Try again to install the original update.
 
 ### Next steps
 
-After you resove the issue, monitor the computer's update status to make sure that it stays up to date.
+After you resolve the issue, monitor the computer's update status to make sure that it stays up to date.
 
 If the issue persists, contact Microsoft Support for further assistance. Attach copies of any relevant CBS.log data to your support request.
