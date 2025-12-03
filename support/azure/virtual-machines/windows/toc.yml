@@ -126,6 +126,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800f0920
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8024001E
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8024002E
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80244007
