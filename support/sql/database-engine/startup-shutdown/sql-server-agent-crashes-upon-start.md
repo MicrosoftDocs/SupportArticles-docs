@@ -85,7 +85,9 @@ To work around this issue, delete the jobs that you don't need.
 
 ## Cause 2: ODBC driver missing or corrupted
 
-This issue can occur if the Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server requires the ODBC driver as a core dependency. For info on the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
+This issue can occur if the Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server requires the ODBC driver as a core dependency. 
+
+For info on the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
 
 ### Solution
 
