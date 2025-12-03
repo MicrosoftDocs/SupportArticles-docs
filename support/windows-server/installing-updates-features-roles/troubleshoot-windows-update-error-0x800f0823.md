@@ -41,7 +41,7 @@ Typically, Windows Update automatically keeps the servicing stack up-to-date by 
 > Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 > [!NOTE]  
-> If the affected computer is a VM, consider using the technique that's described in [Azure Virtual Machine (VM) Windows servicing stack reset tool](../../../azure/virtual-machines/windows/windows-vm-wureset-tool.md).
+> If the affected computer is a VM, consider using the technique that's described in [Azure Virtual Machine (VM) Windows servicing stack reset tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md).
 
 ### Step 1: Get the most recent SSU
 
