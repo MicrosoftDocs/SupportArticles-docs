@@ -13,7 +13,10 @@ _Applies to:_ &nbsp; Internet Information Services 8.5 and later
 
 Request-based tracing is available both on standalone servers that run Internet Information Services (IIS) and in Azure App Service. If you can reproduce a problem that you're experiencing, request-based tracing provides a method to diagnose the problem and determine why it's occurring. Problems such as poor performance on some requests, authentication-related failures on other requests, or the server "500" error from ASP or ASP.NET can often be difficult to troubleshoot. You can make the job easier by capturing a trace of the problem when it occurs. This article discusses Failed Request Tracing on an IIS server.
 
-Failed Request Tracing is designed to buffer the trace events for a request, and flush them to disk only if the request fails. You provide the definition of _failure_. If you want to know why your requests return a specific HTTP status code (for example, "401" or "404"), or if a request takes a while to process or isn't responding, then you can use Failed Request Tracing.
+Failed Request Tracing is designed to buffer the trace events for a request, and flush them to disk only if the request fails. You provide the definition of _failure_. You can use Failed Request Tracing for the following reasons:
+
+- You want to know why your requests return a specific HTTP status code (for example, "401" or "404").
+- A request takes a long time to process or isn't responding.
 
 This article explains how to:
 
@@ -148,7 +151,7 @@ In this step, you configure the failure definitions for your URL, including whic
 1. Under **Verbosity**, select **Verbose**.
 
     > [!NOTE]
-    > By default, when you install the Tracing role service, IIS installs the WWW Server, ASP, and ISAPI Extension trace providers. If you install ASP.NET 2.0 or a later version, IIS automatically adds the ASPNET trace provider. Additional providers are installed by the Application Request Routing (ARR) installer package thae also installs the URL Rewrite module, Web Farm Management, and External Cache. You can add more trace providers by using the `<add>` element within the `<traceProviderDefinitions>` element.
+    > By default, when you install the Tracing role service, IIS installs the WWW Server, ASP, and ISAPI Extension trace providers. If you install ASP.NET 2.0 or a later version, IIS automatically adds the ASPNET trace provider. Additional providers are installed by the Application Request Routing (ARR) installer package that also installs the URL Rewrite module, Web Farm Management, and External Cache. You can add more trace providers by using the `<add>` element within the `<traceProviderDefinitions>` element.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/add-frtr-www-server-security-selected.png" alt-text="The Add Failed Request Tracing Rule Wizard showing WWW Server selected on the Providers list and Security selected in the Areas menu.":::
 1. Select **Finish**.
@@ -189,14 +192,14 @@ This section shows you how to generate a failed request and view the resulting t
 
 ### Step 2: View the failure request log file
 
-1. Now that you've generated a failed request, open File Explorer, and go to _%systemdrive%\\inetpub\\logs\\FailedReqLogFiles\\W3SVC1_.  
+1. After you generate a failed request, open File Explorer, and go to _%systemdrive%\\inetpub\\logs\\FailedReqLogFiles\\W3SVC1_.  
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/w3svc1-fr-log.png" alt-text="The W 3 S V C 1 folder in the failed Req Log Files folder.":::
 
     > [!NOTE]
     > When IIS writes the failed request log file, it writes one file per failed request. It also writes one _freb.xsl_ style sheet per directory. This style sheet helps you to view the resulting failure request log files (such as _fr000001.xml_ in this sample).
 
-1. Right-click the log file for the "404.2" error, and then select **Open With** > **Internet Explorer**. If this is the first time that you're opening a Failed Request Tracing file, you must add **about:internet** to the list of trusted sites. This step is necessary because Internet Explorer's Enhanced Security Configuration is enabled by default. If this is your first time, you see the following dialog box.
+1. Right-click the log file for the "404.2" error, and then select **Open With** > **Internet Explorer**. If you're opening a Failed Request Tracing file for the first time, you must add **about:internet** to the list of trusted sites. This step is necessary because the Internet Explorer Enhanced Security Configuration is enabled by default. In this situation, you see a dialog box that contains a **Continue to prompt when website content is blocked** option.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/ie-blocked-dialog.png" alt-text="The Internet Explorer dialog box showing the Continue to prompt when website content is blocked option selected.":::
 
@@ -215,7 +218,7 @@ This section shows you how to generate a failed request and view the resulting t
 
 You completed two tasks: 
 
-- Configuring Failed Request Tracing to capture traces for any request that IIS returns that has a "404.2" status code
+- Configuring Failed Request Tracing to capture traces for any request that IIS returns and that has a "404.2" status code
 - Verifying that IIS captured the trace for your request
 
 You also verified that the _freb.xml_ log file doesn't contain any requests other than those requests that show a "404.2" return code. When you consulted the failure log file, you determined that the cause of the failure was that the extension is disabled for that request. You can try other non-HTML pages (such as .gif or .jpg files), and see that the log file doesn't add these traces. You can also easily change this event to be a "404" event. If the request takes longer than 30 seconds, you can capture the failure by setting the _timeTaken_ field as a _failureDefinitions_ value.
