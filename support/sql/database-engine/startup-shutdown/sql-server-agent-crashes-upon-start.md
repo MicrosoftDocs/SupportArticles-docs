@@ -15,14 +15,14 @@ _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
-A SQL Server agent crashes when you try to start it or takes longer than expected to start. Additionally, you may experience one or more of the following scenarios:
+A SQL Server agent crashes when you try to start it or takes longer than expected to start. Additionally, you might experience one or more of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
     > The service didn't respond to the start or control request in a timely fashion.
 - **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the *SQLAgent.log* file:
     > An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
-    Additionally, the following entries may be logged in the *SQLAgent.log* file:
+    Additionally, the following entries might be logged in the *SQLAgent.log* file:
 
     ```output
     <Time Stamp> - ? [431] Populating subsystems cache... \
@@ -78,7 +78,7 @@ This issue occurs because there are multiple job entries in SQL Server.
 
 ### Workaround
 
-To work around this issue, delete the jobs that you don't require.
+To work around this issue, delete the jobs that you don't need.
 
 > [!NOTE]
 > If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
@@ -103,10 +103,10 @@ This issue can occur if the Open Database Connectivity (ODBC) driver is removed 
       ```
 
 1. Confirm that the ODBC driver for SQL Server is missing. <!-- Need to confirm with SME what the user should look for to confirm the driver is missing -->
-   1. If the driver is missing continue to the next step.
-   1. If the driver is not missing, see [Cause 1](#cause-1-multiple-job-entries)
+   1. If the driver is missing, continue to the next step.
+   1. If the driver isn't missing, see [Cause 1](#cause-1-multiple-job-entries).
 1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server)
-1. Install the driver using the GUI or a silent install.
+1. Install the driver by using the GUI or a silent install.
    1. You can perform a silent install by using the following command:
 
       ```cli
