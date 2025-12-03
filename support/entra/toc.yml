@@ -5,495 +5,495 @@ items:
 
 - name: Microsoft Entra ID troubleshooting documentation
   items:
-- name: Microsoft Entra Domain Services (Microsoft Managed - DCaaS)
-  items:
-  - name: Maximum number of devices is reached
-    href: entra-id/ad-dmn-services/maximum-number-of-devices-joined-workplace.md
-  - name: Microsoft Graph PowerShell overview
-    href: /powershell/microsoftgraph/overview?context=/troubleshoot/azure/entra-id/context/context
-  - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
-    href: entra-id/ad-dmn-services/aad-connect-health-data-freshness.md
-  - name: Unable to register a device
-    href: entra-id/ad-dmn-services/cant-connect-service-error-register-device.md
-  - name: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
-    href: entra-id/ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health.md
-  - name: Understand Microsoft Entra Connect 1.4 and device disappearance
-    href: entra-id/ad-dmn-services/reference-connect-device-disappearance.md
-  - name: Microsoft Entra Hybrid Sync Agent Installation Issues
+  - name: Microsoft Entra Domain Services (Microsoft Managed - DCaaS)
     items:
-    - name: Installation issues overview
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome.md
-    - name: No privileges to install MSI
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi.md
-    - name: Cannot start service AADConnectProvisioningAgent
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
-    - name: The gMSA is set to log on as Service
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service.md
-    - name: There is no such object on the server
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server.md
-    - name: Unable to create gMSA because KDS may not be running on domain controller
-      href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
-  - name: Common issues
-    items:
-    - name: IdFix.exe is not a valid Win32 application
-      href: entra-id/ad-dmn-services/idfix-not-valid-win32-application.md
-    - name: IPv6 Support in Microsoft Entra ID
-      href: entra-id/ad-dmn-services/azure-ad-ipv6-support.md
-    - name: Security context is not associated in IdFix
-      href: entra-id/ad-dmn-services/security-context-not-associate-domian.md
-  - name: Get support
-    items:
-    - name: Send Microsoft Authenticator logs and get an incident ID
-      href: entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md  
-    - name: Support data collection
-      href: entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md
-    
-- name: Microsoft Entra App Integration and Development 
-  items:
-  - name: Developing or registering apps
-    items:
-      - name: 401 Unauthorized errors in ASP.NET Core Web API
-        href:  entra-id/app-integration/401-unauthorized-aspnet-core-web-api.md
-      - name: Applications using TLS 1.0/1.1 fail to authenticate
-        href: entra-id/app-integration/application-using-tls-1dot0-1dot1-authentication-fail.md
-      - name: Authentication fails after Android app is published to Google Play Store
-        href: entra-id/app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
-      - name: Cookies are disabled error in MSAL.Net XBAP application
-        href: entra-id/app-integration/customize-authentication-session-expiration.md
-      - name: Customize Middleware authentication ticket
-        href: entra-id/app-integration/script-errors-running-msal-net-xbap-app.md
-      - name: Enable MSAL4J logging in a Spring Boot web application
-        href: entra-id/app-integration/enable-msal4j-logging-spring-boot-webapp.md
-      - name: Error AADSTS7000218 - Invalid client
-        href: entra-id/app-integration/confidential-client-application-authentication-error-aadsts7000218.md
-      - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
-        href: entra-id/app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
-      - name: Infinite sign-in loop issue with ASP.NET applications
-        href: entra-id/app-integration/asp-dot-net-application-infinite-sign-in-loop.md
-      - name: MsalClientException - Failed to get user name
-        href: entra-id/app-integration/msal-client-exception-failed-to-get-user-name.md
-      - name: No account or login hint was passed to the AcquireTokenSilent
-        href: entra-id/app-integration/no-account-login-hint-passed-acquire-token-silent.md
-      - name: Package Inspector for MSAL Android Native
-        href: entra-id/app-integration/package-inspector-msal-android-native.md
-      - name: Unable to match key ID 
-        href: entra-id/app-integration/idx10501-token-signature-validation-error.md
-      - name: Repeated login prompts in iOS MSAL implementation
-        href: entra-id/app-integration/repeat-login-prompts-in-msal-ios-app.md
-      - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
-        href: entra-id/app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
-      - name: Troubleshoot Cross-Origin Resource Sharing issues
-        href: entra-id/app-integration/troubleshoot-cross-origin-resource-sharing-issues.md
-      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
-        href: entra-id/app-integration/serilog-protected-web-api-authentication-authorization-errors.md
-      - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
-        href: entra-id/app-integration/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures.md
-      - name: Troubleshoot access token signature validation errors
-        href: entra-id/app-integration/troubleshooting-signature-validation-errors.md
-      - name: WIF10201 No valid key mapping found
-        href: entra-id/app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
-
-  - name: Troubleshoot adding apps
-    href: entra-id/app-integration/troubleshoot-adding-apps.md
-    items: 
-      - name: Application takes a long time to appear
-        href: entra-id/app-integration/app-takes-long-time-appear.md
-      - name: Application doesn't appear
-        href: entra-id/app-integration/app-doesnt-appear.md
-      - name: Unable to delete an application
-        href: entra-id/app-integration/unable-delete-app.md
-      - name: Send notification details to Microsoft support
-        href: entra-id/app-integration/send-notification-details.md
-  - name: Troubleshoot sign-in to apps
-    items:
-      - name: AADSTS7500514 - A supported type of SAML response was not found
-        href: entra-id/app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
-      - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
-        href: entra-id/app-integration/error-code-aadsts50173-grant-expired-revoked.md
-      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
-        href: entra-id/app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
-      - name: Error AADSTS50003 - certificate or key not configured
-        href: entra-id/app-integration/error-code-AADSTS50003-cert-or-key-not-configured.md
-      - name: Error AADSTS50011 - reply URL mismatch (SAML)
-        href: entra-id/app-integration/error-code-AADSTS50011-reply-url-mismatch.md
-      - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
-        href: entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch.md
-      - name: Error AADSTS50020 - guest sign-in to resource tenant fails
-        href: entra-id/app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
-      - name: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
-        href: entra-id/app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
-      - name: Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
-        href: entra-id/app-integration/error-code-aadsts50017-certificate-based-authentication-failed.md
-      - name: Error AADSTS50057 - user account is disabled
-        href: entra-id/app-integration/error-code-aadsts50057-user-account-is-disabled.md
-      - name: AADSTS500011 - Resource Principal Not Found
-        href: entra-id/app-integration/error-code-aadsts500011-resource-principal-not-found.md
-      - name: Error AADSTS500571 - guest user account is disabled
-        href: entra-id/app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
-      - name: Error AADSTS50105 - user not assigned a role
-        href: entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md
-      - name: Error AADSTS50107 - Guest invitation redemption fails
-        href: entra-id/app-integration/error-aadsts50107-guest-redemption-fails.md
-      - name: Error AADSTS650056 - misconfigured app
-        href: entra-id/app-integration/error-code-AADSTS650056-misconfigured-app.md
-      - name: Error AADSTS70001 - app not found in directory
-        href: entra-id/app-integration/error-code-AADSTS70001-app-not-found-in-directory.md
-      - name: Error AADSTS75011 - authentication method mismatch
-        href: entra-id/app-integration/error-code-AADSTS75011-auth-method-mismatch.md
-      - name: Error AADSTS75005 - not a valid saml request
-        href: entra-id/app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
-      - name: Error AADSTS750054 - SAML request or response not present
-        href: entra-id/app-integration/error-code-AADSTS750054-saml-request-not-present.md
-      - name: Error AADSTS700003 - Device object was not found in the tenant directory
-        href: entra-id/app-integration/error-code-aadsts700003-device-object-not-found.md
-      - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
-        href: entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous.md
-      - name: Error AADSTS7000112 - application is disabled
-        href: entra-id/app-integration/error-code-aadsts7000112-application-is-disabled.md
-      - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
-        href: entra-id/app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
-      - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
-        href: entra-id/app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
-      - name: Enable bundle consent for apps
-        href: entra-id/app-integration/bundle-consent-application-registrations.md
-      - name: Troubleshoot signing in to SAML-based single sign-on configured apps
-        href: entra-id/app-integration/troubleshoot-sign-in-saml-based-apps.md
-      - name: Troubleshooting infinite redirection between OIDC app and Entra ID
-        href: entra-id/app-integration/troubleshoot-oidc-http-infinite-redirection.md
-      - name: User redirected to incorrect reply URL or localhost
-        href: entra-id/app-integration/reply-url-redirected-to-localhost.md
-      - name: Nonce is null error in ASP.NET MVC with OpenID Connect
-        href: entra-id/app-integration/troubleshoot-validation-context-nonce-null-mvc.md
-      - name: Your browser is not supported or up-to-date error in MSAL app
-        href: entra-id/app-integration/update-your-browser-error-when-using-apps-adal-msal.md
-  - name: Troubleshoot app registrations
-    items: 
-      - name: Application and delegated permissions for access tokens
-        href: entra-id/app-integration/application-delegated-permission-access-tokens-identity-platform.md
-      - name: Troubleshoot consent issues
-        href: entra-id/app-integration/troubleshoot-consent-issues.md
-- name: Use NetLog as an alternative to Fiddler and HAR captures
-  href: entra-id/app-integration/use-netlog-capture-network-traffic.md
-- name: Business To Consumer (B2C) Tenants
-  items:
-  - name: Problem with app or API integration
-    items:
-    - name: An exception occurs in application
-      href: entra-id/b2c/server-error-application-exception.md
-    - name: Fail to sign in to application
-      href: entra-id/b2c/error-sign-into-app.md
-    - name: Server Error in '/' Application error in application
-      href: entra-id/b2c/server-error-application.md
-  - name: Problem with directory, tenant, and user management
-    items:
-    - name: Can't delete a directory
-      href: entra-id/b2c/cannot-delete-directory.md
-- name: Microsoft Entra Directories, Domains, and Objects
-  items:
-  - name: Devices
-    items:
-      - name: No local administrator group privileges on Microsoft Entra joined device
-        href: entra-id/dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device.md
-      - name: Pending devices
-        href: entra-id/dir-dmns-obj/pending-devices.md
-      - name: Troubleshoot Global Secure Access client for Windows issues
-        href: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
-  - name: Directories
-    items:
-    - name: Can't delete a directory using portal
-      href: entra-id/dir-dmns-obj/cannot-delete-directory-azure-portal.md
-    - name: Can't open Azure AD module PowerShell
-      href: entra-id/dir-dmns-obj/cant-open-aad-module-powershell.md
-    - name: Method invocation failed error in Azure PowerShell
-      href: entra-id/dir-dmns-obj/method-invocation-failed-error.md
-    - name: The term is not recognized error in Azure PowerShell
-      href: entra-id/dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet.md
-  - name: Groups
-    items:
-    - name: Troubleshoot dynamic groups
-      href: entra-id/dir-dmns-obj/troubleshoot-dynamic-groups.md
-    - name: Troubleshooting Groups with dynamic membership processing
-      href: entra-id/dir-dmns-obj/troubleshoot-dynamic-group-processing.md
-  - name: Users
-    items:
-    - name: Password changes aren't saved
-      href: entra-id/dir-dmns-obj/pwd-change-not-save.md
-    - name: Perform a Workplace Join using DRS
-      href: entra-id/dir-dmns-obj/cant-perform-workplace-join.md
-    - name: Remove user from recycle bin
-      href: entra-id/dir-dmns-obj/remove-msoluser-user-not-found-recyclebin.md
-    - name: Set up your enterprise for working remotely FAQ
-      href: entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely.yml
-    - name: Troubleshoot user creation and deletion issues
-      href: entra-id/dir-dmns-obj/troubleshoot-user-creation-deletion-issues.md
-- name: Microsoft Entra Governance, Compliance and Reporting 
-  items:
-  - name: Audit Logs
-    items:
-      - name: Unknown Actors in Audit Reports
-        href: entra-id/governance/unknown-actors-in-audit-reports.md
-  - name: Sign-in Activity Reports
-    items:
-      - name: Verify 1st party Microsoft apps in sign-in reports
-        href: entra-id/governance/verify-first-party-apps-sign-in.md
-- name: Microsoft Entra Sign-in and Multi-factor authentication
-  items:
-  - name: AD domain-joined Seamless SSO with PTA or PHS
-    items:
-    - name: Code 403 Forbidden error when using SSO
-      href: entra-id/mfa/code-403-azure-seamless-sso-win10.md
-    - name: Split-brain DNS configuration
-      href: entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso.md
-  - name: AD FS (Active Directory Federation Services)
-    items:
-    - name: Can't perform a Workplace Join
-      href: entra-id/mfa/confirm-signin-info-workplace-join.md
-    - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
-      href: entra-id/mfa/unable-sync-system-discovery-mailbox.md
-    - name: ESR settings don't sync
-      href: entra-id/mfa/esr-settings-not-sync-mfa-enabled.md
-    - name: Enable support for TLS 1.2 in your environment
-      href: entra-id/ad-dmn-services/enable-support-tls-environment.md
-    - name: Federated user is prompted to enter credentials
-      href: entra-id/mfa/federated-user-prompt-enter-credentials.md
-    - name: Federated users sign in two times
-      href: entra-id/mfa/federated-users-sign-in-two-times-mfa.md
-    - name: Federation service identifier is already in use
-      href: entra-id/mfa/federation-service-identifier-specified.md
-    - name: Troubleshoot account lockout
-      href: entra-id/mfa/account-lockout-adfs-window-server.md
-  - name: Conditional Access
-    items:
-    - name: MFA users aren't prompted for a second verification
-      href: entra-id/mfa/multi-factor-auth-second-verification.md
-  - name: Multi-Factor Authentication (MFA)
-    items:
-    - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
-      href: entra-id/mfa/authentication-fails-with-error.md
-    - name: Can't authenticate using ADAL
-      href: entra-id/mfa/adal-authenticate-android-devices-fail.md
-    - name: MFA fails because five registered devices already use authenticator apps
-      href: entra-id/mfa/cant-set-up-mfa-five-devices-registered.md
-    - name: Connect-MsolService fails with access denied error
-      href: entra-id/mfa/cannot-connect-cloud-services-powershell.md
-    - name: Reset MFA setting after phone number changes
-      href: entra-id/mfa/cannot-use-mfa-signin-lose-phone.md
-    - name: Settings aren't sync between devices
-      href: entra-id/mfa/event-id-6065-user-cant-sign.md
-    - name: The MFA status is displayed incorrectly
-      href: entra-id/mfa/user-displayed-disabled-or-enabled-mfa.md
-    - name: Troubleshooting MFA issues
-      href: entra-id/mfa/troubleshoot-azure-mfa-issue.md
-    - name: Cannot receive MFA verification code
-      href: entra-id/mfa/text-voice-call-verification-code-mfa-not-send.md
-  - name: Passwords
-    items:
-    - name: Can't verify account when resetting password
-      href: entra-id/user-prov-sync/could-not-verify-account-reset-pwd.md
-    - name: Federated user is forced to sign in
-      href: entra-id/mfa/federated-users-forced-sign-in.md
-    - name: No response received when resetting password
-      href: entra-id/mfa/unable-reset-pwd-response-call.md
-    - name: Request isn't processed when resetting password
-      href: entra-id/mfa/request-not-processed-reset-pwd.md
-    - name: User name or password is incorrect
-      href: entra-id/mfa/user-name-pwd-incorrect.md
-    - name: Unexpected error when resetting password
-      href: entra-id/mfa/unexpected-error-reset-pwd.md
-    - name: Verify account error when resetting password
-      href: entra-id/mfa/cannot-verify-account-reset-pwd.md
-- name: Microsoft Graph Users, Groups, and Entra APIs
-  items: 
-   - name: 403 error when adding a user to a group
-     href: entra-id/users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
-   - name: 404 error when managing objects
-     href: entra-id/app-integration/404-not-found-error-manage-objects-microsoft-graph.md
-   - name: Change enumeration is not supported for requested tenant
-     href: entra-id/users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
-   - name: Graph API request fails to get B2B users using UPN
-     href: entra-id/users-groups-entra-apis/microsoft-graph-api-query-can-not-get-business-to-business-user.md
-   - name: Handling errors in Graph API requests with Invoke-RestMethod
-     href: entra-id/app-integration/graph-api-error-handling-invoke-restmethod.md
-   - name: Only one user is returned when running List users API
-     href: entra-id/users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
-   - name: Troubleshoot Authorization RequestDenied error
-     href: entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api.md
-   - name: The memberOf API returns null values for properties
-     href: entra-id/users-groups-entra-apis/memberof-api-returns-null-properties.md
-   - name: Use managed identities to call Graph APIs in VB.Net and C#
-     href: entra-id/users-groups-entra-apis/call-graph-api-using-managed-dentities.md
-   - name: Getting access denied errors (Authorization)
-     items:
-      - name: Add an owner to an application
-        href: entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
-      - name: Can't modify user mail or phone number attributes
-        href: entra-id/users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
-      - name: Error "The identity of the calling application could not be established"
-        href: entra-id/users-groups-entra-apis/identity-of-calling-application-not-established.md
-      - name: Can't look up users using the /users endpoint
-        href: entra-id/users-groups-entra-apis/cannot-look-up-users-using-microsoft-graph-users-endpoint.md
-      - name: Add an owner to an application
-        href: entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
-      - name: NoPermissionsInAccessToken when calling me endpoint
-        href: entra-id/users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
-      - name: HTTP 403 authorization error when calling Microsoft Graph Security API
-        href: entra-id/users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
-      - name: Premium license error when querying sign-in activities
-        href: entra-id/users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
-   - name: Problem with using the Graph SDK - libraries
-     items:
-      - name: Enable logging for MSAL.NET and Microsoft Graph SDK
-        href: entra-id/users-groups-entra-apis/enable-logging-for-msal-microsoft-graph.md
-      - name: IDX14102 error - Unable to decode the header
-        href: entra-id/users-groups-entra-apis/unable-to-decode-header-error.md
-      - name: Python scripts making requests are detected as web crawlers
-        href: entra-id/users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
-- name: Microsoft Entra User Provisioning and Synchronization
-  items:
-  - name: User Sign-in or password Problems
-    items:
-    - name: Problem with Password Writeback
+    - name: Maximum number of devices is reached
+      href: entra-id/ad-dmn-services/maximum-number-of-devices-joined-workplace.md
+    - name: Microsoft Graph PowerShell overview
+      href: /powershell/microsoftgraph/overview?context=/troubleshoot/azure/entra-id/context/context
+    - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
+      href: entra-id/ad-dmn-services/aad-connect-health-data-freshness.md
+    - name: Unable to register a device
+      href: entra-id/ad-dmn-services/cant-connect-service-error-register-device.md
+    - name: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
+      href: entra-id/ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health.md
+    - name: Understand Microsoft Entra Connect 1.4 and device disappearance
+      href: entra-id/ad-dmn-services/reference-connect-device-disappearance.md
+    - name: Microsoft Entra Hybrid Sync Agent Installation Issues
       items:
-      - name: General troubleshooting steps
-        href: entra-id/user-prov-sync/password-writeback-general-troubleshooting-steps.md
-      - name: Access rights and permissions
-        href: entra-id/user-prov-sync/password-writeback-access-rights-permissions.md
-      - name: Error code 8023062C - insecure password reset or change
-        href: entra-id/user-prov-sync/password-writeback-error-code-8023062c.md
-      - name: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
-        href: entra-id/user-prov-sync/password-writeback-error-code-sspr-009.md
-      - name: Error code SSPR_0029 - on-premises configuration not set up
-        href: entra-id/user-prov-sync/password-writeback-error-code-sspr-0029.md
-      - name: Admin password reset on Microsoft 365 admin center
-        href: entra-id/user-prov-sync/password-writeback-microsoft-365-admin-center.md
-      - name: Initial sign-in delays after forced password change
-        href: entra-id/user-prov-sync/password-writeback-servers-need-time-catch-up.md
-      - name: On-premises policy disallows password reset
-        href: entra-id/user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy.md
-  - name: Microsoft Entra Connect Sync
+      - name: Installation issues overview
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome.md
+      - name: No privileges to install MSI
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi.md
+      - name: Cannot start service AADConnectProvisioningAgent
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+      - name: The gMSA is set to log on as Service
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service.md
+      - name: There is no such object on the server
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server.md
+      - name: Unable to create gMSA because KDS may not be running on domain controller
+        href: entra-id/ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
+    - name: Common issues
+      items:
+      - name: IdFix.exe is not a valid Win32 application
+        href: entra-id/ad-dmn-services/idfix-not-valid-win32-application.md
+      - name: IPv6 Support in Microsoft Entra ID
+        href: entra-id/ad-dmn-services/azure-ad-ipv6-support.md
+      - name: Security context is not associated in IdFix
+        href: entra-id/ad-dmn-services/security-context-not-associate-domian.md
+    - name: Get support
+      items:
+      - name: Send Microsoft Authenticator logs and get an incident ID
+        href: entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md  
+      - name: Support data collection
+        href: entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md
+    
+  - name: Microsoft Entra App Integration and Development 
     items:
-    - name: An unknown error occurred
-      href: entra-id/mfa/unknown-error-occurred-sign-in-assistant.md
-    - name: Administrator credentials error
-      href: entra-id/user-prov-sync/admin-credentials-supplied-not-valid.md
-    - name: Microsoft Entra Connect services don't start
-      href: entra-id/user-prov-sync/services-sync-not-start.md
-    - name: Microsoft Entra Connect hangs during importing
-      href: entra-id/user-prov-sync/aad-management-agent-hangs-during-import.md
-    - name: Microsoft Entra Connect won't work after upgrading
-      href: entra-id/user-prov-sync/cannot-work-automatic-upgrade.md
-    - name: Can't connect to Azure RMS
-      href: entra-id/user-prov-sync/fail-connect-azure-information-protection-powerShell.md
-    - name: Can't enable Device writeback
-      href: entra-id/user-prov-sync/cannot-enable-device-writeback.md
-    - name: Can't manage or remove objects
-      href: entra-id/user-prov-sync/cannot-manage-objects.md
-    - name: Can't run DirSyncConfigShell.psc1
-      href: entra-id/user-prov-sync/load-file-or-assembly-error.md
-    - name: Can't sign in after converting domain
-      href: entra-id/user-prov-sync/cannot-signin-convert-domain-federated.md
-    - name: Can't sync system mailbox
-      href: entra-id/mfa/unable-sync-system-discovery-mailbox.md
-    - name: Changes to mail-enabled security group don't sync
-      href: entra-id/user-prov-sync/sg-mail-enabled-sync.md
-    - name: Computer startup delays
-      href: entra-id/user-prov-sync/computers-3-hour-delay-boot.md
-    - name: Directory sync to Azure stops
-      href: entra-id/user-prov-sync/directory-sync-stop-register.md
-    - name: Email addresses aren't synced
-      href: entra-id/user-prov-sync/email-addresses-not-sync.md
-    - name: Enable password hash sync
-      href: entra-id/user-prov-sync/pwd-hash-sync-auto-enable.md
-    - name: Error code 1603 in Microsoft Entra Connect
-      href: entra-id/user-prov-sync/upgrade-fails-error-code-1603.md
-    - name: Error 80070005 in Azure AD Sync Services config wizard
-      href: entra-id/user-prov-sync/aad-sync-services-config-wizard-error.md
-    - name: Errors with event ID 6301 after installing Microsoft Entra Connect
-      href: entra-id/user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
-    - name: Fail to get address for method
-      href: entra-id/user-prov-sync/failed-get-address-method.md
-    - name: Fail to install Azure AD module
-      href: entra-id/user-prov-sync/unable-install-aad-module-powershell.md
-    - name: Fail to sync domain-based filtering changes
-      href: entra-id/user-prov-sync/domain-based-filtering-fail-sync.md
-    - name: High CPU usage when using Microsoft Entra Connect
-      href: entra-id/user-prov-sync/high-cpu-usage.md
-    - name: Identity sync client can't authenticate
-      href: entra-id/user-prov-sync/unable-communicate-windows-service.md
-    - name: Logon failure with 1789 error
-      href: entra-id/user-prov-sync/error-code-1789-configuration-wizard.md
-    - name: Model database corruption in SQLLocalDB
-      href: entra-id/user-prov-sync/resolve-model-database-corruption-sqllocaldb.md
-    - name: Must join domain error when installing sync tool
-      href: entra-id/user-prov-sync/computer-must-joined-domain.md
-    - name: Number is added to username
-      href: entra-id/user-prov-sync/number-add-username-email-address.md
-    - name: Number of objects are exceeded
-      href: entra-id/user-prov-sync/exceed-number-objects-synced.md
-    - name: Object deletions aren't synched
-      href: entra-id/user-prov-sync/object-deletions-not-sync.md
-    - name: One or more objects don't sync 
-      href: entra-id/user-prov-sync/objects-dont-sync-ad-sync-tool.md
-    - name: Outdate information is displayed
-      href: entra-id/user-prov-sync/outdate-information-displays.md 
-    - name: Password hash sync stops work
-      href: entra-id/user-prov-sync/pwd-hash-sync-stop-work-fim.md
-    - name: Password isn't sync after reset
-      href: entra-id/user-prov-sync/pwd-not-sync.md
-    - name: Password sync fails with event ID 611 
-      href: entra-id/user-prov-sync/pwd-hash-sync-stops-work.md
-    - name: Permission-issue 8344 (insufficient access rights to perform the operation)
-      href: entra-id/user-prov-sync/troubleshoot-permission-issue-sync-service-manager.md
-    - name: ProxyAddresses attribute in Microsoft Entra ID
-      href: entra-id/user-prov-sync/proxyaddresses-attribute-populate.md
-    - name: Request isn't processed when resetting password
-      href: entra-id/mfa/request-not-processed-reset-pwd.md
-    - name: RPC errors affecting Microsoft Entra Connect
-      href: entra-id/user-prov-sync/rpc-errors-affecting-aadconnect.md
-    - name: Scripts cannot be loaded
-      href: entra-id/user-prov-sync/cannot-run-scripts-powershell.md
-    - name: Separate passwords required
-      href: entra-id/user-prov-sync/separate-pwds-required-computer-work-account.md
-    - name: Size limit was exceeded
-      href: entra-id/user-prov-sync/size-limit-exceeded.md
-    - name: Slow performance and high CPU usage
-      href: entra-id/user-prov-sync/slow-performance-high-cpu-usage.md
-    - name: Troubleshoot Microsoft Entra Connect version upgrading issues
-      href: entra-id/user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version.md
-    - name: Troubleshoot Azure AD Sync installation issues
-      href: entra-id/user-prov-sync/installation-configuration-wizard-errors.md
-    - name: Troubleshoot Microsoft Entra Connect objects and attributes
-      href: entra-id/user-prov-sync/troubleshoot-aad-connect-objects-attributes.md
-    - name: Troubleshoot Certificate-Based Authentication issues
-      href: entra-id/user-prov-sync/certificate-based-authenticate-issue.md
-    - name: Troubleshoot password sync issues
-      href: entra-id/user-prov-sync/troubleshoot-pwd-sync.md
-    - name: Unable to add subdomain
-      href: entra-id/user-prov-sync/new-msoldomain-cmdle-add-subdomain.md
-    - name: Unable to authenticate your credentials
-      href: entra-id/user-prov-sync/unable-authenticate-credentials.md
-    - name: Unable to configure password writeback
-      href: entra-id/user-prov-sync/unable-configure-pwd-writeback-error.md
-    - name: Unknown error 0x80005000
-      href: entra-id/user-prov-sync/unknown-error-0x80005000.md 
-    - name: UPN matching for identity sync
-      href: entra-id/user-prov-sync/use-upn-matching-identity-sync.md
-    - name: User object is missing or filtered
-      href: entra-id/user-prov-sync/user-object-missing-filtered.md
-    - name: User's primary group is excluded
-      href: entra-id/user-prov-sync/exclude-user-primary-group.md
-    - name: Yellow exclamation mark in Office 2013
-      href: entra-id/user-prov-sync/yellow-exclamation-mark-office2013.md
-- name: Capture SSL traffic
-  items:
-  - name: Capture HTTPS traffic with Fiddler
-    href: entra-id/app-integration/capture-https-traffic-fiddler-entra-id-app.md
-  - name: Capture Python web app HTTPS traffic with Fiddler
-    href: entra-id/app-integration/capture-https-traffic-fiddler-python-app.md
-  - name: Capture SSL traffic with Fiddler
-    href: entra-id/app-integration/fiddler-capture-ssl-traffic.md
-  - name: Filter Fiddler traffic using domain names and client processes
-    href: entra-id/app-integration/filter-fiddler-traffic-using-domain-name-client-process.md
+    - name: Developing or registering apps
+      items:
+        - name: 401 Unauthorized errors in ASP.NET Core Web API
+          href:  entra-id/app-integration/401-unauthorized-aspnet-core-web-api.md
+        - name: Applications using TLS 1.0/1.1 fail to authenticate
+          href: entra-id/app-integration/application-using-tls-1dot0-1dot1-authentication-fail.md
+        - name: Authentication fails after Android app is published to Google Play Store
+          href: entra-id/app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
+        - name: Cookies are disabled error in MSAL.Net XBAP application
+          href: entra-id/app-integration/customize-authentication-session-expiration.md
+        - name: Customize Middleware authentication ticket
+          href: entra-id/app-integration/script-errors-running-msal-net-xbap-app.md
+        - name: Enable MSAL4J logging in a Spring Boot web application
+          href: entra-id/app-integration/enable-msal4j-logging-spring-boot-webapp.md
+        - name: Error AADSTS7000218 - Invalid client
+          href: entra-id/app-integration/confidential-client-application-authentication-error-aadsts7000218.md
+        - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
+          href: entra-id/app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+        - name: Infinite sign-in loop issue with ASP.NET applications
+          href: entra-id/app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+        - name: MsalClientException - Failed to get user name
+          href: entra-id/app-integration/msal-client-exception-failed-to-get-user-name.md
+        - name: No account or login hint was passed to the AcquireTokenSilent
+          href: entra-id/app-integration/no-account-login-hint-passed-acquire-token-silent.md
+        - name: Package Inspector for MSAL Android Native
+          href: entra-id/app-integration/package-inspector-msal-android-native.md
+        - name: Unable to match key ID 
+          href: entra-id/app-integration/idx10501-token-signature-validation-error.md
+        - name: Repeated login prompts in iOS MSAL implementation
+          href: entra-id/app-integration/repeat-login-prompts-in-msal-ios-app.md
+        - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+          href: entra-id/app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
+        - name: Troubleshoot Cross-Origin Resource Sharing issues
+          href: entra-id/app-integration/troubleshoot-cross-origin-resource-sharing-issues.md
+        - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
+          href: entra-id/app-integration/serilog-protected-web-api-authentication-authorization-errors.md
+        - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
+          href: entra-id/app-integration/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures.md
+        - name: Troubleshoot access token signature validation errors
+          href: entra-id/app-integration/troubleshooting-signature-validation-errors.md
+        - name: WIF10201 No valid key mapping found
+          href: entra-id/app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
+
+    - name: Troubleshoot adding apps
+      href: entra-id/app-integration/troubleshoot-adding-apps.md
+      items: 
+        - name: Application takes a long time to appear
+          href: entra-id/app-integration/app-takes-long-time-appear.md
+        - name: Application doesn't appear
+          href: entra-id/app-integration/app-doesnt-appear.md
+        - name: Unable to delete an application
+          href: entra-id/app-integration/unable-delete-app.md
+        - name: Send notification details to Microsoft support
+          href: entra-id/app-integration/send-notification-details.md
+    - name: Troubleshoot sign-in to apps
+      items:
+        - name: AADSTS7500514 - A supported type of SAML response was not found
+          href: entra-id/app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+        - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
+          href: entra-id/app-integration/error-code-aadsts50173-grant-expired-revoked.md
+        - name: Error AADSTS220501 - Unable to download Certificate Revocation List
+          href: entra-id/app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
+        - name: Error AADSTS50003 - certificate or key not configured
+          href: entra-id/app-integration/error-code-AADSTS50003-cert-or-key-not-configured.md
+        - name: Error AADSTS50011 - reply URL mismatch (SAML)
+          href: entra-id/app-integration/error-code-AADSTS50011-reply-url-mismatch.md
+        - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
+          href: entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch.md
+        - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+          href: entra-id/app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+        - name: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
+          href: entra-id/app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
+        - name: Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
+          href: entra-id/app-integration/error-code-aadsts50017-certificate-based-authentication-failed.md
+        - name: Error AADSTS50057 - user account is disabled
+          href: entra-id/app-integration/error-code-aadsts50057-user-account-is-disabled.md
+        - name: AADSTS500011 - Resource Principal Not Found
+          href: entra-id/app-integration/error-code-aadsts500011-resource-principal-not-found.md
+        - name: Error AADSTS500571 - guest user account is disabled
+          href: entra-id/app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
+        - name: Error AADSTS50105 - user not assigned a role
+          href: entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+        - name: Error AADSTS50107 - Guest invitation redemption fails
+          href: entra-id/app-integration/error-aadsts50107-guest-redemption-fails.md
+        - name: Error AADSTS650056 - misconfigured app
+          href: entra-id/app-integration/error-code-AADSTS650056-misconfigured-app.md
+        - name: Error AADSTS70001 - app not found in directory
+          href: entra-id/app-integration/error-code-AADSTS70001-app-not-found-in-directory.md
+        - name: Error AADSTS75011 - authentication method mismatch
+          href: entra-id/app-integration/error-code-AADSTS75011-auth-method-mismatch.md
+        - name: Error AADSTS75005 - not a valid saml request
+          href: entra-id/app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
+        - name: Error AADSTS750054 - SAML request or response not present
+          href: entra-id/app-integration/error-code-AADSTS750054-saml-request-not-present.md
+        - name: Error AADSTS700003 - Device object was not found in the tenant directory
+          href: entra-id/app-integration/error-code-aadsts700003-device-object-not-found.md
+        - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
+          href: entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous.md
+        - name: Error AADSTS7000112 - application is disabled
+          href: entra-id/app-integration/error-code-aadsts7000112-application-is-disabled.md
+        - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
+          href: entra-id/app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
+        - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
+          href: entra-id/app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
+        - name: Enable bundle consent for apps
+          href: entra-id/app-integration/bundle-consent-application-registrations.md
+        - name: Troubleshoot signing in to SAML-based single sign-on configured apps
+          href: entra-id/app-integration/troubleshoot-sign-in-saml-based-apps.md
+        - name: Troubleshooting infinite redirection between OIDC app and Entra ID
+          href: entra-id/app-integration/troubleshoot-oidc-http-infinite-redirection.md
+        - name: User redirected to incorrect reply URL or localhost
+          href: entra-id/app-integration/reply-url-redirected-to-localhost.md
+        - name: Nonce is null error in ASP.NET MVC with OpenID Connect
+          href: entra-id/app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+        - name: Your browser is not supported or up-to-date error in MSAL app
+          href: entra-id/app-integration/update-your-browser-error-when-using-apps-adal-msal.md
+    - name: Troubleshoot app registrations
+      items: 
+        - name: Application and delegated permissions for access tokens
+          href: entra-id/app-integration/application-delegated-permission-access-tokens-identity-platform.md
+        - name: Troubleshoot consent issues
+          href: entra-id/app-integration/troubleshoot-consent-issues.md
+  - name: Use NetLog as an alternative to Fiddler and HAR captures
+    href: entra-id/app-integration/use-netlog-capture-network-traffic.md
+  - name: Business To Consumer (B2C) Tenants
+    items:
+    - name: Problem with app or API integration
+      items:
+      - name: An exception occurs in application
+        href: entra-id/b2c/server-error-application-exception.md
+      - name: Fail to sign in to application
+        href: entra-id/b2c/error-sign-into-app.md
+      - name: Server Error in '/' Application error in application
+        href: entra-id/b2c/server-error-application.md
+    - name: Problem with directory, tenant, and user management
+      items:
+      - name: Can't delete a directory
+        href: entra-id/b2c/cannot-delete-directory.md
+  - name: Microsoft Entra Directories, Domains, and Objects
+    items:
+    - name: Devices
+      items:
+        - name: No local administrator group privileges on Microsoft Entra joined device
+          href: entra-id/dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device.md
+        - name: Pending devices
+          href: entra-id/dir-dmns-obj/pending-devices.md
+        - name: Troubleshoot Global Secure Access client for Windows issues
+          href: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md
+    - name: Directories
+      items:
+      - name: Can't delete a directory using portal
+        href: entra-id/dir-dmns-obj/cannot-delete-directory-azure-portal.md
+      - name: Can't open Azure AD module PowerShell
+        href: entra-id/dir-dmns-obj/cant-open-aad-module-powershell.md
+      - name: Method invocation failed error in Azure PowerShell
+        href: entra-id/dir-dmns-obj/method-invocation-failed-error.md
+      - name: The term is not recognized error in Azure PowerShell
+        href: entra-id/dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet.md
+    - name: Groups
+      items:
+      - name: Troubleshoot dynamic groups
+        href: entra-id/dir-dmns-obj/troubleshoot-dynamic-groups.md
+      - name: Troubleshooting Groups with dynamic membership processing
+        href: entra-id/dir-dmns-obj/troubleshoot-dynamic-group-processing.md
+    - name: Users
+      items:
+      - name: Password changes aren't saved
+        href: entra-id/dir-dmns-obj/pwd-change-not-save.md
+      - name: Perform a Workplace Join using DRS
+        href: entra-id/dir-dmns-obj/cant-perform-workplace-join.md
+      - name: Remove user from recycle bin
+        href: entra-id/dir-dmns-obj/remove-msoluser-user-not-found-recyclebin.md
+      - name: Set up your enterprise for working remotely FAQ
+        href: entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely.yml
+      - name: Troubleshoot user creation and deletion issues
+        href: entra-id/dir-dmns-obj/troubleshoot-user-creation-deletion-issues.md
+  - name: Microsoft Entra Governance, Compliance and Reporting 
+    items:
+    - name: Audit Logs
+      items:
+        - name: Unknown Actors in Audit Reports
+          href: entra-id/governance/unknown-actors-in-audit-reports.md
+    - name: Sign-in Activity Reports
+      items:
+        - name: Verify 1st party Microsoft apps in sign-in reports
+          href: entra-id/governance/verify-first-party-apps-sign-in.md
+  - name: Microsoft Entra Sign-in and Multi-factor authentication
+    items:
+    - name: AD domain-joined Seamless SSO with PTA or PHS
+      items:
+      - name: Code 403 Forbidden error when using SSO
+        href: entra-id/mfa/code-403-azure-seamless-sso-win10.md
+      - name: Split-brain DNS configuration
+        href: entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso.md
+    - name: AD FS (Active Directory Federation Services)
+      items:
+      - name: Can't perform a Workplace Join
+        href: entra-id/mfa/confirm-signin-info-workplace-join.md
+      - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
+        href: entra-id/mfa/unable-sync-system-discovery-mailbox.md
+      - name: ESR settings don't sync
+        href: entra-id/mfa/esr-settings-not-sync-mfa-enabled.md
+      - name: Enable support for TLS 1.2 in your environment
+        href: entra-id/ad-dmn-services/enable-support-tls-environment.md
+      - name: Federated user is prompted to enter credentials
+        href: entra-id/mfa/federated-user-prompt-enter-credentials.md
+      - name: Federated users sign in two times
+        href: entra-id/mfa/federated-users-sign-in-two-times-mfa.md
+      - name: Federation service identifier is already in use
+        href: entra-id/mfa/federation-service-identifier-specified.md
+      - name: Troubleshoot account lockout
+        href: entra-id/mfa/account-lockout-adfs-window-server.md
+    - name: Conditional Access
+      items:
+      - name: MFA users aren't prompted for a second verification
+        href: entra-id/mfa/multi-factor-auth-second-verification.md
+    - name: Multi-Factor Authentication (MFA)
+      items:
+      - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
+        href: entra-id/mfa/authentication-fails-with-error.md
+      - name: Can't authenticate using ADAL
+        href: entra-id/mfa/adal-authenticate-android-devices-fail.md
+      - name: MFA fails because five registered devices already use authenticator apps
+        href: entra-id/mfa/cant-set-up-mfa-five-devices-registered.md
+      - name: Connect-MsolService fails with access denied error
+        href: entra-id/mfa/cannot-connect-cloud-services-powershell.md
+      - name: Reset MFA setting after phone number changes
+        href: entra-id/mfa/cannot-use-mfa-signin-lose-phone.md
+      - name: Settings aren't sync between devices
+        href: entra-id/mfa/event-id-6065-user-cant-sign.md
+      - name: The MFA status is displayed incorrectly
+        href: entra-id/mfa/user-displayed-disabled-or-enabled-mfa.md
+      - name: Troubleshooting MFA issues
+        href: entra-id/mfa/troubleshoot-azure-mfa-issue.md
+      - name: Cannot receive MFA verification code
+        href: entra-id/mfa/text-voice-call-verification-code-mfa-not-send.md
+    - name: Passwords
+      items:
+      - name: Can't verify account when resetting password
+        href: entra-id/user-prov-sync/could-not-verify-account-reset-pwd.md
+      - name: Federated user is forced to sign in
+        href: entra-id/mfa/federated-users-forced-sign-in.md
+      - name: No response received when resetting password
+        href: entra-id/mfa/unable-reset-pwd-response-call.md
+      - name: Request isn't processed when resetting password
+        href: entra-id/mfa/request-not-processed-reset-pwd.md
+      - name: User name or password is incorrect
+        href: entra-id/mfa/user-name-pwd-incorrect.md
+      - name: Unexpected error when resetting password
+        href: entra-id/mfa/unexpected-error-reset-pwd.md
+      - name: Verify account error when resetting password
+        href: entra-id/mfa/cannot-verify-account-reset-pwd.md
+  - name: Microsoft Graph Users, Groups, and Entra APIs
+    items: 
+    - name: 403 error when adding a user to a group
+      href: entra-id/users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
+    - name: 404 error when managing objects
+      href: entra-id/app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+    - name: Change enumeration is not supported for requested tenant
+      href: entra-id/users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
+    - name: Graph API request fails to get B2B users using UPN
+      href: entra-id/users-groups-entra-apis/microsoft-graph-api-query-can-not-get-business-to-business-user.md
+    - name: Handling errors in Graph API requests with Invoke-RestMethod
+      href: entra-id/app-integration/graph-api-error-handling-invoke-restmethod.md
+    - name: Only one user is returned when running List users API
+      href: entra-id/users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
+    - name: Troubleshoot Authorization RequestDenied error
+      href: entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+    - name: The memberOf API returns null values for properties
+      href: entra-id/users-groups-entra-apis/memberof-api-returns-null-properties.md
+    - name: Use managed identities to call Graph APIs in VB.Net and C#
+      href: entra-id/users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+    - name: Getting access denied errors (Authorization)
+      items:
+        - name: Add an owner to an application
+          href: entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+        - name: Can't modify user mail or phone number attributes
+          href: entra-id/users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
+        - name: Error "The identity of the calling application could not be established"
+          href: entra-id/users-groups-entra-apis/identity-of-calling-application-not-established.md
+        - name: Can't look up users using the /users endpoint
+          href: entra-id/users-groups-entra-apis/cannot-look-up-users-using-microsoft-graph-users-endpoint.md
+        - name: Add an owner to an application
+          href: entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+        - name: NoPermissionsInAccessToken when calling me endpoint
+          href: entra-id/users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
+        - name: HTTP 403 authorization error when calling Microsoft Graph Security API
+          href: entra-id/users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
+        - name: Premium license error when querying sign-in activities
+          href: entra-id/users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
+    - name: Problem with using the Graph SDK - libraries
+      items:
+        - name: Enable logging for MSAL.NET and Microsoft Graph SDK
+          href: entra-id/users-groups-entra-apis/enable-logging-for-msal-microsoft-graph.md
+        - name: IDX14102 error - Unable to decode the header
+          href: entra-id/users-groups-entra-apis/unable-to-decode-header-error.md
+        - name: Python scripts making requests are detected as web crawlers
+          href: entra-id/users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
+    - name: Microsoft Entra User Provisioning and Synchronization
+      items:
+      - name: User Sign-in or password Problems
+        items:
+        - name: Problem with Password Writeback
+          items:
+        - name: General troubleshooting steps
+          href: entra-id/user-prov-sync/password-writeback-general-troubleshooting-steps.md
+        - name: Access rights and permissions
+          href: entra-id/user-prov-sync/password-writeback-access-rights-permissions.md
+        - name: Error code 8023062C - insecure password reset or change
+          href: entra-id/user-prov-sync/password-writeback-error-code-8023062c.md
+        - name: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
+          href: entra-id/user-prov-sync/password-writeback-error-code-sspr-009.md
+        - name: Error code SSPR_0029 - on-premises configuration not set up
+          href: entra-id/user-prov-sync/password-writeback-error-code-sspr-0029.md
+        - name: Admin password reset on Microsoft 365 admin center
+          href: entra-id/user-prov-sync/password-writeback-microsoft-365-admin-center.md
+        - name: Initial sign-in delays after forced password change
+          href: entra-id/user-prov-sync/password-writeback-servers-need-time-catch-up.md
+        - name: On-premises policy disallows password reset
+          href: entra-id/user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy.md
+    - name: Microsoft Entra Connect Sync
+      items:
+      - name: An unknown error occurred
+        href: entra-id/mfa/unknown-error-occurred-sign-in-assistant.md
+      - name: Administrator credentials error
+        href: entra-id/user-prov-sync/admin-credentials-supplied-not-valid.md
+      - name: Microsoft Entra Connect services don't start
+        href: entra-id/user-prov-sync/services-sync-not-start.md
+      - name: Microsoft Entra Connect hangs during importing
+        href: entra-id/user-prov-sync/aad-management-agent-hangs-during-import.md
+      - name: Microsoft Entra Connect won't work after upgrading
+        href: entra-id/user-prov-sync/cannot-work-automatic-upgrade.md
+      - name: Can't connect to Azure RMS
+        href: entra-id/user-prov-sync/fail-connect-azure-information-protection-powerShell.md
+      - name: Can't enable Device writeback
+        href: entra-id/user-prov-sync/cannot-enable-device-writeback.md
+      - name: Can't manage or remove objects
+        href: entra-id/user-prov-sync/cannot-manage-objects.md
+      - name: Can't run DirSyncConfigShell.psc1
+        href: entra-id/user-prov-sync/load-file-or-assembly-error.md
+      - name: Can't sign in after converting domain
+        href: entra-id/user-prov-sync/cannot-signin-convert-domain-federated.md
+      - name: Can't sync system mailbox
+        href: entra-id/mfa/unable-sync-system-discovery-mailbox.md
+      - name: Changes to mail-enabled security group don't sync
+        href: entra-id/user-prov-sync/sg-mail-enabled-sync.md
+      - name: Computer startup delays
+        href: entra-id/user-prov-sync/computers-3-hour-delay-boot.md
+      - name: Directory sync to Azure stops
+        href: entra-id/user-prov-sync/directory-sync-stop-register.md
+      - name: Email addresses aren't synced
+        href: entra-id/user-prov-sync/email-addresses-not-sync.md
+      - name: Enable password hash sync
+        href: entra-id/user-prov-sync/pwd-hash-sync-auto-enable.md
+      - name: Error code 1603 in Microsoft Entra Connect
+        href: entra-id/user-prov-sync/upgrade-fails-error-code-1603.md
+      - name: Error 80070005 in Azure AD Sync Services config wizard
+        href: entra-id/user-prov-sync/aad-sync-services-config-wizard-error.md
+      - name: Errors with event ID 6301 after installing Microsoft Entra Connect
+        href: entra-id/user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
+      - name: Fail to get address for method
+        href: entra-id/user-prov-sync/failed-get-address-method.md
+      - name: Fail to install Azure AD module
+        href: entra-id/user-prov-sync/unable-install-aad-module-powershell.md
+      - name: Fail to sync domain-based filtering changes
+        href: entra-id/user-prov-sync/domain-based-filtering-fail-sync.md
+      - name: High CPU usage when using Microsoft Entra Connect
+        href: entra-id/user-prov-sync/high-cpu-usage.md
+      - name: Identity sync client can't authenticate
+        href: entra-id/user-prov-sync/unable-communicate-windows-service.md
+      - name: Logon failure with 1789 error
+        href: entra-id/user-prov-sync/error-code-1789-configuration-wizard.md
+      - name: Model database corruption in SQLLocalDB
+        href: entra-id/user-prov-sync/resolve-model-database-corruption-sqllocaldb.md
+      - name: Must join domain error when installing sync tool
+        href: entra-id/user-prov-sync/computer-must-joined-domain.md
+      - name: Number is added to username
+        href: entra-id/user-prov-sync/number-add-username-email-address.md
+      - name: Number of objects are exceeded
+        href: entra-id/user-prov-sync/exceed-number-objects-synced.md
+      - name: Object deletions aren't synched
+        href: entra-id/user-prov-sync/object-deletions-not-sync.md
+      - name: One or more objects don't sync 
+        href: entra-id/user-prov-sync/objects-dont-sync-ad-sync-tool.md
+      - name: Outdate information is displayed
+        href: entra-id/user-prov-sync/outdate-information-displays.md 
+      - name: Password hash sync stops work
+        href: entra-id/user-prov-sync/pwd-hash-sync-stop-work-fim.md
+      - name: Password isn't sync after reset
+        href: entra-id/user-prov-sync/pwd-not-sync.md
+      - name: Password sync fails with event ID 611 
+        href: entra-id/user-prov-sync/pwd-hash-sync-stops-work.md
+      - name: Permission-issue 8344 (insufficient access rights to perform the operation)
+        href: entra-id/user-prov-sync/troubleshoot-permission-issue-sync-service-manager.md
+      - name: ProxyAddresses attribute in Microsoft Entra ID
+        href: entra-id/user-prov-sync/proxyaddresses-attribute-populate.md
+      - name: Request isn't processed when resetting password
+        href: entra-id/mfa/request-not-processed-reset-pwd.md
+      - name: RPC errors affecting Microsoft Entra Connect
+        href: entra-id/user-prov-sync/rpc-errors-affecting-aadconnect.md
+      - name: Scripts cannot be loaded
+        href: entra-id/user-prov-sync/cannot-run-scripts-powershell.md
+      - name: Separate passwords required
+        href: entra-id/user-prov-sync/separate-pwds-required-computer-work-account.md
+      - name: Size limit was exceeded
+        href: entra-id/user-prov-sync/size-limit-exceeded.md
+      - name: Slow performance and high CPU usage
+        href: entra-id/user-prov-sync/slow-performance-high-cpu-usage.md
+      - name: Troubleshoot Microsoft Entra Connect version upgrading issues
+        href: entra-id/user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version.md
+      - name: Troubleshoot Azure AD Sync installation issues
+        href: entra-id/user-prov-sync/installation-configuration-wizard-errors.md
+      - name: Troubleshoot Microsoft Entra Connect objects and attributes
+        href: entra-id/user-prov-sync/troubleshoot-aad-connect-objects-attributes.md
+      - name: Troubleshoot Certificate-Based Authentication issues
+        href: entra-id/user-prov-sync/certificate-based-authenticate-issue.md
+      - name: Troubleshoot password sync issues
+        href: entra-id/user-prov-sync/troubleshoot-pwd-sync.md
+      - name: Unable to add subdomain
+        href: entra-id/user-prov-sync/new-msoldomain-cmdle-add-subdomain.md
+      - name: Unable to authenticate your credentials
+        href: entra-id/user-prov-sync/unable-authenticate-credentials.md
+      - name: Unable to configure password writeback
+        href: entra-id/user-prov-sync/unable-configure-pwd-writeback-error.md
+      - name: Unknown error 0x80005000
+        href: entra-id/user-prov-sync/unknown-error-0x80005000.md 
+      - name: UPN matching for identity sync
+        href: entra-id/user-prov-sync/use-upn-matching-identity-sync.md
+      - name: User object is missing or filtered
+        href: entra-id/user-prov-sync/user-object-missing-filtered.md
+      - name: User's primary group is excluded
+        href: entra-id/user-prov-sync/exclude-user-primary-group.md
+      - name: Yellow exclamation mark in Office 2013
+        href: entra-id/user-prov-sync/yellow-exclamation-mark-office2013.md
+  - name: Capture SSL traffic
+    items:
+    - name: Capture HTTPS traffic with Fiddler
+      href: entra-id/app-integration/capture-https-traffic-fiddler-entra-id-app.md
+    - name: Capture Python web app HTTPS traffic with Fiddler
+      href: entra-id/app-integration/capture-https-traffic-fiddler-python-app.md
+    - name: Capture SSL traffic with Fiddler
+      href: entra-id/app-integration/fiddler-capture-ssl-traffic.md
+    - name: Filter Fiddler traffic using domain names and client processes
+      href: entra-id/app-integration/filter-fiddler-traffic-using-domain-name-client-process.md
 - name: Global Secure Access troubleshooting documentation
   items:
   - name: Global Secure Access 
