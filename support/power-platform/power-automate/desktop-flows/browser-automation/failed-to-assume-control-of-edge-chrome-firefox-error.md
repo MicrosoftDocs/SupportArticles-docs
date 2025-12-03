@@ -1,13 +1,13 @@
 ---
 title: Failed to assume control of Edge or Chrome or Firefox error
-description: Provides a resolution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
+description: Provides a solution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo, jefernn
 ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
-This article provides a resolution for the error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. If the error occurs right after a browser update and has the same symptoms, see [Browser automation actions stop working after a browser update](browser-automation-error-after-chromium-update.md).
+This article provides a solution for the error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. If the error occurs right after a browser update and has the same symptoms, see [Browser automation actions stop working after a browser update](browser-automation-error-after-chromium-update.md).
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001691
@@ -27,7 +27,7 @@ When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automa
 >
 > 1. First run the **Troubleshoot UI/Web automation issues** diagnostic using the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).  
 > 2. When the diagnostic runs, a report is generated that identifies issues. These issues can be resolved by pressing the **Fix** button that appears after the diagnostics check completes.  
-> 3. If the troubleshooter doesn't resolve the error, proceed to the potential causes and resolutions provided in this article.
+> 3. If the troubleshooter doesn't resolve the error, proceed to the potential causes and solutions provided in this article.
 
 ### Scenario 2
 
@@ -37,7 +37,7 @@ The error also occurs when you run a Launch Browser action, and the browser is l
 
 The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed properly or enabled.
 
-### Verifying issue for cause 1
+### Additional symptoms
 
 - Execution of a desktop flow with one of the respective actions fails with the error message.
 - Web Recorder initiation for the specific browser shows the following message:
@@ -46,7 +46,7 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed prop
 
 - The web extension might seem to be installed and enabled in the extension repository of the specific browser, but it fails to execute.
 
-### Resolution
+### Solution
 
 1. Install the respective web extension from the Power Automate for desktop designer.
 
@@ -59,17 +59,17 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed prop
 
 Launch of the browser takes longer than the default timeout (**30** seconds) of the action. The automation tries to assume control of the browser before opening and as a result the Launch Browser action fails.
 
-### Verifying issue for cause 2
+### Additional symptoms
 
 Execution of a desktop flow with one of the respective actions fails with the error message. This behavior might not be consistent (some executions could be successful).
 
-### Resolution 1
+### Solution 1: Increase timeouts
 
 In the **Launch new Edge**, **Launch new Chrome**, or **Launch new Firefox** action, increase the values of **Timeout on webpage load** and **Timeout** parameters located in the **Advanced** section. For example, set these values to **120** seconds.
 
-If this adjustment doesn't resolve the issue, follow the steps outlined in [Resolution 2](#resolution-2) or [Resolution 3](#resolution-3).
+If this adjustment doesn't resolve the issue, follow the steps outlined in [Solution 2](#solution-2-use-a-go-to-web-page-action) or [Solution 3](#solution-3-use-a-wait-action).
 
-### Resolution 2
+### Solution 2: Use a Go to web page action
 
 Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a [Go to web page](/power-automate/desktop-flows/actions-reference/webautomation#gotowebpagebase) action afterwards can be used to resolve the issue.
 
@@ -119,7 +119,7 @@ Use the Launch Browser action to start the process of the corresponding browser.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Screenshot that shows how to configure the parameters of the Go to web page action.":::
 
-### Resolution 3
+### Solution 3: Use a Wait action
 
 Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a **Wait** action set to a duration afterwards can be used to resolve the issue.
 
@@ -167,11 +167,11 @@ To resolve the issue, ensure that the browser is launched using the same system 
 
 The browser doesn't launch, or it launches once but fails to open in subsequent attempts.
 
-### Verifying issue for cause 4
+### Verify cause
 
 Execution of a desktop flow with a Launch Browser action fails, and the browser either doesn't appear or terminates immediately after launch.
 
-### Resolution for cause 4
+### Solution
 
 Another session might be using the same browser profile. When you launch a Chromium-based browser (such as Microsoft Edge or Chrome), the browser checks if another instance is already using the same profile on disk. If another instance exists, the browser terminates immediately.
 
