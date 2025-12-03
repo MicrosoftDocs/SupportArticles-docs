@@ -58,7 +58,7 @@ Follow these steps on each cluster host:
 
 ### Solution 2: Schedule CAU to occur during a maintenance window, and temporarily disable Windows Update services
 
-To prevent conflicts between CAU and the Windows Update service, follow these steps to make sure that the CAU process runs during a maintenance window while automatic updates are disabled.
+Use this solution to prevent conflicts between CAU and the Windows Update service.
 
 > [!IMPORTANT]  
 > Your systems might be vulnerable if you leave automatic updates disabled for an extended period. Schedule your maintenance window to be as brief as possible.
@@ -88,7 +88,7 @@ Don't try to use VM checkpoints for long-term backup storage. Typically, checkpo
 > [!NOTE]
 > Use this procedure during a maintenance window. When you delete a checkpoint, Windows merges the related differencing disk into the parent VHDX of the VM. For large VMs, this operation can be time-consuming and resource-intensive.
 
-When you don't need the checkpoints any more, follow these steps to remove the checkpoints:
+When you don't need the checkpoints anymore, follow these steps to remove the checkpoints:
 
 1. Open the Hyper-V Manager or your preferred virtualization management tool.
 1. Go to the VM that has checkpoints.
