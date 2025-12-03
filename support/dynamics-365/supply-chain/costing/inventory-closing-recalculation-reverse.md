@@ -225,7 +225,7 @@ An inventory closing or recalculation fails with the following error message:
 
 This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error happens when pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should only affect non-financial transactions.
 
-The inventory closing and recalculation processes implicitly execute pre-closing for the non-financial transfers against which they have any markings. This issue most likely occurred in that process.
+The inventory closing and recalculation processes implicitly execute pre-closing for the non-financial transfers against which they have any markings. This issue most likely occurs during that process.
 
 ### Solution
 
