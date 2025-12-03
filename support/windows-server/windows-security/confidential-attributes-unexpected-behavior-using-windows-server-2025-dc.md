@@ -44,7 +44,7 @@ Writing out entries.
 ```
 
 > [!NOTE]  
-> This example text results from using an LDAP client on Windows 11, 23H2, or an older version of Windows.
+> This example text results from using an LDAP client on Windows 11, 23H2, or an earlier version of Windows.
 
 However, when you review the exported list, you find the "cn" attribute but not the "ms-Mcs-AdmPwd" attribute.
 
@@ -56,10 +56,10 @@ The following table summarizes the behavior across different client and server v
 | --- | --- | --- |
 | Windows 11, version 24H2 | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
 | Windows Server 2025 (member server) | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
-| Windows version older than Windows 11, version 24H2 | Windows Server 2025 | "cn" |
+| Windows version earlier than Windows 11, version 24H2 | Windows Server 2025 | "cn" |
 | Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2025 | "cn" |
-| Windows version older than Windows 11, version 24H2 | Windows Server 2022 or an older version | "cn"<br />"ms-Mcs-AdmPwd" |
-| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2022 or an older version | "cn"<br />"ms-Mcs-AdmPwd" |
+| Windows version earlier than Windows 11, version 24H2 | Windows Server 2022 or an earlier version | "cn"<br />"ms-Mcs-AdmPwd" |
+| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2022 or an earlier version | "cn"<br />"ms-Mcs-AdmPwd" |
 
 ### Example - Operations on confidential attributes fail
 
@@ -107,10 +107,10 @@ Similarly to the query in the previous example, the operations succeed or fail d
 | --- | --- | --- |
 | Windows 11, version 24H2 | Windows Server 2025 | Success |
 | Windows Server 2025 (member server) | Windows Server 2025 | Success |
-| Windows version older than Windows 11, version 24H2 | Windows Server 2025 | INSUFF_ACCESS_RIGHTS |
-| Non-Windows operating system (for example, ldifde on UNIX) | Windows Server 2025 | INSUFF_ACCESS_RIGHTS |
-| Windows version older than Windows 11, version 24H2 | Windows Server 2022 or an older version | Success |
-| Non-Windows operating system (for example, ldifde on UNIX) | Windows Server 2022 or an older version | Success |
+| Windows version earlier than Windows 11, version 24H2 | Windows Server 2025 | INSUFF_ACCESS_RIGHTS |
+| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2025 | INSUFF_ACCESS_RIGHTS |
+| Windows version earlier than Windows 11, version 24H2 | Windows Server 2022 or an earlier version | Success |
+| Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2022 or an earlier version | Success |
 
 ## Cause
 
