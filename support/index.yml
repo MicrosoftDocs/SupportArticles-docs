@@ -77,7 +77,6 @@ productDirectory:
     imageSrc: "media/hub-landing/microsoft-entra.svg"
     summary: Troubleshooting articles for Microsoft Entra
     url: entra/welcome-entra.yml
-    url: entra/global-secure-access/welcome-global-secure-access.yml
 
   - title: Microsoft Power Platform
     imageSrc: "media/hub-landing/microsoft.png"
