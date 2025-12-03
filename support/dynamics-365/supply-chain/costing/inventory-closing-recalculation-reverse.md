@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Common Issues During Inventory Closing, Recalculating, and Reverse
-description: Error during inventory closing or recalculation -- Another closing or adjustment has not finished yet
+description: Resolve common inventory closing, recalculation, and reverse errors in Dynamics 365 Supply Chain Management. Learn troubleshooting steps for SQL issues, fiscal periods, and more.
 ms.date: 11/26/2025
 ms.search.form: InventClosing
 ms.reviewer: soumyamoydas, kamaybac, aevengir, v-shaywood
