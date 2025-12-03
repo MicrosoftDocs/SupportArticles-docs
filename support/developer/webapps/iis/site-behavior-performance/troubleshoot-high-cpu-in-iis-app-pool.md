@@ -15,7 +15,7 @@ This troubleshooter helps you identify the cause of sustained high CPU in an Int
 
 An application pool in IIS experiences a prolonged period of high CPU that exceeds 90 percent usage. When you test the application, you don't encounter any problems. Then, the application experiences actual user load, and CPU climbs to a high percentage and remains there. To recover, you must restart the application pool. However, after you the restart, CPU again climbs to a high level.
 
-## Tools
+## Diagnostic Tools
 
 - [Debug Diagnostics (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=103453)
 - Performance Monitor (Perfmon)
@@ -34,10 +34,10 @@ You can also use Performance Monitor to determine which process uses the most CP
 
 After you verify that a `w3wp.exe` process is experiencing high CPU, determine the cause of the problem by collecting the following information:
 
-- [A Performance Monitor data collector set](#collecting-a-performance-monitor-data-collector-set)
+- [A Performance Monitor data collector set](#collect-a-performance-monitor-data-collector-set)
 - Either or both:
   - [A user-mode memory dump of the `w3wp.exe` process](#collect-a-user-mode-memory-dump-file-by-using-debug-diagnostics)
-  - [An ETW trace](#collecting-etw-traces-by-using-perfview)
+  - [An ETW trace](#collect-etw-traces-by-using-perfview)
 
 > [!NOTE]
 > In general, ETW tracing doesn't affect performance. This feature makes it useful in production scenarios in which server performance must be maintained during log collection. In comparison, threads pause during memory dump file collection. Therefore, server performance might be reduced during dump file collection.
@@ -51,7 +51,7 @@ The goal of this data collection is to observe the operations on the non-waiting
 - Collect traces or dump files 10 seconds apart to minimize the time in between each. (This method helps make sure that the same threads are still alive in each trace or dump file so that you can better identify which threads are consuming the most CPU.)
 - Collect dump files when the CPU usage of `w3wp.exe` is high or abnormal, not only when the total server CPU usage is high.
 
-### Collecting a Performance Monitor data collector set
+### Collect a Performance Monitor data collector set
 
 Performance Monitor data is often critical in determining the cause of high CPU issues. It can also be helpful to get a "big picture" view of how your application performs.
 
@@ -129,7 +129,7 @@ This rule creates 11 dump files. The first 10 are "mini dumps". The final dump f
 
 After the high CPU problem occurs, stop the Perfmon data collector set from collecting data. To stop the collection, right-click the **High CPU** data collector set that's listed under the **User Defined** node, and then select **Stop**.
 
-### Collecting ETW traces by using PerfView
+### Collect ETW traces by using PerfView
 
 1. Download [Perfview](https://github.com/microsoft/perfview/blob/main/documentation/Downloading.md), and run it as an administrator.
 1. Select **Collect** > **Collect**.
@@ -144,7 +144,7 @@ PerfView merges multiple ETL files into a .zip file, and stores the file in the 
 
 After the high CPU event, you have two sets of data to review: the Perfmon data collector set and the memory dump files. Begin by reviewing the Perfmon data.
 
-### Analyzing performance data
+### Analyze performance data
 
 To review the Perfmon data for your issue, right-click on the **High CPU** data collector set that's listed under the **User Defined** node, and then select **Latest Report**. The report resembles the following screenshot.
 
@@ -172,7 +172,7 @@ Use the down arrow on your keyboard to move through the list of processes until 
 
 To determine the cause of the high CPU issue, review the dump files that were created by using DebugDiag.
 
-### Dump file analysis with DebugDiag
+### Analyze dumps with DebugDiag
 
 DebugDiag can recognize many problems by doing an automated dump file analysis. For this problem, DebugDiag's Performance Analyzers help identify the root cause of high CPU. To use the analyzer, follow these steps:
 
