@@ -19,7 +19,7 @@ An application pool in IIS experiences a prolonged period of high CPU that excee
 
 - [Debug Diagnostics (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=103453)
 - Performance Monitor (Perfmon)
-- [Perfview](https://github.com/microsoft/perfview/releases)
+- [PerfView](https://github.com/microsoft/perfview/releases)
 
 ## Data collection
 
@@ -131,7 +131,7 @@ After the high CPU problem occurs, stop the Perfmon data collector set from coll
 
 ### Collect ETW traces by using PerfView
 
-1. Download [Perfview](https://github.com/microsoft/perfview/blob/main/documentation/Downloading.md), and run it as an administrator.
+1. Download [PerfView](https://github.com/microsoft/perfview/blob/main/documentation/Downloading.md), and run it as an administrator.
 1. Select **Collect** > **Collect**.
 1. Select the **Zip**, **Merge**, and **Thread Time** checkboxes.
 1. Expand **Advanced Options**, and select the **IIS** checkbox.
