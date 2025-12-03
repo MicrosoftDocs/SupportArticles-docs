@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Common Issues During Inventory Closing, Recalculating, and Reverse
-description: Resolve common inventory closing, recalculation, and reverse errors in Dynamics 365 Supply Chain Management. Learn troubleshooting steps for SQL issues, fiscal periods, and more.
+title: Troubleshoot Common Issues During Inventory Closing, Recalculating, and Reverse Operations
+description: Resolve common inventory closing, recalculation, and reverse operation errors in Dynamics 365 Supply Chain Management. Learn troubleshooting steps for SQL issues, fiscal periods, and more.
 ms.date: 11/26/2025
 ms.search.form: InventClosing
 ms.reviewer: soumyamoydas, kamaybac, aevengir, v-shaywood
@@ -9,7 +9,7 @@ ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.43
 ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 ---
-# Troubleshoot inventory closing, recalculation, and reverse in Dynamics 365 Chain Management
+# Troubleshoot inventory closing, recalculation, and reverse operations in Dynamics 365 Supply Chain Management
 
 This article provides troubleshooting guidance for common errors that might occur during inventory close, recalculation, or reverse in Microsoft Dynamics 365 Supply Chain Management.
 
