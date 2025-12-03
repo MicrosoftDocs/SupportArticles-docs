@@ -17,133 +17,232 @@ This article provides troubleshooting guidance for common errors that might occu
 
 ### Symptoms
 
-Inventory closing, recalculation or reverse errors out with "Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.".
+An inventory closing, recalculation, or reverse fails with the following error:
+
+> Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
+
+### Cause
+
+This issue can occur due to SQL database unavailability, deadlocks, blockings, or other SQL errors.
 
 ### Solution
 
-This issue can occur due to SQL database unavailability, deadlocks, blockings or any other generic SQL limitation/error. Most of the time, these issues are transient and never cause any data corruption. Please retry the operation again. If the issue persists, please reach out to Microsoft Support or your Partner.
+Most of the time, these type of issues are transient and never cause any data corruption. Retry the operation.
 
 ## Duplicate reverse is not allowed
 
 ### Symptoms
 
-Inventory reverse fails with the following error as "Another Inventory %1 reverse for voucher %2 is running. Duplicate reverse is not allowed.".
+An Inventory reverse fails with the following error:
+
+> Another Inventory %1 reverse for voucher %2 is running. Duplicate reverse is not allowed
+
+### Cause
+
+This issue occurs when you try to execute the reversal or cancellation of multiple closing or recalculation vouchers at the same time. Reversals must be carried out sequentially. This approach prevents any inventory and ledger data corruption due to concurrent updates of adjustments, settlements, or postings.
 
 ### Solution
 
-This issue mainly occurs when user tries to execute the reversal/cancellation of multiple closing/recalculation vouchers at the same time. As shared in the best practices for Inventory Reverse, always execute the reversal of one voucher at a time, and only after its completion, proceed with further reversals i.e. reversals should be carried out sequentially. This is a check used to prevent multiple reversals and thereby avoid any inventory & ledger data corruption due to concurrent updates of adjustments/settlements/postings.
+Always execute the reversal of one voucher at a time, and only after its completion, proceed with further reversals.
 
-This issue can rarely occur if the previous reversal execution has not completed successfully, but the batch job has ended with error, and user tries to execute a fresh reverse of the original voucher. This can be due to system issues, sudden crashes, system or SQL server unavailability, etc. In such cases, you can reach out to Microsoft Support or your Partner.
+This issue can occur if the previous reversal execution doesn't complete successfully, but the batch job ends with error, and the user tries to execute a new reverse of the original voucher. This issue can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
 
-## Inventory closing cannot proceed because available physical on-hand inventory on item <ItemName> is currently negative
+## Inventory closing cannot proceed because available physical on-hand inventory on item \<ItemName\> is currently negative
 
 ### Symptoms
 
-Inventory closing or recalculation errors out with "Inventory closing cannot proceed because available physical on-hand inventory on item abc is currently negative, which is not allowed according to its item model group". The error can be viewed from the closing logs.
+An inventory closing or recalculation fails with the following error:
+
+> Inventory closing cannot proceed because available physical on-hand inventory on item \<Item\> is currently negative, which isn't allowed according to its item model group
+
+You can view this error in the inventory closing logs. For more information on accessing closing logs, see [Inventory close](/dynamics365/supply-chain/cost-management/inventory-close#the-inventory-close-log).
+
+### Cause
+
+This error can occur because of data corruption in the posted inventory transactions. This error occurs when the on-hand physical or financial inventory becomes negative, which isn't allowed as per the item’s _Item Model Group_ configuration.
+
+Usually, the system flags this error while posting transactions for an item that results in negative on-hand inventory, not during inventory closing or recalculation. But if you manually intervene, migrate data, or update the database directly, these checks are skipped and this error can occur during the stock closing process.
 
 ### Solution
 
-This can happen because of data corruption in the posted inventory transactions, when the on-hand physical/financial inventory becomes negative which is otherwise not allowed as per the item’s Item Model Group configuration. Ideally this error should be flagged while posting transactions for an item which results in negative on-hand, and not during inventory closing/recalculation process. But if any manual intervention or data migration or direct database updates are done, these checks are skipped and hence the error is thrown during the stock closing process. In those cases, this error is thrown during the stock closing process.  
+1. Review the inventory transactions for the item mentioned in the error message to identify the cause of this issue.
+   1. If necessary, based on your business requirements, you can enable the negative physical or financial inventory.
+   1. Alternatively, you can post manual adjustments to balance out the inventory transactions that result in a negative inventory.
+1. Once you fix the transactions, execute a consistence check for that item:
+   1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
+   1. In the consistency check dialog set **Check/Fix** to **Fix error**.
+   1. Set **Module** to **Inventory management**.
+   1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
+   1. Open the More menu (**...**) and select **Dialog**.
+   1. Use the dialog to filter for the item mentioned in the error message.
+   1. Run the consistency check.
 
-As the error already mentions the specific item, please go through the inventory transactions for that item and try to figure out the actual issue. If required, enable the negative physical/financial inventory, but final call should be taken as per your business requirements. Else manual adjustments can also be posted to balance out the inventory transactions resulting in negative inventory. Once these transactions are fixed, execute consistency check fix for that item from System administration -> Periodic tasks -> Database -> Fix error -> Inventory management -> Item -> Enable checkbox for Inventory transactions and On-hand, then filter the exact item from the dialog. If required, this process can be executed as a batch process in the background. The final fix logs can be viewed from the batch job logs. Upon completion of this process, resume the closing/recalculation operation.
+   > [!NOTE]
+   > If required, you can run the check as a batch process in the background.
 
-## Close stock - processing level x with a total of y bundles
+1. Once the consistence check completes, you can view the final fix logs from the batch job logs or in the notification panel.
+1. After completing the consistency check, resume the closing or recalculation operation.
+
+## Close stock - processing level \<Level\> with a total of \<Total\> bundles
 
 ### Symptoms
 
-Inventory closing or recalculation errors out with "Close stock - processing level x with a total of y bundles".
+An inventory closing or recalculation fails with the following error:
+
+> Close stock - processing level \<Level\> with a total of \<Total\> bundles
+
+### Cause
+
+This error usually occurs because of business data corruption due to manual database interventions, manual changes in the decimal precision in the customized version, incorrect exchange rate configurations while posting source documents, and similar issues.
 
 ### Solution
 
-This is a generic error thrown mostly in cases on business data corruption due to manual database interventions, manual changes in the decimal precision in the customized version, incorrect exchange rate configurations while posting source documents, etc. Try to trace the exact item, inventory transactions for which would be responsible for this error. Then execute the consistency check for that item for on-hand and inventory transactions (from System administration -> Periodic tasks -> Database -> Check/Fix error -> Inventory management -> Item -> Enable checkbox for Inventory transactions and On-hand, then filter the exact item from the dialog), to verify whether there are data inconsistencies which can be corrected autonomously. If the issue persists, please reach out to Microsoft Support or your Partner.
+1. Identify the item and inventory transactions causing this error
+1. Execute a consistency check for that item for on-hand and inventory transactions.
+   1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
+   1. In the consistency check dialog set **Check/Fix** to ?????. <!-- (need to confirm with SME) -->
+   1. Set **Module** to **Inventory management**.
+   1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
+   1. Open the More menu (**...**) and select **Dialog**.
+   1. Use the dialog to filter for the item causing the error.
+   1. Run the consistency check.
+
+   > [!NOTE]
+   > If required, you can run the check as a batch process in the background.
+
+1. Once the consistence check completes, you can view the final fix logs from the batch job logs or in the notification panel.
+1. After completing the consistency check, resume the closing or recalculation operation.
 
 ## Fiscal period is not open
 
 ### Symptoms
 
-Inventory closing, recalculation or reverse or journal postings (like inventory journal, production orders, purchase orders, sales orders, etc.) errors out with the following message as "Fiscal period for XXX is not open".
+An inventory closing, recalculation, reverse, or journal posting (such as an inventory journal, production orders, purchase orders, sales orders, or similar postings) fails with the following message:
+
+> Fiscal period for \<Date\> is not open
 
 ### Solution
 
-Please verify the ledger calendar period status from General Ledger -> Calendars -> Ledger calendars -> Select the required ledger period and then verify the period status for specific legal entities. Ideally, the period status should be “Open” to allow the posting of any adjustments.
+Verify the ledger calendar period status:
+
+1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
+1. Select the required ledger period and then verify the period status for specific legal entities.
+   1. The period status should be **Open** to allow for the posting of any adjustments.
+1. After updating the period status, resume the inventory operation.
 
 ## Account number for transaction type does not exist
 
 ### Symptoms
 
-Inventory closing or recalculation errors out with "Account number for transaction type XXX does not exist".
+An inventory closing or recalculation fails with the following error:
+
+> Account number for transaction type \<Type\> does not exist
 
 ### Solution
 
-Verify whether Main Account is correctly setup for the specified transaction type under proper head in Inventory Management -> Setup -> Posting -> Posting. Also, verify the financial dimensions' in the Accounting Structure Setup for the corresponding Main Accounts from General Ledger -> Ledger setup -> Ledger. 
-Once all the setup are verified, try resuming calculation for the corresponding voucher.
+Verify that the main account is set up for the specified transaction type:
 
-## Only users in user group x can post in module y in the period containing the date z
+1. Go to **Inventory Management** > **Setup** > **Posting** > **Posting**
+1. ???? <!-- Need to confirm with the SME how to enable the transaction type -->
+
+Also, check the financial dimensions in the _Accounting Structure Setup_ for the corresponding main accounts:
+
+1. Go to **General Ledger** > **Ledger setup** > **Ledger**
+1. ???? <!-- Need to confirm with the SME how to check the financial dimensions -->
+
+After verifying your setup, resume the closing or recalculation operation.
+
+## Only users in user group \<Group\> can post in module \<Module\> in the period containing the date \<Date\>
 
 ### Symptoms
 
-Inventory closing or recalculation errors out with "Only users in user group x can post in module y in the period containing the date z".
+An inventory closing or recalculation fails with the following error:
+
+> Only users in user group \<Group\> can post in module \<Module\> in the period containing the date \<Date\>
 
 ### Solution
 
-Please verify the ledger calendar period access level from General Ledger -> Calendars -> Ledger calendars -> Select the required ledger period and then verify the access level for specific modules and legal entities. Default access level for all the modules is **\<All\>**.
+1. Go to **General Ledger** > **Calendars** > **Ledger calendars**
+1. Select the required ledger period, then check the access level for specific modules and legal entities.
 
-## The entry for category x on project y cannot be posted/approved because it would cause the cost budget to be exceeded by z
+   > [!NOTE]
+   > The default access level for all the modules is **\<All\>**
+
+1. After updating the access levels, resume the closing or recalculation operation.
+
+## The entry for category \<Category\> on project \<Project\> cannot be posted/approved because it would cause the cost budget to be exceeded by \<Amount\>
 
 ### Symptoms
 
-Inventory closing, recalculation, or reverse fails with "The entry for category x on project y cannot be posted/approved because it would cause the cost budget to be exceeded by z" error during the ledger posting stage. The error can be traced from the Logs in Closing and Adjustment form, after selecting the specific voucher.
+An inventory closing, recalculation, or reverse fails during the ledger posting stage with the following error message:
+
+> The entry for category \<Category\> on project \<Project\> cannot be posted/approved because it would cause the cost budget to be exceeded by \<Amount\>
+
+You can view this error in the inventory closing logs. For more information on accessing closing logs, see [Inventory close](/dynamics365/supply-chain/cost-management/inventory-close#the-inventory-close-log).
+
+### Cause
+
+This issue can appear when inventory closing, recalculation, or reverse adjustments settles the project-enabled inventory transactions, and those adjustments or settlements exceed the budget control price set for that specific project.
 
 ### Solution
 
-This issue can appear when inventory closing, recalculation or reverse adjusts/settles the project enabled inventory transactions, and such adjustments/settlements exceed the budget control price set for that specific project. As a temporary mitigation, please navigate to Project management and accounting -> Setup -> Project management and accounting parameters -> Cost control -> Budget control -> Disable “Use budget control” 
+As a temporary workaround:
 
-Once disabled, resume the inventory closing/recalculation/reverse voucher, and once the operation completes, enable the parameter back. 
+1. Go to **Project management and accounting** > **Setup** > **Project management and accounting parameters** > **Cost control**.
+1. Set **Budget control** to **Disabled**. <!-- Need to ask SME where "Use budget control" applies to -->
+1. Resume the inventory closing, recalculation, or reverse voucher.
+1. After the inventory operation completes, set **Budget control** back to **Enabled** <!-- Need to confirm this value with the SME -->
 
-For permanent mitigation, please try updating the project budget control cost as per the business requirement. 
+For a more permanent solution, update the project budget control cost to meet your business requirements.
 
 ## Transaction cannot be reopened as it has already been pre-closed
 
 ### Symptoms
 
-Inventory closing or recalculation errors out with "Transaction XXX cannot be reopened as it has already been pre-closed".
+An inventory closing or recalculation fails with the following error message:
+
+> Transaction \<TransactionID\> cannot be reopened as it has already been pre-closed
+
+### Cause
+
+This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error happens when pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should only affect non-financial transactions.
+
+The inventory closing and recalculation processes implicitly execute pre-closing for the non-financial transfers against which it has any markings. This issue most likely occurred in that process.
 
 ### Solution
 
-This issue can rarely occur if there are any data corruptions in the inventory transactions/adjustments, when pre-closing has posted settlements to financial transactions and closed them, instead of the non-financial transactions. Pre-closing is executed implicitly in the inventory closing/recalculation process for the non-financial transfers against which we have any markings. This issue might have most likely occurred in that process. 
+You can identify which transactions are causing this issue from the `InventTrans` table in the database. Look for records that meet the following criteria:
 
-This can be traced directly from the database in InventTrans table. The records agianst which we have some values posted in QtySettled and CostAmountSettled fields but again ValueOpen is false and NonFinancialTransferInventClosing has got some record id of a closing/recalculation voucher. 
+- A value is specified for the `QtySettled` or `CostAmountSettled` fields
+- The `ValueOpen` field is set to `false`
+- The `NonFinancialTransferInventClosing` field is set to the record ID of a closing or recalculation voucher.
 
-One of the mitigations is to explicitly reset the ValueOpen, NonFinancialTransferInventClosing and DateClosed in those records in InventTrans and retry the closing process again. In case of any direct database data modifications, please carry out first in any lower replica and check whether everything is correct as per the business and calculation procedures.
+For each problematic transaction you identify, reset the `ValueOpen`, `NonFinancialTransferInventClosing`, `DateClosed` fields. After updating all problematic transactions, resume the closing or recalculation operation.
 
-In case of any further assisstance, please reach out to Microsoft Support or your Partner to fix this issue.
+1. Reset the `ValueOpen`, `NonFinancialTransferInventClosing`, `DateClosed` fields
+1. After updating all problematic transactions, resume the closing or recalculation operation.
 
-## Transaction cannot be reopened as it has already been pre-closed
-
-### Symptoms
-
-Inventory closing or recalculation errors out with "Transaction XXX cannot be reopened as it has already been pre-closed".
-
-### Solution
-
-This issue can rarely occur if there are any data corruptions in the inventory transactions/adjustments, when pre-closing has posted settlements to financial transactions and closed them, instead of the non-financial transactions. Pre-closing is executed implicitly in the inventory closing/recalculation process for the non-financial transfers against which we have any markings. This issue might have most likely occurred in that process. 
-
-This can be traced directly from the database in InventTrans table. The records agianst which we have some values posted in QtySettled and CostAmountSettled fields but again ValueOpen is false and NonFinancialTransferInventClosing has got some record id of a closing/recalculation voucher. 
-
-One of the mitigations is to explicitly reset the ValueOpen, NonFinancialTransferInventClosing and DateClosed in those records in InventTrans and retry the closing process again. In case of any direct database data modifications, please carry out first in any lower replica and check whether everything is correct as per the business and calculation procedures.
-
-In case of any further assisstance, please reach out to Microsoft Support or your Partner to fix this issue. 
+> [!IMPORTANT]
+> When making any direct database data modification, you should first make the change in a lower replica then confirm everything is work correctly before proceeding to other replicas.
 
 ## Unable to edit a record in table
 
 ### Symptoms
 
-Inventory closing, recalculation or reverse errors out with the following message as "Unable to edit a record in InventSettlement table". The same can be traced with multiple other processes like inventory journal, sales order, production or purchase order postings, or with different other tables like InventTrans, AssetTrans, ProdTable, etc.
+An inventory closing, recalculation, or reverse fails with the following error message:
+
+> Unable to edit a record in InventSettlement table
+
+### Cause
+
+This issue occurs when a SQL error prevents further execution and cause a process or batch job to fail. Typically, these SQL errors are deadlocks that occur when multiple processes execute at the same time. Other possible causes include SQL Server availability issues due to increased traffic, or insufficient and inappropriate indexing that results in query timeouts for long running queries.
 
 ### Solution
 
-This message signifies that some SQL issues have prevented further execution, due to which any process or batch job failed. Normally these issues can be deadlocks as multiple other processes are also executing at the same time, or SQL Server Availability issues due to increased traffic, or due to insufficient and inappropriate indexing resulting to query timeouts for long running queries. Generally, these SQL issues are mostly transient and shall be done away with retries. 
+Usually, these SQL issues are transient and go away with retries.
 
-Sometimes, it is observed that customizations also result in deadlocks and blockings due to inappropriate transaction scope and error handling. Please try to trace the error message from the batch job (or related processes), call stack, SQL statement, verify whether any customizations are poresent, check the indexes and index fragmentations. 
+Sometimes, customizations also result in deadlocks and blocking issues due to inappropriate transaction scopes and error handling. Tace the error message from the batch job or related processes, call stack, and SQL statement. Verify if any customizations are present. If customizations are present, check the indexes and index fragmentation. <!-- The indexes and index fragmentation of what? The customizations? The tables the customizations are applied to? -->
 
-In case the issue persists after retrying, please feel free to contact Microsoft Support or your Partner.
+## Additional support
+
+If the guidance in this article does not resolve your issue, contact Microsoft Support or your partner for further assistance.
