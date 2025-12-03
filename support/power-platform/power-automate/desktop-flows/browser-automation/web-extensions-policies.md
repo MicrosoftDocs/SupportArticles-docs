@@ -297,7 +297,7 @@ Some browser settings can interfere with the Power Automate extension. To resolv
 1. Open Microsoft Edge or Google Chrome.
 1. Go to **Settings** > **System and performance**.
 1. Turn off the following settings:
-   - **Continue running background extensions and apps when Microsoft Edge is closed** (or **Continue running background apps when Google Chrome is closed**).
-   - **Startup boost** (Microsoft Edge only).
+   1. **Continue running background extensions and apps when Microsoft Edge is closed** (or **Continue running background apps when Google Chrome is closed**).
+   1. **Startup boost** (Microsoft Edge only).
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
