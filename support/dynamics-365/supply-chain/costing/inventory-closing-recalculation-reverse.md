@@ -168,7 +168,7 @@ Also, check the financial dimensions in the _Accounting Structure Setup_ for the
 1. Go to **General Ledger** > **Ledger setup** > **Ledger**
 1. ???? <!-- Need to confirm with the SME how to check the financial dimensions -->
 
-After verifying your setup, resume the closing or recalculation operation.
+After verifying your configuration, resume the closing or recalculation operation.
 
 ## Only users in user group \<Group\> can post in module \<Module\> in the period containing the date \<Date\>
 
