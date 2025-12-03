@@ -86,7 +86,7 @@ For reference, the following table lists well-known update package GUIDs. The li
 | Configuration Manager 2403 HFRU | A02D38C5-021E-4144-8249-E7CDE48DA83F|
 | Configuration Manager 2409 | 3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E |
 | Configuration Manager 2409 HFRU | 345A6BE1-3D07-43ED-B6E5-FAC0889DA04C |
-| Configuration Manager 2503 | 8576527E-DDE9-4146-8ED9-DB91091C38EF|
+| Configuration Manager 2503 | AA928926-5C76-4DE0-B51F-0FE4D365DFE2 |
 | Configuration Manager 2503 HFRU | 6B0783D9-B8A2-4848-82F6-8EFE956F4988|
 
 ### Identify the installation stage of the update
