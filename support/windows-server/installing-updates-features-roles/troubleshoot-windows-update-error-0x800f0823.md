@@ -21,17 +21,17 @@ This article discusses how to resolve an issue that prevents Windows updates fro
 
 ## Symptoms
 
-When you try to install a Windows update, the installation fails, and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur when you install updates whether you use a direct connection to Windows Update or an offline .msi file. To verify the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
+When you try to install a Windows update, the installation fails, and you receive error code `0x800f0823 (CBS_E_NEW_SERVICING_STACK_REQUIRED)`. This issue might occur when you install updates whether you use a direct connection to Windows Update or an offline MSI file. To verify the details of this issue, search for an entry in the CBS.log file that resembles the following example (from Windows Server 2016):
 
 ```output
-2023-09-04 15:01:53, Error                 CBS    Package "Package_for_KB5012170~31bf3856ad364e35~amd64~~14393.5285.1.4" requires Servicing Stack v10.0.14393.5285 but current Servicing Stack is v10.0.14393.4349. [HRESULT = 0x800f0823 - CBS_E_NEW_SERVICING_STACK_REQUIRED]
+2023-09-04 15:01:53, Error            CBS    Package "Package_for_KB5012170~31bf3856ad364e35~amd64~~14393.5285.1.4" requires Servicing Stack v10.0.14393.5285 but current Servicing Stack is v10.0.14393.4349. [HRESULT = 0x800f0823 - CBS_E_NEW_SERVICING_STACK_REQUIRED]
 ```
 
 For more information about the CBS log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ## Cause
 
-This error code means that the affected computer's [servicing stack](/windows/deployment/update/servicing-stack-updates) is out of date. The servicing stack is the component that installs Windows updates. If this error occurs, the computer can't process new updates correctly.
+This error code means that the affected computer's servicing stack is out of date. The servicing stack is the component that installs Windows updates. If this error occurs, the computer can't process new updates correctly.
 
 Typically, Windows Update automatically keeps the servicing stack up to date by installing [servicing stack updates (SSUs)](/windows/deployment/update/servicing-stack-updates). However, it's possible for a physical computer or virtual machine (VM) to fall out of sync by skipping updates.
 
