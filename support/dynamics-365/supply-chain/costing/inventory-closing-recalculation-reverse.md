@@ -63,7 +63,7 @@ This issue occurs when you try to execute the reversal or cancellation of multip
 
 Always execute the reversal of vouchers one at a time, and wait for each reversal to complete before proceeding to the next one.
 
-This issue can occur if the previous reversal execution doesn't complete successfully, but the batch job ends with error, and you try to execute a new reverse of the original voucher. This issue can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
+This issue can also occur if a previous reversal execution doesn't complete successfully, the batch job ends with errors, and you try to execute a new reverse of the original voucher. This behavior can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
 
 ## Inventory closing cannot proceed because available physical on-hand inventory on item \<ItemName\> is currently negative
 
