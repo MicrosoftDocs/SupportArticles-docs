@@ -2777,7 +2777,7 @@ items:
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
     - name: Windows updates don't install on VM cluster hosts
-      href: ./virtualization/windows-updates-dont-install-vm-cluster-hosts.md
+      href: ./virtualization/windows-updates-dont-install-on-vm-cluster-hosts.md
   - name: Hyper-V Replica
     items:
     - name: Feature and performance optimization of HVR
