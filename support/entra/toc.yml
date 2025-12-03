@@ -496,7 +496,7 @@ items:
       href: entra-id/app-integration/filter-fiddler-traffic-using-domain-name-client-process.md
 - name: Global Secure Access troubleshooting documentation
   items:
-  - name: Global Secure Access 
+  - name: Global Secure Access troubleshooting documentation
     href: global-secure-access/welcome-global-secure-access.yml
   - name: Troubleshoot issues in the Global Secure Access client for Windows
     href: global-secure-access/troubleshoot-global-secure-access-client-windows-issues.md  

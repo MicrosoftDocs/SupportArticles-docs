@@ -21,7 +21,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Global Secure Access 
+          - text: Global Secure Access troubleshooting documentation
             url: global-secure-access/welcome-global-secure-access.yml
 
  # Card
