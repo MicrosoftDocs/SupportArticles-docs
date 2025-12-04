@@ -129,7 +129,10 @@ To work around this issue, use one of the following methods:
 
 - Use Windows Server 2025 or Windows 11 24H2, or a newer version, as an LDAP client. These operating systems encrypt LDAP sessions by default. For more information about this feature, see [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services).
 
-- If you can't use either of the previous methods, use your LDAP client to connect to a DC that runs an older version of Windows Server.
+- If you can't use either of the previous methods, you can temporarily disable the encrypted session requirements. For more information about how to do this, see [How dsHeuristics affects the encrypted session requirements and related events](#how-dsheuristics-affects-the-encrypted-session-requirements-and-related-events) later in this article.
+
+  > [!IMPORTANT]  
+  > This method is not secure. Use it only as a temporary step.
 
 ## More information
 
@@ -138,10 +141,10 @@ Several new Directory Service events document this behavior. The following table
 | Event ID | Action that a client attempted during an unencrypted session | User error (returned to the client) |
 | --- | --- | --- |
 | 3079 | Search for one or more confidential attributes. | None |
-| 3080 | Set a value for a confidential attribute of an existing or new object. | `INSUFF_ACCESS_RIGHTS` |
-| 3081 | Add a confidential attribute (or add an object that has confidential attributes). | `INSUFF_ACCESS_RIGHTS` |
+| 3080 | Set a value for a confidential attribute of an existing object. | `INSUFF_ACCESS_RIGHTS` |
+| 3081 | Add an object that has values for confidential attributes. | `INSUFF_ACCESS_RIGHTS` |
 
-### Details for Event ID 3079
+### Details of Event ID 3079
 
 ```output
 Log Name: Directory Service
@@ -156,7 +159,7 @@ Description:
 The directory blocked access to one or more confidential attributes on one or more LDAP search requests because one or more clients were using an unencrypted LDAP connection.
 ```
 
-### Details for Event ID 3080
+### Details of Event ID 3080
 
 ```output
 Log Name: Directory Service
@@ -170,7 +173,7 @@ Description:
 The directory blocked one or more LDAP modify requests including changes to one or more confidential attributes because one or more clients were using an unencrypted LDAP connection.
 ```
 
-### Details for Event ID 3081
+### Details of Event ID 3081
 
 ```output
 Log Name: Directory Service
@@ -182,6 +185,79 @@ User: contoso\admin
 Computer: dc25.contoso.com
 Description:
 The directory blocked one or more LDAP add requests including changes to one or more confidential attributes because one or more clients were using an unencrypted LDAP connection.
+```
+
+### How dsHeuristics affects the encrypted session requirements and related events
+
+It's possible (for example, in testing scenarios) to use the `dsHeuristics` attribute to modify the requirements for encrypted sessions. For example, if you configure `dsHeuristics` to disable the encrypted session requirement for searching confidential attributes, searches that use non-encrypted sessions successfully return both non-confidential and confidential results. Event ID 3079 doesn't appear in the event log.
+
+The `dsHeuristics` value is a string in which individual characters or sets of characters reflect parameter values. The 31st character represents the value of `DisableConfidentialAttributeEncryptionRequirements`. This value ranges from **0** (all the encrypted session requirements are enforced) to **7** (all the encrypted session requirements are disabled). For example, **0000000001000000000200000000037** is a `dsHeuristics` value that disables all the encrypted session requirements. `DisableConfidentialAttributeEncryptionRequirements` is a three-bit value. The following table describes how the values correlate to the encrypted session requirements.
+
+| Affected requirement | Bit | Not set (default) | Set (integer value) |
+| --- | --- | --- | --- |
+| Encrypted session required to search confidential attribute values | 0 | **0** (enforced) | **1** (disabled) |
+| Encrypted session required to modify existing confidential attribute values | 1 | **0** (enforced) | **2** (disabled) |
+| Encrypted session required to add an object that has confidential attribute values | 2 | **0** (enforced) | **4** (disabled) |
+
+For more information about `dsHeuristics`, see [6.1.1.2.4.1.2 dSHeuristics](/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5).
+
+When AD DS starts, it checks `dsHeuristics`. If any of the encrypted session requirements are disabled, it logs the appropriate events to document that fact. The following table lists these events, the corresponding disabled requirements, and the events that the `dsHeuristics` setting suppresses.
+
+| Event ID | Effects of the corresponding `dsHeuristic` setting | Suppressed Event ID |
+| --- | --- | --- |
+| 3076 | Encrypted sessions aren't required for searches of confidential attributes | 3079 |
+| 3077 | Encrypted sessions aren't required to modify existing confidential attributes | 3080 |
+| 3078 | Encrypted sessions aren't required to add objects that have confidential attributes | 3081 |
+
+#### Details for Event ID 3076
+
+```output
+Log Name: Directory Service
+Source: Microsoft-Windows-ActiveDirectory_DomainService
+Event ID: 3076
+Task Category: Security
+Level: Warning
+Keywords: Classic
+User: contoso\admin
+Computer: dc25.contoso.com
+Description:
+The directory has been configured to return confidential attributes for LDAP search requests on unencrypted LDAP connections. No events will be logged and no requests will be blocked.
+
+This setting is not secure and should only be used as a temporary step.
+```
+
+#### Details of Event ID 3077
+
+```output
+Log Name: Directory Service
+Source: Microsoft-Windows-ActiveDirectory_DomainService
+Event ID: 3077
+Task Category: Security
+Level: Warning
+Keywords: Classic
+User: contoso\admin
+Computer: dc25.contoso.com
+Description:
+The directory has been configured to allow modifying confidential attributes on unencrypted LDAP connections. No events will be logged and no requests will be blocked.
+
+This setting is not secure and should only be used as a temporary step.
+```
+
+#### Details of Event ID 3078
+
+```output
+Log Name: Directory Service
+Source: Microsoft-Windows-ActiveDirectory_DomainService
+Event ID: 3078
+Task Category: Security
+Level: Warning
+Keywords: Classic
+User: contoso\admin
+Computer: dc25.contoso.com
+Description:
+The directory has been configured to allow adding new objects with confidential attributes on unencrypted LDAP connections. No events will be logged and no requests will be blocked.
+
+This setting is not secure and should only be used as a temporary step.
 ```
 
 ### Deeper investigation
