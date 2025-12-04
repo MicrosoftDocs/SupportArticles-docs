@@ -12,9 +12,9 @@ This article provides troubleshooting guidance for an issue where SQL Agent jobs
 
 ## Symptoms
 
-The SQL Agent service is running, but scheduled SQL Agent jobs are not being executed. The SQL Server and Agent logs show network and login timeouts as well as failed logons.
+The SQL Agent service runs, but scheduled SQL Agent jobs don't execute. The SQL Server and Agent logs show network and authentication timeouts as well as failed sign-ins.
 
-The following is an example of the error message that is added to the logs:
+The following example shows the error message that's added to the logs:
 
 ```output
 SQLServer Error: 258, TCP Provider: Timeout error [258]
@@ -40,7 +40,7 @@ This issue can be caused by any of the following underlying problems:
     Get-Service -Name "SQLSERVERAGENT"
     ```
 
-1. If the SQL Server Agent service is not already running, start it.
+1. If the SQL Server Agent service isn't running, start it.
 1. Check the jobs and schedules in `msdb` by opening [SQL Server Management Studio (SSMS)](/ssms/install/install) and running the following query: <!-- Check with SME, what the user should do with the output of this query -->
   
     ```tsql
@@ -64,7 +64,7 @@ This issue can be caused by any of the following underlying problems:
     GO
     ```
 
-1. Detect blocking on `msdb` Agent system tables by running the following query is SSMS:
+1. Detect blocking on `msdb` Agent system tables by running the following query in SSMS:
 
     ```tsql
     USE msdb;
@@ -79,17 +79,17 @@ This issue can be caused by any of the following underlying problems:
     ```
 
 1. If blocking sessions are found, investigate the blocking query using `sys.dm_exec_requests` and `sys.dm_exec_sql_text`. Then, resolve or kill the blocking session.
-1. Check the system health extended events for any worker, thread, or resource issues by running the following query is SSMS:
+1. Check the system health extended events for any worker, thread, or resource issues by running the following query in SSMS:
 
     ```tsql
     ?????
     ```
 
-   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components, look for thread exhaustion, memory pressure, or CPU issues.
+   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues.
 
    <!-- Check with SME what the user should do if they identify any thread exhaustion, memory pressure, or CPU issues -->
 
-1. If blocking, hangs, or worker exhaustion can't be resolved, restart the SQL Server Agent by running the following commands in PowerShell:
+1. If you can't resolve blocking, hangs, or worker exhaustion, restart the SQL Server Agent by running the following commands in PowerShell:
 
     ```powershell
     Restart-Service -Name "SQLSERVERAGENT" -Force
@@ -98,7 +98,7 @@ This issue can be caused by any of the following underlying problems:
     ```
 
    > [!IMPORTANT]
-   > Restarting the SQL Server Agent will interrupt any currently running jobs.
+   > Restarting the SQL Server Agent interrupts any currently running jobs.
 
    After the SQL Server Agent restarts, verify that jobs are now being executed by using the [Job Activity Monitor](/ssms/agent/monitor-job-activity#job-activity-monitor).
 
