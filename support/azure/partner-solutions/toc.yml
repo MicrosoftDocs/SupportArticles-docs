@@ -55,10 +55,14 @@ items:
       href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
+    - name: Free trial limitations
+      href: dynatrace/free-trial-errors.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
+    - name: Metrics checkbox is unavailable
+      href: dynatrace/metrics-checkbox-disabled.md
 - name: Elastic
   items:
     - name: Diagnostic settings manual update
