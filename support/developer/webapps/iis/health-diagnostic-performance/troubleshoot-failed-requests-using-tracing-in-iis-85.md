@@ -49,9 +49,9 @@ Make sure that the account that you use to sign in is the administrator account 
 
 Before you begin, back up the configuration files:
 
-1. Press the Windows logo key + X, select **Command Prompt (Admin)**, then select **Yes**.
+1. Press the Windows logo key + X, select **Terminal (Admin)**, if the User Account Control (UAC) dialog appears select **Yes**.
 
-    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Command Prompt Admin icon on the Windows taskbar.":::
+    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Terminal Admin icon on the Windows taskbar.":::
 
 1. At the command prompt, run the following command:
 
@@ -158,26 +158,26 @@ In this step, you configure the failure definitions for your URL, including whic
 
 You see the following definition for **Default Web Site**.
 
-    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="The Failed Request Tracing Rules page showing WWW Server entered as Associated Provider and 404 point 2 as Status Code.":::
+:::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/frtr-www-server-404-2.png" alt-text="The Failed Request Tracing Rules page showing WWW Server entered as Associated Provider and 404 point 2 as Status Code.":::
 
-    IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should resemble the following example:
+IIS Manager writes the configuration to the `%systemdrive%\inetpub\wwwroot\web.config` file by using a `<location>` tag. The configuration should resemble the following example:
 
-    ```xml
-    <configuration> 
-        <system.webServer> 
-            <tracing> 
-                <traceFailedRequests> 
-                    <add path="*"> 
-                        <traceAreas> 
-                            <add provider="WWW Server" areas="Security" verbosity="Verbose" /> 
-                        </traceAreas> 
-                        <failureDefinitions statusCodes="404.2" /> 
-                    </add> 
-                </traceFailedRequests> 
-            </tracing> 
-        </system.webServer> 
-    </configuration>
-    ```
+```xml
+<configuration> 
+    <system.webServer> 
+        <tracing> 
+            <traceFailedRequests> 
+                <add path="*"> 
+                    <traceAreas> 
+                        <add provider="WWW Server" areas="Security" verbosity="Verbose" /> 
+                    </traceAreas> 
+                    <failureDefinitions statusCodes="404.2" /> 
+                </add> 
+            </traceFailedRequests> 
+        </tracing> 
+    </system.webServer> 
+</configuration>
+```
 
 ## Test and view the failure request log file
 
@@ -186,7 +186,7 @@ This section shows you how to generate a failed request and view the resulting t
 ### Step 1: Generate an error and the failure request log file
 
 1. Open a new Internet Explorer window.
-1. Enter `http://localhost/test.asp`, and press Enter. The "HTTP Error 404.2 - Not Found" error message is displayed.
+1. Enter `http://localhost/test.asp`, and press <kbd>Enter</kbd>. The "HTTP Error 404.2 - Not Found" error message is displayed.
 
     :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/ie-http-404-2-error.png" alt-text="The Internet Explorer window displaying H T T P Error 404 point 2 dash Not Found message page.":::
 
@@ -216,7 +216,7 @@ This section shows you how to generate a failed request and view the resulting t
 
 ## Summary
 
-You completed two tasks: 
+You completed two tasks:
 
 - Configuring Failed Request Tracing to capture traces for any request that IIS returns and that has a "404.2" status code
 - Verifying that IIS captured the trace for your request
