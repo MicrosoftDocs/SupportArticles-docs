@@ -28,9 +28,9 @@ When existing users in an organization try to access a SharePoint Online resourc
 - You can't access this item.
 - You don't have permission to access this item.
 
-These error messages are expected. However, in this scenario, users don't have an option to request access to the resource. 
+However, users don't have an option to request access to the resource. 
 
-# Cause
+## Cause
 
 The errors occur because access requests aren't enabled for the site collection that's associated with the resource.
 
