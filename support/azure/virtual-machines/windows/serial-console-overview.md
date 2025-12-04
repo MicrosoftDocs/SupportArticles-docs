@@ -32,6 +32,10 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - Australia Central 2
 - Australia East
 - Australia Southeast
+- Austria East
+
+- Belgium Central
+
 - Brazil South
 - Brazil Southeast
 - Canada Central
@@ -39,6 +43,8 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - Central India
 - Central US
 - Central US EUAP
+- Chile Central
+
 - China East 2
 - China East 3
 - China North 2
@@ -50,12 +56,18 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - France South
 - Germany North
 - Germany West Central
+- Indonesia Central
+
 - Israel Central
+- Israel Northwest
+
 - Italy North
 - Japan East
 - Japan West
 - Korea Central
 - Korea South
+- Malaysia West
+
 - Mexico Central
 - New Zealand North
 - North Central US
