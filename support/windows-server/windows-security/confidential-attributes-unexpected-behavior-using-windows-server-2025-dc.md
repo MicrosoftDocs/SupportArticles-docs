@@ -129,10 +129,10 @@ To work around this issue, use one of the following methods:
 
 - Use Windows Server 2025 or Windows 11 24H2, or a newer version, as an LDAP client. These operating systems encrypt LDAP sessions by default. For more information about this feature, see [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services).
 
-- If you can't use either of the previous methods, you can temporarily disable the encrypted session requirements. For more information about how to do this, see [How dsHeuristics affects the encrypted session requirements and related events](#how-dsheuristics-affects-the-encrypted-session-requirements-and-related-events) later in this article.
+- If you can't use either of the previous methods, you can temporarily disable the encrypted session requirements. For more information, see [How dsHeuristics affects the encrypted session requirements and related events](#how-dsheuristics-affects-the-encrypted-session-requirements-and-related-events) later in this article.
 
   > [!IMPORTANT]  
-  > This method is not secure. Use it only as a temporary step.
+  > This method isn't secure. Use it only as a temporary step.
 
 ## More information
 
