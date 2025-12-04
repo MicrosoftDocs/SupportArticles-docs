@@ -12,7 +12,7 @@ This article provides troubleshooting guidance for an issue where the SQL Agent 
 
 ## Symptoms
 
-The SQL Agent service crashes intermittently on a SQL Server Always On Cluster. When the SQL Agent service crashes, the following error message is added to the ???? log: <!-- Ask SME where the error message is reported. Popup, command output, log entry? -->
+The SQL Agent service crashes intermittently on a SQL Server Always On Cluster. When the SQL Agent service crashes, the following error message is added to the SQL Agent log:
 
 > [510] SQLAgent failed, dump generated in \<SQL_Instance_Log_Directory\>  
 > [LOG] Exception 29539 caught at line 233 of file sql\mpu\SqlAgent\src\autostrt.cpp. SQLServerAgent initiating self-termination.
