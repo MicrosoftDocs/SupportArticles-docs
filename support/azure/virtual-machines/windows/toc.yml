@@ -122,6 +122,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80072f8f
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x800f0823
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800f0920
