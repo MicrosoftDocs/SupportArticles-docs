@@ -73,7 +73,7 @@ If there are no new errors proceed to the next step. If there are new errors the
 
 ### Step 4: Restart SQL Agent service
 
-Restart the SQL Agent service for the previous changes to take effect.
+Restart the SQL Agent service for the previous changes to take full effect.
 
 ### Step 5: Monitor stability
 
