@@ -27,7 +27,7 @@ You experience one or more of these symptoms:
 
 ## Cause
 
-These issues occur if checkpoints (sometimes known as snapshots) for the VMs in the cluster grow too large. Checkpoints generate large VMRS files. Such files which consume disk space and can disrupt the migration process. Disruptions and insufficient disk space can further cause operations to time out and updates to fail to install.
+These issues occur if checkpoints (sometimes known as snapshots) for the VMs in the cluster grow too large. Checkpoints generate large VMRS files. Such files consume disk space and can disrupt the migration process. Disruptions and insufficient disk space can further cause operations to time out and updates to fail to install.
 
 For more information about checkpoints, see [Using checkpoints to revert virtual machines to a previous state](/windows-server/virtualization/hyper-v/checkpoints).
 
@@ -79,7 +79,7 @@ Use this solution to prevent conflicts between CAU and the Windows Update servic
 1. Use the Services console to re-enable the Windows Update service. In the service properties, set **Startup type** to **Automatic**, and then select **Start**.
 
    > [!IMPORTANT]
-   > This final step make sure that your hosts continue to receive security updates.
+   > This final step makes sure that your hosts continue to receive security updates.
 
 ### Solution 3: Remove checkpoints that you don't need
 
