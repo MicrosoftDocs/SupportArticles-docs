@@ -66,7 +66,9 @@ items:
   href: startup-shutdown/toc.yml
 
 - name: SQL Agent (Jobs, Alerts, Operators)
-  items: agent/
+  items:
+  - name: SQL Agent job fails with error 258
+    href: agent/job-failed-error-258.md
   
 
 - name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
