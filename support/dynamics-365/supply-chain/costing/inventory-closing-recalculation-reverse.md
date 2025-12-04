@@ -63,7 +63,7 @@ This issue occurs when you try to execute the reversal or cancellation of multip
 
 Always execute the reversal of vouchers one at a time, and wait for each reversal to complete before proceeding to the next one.
 
-This issue can also occur if a previous reversal execution doesn't complete successfully, the batch job ends with errors, and you try to execute a new reverse of the original voucher. This behavior can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
+This issue can also occur if a previous reversal execution doesn't complete successfully, the batch job ends with errors, then you try to execute a new reverse of the original voucher. This behavior can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
 
 ## Inventory closing cannot proceed because available physical on-hand inventory on item \<ItemName\> is currently negative
 
@@ -79,7 +79,7 @@ You can view this error in the inventory closing logs. For more information on a
 
 This error can occur because of data corruption in the posted inventory transactions. This error occurs when the on-hand physical or financial inventory becomes negative, which isn't allowed as per the item’s _Item Model Group_ configuration.
 
-Usually, the system flags this error while posting transactions for an item that results in negative on-hand inventory, not during inventory closing or recalculation. But if you manually intervene, migrate data, or update the database directly, these checks are skipped and this error can occur during the stock closing process.
+Usually, the system flags this error while posting transactions for an item that results in negative on-hand inventory, not during inventory closing or recalculation. But if you manually intervene, migrate data, or update the database directly, these checks are skipped. In this scenario, the error can occur during the stock closing process.
 
 ### Solution
 
@@ -97,7 +97,7 @@ Usually, the system flags this error while posting transactions for an item that
    1. Run the consistency check.
 
    > [!NOTE]
-   > If required, you can run the check as a batch process in the background.
+   > If necessary, you can run the check as a batch process in the background.
 
 1. Once the consistency check completes, you can view the final fix logs from the batch job logs or in the notification panel.
 1. After completing the consistency check, resume the closing or recalculation operation.
@@ -112,7 +112,11 @@ An inventory closing or recalculation fails with the following error message:
 
 ### Cause
 
-This error usually occurs because of business data corruption due to manual database interventions, manual changes in the decimal precision in the customized version, incorrect exchange rate configurations while posting source documents, and similar issues.
+This error usually occurs because of:
+
+- Business data corruption due to manual database interventions.
+- Manual changes to the decimal precision in the customized version.
+- Incorrect exchange rate configurations while posting source documents and similar issues.
 
 ### Solution
 
@@ -128,7 +132,7 @@ This error usually occurs because of business data corruption due to manual data
    1. Run the consistency check.
 
    > [!NOTE]
-   > If required, you can run the check as a batch process in the background.
+   > If necessary, you can run the check as a batch process in the background.
 
 1. Once the consistency check completes, you can view the final fix logs from the batch job logs or in the notification panel.
 1. After completing the consistency check, resume the closing or recalculation operation.
@@ -203,7 +207,7 @@ You can view this error in the inventory closing logs. For more information on a
 
 ### Cause
 
-This issue can appear when inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions, and those adjustments or settlements exceed the budget control price set for that specific project.
+This issue can appear when inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions. Then those adjustments or settlements exceed the budget control price set for that specific project.
 
 ### Solution
 
@@ -247,7 +251,7 @@ For each problematic transaction you identify, update the following field values
 After updating all problematic transactions, resume the closing or recalculation operation.
 
 > [!IMPORTANT]
-> When making any direct database data modification, first make the change in a lower replica then confirm everything works correctly before proceeding to other replicas.
+> When making any direct database data modification, first make the change in a lower replica and confirm everything works correctly before proceeding to other replicas.
 
 ## Unable to edit a record in table
 
