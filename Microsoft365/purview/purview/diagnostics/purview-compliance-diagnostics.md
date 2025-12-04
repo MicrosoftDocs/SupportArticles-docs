@@ -47,7 +47,8 @@ You can find these diagnostics on the following portal pages:
 - **Solutions** \> **Data Loss Prevention** \> **Diagnostics**
 
 > [!NOTE]
-> Diagnostics on **Solutions** pages are being rolled out gradually and might not yet be available in your organization.
+> Diagnostics on **Solutions** pages are being rolled out gradually and might not yet be available in your organization. 
+> "Microsoft Support agents do not provide assistance for these diagnostics. If you experience any issues, please use the Feedback link in the diagnostic to submit your feedback."
 
 ### Available diagnostics
 
