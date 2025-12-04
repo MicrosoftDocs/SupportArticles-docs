@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
-This article provides a solution for the error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. If the error occurs right after a browser update and has the same symptoms, see [Browser automation actions stop working after a browser update](browser-automation-error-after-chromium-update.md).
+This article provides a solution for the error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. If the error occurs right after a browser update and has the same symptoms, see [Browser automation actions stop working after a browser update](./browser-automation-error-after-chromium-update.md).
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001691
@@ -41,6 +41,9 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed prop
 
 - Execution of a desktop flow with one of the respective actions fails with the error message.
 - Web Recorder initiation for the specific browser shows the following message:
+
+  > 1. To use web automation in your flows, select 'Get Extension' to download and install to the selected browser.  
+  > 2. After installing, be sure to enable the extension in the browser.
 
   :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/you-need-power-automate-desktop-extension.png" alt-text="Screenshot that shows a message containing a Get Extension button to install the web extension.":::
 
@@ -114,14 +117,14 @@ Use the **Launch Browser** action to start the process of the corresponding brow
 
 1. Insert a **Go to web page** action and set up the parameters of the action:
     - Web browser instance: The variable produced by the **Launch Browser** action.
-    - Navigate: To URL
+    - Navigate: **To URL**
     - URL: The URL you want to navigate to.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Screenshot that shows how to configure the parameters of the Go to web page action.":::
 
 ### Solution 3: Use a Wait action
 
-Use the **Launch Browser** action to start the process of the corresponding browser. Then use a combination of an additional **Launch Browser** action with mode set to **Attach to running instance** and a **Wait** action set to a duration afterwards to resolve the issue.
+Use the **Launch Browser** action to start the process of the corresponding browser. Then use a combination of an additional **Launch Browser** action with mode set to **Attach to running instance** and a **Wait** action with the duration set to a 90 seconds resolve the issue.
 
 1. Insert a new **Launch Browser** action as:
     - **Launch new Microsoft Edge**
@@ -141,7 +144,7 @@ Use the **Launch Browser** action to start the process of the corresponding brow
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/insert-error-handling-policy-for-action.png" alt-text="Screenshot that shows how to insert an error handling policy by using the On error option.":::
 
-    - Select **Continue flow run** > **Go to next action** in the dropdown list, then select **Save**.
+    - Select **Go to next action** in the **Continue flow run** dropdown list, then select **Save**.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Screenshot that shows how to select the Continue flow run and Go to next action options and then save the settings.":::
 
