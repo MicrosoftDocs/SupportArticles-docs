@@ -51,7 +51,7 @@ Before you begin, back up the configuration files:
 
 1. Press the Windows logo key + X, select **Terminal (Admin)**, if the User Account Control (UAC) dialog appears select **Yes**.
 
-    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Terminal Admin icon on the Windows taskbar.":::
+    :::image type="content" source="media/troubleshoot-failed-requests-using-tracing-in-iis-85/cmd-admin-in-task-bar.png" alt-text="Terminal Admin icon on the Quick Link menu.":::
 
 1. At the command prompt, run the following command:
 
