@@ -85,8 +85,8 @@ Double check whether you set restrictions to allow traffic to only the subnets o
 ### Versioning and Upgrade Troubleshooting
 
 Upgrades of Istio control plane for the application routing Gateway API Implementation occur in-place and are triggered in the following two scenarios:
-- Manual: The AKS cluster is upgraded to a new version which has a higher maximum supported Istio version corresponding to it. The Istio control plane will be upgraded to the higher minor version as part of the AKS cluster upgrade.
-- Automatic: A new Istio version is released for AKS and is now the maximum supported Istio version for the AKS cluster version. The Istio control plane on your cluster will automatically be upgraded to the new minor version after the release is rolled out to your region. Follow the AKS release notes to track new Istio version releases.
+- The AKS cluster is upgraded to a new version which has a higher maximum supported Istio version corresponding to it. The Istio control plane will be upgraded to the higher minor version as part of the AKS cluster upgrade.
+- A new Istio version is released for AKS and is now the maximum supported Istio version for the AKS cluster version. The Istio control plane on your cluster will **automatically** be upgraded to the new minor version after the release is rolled out to your region. Follow the AKS release notes to track new Istio version releases.
 
 It's possible that traffic disruptions could occur during the upgrade process. To minimize disruptions during upgrades, the application routing add-on deploys a Horizontal Pod Autoscaler (HPA) with 2 minimum replicas and a PodDisruptionBudget (PDB) with a minimum availability of 1 for each `Gateway`. 
 
@@ -100,7 +100,7 @@ If the `istiod` deployment is still not up-to-date, you may need to manually tri
 
 If the `istiod` version is up-to-date, you should also verify that the `Gateway` deployment proxy images also have the new patch versions. `istiod` should update the `Gateway` deployments automatically after `istiod` gets updated. If the `Gateway` deployment images aren't updated to the new minor or patch version, try restarting the `istiod` deployment manually.
 
-### Istio control plane and `Gateway` proxy troubleshooting
+## Istio control plane and `Gateway` proxy troubleshooting
 
 Because the App Routing Gateway API Implementation uses an Istio control plane, you can follow the steps in the [Istio add-on troubleshooting guide](./istio-add-on-general-troubleshooting.md) to debug `istiod` and `Gateway` proxies. Note that some of the Istio add-on troubleshooting steps could pertain to Istio CRDs, revisioned deployments, canary upgrades, and other features that are not applicable to the App Routing Istio Gateway API Implementation.
 
