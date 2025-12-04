@@ -13,7 +13,7 @@ ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 
 This article provides troubleshooting guidance for common errors that might occur during inventory close, recalculation, or reverse in Microsoft Dynamics 365 Supply Chain Management.
 
-## Another closing or adjustment has not finished yet
+## Another closing or adjustment is in progress
 
 ### Symptoms
 
@@ -31,7 +31,7 @@ This issue occurs when you attempt to execute a new closing or recalculation whi
 
 Wait for the previous closing or voucher execution to complete, then you can execute a new closing or recalculation.
 
-## Batch task failed: Cannot select a record in Current client sessions
+## Cannot select a record in current client sessions
 
 ### Symptoms
 
@@ -65,7 +65,7 @@ Always execute the reversal of vouchers one at a time, and wait for each reversa
 
 This issue can also occur if a previous reversal execution doesn't complete successfully, the batch job ends with errors, then you try to execute a new reverse of the original voucher. This behavior can occur due to system issues, sudden crashes, system or SQL server unavailability, and so on. In such cases, contact Microsoft Support or your partner.
 
-## Inventory closing cannot proceed because available physical on-hand inventory on item \<ItemName\> is currently negative
+## Inventory closing cannot proceed
 
 ### Symptoms
 
@@ -102,7 +102,7 @@ Usually, the system flags this error while posting transactions for an item that
 1. Once the consistency check completes, you can view the final fix logs from the batch job logs or in the notification panel.
 1. After completing the consistency check, resume the closing or recalculation operation.
 
-## Close stock - processing level \<Level\> with a total of \<Total\> bundles
+## Failure when closing stock
 
 ### Symptoms
 
@@ -177,7 +177,7 @@ Also, check the financial dimensions in the _Accounting Structure Setup_ for the
 
 After verifying your configuration, resume the closing or recalculation operation.
 
-## Only users in user group \<Group\> can post in module \<Module\> in the period containing the date \<Date\>
+## User can't post in module for a given date
 
 ### Symptoms
 
@@ -195,7 +195,7 @@ An inventory closing or recalculation fails with the following error message:
 
 1. After updating the access levels, resume the closing or recalculation operation.
 
-## The entry for category \<Category\> on project \<Project\> cannot be posted/approved because it would cause the cost budget to be exceeded by \<Amount\>
+## An entry can't be posted or approved because of the cost budget
 
 ### Symptoms
 
@@ -220,7 +220,7 @@ As a temporary workaround:
 
 For a more permanent solution, update the project budget control cost to meet your business requirements.
 
-## Transaction cannot be reopened as it has already been pre-closed
+## A transaction cannot be reopened after being pre-closed
 
 ### Symptoms
 
