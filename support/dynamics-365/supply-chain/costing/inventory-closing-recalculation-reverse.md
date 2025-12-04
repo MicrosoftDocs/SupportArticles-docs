@@ -207,7 +207,7 @@ You can view this error in the inventory closing logs. For more information on a
 
 ### Cause
 
-This issue can appear when inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions. Then those adjustments or settlements exceed the budget control price set for that specific project.
+This issue can appear when inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions. Then those adjustments or settlements exceed the [budget control](/dynamics365/finance/budgeting/budget-control-overview-configuration) price set for that specific project.
 
 ### Solution
 
