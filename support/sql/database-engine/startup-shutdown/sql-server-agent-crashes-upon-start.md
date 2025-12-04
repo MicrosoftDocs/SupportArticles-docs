@@ -95,14 +95,46 @@ For info on the ODBC driver requirements for different versions of SQL Server, s
    1. Command prompt:
 
       ```cli
-      odbcconf /L
+      odbcad32.exe
       ```
+
+      This command will open the _ODBC data source Administrator_ window, then go to the **Drivers** tab and check if the ODBC driver is missing.
 
    1. PowerShell:
 
       ```powershell
       Get-OdbcDriver
       ```
+
+      This command will return an output similar to the following:
+
+      ```output
+      Name : SQL Server
+      Platform : 64-bit
+      Attribute : {APILevel, FileUsage, Driver, ConnectFunctions...}
+      
+      Name : SQL Server Native Client 11.0
+      Platform : 64-bit
+      Attribute : {Driver, APILevel, FileUsage, Setup...}
+      
+      Name : Microsoft Access Driver (*.mdb, *.accdb)
+      Platform : 64-bit
+      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
+      
+      Name : Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)
+      Platform : 64-bit
+      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
+      
+      Name : Microsoft Access Text Driver (*.txt, *.csv)
+      Platform : 64-bit
+      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
+      
+      Name : Microsoft Access dBASE Driver (*.dbf, *.ndx, *.mdx)
+      Platform : 64-bit
+      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
+      ```
+
+      If the ODBC driver is not listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
 
 1. Confirm that the ODBC driver for SQL Server is missing. <!-- Need to confirm with SME what the user should look for to confirm the driver is missing -->
    1. If the driver is missing, continue to the next step.
