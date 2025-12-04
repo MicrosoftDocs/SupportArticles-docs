@@ -89,7 +89,7 @@ This issue can be caused by any of the following underlying problems:
 
    <!-- Check with SME what the user should do if they identify any thread exhaustion, memory pressure, or CPU issues -->
 
-1. If blocking, hangs, or worker exhaustion can't be resolved, restart SQL Server Agent by running the following commands in PowerShell:
+1. If blocking, hangs, or worker exhaustion can't be resolved, restart the SQL Server Agent by running the following commands in PowerShell:
 
     ```powershell
     Restart-Service -Name "SQLSERVERAGENT" -Force
