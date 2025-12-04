@@ -46,7 +46,7 @@ Some desktop applications use custom UI frameworks or rendering methods that are
 
 This action moves the mouse to the first occurrence of the specified image and sends a left click.
 
-## Solution 2: Use Move mouse to text on screen (OCR) action
+### Solution 2: Use Move mouse to text on screen (OCR) action
 
 1. Add a **Move mouse to text on screen (OCR)** action to your flow.
 1. Specify the text that appears on or near the UI element you want to interact with.
@@ -55,7 +55,7 @@ This action moves the mouse to the first occurrence of the specified image and s
 
 This action uses Optical Character Recognition (OCR) to locate text on the screen or foreground window and sends a mouse click to that location.
 
-## Solution 3: Use the recorder with coordinates
+### Solution 3: Use the recorder with coordinates
 
 1. Open Power Automate for desktop and create a new flow.
 1. Select **Recorder** from the toolbar.
@@ -64,7 +64,7 @@ This action uses Optical Character Recognition (OCR) to locate text on the scree
 
 The recorder creates a **Click UI element in window** action with coordinate-based input parameters populated by using the respective values from your click action.
 
-## Solution 4: Use Move mouse and Send mouse click actions
+### Solution 4: Use Move mouse and Send mouse click actions
 
 1. Add a **Move mouse** action to your flow.
 1. Configure the action to move the mouse to the specific coordinates of the target element.
