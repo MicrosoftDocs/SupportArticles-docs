@@ -1,8 +1,10 @@
 ---
 title: Dynatrace Free Trial Limitations on Azure
 description: Understand the limitations of Dynatrace free trial resources on Azure.
-author:  agrimayadav
+author: agrimayadav
 ms.author: jarrettr 
+ms.reviewer: v-ryanberg
+manager: dcscontentpm
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
@@ -23,17 +25,21 @@ This article helps you understand limitations that you might encounter when crea
 ## Cause
 
 - You can only create one Dynatrace resource during the trial period.
-- With the free trial plan, your Dynatrace resource on Azure will be deleted automatically after the trial expires, unless you request an extension.
+- With the free trial plan, your Dynatrace resource on Azure will be deleted automatically after the trial expires unless you request an extension.
 
 ## Solution 1: Unable to create another free trial resource
 
-Only one environment/resource can be created during the trial period. If you need additional environments, upgrade to a paid Dynatrace plan or wait until the trial expires and start a new trial (if eligible).
+Only one environment or resource can be created during the trial period. If you need additional environments, upgrade to a paid Dynatrace plan or wait until the trial expires and start a new trial (if eligible).
 
 ## Solution 2: Prepare for automatic free trial resource deletion
 
 Be aware that free trial resources are deleted automatically after the trial period ends. If you require more time, [contact Dynatrace sales](mailto:sales@dynatrace.com) to request a trial extension or discuss upgrade options.
 
-## Related content
+## Resources
 
 - [Dynatrace free trial documentation](https://www.dynatrace.com/trial/resources/)
 - [Contact Dynatrace sales](mailto:sales@dynatrace.com)
+
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
