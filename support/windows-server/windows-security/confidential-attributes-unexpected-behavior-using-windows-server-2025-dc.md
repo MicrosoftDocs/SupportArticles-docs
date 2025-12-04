@@ -93,7 +93,7 @@ The extended server error is:
 00002098: SecErr: DSID-03151656, problem 4003 (INSUFF_ACCESS_RIGHTS), data 0
 ```
 
-When you use a similar approach to try to create an object, the resulting output resembles the following example:
+When you use a similar approach to try to create an object and set a value for a confidential attribute on that object, the resulting output resembles the following example:
 
 ```output
 Add error on entry starting on line 1: Insufficient Rights
