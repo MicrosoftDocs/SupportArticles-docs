@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 5001691
 
 ### Scenario 1
 
-When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action in Microsoft Power Automate, the attempt fails, and the program returns one of the following error messages:
+When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action in Microsoft Power Automate, the attempt fails. Additionally and the program returns one of the following error messages:
 
 - > Failed to assume control of Microsoft Edge (Internal error or communication failure).
 - > Failed to assume control of Chrome (Internal error or communication failure).
@@ -57,7 +57,7 @@ Starting the browser takes longer than the Launch Browser action's default timeo
 
 ### Additional symptoms
 
-Running a desktop flow by using one of the respective actions might fail and return one of the error message that's listed n "Scenario 1." This behavior is inconsistent.
+Running a desktop flow by using one of the respective actions might fail and return one of the error messages that's listed in "Scenario 1." This behavior is inconsistent.
 
 ### Solution 1: Increase timeouts
 
