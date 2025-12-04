@@ -30,13 +30,17 @@ When existing users in an organization try to access a SharePoint Online resourc
 
 These error messages are expected. However, in this scenario, users don't have an option to request access to the resource. 
 
+# Cause
+
+The errors occur because access requests aren't enabled for the site collection that's associated with the resource.
+
 ## Resolution
 
-To enable users who receive an error message to request access to a resource, you must allow access requests for the affected site collection. You must be a site collection administrator to enable this feature if it is turned off. 
+To resolve the errors, enable access requests for the affected site collection. You must be a site collection administrator to enable this feature. 
 
 As a site collection administrator, use the following steps to enable access requests:
 
-1. On the affected SharePoint Online site collection, select **Settings**> **Site Settings**.
+1. On the affected SharePoint Online site collection, select **Settings** > **Site Settings**.
 
 1. On the **Site Settings** page, under **Users and Permissions**, select **Site permissions**.
 
