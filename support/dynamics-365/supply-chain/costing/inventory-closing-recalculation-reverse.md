@@ -270,7 +270,3 @@ This issue occurs when a SQL error prevents further execution and causes a proce
 Usually, these SQL issues are transient and go away with retries.
 
 Sometimes, customizations also result in deadlocks and blocking issues due to inappropriate transaction scopes and error handling. Trace the error message from the batch job or related processes, call stack, and SQL statement. Verify if any customizations are present. If customizations are present, check the indexes and index fragmentation for the SQL table mentioned in the error message.
-
-## Additional support
-
-If the guidance in this article doesn't resolve your issue, contact Microsoft Support or your partner for further assistance.
