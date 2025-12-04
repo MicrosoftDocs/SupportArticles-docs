@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/20/2025
+ms.date: 12/03/2025
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -39,6 +39,8 @@ ms.date: 11/20/2025
 |Unable to join some Webex meetings|When you select the **Join** button to join a Cisco Webex meeting from a Teams Rooms on Windows device, you're not connected to the meeting and see the home screen on the device instead.|No workaround is available at this time. Cisco is investigating the issue.|
 |Automatic remediation in Pro Management portal keeps failing.|The built-in remediation in the Microsoft Teams Rooms Pro Management portal to disable the USB peripheral power draining option under Windows USB settings keeps failing with the error message:<br/><br/>`Auto Remediation was unable to resolve this issue.`|To resolve the issue, implement a manual fix as described in [USB Peripheral Power Drain signal is unhealthy](./usb-peripheral-power-drain-status-unhealthy.md).|
 |Lenovo Teams Rooms devices display BitLocker recovery screen.|When you try to update Windows from 23H2 to 24H2 on a Lenovo Teams Rooms for Windows device that has BitLocker enabled, the update might fail and you see a BitLocker recovery screen instead.|The Windows update to 24H2 on Lenovo devices is [blocked](https://support.microsoft.com/topic/kb5070632-some-devices-are-temporarily-unable-to-upgrade-to-windows-11-version-24h2-or-25h2-c3dd7515-21e6-46ce-9a9d-64a8882ef5ca) due to this issue. <br/><br/>You can safely upgrade the versions of the Teams Rooms app to 5.3.205.0 and 5.4.210.0 on the affected devices that will remain on Windows version 23H2. <br/><br/>If one of these versions of the Teams Rooms app is already installed and the device displays the BitLocker recovery screen, enter the BitLocker recovery key to restore functionality.|
+|Video participants missing from Front row.|The Front row view doesn't show all the video participants, and they're missing from the overflow area as well.<br/><br/>The Front row view displays a maximum of five attendees on a single screen, and up to nine attendees on a dual screen. When the maximum number of attendees are already shown on the screen, the extra attendees are represented in the overflow view area. However, when two or more participants turn on their cameras, the remaining video streams might not fit in the Front-of-Room display, and they are not accounted for in the overflow area as well. This issue causes those video participants to appear as "missing" from the meeting.|Use a different meeting view than the Front row view.|
+|All video streams turn off on Front row during a meeting.|When you use the Front row view on a Teams Rooms on Windows device, all video streams including the meeting room's video and incoming content turn off in the Front-of-Room display. This issue occurs intermittently when a remote participant turns off their video while content is being shared.|Leave and rejoin the Teams meeting from the Teams Rooms device.|
 
 ## Hardware issues
 
