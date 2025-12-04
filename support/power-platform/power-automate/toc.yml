@@ -113,6 +113,8 @@ items:
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions
             href: desktop-flows/ui-automation/uipi-issues.md
+          - name: Wrong UI element is clicked or populated in desktop flow
+            href: desktop-flows/ui-automation/wrong-ui-element-clicked-populated.md
       - name: '"Could not read the application certificate" error when creating a connection'
         href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows
