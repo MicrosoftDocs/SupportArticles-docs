@@ -90,7 +90,7 @@ Use the **Launch Browser** action to start the process of the corresponding brow
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/insert-error-handling-policy-for-action.png" alt-text="How to insert an error handling policy by using the On error option.":::
 
-    - Select **Continue flow run** > **Go to next action**, and then select **Save**.
+    - Open the **Continue flow run** dropdown list, select **Go to next action**, and then select **Save**.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Illustration of how to select the Continue flow run and Go to next action options and then save the settings.":::
 
