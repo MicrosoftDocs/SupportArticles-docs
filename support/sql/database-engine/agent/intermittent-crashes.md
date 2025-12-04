@@ -62,14 +62,13 @@ For more info on configuring your antivirus or endpoint protection software to w
 
 ### Step 3: Check event logs and dumps
 
-Check if there are any new errors in the logs or most recent SQL Agent dump file:
+Check if the logs or the most recent SQL Agent dump file contain any new errors:
 
 1. Review the SQL Agent logs located in: `<SQL_Instance_Log_Directory>\SQLAGENT.OUT\`.
 1. Review the Application and System logs in Event Viewer for related errors.
 1. Analyze the SQL Agent dump file (if multiple dumps are generated, focus on the most recent one).
 
-If there are no new errors proceed to the next step. If there are new errors then do the following:
-1. ?????
+If there are no new errors, proceed to the next step. If there are new errors, repeat the previous steps then check the event logs and dumps again.
 
 ### Step 4: Restart SQL Agent service
 
