@@ -10,7 +10,8 @@ ms.custom:
 - sap:windows security technologies\ad object permissions, access control, delegation, adminsdholder and auditing
 - pcy:WinComm Directory Services
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
 
