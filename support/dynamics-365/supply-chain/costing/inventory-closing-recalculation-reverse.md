@@ -53,7 +53,7 @@ Most of the time, these issues are transient and don't cause any data corruption
 
 An inventory reverse fails with the following error message:
 
-> Another Inventory %1 reverse for voucher %2 is running. Duplicate reverse is not allowed
+> Another Inventory \<OperationType\> reverse for voucher \<VoucherID\> is running. Duplicate reverse is not allowed
 
 ### Cause
 
@@ -89,6 +89,7 @@ Usually, the system flags this error while posting transactions for an item that
 1. Once you fix the transactions, execute a consistency check for that item:
    1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
    1. In the consistency check dialog, set **Check/Fix** to **Fix error**.
+      1. If you just want to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
    1. Set **Module** to **Inventory management**.
    1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
    1. Open the More menu (**...**) and select **Dialog**.
@@ -118,7 +119,8 @@ This error usually occurs because of business data corruption due to manual data
 1. Identify the item and inventory transactions causing this error.
 1. Execute a consistency check for that item for on-hand and inventory transactions.
    1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
-      1. In the consistency check dialog, set **Check/Fix** to ?????. <!-- (need to confirm with SME) -->
+   1. In the consistency check dialog, set **Check/Fix** to **Fix error**.
+      1. If you just want to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
    1. Set **Module** to **Inventory management**.
    1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
    1. Open the More menu (**...**) and select **Dialog**.
@@ -144,7 +146,7 @@ An inventory closing, recalculation, reverse, or journal posting (such as an inv
 Verify the ledger calendar period status:
 
 1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
-1. Select the required ledger period and then verify the period status for specific legal entities.
+1. Select the required ledger period and then verify the period status for the legal entities experiencing issues.
    1. The period status should be **Open** to allow for the posting of any adjustments.
 1. After updating the period status, resume the inventory operation.
 
@@ -166,6 +168,7 @@ Verify that the main account is set up for the specified transaction type:
 Also, check the financial dimensions in the _Accounting Structure Setup_ for the corresponding main accounts:
 
 1. Go to **General Ledger** > **Ledger setup** > **Ledger**
+1. Select the account structure that is experiencing issues.
 1. ???? <!-- Need to confirm with the SME how to check the financial dimensions -->
 
 After verifying your configuration, resume the closing or recalculation operation.
@@ -181,7 +184,7 @@ An inventory closing or recalculation fails with the following error message:
 ### Solution
 
 1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
-1. Select the required ledger period, then check the access level for specific modules and legal entities.
+1. Select the required ledger period, then check the access level for specific modules and the legal entities experiencing issues.
 
    > [!NOTE]
    > The default access level for all the modules is **\<All\>**
@@ -207,9 +210,9 @@ This issue can appear when inventory closing, recalculation, or reverse adjustme
 As a temporary workaround:
 
 1. Go to **Project management and accounting** > **Setup** > **Project management and accounting parameters** > **Cost control**.
-1. Set **Budget control** to **Disabled**. <!-- Need to ask SME where "Use budget control" applies to -->
+1. Set **Budget control** to **Disabled**.
 1. Resume the inventory closing, recalculation, or reverse voucher.
-1. After the inventory operation completes, set **Budget control** back to **Enabled**. <!-- Need to confirm this value with the SME -->
+1. After the inventory operation completes, set **Budget control** back to **Enabled**.
 
 For a more permanent solution, update the project budget control cost to meet your business requirements.
 
@@ -235,11 +238,11 @@ You can identify which transactions cause this issue from the `InventTrans` tabl
 - The `ValueOpen` field is set to `false`
 - The `NonFinancialTransferInventClosing` field is set to the record ID of a closing or recalculation voucher.
 
-For each problematic transaction you identify, reset the following fields: <!-- What does resetting them entail -->
+For each problematic transaction you identify, update the following field values:
 
-- `ValueOpen`
-- `NonFinancialTransferInventClosing`
-- `DateClosed`
+- `ValueOpen = 0`
+- `NonFinancialTransferInventClosing = 0`
+- `DateClosed = 1900-01-01 00:00:00.000`
 
 After updating all problematic transactions, resume the closing or recalculation operation.
 
@@ -262,7 +265,7 @@ This issue occurs when a SQL error prevents further execution and causes a proce
 
 Usually, these SQL issues are transient and go away with retries.
 
-Sometimes, customizations also result in deadlocks and blocking issues due to inappropriate transaction scopes and error handling. Trace the error message from the batch job or related processes, call stack, and SQL statement. Verify if any customizations are present. If customizations are present, check the indexes and index fragmentation. <!-- The indexes and index fragmentation of what? The customizations? The tables the customizations are applied to? -->
+Sometimes, customizations also result in deadlocks and blocking issues due to inappropriate transaction scopes and error handling. Trace the error message from the batch job or related processes, call stack, and SQL statement. Verify if any customizations are present. If customizations are present, check the indexes and index fragmentation for the SQL table mentioned in the error message.
 
 ## Additional support
 
