@@ -5,19 +5,19 @@ ms.reviewer: iomimtso, iopanag, v-shaywood
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.date: 11/20/2025
 ---
-# CyberArk connections aren't supported for RDP automation
+# RDP automation fails to connect to a machine through CyberArk
 
-This article helps you resolve an issue in which you can't connect to a device (computer or virtual machine) through CyberArk when you use Remote Desktop Protocol (RDP) automation in Microsoft Power Automate for desktop.
+This article helps you resolve an issue in which you can't connect to a machine through CyberArk when you use Remote Desktop Protocol (RDP) automation in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
-When you try to connect to a device through CyberArk by using RDP automation, the Power Automate agent for virtual desktops doesn't establish communication with Power Automate for desktop, and you receive the following error message:
+When you try to connect to a machine through CyberArk by using RDP automation, the Power Automate agent for virtual desktops doesn't establish communication with Power Automate for desktop, and you receive the following error message:
 
 > A device attached to the system is not functioning.
 
 :::image type="content" source="media/cyberark-connection-not-supported/rdp-connection-failed.png" alt-text="The error message that you receive when you try to connect through CyberArk.":::
 
-However, when you connect directly to the device by using RDP without CyberArk, the connection works as expected, and Power Automate for desktop successfully communicates with the agent.
+However, when you connect directly to the machine by using RDP without CyberArk, the connection works as expected, and Power Automate for desktop successfully communicates with the agent.
 
 ## Cause
 
@@ -27,7 +27,7 @@ CyberArk creates a nested remote connection path. This condition interferes with
 
 To resolve this issue:
 
-- Use a direct RDP connection to the target device instead of connecting through CyberArk.
-- Make sure that the Power Automate agent for virtual desktops is running and correctly registered on the device.
+- Use a direct RDP connection to the target machine instead of connecting through CyberArk.
+- Make sure that the Power Automate agent for virtual desktops is running and correctly registered on the machine.
 
 [!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
