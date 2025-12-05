@@ -6,7 +6,7 @@ ms.reviewer: ramakoni1, v-jayaramanp, v-shaywood
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
-# SQL Server Agent stops responding when you try to start it
+# SQL Server Agent shuts down unexpectedly when you try to start it
 
 This article provides troubleshooting guidance for an issue in which the SQL Server Agent service stops responding or takes longer than you expect when you try to start it. Many different underlying problems can cause this issue. This article covers some of the most common scenarios.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
-A SQL Server Agent stops responding when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
+A SQL Server Agent fails when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
   > The SQL Server Agent (MSSQLSERVER) service failed to start due to the following error:  
@@ -26,63 +26,67 @@ A SQL Server Agent stops responding when you try to start it, or it takes longer
   Additionally, the following entries might be logged in the *SQLAgent.log* file:
 
   ```output
-  <Time Stamp> - ? [431] Populating subsystems cache... \
-  <Time Stamp> - ? [432] There are 7 subsystems in the subsystems cache \
-  <Time Stamp> - ? [124] Subsystem 'ActiveScripting' successfully loaded (maximum concurrency: 40)\
-  <Time Stamp> - ? [124] Subsystem 'ANALYSISCOMMAND' successfully loaded (maximum concurrency: 400)\
-  <Time Stamp> - ? [124] Subsystem 'ANALYSISQUERY' successfully loaded (maximum concurrency: 400)\
-  <Time Stamp> - ? [124] Subsystem 'CmdExec' successfully loaded (maximum concurrency: 40)\
-  <Time Stamp> - ? [124] Subsystem 'PowerShell' successfully loaded (maximum concurrency: 2)\
-  <Time Stamp> - ? [124] Subsystem 'SSIS' successfully loaded (maximum concurrency: 400)\
-  <Time Stamp> - ? [124] Subsystem 'TSQL' successfully loaded (maximum concurrency: 80)\
-  <Time Stamp> - ! [364] The Messenger service has not been started - NetSend notifications will not be sent\
-  <Time Stamp> - ? [129] SQLSERVERAGENT starting under Windows NT service control\
-  <Time Stamp> - + [396] An idle CPU condition has not been defined - OnIdle job schedules will have no effect\
-  <Time Stamp> - ? [110] Starting SQLServerAgent Monitor using '' as the notification recipient...\
-  <Time Stamp> - ? [146] Request servicer engine started\
-  <Time Stamp> - ? [133] Support engine started\
-  <Time Stamp> - ? [167] Populating job cache...\
-  <Time Stamp> - ? [131] SQLSERVER service stopping due to a stop request from a user, process, or the OS...\
-  <Time Stamp> - ? [134] Support engine stopped\
-  <Time Stamp> - ? [197] Alert engine stopped\
-  <Time Stamp> - ? [168] There are 4731 job(s) [0 disabled] in the job cache\
-  <Time Stamp> - ? [170] Populating alert cache...\
-  <Time Stamp> - ? [171] There are 0 alert(s) in the alert cache\
-  <Time Stamp> - ? [149] Request servicer engine stopped\
-  <Time Stamp> - ? [248] Saving NextRunDate/Times for all updated job schedules...\
-  <Time Stamp> - ? [249] 0 job schedule(s) saved\
-  <Time Stamp> - ? [127] Waiting for subsystems to finish...\
-  <Time Stamp> - ? [128] Subsystem 'ActiveScripting' stopped (exit code 1)\
-  <Time Stamp> - ? [128] Subsystem 'ANALYSISCOMMAND' stopped (exit code 1)\
-  <Time Stamp> - ? [128] Subsystem 'ANALYSISQUERY' stopped (exit code 1)\
-  <Time Stamp> - ? [128] Subsystem 'CmdExec' stopped (exit code 1)\
-  <Time Stamp> - ? [128] Subsystem 'PowerShell' stopped (exit code 1)\
-  <Time Stamp> - ? [128] Subsystem 'SSIS' stopped (exit code 1)\
-  <Time Stamp> - ? [175] Job scheduler engine stopped\
+  <Time Stamp> - ? [431] Populating subsystems cache... 
+  <Time Stamp> - ? [432] There are 7 subsystems in the subsystems cache 
+  <Time Stamp> - ? [124] Subsystem 'ActiveScripting' successfully loaded (maximum concurrency: 40)
+  <Time Stamp> - ? [124] Subsystem 'ANALYSISCOMMAND' successfully loaded (maximum concurrency: 400)
+  <Time Stamp> - ? [124] Subsystem 'ANALYSISQUERY' successfully loaded (maximum concurrency: 400)
+  <Time Stamp> - ? [124] Subsystem 'CmdExec' successfully loaded (maximum concurrency: 40)
+  <Time Stamp> - ? [124] Subsystem 'PowerShell' successfully loaded (maximum concurrency: 2)
+  <Time Stamp> - ? [124] Subsystem 'SSIS' successfully loaded (maximum concurrency: 400)
+  <Time Stamp> - ? [124] Subsystem 'TSQL' successfully loaded (maximum concurrency: 80)
+  <Time Stamp> - ! [364] The Messenger service has not been started - NetSend notifications will not be sent
+  <Time Stamp> - ? [129] SQLSERVERAGENT starting under Windows NT service control
+  <Time Stamp> - + [396] An idle CPU condition has not been defined - OnIdle job schedules will have no effect
+  <Time Stamp> - ? [110] Starting SQLServerAgent Monitor using '' as the notification recipient...
+  <Time Stamp> - ? [146] Request servicer engine started
+  <Time Stamp> - ? [133] Support engine started
+  <Time Stamp> - ? [167] Populating job cache...
+  <Time Stamp> - ? [131] SQLSERVER service stopping due to a stop request from a user, process, or the OS...
+  <Time Stamp> - ? [134] Support engine stopped
+  <Time Stamp> - ? [197] Alert engine stopped
+  <Time Stamp> - ? [168] There are 4731 job(s) [0 disabled] in the job cache
+  <Time Stamp> - ? [170] Populating alert cache...
+  <Time Stamp> - ? [171] There are 0 alert(s) in the alert cache
+  <Time Stamp> - ? [149] Request servicer engine stopped
+  <Time Stamp> - ? [248] Saving NextRunDate/Times for all updated job schedules...
+  <Time Stamp> - ? [249] 0 job schedule(s) saved
+  <Time Stamp> - ? [127] Waiting for subsystems to finish...
+  <Time Stamp> - ? [128] Subsystem 'ActiveScripting' stopped (exit code 1)
+  <Time Stamp> - ? [128] Subsystem 'ANALYSISCOMMAND' stopped (exit code 1)
+  <Time Stamp> - ? [128] Subsystem 'ANALYSISQUERY' stopped (exit code 1)
+  <Time Stamp> - ? [128] Subsystem 'CmdExec' stopped (exit code 1)
+  <Time Stamp> - ? [128] Subsystem 'PowerShell' stopped (exit code 1)
+  <Time Stamp> - ? [128] Subsystem 'SSIS' stopped (exit code 1)
+  <Time Stamp> - ? [175] Job scheduler engine stopped
   ```
 
-- **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID:
+- **Scenario 3**: The database engine displays a session_id  from the "SQLAgent - Generic Refresher" service and the following job is displayed as query text running in for that session:  `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
+
+You can use the following query to check for such session and text
 
   ```sql
-  EXECUTE msdb.dbo.sp_sqlagent_refresh_job
+SELECT s.session_id, r.status, r.wait_type, r.wait_time, s.program_name, t.text
+FROM sys.dm_exec_requests AS r
+RIGHT JOIN sys.dm_exec_sessions s
+    ON r.session_id = s.session_id
+OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) t
+WHERE s.program_name = 'SQLAgent - Generic Refresher'
   ```
 
-  > [!NOTE]
-  > When this issue occurs, the SPID is in the RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+When this issue occurs, the session is in a RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause 1: Multiple job entries
 
-This issue can occur if multiple job entries exist in SQL Server.
+This issue can occur if a large number of jobs have been configured in SQL Server Agent and with many schedules. This can trigger the Generic refresher task to be continuously activated and thus busy.
 
-> [!NOTE]
-> The issue can also occur if you unintentionally set up multiple subscriptions for your reports in the Reporting Services Configuration Manager.
+For example, the issue can also occur if you unintentionally set up multiple subscriptions for your reports in the SQL Server Reporting Services Configuration Manager.
 
 ### Workaround
 
 To work around this issue, delete the jobs that you don't need.
 
-> [!NOTE]
-> If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
+If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
 
 ## Cause 2: ODBC driver missing or corrupted
 
@@ -92,7 +96,7 @@ For information about the ODBC driver requirements for different versions of SQL
 
 ### Solution
 
-1. To verify that the ODBC driver is missing, run one of the following commands in an elevated Command Prompt window or PowerShell:
+1. To check if the SQL Server ODBC driver is missing, run one of the following commands in an elevated Command Prompt window or PowerShell:
    1. Command prompt:
 
       ```cli
@@ -135,11 +139,11 @@ For information about the ODBC driver requirements for different versions of SQL
       Attribute : {Driver, APILevel, FileExtns, FileUsage...}
       ```
 
-      If the ODBC driver isn't listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
+      If the SQL Server ODBC driver isn't listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
 
-1. Verify that the ODBC driver for SQL Server is missing. <!-- Need to verify with SME what the user should look for to verify the driver is missing -->
+1. Check if the ODBC driver for SQL Server is present
    1. If the driver is missing, go to the next step.
-   1. If the driver isn't missing, see [Cause 1](#cause-1-multiple-job-entries).
+   1. If the driver is missing, go to [ODBC driver is missing](#sql-server-odbc-driver-is-missing)
 1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 1. Install the driver by using the GUI or a silent installation.
    1. To perform a silent installation, run the following command:
