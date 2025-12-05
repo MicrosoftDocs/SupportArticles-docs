@@ -16,7 +16,7 @@ Power Automate for desktop doesn't capture SAP GuiTree objects when you use SAP 
 
 ## Workaround 1: Use UI automation
 
-Use UI automation actions to interact with the controls. Capture the controls by using the UI element picker. Then, use UI automation actions in your desktop flow.
+Use [UI automation actions](/power-automate/desktop-flows/actions-reference/uiautomation) to interact with the controls. Capture the controls by using the UI element picker. Then, use UI automation actions in your desktop flow.
 
 ## Workaround 2: Use SAP GUI scripting
 
