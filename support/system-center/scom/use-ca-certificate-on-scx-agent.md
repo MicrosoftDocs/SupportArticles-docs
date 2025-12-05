@@ -2,7 +2,7 @@
 title: Convert self-signed SCX certificates to CA certificates
 description: Introduces how to convert a self-signed certificate on an SCX agent to a Certificate Authority (CA) signed certificate.
 ms.date: 04/15/2024
-ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
+ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu, v-ryanberg
 ms.topic: how-to
 ms.custom: linux-related-content
 ---
@@ -75,9 +75,11 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 1. Export the CA and Intermediate CA certificate (if applicable) to the *root* store of all the management servers/gateways in the UNIX/Linux resource pool.
 
 ## Copy and edit the certificate on the Unix/Linux server
+
 Use one of the following methods to configure the certificate on the the Unix/Linux server:
 
-### Method 1: Configure Certificate Manually
+### Method 1: Configure certificate manually
+
 1. Copy the certificate to the Unix/Linux server for which the certificate was issued.
 1. Export the private key by using the following command:
 
@@ -85,7 +87,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     openssl pkcs12 -in <FileName>.pfx -nocerts -out /etc/opt/omi/ssl/omikey.pem -nodes -passin pass:"pfxpassword"
     ```
 
-    > While exporting the private key from the certificate store, include the `-nodes` paramter (stands for no DES) which instructs OpenSSL to output the private key in an unencrypted format, otherwise a new password has to be set for the new key file. 
+While exporting the private key from the certificate store, include the `-nodes` paramter (which stands for no Desktop Environments (DEs)). This instructs OpenSSL to output the private key in an unencrypted format. Otherwise a new password has to be set for the new key file. 
 
 1. Export the certificate by using the following command:
 
@@ -100,7 +102,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     ln -s /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
     ```
    
-1. Set the correct permissions and ownership on the private key, certificate and symbolic link:
+1. Set the correct permissions and ownership on the private key, certificate, and symbolic link:
 
     ```console
     chmod 600 /etc/opt/omi/ssl/omikey.pem
@@ -115,7 +117,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     scxadmin -restart
     ```
 
-1. Make sure the *omi* processes are running after restarting the agent:
+1. Make sure the Open Management Infrastructure (OMI) processes are running after restarting the agent:
 
     ```console
     ps -ef | grep omi | grep -v grep
@@ -123,8 +125,9 @@ Use one of the following methods to configure the certificate on the the Unix/Li
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running." lightbox="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png":::
 
-### Method 2: Configure Certificate with Bash Script
-1. Save the following bash script extract_scx_cert.sh
+### Method 2: Configure certificate with bash script
+
+1. Save the following bash script: `extract_scx_cert.sh`
 
     ```console
     #!/bin/bash
@@ -163,13 +166,13 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     systemctl restart omid
     ```
 
-1. Change script permissions to be executed
+1. Change the script permissions to be run:
 
     ```console
     chmod +x /home/user/extract_scx_cert.sh
     ```
 
-1. Run he following command to execute the script with the two parameters; the path to the pfx file and the password for it
+1. Run the following command to run the script with these two parameters: the path to the PFX file and the password for it.
 
     ```console
     sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
@@ -199,7 +202,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     notAfter=Jul 25 12:12:14 2033 GMT
     ```
 
-    > The path `/etc/opt/microsoft/scx/ssl` contains a symbolic link `scx.pem -> /etc/opt/omi/ssl/omi.pem` that is used by the SCX agent to use the OMI certificate that was created earlier.
+    > The path `/etc/opt/microsoft/scx/ssl` contains a symbolic link `scx.pem -> /etc/opt/omi/ssl/omi.pem` that's used by the SCX agent in order to use the OMI certificate created earlier.
 
 1. Run a network trace on one of the management servers/gateways in the UNIX/Linux resource pool.
 1. Run the following `WinRM` command against the agent and make sure you get the instance output:
