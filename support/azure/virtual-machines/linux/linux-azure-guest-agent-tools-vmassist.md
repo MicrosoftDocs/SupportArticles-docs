@@ -4,7 +4,7 @@ description: Provides script-based tool to help diagnose and resolve Azure Guest
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
-ms.date: 10/24/2025
+ms.date: 12/4/2025
 ms.reviewer: v-jsitser, scotro, v-ryanberg
 ms.service: azure-virtual-machines
 ms.custom: sap:zzzz
@@ -59,7 +59,7 @@ If no issues are discovered during the base checks by using bash, the Python scr
 
 ## How to run the tool
 
-The VM assist scripting is run initially from the documentation. Subsequently, you can run the bash script directly: `vmassist.sh` as root or by using `sudo`.
+Follow the GitHub page for the latest instructions to [download, install and run the tool](https://github.com/Azure/azure-support-scripts/blob/master/vmassist/linux/README.md). Subsequently, you can run the bash script directly: `vmassist.sh` as root or by using `sudo`.
 
 If you open a support request, please include both of these files to aid the support agent who assists you.
 
