@@ -8,7 +8,7 @@ ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 
 # SQL Server Agent stops responding when you try to start it
 
-This article provides troubleshooting guidance for an issue in which the SQL Server Agent service stops responding or takes longer than you expect when you try to start it.
+This article provides troubleshooting guidance for an issue in which the SQL Server Agent service stops responding or takes longer than you expect when you try to start it. Many different underlying problems can cause this issue. This article covers some of the most common scenarios.
 
 _Original product version:_ &nbsp; SQL Server  \
 _Original KB number:_ &nbsp; 2795690
