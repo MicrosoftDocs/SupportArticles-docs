@@ -41,7 +41,7 @@ This issue can be caused by any of the following underlying problems:
     ```
 
 1. If the SQL Server Agent service isn't running, start it.
-1. Check the jobs and schedules in `msdb` by opening [SQL Server Management Studio (SSMS)](/ssms/install/install) and running the following query: <!-- Check with SME, what the user should do with the output of this query -->
+1. Check the jobs and schedules in `msdb` by opening [SQL Server Management Studio (SSMS)](/ssms/install/install) and running the following query:
   
     ```tsql
     USE msdb;
@@ -93,7 +93,6 @@ This issue can be caused by any of the following underlying problems:
 
    Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues. If you identify any issues resolve them by following the guidance provided in [Troubleshooting SQL Agent Issues](/to-do). <!--Fill in this link one the doc is published -->
 
-   <!-- Check with SME what the user should do if they identify any thread exhaustion, memory pressure, or CPU issues -->
 
 1. If you can't resolve blocking, hangs, or worker exhaustion, restart the SQL Server Agent by running the following commands in PowerShell:
 
