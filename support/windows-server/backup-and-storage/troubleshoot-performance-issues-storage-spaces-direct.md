@@ -31,7 +31,7 @@ Several factors can lead to performance issues for Storage Spaces. The following
 
 - **Incorrect drive configuration**: Using mismatched or incompatible drives within a storage pool can degrade performance.
 - **Incorrect storage space type**: Selecting the wrong resiliency option (such as parity instead of simple or mirror) for the workload.
-- **Insufficient system resources**: Low memory or CPU availability, which can bottleneck performance.
+- **Insufficient system resources**: Low memory or CPU availability that can cause performance bottlenecks.
 - **Fragmentation**: Excessive fragmentation within the storage pool can slow down data access.
 - **Firmware and driver issues**: Outdated or incompatible drive firmware and drivers.
 - **Background tasks**: Resource-intensive background tasks, such as disk scrubbing or repair jobs.
@@ -43,18 +43,18 @@ Follow the steps in this section to improve the performance of your storage spac
 Before you start troubleshooting performance issues, consider measuring the system's current performance to establish a baseline. You can use tools such as Performance Monitor or Resource Monitor to collect metrics. You can also use third-party tools such as DiskSpd or CrystalDiskMark to run benchmark tests and gather detailed performance metrics.
 
 > [!IMPORTANT]  
-> Before you start changing your storage space configuration, make sure that all the storage space's data and configuration settings are backed up.
+> Before you start changing your storage space configuration, make sure that the storage space's data and configuration settings are backed up.
 
 ### Step 1: Collect performance metrics, events, and configuration information
 
-To assist in troubleshooting, collect the following data:
+Collect the following data to help you identify issues:
 
 - A detailed description of the storage space configuration, including the resiliency type and drive details.
   - What type of storage space configuration is being used? For example, simple, mirror, or parity?
   - What is the size of the storage pool, and how many drives are included?
   - What is the current firmware and driver version for the drives in the storage pool?
   - Are all drives in the pool of the same type, capacity, and speed?
-  - Have there been any recent changes to the system, such as software updates, hardware replacements, or new applications installed?
+  - Are any recent changes to the system, such as software updates, hardware replacements, or new applications installed?
   - Information about recent system updates or changes.
 
 - Performance metrics, such as disk queue length and throughput. You can use tools such as Performance Monitor or Task Manager to collect this information. You can also review performance history information, as described in [Performance history for Storage Spaces Direct](/windows-server/storage/storage-spaces/performance-history).
@@ -72,7 +72,7 @@ To assist in troubleshooting, collect the following data:
 
 ### Step 2: Verify the Storage Space configuration
 
-1. Make sure that all the drives in the pool are of the same type (for example, all SSDs or all HDDs) and have similar performance characteristics.
+1. Make sure that all the drives in the pool are of the same type (for example, all solid-state drives (SSDs) or all hard disk drives (HDDs)) and have similar performance characteristics.
 1. Check that the storage space type (simple, mirror, or parity) is appropriate for the workload. For more information about storage space types in S2D, see [Deep Dive: Volumes in Storage Spaces Direct](https://techcommunity.microsoft.com/blog/filecab/deep-dive-volumes-in-storage-spaces-direct/425807).
 1. If you make any changes during this step, test the system's performance and compare it to earlier measurements.
 
@@ -91,7 +91,7 @@ To assist in troubleshooting, collect the following data:
 
 ### Step 5: Run storage maintenance tasks
 
-1. To optimize the storage pool, run the following cmdlet at a powerShell command prompt:
+1. To optimize the storage pool, run the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    Optimize-StoragePool -FriendlyName <StoragePoolName>
@@ -115,7 +115,7 @@ To assist in troubleshooting, collect the following data:
 
 ### Step 7: Rebuild or recreate the storage space
 
-If you followed the earlier steps and the S2D performance hasn't improved sufficiently, consider rebuilding the storage space. Follow these steps:
+If you followed the earlier steps and the S2D performance didn't improve sufficiently, consider rebuilding the storage space. Follow these steps:
 
 1. Make sure that all backups are current and available.
 1. Delete the existing storage space.
