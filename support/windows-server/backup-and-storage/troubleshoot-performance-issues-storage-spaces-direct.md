@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Performance Issues for Storage Spaces Direct
-description: Shows how to extend stand-alone tiered storage spaces
-ms.date: 12/05/2025
+title: Troubleshoot Performance Issues in Storage Spaces Direct
+description: Helps you identify and fix performance issues related to Storage Spaces Direct (S2D) in Windows Server environments.
+ms.date: 12/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Troubleshoot performance issues for Storage Spaces Direct
+# Troubleshoot performance issues in Storage Spaces Direct
 
 This article helps you identify and fix performance issues related to Storage Spaces Direct (S2D) in Windows Server environments.
 
