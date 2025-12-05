@@ -135,7 +135,7 @@ For information about the ODBC driver requirements for different versions of SQL
       Attribute : {Driver, APILevel, FileExtns, FileUsage...}
       ```
 
-      If the ODBC driver is not listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
+      If the ODBC driver isn't listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
 
 1. Verify that the ODBC driver for SQL Server is missing. <!-- Need to verify with SME what the user should look for to verify the driver is missing -->
    1. If the driver is missing, go to the next step.
