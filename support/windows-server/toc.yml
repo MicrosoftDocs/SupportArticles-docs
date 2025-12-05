@@ -1190,6 +1190,10 @@ items:
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds
       href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
+  - name: Site configuration
+    items:
+    - name: Troubleshoot site configuration issues   
+      href: ./high-availability/troubleshoot-site-configuration.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
