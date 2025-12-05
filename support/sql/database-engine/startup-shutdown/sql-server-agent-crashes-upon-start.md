@@ -6,7 +6,7 @@ ms.reviewer: ramakoni1, v-jayaramanp, v-shaywood
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
-# SQL Server agent stops responding when you try to start it
+# SQL Server Agent stops responding when you try to start it
 
 This article provides troubleshooting guidance for an issue in which the SQL Server Agent service stops responding or takes longer than you expect when you try to start it.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
-A SQL Server agent stops responding when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
+A SQL Server Agent stops responding when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
   > The SQL Server Agent (MSSQLSERVER) service failed to start due to the following error:  
@@ -145,10 +145,10 @@ For information about the ODBC driver requirements for different versions of SQL
    1. To perform a silent installation, run the following command:
 
       ```cli
-      msiexec /i <ODBD_Driver_MSI> /qn
+      msiexec /i <ODBC_Driver_MSI> /qn
       ```
 
-1. After the driver installation finishes, restart the SQL Server agent.
+1. After the driver installation finishes, restart the SQL Server Agent.
 1. Verify that the _SQL SERVER AGENT_ service is running.
     1. For an unnamed SQL Server instance, run the following PowerShell command:
 
