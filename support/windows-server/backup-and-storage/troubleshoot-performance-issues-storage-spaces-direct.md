@@ -98,7 +98,7 @@ Collect the following data to help you identify issues:
    ```
 
    > [!NOTE]  
-   > In this cmdlet, /<StoragePoolName> is the name of the storage pool. If you need to identify the storage pool name, run `Get-StoragePool`.
+   > In this cmdlet, \<StoragePoolName> is the name of the storage pool. If you need to identify the storage pool name, run `Get-StoragePool`.
 
 1. If the storage pool uses HDD drives, manually defragment the drives.
 
