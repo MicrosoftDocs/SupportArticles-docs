@@ -90,7 +90,7 @@ If there are many job entries because you unintentionally set up many subscripti
 
 ## Cause 2: ODBC driver missing or corrupted
 
-This issue can occur if the Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server requires the ODBC driver as a core dependency. 
+This issue can occur if the SQL Server Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server Agent uses the SQL Server ODBC driver to connect to SQL Server and if the driver is missing or not functioning, a SQL Server Agent fails to start.  
 
 For information about the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
 
@@ -103,7 +103,7 @@ For information about the ODBC driver requirements for different versions of SQL
       odbcad32.exe
       ```
 
-      This command opens the _ODBC data source Administrator_ window. In that window, open the **Drivers** tab, and check whether the ODBC driver is missing.
+1. Check if the expected SQL Server ODBC driver is there by comparing to the following table [SQL Server versions and ODBC and OLE DB drivers](/sql/connect/connect-history#sql-server-versions-and-odbc-and-ole-db-drivers). The table lists the SQL Server ODBC driver version shipped with each SQL Server engine and used by SQL Server Agent to connect to SQL Server engine.
 
    1. PowerShell:
 
@@ -144,6 +144,17 @@ For information about the ODBC driver requirements for different versions of SQL
 1. Check if the ODBC driver for SQL Server is present
    1. If the driver is missing, go to the next step.
    1. If the driver is missing, go to [ODBC driver is missing](#sql-server-odbc-driver-is-missing)
+
+#### SQL Server ODBC driver is present
+
+1. If the ODBC driver is present, open **Add or Remove Programs** in Windows and locate the **Microsoft ODBC Driver XX for SQL Server** where XX is the expected version for your SQL Server.
+1. Click on the three dots and choose **Modify**
+1. In the wizard that start choose the **Repair** option and finish the steps to repair the driver.
+1. After you complete the repair steps, you can test a connection to SQL Server by configuring a test DSN with the repaired SQL Server driver. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation)
+
+
+
+#### SQL Server ODBC driver is missing
 1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 1. Install the driver by using the GUI or a silent installation.
    1. To perform a silent installation, run the following command:
