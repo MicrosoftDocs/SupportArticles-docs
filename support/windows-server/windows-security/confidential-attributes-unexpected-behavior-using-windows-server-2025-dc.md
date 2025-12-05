@@ -1,5 +1,5 @@
 ---
-title: Operations on Confidential Attributes Produce Unexpected Results when Using Windows Server 2025 DCs
+title: Operations on Confidential Attributes Produce Unexpected Results When Using Windows Server 2025 DCs
 description: Discusses new requirements for using LDAP clients to access confidential attributes while connected to Windows Server 2025-based domain controllers (DCs).
 ms.date: 12/05/2025
 manager: dcscontentpm
@@ -13,19 +13,19 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+# Unexpected results for operations on confidential attributes on Windows Server 2025 DCs
 
-This article discusses new requirements for using LDAP clients to access confidential attributes while connected to Windows Server 2025-based domain controllers (DCs).
+This article discusses new requirements for using LDAP clients to access confidential attributes while they're connected to Windows Server 2025-based domain controllers (DCs).
 
 ## Symptoms
 
-When you search for or edit Active Directory Domain Services (AD DS) objects, you notice the following behaviors:
+When you search for or edit Active Directory Domain Services (AD DS) objects, you notice the following behavior:
 
 - When you run a Lightweight Directory Access Protocol (LDAP) search request against a Windows Server 2025-based DC, the resulting attribute list doesn't include confidential attributes. However, if you run the same LDAP query against a DC that runs on Windows Server 2022 or earlier, you obtain a full attribute list in the response.
 
-- When you run an LDAP update request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the update request fails and returns an `INSUFF_ACCESS_RIGHTS` error. If you run the same LDAP update request against a DC that runs on Windows Server 2022 or earlier, the update request succeeds.
+- When you run an LDAP update request that adds or modifies confidential attribute values against a Windows Server 2025-based DC, the update request fails and returns an `INSUFF_ACCESS_RIGHTS` error message. If you run the same LDAP update request against a DC that runs on Windows Server 2022 or earlier, the update request succeeds.
 
-### Example - Search results omit confidential attributes
+### Example 1: Search results omit confidential attributes
 
 In this example, you run an [Ldifde](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)) query try to read the legacy Local Administrator Password Solution (LAPS) password attribute. The query resembles the following example:
 
@@ -45,7 +45,7 @@ Writing out entries.
 ```
 
 > [!NOTE]  
-> This example text results from using an LDAP client on Windows 11, 23H2, or an earlier version of Windows.
+> This example text is created by using an LDAP client on Windows 11, 23H2, or an earlier version of Windows.
 
 However, when you review the exported list, you find the "cn" attribute but not the "ms-Mcs-AdmPwd" attribute.
 
@@ -57,14 +57,14 @@ The following table summarizes the behavior across different client and server v
 | --- | --- | --- |
 | Windows 11, version 24H2 | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
 | Windows Server 2025 (member server) | Windows Server 2025 | "cn"<br />"ms-Mcs-AdmPwd" |
-| Windows version earlier than Windows 11, version 24H2 | Windows Server 2025 | "cn" |
+| Windows versions earlier than Windows 11, version 24H2 | Windows Server 2025 | "cn" |
 | Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2025 | "cn" |
-| Windows version earlier than Windows 11, version 24H2 | Windows Server 2022 or an earlier version | "cn"<br />"ms-Mcs-AdmPwd" |
+| Windows versions earlier than Windows 11, version 24H2 | Windows Server 2022 or an earlier version | "cn"<br />"ms-Mcs-AdmPwd" |
 | Non-Windows operating system (for example, a UNIX-based client) | Windows Server 2022 or an earlier version | "cn"<br />"ms-Mcs-AdmPwd" |
 
-### Example - Operations on confidential attributes fail
+### Example 2: Operations on confidential attributes fail
 
-In this example, you create an LDIFDE file (named update.txt) that modifies the value of a confidential attribute. For convenience, this example refers to the same legacy LAPS password as the previous example (we don't recommend this type of change in practice). The file text resembles the following example:
+In this example, you create an LDIFDE file (named Update.txt) that modifies the value of a confidential attribute. For convenience, this example refers to the same legacy LAPS password as the previous example. (Note: We don't recommend this type of change in practice). The file text resembles the following example:
 
 ```console
 dn: CN=test-comp01,OU=New-Computers,DC=contoso,DC=com
@@ -102,7 +102,7 @@ The extended server error is:
 00002098: SecErr: DSID-03153BAC, problem 4003 (INSUFF_ACCESS_RIGHTS), data 0
 ```
 
-Similarly to the query in the previous example, the operations succeed or fail depending on the client and server versions. The following table summarizes these interactions.
+Similarly to the previous query example, the operations succeed or fail depending on the client and server versions. The following table summarizes these interactions.
 
 | Client | Target DC | Operation result |
 | --- | --- | --- |
@@ -115,9 +115,9 @@ Similarly to the query in the previous example, the operations succeed or fail d
 
 ## Cause
 
-Because of new functionality in Windows Server 2025 DCs, your administrative client must establish an encrypted connection to AD DS to search, read, add, or modify confidential object attributes. [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services) describes the new functionality:
+Because of new functionality in Windows Server 2025 DCs, your administrative client must establish an encrypted connection to AD DS in order to search, read, add, or modify confidential object attributes. [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services) describes the new functionality:
 
-- **Improved security for confidential attributes**: DCs and AD LDS instances only allow LDAP to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
+- **Improved security for confidential attributes**: DCs and AD LDS instances allow LDAP only to add, search, and modify operations that involve confidential attributes when the connection is encrypted.
 
 This behavior doesn't affect LDAP clients that run on Windows Server 2025-based member servers or Windows 11, version 24H2-based computers. On these operating system versions, LDAP clients use encrypted sessions by default.
 
@@ -127,9 +127,9 @@ To work around this issue, use one of the following methods:
 
 - Configure your LDAP client to use the [**LDAP_OPT_ENCRYPT**](/previous-versions/windows/desktop/ldap/session-options) session option (or update to a client that supports this option). If you're using ldifde on Windows, use the `/h` switch (for example, run `ldifde /h /s dc25 -i /f .\update.txt`).
 
-- Use Windows Server 2025 or Windows 11 24H2, or a newer version, as an LDAP client. These operating systems encrypt LDAP sessions by default. For more information about this feature, see [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services).
+- Use Windows Server 2025 or Windows 11 24H2, or a newer version, as an LDAP client. By default, these operating systems encrypt LDAP sessions. For more information about this feature, see [What's new in Windows Server 2025](/windows-server/get-started/whats-new-windows-server-2025#active-directory-domain-services).
 
-- If you can't use either of the previous methods, you can temporarily disable the encrypted session requirements. For more information, see [How dsHeuristics affects the encrypted session requirements and related events](#how-dsheuristics-affects-the-encrypted-session-requirements-and-related-events) later in this article.
+- If you can't use either of the previous methods, you can temporarily disable the encrypted session requirements. For more information, see [How dsHeuristics affects the encrypted session requirements and related events](#how-dsheuristics-affects-the-encrypted-session-requirements-and-related-events) in this article.
 
   > [!IMPORTANT]  
   > This method isn't secure. Use it only as a temporary step.
@@ -264,7 +264,7 @@ This setting is not secure and should only be used as a temporary step.
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-For queries, if you want to confirm that clients are using unencrypted sessions, you can correlate Event ID 3079 with field engineering Event ID 1644. To turn on verbose logging and maximize the event information that the queries generate, run the following commands at a Windows command prompt:
+For queries, if you want to verify that clients are using unencrypted sessions, you can correlate Event ID 3079 with field engineering Event ID 1644. To turn on verbose logging and maximize the event information that the queries generate, run the following commands at a Windows command prompt:
 
 ```console
 reg add "hklm\system\currentcontrolset\services\ntds\parameters" /v "Expensive Search Results Threshold" /t reg_dword /d 00000001 /f
@@ -311,7 +311,7 @@ User:
 Contoso\Admin
 ```
 
-You might also see Event ID 2041, which indicates that duplicate log entries are suppressed. The event content resembles the following example:
+You might also see Event ID 2041. This event indicates that duplicate log entries are suppressed. The event content resembles the following example:
 
 ```output
 Log Name: Directory Service
@@ -323,7 +323,7 @@ Computer: dc25.contoso.com
 Description:
 Duplicate event log entries were suppressed.
 
-See the previous event log entry for details. An entry is considered a duplicate if the event code and all of its insertion parameters are identical. The time period for this run of duplicates is from the time of the previous event to the time of this event.
+See the previous event log entry for details. An entry is considered a duplicate if the event code and all its insertion parameters are identical. The time period for this run of duplicates is from the time of the previous event to the time of this event.
 
 Event Code:
 80000c07
@@ -333,12 +333,12 @@ Number of duplicate entries:
 
 In this context, the information in these events indicates the following behavior:
 
-- The request attempted to inspect a confidential attribute on each of eight AD DS objects.
+- The request tries to inspect a confidential attribute on each of eight AD DS objects.
 - For each of the eight objects, the query results omit the confidential attribute.
 
-To identify clients that used an unencrypted session, cross-reference the user details from Event ID 3079 to the query, client IP address, and port details from Event ID 1644.
+To identify clients that used an unencrypted session, cross-reference the user details from Event ID 3079 to the query, the port details from Event ID 1644, and the client IP address.
 
-To turn off verbose logging when you're done investigating, run the following commands:
+To turn off verbose logging when you finish investigating, run the following commands:
 
 ```console
 reg delete "hklm\system\currentcontrolset\services\ntds\parameters" /v "Expensive Search Results Threshold" /f
