@@ -68,7 +68,7 @@ A SQL Server agent stops responding when you try to start it, or it takes longer
   ```
 
   > [!NOTE]
-  > The SPID is in the RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+  > When this issue occurs, the SPID is in the RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause 1: Multiple job entries
 
