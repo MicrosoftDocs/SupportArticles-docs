@@ -206,7 +206,7 @@ Set-ClusterFaultDomain -Name -Type Site -Location
 
 **Generate cluster logs**
 
-    ```powershell
+```powershell
     
     Get-ClusterLog -Node -TimeSpan
 
@@ -214,7 +214,7 @@ Set-ClusterFaultDomain -Name -Type Site -Location
 
 **Run cluster validation tests**
 
-    ```powershell
+```powershell
     
     Test-Cluster
 
@@ -235,4 +235,4 @@ Use Event Viewer to export logs. Be sure to filter for FailoverClustering, Syste
 
 ## References
 
-- [Fault domain awareness](https://learn.microsoft.com/en-us/windows-server/failover-clustering/fault-domains)
+- [Fault domain awareness](/windows-server/failover-clustering/fault-domains)
