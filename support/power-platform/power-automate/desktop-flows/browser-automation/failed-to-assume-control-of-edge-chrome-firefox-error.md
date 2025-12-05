@@ -1,13 +1,13 @@
 ---
 title: Failed to assume control of Edge or Chrome or Firefox error
-description: Provides a solution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
+description: Describes potential causes and solutions for an error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo, jefernn, v-shaywood
 ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
-This article resolves an error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. If the error occurs immediately after a browser update, see [Browser automation actions stop working after a browser update](./browser-automation-error-after-chromium-update.md) to determine whether you're experiencing those symptoms.
+This article provides guidance to resolve an error that might occur when you run a desktop flow that contains a Launch Browser action in Microsoft Power Automate. 
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5001691
@@ -54,7 +54,7 @@ Starting the browser takes longer than the Launch Browser action's default timeo
 
 ### Solution 1: Increase timeouts
 
-In the [Launch new Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action, increase the values of the **Timeout on webpage load** and **Timeout** parameters that are located in the **Advanced** section. For example, set these values to **120** seconds.
+In the [Launch new Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action, increase the values of the **Timeout for webpage to load** and **Timeout** parameters that are located in the **Advanced** section. For example, set these values to **120** seconds.
 
 If this adjustment doesn't resolve the issue, try the steps in [Solution 2](#solution-2-use-a-go-to-web-page-action) or [Solution 3](#solution-3-use-a-wait-action).
 
@@ -146,9 +146,11 @@ Use the **Launch Browser** action to start the process of the corresponding brow
 
         :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="How to replace the new browser variable with the name of the variable produced in step 1.":::
 
-## Cause 3: You start the browser by using a different system user than the one you use to run Power Automate for desktop (version 2.38 or higher)
+## Cause 3: Different user accounts for starting browser and running Power Automate for desktop
 
-This issue can occur in attended and unattended desktop flow modes.
+You start the browser by using a different system user than the one you use to run Power Automate for desktop (version 2.38 or higher). This issue can occur in attended and unattended desktop flow modes.
+
+### Solution
 
 To resolve the issue, make sure you start the browser by using the same system user account that you use to run Power Automate for desktop.
 
@@ -156,9 +158,7 @@ To resolve the issue, make sure you start the browser by using the same system u
 
 The browser doesn't start, or it starts one time but doesn't start in subsequent attempts. Running a desktop flow by using a **Launch Browser** action fails, and the browser either doesn't appear or terminates immediately after launch.
 
-Another session might be using the same browser profile. When you start a Chromium-based browser (such as Microsoft Edge or Google Chrome), the browser checks whether another instance is already using the same profile on disk. If another instance is using the same profile, the browser terminates immediately.
-
-This issue can occur if the same user signs in to multiple sessions on the same machine, and each session tries to open the browser. Only one session can successfully start the browser. The other attempts terminate on startup.
+This issue can occur if another session is using the same browser profile. When you start a Chromium-based browser (such as Microsoft Edge or Google Chrome), the browser checks whether another instance is already using the same profile on disk. If it is, the browser terminates immediately. If the same user signs in to multiple sessions on the same machine, only one session can successfully start the browser; the other attempts terminate on startup.
 
 ### Solution
 
