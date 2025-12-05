@@ -19,7 +19,7 @@ A SQL Server Agent stops responding when you try to start it, or it takes longer
 
 - **Scenario 1**: The following error message is logged in the System event log:
   > The SQL Server Agent (MSSQLSERVER) service failed to start due to the following error:  
-  > The service didn't respond to the start or control request in a timely fashion.
+  > The service did not respond to the start or control request in a timely fashion.
 - **Scenario 2**: The status of the agent appears as "Starting" in Control Panel, and the following error message is logged in the *SQLAgent.log* file:
   > An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
