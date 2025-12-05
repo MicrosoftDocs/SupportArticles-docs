@@ -64,7 +64,7 @@ This issue can be caused by any of the following underlying problems:
     GO
     ```
 
-    Analyze the query output for any jobs which are enabled but have failed, make note of when the next run for the job is scheduled.
+    Analyze the query output for any jobs which are enabled but have failed. Investigate the job history and job-step outputs for any problematic jobs to identify and fix underlying issues.
 
 1. Detect blocking on `msdb` Agent system tables by running the following query in SSMS:
 
@@ -81,9 +81,17 @@ This issue can be caused by any of the following underlying problems:
     ```
 
 1. If blocking sessions are found, investigate the blocking query using `sys.dm_exec_requests` and `sys.dm_exec_sql_text`. Then, resolve or kill the blocking session.
-1. Check the system health extended events for any worker, thread, or resource issues by running the queries provided in [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking).
+1. Check the `system_health` Extended Events session for any worker, thread, or resource issues by running the following query in SSMS:
 
-   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues. For guidance on analyzing the system health extended events, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
+    ```tsql
+    SELECT CAST(xet.target_data as xml) AS target_data
+    FROM sys.dm_xe_session_targets xet
+    JOIN sys.dm_xe_sessions xe
+    ON xe.address = xet.event_session_address
+    WHERE xe.name = 'system_health'
+    ```
+
+   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues. If you identify any issues resolve them by following the guidance provided in [Troubleshooting SQL Agent Issues](/to-do). <!--Fill in this link one the doc is published -->
 
    <!-- Check with SME what the user should do if they identify any thread exhaustion, memory pressure, or CPU issues -->
 
