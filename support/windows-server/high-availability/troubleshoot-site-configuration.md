@@ -14,15 +14,15 @@ ms.custom:
 
 ## Summary
 
-This article provides guidance on troubleshooting site configuration issues in Windows Server failover clustering. 
+This article provides guidance for troubleshooting site configuration issues in Windows Server failover clustering. 
 
-Site-aware configuration is essential for disaster recovery and high availability by enabling optimal distribution of resources and nodes across physical locations (*sites*). Misconfiguration or environmental issues can lead to problems including incorrect resource placement, dependency handling failures, connectivity issues, or impaired disaster recovery. You can use this article to identify and resolve common site configuration issues.
+Site-aware configuration is essential for disaster recovery and high availability. The process enables optimal distribution of resources and nodes across physical locations (*sites*). Misconfiguration or environmental issues can create various problems, including incorrect resource placement, dependency handling failures, connectivity issues, and impaired disaster recovery. This article helps you to identify and resolve common site configuration issues.
 
 ## Prerequisites
 
-- Windows Server failover clustering is configured and operational.
-- Admin privileges for both Active Directory and the cluster environment.
-- Familiarity with tools like Failover Cluster Manager snap-in, PowerShell, and Active Directory Sites and Services.
+- Windows Server failover clustering that's configured and operational
+- Administrator privileges for both Active Directory and the cluster environment
+- Familiarity with tools such as Failover Cluster Manager snap-in, PowerShell, and Active Directory Sites and Services
 
 ## Potential workarounds
 
@@ -48,8 +48,8 @@ Site-aware configuration is essential for disaster recovery and high availabilit
 ### Review and update Active Directory subnet mappings
 
 1. Open Active Directory Sites and Services.
-2. Confirm that subnets are correctly mapped to their respective sites.
-3. Avoid overly broad subnet masks (like `/9`) and ensure precise subnet definitions.
+2. Verify that subnets are correctly mapped to their respective sites.
+3. Avoid overly broad subnet masks (such as `/9`), and make sure that you use precise subnet definitions.
 
 ## Troubleshooting checklist
 
@@ -72,21 +72,21 @@ Site-aware configuration is essential for disaster recovery and high availabilit
 
 ### Review cluster configuration
 
-Validate site and fault domain settings in Failover Cluster Manager or PowerShell.
+Verify site and fault domain settings in Failover Cluster Manager or PowerShell.
 
 ### Check health and connectivity
 
-- Confirm network communication between sites and nodes.
-- Ensure firewall and network security rules allow cross-site traffic.
+- Verify network communication between sites and nodes.
+- Make sure that firewall and network security rules allow cross-site traffic.
 
-### Validate site-awareness in the cluster
+### Verify site-awareness in the cluster
 
 - Check resource placement policies and dependency assignments.
 - Review the placement of critical resources across sites.
 
 ### Update and review documentation
 
-- Ensure all steps align with Microsoft recommendations for site-aware clusters.
+- Make sure that all steps align with Microsoft recommendations for site-aware clusters.
 
 ## Cause: Incorrect automatic site assignment
 
@@ -100,12 +100,12 @@ Validate site and fault domain settings in Failover Cluster Manager or PowerShel
 
     ```
 
-2. Review and correct Active Directory subnet definitions. Be sure to:
+2. Review and correct Active Directory subnet definitions. Make sure that you:
 
     - Remove overly broad subnets.
     - Define precise subnet masks, avoiding configurations that group multiple `/24` subnets under a single broad definition.
 
-1. Confirm the changes:
+1. Verify the changes:
 
     ```powershell
     
@@ -113,13 +113,13 @@ Validate site and fault domain settings in Failover Cluster Manager or PowerShel
 
     ```
 
-4. Restart the cluster service to apply changes as needed.
+4. To apply the changes, restart the cluster service as necessary.
 
 ## Cause: Inconsistent failover or resource placement
 
 ### Solution: Review fault domains and placement policies
 
-1. Run the following command and verify fault domain configurations:
+1. Run the following command, and verify fault domain configurations:
 
     ```powershell
     
@@ -127,9 +127,9 @@ Validate site and fault domain settings in Failover Cluster Manager or PowerShel
 
     ```
 
-    - Ensure the nodes are correctly grouped under the appropriate sites.
+    - Make sure that the nodes are correctly grouped under the appropriate sites.
 
-2. Adjust the resource placement policies using PowerShell or Failover Cluster Manager with the following command:
+2. Adjust the resource placement policies using PowerShell or Failover Cluster Manager. Run the following command:
 
     ```powershell
     
@@ -159,16 +159,16 @@ Validate site and fault domain settings in Failover Cluster Manager or PowerShel
 
     ```
 
-## Cause: Cluster validation fails due to site assignment issues
+## Cause: Cluster validation fails because of site assignment issues
 
 ### Solution: Update topology and rerun validation tests
 
-1. Update Active Directory and cluster topology. Be sure to:    
+1. Update Active Directory and cluster topology. Make sure that you:    
     
-    - Ensure each subnet is accurately mapped to a site.
-    - Force Active Directory replication to ensure updates propagate across the environment.
+    - Verify that each subnet is accurately mapped to a site.
+    - Force Active Directory replication to make sure that updates propagate across the environment.
 
-1. Run the following command to perform cluster validation tests:
+1. To perform cluster validation tests, run the following command:
 
     ```powershell
     
@@ -176,7 +176,7 @@ Validate site and fault domain settings in Failover Cluster Manager or PowerShel
 
     ```
 
-3. Resolve errors reported in the validation output and the rerun the tests to confirm all issues have been resolved.
+3. Resolve errors that are reported in the validation output, and rerun the tests to verify all issues are resolved.
 
 ### Commands for advanced troubleshooting and data collection
 
@@ -222,7 +222,7 @@ Set-ClusterFaultDomain -Name -Type Site -Location
 
 ### Collect event logs
 
-Use Event Viewer to export logs. Be sure to filter for FailoverClustering, System, and Application event logs.
+Use Event Viewer to export logs. Be sure to filter for FailoverClustering, system, and application event logs.
 
 ### Common issues quick reference table
 
