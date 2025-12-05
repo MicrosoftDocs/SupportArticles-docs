@@ -7,7 +7,7 @@ ms.date: 11/19/2025
 ---
 # Can't capture elements from SAP Save As dialog
 
-This article helps you resolve an issue in which the element picker can't capture elements from the _Save As_ dialog box in SAP automation with Power Automate for desktop.
+This article helps you resolve an issue in which the element picker can't capture elements from the _Save As_ dialog box in SAP automation with Microsoft Power Automate for desktop.
 
 ## Symptoms
 
