@@ -60,7 +60,7 @@ Site-aware configuration is essential for disaster recovery and high availabilit
 
 ### Check Active Directory subnets and sites
 
-- Run the following command on each cluster node to verify the Active Directory site assignment:
+- To verify the Active Directory site assignment, run the following command on each cluster node:
 
     ```powershell
     
@@ -137,7 +137,7 @@ Verify site and fault domain settings in Failover Cluster Manager or PowerShell.
 
     ``` 
 
-3. Simulate failover to validate site-awareness:
+3. To validate site-awareness, simulate failover:
 
     ```powershell
 
@@ -176,7 +176,7 @@ Verify site and fault domain settings in Failover Cluster Manager or PowerShell.
 
     ```
 
-3. Resolve errors that are reported in the validation output, and rerun the tests to verify all issues are resolved.
+3. Resolve errors that are reported in the validation output, and then rerun the tests to verify that all issues are resolved.
 
 ### Commands for advanced troubleshooting and data collection
 
@@ -222,14 +222,14 @@ Set-ClusterFaultDomain -Name -Type Site -Location
 
 ### Collect event logs
 
-Use Event Viewer to export logs. Be sure to filter for FailoverClustering, system, and application event logs.
+Use Event Viewer to export logs. Be sure to filter for FailoverClustering, system event logs, and Application event logs.
 
 ### Common issues quick reference table
 
 | Symptom | Likely cause | Resolution steps | Command or tool |
 | --- | --- | --- | --- |
 | Nodes assigned to the wrong site | Broad Active Directory subnet masks | Manually assign sites and review Active Directory subnet mapping | `Set-ClusterFaultDomain`, `nltest` |
-| Resources don't failover to correct site | Misconfigured placement policies | Review fault domains and simulate failover | `Get-ClusterFaultDomain`, `Move-ClusterGroup` |
+| Resources don't fail over to correct site | Misconfigured placement policies | Review fault domains and simulate failover | `Get-ClusterFaultDomain`, `Move-ClusterGroup` |
 | Resource dependencies not honored by site | Dependency misconfiguration | Configure dependencies and verify resource locality | Failover Cluster Manager, `Set-ClusterResourceDependency` |
 | Cluster validation errors on site or subnets | Incorrect Active Directory or subnet configuration | Update Active Directory topology and rerun validation tests | `Test-Cluster`, Active Directory Sites and Services |
 
