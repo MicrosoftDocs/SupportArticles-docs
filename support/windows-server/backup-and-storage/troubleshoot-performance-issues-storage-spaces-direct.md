@@ -10,7 +10,7 @@ ms.custom:
 - sap:backup, recovery, disk, and storage\Storage Spaces Direct (S2D)
 - pcy:WinComm Storage High Avail
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot performance issues in Storage Spaces Direct
 
