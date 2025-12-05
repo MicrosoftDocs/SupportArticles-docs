@@ -47,8 +47,6 @@ items:
     items:
       - name: Browser automation
         items:
-          - name: Browser automation actions stop working after a browser update
-            href: desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md
           - name: Can't automate webpage with cross-domain iframes
             href: desktop-flows/browser-automation/cannot-automate-webpage-with-iframes.md
           - name: Can't interact with web elements on runtime
