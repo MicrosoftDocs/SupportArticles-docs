@@ -79,13 +79,9 @@ This issue can be caused by any of the following underlying problems:
     ```
 
 1. If blocking sessions are found, investigate the blocking query using `sys.dm_exec_requests` and `sys.dm_exec_sql_text`. Then, resolve or kill the blocking session.
-1. Check the system health extended events for any worker, thread, or resource issues by running the following query in SSMS:
+1. Check the system health extended events for any worker, thread, or resource issues by running the queries provided in [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking).
 
-    ```tsql
-    ?????
-    ```
-
-   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues.
+   Inspect the query results for `QUERY_PROCESSING`, `RESOURCE`, and `SYSTEM` components. Look for thread exhaustion, memory pressure, or CPU issues. For guidance on analyzing the system health extended events, see [Use the system_health session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
    <!-- Check with SME what the user should do if they identify any thread exhaustion, memory pressure, or CPU issues -->
 
