@@ -1,26 +1,26 @@
 ---
-title: SQL Server agent crashes when you try to start it
-description: Learn how to resolve SQL Server Agent crashes when starting, including troubleshooting multiple job entries and missing ODBC drivers.
+title: SQL Server Agent Stops Responding When You Try to Start It
+description: Resolves an issue in which SQL Server Agent doesn't start, and provides troubleshooting guidance for multiple job entries and missing ODBC drivers.
 ms.date: 12/03/2025
 ms.reviewer: ramakoni1, v-jayaramanp, v-shaywood
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
-# SQL Server agent crashes when you try to start it
+# SQL Server agent stops responding when you try to start it
 
-This article provides troubleshooting guidance for an issue where the SQL Server agent service crashes or takes longer than expected when you try to start it.
+This article provides troubleshooting guidance for an issue in which the SQL Server Agent service stops responding or takes longer than you expect when you try to start it.
 
 _Original product version:_ &nbsp; SQL Server  \
 _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
-A SQL Server agent crashes when you try to start it or takes longer than expected to start. Additionally, you might experience one or more of the following scenarios:
+A SQL Server agent stops responding when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
   > The SQL Server Agent (MSSQLSERVER) service failed to start due to the following error:  
   > The service didn't respond to the start or control request in a timely fashion.
-- **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the *SQLAgent.log* file:
+- **Scenario 2**: The status of the agent appears as "Starting" in Control Panel, and the following error message is logged in the *SQLAgent.log* file:
   > An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
   Additionally, the following entries might be logged in the *SQLAgent.log* file:
@@ -42,7 +42,7 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
   <Time Stamp> - ? [146] Request servicer engine started\
   <Time Stamp> - ? [133] Support engine started\
   <Time Stamp> - ? [167] Populating job cache...\
-  <Time Stamp> - ? [131] SQLSERVERAGENT service stopping due to a stop request from a user, process, or the OS...\
+  <Time Stamp> - ? [131] SQLSERVER service stopping due to a stop request from a user, process, or the OS...\
   <Time Stamp> - ? [134] Support engine stopped\
   <Time Stamp> - ? [197] Alert engine stopped\
   <Time Stamp> - ? [168] There are 4731 job(s) [0 disabled] in the job cache\
@@ -68,11 +68,11 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
   ```
 
   > [!NOTE]
-  > The SPID is in the RUNNABLE state and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type, or the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+  > The SPID is in the RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause 1: Multiple job entries
 
-This issue can occur when there are multiple job entries in SQL Server.
+This issue can occur if multiple job entries exist in SQL Server.
 
 > [!NOTE]
 > The issue can also occur if you unintentionally set up multiple subscriptions for your reports in the Reporting Services Configuration Manager.
@@ -88,18 +88,18 @@ To work around this issue, delete the jobs that you don't need.
 
 This issue can occur if the Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server requires the ODBC driver as a core dependency. 
 
-For info on the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
+For information about the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
 
 ### Solution
 
-1. To verify that the ODBC driver is missing, run one of the following commands from an elevated command prompt or PowerShell:
+1. To verify that the ODBC driver is missing, run one of the following commands in an elevated Command Prompt window or PowerShell:
    1. Command prompt:
 
       ```cli
       odbcad32.exe
       ```
 
-      This command will open the _ODBC data source Administrator_ window, then go to the **Drivers** tab and check if the ODBC driver is missing.
+      This command opens the _ODBC data source Administrator_ window. In that window, open the **Drivers** tab, and check whether the ODBC driver is missing.
 
    1. PowerShell:
 
@@ -107,7 +107,7 @@ For info on the ODBC driver requirements for different versions of SQL Server, s
       Get-OdbcDriver
       ```
 
-      This command will return an output similar to the following:
+      This command returns an output that resembles the following example:
 
       ```output
       Name : SQL Server
@@ -137,26 +137,26 @@ For info on the ODBC driver requirements for different versions of SQL Server, s
 
       If the ODBC driver is not listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
 
-1. Confirm that the ODBC driver for SQL Server is missing. <!-- Need to confirm with SME what the user should look for to confirm the driver is missing -->
-   1. If the driver is missing, continue to the next step.
+1. Verify that the ODBC driver for SQL Server is missing. <!-- Need to verify with SME what the user should look for to verify the driver is missing -->
+   1. If the driver is missing, go to the next step.
    1. If the driver isn't missing, see [Cause 1](#cause-1-multiple-job-entries).
-1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server)
-1. Install the driver by using the GUI or a silent install.
-   1. You can perform a silent install by using the following command:
+1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
+1. Install the driver by using the GUI or a silent installation.
+   1. To perform a silent installation, run the following command:
 
       ```cli
       msiexec /i <ODBD_Driver_MSI> /qn
       ```
 
-1. After the driver installation completes, restart the SQL Server Agent.
-1. Confirm the _SQL SERVER AGENT_ service is running.
-    1. For an unnamed SQL Server instance run the following PowerShell command:
+1. After the driver installation finishes, restart the SQL Server agent.
+1. Verify that the _SQL SERVER AGENT_ service is running.
+    1. For an unnamed SQL Server instance, run the following PowerShell command:
 
        ```powershell
        Get-Service -Name SQLSERVERAGENT
        ```
 
-    1. For a named SQL Server instance run the following PowerShell command:
+    1. For a named SQL Server instance, run the following PowerShell command:
 
        ```powershell
        Get-Service -Name SQLAgent$<InstanceName>
@@ -165,5 +165,5 @@ For info on the ODBC driver requirements for different versions of SQL Server, s
 ## More information
 
 - For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs).
-- For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN).
+- For more information about how to manage your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN).
 - For more information about various wait types, see [SQL Server wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).
