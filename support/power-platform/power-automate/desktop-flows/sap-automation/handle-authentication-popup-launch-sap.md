@@ -7,7 +7,7 @@ ms.date: 11/19/2025
 ---
 # Authentication popup appears when starting SAP
 
-This article helps you resolve an issue in which an authentication popup appears when you use the **Launch SAP** action in Power Automate for desktop.
+This article helps you resolve an issue in which an authentication popup appears when you use the **Launch SAP** action in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
