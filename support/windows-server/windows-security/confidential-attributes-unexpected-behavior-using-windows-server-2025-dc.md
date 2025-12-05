@@ -189,7 +189,7 @@ The directory blocked one or more LDAP add requests including changes to one or 
 
 ### How dsHeuristics affects the encrypted session requirements and related events
 
-It's possible (for example, in testing scenarios) to use the `dsHeuristics` attribute to modify the requirements for encrypted sessions. For example, if you configure `dsHeuristics` to disable the encrypted session requirement for searching confidential attributes, searches that use non-encrypted sessions successfully return both non-confidential and confidential results. Event ID 3079 doesn't appear in the event log.
+It's possible (for example, in testing scenarios) to use the `dsHeuristics` attribute to modify the requirements for encrypted sessions. For example, if you configure `dsHeuristics` to disable the encrypted session requirement for searching confidential attributes, searches that use nonencrypted sessions successfully return both nonconfidential and confidential results. Event ID 3079 doesn't appear in the event log.
 
 The `dsHeuristics` value is a string in which individual characters or sets of characters reflect parameter values. The 31st character represents the value of `DisableConfidentialAttributeEncryptionRequirements`. This value ranges from **0** (all the encrypted session requirements are enforced) to **7** (all the encrypted session requirements are disabled). For example, **0000000001000000000200000000037** is a `dsHeuristics` value that disables all the encrypted session requirements. `DisableConfidentialAttributeEncryptionRequirements` is a three-bit value. The following table describes how the values correlate to the encrypted session requirements.
 
