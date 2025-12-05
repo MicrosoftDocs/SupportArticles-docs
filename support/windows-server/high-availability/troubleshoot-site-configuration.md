@@ -5,8 +5,7 @@ ms.date: 12/05/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.author: jeffhugh
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, v-ryanberg, v-gsitser
 ms.custom:
 - sap:site configuration and high availability\site configuration issues
 - pcy:WinComm Storage High Avail
