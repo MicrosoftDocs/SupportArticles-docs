@@ -166,8 +166,9 @@ An inventory closing or recalculation fails with the following error message:
 
 Verify that the main account is set up for the specified [transaction type](/dynamics365/business-central/dev-itpro/developer/properties/devenv-transactiontype-property#remarks):
 
-1. Go to **Inventory Management** > **Setup** > **Posting** > **Posting**
-1. ???? <!-- Need to confirm with the SME how to enable the transaction type -->
+1. Go to **Inventory Management** > **Setup** > **Posting** > **Posting**.
+1. Confirm that the main account is set up for the transaction type mentioned in the error message.
+    1. For more info on configuring transaction types for an account, see [Inventory posting profiles](/dynamics365/finance/general-ledger/inventory-posting-profiles).
 
 Also, check the financial dimensions in the [Accounting Structure Setup](/dynamics365/finance/general-ledger/configure-account-structures) for the corresponding main accounts:
 
@@ -188,10 +189,26 @@ An inventory closing or recalculation fails with the following error message:
 ### Solution
 
 1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
-1. Select the required ledger period, then check the access level for specific modules and the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) experiencing issues.
+1. Select the required ledger period, then check the access level for the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) experiencing issues and the following modules:
+    1. Ledger
+    1. Sales tax
+    1. Bank
+    1. Customer
+    1. Vendor
+    1. Sales order
+    1. Purchasing
+    1. Inventory
+    1. Production
+    1. Project
+    1. Fixed assets
+    1. Payroll
+    1. Expense
+    1. Retail Headquarters
+    1. Fixed assets (Russia)
+    1. Landed cost
 
    > [!NOTE]
-   > The default access level for all the modules is **\<All\>**
+   > The default access level for all the modules is **&lt;All&gt;**
 
 1. After updating the access levels, resume the closing or recalculation operation.
 
