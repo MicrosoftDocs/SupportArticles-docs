@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 02/11/2025
+ms.date: 12/05/2025
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -173,12 +173,67 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
+## Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types
+
+When mounting an Azure file share using Entra Kerberos authentication, the mount operation fails. Log collection might show that the Kerberos service ticket can't be decrypted.
+You might also find that the following registry key is configured: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes`
+
+### Cause
+
+If the `SupportedEncryptionTypes` registry key is configured with a value that does **not include AES**, Windows will only allow the encryption types specified in the bitmask. For example, the value `0x7` indicates that the client supports only the following Kerberos encryption types:
+
+- DES_CBC_CRC  
+- DES_CBC_MD5  
+- RC4_HMAC  
+
+Because Entra Kerberos always encrypts service tickets with **AES-256 (AES256-CTS-HMAC-SHA1-96)**, mounts will fail if AES isn't included in the supported encryption types for the account or machine.
+
+> [!NOTE]  
+> AES encryption is enabled by default on modern Windows operating systems. If the `SupportedEncryptionTypes` registry key isn't configured, Windows will automatically negotiate AES when available.
+
+### Solution
+
+To successfully mount Azure file shares using Entra Kerberos, AES-256 must be included in the supported encryption types.
+
+Use one of the following options:
+
+#### Option 1: Remove the registry key (recommended if not intentionally configured)
+
+If the encryption types weren't deliberately restricted:
+
+1. Delete the registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes`
+1. Reboot the computer.
+
+After rebooting, retry mounting the file share.
+
+> [!TIP]  
+> Removing the key restores Windows default behavior, allowing Active Directory to automatically negotiate AES for Kerberos tickets.
+
+#### Option 2: Explicitly enable AES-256 using Group Policy
+
+If your organization requires explicitly configured Kerberos encryption types:
+
+1. Press **Win + R**, type `gpedit.msc`, and select **Enter**.
+1. Navigate to:  **Local Computer Policy > Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options**
+1. Open **Network Security: Configure encryption types allowed for Kerberos**.
+1. Enable the following encryption types:
+   - **AES256_HMAC_SHA1**  
+   - **AES128_HMAC_SHA1** (optional)  
+1. Apply the change and reboot the computer.
+
+After rebooting, retry mounting the file share.
+
+> [!IMPORTANT]  
+> Entra Kerberos requires **AES256_HMAC_SHA1** to successfully mount Azure file shares. RC4 or DES-only configurations will fail.
+> To understand more about registry keys, see [Decrypting the Selection of Supported Kerberos Encryption Types](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/decrypting-the-selection-of-supported-kerberos-encryption-types/1628797).
+
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
 ### Symptom
 
-You might experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
-- After you click on **Edit permission** under the Security tab, the Permission wizard doesn't load. 
+You might experience one of the symptoms described below when trying to configure Windows ACLs with Windows File Explorer on a mounted file share:
+
+- After you click on **Edit permission** under the **Security** tab, the Permission wizard doesn't load. 
 - When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
 
