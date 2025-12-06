@@ -10,12 +10,12 @@ ms.custom:
   - sap:Microsoft Purview Compliance
   - Microsoft Purview
   - CSSTroubleshoot
-  - CI 2772, 1283, 5607, 8191
+  - CI 2772, 1283, 5607, 8191, 8567
 ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 11/19/2025
+ms.date: 12/05/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -55,7 +55,7 @@ The following table lists the available diagnostics on **Solutions** pages. You 
 
 **Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
-When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfi) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
+When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
 
 | **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
 |-|-|-|-|
