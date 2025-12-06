@@ -129,8 +129,5 @@ The following table lists the available diagnostics on the **Help** pane. You ca
 | [DLP policy and rule configuration for policy tips](https://aka.ms/PillarDLPPolicyTipsDiag)<br> | Troubleshoots common policy tip configuration issues that affect a DLP rule and its policy for Outlook desktop clients and Outlook on the web. | Global admin | [Resolve issues that affect DLP policy tips](/microsoft-365/troubleshoot/data-loss-prevention/data-loss-prevention-policy-tips) |
 | [Sensitivity label configuration](https://aka.ms/PillarMipLabelDiag)<br> | Troubleshoots common issues that affect a sensitivity label. Checks whether a sensitivity label is correctly configured for use in various workloads. | Global admin | [Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) |
 | [Microsoft Purview Message Encryption configuration](https://aka.ms/PillarOMEDiag)<br> | Validates the tenant configuration for Microsoft Purview Message Encryption. Identifies any configuration issues. | Any Microsoft 365 admin role | [Resolve Microsoft Purview Message Encryption issues](/microsoft-365/troubleshoot/office-message-encryption/fix-message-encryption-issue-microsoft-purview) |
-Note: "Microsoft Support agents do not provide assistance for diagnostics in the Help pane. If you experience any issues with those diagnostics, please use the Feedback link in the diagnostic to submit your feedback."
 
-Here’s a more concise and direct version:
-
-Note: Assistance for diagnostics in the **Help** pane is not available from Microsoft Support agents. If you encounter any issues, please use the Feedback link within the diagnostic to report the issue.
+**Note**: Microsoft Support agents can't provide assistance for diagnostics that appear in the **Help** pane. If you encounter any issues, you can use the Feedback link within the diagnostic to report the issue.
