@@ -113,7 +113,7 @@ For information about the ODBC driver requirements for different versions of SQL
 
 
 1. Check if the ODBC driver for SQL Server is present
-   1. If the driver is missing, go to the next step  [ODBC driver is present](#sql-server-odbc-driver-is-present)
+   1. If the expected ODBC driver version is present, then you can attempt to repair it's installation. For steps on how to do that, go to [ODBC Driver is present](#sql-server-odbc-driver-is-present)
    1. If the driver is missing, go to [ODBC driver is missing](#sql-server-odbc-driver-is-missing)
 
 #### SQL Server ODBC driver is present
