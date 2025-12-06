@@ -10,12 +10,12 @@ ms.custom:
   - sap:Microsoft Purview Compliance
   - Microsoft Purview
   - CSSTroubleshoot
-  - CI 2772, 1283, 5607, 8191
+  - CI 2772, 1283, 5607, 8191, 8567
 ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 11/19/2025
+ms.date: 12/05/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -47,7 +47,7 @@ You can find these diagnostics on the following portal pages:
 - **Solutions** \> **Data Loss Prevention** \> **Diagnostics**
 
 > [!NOTE]
-> Diagnostics on **Solutions** pages are being rolled out gradually and might not yet be available in your organization.
+> Diagnostics on **Solutions** pages are being rolled out gradually and might not yet be available in your organization. 
 
 ### Available diagnostics
 
@@ -55,7 +55,7 @@ The following table lists the available diagnostics on **Solutions** pages. You 
 
 **Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
-When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfi) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
+When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
 
 | **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
 |-|-|-|-|
@@ -129,3 +129,5 @@ The following table lists the available diagnostics on the **Help** pane. You ca
 | [DLP policy and rule configuration for policy tips](https://aka.ms/PillarDLPPolicyTipsDiag)<br> | Troubleshoots common policy tip configuration issues that affect a DLP rule and its policy for Outlook desktop clients and Outlook on the web. | Global admin | [Resolve issues that affect DLP policy tips](/microsoft-365/troubleshoot/data-loss-prevention/data-loss-prevention-policy-tips) |
 | [Sensitivity label configuration](https://aka.ms/PillarMipLabelDiag)<br> | Troubleshoots common issues that affect a sensitivity label. Checks whether a sensitivity label is correctly configured for use in various workloads. | Global admin | [Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) |
 | [Microsoft Purview Message Encryption configuration](https://aka.ms/PillarOMEDiag)<br> | Validates the tenant configuration for Microsoft Purview Message Encryption. Identifies any configuration issues. | Any Microsoft 365 admin role | [Resolve Microsoft Purview Message Encryption issues](/microsoft-365/troubleshoot/office-message-encryption/fix-message-encryption-issue-microsoft-purview) |
+
+**Note**: Microsoft Support agents can't provide assistance for diagnostics that appear in the **Help** pane. If you encounter any issues, you can use the Feedback link within the diagnostic to report the issue.
