@@ -1341,6 +1341,8 @@ items:
     items:
     - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ../windows-server/windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md?context=/troubleshoot/windows-client/context/context
   - name: Zero Trust DNS
     items:
     - name: 'Troubleshooting Guidance: Zero Trust DNS'
