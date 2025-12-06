@@ -2776,6 +2776,8 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
+    - name: Windows updates don't install on VM cluster hosts
+      href: ./virtualization/windows-updates-dont-install-on-vm-cluster-hosts.md
   - name: Hyper-V Replica
     items:
     - name: Feature and performance optimization of HVR
@@ -3112,6 +3114,8 @@ items:
       href: ./windows-security/mark-attribute-as-confidential.md
     - name: Maximum number of access control entries
       href: ./windows-security/error-add-user-to-security-permissions.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ./windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md
     - name: Security auditing settings aren't applied when you deploy domain-based policy
       href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
     - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
