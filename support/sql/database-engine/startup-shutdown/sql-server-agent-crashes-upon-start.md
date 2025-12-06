@@ -63,18 +63,18 @@ A SQL Server Agent fails when you try to start it, or it takes longer than you e
 
 - **Scenario 3**: The database engine displays a session_id  from the "SQLAgent - Generic Refresher" service and the following job is displayed as query text running in for that session:  `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
 
-You can use the following query to check for such session and text
+   You can use the following query to check for such session and text
 
-  ```sql
-SELECT s.session_id, r.status, r.wait_type, r.wait_time, s.program_name, t.text
-FROM sys.dm_exec_requests AS r
-RIGHT JOIN sys.dm_exec_sessions s
-    ON r.session_id = s.session_id
-OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) t
-WHERE s.program_name = 'SQLAgent - Generic Refresher'
-  ```
+   ```sql
+   SELECT s.session_id, r.status, r.wait_type, r.wait_time, s.program_name, t.text
+   FROM sys.dm_exec_requests AS r
+   RIGHT JOIN sys.dm_exec_sessions s
+       ON r.session_id = s.session_id
+   OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) t
+   WHERE s.program_name = 'SQLAgent - Generic Refresher'
+   ```
 
-When this issue occurs, the session is in a RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+   When this issue occurs, the session is in a RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause 1: Multiple job entries
 
