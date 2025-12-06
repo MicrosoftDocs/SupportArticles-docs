@@ -97,52 +97,24 @@ For information about the ODBC driver requirements for different versions of SQL
 ### Solution
 
 1. To check if the SQL Server ODBC driver is missing, run one of the following commands in an elevated Command Prompt window or PowerShell:
-   1. Command prompt:
+   1. Command prompt to launch ODBC Data Source Administrator:
 
       ```cli
       odbcad32.exe
       ```
 
-1. Check if the expected SQL Server ODBC driver is there by comparing to the following table [SQL Server versions and ODBC and OLE DB drivers](/sql/connect/connect-history#sql-server-versions-and-odbc-and-ole-db-drivers). The table lists the SQL Server ODBC driver version shipped with each SQL Server engine and used by SQL Server Agent to connect to SQL Server engine.
-
-   1. PowerShell:
+   1. PowerShell cmd-let:
 
       ```powershell
       Get-OdbcDriver
       ```
 
-      This command returns an output that resembles the following example:
-
-      ```output
-      Name : SQL Server
-      Platform : 64-bit
-      Attribute : {APILevel, FileUsage, Driver, ConnectFunctions...}
-      
-      Name : SQL Server Native Client 11.0
-      Platform : 64-bit
-      Attribute : {Driver, APILevel, FileUsage, Setup...}
-      
-      Name : Microsoft Access Driver (*.mdb, *.accdb)
-      Platform : 64-bit
-      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
-      
-      Name : Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)
-      Platform : 64-bit
-      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
-      
-      Name : Microsoft Access Text Driver (*.txt, *.csv)
-      Platform : 64-bit
-      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
-      
-      Name : Microsoft Access dBASE Driver (*.dbf, *.ndx, *.mdx)
-      Platform : 64-bit
-      Attribute : {Driver, APILevel, FileExtns, FileUsage...}
-      ```
+1. Check if the expected SQL Server ODBC driver is there by comparing to the following table [SQL Server versions and ODBC and OLE DB drivers](/sql/connect/connect-history#sql-server-versions-and-odbc-and-ole-db-drivers). The table lists the SQL Server ODBC driver version shipped with each SQL Server engine and used by SQL Server Agent to connect to SQL Server engine.
 
       If the SQL Server ODBC driver isn't listed in the output of the `Get-OdbcDriver` command, then the driver is missing.
 
 1. Check if the ODBC driver for SQL Server is present
-   1. If the driver is missing, go to the next step.
+   1. If the driver is missing, go to the next step  [ODBC driver is present](#sql-server-odbc-driver-is-present)
    1. If the driver is missing, go to [ODBC driver is missing](#sql-server-odbc-driver-is-missing)
 
 #### SQL Server ODBC driver is present
