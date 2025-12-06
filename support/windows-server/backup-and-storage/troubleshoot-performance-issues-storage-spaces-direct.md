@@ -47,7 +47,7 @@ Before you start to troubleshoot performance issues, consider measuring the syst
 
 ### Step 1: Collect performance metrics, events, and configuration information
 
-Collect the following data to help identify issues:
+To help identify issues, collect the following data:
 
 - A detailed description of the storage space configuration, including the resiliency type and drive details. Use the following questions as guidelines:
   - What type of storage space configuration is being used? For example, simple, mirror, or parity?
@@ -71,7 +71,7 @@ Collect the following data to help identify issues:
 
 ### Step 2: Verify the Storage Space configuration
 
-1. Make sure that all the drives in the pool are of the same type (for example, all solid-state drives (SSDs) or all hard disk drives (HDDs)) and that the drives have similar performance characteristics.
+1. Make sure that all the drives in the pool are of the same type (for example, all solid-state drives (SSDs) or all hard disk drives (HDDs)). Also make sure that the drives have similar performance characteristics.
 1. Verify that the storage space type (simple, mirror, or parity) is appropriate for the workload. For more information about storage space types in S2D, see [Deep Dive: Volumes in Storage Spaces Direct](https://techcommunity.microsoft.com/blog/filecab/deep-dive-volumes-in-storage-spaces-direct/425807).
 1. If you make any changes during this step, test the system's performance, and compare it to earlier measurements.
 
