@@ -33,8 +33,8 @@ When users who have Full Control permissions to the site select **Access request
 
 Also, when users browse to the **Access Requests** list and select **Approve** or **Decline** to process a pending request, they receive one of the following status messages:
 
-> Sending approval
-> Request approval failed
+- Sending approval
+- Request approval failed
 
 ## Cause
 
@@ -50,22 +50,22 @@ Use one of the following solutions.
 
 To provide a user with site collection administrator permissions, see [Manage site collection administrators](/sharepoint/manage-site-collection-administrators).
 
-### Solution 2: Add the user to the Owners group for the site 
+### Solution 2: Add the user to the Owners group for the site
 
 Use the following steps:
 
 **Note**: You must have the Manage Permissions permission level on the site to edit the Owners group for the site.
 
-Find the Owners group for teh affected site collection. If the Owners group for the site collection does not exist, click **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then click **Share**
+1. Find the Owners group for the affected site collection.
+
+   If the Owners group for the site collection does not exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
 
 1. On the affected site, select **Settings** > **Site settings**.
 
 1. Select **Site permissions**.
 
-1. Check for the Owners group in the list. If the Owners group for the site collection doesn't exist, select **Grant Permissions**, enter **Owners** for the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
-
 1. Select the **Owners** group for the site, and then select **New**.
-   
+
 1. In the **Share** dialog box, enter the user account to add to the group, and then select **Share**.
 
 Test to verify that the user can now access the Access REquests list, and approve or decline requests.
@@ -88,7 +88,7 @@ Use the following steps:
 
     :::image type="content" source="media/request-approval-failed/pagelistid.png" alt-text="Screenshot of the search box when you type PageListId.":::
 
-1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be enclosed between braces. 
+1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be enclosed between braces.
     :::image type="content" source="media/request-approval-failed/guid.png" alt-text="Screenshot of an example of GUID that follows the pageListId.":::
 
 1. In the address bar of the browser, enter '<your_tenant_URL>/_layouts/15/ListEdit.aspx?List=<{GUID}>'.
@@ -98,4 +98,3 @@ Use the following steps:
     In this example, 'https://contoso.sharepoint.com' is the tenant URL and the GUID is the value from step 5.
 
 1. On the **Settings** page, select **Permissions for this list**, and select the **Owners** group.
-
