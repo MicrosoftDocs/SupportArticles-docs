@@ -13922,6 +13922,10 @@
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/sap-automation/sap-click-element-dpi"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
     }
   ]
 }
