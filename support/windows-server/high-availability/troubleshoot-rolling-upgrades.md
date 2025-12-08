@@ -70,7 +70,7 @@ You can't pause, drain, or remove a node from the cluster. You receive error mes
 
 **Cause** 
 
-The node hosts core cluster resources, dependencies are misconfigured, or the cluster is unstable.
+The node hosts core cluster resources, dependencies are misconfigured or the cluster is unstable.
 
 **Solution**    
 
