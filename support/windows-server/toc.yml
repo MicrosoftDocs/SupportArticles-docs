@@ -1190,6 +1190,10 @@ items:
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds
       href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
+  - name: Rolling upgrades
+    items:
+    - name: Troubleshoot rolling upgrade issues
+      href: ./high-availability/troubleshoot-rolling-upgrades.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
