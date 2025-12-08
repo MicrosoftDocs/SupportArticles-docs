@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Rolling Upgrade Issues
-description: Describes how to troubleshoot rolling upgrade issues.
+description: Discusses how to troubleshoot rolling upgrade issues.
 ms.date: 12/05/2025
 manager: dcscontentpm
 audience: itpro
@@ -15,17 +15,17 @@ ms.custom:
 
 ## Summary
 
-This article provides a structured troubleshooting approach for addressing common issues encountered during rolling upgrades in Windows Server Failover Clustering (WSFC), Storage Spaces Direct, SQL Server Always On availability groups, and Hyper-V. 
+This article provides a structured troubleshooting method to resolve common issues that you might encounter during rolling upgrades in Windows Server Failover Clustering (WSFC), Storage Spaces Direct, SQL Server Always On availability groups, and Hyper-V. 
 
-Rolling upgrades are essential for maintaining and upgrading systems with minimal downtime. However, challenges like compatibility and configuration errors can impact availability and potentially cause data loss. 
+Rolling upgrades are essential for maintaining and upgrading systems while experiencing minimal downtime. However, challenges such as compatibility and configuration errors can affect availability, and potentially cause data loss. 
 
 ## Prerequisites
 
-Before starting a rolling upgrade:
+Before you start a rolling upgrade:
 
 - Verify that the rolling upgrade feature is supported for your workload and operating system (OS) versions.
-- Confirm all cluster nodes are healthy using the `Get-ClusterNode` PowerShell command.
-- Ensure you have up-to-date backups, including:    
+- Verify that all cluster nodes are healthy by using the `Get-ClusterNode` PowerShell command.
+- Make sure that you have up-to-date backups, including:    
     - System state
     - Cluster configuration
     - User data
@@ -34,37 +34,39 @@ Before starting a rolling upgrade:
 
 ### Address rolling upgrade failures
 
-1. Move core resources to another node using Failover Cluster Manager or the `Move-ClusterGroup` PowerShell command.
-2. Use `Suspend-ClusterNode -Drain` to migrate roles and resources off the node.
-3. Check cluster logs for dependencies or errors blocking the operation.
+1. Move core resources to another node by using Failover Cluster Manager or the `Move-ClusterGroup` PowerShell command.
+2. Migrate roles and resources off the node by using `Suspend-ClusterNode -Drain`.
+3. Check cluster logs for dependencies or errors that might block the operation.
 
 ## Troubleshooting checklist
 
-1. **Review prerequisites**: Ensure the environment meets all prerequisites previously cited in this article.
+1. **Review prerequisites**: Make sure that the environment meets all prerequisites that are mentioned in this article.
 
-2. **Validate cluster status**: Run `Test-Cluster` and resolve any validation warnings or errors.
-    - Verify the current cluster functional level using `Get-Cluster | Select ClusterFunctionalLevel`.
+2. **Validate cluster status**: Resolve any validation warnings or errors by running `Test-Cluster`.
+    - Verify the current cluster functional level by using `Get-Cluster | Select ClusterFunctionalLevel`.
     - Validate network connectivity among all nodes.
 
 3. **Plan and sequence upgrades**: Document the sequence of node upgrades (one node at a time).
-    - Move cluster roles (like virtual machines (VMs), availability groups, or file shares) off the node being upgraded.
-    - Update all nodes with the latest supported patches or hotfixes for the current OS.
+    - Move cluster roles (such as virtual machines (VMs), availability groups, or file shares) off the node that's being upgraded.
+    - Update all nodes to the latest supported updates or hotfixes for the current OS.
 
 4. **Communicate with stakeholders**: Inform stakeholders and schedule maintenance windows.
-    - Notify monitoring teams to avoid unnecessary alerts.
+    - Notify monitoring teams in order to avoid unnecessary alerts.
 
-5. **Ensure application awareness**: Confirm application compatibility for workloads like SQL Server, Hyper-V, or file services.
-    - Inform application owners of planned upgrades.
+5. **Ensure application awareness**: Verify application compatibility for workloads such as SQL Server, Hyper-V, or file services.
+    - Inform application owners about planned upgrades.
 
 6. **Conduct pre-upgrade tests**: Review logs for Windows, applications, clusters, and storage to identify any pre-existing issues.
 
 ## Common issues and their respective solutions
 
-### 1. Rolling upgrade fails to start or node can't be evicted
+### 1. Rolling upgrade doesn't start or node can't be evicted
 
 **Symptoms** 
 
-You're unable to pause, drain, or remove a node from the cluster. Errors like "Node ... cannot be removed from the cluster ..." appear.
+You can't pause, drain, or remove a node from the cluster. You receive error messages such as the following example:
+
+> Node... cannot be removed from the cluster.
 
 **Cause** 
 
@@ -72,44 +74,46 @@ The node hosts core cluster resources, dependencies are misconfigured, or the cl
 
 **Solution**    
 
-1. Move core resources to another node using Failover Cluster Manager or `Move-ClusterGroup`.
-2. Use `Suspend-ClusterNode -Drain` to move roles and resources.
-3. Ensure the node isn't the last up-to-date or quorum node.
+1. Move core resources to another node by using Failover Cluster Manager or `Move-ClusterGroup`.
+2. move roles and resources by running `Suspend-ClusterNode -Drain`.
+3. Make sure that the node isn't the last up-to-date or quorum node.
 4. Check cluster logs for blocking dependencies.
 
-### 2. Failure adding upgraded node back to cluster
+### 2. Can't restore upgraded node to cluster
 
 **Symptoms** 
 
-Errors like "A node attempted to join a failover cluster but failed due to incompatibility…" or version mismatch messages appear.
+You receive a version mismatch message or error messages such as the following example:
+
+> A node attempted to join a failover cluster but failed due to incompatibility.
 
 **Cause** 
 
-Unsupported OS version mix or unpatched node.
+Unsupported OS version mix or nonupdated node.
 
-**Solution**    
+**Solution**
 
 1. Verify the supported OS and cluster version matrix.
-2. Patch the node to the latest cumulative update (CU).
+2. Update the node to the latest cumulative update (CU).
 3. Upgrade the OS versions sequentially (for example, 2016 → 2019 → 2022).
-4. Use `Get-ClusterLog` to identify versioning errors.
+4. Identify versioning errors by using `Get-ClusterLog`.
 
-### 3. Resource or service fails to come online
+### 3. Resource or service doesn't come online
 
 **Symptoms** 
 
-Resources like VMs or file shares enter a failed or offline state post-upgrade. Common Event IDs include `1069`, `1146`, and `1230`.
+Resources such as VMs or file shares enter a failed or offline state post-upgrade. Common Event IDs include `1069`, `1146`, and `1230`.
 
 **Cause** 
 
 Misconfiguration during upgrade, missing registry keys or files, or service account failures.
 
-**Solution**   
+**Solution**
  
 1. Check cluster events in Failover Cluster Manager.
-2. Validate resource owner configurations using `Get-ClusterResource | Get-ClusterOwnerNode`.
-3. Repair or recreate missing dependencies.
-4. Restart cluster services with `Restart-Service ClusSvc`.
+2. Verify resource owner configurations by running `Get-ClusterResource | Get-ClusterOwnerNode`.
+3. Repair or re-create missing dependencies.
+4. Restart cluster services by running `Restart-Service ClusSvc`.
 
 ### 4. Quorum or communication loss
 
@@ -123,33 +127,33 @@ Network partition, firewall configuration, or quorum misconfiguration.
 
 **Solution**    
 
-1. Ensure all required ports are open.
+1. Make sure that all required ports are open.
 2. Check network, DNS, and routing configurations.
-3. Check quorum settings with `Get-ClusterQuorum` and update them if necessary.
-4. Run `Validate-Cluster` to identify root causes.
+3. Check quorum settings by running `Get-ClusterQuorum`. Update settings as appropriate.
+4. To identify root causes, run `Validate-Cluster`.
 
-### 5. Patch or update failure or known bug
+### 5. Update failure or known bug
 
 **Symptoms** 
 
-Cluster services crash post-update or resources fail due to a known problematic update.
+Cluster services stop responding after an update, or resources fail because of a known problematic update.
 
 **Cause** 
 
-Microsoft updates or patches causing cluster instability.
+Cluster instability occurred after a Microsoft update installation.
 
 **Solution**    
 
 1. Review Microsoft Knowledge Base (KB) articles for known issues.
-2. Remove problematic updates if needed.
-3. Apply recommended hotfixes or wait for updated patches.
-4. Open a support case if still unresolved.
+2. Remove problematic updates, if it's necessary.
+3. Apply recommended hotfixes or wait for new updates.
+4. Open a support case if the issue remains unresolved.
 
 ### 6. Cluster validation or functional level errors
 
 **Symptoms** 
 
-Unable to update the cluster functional level or validation fails.
+Can't update the cluster functional level, or validation fails.
 
 **Cause** 
 
@@ -157,14 +161,14 @@ Mixed OS versions, incomplete upgrades, or outdated drivers.
 
 **Solution**    
 
-1. Update all nodes and ensure they're joined to the cluster.
-2. Update hardware drivers (like network and storage) and firmware.
-3. Use `Update-ClusterFunctionalLevel` to complete the upgrade.
+1. Update all nodes, and make sure that they're joined to the cluster.
+2. Update hardware drivers (such as network and storage) and firmware.
+3. Complete the upgrade by using `Update-ClusterFunctionalLevel`.
 4. Review logs for driver or validation failures.
 
 ## Advanced troubleshooting and data collection
 
-For persistent or complex issues, collect the following data:
+For persistent or complex issues, collect the following data.
 
 **Cluster logs**
 
@@ -203,7 +207,7 @@ Get-ClusterLog -TimeSpan 24:00 -Destination
     
 ```
 
-**Patch or update history**
+**Uupdate history**
 
 ```powershell
 
