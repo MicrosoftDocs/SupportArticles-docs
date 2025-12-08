@@ -91,7 +91,7 @@ Key entries include the following sample text strings:
 
 ### Windows devices
 
-On a Windows device that is making a connection to NDES, you can view the devices Windows Event Viewer and look for indications of a successful connection. Connections are logged as an event ID **36** in the devices *DeviceManagement-Enterprise-Diagnostics-Provide* > **Admin** log.
+On a Windows device that is making a connection to NDES, you can view the devices Windows Event Viewer and look for indications of a successful connection. Connections are logged as an event ID **36** in the devices *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log.
 
 To open the log:
 
