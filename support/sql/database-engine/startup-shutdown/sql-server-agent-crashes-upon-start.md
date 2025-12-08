@@ -15,15 +15,15 @@ _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
-A SQL Server Agent fails when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or both of the following scenarios:
+A SQL Server Agent fails when you try to start it, or it takes longer than you expect to start. Additionally, you might experience one or more of the following scenarios:
 
-- **Scenario 1**: The following error message is logged in the System event log:
+- **Scenario 1**: The following error message is logged in the [System event log](/host-integration-server/core/windows-event-viewer1):
   > The SQL Server Agent (MSSQLSERVER) service failed to start due to the following error:  
   > The service did not respond to the start or control request in a timely fashion.
-- **Scenario 2**: The status of the agent appears as "Starting" in Control Panel, and the following error message is logged in the *SQLAgent.log* file:
+- **Scenario 2**: The status of the agent appears as "Starting" in Control Panel, and the following error message is logged in the _SQLAgent.log_ file:
   > An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
-  Additionally, the following entries might be logged in the *SQLAgent.log* file:
+  Additionally, the following entries might be logged in the _SQLAgent.log_ file:
 
   ```output
   <Time Stamp> - ? [431] Populating subsystems cache... 
@@ -61,9 +61,9 @@ A SQL Server Agent fails when you try to start it, or it takes longer than you e
   <Time Stamp> - ? [175] Job scheduler engine stopped
   ```
 
-- **Scenario 3**: The database engine displays a session_id  from the "SQLAgent - Generic Refresher" service and the following job is displayed as query text running in for that session:  `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
+- **Scenario 3**: The database engine displays a session_id from the "SQLAgent - Generic Refresher" service and the following job is displayed as query text running in that session: `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
 
-   You can use the following query to check for such session and text
+   You can use the following query to check for such session and text:
 
    ```sql
    SELECT s.session_id, r.status, r.wait_type, r.wait_time, s.program_name, t.text
@@ -74,58 +74,58 @@ A SQL Server Agent fails when you try to start it, or it takes longer than you e
    WHERE s.program_name = 'SQLAgent - Generic Refresher'
    ```
 
-   When this issue occurs, the session is in a RUNNABLE state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+   When this issue occurs, the session is in a _RUNNABLE_ state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause 1: Multiple job entries
 
-This issue can occur if a large number of jobs have been configured in SQL Server Agent and with many schedules. This can trigger the Generic refresher task to be continuously activated and thus busy.
+This issue can occur if you configure a large number of jobs in SQL Server Agent with many schedules. This configuration can continuously activate the Generic refresher task, keeping it in busy state.
 
-For example, the issue can also occur if you unintentionally set up multiple subscriptions for your reports in the SQL Server Reporting Services Configuration Manager.
+For example, the issue can occur if you unintentionally set up multiple subscriptions for your reports in the [SQL Server Reporting Services Configuration Manager](/sql/reporting-services/install-windows/reporting-services-configuration-manager-native-mode).
 
 ### Workaround
 
 To work around this issue, delete the jobs that you don't need.
 
-If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
+If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using the [Reporting Services Configuration Manager](/sql/reporting-services/install-windows/reporting-services-configuration-manager-native-mode).
 
 ## Cause 2: ODBC driver missing or corrupted
 
-This issue can occur if the SQL Server Open Database Connectivity (ODBC) driver is removed or becomes corrupted (often after system updates). SQL Server Agent uses the SQL Server ODBC driver to connect to SQL Server and if the driver is missing or not functioning, a SQL Server Agent fails to start.  
+This issue can occur if the SQL Server [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) driver is removed or becomes corrupted (often after system updates). SQL Server Agent uses the SQL Server ODBC driver to connect to SQL Server. If the driver is missing or not functioning, a SQL Server Agent fails to start.
 
 For information about the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
 
 ### Solution
 
 1. To check if the SQL Server ODBC driver is missing, run one of the following commands in an elevated Command Prompt window or PowerShell:
-   1. Command prompt to launch ODBC Data Source Administrator:
+   1. Command Prompt:
 
       ```cli
       odbcad32.exe
       ```
 
-   1. PowerShell cmd-let:
+      This command opens the [ODBC Data Source Administrator](/host-integration-server/core/odbc-data-source-administrator).
+
+   1. PowerShell:
 
       ```powershell
       Get-OdbcDriver
       ```
 
-1. Check if the expected SQL Server ODBC driver is there by comparing to the following table [SQL Server versions and ODBC and OLE DB drivers](/sql/connect/connect-history#sql-server-versions-and-odbc-and-ole-db-drivers). The table lists the SQL Server ODBC driver version shipped with each SQL Server engine and used by SQL Server Agent to connect to SQL Server engine.
+      This command outputs a list of the installed ODBC drivers.
 
+1. Check if the required SQL Server ODBC driver is present by comparing it to the table found in [SQL Server versions and ODBC and OLE DB drivers](/sql/connect/connect-history#sql-server-versions-and-odbc-and-ole-db-drivers). The table lists the version of the SQL Server ODBC driver shipped with each SQL Server engine and used by SQL Server Agent to connect to SQL Server engine.
+   1. If the required ODBC driver version is present, repair it by following the steps in [ODBC Driver is present](#odbc-driver-is-present).
+   1. If the ODBC driver is missing, install it by following the steps in [ODBC driver is missing](#odbc-driver-is-missing).
 
-1. Check if the ODBC driver for SQL Server is present
-   1. If the expected ODBC driver version is present, then you can attempt to repair it's installation. For steps on how to do that, go to [ODBC Driver is present](#sql-server-odbc-driver-is-present)
-   1. If the driver is missing, go to [ODBC driver is missing](#sql-server-odbc-driver-is-missing)
+#### ODBC driver is present
 
-#### SQL Server ODBC driver is present
+1. Open **Add or Remove Programs** and select **Microsoft ODBC Driver \<Driver_Version\> for SQL Server**.
+1. Select the three dots (**...**) and choose **Modify**.
+1. In the wizard that opens, choose the **Repair** option and follow the steps to repair the driver.
+1. After you complete the repair steps, you can test the connection to SQL Server by configuring a test DSN with the repaired SQL Server driver. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation).
 
-1. If the ODBC driver is present, open **Add or Remove Programs** in Windows and locate the **Microsoft ODBC Driver XX for SQL Server** where XX is the expected version for your SQL Server.
-1. Click on the three dots and choose **Modify**
-1. In the wizard that start choose the **Repair** option and finish the steps to repair the driver.
-1. After you complete the repair steps, you can test a connection to SQL Server by configuring a test DSN with the repaired SQL Server driver. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation)
+#### ODBC driver is missing
 
-
-
-#### SQL Server ODBC driver is missing
 1. [Download the ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 1. Install the driver by using the GUI or a silent installation.
    1. To perform a silent installation, run the following command:
