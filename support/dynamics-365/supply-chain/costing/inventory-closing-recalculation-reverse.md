@@ -11,13 +11,13 @@ ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 ---
 # Troubleshoot inventory closing, recalculation, and reverse operations
 
-This article explains how to troubleshoot common errors during inventory closing, recalculation, or reverse operations in Dynamics 365 Supply Chain Management.
+This article explains how to troubleshoot common errors that occur during inventory closing, recalculation, or reverse operations in Microsoft Dynamics 365 Supply Chain Management.
 
 ## Another closing or adjustment is in progress
 
 ### Symptoms
 
-An inventory closing or recalculation fails with the following error message:
+An inventory closing or recalculation fails and generates the following error message:
 
 > Another closing or adjustment has not finished yet
 
@@ -25,53 +25,53 @@ Also, a new closing or recalculation voucher isn't created in the [Closing and A
 
 ### Cause
 
-This issue occurs when you attempt to execute a new closing or recalculation while a previous closing or voucher execution is still in progress.
+This issue occurs if you try to run a new closing or recalculation while a previous closing or voucher execution is still in progress.
 
 ### Solution
 
-Wait for the previous closing or voucher execution to complete, then you can execute a new closing or recalculation.
+Wait for the previous closing or voucher process to finish before you run a new closing or recalculation.
 
-## Cannot select a record in current client sessions
+## Can't select a record in current client sessions
 
 ### Symptoms
 
-An inventory closing, recalculation, or reverse fails with the following error message:
+An inventory closing, recalculation, or reverse fails and generates the following error message:
 
 > Batch task failed: Cannot select a record in Current client sessions (SysClientSessions). Sessionld: 0, 0. The SQL database has issued an error.
 
 ### Cause
 
-This issue can occur due to SQL database unavailability, deadlocks, blockings, or other SQL errors.
+This issue might be caused by Microsoft SQL Server database unavailability, deadlocks, blockings, or other errors.
 
 ### Solution
 
-Most of the time, these issues are transient and don't cause any data corruption. Retry the operation.
+Usuually, these issues are transient and don't cause any data corruption. Retry the operation.
 
 ## Duplicate reverse is not allowed
 
 ### Symptoms
 
-An inventory reverse fails with the following error message:
+An inventory reverse fails and generates the following error message:
 
 > Another Inventory \<OperationType\> reverse for voucher \<VoucherID\> is running. Duplicate reverse is not allowed
 
 ### Cause
 
-This issue occurs when you try to execute the reversal or cancellation of multiple closing or recalculation vouchers at the same time. You must carry out reversals sequentially. This approach prevents any inventory and ledger data corruption due to concurrent updates of adjustments, settlements, or postings.
+This issue occurs if you try to run the reversal or cancelation of multiple closing or recalculation vouchers at the same time. You must carry out reversals sequentially. This method prevents any inventory and ledger data corruption because of concurrent updates of adjustments, settlements, or postings.
 
 ### Solution
 
-Always execute the reversal of vouchers one at a time, and wait for each reversal to complete before proceeding to the next one.
+Always run the reversal of vouchers one at a time, and wait for each reversal to finish before proceeding to the next one.
 
-This issue can also occur if a previous reversal execution doesn't complete successfully, the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) ends with errors, then you try to execute a new reverse of the original voucher. This behavior can occur due to system issues, sudden crashes, system or SQL server unavailability, and similar issues. In such cases, contact Microsoft Support or your partner.
+This issue can also occur if a previous reversal execution doesn't finish successfully, the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) generates errors, and then you try to run a new reverse of the original voucher. This behavior can occur because of system issues, programs that stop responding, system or SQL server unavailability, and similar issues. In such cases, contact Microsoft Support or your partner.
 
-## Inventory closing cannot proceed
+## Inventory closing can't proceed
 
 ### Symptoms
 
-An inventory closing or recalculation fails with the following error message:
+An inventory closing or recalculation fails and generates the following error message:
 
-> Inventory closing cannot proceed because available physical on-hand inventory on item \<Item\> is currently negative, which isn't allowed according to its item model group
+> Inventory closing can't proceed because available physical on-hand inventory on item \<Item\> is currently negative, which isn't allowed according to its item model group
 
 You can view this error in the inventory closing logs. For more information on accessing closing logs, see [Inventory close](/dynamics365/supply-chain/cost-management/inventory-close#the-inventory-close-log).
 
@@ -84,29 +84,29 @@ Usually, the system flags this error while posting transactions for an item that
 ### Solution
 
 1. Review the inventory transactions for the item mentioned in the error message to identify the cause of this issue.
-   1. If necessary, based on your business requirements, enable the negative physical or financial inventory.
-   1. Alternatively, you can post manual adjustments to balance out the inventory transactions that result in a negative inventory.
-1. Once you fix the transactions, execute a [consistency check](/dynamics365/supply-chain/inventory/inventory-onhand-consistency-check) for that item:
+   1. If it's necessary, based on your business requirements, enable the negative physical or financial inventory.
+   1. Alternatively, you can post manual adjustments to balance out the inventory transactions that cause a negative inventory.
+1. After you fix the transactions, run a [consistency check](/dynamics365/supply-chain/inventory/inventory-onhand-consistency-check) for that item:
    1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
-   1. In the consistency check dialog, set **Check/Fix** to **Fix error**.
-      1. If you just want to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
+   1. In the consistency check dialog box, set **Check/Fix** to **Fix error**.
+      1. If you want only to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
    1. Set **Module** to **Inventory management**.
-   1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
-   1. Open the More menu (**...**) and select **Dialog**.
-   1. Use the dialog to filter for the item mentioned in the error message.
+   1. Expand the **Item** tree, and select the checkboxes for **Inventory transactions** and **On-hand**.
+   1. Open the More menu (...), and select **Dialog**.
+   1. Use the dialog box to filter for the item that's mentioned in the error message.
    1. Run the consistency check.
 
    > [!NOTE]
-   > If necessary, you can run the check as a batch process in the background.
+   > If it's necessary, you can run the check as a batch process in the background.
 
-1. Once the consistency check completes, you can view the final fix logs from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) logs or in the notification panel.
-1. After completing the consistency check, resume the closing or recalculation operation.
+1. After the consistency check finishes, you can view the final fix logs from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) logs or in the notification panel.
+1. After you complete the consistency check, resume the closing or recalculation operation.
 
 ## Failure when closing stock
 
 ### Symptoms
 
-An inventory closing or recalculation fails with the following error message:
+An inventory closing or recalculation fails and generates the following error message:
 
 > Close stock - processing level \<Level\> with a total of \<Total\> bundles
 
@@ -114,34 +114,34 @@ An inventory closing or recalculation fails with the following error message:
 
 This error usually occurs because of:
 
-- Business data corruption due to manual database interventions.
-- Manual changes to the decimal precision in the customized version.
-- Incorrect [exchange rate](/dynamics365/business-central/finance-set-up-currencies#exchange-rates) configurations while posting source documents and similar issues.
+- Business data corruption because of manual database interventions
+- Manual changes to the decimal precision in the customized version
+- Incorrect [exchange rate](/dynamics365/business-central/finance-set-up-currencies#exchange-rates) configurations while posting source documents and similar issues
 
 ### Solution
 
-1. Identify the item and inventory transactions causing this error.
-1. Execute a [consistency check](/dynamics365/supply-chain/inventory/inventory-onhand-consistency-check) for that item for on-hand and inventory transactions.
+1. Identify the item and inventory transactions that's causing this error.
+1. Run a [consistency check](/dynamics365/supply-chain/inventory/inventory-onhand-consistency-check) for that item for on-hand and inventory transactions.
    1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
-   1. In the consistency check dialog, set **Check/Fix** to **Fix error**.
-      1. If you just want to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
+   1. In the consistency check dialog box, set **Check/Fix** to **Fix error**.
+      **Note:** If you want only to identify inconsistencies but not make any changes, set **Check/Fix** to **Check**.
    1. Set **Module** to **Inventory management**.
-   1. Expand the **Item** tree and select the checkboxes for **Inventory transactions** and **On-hand**.
-   1. Open the More menu (**...**) and select **Dialog**.
-   1. Use the dialog to filter for the item causing the error.
+   1. Expand the **Item** tree, and select the checkboxes for **Inventory transactions** and **On-hand**.
+   1. Open the More menu (...), and select **Dialog**.
+   1. Use the dialog box to filter for the item that's causing the error.
    1. Run the consistency check.
 
    > [!NOTE]
-   > If necessary, you can run the check as a batch process in the background.
+   > If it's necessary, you can run the check as a batch process in the background.
 
-1. Once the consistency check completes, you can view the final fix logs from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) logs or in the notification panel.
-1. After completing the consistency check, resume the closing or recalculation operation.
+1. After the consistency check finishes, you can view the final fix logs from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) logs or in the notification panel.
+1. After you complete the consistency check, resume the closing or recalculation operation.
 
 ## Fiscal period is not open
 
 ### Symptoms
 
-An inventory closing, recalculation, reverse, or journal posting (such as an [inventory journal](/dynamics365/supply-chain/inventory/inventory-journals), [production orders](/dynamics365/business-central/production-about-production-orders), [purchase orders](/dynamics365/field-service/create-purchase-order), [sales orders](/dynamics365/sales/create-edit-order-sales), or similar postings) fails with the following message:
+An inventory closing, recalculation, reverse, or journal posting (such as an [inventory journal](/dynamics365/supply-chain/inventory/inventory-journals), [production orders](/dynamics365/business-central/production-about-production-orders), [purchase orders](/dynamics365/field-service/create-purchase-order), [sales orders](/dynamics365/sales/create-edit-order-sales), or similar postings) fails and generates the following message:
 
 > Fiscal period for \<Date\> is not open
 
@@ -150,9 +150,9 @@ An inventory closing, recalculation, reverse, or journal posting (such as an [in
 Verify the [ledger calendar](/dynamics365/finance/general-ledger/configure-ledger#configuring-calendars-for-the-ledger) period status:
 
 1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
-1. Select the required ledger period and then verify the period status for the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) experiencing issues.
-   1. The period status should be **Open** to allow for the posting of any adjustments.
-1. After updating the period status, resume the inventory operation.
+1. Select the required ledger period, and then verify the period status for the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) that are experiencing issues.
+   **Note:** The period status should be set to **Open** to enable the posting of any adjustments.
+1. After you update the period status, resume the inventory operation.
 
 ## Account number for transaction type does not exist
 
@@ -167,14 +167,14 @@ An inventory closing or recalculation fails with the following error message:
 Verify that the main account is set up for the specified [transaction type](/dynamics365/business-central/dev-itpro/developer/properties/devenv-transactiontype-property#remarks):
 
 1. Go to **Inventory Management** > **Setup** > **Posting** > **Posting**.
-1. Confirm that the main account is set up for the transaction type mentioned in the error message.
-    1. For more info on configuring transaction types for an account, see [Inventory posting profiles](/dynamics365/finance/general-ledger/inventory-posting-profiles).
+1. Verify that the main account is set up for the transaction type mentioned in the error message.
+    1. For more information about how to configure transaction types for an account, see [Inventory posting profiles](/dynamics365/finance/general-ledger/inventory-posting-profiles).
 
 Also, check the financial dimensions in the [Accounting Structure Setup](/dynamics365/finance/general-ledger/configure-account-structures) for the corresponding main accounts:
 
 1. Go to **General Ledger** > **Ledger setup** > **Ledger**
-1. Select the account structure that is experiencing issues.
-1. Confirm that your financial dimensions are correctly configured by following the guidance provided in [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
+1. Select the account structure that's experiencing issues.
+1. Verify that your financial dimensions are correctly configured. Follow the guidance that's provided in [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
 After verifying your configuration, resume the closing or recalculation operation.
 
@@ -182,74 +182,74 @@ After verifying your configuration, resume the closing or recalculation operatio
 
 ### Symptoms
 
-An inventory closing or recalculation fails with the following error message:
+An inventory closing or recalculation fails and generates the following error message:
 
 > Only users in user group \<Group\> can post in module \<Module\> in the period containing the date \<Date\>
 
 ### Solution
 
 1. Go to **General Ledger** > **Calendars** > **Ledger calendars**.
-1. Select the required ledger period, then check the access level for the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) experiencing issues and the following modules:
-    1. Ledger
-    1. Sales tax
-    1. Bank
-    1. Customer
-    1. Vendor
-    1. Sales order
-    1. Purchasing
-    1. Inventory
-    1. Production
-    1. Project
-    1. Fixed assets
-    1. Payroll
-    1. Expense
-    1. Retail Headquarters
-    1. Fixed assets (Russia)
-    1. Landed cost
+1. Select the required ledger period, then check the access level for the [legal entities](/dynamics365/guidance/organizational-strategy/define-organizational-strategy#legal-entity) that are experiencing issues and for the following modules:
+    - Ledger
+    - Sales tax
+    - Bank
+    - Customer
+    - Vendor
+    - Sales order
+    - Purchasing
+    - Inventory
+    - Production
+    - Project
+    - Fixed assets
+    - Payroll
+    - Expense
+    - Retail Headquarters
+    - Fixed assets (Russia)
+    - Landed cost
 
    > [!NOTE]
-   > The default access level for all the modules is **&lt;All&gt;**
+   > The default access level for all the modules is **&lt;All&gt;**.
 
-1. After updating the access levels, resume the closing or recalculation operation.
+1. After you update the access levels, resume the closing or recalculation operation.
 
 ## An entry can't be posted or approved because of the cost budget
 
 ### Symptoms
 
-An inventory closing, recalculation, or reverse operation fails during the ledger posting stage with the following error message:
+An inventory closing, recalculation, or reverse operation fails during the ledger posting stage and generates the following error message:
 
 > The entry for category \<Category\> on project \<Project\> cannot be posted/approved because it would cause the cost budget to be exceeded by \<Amount\>
 
-You can view this error in the inventory closing logs. For more information on accessing closing logs, see [Inventory close](/dynamics365/supply-chain/cost-management/inventory-close#the-inventory-close-log).
+You can view this error in the inventory closing logs. For more information about how to access closing logs, see [Inventory close](/dynamics365/supply-chain/cost-management/inventory-close#the-inventory-close-log).
 
 ### Cause
 
-This issue can appear when inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions. Then those adjustments or settlements exceed the [budget control](/dynamics365/finance/budgeting/budget-control-overview-configuration) price set for that specific project.
+This issue can occur if inventory closing, recalculation, or reverse adjustments settle the project-enabled inventory transactions. These particular adjustments or settlements exceed the [budget control](/dynamics365/finance/budgeting/budget-control-overview-configuration) price that's set for that specific project.
 
 ### Solution
 
-As a temporary workaround:
+To work around this issue:
 
 1. Go to **Project management and accounting** > **Setup** > **Project management and accounting parameters** > **Cost control**.
 1. Set **Budget control** to **Disabled**.
 1. Resume the inventory closing, recalculation, or reverse voucher.
-1. After the inventory operation completes, set **Budget control** back to **Enabled**.
+1. After the inventory operation finishes, revert **Budget control** to **Enabled**.
 
 For a more permanent solution, update the project budget control cost to meet your business requirements.
 
-## A transaction cannot be reopened after being pre-closed
+## A transaction can't be reopened after being pre-closed
 
 ### Symptoms
 
-An inventory closing or recalculation fails with the following error message:
+An inventory closing or recalculation fails and generates the following error message:
 
-> Transaction \<TransactionID\> cannot be reopened as it has already been pre-closed
+> Transaction \<TransactionID\> can't be reopened as it has already been pre-closed
 
 ### Cause
 
-This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error happens when pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should only affect non-financial transactions.
+This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error occurs if pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should affect only non-financial transactions.
 
-The inventory closing and recalculation processes implicitly execute pre-closing for the non-financial transfers against which they have any markings. This issue most likely occurs during that process.
+The inventory closing and recalculation processes implicitly run pre-closing for the non-financial transfers against which they have any markings. This issue most likely occurs during that process.
 
 ### Solution
 
@@ -265,25 +265,25 @@ For each problematic transaction you identify, update the following field values
 - `NonFinancialTransferInventClosing = 0`
 - `DateClosed = 1900-01-01 00:00:00.000`
 
-After updating all problematic transactions, resume the closing or recalculation operation.
+After you update all problematic transactions, resume the closing or recalculation operation.
 
 > [!IMPORTANT]
-> When making any direct database data modification, first make the change in a lower [replica](/dynamics365/business-central/dev-itpro/administration/migration-data-replication) and confirm everything works correctly before proceeding to other replicas.
+> When you make any direct database data modification, make the change in a lower [replica](/dynamics365/business-central/dev-itpro/administration/migration-data-replication) and verify that everything works correctly before you proceed to other replicas.
 
-## Unable to edit a record in table
+## Can't edit a record in a table
 
 ### Symptoms
 
-An inventory closing, recalculation, or reverse fails with the following error message:
+An inventory closing, recalculation, or reverse fails and generates the following error message:
 
 > Unable to edit a record in InventSettlement table
 
 ### Cause
 
-This issue occurs when a SQL error prevents further execution and causes a process or [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) to fail. Typically, these SQL errors are deadlocks that occur when multiple processes execute at the same time. Other possible causes include SQL Server availability issues due to increased traffic, or insufficient and inappropriate indexing that results in query timeouts for long running queries.
+This issue occurs if a SQL Server error prevents further execution and causes a process or [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) to fail. Typically, these errors are deadlocks that occur when multiple processes run at the same time. Other possible causes include SQL Server availability issues because of increased traffic, or insufficient and inappropriate indexing that causes query timeouts for long-running queries.
 
 ### Solution
 
-Usually, these SQL issues are transient and go away with retries.
+Usually, these issues are transient. Retry the operation.
 
-Sometimes, customizations also result in deadlocks and blocking issues due to inappropriate transaction scopes and error handling. Trace the error message from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) or related processes, call stack, and SQL statement. Verify if any customizations are present. If customizations are present, check the indexes and index fragmentation for the SQL table mentioned in the error message.
+Sometimes, customizations also cause deadlocks and blocking issues because of inappropriate transaction scopes and error handling. Trace the error message from the [batch job](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling#batch-jobs) or related processes, call stack, and SQL statement. Check whether any customizations exist. If customizations do exist, check the indexes and index fragmentation for the SQL table that's mentioned in the error message.
