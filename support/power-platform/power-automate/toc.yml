@@ -83,7 +83,7 @@ items:
                 href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
       - name: SAP automation
         items:
-          - name: Can't capture SAP GuiTree objects in Power Automate for desktop
+          - name: Can't capture SAP GuiTree objects
             href: desktop-flows/sap-automation/cannot-capture-guitree-objects.md
           - name: Can't open SAP
             href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
