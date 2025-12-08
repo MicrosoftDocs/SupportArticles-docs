@@ -174,7 +174,7 @@ Also, check the financial dimensions in the [Accounting Structure Setup](/dynami
 
 1. Go to **General Ledger** > **Ledger setup** > **Ledger**
 1. Select the account structure that is experiencing issues.
-1. ???? <!-- Need to confirm with the SME how to check the financial dimensions -->
+1. Confirm that your financial dimensions are correctly configured by following the guidance provided in [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
 After verifying your configuration, resume the closing or recalculation operation.
 
