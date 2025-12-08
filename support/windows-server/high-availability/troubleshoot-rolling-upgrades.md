@@ -207,7 +207,7 @@ Get-ClusterLog -TimeSpan 24:00 -Destination
     
 ```
 
-**Uupdate history**
+**Update history**
 
 ```powershell
 
