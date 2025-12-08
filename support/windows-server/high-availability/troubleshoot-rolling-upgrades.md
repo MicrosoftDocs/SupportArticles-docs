@@ -117,7 +117,9 @@ Misconfiguration during upgrade, missing registry keys or files, or service acco
 
 Cluster goes offline, nodes enter quarantine, or Event IDs `1135` and `1136` appear.
 
-**Cause** Network partition, firewall configuration, or quorum misconfiguration.
+**Cause** 
+
+Network partition, firewall configuration, or quorum misconfiguration.
 
 **Solution**    
 
@@ -164,7 +166,7 @@ Mixed OS versions, incomplete upgrades, or outdated drivers.
 
 For persistent or complex issues, collect the following data:
 
-- **Cluster logs**
+**Cluster logs**
 
 ```powershell
 
