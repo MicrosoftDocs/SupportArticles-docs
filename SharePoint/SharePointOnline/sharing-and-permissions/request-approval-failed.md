@@ -38,17 +38,17 @@ Also, when users browse to the **Access Requests** list and select **Approve** o
 
 ## Cause
 
-These issues occur because the affected users are neither site collection administrators nor members of the Owners group for the site. Only users with these specific permissions can process requests to the Access Requests list. For users who are members of the Owners group for the site, an additional requirement is that the Owners group must have Full Control permissions to access the Access Requests list.
+These issues occur because the affected users are not site admins (previously called site collection administrators) or members of the Owners group for the site. Only users with these specific permissions can process requests to the Access Requests list. For users who are members of the Owners group for the site, an another requirement is that the Owners group must have Full Control permissions to access the Access Requests list.
 
 ## Resolution
 
-To resolve the issues, assign site collection administration permissions to the affected users or add them to the Owners group for the site. Additionally, the Owners group must have Full Control permissions to access the Access Requests list.
+To resolve the issues, assign site admin permissions to the affected users or add them to the Owners group for the site. Additionally, the Owners group must have Full Control permissions to access the Access Requests list.
 
 Use one of the following solutions.
 
-### Solution 1: Assign Site collection administrator permissions
+### Solution 1: Assign Site admin permissions
 
-To provide a user with site collection administrator permissions, see [Manage site collection administrators](/sharepoint/manage-site-collection-administrators).
+To provide a user with site admin permissions, see [Manage site admins](/sharepoint/manage-site-collection-administrators).
 
 ### Solution 2: Add the user to the Owners group for the site
 
@@ -58,7 +58,7 @@ Use the following steps:
 
 1. Find the Owners group for the affected site collection.
 
-   If the Owners group for the site collection does not exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
+   If the Owners group for the site collection doesn't exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
 
 1. On the affected site, select **Settings** > **Site settings**.
 
@@ -68,7 +68,7 @@ Use the following steps:
 
 1. In the **Share** dialog box, enter the user account to add to the group, and then select **Share**.
 
-Test to verify that the user can now access the Access REquests list, and approve or decline requests.
+Test to verify that the user can now access the Access Requests list, and approve or decline requests.
 
 ### Owners group must have permissions to the Access Requests list
 
@@ -88,7 +88,7 @@ Use the following steps:
 
     :::image type="content" source="media/request-approval-failed/pagelistid.png" alt-text="Screenshot of the search box when you type PageListId.":::
 
-1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be enclosed between braces.
+1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID is enclosed between braces.
     :::image type="content" source="media/request-approval-failed/guid.png" alt-text="Screenshot of an example of GUID that follows the pageListId.":::
 
 1. In the address bar of the browser, enter '<your_tenant_URL>/_layouts/15/ListEdit.aspx?List=<{GUID}>'.
