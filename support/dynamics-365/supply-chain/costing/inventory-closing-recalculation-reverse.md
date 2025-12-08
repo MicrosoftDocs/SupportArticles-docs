@@ -45,7 +45,7 @@ This issue might be caused by Microsoft SQL Server database unavailability, dead
 
 ### Solution
 
-Usuually, these issues are transient and don't cause any data corruption. Retry the operation.
+Usually, these issues are transient and don't cause any data corruption. Retry the operation.
 
 ## Duplicate reverse is not allowed
 
@@ -247,9 +247,9 @@ An inventory closing or recalculation fails and generates the following error me
 
 ### Cause
 
-This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error occurs if pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should affect only non-financial transactions.
+This issue can occur if data corruptions exist in the inventory transactions or adjustments. The error occurs if pre-closing incorrectly posts settlements to and closes financial transactions. Pre-closing should affect only nonfinancial transactions.
 
-The inventory closing and recalculation processes implicitly run pre-closing for the non-financial transfers against which they have any markings. This issue most likely occurs during that process.
+The inventory closing and recalculation processes implicitly run pre-closing for the nonfinancial transfers against which they have any markings. This issue most likely occurs during that process.
 
 ### Solution
 
