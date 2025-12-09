@@ -220,7 +220,7 @@ sudo leapp preupgrade --target <target_os_version> --no-rhsm
 
 Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`. 
 
-### [RHEL 9.7to RHEL 10.1](#tab/rhel9-rhel10)
+### [RHEL 9.7 to RHEL 10.1](#tab/rhel9-rhel10)
 
 > [!NOTE]  
 > If you use the sudo command, you must use the `-r unconfined_r -t unconfined_t` options when entering each leapp command.
@@ -295,7 +295,7 @@ Continue the Leapp upgrade process after the Leapp pre-upgrade report shows no e
     sudo reboot
     ```
 
-### [RHEL 9.7to RHEL 10.1](#tab/rhel9-rhel10)
+### [RHEL 9.7 to RHEL 10.1](#tab/rhel9-rhel10)
 
 
 1. Run the following `leapp upgrade` command:
@@ -370,6 +370,26 @@ This section outlines the recommended verification steps after completing an in-
     sudo dnf repolist
     ```
 
+### [RHEL 9.7 to RHEL 10.1](#tab/rhel9-rhel10)
+
+1. Verify that the current OS version belongs to RHEL 9:
+
+    ```bash
+    sudo cat /etc/redhat-release
+    ```
+
+2. Check the kernel version:
+
+    ```bash
+    uname -r
+    ```
+
+3. Verify the new repositories:
+
+    ```bash
+    sudo dnf repolist
+    ```
+    
 ---
 
 ## Post-upgrade tasks
@@ -495,7 +515,7 @@ Once the VM is successfully upgraded, perform the following tasks:
         > Removing this data might limit Microsoft and Red Hat Support's ability to investigate and troubleshoot post-upgrade problems.
 
 
-### [RHEL 9.7to RHEL 10.1](#tab/rhel9-rhel10)
+### [RHEL 9.7 to RHEL 10.1](#tab/rhel9-rhel10)
 
 
 1. Delete all remaining Leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These Leapp packages are installed during the in-place upgrade.
