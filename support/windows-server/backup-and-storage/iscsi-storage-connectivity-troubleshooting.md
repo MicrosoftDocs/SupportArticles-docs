@@ -1,5 +1,5 @@
 ---
-title: Windows Server iSCSI Storage Connectivity Troubleshooting Guidance
+title: iSCSI Storage Connectivity Troubleshooting Guidance
 description: Resolves issues that occur in SAN-based and iSCSI storage environments in Windows Server.
 ms.date: 10/08/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Windows Server iSCSI storage connectivity troubleshooting guidance
+# iSCSI storage connectivity troubleshooting guidance
 
 ## Summary
 
@@ -24,27 +24,27 @@ SAN-based and iSCSI storage environments in Windows Server (2025, 2022, 2019, an
 Use this checklist for systematic troubleshooting:
 
 - **Networking**
-    - Make sure that iSCSI, management, and client networks are segregated and correctly routed.
-    - Are MTU, VLANs, Jumbo Frames, and Flow Control/ROCE/PFC are consistently configured?
+  - Make sure that iSCSI, management, and client networks are segregated and correctly routed.
+  - Are MTU, VLANs, Jumbo Frames, and Flow Control/ROCE/PFC are consistently configured?
 - **Firmware/Driver Updates**
-    - Are network adapters, storage controllers, and storage array firmware current and vendor-supported?
+  - Are network adapters, storage controllers, and storage array firmware current and vendor-supported?
 - **Storage Infrastructure**
-    - Are all SCSI, multipath or MPIO, and iSCSI target device drivers and tools up to date?
-    - Verify that all SAN zoning and LUN masking are correct.
+  - Are all SCSI, multipath or MPIO, and iSCSI target device drivers and tools up to date?
+  - Verify that all SAN zoning and LUN masking are correct.
 - **Windows Configuration**
-    - Does the appropriate MPIO policy exist? Verify that disks and LUNs are visible and healthy in Disk Management.
-    - Are cluster and quorum configurations validated (Test-Cluster, validation reports)?
-    - Are antivirus exclusions set for storage and cluster paths?
-    - Is the correct Group Policy policy enabled for disk and volume access?
+  - Does the appropriate MPIO policy exist? Verify that disks and LUNs are visible and healthy in Disk Management.
+  - Are cluster and quorum configurations validated (Test-Cluster, validation reports)?
+  - Are antivirus exclusions set for storage and cluster paths?
+  - Is the correct Group Policy policy enabled for disk and volume access?
 - **Backup/Restore**
-    - Does the VSS and backup configuration comply with storage guidelines?
-    - Are shadow copies and snapshots managed and not excessive?
+  - Does the VSS and backup configuration comply with storage guidelines?
+  - Are shadow copies and snapshots managed and not excessive?
 - **Documentation/Change Log**
-    - Document all infrastructure changes that occurred before the incident (updates, config edits, firmware, hardware swaps, and so on).
+  - Document all infrastructure changes that occurred before the incident (updates, config edits, firmware, hardware swaps, and so on).
 
 ## Common issues and solutions
 
-The following sections detail the most common failure modes and provide step-by-step solutions.
+The following sections describe the most issues, and provide step-by-step solutions.
 
 ### iSCSI disk disconnections, failover issues, surprise removal
 
@@ -65,23 +65,23 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Network and Multipath review:
-    - Verify network hardware configuration (MTU, VLAN, Jumbo, Flow Control).
-    - Use mpclaim -v and Get-MSDSMAutomaticClaim.
-    - Remove duplicate iSCSI sessions and unnecessary paths.
-2. Firmware and driver update:
-    - Update all storage and network firmware and drivers.
-3. Timeout registry tuning:
-    - Set disk and iSCSI timeout (HKLM\SYSTEM\CurrentControlSet\Services\disk, TimeOutValue=179).
-4. Check SAN Health:
-    - Coordinate with vendor to verify logs and event triggers.
-5. Application and script adjustments
-    - Avoid reliance on disk numbers (can change after path failover).
-6. Command tools:
-    - Get-Disk, Get-PhysicalDisk, Out-GridView (review mapping)
-    - Netsh trace start scenario=netconnection capture=yes tracefile=c:\os.etl
-7. Known bugs:
-    - For REFS/backup unresponsiveness on Windows Server 2025, apply KB5062660.
-    - Review cluster logs for evidence of quorum or heartbeat-related outages.
+   - Verify network hardware configuration (MTU, VLAN, Jumbo, Flow Control).
+   - Use mpclaim -v and Get-MSDSMAutomaticClaim.
+   - Remove duplicate iSCSI sessions and unnecessary paths.
+1. Firmware and driver update:
+   - Update all storage and network firmware and drivers.
+1. Timeout registry tuning:
+   - Set disk and iSCSI timeout (HKLM\SYSTEM\CurrentControlSet\Services\disk, TimeOutValue=179).
+1. Check SAN Health:
+   - Coordinate with vendor to verify logs and event triggers.
+1. Application and script adjustments
+   - Avoid reliance on disk numbers (can change after path failover).
+1. Command tools:
+   - Get-Disk, Get-PhysicalDisk, Out-GridView (review mapping)
+   - Netsh trace start scenario=netconnection capture=yes tracefile=c:\os.etl
+1. Known bugs:
+   - For REFS/backup unresponsiveness on Windows Server 2025, apply KB5062660.
+   - Review cluster logs for evidence of quorum or heartbeat-related outages.
 
 ### 2. Volumes changing to RAW, file system, metadata corruption
 
@@ -101,23 +101,21 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. File system repair
-    - NTFS: chkdsk X: /f /r (back up data first because "/r" might take a long time and could risk further loss.
-    - ReFS: Use refsutil for salvage:
-
-    ```console
-    refsutil salvage -QA D: \<log path> \<recovery path> -x
-    refsutil salvage -FA D: \<log path> \<recovery path> -x
-    ```
-
-    - Adjust partition boundaries with disk management tool if mismatched.
-2. **Address Underlying Disk Issues
-    - Use vendor diagnostics tool, review SMART data, replace as necessary.
-3. Service dependencies
-    - Set dependency: sc configuration  LanmanServer depend= MSiSCSI
-    - Or set critical services to "Automatic (Delayed Start)" in services.msc
-4. Check Hardware/Virtualization Layer
-    - Fix drives incorrectly presented as removable in VM configuration or hypervisor layer.
-5. Recover file shares
+   - NTFS: chkdsk X: /f /r (back up data first because "/r" might take a long time and could risk further loss.
+   - ReFS: Use refsutil for salvage:
+   ```console
+   refsutil salvage -QA D: \<log path> \<recovery path> -x
+   refsutil salvage -FA D: \<log path> \<recovery path> -x
+   ```
+   - Adjust partition boundaries with disk management tool if mismatched.
+1. **Address Underlying Disk Issues
+   - Use vendor diagnostics tool, review SMART data, replace as necessary.
+1. Service dependencies
+   - Set dependency: sc configuration LanmanServer depend= MSiSCSI
+   - Or set critical services to "Automatic (Delayed Start)" in services.msc
+1. Check Hardware/Virtualization Layer
+   - Fix drives incorrectly presented as removable in VM configuration or hypervisor layer.
+1. Recover file shares
    - Manually restart LanmanServer or use delayed start.
 
 ### Cluster resource, ownership, or quorum failures
@@ -139,22 +137,20 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Verify cluster and disk resource. Use:
-
-    ```powershell
-    Test-Cluster
-    Get-ClusterLog -Destination \<path>
-    ```
-
-    - Review and reassign quorum if it's necessary.
-2. Correct Permissions
-    - On certificate store: SYSTEM and ADMINISTRATORS must have full control on: C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys
-    - Re-import required certificates as necessary by using certutil -store -service clussvc\my
-3. Handle disk ownership and signature:
-    - Detach conflicting or double-mapped VHDs.
-    - Verify that all signatures are unique.
-    - Involve storage vendor to clear persistent reservations (PRs).
-4. Check Group Policy/Security
-    - Make sure that Group Policy Object for "Network access: Restrict anonymous access to Named Pipes and Shares" isn't blocking share access.
+   ```powershell
+   Test-Cluster
+   Get-ClusterLog -Destination \<path>
+   ```
+   - Review and reassign quorum if it's necessary.
+1. Correct Permissions
+   - On certificate store: SYSTEM and ADMINISTRATORS must have full control on: C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys
+   - Re-import required certificates as necessary by using certutil -store -service clussvc\my
+1. Handle disk ownership and signature:
+   - Detach conflicting or double-mapped VHDs.
+   - Verify that all signatures are unique.
+   - Involve storage vendor to clear persistent reservations (PRs).
+1. Check Group Policy/Security
+   - Make sure that Group Policy Object for "Network access: Restrict anonymous access to Named Pipes and Shares" isn't blocking share access.
 
 ### Performance and latency issues
 
@@ -176,16 +172,16 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Disk and file system optimization
-    - SSD: Optimize-Volume -DriveLetter X -ReTrim -Verbose
-    - Remove excessive shadow copies: vssadministrator delete shadows /all
-2. NFS and iSCSI optimization
-    - Verify jumbo frames, set correct MTU:netsh interface ipv4 set subinterface "\<Name>" mtu=9000 store=persistent
-3. Disk cleanup
-    - Resize VHDs appropriately.
-    - Remove orphaned or unused disks by using DevNodeClean:devnodeclean /n (dry run), devnodeclean /r (remove)
-4. Firmware, driver and policy review
-    - Update HBA, network adapter, and storage driver.
-    - Ensure correct antivirus exclusions.
+   - SSD: Optimize-Volume -DriveLetter X -ReTrim -Verbose
+   - Remove excessive shadow copies: vssadministrator delete shadows /all
+1. NFS and iSCSI optimization
+   - Verify jumbo frames, set correct MTU:netsh interface ipv4 set subinterface "\<Name>" mtu=9000 store=persistent
+1. Disk cleanup
+   - Resize VHDs appropriately.
+   - Remove orphaned or unused disks by using DevNodeClean:devnodeclean /n (dry run), devnodeclean /r (remove)
+1. Firmware, driver and policy review
+   - Update HBA, network adapter, and storage driver.
+   - Ensure correct antivirus exclusions.
 
 ### System, driver, registry, service problems
 
@@ -205,22 +201,20 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. MOF file recovery
-
-    - Recompile MOFs:
-
-    ```console
-    mofcomp iscsiwmiv2_uninstall.mof
-    mofcomp iscsirem.mof
-    ...
-        
-    - Verify WMI and storage provider states and repair as necessary.
-2. Permissions and certificate issues
-    - Use certutil and file permissions tools and fix missing private keys.
-3. Apply relevant hotfixes
-    - For Windows Server 2025 REFS with Veeam: [Apply KB5062660](https://support.microsoft.com/help/5062660).
-    - For known bugs, monitor for product group guidance.
-4. UI and rRegistry updates
-    - For iSCSI Initiator Favorites bug, functionality is unaffected. A fix may not be available.
+   - Recompile MOFs:
+   ```console
+   mofcomp iscsiwmiv2_uninstall.mof
+   mofcomp iscsirem.mof
+   ...
+   ```
+   - Verify WMI and storage provider states and repair as necessary.
+1. Permissions and certificate issues
+   - Use certutil and file permissions tools and fix missing private keys.
+1. Apply relevant hotfixes
+   - For Windows Server 2025 REFS with Veeam: [Apply KB5062660](https://support.microsoft.com/help/5062660).
+   - For known bugs, monitor for product group guidance.
+1. UI and rRegistry updates
+   - For iSCSI Initiator Favorites bug, functionality is unaffected. A fix may not be available.
 
 ## Common issues quick reference table
 
@@ -244,24 +238,24 @@ The following sections detail the most common failure modes and provide step-by-
 Before you contact Microsoft Support, you can gather the following information about your issue.
 
 - **Event Viewer:** Export system, application, and storage logs
-    - Filter: Event IDs 9, 20, 27, 39, 43, 55, 98, 129, 153, 157, 507 (and others, if relevant)
+  - Filter: Event IDs 9, 20, 27, 39, 43, 55, 98, 129, 153, 157, 507 (and others, if relevant)
 - **Cluster:**
-    - Get-ClusterLog -Destination \<path>
-    - Test-Cluster
+  - Get-ClusterLog -Destination \<path>
+  - Test-Cluster
 - **Disk/Physical Mapping:**
-    - Get-WmiObject -Class win32_diskdrive | select \*
-    - Get-Disk, Get-PhysicalDisk
+  - Get-WmiObject -Class win32_diskdrive | select \*
+  - Get-Disk, Get-PhysicalDisk
 - **Network Traces:**
-    - netsh trace start scenario=netconnection capture=yes tracefile=\<path>
-    - Wireshark .pcap as necessary
+  - netsh trace start scenario=netconnection capture=yes tracefile=\<path>
+  - Wireshark .pcap as necessary
 - **Performance:**
-    - Perfmon, logman for disk/network stats
-    - Storport traces: logman create trace drivers_storage
+  - Perfmon, logman for disk/network stats
+  - Storport traces: logman create trace drivers_storage
 - **Advanced:**
-    - refsutil logs for ReFS recovery
-    - Output from tools like DevNodeClean, MPIO and iscsicli.exe
+   refsutil logs for ReFS recovery
+  - Output from tools like DevNodeClean, MPIO and iscsicli.exe
 - **Service Config:**
-    - sc qc \<service>, sc config \<service> depend= MSiSCSI
+  - sc qc \<service>, sc config \<service> depend= MSiSCSI
 - **Screenshots:** For UI anomalies (disk management, iSCSI Initiator "Favorites," and so on)
 
 ## References
