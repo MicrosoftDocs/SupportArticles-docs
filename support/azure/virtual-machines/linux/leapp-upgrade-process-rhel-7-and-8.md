@@ -218,7 +218,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`. 
+Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.6` . 
 
 ### [RHEL 9.7 to RHEL 10.1](#tab/rhel9-rhel10)
 
