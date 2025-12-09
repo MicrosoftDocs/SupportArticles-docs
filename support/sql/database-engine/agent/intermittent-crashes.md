@@ -25,7 +25,7 @@ These failures occur if the SQL Server Agent service doesn't retrieve the follow
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceID>\SQLServerAgent\AutoRegistryRefresh`
 
-When the registry subkeykey retrieval fails, the SQL Server Agent service reports an exception in the log, and then it terminates itself.
+When the registry subkey retrieval fails, the SQL Server Agent service reports an exception in the log, and then it terminates itself.
 
 Registry subkey retrieval can fail because of the following reasons:
 
