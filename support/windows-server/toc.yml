@@ -766,7 +766,7 @@ items:
       href: ./backup-and-storage/windows-server-storage-migration-service.md
   - name: Storage Replica
     items:
-    - name: Troubleshoot Windows Server storage replica
+    - name: Troubleshoot Windows Server Storage Replica
       href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
   - name: Storage Sense
     items:
