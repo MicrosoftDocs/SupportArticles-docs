@@ -61,20 +61,7 @@ A SQL Server Agent fails when you try to start it, or it takes longer than you e
   <Time Stamp> - ? [175] Job scheduler engine stopped
   ```
 
-- **Scenario 3**: The database engine displays a session_id from the "SQLAgent - Generic Refresher" service and the following job is displayed as query text running in that session: `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
-
-   You can use the following query to check for such session and text:
-
-   ```sql
-   SELECT s.session_id, r.status, r.wait_type, r.wait_time, s.program_name, t.text
-   FROM sys.dm_exec_requests AS r
-   RIGHT JOIN sys.dm_exec_sessions s
-       ON r.session_id = s.session_id
-   OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) t
-   WHERE s.program_name = 'SQLAgent - Generic Refresher'
-   ```
-
-   When this issue occurs, the session is in a _RUNNABLE_ state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+- **Scenario 3**: The database engine displays a `session_id` from the _SQLAgent - Generic Refresher_ service and the following job is displayed as query text running in that session: `EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
 
 ## Cause 1: Multiple job entries
 
@@ -147,6 +134,43 @@ For information about the ODBC driver requirements for different versions of SQL
        ```powershell
        Get-Service -Name SQLAgent$<InstanceName>
        ```
+
+## Cause 3: Waiting for "SQLAgent - Generic Refresher" service
+
+When SQL Server Agent starts, the _SQLAgent – Generic Refresher_ component runs the `msdb.dbo.sp_sqlagent_refresh_job` procedure to refresh job metadata. During this operation, SQL Server might repeatedly check Windows group membership for job owners or proxy accounts. These checks use Windows API calls, which can cause the session to enter one or more of the following wait types:
+
+- `PREEMPTIVE_OS_LOOKUPACCOUNTSID`
+- `PREEMPTIVE_OS_AUTHORIZATIONOPS`
+- `ASYNC_NETWORK_IO`
+
+Use the following query to identify the session and the associated command text:
+
+```sql
+SELECT
+    s.session_id,
+    r.status,
+    r.wait_type,
+    r.wait_time,
+    s.program_name,
+    t.text
+FROM sys.dm_exec_requests AS r
+RIGHT JOIN sys.dm_exec_sessions AS s
+    ON r.session_id = s.session_id
+OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
+WHERE s.program_name = 'SQLAgent - Generic Refresher';
+```
+
+When this issue occurs, the session is in a _RUNNABLE_ state, and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type. Or, the session is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
+
+### Workaround
+
+To reduce delays related to Windows authorization lookups:
+
+- Ensure domain controllers are reachable and responsive.
+- Avoid using highly nested or very large Active Directory groups for SQL Agent job ownership or proxy accounts.
+- Restart SQL Server Agent after significant Active Directory group membership changes to refresh the service account’s access token.
+- Consider using SQL logins instead of AD groups for job ownership when appropriate.
+- Review SQL Agent jobs and proxies to identify Windows principals that might contribute to expensive Windows security lookups.
 
 ## More information
 
