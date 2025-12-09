@@ -61,10 +61,10 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Check physical and storage connectivity and switch zoning
-2. Remove ghost or hidden devices in Device Manager (enable "show hidden") or run devnode clean
-3. Uninstall unsupported or duplicate DSMs (Control Panel > Programs and Features)
-4. Restart, reinstall, or re-enable the Multipath-IO feature (Install-WindowsFeature Multipath-IO)
-5. Run:
+1. Remove ghost or hidden devices in Device Manager (enable "show hidden") or run devnode clean
+1. Uninstall unsupported or duplicate DSMs (Control Panel > Programs and Features)
+1. Restart, reinstall, or re-enable the Multipath-IO feature (Install-WindowsFeature Multipath-IO)
+1. Run:
 
     ```console
     mpclaim -e
@@ -73,7 +73,7 @@ The following sections detail the most common failure modes and provide step-by-
     ```
 
     Add missing hardware IDs in **MPIO Properties** > **Discover Multi-Paths**.
-6. Open DiskPart:
+1. Open DiskPart:
 
     ```console
     diskpart
@@ -81,7 +81,7 @@ The following sections detail the most common failure modes and provide step-by-
     exit
     ```
     
-7. Bring missing disks online in Disk Management or through DiskPart.
+1. Bring missing disks online in Disk Management or through DiskPart.
 
 ### Multipath Failover Delays or Path Flapping
 
@@ -96,7 +96,7 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Update all storage, HBA, and multipath drivers and firmware.
-2. Set recommended load-balancing policy and failover parameters:
+1. Set recommended load-balancing policy and failover parameters:
 
     ```powershell
     Set-MSDSMGlobalDefaultLoadBalancePolicy -Policy RR
@@ -109,7 +109,7 @@ The following sections detail the most common failure modes and provide step-by-
     ```
 
     Restart if prompted to do so.
-3. On clusters, increase disk resource timeouts to tolerate slow failover.
+1. On clusters, increase disk resource timeouts to tolerate slow failover.
 
 ### Cluster disk online pending or resource failure
 
@@ -122,11 +122,11 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Review cluster logs for timeout or resource errors.
-2. Increase resource timeout in Failover Cluster Manager (default is three minutes, try five minutes or more).
-3. Check for volume snapshots or FSRM quotas that delay bringing resources online.
-4. Clear any cluster dependencies or disk policies that are impeding access.
+1. Increase resource timeout in Failover Cluster Manager (default is three minutes, try five minutes or more).
+1. Check for volume snapshots or FSRM quotas that delay bringing resources online.
+1. Clear any cluster dependencies or disk policies that are impeding access.
 
-### 4. **Persistent Disk or Path Errors in Event Log**
+### 4. "Persistent Disk or Path Errors in Event Log"
 
 #### Symptoms
 
@@ -136,14 +136,14 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Verify that physical and logical paths exist and are healthy.
-2. Update storage firmware and drivers.
-3. For Event ID 158, reset disk GUIDs on VHDs by using:
+1. Update storage firmware and drivers.
+1. For Event ID 158, reset disk GUIDs on VHDs by using:
 
     ```powershell
     Set-VHD -Path \<VHD-Path> -ResetDiskIdentifier
     ```
 
-4. For repeated errors with third-party DSMs: Consult storage vendor, or migrate to supported native DSM.
+1. For repeated errors with third-party DSMs: Consult storage vendor, or migrate to supported native DSM.
 
 ### Duplicate disks or wrong disk order
 
@@ -156,7 +156,7 @@ The following sections detail the most common failure modes and provide step-by-
 
 1. Make sure that only one multipath solution is attached (remove unsupported DSMs, restart, and then reinstall or reconfigure MPIO).
 
-2. Disk order in Windows is nondeterministic. For applications, use persistent identifiers (GUID/UUID/WWN) instead of disk number or drive letter.
+1. Disk order in Windows is nondeterministic. For applications, use persistent identifiers (GUID/UUID/WWN) instead of disk number or drive letter.
 
 ### Performance and latency issues, high disk IO waits
 
@@ -176,9 +176,9 @@ The following sections detail the most common failure modes and provide step-by-
     logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
     ```
     
-2. Check for security or antivirus scans on storage volumes (exclude or temporarily disable to test the effect).
-3. Update drivers, firmware, and the OS.
-4. Use 64K allocation units for data volumes. Distribute disks across multiple controllers, if possible.
+1. Check for security or antivirus scans on storage volumes (exclude or temporarily disable to test the effect).
+1. Update drivers, firmware, and the OS.
+1. Use 64K allocation units for data volumes. Distribute disks across multiple controllers, if possible.
 
 ### Cluster disk disappears after an expansion or resize
 
@@ -189,7 +189,7 @@ The following sections detail the most common failure modes and provide step-by-
 #### Resolution
 
 1. Bring affected cluster role offline, then online (or move role to another node).
-2. Use DiskPart on the owner node to rescan and extend filesystem during maintenance:
+1. Use DiskPart on the owner node to rescan and extend filesystem during maintenance:
 
     ```console
     diskpart
@@ -215,8 +215,8 @@ The following sections detail the most common failure modes and provide step-by-
     mpclaim -n -d
     ```
 
-2. If the command is unsuccessful, a restart is required.
-3. Make sure that MPIO, DSM, and Storport are up to date.
+1. If the command is unsuccessful, a restart is required.
+1. Make sure that MPIO, DSM, and Storport are up to date.
 
 ### Known bug and ICM or product defect scenarios
 
@@ -224,13 +224,13 @@ The following sections detail the most common failure modes and provide step-by-
 
 - Persistent failover problems
 - Event 153 or 129, despite all fixes
-- Documented "won’t fix" scenarios in the OS version
+- Documented "won't fix" scenarios in the OS version
 
 #### Resolution
 
 1. Verify with Microsoft Support or vendor documentation all bug and ICM IDs.
-2. Implement documented workarounds.
-3. Upgrade to latest supported Windows Server build if a fix is available (for example, from 2019 to 2022 for known MPIO bugs).
+1. Implement documented workarounds.
+1. Upgrade to latest supported Windows Server build if a fix is available (for example, from 2019 to 2022 for known MPIO bugs).
 
 ## Common issues quick reference table
 
@@ -253,18 +253,18 @@ When issues persist after basic troubleshooting, use these steps to gather diagn
 
 - **Procmon (Process Monitor):** Trace "ACCESS DENIED" registry or file system events
 - **PowerShell:**
-    - Get-VMNetworkAdapter -VMName \<YourVMName>
-    - Import-VM for import verification and error export.
-    - Set-VMFirmware -VMName \<VMName> -SystemUUID ([guid]::NewGuid()) for UUID management
+  - Get-VMNetworkAdapter -VMName \<YourVMName>
+  - Import-VM for import verification and error export.
+  - Set-VMFirmware -VMName \<VMName> -SystemUUID ([guid]::NewGuid()) for UUID management
 - **System and cluster logs:**
-    - Windows Event Viewer: Collect logs from Hyper-V VMMS, cluster services, and storage
-    - Cluster validation reports
+  - Windows Event Viewer: Collect logs from Hyper-V VMMS, cluster services, and storage
+  - Cluster validation reports
 - **Registry Editor:** Audit permissions under HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker
 - **Command Line:**
-    - sfc /scannow
-    - DISM /Online /Cleanup-Image /RestoreHealth
-    - bcdedit /set hypervisorlaunchtype auto
-    - gpupdate /force
+  - sfc /scannow
+  - DISM /Online /Cleanup-Image /RestoreHealth
+  - bcdedit /set hypervisorlaunchtype auto
+  - gpupdate /force
 - **BIOS/UEFI:** screenshots or settings exports
 - **Minidump files** after blue screen
 - **Network trace logs** if connectivity issues exist
