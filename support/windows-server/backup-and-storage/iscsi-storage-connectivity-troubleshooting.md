@@ -1,7 +1,7 @@
 ---
 title: iSCSI Storage Connectivity Troubleshooting Guidance
 description: Resolves issues that occur in SAN-based and iSCSI storage environments in Windows Server.
-ms.date: 10/08/2025
+ms.date: 12/10/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-SAN-based and iSCSI storage environments in Windows Server (2025, 2022, 2019, and 2016) are essential for clustering, high-availability, virtualization, and large-scale file services. However, these environments can experience various issues, from connectivity dropouts and disk corruption to performance degradation and cluster failures. Causes range from misconfiguration and a driver-firmware mismatch to underlying network instability, hardware faults, and OS storage subsystem bugs. This article provides a step-by-step approach to diagnose and resolve common iSCSI, disk, and cluster-related failures to help administrators maintain high service availability, data integrity, and operational efficiency.
+SAN-based and iSCSI storage environments in Windows Server (2025, 2022, 2019, and 2016) are essential for clustering, high-availability, virtualization, and large-scale file services. However, these environments can experience various issues, from connectivity dropouts and disk corruption to performance degradation and cluster failures. Causes range from misconfiguration and driver-firmware mismatches to underlying network instability, hardware faults, and operating system or storage subsystem bugs. This article provides a step-by-step approach to diagnose and resolve common iSCSI, disk, and cluster-related failures to help you maintain high service availability, data integrity, and operational efficiency.
 
 ## Known issues
 
@@ -35,12 +35,12 @@ Use this checklist for systematic troubleshooting:
 
 - **Networking**
   - Make sure that iSCSI, management, and client networks are segregated and correctly routed.
-  - Are MTU, VLANs, Jumbo Frames, and Flow Control/ROCE/PFC are consistently configured?
+  - Are maximum transmission units (MTUs), virtual LANs (VLANs), Jumbo Frames, and Flow Control/ROCE/PFC consistently configured?
 - **Firmware and driver updates**
   - Are network adapters, storage controllers, and storage array firmware current and vendor-supported?
 - **Storage infrastructure**
-  - Are all SCSI, multipath or MPIO, and iSCSI target device drivers and tools up to date?
-  - Verify that all SAN zoning and LUN masking are correct.
+  - Are all iSCSI, multipath I/O (MPIO), and iSCSI target device drivers and tools up to date?
+  - Verify that all storage area network (SAN) zoning and logical unit number (LUN) masking are correct.
 - **Windows configuration**
   - Does the appropriate MPIO policy exist? Verify that disks and LUNs are visible and healthy in Disk Management.
   - Are cluster and quorum configurations validated (Test-Cluster, validation reports)?
@@ -77,7 +77,12 @@ The following sections describe the most issues, and provide step-by-step soluti
 #### Causes
 
 - Network instability.
-- Multi-path configuration errors.
+- MPIO configuration errors.
+- Network adapters or Load Balancing/Failover (LBFO) NIC teams aren't ready when iSCSI services start. As a result, ports can't bind correctly.
+
+  > [!IMPORTANT]  
+  > LBFO NIC teaming is deprecated for Windows Server Hyper-V deployments as of Windows Server 2022. Use switch embedded teaming (SET) instead. For more information, see the [Features no longer in development](/windows-server/get-started/removed-deprecated-features-windows-server) section of "Features removed or no longer developed in Windows Server."
+
 - Mismatched VLAN/MTU/Jumbo settings, improper failover scripts.
 - Outdated firmware or drivers.
 - Resource exhaustion on the storage area network (SAN) or network attached storage (NAS) array.
@@ -88,7 +93,7 @@ The following sections describe the most issues, and provide step-by-step soluti
    1. Restart the affected computer or virtual machine (VM), and then verify that the network adapter is ready.
    1. If you configured switch logs or port counters for this computer, verify that there aren't any anomalies in the data.
    1. To gather information about the network status, open a PowerShell Command Prompt window, and then run the [`Get-NetAdapter`](/powershell/module/netadapter/get-netadapter), [`Get-NetAdapterStatistics`](/powershell/module/netadapter/get-netadapterstatistics), [`Get-VMSwitch`](/powershell/module/hyper-v/get-vmswitch), and [`Get-VMSwitchTeam`](/powershell/module/hyper-v/get-vmswitchteam) cmdlets.
-   1. Ensure that maximum transmission units (MTUs) and Jumbo Frames are consistent end-to-end.
+   1. Make sure that MTUs and Jumbo Frames are consistent end-to-end.
    1. Resolve any issues that you find. For more detailed information about troubleshooting specific connectivity issues, see [Windows Server networking troubleshooting documentation](../networking/networking-overview.md). If you need more detailed troubleshooting data, open a Windows Command Prompt window and collect a network trace by using the following command:
 
       ```console
@@ -101,9 +106,33 @@ The following sections describe the most issues, and provide step-by-step soluti
 
 1. To review disk mappings and properties, use the [`Get-Disk`](/powershell/module/storage/get-disk), [`Get-PhysicalDisk`](/powershell/module/storage/get-physicaldisk), [`Out-GridView`](/powershell/module/microsoft.powershell.utility/out-gridview) cmdlets.
 
+1. Follow these steps to review the iSCSI and MPIO configuration.
+   1. To gather information about the path and session status, at the PowerShell command prompt, run the [`Get-IscsiConnection`](/powershell/module/iscsi/get-iscsiconnection), [`Get-IscsiSession`](powershell/module/iscsi/get-iscsisession), and [`Get-MSDSMAutomaticClaimSettings`](/powershell/module/mpio/get-msdsmautomaticclaimsettings) cmdlets.
+   1. To review specific persistent connections, at the PowerShell command prompt, run the following cmdlet:
+
+      ```powershell
+      Connect-IscsiTarget -NodeAddress <target> -TargetPortalAddress <IP> -TargetPortalPortNumber 3260 -IsPersistent $true
+      ```
+
+   1. If any of the storage IP addresses are incorrect, follow these steps:
+      1. In the search bar of the affected computer, type iSCSI Initiator, and then in the search results, select **iSCSI Initiator**.
+      1. Select **Favorite Targets**, select the target that you want to reconfigure, and then select **Remove**.
+      1. To add the target, select **Add** and then provide the configuration information for the new target.
+   1. If the affected computer is part of a cluster, make sure that the computer routes iSCSI traffic through dedicated network adapters (don't use the same adapters as production or cluster network traffic).
+
+1. To clean up an outdated configuration, follow these steps
+   1. In iSCSI Initiator, select **Discovery**, and then select **Refresh**. If the list contains a target that is incorrect or not used, select it and then select **Remove**.
+   1. At the PowerShell command prompt, run the following cmdlet:
+
+      ```powershell
+      Get-IscsiSession | Remove-IscsiSession
+      ```
+
 1. To change the disk and iSCSI timeout values, follow this step:
    [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
    - In the `HKLM\SYSTEM\CurrentControlSet\Services\disk` subkey, set the `TimeOutValue` value to a larger number, such as **179**.
+
+1. If you suspect that storage device itself is causing issues, contact your storage vendor.
 
 ### Volumes change to RAW, file system is corrupted, or metadata is corrupted
 
@@ -173,11 +202,11 @@ To check for and fix volume issues, follow these steps:
    > [!NOTE]  
    > You can also use the Services console (services.msc) to set dependencies. Make sure that critical services are set to **Automatic (Delayed Start)**.
 
-1. If this issue affects virtual machines (VMs), check the VM configuration or the Hyper-V configuration. Make sure that the drives are not listed as removable.
+1. If this issue affects virtual machines (VMs), check the VM configuration or the Hyper-V configuration. Make sure that the drives aren't listed as removable.
 
 1. To recover file shares, manually restart the LanmanServer service. You can use the Services console or the command line.
 
-1. If the earlier steps haven't resolved the issue, restore the volumes to a point before the corruption occurred.
+1. If the earlier steps didn't resolve the issue, restore the volumes to a point before the corruption occurred.
 
 ### Cluster resource, ownership, or quorum issues
 
