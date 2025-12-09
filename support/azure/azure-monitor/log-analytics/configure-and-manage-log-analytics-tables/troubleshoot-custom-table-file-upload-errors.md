@@ -11,7 +11,7 @@ ms.custom: Configure and Manage Log analytics tables
 
 # Troubleshoot file upload errors when creating custom tables in Azure
 
-Creating custom tables in Azure Log Analytics can sometimes present challenges, particularly when dealing with file uploads that result in errors. This article provides a step-by-step approach to troubleshoot and resolve issues related to creating custom tables, ensuring a smooth experience.
+Creating custom tables in Azure Log Analytics can sometimes present challenges, particularly when dealing with file uploads that result in errors. This article provides a step-by-step approach to troubleshoot and resolve issues related to creating custom tables.
 
 ## Symptoms
 
