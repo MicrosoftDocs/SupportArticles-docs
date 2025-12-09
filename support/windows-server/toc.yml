@@ -674,22 +674,30 @@ items:
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
     items:
+    - name: Troubleshoot Windows Server data deduplication
+      href: ./backup-and-storage/troubleshootwindows-server-data-deduplication.md
     - name: Files are corrupted on deduplicated volume
       href: ./backup-and-storage/files-are-corrupted-deduplicated-volume.md
     - name: Full garbage collection causes performance issues
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
   - name: File Server Resource Manager (FSRM)
     items:
+    - name: FSRM troubleshooting guidance
+      href: ./backup-and-storage/fsrm-troubleshooting-guidance.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
+    - name: Windows Server iSCSI storage connectivity troubleshooting guidance
+      href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
+    - name: Windows Server Multipath I/O (MPIO) troubleshooting guidance
+      href: ./backup-and-storage/windows-server-mpio-troubleshooting.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
@@ -752,6 +760,18 @@ items:
       href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
+  - name: Storage Migration
+    items:
+    - name: Troubleshoot Windows Server Storage Migration service
+      href: ./backup-and-storage/windows-server-storage-migration-service.md
+  - name: Storage Replica
+    items:
+    - name: Troubleshoot Windows Server storage replica
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
+  - name: Storage Sense
+    items:
+    - name: Troubleshoot Windows Server Storage Sense
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-sense.md
   - name: Storage Spaces
     items:
     - name: Extend stand-alone tiered storage spaces
