@@ -107,11 +107,11 @@ The following sections describe the most issues, and provide step-by-step soluti
 1. To review disk mappings and properties, use the [`Get-Disk`](/powershell/module/storage/get-disk), [`Get-PhysicalDisk`](/powershell/module/storage/get-physicaldisk), [`Out-GridView`](/powershell/module/microsoft.powershell.utility/out-gridview) cmdlets.
 
 1. Follow these steps to review the iSCSI and MPIO configuration.
-   1. To gather information about the path and session status, at the PowerShell command prompt, run the [`Get-IscsiConnection`](/powershell/module/iscsi/get-iscsiconnection), [`Get-IscsiSession`](powershell/module/iscsi/get-iscsisession), and [`Get-MSDSMAutomaticClaimSettings`](/powershell/module/mpio/get-msdsmautomaticclaimsettings) cmdlets.
+   1. To gather information about the path and session status, at the PowerShell command prompt, run the [`Get-IscsiConnection`](/powershell/module/iscsi/get-iscsiconnection), [`Get-IscsiSession`](/powershell/module/iscsi/get-iscsisession), and [`Get-MSDSMAutomaticClaimSettings`](/powershell/module/mpio/get-msdsmautomaticclaimsettings) cmdlets.
    1. To review specific persistent connections, at the PowerShell command prompt, run the following cmdlet:
 
       ```powershell
-      Connect-IscsiTarget -NodeAddress <target> -TargetPortalAddress <IP> -TargetPortalPortNumber 3260 -IsPersistent $true
+      Connect-IscsiTarget -NodeAddress <Target> -TargetPortalAddress <IPAddress> -TargetPortalPortNumber 3260 -IsPersistent $true
       ```
 
    1. If any of the storage IP addresses are incorrect, follow these steps:
@@ -177,8 +177,8 @@ To check for and fix volume issues, follow these steps:
      > [!NOTE]  
      >
      > - \<Drive> specifies the ReFS volume to process in the format E: or the path to the volume mount point.
-     > - \<LogFolder> specifies the location to store temporary information and logs. This folder must reside in a volume that doesn't reside on /<Drive>.
-     > - \<RecoveredDataFolder> specifies the location where identified files are copied to. This folder must reside in a volume that doesn't reside on /<Drive>.
+     > - \<LogFolder> specifies the location to store temporary information and logs. This folder must reside in a volume that doesn't reside on \<Drive>.
+     > - \<RecoveredDataFolder> specifies the location where identified files are copied to. This folder must reside in a volume that doesn't reside on \<Drive>.
      > - The `-FA` switch starts a deeper scan than the `-QA` switch does. The deeper scan might take significantly longer to finish.
 
 1. If the disk appears to be RAW or unformatted, try one or more of the following methods:
