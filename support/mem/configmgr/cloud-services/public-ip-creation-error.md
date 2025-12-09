@@ -75,7 +75,7 @@ Current Configuration Manager releases don't specify Availability Zone when crea
 
 ## Resolution
 
-Microsoft has released a hotfix to address this issue: [Cloud management gateway deployment maintenance update for Configuration Manager 2409, 2503](/intune/configmgr/hotfix/2503/35958849). Configuration Manager 2509 version includes this hotfix.
+Microsoft has released a hotfix to address this issue: [Cloud management gateway deployment maintenance update for Configuration Manager 2409, 2503](/intune/configmgr/hotfix/2503/35958849). [Configuration Manager 2509](/intune/configmgr/hotfix/2509/35877153) includes this hotfix.
 
 ## More information
 
