@@ -135,7 +135,7 @@ For information about the ODBC driver requirements for different versions of SQL
        Get-Service -Name SQLAgent$<InstanceName>
        ```
 
-## Cause 3: Waiting for "SQLAgent - Generic Refresher" service
+## Cause 3: Waiting for SQLAgent - Generic Refresher service
 
 When SQL Server Agent starts, the _SQLAgent – Generic Refresher_ component runs the `msdb.dbo.sp_sqlagent_refresh_job` procedure to refresh job metadata. During this operation, SQL Server might repeatedly check Windows group membership for job owners or proxy accounts. These checks use [Windows API](/windows/win32/api/) calls, which can cause the session to enter one or more of the following wait types:
 
