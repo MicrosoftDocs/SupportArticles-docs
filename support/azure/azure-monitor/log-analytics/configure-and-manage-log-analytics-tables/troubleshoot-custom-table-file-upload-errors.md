@@ -25,19 +25,19 @@ The file format isn't supported by Azure for table creation.
 
 Follow these steps to resolve this issue.
 
-1. **Verify the file format**
+**1. Verify the file format**
 
 Ensure the file you're attempting to upload is in a supported format. For more information, see [Azure Monitor Logs overview](/azure/azure-monitor/logs/data-platform-logs).
 
-1. **Check the file size**
+**2. Check the file size**
 
 Confirm that the file size doesn't exceed the limits set by Azure. Large files may need to be split into smaller parts.
 
-1. **Review documentation**
+**3. Review documentation**
 
 Familiarize yourself with [Add or delete tables and columns in Azure Monitor Logs](/azure/azure-monitor/logs/create-custom-table).
 
-1. **Upload the file**
+**4. Upload the file**
 
     a. Navigate to the [Azure portal](https://portal.azure.com) and access your Log Analytics workspace.
     b. Select **Custom Logs** and follow the prompts to upload your file.
