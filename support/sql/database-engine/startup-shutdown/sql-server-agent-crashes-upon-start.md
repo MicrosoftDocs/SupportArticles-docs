@@ -137,7 +137,7 @@ For information about the ODBC driver requirements for different versions of SQL
 
 ## Cause 3: Waiting for "SQLAgent - Generic Refresher" service
 
-When SQL Server Agent starts, the _SQLAgent – Generic Refresher_ component runs the `msdb.dbo.sp_sqlagent_refresh_job` procedure to refresh job metadata. During this operation, SQL Server might repeatedly check Windows group membership for job owners or proxy accounts. These checks use Windows API calls, which can cause the session to enter one or more of the following wait types:
+When SQL Server Agent starts, the _SQLAgent – Generic Refresher_ component runs the `msdb.dbo.sp_sqlagent_refresh_job` procedure to refresh job metadata. During this operation, SQL Server might repeatedly check Windows group membership for job owners or proxy accounts. These checks use [Windows API](/windows/win32/api/) calls, which can cause the session to enter one or more of the following wait types:
 
 - `PREEMPTIVE_OS_LOOKUPACCOUNTSID`
 - `PREEMPTIVE_OS_AUTHORIZATIONOPS`
@@ -167,7 +167,7 @@ When this issue occurs, the session is in a _RUNNABLE_ state, and regularly wait
 To reduce delays related to Windows authorization lookups:
 
 - Ensure domain controllers are reachable and responsive.
-- Avoid using highly nested or very large Active Directory groups for SQL Agent job ownership or proxy accounts.
+- Avoid using highly nested or very large [Active Directory](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) groups for SQL Agent job ownership or proxy accounts.
 - Restart SQL Server Agent after significant Active Directory group membership changes to refresh the service account’s access token.
 - Consider using SQL logins instead of AD groups for job ownership when appropriate.
 - Review SQL Agent jobs and proxies to identify Windows principals that might contribute to expensive Windows security lookups.
