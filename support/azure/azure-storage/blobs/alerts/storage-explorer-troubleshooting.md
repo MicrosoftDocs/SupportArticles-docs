@@ -479,7 +479,7 @@ If you accidentally attached by using an invalid shared access signature URL and
 Storage Explorer comes packaged with all dependencies it needs to run on Windows.
 
 > [!NOTE]
-> Some components need command line access. If it's restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
+> Some components need command line access. If restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
 
 ## [macOS](#tab/macOS)
 
@@ -840,7 +840,7 @@ docker run \
 
 ## Storage Explorer doesn't run within FSLogix session
 
-If FSLogix manages your user profile, Storage Explorer might be unable to run due to an `EEXIST` error. The error occurs due to a known issue with recent versions of FSLogix. If you encounter the error, you can work around it by following these steps:
+If FSLogix manages your user profile, Storage Explorer might be unable to run due to an `EEXIST` error. The error occurs due to a known issue with certain versions of FSLogix. If you encounter the error, make sure you're using the latest version of FSLogix. If the issue still occurs, you can work around it by following these steps:
 
 1. Open the Group Policy Management Console (gpmc.msc).
 

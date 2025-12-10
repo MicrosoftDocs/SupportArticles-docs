@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
 description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
-ms.date: 11/26/2025
+ms.date: 12/03/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -40,12 +40,32 @@ When you review events in Event Viewer, you might also find Event ID 2004 record
 
 > Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory: java.exe (1152) consumed 33821605888 bytes, java.exe (6316) consumed 5259997184 bytes, and java.exe (12536) consumed 1569894400 bytes.
 
+### Special case of error code 0x800705aa - Registry size limit
+
+Error code 0x800705aa might indicate a registry issue instead of a general virtual memory issue. To determine the source of the issue, check the CBS.log file for entries that resemble the following example:
+
+```output
+2024-05-13 22:31:56, Info                  CBS    Failed to load the COMPONENTS hive from 'C:\Windows\System32\config\COMPONENTS' into registry key 'HKLM\COMPONENTS'. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to load component store [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to get CSI store. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to get CSI Inventory [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to get component state. [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to get current state of the deployment [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+2024-05-13 22:31:56, Info                  CBS    Failed to get Transaction State for package: Microsoft-Windows-NetFx4-OC-Package~31bf3856ad364e35~amd64~~10.0.17763.1, update: NetFx4 [HRESULT = 0x800705aa - ERROR_NO_SYSTEM_RESOURCES]
+```
+
+For a contrasting example of CBS log entries that indicate a nonregistry cause, see [More information](#more-information).
+
+For more information about how to use the CBS log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+
 ## Cause
 
-This issue occurs if the computer or virtual machine (VM) doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
+In most cases, this issue occurs if the computer or virtual machine (VM) doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
 
 - Third-party applications are consuming lots of virtual memory.
 - The computer's virtual memory isn't managed automatically. Instead, it's manually configured.
+
+If the CBS log indicates that the issue involved registry resources, the `RegistrySizeLimit` registry entry is set to a value other than **0**. This value restricts the registry's maximum size. When the registry size grows to meet the configured limit, Windows can't perform necessary servicing activities, such as updates.
 
 ## Workaround: Clean restart
 
@@ -69,6 +89,8 @@ After the computer restarts, try again to update it.
 > [!IMPORTANT]  
 > Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
+### General resource issues
+
 > [!NOTE]  
 > If the affected computer is a VM, consider upgrading the virtual hardware of the VM to increase its available memory resources.
 
@@ -79,11 +101,30 @@ To configure the computer to automatically manage its virtual memory, follow the
 1. In **Performance Options**, select **Advanced** > **Virtual memory** > **Change**.
 1. Make sure that **Automatically manage paging file size for all drives** is selected, and then select **OK**.
 1. Restart the computer.
-1. To make sure that this issue doesn't reoccur, monitor the computer's available memory resources.
+1. To make sure that this issue doesn't occur again, monitor the computer's available memory resources.
+
+### Registry size limit issue
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+To reset the registry size limit, follow these steps:
+
+1. In the search bar of the affected computer or VM, type **regedit**, and then right-click **Registry Editor** in the search results.
+1. Select **Run as administrator**.
+1. Select `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`.
+1. Right-click `RegistrySizeLimit`, and then do one of the following actions:
+
+   - Select **Delete**.
+   - Select **Modify**, enter **0** in the **Value data** field, and then select **OK**.
+
+1. Restart the physical computer or VM.
+1. On the affected computer or VM, try again to update Windows.
+
+If the issue persists, contact Microsoft Support for more assistance. Attach copies of any relevant CBS.log data to your support request.
 
 ## More information
 
-As an example of this issue, the following excerpt shows how error code 0x800705aa appears in the CBS.log file:
+The following example shows how error code 0x800705aa might appear in the CBS.log file if the issue doesn't involve the registry size limit:
 
 ```output
 2024-02-06 02:20:51, Info          

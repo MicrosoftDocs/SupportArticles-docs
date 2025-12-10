@@ -47,8 +47,6 @@ items:
     items:
       - name: Browser automation
         items:
-          - name: Browser automation actions stop working after a browser update
-            href: desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md
           - name: Can't automate webpage with cross-domain iframes
             href: desktop-flows/browser-automation/cannot-automate-webpage-with-iframes.md
           - name: Can't interact with web elements on runtime
@@ -83,6 +81,8 @@ items:
                 href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
       - name: SAP automation
         items:
+          - name: Authentication popup appears when launching SAP
+            href: desktop-flows/sap-automation/handle-authentication-popup-launch-sap.md
           - name: Can't capture SAP GuiTree objects
             href: desktop-flows/sap-automation/cannot-capture-guitree-objects.md
           - name: Can't open SAP
@@ -105,6 +105,8 @@ items:
             href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
           - name: Interactions with RDP or Citrix applications take a long time and fail
             href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
+          - name: RDP automation fails to connect to a machine through CyberArk
+            href: desktop-flows/ui-automation/ui-rdp-automation/cyberark-connection-not-supported.md
           - name: Set drop-down list value in window/on web page action fails
             href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
           - name: UI element highlighting or hovering issues in virtual desktops
@@ -115,6 +117,8 @@ items:
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions
             href: desktop-flows/ui-automation/uipi-issues.md
+          - name: Wrong UI element is clicked or populated in desktop flow
+            href: desktop-flows/ui-automation/wrong-ui-element-clicked-populated.md
       - name: '"Could not read the application certificate" error when creating a connection'
         href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows

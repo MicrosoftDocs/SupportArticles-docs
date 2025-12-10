@@ -674,22 +674,30 @@ items:
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
     items:
+    - name: Troubleshoot Windows Server data deduplication
+      href: ./backup-and-storage/troubleshootwindows-server-data-deduplication.md
     - name: Files are corrupted on deduplicated volume
       href: ./backup-and-storage/files-are-corrupted-deduplicated-volume.md
     - name: Full garbage collection causes performance issues
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
   - name: File Server Resource Manager (FSRM)
     items:
+    - name: FSRM troubleshooting guidance
+      href: ./backup-and-storage/fsrm-troubleshooting-guidance.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
+    - name: iSCSI storage connectivity troubleshooting guidance
+      href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
+    - name: Multipath I/O (MPIO) troubleshooting guidance
+      href: ./backup-and-storage/windows-server-mpio-troubleshooting.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
@@ -752,12 +760,26 @@ items:
       href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
+  - name: Storage Migration
+    items:
+    - name: Troubleshoot Windows Server Storage Migration service
+      href: ./backup-and-storage/windows-server-storage-migration-service.md
+  - name: Storage Replica
+    items:
+    - name: Troubleshoot Windows Server Storage Replica
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
+  - name: Storage Sense
+    items:
+    - name: Troubleshoot Windows Server Storage Sense
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-sense.md
   - name: Storage Spaces
     items:
     - name: Extend stand-alone tiered storage spaces
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
+    - name: Troubleshoot performance issues in Storage Spaces Direct
+      href: ./backup-and-storage/troubleshoot-performance-issues-storage-spaces-direct.md
   - name: System Restore or resetting your computer
     items:
     - name: How to restore a Windows 7 installation
@@ -2776,6 +2798,8 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
+    - name: Windows updates don't install on VM cluster hosts
+      href: ./virtualization/windows-updates-dont-install-on-vm-cluster-hosts.md
   - name: Hyper-V Replica
     items:
     - name: Feature and performance optimization of HVR
@@ -3112,6 +3136,8 @@ items:
       href: ./windows-security/mark-attribute-as-confidential.md
     - name: Maximum number of access control entries
       href: ./windows-security/error-add-user-to-security-permissions.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ./windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md
     - name: Security auditing settings aren't applied when you deploy domain-based policy
       href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
     - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
@@ -3218,34 +3244,39 @@ items:
       href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
     - name: Fix Windows Update corruptions and installation failures
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: Troubleshoot Windows Update download errors
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
+    - name: Troubleshoot Windows Update error code 0x80070070
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md
+    - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
+      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
-    - name: Troubleshoot Windows Update download errors
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
-    - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
-      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md   
-    - name: Troubleshoot Windows Update error 0x80244007
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md   
-    - name: Troubleshoot Windows Update error 0x80072f8f    
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
-    - name: Troubleshoot Windows Update error 0x800f0920
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
     - name: Troubleshoot Windows Update error 0x80070bc9
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
+    - name: Troubleshoot Windows Update error 0x80072f8f
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
+    - name: Troubleshoot Windows Update error 0x800f0823
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md
+    - name: Troubleshoot Windows Update error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
+    - name: Troubleshoot Windows Update error 0x800f0920
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
+    - name: Troubleshoot Windows Update error 0x8024001E
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80244007
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-
-    - name: Error Code 0x800f0831
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
   - name: Windows Update for Business Reports
     items:
-    - name: Troubleshoot Windows Installation Error 0x800f0831
+    - name: Troubleshoot Windows Update error 0x800f0831
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
@@ -3307,13 +3338,15 @@ items:
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Collect data to analyze and troubleshoot Group Policy scenarios
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-group-policy-scenarios.md?context=/troubleshoot/windows-server/context/context
-    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
-      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
-    - name: Collect data to analyze and troubleshoot system management components scenarios
-      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Collect data to analyze and troubleshoot Hyper-V related issues
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot system management components scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
+      href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
       href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context

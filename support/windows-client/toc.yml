@@ -1341,6 +1341,8 @@ items:
     items:
     - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ../windows-server/windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md?context=/troubleshoot/windows-client/context/context
   - name: Zero Trust DNS
     items:
     - name: 'Troubleshooting Guidance: Zero Trust DNS'
@@ -1423,8 +1425,14 @@ items:
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
+    - name: Troubleshoot Windows Update error code 0x80070070
+      href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot Windows Update error 0x80072EFE
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
+    - name: Troubleshoot Windows Update error 0x800f0823
+      href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot Windows Update error 0x8024001E
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md
     - name: Windows Update common errors and mitigation
       href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Windows Troubleshooters
@@ -1457,6 +1465,8 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md
     - name: Collect data to analyze and troubleshoot Group Policy scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-group-policy-scenarios.md
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
     - name: Collect data to analyze and troubleshoot licensing and activation scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-licensing-activation-scenarios.md
     - name: Collect data to analyze and troubleshoot Windows networking scenarios
@@ -1465,15 +1475,15 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-performance-scenarios.md
     - name: Collect data to analyze and troubleshoot Remote Desktop Services scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-remote-desktop-services-scenarios.md
-    - name: Collect data to analyze and troubleshoot shell experience scenarios
-      href: ./windows-tss/collect-data-analyze-troubleshoot-shell-experiences-scenarios.md
     - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
-    - name: Collect data to analyze and troubleshoot system management components scenarios
-      href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
-    - name: Collect data to analyze and troubleshoot Hyper-V related issues
-      href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
+    - name: Collect data to analyze and troubleshoot shell experience scenarios
+      href: ./windows-tss/collect-data-analyze-troubleshoot-shell-experiences-scenarios.md
     - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
       href: ./windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md
+    - name: Collect data to analyze and troubleshoot system management components scenarios
+      href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
+    - name: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
