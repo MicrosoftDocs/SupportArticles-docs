@@ -55,7 +55,7 @@ To resolve this problem, use an SQL query tool to discover why the document is d
 5. Run the following script against the company database:
 
     ```sql
-    Select PSTGSTUS, BCHSOURC, VOIDSTTS,TRXSORCE, DEX_ROW_ID * from SOP10100 where SOPNUMBE = 'Enter your SOP Document number with issue'
+    Select PSTGSTUS, BCHSOURC, VOIDSTTS,TRXSORCE, DEX_ROW_ID, * from SOP10100 where SOPNUMBE = 'Enter your SOP Document number with issue'
     ```
 
 6. > [!NOTE]
