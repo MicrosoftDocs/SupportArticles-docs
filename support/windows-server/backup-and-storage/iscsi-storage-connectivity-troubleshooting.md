@@ -23,24 +23,24 @@ SAN-based and iSCSI storage environments in Windows Server (2025, 2022, 2019, an
 
 ### After you restart Windows Server 2022, the list of favorite target IPs for the iSCSI configuration is incorrect
 
-This issue might occur even if the backend configuration is correct. This is a display issue, and Microsoft is aware of the issue.
+This is a display issue that might occur even if the backend configuration is correct. Microsoft is aware of the issue.
 
 ### Backups become unresponsive on Windows Server 2025 ReFS drives
 
-To fix this issue, install the latest Windows Update. [December 9, 2025—KB5072033 (OS Build 26100.7462)](https://support.microsoft.com/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1) and later updates contain the fix for this issue.
+To fix this issue, install the latest Windows Update. The [December 9, 2025—KB5072033 (OS Build 26100.7462)](https://support.microsoft.com/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1) update and later updates contain the fix for this issue.
 
 ## Troubleshooting checklist
 
 Use this checklist for systematic troubleshooting:
 
 - **Networking**
-  - Make sure that iSCSI, management, and client networks are segregated and correctly routed.
+  - Are iSCSI, management, and client networks segregated and correctly routed?
   - Are maximum transmission units (MTUs), virtual LANs (VLANs), Jumbo Frames, and Flow Control/ROCE/PFC consistently configured?
 - **Firmware and driver updates**
   - Are network adapters, storage controllers, and storage array firmware current and vendor-supported?
 - **Storage infrastructure**
   - Are all iSCSI, multipath I/O (MPIO), and iSCSI target device drivers and tools up to date?
-  - Verify that all storage area network (SAN) zoning and logical unit number (LUN) masking are correct.
+  - Are all storage area network (SAN) zoning and logical unit number (LUN) masking correct?
 - **Windows configuration**
   - Does the appropriate MPIO policy exist? Verify that disks and LUNs are visible and healthy in Disk Management.
   - Are cluster and quorum configurations validated (Test-Cluster, validation reports)?
@@ -50,14 +50,14 @@ Use this checklist for systematic troubleshooting:
   - Does the VSS and backup configuration comply with storage guidelines?
   - Are shadow copies and snapshots managed and not excessive?
 - **Documentation and change log**
-  - Document all infrastructure changes that occurred before the incident (updates, config edits, firmware, hardware swaps, and so on).
+  - Are all infrastructure changes that occurred before the incident (updates, configuration edits, firmware, hardware swaps, and so on) documented?
 
 ## Common issues and solutions
 
-The following sections describe the most issues, and provide step-by-step solutions.
+The following sections describe the most common issues, and provide step-by-step solutions for them.
 
 > [!IMPORTANT]  
-> To use these solutions, make sure you install these Windows PowerShell modules:
+> To use these solutions, make sure that you install the following Windows PowerShell modules:
 >
 > - NetAdapter
 > - Hyper-V
@@ -71,14 +71,14 @@ The following sections describe the most issues, and provide step-by-step soluti
 #### Symptoms
 
 - After a restart, drives or volumes are offline or marked as RAW.
-- "Disk X has been surprise removed" (Event ID 157).
+- Event ID 157: "Disk X has been surprise removed"
 - iSCSI events and errors: Event IDs 9, 20, 27, 39, 153, "Target did not respond," "Initiator failed to connect," "IO operation at logical block address was retried."
 
 #### Causes
 
 - Network instability.
 - MPIO configuration errors.
-- Network adapters or Load Balancing/Failover (LBFO) NIC teams aren't ready when iSCSI services start. As a result, ports can't bind correctly.
+- Network adapters or Load Balancing/Failover (LBFO) NIC teams aren't ready when iSCSI services start. Therefore, ports can't bind correctly.
 
   > [!IMPORTANT]  
   > LBFO NIC teaming is deprecated for Windows Server Hyper-V deployments as of Windows Server 2022. Use switch embedded teaming (SET) instead. For more information, see the [Features no longer in development](/windows-server/get-started/removed-deprecated-features-windows-server) section of "Features removed or no longer developed in Windows Server."
@@ -89,12 +89,12 @@ The following sections describe the most issues, and provide step-by-step soluti
 
 #### Resolution
 
-1. Follow these steps to review the health of the network:
+1. To review the health of the network, follow these steps:
    1. Restart the affected computer or virtual machine (VM), and then verify that the network adapter is ready.
    1. If you configured switch logs or port counters for this computer, verify that there aren't any anomalies in the data.
-   1. To gather information about the network status, open a PowerShell Command Prompt window, and then run the [`Get-NetAdapter`](/powershell/module/netadapter/get-netadapter), [`Get-NetAdapterStatistics`](/powershell/module/netadapter/get-netadapterstatistics), [`Get-VMSwitch`](/powershell/module/hyper-v/get-vmswitch), and [`Get-VMSwitchTeam`](/powershell/module/hyper-v/get-vmswitchteam) cmdlets.
-   1. Make sure that MTUs and Jumbo Frames are consistent end-to-end.
-   1. Resolve any issues that you find. For more detailed information about troubleshooting specific connectivity issues, see [Windows Server networking troubleshooting documentation](../networking/networking-overview.md). If you need more detailed troubleshooting data, open a Windows Command Prompt window and collect a network trace by using the following command:
+   1. To gather information about the network status, go to the PowerShell Command Prompt window, and then run the [`Get-NetAdapter`](/powershell/module/netadapter/get-netadapter), [`Get-NetAdapterStatistics`](/powershell/module/netadapter/get-netadapterstatistics), [`Get-VMSwitch`](/powershell/module/hyper-v/get-vmswitch), and [`Get-VMSwitchTeam`](/powershell/module/hyper-v/get-vmswitchteam) cmdlets.
+   1. Make sure that MTUs and Jumbo Frames are consistent end to end.
+   1. Resolve any issues that you find. For more detailed information about how to troubleshoot specific connectivity issues, see [Windows Server networking troubleshooting documentation](../networking/networking-overview.md). If you need more detailed troubleshooting data, open a Windows Command Prompt window, and collect a network trace by running the following command:
 
       ```console
       Netsh trace start scenario=netconnection capture=yes tracefile=c:\os.etl
@@ -106,22 +106,22 @@ The following sections describe the most issues, and provide step-by-step soluti
 
 1. To review disk mappings and properties, use the [`Get-Disk`](/powershell/module/storage/get-disk), [`Get-PhysicalDisk`](/powershell/module/storage/get-physicaldisk), [`Out-GridView`](/powershell/module/microsoft.powershell.utility/out-gridview) cmdlets.
 
-1. Follow these steps to review the iSCSI and MPIO configuration.
-   1. To gather information about the path and session status, at the PowerShell command prompt, run the [`Get-IscsiConnection`](/powershell/module/iscsi/get-iscsiconnection), [`Get-IscsiSession`](/powershell/module/iscsi/get-iscsisession), and [`Get-MSDSMAutomaticClaimSettings`](/powershell/module/mpio/get-msdsmautomaticclaimsettings) cmdlets.
-   1. To review specific persistent connections, at the PowerShell command prompt, run the following cmdlet:
+1. To review the iSCSI and MPIO configuration, follow these steps:
+   1. To gather information about the path and session status, go to the PowerShell command prompt, and then run the [`Get-IscsiConnection`](/powershell/module/iscsi/get-iscsiconnection), [`Get-IscsiSession`](/powershell/module/iscsi/get-iscsisession), and [`Get-MSDSMAutomaticClaimSettings`](/powershell/module/mpio/get-msdsmautomaticclaimsettings) cmdlets.
+   1. To review specific persistent connections, go to the PowerShell command prompt, and then run the following cmdlet:
 
       ```powershell
       Connect-IscsiTarget -NodeAddress <Target> -TargetPortalAddress <IPAddress> -TargetPortalPortNumber 3260 -IsPersistent $true
       ```
 
    1. If any of the storage IP addresses are incorrect, follow these steps:
-      1. In the search bar of the affected computer, type iSCSI Initiator, and then in the search results, select **iSCSI Initiator**.
+      1. In the search bar of the affected computer, enter _iSCSI Initiator_, and then select **iSCSI Initiator** in the search results.
       1. Select **Favorite Targets**, select the target that you want to reconfigure, and then select **Remove**.
-      1. To add the target, select **Add** and then provide the configuration information for the new target.
-   1. If the affected computer is part of a cluster, make sure that the computer routes iSCSI traffic through dedicated network adapters (don't use the same adapters as production or cluster network traffic).
+      1. To add the target, select **Add**, and then provide the configuration information for the new target.
+   1. If the affected computer is part of a cluster, make sure that the computer routes iSCSI traffic through dedicated network adapters. Don't use the same adapters as production or cluster network traffic.
 
-1. To clean up an outdated configuration, follow these steps
-   1. In iSCSI Initiator, select **Discovery**, and then select **Refresh**. If the list contains a target that is incorrect or not used, select it and then select **Remove**.
+1. To clean up an outdated configuration, follow these steps:
+   1. In iSCSI Initiator, select **Discovery**, and then select **Refresh**. If the list contains a target that's incorrect or not used, select it, and then select **Remove**.
    1. At the PowerShell command prompt, run the following cmdlet:
 
       ```powershell
@@ -138,17 +138,17 @@ The following sections describe the most issues, and provide step-by-step soluti
 
 #### Symptoms
 
-- File share becomes inaccessible
-- Copy or backup operation fails
+- A file share becomes inaccessible.
+- A copy or backup operation fails.
 - Message: "The file system detected a checksum error" or "Device... has a bad block."
 - An NTFS, RECORD, or ReFS volume unexpectedly becomes RAW.
 
 #### Causes
 
-- Improper shutdown or storage disconnects.
-- Physical disk or controller hardware failure.
-- Partition table or volume boundary errors.
-- Service dependencies not set (after a restart, file shares are missing).
+- Improper shutdown or storage disconnects
+- Physical disk or controller hardware failure
+- Partition table or volume boundary errors
+- Service dependencies not set (after a restart, file shares are missing)
 
 #### Resolution
 
@@ -157,7 +157,7 @@ To check for and fix volume issues, follow these steps:
 1. Back up the affected volume.
 1. To detect and repair corruption, run the appropriate disk utility:
 
-   - For an NTFS volume, at the command prompt, run the following commands:
+   - For an NTFS volume, run the following commands at a Windows command prompt:
 
      ```console
      chkdsk /f <Drive>:
@@ -167,7 +167,7 @@ To check for and fix volume issues, follow these steps:
      > [!NOTE]  
      > In these commands, \<Drive> represents the letter of the drive where the affected volume resides.
 
-   - For an ReFS volume, at the command prompt, run the following commands:
+   - For an ReFS volume, run the following commands at a Windows command prompt:
 
      ```console
      refsutil salvage -QA <Drive> <LogFolder> <RecoveredDataFolder> -x
@@ -176,22 +176,22 @@ To check for and fix volume issues, follow these steps:
 
      > [!NOTE]  
      >
-     > - \<Drive> specifies the ReFS volume to process in the format E: or the path to the volume mount point.
-     > - \<LogFolder> specifies the location to store temporary information and logs. This folder must reside in a volume that doesn't reside on \<Drive>.
-     > - \<RecoveredDataFolder> specifies the location where identified files are copied to. This folder must reside in a volume that doesn't reside on \<Drive>.
-     > - The `-FA` switch starts a deeper scan than the `-QA` switch does. The deeper scan might take significantly longer to finish.
+     > - \<Drive> specifies the ReFS volume to process in the format "E:" or the path to the volume mount point.
+     > - \<LogFolder> specifies the location to store temporary information and logs. This folder must reside on a volume that doesn't reside on \<Drive>.
+     > - \<RecoveredDataFolder> specifies the location that identified files are copied to. This folder must reside on a volume that doesn't reside on \<Drive>.
+     > - The `-FA` switch starts a deeper scan than the `-QA` switch does. The deeper scan might take much longer to finish.
 
 1. If the disk appears to be RAW or unformatted, try one or more of the following methods:
    - Attach the disk to a computer that runs a later version of Windows Server.
    - If you're using Windows Server 2019 or a later version to connect to the disk, use `rfsutil` to back up and recover data.
-   - Use other file recovery tools to back p and recover data.
+   - Use other file recovery tools to back up and recover data.
 
 1. To verify and fix partition tables, run one of the following tools:
 
-   - The [Disk Management console](disk-management-snap-in-basic-dynamic-disks.md) (in the search bar, type **diskmgmt.msc** and then in the search results, select **Disk Management**).
+   - The [Disk Management console](disk-management-snap-in-basic-dynamic-disks.md) (in the search bar, type **diskmgmt.msc**, and then select **Disk Management** in the search results).
    - [diskpart](/windows-server/administration/windows-commands/diskpart) (use at a Windows command prompt).
 
-1. To check for underlying disk issues, use vendor diagnostics tools to review disk information (including SMART data). If needed, replace the disk.
+1. To check for underlying disk issues, use vendor diagnostics tools to review disk information (including SMART data). If it's necessary, replace the disk.
 
 1. To set service dependencies, run the following command at a Windows command prompt:
 
@@ -206,21 +206,21 @@ To check for and fix volume issues, follow these steps:
 
 1. To recover file shares, manually restart the LanmanServer service. You can use the Services console or the command line.
 
-1. If the earlier steps didn't resolve the issue, restore the volumes to a point before the corruption occurred.
+1. If the previous steps don't resolve the issue, restore the volumes to a point before the corruption occurred.
 
 ### Cluster resource, ownership, or quorum issues
 
 #### Symptoms
 
 - Cluster disks go offline or don't come online.
-- Message: "Cluster Disk X contains an invalid mount point."
-- Event IDs 98 or 55.
+- You see the following message: "Cluster Disk X contains an invalid mount point."
+- Event IDs 98 or 55 occur.
 - Failover Cluster Manager shows failed resources, lost quorum, or invalid signatures.
 
 #### Cause
 
-- Incorrect cluster quorum configuration.
-- Disk or signature conflicts (duplicate VHDs, snapshots attached).
+- The cluster quorum configuration is incorrect.
+- Disk or signature conflicts (duplicate VHDs, snapshots attached) exist.
 - Permissions for cluster-related files (MachineKeys) are missing certificate/key pairs.
 - Storage vendor persistent reservation (PR) has a mismatch or stale entries.
 
@@ -233,19 +233,18 @@ To check for and fix volume issues, follow these steps:
    Get-ClusterLog -Destination <Path>
    ```
 
-1. If disk-related resources appear to be "stuck, remove and re-add them to cluster storage.
+1. If disk-related resources appear to be "stuck, remove and then restore them to cluster storage.
    - Adjust CrossSubnetDelay and CrossSubnetThreshold for better tolerance to transient network issues.
-1. Review the quorum configuration, and if needed, reassign the quorum.
+1. Review the quorum configuration. If it's necessary, reassign the quorum.
 1. Review the certificates and certificate store.
    - Check the certificate store's access control list. The SYSTEM account and the ADMINISTRATORS group must have full control on the C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys folder.
-   - If needed, use Windows command prompt commands that resemble the following example to re-import required certificates
+   - If it's necessary, re-import required certificates by running commands that resemble the following example at a Windows command prompt:
 
       ```console
       certutil -store -service clussvc\my
       ```
 
-1. Review disk ownership and signature information. Check each of the following configurations:
-
+1. Review disk ownership and signature information:
    - Detach conflicting or double-mapped VHDs.
    - Verify that all signatures are unique.
    - To clear persistent reservations (PRs), contact your storage vendor
@@ -253,7 +252,7 @@ To check for and fix volume issues, follow these steps:
 
 ### MOF provider, WMI provider, or iSCSI or Storage PowerShell command issues
 
-If iSCSI or Storage PowerShell commands aren't working, you might have a Windows Management interface (WMI) or Managed Object Format (MOF) issue. To troubleshoot WMI and MOF, follow these steps:
+If iSCSI or Storage PowerShell commands aren't working, you might have an issue that affects Windows Management interface (WMI) or Managed Object Format (MOF). To troubleshoot WMI and MOF, follow these steps:
 
 1. Open an administrative Command Prompt window, and then run the following commands.
 
@@ -275,19 +274,19 @@ If iSCSI or Storage PowerShell commands aren't working, you might have a Windows
 
 #### Symptoms
 
-- Slow performance. For example, the **Avg. Disk sec/Write** shows unusually high values (such as 500 ms).
-- Slow backups or queries.
-- Frequent IO retries.
-- Excessive shadow copies (more than 1,000).
+- You experience slow performance. For example, the **Avg. Disk sec/Write** field shows unusually high values (such as 500 ms).
+- Backups and queries are slow.
+- Frequent IO retries occur.
+- Shadow copies are excessive (more than 1,000).
 - Disks appear to be "full" regardless of free space.
 
 #### Cause
 
 - Disk fragmentation on HDDs, or lack of TRIM on SSDs.
 - Network or switch misconfiguration or packet loss.
-- Disks go offline because they run out of available disk space
-- Excessively long disk queues, accumulated shadow copies (more than 4,000 copies), or storport driver issues can increase latency.
-- Non-optimized commands or insufficient available threads can slow down backup or file copy operations.
+- Disks that go offline (because they run out of available disk space).
+- Excessively long disk queues, accumulated shadow copies (more than 4,000 copies), or storport driver issues. These can increase latency.
+- Nonoptimized commands or insufficient available threads. These can slow down backup or file copy operations.
 
 #### Resolution
 
@@ -295,7 +294,7 @@ To troubleshoot performance and latency issues, follow these steps:
 
 1. Use Performance Monitor (Perfmon) to review the length and latency of disk queues.
 
-1. Make sure that the operating system is up to date. [December 9, 2025—KB5072033 (OS Build 26100.7462)](https://support.microsoft.com/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1) and later updates contain a fix for an issue that affected backup performance in Windows Server 2025.
+1. Make sure that the operating system is up to date. The [December 9, 2025—KB5072033 (OS Build 26100.7462)](https://support.microsoft.com/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1) update and later updates contain a fix for an issue that affects backup performance in Windows Server 2025.
 
 1. For large data copy and backup operations, use [`robocopy`](/windows-server/administration/windows-commands/robocopy). As shown in the following example, `robocopy` includes multi-threading and logging options.
 
@@ -303,57 +302,58 @@ To troubleshoot performance and latency issues, follow these steps:
    robocopy <src> <dst> /E /COPYALL /SECFIX /R:1 /W:1 /Z /MT:16 /LOG+:copylog.txt /NFL /NDL
    ```
 
-1. Make sure that MTUs and Jumbo Frames are consistent end-to-end. To make sure that an MTU is correctly configured, at the Windows command prompt, run the following command:
+1. Make sure that MTUs and Jumbo Frames are consistent from end to end. To make sure that an MTU is correctly configured, open a Windows Command Prompt window, and run the following command:
 
    ```console
    netsh interface ipv4 set subinterface "\<Name>" mtu=9000 store=persistent
    ```
 
-1. To clean up excessive shadow copies, at a Windows command prompt, run the following command:
+1. To clean up excessive shadow copies, go to a Windows command prompt, and run the following command:
 
    ```console
    vssadmin delete shadows /all
    ```
 
-1. To clean up orphaned devices, at a Windows command prompt, run the following commands:
+1. To clean up orphaned devices, go to a Windows command prompt window, and run the following commands:
 
    ```console
    devnodeclean /n
    devnodeclean
    ```
 
-1. Check the sizes of any virtual hard disks (VHD or VHDX). If appropriate, resize them.
+1. Check the sizes of any virtual hard disks (VHD or VHDX). If it's appropriate, resize them.
 
-1. Review the antivirus exclusion configuration, and fix if needed.
+1. Review the antivirus exclusion configuration, and fix it if it's necessary.
 
 1. If you have HDD devices, defragment them.
-1. If you have SSD devices, use the following command at a PowerShell command prompt to optimize them.
+
+1. If you have SSD devices, run the following command at the PowerShell command prompt:
 
    ```powershell
    Optimize-Volume -DriveLetter X -ReTrim -Verbose
    ```
 
-1. Review the drivers, firmware, and related policies for all storage devices and controllers, as well as for network adapters.
+1. Review the drivers, firmware, and related policies for all storage devices and controllers, and network adapters.
 
 ## Common issues quick reference table
 
 | Symptom | Root cause | Resolution |
 | --- | --- | --- |
 | Disk surprise removed (157) | Storage/network instability | Check network configuration and MPIO settings, update drivers |
-| Disk RAW/Inaccessible | File system or partition issue | chkdsk, refsutil, adjust partitions, backup data |
+| Disk RAW/Inaccessible | File system or partition issue | Run chkdsk and refsutil, adjust partitions, back up data |
 | "The device has a bad block" (7) | Hardware fault | Replace disk/controller, run vendor diagnostics |
 | iSCSI failed to connect (20,27) | Config/network/target issue | Review target IP addresses, reset sessions, fix mappings |
-| Cluster disk/ownership errors | Quorum/mount/perm issue | Verify cluster configuration, fix permissions, vendor PR |
+| Cluster disk/ownership errors | Quorum/mount/permissions issue | Verify cluster configuration, fix permissions, vendor PR |
 | Performance/Backup slowness | Fragmentation, VSS, driver | Trim disks, clean up shadow copies, update drivers |
 | File shares disappear after restart | Service dependencies not set | `sc configuration`, set Delayed Start, review logs |
-| iSCSI Initiator UI shows old IP | Known issue | Ignore, no functional impact |
-| Incorrect disk mapping | Wrong IP address/session/favorite target | Remove, and then add correct targets, use persistent sessions |
+| iSCSI Initiator UI shows old IP | Known issue | Ignore (no functional effect) |
+| Incorrect disk mapping | Wrong IP address/session/favorite target | Remove and then restore correct targets, use persistent sessions |
 | Shadow copies (more than 1,000) | Performance drain | `vssadministrator delete shadows /all` |
 | MOF/WMI errors | WMI/MOF provider corruption | Recompile MOF files, verify repository |
 
 ## Data collection
 
-Before you contact Microsoft Support, you can gather the following information about your issue.
+Before you contact Microsoft Support, you can gather the following information about your issue:
 
 - **Event Viewer:** Export the System, Application, and Storage logs.
   - Filter for the following events: Event IDs 9, 20, 27, 39, 43, 55, 98, 129, 153, 157, 507 (and others, if relevant)
