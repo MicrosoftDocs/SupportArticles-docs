@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-In modern Windows Server environments (Hyper-V, clustering, and virtualization), Multipath I/O (MPIO) is important for achieving storage high availability and fault tolerance. However, failures in configuration, hardware compatibility, or interactions with third-party DSMs (Device Specific Modules) can make disks unavailable and cause performance issues, path loss, and unexpected outages. This article provides troubleshooting help for administrators to resolve MPIO and storage path issues. 
+In modern Windows Server environments (Hyper-V, clustering, and virtualization), Multipath I/O (MPIO) is important for achieving storage high availability and fault tolerance. However, configuration issues, hardware compatibility issues, or interactions with third-party device-specific modules (DSMs) can make disks unavailable and cause performance issues, path loss, and unexpected outages. This article helps you to resolve MPIO storage path issues.
 
 ## Troubleshooting checklist
 
@@ -27,27 +27,31 @@ Use this checklist for systematic troubleshooting.
 
 - Back up all the affected systems and data. Test that you can restore the backup.
 - Confirm that you have a maintenance window and change management approval for troubleshooting.
-- Review recent storage and network changes or firmware and driver updates.
 - Document all observed issues, error messages, event IDs, and timing.
 
-**Initial triage**
+### Review the symptoms
 
-- Are disks or volumes missing in Disk Management, Failover Cluster Manager, or virtual machine (VM) settings?
-- Are any MPIO or storage errors reported? (Check: mpclaim -s -d, Device Manager, Event Viewer.)
-- Are you using third-party DSMs? Are they certified for your OS version?
-- Recent hardware changes: New or replaced cables, HBAs, storage switches and zones, server restarts.
-- Are storage controller and network paths visible in the system management console?
-- Are relevant Windows features (for example, Multipath-IO) installed and enabled?
+- Check the Disk Management and Failover Cluster Manager tools, as well as the settings of any affected virtual machines (VMs). Are disks or volumes missing?
+- Are issues isolated to one cluster node, all nodes, or all servers?
+- Check Server Manager. Are storage controller and network paths missing?
+- If you're using third-party DSMs, check their documentation. Are they certified for your operating system version?
+- Check Event Viewer and Device Manager, and run `mpclaim -s -d` at a Windows command prompt. Do you see any MPIO or storage errors?
 
-**Deeper checks**
+### Check for the most basic possible causes
 
-- Review Windows Event Viewer (system, storage, failover clustering logs).
+- Are there recent hardware changes, such as new or replaced cables, HBAs, or storage switches and zones?
+- Did any devices get firmware or driver updates?
+- Did any servers restart recently?
+- Are the relevant Windows features, such as MPIO, installed? Are the related services running?
+
+### Investigate issues more deeply
+
+- Review the available event log data, as described in [Data collection](#data-collection).
 - Use PowerShell, DiskPart, and sysinternals tools to inspect and manipulate the disk and volume status.
-- Are problems isolated to one node, all nodes, or all servers?
 
 ## Common issues and solutions
 
-The following sections detail the most common failure modes and provide step-by-step solutions.
+The following sections describe the most common issues, and how to fix them.
 
 ### Disks or paths missing in MPIO or OS (including after maintenance or restart)
 
