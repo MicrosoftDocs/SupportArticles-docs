@@ -23,14 +23,14 @@ In modern Windows Server environments (Hyper-V, clustering, and virtualization),
 
 Use this checklist for systematic troubleshooting.
 
-**Preparation**
+### Prepare to troubleshoot
 
-- Verify a current and tested backup of all involved systems.
-- Confirm maintenance window and change management approval.
+- Back up all the affected systems and data. Test that you can restore the backup.
+- Confirm that you have a maintenance window and change management approval for troubleshooting.
 - Review recent storage and network changes or firmware and driver updates.
 - Document all observed issues, error messages, event IDs, and timing.
 
-**Initial Triage**
+**Initial triage**
 
 - Are disks or volumes missing in Disk Management, Failover Cluster Manager, or virtual machine (VM) settings?
 - Are any MPIO or storage errors reported? (Check: mpclaim -s -d, Device Manager, Event Viewer.)
@@ -218,7 +218,8 @@ The following sections detail the most common failure modes and provide step-by-
 1. If the command is unsuccessful, a restart is required.
 1. Make sure that MPIO, DSM, and Storport are up to date.
 
-### Known bug and ICM or product defect scenarios
+### Persistent issues
+
 
 #### Symptoms
 
@@ -273,5 +274,5 @@ When issues persist after basic troubleshooting, use these steps to gather diagn
 
 ## References
 
-- [Troubleshoot disk issues](/windows-server/administration/windows-commands/diskpart)
-- [Event ID reference](/windows/win32/eventlog/event-identifiers)
+- [diskpart command](/windows-server/administration/windows-commands/diskpart)
+
