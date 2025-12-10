@@ -11,7 +11,7 @@ This article helps you resolve an issue in which you can't connect to a machine 
 
 ## Symptoms
 
-When you try to connect to a machine through CyberArk by using RDP automation, the Power Automate agent for virtual desktops doesn't establish communication with Power Automate for desktop, and you receive the following error message:
+When you execute an RDP automation and it attempts to connect to a machine through CyberArk, the Power Automate agent for virtual desktops doesn't establish communication with Power Automate for desktop, and you receive the following error message:
 
 > A device attached to the system is not functioning.
 
