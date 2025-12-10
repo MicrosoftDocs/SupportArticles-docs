@@ -25,23 +25,23 @@ Follow these steps to resolve this issue.
 
 1. **Verify log file integrity**
 
-    a. Navigate to the [Azure portal](https://portal.azure.com) and access your Log Analytics workspace.
-    b. Check the integrity of the log files by reviewing the Log Management section.
+    1. Navigate to the [Azure portal](https://portal.azure.com) and access your Log Analytics workspace.
+    1. Check the integrity of the log files by reviewing the Log Management section.
 
 2. **Check application team fixes**
 
-    a. Ensure that the application team has addressed any log file issues.
-    b. Confirm that the logs are now accessible and can be queried without errors.
+    1. Ensure that the application team has addressed any log file issues.
+    1. Confirm that the logs are now accessible and can be queried without errors.
 
 3. **Test log queries**
 
-    a. Use the Log Analytics query editor to run test queries.
-    b. Confirm that the queries return expected results and that there are no errors.
+    1. Use the Log Analytics query editor to run test queries.
+    1. Confirm that the queries return expected results and that there are no errors.
 
 4. **Monitor log performance**
 
-    a. Use Azure Monitor charts to track log performance and identify any anomalies.
-    b. Set up alerts for any unusual activity or errors in log queries.
+    1. Use Azure Monitor charts to track log performance and identify any anomalies.
+    1. Set up alerts for any unusual activity or errors in log queries.
 
 ## References
 
