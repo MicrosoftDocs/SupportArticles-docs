@@ -8,7 +8,7 @@ ms.author: meerak
 manager: dcscontentpm
 ms.date: 09/04/2025
 ms.topic: troubleshooting
-ms.service: information-protection
+ms.service: azure-information-protection
 ---
 # Known issues for the information protection client
 
