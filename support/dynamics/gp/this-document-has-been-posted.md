@@ -62,9 +62,9 @@ To resolve this problem, use an SQL query tool to discover why the document is d
    > The Dex_Row_ID value.
 7. Check values in the following columns for the SOP Document. If any of these values are incorrect, the document may appear as posted.
 
-    PSTGSTUS (For an unposted document, it should read "0.")  
-    BCHSOURC (For an unposted document, it should read "Sales Entry.")  
-    VOIDSTTS (For an unposted document, it should read "0.")  
+    PSTGSTUS (For an unposted document, it should read "0".)  
+    BCHSOURC (For an unposted document, it should read "Sales Entry".)  
+    VOIDSTTS (For an unposted document, it should read "0".)  
     TRXSORCE (For an unposted document, it should be blank.)
 8. Run the following scripts against the company database to correct any of the four values from step 6:
 
