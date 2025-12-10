@@ -23,7 +23,7 @@ SAN-based and iSCSI storage environments in Windows Server (2025, 2022, 2019, an
 
 ### After you restart Windows Server 2022, the list of favorite target IPs for the iSCSI configuration is incorrect
 
-This is a display issue that might occur even if the backend configuration is correct. Microsoft is aware of the issue.
+This issue is a display issue that might occur even if the back-end configuration is correct. Microsoft is aware of the issue.
 
 ### Backups become unresponsive on Windows Server 2025 ReFS drives
 
@@ -238,7 +238,7 @@ To check for and fix volume issues, follow these steps:
 1. Review the quorum configuration. If it's necessary, reassign the quorum.
 1. Review the certificates and certificate store.
    - Check the certificate store's access control list. The SYSTEM account and the ADMINISTRATORS group must have full control on the C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys folder.
-   - If it's necessary, re-import required certificates by running commands that resemble the following example at a Windows command prompt:
+   - If it's necessary, import the required certificates again by running commands that resemble the following example at a Windows command prompt:
 
       ```console
       certutil -store -service clussvc\my
@@ -285,8 +285,8 @@ If iSCSI or Storage PowerShell commands aren't working, you might have an issue 
 - Disk fragmentation on HDDs, or lack of TRIM on SSDs.
 - Network or switch misconfiguration or packet loss.
 - Disks that go offline (because they run out of available disk space).
-- Excessively long disk queues, accumulated shadow copies (more than 4,000 copies), or storport driver issues. These can increase latency.
-- Nonoptimized commands or insufficient available threads. These can slow down backup or file copy operations.
+- Excessively long disk queues, accumulated shadow copies (more than 4,000 copies), or storport driver issues. These conditions can increase latency.
+- Nonoptimized commands or insufficient available threads. These conditions can slow down backup or file copy operations.
 
 #### Resolution
 
