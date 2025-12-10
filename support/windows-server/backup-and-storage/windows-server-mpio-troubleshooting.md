@@ -15,9 +15,39 @@ appliesto:
 
 # Windows Server Multipath I/O (MPIO) troubleshooting guidance
 
-## Summary
-
 In modern Windows Server environments (Hyper-V, clustering, and virtualization), Multipath I/O (MPIO) is important for achieving storage high availability and fault tolerance. However, configuration issues, hardware compatibility issues, or interactions with third-party device-specific modules (DSMs) can make disks unavailable and cause performance issues, path loss, and unexpected outages. This article helps you to resolve MPIO storage path issues.
+
+MPIO or disk storage failures cause several problems. You see disk unavailability, degraded performance, or application outages. These issues appear as connectivity loss, path failures, or file system corruption. Problems stem from misconfiguration, hardware faults, driver or firmware incompatibilities, or external factors like storage or network changes.
+
+## Known issues
+
+### Windows Server 2019 or 2022: VM IO performance degrades when Hyper-V uses resilient change tracking (RCT) is in use
+
+If you experience this issue, make sure that your computers are up to date. [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) and subsequent updates contain a fix for this issue.
+
+> [!NOTE]  
+> After you install this update, VMs that have been backed up by using  or a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
+
+### After you update firmware, multipath disks are missing
+
+This is a known issue for some storage devices. Contact your storage vendor for support.
+
+### In VMware or virtual environments, Event ID 153 recurs
+
+This behavior reflects a Storport driver issue. Make sure that your drivers are up to date. If the issue continues, contact your vendor for support.
+
+### Some cluster disks remain in "Online Pending" state
+
+The default `PendingTimeout` value is too low for cluster disks that have quota or File Server Resource Manager (FSRM) changes. As a result, the cluster disks don't come online. To increase this `PendingTimout` value, run the following cmdlets at the PowerShell command prompt:
+
+```powershell
+Get-ClusterResource "<Resource_Name>" | Set-ClusterParameter PendingTimeout 300000
+```
+
+> [!NOTE]  
+>
+> - In these commands, \<Resource_Name> is the name of the disk resource.
+> - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
 
 ## Troubleshooting checklist
 
@@ -35,11 +65,16 @@ Use this checklist for systematic troubleshooting.
 - Are issues isolated to one cluster node, all nodes, or all servers?
 - Check Server Manager. Are storage controller and network paths missing?
 - If you're using third-party DSMs, check their documentation. Are they certified for your operating system version?
-- Check Event Viewer and Device Manager, and run `mpclaim -s -d` at a Windows command prompt. Do you see any MPIO or storage errors?
+- Check Event Viewer and Device Manager, and run `mpclaim -s -d` at a Windows command prompt. Do you see any MPIO or storage errors? In particular, watch for the following events:
+
+  - Event ID 153: "The IO operation at logical block address... was retried."
+  - Event ID 129: "Reset to device... was issued."
+  - Event ID 140: "Device specified does not exist."
+  - Event ID 51, 55, 98, 1069, 1205, 5120, 5121, 5124. These events describe disk, file system, and cluster errors.
 
 ### Check for the most basic possible causes
 
-- Are there recent hardware changes, such as new or replaced cables, HBAs, or storage switches and zones?
+- Are there recent hardware changes, such as new or replaced cables, host bus adapters (HBA)s, or storage switches and zones?
 - Did any devices get firmware or driver updates?
 - Did any servers restart recently?
 - Are the relevant Windows features, such as MPIO, installed? Are the related services running?
