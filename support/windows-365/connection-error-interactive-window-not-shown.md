@@ -12,6 +12,9 @@ ms.custom:
 # Windows 365 Link connection fails with error "an interactive window could not be shown"
 
 
+>[!NOTE]
+>With the release of Windows 365 Link December Quality Update version 26100.7462, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.7462 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
+
 This article helps resolve the connection error "an interactive window could not be shown."
 
 After you authenticate on the sign-in screen, you might encounter the following error message when connecting to your Cloud PC:
