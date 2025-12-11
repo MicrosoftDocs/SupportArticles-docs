@@ -13,7 +13,7 @@ items:
   href: find-my-sql-version.md
 - name: Version and edition of SQL components
   href: components-client-tools-versions.md
-: name: SQL Server 2025
+- name: SQL Server 2025
   items:
   - name: SQL Server 2025 build versions
     href: sqlserver-2025/build-versions.md
