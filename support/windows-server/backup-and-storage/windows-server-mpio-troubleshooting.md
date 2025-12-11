@@ -97,9 +97,9 @@ Use this checklist for systematic troubleshooting.
   > [!NOTE]  
   >
   > - In these commands, \<Resource_Name> is the name of the disk resource.
-  > - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
+  > - The value of the PendingTimeout property is measured in milliseconds. The value shown here's higher than the default value.
 
-- For stale ClusterStorage folders, stop cluster service, take ownership and permissions with `takeown` and `icacls`, then delete with `rmdir`.
+- For stale ClusterStorage folders, stop the cluster service, use `takeown` to take ownership and `icacls` to reset permissions, and then use `rmdir`to delete.
 
 ### Check the state of the MPIO paths
 
@@ -153,7 +153,7 @@ The following sections describe the most common issues, and how to fix them.
 If you experience this issue, make sure that your computers are up to date. [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) and subsequent updates contain a fix for this issue.
 
 > [!NOTE]  
-> After you install this update, VMs that have been backed up by using a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
+> After you install this update, VMs that were previously backed up by using a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
 
 ### Some cluster disk resources remain in "Online Pending" state
 
@@ -166,7 +166,7 @@ Get-ClusterResource "<Resource_Name>" | Set-ClusterParameter PendingTimeout 3000
 > [!NOTE]  
 >
 > - In these commands, \<Resource_Name> is the name of the disk resource.
-> - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
+> - The value of the PendingTimeout property is measured in milliseconds. The value shown here's higher than the default value.
 
 ### Cluster disk resources are slow to come online
 
@@ -181,7 +181,7 @@ To fix this issue, follow these steps:
 
 ### After maintenance or a restart, administrative tools don't show disks or paths
 
-The Disk Management or Failover Cluster Manager tools don't show all of the disks or paths, and the **Discover** option is unavailable. If you run `mpclaim -s -d` at a Windows command prompt, some LUNs might be missing. You might also observer Event ID 46, Event ID 129, or Event ID 153.
+The Disk Management or Failover Cluster Manager tools don't show all of the disks or paths, and the **Discover** option is unavailable. If you run `mpclaim -s -d` at a Windows command prompt, some LUNs might be missing. You might also observe Event ID 46, Event ID 129, or Event ID 153.
 
 To fix this issue, follow these steps:
 
@@ -211,7 +211,7 @@ To fix this issue, follow these steps:
 
 ### MPIO is in a degraded state, slow or unresponsive during failover
 
-During a failover, you observe delays that might exceed thirty seconds. You also observe IO error messages, and messages such as "MPIO is in a degraded state." You might observe the following events:
+During a failover, you observe delays that might exceed 30 seconds. You also observe IO error messages, and messages such as "MPIO is in a degraded state." You might observe the following events:
 
 - Event ID 46
 - Event ID 129
@@ -221,7 +221,7 @@ During a failover, you observe delays that might exceed thirty seconds. You also
 To fix this issue, follow these steps:
 
 1. Update all storage, HBA, and multipath drivers and firmware.
-1. To set recommended load-balancing policy and failover parameters, run the following cmdlets at a Powershell command prompt:
+1. To set recommended load-balancing policy and failover parameters, run the following cmdlets at a PowerShell command prompt:
 
     ```powershell
     Set-MSDSMGlobalDefaultLoadBalancePolicy -Policy RR
@@ -274,7 +274,7 @@ You might observe this behavior after a restart, or after you add or remove disk
    logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
    ```
 
-1. Check for security or antivirus scans on the storage volumes (you might have to temporarily exclude the volumes or temporarily disable scans to test the effect on performance).
+1. Check for security or antivirus scans on the storage volumes. You might have to temporarily exclude the volumes or temporarily disable scans to test the effect on performance.
 1. Make sure that Windows Server is up to date, and update drivers and firmware.
 1. Use 64K allocation units for data volumes.
 1. If possible, distribute disks across multiple controllers.
@@ -286,7 +286,7 @@ After you increase disk or LUN capacity, Disk Management or Failover Cluster Man
 To fix this issue, follow these steps:
 
 1. Take the affected cluster role offline, then bring it online again (or move role to another node).
-1. To run maintenance prcesses that rescan and extend the file system run the following commands at a Windows command prompt on the node that owns the role:
+1. To run maintenance processes that rescan and extend the file system, run the following commands at a Windows command prompt on the node that owns the role:
 
    ```console
    diskpart
@@ -303,7 +303,7 @@ After you change cabling, zoning, or storage configuration, the computer that ma
 
 To fix this issue, follow these steps:
 
-1. At a PowerShell command prompt on the affected computer, run the followng commands:
+1. At a PowerShell command prompt on the affected computer, run the following commands:
 
    ```powershell
    Update-HostStorageCache
@@ -360,7 +360,7 @@ If these procedures don't resolve your issue, contact Microsoft Support. Use the
   - Cluster validation reports
 - **Registry Editor:** Audit the permissions under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker`
 - **BIOS/UEFI:** Export settings, or create screenshots of them
-- **Minidump files** If you observe a stop or bugcheck error (also known as a bluescreen error), retrieve these files
+- **Minidump files** If you observe a stop or bug check error (also known as a bluescreen error), retrieve these files
 - **Network trace logs** If you observe connectivity issues, collect network traces
 - **Exported VM configuration files:** If you're troubleshooting import or export issues, export configuration files for the affected VMs
 - **Driver versions** Note the current versions that your storage components, network components, and security agents use
