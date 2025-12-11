@@ -335,7 +335,7 @@ If these procedures don't resolve your issue, contact Microsoft Support. Use the
 
 - **Windows Troubleshooting Scripts (TSS)**: The TSS scripts automatically collect useful data. For more information and instructions, see the following articles:
   - [Collect data to analyze and troubleshoot clustering and high availability scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext)
-  - [Collect data to analyze and troubleshoot Hyper-V scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext)
+  - [Collect data to analyze and troubleshoot Hyper-V scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext)
 - **Process Monitor (Procmon):** For in-depth file, registry, or process analysis, run a command that resembles the following example at the Windows command prompt:
 
   ```console
@@ -376,5 +376,5 @@ If these procedures don't resolve your issue, contact Microsoft Support. Use the
 - [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md)
 - [Information about Event ID 51](event-id-51-information.md)
 - [Event ID 158 is logged for identical disk GUIDs](../../windows-client/backup-and-storage/event-id-158-for-identical-disk-guids.md)
-- [iSCSI storage connectivity troubleshooting guidance](iscsi-storage-connectivity-troubleshooting)
+- [iSCSI storage connectivity troubleshooting guidance](iscsi-storage-connectivity-troubleshooting.md)
 - [Manage MPIO for Hyper-V hosts in the VMM fabric](/system-center/vmm/hyper-v-mpio)
