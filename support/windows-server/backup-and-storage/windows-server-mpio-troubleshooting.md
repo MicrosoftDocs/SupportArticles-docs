@@ -239,28 +239,30 @@ To fix this issue, follow these steps:
 
 1. On clusters, increase disk resource timeouts to tolerate slow failover.
 
-### 4. "Persistent Disk or Path Errors in Event Log"
+### Applications experience downtime, and events repeat in the Event Log
 
-#### Symptoms
+The repeating events include the following examples:
 
-- Recurring Event IDs 153 ("disk retried"), 129 ("reset to device"), 11 ("controller error"), 158 (identical disk GUIDs)
-- Application downtime.
+- Event ID 153 ("disk retried")
+- Event ID 129 ("reset to device")
+- Event ID 11 ("controller error")
+- Event ID 158 (identical disk GUIDs)
 
-#### Resolution
+To fix this issue, follow these steps:
 
 1. Verify that physical and logical paths exist and are healthy.
-1. Update storage firmware and drivers.
-1. For Event ID 158, reset disk GUIDs on VHDs by using:
+1. Update the storage firmware and drivers.
+1. If Event ID 158 recurs, use the following PowerShell cmdlet to reset the disk GUIDs on the VHDs:
 
     ```powershell
     Set-VHD -Path \<VHD-Path> -ResetDiskIdentifier
     ```
 
-1. For repeated errors with third-party DSMs: Consult storage vendor, or migrate to supported native DSM.
+1. If the repeating events refer to third-party DSMs, consult storage vendor or migrate to a supported native DSM.
 
-### Duplicate disks or wrong disk order
+### Duplicate disks or changed disk numbering
 
-#### Symptoms
+You might observe this behavior after a restart, or after you add or remove disks. 
 
 - Duplicate instance of the same disk or LUN
 - Disks renumbered after a restart, addition, or removal
