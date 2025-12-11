@@ -138,7 +138,7 @@ Use this checklist for systematic troubleshooting.
 - If your disk is RAW and can't be fixed, delete and recreate the partition, then restore data from backup.
 - If your clustered disks have stale reservations, use `Clear-ClusterDiskReservation` at a PowerShell command prompt to clear them.
 
-#### Switch DSM or remove third-party multipath drivers
+### Switch DSM or remove third-party multipath drivers
 
 1. If you're using third-party DSMs, use the Programs and Features control panel to uninstall them.
 1. Restart the computer.
@@ -283,97 +283,100 @@ You might observe this behavior after a restart, or after you add or remove disk
 
 ### Cluster disk resource or LUN disappears after you expand or resize it
 
-- After you increase disk or LUN capacity, the volume isn't visible in cluster or disk manager until the role is cycled.
+After you increase disk or LUN capacity, Disk Management or Failover Cluster Manager don't display the related volume. The volume reappears if you take the cluster role offline and then online again.
 
+To fix this issue, follow these steps:
 
+1. Take the affected cluster role offline, then bring it online again (or move role to another node).
+1. To run maintenance prcesses that rescan and extend the file system run the following commands at a Windows command prompt on the node that owns the role:
 
-#### Resolution
+   ```console
+   diskpart
+   rescan
+   list vol
+   select vol x
+   extend filesystem
+   exit
+   ```
 
-1. Bring affected cluster role offline, then online (or move role to another node).
-1. Use DiskPart on the owner node to rescan and extend filesystem during maintenance:
+### Server has to restart to detect new MPIO paths
 
-    ```console
-    diskpart
-    rescan
-    list vol
-    select vol x
-    extend filesystem
-    exit
-    ```
+After you change cabling, zoning, or storage configuration, the computer that manages storage doesn't detect new paths until it restarts.
 
-### MPIO path not detected without server restart
+To fix this issue, follow these steps:
 
-#### Symptoms
+1. At a PowerShell command prompt on the affected computer, run the followng commands:
 
-- After cabling, zoning, or storage configuration change, new paths aren't detected until server is restarted.
+   ```powershell
+   Update-HostStorageCache
+   mpclaim -n -d
+   ```
 
-#### Resolution
+   > [!IMPORTANT]  
+   > If these commands don't work, restart the computer.
 
-1. Run:
-
-    ```console
-    Update-HostStorageCache
-    mpclaim -n -d
-    ```
-
-1. If the command is unsuccessful, a restart is required.
 1. Make sure that MPIO, DSM, and Storport are up to date.
-
-### Persistent issues
-
-
-#### Symptoms
-
-- Persistent failover problems
-- Event 153 or 129, despite all fixes
-- Documented "won't fix" scenarios in the OS version
-
-#### Resolution
-
-1. Verify with Microsoft Support or vendor documentation all bug and ICM IDs.
-1. Implement documented workarounds.
-1. Upgrade to latest supported Windows Server build if a fix is available (for example, from 2019 to 2022 for known MPIO bugs).
 
 ## Common issues quick reference table
 
-| Symptom | Root cause | Resolution |
+| Symptom | Cause | Resolution |
 | --- | --- | --- |
-| Disk missing in MPIO/Disk Mgmt | Zoning, DSM conflict | Check Device Manager, remove ghost devices, reinstall MPIO, restart |
-| Event 153/129/11 | Path loss, driver/firm | Update firmware/drivers, set MPIO policy, check physical connectivity |
+| Disk missing in MPIO properties and Disk Mgmt | Zoning or DSM conflict | Check Device Manager, remove ghost devices, reinstall MPIO, restart |
+| Event IDs 153/129/11 | Path loss, driver/firm | Update firmware/drivers, set MPIO policy, check physical connectivity |
 | Failover delay, slow cluster resource online | Timeout, configuration  error | Raise resource timeout, fix quotas/snapshots, update drivers |
 | Duplicate disks/wrong disk order | Bad DSM/configuration | Remove extra DSM, use persistent identifiers (GUID/WWN) |
-| High IO latency, app slow, Event 833 | Driver/antivirus | Exclude storage from AV, update drivers, Perfmon, use 64K clusters |
-| Disk GUID duplicate, Event 158 | No MPIO/clone VHDs | Enable MPIO, Set-VHD -ResetDiskIdentifier |
-| Cluster disk disappears after expansion | Driver/event miss | Cycle role offline/online, rescan, extend with DiskPart |
-| Paths not detected until restart | Storport configuration  bug | Update-HostStorageCache, restart |
-| "Requested resource in use," can't bring disk online | Metadata/disk fail | Use CHKDSK, check logs, engage storage team |
-| MPIO failover bug (Win 2019/2022) | Known defect | Upgrade OS, reference vendor/MS documentation |
+| High IO latency, app slow, Event ID 833 | Driver/antivirus | Exclude storage from AV, update drivers, Perfmon, use 64K clusters |
+| Disk GUID duplicate, Event ID 158 | No MPIO/clone VHDs | Enable MPIO, Set-VHD -ResetDiskIdentifier |
+| Cluster disk disappears after expansion | Driver/event miss | Cycle role offline and online, rescan, extend with DiskPart |
+| Paths not detected until restart | Storport configuration issue | `Update-HostStorageCache`, restart |
+| "Requested resource in use," can't bring disk online | Metadata or disk issue | Use `chkdsk`, check logs, engage storage team |
 
 ## Data collection
 
-When issues persist after basic troubleshooting, use these steps to gather diagnostic data:
+If these procedures don't resolve your issue, contact Microsoft Support. Use the following tools to gather diagnostic data to append to your support request:
 
-- **Procmon (Process Monitor):** Trace "ACCESS DENIED" registry or file system events
-- **PowerShell:**
-  - Get-VMNetworkAdapter -VMName \<YourVMName>
-  - Import-VM for import verification and error export.
-  - Set-VMFirmware -VMName \<VMName> -SystemUUID ([guid]::NewGuid()) for UUID management
+- **Windows Troubleshooting Scripts (TSS)**: The TSS scripts automatically collect useful data. For more information and instructions, see the following articles:
+  - [Collect data to analyze and troubleshoot clustering and high availability scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext)
+  - [Collect data to analyze and troubleshoot Hyper-V scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext)
+- **Process Monitor (Procmon):** For in-depth file, registry, or process analysis, run a command that resembles the following example at the Windows command prompt:
+
+  ```console
+  procmon.exe /BackingFile c:\procmon.pml /Quiet /Minimized /Runtime 60
+  ```
+
+  > [!NOTE]
+  > Before you collect traces, for Windows Server 2016 and later, make sure you install the latest cumulative updates.
+
+- **Performance Monitor (Perfmon):** Use the GUI or command line interface. The following example collects data at five-second intervals:
+
+  ```console
+  logman create counter PerfLog -o c:\PerfLog.blg -c "\PhysicalDisk(*)\*" -si 00:00:05
+  logman start PerfLog
+  ```
+
+- **PowerShell:** Use the following cmdlets to gather information:
+  - `Get-VMNetworkAdapter -VMName \<YourVMName>`
+  - `Import-VM` for import verification and error export.
 - **System and cluster logs:**
   - Windows Event Viewer: Collect logs from Hyper-V VMMS, cluster services, and storage
   - Cluster validation reports
-- **Registry Editor:** Audit permissions under HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker
-- **Command Line:**
-  - sfc /scannow
-  - DISM /Online /Cleanup-Image /RestoreHealth
-  - bcdedit /set hypervisorlaunchtype auto
-  - gpupdate /force
-- **BIOS/UEFI:** screenshots or settings exports
-- **Minidump files** after blue screen
-- **Network trace logs** if connectivity issues exist
-- **Exported VM configuration files:** if you're troubleshooting import/export
-- **Driver versions** for storage, network, and security agents
+- **Registry Editor:** Audit the permissions under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker`
+- **BIOS/UEFI:** Export settings, or create screenshots of them
+- **Minidump files** If you observe a stop or bugcheck error (also known as a bluescreen error), retrieve these files
+- **Network trace logs** If you observe connectivity issues, collect network traces
+- **Exported VM configuration files:** If you're troubleshooting import or export issues, export configuration files for the affected VMs
+- **Driver versions** Note the current versions that your storage components, network components, and security agents use
+- **Storport traces:** Run commands that resemble the following examples at the Windows command prompt:
+
+  ```console
+  logman create trace storport -ow -o c:\storport.etl -p Microsoft-Windows-StorPort 0xff -ets
+  logman stop storport -ets
+  ```
 
 ## References
 
-- [diskpart command](/windows-server/administration/windows-commands/diskpart)
-
+- [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md)
+- [Information about Event ID 51](event-id-51-information.md)
+- [Event ID 158 is logged for identical disk GUIDs](../../windows-client/backup-and-storage/event-id-158-for-identical-disk-guids.md)
+- [iSCSI storage connectivity troubleshooting guidance](iscsi-storage-connectivity-troubleshooting)
+- [Manage MPIO for Hyper-V hosts in the VMM fabric](/system-center/vmm/hyper-v-mpio)
