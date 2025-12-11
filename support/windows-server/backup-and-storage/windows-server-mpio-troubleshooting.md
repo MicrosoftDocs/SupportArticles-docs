@@ -262,44 +262,30 @@ To fix this issue, follow these steps:
 
 ### Duplicate disks or changed disk numbering
 
-You might observe this behavior after a restart, or after you add or remove disks. 
-
-- Duplicate instance of the same disk or LUN
-- Disks renumbered after a restart, addition, or removal
-
-#### Resolution
+You might observe this behavior after a restart, or after you add or remove disks. To fix this issue, follow these steps:
 
 1. Make sure that only one multipath solution is attached (remove unsupported DSMs, restart, and then reinstall or reconfigure MPIO).
 
-1. Disk order in Windows is nondeterministic. For applications, use persistent identifiers (GUID/UUID/WWN) instead of disk number or drive letter.
+1. Windows uses nondeterministic disk order. If your application requires a specific disk order, use persistent identifiers (for example a GUID, UUID, or WWN) instead of using a disk number or drive letter.
 
-### Performance and latency issues, high disk IO waits
+### High latency, IO spikes, low throughput, slow backups, SQL Event ID 833, or other performance issues
 
-#### Symptoms
+1. Use Performance Monitor (Perfmon) to collect performance data. At the Windows command prompt, run the following command:
 
-- High latency in database and apps
-- Periodic IO spikes
-- Low throughput
-- Event 833 (SQL)
-- Slow backups
+   ```console
+   logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
+   ```
 
-#### Resolution
+1. Check for security or antivirus scans on the storage volumes (you might have to temporarily exclude the volumes or temporarily disable scans to test the effect on performance).
+1. Make sure that Windows Server is up to date, and update drivers and firmware.
+1. Use 64K allocation units for data volumes.
+1. If possible, distribute disks across multiple controllers.
 
-1. Run Perfmon to verify:
-
-    ```console
-    logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
-    ```
-    
-1. Check for security or antivirus scans on storage volumes (exclude or temporarily disable to test the effect).
-1. Update drivers, firmware, and the OS.
-1. Use 64K allocation units for data volumes. Distribute disks across multiple controllers, if possible.
-
-### Cluster disk disappears after an expansion or resize
-
-#### Symptoms
+### Cluster disk resource or LUN disappears after you expand or resize it
 
 - After you increase disk or LUN capacity, the volume isn't visible in cluster or disk manager until the role is cycled.
+
+
 
 #### Resolution
 
