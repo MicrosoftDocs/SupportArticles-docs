@@ -66,9 +66,7 @@ Use this checklist for systematic troubleshooting.
    1. Select **Discover Multi-Paths**. Review the list of IDs and fix any errors.
    > [!NOTE]  
    > You can also use the Windows PowerShell `Get-MPIOAvailableHW` and `Get-MPIOSetting` cmdlets, or the command line `mpclaim -e` and `mpclaim -r -i -a` commands to perform these steps.
-
 1. To review and update the storage area network (SAN) policy, open a Windows command prompt window and then run the following command:
-**Review and update SAN policy**:
 
    ```console
    diskpart san policy=OnlineAll
@@ -144,7 +142,7 @@ Use this checklist for systematic troubleshooting.
 
 1. If you're using third-party DSMs, use the Programs and Features control panel to uninstall them.
 1. Restart the computer.
-1. In the MPIO tool, select **Devices**, and then remove the hardware IDs. from MPIO Devices tab, 
+1. In the MPIO tool, select **Devices**, and then remove the hardware IDs.
 1. Restart the computer again, then in the MPIO tool, re-add the hardware IDs for MSDSM.
 1. To make sure that Microsoft DSM claims your disks, run `mpclaim -s -d` at the Windows command prompt.
 
@@ -157,7 +155,7 @@ The following sections describe the most common issues, and how to fix them.
 If you experience this issue, make sure that your computers are up to date. [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) and subsequent updates contain a fix for this issue.
 
 > [!NOTE]  
-> After you install this update, VMs that have been backed up by using  or a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
+> After you install this update, VMs that have been backed up by using a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
 
 ### Some cluster disk resources remain in "Online Pending" state
 
@@ -185,20 +183,15 @@ To fix this issue, follow these steps:
 
 ### After maintenance or a restart, administrative tools don't show disks or paths
 
-use the iSCSI Initiator tool to review the "Favorite Targets" list (In the search bar, type *iscsiocpl*, and then in the search results, select **iSCI Initiator**, and then select **Favorite Targets**.
+The Disk Management or Failover Cluster Manager tools don't show all of the disks or paths, and the **Discover** option is unavailable. If you run `mpclaim -s -d` at a Windows command prompt, some LUNs might be missing. You might also observer Event ID 46, Event ID 129, or Event ID 153.
 
-- Disk missing in Disk Management or cluster
-- "mpclaim -s -d" missing LUNs
-- "Discover" option unavailable (greyed out)
-- Event log IDs 46, 153, 129
+To fix this issue, follow these steps:
 
-#### Resolution
-
-1. Check physical and storage connectivity and switch zoning
-1. Remove ghost or hidden devices in Device Manager (enable "show hidden") or run devnode clean
-1. Uninstall unsupported or duplicate DSMs (Control Panel > Programs and Features)
-1. Restart, reinstall, or re-enable the Multipath-IO feature (Install-WindowsFeature Multipath-IO)
-1. Run:
+1. Check the physical disk connections, switch zoning, and storage connectivity.
+1. In Device Manager (enable "show hidden"), remove ghost or hidden devices (or run `devnode clean` at a Windows command prompt).
+1. If you're using an unsupported DSM or duplicate DSMs, use the Programs and Features control panel to uninstall them.
+1. Restart, reinstall, or re-enable the Multipath-IO feature (to do this, you can run `Install-WindowsFeature Multipath-IO` at a PowerShell command prompt).
+1. At a Windows command prompt, run the following commands, in sequence:
 
     ```console
     mpclaim -e
@@ -206,31 +199,31 @@ use the iSCSI Initiator tool to review the "Favorite Targets" list (In the searc
     mpclaim -r -i -a
     ```
 
-    Add missing hardware IDs in **MPIO Properties** > **Discover Multi-Paths**.
-1. Open DiskPart:
+1. In the MPIO tool, select **Discover Multi-Paths**, add the missing hardware IDs.
 
-    ```console
-    diskpart
-    san policy=OnlineAll
-    exit
-    ```
-    
-1. Bring missing disks online in Disk Management or through DiskPart.
+1. To review and update the storage area network (SAN) policy, open a Windows command prompt window and then run the following command:
 
-### Multipath Failover Delays or Path Flapping
+   ```console
+   diskpart san policy=OnlineAll
+   ```
 
-#### Symptoms
+1. Use Disk Management or diskpart to bring the missing disks online.
 
-- 30+ seconds delay or unresponsiveness during failover
-- IO errors
-- "MPIO is in a degraded state"
+1. To review the "Favorite Targets" list, use the iSCSI Initiator tool (In the search bar, type *iscsiocpl*, and then in the search results, select **iSCI Initiator**, and then select **Favorite Targets**.)
 
-- Event IDs 140, 46, 153, 129
+### MPIO is in a degraded state, slow or unresponsive during failover
 
-#### Resolution
+During a failover, you observe delays that might exceed thirty seconds. You also observe IO error messages, and messages such as "MPIO is in a degraded state." You might observe the following events:
+
+- Event ID 46
+- Event ID 129
+- Event ID 140
+- Event ID 153
+
+To fix this issue, follow these steps:
 
 1. Update all storage, HBA, and multipath drivers and firmware.
-1. Set recommended load-balancing policy and failover parameters:
+1. To set recommended load-balancing policy and failover parameters, run the following cmdlets at a Powershell command prompt:
 
     ```powershell
     Set-MSDSMGlobalDefaultLoadBalancePolicy -Policy RR
@@ -243,9 +236,8 @@ use the iSCSI Initiator tool to review the "Favorite Targets" list (In the searc
     ```
 
     Restart if prompted to do so.
+
 1. On clusters, increase disk resource timeouts to tolerate slow failover.
-
-
 
 ### 4. "Persistent Disk or Path Errors in Event Log"
 
