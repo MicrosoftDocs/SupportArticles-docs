@@ -268,6 +268,8 @@ You might observe this behavior after a restart, or after you add or remove disk
 
 ### High latency, IO spikes, low throughput, slow backups, SQL Event ID 833, or other performance issues
 
+To diagnose and fix these performance issues, follow these steps:
+
 1. Use Performance Monitor (Perfmon) to collect performance data. At the Windows command prompt, run the following command:
 
    ```console
