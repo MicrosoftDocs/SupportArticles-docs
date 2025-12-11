@@ -682,13 +682,13 @@ items:
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
   - name: File Server Resource Manager (FSRM)
     items:
-    - name: FSRM troubleshooting guidance
+    - name: 'Troubleshooting guidance: FSRM'
       href: ./backup-and-storage/fsrm-troubleshooting-guidance.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
-    - name: iSCSI storage connectivity troubleshooting guidance
+    - name: 'Troubleshooting guidance: iSCSI storage connectivity'
       href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
@@ -696,7 +696,7 @@ items:
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
-    - name: Multipath I/O (MPIO) troubleshooting guidance
+    - name: 'Troubleshooting guidance: Multipath I/O (MPIO)'
       href: ./backup-and-storage/windows-server-mpio-troubleshooting.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md

@@ -1,5 +1,5 @@
 ---
-title: Windows Server Multipath I/O (MPIO) Troubleshooting guidance
+title: Multipath I/O (MPIO) Troubleshooting Guidance
 description: Describes how to troubleshoot and fx issues in Hyper-V, clustering, and virtualization environments that use the Windows Multipath I/O (MPIO) feature.
 ms.date: 12/12/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Windows Server Multipath I/O (MPIO) troubleshooting guidance
+# Multipath I/O (MPIO) troubleshooting guidance
 
 In modern Windows Server environments (Hyper-V, clustering, and virtualization), Multipath I/O (MPIO) helps achieve storage high availability and fault tolerance. However, configuration issues, hardware compatibility issues, or interactions with third-party device-specific modules (DSMs) can make disks unavailable and cause performance issues, path loss, and unexpected outages. This article helps you to resolve MPIO storage path issues.
 
