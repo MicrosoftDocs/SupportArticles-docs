@@ -21,13 +21,6 @@ MPIO or disk storage failures cause several problems. You see disk unavailabilit
 
 ## Known issues
 
-### Windows Server 2019 or 2022: VM IO performance degrades when Hyper-V uses resilient change tracking (RCT) is in use
-
-If you experience this issue, make sure that your computers are up to date. [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) and subsequent updates contain a fix for this issue.
-
-> [!NOTE]  
-> After you install this update, VMs that have been backed up by using  or a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
-
 ### After you update firmware, multipath disks are missing
 
 This is a known issue for some storage devices. Contact your storage vendor for support.
@@ -35,19 +28,6 @@ This is a known issue for some storage devices. Contact your storage vendor for 
 ### In VMware or virtual environments, Event ID 153 recurs
 
 This behavior reflects a Storport driver issue. Make sure that your drivers are up to date. If the issue continues, contact your vendor for support.
-
-### Some cluster disks remain in "Online Pending" state
-
-The default `PendingTimeout` value is too low for cluster disks that have quota or File Server Resource Manager (FSRM) changes. As a result, the cluster disks don't come online. To increase this `PendingTimout` value, run the following cmdlets at the PowerShell command prompt:
-
-```powershell
-Get-ClusterResource "<Resource_Name>" | Set-ClusterParameter PendingTimeout 300000
-```
-
-> [!NOTE]  
->
-> - In these commands, \<Resource_Name> is the name of the disk resource.
-> - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
 
 ## Troubleshooting checklist
 
@@ -79,18 +59,133 @@ Use this checklist for systematic troubleshooting.
 - Did any servers restart recently?
 - Are the relevant Windows features, such as MPIO, installed? Are the related services running?
 
-### Investigate issues more deeply
+### Verify the MPIO and storage configuration
 
-- Review the available event log data, as described in [Data collection](#data-collection).
-- Use PowerShell, DiskPart, and sysinternals tools to inspect and manipulate the disk and volume status.
+1. To review the device IDs of the storage hardware, follow these steps:
+   1. In the search bar, type *mpiocpl*, and then in the search results, select **MPIO**.
+   1. Select **Discover Multi-Paths**. Review the list of IDs and fix any errors.
+   > [!NOTE]  
+   > You can also use the Windows PowerShell `Get-MPIOAvailableHW` and `Get-MPIOSetting` cmdlets, or the command line `mpclaim -e` and `mpclaim -r -i -a` commands to perform these steps.
+
+1. To review and update the storage area network (SAN) policy, open a Windows command prompt window and then run the following command:
+**Review and update SAN policy**:
+
+   ```console
+   diskpart san policy=OnlineAll
+   ```
+
+1. To update the path configuration, follow these guidelines:
+   1. For redundancy, make sure each iSCSI connection uses a different network adapter.
+   1. If the system only detects one path, rebuild the iSCSI connections.
+
+### Update drivers and firmware
+
+- Update all storage, network, and multipath drivers to the latest supported versions from your hardware or storage vendor.
+- Update storage or SAN controller firmware as recommended.
+
+### Verify the health of the file system and disks
+
+- To check and repair file system errors, run `chkdsk <drive>: /f /r` at a Windows command prompt.
+- If chkdsk fails while scanning a RAW volume, attempt to recover the data or restore it from a backup.
+- If the resilient file system (ReFS) is unstable, consider reformatting the file system to NTFS.
+
+### Check for cluster and CSV disk issues
+
+- To check the status of the disk resources, Use Failover Cluster Manager.
+- If your disk resource is stuck in the "Online Pending" state, or if the disk resource can't come online and generates error 1069 or error 1205, the timeout setting might be too short. To increase this value, run the following cmdlets at the PowerShell command prompt:
+
+  ```powershell
+  Get-ClusterResource "<Resource_Name>" | Set-ClusterParameter PendingTimeout 300000
+  ```
+
+  > [!NOTE]  
+  >
+  > - In these commands, \<Resource_Name> is the name of the disk resource.
+  > - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
+
+- For stale ClusterStorage folders, stop cluster service, take ownership and permissions with `takeown` and `icacls`, then delete with `rmdir`.
+
+### Check the state of the MPIO paths
+
+- If only some paths are visible, verify zoning, cabling, and HBA status on both server and the SAN.
+- If you observe Event IDs 153, 129, or 140, you might have storage or network bottlenecks. Review your underlying storage or network traffic.
+- If MPIO paths are missing or incorrectly configured following a restart, see [After maintenance or a restart, administrative tools don't show disks or paths](#after-maintenance-or-a-restart-administrative-tools-dont-show-disks-or-paths) for instructions.
+
+### Tune Registry and policy settings
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+- If you observe excessive logging (such as unusual growth of the lsass.log file), set the following registry value.
+
+  - Subkey: `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`
+  - Value, data, and type: `LogToFile` = `0` (DWORD)
+  After you change a registry value, restart the computer.
+
+- To configure MPIO verification settings, run the following cmdlets at a PowerShell command prompt window:
+
+  ```powershell
+  Set-MPIOSetting -NewPathVerifyState Enabled
+  Set-MPIOSetting -CustomPathRecovery Enabled
+  ```
+
+- To configure intervals and timeouts for path verification, confirm appropriate settings together with your hardware vendor. Set the following values in the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mpio\Parameters` subkey:
+
+  - `PathVerifyEnabled` (DWORD): 1 to turn on
+  - `PathRecoveryInterval` (DWORD): Time in seconds (default: 30)
+  - `PDORemovePeriod` (DWORD): Time in seconds (default: 20)
+  After you change a registry value, restart the computer.
+
+### Fix file system corruption or RAW disks
+
+- If your disk is RAW and can't be fixed, delete and recreate the partition, then restore data from backup.
+- If your clustered disks have stale reservations, use `Clear-ClusterDiskReservation` at a PowerShell command prompt to clear them.
+
+#### Switch DSM or remove third-party multipath drivers
+
+1. If you're using third-party DSMs, use the Programs and Features control panel to uninstall them.
+1. Restart the computer.
+1. In the MPIO tool, select **Devices**, and then remove the hardware IDs. from MPIO Devices tab, 
+1. Restart the computer again, then in the MPIO tool, re-add the hardware IDs for MSDSM.
+1. To make sure that Microsoft DSM claims your disks, run `mpclaim -s -d` at the Windows command prompt.
 
 ## Common issues and solutions
 
 The following sections describe the most common issues, and how to fix them.
 
-### Disks or paths missing in MPIO or OS (including after maintenance or restart)
+### Windows Server 2019 or 2022: VM IO performance degrades when Hyper-V uses resilient change tracking (RCT) is in use
 
-#### Symptoms
+If you experience this issue, make sure that your computers are up to date. [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) and subsequent updates contain a fix for this issue.
+
+> [!NOTE]  
+> After you install this update, VMs that have been backed up by using  or a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then try again to start the VMs. If the issue persists, contact Microsoft Support.
+
+### Some cluster disk resources remain in "Online Pending" state
+
+The default `PendingTimeout` value is too low for cluster disks that have quota or File Server Resource Manager (FSRM) changes. As a result, the cluster disks don't come online. To increase this `PendingTimout` value, run the following cmdlets at the PowerShell command prompt:
+
+```powershell
+Get-ClusterResource "<Resource_Name>" | Set-ClusterParameter PendingTimeout 300000
+```
+
+> [!NOTE]  
+>
+> - In these commands, \<Resource_Name> is the name of the disk resource.
+> - The value of the PendingTimeout property is measured in milliseconds. The value shown here is higher than the default value.
+
+### Cluster disk resources are slow to come online
+
+You might observe cluster disk resources taking three to five minutes to come online. This behavior also generates Event ID 1069 and Event ID 4874.
+
+To fix this issue, follow these steps:
+
+1. Review cluster logs for timeout or resource errors.
+1. In Failover Cluster Manager, increase the resource timeout from the default value (three minutes), to five minutes or more.
+1. Check for volume snapshots or FSRM quotas that delay bringing resources online.
+1. Clear any cluster dependencies or disk policies that might impede access to the disks.
+
+### After maintenance or a restart, administrative tools don't show disks or paths
+
+use the iSCSI Initiator tool to review the "Favorite Targets" list (In the search bar, type *iscsiocpl*, and then in the search results, select **iSCI Initiator**, and then select **Favorite Targets**.
 
 - Disk missing in Disk Management or cluster
 - "mpclaim -s -d" missing LUNs
@@ -150,20 +245,7 @@ The following sections describe the most common issues, and how to fix them.
     Restart if prompted to do so.
 1. On clusters, increase disk resource timeouts to tolerate slow failover.
 
-### Cluster disk online pending or resource failure
 
-#### Symptoms
-
-- Cluster disk stuck "Online Pending"
-- Event IDs 1069, 4874
-- Disk takes three to five minutes to come online
-
-#### Resolution
-
-1. Review cluster logs for timeout or resource errors.
-1. Increase resource timeout in Failover Cluster Manager (default is three minutes, try five minutes or more).
-1. Check for volume snapshots or FSRM quotas that delay bringing resources online.
-1. Clear any cluster dependencies or disk policies that are impeding access.
 
 ### 4. "Persistent Disk or Path Errors in Event Log"
 
