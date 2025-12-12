@@ -65,9 +65,6 @@ The complete progression of `ResourcePlacement` is as follows:
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementScheduled condition status is false](crp-clusterresourceplacementscheduled-false.md).
 
-    > [!NOTE]
-    > ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
-
 2. **ResourcePlacementRolloutStarted**: Indicates that the rollout process started.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementRolloutStarted condition status is false](crp-clusterresourceplacementrolloutstarted-false.md).
@@ -90,9 +87,9 @@ The complete progression of `ResourcePlacement` is as follows:
 
 7. **ResourcePlacementDiffReported**: Indicates whether diff reporting completes on all resources. This condition is only populated if the applied strategy type is `ReportDiff`.
 
-    For troubleshooting diff reporting issues, see the ClusterResourcePlacement troubleshooting guides and substitute the appropriate ResourcePlacement condition names.
-
 > [!NOTE]
+> ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
+>
 > The condition types follow a naming convention where ResourcePlacement conditions use the `ResourcePlacement` prefix while ClusterResourcePlacement conditions use the `ClusterResourcePlacement` prefix. For example:
 >
 > - `ResourcePlacementScheduled` ↔ `ClusterResourcePlacementScheduled`
