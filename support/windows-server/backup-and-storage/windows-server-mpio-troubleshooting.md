@@ -21,7 +21,7 @@ In modern Windows Server environments (Hyper-V, clustering, and virtualization),
 
 ### After you update firmware, multipath disks are missing
 
-This is a known issue for some storage devices. Contact your storage vendor for support.
+This issue affects some storage devices. Contact your storage vendor for support.
 
 ### In VMware or virtual environments, Event ID 153 recurs
 
@@ -209,7 +209,7 @@ To fix this issue, follow these steps:
 
 1. Use Disk Management or diskpart to bring the missing disks online.
 
-1. To review the "Favorite Targets" list, use the iSCSI Initiator tool (In the search bar, type *iscsiocpl*, select **iSCI Initiator** in the in the search results, and then select **Favorite Targets**.
+1. To review the "Favorite Targets" list, use the iSCSI Initiator tool (In the search bar, type *iscsiocpl*, select **iSCI Initiator** in the search results, and then select **Favorite Targets**.
    
 ### MPIO is in a degraded state, slow or unresponsive during failover
 
@@ -319,7 +319,7 @@ To fix this issue, follow these steps:
 
 1. Make sure that MPIO, DSM, and Storport are up to date.
 
-## Common issues quick reference table
+## Common issues quick reference
 
 | Symptom | Cause | Resolution |
 | --- | --- | --- |
