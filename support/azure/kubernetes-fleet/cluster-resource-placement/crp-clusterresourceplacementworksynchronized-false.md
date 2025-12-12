@@ -12,7 +12,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchron
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, if the placement has been recently updated, the associated work objects aren't synchronized with the latest selected resources, and the `ClusterResourcePlacementWorkSynchronized` (for ClusterResourcePlacement) or `ResourcePlacementWorkSynchronized` (for ResourcePlacement) condition status shows as `False`.
+When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, if the placement was recently updated, the associated work objects aren't synchronized with the latest selected resources, and the `ClusterResourcePlacementWorkSynchronized` (for ClusterResourcePlacement) or `ResourcePlacementWorkSynchronized` (for ResourcePlacement) condition status shows as `False`.
 
 > [!NOTE]
 > To get more information about why the work object synchronization fails, you can check the [work generator controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workgenerator/controller.go) logs.
@@ -26,7 +26,7 @@ This issue might occur for one of the following reasons:
 
 ## Case study: ClusterResourcePlacement
 
-In the following example, the `ClusterResourcePlacement` is trying to propagate a resource to a selected cluster, but the work object isn't updated to reflect the latest changes because the selected cluster has been terminated.
+In the following example, the `ClusterResourcePlacement` is trying to propagate a resource to a selected cluster, but the work object isn't updated to reflect the latest changes because the selected cluster was terminated.
 
 ### ClusterResourcePlacement specification
 
@@ -81,7 +81,7 @@ status:
     status: "True"
     type: ClusterResourcePlacementOverridden
   - lastTransitionTime: "2024-05-14T18:05:05Z"
-    message: There are 1 cluster(s) which have not finished creating or updating work(s)
+    message: There are 1 cluster(s) which didn't finish creating or updating work(s)
       yet
     observedGeneration: 1
     reason: WorkNotSynchronizedYet
@@ -113,7 +113,7 @@ status:
     - lastTransitionTime: "2024-05-14T18:05:05Z"
       message: 'Failed to synchronize the work to the latest: works.placement.kubernetes-fleet.io
         "crp1-work" is forbidden: unable to create new content in namespace fleet-member-kind-cluster-1
-        because it is being terminated'
+        because it is terminating'
       observedGeneration: 1
       reason: SyncWorkFailed
       status: "False"
@@ -137,7 +137,7 @@ In this situation, here are several potential solutions:
 In other situations, you might opt to wait for the work to finish propagating.
 
 ## General Notes
-For ResourcePlacement the investigation is identical — inspect `.status.placementStatuses[*].conditions` for `WorkSynchronized` and check the associated Work in the `fleet-member-{clusterName}` namespace.
+For ResourcePlacement, the investigation is identical—inspect `.status.placementStatuses[*].conditions` for `WorkSynchronized` and check the associated Work in the `fleet-member-{clusterName}` namespace.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
