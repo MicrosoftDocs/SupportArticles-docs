@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Kubernetes Fleet Manager ResourcePlacement application programming interface
+title: Troubleshoot Azure Kubernetes Fleet Manager ResourcePlacement
 description: Troubleshoot errors that occur when using the ResourcePlacement API in Azure Kubernetes Fleet Manager.
 author: weiweng
 ms.author: weiweng
