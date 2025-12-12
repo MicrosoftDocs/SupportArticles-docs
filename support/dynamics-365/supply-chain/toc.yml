@@ -29,6 +29,8 @@ items:
         href: costing/indirect-costs-process-report-has-deleted-orders.md
       - name: There is no From date on the Active prices tab of the Item price page
         href: costing/no-from-date-active-prices-tab-item-price.md
+      - name: Troubleshoot inventory closing, recalculation, and reverse operations
+        href: costing/inventory-closing-recalculation-reverse.md
       - name: Warnings or errors on changing ledger period status without closing inventory
         href: costing/errors-change-ledger-period-without-closing.md
   - name: Inventory management

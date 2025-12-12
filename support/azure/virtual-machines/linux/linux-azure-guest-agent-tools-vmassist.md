@@ -4,10 +4,10 @@ description: Provides script-based tool to help diagnose and resolve Azure Guest
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
-ms.date: 10/24/2025
+ms.date: 12/04/2025
 ms.reviewer: v-jsitser, scotro, v-ryanberg
 ms.service: azure-virtual-machines
-ms.custom: sap:zzzz
+ms.custom: sap:VM Extensions not operating correctly
 ---
 #  Troubleshooting Tool for Linux Guest Agent - VM assist
 
@@ -59,11 +59,12 @@ If no issues are discovered during the base checks by using bash, the Python scr
 
 ## How to run the tool
 
-The VM assist scripting is run initially from the documentation. Subsequently, you can run the bash script directly: `vmassist.sh` as root or by using `sudo`.
+Go to the following GitHub location and follow the instructions there to [download, install, and run the tool](https://github.com/Azure/azure-support-scripts/blob/master/vmassist/linux/README.md). Subsequently, you can run the bash script directly: `vmassist.sh` as root or by using `sudo`.
 
 If you open a support request, please include both of these files to aid the support agent who assists you.
 
 ## Known issues
+
 - Don't try to run VM assist on appliances. Appliances don't run on general purpose operating systems, and the guest agent might not run at all.
 - Distributions outside PAYG versions of RedHat or SUSE, or any Ubuntu or Mariner or Azure Linux, might display false positive warnings about repository names. This situation requires a more careful reading because even official repositories might not match strict pattern matching. This condition is true because we don't build cases for all distributions.
 - Ubuntu 24.04 has a different architecture of the SSH service. It might flag the service even if the service is operating well.
