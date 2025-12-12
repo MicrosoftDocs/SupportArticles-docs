@@ -1,7 +1,7 @@
 ---
 title: ClusterResourcePlacementWorkSynchronized / ResourcePlacementWorkSynchronized failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve the ClusterResourcePlacementWorkSynchronized or ResourcePlacementWorkSynchronized failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
-ms.date: 12/09/2024
+ms.date: 5
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
