@@ -162,7 +162,7 @@ The following DLLs are known to affect the Teams desktop client and Edge WebView
 - `wincept64.dll`  
 - `winncap364.dll`
 - `xpspntdll64_6016.dll`  
--  `trssys.exe` from ```TRNSYS``` software.
+- `trssys.exe` from ```TRNSYS``` software.
   
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
