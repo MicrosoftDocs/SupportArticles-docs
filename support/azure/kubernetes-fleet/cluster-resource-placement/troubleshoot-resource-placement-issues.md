@@ -49,6 +49,19 @@ ResourcePlacement can only select and manage namespace-scoped resources within t
 - ❌ **Not Supported**: Cluster-scoped resources (use ClusterResourcePlacement instead)
 - ❌ **Not Supported**: Resources in other namespaces
 
+## Relationship between ResourcePlacement and ClusterResourcePlacement
+
+> [!NOTE]
+> ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
+>
+> The condition types follow a naming convention where ResourcePlacement conditions use the `ResourcePlacement` prefix while ClusterResourcePlacement conditions use the `ClusterResourcePlacement` prefix. For example:
+>
+> - `ResourcePlacementScheduled` ↔ `ClusterResourcePlacementScheduled`
+> - `ResourcePlacementApplied` ↔ `ClusterResourcePlacementApplied`
+> - `ResourcePlacementAvailable` ↔ `ClusterResourcePlacementAvailable`
+>
+> When following ClusterResourcePlacement troubleshooting guidance, substitute the appropriate ResourcePlacement condition names and commands (for example, use `kubectl get resourceplacement -n <namespace>` instead of `kubectl get clusterresourceplacement`).
+
 ## Complete progression of the ResourcePlacement deployment
 
 Understanding the progression and status of the `ResourcePlacement` custom resource is crucial for diagnosing and identifying failures. You can view the status of the `ResourcePlacement` custom resource by using the following command:
@@ -86,17 +99,6 @@ The complete progression of `ResourcePlacement` is as follows:
     If false, see [How to troubleshoot when the ClusterResourcePlacementAvailable condition status is false](crp-clusterresourceplacementavailable-false.md).
 
 7. **ResourcePlacementDiffReported**: Indicates whether diff reporting completes on all resources. This condition is only populated if the applied strategy type is `ReportDiff`.
-
-> [!NOTE]
-> ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
->
-> The condition types follow a naming convention where ResourcePlacement conditions use the `ResourcePlacement` prefix while ClusterResourcePlacement conditions use the `ClusterResourcePlacement` prefix. For example:
->
-> - `ResourcePlacementScheduled` ↔ `ClusterResourcePlacementScheduled`
-> - `ResourcePlacementApplied` ↔ `ClusterResourcePlacementApplied`
-> - `ResourcePlacementAvailable` ↔ `ClusterResourcePlacementAvailable`
->
-> When following ClusterResourcePlacement troubleshooting guidance, substitute the appropriate ResourcePlacement condition names and commands (for example, use `kubectl get resourceplacement -n <namespace>` instead of `kubectl get clusterresourceplacement`).
 
 ## FAQ
 

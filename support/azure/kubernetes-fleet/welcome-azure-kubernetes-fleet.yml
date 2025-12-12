@@ -17,12 +17,14 @@ metadata:
 landingContent:
 
 # Card
-  - title:  Troubleshooting Cluster Resource Placement
+  - title:  Troubleshooting Resource Placement
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshooting guide for ClusterResourcePlacement API failures
+          - text: Troubleshooting ClusterResourcePlacement
             url: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
+          - text: Troubleshooting ResourcePlacement
+            url: cluster-resource-placement/troubleshoot-resource-placement-issues.md
 
  # Card 
   - title: Troubleshoot multi-cluster networking
