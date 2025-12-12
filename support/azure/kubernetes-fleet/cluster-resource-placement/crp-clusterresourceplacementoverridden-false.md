@@ -176,7 +176,7 @@ jsonPatchOverrides:
 
 The code adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
 
-## ResourcePlacement case study
+## General Notes
 
 For ResourcePlacement, the override flow is identical except that all the resources reside in the same namespace. Use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 
