@@ -36,13 +36,13 @@ This issue can be caused by any of the following underlying problems:
 
 1. Confirm that the SQL Server Agent service is running by using one of the following PowerShell commands:
 
-    * For default SQL instances:
+    - For default SQL instances:
 
         ```powershell
         Get-Service -Name "SQLSERVERAGENT"
         ```
 
-    * For named SQL instances:
+    - For named SQL instances:
 
         ```powershell
         Get-Service -Name "SQLSERVERAGENT$<InstanceName>"
@@ -50,13 +50,13 @@ This issue can be caused by any of the following underlying problems:
 
 1. If the SQL Server Agent service isn't running, start it by using one of the following commands:
 
-    * For default SQL instances:
+    - For default SQL instances:
 
         ```powershell
         Start-Service -Name "SQLSERVERAGENT"
         ```
 
-    * For named SQL instances:
+    - For named SQL instances:
 
         ```powershell
         Start-Service -Name "SQLSERVERAGENT$<InstanceName>"
@@ -107,7 +107,7 @@ This issue can be caused by any of the following underlying problems:
     GO 
     ```
 
-    * To identify the query associated with a blocking session run the following query in SSMS:
+    - To identify the query associated with a blocking session run the following query in SSMS:
 
         ```tsql
         SELECT 
@@ -209,28 +209,28 @@ This issue can be caused by any of the following underlying problems:
 
     Investigate the output of the health check query for any of the following problems using the given symptoms:
 
-    * Worker thread pressure:
-        * Worker exhaustion, for example `Workers: 512/512`.
-        * `WorkQueue` is greater than zero, indicating that tasks are waiting and the system is overloaded.
-    * CPU pressure:
-        * `RunnableTasks` is greater than zero, indicating there's a CPU bottleneck.
-    * Memory pressure:
-        * `Memory state` is `LOW`, indicating the overall system is low on memory.
-        * A low value for `AvailableMB`, indicating high memory usage for SQL Server.
-        * A `PLE` value less than 300, indicating high memory churn.
+    - Worker thread pressure:
+        - Worker exhaustion, for example `Workers: 512/512`.
+        - `WorkQueue` is greater than zero, indicating that tasks are waiting and the system is overloaded.
+    - CPU pressure:
+        - `RunnableTasks` is greater than zero, indicating there's a CPU bottleneck.
+    - Memory pressure:
+        - `Memory state` is `LOW`, indicating the overall system is low on memory.
+        - A low value for `AvailableMB`, indicating high memory usage for SQL Server.
+        - A `PLE` value less than 300, indicating high memory churn.
 1. If you identified any worker, CPU, or memory problems in the previous step, reduce your current workload to resolve them. If you didn't identify any worker, CPU, or memory problems, proceed to the next step.
 1. Restart the SQL Server Agent by running one of the the following PowerShell commands:
 
     > [!IMPORTANT]
     > Restarting the SQL Server Agent interrupts any currently running jobs.
 
-    * For default SQL instances:
+    - For default SQL instances:
 
         ```powershell
         Restart-Service -Name "SQLSERVERAGENT"
         ```
 
-    * For named SQL instances:
+    - For named SQL instances:
 
         ```powershell
         Restart-Service -Name "SQLAgent$<InstanceName>"
