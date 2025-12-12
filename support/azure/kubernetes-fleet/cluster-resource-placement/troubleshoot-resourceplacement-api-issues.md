@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Kubernetes Fleet Manager ResourcePlacement API
+title: Troubleshoot Azure Kubernetes Fleet Manager ResourcePlacement application programming interface
 description: Troubleshoot errors that occur when using the ResourcePlacement API in Azure Kubernetes Fleet Manager.
 author: weiweng
 ms.author: weiweng
@@ -18,8 +18,6 @@ This troubleshooting guide helps you resolve `ResourcePlacement` API object-rela
 - `Work`
 
 For more information about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
-
-[!INCLUDE [preview features note](../../../includes/kubernetes-fleet/preview-callout-data-plane-beta.md)]
 
 ## Important considerations for ResourcePlacement
 
