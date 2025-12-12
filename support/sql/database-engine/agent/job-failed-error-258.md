@@ -27,22 +27,22 @@ Logon to server '<ServerName>' failed (ConnLogJobHistory)
 
 This issue can be caused by any of the following underlying problems:
 
-- Blocking on [msdb](/sql/relational-databases/databases/msdb-database) system tables used by Agent, which prevents job metadata reads and writes.
-  - Example system tables: `dbo.sysjobs`, `dbo.sysjobschedulers`, and `dbo.jobsteps`.
+- Blocking on [msdb](/sql/relational-databases/databases/msdb-database) system tables that SQL Agent uses. This blocking prevents job metadata reads and writes.  
+  - Example system tables include `dbo.sysjobs`, `dbo.sysjobschedulers`, and `dbo.jobsteps`.
 - Hangs inside important SQL Server Agent threads or other process-level problems.
-- Worker thread exhaustion in SQL Server (no workers available), making the Agent unable to connect or process schedules.
+- Worker thread exhaustion in SQL Server (no workers available). This exhaustion makes the Agent unable to connect or process schedules.
 
 ## Solution
 
 1. Confirm that the SQL Server Agent service is running by using one of the following PowerShell commands:
 
-    1. For default SQL instances:
+    * For default SQL instances:
 
         ```powershell
         Get-Service -Name "SQLSERVERAGENT"
         ```
 
-    1. For named SQL instances:
+    * For named SQL instances:
 
         ```powershell
         Get-Service -Name "SQLSERVERAGENT$<InstanceName>"
@@ -50,19 +50,19 @@ This issue can be caused by any of the following underlying problems:
 
 1. If the SQL Server Agent service isn't running, start it by using one of the following commands:
 
-    1. For default SQL instances:
+    * For default SQL instances:
 
         ```powershell
         Start-Service -Name "SQLSERVERAGENT"
         ```
 
-    1. For named SQL instances:
+    * For named SQL instances:
 
         ```powershell
         Start-Service -Name "SQLSERVERAGENT$<InstanceName>"
         ```
 
-1. If jobs continue to fail after starting the SQL Server Agent service, continue to the next step. If jobs are completing successfully, the issue is resolved and no further action is needed.
+1. If jobs continue to fail after starting the SQL Server Agent service, continue to the next step. If jobs are completing successfully, the problem is resolved and no further action is needed.
 1. Check the jobs and schedules in `msdb` by opening [SQL Server Management Studio (SSMS)](/ssms/install/install) and running the following query:
   
     ```tsql
@@ -87,7 +87,7 @@ This issue can be caused by any of the following underlying problems:
     GO
     ```
 
-    Analyze the query output for any jobs which are enabled but have failed. Investigate the job history and job-step outputs for any problematic jobs to identify and fix underlying issues.
+    Analyze the query output for any jobs that are enabled but failed. Investigate the job history and job-step outputs for any problematic jobs to identify and fix underlying problems.
 
 1. Detect blocking sessions on `msdb` Agent system tables by running the following query in SSMS:
 
@@ -107,7 +107,7 @@ This issue can be caused by any of the following underlying problems:
     GO 
     ```
 
-    1. To identify the query associated with a blocking session run the following query in SSMS:
+    * To identify the query associated with a blocking session run the following query in SSMS:
 
         ```tsql
         SELECT 
@@ -138,7 +138,7 @@ This issue can be caused by any of the following underlying problems:
 
     Once all blocking sessions are resolved or terminated, proceed to the next step.
 
-1. Check for any worker, thread, or resource health issues by running the following query in SSMS:
+1. Check for any worker, thread, or resource health problems by running the following query in SSMS:
 
     ```tsql
     /* ============================================================
@@ -207,36 +207,36 @@ This issue can be caused by any of the following underlying problems:
     ORDER BY Section, Metric;
     ```
 
-    Investigate the output of the health check query for any of the following issues using the given symptoms:
+    Investigate the output of the health check query for any of the following problems using the given symptoms:
 
-    1. Worker thread pressure:
-        1. Worker exhaustion, for example `Workers: 512/512`.
-        1. `WorkQueue` is greater than zero, indicating that tasks are waiting and the system is overloaded.
-    1. CPU pressure:
-        1. `RunnableTasks` is greater than zero, indicating there is a CPU bottleneck.
-    1. Memory pressure:
-        1. `Memory state` is `LOW`, indicating the overall system is low on memory.
-        1. A low value for `AvailableMB`, indicating high memory usage for SQL Server.
-        1. A `PLE` value less than 300, indicating high memory churn.
-1. If you identified any worker, CPU, or memory issues in the previous step reduce your current workload to resolve them. If no worker, CPU, or memory issues were identified, proceed to the next step.
+    * Worker thread pressure:
+        * Worker exhaustion, for example `Workers: 512/512`.
+        * `WorkQueue` is greater than zero, indicating that tasks are waiting and the system is overloaded.
+    * CPU pressure:
+        * `RunnableTasks` is greater than zero, indicating there's a CPU bottleneck.
+    * Memory pressure:
+        * `Memory state` is `LOW`, indicating the overall system is low on memory.
+        * A low value for `AvailableMB`, indicating high memory usage for SQL Server.
+        * A `PLE` value less than 300, indicating high memory churn.
+1. If you identified any worker, CPU, or memory problems in the previous step, reduce your current workload to resolve them. If you didn't identify any worker, CPU, or memory problems, proceed to the next step.
 1. Restart the SQL Server Agent by running one of the the following PowerShell commands:
 
     > [!IMPORTANT]
     > Restarting the SQL Server Agent interrupts any currently running jobs.
 
-    1. For default SQL instances:
+    * For default SQL instances:
 
         ```powershell
         Restart-Service -Name "SQLSERVERAGENT"
         ```
 
-    1. For named SQL instances:
+    * For named SQL instances:
 
         ```powershell
         Restart-Service -Name "SQLAgent$<InstanceName>"
         ```
 
-1. After the SQL Server Agent restarts, verify that jobs are now being executed by using the [Job Activity Monitor](/ssms/agent/monitor-job-activity#job-activity-monitor).
+1. After SQL Server Agent restarts, verify that jobs are now running by using the [Job Activity Monitor](/ssms/agent/monitor-job-activity#job-activity-monitor).
 
 ## Related content
 
