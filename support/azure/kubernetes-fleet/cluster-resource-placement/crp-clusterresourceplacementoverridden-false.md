@@ -1,25 +1,28 @@
 ---
-title: ClusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve clusterResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 08/05/2024
+title: ClusterResourcePlacementOverridden / ResourcePlacementOverridden failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve ClusterResourcePlacementOverridden or ResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementOverridden is False
+# Resource propagation failure: ClusterResourcePlacementOverridden / ResourcePlacementOverridden is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) issues when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as `False`.
+When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) status shows as `False`.
+
+> [!NOTE]
+> To get more information, look into the logs for the [overrider controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/overrider) (includes controller for ClusterResourceOverride and ResourceOverride).
 
 ## Cause
 
 This issue might occur because the `ClusterResourceOverride` or `ResourceOverride` is created by using an invalid field path for the resource.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
 In the following example, an attempt is made to override the cluster role `secret-reader` that is propagated by the `ClusterResourcePlacement` to the selected clusters.
 However, the `ClusterResourceOverride` is created by using an invalid path for the resource.
@@ -153,7 +156,7 @@ status:
     version: v1
 ```
 
-If the `ClusterResourcePlacementOverridden` condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
+If the `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
 
 In this situation, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
 Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. This means that `labels` doesn't exist.
@@ -172,6 +175,10 @@ jsonPatchOverrides:
 ```
 
 This adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
+
+## General Notes
+
+For ResourcePlacement the override flow is identical except that all the resources reside in the same namespace; use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
