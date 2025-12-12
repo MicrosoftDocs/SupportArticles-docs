@@ -35,7 +35,7 @@ This article provides lists of errors that you might experience during user data
 | **MIGR-001** | Tenant authorization error. The tenants are not configured to support migration. | The Organization Relationship isn't configured correctly. | Correct the Organization Relationship to authorize migration. |
 | **MIGR-002** | User migration failed. User \<X> is not authorized to migrate. To authorize \<X>, add them to security group \<Y> and then retry the migration. | Admins have to authorize a user for a migration. The user must be a member of the security group. | Add the user to the security group on the source tenant. |
 | **MIGR-003** | User \[X] migration failed. Please retry user migration. | A user's migration failed, and the admin must retry it. | Retry the migration. |
-| **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to be moved. | Edit the Organization Relationship or add the user to the security group. |
+| **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to be moved. | Either edit the Organization Relationship or add the user to the security group, or both. |
 
 ## Cross-tenant migration service errors
 
