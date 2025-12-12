@@ -6,7 +6,7 @@
     - name: Troubleshooting Cluster Resource Placement 
       href: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
     - name: Troubleshooting Resource Placement
-      href: cluster-resource-placement/troubleshoot-resourceplacement-issues.md
+      href: cluster-resource-placement/troubleshoot-resource-placement-issues.md
     - name: ClusterResourcePlacementScheduled is false
       href: cluster-resource-placement/crp-clusterresourceplacementscheduled-false.md
     - name: ClusterResourcePlacementRolloutStarted is false
