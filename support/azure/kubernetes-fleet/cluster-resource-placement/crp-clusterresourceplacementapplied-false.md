@@ -31,7 +31,7 @@ One of the following reasons might cause the issue:
 1. To identify clusters with the `ClusterResourcePlacementApplied` (for ClusterResourcePlacement) or `ResourcePlacementApplied` (for ResourcePlacement) condition set to `False`, inspect the `placementStatuses` in the placement status section and note down their `clusterName`.
 2. To locate the `Work` object associated with the member cluster, use the identified `clusterName`.
    - For ClusterResourcePlacement, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work)
-   - For ResourcePlacement, see [How to find the correct Work resource associated with `ResourcePlacement`](troubleshoot-resourceplacement-api-issues.md#find-work)
+   - For ResourcePlacement, see [How to find the correct Work resource associated with `ResourcePlacement`](troubleshoot-resource-placement-issues.md#find-work)
 3. To understand the specific issues preventing successful resource application, inspect the status of the `Work` object.
 
 ## Case study: ClusterResourcePlacement

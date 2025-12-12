@@ -28,7 +28,7 @@ The rollout strategy is blocked because the `RollingUpdate` configuration is too
 1. To identify clusters with the `RolloutStarted` status set to `False`, check the `placementStatuses` in the placement status section.
 2. To find the corresponding binding resource for the identified cluster, locate the `ClusterResourceBinding` (for ClusterResourcePlacement) or `ResourceBinding` (for ResourcePlacement).
    - For ClusterResourcePlacement, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource)
-   - For ResourcePlacement, see [How can I find the latest ResourceBinding resource?](troubleshoot-resourceplacement-api-issues.md#how-can-i-find-the-latest-resourcebinding-resource)
+   - For ResourcePlacement, see [How can I find the latest ResourceBinding resource?](troubleshoot-resource-placement-issues.md#how-can-i-find-the-latest-resourcebinding-resource)
    
    This resource should indicate the `Work` status (whether it was created or updated).
 3. To ensure the rollout configuration meets your expectations, verify the values of `maxUnavailable` and `maxSurge`.
