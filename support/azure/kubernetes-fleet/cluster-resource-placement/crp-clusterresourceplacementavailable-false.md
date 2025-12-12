@@ -158,7 +158,7 @@ status:
     namespace: test-ns
     version: v1
  ```
-In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object that's intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. The `Work` object intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 ```
@@ -218,21 +218,21 @@ conditions:
     version: v1
 ```
 
-Check the `Available` status for `kind-cluster-1`. You can see that the `my-deployment` deployment isn't yet available on the member cluster. This suggests that an issue might be affecting the deployment manifest.
+Check the `Available` status for `kind-cluster-1`. You can see that the `my-deployment` deployment isn't yet available on the member cluster. An issue might be affecting the deployment manifest.
 
 ### Resolution
 
-In this situation, a potential solution is to check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the placement object (ClusterResourcePlacement or ResourcePlacement) automatically propagates the corrected resource to the member cluster.
+In the situation, check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After you identify the image name, correct the deployment manifest and update it. After you fix and update the resource manifest, the placement object (ClusterResourcePlacement or ResourcePlacement) automatically propagates the corrected resource to the member cluster.
 
 For all other situations, make sure that the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
 
 ## General Troubleshooting Notes
 
-The troubleshooting process and Work object inspection are identical for both ClusterResourcePlacement and ResourcePlacement:
-- Both use the same underlying Work API to apply resources to member clusters
-- The Work object status and manifestConditions have the same structure regardless of whether they were created by a ClusterResourcePlacement or ResourcePlacement
-- The `Available` condition in the Work status indicates whether the applied resources have become available on the member cluster
-- The main difference is the scope: ClusterResourcePlacement is cluster-scoped and can select both cluster-scoped and namespace-scoped resources, while ResourcePlacement is namespace-scoped and can only select namespace-scoped resources within its own namespace
+The troubleshooting process and Work object inspection are identical for both placement types:
+- Both use the same underlying Work API to apply resources to member clusters.
+- The Work object status and manifestConditions have the same structure regardless of the placement type that created them.
+- The `Available` condition in the Work status indicates whether the applied resources are now available on the member cluster.
+- The main difference is the scope: the cluster-scoped placement can select both cluster-scoped and namespace-scoped resources, while the namespace-scoped placement can only select namespace-scoped resources within its own namespace.
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
