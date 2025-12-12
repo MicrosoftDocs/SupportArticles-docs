@@ -64,6 +64,7 @@ Go to the following GitHub location and follow the instructions there to [downlo
 If you open a support request, please include both of these files to aid the support agent who assists you.
 
 ## Known issues
+
 - Don't try to run VM assist on appliances. Appliances don't run on general purpose operating systems, and the guest agent might not run at all.
 - Distributions outside PAYG versions of RedHat or SUSE, or any Ubuntu or Mariner or Azure Linux, might display false positive warnings about repository names. This situation requires a more careful reading because even official repositories might not match strict pattern matching. This condition is true because we don't build cases for all distributions.
 - Ubuntu 24.04 has a different architecture of the SSH service. It might flag the service even if the service is operating well.
