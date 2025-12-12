@@ -218,7 +218,7 @@ This issue can be caused by any of the following underlying problems:
         - `Memory state` is `LOW`, indicating the overall system is low on memory.
         - A low value for `AvailableMB`, indicating high memory usage for SQL Server.
         - A `PLE` value less than 300, indicating high memory churn.
-1. If you identified any worker, CPU, or memory problems in the previous step, reduce your current workload to resolve them. If you didn't identify any worker, CPU, or memory problems, proceed to the next step.
+1. If you identified any worker, CPU, or memory problems in the previous step, reduce your current workload to resolve them. If you didn't identify any problems, proceed to the next step.
 1. Restart the SQL Server Agent by running one of the the following PowerShell commands:
 
     > [!IMPORTANT]
