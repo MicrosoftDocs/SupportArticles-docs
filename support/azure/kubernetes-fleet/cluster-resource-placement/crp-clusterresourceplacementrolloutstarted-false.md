@@ -375,7 +375,7 @@ Upon creating the `test-ns` namespace on the hub cluster, the rollout controller
 
 In this situation, to address this issue, consider manually setting `maxUnavailable` to a value greater than `1` to relax the `RollingUpdate` configuration. Alternatively, you can join a third member cluster.
 
-### General Notes
+## General Notes
 The rollout failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace CRP-specific object kinds with their RP equivalents when working with namespace-scoped placements.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

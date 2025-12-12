@@ -1,18 +1,18 @@
 ---
-title: ClusterResourcePlacementScheduled failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve the ClusterResourcePlacementScheduled failure when you propagate resources using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager.
-ms.date: 08/05/2024
+title: ClusterResourcePlacementScheduled / ResourcePlacementScheduled failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementScheduled or ResourcePlacementScheduled failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Resource propagation failure: ClusterResourcePlacementScheduled is false
+# Resource propagation failure: ClusterResourcePlacementScheduled / ResourcePlacementScheduled is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementScheduled` issues when you propagate resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementScheduled` (for ClusterResourcePlacement) or `ResourcePlacementScheduled` (for ResourcePlacement) issues when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the scheduler for Fleet workloads can't find all the required clusters specified by the scheduling policy, and the `ClusterResourcePlacementScheduled` condition status shows as `False`.
+When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the scheduler for Fleet workloads can't find all the required clusters specified by the scheduling policy, and the `ClusterResourcePlacementScheduled` (for ClusterResourcePlacement) or `ResourcePlacementScheduled` (for ResourcePlacement) condition status shows as `False`.
 
 > [!NOTE]
 > To get more information about why the scheduling fails, you can check the [scheduler](https://github.com/Azure/fleet/blob/main/pkg/scheduler/scheduler.go) logs.
@@ -23,14 +23,15 @@ This issue might occur for one of the following reasons:
 
 - The placement policy is set to `PickFixed`, but the specified cluster names don't match any joined member cluster name in the fleet, or the specified cluster is no longer connected to the fleet.
 - The placement policy is set to `PickN`, and N clusters are specified, but fewer than N clusters have joined the fleet or satisfied the placement policy.
-- The `ClusterResourcePlacement` resource selector selects a reserved namespace.
+- The placement resource selector selects a reserved namespace.
 
 > [!NOTE]
-> When the placement policy is set to `PickAll`, the `ClusterResourcePlacementScheduled` condition is set to `True`.
+> When the placement policy is set to `PickAll`, the `ClusterResourcePlacementScheduled` or `ResourcePlacementScheduled` condition is always set to `True`.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
-In the following example, the `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. The two clusters, named `kind-cluster-1` and `kind-cluster-2`, have joined the fleet. However, only one member cluster, `kind-cluster-1`, has the label `env:prod`.
+In the following example, a `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. (The same scheduling logic applies to `ResourcePlacement`.)
+The two clusters, named `kind-cluster-1` and `kind-cluster-2`, have joined the fleet. However, only one member cluster, `kind-cluster-1`, has the label `env:prod`.
 
 ### ClusterResourcePlacement specification
 
@@ -213,6 +214,9 @@ status:
 ### Resolution
 
 In this scenario, to resolve this issue, add the `env:prod` label to the member cluster resource for `kind-cluster-2` as well, so that the scheduler can select the cluster to propagate resources.
+
+## General Notes
+The scheduling failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace CRP-specific object kinds with their RP equivalents when working with namespace-scoped placements.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
