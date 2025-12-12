@@ -117,7 +117,6 @@ The following table lists applications and their associated DLLs that are known 
 | TenxGuard64 | |
 | Action1| `k1agentdeploycse_<architecture>.dll` |
 
-
 ## Other DLLs or .exe that might affect Teams desktop client and Edge WebView2
 
 The following DLLs are known to affect the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and also verify the ownership and integrity of the DLLs.
