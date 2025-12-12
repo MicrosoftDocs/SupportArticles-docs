@@ -150,9 +150,9 @@ Use this checklist for systematic troubleshooting.
 
 The following sections describe the most common issues, and how to fix them.
 
-### Windows Server 2022 or 2019: VM IO performance degrades when Hyper-V uses resilient change tracking (RCT) is in use
+### Windows Server 2022 or 2019: VM IO performance degrades when Hyper-V uses resilient change tracking (RCT)
 
-If you experience this issue, make sure that your computers are up to date. The [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/en-us/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) update and subsequent updates contain a fix for this issue.
+If you experience this issue, make sure that your computers are up to date. The [October 23, 2025—KB5070884 (OS Build 20348.4297)](https://support.microsoft.com/topic/october-23-2025-kb5070884-os-build-20348-4297-out-of-band-9c001fdc-f0d2-4636-87bb-494a59da55d0) update and subsequent updates contain a fix for this issue.
 
 > [!NOTE]  
 > After you install this update, VMs that were previously backed up by using a host-level backup application might not be able to start. To fix this issue, delete any .rct and .mrt files that are associated with the affected virtual hard disks. Then, try again to start the VMs. If the issue persists, contact Microsoft Support.
@@ -210,7 +210,7 @@ To fix this issue, follow these steps:
 1. Use Disk Management or diskpart to bring the missing disks online.
 
 1. To review the "Favorite Targets" list, use the iSCSI Initiator tool (In the search bar, type *iscsiocpl*, select **iSCI Initiator** in the search results, and then select **Favorite Targets**.
-   
+
 ### MPIO is in a degraded state, slow or unresponsive during failover
 
 During a failover, you might observe delays that exceed 30 seconds. You also observe IO error messages, and messages such as "MPIO is in a degraded state." You might also observe the following events:
@@ -324,12 +324,12 @@ To fix this issue, follow these steps:
 | Symptom | Cause | Resolution |
 | --- | --- | --- |
 | Disk missing in MPIO properties and Disk Mgmt | Zoning or DSM conflict | Check Device Manager, remove ghost devices, reinstall MPIO, restart |
-| Event IDs 153/129/11 | Path loss, driver/firm | Update firmware or drivers, set MPIO policy, check physical connectivity |
+| Event IDs 153/129/11 | Path loss, driver or firmware issue | Update firmware or drivers, set MPIO policy, check physical connectivity |
 | Failover delay, slow cluster resource online | Timeout, configuration  error | Raise resource timeout, fix quotas and snapshots, update drivers |
 | Duplicate disks/wrong disk order | Bad DSM or configuration | Remove extra DSM, use persistent identifiers (GUID/WWN) |
-| High IO latency, app slow, Event ID 833 | Driver and antivirus | Exclude storage from AV, update drivers, Perfmon, use 64K clusters |
+| High IO latency, app slow, Event ID 833 | Driver and antivirus (AV) | Exclude storage from AV, update drivers, Perfmon, use 64K clusters |
 | Disk GUID duplicate, Event ID 158 | No MPIO or clone VHDs | Enable MPIO, Set-VHD -ResetDiskIdentifier |
-| Cluster disk disappears after expansion | Driver or event miss | Cycle role offline and online, rescan, extend with DiskPart |
+| Cluster disk disappears after expansion | Driver or disk issue | Cycle role offline and online, rescan, use `diskpart` to extend |
 | Paths not detected until restart | Storport configuration issue | `Update-HostStorageCache`, restart |
 | "Requested resource in use," can't bring disk online | Metadata or disk issue | Use `chkdsk`, check logs, engage storage team |
 
