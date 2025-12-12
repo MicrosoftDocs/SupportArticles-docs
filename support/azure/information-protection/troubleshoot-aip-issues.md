@@ -2,7 +2,7 @@
 title: How to troubleshoot Azure Information Protection policy issues
 description: Discusses how to troubleshoot Azure Information Protection policy issues.
 ms.date: 04/07/2022
-ms.service: information-protection
+ms.service: azure-information-protection
 ms.author: jarrettr
 author: JarrettRenshaw
 ms.reviewer: 
