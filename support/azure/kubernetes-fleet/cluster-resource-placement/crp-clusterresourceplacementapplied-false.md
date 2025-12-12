@@ -1,7 +1,7 @@
 ---
 title: ClusterResourcePlacementApplied / ResourcePlacementApplied failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementApplied or ResourcePlacementApplied failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 12/09/2024
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager

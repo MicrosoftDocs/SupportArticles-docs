@@ -1,19 +1,22 @@
 ---
-title: ClusterResourcePlacementAvailable is false when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve ClusterResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 08/05/2024
+title: ClusterResourcePlacementAvailable / ResourcePlacementAvailable failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve ClusterResourcePlacementAvailable or ResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementAvailable is False
+# Resource propagation failure: ClusterResourcePlacementAvailable / ResourcePlacementAvailable is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` (for ClusterResourcePlacement) or `ResourcePlacementAvailable` (for ResourcePlacement) issues when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as `False`.
+When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` (for ClusterResourcePlacement) or `ResourcePlacementAvailable` (for ResourcePlacement) status shows as `False`.
+
+> [!NOTE]
+> To get more information about why resources are unavailable, check the [work applier controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workapplier) logs. Detailed failures are placed in the `failedPlacements` section of the placement status.
 
 ## Cause
 
@@ -21,10 +24,12 @@ This issue might occur because of one of the following reasons:
 
 - The member cluster doesn't have enough resource availability.
 - The deployment contains an invalid image name.
+- Required resources (such as persistent volumes, config maps, or secrets) are missing.
+- Resource quotas or limit ranges are preventing the resource from becoming available.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
-The following example shows that `ClusterResourcePlacement` doesn't propagate a deployment to a member cluster because of an invalid image name.
+The following example shows that a `ClusterResourcePlacement` is unable to propagate a deployment to a member cluster because of an invalid image name.
 
 #### ClusterResourcePlacement specifications
 
@@ -217,9 +222,18 @@ Check the `Available` status for `kind-cluster-1`. You can see that the `my-depl
 
 ### Resolution
 
-In this situation, a potential solution is to check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the `ClusterResourcePlacement` object API automatically propagates the corrected resource to the member cluster.
+In this situation, a potential solution is to check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the placement object (ClusterResourcePlacement or ResourcePlacement) automatically propagates the corrected resource to the member cluster.
 
 For all other situations, make sure that the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
+
+## General Troubleshooting Notes
+
+The troubleshooting process and Work object inspection are identical for both ClusterResourcePlacement and ResourcePlacement:
+- Both use the same underlying Work API to apply resources to member clusters
+- The Work object status and manifestConditions have the same structure regardless of whether they were created by a ClusterResourcePlacement or ResourcePlacement
+- The `Available` condition in the Work status indicates whether the applied resources have become available on the member cluster
+- The main difference is the scope: ClusterResourcePlacement is cluster-scoped and can select both cluster-scoped and namespace-scoped resources, while ResourcePlacement is namespace-scoped and can only select namespace-scoped resources within its own namespace
+
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
