@@ -30,10 +30,12 @@ To disable NetBIOS on the DHCP server, follow these steps:
 2. In the navigation pane, expand the **server_name**, expand **Scope**, right-click **Scope Options**, and then select **Configure Options**.
     > [!NOTE]
     > In this step, the **server_name** placeholder specifies the name of the DHCP server.
-3. Select the **Advanced** tab, and then select **Microsoft Windows 2000 Options** in the **Vendor class** list.
+3. Select the **Advanced** tab, and then select **Microsoft Windows Options** in the **Vendor class** list.
 4. Make sure that **Default User Class** is selected in the **User class** list.
 5. Select the **001 Microsoft Disable Netbios Option** check box, under the **Available Options** column.
 6. In the **Data entry** area, type 0x2 in the **Long** box, and then select **OK**.
+
+<img width="517" height="593" alt="image" src="https://github.com/user-attachments/assets/90656ed9-a1e5-4d91-9814-ef94953de68e" />
 
 ## Configure the DHCP client to enable the DHCP server to determine NetBIOS behavior
 
