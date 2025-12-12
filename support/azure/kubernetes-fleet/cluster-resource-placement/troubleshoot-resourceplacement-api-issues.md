@@ -17,7 +17,7 @@ This troubleshooting guide helps you resolve `ResourcePlacement` API object-rela
 - `ResourceBinding`
 - `Work`
 
-For more details about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
+For more information about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
 
 [!INCLUDE [preview features note](../../../includes/kubernetes-fleet/preview-callout-data-plane-beta.md)]
 
@@ -32,7 +32,7 @@ Before creating a ResourcePlacement:
 
 - Ensure the target namespace exists on the member clusters, either:
   - Created by a `ClusterResourcePlacement` using namespace-only mode
-  - Pre-existing on the member clusters
+  - Preexisting on the member clusters
 - If the namespace doesn't exist on a member cluster, the `ResourcePlacement` fails to apply resources to that cluster.
 
 ### Coordination with ClusterResourcePlacement
@@ -63,34 +63,34 @@ For more information, see [Use ResourcePlacement to place namespace-scoped resou
 
 The complete progression of `ResourcePlacement` is as follows:
 
-1. **ResourcePlacementScheduled**: Indicates that a resource has been scheduled for placement.
+1. **ResourcePlacementScheduled**: Indicates that a resource is scheduled for placement.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementScheduled condition status is false](crp-clusterresourceplacementscheduled-false.md).
 
     > [!NOTE]
-    > ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a 1-to-1 mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
+    > ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
 
-2. **ResourcePlacementRolloutStarted**: Indicates that the rollout process has begun.
+2. **ResourcePlacementRolloutStarted**: Indicates that the rollout process started.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementRolloutStarted condition status is false](crp-clusterresourceplacementrolloutstarted-false.md).
 
-3. **ResourcePlacementOverridden**: Indicates that the resource has been overridden.
+3. **ResourcePlacementOverridden**: Indicates that the resource is overridden.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementOverridden condition status is false](crp-clusterresourceplacementoverridden-false.md).
 
-4. **ResourcePlacementWorkSynchronized**: Indicates that work objects were synchronized.
+4. **ResourcePlacementWorkSynchronized**: Indicates that work objects are synchronized.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementWorkSynchronized condition status is false](crp-clusterresourceplacementworksynchronized-false.md).
 
-5. **ResourcePlacementApplied**: Indicates the resource was applied. This condition is only populated if the apply strategy type is `ClientSideApply` (default) or `ServerSideApply`.
+5. **ResourcePlacementApplied**: Indicates the resource is applied. This condition is only populated if the applied strategy type is `ClientSideApply` (default) or `ServerSideApply`.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementApplied condition status is false](crp-clusterresourceplacementapplied-false.md).
 
-6. **ResourcePlacementAvailable**: Indicates that the resource is available. This condition is only populated if the apply strategy type is `ClientSideApply` (default) or `ServerSideApply`.
+6. **ResourcePlacementAvailable**: Indicates that the resource is available. This condition is only populated if the applied strategy type is `ClientSideApply` (default) or `ServerSideApply`.
 
     If false, see [How to troubleshoot when the ClusterResourcePlacementAvailable condition status is false](crp-clusterresourceplacementavailable-false.md).
 
-7. **ResourcePlacementDiffReported**: Indicates whether diff reporting has completed on all resources. This condition is only populated if the apply strategy type is `ReportDiff`.
+7. **ResourcePlacementDiffReported**: Indicates whether diff reporting completes on all resources. This condition is only populated if the applied strategy type is `ReportDiff`.
 
     For troubleshooting diff reporting issues, see the ClusterResourcePlacement troubleshooting guides and substitute the appropriate ResourcePlacement condition names.
 
@@ -107,7 +107,7 @@ The complete progression of `ResourcePlacement` is as follows:
 
 ### How can I debug if some clusters aren't selected as expected?
 
-Check the status of `SchedulingPolicySnapshot` to determine which clusters were selected and the reason for their selection.
+Check the status of `SchedulingPolicySnapshot` to determine which clusters the scheduler selected and the reason for their selection.
 
 To find the latest `SchedulingPolicySnapshot` for a `ResourcePlacement` resource, run the following command:
 
@@ -123,20 +123,20 @@ Then, compare the `SchedulingPolicySnapshot` with the `ResourcePlacement` policy
 ### How can I debug if a selected cluster doesn't have the expected resources or if ResourcePlacement doesn't pick up the latest changes?
 
 1. Check whether the `ResourcePlacementRolloutStarted` condition in the `ResourcePlacement` status is set to **true** or **false**.
-    - If **false**, the resource placement hasn't started rolling out yet.
+    - If **false**, the resource placement doesn't start rolling out yet.
     - If **true**, go to step 2.
 2. Check whether the `ResourcePlacementApplied` condition is set to **unknown**, **false**, or **true**.
-    - If **unknown**, wait for the process to finish because the resources are still being applied to the member cluster. If the status remains **unknown** for a while, open an [issue](https://github.com/Azure/fleet/issues) because this is unusual behavior.
+    - If **unknown**, wait for the process to finish because Fleet Manager still applies the resources to the member cluster. If the status remains **unknown** for a while, open an [issue](https://github.com/Azure/fleet/issues) because this status is unusual behavior.
     - If **false**, the resources failed to apply on one or more clusters. Check the `placementStatuses` section in the status for cluster-specific details.
     - If **true**, verify that the resource exists on the hub cluster in the same namespace as the ResourcePlacement.
 3. To pinpoint issues on specific clusters, examine the `placementStatuses` section in `ResourcePlacement` status. For each cluster, you can find:
     - The cluster name
     - Conditions specific to that cluster (for example, `Applied`, `Available`)
-    - `failedPlacements` section which lists the resources that failed to apply along with the reasons
+    - `failedPlacements` section, which lists the resources that failed to apply along with the reasons
 
 ### How can I find the latest ResourceBinding resource?
 
-The following command lists all `ResourceBindings` instances that are associated with `ResourcePlacement`:
+The following command lists all `ResourceBindings` instances associated with `ResourcePlacement`:
 
 ```bash
 kubectl get resourcebinding -n <namespace> -l kubernetes-fleet.io/parent-CRP={RPName}
@@ -203,7 +203,7 @@ kubectl get resourcebinding -n <namespace> -l kubernetes-fleet.io/parent-CRP={RP
     test-rp-kind-cluster-2-ec4d953c   True               True               33s
     ```
 
-    The output lists all `ResourceBindings` instances that are associated with `test-rp`. The `ResourceBinding` resource name uses the following format:
+    The output lists all `ResourceBindings` instances associated with `test-rp`. The `ResourceBinding` resource name uses the following format:
 
     `{RPName}-{clusterName}-{suffix}`
 
@@ -220,7 +220,7 @@ kubectl get resourcesnapshot -n <namespace> -l kubernetes-fleet.io/is-latest-sna
 > [!NOTE]
 > In this command, replace `{RPName}` with your `ResourcePlacement` name and `<namespace>` with the namespace where the ResourcePlacement exists.
 
-### How can I find the correct work resource that's associated with ResourcePlacement?
+### How can I find the correct work resource associated with ResourcePlacement?
 
 To find the correct work resource, follow these steps:
 
