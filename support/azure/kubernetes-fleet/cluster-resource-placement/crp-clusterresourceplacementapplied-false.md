@@ -20,19 +20,19 @@ When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in
 
 ## Cause
 
-This issue might occur because of one of the following reasons:
+One of the following reasons might cause the issue:
 
-- The resource already exists on the cluster and isn't managed by the fleet controller.
-- Another placement (ClusterResourcePlacement or ResourcePlacement) is already managing the resource for the selected cluster by using a different apply strategy.
-- The placement doesn't apply the manifest because of syntax errors or invalid resource configurations. This might also occur if a resource is propagated through an envelope object.
+- The resource already exists on the cluster and the fleet controller doesn't manage it.
+- Another placement (ClusterResourcePlacement or ResourcePlacement) already manages the resource for the selected cluster by using a different apply strategy.
+- The placement doesn't apply the manifest because of syntax errors or invalid resource configurations. A resource propagated through an envelope object might also cause the issue.
 
 ## Troubleshooting steps
 
-1. **Check `placementStatuses`**: In the placement status section, inspect the `placementStatuses` to identify which clusters have the `ClusterResourcePlacementApplied` (for ClusterResourcePlacement) or `ResourcePlacementApplied` (for ResourcePlacement) condition set to `False` and note down their `clusterName`.
-2. **Locate the `Work` object in hub cluster**: Use the identified `clusterName` to locate the `Work` object associated with the member cluster.
+1. To identify clusters with the `ClusterResourcePlacementApplied` (for ClusterResourcePlacement) or `ResourcePlacementApplied` (for ResourcePlacement) condition set to `False`, inspect the `placementStatuses` in the placement status section and note down their `clusterName`.
+2. To locate the `Work` object associated with the member cluster, use the identified `clusterName`.
    - For ClusterResourcePlacement, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work)
    - For ResourcePlacement, see [How to find the correct Work resource associated with `ResourcePlacement`](troubleshoot-resourceplacement-api-issues.md#find-work)
-3. **Check `Work` object status**: Inspect the status of the `Work` object to understand the specific issues preventing successful resource application.
+3. To understand the specific issues preventing successful resource application, inspect the status of the `Work` object.
 
 ## Case study: ClusterResourcePlacement
 
@@ -196,7 +196,7 @@ status:
     version: v1
 ```
 
-In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explain why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object that's intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` fields explain why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. The `Work` object intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 
@@ -263,14 +263,14 @@ Check the `Work` status, particularly the `manifestConditions` section. You can 
 
 ### Resolution
 
-In this situation, a potential solution is to set the `AllowCoOwnership` to `true` in the ApplyStrategy policy. However, it's important to notice that this decision should be made by the user because the resources might not be shared.
+In the situation, set the `AllowCoOwnership` to `true` in the ApplyStrategy policy. However, the user must make the decision because the resources might not be shared.
 
 ## General Troubleshooting Notes
 
-The troubleshooting process and Work object inspection are identical for both ClusterResourcePlacement and ResourcePlacement:
-- Both use the same underlying Work API to apply resources to member clusters
-- The Work object status and manifestConditions have the same structure regardless of whether they were created by a ClusterResourcePlacement or ResourcePlacement
-- The main difference is the scope: ClusterResourcePlacement is cluster-scoped and can select both cluster-scoped and namespace-scoped resources, while ResourcePlacement is namespace-scoped and can only select namespace-scoped resources within its own namespace
+The troubleshooting process and Work object inspection are identical for both placement types:
+- Both use the same underlying Work API to apply resources to member clusters.
+- The Work object status and manifestConditions have the same structure regardless of the placement type that created them.
+- The main difference is the scope: the cluster-scoped placement can select both cluster-scoped and namespace-scoped resources, while the namespace-scoped placement can only select namespace-scoped resources within its own namespace.
 
 For ResourcePlacement-specific considerations:
 - Ensure the target namespace exists on member clusters before the ResourcePlacement tries to apply resources to it
