@@ -35,7 +35,7 @@ This article provides lists of errors that you might see during user data migrat
 | **MIGR-001** | Tenant authorization error. The tenants are not configured to support migration. | The Organization Relationship isn't configured properly. | Edit the Organization Relationship to properly authorize migration. |
 | **MIGR-002** | User migration failed. User \<X> is not authorized to migrate. To authorize \<X>, add them to security group \<Y> and then retry the migration. | Admins need to authorize the user to migrate. The user needs to be a member of the security group. | Add the user to the security group on the source tenant. |
 | **MIGR-003** | User \[X] migration failed. Please retry user migration. | A user's migration failed, and the admin must retry it. | Retry migration. |
-| | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to move. | Edit the Organization Relationship and/or add the user to the security group. |
+| **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to move. | Edit the Organization Relationship and/or add the user to the security group. |
 
 ## Cross-tenant migration service errors
 
@@ -85,7 +85,7 @@ This article provides lists of errors that you might see during user data migrat
 | **Error code** | **Error message** | **Description** | **Action** |
 |---|---|---|---|
 | **IM-003** | Teams meeting migration for user {0} failed. User {0} from source tenant {2} isn't mapped to an identity in target tenant {3}. Refer to documentation for identity mapping and retry migration. | The submitted users must be properly mapped through the identity mapping system. The mapping is checked both during the "Sync" validation state and before the user is migrated. | [Run identity mapping](/microsoft-365/enterprise/migration-orchestrator-4-user-prep.md#run-identity-mapping) again, then retry migration. |
-| **MMS-001/002** | Teams Meeting migration failed. The MMS App in tenant {1} isn't provisioned, or the app is provisioned but isn't enabled. Please refer to tenant configuration documentation and retry migration. | Without a correctly provisioned app on the source tenant, the Teams meeting migration fails. | Go to the [tenant configuration for Teams](/microsoft-365/enterprise/migration-orchestrator-3-tenant-config.md#prepare-both-tenants-for-teams-chat-and-meeting-migration) in the source or in the target. |
+| **MMS-001/002** | Teams Meeting migration failed. The MMS App {0} in tenant {1} isn't provisioned, or the app is provisioned but isn't enabled. Please refer to tenant configuration documentation and retry migration. | Without a correctly provisioned app on the source tenant, the Teams meeting migration fails. | Go to the [tenant configuration for Teams](/microsoft-365/enterprise/migration-orchestrator-3-tenant-config.md#prepare-both-tenants-for-teams-chat-and-meeting-migration) in the source or in the target. |
 | **MIGR-001** | Teams Meeting migration failed. The tenants are not configured to support migration. Refer to tenant configuration documentation and retry migration. | The Teams Meeting Migration app isn't authorized for migration data. | Go to the [tenant configuration for Teams](/microsoft-365/enterprise/migration-orchestrator-3-tenant-config.md#prepare-both-tenants-for-teams-chat-and-meeting-migration) in the source or in the target. |
 | **MIGR-003** | Teams Meeting migration for user {0} failed. Retry migration. | If there is any issue with the Teams meeting migration, then this error appears once for a user. | Retry migration for the user. |
 | **MMS-003** | Teams Meeting migration failed. MMS app in tenant {0} is missing the required RBAC roles to access the calendar. Refer to tenant configuration documentation and retry migration. | The Teams Meeting Migration app must have the appropriate app roles and service principals assigned. | Go to the [tenant configuration for Teams](/microsoft-365/enterprise/migration-orchestrator-3-tenant-config.md#prepare-both-tenants-for-teams-chat-and-meeting-migration) in the source or in the target. |
@@ -100,34 +100,34 @@ This article provides lists of errors that you might see during user data migrat
 
 ## OneDrive errors
 
-| **Error code** | **Error message** | **Description** |
-|---|---|---|
-| **1** | `FeatureIsNotEnabled` | Cross-tenant content move [{0}] is not enabled for this tenant. |
-| **50** | `MnATrustNoSetupForPartner` | There is no Cross-Tenant relationship established for partner [{0}]. |
-| **51** | `MnAReverseTrustNeedsRequiredPartnerRole` | Provide the `RequiredPartnerRole` for the cmdlet. |
-| **52** | `MnATrustWrongCmdletUsage` | You can't use this cmdlet with a partner with [Source] cross-tenant relationship configuration [{0}]. |
-| **70** | `MnAOdbFailedToGetUrlForSourceUPN` | Unable to get a OneDrive URL for source user UPN [{0}]. Error: {1}. |
-| **71** | `MnAOdbForSourceUPNDoesNotExist` | OneDrive site for source user UPN [{0}] doesn't exist. |
-| **72** | `MnAOdbForSourceUPNDoesNotExistYet` | OneDrive site for source user UPN [{0}] doesn't yet exist. Current URL - [{1}]. |
-| **80** | `MnAIdentityMapEntryDoesNotExistsForSourceUPN` | Identity map entry for source UPN [{0}] doesn't exist on the target tenant. |
-| **81** | `MnAIdentityMapEntryTooManyForSourceUPN` | There is more than one identity map entry for source UPN [{0}]. |
-| **82** | `MnAIdentityMapEntryDoesNotMatchRequest` | The identity map entry for source UPN [{0}] doesn't correspond to the requested target UPN [{1}]. |
-| **83** | `MnAOdbUsersAreNotLicensed` | The source UPN [{0}] and target UPN [{1}] aren't licensed for cross-tenant OneDrive migration. |
-| **84** | `MnATargetUpnIsInvalid` | The target UPN '{0}' is invalid. Correct this issue and try again. |
-| **85** | `MnATargetDomainIsAlreadyInSourceSiteUsers` | The source ODB '{0}' contains users with the target tenant domain '{1}' in their UPN, such as [{2}]. |
-| **86** | `MnATargetUserDoesNotExist` | Target user [{0}] does not exist on the target side. |
-| **87** | `MnATargetUserIsNotSpoEnabled` | Target user [{0}] is not allowed to have any SharePoint resources, including OneDrive. |
-| **300** | `MnAMoveJobWasNotCreated` | The cross-tenant content move job was not created for the source site [{0}]. |
-| **301** | `MnAMoveJobCreationFailed` | The Cross-Tenant content move job creation for the source object id [{0}] has failed. Error: [{1}] |
-| **303** | `MnASiteMoveTargetUrlHasWriteConflict` | The target tenant has a conflict for the site provided. Check whether site with url from the `TargetSiteUrl` property of this job already exists on the target. |
-| **304** | `MnAOdbOwnerUrlMismatch` | The OneDrive site '{0}' has a site owner '{1}' that doesn't match the owner of the OneDrive. |
-| **305** | `MnATargetUrlNotValidForRename` | For site Source url '{0}', target url '{1}', including files and folders, exceeds the character limit of the destination. |
-| **306** | `MnAFatalErrorAdminSiteCouldNotBeUsedAsMySiteHost` | Cross-tenant moves are blocked because the `TargetCrossTenantHostUrl` value is incorrect. |
-| **307** | `MnABYOKEnabledOnSourceTenant` | Blocking cross-tenant moves because bring your own key (BYOK) is enabled for the source tenant. |
-| **308** | `MnAPartnersOnTheSameFarm` | It has been detected that partners reside in the same SharePoint location that prevents them from migrating. |
-| **309** | `MnATargetSideEnvironmentHasConditionsThatBlockTheMove` | Cross-tenant moves are blocked because the target environment has conditions that prevent the move. |
-| **310** | `MnASiteMoveIsInprogressOrFinished` | Failed to initiate cross-tenant move because another move job for the same source URL [{0}] is already in progress or has finished. |
-| **311** | `MnAPartnersFarmsAreIncompatible` | Verify the compatibility status before running the migration. In case of incompatible tenants, we recommend waiting for a minimum of 48 hours. |
+| **Error code** | **Error message** |
+|---|---|
+| `FeatureIsNotEnabled` | Cross-tenant content move [{0}] is not enabled for this tenant. |
+| `MnATrustNoSetupForPartner` | There is no Cross-Tenant relationship established for partner [{0}]. |
+| `MnAReverseTrustNeedsRequiredPartnerRole` | Provide the `RequiredPartnerRole` for the cmdlet. |
+| `MnATrustWrongCmdletUsage` | You can't use this cmdlet with a partner with [Source] cross-tenant relationship configuration [{0}]. |
+| `MnAOdbFailedToGetUrlForSourceUPN` | Unable to get a OneDrive URL for source user UPN [{0}]. Error: {1}. |
+| `MnAOdbForSourceUPNDoesNotExist` | OneDrive site for source user UPN [{0}] doesn't exist. |
+| `MnAOdbForSourceUPNDoesNotExistYet` | OneDrive site for source user UPN [{0}] doesn't yet exist. Current URL - [{1}]. |
+| `MnAIdentityMapEntryDoesNotExistsForSourceUPN` | Identity map entry for source UPN [{0}] doesn't exist on the target tenant. |
+| `MnAIdentityMapEntryTooManyForSourceUPN` | There is more than one identity map entry for source UPN [{0}]. |
+| `MnAIdentityMapEntryDoesNotMatchRequest` | The identity map entry for source UPN [{0}] doesn't correspond to the requested target UPN [{1}]. |
+| `MnAOdbUsersAreNotLicensed` | The source UPN [{0}] and target UPN [{1}] aren't licensed for cross-tenant OneDrive migration. |
+| `MnATargetUpnIsInvalid` | The target UPN '{0}' is invalid. Correct this issue and try again. |
+| `MnATargetDomainIsAlreadyInSourceSiteUsers` | The source ODB '{0}' contains users with the target tenant domain '{1}' in their UPN, such as [{2}]. |
+| `MnATargetUserDoesNotExist` | Target user [{0}] does not exist on the target side. |
+| `MnATargetUserIsNotSpoEnabled` | Target user [{0}] is not allowed to have any SharePoint resources, including OneDrive. |
+| `MnAMoveJobWasNotCreated` | The cross-tenant content move job was not created for the source site [{0}]. |
+| `MnAMoveJobCreationFailed` | The Cross-Tenant content move job creation for the source object id [{0}] has failed. Error: [{1}] |
+| `MnASiteMoveTargetUrlHasWriteConflict` | The target tenant has a conflict for the site provided. Check whether site with url from the `TargetSiteUrl` property of this job already exists on the target. |
+| `MnAOdbOwnerUrlMismatch` | The OneDrive site '{0}' has a site owner '{1}' that doesn't match the owner of the OneDrive. |
+| `MnATargetUrlNotValidForRename` | For site Source url '{0}', target url '{1}', including files and folders, exceeds the character limit of the destination. |
+| `MnAFatalErrorAdminSiteCouldNotBeUsedAsMySiteHost` | Cross-tenant moves are blocked because the `TargetCrossTenantHostUrl` value is incorrect. |
+| `MnABYOKEnabledOnSourceTenant` | Blocking cross-tenant moves because bring your own key (BYOK) is enabled for the source tenant. |
+| `MnAPartnersOnTheSameFarm` | It has been detected that partners reside in the same SharePoint location that prevents them from migrating. |
+| `MnATargetSideEnvironmentHasConditionsThatBlockTheMove` | Cross-tenant moves are blocked because the target environment has conditions that prevent the move. |
+| `MnASiteMoveIsInprogressOrFinished` | Failed to initiate cross-tenant move because another move job for the same source URL [{0}] is already in progress or has finished. |
+| `MnAPartnersFarmsAreIncompatible` | Verify the compatibility status before running the migration. In case of incompatible tenants, we recommend waiting for a minimum of 48 hours. |
 
 ## Identity mapping errors
 
