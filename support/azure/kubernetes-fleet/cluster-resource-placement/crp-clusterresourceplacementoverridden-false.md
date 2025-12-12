@@ -24,7 +24,7 @@ This issue might occur because the `ClusterResourceOverride` or `ResourceOverrid
 
 ## Case study: ClusterResourcePlacement
 
-In the following example, an attempt is made to override the cluster role `secret-reader` that is propagated by the `ClusterResourcePlacement` to the selected clusters.
+In the following example, an attempt is made to override the cluster role `secret-reader` that the `ClusterResourcePlacement` propagates to the selected clusters.
 However, the `ClusterResourceOverride` is created by using an invalid path for the resource.
 
 ### ClusterRole
@@ -50,7 +50,7 @@ rules:
   - watch
   - list
 ```
-The `ClusterRole` `secret-reader` that is propagated to the member clusters by the `ClusterResourcePlacement`.
+The `ClusterRole` `secret-reader` that the `ClusterResourcePlacement` propagates to the member clusters.
 
 ### ClusterResourceOverride specifications
 ```YAML
@@ -158,8 +158,8 @@ status:
 
 If the `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
 
-In this situation, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
-Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. This means that `labels` doesn't exist.
+In the example, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
+Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. The `labels` field doesn't exist.
 Therefore, a new label can't be added.
 
 ### Resolution
@@ -174,11 +174,11 @@ jsonPatchOverrides:
       newlabel: new-value
 ```
 
-This adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
+The code adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
 
-## General Notes
+## ResourcePlacement case study
 
-For ResourcePlacement the override flow is identical except that all the resources reside in the same namespace; use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
+For ResourcePlacement, the override flow is identical except that all the resources reside in the same namespace. Use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
