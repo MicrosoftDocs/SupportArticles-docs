@@ -16,7 +16,7 @@ This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` (
 When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` (for ClusterResourcePlacement) or `ResourcePlacementAvailable` (for ResourcePlacement) status shows as `False`.
 
 > [!NOTE]
-> To get more information about why resources are unavailable, check the [work applier controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workapplier) logs. Detailed failures are placed in the `failedPlacements` section of the placement status.
+> To get more information about why resources are unavailable, check the work applier controller logs. Detailed failures are placed in the `failedPlacements` section of the placement status. For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 

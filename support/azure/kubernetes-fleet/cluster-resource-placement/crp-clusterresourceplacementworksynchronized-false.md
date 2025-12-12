@@ -1,7 +1,7 @@
 ---
 title: ClusterResourcePlacementWorkSynchronized / ResourcePlacementWorkSynchronized failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve the ClusterResourcePlacementWorkSynchronized or ResourcePlacementWorkSynchronized failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
-ms.date: 5
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
@@ -15,7 +15,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchron
 When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, if the placement was recently updated, the associated work objects aren't synchronized with the latest selected resources, and the `ClusterResourcePlacementWorkSynchronized` (for ClusterResourcePlacement) or `ResourcePlacementWorkSynchronized` (for ResourcePlacement) condition status shows as `False`.
 
 > [!NOTE]
-> To get more information about why the work object synchronization fails, you can check the [work generator controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/workgenerator/controller.go) logs.
+> To get more information about why the work object synchronization fails, you can check the work generator controller logs. For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 

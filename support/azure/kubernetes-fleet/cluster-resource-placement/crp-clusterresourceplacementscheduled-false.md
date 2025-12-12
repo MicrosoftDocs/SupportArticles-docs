@@ -15,7 +15,7 @@ This article describes how to troubleshoot `ClusterResourcePlacementScheduled` (
 When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the scheduler for Fleet workloads can't find all the required clusters specified by the scheduling policy, and the `ClusterResourcePlacementScheduled` (for ClusterResourcePlacement) or `ResourcePlacementScheduled` (for ResourcePlacement) condition status shows as `False`.
 
 > [!NOTE]
-> To get more information about why the scheduling fails, you can check the [scheduler](https://github.com/Azure/fleet/blob/main/pkg/scheduler/scheduler.go) logs.
+> To get more information about why the scheduling fails, you can check the scheduler logs. For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 

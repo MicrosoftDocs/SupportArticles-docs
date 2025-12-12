@@ -16,7 +16,7 @@ This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` 
 When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) status shows as `False`.
 
 > [!NOTE]
-> To get more information, look into the logs for the [overrider controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/overrider) (includes controller for ClusterResourceOverride and ResourceOverride).
+> To get more information, look into the overrider controller logs (includes controller for ClusterResourceOverride and ResourceOverride). For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 

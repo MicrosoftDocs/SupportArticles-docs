@@ -17,7 +17,7 @@ When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in A
 > [!NOTE]
 > This troubleshooting guide (TSG) only applies to the `RollingUpdate` rollout strategy, which is the default strategy if you don't specify in the placement. To troubleshoot the update run strategy when you specify `External` in the placement, refer to the staged update run troubleshooting documentation.
 >
-> To get more information about why the rollout doesn't start, you can check the [rollout controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/rollout/controller.go) logs.
+> To get more information about why the rollout doesn't start, you can check the rollout controller logs. For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 
