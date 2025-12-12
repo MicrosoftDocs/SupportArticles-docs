@@ -213,6 +213,7 @@ To find the latest ResourceSnapshot resource, run the following command:
 ```bash
 kubectl get resourcesnapshot -n <namespace> -l kubernetes-fleet.io/is-latest-snapshot=true,kubernetes-fleet.io/parent-CRP={RPName}
 ```
+<a id="find-work"></a>
 
 > [!NOTE]
 > In this command, replace `{RPName}` with your `ResourcePlacement` name and `<namespace>` with the namespace where the ResourcePlacement exists.

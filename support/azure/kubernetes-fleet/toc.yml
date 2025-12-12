@@ -7,17 +7,17 @@
       href: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
     - name: Troubleshooting Resource Placement
       href: cluster-resource-placement/troubleshoot-resource-placement-issues.md
-    - name: ClusterResourcePlacementScheduled is false
+    - name: ClusterResourcePlacementScheduled / ResourcePlacementScheduled is false
       href: cluster-resource-placement/crp-clusterresourceplacementscheduled-false.md
-    - name: ClusterResourcePlacementRolloutStarted is false
+    - name: ClusterResourcePlacementRolloutStarted / ResourcePlacementRolloutStarted is false
       href: cluster-resource-placement/crp-clusterresourceplacementrolloutstarted-false.md
-    - name: ClusterResourcePlacementOverridden is false
+    - name: ClusterResourcePlacementOverridden / ResourcePlacementOverridden is false
       href: cluster-resource-placement/crp-clusterresourceplacementoverridden-false.md
-    - name: ClusterResourcePlacementWorkSynchronized is false 
+    - name: ClusterResourcePlacementWorkSynchronized / ResourcePlacementWorkSynchronized is false 
       href: cluster-resource-placement/crp-clusterresourceplacementworksynchronized-false.md
-    - name: ClusterResourcePlacementApplied is false 
+    - name: ClusterResourcePlacementApplied / ResourcePlacementApplied is false 
       href: cluster-resource-placement/crp-clusterresourceplacementapplied-false.md
-    - name: ClusterResourcePlacementAvailable is false 
+    - name: ClusterResourcePlacementAvailable / ResourcePlacementAvailable is false 
       href: cluster-resource-placement/crp-clusterresourceplacementavailable-false.md
 
 - name: Multi-cluster networking
