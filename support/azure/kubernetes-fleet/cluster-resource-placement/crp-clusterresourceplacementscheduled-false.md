@@ -22,7 +22,7 @@ When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in A
 This issue might occur for one of the following reasons:
 
 - The placement policy is set to `PickFixed`, but the specified cluster names don't match any joined member cluster name in the fleet, or the specified cluster is no longer connected to the fleet.
-- The placement policy is set to `PickN`, and N clusters are specified, but fewer than N clusters have joined the fleet or satisfied the placement policy.
+- The placement policy is set to `PickN`, and N clusters are specified, but fewer than N clusters joined the fleet or satisfied the placement policy.
 - The placement resource selector selects a reserved namespace.
 
 > [!NOTE]
@@ -31,7 +31,7 @@ This issue might occur for one of the following reasons:
 ## Case study: ClusterResourcePlacement
 
 In the following example, a `ClusterResourcePlacement` with a `PickN` placement policy is trying to propagate resources to two clusters labeled `env:prod`. (The same scheduling logic applies to `ResourcePlacement`.)
-The two clusters, named `kind-cluster-1` and `kind-cluster-2`, have joined the fleet. However, only one member cluster, `kind-cluster-1`, has the label `env:prod`.
+The two clusters, named `kind-cluster-1` and `kind-cluster-2`, joined the fleet. However, only one member cluster, `kind-cluster-1`, has the label `env:prod`.
 
 ### ClusterResourcePlacement specification
 
@@ -216,7 +216,7 @@ status:
 In this scenario, to resolve this issue, add the `env:prod` label to the member cluster resource for `kind-cluster-2` as well, so that the scheduler can select the cluster to propagate resources.
 
 ## General Notes
-The scheduling failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace CRP-specific object kinds with their RP equivalents when working with namespace-scoped placements.
+The scheduling failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace ClusterResourcePlacement (CRP)-specific object kinds with their ResourcePlacement (RP) equivalents when working with namespace-scoped placements.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
