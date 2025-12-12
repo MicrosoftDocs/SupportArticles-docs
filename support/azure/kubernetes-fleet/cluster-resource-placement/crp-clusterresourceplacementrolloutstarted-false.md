@@ -1,33 +1,39 @@
 ---
-title: ClusterResourcePlacementRolloutStarted failure when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve the ClusterResourcePlacementRolloutStarted failure when you propagate resources using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager.
-ms.date: 08/05/2024
+title: ClusterResourcePlacementRolloutStarted / ResourcePlacementRolloutStarted failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve the ClusterResourcePlacementRolloutStarted or ResourcePlacementRolloutStarted failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Resource propagation failure: ClusterResourcePlacementRolloutStarted is false
+# Resource propagation failure: ClusterResourcePlacementRolloutStarted / ResourcePlacementRolloutStarted is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementRolloutStarted` issues when you propagate resources using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot `ClusterResourcePlacementRolloutStarted` (for ClusterResourcePlacement) or `ResourcePlacementRolloutStarted` (for ResourcePlacement) issues when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager.
 
 ## Symptoms
 
-When using the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the selected resources aren't rolled out in all scheduled clusters, and the `ClusterResourcePlacementRolloutStarted` condition status shows as `False`.
+When using the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the selected resources aren't rolled out in all scheduled clusters, and the `ClusterResourcePlacementRolloutStarted` (for ClusterResourcePlacement) or `ResourcePlacementRolloutStarted` (for ResourcePlacement) condition status shows as `False`.
 
 > [!NOTE]
+> This TSG only applies to the `RollingUpdate` rollout strategy, which is the default strategy if you don't specify in the placement. To troubleshoot the update run strategy when you specify `External` in the placement, refer to the staged update run troubleshooting documentation.
+>
 > To get more information about why the rollout doesn't start, you can check the [rollout controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/rollout/controller.go) logs.
 
 ## Cause
 
-The Cluster Resource Placement rollout strategy is blocked because the `RollingUpdate` configuration is too strict.
+The rollout strategy is blocked because the `RollingUpdate` configuration is too strict.
 
 ## Troubleshooting steps
 
-1. In the `ClusterResourcePlacement` status section, check the `placementStatuses` to identify clusters that have the `RolloutStarted` status set to `False`.
-2. Locate the corresponding `ClusterResourceBinding` for the identified cluster. For more information, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource) This resource should indicate the `Work` status (whether it was created or updated).
+1. In the placement status section, check the `placementStatuses` to identify clusters with the `RolloutStarted` status set to `False`.
+2. Locate the corresponding `ClusterResourceBinding` (for ClusterResourcePlacement) or `ResourceBinding` (for ResourcePlacement) for the identified cluster.
+   - For ClusterResourcePlacement, see [How can I find the latest ClusterResourceBinding resource?](troubleshoot-clusterresourceplacement-api-issues.md#how-can-i-find-the-latest-clusterresourcebinding-resource)
+   - For ResourcePlacement, see [How can I find the latest ResourceBinding resource?](troubleshoot-resourceplacement-api-issues.md#how-can-i-find-the-latest-resourcebinding-resource)
+   
+   This resource should indicate the `Work` status (whether it was created or updated).
 3. Verify the values of `maxUnavailable` and `maxSurge` to ensure they align with your expectations.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
 In the following example, the `ClusterResourcePlacement` is trying to propagate a namespace to three member clusters. However, during the initial creation of the `ClusterResourcePlacement`, the namespace didn't exist on the hub cluster, and the fleet currently comprises two member clusters named `kind-cluster-1` and `kind-cluster-2`.
 
@@ -368,6 +374,9 @@ Upon creating the `test-ns` namespace on the hub cluster, the rollout controller
 ### Resolution
 
 In this situation, to address this issue, consider manually setting `maxUnavailable` to a value greater than `1` to relax the `RollingUpdate` configuration. Alternatively, you can join a third member cluster.
+
+### General Notes
+The rollout failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace CRP-specific object kinds with their RP equivalents when working with namespace-scoped placements.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
