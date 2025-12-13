@@ -219,7 +219,7 @@ This issue can be caused by any of the following underlying problems:
         - A low value for `AvailableMB`. This value indicates high memory usage for SQL Server.
         - A `PLE` value of less than 300. This value indicates high memory churn.
 1. If you identified any worker, CPU, or memory issues in the previous step, reduce your current workload to resolve the issues. If you didn't identify any issues, go to the next step.
-1. Restart the SQL Server Agent by running one of the the following PowerShell commands:
+1. Restart the SQL Server Agent by running one of the following PowerShell commands:
 
     > [!IMPORTANT]
     > Restarting the SQL Server Agent interrupts any currently running jobs.
