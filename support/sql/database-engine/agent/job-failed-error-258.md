@@ -1,18 +1,18 @@
 ---
-title: Troubleshoot SQL Agent Job Failures with Error 258
-description: Troubleshoot SQL Agent job failures with error 258. Learn how to resolve timeout issues, fix registry problems, and ensure stable job execution.
+title: Troubleshoot SQL Server Agent Job Failures with Error 258
+description: Troubleshoot SQL Server Agent job failures (error 258). Learn how to resolve timeout issues, fix registry problems, and ensure stable job execution.
 ms.date: 12/04/2025
 ms.custom: sap:SQL Agent (Jobs, Alerts, Operators)\Job failures, job scheduling and monitoring
 ms.reviewer: prmadhes, v-shaywood
 ---
 
-# SQL Agent job fails with error 258
+# SQL Server Agent job fails and returns error 258
 
-This article provides troubleshooting guidance for an issue where SQL Agent jobs fail with error code 258.
+This article provides troubleshooting guidance for an issue that causes Microsoft SQL Server Agent jobs to fail and generates error code 258.
 
 ## Symptoms
 
-The [SQL Agent service](/ssms/agent/sql-server-agent#sql-server-agent-components) runs, but scheduled SQL Agent jobs don't execute. The SQL Server and Agent logs show network and authentication timeouts as well as failed sign-ins.
+The [SQL Server Agent service](/ssms/agent/sql-server-agent#sql-server-agent-components) runs, but scheduled SQL Server Agent jobs don't run. The SQL Server and Agent logs show network and authentication timeouts in addition to failed sign-ins.
 
 The following example shows the error message that's added to the logs:
 
@@ -27,14 +27,14 @@ Logon to server '<ServerName>' failed (ConnLogJobHistory)
 
 This issue can be caused by any of the following underlying problems:
 
-- Blocking on [msdb](/sql/relational-databases/databases/msdb-database) system tables that SQL Agent uses. This blocking prevents job metadata reads and writes.  
+- Blocking on [msdb](/sql/relational-databases/databases/msdb-database) system tables that SQL Agent uses. This blocking prevents job metadata read and write operations.  
   - Example system tables include `dbo.sysjobs`, `dbo.sysjobschedulers`, and `dbo.jobsteps`.
-- Hangs inside important SQL Server Agent threads or other process-level problems.
-- Worker thread exhaustion in SQL Server (no workers available). This exhaustion makes the Agent unable to connect or process schedules.
+- Non response (hangs) in important SQL Server Agent threads or other process-level problems.
+- Worker thread exhaustion in SQL Server (no workers available). This exhaustion prevents the Agent from connecting or processing schedules.
 
 ## Solution
 
-1. Confirm that the SQL Server Agent service is running by using one of the following PowerShell commands:
+1. Verify that the SQL Server Agent service is running. Use one of the following PowerShell commands:
 
     - For default SQL instances:
 
@@ -62,8 +62,8 @@ This issue can be caused by any of the following underlying problems:
         Start-Service -Name "SQLSERVERAGENT$<InstanceName>"
         ```
 
-1. If jobs continue to fail after starting the SQL Server Agent service, continue to the next step. If jobs are completing successfully, the problem is resolved and no further action is needed.
-1. Check the jobs and schedules in `msdb` by opening [SQL Server Management Studio (SSMS)](/ssms/install/install) and running the following query:
+1. If jobs continue to fail after you start the SQL Server Agent service, go to the next step. If jobs are finishing successfully, the issue is resolved and no further action is required.
+1. Check the jobs and schedules in `msdb`. Start [SQL Server Management Studio (SSMS)](/ssms/install/install), and run the following query:
   
     ```tsql
     USE msdb;
@@ -107,7 +107,7 @@ This issue can be caused by any of the following underlying problems:
     GO 
     ```
 
-    - To identify the query associated with a blocking session run the following query in SSMS:
+    - To identify the query that's associated with a blocking session, run the following query in SSMS:
 
         ```tsql
         SELECT 
@@ -130,13 +130,13 @@ This issue can be caused by any of the following underlying problems:
            OR wt.resource_description LIKE '%jobsteps%';
         ```
 
-1. Resolve or terminate any blocking sessions you identified in the previous step. To terminate a session run the following query in SSMS:
+1. Resolve or terminate any blocking sessions that you identified in the previous step. To terminate a session, run the following query in SSMS:
 
     ```tsql
     Kill <Blocking_Session_ID>
     ```
 
-    Once all blocking sessions are resolved or terminated, proceed to the next step.
+    After all blocking sessions are resolved or terminated, go to the next step.
 
 1. Check for any worker, thread, or resource health problems by running the following query in SSMS:
 
@@ -207,36 +207,36 @@ This issue can be caused by any of the following underlying problems:
     ORDER BY Section, Metric;
     ```
 
-    Investigate the output of the health check query for any of the following problems using the given symptoms:
+    Investigate the output of the health check query for any of the following problems as determined by the given symptoms:
 
     - Worker thread pressure:
         - Worker exhaustion, for example `Workers: 512/512`.
-        - `WorkQueue` is greater than zero, indicating that tasks are waiting and the system is overloaded.
+        - `WorkQueue` is greater than zero. This value indicates that tasks are waiting and the system is overloaded.
     - CPU pressure:
-        - `RunnableTasks` is greater than zero, indicating there's a CPU bottleneck.
+        - `RunnableTasks` is greater than zero. This value indicates that a CPU bottleneck exists.
     - Memory pressure:
-        - `Memory state` is `LOW`, indicating the overall system is low on memory.
-        - A low value for `AvailableMB`, indicating high memory usage for SQL Server.
-        - A `PLE` value less than 300, indicating high memory churn.
-1. If you identified any worker, CPU, or memory problems in the previous step, reduce your current workload to resolve them. If you didn't identify any problems, proceed to the next step.
+        - `Memory state` is `LOW`. This value indicates that the overall system is low on memory.
+        - A low value for `AvailableMB`. This value indicates high memory usage for SQL Server.
+        - A `PLE` value of less than 300. This value indicates high memory churn.
+1. If you identified any worker, CPU, or memory issues in the previous step, reduce your current workload to resolve the issues. If you didn't identify any issues, go to the next step.
 1. Restart the SQL Server Agent by running one of the the following PowerShell commands:
 
     > [!IMPORTANT]
     > Restarting the SQL Server Agent interrupts any currently running jobs.
 
-    - For default SQL instances:
+    - For default SQL Server instances:
 
         ```powershell
         Restart-Service -Name "SQLSERVERAGENT"
         ```
 
-    - For named SQL instances:
+    - For named SQL Server instances:
 
         ```powershell
         Restart-Service -Name "SQLAgent$<InstanceName>"
         ```
 
-1. After SQL Server Agent restarts, verify that jobs are now running by using the [Job Activity Monitor](/ssms/agent/monitor-job-activity#job-activity-monitor).
+1. After SQL Server Agent restarts, verify that jobs are now running. Use the [Job Activity Monitor](/ssms/agent/monitor-job-activity#job-activity-monitor).
 
 ## Related content
 
