@@ -16,163 +16,110 @@ appliesto:
 ---
 # Data corruption and disk errors troubleshooting guidance
 
-Data corruption and disk errors cover different areas such as issues about accessing a drive, drive corruption, and slow performance.
+Disk, file system, and storage issues in Windows Server environments can cause inaccessible drives, file or folder corruption, unexpected drive state changes, and application or backup failures. If not resolved promptly, these issues can compromise data integrity, disrupt service availability, and lead to downtime or data loss.
 
-The following Event IDs indicate that there's data corruption or a disk error:
+This article provides guidance to help you identify, diagnose, and repair data corruption and disk errors effectively.
 
-- Event ID 153
+## Prerequisites
 
-   > The IO operation at logical block address 123456 for Disk 2 was retried.
+- Before you perform any repairs or modify any disks, back up all critical data.
+- Make sure that you have administrative permissions on the affected devices.
+- Familiarize yourself with storage subsystem architecture and event log monitoring.
+- Make sure that you use modern volume management tools. Avoid deprecated features such as dynamic disks
 
-- Event ID 129
-
-   > Reset to device, \Device\RaidPort1, was issued.
-
-- Event ID 157
-
-   > Disk 2 has been surprise removed.
-
-- Event ID 55
-
-   > The file system structure on the disk is corrupt and unusable. Please run the chkdsk utility on the volume.
-
-- Event ID 98
-
-   > Volume C: (\Device\HarddiskVolume3) needs to be taken offline to perform a Full Chkdsk. Please run "CHKDSK /F" locally via the command line or run "REPAIR-VOLUME \<drive:>" locally or remotely via PowerShell.
+> [!NOTE]
+> This article describes commands you have to run at an administrative Windows command prompt or an administrative Windows PowerShell command prompt.
 
 ## Troubleshooting checklist
 
-> [!NOTE]
-> This article describes commands that need to be run at an elevated command prompt.
+Use this checklist for systematic troubleshooting.
 
-- In the System event log, search for New Technology File System (NTFS) and disk-related warnings and errors. For example, Event ID 55, 153, or 98.
+**Check drivers and firmware**
 
-- Run the `chkdsk /scan` command and check the result.
+Make sure that the storage-related drivers and firmware are up to date. Consult your hardware vendor for the latest drivers and diagnostic tools, if necessary. This step includes drivers foe components such as:
+
+- SCSI port
+- RAID controller
+- Host Bus Adapter (HBA)
+- Device-specific module (DSM)
+- Multipath I/O (MPIO)
+
+**Scan the health of the storage system**
+
+Use `chkdsk` in scan mode to look for potential storage system issues without making changes. Open a Windows Command Prompt window as an administrator, and then run the following command:
+
+```
+console chkdsk /scan
+```
+
+**Review the event log for relevant events**
+
+The following Event IDs indicate that there's data corruption or a disk error:
+
+- Event ID 55, `The file system structure on the disk is corrupt and unusable. Please run the chkdsk utility on the volume.`
+- Event ID 98, `Volume C: (\Device\HarddiskVolume3) needs to be taken offline to perform a Full Chkdsk. Please run "CHKDSK /F" locally via the command line or run "REPAIR-VOLUME \<drive:>" locally or remotely via PowerShell.`
+- Event ID 129, `Reset to device, \Device\RaidPort1, was issued.`
+- Event ID 153, `The IO operation at logical block address 123456 for Disk 2 was retried.`
+- Event ID 157, `Disk 2 has been surprise removed.`
+
+**Scan and repair NTFS volumes**
+
+> [!NOTE]  
+> Resilient file system (ReFS) volumes can automatically fix corruption issues. You can still run `chkdsk` to scan them.
+
+1. To get detailed information about a volume, run the following command at a Windows command prompt:
+
+   ```console
+   fsutil fsinfo ntfsinfo <RootPath>:
+   ```
 
    > [!NOTE]
-   > The `chkdsk /scan` command is read-only.
+   > In this command, \<RootPath> represents the drive letter of the drive root.
 
-- Query a drive for NTFS-specific volume information by running the following command:
+1. To verify if the volume is dirty, run the following command at a Windows command prompt:
 
-   `fsutil fsinfo ntfsinfo <rootpath>:`
-
-   > [!NOTE]
-   > The placeholder \<rootpath> represents the drive letter of the root drive.
-
-- Run the `fsutil dirty query <volumepath>:` command to check if the volume is dirty.
+   ```console
+   fsutil dirty query <VolumePath>:
+   ```
 
    > [!NOTE]
-   > The placeholder \<volumepath> represents the drive letter.
+   > In this command, \<VolumePath> represents the drive letter.
 
-  - For a volume whose file system is NTFS, run the `chkdsk /f /r` command if the volume is dirty. The `chkdsk /F /R` command needs downtime because the disk won't be accessible.
+1. If the result of the previous step indicates that the volume is dirty, schedule a maintenance window for the volume. The disk isn't accessible during the repair process. During the maintenance window, run the following command at the Windows command prompt:
 
-  - For a volume whose file system is Resilient File System (ReFS), the disk corruption will be repaired automatically.
+   ```console
+   chkdsk /f /r
+   ```
 
-- If the "chkdsk" utility doesn't fix the disk errors, perform a restore from a backup.
+   > [!NOTE]  
+   > If `chkdsk` doesn't fix the disk errors, consider reviewing the rest of the checklist to look for more issues. However, you have to restore the data from a backup.
 
-- Run a storage validation to check if there are any storage-related errors.
+**Advanced troubleshooting**
 
-- Remove the disks from the cluster and check the operating system level.
+If errors persist, follow these steps to further test the system and isolate the issue:
 
-- Run the `chkdsk /f` command on all volumes that the event is logged for.
+1. Uninstall any third-party disk management software, such as Diskeeper.
+1. Remove or update filter drivers.
+1. Switch to different types of drivers. For example, RAID controller drivers or monolithic drivers.
+1. Check the multipath I/O configuration. For more information, see [Multipath I/O (MPIO) troubleshooting guidance](windows-server-mpio-troubleshooting.md).
+1. To isolate an issue to specific hardware, remove individual disks from the cluster and then test the system.
 
-- Update third-party storage drivers or firmware.
+## Common issues and solutions
 
-If the issue persists, try the following methods:
+### Event ID 153: The IO operation at logical block address 123456 for Disk 2 was retried
 
-- Uninstall any third-party disk managing software (for example, Diskeeper).
+Event ID 153 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 153 is logged when the Storport miniport driver (sometimes known as an adapter or HBA driver) times out a request, while Event ID 129 is logged when the Storport driver times out a request to the disk. Because of the way the Storport miniport driver an the Storport driver interact, Event ID 153 might not be accompanied by an error.
 
-- Remove or update filter drivers.
+To fix this issue, you have to relieve the overload. Follow these steps:
 
-- Contact the hardware vendor and run hardware diagnostics to avoid the possibility of any hardware issues.
+1. Determine how traffic is distributed in the system (for example, by examining Performance Monitor statistics).
+1. Make sure that you have enough controllers to handle the system load. If you have multiple high-load drives that share a controller, consider splitting the drives among different controllers.
+1. Check the controller configurations, especially any throttling configurations (such as for VMware Storage I/O Control).
+1. If the system traffic doesn't flow as expected, check for the following issues:
+   - iSCSI configuration issues, such as damaged cables, damaged network adapters, or network adapters that handle non-storage traffic as well as storage traffic.
+   - MPIO configuration issues, such as insufficient or incorrectly configured multipaths.
+1. If the previous steps can't fix the timeout issue, contact your hardware vendor for information about you specific driver timeouts.
 
-- Get in touch with the storage vendor to check the multipathing configuration.
-
-- Update the SCSI port or the RAID controller drivers.
-
-- Switching to different types of drivers. For example, RAID controller drivers or monolithic drivers.
-
-- Update the Host Bud Adapter (HBA) drivers.
-
-- Update the multipathing drivers of device-specific modules (DSM).
-
-- Update the HBA firmware.
-
-## Troubleshooting Event ID 153
-
-Event ID 153 indicates that there's an error with the storage subsystem. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 129 is logged when the Storport driver times out a request to the disk, and Event ID 153 is logged when the Storport miniport driver times out a request. The miniport driver may also be referred to as an adapter driver or HBA driver, which is typically written by the hardware vendor.
-
-If Event ID 153 or Event ID 129 is logged, disk I/O timeout is the common cause because the storage controller can't handle the load. In this case, the I/O operation times out, and the miniport driver (from a vendor) sends back the messages to the Storport driver (the last Microsoft storage driver in the stack). Then, the Storport driver translates the information and logs the event in the Event Viewer.
-
-Because the miniport driver has sufficient knowledge of the request execution environment, some miniport drivers time the request themselves instead of letting the Storport driver handle request timing. The miniport driver can abort an individual request and return an error, whereas the Storport driver resets the drive after a timeout. Resetting the drive is disruptive to the I/O subsystem and may not be necessary if only one request has timed out. The miniport driver returns the error to the class driver that logs Event ID 153 and retries the request.
-
-Here's an example of Event ID 153:
-
-```output
-Log Name: System
-Source: disk
-Event ID: 153
-Level: Warning
-Description: The IO operation at logical block address 123456 for Disk 2 was retried.
-```
-
-This event indicates that a request failed and was retried by the class driver. No error message was logged in this situation because the Storport driver didn't time out the request. The lack of messages resulted in confusion when troubleshooting disk errors because there was no evidence of the error.
-
-On the **Details** tab of the event log, the detailed information shows the error that caused the retry and whether the request was a Read or Write request. For example:
-
-```output
-0000: 0004010F 002C0003 00000000 80040099
-0010: 00000000 00000000 00000000 00000000
-0020: 00000000 00000000 28090000
-
-in bytes
-
-0000: 0F 01 04 00 03 00 2C 00 ......,.
-0008: 00 00 00 00 99 00 04 80 ......
-0010: 00 00 00 00 00 00 00 00 ........
-0018: 00 00 00 00 00 00 00 00 ........
-0020: 00 00 00 00 00 00 00 00 ........
-0028: 00 00 09 28             ...*
-```
-
-In this example, the byte offset `29` shows the SCSI status, the byte offset `30` shows the SCSI request block (SRB) status that caused the retry, and the byte offset `31` shows the SCSI command that is being retried. In this case, the SCSI status is `00` (`SCSISTAT_GOOD`), the SRB status is `09` (`SRB_STATUS_TIMEOUT`), and the SCSI command is `28` (`SCSIOP_READ`).
-
-Here are the most common SCSI commands:
-
-```output
-SCSIOP_READ - 0x28
-SCSIOP_WRITE - 0x2A
-```
-
-See [scsi.h](/windows-hardware/drivers/ddi/scsi/) for a list of SCSI operations and statuses.
-
-Here are the most common SRB statuses:
-
-```output
-SRB_STATUS_TIMEOUT - 0x09
-SRB_STATUS_BUS_RESET - 0x0E
-SRB_STATUS_COMMAND_TIMEOUT - 0x0B
-```
-
-See [srb.h](/windows-hardware/drivers/ddi/srb/ns-srb-_scsi_request_block) for a list of SRB statuses.
-
-> [!NOTE]
->
-> - The timeout errors (`SRB_STATUS_TIMEOUT` or `SRB_STATUS_COMMAND_TIMEOUT`) indicate that a request is timed out in the adapter. A request was sent to the drive, and there was no response within the timeout period.
->
-> - The bus reset error (`SRB_STATUS_BUS_RESET`) indicates that the device was reset and the request is being retried because of the reset since all incomplete requests are aborted when a drive receives a reset.
-
-An administrator needs to verify the health of the disk subsystem. Although an occasional timeout may be part of the normal operation of a system, the frequent retry requests indicate a performance issue with storage that should be fixed.
-
-### More information
-
-Because the issue is normally outside the operating system, check the following common causes:
-
-- Some type of throttling is configured, such as I/O limitations. Sometimes, Storage I/O Control in VMware causes this issue.
-
-- Too many drives with a high load are on the same storage controller. Therefore the drives need to be split among different controllers.
-
-- If Multipath I/O (MPIO) is configured, a single cable or a damaged NIC can cause issues with iSCSI.
 
 ## Troubleshooting Event ID 129
 
