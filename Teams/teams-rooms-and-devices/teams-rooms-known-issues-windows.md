@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 12/03/2025
+ms.date: 12/13/2025
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -41,6 +41,7 @@ ms.date: 12/03/2025
 |Lenovo Teams Rooms devices display BitLocker recovery screen.|When you try to update Windows from 23H2 to 24H2 on a Lenovo Teams Rooms for Windows device that has BitLocker enabled, the update might fail and you see a BitLocker recovery screen instead.|The Windows update to 24H2 on Lenovo devices is [blocked](https://support.microsoft.com/topic/kb5070632-some-devices-are-temporarily-unable-to-upgrade-to-windows-11-version-24h2-or-25h2-c3dd7515-21e6-46ce-9a9d-64a8882ef5ca) due to this issue. <br/><br/>You can safely upgrade the versions of the Teams Rooms app to 5.3.205.0 and 5.4.210.0 on the affected devices that will remain on Windows version 23H2. <br/><br/>If one of these versions of the Teams Rooms app is already installed and the device displays the BitLocker recovery screen, enter the BitLocker recovery key to restore functionality.|
 |Video participants missing from Front row.|The Front row view doesn't show all the video participants, and they're missing from the overflow area as well.<br/><br/>The Front row view displays a maximum of five attendees on a single screen, and up to nine attendees on a dual screen. When the maximum number of attendees are already shown on the screen, the extra attendees are represented in the overflow view area. However, when two or more participants turn on their cameras, the remaining video streams might not fit in the Front-of-Room display, and they are not accounted for in the overflow area as well. This issue causes those video participants to appear as "missing" from the meeting.|Use a different meeting view than the Front row view.|
 |All video streams turn off on Front row during a meeting.|When you use the Front row view on a Teams Rooms on Windows device, all video streams including the meeting room's video and incoming content turn off in the Front-of-Room display. This issue occurs intermittently when a remote participant turns off their video while content is being shared.|Leave and rejoin the Teams meeting from the Teams Rooms device.|
+|USB devices fail intermittently on Teams Rooms devices.|On Teams Rooms on Windows devices that use Intel PCH 500, 600, or 700 systems, you hear occasional glitches or unexpected clicking or popping noises in an audio stream. You might also see glitches in a video stream momentarily, and occasionally a USB audio or video device might stop working.<br/><br/>These issues occur if your device experiences USB split transaction issues.|Switch to Admin mode on your Teams Rooms on Windows device and perform step 3 listed in the Resolution section of [USB-connected audio or video devices malfunction when connected to specific Intel-based devices](/windows-client/setup-upgrade-and-drivers/usb-audio-video-devices-malfunction?source=docs#resolution). If the script that you run determines that your device is impacted, perform step 4 to add the registry entry as described.|
 
 ## Hardware issues
 
