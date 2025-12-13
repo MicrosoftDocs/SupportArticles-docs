@@ -113,6 +113,8 @@ items:
             href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
           - name: '"The remote desktop was not found" error'
             href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
+          - name: UI automation actions fail after Block Input action
+            href: desktop-flows/ui-automation/block-input-action-issues.md
           - name: UI element picker or recorder can't view UI elements in desktop applications
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions
