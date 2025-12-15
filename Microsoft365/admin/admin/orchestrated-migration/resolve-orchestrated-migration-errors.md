@@ -23,7 +23,7 @@ This article provides lists of errors that you might experience during user data
 
 | **Error code** | **Error message** | **Description** | **Action** |
 |---|---|---|---|
-| **HTTP 409 Conflict** | `Conflict`<br><br>Cross Tenant Migration Job \<ID> must be in final state (Completed, Failed, or Cancelled) before it can be deleted.<br><br>`resourceTypeMismatch` | Jobs can be deleted, but only if the job isn't in progress. | Cancel the migration, and retry the deletion or wait until it completes or fails to delete it. |
+| **HTTP 409 Conflict** | `Conflict`<br><br>Cross Tenant Migration Job \<ID> must be in final state (Completed, Failed, or Cancelled) before it can be deleted.<br><br>`resourceTypeMismatch` | The job cannot currently be deleted because it is not in a terminal state. The job must be in a Failed, Canceled, or Completed state before it can be deleted. | Cancel the job, or wait for it to reach a Failed or Completed state. Then retry the delete request. |
 | **HTTP 422 Unprocessable Entity** | `BadArgument` <br><br> Error in `displayName` data field `duplicateDisplayNameJob`<br><br> `displayName` already exists. Please provide a unique job `displayName`. | Each newly submitted batch (validation or migration) must have a unique batch name. | Resubmit the batch by using a unique batch name. |
 | **HTTP 422 Unprocessable Entity** | `BadArgument`<br><br>Error in `completeAfterDateTime` data field `minThresholdFailed` <br><br>`completeAfterDateTime` must be greater than the current time. | The `completeAfterDateTime` value is in the past. It should be in the future. | Resubmit the request to update `completeAfterDateTime` to a future date. |
 
@@ -35,7 +35,7 @@ This article provides lists of errors that you might experience during user data
 | **MIGR-001** | Tenant authorization error. The tenants are not configured to support migration. | The Organization Relationship isn't configured correctly. | Correct the Organization Relationship to authorize migration. |
 | **MIGR-002** | User migration failed. User \<X> is not authorized to migrate. To authorize \<X>, add them to security group \<Y> and then retry the migration. | Admins have to authorize a user for a migration. The user must be a member of the security group. | Add the user to the security group on the source tenant. |
 | **MIGR-003** | User \[X] migration failed. Please retry user migration. | A user's migration failed, and the admin must retry it. | Retry the migration. |
-| **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to be moved. | Either edit the Organization Relationship or add the user to the security group, or both. |
+| **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to be moved. | Either edit the Organization Relationship or add the user to the security group, or do both. |
 
 ## Cross-tenant migration service errors
 
