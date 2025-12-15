@@ -38,8 +38,6 @@ For more information about performing the upgrade process on custom, golden, and
 
 ## Upgrade RHEL-SAP-HANA PAYG images from 8.x to 8.10
 
-> [!IMPORTANT]  
-> RHEL 8.10 isn't currently certified to run SAP High-performance ANalytic Appliance (HANA). This certification is in process. For more information, see [Overview Product Availability Matrix for SAP on Red Hat](https://access.redhat.com/articles/6966927#support-matrix-for-sap-hana-on-intel-64-rhel-5).
 
 1. Remove the RHUI E4S package installed or updated on the VM:
 
