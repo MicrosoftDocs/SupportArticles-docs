@@ -361,8 +361,8 @@ internet. You can use resources like [digwebinterface](https://digwebinterface.c
 with correct values. For example, in digwebinterface:
 
 1.  In **Hostnames or IP addresses**, add a custom domain (like
-    [*www.mydomain.com*](http://www.mydomain.com)) and then enter
-    [*asuid.www.mydomain.com*](http://asuid.www.mydomain.com).
+    *www.mydomain.com*) and then enter
+    *asuid.www.mydomain.com*.
 
 2.  In **Type**, select **TXT**.
 
@@ -411,7 +411,7 @@ redirect URI specified in the request does not match the redirect URIs
 configured for the application." What should I do?
 
 **Solution**: This is due to the Reply URL in the Azure App Registration
-being configured with the default [azurewebsites.net](https://azurewebsites.net/) uniform resource identifier (URI). To fix this, add your custom domain
+being configured with the default *azurewebsites.net* uniform resource identifier (URI). To fix this, add your custom domain
 as a valid redirect URI. Go to Azure portal > **App Registration** >
 **Authentication** blade and update the URI to include your custom domain. For example,
 [*https://www.mydomain.com/.auth/login/aad/callback*](https://www.mydomain.com/.auth/login/aad/callback).
@@ -428,9 +428,8 @@ certificate is bound to the custom domain URL) isn't reached.
 For example, using digwebinterface:
 
 1.  In **Hostnames or IP Addresses**, enter the default App Service URL
-    and the custom domain URL (like
-    [*mywebapp.azurewebsites.net*](http://mywebapp.azurewebsites.net/)
-    and [*www.mydomain.com*](http://www.mydomain.com/)).
+    and the custom domain URL (like *mywebapp.azurewebsites.net*
+    and *www.mydomain.com*).
 
 2.  Select **Dig** to see the returned IP address.
 
@@ -472,9 +471,8 @@ certificate authorities can issue certificates for your domain.
 4.  Ensure [digicert.com](http://digicert.com/) is allowed to issue the certificate.
 
 The free managed certificate and apex domain certificate require the A
-record to point to the web app's IP address and subdomain with the
-CNAME to *<app-name>.azurewebsites.net* or [trafficmanager.net](http://trafficmanager.net). If these conditions aren't met,
-certificate renewal is blocked.
+record to point to the web app's IP address and subdomain. Point the
+CNAME to *your-app-name.azurewebsites.net* or your Azure Traffic Manager URL. If these conditions aren't met, certificate renewal is blocked.
 
 **Issue**: I'm using an App Service certificate for my custom domain.
 The certificate is about to expire. Why hasn't it been renewed yet?
@@ -508,7 +506,7 @@ Either the A or CNAME record is missing or you're checking too soon.
 CNAME for subdomain) as described in [Step 3](#step-3-add-and-validate-the-custom-domain-in-azure) and wait for propagation.
 Use global DNS check tools to confirm the records exist. If these
 records are in place, ensure you used the correct Azure domain as target
-(for example, *<yourapp>.azurewebsites.net*) and that the domain is
+(for example, *yourapp.azurewebsites.net*) and that the domain is
 spelled correctly. Verify you didn't create conflicting records (like
 having both an A and CNAME for the same name). Once the DNS is correct,
 Azure validation and resolution will succeed. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
@@ -517,7 +515,7 @@ Azure validation and resolution will succeed. For more information, see [Trouble
 domain)" error.
 
 DNS is behaving as expected (the domain resolves), but browsing to
-*http://<custom-domain>* shows an Azure 404 page. This indicates the
+*http://custom-domain* shows an Azure 404 page. This indicates the
 custom hostname isn't linked to the App Service configuration and Azure
 can't determine which app should answer that domain. The domain isn't
 successfully added to the app or the DNS is pointing to Azure but the
