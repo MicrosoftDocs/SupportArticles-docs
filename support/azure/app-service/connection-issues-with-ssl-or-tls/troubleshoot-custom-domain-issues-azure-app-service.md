@@ -82,7 +82,7 @@ information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure 
 app's default Azure domain (for example, *yourapp.azurewebsites.net*).
 We recommend a TXT record with a prefix asuid (for example, *asuid.www*
 as the record name). Azure also suggests this in the portal. For more
-information, see [Set up an existing custom domain in Azure App service]() /azure/app-service/app-service-web-tutorial-custom-domain).
+information, see [Set up an existing custom domain in Azure App service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
 - Never configure both a CNAME and an A record for the same domain.
 This causes resolution conflicts. Choose one of the methods previously
@@ -103,13 +103,13 @@ and `value` as the IP address of your web app (find this either in
 > site or change the region or tier. As such, Azure prefers CNAME for
 > subdomains. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- **CNAME record** - Use `hostname\` as the subdomain (for example, *www*)
+- **CNAME record** - Use `hostname` as the subdomain (for example, *www*)
 and `value` as the default domain of your app (for example,
 *yourapp.azurewebsites.net*). Ensure it's the exact value Azure provided
 (like not including ".net" in the value).
 For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
-- **TXT record** - Use `hostname\` as the asuid (for the root) or
+- **TXT record** - Use `hostname` as the asuid (for the root) or
 *asuid.subdomain* (for subdomains) and the `value` as the
 *verification token* (a GUID-like string that Azure provides). This TXT
 record proves to Azure that you own the domain and helps prevent others
@@ -172,7 +172,7 @@ succeeds, the domain status in Azure usually shows as **Successfully added**.
 > If you're still stuck at validation after checking DNS and
 > prerequisites, try the **App Service Diagnostics** tool (your App
 > Service's **Diagnose and Solve Problems** blade > **SSL and Domains**
-> > **Run All Certificates & Domains Checks**). Azure provides an
+> **Run All Certificates & Domains Checks**). Azure provides an
 > interactive troubleshooter that can often detect common
 > misconfigurations (like missing records) and suggest fixes.
 > For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
