@@ -36,9 +36,9 @@ Use this checklist for systematic troubleshooting.
 
 **Check drivers and firmware**
 
-Make sure that the storage-related drivers and firmware are up to date. Consult your hardware vendor for the latest drivers and diagnostic tools, if necessary. This step includes drivers foe components such as:
+Make sure that the storage-related drivers and firmware are up to date. Consult your hardware vendor for the latest drivers and diagnostic tools, if necessary. This step includes drivers for components such as:
 
-- SCSI port
+- iSCSI port
 - RAID controller
 - Host Bus Adapter (HBA)
 - Device-specific module (DSM)
@@ -108,7 +108,7 @@ If errors persist, follow these steps to further test the system and isolate the
 
 ### Event ID 153: The IO operation at logical block address 123456 for Disk 2 was retried
 
-Event ID 153 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 153 is logged when the Storport miniport driver (sometimes known as an adapter or HBA driver) times out a request, while Event ID 129 is logged when the Storport driver (*Storport.sys*) times out a request to the disk. Because of the way the Storport miniport driver an the Storport driver interact, Event ID 153 might not be accompanied by an error.
+Event ID 153 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 153 is logged when the Storport miniport driver (sometimes known as an adapter or HBA driver) times out a request, while Event ID 129 is logged when the Storport driver (*Storport.sys*) times out a request to the disk. Because of the way the Storport miniport driver and the Storport driver interact, Event ID 153 might not be accompanied by an error.
 
 To fix this issue, you have to relieve the overload. Follow these steps:
 
@@ -116,9 +116,9 @@ To fix this issue, you have to relieve the overload. Follow these steps:
 1. Make sure that you have enough controllers to handle the system load. If you have multiple high-load drives that share a controller, consider splitting the drives among different controllers.
 1. Check the controller configurations, especially any throttling configurations (such as for VMware Storage I/O Control).
 1. If the system traffic doesn't flow as expected, check for the following issues:
-   - iSCSI configuration issues, such as damaged cables, damaged network adapters, or network adapters that handle non-storage traffic as well as storage traffic.
+   - iSCSI configuration issues, such as damaged cables, damaged network adapters, or network adapters that handle non-storage traffic and storage traffic.
    - MPIO configuration issues, such as insufficient or incorrectly configured multipaths.
-1. If the previous steps can't fix the timeout issue, contact your hardware vendor for information about you specific driver timeouts.
+1. If the previous steps can't fix the timeout issue, contact your hardware vendor for information about your specific driver timeouts.
 
 ### Event ID 129: Reset to device, \Device\RaidPort1, was issued
 
@@ -158,13 +158,13 @@ NTFS events such as Event ID 55, 50, 140, and 98 indicate file system corruption
 - I/O requests that the file system sends to the disk subsystem aren't completed successfully.
 
 > [!NOTE]  
-> Because NTFS couldn't write data to the transaction log, this could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
+> Because NTFS couldn't write data to the transaction log, this issue could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
 
 To fix these issues, follow these steps:
 
 1. Open an administrative Windows Command Prompt window, and then run the following command:
 
-   ```console3
+   ```console
    chkdsk with /f /r
    ```
 
