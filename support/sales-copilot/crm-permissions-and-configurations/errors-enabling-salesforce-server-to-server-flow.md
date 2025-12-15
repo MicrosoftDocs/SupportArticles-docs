@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Sales app.
-ms.date: 11/20/2025
+ms.date: 12/16/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -125,6 +125,25 @@ During the Salesforce server-to-server flow setup, a profile named **Sales Integ
 ### Resolution
 
 To resolve this issue, check if a profile with the same name already exists in the Salesforce organization. If it was created before enabling the server-to-server flow, rename the existing profile and try again. If the profile wasn't created previously, contact [Microsoft support](/microsoft-sales-copilot/get-support).
+
+## Required fields are missing
+
+### Symptoms
+
+When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+
+> Required fields are missing: [field_name]
+
+### Cause
+
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. The error occurs when custom validation rules are created for creation of a user in Salesforce.
+
+### Resolution
+
+To resolve this issue:
+
+- Temporarily disable the custom validation rules for user creation. In Salesforce, go to Setup > Object Manager > User > Validation Rules.
+- Create the integration user and provide the Salesforce user ID to Microsoft for allow listing in the backend. Microsoft then creates the user bypassing the validation rules. 
 
 ## More information
 
