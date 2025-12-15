@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
 
 > [!CAUTION]  
-> Use the ADMX download packages in only the Central Store scenario. Replacing files in c:\Windows\PolicyDefinitions is not supported.
+> Use the ADMX download packages in only the Central Store scenario. Replacing files in c:\Windows\PolicyDefinitions isn't supported.
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
@@ -49,7 +49,7 @@ A new policy **AllowedNonAdminPackageFamilyNameRules** is added to the AppxPacka
 
 ## Administrative Templates file storage
 
-Windows uses a Central Store to store Administrative Templates files. The ADM folder is not created in a Group Policy Object (GPO) as it is done in earlier versions of Windows. Therefore, Windows domain controllers do not store or replicate redundant copies of .adm files.
+Windows uses a Central Store to store Administrative Templates files. The ADM folder is no longer created in a Group Policy Object (GPO) as it was in earlier versions of Windows. Therefore, Windows domain controllers don't store or replicate redundant copies of .adm files.
 
 ## The Central Store
 
@@ -68,7 +68,7 @@ If you already have such a folder that has a previously built Central Store, use
 Copy all files from the PolicyDefinitions folder on a source computer to the new PolicyDefinitions folder on the domain controller. The source location can be either of the following locations:
 
 - The `C:\Windows\PolicyDefinitions` folder on a Windows 10-based or Windows 11-based client computer
-- The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you have downloaded any of the Administrative Templates separately from the links above.
+- The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you downloaded any of the Administrative Templates separately from the links above.
 
 The PolicyDefinitions folder on the Windows domain controller stores all .admx files and .adml files for all languages that are enabled on the client computer.
 
@@ -85,7 +85,7 @@ We suggest that you use this approach because you can revert to the old folder i
 
 ## Group Policy administration
 
-Windows 10 and later versions do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 10 or later versions of Windows to perform Group Policy administration.
+Windows 10 and later versions don't include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 10 or later versions of Windows to perform Group Policy administration.
 
 ## Updating the Administrative Templates files
 
