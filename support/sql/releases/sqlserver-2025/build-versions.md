@@ -10,7 +10,7 @@ ms.reviewer: v-six
 ---
 # KB1234567 - SQL Server 2025 build versions
 
-This article lists the Microsoft SQL Server 2025 builds that were released after the release of SQL Server 2022.
+This article lists the Microsoft SQL Server 2025 builds that were released after the release of SQL Server 2025.
 
 ## SQL Server 2025 GDR builds
 
