@@ -142,8 +142,8 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 
 To resolve this issue:
 
-- Temporarily disable the custom validation rules for user creation. In Salesforce, go to Setup > Object Manager > User > Validation Rules.
-- Create the integration user and provide the Salesforce user ID to Microsoft for allow listing in the backend. Microsoft then creates the user bypassing the validation rules. 
+1. Temporarily disable the custom validation rules for user creation from Setup > Object Manager > User > Validation Rules.
+1. Create the integration user manually and provide the Salesforce user ID to [Microsoft support](/microsoft-sales-copilot/get-support) for allow listing it in the backend. Microsoft then creates the user bypassing the validation rules. 
 
 ## More information
 
