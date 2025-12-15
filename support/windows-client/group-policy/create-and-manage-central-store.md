@@ -28,6 +28,9 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677) 
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
 
+> [!CAUTION]  
+> Use the ADMX download packages only in the Central Store scenario. Replacing files in c:\Windows\PolicyDefinitions is not supported.
+
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
 - [Group Policy Settings Reference Spreadsheet for Windows 11 2025 Update (25H2)](https://www.microsoft.com/download/details.aspx?id=108395)
