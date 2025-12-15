@@ -120,76 +120,53 @@ To fix this issue, you have to relieve the overload. Follow these steps:
    - MPIO configuration issues, such as insufficient or incorrectly configured multipaths.
 1. If the previous steps can't fix the timeout issue, contact your hardware vendor for information about you specific driver timeouts.
 
+### Event ID 129: Reset to device, \Device\RaidPort1, was issued
 
-## Event ID 129: Reset to device, \Device\RaidPort1, was issued
+Similar to Event ID 153, Event ID 129 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 129 is logged when the Storport driver (*Storport.sys*) times out a request to the disk. The event information includes the name of the storage adapter (HBA) driver (also known as the miniport driver) that's associated with the affected Storport driver.
 
-Logged when the Storport driver times out a request to the storage adapter. Causes include:
+The following issues can cause this behavior:
 
-- Unresponsive LUNs.
-- Dropped requests due to hardware issues, such as faulty SAN routers.
-**Recommended actions:**
-- Verify LUN responsiveness and storage network stability.
-- Avoid changing registry disk timeout values without vendor guidance.
+- LUNs aren't responding.
+- Hardware issues such as faulty SAN routers are causing request drops.
 
-Event ID 129 is logged with the storage adapter (HBA) driver's name as the source. The Storport driver logs this event when it detects that a request is timed out. The HBA driver's name is used in the event because it's the miniport driver that is associated with the Storport driver.
+To fix this issue, follow these steps:
 
+1. Verify that the storage network is stable and the LUNs are responding.
+1. If you need information about disk tuning, contact your storage vendor. Don't change the disk timeout values in the registry unless you have vendor guidance.
 
-### Information about Windows I/O stack architecture
+### Event ID 157: Disk 2 has been surprise removed
 
-Windows I/O operation uses a layered architecture where device drivers are on a device stack. In a basic model, the top of the stack is the file system. The next is the volume manager, followed by the disk driver. The port and miniport drivers are at the bottom of the device stack. When an I/O request reaches the file system, it takes the block number of the file and translates it to an offset in the volume. Then, the volume manager translates the volume offset to a block number on the disk and passes the request to the disk driver. When the request reaches the disk driver, it will create a command descriptor block (CDB) and send it to the SCSI device. The disk driver embeds the CDB into the SCSI_REQUEST_BLOCK (SRB) structure. This SRB is sent to the port driver as part of the I/O request packet (IRP).
+This event indicates that the *Classpnp.sys* driver received a surprise removal request from the plug and play (PNP) manager for a non-removable disk.
 
-The port driver does most of the request processing. There are different port drivers depending on the architecture. For example, the ATA port driver (*Ataport.sys*) and the SCSI port driver (*Storport.sys*). Here are some responsibilities of a port driver:
+This issue most often occurs when something disrupts communication between the system and a disk. For example, any of the following incidents can generate this event:
 
-- Providing timing services for requests
+- A SAN fabric error
+- A SCSI bus issue
+- A disk that fails
+- A user unplugs a disk while the system is running.
 
-- Enforcing queue depth to make sure that a device doesn't have more requests than it can handle
+To fix this issue, follow these steps:
 
-- Building "scatter" and "gather" arrays for data buffers
+1. Verify that the disk subsystem is healthy.
+1. Check the state of the disk hardware, and check storage connections for disruptions.
 
-The port driver interfaces with the miniport driver, and the miniport driver is designed by the hardware vendor to work with a specific adapter. It's responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter with a value set to `RequestComplete`, along with a pointer to the completed SRB.
+### Event ID 55 and Event ID 98: Please run the chkdsk utility
 
-When a request is sent to the miniport driver, the Storport driver will put the request in a pending queue, and it's timed. When the request is completed, it's removed from this queue.
-
-The timing mechanism is simple. There's one timer per logical unit, and it's initialized to `-1`. When the first request is sent to the miniport driver, the timer is set to the timeout value in the SRB. The disk timeout value is a tunable parameter that's located under the following registry key:
-
-`HKLM\System\CurrentControlSet\Services\Disk\TimeOutValue`
-
-Some hardware vendors will tune this value to best match their hardware. Don't change this value without guidance from your storage vendor.
-
-The timer is decremented once per second. When a request is completed, the timer is refreshed with the timeout value of the head request in the pending queue. Therefore, the timer will never go to zero as long as requests complete. If the timer goes to zero, it means that the device has stopped responding. For example, when the Storport driver logs Event ID 129, the Storport driver has to take corrective action by trying to reset the unit. When the unit is reset, all incomplete requests are completed with an error, and they're retried. When the pending queue is cleared, the timer is set to `-1`, which is the initial value.
-
-Each SRB has a timer value set. When requests are completed, the queue timer is refreshed with the timeout value of the SRB at the head of the list.
-
-The most common causes of Event ID 129 are unresponsive LUNs or a dropped request. Dropped requests can be caused by faulty routers or other hardware problems on the storage area network (SAN).
-
-## Troubleshooting Event ID 157
-
-This event indicates that the *Classpnp.sys* driver has received a surprise removal request from the plug and play manager (PNP) for a non-removable disk.
-
-This issue most often occurs when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails or when a user unplugs a disk while the system is running. In this case, an administrator needs to verify the heath of the disk subsystem.
-
-## Troubleshooting Event ID 55 and 98
-
-If NTFS events such as Event ID 55, 50, 140, and 98 are logged, you need to run the "chkdsk" utility.
-
-Because NTFS couldn't write data to the transaction log, this could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
-
-Here's an example of Event ID 55:
-
-```output
-Event Type: Error
-Event Source: NTFS
-Event ID: 55
-Description: The file system structure on the disk is corrupt and unusable. Please run the chkdsk utility on the volume.
-```
-
-Usually, Event ID 55 is logged when file system corruption occurs. The file system corruption occurs when one or more of the following issues occur:
+NTFS events such as Event ID 55, 50, 140, and 98 indicate file system corruption and similar issues. The file system corruption occurs when one or more of the following issues occur:
 
 - A disk has bad sectors.
+- I/O requests that the file system sends to the disk subsystem aren't completed successfully.
 
-- I/O requests that are delivered by the file system to the disk subsystem aren't completed successfully.
+> [!NOTE]  
+> Because NTFS couldn't write data to the transaction log, this could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
 
-Most issues are hardware-related, and hardware may be corrupted unexpectedly. You can try the following methods to fix the issues:
+To fix these issues, try the following methods:
+
+- Run chkdsk with /f /r parameters to repair and recover sectors.
+- 
+- 
+- 
+- Address underlying hardware issues to prevent recurrence.
 
 - Update the SCSI port or the RAID controller drivers.
 
