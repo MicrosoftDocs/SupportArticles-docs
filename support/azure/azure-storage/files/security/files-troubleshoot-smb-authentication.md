@@ -61,6 +61,37 @@ Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain
 
 Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance).
 
+
+## Error: All newly added URIs must contain a tenant verified domain, tenant ID, or app ID
+
+### Cause
+
+This error occurs during configuration of identity-based authentication for Azure Files when adding a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
+
+Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following:
+- A tenant-verified custom domain
+- The Microsoft Entra tenant ID
+- The application (client) ID
+
+If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that is not associated with the tenant, the request is blocked by default tenant policy.
+
+This behavior is enforced by Microsoft Entra ID and is not specific to the Azure Files service.
+
+For more information, see:
+[Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
+[Redirect URI (reply URL) outline and restrictions](/entra/identity-platform/reply-url)
+[Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
+
+### Solution
+When configuring application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
+- Use a tenant-verified custom domain
+- Use the Microsoft Entra tenant ID
+- Use the application (client) ID
+
+Do not use unverified domains, `.local` hostnames, or arbitrary URLs, as these will be rejected by Microsoft Entra ID tenant policy.
+If you are unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
+
+  
 ## Unable to mount Azure file shares with AD credentials
 
 ### Self diagnostics steps
@@ -402,7 +433,7 @@ if ($null -ne $application) {
 
 <a name='error---service-principal-password-has-expired-in-azure-ad'></a>
 
-### Error - Service principal password has expired in Microsoft Entra ID
+## Error - Service principal password has expired in Microsoft Entra ID
 
 If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users won't be able to get Kerberos tickets to the file share.
 
@@ -418,7 +449,7 @@ Be sure to save domain properties (domainName and domainGUID) before disabling M
 
 Once you've reconfigured Microsoft Entra Kerberos, the new experience will auto-create and manage the newly created application.
 
-### Error 1326 - The username or password is incorrect when using private link
+## Error 1326 - The username or password is incorrect when using private link
 
 If you're connecting to a storage account via a private endpoint/private link using Microsoft Entra Kerberos authentication, when attempting to mount a file share via `net use` or other method, the client is prompted for credentials. The user will likely type their credentials in, but the credentials are rejected.
 
@@ -473,17 +504,90 @@ The solution is to add the privateLink FQDN to the storage account's Microsoft E
 1. Update any internal DNS references to point to the private link.
 1. Retry mounting the share.
 
-### Error AADSTS50105
+
+## Intermittent authentication failures after network changes when using Microsoft Entra Kerberos
+
+### Symptom
+
+Windows clients that use Microsoft Entra Kerberos authentication to access Azure Files intermittently lose access after a network change (for example, VPN reconnect, Wi-Fi change, sleep or resume). Access may fail until the user signs out and signs back in to Windows.
+
+### Cause
+
+This issue is caused by a known Windows behavior where certain network changes clear the cached KDC proxy configuration on the client. When the KDC proxy configuration is removed, the client is unable to refresh Kerberos service tickets from Microsoft Entra ID.
+
+Although the user’s Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
+
+This is a Windows client limitation and is not caused by Azure Files or Microsoft Entra ID configuration.
+
+### Solution
+
+**Option one**: Signing out and signing back in to Windows restores access by fetching a new PRT, which includes a refreshed Ticket Granting Ticket (TGT) and KDC proxy configuration. However, this results in a poor user experience.
+
+**Option two**: Configure a Group Policy setting to persist the KDC proxy configuration on the client, reducing authentication interruptions caused by network changes.
+1. Configure KDC proxy settings using Group Policy
+2. Open Group Policy Management and edit the applicable policy
+3.  Navigate to:
+**Administrative Templates** > **System** > **Kerberos** > **Specify KDC proxy servers for Kerberos clients**
+4. Select **Enabled**
+5.  Under Options, select Show to open the Show Contents dialog box.
+6.  Add the following mapping, replacing your_Azure_AD_tenant_id with your Microsoft Entra tenant ID
+
+|Value name |Value |
+|-----------|--------------|
+| KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Azure_AD_tenant_id/kerberos /> |
+
+> [!NOTE]
+> Include the space after https and before the closing /.
+
+7. Select **OK**, then select **Apply**.
+
+After this policy is applied, Windows clients retain the KDC proxy configuration across network changes, reducing authentication disruptions.
+
+
+
+## Authentication stops after approximately 10 hours when using Microsoft Entra Kerberos
+
+### Symptom
+
+Windows clients using Microsoft Entra Kerberos authentication to access Azure Files lose access after approximately 10 hours of continuous use. Access is restored only after the user signs out and signs back in to Windows.
+
+### Cause
+
+This issue is caused by a known limitation in Microsoft Entra Kerberos authentication. Microsoft Entra ID does not currently support renewal of Ticket Granting Tickets (TGTs).
+
+In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user’s Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
+
+Signing out and signing back in to Windows resolves the issue by obtaining a new PRT, which includes a new TGT.
+This is a known limitation of Microsoft Entra Kerberos and is not caused by Azure Files configuration.
+
+### Solution
+
+As a mitigation, customers can use cloud trust between on-premises Active Directory Domain Services (AD DS) and Microsoft Entra ID when accessing Azure Files.
+
+With cloud trust configured, Windows clients obtain their TGT from AD DS instead of Microsoft Entra ID. AD DS-issued TGTs support renewal, avoiding the expiration behavior seen with Microsoft Entra Kerberos. The AD DS-issued TGT is then exchanged for an Entra referral TGT, which is used to obtain service tickets for Azure Files.
+
+This mitigation applies only to clients that are:
+- AD DS domain joined, or
+- Hybrid Microsoft Entra joined
+- Cloud-native (Microsoft Entra–only) clients cannot use this workaround.
+
+To apply this mitigation, configure a cloud trust between on-premises AD DS and Microsoft Entra ID for accessing Azure Files. For step-by-step guidance, see: [Configure a cloud trust for Azure Files authentication](files/storage-files-identity-auth-hybrid-cloud-trust?tabs=azure-portal)
+
+
+
+## Error AADSTS50105
+
+### Symptom
 
 The request was interrupted by the following error AADSTS50105:
 
 > Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
 
-#### Cause
+### Cause
 
 If you set up "assignment required" for the corresponding enterprise application, you won't be able to get a Kerberos ticket, and Microsoft Entra sign-in logs will show an error even though users or groups are assigned to the application.
 
-#### Solution
+### Solution
 
 Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../../entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md).
 
