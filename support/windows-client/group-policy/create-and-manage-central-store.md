@@ -53,9 +53,9 @@ Windows uses a Central Store to store Administrative Templates files. The ADM fo
 
 ## The Central Store
 
-To take advantage of the benefits of .admx files, you must create a Central Store in the sysvol folder on a Windows domain controller. The Central Store is a file location that is checked by the Group Policy tools by default. The Group Policy tools use all .admx files that are in the Central Store. The files that are in the Central Store are replicated to all domain controllers in the domain.
+To take advantage of the benefits of .admx files, you must create a Central Store in the sysvol folder on a Windows domain controller. The Central Store is a file location that's checked by the Group Policy tools by default. The Group Policy tools use all .admx files that are in the Central Store. The files that are in the Central Store are replicated to all domain controllers in the domain.
 
-We suggest that you keep a repository of any ADMX/L files that you have for applications that you may want to use. For example, operating system extensions such as Microsoft Desktop optimization Pack (MDOP), Microsoft Office, and also third-party applications that offer Group Policy support.
+We suggest that you keep a repository of your ADMX/L files for applications that you might want to use. For example, operating system extensions such as Microsoft Desktop optimization Pack (MDOP), Microsoft Office, and also third-party applications that offer Group Policy support.
 
 To create a Central Store for .admx and .adml files, create a folder that's named PolicyDefinitions in the following location (for example) on the domain controller:
 
@@ -89,9 +89,9 @@ Windows 10 and later versions do not include Administrative Templates that have 
 
 ## Updating the Administrative Templates files
 
-In Group Policy for Windows Vista and later version of Windows, if you change Administrative Templates policy settings on local computers, sysvol folder isn't automatically updated to include the new .admx or .adml files. This behavior is implemented to reduce network load and disk storage requirements, and to prevent conflicts between .admx and .adml files when changes are made to Administrative Templates policy settings across different locations.
+You might change Administrative Templates policy settings on local computers. However, in Group Policy for Windows Vista and later version of Windows, the sysvol folder isn't automatically updated to include the new .admx or .adml files. This behavior is implemented to reduce network load and disk storage requirements. This behavior also prevents conflicts between .admx and .adml files when changes are made to Administrative Templates policy settings across different locations.
 
-To make sure that any local updates are reflected in sysvol folder, you must manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to the share sysvol folder, *contoso.com\\PolicyDefinitions*, on the domain controller.
+You can force the sysvol folder to reflect local updates. To make this change, manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to the share sysvol folder, *contoso.com\\PolicyDefinitions*, on the domain controller.
 
 The following update enables you to configure the Local Group Policy editor to use local .admx files instead of the Central Store:
 
