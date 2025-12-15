@@ -23,7 +23,7 @@ This article provides lists of errors that you might experience during user data
 
 | **Error code** | **Error message** | **Description** | **Action** |
 |---|---|---|---|
-| **HTTP 409 Conflict** | `Conflict`<br><br>Cross Tenant Migration Job \<ID> must be in final state (Completed, Failed, or Cancelled) before it can be deleted.<br><br>`resourceTypeMismatch` | The job cannot currently be deleted because it is not in a terminal state. The job must be in a Failed, Canceled, or Completed state before it can be deleted. | Cancel the job, or wait for it to reach a Failed or Completed state. Then retry the delete request. |
+| **HTTP 409 Conflict** | `Conflict`<br><br>Cross Tenant Migration Job \<ID> must be in final state (Completed, Failed, or Cancelled) before it can be deleted.<br><br>`resourceTypeMismatch` | Currently, the job can't be deleted because it's not in a terminal state. The job must be in a Failed, Canceled, or Completed state before it can be deleted. | Cancel the job, or wait for it to reach a Failed or Completed state. Then, retry the delete request. |
 | **HTTP 422 Unprocessable Entity** | `BadArgument` <br><br> Error in `displayName` data field `duplicateDisplayNameJob`<br><br> `displayName` already exists. Please provide a unique job `displayName`. | Each newly submitted batch (validation or migration) must have a unique batch name. | Resubmit the batch by using a unique batch name. |
 | **HTTP 422 Unprocessable Entity** | `BadArgument`<br><br>Error in `completeAfterDateTime` data field `minThresholdFailed` <br><br>`completeAfterDateTime` must be greater than the current time. | The `completeAfterDateTime` value is in the past. It should be in the future. | Resubmit the request to update `completeAfterDateTime` to a future date. |
 
