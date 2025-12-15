@@ -120,7 +120,7 @@ The following table lists applications and their associated DLLs that are known 
 
 ## Other DLLs that might affect Teams desktop client and Edge WebView2
 
-The following DLLs and .exe are known to affect the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and also verify the ownership and integrity of the DLLs.
+The following DLLs are known to affect the Teams desktop client and Edge WebView2. You should verify the presence of the DLLs, and also verify the ownership and integrity of the DLLs.
 
 - `bsijt64.dll`
 - `core64.dll`
