@@ -160,22 +160,24 @@ NTFS events such as Event ID 55, 50, 140, and 98 indicate file system corruption
 > [!NOTE]  
 > Because NTFS couldn't write data to the transaction log, this could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
 
-To fix these issues, try the following methods:
+To fix these issues, follow these steps:
 
-- Run chkdsk with /f /r parameters to repair and recover sectors.
-- 
-- 
-- 
-- Address underlying hardware issues to prevent recurrence.
+1. Open an administrative Windows Command Prompt window, and then run the following command:
 
-- Update the SCSI port or the RAID controller drivers.
+   ```console3
+   chkdsk with /f /r
+   ```
 
-- Remove or update filter drivers.
+   This command repairs and recovers sectors.
 
-- Update third-party storage drivers or firmware.
+1. Verify that the underlying hardware is working correctly.
 
-- Switching to different types of drivers. For example, RAID controller drivers or monolithic drivers.
+1. Update the SCSI port or RAID controller drivers.
 
-- Rearrange hardware into various combinations.
+1. Remove or update filter drivers.
+
+1. Update third-party storage drivers or firmware.
+
+1. If the issue persists, try switching to different types of drivers. For example, RAID controller drivers or monolithic drivers, or try rearranging hardware into various combinations.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
