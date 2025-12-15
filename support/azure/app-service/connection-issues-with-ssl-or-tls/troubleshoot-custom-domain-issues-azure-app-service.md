@@ -177,7 +177,7 @@ succeeds, the domain status in Azure usually shows as **Successfully added**.
 > misconfigurations (like missing records) and suggest fixes.
 > For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
-
+:::image type="content" source="../media/troubleshoot-custom-domain-issues-azure-app-service/diagnose-and-solve-problems-view-azure-portal.png" alt-text="Diagnose and solve problems view in Azure portal." lightbox="../media/troubleshoot-custom-domain-issues-azure-app-service/diagnose-and-solve-problems-view-azure-portal.png":::
 
 ### Step 4: Test domain mapping and app response
 
