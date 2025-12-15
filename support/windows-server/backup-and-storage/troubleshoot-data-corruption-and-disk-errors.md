@@ -108,7 +108,7 @@ If errors persist, follow these steps to further test the system and isolate the
 
 ### Event ID 153: The IO operation at logical block address 123456 for Disk 2 was retried
 
-Event ID 153 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 153 is logged when the Storport miniport driver (sometimes known as an adapter or HBA driver) times out a request, while Event ID 129 is logged when the Storport driver times out a request to the disk. Because of the way the Storport miniport driver an the Storport driver interact, Event ID 153 might not be accompanied by an error.
+Event ID 153 indicates that the storage subsystem is overloaded, which is causing requests to time out. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 153 is logged when the Storport miniport driver (sometimes known as an adapter or HBA driver) times out a request, while Event ID 129 is logged when the Storport driver (*Storport.sys*) times out a request to the disk. Because of the way the Storport miniport driver an the Storport driver interact, Event ID 153 might not be accompanied by an error.
 
 To fix this issue, you have to relieve the overload. Follow these steps:
 
@@ -121,20 +121,18 @@ To fix this issue, you have to relieve the overload. Follow these steps:
 1. If the previous steps can't fix the timeout issue, contact your hardware vendor for information about you specific driver timeouts.
 
 
-## Troubleshooting Event ID 129
+## Event ID 129: Reset to device, \Device\RaidPort1, was issued
 
-Event ID 129 is logged with the storage adapter (HBA) driver's name as the source. The Storport driver (*Storport.sys*) logs this event when it detects that a request is timed out. The HBA driver's name is used in the event because it's the miniport driver that is associated with the Storport driver.
+Logged when the Storport driver times out a request to the storage adapter. Causes include:
 
-Here's an example of Event ID 129:
+- Unresponsive LUNs.
+- Dropped requests due to hardware issues, such as faulty SAN routers.
+**Recommended actions:**
+- Verify LUN responsiveness and storage network stability.
+- Avoid changing registry disk timeout values without vendor guidance.
 
-```output
-Event Type:       Warning
-Event Source:     <HBA_Name>
-Event Category:   None
-Event ID:         129
-Computer:         <Computer_Name>
-Description: Reset to device, \Device\RaidPort1, was issued.
-```
+Event ID 129 is logged with the storage adapter (HBA) driver's name as the source. The Storport driver logs this event when it detects that a request is timed out. The HBA driver's name is used in the event because it's the miniport driver that is associated with the Storport driver.
+
 
 ### Information about Windows I/O stack architecture
 
