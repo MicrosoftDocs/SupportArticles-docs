@@ -11,9 +11,9 @@ ms.custom: sap:Authoring
 
 # Understand error codes
 
-When an agent encounters a problem during a conversation, it responds with a message that includes an error code for the specific problem that was encountered. Users of the agent should give this error code to their administrator.
+When an agent encounters a problem during a conversation, it responds with a message that includes an error code for the specific problem. Users of the agent should give this error code to their administrator.
 
-As an agent maker, if a problem occurs when you're using the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you can see a message with more context about the problem, in addition to the error code. Alternatively, you can use the **Topic checker** panel to [validate your agent](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
+As an agent maker, if a problem occurs when you're using the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you see a message with more context about the problem, in addition to the error code. Alternatively, you can use the **Topic checker** panel to [validate your agent](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
 
 ## Error list
 
@@ -76,14 +76,14 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 Common problems include:
 
 - A node is missing required properties.
-- Invalid YAML was added with the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor).
+- Invalid YAML was added by using the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor).
 - A [Power Fx formula](/microsoft-copilot-studio/advanced-power-fx) contains an error.
 
 #### ConsentNotProvidedByUser
 
 **Error message**: No consent provided for SSO connection.
 
-**Resolution**: The user interacting with the agent must confirm the connection using the agent's single sign-on connection prompt.
+**Resolution**: The user interacting with the agent must confirm the connection by using the agent's single sign-on connection prompt.
 
 #### DataLossPreventionViolation
 
@@ -92,14 +92,14 @@ Common problems include:
 **Resolution**:
 
 - Your environment's data policies require that users sign in. See [Add user authentication with the Sign in system topic](/microsoft-copilot-studio/advanced-end-user-authentication#add-user-authentication-with-the-sign-in-system-topic).
-- One or more connectors that are used in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
-- One or more connectors that are used in the agent were blocked by the tenant administrator.
+- One or more connectors that you use in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
+- One or more connectors that you use in the agent were blocked by the tenant administrator.
 
 #### EnforcementMessageC2
 
 **Error message**: This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution**: This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within 5 minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution**: This message appears when an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionBadRequest
 
@@ -110,7 +110,7 @@ Common problems include:
 - The parameter with name {KeyName} on flow {FlowName} ({FlowId}) evaluated to type {ResolveType}, expected type {ExpectedType}.
 - The flow {FlowName} ({FlowId}) failed to run with response code {ResponseCode}, error code: {FlowErrorCode}.
 
-**Resolution**: Check that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables you pass to the flow match the parameter's type.
+**Resolution**: Check that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables you pass to the flow matches the parameter's type.
 
 #### FlowActionException
 
@@ -138,13 +138,13 @@ Common problems include:
 
 **Error message**: The usage limit for search and summarize has been reached. Please try again later.
 
-**Resolution**: This message is returned when the agent reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message when it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### GenAIToolPlannerRateLimitReached
 
 **Error message**: The usage limit for generative orchestration has been reached. Please try again later.
 
-**Resolution**: This message is returned when the agent reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message when it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### InfiniteLoopInBotContent
 
@@ -156,7 +156,7 @@ Common problems include:
 
 **Error message**: A total of {TotalComponents} component(s) exist in the agent, but none are valid.
 
-**Resolution**: [Open the code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor) to review issues with the content.
+**Resolution**: [Open the code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor) to review problems with the content.
 
 #### LatestPublishedVersionNotFound
 
@@ -168,9 +168,9 @@ Common problems include:
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-The content was blocked by a Responsible AI check for hateful content. Hateful content refer to any content that attacks or uses discriminatory language with reference to a person or identity group based on certain differentiating attributes of these groups.
+A Responsible AI check blocks the content for hateful content. Hateful content refers to any content that attacks or uses discriminatory language with reference to a person or identity group based on certain differentiating attributes of these groups.
 
-This includes, but isn't limited to:
+This restriction includes, but isn't limited to, content about:
 
 - Race, ethnicity, nationality
 - Gender identity groups and expression
@@ -180,21 +180,21 @@ This includes, but isn't limited to:
 - Disability status
 - Harassment and bullying
 
-**Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 #### OpenAIJailBreak
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-The content was blocked by a security check for a jailbreak attempt. A jailbreak attempt is a user prompt attack that ignores system prompts with the goal of altering the intended agent behavior. These attacks include attempts to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+A security check blocks the content for a jailbreak attempt. A jailbreak attempt is a user prompt attack that ignores system prompts with the goal of altering the intended agent behavior. These attacks include attempts to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
-**Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 #### OpenAIndirectAttack
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-There was an attack detected from information not directly supplied by the agent author or the end user, such as external documents. Attackers attempts to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
+An attack was detected from information not directly supplied by the agent author or the end user, such as external documents. Attackers attempt to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
 
 - Manipulating content
 - Intrusion
@@ -205,28 +205,28 @@ There was an attack detected from information not directly supplied by the agent
 
 For more information, see [Prompt Shields for documents](/azure/ai-services/content-safety/concepts/jailbreak-detection#prompt-shields-for-documents).
 
-**Resolution**: If you're testing and didn't mean it to be an attack, make sure your instructions are in line with what you want the agent to be able to do. Otherwise, you can reinforce responsible AI guidelines with your agent users to avoid this situation.
+**Resolution**: If you're testing and didn't intend it to be an attack, make sure your instructions align with what you want the agent to be able to do. Otherwise, reinforce responsible AI guidelines with your agent users to avoid this situation.
 
 #### OpenAISelfHarm
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-The content was blocked by a Responsible AI check for content related to self-harm. Self-harm describes language related to physical actions intended to purposely hurt, injure, damage one's body, or kill oneself.
+A Responsible AI check blocked content related to self-harm. Self-harm describes language related to physical actions intended to purposely hurt, injure, damage one's body, or kill oneself.
 
-This includes, but isn't limited to:
+This restriction includes, but isn't limited to, content about:
 
 - Eating disorder
 - Bullying and intimidation
 
-**Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 #### OpenAISexual
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-The content was blocked by a Responsible AI check for sexual content. Sexual content describes language related to anatomical organs and genitals, romantic relationships, sexual acts, and acts portrayed in erotic or affectionate terms, including those portrayed as an assault or a forced sexual violent act against one's will.
+A Responsible AI check blocked content for sexual content. Sexual content describes language related to anatomical organs and genitals, romantic relationships, sexual acts, and acts portrayed in erotic or affectionate terms, including those portrayed as an assault or a forced sexual violent act against one's will.
 
-This includes, but isn't limited to:
+This restriction includes, but isn't limited to, content about:
 
 - Vulgar content
 - Prostitution
@@ -234,7 +234,7 @@ This includes, but isn't limited to:
 - Abuse
 - Child exploitation, child abuse, child grooming
 
-**Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 #### OpenAIRateLimitReached
 
@@ -246,24 +246,24 @@ This includes, but isn't limited to:
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-The content was blocked by a Responsible AI check for violent content. Violent content describes language related to physical actions intended to hurt, injure, damage, or kill someone or something; describes weapons, guns, and related entities.
+A Responsible AI check blocked content for violent content. Violent content describes language related to physical actions intended to hurt, injure, damage, or kill someone or something. It also describes weapons, guns, and related entities.
 
-This includes, but isn't limited to:
+This restriction includes, but isn't limited to, content about:
 
 - Weapons
 - Bullying and intimidation
 - Terrorist and violent extremism
 - Stalking
 
-**Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
+**Resolution**: To avoid this situation, reinforce responsible AI guidelines with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 #### OutgoingMessageSizeTooBig
 
 **Error message**: Outgoing message size too big.
 
-**Resolution**: Depending on the channel, such as Direct Line or Facebook, being used to transfer files, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." These limits are imposed by the [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true), and not Copilot Studio.
+**Resolution**: Depending on the channel you're using to transfer files, such as Direct Line or Facebook, you might receive the following error message: "The request content length exceeded limit of 262,144 bytes." These limits are imposed by the [channel](/azure/bot-service/bot-service-resources-faq-general?azure-bot-service-4.0#what-is-the-size-limit-of-a-file-transferred-using-channels&preserve-view=true), and not Copilot Studio.
 
-In this scenario, there are a few options. One option is to provide a link to the resource as an internet attachment. Another option is to review your nodes to ensure that none of them are using a variable that contains a large volume of text, such as a `JSON.stringify()` static method. If you use this method or a variable that contains a large volume of text, modify the node to only pass the portion of text that's necessary. For example, if you use an Adaptive Card to pass data to another topic, update the variable to only pass the necessary property.
+In this scenario, consider a few options. One option is to provide a link to the resource as an internet attachment. Another option is to review your nodes to ensure that none of them use a variable that contains a large volume of text, such as a `JSON.stringify()` static method. If you use this method or a variable that contains a large volume of text, modify the node to only pass the portion of text that's necessary. For example, if you use an Adaptive Card to pass data to another topic, update the variable to only pass the necessary property.
 
 For more information, see [Maximum channel data message size limits when using Copilot Studio in Omnichannel](/microsoft-copilot-studio/requirements-quotas#maximum-channel-data-message-size-limits-when-using-copilot-studio-in-omnichannel).
 
@@ -289,7 +289,7 @@ For more information, see [Maximum channel data message size limits when using C
 
 **Error message**: The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution**: This indicates the request being sent to OpenAI is exceeding the maximum request size allowed. There are a number of things that make up the request including the user input, output from previous actions, tools called, and conversation history. Review the tools you're using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
+**Resolution**: This error indicates the request sent to OpenAI exceeds the maximum request size allowed. The request includes the user input, output from previous actions, tools called, and conversation history. Review the tools you're using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
