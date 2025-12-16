@@ -30,6 +30,6 @@ Also note that a 64-bit environment requires a Basic or Standard service plan. F
 
 For more information, see [Configure web apps in App Service](/azure/app-service/configure-common).
 
-[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
-
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)] 
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
