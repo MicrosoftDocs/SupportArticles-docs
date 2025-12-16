@@ -62,7 +62,7 @@ Verify the following items:
 > [!NOTE]
 > App Service IPs can change if you delete and re-create the site or change the region or tier. Azure prefers CNAME for subdomains. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- **CNAME record** - Use `hostname` as the subdomain (for example, *www*) and `value` as the default domain of your app (for example, *yourapp.azurewebsites.net*). Make sure that it's the exact value that Azure provided (for exmaple, don't include ".net" in the value). For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
+- **CNAME record** - Use `hostname` as the subdomain (for example, *www*) and `value` as the default domain of your app (for example, *yourapp.azurewebsites.net*). Make sure that it's the exact value that Azure provided (for example, don't include ".net" in the value). For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
 - **TXT record** - Use `hostname` as the asuid (for the root) or *asuid.subdomain* (for subdomains) and the `value` as the *verification token* (a GUID-like string that Azure provides). This TXT record proves to Azure that you own the domain, and helps prevent others from hijacking your domain mapping. While Azure doesn't force the use
 of the TXT record in every scenario, we strongly recommend that you use it for security. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
@@ -116,444 +116,222 @@ After the custom domain is added, perform a quick test to make sure that it's co
 
 ### Step 5: Configure SSL (HTTPS) for the custom domain
 
-Serving your app over HTTPS is crucial. Azure App Service supports four
-ways to get an SSL certificate for your custom domain using either App
-Service Managed Certificates (ASMC) (free) or custom uploaded
-certificates (bring your own).
+Serving your app over HTTPS is crucial. Azure App Service supports four methods to get an SSL certificate for your custom domain by using either App Service Managed Certificates (ASMC) (free) or custom uploaded certificates (bring your own).
 
-**Option A: Use ASMC** - If your App Service Plan is B1 or higher,
-  you can use a free managed certificate for custom domains. In the
-  **Custom domains** blade, if your domain is added and shows **No binding**, select it, choose **Add binding**, and then choose **Azure Managed Certificate**. This provisions a standard certificate that covers that domain. It usually issues within a few minutes and automatically renews.
+**Option A: Use ASMC** - If your App Service Plan is B1 or later, you can use a free managed certificate for custom domains. In the **Custom domains** blade, if your domain is added and shows **No binding**, select it, and then select **Add binding** > **Azure Managed Certificate**. This action provisions a standard certificate that covers that domain. The certificate is issued within a few minutes and renews automatically.
 
 > [!NOTE]
-> ASMC currently doesn't support wildcards.
+> Currently, ASMC doesn't support wildcards.
 
-**Option B: Import an App Service certificate** - To import an
-  App Service certificate, [buy and configure an App Service certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate)
-  and then add it to the web app. For more information, see [Import an App Service certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#import-an-app-service-certificate).
+**Option B: Import an App Service certificate** - To import an App Service certificate, [buy and configure an App Service certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate), and then add it to the web app. For more information, see [Import an App Service certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#import-an-app-service-certificate).
 
-**Option C: Upload a certificate** - For more control (or if you need
-  certificates like wildcard or Extended Validation (EV) certificates),
-  you can upload a PFX certificate with its password. Go to **TLS/SSL Settings > Private Key Certificates (.pfx)** in your App Service and
-  upload your certificate. Once uploaded, go to **Custom domains > Add binding** and then select the uploaded certificate and either Server
-  Name Indication (SNI) or IP-based SSL. Most scenarios use SNI SSL
-  which allows multiple certificates on one IP. IP-based SSL is rarely
-  needed (only for older clients that don't support SNI). [IP SSL requires your app to be on Standard tier or above (Basic tier only supportsSNI)](/azure/app-service/app-service-web-tutorial-custom-domain). For more information, see [Upload a private certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#upload-a-private-certificate).
+**Option C: Upload a certificate** - For more control (or if you need certificates such as wildcard or Extended Validation (EV) certificates), you can upload a PFX certificate with its password. Go to **TLS/SSL Settings > Private Key Certificates (.pfx)** in your App Service, and upload your certificate. Then, go to **Custom domains > Add binding**, and select the uploaded certificate plus either Server Name Indication (SNI) or IP-based SSL. Most scenarios use SNI SSL. This choice allows multiple certificates on one IP. IP-based SSL is needed only for older clients that don't support SNI. [IP SSL requires your app to be on Standard tier or above (Basic tier only supportsSNI)](/azure/app-service/app-service-web-tutorial-custom-domain). For more information, see [Upload a private certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#upload-a-private-certificate).
 
-**Option D: Import a certificate from Key Vault** - If you use
-  Key Vault to manage your certificates, you can import a PKCS12
-  certificate into your App Service from Key Vault if you meet
-  the [requirements](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#private-certificate-requirements). For more information, see [Import a certificate from Key Vault](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#import-a-certificate-from-key-vault).
+**Option D: Import a certificate from Key Vault** - If you use Key Vault to manage your certificates, you can import a PKCS12 certificate into your App Service from Key Vault if you meet the [requirements](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#private-certificate-requirements). For more information, see [Import a certificate from Key Vault](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#import-a-certificate-from-key-vault).
 
-After adding the SSL binding, test your site on *https://yourdomain*. It
-should load without certificate warnings. In Azure portal, the custom
-domain should now show a green lock icon or **Secure** status indicating
-an SSL binding.
+After you add the SSL binding, test your site on *https://yourdomain*. The site should load without certificate warnings. In Azure portal, the custom domain should now show a green lock icon or **Secure** status that indicates an SSL binding.
 
 #### Troubleshoot SSL and certificate issues
-Following SSL setup, you might encounter a few known issues.
+After you complete the SSL setup, you might encounter a few known issues.
 
-**Issue**: Can't add SSL binding (conflict error). If you see an
-  error like *Failed to add SSL binding. Cannot set certificate for existing VIP because another VIP already uses that certificate.*, it
-  means you have another App Service using an IP-based SSL with the same
-  certificate. One IP address can't be bound to two
-  different certificates across apps.
+**Issue**: Can't add SSL binding (conflict error). If you see an error message such as, *Failed to add SSL binding. Cannot set certificate for existing VIP because another VIP already uses that certificate.*, it means that another App Service is using an IP-based SSL that has the same certificate. One IP address can't be bound to two different certificates across apps.
 
-**Solution**: Convert one of the apps to SNI SSL (if possible) or use
-  the same certificate on both. If you're using IP-based out of
-  necessity, you might need to remove the IP SSL binding from the other
-  app first before binding it here. Azure generally recommends SNI SSL
-  unless you absolutely require an IP-based solution. For more
-  information, see \[How to add custom domain for my API web
-  app\](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+**Solution**: Convert one of the apps to SNI SSL (if possible) or use the same certificate on both. If you're using an IP-based SSL out of necessity, you might have to remove the IP SSL binding from the other app before you can bind it here. Azure generally recommends SNI SSL unless you must have an IP-based solution. For more information, see \[How to add custom domain for my API web app\](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
-**Issue**: The certificate uploaded but ins't visible or can't be selected.
+**Issue**: The certificate uploaded successfully but isn't visible or can't be selected.
 
-**Solution**: Ensure the certificate meets the following requirements:
+**Solution**: Make sure that the certificate meets the following requirements:
 
 - It must contain a private key in PFX format.
-
 - The password must be correct.
+- The App Service and certificate must be in the same region if it's an App Service Certificate from Azure. After you upload, refresh the blade.
 
-- The App Service and certificate must be in the same region if it's an
-  App Service Certificate from Azure. After uploading, refresh the
-  blade.
+If the certificate still doesn't appear, a permissions issue that affects the Key Vault for App Service Certificates might exist (see the next item).
 
-If it still doesn't show, there might be a permission issue with the Key Vault for App Service Certificates (covered in the next point).
+**Issue**: ASMC doesn't create certificates.
 
-**Issue**: ASMC won't create certificates.
+**Solution**: Managed certificates have a prerequisite that requires the custom domain to be validated and mapped to the app first. You can't create the certificate before the domain is successfully added.
 
-**Solution**: Managed certificates have a prerequisite that the custom
-  domain must be validated and mapped to the app first. You can't create
-  the certificate before the domain is successfully added.
+**Issue**: The SSL certificate renewed but the site still shows the old one. If you used an Azure App Service Certificate (a paid certificate stored in Azure Key Vault) and renewed it, sometimes the web app doesn't automatically switch to the new certificate.
 
-**Issue**: The SSL certificate renewed but the site still shows the old one. If you used an Azure App Service Certificate (a paid certificate
-  stored in Azure Key Vault) and renewed it, sometimes the web app
-  doesn't automatically switch to the new certificate.
+**Solution**: Go to your App Service Certificate resource, and select **Synchronize**. (You can also try rebinding the certificate in Key Vault). Azure also has a **Rekey and Sync** option for App Service Certificates that forces the renewal sync. After forcing a sync, the new certificate should be in use. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
-**Solution**: Go to your App Service Certificate resource and select
-  **Synchronize**. (You can also try rebinding the certificate in Key
-  Vault). Azure also has a **Rekey and Sync** option for App Service
-  Certificates that forces the renewal sync. After forcing a sync, the
-  new certificate should be in use. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+**Issue**: The wrong certificate is served for the custom domain. If you have multiple custom domains and certificates, a browser might show a certificate mismatch (a certificate from a different domain). A mismatch can occur if you mixed SNI and IP-based SSL bindings on the same app, and a client without SNI tries to access the site. 
 
-**Issue**: The wrong certificate is served for the custom domain. If you have
-  multiple custom domains and certificates, a browser might show a
-  certificate mismatch (seeing a certificate from a different domain).
-  This can happen if you mixed SNI and IP-based SSL bindings on the same
-  app and a client without SNI tries to access the site. 
-
-**Solution**: Avoid using both SNI and IP bindings together. Ensure the IP binding's
-  certificate is a wildcard or multi-domain certificate that covers all
-  hostnames so non-SNI clients get a valid certificate. For more
-  information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+**Solution**: Avoid using SNI and IP bindings together. Make sure that the IP binding's certificate is a wildcard or multi-domain certificate that covers all hostnames so that non-SNI clients get a valid certificate. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
 ### Step 6: Final checks
-At this stage, your custom domain should be fully functional with HTTPS. Perform these final checks for a smooth deployment:
+At this stage, your custom domain should be fully functional for HTTPS. For a smooth deployment, perform these final checks:
 
-- Browse the site on multiple networks (to ensure DNS is globally
-  available) and multiple devices. For example, mobile networks have
-  their own DNS resolvers. You confirm propagation when you test this.
+- Browse the site on multiple networks (to make sure that DNS is globally available) and multiple devices. For example, mobile networks have their own DNS resolvers. You verify propagation when you run this test.
 
-- If you implemented HTTPS redirect (in the app or using Azure's **HTTPS Only** setting), test that an HTTP URL correctly redirects to HTTPS.
+- If you implemented HTTPS redirect (in the app or by using Azure's **HTTPS Only** setting), test that an HTTP URL correctly redirects to HTTPS.
 
-- Use an SSL checker tool (like SSL Labs Server Test or DigiCert SSL
-  Certificate Checker) on your domain to verify there are no certificate
-  chain issues and that the certificate is trusted.
+- Use an SSL checker tool (such as SSL Labs Server Test or DigiCert SSL Certificate Checker) on your domain to verify that there are no certificate chain issues and that the certificate is trusted.
 
-- In Azure portal, check the **Custom domains** blade. Each custom
-  domain entry should show as **Validated** and SSL bindings should show
-  the TLS/SSL type (SNI or IP) with no warning icons.
+- In Azure portal, check the **Custom domains** blade. Each custom domain entry should appear as **Validated**, and SSL bindings should display the TLS/SSL type (SNI or IP) without warning icons.
 
-- Remove any temporary diagnostic settings. If you lowered DNS TTL for
-  fast testing, you can raise it back to a normal value (to reduce DNS
-  query load). If you opened any firewall temporarily for testing,
-  resecure it appropriately.
+- Remove any temporary diagnostic settings. If you lowered DNS TTL for fast testing, you can restore it to a standard value (to reduce DNS query load). If you opened any firewall temporarily for testing, resecure it appropriately.
 
 ## Common issues and solutions
 
-This section lists frequently reported custom domain issues in Azure App
-Service and how to resolve them.
+This section lists frequently reported custom domain issues in Azure App Service, and discusses how to resolve them.
 
-**Issue**: Why am I unable to validate domain ownership?
+**Issue**: Why can't I validate domain ownership?
 
-**Solution**: Ensure asuid TXT or CNAME records are added on the DNS
-server with the correct value and have no extra characters or space at
+**Solution**: Make sure that asuid TXT or CNAME records are added on the DNS server by having the correct value, and that they don't include extra characters or spaces at
 the end of the string.
 
-The DNS records need to be publicly resolvable. Some DNS providers can
-take up to 48 hours to propagate the changes across all servers on the
-internet. You can use resources like [digwebinterface](https://digwebinterface.com) to verify DNS records are being returned
-with correct values. For example, in digwebinterface:
+The DNS records must be publicly resolvable. Some DNS providers can take up to 48 hours to propagate the changes across all servers on the internet. To verify that DNS records are returned by having the correct values, use resources such as [digwebinterface](https://digwebinterface.com). For example, in digwebinterface:
 
-1.  In **Hostnames or IP addresses**, add a custom domain (like
-    *www.mydomain.com*) and then enter
-    *asuid.www.mydomain.com*.
+1. In **Hostnames or IP addresses**, add a custom domain (such as *www.mydomain.com*), and then enter *asuid.www.mydomain.com*.
 
-2.  In **Type**, select **TXT**.
+2. In **Type**, select **TXT**.
 
-3.  In **Nameservers**, select **All**.
+3. In **Nameservers**, select **All**.
 
-4.  Select **Dig.**
+4. Select **Dig.**
 
-5.  Check the value being returned and then match the value on the
-    custom domains portal with **Custom Domain Verification ID**.
+5. Check the value that's returned, and then match the value on the custom domains portal with **Custom Domain Verification ID**.
 
 **Issue**: Can I add internal domains to App Service?
 
-Internal domains that aren't resolvable over the internet can't be
-validated. This means they can't be added to a multi-tenant public App
-Service.
+Internal domains that aren't resolvable over the internet can't be validated. That is, they can't be added to a multi-tenant public App Service.
 
-**Solution**: Add the domain to an internal App Service Environment
-Azure App Service. Adding custom domains to an internal App Service
-Environment App Service doesn't require validation.
+**Solution**: Add the domain to an internal App Service Environment Azure App Service. Validation isn't required to add custom domains to an internal App Service Environment App Service.
 
-**Issue**: I was able to successfully add a custom domain to one App
-Service. Why can't I add the same domain to another App Service?
+**Issue**: I successfully added a custom domain to one App Service. Why can't I add the same domain to another App Service?
 
-**Solution**: The same custom domain can't be added to
-another App Service in the same stamp. A [stamp](/archive/msdn-magazine/2017/february/azure-inside-the-azure-app-service-architecture)
-is a scale unit with a lot of servers running your App Services. If both
-App Services are in the same stamp, Microsoft-based frontends don't know
+**Solution**: The same custom domain can't be added to another App Service in the same stamp. A [stamp](/archive/msdn-magazine/2017/february/azure-inside-the-azure-app-service-architecture) is a scale unit with a lot of servers running your App Services. If both App Services are in the same stamp, Microsoft-based front ends don't know
 how to route the traffic between the two apps.
 
-To determine what stamp your App Service is in, go to Azure portal >
-**Service** > **Overview** blade > **JSON View** and search for
-**homeStamp**. As you have no control which App Service the stamp
-deploys to, we recommend you deploy the second App Service in another
-region to ensure the second App Service lands on a different stamp.
+To determine which stamp your App Service is in, go to the Azure portal > **Service** > **Overview** blade > **JSON View**, and then search for **homeStamp**. Because you have no control over which App Service the stamp deploys to, we recommend that you deploy the second App Service in another region to make sure that the second App Service lands on a different stamp.
 
-**Issue:** I previously added my domain to an App Service but it's
-since been deleted. It's now resolving to a site with contents I don't
-own. What should I do?
+**Issue:** I previously added my domain to an App Service. But the domain is now deleted and resolves to a site that has contents I don't own. What should I do?
 
-**Solution**: Delete your DNS record for your custom domain to mitigate
-the problem. For more information, see [Prevent subdomain takeovers with Azure DNS alias records and Azure App Service's custom domain verification](/azure/security/fundamentals/subdomain-takeover).
+**Solution**: Delete your DNS record for your custom domain. For more information, see [Prevent subdomain takeovers with Azure DNS alias records and Azure App Service's custom domain verification](/azure/security/fundamentals/subdomain-takeover).
 
-**Issue**: After adding a custom domain to my App Service, Easy Auth is
-no longer working. The following error appears: "Error: AADSTS50011 The
-redirect URI specified in the request does not match the redirect URIs
-configured for the application." What should I do?
+**Issue**: After I added a custom domain to my App Service, Easy Auth stopped working, and I see the following error message: "Error: AADSTS50011 The redirect URI specified in the request does not match the redirect URIs configured for the application." What should I do?
 
-**Solution**: This is due to the Reply URL in the Azure App Registration
-being configured with the default *azurewebsites.net* uniform resource identifier (URI). To fix this, add your custom domain
-as a valid redirect URI. Go to Azure portal > **App Registration** >
-**Authentication** blade and update the URI to include your custom domain. For example,
-[*https://www.mydomain.com/.auth/login/aad/callback*](https://www.mydomain.com/.auth/login/aad/callback).
+**Solution**: This error occurs because the Reply URL in the Azure App Registration is configured by using the default *azurewebsites.net* uniform resource identifier (URI). To fix this issue, add your custom domain as a valid redirect URI. Go to the Azure portal > **App Registration** > **Authentication** blade, and update the URI to include your custom domain. For example, [*https://www.mydomain.com/.auth/login/aad/callback*](https://www.mydomain.com/.auth/login/aad/callback).
 
-**Issue**: When browsing to my custom domain URL site, the browser shows
-"Not secure" and returns `net::ERR_CERT_COMMON_NAME_INVALID`. How do I
-fix this?
+**Issue**: When I browse to my custom domain URL site, the browser shows a "Not secure" and returns `net::ERR_CERT_COMMON_NAME_INVALID` message. How do I fix this?
 
-This issue often arises when the intended App Service (where the correct
-certificate is bound to the custom domain URL) isn't reached.
+This issue often occurs if the intended App Service (where the correct certificate is bound to the custom domain URL) isn't reached.
 
-**Solution**: To verify this, use resources like [digwebinterface](https://digwebinterface.com).
+**Solution**: To verify this situation, use resources such as [digwebinterface](https://digwebinterface.com). For example, in digwebinterface:
 
-For example, using digwebinterface:
+1. In **Hostnames or IP Addresses**, enter the default App Service URL and the custom domain URL (for example, *mywebapp.azurewebsites.net* and *www.mydomain.com*).
 
-1.  In **Hostnames or IP Addresses**, enter the default App Service URL
-    and the custom domain URL (like *mywebapp.azurewebsites.net*
-    and *www.mydomain.com*).
+2. To see the returned IP address, select **Dig**.
 
-2.  Select **Dig** to see the returned IP address.
-
-The returned IP address shows where the certificate needs to be updated
-for the custom domain. Use Azure Front Door, Azure Application Gateway,
-or Azure Content Delivery Network for this process.
+The returned IP address shows where the certificate has to be updated for the custom domain. Use Azure Front Door, Azure Application Gateway, or Azure Content Delivery Network for this process.
 
 **Issue**: What type of certificates can be used for custom domains on a web app?
 
-**Solution**: You can use a free Microsoft [managed certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2crbac%2cazure-cli#create-a-free-managed-certificate)
-issued by DigiCert, purchase an [App Service certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal) issued by GoDaddy, or upload or import a private certificate to App Service.
+**Solution**: You can use a free Microsoft [managed certificate](/azure/app-service/configure-ssl-certificate?tabs=apex%2crbac%2cazure-cli#create-a-free-managed-certificate) that's issued by DigiCert, purchase an [App Service certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal) that's issued by GoDaddy, or upload or import a private certificate to App Service.
 
 The certificate must meet the following requirements:
 
-- Exportable as a password protected PFX file.
+- It muct be exportable as a password-protected PFX file.
 
-- Encrypted using triple DES format.
+- It must be encrypted by using a triple DES format.
 
-- Use a private key of at least 2,048 bits long that contains all
-  intermediate certificates and the root certificate in the certificate
-  chain.
+- It must use a private key that's at least 2,048 bits long and that contains all intermediate certificates and the root certificate in the certificate chain.
 
-**Issue**: I'm using a free managed certificate for my custom domain but
-the certificate has expired. Why wasn't it renewed automatically?
+**Issue**: I'm using a free managed certificate for my custom domain, but the certificate is expired. Why wasn't it renewed automatically?
 
-This can be due to the existence of a DNS Certification Authority
-Authorization [CAA record](https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization) issued to your domain. The CAA record is used to control which
-certificate authorities can issue certificates for your domain.
+This situation might occur because a DNS Certification Authority Authorization [CAA record](https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization) was issued to your domain. The CAA record is used to control which certificate authorities can issue certificates for your domain.
 
-**Solution**: The CAA record can exist on root or subdomains. Use
-[digwebinterface](https://digwebinterface.com/) to check.
+**Solution**: The CAA record can exist on the root or subdomains. To check for it, use [digwebinterface](https://digwebinterface.com/):
 
-1.  In **Hostname**, enter both the URIs.
+1. In **Hostname**, enter both URIs.
+2. In **Type**, select **CAA**.
+3. Check the results by selecting **Dig**.
+4. Verify that [digicert.com](http://digicert.com/) is allowed to issue the certificate.
 
-2.  In **Type**, select **CAA**. then
+The free managed certificate and apex domain certificate require the A record to point to the web app's IP address and subdomain. Point the CNAME to *your-app-name.azurewebsites.net* or your Azure Traffic Manager URL. If these conditions aren't met, certificate renewal is blocked.
 
-3.  Select **Dig** to check the results.
+**Issue**: I'm using an App Service certificate for my custom domain. The certificate is about to expire. Why hasn't it been renewed yet?
 
-4.  Ensure [digicert.com](http://digicert.com/) is allowed to issue the certificate.
+Similar to the free managed certificate, the presence of CAA records can prevent an App Service certificate from renewing.
 
-The free managed certificate and apex domain certificate require the A
-record to point to the web app's IP address and subdomain. Point the
-CNAME to *your-app-name.azurewebsites.net* or your Azure Traffic Manager URL. If these conditions aren't met, certificate renewal is blocked.
-
-**Issue**: I'm using an App Service certificate for my custom domain.
-The certificate is about to expire. Why hasn't it been renewed yet?
-
-Like the free managed certificate, the presence of CAA records can
-prevent it from renewing.
-
-**Solution**: Ensure that [godaddy.com](https://godaddy.com/) is
-authorized to issue certificates for the domain. The App Service
-certificate is stored in Key Vault, so make sure the key vault access
-policies include the secret permissions for *Microsoft.Azure.WebSites*
-(`GET`) and *Microsoft.Azure.CertificateRegistration* (`GET`,
+**Solution**: Make sure that [godaddy.com](https://godaddy.com/) is authorized to issue certificates for the domain. The App Service certificate is stored in Key Vault. Make sure that the key vault access policies include the secret permissions for *Microsoft.Azure.WebSites* (`GET`) and *Microsoft.Azure.CertificateRegistration* (`GET`,
 `SET`, `DELETE`).
 
-Additionally, domain ownership verification is required every 395 days
-for renewal or rekeying. We recommend using a DNS TXT record for this
-verification. The verification check is performed at the root of the
-domain to which the certificate is issued. The domain verification token
-value is generated when domain ownership needs to be verified. You can
-obtain this value by going to Azure portal, > your App Service
-certificate > **Certificate Configuration** and then performing [Step 2](#step-2-confirm-dns-record-configuration).
-The determined value must be entered on the DNS server root domain for the TXT record.
+Additionally, domain ownership verification is required every 395 days for renewal or rekeying. We recommend that you use a DNS TXT record for this verification. The verification check is performed at the root of the domain to which the certificate is issued. The domain verification token value is generated when domain ownership has to be verified. To obtain this value, go to the Azure portal > your App Service certificate > **Certificate Configuration**, and then perform [Step 2](#step-2-confirm-dns-record-configuration). 
+
+**Note**: The determined value must be entered on the DNS server root domain for the TXT record.
 
 **Issue**: The custom domain doesn't resolve (DNS not found errors).
 
-Visiting the domain leads to "server not found" or similar DNS errors.
-This happens when DNS records aren't configured or not propagated.
-Either the A or CNAME record is missing or you're checking too soon.
+When you visit the domain, a "Server not found" or similar DNS error message is returned. This error occurs if DNS records aren't configured or not propagated. Either the A or CNAME record is missing, or you're checking too soon.
 
-**Solution**: Create the required DNS records (A for root with TXT, or
-CNAME for subdomain) as described in [Step 3](#step-3-add-and-validate-the-custom-domain-in-azure) and wait for propagation.
-Use global DNS check tools to confirm the records exist. If these
-records are in place, ensure you used the correct Azure domain as target
-(for example, *yourapp.azurewebsites.net*) and that the domain is
-spelled correctly. Verify you didn't create conflicting records (like
-having both an A and CNAME for the same name). Once the DNS is correct,
-Azure validation and resolution will succeed. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+**Solution**: Create the required DNS records (A for root with TXT, or CNAME for subdomain), as described in [Step 3](#step-3-add-and-validate-the-custom-domain-in-azure) and wait for propagation. To verify that the records exist, use global DNS check tools. If these records do exist, make sure that you use the correct Azure domain as the target (for example, *yourapp.azurewebsites.net*), and that the domain is spelled correctly. Verify that you didn't create conflicting records (such as having both an A and CNAME record for the same name). After the DNS is correct, Azure validation and resolution can succeed. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-**Issue**: I'm getting the "Web app not found (HTTP 404 on custom
-domain)" error.
+**Issue**: I'm seeing this error message: "Web app not found (HTTP 404 on custom domain)".
 
-DNS is behaving as expected (the domain resolves), but browsing to
-*http://custom-domain* shows an Azure 404 page. This indicates the
-custom hostname isn't linked to the App Service configuration and Azure
-can't determine which app should answer that domain. The domain isn't
-successfully added to the app or the DNS is pointing to Azure but the
-app doesn't have that hostname in its bindings.
+DNS behaves as expected (the domain resolves). However, if you browse to *http://custom-domain*, you receive an "Azure 404" error message. This error indicates that the custom hostname isn't linked to the App Service configuration, and that Azure can't determine which app should answer that domain. The domain isn't successfully added to the app, or the DNS points to Azure but the app doesn't have that hostname in its bindings.
 
-**Solution**: Go to Azure portal and add the custom domain to your app
-if it's not already there ([Step 3](#step-3-add-and-validate-the-custom-domain-in-azure)). If it's listed but you still get
-a 404 error, you might have added an A record without the TXT record or
-vice versa. Ensure both required records are present. Be sure to clear
-your browser cache and DNS cache. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+**Solution**: Go to the Azure portal, and add the custom domain to your app if it's not already there ([Step 3](#step-3-add-and-validate-the-custom-domain-in-azure)). If it's listed but you still see a "404" error, you might have added an A record without the TXT record, or vice versa. Make sure that both required records exist. Also, make sure to clear your browser cache and DNS cache. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-**Issue**: I can't add a custom domain (the portal says not authorized
-or fails immediately).
+**Issue**: I can't add a custom domain. The portal says "not authorized" or fails immediately.
 
-You attempt to add the domain in Azure and get an error like "Failed
-to add hostname", a message about not having permissions, or the
-**Add custom domain** button is disabled. This usually indicates
-insufficient permissions or plan limits. If you're on a Free or Shared
-plan, custom domains are disabled entirely. If you're on different plan,
-then it's likely your Azure account role doesn't permit this action.
-Only certain roles (like Owner, Contributor, and Website Contributor)
-can modify app hostnames.
+You try to add the domain in Azure, and you receive an error message such as, "Failed to add hostname," or the **Add custom domain** button is disabled. This situation usually indicates insufficient permissions or plan limits. If you're on a Free or Shared plan, custom domains are disabled entirely. If you're on different plan,
+then it's likely that your Azure account role doesn't permit this action. Only certain roles (including Owner, Contributor, and Website Contributor) can modify app hostnames.
 
-**Solution**: Upgrade the App Service Plan as needed. If it's a
-permission issue, have an admin assign you a Contributor role on the App
-Service. You can verify this by trying it using Azure CLI or PowerShell
-with your credentials. If that fails with an "Unauthorized" error, it's
+**Solution**: Upgrade the App Service Plan, if it's necessary. For a permission issue, have an admin assign you a Contributor role on the App Service. You can verify this by trying it using Azure CLI or PowerShell with your credentials. If that fails with an "Unauthorized" error, it's
 a permission issue.
 
 > [!NOTE]
-> If you're using an ILB App Service Environment or restricted
-> network, custom domains must be added using Azure Rights Management
-> (Azure ARM) or Azure CLI For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+> If you're using an ILB App Service Environment or restricted network, custom domains must be added by using Azure Rights Management (Azure ARM) or Azure CLI. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
 **Issue**: The domain is already in use by another resource.
 
-Azure returns an error like "The custom domain is already assigned to
-a different app" or it fails validation with a mention of duplication.
-This happens when the domain was previously mapped to another App
-Service or Azure service and that mapping wasn't removed. Azure prevents
-reusing it to avoid domain takeover. For example, a colleague mapped the
-domain to a test app, you had it in another subscription and forgot to
-remove it, or (in the case of a migrated DNS) it's still lingering in an
-orphaned resource.
+Azure returns an error message such as, "The custom domain is already assigned to a different app," or it fails validation because of a reported duplication.
+This situation might occur if the domain was previously mapped to another App Service or Azure service and that mapping wasn't removed. Azure prevents this kind of reuse to avoid domain takeover. For example, a colleague mapped the domain to a test app, you had it in another subscription but forgot to remove it, or (in the case of a migrated DNS) the domain is lingering in an orphaned resource.
 
-**Solution**: Identify where it's in use. Check other apps in your
-subscriptions first. If you find it, remove the custom domain from that
-app. If you can't find it (for example, it's in a subscription you no
-longer have access to, or is on a now-deleted app), you'll need to open
-an Azure support ticket to release the domain. You'll need to provide
-proof of domain ownership to support (like a screenshot of your domain
-registrar settings) and they can then manually clear it. Once that's
-done, you can add it to your app successfully. For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
+**Solution**: Identify where the custom domain is used. Check other apps in your subscriptions first. If you find the domain, remove it from that app. If you can't find it (for example, it's in a subscription that you no longer have access to, or it's on a now-deleted app), you'll have to open an Azure support ticket to release the domain. You'll must provide proof of domain ownership (such as a screenshot of your domain registrar settings) so that Microsoft Support can manually clear it. Then, you can add it to your app successfully. For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
 
-**Issue**: Encountering SSL certificate issues.
+**Issue**: SSL certificate issues.
 
-You experience various "Not secure" warnings in browser, can't upload or
-bind a certificate, or have certificate mismatches. The following is a
-list of issues and solutions.
+You experience various "Not secure" warnings in browser, can't upload or bind a certificate, or have certificate mismatches. The following is a list of issues and solutions.
 
-- **Issue**: "Not secure" warning. This indicates there's no proper
-  certificate installed for the domain.
+- **Issue**: "Not secure" error message. This warning indicates that no proper certificate is installed for the domain.
   
-  **Solution**: Ensure you completed Step 5 (specifically adding a
-  binding with either a managed or custom SSL). If a certificate is
-  bound but still not recognized, check that the binding was to the
-  correct hostname (for example, *www* and root variant need separate
-  certificates unless there's a wildcard used for both). You can also
-  try using an incognito browser or another device to rule out caching.
+**Solution**: Make sure that you complete Step 5 (specifically, adding a binding by using a managed or custom SSL). If a certificate is bound but still isn't recognized, check whether the binding was amde to the correct hostname (for example, *www* and the root variant require separate certificates, unless a wildcard is used for both). You can also try to use an incognito browser or another device to rule out caching as a cause.
 
 - **Issue**: Upload errors.
   
-  **Solution**: If uploading a PFX file, make sure it's
-  password-protected and in `PKCS#12` format. Azure rejects
-  certificates in other formats (like Privacy-Enhanced Mail (PEM)).
-  Convert as needed using tools like OpenSSL before uploading.
+  **Solution**: If you upload a PFX file, make sure that it's password-protected and in `PKCS#12` format. Azure rejects certificates that are in other formats (such as Privacy-Enhanced Mail (PEM)). Before you upload a PFX file, convert it as necessary by using tools such as OpenSSL.
 
 - **Issue**: Binding errors.
   
-  **Solution**: Resolve them by avoiding duplicate IP-based bindings. If
-  you encounter "hostname conflicts with an existing binding" messages,
-  it might mean you're trying to bind the same hostname twice (for
-  example, it may already be bound with another certificate). Remove old
-  bindings and then try again. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+  **Solution**: Resolve binding errors by avoiding duplicate IP-based bindings. If you encounter "hostname conflicts with an existing binding" messages, it might mean that you're trying to bind the same hostname two times (for example, the hostname might already be bound with another certificate). Remove old bindings, and then try again. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
-- **Issue**: Hostname isn't allowed. If you're using the free **ASMC**, it doesn't issue certificates for wildcards or certain domain types. 
+- **Issue**: The hostname isn't allowed. The free **ASMC** method doesn't issue certificates for wildcards or certain domain types. 
   
-  **Solution**: Use a custom certificate from a
-  certificate authority. Azure doesn't allow certificates that aren't
-  trusted (like self-signed certificates) to be bound to public apps. Be
-  sure to use a trusted certificate authority.
+  **Solution**: Use a custom certificate from a certificate authority. Azure doesn't allow certificates that aren't trusted (such as self-signed certificates) to be bound to public apps. Make sure that you use a trusted certificate authority.
 
-- **Issue**: Old certificate is still showing.
+- **Issue**: Old certificate is still displayed.
   
-  **Solution**: If you updated the certificate through renewal and the site
-  hasn't recognized it, if it's an App Service Certificate use the Sync
-  function. If it's a third-party certificate, try unbinding and
-  rebinding the new certificate in Azure portal. Ensure that no client
-  or browser caching is contributing. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+  **Solution**: If you updated an App Service certificate through renewal, but the site doesn't recognize it, use the Sync function. For a third-party certificate, try unbinding and rebinding the new certificate in the Azure portal. Verify that no client or browser caching is contributing. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
 
-**Issue**: The DNS record exists but Azure can't locate it (Time-to-Live
-(TTL) issues).
+**Issue**: The DNS record exists, but Azure can't locate it (Time-to-Live (TTL) issues).
 
-You added the DNS records and can query them successfully, but Azure
-validation still fails saying it can't find the record. This can be due
-to DNS TTL and how the Azure validation service queries DNS. If the
-authoritative name servers haven't updated or the Azure resolver
-received a cached negative response, it might not locate the update.
+You added the DNS records and can query them successfully, but Azure validation still fails because it can't find the record. This issue can occur because of DNS TTL and the manner in which the Azure validation service queries DNS. If the authoritative name servers haven't updated, or the Azure resolver received a cached negative response, the resolver might not locate the update.
 
-**Solution**: Wait and retry later, especially if your previous DNS
-entries had high TTL. You can also try toggling the record (removing and
-re-adding it) to possibly trigger fresh propagation. In the interim,
-verify from other global locations that the record is visible. This
-usually clears up within 1-2 hours.
+**Solution**: Wait and retry later, especially if your previous DNS entries had high TTL. You can also try to toggle the record (removing and re-adding it) to possibly trigger fresh propagation. While you wait, verify from other global locations that the record is visible. This issue usually resolves itself within two hours.
 
 **Issue**: Too many hostnames or subdomain limit reached.
 
-Attempting to add more custom hostnames to an app fails or you are
-limit-capped. A multi-tenant n App Service might limit the number of
-custom domains (hostnames) you can assign. This limit is usually around
-100 hostnames for external DNS and higher (up to 500 with a hard
-platform limit of 500 per app) when using Azure DNS zone integration.
+Trying to add more custom hostnames to an app fails or you are limit-capped. A multi-tenant n App Service might limit the number of custom domains (hostnames) you can assign. When you use Azure DNS zone integration, this limit is usually around 100 hostnames for external DNS or more (up to 500, having a hard platform limit of 500 per app).
 
-**Solution**: If you need a large number of subdomains, consider
-migrating your domain's DNS to Azure DNS which supports up to 500
-hostnames on a single App Service. 500 is the maximum for hostnames. You
-might need to architect a different solution (like using wildcard
-certificates on a single wildcard binding or deploying another app).
-Always remove any hostnames that you no longer use to free slots. In one
-tenant, the sum of custom hostnames should also not exceed certain
-thresholds (though 500 per app is usually the limit). For more
-information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+**Solution**: If you need a large number of subdomains, consider migrating your domain's DNS to Azure DNS. Azure DNS supports up to 500 hostnames on a single App Service. You might have to design a different solution (such as using wildcard certificates on a single wildcard binding or deploying another app). To free up slots, always remove any hostnames that you no longer use. In one tenant, the sum of custom hostnames should also not exceed certain thresholds (although 500 per app is usually the limit). For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-**Issue**: The custom domain works but the site isn't reachable
-externally.
+**Issue**: The custom domain works, but the site isn't externally reachable.
 
-After setup, you find that only certain networks can reach the site. For
-example, it works for internal networks, but external users can't reach
-the site, or vice versa. This indicates a network configuration issue.
-For example, if the App Service is in an Azure Virtual Network with a
-private endpoint and you set up a custom domain, public DNS might
-resolve to a private IP that isn't accessible outside your network.
-Also, if you're using an App Service environment (like ILB ASE), the
+After you set up the site, only certain networks can reach the site. For example, internal networks can access the site, but external users can't, or vice versa. This situation indicates a network configuration issue. For example, if the App Service is in an Azure Virtual Network that has a private endpoint, and you set up a custom domain, public DNS might resolve to a private IP that isn't accessible outside your network. Also, if you're using an App Service environment (such as ILB ASE), the
 domain might be intended for internal use only.
 
-**Solution**: Verify the IP where your custom domain is resolving. If
-it's a private address, then external users can't reach it by design. In
-such cases, either expose it using a public IP or proxy or ensure
-clients are within the network (like with a VPN). If this isn't
-intentional, you might have configured a private endpoint. Consider
-removing it for a purely public web app. If you expected internal-only
-access and see external exposure, make sure you haven't used a public
-DNS for an internal app. Internal apps should use DNS entries that only
-resolve internally (like using Azure Private DNS). Be sure to match your
-DNS configuration to your network setup.
+**Solution**: Verify the IP where your custom domain is resolving. If it's a private address, then external users can't reach it by design. In such cases, either expose the site by using a public IP or proxy, or make sure that clients are within the network (for example, by using a VPN). If this situation isn't intentional, you might have configured a private endpoint. Consider removing the private endpoint for a purely public web app. If you expected internal-only access, and you see external exposure, make sure that you haven't used a public DNS for an internal app. Internal apps should use DNS entries that resolve internally only (for example, by using Azure Private DNS). Make sure that you match your DNS configuration to your network setup.
