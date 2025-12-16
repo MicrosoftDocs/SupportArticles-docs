@@ -13,11 +13,9 @@ This article helps you resolve an issue in which the element picker can't captur
 
 When you use the element picker in Power Automate for desktop, you can't capture or select any elements from the _Save As_ dialog box in SAP.
 
-## Solution
+## Solution 1: Disable Show Microsoft Windows dialogs
 
-### Disable Show Microsoft Windows dialogs
-
-1. If the **Show native Microsoft Windows dialogs** option is available, turn it off in the SAP GUI:
+- If the **Show native Microsoft Windows dialogs** option is available, turn it off in the SAP GUI:
 
    1. Go to **Options** > **Accessibility & Scripting** > **Scripting**.
 
@@ -27,13 +25,13 @@ When you use the element picker in Power Automate for desktop, you can't capture
 
    1. Restart SAP.
 
-2. If the **Show native Microsoft Windows dialogs** option is not available, make sure that the element picker is in the SAP context to to display the custom SAP dialog box, follow these steps:
+- If the **Show native Microsoft Windows dialogs** option isn't available, make sure that the element picker is in the SAP context to display the custom SAP dialog box:
 
     1. Open the element picker.
 
     1. Before the _Save As_ dialog appears, hover over an SAP GUI element in the main SAP window. This action keeps the element picker in SAP context and lets it capture elements from the custom SAP dialog box.
 
-### Use mouse and keyboard actions
+## Solution 2: Use mouse and keyboard actions
 
 If SAP displays the standard Windows _Save As_ dialog box instead of the custom SAP dialog box, you can automate the dialog box by using mouse and keyboard actions. For more information, see [Use mouse and keyboard actions](/power-automate/desktop-flows/actions-reference/mouseandkeyboard).
 
