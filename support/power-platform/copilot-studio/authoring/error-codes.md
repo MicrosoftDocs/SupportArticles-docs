@@ -166,7 +166,9 @@ Common problems include:
 
 #### OpenAIHate
 
-**Error message**: The content was blocked by a Responsible AI check for hateful content. Hate harms refer to any content that attacks or uses discriminatory language with reference to a person or identity group based on certain differentiating attributes of these groups.
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+The content was blocked by a Responsible AI check for hateful content. Hate harms refer to any content that attacks or uses discriminatory language with reference to a person or identity group based on certain differentiating attributes of these groups.
 
 This includes, but isn't limited to:
 
@@ -182,13 +184,17 @@ This includes, but isn't limited to:
 
 #### OpenAIJailBreak
 
-**Error message**: The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that's ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+The content was blocked by a security check for a jailbreak attempt. This is a user prompt attack that's ignoring system prompts with the goal of altering the intended agent behavior. Classes of attacks include attempt to change system rules, embedding a conversation mockup to confuse the model, role-play, or encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 **Resolution**: You can reinforce responsible AI guidelines with your agent users to avoid this situation. Optionally, you can also update the agent content moderation policies.
 
 #### OpenAIndirectAttack
 
-**Error message**: There was an attack detected from information not directly supplied by the agent author or the end user, such as external documents. Attacker attempts to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+There was an attack detected from information not directly supplied by the agent author or the end user, such as external documents. Attacker attempts to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
 
 - Manipulating content
 - Intrusion
@@ -203,7 +209,9 @@ For more information, see [Prompt Shields for documents](/azure/ai-services/cont
 
 #### OpenAISelfHarm
 
-**Error message**: The content was blocked by a Responsible AI check for content related to self-harm. Self-harm describes language related to physical actions intended to purposely hurt, injure, damage one's body or kill oneself.
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+The content was blocked by a Responsible AI check for content related to self-harm. Self-harm describes language related to physical actions intended to purposely hurt, injure, damage one's body or kill oneself.
 
 This includes, but isn't limited to:
 
@@ -214,7 +222,9 @@ This includes, but isn't limited to:
 
 #### OpenAISexual
 
-**Error message**: The content was blocked by a Responsible AI check for sexual content. Sexual describes language related to anatomical organs and genitals, romantic relationships and sexual acts, acts portrayed in erotic or affectionate terms, including those portrayed as an assault or a forced sexual violent act against one's will.
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+The content was blocked by a Responsible AI check for sexual content. Sexual describes language related to anatomical organs and genitals, romantic relationships and sexual acts, acts portrayed in erotic or affectionate terms, including those portrayed as an assault or a forced sexual violent act against one's will.
 
 This includes, but isn't limited to:
 
@@ -234,7 +244,9 @@ This includes, but isn't limited to:
 
 #### OpenAIViolence
 
-**Error message**: The content was blocked by a Responsible AI check for violent content. Violence describes language related to physical actions intended to hurt, injure, damage, or kill someone or something; describes weapons, guns, and related entities.
+**Error message**: The content was filtered due to Responsible AI restrictions.
+
+The content was blocked by a Responsible AI check for violent content. Violence describes language related to physical actions intended to hurt, injure, damage, or kill someone or something; describes weapons, guns, and related entities.
 
 This includes, but isn't limited to:
 
