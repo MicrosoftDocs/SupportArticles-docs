@@ -163,8 +163,8 @@ Solution: Check the router or firewall settings, and then test by using `Test-Ne
 
 ## Related articles
 
-- [OpenSSH Server configuration for Windows](https://learn.microsoft.com/windows-server/administration/openssh/openssh_install_firstuse)
+- [OpenSSH Server configuration for Windows](/windows-server/administration/openssh/openssh_install_firstuse)
 - [How to enable OpenSSH verbose logging](enable-openssh-verbose-logging.md)
 - [OpenSSH Manual Pages](https://www.openssh.com/manual.html)
-- [Windows Firewall with Advanced Security](https://learn.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
-- [Troubleshooting OpenSSH in Windows](https://learn.microsoft.com/windows-server/administration/openssh/openssh_server_configuration)
+- [Windows Firewall with Advanced Security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
+- [Troubleshooting OpenSSH in Windows](/windows-server/administration/openssh/openssh_server_configuration)
