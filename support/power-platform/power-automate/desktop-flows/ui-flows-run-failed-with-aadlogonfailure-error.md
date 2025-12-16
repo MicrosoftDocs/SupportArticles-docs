@@ -26,7 +26,7 @@ Desktop flows failed to validate your Microsoft Entra credentials on the machine
 
 There are cases where specific tenant & user configurations might result to this error. Some examples are Microsoft Entra ID (Cloud) tenants with Federated users (ADFS). With this configuration, the validation of the credentials is happening on the user's on-premises Identity Provider.
 
-The preferred and most secure method is to configure [Certificate-Based Authentication](power-automate/desktop-flows/configure-certificate-based-auth).
+The preferred and most secure method is to configure [Certificate-Based Authentication](/power-automate/desktop-flows/configure-certificate-based-auth).
 
 Alternatively, in cases where CBA cannot be configured, the alternative is for configurations where administrators of the on-premises IdP have configured Password Hash Sync (PHS) and password hashes are synchronized to the Cloud, federated users can use their password directly against Microsoft Entra ID (ESTS). In order to do that, a Home Realm Discovery (HRD) policy should be configured to explicitly allow this.
 
