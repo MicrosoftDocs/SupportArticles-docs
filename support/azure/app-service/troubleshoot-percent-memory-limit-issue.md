@@ -32,4 +32,4 @@ For more information, see [Configure web apps in App Service](/azure/app-service
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)] 
