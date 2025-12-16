@@ -21,11 +21,11 @@ Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensur
 
 For more information about performing a Leapp upgrade on custom, golden, or PAYG images provided by Red Hat, see the following articles:
 
-- [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
+- [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
-- [Upgrading from RHEL 8 to RHEL 9](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9/index)
+- [Upgrading from RHEL 8 to RHEL 9](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9/index)
 
-- [Upgrading from RHEL 9 to RHEL 10](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/upgrading_from_rhel_9_to_rhel_10/index)
+- [Upgrading from RHEL 9 to RHEL 10](https://docs.redhat.com/documentation/red_hat_enterprise_linux/10/html/upgrading_from_rhel_9_to_rhel_10/index)
 
 ## Prerequisites
 
@@ -191,7 +191,7 @@ You can perform an in-place upgrade from RHEL 9 to the following RHEL 10 minor v
 
 7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
 
-8. If the system has been previously upgraded from RHEL 8 to RHEL 9, ensure that all required post-upgrade steps have been completed. For more information, see Performing post-upgrade tasks in the Upgrading from RHEL 8 to RHEL 9 guide[Performing post-upgrade](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/upgrading_from_rhel_8_to_rhel_9/index#performing-post-upgrade-tasks-on-the-rhel-9-system_upgrading-from-rhel-8-to-rhel-9)
+8. If the system has been previously upgraded from RHEL 8 to RHEL 9, ensure that all required post-upgrade steps have been completed. For more information, see Performing post-upgrade tasks in the Upgrading from RHEL 8 to RHEL 9 guide[Performing post-upgrade](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html-single/upgrading_from_rhel_8_to_rhel_9/index#performing-post-upgrade-tasks-on-the-rhel-9-system_upgrading-from-rhel-8-to-rhel-9)
 
 ---
 
