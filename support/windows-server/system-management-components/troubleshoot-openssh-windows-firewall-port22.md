@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-appelgatet
+ai.usage: ai-assisted
 ms.custom:
 - sap:system management components\openssh (including sftp)
 - pcy:WinComm User Experience
