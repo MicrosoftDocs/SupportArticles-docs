@@ -194,7 +194,7 @@ The content was blocked by a security check for a jailbreak attempt. A jailbreak
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-There was an attack detected from information not directly supplied by the agent author or the end user, such as external documents. Attackers attempts to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
+There was an attack detected from information not directly supplied by the agent author or the end user, such as external documents. Attackers attempt to embed instructions in grounded data provided by the user to maliciously gain control of the system by:
 
 - Manipulating content
 - Intrusion
