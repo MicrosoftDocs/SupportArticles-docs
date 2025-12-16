@@ -39,7 +39,7 @@ DNS, you can't complete the mapping. For more information, see [Set up an existi
 
 **No conflicting use** - Check that the domain isn't already bound to another Azure resource. A domain can be linked to only one App Service (including Azure Static Web Apps and Azure Front Door) at a time. If you previously used this domain on another app (such as in a different subscription or a now-deleted app), remove it there first. If the old app is inaccessible, you might have to contact [Azure support](https://azure.microsoft.com/support) to release the domain from that previous association. Azure can manually unbind a *locked* domain that's still tied to a resource that you no longer control. For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
 
-**Resource locks** - Check whether a resource lock is applied to your App Service or related resources. A *ReadOnly* lock on the web app prevents you from adding new hostnames. Similarly, if you purchased the domain by having Azure as an App Service domain, make sure that no lock exists on the domain resource that might prevent updates. Remove any locks before you proceed. They can be re-applied after configuration, if it's necessary.
+**Resource locks** - Check whether a resource lock is applied to your App Service or related resources. A *ReadOnly* lock on the web app prevents you from adding new hostnames. Similarly, if you purchased the domain by having Azure as an App Service domain, make sure that no lock exists on the domain resource that might prevent updates. Remove any locks before you proceed. You can re-apply them after configuration, if it's necessary.
 
 ### Step 2: Verify DNS record configuration
 
@@ -47,164 +47,72 @@ Custom domain mapping requires correct DNS records. A misconfigured DNS is the p
 
 Verify the following items:
 
-**Determine the record type** - Are you mapping a root or apex domain
-(like *contoso.com*) or a subdomain (like *www.contoso.com*)?
+**Determine the record type** - Are you mapping a root or apex domain (such as *contoso.com*) or a subdomain (such as *www.contoso.com*)?
 
-- For root domains, App Service requires an A record pointing to the
-app's IP and a supporting TXT record for verification. Azure provides
-the IP address and a unique *asuid* (TXT verification ID) in the
-**Custom domains** blade when you initiate the domain addition. For more
-information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+- For root domains, App Service requires an A record that points to the app's IP and a supporting TXT record for verification. Azure provides the IP address and a unique *asuid* (TXT verification ID) in the **Custom domains** blade when you initiate the domain addition. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-- For subdomains, use a Canonical Name (CNAME) record pointing to the
-app's default Azure domain (for example, *yourapp.azurewebsites.net*).
-We recommend a TXT record with a prefix asuid (for example, *asuid.www*
-as the record name). Azure also suggests this in the portal. For more
-information, see [Set up an existing custom domain in Azure App service](/azure/app-service/app-service-web-tutorial-custom-domain).
+- For subdomains, use a Canonical Name (CNAME) record that points to the app's default Azure domain (for example, *yourapp.azurewebsites.net*). We recommend that you use a TXT record that has has the prefix "asuid" (for example, *asuid.www* as the record name). Azure also suggests this in the portal. For more information, see [Set up an existing custom domain in Azure App service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- Never configure both a CNAME and an A record for the same domain.
-This causes resolution conflicts. Choose one of the methods previously
-suggested (like CNAME for subdomains and A record for root). For more
-information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+- Never configure both a CNAME and an A record for the same domain. This causes resolution conflicts. Choose one of the methods that are suggested here (for example, CNAME for subdomains and A record for root). For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-**Add the Azure-provided records** - Through your domain registrar's
-DNS management, create the following required records:
+**Add the Azure-provided records** - Through your domain registrar's DNS management, create the following required records:
 
-- **A record** - Use `hostname @` for the root or the specific subdomain
-and `value` as the IP address of your web app (find this either in
-[Azure portal](https://portal.azure.com) in **Custom domains** or use
-`az webapp config hostname list` in a command-line interface
-(CLI)).
+- **A record** - Use `hostname @` for the root or the specific subdomain and `value` as the IP address of your web app. To find these values, either look in the [Azure portal](https://portal.azure.com) in **Custom domains** or run `az webapp config hostname list` in a command line interface (CLI)).
 
 > [!NOTE]
-> App Service IPs can change if you delete and recreate the
-> site or change the region or tier. As such, Azure prefers CNAME for
-> subdomains. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
+> App Service IPs can change if you delete and re-create the site or change the region or tier. Azure prefers CNAME for subdomains. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- **CNAME record** - Use `hostname` as the subdomain (for example, *www*)
-and `value` as the default domain of your app (for example,
-*yourapp.azurewebsites.net*). Ensure it's the exact value Azure provided
-(like not including ".net" in the value).
-For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
+- **CNAME record** - Use `hostname` as the subdomain (for example, *www*) and `value` as the default domain of your app (for example, *yourapp.azurewebsites.net*). Make sure that it's the exact value that Azure provided (for exmaple, don't include ".net" in the value). For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
-- **TXT record** - Use `hostname` as the asuid (for the root) or
-*asuid.subdomain* (for subdomains) and the `value` as the
-*verification token* (a GUID-like string that Azure provides). This TXT
-record proves to Azure that you own the domain and helps prevent others
-from hijacking your domain mapping. While Azure doesn't force the use
-of the TXT record in every scenario, we strongly recommend its use for
-security purposes. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
+- **TXT record** - Use `hostname` as the asuid (for the root) or *asuid.subdomain* (for subdomains) and the `value` as the *verification token* (a GUID-like string that Azure provides). This TXT record proves to Azure that you own the domain, and helps prevent others from hijacking your domain mapping. While Azure doesn't force the use
+of the TXT record in every scenario, we strongly recommend that you use it for security. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- **DNS propagation** - After creating or updating DNS records, those
-changes can take time to propagate. if the previous Time-to-Live (TTL)
-was long or the DNS provider is slow, propagation can take up to 48
-hours worldwide. You can monitor propagation using tools like Whats My
-DNS or DNS Checker. Ensure all expected records show up correctly on
-these tools If issues persist, be sure to double-check for typos in the
-DNS entries. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+- **DNS propagation** - After you create or update DNS records, those changes can take time to propagate. if the previous Time-to-Live (TTL) was long or the DNS provider is slow, propagation can take up to 48 hours worldwide. You can monitor propagation by using such tools as Whats My DNS or DNS Checker. Make sure that all expected records appear correctly on these tools. If issues persist, make sure that you double-check for typos in the DNS entries. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-### Step 3: Add and validate the custom domain in azure
-Once DNS entries are in place, configure the App Service to use the
-domain:
+### Step 3: Add and verify the custom domain in Azure
 
-1.  In Azure portal, navigate to your **App Service > Custom domains**
-    blade.
+After you make the DNS entries, configure the App Service to use the domain:
+
+1.  In Azure portal, navigate to your **App Service > Custom domains** blade.
 
 2.  Select **Add custom domain**.
 
-3.  Enter your domain name (for example, *contoso.com* or
-    *www.contoso.com*) and choose **Validate**. Azure then checks for
-    the DNS records.
+3.  Enter your domain name (for example, *contoso.com* or *www.contoso.com*), and select **Validate**. Azure then checks for the DNS records.
 
-- If validation succeeds, you'll see green checkmarks next to the
-hostname record and TXT record in the portal. Select **Add** to
-complete the mapping. The domain then appears in the list of custom
-hostnames for the app. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
+- If validation succeeds, you'll see green checkmarks next to the hostname record and TXT record in the portal. Select **Add** to complete the mapping. Then, the domain appears in the list of custom hostnames for the app. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-- If validation fails or shows errors, Azure couldn't find the required DNS records. Check the error message for common validation errors, including:
+- If validation fails or shows errors, it means that Azure couldn't find the required DNS records. Check the error message for common validation errors, including:
   
-  - *DNS record could not be located* - The A or CNAME record isn't
-visible to Azure. This often means propagation delay or a typo.
-double-check the record name and value, correct any mistake, wait a
-few minutes, and then try validating again. If possible, flush your
-local DNS cache (on Windows, run \`ipconfig /flushdns\`). You can also
-try a different network to ensure you're not seeing cached results. In
-rare cases, the Azure validation service itself may be lagging and
-retrying after a few minutes resolves this issue. For more
-information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates)
-and [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
+  - *DNS record could not be located* - The A or CNAME record isn't visible to Azure. This often means a propagation delay or a typo. Double-check the record name and value, correct any mistakes, wait a few minutes, and then try validating again. If possible, flush your local DNS cache (on Windows, run \`ipconfig /flushdns\`). You can also try a different network to make sure that you're not seeing cached results. In rare cases, the Azure validation service itself may be lagging. To resolve this issue, retry after a few minutes. For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates) and [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
-  - *Hostname not found/Invalid* - This can indicate no such domain in DNS exists or there's no authoritative answer. Ensure you typed the domain correctly and that the domain is active (not expired). Verify that your DNS provider is authoritative for the domain and is responding.
+  - *Hostname not found/Invalid* - This message can indicate that no such domain in DNS exists, or there's no authoritative answer. Make sure that you typed the domain name correctly, and that the domain is active (not expired). Verify that your DNS provider is authoritative for the domain and is responding.
 
-  - *Cannot verify domain ownership* - Azure can't verify you own the domain. This usually means the TXT record is missing or incorrect. Add the TXT verification record (or fix its name or value). For example, for root domains ensure the TXT is exactly *asuid.yourdomain* (often entered as `@` at registrars), and for subdomains it should include the subdomain prefix (for example, *asuid.www*). After adding the value, wait a few minutes and then select **Refresh/Validate** again. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain) and [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
+  - *Cannot verify domain ownership* - Azure can't verify that you own the domain. This usually means that the TXT record is missing or incorrect. Add the TXT verification record (or fix its name or value). For example, for root domains, make sure that the TXT record name is exactly *asuid.yourdomain* (often entered as `@` at registrars). For subdomains it should include the subdomain prefix (for example, *asuid.www*). After you add the value, wait a few minutes, and then select **Refresh/Validate** again. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain) and [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-  - *Already in use* or *Linked to another app* - This indicates the domain is currently assigned to a different App Service or Azure service. Azure prevents duplicate domain bindings for security. Remove the domain from the other resource first. If you don't have access to the other app (for example, if it's in another tenant or was owned by someone else), you'll need to open a support ticket to have Azure release the domain from that past association. (This usually involves proving domain ownership to Microsoft support, who can then free it for you to use.) For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
+  - *Already in use* or *Linked to another app* - This message indicates that the domain is currently assigned to a different App Service or Azure service. Azure prevents duplicate domain bindings for security. Remove the domain from the other resource first. If you don't have access to the other app (for example, if it's in another tenant or was owned by someone else), you have to open a support ticket to have Azure release the domain from that past association. (This usually involves proving domain ownership to a Microsoft Support agent, who can then free it for you to use.) For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
 
-- **Multiple attempts** - You might need to select **Validate** a few
-times as you correct issues. Azure portal reflects new DNS changes as
-they propagate. Ensure that after each change you wait and give enough
-time to clear caches as previously noted. Once **Add custom domain**
-succeeds, the domain status in Azure usually shows as **Successfully added**.
+- **Multiple attempts** - You might need to select **Validate** a few times as you correct issues. Azure portal reflects new DNS changes as they propagate. Make sure that you wait after each change to allow enough time to clear caches, as previously noted. After **Add custom domain** succeeds, the domain status in Azure usually shows as **Successfully added**.
 
 > [!NOTE]
-> If you're still stuck at validation after checking DNS and
-> prerequisites, try the **App Service Diagnostics** tool (your App
-> Service's **Diagnose and Solve Problems** blade > **SSL and Domains**
-> **Run All Certificates & Domains Checks**). Azure provides an
-> interactive troubleshooter that can often detect common
-> misconfigurations (like missing records) and suggest fixes.
-> For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
+> If you're still stuck at validation after you check DNS and prerequisites, try the **App Service Diagnostics** tool (your App Service's **Diagnose and Solve Problems** blade > **SSL and Domains**. **Run All Certificates & Domains Checks**). Azure provides an interactive troubleshooter that can often detect common misconfigurations (such as missing records) and suggest fixes. For more information, see [Custom Domain on App Service not validating even after DNS entries confirmed by multiple tools](/answers/questions/2180777/custom-domain-on-app-service-not-validating-even-a).
 
 :::image type="content" source="../media/troubleshoot-custom-domain-issues-azure-app-service/diagnose-and-solve-problems-view-azure-portal.png" alt-text="Diagnose and solve problems view in Azure portal." lightbox="../media/troubleshoot-custom-domain-issues-azure-app-service/diagnose-and-solve-problems-view-azure-portal.png":::
 
 ### Step 4: Test domain mapping and app response
 
-Once the custom domain is added, perform a quick test to ensure it's
-correctly serving your app:
+After the custom domain is added, perform a quick test to make sure that it's correctly serving your app:
 
-- Open a browser and navigate to *http://*. You should see your web
-  app's content. It might initially redirect to *https* (if SSL is
-  enforced or once the certificate is added).
+- Open a browser, and navigate to *http://*. You should see your web app content. It might initially redirect to *https* (if SSL is enforced or after the certificate is added).
 
-  - If you get an *Azure 404 (Web App not found)* error -- This suggests
-    the custom domain isn't recognized by Azure. The likely cause is
-    that the domain wasn't added to the app or the DNS is misconfigured.
-    Go back to [Step 2](#step-2-confirm-dns-record-configuration) and [Step 3](#step-3-add-and-validate-the-custom-domain-in-azure) and confirm the domain appears in the app's
-    custom domains list and that DNS resolution is configured to the
-    correct IP. For example, if you're using an A record without the
-    required TXT record it can lead to a *404* because Azure didn't
-    fully verify and map the domain. Ensure the domain shows as
-    **Active"** in Azure. If not, re-add it. Be sure to also confirm you
-    haven't created conflicting records (CNAME versus A records) which
-    can confuse resolution.
+  - An *Azure 404 (Web App not found)* error message suggests that the custom domain isn't recognized by Azure. The likely cause is that the domain wasn't added to the app or the DNS is misconfigured.
+    Go back to [Step 2](#step-2-confirm-dns-record-configuration) and [Step 3](#step-3-add-and-validate-the-custom-domain-in-azure), and verify that the domain appears in the app's custom domains list and that DNS resolution is configured to the correct IP. For example, if you're using an A record without the required TXT record, a *404* error might occur because Azure didn't fully verify and map the domain. Make sure that the domain appears as **Active"** in Azure. If not, re-add it. Make sure to also verify that you haven't created conflicting records (CNAME versus A records) that can confuse resolution.
     For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
-  - If you get a *DNS (domain not found)* error - This is a DNS issue
-    as the domain isn't resolving. Use `nslookup <yourdomain>` or an
-    online DNS checker. If no A or CNAME record results comes back, the
-    DNS records might not be in place or propagated. Return to [Step 2](#step-2-confirm-dns-record-configuration) to fix the DNS settings (or wait longer if you just added them).
+  - A *DNS (domain not found)* error message indicates a DNS issue because the domain isn't resolving. Use `nslookup <yourdomain>` or an online DNS checker. If no A or CNAME record results are returned, the DNS records might not be available or propagated. Return to [Step 2](#step-2-confirm-dns-record-configuration) to fix the DNS settings (or wait longer if you recently added them).
 
-  - If you get a *403* or other permission error - This might indicate
-    that access or IP restrictions are enabled on your app and are
-    allowing only certain IPs or Azure Virtual Networks. If you set
-    those intentionally, ensure your current client IP is allowed. The
-    Azure custom domain doesn't cause a *403* error. It means the app
-    received the request but refused it due to a rule. Check the
-    **Networking > Access Restriction** settings of the App Service. If
-    your app is in an internal load balancer (ILB) App Service
-    Environment (isolated) or behind a firewall, ensure you are
-    accessing it from a permitted network. External users won't reach an
-    internal-only app even if DNS is correctly configured. In these
-    cases, consider using a VPN or Azure ExpressRoute that connects to
-    that environment or configure a public access point if appropriate.
+  - A *403* or other permission error might indicate that access or IP restrictions are enabled on your app and are allowing only certain IPs or Azure Virtual Networks. If you set those restrictions intentionally, make sure that your current client IP is allowed. The Azure custom domain doesn't cause a *403* error. The error means that the app received the request but refused it because of a rule. Check the **Networking > Access Restriction** settings of the App Service. If your app is in an internal load balancer (ILB) App Service Environment (isolated) or behind a firewall, make sure that you're accessing it from a permitted network. External users won't reach an internal-only app, even if DNS is correctly configured. In these cases, consider using a VPN or Azure ExpressRoute that connects to that environment, or configure a public access point, if it's appropriate.
 
-  - If the custom domain works over HTTP but not HTTPS - This is
-    expected behavior until you configure SSL. By default, adding a
-    custom domain enables it for HTTP. For HTTPS, you must bind an SSL
-    certificate to that domain ([Step 5](#step-5-configure-ssl-https-for-the-custom-domain)). In the meantime, an HTTPS
-    attempt may show a browser security warning or a default
-    *.azurewebsites.net* certificate which isn't trusted for your
-    domain.
+  - If the custom domain works over HTTP but not HTTPS, this is expected behavior until you configure SSL. By default, adding a custom domain enables it for HTTP. For HTTPS, you must bind an SSL certificate to that domain ([see Step 5](#step-5-configure-ssl-https-for-the-custom-domain)). In the meantime, an HTTPS attempt might display a browser security warning or a default *.azurewebsites.net* certificate. This certificate isn't trusted for your domain.
 
 ### Step 5: Configure SSL (HTTPS) for the custom domain
 
