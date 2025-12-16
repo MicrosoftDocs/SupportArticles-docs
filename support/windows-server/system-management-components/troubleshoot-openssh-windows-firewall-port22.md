@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot OpenSSH Communication through Windows Firewall
+title: Troubleshoot OpenSSH Communication Through Windows Firewall
 description: Discusses how to troubleshoot issues that affect OpenSSH commands that pass through Windows Firewall.
 ms.date: 12/17/2025
 manager: dcscontentpm
@@ -16,7 +16,7 @@ ms.custom:
 
 This article discusses how to troubleshoot issues that affect OpenSSH commands that pass through Windows Firewall.
 
-By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, SSH commands fail. By default, OpenSSH listens on both IPv4 (0.0.0.0:22) and IPv6 ([::]:22). Windows Firewall settings, service status, and network permissions all play a crucial role in ensuring that port 22 is both listening and accessible. Many factors can block OpenSSH communication, such as the following issues:
+By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, SSH commands fail. By default, OpenSSH listens on both IPv4 (0.0.0.0:22) and IPv6 ([::]:22). Windows Firewall settings, service status, and network permissions all play a crucial role in making sure that port 22 is both listening and accessible. Many factors can block OpenSSH communication, such as the following issues:
 
 - The OpenSSH service isn't running or is misconfigured.
 - Port 22 isn't listening because of service or firewall problems.
@@ -28,7 +28,7 @@ By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, 
 
 ### Step 1: Verify the basic functionality
 
-1. To verify that OpenSSH installed correctly, open a Windows PowerShell Command Prompt window and then run the following command:
+1. To verify that OpenSSH installed correctly, open a Windows PowerShell Command Prompt window, and then run the following command:
 
    ```powershell
    Get-Service -Name sshd
@@ -43,7 +43,7 @@ By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, 
    netstat -an | findstr :22
    ```
 
-   The following example shows the response to this command when port 22 is listening for traffic.
+   The following example shows the response to this command when port 22 is listening for traffic:
 
    ```output
    TCP    0.0.0.0:22             0.0.0.0:0              LISTENING
@@ -58,19 +58,19 @@ By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, 
 > - Avoid using port 22 for non-OpenSSH traffic.
 > - Audit your firewall rules regularly.
 
-1. To check for existing firewall rules, on your OpenSSH client computer, run the following cmdlet at a PowerShell command prompt.
+1. To check for existing firewall rules, go to your OpenSSH client computer, and run the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    Get-NetFirewallRule -DisplayName "*SSH*" | Get-NetFirewallPortFilter | Where-Object {$_.LocalPort -eq 22}
    ```
 
-1. If you can't find an existing SSH rule, open and administrative PowerShell command prompt window. Then run the following cmdlet:
+1. If you can't find an existing SSH rule, open an administrative PowerShell command prompt window. Then, run the following cmdlet:
 
    ```powershell
    New-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -DisplayName "OpenSSH Server (SSH)" -Enabled True -Direction Inbound -Protocol TCP -LocalPort 22 -Action Allow
    ```
 
-1. To check that the rule is correctly configured, run `Get-NetFirewallRule` again.
+1. To verify that the rule is correctly configured, run `Get-NetFirewallRule` again.
 
 ### Step 3: Review the event logs for errors
 
@@ -78,7 +78,7 @@ In Event Viewer, review the entries in **Application and Services Logs** > **Ope
 
 ### Step 4: If the port isn't listening, configure it
 
-If in the previous steps `netstat` didn't report port 22 as "Listening," and the firewall rule is correctly configured, follow these steps:
+In the previous steps, if `netstat` didn't report port 22 as "Listening," and the firewall rule is correctly configured, follow these steps:
 
 1. To check the service status, run the following command at a PowerShell command prompt:
 
@@ -86,7 +86,7 @@ If in the previous steps `netstat` didn't report port 22 as "Listening," and the
    Get-Service -Name sshd
    ```
 
-1. To check the OpenSSH configuration, in the C:\ProgramData\ssh\ folder, use a text editor to open the sshd_config file.
+1. To check the OpenSSH configuration, open the C:\ProgramData\ssh\ folder, and then use a text editor to open the sshd_config file.
 1. Go to the `Port` section of the file. If the port information is commented out, uncomment it, and then make sure that the value is `22`.
 
    > [!IMPORTANT]  
@@ -98,7 +98,7 @@ If in the previous steps `netstat` didn't report port 22 as "Listening," and the
    sshd -t
    ```
 
-1. To restart the OpenSSH server service, run the following cmdlet at a PowerShell command prompt.
+1. To restart the OpenSSH server service, run the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    Restart-Service sshd
@@ -106,18 +106,18 @@ If in the previous steps `netstat` didn't report port 22 as "Listening," and the
 
 ### Step 5: Test for firewall issues
 
-1. To create a temporary test rule, run the following cmdlet at a PowerShell command prompt
+1. To create a temporary test rule, run the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    New-NetFirewallRule -Name "SSH-Test" -DisplayName "SSH Test Rule" -Enabled True -Direction Inbound -Protocol TCP -LocalPort 22 -Action Allow -Profile Any
    ```
 
    > [!NOTE]  
-   > This cmdlet creates a temporary rule called "SSH Test Rule" that opens port 22. By using this approach, you avoid having to disable the entire firewall.
+   > This cmdlet creates a temporary rule that's named "SSH Test Rule" to open port 22. By using this approach, you avoid having to disable the entire firewall.
 
 1. Test some OpenSSH commands. If they work correctly, review and adjust your permanent firewall rules.
 
-1. When you're finished, remove the test rule by running the following cmdlet at a PowerShell command prompt.
+1. When you're finished, remove the test rule by running the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    Remove-NetFirewallRule -Name "SSH-Test"
@@ -145,7 +145,7 @@ If in the previous steps `netstat` didn't report port 22 as "Listening," and the
 
 For information about verbose logging for OpenSSH, see [How to enable OpenSSH verbose logging](enable-openssh-verbose-logging.md).
 
-Review the logs in %ProgramData%\ssh\logs for information about connection attempts and errors.
+For information about connection attempts and errors, review the logs in %ProgramData%\ssh\logs.
 
 ## Example scenarios
 
