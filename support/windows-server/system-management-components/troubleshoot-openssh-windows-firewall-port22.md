@@ -16,7 +16,7 @@ ms.custom:
 
 This article discusses how to troubleshoot issues that affect OpenSSH commands that pass through Windows Firewall.
 
-By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, SSH commands fail. By default, OpenSSH listens on both IPv4 (0.0.0.0:22) and IPv6 ([::]:22). Windows Firewall settings, service status, and network permissions all play a crucial role in ensuring that port 22 is both listening and accessible. A number of factors can block OpenSSH communication, such as the following issues:
+By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, SSH commands fail. By default, OpenSSH listens on both IPv4 (0.0.0.0:22) and IPv6 ([::]:22). Windows Firewall settings, service status, and network permissions all play a crucial role in ensuring that port 22 is both listening and accessible. Many factors can block OpenSSH communication, such as the following issues:
 
 - The OpenSSH service isn't running or is misconfigured.
 - Port 22 isn't listening because of service or firewall problems.
@@ -58,7 +58,7 @@ By default, OpenSSH uses TCP port 22. If this port is blocked or not listening, 
 > - Avoid using port 22 for non-OpenSSH traffic.
 > - Audit your firewall rules regularly.
 
-1. To check for existing firewall rules, on you OpenSSH client computer, run the following cmdlet at a PowerShell command prompt.
+1. To check for existing firewall rules, on your OpenSSH client computer, run the following cmdlet at a PowerShell command prompt.
 
    ```powershell
    Get-NetFirewallRule -DisplayName "*SSH*" | Get-NetFirewallPortFilter | Where-Object {$_.LocalPort -eq 22}
