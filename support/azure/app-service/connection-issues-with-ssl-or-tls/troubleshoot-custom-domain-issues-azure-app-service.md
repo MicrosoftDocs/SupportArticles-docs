@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Custom Domain Issues in Azure App Service for web apps on Windows and Linux
+title: Troubleshoot Custom Domain Issues in Azure App Service for Web Apps on Windows and Linux
 description: This article helps developers and IT admins troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux. 
 author: JarrettRenshaw
 manager: dcscontentpm
@@ -12,32 +12,24 @@ ms.custom:  sap:Connection issues with SSL or TLS, SSL Certificates and Domains
 ---
 # Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
 
-When adding a custom domain to an Azure App Service as a web app,
-misconfigurations can lead to validation errors, domain name service
-(DNS) resolution failures, or SSL issues. This guide provides:
+When you add a custom domain to an Azure App Service as a web app, misconfigurations can cause validation errors, domain name service (DNS) resolution failures, or SSL issues. This guide provides:
 
-- A step-by-step troubleshooting flow, featuring a linear process to assist with diagnosing and fixing custom domain problems.
+- A step-by-step troubleshooting flow, featuring a linear process to help you diagnose and fix custom domain problems
 
-- Common issues and solutions, featuring a catalog of frequently reported issues with their causes and resolutions.
+- Common issues and solutions, featuring a catalog of frequently reported issues together with their causes and resolutions
 
 ## Troubleshooting steps
 
-Perform the following troubleshooting steps in order. This helps clarify
-the issue and guide you to a solution.
+Perform the following troubleshooting steps in the given order. This process helps clarify the issue and guides you to a solution.
 
 ### Step 1: Verify prerequisites and platform support
-Ensure the following are in place:
 
-**App Service plan tier** - Confirm your web app isn't on the Free or
-Shared tier. Custom domains are only supported on Basic (B1) and higher
-tiers. If you're on a Free or Shared tier, scale up to at least B1
-before proceeding. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+Make sure that the following items are established:
 
-**User permissions** - Ensure you have the correct Azure role on your
-App Service. You need to be an Owner or Contributor on the web app's
-subscription or resource. If you're not allowed to add a hostname (for
-example, the validation fails immediately or the option is greyed out),
-you might lack permission. Have a subscription admin grant you access.
+**App Service plan tier** - Verify that your web app isn't on the Free or Shared tier. Custom domains are supported on only Basic (B1) and higher tiers. If you're on a Free or Shared tier, scale up to at least B1 before you proceed. For more information, see [How to add custom domain for my API web app](/answers/questions/5618685/how-to-add-custom-domain-for-my-api-web-app).
+
+**User permissions** - Make sure that you have the correct Azure role on your App Service. You have to be an Owner or Contributor on the web app subscription or resource. If you're not allowed to add a hostname (for example, the validation fails immediately or the option is greyed out), you might lack permission. Ask a subscription administrator to grant you access.
+
 For more information, see [Troubleshoot domain and TLS/SSL certificate problems in Azure App Service](/troubleshoot/azure/app-service/connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates).
 
 **Domain ownership** - You must own the domain name. Make sure you
@@ -45,29 +37,15 @@ have access to the DNS provider for that domain (for example, GoDaddy or
 Namecheap) to create or modify DNS records. If you don't control the
 DNS, you can't complete the mapping. For more information, see [Set up an existing custom domain in Azure App Service](/azure/app-service/app-service-web-tutorial-custom-domain).
 
-**No conflicting use** - Check that the domain isn't already bound to
-another Azure resource. A domain can only be linked to one App Service
-(including Azure Static Web Apps and Azure Front Door)at a time. If you
-previously used this domain on another app (like in a different
-subscription or a now-deleted app), remove it there first. In cases
-where the old app is inaccessible, you may need to contact [Azure
-support](https://azure.microsoft.com/support) to release the domain
-from that prior association. Azure can manually unbind a *locked* domain
-that's still tied to a resource you no longer control. For more
-information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
+**No conflicting use** - Check that the domain isn't already bound to another Azure resource. A domain can be linked to only one App Service (including Azure Static Web Apps and Azure Front Door) at a time. If you previously used this domain on another app (such as in a different subscription or a now-deleted app), remove it there first. If the old app is inaccessible, you might have to contact [Azure support](https://azure.microsoft.com/support) to release the domain from that previous association. Azure can manually unbind a *locked* domain that's still tied to a resource that you no longer control. For more information, see [Unable to Reuse My Custom Domain After Losing Access to Previous Azure Account](/answers/questions/2121811/unable-to-reuse-my-custom-domain-after-losing-acce).
 
-**Resource locks** - Check if a resource lock is applied to your App
-Service or related resources. A *ReadOnly* lock on the web app prevents
-adding new hostnames. Similarly, if you purchased the domain with Azure
-as an App Service domain, ensure there's no lock on the domain resource
-that might prevent updates. Remove any locks before proceeding. They can
-be re-applied after configuration if needed.
+**Resource locks** - Check whether a resource lock is applied to your App Service or related resources. A *ReadOnly* lock on the web app prevents you from adding new hostnames. Similarly, if you purchased the domain by having Azure as an App Service domain, make sure that no lock exists on the domain resource that might prevent updates. Remove any locks before you proceed. They can be re-applied after configuration, if it's necessary.
 
-### Step 2: Confirm DNS record configuration
-Custom domain mapping requires correct DNS records. A misconfigured DNS is
-the primary cause of custom domain issues.
+### Step 2: Verify DNS record configuration
 
-Verify the following:
+Custom domain mapping requires correct DNS records. A misconfigured DNS is the primary cause of custom domain issues.
+
+Verify the following items:
 
 **Determine the record type** - Are you mapping a root or apex domain
 (like *contoso.com*) or a subdomain (like *www.contoso.com*)?
