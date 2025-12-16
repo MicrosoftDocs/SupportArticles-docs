@@ -116,6 +116,6 @@ You can also use this setting to:
   
 - Issue 2
 
-  Updated ADMX/L files for Windows 10, version 1803 contain only SearchOCR.ADML. It is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. For more information about the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).
+  Updated ADMX/L files for Windows 10, version 1803 contain only SearchOCR.ADML. This version of SearchOCR.ADML is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. For more information about the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).
   
   Both issues can be avoided by building a pristine PolicyDefinitions folder from a base OS release folder, as mentioned in this article.
