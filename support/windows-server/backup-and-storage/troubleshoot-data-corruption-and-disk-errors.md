@@ -121,7 +121,7 @@ To fix this issue, you have to relieve the overload. Follow these steps:
 1. Make sure that you have enough controllers to handle the system load. If you have multiple high-load drives that share a controller, consider splitting the drives among different controllers.
 1. Check the controller configurations, especially any throttling configurations (such as for VMware Storage I/O Control).
 1. If the system traffic doesn't flow as expected, check for the following issues:
-   - iSCSI configuration issues, such as damaged cables, damaged network adapters, or network adapters that handle non-storage traffic and storage traffic.
+   - iSCSI configuration issues, such as damaged cables, damaged network adapters, or network adapters that handle nonstorage traffic and storage traffic.
    - MPIO configuration issues, such as insufficient or incorrectly configured multipaths.
 1. If the previous steps don't fix the timeout issue, contact your hardware vendor for information about your specific driver timeouts.
 
@@ -141,7 +141,7 @@ To fix this issue, follow these steps:
 
 ### Event ID 157: Disk 2 has been surprise removed
 
-This event indicates that the *Classpnp.sys* driver received a surprise removal request from the plug and play (PNP) manager for a non-removable disk.
+This event indicates that the *Classpnp.sys* driver received a surprise removal request from the plug and play (PNP) manager for a nonremovable disk.
 
 This issue most often occurs when something disrupts communication between the system and a disk. For example, any of the following incidents can generate this event:
 
