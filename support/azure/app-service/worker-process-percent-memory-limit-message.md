@@ -12,7 +12,7 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # "Worker Process requested recycle due to 'Percent Memory' limit" message
 
-This article provides guidance on addressing the "Worker Process requested recycle due to 'Percent Memory' limit" message message in Azure App Service. 
+This article provides guidance on addressing the "Worker Process requested recycle due to 'Percent Memory' limit" message in Azure App Service. 
 
 ## Symptom
 
