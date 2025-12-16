@@ -22,6 +22,18 @@ Your unattended desktop flows run failed with the error code **MSEntraLogonFailu
 
 Desktop flows failed to validate your Microsoft Entra credentials on the machine.
 
+## Mitigation for errors similar to AADSTS50126: Error validating credentials due to invalid username or password
+
+There are cases where specific tenant & user configurations might result to this error. Some examples are Microsoft Entra ID (Cloud) tenants with Federated users (ADFS). With this configuration, the validation of the credentials is happening on the user's on-premises Identity Provider.
+
+The preferred and most secure method is to configure [Certificate-Based Authentication](power-automate/desktop-flows/configure-certificate-based-auth).
+
+Alternatively, in cases where CBA cannot be configured, the alternative is for configurations where administrators of the on-premises IdP have configured Password Hash Sync (PHS) and password hashes are synchronized to the Cloud, federated users can use their password directly against Microsoft Entra ID (ESTS). In order to do that, a Home Realm Discovery (HRD) policy should be configured to explicitly allow this.
+
+For more information on this case, please follow this article: [Enable direct ROPC authentication of federated users for legacy applications](/entra/identity/enterprise-apps/home-realm-discovery-policy#enable-direct-ropc-authentication-of-federated-users-for-legacy-applications)
+
+The setting that needs to be used is `"AllowCloudPasswordValidation" : true`
+
 ## Resolution for Power Automate for desktop version 2.49 or later
 
 You need to [configure Microsoft Entra authentication for Remote Desktop](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
