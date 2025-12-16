@@ -35,7 +35,7 @@ To disable NetBIOS on the DHCP server, follow these steps:
 5. Select the **001 Microsoft Disable Netbios Option** check box, under the **Available Options** column.
 6. In the **Data entry** area, type 0x2 in the **Long** box, and then select **OK**.
 
-<img width="517" height="593" alt="image" src="https://github.com/user-attachments/assets/90656ed9-a1e5-4d91-9814-ef94953de68e" />
+   :::image type="content" source="./media/disable-netbios-tcp-ip-using-dhcp/scope-options-dialog-box.png" alt-text="Screenshot of the scope options dialog box, showing the Microsoft Disable Netbios Option selected and the Long box configured.":::
 
 ## Configure the DHCP client to enable the DHCP server to determine NetBIOS behavior
 
