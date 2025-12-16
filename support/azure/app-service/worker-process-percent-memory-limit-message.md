@@ -1,5 +1,5 @@
 ---
-title: "Worker Process requested recycle due to 'Percent Memory' limit" message
+title: Worker Process requested recycle due to Percent Memory limit message
 description: This article provides guidance on addressing the "Worker Process requested recycle due to 'Percent Memory' limit" message in Azure App Service. 
 author: JarrettRenshaw
 manager: dcscontentpm
