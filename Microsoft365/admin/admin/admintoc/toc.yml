@@ -136,6 +136,10 @@
       href: ../miscellaneous/support-cases-for-gcc-high-dod.md
     - name: Reports show anonymous user names
       href: ../miscellaneous/reports-show-anonymous-user-name.md    
+  - name: Orchestrated Migration
+    items:
+    - name: Resolve Orchestrated Migration errors
+      href: ../orchestrated-migration/resolve-orchestrated-migration-errors.md
   - name: Sign-in
     items:
     - name: Can't sign in to Microsoft cloud service
