@@ -6499,6 +6499,11 @@
         {
         "source_path": "information-protection/troubleshoot-aip-issues.md",
         "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client"
+      },
+        {
+        "source_path": "information-protection/welcome-information-protection.yml",
+        "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client",
+        "redirect_document_id": false
       }
   ]
 }
