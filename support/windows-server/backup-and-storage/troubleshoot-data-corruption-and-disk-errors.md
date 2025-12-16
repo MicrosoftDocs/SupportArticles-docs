@@ -7,7 +7,8 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, simonw
+ai.usage: ai-assisted
 ms.custom:
 - sap:backup,recovery,disk,and storage\data corruption and disk errors
 - pcy:WinComm Storage High Avail
