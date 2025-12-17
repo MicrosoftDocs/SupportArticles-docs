@@ -179,6 +179,4 @@ You can also manage your app using Azure PowerShell. For more information, see [
 - [Tutorial: Run a load test to identify performance bottlenecks in a web app](/azure/app-testing/load-testing/tutorial-identify-bottlenecks-azure-portal)
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
-
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
