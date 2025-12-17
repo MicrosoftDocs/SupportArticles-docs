@@ -35,7 +35,7 @@ If you upgrade the device by using the latest Windows 11 23H2 ISO image for sour
 
 Windows updates that were released on and after July 9, 2024 contain protections for a publicly disclosed Secure Boot security feature bypass. These updates install %systemdrive%\bootmgfw_2023.efi, which is a UEFI CA 2023-signed bootloader. For more information about the vulnerability and the fix, see the following articles:
 
-- [Secure Boot Security Feature Bypass Vulnerability, CVE-2023-24932](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-24932
+- [Secure Boot Security Feature Bypass Vulnerability, CVE-2023-24932](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-24932)
 - [How to manage the Windows Boot Manager revocations for Secure Boot changes associated with CVE-2023-24932](https://support.microsoft.com/topic/how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d)
 
 The issue occurs because this file wasn't part of the original Windows 11 23H2 upgrade media or Safe OS Dynamic Update (SafeOS DU) media. The upgrade process uses the Windows Recovery Environment (WinRE) while it validates or updates boot files. Because the bootloader on the device is newer than the bootloader in the Windows 11 upgrade media, the upgrade process can't update boot information on the WinRE image under %systemroot%\~BT\Sources\Rollback\EFI\Microsoft\Recovery. As a result, the upgrade fails and rolls back.
