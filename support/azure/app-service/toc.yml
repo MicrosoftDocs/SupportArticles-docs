@@ -19,8 +19,8 @@ items:
           href: web-apps-performance-faqs.md
         - name: Worker Process requested recycle due to Percent Memory limit message 
           href: worker-process-percent-memory-limit-message.md
-        - name: Web request times out after 230 seconds
-          href: web-request-times-out-after-230-seconds.md  
+        - name: Web request times out in App Service
+          href: web-request-times-out-in-app-service.md  
         - name: Troubleshoot instance-related issues
           href: troubleshoot-instance-related-issues-on-azure-app-service.md
         - name: Troubleshoot temporary storage
