@@ -17,6 +17,8 @@ items:
           href: ./capture-memory-dumps-app-service.md
         - name: Availability, performance, and application FAQs
           href: web-apps-performance-faqs.md
+        - name: Worker Process requested recycle due to Percent Memory limit message 
+          href: worker-process-percent-memory-limit-message.md
         - name: Troubleshoot instance-related issues
           href: troubleshoot-instance-related-issues-on-azure-app-service.md
         - name: Troubleshoot temporary storage
