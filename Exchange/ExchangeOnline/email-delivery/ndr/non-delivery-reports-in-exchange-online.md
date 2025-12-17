@@ -191,7 +191,7 @@ Original message headers:
 ...
 ```
 
-From the **User information** section, you can determine that the recipient is Ronald Slattery, that the message was rejected by the mail server mail.contoso.com, and that server isn't an Exchange Online or Exchange Online Protection mail server.
+From the **User information** section, you can determine that the recipient is Ronald Slattery, that the message was rejected by the mail server mail.contoso.com, and that server isn't a Microsoft 365 mail server.
 
 From the **Diagnostic information for administrators** section, you can see that alpineskihouse.com tried to connect to the server, mail.contoso.com, to deliver the message to the recipient ronald@contoso.com. However, mail.contoso.com responded with the error `530 5.7.1 Client was not authenticated`. Even though bigfish.com generated the NDR, mail.contoso.com actually rejected the message, so the administrators at contoso.com are responsible for understanding and fixing the problem. This particular error indicates that the server, mail.contoso.com, is configured not to accept anonymous email from the Internet.
 
@@ -217,7 +217,7 @@ Although the **Original message headers** are omitted from this example because 
 
 - [Find and fix email delivery issues as a Microsoft 365 for business admin](/Exchange/fix-outlook-connection-problems-in-office-365/fix-outlook-connection-problems-in-office-365/find-and-fix-email-delivery-issues-as-an-office-365-for-business-admin)
 
-- [Anti-spam protection in EOP](/office365/securitycompliance/anti-spam-protection)
+- [Anti-spam protection in cloud organizations](/defender-office-365/anti-spam-protection-about)
 
 - [Recover deleted items in a user mailbox - Admin Help](/office365/enterprise/recover-deleted-items-in-a-mailbox)
 

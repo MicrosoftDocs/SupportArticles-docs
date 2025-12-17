@@ -13,31 +13,31 @@ ms.custom:
 ms.reviewer: v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# Recipient rejects mail from Exchange Online or Exchange Online Protection and host name does not match IP address error
+# Recipient rejects mail from Microsoft 365 and host name does not match IP address error
 
 _Original KB number:_ &nbsp; 3019655
 
 ## Symptoms
 
-When users try to send mail from Microsoft Exchange Online or Microsoft Exchange Online Protection to an external recipient, the destination message transfer agent (MTA) rejects the message. The error message that users receive may vary. Typically, it states that the source server's host name does not match its IP address.
+When users try to send mail from Microsoft 365 to an external recipient, the destination message transfer agent (MTA) rejects the message. The error message that users receive may vary. Typically, it states that the source server's host name does not match its IP address.
 
 ## Cause
 
-The recipient server requires that the server name that's contained in the message HELO string have a corresponding pointer (PTR) resource record (reverse IP lookup). Exchange Online and Exchange Online Protection use multiple IP addresses to send mail. Because of DNS limitations, all these IP addresses can't be mapped through the PTR record to the server name that's in the message HELO string.
+The recipient server requires that the server name that's contained in the message HELO string have a corresponding pointer (PTR) resource record (reverse IP lookup). Microsoft 365 use multiple IP addresses to send mail. Because of DNS limitations, all these IP addresses can't be mapped through the PTR record to the server name that's in the message HELO string.
 
 ## Resolution
 
-The method in which Exchange Online and Exchange Online Protection send email by using multiple IP addresses is typical for most large mail systems and is by design. Contact the recipient system administrator for help.
+The method in which Microsoft 365 send email by using multiple IP addresses is typical for most large mail systems and is by design. Contact the recipient system administrator for help.
 
 ## More information
 
-In Exchange Online and Exchange Online Protection, outgoing email settings use specific patterns. It's important to be aware of these patterns if your recipient servers use PTR record lookups for validation. This is because they explain why messages that are sent from the service might be rejected. The patterns are as follows:
+In Microsoft 365, outgoing email settings use specific patterns. It's important to be aware of these patterns if your recipient servers use PTR record lookups for validation. This is because they explain why messages that are sent from the service might be rejected. The patterns are as follows:
 
-1. The sending IP addresses that are used by Exchange Online and Exchange Online Protection have forward-confirmed reverse DNS records. This means that each sending IP address has both a forward (name-to-IP address) and a reverse (address-to-name) DNS record that contains matching information. For example:
+1. The sending IP addresses that are used by Microsoft 365 have forward-confirmed reverse DNS records. This means that each sending IP address has both a forward (name-to-IP address) and a reverse (address-to-name) DNS record that contains matching information. For example:
 
     ```console
     Outbound IP address: 157.56.110.65
