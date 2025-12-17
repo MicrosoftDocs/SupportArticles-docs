@@ -429,6 +429,32 @@ Base images:
 sudo dnf downgrade leapp-rhui-azure
 ```
 
+### preupgrade symptom 7: Preupgrade fails with "Unable to find a match:  util-linux dnf dnf-command(config-manager) kpatch-dnf" error on RHEL 8.10 base image (non-SAP)
+
+An in-place upgrade from **RHEL 8.10 to RHEL 9.x** base images(non-SAP) fails during the `leapp preupgrade` phase. The following error is reported in `/var/log/leapp/leapp-report.txt`:
+
+```output
+====> Title: Unable to install RHEL 9 userspace packages.
+Summary: {"details": "Command ['systemd-nspawn', '--register=no', '--quiet', '--keep-unit', '--capability=all', '-D', '/var/lib/leapp/scratch/mounts/root_/system_overlay', '--setenv=LEAPP_HOSTNAME=rhel810.internal.cloudapp.net', '--setenv=LEAPP_EXPERIMENTAL=0', '--setenv=LEAPP_UNSUPPORTED=0', '--setenv=LEAPP_NO_RHSM=1', '--setenv=LEAPP_NO_RHSM_FACTS=1', '--setenv=LEAPP_TARGET_PRODUCT_CHANNEL=ga', '--setenv=LEAPP_UPGRADE_PATH_TARGET_RELEASE=9.6', '--setenv=LEAPP_UPGRADE_PATH_FLAVOUR=default', '--setenv=LEAPP_IPU_IN_PROGRESS=8to9', '--setenv=LEAPP_EXECUTION_ID=143879fb-a55b-406f-8eca-2c257c3e3e08', '--setenv=LEAPP_COMMON_TOOLS=:/etc/leapp/repos.d/system_upgrade/common/tools:/etc/leapp/repos.d/system_upgrade/el8toel9/tools', '--setenv=LEAPP_COMMON_FILES=:/etc/leapp/repos.d/system_upgrade/common/files:/etc/leapp/repos.d/system_upgrade/el8toel9/files', 'dnf', 'install', '-y', '--setopt=module_platform_id=platform:el9', '--setopt=keepcache=1', '--releasever', '9.6', '--installroot', '/el9target', '--disablerepo', '*', '--enablerepo', 'rhui-microsoft-azure-rhel9', 'util-linux', 'dnf', 'rhui-azure-rhel9', 'dnf-command(config-manager)', 'kpatch-dnf', '--disableplugin', 'subscription-manager'] failed with exit code 1.", "stderr": "Host and machine ids are equal (32f9000d1b424a30bb3d02c4fd201983): refusing to link journals
+Error: Unable to find a match: util-linux dnf dnf-command(config-manager) kpatch-dnf
+"}
+Key: 0e5d8451adfe372b923058fd09028cb5356e733d
+```
+
+#### Cause
+
+During the preupgrade phase, Leapp installs a RHUI client version **(`rhui-azure-rhel9-2.3-900`)**. This version contains **incorrect repository IDs**, which prevents `dnf` from resolving required RHEL 9 packages.
+
+#### preupgrade solution 7: Update the RHUI client to the latest version
+
+A newer version of the RHUI client **(`rhui-azure-rhel*-901` or later)** includes the correct repository IDs required for the RHEL 8 to RHEL 9 in-place upgrade.
+
+Before running `leapp preupgrade`, update the RHUI client package on the RHEL 8 system:
+
+```bash
+dnf update rhui-azure-rhel8
+```
+
 After you resolve all the inhibitors, run the preupgrade again, and make sure that all issues are resolved.
 
 ## Leapp upgrade common issues
