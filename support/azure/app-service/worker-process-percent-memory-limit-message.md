@@ -29,7 +29,3 @@ Consider switching to 64-bit processes so you can take advantage of the addition
 Also note that a 64-bit environment requires a Basic or Standard service plan. Free and Shared plans always run in a 32-bit environment.
 
 For more information, see [Configure web apps in App Service](/azure/app-service/configure-common).
-
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)] 
-
-[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
