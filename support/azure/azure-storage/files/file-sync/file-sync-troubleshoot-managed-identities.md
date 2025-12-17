@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 07/31/2025
+ms.date: 12/17/2025
 author: khdownie
 ms.author: kendownie
 ---
