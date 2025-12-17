@@ -50,8 +50,4 @@ There are two recovery options if you reach a usage quota:
 
 - Scale up the web hosting plan. Quotas only apply to the Free and Shared web hosting plans. Upgrading your plan can solve the limit issue. For more information, see [Azure plan](https://azure.microsoft.com/pricing/offers/ms-azr-0017g/) and [Pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
-
-[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
-
 
