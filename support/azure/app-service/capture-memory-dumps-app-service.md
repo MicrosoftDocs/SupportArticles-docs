@@ -273,6 +273,4 @@ You might have noticed the **Configure Action** option in the previous screensho
 
 There are other options for troubleshooting and diagnosing performance issues on the Azure App Service platform. This article focuses on memory dump collection and makes some recommendations for approaching the diagnosis by using these methods. If you have already studied, experienced, and perfected your collection procedures, and they work well for you, you should continue to use those procedures.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
 [ap]: https://portal.azure.com
