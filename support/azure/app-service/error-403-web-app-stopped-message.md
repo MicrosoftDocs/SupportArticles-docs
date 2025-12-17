@@ -46,7 +46,7 @@ In Azure portal, navigate to the **Quotas** blade and determine your quota statu
 
 There are two recovery options if you reach a usage quota:
 
-- Wait until the quota is reset. Under each quota, you see **Resets in <x> hours <x> minutes**. This is the quota measurement period. If you choose to wait, the site isn't be functional until this time expires. For example, the **Data Out** quota is applied once per day. If the quota is reached in the first hour of the measurement period (one day), your site will be offline for 23 hours until the quota is reset.
+- Wait until the quota is reset. Under each quota, you see **Resets in X hours X minutes**. This is the quota measurement period. If you choose to wait, the site isn't be functional until this time expires. For example, the **Data Out** quota is applied once per day. If the quota is reached in the first hour of the measurement period (one day), your site will be offline for 23 hours until the quota is reset.
 
 - Scale up the web hosting plan. Quotas only apply to the Free and Shared web hosting plans. Upgrading your plan can solve the limit issue. For more information, see [Azure plan](https://azure.microsoft.com/pricing/offers/ms-azr-0017g/) and [Pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
