@@ -1,5 +1,5 @@
 ---
-title: ClusterResourcePlacementAvailable / ResourcePlacementAvailable failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: PlacementAvailable failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementAvailable or ResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
@@ -7,9 +7,38 @@ ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementAvailable / ResourcePlacementAvailable is False
+# Resource propagation failure: PlacementAvailable is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` (for ClusterResourcePlacement) or `ResourcePlacementAvailable` (for ResourcePlacement) issues when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot resource availability failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementAvailable` for ClusterResourcePlacement
+- `ResourcePlacementAvailable` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to check the availability of resources in 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ResourcesUnavailable
+    status: "False"
+    type: ClusterResourcePlacementAvailable
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to check the availability of resources in 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ResourcesUnavailable
+    status: "False"
+    type: ResourcePlacementAvailable
+```
+
+---
 
 ## Symptoms
 

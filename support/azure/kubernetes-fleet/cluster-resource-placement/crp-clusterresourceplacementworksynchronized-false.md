@@ -1,14 +1,43 @@
 ---
-title: ClusterResourcePlacementWorkSynchronized / ResourcePlacementWorkSynchronized failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: WorkSynchronized failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve the ClusterResourcePlacementWorkSynchronized or ResourcePlacementWorkSynchronized failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Resource propagation failure: ClusterResourcePlacementWorkSynchronized / ResourcePlacementWorkSynchronized is false
+# Resource propagation failure: WorkSynchronized is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementWorkSynchronized` (for ClusterResourcePlacement) or `ResourcePlacementWorkSynchronized` (for ResourcePlacement) issues when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot work synchronization failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementWorkSynchronized` for ClusterResourcePlacement
+- `ResourcePlacementWorkSynchronized` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to synchronize work(s) for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: WorkNeedSyncedOrUpdated
+    status: "False"
+    type: ClusterResourcePlacementWorkSynchronized
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to synchronize work(s) for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: WorkNeedSyncedOrUpdated
+    status: "False"
+    type: ResourcePlacementWorkSynchronized
+```
+
+---
 
 ## Symptoms
 

@@ -19,6 +19,18 @@ This troubleshooting guide helps you resolve `ResourcePlacement` API object-rela
 
 For more information about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
 
+## Relationship between ResourcePlacement and ClusterResourcePlacement
+
+ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
+
+The condition types follow a naming convention where ResourcePlacement conditions use the `ResourcePlacement` prefix while ClusterResourcePlacement conditions use the `ClusterResourcePlacement` prefix. For example:
+
+- `ResourcePlacementScheduled` ↔ `ClusterResourcePlacementScheduled`
+- `ResourcePlacementApplied` ↔ `ClusterResourcePlacementApplied`
+- `ResourcePlacementAvailable` ↔ `ClusterResourcePlacementAvailable`
+
+When following ClusterResourcePlacement troubleshooting guidance, substitute the appropriate ResourcePlacement condition names and commands (for example, use `kubectl get resourceplacement -n <namespace>` instead of `kubectl get clusterresourceplacement`).
+
 ## Important considerations for ResourcePlacement
 
 ### Namespace prerequisites
@@ -48,19 +60,6 @@ ResourcePlacement can only select and manage namespace-scoped resources within t
 - ✅ **Supported**: ConfigMaps, Secrets, Services, Deployments, StatefulSets, Jobs, etc. within the ResourcePlacement's namespace
 - ❌ **Not Supported**: Cluster-scoped resources (use ClusterResourcePlacement instead)
 - ❌ **Not Supported**: Resources in other namespaces
-
-## Relationship between ResourcePlacement and ClusterResourcePlacement
-
-> [!NOTE]
-> ResourcePlacement and ClusterResourcePlacement share the same underlying architecture with a one-to-one mapping of condition types. The troubleshooting approaches documented in the ClusterResourcePlacement troubleshooting guides are applicable to ResourcePlacement as well. The main difference is that ResourcePlacement is namespace-scoped and works with namespace-scoped resources, while ClusterResourcePlacement is cluster-scoped.
->
-> The condition types follow a naming convention where ResourcePlacement conditions use the `ResourcePlacement` prefix while ClusterResourcePlacement conditions use the `ClusterResourcePlacement` prefix. For example:
->
-> - `ResourcePlacementScheduled` ↔ `ClusterResourcePlacementScheduled`
-> - `ResourcePlacementApplied` ↔ `ClusterResourcePlacementApplied`
-> - `ResourcePlacementAvailable` ↔ `ClusterResourcePlacementAvailable`
->
-> When following ClusterResourcePlacement troubleshooting guidance, substitute the appropriate ResourcePlacement condition names and commands (for example, use `kubectl get resourceplacement -n <namespace>` instead of `kubectl get clusterresourceplacement`).
 
 ## Complete progression of the ResourcePlacement deployment
 

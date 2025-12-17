@@ -1,5 +1,5 @@
 ---
-title: ClusterResourcePlacementApplied / ResourcePlacementApplied failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: PlacementApplied failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementApplied or ResourcePlacementApplied failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
@@ -7,9 +7,38 @@ ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementApplied / ResourcePlacementApplied is False
+# Resource propagation failure: PlacementApplied is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementApplied` (for ClusterResourcePlacement) or `ResourcePlacementApplied` (for ResourcePlacement) issues when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot resource application failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementApplied` for ClusterResourcePlacement
+- `ResourcePlacementApplied` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to apply resources to 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ApplyFailed
+    status: "False"
+    type: ClusterResourcePlacementApplied
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to apply resources to 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ApplyFailed
+    status: "False"
+    type: ResourcePlacementApplied
+```
+
+---
 
 ## Symptoms
 

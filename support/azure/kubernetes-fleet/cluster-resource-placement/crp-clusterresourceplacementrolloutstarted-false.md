@@ -1,14 +1,43 @@
 ---
-title: ClusterResourcePlacementRolloutStarted / ResourcePlacementRolloutStarted failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: PlacementRolloutStarted failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve the ClusterResourcePlacementRolloutStarted or ResourcePlacementRolloutStarted failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Resource propagation failure: ClusterResourcePlacementRolloutStarted / ResourcePlacementRolloutStarted is false
+# Resource propagation failure: PlacementRolloutStarted is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementRolloutStarted` (for ClusterResourcePlacement) or `ResourcePlacementRolloutStarted` (for ResourcePlacement) issues when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot rollout initiation failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementRolloutStarted` for ClusterResourcePlacement
+- `ResourcePlacementRolloutStarted` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: The rollout is being blocked by the rollout strategy
+    observedGeneration: 1
+    reason: RolloutNotStartedYet
+    status: "False"
+    type: ClusterResourcePlacementRolloutStarted
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: The rollout is being blocked by the rollout strategy
+    observedGeneration: 1
+    reason: RolloutNotStartedYet
+    status: "False"
+    type: ResourcePlacementRolloutStarted
+```
+
+---
 
 ## Symptoms
 

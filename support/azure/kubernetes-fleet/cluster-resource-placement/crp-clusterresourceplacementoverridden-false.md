@@ -1,5 +1,5 @@
 ---
-title: ClusterResourcePlacementOverridden / ResourcePlacementOverridden failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: PlacementOverridden failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve ClusterResourcePlacementOverridden or ResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
@@ -7,9 +7,38 @@ ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementOverridden / ResourcePlacementOverridden is False
+# Resource propagation failure: PlacementOverridden is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) issues when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager.
+This article discusses how to troubleshoot override failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementOverridden` for ClusterResourcePlacement
+- `ResourcePlacementOverridden` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to override resources for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: OverrideFailed
+    status: "False"
+    type: ClusterResourcePlacementOverridden
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to override resources for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: OverrideFailed
+    status: "False"
+    type: ResourcePlacementOverridden
+```
+
+---
 
 ## Symptoms
 

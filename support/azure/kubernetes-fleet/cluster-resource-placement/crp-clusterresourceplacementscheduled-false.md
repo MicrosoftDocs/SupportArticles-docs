@@ -1,14 +1,43 @@
 ---
-title: ClusterResourcePlacementScheduled / ResourcePlacementScheduled failure when using placement APIs in Azure Kubernetes Fleet Manager
+title: PlacementScheduled failure when using placement APIs in Azure Kubernetes Fleet Manager
 description: Helps you resolve the ClusterResourcePlacementScheduled or ResourcePlacementScheduled failure when you propagate resources using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
-# Resource propagation failure: ClusterResourcePlacementScheduled / ResourcePlacementScheduled is false
+# Resource propagation failure: PlacementScheduled is false
 
-This article describes how to troubleshoot `ClusterResourcePlacementScheduled` (for ClusterResourcePlacement) or `ResourcePlacementScheduled` (for ResourcePlacement) issues when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager.
+This article describes how to troubleshoot scheduling failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementScheduled` for ClusterResourcePlacement
+- `ResourcePlacementScheduled` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: "couldn't find all the clusters needed as specified by the scheduling policy"
+    observedGeneration: 1
+    reason: SchedulingPolicyUnfulfilled
+    status: "False"
+    type: ClusterResourcePlacementScheduled
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: "couldn't find all the clusters needed as specified by the scheduling policy"
+    observedGeneration: 1
+    reason: SchedulingPolicyUnfulfilled
+    status: "False"
+    type: ResourcePlacementScheduled
+```
+
+---
 
 ## Symptoms
 
