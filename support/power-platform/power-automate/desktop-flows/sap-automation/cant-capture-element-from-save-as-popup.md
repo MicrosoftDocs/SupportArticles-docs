@@ -7,7 +7,7 @@ ms.date: 11/19/2025
 ---
 # Can't capture elements from SAP Save As dialog
 
-This article helps you resolve an issue in which the element picker can't capture elements from the _Save As_ dialog box in SAP automation with Microsoft Power Automate for desktop.
+Automating SAP processes in Power Automate Desktop often involves interacting with various system dialogs, including the _Save As_ dialog. However, capturing elements from the _Save As_ dialogs by using the element picker isn't always straightforward. This article provides effective strategies and workarounds to help you automate SAP workflows that interact with the _Save As_ dialog when the standard element picker methods aren't sufficient.
 
 ## Symptoms
 
@@ -20,7 +20,11 @@ This issue can occur due to the following causes:
 - SAP shows the standard Windows _Save As_ dialog box. The standard dialog box doesn't support SAP-specific automation.
 - SAP shows a custom _Save As_ dialog box, but the element picker might not maintain the SAP context when the dialog box opens. This problem prevents the element picker from capturing elements from the custom SAP dialog box.
 
-## Solution 1: Disable Show Microsoft Windows dialogs
+## Solution
+
+Use one of the following workarounds based on your scenario.
+
+### Disable Show Microsoft Windows dialogs
 
 - If the **Show native Microsoft Windows dialogs** option is available, turn it off in the SAP GUI:
 
@@ -38,7 +42,7 @@ This issue can occur due to the following causes:
 
     1. Before the _Save As_ dialog appears, hover over an SAP GUI element in the main SAP window. This action keeps the element picker in SAP context and lets it capture elements from the custom SAP dialog box.
 
-## Solution 2: Use mouse and keyboard actions
+### Use mouse and keyboard actions
 
 If SAP displays the standard Windows _Save As_ dialog box instead of the custom SAP dialog box, you can automate the dialog box by using mouse and keyboard actions. For more information, see [Use mouse and keyboard actions](/power-automate/desktop-flows/actions-reference/mouseandkeyboard).
 
