@@ -58,6 +58,6 @@ For more information, see [Run scripts in your Windows VM by using action run co
 - [Azure VM Windows WUA Update Reset Tool](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

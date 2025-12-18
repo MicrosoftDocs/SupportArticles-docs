@@ -38,6 +38,6 @@ If you don't see the offer, contact [Confluent support](https://support.confluen
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
