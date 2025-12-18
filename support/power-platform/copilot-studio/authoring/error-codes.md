@@ -130,7 +130,7 @@ Common problems include:
 
 #### FlowMakerConnectionBlocked
 
-**Error message**: The flow with name `{FlowName}` is using a maker connection, which is not allowed. Error Code: `{FlowMakerConnectionBlocked}`
+**Error message**: The flow with name `{FlowName}` is using a maker connection, which isn't allowed. Error Code: `{FlowMakerConnectionBlocked}`
 
 **Resolution**: The administrator prevents using maker credentials in a connection that's invoked from the agent flow. [Open the flow in Power Automate](/power-automate/overview-manage-cloud-flows#open-the-details-screen-for-a-flow) and [share the cloud flow by using run-only permissions](/power-automate/create-team-flows#share-a-cloud-flow-with-run-only-permissions).
 
