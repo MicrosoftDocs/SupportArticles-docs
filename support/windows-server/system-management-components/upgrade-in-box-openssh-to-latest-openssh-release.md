@@ -53,7 +53,7 @@ The following table lists the files and their default folder locations
 | Folder and files | Description |
 | --- | --- |
 | C:\ProgramData\ssh\sshd_config | The server configuration file |
-| C:\ProgramData\ssh\administrators_authorized_keys | Keys for admininstrator accounts |
+| C:\ProgramData\ssh\administrators_authorized_keys | Keys for administrator accounts |
 | C:\\ProgramData\\ssh\\ssh_host\_\*\_key | Host identity keys |
 | C:\\Users\\\<UserName>\\.ssh\\authorized_keys | Per-user keys |
 
@@ -72,7 +72,7 @@ Copy-Item "C:\ProgramData\ssh" -Destination "C:\Backup\ssh_backup" -Recurse
 
 ## Step 2: Upgrade OpenSSH
 
-Select one of the following methods to upgrade OpenSSH:
+Select one of the following methods for upgrading OpenSSH:
 
 - [Option 1: Use an MSI installer to upgrade OpenSSH to the latest GitHub release](#option-1-use-an-msi-installer-to-upgrade-openssh-to-the-latest-github-release)
 - [Option 2: Use a ZIP file to upgrade OpenSSH to the latest GitHub release](#option-2-use-a-zip-file-to-upgrade-openssh-to-the-latest-github-release)
@@ -189,7 +189,7 @@ If you don't want to use the MSI package to install the upgrade, you can use a Z
    ```
 
    > [!NOTE]  
-   > The display name of the service is "OpenSSH SSH Server".
+   > The display name of the service is "OpenSSH SSH Server."
 
 1. To verify that you're using the correct SSH binary, run the following cmdlets at the Windows PowerShell command prompt:
 
@@ -201,7 +201,7 @@ If you don't want to use the MSI package to install the upgrade, you can use a Z
 
 1. Make sure that administrators and users can authenticate.
 
-1. To avoid path conflicts check for multiple OpenSSH folders (typically in the System32 folder). If multiple OpenSSH folders exist, keep the newest folder and remove any older ones.
+1. To avoid path conflicts, check for multiple OpenSSH folders (typically in the System32 folder). If multiple OpenSSH folders exist, keep the newest folder and remove any older ones.
 
 ## Common issue quick reference
 
