@@ -128,6 +128,6 @@ The following table lists the current checks and findings together with any pote
 | Sufficient disk space |This check looks for available disk space. If the disk space is filled, the guest agent might not be able to write its status file, update, install extensions, and so on. In this situation, you must either delete files or expand the disk capacity. |
 | DHCP IP | If one private IP exists on the VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If a static private IP address is needed, [configure it through the Azure portal or PowerShell](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps). Make sure that the DHCP option inside the VM is enabled. This setting makes sure that the IP configuration always matches the VM configuration in Azure.<br><br>If multiple private IPs are assigned to the VM's network adapter, make sure that you follow these steps to [statically assign the IPs correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After you perform this procedure, if the guest agent can't communicate with 168.63.129.16, check whether the primary IP in Windows [matches the primary IP in the VM's network adapter in Azure](no-internet-access-multi-ip.md). |
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
