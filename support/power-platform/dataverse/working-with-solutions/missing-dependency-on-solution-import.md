@@ -119,6 +119,9 @@ Always apply changes within an unmanaged solution or extend functionality by usi
 
 ### Avoid dependencies on deprecated applications
 
+> [!IMPORTANT]
+> This experience might not be available yet in the environments of all regions.
+
 Avoid taking dependencies on deprecated applications. Deprecated applications are no longer available for installation or update. You can find these dependencies in the **Deprecated Applications** section of the **Missing dependencies** page. Expanding the section provides additional details.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/deprecated-applications.png" alt-text="Screenshot that shows the Deprecated Applications section of the Missing dependencies page.":::
