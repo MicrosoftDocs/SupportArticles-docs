@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot data corruption and storage replication failures in Windows Server 2025
-description: discusses how to identify, troubleshoot, and resolve issues that relate to data corruption, disk errors, and storage replication failures in Windows Server 2025.
+description: Discusses how to identify, troubleshoot, and resolve issues that relate to data corruption, disk errors, and storage replication failures in Windows Server 2025.
 ms.date: 12/19/2025
 author: kaushika-msft
 ms.author: kaushika
@@ -92,7 +92,7 @@ To resolve data corruption and storage replication failures in Windows Server 20
 
 1. To confirm that your system is stable, monitor the replication status for at least 24 hours.
 
-1. For additional troubleshooting information, including specialized troubleshooting for Event ID 153, see [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md).
+1. For more troubleshooting information, including specialized troubleshooting for Event ID 153, see [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md).
 
 1. If issues persist, consider contacting Microsoft Support. For information about helpful information to add to your support request, review [Data collection](#data-collection).
 
