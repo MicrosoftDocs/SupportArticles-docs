@@ -96,13 +96,13 @@ In some cases, users aren't automatically provisioned into environments.
 
 If a user meets all access requirements but is still missing from an environment, the user might fall into one of the following cases:
 
-1. Users with only Office licenses (with Dataverse plan enabled) won't be pre-provisioned into environments.
+- Users with only Office licenses (with Dataverse plan enabled) won't be pre-provisioned into environments.
 
-1. Owners of Microsoft Entra groups that are associated with environments won't be pre-provisioned.
+- Owners of Microsoft Entra groups that are associated with environments won't be pre-provisioned.
 
-1. Members of Microsoft Entra groups that are part of a Group Team created for the Microsoft Entra group won't be pre-provisioned.
+- Members of Microsoft Entra groups that are part of a Group Team created for the Microsoft Entra group won't be pre-provisioned.
 
-1. Users won't be pre-provisioned into Microsoft Dataverse for Teams environments. For more information, see [Users not added automatically in Dataverse](/power-platform/admin/create-users#categories-of-users-not-added-automatically-in-dataverse).
+- Users won't be pre-provisioned into Microsoft Dataverse for Teams environments. For more information, see [Users not added automatically in Dataverse](/power-platform/admin/create-users#categories-of-users-not-added-automatically-in-dataverse).
 
 Although these users aren't pre-provisioned, you can add them [on demand](#troubleshoot-on-demand-user-management). To add or refresh users on demand, see the following section.
 
@@ -112,17 +112,17 @@ As mentioned earlier, there are some scenarios where users aren't provisioned au
 
 You can use several methods to do this:
 
-1. **Just-in-time (JIT) user provisioning**: When users access an environment URL, the system checks access requirements during sign-in and adds qualified users to the environment.
+- **Just-in-time (JIT) user provisioning**: When users access an environment URL, the system checks access requirements during sign-in and adds qualified users to the environment.
 
-1. **User impersonation call**: An impersonation call triggers a JIT sync for the user. For more information, see [How to impersonate a user](/powerapps/developer/common-data-service/webapi/impersonate-another-user-web-api#how-to-impersonate-a-user).
+- **User impersonation call**: An impersonation call triggers a JIT sync for the user. For more information, see [How to impersonate a user](/powerapps/developer/common-data-service/webapi/impersonate-another-user-web-api#how-to-impersonate-a-user).
 
-1. **Add users**: Administrators can add or refresh users in the Power Platform admin center. For more information, see [Add users to an environment](/power-platform/admin/add-users-to-environment).
+- **Add users**: Administrators can add or refresh users in the Power Platform admin center. For more information, see [Add users to an environment](/power-platform/admin/add-users-to-environment).
 
-1. **PowerShell cmdlets**: See [PowerShell support for Power Apps](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
+- **PowerShell cmdlets**: See [PowerShell support for Power Apps](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
 
-1. **Connectors**: See [Power Platform for Admins](/connectors/powerplatformforadmins/#force-sync-user).
+- **Connectors**: See [Power Platform for Admins](/connectors/powerplatformforadmins/#force-sync-user).
 
-1. **Power Automate template**: See [Force Sync Microsoft Entra Group members to specified CDS instance](https://us.flow.microsoft.com/galleries/public/templates/6e4162ca7afc48479e3ad1caadc6c1e6/force-sync-azure-active-directory-group-members-to-specified-cds-instance/).
+- **Power Automate template**: See [Force Sync Microsoft Entra Group members to specified CDS instance](https://us.flow.microsoft.com/galleries/public/templates/6e4162ca7afc48479e3ad1caadc6c1e6/force-sync-azure-active-directory-group-members-to-specified-cds-instance/).
 
 ## Known issue
 
