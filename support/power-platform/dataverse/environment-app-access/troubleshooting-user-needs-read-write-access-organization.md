@@ -17,11 +17,8 @@ This article helps administrators diagnose and resolve common user access issues
 To access an environment, a user must meet the following criteria:
 
 1. Be enabled for sign-in in Microsoft Entra ID.
-
 1. Have a valid license that has a Dynamics 365 or Microsoft Power Platform recognized service plan, or the environment must have active per-app plans.
-
 1. Be a member of the environment's Microsoft Entra group (if one is associated with the environment).
-
 1. Have at least one Dataverse security role assigned directly to them or to a [group team](/power-platform/admin/manage-group-teams) they're a member of.
 
 A user's level of access within the environment and to the resources (apps and data) in the environment is determined by the privileges defined in the security roles assigned to that user. Their access mode being [Administrative](/power-platform/admin/create-users#create-an-administrative-user-account) or [Read-Write](/power-platform/admin/create-users#create-a-read-write-user-account) also determines their level of access within an environment.
@@ -30,7 +27,7 @@ A user's level of access within the environment and to the resources (apps and d
 
 Administrators can use the **Run diagnostics** feature in the Power Platform admin center to assess user access to an environment and get details and mitigation suggestions about why a user can or can't access the environment.
 
-Follow these steps to run user access diagnostics on a user in an environment:
+Follow these steps to run user access diagnostics:
 
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select an environment.
 
@@ -47,8 +44,7 @@ Follow these steps to run user access diagnostics on a user in an environment:
 
 ## Assign security roles to users
 
-When a user encounters an error screen stating they have no roles, a system administrator needs to assign roles to the user. Assign roles directly to the user or to a group team that the user is part of. For information on how to assign Dataverse security roles to a user, see:
-[Assign a security role to a user](/power-platform/admin/assign-security-roles).
+When a user encounters an error screen stating they have no roles, a system administrator needs to assign roles to the user. Assign roles directly to the user or to a group team that the user is part of. For information on how to assign Dataverse security roles to a user, see [Assign a security role to a user](/power-platform/admin/assign-security-roles).
 
 ## Troubleshoot record visibility issues
 
@@ -58,21 +54,21 @@ If a user has trouble accessing a record in Dataverse, check if they have the ne
 
 1. Check if the user has a license. If the user doesn't have a license, assign one. For more information, see [Add a license to a user account](/power-platform/admin/assign-licenses).
 
-1. After assigning a license, wait for the license change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
+1. After assigning a license, wait for the license change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can re-add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ## Verify environment association and group membership
 
-1. As a system administrator of the environment, verify that the environment is associated with any Microsoft Entra group. For more information, see [Associate a security group with an environment](/power-platform/admin/control-user-access#associate-a-security-group-with-an-environment).
+1. As a system administrator of the environment, verify that the environment is associated with a Microsoft Entra group. For more information, see [Associate a security group with an environment](/power-platform/admin/control-user-access#associate-a-security-group-with-an-environment).
 
 1. Make sure the user with the access problem is a member of the group associated with the environment. For more information, see [Create a security group and add members to the security group](/power-platform/admin/control-user-access#create-a-security-group-and-add-members-to-the-security-group).
 
-1. After updating user membership in the environment's group, wait for the change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
+1. After updating user membership in the environment's group, wait for the change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can re-add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ## Troubleshoot permission issues
 
-You don't have sufficient permissions to access customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation). A system administrator needs to complete the following steps.  
+If the user doesn't have sufficient permissions to access customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), a system administrator should complete the following steps.  
   
-1. In the Power Platform admin center, select an environment.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select an environment.
 
 1. Select **Settings** > **Users + permissions** > **Users**.  
   
@@ -84,7 +80,7 @@ You don't have sufficient permissions to access customer engagement apps (Dynami
   
 1. Select **Security** > **Security Roles**.  
   
-1. Select the security role from step 4.  
+1. Select the security role from step 5.  
   
 1. Select **Core Records**.  
   
@@ -106,9 +102,9 @@ If a user meets all access requirements but is still missing from an environment
 
 1. Members of Microsoft Entra groups that are part of a Group Team created for the Microsoft Entra group won't be pre-provisioned.
 
-1. Users won't be pre-provisioned into Microsoft Dataverse for Teams environments.
+1. Users won't be pre-provisioned into Microsoft Dataverse for Teams environments. For more information, see [Users not added automatically in Dataverse](/power-platform/admin/create-users#categories-of-users-not-added-automatically-in-dataverse).
 
-Although these users aren't pre-provisioned, you can add them through on-demand sync. For ways to add or refresh users on demand, see the following section.
+Although these users aren't pre-provisioned, you can add them [on demand](#troubleshoot-on-demand-user-management). To add or refresh users on demand, see the following section.
 
 ## Troubleshoot on demand user management
 
@@ -130,6 +126,4 @@ You can use several methods to do this:
 
 ## Known issue
 
-The check for the presence of security roles assigned to a user only checks for roles directly assigned to the user. It can't currently check for roles inherited through group team memberships.
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+The system currently checks only for security roles assigned directly to a user. It doesn't check for roles inherited through group team memberships.
