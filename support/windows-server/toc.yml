@@ -768,6 +768,8 @@ items:
     items:
     - name: Troubleshoot Windows Server Storage Replica
       href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
+    - name: Troubleshoot data corruption and storage replication failures in Windows Server 2025
+      href: ./backup-and-storage/troubleshoot-data-corruption-storage-replication-failures-ws025.md
   - name: Storage Sense
     items:
     - name: Troubleshoot Windows Server Storage Sense
