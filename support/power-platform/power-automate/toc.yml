@@ -81,6 +81,10 @@ items:
                 href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
       - name: SAP automation
         items:
+          - name: Authentication popup appears when launching SAP
+            href: desktop-flows/sap-automation/handle-authentication-popup-launch-sap.md
+          - name: Can't capture SAP GuiTree objects
+            href: desktop-flows/sap-automation/cannot-capture-guitree-objects.md
           - name: Can't open SAP
             href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
           - name: SAP UI element click issue
@@ -101,12 +105,16 @@ items:
             href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
           - name: Interactions with RDP or Citrix applications take a long time and fail
             href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
+          - name: RDP automation fails to connect to a machine through CyberArk
+            href: desktop-flows/ui-automation/ui-rdp-automation/cyberark-connection-not-supported.md
           - name: Set drop-down list value in window/on web page action fails
             href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
           - name: UI element highlighting or hovering issues in virtual desktops
             href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
           - name: '"The remote desktop was not found" error'
             href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
+          - name: UI automation actions fail after Block Input action
+            href: desktop-flows/ui-automation/block-input-action-issues.md
           - name: UI element picker or recorder can't view UI elements in desktop applications
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions

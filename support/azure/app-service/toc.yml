@@ -17,6 +17,12 @@ items:
           href: ./capture-memory-dumps-app-service.md
         - name: Availability, performance, and application FAQs
           href: web-apps-performance-faqs.md
+        - name: Error 403 - This web app is stopped message
+          href: error-403-web-app-stopped-message.md  
+        - name: Worker Process requested recycle due to Percent Memory limit message 
+          href: worker-process-percent-memory-limit-message.md
+        - name: Web request times out in App Service
+          href: web-request-times-out-app-service.md  
         - name: Troubleshoot instance-related issues
           href: troubleshoot-instance-related-issues-on-azure-app-service.md
         - name: Troubleshoot temporary storage
