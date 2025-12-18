@@ -106,7 +106,7 @@ If a user meets all access requirements but is still missing from an environment
 
 Although these users aren't pre-provisioned, you can add them [on demand](#troubleshoot-on-demand-user-management). To add or refresh users on demand, see the following section.
 
-## Troubleshoot on demand user management
+## On demand user management
 
 As mentioned earlier, there are some scenarios where users aren't provisioned automatically. Also, environments might experience delays in showing the users' latest status. In these situations, adding or refreshing specific users on demand can help.
 
