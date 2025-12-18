@@ -98,6 +98,6 @@ If Accelerated Networking is required for performance:
 - [Azure Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 - [Azure Virtual Network Interface](/azure/virtual-network/virtual-network-network-interface)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

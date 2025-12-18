@@ -41,6 +41,6 @@ To resolve the issue, follow these steps:
 - [Azure Monitor documentation](/azure/azure-monitor/)
 - [ARM template documentation](/azure/azure-resource-manager/templates/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

@@ -44,6 +44,6 @@ If you don't have Owner role permissions, contact the subscription Owner or admi
 - [Azure role-based access control (RBAC)](/azure/role-based-access-control/)
 - [Assign Azure roles using the Azure CLI](/azure/role-based-access-control/role-assignments-cli)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

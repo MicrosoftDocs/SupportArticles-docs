@@ -1099,6 +1099,8 @@ items:
       href: ../windows-server/system-management-components/openssh-server-service-wont-start-error-1053.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot common SFTP issues when using OpenSSH
       href: ../windows-server/system-management-components/troubleshoot-sftp-issues-using-openssh.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot OpenSSH Communication through Windows Firewall
+      href: ../windows-server/system-management-components/troubleshoot-openssh-windows-firewall-port22.md?context=/troubleshoot/windows-client/context/context
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
