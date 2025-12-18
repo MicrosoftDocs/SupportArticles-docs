@@ -63,13 +63,13 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 #### AsyncResponsePayloadTooLarge
 
-**Error message**: The output that was returned from the connector was too large to be handled by the agent. Try reducing its size by using available connector filters or by limiting the number of configured action outputs.
+**Error message**: The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
 **Resolution**: One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information about the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
 
 #### ContentError
 
-**Error message**: This error produces dynamic messages that are based on the context of the error.
+**Error message**: This error produces dynamic messages based on the context of the error.
 
 **Resolution**: This message is a catch-all error for problems that are related to your agent's content. The error message provides more details.
 
@@ -81,7 +81,7 @@ Common problems include:
 
 #### ConsentNotProvidedByUser
 
-**Error message**: No consent was provided for the SSO connection.
+**Error message**: No consent provided for SSO connection.
 
 **Resolution**: The user who's interacting with the agent must verify the connection by using the agent's single sign-on connection prompt.
 
