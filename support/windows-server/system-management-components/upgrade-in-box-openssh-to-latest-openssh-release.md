@@ -36,14 +36,6 @@ By default, you use Windows Update to install and maintain the in-box OpenSSH fe
 
 The GitHub version, known as Win32-OpenSSH, installs in C:\Program Files\OpenSSH, and has the newest features and fixes. However, you have to manually update it.
 
-## Best practices
-
-- Keep your host and user keys unchanged to avoid client trust warnings.
-
-- Verify file permissions after upgrading.
-
-- Monitor the Win32-OpenSSH GitHub page for future updates.
-
 ## Step 1: Back up the configuration and keys
 
 Before you upgrade, back up all configuration and key files.
@@ -64,11 +56,13 @@ Copy-Item "C:\ProgramData\ssh" -Destination "C:\Backup\ssh_backup" -Recurse
 ```
 
 > [!IMPORTANT]  
-> Don't change file permissions for either the source files and folders or the destination files and folders. Private keys must remain readable only by SYSTEM and Administrators. To verify the permissions, run a cmdlet that resembles the following cmdlet at a PowerShell command prompt:
 >
-> ```powershell
-> Get-Acl "C:\ProgramData\ssh\ssh_host_ed25519_key" | Format-List
-> ```
+> - To avoid client trust warnings, don't change the host or user keys.
+> - Don't change file permissions for either the source files and folders or the destination files and folders. Private keys must remain readable only by SYSTEM and Administrators. To verify the permissions, run a cmdlet that resembles the following cmdlet at a PowerShell command prompt:
+>
+>   ```powershell
+>   Get-Acl "C:\ProgramData\ssh\ssh_host_ed25519_key" | Format-List
+>   ```
 
 ## Step 2: Upgrade OpenSSH
 
