@@ -47,7 +47,3 @@ Follow these steps to resolve this issue.
 
 - [Azure Monitor overview](/azure/azure-monitor/fundamentals/overview)
 - [Azure Monitor documentation](/azure/azure-monitor/)
-
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
-
-[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
