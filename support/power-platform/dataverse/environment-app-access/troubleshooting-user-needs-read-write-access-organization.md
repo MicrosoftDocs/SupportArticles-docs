@@ -16,10 +16,10 @@ This article helps administrators diagnose and resolve common user access issues
 
 To access an environment, a user must meet the following criteria:
 
-1. Be enabled for sign-in in Microsoft Entra ID.
-1. Have a valid license that has a Dynamics 365 or Microsoft Power Platform recognized service plan, or the environment must have active per-app plans.
-1. Be a member of the environment's Microsoft Entra group (if one is associated with the environment).
-1. Have at least one Dataverse security role assigned directly to them or to a [group team](/power-platform/admin/manage-group-teams) they're a member of.
+- Be enabled for sign-in in Microsoft Entra ID.
+- Have a valid license that has a Dynamics 365 or Microsoft Power Platform recognized service plan, or the environment must have active per-app plans.
+- Be a member of the environment's Microsoft Entra group (if one is associated with the environment).
+- Have at least one Dataverse security role assigned directly to them or to a [group team](/power-platform/admin/manage-group-teams) they're a member of.
 
 A user's level of access within the environment and to the resources (apps and data) in the environment is determined by the privileges defined in the security roles assigned to that user. Their access mode being [Administrative](/power-platform/admin/create-users#create-an-administrative-user-account) or [Read-Write](/power-platform/admin/create-users#create-a-read-write-user-account) also determines their level of access within an environment.
 
