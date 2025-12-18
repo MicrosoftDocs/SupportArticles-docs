@@ -54,12 +54,15 @@ If a user has trouble accessing a record in Dataverse, check if they have the ne
 ## Troubleshoot license issues
 
 1. Check if the user has a license. If the user doesn't have a license, assign one. For more information, see [Add a license to a user account](/power-platform/admin/assign-licenses).
+
 1. After assigning a license, wait for the license change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ## Verify environment association and group membership
 
 1. As a system administrator of the environment, verify that the environment is associated with any Microsoft Entra group. For more information, see [Associate a security group with an environment](/power-platform/admin/control-user-access#associate-a-security-group-with-an-environment).
+
 1. Make sure the user with the access problem is a member of the group associated with the environment. For more information, see [Create a security group and add members to the security group](/power-platform/admin/control-user-access#create-a-security-group-and-add-members-to-the-security-group).
+
 1. After updating user membership in the environment's group, wait for the change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can add the user to the environment. For more information, see [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ## Troubleshoot permission issues
