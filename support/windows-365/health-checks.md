@@ -50,7 +50,7 @@ Every failed ANC or success with a warning error state includes the technical de
 - **Environment and configuration are ready**: The underlying infrastructure is ready for provisioning to succeed.
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also, verify that the localization package download link is reachable.
-- **UDP connection check**: Network configuration allows the use of User Datagram Protocol (UDP) direct connection (STUN) or related connection (TURN).
+- **UDP connection check**: Network configuration allows the use of User Datagram Protocol (UDP) direct connection (STUN) or relayed connection (TURN).
 
 - **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](/windows-365/enterprise/identity-authentication#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
 
