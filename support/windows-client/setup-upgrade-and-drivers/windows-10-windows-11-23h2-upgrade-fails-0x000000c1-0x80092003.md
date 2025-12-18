@@ -22,7 +22,7 @@ This article discusses an issue in which an in-place upgrade to Windows 11, vers
 Consider the following scenario:
 
 - You have a Windows 10 device that uses the UEFI CA 2023 signed bootloader that was provided in an update on or after July 9, 2024.
-- By using Windows Update (or media that you downloaded from Windows Update), you perform and in-place upgrade to upgrade the device from Windows 10 to Windows 11, version 23H2.
+- By using Windows Update (or media that you downloaded from Windows Update), you perform an in-place upgrade to upgrade the device from Windows 10 to Windows 11, version 23H2.
 
 After the upgrade reaches the OOBE restart phase, the upgrade fails, rolls back to Windows 10, and generates one of the following error codes:
 
