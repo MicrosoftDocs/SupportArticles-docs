@@ -277,6 +277,4 @@ Follow these links to learn more about Node.js applications on Azure App Service
 * [Exploring the Super Secret Kudu Debug Console](https://www.youtube.com/watch?v=-VjqyvA2XjM)
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
-
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

@@ -1,6 +1,6 @@
 ---
-title: Create and manage Central Store
-description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
+title: Create and Manage Central Store
+description: Discusses how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
 ms.date: 02/06/2025
 manager: dcscontentpm
 audience: ITPro
@@ -14,7 +14,7 @@ appliesto:
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
 
-This article describes how to use the new .admx and .adml files to create and administer registry-based policy settings in Windows. This article also explains how the Central Store is used to store and to replicate Windows-based policy files in a domain environment.
+This article discusses how to use the new .admx and .adml files to create and administer registry-based policy settings in Windows. This article also explains how the Central Store is used to store and to replicate Windows-based policy files in a domain environment.
 
 _Original KB number:_ &nbsp; 3087759
 
@@ -27,6 +27,9 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104593)
 - [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677) 
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
+
+> [!CAUTION]  
+> Use the ADMX download packages in only the Central Store scenario. Replacing files in c:\Windows\PolicyDefinitions isn't supported.
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
@@ -46,51 +49,49 @@ A new policy **AllowedNonAdminPackageFamilyNameRules** is added to the AppxPacka
 
 ## Administrative Templates file storage
 
-Windows uses a Central Store to store Administrative Templates files. The ADM folder is not created in a Group Policy Object (GPO) as it is done in earlier versions of Windows. Therefore, Windows domain controllers do not store or replicate redundant copies of .adm files.
+Windows uses a Central Store to store Administrative Templates files. The ADM folder is no longer created in a Group Policy Object (GPO) as it was in earlier versions of Windows. Therefore, Windows domain controllers don't store or replicate redundant copies of .adm files.
 
 ## The Central Store
 
-To take advantage of the benefits of .admx files, you must create a Central Store in the sysvol folder on a Windows domain controller. The Central Store is a file location that is checked by the Group Policy tools by default. The Group Policy tools use all .admx files that are in the Central Store. The files that are in the Central Store are replicated to all domain controllers in the domain.
+To take advantage of the benefits of .admx files, you must create a Central Store in the sysvol folder on a Windows domain controller. The Central Store is a file location that's checked by the Group Policy tools by default. The Group Policy tools use all .admx files that are in the Central Store. The files that are in the Central Store are replicated to all domain controllers in the domain.
 
-We suggest keeping a repository of any ADMX/L files that you have for applications that you may want to use. For example, operating system extensions like Microsoft Desktop optimization Pack (MDOP), Microsoft Office, and also third-party applications that offer Group Policy support.
+We suggest that you keep a repository of your ADMX/L files for applications that you might want to use. For example, operating system extensions such as Microsoft Desktop optimization Pack (MDOP), Microsoft Office, and also third-party applications that offer Group Policy support.
 
-To create a Central Store for .admx and .adml files, create a new folder named PolicyDefinitions in the following location (for example) on the domain controller:
+To create a Central Store for .admx and .adml files, create a folder that's named PolicyDefinitions in the following location (for example) on the domain controller:
 
 `\\contoso.com\SYSVOL\contoso.com\policies\PolicyDefinitions`
 
-When you already have such a folder that has a previously built Central Store, use a new folder describing the current version such as:
+If you already have such a folder that has a previously built Central Store, use a new folder whose name describes the current version, such as:
 
 `\\contoso.com\SYSVOL\contoso.com\policies\PolicyDefinitions-24H2`
 
-Copy all files from the PolicyDefinitions folder on a source computer to the new PolicyDefinitions folder on the domain controller. The source location can be either of the following ones:
+Copy all files from the PolicyDefinitions folder on a source computer to the new PolicyDefinitions folder on the domain controller. The source location can be either of the following locations:
 
 - The `C:\Windows\PolicyDefinitions` folder on a Windows 10-based or Windows 11-based client computer
-- The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you have downloaded any of the Administrative Templates separately from the links above.
+- The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you downloaded any of the Administrative Templates separately from the links above.
 
 The PolicyDefinitions folder on the Windows domain controller stores all .admx files and .adml files for all languages that are enabled on the client computer.
 
-The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that is named *en-US*. Korean .adml files are stored in a folder that is named *ko-KR*, and so on.
+The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that's named *en-US*. Korean .adml files are stored in a folder that's named *ko-KR*, and so on.
 
-If .adml files for additional languages are required, you must copy the folder that contains the .adml files for that language to the Central Store. When you have copied all .admx and .adml files, the PolicyDefinitions folder on the domain controller should contain the .admx files and one or more folders that contain language-specific .adml files.
+If .adml files for additional languages are required, you must copy the folder that contains the .adml files for that language to the Central Store. After you copy all .admx and .adml files, the PolicyDefinitions folder on the domain controller should contain the .admx files and one or more folders that contain language-specific .adml files.
 
 > [!NOTE]
 > When you copy the .admx and .adml files from a Windows 10-based or Windows 11-based computer, verify that the most recent updates to these files are installed. Also, make sure that the most recent Administrative Templates files are replicated. This advice also applies to service packs, as applicable.
 
-When the operating system collection is completed, merge any OS extension or application ADMX/ADML files into the new PolicyDefinitions folder.
+When the operating system collection is completed, merge any OS extension or application ADMX/ADML files into the new PolicyDefinitions folder. Then, rename the current PolicyDefinitions folder to reflect that it's the previous version, such as PolicyDefinitions-23H2. Finally, rename the new folder (such as PolicyDefinitions-24H2) to the production name.
 
-When this is finished, rename the current PolicyDefinitions folder to reflect that it's the previous version, such as PolicyDefinitions-23H2. Then, rename the new folder (such as PolicyDefinitions-24H2) to the production name.
-
-We suggest this approach as you can revert to the old folder in case you experience a severe problem with the new set of files. When you don't experience any problems with the new set of files, you can move the older PolicyDefinitions folder to an archive location outside sysvol folder.
+We suggest that you use this approach because you can revert to the old folder in case you experience a severe problem that affects the new set of files. When you no longer experience any problems that affect the new set of files, you can move the older PolicyDefinitions folder to an archive location outside sysvol folder.
 
 ## Group Policy administration
 
-Windows 10 and later versions do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 10 or later versions of Windows to perform Group Policy administration.
+Windows 10 and later versions don't include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 10 or later versions of Windows to perform Group Policy administration.
 
 ## Updating the Administrative Templates files
 
-In Group Policy for Windows Vista and later version of Windows, if you change Administrative Templates policy settings on local computers, sysvol folder isn't automatically updated to include the new .admx or .adml files. This behavior is implemented to reduce network load and disk storage requirements, and to prevent conflicts between .admx and .adml files when changes are made to Administrative Templates policy settings across different locations.
+You might change Administrative Templates policy settings on local computers. However, in Group Policy for Windows Vista and later version of Windows, the sysvol folder isn't automatically updated to include the new .admx or .adml files. This behavior is implemented to reduce network load and disk storage requirements. This behavior also prevents conflicts between .admx and .adml files when changes are made to Administrative Templates policy settings across different locations.
 
-To ensure that any local updates are reflected in sysvol folder, you must manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to domain controller share sysvol folder *contoso.com\\PolicyDefinitions*.
+You can force the sysvol folder to reflect local updates. To make this change, manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to the share sysvol folder, *contoso.com\\PolicyDefinitions*, on the domain controller.
 
 The following update enables you to configure the Local Group Policy editor to use local .admx files instead of the Central Store:
 
@@ -115,6 +116,6 @@ You can also use this setting to:
   
 - Issue 2
 
-  Updated ADMX/L files for Windows 10 version 1803 contain only SearchOCR.ADML. It is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. For more information about the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).
+  Updated ADMX/L files for Windows 10, version 1803 contain only SearchOCR.ADML. This version of SearchOCR.ADML is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. For more information about the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).
   
-  Both issues can be avoided by building a pristine PolicyDefinitions folder from a base OS release folder as described above.
+  Both issues can be avoided by building a pristine PolicyDefinitions folder from a base OS release folder, as mentioned in this article.

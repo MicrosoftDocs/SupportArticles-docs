@@ -38,6 +38,6 @@ Users might receive an error message that states "Cannot read properties of unde
 - [Create Custom Table in Azure](/azure/azure-monitor/vm/data-collection-log-json#create-custom-table)
 - [Data Collection Rule Best Practices](/azure/azure-monitor/data-collection/data-collection-rule-best-practices)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
