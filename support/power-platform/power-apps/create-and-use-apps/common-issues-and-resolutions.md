@@ -92,7 +92,7 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Sign-in issues on certain Android mobile devices when using authenticator**
 
-  In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This issue is due to limitation imposed by the OEM. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
+  On certain devices and in certain scenarios, you might experience sign-in failures when you use an authenticator. This problem happens because of a limitation that the OEM imposes. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
 - **Office 365 Video connector isn't supported.**
 
@@ -100,11 +100,11 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Power Automate flows are orphaned in Power Apps.**
 
-  Power Automate flows that are added using an older version of the Power Apps panel might become orphaned and removed. To fix this issue, re-add the flows manually.
+  Power Automate flows that you add by using an older version of the Power Apps panel might become orphaned and removed. To fix this problem, re-add the flows manually.
 
 - **Power Apps custom pages (in a model-driven app) are out of synchronization with embedded Power Automate flow metadata.**
 
-  The metadata for a Power Automate flow might get out of synchronization with a model-driven app's custom page, if you update the flow after embedding it. To update the metadata, follow these steps for each embedded flow:
+  The metadata for a Power Automate flow might get out of synchronization with a model-driven app's custom page if you update the flow after embedding it. To update the metadata, follow these steps for each embedded flow:
 
   1. Edit the custom pages that use the flow.
   1. Open the Power Automate pane and refresh the flow.
@@ -126,7 +126,7 @@ For more information about Power Fx, see [Microsoft Power Fx](/power-platform/po
 
 - **Issues with Date-time**
 
-  For more information about date and time issues, see:
+  For more information about date and time problems, see:
 
   - [Troubleshoot Canvas app date time issues](./troubleshoot-canvas-app-date-time-issues.md)
   - [Troubleshoot Model driven app date time issues](./troubleshoot-model-driven-app-date-time-issues.md)
@@ -135,7 +135,7 @@ For more information about Power Fx, see [Microsoft Power Fx](/power-platform/po
 
 - **Performance degradation when opening Power Apps Studio in China**
 
-  [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds to load in China. This problem doesn't affect tenants hosted locally by 21Vianet.
+  [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds to load in China. This problem doesn't affect tenants that 21Vianet hosts locally.
 
 ## Power Apps Studio and forms
 
@@ -147,9 +147,9 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **Problems changing dimensions or orientation of SharePoint forms**
 
-  If you have issues with the **Screen size + orientation** settings for custom SharePoint forms, you can use the **Custom** size to work around the issue:
+  If you have problems with the **Screen size + orientation** settings for custom SharePoint forms, use the **Custom** size to work around the problem:
 
-  1. Reset the setting by selecting the **Small** size,
+  1. Reset the setting by selecting the **Small** size.
   1. Toggle **Orientation** to **Portrait** and then back to **Landscape**.
   1. Select **Custom** and enter a desired screen size. For reference, the preset values are:
      - "Width: 270, Height: 480" for the Small Portrait size.
@@ -157,7 +157,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **Copying and pasting screens across apps**
 
-  Copying and pasting screens across apps isn't currently supported. To work around this issue:
+  Copying and pasting screens across apps isn't currently supported. To work around this problem:
 
   1. Add a new screen to your target app.
   1. Copy the controls from the screen in your source app.
@@ -173,7 +173,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **Changing a "Title" field in a table**
 
-  If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this issue:
+  If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this problem:
   
   1. Remove any lookups to the table you want to change.
   1. Change the table's **Title** field.
@@ -191,7 +191,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **In the [Form control](/power-apps/maker/canvas-apps/controls/control-form-detail), you can't change data by using a custom card.**
 
-  The stock custom card is missing the [Update](/power-apps/maker/canvas-apps/controls/control-card) property, which is required to write back changes. To work around this issue:
+  The stock custom card is missing the [Update](/power-apps/maker/canvas-apps/controls/control-card) property, which is required to write back changes. To work around this problem:
 
   1. Select the **Form** control, and insert a card by using the right-hand pane based on the field that you want the card to show.
   1. Unlock the card, as described in [Understanding data cards](/power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
