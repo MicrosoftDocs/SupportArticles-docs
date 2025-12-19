@@ -44,7 +44,7 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
   - The application shares an implicit connection that isn't a secure implicit connection. To resolve the problem, share the connection with the end user, but consider that this approach isn't recommended. The author should convert all connections to secure implicit connections.
 
-  - The application uses a secure implicit connection. In this case, republishing the app might resolve the problem. If it doesn't, file a product bug.
+  - The application uses a secure implicit connection. In this case, republishing the app might resolve the problem.
 
 - **Automatic Next links for galleries and grids don't work for action-based connectors.**
 
@@ -93,8 +93,6 @@ For a description of how to monitor the data being sent and returned, see [Debug
 - **Sign-in issues on certain Android mobile devices when using authenticator**
 
   On certain devices and in certain scenarios, you might experience sign-in failures when you use an authenticator. This problem happens because of a limitation that the OEM imposes. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
-
-- **Office 365 Video connector isn't supported.**
 
 ## Power Automate integration
 
