@@ -27,7 +27,7 @@ This article explains the difference between the in-box and GitHub versions, how
   > Upgrading temporarily stops the OpenSSH Server service and disconnects any active SSH sessions.
 
 - In case the service restarts, have alternative access methods (such as RDP or console) available.
-- Make sure you have the correct permissions to modify C:\ProgramData\ssh and install MSI packages.
+- Make sure that you have the correct permissions to modify C:\ProgramData\ssh and install MSI packages.
 - Before you install a new release in a production environment, test it in a staging environment first.
 
 ## Understanding in-box versus GitHub OpenSSH
@@ -66,7 +66,7 @@ Copy-Item "C:\ProgramData\ssh" -Destination "C:\Backup\ssh_backup" -Recurse
 
 ## Step 2: Upgrade OpenSSH
 
-Select one of the following methods to upgrade OpenSSH:
+To upgrade OpenSSH, select one of the following methods:
 
 - [Option 1: Use an MSI installer to upgrade OpenSSH to the latest GitHub release](#option-1-use-an-msi-installer-to-upgrade-openssh-to-the-latest-github-release)
 - [Option 2: Use a ZIP file to upgrade OpenSSH to the latest GitHub release](#option-2-use-a-zip-file-to-upgrade-openssh-to-the-latest-github-release)
