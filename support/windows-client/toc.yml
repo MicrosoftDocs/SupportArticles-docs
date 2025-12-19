@@ -887,6 +887,8 @@ items:
       href: ./setup-upgrade-and-drivers/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
     - name: Devices attached to Thunderbolt Dock stop working
       href: ./setup-upgrade-and-drivers/devices-connected-via-thunderbolt-dock-not-work.md
+    - name: Error 0x000000c1 or 0x80092003 CRYPT_E_FILE_ERROR stops in-place upgrade from Windows 10 to Windows 11
+      href: ./setup-upgrade-and-drivers/windows-10-windows-11-23h2-upgrade-fails-0x000000c1-0x80092003.md
     - name: Fast startup causes system shutdown
       href: ./setup-upgrade-and-drivers/fast-startup-causes-system-hibernation-shutdown-fail.md
     - name: Hard disk usage reaches 100 percent
