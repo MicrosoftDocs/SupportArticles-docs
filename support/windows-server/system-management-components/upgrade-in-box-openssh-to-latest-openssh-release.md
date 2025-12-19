@@ -77,7 +77,7 @@ To upgrade OpenSSH, select one of the following methods:
 > [!NOTE]  
 > Depending on your processor, OpenSSH installs in either C:\Program Files\OpenSSH or C:\Program Files\OpenSSH-Win64. The installer automatically registers the OpenSSH services and updates the PATH environment variable.
 
-1. To download the MSI installer, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases), and download the latest OpenSSH-Win64.msi or Win32 build.
+1. To download the MSI installer, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases), and download the latest Win64 or Win32 OpenSSH .msi file.
 
 1. To install all components of the new version, open an administrative PowerShell command prompt window and run a cmdlet that resembles the following cmdlet:
 
