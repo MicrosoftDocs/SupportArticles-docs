@@ -60,6 +60,8 @@ You can also disable debugging for all applications on a system by modifying the
 
 1. Save the **Machine.config** file.
 
+**Caution** : Do not directly edit Machine.config unless you fully understand the impact. This file applies globally to all .NET applications on the server, and mistakes can break other applications. Prefer setting debug="false" in the application’s Web.config or via IIS Manager to target only specific sites.
+
 ## Method 3: Using IIS Manager (if the web application is hosted on IIS)
 
 1. Open IIS Manager on the computer where the website is hosted (you can select <kbd>Windows</kbd> + <kbd>R</kbd> and type **inetmgr**):
