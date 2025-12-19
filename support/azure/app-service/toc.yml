@@ -17,6 +17,8 @@ items:
           href: ./capture-memory-dumps-app-service.md
         - name: Availability, performance, and application FAQs
           href: web-apps-performance-faqs.md
+        - name: An attempt was made to access a socket in a way forbidden by its access permissions message
+          href: socket-forbidden-access-permissions-message.md   
         - name: ASP.NET Core applications hosted in App Service stop responding
           href: asp-net-core-apps-stop-responding.md  
         - name: Error 403 - This web app is stopped message
