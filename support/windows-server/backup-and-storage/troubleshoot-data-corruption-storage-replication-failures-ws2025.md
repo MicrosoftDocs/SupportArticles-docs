@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot data corruption and storage replication failures in Windows Server 2025
+title: Troubleshoot Data Corruption and Storage Replication Failures in Windows Server 2025
 description: Discusses how to identify, troubleshoot, and resolve issues that relate to data corruption, disk errors, and storage replication failures in Windows Server 2025.
 ms.date: 12/19/2025
 author: kaushika-msft
@@ -21,7 +21,7 @@ This article discusses how to identify, troubleshoot, and resolve issues that re
 
 ## Symptoms
 
-You might experience one or more of the following symptoms on Windows Server 2025:
+You might experience one or more of the following symptoms in Windows Server 2025:
 
 - The event logs list disk, storage, and replication-related errors. These errors might include the following events:
   - Event ID 7 (device error)
@@ -29,7 +29,7 @@ You might experience one or more of the following symptoms on Windows Server 202
   - Event ID 153 (disk timeout)
   - Event ID 1112 (Storage Replica replication error)
 
-- Files, databases, or application storage appear to be corrupt.
+- Files or databases appear to be corrupted, or application storage appears to be corrupted.
 - Storage Replica experiences replication failures.
 - Storage monitoring tools generate warnings or alerts that indicate degraded performance or reliability.
 
@@ -37,11 +37,11 @@ You might experience one or more of the following symptoms on Windows Server 202
 
 The following factors can cause these issues:
 
-- Physical disk failures, such as bad sectors or mechanical defects.
-- Data corruption within the storage subsystem.
-- Underlying storage hardware issues that interfere with replication processes.
-- Misconfigured storage replication settings, such as inadequate log sizes or incorrect replication mode.
-- Disk configuration issues that reduce system resilience.
+- Physical disk failures, such as bad sectors or mechanical defects
+- Data corruption within the storage subsystem
+- Underlying storage hardware issues that interfere with replication processes
+- Misconfigured storage replication settings, such as inadequate log sizes or incorrect replication mode
+- Disk configuration issues that reduce system resilience
 
 ## Resolution
 
@@ -50,7 +50,7 @@ The following factors can cause these issues:
 
 To resolve data corruption and storage replication failures in Windows Server 2025, follow these steps.
 
-1. To inspect hardware for failing disks, open a Windows PowerShell command prompt and then run the following cmdlets:
+1. To inspect hardware for failing disks, open a Windows PowerShell command prompt, and then run the following cmdlets:
 
    ```powershell
    Get-PhysicalDisk | Format-Table -AutoSize
@@ -63,7 +63,7 @@ To resolve data corruption and storage replication failures in Windows Server 20
 
 1. Make sure that firmware is up to date on all storage controllers.
 
-1. To fix bad disk sectors and recover as much data as possible, open a Windows Command Prompt window and then run the following command:
+1. To fix bad disk sectors and recover as much data as possible, open a Windows Command Prompt window, and then run the following command:
 
    ```console
    chkdsk <Drive>: /F /R
@@ -72,17 +72,17 @@ To resolve data corruption and storage replication failures in Windows Server 20
    > [!NOTE]  
    > In this command, \<Drive> represents the drive to be fixed.
 
-1. If `chkdsk` couldn't recover some of the data, restore that data from your backup.
+1. If `chkdsk` doesn't recover some part of the data, restore that data from your backup.
 
-1. Review your disk and Storage Replica configuration, and make sure your system follows best practices. Pay particular attention to the following settings:
+1. Review your disk and Storage Replica configuration, and make sure that your system follows best practices. Pay particular attention to the following settings:
 
    - Allocate sufficient space for log files (production workloads should have at least 8 GB available for log files).
    - Allocate sufficient network bandwidth for replication traffic.
-   - Confirm the volume alignment and cluster size settings.
-   - Validate that the replication mode (synchronous or asynchronous) matches your requirements.
+   - Verify the volume alignment and cluster size settings.
+   - Verify that the replication mode (synchronous or asynchronous) matches your requirements.
    - Make sure that all replication nodes are running Windows Server Datacenter edition.
 
-1. To confirm that you've restored data consistency and transfer reliability, test storage replication. At a PowerShell command prompt, run the following cmdlets:
+1. To verify that you restored data consistency and transfer reliability, test storage replication. At a PowerShell command prompt, run the following cmdlets:
 
    ```powershell
    Get-SRGroup | Format-List *
@@ -90,18 +90,18 @@ To resolve data corruption and storage replication failures in Windows Server 20
    Test-SRTopology -SourceComputerName Server1 -SourceVolumeName D: -DestinationComputerName Server2 -DestinationVolumeName D:
    ```
 
-1. To confirm that your system is stable, monitor the replication status for at least 24 hours.
+1. To verify that your system is stable, monitor the replication status for at least 24 hours.
 
 1. For more troubleshooting information, including specialized troubleshooting for Event ID 153, see [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md).
 
-1. If issues persist, consider contacting Microsoft Support. For information about helpful information to add to your support request, review [Data collection](#data-collection).
+1. If issues persist, consider contacting Microsoft Support. To learn about helpful information that you can add to your support request, review [Data collection](#data-collection).
 
 ## Data collection
 
 Before you contact Microsoft Support for assistance, gather the following information from your Windows Server 2025 environment:
 
 - Event Viewer logs for disk, storage, and replication errors (System, Application, and Microsoft-Windows-StorageReplica/Admin logs).
-- Output from PowerShell cmdlets such as the following cmdlets:
+- Output from PowerShell cmdlets, such as the following cmdlets:
 
   ```powershell
   Get-PhysicalDisk | Format-Table -AutoSize
@@ -111,8 +111,8 @@ Before you contact Microsoft Support for assistance, gather the following inform
   ```
 
 - Details of your storage configuration, including RAID levels, disk models, firmware versions, and storage controller information.
-- Screenshots or exports from monitoring tools showing error codes and performance metrics.
-- Steps you have already taken to troubleshoot the issue.
+- Screenshots or exports from monitoring tools that show error codes and performance metrics.
+- The steps that you already took to troubleshoot the issue.
 
 ## References
 
