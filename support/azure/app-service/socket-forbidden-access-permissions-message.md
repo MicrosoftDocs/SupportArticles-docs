@@ -36,5 +36,5 @@ For more information, see [Local address requests](https://github.com/projectkud
 
 ## Resources
 
-For more information about outbound connections in your web app, see the blog post about [outgoing connections to Azure websites](https://www.freekpaans.nl/2015/08/starving-outgoing-connections-on-windows-azure-web-sites/).
+For more information about outbound connections in your web app, see the blog post about [outgoing connections to Azure websites](https://www.freekpaans.nl/2015/08/starving-outgoing-connections-on-windows-azure-web-sites/). 
 
