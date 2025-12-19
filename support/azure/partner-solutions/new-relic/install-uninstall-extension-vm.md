@@ -60,6 +60,6 @@ If your selection includes VMs in different states (some that have the agent and
 - [Troubleshoot VM Agent issues](../../virtual-machines/windows/windows-azure-guest-agent.md)
 - [Introduction to the Azure Native New Relic Service](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/get-started/azure-native/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

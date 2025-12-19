@@ -43,4 +43,4 @@ When users try to export audit logs from one tenant to another by using Microsof
 - [Manage Access to Log Analytics workspaces](/azure/azure-monitor/logs/manage-access?tabs=portal#workspace-permissions)
 - [Azure role assignments](/azure/role-based-access-control/role-assignments-portal)
 
-[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
+ (../../../../includes/azure-help-support.md)]

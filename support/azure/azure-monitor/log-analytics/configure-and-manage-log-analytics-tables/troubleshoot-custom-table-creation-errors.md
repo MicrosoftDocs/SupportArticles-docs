@@ -43,6 +43,6 @@ Users might receive an error message that indicates that properties of undefined
 - [Azure Monitor Overview](/azure/azure-monitor/fundamentals/overview)
 - [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
