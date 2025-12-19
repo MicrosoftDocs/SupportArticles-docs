@@ -68,7 +68,7 @@ These invalid registry keys prevent the Windows Event Log service from starting.
 
 1. Create a backup of the existing registry keys before making any registry changes, use one of the following methods:
 
-   - Open the [Registry Editor](~/windows-server/performance/windows-registry-advanced-users#use-the-windows-user-interface.md), then right-click the `HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog` key and select **Export**.
+   - Open the [Registry Editor](~/windows-server/performance/windows-registry-advanced-users.md#use-the-windows-user-interface), then right-click the `HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog` key and select **Export**.
 
    - From an elevated command prompt, run the following command:
 
@@ -76,7 +76,7 @@ These invalid registry keys prevent the Windows Event Log service from starting.
      reg export "HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog" "<Path_To_Store_Backup>/EventLog_Backup.reg"
      ```
 
-1. Open the [Registry Editor](~/windows-server/performance/windows-registry-advanced-users#use-the-windows-user-interface.md) and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog`.
+1. Open the [Registry Editor](~/windows-server/performance/windows-registry-advanced-users.md#use-the-windows-user-interface) and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog`.
 1. Under the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EventLog` key and all its subkeys:
    1. Identify and delete any registry values that are configured as a `DWORD` type.
    1. Recreate the deleted `DWORD` values by using the same name and the `REG_SZ` type.
