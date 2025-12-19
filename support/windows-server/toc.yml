@@ -2642,7 +2642,7 @@ items:
       href: ./system-management-components/open-client-can-not-connect-server.md
     - name: Troubleshoot common SFTP issues when using OpenSSH
       href: ./system-management-components/troubleshoot-sftp-issues-using-openssh.md
-    - name: Troubleshoot OpenSSH Communication through Windows Firewall
+    - name: Troubleshoot OpenSSH communication through Windows Firewall
       href: ./system-management-components/troubleshoot-openssh-windows-firewall-port22.md
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
