@@ -59,7 +59,7 @@ To resolve data corruption and storage replication failures in Windows Server 20
 
    If a disk or controller is defective, replace it promptly to prevent further corruption or replication errors.
 
-1. Make sure that all storage arrays, RAID configurations, and storage area networks (SANs) or network attached storage (NAS) devices are functioning correctly, and verify their performance.
+1. Make sure that all storage arrays, RAID configurations, and storage area networks (SANs) or network attached storage (NAS) devices are functioning correctly, and use tools such as Performance Monitor (Perfmon) to verify their performance.
 
 1. Make sure that firmware is up to date on all storage controllers.
 
