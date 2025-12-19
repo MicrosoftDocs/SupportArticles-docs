@@ -34,15 +34,15 @@ These invalid registry keys prevent the Windows Event Log service from starting.
 ## Solution
 
 1. Verify that the SQL Server Agent fails to start by attempting to start it by using one of the following methods:
-    * [Service Control Manager (services.msc)](/windows/win32/services/about-services)
-    * [SQL Server Configuration Manager](/sql/tools/configuration-manager/sql-server-configuration-manager)
-    * [Command Prompt](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services#command-prompt-window-using-net-commands)
+    - [Service Control Manager (services.msc)](/windows/win32/services/about-services)
+    - [SQL Server Configuration Manager](/sql/tools/configuration-manager/sql-server-configuration-manager)
+    - [Command Prompt](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services#command-prompt-window-using-net-commands)
 
        ```cli
        NET START SQLSERVERAGENT
        ```
 
-    * [PowerShell](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services#powershell)
+    - [PowerShell](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services#powershell)
 
        ```powershell
        Start-Service SQLSERVERAGENT
@@ -56,7 +56,7 @@ These invalid registry keys prevent the Windows Event Log service from starting.
     NET START EVENTLOG
     ```
 
-    If the Event Log service fails to start, no logs appear when you open the [Event Viewer](/host-integration-server/core/windows-event-viewer1). Proceed to the next step.
+1. If the Event Log service starts successfully, the problem is resolved. However, if the Event Log service fails to start (no logs appear when you open the [Event Viewer](/host-integration-server/core/windows-event-viewer1)) proceed to the next step.
 1. Check the Event Log folder `C:\Windows\System32\winevt\Logs` for event log files:
    - If the folder contains `.evtx` log files, proceed to the next step.
    - If the folder doesn't contain log files, the Windows Event Log might be corrupted. To troubleshoot a corrupted Windows Event Log, see [How to delete corrupt Event Viewer Log files](~/windows-server/application-management/delete-corrupt-event-viewer-log-files.md).
