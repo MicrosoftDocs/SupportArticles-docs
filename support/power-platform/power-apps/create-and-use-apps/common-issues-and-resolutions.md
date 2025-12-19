@@ -54,7 +54,7 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
   For more information about how to share an app for SharePoint, see [Connect to SharePoint from a canvas app](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online).
 
-- **SQL data sources no longer add a "[dbo]" prefix to the data source name.**
+- **SQL data sources no longer add a `[dbo]` prefix to the data source name.**
 
   For more information about this change, see [Connect to SQL Server from Power Apps](/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase).
 
@@ -70,11 +70,13 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Column names with spaces**
 
-  If you're using a list created using Microsoft Lists, a SharePoint library, or an Excel table in which a column name contains a space, use single quotes with the column name, like this `someList.'Color Tag'`.
+  If you're using a list created using Microsoft Lists, a SharePoint library, or an Excel table in which a column name contains a space, use single quotes with the column name, for example `someList.'Color Tag'`.
 
 - **Apps that connect to on-premises SharePoint**
 
-  If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
+  If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner.
+
+  The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
 
 - **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
@@ -90,7 +92,7 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Sign-in issues on certain Android mobile devices when using authenticator**
 
-  In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This issue is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
+  In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This issue is due to limitation imposed by the OEM. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
 - **Office 365 Video connector isn't supported.**
 
@@ -98,11 +100,11 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Power Automate flows are orphaned in Power Apps.**
 
-    Power Automate flows that are added using an older version of the Power Apps panel might become orphaned and removed. To fix this issue, readd the flows manually.
+  Power Automate flows that are added using an older version of the Power Apps panel might become orphaned and removed. To fix this issue, re-add the flows manually.
 
 - **Power Apps custom pages (in a model-driven app) are out of synchronization with embedded Power Automate flow metadata.**
 
-  The metadata for a Power Automate flow might get out of synchronization with a model-driven app's custom page if you update the flow after embedding it. To update the metadata, follow these steps for each embedded flow:
+  The metadata for a Power Automate flow might get out of synchronization with a model-driven app's custom page, if you update the flow after embedding it. To update the metadata, follow these steps for each embedded flow:
 
   1. Edit the custom pages that use the flow.
   1. Open the Power Automate pane and refresh the flow.
@@ -120,14 +122,14 @@ For more information about Power Fx, see [Microsoft Power Fx](/power-platform/po
 
 - **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows.**
 
-  While offline, the **[Connection.Connected](/power-platform/power-fx/reference/signals#connection)** formula might wrongly return **true** immediately after starting an app in the Windows app. As a workaround, use a **Timer** control to delay the execution of the logic depending on it.
+  While offline, the **[Connection.Connected](/power-platform/power-fx/reference/signals#connection)** formula might wrongly return **true** immediately after starting an app in Power Apps for Windows. As a workaround, use a [Timer](/power-apps/maker/canvas-apps/controls/control-timer) control to delay the execution of the logic depending on it.
 
 - **Issues with Date-time**
 
   For more information about date and time issues, see:
 
-  - [Troubleshoot Canvas app date time issues](troubleshoot-canvas-app-date-time-issues.md)
-  - [Troubleshoot Model driven app date time issues](troubleshoot-model-driven-app-date-time-issues.md)
+  - [Troubleshoot Canvas app date time issues](./troubleshoot-canvas-app-date-time-issues.md)
+  - [Troubleshoot Model driven app date time issues](./troubleshoot-model-driven-app-date-time-issues.md)
 
 ## Regional performance
 
@@ -141,15 +143,25 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **Problems with startup**
 
-  If you have trouble accessing or starting Power Apps, see [troubleshooting startup issues](~/power-platform/power-apps/sign-in/troubleshooting-startup-issues.md).
+  If you have trouble accessing or starting Power Apps, see [Troubleshooting startup or sign-in issues for Power Apps](~/power-platform/power-apps/sign-in/troubleshooting-startup-issues.md).
 
 - **Problems changing dimensions or orientation of SharePoint forms**
 
-  If you have issues with the **Screen size + orientation** settings for custom SharePoint forms, you can use the **Custom** size to work around the issue. First, reset the setting by selecting the **Small** size, then toggle **Orientation** to **Portrait** and then back to **Landscape**. Then, select **Custom** and enter a desired screen size. For reference, the preset values are "Width: 270, Height: 480" for the Small Portrait size, and "Width: 720, Height: 480" for the Small Landscape size.
+  If you have issues with the **Screen size + orientation** settings for custom SharePoint forms, you can use the **Custom** size to work around the issue:
+
+  1. Reset the setting by selecting the **Small** size,
+  1. Toggle **Orientation** to **Portrait** and then back to **Landscape**.
+  1. Select **Custom** and enter a desired screen size. For reference, the preset values are:
+     - "Width: 270, Height: 480" for the Small Portrait size.
+     - "Width: 720, Height: 480" for the Small Landscape size.
 
 - **Copying and pasting screens across apps**
 
-  Copying and pasting screens across apps isn't currently supported. To work around this issue, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app.
+  Copying and pasting screens across apps isn't currently supported. To work around this issue:
+
+  1. Add a new screen to your target app.
+  1. Copy the controls from the screen in your source app.
+  1. Paste the controls into the screen of your target app.
 
 - **Changing the layout of SharePoint forms**
 
@@ -157,11 +169,17 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **Changing a flow in a shared app**
 
-  If you add a flow to an app and share the app, and then make changes to the flow, such as adding a service or modifying a connection, more steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. Finally, reshare the app.
+  If you add a flow to an app and share the app, and then make changes to the flow, such as adding a service or modifying a connection, more steps are required. You must also first remove the flow from the shared app. Next, re-add the flow to the app. Finally, re-share the app.
 
 - **Changing a "Title" field in a table**
 
-  If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the **Title** field, make the change, and then re-create the lookups. For more information about lookups, see [Create a relationship between tables](/power-apps/maker/data-platform/data-platform-entity-lookup).
+  If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this issue:
+  
+  1. Remove any lookups to the table you want to change.
+  1. Change the table's **Title** field.
+  1. Re-create the lookups.
+
+  For more information about lookups, see [Create a relationship between tables](/power-apps/maker/data-platform/data-platform-entity-lookup).
 
 - **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured.**
 
@@ -173,15 +191,15 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
 - **In the [Form control](/power-apps/maker/canvas-apps/controls/control-form-detail), you can't change data by using a custom card.**
 
-  The stock custom card is missing the **[Update](/power-apps/maker/canvas-apps/controls/control-card)** property, which is required to write back changes. To work around this issue:
+  The stock custom card is missing the [Update](/power-apps/maker/canvas-apps/controls/control-card) property, which is required to write back changes. To work around this issue:
 
-  - Select the **Form** control, and insert a card by using the right-hand pane based on the field that you want the card to show.
-  - Unlock the card, as described in [Understanding data cards](/power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
-  - Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
+  1. Select the **Form** control, and insert a card by using the right-hand pane based on the field that you want the card to show.
+  1. Unlock the card, as described in [Understanding data cards](/power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
+  1. Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
 - **Card gallery is deprecated.**
 
-  Existing apps that use this feature continue to run for now, but you can't add a card gallery. Replace card galleries with the new **[Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
+  Existing apps that use this feature continue to run for now, but you can't add a card gallery. Replace card galleries with the new [Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail) and [Display form](/power-apps/maker/canvas-apps/controls/control-form-detail) controls.
 
 ## Browser performance
 
@@ -199,9 +217,9 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) hosts t
 
   When this issue occurs, consider using a web player on the Windows platform.
 
-- **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" doesn't work in Power Apps for Windows.**
+- **Microsoft Entra Conditional Access with the policy _Require device to be marked as compliant_ doesn't work in Power Apps for Windows.**
 
-  When the Conditional Access policy is set to "Require device to be marked as compliant" in Microsoft Entra ID, users receive the following sign-in error and can't access their Power Apps.
+  When the Conditional Access policy is set to _Require device to be marked as compliant_ in Microsoft Entra ID, users receive the following sign-in error and can't access their Power Apps.
 
   > The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy.
 
