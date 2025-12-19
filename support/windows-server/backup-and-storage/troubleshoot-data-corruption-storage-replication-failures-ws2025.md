@@ -74,7 +74,7 @@ To resolve data corruption and storage replication failures in Windows Server 20
 
 1. If `chkdsk` doesn't recover some part of the data, restore that data from your backup.
 
-1. Review your disk and Storage Replica configuration, and make sure that your system follows best practices. Pay particular attention to the following settings:
+1. Review your disk and Storage Replica configuration, and make sure that your system follows best practices. Closely review the following settings:
 
    - Allocate sufficient space for log files (production workloads should have at least 8 GB available for log files).
    - Allocate sufficient network bandwidth for replication traffic.
