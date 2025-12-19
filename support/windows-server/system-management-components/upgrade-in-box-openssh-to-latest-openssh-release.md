@@ -26,13 +26,13 @@ This article explains the difference between the in-box and GitHub versions, how
   > [!NOTE]  
   > Upgrading temporarily stops the OpenSSH Server service and disconnects any active SSH sessions.
 
-- In case the service restarts, have alternate access methods (such as RDP or console) available.
+- In case the service restarts, have alternative access methods (such as RDP or console) available.
 - Make sure you have the correct permissions to modify C:\ProgramData\ssh and install MSI packages.
 - Before you install a new release in a production environment, test it in a staging environment first.
 
 ## Understanding in-box versus GitHub OpenSSH
 
-By default, you use Windows Update to install and maintain the in-box OpenSSH feature. Typically, it resides in C:\Windows\System32\OpenSSH. The in-box version is Microsoft-supported and stable, but it updates only when Windows itself updates.
+By default, you use Windows Update to install and maintain the in-box OpenSSH feature. Typically, the software resides in C:\Windows\System32\OpenSSH. The in-box version is Microsoft-supported and stable, but it updates only when Windows itself updates.
 
 The GitHub version, known as Win32-OpenSSH, installs in C:\Program Files\OpenSSH, and has the newest features and fixes. However, you have to manually update it.
 
@@ -49,7 +49,7 @@ The following table lists the files and their default folder locations
 | C:\\ProgramData\\ssh\\ssh_host\_\*\_key | Host identity keys |
 | C:\\Users\\\<UserName>\\.ssh\\authorized_keys | Per-user keys |
 
-To copy these files, open a Windows PowerShell command prompt and run a cmdlet that resembles the following cmdlet:
+To copy these files, open a Windows PowerShell command prompt, and run a cmdlet that resembles the following cmdlet:
 
 ```powershell
 Copy-Item "C:\ProgramData\ssh" -Destination "C:\Backup\ssh_backup" -Recurse
@@ -66,7 +66,7 @@ Copy-Item "C:\ProgramData\ssh" -Destination "C:\Backup\ssh_backup" -Recurse
 
 ## Step 2: Upgrade OpenSSH
 
-Select one of the following methods for upgrading OpenSSH:
+Select one of the following methods to upgrade OpenSSH:
 
 - [Option 1: Use an MSI installer to upgrade OpenSSH to the latest GitHub release](#option-1-use-an-msi-installer-to-upgrade-openssh-to-the-latest-github-release)
 - [Option 2: Use a ZIP file to upgrade OpenSSH to the latest GitHub release](#option-2-use-a-zip-file-to-upgrade-openssh-to-the-latest-github-release)
@@ -77,7 +77,7 @@ Select one of the following methods for upgrading OpenSSH:
 > [!NOTE]  
 > Depending on your processor, OpenSSH installs in either C:\Program Files\OpenSSH or C:\Program Files\OpenSSH-Win64. The installer automatically registers the OpenSSH services and updates the PATH environment variable.
 
-1. To download the MSI installer, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases) and download the latest OpenSSH-Win64.msi or Win32 build.
+1. To download the MSI installer, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases), and download the latest OpenSSH-Win64.msi or Win32 build.
 
 1. To install all components of the new version, open an administrative PowerShell command prompt window and run a cmdlet that resembles the following cmdlet:
 
@@ -85,14 +85,14 @@ Select one of the following methods for upgrading OpenSSH:
    msiexec /i OpenSSH-Win64-v9.x.x.x.msi
    ```
 
-1. To install only the client or server component, open an administrative PowerShell command prompt window and run a cmdlet that resembles the one of the following cmdlets, as appropriate:
+1. To install only the client or server component, open an administrative PowerShell command prompt window, and run a cmdlet that resembles the one of the following cmdlets, as appropriate:
 
    ```powershell
    msiexec /i OpenSSH-Win64-v9.x.x.x.msi ADDLOCAL=Client
    msiexec /i OpenSSH-Win64-v9.x.x.x.msi ADDLOCAL=Server
    ```
 
-1. To configure the OpenSSH Server service and then start it, run the following cmdlets on the computer where you installed the server component.
+1. To configure the OpenSSH Server service and then start it, run the following cmdlets on the computer where you installed the server component:
 
    ```powershell
    Start-Service sshd
@@ -105,13 +105,13 @@ Select one of the following methods for upgrading OpenSSH:
    PowerShell.exe -ExecutionPolicy Bypass -File "C:\Program Files\OpenSSH\install-sshd.ps1"
    ```
 
-### Option 2: Use a ZIP file to upgrade OpenSSH to the latest GitHub release
+### Option 2: Use a .zip file to upgrade OpenSSH to the latest GitHub release
 
-If you don't want to use the MSI package to install the upgrade, you can use a ZIP archive file.
+If you don't want to use the MSI package to install the upgrade, you can use a .zip archive file.
 
-1. To download the latest ZIP file, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases) and download the appropriate file.
+1. To download the latest .zip file, go to [Win32-OpenSSH releases page on GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases), and download the appropriate file.
 
-1. Extract the ZIP file to C:\Program Files\OpenSSH.
+1. Extract the .zip file to C:\Program Files\OpenSSH.
 
 1. Open an administrative PowerShell window, change to the C:\Program Files\OpenSSH folder, and then run the following command:
 
@@ -137,23 +137,23 @@ If you don't want to use the MSI package to install the upgrade, you can use a Z
    Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
    ```
 
-1. After the uninstall operations finish, restart Windows.
+1. After the software is uninstalled, restart Windows.
 
-1. To install the latest release from Windows Update, run the following cmdlets at a PowerShell command prompt.
+1. To install the latest release from Windows Update, run the following cmdlets at a PowerShell command prompt:
 
    ```powershell
    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
    ```
 
-1. To configure the OpenSSH Server service and then start it, run the following cmdlets.
+1. To configure the OpenSSH Server service and then start it, run the following cmdlets:
 
    ```powershell
    Start-Service sshd
    Set-Service sshd -StartupType Automatic
    ```
 
-## Step 3: Create the firewall rule, if necessary
+## Step 3: Create the firewall rule, if it's necessary
 
 1. To check for existing firewall rules, go to your OpenSSH client computer, and run the following cmdlet at a PowerShell command prompt:
 
@@ -171,11 +171,11 @@ If you don't want to use the MSI package to install the upgrade, you can use a Z
 
 ## Step 4: Verify the installation
 
-1. Make sure that C:\ProgramData\ssh still has your previous configuration and keys. If necessary, restore this information from your backup.
+1. Make sure that C:\ProgramData\ssh still has your previous configuration and keys. If it's necessary, restore this information from your backup.
 
 1. To check the version, run `ssh -V` at the PowerShell command prompt.
 
-1. To check the service status and connectivity, run the following cmdlets at the PowerShell command prompt:
+1. To check the service status and connectivity, run the following cmdlets at a PowerShell command prompt:
 
    ```powershell
    Get-Service sshd
@@ -185,26 +185,26 @@ If you don't want to use the MSI package to install the upgrade, you can use a Z
    > [!NOTE]  
    > The display name of the service is "OpenSSH SSH Server."
 
-1. To verify that you're using the correct SSH binary, run the following cmdlets at the Windows PowerShell command prompt:
+1. To verify that you're using the correct SSH binary, run the following cmdlets at a Windows PowerShell command prompt:
 
    ```powershell
    Get-Command ssh.exe | Select-Object Source
    ```
 
-1. To check for errors, open Event Viewer and then select **Applications and Services Logs** > **OpenSSH** > **Operational**.
+1. To check for errors, open Event Viewer, and then select **Applications and Services Logs** > **OpenSSH** > **Operational**.
 
 1. Make sure that administrators and users can authenticate.
 
-1. To avoid path conflicts, check for multiple OpenSSH folders (typically in the System32 folder). If multiple OpenSSH folders exist, keep the newest folder and remove any older ones.
+1. To avoid path conflicts, check for multiple OpenSSH folders (typically in the System32 folder). If multiple OpenSSH folders exist, keep the newest folder, and remove any older folders.
 
-## Common issue quick reference
+## Common issues quick reference
 
 | **Symptom** | **Likely cause** | **Resolution** |
 | --- | --- | --- |
-| SSH service fails to start | Missing or misconfigured host keys | Restore backed-up keys and restart the service |
-| Authentication errors | Improper key file permissions | Make sure only SYSTEM and Administrators can read or write key files |
+| SSH service doesn't start | Missing or misconfigured host keys | Restore backed-up keys and restart the service |
+| Authentication errors | Improper key file permissions | Make sure that only SYSTEM and Administrators can read or write key files |
 | Old binaries still run | PATH still points to System32\OpenSSH | Remove or rename the outdated directory |
-| Port 22 unreachable | Firewall rule is missing | Recreate inbound rule for TCP port 22 |
+| Port 22 unreachable | Firewall rule is missing | Re-create the inbound rule for TCP port 22 |
 
 ## Related articles
 
