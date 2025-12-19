@@ -17,6 +17,8 @@ items:
           href: ./capture-memory-dumps-app-service.md
         - name: Availability, performance, and application FAQs
           href: web-apps-performance-faqs.md
+        - name: ASP.NET Core applications hosted in App Service stop responding
+          href: asp-net-core-apps-stop-responding.md  
         - name: Error 403 - This web app is stopped message
           href: error-403-web-app-stopped-message.md  
         - name: Worker Process requested recycle due to Percent Memory limit message 
