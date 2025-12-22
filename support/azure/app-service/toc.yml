@@ -67,6 +67,8 @@ items:
           href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
         - name: Unable to configure custom domains on an app
           items:
+          - name: Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
+            href: ./connection-issues-with-ssl-or-tls/troubleshoot-custom-domain-issues-azure-app-service.md
         - name: Set up an existing custom domain
           href: /azure/app-service/app-service-web-tutorial-custom-domain
     - name: App Service Certificates
