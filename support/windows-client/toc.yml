@@ -1101,6 +1101,8 @@ items:
       href: ../windows-server/system-management-components/troubleshoot-sftp-issues-using-openssh.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot OpenSSH communication through Windows Firewall
       href: ../windows-server/system-management-components/troubleshoot-openssh-windows-firewall-port22.md?context=/troubleshoot/windows-client/context/context
+    - name: Upgrade in-box OpenSSH to the latest OpenSSH release
+      href: ../windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release.md?context=/troubleshoot/windows-client/context/context
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
