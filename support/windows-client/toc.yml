@@ -803,6 +803,8 @@ items:
       href: ./setup-upgrade-and-drivers/dism-apply-image-command-fails-error-code-5.md
     - name: Download and burn an ISO file from VLSC
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
+    - name: Error 0x000000c1 or 0x80092003 CRYPT_E_FILE_ERROR stops in-place upgrade from Windows 10 to Windows 11
+      href: ./setup-upgrade-and-drivers/windows-10-windows-11-23h2-upgrade-fails-0x000000c1-0x80092003.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
     - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
@@ -1097,8 +1099,10 @@ items:
       href: ../windows-server/system-management-components/openssh-server-service-wont-start-error-1053.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot common SFTP issues when using OpenSSH
       href: ../windows-server/system-management-components/troubleshoot-sftp-issues-using-openssh.md?context=/troubleshoot/windows-client/context/context
-    - name: Troubleshoot OpenSSH Communication through Windows Firewall
+    - name: Troubleshoot OpenSSH communication through Windows Firewall
       href: ../windows-server/system-management-components/troubleshoot-openssh-windows-firewall-port22.md?context=/troubleshoot/windows-client/context/context
+    - name: Upgrade in-box OpenSSH to the latest OpenSSH release
+      href: ../windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release.md?context=/troubleshoot/windows-client/context/context
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell

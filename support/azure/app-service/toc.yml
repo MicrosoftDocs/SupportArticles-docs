@@ -17,6 +17,10 @@ items:
           href: ./capture-memory-dumps-app-service.md
         - name: Availability, performance, and application FAQs
           href: web-apps-performance-faqs.md
+        - name: An attempt was made to access a socket in a way forbidden by its access permissions message
+          href: socket-forbidden-access-permissions-message.md   
+        - name: ASP.NET Core applications hosted in App Service stop responding
+          href: asp-net-core-apps-stop-responding.md  
         - name: Error 403 - This web app is stopped message
           href: error-403-web-app-stopped-message.md  
         - name: Worker Process requested recycle due to Percent Memory limit message 
@@ -63,6 +67,8 @@ items:
           href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
         - name: Unable to configure custom domains on an app
           items:
+          - name: Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
+            href: ./connection-issues-with-ssl-or-tls/troubleshoot-custom-domain-issues-azure-app-service.md
         - name: Set up an existing custom domain
           href: /azure/app-service/app-service-web-tutorial-custom-domain
     - name: App Service Certificates
