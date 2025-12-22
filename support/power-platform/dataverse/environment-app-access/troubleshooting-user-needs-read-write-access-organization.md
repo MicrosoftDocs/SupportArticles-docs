@@ -104,7 +104,7 @@ If a user meets all access requirements but is still missing from an environment
 
 - Users won't be pre-provisioned into Microsoft Dataverse for Teams environments. For more information, see [Users not added automatically in Dataverse](/power-platform/admin/create-users#categories-of-users-not-added-automatically-in-dataverse).
 
-Although these users aren't pre-provisioned, you can add them [on demand](#troubleshoot-on-demand-user-management). To add or refresh users on demand, see the following section.
+Although these users aren't pre-provisioned, you can add them [on demand](#on-demand-user-management). To add or refresh users on demand, see the following section.
 
 ## On demand user management
 
