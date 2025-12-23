@@ -1,14 +1,14 @@
 ---
-title: SQL Server 2025 build versions (KB1234567)
+title: SQL Server 2025 build versions (KB5005684)
 description: This article lists cumulative update and GDR builds for SQL Server 2025.
 ms.date: 12/11/2025
 ms.update-cycle: 1095-days
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB1234567
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005684
 appliesto:
 - SQL Server 2025
 ms.reviewer: v-six
 ---
-# KB1234567 - SQL Server 2025 build versions
+# KB5005684 - SQL Server 2025 build versions
 
 This article lists the Microsoft SQL Server 2025 builds that were released after the release of SQL Server 2025.
 
@@ -16,8 +16,7 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
-| CU21 + GDR  | 16.0.4222.2 | 2022.160.4222.2 | 16.0.43.249 | 2022.160.43.249 | [KB5068406](https://support.microsoft.com/help/5068406) | November 11, 2025  |
-| GDR         | 16.0.1160.1 | 2022.160.1160.1 | 16.0.42.229 | 2022.160.42.229 | [KB5068407](https://support.microsoft.com/help/5068407) | November 11, 2025  |
+| GDR         | 17.0.1050.2 | 2025.170.1050.2 | 16.0.42.229 | 2022.160.42.229 | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026  |
 
 ## References
 
