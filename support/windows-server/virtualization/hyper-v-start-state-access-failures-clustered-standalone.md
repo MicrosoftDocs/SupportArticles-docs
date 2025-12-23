@@ -1,203 +1,219 @@
 ---
-title: Troubleshoot Hyper-V Virtual Machine Startup, State, and Access Failures
-description: Helps resolve issues related to Hyper-V VMs that fail to start, become stuck in transitional states, or become inaccessible in clustered and standalone environments.
-ms.date: 09/01/2025
+title: Troubleshoot Inaccessible or Unresponsive Virtual Machines in Clustered or Standalone Environments
+description: Helps you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments.
+ms.date: 12/27/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, jeffhugh, v-lianna
+ms.reviewer: kaushika, simonw, v-tappelgate
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine state
 - pcy:WinComm Storage High Avail
+keywords: Get-VMNetworkAdapter
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Troubleshoot Hyper-V virtual machine startup, state, and access failures in clustered and standalone environments
+# Troubleshoot inaccessible or unresponsive virtual machines in clustered or standalone environments
 
-This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Common causes include VM configuration file corruption, storage or network problems, process lockups, checkpoint or automatic virtual hard disk (AVHDX) issues, and permission or driver errors. Timely identifying and resolving these problems is essential to minimizing VM downtime, preventing business disruption, and avoiding data loss in production environments.
+This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to get "stuck" might prevent an offline VM from starting. Further, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
 
-When dealing with Hyper-V VM issues, you might encounter various symptoms, including:
+## Troubleshooting checklist
 
-## End-user and technical symptoms
+### Step 1: Identify the scope of the issue
 
-- VMs fail to start or power on in Hyper-V Manager or Failover Cluster Manager.
-- VMs are stuck in states like "starting," "stopping," "saved-critical," "paused," or "restoring."
-- VMs are missing or invisible in Hyper-V Manager or the output of `Get-VM`.
-- VM states are displayed as "running critical," "stopping," or "online pending."
-- VM consoles are inaccessible, and remote desktop connections are unavailable.
-- VMs fail to migrate successfully between cluster nodes.
-- Hyper-V Manager or Failover Cluster Manager can't change VM states or report their status.
-- The virtual machine management service (VMMS) or VMM services are stuck in a "Stopping" state.
-- Storage volumes, such as Cluster Shared Volumes (CSVs), appear as RAW or offline, and VHDX files are inaccessible or locked.
+1. Use Hyper-V Manager, Failover Cluster Manager, or Windows PowerShell to identify affected VMs, hosts, and cluster resources. Note any error messages.
+1. Make sure that VMs have unique GUIDs.
+1. If VMs are "stuck" in any of the following states, see [VM hangs or appears to be "stuck" in a transitional state (such as Starting, Stopping, or Restoring)](#vm-hangs-or-appears-to-be-stuck-in-a-transitional-state-such-as-starting-stopping-or-restoring).
+     - Starting
+     - Stopping
+     - Saved-critical
+     - Running critical
+     - Paused
+     - Restoring
+     - Online pending
 
-## Error messages, event logs, and codes
+1. Review system event logs, Hyper-V logs, and cluster event logs. Note any relevant entries, error messages, and Event IDs. The following Event IDs and Event ID combinations indicate common issues. Follow the links to see specific solutions for these issues:
 
-- Error messages:
+   - [Event ID 32 and Event ID 21502](#event-id-32-failed-to-connect-nic-and-event-id-21502-virtual-machine-xxxxxxx-failed-to-startthe-switch-port-connection-for-network-adapter-xxxxxxx--is-invalid)
+   - [Event ID 1069](#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online)
+   - [Event ID 1205](#event-id-1205-cant-bring-a-resource-online)
+   - [Event ID 1135, Event ID 1795, Event ID 5257, and virtual machines are paused](#event-id-1135-event-id-1795-event-id-5257-and-virtual-machines-are-paused)
+   - Event ID 1135. At a general level, Event ID 1135 indicates that one or more cluster nodes were removed from the active failover cluster membership. For more information about troubleshooting this issue, see [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135).
+   - Event ID 5120. At a general level, Event ID 5120 indicates an issue that involves the cluster shared volume (CSV). For more information about troubleshooting this issue, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance).
 
-  - > A virtual machine or container with the specified identifier already exists in Hyper-V.
-  - > Failed to start worker process: Catastrophic failure 0x8000FFFF.
-  - > Virtual machine failed to generate VHD tree: The system cannot find the file specified (0x80070002).
-  - > The process cannot access the file because it is being used by another process.
-  - > Failed to perform the Cleaning up stale reference point(s) operation. The virtual machine is currently performing: Turning Off.
-  - > The file or directory is corrupted and unreadable. (0x80070570)
+1. Note any recent changes or incidents that affected your infrastructure. Such changes include system or driver updates, or interruptions in power or network connectivity.
+1. Note any unusual system activity, such as the following behavior:
 
-- Event IDs: 21502, 1069, 1205, 5120, 1135, 225, 15500, 1793, 1795, 7034, 7031, 7036, 16300, 14102, 4092, 18012, 18016, 20848, 20864, 12620, 12240, 153, 20848, 18524, 1146, 1230.
-- Cluster resources are stuck in "online pending" or "failed" states.
-- VMs are unavailable after patching, host restarts, or storage and network events.
+   - VMs repeatedly restart.
+   - VMs don't live migrate successfully.
+   - Clusters fail over, or don't fail over correctly.
+   - Cluster resources are offline.
+1. Review the [Windows Server release information](/windows/release-health/windows-server-release-info) pages for the latest known issue and notification information.
+1. Contact your hardware vendors and other third-party vendors for information about updates and known issues.
 
-Hyper-V VM failures might originate from several root causes, which are categorized as follows, along with their respective resolutions:
+### Step 2: Make sure that the operating system and drivers are up to date
 
-- [Cause 1: Configuration and metadata corruption](#cause-1-configuration-and-metadata-corruption)
-- [Cause 2: Storage and file system issues](#cause-2-storage-and-file-system-issues)
-- [Cause 3: Process and service lockups](#cause-3-process-and-service-lockups)
-- [Cause 4: Permissions, security, and driver problems](#cause-4-permissions-security-and-driver-problems)
-- [Cause 5: Cluster, network, and failover issues](#cause-5-cluster-network-and-failover-issues)
+1. Make sure that your disk and network hardware drivers have been updated to the latest versions.
+1. Make sure that all servers have the latest Windows Update releases installed.
+1. In a clustered environment, for each cluster, make sure that all of the nodes in the cluster run the same Windows Server release.
 
-## Initial checks before proceeding
+### Step 3: Review the permission and security settings
 
-To resolve these issues, perform the initial checks using the following steps:
+Make sure that your security infrastructure accommodates Hyper-V. The following technologies can cause issues:
 
-1. Identify error messages, event IDs, and affected VMs using Hyper-V Manager, Failover Cluster Manager, or PowerShell.
-2. Review system logs, Hyper-V logs, and cluster event logs for relevant entries.
+- Antivirus or third-party filter drivers interfere with Hyper-V by blocking file access or causing merge failures.
+- BitLocker-locked disks might prevent VMs from starting after updates or restarts. BitLocker also might block access to virtual machine files, preventing VMs from starting or responding.
 
-## Cause 1: Configuration and metadata corruption
-
-- Corrupt or missing VM configuration files (for example, `.VMCX` and `.XML`) prevent Hyper-V from recognizing or starting the VM, often after failed migrations, storage issues, or abrupt shutdowns.
-- Checkpoint (AVHDX) chain corruption or missing differencing disks prevent the VM from starting.
-- Orphaned checkpoints, incomplete merges, or invalid entries in configuration files block VM operations.
-- Duplicate VM GUIDs or object entries, particularly with System Center Virtual Machine Manager (SCVMM), can cause "already exists" errors and prevent VM imports or starts.
-
-To resolve this issue, see [File system and storage checks](#resolution-file-system-and-storage-checks).
-
-## Cause 2: Storage and file system issues
-
-- CSVs or volumes are offline, RAW, or inaccessible due to storage subsystem failures, disk corruption, or drive letter conflicts.
-- VHD or VHDX files are locked or in use by another process, such as a backup or antivirus program.
-- Missing or corrupt VM runtime state files (VMRS) impede VM operations.
-- BitLocker-locked disks prevent VMs from starting after patching or rebooting.
-
-### Resolution: File system and storage checks
-
-1. Verify storage volumes:
-
-    - Use Disk Management or `diskpart` to ensure volumes are online and properly assigned.
-    - If volumes are RAW or missing, reassign drive letters and repair disk corruption using `chkdsk`:
-
-      ```console
-      chkdsk <drive_letter>: /f /r</drive_letter>
-      ```
-
-2. Check VM configuration and disk file presence:
-
-    - Confirm the existence of `.VMCX`, `.VMRS`, `.VHDX`, and `.AVHDX` files in the VM folder.
-    - For missing or corrupt configuration files, rebuild the VM using existing VHDX files or restore from a backup.
-    - For missing or corrupt AVHDX files:
-
-      ```powershell
-      Set-VHD -Path <vhdx path> -ParentPath <parent vhdx path> -IgnoreIDMismatch</parent></vhdx>
-      ```
-
-    - If BitLocker is enabled, unlock the disk:
-
-      ```console
-      manage-bde -unlock D: -RecoveryPassword <yourrecoverypassword></yourrecoverypassword>
-      ```
-
-    - For locked or in-use files, use Process Explorer to identify and terminate the locking process, or reboot the host to release the lock.
-
-## Cause 3: Process and service lockups
-
-- Stale VM Worker Process (VMWP) or VMMS processes are stuck due to storage or network issues or deadlocks.
-- Failed attempts to terminate VM processes via Task Manager, `taskkill`, or Process Explorer persist due to kernel or resource locks.
-
-### Resolution: Process and service recovery
-
-1. If the VM is stuck in transitional states:
-
-    - End the VM process:
-
-      ```console
-      taskkill /PID <pid> /F</pid>
-      ```
-
-    - Restart VMMS or the host if processes remain stuck.
-2. Remove saved states or checkpoints:
-
-   ```powershell
-   Get-VMSnapshot <vmname> | Remove-VMSavedState<br>Remove-VMSavedState <vmname></vmname></vmname>
-   ```
-
-## Cause 4: Permissions, security, and driver problems
-
-- Permissions issues restrict the Hyper-V service account from accessing VM files or folders.
-- Antivirus or third-party filter drivers interfere with Hyper-V, blocking file access or causing merge failures.
-- Outdated or misconfigured storage or network drivers lead to connectivity loss or failover events.
-
-### Resolution: Permission and security configuration
-
-1. Ensure the Hyper-V service account has full control over VM files and folders.
-2. Apply antivirus exclusions as per Microsoft's Hyper-V documentation.
-3. Identify and unload problematic filter drivers:
+1. Review the permissions of the Hyper-V service account. This account must have full control over VM files and folders.
+1. Review [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts), and make sure that the correct exclusions are in place.
+1. Use [fltmc](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to identify and unload problematic filter drivers. Open a Windows Command Prompt window, and then run the following command:
 
    ```console
-   fltmc
-   fltmc unload <drivername></drivername>
+   fltmc unload <DriverName>
    ```
 
-## Cause 5: Cluster, network, and failover issues
+1. If BitLocker is enabled on the volume, run the following command at a PowerShell command prompt:
 
-- CSV or network communication failures, such as cluster node isolation, result in mass VM failovers or reboots.
-- Improper cluster configurations or inconsistent patching across nodes cause instability.
-- Live migration or failover failures occur due to insufficient memory, incompatible settings, or node misconfigurations.
+     ```powershell
+      manage-bde -unlock <DriveLetter>: -RecoveryPassword <RecoveryPassword>
+     ```
 
-### Resolution 1: Cluster and network remediation
+### Step 4: Review the storage subsystem and the file system
 
-1. Validate the cluster health and configuration using the cluster validation wizard or:
+> [!IMPORTANT]  
+> This section instructs you to run the `chkdsk /f /r` command. This command requires exclusive access to the target disk, and takes some time to complete.
+
+1. Use Disk Management or the [`diskpart`](/windows-server/administration/windows-commands/diskpart) tool to verify that all disk volumes are online and correctly assigned.
+1. If a disk volume is RAW or missing, reassign its drive letter and then use [`chkdsk`](/windows-server/administration/windows-commands/chkdsk) to repair the volume. Open an administrative Windows Command Prompt window, and then run the following command:
+
+   ```console
+     chkdsk <DriveLetter>: /f /r
+   ```
+
+   If this command doesn't fix your disk issues, see the following articles for more information:
+
+   - [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors)
+   - [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting)
+
+1. In the volume that hosts your VM files, review the contents of the VM folder. Make sure that the appropriate VM files (.vmcx (configuration), .vmrs (run-time state), .vhdx (disk), and .avhdx (differencing disk)) exist.
+
+   - If a VM's .vmcx file is missing or corrupt, use the .vhdx file to build a new VM (you can also restore the affected VM from a backup).
+     > [!NOTE]  
+     > When a configuration file is missing or corrupt, Hyper-V can't recognize or start the VM. Configuration files might be damaged after a migration fails, or after a storage issue or an abrupt shutdown occurs.
+   - If a VM's .avhdx file is missing or corrupt, run the following cmdlet at a PowerShell command prompt:
+
+     ```powershell
+      Set-VHD -Path <VhdxPath> -ParentPath <ParentVhdxPath> -IgnoreIDMismatch
+     ```
+
+### Step 5: Review cluster health
+
+If you're using Hyper-V in a failover cluster, the cluster must be healthy for the VMs to function correctly. Issues in the cluster configuration can cause many different issues, including failures in live migration, unexpected VM restarts, or unexpected failover events.
+
+Validate cluster health and configuration either by using the Cluster Validation wizard or by running the following cmdlet at a PowerShell command prompt:
 
    ```powershell
    Test-Cluster
    ```
 
-2. Resolve network issues by reviewing event IDs (for example, 5120 and 1135) and adjusting parameters:
+If the cluster is not functioning correctly, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview).
+
+### Step 6: Remove VM saved states or checkpoints
+
+Checkpoint issues, such as orphaned checkpoints, chain corruption, or incomplete merges might prevent a VM from functioning or prevent an offline VM from starting.
+
+> [!IMPORTANT]  
+> If you remove a VM's checkpoints, the VM might lose any unsaved or transient data.
+
+To remove checkpoints (also known as *snapshots*), run the following cmdlets at a PowerShell command prompt:
 
    ```powershell
-   (Get-Cluster).SameSubnetThreshold = <value></value>
+   Get-VMSnapshot -VMName "<VMName>" | Remove-VMSavedState
    ```
 
-3. Ensure consistent patching and proper network/storage configurations across nodes.
+## Common issues and solutions
 
-### Resolution 2: VM configuration repairs and rebuilds
+### Event ID 32 ("Failed to connect NIC") and Event ID 21502 ("Virtual Machine xxxxxxx failed to start...The switch port connection for "Network Adapter" (xxxxxxx ) is invalid")
 
-1. For corrupt configuration files, edit the `.VMCX` file or create a new VM with existing disks.
-2. Address saved state or checkpoint issues by removing invalid checkpoints or reattaching disks.
+This combination of events means that the specified VM can't connect to a network.
 
-## Escalation and bug reference
+To fix this issue, in Hyper-V Manager, go to the settings for that virtual machine. Select the correct virtual network.
 
-If known bugs or product defects are involved (for example, UEFI firmware bugs or cluster communication issues), review vendor advisories and apply the recommended updates or fixes.
+### Event ID 1069 (Cluster VM failed to start/can't bring a resource online)
+
+This event indicates that a VM tried to start or fail over, but it couldn't register its configuration with the Virtual Machine Management Server service. Typically, this issue means that the VMs .vmcx file is corrupt.
+
+To fix this issue, use the .vhdx file to build a new VM (you can also restore the affected VM from a backup).
+
+### Event ID 1205 (Can't bring a resource online)
+
+This event indicates that one or more resources might be in a failed state. For more information about troubleshooting this issue, see the following articles:
+
+- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance)
+- [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
+
+### Event ID 1135, Event ID 1795, Event ID 5257, and virtual machines are paused
+
+Follow these steps to resolve the issue by restarting the affected VMs:
+
+1. Open the Hyper-V Manager or the Failover Cluster Manager.
+1. Identify the VMs that are in a "paused" state.
+1. Right-click  each affected VM, and then select **Restart**.
+1. To make sure the VMs return to an operational state, monitor their progress.
+
+For more information, see [Unresponsive VMs after cluster failover failure](unresponsive-vms-after-cluster-failover-failure.md).
+
+### VM hangs or appears to be "stuck" in a transitional state (such as Starting, Stopping, or Restoring)
+
+> [!IMPORTANT]  
+> This procedure instructs you to stop VM processes. When you stop a VM in this manner, the VM might lose any unsaved or transient data.
+
+1. Identify the stuck VM's process ID (PID) either by using Task Manager or by running the following cmdlets at a PowerShell command prompt:
+
+   ```powershell
+   Get-Process | Where-Object {$_.Name -like "*vmwp*"}
+   ```
+
+1. To end the VM process, run the following command at a PowerShell or Windows command prompt:
+
+   ```powershell
+   taskkill /PID <PID> /F
+   ```
+
+1. Restart the Virtual Machine Management Service.
+1. If the VMs are still stuck after the service restarts, restart the host computer.
 
 ## Data collection
 
-Gather the following logs and diagnostic information to assist with troubleshooting:
+To assist with troubleshooting, gather the following logs and diagnostics:
 
 - Hyper-V event logs:
 
   ```powershell
-  Get-WinEvent -LogName Microsoft-Windows-Hyper-V-VMMS-Admin | Export-Csv -Path <unc path></unc>
+  Get-WinEvent -LogName Microsoft-Windows-Hyper-V-VMMS-Admin | Export-Csv -Path <UncPath>
   ```
 
 - Cluster logs:
 
   ```powershell
-  Get-ClusterLog -UseLocalTime -Destination <folder></folder>
+  Get-ClusterLog -UseLocalTime -Destination <Folder>
   ```
 
-- Process dumps for stuck services:
+- Process dumps for stuck services or processes:
 
   ```console
-  procdump -ma <pid> <output_path></output_path></pid>
+  procdump -ma <PID> <OutputPath>
   ```
 
 ## References
 
+- [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors)
+- [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting)
+- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance)
+- [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135)
+- [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance)
+- [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts)
+- [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview)
+- [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
 - [Hyper-V performance tuning guide](/windows-server/virtualization/hyper-v)
-- [Failover cluster troubleshooting](/sql/sql-server/failover-clusters/windows/failover-cluster-troubleshooting)
+- [Failover cluster troubleshooting](/windows-server/failover-clustering)
