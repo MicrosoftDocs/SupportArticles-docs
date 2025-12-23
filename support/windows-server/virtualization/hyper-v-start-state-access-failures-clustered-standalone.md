@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments
+title: Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments Troubleshooting Guidance
 description: Helps you troubleshoot and fix Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments.
 ms.date: 12/27/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Troubleshoot inaccessible or unresponsive Hyper-V virtual machines in clustered or standalone environments
+# Inaccessible or unresponsive Hyper-V virtual machines in clustered or standalone environments troubleshooting guidance
 
 This article provides a detailed troubleshooting guide to help you troubleshoot and fix Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to get "stuck" might prevent an offline VM from starting. Further, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
 

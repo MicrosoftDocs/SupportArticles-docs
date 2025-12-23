@@ -2930,12 +2930,12 @@ items:
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
-    - name: Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments
-      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
