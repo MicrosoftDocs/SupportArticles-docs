@@ -216,4 +216,4 @@ To assist with troubleshooting, gather the following logs and diagnostics:
 - [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md)
 - [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
 - [Hyper-V performance tuning guide](/windows-server/virtualization/hyper-v)
-- [Failover cluster troubleshooting](/windows-server/failover-clustering)
+- [Failover cluster troubleshooting](/windows-server/failover-clustering/failover-clustering-overview)
