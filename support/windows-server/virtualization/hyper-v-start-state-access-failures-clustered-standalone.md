@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments
-description: Helps you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments.
+description: Helps you troubleshoot and fix Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments.
 ms.date: 12/27/2025
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,7 @@ appliesto:
 ---
 # Troubleshoot inaccessible or unresponsive Hyper-V virtual machines in clustered or standalone environments
 
-This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to get "stuck" might prevent an offline VM from starting. Further, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
+This article provides a detailed troubleshooting guide to help you troubleshoot and fix Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to get "stuck" might prevent an offline VM from starting. Further, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
 
 ## Troubleshooting checklist
 
@@ -53,7 +53,7 @@ This article provides a detailed troubleshooting guide to help you resolve issue
 
 ### Step 2: Make sure that the operating system and drivers are up to date
 
-1. Make sure that your disk and network hardware drivers have been updated to the latest versions.
+1. Make sure that your disk and network hardware drivers are up to date.
 1. Make sure that all servers have the latest Windows Update releases installed.
 1. In a clustered environment, for each cluster, make sure that all of the nodes in the cluster run the same Windows Server release.
 
@@ -116,7 +116,7 @@ Validate cluster health and configuration either by using the Cluster Validation
    Test-Cluster
    ```
 
-If the cluster is not functioning correctly, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md).
+If the cluster isn't functioning correctly, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md).
 
 ### Step 6: Remove VM saved states or checkpoints
 
@@ -133,7 +133,7 @@ To remove checkpoints (also known as *snapshots*), run the following cmdlets at 
 
 ## Common issues and solutions
 
-### Event ID 32 ("Failed to connect NIC") and Event ID 21502 ("Virtual Machine xxxxxxx failed to start...The switch port connection for "Network Adapter" (xxxxxxx ) is invalid")
+### Event ID 32 ("Failed to connect NIC") and Event ID 21502 ("Virtual Machine xxxxxxx failed to start...The switch port connection for "Network Adapter" (xxxxxxx) is invalid")
 
 This combination of events means that the specified VM can't connect to a network.
 
@@ -141,7 +141,7 @@ To fix this issue, in Hyper-V Manager, go to the settings for that virtual machi
 
 ### Event ID 1069 (Cluster VM failed to start/can't bring a resource online)
 
-This event indicates that a VM tried to start or fail over, but it couldn't register its configuration with the Virtual Machine Management Server service. Typically, this issue means that the VMs .vmcx file is corrupt.
+This event indicates that a VM tried to start or fail over, but it couldn't register its configuration with the Virtual Machine Management Server service. Typically, this issue means that the VM's .vmcx file is corrupt.
 
 To fix this issue, use the .vhdx file to build a new VM (you can also restore the affected VM from a backup).
 
