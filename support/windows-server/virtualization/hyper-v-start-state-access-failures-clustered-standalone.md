@@ -34,12 +34,12 @@ This article provides a detailed troubleshooting guide to help you troubleshoot 
 
 1. Review system event logs, Hyper-V logs, and cluster event logs. Note any relevant entries, error messages, and Event IDs. The following Event IDs and Event ID combinations indicate common issues. Follow the links to see specific solutions for these issues:
 
-   - [Event ID 32 and Event ID 21502](#event-id-32-failed-to-connect-nic-and-event-id-21502-virtual-machine-xxxxxxx-failed-to-startthe-switch-port-connection-for-network-adapter-xxxxxxx--is-invalid)
+   - [Event ID 32 and Event ID 21502](#event-id-32-failed-to-connect-nic-and-event-id-21502-virtual-machine-xxxxxxx-failed-to-startthe-switch-port-connection-for-network-adapter-xxxxxxx-is-invalid)
    - [Event ID 1069](#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online)
    - [Event ID 1205](#event-id-1205-cant-bring-a-resource-online)
    - [Event ID 1135, Event ID 1795, Event ID 5257, and virtual machines are paused](#event-id-1135-event-id-1795-event-id-5257-and-virtual-machines-are-paused)
    - Event ID 1135. At a general level, Event ID 1135 indicates that one or more cluster nodes were removed from the active failover cluster membership. For more information about troubleshooting this issue, see [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135.md).
-   - Event ID 5120. At a general level, Event ID 5120 indicates an issue that involves the cluster shared volume (CSV). For more information about troubleshooting this issue, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
+   - Event ID 5120. At a general level, Event ID 5120 indicates an issue that involves the cluster shared volume (CSV). For more information about troubleshooting this issue, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
 
 1. Note any recent changes or incidents that affected your infrastructure. Such changes include system or driver updates, or interruptions in power or network connectivity.
 1. Note any unusual system activity, such as the following behavior:
@@ -211,7 +211,7 @@ To assist with troubleshooting, gather the following logs and diagnostics:
 - [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting.md)
 - [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
 - [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135.md)
-- [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md)
+- [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md)
 - [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md)
 - [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md)
 - [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
