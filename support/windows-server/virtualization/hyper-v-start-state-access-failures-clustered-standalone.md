@@ -38,8 +38,8 @@ This article provides a detailed troubleshooting guide to help you resolve issue
    - [Event ID 1069](#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online)
    - [Event ID 1205](#event-id-1205-cant-bring-a-resource-online)
    - [Event ID 1135, Event ID 1795, Event ID 5257, and virtual machines are paused](#event-id-1135-event-id-1795-event-id-5257-and-virtual-machines-are-paused)
-   - Event ID 1135. At a general level, Event ID 1135 indicates that one or more cluster nodes were removed from the active failover cluster membership. For more information about troubleshooting this issue, see [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135).
-   - Event ID 5120. At a general level, Event ID 5120 indicates an issue that involves the cluster shared volume (CSV). For more information about troubleshooting this issue, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance).
+   - Event ID 1135. At a general level, Event ID 1135 indicates that one or more cluster nodes were removed from the active failover cluster membership. For more information about troubleshooting this issue, see [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135.md).
+   - Event ID 5120. At a general level, Event ID 5120 indicates an issue that involves the cluster shared volume (CSV). For more information about troubleshooting this issue, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
 
 1. Note any recent changes or incidents that affected your infrastructure. Such changes include system or driver updates, or interruptions in power or network connectivity.
 1. Note any unusual system activity, such as the following behavior:
@@ -65,7 +65,7 @@ Make sure that your security infrastructure accommodates Hyper-V. The following 
 - BitLocker-locked disks might prevent VMs from starting after updates or restarts. BitLocker also might block access to virtual machine files, preventing VMs from starting or responding.
 
 1. Review the permissions of the Hyper-V service account. This account must have full control over VM files and folders.
-1. Review [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts), and make sure that the correct exclusions are in place.
+1. Review [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md), and make sure that the correct exclusions are in place.
 1. Use [fltmc](/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-command) to identify and unload problematic filter drivers. Open a Windows Command Prompt window, and then run the following command:
 
    ```console
@@ -92,8 +92,8 @@ Make sure that your security infrastructure accommodates Hyper-V. The following 
 
    If this command doesn't fix your disk issues, see the following articles for more information:
 
-   - [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors)
-   - [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting)
+   - [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md)
+   - [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting.md)
 
 1. In the volume that hosts your VM files, review the contents of the VM folder. Make sure that the appropriate VM files (.vmcx (configuration), .vmrs (run-time state), .vhdx (disk), and .avhdx (differencing disk)) exist.
 
@@ -116,7 +116,7 @@ Validate cluster health and configuration either by using the Cluster Validation
    Test-Cluster
    ```
 
-If the cluster is not functioning correctly, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview).
+If the cluster is not functioning correctly, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md).
 
 ### Step 6: Remove VM saved states or checkpoints
 
@@ -149,7 +149,7 @@ To fix this issue, use the .vhdx file to build a new VM (you can also restore th
 
 This event indicates that one or more resources might be in a failed state. For more information about troubleshooting this issue, see the following articles:
 
-- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance)
+- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
 - [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
 
 ### Event ID 1135, Event ID 1795, Event ID 5257, and virtual machines are paused
@@ -207,13 +207,13 @@ To assist with troubleshooting, gather the following logs and diagnostics:
 
 ## References
 
-- [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors)
-- [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting)
-- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance)
-- [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135)
-- [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance)
-- [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts)
-- [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview)
+- [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md)
+- [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting.md)
+- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
+- [Troubleshoot cluster issue with Event ID 1135](../high-availability/troubleshoot-cluster-event-id-1135.md)
+- [Event ID 5120 Cluster Shared Volume troubleshooting guidance](/high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md)
+- [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md)
+- [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md)
 - [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10))
 - [Hyper-V performance tuning guide](/windows-server/virtualization/hyper-v)
 - [Failover cluster troubleshooting](/windows-server/failover-clustering)
