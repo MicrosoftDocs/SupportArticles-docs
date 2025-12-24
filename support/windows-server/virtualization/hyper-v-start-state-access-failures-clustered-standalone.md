@@ -1,6 +1,6 @@
 ---
-title: Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments Troubleshooting Guidance
-description: Troubleshoot Hyper-V virtual machines (VMs) that don't start, become stuck in transitional states, or become inaccessible in both clustered and standalone environments.
+title: Troubleshoot Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments
+description: Troubleshoot Hyper-V virtual machines (VMs) that don't start, become stuck in transitional states, or become inaccessible in either clustered or standalone environments.
 ms.date: 12/27/2025
 manager: dcscontentpm
 audience: itpro
@@ -13,9 +13,9 @@ ai-usage: ai-assisted
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments troubleshooting guidance
+# Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments
 
-This article provides a detailed guide to help you troubleshoot and fix Hyper-V virtual machines (VMs) that don't start, become "stuck" (stop responding) in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to stop responding might prevent an offline VM from starting. Additionally, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
+This article provides a detailed guide to help you troubleshoot and fix Hyper-V virtual machines (VMs) that don't start, become "stuck" (stop responding) in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in either clustered or standalone environments. Many of these issues produce similar symptoms even if they have different causes. For example, the same issue that causes a running VM to stop responding might prevent an offline VM from starting. Additionally, the symptoms might appear at different levels of your infrastructure, such as Hyper-V Manager or Failover Cluster Manager.
 
 ## Troubleshooting checklist
 
@@ -23,7 +23,7 @@ This article provides a detailed guide to help you troubleshoot and fix Hyper-V 
 
 1. Use Hyper-V Manager, Failover Cluster Manager, or Windows PowerShell to identify affected VMs, hosts, and cluster resources. Note any error messages.
 1. Make sure that VMs have unique GUIDs.
-1. If VMs are stuck" in any of the following states, see [VM hangs or appears to be "stuck" in a transitional state (such as Starting, Stopping, or Restoring)](#vm-hangs-or-appears-to-be-stuck-in-a-transitional-state-such-as-starting-stopping-or-restoring).
+1. If VMs are stuck in any of the following states, see [VM "hangs" or appears to be "stuck" in a transitional state (such as Starting, Stopping, or Restoring)](#vm-hangs-or-appears-to-be-stuck-in-a-transitional-state-such-as-starting-stopping-or-restoring).
      - Starting
      - Stopping
      - Saved-critical
@@ -49,7 +49,7 @@ This article provides a detailed guide to help you troubleshoot and fix Hyper-V 
    - Clusters fail over or don't fail over correctly.
    - Cluster resources are offline.
 1. For the latest known issue and notification information, review the [Windows Server release information](/windows/release-health/windows-server-release-info) pages.
-1. For information about updates and known issues, contact your hardware vendors and other third-party vendors.
+1. For information about updates and known issues that might affect your hardware, contact your hardware vendors and other third-party vendors.
 
 ### Step 2: Make sure that the operating system and drivers are up to date
 
@@ -199,7 +199,7 @@ To assist with troubleshooting, gather the following logs and diagnostics:
   Get-ClusterLog -UseLocalTime -Destination <Folder>
   ```
 
-- Process dumps files for stuck services or processes:
+- Process dump files for stuck services or processes:
 
   ```console
   procdump -ma <PID> <OutputPath>
