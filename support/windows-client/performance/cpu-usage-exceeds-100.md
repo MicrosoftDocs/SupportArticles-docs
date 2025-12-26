@@ -25,7 +25,7 @@ Starting with Windows 8, a change was made to the way that Task Manager and Perf
 
 ## Cause
 
-This change affects the way that CPU utilization is computed. The values in Task Manager now correspond to the **Processor Information\% Processor Utility** and **Processor Information\% Privileged Utility** performance counters, *not* to the **Processor Information\% Processor Time** and **Processor Information\% Privileged Time** counters as in Windows 7.
+This change affects the way that CPU utilization is computed. The values in Task Manager now correspond to the `Processor Information\% Processor Utility` and `Processor Information\% Privileged Utility` performance counters, *not* to the `Processor Information\% Processor Time` and `Processor Information\% Privileged Time` counters as in Windows 7.
 
 ## More information
 
