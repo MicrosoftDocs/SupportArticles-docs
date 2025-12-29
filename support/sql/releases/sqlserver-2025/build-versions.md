@@ -16,7 +16,7 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
-| GDR         | 17.0.1050.2 | 2025.170.1050.2 | 16.0.25.229 | 2025.160.42.229 | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026  |
+| GDR         | 17.0.1050.2 | 2025.170.1050.2 | 16.0.25.229 | 2022.160.42.229 | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026  |
 
 ## References
 
