@@ -65,7 +65,7 @@ To disable debugging, add the compilation element to the `Web.config` file of th
 ## Modify the Machine.config file
 
 > [!CAUTION]
-> Be careful when editing `Machine.config`. This file applies globally to all .NET applications on the server, and a misconfiguration can break other applications. Prefer setting `debug="false"` in the application’s Web.config or via IIS Manager to target only specific sites.
+> Be careful when editing `Machine.config`. This file applies globally to all .NET applications on the server, and a misconfiguration can break other applications. To target only specific sites, prefer setting `debug="false"` in the application’s Web.config or via IIS Manager.
 
 You can also disable debugging for all applications on a system by modifying the `Machine.config` file. To confirm that debugging isn't enabled in the `Machine.config` file, follow these steps:
 
