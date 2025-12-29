@@ -57,17 +57,17 @@ To identify the path that Windows Update couldn't find, follow these steps:
    For example, the following excerpt shows that the issue occurred during the installation of ntprint.inf (the Windows printer driver):
 
    ```output
-   2017-12-06 15:30:46, Info                 CBS           INSTALL index: 69, phase: 1, result 3, inf: ntprint4.inf
-   2017-12-06 15:30:46, Info                 CBS   Doqe: Recording result: 0x80070003, for Inf: ntprint4.inf
-   2017-12-06 15:30:46, Info                 CBS   DriverUpdateInstallUpdates failed [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
-   2017-12-06 15:30:46, Info                 CBS   Doqe: Failed installing driver updates [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
-   2017-12-06 15:30:46, Info                 CBS   Perf: Doqe: Install ended.
-   2017-12-06 15:30:46, Info                 CBS   Failed installing driver updates [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
-   2017-12-06 15:30:46, Error                CBS   Startup: Failed while processing non-critical driver operations queue. [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
-   2017-12-06 15:30:46, Info                 CBS   Startup: Rolling back KTM, because drivers failed.
-   2017-12-06 15:30:46, Info                 CBS   Setting ExecuteState key to: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed
-   2017-12-06 15:30:46, Info                 CBS   SetProgressMessage: progressMessageStage: -1, ExecuteState: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed, SubStage: 0
-   2017-12-06 15:30:46, Info                 CBS   Progress: UI message updated. Operation type: Update. Stage: 1 out of 1. Rollback.
-   2017-12-06 15:30:46, Info                 CBS   Setting original failure status: 0x80070003, last forward execute state: CbsExecuteStatePrimitives
-   2017-12-06 15:30:46, Info                 CBS   SetProgressMessage: progressMessageStage: -1, ExecuteState: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed, SubStage: 1
+   2017-12-06 15:30:46, Info    CBS         INSTALL index: 69, phase: 1, result 3, inf: ntprint4.inf
+   2017-12-06 15:30:46, Info    CBS   Doqe: Recording result: 0x80070003, for Inf: ntprint4.inf
+   2017-12-06 15:30:46, Info    CBS   DriverUpdateInstallUpdates failed [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
+   2017-12-06 15:30:46, Info    CBS   Doqe: Failed installing driver updates [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
+   2017-12-06 15:30:46, Info    CBS   Perf: Doqe: Install ended.
+   2017-12-06 15:30:46, Info    CBS   Failed installing driver updates [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
+   2017-12-06 15:30:46, Error   CBS   Startup: Failed while processing non-critical driver operations queue. [HRESULT = 0x80070003 - ERROR_PATH_NOT_FOUND]
+   2017-12-06 15:30:46, Info    CBS   Startup: Rolling back KTM, because drivers failed.
+   2017-12-06 15:30:46, Info    CBS   Setting ExecuteState key to: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed
+   2017-12-06 15:30:46, Info    CBS   SetProgressMessage: progressMessageStage: -1, ExecuteState: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed, SubStage: 0
+   2017-12-06 15:30:46, Info    CBS   Progress: UI message updated. Operation type: Update. Stage: 1 out of 1. Rollback.
+   2017-12-06 15:30:46, Info    CBS   Setting original failure status: 0x80070003, last forward execute state: CbsExecuteStatePrimitives
+   2017-12-06 15:30:46, Info    CBS   SetProgressMessage: progressMessageStage: -1, ExecuteState: CbsExecuteStateStageDrivers | CbsExecuteStateFlagRollback | CbsExecuteStateFlagDriversFailed, SubStage: 1
    ```
