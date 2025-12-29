@@ -1,6 +1,6 @@
 ---
 title: Error 0x80070003 when Windows Update Fails
-description: Learn how to resolve the update error 0x80070003 encountered during Windows update installations.
+description: Describes how to fix Windows Update error 0x80070003, which causes the update to fail to install, and rolls back the installation after the computer restarts.
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/30/2025
@@ -17,7 +17,7 @@ appliesto:
 ---
 # Error 0x80070003 when Windows Update fails
 
-This article describes how to resolve Windows Update error 0x80070003, which causes the update to fail to install, or to roll back the installation after the computer restarts.
+This article describes how to fix Windows Update error 0x80070003, which causes the update to fail to install, and rolls back the installation after the computer restarts.
 
 ## Symptoms
 
