@@ -38,11 +38,11 @@ For model-driven apps:
 After you have isolated the issue to a specific functionality area, use the following sections to help you work around or address the issue.
 
 - [Connectors and delegation](common-issues-and-resolutions.md#connectors-and-delegation)
-- [Integration](common-issues-and-resolutions.md#power-automate-integration)
+- [Power Automate Integration](common-issues-and-resolutions.md#power-automate-integration)
 - [Power Fx](common-issues-and-resolutions.md#power-fx)
-- [Region](common-issues-and-resolutions.md#region)
-- [Studio and Forms](common-issues-and-resolutions.md#studio-and-forms)
-- [Browser](common-issues-and-resolutions.md#browser)
+- [Regional performance issues](common-issues-and-resolutions.md#regional-performance)
+- [Power Apps Studio and Forms](common-issues-and-resolutions.md#power-apps-studio-and-forms)
+- [Browser performance](common-issues-and-resolutions.md#browser-performance)
 - [Power Apps for Windows](common-issues-and-resolutions.md#power-apps-for-windows)
 
 If your issue isn't listed, see [Next steps](#next-steps) later in this article.
