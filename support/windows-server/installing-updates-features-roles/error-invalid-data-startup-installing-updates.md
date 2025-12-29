@@ -1,7 +1,7 @@
 ---
-title: ERROR_INVALID_DATA Error After Installing Windows Updates
+title: Error 0x8007000d at Startup after You Install a Windows Update
 description: Helps resolve the 0x8007000d (ERROR_INVALID_DATA) error at system startup after you install Windows updates.
-ms.date: 05/23/2025
+ms.date: 12/31/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,19 +13,40 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
 ---
-# Error 0x8007000d at startup after installing updates
+# Error 0x8007000d at startup after you install a Windows update
 
-This article helps you resolve an issue that occurs at system startup after you install Windows updates. After you install the updates and restart the system, the system performs a rollback, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
-
-
+This article helps you resolve an issue that occurs when the computer restarts after you install a Windows update.
 
 ## Symptoms
 
-When this issue occurs, you might experience any of the following symptoms.
+You install a Windows update, and it appears to install successfully. However, when the computer restarts, the installation rolls back and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
+
+## Cause
+
+Typically, this issue has one of the following causes:
+
+- **File corruption or registry corruption.** An old update might be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
+
+- **Incorrect driver version.** Driver updates might fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
+
+## Resolution
+
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+
+The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
+
+> [!NOTE]  
+> For more information about upgrading VMs, see one of the following articles:
+>
+> - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+> - [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
+
+## More information
 
 ### Symptom 1: Catalog file errors
 
-Entries in the Component-Based Servicing (CBS) log file indicate issues that affect a catalog file. This log is typically located at *C:\Windows\Logs\CBS*. You see a log entry that resembles the following output:
+Entries in the Component-Based Servicing (CBS) log file indicate issues that affect a catalog file. This log is typically located at C:\Windows\Logs\CBS. You see a log entry that resembles the following example:
 
 ```output
 20xx-xx-06 xx:51:15, Info CBS Exec: Installing Package: Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0, Update: 4584642-1_neutral, InstallDeployment: amd64_771d1f434ef835536dafe93d6811f766_31bf3856ad364e35_10.0.17763.1549_none_e4d395cdb7886270
@@ -45,7 +66,7 @@ In this situation, the error occurs because the system can't determine whether t
 
 *C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat*
 
-This symptom indicates that the package is likely corrupted. 
+This symptom indicates that the package is probably corrupted.
 
 ### Symptom 2: Registry errors
 
@@ -102,22 +123,3 @@ idb: {Unregister Driver Package: exit(0x00000000)} 15:21:14.3xx
 ```
 
 Make sure that you note the driver packages.
-
-## Cause
-
-This issue occurs either because the database of performance counters is corrupted or the driver version is incorrect. 
-
-### File corruption or registry corruption
-
-An old update might be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
-
-### Incorrect driver version
-
-Driver updates might fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
-
-## Resolution
-
-> [!NOTE]
-> Before you proceed, [back up the OS disk](/azure/backup/about-azure-vm-restore).
-
-The most reliable solution for this problem is to perform an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).
