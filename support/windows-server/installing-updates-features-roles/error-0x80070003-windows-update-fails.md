@@ -40,9 +40,9 @@ The most reliable way to fix this issue is to perform an in-place upgrade on the
 > For more information about upgrading VMs, see one of the following articles:
 
 - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
-- [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../../azure/virtual-machines/windows/in-place-system-upgrade.md)
+- [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
 
-If you experience error 0x80070003 during the in-place upgrade, see ["0x80070003" error and Windows upgrade fails during "Process Drivers for Migration"](../../setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md).
+If you experience error 0x80070003 during the in-place upgrade, see ["0x80070003" error and Windows upgrade fails during "Process Drivers for Migration"](../setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md).
 
 If the issue persists, contact Microsoft Support. List the path or file that wasn't found in the support request. For information about how to identify this information, see [More information](#more-information).
 
