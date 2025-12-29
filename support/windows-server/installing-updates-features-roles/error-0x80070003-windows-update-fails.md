@@ -48,7 +48,7 @@ If the issue persists, contact Microsoft Support. List the path or file that was
 
 ## More information
 
-To identify the path that could not be accessed, follow these steps:
+To identify the path that Windows Update couldn't find, follow these steps:
 
 1. On the affected computer, go to the %Windir%\logs\CBS folder (%Windir% represents the Windows directory on the computer's system drive).
 1. Use a text editor to open the most recent CBS.log file, and search for a ", error" string.
