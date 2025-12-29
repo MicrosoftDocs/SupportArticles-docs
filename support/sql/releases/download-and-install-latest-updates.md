@@ -60,12 +60,15 @@ Each of the following links provides information for all of the applicable produ
 | Build number or version | Service pack | Update    | Knowledge Base number                                 | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
 | 17.0.1000.7             | None         | RTM/GA    | NA                                                    | November 18, 2025  |
+| 17.0.1050.2             | None         | GDR    | [KB5073177](https://support.microsoft.com/help/5073177)                                                    | January 13, 2026  |
 
 
 ### SQL Server 2022
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
+| 16.0.4230.2             | None         | CU22 + GDR| [KB5072936](https://support.microsoft.com/help/5072936) | January 13, 2026    |
+| 16.0.1165.1             | None         | GDR       | [KB5073031](https://support.microsoft.com/help/5073031) | January 13, 2026    |
 | 16.0.4225.2             | None         | CU22      | [KB5068450](sqlserver-2022/cumulativeupdate22.md)     | November 13, 2025  |
 | 16.0.4222.2             | None         | CU21 + GDR| [KB5068406](https://support.microsoft.com/help/5068406) | November 11, 2025    |
 | 16.0.1160.1             | None         | GDR       | [KB5068407](https://support.microsoft.com/help/5068407) | November 11, 2025    |
