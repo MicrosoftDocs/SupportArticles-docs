@@ -31,16 +31,18 @@ This error typically means that driver files are missing or inaccessible.
 
 ## Resolution
 
-> [!NOTE]  
-> If the affected computer is a Windows virtual machine (VM), and it can't restart correctly or if you can't use SSH to access it, make sure that you can use the Azure Serial Console to access it.
+> [!IMPORTANT]  
+>
+> - If the affected computer is a Windows virtual machine (VM), and it can't restart correctly or if you can't use SSH to access it, make sure that you can use the Azure Serial Console to access it.
+> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
 
 > [!NOTE]  
 > For more information about upgrading VMs, see one of the following articles:
-
-- [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
-- [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
+>
+> - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+> - [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
 
 If you experience error 0x80070003 during the in-place upgrade, see ["0x80070003" error and Windows upgrade fails during "Process Drivers for Migration"](../setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md).
 
