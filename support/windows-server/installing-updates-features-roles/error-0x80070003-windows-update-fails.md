@@ -1,6 +1,6 @@
 ---
 title: Error 0x80070003 when Windows Update Fails
-description: Describes how to fix Windows Update error 0x80070003, which causes the update to fail to install, and rolls back the installation after the computer restarts.
+description: Discusses how to fix Windows Update error 0x80070003 that causes the installation to fail and the system to roll back.
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/30/2025
@@ -17,11 +17,11 @@ appliesto:
 ---
 # Error 0x80070003 when Windows Update fails
 
-This article describes how to fix Windows Update error 0x80070003, which causes the update to fail to install, and rolls back the installation after the computer restarts.
+This article discusses how to fix Windows Update error 0x80070003. This error causes an update installation to fail, and rolls back the system to its pre-update state after the computer restarts.
 
 ## Symptoms
 
-When you install a Windows update, the update fails and you see the following error message:
+When you try to install a Windows update, the installation fails, and you receive the following error message:
 
 > Some update files are missing or have problems. We'll try to download the update again later. Error code: (0x80070003).
 
@@ -32,27 +32,27 @@ This error typically means that driver files are missing or inaccessible.
 ## Resolution
 
 > [!NOTE]  
-> If the affected computer is a Windows virtual machine (VM), and it can't restart correctly or if you can't use SSH to access it, make sure that you can use the Azure Serial Console to access it.
+> If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
 
 The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
 
 > [!NOTE]  
-> For more information about upgrading VMs, see one of the following articles:
+> For more information about how to upgrade VMs, see one of the following articles:
 
 - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
 - [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
 
 If you experience error 0x80070003 during the in-place upgrade, see ["0x80070003" error and Windows upgrade fails during "Process Drivers for Migration"](../setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md).
 
-If the issue persists, contact Microsoft Support. List the path or file that wasn't found in the support request. For information about how to identify this information, see [More information](#more-information).
+If the issue persists, contact Microsoft Support. In the support request, share the path or file that isn't found. For information about how to identify this information, see the next section.
 
 ## More information
 
-To identify the path that Windows Update couldn't find, follow these steps:
+To identify the path that Windows Update can't find, follow these steps:
 
 1. On the affected computer, go to the %Windir%\logs\CBS folder (%Windir% represents the Windows directory on the computer's system drive).
 1. Use a text editor to open the most recent CBS.log file, and search for a ", error" string.
-1. Check the log entries that share the same timestamp as the error and look for the path that is related to the error.
+1. Check the log entries that share the same timestamp as the error, and locate the path that's related to the error.
 
    For example, the following excerpt shows that the issue occurred during the installation of ntprint.inf (the Windows printer driver):
 
