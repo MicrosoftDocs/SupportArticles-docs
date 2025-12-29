@@ -1,6 +1,6 @@
 ---
 title: Can't Restore VM From Checkpoint in Hyper-V on Windows Server 2016
-description: Resolves issues that occur during a planned cluster node drain operation if Cluster Shared Volumes stop responding. 
+description: Discusses how to fix an issue in which you can't restore a virtual machine from a checkpoint in a Hyper-V environment that runs on Windows Server 2016.
 ms.date: 10/06/2025
 author: kaushika-msft
 ms.author: kaushika

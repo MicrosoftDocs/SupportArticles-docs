@@ -41,7 +41,7 @@ This issue occurs because the NT Virtual Machine\Virtual Machines special identi
 
 ## Potential Fix
 
-One potential way to resolve this issue is to enable service log on. For more information, see [How to Enable Service Logon](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025#enable-service-logon-as-log-on-type).
+One potential way to resolve this issue is to enable service log on. For more information, see [How to Enable Service Logon](/system-center/scsm/enable-service-log-on-sm#enable-service-logon-as-log-on-type).
 
 ## Workaround
 
