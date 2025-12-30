@@ -4,6 +4,7 @@ description: Discusses how to fix the 0x8007000d (ERROR_INVALID_DATA) error when
 ms.date: 12/31/2025
 manager: dcscontentpm
 audience: itpro
+ai.usage: ai-assisted
 ms.topic: troubleshooting
 ms.reviewer: kaushika, hamansoor, jdickson, v-lianna, dougking, v-appelgatet
 ms.custom:
