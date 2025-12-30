@@ -1,5 +1,5 @@
 ---
-title: Error 0x8007000d at Startup after You Install a Windows Update
+title: Error 0x8007000d at Startup After You Install a Windows Update
 description: Discusses how to fix the 0x8007000d (ERROR_INVALID_DATA) error when the system restarts after you install Windows updates.
 ms.date: 12/31/2025
 manager: dcscontentpm
@@ -21,15 +21,15 @@ This article helps you resolve an issue that occurs when the computer restarts a
 
 ## Symptoms
 
-You install a Windows update, and it appears to install successfully. However, when the computer restarts, the installation rolls back and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
+You install a Windows update. The update appears to install successfully. However, when the computer restarts, the installation rolls back, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
 
 ## Cause
 
 Typically, this issue has one of the following causes:
 
-- **File corruption or registry corruption.** An old update might be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
+- **File corruption or registry corruption** - An old update is reported, and the related file or registry key locations are corrupted. This corruption can prevent the system from verifying the validity of catalog files.
 
-- **Incorrect driver version.** Driver updates might fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
+- **Incorrect driver version** - Driver updates fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
 
 ## Resolution
 
@@ -50,13 +50,13 @@ If the issue persists, contact Microsoft Support. In the support request, includ
 
 ## More information
 
-Entries in the Component-Based Servicing (CBS) log file might provide more details about how the error actually occurred. This log is typically located at C:\Windows\Logs\CBS. To track down the issue, open the log file in a text editor and search for `ERROR_INVALID_DATA`. To identify the context in which the error occurred, review the log entries that precede and follow the error.
+Entries in the Component-Based Servicing (CBS) log file might provide more details about how the error actually occurred. This log is typically located at C:\Windows\Logs\CBS. To track down the issue, open the log file in a text editor, and search for `ERROR_INVALID_DATA`. To identify the context in which the error occurred, review the log entries that precede and follow the error.
 
-The following sections show examples of log entries that document the error.
+The following sections show examples of log entries that document this error.
 
 ### Case 1: Catalog file errors
 
-In this example, `ERROR_INVALID_DATA` occurred when the system attempted to validate C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat.
+In this example, `ERROR_INVALID_DATA` occurs when the system tries to validate C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat.
 
 ```output
 20xx-xx-06 xx:51:15, Info CBS Exec: Installing Package: Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0, Update: 4584642-1_neutral, InstallDeployment: amd64_771d1f434ef835536dafe93d6811f766_31bf3856ad364e35_10.0.17763.1549_none_e4d395cdb7886270
@@ -72,11 +72,11 @@ In this example, `ERROR_INVALID_DATA` occurred when the system attempted to vali
 20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-The system can't validate the .cat (catalog) file, which indicates that the package is probably corrupted.
+The system can't validate the .cat (catalog) file. This indicates that the package is probably corrupted.
 
 ### Case 2: Registry errors
 
-In this example, `ERROR_INVALID_DATA` occurred when the system determined that a registry value used the wrong data type.
+In this example, `ERROR_INVALID_DATA` occurs when the system determines that a registry value uses the wrong data type.
 
 ```output
 20xx-xx-24 05:13:10, Info CBS Registry value for Package_7762_for_KB5001347~31bf3856ad364e35~amd64~~10.0.1.4 is not a dword type. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
@@ -90,7 +90,7 @@ In this example, `ERROR_INVALID_DATA` occurred when the system determined that a
 
 ### Case 3: Driver installation failure
 
-In this example, `ERROR_INVALID_DATA` occurred when the system tried to install drivers during the restart process.
+In this example, `ERROR_INVALID_DATA` occurs when the system tries to install drivers during the restart process.
 
 ```output
 20xx-xx-18 15:21:14, Info CBS Perf: Doqe: Critical install started.
@@ -110,9 +110,9 @@ In this example, `ERROR_INVALID_DATA` occurred when the system tried to install 
 20xx-xx-18 15:22:52, Info CBS WER: Generating failure report for package: Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4889.1.2, status: 0x8007000d, failure source: DOQ, start state: Staged, target state: Installed, client id: WindowsUpdateAgent
 ```
 
-The mshdc.inf driver didn't install correctly, so the rollback process started.
+The mshdc.inf driver doesn't install correctly. This issue triggers the rollback process.
 
-The SetupAPI log (typically in C:\Windows\INF\setupapapi.dev) also records driver installations. In this example, the following excerpt from setupapapi.dev.log provides additional information about mshdc.inf, including the names and versions of the driver packages.
+The SetupAPI log (typically in C:\Windows\INF\setupapapi.dev) also records driver installations. In this example, the following excerpt from Setupapapi.dev.log provides additional information about Mshdc.inf, including the names and versions of the driver packages.
 
 ```output
 sto: {Unstage Driver Package: C:\Windows\System32\DriverStore\FileRepository\mshdc.inf_amd64_b0b5572axx95167b\mshdc.inf} 15:21:14.3xx
