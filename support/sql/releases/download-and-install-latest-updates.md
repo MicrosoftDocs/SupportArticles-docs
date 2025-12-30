@@ -59,8 +59,9 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                 | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
+| 17.0.1050.2             | None         | GDR    | [KB5073177](https://support.microsoft.com/help/5073177) 
 | 17.0.1000.7             | None         | RTM/GA    | NA                                                    | November 18, 2025  |
-| 17.0.1050.2             | None         | GDR    | [KB5073177](https://support.microsoft.com/help/5073177)                                                    | January 13, 2026  |
+                                                   | January 13, 2026  |
 
 
 ### SQL Server 2022
