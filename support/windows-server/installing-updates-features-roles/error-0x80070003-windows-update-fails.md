@@ -1,6 +1,6 @@
 ---
 title: Error 0x80070003 when Windows Update Fails
-description: Discusses how to fix Windows Update error 0x80070003 that causes the installation to fail and the system to roll back.  
+description: Discusses how to fix Windows Update error 0x80070003. When this issue occurs, the update can't install correctly. After the computer restarts, the installation rolls back.
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/30/2025
