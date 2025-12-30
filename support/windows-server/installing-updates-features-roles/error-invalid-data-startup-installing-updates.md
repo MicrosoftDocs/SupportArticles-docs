@@ -86,7 +86,7 @@ In this example, `ERROR_INVALID_DATA` occurred when the system determined that a
 20xx-xx-24 05:13:10, Info CBS Failed to find or add the component family [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-### Symptom 3: Driver update failure
+### Case 3: Driver installation failure
 
 In this example, `ERROR_INVALID_DATA` occurred when the system tried to install drivers during the restart process.
 
