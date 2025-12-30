@@ -571,9 +571,7 @@ This mitigation applies only to clients that are:
 - Hybrid Microsoft Entra joined
 - Cloud-native (Microsoft Entra–only) clients cannot use this workaround.
 
-To apply this mitigation, configure a cloud trust between on-premises AD DS and Microsoft Entra ID for accessing Azure Files. For step-by-step guidance, see: [Configure a cloud trust for Azure Files authentication](files/storage-files-identity-auth-hybrid-cloud-trust?tabs=azure-portal)
-
-
+To apply this mitigation, configure a cloud trust between on-premises AD DS and Microsoft Entra ID for accessing Azure Files. For more information, see [Plan to deploy Azure Files](/azure/storage/files/storage-files-planning).
 
 ## Error AADSTS50105
 
