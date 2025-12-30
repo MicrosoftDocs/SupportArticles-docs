@@ -1,5 +1,5 @@
 ---
-title: Error 0x80070003 when Windows Update Fails
+title: Error 0x80070003 at Startup after You Install a Windows Update
 description: Discusses how to fix Windows Update error 0x80070003. When this issue occurs, the update can't install correctly. After the computer restarts, the installation rolls back.
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
 - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
-# Error 0x80070003 when Windows Update fails
+# Error 0x80070003 at startup after you install a Windows update
 
 This article discusses how to fix Windows Update error 0x80070003. When this issue occurs, the update can't install correctly. After the computer restarts, the installation rolls back.
 
