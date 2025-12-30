@@ -4,6 +4,7 @@ description: Discusses how to fix Windows Update error 0x80070003. When this iss
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/30/2025
+ai.usage: ai-assisted
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dougking, v-appelgatet
 ms.custom:
