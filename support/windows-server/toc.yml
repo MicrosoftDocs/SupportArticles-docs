@@ -3242,7 +3242,7 @@ items:
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
-    - name: Error 0x8007000d after installing Windows updates
+    - name: Error 0x8007000d at startup after you install a Windows update
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
