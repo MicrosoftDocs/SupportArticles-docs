@@ -1151,7 +1151,7 @@ items:
     - name: Cluster Shared Volume goes offline
       href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
-      href: ../../virtualization/shared-volumes-do-not-respond.md
+      href: ../virtualization/shared-volumes-do-not-respond.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
