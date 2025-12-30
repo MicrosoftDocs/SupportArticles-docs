@@ -34,7 +34,7 @@ Typically, this issue has one of the following causes:
 
 > [!IMPORTANT]  
 >
-> - If the affected computer is a Windows virtual machine (VM), that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
+> - If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
 > - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
