@@ -17,7 +17,7 @@ appliesto:
 ---
 # Error 0x80070003 when Windows Update fails
 
-This article discusses how to fix Windows Update error 0x80070003. This error causes an update installation to fail, and rolls back the system to its pre-update state after the computer restarts.
+This article discusses how to fix Windows Update error 0x80070003. When this issue occurs, the update can't install correctly. After the computer restarts, the installation rolls back.
 
 ## Symptoms
 
@@ -33,7 +33,7 @@ This error typically means that driver files are missing or inaccessible.
 
 > [!IMPORTANT]  
 >
-> - If the affected computer is a Windows virtual machine (VM), that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
+> - If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
 > - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
@@ -56,7 +56,7 @@ To identify the path that Windows Update can't find, follow these steps:
 1. Use a text editor to open the most recent CBS.log file, and search for a ", error" string.
 1. Check the log entries that share the same timestamp as the error, and locate the path that's related to the error.
 
-   For example, the following excerpt shows that the issue occurred during the installation of ntprint.inf (the Windows printer driver):
+   For example, the following excerpt shows that the issue occurred during the installation of Ntprint.inf (the Windows printer driver):
 
    ```output
    2017-12-06 15:30:46, Info    CBS         INSTALL index: 69, phase: 1, result 3, inf: ntprint4.inf
