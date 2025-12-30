@@ -46,6 +46,8 @@
     href: ./specified-program-requires-newer-version-windows.md
   - name: Troubleshoot installation and upgrade issues
     href: ./troubleshoot-installation-issues.md
+  - name: Unable to install Visual Studio 2017, 2019, or 2022
+    href: ./install-failure-2017-2019-2022.md
   - name: Uninstall third-party applications in Visual Studio 2015
     href: ./secondary-installer-third-party-app.md
   - name: Visual Studio installation stops on Windows 10 21H2
