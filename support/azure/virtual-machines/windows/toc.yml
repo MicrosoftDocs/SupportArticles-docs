@@ -108,6 +108,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070002
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0x80070003 when Windows Update fails
+      href: ../../../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/azure/context/context
     - name: Error code 0x8007000d
       href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8007000e or 0x800705aa
