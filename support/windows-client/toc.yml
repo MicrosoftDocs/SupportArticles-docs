@@ -1421,6 +1421,8 @@ items:
     items:
     - name: Analyze log file entries that SFC.exe generates
       href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+    - name: Error 0x80070003 at startup after you install a Windows update
+      href: ../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/windows-client/context/context
     - name: Error code 0x8024402C when you try to install a Windows update or a Feature on Demand
       href: ./installing-updates-features-roles/error-0x8024402c-installing-update-feature-on-demand.md
     - name: Fix errors found in CheckSUR.log
