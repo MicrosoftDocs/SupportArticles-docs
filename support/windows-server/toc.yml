@@ -2814,6 +2814,8 @@ items:
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
+    - name: Unresponsive VMs after cluster failover failure
+      href: ./virtualization/unresponsive-vms-after-cluster-failover-failure.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
     - name: Windows updates don't install on VM cluster hosts
@@ -2922,6 +2924,8 @@ items:
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
+    - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
+      href: ./virtualization/troubleshoot-hyper-v-virtual-machine-creation.md
     - name: Error when you manage a VHD file
       href: ./virtualization/fail-to-manage-vhd-file.md
     - name: Microsoft server software and supported virtualization environments
@@ -2932,12 +2936,12 @@ items:
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
-    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
-      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
