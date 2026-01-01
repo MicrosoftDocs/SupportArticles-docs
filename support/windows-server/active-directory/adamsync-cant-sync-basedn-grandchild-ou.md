@@ -1,6 +1,6 @@
 ---
 title: Synchronizing Between AD DS and AD LDS Enters Endless Loop when the BaseDN is a Grandchild OU
-description: Discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop that you can only stop by using Task Manager or by pressing CTRL + C.
+description: Discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop. You can only stop the loop by using Task Manager or by pressing CTRL+C.
 ms.date: 01/09/2026
 manager: dcscontentpm
 audience: itpro
@@ -16,15 +16,15 @@ appliesto:
 
 # Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
 
-This article discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop that you can only stop by using Task Manager or by pressing CTRL + C.
+This article discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop. You can only stop the loop by using Task Manager or by pressing CTRL+C.
 
 _Original KB number:_ &nbsp; 926933
 
 ## Symptoms
 
-You have an Active Directory Directory Service (AD DS) forest and an Active Directory Lightweight Directory Service (AD LDS) instance. You use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool in Microsoft Windows to synchronize data from the AD DS forest to the AD LDS instance. However, the synchronization never finishes. For a detailed walkthrough of this process, see [More information](#more-information).
+You have an Active Directory Domain Services (AD DS) forest and an Active Directory Lightweight Directory Service (AD LDS) instance. You use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool in Microsoft Windows to synchronize data from the AD DS forest to the AD LDS instance. However, the synchronization never finishes. For a detailed walkthrough of this process, see [More information](#more-information).
 
-This issue occurs if you have specified a grandchild organizational unit (OU) in the AD DS forest as the base distinguished name (base DN) in Adamsync's XML configuration file. Such a configuration resembles the following example:
+This issue occurs if you specified a grandchild organizational unit (OU) in the AD DS forest as the base distinguished name (base DN) in Adamsync's XML configuration file. Such a configuration resembles the following example:
 
 ```xml
 <base-dn>OU=Grandchild,OU=Child,DC=03child,DC=MyDomCon,DC=net</base-dn>
@@ -34,7 +34,7 @@ By default, the configuration file is named MS-AdamsyncConf.XML and it resides i
 
 ## Cause
 
-This is a known issue in the Adamsync tool.
+This behavior is a known issue in the Adamsync tool.
 
 ## Workaround
 
