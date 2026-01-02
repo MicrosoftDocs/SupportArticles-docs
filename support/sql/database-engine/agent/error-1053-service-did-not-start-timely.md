@@ -33,6 +33,8 @@ These invalid registry keys prevent the Windows Event Log service from starting.
 
 ## Solution
 
+[!INCLUDE [registry-important-alert](~/includes/registry-important-alert.md)]
+
 1. Verify that the SQL Server Agent didn't start. Try to start it by using any of the following methods:
     - [Service Control Manager (services.msc)](/windows/win32/services/about-services)
     - [SQL Server Configuration Manager](/sql/tools/configuration-manager/sql-server-configuration-manager)
