@@ -75,9 +75,9 @@ To work around this issue, delete the jobs that you don't need.
 
 If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using the [Reporting Services Configuration Manager](/sql/reporting-services/install-windows/reporting-services-configuration-manager-native-mode).
 
-## Cause 2: ODBC driver missing or corrupted
+## Cause 2: ODBC driver missing or not functioning
 
-This issue can occur if the SQL Server [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) driver is removed or becomes corrupted (often after system updates). SQL Server Agent uses the SQL Server ODBC driver to connect to SQL Server. If the driver is missing or not functioning, a SQL Server Agent fails to start.
+This issue can occur if the SQL Server [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) driver is removed or not functioning (often after system updates). SQL Server Agent uses the SQL Server ODBC driver to connect to SQL Server. If the driver is missing or not functioning, a SQL Server Agent fails to start.
 
 For information about the ODBC driver requirements for different versions of SQL Server, see [Hardware and software requirements for SQL Server](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2025).
 
