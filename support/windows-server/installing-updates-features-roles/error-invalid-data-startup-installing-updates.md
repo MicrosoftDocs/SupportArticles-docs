@@ -1,32 +1,62 @@
 ---
-title: ERROR_INVALID_DATA Error After Installing Windows Updates
-description: Helps resolve the 0x8007000d (ERROR_INVALID_DATA) error at system startup after you install Windows updates.
-ms.date: 05/23/2025
+title: Error 0x8007000d at Startup After You Install a Windows Update
+description: Discusses how to fix the 0x8007000d (ERROR_INVALID_DATA) error when the system restarts after you install Windows updates.
+ms.date: 12/31/2025
 manager: dcscontentpm
 audience: itpro
+ai.usage: ai-assisted
 ms.topic: troubleshooting
-ms.reviewer: kaushika, hamansoor, jdickson, v-lianna, dougking
+ms.reviewer: kaushika, hamansoor, jdickson, v-lianna, dougking, v-appelgatet
 ms.custom:
 - sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
-  - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
 ---
-# Error 0x8007000d at startup after installing updates
+# Error 0x8007000d at startup after you install a Windows update
 
-This article helps you resolve an issue that occurs at system startup after you install Windows updates. After you install the updates and restart the system, the system performs a rollback, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
-
-> [!IMPORTANT]
-> This article covers the Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an upgrade of Windows Server running in an Azure VM, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).
+This article helps you resolve an issue that occurs when the computer restarts after you install a Windows update.
 
 ## Symptoms
 
-When this issue occurs, you might experience any of the following symptoms.
+You install a Windows update. The update appears to install successfully. However, when the computer restarts, the installation rolls back, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
 
-### Symptom 1: Catalog file errors
+## Cause
 
-Entries in the Component-Based Servicing (CBS) log file indicate issues that affect a catalog file. This log is typically located at *C:\Windows\Logs\CBS*. You see a log entry that resembles the following output:
+Typically, this issue has one of the following causes:
+
+- **File corruption or registry corruption** - An old update is reported, and the related file or registry key locations are corrupted. This corruption can prevent the system from verifying the validity of catalog files.
+
+- **Incorrect driver version** - Driver updates fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
+
+## Resolution
+
+> [!IMPORTANT]  
+>
+> - If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
+> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+
+The most reliable way to fix this issue is to perform an in-place upgrade on the affected computer.
+
+> [!NOTE]  
+> For more information about how to upgrade VMs, see one of the following articles:
+>
+> - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+> - [In-place upgrade for supported VMs running Windows in Azure (Windows client)](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
+
+If the issue persists, contact Microsoft Support. In the support request, include data from the CBS log that helps describe the issue. For information about how to identify this information, see the next section.
+
+## More information
+
+Entries in the Component-Based Servicing (CBS) log file might provide more details about how the error actually occurred. This log is typically located at C:\Windows\Logs\CBS. To track down the issue, open the log file in a text editor, and search for `ERROR_INVALID_DATA`. To identify the context in which the error occurred, review the log entries that precede and follow the error.
+
+The following sections show examples of log entries that document this error.
+
+### Case 1: Catalog file errors
+
+In this example, `ERROR_INVALID_DATA` occurs when the system tries to validate C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat.
 
 ```output
 20xx-xx-06 xx:51:15, Info CBS Exec: Installing Package: Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0, Update: 4584642-1_neutral, InstallDeployment: amd64_771d1f434ef835536dafe93d6811f766_31bf3856ad364e35_10.0.17763.1549_none_e4d395cdb7886270
@@ -42,15 +72,11 @@ Entries in the Component-Based Servicing (CBS) log file indicate issues that aff
 20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-In this situation, the error occurs because the system can't determine whether the following catalog file is valid:
+The system can't validate the .cat (catalog) file. This indicates that the package is probably corrupted.
 
-*C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat*
+### Case 2: Registry errors
 
-This symptom indicates that the package is likely corrupted. 
-
-### Symptom 2: Registry errors
-
-In the CBS log file, you see the following entry or something similar that indicates registry issues:
+In this example, `ERROR_INVALID_DATA` occurs when the system determines that a registry value uses the wrong data type.
 
 ```output
 20xx-xx-24 05:13:10, Info CBS Registry value for Package_7762_for_KB5001347~31bf3856ad364e35~amd64~~10.0.1.4 is not a dword type. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
@@ -62,9 +88,9 @@ In the CBS log file, you see the following entry or something similar that indic
 20xx-xx-24 05:13:10, Info CBS Failed to find or add the component family [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-### Symptom 3: Driver update failure
+### Case 3: Driver installation failure
 
-In the CBS log file, you see the following entry or something similar that indicates driver update failures during restart:
+In this example, `ERROR_INVALID_DATA` occurs when the system tries to install drivers during the restart process.
 
 ```output
 20xx-xx-18 15:21:14, Info CBS Perf: Doqe: Critical install started.
@@ -84,11 +110,9 @@ In the CBS log file, you see the following entry or something similar that indic
 20xx-xx-18 15:22:52, Info CBS WER: Generating failure report for package: Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4889.1.2, status: 0x8007000d, failure source: DOQ, start state: Staged, target state: Installed, client id: WindowsUpdateAgent
 ```
 
-This entry shows that the driver updates failed. This issue caused the Windows update to also fail.
+The mshdc.inf driver doesn't install correctly. This issue triggers the rollback process.
 
-To verify that this condition is true, go to *C:\Windows\INF\setupapapi.dev*, locate the log, and examine the entries for the driver failure. In this case, it's mshdc.inf.
-
-**setupapapi.dev.log**
+The SetupAPI log (typically in C:\Windows\INF\setupapapi.dev) also records driver installations. In this example, the following excerpt from Setupapapi.dev.log provides additional information about Mshdc.inf, including the names and versions of the driver packages.
 
 ```output
 sto: {Unstage Driver Package: C:\Windows\System32\DriverStore\FileRepository\mshdc.inf_amd64_b0b5572axx95167b\mshdc.inf} 15:21:14.3xx
@@ -101,24 +125,3 @@ idb: Driver packages registered to 'mshdc.inf':
 idb: mshdc.inf_amd64_79f38c21b894a1c1
 idb: {Unregister Driver Package: exit(0x00000000)} 15:21:14.3xx
 ```
-
-Make sure that you note the driver packages.
-
-## Cause
-
-This issue occurs either because the database of performance counters is corrupted or the driver version is incorrect. 
-
-### File corruption or registry corruption
-
-An old update might be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
-
-### Incorrect driver version
-
-Driver updates might fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
-
-## Resolution
-
-> [!NOTE]
-> Before you proceed, [back up the OS disk](/azure/backup/about-azure-vm-restore).
-
-The most reliable solution for this problem is to perform an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).

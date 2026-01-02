@@ -5513,7 +5513,7 @@
       {
         "source_path": "entra/entra-id/welcome-entra-id.yml",
         "redirect_url": "/troubleshoot/entra/entra-id/welcome-entra-id",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "entra/entra-id/user-prov-sync/use-upn-matching-identity-sync.md",
@@ -6495,6 +6495,15 @@
         {
         "source_path": "virtual-machines/windows/vm-stops-at-please-wait-for-group-policy-client.md",
         "redirect_url": "/troubleshoot/virtual-machines/windows/please-wait-for-the-group-policy-client"
+      },
+        {
+        "source_path": "information-protection/troubleshoot-aip-issues.md",
+        "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client"
+      },
+        {
+        "source_path": "information-protection/welcome-information-protection.yml",
+        "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client",
+        "redirect_document_id": false
       }
   ]
 }

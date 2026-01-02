@@ -1,8 +1,8 @@
 ---
 title: Guests can't access Files tab for shared files in Teams
 description: Fixes an issue in which guest users can't use the Files tab to access shared files in Teams. This issue occurs because the sharing settings aren't configured correctly.
-author: v-charloz
-ms.author: v-chazhang
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Settings for Teams calls with Apple CarPlay on iOS device
 description: Describes if you're unable to use Apple CarPlay in Teams, ask your administrator to configure settings for you.
-author: v-charloz
-ms.author: v-chazhang
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

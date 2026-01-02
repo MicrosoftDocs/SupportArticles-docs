@@ -52,4 +52,4 @@ Users might encounter challenges when they try to push subscription activity log
 - [Connect services through a diagnostic setting-based connector](/azure/sentinel/connect-services-diagnostic-setting-based#connect-via-a-diagnostic-setting-based-connector-managed-by-azure-policy)
 - [Time before telemetry gets to destination](/azure/azure-monitor/platform/diagnostic-settings#time-before-telemetry-gets-to-destination)
 
-[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
+ (../../../../includes/azure-help-support.md)]
