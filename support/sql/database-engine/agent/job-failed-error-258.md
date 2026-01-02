@@ -213,7 +213,7 @@ This issue can be caused by any of the following underlying problems:
         - Worker exhaustion, for example `Workers: 512/512`.
         - `WorkQueue` is greater than zero. This value indicates that tasks are waiting and the system is overloaded.
     - CPU pressure:
-        - `RunnableTasks` is greater than zero. This value indicates that a CPU bottleneck exists.
+        - `RunnableTasks` is greater than zero. This value indicates that a CPU bottleneck exists. A non-zero value can also indicate that the SQL Server scheduler is being monopolized by a thread (a non-yielding scheduler).
     - Memory pressure:
         - `Memory state` is `LOW`. This value indicates that the overall system is low on memory.
         - A low value for `AvailableMB`. This value indicates high memory usage for SQL Server.
