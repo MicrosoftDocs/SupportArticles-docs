@@ -179,6 +179,6 @@ If SNAT ports are exhausted, and WebJobs are unable to connect to SQL Database, 
 * [SNAT with App Service](https://4lowtherabbit.github.io/blogs/2019/10/SNAT/)
 * [Troubleshoot slow app performance issues in Azure App Service](/azure/app-service/troubleshoot-performance-degradation)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

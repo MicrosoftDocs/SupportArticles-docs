@@ -131,6 +131,6 @@ You can also manage your app by using Azure PowerShell. For more information, se
 [Manage Azure resources by using Azure PowerShell](/azure/azure-resource-manager/management/manage-resources-powershell).
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

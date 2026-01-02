@@ -50,6 +50,6 @@ This article helps you troubleshoot issues with creating a service connection fo
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

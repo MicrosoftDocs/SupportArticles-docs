@@ -97,4 +97,4 @@ az aks get-versions --location <region> --output table
 
   - **Test thoroughly:** To identify and resolve any compatibility issues, perform thorough testing in a staging environment.
 
-[!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
+ (../../../includes/azure-help-support.md)]

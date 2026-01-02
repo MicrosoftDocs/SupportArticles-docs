@@ -24,9 +24,10 @@ Before you install updates by using the Configuration Manager console, review th
 
 Review the following update checklists for actions to take before you start the update:
 
+- [Checklist for installing update 2509](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2509)
 - [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
 - [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
-- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
+
 
 ### Step 2: Run the prerequisite checker before you install an update
 
@@ -86,8 +87,9 @@ For reference, the following table lists well-known update package GUIDs. The li
 | Configuration Manager 2403 HFRU | A02D38C5-021E-4144-8249-E7CDE48DA83F|
 | Configuration Manager 2409 | 3B7D84FA-ECCC-4EA0-B8AB-ABBDA1E88E0E |
 | Configuration Manager 2409 HFRU | 345A6BE1-3D07-43ED-B6E5-FAC0889DA04C |
-| Configuration Manager 2503 | 8576527E-DDE9-4146-8ED9-DB91091C38EF|
+| Configuration Manager 2503 | AA928926-5C76-4DE0-B51F-0FE4D365DFE2 |
 | Configuration Manager 2503 HFRU | 6B0783D9-B8A2-4848-82F6-8EFE956F4988|
+| Configuration Manager 2509 | 420E3E18-73C5-4BE9-88B0-6F1E30A012CA |
 
 ### Identify the installation stage of the update
 
@@ -331,7 +333,7 @@ Correlate the returned version information to other sources such as the version 
 | SQL DB | fnCurrentSiteVersion | 5.00.*nnnn*.1000 |
 | SQL DB | fnSetupFullVersion | 5.00.*nnnn*.10*mm* |
 | SQL DB | fnCurrentSiteVersion_INT/fnCurrentSiteVersion_INT_TABLE | 500*nnnn* |
-| Registry | `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Setup\Full Version` | 5.00.*nnnn*.1000 |
+| Registry | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Setup\Full Version | 5.00.*nnnn*.1000 |
 | SQL DB | Sites.Version | 5.00.*nnnn*.1000 |
 | SMSExec.exe | Product Version | 5.00.*nnnn*.10*mm* |
 
@@ -1390,7 +1392,7 @@ In the console, go to **Monitoring** > **Overview** > **Database Replication**. 
 
 The CMUpdate process is the main driver of update package installation. It hosts the CONFIGURATION_MANAGER_UPDATE service. If CMUpdate fails, the installation stops responding at a specific stage, and CMUpdate.log might repeatedly record the same activity. To investigate this issue, open Event Viewer, and review the Windows Application log for Event ID 1000 (Process crash).
 
-Security software can also cause this behavior by preventing the updated CMUpdate binary from running, or by stopping the process. To investigate this issue, turn off the security software, and then try again to update. If the issue persists, use the [ProcDump](/sysinternals/downloads/procdump) tool to collect a process memory dump file. Download and install the tool, and then run the following command at a command prompt:
+Security software can also cause this behavior by preventing the updated CMUpdate binary from running, or by stopping the process. To investigate this issue, turn off the security software, and then try again to update. If the issue persists, use the [ProcDump](/sysinternals/downloads/procdump) tool to collect a process memory dump file. Download and unpack the tool, and then run the following command at a command prompt:
 
 ```console
 procdump -ma -e cmupdate.exe

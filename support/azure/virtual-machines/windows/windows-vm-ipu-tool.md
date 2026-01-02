@@ -54,6 +54,6 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 - [In-place upgrade (client) for VMs running Windows in Azure](in-place-system-upgrade.md)
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

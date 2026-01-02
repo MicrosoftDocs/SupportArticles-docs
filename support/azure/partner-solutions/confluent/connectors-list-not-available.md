@@ -39,6 +39,6 @@ This article helps you troubleshoot the problem in which the list of Confluent c
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
