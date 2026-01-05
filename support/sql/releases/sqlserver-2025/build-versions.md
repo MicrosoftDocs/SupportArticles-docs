@@ -1,0 +1,1 @@
+<!-- TODO: Placeholder, real doc will be merged from GDR release -->
