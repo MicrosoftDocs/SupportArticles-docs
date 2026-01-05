@@ -57,7 +57,7 @@ After you fix the problem, edit the flow and then save it. You can then edit it 
 
 ### Check for broken connections
 
-Normally, you only need to sign in to a connection once, and you can keep using it until an admin removes it. However, connections break in the following situations:
+Normally, you only need to sign in to a connection once, and you can keep using it until an admin removes it. However, connections might break in the following situations:
 
 - The password for the connection expires.
 - Your organization has a policy that makes the connector's authentication token expire after a certain amount of time.
@@ -93,8 +93,6 @@ For more information on available plans, see [Power Automate plans](https://make
 
 ### Determine whether trigger check is skipped
 
-Locate the flow's trigger conditions and verify that the condition expressions correctly and accurately reflect your requirements.
-
 To check for skipped trigger runs:
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
@@ -103,11 +101,11 @@ To check for skipped trigger runs:
 
     :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="The 28-day run history view showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
-If a run was expected but didn't happen, look for the specific run to see if the trigger check was skipped. A skipped check means the condition was false, and the flow wasn't initiated. [Review the flow's inputs and trigger conditions](#review-flow-inputs-and-trigger-conditions) to confirm they align with your expectations. You might need to adjust the condition expression to fix the issue.
+If a run was expected but didn't happen, look for the specific run to see if the trigger check was skipped. A skipped check means the trigger condition wasn't met, and the flow wasn't initiated. [Review the flow's inputs and trigger conditions](#review-flow-inputs-and-trigger-conditions) to confirm they align with your expectations. You might need to adjust the condition expression to fix the issue.
 
 ### Review flow inputs and trigger conditions
 
-Follow these steps to review your inputs and conditions:
+Locate the flow's trigger conditions and verify that the condition expressions correctly and accurately reflect your requirements. Follow these steps to review your inputs and conditions:
 
 > [!NOTE]
 > You can use either the [new designer](/power-automate/flows-designer) or the classic designer to configure and review your cloud flow. The steps are similar in both designers. For more information, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
