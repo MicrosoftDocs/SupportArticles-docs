@@ -3,7 +3,7 @@ title: Forms show an error about being read-only
 description: Resolves the issues with read-only forms in Dynamics 365 Field Service.
 author: jshotts
 ms.author: jasonshotts
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.date: 12/29/2025
 ms.custom: sap:Customizations and Integrations
 ---
