@@ -5,7 +5,6 @@ author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 ms.reviewer: simonjx, corbinm, v-kccross
-manager: dcscontentpm
 audience: Admin
 search.appverid: 
   - MET150
