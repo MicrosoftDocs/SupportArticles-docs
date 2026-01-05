@@ -1,7 +1,7 @@
 ---
 title: Prevent Antivirus and DLP Tools from Blocking or Crashing Microsoft Teams
 manager: dcscontentpm
-ms.date: 06/06/2025
+ms.date: 01/05/2026
 audience: Admin
 ms.topic: troubleshooting
 search.appverid:
