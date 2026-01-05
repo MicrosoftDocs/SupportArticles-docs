@@ -65,6 +65,15 @@ items:
 - name: Startup, shutdown, restart issues (instance or database)
   href: startup-shutdown/toc.yml
 
+- name: SQL Agent (Jobs, Alerts, Operators)
+  items:
+  - name: "Error 1053: The service did not respond to the start or control request in a timely fashion"
+    href: agent/error-1053-service-did-not-start-timely.md
+  - name: SQL Agent job fails with error 258
+    href: agent/job-failed-error-258.md
+  - name: SQL Agent services crashes intermittently
+    href: agent/intermittent-crashes.md
+
 - name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
   items: 
   - name: 701 error with large batches
