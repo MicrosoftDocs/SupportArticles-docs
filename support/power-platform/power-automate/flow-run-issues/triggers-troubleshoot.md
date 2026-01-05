@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot common issues with triggers
-description: Learn how to find and fix issues when your flows don't run.
+title: Troubleshoot common issues with Power Automate triggers
+description: Diagnose and fix Power Automate trigger problems including trigger not firing, duplicate runs, delays, and skipped conditions.
 suite: flow
 ms.date: 10/16/2025
 ms.custom: sap:Flow run issues\Triggers
@@ -9,94 +9,112 @@ ms.reviewer: angieandrews, kenseongtan, kisubedi, v-aangie, v-shaywood
 search.audienceType: 
   - flowadmin
 ---
-# Troubleshoot common issues with triggers
+# Troubleshoot Power Automate trigger issues and errors
 
-Here are some tips and tricks for troubleshooting issues with triggers.
+When Power Automate flows don't run as expected, the trigger might be the issue. [Triggers](/power-automate/triggers-introduction) are the entry point for your flows. They can fail for many reasons, such as connection issues, expired authentication tokens, licensing problems, and misconfigured conditions.
 
-## Identify specific flow run
+This article describes the most common trigger problems and their solutions. You'll learn how to diagnose connection problems, check licensing requirements, review trigger conditions, and handle environment-specific problems.
 
-Sometimes, you have to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
+The first step to troubleshoot your flows is to [identify the specific flow run](/power-automate/fix-flow-failures#identify-specific-flow-runs) that is failing. This will help you pinpoint whether the issue is with the trigger itself or another part of your flow.
 
-## My trigger doesn't fire
+## Trigger not firing
 
-1. A data loss prevention policy might be the cause.
+If your trigger doesn't fire as expected, check the following items to isolate the cause of the issue.
 
-   Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can be used only together with other connectors from that group in any given app or flow.
+### Check for data loss prevention policies
 
-   If your flow violates a DLP policy, it's suspended. The suspension prevents the trigger from firing. To determine whether your flow is suspended, try to edit the flow and save it. The flow checker reports whether the flow violates a DLP policy. Your administrator can change the DLP policy.
+A data loss prevention policy might be blocking your flow.
 
-1. The trigger might be failing. Follow these steps to verify:
+Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can be used only together with other connectors from that group in any given app or flow.
 
-   1. Sign in to [Power Automate](https://make.powerautomate.com).
-   1. On the navigation menu to the left, select **My flows**, and then select your flow.
-   1. Review the details page. Do you see the following error in the **Details**?
+If your flow violates a DLP policy, it'll be suspended, causing the trigger to not fire. To know if your flow is suspended, try to edit the flow and save it. The flow checker will report if the flow violates a DLP policy.
 
-      > There's a problem with the flow's trigger. Fix the trigger.
+If a DLP policy blocks certain connectors, you might see the following error message when creating a flow in the Power Automate portal or via integrations:
 
-       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
+> Looks like this workflow is disabled by your organization
 
-   This error means that Power Automate unsuccessfully tried multiple times to establish a connection to register the trigger. Your flow doesn't trigger until this problem is resolved.
+To work around the problem, an administrator can check the admin center to find the DLP policy (tenant level or environment level) that is blocking the flow and remove or update the policy.
 
-   One common reason for this failure is that the Power Automate service endpoints aren't included in the allowlist. To fix this problem, verify that your IT department added these endpoints to the allowlist.
+### Check if the trigger is failing
 
-   Refer to [this list of IP addresses and domains](/power-automate/ip-address-configuration) that have to be added to your allowlist.
+Follow these steps to check if the trigger is failing:
 
-      For more information about fixing issues with triggers, see [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
+1. Sign in to [Power Automate](https://make.powerautomate.com).
+1. On the navigation menu to the left, select **My flows**, and then select your flow.
+1. Review the **Details** page.
 
-After the problem is resolved, modify the flow, and then save it. Then, you can revert it to its original state, and save it again. The flow becomes aware that its configuration changed, and it tries again to register its trigger.
+If you see the following error,it means that Power Automate tried multiple times to establish a connection to register the trigger and failed. Your flow won't trigger until you fix this problem.
 
-### Verify connections
+    > There's a problem with the flow's trigger. Fix the trigger.
 
-If users use the default settings, they have to sign in to a connection only one time. Then, they can use that connection until an administrator revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
+    :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
 
-To check whether your connections are broken, follow these steps:
+One common reason for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, check that your IT department added the necessary [IP addresses and domains](/power-automate/ip-address-configuration) to your allowlist.
+
+For more troubleshooting suggestions, see [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
+
+After you fix the problem, change the flow and then save it. You can then change it back to its original state, and save it again. The flow becomes aware that its setup changed, and registers its trigger again.
+
+### Check for broken connections
+
+Normally, you only need to sign in to a connection once, and you can keep using it until an admin removes it. However, connections can break in these situations:
+
+- The password for the connection expires.
+- Your organization has a policy that makes the connector's authentication token expire after a certain amount of time.
+
+Microsoft Entra ID sets up token lifetime policies. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
+
+Follow these steps to check if your connections are broken:
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. Go to **More** > **Connections**.
 1. Find the connection that your flow uses.
-1. To fix a broken connection, select the link next to the **Status** column, and then follow the instructions.
+1. To fix a broken connection, select the link next to the **Status** column, and follow the instructions.
 
    :::image type="content" source="./media/triggers-troubleshoot/fix-link.png" alt-text="The Fix connection link to fix a broken connection." lightbox="media/triggers-troubleshoot/fix-link.png":::
 
-### Verify that the flow uses a premium connector trigger
+### Check if the flow uses a premium connector trigger
 
 1. Edit your flow to find the connector name for the trigger.
-1. Go to the [list of connectors](https://make.powerautomate.com/connectors), and then search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
+1. Go to the [list of connectors](https://make.powerautomate.com/connectors), and search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
 
     :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector." lightbox="media/triggers-troubleshoot/premium-connector.png":::
 
-A standalone Power Apps or Power Automate license is required to access all premium, on-premises, and custom connectors. You can [purchase licenses](https://make.powerautomate.com/pricing) at any time.
+To access premium, on-premises, and custom connectors, you need a standalone Power Apps or Power Automate license. Check your license plan and adjust your plan, if needed, to access the connectors.
 
-### Check your license type
-
-To view the type of license that you have, follow these steps:
+To check your license plan:
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. Go to **My flows** in the left pane.
 1. Select any flow.
 1. In the **Details** section, find **Plan**. Your current license plan is listed.
 
-### Check whether trigger check is skipped
+For more information on available plans, see [Power Automate plans](https://make.powerautomate.com/pricing).
 
-After you complete an event, the flow doesn't run. For example, you add a new list item or send an email message that should trigger the flow, but doesn't. To learn the cause of the problem, follow these steps:
+### Determine whether trigger check is skipped
 
-1. On the navigation menu to the left, select **My flows**, then select the flow.
+Locate the flow's trigger conditions and verify that the condition expressions are written correctly and accurately reflect your requirements.
+
+To check for skipped trigger runs:
+
+1. Sign in to [Power Automate](https://make.powerautomate.com).
+1. Select **My flows** in the left pane, and then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
     :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="The 28-day run history view showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
-If you expect the flow to run but it doesn't, check whether the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow inputs and trigger conditions to determine whether you're using the latest configuration to trigger the flow.
+If a run was expected but didn't happen, look for the specific run to see if the trigger check was skipped. A skipped check means the condition was false, and the flow wasn't initiated. [Review the flow's inputs and trigger conditions](#review-inputs-and-trigger-conditions) to confirm they align with your expectations. You might need to adjust the condition expression to fix the issue.
 
-### Verify inputs and trigger conditions
+### Review flow inputs and trigger conditions
 
-Sometimes, the inputs and trigger conditions cause failures. Follow these steps to verify your inputs and conditions.
+Follow these steps to review your inputs and conditions.
 
-Power Automate provides the option to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
+You can use either the [new designer](/power-automate/flows-designer) or the classic designer to configure and review your cloud flow. The steps are similar in both designers. For more information, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
-1. On the navigation menu on the left, select **My flows**, then select a flow.
+1. On the navigation menu on the left, select **My flows**, and then select a flow.
 1. On the command bar, select **Edit**.
 1. Select the first card to learn which folders, sites, mailboxes, and others items are used for the trigger in the configuration pane.
 
@@ -107,7 +125,7 @@ Power Automate provides the option to use either the [new designer](/power-autom
 
    If the field is empty, there are no other customizations. The title of the card (in this case, **When an item is created or modified**) indicates when the trigger fires.
 
-   If there are other customizations in **Trigger Conditions**, verify that you're using the expected or correct inputs to trigger the flow.
+   If you see other customizations in **Trigger Conditions**, make sure you're using the expected or correct inputs to trigger the flow.
 
     :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Trigger conditions in Copilot." lightbox="media/triggers-troubleshoot/copilot-trigger-conditions.png":::
 
@@ -122,7 +140,7 @@ Power Automate provides the option to use either the [new designer](/power-autom
 
    If the field is empty, there are no other customizations. The title of the card (in this case, **When an item is created or modified**) indicates when the trigger fires.
 
-   If there are other customizations in **Trigger Conditions**, verify that you're using the expected or correct inputs to trigger the flow.
+   If you see other customizations in **Trigger Conditions**, make sure you're using the expected or correct inputs to trigger the flow.
 
     :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Trigger conditions." lightbox="media/triggers-troubleshoot/trigger-conditions.png":::
 
@@ -130,32 +148,30 @@ Power Automate provides the option to use either the [new designer](/power-autom
 
 ### Check permissions
 
-Verify that you have access to the folders, sites, or mailboxes that the trigger uses. For example, you need permissions to send email from a shared inbox through Power Automate. Send a test message from that shared mailbox in Outlook.
+Verify that you have access to the folders, sites, or mailboxes that the trigger uses. For example, to send email from a shared inbox via Power Automate, you need permissions to send an email through the shared inbox. Try sending a test email from that shared mailbox in Outlook.
 
 ### Check whether admin mode is turned on
 
 If you turn on admin mode for an environment, you turn off all background processes, including flows. This change prevents the flow from triggering.
 
-To turn off admin mode, follow these steps:
+Follow these steps to check the admin mode and disable it, if necessary.
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.com), and sign in by having the Environment Admin or System Administrator role credentials.
-1. On the left-side menu, select **Environments**, and then select a sandbox or production environment.
+1. Go to the [Power Platform admin center](https://admin.powerplatform.com) and sign in with Environment Admin or System Administrator role credentials.
+1. From the left-side menu, select **Environments**, and select the relevant environment.
 1. On the **Details** page, select **Edit**.
 1. Under **Administration mode**, set the slider to **Disabled**.
 
-If everything looks good but your flow still doesn't trigger, check whether your flow triggers after every step.
-
-### Try these steps
+### Additional troubleshooting steps
 
 1. Test the flow manually.
-1. Remove and then restore trigger.
+1. Remove and then re-add the trigger.
 1. Switch the connection.
 1. Turn off and then turn on the flow.
 1. [Export](/power-automate/export-flow-solution) and then [import](/power-automate/import-flow-solution) the flow.
 1. Create a copy of the flow.
 1. If the trigger uses special conditions, such as when an email message arrives in a specific folder, remove the folder, then restore it.
 
-## If the trigger fires for old events
+## Trigger fires for old events
 
 There are two types of triggers: polling triggers and Webhook triggers.
 
@@ -193,19 +209,19 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
 ---
 
-## My flow runs multiple times or some of my actions run multiple times
+## Flow or actions run multiple times
 
-You might encounter a scenario in which a single flow run has some (or all) its actions duplicated. While the UI doesn't show this issue, you might see the results of the flow being duplicated. For example, duplicate email messages sent, or duplicate list items created.
+You might encounter a scenario where a single flow run has some (or all) of its actions duplicated. While the UI doesn't show this problem, you might see the results of the flow being duplicated. For example, duplicate emails sent, or duplicate list items created.
 
-One of the reasons that this issue occurs is the "at-least-once" design of Azure Logic Apps.
+One reason this problem occurs is because of the "at-least-once" design of Azure Logic Apps.
 
-Typically, this issue indicates that an issue exists in the Azure service. These issues usually resolve by themselves quickly. To make sure that your flows don't create duplication, design them to be **idempotent**. That is, the flow has to account for the possibility of duplicate inputs.
+Most of the time, this indicates that there was an issue with the Azure service. Usually, these issues resolve quickly by themselves. To ensure that your flows don't create duplication, design them to be **idempotent**- which means the flow needs to account for the possibility of duplicate inputs.
 
-An example of idempotency would be checking whether a duplicate SharePoint document already exists before you try to create it, or using key constraints in Dataverse to prevent duplicate records from being created.
+An example of idempotency is checking to see if a duplicate SharePoint document already exists before trying to create it, or using key constraints in Dataverse to prevent duplicate records getting created.
 
-Another reason that a flow might trigger multiple times is having copies of the flow active in different environments that are triggering based on same condition. Use trigger conditions to customize triggers to reduce the number of activations.
+Another possibility for flow triggering multiple times is having copies of the flow active in different environments that are triggering based on same condition. Use trigger conditions to customize triggers to reduce the number of times it triggers.
 
-## My recurrence trigger runs ahead of schedule
+## Recurrence trigger runs ahead of schedule
 
 Verify that you set the **Start time** on the **Recurrence** card to make sure that it runs only at the time that you need. For example, set **Start time** to '2022-10-10T10:00:00Z' to start your trigger at 10:00 AM.
 
@@ -213,9 +229,9 @@ Verify that you set the **Start time** on the **Recurrence** card to make sure t
 
 If the trigger is a polling trigger, it wakes up periodically to check if new events occurred. The wake-up time depends on the license plan on which the flow runs.
 
-For example, your flows might run every 15 minutes if you're on the **Free** license plan. On the **Free** plan, if a cloud flow is triggered less than 15 minutes after its last run, it's queued until 15 minutes elapsed.
+For example, your flows might run every 15 minutes if you're on the **Free** license plan. On the **Free** plan, if a cloud flow is triggered less than 15 minutes after its last run, it's queued until 15 minutes elapses.
 
-If your license is the **Flow for Office 365** plan (from your Enterprise license E3, E5, and others), or the **Flow for Dynamics 365** plan, your flow doesn't run again until five minutes pass. The flow might take a few minutes to begin after the triggering event occurs.
+If your license is the **Flow for Office 365** plan (from your Enterprise license E3, E5, and others), or the **Flow for Dynamics 365** plan, your flow doesn't run again until five minutes elapses. It might be a few minutes between the time the triggering event occurs and the time the flow begins.
 
 To check the trigger wake-up frequency, follow these steps:
 
@@ -247,23 +263,18 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
 ---
 
-If your flow takes longer than expected to trigger, the delay is likely caused by one of the following conditions:
+If your flow takes longer than expected to trigger, check for these two common problems:
 
-1. Too many calls to the connector or flow. This condition causes throttling. To check whether your flow is being throttled, manually test the flow to determine whether it triggers immediately. If the flow triggers immediately, it's not throttled.
+1. Too many calls to the connector or flow caused throttling. To check if throttling is affecting your flow, manually test the flow to see if it triggers immediately. If it triggers immediately, throttling isn't the problem. 
 
-   To learn more about flows, see [Power Automate analytics](/power-automate/admin-analytics-report).
+   Tips to address throttling issues:
 
-   If your flow is frequently throttled, redesign your flow to use fewer actions. For more information, see [Understand platform limits and avoid throttling](/power-automate/guidance/coding-guidelines/understand-limits).
+   - Check the [Power Automate analytics report](/power-automate/admin-analytics-report) to learn more about your flows.
+   - Redesign your flow to use fewer actions. For more information, see [Understand platform limits and avoid throttling](/power-automate/guidance/coding-guidelines/understand-limits).
+   - Acquire a Power Automate Premium (previously Power Automate per user) or Power Automate Process (previously Power Automate per flow) license. After you acquire the license, open and then save the flow to refresh the entitlement associated with it and change the throttling mode.
+   - Split the flow into several instances. If the flow processes data, you can divide this data into subsets (per country and region, per business area, and so on). Use **Save As** on the flow to create several instances that process their own data. Because the quota is per flow, this approach serves as a workaround.
 
-   More tips:
-
-   1. Acquire a Power Automate Premium (previously Power Automate per user) or Power Automate Process (previously Power Automate per flow) license. After you acquire the license, open and then save the flow to refresh the entitlement associated with it and change the throttling mode.
-
-   1. Split the flow into several instances. If the flow processes data, you can divide this data into subsets (per country and region, per business area, and so on).
-
-      1. Use **Save As** on the flow to create several instances that process their own data. Because the quota is per flow, this approach serves as a workaround.
-
-1. A communication issue prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar issue caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try triggering the flow again.
+1. A communication problem prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar problem caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to learn whether any active outages exist. You can also clear the cache of the browser, and then try triggering the flow again.
 
 ## Power Apps trigger issues
 
@@ -284,7 +295,9 @@ After you publish an app, make copies of the flows that are used by that app to 
 
 SharePoint triggers, such as **When a file is created or modified**, don't fire if you add or update a file in a subfolder. If the flow has to trigger on subfolders, create multiple flows.
 
-## Users can't run shared flows, but the owner can run the flow
+If the flow pop up doesn't load properly or keeps loading or spinning indefinitely, make sure that the user running the flow has the required security roles and permissions needed to run the flow. For more information, see [Cloud flow sharing and permissions](https://learn.microsoft.com/en-us/power-automate/guide-to-cloud-flow-sharing-permissions).
+
+## Users can't run shared flows, but owner can run the flow
 
 Try one of the following solutions:
 
@@ -294,11 +307,11 @@ Try one of the following solutions:
 
 1. Verify that the user has the appropriate license for the connections in the flow.
 
-   A Power Automate license is required for the user to perform any actions such as save and turn off. A Power Apps, Dynamics 365, or Microsoft 365 license isn't sufficient for this purpose. For flows that use premium connectors and are shared with users, each user must have a Power Automate Premium (previously Power Automate per user) or Power Automate Process (previously Power Automate per flow) license to edit or manually trigger the flow. If the user was previously able to save or modify the flow, it's possible that their license is expired.
+   A Power Automate license is required for the user to perform any actions like save, turn off, and more. A Power Apps, Dynamics 365, or Microsoft 365 license isn't sufficient. Users with whom flows that use premium connectors are shared each need a Power Automate Premium (previously Power Automate per user) or Power Automate Process license (previously Power Automate per flow) license to edit or manually trigger the flow. If the user was previously able to save or modify the flow, it's possible that their license expired.
 
-   Alternatively, you can start a trial for the **Per User** plan for 90 days. After this period, users must have a paid plan to run or edit flows that use premium connectors. For more information, see [licensing page](https://make.powerautomate.com/pricing) and [Power Automate support](https://www.microsoft.com/en-us/power-platform/products/power-automate/).
+   Alternatively, you can start a trial for the **Per User** plan for 90 days, after which you need a paid plan to run or edit flows that use premium connectors. Learn more in the [licensing page](https://make.powerautomate.com/pricing) and [Power Automate support](https://www.microsoft.com/en-us/power-platform/products/power-automate/).
 
-### Flows don't trigger changing the environment URL
+## Flows don't trigger after changing the environment URL
 
 To resolve this issue, edit each flow, and then save it. The triggers should start firing again.
 
@@ -345,7 +358,7 @@ To make sure that your flows continue to function as expected, follow these step
    1. If your trigger URL uses a relative path parameter, make sure that no backslashes exist in the field that might cause double slash errors.
    1. Modify the relative path as necessary, and verify the trigger URL for correctness.
 
-### Key changes
+### Key changes to HTTP or Teams Webhook trigger flows
 
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer reflects a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs that are longer than 255 characters. Adjust its configuration, if it's necessary.
