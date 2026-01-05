@@ -4,7 +4,7 @@ description: Skype for Business plays a dial tone to all participants of a call 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: splette, brweathe, v-kccross
+ms.reviewer: simonjx, splette, brweathe, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
