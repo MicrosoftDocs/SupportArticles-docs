@@ -7,7 +7,7 @@ f1.keywords:
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance

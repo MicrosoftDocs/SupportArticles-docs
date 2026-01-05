@@ -4,7 +4,7 @@ description: Provide a solution when Skype for Business and Exchange integration
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

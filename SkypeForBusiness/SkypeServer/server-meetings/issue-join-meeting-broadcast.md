@@ -4,7 +4,7 @@ description: Describes an issue that triggers an error occurred during the Skype
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

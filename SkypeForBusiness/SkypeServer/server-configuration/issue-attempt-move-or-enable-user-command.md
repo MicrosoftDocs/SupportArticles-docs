@@ -4,7 +4,7 @@ description: Lync Server Control Panel returns that error Insufficient access ri
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

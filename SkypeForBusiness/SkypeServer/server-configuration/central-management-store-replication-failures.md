@@ -4,7 +4,7 @@ description: Resolves the issues in which Lync Server 2010 Central Management St
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

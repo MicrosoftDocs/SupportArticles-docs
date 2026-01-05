@@ -4,7 +4,7 @@ description: Fixes an issue that triggers a MAPI unavailable error in a Skype fo
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

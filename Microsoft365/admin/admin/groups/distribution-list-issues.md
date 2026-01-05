@@ -3,7 +3,7 @@ title: Distribution group issues
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: simonjx, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 ms.collection: Adm_O365
