@@ -15,7 +15,6 @@ appliesto:
 - Excel 2016 for Mac
 - Excel for Microsoft 365 for Mac
 search.appverid: MET150
-ms.reviewer: 
 ms.date: 06/06/2024
 ---
 
