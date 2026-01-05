@@ -16,7 +16,6 @@ appliesto:
 - Excel 2019
 - Excel 2021
 search.appverid: MET150
-ms.reviewer: 
 ms.date: 05/26/2025
 ---
 
