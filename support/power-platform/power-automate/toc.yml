@@ -83,6 +83,8 @@ items:
         items:
           - name: Authentication popup appears when launching SAP
             href: desktop-flows/sap-automation/handle-authentication-popup-launch-sap.md
+          - name: Can't capture elements from SAP Save As dialog
+            href: desktop-flows/sap-automation/cant-capture-element-from-save-as-popup.md
           - name: Can't capture SAP GuiTree objects
             href: desktop-flows/sap-automation/cannot-capture-guitree-objects.md
           - name: Can't open SAP
