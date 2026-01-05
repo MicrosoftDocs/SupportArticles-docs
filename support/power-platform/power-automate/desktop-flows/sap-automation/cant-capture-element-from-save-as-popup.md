@@ -15,10 +15,7 @@ When you use the element picker in Power Automate for desktop, you can't capture
 
 ## Cause
 
-This issue can occur due to the following causes:
-
-- SAP shows the standard Windows _Save As_ dialog box. The standard dialog box doesn't support SAP-specific automation.
-- SAP shows a custom _Save As_ dialog box, but the element picker might not maintain the SAP context when the dialog box opens. This problem prevents the element picker from capturing elements from the custom SAP dialog box.
+This issue occurs when SAP shows the standard Windows _Save As_ dialog box. The standard dialog box doesn't support SAP-specific automation.
 
 ## Solution
 
