@@ -1,14 +1,14 @@
 ---
 title: SideBySide event ID 35 is logged
 description: Describes an issue in which event ID 35 appears in the Application log when you start Skype for Business. This event can be ignored safely.
-author: simonxjx
-ms.author: 
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: 
 appliesto: 
   - Skype for Business
   - Microsoft Lync 2013
@@ -24,6 +24,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
+
 # SideBySide event ID 35 is logged in the Application log when you start Skype for Business
 
 _Original KB number:_ &nbsp; 3077028

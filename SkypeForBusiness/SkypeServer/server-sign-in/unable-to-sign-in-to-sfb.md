@@ -1,9 +1,10 @@
 ---
 title: How to troubleshoot being unable to sign in to Skype for Business | Microsoft Docs
 description: This article fixes an issue in which you cannot sign in to Skype for Business.
-author: simonxjx
-ms.author: 
-ms.reviewer: corbinm
+author: cloud-writer
+ms.author: meerak
+manager: dcscontentpm
+ms.reviewer: corbinm, v-kccross
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

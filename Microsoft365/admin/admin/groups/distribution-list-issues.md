@@ -1,8 +1,9 @@
 ---
 title: Distribution group issues
-author: simonxjx
-ms.author: 
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 audience: Admin
 ms.topic: troubleshooting
 ms.collection: Adm_O365

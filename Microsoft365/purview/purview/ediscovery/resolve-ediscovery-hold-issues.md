@@ -4,9 +4,10 @@ description: Resolve errors related to legal holds applied to custodial and nonc
 ms.date: 05/05/2025
 f1.keywords: 
   - NOCSH
-ms.author: 
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 audience: Admin
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
@@ -19,6 +20,7 @@ ms.custom:
   - seo-marvel-apr2020
   - CSSTroubleshoot
 ---
+
 # Resolve eDiscovery hold errors
 
 This article discusses common issues that might occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
