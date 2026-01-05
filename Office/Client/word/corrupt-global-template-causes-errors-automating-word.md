@@ -1,7 +1,10 @@
 ---
 title: A corrupt global template causes errors when automating Word
 description: Describes an issue where an invalid global template file may cause an out-of-process automation client to throw an error message. Rename the global template file to resolve this issue.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -11,11 +14,9 @@ ms.custom:
 appliesto: 
 - Microsoft Word 2010
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # A corrupt global template causes errors when automating Word
 
 ## Symptoms

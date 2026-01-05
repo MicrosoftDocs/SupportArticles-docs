@@ -1,7 +1,10 @@
 ---
 title: Object Model calls fails from WorkbookOpen event
 description: This article provides two resolutions for the problem where Object Model calls fail with a runtime error 1004 - Method of Object failed.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,10 +17,9 @@ appliesto:
 - Excel 2021
 search.appverid: MET150
 ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 05/26/2025
 ---
+
 # Object Model calls may fail from WorkbookOpen event when exiting Protected View
 
 ## Symptoms

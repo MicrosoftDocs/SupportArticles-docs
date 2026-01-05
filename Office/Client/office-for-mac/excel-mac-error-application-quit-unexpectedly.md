@@ -1,7 +1,10 @@
 ---
 title: The application Microsoft Excel quit unexpectedly error
 description: Describes an issue in which you receive an error or Excel closes unexpectedly.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -13,10 +16,9 @@ appliesto:
 - Excel for Microsoft 365 for Mac
 search.appverid: MET150
 ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # Excel for Mac error: "The application Microsoft Excel quit unexpectedly"
 
 ## Symptoms
