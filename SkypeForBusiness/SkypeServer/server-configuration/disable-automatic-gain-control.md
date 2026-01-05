@@ -4,7 +4,7 @@ description: Describes methods to disable the Automatic Gain Control feature in 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

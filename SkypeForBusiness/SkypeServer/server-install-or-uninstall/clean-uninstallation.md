@@ -4,7 +4,7 @@ description: Describes how to cleanly remove Skype for Business on Mac from your
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

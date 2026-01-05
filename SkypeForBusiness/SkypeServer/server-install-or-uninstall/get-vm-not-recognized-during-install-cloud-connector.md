@@ -4,7 +4,7 @@ description: Describes an error that occurs when you run the cmdlet Install-CcIn
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

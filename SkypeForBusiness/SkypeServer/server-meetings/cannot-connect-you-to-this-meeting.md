@@ -4,7 +4,7 @@ description: Discusses a problem in which you receive the 12029 error message an
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

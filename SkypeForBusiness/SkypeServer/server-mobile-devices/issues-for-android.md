@@ -4,7 +4,7 @@ description: This article describes how to troubleshoot some common issues that 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

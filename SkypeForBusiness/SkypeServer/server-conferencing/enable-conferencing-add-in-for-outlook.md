@@ -4,7 +4,7 @@ description: Describes how to enable the Conferencing Add-in for Outlook in Outl
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, v-kccross
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro

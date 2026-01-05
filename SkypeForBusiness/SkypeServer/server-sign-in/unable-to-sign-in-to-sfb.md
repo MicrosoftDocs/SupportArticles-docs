@@ -4,7 +4,7 @@ description: This article fixes an issue in which you cannot sign in to Skype fo
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonjx, corbinm, v-kccross
+ms.reviewer: simonxjx, corbinm, v-kccross
 audience: Admin
 search.appverid: 
   - MET150

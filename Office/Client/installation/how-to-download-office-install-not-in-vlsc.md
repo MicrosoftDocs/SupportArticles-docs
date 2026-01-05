@@ -1,9 +1,10 @@
 ---
 title: How to download and run Office LTSC installation files not in VLSC
 description: Describes how to install Office LTSC files that are not in VLSC and activate by using a product key.
-ms.author: 
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, joselr, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -17,7 +18,6 @@ ms.custom:
   - CI 157620
   - CI 113921
   - CSSTroubleshoot
-ms.reviewer: joselr
 ms.date: 06/06/2024
 ---
 # How to install Office LTSC installation files not found in VLSC

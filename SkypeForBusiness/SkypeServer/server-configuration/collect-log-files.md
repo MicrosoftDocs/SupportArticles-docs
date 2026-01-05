@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: simonjx, v-gregl, v-jastho, v-kccross
+ms.reviewer: simonxjx, v-gregl, v-jastho, v-kccross
 appliesto: 
   - Microsoft Office Communicator 2007 R2
   - Lync 2010
