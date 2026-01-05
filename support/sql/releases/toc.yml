@@ -13,6 +13,12 @@ items:
   href: find-my-sql-version.md
 - name: Version and edition of SQL components
   href: components-client-tools-versions.md
+- name: SQL Server 2025
+  items:
+  - name: Cumulative Update 1
+    items:
+    - name: Cumulative Update 1 (KB5074901)
+      href: sqlserver-2025/cumulativeupdate1.md
 - name: SQL Server 2022
   items:
   - name: SQL Server 2022 build versions
