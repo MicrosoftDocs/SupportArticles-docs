@@ -19,6 +19,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 06/06/2024
 ---
+
 # Send to OneNote and Meeting Notes buttons in Outlook do not work
 
 Nothing happens when you select the **Send to OneNote** button or the **Meeting Notes** button in Microsoft Outlook 2013 or Microsoft Outlook 2010.

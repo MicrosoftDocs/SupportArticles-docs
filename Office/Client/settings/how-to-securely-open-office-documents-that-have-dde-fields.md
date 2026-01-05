@@ -18,6 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 06/06/2024
 ---
+
 # Securely opening Microsoft Office documents that contain Dynamic Data Exchange (DDE) fields
 
 ## Overview

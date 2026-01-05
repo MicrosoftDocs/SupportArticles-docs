@@ -19,6 +19,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 06/06/2024
 ---
+
 # The Save As dialog box appears two times when you try to save a file in Word
 
 When you select **Save** or **Save As**  to save a file in Microsoft Word, the **Save As**  dialog box appears two times.

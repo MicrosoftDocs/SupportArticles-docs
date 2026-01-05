@@ -16,6 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 06/06/2024
 ---
+
 # A corrupt global template causes errors when automating Word
 
 ## Symptoms
