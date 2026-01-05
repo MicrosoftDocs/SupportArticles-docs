@@ -113,7 +113,7 @@ You can verify the download by computing the hash of the _?_ TODO file through t
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5068450](https://download.microsoft.com/download/TODO).
+Download [the list of files that are included in KB5074819](https://download.microsoft.com/download/TODO/KB5074819.csv).
 
 </details>
 
