@@ -1,42 +1,42 @@
 ---
-title: Troubleshoot Visual Studio 2017 or Later Install Errors
-description: Learn how to troubleshoot and resolve Visual Studio installation failures, including online and offline setup issues, with clear, actionable steps.
+title: Troubleshoot Visual Studio 2017 or Later Installation Errors
+description: Learn how to troubleshoot and resolve Visual Studio installation failures, including online and offline setup issues.
 ms.date: 12/30/2025
 ms.reviewer: khgupta, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Unable to install Visual Studio 2017 or later versions
+# Installation fails for Visual Studio 2017 or later
 
 _Applies to:_&nbsp;Visual Studio 2017 and later versions  
 
-When you try to install Visual Studio 2017 or a later version, you might encounter a problem where the installation wizard unexpectedly closes or returns an error message that indicates it couldn't download some installation files. This article provides a solution that resolves these installation problems and enables you to successfully install Visual Studio.
+When you try to install Microsoft Visual Studio 2017 or a later version, the installation wizard unexpectedly closes or indicates that it can't download some installation files. This article resolves these problems and enables you to successfully install Visual Studio.
 
 ## Symptoms
 
-The symptoms of this problem depend on whether you're attempting an [online install](/visualstudio/install/install-visual-studio) or an [offline install](/visualstudio/install/create-an-offline-installation-of-visual-studio).
+The symptoms of this problem depend on whether you're trying an [online installation](/visualstudio/install/install-visual-studio) or an [offline installation](/visualstudio/install/create-an-offline-installation-of-visual-studio).
 
-### Online install
+### Online installation
 
-When you attempt an _online install_ of Visual Studio 2017 or a later version, the installation wizard shows the following message dialog:
+When you try an _online installati9on_ of Visual Studio 2017 or a later version, the installation wizard displays the following message:
 
 > Before you get started, we need to set up a few things so that you can configure your installation.
 
-:::image type="content" source="./media/install-failure-2017-later-versions/install-wizard-set-up-things.png" alt-text="Screenshot of the Visual Studio installation wizard with a message that the installer needs to set up a few things so that you can configure your installation":::
+:::image type="content" source="./media/install-failure-2017-later-versions/install-wizard-set-up-things.png" alt-text="Visual Studio installation wizard message about configuring the installation.":::
 
-After you select **Continue** in the message dialog, the installation wizard closes and the install stops.
+After you select **Continue** in the message dialog box, the installation wizard closes and the installation stops.
 
-### Offline install
+### Offline installation
 
-When you attempt an _offline install_ of Visual Studio 2017 or a later version on a device with no or limited internet access, the installation wizard shows the following error dialog:
+When you try an _offline installation_ of Visual Studio 2017 or a later version on a device that has limited or no internet access, the installation wizard displays the following error message:
 
 > Unable to download installation files. Check your internet connection and try again.
 
-:::image type="content" source="./media/install-failure-2017-later-versions/install-wizard-download-error.png" alt-text="Screenshot of the Visual Studio installation wizard with an error message that the installer was unable to download installation files":::
+:::image type="content" source="./media/install-failure-2017-later-versions/install-wizard-download-error.png" alt-text="Visual Studio installation wizard error message that states that the installer can't download installation files.":::
 
-If your device has event logging enabled for the [CryptoAPI (CAPI2)](/windows/win32/seccrypto/cryptography--cryptoapi--and-capicom), you also see the following error in the CAPI2 [Event Viewer](/host-integration-server/core/windows-event-viewer1) logs (Event ID 30):
+If your device has event logging enabled for the [CryptoAPI (CAPI2)](/windows/win32/seccrypto/cryptography--cryptoapi--and-capicom), you also see the following error message in the CAPI2 [Event Viewer](/host-integration-server/core/windows-event-viewer1) logs (Event ID 30):
 
-:::image type="content" source="./media/install-failure-2017-later-versions/event-viewer-capi2-errors.png" alt-text="Screenshot of the Event Viewer showing multiple CAPI2 errors with Event ID 30":::
+:::image type="content" source="./media/install-failure-2017-later-versions/event-viewer-capi2-errors.png" alt-text="Event Viewer display that shows multiple CAPI2 errors and Event ID 30.":::
 
 ```xml
 <Event>
@@ -57,40 +57,39 @@ If your device has event logging enabled for the [CryptoAPI (CAPI2)](/windows/wi
 </Event>
 ```
 
-You can access the CAPI2 event logs from the Event Viewer by going to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**.
+To access the CAPI2 event logs from the Event Viewer, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**.
 
 #### Enable CAPI2 logs
 
-Use the following steps to enable CAPI2 event logging:
+To enable CAPI2 event logging, follow these steps:
 
-1. Open Event Viewer by pressing <kbd>Win</kbd> + <kbd>R</kbd>, type _eventvwr_, and then press <kbd>Enter</kdb>.
-1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**.
-1. Right-click **Operational** and select **Clear Log** to delete any previous logs.
-1. Right-click **Operational** and select **Enable Log** to start logging.
+1. Open Event Viewer by pressing <kbd>Win</kbd> + <kbd>R</kbd>, type _eventvwr_, and then pressing <kbd>Enter</kdb>.
+1. Navigate to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**.
+1. To delete any previous logs, right-click **Operational**, and then select **Clear Log**.
+1. To start logging, right-click **Operational**, and then select **Enable Log**.
 
-   :::image type="content" source="./media/install-failure-2017-later-versions/event-viewer-enable-capi2-logs.png" alt-text="Screenshot of the Event Viewer with the right-click menu to clear or enable logs for CAPI2":::
+   :::image type="content" source="./media/install-failure-2017-later-versions/event-viewer-enable-capi2-logs.png" alt-text="Event Viewer showing the right-click menu to clear or enable logs for CAPI2.":::
 
-1. Try installing Visual Studio again by using the offline installer.
-1. After reproducing the issue, the CAPI2 event logs should contain details about the install failure.
-1. To stop logging, right-click **Operation** and select **Disable Log**.
+1. Try again to install Visual Studio by using the offline installer.
+1. After you reproduce the problem, the CAPI2 event logs should contain details about the installation failure.
+1. To stop logging, right-click **Operation**, and then select **Disable Log**.
 
 ## Cause
 
 This problem can occur for one of the following reasons, depending on the type of installation:
 
-- _Offline install_: The device doesn't have the latest [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate that Visual Studio uses.
-- _Online install_: The device's internet access is restricted and the user doesn't have permission to download the [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate.
+- _Offline installation_: The device doesn't have the latest [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate that Visual Studio uses.
+- _Online installation_: The device's internet access is restricted, and the user doesn't have permission to download the [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate.
 
 ## Solution
 
-Use the following steps to resolve this problem:
+To resolve this problem, follow these steps:
 
 1. Download the [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate by using a device that has internet access.
-1. Copy the certificate file to `C:\Temp` on the device that has installation problems.
-1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate into the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store) by running the following command from an elevated command prompt:
+1. Copy the certificate file to `C:\Temp` on the device that experiences the installation problem.
+1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate in the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store). To do this, run the following command in an elevated Command Prompt window:
 
    ```cli
    CertUtil -addStore CA "C:\Temp\Microsoft Windows Code Signing PCA 2024.crt"
    ```
-
-1. Try installing Visual Studio again by using the offline installer.
+1. Try again to install Visual Studio by using the offline installer.
