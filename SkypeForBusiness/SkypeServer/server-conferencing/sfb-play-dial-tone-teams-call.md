@@ -1,15 +1,15 @@
 ---
 title: Skype for Business plays a dial tone during a Teams call
 description: Skype for Business plays a dial tone to all participants of a call for 30 seconds in a call. This article provides a workaround.
-author: simonxjx
-ms.author: 
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, splette, brweathe, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CI 115787, CI 125216
   - CSSTroubleshoot
-ms.reviewer: splette, brweathe
 appliesto: 
   - Skype for Business 2016
   - Teams
@@ -17,6 +17,7 @@ search.appverid:
   - MET150
 ms.date: 03/31/2022
 ---
+
 # Skype for Business plays a dial tone during a Teams call
 
 ## Symptoms

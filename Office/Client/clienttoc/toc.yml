@@ -486,6 +486,8 @@
           href: ../office-suite-issues/enable-disable-hyperlink-warning.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
+        - name: Errors when Office add-ins start
+          href: ../office-suite-issues/errors-when-office-add-ins-start.md          
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
