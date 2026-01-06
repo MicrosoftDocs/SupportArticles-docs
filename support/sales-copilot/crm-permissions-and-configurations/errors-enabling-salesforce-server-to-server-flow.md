@@ -130,7 +130,7 @@ To resolve this issue, check whether a profile that has the same name already ex
 
 When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
 
-> Required fields are missing: \<FieldName\>
+> Required fields are missing: \<FieldNames\>
 
 ### Cause
 
