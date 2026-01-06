@@ -4,7 +4,7 @@ description: This article fixes an issue that causes the installation of the Exc
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: arindamt, v-six, v-kccross
+ms.reviewer: arindamt, v-six
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -40,4 +40,5 @@ This issue occurs because Visual C++ 2012 isn't installed on the server. Visual 
 
 To fix this issue, install Visual C++ 2012, and run the Setup wizard again.
 
-The following article lists the download links for the latest versions of Visual C++:  [The latest supported Visual C++ downloads](/cpp/windows/latest-supported-vc-redist).
+The following article lists the download links for the latest versions of Visual C++:  
+[The latest supported Visual C++ downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

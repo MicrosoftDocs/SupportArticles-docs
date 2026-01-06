@@ -4,7 +4,7 @@ description: Learn how to install SaRA from a network share and update the SaRA 
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: gregmans, v-kccross
+ms.reviewer: gregmans
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
