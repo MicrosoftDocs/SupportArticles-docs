@@ -4,13 +4,13 @@ description: Learn how to install SaRA from a network share and update the SaRA 
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: gregmans
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
   - CSSTroubleshoot
   - SaRANetworkInstallFiles
+ms.reviewer: gregmans
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Outlook
