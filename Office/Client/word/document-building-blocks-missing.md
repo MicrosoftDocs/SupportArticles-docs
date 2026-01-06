@@ -1,7 +1,10 @@
 ---
 title: Document building blocks may be missing
 description: This article provides two workarounds to the problem that occurs because the workgroup path for building block templates differs from the path for regular templates.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -11,11 +14,9 @@ ms.custom:
 appliesto: 
 - Word 2010
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # Document building blocks may be missing in a template that is part of a workgroup template in Word 2010
 
 ## Symptoms
