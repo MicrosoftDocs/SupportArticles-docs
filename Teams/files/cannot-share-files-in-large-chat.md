@@ -21,11 +21,11 @@ ms.date: 10/30/2023
 
 ## Symptoms
 
-When you try to share files in a Microsoft Teams group chat or meeting chat that contains more than 50 participants, the message might not be sent successfully when you select **Send** :::image type="icon" source="media/cannot-share-files-in-large-chat/send-file-icon.png":::.
+When you try to share files in a Microsoft Teams group chat or meeting chat that contains more than 100 participants, the message might not be sent successfully when you select **Send** :::image type="icon" source="media/cannot-share-files-in-large-chat/send-file-icon.png":::.
 
 ## Cause
 
-This issue occurs if the default setting for file sharing is **People currently in this chat**. In this case, the [Specific people](/sharepoint/turn-external-sharing-on-or-off#file-and-folder-links) link is used. However, *Specific people* links aren't recommended when you want to share files with more than 50 people.
+This issue occurs if the default setting for file sharing is **People currently in this chat**. In this case, the [Specific people](/sharepoint/turn-external-sharing-on-or-off#file-and-folder-links) link is used. However, *Specific people* links aren't recommended when you want to share files with more than 100 people. If there are more than 100 people in the chat/channel some users may have to request permission for file access.
 
 ## Workaround
 
