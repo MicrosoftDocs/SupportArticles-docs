@@ -22,6 +22,8 @@
     href: ./invalid-entries-passed-switch.md
   - name: Issues and workarounds in Visual Studio setup
     href: ./issues-workarounds-visual-studio-setup.md
+  - name: Installation fails for Visual Studio 2017 or later
+    href: ./install-failure-2017-later-versions.md
   - name: Installer fails to perform repair or update
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode
@@ -46,8 +48,6 @@
     href: ./specified-program-requires-newer-version-windows.md
   - name: Troubleshoot installation and upgrade issues
     href: ./troubleshoot-installation-issues.md
-  - name: Unable to install Visual Studio 2017, 2019, or 2022
-    href: ./install-failure-2017-2019-2022.md
   - name: Uninstall third-party applications in Visual Studio 2015
     href: ./secondary-installer-third-party-app.md
   - name: Visual Studio installation stops on Windows 10 21H2
