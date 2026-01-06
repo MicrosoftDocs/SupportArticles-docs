@@ -4,13 +4,13 @@ description: Fixes some mailbox connection issues for Outlook 2013, Outlook 2010
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: gregmans, wduff, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with Outlook
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: gregmans, wduff, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
@@ -24,6 +24,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # Outlook connection issues with Exchange mailboxes caused by the RPC encryption requirement
 
 _Original KB number:_ &nbsp;3032395
@@ -84,7 +85,7 @@ To manually update an existing Outlook profile so that it uses RPC encryption, f
 1. Select **Show Profiles**.
 1. Select your profile, and then click **Properties**.
 1. Select **E-mail Accounts**.
-1. Select M**icrosoft Exchange (send from this account by default)** account > **Change**.
+1. Select **Microsoft Exchange (send from this account by default)** account > **Change**.
 1. In the dialog box that contains your mailbox server and user name, select **More Settings**.
 1. In the Microsoft Exchange dialog box, select the **Security** tab.
 1. Select **Encrypt data between Microsoft Office Outlook and Microsoft Exchange** > **OK** (A screenshot for this step can be seen here).

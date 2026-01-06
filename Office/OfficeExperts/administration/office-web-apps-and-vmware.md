@@ -1,14 +1,14 @@
 ---
 title: Microsoft Office Online and VMware
-description: This article describes some issues that occur when installing Microsoft Offices Online or Office Online Server on a nonsystem Drive by using VMware, and provide solutions.
+description: This article describes some issues that occur when installing Microsoft Office Online or Office Online Server on a nonsystem Drive by using VMware, and provide solutions.
 author: Cloud-Writer
 manager: dcscontentpm
+ms.author: meerak
+ms.reviewer: arhinesm, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
-ms.reviewer: arhinesm
 ms.custom: 
   - sap:office-experts
   - CSSTroubleshoot
@@ -19,7 +19,7 @@ ms.date: 06/06/2024
 
 # Microsoft Office Web Apps and VMware
 
-This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+This article was written by Tom Schauer, Technical Specialist.
 
 Several issues occur when installing Microsoft Office Web Apps or Office Online Server on a nonsystem Drive by using VMware. The problem lies in setting the Microsoft Office Web Apps CacheLocation or RenderingCacheLocation to a nonsystem drive location with the HotAdd/HotPlug capability in VMware.
 
@@ -45,4 +45,4 @@ The most reliable resolution is to uninstall Microsoft Office Web Apps or Office
 
 You can also use the method that is provided in the following article to work around the issue:
 
-[Disabling the HotAdd/HotPlug capability in ESXi 5.x and ESXi/ESX 4.x virtual machines (1012225)](https://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=1012225)
+[Disabling the HotAdd/HotPlug capability in virtual machines](https://knowledge.broadcom.com/external/article/367422/disabling-the-hotaddhotplug-capability-i.html)

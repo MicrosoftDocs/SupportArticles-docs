@@ -4,9 +4,9 @@ description: This article fixes an issue that causes the installation of the Exc
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: arindamt, v-six
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: arindamt, v-six
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013
 ms.date: 01/24/2024
 ---
+
 # Error when installation of Exchange Edge Transport role fails: Process execution failed with exit code 3
 
 _Original KB number:_ &nbsp; 4495264
