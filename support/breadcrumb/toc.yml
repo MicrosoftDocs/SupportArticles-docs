@@ -198,7 +198,7 @@ items:
         topicHref: /troubleshoot/azure/logic-apps/index
       - name: Azure Native Integrations
         tocHref: /troubleshoot/azure/partner-solutions/
-        topicHref: /troubleshoot/azure/partner-solutions/welcome-native-integrations
+        topicHref: /troubleshoot/azure/partner-solutions
 
     - name: Entra
       tocHref: /troubleshoot/entra/
