@@ -1,3 +1,17 @@
+---
+title: Delete a Storage Spaces Direct Storage Pool and Reset the Physical Sisks
+description: Explains how to gracefully delete an S2D storage pool. This process cleans S2D information from the disks that the storage pool aggregates, so that you can reuse the disks elsewhere.
+ms.date: 01/07/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, kanchan.sharadhi, sbathija, v-appelgatet
+ms.custom:
+- sap:backup, recovery, disk, and storage\Storage Spaces Direct (S2D)
+- pcy:WinComm Storage High Avail
+appliesto:
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
 # How to delete a Storage Spaces Direct storage pool and reset the physical disks
 
 This article uses an example Storage Spaces Direct (S2D) deployment to explain how to gracefully delete an S2D storage pool. This process cleans S2D information from the disks that the storage pool aggregates, so that you can reuse the disks elsewhere. If you use a different approach to remove disks from a storage pool, both the disks and the storage pool might enter an unusable state. For more information about these issues, including related events, see [More information](#more-information).
