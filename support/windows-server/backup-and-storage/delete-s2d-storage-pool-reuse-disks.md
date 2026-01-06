@@ -41,12 +41,12 @@ The example in this section uses the following configuration:
 
 To use the procedures that this example describes, make sure that the following permissions are in place:
 
-- You have access to PowerShell in administrator mode.
+- You have access to PowerShell in administrator mode. The following steps require you to run Windows PowerShell commands in an administrative PowerShell Command Prompt window.
 - You have the necessary permissions to execute the commands on the target system.
 
 ## Step 1: Review the current S2D configuration
 
-1. To see the properties of the S2D storage pool, open a Windows PowerShell Command Prompt window. Then run the following command:
+1. To see the properties of the S2D storage pool, open an administrative PowerShell Command Prompt window. Then run the following command:
 
    ```powershell
    C:\Users\SQLVMADMIN> Get-StoragePool
