@@ -7,7 +7,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when enabling Salesforce with server-to-server flow
 
-This article helps you troubleshoot errors that might occur when you try to enable Salesforce with a server-to-server flow in Sales app.
+This article helps you troubleshoot errors that might occur when you try to enable Salesforce in a server-to-server flow in Sales app.
 
 ## Who is affected?
 
@@ -24,7 +24,7 @@ This article helps you troubleshoot errors that might occur when you try to enab
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+When you try to enable Salesforce in a server-to-server flow, the following error message might occur:
 
 > Couldn't assign permission set because the integration user is inactive in Salesforce.
 
@@ -46,7 +46,7 @@ To resolve this issue:
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+When you try to enable Salesforce in a server-to-server flow, the following error message might occur:
 
 > Couldn't create user because Salesforce integration license limit reached.
 
@@ -64,13 +64,13 @@ To check the number of integration user licenses available in your Salesforce or
 
 1. Go to **Setup** > **Company Settings** > **Company Information**.
 
-1. Under **User Licenses**, check the number of available **Salesforce Integration** licenses under the **Remaining Licenses** column. If the number is **0**, deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
+1. Under **User Licenses**, check the number of available **Salesforce Integration** licenses in the **Remaining Licenses** column. If the number is **0**, deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
 
 ## Unexpected errors when enabling Salesforce with a server-to-server flow
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, you might receive one of the following error messages:
+When you try to enable Salesforce in a server-to-server flow, you might receive one of the following error messages:
 
 - > Couldn't get deployment status due to incorrect ID format.
 - > Couldn't find the connected app.
@@ -92,7 +92,7 @@ To resolve this issue, retry the operation. If the problem continues, gather the
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+When you try to enable Salesforce in a server-to-server flow, the following error message might occur:
 
 > No changes were made.
 
@@ -108,7 +108,7 @@ To resolve this problem, check for any manual changes to the connected app or pr
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+When you try to enable Salesforce in a server-to-server flow, the following error message might occur:
 
 > The profile name is already in use. Pick a different name or rename the existing profile in Salesforce.
 
@@ -124,13 +124,13 @@ To resolve this issue, check if a profile with the same name already exists in t
 
 ### Symptoms
 
-When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
+When you try to enable Salesforce in a server-to-server flow, the following error message might occur:
 
 > Required fields are missing: \<FieldName\>
 
 ### Cause
 
-During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. This error occurs when there are custom validation rules for user creation that prevent the integration user from being automatically created in Salesforce.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. This error occurs when custom validation rules for user creation prevent the integration user from being automatically created in Salesforce.
 
 ### Resolution
 
@@ -142,6 +142,6 @@ To resolve this issue:
 
 ## More information
 
-If your issue isn't resolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with experts.
+If your problem isn't resolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
