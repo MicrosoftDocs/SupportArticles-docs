@@ -16,7 +16,7 @@ appliesto:
 
 This article uses an example Storage Spaces Direct (S2D) deployment to explain how to gracefully delete an S2D storage pool. This process cleans S2D information from the disks that the storage pool aggregates, so that you can reuse the disks elsewhere. If you use a different approach to remove disks from a storage pool, both the disks and the storage pool might enter an unusable state. For more information about these issues, including related events, see [More information](#more-information).
 
-This example uses the following steps to completely remove the S2D configuration and prepare the disks for re-use.
+This example uses the following steps to completely remove the S2D configuration and prepare the disks for reuse.
 
 1. [Review the current S2D configuration](#step-1-review-the-current-s2d-configuration).
 1. [Remove the virtual disks from the storage pool](#step-2-remove-the-virtual-disks-from-the-storage-pool).
@@ -37,7 +37,7 @@ The example in this section uses the following configuration:
 - **Disk 1**: Temporary disk
 
 > [!IMPORTANT]  
-> This example was created and tested in an Azure test lab environment. As a result, each of the disks in the earlier list appear in the command output examples as "Msft Virtual Disk," even though the example treats them as physical disks.
+> This example was created and tested in an Azure test lab environment. As a result, each of the disks in the earlier list appears in the command output examples as "Msft Virtual Disk," even though the example treats them as physical disks.
 
 To use the procedures that this example describes, make sure that the following permissions are in place:
 
@@ -257,7 +257,7 @@ Number FriendlyName      SerialNumber MediaType    CanPool OperationalStatus Hea
 
 ## More information
 
-If you remove a physical disk from the storage pool infrastructure without using the process described in this article, both the storage pool and the disk experience issues. For example, if you remove a disk from one node, the System event log of that node generates Event ID 157:
+If you remove a physical disk from the storage pool infrastructure without using the process described earlier, both the storage pool and the disk become unusable. For example, if you remove a disk from one node, the System event log of that node generates Event ID 157:
 
 ```output
 Log Name:      System
@@ -318,4 +318,4 @@ If you connect the disk to a new server, the disk might appear to be healthy, bu
 
 :::image type="content" source="media/delete-s2d-storage-pool-reuse-disks/diskmgr-error-detail.png" alt-text="Screenshot of the Disk Manager that shows a disk that was improperly moved from a storage pool to a separate server." lightbox="media/delete-s2d-storage-pool-reuse-disks/diskmgr-error-detail-expanded.png":::
 
-Note that according to Disk Manager, the disk still belongs to the storage pool.
+According to Disk Manager, the disk still belongs to the storage pool.
