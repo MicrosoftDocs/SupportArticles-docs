@@ -2,13 +2,13 @@
 title: Use Remote Connectivity Analyzer to troubleshoot single sign-on issues
 description: Describes how to use Remote Connectivity Analyzer to diagnose single sign-on (SSO) logon issues in Microsoft 365, Azure, or Microsoft Intune. Also contains information about causes of common SSO failures and links to troubleshooting resources.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-jocomf, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: meerak
-ms.reviewer: v-jocomf
 search.appverid: 
   - MET150
 appliesto: 
@@ -30,18 +30,18 @@ Remote Connectivity Analyzer is a free connectivity test platform for the cloud-
 
 ## More information
 
-The data flow of any SSO communication is predictable. The expected data flow pattern can be compared to or contrasted with a capture of the actual data flow that occurs during a failing SSO attempt to determine what might be wrong with the process. 
+The data flow of any SSO communication is predictable. The expected data flow pattern can be compared to or contrasted with a capture of the actual data flow that occurs during a failing SSO attempt to determine what might be wrong with the process.
 
 ### How to run Remote Connectivity Analyzer to test SSO authentication
- 
+
 To run Remote Connectivity Analyzer to test SSO authentication, follow these steps:
 
-1. Open a web browser, and then browse to [https://www.testconnectivity.microsoft.com/tests/SingleSignOn/input](https://www.testconnectivity.microsoft.com/tests/SingleSignOn/input).   
+1. Open a web browser, and then browse to [https://www.testconnectivity.microsoft.com/tests/](https://www.testconnectivity.microsoft.com/tests/).
 2. Type your user ID and the password, click to select the security acknowledgement check box, type the verification code, and then click **Perform Test**.
 
     > [!NOTE]
-    > - Your user ID is your user principal name (UPN).    
-    > - You must enter the actual credentials that are associated with the SSO implementation that you're testing.   
+    > - Your user ID is your user principal name (UPN).
+    > - You must enter the actual credentials that are associated with the SSO implementation that you're testing.
     
     :::image type="content" source="media/single-sign-on-issues/remote-connectivity-analyzer.png" alt-text="Screenshot of the Remote Connectivity Analyzer page.":::
 

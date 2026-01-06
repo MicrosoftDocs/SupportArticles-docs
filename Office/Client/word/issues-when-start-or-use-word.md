@@ -2,7 +2,9 @@
 title: How to troubleshoot problems that occur when you start or use Word
 description: Provides a guide to identify and resolve problems that you experience when you start Word.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 ms.date: 06/06/2024
 search.appverid: 
   - MET150
@@ -13,7 +15,6 @@ ms.custom:
   - Reliability
   - CI 117479
   - CSSTroubleshoot
-ms.author: meerak
 appliesto: 
   - Word for Microsoft 365
   - Word 2019
@@ -288,13 +289,13 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 ## Verify or install the latest updates
 
-For list of the latest Office updates, see [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29.aspx). If your issue is not resolved after you install the latest Windows and Office updates, go to Option 1.
+If your issue is not resolved after you install the latest Windows and Office updates, go to Option 1.
 
 ## Additional resources
  
 If you experience specific issues when you use Word, go to the following website to search for more information about your program version:
 
-[Microsoft Office Support search: Word](https://support.office.com/search/results?query=word)
+[Microsoft Office Support search: Word](https://support.microsoft.com/search/results?query=word)
 
 ## Detailed view of the options
 

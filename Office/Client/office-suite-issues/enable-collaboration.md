@@ -2,7 +2,9 @@
 title: Features to enable collaboration and not to increase security
 description: Describes features in Office products that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: ambroset, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -10,8 +12,6 @@ ms.custom:
   - Sharing\Collab
   - CSSTroubleshoot
   - CI 162681
-ms.author: meerak
-ms.reviewer: ambroset
 search.appverid: 
   - MET150
 appliesto: 
@@ -93,8 +93,3 @@ For a password to be a strong password, it should meet all the following criteri
 -  Do not use any part of your user name for logging on to the Internet or a network.    
 -  Not be a common word, a common name, or a word that a person might guess like your own name. When a malicious user tries to bypass a password, they may use a tool that tries a number of common words to try and guess your password.    
 Use a strong password that you can remember so that you do not have to write it down. If you must write down a password to remember it, store the password in a secure place.
-
-## References
-
-For more information about features that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure in PowerPoint, see
-[How password protection works with PowerPoint Show (*.pps) files](https://support.microsoft.com/help/278578).

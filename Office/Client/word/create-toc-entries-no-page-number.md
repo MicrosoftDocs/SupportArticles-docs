@@ -24,7 +24,7 @@ ms.date: 06/06/2024
 # How to create table of contents entries without a page number in Word
 
 > [!NOTE]
-> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://smallbusiness.support.microsoft.com/) site.  
+> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://support.microsoft.com/smallbusiness/) site.  
 
 ## Summary
 

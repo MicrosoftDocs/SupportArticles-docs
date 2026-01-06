@@ -4,9 +4,9 @@ description: This article fixes an issue that causes the installation of the Exc
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: arindamt, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: arindamt, v-six
 ms.custom: 
   - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013
 ms.date: 01/24/2024
 ---
+
 # Error when installation of Exchange Edge Transport role fails: Process execution failed with exit code 3
 
 _Original KB number:_ &nbsp; 4495264
@@ -39,5 +40,4 @@ This issue occurs because Visual C++ 2012 isn't installed on the server. Visual 
 
 To fix this issue, install Visual C++ 2012, and run the Setup wizard again.
 
-The following article lists the download links for the latest versions of Visual C++:  
-[The latest supported Visual C++ downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+The following article lists the download links for the latest versions of Visual C++: [The latest supported Visual C++ downloads](/cpp/windows/latest-supported-vc-redist?view=msvc-170).
