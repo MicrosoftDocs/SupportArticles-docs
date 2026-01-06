@@ -18,7 +18,7 @@ The symptoms of this problem depend on whether you're trying an [online installa
 
 ### Online installation
 
-When you try an _online installati9on_ of Visual Studio 2017 or a later version, the installation wizard displays the following message:
+When you try an _online installation_ of Visual Studio 2017 or a later version, the installation wizard displays the following message:
 
 > Before you get started, we need to set up a few things so that you can configure your installation.
 
@@ -87,7 +87,7 @@ To resolve this problem, follow these steps:
 
 1. Download the [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate by using a device that has internet access.
 1. Copy the certificate file to `C:\Temp` on the device that experiences the installation problem.
-1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate in the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store). To do this, run the following command in an elevated Command Prompt window:
+1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate in the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store) by runninng the following command in an elevated Command Prompt window:
 
    ```cli
    CertUtil -addStore CA "C:\Temp\Microsoft Windows Code Signing PCA 2024.crt"
