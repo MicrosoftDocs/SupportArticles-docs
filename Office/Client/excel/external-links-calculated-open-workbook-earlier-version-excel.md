@@ -1,7 +1,10 @@
 ---
 title: External links may be calculated when you open a workbook
 description: External links in a workbook from an earlier version of Excel are calculated.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,11 +17,9 @@ appliesto:
 - Excel 2019
 - Excel 2021
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 05/26/2025
 ---
+
 # External links may be calculated when you open a workbook that was last saved in an earlier version of Excel
 
 ## Symptoms
