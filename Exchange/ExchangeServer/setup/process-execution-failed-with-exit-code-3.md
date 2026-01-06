@@ -40,4 +40,4 @@ This issue occurs because Visual C++ 2012 isn't installed on the server. Visual 
 
 To fix this issue, install Visual C++ 2012, and run the Setup wizard again.
 
-The following article lists the download links for the latest versions of Visual C++: [The latest supported Visual C++ downloads](/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+The following article lists the download links for the latest versions of Visual C++:  [The latest supported Visual C++ downloads](/cpp/windows/latest-supported-vc-redist).
