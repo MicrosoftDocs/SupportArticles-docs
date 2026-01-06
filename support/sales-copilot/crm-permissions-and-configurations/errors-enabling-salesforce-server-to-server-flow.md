@@ -138,7 +138,7 @@ To resolve this issue:
 
 1. Temporarily disable the custom validation rules for user creation by going to **Setup** > **Object Manager** > **User** > **Validation Rules**.
 1. Retry setting up the Salesforce connection in the [Sales admin settings](/dynamics365/sales/admin-settings-overview).
-1. After the Salesforce connection is setup and the integration user created, re-enable your validation rules.
+1. After the Salesforce connection is set up and the integration user created, re-enable your validation rules.
 
 ## More information
 
