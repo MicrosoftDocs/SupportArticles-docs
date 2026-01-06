@@ -1,14 +1,13 @@
 ---
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
-ms.reviewer: pefelesk, mitsirak, nimoutzo
-ms.author: iomimtso
+ms.reviewer: pefelesk, mitsirak, nimoutzo, iomimtso, v-shaywood
 ms.date: 11/26/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
 
-If you encounter issues while [automating Java applications](/power-automate/desktop-flows/how-to/java) with Power Automate for desktop, follow the steps in this article to troubleshoot the issue.
+When [automating Java applications](/power-automate/desktop-flows/how-to/java) with Power Automate for desktop, you might experience an issue where Power Automate can't access the UI elements of the Java application. Follow the steps in this article to troubleshoot this issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
@@ -17,9 +16,9 @@ _Original KB number:_ &nbsp; 5014922
 
 Power Automate for desktop can't access the UI elements of a Java desktop application when you use either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
 
-## Troubleshooting steps
+## Diagnose using the troubleshooter
 
-To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/troubleshooter) first.
+To solve this issue, first try the [troubleshooter](/power-automate/desktop-flows/troubleshooter):
 
 1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
@@ -29,41 +28,55 @@ To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/trou
 
 4. If a **Fix** button is available, select it to apply the fix. Ensure all running **Java** applications are closed before applying the fix.
 
-If the issue persists after using the troubleshooter, follow these steps to manually troubleshoot the issue:
+If the issue persists after using the troubleshooter, follow the steps in [Manual troubleshooting](#manual-troubleshooting) to further troubleshoot the issue.
 
-## 1. Manually configure Java (only for Java 7 and 8)
+## Manual troubleshooting
 
 Use these steps only if the troubleshooter finds no Java installations or cannot configure the environment.
 
-### A. Locate the Java installation folder
+### Configure Java (for Java 7 and 8)
 
-- Check common paths such as `C:\Program Files\Java\jre7` or `C:\Program Files\Java\jre8`.
-- Some apps use an embedded Java runtime that is not registered system-wide. Start the Java application, open Task Manager, find the `java.exe` process, right-click it, and choose **Open file location**. Use that folder as `<JRE_HOME>\bin`.
-- To avoid this issue in future, install Java under `Program Files` or enable the option to register Java in the system registry during installation.
+Use these steps to troubleshoot Java 7 and 8. If you are using Java 9 or later, see [Configure Java (for Java 9 and later)](#configure-java-for-java-9-and-later).
 
-### B. Copy required files (administrator rights required)
+#### Locate the Java installation folder
 
-Copy these files from the Power Automate for desktop installation folder (C:\Program Files (x86)\Power Automate Desktop\dotnet\java-support):
+1. Check common paths such as `C:\Program Files\Java\jre7` or `C:\Program Files\Java\jre8`.
+1. Some apps use an embedded Java runtime that is not registered system-wide. To identify the location of an embedded Java runtime:
+
+   1. Start the Java application.
+
+   1. Open Task Manager.
+
+   1. Find the `java.exe` process, right-click it, and then choose **Open file location**.
+  
+   1. Use that folder as `<JRE_HOME>\bin`.
+  
+To avoid this issue in future, install Java under `Program Files` or enable the option to register Java in the system registry during installation.
+
+#### Copy required files (administrator rights required)
+
+Copy these files from the Power Automate for desktop installation folder (`C:\Program Files (x86)\Power Automate Desktop\dotnet\java-support`):
 
 - `PAD.JavaBridge.jar` to `<JRE_HOME>\lib\ext\`
-- `Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll` (x86 or x64 depending on the Java architecture) to `<JRE_HOME>\bin\`
+- `Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll` to `<JRE_HOME>\bin\` (x86 or x64 depending on the Java architecture) 
 
-### C. Update accessibility configuration
+#### Update accessibility configuration
 
 1. Open `<JRE_HOME>\lib\accessibility.properties` in a text editor. Create the file if it doesn't exist.
-2. Add or update this line:
+1. Add or update this line:
 
-   assistive_technologies=microsoft.flows.rpa.desktop.uiautomation.JavaBridge
+   `assistive_technologies=microsoft.flows.rpa.desktop.uiautomation.JavaBridge`
 
    If the line starts with `#`, remove the `#` to uncomment it. If other assistive technologies are listed, append the Microsoft value at the end, separated by a comma.
 
-Note: Manual file placement works only for Java 7 and 8. Java 9 and later do not support loading assistive technologies by this method.
+> [!NOTE]
+> Manual file placement works only for Java 7 and 8. Java 9 and later do not support loading assistive technologies by this method.
 
-## 2. Workaround for Java 9 and later (or when file placement is not possible)
+### Configure Java (for Java 9 and later)
 
-For Java 9+ you cannot modify the Java installation in the same way. Use one of these options.
+For Java 9 and later versions, you cannot modify the Java installation in the same way. Use one of the following methods instead.
 
-### A. Set environment variable (recommended)
+#### Set environment variable (recommended)
 
 Set a system or user environment variable named `JDK_JAVA_OPTIONS` with this value (64-bit example):
 
@@ -71,12 +84,12 @@ Set a system or user environment variable named `JDK_JAVA_OPTIONS` with this val
 
 For 32-bit Java, use the `x86` folder instead of `x64`.
 
-### B. Add JVM arguments to the Java application start command
+#### Add JVM arguments to the Java application start command
 
 Append these arguments to the app's Java startup command:
 
 - `-javaagent:"<PAD install path>\dotnet\java-support\PAD.JavaBridge.jar"`
-- `-Djava.library.path="<PAD install path>\dotnet\java-support\x64"` (or `x86`)
+- `-Djava.library.path="<PAD install path>\dotnet\java-support\x64"` (for 32-bit Java, use the `x86` folder instead of `x64`)
 
 ## Key clarifications and troubleshooting tips
 
@@ -89,7 +102,7 @@ Append these arguments to the app's Java startup command:
 - If you placed the files manually, they are not updated automatically when Power Automate for desktop is updated. Repeat the manual file placement after each Power Automate for desktop update to use the latest Java automation files.
 - After making changes, close all running Java applications. Restarting the PC is recommended.
 
-## More information
+## Related content
 
 - [Automate Java applications](/power-automate/desktop-flows/desktop-flows/how-to/java)
 - [Troubleshoot UI automation in Power Automate for desktop](/power-automate/desktop-flows/how-to/troubleshoot-ui-automation)
