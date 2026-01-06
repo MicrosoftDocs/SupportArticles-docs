@@ -104,7 +104,7 @@ Append these arguments to the app's Java startup command:
 
 ## Related content
 
-- [Automate Java applications](/power-automate/desktop-flows/desktop-flows/how-to/java)
-- [Troubleshoot UI automation in Power Automate for desktop](/power-automate/desktop-flows/how-to/troubleshoot-ui-automation)
+- [Automate Java applications](/power-automate/desktop-flows/how-to/java)
+- [Power Automate troubleshooting](../../welcome-power-automate.yml)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
