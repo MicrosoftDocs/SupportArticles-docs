@@ -88,9 +88,6 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 
 To resolve this issue, retry the operation. If the problem continues, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-> [!NOTE]
-> You might encounter an error message that's not listed above. This issue can happen for several reasons. For example, your Salesforce organization might have a validation rule that requires specific values for user records. If this prevents the integration user from being created, try temporarily disabling the validation rule. Once the integration user is created, you can re-enable the rule.
-
 ## No changes were made
 
 ### Symptoms
@@ -140,7 +137,8 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 To resolve this issue:
 
 1. Temporarily disable the custom validation rules for user creation by going to **Setup** > **Object Manager** > **User** > **Validation Rules**.
-1. Create the integration user manually and provide the Salesforce user ID to [Microsoft support](/microsoft-sales-copilot/get-support) so the user can be added to the backend allow list. Microsoft then creates the user, bypassing the validation rules.
+1. Retry setting up the Salesforce connection in the [Sales admin settings](/dynamics365/sales/admin-settings-overview).
+1. After the Salesforce connection is setup and the integration user created, re-enable your validation rules.
 
 ## More information
 
