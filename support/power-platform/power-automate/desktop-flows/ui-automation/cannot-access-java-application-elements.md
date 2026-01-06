@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
 
-When [automating Java applications](/power-automate/desktop-flows/how-to/java) with Power Automate for desktop, you might experience an issue where Power Automate can't access the UI elements of the Java application. Follow the steps in this article to troubleshoot this issue.
+When [automating Java applications](/power-automate/desktop-flows/how-to/java) by using Power Automate for desktop, you might experience an issue where Power Automate can't access the UI elements of the Java application. Follow the steps in this article to troubleshoot this issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
@@ -18,30 +18,30 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
 ## Diagnose using the troubleshooter
 
-To solve this issue, first try the [troubleshooter](/power-automate/desktop-flows/troubleshooter):
+To solve this problem, first try the [troubleshooter](/power-automate/desktop-flows/troubleshooter):
 
-1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
+1. In Power Automate for desktop, go to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
-2. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
+1. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
 
-3. If an issue is found for **Java Automation**, expand the panel to see the details.
+1. If the troubleshooter finds an issue for **Java Automation**, expand the panel to see the details.
 
-4. If a **Fix** button is available, select it to apply the fix. Ensure all running **Java** applications are closed before applying the fix.
+1. If a **Fix** button is available, select it to apply the fix. Make sure you close all running **Java** applications before applying the fix.
 
-If the issue persists after using the troubleshooter, follow the steps in [Manual troubleshooting](#manual-troubleshooting) to further troubleshoot the issue.
+If the problem persists after using the troubleshooter, follow the steps in [Manual troubleshooting](#manual-troubleshooting) to further troubleshoot the problem.
 
 ## Manual troubleshooting
 
-Use these steps only if the troubleshooter finds no Java installations or cannot configure the environment.
+Use these steps only if the troubleshooter finds no Java installations or can't configure the environment.
 
 ### Configure Java (for Java 7 and 8)
 
-Use these steps to troubleshoot Java 7 and 8. If you are using Java 9 or later, see [Configure Java (for Java 9 and later)](#configure-java-for-java-9-and-later).
+Use these steps to troubleshoot Java 7 and 8. If you're using Java 9 or later, see [Configure Java (for Java 9 and later)](#configure-java-for-java-9-and-later).
 
 #### Locate the Java installation folder
 
 1. Check common paths such as `C:\Program Files\Java\jre7` or `C:\Program Files\Java\jre8`.
-1. Some apps use an embedded Java runtime that is not registered system-wide. To identify the location of an embedded Java runtime:
+1. Some apps use an embedded Java runtime that isn't registered system-wide. To identify the location of an embedded Java runtime:
 
    1. Start the Java application.
 
@@ -51,7 +51,7 @@ Use these steps to troubleshoot Java 7 and 8. If you are using Java 9 or later, 
   
    1. Use that folder as `<JRE_HOME>\bin`.
   
-To avoid this issue in future, install Java under `Program Files` or enable the option to register Java in the system registry during installation.
+To avoid this issue in the future, install Java under `Program Files` or enable the option to register Java in the system registry during installation.
 
 #### Copy required files (administrator rights required)
 
@@ -70,11 +70,11 @@ Copy these files from the Power Automate for desktop installation folder (`C:\Pr
    If the line starts with `#`, remove the `#` to uncomment it. If other assistive technologies are listed, append the Microsoft value at the end, separated by a comma.
 
 > [!NOTE]
-> Manual file placement works only for Java 7 and 8. Java 9 and later do not support loading assistive technologies by this method.
+> Manual file placement works only for Java 7 and 8. Java 9 and later don't support loading assistive technologies by this method.
 
 ### Configure Java (for Java 9 and later)
 
-For Java 9 and later versions, you cannot modify the Java installation in the same way. Use one of the following methods instead.
+For Java 9 and later versions, you can't modify the Java installation in the same way. Use one of the following methods instead.
 
 #### Set environment variable (recommended)
 
@@ -95,11 +95,11 @@ Append these arguments to the app's Java startup command:
 
 - Always try the Power Automate for desktop Troubleshooter first. It's the safest and fastest method to configure Java automation.
 - Manual file placement applies only to Java 7 and 8. Use the environment-variable or JVM-argument method for Java 9 and later.
-- Java versions earlier than 7 are not supported.
-- The attach mechanism may not work reliably with Java 9 or Java 10.
+- Java versions earlier than 7 aren't supported.
+- The attach mechanism might not work reliably with Java 9 or Java 10.
 - Use Task Manager to find the Java executable path when an application uses an embedded runtime.
-- Administrator rights are required to place files in Java installation folders.
-- If you placed the files manually, they are not updated automatically when Power Automate for desktop is updated. Repeat the manual file placement after each Power Automate for desktop update to use the latest Java automation files.
+- You need administrator rights to place files in Java installation folders.
+- If you placed the files manually, they aren't updated automatically when Power Automate for desktop is updated. Repeat the manual file placement after each Power Automate for desktop update to use the latest Java automation files.
 - After making changes, close all running Java applications. Restarting the PC is recommended.
 
 ## Related content
