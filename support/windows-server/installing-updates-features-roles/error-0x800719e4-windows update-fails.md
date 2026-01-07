@@ -1,0 +1,159 @@
+---
+title: Error 0x800719e4 (ERROR_LOG_FULL) when Windows update fails
+description: Discusses how to fix Windows Update failures that relate to to error code `0x800719e4 (ERROR_LOG_FULL)`. Typically, this error occurs on Azure-hosted Windows virtual machines (VMs).
+ms.date: 01/08/2026
+manager: dcscontentpm
+audience: itpro
+ai.usage: ai-assisted
+ms.topic: troubleshooting
+ms.reviewer: kaushika, dougking, v-appelgatet
+ms.custom:
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
+- pcy:WinComm Devices Deploy
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
+---
+# Error 0x800719e4 (ERROR_LOG_FULL) when Windows update fails
+
+This article discusses how to fix Windows Update failures that relate to error code `0x800719e4 (ERROR_LOG_FULL)`. Typically, this error occurs on Azure-hosted Windows virtual machines (VMs).
+
+## Symptoms
+
+When you try to install an update, the installation fails with error code `0x800719e4 (ERROR_LOG_FULL)`. The update might appear to install, but after the computer restarts at the end of installation, the installation rolls back. The Windows Update history might list repeated failed installations.
+
+When you check the System log and the CBS log, you see errors that might include the following error messages:
+
+- `Failed uninstalling driver updates [HRESULT = 0x800719e4 - ERROR_LOG_FULL]`
+- `Startup: Failed while processing non-critical driver operations queue`
+- `patch not applicable` or `patch not reflecting after restart`
+- `0x80070002 (ERROR_FILE_NOT_FOUND)`
+- `0x800f0991 (PSFX_E_MISSING_PAYLOAD_FILE)`
+- `0x800f0982 (PSFX_E_MATCHING_COMPONENT_NOT_FOUND)`
+- `0x800F0920 (CBS_E_HANG_DETECTED)`
+
+## Cause
+
+Typically, this issue occurs during the installation or uninstallation of cumulative or driver-related updates. 
+
+- **Transaction log exhaustion, corruption, or improper cleanup**. Windows transaction logs (.blf files and .regtrans-ms files in \Windows\System32\Config\TxR) become full or corrupted, blocking update processes. Improper cleaning of the transaction logs can lead to further system corruption and startup failures.
+- **"Ghosted" NICs or drivers**. VMs that are frequently deallocated and reallocated in Azure can accumulate replicas of network adapters or drivers (also known as "ghosted" or hidden devices that remain in the system registry but are no longer physically present). This behavior has been observed for Mellanox devices. When this occurs, driver update queues increase in size and logs eventually overflow.
+- **Misconfigured update orchestration**. Incorrect settings for update orchestration (such as not using the **Customer Managed** option) can contribute to update failures.
+
+## Resolution
+
+> [!IMPORTANT]  
+>
+> - If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using SSH, make sure that you can use the Azure Serial Console to access the VM.
+> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> - Use administrative permissions to run all of the commands and scripts in these steps.
+
+### Step 1: Check the system health
+
+To check the system health, and make any necessary repairs, open an administrative Command Prompt window, and then run the following commands:
+
+```console
+DISM /Online /Cleanup-Image /RestoreHealth
+SFC /SCANNOW
+```
+
+Review the output for errors or corruption. If these commands made repairs, try to again install the update.
+
+### Step 2: Clean up the transaction logs
+
+> [!IMPORTANT]  
+> As mentioned previously in this article, incorrectly cleaning up transaction logs can cause additional issues. Follow these steps carefully. This section contains two procedures. In most cases, you should use Option A. Use Option B only in the case of VMs that can't start.
+
+**Option A (Safer method): Rename the TxR and Windows Update folders**
+
+1. To stop the Windows Update service (WUauServ) and the Background Intelligent Transfer Service (BITS), run the following commands:
+
+   ```console
+   net stop wuauserv
+   net stop bits
+   ```
+
+1. To rename the TxR and Windows Update folders, run the following commands:
+
+   ```console
+   ren C:\Windows\System32\Config\TxR TxR_old
+   ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
+   ren C:\Windows\System32\catroot2 catroot2.old
+   ren C:\Windows\winsxs\pending.xml pending.old
+   ```
+
+1. To restart the services, run the following commands:
+
+   ```console
+   net start wuauserv
+   net start bits
+   ```
+
+1. Restart the computer, and then try again to install the update.
+
+**Option B (Use only on a VM that doesn't start): Use a rescue VM to remove files**
+
+1. Create a rescue VM, and then move the operating system disk from the affected VM to the rescue VM.
+1. On the rescue VM, in an administrative command prompt window, change the working directory to \<drive>:\Windows\System32\Config\TxR.
+1. To remove the system and hidden attributes from the transaction log files, run the following command:
+
+   ```console
+   attrib -h -s *
+   ```
+
+1. To delete the transaction log files, run the following commands:
+
+   ```console
+   del *.blf
+   del *.regtrans-ms
+   ```
+
+1. Move the operating system disk back to the original VM.
+
+1. Start the VM, and then try again to install the update.
+
+### Step 3: Check for ghosted network adapters or drivers
+
+> [!NOTE]  
+> A computer that accumulates ghosted network adapters or drivers might continue to do so. Consider checking for this issue periodically as part of regular maintenance.
+
+1. Download the following scripts:
+
+- [Windows_GhostedNIC_Detection.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Detection.ps1)
+- [Windows_GhostedNIC_Removal.ps1](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_GhostedNIC_Removal.ps1)
+
+1. To detect any ghosted network adapters or drivers, open an administrative Windows PowerShell Command Prompt window and then run the following commands:
+
+   ```powershell
+   Set-ExecutionPolicy Bypass -Force
+   .\Windows_GhostedNIC_Detection.ps1
+   ```
+
+1. If the script detects ghosted network adapters or drivers, run the following commands:
+
+   ```powershell
+   Set-ExecutionPolicy Bypass -Force
+   .\Windows_GhostedNIC_Removal.ps1
+   ```
+
+1. If the affected computer has a Mellanox adapter or driver, run the following commands:
+
+   ```powershell
+   Get-PnpDevice | Where-Object { $_.FriendlyName -like "*Mellanox*" }
+   pnputil /remove-device <InstanceID>
+   ```
+
+   > [!NOTE]  
+   > In this command, \<InstanceID> represents the instance ID number of the device.
+
+1. Restart the computer, and then try again to install the update.
+
+## Data collection
+
+If issues persist, consider contacting Microsoft Support. Before you contact Microsoft Support for assistance, use the Trouble Shooting Script (TSS) diagnostic scripts to collect data, as described in [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext#scenario-failures-to-install-windows-updates-or-features-on-demand). Attach this information to your support request.
+
+## References
+
+- [Ghosted NIC Detection & Removal Scripts](https://github.com/Azure/azure-support-scripts)
+- [Introduction to TroubleShootingScript toolset (TSS)](../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
