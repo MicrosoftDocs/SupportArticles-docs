@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Edge troubleshooting # < 60 chars
+title: Microsoft Edge troubleshooting
 summary: Welcome to Microsoft Edge troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Edge. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Microsoft Edge troubleshooting
-  description: Landing page for Microsoft Edge troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  description: Landing page for Microsoft Edge troubleshooting articles. 
   ms.service: TODO # Check with Aarti
   ms.topic: landing-page 
   author: aartig13 
@@ -15,11 +15,16 @@ metadata:
 
 landingContent:
 
- # Check with Aarti about what cards we should have
-  - title: TODO
+  - title: Manage and Deploy
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: TODO
-            url: TODO.md
-            
+          - text: Install, update, or rollback failures for Edge and Edge WebView2
+            url: manageability/update-install-rollback-failures.md
+  
+  - title: Web Platform and Development
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: TODO
+          url: TODO
