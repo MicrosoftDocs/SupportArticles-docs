@@ -45,7 +45,7 @@ To work around this issue, use one of the following methods:
 - Instead of specifying the grandchild OU as the base DN in the Adamsync configuration file, specify the child OU as the base DN. For example, use the following syntax to specify the base DN in the Adamsync configuration file:
 
   ```xml
-  <base-dn>OU=Child,DC=DomainComponentName,...</base-dn>
+  <base-dn>OU=Child,DC=03child,DC=MyDomCon,DC=net</base-dn>
   ```
 
 ## More information
@@ -83,8 +83,8 @@ You can reproduce the issue by following these steps:
    Adamsync /sync <AdamServerName>:<PortNo> "dc=lds-target,dc=com" /Log Synclog.txt
    ```
 
-   [!NOTE]  
-   In this command, `dc=lds-target,dc=com` represents the target naming context in the AD LDS instance. `Synclog.txt` is the file name of the synchronization log.
+   > [!NOTE]  
+   > In this command, `dc=lds-target,dc=com` represents the target naming context in the AD LDS instance. `Synclog.txt` is the file name of the synchronization log.
 
    The synchronization process runs for a much longer time than you expect.
 
