@@ -29,10 +29,10 @@ The current Windows Server Failover Cluster (WSFC) configuration isn't changed. 
 
 The example in this section uses the following configuration:
 
-- **S2D on S2DclusterNew**: S2D storage pool that includes two virtual disks that host volumes (ClusterPerformanceHistory and userdata01)
+- **S2D on S2DclusterNew**: S2D storage pool. It includes two virtual disks that host volumes (ClusterPerformanceHistory and userdata01)
 - Cluster configuration:
-  - **S2D-1.contoso.com**: Cluster node 1 that has three attached disks (1002, 1003, and 1004)
-  - **S2D-2.contoso.com**: Cluster node 2 that has three attached disks (2002, 2003, and 2004)
+  - **S2D-1.contoso.com**: Cluster node that has three attached disks (1002, 1003, and 1004)
+  - **S2D-2.contoso.com**: Cluster node that has three attached disks (2002, 2003, and 2004)
 - **Disk 0**: Operating system disk
 - **Disk 1**: Temporary disk
 
