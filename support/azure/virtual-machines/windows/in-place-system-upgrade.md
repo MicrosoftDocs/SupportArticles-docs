@@ -51,7 +51,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 single-session (includes Enterprise multi-session, all versions)
+- Windows 10 and 11 single-session up to Windows 10 and 11 multi-session (all versions)
 - Windows 8.1
 - Windows 7 Enterprise
 
