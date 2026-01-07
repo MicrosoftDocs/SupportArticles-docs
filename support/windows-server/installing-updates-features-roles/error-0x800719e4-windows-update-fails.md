@@ -115,7 +115,7 @@ Review the output for errors or corruption. If these commands made repairs, try 
 
 ### Step 3: Check for ghosted network adapters or drivers
 
-For more information about this issue, see [Azure VM Ghosted Nic Validation and Cleanup Tools](../../../azure/virtual-machines/windows/windows-vm-ghostednic-tool).
+For more information about this issue, see [Azure VM Ghosted Nic Validation and Cleanup Tools](../../../../azure/virtual-machines/windows/windows-vm-ghostednic-tool).
 
 > [!NOTE]  
 > A computer that accumulates ghosted network adapters or drivers might continue to do so. Consider checking for this issue periodically as part of regular maintenance.
@@ -153,9 +153,9 @@ For more information about this issue, see [Azure VM Ghosted Nic Validation and 
 
 ## Data collection
 
-If issues persist, consider contacting Microsoft Support. Before you contact Microsoft Support for assistance, use the Trouble Shooting Script (TSS) diagnostic scripts to collect data, as described in [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext#scenario-failures-to-install-windows-updates-or-features-on-demand). Attach this information to your support request.
+If issues persist, consider contacting Microsoft Support. Before you contact Microsoft Support for assistance, use the Trouble Shooting Script (TSS) diagnostic scripts to collect data, as described in [Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext#scenario-failures-to-install-windows-updates-or-features-on-demand). Attach this information to your support request.
 
 ## References
 
 - [Ghosted NIC Detection & Removal Scripts](https://github.com/Azure/azure-support-scripts)
-- [Introduction to TroubleShootingScript toolset (TSS)](../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
+- [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
