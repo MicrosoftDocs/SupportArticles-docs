@@ -132,7 +132,9 @@ Windows 365 provisioned the Cloud PC but didn't hide the shutdown and restart ic
 
 ## Supported Azure regions for Cloud PCs not listed in the provisioning user interface
 
-If a specific region isn't listed in the Cloud PC provisioning user interface (UI), but is listed in the [Windows 365 requirements documentation](/windows-365/enterprise/requirements), Windows 365 might expand in a new region. If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
+If a specific region isn't listed in the Cloud PC provisioning user interface (UI), but is listed in the [Windows 365 requirements documentation](/windows-365/enterprise/requirements), Windows 365 might expand in a new region.
+
+**Suggested solution:** If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
 
 ## Time zone redirection error
 
