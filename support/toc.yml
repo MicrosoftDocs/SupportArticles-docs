@@ -22,6 +22,8 @@
   href: system-center/index.yml
 - name: Welcome
   href: azure/index.yml
+- name: Microsoft Edge
+  href: edge/welcome-edge.yml
 - name: Welcome
   href: entra/welcome-entra.yml
 - name: Welcome

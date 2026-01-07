@@ -1,0 +1,25 @@
+### YamlMime:Landing
+
+title: Microsoft Edge troubleshooting # < 60 chars
+summary: Welcome to Microsoft Edge troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Edge. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Edge troubleshooting
+  description: Landing page for Microsoft Edge troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: TODO # Check with Aarti
+  ms.topic: landing-page 
+  author: aartig13 
+  ms.author: aartigoyle
+  ms.date: 01/07/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Check with Aarti about what cards we should have
+  - title: TODO
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: TODO
+            url: TODO.md
+            
