@@ -1,13 +1,13 @@
 ---
 title: Errors When Enabling Salesforce in Server-to-Server Flow
-description: Troubleshoot errors that occur when you try to enable Salesforce in a server-to-server flow in the Sales app.
+description: Troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales app.
 ms.date: 12/16/2025
 ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Errors occur when enabling Salesforce in a server-to-server flow
+# Errors occur when enabling Salesforce with a server-to-server flow
 
-This article helps you troubleshoot errors that occur when you try to enable Salesforce in a server-to-server flow in the Sales app.
+This article helps you troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales app.
 
 ## Who is affected?
 
@@ -24,7 +24,7 @@ This article helps you troubleshoot errors that occur when you try to enable Sal
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > Couldn't assign permission set because the integration user is inactive in Salesforce.
 
@@ -44,7 +44,7 @@ To resolve this issue:
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > Couldn't create user because Salesforce integration license limit reached.
 
@@ -64,11 +64,11 @@ To check the number of integration user licenses available in your Salesforce or
 
 1. Under **User Licenses**, check the number of available **Salesforce Integration** licenses in the **Remaining Licenses** column. If the number is **0**, deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
 
-## Errors when enabling Salesforce in a server-to-server flow
+## Errors when enabling Salesforce with a server-to-server flow
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive one of the following error messages:
+When you try to enable Salesforce with a server-to-server flow, you receive one of the following error messages:
 
 > Couldn't get deployment status due to incorrect ID format.
 
@@ -96,7 +96,7 @@ To resolve this issue, retry the operation. If the problem continues, gather the
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > No changes were made.
 
@@ -112,7 +112,7 @@ To resolve this problem, check for any manual changes to the connected app or pr
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > The profile name is already in use. Pick a different name or rename the existing profile in Salesforce.
 
@@ -128,7 +128,7 @@ To resolve this issue, check whether a profile that has the same name already ex
 
 ### Symptoms
 
-When you try to enable Salesforce in a server-to-server flow, you receive the following error message:
+When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > Required fields are missing: \<FieldNames\>
 
@@ -141,7 +141,7 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 To resolve this issue:
 
 1. Temporarily disable the custom validation rules for user creation. To make this change, go to **Setup** > **Object Manager** > **User** > **Validation Rules**.
-1. Try again to set up the Salesforce connection in the [Sales admin settings](/dynamics365/sales/admin-settings-overview).
+1. Try again to set up the Salesforce connection in the [Sales app admin settings](/microsoft-sales-copilot/connect-agent-datasource).
 1. After the Salesforce connection is set up and the integration user is created, re-enable your validation rules.
 
 ## More information
