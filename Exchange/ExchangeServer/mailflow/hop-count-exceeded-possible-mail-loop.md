@@ -36,9 +36,9 @@ In this scenario, the message cannot be sent. Instead, it loops between the Exch
 
 ## Cause
 
-This issue occurs because the Exchange Edge server cannot associate the SMTP address space for the application as a subdomain to the accepted domain. This is true even though the accepted domain is configured as a parent domain.
+This issue occurs because the Exchange Edge server can't associate the SMTP address space for the application as a subdomain to the accepted domain. This is true even though the accepted domain is configured as a parent domain.
 
-In this scenario, the subdomain would be part of the address space in the **EdgeSync - Inbound to SiteName** send connector. 
+In this scenario, the subdomain is part of the address space in the **EdgeSync - Inbound to SiteName** send connector. 
 
 ## Resolution
 
