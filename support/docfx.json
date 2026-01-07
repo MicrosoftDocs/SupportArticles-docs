@@ -55,6 +55,7 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
+        "edge/**.*": "MSDocsHeader-MSEdge",
         "entra/**.*": "MSDocsHeader-Entra",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
@@ -229,6 +230,7 @@
         "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "devices/**.*": "surface",
+        "edge/**.*": "microsoft-edge",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
         "power-platform/ai-builder/**/**.*": "ai-builder",
@@ -265,6 +267,7 @@
         "developer/webapps/aspnet/**/*.md": "ASP.NET",
         "developer/webapps/aspnetcore/**/*.md": "ASP.NET Core",
         "developer/webapps/iis/**/*.md": "Internet Information Services",
+        "edge/**.*": "Microsoft Edge",
         "sql/**/*.md": "SQL Server",
         "developer/visualstudio/**/*.md": "Visual Studio",
         "developer/visualstudio/silverlight/**/*.md": "Silverlight",
@@ -342,6 +345,10 @@
           "Troubleshoot",
           "ASP.NET",
           "ASP.NET Core"
+        ],
+        "edge/**.*": [
+          "Microsoft Edge", 
+          "Microsoft Edge Developer"
         ],
         "sql/**/*.md": [
           "Troubleshoot",
