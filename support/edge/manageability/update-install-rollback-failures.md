@@ -96,8 +96,13 @@ Follow these steps to collect a Process Monitor log:
 
       - **Events to save**: _All events_
       - **Format**: _Native Process Monitor Format (PML)_
-      - **Path**: _Choose the desired folder to save the log file_
+      - **Path**: Choose the desired folder to save the log file
 
 ### Submit the diagnostic package
 
 After packaging the collected logs together, submit the files to the [Microsoft Support Team](TODO). The support team will analyze the logs and help you resolve the issue.
+
+## Related content
+
+- [Sysinternals](/sysinternals)
+- [Troubleshooting with the Windows Sysinternals Tools](/sysinternals/resources/troubleshooting-book)
