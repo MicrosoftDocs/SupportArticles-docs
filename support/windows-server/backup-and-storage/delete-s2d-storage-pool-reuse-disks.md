@@ -268,7 +268,7 @@ Task Category: None
 Level:         Warning
 Keywords:      Classic
 User:          N/A
-Computer:      S2D-1.SQL.com
+Computer:      S2D-1.contoso.com
 Description:
 Disk 4 has been surprise removed.
 ```
@@ -284,7 +284,7 @@ Task Category: None
 Level:         Warning
 Keywords:
 User:          SYSTEM
-Computer:      S2D-1.SQL.com
+Computer:      S2D-1.contoso.com
 Description:
 Windows lost communication with physical disk {81ea06c7-7433-bdd5-6a02-b267b5702b0b}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 This disk may be located using the following information:
