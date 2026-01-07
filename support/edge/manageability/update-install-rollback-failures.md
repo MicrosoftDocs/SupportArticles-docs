@@ -7,11 +7,11 @@ ms.date: 01/07/2026
 ---
 # Install, update, or rollback failures for Edge and Edge WebView2
 
-When installing, updating, or rolling back Microsoft Edge or Microsoft Edge WebView2 you might experience an issue that prevents the operations from completing successfully. This article helps you collect the necessary diagnostic information for the [Microsoft Support Team](TODO) to analyze and assist with resolving the issue.
+When you install, update, or rollback Microsoft Edge or Microsoft Edge WebView2, you might encounter an issue that prevents the operation from completing. This article helps you collect the diagnostic information the [Microsoft Support Team](TODO) needs to analyze and help resolve the problem.
 
 ## Symptoms
 
-You might experience one or more of the following issues with Edge or Edge WebView2:
+You might experience one or more of the following problems with Edge or Edge WebView2:
 
 - Failure to install
 - Failure to update
@@ -25,7 +25,7 @@ You might experience one or more of the following issues with Edge or Edge WebVi
 
 ## Solution
 
-To resolve this issue, collect and package the following diagnostic logs, then submit them to the Microsoft Support Team for analysis:
+To resolve this problem, collect and package the following diagnostic logs. Then, submit them to the Microsoft Support Team for analysis:
 
 - Edge installation and update logs
 - Edge policy JSON export
@@ -59,7 +59,7 @@ Collect logs from the following locations based on your installation type:
 
 Follow these steps to export the Edge policy information:
 
-1. Open Microsoft Edge and navigate to `edge://policy`
+1. Open Microsoft Edge and go to `edge://policy`.
 1. Select **Export to JSON**.
 1. Save the exported JSON file.
 
@@ -88,11 +88,11 @@ Follow these steps to collect a Process Monitor log:
    :::image type="content" source="./media/update-install-rollback-failures/procmon-activity-types.png" alt-text="Screenshot of Process Monitor with the File System, Registry, Process/Thread, and Network activity types selected.":::
 
 1. Select the **Capture** icon again to start monitoring.
-1. Retry the install, update, or rollback to reproduce the issue.
+1. Retry the install, update, or rollback process to reproduce the issue.
 1. Once the issue occurs, select the **Capture** icon again to stop monitoring.
 1. Save the log file:
    1. Go to **File** > **Save**.
-   2. In the dialog, select:
+   1. In the dialog, select:
 
       - **Events to save**: _All events_
       - **Format**: _Native Process Monitor Format (PML)_
@@ -100,7 +100,7 @@ Follow these steps to collect a Process Monitor log:
 
 ### Submit the diagnostic package
 
-After packaging the collected logs together, submit the files to the [Microsoft Support Team](TODO). The support team will analyze the logs and help you resolve the issue.
+After packaging the collected logs, submit the files to the [Microsoft Support Team](TODO). The support team will analyze the logs and help you resolve the problem.
 
 ## Related content
 
