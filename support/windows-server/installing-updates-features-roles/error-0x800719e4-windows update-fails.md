@@ -1,10 +1,10 @@
 ---
 title: Error 0x800719e4 (ERROR_LOG_FULL) when Windows update fails
-description: Discusses how to fix Windows Update failures that relate to to error code `0x800719e4 (ERROR_LOG_FULL)`. Typically, this error occurs on Azure-hosted Windows virtual machines (VMs).
+description: Discusses how to fix Windows Update failures that relate to error code `0x800719e4 (ERROR_LOG_FULL)`. Typically, this error occurs on Azure-hosted Windows virtual machines (VMs).
 ms.date: 01/08/2026
 manager: dcscontentpm
 audience: itpro
-ai.usage: ai-assisted
+ai.usage: ai-generated
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dougking, v-appelgatet
 ms.custom:
@@ -23,7 +23,7 @@ This article discusses how to fix Windows Update failures that relate to error c
 
 When you try to install an update, the installation fails with error code `0x800719e4 (ERROR_LOG_FULL)`. The update might appear to install, but after the computer restarts at the end of installation, the installation rolls back. The Windows Update history might list repeated failed installations.
 
-When you check the System log and the CBS log, you see errors that might include the following error messages:
+When you check the System log and the Component-Based Servicing (CBS) log, you see errors that might include the following error messages:
 
 - `Failed uninstalling driver updates [HRESULT = 0x800719e4 - ERROR_LOG_FULL]`
 - `Startup: Failed while processing non-critical driver operations queue`
@@ -38,7 +38,7 @@ When you check the System log and the CBS log, you see errors that might include
 Typically, this issue occurs during the installation or uninstallation of cumulative or driver-related updates. 
 
 - **Transaction log exhaustion, corruption, or improper cleanup**. Windows transaction logs (.blf files and .regtrans-ms files in \Windows\System32\Config\TxR) become full or corrupted, blocking update processes. Improper cleaning of the transaction logs can lead to further system corruption and startup failures.
-- **"Ghosted" NICs or drivers**. VMs that are frequently deallocated and reallocated in Azure can accumulate replicas of network adapters or drivers (also known as "ghosted" or hidden devices that remain in the system registry but are no longer physically present). This behavior has been observed for Mellanox devices. When this occurs, driver update queues increase in size and logs eventually overflow.
+- **"Ghosted" network adapters or drivers**. VMs that are frequently deallocated and reallocated in Azure can accumulate "ghosted" or hidden device entries that remain in the system registry but are no longer physically present. This behavior has been observed for Mellanox devices. When this behavior occurs, driver update queues increase in size and logs eventually overflow.
 - **Misconfigured update orchestration**. Incorrect settings for update orchestration (such as not using the **Customer Managed** option) can contribute to update failures.
 
 ## Resolution
@@ -63,7 +63,7 @@ Review the output for errors or corruption. If these commands made repairs, try 
 ### Step 2: Clean up the transaction logs
 
 > [!IMPORTANT]  
-> As mentioned previously in this article, incorrectly cleaning up transaction logs can cause additional issues. Follow these steps carefully. This section contains two procedures. In most cases, you should use Option A. Use Option B only in the case of VMs that can't start.
+> As mentioned previously in this article, incorrectly cleaning up transaction logs can cause more issues. Follow these steps carefully. This section contains two procedures. In most cases, you should use Option A. Use Option B only if the affected computer is a VM that can't start.
 
 **Option A (Safer method): Rename the TxR and Windows Update folders**
 
@@ -114,6 +114,8 @@ Review the output for errors or corruption. If these commands made repairs, try 
 1. Start the VM, and then try again to install the update.
 
 ### Step 3: Check for ghosted network adapters or drivers
+
+For more information about this issue, see [Azure VM Ghosted Nic Validation and Cleanup Tools](../../../azure/virtual-machines/windows/windows-vm-ghostednic-tool).
 
 > [!NOTE]  
 > A computer that accumulates ghosted network adapters or drivers might continue to do so. Consider checking for this issue periodically as part of regular maintenance.
