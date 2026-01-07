@@ -1,16 +1,16 @@
 ---
 title: Offer updates for Office programs that you do not have installed
 description: Describes how Microsoft Update or Windows Update may offer updates to programs that you do not have installed on your computer. We provide steps to resolve this issue.
+ms.author: meerak
 author: Cloud-Writer
 manager: dcscontentpm
+ms.reviewer: v-chasec, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\Updates\ProblemsInstallingUpdates
   - CSSTroubleshoot
-ms.author: meerak
-ms.reviewer: v-chasec
 search.appverid: 
   - MET150
 appliesto: 
@@ -31,10 +31,7 @@ For example, you may be offered an update for an Office product even though you 
 
 In addition, you may be offered an Office security update even though the associated security bulletin indicates that the Office products that you do have installed are not affected.
 
-To look for updates for Office, do one of the following: 
-
-- On Windows 7, on Windows Vista or on a Windows Server 2008 client, click **Start**, point to **All Programs** and then click **Windows Update**.   
-- On Windows XP or on a Windows Server 2003 client, see [Windows Update: FAQ](https://update.microsoft.com/microsoftupdate/v6/default.aspx).   
+To look for updates for Office, on Windows 7, on Windows Vista or on a Windows Server 2008 client, click **Start**, point to **All Programs** and then click **Windows Update**.   
 
 ## Cause
 
