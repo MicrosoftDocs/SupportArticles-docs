@@ -20,7 +20,7 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 ## References
 
-- [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/)
+- [Microsoft SQL Server support lifecycle](/lifecycle/)
 - [Latest updates and version history for SQL Server](../download-and-install-latest-updates.md)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Where to find information about the latest SQL Server builds](https://support.microsoft.com/help/957826)
