@@ -1,5 +1,5 @@
 ---
-title: Delete a Storage Spaces Direct Storage Pool and Reset the Physical Sisks
+title: Delete a Storage Spaces Direct Storage Pool and Reset the Physical Disks
 description: Explains how to gracefully delete an S2D storage pool so that you can reuse the disks elsewhere.
 ms.date: 01/07/2026
 manager: dcscontentpm
@@ -71,7 +71,7 @@ To use the procedures from this example, make sure that the following permission
    > [!NOTE]  
    >
    > - If you don't specify a node when you run `Get-PhysicalDisk` on any node within an S2D cluster, the output includes all physical disks across all nodes in the cluster. This behavior is by design. Each node maintains awareness of the entire pool's disk inventory--not only the disks that are physically attached to it.
-   > - In the command output, note that the **CanPool** property of the 64-GB disks (1002-1004 and 2002-2004) is **False**. This value means that the disks already belong to a storage pool.
+   > - In the command output, the **CanPool** property of the 64-GB disks (1002-1004 and 2002-2004) is **False**. This value means that the disks already belong to a storage pool.
 
    ```output
    Number FriendlyName      SerialNumber MediaType   CanPool OperationalStatus HealthStatus Usage         Size
@@ -205,7 +205,7 @@ To verify that the virtual disks, storage tiers, and the storage pool don't exis
 PS C:\Users\SQLVMADMIN> Get-StoragePool
 ```
 
-The output of this command resembles the following example. Note that the primordial storage pool is still present.
+The output of this command resembles the following example. Notice that the primordial storage pool is still present.
 
 ```output
 FriendlyName OperationalStatus HealthStatus IsPrimordial IsReadOnly   Size AllocatedSize
@@ -240,7 +240,7 @@ After the script finishes, verify the disk status by running the following comma
 PS C:\Users\SQLVMADMIN> Get-PhysicalDisk
 ```
 
-The output of this command resembles the following example. Note that the **CanPool** property of each disk changed from "False" to "True." The disks don't belong to a storage pool anymore, but they're available to assign to a new storage pool.
+The output of this command resembles the following example. The **CanPool** property of each disk changed from "False" to "True." The disks don't belong to a storage pool anymore, but they're available to assign to a new storage pool.
 
 ```output
 Number FriendlyName      SerialNumber MediaType    CanPool OperationalStatus HealthStatus Usage         Size
@@ -257,7 +257,7 @@ Number FriendlyName      SerialNumber MediaType    CanPool OperationalStatus Hea
 
 ## More information
 
-If you remove a physical disk from the storage pool infrastructure without using the process that's detailed in this article, both the storage pool and the disk become unusable. For example, if you remove a disk from one node, the System log of that node generates Event ID 157:
+If you remove a physical disk from the storage pool infrastructure without using the process that this article provides, both the storage pool and the disk become unusable. For example, if you remove a disk from one node, the System log of that node generates Event ID 157:
 
 ```output
 Log Name:      System
