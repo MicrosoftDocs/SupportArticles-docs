@@ -163,7 +163,7 @@ If you receive this error, some factors to consider are:
 - Sometimes, an enterprise implements an Intune group policy that enables one of these ports by default.  
 - Make sure that there are no Intune policies that might override Windows 365's default of disabling these high-risk ports.
 
-**Suggested solution:** Try any of these solutions:
+**Suggested solution:** Try any of these methods:
 
 - Retry provisioning.
 - If the device is Intune-enrolled, you can apply the Intune policy to disable the ports.
