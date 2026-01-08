@@ -3260,7 +3260,7 @@ items:
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
-    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows update fails
+    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md

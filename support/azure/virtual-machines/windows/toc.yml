@@ -122,7 +122,7 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070bc9
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows update fails
+    - name: Error code 0x800719e4 (ERROR_LOG_FULL)
       href: ../../../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80072f8f
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
