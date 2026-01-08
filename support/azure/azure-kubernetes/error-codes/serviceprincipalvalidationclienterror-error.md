@@ -85,7 +85,7 @@ The output of the command should resemble the following JSON string:
 
 ```json
 {
-  "appId": "12345678-9abc-def0-1234-56789abcdef0",
+  "appId": "00001111-aaaa-2222-bbbb-3333cccc4444",
   "name": "23456789-abcd-ef01-2345-6789abcdef01",
   "password": "3456789a-bcde-f012-3456-789abcdef012",
   "tenant": "456789ab-cdef-0123-4567-89abcdef0123"

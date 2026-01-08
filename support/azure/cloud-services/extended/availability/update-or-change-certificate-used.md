@@ -35,7 +35,7 @@ To make your certificate update or change go into effect, use the instructions f
    <Certificates>
      <Certificate
        name="Certificate1"
-       thumbprint="0123456789ABCDEF0123456789ABCDEF01234567"
+       thumbprint="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
        thumbprintAlgorithm="sha1"
      />
    </Certificates>
@@ -58,7 +58,7 @@ To make your certificate update or change go into effect, use the instructions f
      <Certificates>
        <Certificate
          name="Certificate1"
-         thumbprint="0123456789ABCDEF0123456789ABCDEF01234567"
+         thumbprint="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
          thumbprintAlgorithm="sha1"
        />
      </Certificates>
@@ -128,7 +128,7 @@ To make your certificate update or change go into effect, use the instructions f
      <Certificates>
        <Certificate
          name="Certificate1"
-         thumbprint="0123456789ABCDEF0123456789ABCDEF01234567"
+         thumbprint="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
          thumbprintAlgorithm="sha1"
        />
      </Certificates>
