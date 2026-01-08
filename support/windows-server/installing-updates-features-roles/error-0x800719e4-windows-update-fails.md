@@ -1,6 +1,6 @@
 ---
 title: Error 0x800719e4 (ERROR_LOG_FULL) When Windows Update Fails
-description: Discusses how to fix Windows Update failures related to error code `0x800719e4 (ERROR_LOG_FULL)` -- typically on Azure-hosted Windows virtual machines.
+description: Discusses how to fix Windows Update failures related to error code `0x800719e4 (ERROR_LOG_FULL)`--typically on Azure-hosted Windows virtual machines.
 ms.date: 01/08/2026
 manager: dcscontentpm
 audience: itpro
@@ -38,7 +38,7 @@ When this issue occurs, the System log and Component-Based Servicing (CBS) log m
 Typically, this issue occurs during the installation or uninstallation of cumulative or driver-related updates. This issue has various possible causes:
 
 - **Transaction log exhaustion, corruption, or improper cleanup**. Windows transaction logs (.blf files and .regtrans-ms files in \Windows\System32\Config\TxR) become full or corrupted, and then block update processes. Improper cleaning of the transaction logs can cause further system corruption and startup failures.
-- **"Ghosted" network adapters or drivers**. VMs that are frequently deallocated and reallocated in Azure can accumulate "ghosted" or hidden device entries that remain in the system registry but are no longer physically present. This behavior has been observed in Mellanox devices. When this behavior occurs, driver update queues increase in size, and logs eventually overflow.
+- **"Ghosted" network adapters or drivers**. VMs that are frequently deallocated and reallocated in Azure can accumulate "ghosted" or hidden device entries that remain in the system registry but are no longer physically present. This behavior is observed in Mellanox devices. When this behavior occurs, driver update queues increase in size, and logs eventually overflow.
 - **Misconfigured update orchestration**. Incorrect settings for update orchestration (such as not using the **Customer Managed** option) can contribute to update failures.
 
 ## Resolution
