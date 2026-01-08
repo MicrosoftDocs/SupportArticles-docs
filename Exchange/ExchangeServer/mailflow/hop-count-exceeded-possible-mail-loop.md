@@ -25,9 +25,9 @@ ms.reviewer: v-six
 
 Consider the following scenario:
 
-- You have a parent domain, **contoso.com**, that you have added as an accepted domain to an on-premises Microsoft Exchange Server 2016 or 2013 environment.
+- You added a parent domain, **contoso.com**, as an accepted domain to an on-premises Microsoft Exchange Server 2016 or 2013 environment.
 - You have an on-premises application server domain, such as **app.contoso.com**, that is a subdomain of the parent domain.
-- The parent domain is configured to accept email messages from domains such as ***.contoso.com**.
+- You configured the parent domain to accept email messages from domains such as ***.contoso.com**.
 - You try to send an email message to the on-premises application through Exchange Server.
 
 In this scenario, the message cannot be sent. Instead, it loops between the Exchange Edge Transport server and Microsoft 365. Additionally, you receive a non-delivery report (NDR) that resembles the following:
@@ -42,7 +42,7 @@ In this scenario, the subdomain is part of the address space in the **EdgeSync -
 
 ## Resolution
 
-To fix this issue, follow these steps:
+To fix this issue, use the following steps:
 
 1. Add the subdomain as an accepted domain. To do this, run the following command:
 
@@ -50,7 +50,7 @@ To fix this issue, follow these steps:
     New-AcceptedDomain -DomainName app.Contoso.com -DomainType InternalRelay -Name app.contoso.com
     ```
 
-2. To have the added accepted domain synced to the Edge servers immediately, run the following command: 
+2. To sync the newly added accepted domain to the Edge servers immediately, run the following command: 
 
     ```powershell
     Start-EdgeSynchronization
