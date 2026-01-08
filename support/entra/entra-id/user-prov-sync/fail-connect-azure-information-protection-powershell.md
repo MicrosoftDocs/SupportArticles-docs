@@ -24,7 +24,7 @@ When you try to connect to Microsoft Azure Information Protection using Windows 
 >
 > `Connect-AipService : The attempt to connect to the Azure Information Protection service failed. Verify that the user name and password you are using are correct and try again. If you have continued problems, see http://go.microsoft.com/fwlink/?LinkId=251909.`
 >
-> `The correlation ID is 1df4c755-f859-4284-907b-be5d2a551260. Please note and provide this value if asked by support for it.`
+> `The correlation ID is aaaa0000-bb11-2222-33cc-444444dddddd. Please note and provide this value if asked by support for it.`
 >
 > `At line:1 char:1`
 >

@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 3067633
 
 Configuration Manager clients that report to a particular server or subset of servers may repeatedly become inactive. You may also notice that the clients do not send inventory information for 30 days or more and that the data in the Inventoryagent.log file is static. Additionally, the ClientIDManagerStartup.log displays repeated occurrences of this error:
 
-> [RegTask] - Client is not registered. Sending registration request for GUID:4874BD6C-CB98-4EEB-9F4F-721CC65B25C3 ...
+> [RegTask] - Client is not registered. Sending registration request for GUID:00001111-aaaa-2222-bbbb-3333cccc4444 ...
 >
-> [RegTask] - Client is registered. Server assigned ClientID is GUID:4874BD6C-CB98-4EEB-9F4F-721CC65B25C3. Approval status 1
+> [RegTask] - Client is registered. Server assigned ClientID is GUID:00001111-aaaa-2222-bbbb-3333cccc4444. Approval status 1
 >
 > SetRegistrationState failed (0x80071770)
 >

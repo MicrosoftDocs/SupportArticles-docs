@@ -171,8 +171,8 @@ SMSPXE.log
 Machine is running Windows Longhorn. (NTVersion=0X602, ServicePack=0)  
 Cannot read the registry value of MACIgnoreListFile (00000000)  
 MAC Ignore List Filename in registry is empty  
-Begin validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'  
-Completed validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'
+Begin validation of Certificate [Thumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'  
+Completed validation of Certificate [Thumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'
 ```
 
 The Distribution Point should now be PXE-enabled and ready to accept incoming requests.
