@@ -44,7 +44,7 @@ If the value of `OpenDomainRoutingEnabled` is **True**, the `Content-Class` head
 To fix this issue, submit a support request to [Microsoft Support](https://support.microsoft.com/contactus) to update this setting to **False** in your tenant configuration.
 
 > [!NOTE]
-> The `OpenDomainRoutingEnabled` setting is a legacy setting that's used for anti-spam detection before the implementation of Exchange Online Protection.
+> The `OpenDomainRoutingEnabled` setting is a legacy setting that's used for anti-spam detection before the implementation of [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about).
 
 ## Workaround for Symptom 1
 
