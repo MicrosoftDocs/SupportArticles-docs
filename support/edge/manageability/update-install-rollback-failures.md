@@ -1,6 +1,6 @@
 ---
-title: Edge and Edge WebView2 update, installation, or rollback failure
-description: Troubleshoot issues when Microsoft Edge or Edge WebView2 fails to update, install, or roll back.
+title: Troubleshoot Edge Update, Installation, and Rollback Failures
+description: Learn how to troubleshoot and resolve installation, update, or rollback failures for Microsoft Edge and Edge WebView2 with step-by-step guidance.
 ms.custom: sap:Manageability and Deployment\Installation, Update, Removal, Rollback
 ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 01/07/2026
