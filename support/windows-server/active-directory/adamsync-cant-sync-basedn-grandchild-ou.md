@@ -1,6 +1,6 @@
 ---
-title: Synchronizing Between AD DS and AD LDS Enters Endless Loop when the BaseDN is a Grandchild OU
-description: Discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop. You can only stop the loop by using Task Manager or by pressing CTRL+C.
+title: Synchronizing Between AD DS and AD LDS Enters Endless Loop if the base DN is a Grandchild OU
+description: Discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop.
 ms.date: 01/09/2026
 manager: dcscontentpm
 audience: itpro
@@ -14,23 +14,23 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
-# Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+# Endless loop in AD DS to AD LDS synchronization if base DN is a grandchild OU
 
-This article discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop. You can only stop the loop by using Task Manager or by pressing CTRL+C.
+This article discusses how to work around a behavior in the Adamsync tool in which the synchronization process enters an endless loop if the base distinguished name (base DN) is a grandchild OU. You can stop the loop only by using Task Manager or by pressing Ctrl+C.
 
 _Original KB number:_ &nbsp; 926933
 
 ## Symptoms
 
-You have an Active Directory Domain Services (AD DS) forest and an Active Directory Lightweight Directory Service (AD LDS) instance. You use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool in Microsoft Windows to synchronize data from the AD DS forest to the AD LDS instance. However, the synchronization never finishes. For a detailed walkthrough of this process, see [More information](#more-information).
+You have an Active Directory Domain Services (AD DS) forest and an Active Directory Lightweight Directory Service (AD LDS) instance. You use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool in Windows to synchronize data from the AD DS forest to the AD LDS instance. However, the synchronization never finishes. For a detailed walkthrough of this process, see [More information](#more-information).
 
-This issue occurs if you specified a grandchild organizational unit (OU) in the AD DS forest as the base distinguished name (base DN) in Adamsync's XML configuration file. Such a configuration resembles the following example:
+This issue occurs if you specify a grandchild organizational unit (OU) in the AD DS forest as the base DN in Adamsync's XML configuration file. Such a configuration resembles the following example:
 
 ```xml
 <base-dn>OU=Grandchild,OU=Child,DC=03child,DC=MyDomCon,DC=net</base-dn>
 ```
 
-By default, the configuration file is named MS-AdamsyncConf.XML and it resides in the %windir%\adam folder.
+By default, the configuration file is named MS-AdamsyncConf.XML, and it resides in the %windir%\adam folder.
 
 ## Cause
 
@@ -54,7 +54,7 @@ You can reproduce the issue by following these steps:
 
 1. Configure an AD LDS instance (or a configuration set of instances) as described in the [Preparing an AD LDS instance for synchronization](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770408(v=ws.10)#preparing-an-adlds-instance-for-synchronization) section of "Synchronize with Active Directory Domain Services."
 
-1. Edit the Adamsync tool's configuration file to synchronize data from an Active Directory forest to the instance or configuration set. Set the base DN to be the grandchild OU.
+1. Edit the Adamsync tool configuration file to synchronize data from an Active Directory forest to the instance or configuration set. Set the base DN to be the grandchild OU.
 
    For example, include parameters that resemble the following example in the My-Custom-AdamsyncConf.XML configuration file:
 
@@ -68,14 +68,14 @@ You can reproduce the issue by following these steps:
      <base-dn>OU=Grandchild,OU=Child,DC=03child,DC=MyDomCon,DC=net</base-dn>
    ```
 
-1. To install the Adamsync configuration, open a Windows Command Prompt window, and then run the following command:
+1. To install the Adamsync configuration, run the following command at a Windows command prompt:
 
    ```console
    Adamsync.exe /install <AdamServerName>:<PortNo> My-Custom-AdamsyncConf.XML
    ```
 
    > [!NOTE]  
-   > In this command (and in the other steps of this procedure) `<AdamServerName>` represents the name of the computer that runs the Adamsync tool, and `<PortNo>` represents the number of the port that the Adamsync tool uses.
+   > In this command (and in the other steps of this procedure), `<AdamServerName>` represents the name of the computer that runs the Adamsync tool, and `<PortNo>` represents the number of the port that the Adamsync tool uses.
 
 1. To start synchronizing, run the following command at the command prompt:
 
@@ -118,7 +118,7 @@ You can reproduce the issue by following these steps:
    Previous entry took 0 seconds (2, 0) to process
    ```
 
-   This pattern of entries keeps repeating through the log file.
+   This pattern of entries repeats throughout the log file.
 
 ## References
 
