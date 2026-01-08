@@ -60,7 +60,7 @@ For Windows editions that experience activation and "not genuine" errors that ar
 
 |Event log|Event source|Event ID|Description|
 |---|---|---|---|
-|Application|Microsoft-Windows-Security-SPP|8209|Genuine state set to non-genuine (0x00000000) for application Id 55c92734-d682-4d71-983e-d6ec3f16059f|
+|Application|Microsoft-Windows-Security-SPP|8209|Genuine state set to non-genuine (0x00000000) for application Id 00001111-aaaa-2222-bbbb-3333cccc4444|
 |Application|Microsoft-Windows-Security-SPP|8208|Acquisition of genuine ticket failed (hr=0xC004C4A2) for template Id 66c92734-d682-4d71-983e-d6ec3f16059f|
 |Application|Windows Activation Technologies|13|Genuine validation result: hrOffline = 0x00000000, hrOnline =0xC004C4A2|
 |Application|Microsoft-Windows-Security-SPP|8196|License Activation Scheduler (sppuinotify.dll) was not able to automatically activate. Error code:  0xC004F200:|

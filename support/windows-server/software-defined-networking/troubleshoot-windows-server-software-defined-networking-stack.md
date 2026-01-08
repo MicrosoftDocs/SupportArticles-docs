@@ -236,11 +236,11 @@ HostId : **162cd2c8-08d4-4298-8cb4-10c2977e3cfe**
 Get-NetworkControllerServer -ConnectionUri $uri |where { $_.InstanceId -eq "162cd2c8-08d4-4298-8cb4-10c2977e3cfe"}
 
 Tags             :
-ResourceRef      : /servers/4c4c4544-0056-4a10-8059-b8c04f395931
+ResourceRef      : /servers/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 InstanceId       : **162cd2c8-08d4-4298-8cb4-10c2977e3cfe**
 Etag             : W/"50f89b08-215c-495d-8505-0776baab9cb3"
 ResourceMetadata : Microsoft.Windows.NetworkController.ResourceMetadata
-ResourceId       : 4c4c4544-0056-4a10-8059-b8c04f395931
+ResourceId       : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Properties       : Microsoft.Windows.NetworkController.ServerProperties
 ```
 

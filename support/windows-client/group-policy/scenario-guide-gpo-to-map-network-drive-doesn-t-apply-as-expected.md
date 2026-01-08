@@ -132,16 +132,16 @@ In *\<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt*, we observe that the GP
 
 ```output
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Entering ProcessGroupPolicyExDrives()
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] SOFTWARE\Policies\Microsoft\Windows\Group Policy\{5794DAFD-BE60-433f-88A2-1A31939AC01F}
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] SOFTWARE\Policies\Microsoft\Windows\Group Policy\{aaaabbbb-0000-cccc-1111-dddd2222eeee}
 ```
 
 The Group Policy Mapped Drives extension identified a GPO that's configured with this extension, and the name is **Mapped-Drive**:
 
 ```output
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPC : LDAP://CN=User,cn={6D6CECFD-C75A-43FA-8C32-0B5963E42C5B},cn=policies,cn=system,DC=contoso,DC=com
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPT : \\contoso.com\SysVol\contoso.com\Policies\{6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}\User
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPC : LDAP://CN=User,cn={bbbbcccc-1111-dddd-2222-eeee3333ffff},cn=policies,cn=system,DC=contoso,DC=com
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPT : \\contoso.com\SysVol\contoso.com\Policies\{bbbbcccc-1111-dddd-2222-eeee3333ffff}\User
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Display Name : Mapped-Drive
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Name : {6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Name : {bbbbcccc-1111-dddd-2222-eeee3333ffff}
 ```
 
 We observe that drive Z is successfully mapped:
@@ -151,7 +151,7 @@ yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Starting class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Policy is not flagged for removal.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drives>.
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] EVENT : The user 'Z:' preference item in the 'Mapped-Drive {6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}' Group Policy Object applied successfully.
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] EVENT : The user 'Z:' preference item in the 'Mapped-Drive {bbbbcccc-1111-dddd-2222-eeee3333ffff}' Group Policy Object applied successfully.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drives>
 ```
