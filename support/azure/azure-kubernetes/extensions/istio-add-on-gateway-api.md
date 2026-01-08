@@ -30,7 +30,7 @@ Before you proceed, take the following actions:
 
 ## Application routing Gateway API Implementation compatibility and migration
 
-Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. You must disable one first and enable the other in a separate operation.
+Use of the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api) and the [Istio service mesh add-on](/azure/aks/istio-about) simultaneously is unsupported. You must disable one first and enable the other in a separate operation. You must also update the `gatewayClassName` for your `Gateways` from `approuting-istio` to `approuting`.
 
 If you were previously using application routing Istio Gateway API Implementation and migrated to the Istio add-on, and are experiencing issues with the Istio add-on control plane taking ownership of existing `Gateway` resources, try restarting the `istiod` deployment. Also inspect the `istiod` logs for any errors related to watching and/or taking ownership of the `Gateway` resources.
 
@@ -93,7 +93,7 @@ Double check whether you set restrictions to allow traffic to only the subnets o
 
 ### Step 1: Make sure the gatewayClassName is set to `istio`
 
-Verify that all `Gateways` you created have the `spec.gatewayClassName` set to `istio`. 
+Verify that all `Gateways` you created have the `spec.gatewayClassName` set to `istio` (by contrast, if you are using the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api), the `spec.gatewayClassName` should be set to `approuting-istio`).
 
 ### Step 2: Verify cross-namespace references
 
@@ -110,6 +110,12 @@ If the `Gateway` has a programmed status of `failed` or `unknown`, you should in
 ### Step 5: Inspect `istiod` and `Gateway` logs for errors
 
 The `istiod` logs may have additional details about `Gateway` programming-related errors. If the gateway is programmed successfully, and the pod deployments are created, but other issues occur, try inspecting the `Gateway` pod logs for any potential errors. The `Gateway` pod deployment name follows the format, `<gateway-name>-istio`.
+
+### Step 6: Verify that `Gateway` resource names are valid
+
+By default, the Istio control plane will append the `GatewayClass` name `istio` (or `approuting-istio` for the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api)). to the name of the resources that it provisions for the `Gateway`. The resource names must be less than `63` characters and must also be a valid DNS name. If the names are invalid, `istiod` will fail to provision the `Gateway` resources and will output an `error` log.
+
+You can annotate your `Gateway` resource with `gateway.istio.io/name-override` to override the name of the provisioned resources.
 
 ## Minor revision upgrades and revision label troubleshooting
 
