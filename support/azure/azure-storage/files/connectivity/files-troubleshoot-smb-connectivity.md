@@ -324,7 +324,9 @@ echo 1 | sudo tee /sys/module/cifs/parameters/require_gcm_256
 # Persist the configuration
 echo "options cifs require_gcm_256=1" | sudo tee -a /etc/modprobe.d/cifs.conf
 ```
+You can also use a Kubernetes DaemonSet to enforce AES-256-GCM on every node. See the following example:
 
+[support-cifs-aes-256-gcm.yaml](https://github.com/andyzhangx/demo/blob/master/aks/support-cifs-aes-256-gcm.yaml)
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
 ##### Cause
