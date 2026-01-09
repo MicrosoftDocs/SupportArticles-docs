@@ -54,7 +54,7 @@ The change operation fails, and the Security log records Event ID 2866, which in
 
 ### Scenario 2
 
-You make a bulk change to a set of objects that have an attribute that has a large number of values. You're replacing those values with a small number of values (or an empty value). The change fails, and you receive error code `0x21B1`, as shown in the following example:
+You make a bulk change to a set of objects that have an attribute that has a large number of values. You're replacing those values with a few values (or an empty value). The change fails, and you receive error code `0x21B1`, as shown in the following example:
 
 ```ldp
 ldap_modify_s(ld, 'CN=test-many-members01,OU=TEST01,DC=contoso,DC=com',[1] attrs);
@@ -106,11 +106,11 @@ Properties:        %%7685
 A few seconds after the Security log records the preceding event, it records Event ID 2866. Event ID 2866 references the same object as the change event.
 
 > [!NOTE]  
-> In this example, the GUID `bc0ac240-79a9-11d0-9020-00c04fc2d4cf` represents the `member` attribute schema that is being modified, not the object itself.
+> In this example, the GUID `bc0ac240-79a9-11d0-9020-00c04fc2d4cf` represents the `member` attribute schema that's being modified, not the object itself.
 
 ## Cause
 
-The audit events contain information about security-related events that occur on the domain controller, such as user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
+The audit events contain information about security-related occurrences such as user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
 
 Under heavy load (for example, during bulk operations), it's possible to generate multiple audit events while still writing the first one to the disk. When the number of audit events reaches the maximum for the queue, operational threads start pausing until their audit event can be inserted into the queue. AD DS logs Event ID 2866 at this point.
 
@@ -129,18 +129,18 @@ These commands remove all of the current values of `member`. Each of those value
 The default limit on the number of these audit events that the transaction audit queue can hold is 17,000. If a single transaction exceeds that limit, the transaction returns error code `0x21B1` and rolls the changes back. The Security log records Event ID 2866. The application that started the transaction receives the error. However, depending on the exact commands that the transaction used, the application might not receive information about how many changes the transaction generated.
 
 > [!NOTE]  
-> The recommended maximum number of operations per LDAP transaction is 5,000. Using more than 5,000 operations per transaction risks operational limits (such as those described in this article). Early versions of Windows Server had recommended limits of 5,000 members per group. Although that limit was removed for Windows Server 2003, the recommended limit on the number of operations per LDAP transactions remains. For more information, see the following sections of "Active Directory Maximum Limits - Scalability":
+> The recommended maximum number of operations per LDAP transaction is 5,000. If the number is higher than 5,000, you risk resource and performance issues. Early versions of Windows Server had recommended limits of 5,000 members per group. Although that limit was removed for Windows Server 2003, the recommended limit on the number of operations per LDAP transactions remains. For more information, see the following sections of "Active Directory Maximum Limits - Scalability":
 >
 > - [Maximum Number of Accounts per LDAP Transaction](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc756101(v=ws.10)#maximum-number-of-accounts-per-ldap-transaction)
 > - [Recommended Maximum Number of Users in a Group](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc756101(v=ws.10)#recommended-maximum-number-of-users-in-a-group)
 
 ## Cause 2: The rate at which audit events accumulate is greater than the system can process
 
-Audit events are being generated at a rate that's consistently higher than the rate at which the DC can write them to the log file and purge them from the queue. The queue eventually reaches its maximum size.
+AD DS is generating Audit events at a rate that's consistently higher than the rate at which the DC can write them to the log file and purge them from the queue. The queue eventually reaches its maximum size.
 
-The rate at which your system generates audit events depends on factors that include the following points:
+The rate at which AD DS generates audit events depends on factors that include the following points:
 
-- How many event sources that you've configured for auditing
+- How many event sources that you configured for auditing
 - The type of auditing (such as success auditing, failure auditing, or successful read auditing). For example, all the following categories of operations can generate failure or success auditing:
 
   - [File system auditing](/windows-hardware/drivers/ifs/auditing) (this category can also generate successful read auditing)
