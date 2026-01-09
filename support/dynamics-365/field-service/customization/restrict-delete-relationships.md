@@ -4,7 +4,7 @@ description: Provides a resolution to identify and delete related records to res
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: v-wendysmith
-ms.date: 12/29/2025
+ms.date: 01/09/2026
 ms.custom: sap:Customizations and Integrations
 ---
 # Can't delete record because of a restrict-delete relationship
