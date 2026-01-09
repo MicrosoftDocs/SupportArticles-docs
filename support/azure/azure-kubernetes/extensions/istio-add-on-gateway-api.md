@@ -103,15 +103,21 @@ Depending on the namespace that the `Gateway` and respective Routes are deployed
 
 While multiple Routes can be attached to a single `Gateway` resources, only one Route rule may match each request. Overlapping rules can lead to conflicts and merging issues.
 
-### Step 4: Inspect the `Gateway` for programming errors
+### Step 4: Inspect the `Gateway` and Routes for programming errors
 
 If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `.
+
+You should also inspect the status of Routes (`HTTPRoutes`, `GRPCRoutes`, etc.) by running `kubectl describe httproute <route-name> -n <route-namespace> -o yaml`. 
 
 ### Step 5: Inspect `istiod` and `Gateway` logs for errors
 
 The `istiod` logs may have additional details about `Gateway` programming-related errors. If the gateway is programmed successfully, and the pod deployments are created, but other issues occur, try inspecting the `Gateway` pod logs for any potential errors. The `Gateway` pod deployment name follows the format, `<gateway-name>-istio`.
 
-### Step 6: Verify that `Gateway` resource names are valid
+### Step 6: Inspect `Gateway` proxy pods
+
+Verify that `Gateway` proxy pods aren't crashing or `OOMKilled` due to memory issues. You can configure the deployment resource requests/limits and the HPA for the `Gateway` via [ConfigMap customizations](#gateway-resource-customization-troubleshooting).
+
+### Step 7: Verify that `Gateway` resource names are valid
 
 By default, the Istio control plane will append the `GatewayClass` name `istio` (or `approuting-istio` for the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api)). to the name of the resources that it provisions for the `Gateway`. The resource names must be less than `63` characters and must also be a valid DNS name. If the names are invalid, `istiod` will fail to provision the `Gateway` resources and will output an `error` log.
 
