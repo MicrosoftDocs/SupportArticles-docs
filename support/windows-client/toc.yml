@@ -5,6 +5,10 @@ items:
   items:
   - name: Active Directory
     href: ./active-directory/active-directory-overview.md
+  - name: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+    items:
+    - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+      href: ../windows-server/active-directory/adamsync-cant-sync-basedn-grandchild-ou.md?context=/troubleshoot/windows-client/context/context
   - name: Domain join issues
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
