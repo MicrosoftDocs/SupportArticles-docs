@@ -18,6 +18,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Can't enable extensions for InPrivate browsing by using Group Policy
+            url: manageability/enable-extension-inprivate-policy.md
           - text: Install, update, or rollback failures for Edge and Edge WebView2
             url: manageability/update-install-rollback-failures.md
   
@@ -25,5 +27,5 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-        - text: TODO
-          url: TODO
+        - text: Unexpected SmartScreen block or warning on website
+          url: development/unexpected-block-warning.md

@@ -1,7 +1,11 @@
 items:
   - name: Manage and Deploy
     items:
-      - name: TODO
+      - name: Unexpected SmartScreen block or warning on website
+        href: development/unexpected-block-warning.md
   - name: Web Platform and Development
     items:
-      - name: TODO
+      - name: Can't enable extensions for InPrivate browsing by using Group Policy
+        href: manageability/enable-extension-inprivate-policy.md
+      - name: Install, update, or rollback failures for Edge and Edge WebView2
+        href: manageability/update-install-rollback-failures.md
