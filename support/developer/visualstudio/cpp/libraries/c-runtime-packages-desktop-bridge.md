@@ -25,7 +25,7 @@ For development and testing purposes, the current version (v14) of both debug an
 
 ## Legacy Desktop framework packages
 
-Older C++ Runtime framework packages for desktop applications, v11.0 and v12.0 are no longer supported. However, they can be downloaded and installed from these locations:
+Older C++ Runtime framework packages for desktop applications, such as v11.0 and v12.0, are no longer supported. However, they can be downloaded and installed from these locations:
 
 - [C++ Runtime v11.0 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53340)
 - [C++ Runtime v12 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53176)
