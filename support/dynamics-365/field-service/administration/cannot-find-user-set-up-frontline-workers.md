@@ -1,10 +1,10 @@
 ---
 title: Can't find a user when setting up frontline workers
 description: Resolves an issue where you can't find a user when trying to assign security roles in a new Field Service environment.
-author: jasonxian-msft
-ms.author: jasonxian
+ms.author: jacoh
+author: jasonccohen
 ms.reviewer: v-wendysmith
-ms.date: 11/25/2024
+ms.date: 01/09/2026
 ms.custom: sap:Administration
 ---
 # Can't find a user when setting up frontline workers in Dynamics 365 Field Service

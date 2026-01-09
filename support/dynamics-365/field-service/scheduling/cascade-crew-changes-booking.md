@@ -21,6 +21,6 @@ This issue occurs if the value of [msdyn_CascadeCrewChanges](/common-data-model/
 
 ## Resolution
 
-To fix the issue, open the booking and set the value of `msdyn_CascadeCrewChanges` to **Yes**. Then, assign the booking to a crew again.
+To fix the issue, open the `Booking` entity and set the value of `msdyn_CascadeCrewChanges` to **Yes**. Then, assign the booking to a crew again.
 
 For more information, go to [Group resources in crews](/dynamics365/field-service/resource-crews).
