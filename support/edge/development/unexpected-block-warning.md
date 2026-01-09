@@ -8,11 +8,11 @@ ms.date: 07/01/2025
 
 # Unexpected SmartScreen block or warning on website
 
-When you visit a website in Microsoft Edge, the [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen) might unexpectedly blocks or display a warning if it determines the site is potentially unsafe. This article describes the criteria used by SmartScreen to determine if a site is potentially unsafe, as well as how to resolve a site being incorrectly marked as unsafe.
+When you visit a website in Microsoft Edge, [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen) might unexpectedly block the site or display a warning if it determines the site is potentially unsafe. This article describes the criteria that SmartScreen uses to determine if a site is potentially unsafe and how to resolve a site being incorrectly marked as unsafe.
 
 ## Symptoms
 
-When visiting a website, Microsoft Edge displays a warning page indicating that the site has been reported as unsafe.
+When you visit a website, Microsoft Edge displays a warning page indicating that the site is reported as unsafe.
 
 <!-- TODO: Ask SME for an image of just the warning page, without any buttons or menus highlighted -->
 
@@ -29,11 +29,11 @@ Microsoft Defender SmartScreen determines whether a site is potentially unsafe b
 | **User Feedback**    | Number of reports and trust level                                                 |
 | **Dynamic Behavior** | JavaScript activity, redirects, and obfuscation                                   |
 
-If a site fails the checks of these dimensions it will be marked as unsafe.
+If a site fails the checks of these dimensions, SmartScreen reports the site as unsafe.
 
 ## Solution
 
-### You are the website owner
+### You're the website owner
 
 1. Select **Report that this site doesn't contain (malware/phishing) threats** under the **More information** header on the block page, or select **Report as safe or unsafe** in the **Suspicious site** dropdown on a warning page.
 
@@ -47,21 +47,21 @@ If a site fails the checks of these dimensions it will be marked as unsafe.
 
 1. If the issue is urgent or you need a response after the Reputation Group's investigation, reply to the email from the Reputation Group with your concerns.
 
-### You are not the website owner
+### You're not the website owner
 
-1. Reach out to the website owner and recommend that they report the issue using the steps in [You are the website owner](#you-are-not-the-website-owner).
+1. Reach out to the website owner and recommend that they report the issue by using the steps in [You are the website owner](#youre-not-the-website-owner).
 
-1. Both the site owner and you can report the issue using the [WDSI file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission). When prompted for user type, select **Enterprise customer**.
+1. Both the site owner and you can report the issue by using the [WDSI file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission). When prompted for user type, select **Enterprise customer**.
 
 ### Prevent your site from being blocked
 
 To reduce the likelihood of SmartScreen blocking your site:
 
 1. Enable _HTTPS_ and use a valid certificate.
-2. Block iframe loading of unknown third-party content.
-3. Use _Content Security Policy (CSP)_ and other secure response headers.
-4. Regularly scan for WebShells, trojans, and suspicious uploaded files.
-5. Maintain _domain reputation_ and avoid frequent changes to hosting or DNS.
+1. Block iframe loading of unknown third-party content.
+1. Use _Content Security Policy (CSP)_ and other secure response headers.
+1. Regularly scan for WebShells, trojans, and suspicious uploaded files.
+1. Maintain _domain reputation_ and avoid frequent changes to hosting or DNS.
 
 ## Related content
 
