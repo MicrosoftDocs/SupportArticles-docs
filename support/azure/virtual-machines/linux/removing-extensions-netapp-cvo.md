@@ -43,20 +43,39 @@ Cloud Volumes ONTAP doesn't support Azure VM extensions because extensions affec
 > Starting in BlueXP 3.9.54, NetApp enforces this pre-existing limitation as a notification in BlueXP. 
 
 ## Resolution
-To resolve this issue, run the following script against any affected NetApp CVO VMs in PowerShell:
+To resolve this issue, run the following script against any affected NetApp CVO VMs:
+
+### [PowerShell](#tab/powershell)
 
 ```powershell
-    $subscriptionId = (Get-AzContext).Subscription.Id 
-    $resourceGroup = "RGname" 
-    $vmName = "VMName" 
-    $apiVersion = "2025-04-01" 
-    $uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
-    $response = Invoke-AzRestMethod -Method GET -Uri $uri 
-    $vmModel = $response.Content | ConvertFrom-Json 
-    $vmModel.resources = @() 
-    $body = $vmModel | ConvertTo-Json -Depth 10 -Compress 
-    Invoke-AzRestMethod -Method PUT -Uri $uri -Payload $body
+$subscriptionId = (Get-AzContext).Subscription.Id 
+$resourceGroup = "RGname" 
+$vmName = "VMName" 
+$apiVersion = "2025-04-01" 
+$uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
+
+$response = Invoke-AzRestMethod -Method GET -Uri $uri 
+$vmModel = $response.Content | ConvertFrom-Json 
+$vmModel.resources = @() 
+$body = $vmModel | ConvertTo-Json -Depth 10 -Compress 
+Invoke-AzRestMethod -Method PUT -Uri $uri -Payload $body
 ```
+
+### [CLI](#tab/cli)
+
+```cmd
+subscriptionId=$(az account show --query id -o tsv)
+resourceGroup="RGName"
+vmName="VMName"
+apiVersion="2025-04-01"
+uri="https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
+
+response=$(az rest --method get --uri "$uri")
+vmModel=$(echo "$response" | jq '.resources = []')
+az rest --method put --uri "$uri" --body "$vmModel"
+```
+
+---
 
 > [!NOTE]
 > This operation might take 20-30 minutes to finish if the guest agent doesn't exist. This condition occurs because Azure CRP polls for the agent status first. The script removes all extensions from a VM model.
