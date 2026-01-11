@@ -41,6 +41,9 @@ The following sections provide a comprehensive list of potential rejection error
 | CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect to receive. | Specify the kinds of messages that users might receive. |
 | CallToActionOptInIssues | The opt-in URL is inaccessible or returns a certificate error. | Make sure that the opt-in URL is valid and secure. |
 | CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, and privacy policy. |
+| CallToActionMissingOptInForm | The call-to-action page does not include an opt-in form for users to provide consent. | Add a visible and functional opt-in form to the CTA page, ensuring it collects explicit consent and complies with CTIA guidelines. |
+| CallToActionConsentNotOptional | SMS consent is mandatory on a multipurpose form, meaning users cannot opt out of SMS while completing other actions. | Update the form so SMS consent is presented as an optional checkbox, not pre-selected, and independent of other actions.|
+| CallToActionVerificationIssues | The opt-in process cannot be verified due to missing confirmation steps, timestamps, or verification records. | Implement a confirmation step (e.g., “Thank you for opting in” message) and ensure timestamps are logged for compliance audits.| 
 
 ## Terms and conditions 
 
@@ -102,6 +105,8 @@ The following sections provide a comprehensive list of potential rejection error
 | SampleMessageMissingBrandName | The sample messages don't contain the brand name. | Add the registered (DBA) brand name to all samples. |
 | SampleMessageMissingOptOutInstructions | The sample messages don't contain opt-out instructions. | Add STOP instructions to each sample message. |
 | SampleMessageUseCaseMismatch | The sample messages don't match the declared use cases. | Make sure that sample messages reflect the declared use case accurately. |
+| SampleMessageMissingMessageFrequencyDisclosure | Sample messages do not include disclosure of message frequency (e.g., “You will receive X messages per month”). | Update sample messages to include frequency disclosure (e.g., “You will receive up to 4 messages per month”).|
+| SampleMessageMissingDataRatesDisclosure | Sample messages do not include disclosure of potential data rates (e.g., “Msg & Data rates may apply”).	| Add “Msg & Data rates may apply” to all sample messages provided during campaign registration.|
 
 ## Campaign (use case, description, and attributes)
 
