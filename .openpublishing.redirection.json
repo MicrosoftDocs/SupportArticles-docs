@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/mem/configmgr/alerts-reports-queries/cannot-edit-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+   {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios",
       "redirect_document_id": false

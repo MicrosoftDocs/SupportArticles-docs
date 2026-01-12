@@ -5,8 +5,6 @@ items:
   items:
     - name: A log with a long line is truncated in CMTrace
       href: alerts-reports-queries/long-line-causes-log-truncated.md
-    - name: Editing reports fails
-      href: alerts-reports-queries/cannot-edit-reports.md
     - name: Obtain error code descriptions in reports
       href: alerts-reports-queries/obtain-error-code-descriptions.md
     - name: Reports don't run as expected
