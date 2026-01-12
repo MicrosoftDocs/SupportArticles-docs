@@ -111,7 +111,7 @@ A few seconds after the Security log records the preceding event, it records Eve
 
 ## Cause
 
-The audit events contain information about security-related occurrences such as user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
+The audit events contain information about security-related occurrences such as reads of AD DS objects, user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
 
 Under heavy load (for example, during bulk operations), it's possible to generate multiple audit events while still writing the first one to the disk. When the number of audit events reaches the maximum for the queue, operational threads start pausing until their audit event can be inserted into the queue. AD DS logs Event ID 2866 at this point.
 
