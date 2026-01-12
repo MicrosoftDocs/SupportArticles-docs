@@ -6,11 +6,11 @@ ms.reviewer: khgupta, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Installation fails for Visual Studio 2017 or later
+# Visual Studio Installation issues due to missing certificate
 
 _Applies to:_&nbsp;Visual Studio 2017 and later versions  
 
-When you try to install Microsoft Visual Studio 2017 or a later version, the installation wizard unexpectedly closes or indicates that it can't download some installation files. This article resolves these problems and enables you to successfully install Visual Studio.
+When you try to install Microsoft Visual Studio 2017 or a later version, the installation wizard unexpectedly closes or indicates that it can't download some installation files. This problem can be caused by a missing certificate required for the Visual Studio install. This article provides guidance for resolving this missing certificate, and enables you to successfully install Visual Studio.
 
 ## Symptoms
 
@@ -87,9 +87,20 @@ To resolve this problem, follow these steps:
 
 1. Download the [Microsoft Windows Code Signing PCA 2024](https://www.microsoft.com/pkiops/certs/Microsoft%20Windows%20Code%20Signing%20PCA%202024.crt) certificate by using a device that has internet access.
 1. Copy the certificate file to `C:\Temp` on the device that experiences the installation problem.
-1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate in the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store) by runninng the following command in an elevated Command Prompt window:
+1. Install the _Microsoft Windows Code Signing PCA 2024_ certificate in the [Trusted Root Certification Authorities store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store). You can install the certificate by using either the _Certificate Import Wizard_ or command line:
 
-   ```cli
-   CertUtil -addStore CA "C:\Temp\Microsoft Windows Code Signing PCA 2024.crt"
-   ```
+   - To install using the command line, run the following command in an elevated Command Prompt window:
+
+     ```cli
+     CertUtil -addStore CA "C:\Temp\Microsoft Windows Code Signing PCA 2024.crt"
+     ```
+
+   - To install using the _Certificate Import Wizard_:
+
+     1. Right-click the certificate file and select **Install Certificate**.
+     1. In the _Certificate Import Wizard_, choose **Local Machine** and select **Next**.
+     1. Select **Place all certificates in the following store**.
+     1. Select **Browse...** and choose **Trusted Root Certification Authorities**.
+     1. Select **Next**, then select **Finish** to install the certificate.
+
 1. Try again to install Visual Studio by using the offline installer.
