@@ -98,9 +98,13 @@ To resolve this problem, follow these steps:
    - To install using the _Certificate Import Wizard_:
 
      1. Right-click the certificate file and select **Install Certificate**.
+
      1. In the _Certificate Import Wizard_, choose **Local Machine** and select **Next**.
+
      1. Select **Place all certificates in the following store**.
+
      1. Select **Browse...** and choose **Trusted Root Certification Authorities**.
+
      1. Select **Next**, then select **Finish** to install the certificate.
 
 1. Try again to install Visual Studio by using the offline installer.
