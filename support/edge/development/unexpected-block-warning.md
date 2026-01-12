@@ -14,7 +14,7 @@ When you visit a website in Microsoft Edge, [Microsoft Defender SmartScreen](/wi
 
 When you visit a website, Microsoft Edge displays a warning page indicating that the site is reported as unsafe.
 
-<!-- TODO: Ask SME for an image of just the warning page, without any buttons or menus highlighted -->
+:::image type="content" source="./media/unexpected-block-warning/site-blocked.png" alt-text="Screenshot of a SmartScreen block page":::
 
 ## Cause
 
@@ -37,9 +37,9 @@ If a site fails the checks of these dimensions, SmartScreen reports the site as 
 
 1. Select **Report that this site doesn't contain (malware/phishing) threats** under the **More information** header on the block page, or select **Report as safe or unsafe** in the **Suspicious site** dropdown on a warning page.
 
-   :::image type="content" source="./media/unexpected-block-warning/report-site-safe.png" alt-text="Screenshot of a SmartScreen block page":::
+   :::image type="content" source="./media/unexpected-block-warning/report-site-safe-blocked.png" alt-text="Screenshot of a SmartScreen block page with the link to 'Report that this site doesn't contain malware threats' highlighted.":::
 
-   <!-- Ask SME for screenshot of a warning page as well -->
+   :::image type="content" source="./media/unexpected-block-warning/report-site-safe-warn.png" alt-text="Screenshot of a SmartScreen warning feedback page for reporting a site as safe.":::
 
 1. Wait for a confirmation email from the SmartScreen Reputation Group:
 
