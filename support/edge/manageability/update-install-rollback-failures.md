@@ -9,19 +9,63 @@ ms.date: 01/07/2026
 
 When you install, update, or rollback Microsoft Edge or Microsoft Edge WebView2, you might encounter an issue that prevents the operation from completing. This article helps you collect the diagnostic information the [Microsoft Support Team](TODO) needs to analyze and help resolve the problem.
 
+The following components are involved in Edge installation and update scenarios:
+
+| Component             | Description                     |
+| --------------------- | ------------------------------- |
+| Microsoft Edge        | Chromium-based browser          |
+| Edge WebView2 Runtime | Embedded web rendering runtime  |
+| Microsoft Edge Update | Update service (`msedgeupdate`) |
+| Edge Installer        | MSI or EXE installer            |
+
 ## Symptoms
 
-You might experience one or more of the following problems with Edge or Edge WebView2:
+You might experience one or more of the following symptoms:
 
-- Failure to install
-- Failure to update
-- Failure to rollback to a previous version
+- Edge or Edge WebView2 installation hangs or rolls back.
+- Installation completes but the version doesn't change.
+- Edge WebView2 Runtime is missing or unexpectedly removed.
+- Edge Update service retries repeatedly.
+- Silent installation fails with no UI or error prompt.
+- Edge automatically rolls back to an older version.
+- Application fails to start after Edge WebView2 downgrade.
+- MSI errors occur during rollback.
+- Edge fails to launch after rollback.
 
-<!-- TODO: Ask SME for more info about symptoms. Error messages, effect of the error, what the user is doing when the error occurs -->
+You might also see one of the following error codes:
+
+### Installer or MSI errors
+
+| Error code   | Meaning                              |
+| ------------ | ------------------------------------ |
+| `0x80070643` | MSI installation failure             |
+| `0x80070005` | Access denied                        |
+| `0x80070002` | File not found                       |
+| `0x80070652` | Another installation is in progress  |
+| `1603`       | Fatal error during installation      |
+| `1618`       | Windows Installer is already running |
+
+### Edge Update errors
+
+| Error code   | Meaning                                         |
+| ------------ | ----------------------------------------------- |
+| `0x80072EE7` | DNS resolution failure                          |
+| `0x80072EFE` | Network connection dropped                      |
+| `0x80072F8F` | TLS or certificate validation failure           |
+| `0x80004005` | Unspecified error (usually environment-related) |
 
 ## Cause
 
-<!-- TODO: Ask SME for info about the cause (unless there are many possible causes and the exact cause can't be known in advance) -->
+Most Edge and WebView2 installation, update, and rollback failures are caused by one of the following issues:
+
+- Permission restrictions
+- Network or TLS issues
+- Security software interference
+- System component corruption
+- Residual installation artifacts
+
+> [!NOTE]
+> In enterprise environments, [Group Policy Object (GPO)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview), [Mobile Device Management (MDM)](/windows/client-management/mdm-overview), and security policies are often causes of install, update, or rollback failures.
 
 ## Solution
 
