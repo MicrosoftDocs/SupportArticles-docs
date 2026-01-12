@@ -22,7 +22,7 @@ The following sections provide a comprehensive list of potential rejection error
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
-|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (for example, account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
+|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (e.g., account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
 |CallToActionContainsDisallowedContent | The Call to Action contains disallowed content. | Remove any prohibited content from the Call to Action. |
 |CallToActionCourtOrderedOptIn | Opt-in information implies that consent is acquired through a court order. This statement is disallowed. | Remove any language that suggests that opt-in is obtained through a legal mandate or court order. Consent must be voluntary and user-initiated.|
 | CallToActionDoesNotContainRobustAgeGate | The Call to Action doesn't contain a robust age gate for age-restricted content. | Add a clear age verification step for age-restricted campaigns. |
@@ -41,9 +41,9 @@ The following sections provide a comprehensive list of potential rejection error
 | CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect to receive. | Specify the kinds of messages that users might receive. |
 | CallToActionOptInIssues | The opt-in URL is inaccessible or returns a certificate error. | Make sure that the opt-in URL is valid and secure. |
 | CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, and privacy policy. |
-| CallToActionMissingOptInForm | The call-to-action page does not include an opt-in form for users to provide consent. | Add a visible and functional opt-in form to the CTA page, ensuring it collects explicit consent and complies with CTIA guidelines. |
-| CallToActionConsentNotOptional | SMS consent is mandatory on a multipurpose form, meaning users cannot opt out of SMS while completing other actions. | Update the form so SMS consent is presented as an optional checkbox, not pre-selected, and independent of other actions.|
-| CallToActionVerificationIssues | The opt-in process cannot be verified due to missing confirmation steps, timestamps, or verification records. | Implement a confirmation step (e.g., “Thank you for opting in” message) and ensure timestamps are logged for compliance audits.| 
+| CallToActionMissingOptInForm | The Call to Action page does not include an opt-in form for users to provide consent. | Add a visible and functional opt-in form to the CTA page. Make sure that it collects explicit consent, and complies with CTIA guidelines. |
+| CallToActionConsentNotOptional | SMS consent is mandatory on a multipurpose form. This status means that users cannot opt out of SMS while they complete other actions. | Update the form so that SMS consent is presented as an optional checkbox (not pre-selected), and is independent of other actions.|
+| CallToActionVerificationIssues | The opt-in process cannot be verified because of missing confirmation steps, timestamps, or verification records. | Implement a confirmation step (e.g., “Thank you for opting in” message), and make sure that timestamps are logged for compliance audits.| 
 
 ## Terms and conditions 
 
@@ -105,8 +105,8 @@ The following sections provide a comprehensive list of potential rejection error
 | SampleMessageMissingBrandName | The sample messages don't contain the brand name. | Add the registered (DBA) brand name to all samples. |
 | SampleMessageMissingOptOutInstructions | The sample messages don't contain opt-out instructions. | Add STOP instructions to each sample message. |
 | SampleMessageUseCaseMismatch | The sample messages don't match the declared use cases. | Make sure that sample messages reflect the declared use case accurately. |
-| SampleMessageMissingMessageFrequencyDisclosure | Sample messages do not include disclosure of message frequency (e.g., “You will receive X messages per month”). | Update sample messages to include frequency disclosure (e.g., “You will receive up to 4 messages per month”).|
-| SampleMessageMissingDataRatesDisclosure | Sample messages do not include disclosure of potential data rates (e.g., “Msg & Data rates may apply”).	| Add “Msg & Data rates may apply” to all sample messages provided during campaign registration.|
+| SampleMessageMissingMessageFrequencyDisclosure | Sample messages do not include disclosure of message frequency (e.g., “You will receive X messages per month”). | Update sample messages to include frequency disclosure (e.g., “You will receive up to four (4) messages per month”).|
+| SampleMessageMissingDataRatesDisclosure | Sample messages do not include disclosure of potential data rates (e.g., “Msg & Data rates may apply”).	| Add “Msg & Data rates may apply” to all sample messages that are provided during campaign registration.|
 
 ## Campaign (use case, description, and attributes)
 
