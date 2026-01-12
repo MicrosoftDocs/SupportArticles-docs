@@ -1,7 +1,10 @@
 ---
 title: A corrupt global template causes errors when automating Word
 description: Describes an issue where an invalid global template file may cause an out-of-process automation client to throw an error message. Rename the global template file to resolve this issue.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -11,11 +14,9 @@ ms.custom:
 appliesto: 
 - Microsoft Word 2010
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
 ms.date: 06/06/2024
 ---
+
 # A corrupt global template causes errors when automating Word
 
 ## Symptoms
@@ -64,7 +65,3 @@ To rename the global template file, follow these steps.
 If Word starts correctly, you have resolved the problem. In this case, the problem is a damaged global template. You might need to change a few settings to restore your favorite options. If the global template file you renamed contains customizations, such as styles, macros, or AutoText entries that cannot be easily recreated, you may be able to copy those customizations from the old global template file to the new global template file by using the organizer.
 
 If your toolbar customizations are stored in a custom toolbar, you should be able to copy them using the organizer. Unfortunately, if the customizations were made to one of Word's built-in toolbars you might need to recreate them after you rename your template because you cannot copy those changes with the organizer.
-
-## References
-
-For more information about the error messages, see [Error 800A175D - Could Not Open Macro Storage](https://support.microsoft.com/help/224338).

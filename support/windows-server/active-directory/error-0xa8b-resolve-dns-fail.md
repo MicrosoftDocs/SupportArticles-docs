@@ -9,6 +9,8 @@ ms.reviewer: kaushika, raviks, herbertm, dennhu, eriw, v-lianna
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed
 
@@ -64,7 +66,7 @@ To resolve this error, follow these steps:
 
 3. Check for special names in the target Active Directory domain that require other configuration:
 
-    - Single-label DNS name. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md#how-to-enable-windows-based-clients-to-do-queries-and-dynamic-updates-with-single-label-dns-zones).
+    - Single-label DNS name. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md#how-to-enable-windows-based-clients-to-send-queries-and-dynamic-updates-when-using-single-label-dns-zones).  
     - Disjoint namespace. For more information, see [Event IDs 5788 and 5789 occur on a Windows-based computer](event-ids-5788-5789.md).
     - All numeric top-level domains (TLDs) or TLDs containing numeric characters.
 

@@ -1,0 +1,26 @@
+items:
+- name: New Outlook for Windows Troubleshooting
+  href: ../new-outlook-windows-welcome.yml
+  items:
+  - name: Calendaring
+    items:
+    - name: Can't globally disable the birthday calendar
+      href: ../calendaring/cannot-globally-disable-birthday-calendar.md
+    - name: Multiple time zones show an incorrect time difference
+      href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
+  - name: Installation
+    items:
+    - name: Map classic Outlook policies to new Outlook
+      href: ../installation/map-classic-outlook-policies-to-new-outlook.md
+  - name: Junk Email
+    items:
+    - name: New emails automatically move to Junk folder
+      href: ../junk-email/new-emails-automatically-move-to-junk-folder.md
+  - name: Performance
+    items:
+    - name: Collect a performance trace in new Outlook for Windows
+      href: ../performance/collect-performance-trace.md    
+  - name: Profiles and Accounts
+    items:
+    - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
+      href: ../profiles-and-accounts/archive-mailbox-not-visible.md

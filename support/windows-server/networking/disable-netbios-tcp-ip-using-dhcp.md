@@ -9,6 +9,8 @@ ms.reviewer: kaushika, SKHALELI, abpathak, v-jomcc, MASOUDH
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to disable NetBIOS over TCP/IP by using DHCP server options
 
@@ -28,10 +30,12 @@ To disable NetBIOS on the DHCP server, follow these steps:
 2. In the navigation pane, expand the **server_name**, expand **Scope**, right-click **Scope Options**, and then select **Configure Options**.
     > [!NOTE]
     > In this step, the **server_name** placeholder specifies the name of the DHCP server.
-3. Select the **Advanced** tab, and then select **Microsoft Windows 2000 Options** in the **Vendor class** list.
+3. Select the **Advanced** tab, and then select **Microsoft Options** in the **Vendor class** list.
 4. Make sure that **Default User Class** is selected in the **User class** list.
 5. Select the **001 Microsoft Disable Netbios Option** check box, under the **Available Options** column.
 6. In the **Data entry** area, type 0x2 in the **Long** box, and then select **OK**.
+
+   :::image type="content" source="./media/disable-netbios-tcp-ip-using-dhcp/scope-options-dialog-box.png" alt-text="Screenshot of the scope options dialog box, showing the Microsoft Disable Netbios Option selected and the Long box configured.":::
 
 ## Configure the DHCP client to enable the DHCP server to determine NetBIOS behavior
 

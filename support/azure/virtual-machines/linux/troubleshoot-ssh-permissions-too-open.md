@@ -11,12 +11,14 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 12/30/2021
+ms.date: 09/15/2025
 ms.author: jarrettr
 ---
 # Can't SSH to Azure Linux VM because permissions are too open
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptoms
 
@@ -26,7 +28,7 @@ You can't connect to your Microsoft Azure Linux virtual machine (VM) by using Se
 >sshd: error: It is required that your private key files are NOT accessible by others.</br>
 >sshd: error: This private key will be ignored.</br>
 >sshd: error: key_load_private: bad permissions</br>
->shd: error: Could not load host key: /etc/ssh/sshKeyName
+>sshd: error: Could not load host key: /etc/ssh/sshKeyName
 
 ## Cause
 
@@ -46,8 +48,8 @@ If the [VM agent](../windows/windows-azure-guest-agent.md#step-1-check-whether-t
 1. Sign in to the [Azure portal](https://portal.azure.com), and then go to the VM page.
 1. In the **Operations** section, select **Run Command** > **RunScriptShell**, and then run the following script. Replace `<username>` with your user name.
 
-    ``` bash
-    chmod –R 644 /etc/ssh
+    ```bash
+    chmod -R 644 /etc/ssh
     chmod 600 /etc/ssh/ssh_host*key
     chmod 600 /etc/ssh/sshd_config
     chmod 755 /home/<username>
@@ -62,8 +64,8 @@ If the [VM agent](../windows/windows-azure-guest-agent.md#step-1-check-whether-t
 1. Connect to the VM by using Azure Serial Console, and log on to your account.
 1. Run the following command to restore the appropriate permissions to the configuration directory and the files. Replace `<username>` with your user name.
 
-    ``` bash
-    chmod –R 644 /etc/ssh
+    ```bash
+    chmod -R 644 /etc/ssh
     chmod 600 /etc/ssh/ssh_host*key
     chmod 600 /etc/ssh/sshd_config
     chmod 755 /home/<username>
@@ -100,7 +102,7 @@ If you can't access the VM by using the Azure Serial Console, then the repair mu
 
 1. Restore the appropriate permissions to the configuration directory and files. Replace `<username>` with your user name.
 
-    ```
+    ```bash
     chmod –R 644 /repair/etc/ssh
     chmod 600 /repair/etc/ssh/ssh_host*key
     chmod 600 /repair/etc/ssh/sshd_config
@@ -113,7 +115,7 @@ If you can't access the VM by using the Azure Serial Console, then the repair mu
 
 1. Unmount the boot partition:
 
-    ```
+    ```bash
     umount /repair
     ```
 

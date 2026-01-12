@@ -9,6 +9,8 @@ ms.reviewer: kaushika, steved
 ms.custom:
 - sap:network connectivity and file sharing\windows nic teaming (load balance failover)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Kernel event ID 2 is logged when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2
 

@@ -54,13 +54,13 @@ productDirectory:
     url: developer/webapps/iis/iis-welcome.yml
 
   - title: Microsoft 365
-    imageSrc: "media/hub-landing/microsoft-365-logo.png"
+    imageSrc: "/media/logos/logo-ms-social.svg"
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
-  - title: Microsoft Copilot for Sales
+  - title: Sales in Microsoft 365 Copilot
     imageSrc: "media/hub-landing/sales-copilot.svg"
-    summary: Troubleshooting articles for Microsoft Copilot for Sales
+    summary: Troubleshooting articles for Sales in Microsoft 365 Copilot
     url: sales-copilot/welcome-sales-copilot.yml
 
   - title: Microsoft Dynamics GP

@@ -1,14 +1,14 @@
 ---
 title: Collect log files from Skype for Business Client
 description: Describes how to collect log files from Microsoft Office Communicator, Lync, and Skype for Business Client.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: v-gregl, v-jastho
+ms.reviewer: simonxjx, v-gregl, v-jastho, v-kccross
 appliesto: 
   - Microsoft Office Communicator 2007 R2
   - Lync 2010

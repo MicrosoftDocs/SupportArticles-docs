@@ -9,6 +9,8 @@ ms.reviewer: kaushika, MASOUDH
 ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You can't connect to the Internet after you connect to a VPN server
 

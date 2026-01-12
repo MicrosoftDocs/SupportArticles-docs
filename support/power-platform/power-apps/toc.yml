@@ -6,12 +6,12 @@
       href: canvas-app-performance/troubleshoot-perf-table.md
 - name: Connections
   items:
-    - name: Best practices when updating a flow
-      href: connections/best-practices-when-updating-a-flow.md
     - name: Refresh URL isn't displayed for custom connectors
       href: connections/custom-connectors-not-show-refresh-url.md
     - name: Troubleshoot broken connections
       href: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
+    - name: Troubleshoot Power Apps flow integration errors
+      href: connections/best-practices-when-updating-a-flow.md
     - name: Troubleshoot Power Query
       href: connections/troubleshoot-power-query-issues.md
 - name: Canvas apps
@@ -30,8 +30,12 @@
       href: create-and-use-apps/custom-pages-sdk-script-not-load.md
     - name: Filter expression returns extra blank records in results
       href: create-and-use-apps/filter-blank-records.md
-    - name: Troubleshoot wrap issues
+    - name: '"Something went wrong" error when using the wrap feature' 
+      href: manage-apps/something-went-wrong-error-codes.md
+    - name: Troubleshoot common wrap issues
       href: manage-apps/wrap-issues.md
+    - name: Troubleshoot Azure key vault errors in the wrap wizard
+      href: manage-apps/azure-key-vault-errors.md
 - name: Model-driven apps
   items:
     - name: How to create a vanilla repro model-driven app

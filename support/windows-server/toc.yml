@@ -125,6 +125,8 @@ items:
       href: ./active-directory/event-id-1216-directory-services-event-log.md
     - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
       href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
+    - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+      href: ./active-directory/adamsync-cant-sync-basedn-grandchild-ou.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -285,14 +287,14 @@ items:
       href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Best practices for Active Directory domains that use single-label DNS names
+      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Create an Active Directory server
       href: ./active-directory/create-an-active-directory-server.md
     - name: DCPROMO demotion fails
       href: ./active-directory/dcpromo-demotion-fails.md
     - name: DC promotion stops responding
       href: ./active-directory/dc-promotion-not-respond-netbios-disabled.md
-    - name: Deployment and operation of Active Directory domains
-      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
       href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
     - name: Domain controllers don't demote
@@ -674,22 +676,30 @@ items:
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
     items:
+    - name: Troubleshoot Windows Server data deduplication
+      href: ./backup-and-storage/troubleshootwindows-server-data-deduplication.md
     - name: Files are corrupted on deduplicated volume
       href: ./backup-and-storage/files-are-corrupted-deduplicated-volume.md
     - name: Full garbage collection causes performance issues
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
   - name: File Server Resource Manager (FSRM)
     items:
+    - name: 'Troubleshooting guidance: FSRM'
+      href: ./backup-and-storage/fsrm-troubleshooting-guidance.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
+    - name: 'Troubleshooting guidance: iSCSI storage connectivity'
+      href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
+    - name: 'Troubleshooting guidance: Multipath I/O (MPIO)'
+      href: ./backup-and-storage/windows-server-mpio-troubleshooting.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
@@ -752,12 +762,32 @@ items:
       href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
+  - name: Storage Migration
+    items:
+    - name: Troubleshoot Windows Server Storage Migration service
+      href: ./backup-and-storage/windows-server-storage-migration-service.md
+  - name: Storage Replica
+    items:
+    - name: Troubleshoot Windows Server Storage Replica
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
+    - name: Troubleshoot data corruption and storage replication failures in Windows Server 2025
+      href: ./backup-and-storage/troubleshoot-data-corruption-storage-replication-failures-ws2025.md
+  - name: Storage Sense
+    items:
+    - name: Troubleshoot Windows Server Storage Sense
+      href: ./backup-and-storage/troubleshoot-windows-server-storage-sense.md
   - name: Storage Spaces
     items:
     - name: Extend stand-alone tiered storage spaces
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
+  - name: Storage Spaces Direct (S2D)
+    items:
+    - name: Delete a Storage Spaces Direct storage pool and reset the physical disks
+      href: ./backup-and-storage/delete-s2d-storage-pool-reuse-disks.md
+    - name: Troubleshoot performance issues in Storage Spaces Direct
+      href: ./backup-and-storage/troubleshoot-performance-issues-storage-spaces-direct.md
   - name: System Restore or resetting your computer
     items:
     - name: How to restore a Windows 7 installation
@@ -1124,6 +1154,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
       href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
+    - name: Cluster Shared Volume goes offline
+      href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
@@ -1140,6 +1174,10 @@ items:
     items:
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
+  - name: Nested virtualization
+    items:
+    - name: 'Troubleshooting guide: Hyper-V nested virtualization'
+      href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
@@ -1184,6 +1222,14 @@ items:
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds
       href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
+  - name: Rolling upgrades
+    items:
+    - name: Troubleshoot rolling upgrade issues
+      href: ./high-availability/troubleshoot-rolling-upgrades.md
+  - name: Site configuration
+    items:
+    - name: Troubleshoot site configuration issues   
+      href: ./high-availability/troubleshoot-site-configuration.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -1222,6 +1268,8 @@ items:
       href: ./licensing-and-activation/change-volume-licensing-product-key.md
     - name: How to rebuild the Tokens.dat file
       href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
+    - name: Local policy of this system does not permit you to logon interactively
+      href: ./licensing-and-activation/remote-local-policy-not-permit-logon.md
     - name: Specified database is not a valid VAMT database error
       href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
     - name: Troubleshoot ADBA clients that don't activate
@@ -1628,6 +1676,8 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
+    - name: Default MTU sizes for different network topologies
+      href: ./networking/default-maximum-transfer-unit-network-topologies.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
     - name: Direct host SMB over TCP/IP
@@ -1644,6 +1694,8 @@ items:
       href: ./networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md
     - name: Error 10013 when binding excluded port again
       href: ./networking/error-10013-wsaeacces-is-returned.md
+    - name: Error message when you open the properties of a network connection
+      href: ./networking/network-connection-unexpected-error.md      
     - name: Error message when you set an IP address
       href: ./networking/error-message-when-you-set-ip-address.md
     - name: Event 1500 when SNMP is enabled
@@ -1678,6 +1730,8 @@ items:
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
     - name: Multiple default gateways cause connectivity problems
       href: ./networking/connectivity-issues-multiple-default-gateways.md
+    - name: Modify the TCP/IP maximum retransmission time-out
+      href: ./networking/modify-tcp-ip-maximum-retransmission-time-out.md
     - name: Net Commands Operating Systems
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
@@ -1694,6 +1748,8 @@ items:
       href: ./networking/receive-window-auto-tuning-for-http.md
     - name: Reserve a range of ephemeral ports
       href: ./networking/reserve-a-range-of-ephemeral-ports.md
+    - name: Reset TCP/IP by using the NetShell utility
+      href: ./networking/reset-tcp-ip-net-shell.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
     - name: Slow performance occurs when you copy data to a TCP server
@@ -1716,12 +1772,16 @@ items:
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
     - name: Troubleshoot Web Application Proxy
       href: ./networking/troubleshoot-web-application-proxy.md
+    - name: Use TRACERT to troubleshoot TCP/IP problems
+      href: ./networking/trace-route-troubleshoot-tcp-ip-problems.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Using the PortQry command-line tool
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Virtual machines lose network connectivity
       href: ./networking/vm-lose-network-connectivity-broadcom.md
+    - name: Windows activation or validation fails with error code 0x8004FE33
+      href: ./networking/windows-activation-validation-fails.md
     - name: WSAEMSGSIZE - Error 10040 in Winsock 2.0
       href: ./networking/wsaemsgsize-error-10040-in-winsock-2.md
   - name: Webwindows-client and WebDAV
@@ -1786,6 +1846,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Application or service crashing behavior'
       href: ./performance/troubleshoot-application-service-crashing-behavior.md
+    - name: 'Troubleshooting guidance: Application or service memory leaks'
+      href: ./performance/troubleshoot-application-service-memory-leaks.md
     - name: Cannot set page files on a partition larger than 2 terabytes
       href: ./performance/cannot-set-page-files-on-partition-larger-than-2-tb.md
     - name: Compatibility for 32-bit programs on 64-bit versions of Windows
@@ -2418,6 +2480,8 @@ items:
       href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
     - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
@@ -2458,6 +2522,8 @@ items:
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
     - name: Upgrade fails with error 0x000000C4
       href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
+    - name: Upgrade fails and generates error code 0xC1900101-0x20017
+      href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
       href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
     - name: Windows Deployment Service fails to start
@@ -2572,6 +2638,26 @@ items:
       href: ./system-management-components/sms-administrator-console-connectivity-issue.md
     - name: What is MMC
       href: ./system-management-components/what-is-microsoft-management-console.md
+  - name: OpenSSH
+    items:
+    - name: Can't install OpenSSH Features
+      href: ./system-management-components/cant-install-openssh-features.md
+    - name: Enable OpenSSH verbose logging
+      href: ./system-management-components/enable-openssh-verbose-logging.md
+    - name: Error 1053 and OpenSSH Server service doesn't start
+      href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
+    - name: Error 1053, Error 1067, or Event ID 7034 and OpenSSH Server service doesn't start after you install a Windows update
+      href: ./system-management-components/error-1053-1067-7034-after-update-openssh-doesnt-start.md
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ./system-management-components/open-client-can-not-connect-server.md
+    - name: Troubleshoot common SFTP issues when using OpenSSH
+      href: ./system-management-components/troubleshoot-sftp-issues-using-openssh.md
+    - name: Troubleshoot OpenSSH communication through Windows Firewall
+      href: ./system-management-components/troubleshoot-openssh-windows-firewall-port22.md
+    - name: Upgrade in-box OpenSSH to the latest OpenSSH release
+      href: ./system-management-components/upgrade-in-box-openssh-to-latest-openssh-release.md
+    - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+      href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
     items:
     - name: CJK characters are garbled in PowerShell
@@ -2644,6 +2730,8 @@ items:
     href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - name: Folder redirection
     items:
+    - name: Event ID 1530 may be logged in the application log
+      href: ./user-profiles-and-logon/event-1530-application-log.md
     - name: Fail to set up Folder Redirection with Group Policy
       href: ./user-profiles-and-logon/event-101-1000-with-folder-redirection.md
     - name: Folder Redirection fails with ERROR_SEM_TIMEOUT
@@ -2708,8 +2796,12 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
+      href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
@@ -2718,20 +2810,36 @@ items:
     items:
     - name: API call of performance counters is delayed
       href: ./virtualization/api-call-performance-counters-delay-container.md
+  - name: GPU passthrough
+    items:
+    - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
+      href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
+    - name: Unresponsive VMs after cluster failover failure
+      href: ./virtualization/unresponsive-vms-after-cluster-failover-failure.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
+    - name: Windows updates don't install on VM cluster hosts
+      href: ./virtualization/windows-updates-dont-install-on-vm-cluster-hosts.md
   - name: Hyper-V Replica
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V Replica troubleshooting guide
+      href: ./virtualization/hyper-v-replica-troubleshooting-guide.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Block users from running Hyper-V and VMware virtual machines on workstation-class computers
+      href: ./virtualization/block-users-from-running-virtualization-features-on-specific-computers.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
@@ -2742,16 +2850,24 @@ items:
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
+    - name: Troubleshoot Hyper-V installation, configuration, and operational failures
+      href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
+    - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
+      href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
       href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
+    - name: Hyper-V virtual machine input, migration, and device integration issues
+      href: ./virtualization/hyper-v-virtual-machine-input-migration-integration.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
@@ -2764,12 +2880,22 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: PowerShell cmdlets
+    items:
+    - name: Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues
+      href: ./virtualization/hyper-v-storage-cluster-management.md
+  - name: Remote administration of the Hyper-V role
+    items:
+    - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
+      href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
@@ -2782,6 +2908,8 @@ items:
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
     - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
       href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
+    - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
+      href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
@@ -2792,6 +2920,8 @@ items:
     items:
     - name: Can't add a second Fibre Channel adapter
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
+    - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
+      href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2800,6 +2930,8 @@ items:
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
+    - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
+      href: ./virtualization/troubleshoot-hyper-v-virtual-machine-creation.md
     - name: Error when you manage a VHD file
       href: ./virtualization/fail-to-manage-vhd-file.md
     - name: Microsoft server software and supported virtualization environments
@@ -2810,12 +2942,18 @@ items:
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
+      href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
-    - name: virtual machine shutdown actions don't run
+    - name: Virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
+    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
+      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Virtual machine will not boot
     items:
     - name: 0x8000FFFF error when you start VM
@@ -2990,6 +3128,8 @@ items:
       href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
     - name: DCs can't be located and high-rate outbound sessions
       href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
+    - name: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
+      href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
     - name: Gather information for secure channel issues
       href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
     - name: Troubleshoot domain controller location issues
@@ -3024,6 +3164,8 @@ items:
       href: ./windows-security/mark-attribute-as-confidential.md
     - name: Maximum number of access control entries
       href: ./windows-security/error-add-user-to-security-permissions.md
+    - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
+      href: ./windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md
     - name: Security auditing settings aren't applied when you deploy domain-based policy
       href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
     - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
@@ -3092,6 +3234,8 @@ items:
       href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Known Issue Rollback
+      href: ./installing-updates-features-roles/known-issue-rollback.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
     - name: Unexpected automatic update when it's disabled by Group Policy
@@ -3102,6 +3246,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3110,7 +3256,9 @@ items:
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
-    - name: Error 0x8007000d after installing Windows updates
+    - name: Error 0x80070003 at startup after you install a Windows update
+      href: ./installing-updates-features-roles/error-0x80070003-windows-update-fails.md
+    - name: Error 0x8007000d at startup after you install a Windows update
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
@@ -3126,26 +3274,52 @@ items:
       href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
     - name: Fix Windows Update corruptions and installation failures
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: Troubleshoot Windows Update download errors
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+    - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+      href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
+    - name: Troubleshoot Windows Update error code 0x80070070
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md
+    - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
+      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Troubleshoot Windows Update error 0x80070bc9
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
+    - name: Troubleshoot Windows Update error 0x80072f8f
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
+    - name: Troubleshoot Windows Update error 0x800f0823
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md
+    - name: Troubleshoot Windows Update error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
+    - name: Troubleshoot Windows Update error 0x800f0920
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
+    - name: Troubleshoot Windows Update error 0x8024001E
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80244007
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
   - name: Windows Update for Business Reports
     items:
-    - name: Initial service configuration and Onboarding
+    - name: Troubleshoot Windows Update error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
+    - name: Windows Update for Business Reports
       items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
@@ -3188,21 +3362,21 @@ items:
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Hyper-V related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Windows failover cluster related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Windows Update for Business reports-related issues
+    - name: Collect data to analyze and troubleshoot Active Directory scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-active-directory-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot clustering and high availability scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Group Policy scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-group-policy-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot system management components scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
       href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
       href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context

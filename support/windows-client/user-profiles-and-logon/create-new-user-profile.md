@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Identify a damaged user profile and create a new profile in Windows Server 2003
 

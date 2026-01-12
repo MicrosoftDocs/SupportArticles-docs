@@ -9,6 +9,8 @@ ms.reviewer: kaushika, raackley
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine state
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 

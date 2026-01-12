@@ -24,6 +24,8 @@ The [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) enables 
 >[!NOTE]
 >This IP address is a virtual public IP address that facilitates communication and should not be blocked. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
 ## Before you begin
 
 Check the agent status and version to make sure it is still supported. See [Minimum version support for virtual machine agents in Azure](../windows/support-extensions-agent-version.md) to check version support, or see [WALinuxAgent FAQ](https://github.com/Azure/WALinuxAgent/wiki/FAQ#what-does-goal-state-agent-mean-in-waagent---version-output) for steps to find the status and version.

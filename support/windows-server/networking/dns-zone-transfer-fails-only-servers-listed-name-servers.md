@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting
 

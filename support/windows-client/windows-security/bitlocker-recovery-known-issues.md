@@ -2,7 +2,7 @@
 title: 'BitLocker recovery: known issues'
 description: Describes common issues that can occur that prevent BitLocker from behaving as expected when recovering a drive, or may cause BitLocker to start recovery unexpectedly. The article provides guidance for addressing those issues.
 ms.date: 01/15/2025
-ms.reviewer: kaushika, v-tappelgate, hirito, scottmca
+ms.reviewer: kaushika, v-tappelgate, scottmca
 manager: dcscontentpm
 ms.collection:
 - Windows Security Technologies\BitLocker
@@ -12,6 +12,8 @@ ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # BitLocker recovery: known issues
 
@@ -365,3 +367,9 @@ To resolve this issue, use one of the following two solutions:
 
 - Remove any device that uses TPM 1.2 from any group that is subject to GPOs that enforce secure launch.
 - Edit the **Turn On Virtualization Based Security** GPO to set **Secure Launch Configuration** to **Disabled**.
+
+## BitLocker PIN unlock failure after uninstalling an update
+
+If you uninstall the cumulative update and roll back the OS build to a version earlier than 26100.4770 after installing KB5063878 or a later update, BitLocker may fail to unlock the drive even with the correct PIN on devices running Windows 11, version 24H2.
+
+To resolve this issue, unlock device using recovery password or other recovery mechanism and install KB5062660 or a later update.

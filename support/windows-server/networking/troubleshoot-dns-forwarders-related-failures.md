@@ -9,6 +9,8 @@ ms.reviewer: aytarek,5x5net
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot DNS name resolution failures related to DNS forwarders
 

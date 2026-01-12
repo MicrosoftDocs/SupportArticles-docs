@@ -9,6 +9,8 @@ ms.reviewer: kaushika, MVP
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You can't establish a Remote Desktop session to a computer running one of the affected products
 

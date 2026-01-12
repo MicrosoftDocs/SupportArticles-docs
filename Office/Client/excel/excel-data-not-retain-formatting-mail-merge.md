@@ -1,7 +1,10 @@
 ---
 title: Excel data doesn't retain formatting in mail merge
 description: This article provides two resolutions for the problem where data in an Excel worksheet does not retain its formatting, such as in currency values and percentages, when you perform a mail merge in Word.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -13,11 +16,9 @@ appliesto:
 - Excel 2016
 - Excel 2013
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
 ms.date: 05/26/2025
 ---
+
 # Excel data doesn't retain its formatting in mail merge operations in Word
 
 If you perform a mail merge in Microsoft Word and you use a Microsoft Excel worksheet as the data source for the recipient list, some of the numeric data may not retain its formatting when it is merged.

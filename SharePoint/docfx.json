@@ -124,6 +124,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/troubleshoot/sharepoint/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472",
@@ -139,13 +140,13 @@
       "ms.service": {
         "SharePointHybrid/**/*.md": "sharepoint-online",
         "SharePointOnline/**/*.md": "sharepoint-online",
-        "OneDrive/**/*.md": "one-drive",
+        "OneDrive/**/*.md": "onedrive",
         "SharePointServer/**/*.md": "sharepoint-server-itpro",
         "SharePointExperts/**/*.md": "sharepoint-server-itpro",
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
       },
       "author": {
-        "**/*.md": "Cloud-Writer"
+        "**/*.md": "cloud-writer"
       },
       "ms.author": {
         "**/*.md": "meerak"

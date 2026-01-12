@@ -1,0 +1,106 @@
+### YamlMime:Landing
+
+title: Azure Native Integrations troubleshooting documentation
+summary: Welcome to Azure Native Integration troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Native Integrations. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Native Integration issues
+  description: Documentation for troubleshooting common issues with Azure Native Integrations. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: partner-services
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 08/14/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title:  All Partner Services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Resolve Azure Native Integrations Purchase Errors
+            url: marketplace-purchases-errors.md
+# Card       
+  - title:  Confluent
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't create a service connection by using Service Connector
+            url: confluent/cannot-create-service-connection.md
+          - text: Can't create a Confluent connector
+            url: confluent/cannot-create-confluent-connector.md
+          - text: Can't delete a resource
+            url: confluent/cannot-delete-resource.md
+          - text: Can't find the offer in Azure Marketplace
+            url: confluent/cant-find-offer.md
+          - text: Conflict error
+            url: confluent/conflict-error.md
+          - text: Confluent connector isn't in the list of connectors
+            url: confluent/connector-not-listed.md
+          - text: DeploymentFailed error
+            url: confluent/deploymentfailed-error.md
+          - text: Resource creation is slow or fails
+            url: confluent/resource-creation-slow.md
+          - text: Resource isn't displayed
+            url: confluent/resource-not-displayed.md
+          - text: Single sign-on doesn't work for the Confluent SaaS portal
+            url: confluent/single-sign-on-does-not-work.md   
+
+# Card
+  - title: Dynatrace 
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Free trial limitations
+            url: dynatrace/free-trial-errors.md
+          - text: Metrics collection checkbox is unavailable 
+            url: dynatrace/metrics-checkbox-disabled.md
+
+# Card
+  - title: Astro 
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Can't create Astro resources in Azure  
+          url: astro/resource-creation.md
+        - text: Can't install Astro using a personal email
+          url: astro/personal-email.md
+        - text: Unable to use single sign-on in Astronomer portal
+          url: astro/single-sign-on.md
+
+# Card
+  - title: Informatica
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issues creating Informatica resources in Azure
+            url: informatica/resource-creation.md 
+
+# Card        
+  - title: Observability partners
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Diagnostic settings manual update
+            url: diagnostic-settings-manual-update.md
+          - text: Diagnostic settings not created
+            url: diagnostic-settings.md
+          - text: Log forwarding persists
+            url: log-forwarding-persists.md
+          - text: Log limitations
+            url: log-limitations.md
+
+# Card
+  - title:  New Relic
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Can't install or uninstall the agent on a VM
+            url:  new-relic/install-uninstall-extension-vm.md
+          - text:  Update ingestion key after rotation
+            url: ingestion-key-rotation-log-flow.md
+          - text: Resource monitoring stopped working
+            url: new-relic/resource-monitoring-troubleshoot.md

@@ -1,31 +1,35 @@
 ---
 title: Optimize domain controller location
 description: Explains how to optimize the location of a domain controller or global catalog that resides outside of a client's site. Provides steps for Windows 2000 and Windows Server 2003.
-ms.date: 06/18/2025
+ms.date: 11/14/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 
 This article provides the steps to optimize the location of a domain controller or global catalog that resides outside of a client's site.
 
 _Original KB number:_ &nbsp; 306602  
-_Applies to:_ &nbsp; All supported versions of Windows Server
 
 ## Summary
 
-The domain controller locator mechanism in Windows 2000 always prefers a domain controller that resides in the site of the client that is searching for a domain controller. This is achieved by a domain controller that registers site-specific domain controller locator DNS SRV resource records for the site in which the domain controller resides.
+The domain controller locator mechanism in Windows always prefers a domain controller that resides in the site of the client that is searching for a domain controller. This is achieved by a domain controller that registers site-specific domain controller locator DNS SRV resource records for the site in which the domain controller resides.
 
 Additionally, a domain controller may register site-specific domain controller locator DNS SRV resource records for any other sites that do not contain a domain controller in the same role to which the site of the domain controller is the closest. Such roles include a role that hosts the same domain, or that is a global catalog). This mechanism ensures that clients will locate the nearest domain controller in cases in which no domain controller is located in the client's site.
 
-For more information about this mechanism, refer to the Windows 2000 Server Resource Kit, "Distributed Systems Guide" book, Chapter 3: "Name Resolution in Active Directory."
+In a case in which all the domain controllers in the same role (that is, that are hosting the same domain or are being global catalogs) in a particular site become unavailable, clients that are located in the same site will fail over to:
+  - The Next Closest Site if configured to be used. A client needs to successfully contact a DC indicated the next closest site.
+  -	A DC registered in the list of Site-Less records.
 
-In a case in which all the domain controllers in the same role (that is, that are hosting the same domain or are being global catalogs) in a particular site become unavailable, clients that are located in the same site will fail over to any other domain controller in any other site without optimization.
+By default all writable DCs register records for the site-less names, so a client may try DCs that are slow to respond as they are in a remote network, or they are not reachable at all due to routing restrictions. So it makes sense to have only DCs in the site-less DNS records that are well-connected to your network and are well-monitored, so they have good up-time.
+Read-Only DCs only register site-specific DNS records by default in the site they are located in. They do not automatically cover other sites.
 
 ## More information
 
@@ -43,14 +47,9 @@ It is preferable that if all domain controllers and global catalogs in a satelli
 
 To achieve this behavior, the domain controllers and global catalogs in the satellite offices should not register generic (non-site-specific) domain controller locator DNS records. These records are registered only by the domain controllers and global catalogs in the central hub. When clients cannot locate the domain controllers and global catalogs that serve their site, they try to locate any domain controllers or global catalogs by using these generic (non-site-specific) domain controller locator DNS records.
 
-The following records should not be registered by the domain controllers or global catalogs in the satellite sites:  
+### To configure domain controllers or global catalogs not to register site-less records
 
-- Windows Server 2003-based domain controllers
-- Windows 2000-based domain controllers with Service Pack 2 (SP2) or later installed, or with the hotfix that is specified in Knowledge Base article 267855
-
-### To configure domain controllers or global catalogs not to register generic records
-
-#### Windows 2000
+#### Manual Configuration using Registry Editor
 
 1. Start Registry Editor (Regedt32.exe).
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
@@ -64,9 +63,9 @@ The following records should not be registered by the domain controllers or glob
 
 4. Exit Registry Editor.
 
-#### Windows Server 2003
+#### Administrative Templates Group Policy
 
-To configure Windows Server 2003-based domain controllers, use the "DC locator DNS records not registered by the DCs" Net Logon service group policy. To do this, specify the list of the space-delimited mnemonics that are specified in the "Reference tables" section.
+Use the "DC locator DNS records not registered by the DCs" Net Logon service group policy. To do this, specify the list of the space-delimited mnemonics that are specified in the "Reference tables" section.
 
 #### Reference tables
 
@@ -94,8 +93,6 @@ Global catalog-specific records
 |GcIpAddress|A|gc._msdcs.\<DnsForestName>|
 |GenericGc|SRV|_gc._tcp.\<DnsForestName>|
 
-For the complete list of the domain controller locator DNS records, see the Windows 2000 Server Resource Kit, "Distributed Systems Guide" book, Chapter 3: "Name Resolution in Active Directory." For the complete list of the domain controller locator DNS records, refer to KB article Q267855 that is referenced in this article.
-
 ### Section II: Other topologies
 
 If the failover to the central hubs when local domain controllers and global catalogs become unavailable does not satisfy your requirements, you can use the following configuration.
@@ -107,7 +104,7 @@ If the clients (such as servers that run Microsoft Exchange Servers) in site A f
 
 ### To configure a domain controller to register site-specific records for a different site
 
-#### Windows 2000
+#### Manual Configuration using Registry Editor
 
 1. Start Registry Editor (Regedt32.exe).
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
@@ -121,13 +118,13 @@ If the clients (such as servers that run Microsoft Exchange Servers) in site A f
 
 4. Exit Registry Editor.
 
-#### Windows Server 2003
+#### Administrative Templates Group Policy
 
-To configure Windows Server 2003-based domain controllers, use the "Sites Covered by the domain controller locator DNS SRV Records" Net Logon service group policy. To do this, specify the list of the space-delimited site names for which the domain controller should register.
+Use the "Sites Covered by the domain controller locator DNS SRV Records" Net Logon service group policy. To do this, specify the list of the space-delimited site names for which the domain controller should register.
 
 ### To configure a Global Catalog to register site-specific records for a different site
 
-#### Windows 2000
+#### Manual Configuration using Registry Editor
 
 1. Start Registry Editor (Regedt32.exe).
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
@@ -141,13 +138,13 @@ To configure Windows Server 2003-based domain controllers, use the "Sites Covere
 
 4. Exit Registry Editor.
 
-#### Windows Server 2003
+#### Administrative Templates Group Policy
 
-Use the "Sites Covered by the global catalog locator DNS SRV Records" Net Logon service Group Policy by specifying the list of the carriage return-delineated site names for which the global catalog should register.  
+Use the "Specify sites covered by the GC Locator DNS SRV Records" Net Logon service Group Policy by specifying the list of the carriage return-delineated site names for which the global catalog should register.  
 
 ### To Configure a domain controller to Register SRV Records with Particular Priority
 
-#### Windows 2000
+#### Manual Configuration using Registry Editor
 
 1. Start Registry Editor (Regedt32.exe).
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
@@ -161,6 +158,11 @@ Use the "Sites Covered by the global catalog locator DNS SRV Records" Net Logon 
 
 4. Exit Registry Editor.
 
-#### Windows Server 2003
+#### Administrative Templates Group Policy
 
-To configure Windows Server 2003-based domain controllers, use the "Priority Set in the domain controller locator DNS SRV Records" Net Logon service Group Policy.
+Use the "Priority Set in the domain controller locator DNS SRV Records" Net Logon service Group Policy.
+
+### References
+- [Locating Active Directory domain controllers in Windows and Windows Server](/windows-server/identity/ad-ds/manage/dc-locator?tabs=dns-based-discovery).
+- [Problems occur with DCs in AD integrated DNS zones](/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones).
+- [Enabling Clients to Locate the Next Closest Domain Controller](/windows-server/identity/ad-ds/plan/enabling-clients-to-locate-the-next-closest-domain-controller).

@@ -91,7 +91,7 @@ Key entries include the following sample text strings:
 
 ### Windows devices
 
-On a Windows device that is making a connection to NDES, you can view the devices Windows Event Viewer and look for indications of a successful connection. Connections are logged as an event ID **36** in the devices *DeviceManagement-Enterprise-Diagnostics-Provide* > **Admin** log.
+On a Windows device that is making a connection to NDES, you can view the devices Windows Event Viewer and look for indications of a successful connection. Connections are logged as an event ID **36** in the devices *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log.
 
 To open the log:
 
@@ -114,7 +114,7 @@ To open the log:
 
 ## Troubleshoot status code 500
 
-Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IUSRS group on the NDES server. The status value of **500** appears at the end:
+Connections that resemble the following example, and that have a status code of **500**, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IUSRS group on the NDES server. The status value of **500** appears at the end:
 
 ```output
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31

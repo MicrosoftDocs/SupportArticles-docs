@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jesits
 ms.custom:
 - sap:group policy\sysvol access or replication issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 

@@ -1,8 +1,10 @@
 ---
 title: Troubleshoot Custom Table Creation Errors in Azure
 description: Troubleshooting guide for custom table creation errors in Azure.
-ms.date: 07/23/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.date: 09/30/2025
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
 ---
@@ -41,4 +43,6 @@ Users might receive an error message that indicates that properties of undefined
 - [Azure Monitor Overview](/azure/azure-monitor/fundamentals/overview)
 - [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
-If the issue persists after you following these steps, open a support case for further assistance.
+ 
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

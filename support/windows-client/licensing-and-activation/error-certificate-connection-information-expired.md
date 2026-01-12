@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error "certificate in the connection information has expired" when accessing an AVD VM
 

@@ -22,11 +22,12 @@ ms.date: 05/08/2025
 
 ## Symptoms
 
-As a Global admin, you receive an email message that contains one of the following messages:
+As a Global or SharePoint admin, you receive an email message that contains one of the following messages:
 
-> SharePoint Online is out of storage space.
+> SharePoint Online is out of storage space. Sites are in read-only mode and changes can't be saved. 
 > 
 > There is not enough storage space on SharePoint Online.
+> Your storage is full. You can buy more storage or use Microsoft 365 Archive to free up storage space without deleting any data.
 
 ## Cause
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, takondo, mitsuchi, jamesxia
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\smart card logon
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Integrated Unblock screen not displayed when smart card PIN is blocked
 

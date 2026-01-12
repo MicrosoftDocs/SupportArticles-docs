@@ -1,7 +1,10 @@
 ---
 title: Percentage format changes to Numeric
 description: Fix a problem where percentage (%) format in chart data table and axis changes to numeric format.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -9,11 +12,9 @@ ms.custom:
   - CSSTroubleshoot
 appliesto:
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
 ms.date: 05/26/2025
 ---
+
 # Percentage format in pasted chart data table and axis will change to Numeric when source workbook is closed
 
 ## Symptoms

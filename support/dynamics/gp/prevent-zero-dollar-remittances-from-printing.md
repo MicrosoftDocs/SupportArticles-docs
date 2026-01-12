@@ -23,13 +23,9 @@ This article discusses how to prevent zero dollar remittances from printing in P
 > [!NOTE]
 > To prevent zero dollar remittances from printing, you must have administrator access to Microsoft Dynamics GP and the instance of Microsoft SQL Server.
 
-For more information about how manual payments appear on the check stub and when they're removed from the PM20000 table and from the PM20100 table, click the following article number to view the article in the Microsoft Knowledge Base:
+For more information about how manual payments appear on the check stub and when they're removed from the PM20000 table and from the PM20100 table, see [Information about how manual payments, credit memos, and returns appear on the check stub when you run the Select Checks process in Microsoft Dynamics GP](./how-manual-payments-credit-memos-appear.md).
 
-[860395](https://support.microsoft.com/help/860395) Information about how manual payments appear on the check stub and when they're removed from the PM20000 table and from the PM20100 table when you run the Select Checks process in Microsoft Dynamics GP  
-
-For more information about how payments that have amounts of zero are treated in Payables Management, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[861276](https://support.microsoft.com/help/861276) How payments that have amounts of zero are treated in Payables Management in Microsoft Dynamics GP  
+For more information about how payments that have amounts of zero are treated in Payables Management, see [How payments that have amounts of zero are treated in Payables Management in Microsoft Dynamics GP](./how-payments-that-have-zero-are-treated.md).
 
 ## Steps to prevent zero dollar remittances from printing
 

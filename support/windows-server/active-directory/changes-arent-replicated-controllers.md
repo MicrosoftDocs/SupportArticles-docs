@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ArrenC, GrahamM
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Changes to security groups or distribution groups are not replicated to destination domain controllers when you use link value replication in a Windows Server 2003 environment
 

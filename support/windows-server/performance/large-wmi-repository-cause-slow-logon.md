@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Ajayps, v-jesits
 ms.custom:
 - sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Unexpectedly slow logon caused by large WMI repository in Windows or Windows Server
 

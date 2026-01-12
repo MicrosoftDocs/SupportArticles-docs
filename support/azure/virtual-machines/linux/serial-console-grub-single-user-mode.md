@@ -6,13 +6,12 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 04/15/2024
+ms.date: 10/16/2024
 ms.author: jarrettr
 ---
 

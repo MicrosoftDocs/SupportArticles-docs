@@ -7,7 +7,7 @@ author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
-# SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine
+# SQL Server installation fails with sector size error on a Windows Server Azure virtual machine
 
 This article helps you resolve a problem that occurs when you try to manually install a SQL Server instance on a Microsoft Azure virtual machine (VM) running Windows.
 
@@ -53,7 +53,7 @@ To resolve this problem, reinstall SQL Server after forcing the Azure VM to use 
 To successfully install SQL Server on your Azure VM, follow these steps:
 
 1. If you've already installed SQL Server, uninstall SQL Server. Otherwise, skip to the next step. 
-1. Add the [ForcedPhysicalSectorSizeInBytes](../database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolutions) registry key. 
+1. Add the [ForcedPhysicalSectorSizeInBytes](../database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolution-steps-for-disk-sector-size-errors-in-sql-server) registry key. 
 1. Verify the sector size is 4 KB by running the following command in an elevated command prompt:
 
    `fsutil fsinfo sectorinfo <volume pathname>`

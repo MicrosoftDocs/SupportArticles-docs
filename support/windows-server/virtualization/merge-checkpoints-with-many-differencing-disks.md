@@ -1,7 +1,7 @@
 ---
 title: How to merge checkpoints that have multiple differencing disks
 description: Describes different methods of merging checkpoints and their associated differencing disks into the related virtual machine.
-ms.date: 01/15/2025
+ms.date: 11/05/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,15 +10,24 @@ ms.custom:
 - sap:virtualization and hyper-v\snapshots,checkpoints,and differencing disks
 - pcy:WinComm Storage High Avail
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # How to merge checkpoints that have multiple differencing disks
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-## Introduction
+## Summary
 
-This article describes methods that you can use to merge checkpoints into a virtual machine (VM) if Hyper-V has generated many differencing disks. The method that you use depends on the details of the situation.
+When you work with Hyper-V checkpoints, you might need to merge the associated differencing disks back into the virtual machine (VM). In most cases, you can delete checkpoints by using Hyper-V Manager, which automatically merges the differencing disks. However, in some situations—such as when third-party backup software creates checkpoints but doesn't clean them up—you might encounter checkpoints that don't appear in Hyper-V Manager or that can't be deleted through the standard interface.
+
+This article describes how to:
+
+- Delete checkpoints and merge differencing disks by using Hyper-V Manager.
+- Merge differencing disks when checkpoints aren't visible in Hyper-V Manager.
+- Use PowerShell scripts to merge differencing disks without shutting down the VM.
+
+Choose the method that best fits your scenario based on whether the checkpoints are visible in Hyper-V Manager and whether you can shut down the VM.
 
 ## Merging checkpoints that you can view in Hyper-V Manager
 
@@ -118,7 +127,7 @@ You can merge differencing disks into an online VM. However, this is a multi-ste
            }
        }
    }
-   ==================================
+   
    ```
 
    This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM).

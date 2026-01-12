@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:print,fax,and scan\print configuration or management
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error 0x00000709 when you use a CNAME record for a print server in Windows Server 2008 R2: Operation could not be completed
 

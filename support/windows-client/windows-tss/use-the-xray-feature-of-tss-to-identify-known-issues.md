@@ -9,6 +9,8 @@ ms.reviewer: tdimli, ronsto, ravikiran.s, gipauli, warrenw
 ms.custom:
 - sap:support tools\xray
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Identify known issues by using the xray feature of TSS
 

@@ -76,6 +76,8 @@
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
         "power-platform/power-pages/**.*": "MSDocsHeader-MSPowerPages",
+        "power-platform/administration/**.*": "MSDocsHeader-PowerPlatform",
+        "power-platform/copilot-studio/**.*": "MSDocsHeader-MicrosoftCopilotStudio",
         "sales-copilot/**.*": "MSDocsHeader-MicrosoftSalesCopilot",
         "sql/**.*": "MSDocsHeader-DocsSQL",
         "system-center/**.*": "MSDocsHeader-SystemCenter",
@@ -103,6 +105,8 @@
         "power-platform/ai-builder/**/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "power-platform/power-pages/*.md": "https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96",
         "power-platform/dataverse/**/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
+        "power-platform/administration/**/*.md": "https://powerusers.microsoft.com/",
+        "power-platform/copilot-studio/**/*.md": "https://powerusers.microsoft.com/t5/Power-Virtual-Agents-Community/ct-p/PVACommunity",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
         "windows-365/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/6ab53114-95ab-ec11-9840-000d3a1c7d74",
@@ -138,13 +142,9 @@
       },
       "author": {
         "**/*.md": "JarrettRenshaw",
-        "azure/virtual-desktop/**/*.*": "kaushika-msft",
+        "azure/virtual-desktop/*.md": "kaushika-msft",
         "azure/**/*.md": "JarrettRenshaw",
         "entra/**/*.md": "JarrettRenshaw",
-        "azure/devops/**/*.md": "aartig13",
-        "azure/azure-functions/**/*.md": "aartig13",
-        "azure/synapse-analytics/**/*.md": "aartig13",
-        "azure/cosmos-db/**/*.md": "aartig13",
         "developer/**/*.md": "aartig13",
         "sql/**/*.md": "aartig13",
         "windows/win32/**/*.md": "aartig13",
@@ -154,35 +154,26 @@
         "windows-365/**/*.md": "kaushika-msft",
         "mem/**/*.md": "kaushika-msft",
         "system-center/**/*.md": "JarrettRenshaw",
-        "dynamics-365/customer-insights/**/*.md": "m-hartmann",
-        "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
-        "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
-        "dynamics-365/supply-chain/planning/*.md": "t-benebo",
-        "dynamics-365/supply-chain/procurement/*.md": "GalynaFedorova",
-        "dynamics-365/supply-chain/production/*.md": "johanhoffmann",
-        "dynamics-365/supply-chain/products/*.md": "t-benebo",
-        "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
-        "dynamics-365/supply-chain/sales/*.md": "Henrikan",
-        "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
+        "dynamics-365/**/*.md": "aartig13",
+        "dynamics/**/*.md": "aartig13",
+        "power-platform/**/*.md": "aartig13",
+        "sales-copilot/**/*.md": "aartig13"
       },
       "ms.collection": {
         "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
+        "power-platform/copilot-studio/**/*.md": "CEnSKM-ai-copilot",
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
       },
        "ms.update-cycle": {
         "power-platform/ai-builder/**/*.md": "180-days",
+        "power-platform/copilot-studio/**/*.md": "180-days",
         "sales-copilot/**/*.md": "180-days"
       },
       "ms.author": {
         "**/*.md": "dcscontentpm",
-        "azure/virtual-desktop/**/*.*": "kaushika",
+        "azure/virtual-desktop/*.md": "kaushika",
         "azure/**/*.md": "jarrettr",
         "entra/**/*.md": "jarrettr",
-        "azure/devops/**/*.md": "aartigoyle",
-        "azure/azure-functions/**/*.md": "aartigoyle",
-        "azure/synapse-analytics/**/*.md": "aartigoyle",
-        "azure/cosmos-db/**/*.md": "aartigoyle",
         "developer/**/*.md": "aartigoyle",
         "sql/**/*.md": "aartigoyle",
         "windows/win32/**/*.md": "aartigoyle",
@@ -192,7 +183,12 @@
         "windows-365/**/*.md": "kaushika",
         "mem/**/*.md": "kaushika",
         "system-center/**/*.md": "jarrettr",
-        "dynamics-365/customer-insights/**/*.md": "mhart",
+        "dynamics-365/**/*.md": "aartigoyle",
+        "dynamics/**/*.md": "aartigoyle",
+        "power-platform/**/*.md": "aartigoyle",
+        "sales-copilot/**/*.md": "aartigoyle"
+      },
+      "ms.reviewer": {
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
         "dynamics-365/supply-chain/planning/*.md": "benebotg",
@@ -220,6 +216,8 @@
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
         "power-platform/dataverse/**/*.md": "power-platform",
+        "power-platform/administration/**/**.*": "power-platform",
+        "power-platform/copilot-studio/**/**.*": "copilot-studio",
         "dynamics-365/business-central/**/**.*": "dynamics-365-business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customer-service",
@@ -300,7 +298,7 @@
         "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
         "dynamics-365/guides/**/**.*": "Dynamics 365 Guides",
         "dynamics-365/remote-assist/**/**.*": "Dynamics 365 Remote Assist",
-        "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "dynamics-365/sales/**/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
@@ -308,9 +306,11 @@
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/dataverse/**/*.md": "Microsoft Dataverse",
         "power-platform/ai-builder/**/*.md": "AI Builder",
-        "power-platform/power-pages/*.md": "Power Pages",
-        "sales-copilot/**/*.md": "Copilot for Sales",
-        "dynamics/gp/*.md": "Dynamics GP"
+        "power-platform/power-pages/**/*.md": "Power Pages",
+        "power-platform/administration/**/*.md": "Power Platform",
+        "power-platform/copilot-studio/**/*.md": "Copilot Studio",
+        "sales-copilot/**/*.md": "Sales in Microsoft 365 Copilot",
+        "dynamics/gp/**/*.md": "Dynamics GP"
       },
       "searchScope": {
         "developer/dotnet/**/*.md": [
@@ -463,6 +463,14 @@
           "Troubleshoot",
           "Power Platform",
           "AI Builder"
+        ],
+        "power-platform/administration/**/*.md": [
+          "Troubleshoot",
+          "Power Platform"
+        ],
+        "power-platform/copilot-studio/**/*.md": [
+          "Troubleshoot",
+          "Microsoft Copilot Studio"
         ]
       },
       "ms.search.scope": {
@@ -484,6 +492,13 @@
           "Flow",
           "powerapps-docs",
           "powerautomate-docs"
+        ],
+        "power-platform/administration/**/*.md": [
+          "administration-docs"
+        ],
+        "power-platform/copilot-studio/**/*.md": [
+          "capaedac-pva",
+          "powervirtualagents-docs"
         ],
         "dynamics-365/customer-insights/data/**/**.*": [
           "customerinsights-docs",

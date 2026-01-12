@@ -55,16 +55,16 @@ To resolve this problem, use an SQL query tool to discover why the document is d
 5. Run the following script against the company database:
 
     ```sql
-    Select PSTGSTUS, BCHSOURC, VOIDSTTS,TRXSORCE, DEX_ROW_ID * from SOP10100 where SOPNUMBE = 'Enter your SOP Document number with issue'
+    Select PSTGSTUS, BCHSOURC, VOIDSTTS,TRXSORCE, DEX_ROW_ID, * from SOP10100 where SOPNUMBE = 'Enter your SOP Document number with issue'
     ```
 
 6. > [!NOTE]
    > The Dex_Row_ID value.
 7. Check values in the following columns for the SOP Document. If any of these values are incorrect, the document may appear as posted.
 
-    PSTGSTUS (For an unposted document, it should read "0.")  
-    BCHSOURC (For an unposted document, it should read "Sales Entry.")  
-    VOIDSTTS (For an unposted document, it should read "0.")  
+    PSTGSTUS (For an unposted document, it should read "0".)  
+    BCHSOURC (For an unposted document, it should read "Sales Entry".)  
+    VOIDSTTS (For an unposted document, it should read "0".)  
     TRXSORCE (For an unposted document, it should be blank.)
 8. Run the following scripts against the company database to correct any of the four values from step 6:
 

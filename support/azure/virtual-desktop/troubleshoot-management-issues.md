@@ -3,7 +3,7 @@ title: Azure Virtual Desktop management issues
 description: Common management issues in Azure Virtual Desktop and how to solve them.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Azure Virtual Desktop management issues
@@ -31,6 +31,12 @@ After you assign a user to an application group, the Azure portal displays a war
 This issue usually appears because there's a problem with the conditional access policy. The Azure portal is trying to obtain a token for Microsoft Graph, which is dependent on SharePoint Online. The customer has a conditional access policy called "Microsoft Office 365 Data Storage Terms of Use" that requires users to accept the terms of use to access data storage. However, they haven't signed in yet, so the Azure portal can't get the token.
 
 To solve this issue, before signing in to the Azure portal, the admin first needs to sign in to SharePoint and accept the Terms of Use. After that, they should be able to sign in to the Azure portal like normal.
+
+## Error: Assigning a user-assigned managed identity to a host pool doesn't propagate the assignment to the managed identity object
+
+If you configure a host pool to use a user-assigned managed identity object through Azure PowerShell or REST API, you may [view associated Azure resources for a user-assigned managed identity](/entra/identity/managed-identities-azure-resources/how-to-view-associated-resources-for-an-identity) and notice that the host pool object is not linked.
+
+This issue occurs due to an error in the assignment of the user-assigned managed identity. Double check the ID of the user-assigned managed identity (in the form of "/subscriptions/subscriptionId/resourcegroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedIdentityName"). Currently, the host pool API will accept the parameter even if the ID missing a leading "/".
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: Extensions and virtual machine agent minimum version support
 description: Describes the minimum version support for Linux and Windows virtual machine agents in Azure.
-ms.date: 07/21/2020
+ms.date: 09/15/2025
 ms.reviewer: 
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
@@ -13,6 +13,8 @@ ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 _Original KB number:_ &nbsp; 4049215
 
 This article describes the minimum version support for Linux and Windows virtual machine agents in Azure.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Minimum supported version of Linux VM Agent
 

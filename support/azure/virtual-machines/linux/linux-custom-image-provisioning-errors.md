@@ -23,6 +23,8 @@ This article covers the possible combinations of generalized and specialized ima
 > [!NOTE]
 > For descriptions and comparison of generalized and specialized images, see [Generalized and specialized](/azure/virtual-machines/linux/imaging#generalized-and-specialized).
 
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
 ## Upload combinations of generalized and specialized images
 
 - If the operating system (OS) is a generalized Linux image uploaded using the generalized setting, the upload and deployment will succeed.  

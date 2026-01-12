@@ -9,6 +9,8 @@ ms.reviewer: kaushika, AshishSu, meerak, LavinK, v-jesits
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Reinstall the CA role in Windows Server 2012 Essentials
 

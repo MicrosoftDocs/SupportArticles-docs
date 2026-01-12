@@ -6,7 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 07/21/2025
 ms.author: kendownie
-ms.custom: sap:File Sync
+ms.custom: sap:File Sync, copilot-scenario-highlight
 ---
 # Troubleshoot Azure File Sync
 
@@ -26,6 +26,9 @@ Based on the issue you're experiencing, review the appropriate troubleshooting d
 |High memory usage on the server|[Troubleshoot Azure File Sync](#high-memory-usage-on-the-server)|
 
 If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
+
+> [!TIP]
+> You can use Azure Copilot to help diagnose and fix your Azure File Sync environment. For more information, see [Manage and troubleshoot storage accounts using Azure Copilot](/azure/copilot/improve-storage-accounts#troubleshoot-and-resolve-azure-file-sync-issues).
 
 ## General troubleshooting first steps
 

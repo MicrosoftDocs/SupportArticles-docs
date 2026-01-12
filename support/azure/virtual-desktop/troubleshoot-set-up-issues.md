@@ -4,7 +4,7 @@ description: Helps troubleshoot and resolve tenant and host pool issues during s
 ms.topic: troubleshooting
 ms.custom: references_regions, devx-track-arm-template, docs_inherited, pcy:wincomm-user-experience
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ---
 
 # Troubleshoot host pool creation

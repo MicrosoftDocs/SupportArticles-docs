@@ -1,7 +1,10 @@
 ---
 title: Securely opening documents that have Dynamic Data Exchange fields
 description: Introduces how to securely open  Microsoft Office documents that contain Dynamic Data Exchange (DDE) fields.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -13,11 +16,9 @@ appliesto:
 - Outlook
 - Exchange
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
 ms.date: 06/06/2024
 ---
+
 # Securely opening Microsoft Office documents that contain Dynamic Data Exchange (DDE) fields
 
 ## Overview

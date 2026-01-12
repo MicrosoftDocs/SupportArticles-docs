@@ -10,12 +10,14 @@ ms.custom:
 - sap:user logon and profiles\service account and interactive user logon issues and credential providers
 - pcy:WinComm Directory Services
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Turn on automatic logon in Windows
 
 This article describes how to configure Windows to automate the logon process by storing your password and other pertinent information in the registry database. By using this feature, other users can start your computer and use the account that you establish to automatically log on.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11  
 _Original KB number:_ &nbsp; 324737
 
 > [!IMPORTANT]

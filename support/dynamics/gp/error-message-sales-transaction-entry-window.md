@@ -121,7 +121,7 @@ If you still receive one of the error messages that is described in the "Resolut
 
 - Determine whether the error message that you received is caused by a modified report. To do this, print the original report. If you do not receive the error message when you print the original report, re-create the Reports.dic file.
 
-  For more information about how to re-create the Reports.dic file, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](https://support.microsoft.com/help/850465).
+  For more information about how to re-create the Reports.dic file, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](./how-to-re-create-the-reports-dot-dic-file.md).
 
 - Determine whether the error message that you received is caused by a particular user ID or workstation. To do this, start Microsoft Dynamics GP on a different workstation. Log on by using the user ID that was used when you received the error message. If you do not receive the error message, reinstall Microsoft Dynamics GP on the workstation on which you received the error message. If you do receive the error message on another workstation, the problem may be caused by the user ID. In this situation, create a new user ID.
 

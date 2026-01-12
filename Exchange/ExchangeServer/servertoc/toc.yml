@@ -72,7 +72,7 @@ items:
           href: ../administration/exchange-server-not-display-all-ou.md
         - name: Edge Transport server version isn't updated after an upgrade
           href: ../administration/incorrect-edge-transport-server-version-eac-ecp.md
-        - name: Email received via EOP not journaled
+        - name: Email received via Microsoft 365 not journaled
           href: ../administration/email-received-via-eop-not-journaled.md
         - name: Empty StorageLimitStatus when running Get-MailboxStatistics
           href: ../administration/empty-storagelimitstatus-run-get-mailboxstatistics.md
@@ -102,8 +102,8 @@ items:
           href: ../administration/insufficient-access-rights-perform-operation.md
         - name: EWS App pool crashes
           href: ../administration/ews-app-pool-crashes.md
-        - name: Exchange 2013 end of support roadmap
-          href: ../administration/exchange-2013-end-of-support.md
+        - name: Exchange Server 2019 and 2016 end of support roadmap
+          href: ../administration/exchange-2019-2016-end-of-support.md
         - name: Exchange CU installation fails
           href: ../administration/cannot-install-exchange-cu-localized-windows.md
         - name: Fail to add mailbox database copy
@@ -232,8 +232,6 @@ items:
           href: ../client-connectivity/cannot-create-appointment.md
         - name: Can't open a shared folder in Outlook on the web
           href: ../client-connectivity/cannot-open-shared-folder-owa.md
-        - name: Can't open documents on a network file share
-          href: ../../ExchangeOnline/outlook-on-the-web-issues/cannot-open-documents-on-network-file-share.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
         - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
           href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
         - name: Can't search people in OWA
@@ -460,8 +458,6 @@ items:
           href: ../public-folders/disable-conflict-message.md
         - name: No active public folder mailboxes were found
           href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
-        - name: Public folder meetings cannot be modified in OWA
-          href: ../../ExchangeOnline/calendars/public-folder-meetings-not-modified-in-owa.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
         - name: Large items skipped during migration
           href: ../public-folders/large-items-skipped.md
         - name: Public folder items are deleted after batch migration
@@ -470,8 +466,6 @@ items:
           href: ../public-folders/public-folder-migration-fails.md
         - name: Public folder permissions for Exchange Server
           href: ../public-folders/public-folder-permissions-for-exchange-server.md
-        - name: Public folder users can't manage subfolders
-          href: ../../ExchangeOnline/public-folders/public-folder-users-cannot-manage-subfolders.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
         - name: Troubleshoot public folder replication issues
           href: ../public-folders/troubleshoot-public-folder-replication.md
     - name: Setup

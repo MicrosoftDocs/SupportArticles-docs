@@ -9,6 +9,8 @@ ms.reviewer: kaushika, mohak, weiwan
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Unable to allocate memory from the system paged pool
 

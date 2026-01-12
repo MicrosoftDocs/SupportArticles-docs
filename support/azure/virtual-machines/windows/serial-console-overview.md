@@ -6,12 +6,12 @@ documentationcenter: ''
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 07/23/2025
-ms.reviewer: mbifeld, v-weizhu
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.date: 10/16/2025
+ms.author: jarrettr
+ms.reviewer: mbifeld
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure Serial Console
@@ -32,6 +32,8 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - Australia Central 2
 - Australia East
 - Australia Southeast
+- Austria East
+- Belgium Central
 - Brazil South
 - Brazil Southeast
 - Canada Central
@@ -39,6 +41,7 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - Central India
 - Central US
 - Central US EUAP
+- Chile Central
 - China East 2
 - China East 3
 - China North 2
@@ -50,12 +53,15 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - France South
 - Germany North
 - Germany West Central
+- Indonesia Central
 - Israel Central
+- Israel Northwest
 - Italy North
 - Japan East
 - Japan West
 - Korea Central
 - Korea South
+- Malaysia West
 - Mexico Central
 - New Zealand North
 - North Central US
@@ -99,7 +105,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!IMPORTANT]
-> Serial Console is now compatible with [managed boot diagnostics storage accounts](boot-diagnostics.md) and custom storage account firewalls.
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. This change doesn't affect serial logs or screenshots.
 
 ## Get started with Serial Console
 

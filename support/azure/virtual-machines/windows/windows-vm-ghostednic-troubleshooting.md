@@ -1,0 +1,103 @@
+---
+title: Troubleshooting - Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+description: Troubleshooting - Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+ms.service: azure-virtual-machines
+ms.date: 06/04/2024
+ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
+ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
+---
+# Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+
+> [!NOTE]
+> For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
+> Learn more: [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
+
+## Symptom
+When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
+
+- Connectivity issues may occur for the active NIC
+- Interference with scripts or automation that enumerate NICs
+- Stale IP configurations associated with removed adapters may be present
+- Windows Update download issues 
+- Performance issues
+- Windows Activation failures
+
+`Ghosted nics` can happen to Azure virtual machines (VMs) causing connectivity, performance, Windows Update, and other issues. Microsoft provides a script-based tool to help diagnose and clean-up the ghost-nic issues.
+
+> **Note:**
+> This issue does **not** occur when the VM is shut down from inside the OS without deallocation.
+> If there are over 500+ ghosted nics, there is a larger negative impact to the VM.
+
+## Cause
+
+When an Azure Virtual Machine (VM) is **stopped and started** through the Azure Portal or CLI, the following occurs:
+
+- **Stop (Deallocate):**  
+  The VM is removed from its current physical server in the datacenter.
+- **Start (Allocate):**  
+  The VM is placed on a new physical server with a **different hardware MAC address**.
+
+Because Accelerated Networking bypasses the virtual switch for performance, the operating system cannot reuse the previous MAC address. As a result, the old NIC becomes a **ghosted device** and appears under **hidden devices** in Device Manager.  
+This behavior is **by design** for Accelerated Networking.
+
+### Why Does This Happen?
+- Accelerated Networking improves performance by bypassing the software-controlled virtual switch.  
+- When the VM moves to new hardware, the OS cannot identify the previous MAC address, causing ghosted NICs.  
+- For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
+
+> Learn more: [Accelerated Networking overview | Microsoft Learn](/azure/virtual-network/accelerated-networking-overview)
+
+
+- This behavior typically occurs after:
+
+  - **Stop (deallocate)** and **Start** operations via the Azure Portal, CLI, or PowerShell.
+  - VM redeployment or host migration events
+
+This behavior is **by design** due to the architecture of Accelerated Networking:
+
+- When you **stop (deallocate)** a VM, it is removed from its current physical host.
+- When you **start** the VM again, it is allocated to a different physical server in the datacenter.
+- Each physical server has a **unique hardware MAC address**.
+- Because Accelerated Networking **bypasses the virtual switch for performance**, the OS cannot reuse the previous MAC address. As a result, the old NIC becomes a **ghosted device**.
+
+:::image type="content" source="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png" alt-text="Azure Accelerated Networkinmg difference in design example." lightbox="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png":::  
+
+### Current Limitations
+- MAC address reservation for physical servers is **not supported**.
+- There is **no workaround** to prevent ghosted NICs when using Accelerated Networking.
+- The Product Group is evaluating improvements, but there is **no estimated timeline** for this feature.
+
+> Suggested reading: [Azure Accelerated Networking overview](/azure/virtual-network/virtual-network-network-interface)
+
+## Resolution
+
+## **Recommended Actions – When VM Is Accessible**
+
+### **1. Detect the Scenario**
+Use **RunCommand** to check for ghosted NICs:  
+[Ghosted NIC Check Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
+
+### **2. Clean Up Ghosted NICs**
+
+**Option A: Manual Removal via Device Manager**
+- Open **Device Manager** → **View** → **Show hidden devices** → Remove ghosted NICs.
+
+**Option B: Force Removal via RunCommand**
+- Use RunCommands to check then remove ghosted NICs:  
+  - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Detection)
+  - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal)
+
+
+### **3. Plan for Design Behavior**
+If Accelerated Networking is required for performance:
+
+- Expect ghosted NICs after VM deallocation.
+- Include NIC cleanup in your regular maintenance process by **scheduling a task monthly**.
+
+- [Ghost Nic Troubleshooting and Cleanup tool](./windows-vm-ghostednic-troubleshooting.md)
+- [Azure Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
+- [Azure Virtual Network Interface](/azure/virtual-network/virtual-network-network-interface)
+
+ 
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

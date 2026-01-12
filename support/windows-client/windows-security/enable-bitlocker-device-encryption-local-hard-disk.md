@@ -9,6 +9,8 @@ ms.reviewer: arrenc, toddmax, manojse, kaushika
 ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to enable BitLocker device encryption on Windows 8 RT
 

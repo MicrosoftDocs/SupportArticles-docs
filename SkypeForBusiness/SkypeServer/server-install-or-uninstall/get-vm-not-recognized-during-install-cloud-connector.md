@@ -1,13 +1,14 @@
 ---
 title: The term Get-VM is not recognized during install of Cloud Connector Edition
 description: Describes an error that occurs when you run the cmdlet Install-CcInstance during installation of Cloud Connector Edition. Describes how to resolve the problem.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

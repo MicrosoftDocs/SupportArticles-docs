@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Dataverse Troubleshooting
   href: welcome-dataverse.yml
 - name: Auditing
@@ -104,6 +105,8 @@
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
     - name: Appointments, contacts, and tasks can't be synchronized
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
+    - name: Changes to server-side sync identity for Dataverse communications
+      href: email-exchange-synchronization/server-side-synchronization-new-admin-identity.md
     - name: Errors when signing in to Dynamics 365 online or using Dynamics 365 App for Outlook
       href: email-exchange-synchronization/error-when-signing-dynamics-365.md
     - name: Emails aren't automatically tracked or synchronized
@@ -150,6 +153,8 @@
       href: email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization.md 
     - name: '"Tracked to Dynamics 365" category is added to a mailbox'
       href: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
+    - name: '"Test and Enable failed because no user was found" error'
+      href: email-exchange-synchronization/test-enable-fails-for-unrecognized-email-address.md  
     - name: Test Connection fails from Email Server Profile
       href: email-exchange-synchronization/test-connection-fails-email-server.md
     - name: '"The account does not have permission to impersonate the requested user" error'
@@ -212,8 +217,6 @@
       href: working-with-solutions/unable-import-dynamics-365-solution.md
     - name: Can't import solutions or publish changes
       href: working-with-solutions/cannot-import-solutions-publish-changes.md
-    - name: Can't install managed solution previously deployed as unmanaged
-      href: working-with-solutions/failure-converting-to-managed-solution.md
     - name: Can't Uninstall Solution when removing solutions
       href: working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution.md
     - name: Changes not effective after solution import

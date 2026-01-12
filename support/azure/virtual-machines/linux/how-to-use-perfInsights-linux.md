@@ -29,6 +29,8 @@ This article explains how to download the Performance Diagnostics extension to y
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
 
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
 ## Supported troubleshooting scenarios
 
 You can use Performance Diagnostics to troubleshoot various scenarios. The following sections describe common scenarios for using Continuous and On-Demand Performance Diagnostics to identify and troubleshoot performance issues. For a comparison of Continuous and On-Demand Performance Diagnostics, see [Performance Diagnostics insights and reports](../windows/performance-diagnostics.md).

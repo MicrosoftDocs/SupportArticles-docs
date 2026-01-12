@@ -48,7 +48,7 @@ These error messages are generated when you try to delete a SharePoint or OneDri
 
 ## Resolution
 
-Verify the validity of the retention policy or determine whether the eDiscovery hold is within the grace period. To take this action, run the following diagnostic in the Microsoft 365 admin center. You must have at least Compliance Administrator permissions to use these steps.
+Verify the validity of the retention policy or determine whether the eDiscovery hold is within the grace period. To take this action, run the following diagnostic in the Microsoft 365 admin center. You must have at least the Compliance Administrator role to use these steps.
 
 > [!NOTE]
 > This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.

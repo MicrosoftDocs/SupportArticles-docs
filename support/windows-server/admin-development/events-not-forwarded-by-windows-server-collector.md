@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\winrm,including event forwarding and collections
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Events are not forwarded if the collector is running Windows Server
 
@@ -35,7 +37,7 @@ The forwarder is having a problem communicating with subscription manager at add
 This behavior is caused by the permissions that are configured for the following URLs:
 
 - `http://+:5985/wsman/`
-- `http://+:5986/wsman/`
+- `https://+:5986/wsman/`
 
 On the event collector computer, both the Windows Event Collector service (WecSvc) and the Windows Remote Management service (WinRM) use these URLs. However, the default access control lists (ACLs) for these URLs allow access for only the svchost process that runs WinRM.
 In the default configuration of Windows Server 2016, a single svchost process runs both WinRM and WecSvc. Because the process has access, both services function correctly. However, if you change the configuration so that the services run on separate host processes, WecSvc no longer has access and event forwarding no longer functions.

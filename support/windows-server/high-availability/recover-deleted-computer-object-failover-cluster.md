@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ctimon, v-vincli, jeffhugh
 ms.custom:
 - sap:clustering and high availability\cannot bring a resource online
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 

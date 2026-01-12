@@ -1,9 +1,95 @@
+items:
 - name: Troubleshooting for Azure Native Integrations
-  href: welcome-native-integrations.yml
+  href: index.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
-- name: Azure Native New Relic Service
+- name: Confluent
   items:
+    - name: Can't create a service connection by using Service Connector
+      href: confluent/cannot-create-service-connection.md
+    - name: Can't create a Confluent connector
+      href: confluent/cannot-create-confluent-connector.md  
+    - name: Can't delete a resource
+      href: confluent/cannot-delete-resource.md
+    - name: Can't find the offer in Azure Marketplace
+      href: confluent/cant-find-offer.md
+    - name: Conflict error 
+      href: confluent/conflict-error.md
+    - name: Confluent connector isn't in the list of connectors
+      href: confluent/connector-not-listed.md
+    - name: DeploymentFailed error
+      href: confluent/deploymentfailed-error.md
+    - name: List of Confluent connectors isn't available
+      href: confluent/connectors-list-not-available.md  
+    - name: Offer plan doesn't load
+      href: confluent/plan-does-not-load.md
+    - name: Resource creation is slow or fails
+      href: confluent/resource-creation-slow.md
+    - name: Resource isn't displayed
+      href: confluent/resource-not-displayed.md 
+    - name: Single sign-on doesn't work for the Confluent SaaS portal
+      href: confluent/single-sign-on-does-not-work.md
+- name: Astro
+  items:
+    - name: Can't create Astro resources in Azure 
+      href: astro/resource-creation.md
+    - name: Can't install Astro using a personal email
+      href: astro/personal-email.md
+    - name: Unable to use single sign-on in Astronomer portal
+      href: astro/single-sign-on.md
+- name: Datadog
+  items: 
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
+    - name: Diagnostic settings not created
+      href: diagnostic-settings.md
+    - name: Log forwarding persists
+      href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
+- name: Dynatrace
+  items: 
+    - name: AKS agent installation/uninstallation unavailable
+      href: dynatrace/dynatrace-install-uninstall-inactive.md
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
+    - name: Diagnostic settings not created
+      href: diagnostic-settings.md
+    - name: Free trial limitations
+      href: dynatrace/free-trial-errors.md
+    - name: Log forwarding persists
+      href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
+    - name: Metrics checkbox is unavailable
+      href: dynatrace/metrics-checkbox-disabled.md
+- name: Elastic
+  items:
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md 
+    - name: Diagnostic settings not created
+      href: diagnostic-settings.md
+    - name: Log forwarding persists
+      href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
+- name: Informatica
+  items:
+    - name: Issues creating Informatica resources in Azure
+      href: informatica/resource-creation.md
+- name: New Relic
+  items:
+    - name: Can't install or uninstall the agent on a VM
+      href: new-relic/install-uninstall-extension-vm.md
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
+    - name: Diagnostic settings not created
+      href: diagnostic-settings.md
     - name: Ingestion key rotation resolution
       href: ingestion-key-rotation-log-flow.md
-
+    - name: Log forwarding persists
+      href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
+    - name: Resource monitoring stopped working
+      href: new-relic/resource-monitoring-troubleshoot.md

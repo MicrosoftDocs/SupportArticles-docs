@@ -9,6 +9,8 @@ ms.reviewer: kaushika, samirj
 ms.custom:
 - sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Configure a L2TP/IPsec server behind a NAT-T device
 

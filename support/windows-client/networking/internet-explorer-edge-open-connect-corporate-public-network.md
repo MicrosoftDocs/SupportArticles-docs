@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 

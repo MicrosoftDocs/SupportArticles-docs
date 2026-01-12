@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
 keywords: Windows, Activation, 0x80070005, access denied
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Error 0x80070005 "Access denied" when you activate Windows
@@ -17,6 +19,8 @@ keywords: Windows, Activation, 0x80070005, access denied
 This article discusses how to fix Windows activation error 0x80070005 (access denied).
 
 _Applies to:_ &nbsp; Windows Server, all versions, and Windows client, all versions
+
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
 ## Symptoms
 

@@ -3,9 +3,7 @@ title: UIPI Issues with UI and Browser Automation Actions
 description: Solves issues caused by User Interface Privacy Isolation (UIPI) that prevent UI or browser automation actions from executing successfully.
 ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: andreas-mitrou
+ms.reviewer: v-shaywood
 ---
 # UIPI issues with UI and browser automation actions
 

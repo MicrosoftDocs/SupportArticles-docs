@@ -1,7 +1,10 @@
 ---
 title: Fails to clear the Embed Linguistic Data check box
 description: This article describes an issue where the Embed Linguistic Data check box is still selected after you click to clear the check box in the Word Options dialog box and then restart Word.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,11 +17,9 @@ appliesto:
 - Word 2019
 - Word 2021
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: v-six
 ms.date: 06/06/2024
 ---
+
 # The "Embed Linguistic Data" setting in the "Word Options" dialog box isn't saved in Word
 
 ## Symptoms

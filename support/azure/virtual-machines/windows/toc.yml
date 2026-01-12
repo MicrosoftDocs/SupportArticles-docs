@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
@@ -17,55 +18,133 @@
   - name: Microsoft Azure PaaS VM logs
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
 
-- name: Support statements for Azure VM
+- name: Azure VM support statements
   items:
-  - name: What Microsoft server software is supported
-    href: server-software-support.md
-  - name: Windows 11
-    href: windows-11-support-azure-virtual-machines.md
-  - name: Windows Server 2012 R2
-    items:
-    - name: Extended Security Updates for Windows Server 2012/2012 R2
-      href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Upgrade Windows Server 2012/2012 R2
-      href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Windows Server 2008 R2
-    items:
-      - name: Extended Security Updates for Windows Server 2008/2008 R2 
-        href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-      - name: Upgrade Windows Server 2008/2008 R2
-        href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Windows 2003 Server
-    href: run-win-server-2003.md
-  - name: 32-bit operating systems
-    href: support-32-bit-operating-systems-virtual-machines.md
   - name: Hybrid use benefit images are retired
     href: retirement-hybrid-use-benefit-images.md
   - name: Windows Server images updated to .NET Framework 4.7
     href: updates-included-windows-server-images.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
+  - name: Upgrade VM to contain more than 64 vCPUs
+    href: vm-cannot-upgrade-64-vcpu.md
 
-- name: Extended Security Updates for Windows Server 2008/R2 and 2012/R2
+- name: Windows running in Azure
   items:
-  - name: Overview
-    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Frequently asked questions
-    href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: How to install Extended Security Updates
-    href: /windows-server/get-started/install-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: How to activate Extended Security Updates
-    href: /windows-server/get-started/activate-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  
-- name: Procedures to upload a VHD to Azure
+  - name: Microsoft server software supported
+    href: server-software-support.md
+  - name: Windows 11
+    href: windows-11-support-azure-virtual-machines.md
+  - name: Windows 10 (EOS)
+    items:
+    - name: End Of Service (EOS)
+      href: ms-azure-windows-eos-client.md
+    - name: Extended Security Updates (ESU)
+      href: /windows/whats-new/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: How to upgrade
+      href: in-place-system-upgrade.md
+    - name: OS Upgrade assessment tool
+      href: windows-vm-osupgradeassessment-tool.md
+  - name: Windows Server 2012 R2 (EOS)
+    items:
+    - name: Extended Security Updates (ESU)
+      href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: How to upgrade
+      href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: OS Upgrade assessment tool
+      href: windows-vm-osupgradeassessment-tool.md
+  - name: Windows Server 2008 R2 (EOS)
+    items:
+      - name: End of Support (EOS)
+        href: ms-azure-windows-eos.md
+      - name: How to upgrade
+        href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: OS Upgrade assessment tool
+        href: windows-vm-osupgradeassessment-tool.md
+  - name: Windows Server 2003 (EOS)
+    href: ms-azure-windows-eos.md
+  - name: 32-bit operating systems
+    href: support-32-bit-operating-systems-virtual-machines.md
+
+- name: Windows 10 (EOS)
+  items:
+    - name: End Of Service (EOS)
+      href: ms-azure-windows-eos-client.md
+    - name: OS Upgrade assessment tool
+      href: windows-vm-osupgradeassessment-tool.md
+- name: Extended Security Updates (ESU)
+  items:
+  - name: Windows 10 (ESU)
+    href: /windows/whats-new/extended-security-updates#frequently-asked-questions?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2012/R2 (ESU)
+    href: /windows-server/get-started/extended-security-updates-deploy?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2008/R2 (EOS)
+    href: ms-azure-windows-eos.md
+  - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
+
+- name: Windows OS Upgrades (IPU)
+  items:
+  - name: In-place system upgrades (Server)
+    href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: In-place system upgrade (Client)
+    href: in-place-system-upgrade.md
+  - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
+    
+- name: Windows Update (WU)
+  items:
+  - name: WU errors that require in-place upgrades
+    href: windows-update-errors-requiring-in-place-upgrade.md
+  - name: WU Error Detection tool
+    href: windows-vm-ipu-tool.md
+  - name: Windows Servicing Stack Reset tool
+    href: windows-vm-wureset-tool.md
+  - name: Top errors for Azure VMs
+    items:
+    - name: Error codes associated with download errors
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-download-errors.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8000ffff
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070002
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0x80070003 when Windows Update fails
+      href: ../../../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/azure/context/context
+    - name: Error code 0x8007000d
+      href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8007000e or 0x800705aa
+      href: ../../../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070070
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error Code 0x8007045b
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070490
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070bc9
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80072f8f
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x800f0823
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error Code 0x800f0831
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x800f0920
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8024001E
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8024002E
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80244007
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context   
+
+- name: Uploading a VHD to Azure
   items:
   - name: Uploading a VHD to Azure
     href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/windows/context/context
-
   - name: Preparing a VM for Azure
     href: /azure/virtual-machines/windows/prepare-for-upload-vhd-image?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: Procedures to repair a Windows VM
+- name: Repairing a Windows VM
   items:
   - name: Repair a VM with Nested Hyper-V
     href: troubleshoot-vm-by-use-nested-virtualization.md
@@ -103,18 +182,23 @@
   - name: Increase Networking limits
     href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: VM health
+- name: Determining VM health
   items:
   - name: HealthResources table in Resource Graph has missing entries
     href: healthresources-table-resource-graph-missing-entries.md
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
-  
+  - name: VM stuck in failed state
+    href: vm-stuck-in-failed-state.md
+  - name: VM is unavailable for 15 minutes
+    href: azure-vm-unavailable.md
+
 - name: Cannot connect to my VM
   items:
+
   - name: Common troubleshooting support
     items:
-    - name: RDP troubleshooting
+    - name: Basic RDP troubleshooting
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
       href: detailed-troubleshoot-rdp.md
@@ -126,6 +210,14 @@
       href: reset-network-interface.md
     - name: Reset local Windows password for Azure VM offline
       href: reset-local-password-without-agent.md
+    - name: Ghosted Nic issue
+      href: 
+      items:
+      - name: Overview
+        href: windows-vm-ghostednic-troubleshooting.md
+      - name: Diagnostic tool
+        href: windows-vm-ghostednic-tool.md
+
   - name: Advanced troubleshooting support
     items:
       - name: Cannot RDP because "You must change your password before logging on the first time" error
@@ -189,6 +281,8 @@
 
 - name: VM password reset
   items:
+  - name: Reset Password (RDP)
+    href: reset-rdp.md
   - name: Reset local Windows password for Azure VM offline
     href: reset-local-password-without-agent.md
   - name: Redeploy Windows virtual machine to new Azure node
@@ -218,24 +312,16 @@
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: Windows Update and OS Upgrades
+- name: Instant Metadata Service (IMDS)
   items:
-  - name: In-place system upgrade for Windows Server Azure VMs
-    href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: In-place system upgrade for Windows-based Azure VMs
-    href: in-place-system-upgrade.md
-  - name: Upgrade VM to contain more than 64 vCPUs
-    href: vm-cannot-upgrade-64-vcpu.md
-  - name: Windows Update errors that require in-place upgrades
-    href: windows-update-errors-requiring-in-place-upgrade.md
-  - name: Known errors and issues
-    items:
-    - name: Error code 0x80070002
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error code 0x8024002E
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error code 0x80070490
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Overview
+    href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Certificate Issues
+    href: windows-vm-imds-certissues.md
+  - name: Connection Issues
+    href: windows-vm-imds-connection.md
+  - name: Troubleshooting Tool
+    href: windows-vm-imds-tool.md
 
 - name: My VM is not booting
   items:
@@ -354,8 +440,6 @@
       href: os-not-found.md
     - name: Troubleshoot Windows VM OS boot failure
       href: os-bucket-boot-failure.md
-    - name: VM stops at "Please wait for the Group Policy Client" screen
-      href: vm-stops-at-please-wait-for-group-policy-client.md
     - name: VM stops at "Checking file system" screen
       href: troubleshoot-check-disk-boot-error.md
     - name: Azure VM cannot RDP - driver IRQL not less or equal
@@ -376,6 +460,8 @@
     href: restart-resize-error-troubleshooting.md
   - name: Restarting, shutting down, or stopping services
     href: boot-error-troubleshoot-windows.md
+  - name: Slow VM start caused by extensions troubleshooting
+    href: slow-vm-start-extensions-troubleshooting.md
 
 - name: VM restarts or stops unexpectedly
   items:
@@ -422,43 +508,47 @@
 
 - name: Windows VM Agent
   items:
-  - name: Azure Windows VM Agent overview
+  - name: Overview
     href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Minimum version support
+  - name: Minimum version required
     href: support-extensions-agent-version.md
-  - name: Install Windows VM agent offline
-    href: install-vm-agent-offline.md
-  - name: Troubleshoot Windows VM agent
+  - name: How to troubleshoot
     href: windows-azure-guest-agent.md
-  - name: Multiple certificates on IaaS VM that uses extensions
+  - name: Troubleshooting tools (VM assist)
+    href: windows-azure-guest-agent-tools-vmassist.md
+  - name: Troubleshoot multiple certificates issues
     href: multiple-certificates-iaas-vm-extensions.md
-  - name: Troubleshoot extension certificate issues on Windows VM
+  - name: Troubleshoot extension certificate issues
     href: troubleshoot-extension-certificates-issues-windows-vm.md
-
+  - name: Offline installation
+    href: install-vm-agent-offline.md
+  
 - name: VM Extensions
   items:
+  - name: Overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Supported operating systems
     href: extension-supported-os.md
   - name: Supported extensions
     href: support-agent-extensions.md
-  - name: Azure extension overview
-    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: Cannot activate my Windows VM
+- name: Cannot activate Windows
   items:
-  - name: Understanding Generic Volume License Key
-    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Troubleshooting
+  - name: Overview
     href: troubleshoot-activation-problems.md
+  - name: Troubleshooting tools
+    href: windows-activation-troubleshoot-tools.md
   - name: Frequently asked questions
     href: windows-virtual-machine-activation-faq.yml
-  - name: KMS endpoints - new endpoints
+  - name: KMS endpoints
     href: windows-activation-stopped-working.md
-  - name: Common Issues
+  - name: Generic Volume License Keys
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Common issues
     items:
-    - name: Activation fails in forced tunneling scenario
+    - name: Forced tunneling scenario
       href: custom-routes-enable-kms-activation.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
@@ -466,20 +556,21 @@
       href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x800705B4
       href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    - name: Error 0xC004E015
       href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004FD01 or 0xC004FD02
       href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
     - name: Error 0xC004F06C
-      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context 
     - name: Error 0xC004F074
       href: windows-vm-activation-error-0xc004f074.md
-    - name: Windows activation watermark continues to be displayed
+    - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
 
-
-- name: Allocation Failures
-  href: allocation-failure.md
+- name: Received an allocation failure
+  items:
+  - name: Allocation failures
+    href: ../windows/allocation-failure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: VM planned maintenance
   href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -589,7 +680,4 @@
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
-  - name: VM stuck in failed state
-    href: vm-stuck-in-failed-state.md
-  - name: VM is unavailable for 15 minutes
-    href: azure-vm-unavailable.md
+

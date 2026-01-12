@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ronsto
 ms.custom:
 - sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Disk volumes take longer to go online when you use the Volume Shadow Copy Service on computers that run many I/O operations
 

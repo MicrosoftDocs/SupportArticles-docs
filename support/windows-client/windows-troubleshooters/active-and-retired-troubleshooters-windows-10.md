@@ -1,18 +1,18 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 06/04/2025
+ms.date: 11/11/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, fangmikko
+ms.reviewer: kaushika, grahamm
 ms.custom: sap:Support Tools\Windows Troubleshooters, csstroubleshoot
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Active and retired troubleshooters for Windows 10 and Windows 11
 
 This article provides a list of active and retired troubleshooters for Windows 10 and Windows 11, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
-
-_Applies to:_ &nbsp; Windows 10, Windows 11
 
 ## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
 
@@ -32,7 +32,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|3/15/2023||[https://aka.ms/AAhdpvb](https://aka.ms/AAhdpvb)|
+|3/15/2023|4/12/2025|[https://aka.ms/AAhdpvb](https://aka.ms/AAhdpvb)|
 
 
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
@@ -52,7 +52,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|8/24/2022||[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
+|8/24/2022|11/30/2022|[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
 
 ## Windows Update troubleshooter for repairing .NET framework components
 
@@ -70,7 +70,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|5/31/2022||[https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409)|
+|5/31/2022|10/30/2022|[https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409)|
 
 ## Windows Update troubleshooter for file or metadata corruption
 
@@ -89,7 +89,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|4/19/2021||[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
+|4/19/2021|10/30/2025|[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
 
 ## Windows Update troubleshooter for repairing system files
 
@@ -206,7 +206,7 @@ This troubleshooter automatically runs two times. It runs the first time on all 
   
 |Activation date|Retirement date|More information|
 |---|---|---|
-|2/7/2020|\-|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|
+|2/7/2020|11/28/2020|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|
 
 ## Troubleshooter for Windows logon
 
@@ -232,4 +232,4 @@ The Windows User Profile troubleshooter addresses issues with opening the Window
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|5/29/2025||[https://Aka.ms/AAwe51y](https://Aka.ms/AAwe51y)|
+|5/29/2025|8/27/2025|[https://Aka.ms/AAwe51y](https://Aka.ms/AAwe51y)|

@@ -8,6 +8,8 @@ ms.reviewer: Brad.Held
 ms.custom:
 - sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 180 is logged and AD FS endpoints are missing in Windows Server 2016
 

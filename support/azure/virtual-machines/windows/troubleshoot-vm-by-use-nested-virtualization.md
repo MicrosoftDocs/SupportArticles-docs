@@ -10,7 +10,6 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-ms.topic: article
 ms.date: 11/11/2024
 ms.author: glimoli
 ms.reviewer: v-weizhu, v-six, ekpathak, glimoli, kageorge, herensin

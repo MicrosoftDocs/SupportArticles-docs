@@ -7,12 +7,11 @@ author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 08/07/2024
+ms.date: 10/16/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Enable and disable the Azure Serial Console

@@ -1,0 +1,5 @@
+items:
+- name: Connector request failures
+  href: connector-request-failure.md
+- name: FailedToTakeScreenshot errors during computer use actions
+  href: computer-use-screenshot-error.md

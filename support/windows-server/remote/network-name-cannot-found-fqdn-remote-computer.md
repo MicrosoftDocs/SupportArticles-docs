@@ -9,6 +9,8 @@ ms.reviewer: markusr, kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you use the fully qualified domain name to connect to a remote computer from a Windows Server based computer: The network name cannot be found
 

@@ -1,7 +1,10 @@
 ---
 title: Create flexible organization charts in Visio
 description: This article describes how to create organization charts in Visio.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, johngue, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,11 +17,9 @@ appliesto:
 - Visio 2019
 - Visio 2021
 search.appverid: MET150
-ms.reviewer: johngue
-author: simonxjx
-ms.author: v-six
 ms.date: 06/06/2024
 ---
+
 # Create flexible organization charts in Visio
 
 This step-by-step article discusses methods that you can use to create flexible organization charts in Microsoft Visio. This article contains information about how to:

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error 403 (Access Denied/Forbidden) occurs when you connect to Windows Update
 
@@ -59,7 +61,7 @@ For information about how to reset the Hosts file to the default Hosts file, see
 > [!NOTE]
 > These steps only apply to computers that are running Windows XP or earlier versions of Windows.
 
-1. Go to the [Microsoft Download Center](https://www.microsoft.com/download/en/search.aspx?q=windows%20script%205.7).
+1. Go to the [Microsoft Download Center](https://www.microsoft.com/search/explore?q=windows+script+5.7).
 2. Click the Update symbol next to the update for your version of Windows.
 
     :::image type="icon" source="media/error-403-connect-to-windows-update/update-symbol.png":::

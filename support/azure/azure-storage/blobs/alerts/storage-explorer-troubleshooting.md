@@ -479,7 +479,7 @@ If you accidentally attached by using an invalid shared access signature URL and
 Storage Explorer comes packaged with all dependencies it needs to run on Windows.
 
 > [!NOTE]
-> Some components need command line access. If it's restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
+> Some components need command line access. If restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
 
 ## [macOS](#tab/macOS)
 
@@ -744,7 +744,7 @@ Once added to the `docker` group, restart your machine. For more information, se
 
 ### Verify the Docker context
 
-Make sure you're using the correct Docker context that is managing your containers. You can check your current context by running:
+Make sure you're using the correct Docker context that's managing your containers. You can check your current context by running:
 
 ```bash
 docker context ls
@@ -837,6 +837,34 @@ docker run \
   -p <table-host-port>:10002 \
   mcr.microsoft.com/azure-storage/azurite
 ```
+
+## Storage Explorer doesn't run within FSLogix session
+
+If FSLogix manages your user profile, Storage Explorer might be unable to run due to an `EEXIST` error. The error occurs due to a known issue with certain versions of FSLogix. If you encounter the error, make sure you're using the latest version of FSLogix. If the issue still occurs, you can work around it by following these steps:
+
+1. Open the Group Policy Management Console (gpmc.msc).
+
+2. Create or edit a Group Policy Object (GPO) that targets your AVD session hosts.
+
+3. Navigate to: Computer Configuration > Preferences > Windows Settings > Registry.
+
+4. Add a new Registry Item with the following settings:
+
+   | Action     | Update                                     |
+   |------------|--------------------------------------------|
+   | Hive       | HKEY_LOCAL_MACHINE                         |
+   | Key Path   | SYSTEM\CurrentControlSet\Services\frxdrvvt |
+   | Value Name | SupportedFeatures                          |
+   | Value Type | REG_DWORD                                  |
+   | Value Data | 11 (0xB)                                   |
+
+5. Apply the GPO and reboot the session hosts.
+
+> [!TIP]
+> You can also add registry items to the following key paths:
+>
+> - SYSTEM\CurrentControlSet\Services\frxdrv
+> - SYSTEM\CurrentControlSet\Services\frxccd
 
 ## Next steps
 

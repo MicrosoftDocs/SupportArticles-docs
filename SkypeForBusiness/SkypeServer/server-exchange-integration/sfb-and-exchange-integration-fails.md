@@ -1,13 +1,14 @@
 ---
 title: Skype for Business and Exchange integration fails
 description: Provide a solution when Skype for Business and Exchange integration fails.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

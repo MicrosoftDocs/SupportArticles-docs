@@ -9,6 +9,8 @@ ms.reviewer: kaushika, rolandw, wincicadsec
 ms.custom:
 - sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # A backlog is reported for a DFSR Read-Only member after you remove a replication file filter
 

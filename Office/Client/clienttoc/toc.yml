@@ -336,12 +336,8 @@
           href: ../excel/update-external-links.md
         - name: Large Address Aware capability change
           href: ../excel/laa-capability-change.md
-        - name: Last digits are changed to zeros
-          href: ../excel/last-digits-changed-to-zeros.md
         - name: Link a Visio drawing to a specific region
           href: ../excel/link-visio-drawing-to-a-specific-region.md
-        - name: Long numbers are displayed incorrectly
-          href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
         - name: Memory usage in the 32-bit edition of Excel
@@ -490,6 +486,8 @@
           href: ../office-suite-issues/enable-disable-hyperlink-warning.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
+        - name: Errors when Office add-ins start
+          href: ../office-suite-issues/errors-when-office-add-ins-start.md          
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
@@ -644,8 +642,6 @@
           href: ../powerpoint/slide-transition-sounds-missing.md
         - name: Troubleshoot a damaged presentation
           href: ../powerpoint/damaged-presentation.md
-        - name: User info in @mentions doesn't resolve
-          href: /troubleshoot/office/excel/mentions-not-resolve-user-information?context=/troubleshoot/office/context/client-context
     - name: Project
       items:
         - name: Can't add or edit resources in Enterprise Resource Pool
@@ -790,8 +786,6 @@
           href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
-        - name: User info in @mentions doesn't resolve
-          href: /troubleshoot/office/excel/mentions-not-resolve-user-information?context=/troubleshoot/office/context/client-context
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
         - name: Word slows or stops responding

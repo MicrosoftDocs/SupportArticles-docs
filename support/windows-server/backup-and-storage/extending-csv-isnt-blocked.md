@@ -9,6 +9,8 @@ ms.reviewer: kaushika, josefh
 ms.custom:
 - sap:backup,recovery,disk,and storage\data corruption and disk errors
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Extending a CSV by using Diskpart or PowerShell isn't blocked from a non-coordinator node
 

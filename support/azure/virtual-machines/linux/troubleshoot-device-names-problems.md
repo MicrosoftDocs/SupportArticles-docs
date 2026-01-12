@@ -23,6 +23,8 @@ ms.author: jarrettr
 
 This article explains why device names change after you restart a Linux VM or reattach the data disks. The article also provides solutions for this problem.
 
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
 ## Symptoms
 
 You may experience the following problems when running Linux VMs in Microsoft Azure:

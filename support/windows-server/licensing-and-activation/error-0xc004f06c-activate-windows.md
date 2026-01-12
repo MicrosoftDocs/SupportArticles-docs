@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-naqviadil, v-lianna
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0xC004F06C when you activate Windows
 
@@ -68,3 +70,5 @@ To resolve this error, follow these steps:
         `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\Parameters`.
 
     2. Make sure the value of the **Type** registry entry is **NT5DS**. This means the computer is synchronizing its time with the AD DS time hierarchy.
+
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]

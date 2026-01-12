@@ -21,11 +21,11 @@ productDirectory:
     # Card
     - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /media/logos/logo-ms-social.png
+      imageSrc: /media/logos/logo-ms-social.svg
       links:
-        - url: /troubleshoot/microsoft-365/o365-admin-welcome
-          text: Microsoft 365 admin center
-        - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
+        - url: /troubleshoot/microsoft-365/admin/o365-admin-welcome
+          text: Microsoft 365 Administration
+        - url: /troubleshoot/microsoft-365/purview/microsoft-purview-welcome
           text: Microsoft Purview
     # Card
     - title: Microsoft Teams
@@ -36,7 +36,7 @@ productDirectory:
     # Card      
     - title: Microsoft 365 Apps
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /support/media/hub-landing/logo-m365-app.png
+      imageSrc: /media/logos/logo-ms-social.svg
       links:
         - url: /troubleshoot/office/office-client-welcome
           text: Microsoft 365 Apps
@@ -74,24 +74,30 @@ productDirectory:
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
       links:
-        - url: /troubleshoot/outlook/outlook-client-welcome
-          text: Outlook for Windows
-        - url: /troubleshoot/outlook/outlook-mac-welcome
-          text: Outlook for Mac
+        - url: /troubleshoot/outlook/classic-outlook-windows-welcome
+          text: Classic Outlook for Windows
+        - url: /troubleshoot/outlook/new-outlook-windows-welcome
+          text: New Outlook for Windows
+        - url: /troubleshoot/outlook/legacy-outlook-mac-welcome
+          text: Legacy Outlook for Mac
+        - url: /troubleshoot/outlook/overview-new-outlook-mac
+          text: New Outlook for Mac
     # Card
     - title: OneDrive
-      imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
+      imageSrc: /media/logos/logo-onedrive.svg
       links:
         - url: /troubleshoot/sharepoint/onedrive-welcome
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.png
+      imageSrc: /support/media/hub-landing/logo-viva.svg
       links:
         - url: /troubleshoot/viva/glint/viva-glint-welcome
           text: Microsoft Viva Glint
         - url: /troubleshoot/viva/insights/viva-insights-welcome
           text: Microsoft Viva Insights
+        - url: /troubleshoot/viva/pulse/viva-pulse-welcome
+          text: Microsoft Viva Pulse
 
 # additionalContent section (optional)
 # Card with summary style

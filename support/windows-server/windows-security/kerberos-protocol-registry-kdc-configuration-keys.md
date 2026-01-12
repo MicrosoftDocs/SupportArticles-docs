@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm, jobesanc
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Kerberos protocol registry entries and KDC configuration keys in Windows
 
@@ -124,8 +126,8 @@ The registry entries that are listed in this section must be added to the follow
 
 - Entry: StronglyEncryptDatagram
 
-  - Type: REG_BOOL
-  - Default value: FALSE
+  - Type: REG_DWORD
+  - Default value: 0 (FALSE). Starting in Windows Server 2025 and Windows 11 24H2, the default value is 1 (TRUE)
 
     This value contains a flag that indicates whether to use 128-bit encryption for datagram packets.
 

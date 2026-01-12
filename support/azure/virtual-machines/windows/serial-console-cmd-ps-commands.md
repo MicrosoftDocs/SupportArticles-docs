@@ -8,117 +8,118 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 08/14/2018
+ms.date: 10/16/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ---
 
-# Windows Commands - CMD and PowerShell
+# How to use CMD and PowerShell Windows commands
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This section includes example commands for performing common tasks in scenarios where you may need to use SAC to access your Windows VM, such as when you need to troubleshoot RDP connection failures.
+This article provides example commands to perform common tasks in scenarios in which you have to use the Special Administration Console (SAC) to access your Windows virtual machine (VM). For example, you might have to use SAC to troubleshoot RDP connection failures.
 
-SAC has been included in all versions of Windows since Windows Server 2003 but is disabled by default. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
+SAC is included in all versions of Windows since Windows Server 2003. By default, however, it's disabled. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
 
-SAC allows you to connect to your running OS via serial port. When you launch CMD from SAC, `sacsess.exe` launches `cmd.exe` within your running OS. You can see that in Task Manager if you RDP to your VM at the same time you are connected to SAC via the serial console feature. The CMD you access via SAC is the same `cmd.exe` you use when connected via RDP. All the same commands and tools are available, including the ability to launch PowerShell from that CMD instance. That is a major difference between SAC and the Windows Recovery Environment (WinRE) in that SAC is letting you manage your running OS, where WinRE boots into a different, minimal OS. While Azure VMs do not support the ability to access WinRE, with the serial console feature, Azure VMs can be managed via SAC.
+SAC enables you to connect through a serial port to the running OS. When you open a Command Prompt window in SAC, `sacsess.exe` starts `cmd.exe` within your running OS. In Task Manager, you can see that if, at the same time, you also connect through RDP to your VM, you're now connected to SAC through the serial console feature. The CMD window that you access through SAC is the same as the `cmd.exe` window that you use when you connect through RDP. All the same commands and tools are available, including the ability to start PowerShell from that CMD instance. The major difference between SAC and the Windows Recovery Environment (WinRE) is that SAC lets you manage your running OS, but WinRE starts up into a different, minimal OS. Although Azure VMs don't support the ability to access WinRE, they can be managed through SAC.
 
-Because SAC is limited to an 80x24 screen buffer with no scroll back, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
+Because SAC is limited to an 80x24 pixel screen buffer that has no scroll back capability, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
 
-`SHIFT+INSERT` is the paste shortcut for the serial console window.
+The paste shortcut for the serial console window is `SHIFT+INSERT`.
 
-Because of SAC's limited screen buffer, longer commands may be easier to type out in a local text editor and then pasted into SAC.
+Because of SAC's limited screen buffer, it might be easier to manage longer commands by copying them from a local text editor to SAC.
 
-## View and Edit Windows Registry Settings using CMD
+## Use CMD for Windows registry settings
 
-### Verify RDP is enabled
+To view and edit Windows registry settings by using CMD, follow these steps:  
 
-`reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections`
+1. Verify that RDP is enabled. Run the following commands:
 
-`reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections`
+    reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
 
-The second key (under \Policies) will only exist if the relevant group policy setting is configured.
+    reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
 
-### Enable RDP
+    **Note:** The second key (under \Policies) exists only if the relevant Group Policy setting is configured.
 
-`reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0`
+1. Enable RDP by running the following commands:
 
-`reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0`
+    reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0
 
-The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it is configured in group policy.
+    reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0
 
-## Manage Windows Services using CMD
+    **Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value is rewritten at next Group Policy refresh if it's configured in Group Policy.
 
-### View service state
+## Use CMD to manage Windows services
 
-`sc query termservice`
+To manage Windows services by using CMD, follow these steps:
 
-### View service logon account
+1. View the service state:
 
-`sc qc termservice`
+    `sc query termservice`
 
-### Set service logon account
+1. View the service logon account:
 
-`sc config termservice obj= "NT Authority\NetworkService"`
+    `sc qc termservice`
 
-A space is required after the equals sign.
+1. Set the service logon account:
 
-### Set service start type
+    `sc config termservice obj= "NT Authority\NetworkService"`
 
-`sc config termservice start= demand`
+    **Note:** A space is required after the equal sign.
 
-A space is required after the equals sign. Possible start values include `boot`, `system`, `auto`, `demand`, `disabled`, `delayed-auto`.
+1. Set service start type:
 
-### Set service dependencies
+    `sc config termservice start= demand`
 
-`sc config termservice depend= RPCSS`
+    **Note:** A space is required after the equal sign. Possible start values include: `boot`, `system`, `auto`, `demand`, `disabled`, and `delayed-auto`.
 
-A space is required after the equals sign.
+1. Set service dependencies:
 
-### Start service
+    `sc config termservice depend= RPCSS`
 
-`net start termservice`
+    **Note:** A space is required after the equal sign.
 
-or
+1. Start service by running either of the following commands:
 
-`sc start termservice`
+    `net start termservice`
 
-### Stop service
+    `sc start termservice`
 
-`net stop termservice`
+1. Stop the service by running either of the following commands:
 
-or
+    `net stop termservice`
 
-`sc stop termservice`
+    `sc stop termservice`
 
-## Manage Networking Features using CMD
+## Use CMD to manage networking features
 
-### Show NIC properties
+To manage networking features using CMD, follow these steps:
+   
+1. Show the network shell (netsh) properties:
 
-`netsh interface show interface`
+    `netsh interface show interface`
 
-### Show IP properties
+1. Show IP properties:
 
-`netsh interface ip show config`
+    `netsh interface ip show config`
 
-### Show IPSec configuration
+1. Show IPSec configuration:
 
-`netsh nap client show configuration`
+    `netsh nap client show configuration`
 
-### Enable NIC
+1. Enable the network shell interface:
 
-`netsh interface set interface name="<interface name>" admin=enabled`
+    `netsh interface set interface name="<interface name>" admin=enabled`
 
-### Set NIC to use DHCP
+1. Set the netsh interface to use DHCP:
 
-`netsh interface ip set address name="<interface name>" source=dhcp`
+    `netsh interface ip set address name="<interface name>" source=dhcp`
 
-For more information about `netsh`, [click here](/windows-server/networking/technologies/netsh/netsh-contexts).
+For more information about `netsh`, see [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh-contexts).
 
-Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
+Azure VMs should always be configured in the guest OS to use DHCP to get an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
 
 ### Ping
 
@@ -138,7 +139,7 @@ To remove the telnet client
 
 `dism /online /Disable-Feature /FeatureName:TelnetClient`
 
-When limited to methods available in Windows by default, PowerShell can be a better approach for testing port connectivity. See the PowerShell section below for examples.
+When limited to methods available in Windows by default, PowerShell can be a better approach for testing port connectivity. See the following PowerShell section for examples.
 
 ### Test DNS name resolution
 
@@ -152,7 +153,7 @@ When limited to methods available in Windows by default, PowerShell can be a bet
 
 `netsh advfirewall set allprofiles state off`
 
-You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the command below. Do not stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
+You can use this command when you troubleshoot to temporarily rule out Windows Firewall. Firewall will be enabled at the next restart or when you enable it by using the command in the next section. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a method to rule out the Windows Firewall. Stopping MPSSVC or BFE causes all connectivity to be blocked.
 
 ### Enable Windows Firewall
 
@@ -168,11 +169,11 @@ You can use this command when troubleshooting to temporarily rule out the Window
 
 `net localgroup Administrators <username> /add`
 
-### Verify user account is enabled
+### Verify that the user account is enabled
 
 `net user <username> | find /i "active"`
 
-Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+Azure VMs that are created from a generalized image have the local administrator account renamed to the name that's specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### Enable user account
 
@@ -184,17 +185,19 @@ Azure VMs created from generalized image will have the local administrator accou
 
 Example lines of interest from a local admin account:
 
-`Account active Yes`
+```text
+Account active          Yes
 
-`Account expires Never`
+Account expires         Never
 
-`Password expires Never`
+Password expires        Never
 
-`Workstations allowed All`
+Workstations allowed    All
 
-`Logon hours allowed All`
+Logon hours allowed     All
 
-`Local Group Memberships *Administrators`
+Local Group Memberships *Administrators
+```
 
 ### View local groups
 
@@ -220,25 +223,25 @@ Change `/c:10` to the desired number of events to return, or move it to return a
 
 `wevtutil qe system /c:1 /f:text /q:"Event[System[Provider[@Name='Microsoft-Windows-Hyper-V-Netvsc'] and EventID=11 and TimeCreated[timediff(@SystemTime) <= 86400000]]]"`
 
-Use `604800000` to look back 7 days instead of 24 hours.
+Use `604800000` to look back seven days instead of 24 hours.
 
-### Query event log by Event ID, Provider, and EventData in the last 7 days
+### Query event log by Event ID, Provider, and EventData in the last seven days
 
 `wevtutil qe security /c:1 /f:text /q:"Event[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
-## View or Remove Installed Applications using CMD
+## View or remove installed applications by using CMD
 
 ### List installed applications
 
 `wmic product get Name,InstallDate | sort /r | more`
 
-The `sort /r` sorts descending by install date to make it easy to see what was recently installed. Use `<spacebar>` to advance to the next page of output, or `<enter>` to advance one line.
+The `sort /r` command sorts results in descending order by install date, making it easier to identify recently installed applications. Use `<spacebar>` to advance to the next page of output, or `<enter>` to advance one line.
 
 ### Uninstall an application
 
 `wmic path win32_product where name="<name>" call uninstall`
 
-Replace `<name>` with the name returned in the above command for the application you want to remove.
+Replace `<name>` with the name that's returned in the previous command for the application that you want to remove.
 
 ## File System Management using CMD
 
@@ -246,7 +249,7 @@ Replace `<name>` with the name returned in the above command for the application
 
 `wmic datafile where "drive='C:' and path='\\windows\\system32\\drivers\\' and filename like 'netvsc%'" get version /format:list`
 
-This example returns the file version of the virtual NIC driver, which is netvsc.sys, netvsc63.sys, or netvsc60.sys depending on the Windows version.
+This example returns the file version of the virtual network adapter driver, which is netvsc.sys, netvsc63.sys, or netvsc60.sys depending on the Windows version.
 
 ### Scan for system file corruption
 
@@ -272,7 +275,8 @@ See also [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a
 
 `icacls %programdata%\Microsoft\Crypto\RSA /save %temp%\MachineKeys_permissions_before.aclfile /t`
 
-The path when using `/restore` needs to be the parent folder of the folder you specified when using `/save`. In this example, `\RSA` is the parent of the `\MachineKeys` folder specified in the `/save` example above.
+When using `/restore`, specify the parent folder of the one used in
+ `/save`. For example, use `\RSA` if you previously saved permissions for `\MachineKeys`.
 
 ### Take NTFS ownership of a folder
 
@@ -284,13 +288,15 @@ The path when using `/restore` needs to be the parent folder of the folder you s
 
 ## Manage Devices
 
-### Remove non-present PNP devices
+### Remove entries for nonexistent PNP devices 
+
+This command cleans up device entries for hardware that no longer exists on the system:
 
 `%windir%\System32\RUNDLL32.exe %windir%\System32\pnpclean.dll,RunDLL_PnpClean /Devices /Maxclean`
 
 ## Manage Group Policy
 
-### Force group policy update
+### Force a Group Policy update
 
 `gpupdate /force /wait:-1`
 
@@ -334,7 +340,7 @@ or
 
 `shutdown /r /t 0`
 
-Adding `/f` will force running applications to close without warning users.
+Adding `/f` forces running applications to close without warning users.
 
 ### Detect Safe Mode boot
 
@@ -347,19 +353,21 @@ To run PowerShell in SAC, after you reach a CMD prompt, type:
 `powershell <enter>`
 
 > [!CAUTION]
-> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. There is a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
+> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. There's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
 
-First check if PSReadLine is loaded. It is loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it had been manually installed.
+First check if PSReadLine is loaded. It's loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it's  manually installed.
 
-If this command returns to a prompt with no output, then the module was not loaded and you can continue using the PowerShell session in SAC as normal.
+If this command returns to a prompt with no output, then the module wasn't loaded and you can continue using the PowerShell session in SAC as normal.
 
 `get-module psreadline`
 
-If the above command returns the PSReadLine module version, run the following command to unload it. This command does not delete or uninstall the module, it only unloads it from the current PowerShell session.
+If the previous command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module. It only unloads it from the current PowerShell session.
 
 `remove-module psreadline`
 
-## View and Edit Windows Registry Settings using PowerShell
+If PSReadLine is loaded, it may introduce extra characters when you paste text. To avoid this, unload the module by using `remove-module psreadline`.
+
+## View and Edit Windows Registry Settings by using PowerShell
 
 ### Verify RDP is enabled
 
@@ -367,7 +375,7 @@ If the above command returns the PSReadLine module version, run the following co
 
 `get-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections'`
 
-The second key (under \Policies) will only exist if the relevant group policy setting is configured.
+The second key under `\Policies` exists only if the relevant Group Policy setting is configured.
 
 ### Enable RDP
 
@@ -375,7 +383,7 @@ The second key (under \Policies) will only exist if the relevant group policy se
 
 `set-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections' 0 -type dword`
 
-The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it is configured in group policy.
+The second key (under \Policies) would be needed only if the relevant group policy setting was configured. The value will be rewritten at next group policy refresh if it's configured in group policy.
 
 ## Manage Windows Services using PowerShell
 
@@ -411,7 +419,7 @@ When using a service account other than `NT AUTHORITY\LocalService`, `NT AUTHORI
 
 ## Manage Networking Features using PowerShell
 
-### Show NIC properties
+### Show network adapter properties
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} |  format-list status,name,ifdesc,macadDresS,driverversion,MediaConNectState,MediaDuplexState`
 
@@ -419,13 +427,13 @@ or
 
 `get-wmiobject win32_networkadapter -filter "servicename='netvsc'" |  format-list netenabled,name,macaddress`
 
-`Get-NetAdapter` is available in 2012+, for 2008R2 use `Get-WmiObject`.
+`Get-NetAdapter` is available in 2012 and later versions, for 2008 R2, use `Get-WmiObject`.
 
 ### Show IP properties
 
 `get-wmiobject Win32_NetworkAdapterConfiguration -filter "ServiceName='netvsc'" |  format-list DNSHostName,IPAddress,DHCPEnabled,IPSubnet,DefaultIPGateway,MACAddress,DHCPServer,DNSServerSearchOrder`
 
-### Enable NIC
+### Enable network adapter
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} | enable-netadapter`
 
@@ -433,68 +441,68 @@ or
 
 `(get-wmiobject win32_networkadapter -filter "servicename='netvsc'").enable()`
 
-`Get-NetAdapter` is available in 2012+, for 2008R2 use `Get-WmiObject`.
+`Get-NetAdapter` is available in 2012 and later versions, for 2008 R2, use `Get-WmiObject`.
 
-### Set NIC to use DHCP
+### Set network adapter to use DHCP
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} | Set-NetIPInterface -DHCP Enabled`
 
 `(get-wmiobject Win32_NetworkAdapterConfiguration -filter "ServiceName='netvsc'").EnableDHCP()`
 
-`Get-NetAdapter` is available on 2012+. For 2008R2 use `Get-WmiObject`. Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the IP to the VM.
+`Get-NetAdapter` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the IP to the VM.
 
 ### Ping
 
 `test-netconnection`
 
 > [!NOTE]
-> The Write-Progress cmdlet may not work with this command. As a mitigation, you can run `$ProgressPreference = "SilentlyContinue"` in PowerShell to disable the progress bar.
+> The Write-Progress cmdlet might not work by using this command. As a mitigation, you can run `$ProgressPreference = "SilentlyContinue"` in PowerShell to disable the progress bar.
 
-or
+Or 
 
 `get-wmiobject Win32_PingStatus -Filter 'Address="8.8.8.8"' | format-table -autosize IPV4Address,ReplySize,ResponseTime`
 
-`Test-Netconnection` without any parameters will try to ping `internetbeacon.msedge.net`. It is available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
+`Test-Netconnection` without any parameters, try to ping `internetbeacon.msedge.net`. It's available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`, as in the second example.
 
-### Port Ping
+### Port ping
 
 `test-netconnection -ComputerName bing.com -Port 80`
 
-or
+Or 
 
 `(new-object Net.Sockets.TcpClient).BeginConnect('bing.com','80',$null,$null).AsyncWaitHandle.WaitOne(300)`
 
-`Test-NetConnection` is available on 2012+. For 2008R2 use `Net.Sockets.TcpClient`
+`Test-NetConnection` is available in 2012 and later versions. For 2008 R2, use `Net.Sockets.TcpClient`.
 
 ### Test DNS name resolution
 
 `resolve-dnsname bing.com`
 
-or
+Or 
 
 `[System.Net.Dns]::GetHostAddresses('bing.com')`
 
-`Resolve-DnsName` is available on 2012+. For 2008R2 use `System.Net.DNS`.
+`Resolve-DnsName` is available in 2012 and later versions. For 2008 R2, use `System.Net.DNS`.
 
-### Show Windows firewall rule by name
+### Show Windows Firewall rule by name
 
 `get-netfirewallrule -name RemoteDesktop-UserMode-In-TCP`
 
-### Show Windows firewall rule by port
+### Show Windows Firewall rule by port
 
 `get-netfirewallportfilter | where {$_.localport -eq 3389} | foreach {Get-NetFirewallRule -Name $_.InstanceId} | format-list Name,Enabled,Profile,Direction,Action`
 
-or
+Or 
 
 `(new-object -ComObject hnetcfg.fwpolicy2).rules | where {$_.localports -eq 3389 -and $_.direction -eq 1} | format-table Name,Enabled`
 
-`Get-NetFirewallPortFilter` is available on 2012+. For 2008R2 use the `hnetcfg.fwpolicy2` COM object.
+`Get-NetFirewallPortFilter` is available in 2012 and later versions. For 2008 R2, use the `hnetcfg.fwpolicy2` COM object.
 
-### Disable Windows firewall
+### Disable Windows Firewall
 
 `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False`
 
-`Set-NetFirewallProfile` is available on 2012+. For 2008R2 use `netsh advfirewall` as referenced in the CMD section above.
+`Set-NetFirewallProfile` is available in 2012 and later versions. For 2008 R2, use `netsh advfirewall` as referenced in the CMD section earlier in this article.
 
 ## Manage Users and Groups using PowerShell
 
@@ -506,11 +514,11 @@ or
 
 `(get-localuser | where {$_.SID -like "S-1-5-21-*-500"}).Enabled`
 
-or
+Or 
 
 `(get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'").Disabled`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account. This account always has SID `S-1-5-21-*-500`. Azure VMs that are created from a generalized image have the local administrator account renamed to the name that's specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### Add local user to local group
 
@@ -520,23 +528,23 @@ or
 
 `get-localuser | where {$_.SID -like "S-1-5-21-*-500"} | enable-localuser`
 
-This example enables the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+This example enables the built-in local administrator account. This account always has SID `S-1-5-21-*-500`. Azure VMs that are created from a generalized image have the local administrator account renamed to the name specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### View user account properties
 
 `get-localuser | where {$_.SID -like "S-1-5-21-*-500"} | format-list *`
 
-or
+Or 
 
 `get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'" |  format-list Name,Disabled,Status,Lockout,Description,SID`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account. This account always has SID `S-1-5-21-*-500`.
 
 ### View local groups
 
 `(get-localgroup).name | sort` `(get-wmiobject win32_group).Name | sort`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`.
 
 ## Manage the Windows Event Log using PowerShell
 
@@ -544,7 +552,7 @@ or
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Level=2]]" | more`
 
-Change `/c:10` to the desired number of events to return, or move it to return all events matching the filter.
+Change `/c:10` to the desired number of events to return, or remove it to return all matching events.
 
 ### Query event log by Event ID
 
@@ -558,13 +566,13 @@ Change `/c:10` to the desired number of events to return, or move it to return a
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Provider[@Name='Microsoft-Windows-Hyper-V-Netvsc'] and EventID=11 and TimeCreated[timediff(@SystemTime) <= 86400000]]]"`
 
-Use `604800000` to look back 7 days instead of 24 hours. |
+Use `604800000` to look back seven days instead of 24 hours. |
 
-### Query event log by Event ID, Provider, and EventData in the last 7 days
+### Query event log by Event ID, Provider, and EventData in the last seven days
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
-## View or Remove Installed Applications using PowerShell
+## View or remove iInstalled applications by using PowerShell
 
 ### List installed software
 
@@ -574,7 +582,7 @@ Use `604800000` to look back 7 days instead of 24 hours. |
 
 `(get-wmiobject win32_product -filter "Name='<name>'").Uninstall()`
 
-## File System Management using PowerShell
+## File System Management by using PowerShell
 
 ### Get file version
 
@@ -588,7 +596,7 @@ This example returns the file version of the virtual NIC driver, which is named 
 
 This example creates a `c:\bin` folder, then downloads and extracts the Sysinternals suite of tools into `c:\bin`.
 
-## Miscellaneous Tasks using PowerShell
+## Miscellaneous tasks that use PowerShell
 
 ### Show OS version
 
@@ -612,13 +620,13 @@ Returns uptime as `<days>:<hours>:<minutes>:<seconds>:<milliseconds>`, for examp
 
 `restart-computer`
 
-Adding `-force` will force running applications to close without warning users.
+Adding `-force` forces running applications to close without warning users.
 
-## Instance Metadata
+## Instance metadata
 
 You can query Azure instance metadata from within your Azure VM to view details such as osType, Location, vmSize, vmId, name, resourceGroupName, subscriptionId, privateIpAddress, and publicIpAddress.
 
-Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you are able to query instance metadata, that tells you the guest is able to communicate over the network to an Azure-hosted service.
+Querying instance metadata requires healthy guest network connectivity because it makes a REST call through the Azure host to the instance metadata service. If you can query instance metadata, then the guest can communicate over the network to an Azure-hosted service.
 
 For more information, see [Azure Instance Metadata service](/azure/virtual-machines/windows/instance-metadata-service).
 
@@ -696,8 +704,8 @@ For more information, see [Azure Instance Metadata service](/azure/virtual-machi
 
 ## Next steps
 
-* The main serial console Windows documentation page is located [here](serial-console-windows.md).
-* The serial console is also available for [Linux](../linux/serial-console-linux.md) VMs.
+* See the main [Serial Console Windows documentation page](serial-console-windows.md).
+* Learn about the [Serial Console for Linux VMs](../linux/serial-console-linux.md).
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

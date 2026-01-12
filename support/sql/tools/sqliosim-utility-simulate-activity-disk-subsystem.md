@@ -335,4 +335,4 @@ The sum of the `MaxMemoryMB` parameter for each instance must be less than or eq
 
 - [Information about using disk drive caches with SQL Server that every database administrator should know](https://support.microsoft.com/help/234656)
 
-- [SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes](https://support.microsoft.com/help/826433)
+- [SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes](~/sql/database-engine/database-file-operations/diagnostics-for-unreported-io-problems.md)

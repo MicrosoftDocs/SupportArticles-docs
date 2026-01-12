@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot adding entry points
 

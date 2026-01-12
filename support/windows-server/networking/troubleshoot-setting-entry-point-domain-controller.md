@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot setting the entry point domain controller
 

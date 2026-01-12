@@ -80,7 +80,7 @@ To do it, use one of the following options.
 > [!NOTE]
 > This option would remove all zero dollar checks in the table so that they aren't included in this check batch or any future check batch.
 
-For more information, see [How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP](https://support.microsoft.com/help/855957).
+For more information, see [How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP](./prevent-zero-dollar-remittances-from-printing.md).
 
 ## Reasons that remittances aren't posted to Bank Reconciliation
 

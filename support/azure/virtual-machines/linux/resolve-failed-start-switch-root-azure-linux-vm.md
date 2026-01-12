@@ -4,13 +4,13 @@ description: This article shows how to resolve the error "Failed to start Switch
 services: virtual-machines
 documentationcenter: ''
 author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 tags: top-support-issue
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 08/19/2021
-ms.author: tibasham
+ms.date: 09/15/2025
 ---
 # Resolve "Failed to start Switch Root" for an Azure Linux VM
 
@@ -42,13 +42,13 @@ If you're unable to use the Azure Serial Console section, proceed to the [Offlin
 
 2. Select the entry for the rescue kernel.
 
-3. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
+3. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/grubenv`.
 
 
    Example:
 
    ```console
-   cat /boot/grub2/gubenv
+   cat /boot/grub2/grubenv
    ```
 
 4. Edit the desired boot entry from `/boot/loader/entries`:  
@@ -86,7 +86,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    `mount /dev/sdc15 /repair/efi/`
 
-7. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
+7. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/grubenv`.
 
    Example:
 

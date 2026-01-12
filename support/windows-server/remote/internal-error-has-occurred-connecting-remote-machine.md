@@ -11,6 +11,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "An internal error has occurred" when connecting to a remote machine
 
