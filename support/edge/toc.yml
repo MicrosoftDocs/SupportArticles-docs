@@ -1,6 +1,8 @@
 items:
   - name: Manage and Deploy
     items:
+      - name: Failure to deploy self-hosted extension via group policy
+        href: development/self-host-extension-deploy.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
   - name: Web Platform and Development
