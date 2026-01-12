@@ -7,7 +7,7 @@ ms.date: 01/12/2026
 ---
 # Failure to deploy self-hosted extension via group policy
 
-When you attempt to deploy a self-hosted extension via group policy you might experience an issue where the extension doesn't appear for the target user. This article provides guidance for identifying and resolving the cause of this problem, enabling you to successfully deploy your extension.
+When you attempt to deploy a self-hosted extension through group policy, you might encounter an issue where the extension doesn't appear for the target user. This article provides guidance for identifying and resolving the cause of this problem, enabling you to successfully deploy your extension.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ However, if you manually drag the same extension package (`.crx` file) onto the 
 
 ## Cause: Incorrect group policy configuration
 
-The group policy **ExtensionInstallForcelist** or **ExtensionSettings** is configured incorrectly.
+You incorrectly configured the group policy **ExtensionInstallForcelist** or **ExtensionSettings**.
 
 ### Solution: Verify and correct the group policy configuration
 
@@ -28,7 +28,7 @@ Verify and correct the extension group policy configuration by using the followi
 
 ## Cause: Incorrect Content-Type header for the .crx file
 
-When the extension is hosted on an internal HTTP/HTTPS server and the server doesn't return the correct **Content-Type** header for the `.crx` file, the extension deployment will fail.
+When you host the extension on an internal HTTP or HTTPS server and the server doesn't return the correct **Content-Type** header for the `.crx` file, the extension deployment fails.
 
 If the `.crx` file isn't served with the header `Content-Type: application/x-chrome-extension`, Microsoft Edge or any other Chromium-based browser won't treat the file as an installable extension package when it's downloaded as part of the group policy installation flow.
 
@@ -42,7 +42,7 @@ Configure the web server to return the correct `Content-Type` for `.crx` files. 
 Content-Type: application/x-chrome-extension
 ```
 
-After this header is correctly configured, Microsoft Edge will recognize the `.crx` file as an installable extension when it's downloaded via the policy.
+After you configure this header, Microsoft Edge recognizes the `.crx` file as an installable extension when it's downloaded via the policy.
 
 #### Example: Configure MIME mapping on IIS
 
