@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-You set up an Active Directory Group Discovery to target specific AD Groups as discovery scopes as per [Configure Active Directory Group Discovery](https://learn.microsoft.com/en-us/intune/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adgd).
+You set up an Active Directory Group Discovery to target specific AD Groups as discovery scopes as per [Configure Active Directory Group Discovery](/intune/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adgd).
 
 You notice that AD Group Delta Discovery fails to catch the changes in certain group membership. At the same time, forcing a Full Discovery cycle resolves the issue.
 
