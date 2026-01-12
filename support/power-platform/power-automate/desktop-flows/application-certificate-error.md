@@ -69,11 +69,11 @@ Otherwise, [delete](https://docs.cyberark.com/identity/latest/en/content/applica
 
 If a connection check times out while you retrieve credentials from CyberArk, the issue might be related to HTTPS certificate trust. To rule out untrusted certificate problems, you can temporarily allow the Power Automate service (UIFlowService) to accept untrusted certificates. After testing, revert the change for security.
 
-[!NOTE]
-After you change the registry setting, restart the Power Automate service to apply the update.
+> [!NOTE]
+> After you change the registry setting, restart the Power Automate service to apply the update.
 
-[!WARNING]
-For security, only trusted certificates are accepted by default. Use this setting only for testing. When you finish, delete the entry and restart the service to restore the default behavior.
+> [!WARNING]
+> For security, only trusted certificates are accepted by default. Use this setting only for testing. When you finish, delete the entry and restart the service to restore the default behavior.
 
 1. Temporarily allow untrusted CyberArk HTTPS certificates
 
