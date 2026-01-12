@@ -1,6 +1,6 @@
 ---
 title: Cumulative update 1 for SQL Server 2025 (KB5074901)
-description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 cumulative update 1 (KB5074901).
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5074901).
 ms.date: 01/15/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074901
