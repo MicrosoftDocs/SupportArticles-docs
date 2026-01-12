@@ -312,7 +312,7 @@ If your Azure storage account is configured to use only AES-256-GCM for SMB chan
 
 ##### Solution for cause 5
 
-To resolve this issue, configure the client to require AES-256-GCM by setting the `require_gcm_256` option. This forces the client to use the correct encryption type.
+Configure the client to require AES-256-GCM by enabling the `require_gcm_256` option:
 
 ```bash
 # Load the CIFS module
