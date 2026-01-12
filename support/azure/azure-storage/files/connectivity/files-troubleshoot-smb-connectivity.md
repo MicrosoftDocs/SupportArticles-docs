@@ -308,7 +308,7 @@ Use identity-based authentication instead. See [Enable Active Directory authenti
 
 ##### Cause 5: SMB channel encryption is set to AES-256-GCM only
 
-When you select only AES-256-GCM for SMB channel encryption on your Azure storage account, you might experience a mount failure if the client selects AES-128-GCM as the default.
+If your Azure storage account is configured to use only AES-256-GCM for SMB channel encryption, mount operations fail when the client defaults to AES-128-GCM.
 
 ##### Solution for cause 5
 
