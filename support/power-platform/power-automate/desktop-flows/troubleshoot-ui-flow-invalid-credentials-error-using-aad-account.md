@@ -34,6 +34,8 @@ When you run a desktop flow using a Microsoft Entra account, it fails with the `
 }
 ```
 
+In these error codes, you might also experience an error message containing the phrase `AADSTS50126: Error validating credentials due to invalid username or password`.
+
 ## Cause
 
 You might encounter the error when using a Microsoft Entra account for several reasons:
@@ -41,6 +43,7 @@ You might encounter the error when using a Microsoft Entra account for several r
 - The account credentials entered into the connection might not match those on the machine.
 - The device might not be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) to support [Microsoft Entra authentication](/entra/identity/authentication/overview-authentication).
 - The Microsoft Entra account might not be synchronized to the machine.
+- The user account being attempted to connect is a federated user (ADFS) while the tenant is configured to run on Microsoft Entra ID.
 
 ## Resolution
 
@@ -76,6 +79,16 @@ You might encounter the error when using a Microsoft Entra account for several r
     2. The device login must be successful in order to be used in a connection.
 
 5. Make sure the flow is configured properly with the right username and password. This must match the account on your computer.
+
+### Specifically for AADSTS50126 case
+
+The preferred and most secure method is to configure [Certificate-Based Authentication](/power-automate/desktop-flows/configure-certificate-based-auth).
+
+Alternatively, in cases where CBA cannot be configured, the alternative is for configurations where administrators of the on-premises IdP have configured Password Hash Sync (PHS) and password hashes are synchronized to the Cloud, federated users can use their password directly against Microsoft Entra ID (ESTS). In order to do that, a Home Realm Discovery (HRD) policy should be configured to explicitly allow this.
+
+For more information on this case, please follow this article: [Enable direct ROPC authentication of federated users for legacy applications](/entra/identity/enterprise-apps/home-realm-discovery-policy#enable-direct-ropc-authentication-of-federated-users-for-legacy-applications)
+
+The setting that needs to be used is `"AllowCloudPasswordValidation" : true`
 
 ## More information
 
