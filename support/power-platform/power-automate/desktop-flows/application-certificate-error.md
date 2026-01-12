@@ -65,6 +65,26 @@ This message often appears incorrectly for most errors with Power Automate for d
 
 Otherwise, [delete](https://docs.cyberark.com/identity/latest/en/content/applications/appsadminportal/appremove.htm) and [re-create](https://docs.cyberark.com/credential-providers/13.0/en/content/common/adding-applications.htm) the application in CyberArk as suggested in the error message. Ensure that you correctly enter the **Application ID**, **Safe**, **Folder**, and **Object** details when [setting up the connection](/power-automate/desktop-flows/create-cyberark-credential#create-a-cyberark-credential-1).
 
+## Troubleshoot CyberArk certificate trust errors in Power Automate for desktop
+
+If a connection check times out while you retrieve credentials from CyberArk, the issue might be related to HTTPS certificate trust. To rule out untrusted certificate problems, you can temporarily allow the Power Automate service (UIFlowService) to accept untrusted certificates. After testing, revert the change for security.
+
+[!NOTE]
+After you change the registry setting, restart the Power Automate service to apply the update.
+
+[!WARNING]
+For security, only trusted certificates are accepted by default. Use this setting only for testing. When you finish, delete the entry and restart the service to restore the default behavior.
+
+1. Temporarily allow untrusted CyberArk HTTPS certificates
+
+| Hive | Key | Name | Type |
+|---|---|---|---|
+| HKEY_LOCAL_MACHINE | SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration | AllowUntrustedCyberArkHttpsCertificate | DWORD |
+
+***Value***
+
+- **1**: Allow untrusted CyberArk HTTPS certificates in the Power Automate service (UIFlowService).
+
 ## Other troubleshooting steps
 
 If you still don't have enough information to mitigate the issue, here are some steps you can take to troubleshoot the issue:
