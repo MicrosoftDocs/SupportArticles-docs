@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot Visual Studio 2017 or Later Installation Errors
-description: Learn how to troubleshoot and resolve Visual Studio installation failures, including online and offline setup issues.
+title: Fix Visual Studio Setup Issues Due to Missing Certificate
+description: Resolve Visual Studio installation errors caused by missing certificates. Learn how to fix online and offline setup issues for Visual Studio 2017 and later.
 ms.date: 12/30/2025
 ms.reviewer: khgupta, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Visual Studio Installation issues due to missing certificate
+# Visual Studio installation problems caused by missing certificate
 
 _Applies to:_&nbsp;Visual Studio 2017 and later versions  
 
-When you try to install Microsoft Visual Studio 2017 or a later version, the installation wizard unexpectedly closes or indicates that it can't download some installation files. This problem can be caused by a missing certificate required for the Visual Studio install. This article provides guidance for resolving this missing certificate, and enables you to successfully install Visual Studio.
+When you try to install Microsoft Visual Studio 2017 or a later version, the installation wizard unexpectedly closes or indicates that it can't download some installation files. A missing certificate required for the Visual Studio install can cause this problem. This article provides guidance for resolving the missing certificate problem and enables you to successfully install Visual Studio.
 
 ## Symptoms
 
@@ -63,7 +63,7 @@ To access the CAPI2 event logs from the Event Viewer, go to **Applications and S
 
 To enable CAPI2 event logging, follow these steps:
 
-1. Open Event Viewer by pressing <kbd>Win</kbd> + <kbd>R</kbd>, type _eventvwr_, and then pressing <kbd>Enter</kdb>.
+1. Open Event Viewer by pressing <kbd>Win</kbd> + <kbd>R</kbd>, type _eventvwr_, and then press <kbd>Enter</kdb>.
 1. Navigate to **Applications and Services Logs** > **Microsoft** > **Windows** > **CAPI2** > **Operational**.
 1. To delete any previous logs, right-click **Operational**, and then select **Clear Log**.
 1. To start logging, right-click **Operational**, and then select **Enable Log**.
