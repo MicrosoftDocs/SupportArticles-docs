@@ -164,7 +164,7 @@ In the certificate's Azure portal page, in **Certificate Configuration > Step 1:
 Use role-based access control (RBAC) for Key Vault verification with the following:
 
 ```powershell
-az role assignment create --role "Key Vault Certificate User" --assignee "f3c21649-0979-4721-ac85-b0216b2cf413" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
+az role assignment create --role "Key Vault Secrets Officer" --assignee "f3c21649-0979-4721-ac85-b0216b2cf413" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
 ```
 
 ```powershell
