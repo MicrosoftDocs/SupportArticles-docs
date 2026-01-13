@@ -23,7 +23,7 @@ You run `kubectl describe pod` for a pod, and the pod remains in the **Pending**
 
 These symptoms indicate one or more of the following situations:
 
-- Even if a new node is added by the cluster-autoscaler, the pod can’t be put onto the new node. This condition occurs because the pod's resource requests exceed the maximum resources that are available on the node.
+- Even if the cluster-autoscaler adds a node, the pod can’t be put onto the new node. This condition occurs because the pod's resource requests exceed the maximum resources that are available on the node.
 
 - The node is missing a resource that the pod requires (such as a Graphics Processing Unit (GPU)).
 
@@ -33,4 +33,4 @@ These symptoms indicate one or more of the following situations:
 
 Review the pod resource request configuration (for example CPU, memory, or GPU), and compare it with the node size. To make sure that pod placement can occur, you might have to adjust the node size or type, or adjust the resource request configuration for the pod.
 
-If you rule out a resource constraint, make sure that affinity or taints are not preventing scheduling.
+If you rule out a resource constraint, make sure that affinity or taints aren't preventing scheduling.
