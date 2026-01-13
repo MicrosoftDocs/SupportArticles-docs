@@ -1,11 +1,60 @@
 {
   "redirections": [
     {
+      "source_path": "support/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/software-metering-failed-start-prepdriver.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/tenant-attach-component-not-connect-to-gateway.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/new-cmg-creation-fails-after-sign-in-configuration-manager.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },   {
+      "source_path": "support/mem/configmgr/client-management/inactive-clients-not-send-inventory.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/software-update-installations-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/client-installation-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/install-configmgr-client-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/applications-not-deployed-to-windows10-arm64.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/app-v-application-changes-not-included.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/configmgr/alerts-reports-queries/cannot-edit-reports.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
     },
-   {
+    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios",
       "redirect_document_id": false
