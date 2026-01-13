@@ -34,6 +34,14 @@ To determine whether your version is supported, see the following .NET or .NET C
 - [Application monitoring for Azure App Service and ASP.NET](/azure/azure-monitor/app/azure-web-apps-net#application-monitoring-for-azure-app-service-and-aspnet)
 - [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#application-monitoring-for-azure-app-service-and-aspnet-core)
 
+### Autoinstrumentation fails when .NET Core Hosting Startup assemblies are overridden
+
+ASP.NET Core autoinstrumentation on Azure App Service uses the `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES` mechanism to load the Application Insights startup bootstrapper at runtime. If an application explicitly configures hosting startup assemblies (for example, with `WebHostDefaults.HostingStartupAssembliesKey`), that configuration overrides the App Service environment settings.
+
+When this occurs and `Microsoft.ApplicationInsights.StartupBootstrapper` is not included, the Application Insights agent can't attach and telemetry isn't collected even though Application Insights appears enabled in the Azure portal.
+
+To resolve this, remove custom hosting startup configuration or ensure `Microsoft.ApplicationInsights.StartupBootstrapper` is explicitly included in the configured hosting startup assemblies. If you intend to control startup assemblies programmatically, host configuration takes precedence over the `ASPNETCORE_HOSTINGSTARTUPASSEMBLIES` environment variable. For more information, see [Use hosting startup assemblies in ASP.NET Core](/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-8.0#specify-the-hosting-startup-assembly).
+
 ### A diagnostics library is detected
 
 Autoinstrumentation fails if it detects the following libraries:

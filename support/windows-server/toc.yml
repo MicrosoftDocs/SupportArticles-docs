@@ -125,6 +125,8 @@ items:
       href: ./active-directory/event-id-1216-directory-services-event-log.md
     - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
       href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
+    - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+      href: ./active-directory/adamsync-cant-sync-basedn-grandchild-ou.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -780,6 +782,10 @@ items:
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
+  - name: Storage Spaces Direct (S2D)
+    items:
+    - name: Delete a Storage Spaces Direct storage pool and reset the physical disks
+      href: ./backup-and-storage/delete-s2d-storage-pool-reuse-disks.md
     - name: Troubleshoot performance issues in Storage Spaces Direct
       href: ./backup-and-storage/troubleshoot-performance-issues-storage-spaces-direct.md
   - name: System Restore or resetting your computer

@@ -48,15 +48,15 @@ When the Wizard has successfully completed, the value for the `TLSSenderCertific
 
 ### Option 2: Change the inbound connector without running HCW
 
-Make sure that the new certificate is sent from on-premises Exchange to Exchange Online Protection (EOP) when users send external mail. If the new certificate isn't sent from on-premises Exchange to EOP, there may be a certificate configuration issue on-premises. Confirm the issue by enabling logging on the send connector that is used for routing mail to Microsoft 365 and checking those logs. To find the location of the send connector logs, run the following cmdlet against the source servers that are listed in that send connector. (Here we assume that the send connector name that's used for relaying to external domains through EOP is "outbound to Microsoft 365.")
+Make sure that the new certificate is sent from on-premises Exchange to Microsoft 365 when users send external mail. If the new certificate isn't sent from on-premises Exchange to Microsoft 365, there may be a certificate configuration issue on-premises. Confirm the issue by enabling logging on the send connector that is used for routing mail to Microsoft 365 and checking those logs. To find the location of the send connector logs, run the following cmdlet against the source servers that are listed in that send connector. (Here we assume that the send connector name that's used for relaying to external domains through Microsoft 365 is "outbound to Microsoft 365.")
 
-**For Exchange 2010**
+**For Exchange 2010**:
 
 ```powershell
 (Get-SendConnector "outbound to Microsoft 365").SourceTransportServers | foreach {get-transportserver $_.name} | Select-Object name,SendProtocolLogPath
 ```
 
-**For Exchange 2013 and later versions**
+**For Exchange 2013 and later versions**:
 
 ```powershell
 (Get-SendConnector "outbound to Microsoft 365").SourceTransportServers | foreach {get-transportservice $_.name} | Select-Object name,SendProtocolLogPath

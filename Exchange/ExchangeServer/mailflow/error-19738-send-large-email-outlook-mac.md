@@ -4,13 +4,13 @@ description: Describes an issue that triggers an error or an NDR when you try to
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: tasitae, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with Outlook for Mac
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: tasitae, v-six
 appliesto: 
   - Outlook 2016 for Mac
   - Outlook for Microsoft 365 for Mac
@@ -20,6 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # Error code 19738 when you use Outlook for Mac to send a large email message through Exchange Server
 
 _Original KB number:_ &nbsp;3146087
@@ -61,9 +62,3 @@ You can increase the message size limit on the Exchange server to allow for larg
 Exchange Server 2016 and 2013: [Configure client-specific message size limits](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)
 
 Exchange Server 2010: [Set message size limits for Exchange Web Services](/previous-versions/office/exchange-server-2010/hh529949(v=exchg.141))
-
-## More information
-
-For more information about this issue, see the following article in the Microsoft Knowledge Base:
-
-[3107326](https://support.microsoft.com/help/3107326) You can't send large attachments by using the EWS client

@@ -1,6 +1,6 @@
 ---
-title: NDR error 550 5.7.64 TenantAttribution when sending emails through EOP
-description: Describes an issue in which you receive a 550 5.7.64 TenantAttribution; Relay Access Denied SMTP error when sending mail through Exchange Online Protection.
+title: NDR error 550 5.7.64 TenantAttribution when sending emails through Microsoft 365
+description: Describes an issue in which you receive a 550 5.7.64 TenantAttribution; Relay Access Denied SMTP error when sending mail through Microsoft 365.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -23,7 +23,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# "550 5.7.64 TenantAttribution" when sending emails through Exchange Online Protection
+# "550 5.7.64 TenantAttribution" when sending emails through Microsoft 365
 
 _Original KB number:_ &nbsp; 3212877
 
@@ -31,10 +31,10 @@ _Original KB number:_ &nbsp; 3212877
 
 Consider the following scenario:
 
-- You relay email through Exchange Online Protection from your on-premises Exchange environment or from your Internet Information Services (IIS) SMTP server.
+- You relay email through Microsoft 365 from your on-premises Exchange environment or from your Internet Information Services (IIS) SMTP server.
 - You have an inbound connector that's set to on-premises and has certificate validation enabled.
 
-In this scenario, mail isn't relayed through Exchange Online Protection. Additionally, you receive the following error message:
+In this scenario, mail isn't relayed through Microsoft 365. Additionally, you receive the following error message:
 
 > 550 5.7.64 TenantAttribution; Relay Access Denied SMTP
 

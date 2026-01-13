@@ -1,13 +1,14 @@
 ---
 title: SharePoint Online performance troubleshooter
 description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint client performance issues.
-author: Cloud-Writer
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
 ms.custom: 
   - sap:Sites\Performance
   - CSSTroubleshoot
@@ -63,7 +64,5 @@ The Microsoft 365 SharePoint Online diagnostic package performs the following ch
 |AB374115-9DCE-4977-BE87-22DD321E6737|Checks whether Structural Navigation is turned on for a SharePoint Online publishing site.|[Managed navigation in SharePoint](/sharepoint/dev/general-development/managed-navigation-in-sharepoint)|
 
 ## References
-
-For more information about which operating systems can run Microsoft Support's diagnostic packages, go to [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970/information-about-microsoft-automated-troubleshooting-services-and-sup#q4).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

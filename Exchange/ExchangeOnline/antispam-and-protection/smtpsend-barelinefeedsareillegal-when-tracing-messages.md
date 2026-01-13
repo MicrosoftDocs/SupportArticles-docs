@@ -1,6 +1,6 @@
 ---
 title: SMTPSEND BareLineFeedsAreIllegal when tracing a message
-description: Describes a scenario in which Exchange Online users or Exchange Online Protection users receive an NDR that contains a SMTPSEND.BareLinefeedsAreIllegal error.
+description: Describes a scenario in which Microsoft 365 users receive an NDR that contains a SMTPSEND.BareLinefeedsAreIllegal error.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -13,17 +13,17 @@ ms.custom:
 ms.reviewer: delaja, v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
-# SMTPSEND.BareLineFeedsAreIllegal NDR received by Exchange Online or EOP users in Office 365 Dedicated/ITAR
+# SMTPSEND.BareLineFeedsAreIllegal NDR received by Microsoft 365 users in Office 365 Dedicated/ITAR
 
 _Original KB number:_ &nbsp; 2998901
 
 ## Symptoms
 
-Users of Exchange Online or Exchange Online Protection may not receive an expected email message. If you perform a trace on the message, you find that message delivery failed and that a nondelivery report (NDR) that contains the following error message was generated:
+Users of Microsoft 365 may not receive an expected email message. If you perform a trace on the message, you find that message delivery failed and that a nondelivery report (NDR) that contains the following error message was generated:
 
 > SMTPSEND.BareLinefeedsAreIllegal; message contains bare linefeeds, which cannot be sent via DATA
 

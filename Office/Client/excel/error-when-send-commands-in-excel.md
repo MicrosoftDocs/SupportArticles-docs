@@ -2,7 +2,9 @@
 title: An error occurred when sending commands to the program in Excel
 description: Discusses that you receive an An error occurred when sending commands to the program error message when you try to open an Excel workbook by double-clicking its icon or file name. Provides multiple resolutions.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+reviewer: v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
@@ -10,7 +12,6 @@ ms.topic: troubleshooting
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
-ms.author: meerak
 appliesto: 
   - Excel 2016
   - Excel 2013
@@ -174,10 +175,6 @@ If these steps do not resolve the problem, go to Method 7.
 ### Method 7: Verify or install the latest updates
  
 You may have to set Windows Update to automatically download and install recommended updates. Installing any important, recommended, and optional updates can frequently correct problems by replacing out-of-date files and fixing vulnerabilities.
-
-For more information about Office updates, click the following article number to go to the article in the Microsoft Knowledge Base:
-   
-[Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29)  
 
 [Microsoft Support](https://support.microsoft.com/contactus/?ws=support) 
 

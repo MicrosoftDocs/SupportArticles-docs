@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure file share backup
 description: This article is troubleshooting information about issues occurring when protecting your Azure file shares.
-ms.date: 06/26/2023
+ms.date: 04/01/2026
 ms.reviewer: jsuri
 ms.service: azure-file-storage
 ms.custom: sap:Backup and Restore
@@ -185,6 +185,16 @@ Error Message: Recovery failed as no file could be recovered.
 
   - files that failed are currently in use
   - a directory with the same name as the failed file exists in the parent directory.
+ 
+### CloudStorageAccountAuthenticationFailed - Azure File Share Backup requires a minimum SAS expiry interval of 8 hours
+
+Error Code: CloudStorageAccountAuthenticationFailed
+
+Error Message: Invalid credentials specified for accessing backup data store.
+
+- If the SAS token expiry is shorter than 8 hours, the Backup service cannot renew the token in time. This leads to authentication failures and can interrupt ongoing backup or restore operations.
+  
+- Set the SAS expiry upper limit to 8 hours or more to ensure the Backup service can successfully renew the SAS token and maintain uninterrupted backup and restore activities.
 
 ### UserErrorDTSSourceUriNotValid - Restore fails because one of the files in the source does not exist
 
