@@ -84,7 +84,7 @@ You might encounter the error when using a Microsoft Entra account for several r
 
 ### AADSTS50126 error
 
-The preferred and most secure method to resolve this error is to configure [Certificate-Based Authentication (CBA)](/power-automate/desktop-flows/configure-certificate-based-auth).
+To resolve an AADSTS50126 error, the preferred and most secure method is to configure [Certificate-Based Authentication (CBA)](/power-automate/desktop-flows/configure-certificate-based-auth).
 
 If you can't configure CBA, federated users can use an alternative approach when administrators of the on-premises Identity Provider (IdP) configure Password Hash Sync (PHS) to synchronize password hashes to the cloud. In this scenario, federated users can authenticate directly against Microsoft Entra ID (ESTS) by configuring a Home Realm Discovery (HRD) policy that explicitly allows cloud password validation.
 
