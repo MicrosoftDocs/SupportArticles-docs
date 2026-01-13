@@ -52,11 +52,11 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 
 ## Solution 2: Dynamically scale using Node Auto Provisioning
 
-[Node Auto Provisioning](https://learn.microsoft.com/azure/aks/node-auto-provisioning) allows you to automatically provision VM SKUs based on your workload needs. If a SKU is not available due to capacity constraints, Node Auto Provisioning will select another SKU type based on the specifications provided in the customer resource definitions (CRDs) such as the NodePool and AKSNodeClass. This can be helpful for scaling scenarios when certain sku capacity becomes limited. For best practice on configuring your NAP cluster, see documentation on Node Auto Provisioning [NodePools](https://learn.microsoft.com/azure/aks/node-auto-provisioning-node-pools) and [AKSNodeClass](https://learn.microsoft.com/en-us/azure/aks/node-auto-provisioning-aksnodeclass).
+[Node Auto Provisioning](https://learn.microsoft.com/azure/aks/node-auto-provisioning) allows you to automatically provision VM SKUs based on your workload needs. If a SKU is not available due to capacity constraints, Node Auto Provisioning will select another SKU type based on the specifications provided in the customer resource definitions (CRDs) such as the NodePool and AKSNodeClass. This can be helpful for scaling scenarios when certain sku capacity becomes limited. For best practice on configuring your NAP cluster, see documentation on Node Auto Provisioning [NodePools](https://learn.microsoft.com/azure/aks/node-auto-provisioning-node-pools) and [AKSNodeClass](https://learn.microsoft.com/azure/aks/node-auto-provisioning-aksnodeclass).
 
 ## Solution 3: Upgrade in place using MaxUnavailable
 
-If you don’t need surge node(s) during upgrades, leverage [MaxUnavailable](https://learn.microsoft.com/en-us/azure/aks/upgrade-options#optimize-upgrades-to-improve-performance-and-minimize-disruptions) to upgrade with the existing capacity. Set MaxUnavailable to a value greater than 0 and set MaxSurge equal to 0. Existing nodes will be cordoned and drained one at a time and pods will be evicted to remaining nodes. No buffer node will be created.
+If you don’t need surge node(s) during upgrades, leverage [MaxUnavailable](https://learn.microsoft.com/azure/aks/upgrade-options#optimize-upgrades-to-improve-performance-and-minimize-disruptions) to upgrade with the existing capacity. Set MaxUnavailable to a value greater than 0 and set MaxSurge equal to 0. Existing nodes will be cordoned and drained one at a time and pods will be evicted to remaining nodes. No buffer node will be created.
 
 ## Solution 4: Use Deployment Recommender in portal for new cluster creates
 
