@@ -65,37 +65,10 @@ Review the output for errors or corruption. If these commands make repairs, try 
 > [!IMPORTANT]  
 > Cleaning up transaction incorrectly logs can cause more issues to occur. Follow these steps carefully. This section contains two procedures. In most cases, you should use Option A. Use Option B only if the affected computer is a VM that can't start.
 
-**Option A: Rename the TxR and Windows Update folders (safer method)**
+Follow these steps:
 
-1. To stop the Windows Update service (WUauServ) and the Background Intelligent Transfer Service (BITS), run the following commands:
-
-   ```console
-   net stop wuauserv
-   net stop bits
-   ```
-
-1. To rename the TxR and Windows Update folders, run the following commands:
-
-   ```console
-   ren C:\Windows\System32\Config\TxR TxR_old
-   ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
-   ren C:\Windows\System32\catroot2 catroot2.old
-   ren C:\Windows\winsxs\pending.xml pending.old
-   ```
-
-1. To restart the services, run the following commands:
-
-   ```console
-   net start wuauserv
-   net start bits
-   ```
-
-1. Restart the computer, and then try again to install the update.
-
-**Option B: Use a rescue VM to remove files (use only on a VM that doesn't start)**
-
-1. Create a rescue VM, and then move the operating system disk from the affected VM to the rescue VM.
-1. On the rescue VM, open an administrative command prompt window, and then change the working directory to \<drive>:\Windows\System32\Config\TxR.
+1. If the affected computer is a VM that can't start, create a rescue VM. Then move the operating system disk from the affected VM to the rescue VM.
+1. On the rescue VM or the affected physical computer, open an administrative command prompt window, and then change the working directory to \<drive>:\Windows\System32\Config\TxR.
 1. To remove the system and hidden attributes from the transaction log files, run the following command:
 
    ```console
@@ -109,9 +82,9 @@ Review the output for errors or corruption. If these commands make repairs, try 
    del *.regtrans-ms
    ```
 
-1. Move the operating system disk back to the original VM.
+1. If you're using a rescue VM, move the operating system disk back to the original VM.
 
-1. Start the VM, and then try again to install the update.
+1. Start the VM (or restart the physical computer), and then try again to install the update.
 
 ### Step 3: Check for ghosted network adapters or drivers
 
