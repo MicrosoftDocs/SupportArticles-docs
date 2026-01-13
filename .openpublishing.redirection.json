@@ -1,5 +1,5 @@
 {
-  "redirections": [
+  "redirections": [ 
     {
       "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
