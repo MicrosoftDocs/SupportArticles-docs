@@ -55,7 +55,6 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
-        "edge/**.*": "MSDocsHeader-MSEdge",
         "entra/**.*": "MSDocsHeader-Entra",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
@@ -73,6 +72,7 @@
         "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
         "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
         "mem/**.*": "MSDocsHeader-Intune",
+        "microsoft-edge/**.*": "MSDocsHeader-MSEdge",
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
@@ -230,7 +230,6 @@
         "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "devices/**.*": "surface",
-        "edge/**.*": "microsoft-edge",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
         "power-platform/ai-builder/**/**.*": "ai-builder",
@@ -251,6 +250,7 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
+        "microsoft-edge/**.*": "microsoft-edge",
         "system-center/**/*.md": "system-center",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality",
@@ -267,7 +267,6 @@
         "developer/webapps/aspnet/**/*.md": "ASP.NET",
         "developer/webapps/aspnetcore/**/*.md": "ASP.NET Core",
         "developer/webapps/iis/**/*.md": "Internet Information Services",
-        "edge/**.*": "Microsoft Edge",
         "sql/**/*.md": "SQL Server",
         "developer/visualstudio/**/*.md": "Visual Studio",
         "developer/visualstudio/silverlight/**/*.md": "Silverlight",
@@ -281,6 +280,7 @@
         "windows-365/**/*.md": "Windows 365",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
+        "microsoft-edge/**.*": "Microsoft Edge",
         "system-center/dpm/**/*.md": "Data Protection Manager",
         "system-center/scom/**/*.md": "Operations Manager",
         "system-center/orchestrator/**/*.md": "Orchestrator",
@@ -346,7 +346,7 @@
           "ASP.NET",
           "ASP.NET Core"
         ],
-        "edge/**.*": [
+        "microsoft-edge/**.*": [
           "Microsoft Edge", 
           "Microsoft Edge Developer"
         ],
