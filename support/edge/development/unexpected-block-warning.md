@@ -35,11 +35,9 @@ If a site fails the checks of these dimensions, SmartScreen reports the site as 
 
 ### You're the website owner
 
-1. Select **Report that this site doesn't contain (malware/phishing) threats** under the **More information** header on the block page, or select **Report as safe or unsafe** in the **Suspicious site** dropdown on a warning page.
+1. Select **Report that this site doesn't contain (malware/phishing) threats** under the **More information** header on the block page.
 
    :::image type="content" source="./media/unexpected-block-warning/report-site-safe-blocked.png" alt-text="Screenshot of a SmartScreen block page with the link to 'Report that this site doesn't contain malware threats' highlighted.":::
-
-   :::image type="content" source="./media/unexpected-block-warning/report-site-safe-warn.png" alt-text="Screenshot of a SmartScreen warning feedback page for reporting a site as safe.":::
 
 1. Wait for a confirmation email from the SmartScreen Reputation Group:
 
