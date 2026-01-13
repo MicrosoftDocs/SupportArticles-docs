@@ -1,6 +1,56 @@
 {
   "redirections": [
     {
+      "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/communication-continues-after-subscription-removal.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/support-policies-for-azure-virtual-machines.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/install-endpoint-protection-for-linux.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/incorrect-endpoint-definition-status.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/duplicate-rows-in-distributioncontentversion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/unhandled-exception-launch-console.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/internal-error-2711-lp3076-during-console-installation.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/console-crash-after-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
