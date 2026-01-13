@@ -1,7 +1,7 @@
 ---
 title: Desktop flow invalid credentials error when using a Microsoft Entra account
 description: Resolves the InvalidConnectionCredentials or WindowsIdentityIncorrect error that occurs when you run a desktop flow using a Microsoft Entra account.
-ms.reviewer: guco，aartigoyle
+ms.reviewer: guco，aartigoyle, v-shaywood
 ms.date: 08/20/2024
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
@@ -34,18 +34,20 @@ When you run a desktop flow using a Microsoft Entra account, it fails with the `
 }
 ```
 
-In these error codes, you might also experience an error message containing the phrase `AADSTS50126: Error validating credentials due to invalid username or password`.
+You might also receive the following error message:
+
+> AADSTS50126: Error validating credentials due to invalid username or password
 
 ## Cause
 
 You might encounter the error when using a Microsoft Entra account for several reasons:
 
-- The account credentials entered into the connection might not match those on the machine.
-- The device might not be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) to support [Microsoft Entra authentication](/entra/identity/authentication/overview-authentication).
-- The Microsoft Entra account might not be synchronized to the machine.
-- The user account being attempted to connect is a federated user (ADFS) while the tenant is configured to run on Microsoft Entra ID.
+- You enter account credentials into the connection that don't match the credentials on the machine.
+- The device isn't [Microsoft Entra joined](/entra/identity/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/entra/identity/devices/concept-hybrid-join) to support [Microsoft Entra authentication](/entra/identity/authentication/overview-authentication).
+- The Microsoft Entra account isn't synchronized to the machine.
+- The user account attempting to connect is a [federated user (ADFS)](/windows-server/identity/ad-fs/ad-fs-overview) while the tenant is configured to run on Microsoft Entra ID.
 
-## Resolution
+## Solution
 
 1. Ensure that the device is Microsoft Entra joined or domain-joined:
 
@@ -57,38 +59,40 @@ You might encounter the error when using a Microsoft Entra account for several r
 
        Make sure that one of the `DomainJoined` or `AzureAdJoined` values is `YES`.
 
-       If this isn't the case, a Microsoft Entra account can't be used unless the device is joined. For more information, see [How to join a device](/azure/active-directory/user-help/user-help-join-device-on-network#to-join-an-already-configured-windows-10-device).
+       If this condition isn't true, you can't use a Microsoft Entra account unless the device is joined. For more information, see [How to join a device](/azure/active-directory/user-help/user-help-join-device-on-network#to-join-an-already-configured-windows-10-device).
 
-2. Identify the Microsoft Entra account to use in the machine configuration:
+1. Identify the Microsoft Entra account to use in the machine configuration:
 
     1. Open **Settings** and select **Accounts**.
 
-    2. Select **Access work or school**.
+    1. Select **Access work or school**.
 
-    3. Make sure you see text like "Connected to <your_organization> Microsoft Entra ID." The account it's connected to can be used in the connection.
+    1. Make sure you see text like "Connected to <your_organization> Microsoft Entra ID." The account it's connected to can be used in the connection.
 
-3. Synchronize the Microsoft Entra account on the device:
+1. Synchronize the Microsoft Entra account on the device:
 
     1. Select the **Info** button when selecting your Microsoft Entra connection on the **Access work or school** page.
 
-    2. This will open a page that describes your connection information and device synchronization status. Select the **Sync** button at the end of the page, and wait for this process to complete.
+    1. This action opens a page that describes your connection information and device synchronization status. Select the **Sync** button at the end of the page, and wait for this process to complete.
 
-4. Verify that the configured Microsoft Entra account can sign in to the device:
+1. Verify that the configured Microsoft Entra account can sign in to the device:
 
-    1. Try to sign in to the machine using the Microsoft Entra account identified in step 2.
-    2. The device login must be successful in order to be used in a connection.
+    1. Try to sign in to the machine by using the Microsoft Entra account you identified in step 2.
+    1. The device authentication must be successful to use the account in a connection.
 
-5. Make sure the flow is configured properly with the right username and password. This must match the account on your computer.
+1. Make sure the flow is configured properly with the right username and password. This information must match the account on your computer.
 
-### Specifically for AADSTS50126 case
+### AADSTS50126 error
 
-The preferred and most secure method is to configure [Certificate-Based Authentication](/power-automate/desktop-flows/configure-certificate-based-auth).
+The preferred and most secure method to resolve this error is to configure [Certificate-Based Authentication (CBA)](/power-automate/desktop-flows/configure-certificate-based-auth).
 
-Alternatively, in cases where CBA cannot be configured, the alternative is for configurations where administrators of the on-premises IdP have configured Password Hash Sync (PHS) and password hashes are synchronized to the Cloud, federated users can use their password directly against Microsoft Entra ID (ESTS). In order to do that, a Home Realm Discovery (HRD) policy should be configured to explicitly allow this.
+If you can't configure CBA, federated users can use an alternative approach when administrators of the on-premises Identity Provider (IdP) configure Password Hash Sync (PHS) to synchronize password hashes to the cloud. In this scenario, federated users can authenticate directly against Microsoft Entra ID (ESTS) by configuring a Home Realm Discovery (HRD) policy that explicitly allows cloud password validation.
 
-For more information on this case, please follow this article: [Enable direct ROPC authentication of federated users for legacy applications](/entra/identity/enterprise-apps/home-realm-discovery-policy#enable-direct-ropc-authentication-of-federated-users-for-legacy-applications)
+To enable this configuration, set the following HRD policy value:
 
-The setting that needs to be used is `"AllowCloudPasswordValidation" : true`
+`"AllowCloudPasswordValidation": true`
+
+For detailed instructions, see [Enable direct ROPC authentication of federated users for legacy applications](/entra/identity/enterprise-apps/home-realm-discovery-policy#enable-direct-ropc-authentication-of-federated-users-for-legacy-applications).
 
 ## More information
 
