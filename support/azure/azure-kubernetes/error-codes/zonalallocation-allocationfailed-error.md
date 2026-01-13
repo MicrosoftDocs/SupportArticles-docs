@@ -56,7 +56,7 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 
 ## Solution 3: Upgrade in place using MaxUnavailable
 
-If you don’t need surge node(s) during upgrades, leverage [MaxUnavailable](https://learn.microsoft.com/azure/aks/upgrade-options#optimize-upgrades-to-improve-performance-and-minimize-disruptions) to upgrade with the existing capacity. Set MaxUnavailable to a value greater than 0 and set MaxSurge equal to 0. Existing nodes will be cordoned and drained one at a time and pods will be evicted to remaining nodes. No buffer node will be created.
+If you don’t need surge node(s) during upgrades, leverage [MaxUnavailable](https://learn.microsoft.com/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) to upgrade with the existing capacity. Set MaxUnavailable to a value greater than 0 and set MaxSurge equal to 0. Existing nodes will be cordoned and drained one at a time and pods will be evicted to remaining nodes. No buffer node will be created.
 
 ## Solution 4: Use Deployment Recommender in portal for new cluster creates
 
