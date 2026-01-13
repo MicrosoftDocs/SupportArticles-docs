@@ -4849,11 +4849,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
-      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/mem/configmgr/communication-continues-after-subscription-removal.md",
       "redirect_url": "/troubleshoot/mem/configmgr/mdm/communication-continues-after-subscription-removal",
       "redirect_document_id": true
