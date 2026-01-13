@@ -72,14 +72,9 @@ items:
   items:
     - name: Console appears to hang when loading drivers
       href: console-management/console-stops-responding.md
-    - name: Console crashes after upgrading to version 2107
-      href: console-management/console-crash-after-upgrade.md
+
     - name: Issues after installing June 2022 Windows security updates
       href: console-management/dcom-hardening-change-effect.md
-    - name: Internal Error 2711.LP3076
-      href: console-management/internal-error-2711-lp3076-during-console-installation.md
-    - name: Microsoft.ConfigurationManagement has stopped working
-      href: console-management/unhandled-exception-launch-console.md
     - name: No data in the Windows 10 servicing dashboard
       href: console-management/windows-10-servicing-dashboard-empty.md
 - name: Content management
@@ -104,8 +99,6 @@ items:
           href: content-management/use-neighbor-boundary-group-dp.md
         - name: DP installations or upgrades take a long time
           href: content-management/slow-dp-installation-upgrade.md
-        - name: Duplicate rows in DistributionContentVersion table
-          href: content-management/duplicate-rows-in-distributioncontentversion.md
         - name: Hash mismatch error downloading Contentinfo.tar
           href: content-management/hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
@@ -148,32 +141,18 @@ items:
       href: discovery/resource-domain-changes.md
 - name: Endpoint Protection
   items:
-    - name: An incorrect Endpoint Definition status
-      href: endpoint-protection/incorrect-endpoint-definition-status.md
     - name: Clients can't update antimalware definition files
       href: endpoint-protection/antimalware-definition-files-not-updated.md
-    - name: Download and install Endpoint Protection for Linux
-      href: endpoint-protection/install-endpoint-protection-for-linux.md
     - name: Microsoft Network Inspection service is stopped
       href: endpoint-protection/microsoft-network-inspection-service-stopped.md
     - name: Out-of-date definition version and last update time
       href: endpoint-protection/configmgr-console-shows-out-of-date-values.md
     - name: Recommended antivirus exclusions
       href: endpoint-protection/recommended-antivirus-exclusions.md
-    - name: Support policies for Azure Virtual Machines
-      href: endpoint-protection/support-policies-for-azure-virtual-machines.md
 - name: Microsoft Deployment Toolkit (MDT)
   items:
     - name: Troubleshooting reference for MDT
       href: mdt/troubleshooting-reference.md
-- name: Mobile device management
-  items:
-    - name: Call to HttpSendRequestSync failed for port 443
-      href: mdm/mobile-device-management-installation-errors.md
-    - name: Communication with Intune service doesn't stop
-      href: mdm/communication-continues-after-subscription-removal.md
-    - name: Initialize CA Error
-      href: mdm/initialize-ca-error-edit-device-enrollment-profile.md
 - name: OS deployment
   items:
     - name: Build and capture reference image
