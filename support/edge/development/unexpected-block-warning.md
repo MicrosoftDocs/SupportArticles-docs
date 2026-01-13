@@ -1,7 +1,7 @@
 ---
 title: Unexpected block or warning on customer website in Microsoft Edge
 description: Troubleshoot unexpected Microsoft Defender SmartScreen blocks or warnings on websites and learn how to report false positives.
-ms.custom: "sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads"
+ms.custom: sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads
 ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 07/01/2025
 ---

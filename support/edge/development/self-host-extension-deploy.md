@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot Self-Hosted Extension Deployment Group Policy Issues
 description: Learn how to resolve deployment issues for self-hosted extensions in Microsoft Edge when using group policies like ExtensionInstallForcelist or ExtensionSettings.
-ms.custom: "sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads"
+ms.custom: sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads
 ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 01/12/2026
 ---
+
 # Failure to deploy self-hosted extension via group policy
 
 When you attempt to deploy a self-hosted extension through group policy, you might encounter an issue where the extension doesn't appear for the target user. This article provides guidance for identifying and resolving the cause of this problem, enabling you to successfully deploy your extension.

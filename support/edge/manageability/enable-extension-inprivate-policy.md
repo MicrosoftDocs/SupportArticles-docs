@@ -1,7 +1,7 @@
 ---
 title: Learn About Group Policy Limits for InPrivate Extensions
 description: Find out why Group Policy doesn't allow enabling extensions for InPrivate browsing in Microsoft Edge and learn the manual workaround.
-ms.custom: "sap:Manageability and Deployment\Group Policy: ADM template and MDM"
+ms.custom: sap:Manageability and Deployment\Group Policy: ADM template and MDM
 ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 01/08/2026
 ---
