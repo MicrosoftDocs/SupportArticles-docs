@@ -13,14 +13,14 @@ appliesto:
 # KB5074901 - Cumulative Update 1 for SQL Server 2025
 
 _Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 17.0.4005.? TODO
+_Version:_ &nbsp; 17.0.4005.7  
 
 ## Summary
 
 This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2025. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
-- SQL Server - Product version: **17.0.4005.?** TODO, file version: **?** TODO
-- Analysis Services - Product version: **?** TODO, file version: **?** TODO
+- SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
+- Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 ## Known issues in this update
 
@@ -101,20 +101,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _?_ TODO file through the following command:
+You can verify the download by computing the hash of the _SQLServer2025-KB5074901-x64.exe_ file through the following command:
 
-`certutil -hashfile ? SHA256` TODO
+`certutil -hashfile SQLServer2025-KB5074901-x64.exe SHA256`
 
-| File name | SHA256 hash |
-| --------- | ----------- |
-| TODO      | TODO        |
+| File name                       | SHA256 hash                                                      |
+| ------------------------------- | ---------------------------------------------------------------- |
+| SQLServer2025-KB5074901-x64.exe | A25604D3733CFD0DAD9C7BDA5AFCC81755372FC4CA081ACF0D1076C4881D54D3 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5074901](https://download.microsoft.com/download/TODO/KB5074901.csv).
+Download [the list of files that are included in KB5074901](https://download.microsoft.com/download/85e8b2cf-3981-4c62-b711-a812b4057503/KB5074901.csv).
 
 </details>
 
