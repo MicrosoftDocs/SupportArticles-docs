@@ -13,14 +13,14 @@ appliesto:
 # KB5074819 - Cumulative Update 23 for SQL Server 2022
 
 _Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 16.0.4235.? TODO
+_Version:_ &nbsp; 16.0.4235.2
 
 ## Summary
 
 This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2022. This update contains 15 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 22. It updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4235.?** TODO, file version: **?** TODO
-- Analysis Services - Product version: **?** TODO, file version: **?** TODO
+- SQL Server - Product version: **16.0.4235.2**, file version: **2022.160.4235.2**
+- Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
 ## Known issues in this update
 
@@ -37,23 +37,23 @@ A downloadable Microsoft Excel workbook that contains a summary list of builds, 
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following table.
 
-| Bug reference                         | Description                                                                                                                                                                                                     | Fix Area                         | Component                               | Platform |
-| :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- | :-------------------------------------- | :------- |
-| <a id=4676249>[4676249](#4676249)</a> | Fixes an issue in which backup log operations fail and return an error that indicates that `BACKUP LOG` is not allowed while the recovery model is `SIMPLE`.                                                                 | SQL Server Engine                | Backup Restore                          | Windows  |
-| <a id=4710575>[4710575](#4710575)</a> | Fixes an AV assertion issue in `DbMgrPartner` that's related to new log readiness notifications.                                                                                                                       | SQL Server Engine                | High Availability and Disaster Recovery | All      |
-| <a id=4769216>[4769216](#4769216)</a> | Fixes an issue in which non-yielding scheduler dump files are generated when SSL connections are closed under high CPU load.                                                                                       | Conectivity                      | Protocols                               | All      |
-| <a id=4783675>[4783675](#4783675)</a> | Fixes an issue in which upgrading from SQL Server 2019 to SQL Server 2022 might cause the upgrade process to stop responding during the model database upgrade phase.                                                           | SQL Server Engine                | Programmability                         | All      |
-| <a id=4783748>[4783748](#4783748)</a> | Changes the behavior of the program to return error 19544 instead of returning an assert when you create an availability group that has a name that's longer than 64 characters by using `cluster_type = NONE` or `EXTERNAL`.                            | SQL Server Engine                | High Availability and Disaster Recovery | All      |
-| <a id=4796333>[4796333](#4796333)</a> | Fixes an issue that causes crashes when an invalid ID type is returned from the Domain Controller in LookupAccountSid.                                                                                             | SQL Server Engine                | Linux                                   | Linux    |
-| <a id=4796376>[4796376](#4796376)</a> | Fixes an issue that prevents Active Directory logins from working if the keytab file is updated too long after the privileged user password is rotated.                                                       | SQL Server Engine                | Linux                                   | Linux    |
-| <a id=4798276>[4798276](#4798276)</a> | Fixes an issue in which Distributed Availability Group seeding fails if the local Availability Group is offline.                                                                                                 | SQL Server Engine                | High Availability and Disaster Recovery | Windows  |
-| <a id=4807292>[4807292](#4807292)</a> | Fixes a failure to configure multiple concurrent auditing to write to the Security Event log during updates.                                                                                              | SQL Server Engine                | Security Infrastructure                 | All      |
-| <a id=4811256>[4811256](#4811256)</a> | Fixes a crash that's caused by a missing partition in a common table expression (CTE).                                                                                                                                 | SQL Server Engine                | Programmability                         | All      |
-| <a id=4818763>[4818763](#4818763)</a> | Fixes a bug that causes memory allocation failure during VDI restore operations if memory is limited through `cgroupsv2` on Linux.                                                                                | SQL Server Engine                | Linux                                   | Linux    |
-| <a id=4837925>[4837925](#4837925)</a> | Fixes an issue in which SSCM fails when it imports certain certificates, including self-signed certificates that are password protected and certificates exported from Azure AKV that are not password protected. | SQL Server Configuration Manager | Certificate Import                      | Windows  |
-| <a id=4838959>[4838959](#4838959)</a> | Restricts privileges for dbcc stackdump so that only the sysadmin can invoke the dump file.                                                                                                                             | SQL Server Engine                | Security Infrastructure                 | All      |
-| <a id=4849635>[4849635](#4849635)</a> | Fixes an issue in which AppDomains in a DOOMED state are not unloaded correctly.                                                                                                                              | SQL Server Engine                | Query Execution                         | All      |
-| <a id=4866387>[4866387](#4866387)</a> | Allows using the `sys.fn_xe_file_target_read_file()` function to read `system_health` event session data in Azure SQL Managed Instance.                                                                    | SQL Server Engine                | SQL OS                                  | Windows  |
+| Bug reference                         | Description                                                                                                                                                                                                                   | Fix Area                         | Component                               | Platform |
+| :------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- | :-------------------------------------- | :------- |
+| <a id=4676249>[4676249](#4676249)</a> | Fixes an issue in which backup log operations fail and return an error that indicates that `BACKUP LOG` is not allowed while the recovery model is `SIMPLE`.                                                                  | SQL Server Engine                | Backup Restore                          | Windows  |
+| <a id=4710575>[4710575](#4710575)</a> | Fixes an AV assertion issue in `DbMgrPartner` that's related to new log readiness notifications.                                                                                                                              | SQL Server Engine                | High Availability and Disaster Recovery | All      |
+| <a id=4769216>[4769216](#4769216)</a> | Fixes an issue in which non-yielding scheduler dump files are generated when SSL connections are closed under high CPU load.                                                                                                  | Conectivity                      | Protocols                               | All      |
+| <a id=4783675>[4783675](#4783675)</a> | Fixes an issue in which upgrading from SQL Server 2019 to SQL Server 2022 might cause the upgrade process to stop responding during the model database upgrade phase.                                                         | SQL Server Engine                | Programmability                         | All      |
+| <a id=4783748>[4783748](#4783748)</a> | Changes the behavior of the program to return error 19544 instead of returning an assert when you create an availability group that has a name that's longer than 64 characters by using `cluster_type = NONE` or `EXTERNAL`. | SQL Server Engine                | High Availability and Disaster Recovery | All      |
+| <a id=4796333>[4796333](#4796333)</a> | Fixes an issue that causes crashes when an invalid ID type is returned from the Domain Controller in LookupAccountSid.                                                                                                        | SQL Server Engine                | Linux                                   | Linux    |
+| <a id=4796376>[4796376](#4796376)</a> | Fixes an issue that prevents Active Directory logins from working if the keytab file is updated too long after the privileged user password is rotated.                                                                       | SQL Server Engine                | Linux                                   | Linux    |
+| <a id=4798276>[4798276](#4798276)</a> | Fixes an issue in which Distributed Availability Group seeding fails if the local Availability Group is offline.                                                                                                              | SQL Server Engine                | High Availability and Disaster Recovery | Windows  |
+| <a id=4807292>[4807292](#4807292)</a> | Fixes a failure to configure multiple concurrent auditing to write to the Security Event log during updates.                                                                                                                  | SQL Server Engine                | Security Infrastructure                 | All      |
+| <a id=4811256>[4811256](#4811256)</a> | Fixes a crash that's caused by a missing partition in a common table expression (CTE).                                                                                                                                        | SQL Server Engine                | Programmability                         | All      |
+| <a id=4818763>[4818763](#4818763)</a> | Fixes a bug that causes memory allocation failure during VDI restore operations if memory is limited through `cgroupsv2` on Linux.                                                                                            | SQL Server Engine                | Linux                                   | Linux    |
+| <a id=4837925>[4837925](#4837925)</a> | Fixes an issue in which SSCM fails when it imports certain certificates, including self-signed certificates that are password protected and certificates exported from Azure AKV that are not password protected.             | SQL Server Configuration Manager | Certificate Import                      | Windows  |
+| <a id=4838959>[4838959](#4838959)</a> | Restricts privileges for dbcc stackdump so that only the sysadmin can invoke the dump file.                                                                                                                                   | SQL Server Engine                | Security Infrastructure                 | All      |
+| <a id=4849635>[4849635](#4849635)</a> | Fixes an issue in which AppDomains in a DOOMED state are not unloaded correctly.                                                                                                                                              | SQL Server Engine                | Query Execution                         | All      |
+| <a id=4866387>[4866387](#4866387)</a> | Allows using the `sys.fn_xe_file_target_read_file()` function to read `system_health` event session data in Azure SQL Managed Instance.                                                                                       | SQL Server Engine                | SQL OS                                  | Windows  |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -100,20 +100,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _?_ TODO file through the following command:
+You can verify the download by computing the hash of the _SQLServer2022-KB5074819-x64.exe_ file through the following command:
 
-`certutil -hashfile ? SHA256` TODO
+`certutil -hashfile SQLServer2022-KB5074819-x64.exe SHA256`
 
-| File name | SHA256 hash |
-| --------- | ----------- |
-| TODO      | TODO        |
+| File name                       | SHA256 hash                                                      |
+| ------------------------------- | ---------------------------------------------------------------- |
+| SQLServer2022-KB5074819-x64.exe | 6DD251B27E916C80231B0278A799CA8AF7479461038A53254F7C906408425591 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5074819](https://download.microsoft.com/download/TODO/KB5074819.csv).
+Download [the list of files that are included in KB5074819](https://download.microsoft.com/download/6c92fcb2-4e38-40c8-8fac-179e0b8914e6/KB5074819.csv).
 
 </details>
 
