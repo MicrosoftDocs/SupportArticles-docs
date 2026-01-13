@@ -17,6 +17,8 @@ appliesto:
 ---
 # Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
 
+## Summary
+
 This article discusses how to fix Windows Update failures that are related to error code `0x800719e4 (ERROR_LOG_FULL)`. Typically, this error occurs on Azure-hosted Windows virtual machines (VMs).
 
 ## Symptoms
