@@ -7,7 +7,7 @@ ms.date: 01/07/2026
 ---
 # Install, update, or rollback failures for Edge and Edge WebView2
 
-When you install, update, or rollback Microsoft Edge or Microsoft Edge WebView2, you might encounter an issue that prevents the operation from completing. This article helps you collect the diagnostic information the [Microsoft Support Team](TODO) needs to analyze and help resolve the problem.
+When you install, update, or rollback Microsoft Edge or Microsoft Edge WebView2, you might encounter an problem that prevents the operation from completing. This article helps you collect the diagnostic information the [Microsoft Support Team](TODO) needs to analyze and help resolve the problem.
 
 The following components are involved in Edge installation and update scenarios:
 
@@ -56,7 +56,7 @@ You might also see one of the following error codes:
 
 ## Cause
 
-Most Edge and WebView2 installation, update, and rollback failures are caused by one of the following issues:
+Most Edge and WebView2 installation, update, and rollback failures happen because of one of the following problems:
 
 - Permission restrictions
 - Network or TLS issues
@@ -65,17 +65,17 @@ Most Edge and WebView2 installation, update, and rollback failures are caused by
 - Residual installation artifacts
 
 > [!NOTE]
-> In enterprise environments, [Group Policy Object (GPO)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview), [Mobile Device Management (MDM)](/windows/client-management/mdm-overview), and security policies are often causes of install, update, or rollback failures.
+> In enterprise environments, [Group Policy Object (GPO)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview), [Mobile Device Management (MDM)](/windows/client-management/mdm-overview), and security policies often cause install, update, or rollback failures.
 
 ## Solution
 
 ### Common troubleshooting checks
 
-Before contacting Microsoft support, you should complete the following common troubleshooting checks. These steps resolve the majority of Microsoft Edge and Edge WebView2 update, installation, or rollback issues.
+Before contacting Microsoft support, complete the following common troubleshooting checks. These steps resolve most Microsoft Edge and Edge WebView2 update, installation, or rollback problems.
 
 #### Restart the device
 
-A system restart clears temporary system states that may block Edge or Edge WebView2 updates.
+A system restart clears temporary system states that might block Edge or Edge WebView2 updates.
 
 Restarting the device helps to:
 
@@ -83,11 +83,11 @@ Restarting the device helps to:
 - Release locked files used by Edge or Edge WebView2 processes
 - Reset Windows Installer and related update services
 
-After restarting, ensure no Edge or Edge WebView2-based applications are running before retrying the install, update, or rollback operation.
+After restarting, make sure no Edge or Edge WebView2-based applications are running before retrying the install, update, or rollback operation.
 
 #### Verify available disk space
 
-Insufficient disk space may cause Edge or Edge WebView2 install, update, or rollback failures. During installation, setup packages need temporary space to extract files and complete the process.
+Insufficient disk space might cause Edge or Edge WebView2 install, update, or rollback failures. During installation, setup packages need temporary space to extract files and complete the process.
 
 _Recommended_: At least 1-2 GB of free disk space on the system drive (usually `C:`).
 
@@ -95,7 +95,7 @@ _Recommended_: At least 1-2 GB of free disk space on the system drive (usually `
 1. Check the available space on the system drive.
 1. Free up disk space if needed (for example, remove temporary files or unused applications).
 
-#### 3. Run installation as an administrator
+#### Run installation as an administrator
 
 Edge and Edge WebView2 install, update, and rollback operations require administrative privileges to:
 
@@ -110,13 +110,13 @@ To run the install, update, or rollback as an administrator:
 1. Approve the [User Account Control (UAC)](/windows/security/application-security/application-control/user-account-control/) prompt.
 
 > [!NOTE]
-> On managed or enterprise devices, ensure the account used has local administrator permissions.
+> On managed or enterprise devices, make sure the account you use has local administrator permissions.
 
 #### Close Edge and Edge WebView2-based applications
 
-Running Edge or Edge WebView2-based applications may lock files required during install, update, or rollback operations.
+Running Edge or Edge WebView2-based applications might lock files required during install, update, or rollback operations.
 
-Common WebView2-based applications include (but are not limited to):
+Common WebView2-based applications include (but aren't limited to):
 
 - Microsoft Edge
 - [Microsoft Teams](/microsoftteams/teams-overview)
@@ -137,9 +137,9 @@ Follow these steps:
 #### Temporarily disable third-party security software (if applicable)
 
 > [!IMPORTANT]
-> Follow your organization's security policies. If disabling security software is not allowed, contact your IT administrator for assistance.
+> Follow your organization's security policies. If disabling security software isn't allowed, contact your IT administrator for assistance.
 
-Some third-party antivirus, endpoint protection, or application control solutions may block:
+Some third-party antivirus, endpoint protection, or application control solutions block:
 
 - Installer execution (for example, `msedgeupdate.exe`, `msiexec.exe`)
 - File replacement during update or rollback
@@ -147,13 +147,13 @@ Some third-party antivirus, endpoint protection, or application control solution
 
 Follow these steps:
 
-1. Temporarily disable third-party security software, if permitted by organizational policy.
+1. Temporarily disable third-party security software, if your organizational policy permits.
 1. Retry the installation or update.
 1. Re-enable security software immediately after completion.
 
 ### Contact support
 
-If the steps in [Common troubleshooting checks](#common-troubleshooting-checks) do not resolve your problem, collect and package the following diagnostic logs. Then, submit them to the Microsoft Support Team for analysis:
+If the steps in [Common troubleshooting checks](#common-troubleshooting-checks) don't resolve your problem, collect and package the following diagnostic logs. Then, submit them to the Microsoft Support Team for analysis:
 
 - Edge installation and update logs
 - Edge policy JSON export
@@ -216,15 +216,15 @@ Follow these steps to collect a Process Monitor log:
    :::image type="content" source="./media/update-install-rollback-failures/procmon-activity-types.png" alt-text="Screenshot of Process Monitor with the File System, Registry, Process/Thread, and Network activity types selected.":::
 
 1. Select the **Capture** icon again to start monitoring.
-1. Retry the install, update, or rollback process to reproduce the issue.
-1. Once the issue occurs, select the **Capture** icon again to stop monitoring.
+1. Retry the install, update, or rollback process to reproduce the problem.
+1. When the problem occurs, select the **Capture** icon again to stop monitoring.
 1. Save the log file:
    1. Go to **File** > **Save**.
    1. In the dialog, select:
 
       - **Events to save**: _All events_
       - **Format**: _Native Process Monitor Format (PML)_
-      - **Path**: Choose the desired folder to save the log file
+      - **Path**: Choose the folder where you want to save the log file
 
 #### Submit the diagnostic package
 
