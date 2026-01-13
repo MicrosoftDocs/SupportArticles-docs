@@ -13,7 +13,7 @@ appliesto:
 # KB5074819 - Cumulative Update 23 for SQL Server 2022
 
 _Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 16.0.4235.2
+_Version:_ &nbsp; 16.0.4235.2  
 
 ## Summary
 
