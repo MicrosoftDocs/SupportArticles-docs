@@ -19,10 +19,6 @@ items:
   items:
     - name: Applications not deployed to users logged on to domain controllers
       href: app-management/applications-not-deployed-to-users.md
-    - name: Can't deploy applications to Windows 10 ARM64 devices
-      href: app-management/applications-not-deployed-to-windows10-arm64.md
-    - name: Changes to App-V applications aren't included
-      href: app-management/app-v-application-changes-not-included.md
     - name: Contributor role is no longer assigned at the subscription level
       href: app-management/contributor-role-not-assigned-for-web-app.md
     - name: Deploy Windows language packs
@@ -35,10 +31,6 @@ items:
       href: app-management/troubleshoot-application-deployment.md
 - name: Client installation and assignment
   items:
-    - name: Can't install client in Windows Server 2008 SP2
-      href: client-installation/install-configmgr-client-error-1603.md
-    - name: Client installation error 1603
-      href: client-installation/client-installation-error-1603.md
     - name: Conversion failed when upgrading to version 1810
       href: client-installation/conversion-failed-upgrade-version-1810.md
     - name: Error 80041002 when installing client agent
@@ -47,26 +39,19 @@ items:
       href: client-installation/mac-client-registration-fails.md
     - name: PolicyAgentInstanceProvider warnings during client installation
       href: client-installation/policyagentinstanceprovider-warning-install-client.md
-    - name: Software update installations stop responding
-      href: client-installation/software-update-installations-stop-responding.md
     - name: There was a problem starting PolicyAgentProvider.dll
       href: client-installation/client-installation-fails-with-policyagentprovider-dll.md
 - name: Client management
   items:
     - name: Client remains in provisioning mode after upgrade
       href: client-management/configmgr-client-left-in-provisioning-mode.md
-    - name: Clients become inactive
-      href: client-management/inactive-clients-not-send-inventory.md
+
     - name: Clients don't receive policy data
       href: client-management/clients-not-receive-policy-data.md
     - name: Cloud services
       items:
         - name: Clients can't communicate with CMG
           href: client-management/cmg-communication-error.md
-        - name: CMG creation fails after signing in Configuration Manager
-          href: client-management/new-cmg-creation-fails-after-sign-in-configuration-manager.md  
-        - name: Tenant attach components fail to connect to backend cloud service
-          href: client-management/tenant-attach-component-not-connect-to-gateway.md
     - name: Collections
       items:
         - name: Multiple instances of the Unknown computers collection
@@ -81,12 +66,8 @@ items:
       href: client-management/remote-control-fails-error-c000012.md
     - name: SMS Agent Host service doesn't restart when the WMI service resumes
       href: client-management/sms-agent-host-not-automatically-restarted.md
-    - name: Software Metering failed to start PrepDriver
-      href: client-management/software-metering-failed-start-prepdriver.md
     - name: Turn on the DebugLogging key
       href: client-management/turn-on-debuglogging-key.md
-    - name: Upgrade Readiness data is downloaded continuously
-      href: client-management/upgrade-readiness-data-downloaded-continuously.md
 - name: Configuration Manager console
   items:
     - name: Console appears to hang when loading drivers
