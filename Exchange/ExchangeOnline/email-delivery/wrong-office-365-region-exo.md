@@ -1,6 +1,6 @@
 ---
-title: ATTR35 response code when mail is sent to EOP/EXO
-description: Mail sent to EOP or EXO is deferred with the ATTR35 temporary response code.
+title: ATTR35 response code when mail is sent to Microsoft 365
+description: Mail sent to Microsoft 365 is deferred with the ATTR35 temporary response code.
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
@@ -14,15 +14,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
-# ATTR35 response code when mail is sent to EOP/EXO
+# ATTR35 response code when mail is sent to Microsoft 365
 
 ## Symptoms
 
-Mail that you sent to an Exchange Online Protection (EOP) or Exchange Online (EXO) recipient is deferred, and you receive the following error message:
+Mail that you sent to a Microsoft 365 recipient is deferred, and you receive the following error message:
 
 > 451 4.4.62 Mail sent to the wrong Office 365 region. ATTR35.
 

@@ -2,9 +2,10 @@
 title: Issues with outbound calls
 description: Discusses potential causes and resolutions for issues that affect outbound calls when you use Direct Routing.
 ms.date: 10/30/2023
-author: simonxjx
-ms.author: 
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: mikebis, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -17,7 +18,6 @@ ms.custom:
   - CI-126689
   - CSSTroubleshoot
   - scenario:Direct-Routing-3
-ms.reviewer: mikebis
 ---
 
 # Issues that affect outbound direct routing calls

@@ -2,15 +2,15 @@
 title: Troubleshoot damaged drawings in Visio
 description: Contains information about how to troubleshoot damaged drawings in Visio 2013, Visio 2010, Visio 2007, Visio 2003 and Visio 2002. Lists methods that you can use to try to recover the damaged drawing.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-dahedm, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Reliability
   - CSSTroubleshoot
-ms.author: meerak
-ms.reviewer: v-dahedm
 search.appverid: 
   - MET150
 appliesto: 
@@ -29,7 +29,7 @@ This article discusses how to troubleshoot damaged drawings in Microsoft Office 
 
 Additionally, this article lists some recovery methods that you can use on the damaged drawing. They include general troubleshooting methods, methods to try if you can or can't open the drawing, and methods to help prevent damage that may occur to drawings.
 
-## Introduction 
+## Introduction
 
 ### Overview
 
@@ -212,11 +212,7 @@ Windows may not be able to read the drawing file from where the drawing file is 
 
 #### Method 7: Detect and repair errors on the hard disk
 
-If you are running Microsoft Windows Server 2003, Microsoft Windows XP, Microsoft Windows 2000, or Microsoft Windows NT 4.0, use the Check Disk tool to detect file system errors or bad sectors on your hard disk. 
-
-For more information, select the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[Check your hard disk for errors](https://support.microsoft.com/help/2641432)
+If you are running Microsoft Windows Server 2003, Microsoft Windows XP, Microsoft Windows 2000, or Microsoft Windows NT 4.0, use the Check Disk tool `chkdsk` to detect file system errors or bad sectors on your hard disk. For more information, see [chkdsk](/windows-server/administration/windows-commands/chkdsk).
 
 If you're running Microsoft Windows Millennium Edition (Me) or Microsoft Windows 98, use the Scandisk tool to detect file system errors or bad sectors on your hard disk. 
 

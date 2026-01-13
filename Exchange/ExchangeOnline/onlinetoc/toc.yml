@@ -328,7 +328,7 @@ items:
               href: ../email-delivery/ndr/fix-error-code-5-7-64-in-exchange-online.md
             - name: 550 5.7.64 TenantAttribution when sending emails externally
               href: ../email-delivery/ndr/relay-access-denied-smtp.md
-            - name: 550 5.7.64 TenantAttribution when sending emails through EOP
+            - name: 550 5.7.64 TenantAttribution when sending emails through Microsoft 365
               href: ../email-delivery/ndr/tenantattribution-ndr.md
             - name: 550 5.7.124 or 5.7.124
               href: ../email-delivery/ndr/fix-error-code-5-7-124-in-exchange-online.md

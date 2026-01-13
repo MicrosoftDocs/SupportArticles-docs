@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 05/27/2025
+ms.date: 01/07/2026
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -306,6 +306,27 @@ When storage account key access is disabled or disallowed for a storage account,
 
 Use identity-based authentication instead. See [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable) for prerequisites and instructions.
 
+##### Cause 5: SMB channel encryption is set to AES-256-GCM only
+
+If your Azure storage account is configured to use only AES-256-GCM for SMB channel encryption, mount operations fail when the client defaults to AES-128-GCM.
+
+##### Solution for cause 5
+
+Configure the client to require AES-256-GCM by enabling the `require_gcm_256` option:
+
+```bash
+# Load the CIFS module
+modprobe cifs
+
+# Set the parameter at runtime
+echo 1 | sudo tee /sys/module/cifs/parameters/require_gcm_256
+
+# Persist the configuration
+echo "options cifs require_gcm_256=1" | sudo tee -a /etc/modprobe.d/cifs.conf
+```
+You can also use a Kubernetes DaemonSet to enforce AES-256-GCM on every node. See the following example:
+
+[support-cifs-aes-256-gcm.yaml](https://github.com/andyzhangx/demo/blob/master/aks/support-cifs-aes-256-gcm.yaml)
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
 ##### Cause
