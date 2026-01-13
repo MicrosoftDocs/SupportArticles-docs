@@ -63,7 +63,7 @@ Review the output for errors or corruption. If these commands make repairs, try 
 ### Step 2: Clean up the transaction logs
 
 > [!IMPORTANT]  
-> Cleaning up transaction incorrectly logs can cause more issues to occur. Follow these steps carefully. This section contains two procedures. In most cases, you should use Option A. Use Option B only if the affected computer is a VM that can't start.
+> Cleaning up transaction incorrectly logs can cause more issues to occur.
 
 Follow these steps:
 
