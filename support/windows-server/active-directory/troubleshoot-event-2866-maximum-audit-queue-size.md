@@ -117,7 +117,7 @@ The audit events contain information about security-related occurrences such as 
 
 Under heavy load (for example, during bulk operations), it's possible to generate multiple audit events while still writing the first one to the disk. When the number of audit events reaches the maximum for the queue, operational threads start pausing until their audit event can be inserted into the queue. AD DS logs Event ID 2866 at this point.
 
-## Cause 1: The rate at which audit events accumulate is greater than the system can process
+### Cause 1: The rate at which audit events accumulate is greater than the system can process
 
 AD DS is generating Audit events at a rate that's consistently higher than the rate at which the DC can write them to the log file and purge them from the queue. The queue eventually reaches its maximum size.
 
