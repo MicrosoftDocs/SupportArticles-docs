@@ -15,7 +15,9 @@ appliesto:
 ---
 # Troubleshoot Event ID 2866 (maximum number of cached audit events)
 
-This article describes several methods to use to fix Event ID 2866, and discusses how to identify which methods are appropriate for your situation.
+## Summary
+
+Event ID 2866 occurs when your system generates more audit events for the Security log than the local transaction audit queue can hold. This article describes several methods to use to fix this situation, and discusses how to identify which methods are appropriate to fix your situation.
 
 ## Symptoms
 
@@ -124,13 +126,17 @@ The rate at which AD DS generates audit events depends on factors that include t
 - How many event sources that you configured for auditing
 - The type of auditing (such as success auditing, failure auditing, or successful read auditing). For example, all the following categories of operations can generate failure or success auditing:
 
+  - [Sign in (aka Logon) auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon)
+  - [Credential validation auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-credential-validation)
+  - [Kerberos Authentication Service auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-kerberos-authentication-service)
+  - [Kerberos service ticket operations auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-kerberos-service-ticket-operations)
   - [File system auditing](/windows-hardware/drivers/ifs/auditing) (this category can also generate successful read auditing)
   - Directory Service auditing (this category can also generate successful read auditing)
   - [Windows Filtering Platform auditing](/windows/win32/fwp/auditing-and-logging)
   - Process detailed activity auditing
 
   > [!NOTE]  
-  > Success auditing is typically very verbose.
+  > Success auditing is typically very verbose, especially for authentication-related operations. Remember that Kerberos authentication applies not only to user requests but also to application and service communications.
 
 ### Cause 2: A single transaction generates too many audit events
 
@@ -198,7 +204,7 @@ To increase the capacity of the transaction audit queue, follow these steps:
 
    - Value: `Maximum Audit Queue Size`
    - Type: `REG_DWORD`
-   - Data: An integer between 17,000 and 4,294,967,295 (omit commas from the data). The default is `17000`, and the minimum is `100`.
+   - Data: An integer between `100` and `4294967295`. The default is `17000`.
 
      > [!NOTE]  
      > The value measures the number of audit events that the queue can cache. It doesn't measure memory usage. If your issue is the number of audit events per transaction, make sure that the number you use is large enough to handle that number of events (for example, use a number that's larger than the number of members of the largest group).
