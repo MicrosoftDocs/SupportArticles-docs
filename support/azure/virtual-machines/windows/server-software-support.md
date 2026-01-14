@@ -64,7 +64,7 @@ Microsoft Dynamics 365 Server version 9.1 and later versions are supported.
 Exchange Server 2013 and later versions are supported. For more information, see the "Requirements for hardware virtualization" section of the following TechNet topic: [Exchange 2013 virtualization](https://technet.microsoft.com/library/jj619301%28v=exchg.150%29.aspx?f=255&mspperror=-2147217396#bkmk_prereq).
 
 > [!NOTE]
-> The only supported way to send email to external domains from Azure compute resources is through an SMTP relay (otherwise known as an SMTP smart host). The Azure compute resource sends the email message to the SMTP relay, and then the SMTP relay provider delivers the message to the external domain. Microsoft Exchange Online Protection is one provider of a SMTP relay, but a number of third-party providers also offer this service.
+> The only supported way to send email to external domains from Azure compute resources is through an SMTP relay (otherwise known as an SMTP smart host). The Azure compute resource sends the email message to the SMTP relay, and then the SMTP relay provider delivers the message to the external domain. Microsoft 365 is one provider of a SMTP relay, but a number of third-party providers also offer this service.
 
 ### Microsoft Forefront Identity Manager
 

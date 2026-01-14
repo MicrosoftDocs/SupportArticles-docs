@@ -52,10 +52,10 @@ The table and column names used are [logical names](/power-apps/developer/data-p
 > [!TIP]
 > An easy way to find the ID of a row is to open it in a model-driven app. The ID can be found in the page URL.
 
-The following example gets the `scheduledstart` column of the `appointment` table for the row with ID `d2862246-4763-ee11-8def-000d3a34118b`.
+The following example gets the `scheduledstart` column of the `appointment` table for the row with ID `aaaabbbb-0000-cccc-1111-dddd2222eeee`.
 
 ```http
-https://myorg.crm.dynamics.com/api/data/v9.2/appointments(d2862246-4763-ee11-8def-000d3a34118b)?$select=scheduledstart
+https://myorg.crm.dynamics.com/api/data/v9.2/appointments(aaaabbbb-0000-cccc-1111-dddd2222eeee)?$select=scheduledstart
 ```
 
 Entering this in the browser address bar will show something like the following:
@@ -65,7 +65,7 @@ Entering this in the browser address bar will show something like the following:
     "@odata.context": "https://myorg.crm.dynamics.com/api/data/v9.2/$metadata#appointments(scheduledstart)/$entity",
     "@odata.etag": "W/\"11472725\"",
     "scheduledstart": "2023-10-15T07:30:00Z",
-    "activityid": "d2862246-4763-ee11-8def-000d3a34118b"
+    "activityid": "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 }
 ```
 
@@ -92,7 +92,7 @@ This is likely an issue. Before reporting it, you can isolate whether it's a ser
 For example,
 
 ```http
-GET https://myorg.crm.dynamics.com/api/data/v9.2/appointments(d2862246-4763-ee11-8def-000d3a34118b)?$select=scheduledstart
+GET https://myorg.crm.dynamics.com/api/data/v9.2/appointments(aaaabbbb-0000-cccc-1111-dddd2222eeee)?$select=scheduledstart
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0

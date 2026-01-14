@@ -125,6 +125,8 @@ items:
       href: ./active-directory/event-id-1216-directory-services-event-log.md
     - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
       href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
+    - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+      href: ./active-directory/adamsync-cant-sync-basedn-grandchild-ou.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -780,6 +782,10 @@ items:
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
+  - name: Storage Spaces Direct (S2D)
+    items:
+    - name: Delete a Storage Spaces Direct storage pool and reset the physical disks
+      href: ./backup-and-storage/delete-s2d-storage-pool-reuse-disks.md
     - name: Troubleshoot performance issues in Storage Spaces Direct
       href: ./backup-and-storage/troubleshoot-performance-issues-storage-spaces-direct.md
   - name: System Restore or resetting your computer
@@ -1150,6 +1156,8 @@ items:
       href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
     - name: Cluster Shared Volume goes offline
       href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
@@ -2810,6 +2818,10 @@ items:
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
+    - name: Unresponsive VMs after cluster failover failure
+      href: ./virtualization/unresponsive-vms-after-cluster-failover-failure.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
     - name: Windows updates don't install on VM cluster hosts
@@ -2918,6 +2930,8 @@ items:
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
+    - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
+      href: ./virtualization/troubleshoot-hyper-v-virtual-machine-creation.md
     - name: Error when you manage a VHD file
       href: ./virtualization/fail-to-manage-vhd-file.md
     - name: Microsoft server software and supported virtualization environments
@@ -2928,12 +2942,12 @@ items:
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
-    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
-      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
@@ -3242,10 +3256,14 @@ items:
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
-    - name: Error 0x8007000d after installing Windows updates
+    - name: Error 0x80070003 at startup after you install a Windows update
+      href: ./installing-updates-features-roles/error-0x80070003-windows-update-fails.md
+    - name: Error 0x8007000d at startup after you install a Windows update
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
+      href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates

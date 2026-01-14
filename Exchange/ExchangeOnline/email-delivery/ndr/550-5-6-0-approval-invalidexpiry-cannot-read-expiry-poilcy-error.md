@@ -13,7 +13,7 @@ ms.custom:
   - CI 167832
 ms.reviewer: scottlan, v-six
 appliesto: 
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 01/24/2024
 ---

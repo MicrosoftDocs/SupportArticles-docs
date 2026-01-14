@@ -309,7 +309,7 @@ If you have a custom domain (for example, contoso.com instead of contoso.onmicro
 
 [Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
 
-[Backscatter in EOP](/microsoft-365/security/office-365-security/backscatter-messages-and-eop)
+[Backscatter in cloud organizations](/defender-office-365/anti-spam-backscatter-about)
 
 [Configure email forwarding for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding)
 
@@ -317,4 +317,4 @@ If you have a custom domain (for example, contoso.com instead of contoso.onmicro
 
 [Create DNS records at any DNS hosting provider](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider)
 
-[Set up SPF to help prevent spoofing](/microsoft-365/security/office-365-security/set-up-spf-in-office-365-to-help-prevent-spoofing)
+[Set up SPF to identify valid email sources for your custom cloud domains](/defender-office-365/email-authentication-spf-configure)
