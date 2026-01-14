@@ -229,16 +229,6 @@ items:
           href: os-deployment/troubleshoot-install-application-step.md  
 - name: Setup, migration, backup, and recovery
   items:
-    - name: BitLocker and MBAM
-      items:
-        - name: MBAM 2.0 setup prerequisite checker fails
-          href: setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check.md
-    - name: Not found error editing Update Application Catalog Tables
-      href: setup-migrate-backup-recovery/not-found-error-editing-maintenance-task.md
-    - name: Site installation
-      items:
-        - name: A central administration site setup fails
-          href: setup-migrate-backup-recovery/central-administration-site-setup-fails.md
     - name: Site system roles installation and operations
       items:
         - name: Connectivity issues when the DigiCert Global Root G2 root cert is not installed
@@ -251,38 +241,20 @@ items:
           href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Troubleshoot state message processing performance issues
           href: setup-migrate-backup-recovery/state-message-processing-performance.md
-    - name: SMS Executive service
-      items:
-        - name: SMS_EXECUTIVE service crashes
-          href: setup-migrate-backup-recovery/sms-executive-service-crashes.md
     - name: SQL Server settings and configuration
       items:
         - name: Can't create software update packages or applications
           href: setup-migrate-backup-recovery/cannot-create-software-update-package.md
         - name: Error when you move a site database
           href: setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md
-        - name: Function sequence error in Smsdbmon.log
-          href: setup-migrate-backup-recovery/function-sequence-error.md
-        - name: SQL Server updates must be manually installed on secondary sites
-          href: setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites.md
         - name: Support policies for manual database changes
           href: setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md
-        - name: Warnings are repeatedly logged in Smsdbmon.log
-          href: setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings.md
     - name: Updates and servicing
       items:
-        - name: Changes to built-in collections are overwritten after upgrade
-          href: setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten.md
-        - name: Clients are automatically upgraded
-          href: setup-migrate-backup-recovery/clients-automatically-upgrade.md
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
           href: setup-migrate-backup-recovery/service-connection-tool-not-download-updates.md
-        - name: Offline servicing a WIM image with Latest Cumulative Update fails
-          href: setup-migrate-backup-recovery/offline-servicing-lcu-may-fail.md
         - name: Site upgrade gets stuck at database update
           href: setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update.md
-        - name: Upgrade to System Center 2012 Configuration Manager SP1
-          href: setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1.md
         - name: Understand and troubleshoot Updates and Servicing
           href: setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing.md
     - name: Maintenance tasks default settings
@@ -297,10 +269,6 @@ items:
           href: update-management/clients-not-get-software-updates.md
         - name: Different results are shown for software updates
           href: update-management/different-software-updates-results-displayed.md
-        - name: Errors when servicing a server group
-          href: update-management/errors-servicing-server-group.md
-        - name: .NET Framework 4.7.2 updates fail to sync
-          href: update-management/dotnet-framework-updates-fail-to-sync.md
     - name: State messaging
       href: update-management/state-messaging-description.md
     - name: Understand software update management
@@ -339,8 +307,6 @@ items:
           href: update-management/deploy-definition-updates-using-wsus.md
         - name: Error 80244007 when WSUS client scans for updates
           href: update-management/error-80244007-when-wsus-client-scans-updates.md
-        - name: High network bandwidth usage
-          href: update-management/high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: update-management/optimize-wsus-client-performance.md
         - name: Reindex the WSUS database
