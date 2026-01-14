@@ -518,6 +518,8 @@ items:
       href: ./active-directory/this-property-limited-64-values.md
     - name: Troubleshoot AD replication error 8589
       href: ./active-directory/replication-error-8589.md
+    - name: Troubleshoot Event ID 2866 (maximum number of cached audit events)
+      href: ./active-directory/troubleshoot-event-2866-maximum-audit-queue-size.md
     - name: Use Adminpak to remotely administer computers
       href: ./active-directory/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
