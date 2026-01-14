@@ -136,7 +136,7 @@ The rate at which AD DS generates audit events depends on several factors:
   - Process detailed activity auditing
 
   > [!NOTE]  
-  > Success auditing is typically very verbose, especially for authentication-related operations. Remember that Kerberos authentication applies to not only user requests but also application and service communications.
+  > Success auditing is typically verbose, especially for authentication-related operations. Remember that Kerberos authentication applies to not only user requests but also application and service communications.
 
 ### Cause 2: A single transaction generates too many audit events
 
@@ -153,7 +153,7 @@ These commands remove all the current values of `member`. Each of those values i
 The default limit on the number of these audit events that the transaction audit queue can hold is 17,000. If a single transaction exceeds that limit, the transaction returns error code `0x21B1` and rolls back the changes. The Security log records Event ID 2866. The application that started the transaction receives the error. However, depending on the exact commands that the transaction used, the application might not receive information about how many changes the transaction generated.
 
 > [!NOTE]  
-> The recommended maximum number of operations per LDAP transaction is 5,000. If the number is higher than 5,000, you risk resource and performance issues. Early versions of Windows Server had recommended limits of 5,000 members per group. Although that limit was removed for Windows Server 2003, the recommended limit on the number of operations per LDAP transactions remains. For more information, see the following sections of "Active Directory Maximum Limits - Scalability":
+> The recommended maximum number of operations per LDAP transaction is 5,000. If the number is higher than 5,000, you risk resource and performance issues. Early versions of Windows Server recommended limits of 5,000 members per group. Although that limit was removed for Windows Server 2003, the recommended limit on the number of operations per LDAP transactions remains. For more information, see the following sections of "Active Directory Maximum Limits - Scalability":
 >
 > - [Maximum Number of Accounts per LDAP Transaction](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc756101(v=ws.10)#maximum-number-of-accounts-per-ldap-transaction)
 > - [Recommended Maximum Number of Users in a Group](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc756101(v=ws.10)#recommended-maximum-number-of-users-in-a-group)
