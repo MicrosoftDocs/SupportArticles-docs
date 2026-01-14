@@ -88,7 +88,7 @@ Example of `Appsettings.json`
 {
   "AzureADB2C": {
     "Instance": "https://markstestorganization1.b2clogin.com",
-    "ClientId": "09717d12-ca7f-4388-8393-dafe42c0c3a5",
+    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444",
     "CallbackPath": "/signin-oidc",
     "SignedOutCallbackPath": "/signout/B2C_1_signupsignin1",
     "Domain": "markstestorganization1.onmicrosoft.com",
@@ -98,7 +98,7 @@ Example of `Appsettings.json`
   },
   "AzureADB2CEditEmail": {
     "Instance": "https://markstestorganization1.b2clogin.com",
-    "ClientId": "09717d12-ca7f-4388-8393-dafe42c0c3a5",
+    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444",
     "CallbackPath": "/signin-oidc-editemail",
     "SignedOutCallbackPath": "/signout/B2C_1_signupsignin1",
     "Domain": "markstestorganization1.onmicrosoft.com",
