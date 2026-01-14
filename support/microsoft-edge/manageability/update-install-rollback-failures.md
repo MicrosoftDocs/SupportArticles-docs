@@ -7,7 +7,7 @@ ms.date: 01/07/2026
 ---
 # Install, update, or roll back failures for Edge and Edge WebView2
 
-When you install, update, or roll back Microsoft Edge or Microsoft Edge WebView2, you encounter a problem that prevents the operation from finishing. This article helps you collect the diagnostic information that the [Microsoft Support Team](TODO) needs to analyze and help resolve the problem.
+When you install, update, or roll back Microsoft Edge or Microsoft Edge WebView2, you might encounter a problem that prevents the operation from completing. This article provides common troubleshooting steps to help you resolve this issue. If those steps don't fix the problem, this article also explains how to collect diagnostic information to submit to the Microsoft Support Team for further analysis.
 
 The following components are involved in Edge installation and update scenarios.
 
@@ -151,13 +151,17 @@ Follow these steps:
 1. Retry the installation or update.
 1. Re-enable security software immediately after completion.
 
-### Contact support
+### Additional support
 
-If the steps in [Common troubleshooting checks](#common-troubleshooting-checks) don't resolve your problem, collect and package the following diagnostic logs, and then, submit them to Microsoft Support for analysis:
+If the steps in [Common troubleshooting checks](#common-troubleshooting-checks) don't resolve your issue, go to the [Microsoft Edge Support page](https://developer.microsoft.com/en-us/microsoft-edge/support/?form=MA13LH&cs=261674308) to find additional resources and guidance.
+
+If the resources on the support page don't help resolve your issue, you can create a support ticket. When you create a support ticket, collect and package the following diagnostic logs to attach to your request:
 
 - Edge installation and update logs
 - Edge policy JSON export
 - Process Monitor (PML) log
+
+Use the steps in the following sections to collect these logs and submit a support ticket.
 
 #### Collect Edge installation and update logs
 
@@ -229,7 +233,11 @@ To collect a Process Monitor log, follow these steps:
 
 #### Submit the diagnostic package
 
-After you package the collected logs, submit the files to the [Microsoft Support Team](TODO). The support team analyzes the logs and helps you resolve the problem.
+To get help from Microsoft Support, follow these steps:
+
+1. Package all the collected diagnostic logs into a single compressed folder (for example, a .zip file).
+1. Go to the [Microsoft Edge Support page](https://developer.microsoft.com/en-us/microsoft-edge/support/?form=MA13LH&cs=261674308), and create a support ticket.
+1. When you create the support ticket, attach the packaged diagnostic logs so the support team can analyze them and help you resolve the problem.
 
 ## Related content
 
