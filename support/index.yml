@@ -73,6 +73,11 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
 
+  - title: Microsoft Edge
+    imageSrc: "media/hub-landing/Edge.png"
+    summary: Troubleshooting articles for Microsoft Edge
+    url: microsoft-edge/welcome-edge.yml
+
   - title: Microsoft Entra
     imageSrc: "media/hub-landing/microsoft-entra.svg"
     summary: Troubleshooting articles for Microsoft Entra
