@@ -6,9 +6,9 @@ ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 01/12/2026
 ---
 
-# Self-hosted extension deployment fails in Group Policy
+# Self-hosted extension deployment fails through Group Policy
 
-When you try to deploy a self-hosted extension through Group Policy, you experience an problem in which the extension doesn't appear for the target user. This article provides guidance for how to identify and resolve the cause of this problem so that you can successfully deploy the extension.
+When you try to deploy a self-hosted extension through Group Policy, you experience a problem in which the extension doesn't appear for the target user. This article provides guidance for how to identify and resolve the cause of this problem so that you can successfully deploy the extension.
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ Verify and correct the Group Policy extension configuration by using the followi
 
 When you host the extension on an internal HTTP or HTTPS server, and the server doesn't return the correct **Content-Type** header for the `.crx` file, the extension deployment fails.
 
-If the `.crx` file isn't served by using the header, `Content-Type: application/x-chrome-extension`, Microsoft Edge or any other Chromium-based browser won't treat the file as an installable extension package when it's downloaded as part of the Group Policy installation flow.
+If the `.crx` file isn't served by using the header, `Content-Type: application/x-chrome-extension`, Microsoft Edge and other Chromium-based browsers don't treat the file as an installable extension package if it's downloaded as part of the Group Policy installation flow.
 
 As a result, the policy is processed, but the browser doesn't silently install the extension.
 
