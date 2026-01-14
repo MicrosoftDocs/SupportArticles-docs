@@ -1437,6 +1437,8 @@ items:
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
     - name: Error 0x8007000d at startup after you install a Windows update
       href: ../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
+      href: ../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
     - name: Troubleshoot Windows Update error code 0x80070070
