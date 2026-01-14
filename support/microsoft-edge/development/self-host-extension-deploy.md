@@ -8,11 +8,11 @@ ms.date: 01/12/2026
 
 # Self-hosted extension deployment fails through Group Policy
 
-When you try to deploy a self-hosted extension through Group Policy, you experience a problem in which the extension doesn't appear for the target user. This article provides guidance for how to identify and resolve the cause of this problem so that you can successfully deploy the extension.
+When you try to deploy a self-hosted extension through Group Policy, you encounter a problem in which the extension doesn't appear for the target user. This article provides guidance to identify and resolve the cause of this problem so that you can successfully deploy the extension.
 
 ## Symptoms
 
-When you deploy a browser extension to Microsoft Edge by using the Group Policy [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-browser-policies/extensioninstallforcelist) or [ExtensionSettings](/DeployEdge/microsoft-edge-browser-policies/extensionsettings), the deployment fails, and the extension doesn't appear on the `edge://extensions` page for the target users.
+When you deploy a browser extension to Microsoft Edge by using the Group Policy [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-browser-policies/extensioninstallforcelist) or [ExtensionSettings](/DeployEdge/microsoft-edge-browser-policies/extensionsettings) policy, the deployment fails, and the extension doesn't appear on the `edge://extensions` page for the target users.
 
 However, if you manually drag the same extension package (`.crx` file) onto the `edge://extensions` page by having [Developer mode](/microsoft-edge/extensions/getting-started/extension-sideloading#locally-installing-and-running-an-extension) enabled, the extension installs successfully.
 
