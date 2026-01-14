@@ -3,14 +3,14 @@
 # For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
 # For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title: 'Error AADSTS76021 (ApplicationRequiresSignedRequests) with SAML authentication: The request sent by client is not signed'
+description: Describes a problem in which a user receives the error AADSTS76021 when trying to sign-in
 author:      custorod # GitHub alias
-ms.author:    # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.author: custorod
+ms.service: entra-id
+ms.topic: troubleshooting-problem-resolution
 ms.date:     01/14/2026
+ms.subservice: authentication
 ---
 # Error AADSTS76021 (ApplicationRequiresSignedRequests) with SAML authentication: The request sent by client is not signed
 
