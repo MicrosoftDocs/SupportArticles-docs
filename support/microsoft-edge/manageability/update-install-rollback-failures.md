@@ -87,7 +87,7 @@ After a restart, make sure that no Edge or Edge WebView2-based applications are 
 
 #### Verify available disk space
 
-Insufficient disk space might cause Edge or Edge WebView2 installaion, update, or rollback failures. During installation, setup packages need temporary space to extract files and complete the process.
+Insufficient disk space might cause Edge or Edge WebView2 installation, update, or rollback failures. During installation, setup packages need temporary space to extract files and complete the process.
 
 _Recommended_: At least 1-2 GB of free disk space on the system drive (usually `drive C`).
 
