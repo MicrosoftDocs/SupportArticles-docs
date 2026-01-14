@@ -4,7 +4,7 @@ items:
 
   - name: Manage and Deploy
     items:
-      - name: Failure to deploy self-hosted extension via group policy
+      - name: Self-hosted extension deployment fails through Group Policy
         href: development/self-host-extension-deploy.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
@@ -12,5 +12,5 @@ items:
     items:
       - name: Can't enable extensions for InPrivate browsing by using Group Policy
         href: manageability/enable-extension-inprivate-policy.md
-      - name: Install, update, or rollback failures for Edge and Edge WebView2
+      - name: Install, update, or roll back failures for Edge and Edge WebView2
         href: manageability/update-install-rollback-failures.md

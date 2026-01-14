@@ -20,14 +20,14 @@ landingContent:
         links:
           - text: Can't enable extensions for InPrivate browsing by using Group Policy
             url: manageability/enable-extension-inprivate-policy.md
-          - text: Install, update, or rollback failures for Edge and Edge WebView2
+          - text: Install, update, or roll back failures for Edge and Edge WebView2
             url: manageability/update-install-rollback-failures.md
   
   - title: Web Platform and Development
     linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Failure to deploy self-hosted extension via group policy
+        - text: Self-hosted extension deployment fails through Group Policy
           url: development/self-host-extension-deploy.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
