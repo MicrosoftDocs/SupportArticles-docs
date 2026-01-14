@@ -159,10 +159,6 @@ items:
       items:
         - name: Custom port settings aren't added to boot media
           href: os-deployment/custom-port-settings-not-added-to-boot-media.md
-        - name: Not enough memory resources creating media
-          href: os-deployment/not-enough-memory-resources-create-media.md
-        - name: Scheduled Updates fails to unmount image
-          href: os-deployment/scheduled-updates-fails-error-0x800700a1.md
         - name: Unable to manage boot images
           href: os-deployment/error-managing-boot-images.md
         - name: Errors when capturing Windows 11 image
@@ -171,12 +167,8 @@ items:
       href: os-deployment/configure-operating-system-deployment.md
     - name: Manage drivers
       items:
-        - name: Can't import drivers
-          href: os-deployment/fail-to-import-drivers.md
         - name: Insufficient permissions to migrate a driver package
           href: os-deployment/insufficient-permissions-to-migrate-driver-package.md
-        - name: Signed drivers are displayed as unsigned
-          href: os-deployment/signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
         - name: A PXE enabled DP generates many files
@@ -201,22 +193,14 @@ items:
       items:
         - name: A client computer steals the GUID of an Unknown Computer object
           href: os-deployment/unknown-computer-object-guid-stolen.md
-        - name: Active users and groups are unexpectedly deleted
-          href: os-deployment/active-users-groups-unexpectedly-deleted.md
         - name: An error occurred when loading the task sequence
           href: os-deployment/cannot-create-mdt-task-sequence.md
-        - name: An in-place upgrade task sequence doesn't continue 
-          href: os-deployment/in-place-upgrade-task-sequence-not-continue.md
-        - name: Apply Driver Package task fails with error 80070057
-          href: os-deployment/apply-driver-package-task-error-80070057.md
         - name: Can't create bootable media with errors 80004005 and 0x8004101d
           href: os-deployment/cannot-create-bootable-media-error-80004005-0x8004101d.md
         - name: Computer hangs during an OSD task sequence in debug mode
           href: os-deployment/computer-hangs-task-sequence-debug-mode.md
         - name: Dynamic Media can't get management point locations
           href: os-deployment/dynamic-media-cannot-get-mp-locations.md
-        - name: Enable BitLocker task fails with error 80070057
-          href: os-deployment/enable-bitlocker-task-fails-error-80070057.md
         - name: No option to check online for updates
           href: os-deployment/check-online-updates-unavailable.md
         - name: The Capture User State task fails
@@ -229,8 +213,6 @@ items:
           href: os-deployment/osdresults-not-display-installed-applications.md
         - name: Sending with winhttp failed 80072f8f
           href: os-deployment/sending-with-winhttp-failed-80072f8f-error.md
-        - name: Slow task sequences with earlier client versions
-          href: os-deployment/slow-task-sequence-with-earlier-client-version.md
         - name: Task sequence fails if software updates require multiple restarts
           href: os-deployment/task-sequence-fails-multiple-restarts.md
         - name: Task sequence fails with error 80070005
@@ -245,8 +227,6 @@ items:
           href: os-deployment/debug-deployment-not-displayed.md
         - name: Troubleshoot the Install Application task sequence step
           href: os-deployment/troubleshoot-install-application-step.md  
-    - name: Versions required for Windows deployment
-      href: os-deployment/required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery
   items:
     - name: BitLocker and MBAM
