@@ -1,5 +1,75 @@
 {
-  "redirections": [ 
+  "redirections": [
+    {
+      "source_path": "support/mem/configmgr/update-management/high-network-bandwidth-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/dotnet-framework-updates-fail-to-sync.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/errors-servicing-server-group.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/offline-servicing-lcu-may-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/clients-automatically-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/function-sequence-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+      {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/sms-executive-service-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/central-administration-site-setup-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/not-found-error-editing-maintenance-task.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/mem/configmgr/os-deployment/required-versions-windows-deployment.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
