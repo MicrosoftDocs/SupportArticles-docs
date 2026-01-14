@@ -1,6 +1,235 @@
 {
   "redirections": [
     {
+      "source_path": "support/mem/configmgr/update-management/high-network-bandwidth-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/dotnet-framework-updates-fail-to-sync.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/errors-servicing-server-group.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/offline-servicing-lcu-may-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/clients-automatically-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/function-sequence-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+      {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/sms-executive-service-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/central-administration-site-setup-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/not-found-error-editing-maintenance-task.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/required-versions-windows-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/slow-task-sequence-with-earlier-client-version.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/enable-bitlocker-task-fails-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/apply-driver-package-task-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/in-place-upgrade-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/active-users-groups-unexpectedly-deleted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/signed-drivers-shown-as-unsigned.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/fail-to-import-drivers.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/scheduled-updates-fails-error-0x800700a1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/not-enough-memory-resources-create-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/communication-continues-after-subscription-removal.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/support-policies-for-azure-virtual-machines.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/install-endpoint-protection-for-linux.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/endpoint-protection/incorrect-endpoint-definition-status.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/duplicate-rows-in-distributioncontentversion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/unhandled-exception-launch-console.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/internal-error-2711-lp3076-during-console-installation.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/console-crash-after-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/software-metering-failed-start-prepdriver.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/tenant-attach-component-not-connect-to-gateway.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/new-cmg-creation-fails-after-sign-in-configuration-manager.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },   {
+      "source_path": "support/mem/configmgr/client-management/inactive-clients-not-send-inventory.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/software-update-installations-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/client-installation-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/install-configmgr-client-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/applications-not-deployed-to-windows10-arm64.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/app-v-application-changes-not-included.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/alerts-reports-queries/cannot-edit-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios",
       "redirect_document_id": false
@@ -4742,11 +4971,6 @@
     {
       "source_path": "support/mem/configmgr/troubleshooting-reference.md",
       "redirect_url": "/troubleshoot/mem/configmgr/mdt/troubleshooting-reference",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
-      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
       "redirect_document_id": true
     },
     {
