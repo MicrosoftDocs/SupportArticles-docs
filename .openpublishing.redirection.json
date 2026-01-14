@@ -1,6 +1,66 @@
 {
   "redirections": [ 
     {
+      "source_path": "support/mem/configmgr/os-deployment/required-versions-windows-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/slow-task-sequence-with-earlier-client-version.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/enable-bitlocker-task-fails-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/apply-driver-package-task-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/in-place-upgrade-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/active-users-groups-unexpectedly-deleted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/signed-drivers-shown-as-unsigned.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/fail-to-import-drivers.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/scheduled-updates-fails-error-0x800700a1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/not-enough-memory-resources-create-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
