@@ -74,7 +74,7 @@ productDirectory:
     url: dynamics-365/index.yml
 
   - title: Microsoft Edge
-    imageSrc: "media/hub-landing/Edge.png"
+    imageSrc: "media/hub-landing/Edge.jpg"
     summary: Troubleshooting articles for Microsoft Edge
     url: microsoft-edge/welcome-edge.yml
 
