@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/mem/configmgr/endpoint-protection/support-policies-for-azure-virtual-machines.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
