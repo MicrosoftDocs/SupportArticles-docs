@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Event ID 2866 (Maximum Number of Cached Audit Events)
-description: Describes several methods to use to fix Event ID 2866, and discusses how to identify which methods are appropriate for your situation.
+description: Discusses several methods to troubleshoot Event ID 2866, and discusses how to identify which methods are appropriate for your situation.
 ms.date: 01/14/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,11 +17,11 @@ appliesto:
 
 ## Summary
 
-This article describes how to resolve Event ID 2866 on supported versions of Windows Server. Event ID 2866 occurs when you modify objects in Active Directory Domain Services (AD DS), and those operations generate enough Security log audit events to overload the local transaction audit queue. This article describes the two primary causes for this issue, and how to identify which cause applies to your situation. It then provides step-by step guidance for resolving the issue so that your AD DS operations can resume.
+This article discusses how to resolve Event ID 2866 on supported versions of Windows Server. Event ID 2866 occurs when you modify objects in Active Directory Domain Services (AD DS), and those operations generate enough Security log audit events to overload the local transaction audit queue. This article discusses the two primary causes for this issue, how to identify which cause applies to your situation, and how to resolve the issue so that your AD DS operations can resume.
 
 ## Symptoms
 
-You're modifying AD DS objects. The domain controller (DC) that you're using to make the changes has audit logging enabled and configured to audit the changes that you're making. The modifications start to fail, and on the DC, the Security log records Event ID 2866. The event text resembles the following example:
+You modify AD DS objects. The domain controller (DC) that you use to make the changes has audit logging enabled. The DC is also configured to audit the changes that you make. In this scenario, the modifications start to fail. On the DC, the Security log records Event ID 2866. The event text resembles the following example:
 
 ```output
 While logging audit events for the following object, the directory service reached the maximum number of audit events that could be cached in memory at any given time. As a result of reaching this limit, the operation was aborted.
@@ -43,21 +43,21 @@ Attribute value or new distinguished name:
 
 User Action 
 (1) Check that an excessive number of object creation, modification, move, rename or undelete operations are not being performed.
-(2) Check that an excessive amount of auditing is not enabled.  For example, confirm that auditing is not configured for more attributes than is necessary.
+(2) Check that an excessive amount of auditing is not enabled. For example, confirm that auditing is not configured for more attributes than is necessary.
 (3) If necessary, increase the size of the audit queue by increasing the 'Maximum Audit Queue Size' registry parameter.
 ```
 
-Typically, this event occurs in one of the following two scenarios.
+Typically, this event occurs in one of the following scenarios.
 
 ### Scenario 1
 
-You're making bulk changes to Active Directory Domain Services (AD DS) objects. These objects have auditing turned on for multiple types of operations.
+You make bulk changes to AD DS objects. These objects have auditing turned on for multiple types of operations.
 
-The change operation fails, and the Security log records Event ID 2866. This event indicates that the rate at which the changes generated audit events overwhelmed the ability of the transaction audit queue to manage them. As a result, the DC ran out of audit queue space.
+The change operation fails, and the Security log records Event ID 2866. This event indicates that the rate at which the changes generated audit events overwhelmed the ability of the transaction audit queue to manage them. Therefore, the DC ran out of audit queue space.
 
 ### Scenario 2
 
-You make a bulk change to a set of objects that have an attribute that has a large number of values. You're replacing those values with a few values (or an empty value). The change fails, and you receive error code `0x21B1`, as shown in the following example:
+You make a bulk change to a set of objects that have an attribute that has many values. You replace those values with a few values (or an empty value). The change fails, and you receive error code `0x21B1`, as shown in the following example:
 
 ```ldp
 ldap_modify_s(ld, 'CN=test-many-members01,OU=TEST01,DC=contoso,DC=com',[1] attrs);
@@ -70,7 +70,7 @@ Server error: 000021B1: SvcErr: DSID-0315155D, problem 5005 (UNABLE_TO_PROCEED),
 Error 0x21B1 A required audit event could not be generated for the operation.
 ```
 
-The application you're using might report this error as well. The Security log records an event that documents the change for one object, as shown in the following example:
+The application that you use might also report this error. The Security log records an event that documents the change for one object, as shown in the following example:
 
 ```output
 Log Name: Security
@@ -113,18 +113,18 @@ A few seconds after the Security log records the preceding event, it records Eve
 
 ## Cause
 
-The audit events contain information about security-related occurrences such as reads of AD DS objects, user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
+The audit events contain information about security-related occurrences, such as reads of AD DS objects, user sign-in attempts, changes to security policies, and changes to particular objects such as groups. When AD DS generates an audit event, the Local Security Authority (LSA) has to write *and* flush the event to the Security log file on the disk. The transaction audit queue is a memory space that buffers audit events until the LSA processes them. After the LSA finishes logging an event, it purges the event from the transaction audit queue.
 
-Under heavy load (for example, during bulk operations), it's possible to generate multiple audit events while still writing the first one to the disk. When the number of audit events reaches the maximum for the queue, operational threads start pausing until their audit event can be inserted into the queue. AD DS logs Event ID 2866 at this point.
+Under heavy load (for example, during bulk operations), it's possible to generate multiple audit events while still writing the first one to the disk. When the number of audit events reaches the maximum for the queue, operational threads start pausing until their audit event can be inserted into the queue. At this point, AD DS logs Event ID 2866.
 
 ### Cause 1: The rate at which audit events accumulate is greater than the system can process
 
 AD DS is generating Audit events at a rate that's consistently higher than the rate at which the DC can write them to the log file and purge them from the queue. The queue eventually reaches its maximum size.
 
-The rate at which AD DS generates audit events depends on factors that include the following points:
+The rate at which AD DS generates audit events depends on several factors:
 
-- How many event sources that you configured for auditing
-- The type of auditing (such as success auditing, failure auditing, or successful read auditing). For example, all the following categories of operations can generate failure or success auditing:
+- How many event sources you configure for auditing
+- The type of auditing that's done (such as success auditing, failure auditing, and successful read auditing). For example, all the following categories of operations can generate failure or success auditing:
 
   - [Sign in (also known as Logon) auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon)
   - [Credential validation auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-credential-validation)
@@ -136,11 +136,11 @@ The rate at which AD DS generates audit events depends on factors that include t
   - Process detailed activity auditing
 
   > [!NOTE]  
-  > Success auditing is typically very verbose, especially for authentication-related operations. Remember that Kerberos authentication applies not only to user requests but also to application and service communications.
+  > Success auditing is typically very verbose, especially for authentication-related operations. Remember that Kerberos authentication applies to not only user requests but also application and service communications.
 
 ### Cause 2: A single transaction generates too many audit events
 
-When the DC's auditing level is set to log an audit event for each successful change, AD DS generates such events for each attribute change. When you change a linked attribute, such as `member`, the change propagates to the other objects that have related attributes. For example, suppose you modify a group object by using commands that resemble the following,
+When the DC auditing level is set to log an audit event for each successful change, AD DS generates such events for each attribute change. When you change a linked attribute, such as `member`, the change propagates to the other objects that have related attributes. For example, you modify a group object by using commands that resemble the following commands:
 
 ```ldifde
 changetype: modify
@@ -148,9 +148,9 @@ replace: member
 member:
 ```
 
-These commands remove all of the current values of `member`. Each of those values identifies another object (a group member), and each of those objects has a `memberof` attribute that AD DS automatically maintains. The transaction (remove all group members) generates an audit event for the change to the group object, *plus* audit events for the changes to the member objects. These audit events can accumulate quickly in the transaction audit queue, because the LSA only starts writing events when the transaction is completed successfully.
+These commands remove all the current values of `member`. Each of those values identifies another object (a group member), and each of those objects has a `memberof` attribute that AD DS automatically maintains. The transaction (remove all group members) generates an audit event for the change to the group object, *plus* audit events for the changes to the member objects. These audit events can accumulate quickly in the transaction audit queue, because the LSA only starts writing events when the transaction is completed successfully.
 
-The default limit on the number of these audit events that the transaction audit queue can hold is 17,000. If a single transaction exceeds that limit, the transaction returns error code `0x21B1` and rolls the changes back. The Security log records Event ID 2866. The application that started the transaction receives the error. However, depending on the exact commands that the transaction used, the application might not receive information about how many changes the transaction generated.
+The default limit on the number of these audit events that the transaction audit queue can hold is 17,000. If a single transaction exceeds that limit, the transaction returns error code `0x21B1` and rolls back the changes. The Security log records Event ID 2866. The application that started the transaction receives the error. However, depending on the exact commands that the transaction used, the application might not receive information about how many changes the transaction generated.
 
 > [!NOTE]  
 > The recommended maximum number of operations per LDAP transaction is 5,000. If the number is higher than 5,000, you risk resource and performance issues. Early versions of Windows Server had recommended limits of 5,000 members per group. Although that limit was removed for Windows Server 2003, the recommended limit on the number of operations per LDAP transactions remains. For more information, see the following sections of "Active Directory Maximum Limits - Scalability":
@@ -162,22 +162,22 @@ The default limit on the number of these audit events that the transaction audit
 
 The specific methods that you use to resolve this issue depend on the cause:
 
-- The rate at which audit events accumulate is greater than the system can process
+- The rate at which audit events accumulate is greater than the system can process.
   1. [Reduce the volume of audit events](#method-2-reduce-the-volume-of-audit-events).
   1. If step 1 doesn't resolve the issue, consider [increasing the capacity of the transaction audit queue](#method-3-increase-the-capacity-of-the-transaction-audit-queue).
 
-- A single transaction generates too many audit events
+- A single transaction generates too many audit events.
   1. Consider [reducing the number of operations per transaction](#method-1-reduce-the-number-of-operations-per-transaction).
   1. [Reduce the volume of audit events](#method-2-reduce-the-volume-of-audit-events) for the affected operations or objects.
   1. If the previous steps aren't practical or effective, [increase the capacity of the transaction audit queue](#method-3-increase-the-capacity-of-the-transaction-audit-queue).
 
 ### Method 1: Reduce the number of operations per transaction
 
-If you can change the way that your client application interacts with AD DS, or the way that you manage multi-valued and linked attributes, this method might be practical. Modify your client application (or the way you manage attributes) to reduce the maximum number of operations in a single transaction.
+If you can change the manner in which your client application interacts with AD DS, or the manner in which you manage multi-valued and linked attributes, this method might be practical. To reduce the maximum number of operations in a single transaction, modify your client application (or the manner in which you manage attributes).
 
 ### Method 2: Reduce the volume of audit events
 
-To reduce the overall rate at which your system generates audit events, review what objects and operations generate audit events. Consider whether you could reduce the level of auditing or audit fewer types of objects. For information about changing auditing settings for specific objects and operations, see the following articles:
+To reduce the overall rate at which your system generates audit events, review which objects and operations generate audit events. Consider whether you could reduce the level of auditing or audit fewer types of objects. For information about how to change auditing settings for specific objects and operations, see the following articles:
 
 - [Audit Generation](/windows/win32/secauthz/audit-generation)
 - [Audit Filtering Platform Connection](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-filtering-platform-connection)
@@ -188,7 +188,7 @@ For information about auditing policies and recommended settings, see the [Refer
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-Before you change the queue capacity, consider how the change might affect your system's performance. This registry entry has no upper limit beyond the unsigned 32-bit value upper limit. However, the default value is the recommended value. Increasing the value increases the load on the DC, and can degrade DC performance in the following ways:
+Before you change the queue capacity, consider how the change might affect your system's performance. This registry entry has no upper limit beyond the unsigned 32-bit value upper limit. However, the default value is the recommended value. Increasing the value increases the load on the DC, and can degrade DC performance in the following manners:
 
 - The queue uses more memory.
 - The Security log might use more disk space.
@@ -200,14 +200,14 @@ Before you change the queue capacity, consider how the change might affect your 
 To increase the capacity of the transaction audit queue, follow these steps:
 
 1. On the DC, in Registry Editor, go to the `HKLM\System\CurrentControlSet\services\NTDS\Parameters` subkey. 
-1. Use the following information to create a new entry under this subkey:
+1. Under this subkey, use the following information to create an entry:
 
    - Value: `Maximum Audit Queue Size`
    - Type: `REG_DWORD`
-   - Data: An integer between `100` and `4294967295`. The default is `17000`.
+   - Data: An integer between `100` and `4294967295`. The default value is `17000`.
 
      > [!NOTE]  
-     > The value measures the number of audit events that the queue can cache. It doesn't measure memory usage. If your issue is the number of audit events per transaction, make sure that the number you use is large enough to handle that number of events. For example, use a number that's larger than the number of members of the largest group.
+     > The Data value measures the number of audit events that the queue can cache. It doesn't measure memory usage. If your issue is the number of audit events per transaction, make sure that the number you use is large enough to handle that number of events. For example, use a number that's larger than the number of members of the largest group.
 
 1. Restart the DC.
 
