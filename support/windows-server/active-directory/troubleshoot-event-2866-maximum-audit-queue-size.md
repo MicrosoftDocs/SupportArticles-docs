@@ -17,11 +17,11 @@ appliesto:
 
 ## Summary
 
-Event ID 2866 occurs when your system generates more audit events for the Security log than the local transaction audit queue can hold. This article describes several methods to use to fix this situation, and discusses how to identify which methods are appropriate to fix your situation.
+This article describes how to resolve Event ID 2866 on supported versions of Windows Server. Event ID 2866 occurs when you modify objects in Active Directory Domain Services (AD DS), and those operations generate enough Security log audit events to overload the local transaction audit queue. This article describes the two primary causes for this issue, and how to identify which cause applies to your situation. It then provides step-by step guidance for resolving the issue so that your AD DS operations can resume.
 
 ## Symptoms
 
-You're modifying Active Directory Domain Services (AD DS) objects. The domain controller (DC) that you're using to make the changes has audit logging enabled and configured to audit the changes that you're making. The modifications start to fail, and on the DC, the Security log records Event ID 2866. The event text resembles the following example:
+You're modifying AD DS objects. The domain controller (DC) that you're using to make the changes has audit logging enabled and configured to audit the changes that you're making. The modifications start to fail, and on the DC, the Security log records Event ID 2866. The event text resembles the following example:
 
 ```output
 While logging audit events for the following object, the directory service reached the maximum number of audit events that could be cached in memory at any given time. As a result of reaching this limit, the operation was aborted.
@@ -126,7 +126,7 @@ The rate at which AD DS generates audit events depends on factors that include t
 - How many event sources that you configured for auditing
 - The type of auditing (such as success auditing, failure auditing, or successful read auditing). For example, all the following categories of operations can generate failure or success auditing:
 
-  - [Sign in (aka Logon) auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon)
+  - [Sign in (also known as Logon) auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon)
   - [Credential validation auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-credential-validation)
   - [Kerberos Authentication Service auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-kerberos-authentication-service)
   - [Kerberos service ticket operations auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-kerberos-service-ticket-operations)
@@ -173,7 +173,7 @@ The specific methods that you use to resolve this issue depend on the cause:
 
 ### Method 1: Reduce the number of operations per transaction
 
-If you can change the way that your client application makes requests, or the way that you manage multi-valued and linked attributes, this method might be practical. Modify your client application (or the way you manage attributes) to reduce the maximum number of operations in a single transaction.
+If you can change the way that your client application interacts with AD DS, or the way that you manage multi-valued and linked attributes, this method might be practical. Modify your client application (or the way you manage attributes) to reduce the maximum number of operations in a single transaction.
 
 ### Method 2: Reduce the volume of audit events
 
@@ -207,7 +207,7 @@ To increase the capacity of the transaction audit queue, follow these steps:
    - Data: An integer between `100` and `4294967295`. The default is `17000`.
 
      > [!NOTE]  
-     > The value measures the number of audit events that the queue can cache. It doesn't measure memory usage. If your issue is the number of audit events per transaction, make sure that the number you use is large enough to handle that number of events (for example, use a number that's larger than the number of members of the largest group).
+     > The value measures the number of audit events that the queue can cache. It doesn't measure memory usage. If your issue is the number of audit events per transaction, make sure that the number you use is large enough to handle that number of events. For example, use a number that's larger than the number of members of the largest group.
 
 1. Restart the DC.
 
