@@ -173,7 +173,7 @@ The specific methods that you use to resolve this issue depend on the cause:
 
 ### Method 1: Reduce the number of operations per transaction
 
-If you can change the manner in which your client application interacts with AD DS, or the manner in which you manage multi-valued and linked attributes, this method might be practical. To reduce the maximum number of operations in a single transaction, modify your client application (or the manner in which you manage attributes).
+If you can change your client application or the manner in which you manage multi-valued and linked attributes, this method might be practical. Reduce the maximum number of operations in a single transaction by changing the manner in which your client application interacts with AD DS (or the manner in which you manage attributes).
 
 ### Method 2: Reduce the volume of audit events
 
