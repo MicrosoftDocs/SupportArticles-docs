@@ -47,7 +47,7 @@ If a site fails these dimension checks, SmartScreen reports the site as unsafe.
 
 ### If you're not the website owner
 
-1. Reach out to the website owner, and recommend that they report the issue by using the steps in [You are the website owner](#youre-not-the-website-owner).
+1. Reach out to the website owner, and recommend that they report the issue by using the steps in [If you're the website owner](#if-youre-the-website-owner).
 
 1. Both the site owner and you can report the issue by using the [WDSI file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission). When you're prompted for user type, select **Enterprise customer**.
 
