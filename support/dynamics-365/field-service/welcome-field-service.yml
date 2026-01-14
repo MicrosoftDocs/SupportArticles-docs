@@ -25,8 +25,6 @@ landingContent:
             url: administration/cant-identify-user.md
           - text: Date Window Start/End fields don't exist
             url: administration/date-window-fields-missing.md
-          - text: Error with AttributeMap when upgrading
-            url: administration/attibutemap-error-upgrade.md
           - text: Entity record texts have duplicated numbers
             url: administration/entity-names-duplicated-numbers.md
           - text: '"The user has not been assigned any roles" error'

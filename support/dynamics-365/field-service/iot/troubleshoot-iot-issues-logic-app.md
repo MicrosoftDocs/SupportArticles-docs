@@ -3,8 +3,8 @@ title:  Troubleshoot issues with IoT capabilities
 description: Provides a resolution to solve issues with IoT capabilities in Dynamics 365 Field Service.
 ms.author: vhorvath
 author: vhorvathms
-ms.reviewer: mhart
-ms.date: 11/05/2024
+ms.reviewer: v-wendysmith
+ms.date: 01/14/2026
 ms.custom: sap:IoT - Connected Field Service
 ---
 # Troubleshoot issues with IoT capabilities in Dynamics 365 Field Service

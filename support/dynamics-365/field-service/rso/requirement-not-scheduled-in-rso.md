@@ -1,8 +1,10 @@
 ---
 title: Requirements not scheduled in Resource Scheduling Optimization
 description: Provides a resolution to solve the issues with unscheduled requirements.
-ms.reviewer: mhart
-ms.date: 12/19/2024
+author: andrewclear-ms
+ms.author: anclear
+ms.reviewer: v-wendysmith
+ms.date: 01/13/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Requirements not scheduled in Resource Scheduling Optimization

@@ -1,8 +1,10 @@
 ---
 title: Can't create or save records due to address geocoding mapping service degradation
 description: Provides a workaround to resolve issues with saving records during service degradation of the Geo Code API in Dynamics 365 Field Service.
-ms.reviewer: mhart
-ms.date: 06/18/2024
+author: jshotts
+ms.author: jasonshotts
+ms.reviewer: v-wendysmith
+ms.date: 01/13/2026
 ms.custom: sap:Administration
 ---
 # Can't create or save records due to service degradation of the address geocoding mapping service
