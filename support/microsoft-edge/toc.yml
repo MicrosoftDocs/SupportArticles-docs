@@ -1,4 +1,7 @@
 items:
+  - name: Welcome
+    href: welcome-edge.yml
+
   - name: Manage and Deploy
     items:
       - name: Failure to deploy self-hosted extension via group policy
