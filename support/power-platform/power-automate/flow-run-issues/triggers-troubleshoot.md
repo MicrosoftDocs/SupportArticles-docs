@@ -11,6 +11,8 @@ search.audienceType:
 ---
 # Troubleshoot Power Automate trigger issues and errors
 
+## Summary
+
 When Power Automate flows don't run as expected, the trigger might be the problem. [Triggers](/power-automate/triggers-introduction) are the entry point for your flows. They can fail for several reasons, such as connection problems, expired authentication tokens, licensing problems, and misconfigured conditions.
 
 This article describes the most common trigger problems and their solutions. You'll learn how to diagnose connection problems, check licensing requirements, review trigger conditions, and handle environment-specific problems.
