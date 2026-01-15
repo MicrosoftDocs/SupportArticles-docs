@@ -62,7 +62,7 @@ If you don’t need surge nodes during upgrades, see [Customize unavailable node
 
 During an AKS cluster creation in the Azure portal, if the selected node pool SKU isn't available in the chosen region and zones, the deployment recommender recommends an alternative SKU, zones, and region combination that has availability.
 
-## Solution 5: Use priority expanders with cluster-autoscaler
+### Solution 5: Use priority expanders with cluster-autoscaler
 
 The cluster-autoscaler [priority expander](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/expander/priority/readme.md) lets you define an ordered list of node pools to attempt scaling in sequence. For example: Spot pools first (cost optimization), then on-demand pools (availability fallback). Conditional Access tries to implement the highest priority pool first. If scaling fails (for example, due to allocation failure), it tries the next pool.
 
@@ -72,7 +72,7 @@ The cluster-autoscaler [priority expander](https://github.com/kubernetes/autosca
 
 - Priority expander works at node pool level, not SKU level. You must precreate pools for each SKU family you want to use.
 
-## Cause 2: Too many constraints for a virtual machine to accommodate
+### Cause 2: Too many constraints for a virtual machine to accommodate
 
 If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compute platform can't allocate a new virtual machine (VM) to accommodate the required constraints. These constraints usually (but not always) include the following items:
 
@@ -83,15 +83,15 @@ If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compu
 - Ephemeral disk
 - Proximity placement group (PPG)
 
-## Solution: Don't associate a proximity placement group with the node pool
+### Solution: Don't associate a proximity placement group with the node pool
 
 If you receive an `OverconstrainedAllocationRequest` error code, you can try to create a new node pool that isn't associated with a proximity placement group.
 
-## Cause 3: Not enough dedicated hosts or fault domains
+### Cause 3: Not enough dedicated hosts or fault domains
 
 You're trying to deploy a node pool in a dedicated host group that has limited capacity or doesn't satisfy the fault domain constraint.
 
-## Solution: Ensure you have enough dedicated hosts for your AKS nodes/VMSS
+### Solution: Ensure you have enough dedicated hosts for your AKS nodes/VMSS
 
 As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#planning-for-adh-capacity-on-aks), you're responsible for planning enough dedicated hosts to span as many fault domains as required by your AKS VMSS. For example, if the AKS VMSS is created with *FaultDomainCount=2*, you need at least two dedicated hosts in different fault domains (*FaultDomain 0* and *FaultDomain 1*).
 
