@@ -11,6 +11,12 @@ This article describes how to identify and resolve an issue in which Active Dire
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
+## Summary
+
+Active Directory Group Discovery in Configuration Manager uses different algorithms for delta and full discovery cycles. During delta discovery, Configuration Manager builds a tree structure of organizational units (OUs) and excludes child OUs from processing. This behavior can cause delta discovery to miss group membership changes when groups are located in nested OUs within your discovery scopes.
+
+This article helps you identify when this issue affects your environment and provides workarounds to ensure that group membership changes are detected correctly.
+
 ## Symptoms
 
 You set up an Active Directory Group Discovery to target specific AD Groups as discovery scopes as per [Configure Active Directory Group Discovery](/intune/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adgd).
