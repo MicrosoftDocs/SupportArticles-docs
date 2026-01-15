@@ -1,14 +1,16 @@
 ---
 title: Troubleshoot Self-Hosted Extension Deployment Group Policy Issues
 description: Learn how to resolve deployment issues for self-hosted extensions in Microsoft Edge when you use Group Policy policies.
-ms.custom: 'sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads'
+ms.custom: 'sap:Web Platform and Development\Controls and Extensions'
 ms.reviewer: dili, Johnny.Xu, v-shaywood
 ms.date: 01/12/2026
 ---
 
-# Self-hosted extension deployment fails through Group Policy
+# Failure to deploy self-hosted extension via group policy
 
-When you try to deploy a self-hosted extension through Group Policy, you encounter a problem in which the extension doesn't appear for the target user. This article provides guidance to identify and resolve the cause of this problem so that you can successfully deploy the extension.
+## Summary
+
+This article provides guidance to help you troubleshoot when a self-hosted extension fails to deploy through Group Policy. The extension might not appear for the target user even though you configured the policy. This article covers the common causes of this problem, including incorrect Group Policy configuration, missing or incorrect Content-Type headers on the web server, and invalid extension manifest or update manifest XML files. It also provides steps to resolve each cause.
 
 ## Symptoms
 

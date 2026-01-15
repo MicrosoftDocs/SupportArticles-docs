@@ -27,7 +27,7 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Self-hosted extension deployment fails through Group Policy
+        - text: Failure to deploy self-hosted extension via group policy
           url: development/self-host-extension-deploy.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
