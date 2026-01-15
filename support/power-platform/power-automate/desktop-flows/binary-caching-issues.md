@@ -1,68 +1,89 @@
 ---
-title: Troubleshoot Binary caching issues in Desktop flow executions triggered from cloud
-description: Resolve issues due to conflicting or duplicate files in the disk, related to the binary caching feature in Power Automate for desktop.
-author: sokopa
-ms.author: spanopoulos
-ms.reviewer: spanopoulos
-ms.date: 12/15/2025
+title: Fix Desktop Flow Failures from Cache Issues
+description: Resolve desktop flow errors in Power Automate caused by corrupted or conflicting cache files. Learn how to clear cache folders and fix execution issues.
+ms.reviewer: spanopoulos, v-shaywood
+ms.date: 01/15/2026
 ms.custom: sap:Desktop flows
 ---
 
-# Troubleshooting Binary Caching issues
+# Desktop flows fail due to binary caching problems
 
-This article provides solutions to resolve issues caused by conflicting or duplicate files in the disk cache. The binary caching feature in Power Automate for desktop downloads and stores files locally to reduce flow execution time, but corrupted or outdated cache files can sometimes cause errors during desktop flow execution.
+## Summary
 
-## Clear cache folders
+Power Automate for desktop uses binary caching to download and store files locally. This method improves performance and reduces flow execution time. However, corrupted, outdated, or conflicting cache files can cause errors when running desktop flows.
 
-If you encounter errors during desktop flow execution, you can attempt to resolve them by clearing the cache folders on your machine. The cache folder location depends on how the Power Automate Desktop Machine Runtime is configured.
+Use this guide when desktop flows fail to execute from the cloud or behave unexpectedly. You can learn how to identify your machine runtime configuration and clear the appropriate cache folders.
+
+## Symptoms
+
+You might experience one or more of the following problems:
+
+- Desktop flows fail when triggered from the cloud
+- Error messages about file conflicts or corrupted files
+- Unexpected behavior during flow execution
+
+## Cause
+
+Binary caching stores files locally to optimize performance. Cache errors occur when:
+
+- Cache files become corrupted
+- Outdated files conflict with newer versions
+- Duplicate files exist in the cache directory
+
+## Solution
+
+Clear the cache folders on your machine. The cache folder location depends on your Power Automate machine runtime configuration.
 
 ### Determine your configuration
 
-Before clearing the cache, identify which user account your Service account for the Power Automate machine runtime is configured to use.
+First, identify which user account your service account for the Power Automate machine runtime is configured to use.
 
-This can be found in the Power Automate machine runtime application, which can be accessed from its shortcut in the Windows Start Menu or from Power Automate Console, via Settings -> Open machine settings.
+1. Open the Power Automate machine runtime application from the Windows Start menu, or from Power Automate Console via **Settings** > **Open machine settings**.
 
-Under the Troubleshoot page, the section for Service account indicates the current configuration, with the domain and username of the account that will be used.
+1. On the **Troubleshoot** page, the **Service account** section shows the current configuration, including the domain and username.
 
-- **Default configuration**: The Service account for the Power Automate machine runtime runs under the UIFlowService system account (NT Service\UIFlowService)
-- **Custom configuration**: The Service account for the Power Automate machine runtime runs under a specific user account that you configured (DOMAIN\Username)
+   - **Default configuration**: The service account for the Power Automate machine runtime runs under the UIFlowService system account (`NT Service\UIFlowService`).
+   - **Custom configuration**: The service account for the Power Automate machine runtime runs under a specific user account you configured (`DOMAIN\Username`).
 
-### Clear cache for default configuration (UIFlowService account)
+### Clear cache for the default configuration (UIFlowService account)
 
-If your Service account for the Power Automate machine runtime uses the default UIFlowService account configuration:
+If your service account for the Power Automate machine runtime uses the default UIFlowService account configuration:
 
-1. Open File Explorer and navigate to the cache folder: `C:\Windows\ServiceProfiles\UIFlowService\AppData\Local\Cache`
-2. Delete both folders under this path (`storage` and `metadata`)
-3. Restart the UIFlowService service:
-   - Press <kbd>Win</kbd>+<kbd>R</kbd> to open the **Run** dialog
-   - Type **services.msc** and press <kbd>Enter</kbd>
-   - Locate **Power Automate Service** in the list
-   - Right-click on **Power Automate Service** and select **Restart**
+1. In File Explorer, go to `C:\Windows\ServiceProfiles\UIFlowService\AppData\Local\Cache`.
+1. Delete both the `storage` and `metadata` folders.
+1. Restart the UIFlowService service:
+   1. Press <kbd>Win</kbd>+<kbd>R</kbd> to open the **Run** dialog.
+   1. Type **services.msc** and press <kbd>Enter</kbd>.
+   1. Find **Power Automate Service** in the list.
+   1. Right-click **Power Automate Service** and select **Restart**.
 
-### Clear cache for custom user configuration
+### Clear cache for a custom user configuration
 
-If your Service account for the Power Automate machine runtime is configured to run under a custom user account:
+If your service account for the Power Automate machine runtime is configured to run under a custom user account:
 
-1. Open File Explorer and navigate to the cache folder: `%LOCALAPPDATA%\Cache` or `C:\Users\<username>\AppData\Local\Cache` (where `<username>` is the configured user account)
+1. In File Explorer, go to `%LOCALAPPDATA%\Cache` or `C:\Users\<Username>\AppData\Local\Cache` (replace `<Username>` with the configured account).
+
    > [!NOTE]
-   > The AppData folder is hidden by default. To show hidden folders, in File Explorer, go to **View** > **Show** > **Hidden items**.
+   > The AppData folder is hidden by default. To show it, in File Explorer select **View** > **Show** > **Hidden items**.
 
-2. Delete all files and folders in the Cache directory
-3. Restart the **Power Automate Service** or restart your machine
+1. Delete all files and folders in the Cache directory.
+1. Restart the **Power Automate Service** or restart your machine.
 
-## Next steps
+### Optional cache folders to clear
 
-Additional folders that you can safely clear in case you encounter errors with desktop flow execution:
+If the problem persists, clear these additional folders:
 
 1. Under `%LOCALAPPDATA%\Microsoft\Power Automate Desktop`:
-   - `Scripts`: Contains execution logs and intermediate cached data for desktop flows triggered by a cloud flow
-   - `Console\Scripts`: Contains execution logs and intermediate cached data for desktop flows triggered by PAD Console
-   - `Designer\Scripts`: Contains execution logs and intermediate cached data for desktop flows triggered by PAD Designer
-   - `Cache\(MSI or MSIX)`: All folders except `Account` and `msalcache.bin3` file are safe to remove and will not result in any data loss. You might get back some notifications that you have previously dismissed. If you also choose to delete `Account` folder and the `msalcache.bin3` file, you will be signed out from Power Automate Desktop.
-   - `DesktopFlowModules`: Contains custom modules that have been downloaded through the Asset Library - they will be downloaded again during runtime if they are missing.
+   - `Scripts`: Stores execution logs and cached data for cloud-triggered desktop flows.
+   - `Console\Scripts`: Stores execution logs and cached data for flows triggered from Power Automate Desktop Console.
+   - `Designer\Scripts`: Stores execution logs and cached data for flows triggered from Power Automate Desktop Designer.
+   - `Cache\(MSI or MSIX)`: Safe to remove all folders except `Account` and the `msalcache.bin3` file.
+      - Deleting these folders doesn't cause data loss, but you might see previously dismissed notifications again.
+      - If you delete the `Account` folder and `msalcache.bin3` file, you'll be signed out of Power Automate Desktop.
+   - `DesktopFlowModules`: Contains custom modules downloaded from the Asset Library. Missing modules are downloaded again at runtime.
 2. Under `C:\Windows\ServiceProfiles\UIFlowService\AppData\Local`:
-   - `Microsoft\Power Automate Desktop\Cache`: depending on your PAD version, you might have some files being cached under this directory instead of the ones mentioned in the previous section
-   - `Users`: additional intermediate files can be located here related to binary caching, and purging this folder can be used to eliminate further errors.
-   - After removing any files under this path, also make sure to restart the **Power Automate Service** as previously instructed.
+   - `Microsoft\Power Automate Desktop\Cache`: Depending on your Power Automate Desktop version, some files might be cached here instead of the locations listed earlier.
+   - `Users`: Contains additional intermediate files related to binary caching. Clearing this folder can resolve further errors.
+   - After removing files from this path, restart **Power Automate Service** as described earlier.
 
-If clearing the cache folders doesn't resolve your issue, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
+If clearing cache folders doesn't resolve the problem, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
