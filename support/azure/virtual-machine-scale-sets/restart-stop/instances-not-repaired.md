@@ -77,4 +77,4 @@ If none of the causes above are applicable to the issue, the instance could be i
 
 The grace period is the amount of time automatic repairs will wait after any state change on the instance before performing repairs, which helps avoid any premature or accidental repairs. The repair action should happen once the grace period is completed for the instance. For more information on the grace period setting for automatic repairs, see [Grace Period](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#grace-period).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

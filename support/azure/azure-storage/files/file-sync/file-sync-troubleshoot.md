@@ -164,4 +164,4 @@ Once the `MaxESEDbCachePercent` registry setting is created, restart the Storage
 - [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
 - [Troubleshoot Azure Files performance issues](../performance/files-troubleshoot-performance.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

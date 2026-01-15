@@ -318,7 +318,7 @@ If you see logs for your traffic, the pod is able to reach the LocalDNS service.
 ## Next steps
 If the above logs fail to help root cause the issue, you can enable [Query logging for CoreDNS](/azure/aks/coredns-custom#enable-dns-query-logging) to validate if CoreDNS is working as intended.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 

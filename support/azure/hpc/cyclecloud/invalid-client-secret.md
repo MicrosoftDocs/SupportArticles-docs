@@ -47,4 +47,4 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 
 - [Using Service Principal](/azure/cyclecloud/how-to/service-principals)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

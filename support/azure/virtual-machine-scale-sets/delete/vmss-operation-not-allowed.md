@@ -24,4 +24,4 @@ You tried to delete a Virtual Machine Scale Set in Flexible orchestration mode, 
 
 Delete all the VMs that are associated with the scale set in Flexible orchestration mode. After you delete all the associated VMs, you can delete the scale set successfully.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

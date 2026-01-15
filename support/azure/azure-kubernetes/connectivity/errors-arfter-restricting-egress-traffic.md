@@ -40,4 +40,4 @@ Check for conflicts with the rules that might occur in the NSG (network security
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

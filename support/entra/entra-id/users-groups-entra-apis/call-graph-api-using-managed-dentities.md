@@ -262,4 +262,4 @@ This example shows how to request an access token for a resource such as Microso
             }
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

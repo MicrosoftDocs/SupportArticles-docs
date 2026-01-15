@@ -37,4 +37,4 @@ If none of these solutions addresses your issue, see [Troubleshoot runbook issue
 - [Start a runbook in Azure Automation](/azure/automation/start-runbooks)
 - [Run Automation runbooks on a Hybrid Runbook Worker](/azure/automation/automation-hrw-run-runbooks)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

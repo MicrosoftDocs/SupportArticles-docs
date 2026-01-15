@@ -819,4 +819,4 @@ For more information about analytics in Azure Storage, see these resources:
 
 [!INCLUDE [Third-party information disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -48,4 +48,4 @@ Repair or replace the corrupted system binary (*.sys*) file by following these s
 
 [!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

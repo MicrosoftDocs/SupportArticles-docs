@@ -348,4 +348,4 @@ To install Az PowerShell module for the recovery VM, follow these steps:
     Install-Module -Name Az.Accounts -Scope AllUsers -RequiredVersion "1.9.4" -Repository PSGallery -Force
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

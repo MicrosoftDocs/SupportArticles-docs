@@ -237,4 +237,4 @@ You can use the Microsoft Entra activity logs to get more details. To do so, fol
 
 In certain scenarios, you're required to perform admin consent even though you might allow users to consent and the permission normally doesn't require an admin to consent. For example, when the status reason shows "Microsoft.Online.Security.UserConsentBlockedForRiskyAppsException." For more information, see [Unexpected error when performing consent to an application](/entra/identity/enterprise-apps/application-sign-in-unexpected-user-consent-error#requesting-not-authorized-permissions-error) and [Unexpected consent prompt when signing in to an application](/entra/identity/enterprise-apps/application-sign-in-unexpected-user-consent-prompt).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

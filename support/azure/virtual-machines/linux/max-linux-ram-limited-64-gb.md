@@ -58,7 +58,7 @@ For existing VMs, you can manually add the same kernel boot line option by using
 - For SLES, refer to [SUSE: Booting with GRUB.](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_grub_basic.html)
 - For Debian, refer to [Debian: Boot Parameters](https://www.debian.org/releases/stable/amd64/ch05s03.en.html).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

@@ -91,4 +91,4 @@ To resolve this issue:
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
 * Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

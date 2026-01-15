@@ -22,4 +22,4 @@ This permissions configuration may be intentional, and there is no automated way
 
 Future versions of Team Foundation Server will apply the correct default setting to new projects.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

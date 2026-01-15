@@ -86,4 +86,4 @@ Users often encounter issues when their applications call Microsoft Graph REST e
 * Verify if the endpoint supports delegated permissions, application permissions, or both.
 * Verify that the access token has the correct permissions to call the endpoint.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

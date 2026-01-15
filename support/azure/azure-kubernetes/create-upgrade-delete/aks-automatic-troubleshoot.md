@@ -84,4 +84,4 @@ Before you update an existing AKS cluster from "Base" to "Automatic," make sure 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

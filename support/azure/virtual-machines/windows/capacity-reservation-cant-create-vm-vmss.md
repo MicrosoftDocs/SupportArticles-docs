@@ -39,4 +39,4 @@ The following article discusses the reasons why you are not able to create Capac
 
 - [Create a Capacity Reservation in Azure](/azure/virtual-machines/capacity-reservation-create)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -65,4 +65,4 @@ The following `mountOptions` settings are recommended for Server Message Block (
 
 For Azure Files best practices, see [Provision Azure Files storage](/azure/aks/azure-csi-files-storage-provision#best-practices).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

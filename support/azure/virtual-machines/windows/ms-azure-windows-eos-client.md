@@ -37,4 +37,4 @@ Windows 10 is no longer supported except under the Extended Security Updates (ES
 - [Frequently asked questions](/windows/whats-new/extended-security-updates?source=recommendations#frequently-asked-questions)
 - [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

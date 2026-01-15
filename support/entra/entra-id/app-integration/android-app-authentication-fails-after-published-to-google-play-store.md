@@ -155,4 +155,4 @@ Update the MSAL configuration file and Android Manifest file in the application 
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

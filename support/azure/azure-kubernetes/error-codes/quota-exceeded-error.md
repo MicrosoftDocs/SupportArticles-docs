@@ -35,4 +35,4 @@ The issue occurs if the quota is reached. Your subscription doesn't have availab
 
 To raise the limit or quota for your subscription, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) and file a **Service and subscription limits (quotas)** support ticket. In this case, you have to submit a support ticket to increase the quota for compute cores.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

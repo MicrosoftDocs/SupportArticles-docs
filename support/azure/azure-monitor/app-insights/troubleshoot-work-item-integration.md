@@ -98,6 +98,6 @@ This issue occurs if the default repository or organization URL is incorrect or 
 * Open the workbook, and verify the default repository or organization URL parameter.
 * Remove or update conflicting templates.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

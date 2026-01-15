@@ -747,6 +747,6 @@ For more information refer to [Fenced Node Fails to Rejoin Cluster Without Manua
 
 For additional help, open a support request by using the following instructions. When you submit your request, attach the [SOS report](https://access.redhat.com/solutions/3592) from all the nodes in the cluster for troubleshooting.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
