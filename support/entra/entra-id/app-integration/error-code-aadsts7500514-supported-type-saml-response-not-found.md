@@ -106,4 +106,4 @@ To resolve this issue, make sure that PingFederate is configured to align with M
     When you configure WS-Trust STS, make sure that you select **SAML 1.1 for Office 365** as the Default Token Type.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

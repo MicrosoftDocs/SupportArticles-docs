@@ -48,4 +48,4 @@ To do this, you can use a _.reg_ script file or manually edit the string in Regi
 
 If you still encounter errors after you delete the quotation marks, make sure that Microsoft Corporation is listed as a trusted publisher on your computer. If it's not, you must install the Microsoft certificate.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

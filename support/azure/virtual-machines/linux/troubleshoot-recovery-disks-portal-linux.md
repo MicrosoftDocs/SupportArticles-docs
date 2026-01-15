@@ -204,4 +204,4 @@ If you are having issues connecting to your VM, see [Troubleshoot SSH connection
 
 For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

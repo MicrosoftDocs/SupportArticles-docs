@@ -759,5 +759,5 @@ The following commands are to be run on the recovery (rescue) VM that's temporar
 
 - [Troubleshoot ssh connection](troubleshoot-ssh-connection.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 a

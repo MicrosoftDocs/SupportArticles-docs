@@ -104,4 +104,4 @@ Common OAuth 2.0 flows and their associated `grant_type` values are listed as fo
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

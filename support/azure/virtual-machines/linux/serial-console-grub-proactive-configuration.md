@@ -337,5 +337,5 @@ For more information on how to access single user mode, see [this doc](./serial-
 
 Learn more about [Azure Serial Console](./serial-console-linux.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

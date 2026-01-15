@@ -160,4 +160,4 @@ Start-ADSyncSyncCycle -PolicyType Initial
 
 To do a full password sync, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

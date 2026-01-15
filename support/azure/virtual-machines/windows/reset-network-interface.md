@@ -136,4 +136,4 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
 6. Now all unavailable adapters should be cleared of your system.
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

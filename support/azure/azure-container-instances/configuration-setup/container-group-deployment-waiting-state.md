@@ -49,6 +49,6 @@ Possible solutions include:
 
 - [Azure Container Instances states](/azure/container-instances/container-state)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

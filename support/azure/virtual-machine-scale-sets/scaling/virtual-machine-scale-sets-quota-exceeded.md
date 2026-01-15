@@ -38,4 +38,4 @@ The Azure resources that are available to each virtual machine scale set, such a
 
 Consult the following article for steps to confirm that quota limitations are causing the error message, and for information about opening a support request to increase your quota: [Resolve errors for resource quotas](/azure/azure-resource-manager/templates/error-resource-quota)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

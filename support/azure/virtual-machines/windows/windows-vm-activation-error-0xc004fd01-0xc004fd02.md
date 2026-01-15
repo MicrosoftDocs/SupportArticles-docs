@@ -67,4 +67,4 @@ slmgr /ato
 
 These commands will request the activation of the Azure KMS host.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

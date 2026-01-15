@@ -65,4 +65,4 @@ By following these steps, you can identify the cause of the `Waiting` state prob
 
 - [Azure Spot Virtual Machines for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/use-spot)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

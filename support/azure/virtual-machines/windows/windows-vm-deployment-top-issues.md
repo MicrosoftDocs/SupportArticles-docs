@@ -27,4 +27,4 @@ Retry the request later. If the new VM can be part of a different availability s
 1. Create a VM in a different availability set (in the same region).
 2. Add the new VM to the same virtual network.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

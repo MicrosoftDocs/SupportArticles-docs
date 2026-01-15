@@ -50,4 +50,4 @@ To fix this issue, follow these steps:
      Remove-MgUser -UserId $user.id
      ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

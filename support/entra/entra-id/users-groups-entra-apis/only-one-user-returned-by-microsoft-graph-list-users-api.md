@@ -32,4 +32,4 @@ This issue occurs because you sign in with a personal Microsoft account (MSA), a
 
 To retrieve all users in the directory, you must sign in to Microsoft Graph Explorer using an organizational Microsoft Entra account, such as `userPrincipalName = name@tenant.onmicrosoft.com`.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

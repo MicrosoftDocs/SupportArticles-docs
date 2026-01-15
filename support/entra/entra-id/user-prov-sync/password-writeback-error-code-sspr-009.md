@@ -45,4 +45,4 @@ $params = @{
 Update-MgPolicyAuthorizationPolicy -BodyParameter $params
 ```
 For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
