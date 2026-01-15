@@ -21,7 +21,7 @@ This article builds on [Debugging canvas apps with Live monitor](/power-apps/mak
 
 ## Why combine Live monitor and Trace
 
-Live monitor gives you visibility into platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes like 404 or 429), timing, and delegation indicators. By adding targeted Trace calls in your [behavior formulas](power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) (for example, `OnSelect`, `OnVisible`, `OnStart`), you enrich those platform events with domain context: which user, which environment, which screen, entity counts, business flags, elapsed times, and any information that may help you better understand what the app is doing when it runs. Together they answer both "what happened" and "why it happened."
+Live monitor gives you visibility into platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes like 404 or 429), timing, and delegation indicators. By adding targeted Trace calls in your [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) (for example, `OnSelect`, `OnVisible`, `OnStart`), you enrich those platform events with domain context: which user, which environment, which screen, entity counts, business flags, elapsed times, and any information that may help you better understand what the app is doing when it runs. Together they answer both "what happened" and "why it happened."
 
 ## Scenario 1: Works for one user but not another
 
