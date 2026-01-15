@@ -24,7 +24,7 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 | Error code                                                                          | Description                                                                   |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [AIModelActionBadRequest](#aimodelactionbadrequest]                                 | There was a mimatch between the prompt action types.                          |
+| [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There was a mimatch between the prompt action types.                          |
 | [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There was a timeout error that's related to a call to an AI Builder model.    |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There was an error that's related to the output of a connector.               |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                             |
@@ -63,6 +63,7 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 [1]: /microsoft-copilot-studio/advanced-flow
 [2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
+
 
 #### AIModelActionBadRequest
 
