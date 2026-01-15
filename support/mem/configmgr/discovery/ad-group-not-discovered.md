@@ -1,5 +1,5 @@
 ---
-title: Delta AD Group Discovery Doesn't Detect Membership Changes in Groups in Nested OUs
+title: Delta AD Group Discovery Doesn't Detect Group Membership Changes in Nested OUs
 description: Troubleshoot an issue in which AD Delta Discovery fails to detect group membership changes in child organizational units.
 ms.date: 01/12/2025
 ms.reviewer: kaushika, jarrettr, brianhun, payur
@@ -7,13 +7,13 @@ ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Disco
 appliesto:
   - <a href=https://learn.microsoft.com/lifecycle/products/microsoft-configuration-manager target=_blank>Supported versions of Configuration Manager</a>
 ---
-# Delta AD Group Discovery doesn't detect membership changes in groups in nested OUs
+# Delta AD Group Discovery doesn't detect group membership changes in nested OUs
 
 ## Summary
 
-Active Directory Group Discovery (AD Group Discovery) in Configuration Manager uses different algorithms for delta and full discovery cycles. During the delta discovery process, Configuration Manager doesn't process child organizational units (OUs). This behavior can cause delta discovery to miss group membership changes when groups belong to nested OUs within your discovery scopes.
+Active Directory Group Discovery (AD Group Discovery) in Configuration Manager uses different algorithms for delta and full discovery cycles. During the delta discovery process, Configuration Manager doesn't process child organizational units (OUs). Because of this behavior, delta discovery might miss group membership changes when groups belong to nested OUs within your discovery scopes.
 
-This article helps you identify this issue in your environment, and provides workarounds to ensure that Configuration Manager detects all group membership changes.
+This article helps you identify this issue in your environment, and provides workarounds to make sure that Configuration Manager detects all group membership changes.
 
 ## Symptoms
 
@@ -51,7 +51,7 @@ To see what this behavior looks like in the ADSGDis.log file, follow these steps
 
 1. Open ADSGDis.log in a text editor, and then review the log entries to identify any discovery cycle.
 1. For that discovery cycle, create a list of the discovery scopes that appear in the log entries.
-1. Verify the LDAP path of each scope. In particular, validate that the affected group is in a child OU of another one in the list. The example that this article uses, the scopes and paths resemble the following example:
+1. Verify the LDAP path of each scope. In particular, check that the affected group is in a child OU of another one in the list. In the example that this article uses, the scopes and paths resemble the following example:
 
    ```output
    !!!!Valid Search Scope Name: Unaffected Group     Search Path: LDAP://CN=GROUP-A,OU=OU-A,DC=FOURTHCOFFEE,DC=COM     IsValidPath: TRUE
@@ -82,7 +82,7 @@ To see what this behavior looks like in the ADSGDis.log file, follow these steps
       INFO: Processing search path: 'LDAP://OU=OU-A,DC=FOURTHCOFFEE,DC=COM'.~
       ```
 
-   1. Delta discovery identifies the search path for the child ou (OU-B in the example) as an invalid path, and skips it to process the next path.
+   1. Delta discovery identifies the search path for the child OU (OU-B in the example) as an invalid path, and skips it to process the next path.
 
       ```output
       INFO: Found invalid Search Path: LDAP://OU=OU-B,OU=OU-A,DC=FOURTHCOFFEE,DC=COM. Probably it's sub search path of other search path and will be covered by them.
