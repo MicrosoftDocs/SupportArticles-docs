@@ -87,7 +87,7 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 - **Blank required value:** A required input was provided but its value is blank. Ensure the variable has a value before calling the prompt.
 
-For more information, see [Create a prompt action](/microsoft-copilot-studio/advanced-create-prompt-action).
+For more information, see [Create a prompt action](/ai-builder/use-a-custom-prompt-in-mcs#create-a-prompt-action).
 
 #### AIModelActionRequestTimeout
 
