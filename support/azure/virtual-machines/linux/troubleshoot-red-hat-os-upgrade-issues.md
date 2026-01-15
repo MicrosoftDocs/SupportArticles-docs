@@ -696,4 +696,4 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -703,4 +703,4 @@ When a new file is uploaded, the **CacheControl** property by default is **no-ca
 - [Troubleshoot Azure Files general NFS issues on Linux](../security/files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

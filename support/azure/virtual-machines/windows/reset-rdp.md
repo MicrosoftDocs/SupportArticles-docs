@@ -123,4 +123,4 @@ If you still can't connect remotely to your VM, see [Troubleshoot Remote Desktop
 
 - [Troubleshoot Remote Desktop connections to a Windows-based Azure virtual machine](troubleshoot-rdp-connection.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

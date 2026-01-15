@@ -62,4 +62,4 @@ If solutions 1 and 2 don't resolve the issue, verify the status of your custom A
 
 For more information about other types of Windows service accounts, see [ADSync service account](/entra/identity/hybrid/connect/concept-adsync-service-account).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

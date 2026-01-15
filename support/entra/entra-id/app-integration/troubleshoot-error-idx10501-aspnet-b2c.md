@@ -191,4 +191,4 @@ If you have an existing app that doesn’t use the partial layout, and you want 
 <a asp-area="" asp-controller="Home" asp-action="replace-with-your-controller-action">Replace with text that describes the action</a>
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

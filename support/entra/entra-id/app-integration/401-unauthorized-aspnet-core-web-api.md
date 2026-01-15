@@ -180,4 +180,4 @@ If you use the API development tool to debug the request, you should receive err
 
 :::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of error details in the API development tool." lightbox="media/401-unauthorized-aspnet-core-web-api/wrong-token.png":::
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

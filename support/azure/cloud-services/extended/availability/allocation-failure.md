@@ -60,4 +60,4 @@ The following common allocation scenarios cause an allocation request to be pinn
 
 Learn how to [troubleshoot cloud service role issues by using Azure PaaS computer diagnostics data](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

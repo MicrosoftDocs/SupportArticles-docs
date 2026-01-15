@@ -350,4 +350,4 @@ In some scenarios, updating the application code directly might help reduce the 
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -66,4 +66,4 @@ You can use the following tabs in the NetLog Viewer to inspect different aspects
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

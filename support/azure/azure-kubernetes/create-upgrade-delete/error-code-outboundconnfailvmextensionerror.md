@@ -157,4 +157,4 @@ The following table lists specific reasons why traffic might be blocked, and the
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

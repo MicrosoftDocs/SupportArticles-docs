@@ -127,4 +127,4 @@ If a function app is integrated with a virtual network, you must open port 443 f
 
 For more information, see [IP addresses used by Azure Monitor](/azure/azure-monitor/app/ip-addresses#outgoing-ports).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

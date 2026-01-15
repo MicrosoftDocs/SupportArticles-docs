@@ -51,4 +51,4 @@ You can find the list at Linux on [Azure-Endorsed Distributions](/azure/virtual-
 - [Supportability of adding Azure VMs to an existing availability set](../windows/virtual-machines-availability-set-supportability.md)
 - [Redeploy Linux virtual machine to new Azure node](redeploy-to-new-node-linux.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

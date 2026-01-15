@@ -59,4 +59,4 @@ If your app is sending too many custom event names, change the name in the code 
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

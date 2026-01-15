@@ -32,4 +32,4 @@ In Team Foundation Server 2015, paths in Team Foundation Version Control are not
 
 If you no longer need the data in a placeholder team project, you can delete it by following the steps in [Delete a project](/azure/devops/organizations/projects/delete-project). Otherwise, no action is required. Placeholder team projects are hidden in Web Access and Team Explorer in Visual Studio. Therefore, they have no significant effect on day-to-day usage. As with any other deleted item in Version Control, you can still access the corresponding project in Source Control Explorer if the **Show/Hide Deleted Items** button is enabled.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

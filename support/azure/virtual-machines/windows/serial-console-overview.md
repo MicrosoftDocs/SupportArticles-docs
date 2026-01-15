@@ -167,4 +167,4 @@ Additional Serial Console documentation is available in the sidebar.
 - More information is available for [Serial Console for Linux VMs](../linux/serial-console-linux.md).
 - More information is available for [Serial Console for Windows VMs](serial-console-windows.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -35,4 +35,4 @@ exec prc_QueryRegistry 1, '#\Service\WorkItemTracking\Settings\WorkItemLinksLimi
 
 The script updates a setting that increases the maximum number of 'allowed' links.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

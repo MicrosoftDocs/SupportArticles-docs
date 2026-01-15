@@ -103,4 +103,4 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](rese
 
 If you still cannot connect using Remote Desktop, see the [RDP troubleshooting guide](troubleshoot-rdp-connection.md). The [detailed RDP troubleshooting guide](detailed-troubleshoot-rdp.md) looks at troubleshooting methods rather than specific steps. You can also [open an Azure support request](https://azure.microsoft.com/support/options/) for hands-on assistance.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

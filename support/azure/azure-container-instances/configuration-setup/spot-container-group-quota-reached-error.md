@@ -46,4 +46,4 @@ To resolve this issue, increase the StandardSpotCores limit. To do so, use one o
 - [Change the subscription type to Enterprise Agreement](/azure/cost-management-billing/manage/mosp-ea-transfer) to get 100 StandardSpotCores limits.
 - File support request to increase capacity for Spot containers. For more information, see [How do I file quota requests for ACI Spot containers?](/azure/container-instances/container-instances-faq#spot-containers-on-azure-container-instances--preview)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

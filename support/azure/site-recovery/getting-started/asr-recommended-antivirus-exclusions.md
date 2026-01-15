@@ -81,4 +81,4 @@ Exclude the installation path of the Recovery Services agent, which is `C:\Progr
 
 Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Azure Site Recovery`.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

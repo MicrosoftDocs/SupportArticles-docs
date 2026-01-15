@@ -53,4 +53,4 @@ The daily cap can't stop data collection at precisely the specified cap level an
 > [!div class="nextstepaction"]
 > [Configure recommended alerts](./workspace-recommended-alerts.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
