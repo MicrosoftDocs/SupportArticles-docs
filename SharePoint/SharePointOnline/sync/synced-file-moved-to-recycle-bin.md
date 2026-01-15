@@ -16,7 +16,7 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# A file that was synchronized in SharePoint Online or OneDrive for Business is moved to the recycle bin
+# A file that was synchronized in SharePoint Online or OneDrive for Business is moved to the SharePoint Online or OneDrive for Business recycle bin
 
 ## Problem
 
@@ -34,6 +34,11 @@ This scenario frequently occurs because the file was accidentally deleted or was
 You can confirm that the file wasn't intentionally or accidentally deleted by the user who is listed in the **Deleted By** field. This is important when multiple users are synchronizing a single library. For example, in some cases, a user may try to copy a file that may have been accidentally moved to another directory. This removes the file from the synchronized library.
 
 If the file wasn't intentionally or accidentally deleted, you should have the user who's listed in the **Deleted By** field review the computer to determine whether a local process moved or deleted the item. For example, local virus-protection software may be configured to quarantine files.
+
+> [!NOTE]
+>If a folder is deleted from a locally synced SharePoint library, whether it’s empty or contains files, the OneDrive sync client processes this as a standard file system deletion. It then syncs this change to the cloud (SharePoint/OneDrive). When other users who have the same library synced receive this update, their devices also delete the folder locally. As a result, the operating system moves the deleted folder into each user’s local Recycle Bin. The OneDrive client ensures that local folders and the cloud library are kept in sync. When a deletion is made on any synced device, it is sent to the online library and then distributed to all other devices syncing the same library. Each device then deletes the folder locally, causing the operating system to move the item to that user’s local Recycle Bin. This process applies to empty folders as well.
+
+
 
 ## More information
 
