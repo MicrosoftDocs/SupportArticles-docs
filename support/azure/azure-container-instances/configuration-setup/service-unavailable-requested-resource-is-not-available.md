@@ -4,7 +4,7 @@ description: Provides a solution to the service unavailable error
 ms.date: 02/23/2024
 author: tysonfms
 ms.author: tysonfreeman
-editor: v-jsitser
+editor: kennethgp
 ms.reviewer: tomcassidy, v-leedennis
 ms.topic: troubleshooting-problem-resolution
 ms.service: azure-container-instances
@@ -13,17 +13,19 @@ ms.custom: sap:Configuration and Setup
 ---
 # "ServiceUnavailable (409) - requested resource is not available in the location" error
 
-This article discusses how to resolve the ServiceUnavailable (409) error ("The requested resource is not available in the location" '\<region-name>' at this moment") that occurs when you try to deploy a resource in Microsoft Azure Container Instances.
+This article discusses how to resolve the "ServiceUnavailable (409) error ("The requested resource is not available in the location" '\<region-name>' at this moment")" that occurs when you try to deploy a resource in Microsoft Azure Container Instances.
 
 ## Symptoms
 
 You receive an error message that resembles the following text:
 
-> The requested resource is not available in the location 'usgovvirginia' at this moment. Please retry with a different resource request or in another location. Resource requested: '2' CPU '4' GB memory 'Linux' OS virtual network. ServiceUnavailable (409).
+> The requested resource is not available in the location '\<region>' at this moment. Please retry with a different resource request or in another location. Resource requested: '2' CPU '4' GB memory 'Linux' OS virtual network. ServiceUnavailable (409).
 
 ## Cause
 
 This issue might occur if a feature isn't available in certain regions or if there's a lack of capacity. This issue is typically intermittent.
+
+If container group deployment requests more than 4 CPU or 16 GB memory the deployment is marked as Big Container Group. Big Container Group region capacity is enabled on demand, if there's no infrastructure available for the deployment the error is thrown.
 
 ## Solution
 
@@ -33,4 +35,6 @@ This issue might occur if a feature isn't available in certain regions or if the
 
 1. If you're deploying in an available region, and there's no feature limitation, retry the deployment.
 
- 
+1. If you're deploying a Big Container Group, open a support ticket to validate region capacity.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

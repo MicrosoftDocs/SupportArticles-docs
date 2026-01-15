@@ -5,10 +5,14 @@ ms.date: 05/27/2024
 ms.reviewer: v-rekhanain, momajed, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
+editor: kennethgp
 ---
 # GPU-enabled container deployment fails with "service unavailable" error
 
 This article discusses the causes of GPU-enabled Azure container instance deployment failures and provides solutions.
+
+> [!NOTE]
+> This product is retired as of July 14, 2025.
 
 ## Symptoms
 
@@ -49,7 +53,6 @@ Check the region availability of the GPU SKUs that you want to use. Not all regi
 
 If your region doesn't support the GPU SKU that you need, you can choose a different region or a GPU SKU that's available in your region.
 
-
 ## Cause 3: Incorrect GPU driver or toolkit is installed
 
 Your container image doesn't have the correct GPU driver or toolkit installed. GPU-enabled containers require NVIDIA drivers and CUDA or TensorRT libraries to access GPU resources.
@@ -61,9 +64,9 @@ Check your container image and make sure that it has the correct GPU driver and 
 ## Cause 4: No NVIDIA drivers or libraries are installed
 
 Your container image doesn't have NVIDIA drivers or libraries installed. GPU-enabled containers require NVIDIA drivers and CUDA or TensorRT libraries to access the GPU resources.
- 
+
 ### Solution 4: Use the NVIDIA GPU Cloud (NGC) repository
 
 Check your container image and make sure that it has the NVIDIA drivers and libraries installed. You can use the NVIDIA GPU Cloud (NGC) repository to find and pull prebuilt GPU-accelerated images for various frameworks and applications.
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

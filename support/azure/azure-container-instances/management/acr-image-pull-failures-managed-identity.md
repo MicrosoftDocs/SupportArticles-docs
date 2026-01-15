@@ -3,7 +3,8 @@ title: Fails to pull ACR images using Managed Identity authentication
 description: Describes how to troubleshoot image pull failures when you deploy to Azure Container Instances (ACI) from Azure Container Registry (ACR) by using a managed identity.
 ms.date: 12/08/2023
 ms.service: azure-container-instances
-ms.reviewer: tysonfreeman, v-weizhu 
+ms.reviewer: tysonfreeman
+editor: kennethgp
 ms.custom: sap:Management
 ---
 
@@ -32,7 +33,7 @@ Here are some causes of image pull failures:
 
 ## Troubleshooting from the ACI side
 
-1. Check if you're using an ACI API version earlier than 2021-07-01.
+1. Check if you're using an ACI API version earlier than `2021-07-01`.
 
     If so, you might see the "InvalidImageRegistryCredentialType" error:
 
@@ -41,12 +42,12 @@ Here are some causes of image pull failures:
     Deployment failed. Correlation ID: <Correlation ID>. { 
       "error": { 
         "code": "InvalidImageRegistryCredentialType", 
-        "message": "Identity in 'imageRegistryCredentials' of container group 'acrtestcontainergroup' is not supported." 
+        "message": "Identity in 'imageRegistryCredentials' of container group '<container group name>' is not supported." 
       } 
     } 
     ```
 
-    To resolve this issue, use ACI API version 2021-07-01 or later.
+    To resolve this issue, use ACI API version `2021-07-01` or later.
 
 2. Check if you're violating any ACI limitations.
 
@@ -68,7 +69,7 @@ Here are some causes of image pull failures:
         Deployment failed. Correlation ID: <Correlation ID>. { 
         "error": { 
             "code": "AmbiguousImageResitryCredentialType", 
-            "message": "The registry credential type in the 'imageRegistryCredentials' of container group 'acrtestcontainergroup' cannot be detected. Please set exactly one of username or identity" 
+            "message": "The registry credential type in the 'imageRegistryCredentials' of container group '<container group name>' cannot be detected. Please set exactly one of username or identity" 
         } 
         } 
         ```
@@ -79,7 +80,7 @@ Here are some causes of image pull failures:
         Deployment failed. Correlation ID: <Correlation ID>. { 
         "error": { 
             "code": "InvalidImageRegistryIdentity", 
-            "message": "The identity in the 'imageRegistryCredentials' of container group 'acrtestcontainergroup' not found in container group identity list." 
+            "message": "The identity in the 'imageRegistryCredentials' of container group '<container group name>' not found in container group identity list." 
         } 
         } 
         ```
@@ -110,7 +111,7 @@ Here are some causes of image pull failures:
     Deployment failed. Correlation ID: <Correlation ID>. { 
       "error": { 
         "code": "InaccessibleImage", 
-        "message": "The image 'myacr.azurecr.io/pythonworker:v1' in container group 'acrtestcontainergroup' is not accessible. Please check the image and registry credential." 
+        "message": "The image '<registry>.azurecr.io/<image>:<tag>' in container group '<container group name>' is not accessible. Please check the image and registry credential." 
       } 
     } 
     ```
@@ -119,4 +120,4 @@ Here are some causes of image pull failures:
 
 2. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

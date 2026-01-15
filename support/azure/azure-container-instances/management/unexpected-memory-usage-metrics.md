@@ -2,9 +2,9 @@
 title: Azure Container Instances shows unexpected memory usage metrics
 description: Learn why Azure Container Instances shows unexpected memory usage metrics in the Azure portal compared to other memory usage reporting tools.
 ms.date: 02/22/2024
-ms.author: tysonfreeman
-author: tysonfms
-editor: v-jsitser
+ms.author: kegonzal
+author: kennethgp
+editor: kennethgp
 ms.reviewer: v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Management
@@ -16,11 +16,11 @@ This article discusses scenarios in which you see lower-than-expected memory usa
 
 ## Symptoms
 
-When you check the memory usage metric of a multi-container container group in the Azure portal, the metric shows values that are lower than what you see when you run the [free -h](https://www.man7.org/linux/man-pages/man1/free.1.html) command while you're connecting to the main container.
+In the Azure portal, memory usage metrics for a multi-container container group show lower values than the [free -h](https://www.man7.org/linux/man-pages/man1/free.1.html) command shows when you connect to the container.
   
 ## Cause
 
-The memory usage metric in the Azure portal displays an average value for all containers that are in the container group. It doesn't show the memory usage for only one particular container. This metric is calculated by using a default time interval of one minute. Multi-container averaging can cause the memory usage that's shown in the Azure portal to be slightly different from the usage that's shown in the output of the `free` command.
+The memory usage metric in the Azure portal displays an average value for all containers that are in the container group. It doesn't show the memory usage for only one particular container. This metric is calculated by using a default time interval of one minute. Multi-container averaging can cause the memory usage showed in the Azure portal to be slightly different from the usage showed in the output of the `free` command.
 
 Values for aggregation types (such as Average, Minimum, and Maximum) are available only as an average across all containers in the container group. These statistics aren't available for an individual container within a container group that has many containers. For more information, see [Supported metrics per resource type in Azure Monitor](/azure/azure-monitor/reference/supported-metrics/metrics-index#microsoftcontainerinstance).
 
@@ -38,4 +38,4 @@ You can add a dimension filter to view metrics on a per-container basis if your 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

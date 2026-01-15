@@ -5,11 +5,12 @@ ms.date: 01/24/2024
 ms.service: azure-container-instances
 ms.custom: sap:Connectivity, devx-track-azurecli
 ms.reviewer: tysonfreeman, v-weizhu
+editor: kennethgp
 ---
 
 # Failed to delete a virtual network or subnet used by Azure Container Instances
 
-This article discusses errors that occur when you delete a virtual network (VNet) or subnet used by Azure Container Instances (ACI) and provides workarounds.
+This article discusses errors that occur when you delete a VNet (Virtual Network) or subnet used by Azure Container Instances (ACI) and provides workarounds.
 
 ## Symptoms
 
@@ -45,18 +46,13 @@ This article discusses errors that occur when you delete a virtual network (VNet
 
 The subnet delegation required by ACI must reference a residual Service Association Link, which prevents the deletion of the VNet or subnet used by ACI.
 
+> [!NOTE]
+> Removing subnet delegation isn't supported for Azure Container Instances. If you're getting this error while trying to set subnet delegation to **None**, delete the subnet and recreate it instead.
+
 ### Workaround: Delete the Service Association Link
 
-1. Navigate to the subnet in the Azure portal.
-2. Change the subnet delegation to **None**.
-3. Delete network profiles using the `az network profile delete` command to make sure that no network profiles are linked to the subnet.
-4. If the command in step 3 fails, there might be a lingering network profile. To delete a lingering network profile, use the following command:
-
-    ```azurecli
-    az network profile delete --id resourceIdOfNetworkProfile
-    ```
-5. If network profiles still block the subnet update, try to set the subnet delegation to **None** again.
-6. If the previous steps don't help, try to delete the Service Association Link via the Azure CLI using a specified API version, such as version 2018-10-01:
+1. Attempt to explicitly delete the subnet first to discard cascading delete operation errors.
+2. Try to delete a lingering network profile using the following command:
 
     ```azurecli
     az resource delete --ids /subscriptions/<subscription-id>/resourceGroups/<resourcegroup-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>/providers/Microsoft.ContainerInstance/serviceAssociationLinks/default --api-version 2018-10-01
@@ -64,7 +60,10 @@ The subnet delegation required by ACI must reference a residual Service Associat
 
 ## Cause 2: Network profiles block the deletion of the VNet/subnet
 
-When you remove the container group, the network profile created by ACI during the container group creation might not be properly deleted. This results in something remaining within the VNet or subnet, which blocks certain delete operations.
+When you remove the container group, the network profile created by ACI during the container group creation might not be properly deleted and blocks the delete operation.
+
+> [!NOTE]
+> Network profiles are retired as of the `2021-07-01` API version. Use latest API version to avoid subnet deletion issues in the future.
 
 ### Workaround 1: Delete the network profile of the container group from the Azure portal
 
@@ -85,16 +84,19 @@ After deleting all ACI container groups, follow these steps:
     ```azurecli
     NetworkProfile=$(az network vnet subnet show -g $RES_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME -o tsv --query ipConfigurationProfiles[].id)
     ```
+
 2. Delete the network profile:
 
     ```azurecli
     az network profile delete --ids $NetworkProfile --yes
     ```
+
 3. Delete the subnet:
 
     ```azurecli
     az network vnet subnet delete --resource-group $RES_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME
     ```
+
 4. Delete the VNet:
 
     ```azurecli
@@ -110,11 +112,13 @@ If deleting the network profile through the Azure portal and Azure CLI fails, up
     ```azurecli
     NETWORK_PROFILE_ID=$(az network profile list --resource-group <resource-group-name> --query [0].id --output tsv)
     ```
+
 2. Update the network profile:
 
     ```azurecli
     az resource update --ids $NETWORK_PROFILE_ID --set properties.containerNetworkInterfaceConfigurations=[]
     ```
+
 3. Delete the network profile and the subnet.
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

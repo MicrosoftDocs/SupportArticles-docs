@@ -4,6 +4,7 @@ description: Provides solutions to common issues with confidential containers.
 ms.date: 02/01/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: azure-container-instances
+editor: kennethgp
 ms.custom: sap:Management
 ---
 # Troubleshoot common issues with confidential containers
@@ -72,12 +73,13 @@ You might experience the following issues and errors when you deploy confidentia
     hcs::CreateComputeSystem <compute system id>@vm: The requested operation failed.: unknown.\r\n;
     The container group provisioning has failed. Refer to 'DeploymentFailedReason' event for more details.;
     ```
-    
+
     ```output
     Failed to create containerd task: failed to create shim task: task with id: '<task id>' cannot be created in pod: '<pod>'
     which is not running: failed precondition.\r\n;The container group provisioning has failed.
     Refer to 'DeploymentFailedReason' event for more details.
     ```
+
 - Device hash isn't found:
 
     ```output
@@ -90,6 +92,7 @@ You might experience the following issues and errors when you deploy confidentia
     guest modify: guest RPC failure: mounting scsi device controller 3 lun 2 onto /run/mounts/m4
     denied by policy: mount_device not allowed by policy. Errors: [deviceHash not found]
     ```
+
 - Other issues:
   - Logs don't show up.
   - The exec functionality doesn't work.
@@ -99,7 +102,7 @@ You might experience the following issues and errors when you deploy confidentia
 
 ## Cause
 
-In most cases, these issues occur due to the CCE policy.
+In most cases, these issues occur due to issues with the CCE policy definition.
 
 ## Solution
 
@@ -111,4 +114,4 @@ In most cases, these issues occur due to the CCE policy.
 
   To clean the cache, run the `docker rmi <image_name>:<tag>` command. To clean all images in the cache, run the `docker rmi $(docker images -a -q)` command. To inspect the missing hash, run the `docker inspect <image_name>:<tag>` command.
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

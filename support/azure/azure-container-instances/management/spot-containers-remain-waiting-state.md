@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in Azure Container Instances in whi
 ms.date: 05/13/2024
 author: mosbahmajed
 ms.author: momajed
-editor: v-jsitser
+editor: kennethgp
 ms.reviewer: alaljase, v-rekhanain, v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Management
@@ -61,8 +61,11 @@ Follow these steps to gather troubleshooting information and apply possible solu
 
 By following these steps, you can identify the cause of the `Waiting` state problem for your Azure Spot containers and take the appropriate action to resolve the problem. Remember to monitor your containers and adjust your deployment strategy as necessary to reduce disruptions.
 
+> [!NOTE]
+> Spot containers with Azure Container Instances is in preview and is not recommended for production scenarios.
+
 ## Resources
 
 - [Azure Spot Virtual Machines for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/use-spot)
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

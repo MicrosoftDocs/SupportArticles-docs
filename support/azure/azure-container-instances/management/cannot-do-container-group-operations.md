@@ -1,10 +1,10 @@
 ---
 title: Can't do operations or the container group is in a bad state
-description: Learn how to resolve an issue in Azure Container Instances in which you can't do a container group operation or the container group is in a bad state.
+description: Learn how to fix issues in Azure Container Instances when operations fail because container group is in a bad state.
 ms.date: 02/21/2024
 author: tysonfms
 ms.author: tysonfreeman
-editor: v-jsitser
+editor: kennethgp
 ms.reviewer: chiragpa, v-rekhanain, v-leedennis
 ms.service: azure-container-instances
 ms.topic: troubleshooting-problem-resolution
@@ -13,7 +13,7 @@ ms.custom: sap:Management
 ---
 # Can't do operations or the container group is in a bad state
 
-This article discusses how to resolve a scenario in Microsoft Azure Container Instances in which you can't do container group operations or the container group is in a bad state.
+This article explains how to fix issues in Azure Container Instances when operations fail because container group is in a bad state.
 
 ## Symptoms
 
@@ -27,17 +27,25 @@ You encounter one or more of the following problems:
 
 - The container group remains in a bad state (such as **Stopped** or **Failed**).
 
-## Cause
+## Cause 1: Managed identity deleted before container group
 
-The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script doesn't delete the resources in the correct order: It first deletes the managed identity that's necessary to authenticate the container group, and then it tries to delete the container group itself.
+The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script that deletes all the resources within a development resource group. The script doesn't delete the resources in the correct order: It first deletes the managed identity that's necessary to authenticate the container group, and then it tries to delete the container group itself.
 
-## Solution 1: Delete the container group before you delete the managed identity
+## Cause 2: CMK (Customer-Managed Key) deleted before container group
+
+CMK is enabled in container group and key or Azure Keyvault holding key was deleted before deleting container group.
+
+## Solution 1: Managed identity deleted before container group
 
 Delete the container group first, wait for the deletion operation to finish, and then delete the managed identity.
 
-## Solution 2: Open a support ticket to get the container groups out of a bad state
+## Solution 2: CMK (Customer-Managed Key) deleted before container group
 
-If you have any container groups that remain in a bad state because you first deleted the managed identities that are required for container group authentication, open a support ticket. Microsoft Support can stop the affected container groups and help you work through the other necessary steps to fix your container group setup.
+Confirm if encryption key was deleted or entire keyvault was deleted. Azure Keyvault may have soft-delete enabled and key could be recovered.
+
+## Solution 3: Open a support ticket to get the container groups out of a bad state
+
+Microsoft Support can stop the affected container groups and help you work through the other necessary steps to delete your container group.
 
 ## More information
 
@@ -45,4 +53,4 @@ If you have any container groups that remain in a bad state because you first de
 
 - [Deploy to Azure Container Instances from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi)
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

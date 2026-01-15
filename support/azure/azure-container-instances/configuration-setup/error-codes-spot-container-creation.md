@@ -5,7 +5,7 @@ ms.date: 04/14/2025
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: edneto, v-weizhu, v-leedennis
+ms.reviewer: edneto, v-weizhu, v-leedennis, kegonzal
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #customer intent: As a user of Azure Container Instances, I want find details and solutions to common user errors that involve Spot containers so that I can create Spot containers successfully.
@@ -27,4 +27,4 @@ This article provides solutions to common errors that occur when you try to crea
 
 - [FAQ - Spot containers on Azure Container Instances (Preview)](/azure/container-instances/container-instances-faq#spot-containers-on-azure-container-instances--preview)
 
- 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
