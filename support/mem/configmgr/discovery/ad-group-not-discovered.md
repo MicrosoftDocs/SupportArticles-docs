@@ -41,8 +41,8 @@ During the full discovery cycle of AD Group Discovery, Configuration Manager use
 
 Microsoft is aware of this issue. To work around this issue, use any of the following methods:
 
-- Move all groups to top-level OUs. For the example that's used earlier, that means moving Group B to another OU that isn't a child of OU-A (or any other OU in the discovery scopes).
-- Reconfigure the discovery scopes to include the child OUs as target OUs. For the example that's used earlier, that means including OU-B in the discovery scopes as an Organizational Unit.
+- Move all groups to top-level OUs. For the earlier example, that means moving Group B to another OU that isn't a child of OU-A (or any other OU in the discovery scopes).
+- Reconfigure the discovery scopes to include the child OUs as target OUs. For the earlier example, that means including OU-B in the discovery scopes as an Organizational Unit.
 - Use only the full discovery process for AD Group Discovery.
 
 ## More information
