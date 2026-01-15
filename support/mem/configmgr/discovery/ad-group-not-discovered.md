@@ -4,10 +4,10 @@ description: Troubleshoot an issue when AD Delta Discovery fails to detect group
 ms.date: 01/12/2025
 ms.reviewer: kaushika, jarrettr, brianhun, payur
 ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Discovery (all types)
+appliesto:
+  - <a href=https://learn.microsoft.com/lifecycle/products/microsoft-configuration-manager target=_blank>Supported versions of Configuration Manager</a>
 ---
 # Delta AD Group Discovery doesn't detect membership changes in nested OUs
-
-This article describes how to identify and resolve an issue in which Active Directory Group Discovery fails to detect group membership changes when groups are located in nested organizational units.
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
