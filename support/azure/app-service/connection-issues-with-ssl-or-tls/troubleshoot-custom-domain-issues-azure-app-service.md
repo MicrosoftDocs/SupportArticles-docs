@@ -335,6 +335,6 @@ domain might be intended for internal use only.
 
 **Solution**: Verify the IP where your custom domain is resolving. If it's a private address, then external users can't reach it by design. In such cases, either expose the site by using a public IP or proxy, or make sure that clients are within the network (for example, by using a VPN). If this situation isn't intentional, you might have configured a private endpoint. Consider removing the private endpoint for a purely public web app. If you expected internal-only access, and you see external exposure, make sure that you didn't use a public DNS for an internal app. Internal apps should use DNS entries that resolve internally only (for example, by using Azure Private DNS). Make sure that you match your DNS configuration to your network setup.
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

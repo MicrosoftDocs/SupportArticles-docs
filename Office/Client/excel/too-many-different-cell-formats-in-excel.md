@@ -1,8 +1,10 @@
 ---
 title: You receive a Too many different cell formats error message in Excel
 description: Discusses that you receive a Too many different cell formats error message in Excel. Provides a resolution.
-author: Cloud-Writer
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
@@ -10,7 +12,6 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
-ms.author: meerak
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019
@@ -88,7 +89,7 @@ To clean up workbooks that already contain several styles, you can use one of th
   [Remove Styles Add-in](https://ro.softpedia-secure-download.com/dl/8cf59470c56d8c59ef33441743129a81/61946f8e/100232879/software/OFFICE%20TOOLS/RemoveStyles.xlam)
 
 > [!NOTE]
-> You can also download a copy of XLStyles Tool for Windows 10, Windows 8.1, and Windows 8 from [the Microsoft Store](https://www.microsoft.com/store/apps/xlstylestool/9wzdncrfjptg).
+> You can also download a copy of XLStyles Tool for Windows 10 from [the Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfjptg).
 
 ### Method 4
 

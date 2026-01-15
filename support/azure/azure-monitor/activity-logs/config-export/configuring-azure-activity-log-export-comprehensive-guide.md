@@ -85,4 +85,4 @@ The logs should be visible.
 - [Azure activity logs overview](/azure/azure-monitor/fundamentals/data-sources)
 - [Configure diagnostic settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal)
 
- (../../../../includes/azure-help-support.md)]
+ 

@@ -41,4 +41,4 @@ var client = new SecretClient(new Uri(keyVaultUrl), credential);
 KeyVaultSecret result = client.GetSecret("MySecret");
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

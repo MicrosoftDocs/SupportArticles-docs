@@ -41,7 +41,7 @@ As an alternative, the tenant administrator can give consent to Power Query with
 1. Install [Azure PowerShell](/powershell/azure/install-az-ps).
 2. Run the following PowerShell commands:
    * `Login-AzureRmAccount` (and sign in as the tenant admin)
-   * `New-AzureRmADServicePrincipal -ApplicationId f3b07414-6bf4-46e6-b63f-56941f3f4128`
+   * `New-AzureRmADServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444`
 
 The advantage of this approach (versus the tenant-wide solution) is that this solution is very targeted. It provisions only the **Power Query** service principal, but no other permission changes are made to the tenant.
 

@@ -580,4 +580,4 @@ https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

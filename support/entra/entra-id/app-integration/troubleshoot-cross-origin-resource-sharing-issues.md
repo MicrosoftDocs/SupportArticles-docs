@@ -231,4 +231,4 @@ If your app uses Microsoft Entra Application Proxy, see [Understand complex appl
 - [Azure App Service REST API tutorial](/azure/app-service/app-service-web-tutorial-rest-api)
 - [Azure API Management CORS policy](/azure/api-management/cors-policy)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

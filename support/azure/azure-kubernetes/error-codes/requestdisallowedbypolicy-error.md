@@ -50,4 +50,4 @@ To get details about the policy that blocked your cluster deployment, see [Reque
 
 [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

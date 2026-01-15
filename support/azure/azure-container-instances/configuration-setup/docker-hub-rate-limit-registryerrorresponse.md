@@ -49,4 +49,4 @@ To resolve this issue, create a Docker account and use the Docker account creden
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

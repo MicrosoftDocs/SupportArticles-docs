@@ -49,4 +49,4 @@ To resolve this issue, follow these steps:
 
     The command output should show the cluster's `ProvisioningState` as `Running`. 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

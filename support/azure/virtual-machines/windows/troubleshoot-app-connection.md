@@ -147,4 +147,4 @@ For more information, see [Azure network monitoring overview](/azure/network-wat
 
 [Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](../linux/troubleshoot-ssh-connection.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

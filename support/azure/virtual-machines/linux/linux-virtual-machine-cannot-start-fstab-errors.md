@@ -137,4 +137,4 @@ If both the serial console and ALAR approaches aren't possible or fail, the repa
 
 Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, implement the [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropriate changes to the fstab file of the problematic OS disk.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -215,4 +215,4 @@ To download the trace file, connect to the Web App via methods such as Kudu, FTP
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

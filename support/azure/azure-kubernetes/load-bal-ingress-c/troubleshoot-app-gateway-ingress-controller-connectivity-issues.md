@@ -246,4 +246,4 @@ az network application-gateway start --name <YOUR_APPLICATION_GATEWAY_NAME> --re
 
 [!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

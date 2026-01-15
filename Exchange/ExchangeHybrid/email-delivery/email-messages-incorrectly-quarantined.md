@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: alehud, v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
   - Exchange Server 2013 Enterprise

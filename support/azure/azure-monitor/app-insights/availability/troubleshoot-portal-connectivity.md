@@ -40,4 +40,4 @@ To fix the issue, follow these steps:
 
 1. If the portal error persists and requires further investigations, [Capture a browser trace for troubleshooting](/azure/azure-portal/capture-browser-trace) while you reproduce the unexpected portal behavior. Then, you can report the incident to Microsoft Support.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

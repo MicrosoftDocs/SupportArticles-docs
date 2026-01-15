@@ -61,7 +61,3 @@ Here's a table that shows which ODBC Administrator Tool to use:
 For more information about known issues with using the 32-bit and 64-bit ODBC Administrator tool view the following article:
 
 [942976](https://support.microsoft.com/help/942976) The 32-bit version of the ODBC Administrator tool and the 64-bit version of the ODBC Administrator tool display both the 32-bit user DSNs and the 64-bit user DSNs in a 64-bit version of the Windows operating system
-
-For more information on the 2010 Office System Drivers view the following article:
-
-[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255)

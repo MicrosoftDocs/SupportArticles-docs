@@ -142,4 +142,4 @@ app.UseOpenIdConnectAuthentication(
 
 - [Infinite redirects with ASP.NET OWIN and OpenID Connect](https://varnerin.info/infinite-redirects-with-aspnet-owin-and-openid-connect/)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

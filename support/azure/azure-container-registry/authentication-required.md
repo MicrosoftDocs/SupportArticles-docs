@@ -41,4 +41,4 @@ Make sure that you're authorized to pull from the container registry. To do the 
 
 For more information, see [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 
