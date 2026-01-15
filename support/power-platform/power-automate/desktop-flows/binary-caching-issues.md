@@ -61,10 +61,10 @@ If your service account for the Power Automate machine runtime uses the default 
 
 If your service account for the Power Automate machine runtime is configured to run under a custom user account:
 
-1. In File Explorer, go to `%LOCALAPPDATA%\Cache` or `C:\Users\<Username>\AppData\Local\Cache` (replace `<Username>` with the configured account).
+1. In File Explorer, go to `%LOCALAPPDATA%\Cache` or `C:\Users\<Username>\AppData\Local\Cache`.
 
    > [!NOTE]
-   > The AppData folder is hidden by default. To show it, in File Explorer select **View** > **Show** > **Hidden items**.
+   > The AppData folder is hidden by default. To show it, in File Explorer select **View** &gt; **Show** &gt; **Hidden items**.
 
 1. Delete all files and folders in the Cache directory.
 1. Restart the **Power Automate Service** or restart your machine.
