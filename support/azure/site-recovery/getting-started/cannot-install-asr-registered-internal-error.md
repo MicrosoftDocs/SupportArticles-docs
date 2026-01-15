@@ -63,4 +63,4 @@ Then, add the retrieved VmmID value to the following registry subkey on the VMM 
 
 Microsoft Azure Site Recovery Provider should now install successfully.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

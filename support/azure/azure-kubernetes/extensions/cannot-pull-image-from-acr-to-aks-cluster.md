@@ -427,7 +427,7 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [cause1-solution1]: #solution-1-make-sure-the-correct-acr-role-assignment-is-created-for-identity
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired

@@ -58,4 +58,4 @@ If restoring the backup doesn't solve the problem, collect a memory dump file so
 - For more information about how to use Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 - If you can't connect to your VM, see [Troubleshoot Remote Desktop Protocol (RDP) connections to an Azure VM](./troubleshoot-rdp-connection.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

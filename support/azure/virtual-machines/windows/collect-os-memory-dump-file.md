@@ -17,4 +17,4 @@ This article shows how to collect an operating system (OS) memory dump file for 
 
 [!INCLUDE [Collect an OS memory dump file for Azure support](../../../includes/azure/collect-os-memory-dump-file.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

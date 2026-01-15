@@ -234,4 +234,4 @@ In the command output, the local address is the pod's IP address, and the foreig
 
 Repeat the steps in this section for all other pods running on the node. The pod that has the most connections in the `ESTABLISHED` state to public IP addresses hosts the application that causes SNAT port exhaustion on the node. Work with your application developers to tune the application for improved network performance using the recommendations mentioned in [Design connection-efficient applications](/azure/load-balancer/troubleshoot-outbound-connection#design-connection-efficient-applications). After implementing the recommendations, verify that you see less SNAT port exhaustion.
  
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

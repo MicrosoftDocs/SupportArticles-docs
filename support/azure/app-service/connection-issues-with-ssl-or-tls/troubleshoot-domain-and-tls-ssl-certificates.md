@@ -385,4 +385,4 @@ Also, if your CA gives you multiple certificates in the certificate chain, you h
 For an App Service certificate, you purchase through the Azure portal or by using a Powershell/CLI command. A certificate-signing request isn't needed. However, Azure Key Vault supports storing digital certificates issued by any CA. It supports creating a certificate-signing request with a private/public key pair. The certificate-signing request can be signed by any CA (an internal enterprise CA or an external public CA). For more information, see [Create a certificate-signing request](/azure/key-vault/certificates/create-certificate-signing-request).
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

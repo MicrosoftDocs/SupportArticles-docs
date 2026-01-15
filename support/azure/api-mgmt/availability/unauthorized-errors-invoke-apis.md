@@ -64,4 +64,4 @@ The expected HTTP response code for all the operations is 200, however the respo
 
     Developers must first subscribe to a product to get access to the API. When they subscribe, they get a subscription key that is good for any API in that product. If you created the APIM instance, you are an administrator already, so you are subscribed to every product by default.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -113,4 +113,4 @@ To resolve this issue, use the following commands to change `writeEnabled` to tr
     ```CLI
     az acr repository update --name myregistry --image hello-world:latest --write-enabled true
     ```
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

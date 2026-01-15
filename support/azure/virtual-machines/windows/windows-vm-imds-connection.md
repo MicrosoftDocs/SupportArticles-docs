@@ -163,4 +163,4 @@ If not, it means that the connection to the IMDS wire server is blocked somewher
 1. If the MAC addresses or the primary private IP addresses aren't identical between Azure and the VM guest OS, use various [route][route-command] commands to update the routing table so that the primary network interface and IP address are targeted.
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

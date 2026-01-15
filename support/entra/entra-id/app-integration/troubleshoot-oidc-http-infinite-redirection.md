@@ -53,4 +53,4 @@ public void ConfigureAuth(IAppBuilder app)
 
 This issue is discussed also in [this ASP.NET Security Blog article (Issue #219)](https://github.com/aspnet/Security/issues/219).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

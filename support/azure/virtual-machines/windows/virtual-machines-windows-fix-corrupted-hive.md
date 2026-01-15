@@ -17,4 +17,4 @@ This article shows how to fix registry hive corruption in an Azure virtual machi
 
 [!INCLUDE [Fix registry hive corruption in Windows VMs](../../../includes/azure/virtual-machines-windows-fix-corrupted-hive.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

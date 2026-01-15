@@ -137,4 +137,4 @@ First, follow the instructions in the [Attach the OS disk of the VM to another V
 
 [!INCLUDE [Repair or replace system binary file procedure](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

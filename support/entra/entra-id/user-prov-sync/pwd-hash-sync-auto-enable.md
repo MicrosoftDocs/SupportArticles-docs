@@ -78,4 +78,4 @@ Optionally, if you want to clear password hashes that are already synchronized t
 
     >[!NOTE]
     >If the cmdlet doesn't work for a federated domain user, you may need to temporarily change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

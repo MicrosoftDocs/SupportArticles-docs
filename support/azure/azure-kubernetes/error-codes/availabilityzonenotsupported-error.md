@@ -68,4 +68,4 @@ To resolve this issue, follow the [Azure region access request process](../../ge
                     }
                 ]
     ```
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

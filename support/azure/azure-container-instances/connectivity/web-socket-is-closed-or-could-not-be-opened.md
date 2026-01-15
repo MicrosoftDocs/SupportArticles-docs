@@ -30,4 +30,4 @@ To resolve this error, allow ingress to TCP port 19390 in your firewall. At a mi
 
 In some scenarios where the corporate proxy blocks port 19390, allow this port for corporate proxy, and then verify the traffic by using the **Network** tab in the browser developer tools.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

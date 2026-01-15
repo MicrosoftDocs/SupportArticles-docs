@@ -40,4 +40,4 @@ On the computer or virtual machine that hosts the application, add your user acc
 
 1. In the list of groups, select **Performance Monitor Users**, and then repeat the previous two steps.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

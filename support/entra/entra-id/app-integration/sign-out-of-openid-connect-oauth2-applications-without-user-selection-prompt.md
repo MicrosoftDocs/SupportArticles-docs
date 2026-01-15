@@ -108,4 +108,4 @@ services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationSch
 });
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

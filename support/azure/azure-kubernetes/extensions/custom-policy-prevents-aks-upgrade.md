@@ -27,4 +27,4 @@ During an AKS upgrade, the policies that are defined for the upgrade might diffe
 
 Try using the [Azure portal](https://portal.azure.com) instead of Azure CLI to start the upgrade.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -265,4 +265,4 @@ To ensure that the Azure VM Guest Agent has installed and enabled the extension 
 > [!div class="nextstepaction"]
 > [Advanced troubleshooting steps](ama-windows-installation-issues-advanced-troubleshooting-steps.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

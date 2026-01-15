@@ -90,6 +90,6 @@ If the app is configured correctly, the logging output should resemble the follo
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 

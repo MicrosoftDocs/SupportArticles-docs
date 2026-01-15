@@ -182,4 +182,4 @@ Microsoft Identity Web provides built-in mechanisms to manage token caches. For 
     Services.Configure<CookieAuthenticationOptions>(cookieScheme, options=>options.Events=new RejectSessionCookieWhenAccountNotInCacheEvents());
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

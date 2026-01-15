@@ -25,4 +25,4 @@ There are two possible solutions:
 
 - Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

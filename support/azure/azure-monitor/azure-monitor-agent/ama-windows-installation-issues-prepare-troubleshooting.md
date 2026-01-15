@@ -66,4 +66,4 @@ Before troubleshooting, understand the different ways to install AMA for Windows
 > [!div class="nextstepaction"]
 > [Detailed troubleshooting steps](ama-windows-installation-issues-detailed-troubleshooting-steps.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
