@@ -78,4 +78,4 @@ Behavior expectation if the feature is registered:
 - For any new clusters or node pools that are created or upgraded to Kubernetes versions earlier than 1.31, registering for this feature will have no effect. This is because parallel image pulling applies to only versions 1.31 and later.
 - Performing an empty `PUT` on existing Kubernetes 1.31 node pools or clusters (that were created before subscription registration) will not immediately switch parallel image pulling to serial pulling. To trigger the change, the node must undergo a reimage. A reimage occurs only during a Kubernetes or node image upgrade. However, the PUT operation will update the flag in the database, and the change will take effect during the next upgrade.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

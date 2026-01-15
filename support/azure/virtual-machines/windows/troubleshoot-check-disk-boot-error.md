@@ -49,4 +49,4 @@ Windows will boot normally after the Check Disk process is completed. If the VM 
 
 4. After the Check Disk completes, detach the disk from the repair VM, and then re-attach the disk to the affected VM as an OS disk. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a repair VM through the Azure portal](troubleshoot-recovery-disks-portal-windows.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

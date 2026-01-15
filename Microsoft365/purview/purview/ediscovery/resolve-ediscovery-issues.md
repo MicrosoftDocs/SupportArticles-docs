@@ -32,7 +32,7 @@ If you experience an issue or error that's related to searches in Microsoft Purv
 - [Export download issue: eDiscovery export doesn't download any files](#export-download-issue-ediscovery-export-doesnt-download-any-files)
 - [Export download error: "Search result was not downloaded as it is a folder"](#export-download-error-search-result-was-not-downloaded-as-it-is-a-folder)
 
-If none of these resolutions apply to your search issue, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021). Depending on your issue, gather output by using the [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch) or [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction) PowerShell cmdlet before you create a support case. For information about other diagnostic information that Microsoft Support might need, see [Collect eDiscovery diagnostic information](/microsoft-365/compliance/ediscovery-diagnostic-info).
+If none of these resolutions apply to your search issue, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021). Depending on your issue, gather output by using the [Get-ComplianceSearch](/powershell/module/exchangepowershell/get-compliancesearch) or [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction) PowerShell cmdlet before you create a support case. For information about other diagnostic information that Microsoft Support might need, see [Collect eDiscovery diagnostic information](/microsoft-365/compliance/ediscovery-diagnostic-info).
 
 For eDiscovery hold issues, see [Resolve hold errors in eDiscovery (Standard)](resolve-ediscovery-hold-issues.md).
 
@@ -58,7 +58,7 @@ When you run an [eDiscovery search](/microsoft-365/compliance/ediscovery-search-
 
 ### Cause
 
-The locations that are specified in the error message are invalid. The mailbox identifier for each invalid location is used by duplicate or conflicting objects in Exchange Online Protection (EOP).
+The locations that are specified in the error message are invalid. The mailbox identifier for each invalid location is used by duplicate or conflicting objects in Microsoft 365.
 
 ### Resolution
 
@@ -66,7 +66,7 @@ For each invalid location, follow these steps:
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Find the duplicate or conflicting objects that use a mailbox identifier. To search, run the following [Get-Recipient](/powershell/module/exchange/get-recipient) command:
+2. Find the duplicate or conflicting objects that use a mailbox identifier. To search, run the following [Get-Recipient](/powershell/module/exchangepowershell/get-recipient) command:
 
    ```powershell
    Get-Recipient -Identity "<mailbox identifier from error message>"
@@ -84,13 +84,13 @@ Your [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content
 
 ### Cause
 
-The system can't find one of the [recipients](/powershell/module/exchange/new-mailboxsearch#-recipients) in your eDiscovery search because of synchronization delays in Exchange Online Protection (EOP).
+The system can't find one of the [recipients](/powershell/module/exchangepowershell/new-mailboxsearch#-recipients) in your eDiscovery search because of synchronization delays in Microsoft 365.
 
 ### Resolution
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Check whether the recipients in the search query are synced in EOP by using the [Get-Recipient](/powershell/module/exchange/get-recipient) cmdlet. Run the following command:
+2. Check whether the recipients in the search query are synced in Microsoft 365 by using the [Get-Recipient](/powershell/module/exchangepowershell/get-recipient) cmdlet. Run the following command:
 
    ```powershell
    Get-Recipient -Identity "<user identifier>" | FL
@@ -98,7 +98,7 @@ The system can't find one of the [recipients](/powershell/module/exchange/new-ma
 
 3. If the command doesn't return a user object for a recipient, wait 30 minutes for synchronization to finish, and then recheck.
 
-4. After you verify that the recipient is synced in EOP, retry your search.
+4. After you verify that the recipient is synced in Microsoft 365, retry your search.
 
 [Back to top](#resolve-search-errors-in-ediscovery)
 
@@ -153,7 +153,7 @@ Your organization reached the [maximum limit of 50 concurrent jobs](/microsoft-3
 Use the following procedure to see which export jobs are currently running:
 
 > [!NOTE]
-> To use the following procedure, you must be a member of the eDiscovery Manager role group and be an eDiscovery administrator in that group. For more information about how to view or assign eDiscovery Administrators in your organization, see [Assign eDiscovery permissions](/microsoft-365/compliance/ediscovery-assign-permissions#assign-ediscovery-permissions), [Get-eDiscoveryCaseAdmin](/powershell/module/exchange/get-ediscoverycaseadmin), and [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin).
+> To use the following procedure, you must be a member of the eDiscovery Manager role group and be an eDiscovery administrator in that group. For more information about how to view or assign eDiscovery Administrators in your organization, see [Assign eDiscovery permissions](/microsoft-365/compliance/ediscovery-assign-permissions#assign-ediscovery-permissions), [Get-eDiscoveryCaseAdmin](/powershell/module/exchangepowershell/get-ediscoverycaseadmin), and [Add-eDiscoveryCaseAdmin](/powershell/module/exchangepowershell/add-ediscoverycaseadmin).
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
@@ -183,7 +183,7 @@ To resolve the error, use the following procedure:
 
    - Wait for one or more running jobs to finish.
 
-   - Remove one or more running jobs that you no longer require by using the [Remove-ComplianceSearchAction](/powershell/module/exchange/remove-compliancesearchaction) PowerShell cmdlet.
+   - Remove one or more running jobs that you no longer require by using the [Remove-ComplianceSearchAction](/powershell/module/exchangepowershell/remove-compliancesearchaction) PowerShell cmdlet.
 
 2. Retry your search or export operation.
 

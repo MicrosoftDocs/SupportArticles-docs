@@ -40,4 +40,4 @@ Application Insights SDKs and agents send telemetry to get ingested as REST call
   > [!NOTE]  
   > The example command calls apply to Application Insights for Java version 3.4.11. To find the version number and URL address of the current release of Application Insights for Java, see <https://github.com/microsoft/ApplicationInsights-Java/releases>.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

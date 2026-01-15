@@ -77,4 +77,4 @@ Steps(on the test agent machine):
 
 Repeat the same steps on the test controller machine.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

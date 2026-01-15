@@ -10,7 +10,7 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: kekici, briant, v-six
+ms.reviewer: kekici, briant, v-six, v-kccross
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
@@ -19,6 +19,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # You've exceeded the storage limit for your mailbox error when signing in to Outlook on the Web
 
 _Original KB number:_ &nbsp; 2958940
@@ -42,8 +43,6 @@ X-BEServer: E15
 Date: *DateTime*
 
 After the user selects the refresh the page link, they can sign in to Outlook Web App successfully.
-
-This article is intended for use by support agents and IT professionals. If you're looking for more information about Outlook.com errors, see [Frequently Asked Questions for Outlook.com](https://answers.microsoft.com/en-us/outlook_com/forum/opreview-opemail/frequently-asked-questions-for-outlookcom-preview/bfba4529-2ca3-4b50-895d-03eac9fa83bd?auth=1).
 
 ## Cause
 

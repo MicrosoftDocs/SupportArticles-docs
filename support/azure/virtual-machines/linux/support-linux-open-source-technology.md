@@ -74,4 +74,4 @@ The following situations are some of the support scenarios that Microsoft provid
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

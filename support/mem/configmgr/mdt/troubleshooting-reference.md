@@ -8,7 +8,12 @@ ms.custom: sap:Operating Systems Deployment (OSD)\MDT Integration or User Driven
 
 # Troubleshooting Reference for the Microsoft Deployment Toolkit
 
-The deployment of operating systems and applications as well as the migration of user state can be a challenging endeavor, even when you are equipped with appropriate tools and guidance. This reference, which is part of Microsoft&reg; Deployment Toolkit (MDT) 2013, provides information on current known issues, possible workarounds for those issues, and troubleshooting guidance.  
+##  Microsoft Deployment Toolkit (MDT) is now retired
+
+> [!IMPORTANT]
+> **Microsoft Deployment Toolkit (MDT) is now retired.** MDT integration with Configuration Manager and MDT Standalone are **no longer supported**. To prevent task sequence corruption and modification failures, **remove all MDT task sequence steps**, and then **remove MDT integration**. Consider moving to modern provisioning solutions such as Windows Autopilot to obtain cloud‑driven, zero‑touch provisioning for Windows devices. [Learn more about Autopilot](/windows/deployment/windows-autopilot/windows-autopilot). For customers who have on-premises infrastructure and existing Configuration Manager environments, OSD remains a fully supported option.
+>
+>For full details about this retirement, see the [Removed and Deprecated Features](/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) page.
 
 > [!NOTE]
 > In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  

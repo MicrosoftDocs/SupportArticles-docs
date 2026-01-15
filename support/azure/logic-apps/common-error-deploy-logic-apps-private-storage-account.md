@@ -91,4 +91,4 @@ The following list includes more troubleshooting actions that you can take to fi
 
      1. Check that the virtual network integration is set up correctly with the appropriate virtual network and subnet in your logic app.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

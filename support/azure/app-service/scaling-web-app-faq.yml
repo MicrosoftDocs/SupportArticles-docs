@@ -83,4 +83,4 @@ sections:
           [Availability zone support](/azure/reliability/reliability-app-service#availability-zone-support) requires at least three instances. Verify if the App Service Plan has zone redundancy enabled and if you have autoscale on the App Service Plan. If so, correct the autoscale rule to not set the number of instances to a value less than three.
 
 
-          [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+           

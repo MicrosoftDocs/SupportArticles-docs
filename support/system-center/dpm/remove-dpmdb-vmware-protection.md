@@ -12,9 +12,9 @@ ms.reviewer: Mjacquet, v-jysur; jarrettr; sudesai, v-six
 ```sql
 SET XACT_ABORT ON
 BEGIN TRANSACTION
-IF EXISTS( SELECT Ds.DataSourceID FROM tbl_IM_DataSource Ds JOIN tbl_PRM_LogicalReplica Lr ON Ds.DataSourceId = Lr.DataSourceId WHERE Ds.AppId = '18BEE66C-826F-4499-A663-9805C8688AD3') 
+IF EXISTS( SELECT Ds.DataSourceID FROM tbl_IM_DataSource Ds JOIN tbl_PRM_LogicalReplica Lr ON Ds.DataSourceId = Lr.DataSourceId WHERE Ds.AppId = '00001111-aaaa-2222-bbbb-3333cccc4444') 
 PRINT 'VMware DataSource in Active/Inactive protected state'
-ELSE IF EXISTS ( SELECT DataSourceID FROM tbl_IM_DataSource WHERE CloudProtectionStatus!=0 AND AppId='18BEE66C-826F-4499-A663-9805C8688AD3')
+ELSE IF EXISTS ( SELECT DataSourceID FROM tbl_IM_DataSource WHERE CloudProtectionStatus!=0 AND AppId='00001111-aaaa-2222-bbbb-3333cccc4444')
 PRINT 'VMware DataSource in Cloud are Active/Inactive protected state'
 ELSE
                 PRINT 'All VMware datasource protections are removed'
@@ -102,7 +102,7 @@ ELSE
         END
         DROP TABLE #serverIdTable3
 
-        SELECT DatasourceID INTO #datasourceIdTable2 FROM dbo.tbl_IM_DataSource WHERE AppId='18BEE66C-826F-4499-A663-9805C8688AD3'
+        SELECT DatasourceID INTO #datasourceIdTable2 FROM dbo.tbl_IM_DataSource WHERE AppId='00001111-aaaa-2222-bbbb-3333cccc4444'
         DECLARE @datasourceId2 nvarchar(100)
         WHILE exists ( SELECT * FROM #datasourceIdTable2 )
         BEGIN
@@ -114,7 +114,7 @@ ELSE
         END
         DROP TABLE #datasourceIdTable2
        
-        Delete from tbl_IM_DataSource where AppId='18BEE66C-826F-4499-A663-9805C8688AD3'   
+        Delete from tbl_IM_DataSource where AppId='00001111-aaaa-2222-bbbb-3333cccc4444'   
 
 COMMIT;
 ```

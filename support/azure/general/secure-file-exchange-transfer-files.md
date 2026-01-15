@@ -97,4 +97,4 @@ When you open a support case and the country/region that you specify is:
 - When the service request is closed by the Microsoft Support Professional, the workspace itself will be inaccessible. If the service request is reopened, and the link hasn't expired, the workspace will be accessible.
 - 90 days after the service request is closed, all files in the workspace and the workspace itself will be permanently deleted.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

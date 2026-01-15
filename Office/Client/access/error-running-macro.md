@@ -25,7 +25,7 @@ ms.date: 05/26/2025
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]
-> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://smallbusiness.support.microsoft.com) site.
+> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://support.microsoft.com/smallbusiness) site.
 
 ## Symptoms
 

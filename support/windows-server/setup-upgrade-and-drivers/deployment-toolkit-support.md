@@ -1,6 +1,6 @@
 ---
-title: Microsoft Deployment Toolkit support life cycle
-description: Discusses the support life cycle for Microsoft Deployment Toolkits.
+title: Microsoft Deployment Toolkit support lifecycle
+description: Discusses the support lifecycle for Microsoft Deployment Toolkits.
 ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,22 +12,22 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Microsoft Deployment Toolkit support life cycle
+# Microsoft Deployment Toolkit support lifecycle
 
-This article discusses the support life cycle for Microsoft Deployment Toolkits.
+This article discusses the support lifecycle for Microsoft Deployment Toolkits.
 
 _Original KB number:_ &nbsp; 2872000
 
-## Summary
+##  Microsoft Deployment Toolkit (MDT) is now retired
 
-The latest version of the Microsoft Deployment Toolkit can be downloaded from the following Microsoft Download Center website:
-[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=325278)
-For more information about the Microsoft Deployment Toolkit, see the following Windows website:
-[Microsoft Deployment Toolkit documentation](https://www.microsoft.com/mdt)
+> [!IMPORTANT]
+> **Microsoft Deployment Toolkit (MDT) is retired.** MDT integration with Configuration Manager and MDT Standalone are **no longer supported**. To prevent task sequence corruption and modification failures, **remove all MDT task sequence steps**, and then **remove MDT integration**. Consider moving to modern provisioning solutions such as Windows Autopilot to obtain cloud‑driven, zero‑touch provisioning for Windows devices. [Learn more about Autopilot](/windows/deployment/windows-autopilot/windows-autopilot). For customers who have on-premises infrastructure and existing Configuration Manager environments, OSD remains a fully supported option.
+>
+>For full details about this retirement, see the [Removed and Deprecated Features](/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) page.
 
 ## More information
 
-Microsoft Deployment Toolkits use the following support life cycle:
+Microsoft Deployment Toolkits use the following support lifecycle:
 
 - MDT releases will support only scenarios that use underpinning technologies that are still under their mainstream support policy.
 - MDT releases will be supported for one (1) year after the next version is released, whichever date is last.

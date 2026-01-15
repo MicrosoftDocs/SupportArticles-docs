@@ -82,6 +82,6 @@ The workbook displays a table that contains the following columns:
 > [!div class="nextstepaction"]
 > [Step 3: Configure data collections](step-3-configure-data-collections.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [ap]: https://portal.azure.com

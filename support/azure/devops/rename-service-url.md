@@ -82,4 +82,4 @@ We will not set up a redirect from your previous Azure DevOps Service URL to the
   - [Remove and re-configure the self-host Linux agents](/azure/devops/pipelines/agents/v2-linux#remove-and-re-configure-an-agent).
   - [Remove and re-configure the self-host macOS agents](/azure/devops/pipelines/agents/v2-osx#remove-and-re-configure-an-agent).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

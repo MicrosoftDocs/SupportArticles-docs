@@ -44,9 +44,9 @@ This error response is called _IP throttling_, and it can help reduce the amount
 
 If you received this NDR in response to a message that you sent, try the following steps:
 
-1. If your organization uses Exchange Online Protection (EOP) as part of Microsoft 365 or Office 365 or standalone EOP subscription, an email admin can use the steps in the next section to fix the problem.
+1. If your organization uses [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) as part of Microsoft 365 or [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop), an email admin can use the steps in the next section to fix the problem.
 
-2. If your organization doesn't use EOP (for example, if you provide a third-party service), the error will resolve itself as you establish an email sending history with Microsoft 365 or Office 365 over a period of a few days.
+2. If your organization doesn't use [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) (for example, if you use a third-party service), the error will resolve itself as you establish an email sending history with Microsoft 365 or Office 365 over a period of a few days.
 
 If the problem continues, send the bounce message to your email admin for assistance and refer them to the information in this article.
 

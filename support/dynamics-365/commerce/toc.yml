@@ -62,6 +62,8 @@
       href: payments/refund-declined.md
     - name: Save for my next payment option doesn't appear
       href: payments/next-payment-link-not-appearing.md
+    - name: Troubleshoot Dynamics 365 Payment Connector for Adyen
+      href: payments/adyen-connector.md
 - name: Point of sale (POS)
   items:
     - name: Store Commerce app (POS) is suddenly deactivated

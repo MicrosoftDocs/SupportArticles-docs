@@ -34,7 +34,7 @@ The following articles may help resolve the issue:
 
 - [Delete your office document cache](https://support.office.com/article/Delete-your-Office-Document-Cache-b1d3765e-d71b-4bb8-99ca-acd22c42995d)
 
-- [Repair an Office application](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b)
+- [Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b)
 
 For more information, see [Fix problems opening documents in SharePoint libraries](https://support.office.com/article/Fix-problems-opening-documents-in-SharePoint-libraries-31329FA1-4AD0-47FC-95D8-BB0C5B12A536).
 

@@ -139,4 +139,4 @@ Run the `az aks command invoke` command on a local computer or any virtual machi
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

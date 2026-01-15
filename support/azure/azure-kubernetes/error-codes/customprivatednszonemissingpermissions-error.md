@@ -57,4 +57,4 @@ To create the missing role assignment, follow these steps:
 > [!NOTE]
 > It can take up to 60 minutes to finish granting permissions to your cluster's managed identity or service principal.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

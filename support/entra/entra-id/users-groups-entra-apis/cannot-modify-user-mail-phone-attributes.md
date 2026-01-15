@@ -31,4 +31,4 @@ To resolve this issue, assign a Helpdesk Administrator, User Administrator, or G
 > [!CAUTION]
 > When you assign one of the three admin roles to the service principal or user, you give them the ability to perform tasks at that level.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -45,4 +45,4 @@ Here's the correct request format:
 
 `https://graph.microsoft.com/v1.0/users/example_gmail.com%23EXT%23@example.onmicrosoft.com`
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

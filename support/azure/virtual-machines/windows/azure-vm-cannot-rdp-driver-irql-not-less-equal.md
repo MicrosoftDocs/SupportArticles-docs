@@ -101,4 +101,4 @@ To resolve this problem, gather the memory dump file for the crash, and contact 
 
 Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

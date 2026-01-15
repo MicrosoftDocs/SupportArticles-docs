@@ -139,4 +139,4 @@ To add the virtual network link to the custom DNS server from the private DNS zo
 
 - [Connect privately to an Azure container registry using Azure Private Link](/azure/container-registry/container-registry-private-link)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

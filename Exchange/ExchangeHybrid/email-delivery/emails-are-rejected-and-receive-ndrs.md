@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: jhayes, rorylen, v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
@@ -32,26 +32,26 @@ You run the Hybrid Configuration wizard in Exchange Server 2010 to set up a shar
 
 ## Cause
 
-This issue can occur if the IP addresses that are associated with Exchange Online Protection changed. These IP addresses aren't automatically updated in the on-premises environment. Therefore, the IP addresses that are set in the on-premises Exchange Online Protection receive connector may become invalid. When this issue occurs, mail that's routed from Microsoft 365 users through Exchange Online Protection to the on-premises environment may be rejected.
+This issue can occur if the IP addresses that are associated with Microsoft 365 changed. These IP addresses aren't automatically updated in the on-premises environment. Therefore, the IP addresses that are set in the on-premises receive connector for Microsoft 365 may become invalid. When this issue occurs, mail that's routed from Microsoft 365 users to the on-premises environment may be rejected.
 
 ## Resolution
 
 To fix this issue, use the following steps:
 
-- Rerun the Hybrid Configuration wizard. Rerunning the wizard configures the on-premises Exchange Online Protection receive connector to use the correct IP addresses.
+- Rerun the Hybrid Configuration wizard. Rerunning the wizard configures the on-premises receive connector for Microsoft 365 to use the correct IP addresses.
 
   > [!NOTE]
   > This step applies only to the Hybrid Configuration wizard in Exchange Server 2010. When you run the Hybrid Configuration wizard in Exchange Server 2013, no receive connectors are created or are necessary.
 
-- Manually update the IP addresses that are listed under **Receive mail from remote servers that have these IP addresses** for the on-premises Exchange Online Protection receive connector.
+- Manually update the IP addresses that are listed under **Receive mail from remote servers that have these IP addresses** for the on-premises receive connector for Microsoft 365.
 
 ## More information
 
-In a shared namespace and centralized mail control scenario, an Exchange Online Protection receive connector must be created on the hybrid Exchange 2010 hub transport server to make sure that the on-premises environment receives mail from Microsoft 365 users. The Hybrid Configuration wizard creates the receive connector on the appropriate Exchange 2010 server. Then, the wizard configures the connector with the IP addresses to enable incoming Exchange Online Protection traffic from Microsoft 365 users to be routed to the on-premises environment.
+In a shared namespace and centralized mail control scenario, an receive connector for Microsoft 365 must be created on the hybrid Exchange 2010 Hub transport server to make sure that the on-premises environment receives mail from Microsoft 365 users. The Hybrid Configuration wizard creates the receive connector on the appropriate Exchange 2010 server. Then, the wizard configures the connector with the IP addresses to enable incoming traffic from Microsoft 365 users to be routed to the on-premises environment.
 
-The following screenshot shows an example of an Exchange Online Protection receive connector that the Hybrid Configuration wizard creates.
+The following screenshot shows an example of an receive connector for Microsoft 365 that the Hybrid Configuration wizard creates.
 
-:::image type="content" source="media/emails-are-rejected-and-receive-ndrs/example-of-eop-receive-connector.png" alt-text="Screenshot of an Exchange Online Protection receive connector.":::
+:::image type="content" source="media/emails-are-rejected-and-receive-ndrs/example-of-eop-receive-connector.png" alt-text="Screenshot of a Microsoft 365 receive connector.":::
 
 For more information about the Hybrid Configuration wizard in Exchange 2010, see [Hybrid Deployments with the Hybrid Configuration wizard](/previous-versions/office/exchange-server-2010/hh529920(v=exchg.141)).
 

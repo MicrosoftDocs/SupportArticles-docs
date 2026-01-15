@@ -17,4 +17,4 @@ This article shows how to repair the boot configuration data in an Azure virtual
 
 [!INCLUDE [Repair the boot configuration data](../../../includes/azure/virtual-machines-windows-repair-boot-configuration-data.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

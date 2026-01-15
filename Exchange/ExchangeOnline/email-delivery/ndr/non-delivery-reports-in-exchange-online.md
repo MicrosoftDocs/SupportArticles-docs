@@ -1,6 +1,6 @@
 ---
 title: Email non-delivery report (NDR) and SMTP errors in Exchange Online
-ms.date: 10/14/2024
+ms.date: 01/07/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -82,6 +82,7 @@ The following table contains the error codes (also known as enhanced status code
 |5.7.136|`Sender was not authenticated`|The recipient address is a mail user that is set up to reject messages sent from outside its organization. Only an email administrator for the recipient's organization can change this.|For more information, see [Fix email delivery issues for error code 5.7.136 in Exchange Online](fix-error-code-5-7-136-in-exchange-online.md).|
 |5.7.232|`Your message can't be sent because your trial tenant has exceeded its daily limit for sending email to external recipients (tenant external recipient rate limit)`|The number of external recipients emailed in a 24-hour period exceeds the external recipient rate limit in Exchange Online. The limit applies per trial tenant.|The external recipient rate limit is tracked over a 24-hour rolling window. When the count for the most recent 24-hour period falls below the limit, users in the trial tenant can resume sending messages to external recipients. The limit helps prevent the distribution of unsolicited bulk messages.|
 |5.7.233|`Your message can't be sent because your tenant exceeded its daily limit for sending email to external recipients (tenant external recipient rate limit)`|The number of external recipients emailed in a 24-hour period exceeds the external recipient rate limit in Exchange Online. The limit applies per tenant.|The external recipient rate limit is tracked over a 24-hour rolling window. When the count for the most recent 24-hour period falls below the limit, users in the tenant can resume sending messages to external recipients. The limit helps prevent the distribution of unsolicited bulk messages.|
+|5.7.236|`Your message can't be sent because your tenant has exceeded its daily limit for sending email to external recipients from your tenant's onmicrosoft.com domains`|Your organization has exceeded the limit of sending emails to 100 external recipients from your organization’s onmicrosoft.com (MOERA) domain within a 24‑hour rolling window. This limit is enforced per tenant.|MOERA (onmicrosoft.com) domains are intended only for testing, and shouldn't be used to send regular email messages. Messages sent from these domains are limited to 100 external recipients for a rolling 24-hour period. Inbound emails are not affected. External recipients are counted after any recipient list expansion. To avoid this limitation, purchase and migrate to a custom domain. Then ensure that only the custom domain is used to send email messages to external recipients.|
 |5.7.321|`starttls-not-supported: Destination mail server must support TLS to receive mail.`|<ul><li>DNSSEC checks have passed, yet, upon connection, the destination mail server doesn't respond to the `STARTTLS` command. </li><li>The destination server responds to the `STARTTLS` command, but the TLS handshake fails. </li></ul>| This message usually indicates an issue on the destination mail server. Check the validity of the recipient address and determine if the destination server is configured correctly to receive messages.|
 |5.7.322|`certificate-expired: Destination mail server's certificate is expired.`| DNSSEC checks have passed, yet, upon establishing the connection, the destination mail server provides a certificate that is expired. | A valid X.509 certificate that isn't expired must be presented. X.509 certificates must be renewed after their expiration, most commonly on an annual basis.|
 |5.7.323|`tlsa-invalid: The domain failed DANE validation.`| Records are DNSSEC authentic but one or more of the following things occurred: <ul><li> The destination mail server's certificate doesn't match what is expected per the authentic TLSA record.</li><li> The authentic TLSA record is misconfigured. </li><li> The destination domain is being attacked.</li><li> The certificate start date is in the future. </li><li> Any other DANE failure.</li></ul>| This message usually indicates an issue exists on the destination mail server. Check the validity of the recipient address and determine if the destination server is configured correctly to receive messages. <br/><br/> For more information about DANE, see [https://datatracker.ietf.org/doc/html/rfc7671](https://datatracker.ietf.org/doc/html/rfc7671).|
@@ -191,7 +192,7 @@ Original message headers:
 ...
 ```
 
-From the **User information** section, you can determine that the recipient is Ronald Slattery, that the message was rejected by the mail server mail.contoso.com, and that server isn't an Exchange Online or Exchange Online Protection mail server.
+From the **User information** section, you can determine that the recipient is Ronald Slattery, that the message was rejected by the mail server mail.contoso.com, and that server isn't a Microsoft 365 mail server.
 
 From the **Diagnostic information for administrators** section, you can see that alpineskihouse.com tried to connect to the server, mail.contoso.com, to deliver the message to the recipient ronald@contoso.com. However, mail.contoso.com responded with the error `530 5.7.1 Client was not authenticated`. Even though bigfish.com generated the NDR, mail.contoso.com actually rejected the message, so the administrators at contoso.com are responsible for understanding and fixing the problem. This particular error indicates that the server, mail.contoso.com, is configured not to accept anonymous email from the Internet.
 
@@ -217,7 +218,7 @@ Although the **Original message headers** are omitted from this example because 
 
 - [Find and fix email delivery issues as a Microsoft 365 for business admin](/Exchange/fix-outlook-connection-problems-in-office-365/fix-outlook-connection-problems-in-office-365/find-and-fix-email-delivery-issues-as-an-office-365-for-business-admin)
 
-- [Anti-spam protection in EOP](/office365/securitycompliance/anti-spam-protection)
+- [Anti-spam protection in cloud organizations](/defender-office-365/anti-spam-protection-about)
 
 - [Recover deleted items in a user mailbox - Admin Help](/office365/enterprise/recover-deleted-items-in-a-mailbox)
 

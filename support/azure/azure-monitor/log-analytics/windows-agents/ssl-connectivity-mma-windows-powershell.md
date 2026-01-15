@@ -226,4 +226,4 @@ If `Issuer` doesn't include "Microsoft" in its value, change the configuration o
 
 If the output doesn't return any SSL information, check whether the TCP connection is successful. If you can't establish a TCP connection, then check the network firewall.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
