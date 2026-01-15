@@ -1,7 +1,7 @@
 ---
 title: Could not read the application certificate when creating connection with CyberArk credential
 description: Solves an error that occurs when you create a desktop flow connection using a CyberArk credential in Microsoft Power Automate.
-ms.custom: sap:Desktop flows\Cannot create desktop flow connection
+ms.custom: sap:Desktop flows\Connection Setup - CyberArk
 ms.date: 11/17/2024
 ms.author: quseleba 
 author: QuentinSele
