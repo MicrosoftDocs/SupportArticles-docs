@@ -59,5 +59,5 @@ Debug logging may show errors that resemble the following:
 
 For more information about debug logging, see the following articles:
 
-- [Debug Logging in System Center Service Provider Foundation (SPF)](/system-center/orchestrator/enable-spf-debug-logging)
-- [How to enable debug logging in Virtual Machine Manager](/system-center/vmm/enable-debug-logging)
+- [Debug logging in System Center Service Provider Foundation (SPF)](../orchestrator/enable-spf-debug-logging.md)
+- [How to enable debug logging in Virtual Machine Manager](enable-debug-logging.md)

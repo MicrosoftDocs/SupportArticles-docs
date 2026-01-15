@@ -51,7 +51,7 @@ To create an SPF ETL trace, use the following steps:
 > - You can change the location of the log file by using the command `logman update trace spfdebugtrace -o <location>`. For example, `logman update trace spfdebugtrace c:\temp`.
 > - If you cannot log on to the SPF server directly, but still have network connectivity, you can create the trace remotely by appending `-s <computername>` to the `logman` commands above. For example: `logman create trace spfdebugtrace -p Microsoft-ServiceProviderFoundation-Core 0x8000000000000000 0x5 -s spfserver01`.
 > - ETL log files can grow large very quickly. Attempt to reproduce your issue and stop the trace as soon as the issue reproduces.
-> - It may be helpful to simultaneously gather VMM debug logs for some issues. See [How to enable debug logging in Virtual Machine Manager](/system-center/vmm/enable-debug-logging) for details.
+> - It may be helpful to simultaneously gather VMM debug logs for some issues. See [How to enable debug logging in Virtual Machine Manager](../vmm/enable-debug-logging.md) for details.
 
 ## Method 2: Event Viewer
 
