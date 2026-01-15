@@ -31,4 +31,4 @@ The following are common examples of Microsoft first-party service principal act
 |spo_service@support.onmicrosoft.com|SharePoint Online|This account is used to create Azure Access Control Service (ACS) principles. These are required for the installation of the SharePoint app (add-in).|
 |Windows Azure Service Management API|Azure Resource Manager|Used by the Azure Resource Manager (ARM) service. This service principal may be used for any Microsoft Entra operations needed to maintain proper access to your Azure subscription and resources, such as ensuring the subscription's Service Administrator has a Microsoft Entra account in your tenant. You can see this actor when a customer registers a resource provider in an Azure subscription in their tenant. For more information about how and why this actor appears, see [resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types). More than 1,000 App IDs are connected to resource providers, and new IDs are added regularly. The REST API can be used to return the App ID dynamically.|
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

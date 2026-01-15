@@ -55,4 +55,4 @@ Before you start troubleshooting, [back up the OS disk](/azure/virtual-machines/
 
 1. Restart the VM, and then try again to connect to the VM.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -310,4 +310,4 @@ If the DNS resolution is successful, continue to the network tests. Otherwise, v
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

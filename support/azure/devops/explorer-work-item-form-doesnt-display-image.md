@@ -34,4 +34,4 @@ To work around this issue, follow these steps:
 3. Log on with your account.
 4. Refresh your work item in Team Explorer.  
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

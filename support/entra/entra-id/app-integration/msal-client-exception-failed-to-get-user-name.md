@@ -77,4 +77,4 @@ If the username isn't known beforehand, dynamically retrieve the username and th
 
 [Using MSAL.NET with Integrated Windows Authentication (IWA)](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/integrated-windows-authentication)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

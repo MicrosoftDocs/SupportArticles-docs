@@ -376,4 +376,4 @@ sudo gdisk -l /dev/sdd | grep -A4 '^Partition table scan:'
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

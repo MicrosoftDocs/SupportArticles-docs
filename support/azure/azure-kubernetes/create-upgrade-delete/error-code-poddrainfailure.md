@@ -109,4 +109,4 @@ To resolve this issue, use one of the following solutions.
    Since control-plane-only argument is not specified, this will upgrade the control plane AND all nodepools to version . Continue? (y/N): y
    ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

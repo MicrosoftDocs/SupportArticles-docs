@@ -18,4 +18,4 @@ App services are hosted on Azure App Service plans that define the compute resou
 
 For more information about the methods that are described in this video, plus additional methods to maintain high availability for Azure App Services, see [The Ultimate Guide to Running Healthy Apps in the Cloud - Azure App Service](https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

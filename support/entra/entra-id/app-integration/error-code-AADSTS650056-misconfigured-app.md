@@ -118,4 +118,4 @@ https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/v2.0/authorize
 - You can get the **{App-Id}** and **{App-Uri-Id}** values from the application owner.
 - **{Tenant-Id}** corresponds to your tenant identifier. This value can be either your domain or your directory ID.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

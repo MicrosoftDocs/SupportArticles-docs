@@ -84,4 +84,4 @@ Try to reapply the virtual machine state. This operation reruns VM provisioning,
 
 If you encounter issues when you create a new Windows VM in Azure, see [Troubleshoot deployment issues with creating a new Windows virtual machine in Azure](./troubleshoot-deployment-new-vm-windows.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

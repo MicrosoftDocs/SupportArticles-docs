@@ -85,4 +85,4 @@ Alternately, you can use App Service REST API calls ([GetConfiguration](/rest/ap
 - For runtime issues, from the **Diagnose and Solve Problems** option in the [Azure portal](https://portal.azure.com), search for **Function app down or reporting errors** and review the diagnostic report for error messages and solutions. Also review the **Function Configuration checks** detector to make sure that the configuration is correct.
 - Review the blog [Issues when upgrading Azure function apps to V4](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/issues-you-may-meet-when-upgrading-azure-function-app-to-v4/ba-p/3288983) for additional troubleshooting tips.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

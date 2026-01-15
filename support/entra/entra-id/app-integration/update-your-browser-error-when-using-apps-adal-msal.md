@@ -45,4 +45,4 @@ var pca = PublicClientApplicationBuilder.Create("client_id").WithBroker(new Brok
 
 If Web Account Manager is unavailable (such as on Windows Server 2012), consider using the [default system browser for authentication](/entra/msal/dotnet/acquiring-tokens/using-web-browsers#how-to-use-the-default-system-browser).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

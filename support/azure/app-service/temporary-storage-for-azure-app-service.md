@@ -20,4 +20,4 @@ This video demonstrates how to narrow the scope of your troubleshooting to tempo
 
 ![GitHub logo](../../media/common/github.svg) For more information, see: [Understanding the Azure App Service file system - projectkudu/kudu Wiki (github.com)](https://github.com/projectkudu/kudu/wiki/Understanding-the-Azure-App-Service-file-system#:~:text=Understanding%20the%20Azure%20App%20Service%20file%20system%201,standard%20Windows%20locations%20like)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

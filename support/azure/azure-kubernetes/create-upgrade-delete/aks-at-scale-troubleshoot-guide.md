@@ -139,7 +139,7 @@ SLB back-end pool updates are a known performance bottleneck. We're working on a
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [CNI plug-in]: /azure/aks/configure-azure-cni
 [regional compute quota]: /azure/quotas/regional-quota-requests

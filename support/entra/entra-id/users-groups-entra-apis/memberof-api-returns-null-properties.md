@@ -60,4 +60,4 @@ For more information, see [List a user's direct memberships](/graph/api/user-lis
 
 To get complete information, configure at least the `Directory.Read.All` permission for your application.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

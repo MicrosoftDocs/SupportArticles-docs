@@ -163,4 +163,4 @@ Disabling or restricting access to specific IP addresses or CIDRs can generate t
 To fix this issue, make sure that the container registry's built-in firewall allows the IP address of the device that's used to perform the push operation. For more information, see [Configure public IP network rules for Azure container registry](/azure/container-registry/container-registry-access-selected-networks).
 Alternatively, if you disabled the public network access, you can [configure connectivity by using a private endpoint](/azure/container-registry/container-registry-private-link).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

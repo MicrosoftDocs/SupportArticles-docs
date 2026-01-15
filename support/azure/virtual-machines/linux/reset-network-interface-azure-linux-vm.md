@@ -119,4 +119,4 @@ The following article also introduces how to view and change settings for a NIC,
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

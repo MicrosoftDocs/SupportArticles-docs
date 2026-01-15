@@ -35,4 +35,4 @@ In a scenario where you delete an event hub and related diagnostic settings, use
 
 - Update the diagnostic settings to prevent them from sending data to the event hub, delete them, wait at least one hour to allow their configuration cache to expire, and then delete the event hub.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

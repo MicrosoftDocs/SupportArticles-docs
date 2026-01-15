@@ -61,6 +61,6 @@ The Azure Arc Connected Machine agent is a software component that connects non-
 > [!div class="nextstepaction"]
 > [Step 2: Understand your data collection](step-2-understand-your-data-collection.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [ap]: https://portal.azure.com
