@@ -44,4 +44,4 @@ Application Insights SDKs and agents send telemetry to get ingested as REST call
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

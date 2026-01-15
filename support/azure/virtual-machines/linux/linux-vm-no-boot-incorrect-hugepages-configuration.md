@@ -276,4 +276,4 @@ To fix the issue, follow these steps:
 
 9. Monitor the VM to ensure it boots correctly and services start as expected.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -88,4 +88,4 @@ Continuous code deployment for both these options depends on existing developer 
 
 For information about using FTP or FTPS to deploy your web app to App Service, see [Deploy your app to App Service by using FTP/S](/azure/app-service/deploy-ftp).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

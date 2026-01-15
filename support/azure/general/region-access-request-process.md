@@ -54,7 +54,7 @@ Once you create the support request, the ticket follows our standard process, in
 
 The support request will be routed back to you once complete, letting you know of the result. If successful, you will then see the Azure Region you have requested access to in your portal and can begin to consume resources just like any other Azure region.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 
 
 ## Reserved access regions
 

@@ -211,4 +211,4 @@ These settings control the expiration of the authentication ticket that determin
 > [!NOTE]
 > If you modify the ticket expiration, users might still have access to your application even if they're deleted or disabled in Microsoft Entra ID. This condition remains true until the ticket expires.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

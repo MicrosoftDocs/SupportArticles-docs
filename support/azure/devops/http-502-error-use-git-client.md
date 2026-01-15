@@ -36,7 +36,7 @@ This issue occurs because of an issue in the ARR 2.5 feature.
 
 To resolve this issue, install [the ARR 2.5 update](https://support.microsoft.com/help/2589179).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 
 
 ## More information
 

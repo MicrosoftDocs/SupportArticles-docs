@@ -71,4 +71,4 @@ To troubleshoot a Windows activation issue, follow these steps:
 
 [Azure Windows virtual machine activation FAQ](./windows-virtual-machine-activation-faq.yml)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

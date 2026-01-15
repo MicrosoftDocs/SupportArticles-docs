@@ -46,4 +46,4 @@ If the cache rule is deleted from the managed ACR accidentally, the mitigation i
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

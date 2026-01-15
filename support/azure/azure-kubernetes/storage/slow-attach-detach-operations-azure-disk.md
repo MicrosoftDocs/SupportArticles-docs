@@ -33,4 +33,4 @@ Usage of the in-tree driver was deprecated in AKS 1.21. We now use the Container
 
 We recommend that you [migrate your in-tree volumes to CSI Drivers by using this documentation](/azure/aks/csi-migrate-in-tree-volumes).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

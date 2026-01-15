@@ -102,4 +102,4 @@ Before proceeding, ensure the following prerequisites are met:
 
 You have now created a Linux image from an on-premises disk and uploaded it to Azure. You can use this image to create new VMs in your Azure environment.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

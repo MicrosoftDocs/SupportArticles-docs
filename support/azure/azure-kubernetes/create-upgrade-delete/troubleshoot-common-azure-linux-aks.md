@@ -116,4 +116,4 @@ If you try to deploy an Azure Linux AKS cluster by using Azure CLI, you might re
 
 [!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -95,7 +95,7 @@ $vm | Update-AzVM
 
 [Installing Azure VM management extensions into Cloud Volume ONTAP](https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Can_Azure_VM_Management_Extensions_be_installed_into_Cloud_Volume_ONTAP)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 

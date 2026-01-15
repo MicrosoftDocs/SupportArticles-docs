@@ -62,4 +62,4 @@ where p.data_compression_desc = 'page'
 
 - [Data Compression](/sql/relational-databases/data-compression/data-compression)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

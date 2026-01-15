@@ -104,4 +104,4 @@ AKS provides a set of built-in roles that can be used to create role assignments
 
 Alternatively, you can create your own custom Azure role definitions to provide a more granular management of permissions over specific types of Kubernetes objects and operations. For detailed guidance to create and assign custom roles to users and groups in Azure RBAC-based clusters, see [Create custom roles definitions](/azure/aks/manage-azure-rbac#create-custom-roles-definitions).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

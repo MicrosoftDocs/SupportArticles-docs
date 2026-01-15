@@ -418,5 +418,5 @@ This method determines whether to use the `me` endpoint or the `users` endpoint 
 
 		}
 ```
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

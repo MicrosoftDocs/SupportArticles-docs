@@ -36,4 +36,4 @@ In these error messages, a random user (`domain\UserX`) does not have access. Th
 
 You may experience this issue when you use Big-IP F5 load balancer together with the **OneConnect** option. Disable **OneConnect** to work around the problem in this scenario.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

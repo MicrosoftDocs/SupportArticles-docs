@@ -158,7 +158,7 @@ If your next target is to move to RHEL 8 for SAP environments, see [How to upgra
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 
 

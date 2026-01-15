@@ -115,4 +115,4 @@ To resolve this issue, follow these steps:
 
 3. Rerun the application from Android Studio to apply the changes. Then, you can see the packages you have installed.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

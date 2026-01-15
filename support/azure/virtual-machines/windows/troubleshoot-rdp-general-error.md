@@ -251,4 +251,4 @@ For more information, see [Remote Desktop Services isn't starting on an Azure VM
 
 For more information, see [Remote Desktop disconnects frequently in Azure VM](troubleshoot-rdp-intermittent-connectivity.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

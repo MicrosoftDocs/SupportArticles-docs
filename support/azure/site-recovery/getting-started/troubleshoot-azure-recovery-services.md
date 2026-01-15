@@ -79,4 +79,4 @@ _C:\Program Files\Microsoft Azure Recovery Services Agent\Temp_
 > [!NOTE]
 > These files may be opened in any plain Text Editor.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

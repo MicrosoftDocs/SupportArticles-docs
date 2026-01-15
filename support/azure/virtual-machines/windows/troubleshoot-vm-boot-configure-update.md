@@ -77,4 +77,4 @@ reg unload HKLM\BROKENSYSTEM
 
 4. Follow the instructions in [Step 1: Collect the dump file directly](#step-1-collect-the-dump-file-directly) again.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
