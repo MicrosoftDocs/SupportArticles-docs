@@ -3,12 +3,12 @@ title: Unexpected Block or Warning on Customer Website in Microsoft Edge
 description: Troubleshoot unexpected Microsoft Defender SmartScreen blocks or warnings on websites and learn how to report false positives.
 ms.custom: 'sap:Web Platform and Development\Connectivity and Navigation: TCP, HTTP, TLS, DNS, Proxies, Downloads'
 ms.reviewer: dili, Johnny.Xu, v-shaywood
-ms.date: 07/01/2025
+ms.date: 01/15/2026
 ---
 
 # Unexpected SmartScreen block or warning on website
 
-When you visit a website in Microsoft Edge, [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen) might unexpectedly block the site or display a warning if it determines that the site is potentially unsafe. This article discusses the criteria that SmartScreen uses to determine whether a site is potentially unsafe, and how to resolve the issue if a site is incorrectly marked as unsafe.
+When you visit a website in Microsoft Edge, [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen) might block the site or display a warning if it determines that the site is potentially unsafe. This article discusses the criteria that SmartScreen uses to determine whether a site is potentially unsafe, and how to resolve the issue if a site is incorrectly marked as unsafe.
 
 ## Symptoms
 
@@ -33,6 +33,8 @@ If a site fails these dimension checks, SmartScreen reports the site as unsafe.
 
 ## Solution
 
+If you believe the warning or block was incorrectly shown for a safe site, you can report it to Microsoft using the following steps.
+
 ### If you're the website owner
 
 1. Select **Report that this site doesn't contain (malware/phishing) threats** under the **More information** header on the block page.
@@ -41,15 +43,13 @@ If a site fails these dimension checks, SmartScreen reports the site as unsafe.
 
 1. Wait for a confirmation email message from the SmartScreen Reputation Group.
 
-   :::image type="content" source="./media/unexpected-block-warning/smartscreen-team-reply.png" alt-text="The SmartScreen Reputation Group reply email message.":::
-
 1. If the issue is urgent, or you need a response after the Reputation Group's investigation, reply to the message from the Reputation Group to present your concerns.
 
 ### If you're not the website owner
 
 1. Reach out to the website owner, and recommend that they report the issue by using the steps in [If you're the website owner](#if-youre-the-website-owner).
 
-1. Both the site owner and you can report the issue by using the [WDSI file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission). When you're prompted for user type, select **Enterprise customer**.
+1. Both the site owner and you can report the issue by using the _WDSI file submission portal_, for more information see [Submit files for analysis](/unified-secops/submission-guide). When you're prompted for user type, select **Enterprise customer**.
 
 ### Prevent your site from being blocked
 
@@ -64,4 +64,6 @@ To reduce the likelihood of SmartScreen blocking your site:
 ## Related content
 
 - [Microsoft Defender for Endpoint demonstrations](/defender-endpoint/defender-endpoint-demonstrations)
+- [Microsoft Defender SmartScreen Frequently Asked Questions](https://feedback.smartscreen.microsoft.com/smartscreenfaq.aspx)
+- [Microsoft Edge support for Microsoft Defender SmartScreen](/deployedge/microsoft-edge-security-smartscreen)
 - [SmartScreen URL reputation demonstration](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)

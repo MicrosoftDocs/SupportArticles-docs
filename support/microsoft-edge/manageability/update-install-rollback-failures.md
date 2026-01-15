@@ -7,7 +7,9 @@ ms.date: 01/07/2026
 ---
 # Install, update, or roll back failures for Edge and Edge WebView2
 
-When you install, update, or roll back Microsoft Edge or Microsoft Edge WebView2, you might encounter a problem that prevents the operation from completing. This article provides common troubleshooting steps to help you resolve this issue. If those steps don't fix the problem, this article also explains how to collect diagnostic information to submit to the Microsoft Support Team for further analysis.
+## Summary
+
+When you install, update, or roll back Microsoft Edge or Microsoft Edge WebView2, you might encounter a problem that prevents the operation from completing. Common symptoms include the installation stopping or rolling back unexpectedly, the version not changing after an update, the Edge WebView2 Runtime being removed, silent installation failures with no UI or error prompt, or MSI errors. This article provides common troubleshooting steps to help you resolve these issues. If those steps don't resolve the problem, this article also explains how to collect diagnostic information to submit to the Microsoft Support Team for further analysis.
 
 The following components are involved in Edge installation and update scenarios.
 
@@ -153,13 +155,11 @@ Follow these steps:
 
 ### Additional support
 
-If the steps in [Common troubleshooting checks](#common-troubleshooting-checks) don't resolve your issue, go to the [Microsoft Edge Support page](https://developer.microsoft.com/en-us/microsoft-edge/support/?form=MA13LH&cs=261674308) to find additional resources and guidance.
+If the resources on the support page don't help resolve your issue, you can create a Microsoft support request. When you create a support request, collect and package the following diagnostic logs to attach to your request:
 
-If the resources on the support page don't help resolve your issue, you can create a support ticket. When you create a support ticket, collect and package the following diagnostic logs to attach to your request:
-
-- Edge installation and update logs
-- Edge policy JSON export
-- Process Monitor (PML) log
+- [Edge installation and update logs](#collect-edge-installation-and-update-logs)
+- [Edge policy JSON export](#export-edge-policy-settings)
+- [Process Monitor (PML) log](#collect-a-process-monitor-log)
 
 Use the steps in the following sections to collect these logs and submit a support ticket.
 

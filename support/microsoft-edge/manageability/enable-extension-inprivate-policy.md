@@ -8,6 +8,8 @@ ms.date: 01/08/2026
 
 # Can't enable extensions for InPrivate browsing by using Group Policy
 
+## Summary
+
 After you deploy an extension through [Group Policy](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview), you notice that there is no policy option to enable the extension for [InPrivate browsing](/legal/microsoft-edge/privacy#inprivate-browsing). This article explains why that policy option is missing, and how to manually enable the extension for InPrivate browsing.
 
 ## Symptoms
