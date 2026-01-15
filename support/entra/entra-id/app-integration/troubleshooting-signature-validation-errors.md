@@ -234,7 +234,7 @@ Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-di
 
 [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 
 

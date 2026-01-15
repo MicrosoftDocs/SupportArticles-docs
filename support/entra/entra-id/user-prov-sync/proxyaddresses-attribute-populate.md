@@ -332,4 +332,4 @@ AAD:proxyAddresses    : {smtp:user6mnn5236@Contoso.onmicrosoft.com; SMTP:user6b@
 AAD:userPrincipalName : user6b@Contoso.com
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

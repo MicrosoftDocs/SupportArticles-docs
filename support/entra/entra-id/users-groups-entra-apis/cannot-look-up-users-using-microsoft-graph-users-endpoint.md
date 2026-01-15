@@ -35,4 +35,4 @@ PATCH https://graph.microsoft.com/v1.0/policies/authorizationPolicy
 }
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

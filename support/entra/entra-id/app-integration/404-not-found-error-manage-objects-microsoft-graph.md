@@ -26,4 +26,4 @@ As shown in the following diagram, when your application makes a request via Mic
 
 To resolve this issue, wait some time and retry the update request. If the 404 error still occurs after retrying, double your waiting time and try again. By allowing sufficient time for replication, you can prevent this error from happening again.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

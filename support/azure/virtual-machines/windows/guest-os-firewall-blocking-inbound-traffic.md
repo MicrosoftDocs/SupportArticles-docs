@@ -178,4 +178,4 @@ See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewal
 
 6. Check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -178,6 +178,6 @@ Example:
 
 If you have additional questions about Application Insights autoinstrumentation, you can post them on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

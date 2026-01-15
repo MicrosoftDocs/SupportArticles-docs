@@ -112,4 +112,4 @@ services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, opt
 
 To learn more about Microsoft the Entra ID signing keys rollover, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

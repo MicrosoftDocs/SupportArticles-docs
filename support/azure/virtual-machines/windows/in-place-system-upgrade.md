@@ -104,6 +104,6 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

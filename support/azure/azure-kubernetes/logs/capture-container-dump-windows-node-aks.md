@@ -144,4 +144,4 @@ The dump files are now in the root directory of drive C on your computer.
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

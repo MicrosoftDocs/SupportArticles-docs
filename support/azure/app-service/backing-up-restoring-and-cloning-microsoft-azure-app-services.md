@@ -18,4 +18,4 @@ In this video, you will learn about different kinds of backup and restore proced
 
 For more troubleshooting tips, see [My backups are failing - Azure App Service](https://azure.github.io/AppService/2018/01/02/My-Backups-are-failing%2c-Let%27s-open-a-support-ticket.html)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

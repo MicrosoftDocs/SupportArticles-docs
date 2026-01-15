@@ -17,4 +17,4 @@ This article shows how to enable the serial console and memory dump collection.
 
 [!INCLUDE [Enable the Serial Console and memory dump collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

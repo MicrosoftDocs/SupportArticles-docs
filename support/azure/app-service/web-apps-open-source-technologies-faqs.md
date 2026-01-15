@@ -221,4 +221,4 @@ After you ensure that MySQL in-app is running, try to use PHPMyAdmin.
 
 If you're using an older version of Chrome, you might be experiencing a known bug. To resolve the issue, upgrade to a newer version of Chrome. Also try using a different browser, like Internet Explorer or Microsoft Edge, where the issue doesn't occur.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

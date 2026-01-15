@@ -38,4 +38,4 @@ To start troubleshooting, collect the activity logs to identify the error associ
 - [Troubleshoot Azure VM allocation failures](allocation-failure.md)  
 - [Windows virtual machine deployment FAQs](windows-vm-deployment-faqs.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

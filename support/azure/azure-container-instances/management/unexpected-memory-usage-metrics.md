@@ -38,4 +38,4 @@ You can add a dimension filter to view metrics on a per-container basis if your 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -240,4 +240,4 @@ A. Yes. Because the serial console doesn't require SSH keys, you only need to se
 - The serial console is also available for [Windows VMs](../windows/serial-console-windows.md).
 - Learn more about [boot diagnostics](../windows/boot-diagnostics.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

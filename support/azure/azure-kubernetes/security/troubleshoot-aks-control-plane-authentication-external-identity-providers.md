@@ -445,6 +445,6 @@ To get more detailed information about authentication failures:
 - [jwt-ms token decoder tool](https://jwt.ms)
 - [Supported resource logs for Microsoft.ContainerService/managedClusters](/azure/aks/monitor-aks-reference#supported-resource-logs-for-microsoftcontainerservicemanagedclusters)
 
-[!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

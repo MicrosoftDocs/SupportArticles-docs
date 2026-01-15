@@ -78,4 +78,4 @@ To resolve this issue, use one of the following solutions.
    $ kubectl apply -f pdb_backup.yaml
    ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

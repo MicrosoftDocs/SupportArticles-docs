@@ -599,4 +599,4 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

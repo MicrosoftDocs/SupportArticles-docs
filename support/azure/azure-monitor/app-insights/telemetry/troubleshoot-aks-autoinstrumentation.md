@@ -50,5 +50,5 @@ Ensure that the Kubernetes command-line tool (`kubectl`) is installed and config
 
     If a connection can't be established, troubleshoot the network connectivity issue, such as firewall or name resolution issues.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 

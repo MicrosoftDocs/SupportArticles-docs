@@ -36,4 +36,4 @@ This article provides instructions to use Fiddler to collect HTTPS traffic to tr
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

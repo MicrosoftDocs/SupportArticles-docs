@@ -31,4 +31,4 @@ To eliminate this transient state, destroyed VMs will be prevented from sending 
 
 Microsoft is investing in better coordinating and reporting of platform health. The investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/), which aims to display highly accurate and actionable VM availability information.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -320,7 +320,7 @@ For the latest updates and bug fixes, [consult the release notes](/azure/azure-m
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 <!--
 
@@ -604,6 +604,6 @@ For the latest updates and bug fixes, [consult the release notes](/azure/azure-m
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 -->

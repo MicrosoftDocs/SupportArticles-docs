@@ -470,6 +470,6 @@ In SLES 15, the deprecated `targetcli-fb` package was replaced with `python3-tar
 ## Next steps
 For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

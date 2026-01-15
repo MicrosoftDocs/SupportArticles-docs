@@ -293,4 +293,4 @@ A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#
 * The serial console is also available for [Linux](../linux/serial-console-linux.md) VMs.
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

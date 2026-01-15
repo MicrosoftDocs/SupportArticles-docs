@@ -119,4 +119,4 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
