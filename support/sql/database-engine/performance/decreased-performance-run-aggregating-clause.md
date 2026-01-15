@@ -61,13 +61,16 @@ To work around this issue, follow these steps:
     ```sql
     SELECT TOP 3 A.c1, A.c2
     FROM sys.partitions AS P
-     CROSS APPLY ( SELECT TOP 3 T1.c1, T2.c2)
-     FROM dbo.T1
-     WHERE $PARTITION.PF1(T1.col1) = P.partition_number 
-     ORDER BY T1.c1 ) AS A
-     WHERE P.object_id = OBJECT_ID('dbo.T1') 
-     AND P.index_id = INDEXPROPERTY( OBJECTID('dbo.T1'), 'idx_c1', 'INDEXID')
-     ORDER BY a;
+    CROSS APPLY
+    (
+        SELECT TOP 3 T1.c1, T2.c2
+        FROM dbo.T1
+        WHERE $PARTITION.PF1(T1.col1) = P.partition_number 
+        ORDER BY T1.c1
+    ) AS A
+    WHERE P.object_id = OBJECT_ID('dbo.T1') 
+    AND   P.index_id = INDEXPROPERTY(OBJECT_ID('dbo.T1'), 'idx_c1', 'INDEXID')
+    ORDER BY a.T1;
     ```
 
     > [!NOTE]
