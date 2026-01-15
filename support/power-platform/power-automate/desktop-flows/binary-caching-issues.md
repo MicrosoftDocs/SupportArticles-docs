@@ -6,7 +6,7 @@ ms.date: 01/15/2026
 ms.custom: sap:Desktop flows
 ---
 
-# Desktop flows fail from binary caching problems
+# Desktop flows fail because of binary caching problems
 
 ## Summary
 
