@@ -307,7 +307,7 @@ Common problems include:
 
 - Consider using Power Automate flows to store and retrieve large data from external sources instead of keeping it in conversation state.
 
-For more information, see [Copilot Studio quotas and limits](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas).
+For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas).
 
 #### EnforcementMessageC2
 
