@@ -1,20 +1,20 @@
 ---
 title: Remote control fails with error C000012
-description: Fixes an issue in which remote control fails with error C0000120 in System Center 2012 Configuration Manager.
+description: Fixes an issue in which remote control fails with error C0000120 in Configuration Manager.
 ms.date: 02/11/2025
 ms.reviewer: kaushika, erinwi
 ms.custom: sap:Client Operations\Remote Control
 ---
 # Remote control fails with error C000012 in System Center 2012 Configuration Manager
 
-This article helps you resolve an issue in which remote control fails with error C0000120 in System Center 2012 Configuration Manager.
+This article helps you resolve an issue in which remote control fails with error C0000120 in Configuration Manager.
 
 _Original product version:_ &nbsp; System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 2716965
 
 ## Symptoms
 
-When attempting to use System Center 2012 Configuration Manager to remote control a system, the connection fails. The remote control log and CmRcService.log indicate the following failure:  
+When attempting to use Configuration Manager to remote control a system, the connection fails. The remote control log and CmRcService.log indicate the following failure:  
 
 > WT_CompleteIO failed. Network shutdown : Unknown error (Error: C0000120; Source: Unknown)
 
