@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure file share backup
 description: This article is troubleshooting information about issues occurring when protecting your Azure file shares.
-ms.date: 04/01/2026
+ms.date: 04/01/2025
 ms.reviewer: jsuri
 ms.service: azure-file-storage
 ms.custom: sap:Backup and Restore

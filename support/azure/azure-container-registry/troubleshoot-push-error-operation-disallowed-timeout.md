@@ -87,9 +87,6 @@ az acr repository update --name myregistry --image myrepo@sha256:123456abcdefg -
 
 Another potential issue is that your container registry might have reached its storage limit. The container registry has a maximum storage capacity of 40 TiB. For more information, see [Service Tier Features and Limits](/azure/container-registry/container-registry-skus#service-tier-features-and-limits).
 
-If you require storage beyond this limit, contact [Azure Support](#contact-us-for-help).
-
-
 ## Error 2: Request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
 
 > `Get "https://yourARC.azurecr.io/v2/": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)`
