@@ -23,3 +23,7 @@ To resolve this problem, check the integrity of your MOF file. To do this, open 
 ```console
 mofcomp.exe -check <YourMOFName>.mof
 ```
+
+## More information
+
+For more information about how to test your MOF file, see [How to Extend the Sms_def.mof File by Using the Windows Management Instrumentation Registry Providers](/previous-versions//cc723607(v=technet.10)?redirectedfrom=MSDN#xsltsection126121120120).
