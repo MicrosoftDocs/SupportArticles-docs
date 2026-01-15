@@ -1,6 +1,6 @@
 ---
 title: Fix Desktop Flow Failures from Cache Issues
-description: Resolve desktop flow errors in Power Automate that are caused by corrupted or conflicting cache files.
+description: Resolve desktop flow errors in Power Automate that occur because of corrupted or conflicting cache files.
 ms.reviewer: spanopoulos, v-shaywood
 ms.date: 01/15/2026
 ms.custom: sap:Desktop flows
@@ -78,11 +78,11 @@ If the problem persists, clear these additional folders:
    - `Designer\Scripts`: Stores execution logs and cached data for flows that are triggered from Power Automate Desktop Designer.
    - `Cache\(MSI or MSIX)`: Safe to remove all folders except `Account` and the `msalcache.bin3` file.
       - Deleting these folders doesn't cause data loss, but you might see previously dismissed notifications again.
-      - If you delete the `Account` folder and `msalcache.bin3` file, you are signed out of Power Automate Desktop.
+      - If you delete the `Account` folder and `msalcache.bin3` file, you're signed out of Power Automate Desktop.
    - `DesktopFlowModules`: Contains custom modules downloaded from the Asset Library. Missing modules are downloaded again at runtime.
 2. Under `C:\Windows\ServiceProfiles\UIFlowService\AppData\Local`:
    - `Microsoft\Power Automate Desktop\Cache`: Depending on your Power Automate Desktop version, some files might be cached here instead of the locations that are listed earlier in the previous sections.
-   - `Users`: Contains additional intermediate files that are related to binary caching. Clear this folder to resolve further errors.
+   - `Users`: Contains additional intermediate files that are related to binary caching. To resolve further errors, clear this folder.
    - After you remove files from this path, restart **Power Automate Service** as described in the previous procedures.
 
 If clearing cache folders doesn't resolve the problem, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
