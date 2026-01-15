@@ -15,7 +15,7 @@ This article describes how to identify and resolve the `ZonalAllocationFailed`, 
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.0.59 or a later version. If Azure CLI is already installed, you can find the version number by using `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli) (optional), version 2.0.59, or a later version. If Azure CLI is already installed, you can find the version number by using `az --version`.
 
 - [Azure PowerShell](/powershell/azure/install-az-ps) (optional).
 
@@ -29,7 +29,7 @@ Message: "Allocation failed. We do not have sufficient capacity for the requeste
 
 Code: `AllocationFailed`
 
-Message: "The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details.This is not AKS controlled behavior, please ask help to VMSS team for allocation failure."
+Message: "The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure."
 
 Code: `OverconstrainedAllocationRequest`
 
@@ -37,7 +37,7 @@ Message: "Create or update VMSS failed. Allocation failed. VM(s) with the follow
 
 ### Cause 1: Limited zone availability in a SKU
 
-You're trying to deploy, upgrade or scale up a cluster in a zone that has limited availability for the specific SKU.
+You're trying to deploy, upgrade, or scale up a cluster in a zone that has limited availability for the specific SKU.
 
 ### Solution 1: Use a different SKU, zone, or region
 
@@ -56,11 +56,11 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 
 ### Solution 3: Upgrade in place using `MaxUnavailable`
 
-If you don’t need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than 0 and set `MaxSurge` equal to 0. Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
+If you don’t need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
 
 ### Solution 4: Use deployment recommender in portal for new cluster creates
 
-During an AKS cluster creation in the Azure portal, if the selected nodepool SKU isn't available in the chosen region and zones, the deployment recommender recommends an alternative SKU, zones, and region combination that has availability.
+During an AKS cluster creation in the Azure portal, if the selected node pool SKU isn't available in the chosen region and zones, the deployment recommender recommends an alternative SKU, zones, and region combination that has availability.
 
 ## Solution 5: Use priority expanders with cluster-autoscaler
 
@@ -70,7 +70,7 @@ The cluster-autoscaler [priority expander](https://github.com/kubernetes/autosca
 
 - Conditional Access doesn't create new node pools. It only works with existing pools. If you want dynamic SKU provisioning, use NAP, which can create pools based on SKU availability.
 
-- Priority expander works at node pool level, not SKU level. You must pre-create pools for each SKU family you want to use.
+- Priority expander works at node pool level, not SKU level. You must precreate pools for each SKU family you want to use.
 
 ## Cause 2: Too many constraints for a virtual machine to accommodate
 
@@ -99,7 +99,7 @@ As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#p
 
 Ensuring capacity for users is a top priority for Microsoft, and we're working around the clock to reach this goal. The increasing popularity of Azure services emphasizes the need to scale up our infrastructure even more rapidly. With that in mind, we're expediting expansions and improving our resource deployment process to respond to strong customer demand. We're also adding a large amount of computing infrastructure monthly.
 
-We have identified several methods to improve how we load-balance under a high-resource-usage situation and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity and will continue to plan for strong demand across all regions. For more information about the improvements that we're making toward delivering a resilient cloud supply chain, see [Advancing reliability through a resilient cloud supply chain](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
+We have identified several methods to improve how we load-balance under a high-resource-usage situation and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity and continue to plan for strong demand across all regions. For more information about the improvements that we're making toward delivering a resilient cloud supply chain, see [Advancing reliability through a resilient cloud supply chain](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
 
 ## References
 
