@@ -12,6 +12,8 @@ ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
 # Missing dependencies error during solution import
 
+## Summary
+
 When you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) into a target environment in Microsoft Power Apps, you might encounter errors about missing dependencies. This article helps you identify the cause of missing dependency errors and provides workarounds to resolve them. It also includes best practices to help you prevent these errors in future solution imports.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
