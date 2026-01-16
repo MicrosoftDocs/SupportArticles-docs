@@ -9,7 +9,7 @@ ms.reviewer: jopilov, v-sidong
 
 This article describes an issue where the command line generates an error message when applying a SQL Server 2022 Cumulative Update (CU).
 
-_Applies to:_ &nbsp; SQL Server 2022 on Windows  
+_Applies to:_ &nbsp; SQL Server 2022 on Windows, SQL Server 2025 on Windows  
 
 ## Symptoms
 
