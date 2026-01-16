@@ -20,11 +20,11 @@ Configuration Manager relies on the Windows Deployment Services (WDS) server rol
 
 Before troubleshooting PXE-related problems in Configuration Manager, it's important to understand the basic processes involved, how they work and how they interoperate with each other.
 
-In all instances in this document, we are using System Center 2012 Configuration Manager R2 Cumulative Update 2 (ConfigMgr 2012 R2 CU2) and a remote site system installed on Windows Server 2012 with the Distribution Point (DP) role installed.
+In all instances in this document, we're using System Center 2012 Configuration Manager R2 Cumulative Update 2 (ConfigMgr 2012 R2 CU2) and a remote site system installed on Windows Server 2012 with the Distribution Point (DP) role installed.
 
 ## PXE service point installation
 
-We will first look at the processes involved in the installation of the SMSPXE provider.
+We'll first look at the processes involved in the installation of the SMSPXE provider.
 
 Installation is initiated by selecting the **Enable PXE support for clients** option on the **PXE** tab in **Distribution point properties**. When PXE support is enabled, an instance of `SMS_SCI_SysResUse` class is created.
 
@@ -41,7 +41,7 @@ In the WMI namespace `Root\SMS\Site_RR2` (where RR2 is the site code of the site
 SELECT * FROM SMS_SCI_SysResUse WHERE rolename like 'SMS Distribution Point'
 ```
 
-Changing the properties of these roles via the SDK will alter the site control file and configure the DP. The `IsPXE` property name is a member of the props property and is set to **1** when the DP is PXE enabled.
+Changing the properties of these roles via the SDK alters the site control file and configure the DP. The `IsPXE` property name is a member of the props property and is set to **1** when the DP is PXE enabled.
 
 The SMS Database Monitor component detects the change to the `DPNotificaiton` and `DistributionPoints` tables and drops files in distmgr.box:
 
@@ -164,7 +164,7 @@ On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHI
 > [!NOTE]
 > `PxeInstalled` and `IsPXE` are set to **1**.
 
-If we look at the remote DP's file system, there is a new login `C:\SMS_DP$\sms\logs`:
+If we look at the remote DP's file system, there's a new login `C:\SMS_DP$\sms\logs`:
 
 ```output
 SMSPXE.log  
@@ -179,11 +179,11 @@ The Distribution Point should now be PXE-enabled and ready to accept incoming re
 
 ## Add boot images to a PXE-enabled DP
 
-Whenever a new PXE-enabled distribution point is configured, there are additional steps that need to be completed to enable full functionality. One of these is that you must distribute the x86 and x64 boot images to the new PXE-enabled DP.
+Whenever a new PXE-enabled distribution point is configured, there are more steps that need to be completed to enable full functionality. One of these is that you must distribute the x86 and x64 boot images to the new PXE-enabled DP.
 
 To do this, navigate to **Software Library** > **Operating Systems** > **Boot Images** > **Boot Image (x86)**, and then right-click and select **Distribute Content** > **Add the Boot Image to the PXE enabled DP**. Repeat this process for **Boot Image (x64)**.
 
-Once this is done, Distribution Manager will start processing the request and initiate the distribution to the remote DP:
+After this is done, Distribution Manager starts processing the request and initiate the distribution to the remote DP:
 
 ```output
 DistMgr.log  
@@ -259,11 +259,11 @@ Make sure that these boot images are configured to deploy from the PXE-enabled D
 The example boot process described here involves three machines: The DHCP server, the PXE-enabled DP, and the client (an x64 BIOS computer). All are located on the same subnet.
 
 > [!NOTE]
-> You must make sure that the DHCP (67 and 68), TFTP (69) and BINL (4011) ports are open between the client computer, the DHCP server and the PXE enabled DP.
+> You must make sure that the DHCP (67 and 68), TFTP (69), and BINL (4011) ports are open between the client computer, the DHCP server, and the PXE enabled DP.
 
 In the PXE boot process, the client must first acquire TCP/IP parameters and the location of the TFTP boot server. Once a device is powered on and completes the POST, it begins the PXE boot process (prompted via the boot selection menu).
 
-1. The first thing the PXE firmware does is sending a **DHCPDISCOVER** (a UDP packet) broadcast to get TCP/IP details. This includes a list of parameter requests, and below is a sample network trace with the parameter list from a **DHCPDISCOVER** packet:
+1. The first thing the PXE firmware does is sending a **DHCPDISCOVER** (a UDP packet) broadcast to get TCP/IP details. This includes a list of parameter requests, and the following example is a sample network trace with the parameter list from a **DHCPDISCOVER** packet:
 
     :::image type="content" source="media/understand-pxe-boot/network-trace-dhcpdiscover.png" alt-text="Screenshot of a sample network trace with the parameter list from a DHCPDISCOVER packet.":::
 
@@ -271,16 +271,16 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 2. The DHCP server and the PXE-enabled DP then send a **DHCPOFFER** to the client containing all of the relevant TCP/IP parameters.
 
-   In the example DHCP offer below, it doesn't contain the server name or boot file information because this is the offer from the DHCP server rather than the PXE enabled DP.
+   In the following example DHCP offer, it doesn't contain the server name or boot file information because this is the offer from the DHCP server rather than the PXE enabled DP.
 
     :::image type="content" source="media/understand-pxe-boot/dhcp-offer.png" alt-text="Screenshot shows DHCP without server name or boot file information.":::
 
 3. The client then replies with a **DHCPREQUEST** once it has selected a **DHCPOFFER**. This contains the IP address from the offer that was selected.
-4. The DHCP server responds to the **DHCPREQUEST** with a **DHCPACK** that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
+4. The DHCP server responds to the **DHCPREQUEST** with a **DHCPACK** that contains the same details as the **DHCPOFFER**. The server host name and the boot file name aren't provided here:
 
     :::image type="content" source="media/understand-pxe-boot/dhcp-request.png" alt-text="Screenshot shows DHCPACK contains the same details as the DHCPOFFER.":::
 
-5. At this point, we still don't have the boot file information, however now the client has an IP address. Next, the PXE client sends a new **DHCPREQUEST** to the PXE-enabled DP after receiving a **DHCPOFFER** from the earlier **DHCPDISCOVER** broadcast.
+5. At this point, we still don't have the boot file information. However now the client has an IP address. Next, the PXE client sends a new **DHCPREQUEST** to the PXE-enabled DP after receiving a **DHCPOFFER** from the earlier **DHCPDISCOVER** broadcast.
 6. The PXE-enabled DP sends a **DHCPACK** that contains the BootFileName location and the WDS network boot program (NBP).
 
      :::image type="content" source="media/understand-pxe-boot/dhcp-pack.png" alt-text="Screenshot shows DHCPACK contains BootFileName and WDS network boot program.":::
@@ -291,7 +291,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
      :::image type="content" source="media/understand-pxe-boot/tftp-session.png" alt-text="Screenshot shows the TFTP session with a read request.":::
 
-   The server responds with the tsize and then the blksize. The client will then transfer the file from the server.
+   The server responds with the tsize and then the blksize. The client then transfers the file from the server.
 
    > [!NOTE]
    > The size of these blocks is the blksize, and in this case it's set to 1456 bytes. The blksize is configurable on Windows Server 2008 and later versions. See [Operating system deployment over a network by using WDS fails in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/975710).
@@ -300,7 +300,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
     :::image type="content" source="media/understand-pxe-boot/tftp-transfer.png" alt-text="Screenshot shows the end of the DHCP conversation and the start of the TFTP transfer.":::
 
-   When the WDS network boot program (NBP) has been transferred to the client computer, it will be executed. In our example, it starts by downloading `wdsnbp.com`. The NBP dictates whether the client can boot from the network, whether the client must press F12 to initiate the boot and which boot image the client will receive.
+   When the WDS network boot program (NBP) has been transferred to the client computer, it runs. In our example, it starts by downloading `wdsnbp.com`. The NBP dictates whether the client can boot from the network, whether the client must press F12 to initiate the boot and which boot image the client receives.
 
    NBPs are both architecture and firmware specific (BIOS or UEFI). On BIOS computers, the NBP is a 16-bit real-mode application, therefore it's possible to use the same NBP for both x86-based and x64-based operating systems.
 
@@ -312,8 +312,8 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    - `PXEboot.com` - x86 and x64 BIOS: Requires the end user to press F12 for PXE boot to continue (this is the default NBP).
    - `PXEboot.n12` - x86 and x64 BIOS: Immediately begins PXE boot (doesn't require pressing F12 on the client).
-   - `AbortPXE.com` - x86 and x64 BIOS: Allows the device to immediately begin booting by using the next boot device specified in the BIOS. This allows for devices that should not be booting using PXE to immediately begin their secondary boot process without waiting for a timeout.
-   - `Bootmgfw.efi` - x64 UEFI and IA64 UEFI: The EFI version of `PXEboot.com` or `PXEboot.n12` (in EFI, the choice of whether or not to PXE boot is handled within the EFI shell and not by the NBP). `Bootmgfw.efi` is the equivalent of combining the functionality of `PXEboot.com`, `PXEboot.n12`, `abortpxe.com` and `bootmgr.exe`.
+   - `AbortPXE.com` - x86 and x64 BIOS: Allows the device to immediately begin booting by using the next boot device specified in the BIOS. This allows for devices that shouldn't be booting using PXE to immediately begin their secondary boot process without waiting for a timeout.
+   - `Bootmgfw.efi` - x64 UEFI and IA64 UEFI: The EFI version of `PXEboot.com` or `PXEboot.n12` (in EFI, the choice of whether or not to PXE boot is handled within the EFI shell and not by the NBP). `Bootmgfw.efi` is the equivalent of combining the functionality of `PXEboot.com`, `PXEboot.n12`, `abortpxe.com`, and `bootmgr.exe`.
    - `wdsnbp.com` - x86 and x64 BIOS: A special NBP developed for use by Windows Deployment Services that serves the following general purposes:
 
      - Architecture detection
@@ -339,12 +339,12 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 ## WinPE boot
 
-Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTSLog\`.
+After WinPE boots, the TS boot shell initiates from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTSLog\`.
 
 > [!TIP]
 > To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.
 
-Here is the initial TS boot shell process:
+Here's the initial TS boot shell process:
 
 ```output
 SMSTS.log  
