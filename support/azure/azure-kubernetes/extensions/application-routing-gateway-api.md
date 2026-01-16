@@ -107,3 +107,5 @@ Because the application routing Gateway API Implementation uses an Istio control
 ## Gateway Traffic Management and Resource Customization Issues
 
 While the application routing Gateway API Implementation is separate from the Istio add-on and uses a different `gatewayClassName` of `approuting-istio`, the process of deploying and troubleshooting `Gateways` between the Istio add-on and the App Routing Gateway API Implementation is roughly the same. Moreover, both application routing Gateway API Implementation and the Istio add-on use the same resource customization allowlist to validate `Gateway` ConfigMaps. Follow the steps in the Istio add-on Gateway API troubleshooting guide for [Gateway configuration](./istio-add-on-gateway-api.md#gateway-configuration-troubleshooting) and [resource customization](./istio-add-on-gateway-api.md#gateway-resource-customization-troubleshooting) errors.
+
+To avoid conflicts, ensure that you don't have the `GatewayClass` `approuting-istio` installed on your cluster - or any controller that reconciles `Gateways` of `GatewayClass` `approuting-istio` - prior to enabling App Routing Istio with the Managed Gateway API.

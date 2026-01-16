@@ -50,7 +50,7 @@ service.beta.kubernetes.io/port_<gateway_port>_health-probe_request-path: /healt
 
 These annotations tell Azure Load Balancer the path, protocol, and port for health probing the node or backend pods before forwarding traffic to the pod. By default, this is set to the port that `kube-proxy` is listening on to ensure that the `kube-proxy` instance on the node is healthy and can forward traffic to the destination pods. Note that these health probes only take effect when the `externalTrafficPolicy` is set to `cluster` - when the `externalTrafficPolicy` is set to `local`, Azure Load Balancer will use the `healthCheckNodePort` for health probing the node.
 
-You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+You can verify this by running `kubectl get service <gateway-svc-name> -n <gateway-svc-namespace> -o yaml`. If these annotations are not added to the service for some reason or you are overwriting these annotations with your own resource customizations, traffic from Azure Load Balancer to the Istio Gateway API deployment could be blocked because of failing health probes. You can address this issue by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
 `Gateway` customization (ex - for `Gateway` listening on port `80`):
 
@@ -99,13 +99,15 @@ Verify that all `Gateways` you created have the `spec.gatewayClassName` set to `
 
 Depending on the namespace that the `Gateway` and respective Routes are deployed in, the `Gateway` `spec.listeners.allowedRoutes` value should be set accordingly to allow Routes from only the same namespace or across different namespaces. Likewise, the `spec.parentRefs` value for Routes should reference the correct `Gateway` and provide the appropriate namespace for cross-namespace `Gateway` references. For more information, see the Gateway API docs on [cross-namespace routing](https://gateway-api.sigs.k8s.io/guides/multiple-ns/).
 
+Similarly, [ReferenceGrants](https://gateway-api.sigs.k8s.io/api-types/referencegrant/) can be used to enable cross namespace from Routes to backends in other namespaces.
+
 ### Step 3: Verify routing rules don't conflict
 
 While multiple Routes can be attached to a single `Gateway` resources, only one Route rule may match each request. Overlapping rules can lead to conflicts and merging issues.
 
 ### Step 4: Inspect the `Gateway` and Routes for programming errors
 
-If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `.
+If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `. Check the Gateway objects' `STATUS` for programming issues or other errors.
 
 You should also inspect the status of Routes (`HTTPRoutes`, `GRPCRoutes`, etc.) by running `kubectl describe httproute <route-name> -n <route-namespace> -o yaml`. 
 
@@ -122,6 +124,12 @@ Verify that `Gateway` proxy pods aren't crashing or `OOMKilled` due to memory is
 By default, the Istio control plane will append the `GatewayClass` name `istio` (or `approuting-istio` for the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api)). to the name of the resources that it provisions for the `Gateway`. The resource names must be less than `63` characters and must also be a valid DNS name. If the names are invalid, `istiod` will fail to provision the `Gateway` resources and will output an `error` log.
 
 You can annotate your `Gateway` resource with `gateway.istio.io/name-override` to override the name of the provisioned resources.
+
+### Step 8: Verify `GatewayClass` has been created
+
+Verify that the `GatewayClass` `istio` has been created by `istiod`: `kubectl get gatewayclass`. If the `GatewayClass` has not been created, ensure that you have the Managed Gateway API CRD installation enabled on the cluster. If the Managed Gateway API CRDs have been installed but the `GatewayClass` has still not been created, inspect the `istiod` logs for any errors. (If you are using the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api), the `GatewayClass` that should be created is `approuting-istio`).
+
+To avoid conflicts, also ensure that you don't have the `GatewayClass` `istio` installed on your cluster prior to enabling the Istio add-on with the Managed Gateway API. Also ensure that you don't have another Istio-based controller that reconciles the `GatewayClass` `istio` (such as Open-Source Istio) installed simultaneously with the Istio add-on. 
 
 ## Minor revision upgrades and revision label troubleshooting
 
