@@ -1,5 +1,5 @@
 ---
-Title: The Exchange administrator made a change that requires users to restart Outlook
+title: The Exchange administrator made a change that requires users to restart Outlook
 description: Describes a message received by users that tells them to restart Outlook, but doesn't tell them why. The message is prompted by a configuration change made by the administrator.
 author: cloud-writer
 ms.author: meerak
@@ -17,6 +17,8 @@ appliesto:
 - Outlook 2016
 ms.date: 01/16/2026
 ---
+
+# The Exchange Online administrator has made a change that requires users to restart Outlook
 
 ## Summary
 
