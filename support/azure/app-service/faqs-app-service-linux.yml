@@ -11,11 +11,8 @@ metadata:
 title: Azure App Service on Linux FAQ
 summary: |
 
-  [!INCLUDE [Feedback](../../includes/feedback.md)]
-  
-  With the release of App Service on Linux, we're working on adding features and making improvements to our platform. This article provides answers to questions that our customers have been asking us recently.
-  
-  If you have a question, comment on this article.
+## Summary  
+  This article has answers to frequently asked questions (FAQs) about App Service on Linux.
   
 sections:
   - name: Built-in images
@@ -282,7 +279,7 @@ sections:
           You can submit your idea at the [Web Apps feedback forum](https://aka.ms/webapps-uservoice). Add "[Linux]" to the title of your idea.
           
 additionalContent: |
-  ## Next steps
+  ## Reference
   
   - [What is Azure App Service on Linux?](/azure/app-service/overview#app-service-on-linux)
   - [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots)
