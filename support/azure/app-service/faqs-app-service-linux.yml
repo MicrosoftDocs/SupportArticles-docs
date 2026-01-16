@@ -10,10 +10,7 @@ metadata:
   ms.custom: sap:Application Code Deployment   
 title: Azure App Service on Linux FAQ
 summary: |
-
-## Summary  
-  This article has answers to frequently asked questions (FAQs) about App Service on Linux.
-  
+  This article has answers to frequently asked questions (FAQs) about App Service on Linux.  
 sections:
   - name: Built-in images
     questions:            
