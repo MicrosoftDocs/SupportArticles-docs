@@ -1,6 +1,6 @@
 ---
 title: Delta AD Group Discovery Doesn't Detect Group Membership Changes in Nested OUs
-description: Troubleshoot an issue in which AD Delta Discovery doesn't detect group membership changes in child organizational units.
+description: Troubleshoot an issue in which the delta discovery process of AD Group Discovery doesn't detect group membership changes in child organizational units.
 ms.date: 01/12/2025
 ms.reviewer: kaushika, jarrettr, brianhun, payur
 ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Discovery (all types)
@@ -19,7 +19,7 @@ This article helps you identify this issue in your environment, and provides wor
 
 You set up discovery scopes for AD Group Discovery to target specific Active Directory Domain Services (AD DS) groups, as described in [Configure Active Directory Group Discovery](/intune/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adgd). The initial full discovery cycle correctly discovers groups in all the in-scope OUs.
 
-After the delta discovery cycle runs, you notice that changes in particular group memberships are missed. However, if you force a full discovery cycle to run, the issue resolves as the full discovery cycle discovers changes in all groups in the in-scope OUs.
+Some time after the initial full discovery cycle finishes, the delta discovery cycle runs. After the delta discovery cycle finishes, you notice that changes in particular group memberships are missed. However, if you force a full discovery cycle to run, the issue resolves as the full discovery cycle discovers changes in all groups in the in-scope OUs.
 
 In particular, the issue occurs when you define scopes that resemble the following example:
 
