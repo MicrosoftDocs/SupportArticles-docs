@@ -16,6 +16,8 @@ contributors:
 ---
 # Common issues and resolutions for Power Apps
 
+## Summary
+
 This article provides solutions to common problems that you might encounter when you create or use Power Apps. The article organizes problems by functional area, such as connectors, Power Automate integrations, Power Fx, and Power Apps Studio. Each section includes troubleshooting steps and links to related documentation.
 
 Before you troubleshoot specific problems, review [Power Apps troubleshooting strategies](./isolate-common-issues.md) for guidance on how to identify the source of a problem. That article outlines key principles for debugging both functional and performance problems.
