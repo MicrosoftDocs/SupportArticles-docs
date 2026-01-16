@@ -231,6 +231,10 @@ To address common traffic management and security misconfiguration issues that I
 
 For links to discussion about other issues, such as sidecar injection, observability, and upgrades, see [Common problems](https://istio.io/latest/docs/ops/common-problems/) on the Istio documentation site.
 
+#### Verify AuthorizationPolicy evaluation rules
+
+When applying multiple authorization policies to a particular workload, be mindful of the order in which Istio processess the different access control types. More information can be found in the [Istio Authorization Policy doc](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+
 ### Step 3: Verify protocol selection
 
 Although Istio can automatically detect any TCP-based protocol, in certain cases, the protocol in the `Service` spec may have to be [explicitly declared](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/) to unblock communication issues. This can be done by setting the protocol in the port `name` or in `appProtocol`. In this case, `appProtocol` takes precedence. For instance, certain scenarios might require you to set the protocol to `tcp` to proxy traffic as raw TCP, as opposed to HTTP or HTTPS.
