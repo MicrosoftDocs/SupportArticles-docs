@@ -4,7 +4,7 @@ description: Learn why Azure Container Instances shows unexpected memory usage m
 ms.date: 02/22/2024
 ms.author: kegonzal
 author: kennethgp
-editor: kennethgp
+editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Management
@@ -28,14 +28,10 @@ Values for aggregation types (such as Average, Minimum, and Maximum) are availab
 
 You can add a dimension filter to view metrics on a per-container basis if your container group contains multiple containers. For more information, see [Get metrics in the Azure portal when monitoring container resources in Azure Container Instances](/azure/container-instances/container-instances-monitor#get-metrics---azure-portal).
 
-## Reference
+## Resources
 
 - [Supported metrics for Microsoft.ContainerInstance/containerGroups](/azure/azure-monitor/reference/supported-metrics/microsoft-containerinstance-containergroups-metrics)
-
 - [Tutorial: Deploy a multi-container group using an Azure Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
-
 - [Use dimension filters and splitting](/azure/azure-monitor/essentials/analyze-metrics#use-dimension-filters-and-splitting)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
