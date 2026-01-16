@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 01/15/2026
+ms.date: 01/16/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2022
@@ -12,14 +12,7 @@ ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-rela
 ---
 # <a id="release-history"></a> Release history for SQL Server 2022 on Linux
 
-The following table lists the release history for [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. For release history on other editions, see the following articles:
-
-- [Release history for SQL Server 2017 on Linux](release-history-2017.md?view=sql-server-ver14&preserve-view=true).
-- [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
-- [Release history for SQL Server 2025 on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
-
-> [!NOTE]  
-> Any missing GDRs apply to the Windows version only.
+The following table lists the release history for [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)].
 
 | Release | Version | Release date |
 | --- | --- | --- |
@@ -60,13 +53,25 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 | [GDR (Feb 2023)](#16-0-1050) | 16.0.1050.5 | 2023-02-14 |
 | [GA](#16-0-1000) | 16.0.1000.6 | 2022-11-16 |
 
+For release history on other editions, see the following articles:
+
+- [Release history for SQL Server 2017 on Linux](release-history-2017.md?view=sql-server-ver14&preserve-view=true).
+- [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
+- [Release history for SQL Server 2025 on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
+
+## Release and container tag guidance
+
+- The **mssql-server-is** package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](/sql/linux/sql-server-linux-known-issues#sql-server-integration-services-ssis).
+
+- Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
+
+- Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
+
 <a id="16-0-4235"></a>
 
 ## CU 23 (January 2026)
 
 This is the Cumulative Update 23 (CU 23) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4235.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate23.md).
-
-Owing to a technical issue, the container tag for [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)] `CU21-GDR1` isn't available. Use `CU21-GDR2` or a later tag instead.
 
 ### Package details
 
