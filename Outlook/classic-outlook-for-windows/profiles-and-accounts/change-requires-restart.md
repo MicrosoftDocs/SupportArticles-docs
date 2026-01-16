@@ -34,7 +34,7 @@ After they receive this message, users should select **OK** to dismiss the messa
 
 ## Cause
 
-There is no single cause for this specific message window to appear. However, when it does occur, Event 67 is recorded in Event Viewer.
+This message window might appear for muliple reasons. However, when this issue occurs, Event 67 is recorded in Event Viewer.
 
 To access Event 67, use the following steps.
 
