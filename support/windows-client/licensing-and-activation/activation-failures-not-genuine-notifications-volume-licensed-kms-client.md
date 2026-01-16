@@ -1,6 +1,6 @@
 ---
 title: Activation failures around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
-description: Provides a solution to an issue where users may receive the Windows Activation or (Windows is not genuine) notifications starting at or after 10:00 UTC, January 8, 2019.
+description: Provides a solution to an issue where users might receive the Windows Activation or (Windows is not genuine) notifications starting at or after 10:00 UTC, January 8, 2019.
 ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -14,14 +14,14 @@ appliesto:
 ---
 # Activation failures and (not genuine) notifications around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 
-This article provides a solution to an issue where users may receive the Windows Activation or "Windows is not genuine" notifications starting at or after 10:00 UTC, January 8, 2019.
+This article provides a solution to an issue where users might receive the Windows Activation or "Windows is not genuine" notifications starting at or after 10:00 UTC, January 8, 2019.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4487266
 
 ## Summary
 
-This article applies to volume-licensed Windows 7 Service Pack 1 devices that use Key Management Service (KMS) activation and have the [KB 971033](https://support.microsoft.com/help/971033) update installed. Some users may receive the Windows Activation or "Windows is not genuine" notifications starting at or after 10:00 UTC, January 8, 2019.
+This article applies to volume-licensed Windows 7 Service Pack 1 devices that use Key Management Service (KMS) activation and have the [KB 971033](https://support.microsoft.com/help/971033) update installed. Some users might receive the Windows Activation or "Windows is not genuine" notifications starting at or after 10:00 UTC, January 8, 2019.
 
 On January 9, 2019, we reverted a change that was made to Microsoft Activation and Validation servers. For devices that continue to report activation and "not genuine" notifications, you should remove [KB 971033](https://support.microsoft.com/help/971033) by following the steps in the [Resolution](#resolution) section.
 
@@ -34,11 +34,11 @@ Windows editions that support volume-licensing activation include the following:
 - Windows 7 Enterprise N
 - Windows 7 Enterprise E
 
-For Windows editions that experience activation and "not genuine" errors that are not caused by the Microsoft Activation and Validation server change around January 8, 2019, we recommend that you follow standard activation troubleshooting.
+For Windows editions that experience activation and "not genuine" errors that aren't caused by the Microsoft Activation and Validation server change around January 8, 2019, we recommend that you follow standard activation troubleshooting.
 
 ## Symptoms
 
-1. You receive a **Windows is not genuine** error message after you log on.
+1. You receive a **Windows is not genuine** error message after you sign in.
 
     :::image type="content" source="media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/windows-is-not-genuine-error-message.png" alt-text="Screenshot of Windows is not genuine error message." border="false":::
 
@@ -70,15 +70,15 @@ For Windows editions that experience activation and "not genuine" errors that ar
 A recent update to the Microsoft Activation and Validation unintentionally caused a "not genuine" error on volume-licensed Windows 7 clients that had [KB971033](https://support.microsoft.com/help/971033) installed. The change was introduced at 10:00:00 UTC on January 8, 2019, and was reverted at 4:30:00 UTC on January 9, 2019.
 
 > [!NOTE]
-> This timing coincides with the release of the "1B" January 2019 updates ([KB 4480960](https://support.microsoft.com/help/4480960) and [KB 4480970](https://support.microsoft.com/help/4480970)) that were released on Tuesday, January 8, 2019. These events are not related.
+> This timing coincides with the release of the "1B" January 2019 updates ([KB 4480960](https://support.microsoft.com/help/4480960) and [KB 4480970](https://support.microsoft.com/help/4480970)) that were released on Tuesday, January 8, 2019. These events aren't related.
 
-Windows 7 devices that have [KB971033](https://support.microsoft.com/help/971033) installed but did not experience this issue between the time of the change (10:00:00 UTC, January 8, 2019) and the time of the reversion of that change (4:30:00 UTC, January 9, 2019)  should not experience the issue that is described in this article.
+Windows 7 devices that have [KB971033](https://support.microsoft.com/help/971033) installed but didn't experience this issue between the time of the change (10:00:00 UTC, January 8, 2019) and the time of the reversion of that change (4:30:00 UTC, January 9, 2019) shouldn't experience the issue that this article describes.
 
 [KB971033](https://support.microsoft.com/help/971033) contains the following text:
 
 "Note For an Enterprise customer who uses Key Management Service (KMS) or Multiple Activation Key (MAK) volume activation, we generally recommend to NOT install this update in their reference image or already deployed computers. This update is targeted at consumer installs of Windows using RETAIL activation."
 
-We strongly recommend that you uninstall [KB971033](https://support.microsoft.com/help/971033) from all volume-licensed Windows 7-based devices. This includes devices that are not currently affected by the issue that is mentioned in the [Symptoms](#symptoms) section.
+We strongly recommend that you uninstall [KB971033](https://support.microsoft.com/help/971033) from all volume-licensed Windows 7-based devices. This includes devices that aren't currently affected by the issue that is mentioned in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
@@ -153,7 +153,7 @@ The following table lists the KMS client keys for each edition of Windows 7.
 > [!NOTE]
 >
 > - Scripts that contain the KMS client setup key must target the corresponding operating system edition.
-> - For services that do not have [KB 971033](https://support.microsoft.com/help/971033) installed but experience the issue that is mentioned in the [Symptoms](#symptoms) section, you can also rebuild activation-related files and reactivate the system by using the script that is mentioned in the list of reactivation commands.
+> - For services that don't have [KB 971033](https://support.microsoft.com/help/971033) installed but experience the issue that is mentioned in the [Symptoms](#symptoms) section, you can also rebuild activation-related files and reactivate the system by using the script that is mentioned in the list of reactivation commands.
 
 ## Data collection
 
