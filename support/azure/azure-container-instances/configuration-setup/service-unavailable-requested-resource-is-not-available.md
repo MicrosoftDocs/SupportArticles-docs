@@ -1,5 +1,5 @@
 ---
-title: ServiceUnavailable (409) - requested resource is not available in the location
+title: ServiceUnavailable (409) - requested resource isn't available in the location
 description: Provides a solution to the service unavailable error
 ms.date: 02/23/2024
 author: tysonfms
@@ -11,7 +11,7 @@ ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a ServiceUnavailable (409) error ("requested resource is not available in the location") so that I can successfully deploy a resource in Azure Container Instances.
 ---
-# "ServiceUnavailable (409) - requested resource is not available in the location" error
+# "ServiceUnavailable (409) - requested resource isn't available in the location" error
 
 This article discusses how to resolve the "ServiceUnavailable (409) error ("The requested resource is not available in the location" '\<region-name>' at this moment")" that occurs when you try to deploy a resource in Microsoft Azure Container Instances.
 
@@ -25,7 +25,7 @@ You receive an error message that resembles the following text:
 
 This issue might occur if a feature isn't available in certain regions or if there's a lack of capacity. This issue is typically intermittent.
 
-If container group deployment requests are larger than four (4) CPU or 16 GB memory the deployment is marked as **Big Container Group**. Big Container Group region capacity is enabled on demand and if there's no infrastructure available for the deployment the error is encountered.
+When container group deployment requests are larger than four (4) CPU or 16-GB memory the deployment is marked as **Big Container Group**. Big Container Group region capacity is enabled on demand and if there's no infrastructure available for the deployment the error is encountered.
 
 ## Solution
 
