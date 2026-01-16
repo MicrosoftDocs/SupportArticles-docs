@@ -288,12 +288,12 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
     sudo pcs status --full
     ```
     ```output
-    * Node node-0 (1):
+    * Node vm-mce-hana01 (1):
         + hana_XXX_clone_state              : PROMOTED  
         + hana_XXX_sync_state               : PRIM      
         + hana_XXX_roles                    : 4:P:master1:master:worker:master
 
-    * Node node-1 (2):
+    * Node vm-mce-hana02 (2):
         + hana_XXX_clone_state              : WAITING4PRIM  
         + hana_XX_sync_state                : SFAIL      
         + hana_XXX_roles                    : 4:S:master1:master:worker:slave
@@ -609,7 +609,7 @@ Jan  2 08:01:55 vm-mce-hana01 SAPHana(SAPHana_XXX_00)[5328]: error output [ tput
 Jan  2 08:01:55 vm-mce-hana01 pacemaker-attrd[2161]: error output [ Error performing operation: No such device or address ]
 Jan  2 08:01:55 vm-mce-hana01 SAPHana(SAPHana_XXX_00)[5339]: INFO: RA ==== end action start_clone with rc=1 (0.162.3) (22s)====
 Jan  2 08:01:55 vm-mce-hana01 pacemaker-controld[2163]: notice: Result of start operation for SAPHana_XXX_00 on vm-mce-hana01: error
-Jan  2 08:01:55 vm-mce-hana01 pacemaker-controld[2163]: notice: node-0-SAPHana_XXX_00_start_0:33 [ tput: No value for $TERM and no -T specified\ntput: No value for $TERM and no -T specified\ntput: No value for $TERM and no -T specified\nError performing operation: No such device or address\n ]
+Jan  2 08:01:55 vm-mce-hana01 pacemaker-controld[2163]: notice: vm-mce-hana01-SAPHana_XXX_00_start_0:33 [ tput: No value for $TERM and no -T specified\ntput: No value for $TERM and no -T specified\ntput: No value for $TERM and no -T specified\nError performing operation: No such device or address\n ]
 Jan  2 08:01:55 vm-mce-hana01 pacemaker-attrd[2161]: notice: Setting last-failure-SAPHana_XXX_00#start_0[vm-mce-hana01] in instance_attributes: (unset) -> 1767340915
 Jan  2 08:01:55 vm-mce-hana01 pacemaker-attrd[2161]: notice: Setting fail-count-SAPHana_XXX_00#start_0[vm-mce-hana01] in instance_attributes: (unset) -> INFINITY
 ```
