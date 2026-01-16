@@ -12,7 +12,7 @@ ms.reviewer: v-six
 
 This article lists the Microsoft SQL Server 2025 builds that were released after the release of SQL Server 2025.
 
-## SQL Server 2022 Cumulative Update (CU) builds
+## SQL Server 2025 Cumulative Update (CU) builds
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|-------------|-----------------|-------------|-----------------|------------------------------------|--------------------|
