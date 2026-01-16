@@ -12,7 +12,7 @@ ms.custom: sap:Application Code
 
 This article has answers to frequently asked questions (FAQs) about issues with open-source technologies for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+ 
 
 ## How do I turn on PHP logging to troubleshoot PHP issues?
 
