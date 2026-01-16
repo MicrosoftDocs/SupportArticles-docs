@@ -125,8 +125,6 @@ items:
         href: desktop-flows/application-certificate-error.md
       - name: Agent-related errors when running attended or unattended desktop flows
         href: desktop-flows/agent-connectivity-issues-pad.md
-      - name: Binary caching issues in Power Automate for desktop
-        href: desktop-flows/binary-caching-issues.md
       - name: Can't connect to an IBM Personal Communications session
         href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
       - name: Can't silently join a machine group
@@ -163,6 +161,8 @@ items:
         href: desktop-flows/machine-not-joined-error.md
       - name: Desktop flows don't show in console if license expired or unassigned
         href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
+      - name: Desktop flows fail because of binary caching problems
+        href: desktop-flows/binary-caching-issues.md
       - name: Desktop flow runs are missing from the list
         href: desktop-flows/desktop-flow-runs-missing-from-list.md
       - name: Desktop flow runs list isn't updated

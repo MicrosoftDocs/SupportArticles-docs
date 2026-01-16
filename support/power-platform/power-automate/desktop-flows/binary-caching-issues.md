@@ -10,9 +10,9 @@ ms.custom: sap:Desktop flows
 
 ## Summary
 
-Power Automate for desktop uses binary caching to download and store files locally. This method improves performance and reduces flow execution time. However, corrupted, outdated, or conflicting cache files can cause errors when you run desktop flows.
+When you run desktop flows in Power Automate for desktop, the binary caching feature downloads and stores files locally to improve performance. Sometimes, these cached files can become corrupted or outdated, which prevents your flows from running correctly.
 
-Use this guide when desktop flows don't run from the cloud or behave unexpectedly. This guide helps you to identify your machine runtime configuration, and clear the appropriate cache folders.
+If desktop flows triggered from the cloud don't run or behave as expected, or you receive errors about file conflicts or corrupted files, try clearing the cache folders as a first troubleshooting step. This guide helps you identify your machine runtime configuration and clear the appropriate cache folders.
 
 ## Symptoms
 
