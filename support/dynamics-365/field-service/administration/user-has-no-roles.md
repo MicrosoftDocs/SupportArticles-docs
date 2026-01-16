@@ -19,7 +19,7 @@ When a user tries to access work orders, the following error messages appear, in
 
 - If the user has some privileges but not all the required ones to complete the user action, an error message like the following appears:
 
-    > You don't have prvCreatemsdyn_workorder permission to access msdyn_workorder records. Contact your Microsoft Dynamics 365 administrator for help.
+    > You do not have prvCreatemsdyn_workorder permission to access msdyn_workorder records. Contact your Microsoft Dynamics 365 administrator for help.
 
 ## Resolution
 
