@@ -1,9 +1,7 @@
 ---
 title: Can't find a user when setting up frontline workers
 description: Resolves an issue where you can't find a user when trying to assign security roles in a new Field Service environment.
-ms.author: jacoh
-author: jasonccohen
-ms.reviewer: v-wendysmith
+ms.reviewer: jacoh, v-wendysmith
 ms.date: 01/09/2026
 ms.custom: sap:Administration
 ---

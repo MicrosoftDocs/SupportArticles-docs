@@ -1,9 +1,7 @@
 ---
 title: Can't identify the user shown in an error message 
 description: Resolves an issue where you can't identify the user shown in an error message in Microsoft Dynamics 365 Field Service.
-ms.author: jacoh
-author: jasonccohen
-ms.reviewer: v-wendysmith
+ms.reviewer: jacoh, v-wendysmith
 ms.date: 01/09/2026
 ms.custom: sap:Administration
 ---

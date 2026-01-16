@@ -1,9 +1,7 @@
 ---
 title: Incorrect user privileges errors in Dynamics 365 Field Service
 description: Resolves privileges errors that occur when a user tries to access work orders in Microsoft Dynamics 365 Field Service.
-ms.author: jacoh
-author: jasonccohen
-ms.reviewer: v-wendysmith
+ms.reviewer: jacoh, v-wendysmith
 ms.date: 01/09/2026
 ms.custom: sap:Administration
 ---

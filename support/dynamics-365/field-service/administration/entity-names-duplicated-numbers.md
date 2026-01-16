@@ -1,9 +1,7 @@
 ---
 title: Entity record names have duplicate numbers
 description: Resolves issues with the incremental numbering of records for Dynamics 365 Field Service entities with auto-numbering.
-author: jshotts
-ms.author: jasonshotts
-ms.reviewer: v-wendysmith
+ms.reviewer: jasonshotts, v-wendysmith
 ms.date: 01/12/2026
 ms.custom: sap:Administration
 ---
