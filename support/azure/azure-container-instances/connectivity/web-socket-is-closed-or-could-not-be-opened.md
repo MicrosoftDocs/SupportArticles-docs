@@ -4,8 +4,8 @@ description: Learn how to resolve the (Web socket is closed or couldn't be opene
 ms.date: 02/24/2025
 author: tysonfms
 ms.author: tysonfreeman
-editor: kennethgp
-ms.reviewer: albarqaw, v-weizhu, v-leedennis
+editor: v-jsitser 
+ms.reviewer: albarqaw, v-weizhu, v-leedennis, kennethgp
 ms.service: azure-container-instances
 ms.custom: sap:Connectivity
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "Web socket is closed or couldn't be opened" error so that I can successfully deploy an image onto a container instance.
@@ -31,5 +31,3 @@ To resolve this error, allow ingress to TCP port 19390 in your firewall. At a mi
 In some scenarios where the corporate proxy blocks port 19390, allow this port for corporate proxy, and then verify the traffic by using the **Network** tab in the browser developer tools.
 
 For more information on reserved ports, see [Does the ACI service reserve ports for service functionality?](/azure/container-instances/container-instances-faq#does-the-aci-service-reserve-ports-for-service-functionality-).
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -2,8 +2,7 @@
 title: ContainerGroupQuotaReached error when deploying Spot containers
 description: Provides solutions to the ContainerGroupQuotaReached error that occurs when you deploy a Spot container to Azure Container Instances.
 ms.date: 10/28/2024
-ms.reviewer: chiragpa, v-weizhu
-editor: kennethgp
+ms.reviewer: chiragpa, v-weizhu, kennethgp
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 ---
@@ -45,6 +44,4 @@ To resolve this issue, increase the StandardSpotCores limit. To do so, use one o
 - File support request to increase capacity for Spot containers. For more information, see [How do I file quota requests for ACI Spot containers?](/azure/container-instances/container-instances-faq#spot-containers-on-azure-container-instances--preview)
 
 > [!NOTE]
-> Spot containers with Azure Container Instances is in preview and is not recommended for production scenarios.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+> Spot containers with Azure Container Instances is currently in preview and not recommended for production scenarios.

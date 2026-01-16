@@ -3,8 +3,7 @@ title: Fails to pull ACR images using Managed Identity authentication
 description: Describes how to troubleshoot image pull failures when you deploy to Azure Container Instances (ACI) from Azure Container Registry (ACR) by using a managed identity.
 ms.date: 12/08/2023
 ms.service: azure-container-instances
-ms.reviewer: tysonfreeman
-editor: kennethgp
+ms.reviewer: tysonfreeman, kennethgp
 ms.custom: sap:Management
 ---
 
@@ -119,5 +118,3 @@ Here are some causes of image pull failures:
     To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, see [Grant the identity permissions to access other Azure resources](/azure/container-registry/container-registry-tasks-authentication-managed-identity#3-grant-the-identity-permissions-to-access-other-azure-resources).
 
 2. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

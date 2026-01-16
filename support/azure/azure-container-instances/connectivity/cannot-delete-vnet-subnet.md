@@ -4,13 +4,12 @@ description: Discusses how to troubleshoot failures when you delete a virtual ne
 ms.date: 01/24/2024
 ms.service: azure-container-instances
 ms.custom: sap:Connectivity, devx-track-azurecli
-ms.reviewer: tysonfreeman, v-weizhu
-editor: kennethgp
+ms.reviewer: tysonfreeman, v-weizhu, kennethgp
 ---
 
 # Failed to delete a virtual network or subnet used by Azure Container Instances
 
-This article discusses errors that occur when you delete a VNet (Virtual Network) or subnet used by Azure Container Instances (ACI) and provides workarounds.
+This article discusses errors that occur when you delete a Virtual Network (VNet) or subnet used by Azure Container Instances (ACI) and provides workarounds.
 
 ## Symptoms
 
@@ -47,7 +46,7 @@ This article discusses errors that occur when you delete a VNet (Virtual Network
 The subnet delegation required by ACI must reference a residual Service Association Link, which prevents the deletion of the VNet or subnet used by ACI.
 
 > [!NOTE]
-> Removing subnet delegation isn't supported for Azure Container Instances. If you're getting this error while trying to set subnet delegation to **None**, delete the subnet and recreate it instead.
+> Removing subnet delegation isn't supported for ACI. If you're getting this error while trying to set subnet delegation to **None**, delete the subnet and recreate it instead.
 
 ### Workaround: Delete the Service Association Link
 
@@ -120,5 +119,3 @@ If deleting the network profile through the Azure portal and Azure CLI fails, up
     ```
 
 3. Delete the network profile and the subnet.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

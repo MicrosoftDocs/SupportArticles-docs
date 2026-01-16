@@ -32,7 +32,7 @@ You might also see the following error messages:
 
 ## Cause
 
-This issue might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024. If you're deploying to a Virtual Network (BYOVNET), note the image pull occurs via random platform public IP.
+This issue might occur due to the rate limits on image pulls from Docker Hub. An agreement between Microsoft and Docker to allow Azure IP addresses to make unlimited anonymous image pulls from Docker Hub ended on June 30, 2024. If you're deploying to a Virtual Network (BYOVNET), the image pull occurs through a random platform public IP.
 
 ## Solution
 
@@ -41,12 +41,10 @@ Create a Docker account and use the Docker account credentials to authenticate t
 > [!NOTE]
 > Docker offers a free subscription that allows customers to get 200 pulls every six hours. If 200 pulls aren't enough for you, we recommend purchasing a paid Docker subscription. A paid Docker subscription gives you 5,000 pulls every 24 hours, which can be increased by contacting Docker directly.
 
-## References
+## Resources
 
 - [Docker Hub usage and rate limits](https://docs.docker.com/docker-hub/download-rate-limit/)
 - [Configure Artifact Cache to consume public content](/azure/container-registry/buffer-gate-public-content#configure-artifact-cache-to-consume-public-content)
 - [Artifact cache in Azure Container Registry](/azure/container-registry/container-registry-artifact-cache)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

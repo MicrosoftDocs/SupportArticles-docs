@@ -5,7 +5,6 @@ ms.date: 01/15/2025
 author: kennethgp
 ms.author: kegonzal
 editor: v-jsitser
-ms.reviewer: kegonzal
 ms.service: azure-container-instances
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Configuration and Setup
@@ -17,43 +16,38 @@ This article discusses how to resolve an operational failure that occurs when a 
 
 ## Symptoms
 
-When you issue start/stop operation on a container group, this error is thrown:
+When you issue a start/stop operation on a container group, you receive the following error message:
 
-> **InternalErrorCode**: "ContainerGroupTransitioning"  
-> **StatusCode**: "409"  
-> **Message**: "The container group '\<container-group-name>' is still transitioning, please retry later."
+**InternalErrorCode**: "ContainerGroupTransitioning"  
+**StatusCode**: "409"  
+**Message**: "The container group '\<container-group-name>' is still transitioning, please retry later."
 
 ## Cause
 
 ### Cause 1: After stop operation
 
-During a continuous stop operation of the container group, system sidecar containers the container group aren't terminated in time.
+During a continuous stop operation of the container group, system sidecar containers in the container group aren't terminated in time.
 
 ### Cause 2: After start operation
 
 The stopped state for previous operation wasn't propagated yet or didn't propagate correctly (known platform issue).
 
-## Solution
+## Solution 1
 
 - Wait until the container group is fully stopped to allow the system sidecars to fully terminate (allow at least 10 seconds between operations).
-- If the [container is deployed by using an Azure Logic App](/azure/connectors/connectors-create-api-container-instances?toc=%2Fazure%2Fcontainer-instances%2Ftoc.json&bc=%2Fazure%2Fcontainer-instances%2Fbreadcrumb%2Ftoc.json), check the state of the container, make sure the status is **Stopped** before issuing start operation.
-- For Job container groups (process runs once and exits, restart policy is **Never**) in **Terminated** state, issue a stop operation before start operation to make sure the correct status is propagated first. Another alternative is to issue a restart operation instead. A restart operation avoids a new container group deployment and instead restarts the application process inside the container.
+- If the [container is deployed by using an Azure Logic App](/azure/connectors/connectors-create-api-container-instances?toc=%2Fazure%2Fcontainer-instances%2Ftoc.json&bc=%2Fazure%2Fcontainer-instances%2Fbreadcrumb%2Ftoc.json), check the state of the container and then make sure the status is **Stopped** before issuing a start operation.
+- For job container groups (process runs once and exits, restart policy is **Never**) in **Terminated** state, issue a stop operation before a start operation to make sure the correct status is propagated first. You can also issue a restart operation. A restart operation avoids a new container group deployment and instead restarts the application process inside the container.
 
 > [!NOTE]
 > As a best practice, we recommend that you always issue a stop operation before a start operation to ensure the correct status is propagated. If you start a container group that already has a running container, you might cause the transitioning state problem.
 
-## Solution 3: Open a support ticket
+## Solution 2: Open a support ticket
 
-If the previous solutions don't fix the problem, and you still encounter the error message, open a support ticket.
+If the previous solutions don't fix the problem and you still encounter the error message, open a support ticket.
 
-## More information
+## Resources
 
 - [Tutorial: Deploy a multi-container group using a Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
-
 - [Azure Container Instances states](/azure/container-instances/container-state)
-
 - [Manually stop or start containers in Azure Container Instances](/azure/container-instances/container-instances-stop-start)
-
 - [Update containers in Azure Container Instances](/azure/container-instances/container-instances-update)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

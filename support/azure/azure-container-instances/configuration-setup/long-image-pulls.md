@@ -5,8 +5,8 @@ ms.date: 04/14/2025
 ms.service: azure-container-instances
 author: tysonfms
 ms.author: tysonfreeman
-editor: kennethgp
-ms.reviewer: edneto, v-leedennis
+editor: v-jsitser
+ms.reviewer: edneto, v-leedennis, kennethgp
 ms.custom: sap:Configuration and Setup
 #Customer intent: As a user of Azure Container Instances, I want to learn why an image pull takes a long time to complete so that I can create and use container groups successfully.
 ---
@@ -20,7 +20,7 @@ This article discusses possible causes for an image pull taking long time to com
 
 ## Symptoms
 
-- Container groups are stuck in a "Creating" status for a significant amount of time.
+- Container groups are stuck in a **Creating** status for a significant amount of time.
 - The image size is large.
 
 ## Cause
@@ -37,7 +37,7 @@ To view the timeline of the container events, run the following [az container sh
 az container show --resource-group <resource-group-name> --name <container-group-name>
 ```
 
-The time span between the **Pulling** and **Pulled** events allows you to determine whether the image pull time is expected or abnormal. Sample command output:
+The time span between the `Pulling` and `Pulled` events allows you to determine whether the image pull time is expected or abnormal. The following is a sample command output:
 
 ```json
 {
@@ -149,8 +149,6 @@ The time span between the **Pulling** and **Pulled** events allows you to determ
 }
 ```
 
-## More information
+## Resources
 
 - [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

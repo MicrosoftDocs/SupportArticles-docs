@@ -21,10 +21,7 @@ This article provides solutions to common errors that occur when you try to crea
 | `SpotPriorityContainerGroupWithGPUResourcesNotSupported` | `Spot Priority Container Groups that include containers requesting GPU resources are not supported.` | GPUs aren't supported for Spot containers. Remove the GPU from the request, and try again. |
 | `PriorityNotSpecified` | `The 'Priority' must be one of 'Regular,Spot' for container group '{xyz}'.` | If the priority is mentioned in the request body, specify a value of `Regular` or `Spot`. |
 
-## More information
+## Resources
 
 - [Azure Container Instances Spot containers (preview)](/azure/container-instances/container-instances-spot-containers-overview)
-
 - [FAQ - Spot containers on Azure Container Instances (Preview)](/azure/container-instances/container-instances-faq#spot-containers-on-azure-container-instances--preview)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

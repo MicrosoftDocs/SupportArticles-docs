@@ -4,8 +4,8 @@ description: Provides a solution to the service unavailable error
 ms.date: 02/23/2024
 author: tysonfms
 ms.author: tysonfreeman
-editor: kennethgp
-ms.reviewer: tomcassidy, v-leedennis
+editor: v-jsitser
+ms.reviewer: tomcassidy, v-leedennis, kennethgp
 ms.topic: troubleshooting-problem-resolution
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
@@ -25,16 +25,11 @@ You receive an error message that resembles the following text:
 
 This issue might occur if a feature isn't available in certain regions or if there's a lack of capacity. This issue is typically intermittent.
 
-If container group deployment requests more than 4 CPU or 16 GB memory the deployment is marked as Big Container Group. Big Container Group region capacity is enabled on demand, if there's no infrastructure available for the deployment the error is thrown.
+If container group deployment requests are larger than four (4) CPU or 16 GB memory the deployment is marked as **Big Container Group**. Big Container Group region capacity is enabled on demand and if there's no infrastructure available for the deployment the error is encountered.
 
 ## Solution
 
-1. To determine whether you can deploy to an available region, see [Resource availability & quota limits for Azure Container Instances](/azure/container-instances/container-instances-resource-and-quota-limits).
-
-1. To determine which features are available in your region, use the [Location - List Capabilities](/rest/api/container-instances/location/list-capabilities) REST API. You can also verify available features per region by selecting the "Try it" button in that article.
-
-1. If you're deploying in an available region, and there's no feature limitation, retry the deployment.
-
-1. If you're deploying a Big Container Group, open a support ticket to validate region capacity.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+- To determine whether you can deploy to an available region, see [Resource availability & quota limits for Azure Container Instances](/azure/container-instances/container-instances-resource-and-quota-limits).
+- To determine which features are available in your region, use the [Location - List Capabilities](/rest/api/container-instances/location/list-capabilities) REST API. You can also verify available features per region by selecting the "Try it" button in that article.
+- If you're deploying in an available region, and there's no feature limitation, retry the deployment.
+- If you're deploying a Big Container Group, open a support ticket to validate region capacity.

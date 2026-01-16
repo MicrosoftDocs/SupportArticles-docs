@@ -46,14 +46,10 @@ When you try to deploy a container instance, the deployment fails, and you recei
 You must use a managed identity to allow the Container Instances trusted service to access the container registry. For more information, see [Allow trusted services to securely access a network-restricted container registry](/azure/container-registry/allow-access-trusted-services#about-trusted-services). You can also learn more at [Deploy to Azure Container Instances from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi).
 
 > [!NOTE]
-> Image pull phase happens before container is created. If you're deploying to a Virtual Network (BYOVNET), image pull occurs via random platform public IP. Because of this reason, private registries other than Azure Container Registry aren't supported even if there's private connectivity from target subnet.
+> Image pull phase happens before container is created. If you're deploying to a Virtual Network (BYOVNET), image pull occurs through a random platform public IP. Because of this, private registries other than Azure Container Registry aren't supported even if there's private connectivity from the target subnet.
 
-## References
+## Resources
 
 - [Managed identities in Azure Container Apps](/azure/container-apps/managed-identity)
-
 - [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
-
 - [Tutorial: Deploy a multi-container group using a Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

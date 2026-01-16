@@ -4,15 +4,15 @@ description: Learn how to resolve an issue in which a container group deployment
 ms.date: 04/17/2025
 author: kennethgp
 ms.author: kegonzal
-editor: v-ryanberg
-ms.reviewer: v-ryanberg
+editor: v-jsitser
+ms.reviewer: edneto, v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
 ---
 # Container group deployment remains in Waiting state
 
-This article discusses possible causes and how to resolve an unresponsive deployment, which doesn't exit the Waiting state.
+This article discusses possible causes and how to resolve an unresponsive deployment which doesn't exit the Waiting state.
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ The Waiting state indicates there's a condition preventing deployment setup or c
 
 Possible solutions include:
 
-- Check that the container runs fine locally. A local machine with Docker can be used to do validate the container runs correctly.
+- Check that the container runs fine locally. A local machine with Docker can be used to validate the container runs correctly.
 - Inspect possible errors on the **Container Events** tab starting with the main container process.
 - Make sure no reserved ports are being used in the container definition. For more information, see [Does the ACI service reserve ports for service functionality?](/azure/container-instances/container-instances-faq#does-the-aci-service-reserve-ports-for-service-functionality-).
 - Check that there's connectivity to the Azure file share and that the key is correct or valid. If deployment is on BYOVNET, check that domain name system (DNS) resolution is working for the Azure file share fully qualified domain name (FQDN).
@@ -46,9 +46,6 @@ Possible solutions include:
 ## Resources
 
 - [Tutorial: Deploy a multi-container group using a Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
-
 - [Azure Container Instances states](/azure/container-instances/container-state)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

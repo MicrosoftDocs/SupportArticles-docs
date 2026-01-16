@@ -2,9 +2,8 @@
 title: Common issues with confidential containers
 description: Provides solutions to common issues with confidential containers.
 ms.date: 02/01/2024
-ms.reviewer: tysonfreeman, v-weizhu
+ms.reviewer: tysonfreeman, v-weizhu, kennethgp
 ms.service: azure-container-instances
-editor: kennethgp
 ms.custom: sap:Management
 ---
 # Troubleshoot common issues with confidential containers
@@ -102,16 +101,13 @@ You might experience the following issues and errors when you deploy confidentia
 
 ## Cause
 
-In most cases, these issues occur due to issues with the CCE policy definition.
+In most cases, these issues occur due to the CCE policy definition.
 
 ## Solution
 
 - If you experience any policy failures, regenerate the CCE policy and retry the deployment.
-
 - If the CCE policy enforces a framework, revert to an older framework svn.
-
 - If the device hash isn't found or there's an issue with an image, clear the cache and regenerate the CCE policy.
 
   To clean the cache, run the `docker rmi <image_name>:<tag>` command. To clean all images in the cache, run the `docker rmi $(docker images -a -q)` command. To inspect the missing hash, run the `docker inspect <image_name>:<tag>` command.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

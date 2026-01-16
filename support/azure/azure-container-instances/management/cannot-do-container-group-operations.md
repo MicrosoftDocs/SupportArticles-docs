@@ -4,8 +4,8 @@ description: Learn how to fix issues in Azure Container Instances when operation
 ms.date: 02/21/2024
 author: tysonfms
 ms.author: tysonfreeman
-editor: kennethgp
-ms.reviewer: chiragpa, v-rekhanain, v-leedennis
+editor: v-jsitser
+ms.reviewer: chiragpa, v-rekhanain, v-leedennis, kennethgp
 ms.service: azure-container-instances
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Management
@@ -29,11 +29,11 @@ You encounter one or more of the following problems:
 
 ## Cause 1: Managed identity deleted before container group
 
-The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script that deletes all the resources within a development resource group. The script doesn't delete the resources in the correct order: It first deletes the managed identity that's necessary to authenticate the container group, and then it tries to delete the container group itself.
+The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script that deletes all the resources within a development resource group. The script doesn't delete the resources in the correct order. It first deletes the managed identity that's necessary to authenticate the container group and then tries to delete the container group itself.
 
-## Cause 2: CMK (Customer-Managed Key) deleted before container group
+## Cause 2: Customer-Managed Key (CMK) deleted before container group
 
-CMK is enabled in container group and key or Azure Keyvault holding key was deleted before deleting container group.
+CMK is enabled in a container group and key or the Azure Keyvault holding key was deleted before deleting the container group.
 
 ## Solution 1: Managed identity deleted before container group
 
@@ -41,16 +41,13 @@ Delete the container group first, wait for the deletion operation to finish, and
 
 ## Solution 2: CMK (Customer-Managed Key) deleted before container group
 
-Confirm if encryption key was deleted or entire keyvault was deleted. Azure Keyvault may have soft-delete enabled and key could be recovered.
+Confirm if the encryption key was deleted or the entire keyvault was deleted. Azure Keyvault may be soft-delete enabled and the key is then recoverable.
 
 ## Solution 3: Open a support ticket to get the container groups out of a bad state
 
 Microsoft Support can stop the affected container groups and help you work through the other necessary steps to delete your container group.
 
-## More information
+## Resources
 
 - [Azure Container Instances states](/azure/container-instances/container-state)
-
 - [Deploy to Azure Container Instances from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

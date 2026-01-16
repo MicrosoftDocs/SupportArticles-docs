@@ -4,8 +4,8 @@ description: Learn how to resolve a (ServiceUnavailable - container group quota 
 ms.date: 02/23/2024
 author: tysonfms
 ms.author: tysonfreeman
-editor: kennethgp
-ms.reviewer: v-leedennis
+editor: v-jsitser
+ms.reviewer: v-leedennis, kennethgp
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a "ServiceUnavailable" error ("Resource type 'Microsoft.ContainerInstance/containerGroups' container group quota 'ContainerGroups' exceeded in region") so that I can successfully deploy container groups onto Azure Container Instances.
@@ -29,10 +29,8 @@ However, you confirm there's enough quota settings for this deployment.
 
 ## Cause
 
-You try to simultaneously deploy multiple container groups in different regions that use the same name. This action triggers the fraud detection logic in Container Instances. Automation scripts that are run in the cloud might be trying to do this multi-deployment operation. You can identify this scenario by the '0' limit and usage fields in error message.
+You try to simultaneously deploy multiple container groups in different regions that use the same name. This action triggers the fraud detection logic in Container Instances. Automation scripts that are run in the cloud might be trying to do this multi-deployment operation. You can identify this scenario by the `0` limit and usage fields in the error message.
 
 ## Solution
 
 To avoid this error, issue requests for container group deployments one at a time.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
