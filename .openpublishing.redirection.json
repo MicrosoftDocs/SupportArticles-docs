@@ -12664,6 +12664,10 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/field-service/administration/attibutemap-error-upgrade.md",
+      "redirect_url": "/dynamics365/field-service/update-field-service"
+    },
+    {
       "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false

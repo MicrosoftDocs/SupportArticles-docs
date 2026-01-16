@@ -1,10 +1,8 @@
 ---
 title: No records after pulling IoT device data
 description: Resolves issues with missing data from IoT devices in Dynamics 365 Field Service by setting the Azure IoT Hub pricing and scale tier to S1-Standard.
-ms.author: vhorvath
-author: vhorvathms
-ms.reviewer: mhart
-ms.date: 11/05/2024
+ms.reviewer: vhorvath, v-wendysmith
+ms.date: 01/13/2026
 ms.custom: sap:IoT - Connected Field Service
 ---
 # No records after pulling IoT device data in Dynamics 365 Field Service
