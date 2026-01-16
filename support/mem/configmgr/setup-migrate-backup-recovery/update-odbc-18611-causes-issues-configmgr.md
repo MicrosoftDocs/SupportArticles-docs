@@ -12,7 +12,7 @@ ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Rec
 
 ## Symptoms
 
-After you install the [Microsoft ODBC driver for SQL Server on Windows version 18.6.1.1](sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186), the installation of new ConfigMgr site fails with the following error in ConfigMgrSetup.log:
+After you install the [Microsoft ODBC driver for SQL Server on Windows version 18.6.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186), the installation of new ConfigMgr site fails with the following error in ConfigMgrSetup.log:
 
 ```output
     INFO: Database watermark:
@@ -28,7 +28,7 @@ After you install the [Microsoft ODBC driver for SQL Server on Windows version 1
     ERROR: Failed to import Asset Intelligence data into the site database.
 ```
 
-In the existing environments, after updating the ODBC Driver for SQL Server to version 18.6.1.1, the Client Notification feature might stop working. You might see the following error message in the BGBMgr.log on the Site Server:
+In the existing environments, after updating the ODBC Driver for SQL Server to version 18.6.1.1, the Client Notification feature might stop working. In particular, you notice that "Currently Logged on User" column isn't populated in the Configuration Manager console. You also see the following error message in the BGBMgr.log on the Site Server:
 
 ```output
 BCP queued 18 rows for currently logged on users
@@ -45,14 +45,14 @@ Begin to move file from E:\Microsoft Configuration Manager\inboxes\bgb.box\Bgbtd
 
 ## Cause
 
-ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can lead to failures in Configuration Manager operations that attempt to insert NULL values into such columns, resulting in errors during site installation and Client Notification processes.
+ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can lead to failures in Configuration Manager operations that attempt to insert NULL values into such columns, resulting in errors during Site Installation and "Currently Logged on User" reporting.
 
 ## Resolution
 
-Downgrade the ODBC Driver for SQL Server to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#1852) or use a [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#184) being included with Configuration Manager version 2503 and later as Redistributable content.
+Downgrade the ODBC Driver for SQL Server to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#1852) or use a [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184) being included with Configuration Manager version 2503 and later as Redistributable content.
 
 ## More information
 
-There are no security updates in ODBC Driver for SQL Server version 18.6.1.1. Microsoft plans resolving the issue in the next ODBC Driver for SQL Server release expected in the middle of 2026.
+Microsoft plans resolving the issue in the next ODBC Driver for SQL Server release expected in the middle of 2026. Note, there are no security updates in ODBC Driver for SQL Server version 18.6.1.1.
 
 See also: [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle)
