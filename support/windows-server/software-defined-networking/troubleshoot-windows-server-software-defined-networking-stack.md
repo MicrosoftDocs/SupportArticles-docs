@@ -17,7 +17,7 @@ appliesto:
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that uses the available diagnostic tools. For more information about SDN, see [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking).
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, and Azure Stack HCI, versions 21H2 and 20H2
 
 ## Error types
 
@@ -30,7 +30,7 @@ Most errors can be classified into a small set of classes:
   A user invokes the NorthBound API incorrectly or with invalid policy.
 - Error in policy application
 
-  Policy from Network Controller was not delivered to a Hyper-V Host, delayed, or not up to date on all Hyper-V hosts (for example, after a Live Migration).
+  Policy from Network Controller wasn't delivered to a Hyper-V Host, delayed, or not up to date on all Hyper-V hosts (for example, after a Live Migration).
 - Configuration drift or software bug
 
   Data-path issues resulting in dropped packets.
@@ -68,7 +68,7 @@ The `Debug-ServiceFabricNodeStatus` and `Get-NetworkControllerReplica` cmdlets m
 
 These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics cmdlet](/powershell/module/hnvdiagnostics/). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South).
 
-The `Debug-VirtualMachineQueueOperation`, `Get-CustomerRoute`, `Get-PACAMapping`, `Get-ProviderAddress`, `Get-VMNetworkAdapterPortId`, `Get-VMSwitchExternalPortId`, and `Test-EncapOverheadSettings` are all local tests that can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as described above.
+The `Debug-VirtualMachineQueueOperation`, `Get-CustomerRoute`, `Get-PACAMapping`, `Get-ProviderAddress`, `Get-VMNetworkAdapterPortId`, `Get-VMSwitchExternalPortId`, and `Test-EncapOverheadSettings` are all local tests that can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as described previously.
 
 ### GitHub
 
@@ -78,9 +78,9 @@ The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has many sampl
 
 ### [Hoster] Validate system health
 
-There is an embedded resource named _Configuration State_ in several of the Network Controller resources. Configuration state provides information about system health including the consistency between the network controller's configuration and the actual (running) state on the Hyper-V hosts.
+There's an embedded resource named _Configuration State_ in several of the Network Controller resources. Configuration state provides information about system health including the consistency between the network controller's configuration and the actual (running) state on the Hyper-V hosts.
 
-To check configuration state, run the following from any Hyper-V host with connectivity to the Network Controller.
+To check configuration state, run the following cmdlet from any Hyper-V host with connectivity to the Network Controller.
 
 > [!NOTE]
 > The value for the `NetworkController` parameter should either be the FQDN or IP address based on the subject name of the X.509 >certificate created for Network Controller.
@@ -103,7 +103,7 @@ Fetching ResourceType:     loadbalancerMuxes
 Fetching ResourceType:     Gateways
 ```
 
-A sample Configuration State message is shown below:
+The Configuration State message resembles the following example:
 
 ```powershell
 Fetching ResourceType:     servers
@@ -118,11 +118,11 @@ Message:          Host is not Connected.
 ```
 
 > [!NOTE]
-> There is a bug in the system where the Network Interface resources for the SLB Mux Transit VM NIC are in a Failure state with error "Virtual Switch - Host Not Connected To Controller". This error can be safely ignored if the IP configuration in the VM NIC resource is set to an IP Address from the Transit Logical Network's IP Pool.
+> There's a bug in the system where the Network Interface resources for the SLB Mux Transit VM NIC are in a Failure state with error "Virtual Switch - Host Not Connected To Controller". This error can be safely ignored if the IP configuration in the VM NIC resource is set to an IP Address from the Transit Logical Network's IP Pool.
 >
-> There is a second bug in the system where the Network Interface resources for the Gateway HNV Provider VM NICs are in a Failure state with error "Virtual Switch - PortBlocked". This error can also be safely ignored if the IP configuration in the VM NIC resource is set to null (by design).
+> There's a second bug in the system where the Network Interface resources for the Gateway HNV Provider VM NICs are in a Failure state with error "Virtual Switch - PortBlocked". This error can also be safely ignored if the IP configuration in the VM NIC resource is set to null (by design).
 
-The table below shows the list of error codes, messages, and follow-up actions to take based on the configuration state observed.
+The following table shows the list of error codes, messages, and follow-up actions to take based on the configuration state observed.
 
 | Code | Message | Action |
 |--|--|--|
@@ -133,34 +133,34 @@ The table below shows the list of error codes, messages, and follow-up actions t
 | PAAddressConfigurationFailure | Failed to plumb PA addresses to the host | Check the Management network connectivity between Network Controller and Host. |
 | CertificateNotTrusted | Certificate is not trusted | Fix the certificates used for communication with the host. |
 | CertificateNotAuthorized | Certificate not authorized | Fix the certificates used for communication with the host. |
-| PolicyConfigurationFailureOnVfp | Failure in configuring VFP policies | This is a runtime failure.  No definite workarounds. Collect logs. |
-| PolicyConfigurationFailure | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController. | No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs. |
-| HostNotConnectedToController | The Host is not yet connected to the Network Controller | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key matches the Instance ID of the server resource |
-| MultipleVfpEnabledSwitches | There are multiple VFp enabled Switches on the host | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled |
-| PolicyConfigurationFailure | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller |
-| PolicyConfigurationFailure | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller |
-| PolicyConfigurationFailure | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller |
-| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported |
-| DhcpAddressAllocationFailure | DHCP address allocation failed for a VMNic | Check if the static IP address attribute is configured on the NIC resource |
-| CertificateNotTrusted<br>CertificateNotAuthorized | Failed to connect to Mux due to network or cert errors | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.) |
-| HostUnreachable | MUX is Unhealthy (Common case is BGPRouter disconnected) | BGP peer on the RRAS (BGP virtual machine) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource  and BGP peer (ToR or RRAS virtual machine) |
-| HostNotConnectedToController | SLB host agent is not connected | Check that SLB Host Agent service is running; Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information |
+| PolicyConfigurationFailureOnVfp | Failure in configuring VFP policies | This is a runtime failure. No definite workarounds. Collect logs. |
+| PolicyConfigurationFailure | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController. | No definite actions. This is due to failure in goal state processing in the Network Controller modules. Collect logs. |
+| HostNotConnectedToController | The Host is not yet connected to the Network Controller | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key matches the Instance ID of the server resource. |
+| MultipleVfpEnabledSwitches | There are multiple VFp enabled Switches on the host | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled. |
+| PolicyConfigurationFailure | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller. |
+| PolicyConfigurationFailure | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller. |
+| PolicyConfigurationFailure | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller. |
+| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported. |
+| DhcpAddressAllocationFailure | DHCP address allocation failed for a VMNic | Check if the static IP address attribute is configured on the NIC resource. |
+| CertificateNotTrusted<br>CertificateNotAuthorized | Failed to connect to Mux due to network or cert errors | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert can't be verified, cert not authorized, etc.). |
+| HostUnreachable | MUX is Unhealthy (Common case is BGPRouter disconnected) | BGP peer on the RRAS (BGP virtual machine) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource  and BGP peer (ToR or RRAS virtual machine). |
+| HostNotConnectedToController | SLB host agent is not connected | Check that SLB Host Agent service is running. Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state shows nuanced information. |
 | PortBlocked | The VFP port is blocked, due to lack of VNET / ACL policies | Check if there are any other errors, which might cause the policies to be not configured. |
-| Overloaded | Loadbalancer MUX is overloaded | Performance issue with MUX |
-| RoutePublicationFailure | Loadbalancer MUX is not connected to a BGP router | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly |
-| VirtualServerUnreachable | Loadbalancer MUX is not connected to SLB manager | Check connectivity between SLBM and MUX |
-| QosConfigurationFailure | Failed to configure QOS policies | See if sufficient bandwidth is available for all VM's if QOS reservation is used |
+| Overloaded | Load balancer MUX is overloaded | Performance issue with MUX. |
+| RoutePublicationFailure | Load balancer MUX isn't connected to a BGP router | Check if the MUX has connectivity with the BGP routers and that BGP peering is set up correctly. |
+| VirtualServerUnreachable | Load balancer MUX isn't connected to SLB manager | Check connectivity between SLBM and MUX. |
+| QosConfigurationFailure | Failed to configure QOS policies | See if sufficient bandwidth is available for all VMs if QOS reservation is used. |
 
 #### Check network connectivity between the network controller and Hyper-V Host (NC Host Agent service)
 
-Run the `netstat` command below to validate that there are three `ESTABLISHED` connections between the NC Host Agent and the Network Controller node(s) and one `LISTENING` socket on the Hyper-V Host.
+Run the following `netstat` command to validate that there are three `ESTABLISHED` connections between the NC Host Agent and the Network Controller node(s) and one `LISTENING` socket on the Hyper-V Host.
 
-- LISTENING on port TCP:6640 on Hyper-V Host (NC Host Agent Service)
+- LISTENING on port TCP: 6640 on Hyper-V Host (NC Host Agent Service)
 - Two established connections from Hyper-V host IP on port 6640 to NC node IP on ephemeral ports (> 32000)
 - One established connection from Hyper-V host IP on ephemeral port to Network Controller REST IP on port 6640
 
 > [!NOTE]
-> There may only be two established connections on a Hyper-V host if there are no tenant virtual machines deployed on that particular host.
+> There might only be two established connections on a Hyper-V host if there are no tenant virtual machines deployed on that particular host.
 
 ```console
 netstat -anp tcp |findstr 6640
@@ -174,7 +174,7 @@ netstat -anp tcp |findstr 6640
 
 #### Check host agent services
 
-The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It is possible that one or both of these services are not running. Check their state and restart if they're not running.
+The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It's possible that one or both of these services aren't running. Check their state and restart if they're not running.
 
 ```powershell
 Get-Service SlbHostAgent
@@ -187,7 +187,7 @@ Start-Service SlbHostAgent -Force
 
 #### Check health of network controller
 
-If there are not three `ESTABLISHED` connections or if the Network Controller appears unresponsive, check to see that all nodes and service modules are up and running by using the following cmdlets.
+If there aren't three `ESTABLISHED` connections or if the Network Controller appears unresponsive, check to see that all nodes and service modules are up and running by using the following cmdlets.
 
 ```powershell
 # Prints a DIFF state (status is automatically updated if state is changed) of a particular service module replica
@@ -249,7 +249,7 @@ Properties       : Microsoft.Windows.NetworkController.ServerProperties
 If using SDNExpress scripts or manual deployment, update the HostId key in the registry to match the Instance ID of the server resource. Restart the Network Controller Host Agent on the Hyper-V host (physical server)
 If using VMM, delete the Hyper-V Server from VMM and remove the HostId registry key. Then, add the server through VMM again.
 
-Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname will be the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of `CN=<FQDN or IP>`.
+Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname is the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of `CN=<FQDN or IP>`.
 
 ```console
 # On Hyper-V Host
@@ -282,13 +282,13 @@ You can also check the following parameters of each cert to make sure the subjec
 - Expiration Date
 - Trusted by Root Authority
 
-If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This might not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then restart the Network Controller Host Agent service. If a connection still cannot be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, recreate the server resource in VMM, which will generate a new X.509 certificate and install it on the Hyper-V host.
+If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent randomly chooses one to present to the Network Controller. This might not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then restart the Network Controller Host Agent service. If a connection still can't be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, recreate the server resource in VMM, which generates a new X.509 certificate and install it on the Hyper-V host.
 
 #### Check the SLB configuration state
 
-The SLB Configuration State can be determined as part of the output to the `Debug-NetworkController` cmdlet. This cmdlet will also output the current set of Network Controller resources in JSON files, all IP configurations from each Hyper-V host (server) and local network policy from Host Agent database tables.
+The SLB Configuration State can be determined as part of the output to the `Debug-NetworkController` cmdlet. This cmdlet also lists the current set of Network Controller resources in JSON files, all IP configurations from each Hyper-V host (server) and local network policy from Host Agent database tables.
 
-More traces will be collected by default. To not collect traces, add the `-IncludeTraces:$false` parameter.
+By default, mMore traces are collected. To not collect traces, add the `-IncludeTraces:$false` parameter.
 
 ```powershell
 Debug-NetworkController -NetworkController <FQDN or IP> [-Credential <PS Credential>] [-IncludeTraces:$false]
@@ -302,7 +302,7 @@ Collecting Diagnostics data from NC Nodes
 ```
 
 > [!NOTE]
-> The default output location will be the \<working_directory\>\NCDiagnostics\\ directory. The default output directory can be changed by using the `-OutputDirectory` parameter.
+> The default output location is the \<working_directory\>\NCDiagnostics\\ directory. The default output directory can be changed by using the `-OutputDirectory` parameter.
 
 The SLB Configuration State information can be found in the _diagnostics-slbstateResults.Json_ file in this directory.
 
@@ -310,13 +310,13 @@ This JSON file can be broken down into the following sections:
 
 - Fabric
   - SlbmVips - This section lists the IP address of the SLB Manager VIP address, which is used by the Network Controller to coordinate configuration and health between the SLB Muxes and SLB Host Agents.
-  - MuxState - This section will list one value for each SLB Mux deployed giving the state of the mux
-  - Router Configuration - This section will list the Upstream Router's (BGP Peer) Autonomous System Number (ASN), Transit IP Address, and ID. It will also list the SLB Muxes ASN and Transit IP.
-  - Connected Host Info - This section will list the Management IP address all of the Hyper-V hosts available to run load-balanced workloads.
-  - Vip Ranges - This section will list the public and private VIP IP pool ranges. The SLBM VIP will be included as an allocated IP from one of these ranges.
-  - Mux Routes - This section will list one value for each SLB Mux deployed containing all of the Route Advertisements for that particular mux.
+  - MuxState - This section lists one value for each SLB Mux deployed giving the state of the mux
+  - Router Configuration - This section lists the Upstream Router's (BGP Peer) Autonomous System Number (ASN), Transit IP Address, and ID. It also lists the SLB Muxes ASN and Transit IP.
+  - Connected Host Info - This section lists the Management IP address all of the Hyper-V hosts available to run load-balanced workloads.
+  - Vip Ranges - This section lists the public and private VIP IP pool ranges. The SLBM VIP is included as an allocated IP from one of these ranges.
+  - Mux Routes - This section lists one value for each SLB Mux deployed containing all of the Route Advertisements for that particular mux.
 - Tenant
-  - VipConsolidatedState - This section will list the connectivity state for each Tenant VIP including advertised route prefix, Hyper-V Host, and DIP endpoints.
+  - VipConsolidatedState - This section lists the connectivity state for each Tenant VIP including advertised route prefix, Hyper-V Host, and DIP endpoints.
 
 > [!NOTE]
 > SLB State can be ascertained directly by using the [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) script available on the [Microsoft SDN GitHub repository](https://github.com/microsoft/sdn).
@@ -366,11 +366,11 @@ PS > (Get-NetworkControllerVirtualgatewayNetworkConnection -ConnectionUri $uri -
 
 ### [Hoster] Validate Data-Plane
 
-After the Network Controller has been deployed, tenant virtual networks and subnets have been created, and VMs have been attached to the virtual subnets, additional fabric level tests can be performed by the hoster to check tenant connectivity.
+After the Network Controller has been deployed, tenant virtual networks and subnets have been created, and VMs have been attached to the virtual subnets, the hoster can perform further fabric-level tests to check tenant connectivity.
 
 #### Check HNV provider logical network connectivity
 
-After the first guest VM running on a Hyper-V host has been connected to a tenant virtual network, the Network Controller will assign two HNV Provider IP Addresses (PA IP Addresses) to the Hyper-V Host. These IPs will come from the HNV Provider logical network's IP Pool and be managed by the Network Controller.  To find out what these two HNV IP Addresses are:
+After the first guest VM running on a Hyper-V host has been connected to a tenant virtual network, the Network Controller assigns two HNV Provider IP Addresses (PA IP Addresses) to the Hyper-V Host. These IPs come from the HNV Provider logical network's IP Pool, and the Network Controller manages them. To find out what these two HNV IP Addresses are, run the following cmdlet:
 
 ```powershell
 PS > Get-ProviderAddress
@@ -391,7 +391,7 @@ VLAN            : VLAN11
 
 These HNV Provider IP Addresses (PA IPs) are assigned to Ethernet Adapters created in a separate TCPIP network compartment and have an adapter name of _VLANX_ where X is the VLAN assigned to the HNV Provider (transport) logical network.
 
-Connectivity between two Hyper-V hosts using the HNV Provider logical network can be done by a ping with an additional compartment (-c Y) parameter where Y is the TCPIP network compartment in which the PAhostVNICs are created. This compartment can be determined by executing:
+Connectivity between two Hyper-V hosts using the HNV Provider logical network can be done by a ping with an additional compartment (-c Y) parameter where Y is the TCPIP network compartment in which the PAhostVNICs are created. To determine this compartment, run the following command at a Windows command prompt:
 
 ```console
 C:\> ipconfig /allcompartments /all
@@ -434,7 +434,7 @@ Ethernet adapter VLAN11:
 ```
 
 > [!NOTE]
-> The PA Host vNIC Adapters are not used in the data-path and so do not have an IP assigned to the "vEthernet (PAhostVNic) adapter".
+> The PA Host vNIC Adapters aren't used in the data-path and so don't have an IP assigned to the vEthernet (PAhostVNic) adapter.
 
 For instance, assume that Hyper-V hosts 1 and 2 have HNV Provider (PA) IP Addresses of:
 
@@ -443,7 +443,7 @@ For instance, assume that Hyper-V hosts 1 and 2 have HNV Provider (PA) IP Addres
 | Host 1 | 10.10.182.64 | 10.10.182.65 |
 | Host 2 | 10.10.182.66 | 10.10.182.67 |
 
-we can ping between the two using the following command to check HNV Provider logical network connectivity.
+We can ping between the two using the following command to check HNV Provider logical network connectivity.
 
 ```console
 # Ping the first PA IP Address on Hyper-V Host 2 from the first PA IP address on Hyper-V Host 1 in compartment (-c) 3
@@ -512,7 +512,7 @@ IsDeleted            : False
 Another common problem in the HNV Provider logical network is that the physical network ports and/or Ethernet card don't have a large enough MTU configured to handle the overhead from VXLAN (or NVGRE) encapsulation.
 
 > [!NOTE]
-> Some Ethernet cards and drivers support the new `*EncapOverhead` keyword which will automatically be set by the Network Controller Host Agent to a value of 160. This value will then be added to the value of the *JumboPacket keyword whose summation is used as the advertised MTU.
+> Some Ethernet cards and drivers support the new `*EncapOverhead` keyword, which the Network Controller Host Agent automatically sets to a value of 160. This value will then be added to the value of the *JumboPacket keyword whose summation is used as the advertised MTU.
 >
 > For example, `*EncapOverhead` = 160 and `*JumboPacket` = 1514 => MTU = 1674B
 
@@ -572,9 +572,9 @@ CA IP Address CA MAC Address    Virtual Subnet ID PA IP Address
 ```
 
 > [!NOTE]
-> If the CA-PA mappings you expect are not output for a given tenant VM, please check the VM NIC and IP Configuration resources on the Network Controller using the `Get-NetworkControllerNetworkInterface` cmdlet. Also, check the established connections between the NC Host Agent and Network Controller nodes.
+> If the CA-PA mappings you expect aren't output for a given tenant VM, check the VM NIC and IP Configuration resources on the Network Controller using the `Get-NetworkControllerNetworkInterface` cmdlet. Also, check the established connections between the NC Host Agent and Network Controller nodes.
 
-With this information, a tenant VM ping can now be initiated by the Hoster from the Network Controller using the `Test-VirtualNetworkConnection` cmdlet.
+With this information, the Hoster can initiate a tenant VM ping from the Network Controller by using the `Test-VirtualNetworkConnection` cmdlet.
 
 ## Specific troubleshooting scenarios
 
@@ -582,8 +582,8 @@ The following sections provide guidance for troubleshooting specific scenarios.
 
 ### No network connectivity between two tenant virtual machines
 
-1. [Tenant] Ensure Windows Firewall in tenant virtual machines is not blocking traffic.
-2. [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running `ipconfig`.
+1. [Tenant] Ensure Windows Firewall in tenant virtual machines isn't blocking traffic.
+2. [Tenant] Check that IP addresses are to the tenant virtual machine by running `ipconfig`.
 3. [Hoster] Run `Test-VirtualNetworkConnection` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question.
 
 > [!NOTE]
@@ -627,7 +627,7 @@ PA Routing Information:
  <snip> ...
 ```
 
-[Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces that would block traffic.
+[Tenant] Check that there aren't any distributed firewall policies specified on the virtual subnet or VM network interfaces that would block traffic.
 
 Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain.
 
@@ -638,9 +638,9 @@ Get-NetworkControllerAccessControlList -ConnectionUri $uri
 
 ## Look at IP configuration and virtual subnets that are referencing this ACL
 
-1. [Hoster] Run `Get-ProviderAddress` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run `Test-LogicalNetworkConnection` or `ping -c <compartment>` from the Hyper-V host to validate connectivity on the HNV Provider logical network
-2. [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run `Test-EncapOverheadValue` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.
-3. [Hoster] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run `Get-PACAMapping` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.
+1. [Hoster] Run `Get-ProviderAddress` on both the Hyper-V hosts that host the two tenant virtual machines in question. Then, to validate connectivity on the HNV Provider logical network, run `Test-LogicalNetworkConnection` or `ping -c <compartment>` from the Hyper-V host.
+2. [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run `Test-EncapOverheadValue` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1,674 bytes to account for maximum overhead of 160 bytes.
+3. [Hoster] If PA IP Addresses aren't present and/or CA Connectivity is broken, check to ensure network policy has been received. Run `Get-PACAMapping` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.
 4. [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. To do this, run `netstat -anp tcp |findstr 6640`.
 5. [Hoster] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.
 6. [Hoster] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.
@@ -651,20 +651,20 @@ The following sections provide information on advanced diagnostics, logging, and
 
 ### Network controller centralized logging
 
-The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or anytime later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines.
+The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or anytime later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB), and gateway machines.
 
 These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking, and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines.
 Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.
 
 #### Enable logging
 
-Logging is automatically enabled when you install the Network Controller cluster using the `Install-NetworkControllerCluster` cmdlet. By default, the logs are collected locally on the Network Controller nodes at _%systemdrive%\\SDNDiagnostics_. It is recommended that you change this location to be a remote file share (not local).
+Logging is automatically enabled when you install the Network Controller cluster using the `Install-NetworkControllerCluster` cmdlet. By default, the logs are collected locally on the Network Controller nodes at _%systemdrive%\\SDNDiagnostics_. It's recommended that you change this location to be a remote file share (not local).
 
-The Network Controller cluster logs are stored at _%programData%\\Windows Fabric\\log\\Traces_. You can specify a centralized location for log collection with the `DiagnosticLogLocation` parameter with the recommendation that this also be a remote file share.
+The Network Controller cluster logs are stored at _%programData%\\Windows Fabric\\log\\Traces_. You can specify a centralized location for log collection with the `DiagnosticLogLocation` parameter. This location should also be a remote file share.
 
 If you want to restrict access to this location, you can provide the access credentials with the `LogLocationCredential` parameter. If you provide the credentials to access the log location, you should also provide the `CredentialEncryptionCertificate` parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.
 
-With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a three-node Network Controller cluster.
+With the default settings, it's recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a three-node Network Controller cluster.
 
 #### Change logging settings
 
@@ -678,7 +678,7 @@ You can change logging settings at any time using the `Set-NetworkControllerDiag
   You can change the credentials to access the log location, with the `LogLocationCredential` parameter.
 - Move to local logging.
 
-  If you have provided centralized location to store logs, you can move back to logging locally on the Network Controller nodes with the `UseLocalLogLocation` parameter (not recommended due to large disk space requirements).
+  If you have provided a centralized location to store logs, you can move back to logging locally on the Network Controller nodes with the `UseLocalLogLocation` parameter (not recommended due to large disk space requirements).
 - Logging scope.
 
   By default, all logs are collected. You can change the scope to collect only Network Controller cluster logs.
@@ -690,13 +690,13 @@ You can change logging settings at any time using the `Set-NetworkControllerDiag
   The logs are stored in a circular fashion. You have three days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with the `LogTimeLimitInDays` parameter.
 - Log Aging size.
 
-  By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the `LogSizeLimitInMBs` parameter.
+  By default, you have a maximum 75 GB of logging data if you use centralized logging and 25 GB if you use local logging. You can change this limit with the `LogSizeLimitInMBs` parameter.
 
 #### Collecting logs and traces
 
 VMM deployments use centralized logging for the Network Controller by default. The file share location for these logs is specified when deploying the Network Controller service template.
 
-If a file location has not been specified, local logging will be used on each Network Controller node with logs saved under _C:\\Windows\\tracing\\SDNDiagnostics_. These logs are saved using the following hierarchy:
+If you don't specify a file location, each Network Controller node saves logs locally. Each node saves logs under _C:\\Windows\\tracing\\SDNDiagnostics_. These logs are saved using the following hierarchy:
 
 - CrashDumps
 - NCApplicationCrashDumps
@@ -751,7 +751,7 @@ Based on the following diagnostic information presented, fix the following:
     2. Check how many DIP endpoints have been discovered for the VIP endpoint.
 2. [Tenant] Validate Load Balancer Resources are correctly specified.
     1. Validate DIP endpoints that are registered in SLBM are hosting tenant virtual machines, which correspond to the LoadBalancer Back-end Address pool IP configurations.
-3. [Hoster] If DIP endpoints are not discovered or connected:
+3. [Hoster] If DIP endpoints aren't discovered or connected:
     1. Check `Debug-NetworkControllerConfigurationState`
 
         Validate that NC and SLB Host Agent is successfully connected to the Network Controller Event Coordinator using `netstat -anp tcp |findstr 6640)`.
@@ -768,11 +768,11 @@ Information from the Software Load Balancer Muxes can also be determined through
 3. Right-click it and select **Enable Log**.
 
 > [!NOTE]
-> It is recommended that you only have this logging enabled for a short time while you are trying to reproduce a problem.
+> It's recommended that you only have this logging enabled for a short time while you're trying to reproduce a problem.
 
 ### VFP and vSwitch tracing
 
-From any Hyper-V host that is hosting a guest VM attached to a tenant virtual network, you can collect a VFP trace to determine where problems might lie.
+From any Hyper-V host that's hosting a guest VM attached to a tenant virtual network, you can collect a VFP trace to determine where problems might lie.
 
 ```console
 netsh trace start provider=Microsoft-Windows-Hyper-V-VfpExt overwrite=yes tracefile=vfp.etl report=disable provider=Microsoft-Windows-Hyper-V-VmSwitch
