@@ -4,7 +4,7 @@ description: Discusses a message that tells users to restart Outlook, but doesn'
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: Pedro Correia, v-kccross
+ms.reviewer: pedrocorreia, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
