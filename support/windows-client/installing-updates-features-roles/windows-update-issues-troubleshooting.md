@@ -74,10 +74,10 @@ Checking the WindowsUpdate.log reveals the following error:
 ```output
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           * START * Finding updates CallerId = Update;taskhostw  Id = 25
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           Online = Yes; Interactive = No; AllowCachedResults = No; Ignore download priority = No
-YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           ServiceID = {855E8A7C-ECB4-4CA3-B045-1DFA50104289} Third party service
+YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           ServiceID = {aaaabbbb-0000-cccc-1111-dddd2222eeee} Third party service
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           Search Scope = {Current User}
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           Caller SID for Applicability: S-1-12-1-2933642503-1247987907-1399130510-4207851353
-YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            Got 855E8A7C-ECB4-4CA3-B045-1DFA50104289 redir Client/Server URL: https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx""
+YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            Got aaaabbbb-0000-cccc-1111-dddd2222eeee redir Client/Server URL: https://fe3.delivery.mp.microsoft.com/ClientWebService/client.asmx""
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            Token Requested with 0 category IDs.
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            GetUserTickets: No user tickets found. Returning WU_E_NO_USERTOKEN.
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] Method failed [AuthTicketHelper::GetDeviceTickets:570]
@@ -88,7 +88,7 @@ YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] Method fai
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] GetAgentTokenFromServer
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] GetAgentToken
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] EP:Call to GetEndpointToken
-YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] Failed to obtain service 855E8A7C-ECB4-4CA3-B045-1DFA50104289 plugin Client/Server auth token of type 0x00000001
+YYYY/MM/DD HH:mm:ss:SSS PID  TID  Misc            *FAILED* [80070426] Failed to obtain service aaaabbbb-0000-cccc-1111-dddd2222eeee plugin Client/Server auth token of type 0x00000001
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  ProtocolTalker  *FAILED* [80070426] Method failed [CAgentProtocolTalkerContext::DetermineServiceEndpoint:377]
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  ProtocolTalker  *FAILED* [80070426] Initialization failed for Protocol Talker Context
 YYYY/MM/DD HH:mm:ss:SSS PID  TID  Agent           Exit code = 0x80070426
@@ -101,7 +101,7 @@ The 0x80070426 error code translates to:
 ERROR_SERVICE_NOT_ACTIVE - # The service has not been started.
 ```
 
-Microsoft Account Sign In Assistant (MSA or wlidsvc) is the service in question. The DCAT Flighting service (ServiceId: 855E8A7C-ECB4-4CA3-B045-1DFA50104289) relies on MSA to get the global device ID for the device. Without the MSA service running, the global device ID won't be generated and sent by the client and the search for feature updates never completes successfully.
+Microsoft Account Sign In Assistant (MSA or wlidsvc) is the service in question. The DCAT Flighting service (ServiceId: aaaabbbb-0000-cccc-1111-dddd2222eeee) relies on MSA to get the global device ID for the device. Without the MSA service running, the global device ID won't be generated and sent by the client and the search for feature updates never completes successfully.
 
 To resolve this issue, reset the MSA service to the default StartType of "manual."
 
