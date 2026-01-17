@@ -222,7 +222,7 @@ Here's one of the log entries from the WMI-Tracing CSV file saved:
 
 |Level|Date and time|Source|Event ID|Task category|Description|
 |-|-|-|-|-|-|
-|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|05-05-23 14:48|Microsoft-Windows-WMI-Activity|11|None|CorrelationId = {aaaa0000-bb11-2222-33cc-444444dddddd}; GroupOperationId = 30693; OperationId = 30694; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 
 A similar event in XML format looks like:
 
@@ -246,7 +246,7 @@ A similar event in XML format looks like:
 </System> 
 <UserData> 
 <Operation_New xmlns="http://manifests.microsoft.com/win/2006/windows/WMI"> 
-<CorrelationId>{345E5566-0000-0000-0000-67343241D901}</CorrelationId> 
+<CorrelationId>{bbbb1111-cc22-3333-44dd-555555eeeeee}</CorrelationId> 
 <GroupOperationId>28089</GroupOperationId> 
 <OperationId>28090</OperationId> 
 <Operation>Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product</Operation> 
@@ -260,7 +260,7 @@ A similar event in XML format looks like:
 </Operation_New> 
 </UserData> 
 <RenderingInfo Culture="en-US"> 
-<Message>CorrelationId = {345E5566-0000-0000-0000-67343241D901}; GroupOperationId = 28089; OperationId = 28090; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520</Message> 
+<Message>CorrelationId = {bbbb1111-cc22-3333-44dd-555555eeeeee}; GroupOperationId = 28089; OperationId = 28090; Operation = Start IWbemServices::ExecQuery - root\cimv2 : select * from Win32_Product; ClientMachine = 21H2W10M; User = CONTOSO\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520</Message> 
 <Level>Information</Level> 
 <Task/> 
 <Opcode>Info</Opcode> 
@@ -356,9 +356,9 @@ With the filter showing only the lines or operations that include "Win32_NTLogEv
 
 |Level|Source|Event ID|Description|
 |-|-|-|-|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {aaaa0000-bb11-2222-33cc-444444dddddd}; GroupOperationId = 30641; OperationId = 30642; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30641; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
-|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {345E5566-0000-0000-0000-68343241D901}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
+|Information|Microsoft-Windows-WMI-Activity|11|CorrelationId = {aaaa0000-bb11-2222-33cc-444444dddddd}; GroupOperationId = 30697; OperationId = 30698; Operation = Start IWbemServices::CreateInstanceEnum - root\cimv2 : Win32_NTLogEvent; ClientMachine = 21H2W10M; User = CONTOSO\\\<UserName>; ClientProcessId = 5484; NamespaceName = 133277000000783520|
 |Information|Microsoft-Windows-WMI-Activity|12|ProviderInfo for GroupOperationId = 30697; Operation = Provider::CreateInstanceEnum - MS_NT_EVENTLOG_PROVIDER : Win32_NTLogEvent; HostID = 556; ProviderName = MS_NT_EVENTLOG_PROVIDER; ProviderGuid = {FD4F53E0-65DC-11d1-AB64-00C04FD9159E}; Path = %systemroot%\system32\wbem\ntevt.dll|
 
 From the above operations, you can get the following additional information:
