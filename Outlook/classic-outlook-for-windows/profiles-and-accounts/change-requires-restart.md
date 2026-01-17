@@ -1,5 +1,5 @@
 ---
-title: Exchange Online Admin Makes a Change That Requires Users to Restart Outlook
+title: Exchange Online admin makes a change that requires users to restart Outlook
 description: Discusses a message that tells users to restart Outlook, but doesn't explain why. The message is prompted by a configuration change by the administrator.
 author: cloud-writer
 ms.author: meerak
