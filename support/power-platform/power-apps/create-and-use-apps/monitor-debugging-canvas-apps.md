@@ -209,13 +209,13 @@ Surface environment-specific metadata and counts, then compare the sequence and 
 
 In the event list:
 
-- Compare `getRows` for **Products** across environments. Does one return zero results or error codes (404 if the table is missing, 403 if access is denied, 429 if throttled)?
+- Compare `getRows` for **Products** across environments. Does one return zero results or error codes (`404` if the table is missing, `403` if access is denied, `429` if throttled)?
 - Look for repeated `getRows` calls that might indicate a non-delegable formula.
-- Compare the Trace values—do products have different values for `relatedOrders` or `hasDiscount`?
+- Compare the Trace values. Do products have different values for `relatedOrders` or `hasDiscount`?
 
 If you find a difference, add more Trace calls where the variable is created to see how it's populated.
 
-If you see network errors (4xx responses), check whether tables, flows, and connectors are set up correctly in both environments.
+If you see network errors (`4xx` responses), check whether tables, flows, and connectors are set up correctly in both environments.
 
 ## Related content
 
