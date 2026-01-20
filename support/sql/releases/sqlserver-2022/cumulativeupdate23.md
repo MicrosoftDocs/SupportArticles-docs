@@ -26,7 +26,15 @@ This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Ser
 
 ### Database Mail stops working after installing this cumulative update
 
-Microsoft is aware of an issue where Database Mail stops working after this cumulative update is installed. While we are working on a fix, we ask that customers who use Database Mail avoid installing this update.
+Microsoft is aware of an issue where Database Mail stops working after this cumulative update is installed. When this occurs, you might see the following message:
+
+```output
+Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
+```
+
+While we are working on a fix, we ask that customers who use Database Mail avoid installing this update.
+
+If you already installed this cumulative update, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it to revert Database Mail to a working state.
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
