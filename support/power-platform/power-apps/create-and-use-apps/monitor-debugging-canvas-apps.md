@@ -1,6 +1,6 @@
 ---
-title: Debug canvas apps with Live monitor and Trace
-description: Learn how to troubleshoot canvas app issues across users and environments by using Live monitor and the Trace function to capture real-time events and diagnostic data.
+title: Diagnose Canvas App Issues with Trace and Live Monitor
+description: Discover how to troubleshoot canvas app issues with Live monitor and Trace. Monitor real-time data operations, errors, and performance for better app diagnostics.
 ms.date: 01/15/2026
 ms.reviewer: carlosff, v-shaywood
 ms.custom: sap:Running Canvas App
@@ -8,12 +8,11 @@ search.audienceType:
   - maker
 ---
 
-
-# Debug canvas apps with Live monitor and Trace
+# Debug canvas apps by using Live monitor and Trace
 
 ## Summary
 
-This article explains how to use [Live monitor](/power-apps/maker/monitor-overview) with the [Trace function](/power-platform/power-fx/reference/function-trace) to diagnose issues in Power Apps canvas apps. This approach helps you troubleshoot problems that occur only for certain users or in specific environments. Live monitor displays real-time events such as network calls, data operations, errors, and performance details. The Trace function lets you add custom diagnostic records to capture values from [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) at key moments.
+This article explains how to use [Live monitor](/power-apps/maker/monitor-overview) with the [Trace function](/power-platform/power-fx/reference/function-trace) to diagnose problems in Power Apps canvas apps. This approach helps you troubleshoot problems that occur only for certain users or in specific environments. Live monitor displays real-time events such as network calls, data operations, errors, and performance details. The Trace function lets you add custom diagnostic records to capture values from [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) at key moments.
 
 > [!NOTE]
 > If you can't use Live monitor (for example, in SharePoint forms or custom portal embeddings), see [Debug canvas apps without Live monitor](monitor-debugging-canvas-apps-without-live-monitor.md) for alternative approaches.
@@ -24,7 +23,7 @@ This article builds on [Debugging canvas apps with Live monitor](/power-apps/mak
 
 ## Combine Live monitor and Trace
 
-Live monitor displays platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes such as `404` or `429`), timing, and delegation indicators.
+Live monitor displays platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes such as `404` or `429`), timing, and [delegation](/power-apps/maker/canvas-apps/delegation-overview) indicators.
 
 When you add Trace calls in your behavior formulas (`OnSelect`, `OnVisible`, `OnStart`), you capture context such as:
 
@@ -43,15 +42,15 @@ Together, Live monitor and Trace answer both "what happened" and "why."
 Live monitor displays each data operation event with:
 
 - Operation type (`getRows`, `createRow`, `patch`, `removeRow`)
-- Data source (Dataverse table or connector name)
+- Data source ([Dataverse](/power-apps/maker/data-platform/data-platform-intro) table or connector name)
 - Timing (start, finish, duration)
 - Result (success or error status code)
-- Delegation hints (non-delegable operations trigger client-side processing)
+- Delegation hints ([non-delegable operations](/power-apps/maker/canvas-apps/delegation-overview#non-delegable-limits) trigger client-side processing)
 
 Select an event to view details. Correlate events with nearby Trace records to understand *why* the operation occurred. For example, a surge in `getRows` calls after a Trace with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
 
 > [!TIP]
-> If you see HTTP 429 (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use collections to cache data and reduce network calls.
+> If you see HTTP 429 (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use [collections](/power-apps/maker/canvas-apps/create-update-collection) to cache data and reduce network calls.
 
 ### Use Trace effectively
 
@@ -60,22 +59,23 @@ The [Trace function](/power-platform/power-fx/reference/function-trace) writes a
 Key features:
 
 - Works only in behavior properties (`OnSelect`, `OnChange`, `OnVisible`, `OnStart`).
-- Accepts a text message and an optional record payload for additional details.
+- Accepts a text message and an optional record payload for extra details.
 - `TraceSeverity` helps you filter events (Information, Warning, Error). Use Error sparingly.
 - Has minimal performance impact when used appropriately. Remove or guard verbose Trace calls before broad deployment.
 
-#### Trace data property values with debug buttons
+#### Trace data property values by using debug buttons
 
 Because you can't place Trace in data properties (such as a label's `Text`), use temporary debug buttons to capture those values.
 
 To create a debug button:
 
 1. Add a button named `btnDebugSnapshot` with **Visible** set to `Param("debug") = "true"`.
+   1. For more information about passing parameters, see [Param function](/power-platform/power-fx/reference/function-param).
 1. In `OnSelect`, call Trace with a snapshot record.
 1. When testing, add `&debug=true` to the app URL to show the button.
 
 > [!TIP]
-> Trace the input values used to calculate a data property. They often reveal why the result isn't what you expect.
+> Trace the input values you use to calculate a data property. They often reveal why the result isn't what you expect.
 
 ##### Example debug snapshot button
 
@@ -97,13 +97,13 @@ Trace(
 ```
 
 > [!NOTE]
-> Guard debug controls with query string parameters or role checks so that end users don't see them. Remove these controls before you finalize the app.
+> Guard debug controls by using query string parameters or role checks so that end users don't see them. Remove these controls before you finalize the app.
 
 ### Debugging checklist
 
-Use this checklist when troubleshooting canvas app issues:
+Use this checklist when troubleshooting canvas app problems:
 
-1. Reproduce the issue with Live monitor open (in Studio or a published session).
+1. Reproduce the problem with Live monitor open (in Studio or a published session).
 1. Add Trace calls at key phases (start, decision points, end, error handlers).
 1. Use query string parameters (`Param`) to tag the environment or enable debug controls.
 1. Compare traces across users or environments. Look for different flags or counts.
@@ -122,7 +122,7 @@ Capture what the app sees about each user (email, roles, customer selection, dis
 
 #### Steps
 
-1. Open the app in Power Apps Studio.
+1. Open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio).
 1. Add Trace calls in the `OnSelect` property of the submit button.
 1. Save and publish the app.
 1. Open Live monitor for the published app.
@@ -172,7 +172,7 @@ Trace(
 
 In Live monitor, filter by Trace events, button name, or search for "Debug:" in the info column. Compare User A vs. User B:
 
-- Do they have different `isVIP` values? This could change discount calculations.
+- Do they have different `isVIP` values? This difference could change discount calculations.
 - Are cart counts identical? If not, upstream logic differs.
 - Are error traces present only for User B? Expand the event to inspect error details.
 
@@ -215,7 +215,7 @@ In the event list:
 
 If you find a difference, add more Trace calls where the variable is set to see how it's populated.
 
-If you see network errors (`4xx` responses), verify that tables, flows, and connectors are configured correctly in both environments.
+If you see network errors (`4xx` responses), verify that tables, [flows](/power-automate/overview-cloud), and [connectors](/connectors/connectors) are configured correctly in both environments.
 
 ## Related content
 
