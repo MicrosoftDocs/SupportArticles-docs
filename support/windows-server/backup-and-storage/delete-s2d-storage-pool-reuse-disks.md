@@ -14,7 +14,18 @@ appliesto:
 ---
 # Delete a Storage Spaces Direct storage pool and reset the physical disks
 
-This article uses an example Storage Spaces Direct (S2D) deployment to explain how to gracefully delete an S2D storage pool. This process cleans S2D information from the disks that the storage pool aggregates so that you can reuse the disks elsewhere. If you use a different approach to remove disks from a storage pool, both the disks and the storage pool might enter an unusable state. For more information about these issues and related events, see [More information](#more-information).
+## Summary
+
+This article describes how to safely remove a Storage Spaces Direct (S2D) storage pool and prepare the physical disks for reuse. Follow these steps to avoid rendering the disks or storage pool unusable.
+
+When you remove disks from a storage pool incorrectly, both the disks and the storage pool can enter an unusable state. This article provides a step-by-step procedure to gracefully delete an S2D storage pool and clean the disks so that you can reuse them in a different configuration. For more information about these issues and related events, see [More information](#more-information).
+
+> [!CAUTION]  
+> Make sure that you back up any data that's in the storage pool. The steps in this article delete all data from the disks.
+
+The steps in this article don't affect the  current Windows Server Failover Cluster (WSFC) configuration. These steps modify only the S2D configuration.
+
+## Introduction to the example
 
 This example uses the following steps to completely remove the S2D configuration and prepare the disks for reuse:
 
@@ -24,8 +35,6 @@ This example uses the following steps to completely remove the S2D configuration
 1. [Disable S2D](#step-4-disable-s2d).
 1. [Verify that everything is removed](#step-5-verify-that-everything-is-removed).
 1. [Clean up the physical disks](#step-6-clean-up-the-physical-disks).
-
-The current Windows Server Failover Cluster (WSFC) configuration isn't changed. These steps modify only the S2D configuration.
 
 The example in this section uses the following configuration:
 
