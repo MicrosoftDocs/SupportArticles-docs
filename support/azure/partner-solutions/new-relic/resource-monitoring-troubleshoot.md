@@ -6,7 +6,8 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-general
-ms.custom: sap:Native New Relic Service
+ms.custom:
+  - sap:Native New Relic Service
 ms.date: 09/19/2025
 ai-usage: ai-assisted
 

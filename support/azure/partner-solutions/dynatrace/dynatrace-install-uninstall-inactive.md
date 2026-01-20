@@ -4,7 +4,8 @@ description: Resolve the issue in which the installation or uninstallation optio
 author: agrimayadav
 ms.author: jarrettr 
 ms.service: partner-services 
-ms.custom: sap:Dynatrace on Azure
+ms.custom:
+  - sap:Dynatrace on Azure
 ms.topic: troubleshooting-problem-resolution  
 ms.date: 10/21/2025
 

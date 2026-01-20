@@ -6,7 +6,8 @@ ms.author: jarrettr
 ms.reviewer: kkendrick
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution 
-ms.custom: sap:Azure Native Informatica Service
+ms.custom:
+  - sap:Azure Native Informatica Service
 ms.date: 08/14/2025
 ai-usage: ai-assisted
 

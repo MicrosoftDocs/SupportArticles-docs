@@ -4,7 +4,8 @@ description: Troubleshoot problems with creating a service connection for Conflu
 author:  praveenrajap
 ms.author: jarrettr  
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom:
+  - sap:Confluent on Azure
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/24/2025

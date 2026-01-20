@@ -4,7 +4,8 @@ description: Resolve the DeploymentFailed error that can occur when you create a
 author:  praveenrajap
 ms.author: jarrettr 
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom:
+  - sap:Confluent on Azure
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
