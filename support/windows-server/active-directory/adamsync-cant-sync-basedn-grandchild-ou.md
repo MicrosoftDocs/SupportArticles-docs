@@ -16,9 +16,13 @@ appliesto:
 
 # Endless loop in AD DS to AD LDS synchronization if base DN is a grandchild OU
 
-This article discusses how to work around a behavior in the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool. This behavior causes the synchronization process to enter an endless loop if the base distinguished name (base DN) is a grandchild OU. You can stop the loop only by using Task Manager or by pressing Ctrl+C.
-
 _Original KB number:_ &nbsp; 926933
+
+## Summary
+
+When you use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync) tool to synchronize data from Active Directory Domain Services (AD DS) to Active Directory Lightweight Directory Services (AD LDS), the synchronization process might enter an endless loop. This issue occurs when you specify a grandchild organizational unit (OU) as the base distinguished name (base DN) in the Adamsync configuration file.
+
+This article describes the symptoms, cause, and workarounds for this known issue in the Adamsync tool.
 
 ## Symptoms
 
