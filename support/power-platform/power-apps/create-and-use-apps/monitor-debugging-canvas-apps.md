@@ -184,11 +184,11 @@ Your app works correctly in _Test_ but fails in _Production_, for example a gall
 
 #### Goal
 
-Surface environment-specific metadata and counts, then compare the sequence and status codes of data operations between environments. In this example, the app has one screen with a form where a **Product** selected from a gallery can be updated. The update works in **Test** but fails in **Production**.
+Surface environment-specific metadata and counts, then compare the sequence and status codes of data operations between environments. In this example, the app has one screen with a form where a **Product** selected from a gallery can be updated. The update works in _Test_ but fails in _Production_.
 
 #### Steps
 
-1. Add an **OnVisible** Trace on the affected screen:
+1. Add an `OnVisible` Trace on the affected screen:
 
     ```powerfx
     Trace(
@@ -203,7 +203,7 @@ Surface environment-specific metadata and counts, then compare the sequence and 
     ```
 
 1. Deploy the app with the new traces to production.
-1. Open Live monitor in **Test** and then in **Production**. Export logs if needed.
+1. Open Live monitor in _Test_ and then in _Production_. Export logs if needed.
 
 #### Analyze the results
 
