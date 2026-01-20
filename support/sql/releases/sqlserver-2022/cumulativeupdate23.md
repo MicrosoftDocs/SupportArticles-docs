@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 23 for SQL Server 2022 (KB5074819)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 23 (KB5074819).
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074819
 ms.reviewer: v-shaywood
@@ -23,6 +23,10 @@ This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Ser
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
 ## Known issues in this update
+
+### Database Mail stops working after updating
+
+[!INCLUDE [database-mail-stops](../includes/database-mail-stops.md)]
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
