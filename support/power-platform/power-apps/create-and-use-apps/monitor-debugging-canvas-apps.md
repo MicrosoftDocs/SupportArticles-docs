@@ -180,11 +180,11 @@ Correlate Trace events with adjacent `getRows` or `patch` operations. If User B 
 
 ### Scenario: App works in one environment but not another
 
-Your app works correctly in _Test_ but fails in _Production_, for example a gallery loads no items and submission is slow. Even though the app is the same, the data in each environment can differ, this difference can cause the app to behave differently in each environment.
+Your app works correctly in _Test_ but fails in _Production_, for example a gallery loads no items and submission is slow. Even though the app is the same, the data in each environment can differ, this difference can cause the app to experience problems in one environment but not the other.
 
 #### Goal
 
-Surface environment-specific metadata and counts, then compare data operations between environments.
+Surface environment-specific metadata and counts, then compare the sequence and status codes of data operations between environments. In this example, the app has one screen with a form where a **Product** selected from a gallery can be updated. The update works in **Test** but fails in **Production**.
 
 #### Steps
 
