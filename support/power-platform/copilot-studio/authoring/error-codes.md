@@ -69,13 +69,13 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 **Error messages:**
 
-- The output of the prompt evaluated to '{ActualType}' but expected '{ExpectedType}'.
+- The output of the prompt evaluated to `{ActualType}` but expected `{ExpectedType}`.
 
-- The input parameter '{ParameterName}' for prompt '{PromptName}' is missing.
+- The input parameter `{ParameterName}` for prompt `{PromptName}` is missing.
 
-- The input parameter '{ParameterName}' for prompt '{PromptName}' is blank but is required.
+- The input parameter `{ParameterName}` for prompt `{PromptName}` is blank but is required.
 
-- Expected: {ExpectedType}. Actual: {ActualType}.
+- Expected: `{ExpectedType}`. Actual: `{ActualType}`.
 
 **Resolution:** This error occurs when a prompt action receives incorrect input or returns unexpected output types.
 
@@ -179,7 +179,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 #### ConnectedAgentBotNotPublished
 
-**Error message:** Connected agent with schema name {AgentSchemaName} needs to be published to be invoked.
+**Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
 **Resolution:** The connected sub-agent must be published before it can be invoked by the orchestrator agent.
 
