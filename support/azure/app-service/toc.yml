@@ -50,7 +50,7 @@ items:
       - name: Application code deployment
         items:
         - name: Built-in Linux containers FAQs
-          href: faqs-app-service-linux.yml
+          href: faqs-app-service-linux.md
         - name: Deployment FAQs for Web Apps
           href: web-apps-deployment-faqs.md
       - name: Application code

@@ -1,0 +1,263 @@
+---
+title: Azure App Service on Linux FAQ
+description: Find answers to the frequently asked questions about the built-in Linux containers in Azure App Service.
+keywords: azure app service, web app, faq, linux, oss, web app for containers, multi-container, multicontainer
+author: JarrettRenshaw
+ms.service: azure-app-service
+ms.date: 01/20/2026
+ms.author: jarrettr
+ms.custom: sap:Application Code Deployment  
+---
+
+# Azure App Service on Linux FAQ
+
+## Summary
+
+This article has answers to frequently asked questions (FAQs) about App Service on Linux.
+
+## Built-in images
+
+### What are the expected values for the Startup File section when I configure the runtime stack?
+
+| Stack | Expected Value |
+|-------|----------------|
+| Java SE | the command to start your JAR app (for example, `java -jar /home/site/wwwroot/app.jar --server.port=80`) |
+| Tomcat | the location of a script to perform necessary configurations (for example, `/home/site/deployments/tools/startup_script.sh`) |
+| Node.js | the PM2 configuration file or your script file |
+| .NET Core | the compiled DLL name as `dotnet <myapp>.dll` |
+| PHP | optional custom startup |
+| Python | optional startup script |
+| Ruby | the Ruby script that initializes your app |
+
+These commands or scripts are run after the built-in Docker container is started, but before your application code is started.
+
+## Management
+
+### What happens when I press the restart button in the Azure portal?
+
+This action is the same as a Docker restart.
+
+### Can I use Secure Shell (SSH) protocol to connect to the app container virtual machine (VM)?
+
+Yes, through the Azure source control management (SCM) site.
+
+> **Note**
+> You can also connect to the app container from your local machine using SSH, Secure File Transfer Protocol (SFTP), or VS Code.
+
+### How can I create a Linux App Service plan through an SDK or ARM template?
+
+Set the `reserved` field of the App Service to `true`.
+
+## Continuous integration and deployment
+
+### My web app still uses an old Docker container image after it's updated on Docker Hub. Do you support continuous integration and deployment (CI/CD) of custom containers?
+
+Yes, CI/CD is supported. For more information, see [Continuous Deployment with Web App for Containers](/azure/app-service/deploy-ci-cd-custom-container).
+
+### Do you support staging environments?
+
+Yes.
+
+### Can I use WebDeploy/MSDeploy?
+
+Yes, set the `WEBSITE_WEBDEPLOY_USE_SCM` setting to `false`.
+
+### Git deployment fails using Linux web apps. How can I work around the issue?
+
+Options:
+
+- Use Azure Continuous Delivery with Azure DevOps or GitHub.
+- Use ZIP deploy API:
+
+```bash
+curl -X POST -u <user> --data-binary @<zipfile> https://{your-sitename}.scm.azurewebsites.net/api/zipdeploy
+```
+
+## Language support
+
+### I want to use web sockets in my Node.js application. Are there any special settings or configurations to set?
+
+Yes, disable `perMessageDeflate` in your server-side Node.js code. For example, if you're using socket.io, use the following code:
+
+```javascript
+const io = require('socket.io')(server,{
+  perMessageDeflate: false
+});
+```
+
+### Do you support uncompiled .NET Core apps?
+
+Yes.
+
+### Do you support Composer as a dependency manager for PHP apps?
+
+Yes, during a Git deployment, Kudu should detect that you're deploying a PHP application (thanks to the presence of a `composer.lock` file), and Kudu then triggers a composer install.
+
+## Custom containers
+
+### Can I use Managed Identities when pulling images from Azure Container Registry (ACR)?
+
+Yes. Use Azure CLI (not Azure portal). You can use [system-assigned](https://github.com/Azure/app-service-linux-docs/blob/master/HowTo/use_system-assigned_managed_identities.md) or [user-assigned](https://github.com/Azure/app-service-linux-docs/blob/master/HowTo/use_user-assigned_managed_identities.md) identities.
+
+### I'm using my own custom container. I want the platform to mount an SMB share to the `/home/` directory. Is this doable?
+
+If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to **false**, the `/home/` directory won't be shared across scale instances, and files written won't persist across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* enables the mount. Once this is set to true, if you want to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to **false**.
+
+### My container fails to start with "no space left on device". What does this error mean?
+
+App Service on Linux uses two different types of storage:
+          
+- File system storage: The file system storage is included in the App Service plan quota. It's used when files are saved to the persistent storage that's rooted in the `/home` directory. 
+- Host disk space: The host disk space is used to store container images. It's managed by the platform through the docker storage driver.
+The host disk space is separate from the file system storage quota. It's not expandable and there is a 15-GB limit for each instance. It's used to store any custom images on the worker. You might be able to use larger than 15 GBs depending on the exact availability of host disk space, but this isn't guaranteed. 
+If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storage path](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space is also consumed. The platform routinely cleans the host disk space to remove unused containers. If the container writes a large quantity of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it results in startup failures or runtime exceptions once the host disk space limit is exceeded. We recommend that you keep your container images as small as possible and write data to the persistent storage or BYOS when running on Linux App Service. If not possible, you have to split the App Service plan because the host disk space is fixed and shared between all containers in the App Service Plan.
+
+### My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
+
+You can configure the amount of time the platform waits before restarting the container. To do so, set the `WEBSITES_CONTAINER_START_TIME_LIMIT` app setting to the value you want. The default value is 230 seconds, and the maximum value is 1800 seconds.
+
+### What is the format for the private registry server URL?
+
+Provide the full  registry URL including `https://`.
+
+### What is the format for the image name in the private registry option?
+
+Add the full image name, including the private registry URL (for example, `myacr.azurecr.io/dotnet:latest`). Image names that use a custom port [can't be entered through the portal](https://feedback.azure.com/d365community/). To set `docker-custom-image-name`, use the [`az` command-line tool](/cli/azure/webapp/config/container#az_webapp_config_container_set).
+
+### an I expose more than one port on my custom container image?
+
+This isn't supported.
+
+### Can I bring my own storage?
+
+Yes, [bring your own storage](/azure/app-service/configure-connect-to-azure-storage) is in preview.
+
+### Why can't I browse my custom container's file system or running processes from the SCM site?
+
+The SCM site runs in a separate container. You can't check the file system or running processes of the app container.
+
+### Do I need to implement HTTPS in my custom container?
+
+No, the platform handles HTTPS termination at the shared front ends.
+
+### Do I need to use `WEBSITES_PORT` for custom containers?
+
+Yes, this is required for custom containers. To manually configure a custom port, use the `EXPOSE` instruction in the Dockerfile and the app setting `WEBSITES_PORT` with a port value to bind on the container.
+
+### Can I use `ASPNETCORE_URLS` in the Docker image?
+
+Yes. Be sure to overwrite the environmental variable before the .NET core app starts.
+For example, in the `init.sh` script, use: `export ASPNETCORE_URLS={Your value}`.
+
+## Multi-container with Docker Compose
+
+### How do I configure Azure Container Registry (ACR) to use with multi-container?
+
+In order to use ACR with multi-container, **all container images** need to be hosted on the same ACR registry server. Once they are on the same registry server, you'll need to create application settings and then update the Docker Compose configuration file to include the ACR image name.
+          
+Create the following application settings:
+          
+- `DOCKER_REGISTRY_SERVER_USERNAME`
+- `DOCKER_REGISTRY_SERVER_URL` (use a full URL. For example: `https://<server-name>.azurecr.io`).
+- `DOCKER_REGISTRY_SERVER_PASSWORD` (enable admin access in ACR settings).
+          
+Within the configuration file, reference your ACR image like the following example:
+          
+```yaml
+image: <server-name>.azurecr.io/<image-name>:<tag>
+```
+          
+
+### How do I know which container is internet accessible?
+
+- Only one container can be open for access.
+- Only ports 80 and 8080 are accessible (exposed ports).
+          
+Here are the rules for determining which container is accessible (in the order of precedence):
+          
+- Application setting `WEBSITES_WEB_CONTAINER_NAME` set to the container name.
+- The first container to define port 80 or 8080.
+- If neither of the above is true, the first container defined in the file is accessible (exposed).
+
+### How do I use depends_on?
+
+The `depends_on` option isn't supported on App Service and is ignored. Just as the [control startup and shutdown recommendation from Docker](https://docs.docker.com/compose/startup-order/), App Service multi-container apps should check dependencies through application code - both at startup and disconnection.
+
+The following example code shows a Python app checking to see if a Redis container is running:
+
+          ```python
+          import time
+          import redis
+          from flask import Flask
+          app = Flask(__name__)
+          cache = redis.Redis(host='redis', port=6379)
+          def get_hit_count():
+              retries = 5
+              while True:
+                  try:
+                      return cache.incr('hits')
+                  except redis.exceptions.ConnectionError as exc:
+                      if retries == 0:
+                          raise exc
+                      retries -= 1
+                      time.sleep(0.5)
+          @app.route('/')
+          def hello():
+              count = get_hit_count()
+              return 'Hello from Azure App Service team! I have been seen {} times.\n'.format(count)
+          if __name__ == "__main__":
+              app.run(host="0.0.0.0", port=80, debug=True)
+          ```
+### Are Web Sockets supported?
+          
+Web Sockets are supported on Linux apps. The `webSocketsEnabled` Azure Resource Manager (ARM) doesn't apply to Linux apps since Web Sockets are always enabled for Linux.
+          
+> [!IMPORTANT]
+> Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans. Exceeding this limit results in an **HTTP 429 (Too Many Requests)** error.
+
+## Pricing and SLA
+
+### What is the pricing, now that the service is generally available?
+
+Pricing varies by SKU and region but you can see more details at our pricing page: [App Service Pricing](https://azure.microsoft.com/pricing/details/app-service/linux/).
+
+## Other questions
+
+### How does the container warmup request work?
+
+When Azure App Services starts your container, the warmup request sends an HTTP request to the [/robots933456.txt](/azure/app-service/configure-custom-container?pivots=container-linux#robots933456-in-logs) endpoint of your application. This is simply a dummy endpoint, but your application must reply by returning any status code (including 5*xx*). If your application logic doesn't reply by sending an HTTP status code to nonexistent endpoints, the warmup request can't receive a response. Therefore, it perpetually restarts your container. 
+
+To change from the default behavior, you can customize the warmup endpoint path and status codes that consider the site to be warmed up. To do this, set the [WEBSITE_WARMUP_PATH](/azure/app-service/reference-app-settings?tabs=kudu%2Cdotnet#app-environment) and [WEBSITE_WARMUP_STATUSES](/azure/app-service/reference-app-settings?tabs=kudu%2Cdotnet#app-environment) application settings.
+
+The warmup request also might fail because of port misconfiguration.
+
+### Is it possible to increase the container warmup request time-out?
+
+The warmup request by default fails after waiting 240 seconds for a reply from the container. You can increase the container warmup request time-out by adding the application setting `WEBSITES_CONTAINER_START_TIME_LIMIT` with a value between 240 and 1800 seconds.
+
+### How do I specify the port in my Linux container?
+
+| Container type | Description | How to set/use port |
+|----------------|-------------|---------------------|
+| Built-in containers | If you select a language/framework version for a Linux app, a predefined container is selected for you. | To point your app code to the right port, use the `PORT` environment variable. |
+| Custom containers | You have full control over the container. | App Service has no control about which port your container listens on. What it does need is to know which port to forward requests to. If your container listens to port 80 or 8080, App Service is able to automatically detect it. If it listens to any other port, you need to set the `WEBSITES_PORT` app setting to the port number, and App Service forwards requests to that port in the container. The `WEBSITES_PORT` app setting doesn't have any effect within the container, and you can’t access it as an environment variable within the container. |
+
+### Can I use a file based database (like SQLite) with my Linux Webapp?
+
+The file system of your application is a mounted network share. This enables scale out scenarios where your code needs to be run across multiple hosts. Unfortunately this blocks the use of file-based database providers like SQLite since it's not possible to acquire exclusive locks on the database file. We recommend a managed database service like [Azure SQL](https://azure.microsoft.com/products/azure-sql/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), or [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/).
+
+### What are the supported characters in application settings names?
+
+You can use only letters (A-Z, a-z), numbers (0-9), and the underscore character (_) for application settings.
+
+### Where can I request new features?
+
+You can submit your idea at the [Web Apps feedback forum](https://aka.ms/webapps-uservoice). Add "[Linux]" to the title of your idea.
+
+## References
+  
+- [What is Azure App Service on Linux?](/azure/app-service/overview#app-service-on-linux)
+- [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots)
+- [Continuous Deployment with Web App for Containers](/azure/app-service/deploy-ci-cd-custom-container)
+- [Things You Should Know: Web Apps and Linux](https://techcommunity.microsoft.com/t5/apps-on-azure/things-you-should-know-web-apps-and-linux/ba-p/392472)
+- [Environment variables and app settings reference](/azure/app-service/reference-app-settings)
