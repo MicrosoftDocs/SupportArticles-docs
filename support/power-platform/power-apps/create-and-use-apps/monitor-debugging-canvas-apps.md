@@ -13,7 +13,7 @@ search.audienceType:
 
 ## Summary
 
-This article explains how to use [Live monitor](/power-apps/maker/monitor-overview) with the [Trace function](/power-platform/power-fx/reference/function-trace) to diagnose issues in Power Apps canvas apps. This approach helps you troubleshoot problems that appear only for certain users or in specific environments. Live monitor shows real-time events like network calls, data operations, errors, and performance details. The Trace function lets you add custom diagnostic records to capture values from [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) at key moments.
+This article explains how to use [Live monitor](/power-apps/maker/monitor-overview) with the [Trace function](/power-platform/power-fx/reference/function-trace) to diagnose issues in Power Apps canvas apps. This approach helps you troubleshoot problems that occur only for certain users or in specific environments. Live monitor displays real-time events such as network calls, data operations, errors, and performance details. The Trace function lets you add custom diagnostic records to capture values from [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) at key moments.
 
 > [!NOTE]
 > If you can't use Live monitor (for example, in SharePoint forms or custom portal embeddings), see [Debug canvas apps without Live monitor](monitor-debugging-canvas-apps-without-live-monitor.md) for alternative approaches.
@@ -24,34 +24,34 @@ This article builds on [Debugging canvas apps with Live monitor](/power-apps/mak
 
 ## Combine Live monitor and Trace
 
-Live monitor shows platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes like `404` or `429`), timing, and delegation indicators.
+Live monitor displays platform-level activity: data operations (`getRows`, `createRow`, `patch`), control evaluations, errors (HTTP status codes such as `404` or `429`), timing, and delegation indicators.
 
-By adding Trace calls in your behavior formulas (`OnSelect`, `OnVisible`, `OnStart`), you add context like:
+When you add Trace calls in your behavior formulas (`OnSelect`, `OnVisible`, `OnStart`), you capture context such as:
 
-- Which user is running the app
-- Which environment the app is running in
-- Which screen is active
+- The user running the app
+- The current environment
+- The active screen
 - Entity counts (rows in collections, related records)
 - Business flags (VIP status, discount eligibility)
 - Elapsed times for operations
-- Any other information that helps you understand what the app is doing
+- Any other information that helps you understand app behavior
 
 Together, Live monitor and Trace answer both "what happened" and "why."
 
 ### View data flowing over the network
 
-Live monitor shows each data operation event with:
+Live monitor displays each data operation event with:
 
 - Operation type (`getRows`, `createRow`, `patch`, `removeRow`)
 - Data source (Dataverse table or connector name)
 - Timing (start, finish, duration)
 - Result (success or error status code)
-- Delegation hints (non-delegable operations cause client-side processing)
+- Delegation hints (non-delegable operations trigger client-side processing)
 
-Select an event to see details. Correlate events with nearby Trace records to understand *why* the operation occurred. For example, a `getRows` surge after a Trace with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
+Select an event to view details. Correlate events with nearby Trace records to understand *why* the operation occurred. For example, a surge in `getRows` calls after a Trace with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
 
 > [!TIP]
-> If you see HTTP 429 (throttling), look at preceding events to see whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use collections to cache data and reduce network calls.
+> If you see HTTP 429 (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use collections to cache data and reduce network calls.
 
 ### Use Trace effectively
 
@@ -60,13 +60,13 @@ The [Trace function](/power-platform/power-fx/reference/function-trace) writes a
 Key features:
 
 - Works only in behavior properties (`OnSelect`, `OnChange`, `OnVisible`, `OnStart`).
-- Accepts text and a record payload for additional details.
-- `TraceSeverity` helps filter events (Information, Warning, Error). Use Error sparingly.
-- Has minimal performance impact when used appropriately. Remove or guard verbose traces before broad deployment.
+- Accepts a text message and an optional record payload for additional details.
+- `TraceSeverity` helps you filter events (Information, Warning, Error). Use Error sparingly.
+- Has minimal performance impact when used appropriately. Remove or guard verbose Trace calls before broad deployment.
 
 #### Trace data property values with debug buttons
 
-Because Trace can't be placed in data properties (like a label's `Text`), use temporary debug buttons to capture those values.
+Because you can't place Trace in data properties (such as a label's `Text`), use temporary debug buttons to capture those values.
 
 To create a debug button:
 
@@ -75,7 +75,7 @@ To create a debug button:
 1. When testing, add `&debug=true` to the app URL to show the button.
 
 > [!TIP]
-> It's also useful to trace the values used to calculate a data property, as they might indicate why the value isn't what you expect.
+> Trace the input values used to calculate a data property. They often reveal why the result isn't what you expect.
 
 ##### Example debug snapshot button
 
@@ -97,7 +97,7 @@ Trace(
 ```
 
 > [!NOTE]
-> Guard debug controls with query string parameters or role checks so end users don't see them. Remove these controls before you finalize the app.
+> Guard debug controls with query string parameters or role checks so that end users don't see them. Remove these controls before you finalize the app.
 
 ### Debugging checklist
 
@@ -131,7 +131,7 @@ Capture what the app sees about each user (email, roles, customer selection, dis
 1. Open a new Live monitor instance and connect User B the same way.
 1. Compare the values to find the difference causing the problem.
 
-#### Example: OnSelect formula with Trace
+#### Example OnSelect formula with Trace
 
 ```powerfx
 // Emit pre-submit context
@@ -180,11 +180,11 @@ Correlate Trace events with adjacent `getRows` or `patch` operations. If User B 
 
 ### Scenario: App works in one environment but not another
 
-Your app works correctly in _Test_ but fails in _Production_, for example a gallery loads no items and submission is slow. Even though the app is the same, the data in each environment can differ, this difference can cause the app to experience problems in one environment but not the other.
+Your app works correctly in *Test* but fails in *Production*. For example, a gallery loads no items and submission is slow. Even though the app is the same, the data in each environment can differ. Missing tables, different column values, larger datasets that trigger delegation limits, or permission differences can cause the app to behave differently.
 
 #### Goal
 
-Surface environment-specific metadata and counts, then compare the sequence and status codes of data operations between environments. In this example, the app has one screen with a form where a **Product** selected from a gallery can be updated. The update works in _Test_ but fails in _Production_.
+Surface environment-specific metadata and counts, then compare the sequence and status codes of data operations between environments. In this example, the app has one screen with a form where a **Product** selected from a gallery can be updated. The update works in *Test* but fails in *Production*.
 
 #### Steps
 
@@ -203,19 +203,19 @@ Surface environment-specific metadata and counts, then compare the sequence and 
     ```
 
 1. Deploy the app with the new traces to production.
-1. Open Live monitor in _Test_ and then in _Production_. Export logs if needed.
+1. Open Live monitor in *Test* and then in *Production*. Export logs if needed.
 
 #### Analyze the results
 
 In the event list:
 
-- Compare `getRows` for **Products** across environments. Does one return zero results or error codes (`404` if the table is missing, `403` if access is denied, `429` if throttled)?
-- Look for repeated `getRows` calls that might indicate a non-delegable formula.
+- Compare `getRows` events for **Products** across environments. Does one return zero results or error codes (`404` if the table is missing, `403` if access is denied, `429` if throttled)?
+- Look for repeated `getRows` calls, which might indicate a non-delegable formula.
 - Compare the Trace values. Do products have different values for `relatedOrders` or `hasDiscount`?
 
-If you find a difference, add more Trace calls where the variable is created to see how it's populated.
+If you find a difference, add more Trace calls where the variable is set to see how it's populated.
 
-If you see network errors (`4xx` responses), check whether tables, flows, and connectors are set up correctly in both environments.
+If you see network errors (`4xx` responses), verify that tables, flows, and connectors are configured correctly in both environments.
 
 ## Related content
 
