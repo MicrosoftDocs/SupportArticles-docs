@@ -4,6 +4,7 @@ description: "Learn how to resolve persistent log forwarding in Azure when a ser
 author: ProfessorKendrick
 ms.author: kkendrick
 ms.service: partner-services
+ms.custom: sap:Elastic on Azure
 ms.topic: troubleshooting-problem-resolution 
 ms.date: 08/04/2025
 ai-usage: ai-assisted

@@ -5,6 +5,7 @@ author: ProfessorKendrick
 ms.author: kkendrick
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Elastic on Azure
 ms.date: 08/04/2025
 ai-usage: ai-assisted
 ---
