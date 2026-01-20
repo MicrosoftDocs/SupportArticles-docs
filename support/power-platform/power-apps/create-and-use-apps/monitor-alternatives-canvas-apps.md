@@ -1,33 +1,34 @@
 ---
 title: Debug canvas apps without Live monitor
 description: Learn alternative approaches to debug Power Apps canvas apps when Live monitor isn't available, such as in SharePoint forms or custom portal embeddings.
-ms.date: 01/20/2026
+ms.date: 01/15/2026
 ms.reviewer: carlosff, v-shaywood
 ms.custom: sap:Running Canvas App
+search.audienceType: 
+  - maker
 ---
-
-<!-- [CUSTOMER INTENT: As a Power Apps maker, I want to debug canvas app issues when I can't use Live monitor, so I can troubleshoot problems in embedded or hosted scenarios.] -->
 
 # Debug canvas apps without Live monitor
 
-This article describes alternative debugging approaches for Power Apps canvas apps when [Live monitor](/power-apps/maker/monitor-canvasapps) isn't available. Use these techniques for SharePoint integrated forms, custom pages, or custom portal embeddings where you can't open Live monitor alongside the app.
-
 ## Summary
 
-Live monitor is the recommended tool for debugging canvas apps because it shows real-time events and works with the [Trace function](/power-platform/power-fx/reference/function-trace). However, some hosted or embedded scenarios don't support it. This article covers alternatives like Application Insights, Dataverse logging tables, SharePoint list logging, and on-screen diagnostics panels.
+This article describes alternative debugging approaches for Power Apps canvas apps when [Live monitor](/power-apps/maker/monitor-canvasapps) isn't available. Use these techniques for SharePoint integrated forms, custom pages, or custom portal embeddings where you can't open Live monitor alongside the app.
 
-For scenarios where Live monitor is available, see [Debug canvas apps with Live monitor and Trace](monitor-debugging-canvas-apps.md).
+Live monitor is the recommended tool for debugging canvas apps because it displays real-time events and works with the [Trace function](/power-platform/power-fx/reference/function-trace). However, some hosted or embedded scenarios don't support it. This article covers alternatives such as Application Insights, Dataverse logging tables, SharePoint list logging, and on-screen diagnostics panels.
+
+> [!NOTE]
+> For scenarios where Live monitor is available, see [Debug canvas apps with Live monitor and Trace](monitor-debugging-canvas-apps.md).
 
 ## Alternative debugging approaches
 
 When Live monitor isn't available, choose an alternative based on your environment and needs:
 
-| Alternative | Best for | Notes |
-| ----------- | -------- | ----- |
-| [Application Insights](#application-insights-integration) | Centralized telemetry and performance monitoring | Requires Azure setup. Emits traces and metrics outside Power Apps. |
-| [Dataverse logging table](#write-debug-records-to-dataverse) | Ad-hoc diagnostics and audit trails | Create a custom table. Use guarded logic to write records when debugging. |
-| [SharePoint list logging](#write-debug-records-to-sharepoint) | Lightweight environments without Dataverse | Use `Collect` or `Patch` to a list. Prune entries to control size. |
-| [On-screen diagnostics panel](#create-an-on-screen-diagnostics-panel) | Immediate feedback during testing | Only for secure audiences. Remove before broad rollout. |
+| Alternative                                                           | Best for                                         | Notes                                                                     |
+| --------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------- |
+| [Application Insights](#application-insights-integration)             | Centralized telemetry and performance monitoring | Requires Azure setup. Emits traces and metrics outside Power Apps.        |
+| [Dataverse logging table](#write-debug-records-to-dataverse)          | Ad-hoc diagnostics and audit trails              | Create a custom table. Use guarded logic to write records when debugging. |
+| [SharePoint list logging](#write-debug-records-to-sharepoint)         | Lightweight environments without Dataverse       | Use `Collect` or `Patch` to a list. Prune entries to control size.        |
+| [On-screen diagnostics panel](#create-an-on-screen-diagnostics-panel) | Immediate feedback during testing                | Only for secure audiences. Remove before broad rollout.                   |
 
 ## Application Insights integration
 
@@ -144,14 +145,14 @@ Add a text control to the screen that shows the collected traces. Set its **Visi
 
 **Control properties:**
 
-| Property | Value |
-| -------- | ----- |
-| **Text** | `Concat(debugTraces, $"[{Text(Timestamp, "hh:mm:ss.fff")}] {Data}", Char(10))` |
-| **Visible** | `Param("debug") = "true"` |
-| **Height** | 200 |
-| **Width** | 300 |
-| **X** | `Parent.Width - 320` |
-| **Y** | 20 |
+| Property    | Value                                                                          |
+| ----------- | ------------------------------------------------------------------------------ |
+| **Text**    | `Concat(debugTraces, $"[{Text(Timestamp, "hh:mm:ss.fff")}] {Data}", Char(10))` |
+| **Visible** | `Param("debug") = "true"`                                                      |
+| **Height**  | 200                                                                            |
+| **Width**   | 300                                                                            |
+| **X**       | `Parent.Width - 320`                                                           |
+| **Y**       | 20                                                                             |
 
 This displays a scrollable list of debug messages that you can copy and analyze outside the app.
 

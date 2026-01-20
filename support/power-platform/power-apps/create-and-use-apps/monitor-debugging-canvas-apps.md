@@ -15,7 +15,7 @@ search.audienceType:
 This article explains how to use [Live monitor](/power-apps/maker/monitor-overview) with the [Trace function](/power-platform/power-fx/reference/function-trace) to diagnose problems in Power Apps canvas apps. This approach helps you troubleshoot problems that occur only for certain users or in specific environments. Live monitor displays real-time events such as network calls, data operations, errors, and performance details. The Trace function lets you add custom diagnostic records to capture values from [behavior formulas](/power-apps/maker/canvas-apps/working-with-formulas#manage-app-behavior) at key moments.
 
 > [!NOTE]
-> If you can't use Live monitor (for example, in SharePoint forms or custom portal embeddings), see [Debug canvas apps without Live monitor](monitor-debugging-canvas-apps-without-live-monitor.md) for alternative approaches.
+> If you can't use Live monitor (for example, in SharePoint forms or custom portal embeddings), see [Debug canvas apps without Live monitor](monitor-alternatives-canvas-apps.md) for alternative approaches.
 
 ## Prerequisites
 
@@ -219,5 +219,5 @@ If you see network errors (`4xx` responses), verify that tables, [flows](/power-
 
 ## Related content
 
-- [Debug canvas apps without Live monitor](monitor-debugging-canvas-apps-without-live-monitor.md)
+- [Debug canvas apps without Live monitor](monitor-alternatives-canvas-apps.md)
 - [Advanced monitoring](/power-apps/maker/monitor-advanced)
