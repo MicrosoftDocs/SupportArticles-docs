@@ -1,16 +1,11 @@
 ---
 title: Debugging canvas apps with Live monitor and Trace
 description: Learn how to debug canvas apps across users and environments using Live monitor and the Trace function.
-author: carlosff
-ms.subservice: troubleshoot
-ms.topic: how-to
-ms.custom: canvas
+ms.custom: sap:Running Canvas App
 ms.date: 01/15/2026
 ms.author: carlosff
 search.audienceType: 
   - maker
-contributors:
-  - carlosff
 ---
 
 # Debugging canvas apps with Live monitor and Trace
