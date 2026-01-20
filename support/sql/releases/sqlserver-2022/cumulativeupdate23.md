@@ -17,6 +17,9 @@ _Version:_ &nbsp; 16.0.4235.2
 
 ## Summary
 
+> [!NOTE]  
+> This cumulative update is temporarily unavailable for download because of a [known issue related to Database Mail](#database-mail-stops-working-after-updating).
+
 This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2022. This update contains 15 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 22. It updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4235.2**, file version: **2022.160.4235.2**
