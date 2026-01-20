@@ -67,7 +67,7 @@ Yes, set the `WEBSITE_WEBDEPLOY_USE_SCM` setting to `false`.
 Options:
 
 - Use Azure Continuous Delivery with Azure DevOps or GitHub.
-- Use ZIP deploy API:
+- Use `zipdeploy` API:
 
 ```bash
 curl -X POST -u <user> --data-binary @<zipfile> https://{your-sitename}.scm.azurewebsites.net/api/zipdeploy
@@ -75,9 +75,9 @@ curl -X POST -u <user> --data-binary @<zipfile> https://{your-sitename}.scm.azur
 
 ## Language support
 
-### I want to use web sockets in my Node.js application. Are there any special settings or configurations to set?
+### I want to use web sockets in my 'Node.js' application. Are there any special settings or configurations to set?
 
-Yes, disable `perMessageDeflate` in your server-side Node.js code. For example, if you're using socket.io, use the following code:
+Yes, disable `perMessageDeflate` in your server-side `Node.js` code. For example, if you're using `socket.io`, use the following code:
 
 ```javascript
 const io = require('socket.io')(server,{
@@ -101,7 +101,7 @@ Yes. Use Azure CLI (not Azure portal). You can use [system-assigned](https://git
 
 ### I'm using my own custom container. I want the platform to mount an SMB share to the `/home/` directory. Is this doable?
 
-If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to **false**, the `/home/` directory won't be shared across scale instances, and files written won't persist across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* enables the mount. Once this is set to true, if you want to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to **false**.
+If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to **false**, the `/home/` directory won't be shared across scale instances, and files written won't persist across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to **true** enables the mount. Once this is set to true, if you want to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to **false**.
 
 ### My container fails to start with "no space left on device". What does this error mean?
 
@@ -126,7 +126,7 @@ Provide the full  registry URL including `https://`.
 
 Add the full image name, including the private registry URL (for example, `myacr.azurecr.io/dotnet:latest`). Image names that use a custom port [can't be entered through the portal](https://feedback.azure.com/d365community/). To set `docker-custom-image-name`, use the [`az` command-line tool](/cli/azure/webapp/config/container#az_webapp_config_container_set).
 
-### an I expose more than one port on my custom container image?
+### Can I expose more than one port on my custom container image?
 
 This isn't supported.
 
@@ -155,7 +155,7 @@ For example, in the `init.sh` script, use: `export ASPNETCORE_URLS={Your value}`
 
 ### How do I configure Azure Container Registry (ACR) to use with multi-container?
 
-In order to use ACR with multi-container, **all container images** need to be hosted on the same ACR registry server. Once they are on the same registry server, you'll need to create application settings and then update the Docker Compose configuration file to include the ACR image name.
+In order to use ACR with multi-container, all container images need to be hosted on the same ACR registry server. Once they are on the same registry server, you'll need to create application settings and then update the Docker Compose configuration file to include the ACR image name.
           
 Create the following application settings:
           
@@ -183,7 +183,7 @@ Here are the rules for determining which container is accessible (in the order o
 
 ### How do I use depends_on?
 
-The `depends_on` option isn't supported on App Service and is ignored. Just as the [control startup and shutdown recommendation from Docker](https://docs.docker.com/compose/startup-order/), App Service multi-container apps should check dependencies through application code - both at startup and disconnection.
+The `depends_on` option isn't supported on App Service and is ignored. Just as the [control startup and shutdown recommendation from Docker](https://docs.docker.com/compose/startup-order/), App Service multi-container apps should check dependencies through application code, both at startup and disconnection.
 
 The following example code shows a Python app checking to see if a Redis container is running:
 
