@@ -22,7 +22,7 @@ ms.date: 01/16/2026
 
 ## Summary
 
-This article explains that users of Microsoft classic Outlook for Windows might receive a message to restart Outlook because changes are made by the Microsoft Exchange Online administrator. The message is associated with Event ID 67. The message recommends that administrators correlate this event with the audit log to identify the cause of the message.
+This article explains that users of Microsoft classic Outlook for Windows might receive a message to restart Outlook because changes are made by the Microsoft Exchange Online administrator. The message is associated with Event ID 67. The article recommends that administrators correlate the event with the audit log to identify the cause of the message.
 
 ## Symptoms
 
