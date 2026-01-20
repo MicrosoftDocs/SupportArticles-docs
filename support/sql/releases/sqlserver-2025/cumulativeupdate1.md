@@ -17,6 +17,9 @@ _Version:_ &nbsp; 17.0.4005.7
 
 ## Summary
 
+> [!IMPORTANT]  
+> This update is temporarily unavailable for download because of a [known issue related to Database Mail](#database-mail-stops-working-after-updating).
+
 This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2025. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
