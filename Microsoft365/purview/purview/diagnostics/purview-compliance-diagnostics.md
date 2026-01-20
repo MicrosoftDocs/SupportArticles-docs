@@ -15,7 +15,7 @@ ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 12/05/2025
+ms.date: 01/20/2026
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -129,5 +129,6 @@ The following table lists the available diagnostics on the **Help** pane. You ca
 | [DLP policy and rule configuration for policy tips](https://aka.ms/PillarDLPPolicyTipsDiag)<br> | Troubleshoots common policy tip configuration issues that affect a DLP rule and its policy for Outlook desktop clients and Outlook on the web. | Global admin | [Resolve issues that affect DLP policy tips](/microsoft-365/troubleshoot/data-loss-prevention/data-loss-prevention-policy-tips) |
 | [Sensitivity label configuration](https://aka.ms/PillarMipLabelDiag)<br> | Troubleshoots common issues that affect a sensitivity label. Checks whether a sensitivity label is correctly configured for use in various workloads. | Global admin | [Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) |
 | [Microsoft Purview Message Encryption configuration](https://aka.ms/PillarOMEDiag)<br> | Validates the tenant configuration for Microsoft Purview Message Encryption. Identifies any configuration issues. | Any Microsoft 365 admin role | [Resolve Microsoft Purview Message Encryption issues](/microsoft-365/troubleshoot/office-message-encryption/fix-message-encryption-issue-microsoft-purview) |
+| [Validate Audit configuration](https://aka.ms/PillarAuditConfigDiag)<br> | Validates general Audit Configuration. Checks Audit logs for a user and identifies configuration issues. |Global Admin| [Export, configure, and view audit log records](/purview/audit-log-export-records) |
 
 **Note**: Microsoft Support agents can't provide assistance for diagnostics that appear in the **Help** pane. If you encounter any issues, you can use the Feedback link within the diagnostic to report the issue.
