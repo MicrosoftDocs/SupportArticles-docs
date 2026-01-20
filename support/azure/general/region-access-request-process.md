@@ -16,13 +16,13 @@ _Original KB number:_ &nbsp; 4339658
 
 ## Step 1: Create a new support request
 
-The process to request access is relatively straight forward. You can initiate the process directly within the Azure portal, follow these steps:
+The process to request access is relatively straightforward. You can initiate the process directly within the Azure portal, follow these steps:
 
 1. Log into the [Azure Portal](https://portal.azure.com) and navigate to **Help + support**, then select **Create a new support request**.
 
-2. In the **New support request** page, complete the following:
+2. On the **New support request** page, complete the following:
  
-    1. In **Issue Type**, select **Service and subscription Limit (quotas)**.  
+    1. In **Issue Type**, select **Service and subscription limit (quotas)**.  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
     3. In **Quota type**, select **Compute-VM (core-vCPUs) subscription limit increases**.  
     4. Select **Next**.
@@ -36,23 +36,23 @@ The process to request access is relatively straight forward. You can initiate t
     :::image type="content" source="media/region-access-request-process/enter-details.png" alt-text="Screenshot of the Enter details button." border="true":::
 
 1. Select the deployment mode.
-1. Select one or more regions that you want to request access. If the regions are not listed, go to the [Reserved access regions](#reserved-access-regions) section.  
-1. Select the VM series, and then specify new vCPU limit.
+1. Select one or more regions that you want to request access to. If the regions are not listed, go to the [Reserved access regions](#reserved-access-regions) section.  
+1. Select the VM series, and then specify the new vCPU limit.
 
     :::image type="content" source="media/region-access-request-process/quota-details.png" alt-text="Screenshot of the quota details page." border="true":::
 1. Select **Save and continue**.
 
 ## Step 3: Enter your support method
 
-1. Select the severity based on your urgency of request.
-1. Fill in the details for the best way to contact you. We use this information to follow up with you if we need extra information, or need to learn more about your intended use of the Azure Region to which you are requesting access.
+1. Select the severity based on your urgency of the request.
+1. Fill in the details for the best way to contact you. We use this information to follow up with you if we need extra information or need to learn more about your intended use of the Azure Region to which you are requesting access.
 1. Select **Create** to complete the process.
 
 ## Request processing
 
-Once you create the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requestor for further details, so ensure that you add up-to-date contact details.  
+Once you create the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requester for further details, so ensure that you add up-to-date contact details.  
 
-The support request will be routed back to you once complete, letting you know of the result. If successful, you will then see the Azure Region you have requested access to in your portal and can begin to consume resources just like any other Azure region.
+The support request will be routed back to you once completed, letting you know of the result. If successful, you will then see the Azure Region you have requested access to in your portal and can begin to consume resources just like any other Azure region.
 
  
 
