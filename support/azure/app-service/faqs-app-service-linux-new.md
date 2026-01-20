@@ -109,7 +109,9 @@ App Service on Linux uses two different types of storage:
           
 - File system storage: The file system storage is included in the App Service plan quota. It's used when files are saved to the persistent storage that's rooted in the `/home` directory. 
 - Host disk space: The host disk space is used to store container images. It's managed by the platform through the docker storage driver.
+
 The host disk space is separate from the file system storage quota. It's not expandable and there is a 15-GB limit for each instance. It's used to store any custom images on the worker. You might be able to use larger than 15 GBs depending on the exact availability of host disk space, but this isn't guaranteed. 
+
 If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storage path](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space is also consumed. The platform routinely cleans the host disk space to remove unused containers. If the container writes a large quantity of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it results in startup failures or runtime exceptions once the host disk space limit is exceeded. We recommend that you keep your container images as small as possible and write data to the persistent storage or BYOS when running on Linux App Service. If not possible, you have to split the App Service plan because the host disk space is fixed and shared between all containers in the App Service Plan.
 
 ### My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
@@ -185,7 +187,7 @@ The `depends_on` option isn't supported on App Service and is ignored. Just as t
 
 The following example code shows a Python app checking to see if a Redis container is running:
 
-          ```python
+```python
           import time
           import redis
           from flask import Flask
@@ -207,7 +209,8 @@ The following example code shows a Python app checking to see if a Redis contain
               return 'Hello from Azure App Service team! I have been seen {} times.\n'.format(count)
           if __name__ == "__main__":
               app.run(host="0.0.0.0", port=80, debug=True)
-          ```
+```
+
 ### Are Web Sockets supported?
           
 Web Sockets are supported on Linux apps. The `webSocketsEnabled` Azure Resource Manager (ARM) doesn't apply to Linux apps since Web Sockets are always enabled for Linux.
