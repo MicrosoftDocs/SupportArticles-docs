@@ -6507,7 +6507,7 @@
       },
         {
         "source_path": "app-service/faqs-app-service-linux.yml",
-        "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux"
+        "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux-new"
       }
   ]
 }
