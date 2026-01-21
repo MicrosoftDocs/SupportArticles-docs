@@ -13,6 +13,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 > [!NOTE]
 > Some of the following guidelines might only work on Windows or Linux App Services. For example, Linux App Services run in 64-bit mode by default.
 
+## Summary
+
 This article answers common questions about availability, performance, and troubleshooting application issues in the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/). Use this guide to quickly resolve problems and optimize your app’s reliability.
 
 ## Where can I learn more about quotas and limits for various App Service plans?

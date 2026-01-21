@@ -11,6 +11,8 @@ ms.custom: sap:Connection issues with SSL or TLS, SSL Certificates and Domains
 
 # Use Azure App Service Certificate with Azure Front Door
 
+## Summary
+
 Microsoft Azure Front Door (Standard and Premium) is a modern global load balancer and application delivery network that supports custom TLS certificates through Azure Key Vault. This article discusses how to use an Azure App Service Certificate securely together with Microsoft Azure Front Door by using managed identities and Bring Your Own Certificate (BYOC) support. This integration enables you to deliver encrypted traffic that has automatic renewal, enterprise-grade performance, and global scale.
 
 ## Overview

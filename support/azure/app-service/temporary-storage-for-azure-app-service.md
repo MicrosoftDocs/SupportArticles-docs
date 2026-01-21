@@ -10,6 +10,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # How to troubleshoot temporary storage on Azure App Service
 
+## Summary
+
 If an application is reporting high resource consumption, the source of the problem might not be the site content. Slow performance can also be caused by excessive use of temporary storage.
 
 This video demonstrates how to narrow the scope of your troubleshooting to temporary storage, and the next steps for investigating and troubleshooting performance issues.

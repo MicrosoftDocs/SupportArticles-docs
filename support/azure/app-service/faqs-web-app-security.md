@@ -11,6 +11,8 @@ ms.custom: sap:Questions about App Service security
 ---
 # Frequently asked questions about App Service security
 
+## Summary
+
 This article provides answers to common questions about Azure App Service security.
 
 ## FAQs
