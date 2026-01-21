@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/active-directory/use-adminpak-remotely-administer-computers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-adminpak-remotely-administer-computers",
+      "redirect_document_id": false
+    },
+   {
       "source_path": "support/mem/configmgr/update-management/high-network-bandwidth-usage.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
