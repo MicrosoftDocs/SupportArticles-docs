@@ -1,13 +1,13 @@
 ---
 title: Guidance for troubleshooting Windows Update issues
-description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 01/15/2025
+description: Discusses how to troubleshoot Windows Update issues and identify and fix common issues.
+ms.date: 01/23/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate, lumenahe
 ms.custom:
-- sap:installing windows updates,features,or roles\failure to install windows updates
+- sap:windows servicing, updates and features on demand\windows update - install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
@@ -17,7 +17,9 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806295" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows Update issues</span>
 
-These solutions designed to get you started on Windows Update troubleshooting scenarios.
+## Summary
+
+This article helps you diagnose and resolve common Windows Update issues. It includes step-by-step guidance for initial troubleshooting procedures that restore Windows Update functionality in most cases. It includes more in-depth guidance to address specific symptoms and error messages. For some more complicated issues, the article directs you to a more in-depth discussion of the specific issue.
 
 ## Troubleshooting checklist
 
@@ -31,11 +33,11 @@ For any [supported versions of Windows](/windows/release-health/supported-versio
 
 ### Step 2: Restart the computer
 
-If the computer didn't restart after a previous update, pending actions may still have to be completed before you can apply new updates.
+If the computer didn't restart after a previous update, pending actions might still have to finish before you can apply new updates.
 
 ### Step 3: Install the latest servicing stack update
 
-For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001) or look for the latest servicing stack required for the latest cumulative update in the update history for your Windows version.
+For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001) or review the update history for your Windows version to identify the latest servicing stack that's required for the latest cumulative update.
 
 ### Step 4: Check for and fix any Windows file corruption
 
@@ -43,7 +45,7 @@ For more information, see [Fix Windows file corruption](../../windows-server/dep
 
 ### Step 5: Download the update package and try to install the update manually
 
-To do this, follow these steps:
+Follow these steps:
 
 1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
 1. In the search box, type the update number that you want to download, and then select **Search**.
@@ -54,7 +56,7 @@ To do this, follow these steps:
 1. Browse to the download location, and then double-click the download package to install the update.
 
 > [!NOTE]
-> To skip Windows Update agent applicability checks and make the installation go further or quicker, open an elevated command prompt and run the following command: 
+> To skip Windows Update agent applicability checks and make the installation go further or quicker, open an elevated command prompt and run the following command:
 >
 > ```cmd
 > Dism /online /add-package /packagepath:<path_to_package>
@@ -68,9 +70,9 @@ This error has several possible causes. The following instructions help you iden
 
 #### Step 1: Has the update been superseded?
 
-Make sure that the update package contains newer versions of the binaries than the system that you're updating. Alternatively, check that the package is superseded by another new package.
+Make sure that the update package contains newer versions of the binaries than the system that you're updating. Alternatively, check the [Microsoft Update Catalog](https://catalog.update.microsoft.com/home.aspx) to see if a newer update has superseded the update that you're trying to install.
 
-As updates for a component are released, the updated component will supersede an older component that is already on the system. When this occurs, the previous update is marked as superseded. If the update that you're trying to install already has a newer version of the payload on your system, you might receive this error message.
+As updates for a component are released, the updated component supersedes the older component that is already on the system. When this occurs, Windows marks the previously-installed update as superseded. If the update that you're trying to install already has a newer version of the payload that's on your system, you might receive this error message.
 
 #### Step 2: Has the update already been installed?
 
@@ -100,7 +102,7 @@ If the updates are installed, the command returns the installed date in the **In
 
 ### The device isn't receiving an update that you deployed
 
-Follow these steps to troubleshoot this issue.
+To troubleshoot this issue, follow these steps.
 
 1. Check that the device's updates for the relevant category aren't paused.  
 
@@ -108,7 +110,7 @@ Follow these steps to troubleshoot this issue.
 1. **Feature updates only:** Check to see if the device might have a safeguard hold applied for the given feature update version.  
 
    For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
-1. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
+1. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** don't deploy content to devices.
 1. Check that the device has scanned for updates and is scanning the Windows Update service.  
 
    To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
@@ -127,7 +129,7 @@ To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint.  
 
-   For example, if the device is scanning for updates from a WSUS endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
+   For example, if the device is scanning for updates from a Windows Server Update Service (WSUS) endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
 
    A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by a Microsoft Entra ID device resource. That resource documents an update management enrollment for feature updates, and has no Microsoft Entra ID device registration errors.
