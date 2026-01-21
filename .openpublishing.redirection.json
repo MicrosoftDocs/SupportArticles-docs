@@ -14154,6 +14154,14 @@
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/stl-priority-queue-class-custom-type.md",
+      "redirect_url": "/cpp/standard-library/priority-queue-class#use-a-user-defined-data-type-with-the-priority_queue"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-setfind-stl-function.md",
+      "redirect_url": "/cpp/standard-library/set-class#example-of-setfind"
     }
   ]
 }

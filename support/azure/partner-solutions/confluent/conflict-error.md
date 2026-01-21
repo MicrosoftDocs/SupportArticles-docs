@@ -4,7 +4,7 @@ description: Resolve the Conflict error that can appear when you create a Conflu
 author:  praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
