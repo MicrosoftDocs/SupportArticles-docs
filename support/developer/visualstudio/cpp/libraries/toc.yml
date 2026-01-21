@@ -46,8 +46,6 @@
   href: ./stl-sqrt-pow-functions.md
 - name: Use random_shuffle STL function
   href: ./use-random-shuffle-stl.md
-- name: Use set::find STL function
-  href: ./use-setfind-stl-function.md
 - name: Use STL PRIORITY_QUEUE class
   href: ./stl-priority-queue-class-custom-type.md
 - name: Use the C Run-time
