@@ -674,6 +674,8 @@ items:
       href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
       href: ./backup-and-storage/extending-csv-isnt-blocked.md
+    - name: Stop error when Windows tries to repair a drive while restarting
+      href: ./backup-and-storage/stop-error-when-windows-tries-to-repair-drive-while-restarting.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
@@ -1884,6 +1886,8 @@ items:
       href: ./performance/stop-error-7e-nfs.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
+    - name: Stop error when Windows tries to repair a drive while restarting
+      href: ./backup-and-storage/stop-error-when-windows-tries-to-repair-drive-while-restarting.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
