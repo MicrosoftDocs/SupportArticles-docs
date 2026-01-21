@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 321185
 
 ## Summary
 
-Knowing your SQL Server Database Engine version and edition is essential for troubleshooting, planning upgrades, and ensuring compatibility with other components. This article explains several methods to find this information, including SQL Server Management Studio (SSMS), error log files, T-SQL queries, and the SQL Server Installation Center.
+Knowing your [SQL Server Database Engine](/sql/database-engine/sql-server-database-engine-overview) version and edition is essential for troubleshooting, [planning upgrades](/sql/database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan), and ensuring compatibility with other components. This article explains several methods to find this information, including [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms), error log files, [T-SQL](/sql/t-sql/language-reference) queries, and the SQL Server Installation Center.
 
 > [!NOTE]
 > The version information follows the `major.minor.build.revision` pattern. The _revision_ information typically isn't used when you check the SQL Server version.
