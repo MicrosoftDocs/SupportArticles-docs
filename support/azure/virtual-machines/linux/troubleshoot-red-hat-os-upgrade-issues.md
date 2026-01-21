@@ -5,6 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
+ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
