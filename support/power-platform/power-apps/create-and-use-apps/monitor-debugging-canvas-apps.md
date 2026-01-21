@@ -45,9 +45,9 @@ Live monitor displays each data operation event by providing:
 - Data source ([Dataverse](/power-apps/maker/data-platform/data-platform-intro) table or connector name)
 - Timing (start, finish, duration)
 - Result (success or error status code)
-- Delegation hints ([non-delegable operations](/power-apps/maker/canvas-apps/delegation-overview#non-delegable-limits) trigger client-side processing)
+- Delegation hints ([nondelegable operations](/power-apps/maker/canvas-apps/delegation-overview#nondelegable-limits) trigger client-side processing)
 
-Select an event to view the details. Correlate the events with nearby Trace records to understand why the operation occurred. For example, a surge in `getRows` calls after a Trace operation with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
+To view the details, select an event. To understand why the operation occurred, correlate the events with nearby Trace records. For example, a surge in `getRows` calls after a Trace operation with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
 
 > [!TIP]
 > If you see HTTP 429 (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use [collections](/power-apps/maker/canvas-apps/create-update-collection) to cache data and reduce network calls.
@@ -119,7 +119,7 @@ User A submits orders successfully, but User B sees failures and different UI be
 
 #### Goal
 
-Capture what the app sees about each user (email, roles, customer selection, discount eligibility), and then compare it with the data operations in Live monitor.
+Capture what the app sees about each user (email, roles, customer selection, discount eligibility). Then, compare it with the data operations in Live monitor.
 
 #### Steps
 
@@ -176,7 +176,7 @@ In Live monitor, filter by Trace events, button name, or search for "Debug:" in 
 - Are cart counts identical? If not, the upstream logic differs.
 - Are error traces present only for User B? Expand the event to inspect the error details.
 
-Correlate Trace events with adjacent `getRows` or `patch` operations. If User B triggers extra data calls (for example, a non-delegable filter that forces multiple network requests), you see them in the event table.
+Correlate Trace events with adjacent `getRows` or `patch` operations. If User B triggers extra data calls (for example, a nondelegable filter that forces multiple network requests), you see them in the event table.
 
 ### Scenario: App works in one environment but not another
 
@@ -184,7 +184,7 @@ Your app works correctly in *Test* but fails in *Production*. For example, a gal
 
 #### Goal
 
-Gather environment-specific metadata and counts, and then compare the sequence and status codes of data operations between environments. In this example, the app has one screen that includes a form in which a **Product** that's selected from a gallery can be updated. The update works in *Test* but fails in *Production*.
+Gather environment-specific metadata and counts, and then compare the sequence and status codes of data operations between environments. In this example, the app has one screen that includes a form. This form contains a product that's selected from a gallery and that can be updated. The update works in *Test* but fails in *Production*.
 
 #### Steps
 
@@ -210,7 +210,7 @@ Gather environment-specific metadata and counts, and then compare the sequence a
 In the event list:
 
 - Compare `getRows` events for **Products** across environments. Does one return zero results or error codes (`404` if the table is missing, `403` if access is denied, `429` if throttled)?
-- Look for repeated `getRows` calls. These might indicate a non-delegable formula.
+- Look for repeated `getRows` calls. These calls might indicate a nondelegable formula.
 - Compare the Trace values. Do products have different values for `relatedOrders` or `hasDiscount`?
 
 If you find a difference, add more Trace calls in which the variable is set, and then examine how the calls are populated.
