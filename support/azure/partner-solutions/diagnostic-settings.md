@@ -4,6 +4,11 @@ description: "Resolve issues where diagnostic settings are missing or not create
 author: ProfessorKendrick
 ms.author: kkendrick
 ms.service: partner-services
+ms.custom:
+  - sap:Datadog on Azure
+  - sap:Dynatrace on Azure
+  - sap:Native New Relic Service
+  - sap:Elastic on Azure
 ms.topic: troubleshooting-problem-resolution
 ms.date: 08/04/2025
 ai-usage: ai-assisted

@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 manager: dcscontentpm
 ms.service: partner-services 
+ms.custom: sap:Dynatrace on Azure
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
 ai-usage: ai-assisted
