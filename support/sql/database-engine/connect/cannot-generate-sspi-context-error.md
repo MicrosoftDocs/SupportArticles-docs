@@ -31,7 +31,11 @@ This error typically occurs when Windows authentication fails to use the Kerbero
 
 For more information about SSPI, Kerberos, and SPNs, see [Frequently asked questions](#frequently-asked-questions).
 
-## Fix the error with Kerberos Configuration Manager
+## Solution
+
+To resolve the "Cannot generate SSPI context" error, use one of the following methods.
+
+### Fix the error with Kerberos Configuration Manager
 
 > [!NOTE]
 > This approach fixes the error when you consistently receive these error messages, not intermittently.
@@ -58,11 +62,11 @@ Follow these steps to fix the error by using KCM.
 
 1. After fixing all the problems that KCM identifies, rerun the tool. Ensure that no other problems are reported and then retry the connection. If the tool still reports problems, repeat the previous procedure.
 
-## Fix the error without Kerberos Configuration Manager
+### Fix the error without Kerberos Configuration Manager
 
 If you can't use KCM, follow these steps:
 
-### Check name resolution by using the ping command
+#### Check name resolution by using the ping command
 
 The key factor that makes Kerberos authentication successful is the valid DNS functionality on the network. You can verify this functionality on the client and the server by using the `Ping` command prompt utility. On the client computer, run the following command to get the IP address of the server that is running SQL Server (where the name of the computer is `SQLServer1`):
 
@@ -120,7 +124,7 @@ For detailed diagnostics, use either the [Test-NetConnection](/previous-versions
 
 Check whether any aliases for the destination SQL Server exist in [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager) and in the SQL Server Client Network utility. If such an alias exists, make sure it's configured correctly by checking server names, network protocol, port number, and so on. A [SQL Server alias](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) might cause an unexpected SPN to be generated. This problem results in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.
 
-### Verify communication between domains
+#### Verify communication between domains
 
 Verify that the domain you sign in to can communicate with the domain of the server that's running SQL Server. The domain must also have correct name resolution.
 
@@ -132,7 +136,7 @@ Verify that the domain you sign in to can communicate with the domain of the ser
 1. If your sign-in domain differs from the domain of the server that's running SQL Server, check the trust relationship between the domains.
 1. Check whether the domain that the server belongs to and the domain account that you use to connect are in the same forest. This step is required for SSPI to work.
 
-### Verify SQL Server SPNs by using SQLCHECK and Setspn tools
+#### Verify SQL Server SPNs by using SQLCHECK and Setspn tools
 
 If you can sign in locally to the SQL Server computer and have administrator access, use [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK). SQLCheck provides most of the information required for troubleshooting in one file. For more information about how to use the tool and the information it gathers, review the tool's home page. You can also check the recommended [prerequisites and checklist](resolve-connectivity-errors-checklist.md) page. Once you generate the output file, review SPN configuration for your SQL Server instance under the **SQL Server Information** section of the output file.
 
@@ -169,7 +173,7 @@ Use this output to determine the next steps (see the following examples) and use
 >
 > - For more information about scenarios where SQL Server automatically registers SPNs and where manual SPN registration is required, see [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
-### Check account permission for SQL Server startup account on linked server
+#### Check account permission for SQL Server startup account on linked server
 
 If you use **Impersonate** as the authentication option on the **Security** page of your [linked server](/sql/relational-databases/linked-servers/linked-servers-database-engine), SQL Server must pass incoming credentials to the remote SQL Server. The SQL Server startup account where you define the linked server must have the **Account is trusted for Delegation** right assigned to it in Active Directory. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
