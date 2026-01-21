@@ -27,11 +27,11 @@ This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Database Mail stops working after updating
+### Issue one: Database Mail stops working after updating
 
 [!INCLUDE [database-mail-stops](../includes/database-mail-stops.md)]
 
-### Incorrect behavior of SESSION_CONTEXT in parallel plans
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
