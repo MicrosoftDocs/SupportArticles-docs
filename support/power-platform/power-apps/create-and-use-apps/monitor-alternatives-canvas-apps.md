@@ -1,6 +1,6 @@
 ---
-title: Debug canvas apps without Live monitor
-description: Learn alternative approaches to debug Power Apps canvas apps when Live monitor isn't available, such as in SharePoint forms or custom portal embeddings.
+title: Troubleshoot Canvas Apps When Live Monitor Is Unavailable
+description: Debug Power Apps canvas apps with alternative tools like Application Insights, Dataverse, and on-screen diagnostics when Live monitor is unsupported.
 ms.date: 01/15/2026
 ms.reviewer: carlosff, v-shaywood
 ms.custom: sap:Running Canvas App
@@ -117,7 +117,7 @@ If(Param("debug") = "true",
 ```
 
 > [!NOTE]
-> SharePoint lists have storage limits. Prune old entries regularly to prevent the list from growing too large.
+> SharePoint lists have storage limits. Regularly remove old entries to prevent the list from growing too large.
 
 ## Create an on-screen diagnostics panel
 
@@ -155,7 +155,7 @@ Add a text control to the screen that shows the collected traces. Set its **Visi
 | **X**       | `Parent.Width - 320`                                                           |
 | **Y**       | 20                                                                             |
 
-This displays a scrollable list of debug messages that you can copy and analyze outside the app.
+This configuration displays a scrollable list of debug messages that you can copy and analyze outside the app.
 
 #### Example YAML for the text control
 
@@ -179,14 +179,14 @@ If you're using Power Apps Studio's YAML view:
 ```
 
 > [!IMPORTANT]
-> Remove or hide the diagnostics panel before you deploy the app to end users. Users who open the app with the debug parameter shouldn't see internal diagnostic information.
+> Remove or hide the diagnostics panel before you deploy the app to end users. Users who open the app by using the debug parameter shouldn't see internal diagnostic information.
 
 ## Best practices for alternative debugging
 
 Follow these guidelines when using alternative debugging approaches:
 
 - *Guard debug controls*: Use query string parameters (`Param("debug") = "true"`) or role checks to display debug features only during testing.
-- *Clean up before deployment*: Remove debug controls, logging calls, and diagnostic panels before you deploy broadly.
+- *Clean up before deployment*: Remove debug controls, logging calls, and diagnostic panels before broad deployment.
 - *Manage log storage*: For Dataverse or SharePoint logging, periodically delete old entries to manage storage.
 - *Use meaningful labels*: Include descriptive titles such as "BeforeSubmit" or "OnVisible_OrderScreen" to make logs easier to analyze.
 - *Include context*: Log the user email, screen name, and relevant data values so you can correlate entries across sessions.
