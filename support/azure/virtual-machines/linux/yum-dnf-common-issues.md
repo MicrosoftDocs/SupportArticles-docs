@@ -410,10 +410,10 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
 
 2. Determine the current value for the release version by running the following `cat` command.
 
-   | RHEL version | Command                             |
-   |--------------|-------------------------------------|
-   | RHEL 7       | `sudo cat /etc/yum/vars/releasever` |
-   | RHEL 8 and 9 | `sudo cat /etc/dnf/vars/releasever` |
+   | RHEL version   | Command                             |
+   |----------------|-------------------------------------|
+   | RHEL 7         | `sudo cat /etc/yum/vars/releasever` |
+   | RHEL 8, and 10 | `sudo cat /etc/dnf/vars/releasever` |
 
 3. Modify and use the correct value for the release version:
 
@@ -421,23 +421,25 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
 
      ```bash
      sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
+     sudo sh -c 'echo 9.6 > /etc/dnf/vars/releasever'
      ```
 
      > [!NOTE]
-     > Support for RHEL7 EUS ended on August 30, 2021. We recommend that you no longer use EUS repositories in RHEL7.
+     > Support for RHEL 7 EUS ended on August 30, 2021. We recommend that you no longer use EUS repositories in RHEL 7.
      >
-     > RHEL 8._x_ versions for EUS are available. These versions include RHEL 8.8, 8.6, 8.4, 8.2, and 8.1.
+     > Support for RHEL 8 EUS ended on May 31, 2025. RHEL 8.10 is the last planned minor release of RHEL 8, and is still supported, but is not an EUS release. We recommend that you no longer use EUS repositories in RHEL 8, and instead switch to the non-EUS repos.
      >
-     > RHEL 9._x_ versions for EUS are available. Currently, these versions include RHEL 9.2 and 9.0.
+     > RHEL 9._x_ versions for EUS are available. Currently, these versions include RHEL 9.6 and 9.4.
      >
+     > RHEL 10._x_ versions for EUS are available. Currently, these versions include only RHEL 10.0.
      > For more information about version availability, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata).
 
    - If your system is using non-EUS repositories, make sure that you remove the version lock for the */etc/yum/vars/releasever* or */etc/dnf/vars/releasever* file by running the following command.
 
-     | RHEL version | Command                                   |
-     |--------------|-------------------------------------------|
-     | RHEL 7       | `sudo echo "" > /etc/yum/vars/releasever` |
-     | RHEL 8 and 9 | `sudo echo "" > /etc/dnf/vars/releasever` |
+     | RHEL version    | Command                                   |
+     |-----------------|-------------------------------------------|
+     | RHEL 7          | `sudo echo "" > /etc/yum/vars/releasever` |
+     | RHEL 8,9 and 10 | `sudo echo "" > /etc/dnf/vars/releasever` |
 
 ##### [Oracle Linux](#tab/ol)
 
