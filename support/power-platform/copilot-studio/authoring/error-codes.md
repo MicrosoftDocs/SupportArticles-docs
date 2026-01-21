@@ -77,15 +77,11 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 - Expected: `{ExpectedType}`. Actual: `{ActualType}`.
 
-**Resolution:** This error occurs when a prompt action receives incorrect input or returns unexpected output types.
+**Resolution:** This error occurs when a prompt action receives incorrect input or returns unexpected output types. To resolve, take one of the following actions based on the error:
 
-**Common causes and fixes:**
-
-- **Type mismatch:** The prompt's output type doesn't match what's expected. Check your prompt configuration to ensure the output schema matches the expected variable type.
-
-- **Missing required input:** A required input parameter wasn't provided. Verify that all required inputs are connected to variables with values.
-
-- **Blank required value:** A required input was provided but its value is blank. Ensure the variable has a value before calling the prompt.
+- _Type mismatch:_ Check your prompt configuration to ensure the output schema matches the expected variable type.
+- _Missing required input:_ Verify that all required inputs are connected to variables with values.
+- _Blank required value:_ Ensure the variable has a value before calling the prompt.
 
 For more information, see [Create a prompt action](/ai-builder/use-a-custom-prompt-in-mcs#create-a-prompt-action).
 
@@ -111,18 +107,10 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 - Integrated authentication is not supported in channel `{channel}`.
 
-**Resolution:** This error occurs when your agent uses actions or features that require user authentication, but authentication hasn't been configured.
-
-**To resolve:**
+**Resolution:** This error occurs when your agent uses actions or features that require user authentication, but authentication hasn't been configured. To resolve:
 
 1. In your agent, go to **Settings > Security > Authentication**.
-
-1. Select one of the appropriate authentication methods:
-
-    - **Authenticate with Microsoft** for Microsoft 365 users
-
-    - **Authenticate manually** for custom OAuth providers
-
+1. Select an appropriate authentication method: **Authenticate with Microsoft** for Microsoft 365 users, or **Authenticate manually** for custom OAuth providers.
 1. If the error mentions a specific channel, verify that the channel supports the authentication method you're using. Some channels don't support integrated authentication.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
@@ -131,31 +119,17 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
 
-**Resolution:** The orchestrator agent and connected sub-agent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings.
-
-**To resolve:**
+**Resolution:** The orchestrator agent and connected sub-agent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve:
 
 1. Open both agents and go to **Settings > Security > Authentication**.
-
 1. Ensure both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
-
 1. If using manual authentication, ensure both agents are configured with the same OAuth provider and settings.
 
-**Important:** The following authentication compatibility rules apply:
+The following authentication compatibility rules apply:
 
 - If the connected agent has _no authentication_ configured, any orchestrator authentication is acceptable.
-
 - If the connected agent _requires authentication_, the orchestrator must use the _same_ authentication method.
-
 - **Manual authentication (Generic OAuth2)** on the orchestrator is _not compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration or the connected agent must have no authentication requirement.
-
-**Common scenarios that cause this error:**
-
-- Orchestrator uses **Authenticate with Microsoft** but the connected agent uses manual OAuth
-
-- Orchestrator uses manual OAuth but connected agent uses **Authenticate with Microsoft**
-
-- Connected agent requires authentication but orchestrator has no authentication configured
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -163,16 +137,11 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Connected agent with schema name {AgentSchemaName} not found.
 
-**Resolution:** This error occurs in multi-agent orchestration when the orchestrator agent can't find a connected sub-agent.
-
-**To resolve:**
+**Resolution:** This error occurs in multi-agent orchestration when the orchestrator agent can't find a connected sub-agent. To resolve:
 
 1. Verify the connected agent exists in the same environment as the orchestrator agent.
-
 1. Ensure the connected agent's schema name is spelled correctly in the orchestrator configuration.
-
 1. Check that you have access permissions to the connected agent.
-
 1. If the connected agent was recently created, wait a few minutes and try again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
@@ -181,14 +150,10 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
-**Resolution:** The connected sub-agent must be published before it can be invoked by the orchestrator agent.
-
-**To resolve:**
+**Resolution:** The connected sub-agent must be published before it can be invoked by the orchestrator agent. To resolve:
 
 1. Open the connected agent in Copilot Studio.
-
 1. Publish the agent.
-
 1. Return to the orchestrator agent and test again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
@@ -197,14 +162,10 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
-**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents.
-
-**To resolve:**
+**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve:
 
 1. Review your agent architecture and flatten the hierarchy.
-
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
-
 1. Consider using topics or actions instead of additional connected agents.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
@@ -213,18 +174,12 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
-**Resolution:** The connected agent is missing required description or instructions that enable it to be invoked by an orchestrator agent.
-
-**To resolve:**
+**Resolution:** The connected agent is missing required description or instructions that enable it to be invoked by an orchestrator agent. To resolve:
 
 1. Open the connected agent in Copilot Studio.
-
 1. Go to the agent's **Overview** page.
-
 1. Ensure the agent has a clear **Description** and **Instructions** configured.
-
 1. Publish the connected agent after making changes.
-
 1. Return to the orchestrator agent and test again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
@@ -233,27 +188,19 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Power Fx expression evaluation failed: {ErrorDetails}
 
-**Resolution:** A Power Fx expression used in a connector action failed to evaluate correctly.
-
-**Common causes and fixes:**
-
-- **Syntax error:** Check your Power Fx expression for typos or incorrect syntax.
-
-- **Type mismatch:** Ensure the data types in your expression are compatible (for example, don't compare text to numbers without conversion).
-
-- **Null or blank values:** Add error handling for cases where variables might be blank. Use functions like `IsBlank()`, `Coalesce()`, or `IfError()`.
-
-- **Invalid function usage:** Verify that functions are used with the correct number and type of arguments.
-
-**To resolve:**
+**Resolution:** A Power Fx expression used in a connector action failed to evaluate correctly. To resolve:
 
 1. Open the topic containing the connector action.
-
 1. Review the Power Fx expressions in the action's input parameters.
-
 1. Test the expressions with sample data to identify the issue.
-
 1. Use the formula bar's error indicators to locate specific problems.
+
+Common causes include:
+
+- Syntax errors
+- Type mismatches (such as comparing text to numbers without conversion)
+- Null or blank values (use functions like `IsBlank()`, `Coalesce()`, or `IfError()` for handling)
+- Invalid function usage
 
 For more information, see [Use Power Fx in Copilot Studio](/microsoft-copilot-studio/advanced-power-fx).
 
@@ -289,22 +236,16 @@ Common problems include:
 
 **Error message:** Conversation state size exceeds the maximum allowed limit.
 
-**Resolution:** The conversation has accumulated too much data in its state, exceeding the allowed size limits.
+**Resolution:** The conversation has accumulated too much data in its state, exceeding the allowed size limits. To resolve:
 
-**To resolve:**
+1. Reduce variable data by reviewing your topics and reducing the amount of data stored in variables during the conversation.
+1. Clear unused variables by setting them to blank when they're no longer needed.
+1. Simplify conversation flows by breaking complex conversations into smaller, more focused interactions.
+1. Avoid storing large JSON objects, arrays, or text blocks in conversation variables.
 
-1. **Reduce variable data:** Review your topics and reduce the amount of data stored in variables during the conversation.
-
-1. **Clear unused variables:** Set variables to blank when they're no longer needed.
-
-1. **Simplify conversation flows:** Break complex conversations into smaller, more focused interactions.
-
-1. **Avoid storing large objects:** Don't store large JSON objects, arrays, or text blocks in conversation variables.
-
-**Prevention tips:**
+To prevent this error:
 
 - Use variables only for data that needs to persist across topics.
-
 - Consider using Power Automate flows to store and retrieve large data from external sources instead of keeping it in conversation state.
 
 For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas).
