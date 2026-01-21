@@ -48,13 +48,13 @@ To resolve this issue, follow these steps:
 
    > [!NOTE]  
    >
-   > - In this command. /<X> represents the letter of the affected drive.
+   > - In this command. \<X> represents the letter of the affected drive.
    > - If `chkdsk` doesn't find any issues but the symptoms persist, contact Microsoft Support for further assistance.
 
 1. To fix the drive errors, run the following command at the command prompt:
 
    ```console
-   chkdsk <x>: /F
+   chkdsk <X>: /F
    ```
 
 1. If `chkdsk` can't repair the drive because it's mounted, unmount the drive and then attach it to another Windows device. Run `chkdsk` from a command prompt on the new device.
