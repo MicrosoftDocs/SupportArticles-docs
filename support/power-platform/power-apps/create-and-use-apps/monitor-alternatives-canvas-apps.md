@@ -27,7 +27,7 @@ If Live monitor isn't available, choose one of the following alternative debuggi
 | --------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------- |
 | [Application Insights](#application-insights-integration)             | Centralized telemetry and performance monitoring | Requires Azure setup. Emits traces and metrics outside Power Apps.        |
 | [Dataverse logging table](#write-debug-records-to-dataverse)          | Ad-hoc diagnostics and audit trails              | Create a custom table. Use guarded logic to write records when debugging. |
-| [SharePoint list logging](#write-debug-records-to-sharepoint)         | Lightweight environments without Dataverse       | Use `Collect` or `Patch` (to a list). Prune entries to control size.        |
+| [SharePoint list logging](#write-debug-records-to-sharepoint)         | Lightweight environments without Dataverse       | Use `Collect` or `Patch` (to a list). To control size, prune entries.        |
 | [On-screen diagnostics panel](#create-an-on-screen-diagnostics-panel) | Immediate feedback during testing                | Only for secure audiences. Remove before a broad rollout.                   |
 
 ## Application Insights integration
@@ -50,11 +50,11 @@ To capture diagnostic information if your environment includes Dataverse, create
 
 1. In [Power Apps](https://make.powerapps.com), go to **Tables**, and create a new table that's named `Debug Logs`.
 1. Add the following columns:
-   - `Title`: A label for the log entry.
-   - `UserEmail`: The email of the user.
-   - `Timestamp`: When the event occurred.
-   - `Payload`: Additional data in JSON format.
-   - Other columns as necessary for your scenario (for example, `CartCount`, `ScreenName`).
+   - `Title`: A label for the log entry
+   - `UserEmail`: The email address of the user
+   - `Timestamp`: When the event occurred
+   - `Payload`: Additional data in JSON format
+   - Other columns as necessary for your scenario (for example, `CartCount`, `ScreenName`)
 
 ### Example: Write a debug record to Dataverse
 
@@ -188,7 +188,7 @@ If you use an alternative debugging approach, follow these guidelines:
 - *Guard debug controls*: Use query string parameters (`Param("debug") = "true"`) or role checks to display debug features only during testing.
 - *Clean up before deployment*: Remove debug controls, logging calls, and diagnostic panels before you run a broad deployment.
 - *Manage log storage*: To manage storage for Dataverse or SharePoint logging, periodically delete old entries.
-- *Use meaningful labels*: To make logs easier to analyze, include descriptive titles such as "BeforeSubmit" or "OnVisible_OrderScreen".
+- *Use meaningful labels*: To make logs easier to analyze, include descriptive titles such as "BeforeSubmit" or "OnVisible_OrderScreen."
 - *Include context*: Log the user email, screen name, and relevant data values so you can correlate entries across sessions.
 
 ## Related content
