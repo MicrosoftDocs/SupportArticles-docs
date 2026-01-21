@@ -13,9 +13,9 @@ ms.custom: sap:Availability, Performance, and Application Issues
 > [!NOTE]
 > Some of the following guidelines might only work on Windows or Linux App Services. For example, Linux App Services run in 64-bit mode by default.
 
-This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
+## Summary
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
 ## Why is my App Service Plan displaying CPU/Memory usage even when all Web Apps are stopped?
 
