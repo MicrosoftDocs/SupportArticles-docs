@@ -69,7 +69,7 @@ Because you can't place Trace in data properties (such as a label's `Text`), use
 
 To create a debug button:
 
-1. Add a button that's named `btnDebugSnapshot` and that has the **Visible** setting set to `Param("debug") = "true"`.
+1. Add a button that's named `btnDebugSnapshot` and that has the **Visible** property set to `Param("debug") = "true"`.
 
    For more information about how to pass parameters, see [Param function](/power-platform/power-fx/reference/function-param).
 1. In `OnSelect`, call Trace with a snapshot record.
