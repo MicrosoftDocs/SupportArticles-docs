@@ -24,22 +24,22 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 | Error code                                                                          | Description                                                                   |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There was a mimatch between the prompt action types.                          |
-| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There was a timeout error that's related to a call to an AI Builder model.    |
-| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There was an error that's related to the output of a connector.               |
+| [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There's a mismatch between the prompt action types.                          |
+| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.    |
+| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.               |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                             |
 | [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.    |
 | [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.        |
 | [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.    |
 | [ConnectedAgentChainingNotSupported](#connectedagentchainingnotsupported)           | Multi-level agent chaining isn't supported.                                   |
 | [ConnectedAgentGptComponentNotFound](#connectedagentgptcomponentnotfound)           | A connected agent is missing descriptions or instructions.                    |
-| [ConnectorPowerFxError](#connectorpowerfxerror)                                     | There was an error in the Power Fx expression evaluation in connector actions.|
-| [ContentError](#contenterror)                                                       | There was an error in the topic content.                                      |
+| [ConnectorPowerFxError](#connectorpowerfxerror)                                     | There's an error in the Power Fx expression evaluation in connector actions.|
+| [ContentError](#contenterror)                                                       | There's an error in the topic content.                                      |
 | [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's SSO request.            |
 | [ConversationStateTooLarge](#conversationstatetoolarge)                             | The conversation state exceeds the size limits.                               |
-| [DataLossPreventionViolation](#datalosspreventionviolation)                         | There was a data policy violation.                                            |
-| [EnforcementMessageC2](#enforcementmessagec2)                                       | Not enough prepaid capacity was available.                                    |
-| [FlowActionBadRequest](#flowactionbadrequest)                                       | A request that was made to an [agent flow][1] was malformed.                  |
+| [DataLossPreventionViolation](#datalosspreventionviolation)                         | There's a data policy violation.                                            |
+| [EnforcementMessageC2](#enforcementmessagec2)                                       | Not enough prepaid capacity is available.                                    |
+| [FlowActionBadRequest](#flowactionbadrequest)                                       | A request that was made to an [agent flow][1] is malformed.                  |
 | [FlowActionException](#flowactionexception)                                         | An error occurred while executing an [agent flow][1].                         |
 | [FlowActionTimedOut](#flowactiontimedout)                                           | An [agent flow][1] took more than 100 seconds to run and timed out.           |
 | [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)                           | An [agent flow][1] invoked with unauthorized maker credentials in connection. |
@@ -107,7 +107,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 - Integrated authentication is not supported in channel `{channel}`.
 
-**Resolution:** This error occurs when your agent uses actions or features that require user authentication, but authentication hasn't been configured. To resolve:
+**Resolution:** This error occurs when your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve:
 
 1. In your agent, go to **Settings > Security > Authentication**.
 1. Select an appropriate authentication method: **Authenticate with Microsoft** for Microsoft 365 users, or **Authenticate manually** for custom OAuth providers.
@@ -123,7 +123,7 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 1. Open both agents and go to **Settings > Security > Authentication**.
 1. Ensure both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
-1. If using manual authentication, ensure both agents are configured with the same OAuth provider and settings.
+1. If you're using manual authentication, ensure both agents are configured with the same OAuth provider and settings.
 
 The following authentication compatibility rules apply:
 
@@ -137,7 +137,7 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Connected agent with schema name {AgentSchemaName} not found.
 
-**Resolution:** This error occurs in multi-agent orchestration when the orchestrator agent can't find a connected sub-agent. To resolve:
+**Resolution:** This error occurs in multi-agent orchestration when the orchestrator agent can't find a connected sub-agent. To resolve the error:
 
 1. Verify the connected agent exists in the same environment as the orchestrator agent.
 1. Ensure the connected agent's schema name is spelled correctly in the orchestrator configuration.
@@ -150,7 +150,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
-**Resolution:** The connected sub-agent must be published before it can be invoked by the orchestrator agent. To resolve:
+**Resolution:** The connected sub-agent must be published before the orchestrator agent can invoke it. To resolve the error:
 
 1. Open the connected agent in Copilot Studio.
 1. Publish the agent.
@@ -162,7 +162,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
-**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve:
+**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve the error:
 
 1. Review your agent architecture and flatten the hierarchy.
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
@@ -174,7 +174,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
-**Resolution:** The connected agent is missing required description or instructions that enable it to be invoked by an orchestrator agent. To resolve:
+**Resolution:** The connected agent is missing required description or instructions that enable it to be invoked by an orchestrator agent. To resolve the error:
 
 1. Open the connected agent in Copilot Studio.
 1. Go to the agent's **Overview** page.
@@ -188,7 +188,7 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Power Fx expression evaluation failed: {ErrorDetails}
 
-**Resolution:** A Power Fx expression used in a connector action failed to evaluate correctly. To resolve:
+**Resolution:** A Power Fx expression used in a connector action failed to evaluate correctly. To resolve the error:
 
 1. Open the topic containing the connector action.
 1. Review the Power Fx expressions in the action's input parameters.
@@ -197,10 +197,10 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 Common causes include:
 
-- Syntax errors
-- Type mismatches (such as comparing text to numbers without conversion)
-- Null or blank values (use functions like `IsBlank()`, `Coalesce()`, or `IfError()` for handling)
-- Invalid function usage
+- Syntax errors.
+- Type mismatches, such as comparing text to numbers without conversion.
+- Null or blank values. Use functions like `IsBlank()`, `Coalesce()`, or `IfError()` for handling.
+- Invalid function usage.
 
 For more information, see [Use Power Fx in Copilot Studio](/microsoft-copilot-studio/advanced-power-fx).
 
@@ -236,7 +236,7 @@ Common problems include:
 
 **Error message:** Conversation state size exceeds the maximum allowed limit.
 
-**Resolution:** The conversation has accumulated too much data in its state, exceeding the allowed size limits. To resolve:
+**Resolution:** The conversation accumulates too much data in its state, exceeding the allowed size limits. To resolve:
 
 1. Reduce variable data by reviewing your topics and reducing the amount of data stored in variables during the conversation.
 1. Clear unused variables by setting them to blank when they're no longer needed.
