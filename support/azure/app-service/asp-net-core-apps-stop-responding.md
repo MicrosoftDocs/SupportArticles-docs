@@ -13,6 +13,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 
 # ASP.NET Core applications hosted in App Service stop responding
 
+## Summary
+
 This article provides guidance on addressing ASP.NET Core applications that are hosted in Azure App Service when they stop responding. You might also see this message: "The specified CGI Application encountered an error and the server terminated the process."
 
 ## Symptom
