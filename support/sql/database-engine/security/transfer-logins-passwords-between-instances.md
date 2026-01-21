@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 918992, 246133
 
 ## Summary
 
-This article describes how to transfer the logins and passwords between different instances of Microsoft SQL Server running on Windows. Use these procedures when you migrate databases between servers or need to maintain consistent user access across SQL Server instances. The instances might be on the same server or different servers, and their versions might differ.
+This article describes how to transfer logins and passwords between different instances of [Microsoft SQL Server](/sql/sql-server/sql-server-technical-documentation) running on Windows. Use these procedures when you migrate databases between servers or need to maintain consistent user access across SQL Server instances. The instances can be on the same server or different servers, and their versions can differ.
 
 ## Why transfer logins between SQL Server instances?
 
-When you move a database to a new server (like in a migration or restore), the database users are moved, but their corresponding server-level logins might not exist on the new instance, creating orphaned users. Transferring login and passwords is crucial for maintaining security and access continuity.
+When you move a database to a new server (such as during a migration or restore), you move the database users, but their corresponding server-level logins might not exist on the new instance. This condition creates [orphaned users](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server). Transferring logins and passwords is crucial for maintaining security and access continuity.
 
-After you move a database from a SQL Server instance on server A to a SQL Server instance on server B, users might be unable to log in to the database server on server B. Additionally, users might receive the following error message:
+After you move a database from a SQL Server instance on server A to a SQL Server instance on server B, users might be unable to sign in to the database server on server B. Additionally, users might receive the following error message:
 
 > Login failed for user '**MyUser**'. (Microsoft SQL Server, Error: 18456)
 
@@ -30,7 +30,7 @@ Error 18456 can also occur for several other reasons. For more information on th
 
 ## Steps to transfer logins between SQL Server instances
 
-To transfer the logins, use one of the following methods, as appropriate for your situation.
+To transfer logins, use one of the following methods, as appropriate for your situation.
 
 ### Method: Generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server
 
@@ -45,21 +45,21 @@ To generate scripts via SSMS on the source server and manually reset passwords f
 1. Select **Next** to open the **Set Scripting Options** page. 
 1. Select the **Advanced** button for Script Login options.
 1. In the **Advanced** list, find **Script Logins**, set the option to **True** and select **OK**.
-1. Back to **Set Scripting Options** under **Select how scripts should be saved** and select **Open in new query window**. 
+1. Return to **Set Scripting Options**, under **Select how scripts should be saved** select **Open in new query window**. 
 1. Select **Next** twice, and then select **Finish**.
 1. Find the section in the script that contains logins. Typically, the generated script contains text with the following comment at the beginning of this section:
 
    `/* For security reasons the login is created disabled and with a random password. */`
 
    > [!NOTE]
-   > This comment indicates that the SQL Server Authentication logins are generated with a random password and are disabled by default. You need to reset the password and re-enable these logins on the destination server.
+   > This comment indicates that SQL Server Authentication logins are generated with a random password and are disabled by default. You must reset the password and re-enable these logins on the destination server.
 
 1. Apply the login script from the larger generated script to the destination SQL Server.
 1. For any SQL Server Authentication logins, reset the password on the destination SQL Server and re-enable those logins.
 
 ### Method: Transfer logins and passwords to the destination server (Server B) by using scripts generated on the source server (Server A)
 
-1. Create stored procedures that will help generate necessary scripts to transfer logins and their passwords. To do so, connect to Server A using SQL Server Management Studio (SSMS) or any other client tool and run the following script:
+1. Create stored procedures that help generate necessary scripts to transfer logins and their passwords. To do so, connect to Server A by using [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms) or any other client tool and run the following script:
 
     ```sql
     USE [master]
@@ -286,7 +286,7 @@ To generate scripts via SSMS on the source server and manually reset passwords f
 
 1. The output script that the `sp_help_revlogin` stored procedure generates is the login script. This login script creates the logins that have the original Security Identifier (SID) and the original password.
 1. Review and follow the information in the [Additional considerations when transferring SQL Server logins](#additional-considerations-when-transferring-sql-server-logins) section before you proceed with implementing steps on the destination server.
-1. Once you implement any applicable steps from the [Additional considerations when transferring SQL Server logins](#additional-considerations-when-transferring-sql-server-logins) section, connect to the destination server B using any client tool (like SSMS).
+1. Once you implement any applicable steps from the [Additional considerations when transferring SQL Server logins](#additional-considerations-when-transferring-sql-server-logins) section, connect to the destination server B by using any client tool (such as SSMS).
 1. Run the script generated as the output of `sp_helprevlogin` from server A.
 
 ## Additional considerations when transferring SQL Server logins
@@ -295,41 +295,42 @@ Review the following information before you run the output script on the instanc
 
 ### Understand password hashing in SQL Server login transfers
 
-- A password can be hashed in the following ways:
+You can hash a password in the following ways:
 
-  - `VERSION_SHA1`: This hash is generated by using the SHA1 algorithm and is used in SQL Server 2000 through SQL Server 2008 R2.
-  - `VERSION_SHA2`: This hash is generated by using the SHA2 512 algorithm and is used in SQL Server 2012 and later versions.
-- In the output script, the logins are created by using the encrypted password. This is because of the `HASHED` argument in the `CREATE LOGIN` statement. This argument specifies that the password that is entered after the `PASSWORD` argument is already hashed.
+- `VERSION_SHA1`: SQL Server uses the SHA1 algorithm to generate this hash. Versions from SQL Server 2000 through SQL Server 2008 R2 use this hash.
+- `VERSION_SHA2`: SQL Server uses the SHA2 512 algorithm to generate this hash. Versions from SQL Server 2012 and later use this hash.
+
+The output script creates the logins by using the encrypted password. The `HASHED` argument in the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql) statement causes this behavior. This argument indicates that the password entered after the `PASSWORD` argument is already hashed.
 
 ### Handle domain changes during SQL Server login transfers
 
-Are your source and destination servers in different domains? Review the output script carefully. If server A and server B are in different domains, you have to change the output script. Then, you have to replace the original domain name by using the new domain name in the `CREATE LOGIN` statements. The integrated logins that are granted access in the new domain don't have the same SID as the logins in the original domain. Therefore, users are orphaned from these logins. For more information about how to resolve these orphaned users, see [Troubleshoot orphaned users (SQL Server)](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server) and [ALTER USER](/sql/t-sql/statements/alter-user-transact-sql).  
+If your source and destination servers are in different domains, review the output script carefully. You must change the output script and replace the original domain name with the new domain name in the `CREATE LOGIN` statements. The integrated logins that are granted access in the new domain don't have the same SID as the logins in the original domain. Therefore, users become orphaned from these logins. For more information about how to resolve orphaned users, see [Troubleshoot orphaned users (SQL Server)](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server) and [ALTER USER](/sql/t-sql/statements/alter-user-transact-sql).  
 
-If server A and server B are in the same domain, the same SID is used. Therefore, users are unlikely to be orphaned.
+If server A and server B are in the same domain, the same SID is used. Therefore, users aren't orphaned.
 
 ### Required permissions to view and select SQL Server logins
 
-By default, only a member of the sysadmin fixed server role can run a `SELECT` statement from the `sys.server_principals` view. Unless a member of the sysadmin fixed server role grants the necessary permissions to the users, the users can't create or run the output script.
+By default, only members of the [sysadmin fixed server role](/sql/relational-databases/security/authentication-access/server-level-roles) can run a `SELECT` statement from the `sys.server_principals` view. Unless a member of the sysadmin fixed server role grants the necessary permissions to other users, those users can't create or run the output script.
 
 ### Default database setting isn't scripted and transferred
 
-The steps in this article don't transfer the default database information for a particular login. This is because the default database might not always exist on server B. To define the default database for a login, use the `ALTER LOGIN` statement by passing in the login name and the default database as arguments.
+The steps in this article don't transfer the default database information for a particular login. This limitation exists because the default database might not always exist on server B. To define the default database for a login, use the [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) statement by passing in the login name and the default database as arguments.
 
 ### Manage sort order differences in SQL Server login transfers
 
-There might be differences in sort orders between the source and destination servers, or they might be the same. Here's how each scenario can be addressed:
+The source and destination servers might have different sort orders, or they might use the same sort order. Here's how you can address each scenario:
 
-- **Case-insensitive server A and case-sensitive server B**: The sort order of server A might be case-insensitive, and the sort order of server B might be case-sensitive. In this case, users must type the passwords in all uppercase letters after you transfer the logins and the passwords to the instance on server B.
-- **Case-sensitive server A and case-insensitive server B:** The sort order of server A might be case-sensitive, and the sort order of server B might be case-insensitive. In this case, users can't log in by using the logins and the passwords that you transfer to the instance on server B unless one of the following conditions is true:
+- **Case-insensitive server A and case-sensitive server B**: The sort order of server A is case-insensitive, and the sort order of server B is case-sensitive. In this case, users must type the passwords in all uppercase letters after you transfer the logins and the passwords to the instance on server B.
+- **Case-sensitive server A and case-insensitive server B:** The sort order of server A is case-sensitive, and the sort order of server B is case-insensitive. In this case, users can't sign in by using the logins and the passwords that you transfer to the instance on server B unless one of the following conditions is true:
 
   - The original passwords contain no letters.
   - All letters in the original passwords are uppercase letters.
 
-- **Case-sensitive or case-insensitive on both servers**: The sort order of both server A and server B might be case-sensitive, or the sort order of both server A and server B might be case-insensitive. In these cases, the users don't experience a problem.
+- **Case-sensitive or case-insensitive on both servers**: The sort order of both server A and server B is case-sensitive, or the sort order of both server A and server B is case-insensitive. In these cases, the users don't experience a problem.
 
 ### Resolve conflicts with existing SQL Server logins on destination server
 
-The script is designed to check if the login exists on the destination server and create a login only if it doesn't. However, if you receive the following error message when you run the output script on the instance on server B, you have to manually resolve it by following the steps in this section.
+The script checks if the login exists on the destination server and creates a login only if it doesn't exist. However, if you receive the following error message when you run the output script on the instance on server B, you must manually resolve the conflict by following the steps in this section.
 
 > Msg 15025, Level 16, State 1, Line 1  
 > The server principal '**MyLogin**' already exists.
@@ -339,13 +340,13 @@ Similarly, a login that's already in the instance on server B might have a SID t
 > Msg 15433, Level 16, State 1, Line 1
 > Supplied parameter sid is in use.
 
-To manually resolve the issue, follow these steps:
+To manually resolve the conflict, follow these steps:
 
 1. Review the output script carefully.
 1. Examine the contents of the `sys.server_principals` view in the instance on server B.
 1. Address these error messages as appropriate.
 
-Starting with SQL Server 2005, the SID for a login is used to manage database-level access. Occasionally, a login might have different SIDs when mapped to users in different databases. This issue can occur if databases are manually combined from different servers. In such cases, the login can only access the database where the database principal's SID matches the SID in the `sys.server_principals` view. To resolve this issue, manually remove the database user with the mismatched SID using the [DROP USER](/sql/t-sql/statements/drop-user-transact-sql) statement. Then, add the user again with the `CREATE USER` statement and map it to the correct login (server principal).
+Starting with SQL Server 2005, the SID for a login manages database-level access. Occasionally, a login might have different SIDs when mapped to users in different databases. This problem can occur if you manually combine databases from different servers. In such cases, the login can only access the database where the database principal's SID matches the SID in the `sys.server_principals` view. To resolve this problem, manually remove the database user with the mismatched SID by using the [DROP USER](/sql/t-sql/statements/drop-user-transact-sql) statement. Then, add the user again by using the `CREATE USER` statement and map it to the correct login (server principal).
 
 For more information and to distinguish servers from database principals, see [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) and [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql).
 
