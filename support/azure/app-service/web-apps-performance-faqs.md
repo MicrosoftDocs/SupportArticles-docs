@@ -197,4 +197,3 @@ For a detailed walkthrough that shows you how to debug your web app by using Vis
 
 - App Service undergoes routine maintenance to ensure platform reliability. For more control over update behavior, especially in App Service Environment v3, configure upgrade preference.  For more information, see [Routine (planned) maintenance for Azure App Service](/azure/app-service/routine-maintenance).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
