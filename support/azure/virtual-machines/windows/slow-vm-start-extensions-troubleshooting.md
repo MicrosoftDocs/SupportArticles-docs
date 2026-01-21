@@ -21,9 +21,9 @@ Although the Azure VM guest OS is active and working, and the VM can connect suc
 
 ## Cause
 
-VM extensions are software components that run inside the VM to enable configuration management, security, monitoring, and other features. VM extensions have a 90-minute provisioning timeout. They must complete their installation or update within that time limit. If an extension doesn't provision within the timeout period, it's marked as failed. The extension isn't retried until the next VM operation that triggers it, such as **Start** or **Redeploy**.
+VM extensions are software components that run inside the VM to enable configuration management, security, monitoring, and other features. VM extensions have a 90-minute provisioning timeout. They must complete their installation or update within that time limit. Azure typically doesn't continuously retry the failed extension immediately. The retry is instead triggered the next time a VM operation occurs that re-engages extension provisioning (like **Start** or **Redeploy**). This retry behavior can delay completion of the operation until the extension either succeeds or times out again.
 
-If a VM has one or more extensions in a **Failed** state, delays can occur in other VM operations, such as **Start** or **Redeploy**. This issue occurs because the Azure platform tries to provision the failed extensions again before it completes the operation. Therefore, the VMs show a **Starting** status for an extended period.
+When an Azure VM has one or more VM extensions stuck in a **Failed** state, you might notice that management operations (for example, **Start** or **Redeploy**) take much longer than expected. This happens because the Azure platform treats extension provisioning as part of the overall VM operation workflow. Before the operation can be marked complete, Azure attempts to re-provision any extensions that previously failed. As a result, the VM can remain in a **Starting** or **Updating** status for an extended period even when the guest OS is already running and you may still be able to connect to it.
 
 ## More information
 
