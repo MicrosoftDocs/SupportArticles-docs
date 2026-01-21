@@ -154,12 +154,12 @@ Use the following table to determine the correct RHUI package type based on your
 | Image type     | Support model         | Applicable version                      | RHUI package prefix            | Using `releasever`? |
 |--------------------|---------------------------|----------------------------------------------|------------------------------------|-------------------------|
 | Generic RHEL       | Non-EUS                   | 7.9, 8.10, 9.8, 10.0                          | `rhui-azure-rhelX`                 | No                      |
-| Generic RHEL       | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-eus`             | Yes                     |
-| RHEL-SAP-APPS      | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sapapps`         | Yes                     |
+| Generic RHEL       | EUS                       | 9.4, 9.6, 10.0                                | `rhui-azure-rhelX-eus`             | Yes                     |
+| RHEL-SAP-APPS      | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6, 10.0                 | `rhui-azure-rhelX-sapapps`         | Yes                     |
 | RHEL-SAP-APPS      | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-apps`   | No                      |
-| RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sap-ha`          | Yes                     |
+| RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.2, 9.4, 9.6, 10.0                 | `rhui-azure-rhelX-sap-ha`          | Yes                     |
 | RHEL-SAP-HA        | Base (no E4S available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-ha`     | No                      |
-| RHEL-HA            | EUS                       | 8.6, 8.8, 9.4, 9.6                            | `rhui-azure-rhelX-ha`              | Yes                     |
+| RHEL-HA            | EUS                       | 8.6, 8.8, 9.4, 9.6, 10.0                      | `rhui-azure-rhelX-ha`              | Yes                     |
 | RHEL-HA            | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-ha`         | No                      |
 
 > [!NOTE]
@@ -177,6 +177,7 @@ Use the following index to navigate directly to the corresponding section:
 - [RHEL 7 SAP RHUI package installation](#rhel79sap)
 - [RHEL 8 SAP/E4S/HA RHUI package installation](#rhel8sap)
 - [RHEL 9 SAP/E4S/HA RHUI package installation](#rhel9sap)
+- [RHEL 10 SAP/E4S/HA RHUI package installation](#rhel10sap)
 
   
 ##### <a id="eus"></a> EUS RHUI package installation
@@ -252,6 +253,41 @@ Select the tab of an EUS image type to see the corresponding instructions.
    sudo rhel9-eus.config
    ```
    
+###### [RHEL 10.x - EUS](#tab/rhel10-eus)
+
+
+
+1. Create a config file by using this command:
+
+   ```bash
+   sudo tee rhel10-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10-eus]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10-eus)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1'
+
+   ```
+
+2. Install the `rhui-azure-rhel10-eus` package by running.
+
+   ```bash
+   sudo dnf --config rhel10-eus.config install rhui-azure-rhel10-eus
+   ```
+
+3. Lock the `releasever` variable:
+
+   ```bash
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
+
+5. Remove the temp file created on step 1.
+
+   ```bash
+   sudo rhel10-eus.config
+   ```
+
 ---
 
 
@@ -813,6 +849,123 @@ The following steps apply if the OS version is *earlier than the latest version 
 
    ```bash
    sudo rm rhel9-ha.config
+   ```
+
+---
+
+
+> [!NOTE]
+> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
+>
+> ```bash  
+> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
+> sudo yum install rhui-azure-rhel-X-X-X
+> sudo rm rhelX-XX-XX.config
+> ```
+> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
+
+##### <a id="rhel10sap"></a> RHEL 10 SAP/E4S/HA RHUI package installation
+
+Select the tab of an SAP image type to see the corresponding instructions.
+
+###### [RHEL 10.x - RHEL-SAP-APPS](#tab/rhel10-rhel-sap-apps)
+
+The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 10.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
+
+1. Create a config file by using this command:
+
+   ```bash
+   sudo tee rhel10-sapapps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10-sapapps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10-sapapps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10-sapapps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1'
+   ```
+
+2. Install the `rhui-azure-rhel10-sapapps` package by running the `dnf install` command:
+
+   ```bash
+   sudo dnf --config rhel10-sapapps.config  install rhui-azure-rhel10-sapapps
+   ```
+
+3. Lock the `releasever` level. Currently, the version must be 10.0.
+
+   ```bash
+   sudo sh -c 'echo 10.0 > /etc/dnf/vars/releasever'
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
+
+5. Remove the temp file created on step 1.
+
+   ```bash
+   sudo rm  rhel10-sapapps.config
+   ```
+
+###### [RHEL 10.x - RHEL-SAP-HA (E4S)](#tab/rhel10-rhel-sap-ha-e4s)
+
+The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 10.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
+
+1. Create a config file by using this command:
+
+   ```bash
+   sudo tee rhel10-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1'
+   ```
+
+2. Install the `rhui-azure-rhel10-sap-ha` package by running the `dnf install` command:
+
+   ```bash
+   sudo dnf --config rhel10-sap-ha.config install rhui-azure-rhel10-sap-ha
+   ```
+
+3. Lock the `releasever` level. Currently, the version must be 10.0.
+
+   ```bash
+   sudo sh -c 'echo 10.0 > /etc/dnf/vars/releasever'
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
+
+5. Remove the temp file created on step 1.
+
+   ```bash
+   sudo rm  rhel10-sap-ha.config
+   ```
+
+###### [RHEL 10.x - RHEL-HA](#tab/rhel10-rhel-ha-eus)
+
+1. Create a config file by using this command:
+
+   ```bash
+   sudo tee rhel10-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1'
+   ```
+
+2. Install the `rhui-azure-rhel10-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+
+   ```bash
+   sudo dnf --config rhel10-ha.config install rhui-azure-rhel10-ha
+   ```
+
+3. Lock the `releasever` level. Currently, the version must be 10.0.
+
+   ```bash
+   sudo sh -c 'echo 10.0 > /etc/dnf/vars/releasever'
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist
+   ```
+
+5. Remove the temp file created on step 1.
+
+   ```bash
+   sudo rm rhel10-ha.config
    ```
 
 ---
