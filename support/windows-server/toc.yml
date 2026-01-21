@@ -109,6 +109,8 @@ items:
       href: ./active-directory/fsmo-transfer-seizure-process.md
   - name: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
     items:
+    - name: AD LDS instance logs Event ID 2092
+      href: ./active-directory/ad-lds-instance-logs-event-id-2092.md
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
       href: ./active-directory/adam-general-event-id-1161-logged-ad-lds-server.md
     - name: Change Windows Active Directory user password through LDAP
@@ -131,8 +133,6 @@ items:
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
     items:
-    - name: AD LDS instance logs Event ID 2092
-      href: ./active-directory/ad-lds-instance-logs-event-id-2092.md
     - name: ADMT 3.1 PES installation fails with error
       href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
     - name: Fail to run ADMT console after installation
