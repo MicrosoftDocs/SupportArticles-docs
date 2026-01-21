@@ -27,7 +27,7 @@ This article describes the symptoms that characterize this issue, explains the c
 When Windows restarts, you see a pop-up message that prompts you to repair a drive. You perform one of the following actions:
 
 - You select **Repair**. The device restarts, and then starts repairing the disk. The device experiences a stop error, and reports that the disk initialization failed.
-- You select **Cancel**. The device starts. If you then run the Check Disk tool (`chkdsk`), the tool reports errors, and then unmounts the drive.
+- You select **Cancel**. The device starts. Then, if you run the Check Disk tool (`chkdsk`), the tool reports errors and unmounts the drive.
 
 After either action, the system might become stuck in a cycle of repair attempts followed by blue screen errors.
 
@@ -57,7 +57,7 @@ To resolve this issue, follow these steps:
    chkdsk <X>: /F
    ```
 
-1. If `chkdsk` can't repair the drive because it's mounted, unmount the drive, and then attach it to another Windows device. Run `chkdsk` at a command prompt on the new device.
+1. If `chkdsk` can't repair the drive because the drive is mounted, unmount the drive, and then attach it to another Windows device. Run `chkdsk` at a command prompt on the new device.
 1. If the issue persists after the repairs finish, see [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md), or contact Microsoft Support.
 
 ## Data collection
@@ -66,7 +66,7 @@ Before you contact Microsoft Support, you can gather the following information a
 
 - Windows version and edition (for example, Windows 11 Pro, version 23H2)
 - Device model and hardware specifications
-- Exact error message that's displayed during the blue screen
+- Exact error message that you receive during the blue screen
 - Steps that you took before the issue occurred
 - Output from running chkdsk on the affected drive
 - Any recent changes to hardware or software, including updates and installations
