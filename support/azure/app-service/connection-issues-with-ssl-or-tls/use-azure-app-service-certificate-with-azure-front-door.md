@@ -112,7 +112,7 @@ To add the certificate:
 
 After verification is made, Front Door serves traffic securely by using the certificate from Azure Key Vault. For more information, see [Add a custom domain in Azure Front Door](/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
-## Summary
+### Summary
 
 | Task | Tool | Notes
 | --- | --- | ---

@@ -130,7 +130,7 @@ Set-AzApplicationGateway -ApplicationGateway $AppGw
 - Regularly audit access policies in Key Vault.
 - Keep secure backup copies of your exported `.pfx` files.
 
-## Summary
+### Summary
 
 | Feature | App Service | Application Gateway
 | --- | --- | ---
