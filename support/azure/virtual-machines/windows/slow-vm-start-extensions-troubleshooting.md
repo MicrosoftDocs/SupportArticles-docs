@@ -2,7 +2,8 @@
 title: Slow Azure Virtual Machine Start Operations Caused by Extensions in failed state
 description: Troubleshooting guide for slow Azure Virtual Machine Start operations that are caused by the extensions being in a failed state.
 ms.date: 09/02/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.reviewer: v-ryanberg
+ms.editor: v-gsitser
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot start or stop my VM
