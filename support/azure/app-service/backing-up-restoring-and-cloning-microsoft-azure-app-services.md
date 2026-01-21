@@ -12,7 +12,7 @@ ms.custom: sap:Configuration and Management
 
 ## Summary
 
-In this video, you will learn about different kinds of backup and restore procedures (traditional versus snapshot), the limitations of each, the requirements to complete the action (snapshot), and how to clone the app service to another ASP/ region.
+In this video, you'll learn about different kinds of backup and restore procedures (traditional versus snapshot), the limitations of each, the requirements to complete the action (snapshot), and how to clone the app service to another ASP/ region.
 
 > [!VIDEO https://www.youtube.com/embed/P2BRPuQYPSo]
 
