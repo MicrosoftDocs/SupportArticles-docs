@@ -1,6 +1,6 @@
 ---
-title: Stop Error When Windows Tries to Repair a Drive While Restarting
-description: This article describes an issue where a Windows device displays a drive repair prompt when it restarts. If you select the repair option, the system tries to repair the disk, but encounters a Stop error (also known as a blue screen error or bug check error). The error indicates that disk initialization failed. If you cancel the repair, the system starts successfully. Afterwards, other issues might appear.
+title: Stop error when Windows tries to repair a drive while restarting
+description: This article describes an issue in which a Windows device displays a drive repair prompt when it restarts, and the system experiences a stop error.
 ms.date: 01/22/2026
 manager: dcscontentpm
 audience: itpro
@@ -18,7 +18,7 @@ appliesto:
 
 ## Summary
 
-When you restart a Windows device, you might see a prompt to repair a drive. If you choose to repair the drive, the system might display a stop error (blue screen) that indicates that disk initialization failed. If you cancel the repair, Windows starts, but the device might experience drive errors.
+When you restart a Windows device, you see a prompt to repair a drive. If you choose to repair the drive, the system displays a stop error (blue screen) that indicates that disk initialization failed. If you cancel the repair, Windows starts, but the device experiences drive errors.
 
 This article describes the symptoms that characterize this issue, explains the cause, and provides step-by-step guidance to fix the issue.
 
@@ -26,21 +26,21 @@ This article describes the symptoms that characterize this issue, explains the c
 
 When Windows restarts, you see a pop-up message that prompts you to repair a drive. You perform one of the following actions:
 
-- You select **Repair**. The device restarts, and then starts repairing the disk. The device experiences a stop error and reports that the disk initialization failed.
-- You select **Cancel**. The device starts. Afterwards, if you run the Check Disk tool (`chkdsk`), the tool reports errors and then unmounts the drive.
+- You select **Repair**. The device restarts, and then starts repairing the disk. The device experiences a stop error, and reports that the disk initialization failed.
+- You select **Cancel**. The device starts. If you then run the Check Disk tool (`chkdsk`), the tool reports errors, and then unmounts the drive.
 
-The system might become stuck in a cycle of repair attempts followed by blue screen errors.
+After either action, the system might become stuck in a cycle of repair attempts followed by blue screen errors.
 
 ## Cause
 
-Typically, this issue indicates file system corruption or disk integrity problems. The corruption prevents the disk repair process from completing successfully. The failed repair process, in turn, leads to system instability and repeated blue screen errors.
+Typically, this issue indicates file system corruption or disk integrity problems. The corruption prevents the disk repair process from finishing successfully. In turn, the failed repair process causes system instability and repeated blue screen errors.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
 1. Back up all data on the affected drive.
-1. To check the health of the affected drive, open a Windows Command Prompt window on the device and then run the following command:
+1. To check the health of the affected drive, open a Windows Command Prompt window on the device, and then run the following command:
 
    ```console
    chkdsk <X>: /scan
@@ -57,7 +57,7 @@ To resolve this issue, follow these steps:
    chkdsk <X>: /F
    ```
 
-1. If `chkdsk` can't repair the drive because it's mounted, unmount the drive and then attach it to another Windows device. Run `chkdsk` from a command prompt on the new device.
+1. If `chkdsk` can't repair the drive because it's mounted, unmount the drive, and then attach it to another Windows device. Run `chkdsk` at a command prompt on the new device.
 1. If the issue persists after the repairs finish, see [Data corruption and disk errors troubleshooting guidance](troubleshoot-data-corruption-and-disk-errors.md), or contact Microsoft Support.
 
 ## Data collection
@@ -66,10 +66,10 @@ Before you contact Microsoft Support, you can gather the following information a
 
 - Windows version and edition (for example, Windows 11 Pro, version 23H2)
 - Device model and hardware specifications
-- Exact error message displayed during the blue screen
+- Exact error message that's displayed during the blue screen
 - Steps that you took before the issue occurred
 - Output from running chkdsk on the affected drive
-- Any recent changes to hardware or software, including updates or installations
+- Any recent changes to hardware or software, including updates and installations
 
 ## References
 
