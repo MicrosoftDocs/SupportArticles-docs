@@ -5,6 +5,7 @@ author: apoorvasingh130
 ms.author: singhapoorva
 ms.service: partner-services
 ms.subservice: new-relic
+ms.custom: sap:Native New Relic Service
 ms.topic: troubleshooting-problem-resolution
 ms.date: 04/24/2025
 

@@ -195,14 +195,14 @@ After Object Replication Manager detects the CIA file in objmgr.box, it processe
 ```output
 File notification triggered.    SMS_OBJECT_REPLICATION_MANAGER  
 +++Begin processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER  
-***** Processing Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} *****   SMS_OBJECT_REPLICATION_MANAGER  
+***** Processing Update Group Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee} *****   SMS_OBJECT_REPLICATION_MANAGER  
 Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777222.CIA    SMS_OBJECT_REPLICATION_MANAGER  
-CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
-PolicyID {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
+CI Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
+PolicyID {aaaabbbb-0000-cccc-1111-dddd2222eeee} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
 Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-Successfully created policy for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}    SMS_OBJECT_REPLICATION_MANAGER  
+Successfully created policy for CI Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee}    SMS_OBJECT_REPLICATION_MANAGER  
 Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-Successfully updated Policy Targeting for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}   SMS_OBJECT_REPLICATION_MANAGER  
+Successfully updated Policy Targeting for CI Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee}   SMS_OBJECT_REPLICATION_MANAGER  
 No file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777222.CIV - status 2    SMS_OBJECT_REPLICATION_MANAGER  
 Assigned CIs: [ 16777264 ]    SMS_OBJECT_REPLICATION_MANAGER  
 Begin processing Assigned CI: [16777264]    SMS_OBJECT_REPLICATION_MANAGER  
@@ -212,10 +212,10 @@ Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthLis
 VersionInfo policy for CI 16777264 is Machine type    SMS_OBJECT_REPLICATION_MANAGER  
 PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A/VI PolicyVersion 1.00 PolicyHash SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5FDD5B2FC76     SMS_OBJECT_REPLICATION_MANAGER  
 Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-Updated dependent policy references to CIA {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
-STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}"    SMS_OBJECT_REPLICATION_MANAGER  
-Successfully updated CRCs for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}      SMS_OBJECT_REPLICATION_MANAGER  
-Successfully processed Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
+Updated dependent policy references to CIA {aaaabbbb-0000-cccc-1111-dddd2222eeee}     SMS_OBJECT_REPLICATION_MANAGER  
+STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{aaaabbbb-0000-cccc-1111-dddd2222eeee}"    SMS_OBJECT_REPLICATION_MANAGER  
+Successfully updated CRCs for CI Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee}      SMS_OBJECT_REPLICATION_MANAGER  
+Successfully processed Update Group Assignment {aaaabbbb-0000-cccc-1111-dddd2222eeee}     SMS_OBJECT_REPLICATION_MANAGER  
 Set last row version for CI Assignment to 0x0000000000296628             SMS_OBJECT_REPLICATION_MANAGER
 ```
 
@@ -259,10 +259,10 @@ insert into CI_AssignmentTargetedGroups (CI_ID, AssignmentID) values (16777264, 
 insert into CI_ContentPackages (Content_ID, ContentSubFolder, ContentVersion, Content_UniqueID, MinPackageVersion,PkgID) VALUES ('471', N'd09e9a92-20e7-455a-a51b-aaeca7b7d7e1', '1', N'd09e9a92-20e7-455a-a51b-aaeca7b7d7e1', '0', N'PS100001')
 
 insert Policy(Version, PolicyHash, PolicyFlags, PolicyPriority, DeviceVersion, PolicyID)
-values(N'1.00', N'SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC', 16592, 25, N'''', N'{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}')
+values(N'1.00', N'SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC', 16592, 25, N'''', N'{aaaabbbb-0000-cccc-1111-dddd2222eeee}')
 
 insert PolicyAssignment(PolicyAssignmentID, PADBID, Version, PolicyID, IsTombstoned, LastUpdateTime)
-values(N'{8d9ba949-d038-4c09-a0cc-af3f07c39d71}', 16786995, N'1.00', N'{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}', 0,
+values(N'{8d9ba949-d038-4c09-a0cc-af3f07c39d71}', 16786995, N'1.00', N'{aaaabbbb-0000-cccc-1111-dddd2222eeee}', 0,
 GetUTCDate())
 
 DECLARE @AssignedCIs TABLE(CI_ID INT)  
@@ -270,13 +270,13 @@ BEGIN
 INSERT INTO @AssignedCIs  
 SELECT DISTINCT ATG.CI_ID FROM CI_AssignmentTargetedGroups ATG  
 INNER JOIN vCI_CIAssignments CIA ON CIA.AssignmentID = ATG.AssignmentID  
-WHERE CIA.Assignment_UniqueID = '{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}'  
+WHERE CIA.Assignment_UniqueID = '{aaaabbbb-0000-cccc-1111-dddd2222eeee}'  
 IF @@ROWCOUNT = 0  
 BEGIN  
 INSERT INTO @AssignedCIs  
 SELECT DISTINCT ATCI.CI_ID FROM vCI_AssignmentTargetedCIs_Actual ATCI  
 INNER JOIN vCI_CIAssignments CIA ON CIA.AssignmentID = ATCI.AssignmentID  
-WHERE CIA.Assignment_UniqueID = '{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}'  
+WHERE CIA.Assignment_UniqueID = '{aaaabbbb-0000-cccc-1111-dddd2222eeee}'  
 END  
 END  
 SELECT DISTINCT CI_ID FROM @AssignedCIs
@@ -592,11 +592,11 @@ After the deployment and the deployment policy have been created on the server, 
 
     ```output
     Bundle update (3cbcf577-5139-49b8-afe8-620af5c52f95) is requesting download from child updates for action (INSTALL) UpdatesHandler  
-    Content Text = <Content ContentId="fbb5724a-aa0f-47f9-908a-47068fd8ad6f" Version="1"><FileContent Name="windows6.1-kb2705219-v2-x64.cab" Hash="8E8E0175D46B5A8D52C4856FA3D282FAA12ACD63" HashAlgorithm="SHA1" Size="199093"/></Content>  
+    Content Text = <Content ContentId="fbb5724a-aa0f-47f9-908a-47068fd8ad6f" Version="1"><FileContent Name="windows6.1-kb2705219-v2-x64.cab" Hash="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00" HashAlgorithm="SHA1" Size="199093"/></Content>  
     Bundle update (ada7cf51-66b0-4a00-b37b-68d569d6ff8b) is requesting download from child updates for action (INSTALL) UpdatesHandler  
-    Content Text = <Content ContentId="3e9b1132-9ccd-439d-b32a-5cefd19735d1" Version="1"><FileContent Name="windows6.1-kb2712808-x64.cab" Hash="060B60401B3DE3DCE053A68C65E9EB050874EB80" HashAlgorithm="SHA1" Size="805071"/></Content>  
+    Content Text = <Content ContentId="3e9b1132-9ccd-439d-b32a-5cefd19735d1" Version="1"><FileContent Name="windows6.1-kb2712808-x64.cab" Hash="BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11" HashAlgorithm="SHA1" Size="805071"/></Content>  
     Bundle update (e06056e3-0199-4c68-8ac3-bdddff356a0a) is requesting download from child updates for action (INSTALL) UpdatesHandler  
-    Content Text = <Content ContentId="d2a9ee23-9cab-4843-b040-e2da1cc167e9" Version="1"><FileContent Name="windows6.1-kb2698365-x64.cab" Hash="BF20BB36FC73C0D1F53EA1E635B8AA46C71D7B1F" HashAlgorithm="SHA1" Size="2496330"/></Content>
+    Content Text = <Content ContentId="d2a9ee23-9cab-4843-b040-e2da1cc167e9" Version="1"><FileContent Name="windows6.1-kb2698365-x64.cab" Hash="CC33DD44EE55FF66AA77BB88CC99DD00EE11FF22" HashAlgorithm="SHA1" Size="2496330"/></Content>
     ```
 
     Content Access service starts a download job for each update and creates a Content Transfer Manager (CTM) job. A CTM job is created for each update separately, and CAS.log entries resemble the following for each update:
@@ -694,7 +694,7 @@ After the deployment and the deployment policy have been created on the server, 
 
     ```output
     Download completed for content fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1 under context System   ContentAccess  
-    The hash we are verifying is SDMPackage:<Content ContentId="fbb5724a-aa0f-47f9-908a-47068fd8ad6f" Version="1"><FileContent Name="windows6.1-kb2705219-v2-x64.cab" Hash="8E8E0175D46B5A8D52C4856FA3D282FAA12ACD63" HashAlgorithm="SHA1" Size="199093"/></Content>  ContentAccess  
+    The hash we are verifying is SDMPackage:<Content ContentId="fbb5724a-aa0f-47f9-908a-47068fd8ad6f" Version="1"><FileContent Name="windows6.1-kb2705219-v2-x64.cab" Hash="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00" HashAlgorithm="SHA1" Size="199093"/></Content>  ContentAccess  
     CContentAccessService::NotifyDownloadComplete Start Content Hashing   ContentAccess  
     Hashing file c:\windows\ccmcache\1\windows6.1-kb2705219-v2-x64.cab   ContentAccess  
     Hash matches ContentAccess 2/9/2014 7:15:12 PM 3532 (0x0DCC)  

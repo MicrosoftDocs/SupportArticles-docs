@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2025 (KB5074901)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5074901).
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074901
 ms.reviewer: v-shaywood
@@ -17,12 +17,19 @@ _Version:_ &nbsp; 17.0.4005.7
 
 ## Summary
 
+> [!IMPORTANT]  
+> This update is temporarily unavailable for download because of a [known issue related to Database Mail](#database-mail-stops-working-after-updating).
+
 This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2025. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 ## Known issues in this update
+
+### Database Mail stops working after updating
+
+[!INCLUDE [database-mail-stops](../includes/database-mail-stops.md)]
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 

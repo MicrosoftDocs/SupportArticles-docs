@@ -14158,6 +14158,10 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/stl-priority-queue-class-custom-type.md",
       "redirect_url": "/cpp/standard-library/priority-queue-class#use-a-user-defined-data-type-with-the-priority_queue"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-setfind-stl-function.md",
+      "redirect_url": "/cpp/standard-library/set-class#example-of-setfind"
     }
   ]
 }

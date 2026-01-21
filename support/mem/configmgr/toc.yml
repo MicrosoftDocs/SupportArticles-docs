@@ -72,7 +72,6 @@ items:
   items:
     - name: Console appears to hang when loading drivers
       href: console-management/console-stops-responding.md
-
     - name: Issues after installing June 2022 Windows security updates
       href: console-management/dcom-hardening-change-effect.md
     - name: No data in the Windows 10 servicing dashboard
@@ -135,6 +134,8 @@ items:
       href: diagnostics/failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
+    - name: Delta AD Group Discovery doesn't detect group membership changes in nested OUs
+      href: discovery/ad-group-not-discovered.md
     - name: lastLogonTimestamp isn't updated as expected
       href: discovery/lastlogontimestamp-not-accurate.md
     - name: Resource domain is changed after installing Windows updates

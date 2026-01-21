@@ -5,7 +5,7 @@ ms.date: 03/13/2024
 author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
-ms.reviewer: cssakscic, tysonfms, v-rekhanain, v-weizhu, v-leedennis
+ms.reviewer: cssakscic, tysonfms, v-rekhanain, v-weizhu, v-leedennis, kennethgp
 ms.service: azure-container-instances
 ms.topic: best-practice
 ms.custom: sap:Management
@@ -37,6 +37,9 @@ This article lists the debugging tools that you can use on Microsoft Azure Conta
   | Troubleshooting application errors | Identifying and diagnosing application errors or crashes that occur within the container (if application logging is configured) | Analyzing container logs to pinpoint the source of a "500 Internal Server Error" event that's reported by the application. |
   | Troubleshooting container events | Detecting container creation failures | Analyzing an event that displays the details of a container not starting because of an image pull failure. |
 
+  > [!NOTE]
+  > Some log entries may be missing if the container is restarted or recreated as soon as container process exits.
+
 - [Application Insights](/azure/azure-monitor/app/api-custom-events-metrics)
 
 - [The "ping -t" or "tail -f /dev/null" command](/azure/container-instances/container-instances-troubleshooting#container-continually-exits-and-restarts-no-long-running-process) during container creation (if the container continually exists and restarts)
@@ -49,5 +52,3 @@ This article lists the debugging tools that you can use on Microsoft Azure Conta
   | Troubleshooting performance | Running performance commands to diagnose issues | Running the `free` command in the container to identify memory bottlenecks that cause application slowdowns. |
 
 - [Container group updating](/azure/container-instances/container-instances-update)
-
- 
