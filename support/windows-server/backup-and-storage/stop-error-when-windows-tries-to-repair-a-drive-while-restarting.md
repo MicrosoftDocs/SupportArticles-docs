@@ -33,7 +33,7 @@ The system might become stuck in a cycle of repair attempts followed by blue scr
 
 ## Cause
 
-This issue is typically caused by file system corruption or disk integrity problems. The corruption prevents the disk repair process from completing successfully, leading to system instability and repeated blue screen errors.
+Typically, this issue indicates file system corruption or disk integrity problems. The corruption prevents the disk repair process from completing successfully. The failed repair process, in turn, leads to system instability and repeated blue screen errors.
 
 ## Resolution
 
