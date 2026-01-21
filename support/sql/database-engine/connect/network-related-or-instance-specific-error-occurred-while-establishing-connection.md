@@ -1,6 +1,6 @@
 ---
-title: A network-related or instance-specific error occurred
-description: Provides troubleshooting steps for network-related or instance-specific errors if you can't connect to an instance of the SQL Server Database Engine on a single server.
+title: Fix network-related or instance-specific errors in SQL Server
+description: Troubleshoot and resolve network-related or instance-specific errors when connecting to SQL Server. Follow step-by-step guidance to fix common configuration issues.
 ms.date: 01/10/2025
 ms.custom: sap:Database Connectivity and Authentication
 author: aartig13
@@ -11,11 +11,13 @@ ms.reviewer: jopilov
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more [error messages](#common-sql-server-connection-error-messages). This article explains how to [collect the necessary information](#gather-information-to-troubleshoot-sql-server-connection-errors) to diagnose these issues and outlines a structured troubleshooting approach to help you resolve these issues, starting with basic checks and moving on to more advanced techniques.
+## Summary
+
+This article helps you troubleshoot network-related or instance-specific errors that occur when you connect to a SQL Server instance. These errors typically appear when the SQL Server instance isn't running, the server or instance name is incorrect, network protocols aren't configured correctly, or firewalls block required ports. This guide explains how to gather diagnostic information and outlines a structured troubleshooting approach, starting with basic checks and moving on to more advanced techniques.
 
 ## Common SQL Server connection error messages
 
-The complete error messages vary depending on the client library that's used in the application and the server environment. You can check the following details to see if you're encountering one of the following error messages:
+The complete error messages vary depending on the client library that's used in the application and the server environment. Expand each message below to see if you're encountering one of the following error messages:
 
 ### "A network-related or instance-specific error occurred while establishing a connection to SQL Server. Verify that the instance name is correct and that SQL Server is configured to allow remote connections"
 
@@ -101,11 +103,11 @@ This message means that SQL Server isn't listening on the Shared Memory or Named
 
 We recommend that you gather the information listed in this section using one of the following options before proceeding with the actual steps to troubleshoot the error.
 
-### Option 1: Use the SQL Check tool to gather the required information
+### Use the SQL Check tool to gather the required information
 
 If you can sign in locally to the SQL Server computer and have administrator access, use [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and the information it gathers.  You can also check the recommended [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and checklist page.
 
-### Option 2: Collect the data individually using the following procedures
+### Collect the data individually using the following procedures
 
 #### Get the instance name from Configuration Manager
 
@@ -148,13 +150,15 @@ In most cases, you connect to the Database Engine on another computer by using t
 
 ## Step 1：Verify that the instance is running
 
-### Option 1: Use the SQLCHECK output file
+Use one of the following methods to verify that the instance is running.
+
+### Use the SQLCHECK output file
 
 1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", find your SQL Server instance under **Name** and **Instance** (for named instances) columns and check its status by using **Started** column. If the value is **True**, the services are started. Otherwise the service is currently not running.  
 1. If the service isn't running, [start the service](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services) by using either SQL Server management studio, SQL Server Configuration manager, [PowerShell](/powershell/module/sqlserver/start-sqlinstance), or Services applet.
 
-### Option 2: Use SQL Server Configuration Manager
+### Use SQL Server Configuration Manager
 
 To verify that the instance is running, select **SQL Server Services** in **SQL Server Configuration Manager** and check the symbol by the SQL Server instance.
 
@@ -163,7 +167,7 @@ To verify that the instance is running, select **SQL Server Services** in **SQL 
 
 If the instance is stopped, right-click the instance and select **Start**. Then, the server instance starts, and the indicator becomes a green arrow.
 
-### Option 3: Use PowerShell commands
+### Use PowerShell commands
 
 You can use the following command in PowerShell to check the status of SQL Server services on the system:
 
@@ -179,15 +183,16 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 ## Step 2: Verify that the SQL Server Browser service is running
 
+Use one of the following methods to verify that the SQL Server browser service is runnning.
 > [!NOTE]
 > This step is required only for troubleshooting connectivity issues with named instances.
 
-### Option 1: Use the SQLCHECK output file
+### Use the SQLCHECK output file
 
 1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
 
-### Option 2: Use SQL Server Configuration Manager
+### Use SQL Server Configuration Manager
 
 To connect to a named instance, the SQL Server Browser service must be running. In **SQL Server Configuration Manager**, locate the **SQL Server Browser** service and verify that it's running. If it's not running, start the service. The SQL Server Browser service isn't required for default instances.
 
@@ -215,7 +220,7 @@ Aliases are often used in client environments when you connect to SQL Server wit
 > [!NOTE]
 > The following options only apply to the applications that use [SQL Server Native Client](/sql/relational-databases/native-client/SQL-server-native-client) to connect to SQL Server.
 
-### Option 1: Use the SQLCHECK output file
+### Use the SQLCHECK output file
 
 1. In the SQLCHECK output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
 1. Review the entries in the table. If there's none present, there are no aliases on the computer. If there's an entry, review the information to ensure the server name and port number are set to the correct values.
@@ -233,7 +238,7 @@ prodsql      TCP        prod_sqlserver  1430
 
 The output indicates that `prodsql` is an alias for a SQL Server called `prod_sqlserver` that's running on port 1430.
 
-### Option 2: Check aliases in SQL Server Configuration Manager
+### Check aliases in SQL Server Configuration Manager
 
 1. In [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager), expand **SQL Server Native Client Configuration**, and select **Aliases**.
 1. Check whether any aliases are defined for the server that you're trying to connect to.
@@ -249,10 +254,10 @@ The output indicates that `prodsql` is an alias for a SQL Server called `prod_sq
         - When connecting to a default instance named *Mydefaultinstance*, the pipe name should be *\\\\Mydefaultinstance\pipe\sql\query*.
         - When connecting to a named instance *MySQL\Named*, the pipe name should be *\\\\MySQL\pipe\MSSQL$Named\sql\query*.
 
-### Option 3: Check aliases in SQL Server Client Network Utility
+### Check aliases in SQL Server Client Network Utility
 
 1. Open [SQL Server Client Network Utility](/previous-versions/windows/desktop/odbc/dn170535(v%3dvs.85)) by typing *cliconfg.exe* in your Run command.
-1. Follow step 2 in [Option 2: Check aliases in SQL Server Configuration Manager](#option-2-check-aliases-in-sql-server-configuration-manager).
+1. Follow step 2 in [Check aliases in SQL Server Configuration Manager](#check-aliases-in-sql-server-configuration-manager).
 
 ## Step 5: Verify the firewall configuration
 
@@ -294,9 +299,9 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 ## Step 6: Verify the enabled protocols on SQL Server
 
-In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
+In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. Use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
 
-### Option 1: Use the SQLCHECK output file
+### Use the SQLCHECK output file
 
 1. Search the SQLCHECK output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
 1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
@@ -312,7 +317,7 @@ In some installations of SQL Server, connections to the Database Engine from ano
     > [!NOTE]
     > After enabling a protocol, the Database Engine must be stopped and restarted for the change to take effect.
 
-### Option 2: Use SQL Server Configuration Manager
+### Use SQL Server Configuration Manager
 
 To enable connections from another computer by using the SQL Server Configuration Manager, follow these steps:
 
@@ -359,7 +364,7 @@ If you can't install Management Studio, you can test the connection by using the
 
     > [!NOTE]
     > You can't troubleshoot the problem without enough information because some error messages are passed to the client intentionally. This is a security feature to avoid providing an attacker with information about SQL Server. To view the details about the error, see the SQL Server error log.
-1. If you receive **error 18456 Login failed for user**, Books Online article [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error) contains additional information about error codes. Aaron Bertrand's blog also has an extensive list of error codes at [Troubleshooting Error 18456](https://sqlblog.org/2020/07/28/troubleshooting-error-18456) (external link). You can view the error log by using SSMS (if you can connect), in the **Management** section of the **Object Explorer**. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for SQL Server 2019 (15.x) is *C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG*.
+1. If you receive **error 18456 Login failed for user**, the article [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error) contains additional information about error codes. Aaron Bertrand's blog also has an extensive list of error codes at [Troubleshooting Error 18456](https://sqlblog.org/2020/07/28/troubleshooting-error-18456) (external link). You can view the error log by using SSMS (if you can connect), in the **Management** section of the **Object Explorer**. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for SQL Server 2019 (15.x) is *C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG*.
 1. If you can connect by using shared memory, test connecting by using TCP. You can force a TCP connection by specifying `tcp:` before the name. Here are the examples:
 
    |Connecting to:|Type:|Example:|
