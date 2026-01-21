@@ -36,7 +36,7 @@ After they receive this message, users should select **OK** to dismiss the messa
 
 This message window might appear for multiple reasons. However, when this issue occurs, Event 67 is recorded in Event Viewer.
 
-To access Event 67, use the following steps.
+To access Event 67, use the following steps:
 
 1. On the affected user's computer, select the **Start** menu or press the Windows logo key on the keyboard.
 1. Type **Event Viewer**, and then select it in the search results.
