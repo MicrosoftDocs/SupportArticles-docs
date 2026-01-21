@@ -1,23 +1,24 @@
 ---
-title: Transfer logins and passwords between instances
-description: This article describes how to transfer the logins and the passwords between different instances of SQL Server running on Windows.
+title: Transfer SQL Server Logins and Passwords Between Instances
+description: Learn how to transfer logins and passwords between SQL Server instances to maintain user access and security during migrations or restores.
 ms.date: 01/17/2025
 ms.custom: sap:Security, Encryption, Auditing, Authorization
-ms.reviewer: jopilov
-ms.author: bartd
+ms.reviewer: jopilov, bartd, v-shaywood
 ms.topic: how-to
 ---
 
 # Transfer logins and passwords between instances of SQL Server
 
-This article describes how to transfer the logins and passwords between different instances of Microsoft SQL Server running on Windows. The instances might be on the same server or different servers, and their versions might differ.
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 918992, 246133
 
+## Summary
+
+This article describes how to transfer the logins and passwords between different instances of Microsoft SQL Server running on Windows. Use these procedures when you migrate databases between servers or need to maintain consistent user access across SQL Server instances. The instances might be on the same server or different servers, and their versions might differ.
+
 ## Why transfer logins between SQL Server instances?
 
-In this article, server A and server B are servers.
+When you move a database to a new server (like in a migration or restore), the database users are moved, but their corresponding server-level logins might not exist on the new instance, creating orphaned users. Transferring login and passwords is crucial for maintaining security and access continuity.
 
 After you move a database from a SQL Server instance on server A to a SQL Server instance on server B, users might be unable to log in to the database server on server B. Additionally, users might receive the following error message:
 
@@ -25,15 +26,15 @@ After you move a database from a SQL Server instance on server A to a SQL Server
 
 This problem occurs because the logins from the SQL Server instance on server A don't exist in the SQL Server instance on server B.
 
-Keep in mind that error 18456 occurs for many other reasons. For more information on these causes and their resolutions, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Error 18456 can also occur for several other reasons. For more information on the various causes and their resolutions, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ## Steps to transfer logins between SQL Server instances
 
 To transfer the logins, use one of the following methods, as appropriate for your situation.
 
-### Method 1: Generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server
+### Method: Generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server
 
-You can generate login scripts in SQL Server Management Studio (SSMS) by using the [Generate Scripts option for a database](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option). 
+You can generate login scripts in SQL Server Management Studio (SSMS) by using the [Generate Scripts option for a database](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option).
 
 To generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server, follow these steps:
 
@@ -51,12 +52,12 @@ To generate scripts via SSMS on the source server and manually reset passwords f
    `/* For security reasons the login is created disabled and with a random password. */`
 
    > [!NOTE]
-   > This indicates that the SQL Server Authentication logins are generated with a random password and are disabled by default. You need to reset the password and re-enable these logins on the destination server.
+   > This comment indicates that the SQL Server Authentication logins are generated with a random password and are disabled by default. You need to reset the password and re-enable these logins on the destination server.
 
 1. Apply the login script from the larger generated script to the destination SQL Server.
 1. For any SQL Server Authentication logins, reset the password on the destination SQL Server and re-enable those logins.
 
-### Method 2: Transfer logins and passwords to the destination server (Server B) using scripts generated on the source server (Server A)
+### Method: Transfer logins and passwords to the destination server (Server B) by using scripts generated on the source server (Server A)
 
 1. Create stored procedures that will help generate necessary scripts to transfer logins and their passwords. To do so, connect to Server A using SQL Server Management Studio (SSMS) or any other client tool and run the following script:
 
@@ -275,7 +276,7 @@ To generate scripts via SSMS on the source server and manually reset passwords f
     > [!NOTE]
     > This script creates two stored procedures in the master database. The procedures are named **sp_hexadecimal** and **sp_help_revlogin**.
 
-1. In the SSMS query editor, select the **[Results to Text](/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)** option.
+1. In the SSMS query editor, select the [Results to Text](/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio) option.
 
 1. Run the following statement in the same or a new query window:
 
