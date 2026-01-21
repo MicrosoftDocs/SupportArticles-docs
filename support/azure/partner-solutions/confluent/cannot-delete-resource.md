@@ -4,8 +4,7 @@ description: Resolve problems with deleting a Confluent Cloud resource in Azure,
 author:  praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom:
-  - sap:Confluent on Azure
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/24/2025

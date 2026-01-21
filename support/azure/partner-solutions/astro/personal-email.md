@@ -6,8 +6,7 @@ ms.author: jarrettr
 ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
-ms.custom:
-  - sap:Apache Airflow on Astro - an Azure Native ISV Service
+ms.custom: sap:Apache Airflow on Astro - an Azure Native ISV Service
 ms.date: 09/04/2025
 ai-usage: ai-assisted
 
