@@ -9,7 +9,7 @@ ms.custom: sap:Mobile application\Offline data sync - Other
 ---
 # Troubleshoot issues with publishing a mobile offline profile
 
-This article helps you solve issues with publishing a [mobile offline profile](/dynamics365/field-service/mobile-power-app-system-offline) in the Microsoft Dynamics 365 Field Service mobile app.
+This article helps you solve issues with publishing a [mobile offline profile](/dynamics365/field-service/mobile/set-up-offline-profile) in the Microsoft Dynamics 365 Field Service mobile app.
 
 ## Symptoms
 
