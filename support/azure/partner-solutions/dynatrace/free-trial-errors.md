@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 manager: dcscontentpm
 ms.service: partner-services 
+ms.custom: sap:Dynatrace on Azure
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/23/2025
 ai-usage: ai-assisted
@@ -40,6 +41,6 @@ Be aware that free trial resources are deleted automatically after the trial per
 - [Dynatrace free trial documentation](https://www.dynatrace.com/trial/resources/)
 - [Contact Dynatrace sales](mailto:sales@dynatrace.com)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

@@ -19,4 +19,4 @@ To improve security, we recommend that you don't run as a root user inside conta
 
 By default, the `securityContext` field is `empty ({})`. To implement these fields in the YAML file, see [Configure a security context for a pod or container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/). After you add these configurations, redeploy the pods to enforce the updates. If the `securityContext` field is omitted, the pod runs as root.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

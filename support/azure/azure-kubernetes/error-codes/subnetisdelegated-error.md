@@ -68,4 +68,4 @@ To resolve this issue, follow these steps:
 
 - [az aks node pool examples](/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add-examples&preserve-view=true)
 
-[!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
+  

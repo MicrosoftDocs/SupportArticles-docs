@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 12/01/2025
+ms.date: 01/07/2026
 ---
 # Known issues with Teams on Android devices
 
@@ -33,10 +33,9 @@ ms.date: 12/01/2025
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Touch console not able to pair with Teams Rooms device.|The touch console that is paired with a Teams Rooms for Android device is unable to stay paired with the Front of Room device, and keeps retrying the pairing process in a loop. Occasionally, you might see the following error message:<br/><br/>**Can't connect to device**|To fix the issue, make sure that the Teams Room for Android device has the latest updates installed, and both the device and the touch console are running the same version of the Teams Rooms for Android app.|
 |Unable to join E2EE meeting using Teams Rooms on Android device.|You're not able use a Teams Rooms on Android device that is paired with a console to join a Teams meeting that is set up with end-to-end encryption (E2EE).|No workaround is available at this time.|
-|Custom background is removed after updating to new version of Teams Rooms app.|After you update to the 1449/1.0.96.2025208203 version of the Teams Rooms on Android app, the custom background is replaced by a purple gradient.|No workaround is available at this time.|
-|Mute/unmute controls don't work.|On Cisco's Teams Rooms on Android devices, the Mute and Unmute functionality doesn't work reliably during a Teams meeting. This issue occurs after you install the 1449/1.0.96.2025328903 version of the Teams Rooms on Android app.|Leave the meeting and rejoin to restore the Mute and Unmute functionality.|
+|Mute/unmute controls don't work.|On Cisco's Teams Rooms on Android devices, the Mute and Unmute functionality doesn't work reliably during a Teams meeting. This issue occurs after you install the 1449/1.0.96.2025328903 version of the Teams Rooms on Android app.|Upgrade to the 1449/1.0.96.2025341701 version of the Teams Rooms app to resolve the issue.|
+|Unable to download software updates on Teams Rooms on Android devices.| Your device is running one of the following versions of the Teams Rooms on Android app and you're unable to install software updates on the device:<br/><ul><li>1449/1.0.96.2025328903</li><li>1449/1.0.96.2025325609</li></ul><br/>This issue occurs because the available space on the device is not enough to download software updates to install.|Use the Microsoft Teams admin center to sign out of the device and then sign in again. This action will clear enough space on the device to download software updates.|
 
 ## Issues affecting multiple devices
 
@@ -50,11 +49,6 @@ ms.date: 12/01/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Sign in loops or fails for Teams Phones.|You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. |The combination of MFA CA and ToU CA isn't supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the Mobile Device Management (MDM) CA is used. When only the MFA CA is used, make sure that it's enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions).|
-|Can't add, delete, or edit contacts on Teams Phones.|You can't perform the add, delete, and edit operations on contacts from Teams phones.|Use either the Teams desktop or the Teams web client to perform these actions.|
-|Can't resume a call after using **Consult first** option on Teams Phones.| After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails.| End the call made by using the **Consult first** option and then resume the original call.|
-|Speed dial line key doesn't transfer an active call.|In older Teams Phones versions, you could transfer an active call by selecting a line key that is configured as a speed dial for a specific contact.<br/><br/>Beginning with Teams Phones version 1.7.0 1449/1.0.94.2025165302, you're only able to make an outgoing call to the speed dial after you select it from the **Transfer** menu.|If you want to transfer active calls to specific contacts, configure line keys as speed dials for those contacts and assign the **Transfer** and **Consult Transfer** menu options to the appropriate line keys.|
-|The screen hangs on Yealink phones when the headset is picked up.|On Yealink MP56 phones that are running version 1449/1.0.94.2025248901 of the Teams for Android app, the screen hangs or crashes when you pick up the headset to make an outbound call.|No workaround is available at this time.|
-|Can't see line keys on the home screen.|After you update your Teams Phones to version 1449/1.0.94.2025264001 of the Teams for Android app, you don't see any assigned line keys on the home screen.<br/><br/>This behavior is seen on non-touch phones such as Poly CCX 350 that have either the CAP or Premium CAP licenses.|No workaround is available at this time.|
 |Incoming calls generate a "Just me" chat automatically.|When you receive a call from a main call queue on a Teams Phone, a "Just Me" chat is generated automatically in the Teams desktop app. This chat only includes you and it remains in the chat notifications list until you delete it manually. A new chat is generated with each incoming call.<br/><br/>The problem occurs specifically when answering calls from a call queue on a Teams Phone device, but not when they're answered by using the Teams desktop app.|To work around the issue, turn on Conference mode for the call queue. Use the following steps:<br/><ol><li>In the Microsoft Teams admin center, select **Call queues**.</li><li>Select **Edit a call queue** > **Call answering**.</li><li>On the Call answering page, toggle the **Conference mode** button to turn it on.</li></ol>|
 
 ## Limitations

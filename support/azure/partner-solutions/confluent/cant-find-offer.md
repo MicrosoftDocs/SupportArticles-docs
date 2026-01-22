@@ -4,7 +4,7 @@ description: Resolve problems with finding the Apache Kafka & Apache Flink on Co
 author:  praveenrajap
 ms.author: jarrettr 
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/23/2025
@@ -38,6 +38,6 @@ If you don't see the offer, contact [Confluent support](https://support.confluen
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

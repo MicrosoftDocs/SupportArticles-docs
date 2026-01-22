@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-general
-ms.custom: New Relic troubleshooting
+ms.custom: sap:Native New Relic Service
 ms.date: 09/19/2025
 ai-usage: ai-assisted
 
@@ -54,6 +54,6 @@ If your Azure subscription and resource are working correctly but the New Relic 
 - [Add, update, or delete a payment method](/azure/cost-management-billing/manage/change-credit-card)
 - [New Relic support](https://support.newrelic.com/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

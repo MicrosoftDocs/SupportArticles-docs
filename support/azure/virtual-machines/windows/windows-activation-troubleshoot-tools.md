@@ -79,6 +79,6 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 - [Additional troubleshooting guidance](/azure/virtual-machines/windows/troubleshoot-activation-problems)
 - [Virtual Machines licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/?msockid=16f3be2d0f1066e62759a8150e8867c4).
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

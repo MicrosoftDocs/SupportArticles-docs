@@ -231,4 +231,4 @@ Application Insights uses `org.apache.http`. This namespace is relocated within 
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

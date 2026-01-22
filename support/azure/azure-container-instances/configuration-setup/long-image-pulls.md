@@ -1,18 +1,18 @@
 ---
-title: Image pull takes a long time to run
+title: Image pull takes a long time to complete
 description: Learn about troubleshooting steps that you can take if an image pull takes a long time to run on Azure Container Instances.
 ms.date: 04/14/2025
 ms.service: azure-container-instances
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: edneto, v-leedennis
+ms.reviewer: edneto, v-leedennis, kennethgp
 ms.custom: sap:Configuration and Setup
-#Customer intent: As a user of Azure Container Instances, I want to learn why an image pull takes a long time to run so that I can create and use container groups successfully.
+#Customer intent: As a user of Azure Container Instances, I want to learn why an image pull takes a long time to complete so that I can create and use container groups successfully.
 ---
-# Image pull takes a long time to run
+# Image pull takes a long time to complete
 
-This article discusses what you can do if an image pull takes a long time to run on Microsoft Azure Container Instances.
+This article discusses possible causes for an image pull taking long time to complete on Microsoft Azure Container Instances.
 
 ## Prerequisites
 
@@ -20,9 +20,8 @@ This article discusses what you can do if an image pull takes a long time to run
 
 ## Symptoms
 
-- Container groups are stuck in a "Created" status for a significant amount of time.
-
-- The image size that's used for the container group is large.
+- Container groups are stuck in a **Creating** status for a significant amount of time.
+- The image size is large.
 
 ## Cause
 
@@ -32,13 +31,13 @@ If you need faster pull times, you might want to check whether one of the [liste
 
 ## Solution
 
-Run the following [az container show](/cli/azure/container#az-container-show) command so that you can view the timeline of the container events:
+To view the timeline of the container events, run the following [az container show](/cli/azure/container#az-container-show) command:
 
 ```azurecli
 az container show --resource-group <resource-group-name> --name <container-group-name>
 ```
 
-In this example, the `Pulling` image event begins at 16:30:51, and the successful `Pulled` event is recorded on the same day at 16:48:43. Therefore, the image pull takes almost 18 minutes to finish. You can use this information to determine whether the image pull time is expected or abnormal.
+The time span between the `Pulling` and `Pulled` events allows you to determine whether the image pull time is expected or abnormal. The following is a sample command output:
 
 ```json
 {
@@ -46,7 +45,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
     {
       "command": null,
       "environmentVariables": [],
-      "image": "pbdockerregistry-on.azurecr.io/software:166884UK",
+      "image": "pbdockerregistry-on.azurecr.io/<image-name>:<tag>",
       "instanceView": {
         "currentState": {
           "detailStatus": "",
@@ -60,7 +59,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
             "count": 1,
             "firstTimestamp": "2019-01-22T16:30:51+00:00",
             "lastTimestamp": "2019-01-22T16:30:51+00:00",
-            "message": "pulling image \"pbdockerregistry-on.azurecr.io/software:166884UK\"",
+            "message": "pulling image \"pbdockerregistry-on.azurecr.io/<image-name>:<tag>\"",
             "name": "Pulling",
             "type": "Normal"
           },
@@ -68,7 +67,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
             "count": 1,
             "firstTimestamp": "2019-01-22T16:48:43+00:00",
             "lastTimestamp": "2019-01-22T16:48:43+00:00",
-            "message": "Successfully pulled image \"pbdockerregistry-on.azurecr.io/software:166884UK\"",
+            "message": "Successfully pulled image \"pbdockerregistry-on.azurecr.io/<image-name>:<tag>\"",
             "name": "Pulled",
             "type": "Normal"
           },
@@ -76,7 +75,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
             "count": 1,
             "firstTimestamp": "2019-01-22T16:48:43+00:00",
             "lastTimestamp": "2019-01-22T16:48:43+00:00",
-            "message": "Created container with docker id 2dfc27ee4e6",
+            "message": "Created container with docker id <id>",
             "name": "Created",
             "type": "Normal"
           },
@@ -84,7 +83,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
             "count": 1,
             "firstTimestamp": "2019-01-22T16:49:11+00:00",
             "lastTimestamp": "2019-01-22T16:49:11+00:00",
-            "message": "Started container with docker id 2edfc27ee4e6",
+            "message": "Started container with docker id <id>",
             "name": "Started",
             "type": "Normal"
           }
@@ -127,8 +126,8 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
   },
   "ipAddress": {
     "dnsNameLabel": "<container-name>",
-    "fqdn": "<container-name>.westeurope.azurecontainer.io",
-    "ip": "40.119.152.151",
+    "fqdn": "<container-name>.<region>.azurecontainer.io",
+    "ip": "<IP>",
     "ports": [
       {
         "port": 443,
@@ -137,7 +136,7 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
     ],
     "type": "Public"
   },
-  "location": "westeurope",
+  "location": "<region>",
   "name": "<container-name>",
   "networkProfile": null,
   "osType": "Windows",
@@ -150,8 +149,6 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
 }
 ```
 
-## More information
+## Resources
 
 - [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

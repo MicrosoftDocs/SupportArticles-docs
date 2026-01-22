@@ -16,6 +16,8 @@ ms.custom: sap:Networking
 ---
 # Troubleshoot HTTP 502 and 503 errors in Azure App Service
 
+## Summary
+
 HTTP "502 Bad Gateway" and "503 Service Unavailable" are common errors that you can get when you open an app that you host in [Azure App Service](/azure/app-service/overview). This article helps you troubleshoot these errors.
 
 If you need more help, you can contact the Azure experts at [Azure Community Support](https://azure.microsoft.com/support/forums/). Or, you can use resources at the [Azure Support site](https://azure.microsoft.com/support/options/).
@@ -131,6 +133,6 @@ You can also manage your app by using Azure PowerShell. For more information, se
 [Manage Azure resources by using Azure PowerShell](/azure/azure-resource-manager/management/manage-resources-powershell).
 
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

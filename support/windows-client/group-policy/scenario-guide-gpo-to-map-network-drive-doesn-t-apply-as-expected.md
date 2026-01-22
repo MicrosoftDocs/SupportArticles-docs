@@ -132,7 +132,7 @@ In *\<Clientmachinename\>_\<Date_Time\>_GPPREF_User.txt*, we observe that the GP
 
 ```output
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Entering ProcessGroupPolicyExDrives()
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] SOFTWARE\Policies\Microsoft\Windows\Group Policy\{5794DAFD-BE60-433f-88A2-1A31939AC01F}
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] SOFTWARE\Policies\Microsoft\Windows\Group Policy\{aaaabbbb-0000-cccc-1111-dddd2222eeee}
 ```
 
 The Group Policy Mapped Drives extension identified a GPO that's configured with this extension, and the name is **Mapped-Drive**:

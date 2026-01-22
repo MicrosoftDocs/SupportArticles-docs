@@ -33,4 +33,4 @@ Series & Availability Set|Second VM|B-Series|D-Series v2|D-Series v3|D-Series v4
 
 All other series could not be in the same availability set because they require a specific hardware.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

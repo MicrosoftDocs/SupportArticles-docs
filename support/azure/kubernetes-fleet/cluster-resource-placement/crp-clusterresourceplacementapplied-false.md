@@ -305,4 +305,4 @@ For ResourcePlacement-specific considerations:
 - Ensure the target namespace exists on member clusters before the ResourcePlacement tries to apply resources to it
 - ResourcePlacement can only select resources within the same namespace where the ResourcePlacement object itself resides
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

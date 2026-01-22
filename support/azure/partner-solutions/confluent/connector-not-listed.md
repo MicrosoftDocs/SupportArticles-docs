@@ -4,7 +4,7 @@ description: Troubleshoot the scenario in which the Confluent connector isn't in
 author: praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/25/2025
@@ -37,6 +37,6 @@ This article helps you troubleshoot the sceanrio where a Confluent connector isn
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

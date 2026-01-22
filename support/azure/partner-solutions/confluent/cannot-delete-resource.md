@@ -4,7 +4,7 @@ description: Resolve problems with deleting a Confluent Cloud resource in Azure,
 author:  praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/24/2025
@@ -47,6 +47,6 @@ If you have the correct permissions but still can't delete the resource, contact
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

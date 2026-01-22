@@ -66,5 +66,5 @@ To resolve this issue, follow these steps:
 
 - [container registry authentication managed identity](/azure/container-registry/container-registry-authentication-managed-identity)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

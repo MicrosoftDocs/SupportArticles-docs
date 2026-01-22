@@ -113,4 +113,4 @@ $Owner = @{
 New-MgApplicationOwnerByRef -ApplicationId $ApplicationObjectId -BodyParameter $Owner
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

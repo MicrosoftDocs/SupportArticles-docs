@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution 
+ms.custom: sap:Apache Airflow on Astro - an Azure Native ISV Service
 ms.date: 09/04/2025
 ai-usage: ai-assisted
 
@@ -41,4 +42,4 @@ SSO issues can occur if you use an incorrect email account, if you don't provide
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

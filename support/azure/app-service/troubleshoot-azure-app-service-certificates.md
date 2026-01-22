@@ -12,6 +12,8 @@ ms.custom: sap:auto-renewal
 ---
 # Troubleshoot Azure App Service certificates 
 
+## Summary
+
 Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and admins systematically diagnose and fix issues that affect App Service certificates. See the following sections:
 
 - [Step-by-step troubleshooting flow](#step-by-step-troubleshooting-flow): A sequence of checks and actions to resolve certificate problems, including portal and command-line steps.
@@ -164,7 +166,7 @@ In the certificate's Azure portal page, in **Certificate Configuration > Step 1:
 Use role-based access control (RBAC) for Key Vault verification with the following:
 
 ```powershell
-az role assignment create --role "Key Vault Certificate User" --assignee "f3c21649-0979-4721-ac85-b0216b2cf413" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
+az role assignment create --role "Key Vault Secrets Officer" --assignee "f3c21649-0979-4721-ac85-b0216b2cf413" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
 ```
 
 ```powershell
@@ -828,4 +830,4 @@ cases are the result of a missed step or a misconfiguration.
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 

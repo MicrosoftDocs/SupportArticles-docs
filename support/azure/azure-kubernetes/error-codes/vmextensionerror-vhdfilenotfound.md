@@ -49,5 +49,5 @@ For detailed troubleshooting steps, refer to the troubleshooting guides in the f
 
 - [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

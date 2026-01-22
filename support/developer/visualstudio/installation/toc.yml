@@ -22,6 +22,8 @@
     href: ./invalid-entries-passed-switch.md
   - name: Issues and workarounds in Visual Studio setup
     href: ./issues-workarounds-visual-studio-setup.md
+  - name: Installation fails for Visual Studio 2017 or later
+    href: ./install-failure-2017-later-versions.md
   - name: Installer fails to perform repair or update
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode

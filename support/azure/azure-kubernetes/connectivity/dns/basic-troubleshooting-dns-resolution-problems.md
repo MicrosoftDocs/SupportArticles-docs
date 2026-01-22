@@ -600,5 +600,5 @@ If these troubleshooting steps don't resolve the problem, repeat the troubleshoo
 
 [!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 

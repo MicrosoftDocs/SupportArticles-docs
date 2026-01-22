@@ -97,4 +97,4 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

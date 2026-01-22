@@ -4,6 +4,7 @@ description: Encrypted connection to your mail server is not available when you 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,8 +15,8 @@ appliesto:
   - Exchange Online
 search.appverid: MET150
 ms.date: 01/24/2024
-ms.reviewer: v-six
 ---
+
 # (Encrypted connection to your mail server is not available) error when Microsoft 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365
 
 _Original KB number:_&nbsp;2826047
@@ -39,11 +40,9 @@ This behavior occurs if the user is trying to connect Outlook to Exchange Online
 To work around this behavior, use one of the following options:
 
 - Use Outlook Web App to access mail in Exchange Online.
-- Set up Outlook to access mail in Exchange Online through a Post Office Protocol (POP3) connection. For more info about how to do this, see [Set up a POP3 or IMAP4 connection to your email in Outlook 2010 or Outlook 2013](https://office.microsoft.com/web-apps-help/redir/ha103785606).
+- Set up Outlook to access mail in Exchange Online through a Post Office Protocol (POP3) connection. For more information, see [Set up a POP3 or IMAP4 connection to your email in Outlook 2010 or Outlook 2013](https://office.microsoft.com/web-apps-help/redir/ha103785606).
 
 ## More Information
-
-For more information about Microsoft 365 F plans, see [Microsoft 365 F1](https://products.office.com/business/office-365-f1?legRedir=true&CorrelationId=b7b7a08f-e568-40de-84d7-fb9d2faaa328).
 
 If Microsoft 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
 

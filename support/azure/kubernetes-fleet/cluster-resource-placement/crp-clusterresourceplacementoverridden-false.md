@@ -209,5 +209,5 @@ The code adds the new label `newlabel` that has the value `new-value` to the Clu
 
 For ResourcePlacement, the override flow is identical except that all the resources reside in the same namespace. Use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

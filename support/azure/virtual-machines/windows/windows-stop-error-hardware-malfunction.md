@@ -117,4 +117,4 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine Boot Errors](./boot-error-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

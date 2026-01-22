@@ -83,6 +83,8 @@ items:
         items:
           - name: Authentication popup appears when launching SAP
             href: desktop-flows/sap-automation/handle-authentication-popup-launch-sap.md
+          - name: Can't capture elements from SAP Save As dialog
+            href: desktop-flows/sap-automation/cant-capture-element-from-save-as-popup.md
           - name: Can't capture SAP GuiTree objects
             href: desktop-flows/sap-automation/cannot-capture-guitree-objects.md
           - name: Can't open SAP
@@ -113,6 +115,8 @@ items:
             href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
           - name: '"The remote desktop was not found" error'
             href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
+          - name: UI automation actions fail after Block Input action
+            href: desktop-flows/ui-automation/block-input-action-issues.md
           - name: UI element picker or recorder can't view UI elements in desktop applications
             href: desktop-flows/ui-automation/element-picker-cant-see-elements.md
           - name: UIPI issues with UI and web automation actions
@@ -159,6 +163,8 @@ items:
         href: desktop-flows/machine-not-joined-error.md
       - name: Desktop flows don't show in console if license expired or unassigned
         href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
+      - name: Desktop flows fail because of binary caching problems
+        href: desktop-flows/binary-caching-issues.md
       - name: Desktop flow runs are missing from the list
         href: desktop-flows/desktop-flow-runs-missing-from-list.md
       - name: Desktop flow runs list isn't updated

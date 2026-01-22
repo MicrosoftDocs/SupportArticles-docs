@@ -91,7 +91,7 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Symptoms
 
-- "Couldn’t transfer some devices."
+- "Couldn't transfer some devices."
 - Jobs stop responding at certain percentages or log "insufficient resources."
 - SMS inventory scan repeatedly fails ("partially succeeded," error code 0x800705AA).
 
@@ -129,14 +129,14 @@ The following sections detail the most common failure modes and provide step-by-
 #### Symptoms
 
 - "Size on disk" differs between source and destination.
-- Some files don’t appear after migration.
+- Some files don't appear after migration.
 - Robocopy log notes files as "updated" when unchanged.
 - Event IDs: None or general user confusion.
 
 #### Resolution
 
 1. Sector Size/Allocation Unit Differences:
-    1. Understand that NTFS allocates space differently on 512- vs. 4K-sector disks; file “size on disk” varies, but data remains intact.
+    1. Understand that NTFS allocates space differently on 512- vs. 4K-sector disks; file "size on disk" varies, but data remains intact.
     1. Verify that with fsutil or disk properties.
 2. Hidden or protected folders: System Volume Information, $RECYCLE.BIN, and similar folders are re-created automatically. Ignore errors for these folders. Files may be hidden because of attributes. View them in File Explorer (select **Show hidden files**) or:
 
@@ -154,13 +154,13 @@ The following sections detail the most common failure modes and provide step-by-
 
 - Disk resource fails to come online (Error 995).
 - Hyper-V: "The disk cannot be moved because it is marked as shareable."
-- “OnlineThread: Error 995 bringing resource online”
+- "OnlineThread: Error 995 bringing resource online"
 
 #### Resolution
 
 1. Shadow copies or backup interference:**
     1. Remove all shadow copies that are created by third-party backup tools.
-    1. Use vssadmin (vssadmin list shadows) or the vendor’s own tools for cleanup.
+    1. Use vssadmin (vssadmin list shadows) or the vendor's own tools for cleanup.
 2. Cluster/CSV Configuration:
     1. Remove and restore the disk to the cluster, as necessary.
     1. Always stop VMs and unmount disks before moving.
@@ -202,7 +202,7 @@ Understand MOTW implementation: Windows 11 (June 2024 and later) applies Mark-of
 | Access Denied / Permissions fail | 5000, 45062 | NTFS/Share permissions, wrong account | Use /COPYALL, align SIDs, export/import registry shares, adjust permissions |
 | Inventory scan fails (SMS) | 2506, 2513, 7004, 0x800705AA | Account, network, long path, firewall | Grant permissions, open ports, enable long paths, clear locks |
 | Robocopy logs "updated" files wrongly | N/A | Incorrect switches, incompatible sources | Review switches, match source/dest filesystems, filter logs |
-| Disk won’t come online in cluster | 995, 1069 | Shadow copies, reservations | Remove shadow copies, clear reservations, repair cluster config |
+| Disk won't come online in cluster | 995, 1069 | Shadow copies, reservations | Remove shadow copies, clear reservations, repair cluster config |
 | Hyper-V shared disk moves fail | "Disk can't be moved..." | Shareable disk attribute | Detach from VMs, manual move/copy, reattach |
 | Stuck or slow migration | N/A | Locked files, resource limits | Stop open processes/services, increase queue depth, upgrade HW |
 | Path too long/invalid character errors | "Path is too long" etc. | Invalid char, &gt;260 chars | Clean up names/paths, enable long path support |
@@ -228,7 +228,7 @@ Before you contact Microsoft Support, you can gather the following information a
 
 ## References
 
-- [Storage Migration Service documentation](https://learn.microsoft.com/windows-server/storage/storage-migration-service/overview)
+- [Storage Migration Service documentation](/windows-server/storage/storage-migration-service/overview)
 - [Robocopy reference](/windows-server/administration/windows-commands/robocopy)
 - [Share permissions migration](/answers/questions/1193948/how-to-migrate-file-server-data-with-permissions-u)
 - [Cluster-shared volume documentation](/windows-server/failover-clustering/failover-cluster-csvs)

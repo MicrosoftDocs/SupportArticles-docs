@@ -77,4 +77,4 @@ For more information about SQL Server and SharePoint Server folder exclusions, s
 
 - [Certain folders may have to be excluded from antivirus scanning when you use file-level antivirus software in SharePoint](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

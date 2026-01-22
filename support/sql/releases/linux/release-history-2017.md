@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 11/13/2025
+ms.date: 01/16/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2017
@@ -12,14 +12,7 @@ ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-rela
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
 
-The following table lists the release history for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. For release history on other editions, see the following articles:
-
-- [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
-- [Release history for SQL Server 2022 on Linux](release-history-2022.md?view=sql-server-ver16&preserve-view=true).
-- [Release history for SQL Server 2025 on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
-
-> [!NOTE]  
-> Any missing GDRs apply to the Windows version only.
+The following table lists the release history for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
 
 | Release | Version | Release date |
 | --- | --- | --- |
@@ -74,6 +67,22 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 | [CU 2](#14-0-3008) | 14.0.3008.27 | 2017-11-28 |
 | [CU 1](#14-0-3006) | 14.0.3006.16 | 2017-10-24 |
 | [GA](#14-0-1000) | 14.0.1000.169 | 2017-10-02 |
+
+For release history on other editions, see the following articles:
+
+- [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
+- [Release history for SQL Server 2022 on Linux](release-history-2022.md?view=sql-server-ver16&preserve-view=true).
+- [Release history for SQL Server 2025 on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
+
+## Release and container tag guidance
+
+- As of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] CU 4, [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] Agent is no longer installed as a separate package. It's installed with the [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] package and must be enabled for use.
+
+- The **mssql-server-is** package isn't supported on SUSE Linux Enterprise Server (SLES). For more information, see [SQL Server on Linux: Known issues](/sql/linux/sql-server-linux-known-issues#sql-server-integration-services-ssis).
+
+- Some GDR releases apply only to Windows. These Windows-only GDRs aren't published for Linux, and don't appear in this article.
+
+- Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
 
 <a id="14-0-3515"></a>
 
@@ -595,7 +604,6 @@ This is the Cumulative Update 18 (CU 18) release of [!INCLUDE [sql-server-2017](
 
 - Change Data Capture (CDC) is supported with [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] on Linux starting with CU 18.
 - Transactional Replication is supported with [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] on Linux starting with CU 18.
-
 ### Remarks
 
 [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] containers now have a new tagging pattern as described in the following examples.

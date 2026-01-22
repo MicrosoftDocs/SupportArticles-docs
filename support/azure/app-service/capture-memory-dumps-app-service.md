@@ -12,6 +12,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # Capture memory dumps on the Azure App Service platform
 
+## Summary
+
 This article provides guidance about Microsoft Azure App Service debugging features for capturing memory dumps. The capture method that you use is dictated by the scenario in which you capture a memory dump for troubleshooting a performance or availability issue. For example, capturing a memory dump is different for a process that's experiencing excessive memory consumption than for a process that's throwing exceptions or responding slowly. The process in this context is the Internet Information Services (IIS) worker process (W3WP, which runs as *w3wp.exe*).
 
 ## Mapping memory dump scenarios to Azure App Service debugging features
@@ -272,7 +274,5 @@ Discussing how to analyze memory dumps is outside the scope of this article. How
 You might have noticed the **Configure Action** option in the previous screenshot. The default setting for this option is **CollectAndKill**. This setting means that the process is killed after the memory dump is collected. A setting that's named **CollectKillAndAnalyze** analyzes the memory dump that's collected. In that scenario, the platform analysis might find the issue so that you don't have to open the memory dump in WinDbg and analyze it.
 
 There are other options for troubleshooting and diagnosing performance issues on the Azure App Service platform. This article focuses on memory dump collection and makes some recommendations for approaching the diagnosis by using these methods. If you have already studied, experienced, and perfected your collection procedures, and they work well for you, you should continue to use those procedures.
-
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [ap]: https://portal.azure.com

@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: jeknight, v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 01/24/2024
 ---

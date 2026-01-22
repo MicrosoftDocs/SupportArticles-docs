@@ -21,6 +21,8 @@ items:
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
       - name: Configuring Azure Activity Log Export
         href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
+      - name: Configure long-term storage for Azure Activity Logs
+        href: activity-logs/config-export/configure-long-term-storage-activity-logs.md 
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -117,8 +119,12 @@ items:
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
     - name: Troubleshoot custom log table creation in Azure
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-log-table-creation.md
+    - name: Troubleshoot file upload errors when creating custom tables in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-file-upload-errors.md
     - name: Troubleshoot performance logs not populating in Azure Government
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-performance-logs-not-populating.md
+    - name: Troubleshoot log file configuration issues when managing custom tables in Azure  
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-log-file-configuration-issues.md
     - name: Troubleshoot deleting migrated custom tables in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-deleting-migrated-custom-tables.md
   - name: Log Analytics workspaces

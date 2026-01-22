@@ -86,4 +86,4 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
 4. [Swap the failed VM's OS disk with the repaired disk](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk).
 5. Check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

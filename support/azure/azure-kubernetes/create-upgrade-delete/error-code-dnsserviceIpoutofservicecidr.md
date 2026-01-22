@@ -36,4 +36,4 @@ This error occurs if the DNS service IP (`--dns-service-ip`) for AKS is out of t
 
 Make sure that the DNS service IP is within the range that's defined by service CIDR.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

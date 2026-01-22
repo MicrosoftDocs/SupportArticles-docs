@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Apache Airflow on Astro - an Azure Native ISV Service
 ms.date: 09/04/2025
 ai-usage: ai-assisted
 
@@ -53,4 +54,4 @@ Your user profile has to be updated to include key business information for Astr
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

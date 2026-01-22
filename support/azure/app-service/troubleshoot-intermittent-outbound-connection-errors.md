@@ -13,6 +13,8 @@ ms.service: azure-app-service
 
 # Troubleshoot intermittent outbound connection errors in Azure App Service
 
+## Summary
+
 This article helps you troubleshoot intermittent connection errors and related performance issues in [Azure App Service](/azure/app-service/overview). It provides more information on, and troubleshooting methodologies for, exhaustion of source network address translation (SNAT) ports. If you require more help at any point in this article, contact the Azure experts at [Azure Community Support](https://azure.microsoft.com/support/community/). Alternatively, you can file an Azure support incident. Go to [Azure support](https://azure.microsoft.com/support/options/) and select **Submit a support ticket**.
 
 ## Symptoms
@@ -179,6 +181,6 @@ If SNAT ports are exhausted, and WebJobs are unable to connect to SQL Database, 
 * [SNAT with App Service](https://4lowtherabbit.github.io/blogs/2019/10/SNAT/)
 * [Troubleshoot slow app performance issues in Azure App Service](/azure/app-service/troubleshoot-performance-degradation)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

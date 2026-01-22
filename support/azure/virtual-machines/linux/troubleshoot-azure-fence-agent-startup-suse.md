@@ -281,7 +281,7 @@ SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm` for P
 
 If you need additional help, use the following instructions to open a support request:
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 When you submit your request, attach a copy of `debug-fence.out` for troubleshooting.
 

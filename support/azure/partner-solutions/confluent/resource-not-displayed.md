@@ -4,7 +4,7 @@ description: Troubleshoot issues in which a Confluent Cloud resource or its Over
 author:  praveenrajap
 ms.author: jarrettr 
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/23/2025
@@ -40,6 +40,6 @@ This article helps you troubleshoot issues where a Confluent Cloud resource or i
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)] 

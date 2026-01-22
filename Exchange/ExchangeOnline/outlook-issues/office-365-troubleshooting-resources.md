@@ -46,13 +46,11 @@ Knowledge Base articles
 - [2427141](https://support.microsoft.com/help/2427141) You can't find a user in the offline address book in Microsoft 365
 - [2429946](https://support.microsoft.com/help/2429946) How to troubleshoot the Outlook Offline Address Book in a Microsoft 365 environment
 - [Anonymous Authentication Enabled for Virtual Directory](/connectivity-analyzer/anonymous-authentication-enabled-virtual-directory)
-- [2710606](https://support.microsoft.com/help/2710606) Error message in the Exchange Remote Connectivity Analyzer tool when you test the Outlook Anywhere feature in a Microsoft 365 environment: "Mutual Authentication couldn't be established"
 
 ## Repeated password prompts in Outlook
 
 Knowledge Base articles
 
-- [2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox
 - [2637629](https://support.microsoft.com/help/2637629) How to troubleshoot nonbrowser apps that can't sign in to Microsoft 365, Azure, or Intune
 
 ## Can't view free/busy information in the Outlook calendar

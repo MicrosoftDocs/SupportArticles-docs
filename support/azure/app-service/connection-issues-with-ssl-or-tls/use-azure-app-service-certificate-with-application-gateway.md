@@ -11,6 +11,8 @@ ms.custom: sap:Connection issues with SSL or TLS, SSL Certificates and Domains
 
 # Use Azure App Service Certificate with Application Gateway
 
+## Summary
+
 Microsoft Azure provides various tools and services to secure your web applications by using SSL/TLS certificates. One such offering, the **Azure App Service Certificate**, is tightly integrated with Azure App Services. However, many organizations use **Azure Application Gateway** as a reverse proxy, load balancer, and Web Application Firewall (WAF). Understandably, such organizations want to use the same certificate across all services.
 
 This article provides a comprehensive guide for using App Service Certificates in Application Gateway, including usage steps, restrictions, and best practices. By understanding the limitations and using the Azure Key Vault service effectively, you can build a robust certificate management workflow across both App Services and Application Gateway.
@@ -58,12 +60,41 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 1. **Store App Service Certificate in Key Vault**: Navigate to the App Service Certificate resource. Then, use the **Key Vault** blade to store the certificate in a key vault of your choice.
 
-2. **Enable Managed Identity for Application Gateway**: Enable user-assigned or system-assigned managed identity.
+2. **Enable Managed Identity for Application Gateway**: Enable user-assigned.
 
 3. **Grant Access to key vault**: In the key vault, go to **Access Policies**, and add a policy for Application Gateway identity that has `get`, `list`,
       and `secret management` permissions.
 
-4. **Reference Certificate from Key Vault**: Go to **Application Gateway** \> **Listeners** \> **+ Add Listener**, select **HTTPS**, and then select **Key Vault certificate**.
+4. Due to current limitations, it's necessary to assign user-assigned managed identity and SSL certificate to Application Gateway. This can be done using Azure PowerShell.
+
+```PowerShell
+
+# Connect to Azure and Authenticate
+Connect-AzAccount
+Select-AzSubscription -Subscription <customer subscription>
+Install-Module -Name Az.ManagedServiceIdentity
+# Define Variables
+$AppGwName = "<YourApplicationGatewayName>"
+$RGName = "<YourResourceGroupName>"
+$UserIdentityName = "<YourUserAssignedManagedIdentityName>"
+$vaultName = "<YourKeyVaultName>"
+$secretName = "<YourCertificateSecretName>"
+# Construct Key Vault Secret ID
+$secretId = "https://${vaultName}.vault.azure.net:443/secrets/${secretName}/"
+# Retrieve Application Gateway Object
+$AppGw = Get-AzApplicationGateway -Name $AppGwName -ResourceGroupName $RGName
+# Add SSL Certificate (Key Vault Reference)
+Add-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGw -Name $secretName -KeyVaultSecretId $secretId
+# Retrieve User-Assigned Managed Identity
+$identity = Get-AzUserAssignedIdentity -Name $UserIdentityName -ResourceGroupName $rgname
+# Assign Managed Identity to Application Gateway
+Set-AzApplicationGatewayIdentity -ApplicationGateway $AppGw -UserAssignedIdentityId $identity.Id
+# Apply Changes to Azure
+Set-AzApplicationGateway -ApplicationGateway $AppGw
+
+```
+
+5. **Reference Certificate from Key Vault**: Go to **Application Gateway** \> **Listeners** \> **+ Add Listener**, select **HTTPS**, and then select **Certificate** which you added in the previous step.
 
 > [!NOTE]
 > Currently, Key Vault integration supports only certificates that have the private key in `.pfx` format.
@@ -99,7 +130,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 - Regularly audit access policies in Key Vault.
 - Keep secure backup copies of your exported `.pfx` files.
 
-## Summary
+### Summary
 
 | Feature | App Service | Application Gateway
 | --- | --- | ---

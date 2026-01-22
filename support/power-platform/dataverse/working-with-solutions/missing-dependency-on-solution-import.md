@@ -1,6 +1,6 @@
 ---
 title: Missing Dependencies During Solution Import in Power Apps
-description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
+description: Resolve missing dependency errors during solution import in Power Apps. Learn how to identify causes, apply workarounds, and prevent future issues.
 ms.reviewer: 
   - swatim
   - matp
@@ -12,23 +12,25 @@ ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
 # Missing dependencies error during solution import
 
-This article provides workarounds for a missing dependencies issue that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps.
+## Summary
+
+When you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) into a target environment in Microsoft Power Apps, you might encounter errors about missing dependencies. This article helps you identify the cause of missing dependency errors and provides workarounds to resolve them. It also includes best practices to help you prevent these errors in future solution imports.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
-## Symptoms
+## Symptoms of missing dependency issues
 
 When you try to import a solution in Power Apps, you receive an error message that resembles the following message:
 
 > Import failed due to missing dependencies.
 
-In this situation, you can't continue the solution import until the missing dependencies issue is resolved.
+In this situation, you can't continue the solution import until you resolve the missing dependencies.
 
-## Cause
+## Cause of missing dependency errors
 
-The solution is dependent on a component that exists in the source environment where the solution is deployed. However, the component doesn't exist in the target environment that the solution is imported into.
+Missing dependency errors occur when a solution references apps or components that exist in the source environment but not in the target environment. These components can include tables, columns, forms, or other solution elements.
 
-This issue might occur if applications are upgraded to their latest version (through Microsoft scheduled maintenance) in the source environment but not in the target environment.
+This issue can occur if applications are upgraded to their latest version (through Microsoft scheduled maintenance) in the source environment but not in the target environment.
 
 ## Workaround 1: Resolve missing dependency errors
 
@@ -69,7 +71,7 @@ To work around this issue, use one of the following methods:
 
 ### Missing dependencies coming from a first-party Dynamics 365 application
 
-A solution might depend on only components from first-party Dynamics 365 applications that are missing or outdated in the target environment. In this situation, the system might be able to automatically update or install these components, and no manual action is required from the user. The **Missing dependencies** page displays the **Deploy Dependencies** option. If you select this option, and then you select the **Import** button, the system first installs or updates the required dependencies, and then imports the solution. If the update or installation of a dependent application fails, the solution import also fails. You can track the status of these updates or installations on the solution history page.
+A solution might depend only on components from first-party Dynamics 365 applications that are missing or outdated in the target environment. In this situation, the system might be able to automatically update or install these components, and no manual action is required from the user. The **Missing dependencies** page displays the **Deploy Dependencies** option. If you select this option, and then select the **Import** button, the system first installs or updates the required dependencies, and then imports the solution. If the update or installation of a dependent application fails, the solution import also fails. You can track the status of these updates or installations on the solution history page.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="The Applications section of the Missing dependencies page showing a first-party application that can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
 
@@ -95,11 +97,11 @@ When you create a solution in Power Platform, you often reuse existing component
 
 ### Component availability in target environments
 
-If your solution has dependencies on components (such as tables, flows, or apps) in the source environment, those components must also exist in the target environment when you deploy the solution. This requirement applies to both pipeline deployments and manual importing. If components are missing in the source environment, a missing dependency error occurs during import.
+If your solution has dependencies on components (such as tables, flows, or apps) in the source environment, those components must also exist in the target environment when you deploy the solution. This requirement applies to both pipeline deployments and manual importing. If components are missing in the target environment, a missing dependency error occurs during import.
 
 ### Select only necessary components
 
-To work around dependency issues, don't include entire tables or components if you need only a subset of their elements (for example, specific columns, views, or forms). Adding unnecessary elements can cause:
+To avoid dependency problems, don't include entire tables or components if you need only a subset of their elements (for example, specific columns, views, or forms). Adding unnecessary elements can cause:
 
 - Increased solution complexity
 - Multiple managed layers that are applied to components
@@ -131,3 +133,4 @@ Remove any dependencies between solution components and deprecated applications 
 ## Related content
 
 - [Organize your solutions](/power-platform/alm/organize-solutions)
+- [Solution checker enforcement](/power-platform/admin/managed-environment-solution-checker)

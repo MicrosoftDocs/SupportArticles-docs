@@ -4,7 +4,7 @@ description: Troubleshoot problems in which the offer plan doesn't load for a Co
 author: praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/24/2025
@@ -30,6 +30,6 @@ This article helps you troubleshoot problems where the offer plan for a Confluen
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)] 

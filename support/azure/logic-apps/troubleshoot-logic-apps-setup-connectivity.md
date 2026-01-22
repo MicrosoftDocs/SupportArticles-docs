@@ -96,6 +96,6 @@ Additionally, check DNS and host settings.
 - [Install on-premises data gateway for logic app workflows - Azure Logic Apps](/azure/logic-apps/install-on-premises-data-gateway-workflows)
 - [Connect to on-premises data sources - Azure Logic Apps](/azure/logic-apps/connect-on-premises-data-sources?tabs=consumption)
 
-[!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

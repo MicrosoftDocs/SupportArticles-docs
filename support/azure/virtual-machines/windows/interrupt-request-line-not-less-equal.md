@@ -40,4 +40,4 @@ If your VM is already running a supported OS version or is configured with 64 or
 To assist with further diagnosis, [collect an OS memory dump file](./collect-os-memory-dump-file.md) and then [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) so that Azure support can investigate and help resolve the issue.
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -4,7 +4,7 @@ description: Resolve problems with single sign-on (SSO) for the Confluent Cloud 
 author: praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services  
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/24/2025
@@ -45,7 +45,7 @@ If SSO still doesn't work after you verify your email and provide consent, conta
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
  
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)] 
  

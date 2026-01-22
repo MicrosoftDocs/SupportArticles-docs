@@ -34,4 +34,4 @@ For each application tier and each proxy server, the administrator needs to do t
 > [!IMPORTANT]
 > If the cache for every AT and proxy is not purged prior to restoration, it is possible that some users will continue to experience the symptoms above.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

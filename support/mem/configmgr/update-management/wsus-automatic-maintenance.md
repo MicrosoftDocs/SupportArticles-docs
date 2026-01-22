@@ -3,7 +3,7 @@ title: Manual and automatic WSUS database maintenance
 description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
 author: danschuh
 ms.author: daschuh
-ms.date: 02/11/2025
+ms.date: 12/19/2025
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically
@@ -193,12 +193,11 @@ The following PowerShell script replicates the manual steps. When the script is 
 
 Requirements
 * WID must be local.
-* Remote connections to SQL are now supported; choose [S] Change SQL Server from the menu to set the SQL Server.
-* WSUS Console must be installed locally.
-* Must have internet access to download the SQL PowerShell Module.
-* Must be using v22 or higher of the SQL Server PowerShell Module.
+* Remote connections for SQL now supported, choose [S] Change SQL Server from menu to set the SQL Server.
+* WSUS Console must be installed local.
+* No longer requires SQL Server PowerShell Module - uses native .NET SqlClient.
 
-This script will present the following menu options for performing SUSDB maintenance. When the script is executed, a SUSDB-Maintenance.log file will be created and opened.
+This script will present the following menu options for performing SUSDB Maintenance.  SUSDB-Maintenance.log will be created and opened when the script is run.
 
 [S] Change SQL Server, currently set to 
 [A] Update Count
@@ -366,9 +365,8 @@ $Reindex = $DB + 'EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALT
 
 $UpdateStatistics = $DB + 'Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS"'
 
-$CleanupSyncHistory = "USE SUSDB 
-GO 
-DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')"
+$CleanupSyncHistory = "USE SUSDB;
+DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389');"
 
 $UpdateCount = "use SUSDB;
 GO
@@ -487,65 +485,211 @@ function Write-Color([String[]]$Text, [ConsoleColor[]]$Color) {
     Write-Host
 }
 
+function Invoke-CustomSqlCommand {
+    <#
+    .SYNOPSIS
+    Executes SQL commands without requiring SQL Server PowerShell module
+    
+    .PARAMETER ServerInstance
+    SQL Server instance name (can be pipe name for WID)
+    
+    .PARAMETER Query
+    SQL query to execute
+    
+    .PARAMETER Database
+    Database name (optional)
+    
+    .PARAMETER OutputResults
+    Return results as objects (default: $true)
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ServerInstance,
+        
+        [Parameter(Mandatory = $true)]
+        [string]$Query,
+        
+        [Parameter(Mandatory = $false)]
+        [string]$Database,
+        
+        [Parameter(Mandatory = $false)]
+        [bool]$OutputResults = $true
+    )
+    
+    $startTime = Get-Date
+    $infoMessages = @()
+    
+    try {
+        # Build connection string
+        if ($ServerInstance -like '*pipe*') {
+            # WID connection
+            $connectionString = "Server=np:$ServerInstance;Database=SUSDB;Integrated Security=True;TrustServerCertificate=True;"
+        }
+        else {
+            # Regular SQL Server connection
+            if ($Database) {
+                $connectionString = "Server=$ServerInstance;Database=$Database;Integrated Security=True;TrustServerCertificate=True;"
+            }
+            else {
+                $connectionString = "Server=$ServerInstance;Integrated Security=True;TrustServerCertificate=True;"
+            }
+        }
+        
+        # Create connection
+        $connection = New-Object System.Data.SqlClient.SqlConnection
+        $connection.ConnectionString = $connectionString
+        
+        # Add event handler for info messages (PRINT statements, etc.)
+        $connection.add_InfoMessage({
+            param($sender, $event)
+            $script:infoMessages += $event.Message
+        })
+        
+        $connection.FireInfoMessageEventOnUserErrors = $true
+        $connection.Open()
+        
+        # Split query by GO statements (batch separator)
+        $batches = $Query -split '\r?\nGO\r?\n|\r?\nGO$|^GO\r?\n' | Where-Object { $_.Trim() -ne '' }
+        
+        $allResults = @()
+        $lastResultSet = $null
+        
+        foreach ($batch in $batches) {
+            $trimmedBatch = $batch.Trim()
+            if ($trimmedBatch -eq '' -or $trimmedBatch -eq 'GO') {
+                continue
+            }
+            
+            # Create command
+            $command = $connection.CreateCommand()
+            $command.CommandText = $trimmedBatch
+            $command.CommandTimeout = 0 # No timeout
+            
+            # Execute and capture results
+            $reader = $command.ExecuteReader()
+            
+            # Read all result sets from this batch
+            do {
+                $dataTable = New-Object System.Data.DataTable
+                $dataTable.Load($reader)
+                
+                if ($dataTable.Rows.Count -gt 0) {
+                    $allResults += $dataTable
+                    $lastResultSet = $dataTable
+                }
+            } while (!$reader.IsClosed)
+            
+            $reader.Close()
+        }
+        
+        # Calculate execution time
+        $endTime = Get-Date
+        $executionTime = ($endTime - $startTime).TotalMilliseconds
+        
+        # Create return object with statistics
+        $result = [PSCustomObject]@{
+            Results = $lastResultSet
+            ExecutionTime = $executionTime
+            RowsAffected = if ($lastResultSet) { $lastResultSet.Rows.Count } else { 0 }
+            InfoMessages = $infoMessages
+        }
+        
+        return $result
+    }
+    catch {
+        Write-Error "SQL Error: $($_.Exception.Message)"
+        throw
+    }
+    finally {
+        if ($connection.State -eq 'Open') {
+            $connection.Close()
+        }
+    }
+}
+
 function UpdateCount {
 
     Write-log -Message "--> Begin Update Count" -severity 1 -component "Update Count"      
     Write-log -Message "Update Count" -severity 1 -component "Update Count"
 
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $UpdateCount -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-
-    Write-log -Message ("Total execution time for Update Count.........:" + ($($stats.ExecutionTime) / 1000) + " seconds")
-    Write-log -Message ("Total Updates " + $SQLoutput.'Total Updates') -severity 1 -component "Update Count"
-    Write-log -Message ("Live Updates " + $SQLoutput.'Live Updates') -severity 1 -component "Update Count"
-    Write-log -Message ("Superseded " + $SQLoutput.'Superseded') -severity 1 -component "Update Count"
-    Write-log -Message ("Superseded but not declined " + $SQLoutput.'Superseded but not declined') -severity 1 -component "Update Count"
-    Write-log -Message ("Declined " + $SQLoutput.'Declined') -severity 1 -component "Update Count"
-    Write-log -Message ("Superseded and Declined " + $SQLoutput.'Superseded and Declined') -severity 1 -component "Update Count"
-    Write-log -Message ("Obsolete Updates Needed to be cleaned " + $SQLoutput.'Obsolete Updates Needed to be cleaned') -severity 1 -component "Update Count"            
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateCount
+    
+    if ($result.Results -and $result.Results.Rows.Count -gt 0) {
+        $SQLoutput = $result.Results.Rows[0]
+        
+        Write-log -Message ("Total execution time for Update Count.........:" + ($result.ExecutionTime / 1000) + " seconds")
+        Write-log -Message ("Total Updates " + $SQLoutput.'Total Updates') -severity 1 -component "Update Count"
+        Write-log -Message ("Live Updates " + $SQLoutput.'Live Updates') -severity 1 -component "Update Count"
+        Write-log -Message ("Superseded " + $SQLoutput.'Superseded') -severity 1 -component "Update Count"
+        Write-log -Message ("Superseded but not declined " + $SQLoutput.'Superseded but not declined') -severity 1 -component "Update Count"
+        Write-log -Message ("Declined " + $SQLoutput.'Declined') -severity 1 -component "Update Count"
+        Write-log -Message ("Superseded and Declined " + $SQLoutput.'Superseded and Declined') -severity 1 -component "Update Count"
+        Write-log -Message ("Obsolete Updates Needed to be cleaned " + $SQLoutput.'Obsolete Updates Needed to be cleaned') -severity 1 -component "Update Count"
+    }
+    else {
+        Write-log -Message "No results returned from Update Count query" -severity 2 -component "Update Count"
+    }
+    
     Write-log -Message "--> End Update Count" -severity 1 -component "Update Count"
 }
 
 function Update_spDeleteUpdate_Procedure {
 
     Write-log -Message "--> Begin update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $spDeleteUpdate -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    Write-log -Message ("Total execution time.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Update spDeleteUpdate"
-    Write-log -Message "SQL Output is $SQLoutput" -severity 1 -component "Update spDeleteUpdate"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $spDeleteUpdate
+    Write-log -Message ("Total execution time.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Update spDeleteUpdate"
+    Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Update spDeleteUpdate"
     Write-log -Message "--> End update spDeleteUpdate procedure" -severity 1 -component "Update spDeleteUpdate"
 }
 
 function ShrinkFile {
 
     Write-log -Message "--> Begin shrink file" -severity 1 -component "Shrink File"            
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Spaceused -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    Write-log -Message ("Total execution time for checking Space Used.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink File"
-    Write-log -Message ($SQLoutput.name[1] + " " + $SQLoutput."Size (MB)"[1] + " MB") -severity 1 -component "Shrink Files"
-
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Shrinkfile -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii
-    Write-log -Message ("Total execution time for Shrinking File.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink File"    
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
+    $SQLoutput = $result.Results
+    Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"
     
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Spaceused -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    Write-log -Message ("Total execution time for checking Space Used.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink File"
-    Write-log -Message ($SQLoutput.name[1] + " " + $SQLoutput."Size (MB)"[1] + " MB") -severity 1 -component "Shrink File"
+    if ($SQLoutput -and $SQLoutput.Rows.Count -gt 1) {
+        Write-log -Message ($SQLoutput.Rows[1].name + " " + $SQLoutput.Rows[1]."Size (MB)" + " MB") -severity 1 -component "Shrink Files"
+    }
+
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Shrinkfile
+    Write-log -Message ("Total execution time for Shrinking File.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"    
+    
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
+    $SQLoutput = $result.Results
+    Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink File"
+    
+    if ($SQLoutput -and $SQLoutput.Rows.Count -gt 1) {
+        Write-log -Message ($SQLoutput.Rows[1].name + " " + $SQLoutput.Rows[1]."Size (MB)" + " MB") -severity 1 -component "Shrink File"
+    }
+    
     Write-log -Message "--> End shrink file" -severity 1 -component "Shrink File"
 }
 
 function ShrinkDatabase {
 
     Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Spaceused -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    Write-log -Message ("Total execution time for checking Space Used.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink Database"
-    Write-log -Message ($SQLoutput.name[0] + " " + $SQLoutput."Size (MB)"[0] + " MB") -severity 1 -component "Shrink Database"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
+    $SQLoutput = $result.Results
+    Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink Database"
+    
+    if ($SQLoutput -and $SQLoutput.Rows.Count -gt 0) {
+        Write-log -Message ($SQLoutput.Rows[0].name + " " + $SQLoutput.Rows[0]."Size (MB)" + " MB") -severity 1 -component "Shrink Database"
+    }
     
     Write-log -Message "--> Begin shrink database" -severity 1 -component "Shrink Database"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $ShrinkDatabase -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii
-    Write-log -Message ("Total execution time for Shrinking Database.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink Database"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $ShrinkDatabase
+    Write-log -Message ("Total execution time for Shrinking Database.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink Database"
     
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Spaceused -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional   
-    Write-log -Message ("Total execution time for checking Space Used.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Shrink Database"
-    Write-log -Message ($SQLoutput.name[0] + " " + $SQLoutput."Size (MB)"[0] + " MB") -severity 1 -component "Shrink Database"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Spaceused
+    $SQLoutput = $result.Results
+    Write-log -Message ("Total execution time for checking Space Used.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Shrink Database"
+    
+    if ($SQLoutput -and $SQLoutput.Rows.Count -gt 0) {
+        Write-log -Message ($SQLoutput.Rows[0].name + " " + $SQLoutput.Rows[0]."Size (MB)" + " MB") -severity 1 -component "Shrink Database"
+    }
+    
     Write-log -Message "--> End shrink database" -severity 1 -component "Shrink Database"
 }
 
@@ -553,14 +697,12 @@ function ReindexStatistics {
 
     Write-log -Message "--> Begin reindex and update statistics" -severity 1 -component "IndexStats"
     Write-log -Message "Reindexing" -severity 1 -component "IndexStats"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $Reindex -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii
-    Write-log -Message ("Total execution time for Reindex.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "IndexStats"    
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $Reindex
+    Write-log -Message ("Total execution time for Reindex.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"    
 
     Write-log -Message "Now Updating Statistics" -severity 1 -component "IndexStats"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $UpdateStatistics -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii
-    Write-log -Message ("Total execution time for Updating Statistics.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "IndexStats"    
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $UpdateStatistics
+    Write-log -Message ("Total execution time for Updating Statistics.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "IndexStats"    
     Write-log -Message "--> End reindex and update statistics" -severity 1 -component "IndexStats"
 
 }
@@ -568,9 +710,8 @@ function ReindexStatistics {
 function CleanUpSyncHistory {
 
     Write-log -Message "--> Begin cleanup sync history" -severity 1 -component "Cleanup Sync History"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $CleanupSyncHistory -Verbose -StatisticsVariable stats -OutputSqlErrors $true -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii
-    Write-log -Message ("Total execution time for Cleaning up Sync History.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Cleanup Sync History"    
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSyncHistory
+    Write-log -Message ("Total execution time for Cleaning up Sync History.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Sync History"    
     Write-log -Message "--> End cleanup sync history" -severity 1 -component "Cleanup Sync History"
 }
 
@@ -608,18 +749,17 @@ DEALLOCATE DU
 PRINT CHAR(10) + 'Attempted to decline ' + CONVERT(NVARCHAR(10), @count) + ' updates.'"
 
 
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Verbose -StatisticsVariable stats -OutputSqlErrors $true -Database SUSDB -TrustServerCertificate -Encrypt Optional
-    Write-log -Message ("Total execution time for Cleaning up Superseded Updates.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Cleanup Superseded Updates"
-    Write-log -Message "SQL Output is $SQLoutput" -severity 1 -component "Cleanup Superseded Updates"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupSupersededUpdates -Database "SUSDB"
+    Write-log -Message ("Total execution time for Cleaning up Superseded Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Superseded Updates"
+    Write-log -Message "SQL Output is $($result.Results)" -severity 1 -component "Cleanup Superseded Updates"
     Write-log -Message "--> End cleanup superseded updates" -severity 1 -component "Cleanup Superseded Updates"
 }
 
 function CleanupObsoleteUpdates {
 
     Write-log -Message "--> Begin cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
-    $SQLoutput = Invoke-Sqlcmd -ServerInstance $LocalSQLInstance -Query $CleanupObsoleteUpdates -Verbose -StatisticsVariable stats -OutputSqlErrors $true -Database SUSDB -TrustServerCertificate -Encrypt Optional
-    $SQLoutput | Out-File -FilePath $LogFile -Append -Encoding ascii    
-    Write-log -Message ("Total execution time for Cleaning up Obsolete Updates.........:" + ($($stats.ExecutionTime) / 1000) + " seconds") -severity 1 -component "Cleanup Obsolete Updates"
+    $result = Invoke-CustomSqlCommand -ServerInstance $LocalSQLInstance -Query $CleanupObsoleteUpdates -Database "SUSDB"
+    Write-log -Message ("Total execution time for Cleaning up Obsolete Updates.........:" + ($result.ExecutionTime / 1000) + " seconds") -severity 1 -component "Cleanup Obsolete Updates"
     Write-log -Message "--> End cleanup obsolete updates" -severity 1 -component "Cleanup Obsolete Updates"
 }
 
@@ -693,27 +833,6 @@ function Show-Menu {
     Write-Host
     
 }
-function Test-SQLModuleInstalled {
-    ##############################################
-    # Checking to see if the SqlServer module is already installed; if not, installing it for the current user
-    ##############################################
-    $SQLModuleCheck = (Get-Module -ListAvailable SqlServer).Version.Major
-    if ($SQLModuleCheck -notin 22) {
-        Write-Host "SqlServer Module Not Found - Installing" 
-        # Not installed, trusting PS Gallery to remove prompt on install
-        Write-log -Message "SQLServer module is not installed, trusting PS Gallery for install." -severity 1 -component "SQL Check"
-        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-        # Installing module
-        Write-log -Message "SqlServer Module Not Found - Installing" -severity 1 -component "SQL Check"        
-        Install-Module -Name SqlServer -Scope AllUsers -Confirm:$false -AllowClobber -Force -Verbose -MinimumVersion 22.1.1
-        Write-log -Message "SqlServer Module Installed" -severity 1 -component "SQL Check"
-    }
-    ##############################################
-    # Importing the SqlServer module
-    ##############################################
-    Write-log -Message "Importing SQL Server Module" -severity 1 -component "SQL Check"
-    Import-Module SqlServer -MinimumVersion 22.1.1 -Force
-}
 
 #Region Initialize
 #Check if running as admin
@@ -742,8 +861,7 @@ else {
     }
     #EndRegion LogCheck
 
-    Write-Host "Checking SQL Module" -ForegroundColor Green
-    Test-SQLModuleInstalled
+    Write-Host "Script initialized - using native .NET SqlClient (no SQL module required)" -ForegroundColor Green
     
 }
 #EndRegion Initialize

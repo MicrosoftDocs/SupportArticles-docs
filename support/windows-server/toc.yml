@@ -125,6 +125,8 @@ items:
       href: ./active-directory/event-id-1216-directory-services-event-log.md
     - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
       href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
+    - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
+      href: ./active-directory/adamsync-cant-sync-basedn-grandchild-ou.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -516,8 +518,8 @@ items:
       href: ./active-directory/this-property-limited-64-values.md
     - name: Troubleshoot AD replication error 8589
       href: ./active-directory/replication-error-8589.md
-    - name: Use Adminpak to remotely administer computers
-      href: ./active-directory/use-adminpak-remotely-administer-computers.md
+    - name: Troubleshoot Event ID 2866 (maximum number of cached audit events)
+      href: ./active-directory/troubleshoot-event-2866-maximum-audit-queue-size.md
     - name: Use Directory Service to manage AD objects
       href: ./active-directory/directory-service-manage-objects.md
     - name: UserAccountControl property flags
@@ -682,13 +684,13 @@ items:
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
   - name: File Server Resource Manager (FSRM)
     items:
-    - name: FSRM troubleshooting guidance
+    - name: 'Troubleshooting guidance: FSRM'
       href: ./backup-and-storage/fsrm-troubleshooting-guidance.md
     - name: Troubleshoot File Server Resource Manager
       href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
-    - name: iSCSI storage connectivity troubleshooting guidance
+    - name: 'Troubleshooting guidance: iSCSI storage connectivity'
       href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
     - name: Redundant subnets are incorrectly created
       href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
@@ -696,7 +698,7 @@ items:
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
     items:
-    - name: Multipath I/O (MPIO) troubleshooting guidance
+    - name: 'Troubleshooting guidance: Multipath I/O (MPIO)'
       href: ./backup-and-storage/windows-server-mpio-troubleshooting.md
     - name: MPIO option not available in Disk Management
       href: ./backup-and-storage/mpio-option-not-available-disk-management.md
@@ -768,6 +770,8 @@ items:
     items:
     - name: Troubleshoot Windows Server Storage Replica
       href: ./backup-and-storage/troubleshoot-windows-server-storage-replica.md
+    - name: Troubleshoot data corruption and storage replication failures in Windows Server 2025
+      href: ./backup-and-storage/troubleshoot-data-corruption-storage-replication-failures-ws2025.md
   - name: Storage Sense
     items:
     - name: Troubleshoot Windows Server Storage Sense
@@ -778,6 +782,10 @@ items:
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
+  - name: Storage Spaces Direct (S2D)
+    items:
+    - name: Delete a Storage Spaces Direct storage pool and reset the physical disks
+      href: ./backup-and-storage/delete-s2d-storage-pool-reuse-disks.md
     - name: Troubleshoot performance issues in Storage Spaces Direct
       href: ./backup-and-storage/troubleshoot-performance-issues-storage-spaces-direct.md
   - name: System Restore or resetting your computer
@@ -1148,6 +1156,8 @@ items:
       href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
     - name: Cluster Shared Volume goes offline
       href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
@@ -1212,6 +1222,14 @@ items:
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds
       href: ./high-availability/iaas-sql-failover-cluster-network-thresholds.md
+  - name: Rolling upgrades
+    items:
+    - name: Troubleshoot rolling upgrade issues
+      href: ./high-availability/troubleshoot-rolling-upgrades.md
+  - name: Site configuration
+    items:
+    - name: Troubleshoot site configuration issues   
+      href: ./high-availability/troubleshoot-site-configuration.md
 - name: Licensing and activation
   items:
   - name: Licensing and activation
@@ -2634,6 +2652,10 @@ items:
       href: ./system-management-components/open-client-can-not-connect-server.md
     - name: Troubleshoot common SFTP issues when using OpenSSH
       href: ./system-management-components/troubleshoot-sftp-issues-using-openssh.md
+    - name: Troubleshoot OpenSSH communication through Windows Firewall
+      href: ./system-management-components/troubleshoot-openssh-windows-firewall-port22.md
+    - name: Upgrade in-box OpenSSH to the latest OpenSSH release
+      href: ./system-management-components/upgrade-in-box-openssh-to-latest-openssh-release.md
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
@@ -2796,6 +2818,10 @@ items:
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
+    - name: Cluster Shared Volumes don't respond during a planned cluster node drain
+      href: ./virtualization/shared-volumes-do-not-respond.md
+    - name: Unresponsive VMs after cluster failover failure
+      href: ./virtualization/unresponsive-vms-after-cluster-failover-failure.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
     - name: Windows updates don't install on VM cluster hosts
@@ -2904,6 +2930,8 @@ items:
       href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
+    - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
+      href: ./virtualization/troubleshoot-hyper-v-virtual-machine-creation.md
     - name: Error when you manage a VHD file
       href: ./virtualization/fail-to-manage-vhd-file.md
     - name: Microsoft server software and supported virtualization environments
@@ -2914,12 +2942,12 @@ items:
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: "Troubleshooting guidance: Inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments"
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
-    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
-      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
@@ -3228,10 +3256,14 @@ items:
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
-    - name: Error 0x8007000d after installing Windows updates
+    - name: Error 0x80070003 at startup after you install a Windows update
+      href: ./installing-updates-features-roles/error-0x80070003-windows-update-fails.md
+    - name: Error 0x8007000d at startup after you install a Windows update
       href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
+      href: ./installing-updates-features-roles/error-0x800719e4-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates
