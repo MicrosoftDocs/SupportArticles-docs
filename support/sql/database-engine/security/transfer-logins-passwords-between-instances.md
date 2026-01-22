@@ -32,7 +32,7 @@ Error 18456 can also occur for several other reasons. For more information on th
 
 To transfer logins, use one of the following methods, as appropriate for your situation.
 
-### Method: Generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server
+### Generate scripts via SSMS on the source server and manually reset passwords for SQL Server logins on the destination server
 
 You can generate login scripts in SQL Server Management Studio (SSMS) by using the [Generate Scripts option for a database](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option).
 
@@ -57,7 +57,7 @@ To generate scripts via SSMS on the source server and manually reset passwords f
 1. Apply the login script from the larger generated script to the destination SQL Server.
 1. For any SQL Server Authentication logins, reset the password on the destination SQL Server and re-enable those logins.
 
-### Method: Transfer logins and passwords to the destination server (Server B) by using scripts generated on the source server (Server A)
+### Transfer logins and passwords to the destination server (Server B) by using scripts generated on the source server (Server A)
 
 1. Create stored procedures that help generate necessary scripts to transfer logins and their passwords. To do so, connect to Server A by using [SQL Server Management Studio (SSMS)](/sql/ssms/sql-server-management-studio-ssms) or any other client tool and run the following script:
 
