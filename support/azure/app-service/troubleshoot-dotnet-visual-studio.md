@@ -19,7 +19,8 @@ ms.custom: sap:Availability, Performance, and Application Issues, devx-track-csh
 > This article is for Visual Studio 2019. For troubleshooting in Visual Studio 2022, see [Remote Debug ASP.NET Core on Azure App Service.](/visualstudio/debugger/remote-debugging-azure-app-service)
 >
 
-## Overview
+## Summary
+
 This tutorial shows how to use Visual Studio tools to help debug an app in [App Service](/azure/app-service/overview), by running in [debug mode](/visualstudio/debugger/) remotely or by viewing application logs and web server logs.
 
 In this tutorial, you learn:
