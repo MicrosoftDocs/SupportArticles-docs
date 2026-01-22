@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot High CPU Usage in an IIS Application Pool
 description: Helps you identify the cause of sustained high CPU usage in an IIS app pool by using Debug Diagnostics and Performance Monitor.
-ms.date: 04/17/2025
+ms.date: 01/22/2026
 ms.reviewer: johnhart, riande, jamesche, v-shaywood
 ms.custom: sap:Site Behavior and Performance\High CPU usage
 ---
