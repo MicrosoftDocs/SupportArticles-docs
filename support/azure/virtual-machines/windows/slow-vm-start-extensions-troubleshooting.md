@@ -1,6 +1,6 @@
 ---
 title: Slow Azure Virtual Machine Start Operations Caused by Extensions in failed state
-description: Troubleshooting guide for slow Azure Virtual Machine Start operations that are caused by the extensions being in a failed state.
+description: Troubleshooting guide for slow Azure Virtual Machine Start operations that occur because extensions are in a failed state.
 ms.date: 09/02/2025
 ms.reviewer: v-ryanberg
 ms.editor: v-gsitser
@@ -24,7 +24,7 @@ Although the Azure VM guest OS is active and working, and the VM can connect suc
 
 VM extensions are software components that run inside the VM to enable configuration management, security, monitoring, and other features. VM extensions have a 90-minute provisioning timeout. They must complete their installation or update within that time limit. Typically, Azure doesn't continuously retry the failed extension immediately. Instead, the retry process is triggered the next time that a VM operation occurs that re-engages extension provisioning (such as **Start** or **Redeploy**). This retry behavior can delay completion of the operation until the extension either succeeds or times out again.
 
-If an Azure VM has one or more VM extensions stuck in a **Failed** state, you might notice that management operations (for example, **Start** or **Redeploy**) take much longer than expected. This occurs because the Azure platform treats extension provisioning as part of the overall VM operation workflow. Before the operation can be marked as completed, Azure tries to reprovision any extensions that previously failed. Therefore, the VM can remain in a **Starting** or **Updating** state for an extended period even if the guest OS is already running and you could still connect to it.
+If an Azure VM has one or more VM extensions stuck in a **Failed** state, you might notice that management operations (for example, **Start** or **Redeploy**) take much longer than expected. This delay occurs because the Azure platform treats extension provisioning as part of the overall VM operation workflow. Before the operation can be marked as completed, Azure tries to reprovision any extensions that previously failed. Therefore, the VM can remain in a **Starting** or **Updating** state for an extended period even if the guest OS is already running and you could still connect to it.
 
 ## More information
 
