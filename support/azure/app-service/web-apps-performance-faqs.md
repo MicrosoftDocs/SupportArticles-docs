@@ -15,7 +15,7 @@ ms.custom: sap:Availability, Performance, and Application Issues
 
 ## Summary
 
-This article answers common questions about availability, performance, and troubleshooting application issues in the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/). Use this guide to quickly resolve problems and optimize your app’s reliability.
+This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
 ## Where can I learn more about quotas and limits for various App Service plans?
 
@@ -145,3 +145,4 @@ To turn on failed request tracing, follow these steps:
 - If you're deploying in regions that support availability zones, consider enabling zone redundancy to enhance resiliency during regional outages. For more information, see [Reliability in Azure App Service](/azure/reliability/reliability-app-service).
 
 - App Service undergoes routine maintenance to ensure platform reliability. For more control over update behavior, especially in App Service Environment v3, configure upgrade preference.  For more information, see [Routine (planned) maintenance for Azure App Service](/azure/app-service/routine-maintenance).
+
