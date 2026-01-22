@@ -358,7 +358,7 @@ Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high-priority [state messages](../update-management/state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following example:
+DMPDownloader uses high-priority [state messages](state-messaging-description.md) to report progress to the site server. DMPDownloader logs entries that resemble the following example:
 
 ```output
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~

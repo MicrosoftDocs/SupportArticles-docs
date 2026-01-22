@@ -64,7 +64,7 @@ To troubleshoot the performance issue, follow these steps:
 
    If your usual processing rate isn't enough to handle the backlog, go to the next step.
 
-3. Change the [internal settings](../update-management/state-messaging-description.md#state_message_system-settings) of the SMS_STATE_SYSTEM component.
+3. Change the [internal settings](state-messaging-description.md#state_message_system-settings) of the SMS_STATE_SYSTEM component.
 
    > [!WARNING]
    > Serious problems might occur if you change these settings incorrectly. Microsoft can't guarantee that these problems can be solved, and doesn't support this scenario. Modify the settings at your own risk. We recommend that you restore these settings after you resolve the backlog.
