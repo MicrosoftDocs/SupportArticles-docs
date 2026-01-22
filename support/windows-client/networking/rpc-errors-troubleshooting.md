@@ -13,13 +13,19 @@ audience: itpro
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Remote Procedure Call (RPC) errors troubleshooting guidance
+# Remote Procedure Call (RPC) error troubleshooting guidance
 
-You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
+## Summary
+
+Many programs and services (for example, Active Directory replication and Microsoft Management Console (MMC)) use the Remote Procedure Call (RPC) protocol to communicate across a network. When RPC communication fails, you might see errors such as "The RPC server is unavailable." The following image shows an example of an RPC error.
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-unavailable.png" alt-text="Screenshot of an error message showing the RPC server is unavailable." border="false":::
 
-This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
+To help you diagnose and fix RPC connectivity issues, this article helps you understand how RPC works and how common issues occur. It provides step-by-step guidance to help you fix common issues. It also introduces tools that you can use to identify and fix RPC issues that're specific to your network topology.
+
+## RPC protocol basics
+
+To begin, there are several important terms to understand:
 
 - **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information. The service is a part of the RPC subsystem that resolves dynamic endpoints in response to client requests. In some cases, it dynamically assigns endpoints to servers.
 - **Tower**: Describes the RPC protocol to enable the client and server to negotiate a connection.
@@ -31,18 +37,18 @@ This is a common networking error that requires some basic familiarity with the 
   > Typically the port number is the most important information that you'll use for troubleshooting.
 - **Stub data**: The data exchanged between the functions on the client and the functions on the server. This data is the payload, the important part of the communication.
 
-## How the connection works
+### How the connection works
 
 The following diagram shows a client connecting to a server to run a remote operation. The client initially contacts TCP port 135 on the server, and then negotiates with EPM for a dynamic port number. After EPM assigns a port, the client disconnects, and then uses the dynamic port to connect to the server.  
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram that shows how a client makes an RPC connection to a remote server." border="true":::
 
 > [!IMPORTANT]  
-> If a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this scenario is to specify ports or ranges of ports for EPM to use. For more information, see [Configure how RPC allocates dynamic ports](#configure-how-rpc-allocates-dynamic-ports).
+> If a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this scenario is to specify ports or ranges of ports for EPM to use. For more information, see [Example: Configure how RPC allocates dynamic ports](#example-configure-how-rpc-allocates-dynamic-ports).
 >  
 > Some firewalls also allow UUID filtering. In this scenario, if an RPC request uses port 135 to cross the firewall and contact EPM, the firewall notes the UUID that's associated with the request. When EPM responds and sends a dynamic port number for that UUID, the firewall also notes the port number. The firewall then allows RPC bind operations for that UUID and port.
 
-### Configure how RPC allocates dynamic ports
+### Example: Configure how RPC allocates dynamic ports
 
 By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system that's used). However, this approach might not be practical, especially if the client and server must communicate through a firewall. An alternative method is to specify a port number or range of port numbers for EPM to use, and open those ports in the firewall.
 
