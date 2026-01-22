@@ -8,6 +8,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: WorkSynchronized is false
 
+## Summary
+
 This article describes how to troubleshoot work synchronization failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
 
 - `ClusterResourcePlacementWorkSynchronized` for ClusterResourcePlacement
@@ -165,8 +167,7 @@ In this situation, here are several potential solutions:
 
 In other situations, you might opt to wait for the work to finish propagating.
 
-## General Notes
-For ResourcePlacement, the investigation is identical—inspect `.status.placementStatuses[*].conditions` for `WorkSynchronized` and check the associated Work in the `fleet-member-{clusterName}` namespace.
+## General notes
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+For ResourcePlacement, the investigation is identical—inspect `.status.placementStatuses[*].conditions` for `WorkSynchronized` and check the associated Work in the `fleet-member-{clusterName}` namespace.
 

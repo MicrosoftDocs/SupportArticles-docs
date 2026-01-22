@@ -9,6 +9,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Resource propagation failure: PlacementOverridden is False
 
+## Summary
+
 This article discusses how to troubleshoot override failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
 
 - `ClusterResourcePlacementOverridden` for ClusterResourcePlacement
@@ -205,7 +207,7 @@ jsonPatchOverrides:
 
 The code adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
 
-## General Notes
+## General notes
 
 For ResourcePlacement, the override flow is identical except that all the resources reside in the same namespace. Use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 

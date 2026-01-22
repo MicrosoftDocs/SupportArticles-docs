@@ -9,6 +9,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Resource propagation failure: PlacementApplied is False
 
+## Summary
+
 This article discusses how to troubleshoot resource application failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
 
 - `ClusterResourcePlacementApplied` for ClusterResourcePlacement
@@ -294,14 +296,16 @@ Check the `Work` status, particularly the `manifestConditions` section. You can 
 
 In the situation, set the `AllowCoOwnership` to `true` in the ApplyStrategy policy. However, the user must make the decision because the resources might not be shared.
 
-## General Troubleshooting Notes
+## General troubleshooting notes
 
 The troubleshooting process and Work object inspection are identical for both placement types:
+
 - Both use the same underlying Work API to apply resources to member clusters.
 - The Work object status and manifestConditions have the same structure regardless of the placement type that created them.
 - The main difference is the scope: the cluster-scoped placement can select both cluster-scoped and namespace-scoped resources, while the namespace-scoped placement can only select namespace-scoped resources within its own namespace.
 
 For ResourcePlacement-specific considerations:
+
 - Ensure the target namespace exists on member clusters before the ResourcePlacement tries to apply resources to it
 - ResourcePlacement can only select resources within the same namespace where the ResourcePlacement object itself resides
 

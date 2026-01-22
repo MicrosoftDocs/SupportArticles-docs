@@ -8,6 +8,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: PlacementRolloutStarted is false
 
+## Summary
+
 This article describes how to troubleshoot rollout initiation failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
 
 - `ClusterResourcePlacementRolloutStarted` for ClusterResourcePlacement
@@ -404,9 +406,7 @@ After you create the `test-ns` namespace on the hub cluster, the rollout control
 
 In this situation, to address this issue, consider manually setting `maxUnavailable` to a value greater than `1` to relax the `RollingUpdate` configuration. Alternatively, you can join a third member cluster.
 
-## General Notes
+## General notes
 
 The rollout failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement. Only the snapshot object kind differs. Replace ClusterResourcePlacement (CRP)-specific object kinds with their ResourcePlacement (RP) equivalents when working with namespace-scoped placements.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 

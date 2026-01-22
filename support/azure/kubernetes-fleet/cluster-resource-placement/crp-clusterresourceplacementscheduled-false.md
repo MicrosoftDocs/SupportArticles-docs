@@ -8,6 +8,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: PlacementScheduled is false
 
+## Summary
+
 This article describes how to troubleshoot scheduling failures when you propagate resources using placement APIs in Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
 
 - `ClusterResourcePlacementScheduled` for ClusterResourcePlacement
@@ -244,8 +246,7 @@ status:
 
 In this scenario, to resolve this issue, add the `env:prod` label to the member cluster resource for `kind-cluster-2` as well, so that the scheduler can select the cluster to propagate resources.
 
-## General Notes
-The scheduling failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace ClusterResourcePlacement (CRP)-specific object kinds with their ResourcePlacement (RP) equivalents when working with namespace-scoped placements.
+## General notes
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+The scheduling failure investigation flow is identical for ClusterResourcePlacement and ResourcePlacement; only the snapshot object kind differs. Replace ClusterResourcePlacement (CRP)-specific object kinds with their ResourcePlacement (RP) equivalents when working with namespace-scoped placements.
 
