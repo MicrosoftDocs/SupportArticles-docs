@@ -44,7 +44,7 @@ The environment's consumption is computed regularly, and is reset at the beginni
 - When the computed consumption is close to the allocated credits, a banner is displayed on the **Capacity** page in the Power Platform admin center, and a notification email is sent to the administrator.
 - When the computed consumption exceeds the tenant-level or environment-level credits (125%), AI Builder actions in flows and apps are blocked, and an error message is displayed in flows and apps.
 
-Sometimes environment's consumption can be computed with an important delay (like 5 days). In such case, the decision will be made based on the last known computed consumption. This can lead to important consumption beyon the capacity before AI Builder actions are blocked or fall back to Copilot Credits. Such overage isn't billed to the customer and doesn't impact other environments.
+Sometimes environment's consumption can be computed with an important delay (like 5 days). In such case, the decision will be made based on the last known computed consumption. This can lead to important consumption beyond the capacity before AI Builder actions are blocked or fall back to Copilot Credits. Such overage isn't billed to the customer and doesn't impact other environments.
 
 ## Resolution
 
