@@ -1,3 +1,14 @@
+---
+title: Troubleshoot ApplicationGatewaySkuNotSpecified Error Code 
+description: Learn how to resolve ApplicationGatewaySkuNotSpecified error when you try to create or modify Azure Application Gateway.
+ms.date: 01/22/2026
+editor: giverm
+ms.reviewer: rimayber
+ms.service: azure-application-gateway
+ms.custom: sap:Failed operations
+#Customer intent: As an Azure Application Gateway user, I want to troubleshoot an Application Gateway create or modify operation that failed because of ApplicationGatewaySkuNotSpecified error so that I can perform the operation successfully.
+---
+
 # Troubleshoot ApplicationGatewaySkuNotSpecified Error
 
 ## Symptom:
