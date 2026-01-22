@@ -1,21 +1,23 @@
 - name: Welcome
   href: welcome-azure-kubernetes-fleet.yml
 
-- name: Cluster Resource Placement
+- name: Resource Placement
   items:
     - name: Troubleshooting Cluster Resource Placement 
       href: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
-    - name: ClusterResourcePlacementScheduled is false
+    - name: Troubleshooting Resource Placement
+      href: cluster-resource-placement/troubleshoot-resource-placement-issues.md
+    - name: PlacementScheduled is false
       href: cluster-resource-placement/crp-clusterresourceplacementscheduled-false.md
-    - name: ClusterResourcePlacementRolloutStarted is false
+    - name: PlacementRolloutStarted is false
       href: cluster-resource-placement/crp-clusterresourceplacementrolloutstarted-false.md
-    - name: ClusterResourcePlacementOverridden is false
+    - name: PlacementOverridden is false
       href: cluster-resource-placement/crp-clusterresourceplacementoverridden-false.md
-    - name: ClusterResourcePlacementWorkSynchronized is false 
+    - name: WorkSynchronized is false
       href: cluster-resource-placement/crp-clusterresourceplacementworksynchronized-false.md
-    - name: ClusterResourcePlacementApplied is false 
+    - name: PlacementApplied is false
       href: cluster-resource-placement/crp-clusterresourceplacementapplied-false.md
-    - name: ClusterResourcePlacementAvailable is false 
+    - name: PlacementAvailable is false
       href: cluster-resource-placement/crp-clusterresourceplacementavailable-false.md
 
 - name: Multi-cluster networking

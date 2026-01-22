@@ -1,19 +1,53 @@
 ---
-title: ClusterResourcePlacementAvailable is false when using ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve ClusterResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 08/05/2024
+title: PlacementAvailable failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve ClusterResourcePlacementAvailable or ResourcePlacementAvailable failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementAvailable is False
+# Resource propagation failure: PlacementAvailable is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementAvailable` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
+## Summary
+
+This article discusses how to troubleshoot resource availability failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementAvailable` for ClusterResourcePlacement
+- `ResourcePlacementAvailable` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to check the availability of resources in 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ResourcesUnavailable
+    status: "False"
+    type: ClusterResourcePlacementAvailable
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to check the availability of resources in 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: ResourcesUnavailable
+    status: "False"
+    type: ResourcePlacementAvailable
+```
+
+---
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` status shows as `False`.
+When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementAvailable` (for ClusterResourcePlacement) or `ResourcePlacementAvailable` (for ResourcePlacement) status shows as `False`.
+
+> [!NOTE]
+> To get more information about why resources are unavailable, check the work applier controller logs. Detailed failures are placed in the `failedPlacements` section of the placement status. For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 
@@ -21,10 +55,12 @@ This issue might occur because of one of the following reasons:
 
 - The member cluster doesn't have enough resource availability.
 - The deployment contains an invalid image name.
+- Required resources (such as persistent volumes, config maps, or secrets) are missing.
+- Resource quotas or limit ranges are preventing the resource from becoming available.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
-The following example shows that `ClusterResourcePlacement` doesn't propagate a deployment to a member cluster because of an invalid image name.
+The following example shows that a `ClusterResourcePlacement` is unable to propagate a deployment to a member cluster because of an invalid image name.
 
 #### ClusterResourcePlacement specifications
 
@@ -153,7 +189,7 @@ status:
     namespace: test-ns
     version: v1
  ```
-In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. This indicates that the `Work` object that's intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
+In the `failedPlacements` section for `kind-cluster-1`, the `message` field explains why the resource wasn't applied on the member cluster. In the preceding `conditions` section, the `Applied` condition for `kind-cluster-1` is flagged as `false` and shows the `NotAllWorkHaveBeenApplied` reason. The `Work` object intended for the member cluster `kind-cluster-1` wasn't applied. For more information, see [How to find the correct Work resource associated with `ClusterResourcePlacement`](troubleshoot-clusterresourceplacement-api-issues.md#find-work).
 
 ### Work status of kind-cluster-1
 ```
@@ -213,13 +249,20 @@ conditions:
     version: v1
 ```
 
-Check the `Available` status for `kind-cluster-1`. You can see that the `my-deployment` deployment isn't yet available on the member cluster. This suggests that an issue might be affecting the deployment manifest.
+Check the `Available` status for `kind-cluster-1`. You can see that the `my-deployment` deployment isn't yet available on the member cluster. An issue might be affecting the deployment manifest.
 
 ### Resolution
 
-In this situation, a potential solution is to check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After this image name is identified, you can correct the deployment manifest and update it. After you fix and update the resource manifest, the `ClusterResourcePlacement` object API automatically propagates the corrected resource to the member cluster.
+In the situation, check the deployment in the member cluster because the message indicates that the root cause of the issue is a bad image name. After you identify the image name, correct the deployment manifest and update it. After you fix and update the resource manifest, the placement object (ClusterResourcePlacement or ResourcePlacement) automatically propagates the corrected resource to the member cluster.
 
 For all other situations, make sure that the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
 
- 
+## General troubleshooting notes
+
+The troubleshooting process and Work object inspection are identical for both placement types:
+
+- Both use the same underlying Work API to apply resources to member clusters.
+- The Work object status and manifestConditions have the same structure regardless of the placement type that created them.
+- The `Available` condition in the Work status indicates whether the applied resources are now available on the member cluster.
+- The main difference is the scope: the cluster-scoped placement can select both cluster-scoped and namespace-scoped resources, while the namespace-scoped placement can only select namespace-scoped resources within its own namespace.
 
