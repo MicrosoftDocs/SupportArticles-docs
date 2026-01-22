@@ -15,7 +15,7 @@ State messaging is one of the most important reporting mechanisms in Configurati
 
 In this article, we focus on the SMS_STATE_SYSTEM component (also referred to as StateSys) that processes the incoming state messages and updates the database.
 
-For more information about the state messaging system, see [Description of state messaging in Configuration Manager](../update-management/state-messaging-description.md).
+For more information about the state messaging system, see [Description of state messaging in Configuration Manager](state-messaging-description.md).
 
 ## Symptoms
 
