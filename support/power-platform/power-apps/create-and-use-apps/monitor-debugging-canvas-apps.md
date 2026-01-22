@@ -47,10 +47,10 @@ Live monitor displays each data operation event by providing:
 - Result (success or error status code)
 - Delegation hints ([nondelegable operations](/power-apps/maker/canvas-apps/delegation-overview#nondelegable-limits) trigger client-side processing)
 
-To view the details, select an event. To understand why the operation occurred, correlate the events with nearby Trace records. For example, a surge in `getRows` calls after a Trace operation with `phase: "ApplyFilters"` might indicate an inefficient filter expression.
+To view the details, select an event. To understand why the operation occurred, correlate the events with nearby Trace records. For example, a surge in `getRows` calls after a Trace operation that includes the `phase: "ApplyFilters"` property might indicate an inefficient filter expression.
 
 > [!TIP]
-> If you see HTTP 429 (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use [collections](/power-apps/maker/canvas-apps/create-update-collection) to cache data and reduce network calls.
+> If you see `HTTP 429` (throttling), check preceding events to determine whether a loop or repeated evaluation triggered excessive operations. Optimize formulas or use [collections](/power-apps/maker/canvas-apps/create-update-collection) to cache data and reduce network calls.
 
 ### Use Trace effectively
 
@@ -72,7 +72,7 @@ To create a debug button:
 1. Add a button that's named `btnDebugSnapshot` and that has the **Visible** property set to `Param("debug") = "true"`.
 
    For more information about how to pass parameters, see [Param function](/power-platform/power-fx/reference/function-param).
-1. In `OnSelect`, call Trace with a snapshot record.
+1. In `OnSelect`, call Trace and include a snapshot record.
 1. When you test, add `&debug=true` to the app URL in order to show the button.
 
 > [!TIP]
@@ -113,7 +113,7 @@ Use this checklist when troubleshooting canvas app problems:
 
 ## Example scenarios
 
-### Scenario: App works for one user but not another
+### App works for one user but not another
 
 User A submits orders successfully, but User B sees failures and different UI behavior (for example, a discount checkbox is disabled). You suspect the underlying data differs between their accounts.
 
@@ -170,7 +170,7 @@ Trace(
 
 #### Analyze the results
 
-In Live monitor, filter by Trace events, button name, or search for "Debug:" in the info column. Compare User A to User B:
+In Live monitor, filter by Trace events, button name, or search for "Debug:" in the event data. Compare User A to User B:
 
 - Do they have different `isVIP` values? This difference could change discount calculations.
 - Are cart counts identical? If not, the upstream logic differs.
@@ -178,7 +178,7 @@ In Live monitor, filter by Trace events, button name, or search for "Debug:" in 
 
 Correlate Trace events with adjacent `getRows` or `patch` operations. If User B triggers extra data calls (for example, a nondelegable filter that forces multiple network requests), you see them in the event table.
 
-### Scenario: App works in one environment but not another
+### App works in one environment but not another
 
 Your app works correctly in *Test* but fails in *Production*. For example, a gallery loads no items, and submission is slow. Even though the app is the same, the data in each environment can differ. Missing tables, different column values, larger datasets that trigger delegation limits, or permission differences can cause the app to behave differently.
 
