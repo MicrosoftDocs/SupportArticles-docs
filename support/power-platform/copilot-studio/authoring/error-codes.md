@@ -1,6 +1,6 @@
 ---
 title: Understand Error Codes
-description: Understand error codes to troubleshoot issues in your agent design by using Microsoft Copilot Studio.
+description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
 ms.date: 01/21/2026
 ms.reviewer:
   - jameslew
@@ -13,7 +13,7 @@ ms.custom: sap:Authoring
 
 When an agent encounters a problem during a conversation, it responds by sending a message that includes an error code for the specific problem. Users of the agent should give this error code to their administrator.
 
-As an agent maker, if a problem occurs when you use the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you see a message that contains more context about the problem, in addition to the error code. Alternatively, you can use the **Topic checker** panel to [validate your agent](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
+As an agent maker, if a problem occurs when you use the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you receive a message that contains  the error code and more context about the problem. Alternatively, you can use the **Topic checker** panel to [validate your agent](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
 
 ## Error list
 
@@ -77,11 +77,11 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 
 - Expected: `{ExpectedType}`. Actual: `{ActualType}`.
 
-**Resolution:** This error occurs when a prompt action receives incorrect input or returns unexpected output types. To resolve, take one of the following actions based on the error:
+**Resolution:** This error occurs if a prompt action receives incorrect input or returns unexpected output types. To resolve the problem, take one of the following actions, based on the error:
 
-- _Type mismatch:_ Check your prompt configuration to ensure the output schema matches the expected variable type.
-- _Missing required input:_ Verify that all required inputs are connected to variables with values.
-- _Blank required value:_ Ensure the variable has a value before calling the prompt.
+- _Type mismatch:_ Check your prompt configuration to make sure that the output schema matches the expected variable type.
+- _Missing required input:_ Verify that all required inputs are connected to variables that have values.
+- _Blank required value:_ Make sure that the variable has a value before you call the prompt.
 
 For more information, see [Create a prompt action](/ai-builder/use-a-custom-prompt-in-mcs#create-a-prompt-action).
 
@@ -93,7 +93,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 #### AsyncResponsePayloadTooLarge
 
-**Error message**: The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
+**Error message**: The output that was returned by the connector was too large to be handled by the agent. Try reducing the output size by using available connector filters or by limiting the number of configured action outputs.
 
 **Resolution**: One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information about the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
 
@@ -107,11 +107,11 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 - Integrated authentication is not supported in channel `{channel}`.
 
-**Resolution:** This error occurs when your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve:
+**Resolution:** This error occurs if your agent uses actions or features that require user authentication, but authentication isn't configured. To resolve the problem:
 
 1. In your agent, go to **Settings > Security > Authentication**.
 1. Select an appropriate authentication method: **Authenticate with Microsoft** for Microsoft 365 users, or **Authenticate manually** for custom OAuth providers.
-1. If the error mentions a specific channel, verify that the channel supports the authentication method you're using. Some channels don't support integrated authentication.
+1. If the error mentions a specific channel, verify that the channel supports the authentication method that you're using. Some channels don't support integrated authentication.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
 
@@ -119,17 +119,17 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Your connected agent with schema name `{AgentSchemaName}` has an authentication mismatch with the main agent.
 
-**Resolution:** The orchestrator agent and connected sub-agent have different authentication configurations. For multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve:
+**Resolution:** The orchestrator agent and connected sub-agent have different authentication configurations. In order for multi-agent orchestration to work, both agents must use compatible authentication settings. To resolve the problem:
 
-1. Open both agents and go to **Settings > Security > Authentication**.
-1. Ensure both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
-1. If you're using manual authentication, ensure both agents are configured with the same OAuth provider and settings.
+1. Open both agents, and go to **Settings > Security > Authentication**.
+1. Make sure that both agents use the same authentication method (for example, both use **Authenticate with Microsoft**).
+1. If you're using manual authentication, make sure that both agents are configured to use the same OAuth provider and settings.
 
 The following authentication compatibility rules apply:
 
 - If the connected agent has _no authentication_ configured, any orchestrator authentication is acceptable.
 - If the connected agent _requires authentication_, the orchestrator must use the _same_ authentication method.
-- **Manual authentication (Generic OAuth2)** on the orchestrator is _not compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration or the connected agent must have no authentication requirement.
+- **Manual authentication (Generic OAuth2)** on the orchestrator is _not compatible_ with connected agents that require authentication. Both agents must use the same manual authentication configuration, or the connected agent must have no authentication requirement.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication) and [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -137,12 +137,12 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error message:** Connected agent with schema name {AgentSchemaName} not found.
 
-**Resolution:** This error occurs in multi-agent orchestration when the orchestrator agent can't find a connected sub-agent. To resolve the error:
+**Resolution:** This error occurs in multi-agent orchestration if the orchestrator agent can't find a connected sub-agent. To resolve the problem:
 
-1. Verify the connected agent exists in the same environment as the orchestrator agent.
-1. Ensure the connected agent's schema name is spelled correctly in the orchestrator configuration.
+1. Verify that the connected agent exists in the same environment as the orchestrator agent.
+1. Make sure that the connected agent's schema name is spelled correctly in the orchestrator configuration.
 1. Check that you have access permissions to the connected agent.
-1. If the connected agent was recently created, wait a few minutes and try again.
+1. If the connected agent was recently created, wait a few minutes, and then try again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -150,11 +150,10 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Connected agent with schema name `{AgentSchemaName}` needs to be published to be invoked.
 
-**Resolution:** The connected sub-agent must be published before the orchestrator agent can invoke it. To resolve the error:
-
+**Resolution:** The connected sub-agent must be published before the orchestrator agent can invoke it. To resolve the problem:
 1. Open the connected agent in Copilot Studio.
 1. Publish the agent.
-1. Return to the orchestrator agent and test again.
+1. Return to the orchestrator agent, and test again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -162,9 +161,9 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Agent chaining detected. Your agent cannot be connected to agent with schema name `{AgentSchemaName}` as it already has a connected agent.
 
-**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve the error:
+**Resolution:** Multi-level agent chaining isn't supported. An orchestrator agent can connect to sub-agents, but those sub-agents can't have their own connected agents. To resolve the problem:
 
-1. Review your agent architecture and flatten the hierarchy.
+1. Review your agent architecture, and flatten the hierarchy.
 1. Move the functionality from deeply nested agents into either the orchestrator or first-level connected agents.
 1. Consider using topics or actions instead of additional connected agents.
 
@@ -174,13 +173,13 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** No GPT component found for connected agent with schema name `{AgentSchemaName}`.
 
-**Resolution:** The connected agent is missing required description or instructions that enable it to be invoked by an orchestrator agent. To resolve the error:
+**Resolution:** The connected agent is missing a required description or instructions that enable it to be invoked by an orchestrator agent. To resolve the problem:
 
 1. Open the connected agent in Copilot Studio.
 1. Go to the agent's **Overview** page.
-1. Ensure the agent has a clear **Description** and **Instructions** configured.
-1. Publish the connected agent after making changes.
-1. Return to the orchestrator agent and test again.
+1. Make sure that the agent has a clear **Description** and **Instructions** configured.
+1. After you make changes, publish the connected agent.
+1. Return to the orchestrator agent, and test again.
 
 For more information, see [Use agents as actions in other agents (preview)](/microsoft-copilot-studio/advanced-use-dispatcher).
 
@@ -188,18 +187,18 @@ For more information, see [Use agents as actions in other agents (preview)](/mic
 
 **Error message:** Power Fx expression evaluation failed: {ErrorDetails}
 
-**Resolution:** A Power Fx expression used in a connector action failed to evaluate correctly. To resolve the error:
+**Resolution:** A Power Fx expression that's used in a connector action wasn't evaluated correctly. To resolve the problem:
 
-1. Open the topic containing the connector action.
+1. Open the topic that contains the connector action.
 1. Review the Power Fx expressions in the action's input parameters.
-1. Test the expressions with sample data to identify the issue.
+1. Test the expressions by using sample data to determine the issue.
 1. Use the formula bar's error indicators to locate specific problems.
 
 Common causes include:
 
 - Syntax errors.
 - Type mismatches, such as comparing text to numbers without conversion.
-- Null or blank values. Use functions like `IsBlank()`, `Coalesce()`, or `IfError()` for handling.
+- Null or blank values. For handling, use functions such as `IsBlank()`, `Coalesce()`, or `IfError()`.
 - Invalid function usage.
 
 For more information, see [Use Power Fx in Copilot Studio](/microsoft-copilot-studio/advanced-power-fx).
@@ -224,7 +223,7 @@ Common problems include:
 
 #### DataLossPreventionViolation
 
-**Error message**: This environment requires users to sign in before they can use the agent. Go to Manage > Security > Authentication and select the option that requires users to sign in.
+**Error message**: This environment requires users to sign in before they can use the agent. Go to **Manage** > **Security** > **Authentication**, and select the option that requires users to sign in.
 
 **Resolution**
 
@@ -236,16 +235,16 @@ Common problems include:
 
 **Error message:** Conversation state size exceeds the maximum allowed limit.
 
-**Resolution:** The conversation accumulates too much data in its state, exceeding the allowed size limits. To resolve:
+**Resolution:** The conversation accumulates too much data in its state, exceeding the allowed size limits. To resolve the problem:
 
 1. Reduce variable data by reviewing your topics and reducing the amount of data stored in variables during the conversation.
-1. Clear unused variables by setting them to blank when they're no longer needed.
+1. Clear unused variables by setting them to blank if they're no longer needed.
 1. Simplify conversation flows by breaking complex conversations into smaller, more focused interactions.
 1. Avoid storing large JSON objects, arrays, or text blocks in conversation variables.
 
 To prevent this error:
 
-- Use variables only for data that needs to persist across topics.
+- Use variables only for data that has to persist across topics.
 - Consider using Power Automate flows to store and retrieve large data from external sources instead of keeping it in conversation state.
 
 For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas).
@@ -254,7 +253,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution**: This message appears when an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution**: This message appears if an agent reaches its message capacity or the pay-as-you-go meter reaches its limit. To resolve the problem, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within five minutes. For more information, see [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionBadRequest
 
@@ -293,13 +292,13 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: The usage limit for search and summarize has been reached. Please try again later.
 
-**Resolution**: The agent returns this message when it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message if it reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### GenAIToolPlannerRateLimitReached
 
 **Error message**: The usage limit for generative orchestration has been reached. Please try again later.
 
-**Resolution**: The agent returns this message when it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: The agent returns this message if it reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### InfiniteLoopInBotContent
 
@@ -323,7 +322,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-A Responsible AI check blocks the content for hateful content. Hateful content refers to any content that attacks or uses discriminatory language that refers to a person or identity group based on certain differentiating attributes of these groups.
+A Responsible AI check blocks the content that's considered to be hateful. Hateful content refers to any content that attacks or uses discriminatory language against a person or identity group based on certain differentiating attributes of these groups.
 
 This restriction includes, but isn't limited to, content about:
 
@@ -341,7 +340,7 @@ This restriction includes, but isn't limited to, content about:
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-A security check blocks the content for a jailbreak attempt. A jailbreak attempt is a user prompt attack that ignores system prompts and tries to alter the intended agent behavior. These attacks include attempts to change system rules, embedding a conversation mockup to confuse the model, role-play, and encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
+A security check blocks the content of a jailbreak attempt. A jailbreak attempt is a user prompt attack that ignores system prompts and tries to alter the intended agent behavior. These attacks include attempts to change system rules, embedding a conversation mockup to confuse the model, role-play, and encoding attacks. For more information, see [Prompt Shields in Azure AI Content Safety](/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 **Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
@@ -349,7 +348,7 @@ A security check blocks the content for a jailbreak attempt. A jailbreak attempt
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-An attack was detected from information that's not directly supplied by the agent author or the user, such as external documents. Attackers attempt to embed instructions in grounded data that's provided by the user in order to maliciously gain control of the system by:
+An attack was detected from information that's not directly supplied by the agent author or the user, such as external documents. Attackers try to embed instructions in grounded data that's provided by the user in order to maliciously gain control of the system by:
 
 - Manipulating content
 - Intrusion
@@ -370,7 +369,7 @@ A Responsible AI check blocked content that's related to self-harm. Self-harm de
 
 This restriction includes, but isn't limited to, content about:
 
-- Eating disorder
+- Eating disorders
 - Bullying and intimidation
 
 **Resolution**: To avoid this situation, reinforce responsible AI guidelines together with your agent users. You can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
@@ -379,7 +378,7 @@ This restriction includes, but isn't limited to, content about:
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-A Responsible AI check blocked content for sexual content. Sexual content describes language that's related to anatomical organs and genitals, romantic relationships, sexual acts, and acts that are portrayed in erotic or affectionate terms, including those portrayed as an assault or a forced sexual violent act against one's will.
+A Responsible AI check blocked content that's considered to be sexual. Sexual content describes language that's related to anatomical organs and genitals, romantic relationships, sexual acts, and acts that are portrayed in erotic or affectionate terms, including those portrayed as an assault or an act of sexual violence.
 
 This restriction includes, but isn't limited to, content about:
 
@@ -395,13 +394,13 @@ This restriction includes, but isn't limited to, content about:
 
 **Error message**: An error has occurred.
 
-**Resolution**: Your agent reached the maximum number of generative answers responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
+**Resolution**: Your agent reached the maximum number of generative answer responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### OpenAIViolence
 
 **Error message**: The content was filtered due to Responsible AI restrictions.
 
-A Responsible AI check blocked content for violent content. Violent content describes language that's related to physical actions intended to hurt, injure, damage, or kill someone or something. It also describes weapons, guns, and related entities.
+A Responsible AI check blocked content that's considered to be violent. Violent content describes language that's related to physical actions that are intended to hurt, injure, damage, or kill someone or something. It also describes weapons, guns, and related entities.
 
 This restriction includes, but isn't limited to, content about:
 
@@ -444,7 +443,7 @@ For more information, see [Maximum channel data message size limits when using C
 
 **Error message**: The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution**: This error indicates that the request that was sent to OpenAI exceeds the maximum request size allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If it's possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
+**Resolution**: This error indicates that the request that was sent to OpenAI exceeds the maximum request size that's allowed. The request includes the user input, output from previous actions, tools that were called, and conversation history. Review the tools that you use. If it's possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
@@ -471,7 +470,7 @@ For more information, see [Maximum channel data message size limits when using C
 | **2019**                | "We couldn't find your environment. It may have been deleted."                                                                                                           | Your environment was deleted. To configure a new environment, see [Work with Power Platform environments][11].                                                                                                            |
 | **2020**                | "Something happened, and `{Flow Name}` isn't working in `{Topic Name}`. Try again later. If the issue persists, check your flow's setup and run history."                | Your Power Automate flow isn't working. Try again later. If the issue persists, [check the flow for errors][6].                                                                                                           |
 | **2021**                | "Number of dialogs executed in the current turn exceeded the maximum of `{Dialog Limit}`."                                                                               | By default, the maximum number of topics is 50. Reduce the number of topics, then try again.                                                                                                                              |
-| **2022**                | "The bot sent more than `{Message Limit}` messages in this turn."                                                                                                        | Limit messages per turn to under 30.                                                                                                                                                                                      |
+| **2022**                | "The bot sent more than `{Message Limit}` messages in this turn."                                                                                                        | Limit messages per turn to less than 30.                                                                                                                                                                                      |
 | **2024**                | "This environment requires users to sign in before they can use the bot. Go to Manage > Security > Authentication and select the option that requires users to sign in." | Your environment data policies require that users sign in. To learn how to require users to sign in, see [Configure user authentication][20].                                                                          |
 | **2025**                | "There are one or more empty nodes in topic `{Topic Name}`, Please check your content."                                                                                  | Add content to empty nodes or remove them from the topic.                                                                                                                                                                 |
 | **2025**                | "`{Topic Name}` is redirecting to a topic, which has been turned off. Return to `{Topic Name}` and check your content."                                                  | Your topic is [redirecting][2] to another topic that has been turned off. [Turn on the other topic][21] or [remove the redirect node][22].                                                                                |
@@ -483,7 +482,7 @@ For more information, see [Maximum channel data message size limits when using C
 | **2102**                | "The user sent a message which is too large to process."                                                                                                                 | You sent a message that's too large to process. Shorten your message, then try again.                                                                                                                                    |
 | **3000**                | "Unexpected error"                                                                                                                                                       | A system error occurred. [Contact customer support][17] for more details.                                                                                                                                                 |
 | **3001**                | "Power Automate isn't available for your flow `{Flow Name}` now. Try again later."                                                                                       | Power Automate isn't responding. Restart the conversation with your bot, and try again. If the issue persists, [contact customer support][17].                                                                             |
-| **3002**                | "Something happened in Power Automate, and your request to your flow `{Flow Name}` wasn't accepted. Try again later."                                                    | An error occurred in Power Automate, and the request to your flow wasn't accepted. Your flow might have taken more than 2 minutes to respond.                                                                              |
+| **3002**                | "Something happened in Power Automate, and your request to your flow `{Flow Name}` wasn't accepted. Try again later."                                                    | An error occurred in Power Automate, and the request to your flow isn't accepted. Your flow might take more than two minutes to respond.                                                                              |
 | **3003**                | "There's a network problem connecting to your flow `{Flow Name}`. Please try again later."                                                                               | Try again later. If the issue persists, [contact customer support][17].                                                                                                                                                   |
 
 [3]: /microsoft-copilot-studio/advanced-hand-off
