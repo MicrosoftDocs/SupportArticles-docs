@@ -60,16 +60,6 @@ Set-ExecutionPolicy Bypass -Force
 .\vmassist.ps1
 ```
 
-### Option 3: Download from browser
-
- 1. Download the ```vmassist.ps1``` file [from a web browser](https://aka.ms/vmassist).
- 1. In an elevated PowerShell window, make sure that you're in the same directory that you downloaded the script to, and then run the following code to run the script:
-
- ```powershell
-Set-ExecutionPolicy Bypass -Force
-.\vmassist.ps1
- ```
-
 ## Analyzing output
 
 The script runs a series of checks to analyze the health of the VM Guest Agent and look for various known configurations that could cause issues. Each check either passes or fails in the PowerShell window. 
