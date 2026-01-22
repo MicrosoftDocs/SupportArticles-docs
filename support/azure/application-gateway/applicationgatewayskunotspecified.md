@@ -45,5 +45,5 @@ The **SKU** (Standard or WAF) for the Application Gateway was not provided durin
 ---
 
 ### More Information:
-[Application Gateway SKU Types](https://learn.microsoft.com/en-us/azure/application-gateway/overview-v2#sku-types)
+[Application Gateway SKU Types](https://learn.microsoft.com/azure/application-gateway/overview-v2#sku-types)
 
