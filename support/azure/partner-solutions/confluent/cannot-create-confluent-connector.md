@@ -14,8 +14,6 @@ ai-usage: ai-assisted
 
 # Can't create a Confluent connector
 
-## Summary
-
 This article helps you resolve failures that can occur when you try to create a Confluent connector in Azure.
 
 ## Prerequisites
