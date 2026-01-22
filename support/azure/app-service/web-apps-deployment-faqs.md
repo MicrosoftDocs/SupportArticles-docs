@@ -10,6 +10,8 @@ ms.custom: sap:Application Code Deployment
 ---
 # Deployment FAQs for Web Apps in Azure
 
+## Summary
+
 This article has answers to frequently asked questions (FAQs) about deployment issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
  
