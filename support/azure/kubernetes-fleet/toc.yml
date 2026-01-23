@@ -1,5 +1,9 @@
+items:
 - name: Welcome
   href: welcome-azure-kubernetes-fleet.yml
+- name: Unable to connect to Azure Fleet Manager
+  href: unable-connect-azure-fleet-manager.md
+- name: Cluster Resource Placement
 
 - name: Resource Placement
   items:

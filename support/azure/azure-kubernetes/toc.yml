@@ -25,6 +25,8 @@ items:
       href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
     - name: Node count isn't in autoscaler min and max range
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
+    - name: Troubleshoot pods remain in a Pending state scenario
+      href: create-upgrade-delete/troubleshoot-pods-remain-pending-state-scenario.md 
   - name: Start operations
     items:
     - name: Basic troubleshooting
