@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Active Directory replication
 description: Introduces general guidance for troubleshooting scenarios related to Active Directory replication.
-ms.date: 01/15/2025
+ms.date: 01/26/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -44,7 +44,7 @@ After you rule out intentional disconnections and hardware failures, the replica
 
 - Monitor replication health daily, or use `Repadmin` to retrieve replication status daily.
 - Try to resolve any reported failure in a timely manner by using the methods that are described in the event messages and this guide. If software is causing the problem, uninstall the software before you continue to try other solutions.
-- If the problem that is causing replication to fail can’t be resolved by any known methods, remove AD DS from the server, and then reinstall it. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816644%28v=ws.10%29).
+- If the problem that is causing replication to fail can't be resolved by any known methods, remove AD DS from the server, and then reinstall it. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816644%28v=ws.10%29).
 - If AD DS can't be removed in a typical manner while the server is connected to the network, use one of the following methods to resolve the problem:
   - Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.
   - Reinstall the operating system, and rebuild the domain controller.
@@ -72,7 +72,7 @@ If no items appear in the "Inbound Neighbors" section of the output that is gene
 Repadmin message:  
 > Access is denied.
 
-A replication link exists between two domain controllers, but replication can’t be done correctly because of an authentication failure. See [Active Directory replication fails with error 5: Access is denied](replications-fail-with-error-5.md).
+A replication link exists between two domain controllers, but replication can't be done correctly because of an authentication failure. See [Active Directory replication fails with error 5: Access is denied](replications-fail-with-error-5.md).
 
 ### Error code 49
 
