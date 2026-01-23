@@ -18,6 +18,8 @@ ms.date: 07/10/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses and resolves common issues that you might experience when you use `yum` and `dnf` package management tools to install or update applications on Microsoft Azure virtual machines (VMs).
 
 > [!CAUTION]
@@ -427,7 +429,7 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
      > [!NOTE]
      > Support for RHEL 7 EUS ended on August 30, 2021. We recommend that you no longer use EUS repositories in RHEL 7.
      >
-     > Support for RHEL 8 EUS ended on May 31, 2025. RHEL 8.10 is the last planned minor release of RHEL 8, and is still supported, but is not an EUS release. We recommend that you no longer use EUS repositories in RHEL 8, and instead switch to the non-EUS repos.
+     > Support for RHEL 8 EUS ended on May 31, 2025. RHEL 8.10 is the last planned minor release of RHEL 8 and is still supported, but isn't an EUS release. We recommend that you no longer use EUS repositories in RHEL 8 and instead switch to the non-EUS repos.
      >
      > RHEL 9._x_ versions for EUS are available. Currently, these versions include RHEL 9.6 and 9.4.
      >
