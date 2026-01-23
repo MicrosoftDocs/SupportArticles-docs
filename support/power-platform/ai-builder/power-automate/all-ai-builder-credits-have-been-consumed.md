@@ -109,7 +109,7 @@ You must be the billing administrator of your tenant to perform these steps.
 1. Search for AI Builder.
 1. Select **AI Builder Capacity Add-on T1**, **AI Builder Capacity Add-on T2 (min 10 packs)**, or **AI Builder Capacity Add-on T3 (min 50 packs)**, depending on how many packs you need. Each pack provides 1 million AI Builder credits.
 1. Follow the purchase process.
-1. Once purchased, follow the steps in [How to change the number of environment-allocated credits](#how-to-change-the-number-of-environment-allocated-credits) if the credits come from the environment level.
+1. Once purchased, follow the steps in [How to change the number of environment-allocated AI Builder credits](#how-to-change-the-number-of-environment-allocated-ai-builder-credits) if the credits come from the environment level.
 
 > [!NOTE]
 > If the **Allow users to consume unassigned credit** setting is disabled, the unassigned credits can't be used. You can go to the Power Platform admin center, select **Settings**, and then open the **AI Builder credit** page to enable this setting.
