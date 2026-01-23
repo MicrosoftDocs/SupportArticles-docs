@@ -356,4 +356,4 @@ We'll keep this article updated. Here's a short link you can use to come back fo
 - [Conditional Access: Block access by location](/azure/active-directory/conditional-access/howto-conditional-access-policy-location)
 - [Find help and get support for Microsoft Entra ID](/azure/active-directory/fundamentals/how-to-get-support)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

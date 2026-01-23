@@ -41,4 +41,4 @@ nslookup <container-registry-name>.azurecr.io 168.63.129.16
 
 If Azure DNS resolves the name, check your device DNS settings. If the device is using a custom DNS server (not Azure DNS), make sure that the custom DNS server can resolve the name of the container registry sign-in server.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

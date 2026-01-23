@@ -48,4 +48,4 @@ For more information, see [Add federation with SAML/WS-Fed identity providers](/
 
 For a full list of Microsoft Entra authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

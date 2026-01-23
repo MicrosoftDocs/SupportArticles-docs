@@ -98,4 +98,4 @@ The guidance for fixing the disk disappearance issue differs depending on whethe
 
 - [Event ID 157 "Disk # has been surprise removed"](/archive/blogs/ntdebugging/event-id-157-disk-has-been-surprise-removed)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

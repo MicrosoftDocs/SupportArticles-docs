@@ -127,4 +127,4 @@ If a virtual appliance, such as a firewall, controls the traffic between subnets
 
 Use the [Kudu service](/azure/app-service/resources-kudu) for additional troubleshooting. You can connect to the Kudu service. For example, use Bash to test DNS resolution by running `nslookup <acr-name>.azurecr.io`, or check connectivity by using `tcpping <acr-name>.azurecr.io`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

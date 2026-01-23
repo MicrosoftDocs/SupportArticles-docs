@@ -51,4 +51,4 @@ The serial console shows the error message: **Another connection is currently in
 * Learn more about the [Azure Serial Console for Linux VMs](../linux/serial-console-linux.md)
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

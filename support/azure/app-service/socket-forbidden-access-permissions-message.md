@@ -12,6 +12,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # "An attempt was made to access a socket in a way forbidden by its access permissions" message
 
+## Summary
+
 This article discusses possible causes and solutions for the message "An attempt was made to access a socket in a way forbidden by its access permissions" in Azure App Service.
 
 ## Symptom

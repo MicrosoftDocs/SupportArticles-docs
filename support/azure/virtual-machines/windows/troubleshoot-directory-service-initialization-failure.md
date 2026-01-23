@@ -193,4 +193,4 @@ To enable Serial Console and memory dump collection, follow these steps:
    >
    > [How to upload existing on-premises Hyper-V domain controllers to Azure by using Azure PowerShell](https://support.microsoft.com/help/2904015)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

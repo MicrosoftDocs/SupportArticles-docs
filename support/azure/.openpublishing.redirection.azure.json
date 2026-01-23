@@ -6504,6 +6504,10 @@
         "source_path": "information-protection/welcome-information-protection.yml",
         "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client",
         "redirect_document_id": false
+      },
+        {
+        "source_path": "app-service/faqs-app-service-linux.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux-new"
       }
   ]
 }

@@ -9,6 +9,8 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 
 # Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
 
+## Summary
+
 This troubleshooting guide helps you resolve `ClusterResourcePlacement` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
 
 - `ClusterResourceSnapshot`
@@ -161,5 +163,3 @@ To find the correct work resource, follow these steps:
 
    > [!NOTE]  
    > In this command, replace `{clusterName}` and `{CRPName}` with the names that you identified in the first step.
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

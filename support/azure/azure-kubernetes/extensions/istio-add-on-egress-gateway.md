@@ -223,4 +223,4 @@ To originate TLS and apply authorization policies at the egress gateway, workloa
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -10,6 +10,8 @@ ms.reviewer: jugonza
 ---
 # Troubleshoot virtual network integration with Azure App Service
 
+## Summary
+
 This article describes tools you can use to troubleshoot connection issues in Azure App Service that [integrate with a virtual network](/azure/app-service/overview-vnet-integration).
 
 > [!NOTE]
@@ -215,4 +217,4 @@ To download the trace file, connect to the Web App via methods such as Kudu, FTP
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

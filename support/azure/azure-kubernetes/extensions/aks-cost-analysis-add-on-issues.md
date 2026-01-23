@@ -117,6 +117,6 @@ If the pod is stuck in the Pending state with the FailedScheduling error, the no
 
 The current memory request of the cost-analysis-agent pod is set to 500 MB. Ensure that there's sufficient allocatable memory for the pod to be scheduled
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [aks-update]: /cli/azure/aks#az-aks-update

@@ -171,4 +171,4 @@ For Azure Blob Storage logging, the logs are in the `msallogs` and `msgraphlogs`
 
 :::image type="content" source="media/enable-logging-for-msal-and-microsoft-graph/azure-blob-storage-logs.png" alt-text="Screenshot that shows Azure Blob Storage logs":::
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

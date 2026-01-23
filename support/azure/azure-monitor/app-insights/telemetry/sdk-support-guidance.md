@@ -53,4 +53,4 @@ Reference the release notes to see the current version of Application Insights S
 
 Our [Service Updates](https://azure.microsoft.com/updates/?service=application-insights) also summarize major Application Insights improvements.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

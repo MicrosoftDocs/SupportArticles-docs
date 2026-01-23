@@ -87,4 +87,4 @@ The following cmdlet specifies that network bandwidth throttling will not be use
 Set-OBMachineSetting -NoThrottle
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -12,6 +12,8 @@ search.audienceType:
 ---
 # Troubleshoot user access issues for different environments
 
+## Summary
+
 This article helps administrators diagnose and resolve common user access issues in Power Platform environments. You'll learn how to use the built-in diagnostics tool to identify problems with permissions, licenses, security roles, and group memberships that prevent users from accessing environments and resources.
 
 To access an environment, a user must meet the following criteria:

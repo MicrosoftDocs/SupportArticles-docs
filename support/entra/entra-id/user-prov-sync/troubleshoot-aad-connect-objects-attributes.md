@@ -336,7 +336,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
     Import-Module ADSyncTools
     Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
-    Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+    Export-ADSyncToolsObjects -ObjectId '{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}' -Source Metaverse -ExportSerialized
     ```
 
     > [!TIP]
@@ -452,7 +452,7 @@ Install-Module ADSyncTools
 
 Import-Module ADSyncTools
 Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
-Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+Export-ADSyncToolsObjects -ObjectId '{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}' -Source Metaverse -ExportSerialized
 ```
 
 > [!TIP]
@@ -599,4 +599,4 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

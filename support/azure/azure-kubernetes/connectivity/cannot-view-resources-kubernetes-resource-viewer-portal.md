@@ -40,4 +40,4 @@ This behavior is expected. To view the AKS resources in the Azure portal, you mu
 
 - [How to find my IP to include in --api-server-authorized-ip-ranges?](/azure/aks/api-server-authorized-ip-ranges#how-to-find-my-ip-to-include-in---api-server-authorized-ip-ranges)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

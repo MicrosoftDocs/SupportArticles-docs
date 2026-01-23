@@ -62,4 +62,4 @@ If your runbook can't call an executable or subprocess in an Azure sandbox, run 
 - [Understand how Azure Resource Manager throttles requests](/azure/azure-resource-manager/management/request-limits-and-throttling)
 - [Troubleshooting API throttling errors](../../virtual-machines/windows/troubleshooting-throttling-errors.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

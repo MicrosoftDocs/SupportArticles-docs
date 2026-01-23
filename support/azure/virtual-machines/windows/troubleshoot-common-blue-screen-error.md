@@ -64,4 +64,4 @@ To enable the dump log and the serial console, follow these steps:
 
 1. Repeat the instructions in the [Step 1: Locate the dump file and submit a support ticket](#step-1-locate-the-dump-file-and-submit-a-support-ticket) section.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

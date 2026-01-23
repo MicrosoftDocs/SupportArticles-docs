@@ -62,6 +62,6 @@ The following table lists the steps, error messages, and possible causes that yo
 
 Some regions restrict the use of TLS 1.3. If you experience connectivity issues in these regions, try an earlier version of TLS, such as TLS 1.2. For details about TLS 1.3, see [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446). To learn more about the supported regions, see [Supported TLS configurations](/azure/azure-monitor/app/availability?tabs=standard#supported-tls-configurations).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

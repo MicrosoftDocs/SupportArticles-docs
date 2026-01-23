@@ -12,11 +12,13 @@ ms.custom:  sap:Connection issues with SSL or TLS, SSL Certificates and Domains
 ---
 # Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
 
+## Summary
+
 When you add a custom domain to an Azure App Service instance as a web app, misconfigurations can cause validation errors, domain name service (DNS) resolution failures, or SSL issues. This guide provides:
 
-- A step-by-step troubleshooting flow, featuring a linear process to help you diagnose and fix custom domain problems
+- A step-by-step troubleshooting flow, featuring a linear process to help you diagnose and fix custom domain problems.
 
-- Common issues and solutions, featuring a catalog of frequently reported issues together with their causes and resolutions
+- Common issues and solutions, featuring a catalog of frequently reported issues together with their causes and resolutions.
 
 ## Troubleshooting steps
 
@@ -335,6 +337,6 @@ domain might be intended for internal use only.
 
 **Solution**: Verify the IP where your custom domain is resolving. If it's a private address, then external users can't reach it by design. In such cases, either expose the site by using a public IP or proxy, or make sure that clients are within the network (for example, by using a VPN). If this situation isn't intentional, you might have configured a private endpoint. Consider removing the private endpoint for a purely public web app. If you expected internal-only access, and you see external exposure, make sure that you didn't use a public DNS for an internal app. Internal apps should use DNS entries that resolve internally only (for example, by using Azure Private DNS). Make sure that you match your DNS configuration to your network setup.
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

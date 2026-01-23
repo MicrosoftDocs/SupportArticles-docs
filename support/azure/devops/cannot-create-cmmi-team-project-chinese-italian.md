@@ -45,4 +45,4 @@ The fix for this issue will be included in Team Foundation Server 2017 Update 1.
 
 6. Reupload the template.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 
