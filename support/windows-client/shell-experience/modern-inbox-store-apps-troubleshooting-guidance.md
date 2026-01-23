@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom:
-- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- sap:windows desktop and shell experience\modern, inbox and microsoft store apps
 - pcy:WinComm User Experience
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, raviks, v-lianna
 ms.localizationpriority: medium
@@ -15,10 +15,20 @@ appliesto:
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 
+## Summary
+
+This article helps you diagnose and fix issues that affect modern apps, inbox apps, and Microsoft Store apps. Such issues can prevent apps from starting or launching, or cause apps to stop responding in Windows. This article provides a systematic troubleshooting approach for support agents and IT professionals. This article includes step-by-step guidance for fixing the following common issues:
+
+- Apps aren't registered or installed correctly for user accounts
+- App activation fails, requiring re-registration
+- Corrupted or missing app packages
+- Permission issues affect app functionality
+- AppLocker policies block apps
+
+The troubleshooting guidance includes Windows PowerShell commands, registry and file permission checks, and data collection methods to help identify and fix app-related issues.
+
 > [!NOTE]  
 > This article is intended for use by support agents and IT professionals. If you're looking for more general information, see [Repair apps and programs in Windows](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-e90eefe4-d0a2-7c1b-dd59-949a9030f317).
-
-Modern Apps or Microsoft Store Apps can sometimes fail to start or launch and then stop responding. This guide discusses troubleshooting techniques that you can use to troubleshoot such issues.
 
 ## Troubleshooting checklist
 
@@ -74,7 +84,7 @@ Here's the detailed troubleshooting checklist:
    Get-AppxPackage *calculator*| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"} 
    ```
 
-   > [!NOTE]
+   > [!NOTE]  
    > Notice how we return the output from the `Get-AppxPackage` cmdlet to feed into the `Add-AppxPackage` cmdlet using the pipe `|` cmdlet. This only works if the package is already registered.
 
 1. <a id="checklist-3"></a>If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the *AppxManifest.xml* file.
@@ -176,10 +186,10 @@ Appx packages can be removed by using the [Remove-AppxPackage](/powershell/modul
 - You need to remove unwanted inbox Apps.
 - You need to uninstall Apps flagged as vulnerable by security software.
 
-> [!WARNING]
+> [!WARNING]  
 > Removing an Appx Package can be irreversible. Make sure you are running these commands from the correct User's context, and for the correct Package.
 
-> [!WARNING]
+> [!WARNING]  
 > Removing the Microsoft Store App is not supported. For more information, see [Removing, uninstalling, or reinstalling Microsoft Store app isn't supported](cannot-remove-uninstall-or-reinstall-microsoft-store-app.md).
 
 To remove the App, follow these steps:
@@ -206,7 +216,7 @@ To remove the App for all user accounts on the computer, you can add the `-AllUs
 Remove-AppxPackage -Package '<package_name>' -AllUsers
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > In this command, \<package_name> represents the package that you want to remove.
 
 The `Remove-AppxPackage` command has other switches that can be used to customize its behavior. For more information about the command, see [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
