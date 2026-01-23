@@ -16,7 +16,7 @@ appliesto:
 # Advanced troubleshooting for Event ID 41: "The system has rebooted without cleanly shutting down first"
 
 > [!NOTE]
-> Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about blue screen error messages, please visit [Troubleshoot blue screen errors](https://support.microsoft.com/help/14238/windows-10-troubleshoot-blue-screen-errors).
+> Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about blue screen error messages, visit [Troubleshoot blue screen errors](https://support.microsoft.com/help/14238/windows-10-troubleshoot-blue-screen-errors).
 
 The preferred way to shut down Windows is to select **Start**, and then select an option to turn off or shut down the computer. When you use this standard method, the operating system closes all files and notifies the running services and applications so that they can write any unsaved data to disk and flush any active caches.
 
@@ -42,7 +42,7 @@ PowerButtonTimestamp 0Converts to 0x9f (0x3, 0xfffffa80029c5060, 0xfffff8000403d
 
 ## How to use Event ID 41 when you troubleshoot an unexpected shutdown or restart
 
-By itself, Event ID 41 might not contain sufficient information to explicitly define what occurred. Typically, you've to also consider what was occurring at the time of the unexpected shutdown (for example, the power supply failed). Use the information in this article to identify a troubleshooting approach that is appropriate for your circumstances:
+By itself, Event ID 41 might not contain sufficient information to explicitly define what occurred. Typically, you've to also consider what was occurring at the time of the unexpected shutdown (for example, the power supply failed). Use the information in this article to identify a troubleshooting approach that's appropriate for your circumstances:
 
 - [Scenario 1](#scenario-1-the-computer-restarts-because-of-a-stop-error-and-event-id-41-contains-a-stop-error-bug-check-code): The computer restarts because of a Stop error, and Event ID 41 contains a Stop error (bug check) code
 - [Scenario 2](#scenario-2-the-computer-restarts-because-you-pressed-and-held-the-power-button): The computer restarts because you pressed and held the power button
@@ -81,7 +81,7 @@ After you identify the hexadecimal value, use the following references to contin
 
 ## Scenario 2: The computer restarts because you pressed and held the power button
 
-Because this method of restarting the computer interferes with the Windows shutdown operation, we recommend that you use this method only if you've no alternative. For example, you might have to use this approach if your computer isn't responding. When you restart the computer by pressing and holding the power button, the computer logs an Event ID 41 that includes a non-zero value for the **PowerButtonTimestamp** entry.
+Because this method of restarting the computer interferes with the Windows shutdown operation, we recommend that you use this method only if you've no alternative. For example, you might have to use this approach if your computer isn't responding. When you restart the computer by pressing and holding the power button, the computer logs an Event ID 41 that includes a nonzero value for the **PowerButtonTimestamp** entry.
 
 ```xml
 <EventData>
@@ -135,11 +135,11 @@ The information in Event ID 41 provides some indication of where to start checki
   </EventData>
   ```
 
-  However, there is an event ID 46 logged by volmgr : **Crash dump initialization failed!**. This event may occur if the computer started without a configured dump file. The default dump file is the pagefile.
+  However, there's an event ID 46 logged by volmgr : **Crash dump initialization failed!**. This event might occur if the computer started without a configured dump file. The default dump file is the pagefile.
   
   :::image type="content" source="media/event-id-41-restart.md/event-id-screenshot.png" alt-text="Screenshot of the event log." border="true":::
   
-  Therefore, when you have a case with an unexpected restart and event ID 41 has all value as **0**, check if you have an event ID 46 by volmgr. If so, check the pagefile configuration. Unexpected reboots could still happened due to a bugcheck, but the system can not write the bugcheck type in event ID 41 and could not also generate a memory dump. See [Event ID 46 when you start a computer](../../windows-server/performance/event-id-46-start-a-computer.md)
+  Therefore, when you have a case with an unexpected restart and event ID 41 has all value as **0**, check if you have an event ID 46 by volmgr. If so, check the pagefile configuration. A bugcheck could still cause an unexpected restart, but the system can't write the bugcheck type in event ID 41 and couldn't also generate a memory dump. See [Event ID 46 when you start a computer](../../windows-server/performance/event-id-46-start-a-computer.md)
 
 Typically, the symptoms described in this scenario indicate a hardware problem. To help isolate the problem, do the following steps:
 
@@ -147,8 +147,8 @@ Typically, the symptoms described in this scenario indicate a hardware problem. 
 - Check the memory. Use a memory checker to determine the memory health and configuration. Verify that all memory chips run at the same speed and that every chip is configured correctly in the system.
 - Check the power supply. Verify that the power supply has enough wattage to appropriately handle the installed devices. If you added memory, installed a newer processor, installed more drives, or added external devices, such devices can require more energy than the current power supply can provide consistently. If the computer logged event ID 41 because the power to the computer was interrupted, consider obtaining an uninterruptible power supply (UPS) such as a battery backup power supply.
 - Check for overheating. Examine the internal temperature of the hardware and check for any overheating components.
-- If the computer is a physical machine, it could have been restarted by an Automatic Server Recovery (ASR) software that detected the machine is not responsive.
-- If system is running in a Hyper-V virtual machine (VM), and is not part of a clustered environment, the system could have been restarted by the Hyper-V heartbeat feature. If this feature is enabled and the host does not detect a heartbeat from the VM (maybe because it's not responsive), Hyper-V will restart the VM.
+- If the computer is a physical machine, it could have been restarted by an Automatic Server Recovery (ASR) software that detected the machine isn't responsive.
+- If system is running in a Hyper-V virtual machine (VM), and isn't part of a clustered environment, the system could have been restarted by the Hyper-V heartbeat feature. If this feature is enabled and the host doesn't detect a heartbeat from the VM (maybe because it's not responsive), Hyper-V restarts the VM.
 - If the issue occurs in a Hyper-V clustered environment, the issue could be related to the **Enable heartbeat monitoring for the virtual machine** option. See [Corrupted memory dump file when you try to obtain a full memory dump file from a virtual machine that is running in a cluster environment](../../windows-server/high-availability/corrupted-memory-dump-file.md).
 - If the issue occurs with a VMWare VM, it could be related to the heartbeat feature in VMWare, or the VM is part of some third party cluster.
 - Check for any suspicious event before the shutdown time (obtained from event ID 6008) in both Application and System log.
@@ -168,7 +168,7 @@ If you perform these checks and still can't isolate the problem, set the system 
 
 The Kernel Power event ID 41 error occurs when the computer shuts down or restarts unexpectedly. When a Windows-based computer starts, a check is performed to determine whether the computer was shut down cleanly. If not, a Kernel Power event ID 41 message is generated.
 
-An event ID 41 is used to report that something unexpected happened that prevented Windows from shutting down correctly. There may be insufficient information to explicitly define what happened. See [Kernel Power Event ID 41](https://social.technet.microsoft.com/wiki/contents/articles/14246.kernel-power-event-id-41.aspx) for more information.
+An event ID 41 is used to report that something unexpected happened that prevented Windows from shutting down correctly. There might not be sufficient information to explicitly define what happened. For more information, see [Kernel Power Event ID 41](https://social.technet.microsoft.com/wiki/contents/articles/14246.kernel-power-event-id-41.aspx).
 
 - Log name: System
 - Product: Windows Operating System
@@ -178,19 +178,19 @@ An event ID 41 is used to report that something unexpected happened that prevent
 - Version: 6.1
 - Message: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
 
-> [!NOTE]
+> [!NOTE]  
 > The time shown in the .evtx file is adjusted to your system's time. Check the time zone of the server.
 
 - Event ID 41: This event indicates that Windows restarted without a complete shutdown.
 - Event ID 1074: This event is logged when an application is responsible for the system shutdown or restart. It also indicates when a user restarted or shut down the system by using the **Start** menu or by pressing Ctrl+Alt+Del.
 - Event ID 6006: This event indicates that Windows was adequately turned off.
-- Event ID 6008: This event indicates an improper or dirty shutdown. It is logged when the most recent shutdown was unexpected.
+- Event ID 6008: This event indicates an improper or dirty shutdown. It's logged when the most recent shutdown was unexpected.
 
-Just before the computer shuts down, `shutdown.exe` will record the shutdown event in the Windows System log with a Source=User32 and event ID 1074 along with any custom message & reason code.
+Just before the computer shuts down, `shutdown.exe` records the shutdown event in the Windows System log with a Source=User32 and event ID 1074 along with any custom message & reason code.
 
 The event log is the only way to tell that a reboot triggered from `shutdown.exe` is pending. The event also records the username, and the date and time when the `shutdown` command was issued.
 
-When using `shutdown.exe` to restart a server, the shutdown process will normally allow 30 seconds to ensure each running service has time to stop. Services are shutdown in alphabetical order. Halting the services manually in a specific order with `NET STOP` or `SC` can be slightly faster.
+When using `shutdown.exe` to restart a server, the shutdown process typically allows 30 seconds to ensure each running service has time to stop. Services are shut down in alphabetical order. Halting the services manually in a specific order with `NET STOP` or `SC` can be slightly faster.
 
 ### Boot Status File (from the windows internals 6th)
 
@@ -202,18 +202,18 @@ This allows the Boot Manager, Windows loader, and the Startup Repair tool to det
 - Shutdown
 - Resume from hibernate or suspend
 
-The boot status file also indicates whether a problem was detected the last time the user tried to boot the operating system and the recovery options shown, indicating that the user has been made aware of the problem and taken action. Runtime Library APIs (Rtl) in ntdll.dll contain the private interfaces that Windows uses to read from and write to the file. Like the BCD, it cannot be edited by users.
+The boot status file also indicates whether a problem was detected the last time the user tried to start the operating system and the recovery options shown, indicating that the user was alerted to the problem and taken action. Runtime Library APIs (Rtl) in ntdll.dll contain the private interfaces that Windows uses to read from and write to the file. Like the BCD, it can't be edited by users.
 
 ### About shutdown
 
-When a shutdown is initiated, Windows sends a WM_QUERYENDSESSION message to all running applications that have a user interface (UI) thread. This message asks the application to save any unsaved data and terminate gracefully. If the application does not respond to the message within a certain time limit, Windows sends a WM_ENDSESSION message to the application, which terminates the application immediately.
+When a shutdown is initiated, Windows sends a WM_QUERYENDSESSION message to all running applications that have a user interface (UI) thread. This message asks the application to save any unsaved data and terminate gracefully. If the application doesn't respond to the message within a certain time limit, Windows sends a WM_ENDSESSION message to the application, which terminates the application immediately.
 
-If all applications respond to the WM_QUERYENDSESSION message and terminate gracefully, Windows logs a clean shutdown event in the System event log. If any application does not respond to the message or terminates abnormally, Windows logs a dirty shutdown event in the System event log.
+If all applications respond to the WM_QUERYENDSESSION message and terminate gracefully, Windows logs a clean shutdown event in the System event log. If any application doesn't respond to the message or terminates abnormally, Windows logs a dirty shutdown event in the System event log.
 
 The unexpected shutdowns are mostly caused by components outside the operating system.
 
 A dirty shutdown is when a computer system is shut down without going through the proper shutdown process. This can happen when the power is suddenly cut off or when the computer is forced to shut down by holding down the power button. A dirty shutdown can cause data loss or corruption and can also lead to boot-up problems.
 
-The dirty shutdown count registry is a registry key in the Windows Registry that is used to track the number of times a computer system has been shut down without going through the proper shutdown process. This key can be useful when troubleshooting boot-up problems to identify whether the system was powered off incorrectly.
+The dirty shutdown count registry is a registry key in the Windows Registry that is used to track the number of times a computer system has shut down without going through the proper shutdown process. This key can be useful when troubleshooting boot-up problems to identify whether the system was powered off incorrectly.
 
 You can also clear all the values (like DirtyShutdown, LastAliveStamp, TimeStampInterval) in the following registry key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability`. This can help prevent the Shutdown Event Tracker from appearing after an unexpected shutdown.
