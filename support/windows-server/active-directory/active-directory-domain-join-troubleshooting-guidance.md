@@ -5,7 +5,7 @@ ms.date: 01/26/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna, raviks
+ms.reviewer: kaushika, v-lianna, raviks, v-applegatet
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
@@ -16,9 +16,13 @@ appliesto:
 
 ## Summary
 
+When you join a Windows-based computer to an Active Directory domain, you might encounter various errors that prevent successful domain membership. These errors can result from network connectivity issues, DNS configuration problems, security restrictions, or authentication failures. This article provides the following information to help you troubleshoot common domain join issues:
 
+- A systematic troubleshooting checklist that covers DNS, logs, and network requirements
+- A table of common error codes with links to detailed solutions
+- Methods for collecting diagnostic data to support further investigation
 
-This guide provides the fundamental concepts used when troubleshooting Active Directory domain join issues.
+Before you begin troubleshooting, make sure that you have administrator permissions for the client computer and appropriate permissions in the Active Directory domain.
 
 ## Troubleshooting checklist
 
