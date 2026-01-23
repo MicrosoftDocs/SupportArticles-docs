@@ -92,7 +92,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 #### AsyncResponsePayloadTooLarge
 
-**Error message**: The output that was returned by the connector was too large to be handled by the agent. Try reducing the output size by using available connector filters or by limiting the number of configured action outputs.
+**Error message**: The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
 **Resolution**: One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information about the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
 
@@ -223,7 +223,7 @@ Common problems include:
 
 #### DataLossPreventionViolation
 
-**Error message**: This environment requires users to sign in before they can use the agent. Go to **Manage** > **Security** > **Authentication**, and select the option that requires users to sign in.
+**Error message**: This environment requires users to sign in before they can use the agent. Go to Manage > Security > Authentication and select the option that requires users to sign in.
 
 **Resolution**
 
