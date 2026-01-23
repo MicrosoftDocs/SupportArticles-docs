@@ -116,6 +116,26 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 
+## Issues connecting to a Captive Portal
+
+**Common Issues & Troubleshooting Steps** 
+
+**1. Network Connection Does Not Update After Captive Portal Connection** 
+
+**Root Cause:** The device is not fully authenticated on the network. 
+
+**Action:** Disconnect from the wifi network that requires Captive portal sign in and complete the sign steps again 
+
+**2. Cloud PC Reconnect Fails After Portal Authentication** 
+
+**Root Cause:** There may be a delay or error in network state propagation after portal authentication. 
+
+**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to 
+
+**3. Logs and Diagnostics** 
+
+- Collect logs as documented above.
+
 ## Next steps
 
 For more information about Windows 365 Boot, see [What is Windows 365 Boot?](/windows-365/enterprise/windows-365-boot-overview).
