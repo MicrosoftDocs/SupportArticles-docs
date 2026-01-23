@@ -1,11 +1,9 @@
 ---
 title: All AI Builder credits have been consumed
 description: Provides a resolution for the issue that all AI Builder credits have been consumed in Microsoft Power Platform.
-ms.reviewer: chplanty, cdbellar
+ms.reviewer: antode, chplanty, cdbellar, v-shaywood
 ms.date: 01/19/2026
 ms.custom: sap:AI Builder\Administration and Licensing
-ms.author: antode
-author: Antoine2F
 ---
 # All AI Builder credits have been consumed
 
@@ -21,7 +19,7 @@ Here are the different symptoms of this issue:
 
 1. A banner shows the "Some environments have consumed all or almost all AI Builder credits" message on the **Capacity** page in the Power Platform admin center.
 1. A banner shows the "You've consumed all your AI Builder credits" message on the AI Builder page.
-1. A flow stops with the "All AI Builder credits in this environment have been consumed" or "Missing Copilot Credit or AI Builder credit capacity" error.
+1. A flow stops and returns the error message "All AI Builder credits in this environment have been consumed" or "Missing Copilot Credit or AI Builder credit capacity".
 
    > [!NOTE]
    > This error is displayed in the **Error** panel on the flow run page.
@@ -32,19 +30,21 @@ Here are the different symptoms of this issue:
    - Code="QuotaExceeded"
    - Message="Credit usage exceeds allocation."
 
-1. In Power Apps, a banner shows the "You need an AI Builder license to use this component" or "Missing Copilot Credit or AI Builder credit capacity" message when you try to perform an AI Builder action.
+1. In Power Apps, a banner shows the message "You need an AI Builder license to use this component" or "Missing Copilot Credit or AI Builder credit capacity" when you try to perform an AI Builder action.
 
 ## Cause
 
-This issue occurs because AI Builder actions consume AI Builder credits and/or Copilot Credits, depending on the context. These credits come from tenant-level or environment-level allocations.
-In Power Apps or Power Automate context, AI Builder actions consume AI Builder credits first, then if exhausted or absent, they consume Copilot Credits. In Microsoft Copilot Studio context (agents, agent flows), AI Builder actions consume Copilot Credits only.
+This issue occurs because AI Builder actions consume AI Builder credits or Copilot Credits, depending on the context. These credits come from tenant-level or environment-level allocations.
 
-The environment's consumption is computed regularly, and is reset at the beginning of the month.  
+- _Power Apps_ or _Power Automate_: AI Builder actions consume AI Builder credits first. If those credits are exhausted or unavailable, the actions consume Copilot Credits instead.
+- _Microsoft Copilot Studio_ (agents and agent flows): AI Builder actions consume Copilot Credits only.
 
-- When the computed consumption is close to the allocated credits, a banner is displayed on the **Capacity** page in the Power Platform admin center, and a notification email is sent to the administrator.
-- When the computed consumption exceeds the tenant-level or environment-level credits (125%), AI Builder actions in flows and apps are blocked, and an error message is displayed in flows and apps.
+The environment's consumption is calculated regularly and resets at the beginning of the month.
 
-Sometimes environment's consumption can be computed with an important delay (like 5 days). In such case, the decision will be made based on the last known computed consumption. This can lead to important consumption beyond the capacity before AI Builder actions are blocked or fall back to Copilot Credits. Such overage isn't billed to the customer and doesn't impact other environments.
+- When the calculated consumption is close to the allocated credits, a banner appears on the **Capacity** page in the Power Platform admin center, and a notification email is sent to the administrator.
+- When the calculated consumption exceeds the tenant-level or environment-level credits (125%), AI Builder actions in flows and apps are blocked, and an error message appears.
+
+Sometimes the environment's consumption calculation is delayed (up to five days). In this case, the system uses the last known calculated consumption. This delay can lead to significant consumption beyond your capacity before AI Builder actions are blocked or fall back to Copilot Credits. This overage isn't billed to you and doesn't affect other environments.
 
 ## Resolution
 
@@ -99,7 +99,10 @@ You need to be the administrator of your environment to perform these actions.
 
 #### How to change the number of tenant-level AI Builder credits (unassigned credits) by purchasing more AI Builder credits
 
-As AI Builder Capacity Add-on are in 'End of Sales' state, that's only possible if you already have active AI Builder Add-ons. You need to be the billing administrator of your tenant to perform these actions.
+> [!IMPORTANT]
+> AI Builder Capacity Add-ons are in "End of Sales" state. You can only purchase more if you already have active AI Builder Add-ons.
+
+You must be the billing administrator of your tenant to perform these steps.
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. On the left pane, select **Billing** > **Purchase services**.
