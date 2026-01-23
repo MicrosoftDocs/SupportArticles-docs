@@ -18,7 +18,7 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806366" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues</span>
 
-This guide provides you with the fundamental concepts used to troubleshoot Group Policy. You'll learn:
+This guide provides the fundamental concepts used to troubleshoot Group Policy. You'll learn:
 
 - How to locate new troubleshooting information.
 - How to use the Event Viewer to filter specific Group Policy information.
@@ -30,7 +30,7 @@ This guide provides you with the fundamental concepts used to troubleshoot Group
 1. Start by reading Group Policy events recorded in the system event log.
 
    - Warning events provide further information for you to follow to ensure the Group Policy service remains healthy.
-   - Error events provide you with information that describes the failure and probable causes.
+   - Error events provide information that describes the failure and probable causes.
    - Use the **More Information** link included in the event message.
    - Use the **Details** tab to view error codes and descriptions.
 
@@ -39,12 +39,12 @@ This guide provides you with the fundamental concepts used to troubleshoot Group
    - Identify the activity ID of the instance of Group Policy processing you're troubleshooting.
    - Create a custom view of the operational log.
    - Divide the log into phases: pre-processing, processing, and post-processing.
-   - Consolidate each starting event with its corresponding ending event. Investigate all warning and error events.
+   - Consolidate each starting event together with its corresponding ending event. Investigate all warning and error events.
    - Isolate and troubleshoot the dependent component.
    - Use the Group Policy update command (`GPUPDATE`) to refresh Group Policy. Repeat these steps to determine if the warning or error still exists.
 
 > [!IMPORTANT]  
-> Refreshing Group Policy changes the Activity ID in your custom view. Make sure to update your custom view with the most current Activity ID when troubleshooting.
+> Refreshing Group Policy changes the Activity ID in your custom view. Make sure to update your custom view to the most current Activity ID when troubleshooting.
 
 ### Determine the instance of Group Policy processing
 
@@ -92,7 +92,7 @@ Make sure the group policy has all the settings you're looking for and it's corr
    gpresult /h gp.html
    ```
 
-1. Verify the `gpresult` output you have captured and look for the Group Policy object (GPO) you're having issues with. It gives an error about why the GPO isn't getting applied.
+1. Verify the `gpresult` output that you captured and look for the affected Group Policy object (GPO). It gives an error about why the GPO isn't getting applied.
 1. If you have an error in the `gpresult` output, we can troubleshoot the issue based on it. Otherwise, go to the next step.
 1. Open the Event Viewer and browse to Application and System event logs. The Application event log provides the details on why the group policy update fails positively.
 1. For more detailed information, open the Operational event log. Events in this log include the list of applied GPOs and a list of denied GPOs that includes the reasons for the denials.
@@ -149,7 +149,7 @@ Enable a network trace to verify that the following operations occur:
 - The query returns two entries for that site that hold the ldap service role.
 - For one of them, we can see a name resolution is being done.
 - Because the name resolution is successful, it tries to do an ldap bind but fails at TCP handshake because port 389 is blocked.
-- If there's no answer from the DC for our TCP handshake on port 389, the next steps are to involve the customer network team and provide them with this information.
+- If there's no answer from the DC for our TCP handshake on port 389, the next steps are to involve the customer network team and provide this information to them.
 - Make sure that in such scenarios, you use all the logs specified in the action plan mentioned previously, and correlate their data. This information leads you to the root cause of the issue, or at least narrows down the issue.
 
 ### Event ID 1002
@@ -173,13 +173,13 @@ Here's the description of Event ID 1006:
 The processing of Group Policy failed. Windows could not authenticate to the Active Directory service on a domain controller. (LDAP Bind function call failed). Look in the Details tab for error code and description.
 ```
 
-To fix this issue, make sure that the Group Policy service can authenticate. The information on the event's **Details** tab provides more information about why authentication failed. This information includes an error code (displayed as a decimal) and error description. Match the error code to the following list:
+To fix this issue, make sure that the Group Policy service can authenticate. The information on the event's **Details** tab provides more information about why authentication failed. This information includes an error code (displayed as a decimal) and error description. Compare the error code to the following list:
 
-- Error code 5 (Access is denied)
+- Error code 5 (`Access is denied`)
 
    This error code might indicate that the user doesn't have permission to access Active Directory.
 
-- Error code 49 (Invalid credentials)
+- Error code 49 (`Invalid credentials`)
 
   This error code might indicate that the user's password expired while the user is still signed in to the computer. To correct credentials that aren't valid:
 
@@ -188,7 +188,7 @@ To fix this issue, make sure that the Group Policy service can authenticate. The
   1. Check if there are any system services running as the user account.
   1. Verify that the password in the service configuration is correct for the user account.
 
-- Error code is 258 (Timeout)
+- Error code is 258 (`Timeout`)
 
   This error code might indicate that the DNS configuration is incorrect. To correct timeout issues, use the `nslookup` tool to confirm that \_ldap.\_tcp.\<domain-dns-name\> records are registered and point to correct servers (where \<domain-dns-name\> is the fully qualified domain name of your Active Directory domain).
 
@@ -237,9 +237,9 @@ The processing of Group Policy failed. Windows attempted to read the file %9 fro
 3. The Distributed File System (DFS) client has been disabled.
 ```
 
-Correct the connectivity to the Group Policy template. The Group Policy service logs the name of the domain controller and the error code, which appears on the **Details** tab of the error message in Event Viewer. The error code (displayed as a decimal) and error description fields further identify the reason for the failure. Match the error code to the following list:
+Correct the connectivity to the Group Policy template. The Group Policy service logs the name of the domain controller and the error code, which appears on the **Details** tab of the error message in Event Viewer. The error code (displayed as a decimal) and error description fields further identify the reason for the failure. Compare the error code to the following list:
 
-- Error code 3 (The system cannot find the path specified)
+- Error code 3 (`The system cannot find the path specified`)
 
   This error code usually indicates that the client computer can't find the path that's specified in the event. To test client connectivity to the domain controller's sysvol:
 
@@ -251,14 +251,14 @@ Correct the connectivity to the Group Policy template. The Group Policy service 
      > [!NOTE]  
      > You must run this command as the user or computer whose credentials previously failed.
 
-- Error code 5 (Access is denied)
+- Error code 5 (`Access is denied`)
 
   This error code usually indicates that the user or computer doesn't have the appropriate permissions to access the path specified in the event. On the domain controller, ensure the user and computer have appropriate permission to read the path specified in the event. To test computer and user credentials:
 
   1. Sign out of the computer and restart it.
-  2. Sign in to the computer by using the domain credentials previously used.
+  1. Sign in to the computer by using the domain credentials previously used.
 
-- Error code 53 (The network path wasn't found)
+- Error code 53 (`The network path wasn't found`)
 
   This error code usually indicates that the computer cannot resolve the name in the provided network path. To test network path name resolution:
 
@@ -275,30 +275,30 @@ The processing of Group Policy failed. Windows could not resolve the user name. 
 2. Active Directory Replication Latency (an account created on another domain controller has not replicated to the current domain controller).
 ```
 
-The Group Policy service logs the name of the domain controller and the error code. This information appears on the **Details** tab of the error message in Event Viewer. The error code (displayed as a decimal) and error description fields further identify the reason for the failure. Match the error code to the following list:
+The Group Policy service logs the name of the domain controller and the error code. This information appears on the **Details** tab of the error message in Event Viewer. The error code (displayed as a decimal) and error description fields further identify the reason for the failure. Compare the error code to the following list:
 
-- Error code 5 (Access is denied): This error code might indicate that the user's password expired while the user was still signed in to the computer. If the user recently changed their password, the issue might disappear after allowing time for Active Directory replication to succeed.
+- Error code 5 (`Access is denied`): This error code might indicate that the user's password expired while the user was still signed in to the computer. If the user recently changed their password, the issue might disappear after allowing time for Active Directory replication to succeed.
 
   1. Change the user password.
   1. Lock/unlock the workstation.
   1. Check if there are any system services running as the user account.
   1. Verify that the password in the service configuration is correct for the user account.
 
-- Error code 14 (Not enough storage is available to complete this operation)
+- Error code 14 (`Not enough storage is available to complete this operation`)
 
   This error code might indicate that Windows doesn't have enough memory to complete the task. Investigate the system event log for any other memory-specific issues.
 
-- Error code 525 (The specified user doesn't exist)
+- Error code 525 (`The specified user doesn't exist`)
 
   This error code might indicate incorrect permissions on the organizational unit. The user requires read access to the organizational unit that contains the user object. Similarly, computers require read access to the organizational unit that contains the computer object.
 
-- Error code 1355 (The specified domain either doesn't exist or couldn't be contacted)
+- Error code 1355 (`The specified domain either doesn't exist or couldn't be contacted`)
 
-  This error code might indicate a fault or improper configuration with name resolution (DNS). Use `nslookup` to confirm you can resolve the addresses of the domain controllers in the user domain.
+  This error code might indicate a domain name resolution (DNS) fault or improper configuration. Use `nslookup` to confirm you can resolve the addresses of the domain controllers in the user domain.
 
-- Error code 1727 (The remote procedure call failed and didn't execute)
+- Error code 1727 (`The remote procedure call failed and didn't execute`)
 
-  This error code might indicate that firewall rules are preventing communication with a domain controller. If you have third-party firewall software installed, check the configuration of the firewall or try temporarily disabling it and verifying that Group Policy processes successfully.
+  This error code might indicate that firewall rules are preventing communication to or from a domain controller. If you have third-party firewall software installed, check the configuration of the firewall or try temporarily disabling it and verifying that Group Policy processes successfully.
 
 ### Event ID 1097
 
@@ -312,7 +312,7 @@ Domain member computers authenticate to the domain, as do domain users. Windows 
 
 - Verify that the time on the computer is synchronized to the time on the domain controller.
 - Account for time zone misconfigurations if the computer is configured in a time zone different from the domain controller.
-- A time difference greater than five minutes between the computer and the domain controller may lead to the computer failing to authenticate with the domain. Force time synchronization against time service using the `w32tm /resync` command.
+- A time difference greater than five minutes between the computer and the domain controller may lead to the computer failing to authenticate to the domain. Force time synchronization against time service using the `w32tm /resync` command.
 - Restart the computer.
 
 ### Event ID 4016 and Event ID 5016
@@ -343,9 +343,9 @@ After you receive the return value 2147483658 from Event ID 5016, you can examin
 Follow these steps to review the **Security-Audit-Configuration-Client** > **Operational** event log for troubleshooting Audit group policy settings:
 
 1. Open Event viewer.
-2. Under **Event Viewer (local)**, select **Applications and Services Logs** > **Microsoft** > **Windows** > **Security-Audit-Configuration-Client** > **Operational**.
-3. Double-click the **Warning** or **Error** events to troubleshoot. Also review the **Details** tab for these events for any **Error** value.
-4. Else, review the **Informational** event to capture the complete processing of Audit extension.
+1. Under **Event Viewer (local)**, select **Applications and Services Logs** > **Microsoft** > **Windows** > **Security-Audit-Configuration-Client** > **Operational**.
+1. Double-click the **Warning** or **Error** events to troubleshoot. Also review the **Details** tab for these events for any **Error** value.
+1. Additionally, review the **Informational** event to capture the complete processing of Audit extension.
 
 ## Gather key information before you contact Microsoft Support
 
