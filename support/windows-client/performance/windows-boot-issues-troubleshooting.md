@@ -303,17 +303,17 @@ Sometimes the dump file shows an error that's related to a driver. For example, 
 
   - To do this action, open WinRE, open a command prompt, and then run the following command:
 
-   ```console
-   SFC /Scannow /OffBootDir=C:\ /OffWinDir=C:\Windows
-   ```
+    ```console
+    SFC /Scannow /OffBootDir=C:\ /OffWinDir=C:\Windows
+    ```
 
-   For more information, see [Using system file checker (SFC) to fix issues](/archive/blogs/askcore/using-system-file-checker-sfc-to-fix-issues).
+    For more information, see [Using system file checker (SFC) to fix issues](/archive/blogs/askcore/using-system-file-checker-sfc-to-fix-issues).
 
   - If there's disk corruption, run the check disk command:
 
-   ```console
-   chkdsk /f /r
-   ```
+    ```console
+    chkdsk /f /r
+    ```
 
 - If the Stop error indicates general registry corruption, or if you believe that new drivers or services were installed, follow these steps:
 
