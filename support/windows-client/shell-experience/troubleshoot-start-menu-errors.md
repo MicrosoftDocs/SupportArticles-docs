@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 02/24/2025
+ms.date: 01/26/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
@@ -15,16 +15,14 @@ appliesto:
 ---
 # Start menu troubleshooting guidance
 
-_Applies to:_ &nbsp; Windows 10
+Start menu issues fall into the following categories:
 
-Categories of issues with the Start menu:
-
-- Issues related to deployment or installation
+- Deployment or installation
 - Application termination or crash
-- Issues related to the Start menu customization or other policies/configuration service providers (CSPs)
+- Start menu customization or other policies/configuration service providers (CSPs)
 - Other issues
 
-## Basic troubleshooting
+## Troubleshooting checklist
 
 When you troubleshoot Start issues (and, for the most part, all other Windows apps), there are a few things to check if they aren't working as expected. For issues where the Start menu or subcomponent isn't working, the following points can help you narrow down where the issue might reside:
 
@@ -34,15 +32,15 @@ When you troubleshoot Start issues (and, for the most part, all other Windows ap
   - Command Prompt: `winver`
 - Were there any recent changes to registry keys or folders?
 - Were there any recent changes related to GPO/MDM policies?
-  - Group policy settings that restrict access or permissions to folders or registry keys can impact the Start menu performance.
-  - Some group policies intended for older operating systems can cause issues with the Start menu.
+  - Group policy settings that restrict access or permissions to folders or registry keys can affect the Start menu performance.
+  - Some group policies that are intended for older operating systems can cause Start menu issues.
   - Untested Start menu customizations can lead to unexpected behavior, though typically not complete Start failures.
 
-## Issues with deployment or installation
+## Deployment or installation issues
 
 When you troubleshoot basic Start issues (and, for the most part, all other Windows apps), there are a few things to check if they aren't working as expected. For issues where the Start menu or subcomponent isn't working, you can do some quick tests to narrow down where the issue might reside.
   
-### Check if the Start menu is installed
+### Check that the Start menu is installed
 
 To see if an individual user has the Start menu package installed, use the following cmdlet in a non-elevated Windows PowerShell prompt:
 
@@ -54,7 +52,7 @@ If it's registered, the output looks like:
 
 :::image type="content" source="media/troubleshoot-start-menu-errors/get-appxpackage-output.png" alt-text="Screenshot of the Get-AppxPackage output showing an individual user has the Start menu package installed.":::
 
-If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the **AppxManifest.xml** file. This is possible because although this user doesn't have the package registered, other users might. This means that the package will still exist on the machine.
+If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the AppxManifest.xml file. This is possible because although this user doesn't have the package registered, other users might. This means that the package still exists on the machine.
 
 To check this, add `-AllUsers` to the same `Get-AppxPackage` cmdlet that is used earlier in an elevated PowerShell prompt:
 
@@ -66,18 +64,18 @@ If the app details are successfully returned, it means that the package exists.
 
 The following cmdlet can be used to register the Start menu if the package exists on the machine.
 
-> [!NOTE]
-> Be sure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt. Otherwise, the package will be registered to the administrator instead of the user.
+> [!NOTE]  
+> Be sure to use the `Add-AppxPackage` cmdlet from a non-elevated prompt. Otherwise, the package is registered to the administrator instead of the user.
 
 ```powershell
 Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\AppxManifest.xml" -Register -DisableDevelopmentMode
 ```
 
-> [!NOTE]
-> On older stock keeping units (SKUs) (Windows 10, version 1809 and earlier), the AppX package for the Start menu is different. Check if **Microsoft.Windows.ShellExperienceHost** is registered for those SKUs.
+> [!NOTE]  
+> On older stock keeping units (SKUs) (Windows 10, version 1809 and earlier), the AppX package for the Start menu is different. Check if Microsoft.Windows.ShellExperienceHost is registered for those SKUs.
 
-> [!WARNING]
-> If **StartMenuExperienceHost** isn't installed for any user, the quickest resolution is to revert to a known-good configuration. This can be rolling back the update, resetting the PC to defaults, or restoring from backup. No method is supported to install Start AppX files. The results are often problematic and unreliable.
+> [!WARNING]  
+> If StartMenuExperienceHost isn't installed for any user, the quickest resolution is to revert to a known-good configuration. This can be rolling back the update, resetting the PC to defaults, or restoring from backup. No method is supported to install Start AppX files. The results are often problematic and unreliable.
 
 The following event logs can be used to troubleshoot related issues:
 
@@ -91,9 +89,9 @@ For issues related to the activation, search for the following keywords in **Mic
 - "Element not found"
 - "Package could not be registered"
 
-If these events are found, Start isn't activated correctly. Each event will have more detail in the description and should be investigated further. Event messages can vary.
+If these events are found, Start isn't activated correctly. Each event has more detail in the description and should be investigated further. Event messages can vary.
 
-## Issues with application crashes
+## Application crash issues
   
 If the application is installed for the user but doesn't work, check if the process responsible for displaying the Start menu is running for the user by running the following PowerShell cmdlet from an elevated PowerShell prompt:
 
@@ -101,14 +99,14 @@ If the application is installed for the user but doesn't work, check if the proc
 get-Process StartMenuExperienceHost -IncludeUserName 
 ```
 
-> [!NOTE]
-> If multiple users are logged into the machine, each user should have a **StartMenuExperienceHost** process in their session.
+> [!NOTE]  
+> If multiple users are logged into the machine, each user should have a `StartMenuExperienceHost` process in their session.
 >
-> On older SKUs (Windows 10, version 1809 and earlier), the AppX package for the Start menu is different. Check if **ShellExperienceHost.exe** is running.
+> On older SKUs (Windows 10, version 1809 and earlier), the AppX package for the Start menu is different. Check if ShellExperienceHost.exe is running.
 
-If the application is installed but not running for the user, test booting into the safe mode or use `msconfig` to eliminate third-party or other drivers and applications.
+If the application is installed but not running for the user, test it by restarting into Safe mode, or use `msconfig` to eliminate third-party or other drivers and applications.
 
-To check if the application is crashing, refer to the Application event log and look for Event IDs 1000 and 1001 for **StartMenuExperienceHost.exe**.
+To check if the application is crashing, refer to the Application event log and look for Event IDs 1000 and 1001 for StartMenuExperienceHost.exe.
 
 The following tools can be used to troubleshoot these behaviors:
 
@@ -120,15 +118,15 @@ For more information about application crash events, see [The application or ser
 
 For more information about using Procmon to troubleshoot failures at application startup, see [Troubleshoot Apps failing to start using Process Monitor](troubleshoot-apps-start-failure-use-process-monitor.md).
 
-> [!TIP]
-> Check for crashes that might be related to Start (for example, **explorer.exe**, Search, and **ShellExperiencehost.exe**).
+> [!TIP]  
+> Check for crashes that might be related to Start (for example, explorer.exe*, Search, and ShellExperiencehost.exe).
 
 The following event logs can be used to troubleshoot related issues:
   
 - For deployment-related issues: **Application**
 - For AppX activation-related issues: **Microsoft-Windows-TWinUI/Operational**
   
-## Issues with the Start menu customization or other policies/CSPs
+## Start menu customization or other policy/CSP issues
   
 These issues are related to the configuration and customization of the Start menu and related components. For example, issues related to the Start layout and Start menu lockdown.
   
@@ -149,7 +147,7 @@ The following logs can be used to troubleshoot related issues:
 
 - Is this system an upgrade or clean install?
   1. Run `test-path "$env:windir\panther\miglog.xml"`.
-  2. If that file doesn't exist, the system is a clean install.
+  1. If that file doesn't exist, the system is a clean install.
 - Upgrade issues can be found by running `test-path "$env:windir\panther\miglog.xml"`.
 
 ### Resources for further troubleshooting
@@ -170,10 +168,10 @@ Event logs:
 
 Logs when the application is crashing:
 
-- Check for crashes that might be related to Start (**explorer.exe**, taskbar, and so on) application log Event IDs 1000 and 1001.
+- Check for crashes that might be related to Start (explorer.exe, Taskbar, and so on) Application log Event IDs 1000 and 1001.
 - Check WER reports:
-  - **C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\**
-  - **C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\**
+  - C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\
+  - C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\
 - If there's a component of Start that consistently crashes, capture a dump that can be reviewed by Microsoft Support.
 - [ProcDump](/sysinternals/downloads/procdump) to generate crash dumps.
 
@@ -181,9 +179,9 @@ Other useful tools to troubleshoot Start menu issues:
 
 [Procmon](/sysinternals/downloads/procmon) to investigate if the failures are related to permission or similar problems.
 
-## Common errors and mitigation
+## Common issues and solutions
 
-The following list provides information about common errors you might run into with the Start menu, and steps to help you mitigate them.
+The following list provides information about common Start menu errors, and steps to help you fix them.
 
 ### Symptom: Start menu doesn't respond on Windows 2012 R2, Windows 10, or Windows 2016
 
@@ -210,26 +208,25 @@ CHECKPOINT       : 0x0
 WAIT_HINT        : 0x0
 ```
 
-The PDC service uses pdc.sys located in __%WinDir%\\system32\\drivers__.
+The PDC service uses pdc.sys located in %WinDir%\\system32\\drivers.
 
-The PDC registry key is:
+The PDC registry subkey is:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\pdc`
-Description="@%SystemRoot%\\system32\\drivers\\pdc.sys,-101"
-DisplayName="@%SystemRoot%\\system32\\drivers\\pdc.sys,-100"
-ErrorControl=dword:00000003
-Group="Boot Bus Extender"
-ImagePath=hex(2):73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,64,00,\
- 72,00,69,00,76,00,65,00,72,00,73,00,5c,00,70,00,64,00,63,00,2e,00,73,00,79,\
- 00,73,00,00,00  
-Start=dword:00000000  
-Type=dword:00000001
 
-In addition to the listed dependencies for the service, Background Tasks Infrastructure Service requires the Power Dependency Coordinator Driver to be loaded. If the PDC doesn't load at boot, Background Tasks Infrastructure Service will fail and affect the Start menu.
+- Description: `@%SystemRoot%\system32\drivers\pdc.sys,-101`
+- DisplayName: `@%SystemRoot%\system32\drivers\pdc.sys,-100`
+- ErrorControl: `dword:00000003`
+- Group: `Boot Bus Extender`
+- ImagePath: `hex(2):73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,64,00,72,00,69,00,76,00,65,00,72,00,73,00,5c,00,70,00,64,00,63,00,2e,00,73,00,79,00,73,00,00,00`  
+- Start: `dword:00000000`  
+- Type: `dword:00000001`
+
+In addition to the listed dependencies for the service, Background Tasks Infrastructure Service requires the Power Dependency Coordinator Driver to be loaded. If the PDC doesn't load at startup, Background Tasks Infrastructure Service will fail and affect the Start menu.
 
 Events for both PDC and Background Tasks Infrastructure Service will be recorded in the event logs. PDC shouldn't be disabled or deleted. BrokerInfrastructure is an automatic service. This Service is required for all these operating Systems as running to have a stable Start menu.
 
-> [!NOTE]
-> You can't stop this automatic service when machine is running (`C:\\windows\\system32\\svchost.exe -k DcomLaunch -p`).
+> [!NOTE]  
+> You can't stop this automatic service when the computer is running (`C:\windows\system32\svchost.exe -k DcomLaunch -p`).
 
 ### Symptom: After upgrading from version 1511 to version 1607, the Group Policy "Remove All Programs list from the Start menu" might not work
 
@@ -263,14 +260,14 @@ This issue has been fixed for Windows 10, version 1709 in [KB 4089848](https://s
 There are two main reasons for this issue:
 
 - Incorrect format: Editing the xml file incorrectly by adding an extra space or spaces, entering a bad character, or saving in the wrong format.
-  - To tell if the format is incorrect, check for "Event ID: 22" in the "__Applications and Services\\Microsoft\\Windows\\ShellCommon-StartLayoutPopulation\\Operational__" log.
+  - To tell if the format is incorrect, check for Event ID: 22 in the **Applications and Services\\Microsoft\\Windows\\ShellCommon-StartLayoutPopulation\\Operational** log.
   - Event ID 22 is logged when the xml is malformed, meaning the specified file simply isn't valid xml.
   - When you edit the xml file, it should be saved in UTF-8 format.
 
 - Unexpected information: This occurs when possibly trying to add a tile via an unexpected or undocumented method.
   - "Event ID: 64" is logged when the xml is valid but has unexpected values.
   - For example: The following error occurred while parsing a layout xml file:
-    > The attribute 'LayoutCustomizationRestrictiontype' on the element '{http://schemas.microsoft.com/Start/2014/LayoutModification}DefaultLayoutOverride' is not defined in the DTD/Schema.
+    > The `LayoutCustomizationRestrictiontype` attribute on the `{http://schemas.microsoft.com/Start/2014/LayoutModification}DefaultLayoutOverride` element is not defined in the DTD/Schema.
 
 XML files can and should be tested locally on a Hyper-V or other virtual machine before deployment or application by Group Policy.
 
@@ -278,7 +275,7 @@ XML files can and should be tested locally on a Hyper-V or other virtual machine
 
 #### Description
 
-If a user is having problems with a PC, it can be refreshed, reset, or restored. Refreshing the PC is a beneficial option because it maintains personal files and settings. When users have trouble starting the PC, **Change PC settings** in **Settings** isn't accessible. So, to access the System Refresh, users might use the F12 key at startup. Refreshing the PC finishes, but the Start menu isn't accessible.
+If a user is having PC issues, the PC can be refreshed, reset, or restored. Refreshing the PC is a beneficial option because it maintains personal files and settings. When users have trouble starting the PC, **Change PC settings** in **Settings** isn't accessible. So, to access the System Refresh, users might use the F12 key at startup. Refreshing the PC finishes, but the Start menu isn't accessible.
 
 #### Cause
 
@@ -298,7 +295,7 @@ Install corrective updates; a fix is included in the [September 11, 2018-KB44571
 
 Disable the **Remove All Programs list from the Start menu** Group Policy.
 
-### Symptom: Tiles are missing from the Start menu when using Windows 10, version 1703 or older, Windows Server 2016, and Roaming User Profiles with a Start layout
+### Symptom: Tiles are missing from the Start menu when using Windows 10, version 1703 or older, Windows Server 2016, and Roaming User Profiles together with a Start layout
 
 #### Description
 
@@ -336,14 +333,14 @@ This issue has been resolved in Windows 10, versions 1703 and 1607, cumulative u
 
 Before the upgrade:
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-before-upgrade.png" alt-text="Screenshot of an example of Start screen with customizations applied." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-before-upgrade.png" alt-text="Screenshot of an example of Start screen that has customizations applied." border="false":::
 
 > [!NOTE]
 > In the screenshot, **Corporate Applications** and **Utilities** are group policy controlled, and the tiles under these items are user pinned.
 
 After the upgrade the user pinned tiles are missing:
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-tiles-missing.png" alt-text="Screenshot of an example of Start screen with previously pinned tiles missing." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-tiles-missing.png" alt-text="Screenshot of an example of Start screen that has previously pinned tiles missing." border="false":::
 
 Additionally, users might see blank tiles if sign-in was attempted without network connectivity.
 
@@ -353,19 +350,19 @@ Additionally, users might see blank tiles if sign-in was attempted without netwo
 
 This issue was fixed in the [October 2017 update](https://support.microsoft.com/help/4041676).
 
-### Symptom: Tiles are missing after upgrade from Windows 10, version 1607 to version 1709 for users with Roaming User Profiles (RUP) enabled and managed the Start menu layout with partial lockdown
+### Symptom: Tiles are missing after upgrade from Windows 10, version 1607 to version 1709 for users who have Roaming User Profiles (RUP) enabled and managed the Start menu layout together with partial lockdown
 
 #### Resolution
 
-The April 2018 LCU must be applied to Windows 10, version 1709 before a user logs on.
+The April 2018 LCU must be applied to Windows 10, version 1709 before a user signs in.
 
 ### Symptom: Start menu and/or Taskbar layout customizations aren't applied if CopyProfile option is used in an answer file during Sysprep
 
 #### Resolution
 
-CopyProfile is no longer supported when attempting to customize the Start menu or taskbar with __layoutmodification.xml__.
+`CopyProfile` is no longer supported when attempting to customize the Start menu or taskbar by using layoutmodification.xml.
 
-### Symptom: Start menu issues with Tile Data Layer corruption
+### Symptom: Start menu issues that involve Tile Data Layer corruption
 
 #### Cause
 
@@ -376,14 +373,14 @@ Windows 10, version 1507 through the release of version 1607 uses a database for
 There are steps you can take to fix the icons, first is to confirm that is the issue that needs to be addressed.
 
 1. The App or Apps work fine when you select the tiles.
-2. The tiles are blank, have a generic placeholder icon, have the wrong or strange title information.
-3. The app is missing, but listed as installed via PowerShell and works if you launch via URI.
+1. The tiles are blank, have a generic placeholder icon, have the wrong or strange title information.
+1. The app is missing, but listed as installed via PowerShell and works if you launch via URI.
 
-    Example: `windows-feedback://`
-    
-4. In some cases, Start can be blank, and Action Center and Cortana don't launch.
+   Example: `windows-feedback://`
 
-> [!NOTE]
+1. In some cases, Start can be blank, and Action Center and Cortana don't launch.
+
+> [!NOTE]  
 > Corruption recovery removes any manual pins from Start. Apps should still be visible, but you need to repin any secondary tiles and/or pin app tiles to the main Start view. Aps that you have installed that are completely missing from "all apps" is unexpected, however. That implies the re-registration didn't work.
 
 Open a command prompt, and run the following command:
@@ -392,7 +389,7 @@ Open a command prompt, and run the following command:
 C:\Windows\System32\tdlrecover.exe -reregister -resetlayout -resetcache
 ```
 
-Although a reboot isn't required, it might help clear up any residual issues after the command is run.
+Although a restart isn't required, it might help clear up any residual issues after the command is run.
 
 ### Symptoms: Start menu and Apps can't start after upgrade to Windows 10 version 1809 when Symantec Endpoint Protection is installed
 
@@ -402,7 +399,7 @@ Start menu, Search, and Apps don't start after you upgrade a computer running Wi
 
 #### Cause
 
-This problem occurs because of a failure to load __sysfer.dll__. During upgrade, the setup process doesn't set the privilege group "All Application Packages" on __sysfer.dll__ and other Symantec modules.
+This problem occurs because of a failure to load sysfer.dll. During upgrade, the setup process doesn't set the privilege group "All Application Packages" on sysfer.dll and other Symantec modules.
 
 #### Resolution
 
@@ -410,15 +407,14 @@ This issue was fixed by the Windows Cumulative Update that were released on Dece
 
 If you've already encountered this issue, use one of the following two options to fix the issue:
 
-Option 1: Remove __sysfer.dll__ from system32 folder and copy it back. Windows will set privilege automatically.
+Option 1: Remove sysfer.dll from the system32 folder and copy it back. Windows will set privilege automatically.
 
 Option 2:
 
-1. Locate the directory __C:\\Windows\\system32__.
-2. Right-click __sysfer.dll__ and choose **Properties**.
-3. Switch to the **Security** tab.
-4. Confirm that **All Application Packages** group is missing.
-5. Select **Edit**, and then select **Add** to add the group.
-6. Test Start and other Apps.
+1. Locate the C:\\Windows\\system32 directory.
+1. Right-click sysfer.dll, and then select **Properties** > **Security**.
+1. Confirm that the **All Application Packages** group is missing.
+1. Select **Edit**, and then select **Add** to add the group.
+1. Test Start and other Apps.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
