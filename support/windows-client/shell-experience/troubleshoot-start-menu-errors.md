@@ -335,8 +335,8 @@ Before the upgrade:
 
 :::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-before-upgrade.png" alt-text="Screenshot of an example of Start screen that has customizations applied." border="false":::
 
-> [!NOTE]
-> In the screenshot, **Corporate Applications** and **Utilities** are group policy controlled, and the tiles under these items are user pinned.
+> [!NOTE]  
+> In the screenshot, **Corporate Applications** and **Utilities** are group-policy controlled, and the tiles under these items are user-pinned.
 
 After the upgrade the user pinned tiles are missing:
 
