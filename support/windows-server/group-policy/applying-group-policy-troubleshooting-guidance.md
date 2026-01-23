@@ -18,12 +18,15 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806366" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues</span>
 
-This guide provides the fundamental concepts used to troubleshoot Group Policy. You'll learn:
+## Summary
 
-- How to locate new troubleshooting information.
-- How to use the Event Viewer to filter specific Group Policy information.
-- How to read and interpret event data.
-- Correct methods for locating the point of failure.
+When Group Policy settings don't apply as expected, the interactions between settings and the complexity of your topology can make troubleshooting a challenge. This article provides fundamental troubleshooting concepts and step-by-step guidance to help you diagnose Group Policy application issues in your Windows Server environment. This guidance helps you perform the following tasks:
+
+  Read and interpret Group Policy event logs.
+  Collect diagnostic information effectively, and use that information to isolate the root cause of your issue.
+  Identify and fix common issues.
+
+Before you begin, make sure that you have administrative access to the affected computers and domain controllers.
 
 ## Troubleshooting checklist
 
