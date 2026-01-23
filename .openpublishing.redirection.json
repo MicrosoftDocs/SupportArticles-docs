@@ -14167,6 +14167,10 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/use-setfind-stl-function.md",
       "redirect_url": "/cpp/standard-library/set-class#example-of-setfind"
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder"
     }
   ]
 }
