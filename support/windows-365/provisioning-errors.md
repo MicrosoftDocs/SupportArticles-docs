@@ -173,7 +173,7 @@ If you receive this error, some factors to consider are:
 
 If you encounter other provisioning errors not covered previously, make sure all the [required endpoints](/windows-365/enterprise/requirements-network?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the virtual network used for your ANC and any gateway device.
 
-For more information about provisioning statuses, see [Device management overview for Cloud PCs](./enterprise/device-management-overview.md).
+For more information about provisioning statuses, see [Device management overview for Cloud PCs](/windows-365/enterprise/device-management-overview).
 
 ## Next steps
 
