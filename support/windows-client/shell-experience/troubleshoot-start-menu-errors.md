@@ -15,12 +15,16 @@ appliesto:
 ---
 # Start menu troubleshooting guidance
 
-Start menu issues fall into the following categories:
+## Summary
 
-- Deployment or installation
-- Application termination or crash
-- Start menu customization or other policies/configuration service providers (CSPs)
-- Other issues
+This article helps you diagnose and resolve common Start menu issues in Windows Client and Windows Server. Start menu issues can affect productivity and user experience, and range from deployment failures and application crashes to customization issues and missing tiles.
+This article provides step-by-step guidance for the following tasks:
+
+- Troubleshoot and fix the type of issue that you have
+- Identify and fix common issues
+- Access relevant event logs and diagnostic tools
+
+For the latest information about known Start menu issues, see the [Windows release health dashboard](/windows/release-health/).
 
 ## Troubleshooting checklist
 
@@ -35,6 +39,13 @@ When you troubleshoot Start issues (and, for the most part, all other Windows ap
   - Group policy settings that restrict access or permissions to folders or registry keys can affect the Start menu performance.
   - Some group policies that are intended for older operating systems can cause Start menu issues.
   - Untested Start menu customizations can lead to unexpected behavior, though typically not complete Start failures.
+
+Start menu issues fall into the following categories:
+
+- Deployment or installation
+- Application termination or crash
+- Start menu customization or other policies/configuration service providers (CSPs)
+- Other issues
 
 ## Deployment or installation issues
 
