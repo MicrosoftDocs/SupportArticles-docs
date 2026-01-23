@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:windows servicing, updates and features on demand\windows update - install errors unknown or code not listed
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
@@ -70,7 +70,7 @@ Verify that the package you want to install matches the processor architecture o
 
 #### Cause 4: Missing prerequisite update
 
-To troubleshoot this issue, read the package’s related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
+To troubleshoot this issue, read the package's related article to find out whether the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424).  
 To determine if these prerequisite updates are installed, run this PowerShell command:  
 `get-hotfix KB3173424, KB2919355, KB2919442`  
 If the updates are installed, the command returns the installed date in the InstalledOn section of the output.
@@ -86,12 +86,12 @@ To troubleshoot this issue, check the numeric code provided in the error message
 
 To troubleshoot this issue, follow these steps:
 
-1. Check that the device’s updates for the relevant category aren’t paused. See [Pause feature updates](/windows/deployment/update/waas-configure-wufb#pause-feature-updates) and [Pause quality updates](/windows/deployment/update/waas-configure-wufb#pause-quality-updates).
+1. Check that the device's updates for the relevant category aren't paused. See [Pause feature updates](/windows/deployment/update/waas-configure-wufb#pause-feature-updates) and [Pause quality updates](/windows/deployment/update/waas-configure-wufb#pause-quality-updates).
 2. Feature updates only: The device might have a safeguard hold applied for the given feature update version. For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
 3. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
 4. Check that the device has scanned for updates and is scanning the Windows Update service. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 5. Feature updates only: Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by a Microsoft Entra device resource with an update management enrollment for feature updates and has no Microsoft Entra device registration errors.
-6. Expedited quality updates only: Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update). The Update Health Tools are required for a device to receive an expedited quality update. The program’s location on the device is *C:\\Program Files\\Microsoft Update Health Tools*.  
+6. Expedited quality updates only: Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update). The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*.  
    To verify its presence, view the installed programs list or use this PowerShell script:
 
    ```powershell
