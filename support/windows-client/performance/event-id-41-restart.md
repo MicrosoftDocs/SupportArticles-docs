@@ -27,7 +27,7 @@ Event ID: 41
 Description: The system has rebooted without cleanly shutting down first.
 ```
 
-This event indicates that some unexpected activity prevented Windows from shutting down correctly. Such a shutdown might be caused by an interruption in the power supply or by a Stop error. If feasible, Windows records any error codes as it shuts down. During the [kernel phase](windows-boot-issues-troubleshooting.md#kernel-phase) of the next Windows startup, Windows checks for these codes and includes any existing codes in the event data of Event ID 41.
+This event indicates that some unexpected activity prevented Windows from shutting down correctly. Such a shutdown might be caused by an interruption in the power supply or by a Stop error. If feasible, Windows records any error codes as it shuts down. During the [kernel phase](windows-boot-issues-troubleshooting.md#troubleshoot-issues-in-the-kernel-phase) of the next Windows startup, Windows checks for these codes and includes any existing codes in the event data of Event ID 41.
 
 ```output
 EventData  
