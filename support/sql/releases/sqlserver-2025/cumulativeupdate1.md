@@ -1,29 +1,28 @@
 ---
-title: Cumulative update 1 for SQL Server 2025 (KB5074901)
-description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5074901).
-ms.date: 01/20/2026
+title: Cumulative update 1 for SQL Server 2025 (KB5078298)
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5078298).
+ms.date: 01/22/2026
 ms.update-cycle: 1095-days
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074901
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078298
 ms.reviewer: v-shaywood
 appliesto:
 - SQL Server 2025 on Windows
 - SQL Server 2025 on Linux
 ---
 
-# KB5074901 - Cumulative Update 1 for SQL Server 2025
+# KB5078298 - Cumulative Update 1 for SQL Server 2025
 
-_Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 17.0.4005.7  
+_Release Date:_ &nbsp; January [todo], 2026  
+_Version:_ &nbsp; 17.0.todo  
 
 ## Summary
-
-> [!IMPORTANT]  
-> This update is temporarily unavailable for download because of a [known issue related to Database Mail](#database-mail-stops-working-after-updating).
 
 This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2025. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
+
+This update was initially released on January 15, 2026 as KB5074901 with SQL Server product version **17.0.4005.7** and file version **2025.170.4005.7**. The initial release of this update contained a [defect](#database-mail-stops-working-after-updating) that caused Database Mail to stop working. The defect is fixed in the currently available version of this cumulative update.
 
 ## Known issues in this update
 
@@ -84,7 +83,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5074901)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5078298)
 
 > [!NOTE]
 >
@@ -108,20 +107,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _SQLServer2025-KB5074901-x64.exe_ file through the following command:
+You can verify the download by computing the hash of the _SQLServer2025-KB5078298-x64.exe_ file through the following command:
 
-`certutil -hashfile SQLServer2025-KB5074901-x64.exe SHA256`
+`certutil -hashfile SQLServer2025-KB5078298-x64.exe SHA256`
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5074901-x64.exe | A25604D3733CFD0DAD9C7BDA5AFCC81755372FC4CA081ACF0D1076C4881D54D3 |
+| SQLServer2025-KB5078298-x64.exe | A25604D3733CFD0DAD9C7BDA5AFCC81755372FC4CA081ACF0D1076C4881D54D3 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5074901](https://download.microsoft.com/download/85e8b2cf-3981-4c62-b711-a812b4057503/KB5074901.csv).
+Download [the list of files that are included in KB5078298](https://download.microsoft.com/download/85e8b2cf-3981-4c62-b711-a812b4057503/KB5078298.csv).
 
 </details>
 
