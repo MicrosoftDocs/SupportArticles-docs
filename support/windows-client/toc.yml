@@ -587,7 +587,7 @@ items:
       href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
-    - name: Windows start-up issues advanced troubleshooting
+    - name: Troubleshooting Windows startup issues
       href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
     items:
