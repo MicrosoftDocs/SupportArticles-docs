@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 05/14/2025
+ms.date: 01/26/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,11 +14,15 @@ appliesto:
 ---
 # Active Directory domain join troubleshooting guidance
 
+## Summary
+
+
+
 This guide provides the fundamental concepts used when troubleshooting Active Directory domain join issues.
 
 ## Troubleshooting checklist
 
-- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory (AD) and makes things work correctly, including domain join. Make sure of the following items:
+- **Domain Name System (DNS):** Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory (AD) and makes things work correctly, including domain join. Make sure of the following items:
 
   - DNS server addresses are correct.
   - DNS suffix search order is correct if multiple DNS domains are in play.
@@ -27,9 +31,9 @@ This guide provides the fundamental concepts used when troubleshooting Active Di
   - The domain name, domain controllers (DCs), and DNS servers can be pinged.
   - Check for DNS record conflicts for the specific server.
 
-- *Netsetup.log*: The *Netsetup.log* file is a valuable resource when you troubleshoot a domain join issue. The *netsetup.log* file is located at *C:\\Windows\\Debug\\netsetup.log*.
-- Network trace: During an AD domain join, multiple types of traffic occur between the client and some DNS servers and then between the client and some DCs. If you see an error in any of the above traffic, follow the corresponding troubleshooting steps of that protocol or component to narrow it down. For more information, see [Using Netsh to Manage Traces](/windows/win32/ndf/using-netsh-to-manage-traces).
-- Domain join hardening changes: Windows updates released on and after October 11, 2022, contain additional protections introduced by [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042). These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless one of the following conditions exist:
+- **Netsetup.log:** The Netsetup.log file is a valuable resource when you troubleshoot a domain join issue. The netsetup.log file is located at C:\\Windows\\Debug\\netsetup.log.
+- Network trace: During an AD domain join, multiple types of traffic occur between the client and some DNS servers and then between the client and some DCs. If you see an error in any of this traffic, follow the corresponding troubleshooting steps of that protocol or component to narrow it down. For more information, see [Using Netsh to Manage Traces](/windows/win32/ndf/using-netsh-to-manage-traces).
+- **Domain join hardening changes:** Windows updates released on and after October 11, 2022, contain additional protections introduced by [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042). These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless one of the following conditions exist:
 
   - The user attempting the operation is the creator of the existing account.
   - The computer was created by a member of domain administrators.
@@ -49,7 +53,7 @@ The following table lists the ports required to be open between the client compu
 |88|TCP|Kerberos|Kerberos Key Distribution Server|
 |135|TCP|RPC|RPC Endpoint Mapper|
 |445|TCP|SMB|LanmanServer|
-|1024-65535|TCP|RPC|RPC Endpoint Mapper for DSCrackNames, SAMR and Netlogon calls between Client and Domain Controller|
+|1024-65535|TCP|RPC|RPC Endpoint Mapper for DSCrackNames, SAMR, and Netlogon calls between Client and Domain Controller|
 
 ## Common issues and solutions
 
@@ -64,7 +68,7 @@ The following table lists the ports required to be open between the client compu
 |0x54b|This error occurs because the specified domain can't be contacted, pointing to issues locating domain controllers (DCs).|[Troubleshooting error code 0x54b](error-code-0x54b.md) |
 |0x0000232A|This error indicates that the Domain Name System (DNS) name can't be resolved.|[Troubleshooting error code 0x0000232A](error-code-0x0000232a.md) |
 |0x3a|This error occurs when the client computer lacks reliable network connectivity on Transmission Control Protocol (TCP) 389 port between the client computer and the domain controller (DC).|[Troubleshooting status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md) |
-|0x216d|This error occurs when the user account has exceeded the limit of 10 computers that can be joined to the domain, or when a Group Policy restricts users from joining computers to the domain.|[Troubleshooting status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md) |
+|0x216d|This error occurs when the user account exceeds the limit of 10 computers that can be joined to the domain, or when a Group Policy restricts users from joining computers to the domain.|[Troubleshooting status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md) |
 
 ### Other errors that occur when you join Windows-based computers to a domain
 
@@ -78,11 +82,11 @@ For more information, see:
 To troubleshoot domain join issues, the following logs could help:
 
 - Netsetup log  
-  This log file contains most information about domain join activities. The file is located on the client machine at `%windir%\debug\netsetup.log`.  
+  This log file contains most information about domain join activities. The file is located on the client machine at %windir%\debug\netsetup.log.  
   This log file is enabled by default. No need to explicitly enable it.
 
 - Network trace  
-  The network trace contains the communication between the client computer and relative servers, such as DNS servers and domain controllers over the network. It should be collected at the client computer. Multiple tools can collect network traces, such as Wireshark, netsh.exe which is included in all Windows editions.
+  The network trace contains the communication between the client computer and relative servers, such as DNS servers and domain controllers over the network. It should be collected at the client computer. Multiple tools can collect network traces, such as Wireshark or netsh.exe. All Windows editions include netsh.exe.
 
 You can collect each log separately. Alternatively, you can use some tools provided by Microsoft to collect them all together. To do so, follow the steps in the following sections.
 
