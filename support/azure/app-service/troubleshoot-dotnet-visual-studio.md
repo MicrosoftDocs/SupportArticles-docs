@@ -49,12 +49,10 @@ Visual Studio provides access to a subset of the app management functions and co
 
 1. If you aren't already signed in to Azure in Visual Studio, right-click **Azure** and select Connect to **Microsoft Azure Subscription** in **Server Explorer**.
 
-    An alternative is to install a management certificate that enables access to your account. If you choose to install a certificate, right-click the **Azure** node in **Server Explorer**, and then select **Manage and Filter Subscriptions** in the context menu. In the **Manage Microsoft Azure Subscriptions** dialog box, click the **Certificates** tab, and then click **Import**. Follow the directions to download and then import a subscription file (also called a *.publishsettings* file) for your Azure account.
+   An alternative is to install a management certificate that enables access to your account. If you choose to install a certificate, right-click the **Azure** node in **Server Explorer**, and then select **Manage and Filter Subscriptions** in the context menu. In the **Manage Microsoft Azure Subscriptions** dialog box, click the **Certificates** tab, and then click **Import**. Follow the directions to download and then import a subscription file (also called a *.publishsettings* file) for your Azure account.
 
    > [!NOTE]
    > If you download a subscription file, save it to a folder outside your source code directories (for example, in the Downloads folder), and then delete it once the import has completed. A malicious user who gains access to the subscription file can edit, create, and delete your Azure services.
-   >
-   >
 
     For more information about connecting to Azure resources from Visual Studio, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 2. In **Server Explorer**, expand **Azure** and expand **App Service**.
@@ -443,43 +441,43 @@ Detailed error logs provide some additional information about HTTP requests that
 1. In the **Azure Web App Configuration** tab that you opened from **Server Explorer**, change **Detailed Error Messages** to **On**, and then click **Save**.
 
     ![Enable detailed error messages](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-detailedlogson.png)
-   
-2. In the **Output** Window, click the **Specify which Microsoft Azure logs to monitor** button.
+
+1. In the **Output** Window, click the **Specify which Microsoft Azure logs to monitor** button.
 
 1. In the **Microsoft Azure Logging Options** dialog box, click **All logs**, and then click **OK**.
 
-    ![Monitor all logs](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-monitorall.png)
-   
+   ![Monitor all logs](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-monitorall.png)
+
 1. In the address bar of the browser window, add an extra character to the URL to cause a 404 error (for example, `http://localhost:53370/Home/Contactx`), and press Enter.
 
-    After several seconds, the detailed error log appears in the Visual Studio **Output** window.
+   After several seconds, the detailed error log appears in the Visual Studio **Output** window.
 
-    ![Detailed error log - Output window](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-detailederrorlog.png)
-   
-       Control+click the link to see the log output formatted in a browser:
+   ![Detailed error log - Output window](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-detailederrorlog.png)
 
-    ![Detailed error log - browser window](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-detailederrorloginbrowser.png)
-   
+   Control+click the link to see the log output formatted in a browser:
+
+   ![Detailed error log - browser window](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-detailederrorloginbrowser.png)
+
 ## <a name="downloadlogs"></a>Download file system logs
 Any logs that you can monitor in the **Output** window can also be downloaded as a *.zip* file.
 
 1. In the **Output** window, click **Download Streaming Logs**.
 
-    :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-downloadicon.png" alt-text="Screenshot of the Output window showing the Download Streaming Logs button highlighted.":::
+   :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-downloadicon.png" alt-text="Screenshot of the Output window showing the Download Streaming Logs button highlighted.":::
 
-    File Explorer opens to your *Downloads* folder with the downloaded file selected.
+   File Explorer opens to your *Downloads* folder with the downloaded file selected.
 
-    :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-downloadedfile.png" alt-text="Screenshot of the Downloads folder in File Explorer with a downloaded file selected.":::
+   :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-downloadedfile.png" alt-text="Screenshot of the Downloads folder in File Explorer with a downloaded file selected.":::
 
-2. Extract the *.zip* file, and you see the following folder structure:
+1. Extract the *.zip* file, and you see the following folder structure:
 
-    :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-logfilefolders.png" alt-text="Screenshot of the .zip file folder structure after the file has been extracted.":::
+   :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-logfilefolders.png" alt-text="Screenshot of the .zip file folder structure after the file has been extracted.":::
 
    * Application tracing logs are in *.txt* files in the *LogFiles\Application* folder.
    * Web server logs are in *.log* files in the *LogFiles\http\RawLogs* folder. You can use a tool such as [Log Parser](https://www.iis.net/downloads/community/2010/04/log-parser-22) to view and manipulate these files.
    * Detailed error message logs are in *.html* files in the *LogFiles\DetailedErrors* folder.
 
-     (The *deployments* folder is for files created by source control publishing; it doesn't have anything related to Visual Studio publishing. The *Git* folder is for traces related to source control publishing and the log file streaming service.)  
+   (The *deployments* folder is for files created by source control publishing; it doesn't have anything related to Visual Studio publishing. The *Git* folder is for traces related to source control publishing and the log file streaming service.)  
 
 <!-- ## <a name="storagelogs"></a>View storage logs
 Application tracing logs can also be sent to an Azure storage account, and you can view them in Visual Studio. To do that you'll create a storage account, enable storage logs in the Azure portal, and view them in the **Logs** tab of the **Azure Web App** window.
@@ -571,45 +569,44 @@ You can view failed request tracing logs in a browser directly via FTP or locall
 
 1. In the **Configuration** tab of the **Azure Web App** window that you opened from **Server Explorer**, change **Failed Request Tracing** to **On**, and then click **Save**.
 
-    ![Enable failed request tracing](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-failedrequeston.png)
-2. In the address bar of the browser window that shows the app, add an extra character to the URL and click Enter to cause a 404 error.
+   ![Enable failed request tracing](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-failedrequeston.png)
+1. In the address bar of the browser window that shows the app, add an extra character to the URL and click Enter to cause a 404 error.
 
-    This causes a failed request tracing log to be created, and the following steps show how to view or download the log.
+   This causes a failed request tracing log to be created, and the following steps show how to view or download the log.
 
-3. In Visual Studio, in the **Configuration** tab of the **Azure Web App** window, click **Open in Management Portal**.
+1. In Visual Studio, in the **Configuration** tab of the **Azure Web App** window, click **Open in Management Portal**.
 
 1. In the [Azure portal](https://portal.azure.com) **Settings** page for your app, click **Deployment credentials**, and then enter a new user name and password.
 
-    ![New FTP user name and password](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-enterftpcredentials.png)
-   
-       > [!NOTE]
-    > When you log in, you have to use the full user name with the app name prefixed to it. For example, if you enter "myid" as a user name and the site is "myexample", you log in as "myexample\myid".
-    >
+   ![New FTP user name and password](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-enterftpcredentials.png)
 
-5. In a new browser window, go to the URL that is shown under **FTP hostname** or **FTPS hostname** in the **Overview** page for your app.
+   > [!NOTE]
+   > When you log in, you have to use the full user name with the app name prefixed to it. For example, if you enter "myid" as a user name and the site is "myexample", you log in as "myexample\myid".
 
-6. Sign in using the FTP credentials that you created earlier (including the app name prefix for the user name).
+1. In a new browser window, go to the URL that is shown under **FTP hostname** or **FTPS hostname** in the **Overview** page for your app.
 
-    The browser shows the root folder of the app.
+1. Sign in using the FTP credentials that you created earlier (including the app name prefix for the user name).
+
+   The browser shows the root folder of the app.
 
 1. Open the *LogFiles* folder.
 
-    ![Open LogFiles folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-logfilesfolder.png)
-   
+   ![Open LogFiles folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-logfilesfolder.png)
+
 1. Open the folder that is named W3SVC plus a numeric value.
 
-    ![Open W3SVC folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-w3svcfolder.png)
-   
-       The folder contains XML files for any errors that have been logged after you enabled failed request tracing, and an XSL file that a browser can use to format the XML.
+   ![Open W3SVC folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-w3svcfolder.png)
 
-       ![W3SVC folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-w3svcfoldercontents.png)
+   The folder contains XML files for any errors that have been logged after you enabled failed request tracing, and an XSL file that a browser can use to format the XML.
+
+   ![W3SVC folder](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-w3svcfoldercontents.png)
 
 1. Click the XML file for the failed request that you want to see tracing information for.
 
-    The following illustration shows part of the tracing information for a sample error.
+   The following illustration shows part of the tracing information for a sample error.
 
-    ![Failed request tracing in browser](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-failedrequestinbrowser.png)
-   
+   ![Failed request tracing in browser](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-failedrequestinbrowser.png)
+
 ## <a name="nextsteps"></a>Related content
 You've seen how Visual Studio makes it easy to view logs created by an App Service app. The following sections provide links to more resources on related topics:
 
@@ -658,7 +655,7 @@ There are no thorough and up-to-date introductions to ASP.NET tracing available 
 * [Tracing in ASP.NET MVC Razor Views](https://devblogs.microsoft.com/aspnet/tracing-in-asp-net-mvc-razor-views/)<br/>
   Besides tracing in Razor views, the post also explains how to create an error filter in order to log all unhandled exceptions in an MVC application. For information about how to log all unhandled exceptions in a Web Forms application, see the Global.asax example in [Complete Example for Error Handlers](/previous-versions/bb397417(v=vs.140)) on MSDN. In either MVC or Web Forms, if you want to log certain exceptions but let the default framework handling take effect for them, you can catch and rethrow as in the following example:
 
-    ```csharp
+  ```csharp
     try
     {
        // Your code that might cause an exception to be thrown.
@@ -668,9 +665,9 @@ There are no thorough and up-to-date introductions to ASP.NET tracing available 
         Trace.TraceError("Exception: " + ex.ToString());
         throw;
     }
-    ```
+  ```
 
-* [Streaming Diagnostics Trace Logging from the Azure Command Line (plus Glimpse!)](https://www.hanselman.com/blog/StreamingDiagnosticsTraceLoggingFromTheAzureCommandLinePlusGlimpse.aspx)<br/>
+* [Streaming Diagnostics Trace Logging from the Azure Command Line (plus Glimpse!)](https://www.hanselman.com/blog/StreamingDiagnosticsTraceLoggingFromTheAzureCommandLinePlusGlimpse.aspx)  
   How to use the command line to do what this tutorial shows how to do in Visual Studio. [Glimpse](https://www.hanselman.com/blog/IfYoureNotUsingGlimpseWithASPNETForDebuggingAndProfilingYoureMissingOut.aspx) is a tool for debugging ASP.NET applications.
 
 For error logging, an alternative to writing your own tracing code is to use an open-source logging framework such as [ELMAH](https://nuget.org/packages/elmah/). For more information, see [Scott Hanselman's blog posts about ELMAH](https://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx).
@@ -680,18 +677,17 @@ Also, you don't need to use ASP.NET or `System.Diagnostics` tracing to get strea
 ### Analyzing web server logs
 For more information about analyzing web server logs, see the following resources:
 
-* [LogParser](https://www.iis.net/downloads/community/2010/04/log-parser-22)<br/>
+* [LogParser](https://www.iis.net/downloads/community/2010/04/log-parser-22)  
   A tool for viewing data in web server logs (*.log* files).
-* [Troubleshooting IIS Performance Issues or Application Errors using LogParser](https://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser)<br/>
+* [Troubleshooting IIS Performance Issues or Application Errors using LogParser](https://www.iis.net/learn/troubleshoot/performance-issues/troubleshooting-iis-performance-issues-or-application-errors-using-logparser)  
   An introduction to the Log Parser tool that you can use to analyze web server logs.
-* [Blog posts by Robert McMurray on using LogParser](/archive/blogs/robert_mcmurray/using-logparser-with-ftp-7-x-sessions)<br/>
+* [Blog posts by Robert McMurray on using LogParser](/archive/blogs/robert_mcmurray/using-logparser-with-ftp-7-x-sessions)  
 * [The HTTP status code in IIS 7.0, IIS 7.5, and IIS 8.0](https://support.microsoft.com/kb/943891)
 
 ### Analyzing failed request tracing logs
 The Microsoft TechNet website includes a [Using Failed Request Tracing](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing) section, which may be helpful for understanding how to use these logs. However, this documentation focuses mainly on configuring failed request tracing in IIS, which you can't do in Azure App Service.
 
 [GetStarted]: quickstart-dotnetcore.md
-[GetStartedWJ]: https://github.com/Azure/azure-webjobs-sdk/wiki
-
+[GetStartedWJ](https://github.com/Azure/azure-webjobs-sdk/wiki): https://github.com/Azure/azure-webjobs-sdk/wiki
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
