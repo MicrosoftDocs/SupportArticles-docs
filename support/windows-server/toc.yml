@@ -109,6 +109,8 @@ items:
       href: ./active-directory/fsmo-transfer-seizure-process.md
   - name: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
     items:
+    - name: AD LDS instance logs Event ID 2092
+      href: ./active-directory/ad-lds-instance-logs-event-id-2092.md
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
       href: ./active-directory/adam-general-event-id-1161-logged-ad-lds-server.md
     - name: Change Windows Active Directory user password through LDAP
@@ -131,8 +133,6 @@ items:
       href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
     items:
-    - name: AD LDS instance logs Event ID 2092
-      href: ./active-directory/ad-lds-instance-logs-event-id-2092.md
     - name: ADMT 3.1 PES installation fails with error
       href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
     - name: Fail to run ADMT console after installation
@@ -672,6 +672,8 @@ items:
       href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
       href: ./backup-and-storage/extending-csv-isnt-blocked.md
+    - name: Stop error when Windows tries to repair a drive while restarting
+      href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
   - name: Deduplication
@@ -1882,6 +1884,8 @@ items:
       href: ./performance/stop-error-7e-nfs.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
+    - name: Stop error when Windows tries to repair a drive while restarting
+      href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
