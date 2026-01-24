@@ -45,6 +45,13 @@ Verify that the OAuth 2.0 client ID and client secret are correct.
 
 ::: zone-end
 
+::: zone pivot="keycloak-self-hosted"
+
+1. Verify that the OpenID Connect (OIDC) provider settings are correctly configured.
+2. Make sure that the audience claim matches the authenticator configuration.
+
+::: zone-end
+
 ### Step 2: Validate the issuer URL
 
 The issuer URL must be accessible from the AKS cluster nodes. Follow these steps.
@@ -67,6 +74,14 @@ The issuer URL must be accessible from the AKS cluster nodes. Follow these steps
    
    ::: zone-end
 
+   ::: zone pivot="keycloak-self-hosted"
+   
+   ```bash
+   nslookup <FQDN OF KEYCLOAK INSTANCE>
+   ```
+   
+   ::: zone-end
+
 2. Test network connectivity from a cluster node:
 
    ::: zone pivot="github"
@@ -81,6 +96,14 @@ The issuer URL must be accessible from the AKS cluster nodes. Follow these steps
    
    ```bash
    curl -v https://accounts.google.com/.well-known/openid-configuration
+   ```
+   
+   ::: zone-end
+
+   ::: zone pivot="keycloak-self-hosted"
+   
+   ```bash
+   curl -v https://<FQDN OF KEYCLOAK INSTANCE>/realms/<NAME OF REALM>/.well-known/openid-configuration
    ```
    
    ::: zone-end
@@ -173,6 +196,45 @@ Example configuration:
 
 ::: zone-end
 
+::: zone pivot="keycloak-self-hosted"
+
+```json
+{
+    "issuer": {
+        "url": "https://<FQDN OF KEYCLOAK INSTANCE>/realms/<NAME OF REALM>",
+        "audiences": [
+            "<NAME OF CLIENT IN KEYCLOAK REALM>"
+        ]
+    },
+    "claimValidationRules": [
+        {
+            "expression": "has(claims.sub)",
+            "message": "must have sub claim"
+        }
+    ],
+    "claimMappings": {
+        "username": {
+            "expression": "'aks:jwt:keycloak:' + claims.sub"
+        },
+        "groups": {
+            "expression": "has(claims.groups) ? claims.groups.split(',').map(g, 'aks:jwt:keycloak:' + g) : []"
+        }
+    },
+    "userValidationRules": [
+        {
+            "expression": "has(user.username)",
+            "message": "must have username"
+        },
+        {
+            "expression": "!user.username.startsWith('aks:jwt:keycloak:system')",
+            "message": "username must not start with 'aks:jwt:keycloak:system'"
+        }
+    ]
+}
+```
+
+::: zone-end
+
 ### Step 4: Decode and verify JWT tokens
 
 Verify claims, and obtain and inspect the JWT token. Follow these steps:
@@ -199,6 +261,19 @@ Verify claims, and obtain and inspect the JWT token. Follow these steps:
      --oidc-issuer-url=https://accounts.google.com \
      --oidc-client-id=your-client-id \
      --oidc-client-secret=your-client-secret
+   ```
+
+::: zone-end
+
+::: zone pivot="keycloak-self-hosted"
+
+1. Get a token from Keycloak:
+
+   ```bash
+   kubectl oidc-login get-token \
+     --oidc-issuer-url="https://<FQDN OF KEYCLOAK INSTANCE>/realms/<NAME OF REALM>" \
+     --oidc-client-id="<NAME OF CLIENT IN KEYCLOAK REALM>" \
+     --oidc-client-secret="<SECRET OF REFERENCED CLIENT IN KEYCLOAK REALM>"
    ```
 
 ::: zone-end
@@ -268,6 +343,7 @@ The OAuth client or OIDC provider settings are incorrect.
 
 ::: zone-end
 
+
 ### Issue 2: Token validation failures
 
 **Cause: Invalid CEL expressions in claim mappings**
@@ -295,7 +371,7 @@ The following code is an example of a valid CEL expression for extracting groups
 
 **Cause: Cluster nodes cannot reach the identity provider**
 
-Issues that affect network security groups, firewalls, or the DNS prevent the cluster from accessing the identity provider.
+Issues that affect network security groups, firewalls, certificate or the DNS prevent the cluster from accessing the identity provider.
 
 **Solution 1: Verify DNS resolution**
 
@@ -328,6 +404,29 @@ Issues that affect network security groups, firewalls, or the DNS prevent the cl
 1. Review network security group rules that are associated with your AKS cluster.
 2. Make sure that outbound HTTPS (port 443) traffic is allowed to your identity provider's domain.
 3. If you use Azure Firewall, add application rules for the identity provider URLs.
+
+::: zone pivot="keycloak-self-hosted"
+
+**Solution 3: Check and replace certificate**
+
+1. Check Azure Log Analytics Workspace for error message `502 Bad Gateway`
+
+    ```KQL
+    AKSControlPlane
+    | where Category == "kube-apiserver"
+    | where Level == "ERROR"
+    ```
+
+    Although the error message highlights potential network issues, it could also be certificate related. 
+
+    ```
+    oidc authenticator: initializing plugin: 502 Bad Gateway: Request to 'https://<FQDN OF KEYCLOAK INSTANCE>/realms/<NAME OF REALM>/.well-known/openid-configuration' cannot be made. Please make sure the OIDC identity provider is publicly accessible, and it is reachable from your cluster node(s).
+    ```
+
+2. Make sure that the correct and valid certificate has been uploaded and the entire certificate trust chain (from certificate up to root, including intermediate certificates) is known and trusted.
+3. Restart the web service to ensure that the certificate is loaded.
+
+::: zone-end
 
 ### Issue 4: Missing `aks:jwt:` prefix in username or groups
 
@@ -413,6 +512,49 @@ For GitHub Actions OIDC, create a file that's named `jwt-config.json` that has t
         {
             "expression": "!user.username.startsWith('aks:jwt:google:system')",
             "message": "username must not start with 'aks:jwt:google:system'"
+        }
+    ]
+}
+```
+
+::: zone-end
+
+::: zone pivot="keycloak-self-hosted"
+
+### Keycloak OIDC Configuration
+
+1. Create a file that's named `jwt-config.json` that has the following configuration:
+
+```json
+{
+    "issuer": {
+        "url": "https://<FQDN OF KEYCLOAK INSTANCE>/realms/<NAME OF REALM>",
+        "audiences": [
+            "<NAME OF CLIENT IN KEYCLOAK REALM>"
+        ]
+    },
+    "claimValidationRules": [
+        {
+            "expression": "has(claims.sub)",
+            "message": "must have sub claim"
+        }
+    ],
+    "claimMappings": {
+        "username": {
+            "expression": "'aks:jwt:keycloak:' + claims.sub"
+        },
+        "groups": {
+            "expression": "has(claims.groups) ? claims.groups.split(',').map(g, 'aks:jwt:keycloak:' + g) : []"
+        }
+    },
+    "userValidationRules": [
+        {
+            "expression": "has(user.username)",
+            "message": "must have username"
+        },
+        {
+            "expression": "!user.username.startsWith('aks:jwt:keycloak:system')",
+            "message": "username must not start with 'aks:jwt:keycloak:system'"
         }
     ]
 }
