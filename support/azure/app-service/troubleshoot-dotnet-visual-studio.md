@@ -310,54 +310,56 @@ For information about how to create application logs in WebJobs, see [How to wor
 1. Add a `using System.Diagnostics;` statement to the top of the file.
 
 ### View the tracing output locally
+
 1. Press F5 to run the application in debug mode.
 
-    The default trace listener writes all trace output to the **Output** window, along with other Debug output. The following illustration shows the output from the trace statements that you added to the `Index` method.
+   The default trace listener writes all trace output to the **Output** window, along with other Debug output. The following illustration shows the output from the trace statements that you added to the `Index` method.
 
     ![Tracing in Debug window](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-debugtracing.png)
-   
-       The following steps show how to view trace output in a web page, without compiling in debug mode.
+
+   The following steps show how to view trace output in a web page, without compiling in debug mode.
 1. Open the application Web.config file (the one located in the project folder) and add a `<system.diagnostics>` element at the end of the file just before the closing `</configuration>` element:
 
-    ``` xml
-    <system.diagnostics>
-    <trace>
-      <listeners>
-        <add name="WebPageTraceListener"
-            type="System.Web.WebPageTraceListener,
-            System.Web,
-            Version=4.0.0.0,
-            Culture=neutral,
-            PublicKeyToken=b03f5f7f11d50a3a" />
-      </listeners>
-    </trace>
-    </system.diagnostics>
-    ```
+   ``` xml
+   <system.diagnostics>
+   <trace>
+     <listeners>
+       <add name="WebPageTraceListener"
+           type="System.Web.WebPageTraceListener,
+           System.Web,
+           Version=4.0.0.0,
+           Culture=neutral,
+           PublicKeyToken=b03f5f7f11d50a3a" />
+     </listeners>
+   </trace>
+   </system.diagnostics>
+   ```
 
 The `WebPageTraceListener` lets you view trace output by browsing to `/trace.axd`.
+
 1. Add a [trace element](/previous-versions/dotnet/netframework-4.0/6915t83k(v=vs.100)) under `<system.web>` in the Web.config file, such as the following example:
 
-    ``` xml
-    <trace enabled="true" writeToDiagnosticsTrace="true" mostRecent="true" pageOutput="false" />
-    ```
+   ``` xml
+   <trace enabled="true" writeToDiagnosticsTrace="true" mostRecent="true" pageOutput="false" />
+   ```
 
 1. Press CTRL+F5 to run the application.
 1. In the address bar of the browser window, add *trace.axd* to the URL, and then press Enter (the URL is similar to `http://localhost:53370/trace.axd`).
 1. On the **Application Trace** page, click **View Details** on the first line (not the BrowserLink line).
 
-    :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-traceaxd1.png" alt-text="Screenshot of the Application Trace page in a web browser showing View Details selected on the first line.":::
+   :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-traceaxd1.png" alt-text="Screenshot of the Application Trace page in a web browser showing View Details selected on the first line.":::
 
-    The **Request Details** page appears, and in the **Trace Information** section you see the output from the trace statements that you added to the `Index` method.
+   The **Request Details** page appears, and in the **Trace Information** section you see the output from the trace statements that you added to the `Index` method.
 
-    :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-traceaxd2.png" alt-text="Screenshot of the Request Details page in a web browser showing a message highlighted in the Trace Information section.":::
+   :::image type="content" source="./media/web-sites-dotnet-troubleshoot-visual-studio/tws-traceaxd2.png" alt-text="Screenshot of the Request Details page in a web browser showing a message highlighted in the Trace Information section.":::
 
-    By default, `trace.axd` is only available locally. If you wanted to make it available from a remote app, you could add `localOnly="false"` to the `trace` element in the *Web.config* file, as shown in the following example:
+   By default, `trace.axd` is only available locally. If you wanted to make it available from a remote app, you could add `localOnly="false"` to the `trace` element in the *Web.config* file, as shown in the following example:
 
-    ```xml
-    <trace enabled="true" writeToDiagnosticsTrace="true" localOnly="false" mostRecent="true" pageOutput="false" />
-    ```
+   ```xml
+   <trace enabled="true" writeToDiagnosticsTrace="true" localOnly="false" mostRecent="true" pageOutput="false" />
+   ```
 
-    However, enabling `trace.axd` in a production app is not recommended for security reasons. In the following sections, you'll see an easier way to read tracing logs in an App Service app.
+   However, enabling `trace.axd` in a production app is not recommended for security reasons. In the following sections, you'll see an easier way to read tracing logs in an App Service app.
 
 ### View the tracing output in Azure
 
