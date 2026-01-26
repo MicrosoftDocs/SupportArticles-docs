@@ -17,7 +17,9 @@ appliesto:
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806211" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common SMB issues.
 
-This article is designed to help you troubleshoot Server Message Block (SMB) issues. Most users are able to resolve their issue by using the solutions that are provided here.
+## Summary
+
+This article helps you troubleshoot Server Message Block (SMB) issues in Windows Server environments. Use the solutions and guidance provided here to diagnose and fix common SMB connectivity, performance, and configuration issues. If you need additional help, see the [Data collection](#data-collection) section before you contact Microsoft Support.
 
 ## SMB terminology
 
