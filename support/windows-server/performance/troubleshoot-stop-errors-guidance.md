@@ -1,20 +1,20 @@
 ---
 title: Guidance for troubleshooting stop errors and unexpected restart.
 description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
-ms.date: 03/19/2025
+ms.date: 01/27/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw
 ms.custom:
-- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- sap:system performance\system reliability (crash ,errors, bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Stop errors and unexpected restart troubleshooting guidance
 
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806236" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues</span>
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806236" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows startup issues</span>
 
 This solution is designed to help you troubleshoot Stop error scenarios.
 
@@ -27,14 +27,14 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 3. Contact the respective hardware or software vendor to update the drivers and applications in the following scenarios:
 
    - The error message indicates that a specific driver is causing the problem.
-   - You're seeing an indication of a service that is starting or stopping before the failure occurred. In this situation, determine whether the service behavior is consistent across all instances of the failure.
+   - You're seeing an indication of a service that's starting or stopping before the failure occurred. In this situation, determine whether the service behavior is consistent across all instances of the failure.
    - You have made any software or hardware changes.
 
 4. Make sure that you install the latest Windows updates, cumulative updates, and rollup updates.
 5. Make sure that the BIOS and firmware are up-to-date.
 6. Run any relevant hardware and memory tests.
 7. Run an anti-malware software scan such as [Microsoft Defender](/defender-endpoint/microsoft-defender-offline).
-8. If the problem occurs after installing a new piece of software, remove the new software. If you can't boot to normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f).
+8. If the problem occurs after installing a new piece of software, remove the new software. If you can't start in normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f).
 
    > [!NOTE]
    > Some software can't be removed from Safe Mode.
@@ -64,7 +64,7 @@ When you troubleshoot this issue, running the Windows Memory Diagnostic tool cou
 Stop error code:  
 > 0x0000003B
 
-This error code indicates that the executing code had an exception, and the thread that was below it is a system thread. Follow these steps:
+This error code indicates that the code that was running had an exception, and the thread that was below it is a system thread. Follow these steps:
 
 1. If new device drivers or system services have been added recently, try removing or updating them.
 2. Look in Device Manager to see whether any devices are marked with an exclamation point (!) to indicate a problem. Review the events log that's displayed in the properties for any faulting device driver. Try to update the related driver.
@@ -96,7 +96,7 @@ This error code indicates that the driver is in an inconsistent or invalid power
 
 1. If new device drivers or system services have been added recently, try removing or updating them. Try to determine what changed in the system that caused the new error code to appear.
 2. Look in Device Manager to see if any devices are marked with the exclamation point (!). Review the event log that's displayed in the driver properties window for any faulting driver. Try updating the related driver.
-3. Check the system log in Event Viewer for additional error messages that might help pinpoint the device or driver that is causing the error. For more information, see Open Event Viewer. Look for critical errors in the system log that occurred in the same time window as the blue screen.
+3. Check the system log in Event Viewer for additional error messages that might help pinpoint the device or driver that's causing the error. For more information, see Open Event Viewer. Look for critical errors in the system log that occurred in the same time window as the blue screen.
 4. To isolate the cause, temporally disable power saving by using the Power Options item in Control Panel. Some driver issues are related to the various states of system hibernation and the suspending and resumption of power.
 5. If you recently added hardware to the system, try removing or replacing it. Or check with the manufacturer to see if any patches are available.
 6. You can try running the hardware diagnostics supplied by the system manufacturer.
