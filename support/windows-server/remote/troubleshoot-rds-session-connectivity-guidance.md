@@ -16,9 +16,9 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806253" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common connectivity issues for Remote Desktop Services.</span>
 
-This article is designed to help you troubleshoot Remote Desktop Session (RDS) connectivity scenarios.
+This article is designed to help you troubleshoot Remote Desktop Service (RDS) session connectivity scenarios.
 
-## Check the status of the RDP protocol
+## Check the status of the Remote Desktop protocol (RDP)
 
 - [Check the status of the RDP protocol on a remote computer](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-the-status-of-the-rdp-protocol-on-a-remote-computer)
 - [Check whether a Group Policy Object (GPO) is blocking RDP on a local computer](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer)
@@ -38,6 +38,8 @@ This article is designed to help you troubleshoot Remote Desktop Session (RDS) c
 ## Common issues and solutions
 
 ### Credential limit per app
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 Windows allows only up to 20 credentials per app. If you have to have more than 20 credentials per app, follow these steps to bypass the 20-credential limit:
 
