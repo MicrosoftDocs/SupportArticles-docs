@@ -226,6 +226,14 @@ When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud 
      - **Enable screen capture protection** = **Enable**
      - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
+## Windows 365 role assignments do not support device groups as scope groups
+
+Windows 365 role assignments do not support adding device group as a part of scope groups. It only supports user groups. 
+
+### Solution
+
+Make sure to add the right user groups within the administrator's role assignment. For devices that do not have associated users (Frontline in shared mode devices or CloudApps), the scope group check is skipped.  
+
 ## Windows 365 scope tags and nested groups
 
 Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
