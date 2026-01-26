@@ -1,7 +1,7 @@
 ---
 title: Windows startup issues troubleshooting
 description: Learn to troubleshoot issues that prevent Windows from starting. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
-ms.date: 01/23/2026
+ms.date: 01/27/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
@@ -15,11 +15,11 @@ appliesto:
 ---
 # Advanced troubleshooting for Windows startup issues
 
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=boot" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues.</span>
+
 ## Summary
 
 This article helps you diagnose and fix issues that prevent Windows from starting correctly. It discusses the different phases of the startup process (PreBoot, Boot Manager, OS Loader, or Kernel), and how to identify which phase is affected. For each phase, the article provides step-by-step guidance and introductions to tools that you can use to identify and fix startup issues.
-
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=boot" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues.</span>
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals. If you're looking for more general information about recovery options, see [Recovery options in Windows 10](https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5).
