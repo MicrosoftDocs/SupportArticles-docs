@@ -101,31 +101,35 @@ Depending on the namespace that the `Gateway` and respective Routes are deployed
 
 Similarly, [ReferenceGrants](https://gateway-api.sigs.k8s.io/api-types/referencegrant/) can be used to enable cross namespace from Routes to backends in other namespaces.
 
-### Step 3: Verify routing rules don't conflict
+### Step 3: Ensure no conflicts with AKS-managed `istio-gateway-class-defaults` ConfigMap
+
+That the `istio-gateway-class-defaults` ConfigMap is provisioned and reconciled by AKS when the Managed Gateway API CRDs and the Istio add-on are enabled together. If you previously created the `istio-gateway-class-defaults` ConfigMap in the `aks-istio-system` namespace yourself, you must delete the self-managed ConfigMap instance prior to enabling the Managed Gateway API CRDs to avoid conflicts with reconciliation of the AKS-managed ConfigMap.
+
+### Step 4: Verify routing rules don't conflict
 
 While multiple Routes can be attached to a single `Gateway` resources, only one Route rule may match each request. Overlapping rules can lead to conflicts and merging issues.
 
-### Step 4: Inspect the `Gateway` and Routes for programming errors
+### Step 5: Inspect the `Gateway` and Routes for programming errors
 
 If the `Gateway` has a programmed status of `failed` or `unknown`, you should inspect the `Gateway` object for more details. You can take this step by running `kubectl get gateway <gateway-name> -n <gateway-namespace> -o yaml` and `kubectl describe gateway <gateway-name> -n <gateway-namespace> `. Check the Gateway objects' `STATUS` for programming issues or other errors.
 
 You should also inspect the status of Routes (`HTTPRoutes`, `GRPCRoutes`, etc.) by running `kubectl describe httproute <route-name> -n <route-namespace> -o yaml`. 
 
-### Step 5: Inspect `istiod` and `Gateway` logs for errors
+### Step 6: Inspect `istiod` and `Gateway` logs for errors
 
 The `istiod` logs may have additional details about `Gateway` programming-related errors. If the gateway is programmed successfully, and the pod deployments are created, but other issues occur, try inspecting the `Gateway` pod logs for any potential errors. The `Gateway` pod deployment name follows the format, `<gateway-name>-istio`.
 
-### Step 6: Inspect `Gateway` proxy pods
+### Step 7: Inspect `Gateway` proxy pods
 
 Verify that `Gateway` proxy pods aren't crashing or `OOMKilled` due to memory issues. You can configure the deployment resource requests/limits and the HPA for the `Gateway` via [ConfigMap customizations](#gateway-resource-customization-troubleshooting).
 
-### Step 7: Verify that `Gateway` resource names are valid
+### Step 8: Verify that `Gateway` resource names are valid
 
 By default, the Istio control plane will append the `GatewayClass` name `istio` (or `approuting-istio` for the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api)). to the name of the resources that it provisions for the `Gateway`. The resource names must be less than `63` characters and must also be a valid DNS name. If the names are invalid, `istiod` will fail to provision the `Gateway` resources and will output an `error` log.
 
 You can annotate your `Gateway` resource with `gateway.istio.io/name-override` to override the name of the provisioned resources.
 
-### Step 8: Verify `GatewayClass` has been created
+### Step 9: Verify `GatewayClass` has been created
 
 Verify that the `GatewayClass` `istio` has been created by `istiod`: `kubectl get gatewayclass`. If the `GatewayClass` has not been created, ensure that you have the Managed Gateway API CRD installation enabled on the cluster. If the Managed Gateway API CRDs have been installed but the `GatewayClass` has still not been created, inspect the `istiod` logs for any errors. (If you are using the [application routing Gateway API Implementation](/azure/aks/app-routing-gateway-api), the `GatewayClass` that should be created is `approuting-istio`).
 
