@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting high CPU usage
 description: Introduces general guidance for troubleshooting scenarios in which you experience high CPU usage.
-ms.date: 01/15/2025
+ms.date: 01/27/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,11 @@ appliesto:
 ---
 # High CPU usage troubleshooting guidance
 
-This article helps you identify the cause of sustained high CPU usage. Keep in mind that you can expect CPU usage to increase as a process or an application serves requests. However, if you consistently see CPU usage remain at a high level (80 percent or greater) for prolonged periods, the performance of your system or application will suffer. For that reason, it's important to understand the cause of sustained high CPU usage to be able to correct the problem, if possible.
+## Summary
+
+High CPU usage can significantly affect the performance of your Windows Server system or applications. This article helps you identify and troubleshoot scenarios in which CPU usage consistently remains at 80 percent or higher for extended periods. While it's normal for CPU usage to spike temporarily when processes handle requests, sustained high usage indicates an underlying issue.
+
+Use this guidance to identify the processes or applications that consume excessive CPU resources, and then troubleshoot and fix the cause of the issue.
 
 ## Troubleshooting tools
 
