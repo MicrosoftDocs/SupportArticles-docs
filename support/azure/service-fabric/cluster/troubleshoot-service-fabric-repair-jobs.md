@@ -13,11 +13,11 @@ ms.date: 01/20/2026
 # Troubleshooting guide for customers to investigate and analyse, using Service Fabric Explorer (SFX), why repair jobs are not being approved 
 
 ## Repair Task overview in service fabric
-Any operation initiated from the Virtual Machine Scale Set (VMSS) that targets VMs is processed by Service Fabric (SF) as a repair task derived from the job it receives. The Infrastructure Service creates a repair task for each job and enriches it with details such as the update type, targeted update domain (UD), and document incarnation number. These jobs begin with UD0 and progress sequentially through UD1, UD2, and so on within the Service Fabric cluster. If an Update Domain walk is required, separate repair tasks are generated for each UD. For example, in a cluster with five UDs, five distinct repair tasks will be created. These tasks execute one after another, UD by UD, and their progress can be tracked in Service Fabric Explorer (SFX). 
+Any operation initiated from the scale-set that targets VMs is processed by Service Fabric as a repair task derived from the job it receives. The Infrastructure Service creates a repair task for each job and adds details like the update type, targeted update domain (UD), and document incarnation number. These jobs begin with UD0 and progress sequentially through UD1, UD2, and so on within the Service Fabric cluster. If an Update Domain walk is required, separate repair tasks are generated for each UD. For example, in a cluster with five UDs, five distinct repair tasks will be created. These tasks execute one after another, UD by UD, and their progress can be tracked in Service Fabric Explorer (SFX). 
 
-RepairManager – Repair Manager (RM) defines and implements a safe workflow for performing repairs by coordinating between the Repair Requestor, Repair Executor, and itself to ensure safe and consistent repair actions. 
+Repair Manager - defines and implements a safe workflow for performing repairs by coordinating between the Repair Requestor, Repair Executor, and itself to ensure safe and consistent repair actions. 
 
-Infrastructure Service – Infrastructure Service (IS) is responsible for managing and orchestrating infrastructure-level operations, such as updates and repairs, ensuring the health and stability of the Service Fabric cluster.
+Infrastructure Service –  responsible for managing and orchestrating infrastructure-level operations, such as updates and repairs, ensuring the health and stability of the Service Fabric cluster.
 
 ### Repair Task vs. Repair Job  
 
@@ -47,11 +47,11 @@ In the Created state, the Repair Manager (RM) accepts and stores the repair requ
 
 * Claimed 
 
-Once the task is Claimed, the Repair Executor (RE) has taken ownership but has not yet specified the repair's impact. The requestor still retains the ability to cancel the task at this stage. Repair executor has ownership in this state. 
+Once the task is Claimed, the Repair Executor (RE) has taken ownership but hasn't specified the repair's impact. The requestor still retains the ability to cancel the task at this stage. Repair executor has ownership in this state. 
 
 * Preparing 
 
-In the Preparing state, the Repair Executor specifies the impact, and the Repair Manager prepares the environment, such as deactivating nodes. If the task is cancelled now, it skips execution and moves directly to restoring. Operator also have the option to force approval, bypassing certain safety checks. Repair Manager has ownership in this state. 
+In the Preparing state, the Repair Executor specifies the impact, and the Repair Manager prepares the environment, such as deactivating nodes. If the task is cancelled now, it skips execution and moves directly to restoring. Operator also has the option to force approval, bypassing certain safety checks. Repair Manager has ownership in this state. 
 
 * Approved 
 
@@ -73,8 +73,12 @@ Finally, in the Completed state, the task is finished, and no further state chan
 
 ### Infrastructure Jobs view 
 
-To view jobs that have been submitted to Service Fabric for approval, navigate to the Infrastructure Jobs tab under cluster view. Each entry includes a Job ID, which remains consistent across Service Fabric as well as outside service fabric. The Acknowledgement Status indicates whether the job has been approved by Service Fabric: • WaitingForAcknowledgement means the job is still pending approval. • Acknowledged confirms that the job has been approved by Service Fabric. This view represents perspective of the job. Jobs will only appear here when they are present in the received document. In addition to the Job ID and Acknowledgement Status, the Impact Types section displays the nature of the job’s impact. The Current Repair Task section shows which repair task is actively running for the job approval on the Service Fabric side. By selecting All Repair Tasks, you can view the status of every repair task associated with the current job.
+To view jobs that have been submitted to Service Fabric for approval, navigate to the **Infrastructure Jobs** tab under cluster view. Each entry includes a **Job ID**, which remains consistent across Service Fabric and outside service fabric. The **Acknowledgement Status** indicates whether the job has been approved by Service Fabric: 
 
+- **WaitingForAcknowledgement** means the job is still pending approval. 
+- **Acknowledged** confirms that the job has been approved by Service Fabric. 
+
+This view represents perspective of the job. Jobs will only appear here when they are present in the received document. In addition to the **Job ID** and **Acknowledgement Status**, the **Impact Types** section displays the nature of the job’s impact. The **Current Repair Task** section shows which repair task is actively running for the job approval on the Service Fabric side. By selecting **All Repair Tasks**, you can view the status of every repair task associated with the current job.
 
 <center>
 ![Infrastructure Job view][Image1]
@@ -141,12 +145,12 @@ To check if any job is being throttled for a specific Infrastructure Service, se
 </center>
 
 
-[Image1]:./media/Infrastructure-job-view.png
+[Image1]:./media/cluster-infrastructure-job-view.png
 [Image2]:./media/repair-task-view.png
-[Image3]:./media/Health-check.png
+[Image3]:./media/cluster-health-check.png
 [Image4]:./media/safety-check-view.png
-[Image5]:./media/Repair-task-executing.png
+[Image5]:./media/cluster-repair-task-executing.png
 [Image6]:./media/completed-repair-task-view.png
-[Image7]:./media/Infrastructure-service-health.png
-[Image8]:./media/RepairManager-Service-Health.png
-[Image9]:./media/Job-Throttling-status-for-IS.png
+[Image7]:./media/cluster-infrastructure-service-health.png
+[Image8]:./media/cluster-repairmanager-service-health.png
+[Image9]:./media/cluster-job-throttling-status.png
