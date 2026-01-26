@@ -17,7 +17,9 @@ appliesto:
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
 
-This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. You can sort DNS troubleshooting issues into server-side and client-side categories.
+## Summary
+
+Domain Name System (DNS) is a critical component of Windows Server networking. When DNS issues occur, they can affect name resolution, Active Directory functionality, and network connectivity. Use this guide to troubleshoot common DNS issues in Windows Server. The guide covers both server-side issues (such as zone transfers and recursion) and client-side issues (such as IP configuration and network connectivity).
 
 ## Troubleshooting checklist
 
@@ -71,7 +73,7 @@ To work around this behavior, avoid configuring DHCP clients that use these adap
 
 The DNS Dynamic Update Protocol update to existing records fails. Because of this issue, the DNS scavenging process considers the records to be aged, and it deletes them.
 
-In the case of a service that requires a SRV record, the local Netlogon service logs "event ID 577*X*" events when it can't register SRV records. For example, if the Netlogon service of a domain controller triggers a dynamic update for its LDAP SRV record, and that update fails, the Netlogon service logs an event on the domain controller. Other events are logged for registration failures of host "A" and PTR records. Check the System event logs on the DNS servers and any other affected computers for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them. These additional events can provide insight into the cause of the failure.
+In the case of a service that requires an SRV record, the local Netlogon service logs "event ID 577*X*" events when it can't register SRV records. For example, if the Netlogon service of a domain controller triggers a dynamic update for its LDAP SRV record, and that update fails, the Netlogon service logs an event on the domain controller. Other events are logged for registration failures of host "A" and PTR records. Check the System event logs on the DNS servers and any other affected computers for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them. These additional events can provide insight into the cause of the failure.
 
 #### Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
 
