@@ -16,9 +16,17 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806236" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows startup issues</span>
 
-This solution is designed to help you troubleshoot Stop error scenarios.
+## Summary
 
-There's no simple explanation for the cause of Stop errors (also known as blue screen errors or bug check errors). Many factors might be involved, and the cause isn't always obvious. For example, you might be using new hardware or third-party software that isn't compatible with your Windows device.
+Use this guidance to troubleshoot Stop errors (also known as blue screen errors or bug check errors) and unexpected restarts in Windows Server. Many issues can cause stop errors. The following list includes some of the most common causes:
+
+- Incompatible hardware or drivers
+- Outdated firmware or BIOS
+- Software conflicts
+- Memory issues
+- Corrupted system files
+
+This article provides a checklist and step-by-step guidance to help you identify and fix your Stop issue. It also provides solutions for common Stop error codes, and instructions for collecting diagnostic data if you need further assistance from Microsoft Support.
 
 ## Troubleshooting checklist
 
