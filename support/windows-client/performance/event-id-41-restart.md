@@ -96,7 +96,7 @@ Because this method of restarting the computer interferes with the Windows shutd
 </EventData>
 ```
 
-For help when troubleshooting an unresponsive computer, see [Windows Help](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10). Consider searching for assistance by using keywords such as "hang," "responding," or "blank screen."
+For help when troubleshooting an unresponsive computer, see [Windows Help](https://support.microsoft.com//windows/troubleshooting-windows-unexpected-restarts-and-stop-code-errors-60b01860-58f2-be66-7516-5c45a66ae3c6). Consider searching for assistance by using keywords such as "hang," "responding," or "blank screen."
 
 ## Scenario 3: The computer is unresponsive or randomly restarts, and Event ID 41 isn't recorded or the Event ID 41 entry or lists error code values of zero
 
