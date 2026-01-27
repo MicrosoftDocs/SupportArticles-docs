@@ -11,6 +11,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 > [!NOTE]
 > Microsoft Azure Information Protection was previously known as Microsoft Azure Rights Management.
 
+## Summary
+
 This article resolves an issue where you can't connect to the Azure Information Protection Service using Windows PowerShell in Office 365.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Azure Information Protection  

@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # How to troubleshoot password synchronization when using Microsoft Entra Connect
 
+## Summary
+
 This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Microsoft Entra ID by using [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  

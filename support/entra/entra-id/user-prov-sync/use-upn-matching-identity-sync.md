@@ -11,7 +11,7 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 _Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune  
 _Original KB number:_ &nbsp; 3164442
 
-## Introduction
+## Summary
 
 Sometimes you may have to transfer the source of authority for a user account if that account was originally authored by using Microsoft cloud services management tools. These tools include:
 
