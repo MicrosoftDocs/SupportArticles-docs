@@ -28,6 +28,7 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.      |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                 |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                             |
+| [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs have changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and re-added to ensure Copilot Studio has the correct list of inputs. |
 | [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.    |
 | [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.        |
 | [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.    |
@@ -113,6 +114,16 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 1. If the error mentions a specific channel, verify that the channel supports the authentication method that you're using. Some channels don't support integrated authentication.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
+
+#### BindingKeyNotFoundError
+
+**Error message**: One of the following error messages appears based on the context of the error:
+
+- Binding '{0}' is not found, refresh this flow to get the latest bindings
+- Input binding '{0}' is not found, refresh this flow to get the latest bindings
+- Output binding '{0}' is not found, refresh this flow to get the latest bindings
+
+**Resolution**: Make sure to set up the agent flow input or output correctly. Try refreshing the inputs or outputs to resolve this issue; otherwise, try setting up the agent flow again. You can also remove or re-add the agent flow to get the latest inputs and outputs. If it isn't a custom agent flow, then open a support ticket.
 
 #### ConnectedAgentAuthMismatch
 
