@@ -1,12 +1,12 @@
 ---
-title: Error AADSTS50105 - The signed in user is not assigned to a role for the application.
+title: Error AADSTS50105 - The signed in user isn't assigned to a role for the application.
 description: Describes a problem in which you receive the AADSTS50105 error when you sign in to a SAML-based configured app with Microsoft Entra SSO.
 ms.date: 07/19/2023
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.custom: sap:Issues Signing In to Applications
 ---
-# Error AADSTS50105 - The signed in user is not assigned to a role for the application
+# Error AADSTS50105 - The signed in user isn't assigned to a role for the application
 
 ## Summary
 
@@ -16,7 +16,7 @@ This article provides a resolution to the AADSTS50105 error that occurs during f
 
 ## Symptoms
 
-You receive the following error message when you try to sign in to an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):
+You receive the following error message when you try to sign in to an application that has been set up to use Microsoft Entra ID for identity management using SAML-based single sign-on (SSO):
 
 >Error AADSTS50105 - The signed in user is not assigned to a role for the application.
 
