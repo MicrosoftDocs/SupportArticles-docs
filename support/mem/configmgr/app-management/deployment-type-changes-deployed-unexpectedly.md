@@ -7,7 +7,7 @@ ms.custom: sap:Application Management\Application Evaluation
 ---
 # Changes to the Deployment Type are deployed unexpectedly and cannot be rolled back
 
-This article describes a behavior that Deployment Type changes are deployed unexpectedly and can't be rolled back in Microsoft System Center 2012 Configuration Manager.
+This article describes a behavior that Deployment Type changes are deployed unexpectedly and can't be rolled back in Microsoft Configuration Manager.
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 2683900
