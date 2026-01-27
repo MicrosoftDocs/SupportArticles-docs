@@ -1,6 +1,6 @@
 ---
 title: A synced SharePoint file is moved to the recycle bin
-description: When you synchronize a SharePoint Online or OneDrive for Business library to your computer, a synced file is moved to the SharePoint Online or OneDrive for Business recycle bin.
+description: When you synchronize a SharePoint Online or OneDrive library to your computer, a synced file is moved to the SharePoint Online or OneDrive recycle bin.
 author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
