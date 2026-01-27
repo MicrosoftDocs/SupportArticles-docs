@@ -21,15 +21,18 @@ ms.date: 12/17/2023
 
 ## Symptoms
 
-When you synchronize a Microsoft SharePoint Online or OneDrive library to your computer by using the OneDrive sync client (onedrive.exe), a file that was synchronized is unexpectedly moved from the SharePoint Online or OneDrive library to the recycle bin for SharePoint Online or OneDrive.
+When you synchronize a Microsoft SharePoint Online library or a OneDrive library to your computer by using the OneDrive sync client (onedrive.exe), a file that was synchronized is unexpectedly moved from the library to the SharePoint Online or OneDrive recycle bin.
 
-## Why does this issue occur?
+## Cause
 
-This issue occurs because a user accidentally deleted the file or it was removed by a local application for a user who was synchronizing the library. Check the **Deleted By** field for the affected file in the SharePoint Online or OneDrive recycle bin. The account that's listed in this field is for the user who performed the delete operation for the file. When you delete a file locally in a folder that's configured to synchronize by using the OneDrive sync application, the delete operation is synchronized with SharePoint Online, and the item is moved to the recycle bin.
+This issue occurs because a user accidentally deleted the file, or the file was removed by a local application for a user who was synchronizing the library. 
 
-You can confirm that the file wasn't intentionally or accidentally deleted by the user who is listed in the **Deleted By** field. This is important when multiple users are synchronizing a single library. For example, in some cases, a user may try to copy a file that might have been accidentally moved to another directory. This action removes the file from the synchronized library.
+## More information
 
-If the file wasn't intentionally or accidentally deleted, ask the user who's listed in the **Deleted By** field to determine whether a local process moved or deleted the file. For example, local virus-protection software might be configured to quarantine files.
+If a folder is deleted from a locally synced SharePoint library, the OneDrive sync client processes this action as a standard file system deletion. The OneDrive sync client then syncs this change to the cloud (SharePoint/OneDrive). When other users who synced the same library receive this update, their devices also delete the folder locally. Therefore, the operating system moves the deleted folder into each user’s local recycle bin. The OneDrive client makes sure that local folders and the cloud library are kept in sync. This process also applies to empty folders.
 
-> [!NOTE]
-> If a folder is deleted from a locally synced SharePoint library, whether it’s empty or contains files, the OneDrive sync client processes this as a standard file system deletion. It then syncs this change to the cloud (SharePoint/OneDrive). When other users who have the same library synced receive this update, their devices also delete the folder locally. As a result, the operating system moves the deleted folder into each user’s local recycle bin. The OneDrive client ensures that local folders and the cloud library are kept in sync. When a deletion is made on any synced device, it is sent to the online library and then distributed to all other devices that sync the same library. Each device then deletes the folder locally, causing the operating system to move the item to that user’s local recycle bin. This process applies to empty folders as well.
+To determine who might have deleted the affected file, check the **Deleted By** field for affected file in the SharePoint Online or OneDrive recycle bin. The account that's listed in this field is for the user who performed the delete operation. 
+
+You can verify that the file wasn't intentionally or accidentally deleted by the identified user. This is important if multiple users are synchronizing a single library. For example, in some cases, a user might try to copy a file that might have been accidentally moved to another directory. This action removes the file from the synchronized library.
+
+If the file wasn't intentionally or accidentally deleted by the user who's listed in the **Deleted By** field, ask the user to determine whether a local process moved or deleted the file. For example, local virus-protection software might be configured to quarantine files.
