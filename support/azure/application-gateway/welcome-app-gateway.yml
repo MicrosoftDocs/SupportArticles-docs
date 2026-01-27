@@ -22,5 +22,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Azure API is returning blank response
+          - text: ApplicationGatewaySkuNotSpecified error
             url: error-codes/applicationgatewayskunotspecified.md
