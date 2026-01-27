@@ -11,6 +11,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Office 365 Identity Management, Microsoft Intune  
 _Original KB number:_ &nbsp; 3085068
 
+## Summary
+
+This article provides guidance on resolving an issue in which you can't enable the **Device writeback** option in Microsoft Entra Connect.
+
 ## Symptoms
 
 When you run the Microsoft Entra Connect configuration wizard, you can't enable the **Device writeback**  option on the **Customize synchronization options** page.
