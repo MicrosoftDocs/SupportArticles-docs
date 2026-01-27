@@ -1,13 +1,9 @@
-- name: _stat-family function can't support Symbolic Directory Link
-  href: ./_stat-family-cannot-support-symbolic-directory-link.md
 - name: Microsoft Visual C++ Redistributable latest supported downloads
   href: /cpp/windows/latest-supported-vc-redist?context=/troubleshoot/developer/context/context
 - name: Redistributable Package installation fails
   href: ./runtime-installation-fails.md
 - name: C2653 or C2039 error when you reference a STD function
   href: ./c2653-c2039-error-reference-function.md
-- name: Can't change the state of a menu item
-  href: ./cannot-change-state-menu-item.md
 - name: Change mouse pointer for a window in MFC
   href: ./change-mouse-pointer-window-mfc.md
 - name: Click a Check box in a TreeView
