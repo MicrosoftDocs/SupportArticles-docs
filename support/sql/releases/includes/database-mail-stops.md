@@ -7,6 +7,6 @@ If the initially released version of this cumulative update is installed, Databa
 The following recommendations and considerations apply:
 
 - If you downloaded the initially released version of this update, don't install it. Download and install the currently available version of the update.
-- If you already installed the initially released update, you can [uninstall](sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it, or install the currently available version of the update to restore Database Mail functionality.
+- If you already installed the initially released update, you can [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it, or install the currently available version of the update to restore Database Mail functionality.
 - Future cumulative updates will also contain the fix for this issue, and can be installed regardless of the currently installed version of this cumulative update.
 - Any email messages queued via Database Mail while the initially released version of this update was installed aren't sent. These messages aren't automatically resent when the initially released update is uninstalled, or when a cumulative update with the fix for this issue is installed.
