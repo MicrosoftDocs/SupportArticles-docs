@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS session connectivity
 description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
-ms.date: 01/15/2025
+ms.date: 01/27/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,11 +14,17 @@ appliesto:
 ---
 # RDS session connectivity troubleshooting guidance
 
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806253" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues</span>
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806253" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common connectivity issues for Remote Desktop Services.</span>
 
-This article is designed to help you troubleshoot Remote Desktop Session (RDS) connectivity scenarios.
+## Summary
 
-## Check the status of the RDP protocol
+This article helps you troubleshoot Remote Desktop Services (RDS) issues that prevent users from connecting to remote desktop sessions on Windows Server hosts.
+
+Start by following the checklist to verify that the underlying components are working correctly. Then review the list of common issues and solutions. If you need further assistance, follow the instructions in the Data collection section to gather the diagnostic data that Microsoft support will need to help you fix your issue.
+
+## Troubleshooting checklist
+
+### Check the status of the Remote Desktop protocol (RDP)
 
 - [Check the status of the RDP protocol on a remote computer](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-the-status-of-the-rdp-protocol-on-a-remote-computer)
 - [Check whether a Group Policy Object (GPO) is blocking RDP on a local computer](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer)
@@ -26,7 +32,7 @@ This article is designed to help you troubleshoot Remote Desktop Session (RDS) c
 - [Modifying a blocking GPO](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#modifying-a-blocking-gpo)
 - [Check the status of the RDP services](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-the-status-of-the-rdp-services)
 
-## Check whether the RDP listener is working
+### Check whether the RDP listener is working
 
 - [Check the status of the RDP listener](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-the-status-of-the-rdp-listener)
 - [Check the status of the RDP self-signed certificate](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting#check-the-status-of-the-rdp-self-signed-certificate)
@@ -38,6 +44,8 @@ This article is designed to help you troubleshoot Remote Desktop Session (RDS) c
 ## Common issues and solutions
 
 ### Credential limit per app
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 Windows allows only up to 20 credentials per app. If you have to have more than 20 credentials per app, follow these steps to bypass the 20-credential limit:
 
