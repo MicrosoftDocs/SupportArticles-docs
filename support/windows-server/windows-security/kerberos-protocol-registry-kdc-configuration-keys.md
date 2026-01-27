@@ -281,6 +281,9 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values:
 
     The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x38.
+ 
+    > [!IMPORTANT]
+    > After applying the July 2026 Windows updates the default value will be changed to 0x18 (AES-SHA1). For additional information please see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc)
 
     This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
 
