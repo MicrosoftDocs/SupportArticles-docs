@@ -14174,7 +14174,7 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/troubleshoot-visual-c-compile-linker.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/troubleshoot-visual-c-compile-linker"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/troubleshoot-visual-c-compile-linker"
     },
     {
       "source_path": "support/developer/visualstudio/version-control/cannot-switch-accounts.md",
@@ -14294,7 +14294,7 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/lnk1000-error-wholearchive-switch.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/lnk1000-error-wholearchive-switch"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/lnk1000-error-wholearchive-switch"
     },
     {
       "source_path": "support/developer/visualstudio/ide/developer-license-notification-not-dismiss.md",
@@ -14314,11 +14314,11 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/unnested-loops-cause-c1061-error.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/unnested-loops-cause-c1061-error"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/unnested-loops-cause-c1061-error"
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/update-database-sqldataadapter.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/update-database-sqldataadapter"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/update-database-sqldataadapter"
     },
     {
       "source_path": "support/developer/visualstudio/ide/release-management-client-crash.md",
@@ -14342,15 +14342,15 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-application-fail-redraw-control.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/mfc-application-fail-redraw-control"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/mfc-application-fail-redraw-control"
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/readfromstream-return-access-denied.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/readfromstream-return-access-denied"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/readfromstream-return-access-denied"
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/cdatabase-getconnect-returnn-empty.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cdatabase-getconnect-returnn-empty"
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/cdatabase-getconnect-returnn-empty"
     },
     {
       "source_path": "support/developer/visualstudio/language-compilers/cannot-use-scale-140-badge-logo.md",
