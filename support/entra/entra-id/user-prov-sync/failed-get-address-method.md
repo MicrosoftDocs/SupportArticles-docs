@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you run the Azure Active Directory Sync tool configuration wizard: Failed to get address for method: CreateIdentityHandle2
 
+## Summary
+
+This article provides guidance on resolving the "Failed to get address for method" error when you run the Azure Active Directory Sync tool configuration wizard.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 3037953
 
