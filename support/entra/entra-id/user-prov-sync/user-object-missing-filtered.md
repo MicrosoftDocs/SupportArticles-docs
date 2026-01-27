@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # User object is missing or filtered from the Microsoft Entra connector in Azure Active Directory Sync
 
+## Summary
+
 This article describes an issue that blocks synchronization for a user object from on-premises to Azure. A workaround is provided.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

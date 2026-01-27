@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Error when you try to use the New-MSOLDomain command to add a subdomain to an existing domain: New-MsolDomain: Unable to add this domain
 
+## Summary
+
+This article provides guidance on resolving the "New-MsolDomain: Unable to add this domain. It is a subdomain and its authentication type is different from the authentication type of the root domain." error when you try to use the `New-MSOLDomain` command to add a subdomain to an existing domain.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2666578
 

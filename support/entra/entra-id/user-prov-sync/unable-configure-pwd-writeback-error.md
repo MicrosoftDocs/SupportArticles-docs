@@ -8,6 +8,8 @@ ms.custom: sap:User Sign-in or password Problems
 ---
 # Error when you run the Microsoft Entra Connect wizard: Unable to configure password writeback
 
+## Summary
+
 This article describes an issue in which an error message appears when you run the Microsoft Entra Connect wizard to set up password writeback.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
