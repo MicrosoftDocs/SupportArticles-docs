@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2683900
 
 ## Symptoms
 
-Consider the following scenario in System Center 2012 Configuration Manager:
+Consider the following scenario in Configuration Manager:
 
 - User A is an administrator who is granted the Application Editor role.
 - User B is an administrator who is granted the Application Deployment role.
