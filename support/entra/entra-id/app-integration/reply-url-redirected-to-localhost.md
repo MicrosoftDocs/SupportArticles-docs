@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost
 
+## Summary
+
 This article describes a problem in which Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost.
 
 ## Symptoms

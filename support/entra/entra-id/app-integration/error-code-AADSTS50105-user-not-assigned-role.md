@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50105 - The signed in user is not assigned to a role for the application
 
+## Summary
+
 This article provides a resolution to the AADSTS50105 error that occurs during federated authentication with Microsoft Entra ID.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]

@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS75005 - The request is not a valid Saml2 protocol message
 
+## Summary
+
 This article describes a problem in which you receive the error message "Error AADSTS75005 - The request is not a valid Saml2 protocol message." when you try to sign into an apapplication that has been integrated with Microsoft Entra ID.
 
 ## Symptoms

@@ -9,6 +9,12 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Problems signing in to SAML-based Single Sign-On configured apps
 
+## Summary
+
+This article provides guidance on resolving problems signing in to SAML-based Single Sign-On configured apps.
+
+## Resolution
+
 To troubleshoot the sign-in issues below, we recommend the following to better diagnosis and automate the resolution steps:
 
 - Install the [My Apps Secure Browser Extension](/azure/active-directory/manage-apps/my-apps-deployment-plan) to help Microsoft Entra ID to provide better diagnosis and resolutions when using the testing experience in the Azure portal.

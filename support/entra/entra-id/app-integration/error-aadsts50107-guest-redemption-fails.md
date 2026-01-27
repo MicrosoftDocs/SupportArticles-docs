@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50107 when a guest user redeems an invitation via SAML external trust
 
+## Summary
+
 This article provides a solution to the Microsoft Entra authentication error AADSTS50107. This error occurs when a guest user attempts to redeem an invitation from a tenant that uses a Security Assertion Markup Language (SAML) external trust.
 
 ## Symptoms
