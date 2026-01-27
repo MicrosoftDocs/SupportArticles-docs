@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Object deletions aren't synchronized to Microsoft Entra ID when using the Microsoft Entra ID Connect
 
+## Summary 
+
+This article provides guidance on resolving an issue in which a deleted on-premises Active Directory object isn't removed from Microsoft Entra ID when directory synchronization is used in Office 365, Azure, or Microsoft Intune.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2709902
 
