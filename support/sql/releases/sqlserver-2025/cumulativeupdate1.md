@@ -12,8 +12,8 @@ appliesto:
 
 # KB5078298 - Cumulative Update 1 for SQL Server 2025
 
-_Release Date:_ &nbsp; January [todo], 2026  
-_Version:_ &nbsp; 17.0.todo  
+_Release Date:_ &nbsp; January 26, 2026  
+_Version:_ &nbsp; 17.0.4006.2  
 
 ## Summary
 

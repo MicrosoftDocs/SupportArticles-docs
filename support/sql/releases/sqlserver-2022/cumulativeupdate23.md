@@ -12,8 +12,8 @@ appliesto:
 
 # KB5078297 - Cumulative Update 23 for SQL Server 2022
 
-_Release Date:_ &nbsp; January [todo], 2026  
-_Version:_ &nbsp; 16.0.todo  
+_Release Date:_ &nbsp; January 26, 2026  
+_Version:_ &nbsp; 16.0.4236.2  
 
 ## Summary
 
