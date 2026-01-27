@@ -49,7 +49,7 @@ If you believe the warning or block was incorrectly shown for a safe site, you c
 
 1. Reach out to the website owner, and recommend that they report the issue by using the steps in [If you're the website owner](#if-youre-the-website-owner).
 
-1. Both the site owner and you can report the issue by using the _WDSI file submission portal_, for more information see [Submit files for analysis](/unified-secops/submission-guide). When you're prompted for user type, select **Enterprise customer**.
+1. Both the site owner and you can report the issue by using the [WDSI file submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission). For more detailed information about submitting files for analysis, see [Submit files for analysis](/unified-secops/submission-guide).
 
 ### Prevent your site from being blocked
 
