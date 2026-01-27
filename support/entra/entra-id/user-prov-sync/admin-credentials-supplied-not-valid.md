@@ -11,6 +11,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2386471
 
+## Summary
+
+This article helps you resolve the "The Enterprise Administrator credentials that you supplied are not valid. Supply valid credentials and try again." message you encoutner after you run the Microsoft Azure Active Directory Sync Tool Configuration Wizard.
+
 ## Symptoms
 
 When you try to run the Microsoft Azure Active Directory Sync Tool Configuration Wizard, you receive the following error message:

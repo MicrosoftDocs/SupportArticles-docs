@@ -11,6 +11,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2502710
 
+## Summary
+
+This article helps you resolve the "An unknown error occurred with the Microsoft Online Services Sign-in Assistant" message you encounter after you run the Azure Active Directory Sync Tool Configuration Wizard.
+
 ## Symptoms
 
 When you run the Microsoft Azure Active Directory Sync Tool Configuration Wizard, you receive the following error message:
