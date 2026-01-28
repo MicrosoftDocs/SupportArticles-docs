@@ -12,17 +12,17 @@ ms.reviewer: v-six
 
 This article lists the Microsoft SQL Server 2025 builds that were released after the release of SQL Server 2025.
 
-## SQL Server 2022 Cumulative Update (CU) builds
+## SQL Server 2025 Cumulative Update (CU) builds
 
-| Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
-|---------------|-------------|-----------------|-------------|-----------------|------------------------------------|--------------------|
-| CU1 (Latest)  | 17.0.4005.7 | 2025.170.4005.7 | 17.0.25.223 | 2025.170.25.223 | [KB5074901](cumulativeupdate1.md)  | January 15, 2026   |
+| Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number             | Release date     |
+| ---------------------- | ------------------------ | -------------------------------------- | ------------------------------- | -------------------------------------------- | --------------------------------- | ---------------- |
+| CU1 (Latest)           | 17.0.4006.2              | 2025.170.4006.2                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5078298](cumulativeupdate1.md) | January 29, 2026 |
 
 ## SQL Server 2025 GDR builds
 
-| GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
-|------------|-------------|-----------------|-------------|-----------------|---------------------------------------------------------|-------------------|
-| GDR         | 17.0.1050.2 | 2025.170.1050.2 | 17.0.25.223 | 2025.170.25.223 | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026  |
+| GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number                                   | Release date     |
+| -------- | ------------------------ | -------------------------------------- | ------------------------------- | -------------------------------------------- | ------------------------------------------------------- | ---------------- |
+| GDR      | 17.0.1050.2              | 2025.170.1050.2                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026 |
 
 ## References
 

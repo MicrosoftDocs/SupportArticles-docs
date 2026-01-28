@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 23 for SQL Server 2022 (KB5078297)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 23 (KB5078297).
-ms.date: 01/22/2026
+ms.date: 01/29/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078297
 ms.reviewer: v-shaywood
@@ -19,7 +19,7 @@ _Version:_ &nbsp; 16.0.4236.2
 
 This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2022. This update contains 15 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 22. It updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4235.2**, file version: **2022.160.4235.2**
+- SQL Server - Product version: **16.0.4236.2**, file version: **2022.160.4236.2**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
 > [!IMPORTANT]
@@ -123,14 +123,14 @@ You can verify the download by computing the hash of the _SQLServer2022-KB507829
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2022-KB5078297-x64.exe | 6DD251B27E916C80231B0278A799CA8AF7479461038A53254F7C906408425591 |
+| SQLServer2022-KB5078297-x64.exe | 0CE7132AD63F2CACA7805FFDF0A6375D97856ECFED5DC6104CA8F542F19CDDB3 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5078297](https://download.microsoft.com/download/6c92fcb2-4e38-40c8-8fac-179e0b8914e6/KB5078297.csv).
+Download [the list of files that are included in KB5078297](https://download.microsoft.com/download/a6ad69f8-3a68-4b3e-95a6-e56ef2be6ebb/KB5078297.csv).
 
 </details>
 
