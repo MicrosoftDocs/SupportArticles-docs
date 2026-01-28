@@ -23,7 +23,7 @@ This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Ser
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
 > [!IMPORTANT]
-> The initial release of this cumulative update (KB5074819) contained an issue that caused Database Mail to stop working. You might also see the following error message:
+> The initial release of this cumulative update (KB5074819), released on January 15, 2026, contained an issue that caused Database Mail to stop working. You might also see the following error message:
 >
 > > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
 >

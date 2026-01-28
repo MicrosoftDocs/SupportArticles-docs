@@ -23,7 +23,7 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 > [!IMPORTANT]
-> The initial release of this cumulative update (KB5074901) contained an issue that caused Database Mail to stop working. You might also see the following error message:
+> The initial release of this cumulative update (KB5074901), released on January 15, 2026, contained an issue that caused Database Mail to stop working. You might also see the following error message:
 >
 > > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
 >
