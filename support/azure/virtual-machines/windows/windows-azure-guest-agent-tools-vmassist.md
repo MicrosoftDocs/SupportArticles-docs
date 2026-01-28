@@ -44,25 +44,13 @@ Set-ExecutionPolicy Bypass -Force
 (Invoke-WebRequest -Uri https://aka.ms/vmassist -OutFile vmassist.ps1) | .\vmassist.ps1
 ```
 
-Alternatively, you can specify the full URL instead of the aka.ms short link:
-
-```powershell
-(Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1) | .\vmassist.ps1
-```
-
 ### Option 2: Manually download and run
 
 Download:
 
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1
-```
-
-Alternatively, you can specify the full URL instead of the aka.ms short link:
-
-```powershell
-Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1
+Invoke-WebRequest -Uri https://aka.ms/vmassist -OutFile vmassist.ps1
 ```
 
 Run the script:
@@ -71,16 +59,6 @@ Run the script:
 Set-ExecutionPolicy Bypass -Force
 .\vmassist.ps1
 ```
-
-### Option 3: Download from browser
-
- 1. Download the ```vmassist.ps1``` file [from a web browser](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/vmassist.ps1).
- 1. In an elevated PowerShell window, make sure that you're in the same directory that you downloaded the script to, and then run the following code to run the script:
-
- ```powershell
-Set-ExecutionPolicy Bypass -Force
-.\vmassist.ps1
- ```
 
 ## Analyzing output
 

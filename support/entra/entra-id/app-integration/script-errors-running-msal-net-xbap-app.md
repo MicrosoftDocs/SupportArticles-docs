@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # "Cookies are disabled" error in MSAL.Net XBAP application in Internet Explorer
 
+## Summary
+
 This article describes a problem in which a script error is returned when you performing a Microsoft Entra ID login by using an XAML Browser Application (XBAP) from Microsoft Internet Explorer.
 
 ## Symptoms
