@@ -3,7 +3,7 @@ title: Troubleshoot Self-Hosted Extension Deployment Group Policy Issues
 description: Learn how to resolve deployment issues for self-hosted extensions in Microsoft Edge when you use Group Policy policies.
 ms.custom: 'sap:Web Platform and Development\Controls and Extensions'
 ms.reviewer: dili, Johnny.Xu, v-shaywood
-ms.date: 01/12/2026
+ms.date: 01/28/2026
 ---
 
 # Failure to deploy self-hosted extension via group policy
