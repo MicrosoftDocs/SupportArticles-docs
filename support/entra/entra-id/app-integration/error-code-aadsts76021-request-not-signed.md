@@ -5,7 +5,6 @@ ms.author: jarrettr
 author: JarrettRenshaw
 ms.topic: troubleshooting
 ms.service: entra-id
-ms.topic: troubleshooting-problem-resolution
 ms.date:     01/14/2026
 ms.custom: sap:Issues Signing In to Applications
 ---
