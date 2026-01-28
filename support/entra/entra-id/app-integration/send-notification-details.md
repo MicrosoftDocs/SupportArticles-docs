@@ -13,6 +13,10 @@ ms.custom: sap:Enterprise Applications
 ---
 # How to send Notification Details to Microsoft support
 
+## Summary
+
+This article provides guidance on how to send Notification Details to Microsoft support.
+
 ## How to see the details of a portal notification
 
 You can see the details of any portal notification by following the steps below:

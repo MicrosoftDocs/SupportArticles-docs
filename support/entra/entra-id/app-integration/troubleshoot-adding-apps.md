@@ -14,6 +14,8 @@ ms.custom: sap:Enterprise Applications
 ---
 # Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 
+## Summary
+
 This series of articles provide guidance on how to troubleshoot issues that may arise when adding or removing an application in Microsoft Entra ID.
 
 ## Application takes a long time to appear
