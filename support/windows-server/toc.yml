@@ -135,8 +135,6 @@ items:
     items:
     - name: ADMT 3.1 PES installation fails with error
       href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
-    - name: Fail to run ADMT console after installation
-      href: ./active-directory/admt-3dot2-installation-incomplete.md
     - name: Issues when you migrate to domain with ADMT 3.1
       href: ./active-directory/issues-admt-3dot1-migrate-to-domain.md
     - name: Support policy and known issues for ADMT
