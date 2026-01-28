@@ -9,6 +9,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS50000 getting a token or signing in to an Azure app
 
+## Summary
+
 The AADSTS50000 error can occur during the authentication process or token acquisition flow that uses the token endpoint. These errors can have multiple causes. This article provides common scenarios and resolutions for this error.
 
 ## Symptoms

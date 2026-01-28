@@ -9,6 +9,8 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # Troubleshoot infinite redirection between OIDC app and Entra ID
 
+## Summary
+
 This article describes an infinite redirection issue that exists between an OpenID Connect (OIDC) application and Microsoft Entra ID.
 
 ## Symptoms

@@ -11,6 +11,8 @@ keywords: AADSTS50020
 ---
 # Error AADSTS50020 - User account from identity provider does not exist in tenant
 
+## Summary
+
 This article helps you troubleshoot error code `AADSTS50020` that's returned if a guest user from an identity provider (IdP) can't sign in to a resource tenant in Microsoft Entra ID.
 
 ## Symptoms
