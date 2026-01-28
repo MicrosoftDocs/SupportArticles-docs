@@ -22,13 +22,24 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 - SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
-This update was initially released on January 15, 2026 as KB5074901 with SQL Server product version **17.0.4005.7** and file version **2025.170.4005.7**. The initial release of this update contained a [defect](#database-mail-stops-working-after-updating) that caused Database Mail to stop working. The defect is fixed in the currently available version of this cumulative update.
+> [!IMPORTANT]
+> The initial release of this cumulative update (KB5074901) contained an issue that caused Database Mail to stop working. You might also see the following error message:
+>
+> > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
+>
+> This issue affects SQL Server product version **17.0.4005.7** and file version **2025.170.4005.7**.
+>
+> This issue is resolved in the current version of this cumulative update (KB5078298).
+>
+> If you downloaded the initial release of this update, don't install it. Download and install the current version instead.
+>
+> If you already installed the initial release, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it or install the current version to restore Database Mail functionality.
+>
+> Future cumulative updates also contain the fix for this issue. You can install them regardless of which version of this cumulative update is currently installed.
+>
+> Email messages queued through Database Mail while the initial release was installed aren't automatically resent when you uninstall it or install a cumulative update that contains the fix.
 
 ## Known issues in this update
-
-### Database Mail stops working after updating
-
-[!INCLUDE [database-mail-stops](../includes/database-mail-stops.md)]
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
