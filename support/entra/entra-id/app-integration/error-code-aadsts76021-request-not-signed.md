@@ -1,6 +1,6 @@
 ---
-title: "Error AADSTS76021 (ApplicationRequiresSignedRequests) with SAML authentication: The request sent by client is not signed"
-description: Describes a problem in which a user receives the error AADSTS76021 when trying to sign-in
+title: "Error AADSTS76021 (ApplicationRequiresSignedRequests) in SAML authentication: The request sent by client is not signed"
+description: Discusses a problem in which a user receives error AADSTS76021 when trying to sign in.
 ms.author: jarrettr
 author: JarrettRenshaw
 ms.topic: troubleshooting
@@ -8,18 +8,18 @@ ms.service: entra-id
 ms.date:     01/14/2026
 ms.custom: sap:Issues Signing In to Applications
 ---
-# Error AADSTS76021 (ApplicationRequiresSignedRequests) with SAML authentication: The request sent by client is not signed
+# "The request sent by client is not signed" error AADSTS76021 in SAML authentication
 
 ## Summary
 
-The error **AADSTS76021** occurs during federated authentication with Microsoft Entra ID when you use SAML-based Single Sign-On (SSO). This error indicates that the client didn't sign the request but the application requires signed requests. Even if the client signs the request, the signature might not be placed according to the SAML binding configuration.
+The **AADSTS76021** (ApplicationRequiresSignedRequests) error occurs during federated authentication by using Microsoft Entra ID when you use SAML-based Single Sign-On (SSO). This error indicates that the client didn't sign the request, but the application requires signed requests. Even if the client signs the request, the signature might not be placed according to the SAML binding configuration.
 
-According to the [SAML specifications](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf), two primary and most commonly used binding types exist:
+According to the [SAML specifications](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf), the two primary and most commonly used binding types are:
 
 - **HTTP-Redirect** [urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect]: For HTTP get method (GET) requests, the signature is included as a query parameter in the URL.
 - **HTTP-POST** [urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST]: For HTTP POST requests, the signature is embedded within the XML payload of the SAML message.
 
-If the application expects the signature in one location but the request uses another binding type, Microsoft Entra ID rejects the request, resulting in the **AADSTS76021** error.
+If the application expects the signature in one location but the request uses another binding type, Microsoft Entra ID rejects the request. This rejection causes the **AADSTS76021** error.
 
 ## Resolution
 
@@ -27,25 +27,25 @@ If the application expects the signature in one location but the request uses an
 
 Check whether the application expects HTTP-Redirect or HTTP-POST.
 
-2. **Ensure configuration matches**
+2. **Verify configuration matches**
 
-Confirm that the Identity Provider (IdP) and Service Provider (SP) configurations align.
+Verify that the Identity Provider (IdP) and Service Provider (SP) configurations align.
 
-3. **Validate signature placement**
+3. **te signature placement**
    
-- For HTTP-Redirect: Signature must be in the query string.
-- For HTTP-POST: Signature must be inside the XML `<Signature>` element.
+- For HTTP-Redirect: The signature must be in the query string.
+- For HTTP-POST: The signature must be inside the XML `<Signature>` element.
 
 4. **Update application or IdP configuration**
    
 - Align binding type and signature placement.
-- In Microsoft Entra ID, confirm SAML settings under **Enterprise Applications > Single Sign-On**.
+- In Microsoft Entra ID, verify the SAML settings under **Enterprise Applications** > **Single Sign-On**.
 
 ## Examples
 
 ### Example 1: HTTP-Redirect binding (GET)
 
-The signed request includes query parameters like the following example:
+The signed request includes query parameters such as the following example:
 
 ```
 https://contoso.com?
@@ -54,7 +54,7 @@ SAMLRequest=<Base64EncodedRequest>&RelayState=<StateValue>&SigAlg=http://www.w3.
 
 ### Example 2: HTTP-POST binding (POST)
 
-The signed request includes a signature inside XML like the following example:
+The signed request includes a signature inside the XML, such as in the following example:
 
 ```xml
 <samlp:AuthnRequest>
@@ -78,17 +78,17 @@ SAML 2.0 defines several protocol bindings that map SAML request and response me
 
 #### HTTP-Redirect binding 
 
-- **Description**: Uses HTTP GET requests where SAML messages are transmitted as query parameters.
+- **Description**: Uses HTTP GET requests in which SAML messages are transmitted as query parameters.
 - **Use case**: Common for initiating authentication requests.
 
 #### HTTP-POST binding
 
-- **Description**: Uses HTTP POST requests where SAML messages are embedded in the body as XML.
+- **Description**: Uses HTTP POST requests in which SAML messages are embedded in the body as XML.
 - **Use case**: Common for sending signed assertions securely.
 
 #### HTTP-Artifact binding
 
-- **Description**: Exchanges small artifacts through HTTP which are later resolved into full SAML messages.
+- **Description**: Exchanges small artifacts through HTTP. The artifacts are later resolved into full SAML messages.
 - **Use case**: Reduces message size in front-channel communication.
 
 #### Simple Object Access Protocol (SOAP) binding
@@ -98,7 +98,7 @@ SAML 2.0 defines several protocol bindings that map SAML request and response me
 
 #### Reverse SOAP (PAOS) binding
 
-- **Description**: Reverse HTTP binding used for Enhanced Client or Proxy (ECP) profiles.
+- **Description**: Reverse HTTP binding that's used for Enhanced Client or Proxy (ECP) profiles.
 - **Use case**: Enables advanced client interactions. 
 
 [SAML Bindings Specification](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf)
