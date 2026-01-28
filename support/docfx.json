@@ -72,6 +72,7 @@
         "dynamics-365/field-service/**.*": "MSDocsHeader-Dynamics365-Field-Service",
         "dynamics-365/sales/**.*": "MSDocsHeader-Dynamics365Sales",
         "mem/**.*": "MSDocsHeader-Intune",
+        "microsoft-edge/**.*": "MSDocsHeader-MSEdge",
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
@@ -249,6 +250,7 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
+        "microsoft-edge/**.*": "microsoft-edge",
         "system-center/**/*.md": "system-center",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality",
@@ -278,6 +280,7 @@
         "windows-365/**/*.md": "Windows 365",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
+        "microsoft-edge/**.*": "Microsoft Edge",
         "system-center/dpm/**/*.md": "Data Protection Manager",
         "system-center/scom/**/*.md": "Operations Manager",
         "system-center/orchestrator/**/*.md": "Orchestrator",
@@ -342,6 +345,10 @@
           "Troubleshoot",
           "ASP.NET",
           "ASP.NET Core"
+        ],
+        "microsoft-edge/**.*": [
+          "Microsoft Edge", 
+          "Microsoft Edge Developer"
         ],
         "sql/**/*.md": [
           "Troubleshoot",
