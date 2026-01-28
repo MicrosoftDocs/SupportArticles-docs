@@ -1,5 +1,5 @@
 ---
-title: Certificate assignment fails due to invalid FQDN in Exchange
+title: Certificate assignment fails with error 0xe434352
 description: This article provides the resolution for error 0xe434352 that occurs during certificate assignment when unsupported characters are used in the domain name of Receive Connectors.
 #customer intent: As an Exchange Server admin, I want to resolve certificate binding issues caused by invalid fully-qualified domain names (FQDNs) so that I can maintain system reliability.
 author: cloud-writer
