@@ -25,6 +25,9 @@ _Original KB number:_ &nbsp; 4090105
 
 You may do this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set **LMCompatibilityLevel** to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` key on the domain controller.
 
+Microsoft has deprecated NTLM as a whole in June 2024, please see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features). You may use the options described in this article to audit the use of NTLM, any version:
+[Removing NTLMv1, new audit event for use of NTLM](topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e)
+
 ## NTLM auditing
 
 To find applications that use NTLMv1, enable Logon Success Auditing on the domain controller, and then look for Success auditing Event 4624, which contains information about the version of NTLM.
@@ -72,7 +75,7 @@ Key Length: 128
 
 ## More information
 
-This logon in the event log doesn't really use NTLMv1 session security. There's actually no session security, because no key material exists.
+This logon in the event log doesn't use NTLMv1 session security. There's actually no session security, because no key material exists.
 
 The logic of the NTLM Auditing is that it will log NTLMv2-level authentication when it finds NTLMv2 key material on the logon session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
 
