@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/active-directory/issues-admt-3dot1-migrate-to-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-admt-3dot1-migrate-to-domain",
+      "redirect_document_id": false
+    },
+   {
       "source_path": "support/windows-server/active-directory/use-adminpak-remotely-administer-computers.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/use-adminpak-remotely-administer-computers",
       "redirect_document_id": false
