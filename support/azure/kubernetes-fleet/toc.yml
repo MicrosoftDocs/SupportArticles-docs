@@ -23,6 +23,11 @@ items:
     - name: PlacementAvailable is false
       href: cluster-resource-placement/crp-clusterresourceplacementavailable-false.md
 
+- name: Staged Update Run
+  items:
+    - name: Troubleshooting Cluster Staged Update Run
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-issues.md
+   
 - name: Multi-cluster networking
   items:
     - name: Troubleshoot DNS load balancing
