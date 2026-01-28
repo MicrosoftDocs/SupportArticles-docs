@@ -24,7 +24,7 @@ ms.date: 01/28/2026
 
 ## Summary
 
-When you assign certificates to Exchange Server services, you might encounter error 0xe0434352 during the certificate binding process. This error typically indicates that one or more Receive Connectors in your Exchange environment use FQDNs that contain characters not supported by DNS standards.
+When you assign certificates to Exchange Server services, you might encounter error 0xe0434352 during the certificate binding process. This error typically indicates that one or more Receive Connectors in your Exchange environment use FQDNs that contain characters that aren't supported by DNS standards.
 
 ## Symptoms
 
@@ -33,7 +33,7 @@ You run the `Enable-ExchangeCertificate` cmdlet to assign a certificate to the S
 > The Exchange Certificate operation has failed with an exception on server <*Server Name*>.
 > The error message is: Unknown error (0xe0434352)
 
-:::image type="content" source="media/certificate-assignment-fails-error-0xe0434352-unsupported-characters/unknown-error-0xe0434352.png" alt-text="A screenshot showing error message 0xe434352.":::
+:::image type="content" source="media/certificate-assignment-fails-unsupported-characters/unknown-error.png" alt-text="A screenshot showing error message 0xe434352.":::
 
 ## Cause
 
