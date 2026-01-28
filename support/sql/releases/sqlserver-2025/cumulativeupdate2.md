@@ -108,7 +108,7 @@ You can verify the download by computing the hash of the _SQLServer2025-KB507521
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5075211-x64.exe | A25604D3733CFD0DAD9C7BDA5AFCC81755372FC4CA081ACF0D1076C4881D54D3 |
+| SQLServer2025-KB5075211-x64.exe | 15519FA35F290E77A6303FE2C5A19019151EEE65EE8335B0F7BE68421076587D |
 
 </details>
 
