@@ -119,9 +119,9 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Error messages**:
 
-- Binding '\<BindingName>' is not found, refresh this flow to get the latest bindings
-- Input binding '\<BindingName>' is not found, refresh this flow to get the latest bindings
-- Output binding '\<BindingName>' is not found, refresh this flow to get the latest bindings
+- Binding '{0}' is not found, refresh this flow to get the latest bindings
+- Input binding '{0}' is not found, refresh this flow to get the latest bindings
+- Output binding '{0}' is not found, refresh this flow to get the latest bindings
 
 **Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If that doesn't work, try setting up the agent flow again.
 
