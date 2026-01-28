@@ -12,7 +12,7 @@ ms.custom: sap:Issues Signing In to Applications
 
 ## Summary
 
-The **AADSTS76021** (ApplicationRequiresSignedRequests) error occurs during federated authentication by using Microsoft Entra ID when you use SAML-based Single Sign-On (SSO). This error indicates that the client didn't sign the request, but the application requires signed requests. Even if the client signs the request, the signature might not be placed according to the SAML binding configuration.
+The **AADSTS76021** (ApplicationRequiresSignedRequests) error occurs during federated authentication by using Microsoft Entra ID when you use SAML-based single sign-on (SSO). This error indicates that the client didn't sign the request, but the application requires signed requests. Even if the client signs the request, the signature might not be placed according to the SAML binding configuration.
 
 According to the [SAML specifications](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf), the two primary and most commonly used binding types are:
 
@@ -31,7 +31,7 @@ Check whether the application expects HTTP-Redirect or HTTP-POST.
 
 Verify that the Identity Provider (IdP) and Service Provider (SP) configurations align.
 
-3. **te signature placement**
+3. **Verify signature placement**
    
 - For HTTP-Redirect: The signature must be in the query string.
 - For HTTP-POST: The signature must be inside the XML `<Signature>` element.
