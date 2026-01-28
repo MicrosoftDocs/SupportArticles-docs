@@ -5,7 +5,7 @@ ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
 ms.date: 08/04/2025
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
+ms.custom: no-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Azure key vault errors in wrap for Power Apps
 
@@ -236,4 +236,5 @@ If your issue isn't covered here, or if the preceding steps don't resolve your p
 
 - ["Something went wrong" error that occurs when using the wrap feature](something-went-wrong-error-codes.md)
 - [Troubleshoot common issues when using the wrap feature](wrap-issues.md)
+
 
