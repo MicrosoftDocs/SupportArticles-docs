@@ -78,7 +78,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5075211)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU2 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5075211)
 
 > [!NOTE]
 >
