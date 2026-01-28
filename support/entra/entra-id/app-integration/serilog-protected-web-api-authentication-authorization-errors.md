@@ -8,6 +8,8 @@ ms.reviewer: bachoang, v-weizhu
 ---
 # Use Serilog to troubleshoot Microsoft Entra protected Web API authentication or authorization errors
 
+## Summary
+
 When a web API application calls a web API that's protected with Microsoft Entra ID, authentication or authorization errors might occur due to JwtBearer event validation failures. To troubleshoot this issue, this article introduces a sample web API application named [Net6WebAPILogging](https://github.com/bachoang/Net6WebAPILogging) to set and collect logs for JwtBearer events.
 
 ## Net6WebAPILogging sample application
