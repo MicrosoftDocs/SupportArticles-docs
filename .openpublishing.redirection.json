@@ -1,8 +1,13 @@
 {
   "redirections": [
-    {
-      "source_path": "support/windows-server/active-directory/issues-admt-3dot1-migrate-to-domain.md",
+   {
+      "source_path": "support/windows-server/active-directory/admt-3dot2-installation-incomplete.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-admt-3dot1-migrate-to-domain",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "support/windows-server/active-directory/issues-admt-3dot1-migrate-to-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/admt-3dot2-installation-incomplete",
       "redirect_document_id": false
     },
    {
