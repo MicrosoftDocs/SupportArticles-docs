@@ -55,7 +55,7 @@ items:
         - name: Certificate status couldn't be determined error
           href: ../administration/cannot-import-third-party-certificate.md
         - name: Certificate assignment fails due to invalid FQDN
-          href: ../administration/certificate-assignment-fails-invalid-fqdn.md
+          href: ../administration/certificate-assignment-fails-invalid-characters.md
         - name: Cmdlet/parameter combinations not working
           href: ../administration/cmdlet-parameter-combinations-not-working.md
         - name: Connecting to the remote server failed
