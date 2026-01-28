@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2025 build versions (KB5005684)
 description: This article lists cumulative update and GDR builds for SQL Server 2025.
-ms.date: 12/11/2025
+ms.date: 01/28/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005684
 appliesto:

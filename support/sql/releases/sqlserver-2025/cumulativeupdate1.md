@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2025 (KB5078298)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5078298).
-ms.date: 01/22/2026
+ms.date: 01/28/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078298
 ms.reviewer: v-shaywood
