@@ -1,8 +1,8 @@
-This issue is **resolved** in the currently available version of this cumulative update.
-
-If the initially released version of this cumulative update is installed, Database Mail stops working. You might see the following error message:
+The initially released version of this cumulative update (KB5074819) contained an issue that caused Database Mail to stop working. You might have also seen the following error message:
 
 > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
+
+This issue is _resolved_ in the currently available version of this cumulative update (KB5078297).
 
 The following recommendations and considerations apply:
 
