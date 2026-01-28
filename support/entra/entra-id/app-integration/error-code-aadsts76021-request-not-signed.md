@@ -12,9 +12,9 @@ ms.custom: sap:Issues Signing In to Applications
 
 ## Summary
 
-The error **AADSTS76021** occurs during federated authentication with Microsoft Entra ID when using SAML-based Single Sign-On (SSO). This error indicates that the request sent by the client isn't signed while the application requires signed requests. Even if the request is signed, the signature might not be placed according to the SAML binding configuration.
+The error **AADSTS76021** occurs during federated authentication with Microsoft Entra ID when you use SAML-based Single Sign-On (SSO). This error indicates that the client didn't sign the request but the application requires signed requests. Even if the client signs the request, the signature might not be placed according to the SAML binding configuration.
 
-According to [SAML specifications](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf), two primary and most commonly used binding types exist:
+According to the [SAML specifications](https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf), two primary and most commonly used binding types exist:
 
 - **HTTP-Redirect** [urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect]: For HTTP get method (GET) requests, the signature is included as a query parameter in the URL.
 - **HTTP-POST** [urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST]: For HTTP POST requests, the signature is embedded within the XML payload of the SAML message.
@@ -94,7 +94,7 @@ SAML 2.0 defines several protocol bindings that map SAML request and response me
 #### Simple Object Access Protocol (SOAP) binding
 
 - **Description**: Uses SOAP over HTTP for back-channel communication.
-- **Use Ccase**: Common for artifact resolution and management operations.
+- **Use case**: Common for artifact resolution and management operations.
 
 #### Reverse SOAP (PAOS) binding
 
@@ -105,4 +105,4 @@ SAML 2.0 defines several protocol bindings that map SAML request and response me
 
 ## Resources
   
-For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
+For a full list of Active Directory authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
