@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
+## Summary
+
 This article describes an issue that you can't manage or remove objects that were created through directory synchronization from Microsoft Entra ID. It provides two resolutions for this issue according to different reasons.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
