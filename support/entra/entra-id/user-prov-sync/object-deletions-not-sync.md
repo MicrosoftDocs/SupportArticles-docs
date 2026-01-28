@@ -43,7 +43,7 @@ To fix this issue, follow these steps:
     ```
 1. If sync is working correctly but the Active Directory object deletion is still not propagated to Microsoft Entra ID, manually remove the orphaned object. To do so, use one of the following Microsoft Graph PowerShell cmdlets:
 
-    - [Remove-MgUserContact](/powershell/module/microsoft.graph.personalcontacts/remove-mgusercontact?view=graph-powershell-1.0)
+    - [Remove-MgUserContact](/powershell/module/microsoft.graph.personalcontacts/remove-mgusercontact)
     - [Remove-MgGroup](/powershell/module/microsoft.graph.groups/remove-mggroup)
     - [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser)
 
