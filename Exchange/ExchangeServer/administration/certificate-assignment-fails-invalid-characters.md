@@ -31,6 +31,7 @@ When you assign certificates to Exchange services, you might encounter error 0xe
 You run the `Enable-ExchangeCertificate` cmdlet to assign a certificate to the SMTP service. The operation fails and returns the following error message:
 
 > The Exchange Certificate operation has failed with an exception on server <*Server Name*>.
+> 
 > The error message is: Unknown error (0xe0434352)
 
 ## Cause
@@ -39,7 +40,7 @@ This issue occurs if the FQDN of one or more Receive Connectors contains unsuppo
 
 For more information about domain names, see the following articles:
 
-- [DNS host names](../../../support/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou.md#dns-host-names)
+- [DNS host names](../../support/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou.md#dns-host-names)
 - [Unsupported characters for Exchange 2013 object names](/exchange/unsupported-characters-for-exchange-2013-object-names-exchange-2013-help)
 
 ## Resolution
