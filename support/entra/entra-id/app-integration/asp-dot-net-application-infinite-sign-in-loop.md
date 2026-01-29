@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # Infinite sign-in loop between ASP.NET application and Microsoft Entra ID
 
+## Summary
+
 This article provides solutions to an issue where an ASP.NET application experiences an infinite redirect loop during signing in with Microsoft Entra ID.
 
 ## Symptoms

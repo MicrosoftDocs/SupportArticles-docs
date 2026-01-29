@@ -1,6 +1,21 @@
 {
   "redirections": [
-    {
+   {
+      "source_path": "support/windows-server/active-directory/admt-3dot2-installation-incomplete.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/admt-3dot2-installation-incomplete",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "support/windows-server/active-directory/issues-admt-3dot1-migrate-to-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-admt-3dot1-migrate-to-domain",
+      "redirect_document_id": false
+    },
+   {
+      "source_path": "support/windows-server/active-directory/use-adminpak-remotely-administer-computers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-adminpak-remotely-administer-computers",
+      "redirect_document_id": false
+    },
+   {
       "source_path": "support/mem/configmgr/update-management/high-network-bandwidth-usage.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
@@ -12664,6 +12679,10 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/field-service/administration/attibutemap-error-upgrade.md",
+      "redirect_url": "/dynamics365/field-service/update-field-service"
+    },
+    {
       "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false
@@ -14150,6 +14169,18 @@
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/stl-priority-queue-class-custom-type.md",
+      "redirect_url": "/cpp/standard-library/priority-queue-class#use-a-user-defined-data-type-with-the-priority_queue"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-setfind-stl-function.md",
+      "redirect_url": "/cpp/standard-library/set-class#example-of-setfind"
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder"
     }
   ]
 }

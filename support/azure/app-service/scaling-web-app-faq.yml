@@ -13,7 +13,7 @@ metadata:
 title: Frequently asked questions about scaling web apps in Azure App Service
 summary: |
   This article answers common questions about scaling [web apps in Azure App Service](https://azure.microsoft.com/services/app-service/web/).
-  [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+   
 sections:
   - name: Scale web app
     questions:

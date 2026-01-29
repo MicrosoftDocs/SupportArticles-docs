@@ -1,48 +1,54 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 01/15/2025
+ms.date: 01/27/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom:
-- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol, nla, winhttp)
 - pcy:WinComm Networking
 ms.reviewer: kaushika, v-tappelgate, moshalaby
 audience: itpro
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Remote Procedure Call (RPC) errors troubleshooting guidance
+# Remote Procedure Call (RPC) error troubleshooting guidance
 
-You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
+## Summary
+
+Many programs and services (for example, Active Directory replication and Microsoft Management Console (MMC)) use the Remote Procedure Call (RPC) protocol to communicate across a network. When RPC communication fails, you might see errors such as "The RPC server is unavailable." The following image shows an example of an RPC error.
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-unavailable.png" alt-text="Screenshot of an error message showing the RPC server is unavailable." border="false":::
 
-This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
+To help you diagnose and fix RPC connectivity issues, this article helps you understand how RPC works and how common issues occur. It provides step-by-step guidance to help you fix common issues. It also introduces tools that you can use to identify and fix RPC issues that're specific to your network topology.
+
+## RPC protocol basics
+
+To begin, there are several important terms to understand:
 
 - **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information. The service is a part of the RPC subsystem that resolves dynamic endpoints in response to client requests. In some cases, it dynamically assigns endpoints to servers.
 - **Tower**: Describes the RPC protocol to enable the client and server to negotiate a connection.
 - **Floors**: The layers of contents within a tower that contain specific data, such as ports, IP addresses, and identifiers.
 - **UUID**: A well-known GUID that identifies an RPC application. During troubleshooting, you can use the UUID to track the RPC conversations of a single type of application (among the many types that occur on a single computer at one time).
-- **Opnum**: Identifies a function that the client wants the server to perform. This is simply a hexadecimal number. However, a good network analyzer will translate the function for you. If the function can't be identified, contact your application vendor.
+- **Opnum**: Identifies a function that the client wants the server to perform. This value is simply a hexadecimal number. However, a good network analyzer translates the function for you. If the function can't be identified, contact your application vendor.
 - **Port**: The communication endpoint for client or server application. The EPM allocates dynamic ports (also known as high ports or ephemeral ports) for clients and servers to use.
   > [!NOTE]  
   > Typically the port number is the most important information that you'll use for troubleshooting.
 - **Stub data**: The data exchanged between the functions on the client and the functions on the server. This data is the payload, the important part of the communication.
 
-## How the connection works
+### How the connection works
 
 The following diagram shows a client connecting to a server to run a remote operation. The client initially contacts TCP port 135 on the server, and then negotiates with EPM for a dynamic port number. After EPM assigns a port, the client disconnects, and then uses the dynamic port to connect to the server.  
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram that shows how a client makes an RPC connection to a remote server." border="true":::
 
 > [!IMPORTANT]  
-> If a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this scenario is to specify ports or ranges of ports for EPM to use. For more information, see [Configure how RPC allocates dynamic ports](#configure-how-rpc-allocates-dynamic-ports).
+> If a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this scenario is to specify ports or ranges of ports for EPM to use. For more information, see [Example: Configure how RPC allocates dynamic ports](#example-configure-how-rpc-allocates-dynamic-ports).
 >  
-> Some firewalls also allow UUID filtering. In this scenario, if an RPC request uses port 135 to cross the firewall and contact EPM, the firewall notes the UUID that's associated with the request. When EPM responds and sends a dynamic port number for that UUID, the firewall also notes the port number. The firewall then allows RPC bind operations for that UUID and port.
+> Some firewalls also allow UUID filtering. In this scenario, if an RPC request uses port 135 to cross the firewall and contact EPM, the firewall notes the UUID that's assigned to the request. When EPM responds and sends a dynamic port number for that UUID, the firewall also notes the port number. The firewall then allows RPC bind operations for that UUID and port.
 
-### Configure how RPC allocates dynamic ports
+### Example: Configure how RPC allocates dynamic ports
 
 By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system that's used). However, this approach might not be practical, especially if the client and server must communicate through a firewall. An alternative method is to specify a port number or range of port numbers for EPM to use, and open those ports in the firewall.
 
@@ -68,14 +74,15 @@ By default, the **Internet** key doesn't exist. Therefore, you have to create it
     - **Y**: The processes that use the default system policy are assigned ports from the set of internet-available ports, as defined previously.
     - **N**: The processes that use the default system policy are assigned ports from the set of intranet-only ports.
 
-You should open a range of ports that are greater than port 5000. Port numbers that are less than 5000 might already be in use by other applications, and they could cause conflicts with your DCOM applications. Furthermore, previous experience shows that a minimum of 100 ports should be opened. This is because several system services rely on these RPC ports to communicate with one another.
+You should open a range of ports that are greater than port 5000. Port numbers that are less than 5000 might already be used by other applications, and opening them for RPC communication could cause conflicts between applications. Because several system services rely on RPC ports to communicate, open a minimum of 100 ports.
 
 > [!NOTE]  
 > The minimum number of ports that are required may differ from computer to computer. Computers that support more traffic might encounter port exhaustion if the RPC dynamic ports are restricted. Take this into consideration if you restrict the port range.
 
 > [!WARNING]  
-> If there's an error in the port configuration, or there aren't enough ports in the pool, EPM can't register RPC server applications (including Windows services such as Netlogon) that use dynamic endpoints. If a configuration error occurs, the error code is **87 (0x57) ERROR_INVALID_PARAMETER**. For example, if there aren't enough ports, Netlogon logs event 5820:
+> If there's an error in the port configuration, or there aren't enough ports in the pool, EPM can't register RPC server applications (including Windows services such as Netlogon) that use dynamic endpoints. If a configuration error occurs, the error code is **87 (0x57) ERROR_INVALID_PARAMETER**. For example, if there aren't enough ports, Netlogon logs event 5820. The text of this event resembles the following example:
 >
+> ```output
 > Log Name: System  
 > Source: NETLOGON  
 > Event ID: 5820  
@@ -83,6 +90,7 @@ You should open a range of ports that are greater than port 5000. Port numbers t
 > Keywords: Classic  
 > Description:  
 > The Netlogon service could not add the AuthZ RPC interface. The service was terminated. The following error occurred: 'The parameter is incorrect.'  
+> ```
 
 For more information about how RPC works, see [RPC over IT/Pro](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/rpc-over-it-pro/ba-p/399898).
 
@@ -173,13 +181,14 @@ Now, try to reproduce your issue on the client computer. Then, run the following
 Netsh trace stop
 ```
 
-Open the trace files in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
+Open the trace files in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer. Filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following examples:
 
-- **Ipv4.address==\<_client-ip_> and ipv4.address==\<_server-ip_> and tcp.port==135**  
-  
-  In this filter string, \<_client-ip_> represents the IP address of the client, and \<_server-ip_> represents the IP address of the server.
+- `Ipv4.address==<client-ip> and ipv4.address==<server-ip> and tcp.port==135`
 
-- **tcp.port==135**
+  > [!NOTE]  
+  > In this filter string, \<client-ip> represents the IP address of the client, and \<server-ip> represents the IP address of the server.
+
+- `tcp.port==135`
 
 In the filtered data, look for the **EPM** entry in the **Protocol** column.
 
@@ -218,7 +227,7 @@ These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooter
 - Make sure that the Windows PowerShell script execution policy for the computer is set to `RemoteSigned`. For more information about PowerShell execution policy, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
   > [!NOTE]  
-  > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet in an elevated Powershell Command Prompt window before you start the tool:
+  > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet in an elevated PowerShell Command Prompt window before you start the tool:
   >  
   > ```powershell
   > PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned

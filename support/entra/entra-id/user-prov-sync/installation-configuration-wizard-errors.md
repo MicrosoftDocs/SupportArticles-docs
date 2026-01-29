@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 
+## Summary
+
 This article describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard issues.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  

@@ -1,26 +1,43 @@
 ---
-title: Cumulative Update 23 for SQL Server 2022 (KB5074819)
-description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 23 (KB5074819).
-ms.date: 01/15/2026
+title: Cumulative Update 23 for SQL Server 2022 (KB5078297)
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 23 (KB5078297).
+ms.date: 01/29/2026
 ms.update-cycle: 1095-days
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074819
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078297
 ms.reviewer: v-shaywood
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
 ---
 
-# KB5074819 - Cumulative Update 23 for SQL Server 2022
+# KB5078297 - Cumulative Update 23 for SQL Server 2022
 
-_Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 16.0.4235.2  
+_Release Date:_ &nbsp; January 29, 2026  
+_Version:_ &nbsp; 16.0.4236.2  
 
 ## Summary
 
 This article describes Cumulative Update package 23 (CU23) for Microsoft SQL Server 2022. This update contains 15 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 22. It updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4235.2**, file version: **2022.160.4235.2**
+- SQL Server - Product version: **16.0.4236.2**, file version: **2022.160.4236.2**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
+
+> [!IMPORTANT]
+> The initial release of this cumulative update (KB5074819), released on January 15, 2026, contained an issue that caused Database Mail to stop working. You might also see the following error message:
+>
+> > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
+>
+> This issue affects SQL Server product version **16.0.4235.2** and file version **2022.160.4235.2**.
+>
+> This issue is resolved in the current version of this cumulative update (KB5078297).
+>
+> If you downloaded the initial release of this update, don't install it. Download and install the current version instead.
+>
+> If you already installed the initial release, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it or install the current version to restore Database Mail functionality.
+>
+> Future cumulative updates also contain the fix for this issue. You can install them regardless of which version of this cumulative update is currently installed.
+>
+> Email messages queued through Database Mail while the initial release was installed aren't automatically resent when you uninstall it or install a cumulative update that contains the fix.
 
 ## Known issues in this update
 
@@ -41,7 +58,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | :------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- | :-------------------------------------- | :------- |
 | <a id=4676249>[4676249](#4676249)</a> | Fixes an issue in which backup log operations fail and return an error that indicates that `BACKUP LOG` is not allowed while the recovery model is `SIMPLE`.                                                                  | SQL Server Engine                | Backup Restore                          | Windows  |
 | <a id=4710575>[4710575](#4710575)</a> | Fixes an AV assertion issue in `DbMgrPartner` that's related to new log readiness notifications.                                                                                                                              | SQL Server Engine                | High Availability and Disaster Recovery | All      |
-| <a id=4769216>[4769216](#4769216)</a> | Fixes an issue in which non-yielding scheduler dump files are generated when SSL connections are closed under high CPU load.                                                                                                  | Conectivity                      | Protocols                               | All      |
+| <a id=4769216>[4769216](#4769216)</a> | Fixes an issue in which non-yielding scheduler dump files are generated when SSL connections are closed under high CPU load.                                                                                                  | Connectivity                      | Protocols                               | All      |
 | <a id=4783675>[4783675](#4783675)</a> | Fixes an issue in which upgrading from SQL Server 2019 to SQL Server 2022 might cause the upgrade process to stop responding during the model database upgrade phase.                                                         | SQL Server Engine                | Programmability                         | All      |
 | <a id=4783748>[4783748](#4783748)</a> | Changes the behavior of the program to return error 19544 instead of returning an assert when you create an availability group that has a name that's longer than 64 characters by using `cluster_type = NONE` or `EXTERNAL`. | SQL Server Engine                | High Availability and Disaster Recovery | All      |
 | <a id=4796333>[4796333](#4796333)</a> | Fixes an issue that causes crashes when an invalid ID type is returned from the Domain Controller in LookupAccountSid.                                                                                                        | SQL Server Engine                | Linux                                   | Linux    |
@@ -76,7 +93,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU23 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5074819)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU23 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5078297)
 
 > [!NOTE]
 >
@@ -100,20 +117,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _SQLServer2022-KB5074819-x64.exe_ file through the following command:
+You can verify the download by computing the hash of the _SQLServer2022-KB5078297-x64.exe_ file through the following command:
 
-`certutil -hashfile SQLServer2022-KB5074819-x64.exe SHA256`
+`certutil -hashfile SQLServer2022-KB5078297-x64.exe SHA256`
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2022-KB5074819-x64.exe | 6DD251B27E916C80231B0278A799CA8AF7479461038A53254F7C906408425591 |
+| SQLServer2022-KB5078297-x64.exe | 0CE7132AD63F2CACA7805FFDF0A6375D97856ECFED5DC6104CA8F542F19CDDB3 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5074819](https://download.microsoft.com/download/6c92fcb2-4e38-40c8-8fac-179e0b8914e6/KB5074819.csv).
+Download [the list of files that are included in KB5078297](https://download.microsoft.com/download/a6ad69f8-3a68-4b3e-95a6-e56ef2be6ebb/KB5078297.csv).
 
 </details>
 

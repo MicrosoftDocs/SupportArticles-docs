@@ -74,7 +74,7 @@ Microsoft product support engineers frequently use [SQLCheck](https://github.com
 ### Use Kerberos Configuration Manager
 
 To identify and resolve Service Principal Name (SPN) issues, you can use the Kerberos Configuration Manager. For more information, see 
-[Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+[Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
 ### Collect and analyze a network trace with SQLTrace and SQLNAUI
 

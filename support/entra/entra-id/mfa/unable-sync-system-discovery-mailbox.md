@@ -8,6 +8,8 @@ ms.custom: sap:AD FS (Active Directory Federation Services)
 ---
 # Can't sync SystemMailbox or DiscoveryMailboxSearch accounts using Azure Active Directory Sync tool
 
+## Summary
+
 This article provides information about resolve a problem in which you receive errors when trying to use the Azure Active Directory Sync tool to synchronize the SystemMailbox and DiscoverySearchMailbox user accounts.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  

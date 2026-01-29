@@ -10,6 +10,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
 
+## Summary
+
 This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. 
 
 This method is used when an object or attribute fails to synchronize with the Microsoft Entra ID directory and no errors are shown in the sync engine, Application event viewer logs, or Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
@@ -336,7 +338,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
     Import-Module ADSyncTools
     Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
-    Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+    Export-ADSyncToolsObjects -ObjectId '{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}' -Source Metaverse -ExportSerialized
     ```
 
     > [!TIP]
@@ -452,7 +454,7 @@ Install-Module ADSyncTools
 
 Import-Module ADSyncTools
 Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
-Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+Export-ADSyncToolsObjects -ObjectId '{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}' -Source Metaverse -ExportSerialized
 ```
 
 > [!TIP]
