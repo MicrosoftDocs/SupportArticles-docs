@@ -44,7 +44,7 @@ For more information about domain names, see the following articles:
 
 ## Resolution
 
-To resolve this issue, use the Exchange Management Shell to find connectors that have invalid FQDNs. Run the following Powershell command:
+To resolve this issue, use the Exchange Management Shell to find connectors that have invalid FQDNs. Run the following PowerShell command:
 
 ```powershell
 Get-ReceiveConnector | Select Identity, FQDN  
