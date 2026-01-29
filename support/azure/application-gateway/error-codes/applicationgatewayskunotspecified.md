@@ -1,48 +1,63 @@
 ---
-title: Troubleshoot ApplicationGatewaySkuNotSpecified Error Code 
-description: Learn how to resolve ApplicationGatewaySkuNotSpecified error when you try to create or modify Azure Application Gateway.
+title: Troubleshoot ApplicationGatewaySkuNotSpecified error code 
+description: This article discusses how to resolve the ApplicationGatewaySkuNotSpecified error when you try to create or modify an application gateway.
 ms.date: 01/22/2026
-editor: giverm
-ms.reviewer: rimayber
+ms.editor: v-gsitser
+ms.reviewer: rimayber, giverm, v-ryanberg
 ms.service: azure-application-gateway
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 #Customer intent: As an Azure Application Gateway user, I want to troubleshoot an Application Gateway create or modify operation that failed because of ApplicationGatewaySkuNotSpecified error so that I can perform the operation successfully.
 ---
 
-# Troubleshoot ApplicationGatewaySkuNotSpecified Error
+# Troubleshoot ApplicationGatewaySkuNotSpecified error
 
-## Symptom:
-Application Gateway cannot be created or updated because the SKU (size) for the gateway has not been specified resulting in error `ApplicationGatewaySkuNotSpecified`
+## Summary
 
-## Cause:
-The **SKU** (Standard or WAF) for the Application Gateway was not provided during the creation or configuration process.
+This article discusses how to resolve the `ApplicationGatewaySkuNotSpecified` error when you try to create or modify an application gateway in Microsoft Azure Application Gateway. An application gateway can't be created or updated because the SKU size isn't specified.
 
-## Resolution:
-1. **Verify SKU Settings:**
-   - Ensure that the correct SKU is specified when creating or configuring the Application Gateway.
-     - For example, use `Standard_v2` or `WAF_v2` for newer SKU types.
-     - Example configuration:
-       ```json
-       "sku": {
-         "name": "Standard_v2",
-         "tier": "Standard"
-       }
-       ```
+## Symptoms
 
-2. **Update Application Gateway Configuration:**
-   - If modifying an existing Application Gateway, update the SKU settings using the Azure Portal, CLI, or ARM template.
+When you try to create or modify an application gateway, you receive an `ApplicationGatewaySkuNotSpecified` error that prevents you from proceeding.
 
-3. **Check ARM Template/CLI Command:**
-   - If using an ARM template or Azure CLI, ensure that the `sku` section is included correctly.
-     - For CLI:
-       ```bash
-       az network application-gateway create --name <gateway_name> --resource-group <resource_group> --sku Standard_v2 --public-ip-address <public_ip>
-       ```
+## Cause
 
-4. **Re-deploy or Retry Creation:**
-   - After specifying the SKU, retry creating or updating the Application Gateway.
+This error occurs if the SKU (Standard or Web Application Firewall (WAF)) for the application gateway isn't specified during the creation or configuration process.
 
----
+## Resolution
 
-### More Information:
+To resolve this problem, follow these steps:
+
+1. **Verify the SKU settings**
+
+Make sure that the correct SKU is specified when you create or configure the application gateway. For example, use `Standard_v2` or `WAF_v2` for newer SKU types. The following code shows an example configuration:
+       
+```json
+
+"sku": {
+"name": "Standard_v2",
+"tier": "Standard"
+}
+
+```
+
+2. **Update the application gateway configuration**
+
+If you're modifying an existing application gateway, update the SKU settings by using [the Azure portal](https://portal.azure.com), Azure CLI, or an Azure Rights Management (Azure RMS) template.
+
+3. **Check Azure RMS or Azure CLI command**
+
+If you're using an Azure RMS template or Azure CLI, make sure that the `sku` section is included correctly. For Azure CLI:
+       
+```azurecli
+
+az network application-gateway create --name <gateway_name> --resource-group <resource_group> --sku Standard_v2 --public-ip-address <public_ip>
+
+```
+
+4. **Redeploy or re-create**
+
+After you specify the SKU, try again to deploy or create the application gateway.
+
+### Resources
+
 [Application Gateway SKU Types](https://github.com/MicrosoftDocs/azure-docs/blob/cca93efa4de263ed8b6d308183e77a975763ce91/articles/application-gateway/overview-v2.md)
