@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # Error AADSTS7000218 when a confidential client application authenticates to Microsoft Entra ID
 
+## Summary
+
 This article provides a solution to the AADSTS7000218 error that occurs when a confidential client application authenticates to Microsoft Entra ID.
 
 ## Symptoms

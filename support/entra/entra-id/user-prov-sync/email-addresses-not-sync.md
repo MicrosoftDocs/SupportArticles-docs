@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Email addresses aren't synced to Microsoft Entra ID
 
+## Summary
+
 This article describes an issue in which users are synced to Microsoft Entra ID but one or more SMTP proxy addresses aren't synced. This issue occurs if duplicate SMTP proxy addresses exist.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot CORS issues with Microsoft Entra ID
 
+## Summary
+
 This article provides guidance on troubleshooting and resolving Cross-Origin Resource Sharing (CORS) errors encountered when using Microsoft Entra ID.
 
 ## Understanding CORS

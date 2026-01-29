@@ -587,10 +587,12 @@ items:
       href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
-    - name: Windows start-up issues advanced troubleshooting
+    - name: Troubleshooting Windows startup issues
       href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting for Windows startup issues
+      href: ./performance/windows-boot-issues-troubleshooting.md
     - name: Advanced troubleshooting Windows boot problems with LiveRE tool
       href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
@@ -605,8 +607,6 @@ items:
       href: ./performance/process1-initialization-failed-stop-error.md
     - name: Windows-based computer freeze troubleshooting
       href: ./performance/windows-based-computer-freeze-troubleshooting.md
-    - name: Windows boot issues troubleshooting
-      href: ./performance/windows-boot-issues-troubleshooting.md
     - name: Windows devices fail to boot after installing October 10 version of KB4041676 or KB4041691
       href: ./performance/windows-devices-fail-boot-after-installing-kb4041676-kb4041691.md
     - name: Windows fails to start with error Missing or Corrupt ntoskrnl.exe

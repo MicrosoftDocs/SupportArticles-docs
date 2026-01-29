@@ -13,6 +13,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # AADSTS500011 - Resource Principal Not Found
 
+## Summary
+
 This article describes a problem in which users experiences an "AADSTS500011" error when they try to sign in to Microsoft Entra ID.
 
 ## Symptoms

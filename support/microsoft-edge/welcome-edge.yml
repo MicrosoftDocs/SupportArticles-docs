@@ -1,0 +1,33 @@
+### YamlMime:Landing
+
+title: Microsoft Edge troubleshooting
+summary: Welcome to Microsoft Edge troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Edge. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Edge troubleshooting
+  description: Landing page for Microsoft Edge troubleshooting articles.
+  ms.topic: landing-page 
+  author: aartig13 
+  ms.author: aartigoyle
+  ms.date: 01/07/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  - title: Manage and Deploy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't enable extensions for InPrivate browsing by using Group Policy
+            url: manageability/enable-extension-inprivate-policy.md
+          - text: Install, update, or roll back failures for Edge and Edge WebView2
+            url: manageability/update-install-rollback-failures.md
+  
+  - title: Web Platform and Development
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Failure to deploy self-hosted extension via group policy
+          url: development/self-host-extension-deploy.md
+        - text: Unexpected SmartScreen block or warning on website
+          url: development/unexpected-block-warning.md

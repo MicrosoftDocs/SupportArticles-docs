@@ -9,9 +9,12 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # IDX10501 error in ASP.NET Core app with Azure B2C custom policy
 
+## Summary
+
 This guide discusses the cause of the "IDX10501" error, and provides a step-by-step solution to resolve it.
 
 ## Symptoms
+
 When you [implement a custom policy](/azure/active-directory-b2c/enable-authentication-web-application-options#pass-the-azure-ad-b2c-policy-id) in an ASP.NET Core application that integrates with Azure Active Directory B2C (Azure AD B2C), you might encounter the following IDX10501 error:
 
 > IDX10501: Signature validation failed. Unable to match key: kid: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '0'. Number of keys in Configuration: '1'. Exceptions caught: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.

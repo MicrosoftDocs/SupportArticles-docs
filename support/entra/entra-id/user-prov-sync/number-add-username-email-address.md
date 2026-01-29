@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Number added to user names and email addresses when users are synced to Microsoft Entra ID
 
+## Summary
+
 This article provides information about troubleshooting an issue in which a number is added to user names and email addresses when users are synced to Microsoft Entra ID. This issue occurs if there are duplicate user principal names (UPN).
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
