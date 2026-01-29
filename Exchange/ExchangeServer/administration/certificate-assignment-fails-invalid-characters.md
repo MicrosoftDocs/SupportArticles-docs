@@ -70,6 +70,8 @@ Enable-ExchangeCertificate -Thumbprint <Thumbprint> -Services SMTP
 
 ## References
 
+For more information about domain name formation and supported characters, see:
+
 - DoD Internet host table specification [RFC 952](https://www.rfc-editor.org/rfc/rfc952)
 - Domain names - Implementation and specification [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035)
 - Requirements for Internet hosts - Application and Support [RFC 1123](https://www.rfc-editor.org/rfc/rfc1123)
