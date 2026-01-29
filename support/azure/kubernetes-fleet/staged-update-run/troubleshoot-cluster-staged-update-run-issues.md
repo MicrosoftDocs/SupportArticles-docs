@@ -525,4 +525,4 @@ status:
 
 We can notice that user approved the request but we don’t see the `ApprovalAccepted` Condition set on the object. Taking a closer look we can clearly see that the observedGeneration for the `Approved` condition doesn’t match the object’s generation (that is, is 0 instead of 1). To remedy, update the condition with the correct observedGeneration. This scenario applies to both before and after stage tasks.
 
-Refer to [Approve the Staged Update Run](https://review.learn.microsoft.com/en-us/azure/kubernetes-fleet/howto-staged-update-run?branch=main&pivots=cluster-scope#approve-the-staged-update-run) to update `ClusterApprovalRequest`.
+Refer to [Approve the Staged Update Run](/azure/kubernetes-fleet/howto-staged-update-run?branch=main&pivots=cluster-scope#approve-the-staged-update-run) to update `ClusterApprovalRequest`.
