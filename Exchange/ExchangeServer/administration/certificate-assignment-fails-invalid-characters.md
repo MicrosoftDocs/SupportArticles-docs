@@ -30,8 +30,8 @@ When you assign certificates to Exchange services, you might encounter error 0xe
 
 You run the `Enable-ExchangeCertificate` cmdlet to assign a certificate to the SMTP service. The operation fails and returns the following error message:
 
-> Unknown error (0xe0434352)
 > The Exchange Certificate operation has failed with an exception on server <*Server Name*>.
+> The error message is: Unknown error (0xe0434352)
 
 ## Cause
 
