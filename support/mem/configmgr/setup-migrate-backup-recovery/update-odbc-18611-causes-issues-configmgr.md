@@ -1,15 +1,17 @@
 ---
-title: Updating ODBC Driver for SQL Server to 18.6.1.1 update causes issues in Configuration Manager
-description: Describes issues that appear after updating to ODBC Driver for SQL Server to version 18.6.1.1 in Configuration Manager.
+title: Updating ODBC Driver for SQL Server to 18.6.1.1 causes issues in Configuration Manager
+description: Describes issues that appear after you update ODBC Driver for SQL Server to version 18.6.1.1 in Configuration Manager, and explains how to work around these issues until a permanent fix becomes available.
 ms.date: 01/30/2026
 ms.reviewer: kaushika, payur, v-tappelgate
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Site Installation or Prerequisites
 ---
-# Updating ODBC Driver for SQL Server to 18.6.1.1 update causes issues in Configuration Manager
+# Updating ODBC Driver for SQL Server to version 18.6.1.1 causes issues in Configuration Manager
 
 *Applies to*: Configuration Manager
 
 ## Summary
+
+After you update Microsoft ODBC Driver for SQL Server to version 18.6.1.1, Configuration Manager site installations might fail, and Client Notification features might stop working. This article provides information about these issues and explains how to work around them until a permanent fix becomes available.
 
 ## Symptoms
 
@@ -54,7 +56,7 @@ Begin to move file from E:\Microsoft Configuration Manager\inboxes\bgb.box\Bgbtd
 
 ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can cause failures in Configuration Manager operations that attempt to insert NULL values into such columns. Such failures generate errors during Site Installation and "Currently Logged on User" reporting.
 
-## Resolution
+## Workaround
 
 Make one of the following changes to the ODBC Driver for SQL Server:
 
@@ -62,8 +64,8 @@ Make one of the following changes to the ODBC Driver for SQL Server:
 - Downgrade the driver to [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184). Configuration Manager version 2503 and later versions include this version of the driver as Redistributable content.
 
 > [!NOTE]  
-> ODBC Driver for SQL Server version 18.6.1.1 doesn't contain security updates, so rolling the driver back doesn't introduce vulnerabilities.
+> ODBC Driver for SQL Server version 18.6.1.1 doesn't contain security updates, so rolling back the driver doesn't introduce vulnerabilities.
 
 ## More information
 
-Microsoft plans resolving the issue in the an upcoming ODBC Driver for SQL Server release. For more information, see [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle).
+Microsoft plans resolving the issue in an upcoming ODBC Driver for SQL Server release. For more information, see [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle).
