@@ -8,9 +8,14 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Customize middleware authentication ticket to extend user sign-in duration
 
+## Summary
+
+This article provides guidance on how to configure ASP.NET or ASP.NET Core App sessions to last longer than the Microsoft Entra ID token.
+
 By default, Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) expire after one hour. Also by default, ASP.NET and ASP.NET Core middleware set their authentication tickets to the expiration of these tokens. If you don't want your web application to redirect users to Microsoft Entra ID to have them sign in again, you can customize the middleware authentication ticket.
 
 This customization can also help resolve AJAX-related issues, such as coss-origin resource sharing (CORS) errors to login.microsoftonline.com. These issues often occur when your app functions as both a web application and a web API.
+
 ## For ASP.NET
 
 In the `ConfigureAuth` method of the `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:

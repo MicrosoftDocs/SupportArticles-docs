@@ -9,6 +9,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 #  Error AADSTS650056: Misconfigured application
 
+## Summary
+
 This article provides troubleshooting steps and solutions for the "AADSTS650056: Misconfigured application" error.
 
 ## Symptoms

@@ -8,6 +8,8 @@ ms.custom: sap:App registrations
 ---
 # Troubleshoot consent issues in Microsoft Entra ID
 
+## Summary
+
 This article provides guidance on troubleshooting consent issues in Microsoft Entra ID. It applies to OpenID Connect and OAuth2-based authentications.
 
 > [!NOTE]

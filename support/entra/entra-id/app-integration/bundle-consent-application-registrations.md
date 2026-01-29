@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Bundled consent for Microsoft Entra ID applications
 
+## Summary
+
 This article discusses how to configure bundled consent for Microsoft Entra ID applications.
 
 ## Symptoms

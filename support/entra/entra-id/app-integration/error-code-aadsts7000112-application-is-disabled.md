@@ -12,6 +12,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS7000112 - Application is disabled
 
+## Summary
+
 This article discusses how to resolve the `AADSTS7000112` error that occurs when you try to sign in to an application that can be used together with Microsoft Entra ID.
 
 ## Symptoms

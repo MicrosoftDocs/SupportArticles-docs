@@ -9,6 +9,8 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # Troubleshoot sign-in prompt issues in iOS with MSAL SDK
 
+## Summary
+
 This article provides guidance for troubleshooting repeated sign-in prompts in an iOS app that uses Microsoft Authentication Library (MSAL).
 
 ## Symptoms
