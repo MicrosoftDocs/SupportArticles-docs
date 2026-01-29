@@ -20,18 +20,18 @@ ms.date: 01/20/2026
 
 # Self-help diagnostics for Microsoft Purview
 
-You can run diagnostics to identify and resolve issues in Microsoft Purview. The diagnostics offer insights into known issues and provide instructions to fix them. Although the diagnostics can fix some configuration issues, they don't make changes to your tenant without your consent.
+You can run diagnostics to identify and resolve issues in Microsoft Purview. The diagnostics offer insights into known issues, and provide instructions to fix the issues. Although the diagnostics can fix some configuration issues, they don't make changes to your tenant without your consent.
 
 Self-help diagnostics that relate to Microsoft Purview are available in the following locations:
 
 - [Microsoft Purview portal](https://purview.microsoft.com/)
 
    - On **Solutions** pages
-   - On the **Help** pane
+   - In the **Help** pane
 
 - [Microsoft 365 admin center](https://admin.microsoft.com/)
 
-   - On the **Help** pane
+   - In the **Help** pane
 
 ## Diagnostics on Solutions pages
 
@@ -53,25 +53,28 @@ You can find these diagnostics on the following portal pages:
 
 The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the fourth column. When you're prompted, sign in to the Microsoft Purview portal.
 
-**Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
+> [!NOTE]
+> To run these diagnostics, you must meet the minimum requirements:
+> - Be an administrator
+> - Have the Organization Configuration role assigned to you
 
-When you select a diagnostic on a Solutions page, it begins by running the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then the diagnostic calls the appropriate cmdlet listed in the following table to perform checks that are specific to your issue. 
+When you select a diagnostic on a Solutions page, the diagnostic runs the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then, the diagnostic calls the appropriate cmdlet that's listed in the following table to perform checks that are specific to your issue. 
 
 | **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
 |-|-|-|-|
-| Email encryption isn't working as expected. Are there any issues with my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Validates encryption settings. | [Test-IrmConfiguration](/powershell/module/exchangepowershell/test-irmconfiguration)| [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
+| Email encryption isn't working as expected. Are there any issues that affect my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Verifies encryption settings. | [Test-IrmConfiguration](/powershell/module/exchangepowershell/test-irmconfiguration)| [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
 | A user can't find the sensitivity label they need. Does the label policy apply to them? | Checks which sensitivity labels are available to the user. Diagnostic results include information such as the label names, settings, and where the labels are available. | [Get-label](/powershell/module/exchangepowershell/get-label) <br> [Get-LabelPolicy](/powershell/module/exchangepowershell/get-labelpolicy) | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
-| Autolabeling isn’t applied to a SharePoint or OneDrive file. Was the file evaluated correctly, and did it meet the auto-labeling conditions? | Checks a file’s properties and classification to determine whether auto-labeling was applied. When entering the file path, make sure you provide the full file path not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open Details, and copy the Path (if available). <br> - If Path isn’t shown, open the file, go to File > Info, then select Copy path. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
+| Autolabeling isn’t applied to a SharePoint or OneDrive file. Was the file evaluated correctly, and did it meet the auto-labeling conditions? | Checks a file’s properties and classification to determine whether auto-labeling was applied. When entering the file path, make sure that you provide the full file path, not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open **Details**, and copy the **Path** (if available). <br> - If **Path** isn’t shown, open the file, go to **File** > **Info**, then select **Copy path**. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
 | A DLP rule isn't enforced for a particular user. Is this user included in the DLP policy? | Checks which DLP policies apply to a user. Diagnostic results include the policy names and where the policies apply.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| Endpoint DLP isn’t working as expected. Are there any issues with policy sync on the device? | Check for policy sync issues and provide recommendations on how to resolve them. |[Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| Alerts not working for a DLP rule. Are there any issues with the DLP rule configuration? | Check for alerts and identify whether there are issues with the DLP rule configuration.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| Can't find an alert for an activity or an audit event ? | Check for the alert related to an activity or audit event and investigate why the alert could be missing | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| A DLP rule isn’t triggering for a file stored in SharePoint or OneDrive. Is the file evaluated by DLP, and is it in scope for the policy? | Checks a file's properties and classification to review whether a DLP rule matched or didn't match. When entering the file path, make sure you provide the full file path not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open Details, and copy the Path (if available). <br> - If Path isn’t shown, open the file, go to File > Info, then select Copy path. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| Policy tips aren’t displaying in Outlook on the web. Are there issues with the DLP policy tips configuration? | Analyzes the HTTP Archive (HAR) file to investigate why policy tips aren’t displaying in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web and press F12 to open Developer Tools. <br> - Select the Network tab, turn on Preserve log, reproduce the issue, and export the HAR file. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Endpoint DLP isn’t working as expected. Are there any issues that affect policy sync on the device? | Check for policy sync issues, and provide recommendations for how to resolve them. |[Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Alerts aren't working for a DLP rule. Are there any issues that affect the DLP rule configuration? | Check for alerts, and determine whether any issues affect the DLP rule configuration.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Can't find an alert for an activity or an audit event. | Check for the alert related to an activity or audit event, and investigate why the alert could be missing. | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| A DLP rule isn’t triggering for a file stored in SharePoint or OneDrive. Is the file evaluated by DLP, and is it in scope for the policy? | Check a file's properties and classification to review whether a DLP rule matched or didn't match. When entering the file path, make sure that you provide the full file path, not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open Details, and copy the Path (if available). <br> - If **Path** isn’t shown, open the file, go to File > Info, then select **Copy path**. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Policy tips don't appear in Outlook on the web. Are there issues that affect the DLP policy tips configuration? | Analyzes the HTTP Archive (HAR) file to investigate why policy tips don't appear in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web, and press F12 to open Developer Tools. <br> - Select the **Network** tab, select **Preserve log**, reproduce the issue, and export the HAR file. | [Test-DlpPolices](https://learn.microsoft.com/en-us/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 
 ## Diagnostics on the Help pane
 
-The diagnostics on the **Help** pane cover the following areas in Microsoft Purview:
+The diagnostics in the **Help** pane cover the following areas in Microsoft Purview:
 
 - Archive mailboxes
 - Mailbox retention
@@ -82,7 +85,7 @@ The diagnostics on the **Help** pane cover the following areas in Microsoft Purv
 - DLP policies
 
 > [!NOTE]
-> Diagnostics on the **Help** pane aren't available in the following environments: GCC High, DoD, and Microsoft 365 operated by 21Vianet.
+> Diagnostics in the **Help** pane aren't available in the following environments: GCC High, DoD, and Microsoft 365 operated by 21Vianet.
 
 ### Find diagnostics through the Help menu
 
@@ -104,9 +107,9 @@ You can search for diagnostics by using the **Help** menu in the Microsoft Purvi
 
 1. Sign in to the [Microsoft Purview portal](https://purview.microsoft.com/) as an administrator.
 
-2. Select the **Help** icon in the upper-right corner of the portal to open the **Help and support** pane.
+2. Open the **Help and support** pane: Select the **Help** icon in the upper-right corner of the portal.
 
-3. In the **Help and support** pane, select **Ask a question** to open the **Help** pane.
+3. Open the **Help** pane: In the **Help and support** pane, select **Ask a question**.
 
 4. In the search box, enter a brief description of the issue that you want to resolve.
 
