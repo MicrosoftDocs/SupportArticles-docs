@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot sIDHistory migration with ADMTv2
-description: Describes how to troubleshoot inter-forest sIDHistory migration by using Active Directory Migration Tool version 2 (ADMTv2).
+title: Troubleshoot sIDHistory migration with ADMT
+description: Describes how to troubleshoot inter-forest sIDHistory migration by using Active Directory Migration Tool (ADMT).
 ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,9 +12,9 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# How to troubleshoot inter-forest sIDHistory migration with ADMTv2
+# How to troubleshoot inter-forest sIDHistory migration with ADMT
 
-This article describes how to troubleshoot inter-forest sIDHistory migration with Active Directory Migration Tool version 2 (ADMTv2).
+This article describes how to troubleshoot inter-forest sIDHistory migration with Active Directory Migration Tool (ADMT).
 
 _Original KB number:_ &nbsp; 322970
 
@@ -33,7 +33,7 @@ The basic requirements for inter-forest migration operations are:
 #### Wizard-based basic user and group account migration without sIDHistory
 
 - The source domain must trust the target domain.
-- The user account that is running ADMTv2 must have Administrator rights in the source domain.
+- The user account that is running ADMT must have Administrator rights in the source domain.
 - The ADMT user account must have delegated permissions to create user or group objects in the target container.
 - DNS (hostname) and NetBIOS name resolution between the domains must exist.
 
@@ -41,6 +41,7 @@ The basic requirements for inter-forest migration operations are:
 
 - Success and failure auditing of account management for both source and target domains.
 - Source domains call this user and group management auditing.
+- Both domains need to run in native mode. To be on the safe side, use the highest Domain and Forest functional levels possible.
 - An empty local group in the source domain that is named *{SourceNetBIOSDom}$$$*.
 - The `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\TcpipClientSupport`registry key must be set to 1 on the source domain primary domain controller.
 - You must restart the source domain primary domain controller after the registry configuration.
@@ -53,8 +54,7 @@ To delegate the MigrateSidHistory extended right on a domain controller or on a 
 3. Click **Next**, click **Add**, enter the name of the user or group that you wish to add in the **Select Users, Computers, or Groups** dialog box, click **OK**, and then click **Next**.
 4. Click to select the **Create a custom task to delegate** option, and then click **Next**.
 5. Make sure that the **This folder, existing objects in this folder, and creation of new objects in this folder** option is selected, and then click **Next**.
-6. Make sure that the **General** option is selected, click **Migrate SID History** in the
-**Permissions** list, and then click **Next**.
+6. Make sure that the **General** option is selected, click **Migrate SID History** in the **Permissions** list, and then click **Next**.
 7. Verify that the information is correct, and then click **Finish**.
     - No sID to be migrated may exist in the target forest, either as a primary sID or as an sIDHistory attribute of another object.
 
@@ -71,7 +71,7 @@ To delegate the MigrateSidHistory extended right on a domain controller or on a 
 
 The most basic step you can use to troubleshoot inter-forest sIDHistory migration is to use the User Account Migration Wizard or the Group Account Migration Wizard to run a test-mode migration.
 
-During the test-mode migration, ADMTv2 validates the following dependencies:
+During the test-mode migration, ADMT validates the following dependencies:
 
 - The {SourceNetBIOSDom}$$$ local group is created.
 - TcpipClientSupport on the source primary domain controller or primary domain controller emulator is turned on.
@@ -102,7 +102,7 @@ This error in the Migration.log file after a migration with sIDHistory typically
 
 ## Additional sIDHistory information
 
-The sIDHistory is a multivalued attribute of security principals in the Active Directory that may hold up to 850 values. To provide backward-compatibility with domain controllers that are running earlier versions of Windows, the sIDHistory attribute is only available in domains that are operating at the functional level of Windows.
+The sIDHistory is a multivalued attribute of security principals in the Active Directory that may hold up to 1300 values. To provide backward-compatibility with domain controllers that are running earlier versions of Windows, the sIDHistory attribute is only available in domains that are operating at the functional level of Windows.
 
 Some third-party vendor products make it possible to turn on sIDHistory in mixed mode domains. These claims do not represent the legitimate use of public APIs. Domain administrators that use such tools risk putting their Active Directory deployment in an unsupported state.
 
@@ -112,4 +112,4 @@ In both cases, migrated objects are assigned a new sID by the target domain. The
 
 Note that the sIDHistory is a transitional tool and is not meant to exist indefinitely attached to security principals. Although migrating the sIDHistory can significantly ease and simplify the domain migration process, there are important security ramifications that must be considered before you implement the sIDHistory in a production enterprise.
 
-A Windows security token can hold a maximum of 1,023 sIDs, including sIDHistory and group sIDs. Kerberos is also limited because Windows Kerberos has a 73-sID buffer. This size can be doubled by an enterprise-wide registry change. Exceeding these limits violates the MaxTokenSize restriction and can lead to unpredictable results, including failure of Kerberos authentication and erratic or nonexistent application of policies. To prevent these issues, use Security Translation instead of sIDHistory as the long-term solution to maintaining resource access after a domain migration.
+A Windows security token can hold a maximum of 1,023 sIDs, including sIDHistory and group sIDs. To prevent these issues, use Security Translation instead of sIDHistory as the long-term solution to maintaining resource access after a domain migration. You also may need to clean up old Sids from other Sid stores outside the reach of Windows tools. This investigation may be complex, but is required to be able to evnetually remove SidHistory.
