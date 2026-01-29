@@ -12,26 +12,24 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# How to Troubleshoot Inter-Forest Password Migration with ADMTv2
+# How to Troubleshoot Inter-Forest Password Migration with ADMT
 
 This article discusses the dependencies and troubleshooting steps for common problems associated with the *inter* -forest password migration operation.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server, all supported versions
 _Original KB number:_ &nbsp; 322981
 
 ## Summary
 
-If you perform intra-forest migrations by using the Active Directory Migration Tool (ADMT) v2, no special configuration is needed to maintain user passwords, sIDHistory, and object globally unique identifiers (GUIDs) during the move operation.
+If you perform intra-forest migrations by using the Active Directory Migration Tool (ADMT), no special configuration is needed to maintain user passwords, sIDHistory, and object globally unique identifiers (GUIDs) during the move operation.
 
-However, if you use ADMTv2 to perform inter-forest password migration when you clone user accounts, this operation relies on dependencies that the administrator must configure. This article discusses the dependencies and troubleshooting steps for common problems associated with this operation.
+However, if you use ADMT to perform inter-forest password migration when you clone user accounts, this operation relies on dependencies that the administrator must configure. This article discusses the dependencies and troubleshooting steps for common problems associated with this operation.
+
+Warning: ADMT has accumulated several security problems, some in particular affecting cross-forest migration as the use of PES is affected: <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info] target=_blank>Support policy and known issues for Active Directory Migration Tool</a>
 
 ### Configuration
 
-Beyond basic configuration, ADMTv2 requires the following dependencies when used to perform inter-forest password migration:
-
-- Service Pack 6a (SP6a) or later must be installed on Microsoft Windows NT 4.0 domain controllers.
-
-- All domain controllers must use 128-bit encryption.
+Beyond basic configuration, ADMT requires the following dependencies when used to perform inter-forest password migration:
 
 - The RestrictAnonymous value on the target domain controller should be set to 0 during the migration.
 
@@ -44,8 +42,7 @@ Beyond basic configuration, ADMTv2 requires the following dependencies when used
 
 - The Everyone group should be a member of the Pre-Windows 2000 Compatible Access group in the target domain during the migration. This action is blocked by Active Directory Users and Computers. To add the Everyone group, run the following command: NET LOCALGROUP "PRE-WINDOWS 2000 COMPATIBLE ACCESS" EVERYONE /ADD 
 
-- If the target domain is Windows Server 2003-based, run this command to make the following group a member of the Pre-Windows 2000 Compatible Access group: NET LOCALGROUP "PRE-WINDOWS 2000 COMPATIBLE ACCESS" "ANONYMOUS LOGON" /ADD 
-
+- Run this command to make the following group a member of the Pre-Windows 2000 Compatible Access group: NET LOCALGROUP "PRE-WINDOWS 2000 COMPATIBLE ACCESS" "ANONYMOUS LOGON" /ADD 
 
 ### Troubleshooting
 
