@@ -1,18 +1,23 @@
 ---
 title: Updating ODBC Driver for SQL Server to 18.6.1.1 update causes issues in Configuration Manager
 description: Describes issues that appear after updating to ODBC Driver for SQL Server to version 18.6.1.1 in Configuration Manager.
-ms.date: 01/16/2025
-ms.reviewer: kaushika, payur
-ms.author: payur
+ms.date: 01/30/2026
+ms.reviewer: kaushika, payur, v-tappelgate
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Site Installation or Prerequisites
 ---
 # Updating ODBC Driver for SQL Server to 18.6.1.1 update causes issues in Configuration Manager
 
 *Applies to*: Configuration Manager
 
+## Summary
+
 ## Symptoms
 
-After you install the [Microsoft ODBC driver for SQL Server on Windows version 18.6.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186), the installation of new ConfigMgr site fails with the following error in ConfigMgrSetup.log:
+After you install [Microsoft ODBC driver for SQL Server on Windows, version 18.6.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186), you experience the following symptoms.
+
+### Symptom: You can't install a new ConfigMgr site
+
+You try to create a new site, but the operation fails. The ConfigMgrSetup.log file reports an error that resembles the following example:
 
 ```output
     INFO: Database watermark:
@@ -28,7 +33,9 @@ After you install the [Microsoft ODBC driver for SQL Server on Windows version 1
     ERROR: Failed to import Asset Intelligence data into the site database.
 ```
 
-In the existing environments, after updating the ODBC Driver for SQL Server to version 18.6.1.1, the Client Notification feature might stop working. In particular, you notice that "Currently Logged on User" column isn't populated in the Configuration Manager console. You also see the following error message in the BGBMgr.log on the Site Server:
+### Symptom: Client Notification stops working
+
+In existing environments, in the Configuration Manager console, you notice that the **Currently Logged on User** column doesn't populate. You also see the following error message in the BGBMgr.log on the Site Server:
 
 ```output
 BCP queued 18 rows for currently logged on users
@@ -45,14 +52,18 @@ Begin to move file from E:\Microsoft Configuration Manager\inboxes\bgb.box\Bgbtd
 
 ## Cause
 
-ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can lead to failures in Configuration Manager operations that attempt to insert NULL values into such columns, resulting in errors during Site Installation and "Currently Logged on User" reporting.
+ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can cause failures in Configuration Manager operations that attempt to insert NULL values into such columns. Such failures generate errors during Site Installation and "Currently Logged on User" reporting.
 
 ## Resolution
 
-Downgrade the ODBC Driver for SQL Server to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#1852) or use a [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184) being included with Configuration Manager version 2503 and later as Redistributable content.
+Make one of the following changes to the ODBC Driver for SQL Server:
+
+- Downgrade the driver to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#1852)
+- Downgrade the driver to [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184). Configuration Manager version 2503 and later versions include this version of the driver as Redistributable content.
+
+> [!NOTE]  
+> ODBC Driver for SQL Server version 18.6.1.1 doesn't contain security updates, so rolling the driver back doesn't introduce vulnerabilities.
 
 ## More information
 
-Microsoft plans resolving the issue in the next ODBC Driver for SQL Server release expected in the middle of 2026. Note, there are no security updates in ODBC Driver for SQL Server version 18.6.1.1.
-
-See also: [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle)
+Microsoft plans resolving the issue in the an upcoming ODBC Driver for SQL Server release. For more information, see [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle).
