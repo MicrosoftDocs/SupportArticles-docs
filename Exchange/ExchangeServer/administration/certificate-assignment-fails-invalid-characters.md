@@ -40,7 +40,7 @@ This issue occurs if the FQDN of one or more Receive Connectors contains unsuppo
 
 For more information about domain names, see the following articles:
 
-- [DNS host names](../../support/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou.md#dns-host-names)
+- [DNS host names](../../troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou.md#dns-host-names)
 - [Unsupported characters for Exchange 2013 object names](/exchange/unsupported-characters-for-exchange-2013-object-names-exchange-2013-help)
 
 ## Resolution
