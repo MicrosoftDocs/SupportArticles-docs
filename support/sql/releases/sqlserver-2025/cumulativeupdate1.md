@@ -1,35 +1,45 @@
 ---
-title: Cumulative update 1 for SQL Server 2025 (KB5074901)
-description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5074901).
-ms.date: 01/20/2026
+title: Cumulative update 1 for SQL Server 2025 (KB5078298)
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5078298).
+ms.date: 01/28/2026
 ms.update-cycle: 1095-days
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5074901
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078298
 ms.reviewer: v-shaywood
 appliesto:
 - SQL Server 2025 on Windows
 - SQL Server 2025 on Linux
 ---
 
-# KB5074901 - Cumulative Update 1 for SQL Server 2025
+# KB5078298 - Cumulative Update 1 for SQL Server 2025
 
-_Release Date:_ &nbsp; January 15, 2026  
-_Version:_ &nbsp; 17.0.4005.7  
+_Release Date:_ &nbsp; January 29, 2026  
+_Version:_ &nbsp; 17.0.4006.2  
 
 ## Summary
 
-> [!IMPORTANT]  
-> This update is temporarily unavailable for download because of a [known issue related to Database Mail](#database-mail-stops-working-after-updating).
-
 This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Server 2025. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
-- SQL Server - Product version: **17.0.4005.7**, file version: **2025.170.4005.7**
+- SQL Server - Product version: **17.0.4006.2**, file version: **2025.170.4006.2**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
+> [!IMPORTANT]
+> The initial release of this cumulative update (KB5074901), released on January 15, 2026, contained an issue that caused Database Mail to stop working. You might also see the following error message:
+>
+> > Could not load file or assembly 'Microsoft.SqlServer.DatabaseMail.XEvents, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.
+>
+> This issue affects SQL Server product version **17.0.4005.7** and file version **2025.170.4005.7**.
+>
+> This issue is resolved in the current version of this cumulative update (KB5078298).
+>
+> If you downloaded the initial release of this update, don't install it. Download and install the current version instead.
+>
+> If you already installed the initial release, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it or install the current version to restore Database Mail functionality.
+>
+> Future cumulative updates also contain the fix for this issue. You can install them regardless of which version of this cumulative update is currently installed.
+>
+> Email messages queued through Database Mail while the initial release was installed aren't automatically resent when you uninstall it or install a cumulative update that contains the fix.
+
 ## Known issues in this update
-
-### Database Mail stops working after updating
-
-[!INCLUDE [database-mail-stops](../includes/database-mail-stops.md)]
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
@@ -70,7 +80,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2025 now](https://www.microsoft.com/en-us/download/details.aspx?id=108529)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2025 now](https://www.microsoft.com/download/details.aspx?id=108540)
 
 > [!NOTE]
 >
@@ -84,7 +94,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5074901)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5078298)
 
 > [!NOTE]
 >
@@ -108,20 +118,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _SQLServer2025-KB5074901-x64.exe_ file through the following command:
+You can verify the download by computing the hash of the _SQLServer2025-KB5078298-x64.exe_ file through the following command:
 
-`certutil -hashfile SQLServer2025-KB5074901-x64.exe SHA256`
+`certutil -hashfile SQLServer2025-KB5078298-x64.exe SHA256`
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5074901-x64.exe | A25604D3733CFD0DAD9C7BDA5AFCC81755372FC4CA081ACF0D1076C4881D54D3 |
+| SQLServer2025-KB5078298-x64.exe | 436CCE96F805C12348809FA791E3A8839BB6D3BB408A5E0EFF6886D053B448EF |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5074901](https://download.microsoft.com/download/85e8b2cf-3981-4c62-b711-a812b4057503/KB5074901.csv).
+Download [the list of files that are included in KB5078298](https://download.microsoft.com/download/e938d686-2fcb-45bf-9105-08e2c0d50880/KB5078298.csv).
 
 </details>
 
