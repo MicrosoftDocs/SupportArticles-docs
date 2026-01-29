@@ -762,7 +762,7 @@ The snap sandbox environment prevents Storage Explorer from accessing system fil
 1. Verify the location of the container engine socket (for example, /var/run/docker.sock).
 2. Create a forwarding socket within an accessible location, such as your home directory:
    ```bash
-   socat UNIX-LISTEN:$HOME/docker.sock,fork UNIX-CONNECT:/var/run/docker.sock​ &
+   socat UNIX-LISTEN:$HOME/docker.sock,fork UNIX-CONNECT:/var/run/docker.sock &
    ```
 3. Launch Storage Explorer.
 4. Modify the Azurite Communication Channels setting to include the absolute path to the forwarding socket (in this case, /home/\<username\>/docker.sock​).
@@ -771,7 +771,7 @@ The snap sandbox environment prevents Storage Explorer from accessing system fil
 > [!NOTE]
 > - The forwarding socket must be opened in a location that Storage Explorer can access, such as your home directory.
 > - The forwarding socket must not be a hidden file (that is, its name can't start with a dot).
-> - You must enter an absolute path to the forwarding socket for the Azurite Communication Channels setting. You can't use expanding shell > characters, such as the "~" character
+> - You must enter an absolute path to the forwarding socket for the Azurite Communication Channels setting. You can't use expanding shell characters, such as the "~" character
 > - If you terminate the background process launched by `socat`, Storage Explorer won't be able to communicate with the container engines to find Azurite instances.
  
 If you're using Docker, you might also need to join the `docker` group.
