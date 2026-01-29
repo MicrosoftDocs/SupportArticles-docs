@@ -27,9 +27,9 @@ When you synchronize a Microsoft SharePoint Online library or a OneDrive library
 
 This issue occurs because a user accidentally deleted the file, or a local application for the user who synchronized the library deleted the file. 
 
-## Solution
+## Resolution
 
-To learn who deleted the affected file, open the SharePoint Online or OneDrive recycle bin, and then check the **Deleted By** field for affected file. The account that's listed in this field is for the user who performed the sync operation. 
+To identify the user who deleted the affected file, open the SharePoint Online or OneDrive recycle bin, and then check the **Deleted By** field for the affected file. The account that's listed in this field is for the user who performed the delete operation. 
 
 Try to determine whether the file was intentionally or accidentally deleted by the identified user. This information is important if multiple users are synchronizing a single library. For example, in some cases, a user might try to copy a file that might have been accidentally moved to another directory. This action removes the file from the synchronized library.
 
