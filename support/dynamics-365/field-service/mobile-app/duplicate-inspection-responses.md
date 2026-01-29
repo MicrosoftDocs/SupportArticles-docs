@@ -21,7 +21,7 @@ Administrators can review the audit log of the work order service task to check 
 
 The default offline profile has filters to download all work order service tasks and inspection responses. If you change the filter of the offline profile, some tasks might fail to download. Therefore, when you open a work order service task record while the device is offline, the associated inspection response can't be found. The system assumes that an inspection response doesn't exist and creates a new one. 
 
-To resolve the issue, review the filters of your custom offline profile to download all required records. For more information, see [Configure offline capabilities](/dynamics365/field-service/set-up-offline-profile).
+To resolve the issue, review the filters of your custom offline profile to download all required records. For more information, see [Configure offline capabilities](/dynamics365/field-service/mobile/set-up-offline-profile).
 
 ### With custom security roles and privileges
 
