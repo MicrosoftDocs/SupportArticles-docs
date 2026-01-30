@@ -1,53 +1,55 @@
 ---
-title: Troubleshooting guide for customers to investigate and analyse, using Service Fabric Explorer (SFX), why repair jobs are not being approved.
-description: Learn how to analyze stuck repair jobs using Service Fabric Explorer.
-ms.topic: concept-article
-ms.author: ashukumar
-author: ashukumar
+title: Troubleshoot repair jobs that aren't approved by using Service Fabric Explorer
+description: This article provides guidance on troubleshooting repair jobs that aren't being approved in a Service Fabric cluster using Service Fabric Explorer (SFX). It explains the concepts of repair tasks and repair jobs, their states, and how to analyze them through SFX.
+ms.topic: troubleshooting-general
+ms.author: jarrettr
+ms.reviewer: ashukumar, v-ryanberg
+ms.editor: v-gsitser
 ms.service: azure-service-fabric
 services: service-fabric
 ms.date: 01/20/2026
 # Customer intent: As a Service Fabric customer, I want to analyze the reason why a repair job is stuck using Service Fabric Explorer.
 ---
 
-# Troubleshooting guide for customers to investigate and analyse, using Service Fabric Explorer (SFX), why repair jobs are not being approved 
+# Troubleshoot repair jobs that aren't approved by using Service Fabric Explorer
 
-## Repair Task overview in service fabric
-Any operation initiated from the scale-set that targets VMs is processed by Service Fabric as a repair task derived from the job it receives. The Infrastructure Service creates a repair task for each job and adds details like the update type, targeted update domain (UD), and document incarnation number. These jobs begin with UD0 and progress sequentially through UD1, UD2, and so on within the Service Fabric cluster. If an Update Domain walk is required, separate repair tasks are generated for each UD. For example, in a cluster with five UDs, five distinct repair tasks will be created. These tasks execute one after another, UD by UD, and their progress can be tracked in Service Fabric Explorer (SFX). 
+## Summary
 
-Repair Manager - defines and implements a safe workflow for performing repairs by coordinating between the Repair Requestor, Repair Executor, and itself to ensure safe and consistent repair actions. 
+This article provides guidance on troubleshooting repair jobs that aren't approved in an Azure Service Fabric cluster by using Service Fabric Explorer (SFX). It explains the concepts of repair tasks and repair jobs, their states, and how to analyze them by using SFX.
 
-Infrastructure Service –  responsible for managing and orchestrating infrastructure-level operations, such as updates and repairs, ensuring the health and stability of the Service Fabric cluster.
+## Repair task overview 
 
-### Repair Task vs. Repair Job  
+Service Fabric processes any operation initiated from the scale set that targets virtual machines (VMs) as a repair task derived from the job it receives. The Infrastructure Service creates a repair task for each job and adds details like the update type, targeted update domain (UD), and document incarnation number. These jobs start with UD0 and progress sequentially through UD1, UD2, and so on within the Service Fabric cluster. If a domain update is required, the Infrastructure Service generates separate repair tasks for each UD. For example, in a cluster with five UDs, the Infrastructure Service creates five distinct repair tasks. These tasks run one after another, UD by UD, and you can track their progress in SFX. 
 
-A repair job refers to an Azure‑initiated maintenance operation that provides essential details such as the job ID, repair type, targeted update domain, document incarnation number, node‑impact information, and additional metadata. Service Fabric then creates a repair task by combining details such as: 
+- **Repair Manager** - Defines and implements a safe workflow for performing repairs by coordinating between the Repair Requestor, Repair Executor, and itself to ensure safe and consistent repair actions. 
 
-* Repair type 
-* Target update domain 
-* Document incarnation number 
+- **Infrastructure Service** –  Responsible for managing and orchestrating infrastructure-level operations, like updates and repairs, ensuring the health and stability of the Service Fabric cluster.
 
-These elements are combined in the following format: 
+### Repair job and repair task  
 
-Azure/repair type/repair job/update domain/document incarnation number 
+A repair job refers to an Azure‑initiated maintenance operation that provides essential details like the job ID, repair type, targeted update domain, document incarnation number, node‑impact information, and additional metadata. Service Fabric then creates a repair task by combining details including: 
 
-Example:Azure/TenantUpdate/addfb79e-1e8c-42c8-a967-b0e2e0afd6b4/0/110 
+- *Repair type*, which indicates the repair category, like **Tenant** or **Platform**, and whether the operation is a maintenance action or an update. 
+- *Target UD*, which refers to the update domain that the repair job is targeting at that time.
+- *Document incarnation number*, which is a monotonically increasing version identifier for the update document received by Service Fabric from Azure.
 
-Repair Type: - It indicates the repair category, such as Tenant or Platform, and whether the operation is a maintenance action or an update. 
-Target Update domain: - It refers to the update domain that the repair job is targeting at that time. 
-Document incarnation number: - The Document Incarnation Number is a monotonically increasing version identifier for the update document received by Service Fabric from Azure. 
+These elements are then combined in the following format: 
 
-The resulting entity is the repair task, which is used within the Service Fabric context. In contrast, the repair job is recognized outside Service Fabric components. 
+`Azure/repair type/repair job/update domain/document incarnation number` 
+
+For example: `Azure/TenantUpdate/addfb79e-1e8c-42c8-a967-b0e2e0afd6b4/0/110` 
+
+The resulting entity is the *repair task*, which is used within the Service Fabric context. In contrast, the repair job is recognized outside Service Fabric components. 
 
 ## Repair task states and their ownership 
 
-* Created 
+### Created 
 
-In the Created state, the Repair Manager (RM) accepts and stores the repair request. At this point, the task is waiting for a Repair Executor (RE) to claim it. The requestor can cancel the task during this stage without any restrictions. Repair manager has ownership in this state. 
+In the Created state, the Repair Manager accepts and stores the repair request. The task then waits for a Repair Executor to claim it. The requestor can cancel the task during this stage without any restrictions. The Repair Manager has ownership in this state. 
 
 * Claimed 
 
-Once the task is Claimed, the Repair Executor (RE) has taken ownership but hasn't specified the repair's impact. The requestor still retains the ability to cancel the task at this stage. Repair executor has ownership in this state. 
+Once the task is Claimed, the Repair Executor (RE) takes ownership but doesn't specify the repair's impact. The requestor still retains the ability to cancel the task at this stage. The repair executor has ownership in this state. 
 
 * Preparing 
 
