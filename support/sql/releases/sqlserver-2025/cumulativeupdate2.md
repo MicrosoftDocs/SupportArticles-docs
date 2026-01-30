@@ -17,14 +17,12 @@ _Version:_ &nbsp; 17.0.4015.3
 
 ## Summary
 
-> [!IMPORTANT]  
-> 
-This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Server 2025. This update contains 7 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
+This article describes Cumulative Update package (CU2) for Microsoft SQL Server 2025. This update contains 6 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4015.3**, file version: **2025.170.4015.3**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
-## Known issues in this update
+> ## Known issues in this update
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
@@ -41,17 +39,21 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference                         | Description                                                                                                                                                                                                                | Fix area                | Component                               | Platform |
 | :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- | :-------------------------------------- | :------- |
-| <a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail when the SQLVDI.dll file is not registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
+<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail when the SQLVDI.dll file is not registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
 | <a id=4860948>[4860948](#4860948)</a> | For none or external type cluster, Availability Group (AG) properties exist only on the local replica. This update writes the properties to the AG configuration so that all AG replicas receive the same properties.                                                                                                                               | SQL Server Engine        | High Availability and Disaster Recovery                        | All  |
 | <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for tempdb space when accelerated database recovery is enabled for tempdb.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
 | <a id=4924793>[4924793](#4924793)</a> | Fixes an issue where an assertion and a dump are generated  around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
 | <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dumps in PmmLogAcceptBlock on the Availability Group (AG) secondary replica. The issue occurs when the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
-| <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an Availability Group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication                                   | All   |
+| <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an Availability Group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication  
 | <a id=4814070>[4814070](#4814070)</a> | SQL Server 2025 can now be registered on Linux containers by setting the MSSQL_PID environment variable to StandardDeveloper or EnterpriseDeveloper.                                                                       | SQL Setup               | Linux                                   | Linux    |
 | <a id=4818774>[4818774](#4818774)</a> | Fixes an issue in which VDI restore operations on Linux containers can run out of memory unexpectedly if memory is limited by a Linux cgroup.                                                                              | SQL Server Engine       | Linux                                   | Linux    |
 | <a id=4836615>[4836615](#4836615)</a> | Restricts the privilege for dbcc stackdump so that only the sysadmin can invoke the dump file.                                                                                                                             | SQL Server Engine       | Security Infrastructure                 | All      |
 | <a id=4860665>[4860665](#4860665)</a> | Enables creating or restoring the database by using a listener for Container Availability Group Connection. This feature lets Contained AG users create and restore the database without a connection to the SQL instance. | SQL Server Engine       | High Availability and Disaster Recovery | All      |
-
+| <a id=4861315>[4861315](#4861315)</a> | If traceflag 15918 is enabled by using DBCC TRACEON on a SQL Server instance by having startup traceflag 15923 enabled, this configuration might cause the SQL Server process to stop responding.                          | SQL Server Engine       | Resource Governor                       | All      |
+| <a id=4861456>[4861456](#4861456)</a> | Adds an information message in the error log if the deprecated lightweight pooling configuration is enabled.                                                                                                               | SQL Server Engine       | SQL OS                                  | Windows  |
+| <a id=4866542>[4866542](#4866542)</a> | Removes `.rtf` from full-text system DMVs on the Linux platform. This document type was previously incorrectly reported as supported.                                                                                      | SQL Server Engine       | Search                                  | Linux    |
+| <a id=4866716>[4866716](#4866716)</a> | Allows the use of sys.fn_xe_file_target_read_file() function to read the system_health event session data in Azure SQL Managed Instance.                                                                                   | SQL Server Engine       | SQL OS                                  | Windows  |
+| <a id=4873449>[4873449](#4873449)</a> | Fixes an issue in which creating a full‑text index on a .docx file produced incorrect results if a paragraph began with a hyperlink and the preceding paragraph did not contain trailing whitespace.                       | SQL Server Engine       | Search                                  | All      |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -60,7 +62,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2025 now](https://www.microsoft.com/en-us/download/details.aspx?id=108529)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2025 now](https://www.microsoft.com/download/details.aspx?id=108540)
 
 > [!NOTE]
 >
@@ -111,7 +113,7 @@ You can verify the download by computing the hash of the _SQLServer2025-KB507521
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5075211](https://download.microsoft.com/download/85e8b2cf-3981-4c62-b711-a812b4057503/KB5075211.csv).
+Download [the list of files that are included in KB5075211](https://download.microsoft.com/download/e938d686-2fcb-45bf-9105-08e2c0d50880/KB5075211.csv).
 
 </details>
 
