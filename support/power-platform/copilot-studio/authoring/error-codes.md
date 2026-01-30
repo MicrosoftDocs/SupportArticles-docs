@@ -1,7 +1,7 @@
 ---
 title: Understand Error Codes
 description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
-ms.date: 01/21/2026
+ms.date: 01/28/2026
 ms.reviewer:
   - jameslew
   - erickinser
@@ -22,44 +22,45 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 > [!NOTE]
 > The term _dialog_ is used in some error messages to refer to a _topic_.
 
-| Error code                                                                          | Description                                                                   |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There's a mismatch between the prompt action types.                           |
-| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.      |
-| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                 |
-| [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                             |
-| [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.    |
-| [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.        |
-| [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.    |
-| [ConnectedAgentChainingNotSupported](#connectedagentchainingnotsupported)           | Multi-level agent chaining isn't supported.                                   |
-| [ConnectedAgentGptComponentNotFound](#connectedagentgptcomponentnotfound)           | A connected agent is missing descriptions or instructions.                    |
-| [ConnectorPowerFxError](#connectorpowerfxerror)                                     | There's an error in the Power Fx expression evaluation in connector actions.  |
-| [ContentError](#contenterror)                                                       | There's an error in the topic content.                                        |
-| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's SSO request.            |
-| [ConversationStateTooLarge](#conversationstatetoolarge)                             | The conversation state exceeds the size limits.                               |
-| [DataLossPreventionViolation](#datalosspreventionviolation)                         | There's a data policy violation.                                              |
-| [EnforcementMessageC2](#enforcementmessagec2)                                       | Not enough prepaid capacity is available.                                     |
-| [FlowActionBadRequest](#flowactionbadrequest)                                       | A request that was made to an [agent flow][1] is malformed.                   |
-| [FlowActionException](#flowactionexception)                                         | An error occurred while executing an [agent flow][1].                         |
-| [FlowActionTimedOut](#flowactiontimedout)                                           | An [agent flow][1] took more than 100 seconds to run and timed out.           |
-| [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)                           | An [agent flow][1] invoked with unauthorized maker credentials in connection. |
-| [GenAISearchandSummarizeRateLimitReached](#genaisearchandsummarizeratelimitreached) | The usage limit for generative AI was reached.                                |
-| [GenAIToolPlannerRateLimitReached](#genaitoolplannerratelimitreached)               | The usage limit for generative orchestration was reached.                     |
-| [InfiniteLoopInBotContent](#infiniteloopinbotcontent)                               | A node was executed too many times.                                           |
-| [InvalidContent](#invalidcontent)                                                   | Invalid content was added to the code editor.                                 |
-| [LatestPublishedVersionNotFound](#latestpublishedversionnotfound)                   | Unable to retrieve the published version of the agent.                        |
-| [OpenAIHate](#openaihate)                                                           | Hate content was detected.                                                    |
-| [OpenAIJailBreak](#openaijailbreak)                                                 | Jailbreak content was detected.                                               |
-| [OpenAIndirectAttack](#openaindirectattack)                                         | Indirect attack content was detected.                                         |
-| [OpenAISelfHarm](#openaiselfharm)                                                   | Self-harm content was detected.                                               |
-| [OpenAISexual](#openaisexual)                                                       | Sexual content was detected.                                                  |
-| [OpenAIRateLimitReached](#openairatelimitreached)                                   | The capacity limit of the agent was reached.                                  |
-| [OpenAIViolence](#openaiviolence)                                                   | Violence content was detected.                                                |
-| [OutgoingMessageSizeTooBig](#outgoingmessagesizetoobig)                             | A message sent by an agent was too large to process.                          |
-| [RedirectToDisabledDialog](#redirecttodisableddialog)                               | A topic was [redirecting][2] to a disabled topic.                             |
-| [RedirectToNonExistentDialog](#redirecttononexistentdialog)                         | A topic was [redirecting][2] to another topic that no longer exists.          |
-| [SystemError](#systemerror)                                                         | A system error occurred in Copilot Studio.                                    |
-| [TooMuchDataToHandle](#toomuchdatatohandle)                                         | The request that was made by the user is too large to process.                |
+| Error code                                                                          | Description                                                                                                                                                                              |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There's a mismatch between the prompt action types.                                                                                                                                      |
+| [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.                                                                                                                 |
+| [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                                                                                                                            |
+| [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                                                                                                                                        |
+| [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs have changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and re-added to ensure Copilot Studio has the correct list of inputs. |
+| [ConnectedAgentAuthMismatch](#connectedagentauthmismatch)                           | There's an authentication mismatch between the orchestrator and sub-agent.                                                                                                               |
+| [ConnectedAgentBotNotFound](#connectedagentbotnotfound)                             | A sub-agent in a multi-agent orchestration configuration wasn't found.                                                                                                                   |
+| [ConnectedAgentBotNotPublished](#connectedagentbotnotpublished)                     | A sub-agent in a multi-agent orchestration configuration wasn't published.                                                                                                               |
+| [ConnectedAgentChainingNotSupported](#connectedagentchainingnotsupported)           | Multi-level agent chaining isn't supported.                                                                                                                                              |
+| [ConnectedAgentGptComponentNotFound](#connectedagentgptcomponentnotfound)           | A connected agent is missing descriptions or instructions.                                                                                                                               |
+| [ConnectorPowerFxError](#connectorpowerfxerror)                                     | There's an error in the Power Fx expression evaluation in connector actions.                                                                                                             |
+| [ContentError](#contenterror)                                                       | There's an error in the topic content.                                                                                                                                                   |
+| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)                               | A user interacting with an agent rejected the agent's SSO request.                                                                                                                       |
+| [ConversationStateTooLarge](#conversationstatetoolarge)                             | The conversation state exceeds the size limits.                                                                                                                                          |
+| [DataLossPreventionViolation](#datalosspreventionviolation)                         | There's a data policy violation.                                                                                                                                                         |
+| [EnforcementMessageC2](#enforcementmessagec2)                                       | Not enough prepaid capacity is available.                                                                                                                                                |
+| [FlowActionBadRequest](#flowactionbadrequest)                                       | A request that was made to an [agent flow][1] is malformed.                                                                                                                              |
+| [FlowActionException](#flowactionexception)                                         | An error occurred while executing an [agent flow][1].                                                                                                                                    |
+| [FlowActionTimedOut](#flowactiontimedout)                                           | An [agent flow][1] took more than 100 seconds to run and timed out.                                                                                                                      |
+| [FlowMakerConnectionBlocked](#flowmakerconnectionblocked)                           | An [agent flow][1] invoked with unauthorized maker credentials in connection.                                                                                                            |
+| [GenAISearchandSummarizeRateLimitReached](#genaisearchandsummarizeratelimitreached) | The usage limit for generative AI was reached.                                                                                                                                           |
+| [GenAIToolPlannerRateLimitReached](#genaitoolplannerratelimitreached)               | The usage limit for generative orchestration was reached.                                                                                                                                |
+| [InfiniteLoopInBotContent](#infiniteloopinbotcontent)                               | A node was executed too many times.                                                                                                                                                      |
+| [InvalidContent](#invalidcontent)                                                   | Invalid content was added to the code editor.                                                                                                                                            |
+| [LatestPublishedVersionNotFound](#latestpublishedversionnotfound)                   | Unable to retrieve the published version of the agent.                                                                                                                                   |
+| [OpenAIHate](#openaihate)                                                           | Hate content was detected.                                                                                                                                                               |
+| [OpenAIJailBreak](#openaijailbreak)                                                 | Jailbreak content was detected.                                                                                                                                                          |
+| [OpenAIndirectAttack](#openaindirectattack)                                         | Indirect attack content was detected.                                                                                                                                                    |
+| [OpenAISelfHarm](#openaiselfharm)                                                   | Self-harm content was detected.                                                                                                                                                          |
+| [OpenAISexual](#openaisexual)                                                       | Sexual content was detected.                                                                                                                                                             |
+| [OpenAIRateLimitReached](#openairatelimitreached)                                   | The capacity limit of the agent was reached.                                                                                                                                             |
+| [OpenAIViolence](#openaiviolence)                                                   | Violence content was detected.                                                                                                                                                           |
+| [OutgoingMessageSizeTooBig](#outgoingmessagesizetoobig)                             | A message sent by an agent was too large to process.                                                                                                                                     |
+| [RedirectToDisabledDialog](#redirecttodisableddialog)                               | A topic was [redirecting][2] to a disabled topic.                                                                                                                                        |
+| [RedirectToNonExistentDialog](#redirecttononexistentdialog)                         | A topic was [redirecting][2] to another topic that no longer exists.                                                                                                                     |
+| [SystemError](#systemerror)                                                         | A system error occurred in Copilot Studio.                                                                                                                                               |
+| [TooMuchDataToHandle](#toomuchdatatohandle)                                         | The request that was made by the user is too large to process.                                                                                                                           |
 
 [1]: /microsoft-copilot-studio/advanced-flow
 [2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
@@ -113,6 +114,18 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 1. If the error mentions a specific channel, verify that the channel supports the authentication method that you're using. Some channels don't support integrated authentication.
 
 For more information, see [Configure user authentication](/microsoft-copilot-studio/configuration-end-user-authentication).
+
+#### BindingKeyNotFoundError
+
+**Error messages**:
+
+- Binding '{0}' is not found, refresh this flow to get the latest bindings
+- Input binding '{0}' is not found, refresh this flow to get the latest bindings
+- Output binding '{0}' is not found, refresh this flow to get the latest bindings
+
+**Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If that doesn't work, try setting up the agent flow again.
+
+To get the latest inputs and outputs, remove and readd the agent flow.
 
 #### ConnectedAgentAuthMismatch
 
