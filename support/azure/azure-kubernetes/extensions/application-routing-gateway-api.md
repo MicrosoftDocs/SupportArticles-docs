@@ -88,6 +88,8 @@ Upgrades of Istio control plane for the application routing Gateway API Implemen
 - The AKS cluster is upgraded to a new version which has a higher maximum supported Istio version corresponding to it. The Istio control plane will be upgraded to the higher minor version as part of the AKS cluster upgrade.
 - A new Istio version is released for AKS and is now the maximum supported Istio version for the AKS cluster version. The Istio control plane on your cluster will **automatically** be upgraded to the new minor version after the release is rolled out to your region. Follow the AKS release notes to track new Istio version releases.
 
+In the rare event that there isn't a supported Istio version for the AKS cluster version, the application routing Gateway API implementation installs the maximum _compatible_ Istio version for the given AKS Kubernetes version. In this situation, your [AKS cluster Kubernetes version](/azure/aks/supported-kubernetes-versions). 
+
 It's possible that traffic disruptions could occur during the upgrade process. To minimize disruptions during upgrades, the application routing add-on deploys a Horizontal Pod Autoscaler (HPA) with 2 minimum replicas and a PodDisruptionBudget (PDB) with a minimum availability of 1 for each `Gateway`. 
 
 See the [Istio release calendar](/azure/aks/app-routing-gateway-api#versioning-and-upgrades) to find the expected Istio minor version for the cluster's Kubernetes version, and check the AKS release notes and [AKS release tracker](https://releases.aks.azure.com/webpage/index.html) to see whether the new Istio minor version has been released to your region. You should also verify that the `istiod` deployment pilot image tag has the expected minor version for the given cluster version by running:
