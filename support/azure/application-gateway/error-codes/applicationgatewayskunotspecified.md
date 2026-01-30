@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot ApplicationGatewaySkuNotSpecified error code 
+title: Troubleshoot ApplicationGatewaySkuNotSpecified error 
 description: This article discusses how to resolve the ApplicationGatewaySkuNotSpecified error when you try to create or modify an application gateway.
 ms.date: 01/22/2026
 ms.editor: v-gsitser
@@ -9,15 +9,15 @@ ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 #Customer intent: As an Azure Application Gateway user, I want to troubleshoot an Application Gateway create or modify operation that failed because of ApplicationGatewaySkuNotSpecified error so that I can perform the operation successfully.
 ---
 
-# Troubleshoot ApplicationGatewaySkuNotSpecified error
+# Troubleshoot the ApplicationGatewaySkuNotSpecified error
 
 ## Summary
 
-This article discusses how to resolve the `ApplicationGatewaySkuNotSpecified` error when you try to create or modify an application gateway in Microsoft Azure Application Gateway. An application gateway can't be created or updated because the SKU size isn't specified.
+This article discusses how to resolve the `ApplicationGatewaySkuNotSpecified` error that occurs when you try to create or modify an application gateway in Microsoft Azure Application Gateway. An application gateway can't be created or updated because the SKU size isn't specified.
 
 ## Symptoms
 
-When you try to create or modify an application gateway, you receive an `ApplicationGatewaySkuNotSpecified` error that prevents you from proceeding.
+When you try to create or modify an application gateway, you encounter an `ApplicationGatewaySkuNotSpecified` error that prevents you from proceeding.
 
 ## Cause
 
@@ -46,7 +46,7 @@ If you're modifying an existing application gateway, update the SKU settings by 
 
 3. **Check Azure RMS or Azure CLI command**
 
-If you're using an Azure RMS template or Azure CLI, make sure that the `sku` section is included correctly. For Azure CLI:
+If you're using an Azure RMS template or Azure CLI, make sure that the `sku` segment is included correctly. For Azure CLI:
        
 ```azurecli
 
