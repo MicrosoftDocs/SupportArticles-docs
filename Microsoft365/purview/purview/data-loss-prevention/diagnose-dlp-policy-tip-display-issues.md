@@ -1,6 +1,6 @@
 ---
 title: Diagnose DLP policy tip issues by using the HAR diagnostic
-description: 
+description: Describes the process to troubleshoot the issue when the confiured DLP policy tips don't appear.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
