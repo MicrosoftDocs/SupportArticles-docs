@@ -60,4 +60,4 @@ After you specify the SKU, try again to deploy or create the application gateway
 
 ### Resources
 
-[Application Gateway SKU Types](https://github.com/MicrosoftDocs/azure-docs/blob/cca93efa4de263ed8b6d308183e77a975763ce91/articles/application-gateway/overview-v2.md)
+[What is Azure Application Gateway v2?](/azure/application-gateway/overview-v2)
