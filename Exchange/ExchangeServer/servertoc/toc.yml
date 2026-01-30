@@ -54,6 +54,8 @@ items:
           href: ../administration/cannot-eac-add-remote-shared-mailbox-distribution-group.md
         - name: Certificate status couldn't be determined error
           href: ../administration/cannot-import-third-party-certificate.md
+        - name: Certificate assignment fails with error 0xe434352
+          href: ../administration/certificate-assignment-fails-invalid-characters.md
         - name: Cmdlet/parameter combinations not working
           href: ../administration/cmdlet-parameter-combinations-not-working.md
         - name: Connecting to the remote server failed
