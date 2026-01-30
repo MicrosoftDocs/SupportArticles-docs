@@ -1,6 +1,6 @@
 ---
-title: A synced SharePoint file is moved to the recycle bin
-description: When you synchronize a SharePoint Online or OneDrive library to your computer, a synced file is moved to the SharePoint Online or OneDrive recycle bin.
+title: A file that was synchronized in SharePoint Online or OneDrive is moved to the recycle bin
+description: Describes an issue when a file in a synchronized SharePoint Online or OneDrive library is moved to the recycle bin. 
 author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
@@ -8,16 +8,20 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: nirupme
 ms.custom: 
   - sap:Backup and Restore\Site Recycle Bin
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - OneDrive
-ms.date: 12/17/2023
+ms.date: 01/29/2026
 ---
 
 # A file that was synchronized in SharePoint Online or OneDrive is moved to the recycle bin
+
+## Summary
+This article discusses the scenario when a file in a SharePoint Online or OneDrive library is moved to the recycle bin after the library is synchronized. The article explains the actions that might cause the issue and the steps you can take to find out more information.
 
 ## Symptoms
 
