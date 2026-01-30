@@ -10,6 +10,8 @@ keywords: AADSTS50020
 
 # AADSTS7500514 - A supported type of SAML response was not found with PingFederate
 
+## Summary
+
 This article helps you troubleshoot error code `AADSTS7500514` that's returned if a PingFederate federated account tries to authenticate by using Microsoft Entra ID (formerly Azure Active Directory).
 
 ## Symptoms

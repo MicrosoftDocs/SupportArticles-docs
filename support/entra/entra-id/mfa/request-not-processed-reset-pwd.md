@@ -7,6 +7,8 @@ ms.custom: sap:Passwords
 ---
 # Error when you reset your password in Azure, Office 365, or Intune: Your request could not be processed
 
+## Summary
+
 This article describes a problem in which you receive a "Your request could not be processed" message when you reset your password in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, work with your administrator to update your telephone number(s).
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Cloud Services (Web roles/Worker roles)  

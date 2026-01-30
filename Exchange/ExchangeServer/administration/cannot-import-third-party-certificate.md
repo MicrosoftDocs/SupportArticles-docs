@@ -10,7 +10,7 @@ ms.custom:
   - sap:OWA  And Exchange Admin Center\Virtual Directories configuration
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, skumarg, batre, v-six
+ms.reviewer: batre, skumarg, v-six
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard

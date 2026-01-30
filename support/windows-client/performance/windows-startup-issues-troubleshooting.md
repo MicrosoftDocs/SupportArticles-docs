@@ -1,5 +1,5 @@
 ---
-title: Advanced troubleshooting for Windows start-up issues
+title: Troubleshooting Windows startup issues
 description: Learn advanced options for how to troubleshoot common Windows start-up issues, like system crashes and freezes.
 ms.date: 01/15/2025
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
-# Advanced troubleshooting for Windows start-up issues
+# Troubleshooting Windows startup issues
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806273" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues</span>
 
@@ -45,7 +45,7 @@ To understand the underlying cause of Windows startup problems, it's important t
 
 These articles will walk you through the resources you need to troubleshoot Windows startup issues:
 
-- [Advanced troubleshooting for Windows boot problems](./windows-boot-issues-troubleshooting.md)
+- [Advanced troubleshooting for Windows startup issues](./windows-boot-issues-troubleshooting.md)
 - [Advanced troubleshooting for Stop error or blue screen error](./stop-error-or-blue-screen-error-troubleshooting.md)
 - [Advanced troubleshooting for Windows-based computer freeze issues](./windows-based-computer-freeze-troubleshooting.md)
 - [Stop error occurs when you update the in-box Broadcom network adapter driver](stop-error-broadcom-network-driver-update.md)

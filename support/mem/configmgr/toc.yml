@@ -244,12 +244,12 @@ items:
           href: setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls.md
         - name: Management Point stops responding with HTTP 500.19
           href: setup-migrate-backup-recovery/management-points-stop-responding.md
-        - name: Updating ODBC Driver for SQL Server to 18.6.1.1 update causes issues in Configuration Manager
+        - name: Service connection point doesn't download updates
+          href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
+        - name: Updating ODBC Driver for SQL Server to 18.6.1.1 causes issues in Configuration Manager
           href: setup-migrate-backup-recovery/update-odbc-18611-causes-issues-configmgr.md
-        - name: Understand state messaging
-          href: setup-migrate-backup-recovery/state-messaging-description.md
-        - name: Troubleshoot state message processing performance
-          href: setup-migrate-backup-recovery/state-message-processing-performance.md
+        - name: Troubleshoot state message processing performance issues
+          href: setup-migrate-backup-recovery/state-message-processing-performance.md          
     - name: SQL Server settings and configuration
       items:
         - name: Can't create software update packages or applications

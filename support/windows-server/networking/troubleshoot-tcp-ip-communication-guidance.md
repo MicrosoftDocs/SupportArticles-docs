@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting TCP/IP communication
-description: Introduces general guidance for troubleshooting scenarios related to TCP/IP communication.
-ms.date: 01/15/2025
+description: Provides step-by-step guidance for testing network components and troubleshooting any resulting issues, helps you fix common TCP/IP-related issues, and helps you improve network performance.
+ms.date: 01/27/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -15,9 +15,14 @@ appliesto:
 # TCP/IP communication troubleshooting guidance
 
 > [!div class="nextstepaction"]
-> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common TCP/IP communication issues.
 
-This article is designed to help you troubleshoot TCP/IP communication issues.
+## Summary
+
+This article helps you troubleshoot TCP/IP communication issues in Windows Server. The article provides step-by-step guidance for testing network components and troubleshooting any resulting issues. It also helps you fix common TCP/IP-related issues and improve network performance.
+
+> [!NOTE]  
+> Before you begin troubleshooting, familiarize yourself with the network topology and devices between the source and destination nodes. This information helps you identify where issues might occur.
 
 ## Troubleshooting tools
 
@@ -108,7 +113,7 @@ If the node can't ping/telnet to nodes on the same subnet/network segment. Note 
 
 When the node can ping its default gateway, then external connectivity (such as off-box connectivity) is possible from the source node. Further testing would still be required to understand whether a basic connectivity issue exists. If the node can't ping or Telnet to its default gateway, this means that the ICMP replies are disabled on the router.
 
-### Step 6: Check issues that affects the specific destination node
+### Step 6: Check issues that affect the specific destination node
 
 If the source node can ping, Telnet, or PsPing to other nodes on the destination subnet, then basic connectivity and routing within the infrastructure is working. This outcome points to an issue that affects the specific destination node.
 
