@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2025 (KB5078298)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 1 (KB5078298).
-ms.date: 01/28/2026
+ms.date: 01/30/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5078298
 ms.reviewer: v-shaywood
@@ -33,7 +33,7 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 >
 > If you downloaded the initial release of this update, don't install it. Download and install the current version instead.
 >
-> If you already installed the initial release, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it or install the current version to restore Database Mail functionality.
+> If you already installed the initial release, [uninstall](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server) it or install the current version on top of the initial CU1 release (KB5074901) to restore Database Mail functionality.
 >
 > Future cumulative updates also contain the fix for this issue. You can install them regardless of which version of this cumulative update is currently installed.
 >
