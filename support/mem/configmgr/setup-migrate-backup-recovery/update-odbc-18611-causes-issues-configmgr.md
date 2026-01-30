@@ -1,6 +1,6 @@
 ---
 title: Updating ODBC Driver for SQL Server to 18.6.1.1 causes issues in Configuration Manager
-description: Describes issues that appear after you update ODBC Driver for SQL Server to version 18.6.1.1 in Configuration Manager, and explains how to work around these issues until a permanent fix becomes available.
+description: Discusses issues that appear after you update ODBC Driver for SQL Server to version 18.6.1.1 in Configuration Manager, and explains how to work around these issues.
 ms.date: 01/30/2026
 ms.reviewer: kaushika, payur, v-tappelgate
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Site Installation or Prerequisites
@@ -11,15 +11,15 @@ ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Rec
 
 ## Summary
 
-After you update Microsoft ODBC Driver for SQL Server to version 18.6.1.1, Configuration Manager site installations might fail, and Client Notification features might stop working. This article provides information about these issues and explains how to work around them until a permanent fix becomes available.
+After you update Microsoft ODBC Driver for Microsoft SQL Server to version 18.6.1.1, Configuration Manager site installations might fail, and Client Notification features might stop working. This article provides information about these issues and explains how to work around them until a permanent fix becomes available.
 
 ## Symptoms
 
 After you install [Microsoft ODBC driver for SQL Server on Windows, version 18.6.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186), you experience the following symptoms.
 
-### Symptom: You can't install a new ConfigMgr site
+### Symptom 1: You can't install a new ConfigMgr site
 
-You try to create a new site, but the operation fails. The ConfigMgrSetup.log file reports an error that resembles the following example:
+You try to create a ConfigMgr site, but the operation fails. The ConfigMgrSetup.log file reports an error that resembles the following example:
 
 ```output
     INFO: Database watermark:
@@ -35,9 +35,9 @@ You try to create a new site, but the operation fails. The ConfigMgrSetup.log fi
     ERROR: Failed to import Asset Intelligence data into the site database.
 ```
 
-### Symptom: Client Notification stops working
+### Symptom 2: Client Notification stops working
 
-In existing environments, in the Configuration Manager console, you notice that the **Currently Logged on User** column doesn't populate. You also see the following error message in the BGBMgr.log on the Site Server:
+In existing environments, the **Currently Logged on User** column in the Configuration Manager console doesn't populate. You also see the following error entry in the BGBMgr log on the Site Server:
 
 ```output
 BCP queued 18 rows for currently logged on users
@@ -54,18 +54,18 @@ Begin to move file from E:\Microsoft Configuration Manager\inboxes\bgb.box\Bgbtd
 
 ## Cause
 
-ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can cause failures in Configuration Manager operations that attempt to insert NULL values into such columns. Such failures generate errors during Site Installation and "Currently Logged on User" reporting.
+ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can cause failures in Configuration Manager operations that try to insert NULL values into such columns. Such failures generate errors during Site Installation and "Currently Logged on User" reporting.
 
 ## Workaround
 
-Make one of the following changes to the ODBC Driver for SQL Server:
+To work around this issue, make one of the following changes to ODBC Driver for SQL Server:
 
-- Downgrade the driver to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#1852)
-- Downgrade the driver to [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184). Configuration Manager version 2503 and later versions include this version of the driver as Redistributable content.
+- Downgrade the driver to [version 18.5.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#1852).
+- Downgrade the driver to [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184). Configuration Manager version 2503 and later versions include this version of the driver as redistributable content.
 
 > [!NOTE]  
-> ODBC Driver for SQL Server version 18.6.1.1 doesn't contain security updates, so rolling back the driver doesn't introduce vulnerabilities.
+> ODBC Driver for SQL Server version 18.6.1.1 doesn't contain security updates. Therefore, rolling back the driver doesn't introduce vulnerabilities.
 
 ## More information
 
-Microsoft plans resolving the issue in an upcoming ODBC Driver for SQL Server release. For more information, see [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle).
+Microsoft plans to resolve this issue in an upcoming ODBC Driver for SQL Server release. For more information, see [Support lifecycle for Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/support-lifecycle).
