@@ -125,7 +125,7 @@ For more information, see [Configure user authentication](/microsoft-copilot-stu
 
 **Resolution**: Check that the agent flow inputs and outputs are set up correctly. Try refreshing the inputs or outputs to resolve this issue. If that doesn't work, try setting up the agent flow again.
 
-To get the latest inputs and outputs, remove and readd the agent flow. If the agent flow isn't a custom agent flow, open a support ticket.
+To get the latest inputs and outputs, remove and readd the agent flow.
 
 #### ConnectedAgentAuthMismatch
 
