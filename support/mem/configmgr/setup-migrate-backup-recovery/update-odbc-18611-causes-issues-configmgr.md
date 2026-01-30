@@ -19,7 +19,7 @@ After you install [Microsoft ODBC driver for SQL Server on Windows, version 18.6
 
 ### Symptom 1: You can't install a new ConfigMgr site
 
-You try to create a ConfigMgr site, but the operation fails. The ConfigMgrSetup.log file reports an error that resembles the following example:
+You try to install a new ConfigMgr site, but the operation fails. The ConfigMgrSetup.log file reports an error that resembles the following example:
 
 ```output
     INFO: Database watermark:
@@ -37,7 +37,7 @@ You try to create a ConfigMgr site, but the operation fails. The ConfigMgrSetup.
 
 ### Symptom 2: Client Notification stops working
 
-In existing environments, the **Currently Logged on User** column in the Configuration Manager console doesn't populate. You also see the following error entry in the BGBMgr log on the Site Server:
+In existing environments, the **Currently Logged on User** column in the Configuration Manager console doesn't populate. You also see the following error entry in the BGBMgr.log file on the Site Server:
 
 ```output
 BCP queued 18 rows for currently logged on users
