@@ -8,7 +8,7 @@ ms.date: 12/15/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg, v-gsitser
 ms.service: azure-app-service
-ms.custom:  sap:Connection issues with SSL or TLS, SSL Certificates and Domains  
+ms.custom:  sap:Connection issues with SSL or TLS
 ---
 # Troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux
 
