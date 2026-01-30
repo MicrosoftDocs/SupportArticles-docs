@@ -12,7 +12,7 @@ appliesto:
 
 # KB5075211 - Cumulative Update 2 for SQL Server 2025
 
-_Release Date:_ &nbsp; JanFebruary 12, 2026  
+_Release Date:_ &nbsp; February 12, 2026  
 _Version:_ &nbsp; 17.0.4015.3  
 
 ## Summary
@@ -44,7 +44,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for `tempdb` space when accelerated database recovery is enabled for `tempdb`.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
 | <a id=4924793>[4924793](#4924793)</a> | Fixes an issue where an assertion and a dump are generated  around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
 | <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dumps in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs when the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
-| <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication  
+| <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
 | <a id=4814070>[4814070](#4814070)</a> | SQL Server 2025 can now be registered on Linux containers by setting the MSSQL_PID environment variable to StandardDeveloper or EnterpriseDeveloper.                                                                       | SQL Setup               | Linux                                   | Linux    |
 | <a id=4818774>[4818774](#4818774)</a> | Fixes an issue in which VDI restore operations on Linux containers can run out of memory unexpectedly if memory is limited by a Linux cgroup.                                                                              | SQL Server Engine       | Linux                                   | Linux    |
 | <a id=4836615>[4836615](#4836615)</a> | Restricts the privilege for dbcc stackdump so that only the sysadmin can invoke the dump file.                                                                                                                             | SQL Server Engine       | Security Infrastructure                 | All      |
