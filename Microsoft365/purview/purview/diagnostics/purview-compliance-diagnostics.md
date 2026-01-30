@@ -15,7 +15,7 @@ ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/20/2026
+ms.date: 01/29/2026
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -70,7 +70,7 @@ When you select a diagnostic on a Solutions page, the diagnostic runs the [Check
 | Alerts aren't working for a DLP rule. Are there any issues that affect the DLP rule configuration? | Check for alerts, and determine whether any issues affect the DLP rule configuration.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 | Can't find an alert for an activity or an audit event. | Check for the alert related to an activity or audit event, and investigate why the alert could be missing. | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 | A DLP rule isn’t triggering for a file stored in SharePoint or OneDrive. Is the file evaluated by DLP, and is it in scope for the policy? | Check a file's properties and classification to review whether a DLP rule matched or didn't match. When entering the file path, make sure that you provide the full file path, not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open Details, and copy the Path (if available). <br> - If **Path** isn’t shown, open the file, go to File > Info, then select **Copy path**. | [Test-DlpPolices](https://learn.microsoft.com/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-| Policy tips don't appear in Outlook on the web. Are there issues that affect the DLP policy tips configuration? | Analyzes the HTTP Archive (HAR) file to investigate why policy tips don't appear in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web, and press F12 to open Developer Tools. <br> - Select the **Network** tab, select **Preserve log**, reproduce the issue, and export the HAR file. | [Test-DlpPolices](https://learn.microsoft.com/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Policy tips don't appear in Outlook on the web. Are there issues that affect the DLP policy tips configuration? | [Analyzes the HTTP Archive (HAR) file](../data-loss-prevention/diagnose-dlp-policy-tip-display-issues.md) to investigate why policy tips don't appear in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web, and press F12 to open Developer Tools. <br> - Select the **Network** tab, select **Preserve log**, reproduce the issue, and export the HAR file. | [Test-DlpPolices](https://learn.microsoft.com/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 
 ## Diagnostics on the Help pane
 
