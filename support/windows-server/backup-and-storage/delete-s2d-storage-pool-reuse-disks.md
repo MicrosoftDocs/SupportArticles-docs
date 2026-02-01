@@ -295,7 +295,7 @@ Keywords:
 User:          SYSTEM
 Computer:      S2D-1.contoso.com
 Description:
-Windows lost communication with physical disk {81ea06c7-7433-bdd5-6a02-b267b5702b0b}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
+Windows lost communication with physical disk {aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 This disk may be located using the following information:
 Drive Manufacturer: Msft
 Drive Model Number: Virtual Disk
@@ -306,9 +306,9 @@ Enclosure Model Number: NULL
 Enclosure Serial Number: NULL
 Enclosure Slot: -1
 More information can be obtained using this PowerShell command:
-Get-PhysicalDisk | ?{ $_.ObjectId -Match "{81ea06c7-7433-bdd5-6a02-b267b5702b0b}" }
+Get-PhysicalDisk | ?{ $_.ObjectId -Match "{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}" }
 To view the virtual disks affected, run this command in PowerShell:
-Get-PhysicalDisk | ?{ $_.ObjectId -Match "{81ea06c7-7433-bdd5-6a02-b267b5702b0b}" } | Get-VirtualDisk
+Get-PhysicalDisk | ?{ $_.ObjectId -Match "{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}" } | Get-VirtualDisk
 ```
 
 When you run the `Get-StoragePool` command, you see output that resembles the following example:
