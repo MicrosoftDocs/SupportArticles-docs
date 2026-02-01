@@ -138,10 +138,10 @@ yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] SOFTWARE\Policies\Microsoft\Wind
 The Group Policy Mapped Drives extension identified a GPO that's configured with this extension, and the name is **Mapped-Drive**:
 
 ```output
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPC : LDAP://CN=User,cn={6D6CECFD-C75A-43FA-8C32-0B5963E42C5B},cn=policies,cn=system,DC=contoso,DC=com
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPT : \\contoso.com\SysVol\contoso.com\Policies\{6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}\User
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPC : LDAP://CN=User,cn={aaaabbbb-0000-cccc-1111-dddd2222eeee},cn=policies,cn=system,DC=contoso,DC=com
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPT : \\contoso.com\SysVol\contoso.com\Policies\{aaaabbbb-0000-cccc-1111-dddd2222eeee}\User
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Display Name : Mapped-Drive
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Name : {6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] GPO Name : {aaaabbbb-0000-cccc-1111-dddd2222eeee}
 ```
 
 We observe that drive Z is successfully mapped:
@@ -151,7 +151,7 @@ yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Starting class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Policy is not flagged for removal.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drives>.
-yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] EVENT : The user 'Z:' preference item in the 'Mapped-Drive {6D6CECFD-C75A-43FA-8C32-0B5963E42C5B}' Group Policy Object applied successfully.
+yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] EVENT : The user 'Z:' preference item in the 'Mapped-Drive {aaaabbbb-0000-cccc-1111-dddd2222eeee}' Group Policy Object applied successfully.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drive> - Z:.
 yyyy-mm-dd hh:mm::ss:sss [pid=0x3134,tid=0x4fc] Completed class <Drives>
 ```

@@ -89,7 +89,7 @@ For example:
 ```HTTP
 https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize
 ?response\_type=code
-&client\_id=044abcc4-914c-4444-9c3f-48cc3140b6b4
+&client\_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &resource=https://vault.azure.net/
 &scope=openid
 &prompt=consent
@@ -111,7 +111,7 @@ For example:
 ```HTTP
 https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/v2.0/authorize
 ?response_type=code
-&client_id=044abcc4-914c-4444-9c3f-48cc3140b6b4
+&client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &scope=openid+https://vault.azure.net/user_impersonation
 &prompt=consent
 ```
