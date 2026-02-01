@@ -67,7 +67,7 @@ To make the code changes to prepare your certificate and configure your project,
      <Certificates>
        <Certificate
          name="Certificate1"
-         thumbprint="0123456789ABCDEF0123456789ABCDEF01234567"
+         thumbprint="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
          thumbprintAlgorithm="sha1"
        />
      </Certificates>
