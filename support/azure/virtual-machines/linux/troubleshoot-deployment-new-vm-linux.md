@@ -30,7 +30,7 @@ Also, make sure the image has been properly prepared (generalized). * Instructio
 ```
 
 ```toutputext
-Deployment failed. Correlation ID: f9dcb33a-4e6e-45c5-9c9d-b29dd73da2e0. {
+Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
   "status": "Failed",
   "error": {
     "code": "ResourceDeploymentFailure",

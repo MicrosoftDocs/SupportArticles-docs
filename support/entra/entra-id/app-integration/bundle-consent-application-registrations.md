@@ -42,7 +42,7 @@ Your authentication request must use the `.default` scope for Microsoft Graph. F
 ```HTTP
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ?response_type=code
-&Client_id=72333f42-5078-4212-abb2-e4f9521ec76a
+&Client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &redirect_uri=https://localhost
 &scope=openid profile offline_access app_uri_id1/.default
 &prompt=consent
@@ -56,7 +56,7 @@ https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ```http
 GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ?response_type=code
-&client_id=72333f42-5078-4212-abb2-e4f9521ec76a
+&client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &redirect_uri=https://localhost
 &scope=openid profile offline_access User.Read https://graph.microsoft.com/.default
 &prompt=consent
@@ -65,7 +65,7 @@ GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 #### Implementation by using MSAL.NET
 
 ```csharp
-String[] consentScope = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/.default" };
+String[] consentScope = { "api://aaaabbbb-0000-cccc-1111-dddd2222eeee/.default" };
 var loginResult = await clientApp.AcquireTokenInteractive(consentScope)
     .WithAccount(account)
 	 .WithPrompt(Prompt.Consent)
@@ -210,9 +210,9 @@ The following is an end-to-end code sample that demonstrates a smooth user exper
 
 ```csharp
 string[] msGraphScopes = { "User.Read", "Mail.Send", "Calendar.Read" }
-String[] apiScopes = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/access_as_user" };
+String[] apiScopes = { "api://aaaabbbb-0000-cccc-1111-dddd2222eeee/access_as_user" };
 String[] msGraphDefaultScope = { "https://graph.microsoft.com/.default" };
-String[] apiDefaultScope = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/.default" };
+String[] apiDefaultScope = { "api://aaaabbbb-0000-cccc-1111-dddd2222eeee/.default" };
 
 var accounts = await clientApp.GetAccountsAsync();
 IAccount account = accounts.FirstOrDefault();
