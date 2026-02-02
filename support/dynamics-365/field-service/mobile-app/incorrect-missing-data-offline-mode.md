@@ -1,7 +1,7 @@
 ---
 title: Incorrect or missing data in offline mode error
 description: Resolves a common issue with missing data in the mobile offline profile in the Dynamics 365 Field Service mobile app.
-ms.reviewer: jobaker, v-wendysmith
+ms.reviewer: jobaker, v-wendysmith, v-shaywood
 ms.date: 01/29/2026
 ms.custom: sap:Mobile application\Offline data sync - Other
 ---

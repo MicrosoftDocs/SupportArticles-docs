@@ -1,7 +1,7 @@
 ---
 title: Duplicated inspection responses
 description: Reviews the audit log and offline profile filters to prevent duplicated inspection responses in Microsoft Dynamics 365 Field Service.
-ms.reviewer: jobaker, v-wendysmith
+ms.reviewer: jobaker, v-wendysmith, v-shaywood
 ms.date: 01/29/2026
 ms.custom: sap:Mobile application\Issues completing inspections
 ---
