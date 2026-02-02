@@ -25,7 +25,7 @@ We can't create a web app with a name that already exists in Azure. The web app 
           
 **How can I create an Azure App Service web app in a region that's unavailable in the subscription?**
 
-Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
+Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](../general/region-access-request-process.md) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
 
 **What if the requested SKU of the App Service plan isn't available in the resource group?**
 
