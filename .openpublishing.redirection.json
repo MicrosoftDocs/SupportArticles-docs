@@ -14181,6 +14181,190 @@
     {
       "source_path": "support/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/welcome-ai-builder"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/troubleshoot-visual-c-compile-linker.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/troubleshoot-visual-c-compile-linker"
+    },
+    {
+      "source_path": "support/developer/visualstudio/version-control/cannot-switch-accounts.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/version-control/cannot-switch-accounts"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/visual-studio-2015-2013-feature-not-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/visual-studio-2015-2013-feature-not-work"
+    },
+    {
+      "source_path": "support/developer/visualstudio/third-party/jdk-missing-create-xamarin-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/third-party/jdk-missing-create-xamarin-app"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/cannot-sign-in-javascript-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/cannot-sign-in-javascript-disabled"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/fonts-cause-setup-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/fonts-cause-setup-crash"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/version-visual-studio-requires-april-2014-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/version-visual-studio-requires-april-2014-update"
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/deploy-aspnet-app-xcopy-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/deploy-aspnet-app-xcopy-command"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/visual-studio-2013-startup-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/visual-studio-2013-startup-crashes"
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/build-errors-delete-debug-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/build-errors-delete-debug-configuration"
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/language-compilers/write-cgi-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/visual-basic/language-compilers/write-cgi-applications"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/_stat-family-cannot-support-symbolic-directory-link.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/_stat-family-cannot-support-symbolic-directory-link"
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/windows-simulator-needs-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/windows-simulator-needs-credentials"
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/language-compilers/scroll-position-not-maintained.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/visual-basic/language-compilers/scroll-position-not-maintained"
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/language-compilers/checkbox-control-values-datagrid.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/visual-basic/language-compilers/checkbox-control-values-datagrid"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/web-deploy-issue-visual-studio-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/web-deploy-issue-visual-studio-2012"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/invalid-entries-passed-switch.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/invalid-entries-passed-switch"
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/remote-debugger-collect-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/remote-debugger-collect-information"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/cannot-change-state-menu-item.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/cannot-change-state-menu-item"
+    },
+    {
+      "source_path": "support/developer/visualstudio/version-control/invisible-solution-platform-drop-down-list.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/version-control/invisible-solution-platform-drop-down-list"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/other-release-management-component-no-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/other-release-management-component-no-work"
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/language-compilers/navigate-xml-xpathnavigator-class.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/visual-basic/language-compilers/navigate-xml-xpathnavigator-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/screen-readers-not-read-tool-windows.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/screen-readers-not-read-tool-windows"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/help-viewer-2-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/help-viewer-2-crashes"
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/building-windows-10-driver-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/building-windows-10-driver-fails"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/cannot-start-windows-simulator.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/cannot-start-windows-simulator"
+    },
+    {
+      "source_path": "support/developer/visualstudio/version-control/excel-project-cannot-connect-tfs-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/version-control/excel-project-cannot-connect-tfs-2010"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/fix-dia-sdk-install-location.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/fix-dia-sdk-install-location"
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/file-setting-not-save.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/file-setting-not-save"
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/instrumenting-signed-assembly-throw-warning-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/instrumenting-signed-assembly-throw-warning-message"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/lnk1000-error-wholearchive-switch.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/lnk1000-error-wholearchive-switch"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/developer-license-notification-not-dismiss.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/developer-license-notification-not-dismiss"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/msiapplymultiplepatches-error-1601.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/msiapplymultiplepatches-error-1601"
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/language-compilers/nullreferenceexception-commandbuilder.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/visual-basic/language-compilers/nullreferenceexception-commandbuilder"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2013-setup.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/issues-workarounds-visual-studio-2013-setup"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/unnested-loops-cause-c1061-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/unnested-loops-cause-c1061-error"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/update-database-sqldataadapter.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/update-database-sqldataadapter"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/release-management-client-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/release-management-client-crash"
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/resource-editor-cannot-save-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/resource-editor-cannot-save-file"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/crash-with-stardict-3.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/crash-with-stardict-3"
+    },
+    {
+      "source_path": "support/developer/visualstudio/third-party/cannot-install-tools-ctp-3-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/third-party/cannot-install-tools-ctp-3-1"
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/release-management-installation-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/release-management-installation-issues"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-application-fail-redraw-control.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/mfc-application-fail-redraw-control"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/readfromstream-return-access-denied.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/readfromstream-return-access-denied"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/cdatabase-getconnect-returnn-empty.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/cdatabase-getconnect-returnn-empty"
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/cannot-use-scale-140-badge-logo.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-use-scale-140-badge-logo"
     }
   ]
 }
