@@ -29,7 +29,7 @@ When you synchronize a Microsoft SharePoint Online library or a OneDrive library
 
 ## Cause
 
-This issue occurs because a user accidentally deleted the file, or a local application for the user who synchronized the library deleted the file. 
+This issue occurs because a user accidentally deleted the file, or a local application for the user who synchronized the library deleted the file.
 
 ## Resolution
 
