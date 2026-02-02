@@ -45,7 +45,7 @@ Service Fabric then creates a repair task by combining several details, includin
 
 These elements are then combined in the following format: 
 
-    `Azure/repair type/repair job/update domain/document incarnation number` 
+`Azure/repair type/repair job/update domain/document incarnation number` 
 
 For example: `Azure/TenantUpdate/addfb79e-1e8c-42c8-a967-b0e2e0afd6b4/0/110`.
 
