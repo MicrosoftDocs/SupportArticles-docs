@@ -23,7 +23,7 @@ items:
       href: sqlserver-2025/cumulativeupdate1.md
   - name: Cumulative Update 2
     items:
-    - name: Cumulative Update 3 (KB5075211)
+    - name: Cumulative Update 2 (KB5075211)
       href: sqlserver-2025/cumulativeupdate2.md
 - name: SQL Server 2022
   items:
