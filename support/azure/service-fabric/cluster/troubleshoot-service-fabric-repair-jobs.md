@@ -121,7 +121,7 @@ To check the health of the Infrastructure Service or Repair Manager Service, sel
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-service-health.png" alt-text="Screenshot of the Infrastructure Service Health view in Service Fabric Explorer." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-service-health.png":::
 
-:::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-repairmanager-service-health.png" alt-text="Screenshot of the Repair Manager Service Health view in Service Fabric Explorer." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-repairmanager-service-health.png":::
+:::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-manager-service-health.png" alt-text="Screenshot of the Repair Manager Service Health view in Service Fabric Explorer." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-manager-service-health.png":::
 
 ### Job throttling status for Infrastructure Service 
 
