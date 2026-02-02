@@ -63,15 +63,15 @@ After the task is claimed, the Repair Executor takes ownership but doesn't speci
 
 ### Preparing 
 
-In the Preparing state, the Repair Executor specifies the impact, and the Repair Manager prepares the environment (for example, by deactivating nodes). If the task is canceled now, it stops running, and moves directly to restoring. The Operator also has the option to force approval and bypass certain safety checks. The Repair Manager has ownership in this state. 
+In the Preparing state, the Repair Executor specifies the impact, and the Repair Manager prepares the environment (for example, by deactivating nodes). If the task is canceled now, it stops running, and moves directly to restoring. Optionally, the Operator can force approval and bypass certain safety checks. The Repair Manager has ownership in this state. 
 
 ### Approved 
 
-When the task reaches the Approved state, the Repair Manager has completed all preparations and approved execution. The Repair Executor moves the task to the Executing state before starting the repair. Cancelation at this point requires cooperation from the Repair Executor. The Repair Executor has ownership in this state. 
+After the Repair Manager completes all preparations and approved execution, the task reaches the Approved state. The Repair Executor moves the task to the Executing state before starting the repair. Cancelation at this point requires cooperation from the Repair Executor. The Repair Executor has ownership in this state. 
 
 ### Executing 
 
-During the Executing state, the Repair Executor performs the repair. The Repair Executor must finish all potentially disruptive actions before it can report completion. Cancelation now requires cooperation from the Repair Executor. The Repair Executor should acknowledge cancelation only when it can do this safely. The Repair Executor has ownership in this state. 
+During the Executing state, the Repair Executor performs the repair. The Repair Executor must finish all potentially disruptive actions before it can report completion. Cancelation now requires cooperation from the Repair Executor. The Repair Executor should acknowledge cancelation only when it's safe to do it. The Repair Executor has ownership in this state. 
 
 ### Restoring 
 
@@ -92,17 +92,17 @@ To view jobs that Service Fabric receives for approval, select **Infrastructure 
 
 Jobs appear here only if they exist in the received document. In addition to the **Job ID** and **Acknowledgement Status**, the **Impact Types** section displays the nature of the job’s impact. The **Current Repair Task** section shows which repair task is actively running for job approval on the Service Fabric side. By selecting **All Repair Tasks**, you can view the status of every repair task that's associated with the current job.
 
-:::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png" alt-text="The Infrastructure Jobs view in Service Fabric Explorer showing job ID, acknowledgement status, and impact types." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png":::
+:::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png" alt-text="The Infrastructure Jobs view in Service Fabric Explorer showing job ID, acknowledgment status, and impact types." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png":::
 
 ### Repair Jobs and Health Checks view 
 
 To view individual and all repair tasks that are associated with a cluster, select **Repair Jobs**. This selection displays pending, completed, and canceled repair tasks. You can also see the state of any pending task. 
 
-If a repair task state is Created, Claimed, or Preparing, it's not yet approved by Service Fabric. After a repair task transitions to the Approved state, it's considered to be approved. It's then forwarded to the Repair Executor for the corresponding job. 
+If a repair task state is Created, Claimed, or Preparing, the task isn't yet approved by Service Fabric. After a repair task transitions to the Approved state, it's considered to be approved. It's then forwarded to the Repair Executor for the corresponding job. 
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/repair-task-view.png" alt-text="Repair Jobs view in Service Fabric Explorer showing repair task states." lightbox="media/troubleshoot-service-fabric-repair-jobs/repair-task-view.png":::
 
-If a repair task gets stuck in the Preparing state, it's either stuck in a health check or a safety check. An unhealthy entity in the cluster (including customer applications and system applications) can cause the health check to fail. To determine whether the task is stuck in a health check, first verify whether **Preparing Health Check** or **Restoring Health Check** is enabled based on the state at which the task is stuck. In the **Repair Task** view, expand the task to show the health check status and whether the health check is enabled. 
+If a repair task gets stuck in the Preparing state, this condition occurs in either a health check or a safety check. An unhealthy entity in the cluster (including customer applications and system applications) can cause the health check to fail. To determine whether the task is stuck in a health check, first verify whether **Preparing Health Check** or **Restoring Health Check** is enabled based on the state at which the task is stuck. In the **Repair Task** view, expand the task to show the health check status and whether the health check is enabled. 
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-health-check.png" alt-text="Expanded repair task showing health check status and preparing health check details." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-health-check.png":::
 
@@ -110,13 +110,13 @@ If the health check is enabled, **Repair Task History** shows that the health ch
 
 ### Safety Checks view 
 
-A repair task can get stuck in the Safety Check phase only if it affects any node. To verify this condition, check the **Impact** section in the **Repair Task** view. If a node impact exists, you can identify which Safety Check is causing the delay by inspecting each affected node individually. Select the node from the **Node List**. In the **Safety Checks** section, you’ll see the specific check where the task is stuck. The **Repair Task ID** is also displayed here. The ID indicates which repair task is responsible for the node deactivation and safety check. 
+A repair task can get stuck in the Safety Check phase only if it affects any node. To verify this condition, check the **Impact** section in the **Repair Task** view. If a node impact exists, you can identify which Safety Check is causing the delay by inspecting each affected node individually. Select the node from the **Node List**. The **Safety Checks** section indicates the specific check in which the task is stuck. The **Repair Task ID** is also displayed here. The ID indicates which repair task is responsible for the node deactivation and safety check. 
 
 For example, in the following screenshot, the repair task is stuck in the **EnsureSeedNodeQuorum** safety check. 
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/safety-check-view.png" alt-text="Safety Checks view in Service Fabric Explorer showing the specific check where the task is stuck." lightbox="media/troubleshoot-service-fabric-repair-jobs/safety-check-view.png":::
 
-If **Infrastructure Service** shows no errors that are related to a repair task, and the task is in the Executing state, this means that the job’s acknowledgment status is Acknowledged for Impact Start. Similarly, if the repair task transitions to the Completed state, this indicates that the job’s acknowledgment status is Acknowledged for Impact End.
+If **Infrastructure Service** shows no errors that are related to a repair task, and the task is in the Executing state, the job’s acknowledgment status is Acknowledged for Impact Start. Similarly, if the repair task transitions to the Completed state, the job’s acknowledgment status is Acknowledged for Impact End.
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-task-executing.png" alt-text="A repair task in the Executing state by having the job acknowledgment status of Acknowledged for Impact Start." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-task-executing.png":::
 
