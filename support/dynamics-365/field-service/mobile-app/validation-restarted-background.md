@@ -1,10 +1,8 @@
 ---
 title: Validations have been restarted in the background because of inconsistent validation data error
 description: Provides a resolution for an issue where synchronous save event limitation causes an error message in Dynamics 365 Field Service forms.
-ms.author: jobaker
-author: JonBaker007
-ms.reviewer: mhart
-ms.date: 01/31/2025
+ms.reviewer: jobaker, v-wendysmith, v-shaywood
+ms.date: 01/29/2026
 ms.custom: sap:Mobile application\Can't save data
 ---
 # "Validations have been restarted in the background because of inconsistent validation data" error
@@ -13,7 +11,7 @@ This article helps resolve an issue where a synchronous save event limitation ca
 
 ## Symptoms
 
-When certain fields on a form are changed, Dynamics 365 Field Service uses the `AsyncJobTracker` pattern to retrieve and cache related records. The cached records are used for validation during the `OnSave` event. Due to a synchronous save event limitation, the system doesn't wait for asynchronous calls. The Dynamics 365 Field Service form then shows the following error message:
+When a user changes certain fields on a form, Dynamics 365 Field Service uses the `AsyncJobTracker` pattern to retrieve and cache related records. The form uses the cached records for validation during the `OnSave` event. Because of a synchronous save event limitation, the system doesn't wait for asynchronous calls. The Dynamics 365 Field Service form shows the following error message:
 
 > Validations have been restarted in the background because of inconsistent validation data. Please try again shortly.
 
@@ -23,7 +21,7 @@ Dynamics 365 Field Service has validations that require retrieving data from rel
 
 The `AsyncJobTracker` pattern is only enabled in offline mode to ensure the changed offline records are validated and can be synced back to the server.
 
-If the cached records don't match the current lookup fields, you receive the error message.
+If the cached records don't match the current lookup fields, you see the error message.
 
 ## Resolution
 
