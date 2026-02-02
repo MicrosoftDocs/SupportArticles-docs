@@ -5384,11 +5384,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/mem/configmgr/state-messaging-description.md",
-      "redirect_url": "support/mem/configmgr/update-management/state-messaging-description",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/mem/configmgr/update-management/state-messaging-description.md",
       "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/state-messaging-description",
       "redirect_document_id": true
