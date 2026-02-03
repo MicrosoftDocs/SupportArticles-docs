@@ -20,10 +20,9 @@ _Original KB number:_ &nbsp; 4090105
 
 ## Summary
 
-> [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-You may do this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set **LMCompatibilityLevel** to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` key on the domain controller.
+Consider using this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set **LMCompatibilityLevel** to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` key on the domain controller.
 
 Microsoft has deprecated NTLM as a whole in June 2024, please see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features). You may use the options described in this article to audit the use of NTLM, any version:
 [Removing NTLMv1, new audit event for use of NTLM](topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e)
