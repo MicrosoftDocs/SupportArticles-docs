@@ -83,7 +83,7 @@ For more information, see [How to enable NTLM 2 authentication](enable-ntlm-2-au
 
 ## More information
 
-The sign-in (logon) operation that Event ID 4624 records doesn't use NTLMv1 session security. There's actually no session security, because no key material exists.
+The sign-in (logon) operation that Event ID 4624 describes doesn't use NTLMv1 session security. There's actually no session security, because no key material exists.
 
 The logic of the NTLM Auditing is that it logs NTLMv2-level authentication when it finds NTLMv2 key material on the sign-in session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
 
