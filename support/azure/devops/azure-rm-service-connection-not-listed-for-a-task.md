@@ -34,13 +34,13 @@ The **Azure PowerShell task** screen shows that the Azure RM Service connection 
    You receive the following error message:
 
     ```output
-    Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: **Application with identifier 'xxxxxxf9-xxxx-xxxx-xxxx-c05xxxxxxxxx' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant**. You may have sent your authentication request to the wrong tenant. Trace ID: xxxxxx2c-xxxx-xxxx-xxxx-e04xxxxxxxxx Correlation ID: xxxxxx72-xxxx-xxxx-xxxx-244xxxxxxxxxx Timestamp: 2022-05-19 09:08:53Z
+    Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: **Application with identifier '00001111-aaaa-2222-bbbb-3333cccc4444' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant**. You may have sent your authentication request to the wrong tenant. Trace ID: 0000aaaa-11bb-cccc-dd22-eeeeee333333 Correlation ID: xxxxxx72-xxxx-xxxx-xxxx-244xxxxxxxxxx Timestamp: 2022-05-19 09:08:53Z
     ```
 
     You will see the following response for the POST call in the trace:
 
     ```output
-    {"result":[],"statusCode":400,"errorMessage":"Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: **Application with identifier 'xxxxxxf9-xxxx-xxxx-xxxx-c05xxxxxxxxx' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant**. You may have sent your authentication request to the wrong tenant.\r\nTrace ID: xxxxxx31-xxxx-xxxx-xxxx-32bxxxxxxxxx\r\nCorrelation ID: xxxxxx49-xxxx-xxxx-xxxx-725xxxxxxxxx\r\nTimestamp: 2022-05-19 09:11:35Z"}
+    {"result":[],"statusCode":400,"errorMessage":"Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: **Application with identifier '00001111-aaaa-2222-bbbb-3333cccc4444' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant**. You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 22223333-cccc-4444-dddd-5555eeee6666\r\nCorrelation ID: 33334444-dddd-5555-eeee-6666ffff7777\r\nTimestamp: 2022-05-19 09:11:35Z"}
     ```
 
     For more information, see [Get the API response of GET endpoints](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
