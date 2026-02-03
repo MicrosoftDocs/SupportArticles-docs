@@ -24,8 +24,7 @@ _Original KB number:_ &nbsp; 4090105
 
 Consider using this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set **LMCompatibilityLevel** to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` key on the domain controller.
 
-Microsoft has deprecated NTLM as a whole in June 2024, please see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features). You may use the options described in this article to audit the use of NTLM, any version:
-[Removing NTLMv1, new audit event for use of NTLM](topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e)
+Microsoft has deprecated NTLM as a whole as of June 2024. For more information, see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features). You can use the options  discussed in [Removing NTLMv1, new audit event for use of NTLM](https://support.microsoft.com/topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e) to audit the use of any version of NTLM.
 
 ## NTLM auditing
 
