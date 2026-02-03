@@ -1,11 +1,11 @@
 ---
 title: Audit use of NTLMv1 on a domain controller
-description: Steps to audit the usage of NTLMv1 on a Windows Server-based domain controller.
-ms.date: 01/15/2025
+description: Discusses how to use event logs to audit the usage of NTLMv1 on a Windows Server-based domain controller.
+ms.date: 02/3/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm, v-appelgatet
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
@@ -18,13 +18,11 @@ _Original KB number:_ &nbsp; 4090105
 
 ## Summary
 
-This article introduces the steps to test any application that's using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller (DC).
+This article describes how to audit NTLMv1 authentication on Windows Server domain controllers. Use this information to identify applications and services that still use NTLMv1 before you disable it in your environment.
 
-[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+NTLMv1 is a legacy authentication protocol that Microsoft deprecated in June 2024. For more information, see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features).
 
-Consider using this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set `LMCompatibilityLevel` to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` subkey on the DC.
-
-Microsoft deprecated NTLM as a whole as of June 2024. For more information, see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features). You can use the options  discussed in [Removing NTLMv1, new audit event for use of NTLM](https://support.microsoft.com/topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e) to audit the use of any version of NTLM.
+To maintain security, identify any remaining NTLMv1 usage and migrate applications to use modern authentication protocols. To audit the use of any version of NTLM, use the methods that are described in this article and in [Removing NTLMv1, new audit event for use of NTLM](https://support.microsoft.com/topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e)
 
 ## NTLM auditing
 
@@ -71,9 +69,21 @@ Package Name (NTLM only): NTLM V1
 Key Length: 128
 ```
 
+## Using NTLMv2 exclusively
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+To configure a DC to only use NTLMv2 for authentication, configure the following registry value on the DC:
+
+- Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`
+- Entry: `LMCompatibilityLevel`
+- Value: **5**
+
+For more information, see [How to enable NTLM 2 authentication](enable-ntlm-2-authentication.md).
+
 ## More information
 
-The sign-in (logon) operation that the event records doesn't use NTLMv1 session security. There's actually no session security, because no key material exists.
+The sign-in (logon) operation that Event ID 4624 records doesn't use NTLMv1 session security. There's actually no session security, because no key material exists.
 
 The logic of the NTLM Auditing is that it logs NTLMv2-level authentication when it finds NTLMv2 key material on the sign-in session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
 
