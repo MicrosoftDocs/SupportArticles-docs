@@ -13,13 +13,13 @@ appliesto:
 # KB5075211 - Cumulative Update 2 for SQL Server 2025
 
 _Release Date:_ &nbsp; February 12, 2026  
-_Version:_ &nbsp; 17.0.4015.3  
+_Version:_ &nbsp; 17.0.4015.4  
 
 ## Summary
 
 This article describes Cumulative Update package (CU2) for Microsoft SQL Server 2025. This update contains 6 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
-- SQL Server - Product version: **17.0.4015.3**, file version: **2025.170.4015.3**
+- SQL Server - Product version: **17.0.4015.4**, file version: **2025.170.4015.4**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 > ## Known issues in this update
@@ -45,15 +45,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=4924793>[4924793](#4924793)</a> | Fixes an issue where an assertion and a dump are generated  around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
 | <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dumps in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs when the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
 | <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
-| <a id=4814070>[4814070](#4814070)</a> | SQL Server 2025 can now be registered on Linux containers by setting the MSSQL_PID environment variable to StandardDeveloper or EnterpriseDeveloper.                                                                       | SQL Setup               | Linux                                   | Linux    |
-| <a id=4818774>[4818774](#4818774)</a> | Fixes an issue in which VDI restore operations on Linux containers can run out of memory unexpectedly if memory is limited by a Linux cgroup.                                                                              | SQL Server Engine       | Linux                                   | Linux    |
-| <a id=4836615>[4836615](#4836615)</a> | Restricts the privilege for dbcc stackdump so that only the sysadmin can invoke the dump file.                                                                                                                             | SQL Server Engine       | Security Infrastructure                 | All      |
-| <a id=4860665>[4860665](#4860665)</a> | Enables creating or restoring the database by using a listener for Container Availability Group Connection. This feature lets Contained AG users create and restore the database without a connection to the SQL instance. | SQL Server Engine       | High Availability and Disaster Recovery | All      |
-| <a id=4861315>[4861315](#4861315)</a> | If traceflag 15918 is enabled by using DBCC TRACEON on a SQL Server instance by having startup traceflag 15923 enabled, this configuration might cause the SQL Server process to stop responding.                          | SQL Server Engine       | Resource Governor                       | All      |
-| <a id=4861456>[4861456](#4861456)</a> | Adds an information message in the error log if the deprecated lightweight pooling configuration is enabled.                                                                                                               | SQL Server Engine       | SQL OS                                  | Windows  |
-| <a id=4866542>[4866542](#4866542)</a> | Removes `.rtf` from full-text system DMVs on the Linux platform. This document type was previously incorrectly reported as supported.                                                                                      | SQL Server Engine       | Search                                  | Linux    |
-| <a id=4866716>[4866716](#4866716)</a> | Allows the use of sys.fn_xe_file_target_read_file() function to read the system_health event session data in Azure SQL Managed Instance.                                                                                   | SQL Server Engine       | SQL OS                                  | Windows  |
-| <a id=4873449>[4873449](#4873449)</a> | Fixes an issue in which creating a full‑text index on a .docx file produced incorrect results if a paragraph began with a hyperlink and the preceding paragraph did not contain trailing whitespace.                       | SQL Server Engine       | Search                                  | All      |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -106,14 +97,14 @@ You can verify the download by computing the hash of the _SQLServer2025-KB507521
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5075211-x64.exe | 15519FA35F290E77A6303FE2C5A19019151EEE65EE8335B0F7BE68421076587D |
+| SQLServer2025-KB5075211-x64.exe | 96ECDF19BBAA193D3689F22DE20E122656F9AD9357B851A3D0FA3FCBEECC9525 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5075211](https://download.microsoft.com/download/e938d686-2fcb-45bf-9105-08e2c0d50880/KB5075211.csv).
+Download [the list of files that are included in KB5075211](https://download.microsoft.com/download/0d286e28-0ed5-4303-b01f-b9179448065a/KB5075211.csv).
 
 </details>
 
