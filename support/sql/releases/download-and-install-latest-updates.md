@@ -59,7 +59,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update | Knowledge Base number                                   | Release date      |
 | ----------------------- | ------------ | ------ | ------------------------------------------------------- | ----------------- |
-| 17.0.4015.4            | None         | CU2    | [KB5075211](sqlserver-2025/cumulativeupdate2.md)        | February 12, 2026  |
+| 17.0.4015.4            | None         | CU2    | [KB5075211](sqlserver-2025/cumulativeupdate1.md)        | February 12, 2026  |
 | 17.0.4006.2            | None         | CU1    | [KB5078298](sqlserver-2025/cumulativeupdate1.md)        | January 29, 2026  |
 | 17.0.1050.2             | None         | GDR    | [KB5073177](https://support.microsoft.com/help/5073177) | January 13, 2026  |
 | 17.0.1000.7             | None         | RTM/GA | NA                                                      | November 18, 2025 |
