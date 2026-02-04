@@ -79,7 +79,7 @@ To configure a DC to only use NTLMv2 for authentication, configure the following
 - Entry: `LMCompatibilityLevel`
 - Value: **5**
 
-For more information, see [How to enable NTLM 2 authentication](../../../windows-client/windows-security/enable-ntlm-2-authentication.md).
+For more information, see [How to enable NTLM 2 authentication](../../windows-client/windows-security/enable-ntlm-2-authentication.md).
 
 ## More information
 
