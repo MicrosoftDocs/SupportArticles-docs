@@ -4584,6 +4584,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/mem/configmgr/alerts-reports-queries/long-line-causes-log-truncated.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/long-line-causes-log-truncated",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/mem/configmgr/cannot-edit-reports.md",
       "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/cannot-edit-reports",
       "redirect_document_id": true
@@ -4611,6 +4616,11 @@
     {
       "source_path": "support/mem/configmgr/sql-query-times-out-or-console-slow-performance.md",
       "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/sql-query-times-out-or-console-slow-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/alerts-reports-queries/sql-query-times-out-or-console-slow-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/sql-query-times-out-or-console-slow-performance",
       "redirect_document_id": true
     },
     {
@@ -4779,6 +4789,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/mem/configmgr/client-management/turn-on-debuglogging-key.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/turn-on-debuglogging-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/cmg-communication-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/cloud-services/cmg-communication-error",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/mem/configmgr/upgrade-readiness-data-downloaded-continuously.md",
       "redirect_url": "/troubleshoot/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously",
       "redirect_document_id": true
@@ -4936,6 +4956,11 @@
     {
       "source_path": "support/mem/configmgr/failed-devices-client-health-dashboard.md",
       "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/failed-devices-client-health-dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/diagnostics/failed-devices-client-health-dashboard.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/failed-devices-client-health-dashboard",
       "redirect_document_id": true
     },
     {
@@ -5359,8 +5384,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/mem/configmgr/state-messaging-description.md",
-      "redirect_url": "/troubleshoot/mem/configmgr/update-management/state-messaging-description",
+      "source_path": "support/mem/configmgr/update-management/state-messaging-description.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/state-messaging-description",
       "redirect_document_id": true
     },
     {
