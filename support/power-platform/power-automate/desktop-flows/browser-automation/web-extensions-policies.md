@@ -18,7 +18,7 @@ You experience the following symptoms:
   > Failed to assume control of _browser_ (Internal error or communication failure).
 
    > [!NOTE]  
-   > In this message, _browser_ represents the name of the web browser (for example, Microsoft Edge or Google Chrome).
+   > In this message, _browser_ represents the name of the web browser, such as Microsoft Edge or Google Chrome.
 
 - During the design phase, when you open the UI element picker or the recorder and hover the mouse over a webpage, the following message is displayed:
 
@@ -29,10 +29,10 @@ You experience the following symptoms:
 ## Prerequisites
 
 - Make sure that the Power Automate web extension is installed and enabled in your browser.
-- Make sure that the correct Power Automate web extension is installed and enabled in your browser. Only one of the following extensions should be installed:
+- Make sure that the correct Power Automate web extension is installed and enabled in your browser. Install only one of the following extensions:
 
-  - For Power Automate for desktop v2.27 or later versions, you need the **Microsoft Power Automate** extension.
-  - For Power Automate for desktop v2.26 or earlier versions, you need the **Microsoft Power Automate (Legacy)** extension.
+  - For Power Automate for desktop v2.27 or later versions, use the **Microsoft Power Automate** extension.
+  - For Power Automate for desktop v2.26 or earlier versions, use the **Microsoft Power Automate (Legacy)** extension.
 
 For more information, see [Install Power Automate browser extensions](/power-automate/desktop-flows/install-browser-extensions).
 
@@ -49,11 +49,11 @@ Follow these steps:
 1. Open Windows Task Manager, select the **Details** tab, and then verify that `PAD.BrowserNativeMessageHost.exe` is running.
 
    > [!NOTE]  
-   > One instance of this .exe file runs for each browser type.
+   > One instance of this process runs for each browser type.
 
 1. If PAD.BrowserNativeMessageHost.exe isn't running, follow these steps:
 
-   1. Check whether the Power Automate web extension is installed and enabled. If it isn't installed, see the [Prerequisites](#prerequisites) section.
+   1. Check whether the Power Automate web extension is installed and enabled. If it's not installed, see the [Prerequisites](#prerequisites) section.
 
    1. If the extension is installed, run the **Troubleshoot UI/Web automation issues** diagnostic in [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
@@ -62,7 +62,7 @@ Follow these steps:
 ### Look for errors in the background script
 
 > [!NOTE]
-> This step is valid only for Microsoft Edge and Google Chrome.
+> This step applies only to Microsoft Edge and Google Chrome.
 
 Follow these steps:
 
@@ -70,7 +70,7 @@ Follow these steps:
 
    - Microsoft Edge: `edge://extensions/`
    - Google Chrome: `chrome://extensions/`
-1. Enable Developer mode.
+1. Turn on Developer mode.
 1. Find the Microsoft Power Automate extension.
 1. Select **background.html** for the Microsoft Power Automate (Legacy) browser extension or **service worker** for the Microsoft Power Automate browser extension. This step opens the developer tools.
 1. Check for any errors on the **Console** tab.
@@ -86,7 +86,7 @@ Follow these steps:
    - Microsoft Edge: `edge://policy/`
    - Google Chrome: `chrome://policy/`
 
-1. Check the **NativeMessagingBlocklist** policy. If this policy is enabled for all native messaging hosts, add the Power Automate for desktop native messaging host to the **NativeMessagingAllowlist** policy:
+1. Check the **NativeMessagingBlocklist** policy. If you enable this policy for all native messaging hosts, add the Power Automate for desktop native messaging host to the **NativeMessagingAllowlist** policy:
 
     1. Open **Start**, enter _Registry Editor_, and then select **Registry Editor** in the results.
 
@@ -261,9 +261,9 @@ Follow these steps:
 
 ### Check whether cmd.exe execution is disabled
 
-Power Automate for desktop relies on the browser extension to communicate with the native messaging host. If `cmd.exe` execution is blocked by Group Policy, Intune, or registry restrictions, the browser can't launch the native messaging host, and the Power Automate browser extension might fail.
+Power Automate for desktop relies on the browser extension to communicate with the native messaging host. If Group Policy, Intune, or registry restrictions block `cmd.exe` execution, the browser can't launch the native messaging host, and the Power Automate browser extension might fail.
 
-Restoring access to `cmd.exe` ensures that the browser can correctly launch the native messaging host that's required by the Power Automate browser extension.To re-enable `cmd.exe` by using one of the following methods.
+Restoring access to `cmd.exe` ensures that the browser can correctly launch the native messaging host that's required by the Power Automate browser extension. To re-enable `cmd.exe`, use one of the following methods.
 
 #### Re-enable cmd.exe by using Group Policy
 
@@ -285,7 +285,7 @@ Restoring access to `cmd.exe` ensures that the browser can correctly launch the 
 
 Check whether the `ComSpec` variable exists in **Environment variable** under **System variables**. If it doesn't exist, add it, and then try again:
 
-1. Select **Start**, search on **Environment variables**, and then select **Edit the system environment variables** in the search results.
+1. Select **Start**, search for **Environment variables**, and then select **Edit the system environment variables** in the search results.
 1. Select **Environment variables**.
 
     > [!NOTE]
@@ -304,17 +304,17 @@ If more than one browser profile exists:
 
 Follow these steps:
 
-1. Open **Start**, search on **Event Viewer**, and then select **Event Viewer** in the search results.
+1. Open **Start**, search for **Event Viewer**, and then select **Event Viewer** in the search results.
 1. In the left pane, expand **Event Viewer (Local)** > **Windows Logs** > **Application**.
 1. Locate the error entries that are related to Power Automate for desktop.
 
 ### Disable other web extensions
 
-Try disabling all other web extensions except the Power Automate extension to see whether the issue persists.
+Try disabling all other web extensions except the Power Automate extension to see if the problem continues.
 
 ### Disable browser background settings
 
-Some browser settings can interfere with the Power Automate extension. To resolve this issue, disable the following settings in your browser:
+Some browser settings can interfere with the Power Automate extension. To resolve this problem, disable the following settings in your browser:
 
 1. Open Microsoft Edge or Google Chrome.
 1. Go to **Settings** > **System and performance**.
