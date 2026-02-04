@@ -1,5 +1,5 @@
 ---
-title: Cumulative update 2 for SQL Server 2025 (KB5075211)
+title: Cumulative Update 2 for SQL Server 2025 (KB5075211)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 2 (KB5075211).
 ms.date: 02/12/2026
 ms.update-cycle: 1095-days
@@ -17,7 +17,7 @@ _Version:_ &nbsp; 17.0.4015.4
 
 ## Summary
 
-This article describes Cumulative Update package (CU2) for Microsoft SQL Server 2025. This update contains 6 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
+This article describes Cumulative Update (CU2) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the initial release of SQL Server 2025. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4015.4**, file version: **2025.170.4015.4**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
@@ -39,12 +39,12 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference                         | Description                                                                                                                                                                                                                | Fix area                | Component                               | Platform |
 | :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- | :-------------------------------------- | :------- |
-<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail when the `Sqlvdi.dll` file is not registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
-| <a id=4860948>[4860948](#4860948)</a> | For `cluster_type = NONE or EXTERNAL`, availability group (AG) properties exist only on the local replica. This update writes the properties to the AG configuration so that all AG replicas receive the same properties.                                                                                                                               | SQL Server Engine        | High Availability and Disaster Recovery                        | All  |
-| <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for `tempdb` space when accelerated database recovery is enabled for `tempdb`.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
-| <a id=4924793>[4924793](#4924793)</a> | Fixes an issue where an assertion and a dump are generated  around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
-| <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dumps in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs when the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
-| <a id=4931611>[4931611](#4931611)</a> | Fixes a scenario where the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent was incorrectly using the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
+<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail if the `Sqlvdi.dll` file is not registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
+| <a id=4860948>[4860948](#4860948)</a> | For `cluster_type = NONE or EXTERNAL`, availability group (AG) properties exist on only the local replica. This update writes the properties to the AG configuration so that all AG replicas receive the same properties.                                                                                                                               | SQL Server Engine        | High Availability and Disaster Recovery                        | All  |
+| <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for the `tempdb` space if accelerated database recovery is enabled for `tempdb`.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
+| <a id=4924793>[4924793](#4924793)</a> | Fixes an issue in which an assertion and a dump file are generated around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
+| <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dump files in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs if the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
+| <a id=4931611>[4931611](#4931611)</a> | Fixes an issue in which the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent incorrectly uses the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -167,7 +167,7 @@ When you deploy an update to a hybrid environment (such as Always On, replicatio
 - [Upgrade and update of availability group servers that use minimal downtime and data loss](https://msdn.microsoft.com/library/dn178483.aspx)
 
     > [!NOTE]
-    > If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) for information about how to apply an update in these environments.
+    > If you enabled Always On together with the **SSISDB** catalog, see the [information about SSIS with Always On](https://techcommunity.microsoft.com/blog/ssis/ssis-with-alwayson/388091)) for information about how to apply an update in these environments.
 
 - [How to apply a hotfix for SQL Server in a transactional replication and database mirroring topology](../../database-engine/replication/install-service-packs-hotfixes.md)
 - [How to apply a hotfix for SQL Server in a replication topology](../../database-engine/replication/apply-hotfix-sql-replication-topology.md)
