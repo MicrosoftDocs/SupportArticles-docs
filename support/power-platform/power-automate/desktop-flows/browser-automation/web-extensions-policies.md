@@ -259,27 +259,27 @@ Follow these steps:
 
    - MSIX Windows 10: `AppData\Local\Packages\Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe\TempState\webextensions\PAD.ChromiumManifest.json`
 
-
 ### Check whether cmd.exe execution is disabled
 
-Power Automate Desktop (PAD) relies on the browser extension to communicate with the native messaging host. If execution of cmd.exe is blocked by Group Policy, Intune, or registry restrictions, the browser cannot launch the native messaging host, which may cause the PAD browser extension to fail.
+Power Automate for desktop relies on the browser extension to communicate with the native messaging host. If `cmd.exe` execution is blocked by Group Policy, Intune, or registry restrictions, the browser can't launch the native messaging host, and the Power Automate browser extension might fail.
 
-How to resolve the issue:
-1. Re-enable command prompt via Group Policy
-- Press Win + R, type gpedit.msc, and press Enter.
-- Navigate to: User Configuration → Administrative Templates → System
-- Open Prevent access to the command prompt.
-- Set the policy to Disabled or Not configured.
-- Select OK to save the changes.
-2. Re-enable cmd.exe via Registry Editor
-- Open regedit.
-- Navigate to: HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\System
-- Find the DisableCMD value and:
-  - Set it to 0, or
-  - Delete the value entirely.
+Restoring access to `cmd.exe` ensures that the browser can correctly launch the native messaging host that's required by the Power Automate browser extension.To re-enable `cmd.exe` by using one of the following methods.
 
-Restoring access to cmd.exe ensures that the browser can correctly launch the native messaging host required by the PAD browser extension.
+#### Re-enable cmd.exe by using Group Policy
 
+1. Press <kbd>Win</kbd>+<kbd>R</kbd>, enter `gpedit.msc`, and then press <kbd>Enter</kbd>.
+1. Go to **User Configuration** > **Administrative Templates** > **System**.
+1. Open **Prevent access to the command prompt**.
+1. Set the policy to **Disabled** or **Not configured**.
+1. Select **OK** to save the changes.
+
+#### Re-enable cmd.exe by using Registry Editor
+
+1. Open **Start**, search for and select **Registry Editor**.
+1. Go to `HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\System`.
+1. Find the `DisableCMD` value, and then do one of the following:
+   - Set the value to `0`.
+   - Delete the value.
 
 ### Check for the ComSpec variable
 
