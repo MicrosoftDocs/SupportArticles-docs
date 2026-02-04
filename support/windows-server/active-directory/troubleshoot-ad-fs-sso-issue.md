@@ -418,7 +418,7 @@ Then, check the certificate configuration on WAP servers and the fallback bindin
   
   To support non-SNI cases, administrators may specify fallback bindings. Other than the standard federationservicename:443 binding, look for fallback bindings under the following application IDs:
   
-  - \{00001111-aaaa-2222-bbbb-3333cccc4444\}: This is the application ID for AD FS.
+  - \{5d89a20c-beab-4389-9447-324788eb944a\}: This is the application ID for AD FS.
   - \{f955c070-e044-456c-ac00-e9e4275b3f04\}: This is the application ID for Web Application Proxy.
   
   For example, if the SSL certificate is specified for a fallback binding like 0.0.0.0:443, make sure that the binding is updated accordingly when the SSL certificate gets updated.
@@ -884,12 +884,12 @@ Get the SSL certificate bindings for AD FS
 On the AD FS server, run the following command in Windows PowerShell:  
 `netsh http show sslcert`
 
-In the list of bindings returned, look for those with the Application ID of 00001111-aaaa-2222-bbbb-3333cccc4444. Here is an example of a healthy binding. Note the "Ctl Store Name" line.
+In the list of bindings returned, look for those with the Application ID of 5d89a20c-beab-4389-9447-324788eb944a. Here is an example of a healthy binding. Note the "Ctl Store Name" line.
 
 ```output
 Hostname:port : adfs.contoso.com:443
 Certificate Hash : 3638de9b03a488341dfe32fc3ae5c480ee687793
-Application ID : {00001111-aaaa-2222-bbbb-3333cccc4444}
+Application ID : {5d89a20c-beab-4389-9447-324788eb944a}
 Certificate Store Name : MY
 Verify Client Certificate Revocation : Enabled
 Verify Revocation Using Cached Client Certificate Only : Disabled
