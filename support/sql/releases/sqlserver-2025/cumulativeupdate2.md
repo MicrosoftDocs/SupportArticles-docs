@@ -39,14 +39,14 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference                         | Description                                                                                                                                                                                                                | Fix area                | Component                               | Platform |
 | :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- | :-------------------------------------- | :------- |
-<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail if the `Sqlvdi.dll` file is not registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
+<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail if the `Sqlvdi.dll` file isn't registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
 | <a id=4860948>[4860948](#4860948)</a> | For `cluster_type = NONE or EXTERNAL`, availability group (AG) properties exist on only the local replica. This update writes the properties to the AG configuration so that all AG replicas receive the same properties.                                                                                                                               | SQL Server Engine        | High Availability and Disaster Recovery                        | All  |
 | <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for the `tempdb` space if accelerated database recovery is enabled for `tempdb`.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
 | <a id=4924793>[4924793](#4924793)</a> | Fixes an issue in which an assertion and a dump file are generated around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
-| <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers non-yielding scheduler dump files in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs if the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
+| <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers nonyielding scheduler dump files in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs if the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
 | <a id=4931611>[4931611](#4931611)</a> | Fixes an issue in which the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent incorrectly uses the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
 
-## How to obtain or download this or the latest cumulative update package
+## How to obtain or download this CU or the latest CU package
 
 <details>
 <summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
@@ -73,7 +73,7 @@ The following update is available from the Microsoft Update Catalog:
 >
 > - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202025) contains this SQL Server 2025 CU and previously released SQL Server 2025 CU releases.
 > - This CU is also available through Windows Server Update Services (WSUS).
-> - We recommend that you always install the latest cumulative update that is available.
+> - We recommend that you always install the latest cumulative update that's available.
 
 </details>
 
@@ -145,8 +145,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-  - CUs might contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that was already addressed in a released CU.
+  - CUs might contain added value over and above hotfixes, such as supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
