@@ -199,7 +199,7 @@ Here's a sample configuration:
     "provider": "AzureAD",
     "jwt": {
         "issuer": "https://login.microsoftonline.com/24c24d79-9790-4a32-bbb4-a5a5c3ffedd5/v2.0/",
-        "audience": "b455fa3c-15fa-4864-8bcd-88fd83d686f3"
+        "audience": "00001111-aaaa-2222-bbbb-3333cccc4444"
     }
 }
 ```
@@ -207,7 +207,7 @@ Here's a sample configuration:
 You must generate a valid token for the defined audience. When using the Azure CLI, you can get an access token by specifying the audience in the `resource` parameter:
 
 ```azurecli
-az account get-access-token --resource "b455fa3c-15fa-4864-8bcd-88fd83d686f3"
+az account get-access-token --resource "00001111-aaaa-2222-bbbb-3333cccc4444"
 ```
 
 ### HTTP 403 "Forbidden" error
