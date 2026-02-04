@@ -48,7 +48,7 @@ Classpnp Driver Tracing Provider {FA8DE7C4-ACDE-4443-9994-C4E2359A9EDB}
 Critical Section Trace Provider {3AC66736-CC59-4CFF-8115-8DF50E39816B}  
 Device Task Enumerator {0E9E7909-00AA-42CF-9502-2C490471E598}  
 Disk Class Driver Tracing Provider {945186BF-3DD6-4F3F-9C8E-9EDD3FC9D558}  
-Downlevel IPsec API {aaaabbbb-0000-cccc-1111-dddd2222eeee}
+Downlevel IPsec API {94335EB3-79EA-44D5-8EA9-306F49B3A041}
 
 Various utilities are available at the Microsoft Download Center in order to parse .etl files, for instance Network Monitor v3.4. However, the sample script below would not need an installation of any of those.
 
