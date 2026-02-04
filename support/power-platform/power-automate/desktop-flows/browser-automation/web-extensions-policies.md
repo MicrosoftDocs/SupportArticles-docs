@@ -259,6 +259,28 @@ Follow these steps:
 
    - MSIX Windows 10: `AppData\Local\Packages\Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe\TempState\webextensions\PAD.ChromiumManifest.json`
 
+
+### Check whether cmd.exe execution is disabled
+
+Power Automate Desktop (PAD) relies on the browser extension to communicate with the native messaging host. If execution of cmd.exe is blocked by Group Policy, Intune, or registry restrictions, the browser cannot launch the native messaging host, which may cause the PAD browser extension to fail.
+
+How to resolve the issue:
+1. Re-enable command prompt via Group Policy
+- Press Win + R, type gpedit.msc, and press Enter.
+- Navigate to: User Configuration → Administrative Templates → System
+- Open Prevent access to the command prompt.
+- Set the policy to Disabled or Not configured.
+- Select OK to save the changes.
+2. Re-enable cmd.exe via Registry Editor
+- Open regedit.
+- Navigate to: HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\System
+- Find the DisableCMD value and:
+  - Set it to 0, or
+  - Delete the value entirely.
+
+Restoring access to cmd.exe ensures that the browser can correctly launch the native messaging host required by the PAD browser extension.
+
+
 ### Check for the ComSpec variable
 
 Check whether the `ComSpec` variable exists in **Environment variable** under **System variables**. If it doesn't exist, add it, and then try again:
