@@ -285,3 +285,6 @@ The registry entries that are listed in this section must be added to the follow
     This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
 
     For more information, see [KB5021131: How to manage the Kerberos protocol changes related to CVE-2022-37966](https://support.microsoft.com/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d).
+ 
+    > [!IMPORTANT]
+    > After applying the April 2026 Windows updates the default value will be changed to 0x18 (AES-SHA1). For additional information see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc)
