@@ -15,6 +15,8 @@ ai-usage: ai-assisted
 
 # Can't create a service connection by using Service Connector
 
+## Summary
+
 This article helps you troubleshoot issues with creating a service connection for Confluent Cloud by using Service Connector in Azure.
 
 ## Prerequisites
