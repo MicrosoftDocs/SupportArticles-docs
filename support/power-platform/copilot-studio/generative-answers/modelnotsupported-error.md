@@ -35,7 +35,7 @@ To resolve the "ModelNotSupported" error and re-enable AI prompt functionality, 
 
 1. Select **Environments** and choose the environment where the error occurs and go to **Settings**.
 
-1. Under **Product** > **Features**, locate the **AI prompts** section, turn on the **AI prompts** feature.
+1. Under **Product** > **Features**, locate the **AI prompts** section, and turn on the **AI prompts** feature.
 
    :::image type="content" source="..\media\generative-answers\power-platform-copilot-ai-prompts.png" alt-text="Screenshot of AI prompts section in Power Platform with enable toggle active, warning about device and data security, and info link.":::
 
