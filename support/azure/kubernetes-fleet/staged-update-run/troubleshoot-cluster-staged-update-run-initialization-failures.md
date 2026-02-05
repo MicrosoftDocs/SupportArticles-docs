@@ -40,9 +40,9 @@ Sample error messages:
 
 ---
 
-# [ClusterStagedUpdateRun](#tab/clusterstagedupdaterun)
+### Investigate Initialization Failure
 
-### Investigate ClusterStagedUpdateRun Initialization Failure
+# [ClusterStagedUpdateRun](#tab/clusterstagedupdaterunfailure)
 
 An `ClusterStagedUpdateRun` initialization failure can be detected by getting the resource:
 
