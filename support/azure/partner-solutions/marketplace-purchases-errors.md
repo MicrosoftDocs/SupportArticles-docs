@@ -11,6 +11,8 @@ ms.date: 05/29/2025
 
 # Azure Native Integration purchase errors
 
+##Summary
+
 This article describes error messages you may encounter when subscribing to an Azure Native Integrations partner service in Azure Marketplace and provides solutions to help you resolve those errors.
 
 |Error message |Details |

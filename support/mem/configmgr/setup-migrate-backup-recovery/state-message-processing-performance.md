@@ -15,7 +15,7 @@ State messaging is one of the most important reporting mechanisms in Configurati
 
 In this article, we focus on the SMS_STATE_SYSTEM component (also referred to as StateSys) that processes the incoming state messages and updates the database.
 
-For more information about the state messaging system, see [Description of state messaging in Configuration Manager](../update-management/state-messaging-description.md).
+For more information about the state messaging system, see [Description of state messaging in Configuration Manager](state-messaging-description.md).
 
 ## Symptoms
 
@@ -64,7 +64,7 @@ To troubleshoot the performance issue, follow these steps:
 
    If your usual processing rate isn't enough to handle the backlog, go to the next step.
 
-3. Change the [internal settings](../update-management/state-messaging-description.md#state_message_system-settings) of the SMS_STATE_SYSTEM component.
+3. Change the [internal settings](state-messaging-description.md#state_message_system-settings) of the SMS_STATE_SYSTEM component.
 
    > [!WARNING]
    > Serious problems might occur if you change these settings incorrectly. Microsoft can't guarantee that these problems can be solved, and doesn't support this scenario. Modify the settings at your own risk. We recommend that you restore these settings after you resolve the backlog.

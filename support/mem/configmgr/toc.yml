@@ -3,9 +3,7 @@ items:
   href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
-    - name: A log with a long line is truncated in CMTrace
-      href: alerts-reports-queries/long-line-causes-log-truncated.md
-    - name: Obtain error code descriptions in reports
+    - name: How to obtain error code descriptions in reports
       href: alerts-reports-queries/obtain-error-code-descriptions.md
     - name: Reports don't run as expected
       href: alerts-reports-queries/reports-not-run-as-expected.md
@@ -13,8 +11,6 @@ items:
       href: alerts-reports-queries/reporting-stops-working.md
     - name: rsProcessingAborted error when running reports
       href: alerts-reports-queries/rsprocessingaborted-error-run-reports.md
-    - name: SQL query times out or slow console performance
-      href: alerts-reports-queries/sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
   items:
     - name: Applications not deployed to users logged on to domain controllers
@@ -48,14 +44,8 @@ items:
 
     - name: Clients don't receive policy data
       href: client-management/clients-not-receive-policy-data.md
-    - name: Cloud services
-      items:
-        - name: Clients can't communicate with CMG
-          href: client-management/cmg-communication-error.md
-    - name: Collections
-      items:
-        - name: Multiple instances of the Unknown computers collection
-          href: client-management/multiple-instances-of-unknown-computers-collection.md
+
+
     - name: Inventory and asset intelligence
       items:
         - name: Can't import the Sms_def.mof file
@@ -66,16 +56,28 @@ items:
       href: client-management/remote-control-fails-error-c000012.md
     - name: SMS Agent Host service doesn't restart when the WMI service resumes
       href: client-management/sms-agent-host-not-automatically-restarted.md
-    - name: Turn on the DebugLogging key
-      href: client-management/turn-on-debuglogging-key.md
+- name: Cloud services
+  items:
+    - name: Clients can't communicate with CMG
+      href: cloud-services/cmg-communication-error.md
+    - name: CMG maintenance task fails to update public IP resource
+      href: cloud-services/public-ip-creation-error.md
+- name: Collections
+  items:
+    - name: Multiple instances of the Unknown computers collection
+      href: client-management/multiple-instances-of-unknown-computers-collection.md
 - name: Configuration Manager console
   items:
+    - name: SQL query times out or slow console performance
+      href: console-management/sql-query-times-out-or-console-slow-performance.md
     - name: Console appears to hang when loading drivers
       href: console-management/console-stops-responding.md
-    - name: Issues after installing June 2022 Windows security updates
+    - name: Console can't connect after DCOM hardening changes
       href: console-management/dcom-hardening-change-effect.md
     - name: No data in the Windows 10 servicing dashboard
       href: console-management/windows-10-servicing-dashboard-empty.md
+    - name: Failed devices on client health dashboard
+      href: console-management/failed-devices-client-health-dashboard.md
 - name: Content management
   items:
     - name: Configure peer cache for Configuration Manager clients
@@ -128,10 +130,12 @@ items:
       href: data-transfer-sites/troubleshoot-database-replication-service-issues.md
 - name: Diagnostic
   items:
+    - name: A log with a long line is truncated in CMTrace
+      href: diagnostics/long-line-causes-log-truncated.md
     - name: Configuration Manager diagnostics
       href: diagnostics/diagnostics-sdp.md
-    - name: Failed devices on client health dashboard
-      href: diagnostics/failed-devices-client-health-dashboard.md
+    - name: How to turn on debug logging for SMS 
+      href: diagnostics/turn-on-debuglogging-key.md
 - name: Discovery
   items:
     - name: Delta AD Group Discovery doesn't detect group membership changes in nested OUs
@@ -152,10 +156,14 @@ items:
       href: endpoint-protection/recommended-antivirus-exclusions.md
 - name: Microsoft Deployment Toolkit (MDT)
   items:
+    - name: MDT Retirement
+      href: mdt/mdt-retirement.md
     - name: Troubleshooting reference for MDT
       href: mdt/troubleshooting-reference.md
 - name: OS deployment
   items:
+    - name: Configure OS deployment in System Center 2012 Configuration Manager
+      href: os-deployment/configure-operating-system-deployment.md
     - name: Build and capture reference image
       items:
         - name: Custom port settings aren't added to boot media
@@ -164,8 +172,6 @@ items:
           href: os-deployment/error-managing-boot-images.md
         - name: Errors when capturing Windows 11 image
           href: os-deployment/windows-11-image-capture-fail.md
-    - name: Configure OS deployment in System Center 2012 Configuration Manager
-      href: os-deployment/configure-operating-system-deployment.md
     - name: Manage drivers
       items:
         - name: Insufficient permissions to migrate a driver package
@@ -227,7 +233,7 @@ items:
         - name: The debug deployment isn't displayed
           href: os-deployment/debug-deployment-not-displayed.md
         - name: Troubleshoot the Install Application task sequence step
-          href: os-deployment/troubleshoot-install-application-step.md  
+          href: os-deployment/troubleshoot-install-application-step.md
 - name: Setup, migration, backup, and recovery
   items:
     - name: Site system roles installation and operations
@@ -236,12 +242,12 @@ items:
           href: setup-migrate-backup-recovery/connectivity-issues-digicert-global-root-g2-not-installed.md
         - name: Enable MFA for SMS Provider calls
           href: setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls.md
-        - name: HTTP Error 500.19
+        - name: Management Point stops responding with HTTP 500.19
           href: setup-migrate-backup-recovery/management-points-stop-responding.md
-        - name: Service connection point doesn't download updates
-          href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Updating ODBC Driver for SQL Server to 18.6.1.1 causes issues in Configuration Manager
           href: setup-migrate-backup-recovery/update-odbc-18611-causes-issues-configmgr.md
+        - name: Understand state messaging
+          href: setup-migrate-backup-recovery/state-messaging-description.md
         - name: Troubleshoot state message processing performance issues
           href: setup-migrate-backup-recovery/state-message-processing-performance.md          
     - name: SQL Server settings and configuration
@@ -258,6 +264,8 @@ items:
           href: setup-migrate-backup-recovery/service-connection-tool-not-download-updates.md
         - name: Site upgrade gets stuck at database update
           href: setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update.md
+        - name: Service connection point doesn't download updates
+          href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Understand and troubleshoot Updates and Servicing
           href: setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing.md
     - name: Maintenance tasks default settings
@@ -272,8 +280,6 @@ items:
           href: update-management/clients-not-get-software-updates.md
         - name: Different results are shown for software updates
           href: update-management/different-software-updates-results-displayed.md
-    - name: State messaging
-      href: update-management/state-messaging-description.md
     - name: Understand software update management
       items:
         - name: Software updates introduction
