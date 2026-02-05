@@ -39,15 +39,15 @@ To fix this error, enable data movement across regions for the environment. Anot
 
 Enable generative AI features:
 
-1.  Access the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
+1. Access the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
 
-1.  Select the respective environment.
+1. Select the respective environment.
 
-1.  Under **Generative AI features**, select **Edit**.
+1. Under **Generative AI features**, select **Edit**.
 
-1.  Enable **Move data across regions**.
+1. Enable **Move data across regions**.
 
-1.  Select **Save**.
+1. Select **Save**.
 
 :::image type="content" source="../media/generative-ai-not-available/gen-ai-features.png" alt-text="Screenshot of the Generative AI features terms and conditions message.":::
 
