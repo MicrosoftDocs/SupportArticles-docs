@@ -11,8 +11,6 @@ ms.date: 02/05/2026
 
 This article provides steps to diagnose and resolve the "ModelNotSupported" error message when attempting to use AI prompts in Copilot Studio agents.
 
-*Applies to: Microsoft Copilot Studio*
-
 ## Symptoms
 
 Users see the following message displayed in the AI Prompt window:
