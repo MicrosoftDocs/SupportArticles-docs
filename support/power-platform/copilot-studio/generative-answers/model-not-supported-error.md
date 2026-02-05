@@ -19,7 +19,7 @@ Users see the following message displayed in the AI Prompt window:
 
 *"This feature has been disabled"*
 
-:::image type="content" source="..\media\generative-answers\modelnotsupported-error-message.png" alt-text="Screenshot of Copilot Studio interface showing disabled AI prompt feature with error notification at the top.":::
+:::image type="content" source="..\media\generative-answers\model-not-supported-error-message.png" alt-text="Screenshot of Copilot Studio interface showing disabled AI prompt feature with error notification at the top.":::
 
 ## Cause
 
