@@ -1,19 +1,19 @@
 ---
-title: ModelNotSupported error in Copilot Studio
-description: Resolve the "ModelNotSupported" error in Microsoft Copilot Studio by enabling AI prompts in the Power Platform admin center.
+title: AI prompts error in Copilot Studio
+description: Resolve the "This feature has been disabled" error in Microsoft Copilot Studio by enabling AI prompts in the Power Platform admin center.
 ms.reviewer: 
   - camogas
   - erickinser
-ms.date: 02/05/2026
+ms.date: 02/06/2026
 ---
 
-# ModelNotSupported error in Copilot Studio
+# AI prompts error in Copilot Studio
 
-This article provides steps to diagnose and resolve the "ModelNotSupported" error message when attempting to use AI prompts in Copilot Studio agents.
+This article provides steps to diagnose and resolve the "This feature has been disabled" error message when attempting to use AI prompts in Copilot Studio agents.
 
 ## Symptoms
 
-Users see the following message displayed in the AI Prompt window:
+Users see the following message displayed in the AI prompt window:
 
 *"This feature has been disabled"*
 
@@ -21,11 +21,11 @@ Users see the following message displayed in the AI Prompt window:
 
 ## Cause
 
-The error occurs because the Power Platform admin didn't enable the AI prompts feature in the Power Platform Admin Center. Without this setting enabled, every time a user attempts to create an AI prompt, they receive the "ModelNotSupported" error.
+The error occurs because the Power Platform admin didn't enable the AI prompts feature in the Power Platform Admin Center. Without this setting enabled, every time a user attempts to create an AI prompt, they receive the "This feature has been disabled" error.
 
 ## Solution
 
-To resolve the "ModelNotSupported" error and re-enable AI prompt functionality, the administrator must enable the AI prompts feature in the Power Platform admin center. The following steps guide you through this process:
+To resolve the error and re-enable AI prompt functionality, the administrator must enable the AI prompts feature in the Power Platform admin center. The following steps guide you through this process:
 
 1. Access the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/) and sign in with administrator credentials.
 
@@ -41,4 +41,4 @@ To resolve the "ModelNotSupported" error and re-enable AI prompt functionality, 
 
 ## Related information
 
-- [Use your prompt actions in Microsoft Copilot Studio](/ai-builder/use-a-custom-prompt-in-mcs)
+- [Create a prompt](/microsoft-copilot-studio/create-custom-prompt)
