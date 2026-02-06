@@ -13,7 +13,7 @@ This article provides steps to diagnose and resolve the "This feature has been d
 
 ## Symptoms
 
-When you try to [create a new prompt[(/microsoft-copilot-studio/create-custom-prompt#create-a-new-prompt) in Copilot Studio, you see the following message displayed in the AI Prompt window:
+When you try to [create a new prompt](/microsoft-copilot-studio/create-custom-prompt#create-a-new-prompt) in Copilot Studio, you see the following message displayed in the AI Prompt window:
 
 *"This feature has been disabled"*
 
