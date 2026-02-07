@@ -1,6 +1,6 @@
 ---
 title: Windows 365 Enterprise and Frontline Known issues
-description: Learn about known issues for Windows 365 Enterprise.
+description: Learn about known issues for Windows 365 Enterprise and Frontline.
 manager: dcscontentpm
 ms.date: 11/17/2025
 ms.topic: troubleshooting
@@ -15,7 +15,7 @@ ms.collection:
 
 # Windows 365 Enterprise and Frontline known issues
 
-The following items are known issues for Windows 365 Enterprise.
+The following items are known issues for Windows 365 Enterprise and Frontline.
 
 ## First-time Cloud PC sign-in triggers an impossible travel location alert
 
