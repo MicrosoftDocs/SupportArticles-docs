@@ -104,7 +104,7 @@ If a base or differencing disk is missing: Restore it from backup, if possible. 
 1. Schedule downtime.
 1. Merge checkpoints sequentially (from youngest to oldest).
 
-For more information, see [Microsoft Doc: Merging Many Differencing Disks](/troubleshoot/windows-server/virtualization/merge-checkpoints-with-many-differencing-disks)
+For more information, see [Microsoft Doc: Merging Many Differencing Disks](merge-checkpoints-with-many-differencing-disks.md)
 
 **Pass-through, shared VHD, or synthetic fibre channel**
 
@@ -222,7 +222,7 @@ Before you contact Microsoft Support, you can gather the following information a
 
 ## References
 
-- [How to merge checkpoints that have multiple differencing disks](/troubleshoot/windows-server/virtualization/merge-checkpoints-with-many-differencing-disks)
-- [Backup recovery checkpoint issues](/troubleshoot/windows-server/virtualization/cannot-delete-recovery-checkpoint-vm)
+- [How to merge checkpoints that have multiple differencing disks](merge-checkpoints-with-many-differencing-disks.md)
+- [Backup recovery checkpoint issues](cannot-delete-recovery-checkpoint-vm.md)
 - [Common antivirus exclusions for Hyper-V](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)
 - [Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)
