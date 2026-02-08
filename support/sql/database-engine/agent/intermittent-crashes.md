@@ -58,7 +58,7 @@ To resolve this issue, follow these steps.
     - `fdhost.exe`
 1. Also, exclude the folder where SQL Server is installed. For example, `C:\Program Files\Microsoft SQL Server\`.
 
-For more information about how to configure your antivirus or endpoint protection software to work together with SQL Server, see [Configure antivirus software to work with SQL Server](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server).
+For more information about how to configure your antivirus or endpoint protection software to work together with SQL Server, see [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md).
 
 ### Step 3: Check event logs and dump files
 
