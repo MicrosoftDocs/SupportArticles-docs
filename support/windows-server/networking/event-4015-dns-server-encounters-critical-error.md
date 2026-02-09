@@ -1,11 +1,11 @@
 ---
 title: Event ID 4015 is logged and the DNS server encounters a critical error
 description: Helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
-ms.date: 01/15/2025
+ms.date: 02/10/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, v-lianna, herbertm, v-appelgatet
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
@@ -22,36 +22,36 @@ You receive Event ID 4015 in one of the following scenarios:
 
 - If you're running the DNS role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible, the following event is logged on the RODC.
 
-    ```output
-    Log Name: DNS Server
-    Source: Microsoft-Windows-DNS-Server-Service
-    Date: date time
-    Event ID: 4015
-    Task Category: None
-    Level: Error
-    Keywords: Classic
-    User: N/A
-    Computer: <ComputerName>
-    Description:
-    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
-    ```
+  ```output
+  Log Name: DNS Server
+  Source: Microsoft-Windows-DNS-Server-Service
+  Date: date time
+  Event ID: 4015
+  Task Category: None
+  Level: Error
+  Keywords: Classic
+  User: N/A
+  Computer: <ComputerName>
+  Description:
+  The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
+  ```
 
 - The DNS server can't access the Active Directory object, and the following event is logged frequently in the DNS server's event log.
 
-    ```output
-    Type: Error
-    Source: DNS
-    Category: None
-    Event ID: 4015
-    Description:
-    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
-    ```
+  ```output
+  Type: Error
+  Source: DNS
+  Category: None
+  Event ID: 4015
+  Description:
+  The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
+  ```
 
 - In a forest or domain located in Active Directory integrated Domain Name System (DNS) zones, some domain controllers that have the DNS Server role installed have been promoted and demoted. Some promoted domain controllers can't register the SRV, Host A, Pointer (PTR), or Name Server (NS) in the Active Directory integrated DNS zones, and the following event is logged:
 
-    ```ouput
-    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002024: SvcErr: DSID-02050BBD, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026". The event data contains the error.
-    ```
+  ```ouput
+  The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002024: SvcErr: DSID-02050BBD, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026". The event data contains the error.
+  ```
 
 ## RODC logs DNS Event ID 4015 every three minutes with error code 00002095
 
@@ -103,6 +103,7 @@ To resolve this issue, follow these steps:
 ### Add Member in The BuiltIn Users Group in the domain
 
 To resolve this issue, follow these steps:
+
 1. Logon to the Domain Controller as Admin Administrator. You can also run this on an admin machine when you add the "/domain" parameter.
 
 2. Identify the current group membership of the "Users" group:
@@ -151,19 +152,19 @@ To resolve this issue, remove all orphaned entries of the denoted domain control
 
 ```powershell
 Get-DnsServerResourceRecord -ZoneName trustanchors -RRType Ns
-Remove-DnsServerResourceRecord -zonename trustanchors -RRType Ns -Name “@” -RecordData DC.contoso.com
+Remove-DnsServerResourceRecord -zonename trustanchors -RRType Ns -Name "@" -RecordData DC.contoso.com
 ```
 
 If you need to delete multiple resource records (RRs) for a single host, run the following cmdlets:
 
 ```powershell
-$AllNsRecords = Get-DnsServerResourceRecord -ZoneName “trustanchors” -RRType Ns
+$AllNsRecords = Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType Ns
 Foreach($Record in $AllNsRecords){
 If($Record.recorddata.nameserver -like "*dc2*"){
 $Record | Remove-DnsServerResourceRecord -ZoneName trustanchors
 }
 }
-$AllSrvRecords = Get-DnsServerResourceRecord -ZoneName “_msdcs.contoso.com” -RRType Srv
+$AllSrvRecords = Get-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com" -RRType Srv
 Foreach($Record in $AllSrvRecords){
 If($Record.recorddata.domainname -like "*dc2*"){
 $Record | Remove-DnsServerResourceRecord -ZoneName _msdcs.contoso.com
