@@ -9,7 +9,7 @@ ms.reviewer:
 ms.custom: sap:Generative Answers\Generative answers do not return a response
 ---
 
-# Generative AI not available error message
+# "Generative AI not available" error message
 
 This article provides steps to resolve the "Generative AI not available" error in Microsoft Copilot Studio agents.
 
