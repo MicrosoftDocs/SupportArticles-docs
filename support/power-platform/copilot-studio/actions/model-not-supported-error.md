@@ -18,7 +18,7 @@ When you try to [create a new prompt](/microsoft-copilot-studio/create-custom-pr
 
 > This feature has been disabled
 
-:::image type="content" source="..\media\generative-answers\model-not-supported-error-message.png" alt-text="Screenshot of Copilot Studio interface showing disabled AI prompt feature with error notification at the top.":::
+:::image type="content" source="media/model-not-supported-error/model-not-supported-error-message.png" alt-text="Screenshot of Copilot Studio interface showing disabled AI prompt feature with error notification at the top.":::
 
 ## Cause
 
@@ -36,7 +36,7 @@ To resolve this issue, an administrator must enable the AI prompts feature in Po
 
 1. Go to **Product** > **Features**, locate the **AI prompts** section, and turn on the **AI prompts** toggle.
 
-   :::image type="content" source="..\media\generative-answers\power-platform-copilot-ai-prompts.png" alt-text="Screenshot of AI prompts section in Power Platform with enable toggle active, warning about device and data security, and info link.":::
+   :::image type="content" source="media/model-not-supported-error/power-platform-copilot-ai-prompts.png" alt-text="Screenshot of AI prompts section in Power Platform with enable toggle active, warning about device and data security, and info link.":::
 
 1. Select **Save**.
 
