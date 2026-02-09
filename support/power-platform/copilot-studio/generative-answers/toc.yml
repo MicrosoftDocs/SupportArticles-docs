@@ -5,5 +5,3 @@ items:
   href: sharepoint-no-response.md
 - name: Resolve responsible AI content filter errors
   href: agent-response-filtered-by-responsible-ai.md
-- name: AI prompts error in Copilot Studio
-  href: model-not-supported-error.md  
