@@ -15,10 +15,9 @@ ms.custom:
 appliesto: 
   - Exchange Server
 ms.date: 02/09/2026
-ms.topic: troubleshooting
 ---
 
-"Database is mandatory on UserMailbox" error in Exchange Server Setup
+# "Database is mandatory on UserMailbox" error in Exchange Server Setup
 
 ## Summary
 
