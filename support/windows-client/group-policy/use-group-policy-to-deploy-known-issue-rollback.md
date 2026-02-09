@@ -71,8 +71,6 @@ To apply a KIR policy definition to devices that belong to a hybrid Microsoft En
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
-1. [Create and configure a WMI filter that applies the GPO](#wmi).
-1. [Link the GPO and the WMI filter](#link).
 1. [Configure the GPO](#configure).
 1. [Monitor the GPO results](#monitor).
 
