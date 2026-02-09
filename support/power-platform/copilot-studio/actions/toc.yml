@@ -3,5 +3,5 @@ items:
   href: connector-request-failure.md
 - name: FailedToTakeScreenshot errors during computer use actions
   href: computer-use-screenshot-error.md
-- name: \"This feature has been disabled\" error for AI prompts
-  href: model-not-supported-error.md
+- name: "\"This feature has been disabled\" error for AI prompts"
+  href: prompt-feature-disabled.md
