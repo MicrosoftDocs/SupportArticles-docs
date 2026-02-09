@@ -49,7 +49,7 @@ On the server on which Setup failed, download and then run the [SetupAssist](h
 
 To set the `homeMDB` attribute for each mailbox in the output from the  SetupAssist script, complete these steps:
 
-1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps).
+1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps&preserve-view=true).
 
 1. Run the `[Get-MailboxDatabase](/powershell/module/exchangepowershell/get-mailboxdatabase?view=exchange-ps)` cmdlet to get a list of available mailbox databases.
 
