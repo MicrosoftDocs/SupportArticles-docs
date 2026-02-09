@@ -1,6 +1,6 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
-description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
+description: Describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 ms.date: 02/09/2026
 manager: dcscontentpm
 audience: itpro
@@ -46,7 +46,7 @@ To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Is
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
-## Apply KIR to a single device using Group Policy
+## Apply KIR to a single device by using Group Policy
 
 To use Group Policy to apply a KIR to a single device, follow these steps:
 
@@ -65,7 +65,7 @@ For more information about how to use the Local Group Policy Editor, see [Workin
 
 <a name='apply-a-kir-to-devices-in-a-hybrid-azure-ad-or-ad-ds-domain-using-group-policy'></a>
 
-## Apply a KIR to devices in a hybrid Microsoft Entra ID or AD DS domain using Group Policy
+## Apply a KIR to devices in a hybrid Microsoft Entra ID or AD DS domain by using Group Policy
 
 To apply a KIR policy definition to devices that belong to a hybrid Microsoft Entra ID or AD DS domain, follow these steps:
 
@@ -114,7 +114,7 @@ Make sure that each affected device restarts after it applies the policy.
 > [!NOTE]
 > To use the solutions in this section, you must install the cumulative update that is released on [July 26, 2022](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or a later one on the computer.
 
-Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions will guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
+Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
 
 To perform a KIR activation on Intune managed devices, follow these steps:  
 
@@ -164,7 +164,7 @@ To configure devices to perform a KIR activation, you need to create a custom co
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is "04/30 KIR Activation – Windows 10 21H2".  
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is "04/30 KIR Activation – Windows 10 21H2."  
     - **Description**: Enter a description for the policy. This setting is optional but recommended.
 
     > [!NOTE]
@@ -199,12 +199,12 @@ This configuration setting is used to install the KIR activation policy on targe
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
 
-    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "ADMX Ingestion: 04/30 KIR Activation – Windows 10 21H2".  
+    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "ADMX Ingestion: 04/30 KIR Activation – Windows 10 21H2."  
     - **Description**: Enter a description for the setting. This setting is optional but recommended.  
     - **OMA-URI**: Enter the string *./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/KIR/Policy/\<ADMX Policy Name\>*.
 
         > [!NOTE]
-        > Replace \<ADMX Policy Name\> with the value of the recorded policy name from the ADMX file. For example, "KB5011563_220428_2000_1_KnownIssueRollback".  
+        > Replace \<ADMX Policy Name\> with the value of the recorded policy name from the ADMX file. For example, "KB5011563_220428_2000_1_KnownIssueRollback."  
     - **Data type**: Select **String**.  
     - **Value**: Open the ADMX file with a text editor (for example, Notepad). Copy and paste the entire contents of the ADMX file you intend to ingest into this field.  
 
@@ -219,11 +219,11 @@ Follow these steps to add the KIR activation configuration settings:
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
 
-    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2".  
+    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2."  
     - **Description**: Enter a description for the setting. This setting is optional but recommended.  
     - **OMA-URI**: Enter the string *./Device/Vendor/MSFT/Policy/Config/KIR~Policy~KnownIssueRollback~\<Parent Category\>/\<ADMX Policy Name\>*.  
         > [!NOTE]
-        > Replace \<Parent Category\> with the parent category string recorded in the previous step. For example, "KnownIssueRollback_Win_11". Replace \<ADMX Policy Name\> with the same policy name used in the previous step.
+        > Replace \<Parent Category\> with the parent category string recorded in the previous step. For example, "KnownIssueRollback_Win_11." Replace \<ADMX Policy Name\> with the same policy name used in the previous step.
 
     - **Data type**: Select **String**.  
     - **Value**: Enter *\<disabled/\>*.
@@ -258,7 +258,7 @@ Follow these instructions to set the correct Applicability Rules for your KIR ac
 2. Select **Next**.
 
 > [!NOTE]
-> The OS version of a device can be found by running the `winver` command from the Start menu. It will show a two-part version number separated by a ".". For example, "22000.613". You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use these values:  
+> You can find the OS version of a device by running the `winver` command from the Start menu. The command output shows a two-part version number separated by a ".". For example, "22000.613". You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use these values:  
 > Min OS version: "10.0.22000"  
 > Max OS version: "10.0.22001"  
 
