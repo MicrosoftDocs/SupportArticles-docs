@@ -47,7 +47,7 @@ On the server on which Setup failed, download and then run the [SetupAssist](h
 
 ### Fix affected mailboxes
 
-To set the `homeMDB` attribute for each mailbox in the output from the  SetupAssist script, complete these steps:
+To set the `homeMDB` attribute for each mailbox in the output from the SetupAssist script, complete these steps:
 
 1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 
