@@ -83,7 +83,11 @@ To resolve either of the causes above, ensure that a writable DC is accessible f
 
 ## Event ID 4015 is logged with error code 0000051B
 
-This issue occurs because of permissions issues. SYSTEM isn't the owner of the DNS zone. You can [enable the Field Engineering diagnostic logging](../identity/configure-ad-and-lds-event-logging.md#enable-field-engineering-diagnostic-event-logging) to identify the DNS zone and change the owner.
+There are two conditions that lead to this error.
+
+Problem 1 is that SYSTEM isn't the owner of the DNS zone. You can [enable the Field Engineering diagnostic logging](../identity/configure-ad-and-lds-event-logging.md#enable-field-engineering-diagnostic-event-logging) to identify the DNS zone and change the owner.
+
+Problem 2 can happen sporadically after at least ten hours of DNS Server uptime with AD-integrated zones. When it happens once, the DNS server will stay in the error condition until it is restarted. The problem happens sprodically across Domain Controllers. The resulting error happens after a complex sequence of events, triggered by missing registry permissions, because a group membership was removed that is in place by default.
 
 ### Set DNS zone owner to SYSTEM
 
@@ -95,6 +99,26 @@ To resolve this issue, follow these steps:
 2. Correlate the exact time of Event ID 4015 to the Directory Service Event ID 1644, and identify the DNS application directory partition.
 3. Open the ADSI Edit (*Adsiedit.msc*) tool, and go to the LDAP location of the object identified in Event ID 1644, which correlates to Event ID 4015.
 4. Right-click the zone, go to **Properties** > **Security** > **Advanced**, and make sure the **Owner** is set to **SYSTEM**.
+
+### Add Member in The BuiltIn Users Group in the domain
+
+To resolve this issue, follow these steps:
+1. Logon to the Domain Controller as Admin Administrator. You can also run this on an admin machine when you add the "/domain" parameter.
+
+2. Identify the current group membership of the "Users" group:
+net localgroup users /domain
+
+3. The members should be:
+Domain Users
+NT AUTHORITY\Authenticated Users
+NT AUTHORITY\INTERACTIVE
+
+4. At least "Authenticated Users" is required to avoid this problem. To re-establish the membership, run:
+net localgroup users "NT AUTHORITY\Authenticated Users" /add /domain
+
+5. Wait for Replication.
+
+6. Restart DNS Server service on all DCs of the domain so it is member of "Users" group again.
 
 ## Event ID 4015 is logged with an extended error code (ADMIN_LIMIT_EXCEEDED)
 
