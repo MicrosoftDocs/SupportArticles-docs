@@ -492,6 +492,8 @@ items:
           href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell
           href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
+        - name: Exchange Server Setup fails and returns “Database is mandatory on UserMailbox” error 
+          href: ../setup/database-mandatory-on-usermailbox.md
         - name: Instal PST Capture tool fails
           href: ../setup/pst-capture-setup-wizard-ended-prematurely.md
         - name: Install Exchange Server 2010 SP2 fails
