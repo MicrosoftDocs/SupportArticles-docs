@@ -8,7 +8,7 @@ ms.reviewer: batre, arindamt, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Microsoft 365 Groups
+  - sap:Setup Issues
   - Exchange Server
   - CSSTroubleshoot
   - CI 6980
