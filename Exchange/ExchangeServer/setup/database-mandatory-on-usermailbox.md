@@ -41,7 +41,7 @@ Use the SetupAssist script to identify affected mailboxes. Then configure the `h
 
 On the server on which Setup failed, download and then run the [SetupAssist](https://microsoft.github.io/CSS-Exchange/Setup/SetupAssist/) script. The script returns information about mailboxes as shown in the following example.
 
-:::image type="content" source="media/database-mandatory-on-usermailbox/setupassist-result.png" alt-text="Screenshot of SetupAssist script output showing mailboxes with blank homeMDB attributes."
+:::image type="content" source="media/database-mandatory-on-usermailbox/setup-assist-result.png" alt-text="Screenshot of SetupAssist script output showing mailboxes with blank homeMDB attributes."
 
  In the example, the `homeMDB` attribute is blank for `DiscoverySearchMailbox`.
 
@@ -49,9 +49,9 @@ On the server on which Setup failed, download and then run the [SetupAssist](h
 
 To set the `homeMDB` attribute for each mailbox in the output from the  SetupAssist script, complete these steps:
 
-1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps&preserve-view=true).
+1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) or [connect to your Exchange server by using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 
-1. Run the `[Get-MailboxDatabase](/powershell/module/exchangepowershell/get-mailboxdatabase?view=exchange-ps)` cmdlet to get a list of available mailbox databases.
+1. Run the `[Get-MailboxDatabase](/powershell/module/exchangepowershell/get-mailboxdatabase)` cmdlet to get a list of available mailbox databases.
 
    ```powershell
 
@@ -59,7 +59,7 @@ To set the `homeMDB` attribute for each mailbox in the output from the  Se
 
    ```
 
-1. Run the `[Set-Mailbox](/powershell/module/exchangepowershell/set-mailbox?view=exchange-ps)` cmdlet to set the `homeMDB` attribute one time for each mailbox in the output from the  SetupAssist script. For each confirmation message that displays, select **Yes**. When you run the cmdlet, use a value that uniquely identifies the database, such as the distinguished name (DN), the GUID, or its name.
+1. Run the `[Set-Mailbox](/powershell/module/exchangepowershell/set-mailbox)` cmdlet to set the `homeMDB` attribute one time for each mailbox in the output from the  SetupAssist script. For each confirmation message that displays, select **Yes**. When you run the cmdlet, use a value that uniquely identifies the database, such as the distinguished name (DN), the GUID, or its name.
 
    ```powershell
 
