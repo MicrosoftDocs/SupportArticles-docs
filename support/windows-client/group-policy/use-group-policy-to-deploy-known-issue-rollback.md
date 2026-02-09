@@ -93,47 +93,7 @@ To apply a KIR policy definition to devices that belong to a hybrid Microsoft En
 
 For more information about how to create GPOs, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
-### <a id="wmi"></a>3. Create and configure a WMI filter that applies the GPO
-
-1. Right-click **WMI Filters**, and then select **New**.
-1. Enter a name for your new WMI filter.
-1. Enter a description of your WMI filter, such as **Filter to all Windows 10, version 2004 devices**.
-1. Select **Add**.
-1. In **Query**, enter the following query string:
-
-   ```sql
-   SELECT version, producttype from Win32_OperatingSystem WHERE Version = <VersionNumber>
-   ```
-
-   > [!IMPORTANT]  
-   > In this string, \<VersionNumber> represents the Windows version that you want the GPO to apply to. The version number must use the following format (exclude the brackets when you use the number in the string):
-   >  
-   > > 10.0.*xxxxx*  
-   >  
-   > where *xxxxx* is a five digit number. Currently, KIRs support the following versions:
-   >  
-   > |Version |Build number |
-   > | --- | --- |
-   > |Windows 10, version 20H2 |10.0.19042 |
-   > |Windows 10, version 2004 |10.0.19041 |
-   > |Windows 10, version 1909 |10.0.18363 |
-   > |Windows 10, version 1903 |10.0.18362 |
-   > |Windows 10, version 1809 |10.0.17763 |
-   >  
-
-   For an up-to-date list of Windows releases and build numbers, see [Windows 10 - release information](/windows/release-health/release-information).  
-
-   > [!IMPORTANT]  
-   > The build numbers that are listed on the Windows 10 release information page don't include the **10.0** prefix. To use a build number in the query, you must add the **10.0** prefix.
-
-For more information about how to create WMI filters, see [Create WMI Filters for the GPO](/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo).
-
-### <a id="link"></a>4. Link the GPO and the WMI filter
-
-1. Select the GPO that you created [previously](#gpo), open the **WMI Filtering** menu, and then select the WMI filter that you just created.
-1. Select **Yes** to accept the filter.
-
-### <a id="configure"></a> 5. Configure the GPO
+### <a id="configure"></a> 3. Configure the GPO
 
 Edit your GPO to use the KIR activation policy:
 
@@ -143,7 +103,7 @@ Edit your GPO to use the KIR activation policy:
 
 For more information about how to edit GPOs, see [Edit a Group Policy object from GPMC](/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10)).
 
-### <a id="monitor"></a>6. Monitor the GPO results
+### <a id="monitor"></a>4. Monitor the GPO results
 
 In the default configuration of Group Policy, managed devices should apply the new policy within 90 to 120 minutes. To speed up this process, you can run `gpupdate` on affected devices to manually check for updated policies.
 
