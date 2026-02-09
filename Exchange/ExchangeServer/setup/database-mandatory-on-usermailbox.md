@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Setup Issues
-  - Exchange Server SE
+  - Exchange Server
   - CSSTroubleshoot
   - CI 6980
 appliesto: 
