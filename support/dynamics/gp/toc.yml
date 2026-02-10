@@ -72,8 +72,6 @@
     href: fail-to-install-integration-manager-for-microsoft-dynamics-gp.md
   - name: Error when you install Microsoft Dexterity Shared Components
     href: fail-to-install-dexterity-shared-components.md
-  - name: Error when you integrate a sales transaction
-    href: fail-to-integrate-sales-transaction-in-integration-manager.md
   - name: Error when you integrate a transaction
     href: error-integrate-transaction.md
   - name: Error when you open a lookup window in Dexterity debug Test Mode
