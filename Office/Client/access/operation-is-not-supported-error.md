@@ -38,17 +38,17 @@ The article provides multiple solutions to resolve the errors.
 
 When you work with Access or Microsoft Excel, you receive one of the following error messages in different scenarios:
 
-`Operation is not supported for this type of object`
+Error message: `Operation is not supported for this type of object`
 
-when:
+When:
 
 - The Access database contains a query that includes a remote reference.
 
 - You create or refresh an ODBC connection by using either an Access driver or an Excel driver within an Excel workbook.
 
-`Invalid use of Null`
+Error message: `Invalid use of Null`
 
-when you:
+When you:
 
 - Add a control or a command button to an Access form or report.
 
@@ -66,7 +66,7 @@ Beginning in the Office updates that were released on December 9, 2025, the **Al
 | 1             | Allow in all databases          |
 | 2             | Disallow in all databases       |
 
-The “Allow only in trusted databases” is the default value for this registry key.
+The "Allow only in trusted databases" is the default value for this registry key.
 
 ### Check for a remote table reference
 
@@ -86,7 +86,7 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 - Don’t use wizards in Access. To avoid wizards, take the following actions instead:
 
-  - When you use the **Create** tab, select an option such as **Table Design**, **Query Design**, **Form Design** or **Report Design** that doesn't use a wizard.
+  - When you use the **Create** tab, select an option such as **Table Design**, **Query Design**, **Form Design**, or **Report Design** that doesn't use a wizard.
 
   - Disable Control wizards that you use for tasks such as adding a command button.  
     Expand the **Controls** group, and clear the **Use Control Wizards** checkbox.
@@ -95,7 +95,7 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 ### Solutions when you work with apps other than Access
 
-- Legacy ODBC connections in Excel are commonly constructed to include a remote table reference within the command text. The remote reference is used even if the table or query object that's referenced is local to the database or workbook that’s supplied in the connection string. In this scenario, remove the remote table reference from the command text in the query because it's unnecessary. See the following example.
+- Legacy ODBC connections in Excel are commonly constructed to include a remote table reference within the command text. The remote reference is used even if the table or query object that's referenced is local to the database or workbook that’s specified in the connection string. In this scenario, remove the remote table reference from the command text in the query because it's unnecessary. See the following example.
 
 | **Original Command Text** | **Updated Command Text** |
 |----|----|
