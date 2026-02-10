@@ -790,7 +790,7 @@
       href: differences-when-reconciling-gl-to-payables-or-receivables-management.md
     - name: The General Ledger isn't updated as expected
       href: general-ledger-is-not-updated-expected.md
-    - name: The rate type ID is missing
+    - name: The Exchange Table ID is missing
       href: the-rate-type-id-is-missing.md
     - name: The stored procedure glpBatchCleanup returned the following results
       href: stored-procedure-glpbatchcleanup-returned.md

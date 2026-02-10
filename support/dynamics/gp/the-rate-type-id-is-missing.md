@@ -1,11 +1,11 @@
 ---
-title: Resolve Rate Type ID and Exchange Rate Errors in Dynamics GP
+title: Resolve Exchange Table ID and Exchange Rate Errors in Dynamics GP
 description: Resolve missing exchange rate errors in Dynamics GP. This guide helps you fix "The Exchange Table ID is missing" and post transactions successfully.
 ms.reviewer: theley, v-shaywood
 ms.date: 02/10/2026
 ms.custom: sap:Financial - General Ledger
 ---
-# "The Exchange Table ID is missing. The Exchange Rate is missing." error message when you print an edit list in General Ledger in Microsoft Dynamics GP
+# "The Exchange Table ID is missing. The Exchange Rate is missing." error message when you print an edit list in General Ledger
 
 This article provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP.
 
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 922872
 
 ## Symptoms
 
-When you print an edit list for a purchase order return transaction, you receive the following error message:
+When you print an edit list for a purchase order return transaction that uses the originating currency, you receive the following error message:
 
 > The Exchange Table ID is missing  
 > The Exchange Rate is missing
