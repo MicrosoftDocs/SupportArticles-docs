@@ -29,7 +29,7 @@ Agent makers also receive the following warning message in Copilot Studio on the
 
 ## Cause
 
-Generative AI features aren't accessible in all regions and languages. In some cases, data might have to move outside the region for these features to become available or to rely on other Microsoft services outside the environment region.
+Generative AI features aren't accessible in all regions and languages. In some cases, data might have to move outside the region for these features to become available or to be able use other Microsoft services outside the environment region.
 
 If data movement across regions is disabled in an environment that needs it for generative AI features, then these features aren't available for agents. If the environment requires cross-geo calls, users receive an error message when they try to use generative AI tools or orchestration.
 
@@ -51,7 +51,7 @@ Enable generative AI features:
 
 :::image type="content" source="../media/generative-ai-not-available/gen-ai-features.png" alt-text="Generative AI features terms and conditions message.":::
 
-If you can't turn on this setting, you have to adapt your agent's behavior. Turn off generative AI features (such as generative orchestration, web search, AI general knowledge, and AI tools) to prevent users from seeing this message when they chat with your agent.
+If you can't turn on this setting, you have to modify your agent's behavior. Turn off generative AI features (such as generative orchestration, web search, AI general knowledge, and AI tools) to prevent users from seeing this message when they chat with your agent.
 
 ## Related information 
 
