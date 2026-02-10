@@ -1,6 +1,6 @@
 ---
-title: Event ID 4015 is logged and the DNS server encounters a critical error
-description: Helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
+title: Event ID 4015 - The DNS server encountered a critical error
+description: Describes how to fix the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
 ms.date: 02/10/2026
 manager: dcscontentpm
 audience: itpro
@@ -12,48 +12,61 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Event ID 4015 is logged and the DNS server encounters a critical error
-
-This article helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
+# Event ID 4015: The DNS server encountered a critical error
 
 _Original KB number:_ &nbsp; 969488, 2733147
 
+## Summary
+
+This article helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
+
+## Symptoms
+
 You receive Event ID 4015 in one of the following scenarios:
 
-- If you're running the DNS role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible, the following event is logged on the RODC.
+- [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This issue might occur in the following scenario:
 
-  ```output
-  Log Name: DNS Server
-  Source: Microsoft-Windows-DNS-Server-Service
-  Date: date time
-  Event ID: 4015
-  Task Category: None
-  Level: Error
-  Keywords: Classic
-  User: N/A
-  Computer: <ComputerName>
-  Description:
-  The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
-  ```
+  - A Read-Only Domain Controller (RODC) run the DNS role.
+  - The RODC can't connect to a writable domain controller (DC) that runs th DNS role.
+  
+  In this scenario, the RODC logs events that resemble the following example:
 
-- The DNS server can't access the Active Directory object, and the following event is logged frequently in the DNS server's event log.
+    ```output
+    Log Name: DNS Server
+    Source: Microsoft-Windows-DNS-Server-Service
+    Date: date time
+    Event ID: 4015
+    Task Category: None
+    Level: Error
+    Keywords: Classic
+    User: N/A
+    Computer: <ComputerName>
+    Description:
+    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
+    ```
 
-  ```output
-  Type: Error
-  Source: DNS
-  Category: None
-  Event ID: 4015
-  Description:
-  The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
-  ```
+- [DNS server logs Event ID 4015 (error code 0000051B)](#dns-server-logs-event-id-4015-error-code-0000051b). This issue might occur if the DNS server can't access an Active Directory object. In this scenario, the DNS server repeatedly logs events that resemble the following example:
 
-- In a forest or domain located in Active Directory integrated Domain Name System (DNS) zones, some domain controllers that have the DNS Server role installed have been promoted and demoted. Some promoted domain controllers can't register the SRV, Host A, Pointer (PTR), or Name Server (NS) in the Active Directory integrated DNS zones, and the following event is logged:
+    ```output
+    Type: Error
+    Source: DNS
+    Category: None
+    Event ID: 4015
+    Description:
+    The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "0000051B: AttrErr: DSID-xxxx, #1: 0:0000051B: DSID-xxxx, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 20119(nTSecurityDescriptor)". The eventdata contains the error."
+    ```
+
+- [DNS server logs Event ID 4015 (extended error code (ADMIN_LIMIT_EXCEEDED))](#dns-server-logs-event-id-4015-extended-error-code-admin_limit_exceeded). This issue might occur in the following scenario:
+
+  - The forest or domain uses Active Directory-integrated DNS zones.
+  - Some DCs that act as DNS servers have been promoted and demoted.
+  Some of the promoted DCs can't register DNS records in the DNS zones. This issue includes server (SRV) records, Host (A) records, pointer (PTR) records, or name server (NS) records. The affected DCs log Event ID 4015, and the description of the event resembles the following example:
 
   ```ouput
   The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002024: SvcErr: DSID-02050BBD, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026". The event data contains the error.
   ```
 
-## RODC logs DNS Event ID 4015 every three minutes with error code 00002095
+## RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes
 
 When an RODC locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
 
@@ -81,7 +94,7 @@ For more information about the DSGETDC function, see [DsGetDcNameA function](/wi
 
 To resolve either of the causes above, ensure that a writable DC is accessible from the RODC, that the DNS Server Role is installed on that DC, and that the NS record is registered in DNS for the writable DC.
 
-## Event ID 4015 is logged with error code 0000051B
+## DNS server logs Event ID 4015 (error code 0000051B)
 
 There are two conditions that lead to this error.
 
@@ -121,7 +134,7 @@ net localgroup users "NT AUTHORITY\Authenticated Users" /add /domain
 
 6. Restart DNS Server service on all DCs of the domain so it is member of "Users" group again.
 
-## Event ID 4015 is logged with an extended error code (ADMIN_LIMIT_EXCEEDED)
+## DNS server logs Event ID 4015 (extended error code (ADMIN_LIMIT_EXCEEDED))
 
 This issue occurs when the DNS Server service reaches the `dnsRecord` multi-valued attribute limit for the `dnsNode` object in Active Directory. In Active Directory integrated DNS zones, DNS names are represented by `dnsNode` objects, and DNS records are stored as values in `dnsRecord` attributes of `dnsNode` objects. DNS resource records (RRs) of demoted domain controllers won't be deleted automatically from `dnsRecord` attributes of `dnsNode` objects in the corresponding zone of the related Active Directory partition. For example:
 
