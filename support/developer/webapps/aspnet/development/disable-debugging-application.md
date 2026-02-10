@@ -1,7 +1,7 @@
 ---
 title: Disable Debugging for ASP.NET Application
 description: This article discusses how to disable debugging for ASP.NET applications.
-ms.date: 01/22/2026
+ms.date: 02/10/2026
 ms.custom: sap:General Development
 ms.topic: how-to
 ms.reviewer: paulboc, v-shaywood
