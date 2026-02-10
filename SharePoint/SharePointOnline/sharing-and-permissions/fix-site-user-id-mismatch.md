@@ -66,6 +66,9 @@ To get the original OneDrive site URL, follow these steps:
 
 To retrieve multiple OneDrive URLs, use one of the methods in [View OneDrive URLs for users in your organization](/sharepoint/list-onedrive-urls).
 
+> [!IMPORTANT]
+> If you recently activated SharePoint Administrator via Microsoft Entra PIM, especially PIM for groups, permissions may take **up to 24 hours** to propagate. During this window, the Site User Mismatch diagnostic may report **“no issues found”** even though access is still converging. For more information, visit [Error when accessing SharePoint or OneDrive after role activation in PIM](/troubleshoot/sharepoint/administration/access-denied-to-pim-user-accounts)
+
 ### Common scenarios
 
 The Site User Mismatch diagnostic can fix the following common issues that can occur when a new account is created by using the UPN that was used by a deleted account.
