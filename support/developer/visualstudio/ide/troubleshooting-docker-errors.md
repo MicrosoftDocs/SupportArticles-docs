@@ -94,6 +94,18 @@ When adding Docker support to a project, you choose either a Windows or a Linux 
 
 To resolve this issue, right-click the Docker for Windows icon in the System Tray and select **Switch to Windows containers...** or **Switch to Linux containers...**.
 
+## ContainerToolsPackage or DockerComposePackage did not load correctly
+
+This may be caused by a corrupted MEF cache. Try deleting your *ComponentModelCache* folder for your Visual Studio instance. Be sure to close all instances of Visual Studio first.
+
+You can use the PowerShell command:
+
+```PowerShell
+Get-ChildItem -Path "$(Join-Path $Env:LOCALAPPDATA "Microsoft\VisualStudio")" -Recurse -Include "ComponentModelCache" | Remove-Folder
+```
+
+Or, open the folder *%localappdata%\Microsoft\VisualStudio* in File Explorer, and open the subfolder *18.0_<sometext>*, which in turn will have the `ComponentModelCache` to delete.
+
 ## Other issues
 
 For any other issues you encounter, see [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) issues.
