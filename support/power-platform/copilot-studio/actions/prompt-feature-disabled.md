@@ -10,7 +10,7 @@ ms.custom: sap:Actions\AI Actions
 
 ## Summary
 
-This article helps you resolve the "This feature has been disabled" error that occurs when you try to create [AI prompts](/microsoft-copilot-studio/create-custom-prompt) in Microsoft Copilot Studio. This error typically appears when the AI prompts feature is disabled at the environment level in Microsoft Power Platform admin center or is restricted by an organizational policy. Enabling the feature lets you create custom prompts for your Copilot Studio agents.
+This article helps you resolve the "This feature has been disabled" error that occurs when you try to create [AI prompts](/microsoft-copilot-studio/create-custom-prompt) in Microsoft Copilot Studio. Typically, this error appears if the AI prompts feature is disabled at the environment level in Microsoft Power Platform admin center or is restricted by an organizational policy. Enabling the feature lets you create custom prompts for your Copilot Studio agents.
 
 ## Symptoms
 
