@@ -14,25 +14,46 @@ ms.author: esflores
 
 ## Performance issues and bottlenecks
 
-When performance issues occur in different operating systems and applications, each case requires a unique approach to troubleshoot. CPU, memory, networking, and input/output (I/O) are key areas where issues can occur. Each of these areas displays different symptoms (sometimes simultaneously) and requires different diagnoses and solutions.
+Performance issues can occur across different operating systems and applications, and each scenario requires a targeted troubleshooting approach. In Linux virtual machines, performance problems typically surface in one or more core resource areas: CPU, memory, networking, and input/output (I/O). Each resource presents distinct symptoms—often overlapping—and requires different diagnostic methods and remediation strategies.
 
-Performance issues could be caused by a misconfiguration of the application or setup. An example would be a web application that has a caching layer that isn't correctly configured. This situation triggers more requests flowing back to the origin server instead of being served from a cache.
+In many cases, performance degradation is caused not by the platform itself but by application or configuration issues. For example, a web application with a misconfigured caching layer may route excessive requests to the origin server instead of serving them from cache, increasing CPU load and response times. Similarly, database workloads can be affected by storage placement. If the redo log for a MySQL or MariaDB database resides on the operating system disk or on storage that does not meet the database’s performance requirements, the system may experience increased latency and reduced transactions per second (TPS) due to I/O contention.
 
-In another example, the redo log of a MySQL or MariaDB database is located on the operating system (OS) disk or on a disk that doesn't meet the database requirements. In this scenario, you might see fewer transactions per second (TPS) because of competition for resources and higher response times (latency).
+Effective troubleshooting begins with understanding the problem and identifying where the bottleneck exists in the stack—whether CPU, memory, networking, or I/O. Establishing a performance baseline is critical, as it allows you to compare metrics before and after changes and determine whether those changes result in measurable improvement.
 
-If you fully understand the issue, you can better identify where to look on the stack (CPU, memory, networking, I/O). To troubleshoot performance issues, you have to establish a *baseline* that enables you to compare metrics after you make changes and to evaluate whether the overall performance has improved.
+Troubleshooting performance issues on a virtual machine is fundamentally the same as on a physical system: the goal is to determine which resource is limiting overall performance. Bottlenecks always exist in any system; performance troubleshooting is the process of identifying the current bottleneck and, when possible, shifting it to a less restrictive resource.
 
-Troubleshooting a virtual machine (VM) performance issue is no different than resolving a performance issue on a physical system. It's about determining which resource or component is causing a *bottleneck* in the system.
+This guide helps you identify and resolve performance issues in Linux-based Azure Virtual Machines by focusing on isolating bottlenecks and applying targeted diagnostics.
 
-It's important to understand that bottlenecks always exist. Performance troubleshooting is all about understanding where a bottleneck occurs and how to move it to a less-offending resource.
+## Start here: Identify the likely bottleneck
 
-This guide helps you discover and resolve performance issues in Azure Virtual Machines in the Linux environment.
+Begin troubleshooting by observing system behavior and metric relationships, not individual resource utilization in isolation. Performance bottlenecks often surface indirectly, and the constrained resource is not always the most obvious one.
 
-### Obtain performance pointers
+The following table maps common observations and metric patterns to the most likely resource to investigate first.
 
-You can obtain performance pointers that either confirm or deny whether the resource constraint exists.
+| Observation or signal | Likely bottleneck to investigate | Rationale |
+|---|---|---|
+| High load average with low CPU usage | Disk (I/O) | Processes are blocked waiting on I/O rather than executing on CPU |
+| High CPU usage with low load average | Application design or single‑threaded workload | CPU is busy but not saturated across available cores |
+| Increasing request latency under load, CPU not saturated | Disk or network | Latency often increases before utilization limits are reached |
+| Sharp CPU usage fluctuations with a steady workload | CPU throttling or burst limits | CPU availability may vary because of platform constraints |
+| High I/O latency with low throughput | Disk saturation or throttling | Latency increases before bandwidth limits are reached |
+| Gradually increasing memory usage over time | Memory leak or cache growth | Memory pressure develops progressively rather than immediately |
+| OOM kill events despite available disk space | Memory | Disk availability does not mitigate RAM exhaustion |
+| Acceptable disk metrics but slow application I/O | Application I/O pattern | Small or synchronous I/O operations limit performance |
+| Network throughput below expectations | VM size or NIC limits | Network bandwidth is capped by the VM SKU |
+| Performance degradation only during peak usage | Capacity constraint | Resource limits are reached only under concurrency |
 
-Depending on the resource that's investigated, many tools can help you obtain data that pertain to that resource. The following table includes examples for the main resources.
+After identifying the most relevant pattern, proceed to the corresponding resource section for detailed diagnostics and validation.
+
+> [!IMPORTANT]
+> Bottlenecks are identified by relationships between metrics, not by individual utilization values. Always interpret CPU, memory, disk, and network data together.
+
+
+### Gathering performance insights
+
+Use these performance insights to validate whether a resource bottleneck exists.
+
+Different tools are used to collect performance data depending on the resource under investigation. The following table shows example tools for the primary resources.
 
 |Resource|Tool|
 |---|---|
@@ -41,16 +62,16 @@ Depending on the resource that's investigated, many tools can help you obtain da
 |Network|`ip`, `vnstat`, `iperf3`|
 |Memory|`free`, `top`, `vmstat`|
 
-The followng sections discuss pointers and tools that you can use to look for the main resources.
+The followng sections discuss performance data and tools that can be used for the investigation.
 
 ## CPU resource
 
-A certain percentage of CPU is either used or not. Similarly, processes either spend time in CPU (such as 80 percent `usr` usage) or do not (such as 80 percent idle). The main tool to confirm CPU usage is `top`.
+CPU usage represents the percentage of time the processor actively executes work versus remaining idle. Similarly, processes either spend time in CPU (such as 80 percent `usr` usage) or do not (such as 80 percent idle). The main tool to confirm CPU usage is `top`.
 
 The `top` tool runs in interactive mode by default. It refreshes every second and shows processes as sorted by CPU usage:
 
 ```output
-[root@rhel78 ~]$ top
+$ top
 top - 19:02:00 up  2:07,  2 users,  load average: 1.04, 0.97, 0.96
 Tasks: 191 total,   3 running, 188 sleeping,   0 stopped,   0 zombie
 %Cpu(s): 29.2 us, 22.0 sy,  0.0 ni, 48.5 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
@@ -97,7 +118,7 @@ You can see that the `dd` process is consuming 99.7 percent of the CPU.
 >
 > - The `top` tool displays a total usage of more than 100 percent if the process is multithreaded and spans more than one CPU.
 
-Another useful reference is load average. The load average shows an average system load in 1-minute, 5-minute, and 15-minute intervals. The value indicates the level of load of the system. Interpreting this value depends on the number of CPUs that are available. For example, if the load average is 2 on a one-CPU system, then the system is so loaded that the processes start to queue up. If there's a load average of 2 on a four-CPU system, there's about 50 percent overall CPU usage.
+Another useful reference is load average. The load average shows an average system load in 1-minute, 5-minute, and 15-minute intervals. The value shows the level of load of the system. Interpreting this value depends on the number of CPUs that are available. For example, if the load average is 2 on a one-CPU system, then the system is so loaded that the processes start to queue up. If there's a load average of 2 on a four-CPU system, there's about 50 percent overall CPU usage.
 
 > [!NOTE]
 > You can quickly obtain the CPU count by running the `nproc` command.
@@ -108,9 +129,14 @@ Use the load average as a quick overview of how the system is performing.
 
 Run the `uptime` command to obtain the load average.
 
+
+> [!IMPORTANT]
+> Load average provides context for CPU usage. High load with low idle CPU indicates saturation, while high load with idle CPU often points to non‑CPU bottlenecks.
+
+
 ## Disk (I/O) resource
 
-When you investigate I/O performance issues, the following terms help you understand where the issue occurs.
+The following terms help explain how to identify and understand I/O performance counters.
 
 | Term | Description |
 |--|--|
@@ -150,7 +176,7 @@ A more equation-friendly version could be written as follows:
 
 Unlike IOPS, throughput is a function of the amount of data over time. This means that during each second, a certain amount of data is either written or read. This speed is measured in *\<amount-of-data>*/*\<time>*, or megabytes per second (MB/s).
 
-If you know the throughput and IOSize values, you can calculate IOPS by dividing the throughput by IOSize. You should normalize the units to the smallest connotation. For example, if IOSize is defined in kilobytes (kb), the throughput should be converted.
+When throughput and I/O size values are known, IOPS can be calculated by dividing throughput by the I/O size. Both values must be normalized to the same unit of measurement. For example, if I/O size is defined in kilobytes (KB), throughput must be converted to kilobytes before performing the calculation.
 
 The equation format is written as follows:
 
@@ -169,14 +195,14 @@ Latency is the measurement of the average amount of time each operation takes to
 
 As part of the sysstat package, the `iostat` tool provides insights into disk performance and usage metrics. `iostat` can help identify bottlenecks that are related to the disk subsystem.
 
-You can run `iostat` in a simple command. The basic syntax is as follows:
+The `iostat` utility can be run using a simple command. The basic syntax is shown below.
 
 > `iostat <parameters> <time-to-refresh-in-seconds> <number-of-iterations> <block-devices>`
 
 The parameters dictate what information `iostat` provides. Without having any command parameter, `iostat` displays basic details:
 
 ```output
-[host@rhel76 ~]$ iostat
+$ iostat
 Linux 3.10.0-957.21.3.el7.x86_64 (rhel76)       08/05/2019      _x86_64_        (1 CPU)
 avg-cpu:  %user   %nice %system %iowait  %steal   %idle
           41.06    0.00   30.47   21.00    0.00    7.47
@@ -211,7 +237,7 @@ The numeral `1` in the command tells `iostat` to refresh every second. To stop t
 If you include the extra parameters, the output resembles the following text:
 
 ```output
-    [host@rhel76 ~]$ iostat -dxctm 1
+    $ iostat -dxctm 1
     Linux 3.10.0-957.21.3.el7.x86_64 (rhel76)       08/05/2019      _x86_64_        (1 CPU)
         08/05/2019 07:03:36 PM
     avg-cpu:  %user   %nice %system %iowait  %steal   %idle
@@ -246,6 +272,10 @@ The data presented by `iostat` is informational, but the presence of certain dat
 > [!NOTE]
 > You can use the `pidstat -d` command to view I/O statistics per process.
 
+
+> [!IMPORTANT]
+> Individual `iostat` values do not indicate a problem on their own. Sustained high latency or queue depth under load is a stronger indicator of disk saturation.
+
 ## Network resource
 
 Networks can experience two main bottlenecks: low bandwidth and high latency.
@@ -257,7 +287,7 @@ You can use `vnstat` to live-capture bandwidth details. However, `vnstat` isn't 
 Network latency in two different systems can be determined by using a simple `ping` command in Internet Control Message Protocol (ICMP):
 
 ```output
-[root@rhel78 ~]# ping 1.1.1.1
+# ping 1.1.1.1
 PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 64 bytes from 1.1.1.1: icmp_seq=1 ttl=53 time=5.33 ms
 64 bytes from 1.1.1.1: icmp_seq=2 ttl=53 time=5.29 ms
@@ -273,12 +303,12 @@ To stop the ping activity, select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ### Network bandwidth
 
-You can verify network bandwidth by using tools such as `iperf3`. The `iperf3` tool works on the server/client model in which the application is started by specifying the `-s` flag on the server. Clients then connect to the server by specifying the IP address or fully qualified domain name (FQDN) of the server in conjunction with the `-c` flag. The following code snippets show how to use the `iperf3` tool on the server and client.
+ Verify network bandwidth using tools such as [`iperf3`](https://github.com/esnet/iperf). The `iperf3` tool works on the server/client model in which the application is started by specifying the `-s` flag on the server. Clients then connect to the server by specifying the IP address or fully qualified domain name (FQDN) of the server in conjunction with the `-c` flag. The following code snippets show how to use the `iperf3` tool on the server and client.
 
 - **Server**
 
   ```output
-  root@ubnt:~# iperf3 -s
+  # iperf3 -s
   -----------------------------------------------------------
   Server listening on 5201
   -----------------------------------------------------------
@@ -287,7 +317,7 @@ You can verify network bandwidth by using tools such as `iperf3`. The `iperf3` t
 - **Client**
   
   ```output
-  root@ubnt2:~# iperf3 -c 10.1.0.4
+  # iperf3 -c 10.1.0.4
   Connecting to host 10.1.0.4, port 5201
   [  5] local 10.1.0.4 port 60134 connected to 10.1.0.4 port 5201
   [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
@@ -317,12 +347,17 @@ Some common `iperf3` parameters for the client are shown in the following table.
 | `-R`      | Reverses traffic. By default, the client sends data to the server. |
 | `--bidir` | Tests both upload and download.                                    |
 
+
+> [!IMPORTANT]
+> Network performance in Azure is bounded by VM size. Throughput limitations are often caused by VM or disk limits rather than the network itself.
+
+
 ## Memory resource
 
 Memory is another troubleshooting resource to check because applications might or might not use a portion of memory. You can use tools such as `free` and `top` to review overall memory utilization and determine how much memory various processes are consuming:
 
 ```output
-[root@rhel78 ~]# free -m
+# free -m
               total        used        free      shared  buff/cache   available
 Mem:           7802         435        5250           9        2117        7051
 Swap:             0           0           0
@@ -332,10 +367,10 @@ In Linux systems, it's common to see 99 percent memory utilization. In the `free
 
 In the `free` output, the *available* column indicates how much memory is available for processes to consume. This value is calculated by adding the amounts of buff/cache memory and free memory.
 
-You can configure the `top` command to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select <kbd>Shift</kbd>+<kbd>M</kbd> when you run `top`. The following text shows output from the `top` command:
+The `top` command and be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select <kbd>Shift</kbd>+<kbd>M</kbd> when you run `top`. The following text shows output from the `top` command:
 
 ```output
-[root@rhel78 ~]# top
+# top
 top - 22:40:15 up  5:45,  2 users,  load average: 0.08, 0.08, 0.06
 Tasks: 194 total,   2 running, 192 sleeping,   0 stopped,   0 zombie
 %Cpu(s): 12.3 us, 41.8 sy,  0.0 ni, 45.4 id,  0.0 wa,  0.0 hi,  0.5 si,  0.0 st
@@ -362,7 +397,7 @@ ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
 The following text shows example output from the command:
 
 ```output
-[root@rhel78 ~]# ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
+# ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
    PID COMMAND         USER     COMMAND                     %CPU %MEM
  45922 tail            root     tail -f /dev/zero           82.7 61.6
 [...]
@@ -380,9 +415,12 @@ OOM is invoked after both RAM (physical memory) and SWAP (disk) are consumed.
 > [!NOTE]
 > You can use the `pidstat -r` command to view per process memory statistics.
 
+> [!IMPORTANT]
+> High memory usage is normal in Linux. Memory pressure is indicated by low available memory, swapping activity, or OOM kill events—not by cache usage.
+
 ## Determine whether a resource constraint exists
 
-You can determine whether a constraint exists by using the previous indicators and knowing the current configuration. The constraint can be compared to the existing configuration.
+Resource constraints can be identified by correlating indicators with the current configuration.
 
 Here's an example of a disk constraint:
 
@@ -390,19 +428,18 @@ Here's an example of a disk constraint:
 
 In this example, the limiting resource is the throughput of the overall VM. The requirement of the application versus what the disk or VM configuration can provide indicates the constraining resource.
 
-If the application requires **\<measurement1> \<resource>**, and the current configuration for **\<resource>** is capable of delivering only **\<measurement2>**, then this requirement could be a limiting factor.
+If the application requires **\<measurement1> \<resource>**, and the current configuration for **\<resource>** is capable of delivering only **\<measurement2>**, then this requirement could be a constraining factor.
 
 ## Define the limiting resource
 
-After you determine a resource to be the limiting factor in the current configuration, identify how it can be changed and how it affects the workload. There are situations in which limiting resources could exist because of a cost-saving measure, but the application is still able to handle the bottleneck without issues.
+After identifying a resource bottleneck in the current configuration, evaluate possible changes and assess the impact on the workload. In some cases, the bottleneck exists as a cost‑optimization choice, and the application continues to operate within acceptable performance limits.
 
-For example:
+For example, when an application requires **128 GB (measurement)** of **RAM (resource)** but the current configuration provides only **64 GB (resource)**, memory becomes a bottleneck for the workload.
 
-> If the application requires **128 GB (measurement)** of **RAM (resource)**, and the current configuration for **RAM (resource)** is capable of delivering only **64 GB (measurement)**, then this requirement could be a limiting factor.
 
-Now, you can define the limiting resource and take actions based on that resource. The same concept applies to other resources.
+After identifying the bottleneck resource, define the constraint and take appropriate action. This approach applies to all resources.
 
-If these limiting resources are expected as a cost-saving measure, the application should work around the bottlenecks. However, if the same cost-saving measures exist, and the application can't easily handle the lack of resources, this configuration might cause problems.
+Some bottlenecks result from cost‑saving configurations and are acceptable when the application can tolerate them. When the application cannot tolerate the reduced resources, the configuration becomes problematic.
 
 ## Make changes based on obtained data
 
@@ -410,11 +447,11 @@ Designing for performance isn't about solving problems but about understanding w
 
 As an example, if the application is being limited by disk performance, you can increase the disk size to allow more throughput. However, the network then becomes the next bottleneck. Because resources are limited, there's no ideal configuration, and you must address issues regularly.
 
-By obtaining data in the previous steps, you can now make changes based on actual, measurable data. You can also compare these changes against the baseline that you previously measured to verify that there's a tangible difference.
+Once the data in the previous steps has the system can be tuned based on actual, measurable data. These changes can be compared against the previously established baseline to verify a measurable improvement.
 
 Consider the following example:
 
-> When you obtained a baseline while the application was running, you determined that the system had a constant 100 percent CPU usage in a configuration of two CPUs. You observed a load average of 4. This meant that the system was queuing requests. A change to an 8-CPU system reduced CPU usage to 25 percent, and load average was reduced to 2 when the same load was applied.
+> A baseline showed 100 percent CPU usage on a two‑CPU system with a load average of 4, indicating request queuing. After resizing to eight CPUs, the same workload reduced CPU usage to 25 percent and lowered the load average to 2.
 
 In this example, there's a measurable difference when you compare the obtained results against the changed resources. Before the change, there was a clear resource constraint. But after the change, there are enough resources to increase the load.
 
@@ -445,7 +482,7 @@ Average Azure latencies are shown in the following table.
 | **Standard HDD**              | Two-digit ms (milliseconds)    |
 
   > [!NOTE]
-  > A disk is throttled if it reaches its IOPS or bandwidth limits, because otherwise the latency can spike to 100 milliseconds or more.
+  > A disk is throttled if it reaches its IOPS or bandwidth limits because otherwise the latency can spike to 100 milliseconds or more.
 
 The latency difference between an on-premises (often less than a millisecond) and Premium SSD (single-digit milliseconds) becomes a limiting factor. Note the differences in latency between the storage offerings, and select the offering that better fits the requirements of the application.
 
@@ -463,7 +500,7 @@ PerfInsights is the recommended tool from Azure support for VM performance issue
 
 ### Run PerfInsights
 
-PerfInsights is available for both the [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify that your Linux distribution is in the list of [supported distributions](../windows/performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
+PerfInsights is available for both the [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify the Linux distribution is in the list of [supported distributions](../windows/performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
 
 ### Run and analyze reports through the Azure portal
 
@@ -471,7 +508,7 @@ When PerfInsights is [installed through the Azure portal](../windows/performance
 
 #### Azure portal option 1
 
-Browse the VM blade and select the **Performance diagnostics** option. You're asked to install the option (uses extensions) on the VM that you selected it for.
+Browse to the VM blade and select **Performance diagnostics**. Then install it on the target VM (uses extensions)..
 
 :::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="Screenshot that shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics." border="false" lightbox="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png":::
 
@@ -483,7 +520,7 @@ Browse to the **Diagnose and Solve Problems** tab in the VM blade, and look for 
 
 #### What to look for in the PerfInsights report
 
-After you run the PerfInsights report, the location of the contents depends on whether the report was run through the Azure portal or as an executable. For either option, access the generated log folder or (if in the Azure portal) download locally for analysis.
+After the PerfInsights report has been run, the location of the contents depends on whether the report was run through the Azure portal or as an executable. For either option, access the generated log folder or (if in the Azure portal) download locally for analysis.
 
 ### Run through the Azure portal
 
