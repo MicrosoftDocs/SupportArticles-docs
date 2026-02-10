@@ -52,4 +52,4 @@ To resolve this problem, follow these steps:
 Use the following methods as alternatives to the previous steps when working with a General Ledger batch:
 
 - Use SQL to update the `GL10000` table to add the `RATETPID`, `XCHGRATE`, and `EXGTBLID` values.
-- Create a new GL batch and copy the transactions into the new batch. This method allows you to choose the information on entry.
+- Create a new General Ledger batch and copy the transactions into the new batch. This method allows you to choose the information on entry.
