@@ -22,7 +22,7 @@ This article helps to resolve the issue in which Event ID 4015 is logged and the
 
 ## Symptoms
 
-You receive Event ID 4015 in one of the following scenarios:
+A DNS server can generate Event ID 4015 in several different situations. The error code in the event description indicates which situation applies. You receive Event ID 4015 in one of the following scenarios:
 
 - [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This issue might occur in the following scenario:
 
