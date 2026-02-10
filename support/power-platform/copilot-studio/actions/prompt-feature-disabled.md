@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Copilot Studio AI prompts disabled issue
+title: Troubleshoot Copilot Studio disabled AI prompts issue
 description: Learn how to fix the "This feature has been disabled" error in Microsoft Copilot Studio by enabling the AI prompts feature in your Power Platform environment.
 ms.date: 02/09/2026
 ms.reviewer: camogas, erickinser, v-shaywood
