@@ -20,7 +20,14 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 ## Symptoms
 
-A typical provisioning failure scenario occurs after you create a custom image and then deploy a virtual machine (VM) from that image. When this failure occurs, the VM status is shown as `creating` for up to 40 minutes, and you receive one of the following error messages:
+> [!IMPORTANT]
+> This article focuses on **Linux VM provisioning failures**, most commonly seen when deploying from **custom images**.
+>
+> If the deployment fails due to **capacity, SKU availability, or regional allocation**, see:
+> - [Troubleshoot Azure VM allocation failures](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/allocation-failure)
+> - [Troubleshoot issues when creating virtual machines in Azure](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-deployment-overview)
+
+Most Linux VM provisioning failures described in this article occur when you deploy a virtual machine (VM) from a **custom image** that wasn't prepared or generalized correctly. When this failure occurs, the VM status is shown as `creating` for up to 40 minutes, and you receive one of the following error messages:
 
 ```output
 Provisioning state Provisioning failed. 
@@ -29,7 +36,7 @@ The VM may still finish provisioning successfully. Please check provisioning sta
 Also, make sure the image has been properly prepared (generalized). * Instructions for Windows: https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/ * Instructions for Linux: https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/.
 ```
 
-```toutputext
+```json
 Deployment failed. Correlation ID: f9dcb33a-4e6e-45c5-9c9d-b29dd73da2e0. {
   "status": "Failed",
   "error": {
