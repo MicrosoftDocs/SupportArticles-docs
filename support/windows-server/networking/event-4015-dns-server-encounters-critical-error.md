@@ -103,43 +103,57 @@ The `DsGetDC` function returns a DC, which the RODC searches for the appropriate
 
 ## DNS server logs Event ID 4015 (error code 0000051B)
 
-There are two conditions that lead to this error.
+One of the following conditions causes the access issue:
 
-Problem 1 is that SYSTEM isn't the owner of the DNS zone. You can [enable the Field Engineering diagnostic logging](../identity/configure-ad-and-lds-event-logging.md#enable-field-engineering-diagnostic-event-logging) to identify the DNS zone and change the owner.
+- The SYSTEM account isn't the owner of the DNS zone.
+- The Users group for the domain doesn't have the correct members, including the Authenticated Users group. In this case, the issue might not appear until the DNS servers have been running for at least 10 hours, and it occurs sporadically on multiple DCs.
 
-Problem 2 can happen sporadically after at least ten hours of DNS Server uptime with AD-integrated zones. When it happens once, the DNS server will stay in the error condition until it is restarted. The problem happens sprodically across Domain Controllers. The resulting error happens after a complex sequence of events, triggered by missing registry permissions, because a group membership was removed that is in place by default.
+### The SYSTEM account isn't the owner of the DNS zone
 
-### Set DNS zone owner to SYSTEM
-
-To resolve this issue, follow these steps:
-
-1. When you see the DNS error in the DNS server event logs again after the logging is enabled, stop the AD diagnostic field engineering logging by setting the following registry value to *0*:
-
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\15 Field Engineering`
-2. Correlate the exact time of Event ID 4015 to the Directory Service Event ID 1644, and identify the DNS application directory partition.
-3. Open the ADSI Edit (*Adsiedit.msc*) tool, and go to the LDAP location of the object identified in Event ID 1644, which correlates to Event ID 4015.
-4. Right-click the zone, go to **Properties** > **Security** > **Advanced**, and make sure the **Owner** is set to **SYSTEM**.
-
-### Add Member in The BuiltIn Users Group in the domain
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 To resolve this issue, follow these steps:
 
-1. Logon to the Domain Controller as Admin Administrator. You can also run this on an admin machine when you add the "/domain" parameter.
+1. To enable Field Engineering diagnostic logging on a DC that's generating Event ID 4015, follow the instructions in [Enable Field Engineering diagnostic event logging](../identity/configure-ad-and-lds-event-logging.md#enable-field-engineering-diagnostic-event-logging).
 
-2. Identify the current group membership of the "Users" group:
-net localgroup users /domain
+1. Reproduce the issue.
 
-3. The members should be:
-Domain Users
-NT AUTHORITY\Authenticated Users
-NT AUTHORITY\INTERACTIVE
+1. To stop Field Engineering diagnostic logging, set the `15 Field Engineering` registry entry to *0*. This entry is under the following subkey:
 
-4. At least "Authenticated Users" is required to avoid this problem. To re-establish the membership, run:
-net localgroup users "NT AUTHORITY\Authenticated Users" /add /domain
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\`
 
-5. Wait for Replication.
+1. Note the time at which Event ID 4015 occurred, and look for an instance of Directory Service Event ID 1644 that occurred at the same time. In that instance of Event ID 1644, note the FQDN of the object that the event identifies. The object should represent a DNS zone.
+1. Open the ADSI Edit (*Adsiedit.msc*) tool, and go to the LDAP location of the DNS zone object.
+1. Right-click the zone object, and then select **Properties** > **Security** > **Advanced**.
+1. Make sure that **Owner** is set to **SYSTEM**.
 
-6. Restart DNS Server service on all DCs of the domain so it is member of "Users" group again.
+### The Users group for the domain doesn't have the correct members
+
+To resolve this issue, follow these steps:
+
+1. Use an Admin group member account to sign in to the DC. You can also run this procedure on an admin computer when you add the `/domain` parameter.
+
+1. To list the current members of the Users group, open a Windows Command Prompt window, and then run the following command:
+
+   ```console
+   net localgroup users /domain
+   ```
+
+1. The group should have the following members:
+
+   - Domain Users
+   - NT AUTHORITY\Authenticated Users
+   - NT AUTHORITY\INTERACTIVE
+
+1. If one or more of the listed groups is missing, add them as group members. For example, to add NT AUTHORITY\Authenticated Users, run the following command at the command prompt:
+
+   ```console
+   net localgroup users "NT AUTHORITY\Authenticated Users" /add /domain
+   ```
+
+1. Wait for the change to replicate among the DCs.
+
+1. On all of the DCs in the domain, restart the DNS Server service.
 
 ## DNS server logs Event ID 4015 (extended error code (ADMIN_LIMIT_EXCEEDED))
 
