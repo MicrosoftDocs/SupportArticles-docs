@@ -104,7 +104,7 @@ You can use the PowerShell command:
 Get-ChildItem -Path "$(Join-Path $Env:LOCALAPPDATA "Microsoft\VisualStudio")" -Recurse -Include "ComponentModelCache" | Remove-Folder
 ```
 
-Or, open the folder *%localappdata%\Microsoft\VisualStudio* in File Explorer, and open the subfolder *18.0_<sometext>*, which in turn will have the `ComponentModelCache` to delete.
+Or, open the folder *%localappdata%\Microsoft\VisualStudio* in File Explorer, and open the subfolder *18.0_xxxxxxxx*, which in turn will have the `ComponentModelCache` to delete.
 
 ## Other issues
 
