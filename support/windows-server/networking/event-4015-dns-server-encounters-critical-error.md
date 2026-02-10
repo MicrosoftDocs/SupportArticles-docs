@@ -22,12 +22,12 @@ This article helps to resolve the issue in which Event ID 4015 is logged and the
 
 ## Symptoms
 
-A DNS server can generate Event ID 4015 in several different situations. The error code in the event description indicates which situation applies. You receive Event ID 4015 in one of the following scenarios:
+A DNS server can generate Event ID 4015 in several different scenarios. Use the error code in the event description to distinguish which scenario you have, and select the closest scenario from the following list:
 
 - [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This issue might occur in the following scenario:
 
   - A Read-Only Domain Controller (RODC) run the DNS role.
-  - The RODC can't connect to a writable domain controller (DC) that runs th DNS role.
+  - The RODC can't connect to a writable domain controller (DC) that runs the DNS role.
   
   In this scenario, the RODC logs events that resemble the following example:
 
@@ -68,31 +68,38 @@ A DNS server can generate Event ID 4015 in several different situations. The err
 
 ## RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes
 
-When an RODC locates a writeable DNS server to perform ReplicateSingleObject (RSO), it performs a DSGETDC function with the following flags set:
+### Cause
+
+An RODC keeps itself up-to-date by replicating changes from one or more writable DCs. An RODC that's functioning as a DNS server uses [replicateSingleObject](/openspecs/windows_protocols/ms-adts/d3d19d15-8427-4d4d-8256-d5fb11333292) to make sure that it has the latest DNS information. In this scenario, the RODC tries to update a name server (NS) record.
+
+To support this functionality, the RODC DNS server must be able to locate a writeable DC DNS server as needed. To do this, the RODC uses one of the `DsGetDC` functions (such as [DsGetDCNameA](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) or [DsGetDCNameW](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)) together with with the following flags:
 
 - `DS_AVOID_SELF`
 - `DS_TRY_NEXTCLOSEST_SITE`
 - `DS_DIRECTORY_SERVICE_6_REQUIRED`
 - `DS_WRITEABLE_REQUIRED`
 
-Once a DC is returned from the DSGETDC call, it uses the result to search for the NS record in DNS. If the DSGETDC call fails or it fails to find the NS record of the DC returned from DSGETDC, Event ID 4015 will be logged.
+The `DsGetDC` function returns a DC, which the RODC searches for the appropriate NS record. In either of the following cases, the RODC logs Event ID 4015.
 
-Possible causes of Event ID 4015:
+- The identified DC isn't a DNS server, or doesn't list an appropriate NS record.
+- The function didn't identify a writeable DC.
 
-- No writeable DC is accessible, or none returned from the DSGETDC call.
-- The DSGETDC call was successful, but the DC returned doesn't have the DNS Server Role installed or doesn't register an NS record in DNS.
+### Resolution
 
-The following command can be run from the RODC to check which DC is returned from the DSGETDC call:
+1. To check the results of the `DsGetDC` function, open a Windows Command Prompt window on the RODC. Run the following command:
 
-```console
-nltest /dsgetdc: DOMAIN.COM /WRITABLE /AVOIDSELF /TRY_NEXT_CLOSEST_SITE /DS_6
-```
+   ```console
+   nltest /dsgetdc: <DomainFQDN> /WRITABLE /AVOIDSELF /TRY_NEXT_CLOSEST_SITE /DS_6
+   ```
 
-Where `DOMAIN.COM` is your domain name.
+   > [!NOTE]  
+   > In this command, \<DomainFQDN> represents the fully qualified domain name (FQDN) for the domain.
 
-For more information about the DSGETDC function, see [DsGetDcNameA function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea).
+1. If the command output lists a DC, check that DC's configuration. If the command didn't locate a DC, update your DNS topology to make sure that the RODC can connect to an appropriate DC. In both cases, make sure that the DC meets the following criteria:
 
-To resolve either of the causes above, ensure that a writable DC is accessible from the RODC, that the DNS Server Role is installed on that DC, and that the NS record is registered in DNS for the writable DC.
+   - The DC is writeable
+   - The DC has the DNS Server role installed
+   - The DNS records on the DC are correctly configured.
 
 ## DNS server logs Event ID 4015 (error code 0000051B)
 
