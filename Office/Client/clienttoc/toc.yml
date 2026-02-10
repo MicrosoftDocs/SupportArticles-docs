@@ -122,6 +122,8 @@
           href: ../access/error-opening-sql-linked-table.md
         - name: OLE DB Provider for Jet and ODBC driver
           href: ../access/jet-odbc-driver-available-32-bit-version.md
+        - name: Operation is not supported error 
+          href: ../access/operation-is-not-supported-error.md          
         - name: Optimize Access when using ODBC data sources
           href: ../access/optimize-odbc-data-sources.md
         - name: Query must have at least one destination field
