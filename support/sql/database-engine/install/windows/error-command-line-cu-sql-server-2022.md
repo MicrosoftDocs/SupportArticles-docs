@@ -7,14 +7,16 @@ ms.reviewer: jopilov, v-sidong
 ---
 # Unable to find an entry point error when updating SQL Server
 
-This article describes an issue where the command line generates an error message when applying a SQL Server Cumulative Update (CU).
-
 _Applies to:_ &nbsp; SQL Server 2022 on Windows, SQL Server 2025 on Windows  
+
+## Summary
+
+When you apply a cumulative update (CU) to SQL Server from the command line on an older Windows operating system, you might see a `System.EntryPointNotFoundException` error in the setup console. This article explains why this error occurs and that it doesn't affect the update process.
 
 ## Symptoms
 
 > [!NOTE]
-> This exception is only visible in the setup console when running **setup.exe** from the command line and only applies to:
+> This exception is only visible in the setup console when running `setup.exe` from the command line and only applies to:
 >
 > - SQL Server 2022 CU15 and later.
 > - SQL Server 2025 RTM and later.
@@ -23,7 +25,7 @@ Consider the following scenario:
 
 - You have a computer that's running an operating system (OS) that has an earlier build of the Windows OS than Windows 10 Build 20348, such as Windows Server 2016 or Windows Server 2019.
 
-- You apply a cumulative update (CU) to SQL Server using **setup.exe** from the command line. For information on how to run the setup from command line, see [Install and configure SQL Server on Windows from the command prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt).
+- You apply a cumulative update (CU) to SQL Server using `setup.exe` from the command line. For information on how to run the setup from command line, see [Install and configure SQL Server on Windows from the command prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt).
 
 In this scenario, an exception occurs in the setup console during the update process, displaying the following error message:
 
@@ -31,7 +33,7 @@ In this scenario, an exception occurs in the setup console during the update pro
 
 ## Cause
 
-When **setup.exe** runs on an OS version where the [GetNumaNodeProcessorMask2](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumanodeprocessormask2) API is unavailable, an exception appears in the setup console.
+When `setup.exe` runs on an OS version where the [GetNumaNodeProcessorMask2](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumanodeprocessormask2) API is unavailable, an exception appears in the setup console.
 
 ## Resolution
 
