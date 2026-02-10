@@ -96,7 +96,7 @@ To resolve this issue, right-click the Docker for Windows icon in the System Tra
 
 ## ContainerToolsPackage or DockerComposePackage did not load correctly
 
-This may be caused by a corrupted MEF cache. Try deleting your *ComponentModelCache* folder for your Visual Studio instance. Be sure to close all instances of Visual Studio first.
+This may be caused by a corrupted Managed Extensibility Framework (MEF) cache. Try deleting your *ComponentModelCache* folder for your Visual Studio instance. Be sure to close all instances of Visual Studio first.
 
 You can use the PowerShell command:
 
