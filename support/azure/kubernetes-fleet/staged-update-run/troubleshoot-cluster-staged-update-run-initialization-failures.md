@@ -6,6 +6,7 @@ ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
 ms.date: 01/20/2026
 ms.custom: sap:Other issue or questions related to Fleet manager
+zone_pivot_groups: cluster-namespace-scope
 ---
 
 # Initialization Failure: Initialized is False
