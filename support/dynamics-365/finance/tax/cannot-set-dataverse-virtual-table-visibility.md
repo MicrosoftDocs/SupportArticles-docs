@@ -101,7 +101,7 @@ The 401 "Unauthorized" error occurs if the "Check connection" process for connec
 
 1. In the RCS environment, go to **Electronic reporting** \> **Connected applications** \> **Dataverse application record**.
 2. The **Application** field shows the URL of the database instance. Confirm that you can sign in to that Dataverse instance by using the same account that you use to sign in to the RCS environment.
-3. Confirm that the **Tenant** field is set to your account's tenant ID (for example, **d335a570-a05b-4bc5-8eb3-c42c65f9560d**) or tenant URL (for example, `taxserviceint.onmicrosoft.com`).
+3. Confirm that the **Tenant** field is set to your account's tenant ID (for example, **aaaabbbb-0000-cccc-1111-dddd2222eeee**) or tenant URL (for example, `taxserviceint.onmicrosoft.com`).
 4. Select **Check connection**. The process should be successful.
 
 > [!IMPORTANT]
