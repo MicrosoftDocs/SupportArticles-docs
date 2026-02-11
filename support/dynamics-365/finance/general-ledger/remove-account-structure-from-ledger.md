@@ -8,8 +8,12 @@ ms.date: 02/10/2026
 
 # Unable to remove account structure from ledger
 
-This guide provides troubleshooting steps for removing account structures from the ledger.
+This article helps troubleshoot problems removing an account structure from your general ledger.
 
-**Potential Cause:** The account structure is used in multiple locations throughout the system.
+## Symptoms
 
-  **Resolution:** Instead of deleting the account structure, modify it by replacing its content with dummy values, then activate the structure. This approach avoids breaking references across the system.
+You are unable to remove an account structure from the ledger.
+
+## Resolution
+
+The account structure is likely used in multiple locations throughout the system. Instead of deleting the account structure, modify it by replacing its content with dummy values, then activate the structure. This approach avoids breaking references across the system.

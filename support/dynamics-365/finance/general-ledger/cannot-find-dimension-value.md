@@ -10,19 +10,19 @@ ms.date: 02/10/2026
 
 This guide provides troubleshooting steps for locating missing or unavailable financial dimension values.
 
-**Potential Cause 1:** The dimension is scoped to a specific legal entity. Custom dimensions are shared across companies, but many entity-backed dimensions are company-specific.
+**Potential Cause 1:** You're working in the incorrect legal entity (company). If the dimension value is scoped to a specific legal entity (company) different from the one which you're working in, it may not be visible. This problem does not exist for "shared" values across entities. 
 
   **Resolution:** Verify you're working in the correct legal entity where the dimension value was created.
 
-**Potential Cause 2:** The user lacks the necessary security role. Extensible Data Security (XDS) policies may restrict access to the dimension value.
+**Potential Cause 2:** The user lacks the necessary security role. If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when XDS filters are applied to the backing entity, and the user doesn’t have permission to view it.
 
   **Resolution:** Assign the **XDSDataAccessPolicyBypassRole** role to the user temporarily. If the dimension value appears, the issue is XDS-related. Work with your administrator to adjust role permissions.
 
-**Potential Cause 3:** The dimension is backed by a system entity. Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
+**Potential Cause 3:** The dimension value has not been used yet and is backed by a system entity. Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
 
   **Resolution:** Ensure the dimension value has been used in at least one account or journal entry.
 
-**Potential Cause 4:** The dimension value you entered doesn't exist in the system.
+**Potential Cause 4:** The dimension value you entered doesn't exist in  exist in the system.
 
   **Resolution:** Verify the dimension value exists by going to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions** and selecting **Dimension values**.
 
