@@ -197,7 +197,7 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 1. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
 1. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 1. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](/troubleshoot/windows-server/networking/disable-http-proxy-auth-features#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
+1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
 1. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
 1. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
 1. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
@@ -591,5 +591,3 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
-
- 

@@ -52,7 +52,7 @@ Then, use one of the following methods when you reset the device to the factory 
 - Reset the device through Recovery mode (FRP will be enforced).
 - Wipe the device from Intune when the device is in your possession and is expected to be reset for further use (FRP will not be enforced).
 
-For background and guidance, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
+For background and guidance, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](factory-reset-protection-emails-not-enforced.md).
 
 ## References
 

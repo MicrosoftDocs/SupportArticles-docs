@@ -14390,6 +14390,10 @@
     {
       "source_path": "support/developer/visualstudio/language-compilers/cannot-use-scale-140-badge-logo.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-use-scale-140-badge-logo"
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager"
     }
   ]
 }
