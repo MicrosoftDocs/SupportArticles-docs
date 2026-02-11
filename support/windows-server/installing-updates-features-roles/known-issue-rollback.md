@@ -68,7 +68,7 @@ If you experience an issue that's related to a feature update, check the Downloa
 1. Report the issue or regression to [Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness/onboarding), the customer-facing arm of Microsoft, and request the Group Policy to activate KIR.
 1. Microsoft Support works with product teams to identify the applicable Group Policy settings, uploads an appropriate Group Policy template to the Download Center, and then provides you with the link to download the template.
 
-Download the template, and then follow the steps in [How to use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
+Download the template, and then follow the steps in [How to use Group Policy to deploy a Known Issue Rollback](../../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md).
 
 For enterprise-managed devices that are domain-joined, the Group Policy refresh happens at certain regular intervals. To make sure that the Group Policy settings take effect, take one of the following actions:
 
@@ -77,7 +77,7 @@ For enterprise-managed devices that are domain-joined, the Group Policy refresh 
 
 For more information about refreshing Group Policy, see [Group Policy processing for Windows](/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing).
 
-Additionally, for information about how to mitigate regressions on Intune or endpoint management service managed devices, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
+Additionally, for information about how to mitigate regressions on Intune or endpoint management service managed devices, see [Use Group Policy to deploy a Known Issue Rollback](../../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md).
 
 ### KIR for retail and consumer devices
 
@@ -127,4 +127,4 @@ There are a few reasons you might still observe issues after you activate the KI
 
 ### What do I do if I need to activate KIR for my enterprise but can't use Group Policy infrastructure?
 
-For more information about how to deploy KIR, including how to activate KIR for single devices and how to activate KIR without using Group Policy, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
+For more information about how to deploy KIR, including how to activate KIR for single devices and how to activate KIR without using Group Policy, see [Use Group Policy to deploy a Known Issue Rollback](../../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md).

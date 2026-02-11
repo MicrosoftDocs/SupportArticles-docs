@@ -62,7 +62,7 @@ These invalid registry keys prevent the Windows Event Log service from starting.
 1. Check the Event Log folder `C:\Windows\System32\winevt\Logs` for event log files:
    - If the folder contains `.evtx` log files, go to the next step.
    - If the folder doesn't contain log files, the Windows event log might be corrupted. To troubleshoot a corrupted Windows event log, see [How to delete corrupt Event Viewer Log files](~/windows-server/application-management/delete-corrupt-event-viewer-log-files.md).
-1. Use the [System File Checker (SFC)](/troubleshoot/windows-server/installing-updates-features-roles/system-file-checker) to repair any corrupted system components by running the following command in an elevated Command Prompt window:
+1. Use the [System File Checker (SFC)](../../../windows-server/installing-updates-features-roles/system-file-checker.md) to repair any corrupted system components by running the following command in an elevated Command Prompt window:
 
     ```cli
     sfc /scannow
