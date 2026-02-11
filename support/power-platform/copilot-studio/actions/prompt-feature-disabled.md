@@ -14,7 +14,7 @@ This article helps you resolve the "This feature has been disabled" error that o
 
 ## Symptoms
 
-When you try to [create a new prompt](/microsoft-copilot-studio/create-custom-prompt#create-a-new-prompt) in Copilot Studio, the following message appears in the **Custom prompt** window:
+When you try to [create a new prompt](/microsoft-copilot-studio/create-custom-prompt#create-a-new-prompt) in Copilot Studio, the following message appears in the **prompt builder**:
 
 > This feature has been disabled
 
@@ -42,7 +42,7 @@ To resolve this issue, an administrator must enable the AI prompts feature in Po
 
 1. Select **Save**.
 
-1. Return to Copilot Studio, and verify that the **Custom prompt** window no longer shows the error message.
+1. Return to Copilot Studio, and verify that the **prompt builder** no longer shows the error message.
 
 For more information, see [Enable or disable AI prompts in Power Platform and Copilot Studio](/ai-builder/administer#enable-or-disable-ai-prompts-in-power-platform-and-copilot-studio).
 
