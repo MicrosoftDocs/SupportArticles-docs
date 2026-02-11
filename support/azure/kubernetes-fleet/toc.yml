@@ -27,6 +27,10 @@ items:
   items:
     - name: Troubleshooting Cluster Staged Update Run
       href: staged-update-run/troubleshoot-cluster-staged-update-run-issues.md
+    - name: Initialized is false
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-initialization-failures.md
+    - name: Progressing and Succeeded is False with "UpdateRunFailed" Reason
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-initialization-failures.md
    
 - name: Multi-cluster networking
   items:
