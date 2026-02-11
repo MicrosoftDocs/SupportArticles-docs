@@ -484,7 +484,7 @@ nginx-deployment-5d9874b8b9-wxmd7   0/1     InvalidImageName   0          10m
 
 > Note: A similar scenario can occur when the updateRun's state is set to Stop since ongoing resource placement on a cluster continues even when State is Stop.
 
-For more debugging instructions, you can refer to [ResourcePlacement Troubleshooting Guide](./../cluster-resource-placement/troubleshoot-resourceplacement-api-issues.md).
+For more debugging instructions, you can refer to [ResourcePlacement Troubleshooting Guide](./../cluster-resource-placement/troubleshoot-resource-placement-issues.md).
 
 After resolving the issue, you can always create a new `StagedUpdateRun` to restart the rollout. You can delete stuck `StagedUpdateRun`.
 

@@ -20,12 +20,3 @@ groups:
     title: GitHub Actions OIDC
   - id: google-identity
     title: Google Identity
-#Owner: britaniar
-- id: cluster-namespace-scope
-  title: Fleet resource scope
-  prompt: Select your Fleet custom resource scope type
-  pivots:
-  - id: cluster-scope
-    title: Cluster-scoped
-  - id: namespace-scope
-    title: Namespace-scoped

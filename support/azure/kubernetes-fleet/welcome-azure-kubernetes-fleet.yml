@@ -25,7 +25,15 @@ landingContent:
             url: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
           - text: Troubleshooting ResourcePlacement
             url: cluster-resource-placement/troubleshoot-resource-placement-issues.md
-
+# Card
+  - title:  Troubleshooting Staged Update Run
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting Cluster Staged Update Run
+            url: staged-update-run/troubleshoot-cluster-staged-update-run-api-issues.md
+          - text: Troubleshooting Staged Update Run
+            url: staged-update-run/troubleshoot-staged-update-run-api-issues.md
  # Card 
   - title: Troubleshoot multi-cluster networking
     linkLists:
