@@ -254,9 +254,9 @@ Before you contact Microsoft Support, you can gather the following information a
 
 ## References
 
-- [Microsoft Storage Sense documentation](/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5)
+- [Microsoft Storage Sense documentation](https://support.microsoft.com/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5)
 - [Known issue KB5050092](https://support.microsoft.com/help/5050092)
 - [USN Journal documentation](/windows/win32/fileio/change-journal-records)
 - [OneDrive Files On-Demand](https://support.microsoft.com/office/learn-about-onedrive-files-on-demand-0e6860d3-d9f3-4971-b321-7092438fb38e)
 - [Sysinternals utilities](/sysinternals/)
-- [Group Policy Central Store guidance](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+- [Group Policy Central Store guidance](../../windows-client/group-policy/create-and-manage-central-store.md)
