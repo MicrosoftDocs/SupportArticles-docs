@@ -9,9 +9,9 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-:::zone target="docs" pivot="cluster-scope"
+# Troubleshooting Staged Update Run API in Azure Kubernetes Fleet Manager (preview)
 
-# Troubleshooting ClusterStagedUpdateRun API in Azure Kubernetes Fleet Manager (preview)
+:::zone target="docs" pivot="cluster-scope"
 
 ## Summary
 
@@ -157,8 +157,6 @@ kubectl patch clusterapprovalrequests example-run-before-canary --type='merge' \
 :::zone-end
 
 :::zone target="docs" pivot="namespace-scope"
-
-# Troubleshooting StagedUpdateRun API in Azure Kubernetes Fleet Manager (preview)
 
 ## Summary
 
