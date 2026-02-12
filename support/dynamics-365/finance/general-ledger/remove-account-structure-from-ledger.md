@@ -12,7 +12,9 @@ This article helps troubleshoot problems removing an account structure from your
 
 ## Symptoms
 
-You are unable to remove an account structure from the ledger.
+You are unable to remove an account structure from the ledger. You see an error like "Account structure ... cannot be deleted because it is used on ledger ... You must first remove the account structure from the ledger." However, it is difficult to see which ledger is the one causing problems.
+
+![Error message showing account structure cannot be deleted because it is used on ledger](media/error-deleting-account-structure.png)
 
 ## Resolution
 
