@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.reviewer: v-kccross, rewood
 appliesto: 
   - Microsoft 365
-ms.date: 12/15/2025
+ms.date: 02/12/2026
 ---
 
 # Resolve errors during orchestrated migration (preview)
@@ -47,7 +47,7 @@ This article provides lists of errors that you might experience during user data
 | **CTM-101** | User migration validation failed. User identity mapping not in completed state. Mapping state is \<state from IM>. Refer to identity mapping documentation to complete the process or fix the errors. | Identity mapping is found, but isn't in a completed state. It could be in mapped state. | Either wait for identity mapping to finish or run the complete identity mapping steps. |
 | **CTM-102** | Service is experiencing a high volume of requests and we are unable to validate the user at this time. Please resubmit the user as part of a different batch after some time. | The service is experiencing a high volume of requests and can't validate the user at this time. Resubmit the user as part of a different batch after some time. | Retry the migration. |
 | **CTM-103** | An internal server error occurred during the validation of the user. Please resubmit the user as part of a different batch or contact support if the issue persists. | An internal server error occurred during user validation. | Retry the migration. |
-| **CTM-104** | User migration failed. The CTMS App in tenant is not provisioned, or the app is provisioned but is not enabled. Please refer to tenant configuration documentation and retry migration. | The CTMS app setup is not correct. | Refer to tenant configuration documentation and retry migration. |
+| **CTM-104** | User migration failed. The CTMS App in tenant is not provisioned, or the app is provisioned but is not enabled. Please refer to tenant configuration documentation and retry migration. | The CTMS app is not set up correctly. | Refer to the documentation for tenant configuration and set up the CTMS app correctly. Then retry the migration. |
 
 ## Exchange mailbox migration errors
 
