@@ -162,4 +162,4 @@ Common issues quick reference table
 
 #### References
 
-- [AV Exclusions for Server and Hyper-V](/troubleshoot/windows-server/virtualization/antivirus-exclusions-for-hyper-v-hosts)
+- [AV Exclusions for Server and Hyper-V](antivirus-exclusions-for-hyper-v-hosts.md)

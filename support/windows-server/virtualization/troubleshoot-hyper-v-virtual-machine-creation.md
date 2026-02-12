@@ -273,9 +273,9 @@ Before you contact Microsoft Support, you can gather the following information a
 - [Hyper-V Best Practices Analyzer](/windows-server/virtualization/hyper-v/best-practices-analyzer/best-practices-analyzer-for-hyper-v)
 - [Hyper-V Import/Export](/windows-server/virtualization/hyper-v/deploy/export-and-import-virtual-machines?tabs=hyper-v-manager)
 - [Windows Server licensing guide](/windows-server/get-started/editions-comparison)
-- [Troubleshooting cluster validation Reports](/troubleshoot/windows-server/high-availability/validate-hardware-failover-cluster)
+- [Troubleshooting cluster validation Reports](../high-availability/validate-hardware-failover-cluster.md)
 - [BlueScreenView tool](https://www.nirsoft.net/utils/blue_screen_view.html)
 
 **Third-party contact disclaimer**
 
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information. 
+Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
