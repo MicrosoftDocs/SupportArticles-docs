@@ -26,15 +26,72 @@ Error message:
 
 Cause
 
-This problem occurs because the ApplicationHost.config or Web.config file contains a malformed or unidentified XML element. IIS can't identify the XML elements of the modules that are not installed. For example, IIS **URL Rewrite** module.
+This error occurs when IIS encounters **malformed or unrecognized XML elements** in the `ApplicationHost.config` or `Web.config` file.  
+Typical reasons include:
 
+- A module or handler is defined in the configuration file, but the **corresponding IIS component or extension is not installed** (for example, *URL Rewrite Module* or *Request Filtering*).  
+- A **syntax error** or missing tag in the configuration file (for example, an unclosed element or extra angle bracket).  
+- Manual edits or merges of configuration files from different environments that introduce incompatible XML entries.
+
+How to Diagnose
+
+1. **Check Event Viewer Logs**
+   - Open **Event Viewer → Windows Logs → Application**.  
+   - Look for **WAS** or **IIS-W3SVC** events around the time of the error.  
+   - The event details often specify the **line number and XML element** causing the issue.
+
+2. **Use IIS Configuration Editor**
+   - Open **IIS Manager → Your Site → Configuration Editor**.  
+   - Try to open the configuration section mentioned in the error.  
+   - If it fails to load, it indicates a malformed or unrecognized section.
+
+3. **Validate XML Syntax**
+   - Open the configuration file in a code editor (for example, Visual Studio Code).  
+   - Enable XML validation and look for red squiggly lines or unmatched tags.
+
+4. **Identify Missing Modules**
+   - Check for unrecognized section names like `<rewrite>`, `<compression>`, or `<authentication>`.  
+   - Verify whether the corresponding features or modules are installed
+   - Also check for module references under:
+     ```
+     C:\Windows\System32\inetsrv\Config\ApplicationHost.config
+     ```
 Resolution
 
-Use one of the following methods:
+**Option 1: Fix Malformed XML**
 
-- Delete the malformed XML element from the ApplicationHost.config or Web.config file.
-- Check the unidentified XML elements, and then install the relevant IIS modules.
+- Open the file and review the **line number** mentioned in the error (if specified).  
+- Ensure all XML tags are **properly closed**, **nested**, and **spelled correctly**.  
+- Validate the syntax in a code editor like Visual Studio Code.
 
+**Option 2: Install Missing IIS Modules**
+
+If the error references an **unrecognized section** (for example, `<rewrite>`, `<dynamicCompression>`, or `<urlCompression>`), install the corresponding IIS module.
+
+**Option 3: Temporarily Remove or Comment Out Unrecognized Entries**
+
+If the referenced module is not required or unavailable on the server:
+
+1. Open the `Web.config` or `ApplicationHost.config` file.  
+2. Locate the **unrecognized section** (for example, `<rewrite>` or `<customModule>`).  
+3. Comment out or remove that section.
+
+**Option 4: Validate Configuration Using IIS Tools**
+
+Use the following methods to test or validate configuration integrity.
+
+- Check configuration sections for issues:
+
+      %windir%\system32\inetsrv\appcmd list config /section:system.webServer
+
+- Or open **Configuration Editor** in IIS Manager and verify the sections manually.
+
+**Option 5: Redeploy or Recreate Configuration**
+
+If none of the above works:
+
+- Copy a known-good version of the configuration file from a working environment.  
+- Or redeploy your web application using a deployment tool (for example, **Web Deploy**) to overwrite corrupted configurations.
 
 ## HRESULT code 0x80070021
 
@@ -48,11 +105,65 @@ Error message:
 
 Cause
 
-This problem can occur if the specified portion of the IIS configuration file is locked at a higher configuration level.
+This problem occurs when IIS encounters a **locked configuration section** that cannot be overridden at a lower level (for example, in a site's `Web.config` file).  
+IIS configuration sections can be **locked** at higher levels such as:
+
+- `ApplicationHost.config` (server-level)  
+- `root Web.config` (framework-level)
+
+When a section is locked, it cannot be redefined or customized in child configuration files.  
+This usually happens when a global IIS policy enforces settings centrally for security or consistency.
 
 Resolution
 
-Unlock the specified section, or don't use it at the higher level. For more information about configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
+**Option 1: Unlock the Configuration Section**
+
+Unlock the required section in the **ApplicationHost.config** file or using the **appcmd** utility.
+
+- **Using Command Line:**
+
+    %windir%\system32\inetsrv\appcmd unlock config /section:handlers
+
+- **Using IIS Manager:**
+
+1. Open **IIS Manager**.  
+2. Select the **server node** (top level).  
+3. Double-click **Configuration Editor**.  
+4. From the drop-down list, select the **section** (for example, `system.webServer/handlers`).  
+5. In the **Actions** pane, click **Unlock Section**.
+
+- **Result:**  
+This makes the section editable at lower configuration levels (such as per-site or per-application).
+
+**Option 2: Remove or Modify the Conflicting Section in Web.config**
+
+If you cannot unlock the section (for policy reasons), remove or comment out the section in your `Web.config`.
+Then, re-apply the configuration at the **server level** or **site root** where the section is allowed.
+
+**Option 3: Adjust Locking Behavior in ApplicationHost.config**
+
+If the lock is defined explicitly, you can modify it manually.
+
+1. Open the following file in a text editor (with admin rights):  
+       C:\Windows\System32\inetsrv\Config\ApplicationHost.config
+
+2. Search for the locked section entry, for example:
+
+       <section name="handlers" overrideModeDefault="Deny" />
+
+3. Change it to:
+
+       <section name="handlers" overrideModeDefault="Allow" />
+
+4. Save the file and **restart IIS**:
+
+> **Caution:** Editing `ApplicationHost.config` directly affects all IIS sites. Always back up the file before changes.
+
+**Option 4: Review Configuration Policy**
+
+If you are in an enterprise environment, configuration locking might be **intentional** (for security or standardization).  
+In that case:
+- Consult your IIS administrator or infrastructure policy owner before unlocking sections.  
 
 ## HRESULT code 0x80070005
 
@@ -237,6 +348,6 @@ Resolution
 - Verify that the *Web.config* path exists and has correct permissions set.
 - Collect Process Monitor logs to get more information about the error.
 
-## Fix break IIS configuration file issue when you update windows
+## Fix IIS Configuration File Breaks After Windows Update
 
 As a general safety rule, all configuration files (not limited to IIS) should be backup before installing any update. If you use Virtual Machines, take a snapshot of the Virtual Machine before you update it. This advice isn’t limited to Windows updates.
