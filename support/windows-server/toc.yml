@@ -2918,6 +2918,8 @@ items:
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
     - name: Merging checkpoints that have multiple differencing disks
       href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
+    - name: "Troubleshooting guidance: Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)"
+      href: ./virtualization/hyper-v-snapshots-checkpoints-differencing-disks.md
   - name: Storage configuration
     items:
     - name: Can't add a second Fibre Channel adapter
