@@ -2952,6 +2952,8 @@ items:
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
+    - name: Hyper-V VM Unexpectedly Missing in Windows Server 2016
+      href: ./virtualization/hyper-v-vm-unexpectedly-missing.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
