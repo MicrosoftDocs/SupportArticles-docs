@@ -24,9 +24,9 @@ This article discusses how to configure Group Policy to use a Known Issue Rollba
 Microsoft has developed a new Windows servicing technology that's named [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831) for Windows Server 2019 and Windows 10, versions 1809 and later versions. For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a nonsecurity Windows Update release. All other changes that were made as a part of that release remain intact. By using this technology, if a Windows update causes a regression or other problem, you don't have to uninstall the entire update and return the system to the last known good configuration. You roll back only the change that caused the problem. This rollback is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer necessary.
 
 > [!IMPORTANT]  
-> KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
+> KIRs apply to only nonsecurity updates because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition .msi files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for nonenterprise devices. For enterprise devices, Microsoft provides KIR policy definition .msi files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -38,7 +38,7 @@ If Microsoft determines that a nonsecurity update has a critical regression or s
 - The Known Issues section of the applicable Windows Update KB article
 - The Known Issues list on the Windows Health Release Dashboard at https://aka.ms/windowsreleasehealth for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues))
 
-For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is required.
+For nonenterprise customers, the Windows Update process applies the KIR automatically. No user action is required.
 
 For enterprise customers, Microsoft provides a policy definition .msi file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
@@ -54,7 +54,7 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
    > [!IMPORTANT]  
    > Make sure that the operating system that is listed in the .msi file name matches the operating system of the device that you want to update.
 1. Run the .msi file on the device. This action installs the KIR policy definition in the Administrative Template.  
-1. Open the Local Group Policy Editor. To do this, select **Start**, and then enter *gpedit.msc*.
+1. Open the Local Group Policy Editor. To open the editor, select **Start**, and then enter *gpedit.msc*.
 1. Select **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **KB *#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.
    > [!NOTE]  
    > In this step, *#######* is the KB article number of the update that caused the problem. *XXX* is the issue number, and *YYMM* is the Windows 10 version number.
@@ -80,7 +80,7 @@ To apply a KIR policy definition to devices that belong to a hybrid Microsoft En
 1. Download the KIR policy definition .msi files that you require to update to the computer that you use to manage Group Policy for your domain.
 1. Run the .msi files. This action installs the KIR policy definition in the Administrative Template.  
    > [!NOTE]  
-   > Policy definitions are installed in the *C:\Windows\PolicyDefinitions* folder. If you have implemented the Group Policy [Central Store](create-and-manage-central-store.md#the-central-store), you must copy the .admx and .adml files to the Central Store.
+   > Policy definitions are installed in the *C:\Windows\PolicyDefinitions* folder. If you implemented the Group Policy [Central Store](create-and-manage-central-store.md#the-central-store), you must copy the .admx and .adml files to the Central Store.
 
 ### <a id="gpo"></a>2. Create a GPO
 
@@ -245,7 +245,7 @@ To target the devices by OS that are applicable to the GP, add an applicability 
 - [Windows 10 release information](/windows/release-health/release-information)  
 - [Windows Server release information](/windows/release-health/windows-server-release-info)
 
-The build numbers that are shown in the pages are formatted as MMMMM.mmmm (M= major version and m= minor version). The OS Version properties use the major version digits. The OS Version values that are entered into the Applicability Rules should be formatted as "10.0.MMMMM". For example, "10.0.22000".  
+The build numbers that are shown in the pages are formatted as MMMMM.mmmm (M= major version and m= minor version). The OS Version properties use the major version digits. The OS Version values that are entered into the Applicability Rules should be formatted as "10.0.MMMMM" (for example, "10.0.22000").  
 
 To set the correct Applicability Rules for your KIR activation, follow these steps:
 
@@ -253,12 +253,12 @@ To set the correct Applicability Rules for your KIR activation, follow these ste
 
     - **Rule**: Select **Assign profile if** from the dropdown list.  
     - **Property**: Select **OS Version** from the dropdown list.  
-    - **Value**: Enter the Min and the Max OS version numbers formatted as "10.0.MMMMM".
+    - **Value**: Enter the Min and the Max OS version numbers formatted as "10.0.MMMMM."
 
 2. Select **Next**.
 
 > [!NOTE]
-> You can find the OS version of a device by running the `winver` command from the Start menu. The command output shows a two-part version number separated by a period (.). For example, "22000.613". You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use the following values:  
+> You can find the OS version of a device by running the `winver` command from the Start menu. The command output shows a two-part version number separated by a period (.) (for example, "22000.613"). You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use the following values:  
 > Min OS version: "10.0.22000"  
 > Max OS version: "10.0.22001"  
 
