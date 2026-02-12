@@ -22,7 +22,7 @@ This article describes Cumulative Update (CU2) for Microsoft SQL Server 2025. Th
 - SQL Server - Product version: **17.0.4015.4**, file version: **2025.170.4015.4**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
-> ## Known issues in this update
+## Known issues in this update
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
