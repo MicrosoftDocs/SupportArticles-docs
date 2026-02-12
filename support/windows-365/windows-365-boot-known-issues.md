@@ -286,6 +286,16 @@ If the user must share a local settings screen, use a different tool like Quick 
 
 If the user still doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
 
+## User can't get connected after device comes out of sleep in some scenarios
+
+### Solution
+
+IT admin needs to set these two policies on the endpoint:
+
+[RequirePasswordWhenComputerWakesPluggedIn](/windows/client-management/mdm/policy-csp-power)
+
+[RequirePasswordWhenComputerWakesOnBattery](/windows/client-management/mdm/policy-csp-power)
+
 ## Next steps
 
 For more information, see [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
