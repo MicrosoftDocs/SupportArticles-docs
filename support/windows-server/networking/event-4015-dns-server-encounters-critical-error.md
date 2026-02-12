@@ -1,7 +1,7 @@
 ---
 title: Event ID 4015 - The DNS server encountered a critical error
 description: Describes how to fix the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
-ms.date: 02/10/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -108,7 +108,7 @@ One of the following conditions causes the access issue:
 - The SYSTEM account isn't the owner of the DNS zone.
 - The Users group for the domain doesn't have the correct members, including the Authenticated Users group. In this case, the issue might not appear until the DNS servers have been running for at least 10 hours, and it occurs sporadically on multiple DCs.
 
-### The SYSTEM account isn't the owner of the DNS zone
+### The SYSTEM account isn't the owner of the DNS zone - Resolution
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
@@ -127,7 +127,7 @@ To resolve this issue, follow these steps:
 1. Right-click the zone object, and then select **Properties** > **Security** > **Advanced**.
 1. Make sure that **Owner** is set to **SYSTEM**.
 
-### The Users group for the domain doesn't have the correct members
+### The Users group for the domain doesn't have the correct members - Resolution
 
 To resolve this issue, follow these steps:
 
@@ -157,15 +157,13 @@ To resolve this issue, follow these steps:
 
 ## DNS server logs Event ID 4015 (extended error code (ADMIN_LIMIT_EXCEEDED))
 
-This issue occurs when the DNS Server service reaches the `dnsRecord` multi-valued attribute limit for the `dnsNode` object in Active Directory. In Active Directory integrated DNS zones, DNS names are represented by `dnsNode` objects, and DNS records are stored as values in `dnsRecord` attributes of `dnsNode` objects. DNS resource records (RRs) of demoted domain controllers won't be deleted automatically from `dnsRecord` attributes of `dnsNode` objects in the corresponding zone of the related Active Directory partition. For example:
+### Cause
 
-```output
-DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=xxx,DC=xxx
-```
+The DNS Server service generates this error code when a multi-valued `dnsRecord` attribute of a `dnsNode` object in Active Directory contains too many values.
 
-When additional records are added to `dnsRecord` attributes of `dnsNode` objects, the orphaned entries of demoted domain controllers result in the ADMIN_LIMIT_EXCEEDED error.
+Active Directory represents DNS names as `dnsNode`-class objects, and DNS records as values in `dnsRecord` attributes of those objects. When you promote a DC into a forest as a DNS server, Active Directory automatically adds the appropriate DNS records to new and existing `dnsNode` objects. However, when you demote a DC that acts as a DNS server, Active Directory doesn't automatically clean up the related DNS objects and attributes, leaving them as "orphans." After multiple demote and promote operations in a single forest, orphaned values can accumulate to the point that `dnsRecord` attributes reach their maximum capacity.
 
-To check the current number of records in each partition, run the following `repadmin` commands:
+To check the current number of records for the objects in each DNS-related partition, run the following `repadmin` commands:
 
 ```console
 repadmin /showattr . "CN=MicrosoftDNS,CN=System,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues >c:\temp\dns_Domain.txt
@@ -173,48 +171,58 @@ repadmin /showattr . "CN=MicrosoftDNS,DC=DomainDnsZones,DC=contoso,DC=com" /subt
 repadmin /showattr . "CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues >c:\temp\dns_ForestDnsZones.txt
 ```
 
-The output displays the current number of entries in `dnsRecord` attributes of the corresponding Active Directory integrated zone. For example:
+The output displays the current number of entries in `dnsRecord` attributes of the corresponding Active Directory `dnsNode` objects. For example, the following excerpt shows command output that refers to a single `dnsNode` object. The `dnsRecord` attribute for this object has 1280 values:
 
 ```output
 DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
 1280> dnsRecord: <48 byte blob>;
 ```
 
-### Delete orphaned entries of denoted domain controllers
+> [!NOTE]  
+> The `repadmin` output doesn't show the actual values. It represents each value as a "blob." This excerpt shows a single value.
 
-To resolve this issue, remove all orphaned entries of the denoted domain controllers from the zones. To check and selectively delete the entries, run the following Windows PowerShell cmdlets:
+### Resolution
+
+To resolve this issue, you have to remove all the orphaned entries of the demoted domain controllers. To check each zone and selectively delete the appropriate records, open an administrative Windows PowerShell window and run the following cmdlets for each zone:
 
 ```powershell
-Get-DnsServerResourceRecord -ZoneName trustanchors -RRType Ns
-Remove-DnsServerResourceRecord -zonename trustanchors -RRType Ns -Name "@" -RecordData DC.contoso.com
+Get-DnsServerResourceRecord -ZoneName "<ZoneName>" -RRType "<ResourceRecordType>"
+Remove-DnsServerResourceRecord -zonename "<ZoneName>" -RRType "<ResourceRecordType>" -Name "<ResourceRecordName>" -RecordData "<DC_FQDN>"
 ```
 
-If you need to delete multiple resource records (RRs) for a single host, run the following cmdlets:
+In the following example, the first command retrieves all of the name server record values for the trustanchors zone. The second command selects any of those records that have the name "@" and relate to the DC that's named DC-10.contoso.com. Then it deletes those records.
 
 ```powershell
-$AllNsRecords = Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType Ns
+Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType "NS"
+Remove-DnsServerResourceRecord -zonename "trustanchors" -RRType "NS" -Name "@" -RecordData "dc2.contoso.com"
+```
+
+The following example shows a script that uses these commands to delete multiple resource record values for a single host:
+
+```powershell
+$AllNsRecords = Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType "NS"
 Foreach($Record in $AllNsRecords){
 If($Record.recorddata.nameserver -like "*dc2*"){
-$Record | Remove-DnsServerResourceRecord -ZoneName trustanchors
+$Record | Remove-DnsServerResourceRecord -ZoneName "trustanchors"
 }
 }
-$AllSrvRecords = Get-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com" -RRType Srv
+$AllSrvRecords = Get-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com" -RRType "Srv"
 Foreach($Record in $AllSrvRecords){
 If($Record.recorddata.domainname -like "*dc2*"){
-$Record | Remove-DnsServerResourceRecord -ZoneName _msdcs.contoso.com
+$Record | Remove-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com"
 }
 }
 ```
 
-### Enable debug logging with TroubleShootingScript (TSS)
+## Data collection
 
-To start traces on the DNS Server by using [TSS](https://aka.ms/getTSS), run the following cmdlet:
+You can use the [Trouble Shooting Scripts (TSS)](https://aka.ms/getTSS) to gather information that can help you troubleshoot DNS issues and provide background if you have to contact Microsoft Support. For more information about how to use TSS when troubleshooting DNS issues, see [Data collection](troubleshoot-dns-guidance.md#data-collection) in "DNS troubleshooting guidance."
+
+In particular, use the following command to gather trace data surrounding Event ID 4015:
 
 ```powershell
 .\TSS.ps1 -Scenario NET_DNSsrv -Mode Verbose -WaitEvent Evt:4015:'DNS Server'
 ```
 
 > [!NOTE]
-> The trace logging will stop automatically after Event ID 4015 is logged.
-
-For more information, see [Gather key information before contacting Microsoft support](troubleshoot-dns-guidance.md#gather-key-information-before-contacting-microsoft-support).
+> The trace logging automatically stops after Event ID 4015 is logged.
