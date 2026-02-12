@@ -1,6 +1,6 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
-description: Describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
+description: Discusses how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 ms.date: 02/09/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,7 +17,7 @@ appliesto:
 
 # How to use Group Policy to deploy a Known Issue Rollback
 
-This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
+This article discusses how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 
 ## Summary
 
@@ -26,7 +26,7 @@ Microsoft has developed a new Windows servicing technology that's named [KIR](ht
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition .msi files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -40,9 +40,9 @@ If Microsoft determines that a nonsecurity update has a critical regression or s
 
 For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is required.
 
-For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
+For enterprise customers, Microsoft provides a policy definition .msi file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
-To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Issue Rollback 031321 01.msi](https://download.microsoft.com/download/b/8/9/b89221d0-d5db-40a7-bf25-cecbee25f713/Windows%2010%20(2004%20&%2020H2)%20Known%20Issue%20Rollback%20031321%2001.msi).
+To see an example of a KIR .msi file, download [Windows 10 (2004 & 20H2) Known Issue Rollback 031321 01.msi](https://download.microsoft.com/download/b/8/9/b89221d0-d5db-40a7-bf25-cecbee25f713/Windows%2010%20(2004%20&%2020H2)%20Known%20Issue%20Rollback%20031321%2001.msi).
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
@@ -50,7 +50,7 @@ A KIR policy definition has a limited lifespan (a few months, at most). After Mi
 
 To use Group Policy to apply a KIR to a single device, follow these steps:
 
-1. Download the KIR policy definition MSI file to the device.  
+1. Download the KIR policy definition .msi file to the device.  
    > [!IMPORTANT]  
    > Make sure that the operating system that is listed in the .msi file name matches the operating system of the device that you want to update.
 1. Run the .msi file on the device. This action installs the KIR policy definition in the Administrative Template.  
@@ -69,12 +69,12 @@ For more information about how to use the Local Group Policy Editor, see [Workin
 
 To apply a KIR policy definition to devices that belong to a hybrid Microsoft Entra ID or AD DS domain, follow these steps:
 
-1. [Download and install the KIR MSI files](#install)
+1. [Download and install the KIR .msi files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
 1. [Configure the GPO](#configure).
 1. [Monitor the GPO results](#monitor).
 
-### <a id="install"></a>1. Download and install the KIR MSI files
+### <a id="install"></a>1. Download and install the KIR .msi files
 
 1. Check the KIR release information or the known issues lists to identify which operating system versions you have to update.  
 1. Download the KIR policy definition .msi files that you require to update to the computer that you use to manage Group Policy for your domain.
@@ -114,28 +114,28 @@ Make sure that each affected device restarts after it applies the policy.
 > [!NOTE]
 > To use the solutions in this section, you must install the cumulative update that is released on [July 26, 2022](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or a later one on the computer.
 
-Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
+Group Policy policies and GPOs aren't compatible with mobile device management (MDM)-based solutions, such as Microsoft Intune. These instructions guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX-backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
 
 To perform a KIR activation on Intune managed devices, follow these steps:  
 
-1. [Download and install the KIR MSI file to get ADMX files](#1-download-and-install-the-kir-msi-file-to-get-admx-files).  
+1. [Download and install the KIR .msi file to get ADMX files](#1-download-and-install-the-kir-msi-file-to-get-admx-files).  
 2. [Create a custom configuration profile in Microsoft Intune](#2-create-a-custom-configuration-profile-in-microsoft-intune).
 3. [Monitor KIR activation](#3-monitor-kir-activation).  
   
-### 1. Download and install the KIR MSI file to get ADMX files
+### 1. Download and install the KIR .msi file to get ADMX files
 
 1. Check the KIR release information or the known issues lists to identify which operating system (OS) versions you must update.  
-2. Download the required KIR policy definition .msi files on the machine you use to sign in to Microsoft Intune.  
+2. Download the required KIR policy definition .msi files on the device that you use to sign in to Microsoft Intune.  
 
     > [!NOTE]
-    > You will need access to the contents of a KIR activation ADMX file.  
+    > You must have access to the contents of a KIR activation ADMX file.  
 
 3. Run the `.msi` files. This action installs the KIR policy definition in the Administrative Template.  
 
     > [!NOTE]
     > Policy definitions are installed in the *C:\Windows\PolicyDefinitions* folder.
     >
-    > If you want to extract the ADMX files to another location, use the `msiexec` command with the [TARGETDIR](/windows/win32/msi/targetdir) property. For example:  
+    > If you want to extract the ADMX files to another location, use the `msiexec` command together with the [TARGETDIR](/windows/win32/msi/targetdir) property. For example:  
     >
     > ```console
     > msiexec /i c:\admx_file.msi /qb TARGETDIR=c:\temp\admx
@@ -143,7 +143,7 @@ To perform a KIR activation on Intune managed devices, follow these steps:
 
 ### 2. Create a custom configuration profile in Microsoft Intune  
 
-To configure devices to perform a KIR activation, you need to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
+To configure devices to perform a KIR activation, you have to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
 
 1. [Select properties and add basic information of the profile](#a-select-properties-and-add-basic-information-about-the-profile).
 2. [Add custom configuration setting to ingest ADMX files for KIR activation](#b-add-custom-configuration-setting-to-ingest-admx-files-for-kir-activation).
@@ -173,9 +173,9 @@ To configure devices to perform a KIR activation, you need to create a custom co
 6. Select **Next**.  
 
 > [!NOTE]  
-> For more information about creating custom configuration profiles and configuration settings, see [Use custom device settings in Microsoft Intune](/mem/intune/configuration/custom-settings-configure).
+> For more information about how to create custom configuration profiles and configuration settings, see [Use custom device settings in Microsoft Intune](/mem/intune/configuration/custom-settings-configure).
 
-Before proceeding to the next two steps, open the ADMX file in a text editor (for example, Notepad) where the file was extracted. The ADMX file should be in the path *C:\Windows\PolicyDefinitions* if you installed it as an MSI file.
+Before you proceed to the next two steps, open the ADMX file in a text editor (for example, Notepad) within the folder in which the file was extracted. The ADMX file should be in the path, *C:\Windows\PolicyDefinitions*, if you installed it as an .msi file.
 
 Here's an example of the ADMX file:
 
@@ -199,31 +199,31 @@ This configuration setting is used to install the KIR activation policy on targe
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
 
-    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "ADMX Ingestion: 04/30 KIR Activation – Windows 10 21H2."  
+    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so that you can easily identify them later. For example, a good setting name is "ADMX Ingestion: 04/30 KIR Activation – Windows 10 21H2."  
     - **Description**: Enter a description for the setting. This setting is optional but recommended.  
     - **OMA-URI**: Enter the string *./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/KIR/Policy/\<ADMX Policy Name\>*.
 
         > [!NOTE]
         > Replace \<ADMX Policy Name\> with the value of the recorded policy name from the ADMX file. For example, "KB5011563_220428_2000_1_KnownIssueRollback."  
     - **Data type**: Select **String**.  
-    - **Value**: Open the ADMX file with a text editor (for example, Notepad). Copy and paste the entire contents of the ADMX file you intend to ingest into this field.  
+    - **Value**: Open the ADMX file with a text editor (for example, Notepad). Copy and paste the entire contents of the ADMX file that you intend to ingest into this field.  
 
 3. Select **Save**.  
 
 #### C. Add custom configuration setting to set new KIR activation policy  
 
-This configuration setting is used to configure the KIR activation policy, which is defined in the previous step.
+This configuration setting is used to configure the KIR activation policy that's defined in the previous step.
 
-Follow these steps to add the KIR activation configuration settings:
+To add the KIR activation configuration settings, follow these steps:
 
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
 
-    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2."  
+    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so that you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2."  
     - **Description**: Enter a description for the setting. This setting is optional but recommended.  
     - **OMA-URI**: Enter the string *./Device/Vendor/MSFT/Policy/Config/KIR~Policy~KnownIssueRollback~\<Parent Category\>/\<ADMX Policy Name\>*.  
         > [!NOTE]
-        > Replace \<Parent Category\> with the parent category string recorded in the previous step. For example, "KnownIssueRollback_Win_11." Replace \<ADMX Policy Name\> with the same policy name used in the previous step.
+        > Replace \<Parent Category\> with the parent category string recorded in the previous step. For example, "KnownIssueRollback_Win_11." Replace \<ADMX Policy Name\> with the same policy name that you used in the previous step.
 
     - **Data type**: Select **String**.  
     - **Value**: Enter *\<disabled/\>*.
@@ -232,7 +232,7 @@ Follow these steps to add the KIR activation configuration settings:
 
 #### D. Assign devices to the KIR activation custom configuration profile  
 
-After you've defined what the custom configuration profile does, follow these steps to identify which devices you'll configure:
+After you define what the custom configuration profile does, follow these steps to identify which devices you'll configure:
 
 1. In **Assignments**, select **Add all devices**.  
 2. Select **Next**.  
@@ -245,11 +245,11 @@ To target the devices by OS that are applicable to the GP, add an applicability 
 - [Windows 10 release information](/windows/release-health/release-information)  
 - [Windows Server release information](/windows/release-health/windows-server-release-info)
 
-The build numbers shown in the pages are formatted as MMMMM.mmmm (M= major version and m= minor version). The OS Version properties use the major version digits. The OS Version values entered into the Applicability Rules should be formatted as "10.0.MMMMM". For example, "10.0.22000".  
+The build numbers that are shown in the pages are formatted as MMMMM.mmmm (M= major version and m= minor version). The OS Version properties use the major version digits. The OS Version values that are entered into the Applicability Rules should be formatted as "10.0.MMMMM". For example, "10.0.22000".  
 
-Follow these instructions to set the correct Applicability Rules for your KIR activation:
+To set the correct Applicability Rules for your KIR activation, follow these steps:
 
-1. In **Applicability Rules**, create an applicability rule by entering the following properties on the blank rule already on the page:  
+1. In **Applicability Rules**, create an applicability rule by entering the following properties on the blank rule that's already on the page:  
 
     - **Rule**: Select **Assign profile if** from the dropdown list.  
     - **Property**: Select **OS Version** from the dropdown list.  
@@ -258,13 +258,13 @@ Follow these instructions to set the correct Applicability Rules for your KIR ac
 2. Select **Next**.
 
 > [!NOTE]
-> You can find the OS version of a device by running the `winver` command from the Start menu. The command output shows a two-part version number separated by a ".". For example, "22000.613". You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use these values:  
+> You can find the OS version of a device by running the `winver` command from the Start menu. The command output shows a two-part version number separated by a period (.). For example, "22000.613". You can append the left number to "10.0." for the Min OS version. Obtain the Max OS version number by adding 1 to the last digit of the Min OS version number. For this example, you can use the following values:  
 > Min OS version: "10.0.22000"  
 > Max OS version: "10.0.22001"  
 
 #### F. Review and create KIR activation custom configuration profile
 
-Review your settings of the custom configuration profile and select **Create**.
+Review your settings of the custom configuration profile, and select **Create**.
 
 ### 3. Monitor KIR activation  
 
@@ -274,7 +274,7 @@ Your KIR activation should be in progress now. Follow these steps to monitor the
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:  
 
     - **Succeeded**: Policy is applied successfully.  
-    - **Error**: The policy failed to apply. The message typically displays an error code that links to an explanation.  
+    - **Error**: The policy didn't apply. The message typically displays an error code that links to an explanation.  
     - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review the conflict.  
     - **Pending**: The device hasn't checked in with Intune to receive the policy yet.  
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.  
