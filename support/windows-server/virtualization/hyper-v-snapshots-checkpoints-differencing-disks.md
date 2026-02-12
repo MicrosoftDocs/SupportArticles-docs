@@ -225,6 +225,7 @@ Before you contact Microsoft Support, you can gather the following information a
 ## References
 
 - [How to merge checkpoints that have multiple differencing disks](merge-checkpoints-with-many-differencing-disks.md)
-- [Backup recovery checkpoint issues](cannot-delete-recovery-checkpoint-vm.md)
-- [Common antivirus exclusions for Hyper-V](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)
+- [You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager](cannot-delete-recovery-checkpoint-vm.md)
+- [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md)
+- [Microsoft Defender Antivirus exclusions on Windows Server](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)
 - [Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)
