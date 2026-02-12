@@ -25,8 +25,6 @@ items:
 
 - name: Staged Update Run
   items:
-    - name: Troubleshooting Cluster Staged Update Run
-      href: staged-update-run/troubleshoot-cluster-staged-update-run-api-issues.md
     - name: Troubleshooting Staged Update Run
       href: staged-update-run/troubleshoot-staged-update-run-api-issues.md
     - name: Initialized is false
