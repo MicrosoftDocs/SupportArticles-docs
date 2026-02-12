@@ -34,7 +34,7 @@ This article provides lists of errors that you might experience during user data
 | **IM-003** | User migration failed. User \<X> is not mapped to an identity on tenant \<Y>. User \<X> must be added to the identity mapping, and then you must re-run identity mapping with this user and then retry the migration. | Admins have to add the user to the identity mapping system. | Add the user to identity mapping, and map them. |
 | **MIGR-001** | Tenant authorization error. The tenants are not configured to support migration. | The Organization Relationship isn't configured correctly. | Correct the Organization Relationship to authorize migration. |
 | **MIGR-002** | User migration failed. User \<X> is not authorized to migrate. To authorize \<X>, add them to security group \<Y> and then retry the migration. | Admins have to authorize a user for a migration. The user must be a member of the security group. | Add the user to the security group on the source tenant. |
-| **MIGR-003** | User \[X] migration failed. Please retry user migration. | A user's migration failed, and the admin must retry it. | Retry the migration. |
+| **MIGR-003** | User [X] migration failed. Please retry user migration. | A user's migration failed, and the admin must retry it. | Retry the migration. |
 | **MIGR-004** | Authorization error. Either one or both of the tenant Organization Relationships isn't configured correctly, or the user isn't a member of the authorized security group. | Either the Organization Relationships aren't configured correctly, or the user isn't a member of the security group that authorizes the user's data to be moved. | Either edit the Organization Relationship or add the user to the security group, or do both. |
 
 ## Cross-tenant migration service errors
@@ -47,6 +47,7 @@ This article provides lists of errors that you might experience during user data
 | **CTM-101** | User migration validation failed. User identity mapping not in completed state. Mapping state is \<state from IM>. Refer to identity mapping documentation to complete the process or fix the errors. | Identity mapping is found, but isn't in a completed state. It could be in mapped state. | Either wait for identity mapping to finish or run the complete identity mapping steps. |
 | **CTM-102** | Service is experiencing a high volume of requests and we are unable to validate the user at this time. Please resubmit the user as part of a different batch after some time. | The service is experiencing a high volume of requests and can't validate the user at this time. Resubmit the user as part of a different batch after some time. | Retry the migration. |
 | **CTM-103** | An internal server error occurred during the validation of the user. Please resubmit the user as part of a different batch or contact support if the issue persists. | An internal server error occurred during user validation. | Retry the migration. |
+| **CTM-104** | User migration failed. The CTMS App in tenant is not provisioned, or the app is provisioned but is not enabled. Please refer to tenant configuration documentation and retry migration. | The CTMS app setup is not correct. | Refer to tenant configuration documentation and retry migration. |
 
 ## Exchange mailbox migration errors
 
