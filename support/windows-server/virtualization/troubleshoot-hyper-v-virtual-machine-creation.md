@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Hyper-V Virtual Machine Creation
+title: Guidance for troubleshooting Hyper-V virtual machine creation
 description: Provides steps, recommendations, and fixes to resolve problems in using VMs in Microsoft Hyper-V environments.
 ms.date: 10/08/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Hyper-V virtual machine creation
+# Troubleshoot Hyper-V virtual machine creation troubleshooting guidance
 
 ## Summary
 
