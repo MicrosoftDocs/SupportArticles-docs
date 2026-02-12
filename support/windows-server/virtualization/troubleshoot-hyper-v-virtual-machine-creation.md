@@ -63,6 +63,8 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Resolution
 
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
 - Export the following registry subkey from a working host:
    `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker`
 - Import the subkey to the affected server, set vmwp.exe or SYSTEM account to Full Control.
@@ -200,7 +202,7 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Symptoms
 
-- System fails after you move a page file or during VM creation, especially on Windows 11. 
+- System fails after you move a page file or during VM creation, especially on Windows 11.
 
 #### Resolution
 
