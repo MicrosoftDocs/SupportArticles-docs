@@ -57,7 +57,7 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - Node appears in "Quarantine" state.
-- Event IDs: 1641 ("Node quarantine activated"), 1647, repeated 7031 (Service Control Manager: unexpected service termination).
+- Event IDs: 1641 (`Node quarantine activated`), 1647, repeated 7031 (Service Control Manager: `unexpected service termination`).
 - Cluster roles continuously fail over from the node. VMs may repeatedly restart or move.
 
 #### Resolution:
@@ -75,7 +75,7 @@ Use this checklist for systematic troubleshooting:
 #### Symptoms
 
 - Node is quarantined. Network events show dropped packets or heartbeat failures.
-- Event IDs: 1135 (Node removed from cluster), 1177, warnings about broken communication channels (status 10054).
+- Event IDs: 1135 (`Node removed from cluster`), 1177, warnings about broken communication channels (status `10054`).
 - Other nodes show failed connection attempts to quarantined node (port 3343).
 
 #### Resolution
@@ -135,7 +135,7 @@ Use this checklist for systematic troubleshooting:
 
 General Recovery Steps:
 
-- Use PowerShell to clear node quarantine: `Start-ClusterNode -Name \<NodeName> -ClearQuarantine`.
+- Use PowerShell to clear node quarantine: `Start-ClusterNode -Name <NodeName> -ClearQuarantine`.
 - Evict and re-add node; restart cluster service, if it's necessary.
 - Restart node after clearing issues (hardware, network, service-related).
 - Monitor logs for confirmation: node rejoins cluster normally.
@@ -144,9 +144,9 @@ General Recovery Steps:
 
 Before you contact Microsoft Support, you can gather the following information about your issue.
 
-- Cluster `Logs: Get-ClusterLog -Destination \<FolderPath> -UseLocal -TimeSpan \<Minutes>`
+- Cluster Logs: `Get-ClusterLog -Destination \<FolderPath> -UseLocal -TimeSpan <Minutes>`
 - Event Logs: Export System, Application, and FailoverClustering logs.
-- Network Trace: `Netsh trace start scenario=GENERAL capture=yes tracefile=\<path>`
+- Network Trace: `Netsh trace start scenario=GENERAL capture=yes tracefile=<path>`
 - Process dumps files: As needed, using Sysinternals or built-in Windows tools.
 - Storage and hardware diagnostics: Collect through vendor tool output.
 - Security software logs: Export relevant security agent filtering and action logs.
@@ -160,7 +160,7 @@ Before you contact Microsoft Support, you can gather the following information a
 | Storage/CSV Access Failure | CSV paused/disconnected, VM disk I/O errors | Storage vendor analysis, update firmware/drivers, fix MPIO, AV exclusions | 5120, 5142 |
 | Antivirus/security platform issues | Packet dropped by filter, service block | Disable/remove AV/Security, set exclusions, reinstall as necessary | Varies |
 | Configuration/quorum issues | Quorum witness fail, IP/certificate errors | Set static IPs, fix certificates, rebuild quorum witness, update resources | 1069, 1558, 121 |
-| Recovery steps (general) | Can't host roles, node stays quarantined | Start-ClusterNode -ClearQuarantine, evict/re-add, restart, monitor logs | 1641 |
+| Recovery steps (general) | Can't host roles, node stays quarantined | `Start-ClusterNode -ClearQuarantine`, evict/re-add, restart, monitor logs | 1641 |
 
 ## References
 
