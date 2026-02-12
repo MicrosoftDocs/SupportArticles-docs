@@ -75,4 +75,5 @@ Before you contact Microsoft Support, you can gather the following information a
 ## References
 
 - [Troubleshoot Hyper-V virtual machine startup, state, and access failures](hyper-v-start-state-access-failures-clustered-standalone.md)
+- [Best Practices Analyzer for Hyper-V](/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/best-practices-analyzer-for-hyper-v)
 - [Windows Server 2012 Hyper-V Best Practices](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/windows-server-2012-hyper-v-best-practices-in-easy-checklist-form/256060)
