@@ -1,6 +1,6 @@
 ---
-title: Cluster Node Quarantine Troubleshooting Guide
-description: Resolves issues cause a cluster node quarantine to temporarily isolate an unstable or problematic node.
+title: Guidance for troubleshooting cluster node quarantine issues
+description: Discusses how to isolate and fix issues that cause a cluster node quarantine to temporarily isolate an unstable or problematic node.
 ms.date: 10/06/2025
 author: kaushika-msft
 ms.author: kaushika
@@ -15,7 +15,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Cluster node quarantine troubleshooting guide
+# Cluster node quarantine troubleshooting guidance
 
 ## Summary
 
