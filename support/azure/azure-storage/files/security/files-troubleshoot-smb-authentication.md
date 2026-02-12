@@ -401,18 +401,16 @@ If this is the case, ask your Microsoft Entra admin to grant admin consent to th
 
 <a name='error---the-request-to-aad-graph-failed-with-code-badrequest'></a>
 
-### Error - "The request to Azure AD Graph failed with code BadRequest"
+### Error - "The request to Microsoft Graph failed with code BadRequest"
 
 #### Cause 1: An application management policy is preventing credentials from being created
 
-When enabling Microsoft Entra Kerberos authentication, you might encounter this error if the following conditions are met:
+When enabling Microsoft Entra Kerberos authentication, you might encounter this error if you (or your administrator) has set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) or an [application management policy](/graph/api/resources/appmanagementpolicy) that:
 
-1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
-2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
-    - Has no start date or has a start date before January 1, 2019.
-    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of fewer than 365.5 days.
+- Applies to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
+- Sets a restriction on service principal passwords, which either blocks password addition or restricts maximum password lifetime to fewer than 365.5 days.
 
-There is currently no workaround for this error.
+To resolve this error, you should configure the offending policy to [grant an exception](/entra/identity/enterprise-apps/configure-app-management-policies#grant-an-exception-to-a-user-or-service) to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
 
 #### Cause 2: An application already exists for the storage account
 
