@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Hyper-V virtual machine creation troubleshooting guidance
+# Hyper-V virtual machine creation troubleshooting guidance
 
 ## Summary
 
