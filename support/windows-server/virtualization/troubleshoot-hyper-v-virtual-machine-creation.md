@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Hyper-V Virtual Machine Creation
+title: Guidance for troubleshooting Hyper-V virtual machine creation
 description: Provides steps, recommendations, and fixes to resolve problems in using VMs in Microsoft Hyper-V environments.
 ms.date: 10/08/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Hyper-V virtual machine creation
+# Hyper-V virtual machine creation troubleshooting guidance
 
 ## Summary
 
@@ -47,7 +47,7 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Symptoms
 
-- VM import fails, config files missing, "Permissions Denied" error. 
+- VM import fails, config files missing, "Permissions Denied" error.
 
 #### Resolution
 
@@ -57,14 +57,16 @@ The following sections detail the most common failure modes and provide step-by-
 
 ### Registry Permission Errors
 
-#### Symptoms 
+#### Symptoms
 
-- Dynamic network address assignment fails, "No available MAC address", "ACCESS DENIED" events. 
+- Dynamic network address assignment fails, "No available MAC address", "ACCESS DENIED" events.
 
 #### Resolution
 
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
 - Export the following registry subkey from a working host:
-   HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker
+   `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Worker`
 - Import the subkey to the affected server, set vmwp.exe or SYSTEM account to Full Control.
 - Use Registry Editor for permission changes, and test importing or starting the VM.
 
@@ -76,11 +78,11 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Resolution
 
-- In Group Policy Editor (gpedit.msc), make sure that "NT Virtual Machines" and cluster service accounts have:
-    - "Access this computer from the network"
-    - "Create symbolic links"
-    - "Log on as a service"
-- Run gpupdate /force. Restart cluster nodes, if it's required.
+- In Group Policy Editor (gpedit.msc), make sure that "NT Virtual Machines" and cluster service accounts have the following privileges:
+  - **Access this computer from the network**
+  - **Create symbolic links**
+  - **Log on as a service**
+- Run `gpupdate /force`. Restart cluster nodes, if it's required.
 
 ### Virtual switch or network adapter issues
 
@@ -94,13 +96,13 @@ The following sections detail the most common failure modes and provide step-by-
 
 - Check and re-create virtual switch in Hyper-V Manager.
 - Update all relevant network drivers (especially for third-party platforms).
-- Use Get-VMNetworkAdapter -VMName \<VMName> to review adapter status.
+- Use `Get-VMNetworkAdapter -VMName <VMName>` to review adapter status.
 
 ### Checkpoint and Snapshot Chain Errors
 
 #### Symptoms 
 
-- VM reverts to old snapshot after failure or maintenance. 
+- VM reverts to old snapshot after failure or maintenance.
 
 #### Resolution
 
@@ -113,7 +115,7 @@ The following sections detail the most common failure modes and provide step-by-
 #### Symptoms
 
 - VMs exists in cluster manager but is missing in Hyper-V.
-- Validation and report failures. 
+- Validation and report failures.
 
 #### Resolution
 
@@ -125,23 +127,23 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Symptoms
 
-- "Virtual machine could not start because the hypervisor is not running." 
+- "Virtual machine could not start because the hypervisor is not running."
 
 #### Resolution
 
 - Enable virtualization (VT-x/AMD-V) and Execute Disable/NX in BIOS/UEFI.
-- Run bcdedit /set hypervisorlaunchtype auto.
+- Run `bcdedit /set hypervisorlaunchtype auto`.
 - Restart the host.
 
 ### OS, update, and software driver problems
 
 #### Symptoms
 
-- VMs fail after updates, stuck update service, system failures (blue screen) 
+- VMs fail after updates, stuck update service, system failures (blue screen)
 
 #### Resolution
 
-- Run sfc /scannow and DISM /Online /Cleanup-Image /RestoreHealth.
+- Run `sfc /scannow` and `DISM /Online /Cleanup-Image /RestoreHealth`.
 - Clear C:\Windows\SoftwareDistribution cache after stopping the update service.
 - For blue screens, analyze minidump files by using BlueScreenView, and update problematic third-party drivers (for example, airlock and Crowdstrike).
 - Reinstall the Hyper-V role, if it's necessary.
@@ -151,7 +153,7 @@ The following sections detail the most common failure modes and provide step-by-
 #### Symptoms
 
 - Performance and availability issues.
-- Users try to block CPU or memory overallocation. 
+- Users try to block CPU or memory overallocation.
 
 #### Resolution
 
@@ -182,15 +184,15 @@ The following sections detail the most common failure modes and provide step-by-
 
 - Copy export folder locally to core server, and use direct PowerShell import:
 
-    ```powershell
-    Import-VM -Path \<VMPath> -Copy -GenerateNewId -VhdDestinationPath \<CSVLocation> -VirtualMachinePath \<ConfigPath>
-    ```
+  ```powershell
+  Import-VM -Path <VMPath> -Copy -GenerateNewId -VhdDestinationPath <CSVLocation> -VirtualMachinePath <ConfigPath>
+  ```
 
 ### Template and disk naming conflicts
 
 #### Symptoms
 
-- New VMs share disk names. This condition causes confusion in bulk deployments. 
+- New VMs share disk names. This condition causes confusion in bulk deployments.
 
 #### Resolution
 
@@ -200,7 +202,7 @@ The following sections detail the most common failure modes and provide step-by-
 
 #### Symptoms
 
-- System fails after you move a page file or during VM creation, especially on Windows 11. 
+- System fails after you move a page file or during VM creation, especially on Windows 11.
 
 #### Resolution
 
@@ -212,7 +214,7 @@ The following sections detail the most common failure modes and provide step-by-
 #### Symptoms
 
 - Can't start a new VM.
-- VM fails after conversion or installation. 
+- VM fails after conversion or installation.
 
 #### Resolution
 
@@ -225,8 +227,8 @@ The following sections detail the most common failure modes and provide step-by-
 | --- | --- | --- | --- | --- |
 | Import/Export Fails, Permissions Denied | "Could not locate VM config," "Permission Denied" | Directory/ownership issue | Fix NTFS, set ownership/inheritance, add groups | File system, Procmon |
 | Dynamic MAC/Network Assign Fails | "No available MAC," "ACCESS DENIED" | Registry permission | Grant vmwp.exe full control, import working reg key | Registry Editor |
-| VM Fails to Start, Logon Failure | 0x80070569 | GPO/group policy misconfig | Set rights in GPO, gpupdate/force, restart nodes | gpedit.msc |
-| VM Can't Start, Hypervisor Not Running | "Hypervisor not running" | BIOS/UEFI not set | Enable VT-x/NX/XD, check BIOS, run bcdedit command | BIOS, bcdedit |
+| VM Fails to Start, Logon Failure | `0x80070569` | GPO/group policy misconfig | Set rights in GPO, `gpupdate/force`, restart nodes | gpedit.msc |
+| VM Can't Start, Hypervisor Not Running | "Hypervisor not running" | BIOS/UEFI not set | Enable VT-x/NX/XD, check BIOS, run `bcdedit `command | BIOS, bcdedit |
 | VM Reverts to Old Checkpoint after Maintenance | n/a | Orphaned .avhdx files | Merge/delete old checkpoints, clean up chain | Hyper-V Manager |
 | Cluster, Failover Issues | "Validation failed," missing VMs | Storage/service misconfig | Cluster validation, fix storage, refresh/sync cluster config | FCM, validation logs |
 | Network/Switch Setup Problems | No connectivity, adapter install fails | Driver/switch misconfig | Update network drivers, recreate switches, use Get-VMNetworkAdapter | Hyper-V, PowerShell |
@@ -244,36 +246,39 @@ Before you contact Microsoft Support, you can gather the following information a
 - **System and storage event logs** (eventvwr.msc, filter for disk/storage-related IDs)
 - **MPIO configuration and status:**
 
-    ```console
-    mpclaim -s -d
-    mpclaim -v
-    ```
+  ```console
+  mpclaim -s -d
+  mpclaim -v
+  ```
+
 - **Hardware/driver/firmware version info**
 - **Device Manager screenshots (all storage and DSMs)**
 - **Perfmon or Storport traces**:
 
-    ```console
-    logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
-    logman create trace storport -ow -o \<output path> -p \<provider>
-    ```
-- **Cluster logs:** Get-ClusterLog -Node \<NodeName> -TimeSpan 3
+  ```console
+  logman create counter PerfLog -o C:\PerfLog.blg -f bincirc ...
+  logman create trace storport -ow -o <output path> -p <provider>
+  ```
+
+- **Cluster logs:** `Get-ClusterLog -Node \<NodeName> -TimeSpan 3`
 - **DiskPart:**
 
-    ```console
-    diskpart
-    list disk
-    list volume
-    san
-    ```
+  ```console
+  diskpart
+  list disk
+  list volume
+  san
+  ```
+
 - **TSS or WPR logs** for IO, storage, failover, VSS issues
 - **Vendor log collection tool, as advised**
 
 ## References
 
-- [Hyper-V Best Practices Analyzer](/windows-server/virtualization/hyper-v/best-practices-analyzer/best-practices-analyzer-for-hyper-v)
-- [Hyper-V Import/Export](/windows-server/virtualization/hyper-v/deploy/export-and-import-virtual-machines?tabs=hyper-v-manager)
-- [Windows Server licensing guide](/windows-server/get-started/editions-comparison)
-- [Troubleshooting cluster validation Reports](../high-availability/validate-hardware-failover-cluster.md)
+- [Best Practices Analyzer for Hyper-V](/windows-server/virtualization/hyper-v/best-practices-analyzer/best-practices-analyzer-for-hyper-v)
+- [Export and import virtual machines](/windows-server/virtualization/hyper-v/deploy/export-and-import-virtual-machines)
+- [Comparison of Windows Server editions](/windows-server/get-started/editions-comparison)
+- [Validate hardware for a failover cluster](../high-availability/validate-hardware-failover-cluster.md)
 - [BlueScreenView tool](https://www.nirsoft.net/utils/blue_screen_view.html)
 
 **Third-party contact disclaimer**
