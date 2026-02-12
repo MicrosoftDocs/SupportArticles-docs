@@ -2796,6 +2796,8 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: "Troubleshooting guidance: Cluster node quarantine"
+      href: ./virtualization/cluster-node-quarantine-troubleshooting.md
     - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
