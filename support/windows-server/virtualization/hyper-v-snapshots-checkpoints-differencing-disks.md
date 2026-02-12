@@ -40,7 +40,7 @@ Use this checklist for systematic troubleshooting:
     ```
 
 - **Check permissions and security**
-  - Verify that the NT VIRTUAL MACHINE\Virtual Machines group has "Log on as a Service" and NTFS folder permissions.
+  - Verify that the NT VIRTUAL MACHINE\Virtual Machines group has the "Log on as a Service" privilege and NTFS folder permissions.
   - Review antivirus exclusions for Hyper-V-related files and folders.
 - **Check for orphaned differencing files**
   - Look for .avhd, .avhdx, .mrt, and .rct files that aren't reflected in Hyper-V Manager.
@@ -134,7 +134,7 @@ For more information, see [How to merge checkpoints that have multiple differenc
 
 **Permission rights issues**
 
-1. Add NT VIRTUAL MACHINE\Virtual Machines to "Log on as a service."
+1. Add NT VIRTUAL MACHINE\Virtual Machines to the "Log on as a service" policy.
    - GPMC: Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment
 1. Apply permissions:
 
@@ -186,8 +186,8 @@ For more information, see [How to merge checkpoints that have multiple differenc
 | Can't delete or merge checkpoints | Orphaned, invisible, or backup-created checkpoints | Shutdown, use PowerShell "Edit Disk" for manual merge |
 | No space to merge, VM doesn't start | Storage exhaustion, unmerged checkpoints | Free up storage, attach USB/NAS, perform merge and export |
 | Error 0x80070032 or disk chain corruption | Broken chain, merge interrupted, disk mismatch | Identify correct merge order, repair chain, or create new VM |
-| File lock or sharing violation (0x80070020) | Backup, AV, or other process has disk open | Use ProcMon to identify lock, restart VSS/Hyper-V/backups, antivirus exclusions |
-| VM stuck at "creating checkpoint" / not responding | SnapshotTask/VMDeltaSync stuck, HVMM service blocked | Restart host, kill stuck processes, analyze dump files |
+| File lock or sharing violation (`0x80070020`) | Backup, AV, or other process has disk open | Use ProcMon to identify lock, restart VSS/Hyper-V/backups, antivirus exclusions |
+| VM stuck at "creating checkpoint" / not responding | `SnapshotTask`/`VMDeltaSync` stuck, HVMM service blocked | Restart host, kill stuck processes, analyze dump files |
 | Can't expand disk (option greyed out) | Active differencing or child disk exists | Merge all checkpoints, make sure that parent is selected in settings |
 | "Catastrophic failure" deleting checkpoint | Invalid permissions, configuration corruption, backup lock | Fix permissions, remove checkpoint through a new VM, if it's necessary |
 | Pass-through/shared VHD/fibre channel=fail | Not supported by design for checkpointing | Convert disk type or use backup vendor's procedure |
