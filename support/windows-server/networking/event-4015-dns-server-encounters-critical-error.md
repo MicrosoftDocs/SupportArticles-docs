@@ -1,6 +1,6 @@
 ---
 title: Event ID 4015 - The DNS server encountered a critical error
-description: Describes how to fix the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
+description: Describes how to interpret DNS Server Event ID 4015, identify the cause of the critical error, and then fix it.
 ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
@@ -18,7 +18,15 @@ _Original KB number:_ &nbsp; 969488, 2733147
 
 ## Summary
 
-This article helps to resolve the issue in which Event ID 4015 is logged and the Domain Name Service (DNS) server encounters a critical error.
+Domain Name Service (DNS) server Event ID 4015 indicates that a domain controller (DC) that runs the DNS Server role experienced a critical error. The event description includes an error code that identifies the type of issue that occurred.
+
+This article describes three common scenarios that trigger Event ID 4015:
+
+- Error code 00002095: A Read-Only Domain Controller (RODC) running DNS can't connect to a writable domain controller
+- Error code 0000051B: The DNS server can't access an Active Directory object due to permission issues
+- ADMIN_LIMIT_EXCEEDED: A DNS-related Active Directory object contains too many orphaned entries from demoted domain controllers
+
+Review the error code in your Event ID 4015 description, then follow the troubleshooting steps for your specific scenario.
 
 ## Symptoms
 
