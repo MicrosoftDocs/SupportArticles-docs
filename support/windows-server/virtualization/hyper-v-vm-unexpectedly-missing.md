@@ -46,8 +46,7 @@ The precise root cause of the VM disappearance isn't yet determined because of t
 
 - Early initiation of planned host decommission activities, either accidentally or because of miscommunication.
 
-> [!NOTE]
->
+> [!NOTE]  
 > Manually deleting a VM doesn't generate specific logs or event entries in Hyper-V. Therefore, it can be challenging to trace such actions after the fact.
 
 ## Resolution
@@ -56,7 +55,7 @@ To resolve the issue, follow these steps:
 
 1. Log collection and analysis:
 
-Collect and upload Troubleshooting Support Script (TSS) logs that are specific to Hyper-V for further analysis.
+  Collect and upload Troubleshooting Support Script (TSS) logs that are specific to Hyper-V for further analysis. See [Data collection](#data-collection).
   
 Customer guidance and best practices:
 
@@ -69,9 +68,9 @@ Customer guidance and best practices:
 Before you contact Microsoft Support, you can gather the following information about your issue.
 
 1. Use the TSS tool to collect detailed Hyper-V logs.
-2. Retain logs for critical periods, especially during or after maintenance windows.
-3. Archive VM configuration files and other related data as part of standard operating procedures.
-4. Review event logs for any unusual activities, such as disk errors or antivirus actions that could affect VM configuration files.
+1. Retain logs for critical periods, especially during or after maintenance windows.
+1. Archive VM configuration files and other related data as part of standard operating procedures.
+1. Review event logs for any unusual activities, such as disk errors or antivirus actions that could affect VM configuration files.
 
 ## References
 
