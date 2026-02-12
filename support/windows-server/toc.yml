@@ -2790,14 +2790,14 @@ items:
     href: ./virtualization/virtualization-overview.md
   - name: Backup and restore of virtual machines
     items:
+    - name: "Troubleshooting guidance: Cluster node quarantine"
+      href: ./virtualization/cluster-node-quarantine-troubleshooting.md
     - name: Backing up VMs that belong to a guest cluster
       href: ./virtualization/error-back-up-vms-in-guest-cluster.md
     - name: Back up and restore a Hyper-V VM
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
-    - name: "Troubleshooting guidance: Cluster node quarantine"
-      href: ./virtualization/cluster-node-quarantine-troubleshooting.md
     - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
@@ -2914,12 +2914,12 @@ items:
       href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
+    - name: "Troubleshooting guidance: Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)"
+      href: ./virtualization/hyper-v-snapshots-checkpoints-differencing-disks.md
     - name: Can't delete a recovery checkpoint for a VM in DPM
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
     - name: Merging checkpoints that have multiple differencing disks
       href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
-    - name: "Troubleshooting guidance: Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)"
-      href: ./virtualization/hyper-v-snapshots-checkpoints-differencing-disks.md
   - name: Storage configuration
     items:
     - name: Can't add a second Fibre Channel adapter
