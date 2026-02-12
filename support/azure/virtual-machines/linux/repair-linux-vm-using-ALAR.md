@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 10/31/2025
+ms.date: 02/11/2026
 ms.author: pagienge
 ---
 
@@ -27,10 +27,10 @@ ALAR utilizes the VM repair extension that's described in [Repair a Linux VM by 
 ALAR covers the following repair scenarios:
 
 - No-boot scenarios
-  - Malformed */etc/fstab*
+  - Malformed `/etc/fstab`
       - syntax error
       - missing disk
-  - Damaged initrd or missing initrd line in the */boot/grub/grub.cfg*
+  - Damaged initrd or missing initrd line in the `/boot/grub/grub.cfg`
   - Last installed kernel isn't bootable
   - GRUB/EFI installation or configuration damaged
   - Disk space/auditd forced shutdowns
@@ -60,7 +60,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
 2. Run the `linux-alar2` script, along with parameters for one or more of the ALAR actions on the rescue VM:
 
     ```azurecli-interactive
-    az vm repair run --verbose --resource-group <RG-NAME> --name <VM-NAME> --run-id linux-alar2 --parameters <action1,action2,...> --run-on-repair
+    az vm repair run --verbose --resource-group <RG-NAME> --name <VM-NAME> --run-id linux-alar2 --parameters <action> --run-on-repair
     ```
     
     See the following for valid action names.
@@ -74,29 +74,29 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     > [!NOTE]
     > The original and new disks aren't deleted during the `restore` phase.
 
-In all of the example commands these are the parameters shown:
+In all of the example commands these are the parameters shown, replace them accordingly:
 
-- `RG-NAME`: The name of the resource group containing the broken VM.
-- `VM-NAME`: The name of the broken VM.
-- `RESCUE-USERNAME`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
-- `RESCUE-PASS`: The password for `RESCUE-USERNAME`, enclosed in single quotes. For example: `'password!234'`.
-- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the following for a complete list of actions and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, like `fstab,sudo`.
+- `<RG-NAME>`: The name of the resource group containing the broken VM.
+- `<VM-NAME>`: The name of the broken VM.
+- `<RESCUE-USERNAME>`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
+- `<RESCUE-PASS>`: The password for `RESCUE-USERNAME`, enclosed in single quotes. For example: `'password!234'`.
+- `<action>`: One or more of the defined actions available to apply to the broken VM. See the following for a complete list of actions and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, like `fstab,sudo`.
 
 ## The ALAR actions
 
 ### fstab
 
-This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First, a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
+This action strips off any lines in the `etc/fstab` file that aren't needed to boot a system. First, a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
 
-For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
+For more information about issues with a malformed `/etc/fstab` file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
 ### efifix
 
-This action can be used to reinstall the required software to boot from a GEN2 VM. The *grub.cfg* file is also regenerated.
+This action can be used to reinstall the required software to boot from a GEN2 VM. The `grub.cfg` file is also regenerated.
 
 ### grubfix
 
-This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
+This action can be used to reinstall GRUB and regenerate the `grub.cfg` file.
 
 ### initrd
 
@@ -128,14 +128,14 @@ This action corrects an incorrect or malformed serial console configuration for 
 
 ### sudo
 
-The `sudo` action resets the permissions on the */etc/sudoers* file and all files in */etc/sudoers.d* to the required 0440 modes and check other best practices. A basic check is run to detect and report on duplicate user entries and move only the */etc/sudoers.d/waagent* file if it's found to conflict with other files.
+The `sudo` action resets the permissions on the `/etc/sudoers` file and all files in `/etc/sudoers.d` to the required 0440 modes and check other best practices. A basic check is run to detect and report on duplicate user entries and move only the `/etc/sudoers.d/waagent` file if it's found to conflict with other files.
 
 ### auditd
 
-If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume can be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the `auditd` configuration file is altered.
+If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the `/etc/audit/auditd.conf` file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume can be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the `auditd` configuration file is altered.
 
 > [!IMPORTANT]
-> This action changes the VM's security posture by altering the audit daemon configuration so that the VM shutdown issue can be resolved. Once the VM is running and accessible, you need to evaluate the configuration and potentially revert it to the original state. For this purpose, a backup of the *auditd.conf* file is created in */etc/audit* by the ALAR action.
+> This action changes the VM's security posture by altering the audit daemon configuration so that the VM shutdown issue can be resolved. Once the VM is running and accessible, you need to evaluate the configuration and potentially revert it to the original state. For this purpose, a backup of the `auditd.conf` file is created in `/etc/audit` by the ALAR action.
 
 
 ## Limitation
