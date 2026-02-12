@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Hyper-V Snapshots, Checkpoints, and Differencing Disks (AVHDX)
+title: Guidance for troubleshooting Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)
 description: Provides troubleshooting methods for issues that affect Hyper-V snapshots, checkpoints, and differencing disks.
 ms.date: 10/08/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
  
-# Troubleshoot Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)
+# Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance
 
 ## Summary
 
