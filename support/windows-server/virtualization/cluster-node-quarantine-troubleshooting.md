@@ -140,17 +140,6 @@ General Recovery Steps:
 - Restart node after clearing issues (hardware, network, service-related).
 - Monitor logs for confirmation: node rejoins cluster normally.
 
-## Data collection
-
-Before you contact Microsoft Support, you can gather the following information about your issue.
-
-- Cluster Logs: `Get-ClusterLog -Destination \<FolderPath> -UseLocal -TimeSpan <Minutes>`
-- Event Logs: Export System, Application, and FailoverClustering logs.
-- Network Trace: `Netsh trace start scenario=GENERAL capture=yes tracefile=<path>`
-- Process dumps files: As needed, using Sysinternals or built-in Windows tools.
-- Storage and hardware diagnostics: Collect through vendor tool output.
-- Security software logs: Export relevant security agent filtering and action logs.
-
 ## Common issues quick reference table
 
 | Issue | Key symptoms | Resolution | Reference event IDs |
@@ -161,6 +150,17 @@ Before you contact Microsoft Support, you can gather the following information a
 | Antivirus/security platform issues | Packet dropped by filter, service block | Disable/remove AV/Security, set exclusions, reinstall as necessary | Varies |
 | Configuration/quorum issues | Quorum witness fail, IP/certificate errors | Set static IPs, fix certificates, rebuild quorum witness, update resources | 1069, 1558, 121 |
 | Recovery steps (general) | Can't host roles, node stays quarantined | `Start-ClusterNode -ClearQuarantine`, evict/re-add, restart, monitor logs | 1641 |
+
+## Data collection
+
+Before you contact Microsoft Support, you can gather the following information about your issue.
+
+- Cluster Logs: `Get-ClusterLog -Destination \<FolderPath> -UseLocal -TimeSpan <Minutes>`
+- Event Logs: Export System, Application, and FailoverClustering logs.
+- Network Trace: `Netsh trace start scenario=GENERAL capture=yes tracefile=<path>`
+- Process dumps files: As needed, using Sysinternals or built-in Windows tools.
+- Storage and hardware diagnostics: Collect through vendor tool output.
+- Security software logs: Export relevant security agent filtering and action logs.
 
 ## References
 
