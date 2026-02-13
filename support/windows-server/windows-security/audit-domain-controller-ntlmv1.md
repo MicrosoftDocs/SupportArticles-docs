@@ -1,11 +1,11 @@
 ---
 title: Audit use of NTLMv1 on a domain controller
-description: Steps to audit the usage of NTLMv1 on a Windows Server-based domain controller.
-ms.date: 01/15/2025
+description: Discusses how to use event logs to audit the usage of NTLMv1 on a Windows Server-based domain controller.
+ms.date: 02/3/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm, v-appelgatet
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
@@ -14,22 +14,21 @@ appliesto:
 ---
 # Audit use of NTLMv1 on a Windows Server-based domain controller
 
-This article introduces the steps to test any application that's using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller.
-
 _Original KB number:_ &nbsp; 4090105
 
 ## Summary
 
-> [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
+This article describes how to audit NTLMv1 authentication on Windows Server domain controllers (DCs). Use this information to identify applications and services that still use NTLMv1 before you disable NTLMv1 in your environment.
 
-You may do this test before setting computers to only use NTLMv2. To configure the computer to only use NTLMv2, set **LMCompatibilityLevel** to **5** under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` key on the domain controller.
+NTLMv1 is a legacy authentication protocol that Microsoft deprecated in June 2024. For more information, see [Deprecated Features](/windows/whats-new/deprecated-features#deprecated-features).
+
+To maintain security, identify any remaining NTLMv1 usage, and migrate applications to use modern authentication protocols. To audit the use of any version of NTLM, use the methods that are described in this article and in [Removing NTLMv1, new audit event for use of NTLM](https://support.microsoft.com/topic/upcoming-changes-to-ntlmv1-in-windows-11-version-24h2-and-windows-server-2025-c0554217-cdbc-420f-b47c-e02b2db49b2e).
 
 ## NTLM auditing
 
-To find applications that use NTLMv1, enable Logon Success Auditing on the domain controller, and then look for Success auditing Event 4624, which contains information about the version of NTLM.
+To find applications that use NTLMv1, enable Logon Success Auditing on the DC. Then, review the event log on the DC for Success auditing Event ID 4624. This log entry contains information about the version of NTLM.
 
-You will receive event logs that resemble the following ones:
+The text of Event ID 4624 resembles the following example:
 
 ```output
 Sample Event ID: 4624  
@@ -70,16 +69,28 @@ Package Name (NTLM only): NTLM V1
 Key Length: 128
 ```
 
+## Using NTLMv2 exclusively
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+To configure a DC to use only NTLMv2 for authentication, configure the following registry value on the DC:
+
+- Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`
+- Entry: `LMCompatibilityLevel`
+- Value: **5**
+
+For more information, see [How to enable NTLM 2 authentication](../../windows-client/windows-security/enable-ntlm-2-authentication.md).
+
 ## More information
 
-This logon in the event log doesn't really use NTLMv1 session security. There's actually no session security, because no key material exists.
+The sign-in (logon) operation that Event ID 4624 describes doesn't use NTLMv1 session security. This operation actually has no session security because no key material exists.
 
-The logic of the NTLM Auditing is that it will log NTLMv2-level authentication when it finds NTLMv2 key material on the logon session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
+The logic of NTLM Auditing is that it logs NTLMv2-level authentication when it finds NTLMv2 key material on the sign-in session. It logs NTLMv1 in all other cases, including anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information if the event is logged for **ANONYMOUS LOGON**.
 
-Common sources of anonymous logon sessions are:
+Common sources of anonymous logon sessions include the following applications and services:
 
-- [Computer Browser Service](/previous-versions/windows/it-pro/windows-server-2003/cc778351(v=ws.10)): It's a legacy service from Windows 2000 and earlier versions of Windows. The service provides lists of computers and domains on the network. The service runs in the background. However, today this data is no longer used. We recommend that you disable this service across the enterprise.
+- [Computer Browser Service](/previous-versions/windows/it-pro/windows-server-2003/cc778351(v=ws.10)): A legacy service from Windows 2000 and earlier versions of Windows. The service runs in the background and provides lists of computers and domains on the network. However, this data is no longer used. We recommend that you disable this service across the enterprise.
 
-- SID-Name mapping: It can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
+- SID-Name mapping: A process that can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
 
-- Client applications that don't authenticate: The application server may still create a logon session as anonymous. It's also done when there are empty strings passed for user name and password in NTLM authentication.
+- Client applications that don't authenticate: The application server might still create a logon session as an anonymous user. Similarly, it might create an anonymous session if it uses NTLM authentication together with empty user name and password strings.

@@ -6355,6 +6355,14 @@
         "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
         "redirect_document_id": true
       },
+            {
+        "source_path": "app-service/create-delete-resources-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq-new",
+      },
+      {
+        "source_path": "app-service/scaling-web-app-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/scaling-web-app-faq-new",
+      },
       {
         "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/change/change-analysis",

@@ -2,10 +2,6 @@
   href: ../cpp/debuggers/expand-pointer-debugger-watch-window.md
 - name: .NET source code debugging
   href: ./dotnet-source-code-debug.md
-- name: Can't use Windows Simulator
-  href: ./windows-simulator-needs-credentials.md
-- name: Information collected by Remote Debugger
-  href: ./remote-debugger-collect-information.md
 - name: Debugger doesn't stop on breakpoints
   href: ./debugger-not-stop-breakpoint.md
 - name: Troubleshoot snapshot debugging of Azure apps
