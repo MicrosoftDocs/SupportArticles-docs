@@ -2,3 +2,5 @@
   href: welcome-app-gateway.yml
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
+- name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
+  herf: error-codes/applicationgatewayfrontendipcannothavepublicipandsubnet.md
