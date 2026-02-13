@@ -2790,6 +2790,8 @@ items:
     href: ./virtualization/virtualization-overview.md
   - name: Backup and restore of virtual machines
     items:
+    - name: "Troubleshooting guidance: Cluster node quarantine"
+      href: ./virtualization/cluster-node-quarantine-troubleshooting.md
     - name: Backing up VMs that belong to a guest cluster
       href: ./virtualization/error-back-up-vms-in-guest-cluster.md
     - name: Back up and restore a Hyper-V VM
@@ -2912,6 +2914,8 @@ items:
       href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
+    - name: "Troubleshooting guidance: Hyper-V snapshots, checkpoints, and differencing disks (AVHDX)"
+      href: ./virtualization/hyper-v-snapshots-checkpoints-differencing-disks.md
     - name: Can't delete a recovery checkpoint for a VM in DPM
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
     - name: Merging checkpoints that have multiple differencing disks
@@ -2948,6 +2952,8 @@ items:
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
       href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
+    - name: Hyper-V VM Unexpectedly Missing in Windows Server 2016
+      href: ./virtualization/hyper-v-vm-unexpectedly-missing.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
