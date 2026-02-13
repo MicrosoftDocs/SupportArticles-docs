@@ -1,3 +1,14 @@
+---
+title: TroubleshootApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error 
+description: This article discusses how to resolve the ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error when you try to create or modify a private only application gateway.
+ms.date: 02/13/2026
+ms.editor: aditsi, giverm
+ms.reviewer: giverm
+ms.service: azure-application-gateway
+ms.custom: sap:Issues with Create, Update and Delete (CRUD)
+#Customer intent: As an Azure Application Gateway user, I want to troubleshoot an Application Gateway create operation that failed because of ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error so that I can perform the operation successfully.
+---
+
 # Troubleshoot Private Azure Application Gateway Frontend IP Creation Issues
 
 ## Overview
@@ -56,7 +67,7 @@ This enables:
 
 📘 Microsoft documentation: 
 
-https://learn.microsoft.com/azure/application-gateway/application-gateway-private-deployment#onboard-to-the-feature  
+[How to onboard to the feature?](/azure/application-gateway/application-gateway-private-deployment#onboard-to-the-feature) 
 
 > Ensure the feature registration reaches **Registered** state before proceeding.
 
@@ -86,7 +97,7 @@ Deployment will succeed without the previously reported SKU or frontend IP error
 
 📘 Microsoft documentation: 
 
-https://learn.microsoft.com/azure/application-gateway/application-gateway-private-deployment
+[What is Private Only Application Gateway?](/azure/application-gateway/application-gateway-private-deployment)
 
 ---
 
