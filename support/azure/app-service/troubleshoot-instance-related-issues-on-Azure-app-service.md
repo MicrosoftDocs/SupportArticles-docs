@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Instance-Related Issues on Azure App Service
-description: Watch a video that shows you how to troubleshoot instance-related issues on Azure App Service.
+description: Watch a video that shows you how to troubleshoot instance-related issues on Microsoft Azure App Service.
 ms.date: 02/13/2026
 ms.service: azure-app-service
 ms.author: shwagarwal
@@ -9,7 +9,7 @@ ms.reviewer:
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
 
-# How to troubleshoot instance-related issues on Azure App Service
+# Troubleshoot instance-related issues on Azure App Service
 
 ## Summary
 

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Temporary Storage on Microsoft Azure App Service
+title: Troubleshoot Temporary Storage on Azure App Service
 description: Watch a video that shows you how to troubleshoot temporary storage on Microsoft Azure App Service.
 ms.date: 02/13/2026
 ms.service: azure-app-service
@@ -9,13 +9,11 @@ ms.reviewer:
 ms.custom: sap:Availability, Performance, and Application Issues
 ---
 
-# How to troubleshoot temporary storage on Azure App Service
+# Troubleshoot temporary storage on Azure App Service
 
 ## Summary
 
-If an application is reporting high resource consumption, the source of the problem might not be the site content. Excessive use of temporary storage also causes slow performance.
-
-This video demonstrates how to narrow the scope of your troubleshooting to temporary storage, and the next steps for investigating and troubleshooting performance issues.
+If an application is reporting high resource consumption, the source of the problem might not be the site content. Excessive use of temporary storage also causes slow performance. This video demonstrates how to narrow the scope of your troubleshooting to temporary storage, and the next steps for investigating and troubleshooting performance issues.
 
 > [!VIDEO https://www.youtube.com/embed/bk8h-VYaIXs]
 
