@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 969488, 2733147
 
 ## Summary
 
-Domain Name Service (DNS) server Event ID 4015 indicates that a domain controller (DC) that runs the DNS Server role experienced a critical error. The event description includes an error code that identifies the type of issue that occurred.
+Domain Name Service (DNS) server Event ID 4015 indicates that a domain controller (DC) that runs the DNS Server role experienced a critical error. The event description includes an error code that identifies the type of issue that occurred.  
 
 This article describes three common scenarios that trigger Event ID 4015:
 
