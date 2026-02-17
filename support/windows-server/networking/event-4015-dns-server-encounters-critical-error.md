@@ -26,13 +26,13 @@ This article describes three common scenarios that trigger Event ID 4015:
 - Error code 0000051B: The DNS server can't access an Active Directory object due to permission issues
 - ADMIN_LIMIT_EXCEEDED: A DNS-related Active Directory object contains too many orphaned entries from demoted domain controllers
 
-Review the error code in your Event ID 4015 description, then follow the troubleshooting steps for your specific scenario.
+Review the error code in the Event ID 4015 description. Then, follow the troubleshooting steps for your specific scenario.
 
 ## Symptoms
 
-A DNS server can generate Event ID 4015 in several different scenarios. Use the error code in the event description to distinguish which scenario you have, and select the closest scenario from the following list:
+A DNS server can generate Event ID 4015 in several different scenarios. Use the error code in the event description to distinguish which scenario you're experiencing, and then select the closest scenario from the following list:
 
-- [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This issue might occur in the following scenario:
+- [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This scenario might have the following conditions:
 
   - A Read-Only Domain Controller (RODC) run the DNS role.
   - The RODC can't connect to a writable domain controller (DC) that runs the DNS role.
@@ -53,7 +53,7 @@ A DNS server can generate Event ID 4015 in several different scenarios. Use the 
     The DNS server has encountered a critical error from the Active Directory. Check that the Active Directory is functioning properly. The extended error debug information (which may be empty) is "00002095: SvcErr: DSID-03210A6A, problem 5012 (DIR_ERROR), data 16". The event data contains the error.
     ```
 
-- [DNS server logs Event ID 4015 (error code 0000051B)](#dns-server-logs-event-id-4015-error-code-0000051b). This issue might occur if the DNS server can't access an Active Directory object. In this scenario, the DNS server repeatedly logs events that resemble the following example:
+- [DNS server logs Event ID 4015 (error code 0000051B)](#dns-server-logs-event-id-4015-error-code-0000051b). This scenario might occur if the DNS server can't access an Active Directory object. In this scenario, the DNS server repeatedly logs events that resemble the following example:
 
     ```output
     Type: Error
@@ -78,40 +78,40 @@ A DNS server can generate Event ID 4015 in several different scenarios. Use the 
 
 ### Cause
 
-An RODC keeps itself up-to-date by replicating changes from one or more writable DCs. An RODC that's functioning as a DNS server uses [replicateSingleObject](/openspecs/windows_protocols/ms-adts/d3d19d15-8427-4d4d-8256-d5fb11333292) to make sure that it has the latest DNS information. In this scenario, the RODC tries to update a name server (NS) record.
+An RODC keeps itself up to date by replicating changes from one or more writable DCs. An RODC that's functioning as a DNS server uses the [replicateSingleObject](/openspecs/windows_protocols/ms-adts/d3d19d15-8427-4d4d-8256-d5fb11333292) operation to make sure that it has the latest DNS information. In this scenario, the RODC tries to update a name server (NS) record.
 
-To support this functionality, the RODC DNS server must be able to locate a writeable DC DNS server as needed. To do this, the RODC uses one of the `DsGetDC` functions (such as [DsGetDCNameA](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) or [DsGetDCNameW](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)) together with with the following flags:
+To support this functionality, the RODC DNS server must be able to locate a writeable DC DNS server, as needed. To locate the server, the RODC uses one of the `DsGetDC` functions (such as [DsGetDCNameA](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) or [DsGetDCNameW](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)) together with with the following flags:
 
 - `DS_AVOID_SELF`
 - `DS_TRY_NEXTCLOSEST_SITE`
 - `DS_DIRECTORY_SERVICE_6_REQUIRED`
 - `DS_WRITEABLE_REQUIRED`
 
-The `DsGetDC` function returns a DC, which the RODC searches for the appropriate NS record. In either of the following cases, the RODC logs Event ID 4015.
+The `DsGetDC` function returns a DC. The RODC searches this DC for the appropriate NS record. In either of the following cases, the RODC logs Event ID 4015:
 
 - The identified DC isn't a DNS server, or doesn't list an appropriate NS record.
 - The function didn't identify a writeable DC.
 
 ### Resolution
 
-1. To check the results of the `DsGetDC` function, open a Windows Command Prompt window on the RODC. Run the following command:
+1. To check the results of the `DsGetDC` function, open a Windows Command Prompt window on the RODC, and then run the following command:
 
    ```console
    nltest /dsgetdc: <DomainFQDN> /WRITABLE /AVOIDSELF /TRY_NEXT_CLOSEST_SITE /DS_6
    ```
 
    > [!NOTE]  
-   > In this command, \<DomainFQDN> represents the fully qualified domain name (FQDN) for the domain.
+   > In this command, \<DomainFQDN> represents the fully qualified domain name (FQDN) of the domain.
 
 1. If the command output lists a DC, check that DC's configuration. If the command didn't locate a DC, update your DNS topology to make sure that the RODC can connect to an appropriate DC. In both cases, make sure that the DC meets the following criteria:
 
-   - The DC is writeable
-   - The DC has the DNS Server role installed
-   - The DNS records on the DC are correctly configured.
+   - The DC is writeable.
+   - The DC has the DNS Server role installed.
+   - The DNS records on the DC are configured correctly.
 
 ## DNS server logs Event ID 4015 (error code 0000051B)
 
-One of the following conditions causes the access issue:
+The access issue is caused by one of the following conditions:
 
 - The SYSTEM account isn't the owner of the DNS zone.
 - The Users group for the domain doesn't have the correct members, including the Authenticated Users group. In this case, the issue might not appear until the DNS servers have been running for at least 10 hours, and it occurs sporadically on multiple DCs.
@@ -139,7 +139,7 @@ To resolve this issue, follow these steps:
 
 To resolve this issue, follow these steps:
 
-1. Use an Admin group member account to sign in to the DC. You can also run this procedure on an admin computer when you add the `/domain` parameter.
+1. Use an Admin group member account to sign in to the DC. You can also run this procedure on an admin computer by adding the `/domain` parameter.
 
 1. To list the current members of the Users group, open a Windows Command Prompt window, and then run the following command:
 
@@ -161,15 +161,15 @@ To resolve this issue, follow these steps:
 
 1. Wait for the change to replicate among the DCs.
 
-1. On all of the DCs in the domain, restart the DNS Server service.
+1. On all the DCs in the domain, restart the DNS Server service.
 
 ## DNS server logs Event ID 4015 (extended error code (ADMIN_LIMIT_EXCEEDED))
 
 ### Cause
 
-The DNS Server service generates this error code when a multi-valued `dnsRecord` attribute of a `dnsNode` object in Active Directory contains too many values.
+The DNS Server service generates this error code if a multi-valued `dnsRecord` attribute of a `dnsNode` object in Active Directory contains too many values.
 
-Active Directory represents DNS names as `dnsNode`-class objects, and DNS records as values in `dnsRecord` attributes of those objects. When you promote a DC into a forest as a DNS server, Active Directory automatically adds the appropriate DNS records to new and existing `dnsNode` objects. However, when you demote a DC that acts as a DNS server, Active Directory doesn't automatically clean up the related DNS objects and attributes, leaving them as "orphans." After multiple demote and promote operations in a single forest, orphaned values can accumulate to the point that `dnsRecord` attributes reach their maximum capacity.
+Active Directory represents DNS names as `dnsNode`-class objects. It records DNS records as values in the `dnsRecord` attributes of those objects. When you promote a DC into a forest as a DNS server, Active Directory automatically adds the appropriate DNS records to new and existing `dnsNode` objects. However, when you demote a DC that acts as a DNS server, Active Directory doesn't automatically clean up the related DNS objects and attributes. Those objects and attributes are left as "orphans." After multiple demote and promote operations in a single forest, orphaned values can accumulate to the point that `dnsRecord` attributes reach their maximum capacity.
 
 To check the current number of records for the objects in each DNS-related partition, run the following `repadmin` commands:
 
@@ -179,7 +179,7 @@ repadmin /showattr . "CN=MicrosoftDNS,DC=DomainDnsZones,DC=contoso,DC=com" /subt
 repadmin /showattr . "CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com" /subtree /filter:"(objectclass=dnsnode)" /atts:"dnsRecord" /allvalues >c:\temp\dns_ForestDnsZones.txt
 ```
 
-The output displays the current number of entries in `dnsRecord` attributes of the corresponding Active Directory `dnsNode` objects. For example, the following excerpt shows command output that refers to a single `dnsNode` object. The `dnsRecord` attribute for this object has 1280 values:
+The output displays the current number of entries that are contained in `dnsRecord` attributes of the corresponding Active Directory `dnsNode` objects. For example, the following excerpt shows command output that refers to a single `dnsNode` object. The `dnsRecord` attribute for this object has 1,280 values:
 
 ```output
 DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
@@ -191,14 +191,14 @@ DN: DC=@,DC=..TrustAnchors,CN=MicrosoftDNS,DC=ForestDnsZones,DC=contoso,DC=com
 
 ### Resolution
 
-To resolve this issue, you have to remove all the orphaned entries of the demoted domain controllers. To check each zone and selectively delete the appropriate records, open an administrative Windows PowerShell window and run the following cmdlets for each zone:
+To resolve this issue, you have to remove all the orphaned entries of the demoted domain controllers. To check each zone and selectively delete the appropriate records, open an administrative Windows PowerShell window, and run the following cmdlets for each zone:
 
 ```powershell
 Get-DnsServerResourceRecord -ZoneName "<ZoneName>" -RRType "<ResourceRecordType>"
 Remove-DnsServerResourceRecord -zonename "<ZoneName>" -RRType "<ResourceRecordType>" -Name "<ResourceRecordName>" -RecordData "<DC_FQDN>"
 ```
 
-In the following example, the first command retrieves all of the name server record values for the trustanchors zone. The second command selects any of those records that have the name "@" and relate to the DC that's named DC-10.contoso.com. Then it deletes those records.
+In the following example, the first command retrieves all the name server record values for the trustanchors zone. The second command selects any of those records that have the name, "@", and that relate to the DC that's named DC-10.contoso.com. Then, it deletes those records.
 
 ```powershell
 Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType "NS"
@@ -224,9 +224,9 @@ $Record | Remove-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com"
 
 ## Data collection
 
-You can use the [Trouble Shooting Scripts (TSS)](https://aka.ms/getTSS) to gather information that can help you troubleshoot DNS issues and provide background if you have to contact Microsoft Support. For more information about how to use TSS when troubleshooting DNS issues, see [Data collection](troubleshoot-dns-guidance.md#data-collection) in "DNS troubleshooting guidance."
+If you have to contact Microsoft Support, you can use [scripts from the TroubleShootingScripts toolset (TSS)](https://aka.ms/getTSS) to gather information about DNS issues and provide background. For more information about how to use TSS when you troubleshoot DNS issues, see [Data collection](troubleshoot-dns-guidance.md#data-collection) in "DNS troubleshooting guidance."
 
-In particular, use the following command to gather trace data surrounding Event ID 4015:
+In particular, use the following command to gather trace data about Event ID 4015:
 
 ```powershell
 .\TSS.ps1 -Scenario NET_DNSsrv -Mode Verbose -WaitEvent Evt:4015:'DNS Server'
