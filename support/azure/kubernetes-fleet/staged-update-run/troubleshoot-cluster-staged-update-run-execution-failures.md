@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun error messages
-description: Troubleshoot errors that occur when ClusterStagedUpdateRun fails to run successfully.
+title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun errors
+description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun fail to run successfully.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -38,7 +38,7 @@ The following is an example error message:
     Type:                  Succeeded
 ```
 
-## Investigation process
+## Investigate errors
 
 :::zone target="docs" pivot="cluster-scope"
 
@@ -158,7 +158,7 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRun`s due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun` messages happen due to run failures and aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
 
 **Placement not found**
 
@@ -423,7 +423,7 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRun`s due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun` messages happen due to run failures and aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
 
 **Placement not found**
 
@@ -495,7 +495,7 @@ When multiple `updateRun`s target the same `ClusterResourcePlacement`, they come
 
 #### Cause 
 
-The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding specification and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. When multiple concurrent `StagedUpdateRun`s exist and during the 15-second wait, another `StagedUpdateRun` preempts and updates the binding with new configuration, the current `StagedUpdateRun` detects this change and fails.
+The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding `spec` and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. When multiple concurrent `StagedUpdateRun`s exist and during the 15-second wait, another `StagedUpdateRun` preempts and updates the binding with new configuration, the current `StagedUpdateRun` detects this change and fails.
 
 Example message:
 

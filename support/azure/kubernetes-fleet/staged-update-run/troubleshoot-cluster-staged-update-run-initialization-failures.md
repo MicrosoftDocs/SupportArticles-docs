@@ -1,6 +1,6 @@
 ---
-title: How To Troubleshoot ClusterStagedUpdateRun Initialization Failures
-description: Troubleshoot errors that occur when ClusterStagedUpdateRun failed to initialize.
+title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun initialization errors
+description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun fail to initialize.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -9,13 +9,13 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-# Initialization Failure: Initialized is False
+# Troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures
 
 ## Summary
 
-This article discusses how to troubleshoot initialization failures when you propagate resources by using update run APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterStageUpdateRun` and `StagedUpdateRun`.
+This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures when you propagate resources by using update-run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
-Sample error messages:
+The following is an example error message:
 
 :::zone target="docs" pivot="cluster-scope"
 
@@ -29,9 +29,9 @@ Sample error messages:
     Type:                  Initialized
 ```
 
-### Investigate Initialization Failure
+## Investigate initialization errors
 
-A `ClusterStagedUpdateRun` initialization failure can be detected by getting the resource:
+1. Locate the `ClusterStagedUpdateRun` initialization error by running the following command:
 
 ```bash
 $ kubectl get clusterstagedupdaterun example-run
@@ -40,9 +40,9 @@ example-run       example-placement   1                         0               
 
 ```
 
-The `INITIALIZED` field is `False`, indicating the initialization failed.
+The `INITIALIZED` field is `False` indicating the initialization failed.
 
-Describe the `ClusterStagedUpdateRun` to get more details:
+2. Run these commands to get more details about the error:
 
 ```bash
 $ kubectl describe clusterstagedupdaterun example-run
@@ -97,48 +97,60 @@ Status:
 
 ```
 
-The condition indicates the initialization failed. The condition message gives more details about the failure. In this case, a nonexistent resource snapshot index 1 is used for the `ClusterStagedUpdateRun`.
+This indicates the initialization failed. In this case, a nonexistent resource snapshot index `1` is used for `ClusterStagedUpdateRun`.
 
-#### Common Initialization Failures
+## Common initialization failures
 
-Aborted `ClusterStagedUpdateRun`s due to initialization failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `ClusterStagedUpdateRun`.
+### Cause
 
-1. Parent Placement Not Found
+Aborted `ClusterStagedUpdateRun` messages happen due to initialization failures and aren't recoverable. 
 
-    Example Message:
+### Solution
 
-    ```text
-    cannot continue the updateRun: failed to validate the updateRun: parent placement not found
-    ```
+If a failure occurs due to a validation error, fix the issue and create a new `ClusterStagedUpdateRun`.
 
-    The `ClusterResourcePlacement` doesn't exist in the namespace. Create a new `ClusterResourcePlacement` with the same name specified in `ClusterStagedUpdateRun`. Then create a new `ClusterStagedUpdateRun` referencing the new `ClusterResourcePlacement`.
+**Parent placement not found**
 
-    Refer to [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation) to create a `ClusterResourcePlacement`.
+Example message:
 
-    Or, create a new `ClusterStagedUpdateRun` that references a valid `ClusterResourcePlacement` that already exists.
+```text
+cannot continue the updateRun: failed to validate the updateRun: parent placement not found
+```
 
-    ```bash
-    $ kubectl get clusterresourceplacements
-    ```
+### Cause
 
-    Describe a `ClusterResourcePlacement` to view the spec. Verify the strategy to ensure `spec.Strategy.Type: External` and the resources to roll out:
+The `ClusterResourcePlacement` doesn't exist in the namespace. 
 
-    ```bash
-    $ kubectl describe clusterresourceplacement <cluster-resource-placement-name> 
-    ```
+### Solution
 
-    Refer to [Control cluster order for resource placement](/azure/kubernetes-fleet/howto-staged-update-run) to create a `ClusterStagedUpdateRun` referencing one of the existing `ClusterResourceplacement`.
+Create a new `ClusterResourcePlacement` with the same name specified in `ClusterStagedUpdateRun`. Then create a new `ClusterStagedUpdateRun` referencing the new `ClusterResourcePlacement`. See [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation) for more details.
 
-2. The Placement Selected Isn't External Rollout Strategy Type
+You can also create a new `ClusterStagedUpdateRun` that references a valid `ClusterResourcePlacement` that already exists. Run the following command:
 
-    Example Message:
+```bash
+kubectl get clusterresourceplacements
+```
 
-    ```text
-    cannot continue the updateRun: failed to validate the updateRun: The placement does not have an external rollout strategy...
-    ```
+View the `spec` and then verify the strategy for `spec.Strategy.Type: External` deployment with the following command:
 
-    To enable staged updates, re-create the `ClusterResourcePlacement` with `spec.Strategy.Type: External` and create a new `ClusterStagedUpdateRun` selecting the new `ClusterResourcePlacement`.
-    > Note: Changing a `ClusterResourcePlacement` from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External` is allowed, but the reverse is not.
+```bash
+$ kubectl describe clusterresourceplacement <cluster-resource-placement-name> 
+```
+
+See [Control cluster order for resource placement](/azure/kubernetes-fleet/howto-staged-update-run) for guidance on creating a `ClusterStagedUpdateRun` that references one of the existing `ClusterResourceplacement` values.
+
+**Selected placement isn't external rollout strategy type**
+
+Example message:
+
+```text
+cannot continue the updateRun: failed to validate the updateRun: The placement does not have an external rollout strategy...
+```
+
+To enable staged updates, recreate the `ClusterResourcePlacement` with `spec.Strategy.Type: External`, create a new `ClusterStagedUpdateRun`, and then select the new `ClusterResourcePlacement`.
+
+> [!NOTE]
+> Changing a `ClusterResourcePlacement` from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External` is allowed, but the reverse is not.
 
     Or, find a `ClusterResourcePlacement` that has `spec.Strategy.Type: External` and create a `ClusterStagedUpdateRun` specifying the `ClusterResourcePlacement` found.
 
