@@ -13,7 +13,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages when you propagate resources with update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
+This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages when you propagate resources with update-run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
 The following is an example error message:
 
@@ -158,7 +158,7 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRuns` due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun`s due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
 
 **Placement not found**
 
@@ -206,7 +206,7 @@ The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateSt
 
 #### Solution
 
-See [Cluster Staged Update Strategy](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the `ClusterStagedUpdateStrategy`. Then create a new `ClusterStagedUpdateRun`.
+See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the `ClusterStagedUpdateStrategy`. Then create a new `ClusterStagedUpdateRun`.
 
 **Cluster appears more than once**
 
@@ -226,7 +226,7 @@ Review the cluster labels and ensure the cluster doesn't have labels for both st
 
 ### Concurrent update run preemptions
 
-When multiple `updateRuns` target the same `ClusterResourcePlacement`, they come into conflict.
+When multiple `updateRun`s target the same `ClusterResourcePlacement`, they come into conflict.
 
 #### Cause 
 
@@ -423,7 +423,7 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRuns` due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun`s due to run failures aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
 
 **Placement not found**
 
@@ -471,7 +471,7 @@ The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it ref
 
 #### Soution
 
-See [Staged Update Strategy](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the  `StagedUpdateStrategy`. Then create a new `StagedUpdateRun`.
+See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the  `StagedUpdateStrategy`. Then create a new `StagedUpdateRun`.
 
 **Cluster appears more than once**
 
@@ -491,7 +491,7 @@ Review the cluster labels and ensure the cluster doesn't have labels for both st
 
 ### Concurrent Update Run Preemption
 
-When multiple `updateRuns` target the same `ClusterResourcePlacement`, they come into conflict.
+When multiple `updateRun`s target the same `ClusterResourcePlacement`, they come into conflict.
 
 #### Cause 
 
