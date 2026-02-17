@@ -14,11 +14,11 @@ This guide provides troubleshooting steps for errors that prevent you from delet
 
 **Potential Cause 1:** Entity-backed dimensions can't be deleted from the **Financial dimension values** page.
 
-  **Resolution:** Delete the dimension value from the corresponding entity page. For example, to delete a Department dimension, go to the **Operating units** page.
+- **Resolution:** Delete the dimension value from the corresponding entity page. For example, to delete a Department dimension, go to the **Operating units** page.
 
 **Potential Cause 2:** The user lacks sufficient roles or privileges to manage dimension values.
 
-  **Resolution:** Verify that an administrator with full privileges can delete the dimension value. Contact your system administrator to request the necessary permissions.
+- **Resolution:** Verify that an administrator with full privileges can delete the dimension value. Contact your system administrator to request the necessary permissions.
 
 ## An error is preventing me
 
