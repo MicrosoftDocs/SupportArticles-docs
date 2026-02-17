@@ -28,7 +28,7 @@ To start troubleshooting this issue, check the status of the user's individual u
 
 ### Policies prevent access to individual user storage
 
-Individual user storage is attached to the Cloud PC when the user signs in. Policies that affect write access to fixed or removable drives are not supported with User Experience Sync. The individual user storage will attach, but the policies will prevent access or changes to it and result in a temporary user experience.
+Policies that affect write access to fixed or removable drives are not supported with User Experience Sync. The individual user storage will attach, but the policies will prevent access or changes to it and result in a temporary user experience.
 
 Windows 365 already applies data encryption to the individual user storage using Microsoft managed keys (MMK) and doesn't support using bitlocker to protect the individual user storage. Review your organization policies that target the Frontline shared Cloud PCs to ensure these two settings are not enabled.
 
