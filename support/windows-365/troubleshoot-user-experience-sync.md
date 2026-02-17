@@ -26,11 +26,11 @@ When a user signs in, Windows might notify them that they've signed in by using 
 
 To start troubleshooting this issue, check the status of the user's individual user storage as described in the following sections.
 
-### Policies preventing the access to the users storage
+### Policies prevent access to individual user storage
 
-Individual user storage is attached to the Cloud PC when the user signs in. Policies that deny writes access to disks that are not protected by bitlocker will attach the individual user storage, but block the ability for our agent to write the users data to the attached storage.
+Individual user storage is attached to the Cloud PC when the user signs in. Policies that affect write access to fixed or removable drives are not supported with User Experience Sync. The individual user storage will attach, but the policies will prevent access or changes to it and result in a temporary user experience.
 
-Windows 365 already applied data encryption to the individual user storage using Microsoft managed keys (MMK) and does not support using bitlocker. Review your organization policies that could be affecting the Frontline shared Cloud PCs to ensure these two settings are not enabled.
+Windows 365 already applies data encryption to the individual user storage using Microsoft managed keys (MMK) and doesn't support using bitlocker to protect the individual user storage. Review your organization policies that target the Frontline shared Cloud PCs to ensure these two settings are not enabled.
 
   - **Windows Component\Bitlocker Drive Encryption\Fixed Data Drives**
     - Deny write access to fixed data drives not protected by BitLocker
