@@ -1468,7 +1468,7 @@ items:
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
-    - name: Event ID 4015 is logged and the DNS server encounters a critical error
+    - name: "Event ID 4015: The DNS server encountered a critical error"
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
     - name: Event IDs 4016 and 4004 when DNS updates time out
       href: ./networking/event-4016-4004-dns-updates-time-out.md
