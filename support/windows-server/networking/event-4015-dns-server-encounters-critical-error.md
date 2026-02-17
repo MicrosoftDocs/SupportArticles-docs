@@ -80,7 +80,7 @@ A DNS server can generate Event ID 4015 in several different scenarios. Use the 
 
 An RODC keeps itself up to date by replicating changes from one or more writable DCs. An RODC that's functioning as a DNS server uses the [replicateSingleObject](/openspecs/windows_protocols/ms-adts/d3d19d15-8427-4d4d-8256-d5fb11333292) operation to make sure that it has the latest DNS information. In this scenario, the RODC tries to update a name server (NS) record.
 
-To support this functionality, the RODC DNS server must be able to locate a writeable DC DNS server, as needed. To locate the server, the RODC uses one of the `DsGetDC` functions (such as [DsGetDCNameA](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) or [DsGetDCNameW](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)) together with with the following flags:
+To support this functionality, the RODC DNS server must be able to locate a writeable DC DNS server, as needed. To locate the server, the RODC uses one of the `DsGetDC` functions (such as [DsGetDCNameA](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) or [DsGetDCNameW](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamew)) together with the following flags:
 
 - `DS_AVOID_SELF`
 - `DS_TRY_NEXTCLOSEST_SITE`
@@ -198,7 +198,7 @@ Get-DnsServerResourceRecord -ZoneName "<ZoneName>" -RRType "<ResourceRecordType>
 Remove-DnsServerResourceRecord -zonename "<ZoneName>" -RRType "<ResourceRecordType>" -Name "<ResourceRecordName>" -RecordData "<DC_FQDN>"
 ```
 
-In the following example, the first command retrieves all the name server record values for the trustanchors zone. The second command selects any of those records that have the name, "@", and that relate to the DC that's named DC-10.contoso.com. Then, it deletes those records.
+In the following example, the first command retrieves all the name server record values for the trustanchors zone. The second command selects any of those records that have the name "@" and that relate to the DC that has the name "DC-10.contoso.com." Then, it deletes those records.
 
 ```powershell
 Get-DnsServerResourceRecord -ZoneName "trustanchors" -RRType "NS"
@@ -224,7 +224,7 @@ $Record | Remove-DnsServerResourceRecord -ZoneName "_msdcs.contoso.com"
 
 ## Data collection
 
-If you have to contact Microsoft Support, you can use [scripts from the TroubleShootingScripts toolset (TSS)](https://aka.ms/getTSS) to gather information about DNS issues and provide background. For more information about how to use TSS when you troubleshoot DNS issues, see [Data collection](troubleshoot-dns-guidance.md#data-collection) in "DNS troubleshooting guidance."
+If you have to contact Microsoft Support, you can use [scripts from the TroubleShootingScript toolset (TSS)](https://aka.ms/getTSS) to gather information about DNS issues and provide background. For more information about how to use TSS when you troubleshoot DNS issues, see [Data collection](troubleshoot-dns-guidance.md#data-collection) in "DNS troubleshooting guidance."
 
 In particular, use the following command to gather trace data about Event ID 4015:
 
