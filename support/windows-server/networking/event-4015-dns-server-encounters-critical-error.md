@@ -34,7 +34,7 @@ A DNS server can generate Event ID 4015 in several different scenarios. Use the 
 
 - [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This scenario might occur under the following conditions:
 
-  - A Read-Only Domain Controller (RODC) run the DNS role.
+  - A Read-Only Domain Controller (RODC) runs the DNS role.
   - The RODC can't connect to a writable domain controller (DC) that runs the DNS role.
   
   In this scenario, the RODC logs events that resemble the following example:
