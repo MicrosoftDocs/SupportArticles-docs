@@ -32,7 +32,7 @@ Review the error code in the Event ID 4015 description. Then, follow the trouble
 
 A DNS server can generate Event ID 4015 in several different scenarios. Use the error code in the event description to distinguish which scenario you're experiencing, and then select the closest scenario from the following list:
 
-- [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This scenario might have the following conditions:
+- [RODC DNS server logs DNS Event ID 4015 (error code 00002095) every three minutes](#rodc-dns-server-logs-dns-event-id-4015-error-code-00002095-every-three-minutes). This scenario might occur under the following conditions:
 
   - A Read-Only Domain Controller (RODC) run the DNS role.
   - The RODC can't connect to a writable domain controller (DC) that runs the DNS role.
@@ -169,7 +169,7 @@ To resolve this issue, follow these steps:
 
 The DNS Server service generates this error code if a multi-valued `dnsRecord` attribute of a `dnsNode` object in Active Directory contains too many values.
 
-Active Directory represents DNS names as `dnsNode`-class objects. It records DNS records as values in the `dnsRecord` attributes of those objects. When you promote a DC into a forest as a DNS server, Active Directory automatically adds the appropriate DNS records to new and existing `dnsNode` objects. However, when you demote a DC that acts as a DNS server, Active Directory doesn't automatically clean up the related DNS objects and attributes. Those objects and attributes are left as "orphans." After multiple demote and promote operations in a single forest, orphaned values can accumulate to the point that `dnsRecord` attributes reach their maximum capacity.
+Active Directory represents DNS names as `dnsNode`-class objects. It stores DNS records as values in the `dnsRecord` attributes of those objects. When you promote a DC into a forest as a DNS server, Active Directory automatically adds the appropriate DNS records to new and existing `dnsNode` objects. However, when you demote a DC that acts as a DNS server, Active Directory doesn't automatically clean up the related DNS objects and attributes. Those objects and attributes are left as "orphans." After multiple demote and promote operations in a single forest, orphaned values can accumulate to the point that `dnsRecord` attributes reach their maximum capacity.
 
 To check the current number of records for the objects in each DNS-related partition, run the following `repadmin` commands:
 
