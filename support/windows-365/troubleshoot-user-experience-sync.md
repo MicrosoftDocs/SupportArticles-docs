@@ -35,7 +35,7 @@ Windows 365 already applies data encryption to the individual user storage using
   - **Windows Component\Bitlocker Drive Encryption\Fixed Data Drives**
     - Deny write access to fixed data drives not protected by BitLocker
   - **Windows Component\Bitlocker Drive Encryption\Removable Data Drives**
-    - Deny write access to fixed data drives not protected by BitLocker
+    - Deny write access to removable drives not protected by BitLocker
 
 ### Individual user storage failed to attach to their session
 
