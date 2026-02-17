@@ -253,11 +253,11 @@ example-placement-member2-e1a567da          True               True             
 
 Since the error message specifies `example-placement-member2-e1a567da`, check the binding with the following commands:
 
-    ```bash
+```bash
     $ kubectl get clusterresourcebinding example-placement-member2-e1a567da -o yaml
-    ```
+```
 
-    ```yml
+```yml
     Name:         example-placement-member2-e1a567da
     Labels:       kubernetes-fleet.io/parent-CRP=example-placement
     ...
@@ -297,7 +297,7 @@ Since the error message specifies `example-placement-member2-e1a567da`, check th
         Status:                True
         Type:                  RolloutStarted
         ...
-    ```
+```
 
 2. If the `RolloutStarted` condition displays, validate that the `ClusterStagedUpdateRun` referenced is the `ClusterStagedUpdateRun` you're working with. If another `ClusterStagedUpdateRun` is referenced, wait for that `ClusterStagedUpdateRun` to finish.
 
@@ -518,11 +518,11 @@ web-app-placement-member2-43991b15   True               True               51m
 
 Since the error message specifies `web-app-placement-member2-43991b15`, check the binding with the following commands:
 
-    ```bash
+```bash
     $ kubectl describe resourcebinding web-app-placement-member2-43991b15 -n my-app-namespace
-    ```
+```
 
-    ```yml
+```yml
     Name:         web-app-placement-member2-43991b15
     Namespace:    my-app-namespace
     Labels:       kubernetes-fleet.io/parent-CRP=web-app-rollout-placement
@@ -563,7 +563,7 @@ Since the error message specifies `web-app-placement-member2-43991b15`, check th
         Status:                True
         Type:                  RolloutStarted
         ...
-    ```
+```
 
 2. If the `RolloutStarted` condition displays, validate that the`StagedUpdateRun` referenced is the one you're working with. If another `StagedUpdateRun` is referenced, wait for that `StagedUpdateRun` to finish.
 
