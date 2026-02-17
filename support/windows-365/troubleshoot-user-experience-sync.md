@@ -26,6 +26,17 @@ When a user signs in, Windows might notify them that they've signed in by using 
 
 To start troubleshooting this issue, check the status of the user's individual user storage as described in the following sections.
 
+### Policies preventing the access to the users storage
+
+Individual user storage is attached to the Cloud PC when the user signs in. Policies that deny writes access to disks that are not protected by bitlocker will attach the individual user storage, but block the ability for our agent to write the users data to the attached storage.
+
+Windows 365 already applied data encryption to the individual user storage using Microsoft managed keys (MMK) and does not support using bitlocker. Review your organization policies that could be affecting the Frontline shared Cloud PCs to ensure these two settings are not enabled.
+
+  - **Windows Component\Bitlocker Drive Encryption\Fixed Data Drives**
+    - Deny write access to fixed data drives not protected by BitLocker
+  - **Windows Component\Bitlocker Drive Encryption\Removable Data Drives**
+    - Deny write access to fixed data drives not protected by BitLocker
+
 ### Individual user storage failed to attach to their session
 
 During the Windows sign-in process, users follow one of two flows:
