@@ -1,7 +1,7 @@
 ---
 title: Event 1500 when SNMP is enabled
 description: Works around an issue where event ID 1500 is logged when SNMP is enabled.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

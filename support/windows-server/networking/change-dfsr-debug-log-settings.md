@@ -1,7 +1,7 @@
 ---
 title: How to configure DFSR logging
 description: Describes the way to change these DFSR debug log settings via the WMI Command-line interface WMIC.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

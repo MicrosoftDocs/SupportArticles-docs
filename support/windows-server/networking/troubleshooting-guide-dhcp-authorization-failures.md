@@ -1,7 +1,7 @@
 ---
 title: Guidance for Troubleshooting DHCP Authorization Failures
 description: Introduces general guidance for troubleshooting authorization failures related to DHCP.
-ms.date: 01/17/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

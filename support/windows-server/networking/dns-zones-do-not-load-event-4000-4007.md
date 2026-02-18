@@ -1,7 +1,7 @@
 ---
 title: DNS zones don't load with event 4000 and 4007
 description: DNS zones aren't loaded on the DNS console. Provides a resolution.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
