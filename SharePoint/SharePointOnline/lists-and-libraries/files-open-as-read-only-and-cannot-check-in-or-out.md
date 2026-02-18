@@ -13,12 +13,13 @@ ms.custom:
   - sap:Files and Documents\Check in
   - CSSTroubleshoot
   - CI 113561
+  - CI 9841
 appliesto: 
   - Microsoft SharePoint
-  - OneDrive for Business
+  - OneDrive
   - SharePoint Online
-description: Describes how to resolve an issue where a SharePoint file checked out from an online or local folder opens as read only.
-ms.date: 12/17/2023
+description: Describes how to resolve an issue where a SharePoint file checked out from an online or local folder opens as read-only.
+ms.date: 02/18/2026
 ---
 # SharePoint files open as read-only
 
@@ -30,8 +31,10 @@ At times, you may find that when you open files from SharePoint or OneDrive for 
 
 There are several reasons why a file may open as read only:
 
-- An unlicensed OneDrive account has been put into read-only mode because it is missing a valid license for over 60 days.  It will likely be put into Archive mode on the 93rd unlicensed day.  If an unlicensed OneDrive account is the cause, you may see the error message "*This file is in a read-only unlicensed OneDrive account and may be archived soon. Copy it somewhere else to retain access, or contact an administrator.*".  To fix this, have your administrator add a valid license or move the content to a SharePoint site.  [Learn more about unlicensed OneDrive accounts](/SharePoint/unlicensed-onedrive-accounts).
-
+- You might see the following error message:
+  > This file is in a read-only unlicensed OneDrive account and may be archived soon. Copy it somewhere else to retain access, or contact an administrator.
+  
+  This error occurs when the file is associated with a [OneDrive account that hasn't had a valid license for over 60 days](/SharePoint/unlicensed-onedrive-accounts).
 - Antivirus programs may open potentially unsafe files as read-only. Check with your antivirus provider to learn how to adjust these settings.
 - If you have libraries with **Checkout Required**, or **Validation** columns or metadata, or when **Draft Item Security** is set to either **Only users who can edit** or **Only users who can approve items** in Version Settings of the library, these items will be synchronized as read-only. For more information, see [Libraries with specific columns or metadata](https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa#librariesspecificcolumns).
 - An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting. For more information, see [An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting](https://support.microsoft.com/help/983047).
@@ -40,6 +43,7 @@ There are several reasons why a file may open as read only:
 
 To resolve this issue, one of the following methods may help:
 
+- If you see the error message about an unlicensed OneDrive account, an administrator can either assign a valid license to the OneDrive account or move the contents of the file to a SharePoint site.
 - Instead of selecting the document title, select **Open Menu** (the three dots), and then select **Edit**.
 - If the file is stored on OneDrive and your OneDrive storage space is full, you will be unable to save the document until your storage space is below your allowance. Check your free space on OneDrive by selecting the OneDrive icon in the notification center and choosing **Manage storage**, or go to https://onedrive.live.com, sign in, and note the amount of used space in the lower-left corner of the screen.
 - If Office is not activated, or if your subscription has expired, you might be in read-only **Reduced Functionality Mode**. For information on how to Activate Office, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
