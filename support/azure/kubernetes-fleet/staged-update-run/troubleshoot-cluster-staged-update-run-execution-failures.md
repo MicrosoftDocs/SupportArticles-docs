@@ -162,15 +162,15 @@ Aborted `updateRun` messages happen due to run failures and aren't recoverable. 
 
 **Placement not found**
 
+#### Cause 
+
+The `ClusterStagedUpdateRun` passed initialization so the `ClusterResourcePlacement` it references existed previously. A user deleted the `ClusterResourcePlacement` while the `ClusterStagedUpdateRun` was running.
+
 Example message:
 
 ```text
 cannot continue the updateRun: failed to validate the updateRun: failedto process the request due to a client error: parent placement not found
 ```
-
-#### Cause 
-
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterResourcePlacement` it references existed previously. A user deleted the `ClusterResourcePlacement` while the `ClusterStagedUpdateRun` was running.
 
 #### Solution
 
@@ -178,15 +178,16 @@ Create a new `ClusterResourcePlacement` in the same namespace. Then create a new
 
 **Strategy not found**
 
+
+#### Cause 
+
+The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references existed previously. A user deleted the `ClusterStagedUpdateStrategy` while the `ClusterStagedUpdateRun` was running.
+
 Example message:
 
 ```text
 cannot continue the updateRun: failed to validate the updateRun: referenced updateStrategy not found: ...
 ```
-
-#### Cause 
-
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references existed previously. A user deleted the `ClusterStagedUpdateStrategy` while the `ClusterStagedUpdateRun` was running.
 
 #### Solution
 
@@ -194,15 +195,15 @@ Create a new `ClusterStagedUpdateStrategy` in the same namespace. Then create a 
 
 **Invalid stage tasks**
 
+#### Cause 
+
+The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `ClusterStagedUpdateStrategy`.
+
 Example message:
 
 ```text
 cannot continue the updateRun: failed to validate the updateRun: the before stage tasks are invalid, updateStrategy: ...
 ```
-
-#### Cause 
-
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `ClusterStagedUpdateStrategy`.
 
 #### Solution
 
@@ -210,15 +211,15 @@ See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-
 
 **Cluster appears more than once**
 
+#### Cause 
+
+The `ClusterStagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during the `ClusterStagedUpdateRun` run. 
+
 Example message:
 
 ```text
 cannot continue the updateRun: failed to validate the updateRun: cluster `member-1` appears in more than one stage
 ```
-
-#### Cause 
-
-The `ClusterStagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during the `ClusterStagedUpdateRun` run. 
 
 #### Solution
 
@@ -301,7 +302,7 @@ Since the error message specifies `example-placement-member2-e1a567da`, check th
 
 2. If the `RolloutStarted` condition displays, validate that the `ClusterStagedUpdateRun` referenced is the `ClusterStagedUpdateRun` you're working with. If another `ClusterStagedUpdateRun` is referenced, wait for that `ClusterStagedUpdateRun` to finish.
 
-3. Verify the `ClusterStagedUpdateRun` is what you want to deploy. If not, stop this `ClusterStagedUpdateRun` and create a new one.
+3. Verify the `ClusterStagedUpdateRun` is what you want to roll out. If not, stop this `ClusterStagedUpdateRun` and create a new one.
 
 :::zone-end
 
@@ -425,7 +426,11 @@ During each reconciliation, validation occurs before running. These validation e
 
 Aborted `updateRun` messages happen due to run failures and aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
 
-**Placement not found**
+**Parent placement not found**
+
+#### Cause
+
+The `StagedUpdateRun` passed initialization so the `ResourcePlacement` it references existed previously. A user deleted the `ResourcePlacement` while the `StagedUpdateRun` was running.
 
 Example message:
 
@@ -433,15 +438,15 @@ Example message:
 cannot continue the updateRun: failed to validate the updateRun: failedto process the request due to a client error: parent placement not found
 ```
 
-#### Cause
-        
-The `StagedUpdateRun` passed initialization so the `ResourcePlacement` it references existed previously. A user deleted the `ResourcePlacement` while the `StagedUpdateRun` was running.
-
 #### Solution
 
 Create a new `ResourcePlacement` in the same namespace. Then create a new `StagedUpdateRun` referencing that placement since this instance is aborted.
 
 **Strategy not found**
+
+#### Cause 
+
+The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references existed previously. A user deleted the `StagedUpdateStrategy` while the `StagedUpdateRun` was running.
 
 Example message:
 
@@ -449,15 +454,15 @@ Example message:
 cannot continue the updateRun: failed to validate the updateRun: referenced updateStrategy not found: ...
 ```
 
-#### Cause 
-
-The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references existed previously. A user deleted the `StagedUpdateStrategy` while the `StagedUpdateRun` was running.
-
 #### Solution
 
 Create a new `StagedUpdateStrategy` in the same namespace. Then create a new `StagedUpdateRun` referencing that strategy.
 
 **Invalid stage tasks**
+
+#### Cause
+
+The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `StagedUpdateStrategy`.
 
 Example message:
 
@@ -465,25 +470,21 @@ Example message:
 cannot continue the updateRun: failed to validate the updateRun: the before stage tasks are invalid, updateStrategy: ...
 ```
 
-#### Cause
-
-The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `StagedUpdateStrategy`.
-
 #### Soution
 
 See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the  `StagedUpdateStrategy`. Then create a new `StagedUpdateRun`.
 
 **Cluster appears more than once**
 
+#### Cause 
+
+The `StagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during `StagedUpdateRun` run. 
+
 Example message:
 
 ```text
 cannot continue the updateRun: failed to validate the updateRun: cluster `member-1` appears in more than one stage
 ```
-
-#### Cause 
-
-The `StagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during `StagedUpdateRun` run. 
 
 #### Solution
 
@@ -567,6 +568,6 @@ Since the error message specifies `web-app-placement-member2-43991b15`, check th
 
 2. If the `RolloutStarted` condition displays, validate that the`StagedUpdateRun` referenced is the one you're working with. If another `StagedUpdateRun` is referenced, wait for that `StagedUpdateRun` to finish.
 
-3. Verify the `StagedUpdateRun` is what you want to deploy. If not, stop this `StagedUpdateRun` and create a new one.
+3. Verify the `StagedUpdateRun` is what you want to roll out. If not, stop this `StagedUpdateRun` and create a new one.
 
 :::zone-end
