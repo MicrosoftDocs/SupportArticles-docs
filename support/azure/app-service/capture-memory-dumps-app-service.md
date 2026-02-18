@@ -1,7 +1,7 @@
 ---
 title: Capture Memory Dumps on the Azure App Service Platform
 description: There are many features for capturing memory dumps on Azure App Service Web Apps. This article makes recommendations about which feature to use based on the scenario.
-ms.date: 06/03/2024
+ms.date: 02/18/2026
 author: benperk
 ms.author: benperk
 editor: v-jsitser
@@ -23,12 +23,12 @@ The following table provides recommendations about the commands that each App Se
 
 | Scenario | Azure App Service debugging feature | Command |
 |--|--|--|
-| [Unresponsive or slow](#unresponsive-or-slow-scenario) | [Auto-heal (request duration)](#auto-heal-request-duration-feature) | `procdump -accepteula -r -dc "Message" -ma <PID> <PATH>` |
+| [Unresponsive or slow](#unresponsive-or-slow-scenario) | [Auto-Heal (request duration)](#auto-heal-request-duration-feature) | `procdump -accepteula -r -dc "Message" -ma <PID> <PATH>` |
 | [Crash (process termination)](#crash-process-termination-scenario) | [Crash monitoring](#crash-monitoring-feature) | Uses DbgHost to capture a memory dump |
 | [Crash (handled exceptions)](#crash-handled-exceptions-scenario) | [Traces in Application Insights/Log Analytics](#traces-in-application-insightslog-analytics-feature) | None |
 | [Crash (unhandled exceptions)](#crash-unhandled-exceptions-scenario) | [Application Insights Snapshot Debugger](#application-insights-snapshot-debugger-feature) | None |
 | [Excessive CPU usage](#excessive-cpu-usage-scenario) | [Proactive CPU monitoring](#proactive-cpu-monitoring-feature) | `procdump -accepteula -dc "Message" -ma <PID> <PATH>` |
-| [Excessive memory consumption](#excessive-memory-consumption-scenario) | [Auto-heal (memory limit)](#auto-heal-memory-limit-feature) | `procdump -accepteula -r -dc "Message" -ma <PID> <PATH>` |
+| [Excessive memory consumption](#excessive-memory-consumption-scenario) | [Auto-Heal (memory limit)](#auto-heal-memory-limit-feature) | `procdump -accepteula -r -dc "Message" -ma <PID> <PATH>` |
 
 > [!NOTE]  
 > We have a secondary recommendation for capturing a W3WP process memory dump in the unresponsive or slow scenario. If that scenario is reproducible, and you want to capture the dump immediately, you can use the [Collect a Memory dump](#collect-a-memory-dump-feature) diagnostic tool. This tool is located in the **Diagnose and solve problems** toolset page for the given App Service Web App in the Azure portal. Another location to check for general exceptions and poor performance is on the **Application Event Logs** page. (You can access Application logs also from the **Diagnose and solve problems** page.) We discuss all the available methods in the ["Expanded Azure App Service debugging feature descriptions"](#expanded-azure-app-service-debugging-feature-descriptions) section.
@@ -37,19 +37,19 @@ The following table provides recommendations about the commands that each App Se
 
 This section contains detailed descriptions of the six scenarios that are shown in the previous table.
 
-#### Unresponsive or slow scenario
+### Unresponsive or slow scenario
 
 When a request is made to a web server, some code must usually be run. The code execution occurs within the *w3wp.exe* process on threads. Each thread has a stack that shows what's currently running.
 
 An unresponsive scenario can be either permanent (and likely to time out) or slow. Therefore, the unresponsive scenario is one in which a request takes longer than expected to run. What you might consider being slow depends on what the code is doing. For some people, a three-second delay is slow. For others, a 15-second delay is acceptable. Basically, if you see performance metrics that indicate slowness, or a super user states that the server is responding slower than normal, then you have an unresponsive or slow scenario.
 
-#### Crash (process termination) scenario
+### Crash (process termination) scenario
 
-Over many years, Microsoft .NET Framework has improved the handling of exceptions. In the current version of .NET, the exception handling experience is even better.
+Over many years, Microsoft .NET Framework improved the handling of exceptions. In the current version of .NET, the exception handling experience is even better.
 
 Historically, if a developer didn't place code snippets within a try-catch block, and an exception was thrown, the process terminated. In that case, an unhandled exception in the developer's code terminated the process. More modern versions of .NET handle some of these "unhandled" exceptions so that the process that's running the code doesn't crash. However, not all unhandled exceptions are thrown directly from the custom code. For example, access violations (such as 0xC0000005 and 0x80070005) or a stack overflow can terminate the process.
 
-#### Crash (handled exceptions) scenario
+### Crash (handled exceptions) scenario
 
 Although a software developer takes special care to determine all possible scenarios under which the code runs, something unexpected can occur. The following errors can trigger an exception:
 
@@ -61,13 +61,13 @@ It's a best practice to put code execution into try-catch code blocks. If a deve
 
 In the catch block, it's useful to capture enough information into a logging source so that the issue can be reproduced and, ultimately, resolved. Exceptions are expensive code paths in terms of performance. Therefore, having many exceptions affects performance.
 
-#### Crash (unhandled exceptions) scenario
+### Crash (unhandled exceptions) scenario
 
 Unhandled exceptions occur when code tries to take an action that it doesn't expect to encounter. As in the [Crash (process termination)](#crash-process-termination-scenario) scenario, that code isn't contained within a try-catch code block. In this case, the developer didn't anticipate that an exception could occur in that section of code.
 
 This scenario differs from the previous two exception scenarios. In the [Crash (unhandled exceptions)](#crash-unhandled-exceptions-scenario) scenario, the code in question is the code that the developer wrote. It isn't the framework code that's throwing the exception, and it isn't one of the unhandled exceptions that kills the *w3wp.exe* process. Also, because the code that's throwing an exception isn't within a try-catch block, there's no opportunity to handle the exception gracefully. Troubleshooting the code is initially a bit more complex. Your goal would be to find the exception text, type, and stack that identifies the method that's throwing this unhandled exception. That information enables you to identify where you have to add the try-catch code block. Then, the developer can add the similar logic to log exception details that should exist in the [Crash (unhandled exceptions)](#crash-unhandled-exceptions-scenario) scenario.
 
-#### Excessive CPU usage scenario
+### Excessive CPU usage scenario
 
 What's excessive CPU usage? This situation is dependent on what the code does. In general, if the CPU usage from the *w3wp.exe* process is 80 percent, then your application is in a critical situation that can cause various symptoms. Some possible symptoms are:
 
@@ -77,7 +77,7 @@ What's excessive CPU usage? This situation is dependent on what the code does. I
 
 Even a 20-percent CPU usage can be considered excessive if the web site is just delivering static HTML files. Post-mortem troubleshooting of an excessive CPU spike by generating a memory dump probably doesn't help you determine the specific method that's using it. The best that you can do is to determine which requests were likely taking the longest time, and then try to reproduce the issue by testing the identified method. That procedure assumes that you don't run performance monitors on the performance systems that captured that burst. In many cases, you can cause performance issues by having monitors constantly run in real time.
 
-#### Excessive memory consumption scenario
+### Excessive memory consumption scenario
 
 If an application is running in a 32-bit process, excessive memory consumption can be a problem. Even a small amount of activity can consume the 2-3 GB of allocated virtual address space. A 32-bit process can never exceed a total of 4 GB, regardless of the amount of physical memory that's available.
 
@@ -100,9 +100,9 @@ In the table in the ["Mapping memory dump scenarios to Azure App Service debuggi
 
 In the following sections, we discuss each of these debugging features in more detail.
 
-#### Auto-heal (request duration) feature
+### Auto-Heal (request duration) feature
 
-The [auto-heal](/azure/app-service/overview-diagnostics#auto-healing) (request duration) feature is useful for capturing a memory dump if the response is taking longer than expected to finish. You can see the link to **Auto-Heal** in the **Diagnostic Tools** tile in the previous screenshot. Select that link to go directly to the feature, or select the **Diagnostic Tools** tile to review all the available tools on the **Diagnostic Tools** page. For information about how to configure this feature, see the following articles:
+The [Auto-Heal](/azure/app-service/overview-diagnostics#auto-healing) (request duration) feature is useful for capturing a memory dump if the response is taking longer than expected to finish. You can see the link to **Auto-Heal** in the **Diagnostic Tools** tile in the previous screenshot. Select that link to go directly to the feature, or select the **Diagnostic Tools** tile to review all the available tools on the **Diagnostic Tools** page. For information about how to configure this feature, see the following articles:
 
 - [Announcing the New Auto Healing Experience in App Service Diagnostics](https://azure.github.io/AppService/2018/09/10/Announcing-the-New-Auto-Healing-Experience-in-App-Service-Diagnostics.html) 
 
@@ -110,13 +110,13 @@ The [auto-heal](/azure/app-service/overview-diagnostics#auto-healing) (request d
 
 - [Collect and automate diagnostic actions with Azure App Services](https://devblogs.microsoft.com/premier-developer/collect-and-automate-diagnostic-actions-with-azure-app-services/)
 
-The auto-heal feature is shown in the following screenshot.
+The **Auto-Heal** feature is shown in the following screenshot.
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/auto-heal-request-duration.png" alt-text="Azure portal screenshot of the 'Auto-Heal' page (containing the Request Duration tile) in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/auto-heal-request-duration.png":::
 
 Another feature named "Collect a Memory dump" is useful in this scenario when the issue is currently occurring or reproducible. This feature quickly collects a memory dump on manual demand.
 
-#### Collect a memory dump feature
+### Collect a memory dump feature
 
 This approach requires manual intervention. The following screenshot shows the **Collect a Memory dump** page.
 
@@ -124,7 +124,7 @@ This approach requires manual intervention. The following screenshot shows the *
 
 To use the feature, select a storage account in which to store the memory dump. Then, select which server instance you want to collect the memory dump from. If you have more than a single instance, make sure that the issue that you're debugging is occurring on that instance. Notice that a restart might not be optimal on a production application that's in operation.
 
-#### Crash Monitoring feature
+### Crash Monitoring feature
 
 The Crash Monitoring feature is useful for capturing a memory dump if an unhandled exception causes the W3WP process to terminate. The following screenshot shows the **Crash Monitoring** page in **Diagnostic Tools**:
 
@@ -132,7 +132,7 @@ The Crash Monitoring feature is useful for capturing a memory dump if an unhandl
 
 To view a guided walk-through about how to configure the crash monitoring feature in Azure App Service, see [Crash monitoring in Azure App Service](https://azure.github.io/AppService/2020/08/11/Crash-Monitoring-Feature-in-Azure-App-Service.html).
 
-#### Traces in Application Insights/Log Analytics feature
+### Traces in Application Insights/Log Analytics feature
 
 A handled exception is a scenario in which the code contained within a try-catch block tries to take an action that's unexpected or unsupported. For example, the following code snippet tries to divide a number by zero even though it's an illegal operation:
 
@@ -164,7 +164,7 @@ The `message` column is the location in which you can store the details that are
 
 The best approach to add this functionality to your application code depends on the application code stack and version that you have. For example, ASP.NET, ASP.NET Core, The Model-View-Controller (MVC) framework, Razor, and so on. To determine the best approach for your scenario, review [Application Insights logging with .NET](/azure/azure-monitor/app/ilogger?tabs=dotnet6).
 
-#### Application event logs (handled exceptions) feature
+### Application event logs (handled exceptions) feature
 
 You also can find unhandled exceptions in the handled exception in the **Application Event Logs** page of **Diagnostic Tools** in the Azure portal, as shown in the following screenshot.
 
@@ -172,11 +172,11 @@ You also can find unhandled exceptions in the handled exception in the **Applica
 
 In this situation, the same error message is received that you logged through your code. However, you lose some flexibility in how you can customize the queries on Application Insights trace logs.
 
-#### Application Insights Snapshot Debugger feature
+### Application Insights Snapshot Debugger feature
 
 Unhandled exceptions are also logged on the **Application Event Logs** page, as shown in the output text in the next section. However, you can also [enable the Application Insights Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service). This approach doesn't require that you add any code to your application.
 
-#### Application event logs (unhandled exceptions) feature
+### Application event logs (unhandled exceptions) feature
 
 The following output is from the **Application Event Logs** page of **Diagnostic Tools** in the Azure portal. It shows some example text of an unhandled application exception:
 
@@ -205,7 +205,7 @@ One difference here from the handled exception in the Application log is the exi
 
 In this view, you see all **Exceptions**, not only the one that you're searching for. The graphical representation of all exceptions that occur in your application is helpful to gain an overview of the health of your system. The Application Insights dashboard is more helpful visually in comparison to the Application event logs.
 
-#### Proactive CPU monitoring feature
+### Proactive CPU monitoring feature
 
 During excessive CPU usage scenarios, you can use the proactive CPU monitoring tool. For information about this tool, see [Mitigate your CPU problems before they happen](https://azure.github.io/AppService/2019/10/07/Mitigate-your-CPU-problems-before-they-even-happen.html). The following image shows the **Proactive CPU Monitoring** page in **Diagnostic Tools**.
 
@@ -219,15 +219,15 @@ You should consider CPU usage of 80 percent or more as a critical situation that
 
 **CPU Threshold** identifies how much computer CPU the targeted process uses (W3WP in this case). **Threshold Seconds** is the amount of time that the CPU was used at the **CPU Threshold**. For example, if there's 75-percent CPU usage for a total of 30 seconds, the memory dump would be captured. As configured on the **Proactive CPU Monitoring** page, the process would be checked for threshold breaches every 15 seconds.
 
-#### Auto-heal (memory limit) feature
+### Auto-Heal (memory limit) feature
 
-The auto-heal (memory limit) feature is useful for capturing a memory dump if the process is consuming more memory than expected. Again, pay attention to the bitness (32 or 64). If you experience memory pressure in the 32-bit process context, and the memory consumption is expected, you might consider changing the bitness to 64. Typically, if you change the bitness, you have to also recompile the application.
+The Auto-Heal (memory limit) feature is useful for capturing a memory dump if the process is consuming more memory than expected. Again, pay attention to the bitness (32 or 64). If you experience memory pressure in the 32-bit process context, and the memory consumption is expected, you might consider changing the bitness to 64. Typically, if you change the bitness, you have to also recompile the application.
 
 Changing the bitness doesn't reduce the amount of memory being used. It does allow the process to use more than 4 GB of total memory. However, if the memory consumption isn't as expected, you can use this feature to determine what's consuming the memory. Then, you can take an action to control the memory consumption.
 
-In the ["Expanded Azure App Service debugging feature descriptions"](#expanded-azure-app-service-debugging-feature-descriptions) section, you can see the link to **Auto-Heal** in the **Diagnostic Tools** tile in the first screenshot. Select that link to go directly to the feature, or select the tile and review all the available tools in the **Diagnostic Tools** page. For more information, go to the ["Auto-healing"](/azure/app-service/overview-diagnostics#auto-healing) section of [Azure App Service diagnostics overview](/azure/app-service/overview-diagnostics).
+In the ["Expanded Azure App Service debugging feature descriptions"](#expanded-azure-app-service-debugging-feature-descriptions) section, you can see the link to **Auto-Heal** in the **Diagnostic Tools** tile in the first screenshot. Select that link to go directly to the feature, or select the tile and review all the available tools in the **Diagnostic Tools** page. For more information, go to the ["Auto-Healing"](/azure/app-service/overview-diagnostics#auto-healing) section of [Azure App Service diagnostics overview](/azure/app-service/overview-diagnostics).
 
-The auto-heal feature is shown in the following screenshot.
+The **Auto-Heal** feature is shown in the following screenshot.
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/auto-heal-memory-limit.png" alt-text="Azure portal screenshot of the 'Auto-Heal' page (containing the Memory Limit tile) in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/auto-heal-memory-limit.png":::
 
@@ -237,7 +237,7 @@ The Collect a Memory dump feature is useful in this scenario if the issue is cur
 
 ## Expanded command descriptions
 
-The art of memory dump collection takes some time to study, experience, and perfect. As you have learned, different procedures are based on the symptoms that the process is showing, as listed in the table in the ["Expanded process scenario descriptions"](#expanded-process-scenario-descriptions) section. By contrast, the following table compares the Azure App Service's memory dump capture command to the [procdump](/sysinternals/downloads/procdump) command that you run manually from the Kudu console.
+The art of memory dump collection takes some time to study, experience, and perfect. As explained in the previous sections, different procedures are based on the symptoms that the process is showing, as listed in the table in the ["Expanded process scenario descriptions"](#expanded-process-scenario-descriptions) section. By contrast, the following table compares the Azure App Service's memory dump capture command to the [procdump](/sysinternals/downloads/procdump) command that you run manually from the Kudu console.
 
 | Scenario | Azure App Service command | General procdump command |
 |--|--|--|
@@ -262,7 +262,7 @@ After you study the different approaches for capturing memory dumps, the next st
 
 - Capturing a memory dump consumes significant system resources and disrupts performance even further.
 
-- Capturing memory dumps on the first chance isn't optimal because you'll probably capture too many. Those first-chance memory dumps are most likely irrelevant.
+- Capturing memory dumps on the first chance isn't optimal because you might capture too many. Those first-chance memory dumps are most likely irrelevant.
 
 - We recommend that you disable Application Insights before you capture a W3WP memory dump.
 
