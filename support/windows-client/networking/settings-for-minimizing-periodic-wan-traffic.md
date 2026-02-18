@@ -1,7 +1,7 @@
 ---
 title: Settings for minimizing periodic WAN traffic
 description: Describes the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic. Includes suggested settings to help prevent or minimize this behavior.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

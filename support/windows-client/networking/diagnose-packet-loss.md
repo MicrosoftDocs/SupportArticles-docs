@@ -1,7 +1,7 @@
 ---
 title: Diagnose Packet Loss
 description: Learn how to troubleshoot TCP/IP packet loss.
-ms.date: 04/30/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
