@@ -25,13 +25,13 @@ items:
 
 - name: Staged Update Run
   items:
-    - name: Troubleshooting Staged Update Run
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun API object-related errors for Azure Kubernetes Fleet Manager (preview)
       href: staged-update-run/troubleshoot-staged-update-run-api-issues.md
-    - name: Initialized is false
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun initialization errors
       href: staged-update-run/troubleshoot-cluster-staged-update-run-initialization-failures.md
-    - name: Progressing is false with "UpdateRunStuck" Reason
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun stuck errors
       href: staged-update-run/troubleshoot-cluster-staged-update-run-stuck.md
-    - name: Progressing and Succeeded is false with "UpdateRunFailed" Reason
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun errors
       href: staged-update-run/troubleshoot-cluster-staged-update-run-execution-failures.md
    
 - name: Multi-cluster networking
