@@ -1,7 +1,7 @@
 ---
 title: Logon scripts don't run for five minutes
 description: Provides a solution to an issue where logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
