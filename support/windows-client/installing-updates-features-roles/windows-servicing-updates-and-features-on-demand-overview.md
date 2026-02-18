@@ -1,7 +1,7 @@
 ---
 title: Windows Servicing, Updates and Features on Demand overview
 description: Overview of Windows Servicing, Updates and Features on Demand troubleshooting articles for Windows clients.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

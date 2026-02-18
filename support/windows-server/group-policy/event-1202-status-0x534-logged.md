@@ -1,7 +1,7 @@
 ---
 title: Event 1202 with status 0x534 logged
 description: Provides a solution to an event logged on domain controllers after modifying security policy.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

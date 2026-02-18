@@ -1,7 +1,7 @@
 ---
 title: Set event log security locally or via Group Policy
 description: This article provides the methods to set event log security access rights.
-ms.date: 04/29/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

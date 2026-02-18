@@ -2,7 +2,7 @@
 title: Windows 365 Enterprise and Frontline Known issues
 description: Learn about known issues for Windows 365 Enterprise and Frontline.
 manager: dcscontentpm
-ms.date: 11/17/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:

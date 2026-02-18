@@ -2,7 +2,7 @@
 title: Troubleshoot Azure network connections
 description: Troubleshoot Azure network connections in Windows 365.
 manager: dcscontentpm
-ms.date: 06/10/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ericor, erikje, joeno
 ms.custom:

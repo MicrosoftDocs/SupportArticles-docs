@@ -1,7 +1,7 @@
 ---
 title: iSCSI Storage Connectivity Troubleshooting Guidance
 description: Resolves issues that occur in SAN-based and iSCSI storage environments in Windows Server.
-ms.date: 12/10/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Printer VBScript error 0x1A8
 description: Fixes a 0x1A8 error that occurs when you use the print-related Visual Basic script files on a 64-bit Windows operating system.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

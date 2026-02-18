@@ -1,7 +1,7 @@
 ---
 title: Failover behavior on clusters of three or more nodes
 description: Describes the logic by which groups fail from one node to another when there are three or more cluster node members.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

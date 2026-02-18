@@ -1,7 +1,7 @@
 ---
 title: Extranet Smart Lockout feature in Windows Server 2016
 description: Describes the Extranet Smart Lockout feature in Windows Server 2016.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
