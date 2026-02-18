@@ -2,7 +2,7 @@
 title: Connection Fails with an Interactive Window Could Not Be Shown Error
 description: Helps resolve the connection error - an interactive window could not be shown.
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:

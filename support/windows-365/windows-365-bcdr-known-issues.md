@@ -2,7 +2,7 @@
 title: Windows 365 BCDR Known Issues
 description: Learn about known issues that involve Windows 365 disaster recovery, including workarounds and updated fixes.
 ms.reviewer: kaushika; aradinger; v-appelgatet
-ms.date: 10/16/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting-known-issue
 ms.service: windows-365
 ms.custom:

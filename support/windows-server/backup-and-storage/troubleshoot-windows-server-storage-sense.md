@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Server Storage Sense
 description: Resolves issues in Storage Sense, a feature to automatically free up disk space by removing unnecessary files.
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
