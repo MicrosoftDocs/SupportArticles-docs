@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure Kubernetes Fleet Manager ClusterStagedUpdateRun/StagedUpdateRun
-description: Troubleshoot errors that occur when using the ClusterStagedUpdateRun/StagedUpdateRun API in Azure Kubernetes Fleet Manager.
+title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun API object-related errors for Azure Kubernetes Fleet Manager (preview)
+description: Troubleshoot issues that occur when using the ClusterStagedUpdateRun or StagedUpdateRun API in Azure Kubernetes Fleet Manager.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -9,13 +9,13 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-# Troubleshooting Staged Update Run API in Azure Kubernetes Fleet Manager (preview)
+# Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun API object-related errors for Azure Kubernetes Fleet Manager (preview)
 
 :::zone target="docs" pivot="cluster-scope"
 
 ## Summary
 
-This troubleshooting guide helps you resolve `ClusterStagedUpdateRun` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
+This troubleshooting guide helps you resolve `ClusterStagedUpdateRun` and `StagedUpdateRun` API object-related errors when you use Azure Kubernetes Fleet Manager. Troubleshooting on the hub cluster requires knowledge of the following objects:
 
 - `ClusterResourceSnapshot`
 - `ClusterSchedulingPolicySnapshot`
