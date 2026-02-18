@@ -1,7 +1,7 @@
 ---
 title: Error 0x6D9 There Are No More Endpoints Available from the Endpoint Mapper
 description: Addresses the error There are no more endpoints available from the endpoint mapper encountered during domain join operations.
-ms.date: 03/28/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

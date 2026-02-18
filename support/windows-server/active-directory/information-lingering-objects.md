@@ -1,7 +1,7 @@
 ---
 title: Lingering objects in an AD DS forest
 description: Provides information about lingering objects in a forest, including events that indicate lingering objects, causes of lingering objects, and methods to remove lingering objects.
-ms.date: 03/10/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

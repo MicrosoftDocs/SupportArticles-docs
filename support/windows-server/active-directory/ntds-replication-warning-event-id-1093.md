@@ -1,7 +1,7 @@
 ---
 title: NTDS replication warning Event ID 1093
 description: Provides a solution to an NTDS warning event ID 1093.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

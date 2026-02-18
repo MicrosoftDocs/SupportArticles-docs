@@ -1,7 +1,7 @@
 ---
 title: How to raise Active Directory domain and forest functional levels
 description: Describes how to raise Active Directory domain and forest functional levels.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
