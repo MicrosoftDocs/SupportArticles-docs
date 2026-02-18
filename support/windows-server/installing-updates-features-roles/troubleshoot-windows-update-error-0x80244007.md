@@ -3,7 +3,7 @@ title: Troubleshoot Windows Update Error 0x80244007
 description: Learn how to resolve Windows Update error 0x80244007 that occurs during update scans.
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/7/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:

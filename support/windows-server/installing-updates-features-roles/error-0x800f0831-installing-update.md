@@ -1,7 +1,7 @@
 ---
 title: Error 0x800f0831 when installing an update
 description: Describes an issue in which you receive the CBS called Error with 0x800f083 error when you install a cumulative update.
-ms.date: 02/11/2025
+ms.date: 02/12/2026
 ms.reviewer: kaushika, andad
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
