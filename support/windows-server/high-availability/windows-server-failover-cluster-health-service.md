@@ -1,7 +1,7 @@
 ---
 title: Windows Server Failover Cluster Health Service Troubleshooting Guide
 description: Resolves issues that affect the Windows Server Failover Cluster Health Service.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

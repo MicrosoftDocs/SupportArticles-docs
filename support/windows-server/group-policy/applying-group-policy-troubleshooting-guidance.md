@@ -1,7 +1,7 @@
 ---
 title: Applying Group Policy troubleshooting guidance
 description: Provides guidance to troubleshoot Group Policy.
-ms.date: 01/27/2026
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

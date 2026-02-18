@@ -2,7 +2,7 @@
 title: Resize a Windows 365 Business Cloud PC
 description: Discusses how to resize a Cloud PC's RAM, CPU, or storage based on your available licenses.
 manager: dcscontentpm
-ms.date: 10/17/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika; v-appelgatet
 ms.custom:

@@ -1,7 +1,7 @@
 ---
 title: Storage tests on a failover cluster might not discover all shared LUNs
 description: Provides a resolution for an issue in which the Validate a Configuration Wizard doesn't discover all shared LUNs for a cluster.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
