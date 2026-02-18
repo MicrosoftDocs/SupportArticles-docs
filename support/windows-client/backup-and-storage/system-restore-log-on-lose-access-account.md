@@ -1,7 +1,7 @@
 ---
 title: How to use System Restore to log on
 description: Describes how to recover when a password is corrupted or when a user account is lost.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
