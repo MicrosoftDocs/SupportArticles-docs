@@ -2,7 +2,7 @@
 title: LDAPS connection fails with event ID 36884
 description: Introduce how to troubleshoot event ID 36884 that occurs during LDAPS connections.
 ms.topic: troubleshooting
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.reviewer: garymu
 ms.custom:
 - sap:active directory\ldap configuration and interoperability

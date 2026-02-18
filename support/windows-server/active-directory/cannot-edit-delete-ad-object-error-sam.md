@@ -1,7 +1,7 @@
 ---
 title: Can't Edit or Delete an AD Object and Receive Errors
 description: Helps resolve an issue where you can't edit or delete an AD object and receive the error Attribute is owned by SAM or The specified account does not exist.
-ms.date: 07/18/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

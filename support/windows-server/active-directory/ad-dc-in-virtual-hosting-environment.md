@@ -1,7 +1,7 @@
 ---
 title: Host AD DCs in virtual hosting environments
 description: Discusses the issues that affect a DC that runs as a guest operating system (OS) in virtual hosting environments in Windows Server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
