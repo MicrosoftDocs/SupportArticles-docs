@@ -1,7 +1,7 @@
 ---
 title: Rename an object after replication collision
 description: Describes how to rename an object after a replication collision has occurred.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

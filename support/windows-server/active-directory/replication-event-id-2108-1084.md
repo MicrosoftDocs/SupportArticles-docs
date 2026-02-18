@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication event ID 2108 and 1084
 description: Documents steps to troubleshoot and to resolve two specific events on domain controllers.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
