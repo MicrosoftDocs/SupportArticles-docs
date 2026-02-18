@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting access denied and user not authorized issues in RDS
 description: Provides solutions to access denied and authorization issues that occur when you try to connect to a remote computer by using Remote Desktop Services.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

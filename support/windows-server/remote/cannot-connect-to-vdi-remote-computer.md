@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop can't connect to VDI-based computer
 description: Fixes an issue where Remote Desktop can't connect to a VDI-based remote computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
