@@ -1,7 +1,7 @@
 ---
 title: Optimize domain controller location
 description: Explains how to optimize the location of a domain controller or global catalog that resides outside of a client's site. Provides steps for Windows 2000 and Windows Server 2003.
-ms.date: 11/14/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -26,7 +26,7 @@ Additionally, a domain controller may register site-specific domain controller l
 
 In a case in which all the domain controllers in the same role (that is, that are hosting the same domain or are being global catalogs) in a particular site become unavailable, clients that are located in the same site will fail over to:
   - The Next Closest Site if configured to be used. A client needs to successfully contact a DC indicated the next closest site.
-  -	A DC registered in the list of Site-Less records.
+  -   A DC registered in the list of Site-Less records.
 
 By default all writable DCs register records for the site-less names, so a client may try DCs that are slow to respond as they are in a remote network, or they are not reachable at all due to routing restrictions. So it makes sense to have only DCs in the site-less DNS records that are well-connected to your network and are well-monitored, so they have good up-time.
 Read-Only DCs only register site-specific DNS records by default in the site they are located in. They do not automatically cover other sites.
@@ -164,5 +164,5 @@ Use the "Priority Set in the domain controller locator DNS SRV Records" Net Logo
 
 ### References
 - [Locating Active Directory domain controllers in Windows and Windows Server](/windows-server/identity/ad-ds/manage/dc-locator?tabs=dns-based-discovery).
-- [Problems occur with DCs in AD integrated DNS zones](/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones).
+- [Problems occur with DCs in AD integrated DNS zones](problems-with-dc-ad-integrated-dns-zones.md).
 - [Enabling Clients to Locate the Next Closest Domain Controller](/windows-server/identity/ad-ds/plan/enabling-clients-to-locate-the-next-closest-domain-controller).

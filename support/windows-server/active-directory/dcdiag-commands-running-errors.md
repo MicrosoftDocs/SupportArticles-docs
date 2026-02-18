@@ -1,7 +1,7 @@
 ---
 title: Errors when you run DCDIAG commands
 description: Fixes errors that occur when you run DCDIAG.EXE /E or /A or /C commands.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

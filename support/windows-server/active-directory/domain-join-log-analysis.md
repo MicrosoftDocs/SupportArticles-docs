@@ -1,7 +1,7 @@
 ---
 title: Domain Join Log Analysis
 description: Provides a detailed guide on what occurs on a client computer during a domain join operation.
-ms.date: 06/04/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

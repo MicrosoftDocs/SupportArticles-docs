@@ -1,7 +1,7 @@
 ---
 title: NetUser/NetGroup APIs fail with ACCESS DENIED
 description: An ACCESS DENIED error occurs with down-level APIs of the NetUser or NetGroup class like NetUserGetInfo or NetGroupGetInfo.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

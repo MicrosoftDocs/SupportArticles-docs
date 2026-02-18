@@ -1,7 +1,7 @@
 ---
 title: Domain join error code 0x0000232A
 description: Provides troubleshooting steps for resolving error code 0x0000232A when you join a workgroup computer to a domain.
-ms.date: 04/25/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

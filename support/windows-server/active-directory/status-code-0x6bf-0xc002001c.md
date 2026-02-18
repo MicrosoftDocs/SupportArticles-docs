@@ -1,7 +1,7 @@
 ---
 title: Status Code 0x6bf or 0xc002001c
 description: Provides troubleshooting steps for resolving the remote procedure call (RPC) status code 0x6bf or 0xc002001c when you join a workgroup computer to a domain.
-ms.date: 04/24/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
