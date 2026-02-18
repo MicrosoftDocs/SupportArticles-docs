@@ -15,39 +15,39 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This troubleshooting guide helps you resolve `ClusterStagedUpdateRun` and `StagedUpdateRun` API object-related errors when you use Azure Kubernetes Fleet Manager. Troubleshooting on the hub cluster requires knowledge of the following objects:
+This article helps you resolve `ClusterStagedUpdateRun` API object-related errors when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
 
 - `ClusterResourceSnapshot`
 - `ClusterSchedulingPolicySnapshot`
 - `ClusterResourceBinding`
 
-For more information about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
+For more information about each object, see [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
 
-## Complete progression of the ClusterStagedUpdateRun deployment
+## Complete progression of `ClusterStagedUpdateRun` deployment
 
-Understanding the progression and status of the `ClusterStagedUpdateRun` custom resource is crucial for diagnosing and identifying failures. You can view the status of the `ClusterStagedUpdateRun` custom resource by using the following command:
+Understanding the progression and status of the `ClusterStagedUpdateRun` custom resource is crucial for diagnosing and identifying failures. You can view the status of `ClusterStagedUpdateRun` by using the following command:
 
 ```bash
 kubectl describe clusterstagedupdaterun <name>
 ```
 
-The complete progression of `ClusterStagedUpdateRun` is as follows:
+The progression of `ClusterStagedUpdateRun` is as follows:
 
 1. **Initialized**: Indicates if the `ClusterStagedUpdateRun` and its corresponding resources (`ClusterResourcePlacement`, `ClusterStagedUpdateStrategy`) are set up correctly to start rollout.
 
-  If false, see [How To Troubleshoot ClusterStagedUpdateRun Initialization Failures](./troubleshoot-cluster-staged-update-run-initialization-failures.md).
+For more information, see [How To Troubleshoot ClusterStagedUpdateRun Initialization Failures](./troubleshoot-cluster-staged-update-run-initialization-failures.md).
 
-2. **Progressing**: Processes stages sequentially, updates clusters within each stage (respecting maxConcurrency), enforces before-stage and after-stage tasks.
+2. **Progressing**: Processes stage sequentially, update clusters within each stage (respecting `maxConcurrency`), and enforce before-stage and after-stage tasks.
 
-  If false with "UpdateRunStuck," see [How To Troubleshoot ClusterStagedUpdateRun Stuck](./troubleshoot-cluster-staged-update-run-stuck.md).
+If `UpdateRunStuck` is set to 'False`, see [How To Troubleshoot ClusterStagedUpdateRun Stuck](./troubleshoot-cluster-staged-update-run-stuck.md) Otherwise, see [How To Troubleshoot ClusterStagedUpdateRun Execution Failures](./troubleshoot-cluster-staged-update-run-execution-failures.md).
 
-  Otherwise, see [How To Troubleshoot ClusterStagedUpdateRun Execution Failures](./troubleshoot-cluster-staged-update-run-execution-failures.md).
+### Troubleshooting when using `ClusterStagedUpdateRun`
 
-### Things to keep in mind when using `ClusterStagedUpdateRun`
+- **`ClusterStagedUpdateRun` doesn't run automatically**
 
-1. `ClusterStagedUpdateRun` doesn't execute automatically.
+#### Cause
 
-When you create `ClusterStagedUpdateRun` with no state, the `ClusterStagedUpdateRun` doesn't start execution. The `ClusterStagedUpdateRun` uses the default value in this case.
+When you create `ClusterStagedUpdateRun` without a state indicated, `ClusterStagedUpdateRun` doesn't start the run. `ClusterStagedUpdateRun` uses the default value instead.
 
 ```yaml
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -77,15 +77,19 @@ status:
     type: Initialized
 ```
 
-No state defined in a `ClusterStagedUpdateRun` defaults to "Initialize" state. To start execution, patch the `ClusterStagedUpdateRun` to "Run" state:
+In this case, `ClusterStagedUpdateRun` defaults to `Initialize`. 
+
+### Solution
+
+Patch `ClusterStagedUpdateRun` to `Run` with the following command:
 
 ```bash
 kubectl patch clusterstagedupdaterun example-run --type='merge' -p '{"spec":{"state":"Run"}}'
 ```
 
-2. `ClusterStagedUpdateRun` not progressing after user approves `ClusterApprovalRequest`
+- **`ClusterStagedUpdateRun` doesn't progress after user approves `ClusterApprovalRequest`**
 
-Check the `ClusterStagedUpdateRun` for insights:
+Check `ClusterStagedUpdateRun` to investigate:
 
 ```bash
 $ kubectl get clusterstagedupdaterun example-run -o yaml
@@ -113,7 +117,9 @@ status:
 ...
 ```
 
-The `ClusterStagedUpdateRun` is still waiting for approval from the user. Check the `ClusterApprovalRequest` to verify:
+#### Cause 
+
+`ClusterStagedUpdateRun` is still waiting for approval from the user. Check `ClusterApprovalRequest` to verify:
 
 ```bash
 $ kubectl get clusterapprovalrequest example-run-after-staging -o yaml
@@ -144,9 +150,11 @@ status:
     type: Approved
 ```
 
-Notice that the user approved the request (status: "True," type: "Approved"), but the approval isn't accepted. The issue is that the `observedGeneration` for the `Approved` condition is 0, but the object's generation is 1. This mismatch applies to both before and after stage tasks.
+Notice that the user approved the request (`status: "True"`, `type: Approved`) but the approval isn't accepted. The issue is that `observedGeneration` for `Approved` is set to `0` but `observedGeneration` is set to `1`. This mismatch applies to both before and after stage tasks.
 
-Update the `observedGeneration` for the Approved condition. Or, reapprove with the correct `observedGeneration`:
+#### Solution
+
+Update `observedGeneration` to `Approved`. You can also reapprove with the correct `observedGeneration`:
 
 ```bash
 kubectl patch clusterapprovalrequests example-run-before-canary --type='merge' \
@@ -160,39 +168,39 @@ kubectl patch clusterapprovalrequests example-run-before-canary --type='merge' \
 
 ## Summary
 
-This troubleshooting guide helps you resolve `StagedUpdateRun` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
+This article helps you resolve `StagedUpdateRun` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
 
 - `ResourceSnapshot`
 - `SchedulingPolicySnapshot`
 - `ResourceBinding`
 
-For more information about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
+For more information about each object, see [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
 
-## Complete progression of the StagedUpdateRun deployment
+## Complete progression of `StagedUpdateRun` deployment
 
-Understanding the progression and status of the `StagedUpdateRun` custom resource is crucial for diagnosing and identifying failures. You can view the status of the `StagedUpdateRun` custom resource by using the following command:
+Understanding the progression and status of the `StagedUpdateRun` custom resource is crucial for diagnosing and identifying failures. You can view the status of `StagedUpdateRun` by using the following command:
 
 ```bash
 kubectl describe stagedupdaterun <name>
 ```
 
-The complete progression of `StagedUpdateRun` is as follows:
+The progression of `StagedUpdateRun` is as follows:
 
 1. **Initialized**: Indicates if the `StagedUpdateRun` and its corresponding resources (`ResourcePlacement`, `StagedUpdateStrategy`) are set up correctly to start rollout.
 
-  If false, see [How To Troubleshoot StagedUpdateRun Initialization Failures](./troubleshoot-cluster-staged-update-run-initialization-failures.md).
+For more information, see [How To Troubleshoot StagedUpdateRun Initialization Failures](./troubleshoot-cluster-staged-update-run-initialization-failures.md).
 
-2. **Progressing**: Processes stages sequentially, updates clusters within each stage (respecting maxConcurrency), enforces before-stage and after-stage tasks.
+2. **Progressing**: Processes stage sequentially, update clusters within each stage (respecting `maxConcurrency`), and enforce before-stage and after-stage tasks.
 
-  If false with "UpdateRunStuck," see [How To Troubleshoot StagedUpdateRun Stuck](./troubleshoot-cluster-staged-update-run-stuck.md).
+If `UpdateRunStuck` is set to `False`, see [How To Troubleshoot StagedUpdateRun Stuck](./troubleshoot-cluster-staged-update-run-stuck.md). Otherwise, see [How To Troubleshoot StagedUpdateRun Execution Failures](./troubleshoot-cluster-staged-update-run-execution-failures.md).
 
-  Otherwise, see [How To Troubleshoot StagedUpdateRun Execution Failures](./troubleshoot-cluster-staged-update-run-execution-failures.md).
+### Troubleshooting when using `StagedUpdateRun`
 
-### Things to keep in mind when using `StagedUpdateRun`
+- **`StagedUpdateRun` doesn't execute automatically**
 
-1. `StagedUpdateRun` doesn't execute automatically.
+#### Cause
 
-When you create `StagedUpdateRun` with no state, the `StagedUpdateRun` doesn't start execution. The `StagedUpdateRun` uses the default value in this case.
+When you create `StagedUpdateRun` without a state indicated, the `StagedUpdateRun` doesn't start the run. `StagedUpdateRun` uses the default value instead.
 
 ```yaml
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -223,15 +231,19 @@ status:
     type: Initialized
 ```
 
-No state defined in a `StagedUpdateRun` defaults to "Initialize" state. To start execution, patch the `StagedUpdateRun` to "Run" state:
+In this case, `StagedUpdateRun` defaults to `Initialize`. 
+
+#### Solution
+
+Patch the `StagedUpdateRun` to `Run` with the following command:
 
 ```bash
 kubectl patch stagedupdaterun web-app-rollout -n my-app-namespace --type='merge' -p '{"spec":{"state":"Run"}}'
 ```
 
-2. `StagedUpdateRun` not progressing after user approves `ApprovalRequest`
+- **`StagedUpdateRun` doesn't progress after user approves `ApprovalRequest`**
 
-Check the `StagedUpdateRun` for insights:
+Check `StagedUpdateRun` to investigate:
 
 ```bash
 $ kubectl get stagedupdaterun web-app-rollout -n my-app-namespace -o yaml
@@ -259,7 +271,9 @@ status:
 ...
 ```
 
-The `StagedUpdateRun` is still waiting for approval from the user. Check the `ApprovalRequest` to verify:
+#### Cause
+
+`StagedUpdateRun` is still waiting for approval from the user. Check `ApprovalRequest` to verify:
 
 ```bash
 $ kubectl get approvalrequests web-app-rollout-before-dev -n my-app-namespace -o yaml
@@ -292,9 +306,11 @@ status:
 
 ```
 
-Notice that the user approved the request (status: "True," type: "Approved"), but the approval isn't accepted. The issue is that the `observedGeneration` for the `Approved` condition is 0, but the object's generation is 1. This mismatch applies to both before and after stage tasks.
+Notice that the user approved the request (`status: "True"`, `type: Approved`) but the approval isn't accepted. The issue is that `observedGeneration` for `Approved` is set to `0` but `observedGeneration` is set to `1`. This mismatch applies to both before and after stage tasks.
 
-Update the `observedGeneration` for the Approved condition. Or, reapprove with the correct `observedGeneration`:
+#### Solution
+
+Update `observedGeneration` to `Approved`. You can also reapprove with the correct `observedGeneration`:
 
 ```bash
 kubectl patch approvalrequests web-app-rollout-before-dev -n my-app-namespace --type='merge' \
