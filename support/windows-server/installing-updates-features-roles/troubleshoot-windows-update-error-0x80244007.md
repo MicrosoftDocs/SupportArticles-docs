@@ -99,13 +99,13 @@ This error is primarily caused by SOAP faults that are returned by the server du
 
 Edit the `web.config` file on the WSUS server. The file is located at *%programfiles%\Update Services\WebServices\ClientWebService\web.config*. Change the value for **maxInstalledPrerequisites** from **400** to **800**.
 
-For more information, see [Error 80244007 when a WSUS client scans for updates](/mem/configmgr/update-management/error-80244007-when-wsus-client-scans-updates).
+For more information, see [Error 80244007 when a WSUS client scans for updates](../../../mem/configmgr/update-management/error-80244007-when-wsus-client-scans-updates.md).
 
 ### Resolution 2: Decline superseded updates in WSUS
 
-Decline all superseded updates on the WSUS server. For detailed instruction to do this procedure, see [PowerShell script to decline superseded updates in WSUS](/mem/configmgr/update-management/decline-superseded-updates).
+Decline all superseded updates on the WSUS server. For detailed instruction to do this procedure, see [PowerShell script to decline superseded updates in WSUS](../../../mem/configmgr/update-management/decline-superseded-updates.md).
 
-For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](/mem/configmgr/update-management/wsus-maintenance-guide).
+For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](../../../mem/configmgr/update-management/wsus-maintenance-guide.md).
 
 ### Resolution 2.1: Increase `maxCachedUpdate` in WSUS configuration
 
@@ -119,7 +119,7 @@ Open an elevated Command Prompt window on the affected WSUS client, and run the 
 - `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f`
 - `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f`
 - `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f`
-- reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f`
+- `reg Delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f`
 - `net start wuauserv`
 - `wuauclt.exe /resetauthorization /detectnow`
 
