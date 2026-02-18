@@ -1,7 +1,7 @@
 ---
 title: Application or Service Memory Leaks Troubleshooting Guidance
 description: Provides guidance on how to troubleshoot application or service memory leaks.
-ms.date: 08/12/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
