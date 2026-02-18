@@ -119,4 +119,3 @@ In another scenario, a previously sent TCP segment isn't acknowledged by the rem
 - [How to capture a NetLog dump](https://www.chromium.org/for-testers/providing-network-details)
 - [How to collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace)
 - [Inspect network activity](/microsoft-edge/devtools-guide-chromium/network/)
-- [Trouble Shooting Guide](https://microsoft.github.io/msquic/msquicdocs/docs/TSG.html)
