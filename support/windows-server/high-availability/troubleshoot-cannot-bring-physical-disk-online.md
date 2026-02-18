@@ -1,7 +1,7 @@
 ---
 title: Can't bring a physical disk online in a cluster
 description: Provides guidance for when a physical disk fails to come online in a Windows-based failover cluster
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

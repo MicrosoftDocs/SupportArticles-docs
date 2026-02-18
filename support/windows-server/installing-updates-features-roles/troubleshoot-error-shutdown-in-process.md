@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Shutdown in Progress Windows Error 0x8007045b 
 description: Learn how to resolve Windows update error 0x8007045b that indicates that access to an unmanaged server isn't allowed.
-ms.date: 08/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

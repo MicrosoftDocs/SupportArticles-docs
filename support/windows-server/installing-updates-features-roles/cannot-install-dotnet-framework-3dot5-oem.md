@@ -1,7 +1,7 @@
 ---
 title: Can't install .NET Framework 3.5 on OEM Windows installation
 description: Works around an issue in which you cannot install the .NET Framework 3.5 on an OEM Windows installation. This issue occurs when you cannot access the public Internet.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

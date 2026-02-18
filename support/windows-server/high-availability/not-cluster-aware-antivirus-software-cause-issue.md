@@ -1,7 +1,7 @@
 ---
 title: Antivirus software cause problems with Cluster Services
 description: Resolve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
