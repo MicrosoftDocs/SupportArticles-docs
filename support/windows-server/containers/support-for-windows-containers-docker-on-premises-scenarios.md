@@ -1,7 +1,7 @@
 ---
 title: Support policy for Windows containers and Docker in on-premises scenarios
 description: Summary of the configurations that Microsoft supports for Windows containers when you use them in an on-premises Windows deployment.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -157,7 +157,7 @@ For support of Microsoft applications like IIS, SQL and .NET running in containe
 
 Avoid copying .DLLs from the container host to the Windows Server Core base image as it may cause the application to misbehave. Microsoft provides some component .DLLs in Redistributable package form. Download Redistributable packages from official Microsoft Download Center and install it in the container image using a Dockerfile.
 
-There isn't a “single source of truth” in terms of which .DLLs are offered in a Redistributable form or not.
+There isn't a "single source of truth" in terms of which .DLLs are offered in a Redistributable form or not.
 
 For guidance on moving legacy apps, see [Lift and shift to containers](/virtualization/windowscontainers/quick-start/lift-shift-to-containers).
 
@@ -201,7 +201,7 @@ _ContainerD_ is an open-source industry-standard container runtime that is suppo
 
 Several container orchestrators support Windows Server containers. Address any issues or questions with the vendor before engaging Microsoft support.
 
-_Azure Kubernetes Service on Azure Stack HCI (AKS-HCI) or Windows Server_ is an on-premises implementation of Azure’s flag ship container service, which automates running containerized applications at scale. AKS makes it quicker to get started hosting Linux and Windows containers in your datacenter.
+_Azure Kubernetes Service on Azure Stack HCI (AKS-HCI) or Windows Server_ is an on-premises implementation of Azure's flag ship container service, which automates running containerized applications at scale. AKS makes it quicker to get started hosting Linux and Windows containers in your datacenter.
 
 Microsoft provides end-to-end support for Azure Kubernetes Service on Azure Stack HCI or Windows Server, including a single node without high availability.
 
@@ -223,7 +223,7 @@ Microsoft provides end-to-end support for Azure Kubernetes Service Edge Essentia
 
 For more information on support policies, see [Support policies for AKS hybrid - AKS hybrid | Microsoft Learn](/azure/aks/hybrid/support-policies).
 
-_Azure Kubernetes Service (AKS)_ is Azure’s flag ship container service; customers can create Windows Server based node pools within an AKS cluster to run their Windows containers. This is a fully supported service; Any issues or questions should be opened using the [Help + Support in the Azure portal](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+_Azure Kubernetes Service (AKS)_ is Azure's flag ship container service; customers can create Windows Server based node pools within an AKS cluster to run their Windows containers. This is a fully supported service; Any issues or questions should be opened using the [Help + Support in the Azure portal](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 _Kubernetes_ is an open-source project that supports Windows Server containers on Windows Server 2019 and higher starting with Kubernetes 1.14. For more information, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#windows-containers-in-kubernetes) and [Support Functionality and Limitations](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations). For more information, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
 
