@@ -1,7 +1,7 @@
 ---
 title: Can't apply user Group Policy settings if computer objects don't have GPO Read permissions
 description: Provides a solution to a problem in which you can't apply Group Policy settings to users because of a permissions problem.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
