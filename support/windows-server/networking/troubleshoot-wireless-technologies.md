@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting wireless technology issues
 description: Learn how to troubleshoot scenarios related to wireless technologies
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

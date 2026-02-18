@@ -1,7 +1,7 @@
 ---
 title: System error 67 has occurred
 description: Helps to fix the error message "System error 67 has occurred. The network name cannot be found".
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

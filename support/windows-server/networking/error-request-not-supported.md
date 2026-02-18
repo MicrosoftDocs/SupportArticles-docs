@@ -1,7 +1,7 @@
 ---
 title: The request is not supported error
 description: Helps resolve the error - Delegation information for the namespace cannot be queried. The request is not supported.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

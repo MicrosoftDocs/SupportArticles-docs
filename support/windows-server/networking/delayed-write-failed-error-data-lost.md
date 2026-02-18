@@ -1,7 +1,7 @@
 ---
 title: Delayed Write Failed error
 description: Helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Verify 6to4 adapter for DirectAccess server troubleshooting
 description: This article dicsusses how to verify 6to4 adapter for DirectAccess server troubleshooting.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

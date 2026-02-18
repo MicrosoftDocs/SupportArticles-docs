@@ -1,7 +1,7 @@
 ---
 title: Event ID 4015 - The DNS server encountered a critical error
 description: Describes how to interpret DNS Server Event ID 4015, identify the cause of the critical error, and then fix it.
-ms.date: 02/12/2026
+ms.date: 02/17/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
