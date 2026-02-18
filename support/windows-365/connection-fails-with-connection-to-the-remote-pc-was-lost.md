@@ -3,7 +3,7 @@ title: Connection fails with error connection to the Remote PC was lost
 description: Introduces how to resolve the connection failure with the "connection to the Remote PC was lost" error.
 audience: itpro
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ms.custom:

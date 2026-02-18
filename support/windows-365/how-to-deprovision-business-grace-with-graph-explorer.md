@@ -3,7 +3,7 @@ title: How to Remove Windows 365 Business Cloud PCs from Grace Using Graph Explo
 description: Learn how to remove Windows 365 Business Cloud PCs from grace period using Microsoft Graph Explorer and API. Step-by-step guide with prerequisites and troubleshooting tips.
 manager: dcscontentpm
 ms.reviewer: kaushika, anwill
-ms.date: 10/22/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.custom:
 - pcy:Provisioning\Grace Period Issues

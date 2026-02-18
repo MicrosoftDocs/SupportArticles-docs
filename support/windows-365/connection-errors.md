@@ -2,7 +2,7 @@
 title: Troubleshoot connection errors
 description: Troubleshoot connection errors in Windows 365.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: traceyadams, erikje
 ms.custom:
