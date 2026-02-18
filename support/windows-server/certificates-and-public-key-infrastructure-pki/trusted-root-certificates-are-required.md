@@ -1,7 +1,7 @@
 ---
 title: Required trusted root certificates
 description: Lists the trusted root certificates that are required by Windows operating systems. These trusted root certificates are required for the operating system to run correctly.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

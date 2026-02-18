@@ -1,7 +1,7 @@
 ---
 title: CA doesn't publish certificates in trusted domain
 description: Fixes an issue where the issued certificate isn't published in Active Directory when users from a child domain as a certification authority (CA) request a certificate.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
