@@ -1,7 +1,7 @@
 ---
 title: UAC blocks elevation of executable apps
 description: Describes new UAC behavior in Windows 10 that will disallow elevation of executable applications that are signed with revoked certificates.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

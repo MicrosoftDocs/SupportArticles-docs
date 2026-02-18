@@ -1,7 +1,7 @@
 ---
 title: Password Reset using Active Directory Users & Computers fails
 description: Provides a solution to an error that occurs when you reset the password of a user.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

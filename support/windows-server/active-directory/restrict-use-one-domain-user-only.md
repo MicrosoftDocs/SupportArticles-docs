@@ -1,7 +1,7 @@
 ---
 title: Restrict use of a computer to one domain user only
 description: Describes how to restrict use of a computer to one domain user only.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

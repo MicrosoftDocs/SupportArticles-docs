@@ -1,7 +1,7 @@
 ---
 title: Domain Join Error Code 0x54b
 description: Provides troubleshooting steps for resolving error code 0x54b when you join a workgroup computer to a domain.
-ms.date: 04/23/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
