@@ -1,6 +1,6 @@
 ---
-title: How To Troubleshoot ClusterStagedUpdateRun Stuck
-description: Troubleshoot errors that occur when ClusterStagedUpdateRun is stuck.
+title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun stuck errors
+description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun are stuck.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -9,13 +9,13 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-# Stuck: Progressing is False with "UpdateRunStuck" Reason
+# Troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` stuck errors
 
 ## Summary
 
-This article discusses how to troubleshoot when the update run is stuck while using update run APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterStageUpdateRun` and `StagedUpdateRun`.
+This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages that occur when the update run is stuck while using update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
-Sample error messages:
+The following is an example error message:
 
 ```yaml
     Last Transition Time:  2026-02-11T22:15:20Z
@@ -33,11 +33,11 @@ Sample error messages:
     Type:                  Progressing
 ```
 
-### Investigate Update Run Stuck
+## Investigate update run stuck errors
 
 :::zone target="docs" pivot="cluster-scope"
 
-A stuck `ClusterStagedUpdateRun` can be detected by getting the resource:
+1. Locate the `ClusterStagedUpdateRun` stuck error by running the following command:
 
 ```bash
 $ kubectl get csur example-run 
@@ -47,9 +47,9 @@ example-run   example-placement   0                         0                   
 
 ```
 
-The `PROGRESSING` field is `False`, indicating the execution stopped. Further investigation is needed to determine the cause.
+The `PROGRESSING` field is `False` indicating the run stopped. Further investigation is needed to determine the cause.
 
-Describe the `ClusterStagedUpdateRun` to get more details:
+2. Run these commands to get more details about the error:
 
 ```bash
 $ kubectl get csur example-run -o yaml
@@ -132,11 +132,13 @@ Status:
     Stage Name:              staging
 ```
 
-The message shows that the `ClusterStagedUpdateRun` is stuck waiting for member2 cluster in stage "staging" to finish updating. Let's examine the `stagesStatus` for stage "staging." There we can also see that member2 cluster starts updating but doesn't succeed.
+The message shows that the `ClusterStagedUpdateRun` is stuck waiting for the `member2` cluster in `Stages Status` to finish updating. 
 
-The controller deploys resources to a member cluster by updating its corresponding binding. It then checks periodically whether the update completes. If the binding is still not available after the current default 5 minutes, the controller determines the rollout is stuck and reports the condition.
+The controller deploys resources to a member cluster by updating its corresponding binding. It then checks periodically whether the update completes. If the binding still isn't available after the current default of five (5) minutes, the controller determines the rollout is stuck and reports the condition.
 
-A stuck `ClusterStagedUpdateRun` usually indicates an issue with the cluster or resources. To investigate further, you can check the `ClusterResourcePlacement` status:
+A stuck `ClusterStagedUpdateRun` usually indicates an issue with the cluster or resources. 
+
+3. Check the `ClusterResourcePlacement` status:
 
 ```bash
 $ kubectl describe crp example-placement
@@ -236,9 +238,9 @@ Status:
 ...
 ```
 
-The `Available` condition is `False` and the reason shows as `NotAllWorkAreAvailable`. In the "failed placements" section, it shows the nginx-deployment deployment isn't available.
+The `Available` condition is `False` and the `Reason` value is `NotAllWorkAreAvailable`. In `Failed Placements`, it shows `nginx-deployment` isn't available.
 
-Check the member2 cluster to see the image pull failure:
+4. Check the `member2` cluster to see the image pull failure:
 
 ```bash
 kubectl config use-context member2
@@ -254,17 +256,20 @@ nginx-deployment-5d9874b8b9-p9zsx   0/1     InvalidImageName   0          10m
 nginx-deployment-5d9874b8b9-wxmd7   0/1     InvalidImageName   0          10m
 ```
 
-> Note: A similar scenario can occur when the updateRun's state is set to Stop since ongoing resource placement on a cluster continues even when State is Stop.
+> [!NOTE]
+> A similar scenario can occur when the `updateRun`'s state is set to `Stop`.
 
-For more debugging instructions, you can refer to [ClusterResourcePlacement Troubleshooting Guide](./../cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md).
+### Solution
 
-After resolving the issue, you can always create a new `ClusterStagedUpdateRun` to restart the rollout. You can delete stuck `ClusterStagedUpdateRun`.
+See [Troubleshooting ResourcePlacement API in Azure Kubernetes Fleet Manager (preview)](./../cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md) for guidance on debugging the issue.
+
+After resolving the issue, create a new `ClusterStagedUpdateRun` to restart the rollout. You can then delete the stuck `ClusterStagedUpdateRun` value.
 
 :::zone-end
 
 :::zone target="docs" pivot="namespace-scope"
 
-A stuck `StagedUpdateRun` can be detected by getting the resource:
+1. Locate the `StagedUpdateRun` stuck error by running the following command:
 
 ```bash
 $ kubectl get stagedupdaterun web-app-rollout -n my-app-namespace
@@ -274,9 +279,9 @@ web-app-rollout   web-app-placement   1                         0               
 
 ```
 
-The `PROGRESSING` field is `False`, indicating the execution stopped. Further investigation is needed to determine the cause.
+The `PROGRESSING` field is `False` indicating the run stopped. Further investigation is needed to determine the cause.
 
-Describe the `StagedUpdateRun` to get more details:
+2. Run these commands to get more details about the error:
 
 ```bash
 $ kubectl describe stagedupdaterun <staged-update-run-name> -n <namespace-name>
@@ -360,11 +365,13 @@ Status:
     Stage Name:              staging
 ```
 
-The message shows that the `StagedUpdateRun` is stuck waiting for member2 cluster in stage "staging" to finish updating. Let's examine the `stagesStatus` for stage "staging." There we can also see that member2 cluster starts updating but doesn't succeed.
+The message shows that the `StagedUpdateRun` is stuck waiting for the `member2` cluster in `Stages Status` to finish updating. 
 
-The controller deploys resources to a member cluster by updating its corresponding binding. It then checks periodically whether the update completes. If the binding is still not available after the current default 5 minutes, the controller determines the rollout is stuck and reports the condition.
+The controller deploys resources to a member cluster by updating its corresponding binding. It then checks periodically whether the update completes. If the binding still isn't available after the current default of five (5) minutes, the controller determines the rollout is stuck and reports the condition.
 
-A stuck `StagedUpdateRun` usually indicates an issue with the cluster or resources. To investigate further, you can check the `ResourcePlacement` status:
+A stuck `StagedUpdateRun` usually indicates an issue with the cluster or resources. 
+
+3. Check the `ClusterResourcePlacement` status:
 
 ```bash
 $ kubectl describe rp web-app-placement -n my-app-namespace
@@ -465,9 +472,10 @@ Status:
 ...
 ```
 
-The `Available` condition is `False` and the reason shows as `NotAllWorkAreAvailable`. In the "failed placements" section, it shows the nginx-deployment deployment isn't available.
+The `Available` condition is `False` and the `Reason` value is `NotAllWorkAreAvailable`. In `Failed Placements`, it shows `nginx-deployment` isn't available.
 
-Check the member2 cluster to see the image pull failure:
+4. Check the `member2` cluster to see the image pull failure:
+
 
 ```bash
 kubectl config use-context member2
@@ -483,10 +491,13 @@ nginx-deployment-5d9874b8b9-p9zsx   0/1     InvalidImageName   0          10m
 nginx-deployment-5d9874b8b9-wxmd7   0/1     InvalidImageName   0          10m
 ```
 
-> Note: A similar scenario can occur when the updateRun's state is set to Stop since ongoing resource placement on a cluster continues even when State is Stop.
+> [!NOTE]
+> A similar scenario can occur when the `updateRun`'s state is set to `Stop`.
 
-For more debugging instructions, you can refer to [ResourcePlacement Troubleshooting Guide](./../cluster-resource-placement/troubleshoot-resource-placement-issues.md).
+### Solution
 
-After resolving the issue, you can always create a new `StagedUpdateRun` to restart the rollout. You can delete stuck `StagedUpdateRun`.
+See [Troubleshooting ResourcePlacement API in Azure Kubernetes Fleet Manager (preview)](./../cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md) for guidance on debugging the issue.
+
+After resolving the issue, create a new `StagedUpdateRun` to restart the rollout. You can then delete the stuck `StagedUpdateRun` value.
 
 :::zone-end

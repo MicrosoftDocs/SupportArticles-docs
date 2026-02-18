@@ -13,7 +13,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures when you propagate resources by using update-run APIs in Microsoft Azure Kubernetes Fleet Manager. 
+This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures that occur when you propagate resources by using update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
 The following is an example error message:
 
@@ -162,7 +162,7 @@ You can also find a `ClusterResourcePlacement` that has `spec.Strategy.Type: Ext
 
 **Strategy not found**
 
-#### Cause 
+### Cause 
 
 `ClusterStagedUpdateStrategy` doesn't exist. 
 

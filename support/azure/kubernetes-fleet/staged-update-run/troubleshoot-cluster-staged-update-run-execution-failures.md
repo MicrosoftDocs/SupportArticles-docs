@@ -13,7 +13,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages when you propagate resources with update-run APIs in Microsoft Azure Kubernetes Fleet Manager. 
+This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages that occur when you propagate resources with update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
 The following is an example error message:
 
