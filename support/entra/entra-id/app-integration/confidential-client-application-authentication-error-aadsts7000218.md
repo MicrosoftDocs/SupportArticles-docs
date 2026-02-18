@@ -42,7 +42,7 @@ In some authentication flow scenarios, such as the [OAuth 2 Resource Owner Passw
 
     :::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/allow-public-client-flows.png" alt-text="Screenshot that shows the 'Enable the following mobile and desktop flows' option." lightbox="media/confidential-client-application-authentication-error-aadsts7000218/allow-public-client-flows.png":::
 
-Changing the default client type from confidential to public causes security implications. For more information, see [What's the security implication of changing the default client type from confidential to public in Azure AD?](https://blogs.aaddevsup.xyz/2020/09/whats-the-security-implication-of-changing-the-default-client-type-from-confidential-to-public-in-azure-ad/)
+Changing the default client type from confidential to public causes security implications. For more information, see [What's the security implication of changing the default client type from confidential to public in Azure AD?](/entra/identity-platform/msal-client-applications).
 
 ## Understand client types in Microsoft Entra ID
 
