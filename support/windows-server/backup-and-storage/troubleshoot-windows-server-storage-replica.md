@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Server Storage Replica
 description: Resolves issues in Storage Replica for Windows Server that provides block-level, synchronous and asynchronous replication for disaster recovery.
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Return codes used by the Robocopy utility
 description: Discusses the return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

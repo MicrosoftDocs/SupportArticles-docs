@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Performance Issues in Storage Spaces Direct
 description: Helps you identify and fix performance issues related to Storage Spaces Direct (S2D) in Windows Server environments.
-ms.date: 12/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

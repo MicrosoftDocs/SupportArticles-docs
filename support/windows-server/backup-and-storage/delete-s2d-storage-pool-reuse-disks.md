@@ -1,7 +1,7 @@
 ---
 title: Delete a Storage Spaces Direct Storage Pool and Reset the Physical Disks
 description: Explains how to gracefully delete an S2D storage pool so that you can reuse the disks elsewhere.
-ms.date: 01/07/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
