@@ -60,8 +60,6 @@
       href: ../active-directory/migration-from-ad-rms-to-azure-rms.md
     - name: Support options for setting SSO
       href: ../active-directory/support-options-of-set-single-sign-on.md
-    - name: Troubleshoot single sign-on issues
-      href: ../active-directory/single-sign-on-issues.md
     - name: User passwords not synced from AD DS
       href: ../active-directory/password-synchronization-not-activated.md
   - name: Authentication

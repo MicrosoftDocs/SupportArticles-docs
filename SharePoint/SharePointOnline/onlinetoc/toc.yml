@@ -337,10 +337,6 @@
     items:
     - name: A synchronized file is moved to the recycle bin
       href: ../Sync/synced-file-moved-to-recycle-bin.md
-  - name: Video
-    items:
-    - name: Can't view embedded Stream video in Teams app
-      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: An online Web Part doesn't display

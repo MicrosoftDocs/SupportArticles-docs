@@ -15,6 +15,18 @@
     {
       "source_path": "Exchange/ExchangeOnline/groups-and-distribution-lists/cannot-reply-all-with-microsoft-365-groups.md",
       "redirect_url": "https://support.microsoft.com/office/ac19ad14-a3c5-4638-a0d3-21a49d5294af"
-    }
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/setupversioninformationcorruptexception-when-opening-ems.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/process-execution-failed-with-exit-code-3.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    }              
   ]
 }
