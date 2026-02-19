@@ -32,19 +32,19 @@ OK
 
 ## Cause
 
-Currently, Configuration Manager supports only following SKUs to create CMG:
+Currently, Configuration Manager supports only the following Azure Virtual Machine (VM) SKUs to create CMG:
 
 - Standard_B2S
 - Standard_A2_V2
 - Standard_A4_V2
 
-Some regions in Azure do not have all of these SKUs available. If you attempt to create a CMG in a region that does not have the selected SKU, you will receive the above error message.
+Some regions in Azure don't have all of these SKUs available. If you attempt to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
 
 ## Resolution
 
 Microsoft is actively working on expanding the list of supported SKUs for CMG creation to mitigate this issue. In the meantime, to work around this issue, you can either:
 
-- Select a different Azure region that has the selected SKU available for CMG creation. You can check the availability of SKUs in different regions by using the sample script below.
+- Select a different Azure region that has the selected SKU available for CMG creation. You can check the availability of SKUs in different regions by using the sample script. You need to have the [Azure PowerShell module](/powershell/azure/install-azps-windows) installed and authenticate to your Azure account to run the script.
 
 [!INCLUDE [Script disclaimer](../../../includes/script-disclaimer.md)]
 
