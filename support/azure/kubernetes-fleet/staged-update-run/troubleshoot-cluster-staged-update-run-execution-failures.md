@@ -498,7 +498,7 @@ If multiple `updateRun`s target the same `ClusterResourcePlacement`, they confli
 
 #### Cause 
 
-The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding `spec` and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. During the 15-second wait, if multiple concurrent `StagedUpdateRun` instances exist, another `StagedUpdateRun` instance preempts and updates the binding by using a new configuration, and the current `StagedUpdateRun` instance detects this change and fails.
+The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding `spec` and setting its status to `RolloutStarted`. The controller then waits 15 seconds and checks the binding again to determine whether the resource applied successfully. During the 15-second wait, if multiple concurrent `StagedUpdateRun` instances exist, another `StagedUpdateRun` instance preempts and updates the binding by using a new configuration, and the current `StagedUpdateRun` instance detects this change and fails.
 
 Example message:
 
