@@ -28,7 +28,7 @@ OK
 
 ```
 
-:::image type="content" source="media/cmg-creation-sku-unavailable-error-message.png" alt-text="The VM Size is currently not available in the region":::
+:::image type="content" source="media/cloud-management-gateway-creation-sku-unavailable.png" alt-text="The VM Size is currently not available in the region":::
 
 ## Cause
 
@@ -63,11 +63,11 @@ $results = Get-AzComputeResourceSku |
 		foreach ($location in $_.Locations) {
 			[PSCustomObject]@{
 				Sku      = $_.Name
-				Location = $location
+				Region = $location
 			}
 		}
 	} |
-	Sort-Object Sku, Location
+	Sort-Object Sku, Region
 
 if (-not $results) {
 	Write-Host 'No available regions found for the supported CMG SKUs.'
