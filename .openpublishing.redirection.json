@@ -14549,6 +14549,21 @@
       "source_path": "support/windows-server/active-directory/windows-app-cant-start.md",
       "redirect_url": "/previous-versions/windows-server/windows-app-cant-start",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/cannot-link-textservice-eudcedit.md",
+      "redirect_url": "/previous-versions/windows-client/cannot-link-textservice-eudcedit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/printer-vbscript-error-0x1a8-object-required.md",
+      "redirect_url": "/previous-versions/windows-client/printer-vbscript-error-0x1a8-object-required",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md",
+      "redirect_url": "/previous-versions/windows-client/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt",
+      "redirect_document_id": false
     }
   ]
 }

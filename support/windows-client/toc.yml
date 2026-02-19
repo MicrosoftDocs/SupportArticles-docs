@@ -99,10 +99,6 @@ items:
     items:
     - name: COM port settings revert to the default
       href: ./application-management/com-port-settings-reset-to-default.md
-    - name: Printer VBScript error 0x1A8
-      href: ./application-management/printer-vbscript-error-0x1a8-object-required.md
-    - name: USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
-      href: ./application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md
   - name: DCOM service startup and permissions
     items:
     - name: Event 10016 when accessing DCOM components
@@ -127,10 +123,6 @@ items:
       href: ./application-management/missing-windows-installer-cache.md
     - name: VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
       href: ./application-management/versionnt-value-for-windows-10-server.md
-  - name: Multilingual User Interface (MUI) and Input Method Editor (IME)
-    items:
-    - name: Can not link TextService in Eudcedit.exe
-      href: ./application-management/cannot-link-textservice-eudcedit.md
   - name: .NET Framework installation
     items:
     - name: .NET Framework 3.5 installation errors
