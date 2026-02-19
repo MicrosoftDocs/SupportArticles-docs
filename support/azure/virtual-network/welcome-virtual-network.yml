@@ -24,5 +24,3 @@ landingContent:
         links:
           - text: Virtual Network troubleshooter
             url: connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
-          - text: Azure Front Door troubleshooting documentation
-            url: front-door/welcome-front-door.yml
