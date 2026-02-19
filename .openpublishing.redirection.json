@@ -14582,22 +14582,22 @@
     },
     {
       "source_path": "support/windows-client/app-v/adding-package-version-error-0x8007012f.md",
-      "redirect_url": "../SupportArticles-docs-archive-pr/support/previous-versions/windows-client/adding-package-version-error-0x8007012f",
+      "redirect_url": "/previous-versions/windows-client/adding-package-version-error-0x8007012f",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/app-v/current-list-app-v-5-dot-x-file-versions.md",
-      "redirect_url": "../SupportArticles-docs-archive-pr/support/previous-versions/windows-client/current-list-app-v-5-dot-x-file-versions",
+      "redirect_url": "/previous-versions/windows-client/current-list-app-v-5-dot-x-file-versions",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/app-v/remove-cached-copy-unpublished-package-app-v-v5.md",
-      "redirect_url": "../SupportArticles-docs-archive-pr/support/previous-versions/windows-client/remove-cached-copy-unpublished-package-app-v-v5",
+      "redirect_url": "/previous-versions/windows-client/remove-cached-copy-unpublished-package-app-v-v5",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/app-v/troubleshoot-publishing-server-refresh-failures-app-v-v5.md",
-      "redirect_url": "../SupportArticles-docs-archive-pr/support/previous-versions/windows-client/troubleshoot-publishing-server-refresh-failures-app-v-v5",
+      "redirect_url": "/previous-versions/windows-client/troubleshoot-publishing-server-refresh-failures-app-v-v5",
       "redirect_document_id": false
     }
   ]
