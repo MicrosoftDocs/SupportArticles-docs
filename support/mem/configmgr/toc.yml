@@ -60,6 +60,8 @@ items:
   items:
     - name: Clients can't communicate with CMG
       href: cloud-services/cmg-communication-error.md
+    - name: Customers cannot create a new CMG in specific locations
+      href: cloud-services/cmg-creation-unavailable-in-region.md
     - name: CMG maintenance task fails to update public IP resource
       href: cloud-services/public-ip-creation-error.md
 - name: Collections
