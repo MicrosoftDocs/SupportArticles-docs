@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot known issues for printing
 description: Overview of printing known issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

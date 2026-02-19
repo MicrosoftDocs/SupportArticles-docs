@@ -1,7 +1,7 @@
 ---
 title: Printing issues caused by Print Spooler service not running
 description: Helps troubleshoot printing issues caused by the Print Spooler service not running.
-ms.date: 03/21/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

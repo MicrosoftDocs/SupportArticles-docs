@@ -1,7 +1,7 @@
 ---
 title: Error when you access an administrative share on a Windows-based computer
 description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

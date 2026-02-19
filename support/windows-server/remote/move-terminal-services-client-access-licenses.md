@@ -1,7 +1,7 @@
 ---
 title: Move Terminal Services CALs from one license server to another
 description: Describes how to move Terminal Services CALs from one license server to another in Windows. You must have the original license documents to perform this operation.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -45,9 +45,7 @@ To move the CALs, follow these steps.
 
     The representative at the Microsoft Clearinghouse will give you a new CAL Key Pack ID. You can also contact Microsoft Customer Support Services at the following telephone number: 1-800-936-3100.
 
-    For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [319726](https://support.microsoft.com/help/319726) Phone numbers for Microsoft Technical Support  
+    For more information about how to contact Microsoft Support, see [Contact us](https://support.microsoft.com/contactus).
 
 8. In the **Obtain Client License Key Pack** dialog box, type the CAL Key Pack ID (from step 7) in the **Type the client license key pack ID in the boxes below** field.
 9. Click **Next**. You'll receive a message that states that the CALs have been installed successfully.

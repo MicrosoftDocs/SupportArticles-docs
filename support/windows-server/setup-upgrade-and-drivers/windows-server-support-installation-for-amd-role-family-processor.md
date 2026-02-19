@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for AMD EPYC 7000 Series server processors
 description: Lists the AMD EPYC 7000 Series server processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -41,8 +41,8 @@ This section provides Windows Server support with respect to total number of log
 
 AMD offers a wide range of EPYC 7000 Series Processors, including the EPYC 7002 and EPYC 7003 Series Processors. You can determine the specific processor model SKUs and the corresponding maximum threads in the following articles:
 
-- [AMD EPYC&trade; 7002 Series Processors](https://www.amd.com/en/processors/epyc-7002-series)
-- [AMD EPYC&trade; 7003 Series Processors](https://www.amd.com/en/processors/epyc-7003-series)
+- [AMD EPYC&trade; 7002 Series Processors](https://www.amd.com/en/products/processors/server/epyc/7002-series.html)
+- [AMD EPYC&trade; 7003 Series Processors](https://www.amd.com/en/products/processors/server/epyc/7003-series.html)
 
 For Windows Server OS releases prior to Windows Server 2019 and on server configurations where both processor sockets are populated, the total number of processor threads enabled should be set to less than 256 and remain so during the OS installation and restart process.
 
