@@ -14602,7 +14602,7 @@
     },
     {
       "source_path": "support/windows-client/backup-and-storage/e2e-event-ids-volsnap.md",
-      "redirect_url": "../SupportArticles-docs-archive-pr/support/previous-versions/windows-client/e2e-event-ids-volsnap",
+      "redirect_url": "/previous-versions/windows-client/e2e-event-ids-volsnap",
       "redirect_document_id": false
     }
   ]
