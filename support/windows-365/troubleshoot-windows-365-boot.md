@@ -130,7 +130,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **Root cause:** There may be a delay or error in network state propagation after portal authentication. 
 
-**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to 
+**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to.
 
 **3. Logs and Diagnostics** 
 
