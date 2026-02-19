@@ -1,7 +1,7 @@
 ---
 title: How to merge checkpoints that have multiple differencing disks
 description: Describes different methods of merging checkpoints and their associated differencing disks into the related virtual machine.
-ms.date: 11/05/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
