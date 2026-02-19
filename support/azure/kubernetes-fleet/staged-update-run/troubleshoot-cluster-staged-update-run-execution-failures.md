@@ -222,7 +222,7 @@ cannot continue the updateRun: failed to validate the updateRun: cluster `member
 
 #### Solution
 
-Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun` instance that referencies that strategy because this instance is aborted.
+Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun` instance that referencies that strategy because this stage is aborted.
 
 ### Concurrent update run preemptions
 
@@ -426,7 +426,7 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRun` messages are generated because of run failures. The runs aren't recoverable. If a failure occurs because of a validation error, fix the issue, and create a new `updateRun` instance.
+"Aborted" `updateRun` messages are generated because of run failures. The runs aren't recoverable. If a failure occurs because of a validation error, fix the issue, and create a new `updateRun` instance.
 
 **Parent placement not found**
 
@@ -442,7 +442,7 @@ cannot continue the updateRun: failed to validate the updateRun: failedto proces
 
 #### Solution
 
-Create a new `ResourcePlacement instance in the same namespace. Then, create a new `StagedUpdateRun` intance that references that placement because this instance is aborted.
+Create a new `ResourcePlacement instance in the same namespace. Then, create a new `StagedUpdateRun` instance that references that placement because this stage is aborted.
 
 **Strategy not found**
 
