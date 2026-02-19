@@ -122,7 +122,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **1. Network connection does not update after captive portal connection** 
 
-**Root Cause:** The device is not fully authenticated on the network. 
+**Root cause:** The device is not fully authenticated on the network. 
 
 **Action:** Disconnect from the wifi network that requires Captive portal sign in and complete the sign steps again 
 
