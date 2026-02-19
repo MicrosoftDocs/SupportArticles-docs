@@ -132,7 +132,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to.
 
-**3. Logs and Diagnostics** 
+**3. Logs and diagnostics** 
 
 - Collect logs as documented above.
 
