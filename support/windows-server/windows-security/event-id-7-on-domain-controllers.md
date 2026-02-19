@@ -1,7 +1,7 @@
 ---
 title: Event ID 7 Is Intermittently Logged on a Windows Server 2025-Based DC
 description: Describes an issue in which event ID 7 is intermittently logged on a Windows Server 2025-based DC.
-ms.date: 06/25/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
