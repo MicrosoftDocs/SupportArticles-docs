@@ -4,7 +4,7 @@ description: Provides answers to common questions about Azure App Service securi
 services: app-service
 author: hepiet
 ms.topic: faq
-ms.date: 01/20/2025
+ms.date: 02/18/2026
 ms.author: hepiet
 ms.service: azure-app-service
 ms.custom: sap:Questions about App Service security
