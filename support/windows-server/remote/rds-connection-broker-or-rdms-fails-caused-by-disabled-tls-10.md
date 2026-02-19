@@ -52,4 +52,4 @@ To fix this issue, use one of the following methods:
 - Upgrade the computers that run the RDS services to Windows Server 2019.
 
 > [!NOTE]
-> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.
+> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](../../sql/database-engine/connect/tls-1-2-support-microsoft-sql-server.md) to enable SQL Server communication to use TLS 1.2.
