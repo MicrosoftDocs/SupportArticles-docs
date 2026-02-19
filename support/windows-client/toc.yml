@@ -145,26 +145,12 @@ items:
     items:
     - name: App-V v5 virtualized application fails with error 0xc0000142
       href: ./app-v/app-v-v5-virtualized-application-fails-start-error-0xc0000142.md
-  - name: Installation and configuration
-    items:
-    - name: Current list of App-V 5.x file versions
-      href: ./app-v/current-list-app-v-5-dot-x-file-versions.md
   - name: Management Server issues
     items:
     - name: HTTP Error 500.19 when launching App-V Management console
       href: ./app-v/http-error-500dot19-launch-app-v-management.md
     - name: Troubleshoot applications failing to stream from an App-V management server
       href: ./app-v/applications-fail-to-stream-from-app-v-management-server.md
-  - name: Package conversion
-    items:
-    - name: Adding a package version returns error 0x8007012F
-      href: ./app-v/adding-package-version-error-0x8007012f.md
-    - name: Remove a cached copy of an unpublished package
-      href: ./app-v/remove-cached-copy-unpublished-package-app-v-v5.md
-  - name: Publishing server issue
-    items:
-    - name: Troubleshoot publishing server refresh failures in App-V v5
-      href: ./app-v/troubleshoot-publishing-server-refresh-failures-app-v-v5.md
 - name: Backup and Storage
   items:
   - name: Backup and Storage
