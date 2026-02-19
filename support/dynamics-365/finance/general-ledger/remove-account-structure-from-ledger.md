@@ -20,15 +20,13 @@ Customer is trying to remove an Accounts Structure from Ledger Setup. However, t
 
 Any modification to an account structure which would invalidate unposted transactions will be blocked. This modification may be a change to or a deletion of its account structure.
 
-Blocking unposted transactions can be found on the unposted journals at **General ledger > Journal entries > General journals** and **General ledger > Journal entries > Global general journals** by choosing the filter **Show > Not posted**. 
+Blocking unposted transactions can be found on the unposted journals at **General ledger > Journal entries > General journals** by choosing the filter **Show > Not posted**. 
 
-To view each journal's transactions, select the journal and click **Lines** in the action pane. Transactions which reference the account structure to be deleted can removed with the **Delete** button or can have their main account changed to something else.
+To view each journal's transactions, select the journal and click **Lines** in the action pane. Transactions which reference the account structure to be deleted can removed with the **Delete** button or can be changed to a different ledger account/offset account.
 
-**Resolution 1: Replacing existing account structure**
+**Resolution 1: Reusing existing account structure**
 
-If you plan to replace the account structure, follow this guide.
-
-First, address blocking unposted transactions via the instructions above. Subsequently, navigate to **General ledger > Structures > Configure account structures** and select the desired account. Click **Edit** in the action pane, make the necessary changes to the structure and then validate your changes with the **Validate** button. Finally, save your changes with the **Activate** button and wait for successful activation.
+First, address blocking unposted transactions via the instructions above. Subsequently, navigate to **General ledger > Structures > Configure account structures** and select the desired account. Click **Edit** in the action pane, replace the outdated account structure's criteria with relevant criteria for your business scenario and then validate your changes with the **Validate** button. Finally, save your changes with the **Activate** button and wait for successful activation.
 
 Modification of an account structure is suitable for:
 - Broadening an account structure's range (e.g. changing from 1000-2000 to 1000-3000)
@@ -37,6 +35,6 @@ Modification of an account structure is suitable for:
 
 **Resolution 2: True deletion of account structure**
 
-If the account structure is no longer needed, follow the instructions above to address blocking unposted transactions. After doing so, you may be able to delete the existing account structure.
+If the account structure is no longer needed, follow the instructions above to remove unposted transactions. After doing so, you may be able to delete the existing account structure.
 
 If you are unable to find the unposted transaction or transactions which are blocking you, contact support.
