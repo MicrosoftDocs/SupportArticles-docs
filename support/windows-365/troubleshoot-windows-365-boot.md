@@ -126,7 +126,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **Action:** Disconnect from the Wi-Fi network that requires Captive portal sign in and complete the sign steps again.
 
-**2. Cloud PC Reconnect Fails After Portal Authentication** 
+**2. Cloud PC reconnect fails after portal authentication** 
 
 **Root Cause:** There may be a delay or error in network state propagation after portal authentication. 
 
