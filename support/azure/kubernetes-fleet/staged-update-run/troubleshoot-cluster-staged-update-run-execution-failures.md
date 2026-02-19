@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun errors
-description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun fail to run successfully.
+description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun don't run successfully.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -13,7 +13,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages that occur when you propagate resources with update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
+This article discusses how to troubleshoot the `ClusterStagedUpdateRun` and `StagedUpdateRun` errors that occur when you propagate resources that have update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
 The following is an example error message:
 
@@ -42,7 +42,7 @@ The following is an example error message:
 
 :::zone target="docs" pivot="cluster-scope"
 
-1. Locate the `ClusterStagedUpdateRun` error by running the following command:
+1. Locate the `ClusterStagedUpdateRun` error message by running the following command:
 
 ```bash
 $ kubectl get clusterstagedupdaterun example-run 
@@ -52,9 +52,9 @@ example-run   example-placement   0                         0                   
 
 ```
 
-The `PROGRESSING` and `SUCCEEDED` fields are `False` indicating the run failed.
+The `PROGRESSING` and `SUCCEEDED` field values are `False`. This value indicates that the run failed.
 
-2. Run these commands to get more details about the error:
+2. To get more details about the error, run the following commands:
 
 ```bash
 $ kubectl describe clusterstagedupdaterun example-run
@@ -146,7 +146,7 @@ Status:
     Stage Name:              staging
 ```
 
-When the `Progressing` condition is `False` with an `UpdateRunFailed` reason and the message is "The stages are aborted due to a nonrecoverable error," the run failed. 
+If the `Progressing` condition is `False`, the reason value is `UpdateRunFailed`, and the message is "The stages are aborted due to a nonrecoverable error," these values indicate that the run failed.
 
 ## Common run failures
 
@@ -158,30 +158,29 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRun` messages happen due to run failures and aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun` messages are generated because of run failures, and thay aren't recoverable. If a failure occurs because of a validation error, fix the issue, and create a new `updateRun` instance.
 
 **Placement not found**
 
 #### Cause 
 
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterResourcePlacement` it references existed previously. A user deleted the `ClusterResourcePlacement` while the `ClusterStagedUpdateRun` was running.
+The `ClusterStagedUpdateRun` run passed initialization. Therefore, the instance of `ClusterResourcePlacement` that it references existed previously. A user deleted `ClusterResourcePlacement` while `ClusterStagedUpdateRun` was running.
 
 Example message:
 
 ```text
-cannot continue the updateRun: failed to validate the updateRun: failedto process the request due to a client error: parent placement not found
+cannot continue the updateRun: failed to validate the updateRun: failed to process the request due to a client error: parent placement not found
 ```
 
 #### Solution
 
-Create a new `ClusterResourcePlacement` in the same namespace. Then create a new `ClusterStagedUpdateRun` referencing that placement.
+Create a new `ClusterResourcePlacement` instance in the same namespace. Then, create a new `ClusterStagedUpdateRun` instance that references that placement.
 
 **Strategy not found**
 
-
 #### Cause 
 
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references existed previously. A user deleted the `ClusterStagedUpdateStrategy` while the `ClusterStagedUpdateRun` was running.
+`ClusterStagedUpdateRun` passed initialization. Therefore, the `ClusterStagedUpdateStrategy` instance that it references existed previously. A user deleted `ClusterStagedUpdateStrategy` while `ClusterStagedUpdateRun` was running.
 
 Example message:
 
@@ -191,13 +190,13 @@ cannot continue the updateRun: failed to validate the updateRun: referenced upda
 
 #### Solution
 
-Create a new `ClusterStagedUpdateStrategy` in the same namespace. Then create a new `ClusterStagedUpdateRun` referencing that strategy.
+Create a new `ClusterStagedUpdateStrategy` instance in the same namespace. Then, create a new `ClusterStagedUpdateRun` instance that references that strategy.
 
 **Invalid stage tasks**
 
 #### Cause 
 
-The `ClusterStagedUpdateRun` passed initialization so the `ClusterStagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `ClusterStagedUpdateStrategy`.
+`ClusterStagedUpdateRun` passed initialization. Therefore, the `ClusterStagedUpdateStrategy` instance that it references previously defined the stage tasks correctly. A user updated `ClusterStagedUpdateStrategy`.
 
 Example message:
 
@@ -207,13 +206,13 @@ cannot continue the updateRun: failed to validate the updateRun: the before stag
 
 #### Solution
 
-See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the `ClusterStagedUpdateStrategy`. Then create a new `ClusterStagedUpdateRun`.
+See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance to correctly update `ClusterStagedUpdateStrategy`. Then create, a new `ClusterStagedUpdateRun` instance.
 
-**Cluster appears more than once**
+**Cluster appears more than one time**
 
 #### Cause 
 
-The `ClusterStagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during the `ClusterStagedUpdateRun` run. 
+`ClusterStagedUpdateRun` passed initialization, and the cluster labels were initially valid. The cluster was updated during the `ClusterStagedUpdateRun` run. 
 
 Example message:
 
@@ -223,15 +222,18 @@ cannot continue the updateRun: failed to validate the updateRun: cluster `member
 
 #### Solution
 
-Review the cluster labels and ensure the cluster doesn't have labels for both stages. Validate that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels, and then create a new `ClusterStagedUpdateRun` referencing that strategy since this instance is aborted.
+Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun` instance that referencies that strategy because this instance is aborted.
 
 ### Concurrent update run preemptions
 
-When multiple `updateRun`s target the same `ClusterResourcePlacement`, they come into conflict.
+When multiple `updateRun`s target the same `ClusterResourcePlacement`, they conflict with one another.
 
 #### Cause 
 
-The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding specification and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. When multiple concurrent `ClusterStagedUpdateRun`s exist and during the 15-second wait, another `ClusterStagedUpdateRun` preempts and updates the binding with a new configuration. The current `ClusterStagedUpdateRun` detects this change and fails.
+The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding specification and setting its status to `RolloutStarted`. Then, the controller waits 15 seconds and checks the binding again to verify that the resource was applied successfully. During the 15-second wait, the current `ClusterStagedUpdateRun` instance detects this change and fails if the following conditions are true:
+
+- Multiple concurrent `ClusterStagedUpdateRun`s exist.
+- Another `ClusterStagedUpdateRun` instance preempts and updates the binding by using a new configuration.
 
 Example message:
 
@@ -239,11 +241,11 @@ Example message:
 cannot continue the updateRun: failed to process the request due to a client error: the binding of the updating cluster `member2` in the stage `dev` is not up-to-date with the desired status, please check the status of binding `example-placement-member2-e1a567da` and see if there is a concurrent updateRun referencing the same placement and updating the same cluster
 ```
 
-In the message, the `member2` cluster gets preempted in the `dev` stage. The user is then prompted to check the `example-placement-member2-e1a567da` binding to verify if there's a concurrent `ClusterStagedUpdateRun` referencing the same `ClusterResourcePlacement` and updating the same cluster.
+In the message, the `member2` cluster gets preempted in the `dev` stage. The user is then prompted to check the `example-placement-member2-e1a567da` binding to verify that a concurrent `ClusterStagedUpdateRun` instance exists, references the same `ClusterResourcePlacement` instance, and updates the same cluster.
 
 #### Solution
 
-1. Investigate the concurrent `ClusterStagedUpdateRun` namespace-scoped resource bindings with the following command:
+1. Investigate the concurrent `ClusterStagedUpdateRun` namespace-scoped resource bindings by running the following command:
 
 ```bash
 $ kubectl get clusterresourcebindings
@@ -252,7 +254,7 @@ example-placement-member1-9a1ee3a0                                              
 example-placement-member2-e1a567da          True               True               20m
 ```
 
-Since the error message specifies `example-placement-member2-e1a567da`, check the binding with the following commands:
+Because the error message specifies `example-placement-member2-e1a567da`, check the binding by running the following commands:
 
 ```bash
     $ kubectl get clusterresourcebinding example-placement-member2-e1a567da -o yaml
@@ -300,9 +302,9 @@ Since the error message specifies `example-placement-member2-e1a567da`, check th
         ...
 ```
 
-2. If the `RolloutStarted` condition displays, validate that the `ClusterStagedUpdateRun` referenced is the `ClusterStagedUpdateRun` you're working with. If another `ClusterStagedUpdateRun` is referenced, wait for that `ClusterStagedUpdateRun` to finish.
+2. If the `RolloutStarted` condition appears, verify that the `ClusterStagedUpdateRun` instance that's referenced is the `ClusterStagedUpdateRun` instance that you're working with. If another `ClusterStagedUpdateRun` is referenced, wait for that `ClusterStagedUpdateRun` to finish.
 
-3. Verify the `ClusterStagedUpdateRun` is what you want to roll out. If not, stop this `ClusterStagedUpdateRun` and create a new one.
+3. Verify that `ClusterStagedUpdateRun` is what you want to roll out. If not, stop this `ClusterStagedUpdateRun` instance and create another.
 
 :::zone-end
 
@@ -319,7 +321,7 @@ web-app-rollout   web-app-placement   1                         0               
 
 The `PROGRESSING` and `SUCCEEDED` fields are `False` indicating the run failed.
 
-2. Run these commands to get more details about the error:
+2. To get more details about the error, run the following commands:
 
 ```bash
 $ kubectl describe stagedupdaterun web-app-rollout -n my-app-namespace
@@ -412,7 +414,7 @@ Status:
     Stage Name:              staging
 ```
 
-When the `Progressing` condition is `False` with an `UpdateRunFailed` reason and the message is "The stages are aborted due to a nonrecoverable error," the run failed.
+If the `Progressing` condition is `False`, the reason value is `UpdateRunFailed`, and the message is, "The stages are aborted due to a nonrecoverable error," the run failed.
 
 ## Common run failures
 
@@ -424,13 +426,13 @@ During each reconciliation, validation occurs before running. These validation e
 
 #### Solution
 
-Aborted `updateRun` messages happen due to run failures and aren't recoverable. If a failure occurs due to a validation error, fix the issue and create a new `updateRun`.
+Aborted `updateRun` messages are generated because of run failures. They aren't recoverable. If a failure occurs because of a validation error, fix the issue, and create a new `updateRun` instance.
 
 **Parent placement not found**
 
 #### Cause
 
-The `StagedUpdateRun` passed initialization so the `ResourcePlacement` it references existed previously. A user deleted the `ResourcePlacement` while the `StagedUpdateRun` was running.
+`StagedUpdateRun` passed initialization. Therefore, the `ResourcePlacement` instance that it references existed previously. A user deleted `ResourcePlacement` while the `StagedUpdateRun` instance was running.
 
 Example message:
 
@@ -440,13 +442,13 @@ cannot continue the updateRun: failed to validate the updateRun: failedto proces
 
 #### Solution
 
-Create a new `ResourcePlacement` in the same namespace. Then create a new `StagedUpdateRun` referencing that placement since this instance is aborted.
+Create a new `ResourcePlacement instance in the same namespace. Then, create a new `StagedUpdateRun` intance that references that placement because this instance is aborted.
 
 **Strategy not found**
 
 #### Cause 
 
-The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references existed previously. A user deleted the `StagedUpdateStrategy` while the `StagedUpdateRun` was running.
+`StagedUpdateRun` passed initialization. Therefore, the `StagedUpdateStrategy` instance that it references existed previously. A user deleted the `StagedUpdateStrategy` instance while `StagedUpdateRun` was running.
 
 Example message:
 
@@ -456,13 +458,13 @@ cannot continue the updateRun: failed to validate the updateRun: referenced upda
 
 #### Solution
 
-Create a new `StagedUpdateStrategy` in the same namespace. Then create a new `StagedUpdateRun` referencing that strategy.
+Create a new `StagedUpdateStrategy` instance in the same namespace. Then, create a new `StagedUpdateRun` instance that references that strategy.
 
 **Invalid stage tasks**
 
 #### Cause
 
-The `StagedUpdateRun` passed initialization so the `StagedUpdateStrategy` it references correctly defined the stage tasks previously. A user updated the `StagedUpdateStrategy`.
+The `StagedUpdateRun` passed initialization. Therefore, the `StagedUpdateStrategy` instance that it references previously defined the stage tasks correctly. A user updated the `StagedUpdateStrategy`.
 
 Example message:
 
@@ -472,13 +474,13 @@ cannot continue the updateRun: failed to validate the updateRun: the before stag
 
 #### Soution
 
-See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the  `StagedUpdateStrategy`. Then create a new `StagedUpdateRun`.
+See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance to correctly update the  `StagedUpdateStrategy` instance. Then, create a new `StagedUpdateRun` instance.
 
-**Cluster appears more than once**
+**Cluster appears more than one time**
 
 #### Cause 
 
-The `StagedUpdateRun` passed initialization and the cluster labels were initially valid. The cluster was updated during `StagedUpdateRun` run. 
+The `StagedUpdateRun` passed initialization, and the cluster labels were initially valid. The cluster was updated during `StagedUpdateRun` run. 
 
 Example message:
 
@@ -488,15 +490,15 @@ cannot continue the updateRun: failed to validate the updateRun: cluster `member
 
 #### Solution
 
-Review the cluster labels and ensure the cluster doesn't have labels for both stages. Validate that the stages in `StagedUpdateStrategy` select distinct cluster labels, and then create a new `StagedUpdateRun` referencing that strategy.
+Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `StagedUpdateStrategy` select distinct cluster labels, and then create a new `StagedUpdateRun` instance that references that strategy.
 
 ### Concurrent Update Run Preemption
 
-When multiple `updateRun`s target the same `ClusterResourcePlacement`, they come into conflict.
+If multiple `updateRun`s target the same `ClusterResourcePlacement`, they conflict with one another.
 
 #### Cause 
 
-The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding `spec` and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. When multiple concurrent `StagedUpdateRun`s exist and during the 15-second wait, another `StagedUpdateRun` preempts and updates the binding with new configuration, the current `StagedUpdateRun` detects this change and fails.
+The `updateRun` controller triggers an update to the member cluster by updating the corresponding binding `spec` and setting its status to `RolloutStarted`. The controller then waits 15 seconds to verify whether the resource applied successfully by checking the binding again. During the 15-second wait, if multiple concurrent `StagedUpdateRun` instances exist, another `StagedUpdateRun` instance preempts and updates the binding by using a new configuration, and the current `StagedUpdateRun` instance detects this change and fails.
 
 Example message:
 
@@ -504,11 +506,11 @@ Example message:
 cannot continue the updateRun: failed to process the request due to a client error: the binding of the updating cluster `member2` in the stage `dev` is not up-to-date with the desired status, please check the status of binding `my-app-namespace/web-app-placement-member2-43991b15` and see if there is a concurrent updateRun referencing the same placement and updating the same cluster
 ```
 
-In the message, the `member2` cluster gets preempted in the `dev` stage. The user is then prompted to check the `my-app-namespace/web-app-placement-member2-43991b15` binding to verify if there's a concurrent `StagedUpdateRun` referencing the same `ResourcePlacement` and updating the same cluster.
+In the message, the `member2` cluster gets preempted in the `dev` stage. The user is then prompted to check the `my-app-namespace/web-app-placement-member2-43991b15` binding to verify that a concurrent `StagedUpdateRun` instance references the same `ResourcePlacement` instance and updates the same cluster.
 
 #### Solution
 
-1. Investigate the concurrent `StagedUpdateRun` namespace-scoped resource bindings with the following command:
+1. Investigate the concurrent `StagedUpdateRun` namespace-scoped resource bindings by running the following command:
 
 ```bash
 $ kubectl get resourcebindings -n my-app-namespace
@@ -517,7 +519,7 @@ web-app-placement-member1-2afc7d7f                                         51m
 web-app-placement-member2-43991b15   True               True               51m
 ```
 
-Since the error message specifies `web-app-placement-member2-43991b15`, check the binding with the following commands:
+Because the error message specifies `web-app-placement-member2-43991b15`, check the binding by running the following commands:
 
 ```bash
     $ kubectl describe resourcebinding web-app-placement-member2-43991b15 -n my-app-namespace
@@ -566,8 +568,8 @@ Since the error message specifies `web-app-placement-member2-43991b15`, check th
         ...
 ```
 
-2. If the `RolloutStarted` condition displays, validate that the`StagedUpdateRun` referenced is the one you're working with. If another `StagedUpdateRun` is referenced, wait for that `StagedUpdateRun` to finish.
+2. If the `RolloutStarted` condition appears, verify that the `StagedUpdateRun` instance that's referenced is the one that you're working with. If another `StagedUpdateRun` instance is referenced, wait for that instance to finish.
 
-3. Verify the `StagedUpdateRun` is what you want to roll out. If not, stop this `StagedUpdateRun` and create a new one.
+3. Verify that the `StagedUpdateRun` instance is what you want to roll out. If not, stop this `StagedUpdateRun` instance and create another.
 
 :::zone-end
