@@ -13,7 +13,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 ## Summary
 
-This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages that are generated when the update run gets stuck while it uses update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
+This article discusses how to troubleshoot the `ClusterStagedUpdateRun` and `StagedUpdateRun` errors that are generated when the update run gets stuck while it uses update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
 The following is an example error message:
 
@@ -263,7 +263,7 @@ nginx-deployment-5d9874b8b9-wxmd7   0/1     InvalidImageName   0          10m
 
 For guidance to debug the issue, see [Troubleshooting ResourcePlacement API in Azure Kubernetes Fleet Manager (preview)](./../cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md).
 
-After you resolve the issue, create a new `ClusterStagedUpdateRun` value to restart the rollout. Then, delete the stuck `ClusterStagedUpdateRun` value.
+After you resolve the issue, create a new `ClusterStagedUpdateRun` instance to restart the rollout. Then, delete the stuck `ClusterStagedUpdateRun` instance.
 
 :::zone-end
 
@@ -497,6 +497,6 @@ nginx-deployment-5d9874b8b9-wxmd7   0/1     InvalidImageName   0          10m
 
 See [Troubleshooting ResourcePlacement API in Azure Kubernetes Fleet Manager (preview)](./../cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md) for guidance about how to debug the issue.
 
-After you resolve the issue, create a new `StagedUpdateRun` value to restart the rollout. You can then delete the stuck `StagedUpdateRun` value.
+After you resolve the issue, create a new `StagedUpdateRun` instance to restart the rollout. You can then delete the stuck `StagedUpdateRun` instance.
 
 :::zone-end
