@@ -89,6 +89,8 @@ productDirectory:
     links:
     - url: virtual-network/welcome-virtual-network.yml
       text: Troubleshooting articles for Azure Virtual Network
+    - url: virtual-network/front-door/welcome-front-door.yml
+      text: Troubleshooting articles for Azure Front Door 
   - title: Azure Application Gateway
     imageSrc: "https://static.docs.com/ui/media/product/azure/application-gateway.svg"
     links:
