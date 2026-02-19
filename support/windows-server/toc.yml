@@ -29,8 +29,6 @@ items:
       href: ./active-directory/access-is-denied-error-domain-controller-replicate-ad.md
     - name: AD communication fails on multihomed domain controllers
       href: ./active-directory/active-directory-communication-fails.md
-    - name: ADWS service crashes after upgrade
-      href: ./active-directory/adws-service-crashes-after-you-upgrade.md
     - name: Database garbage collection process
       href: ./active-directory/database-garbage-collection-caculation-of-allowed-intervals.md
     - name: '"Directory Services cannot start" error when starting a domain controller'
@@ -69,14 +67,10 @@ items:
       href: ./active-directory/this-page-cant-displayed.md
     - name: ADFS 2.0 service fails to start
       href: ./active-directory/adfs-2-service-fails-to-start.md
-    - name: ADFS error 180 and endpoints missing
-      href: ./active-directory/adfs-error-180-endpoints-missing.md
     - name: Availability and description of Active Directory Federation Services 2.0
       href: ./active-directory/availability-description-afds.md
     - name: Change AD FS 2.0 service communications certificate
       href: ./active-directory/change-ad-fs-2-dot-0-service-communications.md
-    - name: Description of the Extranet Smart Lockout feature
-      href: ./active-directory/extranet-smart-lockout-feature.md
     - name: Disable and replace TLS 1.0 in ADFS
       href: ./active-directory/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
@@ -115,8 +109,6 @@ items:
       href: ./active-directory/adam-general-event-id-1161-logged-ad-lds-server.md
     - name: Change Windows Active Directory user password through LDAP
       href: ./active-directory/change-windows-active-directory-user-password.md
-    - name: Hide or display InetOrgPerson object class
-      href: ./active-directory/hide-display-inetorgperson-object-class.md
     - name: How to configure AD and LDS diagnostic event logging
       href: ./active-directory/configure-ad-and-lds-event-logging.md
     - name: LDAP operations to Active Directory are disabled
@@ -129,8 +121,6 @@ items:
       href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
     - name: Synchronizing between AD DS and AD LDS enters endless loop when the baseDN is a grandchild OU
       href: ./active-directory/adamsync-cant-sync-basedn-grandchild-ou.md
-    - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
-      href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
     items:
     - name: ADMT 3.1 PES installation fails with error
@@ -141,8 +131,6 @@ items:
       href: ./active-directory/inter-forest-password-migration-with-admtv2.md
     - name: Troubleshoot sIDHistory migration with ADMTv2
       href: ./active-directory/inter-forest-sidhistory-migration-with-admt.md
-    - name: Windows App can't start
-      href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
@@ -169,8 +157,6 @@ items:
       href: ./active-directory/active-directory-replication-error-8304.md
     - name: Active Directory replication error 8333
       href: ./active-directory/replication-error-8333.md
-    - name: Active Directory replication error 8409
-      href: ./active-directory/ad-replication-fails-error-8409.md
     - name: Active Directory replication error 8418
       href: ./active-directory/replication-error-8418.md
     - name: Active Directory replication error 8446
@@ -189,8 +175,6 @@ items:
       href: ./active-directory/replication-error-8464.md
     - name: Active Directory replication error 8477
       href: ./active-directory/replication-error-8477.md
-    - name: Active Directory replication error 8545
-      href: ./active-directory/active-directory-replication-error-8545.md
     - name: Active Directory replication error 8606
       href: ./active-directory/replication-error-8606.md
     - name: Active Directory replication error 8614
@@ -213,12 +197,8 @@ items:
       href: ./active-directory/replication-error-1127.md
     - name: AD operations fail with Win32 error 8240
       href: ./active-directory/active-directory-replication-error-8240.md
-    - name: Can't change replication scope of AD-integrated zone
-      href: ./active-directory/change-integrated-dns-zone-replication-scope.md
     - name: Can't delete AD objects with many links
       href: ./active-directory/replication-failures-delete-active-directory-objects.md
-    - name: Changes aren't replicated to destination domain controllers
-      href: ./active-directory/changes-arent-replicated-controllers.md
     - name: Diagnose replication failures
       href: ./active-directory/diagnose-replication-failures.md
     - name: Disable KCC from automatically creating replication topology
@@ -235,8 +215,6 @@ items:
       href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
       href: ./active-directory/modify-default-intra-site-dc-replication-interval.md
-    - name: NTDS Replication Warning Event ID 1093
-      href: ./active-directory/ntds-replication-warning-event-id-1093.md
     - name: NTDS replication warning IDs 1083 and 1061
       href: ./active-directory/ntds-replication-warning-1083-1061-sam-error-12294.md
     - name: NTFRS deprecation blocks installation of replica DCs
@@ -257,10 +235,6 @@ items:
       href: ./active-directory/jet-database-errors-recovery-steps.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
       href: ./active-directory/ntdsutil-find-clean-duplicate-security-identifiers.md
-  - name: Active Directory Rights Management Services
-    items:
-    - name: Event ID 84 occurs in AD RMS in Windows Server
-      href: ./active-directory/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
     - name: Can't promote a DC to global catalog server
@@ -279,8 +253,6 @@ items:
       href: ./active-directory/access-denied-create-ntds-settings-object.md
     - name: AD DS configuration operations fails
       href: ./active-directory/service-cannot-be-started-error.md
-    - name: Cannot add a domain controller as a node
-      href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
     - name: Best practices for Active Directory domains that use single-label DNS names
@@ -303,14 +275,10 @@ items:
       href: ./active-directory/fsmo-placement-and-optimization-on-ad-dcs.md
     - name: Group policy application rules for domain controllers
       href: ./active-directory/group-policy-application-rules-for-domain-controller.md
-    - name: Group Policy preparation isn't performed
-      href: ./active-directory/group-policy-preparation-isnt-performed.md
     - name: How to upgrade domain controllers
       href: ./active-directory/add-domain-controllers-to-windows-2000-domain.md
     - name: Installing AD DS fails
       href: ./active-directory/installing-ad-ds-fails.md
-    - name: Internal error during replication phase of dcpromo
-      href: ./active-directory/dcpromo-replication-phase-error.md
     - name: Move Windows Server to a domain fails
       href: ./active-directory/wizard-not-gain-access-to-domain.md
     - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
@@ -374,12 +342,8 @@ items:
       href: ./active-directory/status-code-0x216d-not-joined-domain.md
     - name: Status code 0x32 and you can't join a domain
       href: ./active-directory/status-code-0x32-cannot-join-domain.md
-    - name: Status code 0x3a
-      href: ./active-directory/status-code-0x3a-server-not-perform-operation.md
     - name: 'Status code 0x6ba: The RPC server is unavailable'
       href: ./active-directory/status-code-0x6ba-rpc-server-unavailable.md
-    - name: Status code 0x6bf or 0xc002001c
-      href: ./active-directory/status-code-0x6bf-0xc002001c.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
@@ -416,20 +380,12 @@ items:
       href: ./active-directory/use-online-dbdump-feature-ldp-dot-exe.md
     - name: View and set LDAP policy by using Ntdsutil
       href: ./active-directory/view-set-ldap-policy-using-ntdsutil.md
-  - name: Schema update failure or conflict
-    items:
-    - name: Delays when domain members communicate to DCs
-      href: ./active-directory/delays-domain-members-dc-remote-domains.md
-    - name: Error when you run AD Installation Wizard
-      href: ./active-directory/error-when-you-run-ad-installation-wizard.md
   - name: User, computer, group, and object management
     items:
     - name: A batch of Event ID 4780 are logged in the PDC
       href: ./active-directory/a-batch-of-event-4780-logged-pdc.md
     - name: Access denied after logging on to a local administrator account
       href: ./active-directory/access-denied-log-on-administrator-domain-account.md
-    - name: ACCESS DENIED with NetUser and NetGroup APIs
-      href: ./active-directory/netuser-netgroup-fails-with-access-denied.md
     - name: Access is denied when non-administrator users join computers
       href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
@@ -438,12 +394,8 @@ items:
       href: ./active-directory/accounts-lastlogontimestamp-future-time.md
     - name: Add special groups to built-in groups
       href: ./active-directory/add-special-groups-to-built-in-groups.md
-    - name: All members of a group may not be returned
-      href: ./active-directory/all-members-group-may-not-be-returned.md
     - name: AuditPol and Local Security Policy results are different
       href: ./active-directory/auditpol-local-security-policy-results-differ.md
-    - name: Can't access AD data from Source Control Explorer
-      href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
     - name: Can't edit or delete an AD object
@@ -454,8 +406,6 @@ items:
       href: ./active-directory/compatibility-user-accounts-end-dollar-sign.md
     - name: Define Security Templates by Security Templates Snap-In
       href: ./active-directory/define-security-templates-using-security-templates-snap-in.md
-    - name: Error "The directory datatype cannot be converted to/ from a native DS datatype"
-      href: ./active-directory/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md
     - name: Event ID 5722 is logged on domain controller
       href: ./active-directory/event-id-5722-logged-on-domain-controller.md
     - name: Fail to delete orphaned NTDS Settings
@@ -470,8 +420,6 @@ items:
       href: ./active-directory/reset-directory-services-restore-mode-admin-pwd.md
     - name: How to use phantoms
       href: ./active-directory/phantoms-tombstones-infrastructure-master.md
-    - name: Information about devices configured as RODCs
-      href: ./active-directory/info-devices-configured-rodcs.md
     - name: Let non-administrators view deleted objects container
       href: ./active-directory/non-administrators-view-deleted-object-container.md
     - name: Linux accounts can't get AES encrypted tickes in AD DS
@@ -494,16 +442,10 @@ items:
       href: ./active-directory/password-change-mechanisms.md
     - name: Password Reset fails with error
       href: ./active-directory/password-reset-fails-error.md
-    - name: Poor performance when calling lookup functions
-      href: ./active-directory/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./active-directory/redirect-users-computers-containers.md
-    - name: Rename an item after replication collision
-      href: ./active-directory/rename-item-replication-collision.md
     - name: Restrict use of a computer to one domain user only
       href: ./active-directory/restrict-use-one-domain-user-only.md
-    - name: RSoP Planning mode is not supported in a cross-forest scenario
-      href: ./active-directory/rsop-not-supported-across-multiple-forests.md
     - name: Set a user's password with Ldifde
       href: ./active-directory/set-user-password-with-ldifde.md
     - name: Some applications and APIs require access to authorization information
@@ -546,8 +488,6 @@ items:
       href: ./active-directory/sts-recommendations-for-windows-server.md
     - name: Support boundary for high-accuracy time
       href: ./active-directory/support-boundary-high-accuracy-time.md
-    - name: Support for the leap second
-      href: ./active-directory/support-for-leap-second.md
     - name: Time service not correct the time
       href: ./active-directory/specialpollinterval-polling-interval-time-service-not-correct.md
     - name: Time synchronization may not succeed

@@ -14409,6 +14409,146 @@
       "source_path": "support/windows-client/active-directory/uac-blocks-elevation-executable-apps.md",
       "redirect_url": "/previous-versions/troubleshoot/previous-versions/windows-client/uac-blocks-elevation-executable-apps",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/active-directory-replication-error-8545.md",
+      "redirect_url": "/previous-versions/windows-server/active-directory-replication-error-8545",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adamsync-error-obj-class-violation.md",
+      "redirect_url": "/previous-versions/windows-server/adamsync-error-obj-class-violation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adfs-error-180-endpoints-missing.md",
+      "redirect_url": "/previous-versions/windows-server/adfs-error-180-endpoints-missing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ad-replication-fails-error-8409.md",
+      "redirect_url": "/previous-versions/windows-server/ad-replication-fails-error-8409",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adws-service-crashes-after-you-upgrade.md",
+      "redirect_url": "/previous-versions/windows-server/adws-service-crashes-after-you-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/all-members-group-may-not-be-returned.md",
+      "redirect_url": "/previous-versions/windows-server/all-members-group-may-not-be-returned",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-add-domain-controller-node-failover-cluster.md",
+      "redirect_url": "/previous-versions/windows-server/cannot-add-domain-controller-node-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/change-integrated-dns-zone-replication-scope.md",
+      "redirect_url": "/previous-versions/windows-server/change-integrated-dns-zone-replication-scope",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/changes-arent-replicated-controllers.md",
+      "redirect_url": "/previous-versions/windows-server/changes-arent-replicated-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcpromo-replication-phase-error.md",
+      "redirect_url": "/previous-versions/windows-server/dcpromo-replication-phase-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/delays-domain-members-dc-remote-domains.md",
+      "redirect_url": "/previous-versions/windows-server/delays-domain-members-dc-remote-domains",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md",
+      "redirect_url": "/previous-versions/windows-server/directory-datatype-cannot-converted-to-from-native-ds-datatype-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/error-when-you-run-ad-installation-wizard.md",
+      "redirect_url": "/previous-versions/windows-server/error-when-you-run-ad-installation-wizard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/event-id-84-occurs-ad-rms-windows-server.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-84-occurs-ad-rms-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/extranet-smart-lockout-feature.md",
+      "redirect_url": "/previous-versions/windows-server/extranet-smart-lockout-feature",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/fail-to-access-data-from-source-control-explorer.md",
+      "redirect_url": "/previous-versions/windows-server/fail-to-access-data-from-source-control-explorer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/group-policy-preparation-isnt-performed.md",
+      "redirect_url": "/previous-versions/windows-server/group-policy-preparation-isnt-performed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/hide-display-inetorgperson-object-class.md",
+      "redirect_url": "/previous-versions/windows-server/hide-display-inetorgperson-object-class",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/info-devices-configured-rodcs.md",
+      "redirect_url": "/previous-versions/windows-server/info-devices-configured-rodcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/netuser-netgroup-fails-with-access-denied.md",
+      "redirect_url": "/previous-versions/windows-server/netuser-netgroup-fails-with-access-denied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ntds-replication-warning-event-id-1093.md",
+      "redirect_url": "/previous-versions/windows-server/ntds-replication-warning-event-id-1093",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/poor-performance-calling-lookup-functions.md",
+      "redirect_url": "/previous-versions/windows-server/poor-performance-calling-lookup-functions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/rename-item-replication-collision.md",
+      "redirect_url": "/previous-versions/windows-server/rename-item-replication-collision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/rsop-not-supported-across-multiple-forests.md",
+      "redirect_url": "/previous-versions/windows-server/rsop-not-supported-across-multiple-forests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/status-code-0x3a-server-not-perform-operation.md",
+      "redirect_url": "/previous-versions/windows-server/status-code-0x3a-server-not-perform-operation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/status-code-0x6bf-0xc002001c.md",
+      "redirect_url": "/previous-versions/windows-server/status-code-0x6bf-0xc002001c",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/support-for-leap-second.md",
+      "redirect_url": "/previous-versions/windows-server/support-for-leap-second",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/windows-app-cant-start.md",
+      "redirect_url": "/previous-versions/windows-server/windows-app-cant-start",
+      "redirect_document_id": false
     }
   ]
 }
