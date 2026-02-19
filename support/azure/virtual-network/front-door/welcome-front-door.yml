@@ -23,10 +23,10 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot common issues
-            url: front-door/troubleshoot-issues.md
+            url: troubleshoot-issues.md
           - text: Troubleshoot general performance problems
-            url: front-door/troubleshoot-performance-issues.md
+            url: troubleshoot-performance-issues.md
           - text: Troubleshoot file compression
-            url: front-door/troubleshoot-compression.md
+            url: troubleshoot-compression.md
           - text: Troubleshoot 4xx and 5xx errors using Reference String
-            url: front-door/refstring.md
+            url: refstring.md
