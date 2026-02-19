@@ -1,7 +1,7 @@
 ---
 title: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Windows Update for Business reports-related issues.
-ms.date: 12/1/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
