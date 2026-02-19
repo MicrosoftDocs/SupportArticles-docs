@@ -15,7 +15,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 This article discusses how to troubleshoot the `ClusterStagedUpdateRun` and `StagedUpdateRun` errors that occur when you propagate resources that have update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
-The following is an example error message:
+Here's an example error message:
 
 ```yaml
     Last Transition Time:  2026-02-11T22:15:20Z
@@ -222,7 +222,7 @@ cannot continue the updateRun: failed to validate the updateRun: cluster `member
 
 #### Solution
 
-Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun` instance that referencies that strategy because this stage is aborted.
+Review the cluster labels to make sure that the cluster doesn't have labels for both stages. Verify that the stages in `ClusterStagedUpdateStrategy` select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun` instance that references that strategy because this stage is aborted.
 
 ### Concurrent update run preemptions
 
