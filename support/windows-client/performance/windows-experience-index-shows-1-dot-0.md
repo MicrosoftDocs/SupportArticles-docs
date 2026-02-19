@@ -1,7 +1,7 @@
 ---
 title: Windows Experience Index shows 1.0 for graphics subscore
 description: Provides a solution to an issue where WinSAT fails to generate the correct Windows Experience Index score when you build an image for Windows 7 deployment.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

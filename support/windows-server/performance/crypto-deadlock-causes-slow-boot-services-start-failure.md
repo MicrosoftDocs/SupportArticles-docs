@@ -1,7 +1,7 @@
 ---
 title: Slow boot and services start failure
 description: provides a workaround for an issue that causes slow boot and services fail to start.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

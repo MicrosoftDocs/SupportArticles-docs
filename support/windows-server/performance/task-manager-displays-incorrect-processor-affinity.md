@@ -1,7 +1,7 @@
 ---
 title: Task Manager displays incorrect processor affinity
 description: Describes a known issue in which Task Manager displays incorrect processor affinity in Windows Server 2022.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

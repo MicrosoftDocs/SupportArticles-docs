@@ -1,7 +1,7 @@
 ---
 title: Event ID 307 and 304 logged for deploying Windows
 description: Address an issue in which you receive event ID 307 and event ID 304 after you deploy Windows 10 on a device.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Available updates for Remote Desktop Services
 description: Lists the available updates for Remote Desktop Services in Windows Server 2012.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
