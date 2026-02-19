@@ -28,5 +28,5 @@ landingContent:
             url: troubleshoot-performance-issues.md
           - text: Troubleshoot file compression
             url: troubleshoot-compression.md
-          - text: Troubleshoot 4xx and 5xx errors using Reference String
+          - text: Troubleshoot using Reference String
             url: refstring.md

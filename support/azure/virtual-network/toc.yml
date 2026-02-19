@@ -13,5 +13,5 @@ items:
     href: front-door/troubleshoot-performance-issues.md
   - name: Troubleshoot file compression
     href: front-door/troubleshoot-compression.md
-  - name: Troubleshoot 4xx and 5xx errors using Reference String
+  - name: Troubleshoot using Reference String
     href: front-door/refstring.md
