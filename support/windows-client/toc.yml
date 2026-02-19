@@ -55,18 +55,10 @@ items:
       href: ../windows-server/active-directory/domain-join-authentication-errors.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot networking errors when joining computers to a domain
       href: ../windows-server/active-directory/domain-join-networking-errors.md?context=/troubleshoot/windows-client/context/context
-  - name: Schema update - known issues, best practices, workflow review
-    items:
-    - name: Error when checking domain object property
-      href: ./active-directory/error-when-checking-domain-object-property.md
   - name: User, computer, group, and object management
     items:
     - name: Known issues for managing Group Policy clients
       href: ./active-directory/known-issues-for-group-policy-clients.md
-    - name: The LsaLookupSids function returns the old user name
-      href: ./active-directory/lsalookupsids-function-not-return-new-user-name.md
-    - name: UAC blocks elevation of executable applications
-      href: ./active-directory/uac-blocks-elevation-executable-apps.md
   - name: Windows Time Service
     items:
     - name: W32Time doesn't start automatically

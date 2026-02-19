@@ -14394,6 +14394,21 @@
     {
       "source_path": "support/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager"
+    },
+    {
+      "source_path": "support/windows-client/active-directory/error-when-checking-domain-object-property.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/windows-client/error-when-checking-domain-object-property",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/active-directory/lsalookupsids-function-not-return-new-user-name.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/windows-client/lsalookupsids-function-not-return-new-user-name",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/active-directory/uac-blocks-elevation-executable-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/windows-client/uac-blocks-elevation-executable-apps",
+      "redirect_document_id": false
     }
   ]
 }
