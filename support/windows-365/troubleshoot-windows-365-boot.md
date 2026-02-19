@@ -128,7 +128,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **2. Cloud PC reconnect fails after portal authentication** 
 
-**Root Cause:** There may be a delay or error in network state propagation after portal authentication. 
+**Root cause:** There may be a delay or error in network state propagation after portal authentication. 
 
 **Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to 
 
