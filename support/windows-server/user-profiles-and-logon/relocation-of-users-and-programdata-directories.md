@@ -45,7 +45,7 @@ For information about how to use the answer file setting, see [Answer Files Over
 
 The Windows Automated Installation Kit (AIK) and the Windows OEM Preinstallation Kit (OPK) for Windows and Windows Server contain documentation warnings that are related to the usage of the **ProfilesDirectory** and **ProgramData** unattend settings. These are the settings that let you relocate the *Users* directory and the *ProgramData* directory to locations other than their default locations. This includes other drives.
 
-These warnings were included before the servicing stack update (update [937287](https://support.microsoft.com/help/937287)) was available. This update addresses the issue that is discussed in the warning text. You cannot upgrade such installations to the Windows version that is before Windows 10.
+These warnings were included before the servicing stack update (update [937287](https://catalog.update.microsoft.com/Search.aspx?q=937287)) was available. This update addresses the issue that is discussed in the warning text. You cannot upgrade such installations to the Windows version that is before Windows 10.
 
 ## Reference
 

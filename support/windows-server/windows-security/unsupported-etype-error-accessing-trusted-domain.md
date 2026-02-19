@@ -48,7 +48,7 @@ This problem occurs when you configure the child domain (or just the client) as 
 
 ### Kerberos encryption types
 
-RC4 encryption is considered less secure than the newer encryption types, AES128-CTS-HMAC-SHA1-96 and AES256-CTS-HMAC-SHA1-96. Security guides such as the [Windows 10 Security Technical Implementation Guide](https://www.stigviewer.com/stig/windows_10/2017-04-28/)  provide instructions for improving the security of a computer by configuring it to use only AES128 and/or AES256 encryption (see [Kerberos encryption types must be configured to prevent the use of DES and RC4 encryption suites](https://www.stigviewer.com/stig/windows_10/2017-04-28/finding/V-63795)).  
+RC4 encryption is considered less secure than the newer encryption types, AES128-CTS-HMAC-SHA1-96 and AES256-CTS-HMAC-SHA1-96. Security guides such as the [Windows 10 Security Technical Implementation Guide](https://www.stigviewer.com/stigs/microsoft_windows_10) provide instructions for improving the security of a computer by configuring it to use only AES128 and/or AES256 encryption (see [Kerberos encryption types must be configured to prevent the use of DES and RC4 encryption suites](https://www.stigviewer.com/stigs/microsoft_windows_10/2025-02-25/finding/V-220936)).  
 
 Such a client can continue to connect to services within its own domain that use AES128 or AES256 encryption. However, other factors can prevent the client from connecting to similar services in another trusted domain, even if those services also use AES128 or AES256 encryption.  
 
