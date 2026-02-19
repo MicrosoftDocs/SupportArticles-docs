@@ -15,7 +15,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 This article discusses how to troubleshoot the `ClusterStagedUpdateRun` and `StagedUpdateRun` errors that are generated when the update run gets stuck while it uses update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
-The following is an example error message:
+Here's an example error message:
 
 ```yaml
     Last Transition Time:  2026-02-11T22:15:20Z
@@ -49,7 +49,7 @@ example-run   example-placement   0                         0                   
 
 The `PROGRESSING` field value is `False`. This value indicates that the run stopped. Further investigation is necessary in order to determine the cause.
 
-2. To get more details about the error, run the following commands:
+2. For more information about the error, run the following commands:
 
 ```bash
 $ kubectl get csur example-run -o yaml
@@ -281,7 +281,7 @@ web-app-rollout   web-app-placement   1                         0               
 
 The `PROGRESSING` field value is `False`. This value indicates that the run stopped. Further investigation is necessary in order to determine the cause.
 
-2. To get more details about the error, run the following commands:
+2. For more information about the error, run the following commands:
 
 ```bash
 $ kubectl describe stagedupdaterun <staged-update-run-name> -n <namespace-name>
