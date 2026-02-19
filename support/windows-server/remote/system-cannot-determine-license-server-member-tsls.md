@@ -1,7 +1,7 @@
 ---
 title: System Cannot Determine If the License Server Is Member of TSLS Group on AD DS
 description: Troubleshoot an error when you review the configuration of a Remote Desktop Services (RDS) license server.
-ms.date: 02/13/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Frame rate is limited to 30 FPS in remote sessions
 description: Provides guidance for remote desktop protocols to change the frame rate limit in a remote session.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

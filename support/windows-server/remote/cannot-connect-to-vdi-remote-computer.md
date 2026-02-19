@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop can't connect to VDI-based computer
 description: Fixes an issue where Remote Desktop can't connect to a VDI-based remote computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -97,6 +97,6 @@ You must enable the RemoteFX Windows Firewall rule manually if you enable Remote
      netsh advfirewall firewall set rule group="remote desktop" new enable=Yes  
     ```
 
-4. Using PowerShell script provided on [Microsoft TechNet Script Center](https://go.microsoft.com/fwlink/?linkid=184804) to configure VDI desktops.
+4. Using PowerShell script from Microsoft TechNet Script Center (no longer available) to configure VDI desktops.
 5. Upgrading to Windows 7 with SP1 on a virtual desktop that already had Remote Desktop enabled.
 
