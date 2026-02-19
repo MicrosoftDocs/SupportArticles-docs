@@ -116,7 +116,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 
-## Issues connecting to a Captive Portal
+## Issues connecting to a captive portal
 
 **Common Issues & Troubleshooting Steps** 
 
