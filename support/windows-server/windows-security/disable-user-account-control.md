@@ -1,7 +1,7 @@
 ---
 title: Disable User Account Control (UAC)
 description: Describes disabling User Account Control (UAC) on Windows Server can be an acceptable and recommended practice in certain constrained circumstances.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

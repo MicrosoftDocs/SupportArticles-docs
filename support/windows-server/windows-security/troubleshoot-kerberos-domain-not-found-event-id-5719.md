@@ -1,7 +1,7 @@
 ---
 title: Event ID 5719, Error 1311, or Error 1355 - Domain Controller or Domain Not Found
 description: Provides guidance to troubleshoot "DC or domain not found" issues that occur during Kerberos authentication.
-ms.date: 06/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

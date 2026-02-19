@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 11/11/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
