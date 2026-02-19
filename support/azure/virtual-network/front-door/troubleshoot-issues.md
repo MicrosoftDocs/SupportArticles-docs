@@ -44,13 +44,13 @@ The cause of this issue can be one of three things:
     > [!NOTE]
     > The ability to configure origin response timeout is only available in Azure Front Door Standard/Premium.
 
-    :::image type="content" source="./media/how-to-configure-endpoints/origin-timeout.png" alt-text="Screenshot of the origin timeout settings on the overview page of the Azure Front Door profile.":::
+    :::image type="content" source="media/troubleshoot-issues/origin-timeout.png" alt-text="Screenshot of the origin timeout settings on the overview page of the Azure Front Door profile." lightbox="media/troubleshoot-issues/origin-timeout.png":::
 
 * If increasing the timeout doesn't resolve the issue, use a tool like Fiddler or your browser's developer tool to check if the client is sending byte range requests with **Accept-Encoding** headers. Using this option leads to the origin responding with different content lengths.
 
    If the client is sending byte range requests with **Accept-Encoding** headers, you have two options. The first option is to disable compression on the origin or Azure Front Door. The second option is to create a rules set rule to remove **Accept-Encoding** from the request for byte range requests.
 
-    :::image type="content" source="./media/troubleshoot-issues/remove-encoding-rule.png" alt-text="Screenshot that shows the Accept-Encoding rule in a rule set.":::
+    :::image type="content" source="media/troubleshoot-issues/remove-encoding-rule.png" alt-text="Screenshot that shows the Accept-Encoding rule in a rule set." lightbox="media/troubleshoot-issues/remove-encoding-rule.png":::
 
 ## 503 responses from Azure Front Door only for HTTPS
 

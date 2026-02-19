@@ -1,0 +1,32 @@
+### YamlMime:Landing
+
+title: Azure Front Door troubleshooting documentation
+summary: Welcome to Azure Front Door troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Front Door. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Front Door
+  description: Documentation for troubleshooting common issues with Azure Front Door. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-frontdoor 
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/19/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Front Door
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common issues
+            url: front-door/troubleshoot-issues.md
+          - text: Troubleshoot general performance problems
+            url: front-door/troubleshoot-performance-issues.md
+          - text: Troubleshoot file compression
+            url: front-door/troubleshoot-compression.md
+          - text: Troubleshoot 4xx and 5xx errors using Reference String
+            url: front-door/refstring.md

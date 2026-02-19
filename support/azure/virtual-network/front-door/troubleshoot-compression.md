@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot File Compression
+title: Troubleshoot file compression
 titleSuffix: Azure Front Door
 description: Learn how to troubleshoot issues with file compression in Azure Front Door. This article covers several possible causes.
 author: JarrettRenshaw
@@ -24,7 +24,7 @@ Compression is enabled for your route, but files are being returned uncompressed
 > [!TIP]
 > To check if your files are compressed, use a tool like [Fiddler](https://www.telerik.com/fiddler) or your browser's [developer tools](/microsoft-edge/devtools-guide-chromium/overview). Look for the `Content-Encoding` header in the HTTP response. If it has a value of **gzip**, **bzip2**, or **deflate**, your content is compressed.
 > 
-> ![Content-Encoding header](../media/troubleshoot-compression/content-header.png)
+> :::image type="content" source="media/troubleshoot-compression/content-header.png" alt-text="Content header featuring Content-Encoding." lightbox="media/troubleshoot-compression/content-header.png":::
 
 ## Cause
 
@@ -47,13 +47,13 @@ Use your browser's **[developer tools](/microsoft-edge/devtools-guide-chromium/o
 * Ensure the request is sent to `<endpointname>.z01.azurefd.net`, not your origin.
 * Ensure the request includes an **Accept-Encoding** header with **gzip**, **deflate**, or **bzip2**.
 
-![CDN request headers](../media/troubleshoot-compression/request-headers.png)
+:::image type="content" source="media/troubleshoot-compression/request-headers.png" alt-text="Request Headers featuring Accept-Encoding and Host values." lightbox="media/troubleshoot-compression/request-headers.png":::
 
 ### Verify compression settings
 
 In the [Azure portal](https://portal.azure.com), navigate to your endpoint and select **Configure** in the Routes panel. Ensure compression is **enabled**.
 
-![CDN compression settings](../media/troubleshoot-compression/compression-settings.png)
+:::image type="content" source="media/troubleshoot-compression/compression-settings.png" alt-text="Compression settings featuring Compression enabled option." lightbox="media/troubleshoot-compression/compression-settings.png":::
 
 ### Check the request at the origin server for a **Via** header
 

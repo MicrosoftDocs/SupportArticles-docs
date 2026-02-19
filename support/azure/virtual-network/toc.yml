@@ -1,5 +1,16 @@
+items:
 - name: Welcome
   href: welcome-virtual-network.yml
 - name: Virtual Network troubleshooter
   href: connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
 
+- name: Azure Front Door troubleshooting documentation
+  href: front-door/welcome-front-door.yml
+- name: Troubleshoot common issues
+  href: front-door/troubleshoot-issues.md   
+- name: Troubleshoot general performance problems
+  href: front-door/troubleshoot-performance-issues.md
+- name: Troubleshoot file compression
+  href: front-door/troubleshoot-compression.md
+- name: Troubleshoot 4xx and 5xx errors using Reference String
+  href: front-door/refstring.md
