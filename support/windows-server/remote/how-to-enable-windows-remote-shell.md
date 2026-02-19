@@ -1,7 +1,7 @@
 ---
 title: How to enable Windows Remote Shell
 description: Helps you enable Windows Remote Shell.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

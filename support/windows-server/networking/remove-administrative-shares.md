@@ -1,7 +1,7 @@
 ---
 title: Remove administrative shares
 description: Describes how to remove administrative shares in Windows Server, and how to prevent Windows Server from automatically creating administrative shares.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

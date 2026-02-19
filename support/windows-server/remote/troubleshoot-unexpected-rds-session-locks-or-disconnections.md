@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Unexpected RDS Session Locks or Disconnections
 description: Introduces how to configure RDS session time-outs to troubleshoot unexpected session locks or disconnections.
-ms.date: 03/11/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

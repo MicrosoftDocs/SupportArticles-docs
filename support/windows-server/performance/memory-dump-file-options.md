@@ -1,7 +1,7 @@
 ---
 title: Memory dump file options
 description: This article describes an overview of memory dump file options for Windows.
-ms.date: 04/30/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

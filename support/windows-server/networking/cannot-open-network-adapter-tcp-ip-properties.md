@@ -1,7 +1,7 @@
 ---
 title: Fail to open TCP/IP properties of network adapter
 description: Resolve an error that occurs when you open the TCP/IP properties of your network adapter.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
