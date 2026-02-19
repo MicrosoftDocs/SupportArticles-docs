@@ -15,7 +15,7 @@ zone_pivot_groups: cluster-namespace-scope
 
 This article discusses how to troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures that occur when you propagate resources by using update run APIs in Microsoft Azure Kubernetes Fleet Manager. 
 
-The following is an example error message:
+Here's an example error message:
 
 :::zone target="docs" pivot="cluster-scope"
 
@@ -41,7 +41,7 @@ example-run       example-placement   1                         0               
 
 The `INITIALIZED` field value is `False`. This value indicates that the initialization failed.
 
-2. To get more details about the error, run the following commands:
+2. For more information about the error, run the following commands:
 
 ```bash
 $ kubectl describe clusterstagedupdaterun example-run
@@ -122,7 +122,7 @@ cannot continue the updateRun: failed to validate the updateRun: parent placemen
 
 ### Solution
 
-Create a new `ClusterResourcePlacement` that has the same name that's specified in `ClusterStagedUpdateRun`. Then, create a new `ClusterStagedUpdateRun` instance that references the new `ClusterResourcePlacement`. For more details, see [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation).
+Create a new `ClusterResourcePlacement` that has the same name that's specified in `ClusterStagedUpdateRun`. Then, create a new `ClusterStagedUpdateRun` instance that references the new `ClusterResourcePlacement`. For more information, see [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation).
 
 You can also create a new `ClusterStagedUpdateRun` instance that references a valid `ClusterResourcePlacement` that already exists. Run the following command:
 
@@ -399,7 +399,7 @@ web-app-rollout   web-app-placement   1                         0               
 
 The `INITIALIZED` field value is `False`. This value indicates that the initialization failed.
 
-2. To get more details about the error, run the following commands:
+2. For more information about the error, run the following commands:
 
 ```bash
 $ kubectl describe stagedupdaterun web-app-rollout -n my-app-namespace
