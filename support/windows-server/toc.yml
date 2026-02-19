@@ -528,8 +528,6 @@ items:
       href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
   - name: Application Compatibility Toolkit (ACT)
     items:
-    - name: DXDIAG reports low display adapters memory
-      href: ./application-management/low-amount-display-adapter-memory.md
     - name: Error "The Best Practices Analyzer scan has failed"
       href: ./application-management/error-best-practices-analyzer-scan-has-failed.md
   - name: COM+ administration, configuration, and security
@@ -542,10 +540,6 @@ items:
     items:
     - name: COM+ application stops working when users logs off
       href: ./application-management/complus-server-application-not-work.md
-  - name: COM and DCOM programming
-    items:
-    - name: Performance degrades when accessing large files
-      href: ./application-management/operating-system-performance-degrades.md
   - name: DTC startup, configuration, connectivity, and cluster
     items:
     - name: How to configure DTC to work through firewalls
@@ -574,8 +568,6 @@ items:
     items:
     - name: How the "Regional and Language Options" settings are applied
       href: ./application-management/regional-and-language-options-settings.md
-    - name: HTTP Listener fails to initialize when lacking SeChangeNotifyPrivilege
-      href: ./application-management/http-listener-fails-initialize.md
   - name: .NET Framework installation
     items:
     - name: Services depending on ASP.NET State Service don't start

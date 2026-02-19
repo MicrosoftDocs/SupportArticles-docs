@@ -14564,6 +14564,21 @@
       "source_path": "support/windows-client/application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md",
       "redirect_url": "/previous-versions/windows-client/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/http-listener-fails-initialize.md",
+      "redirect_url": "/previous-versions/windows-server/http-listener-fails-initialize",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/low-amount-display-adapter-memory.md",
+      "redirect_url": "/previous-versions/windows-server/low-amount-display-adapter-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/operating-system-performance-degrades.md",
+      "redirect_url": "/previous-versions/windows-server/operating-system-performance-degrades",
+      "redirect_document_id": false
     }
   ]
 }
