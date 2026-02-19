@@ -327,6 +327,10 @@
     {
       "source_path": "SharePoint/SharePointServer/workflows/workflow-cannot-send-email-to-group.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
-     }
+     },
+    {
+      "source_path": "SharePoint/SharePointOnline/video/cant-view-embedded-video.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     }     
   ]
 }
