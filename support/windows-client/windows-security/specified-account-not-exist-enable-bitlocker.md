@@ -1,7 +1,7 @@
 ---
 title: The specified account does not exist when you try to enable BitLocker
 description: Provides a resolution for the issue that the Specified Account does not exist when you try to enable BitLocker
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

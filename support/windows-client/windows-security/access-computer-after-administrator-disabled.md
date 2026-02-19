@@ -1,7 +1,7 @@
 ---
 title: Access computer after administrator account is disabled
 description: Describes how to access your computer by using the Administrator account after you disable the local Administrator account.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
