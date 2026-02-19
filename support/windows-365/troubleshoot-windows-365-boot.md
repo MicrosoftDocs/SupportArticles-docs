@@ -124,7 +124,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 **Root cause:** The device is not fully authenticated on the network. 
 
-**Action:** Disconnect from the wifi network that requires Captive portal sign in and complete the sign steps again 
+**Action:** Disconnect from the Wi-Fi network that requires Captive portal sign in and complete the sign steps again.
 
 **2. Cloud PC Reconnect Fails After Portal Authentication** 
 
