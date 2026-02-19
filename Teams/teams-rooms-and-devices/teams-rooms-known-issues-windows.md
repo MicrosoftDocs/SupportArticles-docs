@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/06/2026
+ms.date: 02/18/2026
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -46,6 +46,8 @@ ms.date: 02/06/2026
 |Teams Rooms device loses internet connectivity after installing a feature update for Windows| A Teams Rooms device that is connected to a network, which requires a proxy can't connect to the internet after installing a feature update for Windows, including an upgrade to Windows 11.<br/><br/>This issue occurs if the proxy setting for internet access on the affected device is configured for the LocalSystem instead of a system-wide proxy. The Windows feature update deletes the LocalSystem settings. This behavior is by design.|If your device has proxy settings set for the LocalSystem user, transfer those settings to the [system-wide proxy settings](/windows/client-management/mdm/networkproxy-csp) that are set and maintained through Mobile Device Management (MDM). Alternatively, you can use the [Set-WinInetProxy](https://www.powershellgallery.com/packages/WinInetProxy/0.1.0) PowerShell cmdlet to configure the system-wide proxy settings.</br></br>When you use system-wide proxy settings, they won't be affected when you install Windows feature updates on the device in future.|
 |Screen shared from laptop looks blurry on Teams Rooms display.|When you start a full screen share from a laptop that has its resolution set to 1920x1200, the display connected to a Teams Room on Windows device is blurry.|To work around the issue, set the display resolution on the laptop to 1920x1080.|
 |Settings window doesn't display on the console.|On a Teams Rooms on Windows device, when you select the **Settings** menu on the console, the console display becomes blank and the Settings menu opens in the Front of Room display instead.<br/><br/>This issue occurs on devices that are running version 5.5.129 of the Teams Rooms app, and their console display is not connected permanently to the compute system.|To work around the issue, use the following steps:<ol><li>Disconnect all Front of Room displays, but keep the console connected.</li><li>Select the **Settings** menu and verify that it displays on the console.</li><li>Connect the Front of Room displays again.</li></ol>|
+|File Explorer view appears when Google Meet starts.|When you join a Google Meet meeting by using a Teams Rooms on Windows device, the display shows a view of File Explorer briefly before the Google Meet interface appears.|No workaround is needed. The view of File Explorer disappears automatically when the meeting finishes loading.|
+|Brief spike in volume after disconnecting from Google Meet.|You join a Google Meet meeting by using a Teams Rooms on Windows device. Another user joins the meeting by using a different device such as a laptop, and shares a presentation involving audio. The volume of the presentation audio heard on the Teams Rooms device is low.<br/><br/>If you disconnect the Teams Rooms device while the presentation is ongoing, then for a brief moment while the device disconnects from the meeting, you hear a significant increase in the volume of the presentation audio.|No workaround is available at this time.|
 
 ## Hardware issues
 
