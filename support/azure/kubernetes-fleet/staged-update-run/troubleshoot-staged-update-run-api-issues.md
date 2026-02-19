@@ -53,7 +53,7 @@ If `UpdateRunStuck` is set to 'False`, see [How To Troubleshoot ClusterStagedUpd
 
 #### Cause
 
-When you create `ClusterStagedUpdateRun` without gaving a state indicated, `ClusterStagedUpdateRun` doesn't start the run. `ClusterStagedUpdateRun` uses the default value instead.
+If you create a `ClusterStagedUpdateRun` instance without indicating a state, `ClusterStagedUpdateRun` doesn't start the run. `ClusterStagedUpdateRun` uses the default value instead.
 
 ```yaml
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -87,7 +87,7 @@ In this case, `ClusterStagedUpdateRun` defaults to `Initialize`.
 
 #### Solution
 
-Update `ClusterStagedUpdateRun` to `Run` by running the following command:
+Update `ClusterStagedUpdateRun` to the `Run` state by running the following command:
 
 ```bash
 kubectl patch clusterstagedupdaterun example-run --type='merge' -p '{"spec":{"state":"Run"}}'
@@ -125,7 +125,7 @@ status:
 
 #### Cause 
 
-`ClusterStagedUpdateRun` is still waiting for approval from the user. Check `ClusterApprovalRequest` to verify:
+`ClusterStagedUpdateRun` is still waiting for approval from the user. Examine `ClusterApprovalRequest` to verify:
 
 ```bash
 $ kubectl get clusterapprovalrequest example-run-after-staging -o yaml
@@ -174,7 +174,7 @@ kubectl patch clusterapprovalrequests example-run-before-canary --type='merge' \
 
 ## Complete progression of `StagedUpdateRun` deployment
 
-Understanding the progression and status of the `StagedUpdateRun` custom resource is crucial for diagnosing and identifying failures. You can view the status of `StagedUpdateRun` by running the following command:
+It's crucial to understand the progression and status of the `StagedUpdateRun` custom resource in order to diagnose and identify failures. To view the status of `StagedUpdateRun`, run the following command:
 
 ```bash
 kubectl describe stagedupdaterun <name>
@@ -196,7 +196,7 @@ If `UpdateRunStuck` is set to `False`, see [How To Troubleshoot StagedUpdateRun 
 
 #### Cause
 
-When you create `StagedUpdateRun` without having a state indicated, `StagedUpdateRun` doesn't start the run. `StagedUpdateRun` uses the default value instead.
+When you create `StagedUpdateRun` without indicating a state, `StagedUpdateRun` doesn't start the run. `StagedUpdateRun` uses the default value instead.
 
 ```yaml
 apiVersion: placement.kubernetes-fleet.io/v1beta1
@@ -231,7 +231,7 @@ In this case, `StagedUpdateRun` defaults to `Initialize`.
 
 #### Solution
 
-Update `StagedUpdateRun` to `Run` by running the following command:
+Update `StagedUpdateRun` to the `Run` state by running the following command:
 
 ```bash
 kubectl patch stagedupdaterun web-app-rollout -n my-app-namespace --type='merge' -p '{"spec":{"state":"Run"}}'
@@ -239,7 +239,7 @@ kubectl patch stagedupdaterun web-app-rollout -n my-app-namespace --type='merge'
 
 - **`StagedUpdateRun` doesn't progress after user approves `ApprovalRequest`**
 
-Check `StagedUpdateRun` to investigate:
+Examine `StagedUpdateRun` to investigate:
 
 ```bash
 $ kubectl get stagedupdaterun web-app-rollout -n my-app-namespace -o yaml
@@ -269,7 +269,7 @@ status:
 
 #### Cause
 
-`StagedUpdateRun` is still waiting for approval from the user. Check `ApprovalRequest` to verify:
+`StagedUpdateRun` is still waiting for approval from the user. Examine `ApprovalRequest` to verify:
 
 ```bash
 $ kubectl get approvalrequests web-app-rollout-before-dev -n my-app-namespace -o yaml
