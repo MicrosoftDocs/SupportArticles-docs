@@ -1,7 +1,7 @@
 ---
 title: Can't log on to Windows
 description: Describes an issue where you're prompted for user name and password repeatedly when logging on Windows.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

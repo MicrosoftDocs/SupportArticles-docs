@@ -1,7 +1,7 @@
 ---
 title: Use a Log Analysis Test Scenario to Troubleshoot Kerberos Authentication
 description: Uses an example topology to demonstrate techniques for troubleshooting Kerberos issues.
-ms.date: 06/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
