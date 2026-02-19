@@ -187,8 +187,6 @@ items:
       href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
   - name: Volume Shadow Copy Service (VSS)
     items:
-    - name: Event IDs for Volsnap
-      href: ./backup-and-storage/e2e-event-ids-volsnap.md
     - name: Most recent previous versions are missing for a share
       href: ./backup-and-storage/most-recent-previous-versions-missing-for-share.md
 - name: Certificates and Public Key Infrastructure (PKI)
