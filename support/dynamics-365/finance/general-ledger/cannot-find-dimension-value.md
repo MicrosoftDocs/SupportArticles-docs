@@ -16,10 +16,16 @@ This guide provides troubleshooting steps for locating missing or unavailable fi
 
 **Potential Cause 2:** The user lacks the necessary security role. If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when XDS filters are applied to the backing entity, and the user doesn’t have permission to view it.
 
-  - **Resolution:** To verify the cause is not an XDS issue, assign the **XDSDataAccessPolicyBypassRole** role to the user temporarily. If the dimension value appears, the issue is XDS-related. 
-  - To verify the cause is not a security role issue, see if the admin user is able to see the missing value.
+  - **Resolution 1:** Assign the appropriate security role.
 
-**Potential Cause 3:** The dimension value has not been used yet and is backed by a system entity. Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
+    1. Go to **System administration** > **Users** > **Users**.
+    2. Select the affected user.
+    3. Select **Roles** > **Assign organizations**.
+    4. Review the access scope and grant access to the required organizations. To test, select **Grant access to all organizations** and check whether the dimension value appears.
+
+  - **Resolution 2:** To check whether the issue is XDS-related, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility.
+
+**Potential Cause 3:** The dimension value is backed by a system entity and has not been used yet. Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
 
   - **Resolution:** Ensure the dimension value has been used in at least one account or journal entry.
 
