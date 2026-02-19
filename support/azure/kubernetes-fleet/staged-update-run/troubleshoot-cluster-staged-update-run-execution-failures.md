@@ -9,7 +9,7 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-# Troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` error messages
+# Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun error messages
 
 ## Summary
 
