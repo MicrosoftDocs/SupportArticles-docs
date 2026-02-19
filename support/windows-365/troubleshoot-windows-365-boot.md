@@ -118,7 +118,7 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 ## Issues connecting to a captive portal
 
-**Common Issues & Troubleshooting Steps** 
+**Common issues & troubleshooting steps** 
 
 **1. Network Connection Does Not Update After Captive Portal Connection** 
 
