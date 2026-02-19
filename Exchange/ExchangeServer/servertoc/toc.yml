@@ -176,8 +176,6 @@ items:
           href: ../administration/requestor-changed-server-component.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
-        - name: SetupVersionInformationCorruptException if opening EMS
-          href: ../administration/setupversioninformationcorruptexception-when-opening-ems.md
         - name: Some cmdlets fail to run with Add-PSSnapin
           href: ../administration/cmdlets-fail-powershell-ise.md
         - name: Test cmdlets fail with error
@@ -276,8 +274,6 @@ items:
           href: ../client-connectivity/outlook-cannot-access-legacy-public-folders.md
         - name: Outlook Can't connect via firewall or proxy server
           href: ../client-connectivity/outlook-not-connect-firewall-proxy-server.md
-        - name: Outlook connection issues caused by the RPC encryption requirement
-          href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
         - name: OWA doesn't redirect to ADFS login
           href: ../client-connectivity/owa-not-redirect-adfs-login.md
         - name: OWA or ECP stop working after installing Exchange Server security update
@@ -502,8 +498,6 @@ items:
           href: ../setup/error-occurred-while-configuring-search-foundation.md
         - name: Installation in RecoverServer mode fails
           href: ../setup/language-pack-bundle-not-found.md
-        - name: Installation of Edge Transport role fails
-          href: ../setup/process-execution-failed-with-exit-code-3.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
         - name: Run Update cmdlet fails
