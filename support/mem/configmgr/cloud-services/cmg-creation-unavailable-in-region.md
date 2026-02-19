@@ -51,22 +51,12 @@ Microsoft is actively working on expanding the list of supported SKUs for CMG cr
 ```powershell
 Connect-AzAccount
 
-# Supported CMG SKUs
 $supportedSkus = @('Standard_B2s','Standard_A2_v2','Standard_A4_V2')
-
-# Prompt to select the SKU of interest
-$selectedSku = $supportedSkus |
-	Out-GridView -Title 'Select CMG SKU of interest' -OutputMode Single
-
-if (-not $selectedSku) {
-	Write-Host 'No SKU selected. Exiting...'
-	return
-}
 
 $results = Get-AzComputeResourceSku |
 	Where-Object {
 		$_.ResourceType -eq 'virtualMachines' -and
-		$_.Name -eq $selectedSku -and
+		$supportedSkus -contains $_.Name -and
 		($_.Restrictions.ReasonCode -notcontains 'NotAvailableForSubscription')
 	} |
 	ForEach-Object {
@@ -77,12 +67,12 @@ $results = Get-AzComputeResourceSku |
 			}
 		}
 	} |
-	Sort-Object Location
+	Sort-Object Sku, Location
 
 if (-not $results) {
-	Write-Host "No available regions found for SKU '$selectedSku'."
+	Write-Host 'No available regions found for the supported CMG SKUs.'
 } else {
-	$results | Out-GridView -Title "Available regions for $selectedSku"
+	$results | Out-GridView -Title 'Available regions for supported CMG SKUs'
 }
 ```
 
