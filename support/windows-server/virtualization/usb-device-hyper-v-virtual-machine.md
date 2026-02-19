@@ -1,7 +1,7 @@
 ---
 title: YubiKey USB Device Doesn't Appear in a Hyper-V Virtual Machine
 description: Resolves an issue where a YubiKey USB device doesn't appear in a Hyper-V VM. Provides guidance on using a YubiKey USB device for hardware encryption in a Hyper-V VM.
-ms.date: 09/09/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

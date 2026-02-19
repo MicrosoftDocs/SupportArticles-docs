@@ -1,7 +1,7 @@
 ---
 title: Windows LAPS troubleshooting guidance
 description: Provides troubleshooting guidance for Windows LAPS using Windows events.
-ms.date: 06/20/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

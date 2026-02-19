@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Kerberos RBCD Issues
 description: Provides guidance to troubleshoot Kerberos resource-based constrained delegation (RBCD) issues.
-ms.date: 06/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
