@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun initialization errors
-description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun fail to initialize.
+description: Troubleshoot errors that occur when ClusterStagedUpdateRun and StagedUpdateRun don't initialize.
 author: britaniar
 ms.author: britaniar
 ms.service: azure-kubernetes-fleet-manager
@@ -9,7 +9,7 @@ ms.custom: sap:Other issue or questions related to Fleet manager
 zone_pivot_groups: cluster-namespace-scope
 ---
 
-# Troubleshoot `ClusterStagedUpdateRun` and `StagedUpdateRun` initialization failures
+# Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun initialization failures
 
 ## Summary
 
@@ -19,10 +19,9 @@ The following is an example error message:
 
 :::zone target="docs" pivot="cluster-scope"
 
-
 ```yaml
     Last Transition Time:  2026-02-11T00:35:09Z
-    Message:               cannot continue the updateRun: failed to validate the updateRun: failed to process the request due to     a  client error: no resourceSnapshots with index `1` found for placement `/example-placement`
+    Message:               cannot continue the updateRun: failed to validate the updateRun: failed to process the request due to a  client error: no resourceSnapshots with index `1` found for placement `/example-placement`
     Observed Generation:   1
     Reason:                UpdateRunInitializedFailed
     Status:                False
@@ -40,9 +39,9 @@ example-run       example-placement   1                         0               
 
 ```
 
-The `INITIALIZED` field is `False` indicating the initialization failed.
+The `INITIALIZED` field value is `False`. This value indicates that the initialization failed.
 
-2. Run these commands to get more details about the error:
+2. To get more details about the error, run the following commands:
 
 ```bash
 $ kubectl describe clusterstagedupdaterun example-run
@@ -97,17 +96,17 @@ Status:
 
 ```
 
-This indicates the initialization failed. In this case, a nonexistent resource snapshot index `1` is used for `ClusterStagedUpdateRun`.
+This status value indicates that the initialization failed. In this case, a nonexistent resource snapshot index `1` is used for `ClusterStagedUpdateRun`.
 
 ## Common initialization failures
 
 ### Cause
 
-Aborted `ClusterStagedUpdateRun` messages happen due to initialization failures and aren't recoverable. 
+"Aborted" `ClusterStagedUpdateRun` messages are generated because of initialization failures. The initialization process isn't recoverable. 
 
 ### Solution
 
-If a failure occurs due to a validation error, fix the issue and create a new `ClusterStagedUpdateRun`.
+If a failure occurs because of a validation error, fix the issue, and create a new `ClusterStagedUpdateRun` instance.
 
 **Parent placement not found**
 
@@ -123,27 +122,27 @@ cannot continue the updateRun: failed to validate the updateRun: parent placemen
 
 ### Solution
 
-Create a new `ClusterResourcePlacement` with the same name specified in `ClusterStagedUpdateRun`. Then create a new `ClusterStagedUpdateRun` referencing the new `ClusterResourcePlacement`. See [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation) for more details.
+Create a new `ClusterResourcePlacement` that has the same name that's specified in `ClusterStagedUpdateRun`. Then, create a new `ClusterStagedUpdateRun` instance that references the new `ClusterResourcePlacement`. For more details, see [Placing cluster-scoped resources](/azure/kubernetes-fleet/quickstart-resource-propagation).
 
-You can also create a new `ClusterStagedUpdateRun` that references a valid `ClusterResourcePlacement` that already exists. Run the following command:
+You can also create a new `ClusterStagedUpdateRun` instance that references a valid `ClusterResourcePlacement` that already exists. Run the following command:
 
 ```bash
 kubectl get clusterresourceplacements
 ```
 
-View the `spec` and then verify the strategy for `spec.Strategy.Type: External` deployment with the following command:
+View the `spec` value, and then verify the strategy for `spec.Strategy.Type: External` deployment by running the following command:
 
 ```bash
 $ kubectl describe clusterresourceplacement <cluster-resource-placement-name> 
 ```
 
-See [Control cluster order for resource placement](/azure/kubernetes-fleet/howto-staged-update-run) for guidance on creating a `ClusterStagedUpdateRun` that references one of the existing `ClusterResourceplacement` values.
+For information about how to create a `ClusterStagedUpdateRun` that references one of the existing `ClusterResourceplacement` values, see [Control cluster order for resource placement](/azure/kubernetes-fleet/howto-staged-update-run).
 
 **Selected placement isn't external rollout strategy type**
 
 ### Cause
 
-There's no clear external rollout strategy specified in `ClusterResourcePlacement`.
+No clear external rollout strategy is specified in `ClusterResourcePlacement`.
 
 Example message:
 
@@ -153,12 +152,12 @@ cannot continue the updateRun: failed to validate the updateRun: The placement d
 
 ### Solution 
 
-To enable staged updates, recreate the `ClusterResourcePlacement` with `spec.Strategy.Type: External`, create a new `ClusterStagedUpdateRun`, and then select the new `ClusterResourcePlacement`.
+To enable staged updates, re-create the `ClusterResourcePlacement` instance by using `spec.Strategy.Type: External`, create a new `ClusterStagedUpdateRun`, and then select the new `ClusterResourcePlacement`.
 
 > [!NOTE]
-> Changing a `ClusterResourcePlacement` from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External` is allowed, but the reverse isn't.
+> You can change a `ClusterResourcePlacement` instance from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External`. This change is allowed. However, the reverse isn't allowed.
 
-You can also find a `ClusterResourcePlacement` that has `spec.Strategy.Type: External` set and then create a `ClusterStagedUpdateRun` and specify this `ClusterResourcePlacement`.
+You can also find a `ClusterResourcePlacement` instance that has `spec.Strategy.Type: External` set. Then, you can create a `ClusterStagedUpdateRun`, and specify this `ClusterResourcePlacement`.
 
 **Strategy not found**
 
@@ -174,15 +173,15 @@ cannot continue the updateRun: failed to validate the updateRun: referenced upda
 
 ### Solution
 
-Create a new `ClusterStagedUpdateStrategy` within the same name specified in `ClusterStagedUpdateRun` and then create a new `ClusterStagedUpdateRun` referencing this `ClusterStagedUpdateStrategy`.
+Create a `ClusterStagedUpdateStrategy` instance within the same name that's specified in `ClusterStagedUpdateRun`. Then, create a `ClusterStagedUpdateRun` instance that references this `ClusterStagedUpdateStrategy`.
 
-You can also create a new `ClusterStagedUpdateRun` that references a valid `ClusterStagedUpdateStrategy` that already exists.
+You can also create a `ClusterStagedUpdateRun` instance that references a valid `ClusterStagedUpdateStrategy` that already exists.
 
 **Invalid stage tasks**
 
 ### Cause
 
-Within a stage in `ClusterStagedUpdateStrategy`, a `beforeStageTask` or `afterStageTask` is incorrectly defined.
+Within a stage in `ClusterStagedUpdateStrategy`, an instance of `beforeStageTask` or `afterStageTask` is incorrectly defined.
 
 Example message:
 
@@ -191,13 +190,13 @@ cannot continue the updateRun: failed to validate the updateRun: the before stag
 
 ### Solution
 
-See [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update the `ClusterStagedUpdateStrategy`.
+For information about how to correctly update the `ClusterStagedUpdateStrategy`, see [Staged update strategy (preview)](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview).
 
-**Cluster appears more than once**
+**Cluster appears more than one time**
 
 ### Cause
 
-Let's take a look at `ClusterStagedUpdateStrategy`:
+View the `ClusterStagedUpdateStrategy` instance:
 
 ```bash
     $ kubectl describe clusterstagedupdatestrategy <cluster-staged-update-strategy-name>
@@ -230,9 +229,9 @@ Let's take a look at `ClusterStagedUpdateStrategy`:
         Name:             west
 ```
 
-The `ClusterStagedUpdateStrategy` has two labels that are both selected: the `Environment: staging` and `Region: west` labels.
+The `ClusterStagedUpdateStrategy` has two labels that are both selected: `Environment: staging` and `Region: west`.
 
-Now let's take a look at the labels `member-1` referenced in the error as they appear in multiple stages. Use the following command:
+Next, view the `member-1` labels that are referenced in the error message as they appear in multiple stages. Run the following command:
 
 ```bash
     $ kubectl get membercluster member-1  --show-labels
@@ -241,7 +240,7 @@ Now let's take a look at the labels `member-1` referenced in the error as they a
     member-1         True     81m   16s                      2            14750m          48308656Ki         environment=staging,region=west
 ```
 
-The cluster has both labels used in these two stages. 
+For this cluster, both labels are used in these two stages. 
 
 Example message:
 
@@ -251,13 +250,13 @@ cannot continue the updateRun: failed to validate the updateRun: cluster `member
 
 ### Solution
 
-Either remove one of the labels or update the stages in `ClusterStagedUpdateStrategy` so they select distinct cluster labels. You then create a new `ClusterStagedUpdateRun`.
+Either remove one of the labels or update the stages in `ClusterStagedUpdateStrategy` so that they select distinct cluster labels. Then, create a new `ClusterStagedUpdateRun`.
 
 **Some clusters not assigned a stage**
 
 ### Cause
 
-The error provides a list of clusters (up to 10) that aren't assigned a stage. Let's take a look at `ClusterResourcePlacement` and verify what clusters are targeted using the following commands:
+The error message provides a list of clusters (up to 10) that aren't assigned a stage. Examine `ClusterResourcePlacement`, and determine which clusters are targeted. To get this information, run the following commands:
 
 ```bash
     $ kubectl get clusterresourceplacement <cluster-resource-placement-name>
@@ -315,13 +314,11 @@ The error provides a list of clusters (up to 10) that aren't assigned a stage. L
           ...
 ```
 
-`ClusterResourcePlacement` targets subset clusters (or all the clusters in a Fleet) to roll resources out to.
+`ClusterResourcePlacement` targets the subset clusters (or all the clusters in a Fleet) to assign resources to.
 
-In `ClusterResourcePlacement`, the placement type is `PickAll`. This means all the clusters in the Fleet need to be assigned to a stage.
+In `ClusterResourcePlacement`, the placement type is `PickAll`. This type means that all the clusters in the Fleet have to be assigned to a stage. If a cluster isn't placed into a stage, the cluster lacks the label for any of the stages that are specified in `ClusterStagedUpdateStrategy`. 
 
-If a cluster isn't placed in a stage, the cluster lacks the label for any of the stages specified in `ClusterStagedUpdateStrategy`. 
-
-Let's take a look at `ClusterStagedUpdateStrategy`:
+Examine `ClusterStagedUpdateStrategy`:
 
 ```bash
     $  kubectl describe clusterstagedupdatestrategy <cluster-staged-update-strategy-name>
@@ -347,7 +344,7 @@ Let's take a look at `ClusterStagedUpdateStrategy`:
         Name:             staging
 ```
 
-From `Spec`, there's one stage that selects clusters with the label `Environment: staging`.
+The `Spec` field shows one stage that selects clusters that have the label, `Environment: staging`.
 
 Example message:
 
@@ -357,13 +354,13 @@ cannot continue the updateRun: failed to validate the updateRun: failed to proce
 
 ### Solution
 
-1. Update the clusters with a `environment=staging` label:
+1. Update the clusters that have an `environment=staging` label:
 
 ```bash
     $ az fleet member update -g <resource-group-name> -f <fleet-name> -n <member-cluster-name> --labels "environment=staging"
 ```
 
-2. Verify the member cluster has the new label:
+2. Verify that the member cluster has the new label:
 
 ```bash
     $ kubectl get membercluster <member-cluster-name> --show-labels
@@ -374,7 +371,7 @@ cannot continue the updateRun: failed to validate the updateRun: failed to proce
 
 3. Add labels to the remaining clusters. 
 
-4. Create a new `ClusterStagedUpdateRun` referencing the same `ClusterResourcePlacement` and `ClusterStagedUpdateStrategy`.
+4. Create a `ClusterStagedUpdateRun` instance that references the same `ClusterResourcePlacement` and `ClusterStagedUpdateStrategy` instances.
   
 :::zone-end
 
@@ -400,9 +397,9 @@ web-app-rollout   web-app-placement   1                         0               
 
 ```
 
-The `INITIALIZED` field is `False` indicating the initialization failed.
+The `INITIALIZED` field value is `False`. This value indicates that the initialization failed.
 
-2. Run these commands to get more details about the error:
+2. To get more details about the error, run the following commands:
 
 ```bash
 $ kubectl describe stagedupdaterun web-app-rollout -n my-app-namespace
@@ -458,17 +455,17 @@ Status:
 
 ```
 
-The condition indicates the initialization failed. In this case, a nonexistent resource snapshot index `1` is used for `StagedUpdateRun`.
+The condition indicates that the initialization failed. In this case, a nonexistent resource snapshot index value of `1` is used for `StagedUpdateRun`.
 
 ## Common initialization failures
 
 ### Cause
 
-Aborted `StagedUpdateRun` messages happen due to initialization failures and aren't recoverable. 
+"Aborted" `StagedUpdateRun` messages are caused by initialization failures. The initialization processes aren't recoverable. 
 
 ### Solution
 
-If a failure occurs due to a validation error, fix the issue and create a new `StagedUpdateRun`.
+If a failure occurs because of a validation error, fix the issue, and create a new `StagedUpdateRun`.
 
 **Parent placement not found**
 
@@ -484,21 +481,21 @@ cannot continue the updateRun: failed to validate the updateRun: parent placemen
 
 ### Solution
 
-Create a new `ResourcePlacement` in the same namespace with the same name specified in `StagedUpdateRun`. Then create a new `StagedUpdateRun` referencing that `ResourcePlacement`.
+Create a `ResourcePlacement` instance in the same namespace that's specified in `StagedUpdateRun`. Then, create a `StagedUpdateRun` instance that references that `ResourcePlacement`.
 
-See [Use Azure Kubernetes Fleet Manager cluster resource placement to deploy workloads across multiple clusters](/azure/kubernetes-fleet/quickstart-resource-propagation) for guidance on how to create a `ResourcePlacement`.
+For information about how to create a `ResourcePlacement` instance, see [Use Azure Kubernetes Fleet Manager cluster resource placement to deploy workloads across multiple clusters](/azure/kubernetes-fleet/quickstart-resource-propagation).
 
-You can also create a new `StagedUpdateRun` that references a valid placement that already exists. 
+To create a `StagedUpdateRun` instance that references a valid placement that already exists: 
 
-1. Use the following command:
+1. Run the following command:
 
 ```bash
     $ kubectl get resourceplacements -n <namespace-name>
 ```
 
-2. Describe a `ResourcePlacement` to view the `spec`. Verify the strategy and ensure `spec.Strategy.Type: External` is the value.
+2. Describe a `ResourcePlacement` strategy in order to view the `Spec` value. Verify the strategy, and make sure that the value is `spec.Strategy.Type: External`.
 
-3. Set the resources to roll it out:
+3. Set the resources to roll out the strategy:
 
 ```bash
     $ kubectl describe resourceplacement <cluster-resource-placement-name> -n <namespace-name>
@@ -510,22 +507,22 @@ For more information, see [Control cluster order for resource placement](/azure/
 
 ### Cause
 
-There's no clear external rollout strategy specified in `ClusterResourcePlacement`.
+No clear external rollout strategy is specified in `ClusterResourcePlacement`.
 
 Example message:
 
 ```text
-cannot continue the updateRun: failed to validate the updateRun: The placement does not have an external rollout strategy...
+cannot continue the updateRun: failed to validate the updateRun: The placement does not have an external rollout strategy.
 ```
 
 ### Solution
 
-To enable staged updates, recreate the `ClusterResourcePlacement` with `spec.Strategy.Type: External`, create a new `ClusterStagedUpdateRun`, and select the new `ClusterResourcePlacement`.
+To enable staged updates, re-create the `ClusterResourcePlacement` instance by using the `spec.Strategy.Type: External` value, create a `ClusterStagedUpdateRun` instance, and then select the new `ClusterResourcePlacement`.
     
 > [!NOTE]
-> Changing a `ResourcePlacement` from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External` is allowed, but the reverse isn't.
+> You can change a `ResourcePlacement` instance from `spec.Strategy.Type: RolloutStrategy` to `spec.Strategy.Type: External`. This change is allowed, but the reverse isn't allowed.
 
-You can also locate a `ResourcePlacement` that has a `spec.Strategy.Type: External` value and then create a `StagedUpdateRun` specifying the `ResourcePlacement` you located.
+You can also locate a `ResourcePlacement` that has a `spec.Strategy.Type: External` value, and then create a `StagedUpdateRun` by specifying the `ResourcePlacement` that you located.
 
 **Strategy not found**
 
@@ -541,15 +538,15 @@ cannot continue the updateRun: failed to validate the updateRun: referenced upda
 
 ### Solution
 
-Create a new `StagedUpdateStrategy` within the same namespace specified in `StagedUpdateRun` and create a new `StagedUpdateRun` referencing that strategy.
+Create a `StagedUpdateStrategy` instance within the same namespace that's specified in `StagedUpdateRun`, and then create a `StagedUpdateRun` instance that references that strategy.
 
-You can also create a new `StagedUpdateRun` that references a valid `StagedUpdateStrategy` that already exists.
+You can also create a `StagedUpdateRun` instance that references a valid `StagedUpdateStrategy` that already exists.
 
 **Invalid stage tasks**
 
 ### Cause
 
-Within a stage in `StagedUpdateStrategy`, a `beforeStageTask` or `afterStageTask` is incorrectly defined.
+Within a stage in `StagedUpdateStrategy`, a `beforeStageTask` or `afterStageTask` instance is defined incorrectly.
 
 Example message:
 
@@ -559,9 +556,9 @@ cannot continue the updateRun: failed to validate the updateRun: the before stag
 
 ### Solution
 
-See [Staged Update Strategy](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview) for guidance on how to correctly update `StagedUpdateStrategy`.
+For information about how to correctly update `StagedUpdateStrategy`, see [Staged Update Strategy](/azure/kubernetes-fleet/concepts-rollout-strategy#staged-update-strategy-preview).
 
-**Cluster appears more than once**
+**Cluster appears more than one time**
 
 ### Cause 
 
@@ -573,7 +570,7 @@ Example message:
 cannot continue the updateRun: failed to validate the updateRun: cluster `member-1` appears in more than one stage
 ```
 
-Let's take a look at `StagedUpdateStrategy`:
+Examine `StagedUpdateStrategy`:
 
 ```bash
     $ kubectl describe stagedupdatestrategy <staged-update-strategy-name> -n <namespace-name>
@@ -607,9 +604,9 @@ Let's take a look at `StagedUpdateStrategy`:
         Name:             west
 ```
 
-The `StagedUpdateStrategy` has two labels that are both selected: the `Environment: staging` and `Region: west` labels.
+The `StagedUpdateStrategy` instance has two labels that are both selected: the `Environment: staging` and `Region: west` labels.
 
-Now let's take a look at the labels `member-1` referenced in the error as they appear in multiple stages. Use the following command:
+Examine the `member-1` labels that are referenced in the error message because they appear in multiple stages. Run the following command:
 
 ```bash
     $ kubectl get membercluster member-1  --show-labels
@@ -618,17 +615,17 @@ Now let's take a look at the labels `member-1` referenced in the error as they a
     member-1         True     81m   16s                      2            14750m          48308656Ki         environment=staging,region=east
 ```
 
-The cluster has both labels used in these two stages. 
+For this cluster, both labels are used in these two stages. 
 
 ### Solution
 
-Either remove one of the labels or update the stages in  `StagedUpdateStrategy` so they select distinct cluster labels. You then create a new `StagedUpdateRun`.
+Either remove one of the labels or update the stages in  `StagedUpdateStrategy` so that they select distinct cluster labels. Then, create a new `StagedUpdateRun` instance.
 
 **Some clusters not assigned a stage**
 
 ### Cause
 
-The error provides a list of clusters (up to 10) that aren't assigned a stage. Let's take a look at `ResourcePlacement` and verify what clusters are targeted.
+The error message provides a list of clusters (up to 10) that aren't assigned a stage. Examine `ResourcePlacement`, and determine which clusters are targeted.
 
 Example message:
 
@@ -695,13 +692,13 @@ Run the following commands:
           ...
 ```
 
-`ResourcePlacement` targets subset clusters (or all the clusters in a Fleet) to roll out the resources to.
+`ResourcePlacement` targets the subset clusters (or all the clusters in a Fleet) to assign resources to.
 
 In the `ResourcePlacement`, the placement type is `PickAll`. This means all the clusters in the Fleet need to be assigned to a stage.
 
-If a cluster isn't placed in a stage, the cluster lacks the label for any of the stages specified in`StagedUpdateStrategy`. 
+If a cluster isn't placed into a stage, the cluster lacks the label for any of the stages that are specified in`StagedUpdateStrategy`. 
 
-Let's take a look at the `StagedUpdateStrategy`:
+Examine `StagedUpdateStrategy`:
 
 ```bash
     $  kubectl describe stagedupdatestrategy example-strategy -n my-app-namespace
@@ -728,17 +725,17 @@ Let's take a look at the `StagedUpdateStrategy`:
         Name:             staging
 ```
 
-From `Spec`, there's one stage that selects clusters with the label `Environment: staging`.
+The `Spec` field shows one stage that selects clusters that have the label, `Environment: staging`.
 
 ### Solution
 
-1. Update the clusters with a `environment=staging` label:
+1. Update the clusters that have an `environment=staging` label:
 
 ```bash
     $ az fleet member update -g <resource-group-name> -f <fleet-name> -n <member-cluster-name> --labels "environment=staging"
 ```
 
-2. Verify the member cluster has the new label:
+2. Verify that the member cluster has the new label:
 
 ```bash
     $ kubectl get membercluster <member-cluster-name> --show-labels
@@ -749,6 +746,6 @@ From `Spec`, there's one stage that selects clusters with the label `Environment
 
 3. Add labels to the remaining clusters. 
 
-4. Create a new `StagedUpdateRun` referencing the same `ResourcePlacement` and `StagedUpdateStrategy`.
+4. Create a `StagedUpdateRun` instance that references the same `ResourcePlacement` and `StagedUpdateStrategy` instances.
   
 :::zone-end
