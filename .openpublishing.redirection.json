@@ -14734,6 +14734,16 @@
       "source_path": "support/windows-client/installing-updates-features-roles/previously-released-updates-reoffered.md",
       "redirect_url": "/previous-versions/windows-client/previously-released-updates-reoffered",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-data-transmission.md",
+      "redirect_url": "/previous-versions/windows-server/wubr-troubleshooting-data-transmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-guidance.md",
+      "redirect_url": "/previous-versions/windows-server/wubr-troubleshooting-guidance",
+      "redirect_document_id": false
     }
   ]
 }

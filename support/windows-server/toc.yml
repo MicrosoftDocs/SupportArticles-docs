@@ -3204,14 +3204,8 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-      - name: Initial service configuration and Onboarding
-        items:
-        - name: 'Troubleshooting guidance: Windows Update for Business reports'
-          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
       - name: Missing data or incomplete report data
         items:
-        - name: 'WUBr: Troubleshoot diagnostic data transmission'
-          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
         - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
           href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
