@@ -30,7 +30,7 @@
     },
     {
       "source_path": "Exchange/ExchangeOnline/administration/send-on-behalf-for-shared-mailbox.md",
-      "redirect_url": "/troubleshoot/exchange/administration/send-on-behalf-for-shared-mailbox"
+      "redirect_url": "/troubleshoot/exchange/exchangeserver/administration/send-on-behalf-for-shared-mailbox"
     },                  
   ]
 }
