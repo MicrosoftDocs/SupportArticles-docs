@@ -14724,6 +14724,16 @@
       "source_path": "support/windows-server/high-availability/unable-to-get-computer-object-using-guid.md",
       "redirect_url": "/previous-versions/windows-server/unable-to-get-computer-object-using-guid",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md",
+      "redirect_url": "/previous-versions/windows-client/package-manager-cannot-manage-two-more-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/previously-released-updates-reoffered.md",
+      "redirect_url": "/previous-versions/windows-client/previously-released-updates-reoffered",
+      "redirect_document_id": false
     }
   ]
 }

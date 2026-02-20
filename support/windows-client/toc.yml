@@ -1337,8 +1337,6 @@ items:
       href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
     - name: Error messages when you scan for updates
       href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
-    - name: Previously released updates are reoffered
-      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
     - name: Windows Update automatically downloads and installs updates
       href: ./installing-updates-features-roles/updates-automatically-downloaded.md
   - name: Failure to install Windows Updates
@@ -1349,8 +1347,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: Package Manager can install only the first package
-      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Error message when installing RSAT
