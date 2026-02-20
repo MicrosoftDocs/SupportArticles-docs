@@ -14639,6 +14639,11 @@
       "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md",
       "redirect_url": "/previous-versions/windows-server/expand-maximum-extension-size-limit-ad-cs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/group-policy/save-documents-to-onedrive-by-default.md",
+      "redirect_url": "/previous-versions/windows-client/save-documents-to-onedrive-by-default",
+      "redirect_document_id": false
     }
   ]
 }
