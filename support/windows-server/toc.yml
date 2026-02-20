@@ -1142,8 +1142,6 @@ items:
       href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
     - name: Event 12293 when registering a KMS host record
       href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
-    - name: Event ID 12321 Warning Token Based Activation failed
-      href: ./licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md
     - name: Event ID 8208, 8200, or 900 is logged
       href: ./licensing-and-activation/event-id-8208-8200-900.md
     - name: Fail to activate Windows Server over the Internet

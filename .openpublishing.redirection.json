@@ -14749,6 +14749,11 @@
       "source_path": "support/windows-client/licensing-and-activation/item-with-same-key-has-been-added.md",
       "redirect_url": "/previous-versions/windows-client/item-with-same-key-has-been-added",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-12321-warning-token-based-activation-failed",
+      "redirect_document_id": false
     }
   ]
 }
