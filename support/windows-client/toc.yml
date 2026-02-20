@@ -277,8 +277,6 @@ items:
       href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
     - name: Error "certificate in the connection information has expired"
       href: ./licensing-and-activation/error-certificate-connection-information-expired.md
-    - name: Fail to open a list in VAMT 2.0
-      href: ./licensing-and-activation/item-with-same-key-has-been-added.md
     - name: How to validate the OEM activation key
       href: ./licensing-and-activation/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
