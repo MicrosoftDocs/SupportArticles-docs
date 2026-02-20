@@ -483,8 +483,6 @@ items:
     items:
     - name: Applications freeze when concurrently trying to access a file on a network drive
       href: ./performance/applications-freeze-concurrently-access-file-network-drive.md
-    - name: Check Point and Centrify apps stop working
-      href: ./performance/check-point-centrify-apps-stop-working.md
     - name: Command prompt and PowerShell don't start
       href: ./performance/command-prompt-powershell-not-start.md
     - name: Error 1058 when a service suddenly stops
@@ -501,12 +499,8 @@ items:
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
     - name: View system registry with 64-bit versions of Windows
       href: ./performance/view-system-registry-with-64-bit-windows.md
-    - name: Windows 10 causes issues when it calls CreateWindowEx
-      href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Bugcheck/Stop code errors
     items:
-    - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
-      href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
     - name: Cannot scan from a scanning device connected through USB
       href: ./performance/cannot-scan-device-connected-usb.md
     - name: Computers crash with error code 0x113
@@ -525,8 +519,6 @@ items:
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
-    - name: Stop code when initializing PMem or NVDIMM
-      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
@@ -537,8 +529,6 @@ items:
       href: ./performance/stop-code-error-troubleshooting.md
     - name: Stop error when updating in-box Broadcom network adapter driver
       href: ./performance/stop-error-broadcom-network-driver-update.md
-    - name: Tablet device creates only a minidump file
-      href: ./performance/tablet-device-creates-minidump-file.md
     - name: Troubleshooting Windows startup issues
       href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
@@ -581,8 +571,6 @@ items:
       href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md?context=/troubleshoot/windows-client/context/context
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
-    - name: Windows Experience Index shows 1.0
-      href: ./performance/windows-experience-index-shows-1-dot-0.md
   - name: Servicing
     items:
     - name: Push-button reset fails because language resources are missing

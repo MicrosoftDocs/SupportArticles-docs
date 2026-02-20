@@ -14909,6 +14909,36 @@
       "source_path": "support/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md",
       "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md",
+      "redirect_url": "/previous-versions/windows-client/bug-check-0x124-windows-upgrade-boot-camp-apple-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/check-point-centrify-apps-stop-working.md",
+      "redirect_url": "/previous-versions/windows-client/check-point-centrify-apps-stop-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/issues-when-calls-createwindowex-32-bit-applications.md",
+      "redirect_url": "/previous-versions/windows-client/issues-when-calls-createwindowex-32-bit-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/stop-code-initialize-pmem-nvdimm.md",
+      "redirect_url": "/previous-versions/windows-client/stop-code-initialize-pmem-nvdimm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/tablet-device-creates-minidump-file.md",
+      "redirect_url": "/previous-versions/windows-client/tablet-device-creates-minidump-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/windows-experience-index-shows-1-dot-0.md",
+      "redirect_url": "/previous-versions/windows-client/windows-experience-index-shows-1-dot-0",
+      "redirect_document_id": false
     }
   ]
 }
