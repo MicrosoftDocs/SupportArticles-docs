@@ -13,7 +13,7 @@ This article helps you diagnose and provide a workaround in scenarios where an a
 
 ## Symptom
 
-After you add an [existing Copilot Studio agent](/microsof-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](microsoft-copilot-studio/add-agent-fabric-data-agent), and you interact with the agent in the **Test your agent** panel, the agent shows no further responses after your first interaction. However, you can view messages in the transcript.
+After you add an [existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](/microsoft-copilot-studio/add-agent-fabric-data-agent), and you interact with the agent in the **Test your agent** panel, the agent shows no further responses after your first interaction. However, you can view messages in the transcript.
 
 ## Cause
 
