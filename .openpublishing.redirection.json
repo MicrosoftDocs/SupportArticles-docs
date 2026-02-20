@@ -14889,6 +14889,26 @@
       "source_path": "support/windows-server/networking/troubleshoot-multisite-deployment.md",
       "redirect_url": "/previous-versions/windows-server/troubleshoot-multisite-deployment",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-1-identify-computers-that-have-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-2-calculate-and-change-mca.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-2-calculate-and-change-mca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
+      "redirect_document_id": false
     }
   ]
 }
