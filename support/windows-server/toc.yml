@@ -1024,8 +1024,6 @@ items:
       href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: Can't bring a physical disk online
       href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
-    - name: CAP in failover cluster doesn't come online
-      href: ./high-availability/unable-to-get-computer-object-using-guid.md
     - name: Error messages occur when bringing a cluster group online
       href: ./high-availability/error-messages-bring-cluster-group-online.md
     - name: Recover computer object that supports Network Name resource
@@ -1064,8 +1062,6 @@ items:
       href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Cluster validation test on Active Directory configuration fails
       href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
-    - name: Storage tests on a failover cluster might not discover all shared LUNs
-      href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Validate hardware for a failover cluster
@@ -1080,12 +1076,8 @@ items:
       href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
-    - name: Cluster IP address resources fail on both nodes when one node disconnects
-      href: ./high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md
     - name: Problem with deleting nodes from active failover cluster membership
       href: ./high-availability/problem-nodes-failover-cluster.md
-    - name: Remove nodes from active failover cluster membership
-      href: ./high-availability/nodes-failover-cluster-vmware.md
   - name: Root cause of an unexpected failover
     items:
     - name: 'Troubleshooting guidance: Unexpected cluster failover'
@@ -1102,22 +1094,14 @@ items:
       href: ./high-availability/change-network-adapters-ip-address-cluster-node.md
     - name: Configure Shadow Copies of Shared Folders feature
       href: ./high-availability/shadow-copies-of-shared-folders.md
-    - name: Event ID 1222 when you create failover cluster
-      href: ./high-availability/event-id-1222-create-failover-cluster.md
     - name: Extend the partition of a cluster shared disk
       href: ./high-availability/extend-partition-cluster-shared-disk.md
     - name: How to configure FTP for IIS in a failover cluster
       href: ./high-availability/configure-internet-information-services-ftp.md
     - name: Microsoft support policy for Windows server failover cluster
       href: ./high-availability/microsoft-support-policy-failover-clusters.md
-    - name: NetBIOS and WINS not bind to cluster IP address resources
-      href: ./high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md
     - name: Recommended private "Heartbeat" configuration on a cluster server
       href: ./high-availability/private-heartbeat-configuration-on-cluster-server.md
-    - name: SMB features don't work with non-default Cluster Network Name Configuration
-      href: ./high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md
-    - name: Third-party storage software solutions support policy
-      href: ./high-availability/3rd-party-storage-software-solutions-support.md
     - name: Troubleshoot issues with accounts used by failover clusters
       href: ./high-availability/troubleshoot-issues-accounts-used-failover-clusters.md
     - name: Tuning Failover Cluster Network Thresholds

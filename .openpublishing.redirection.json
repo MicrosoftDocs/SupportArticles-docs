@@ -14684,6 +14684,46 @@
       "source_path": "support/windows-server/group-policy/user-based-gpo-settings-not-work-shadow-principals.md",
       "redirect_url": "/previous-versions/windows-server/user-based-gpo-settings-not-work-shadow-principals",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/3rd-party-storage-software-solutions-support.md",
+      "redirect_url": "/previous-versions/windows-server/3rd-party-storage-software-solutions-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md",
+      "redirect_url": "/previous-versions/windows-server/cluster-ip-resources-fail-2-node-2-site-fsw-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/event-id-1222-create-failover-cluster.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-1222-create-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md",
+      "redirect_url": "/previous-versions/windows-server/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md",
+      "redirect_url": "/previous-versions/windows-server/netbios-wins-dont-bind-cluster-ip-address-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/nodes-failover-cluster-vmware.md",
+      "redirect_url": "/previous-versions/windows-server/nodes-failover-cluster-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md",
+      "redirect_url": "/previous-versions/windows-server/smb-features-dont-work-non-default-cluster-network-name-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/unable-to-get-computer-object-using-guid.md",
+      "redirect_url": "/previous-versions/windows-server/unable-to-get-computer-object-using-guid",
+      "redirect_document_id": false
     }
   ]
 }
