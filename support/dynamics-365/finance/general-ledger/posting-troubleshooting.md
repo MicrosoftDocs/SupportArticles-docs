@@ -18,7 +18,7 @@ ms.assetid:
 # Posting Troubleshooting
 This article answers frequently asked questions about posting issues in General ledger. These questions address common errors related to account structures, advanced rules, and dimension values.
 
-## Why do I receive an "Invalid value in ledger account" error?
+## Why do I receive an "Dimension values were validated with this advanced rule structure..." error?
 
 This error occurs when an account doesn't follow the account structure or advanced rules configured for the ledger.
 
@@ -39,7 +39,7 @@ If you identify the source of the issue, update your default dimension setup acc
 > [!NOTE]
 > The error message typically specifies which account structure or advanced rule was violated. [![An image of the error message displayed when an account structure or advanced rule was violated](./media/posting-faq-rule-violation.png)](./media/posting-faq-rule-violation.png)
 
-## Why do I receive a "MainAccount is not a valid dimension value in account structure" error?
+## Why do I receive a "... is not a valid dimension value in account structure" error?
 
 This error occurs when the main account or another entity isn't recognized as valid within the assigned account structure.
 
@@ -56,7 +56,7 @@ To resolve this issue:
 
 For more information, see [Configure account structures](configure-account-structures.md).
 
-## Why do I receive an "Entity does not exist" error for a dimension value?
+## Why do I receive an "The value ... does not exist for ..." error for a dimension value?
 
 This error typically means that the dimension value you entered doesn't exist in the system.
 
@@ -77,7 +77,7 @@ To resolve the synchronization issue:
 > [!IMPORTANT]
 > The rename process runs as a background job and might take time to complete. To monitor progress, go to **System administration > Periodic tasks > Data maintenance**, and check the status of the **Dimension value rename and modify chart of accounts delimiter process** job.
 
-## Why do I receive a "Missing value in ledger account" error?
+## Why do I receive a "Blank is not allowed for ... for the combination." error?
 
 This error occurs when there's a blank value in the ledger account that violates your account structure or advanced rules.
 
@@ -164,7 +164,7 @@ If you identify the source of the issue, update your default dimension setup acc
 > [!NOTE]
 > The error message typically specifies which account structure or advanced rule was violated.
 
-## Why do I receive a "Total account or Reporting account" error?
+## Why do I receive a "The account type for main account ... is not valid. The main account type must be Financial." error?
 
 This error occurs when you try to post a transaction to a main account that has an account type of **Total** or **Reporting**. These account types are used for summarization and reporting purposes only—they don't allow direct transaction entry.
 
