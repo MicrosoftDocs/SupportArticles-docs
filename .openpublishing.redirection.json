@@ -14644,6 +14644,46 @@
       "source_path": "support/windows-client/group-policy/save-documents-to-onedrive-by-default.md",
       "redirect_url": "/previous-versions/windows-client/save-documents-to-onedrive-by-default",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/changes-to-gpo-permissions-ignored.md",
+      "redirect_url": "/previous-versions/windows-server/changes-to-gpo-permissions-ignored",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/creating-dsn-with-gpp-fails.md",
+      "redirect_url": "/previous-versions/windows-server/creating-dsn-with-gpp-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/directory-is-not-empty.md",
+      "redirect_url": "/previous-versions/windows-server/directory-is-not-empty",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/error-0x8007000d-backup-gpo-cmdlet.md",
+      "redirect_url": "/previous-versions/windows-server/error-0x8007000d-backup-gpo-cmdlet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/folder-redirection-group-policy-not-applied.md",
+      "redirect_url": "/previous-versions/windows-server/folder-redirection-group-policy-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/settings-applied-group-policy.md",
+      "redirect_url": "/previous-versions/windows-server/settings-applied-group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/system-cant-find-file-specified.md",
+      "redirect_url": "/previous-versions/windows-server/system-cant-find-file-specified",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/user-based-gpo-settings-not-work-shadow-principals.md",
+      "redirect_url": "/previous-versions/windows-server/user-based-gpo-settings-not-work-shadow-principals",
+      "redirect_document_id": false
     }
   ]
 }

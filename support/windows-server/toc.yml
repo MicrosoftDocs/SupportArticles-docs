@@ -892,14 +892,10 @@ items:
     items:
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
-    - name: Changes to GPO permissions aren't saved
-      href: ./group-policy/changes-to-gpo-permissions-ignored.md
     - name: Dcgpofix tool doesn't restore security settings to the original state
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
       href: ./group-policy/description-of-group-policy-restricted-groups.md
-    - name: Error 0x8007000D when runing Backup-GPO in Server Core
-      href: ./group-policy/error-0x8007000d-backup-gpo-cmdlet.md
     - name: GPMC or Import-GPO cmdlet fails to restore a GPO from backup
       href: ./group-policy/gpmc-import-gpo-fails-restore-gpo-backup.md
     - name: Group Policy settings show as Extra Registry Settings
@@ -916,10 +912,6 @@ items:
       href: ./group-policy/remove-this-item-if-it-is-no-longer-applied-option.md
     - name: Reset user rights in the default domain GPO
       href: ./group-policy/reset-user-rights-in-default-domain-group-policy.md
-    - name: The Directory is not empty
-      href: ./group-policy/directory-is-not-empty.md
-    - name: The system can't find the file specified
-      href: ./group-policy/system-cant-find-file-specified.md
     - name: Troubleshoot SCECLI 1202 events
       href: ./group-policy/scecli-1202-events.md
     - name: Use GPOs to change default logon domain name
@@ -958,8 +950,6 @@ items:
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Can't apply user Group Policy settings
       href: ./group-policy/cannot-apply-user-gpo-when-computer-objects-dont-have-read-permissions.md
-    - name: Error 0x80004005 when you create DSN with GPP
-      href: ./group-policy/creating-dsn-with-gpp-fails.md
     - name: Event 1202 with status 0x534 logged
       href: ./group-policy/event-1202-status-0x534-logged.md
     - name: Event ID 1053 by using "Gpupdate /force" command
@@ -968,8 +958,6 @@ items:
       href: ./group-policy/events-1101-1030-application-log-group-policy.md
     - name: Fail to run Group Policy Modeling Wizard
       href: ./group-policy/cannot-run-group-policy-modeling-wizard.md
-    - name: Folder Redirection group policy is not applied
-      href: ./group-policy/folder-redirection-group-policy-not-applied.md
     - name: Group Policy errors when unknown environment variable is used
       href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: Group Policy fails to apply
@@ -990,14 +978,10 @@ items:
       href: ./group-policy/password-policy-changes-not-applied.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
-    - name: Settings are applied from Group Policy
-      href: ./group-policy/settings-applied-group-policy.md
     - name: Some Group Policy areas are missing
       href: ./group-policy/group-policy-areas-missing.md
     - name: Use Group Policy to add MaxTokenSize registry entry
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
-    - name: User-based GPO settings aren't applied when signing in with shadow principals
-      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: User GPP Scheduled Task item fails to apply
