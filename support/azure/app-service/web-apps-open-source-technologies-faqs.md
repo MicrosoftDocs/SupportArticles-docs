@@ -4,7 +4,7 @@ description: Get answers to frequently asked questions about open-source technol
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-app-service
-ms.date: 03/09/2022
+ms.date: 02/20/2026
 ms.reviewer: toan, shrahman
 ms.custom: sap:Application Code
 ---
