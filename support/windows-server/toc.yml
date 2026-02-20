@@ -622,8 +622,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: iSCSI storage connectivity'
       href: ./backup-and-storage/iscsi-storage-connectivity-troubleshooting.md
-    - name: Redundant subnets are incorrectly created
-      href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
   - name: Multipath I/O (MPIO) and Storport
@@ -646,8 +644,6 @@ items:
       href: ./backup-and-storage/error-use-diskpart-break-command-break-mirrored-set.md
     - name: Configure a Low Disk Space Alert
       href: ./backup-and-storage/configure-low-disk-space-alert-performance-logs.md
-    - name: Disk Defragmenter Limitations
-      href: ./backup-and-storage/disk-defragmenter-limitations.md
     - name: Establish and boot to GPT mirrors in 64-bit Windows
       href: ./backup-and-storage/establish-boot-to-gpt-mirrors.md
     - name: Extend or shrink a data volume
@@ -670,8 +666,6 @@ items:
       href: ./backup-and-storage/set-up-dynamic-boot-partition-mirroring.md
     - name: Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives unresponsive
       href: ./backup-and-storage/intel-ssd-d3-s4510-s4610-series-1-dot-92-3-dot-84-tb-drives-unresponsive.md
-    - name: New logging mechanism for VDS
-      href: ./backup-and-storage/new-vds-logging-mechanism.md
     - name: Restore system/boot drive letter
       href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Simple volumes may become inaccessible
@@ -688,8 +682,6 @@ items:
     items:
     - name: Information about Event ID 51
       href: ./backup-and-storage/event-id-51-information.md
-    - name: Replicated Cluster Shared Volumes are offline
-      href: ./backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
   - name: Storage Migration
@@ -740,8 +732,6 @@ items:
       href: ./backup-and-storage/shadow-copies-deleted-run-file-classification-infrastructure.md
     - name: System state backup using Windows Server Backup fail
       href: ./backup-and-storage/system-writer-not-found-in-backup.md
-    - name: Third-party backup warnings after installing a servicing update
-      href: ./backup-and-storage/third-party-backup-warnings-install-servicing-update.md
     - name: Usability limit for Volume Shadow Copy Service (VSS)
       href: ./backup-and-storage/usability-limit-volume-shadow-copy-service.md
     - name: Volume Shadow Copy Service take longer to go online

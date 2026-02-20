@@ -14604,6 +14604,31 @@
       "source_path": "support/windows-client/backup-and-storage/e2e-event-ids-volsnap.md",
       "redirect_url": "/previous-versions/windows-client/e2e-event-ids-volsnap",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/disk-defragmenter-limitations.md",
+      "redirect_url": "/previous-versions/windows-server/disk-defragmenter-limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/new-vds-logging-mechanism.md",
+      "redirect_url": "/previous-versions/windows-server/new-vds-logging-mechanism",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/redundant-subnets-are-incorrectly-created.md",
+      "redirect_url": "/previous-versions/windows-server/redundant-subnets-are-incorrectly-created",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md",
+      "redirect_url": "/previous-versions/windows-server/replicated-csvs-offline-azure-stack-hci-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/third-party-backup-warnings-install-servicing-update.md",
+      "redirect_url": "/previous-versions/windows-server/third-party-backup-warnings-install-servicing-update",
+      "redirect_document_id": false
     }
   ]
 }
