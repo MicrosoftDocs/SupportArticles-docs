@@ -768,8 +768,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server.md
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
-    - name: How to expand the maximum extension size limit at AD CS
-      href: ./certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: How to reinstall CA role
@@ -832,8 +830,6 @@ items:
     items:
     - name: Back up recovery agent EFS private key
       href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
-    - name: Can't share files with multiple EFS certificates
-      href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
     - name: Client computers can't encrypt a file in a domain
       href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
     - name: Use Cipher.exe to overwrite deleted data
