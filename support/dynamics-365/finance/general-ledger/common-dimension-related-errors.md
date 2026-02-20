@@ -53,7 +53,7 @@ This error means that the dimension value entered was not found in the system.
   3. Ensure the value exists on this page.
   4. If the value doesn't exist, add it accordingly.
 
-- **XDS security is enabled on the backing table**: Extensible Data Security (XDS) policies might be preventing access to the dimension value. Review and configure XDS security policies. For more information, see [Extensible data security policies](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies).
+- **XDS security is enabled on the backing table**: Extensible Data Security (XDS) policies might be preventing access to the dimension value. Review and configure XDS security policies. For more information, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies).
 
 ### The financial dimension name ... contains invalid characters
 Financial dimension names must follow specific naming conventions. The allowed characters for dimension attributes are:
@@ -192,7 +192,7 @@ This error appears when an incorrect dimension value was entered that doesn't fo
   3. **Review derived dimensions setup**: Check the derived dimensions setup against each segment in the ledger account.
   4. If you find the source of the issue, change your defaulting setup accordingly.
 
-For more information, see [Configure account structures](/dynamics365/finance/general-ledger/account-structure).
+For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
 ### Dimension values were validated with this advanced rule structure...
 This error occurs when an account doesn't follow the account structure or advanced rules configured for the ledger.
@@ -223,7 +223,7 @@ This error occurs when the main account or another entity isn't recognized as va
   1. Go to **General ledger** > **Ledger setup** > **Ledger**.
   2. Confirm that the account structure appears in the list.
 
-For more information, see [Configure account structures](/dynamics365/finance/general-ledger/account-structure).
+For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
 ### Derived dimension error with Prevent changes enabled
 This error occurs when a derived dimension rule has **Prevent changes** enabled for the segment that's causing the error. When this option is enabled, the derived dimension automatically populates the segment and prevents manual changes.
@@ -236,7 +236,7 @@ This error occurs when a derived dimension rule has **Prevent changes** enabled 
 
 ## Additional resources
 
-- [Financial dimensions](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/financial-dimensions)
-- [Account structures](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/configure-account-structures)
-- [Advanced rule structures](https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/tasks/create-assign-advanced-rule-structures)
-- [Extensible data security policies](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies)
+- [Financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions)
+- [Account structures](/dynamics365/finance/general-ledger/configure-account-structures)
+- [Advanced rule structures](/dynamics365/finance/general-ledger/tasks/create-assign-advanced-rule-structures)
+- [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies)
