@@ -38,6 +38,9 @@ You might encounter one of the following error messages when working with financ
 - "You must select a value in the ... field in combination with the following dimensions values that are valid"
 - "Blank is not allowed for ... for the combination."
 - "... is not an allowed value in combination with the following dimensions values that are valid"
+- "Dimension values were validated with this advanced rule structure..."
+- "... is not a valid dimension value in account structure"
+- "Derived dimension error with Prevent changes enabled"
 
 ## Resolution
 
@@ -190,6 +193,46 @@ This error appears when an incorrect dimension value was entered that doesn't fo
   4. If you find the source of the issue, change your defaulting setup accordingly.
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/account-structure).
+
+### Dimension values were validated with this advanced rule structure...
+This error occurs when an account doesn't follow the account structure or advanced rules configured for the ledger.
+
+- **Review account structure and advanced rule setup**:
+  1. Go to **General ledger** > **Ledger setup** > **Ledger**.
+  2. Verify the account structures assigned to the ledger.
+  3. Confirm that your account combination complies with the configured rules.
+
+- **Check for default or derived dimensions causing the violation**: If you didn't manually enter the segment that's causing the error, the value might come from default or derived dimensions:
+  1. **Review main account fixed dimensions**: Check if the main account has fixed dimension values that conflict with your account structure.
+  2. **Check header default dimensions**: Review the journal header default dimensions that might be automatically applied.
+  3. **Review derived dimensions setup**: Check the derived dimensions setup against each segment in the ledger account.
+  4. If you find the source of the issue, change your defaulting setup accordingly.
+
+> [!NOTE]
+> The error message typically specifies which account structure or advanced rule was violated.
+
+### ... is not a valid dimension value in account structure
+This error occurs when the main account or another entity isn't recognized as valid within the assigned account structure.
+
+- **Activate the account structure**:
+  1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**.
+  2. Select the account structure.
+  3. Select **Activate** on the Action Pane.
+
+- **Verify the account structure is assigned to the ledger**:
+  1. Go to **General ledger** > **Ledger setup** > **Ledger**.
+  2. Confirm that the account structure appears in the list.
+
+For more information, see [Configure account structures](/dynamics365/finance/general-ledger/account-structure).
+
+### Derived dimension error with Prevent changes enabled
+This error occurs when a derived dimension rule has **Prevent changes** enabled for the segment that's causing the error. When this option is enabled, the derived dimension automatically populates the segment and prevents manual changes.
+
+**To resolve this issue:**
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+2. Select each dimension used in your account structure.
+3. Review the derived dimension rules for each dimension.
+4. If you don't want the derived dimension to automatically populate the specified segment, disable the **Prevent changes** option.
 
 ## Additional resources
 
