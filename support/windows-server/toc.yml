@@ -1208,8 +1208,6 @@ items:
       href: ./networking/error-device-not-ready-for-use.md
     - name: Error "The remote procedure call failed"
       href: ./networking/error-remote-procedure-call-failed.md
-    - name: Error "The request is not supported"
-      href: ./networking/error-request-not-supported.md
     - name: Error "The RPC server is unavailable"
       href: ./networking/namespace-not-queried-rpc-server-unavailable.md
     - name: Error "The specified domain either does not exist or cannot be contacted"
@@ -1224,8 +1222,6 @@ items:
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
       href: ./networking/variables-resolved-incorrectly.md
-    - name: Hotfixes for File Services technologies
-      href: ./networking/hotfixes-for-file-services-technologies.md
     - name: How to create a virtual directory on an existing Web site
       href: ./networking/create-virtual-directory-folder-remote-computer.md
     - name: How to manually decommission a root server
@@ -1272,8 +1268,6 @@ items:
       href: ./networking/cannot-download-file-background-intelligent-transfer-service.md
   - name: DFSR
     items:
-    - name: Backlog is reported for DFSR Read-Only member
-      href: ./networking/backlog-for-dfsr-read-only-member.md
     - name: ConflictAndDeleted folder size exceed limitation
       href: ./networking/conflictanddeleted-folder-size-exceed-configured-limitation.md
     - name: Delegating DFS replication
@@ -1336,8 +1330,6 @@ items:
       href: ./networking/dns-scavenging-setup.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
-    - name: DNS Server geo-location policy doesn't work as expected
-      href: ./networking/dns-server-geo-location-policy-doesnt-work-as-expected.md
     - name: DNS Server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
     - name: DNS Server loses its NIC Teaming configuration
@@ -1456,8 +1448,6 @@ items:
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
     - name: Recovering missing FRS objects and attributes in AD
       href: ./networking/recovering-missing-frs-objects-attributes-ad.md
-    - name: SYSVOL folder isn't replicated between domain controllers
-      href: networking/file-replication-service-event-13552-13555.md
     - name: Troubleshoot the File Replication Service
       href: ./networking/troubleshoot-file-replication-service-ditributed-file-system.md
     - name: Use BurFlags to reinitialize FRS
@@ -1496,8 +1486,6 @@ items:
       href: ./networking/configure-remote-access-client-account-lockout.md
     - name: DirectAccess clients can't connect to server
       href: ./networking/directaccess-clients-not-connect-to-server.md
-    - name: DirectAccess clients connection error 0x274d
-      href: ./networking/directaccess-clients-connection-error-0x274d.md
     - name: Error 51 or 53 when you access shared resources
       href: ./networking/system-error-51-53-access-shared-resources.md
     - name: Error 633 - the modem is already in use
@@ -1560,8 +1548,6 @@ items:
       href: ./networking/configure-snmp-service.md
     - name: Default MTU sizes for different network topologies
       href: ./networking/default-maximum-transfer-unit-network-topologies.md
-    - name: DirectAccess clients unable to connect when a static proxy is configured
-      href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
     - name: Direct host SMB over TCP/IP
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: Disable HTTP proxy features
@@ -1572,8 +1558,6 @@ items:
       href: ./networking/disable-netbios-tcp-ip-using-dhcp.md
     - name: DNS works on both TCP and UDP
       href: ./networking/dns-works-on-tcp-and-udp.md
-    - name: Error 0x2AFC or 0x274D when DirectAccess clients try to connect over IP-HTTPS
-      href: ./networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md
     - name: Error 10013 when binding excluded port again
       href: ./networking/error-10013-wsaeacces-is-returned.md
     - name: Error message when you open the properties of a network connection
@@ -1684,10 +1668,6 @@ items:
       href: ./networking/netsh-advfirewall-firewall-control-firewall-behavior.md
   - name: Windows NIC Teaming (Load Balance Failover)
     items:
-    - name: Event ID 236 with SR-IOV enabled
-      href: ./networking/event-id-236-sr-iov-enabled.md
-    - name: '"Faulted Not Found" status for NIC team'
-      href: ./networking/faulted-not-found-status-nic-team-restart-iscsi-boot-disk.md
     - name: Kernel event ID 2 when MSFT_NetLbfoTeamNic is called
       href: ./networking/kernel-event-id-2-msft-netLbfoteamnic-class.md
     - name: LACP Timer configured incorrectly when creating a new NIC Team for LBFO

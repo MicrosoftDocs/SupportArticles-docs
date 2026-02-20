@@ -14784,6 +14784,56 @@
       "source_path": "support/windows-client/networking/current-hotfixes-have-folder-redirection.md",
       "redirect_url": "/previous-versions/windows-client/current-hotfixes-have-folder-redirection",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md",
+      "redirect_url": "/previous-versions/windows-server/0x2afc-0x274d-error-directaccess-clients-connect-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/backlog-for-dfsr-read-only-member.md",
+      "redirect_url": "/previous-versions/windows-server/backlog-for-dfsr-read-only-member",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-unable-connect-static-proxy-configured.md",
+      "redirect_url": "/previous-versions/windows-server/directaccess-clients-unable-connect-static-proxy-configured",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/dns-server-geo-location-policy-doesnt-work-as-expected.md",
+      "redirect_url": "/previous-versions/windows-server/dns-server-geo-location-policy-doesnt-work-as-expected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/error-request-not-supported.md",
+      "redirect_url": "/previous-versions/windows-server/error-request-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-id-236-sr-iov-enabled.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-236-sr-iov-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/faulted-not-found-status-nic-team-restart-iscsi-boot-disk.md",
+      "redirect_url": "/previous-versions/windows-server/faulted-not-found-status-nic-team-restart-iscsi-boot-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/previous-versions/windows-server/file-replication-service-event-13552-13555",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/hotfixes-for-file-services-technologies.md",
+      "redirect_url": "/previous-versions/windows-server/hotfixes-for-file-services-technologies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/previous-versions/windows-server/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": false
     }
   ]
 }
