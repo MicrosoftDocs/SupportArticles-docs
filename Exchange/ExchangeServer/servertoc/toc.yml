@@ -32,6 +32,8 @@ items:
           href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
         - name: Can't manage Exchange 2019 databases in EAC
           href: ../administration/can't-manage-ex19-database-eac.md
+        - name: Can't manage Send on Behalf permissions
+          href: ../administration/send-on-behalf-for-shared-mailbox.md          
         - name: Can't mount databases that are larger than 1024 GB
           href: ../administration/exchange-cannot-mount-database-larger-than-1024-gb.md
         - name: Can't open a mailbox with Receive-As permissions
