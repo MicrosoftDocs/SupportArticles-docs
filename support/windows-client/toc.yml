@@ -337,7 +337,6 @@ items:
       href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
-    - name: Current hotfixes have folder redirection enabled
     - name: Folder redirection doesn't work correctly
       href: ./networking/folder-redirection-not-work.md
     - name: Folder redirection fails when redirected to mapped drive letter
