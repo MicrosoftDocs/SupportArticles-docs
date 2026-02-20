@@ -55,18 +55,10 @@ items:
       href: ../windows-server/active-directory/domain-join-authentication-errors.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot networking errors when joining computers to a domain
       href: ../windows-server/active-directory/domain-join-networking-errors.md?context=/troubleshoot/windows-client/context/context
-  - name: Schema update - known issues, best practices, workflow review
-    items:
-    - name: Error when checking domain object property
-      href: ./active-directory/error-when-checking-domain-object-property.md
   - name: User, computer, group, and object management
     items:
     - name: Known issues for managing Group Policy clients
       href: ./active-directory/known-issues-for-group-policy-clients.md
-    - name: The LsaLookupSids function returns the old user name
-      href: ./active-directory/lsalookupsids-function-not-return-new-user-name.md
-    - name: UAC blocks elevation of executable applications
-      href: ./active-directory/uac-blocks-elevation-executable-apps.md
   - name: Windows Time Service
     items:
     - name: W32Time doesn't start automatically
@@ -107,10 +99,6 @@ items:
     items:
     - name: COM port settings revert to the default
       href: ./application-management/com-port-settings-reset-to-default.md
-    - name: Printer VBScript error 0x1A8
-      href: ./application-management/printer-vbscript-error-0x1a8-object-required.md
-    - name: USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
-      href: ./application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md
   - name: DCOM service startup and permissions
     items:
     - name: Event 10016 when accessing DCOM components
@@ -135,10 +123,6 @@ items:
       href: ./application-management/missing-windows-installer-cache.md
     - name: VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
       href: ./application-management/versionnt-value-for-windows-10-server.md
-  - name: Multilingual User Interface (MUI) and Input Method Editor (IME)
-    items:
-    - name: Can not link TextService in Eudcedit.exe
-      href: ./application-management/cannot-link-textservice-eudcedit.md
   - name: .NET Framework installation
     items:
     - name: .NET Framework 3.5 installation errors
@@ -161,26 +145,12 @@ items:
     items:
     - name: App-V v5 virtualized application fails with error 0xc0000142
       href: ./app-v/app-v-v5-virtualized-application-fails-start-error-0xc0000142.md
-  - name: Installation and configuration
-    items:
-    - name: Current list of App-V 5.x file versions
-      href: ./app-v/current-list-app-v-5-dot-x-file-versions.md
   - name: Management Server issues
     items:
     - name: HTTP Error 500.19 when launching App-V Management console
       href: ./app-v/http-error-500dot19-launch-app-v-management.md
     - name: Troubleshoot applications failing to stream from an App-V management server
       href: ./app-v/applications-fail-to-stream-from-app-v-management-server.md
-  - name: Package conversion
-    items:
-    - name: Adding a package version returns error 0x8007012F
-      href: ./app-v/adding-package-version-error-0x8007012f.md
-    - name: Remove a cached copy of an unpublished package
-      href: ./app-v/remove-cached-copy-unpublished-package-app-v-v5.md
-  - name: Publishing server issue
-    items:
-    - name: Troubleshoot publishing server refresh failures in App-V v5
-      href: ./app-v/troubleshoot-publishing-server-refresh-failures-app-v-v5.md
 - name: Backup and Storage
   items:
   - name: Backup and Storage
@@ -217,8 +187,6 @@ items:
       href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
   - name: Volume Shadow Copy Service (VSS)
     items:
-    - name: Event IDs for Volsnap
-      href: ./backup-and-storage/e2e-event-ids-volsnap.md
     - name: Most recent previous versions are missing for a share
       href: ./backup-and-storage/most-recent-previous-versions-missing-for-share.md
 - name: Certificates and Public Key Infrastructure (PKI)
@@ -281,8 +249,6 @@ items:
       href: ./group-policy/group-policy-screensaver-setting-not-work.md
     - name: Point and Print Restrictions policies are ignored
       href: ./group-policy/point-print-restrictions-policies-ignored.md
-    - name: Save documents to OneDrive by default
-      href: ./group-policy/save-documents-to-onedrive-by-default.md
     - name: "Scenario guide: GPO to map network drives doesn't apply as expected"
       href: ./group-policy/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected.md
     - name: "Scenario guide: Wallpaper GPO doesn't apply on some client computers"
@@ -1371,8 +1337,6 @@ items:
       href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
     - name: Error messages when you scan for updates
       href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
-    - name: Previously released updates are reoffered
-      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
     - name: Windows Update automatically downloads and installs updates
       href: ./installing-updates-features-roles/updates-automatically-downloaded.md
   - name: Failure to install Windows Updates
@@ -1383,8 +1347,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: Package Manager can install only the first package
-      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Error message when installing RSAT
