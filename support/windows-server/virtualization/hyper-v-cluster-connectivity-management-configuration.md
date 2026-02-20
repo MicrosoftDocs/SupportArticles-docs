@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Cluster Connectivity, Management, and Configuration Failures
 description: Provides a comprehensive guide to troubleshooting various issues related to Hyper-V clusters and management environments on Windows Server 2019 and Windows Server 2022.
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

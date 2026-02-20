@@ -1,7 +1,7 @@
 ---
 title: Host Guardian Service Troubleshooting Guide
 description: Resolves issues that occur when you configure HGS to use HTTPS for key protection and attestation in test environments.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

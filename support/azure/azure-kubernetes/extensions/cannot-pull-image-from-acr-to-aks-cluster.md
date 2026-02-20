@@ -240,7 +240,7 @@ The image not found error appears as follows:
 
 `Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": \<acrname>.azurecr.io/\<repository\:tag>: not found`
 
-### Solution: Make sure the mage name is correct
+### Solution: Make sure the image name is correct
 
 If you see this error, make sure that the image name is correct. Check the registry name, the registry sign-in server, the repository name, and the tag. 
 

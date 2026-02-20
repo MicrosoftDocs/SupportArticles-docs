@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Linux Virtual Machine Issues on Hyper-V
 description: Provides a comprehensive guide to diagnosing and resolving common issues encountered when deploying and managing Linux VMs in Microsoft Hyper-V environments.
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

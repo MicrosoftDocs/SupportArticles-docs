@@ -1,7 +1,7 @@
 ---
 title: Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 description: Describes Windows OS running in the management partition only use up to a maximum of 64 root Virtual Processors (root VPs).
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
