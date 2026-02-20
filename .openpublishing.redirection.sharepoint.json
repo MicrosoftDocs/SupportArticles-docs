@@ -335,7 +335,7 @@
     {
       "source_path": "SharePoint/OneDrive/storage/check-storage-increase-eligibility.md",
       "redirect_url": "/office365/servicedescriptions/onedrive-for-business-service-description",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }          
   ]
 }
