@@ -52,7 +52,7 @@ To work around this issue, disable the local SID cache on the domain member comp
 7. Exit Registry Editor.
 
 > [!NOTE]
-> The LsaLookupCacheMaxSize registry entry sets the maximum number of cached mappings that can be saved in the local SID cache. The default maximum number is 128. When the LsaLookupCacheMaxSize registry entry is set to 0, the local SID cache is disabled.
+> The LsaLookupCacheMaxSize registry entry sets the maximum number of cached mappings that can be saved in the local SID cache. Starting with Windows Server 2019, the cache holds 4096 entries by default. For older OSes, this number is 128. When the LsaLookupCacheMaxSize registry entry is set to 0, the local SID cache is disabled.
 
 ## Status
 
