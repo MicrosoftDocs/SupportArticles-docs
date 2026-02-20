@@ -14834,6 +14834,61 @@
       "source_path": "support/windows-server/networking/directaccess-clients-connection-error-0x274d.md",
       "redirect_url": "/previous-versions/windows-server/directaccess-clients-connection-error-0x274d",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/move-frs-staging-folder-to-different-drive.md",
+      "redirect_url": "/previous-versions/windows-server/move-frs-staging-folder-to-different-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/security-setting-changes-not-appear-dfsr-replication.md",
+      "redirect_url": "/previous-versions/windows-server/security-setting-changes-not-appear-dfsr-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/system-compatibility-with-dnssec-enabled-root-server.md",
+      "redirect_url": "/previous-versions/windows-server/system-compatibility-with-dnssec-enabled-root-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/tcp-connection-abort-validate-negotiate.md",
+      "redirect_url": "/previous-versions/windows-server/tcp-connection-abort-validate-negotiate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-adding-entry-points.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-6to4.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-6to4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-dns.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-dns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-networking.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-enabling-multisite.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-general-issues-related-remote-access.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-multisite-deployment.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
     }
   ]
 }

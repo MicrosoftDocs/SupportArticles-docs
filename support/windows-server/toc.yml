@@ -1256,8 +1256,6 @@ items:
       href: ./networking/account-currently-disabled-system-error-1331.md
     - name: System error 67 has occurred. The network name cannot be found
       href: ./networking/system-error-67-network-name-cannot-be-found.md
-    - name: TCP connection is aborted during Validate Negotiate
-      href: ./networking/tcp-connection-abort-validate-negotiate.md
     - name: TCP three-way handshake failure during SMB connection
       href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
@@ -1284,8 +1282,6 @@ items:
       href: ./networking/dfsr-diagnostics-shows-sharing-violations-events.md
     - name: Error when changing DFS replication group or namespace
       href: ./networking/change-dfsr-debug-log-settings.md
-    - name: Security setting changes delays on DFSR replication partners
-      href: ./networking/security-setting-changes-not-appear-dfsr-replication.md
     - name: SYSVOL DFSR migration fails after in-place upgrade
       href: ./networking/sysvol-dfsr-migration-fails-after-in-place-upgrade.md
     - name: Troubleshoot journal_wrap errors on Sysvol and DFS replica sets
@@ -1442,8 +1438,6 @@ items:
       href: ./networking/ntfrs-added-to-folder-name.md
     - name: FRS event log error codes
       href: ./networking/frs-event-log-error-codes.md
-    - name: How to reset the FRS staging folder
-      href: ./networking/move-frs-staging-folder-to-different-drive.md
     - name: NTFRS error event 13559 and replication stops
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
     - name: Recovering missing FRS objects and attributes in AD
@@ -1504,28 +1498,14 @@ items:
       href: ./networking/troubleshoot-always-on-vpn.md
     - name: Troubleshoot a multisite deployment
       items:
-      - name: Troubleshoot a multisite deployment
-        href: ./networking/troubleshoot-multisite-deployment.md
-      - name: Troubleshoot adding entry points
-        href: ./networking/troubleshoot-adding-entry-points.md
-      - name: Troubleshoot enabling multisite
-        href: ./networking/troubleshoot-enabling-multisite.md
-      - name: Troubleshoot general issues related to Remote Access
-        href: ./networking/troubleshoot-general-issues-related-remote-access.md
       - name: Troubleshoot setting entry point domain controller
         href: ./networking/troubleshoot-setting-entry-point-domain-controller.md
     - name: Troubleshoot DirectAccess
       href: ./networking/troubleshoot-directAccess.md
-    - name: 'Troubleshoot DirectAccess Server console: 6to4'
-      href: ./networking/troubleshoot-directaccess-server-console-6to4.md
-    - name: 'Troubleshoot DirectAccess Server console: DNS'
-      href: ./networking/troubleshoot-directaccess-server-console-dns.md
     - name: 'Troubleshoot DirectAccess Server console: domain controller and Kerberos'
       href: ./networking/troubleshoot-directaccess-server-console-dc-kerberos.md
     - name: 'Troubleshoot DirectAccess Server console: IP-Https and IPSec'
       href: ./networking/troubleshoot-directaccess-server-console-ip-https-ipsec.md
-    - name: 'Troubleshoot DirectAccess Server console: Network and high availability'
-      href: ./networking/troubleshoot-directaccess-server-console-networking.md
     - name: Troubleshoot error 720 when establishing a VPN connection
       href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
   - name: TCP/IP communications
@@ -1600,8 +1580,6 @@ items:
       href: ./networking/modify-tcp-ip-maximum-retransmission-time-out.md
     - name: Net Commands Operating Systems
       href: ./networking/net-commands-on-operating-systems.md
-    - name: OS compatibility with DNSSEC enabled root servers
-      href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
     - name: 'Part 1: TCP/IP performance overview'
       href: ./networking/overview-of-tcpip-performance.md
     - name: 'Part 2: TCP/IP performance underlying network issues'
