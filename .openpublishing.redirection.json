@@ -14754,6 +14754,36 @@
       "source_path": "support/windows-server/licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md",
       "redirect_url": "/previous-versions/windows-server/event-id-12321-warning-token-based-activation-failed",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md",
+      "redirect_url": "/previous-versions/windows-client/directaccess-clients-teredo-tunneling-not-connect-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md",
+      "redirect_url": "/previous-versions/windows-client/enterprise-apn-lost-after-sim-change-mbn-adapter-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/error-directaccess-clients-connect-over-ip-https.md",
+      "redirect_url": "/previous-versions/windows-client/error-directaccess-clients-connect-over-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/errors-work-large-folder-redirection-policy-settings-file.md",
+      "redirect_url": "/previous-versions/windows-client/errors-work-large-folder-redirection-policy-settings-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/opengl-application-not-run-miracast-wireless-display.md",
+      "redirect_url": "/previous-versions/windows-client/opengl-application-not-run-miracast-wireless-display",
+      "redirect_document_id": false
+    }
+    {
+      "source_path": "support/windows-client/networking/current-hotfixes-have-folder-redirection.md",
+      "redirect_url": "/previous-versions/windows-client/current-hotfixes-have-folder-redirection",
+      "redirect_document_id": false
     }
   ]
 }

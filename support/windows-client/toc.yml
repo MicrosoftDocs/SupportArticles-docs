@@ -338,9 +338,6 @@ items:
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
     - name: Current hotfixes have folder redirection enabled
-      href: ./networking/current-hotfixes-have-folder-redirection.md
-    - name: Errors when having a large "Folder Redirection" policy settings file
-      href: ./networking/errors-work-large-folder-redirection-policy-settings-file.md
     - name: Folder redirection doesn't work correctly
       href: ./networking/folder-redirection-not-work.md
     - name: Folder redirection fails when redirected to mapped drive letter
@@ -363,14 +360,10 @@ items:
       href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
-    - name: DirectAccess clients can't connect by IP-HTTPS
-      href: ./networking/error-directaccess-clients-connect-over-ip-https.md
     - name: DirectAccess clients can't connect with IP-HTTPS
       href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md
     - name: DirectAccess clients connection error 0x800b0109
       href: ./networking/directaccess-clients-connection-error-0x800b0109.md
-    - name: DirectAccess clients that use Teredo tunneling cannot connect
-      href: ./networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md
     - name: Disconnect incoming VPN connection
       href: ./networking/disconnect-incoming-vpn-connection.md
     - name: Error 721 when establishing a VPN connection
@@ -401,8 +394,6 @@ items:
       href: ./networking/diagnose-packet-loss.md
     - name: Domain-joined machines can't detect the domain profile
       href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
-    - name: Enterprise APN lost after SIM change or MBN adapter error
-      href: ./networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md
     - name: Error 0x80071779 when removing network components
       href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
     - name: Error 734 when establishing a dial-up connection
@@ -477,8 +468,6 @@ items:
       href: ./networking/intels-my-wifi-stops-working.md
     - name: 'Microsoft: Protected EAP (PEAP) option is missing'
       href: ./networking/microsoft-protected-eap-option-missing.md
-    - name: OpenGL applications don't run on Miracast display
-      href: ./networking/opengl-application-not-run-miracast-wireless-display.md
     - name: Security alert when connecting to wireless network
       href: ./networking/windows-security-alert-wireless-network.md
     - name: Virtual WiFi/SoftAP fails to start
