@@ -44,7 +44,7 @@ Some regions in Azure don't have all of these SKUs available. If you attempt to 
 
 Microsoft is actively working on expanding the list of supported SKUs for CMG creation to mitigate this issue. In the meantime, to work around this issue, you can either:
 
-- Select a different Azure region that has the selected SKU available for CMG creation. You can check the availability of SKUs in different regions by using the sample script. You need to have the [Azure PowerShell module](/powershell/azure/install-azps-windows) installed and authenticate to your Azure account to run the script.
+- Select a different Azure region that has the selected SKU available in your subscription. You can check the availability of SKUs in different regions by using the sample script. You need to have the [Azure PowerShell module](/powershell/azure/install-azps-windows) installed and authenticate to your Azure account to run the script.
 
 [!INCLUDE [Script disclaimer](../../../includes/script-disclaimer.md)]
 
