@@ -106,7 +106,7 @@ When the logs are enabled, reproduce the error, and then check the logs to see i
 [09-Oct-2015 00:03:13 UTC] PHP Warning: mysqli_real_connect(): (HY000/1226): User 'abcdefghijk79' has exceeded the 'max_user_connections' resource (current value: 4) in D:\home\site\wwwroot\wp-includes\wp-db.php on line 1454
 ```
 
-If you see this error in your *debug.log* or *php_errors.log* files, your app is exceeding the number of connections. If you're hosting on ClearDB, verify the number of connections that are available in your [service plan](https://www.cleardb.com/pricing.view).
+If you see this error in your *debug.log* or *php_errors.log* files, your app is exceeding the number of connections.
 
 ## How do I debug a Node.js app hosted in Azure App Service?
 
