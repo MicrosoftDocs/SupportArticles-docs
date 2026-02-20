@@ -22,8 +22,6 @@ items:
           href: ../administration/cannot-connect-to-security-compliance-powershell.md
         - name: Can't disable the Enable Forwarding option
           href: ../administration/convert-value-error-disabling-enable-forwarding-option.md
-        - name: Can't manage Send on Behalf permissions
-          href: ../administration/send-on-behalf-for-shared-mailbox.md
         - name: Can't set up an organization relationship
           href: ../administration/create-organization-relationships-error.md
         - name: Can't add new apps to Outlook Web App

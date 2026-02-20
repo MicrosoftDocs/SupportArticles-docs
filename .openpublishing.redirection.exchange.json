@@ -27,6 +27,10 @@
     {
       "source_path": "Exchange/ExchangeServer/client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
-    }              
+    },
+    {
+      "source_path": "Exchange/ExchangeOnline/administration/send-on-behalf-for-shared-mailbox.md",
+      "redirect_url": "/troubleshoot/exchange/administration/send-on-behalf-for-shared-mailbox"
+    },                  
   ]
 }
