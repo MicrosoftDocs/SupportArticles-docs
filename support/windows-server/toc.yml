@@ -1708,8 +1708,6 @@ items:
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
     - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
       href: ./performance/stop-code-driver-verifier-dma-violation.md
-    - name: Stop error 7E on a server running NFS
-      href: ./performance/stop-error-7e-nfs.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
     - name: Stop error when Windows tries to repair a drive while restarting
@@ -1736,8 +1734,6 @@ items:
     items:
     - name: Black screen on boot
       href: ./performance/black-screen-on-boot.md
-    - name: Can't boot from the second bootable media on UEFI-based computers
-      href: ./performance/cannot-boot-from-second-media-uefi-computers.md
     - name: Can't format or use a disk partition properly
       href: ./performance/cannot-use-disk-partition-power-failure-system-crash.md
     - name: Computer doesn't start after you mark primary partition as active
@@ -1780,28 +1776,16 @@ items:
       href: ./performance/enable-verbose-startup-shutdown-logon-logoff-status-messages.md
     - name: How to obtain a Console Window Handle
       href: ./performance/obtain-console-window-handle.md
-    - name: Known UI limitation of the CPU information in Windows Server 2016
-      href: ./performance/known-ui-limitation-cpu-information.md
-    - name: Log files are deleted when you use Performance Monitor
-      href: ./performance/log-files-are-deleted.md
     - name: Manually rebuild performance counters
       href: ./performance/manually-rebuild-performance-counters.md
     - name: Monitor performance of remote computers
       href: ./performance/monitor-remote-computer-performance.md
-    - name: QueryPerformanceCounter function perform poorly in some program
-      href: ./performance/programs-queryperformancecounter-function-perform-poorly.md
     - name: Rebuild Performance Counter Library values
       href: ./performance/rebuild-performance-counter-library-values.md
-    - name: Reliability Monitor shows no information
-      href: ./performance/reliability-monitor-shows-no-information.md
-    - name: Report generation process stops responding
-      href: ./performance/report-generation-process-stops-responding.md
     - name: Server service configuration and tuning
       href: ./performance/server-service-configuration-tuning.md
     - name: Task Manager displays incorrect memory information
       href: ./performance/task-manager-display-incorrect-memory-info.md
-    - name: Task Manager displays incorrect processor affinity
-      href: ./performance/task-manager-displays-incorrect-processor-affinity.md
     - name: Troubleshoot memory consumption between identical server setup
       href: ./performance/memory-consumption-between-identical-windows-server-environments.md
     - name: Unable to allocate memory from the system paged pool
@@ -1842,8 +1826,6 @@ items:
       href: ./performance/troubleshoot-performance-problems-in-windows.md
   - name: System Hang
     items:
-    - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
-      href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
     - name: Description of Windows registry
@@ -1856,8 +1838,6 @@ items:
       href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
-    - name: Windows Server stops responding during the sign-in process of a custom account
-      href: ./performance/windows-server-stops-responding-signing-custom-account.md
     - name: Windows Server stops responding when a Trigger Start service crashes
       href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md
 - name: Printing

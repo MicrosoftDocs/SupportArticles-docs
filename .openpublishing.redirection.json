@@ -14939,6 +14939,56 @@
       "source_path": "support/windows-client/performance/windows-experience-index-shows-1-dot-0.md",
       "redirect_url": "/previous-versions/windows-client/windows-experience-index-shows-1-dot-0",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-boot-from-second-media-uefi-computers.md",
+      "redirect_url": "/previous-versions/windows-server/cannot-boot-from-second-media-uefi-computers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md",
+      "redirect_url": "/previous-versions/windows-server/cannot-restart-20tb-ram-credential-guard-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/known-ui-limitation-cpu-information.md",
+      "redirect_url": "/previous-versions/windows-server/known-ui-limitation-cpu-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/log-files-are-deleted.md",
+      "redirect_url": "/previous-versions/windows-server/log-files-are-deleted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/programs-queryperformancecounter-function-perform-poorly.md",
+      "redirect_url": "/previous-versions/windows-server/programs-queryperformancecounter-function-perform-poorly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/reliability-monitor-shows-no-information.md",
+      "redirect_url": "/previous-versions/windows-server/reliability-monitor-shows-no-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/report-generation-process-stops-responding.md",
+      "redirect_url": "/previous-versions/windows-server/report-generation-process-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-7e-nfs.md",
+      "redirect_url": "/previous-versions/windows-server/stop-error-7e-nfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/task-manager-displays-incorrect-processor-affinity.md",
+      "redirect_url": "/previous-versions/windows-server/task-manager-displays-incorrect-processor-affinity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/windows-server-stops-responding-signing-custom-account.md",
+      "redirect_url": "/previous-versions/windows-server/windows-server-stops-responding-signing-custom-account",
+      "redirect_document_id": false
     }
   ]
 }
