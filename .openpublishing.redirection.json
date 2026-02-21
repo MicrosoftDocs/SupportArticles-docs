@@ -14748,6 +14748,248 @@
     {
       "source_path": "support/windows-client/printing/print-modern-app-creates-large-file.md",
       "redirect_url": "/previous-versions/windows-client/print-modern-app-creates-large-file",
+      "source_path": "support/windows-client/licensing-and-activation/item-with-same-key-has-been-added.md",
+      "redirect_url": "/previous-versions/windows-client/item-with-same-key-has-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-12321-warning-token-based-activation-failed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md",
+      "redirect_url": "/previous-versions/windows-client/directaccess-clients-teredo-tunneling-not-connect-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md",
+      "redirect_url": "/previous-versions/windows-client/enterprise-apn-lost-after-sim-change-mbn-adapter-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/error-directaccess-clients-connect-over-ip-https.md",
+      "redirect_url": "/previous-versions/windows-client/error-directaccess-clients-connect-over-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/errors-work-large-folder-redirection-policy-settings-file.md",
+      "redirect_url": "/previous-versions/windows-client/errors-work-large-folder-redirection-policy-settings-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/opengl-application-not-run-miracast-wireless-display.md",
+      "redirect_url": "/previous-versions/windows-client/opengl-application-not-run-miracast-wireless-display",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/current-hotfixes-have-folder-redirection.md",
+      "redirect_url": "/previous-versions/windows-client/current-hotfixes-have-folder-redirection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md",
+      "redirect_url": "/previous-versions/windows-server/0x2afc-0x274d-error-directaccess-clients-connect-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/backlog-for-dfsr-read-only-member.md",
+      "redirect_url": "/previous-versions/windows-server/backlog-for-dfsr-read-only-member",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-unable-connect-static-proxy-configured.md",
+      "redirect_url": "/previous-versions/windows-server/directaccess-clients-unable-connect-static-proxy-configured",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/dns-server-geo-location-policy-doesnt-work-as-expected.md",
+      "redirect_url": "/previous-versions/windows-server/dns-server-geo-location-policy-doesnt-work-as-expected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/error-request-not-supported.md",
+      "redirect_url": "/previous-versions/windows-server/error-request-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-id-236-sr-iov-enabled.md",
+      "redirect_url": "/previous-versions/windows-server/event-id-236-sr-iov-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/faulted-not-found-status-nic-team-restart-iscsi-boot-disk.md",
+      "redirect_url": "/previous-versions/windows-server/faulted-not-found-status-nic-team-restart-iscsi-boot-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/previous-versions/windows-server/file-replication-service-event-13552-13555",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/hotfixes-for-file-services-technologies.md",
+      "redirect_url": "/previous-versions/windows-server/hotfixes-for-file-services-technologies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/previous-versions/windows-server/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/move-frs-staging-folder-to-different-drive.md",
+      "redirect_url": "/previous-versions/windows-server/move-frs-staging-folder-to-different-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/security-setting-changes-not-appear-dfsr-replication.md",
+      "redirect_url": "/previous-versions/windows-server/security-setting-changes-not-appear-dfsr-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/system-compatibility-with-dnssec-enabled-root-server.md",
+      "redirect_url": "/previous-versions/windows-server/system-compatibility-with-dnssec-enabled-root-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/tcp-connection-abort-validate-negotiate.md",
+      "redirect_url": "/previous-versions/windows-server/tcp-connection-abort-validate-negotiate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-adding-entry-points.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-6to4.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-6to4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-dns.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-dns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-networking.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-directaccess-server-console-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-enabling-multisite.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-general-issues-related-remote-access.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-multisite-deployment.md",
+      "redirect_url": "/previous-versions/windows-server/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-1-identify-computers-that-have-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-2-calculate-and-change-mca.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-2-calculate-and-change-mca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md",
+      "redirect_url": "/previous-versions/windows-server/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md",
+      "redirect_url": "/previous-versions/windows-client/bug-check-0x124-windows-upgrade-boot-camp-apple-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/check-point-centrify-apps-stop-working.md",
+      "redirect_url": "/previous-versions/windows-client/check-point-centrify-apps-stop-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/issues-when-calls-createwindowex-32-bit-applications.md",
+      "redirect_url": "/previous-versions/windows-client/issues-when-calls-createwindowex-32-bit-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/stop-code-initialize-pmem-nvdimm.md",
+      "redirect_url": "/previous-versions/windows-client/stop-code-initialize-pmem-nvdimm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/tablet-device-creates-minidump-file.md",
+      "redirect_url": "/previous-versions/windows-client/tablet-device-creates-minidump-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/windows-experience-index-shows-1-dot-0.md",
+      "redirect_url": "/previous-versions/windows-client/windows-experience-index-shows-1-dot-0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-boot-from-second-media-uefi-computers.md",
+      "redirect_url": "/previous-versions/windows-server/cannot-boot-from-second-media-uefi-computers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md",
+      "redirect_url": "/previous-versions/windows-server/cannot-restart-20tb-ram-credential-guard-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/known-ui-limitation-cpu-information.md",
+      "redirect_url": "/previous-versions/windows-server/known-ui-limitation-cpu-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/log-files-are-deleted.md",
+      "redirect_url": "/previous-versions/windows-server/log-files-are-deleted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/programs-queryperformancecounter-function-perform-poorly.md",
+      "redirect_url": "/previous-versions/windows-server/programs-queryperformancecounter-function-perform-poorly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/reliability-monitor-shows-no-information.md",
+      "redirect_url": "/previous-versions/windows-server/reliability-monitor-shows-no-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/report-generation-process-stops-responding.md",
+      "redirect_url": "/previous-versions/windows-server/report-generation-process-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-7e-nfs.md",
+      "redirect_url": "/previous-versions/windows-server/stop-error-7e-nfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/task-manager-displays-incorrect-processor-affinity.md",
+      "redirect_url": "/previous-versions/windows-server/task-manager-displays-incorrect-processor-affinity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/windows-server-stops-responding-signing-custom-account.md",
+      "redirect_url": "/previous-versions/windows-server/windows-server-stops-responding-signing-custom-account",
       "redirect_document_id": false
     }
   ]

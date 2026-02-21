@@ -277,8 +277,6 @@ items:
       href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
     - name: Error "certificate in the connection information has expired"
       href: ./licensing-and-activation/error-certificate-connection-information-expired.md
-    - name: Fail to open a list in VAMT 2.0
-      href: ./licensing-and-activation/item-with-same-key-has-been-added.md
     - name: How to validate the OEM activation key
       href: ./licensing-and-activation/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
@@ -339,10 +337,6 @@ items:
       href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
-    - name: Current hotfixes have folder redirection enabled
-      href: ./networking/current-hotfixes-have-folder-redirection.md
-    - name: Errors when having a large "Folder Redirection" policy settings file
-      href: ./networking/errors-work-large-folder-redirection-policy-settings-file.md
     - name: Folder redirection doesn't work correctly
       href: ./networking/folder-redirection-not-work.md
     - name: Folder redirection fails when redirected to mapped drive letter
@@ -365,14 +359,10 @@ items:
       href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
-    - name: DirectAccess clients can't connect by IP-HTTPS
-      href: ./networking/error-directaccess-clients-connect-over-ip-https.md
     - name: DirectAccess clients can't connect with IP-HTTPS
       href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md
     - name: DirectAccess clients connection error 0x800b0109
       href: ./networking/directaccess-clients-connection-error-0x800b0109.md
-    - name: DirectAccess clients that use Teredo tunneling cannot connect
-      href: ./networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md
     - name: Disconnect incoming VPN connection
       href: ./networking/disconnect-incoming-vpn-connection.md
     - name: Error 721 when establishing a VPN connection
@@ -403,8 +393,6 @@ items:
       href: ./networking/diagnose-packet-loss.md
     - name: Domain-joined machines can't detect the domain profile
       href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
-    - name: Enterprise APN lost after SIM change or MBN adapter error
-      href: ./networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md
     - name: Error 0x80071779 when removing network components
       href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
     - name: Error 734 when establishing a dial-up connection
@@ -479,8 +467,6 @@ items:
       href: ./networking/intels-my-wifi-stops-working.md
     - name: 'Microsoft: Protected EAP (PEAP) option is missing'
       href: ./networking/microsoft-protected-eap-option-missing.md
-    - name: OpenGL applications don't run on Miracast display
-      href: ./networking/opengl-application-not-run-miracast-wireless-display.md
     - name: Security alert when connecting to wireless network
       href: ./networking/windows-security-alert-wireless-network.md
     - name: Virtual WiFi/SoftAP fails to start
@@ -497,8 +483,6 @@ items:
     items:
     - name: Applications freeze when concurrently trying to access a file on a network drive
       href: ./performance/applications-freeze-concurrently-access-file-network-drive.md
-    - name: Check Point and Centrify apps stop working
-      href: ./performance/check-point-centrify-apps-stop-working.md
     - name: Command prompt and PowerShell don't start
       href: ./performance/command-prompt-powershell-not-start.md
     - name: Error 1058 when a service suddenly stops
@@ -515,12 +499,8 @@ items:
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
     - name: View system registry with 64-bit versions of Windows
       href: ./performance/view-system-registry-with-64-bit-windows.md
-    - name: Windows 10 causes issues when it calls CreateWindowEx
-      href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Bugcheck/Stop code errors
     items:
-    - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
-      href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
     - name: Cannot scan from a scanning device connected through USB
       href: ./performance/cannot-scan-device-connected-usb.md
     - name: Computers crash with error code 0x113
@@ -539,8 +519,6 @@ items:
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
-    - name: Stop code when initializing PMem or NVDIMM
-      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
@@ -551,8 +529,6 @@ items:
       href: ./performance/stop-code-error-troubleshooting.md
     - name: Stop error when updating in-box Broadcom network adapter driver
       href: ./performance/stop-error-broadcom-network-driver-update.md
-    - name: Tablet device creates only a minidump file
-      href: ./performance/tablet-device-creates-minidump-file.md
     - name: Troubleshooting Windows startup issues
       href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
@@ -595,8 +571,6 @@ items:
       href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md?context=/troubleshoot/windows-client/context/context
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
-    - name: Windows Experience Index shows 1.0
-      href: ./performance/windows-experience-index-shows-1-dot-0.md
   - name: Servicing
     items:
     - name: Push-button reset fails because language resources are missing
