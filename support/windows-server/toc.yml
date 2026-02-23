@@ -2264,8 +2264,6 @@ items:
       href: ./setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values.md
     - name: '"Stop 0x0000007B" error'
       href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
-    - name: Support policy for third-party, kernel-level software
-      href: ./setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
     - name: VMware driver installation fails in Windows Server 2008 R2 SP1
@@ -2294,10 +2292,6 @@ items:
       href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
     - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
       href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
-    - name: Error 0x800f0906 when you convert Server Core to GUI
-      href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
-    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
-      href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md
     - name: Error when you configure a server with Server Manager
       href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
     - name: Event ID 307 and 304 logged for deploying Windows
@@ -2306,20 +2300,14 @@ items:
       href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
     - name: In-place upgrade hangs at black screen
       href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
-    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
-      href: ./setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager.md
     - name: Known issues that affect AppX cleanup maintenance task
       href: ./setup-upgrade-and-drivers/issues-appx-cleanup-maintenance-task.md
     - name: Long paths with spaces require quotation marks
       href: ./setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark.md
     - name: Manually edit Boot.ini file
       href: ./setup-upgrade-and-drivers/manually-edit-boot-file.md
-    - name: MDT Media Deployment USB isn't bootable
-      href: ./setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
-    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
-      href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: PCR7 configuration "Binding not possible" error
       href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
     - name: Post-Deployment Configuration task fails
@@ -2332,8 +2320,6 @@ items:
       href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
     - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
-    - name: Upgrade fails with error 0x000000C4
-      href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
     - name: Upgrade fails and generates error code 0xC1900101-0x20017
       href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
@@ -2344,10 +2330,6 @@ items:
       href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
-  - name: Windows ADK installation
-    items:
-    - name: Multicast deployment fails from WDS
-      href: ./setup-upgrade-and-drivers/multicast-deployment-fails-from-wds.md
 - name: Shell Experience
   items:
   - name: Shell Experience

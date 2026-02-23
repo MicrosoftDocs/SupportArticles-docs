@@ -15036,6 +15036,46 @@
       "source_path": "support/windows-client/setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/upgrade-advisor-tool-failed-to-run",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dism-fails-with-error-0x800f0906",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-path-not-found-upgrading-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mdt-media-deployment-isnt-bootable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/multicast-deployment-fails-from-wds.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/multicast-deployment-fails-from-wds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-policy-third-party-kernel-level-attestation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/update-available-integrates-wsus-into-server-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/upgrade-fail-with-error-0x000000c4",
+      "redirect_document_id": false
     }
   ]
 }
