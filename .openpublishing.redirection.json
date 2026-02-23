@@ -15126,6 +15126,16 @@
       "source_path": "support/windows-client/system-management-components/grant-dfsnaccess-not-change-inheritance.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/grant-dfsnaccess-not-change-inheritance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/software-defined-networking/software-defined-data-center-and-networking.md",
+      "redirect_url": "/previous-versions/troublehoot/windows-server/software-defined-data-center-and-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/software-defined-networking/troubleshoot-software-defined-networking.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-software-defined-networking",
+      "redirect_document_id": false
     }
   ]
 }

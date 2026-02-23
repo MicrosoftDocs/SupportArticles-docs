@@ -2384,12 +2384,6 @@ items:
     href: ./software-defined-networking/software-defined-networking-overview.md
   - name: 'Troubleshooting guidance: SDN'
     href: ./software-defined-networking/troubleshoot-sdn-guidance.md
-  - name: Internal DNS Server for SDN
-    items:
-    - name: Software Defined Data Center and Software Defined Networking
-      href: ./software-defined-networking/software-defined-data-center-and-networking.md
-  - name: Troubleshoot SDN
-    href: ./software-defined-networking/troubleshoot-software-defined-networking.md
   - name: Troubleshoot the Windows Server Software Defined Networking Stack
     href: ./software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack.md
 - name: System Management Components
