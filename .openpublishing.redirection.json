@@ -15086,6 +15086,31 @@
       "source_path": "support/windows-client/shell-experience/upx-displayed-in-UI-on-managed-device.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/upx-displayed-in-UI-on-managed-device",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/increased-cpu-usage.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/increased-cpu-usage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/multipoint-manager-error-during-startup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/multipoint-manager-error-during-startup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/network-adapters-inaccurate-link-speed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/network-adapters-inaccurate-link-speed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/start-menu-shortcuts-arent-immediately-accessible.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/start-menu-shortcuts-arent-immediately-accessible",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/task-manager-displays-incorrect-value.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/task-manager-displays-incorrect-value",
+      "redirect_document_id": false
     }
   ]
 }

@@ -2350,10 +2350,6 @@ items:
       href: ./shell-experience/access-denied-runas-command-run-as-administrator.md
     - name: Enable and use the Run As feature
       href: ./shell-experience/use-run-as-feature.md
-    - name: Multipoint Manager error during startup
-      href: ./shell-experience/multipoint-manager-error-during-startup.md
-    - name: Task manager displays incorrect value for L2/L3 cache
-      href: ./shell-experience/task-manager-displays-incorrect-value.md
     - name: Use Run as to start an app as an administrator
       href: ./shell-experience/use-run-as-start-app-admin.md
   - name: DPI and Display Issues
@@ -2368,10 +2364,6 @@ items:
       href: ./shell-experience/default-date-format-changed.md
   - name: File Explorer/Windows Explorer
     items:
-    - name: High-speed network adapters show inaccurate link speeds
-      href: ./shell-experience/network-adapters-inaccurate-link-speed.md
-    - name: Increased CPU usage when accessing a FileTable share
-      href: ./shell-experience/increased-cpu-usage.md
     - name: TEMP folder with logon session ID is deleted
       href: ./shell-experience/temp-folder-with-logon-session-id-deleted.md
   - name: Lock Screen or Screensaver
@@ -2382,10 +2374,6 @@ items:
     items:
     - name: Remote Assistance connection doesn't work with FIPS encryption
       href: ./shell-experience/fips-encryption-not-allow-remote-assistance-connection.md
-  - name: Start Menu
-    items:
-    - name: Start menu shortcuts aren't immediately accessible
-      href: ./shell-experience/start-menu-shortcuts-arent-immediately-accessible.md
   - name: Windows Media Player
     items:
     - name: How to enable the user experience features
