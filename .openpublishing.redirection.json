@@ -15136,6 +15136,16 @@
       "source_path": "support/windows-server/software-defined-networking/troubleshoot-software-defined-networking.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-software-defined-networking",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/support-tools/script-inspect-the-content-of-the-wmi-repository.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/script-inspect-the-content-of-the-wmi-repository",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/support-tools/scripts-check-and-cleanup-the-agpm-archive.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scripts-check-and-cleanup-the-agpm-archive",
+      "redirect_document_id": false
     }
   ]
 }
