@@ -15111,6 +15111,21 @@
       "source_path": "support/windows-server/shell-experience/task-manager-displays-incorrect-value.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/task-manager-displays-incorrect-value",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/configure-standalone-wmi-providers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/configure-standalone-wmi-providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/event-id-10-logged-application-log-after-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-10-logged-application-log-after-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/grant-dfsnaccess-not-change-inheritance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/grant-dfsnaccess-not-change-inheritance",
+      "redirect_document_id": false
     }
   ]
 }

@@ -1027,8 +1027,6 @@ items:
       href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
-    - name: Grant-DfsnAccess doesn't change inheritance mode
-      href: ./system-management-components/grant-dfsnaccess-not-change-inheritance.md
     - name: Signed PowerShell script fails for hash mismatch
       href: ./system-management-components/signed-powershell-script-fails-hash-mismatch.md
   - name: Server Manager
@@ -1067,10 +1065,6 @@ items:
       href: ./system-management-components/configure-winrm-for-https.md
   - name: WMI
     items:
-    - name: Configure standalone WMI providers
-      href: ./system-management-components/configure-standalone-wmi-providers.md
-    - name: Event ID 10 is logged in the Application log
-      href: ./system-management-components/event-id-10-logged-application-log-after-install.md
     - name: Failed logon event when running remote WMI
       href: ./system-management-components/failed-logon-event-when-running-remote-wmi.md
     - name: SMS Agent Host service not start
