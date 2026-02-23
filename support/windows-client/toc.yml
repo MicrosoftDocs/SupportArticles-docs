@@ -875,8 +875,6 @@ items:
       href: ./shell-experience/change-personal-folder-location-fails.md
     - name: Taskbar calendar doesn't open
       href: ./shell-experience/taskbar-calendar-does-not-open.md
-    - name: UPX is displayed in the UI on managed device
-      href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
     items:
     - name: Can't open high resolution file in Photo Gallery
@@ -961,8 +959,6 @@ items:
       href: ./shell-experience/error-start-store-apps.md
     - name: Event ID 5973 when you open Windows Store apps
       href: ./shell-experience/windows-store-apps-not-open-event-id-5973.md
-    - name: Microsoft Store app removed unexpectedly
-      href: ./shell-experience/pre-installed-microsoft-store-app-removed-logon.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
     - name: Microsoft-Windows-AppReadiness event ID 215 error

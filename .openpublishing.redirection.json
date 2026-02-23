@@ -15076,6 +15076,16 @@
       "source_path": "support/windows-server/setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/upgrade-fail-with-error-0x000000c4",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/pre-installed-microsoft-store-app-removed-logon.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/pre-installed-microsoft-store-app-removed-logon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/upx-displayed-in-UI-on-managed-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/upx-displayed-in-UI-on-managed-device",
+      "redirect_document_id": false
     }
   ]
 }
