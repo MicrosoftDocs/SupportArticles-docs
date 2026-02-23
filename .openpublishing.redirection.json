@@ -15146,6 +15146,26 @@
       "source_path": "support/windows-server/support-tools/scripts-check-and-cleanup-the-agpm-archive.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/scripts-check-and-cleanup-the-agpm-archive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enter-pssession-cmdlet-fails-psmodulepath-variable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/error-0x8007000d-data-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8007000d-data-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/event-5605-query-mscluster-namespace.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-5605-query-mscluster-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/scheduled-tasks-reference-incorrect-user-profile.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scheduled-tasks-reference-incorrect-user-profile",
+      "redirect_document_id": false
     }
   ]
 }

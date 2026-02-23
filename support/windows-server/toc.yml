@@ -2438,8 +2438,6 @@ items:
     items:
     - name: CJK characters are garbled in PowerShell
       href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
-    - name: Enter-PSSession cmdlet fails
-      href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
   - name: Server Manager
     items:
     - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
@@ -2456,8 +2454,6 @@ items:
       href: ./system-management-components/task-manager-disabled-by-administrator.md
   - name: Task Scheduler
     items:
-    - name: Error 0x8007000d when you run an old scheduled task
-      href: ./system-management-components/error-0x8007000d-data-invalid.md
     - name: Failed to schedule Software Protection service for restart
       href: ./system-management-components/failed-schedule-software-protection.md
     - name: How To Schedule a Server Process
@@ -2468,8 +2464,6 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks fail with "Task schedular service is not available"
       href: ../windows-client/system-management-components/task-schedular-service-is-not-available.md?context=/troubleshoot/windows-server/context/context
-    - name: Scheduled tasks reference incorrect user profile paths
-      href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
     - name: Troubleshoot issues with the Task Scheduler service not starting
@@ -2484,8 +2478,6 @@ items:
     items:
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
-    - name: Event 5605 when querying MSCluster namespace by WMI
-      href: ./system-management-components/event-5605-query-mscluster-namespace.md
     - name: Identify the cause of unexpected WMI shutdown
       href: ./system-management-components/identify-cause-of-wmi-shutdown.md
     - name: Microsoft-Windows-RPC-Events Event 11 after reboot
