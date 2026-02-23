@@ -1075,20 +1075,6 @@ items:
   items:
   - name: UE-V
     href: ./ue-v/ue-v-overview.md
-  - name: UEV 2.1
-    items:
-    - name: Unexpected one-minute delay of Outlook if UE-V is enabled
-      href: ./ue-v/outlook-takes-one-minute-start.md
-    - name: '%username% is unavailable that has OneDrive for Business installed'
-      href: ./ue-v/percent-username-percent-unavailable.md
-  - name: User Experience Virtualization (UE-V)
-    items:
-    - name: Enable debug logging
-      href: ./ue-v/enable-debug-logging.md
-    - name: Troubleshoot UE-V replication issues
-      href: ./ue-v/ue-v-replication-issues.md
-    - name: UE-V Registry Settings
-      href: ./ue-v/ue-v-registry-settings.md
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon

@@ -15166,6 +15166,31 @@
       "source_path": "support/windows-server/system-management-components/scheduled-tasks-reference-incorrect-user-profile.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/scheduled-tasks-reference-incorrect-user-profile",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/enable-debug-logging.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/enable-debug-logging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/outlook-takes-one-minute-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/outlook-takes-one-minute-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/percent-username-percent-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/percent-username-percent-unavailable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/ue-v-registry-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/ue-v-registry-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/ue-v-replication-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/ue-v-replication-issues",
+      "redirect_document_id": false
     }
   ]
 }
