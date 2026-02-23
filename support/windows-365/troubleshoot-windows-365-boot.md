@@ -85,6 +85,26 @@ It takes up to 8 hours for Intune to complete policy removal. After that, the ph
 
 The physical device will again be set up for Windows 365 Boot. Retest it to see if it works.
 
+## Issues connecting to a captive portal
+
+**Common issues & troubleshooting steps** 
+
+**1. Network connection does not update after captive portal connection** 
+
+**Root cause:** The device is not fully authenticated on the network. 
+
+**Action:** Disconnect from the Wi-Fi network that requires Captive portal sign in and complete the sign steps again.
+
+**2. Cloud PC reconnect fails after portal authentication** 
+
+**Root cause:** There may be a delay or error in network state propagation after portal authentication. 
+
+**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to.
+
+**3. Logs and diagnostics** 
+
+- Collect logs as documented above.
+
 ## Contact Microsoft support
 
 If you still can't troubleshoot the problem, contact Microsoft support. To help expedite a solution, collect logs and session IDs beforehand.
@@ -115,26 +135,6 @@ You can find the Windows 365 Session ID in an error dialog. For example, a **Som
 You can find the Correlation ID in the interstitial screen displayed during a five-minute time-out.
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
-
-## Issues connecting to a captive portal
-
-**Common issues & troubleshooting steps** 
-
-**1. Network connection does not update after captive portal connection** 
-
-**Root cause:** The device is not fully authenticated on the network. 
-
-**Action:** Disconnect from the Wi-Fi network that requires Captive portal sign in and complete the sign steps again.
-
-**2. Cloud PC reconnect fails after portal authentication** 
-
-**Root cause:** There may be a delay or error in network state propagation after portal authentication. 
-
-**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to.
-
-**3. Logs and diagnostics** 
-
-- Collect logs as documented above.
 
 ## Next steps
 
