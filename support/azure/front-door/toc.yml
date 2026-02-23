@@ -1,12 +1,12 @@
 items:
 - name: Azure Front Door troubleshooting documentation
-  href: front-door/welcome-front-door.yml
+  href: welcome-front-door.yml
   items:
   - name: Troubleshoot common issues
-    href: front-door/troubleshoot-issues.md   
+    href: troubleshoot-issues.md   
   - name: Troubleshoot general performance problems
-    href: front-door/troubleshoot-performance-issues.md
+    href: troubleshoot-performance-issues.md
   - name: Troubleshoot file compression
-    href: front-door/troubleshoot-compression.md
+    href: troubleshoot-compression.md
   - name: Troubleshoot using Reference String
-    href: front-door/refstring.md
+    href: refstring.md

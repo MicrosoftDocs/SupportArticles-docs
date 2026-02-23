@@ -94,7 +94,7 @@ productDirectory:
     links:
     - url: application-gateway/welcome-app-gateway.yml
       text: Troubleshooting articles for Azure Application Gateway
-    - url: virtual-network/front-door/welcome-front-door.yml
+    - url: front-door/welcome-front-door.yml
       text: Troubleshooting articles for Azure Front Door 
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
