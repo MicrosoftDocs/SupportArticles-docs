@@ -15196,6 +15196,11 @@
       "source_path": "support/windows-client/user-profiles-and-logon/custom-credential-providers-dont-load-first-logon.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/custom-credential-providers-dont-load-first-logon",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcs-cannot-be-located-high-rate-outbound-sessions",
+      "redirect_document_id": false
     }
   ]
 }

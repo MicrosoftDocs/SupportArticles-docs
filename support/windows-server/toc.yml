@@ -2900,8 +2900,6 @@ items:
       href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
     - name: Client has a newer password than Active Directory
       href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
-    - name: DCs can't be located and high-rate outbound sessions
-      href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
       href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
     - name: Gather information for secure channel issues
