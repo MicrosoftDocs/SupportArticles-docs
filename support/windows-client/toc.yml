@@ -1085,8 +1085,6 @@ items:
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: User Logon fails
     items:
-    - name: Custom credential providers don't load when you first log on
-      href: ./user-profiles-and-logon/custom-credential-providers-dont-load-first-logon.md
     - name: Error 0xCAA5001C Token broker operation failed
       href: ./user-profiles-and-logon/event-1098-error-0xcaa5001c.md
     - name: Facial recognition logon doesn't work after applying Group Policy setting
