@@ -13,7 +13,7 @@ This troubleshooter helps you identify the cause of sustained high CPU in an Int
 
 ## Scenario
 
-An application pool in IIS experiences a prolonged period of high CPU that exceeds 90 percent usage. When you test the application, you don't encounter any problems. Then, the application experiences actual user load, and CPU climbs to a high percentage and remains there. To recover, you must restart the application pool. However, after you the restart, CPU again climbs to a high level.
+An application pool in IIS experiences a prolonged period of high CPU that exceeds 80 percent usage. When you test the application, you don't encounter any problems. Then, the application experiences actual user load, and CPU climbs to a high percentage and remains there. To recover, you must restart the application pool. However, after you the restart, CPU again climbs to a high level.
 
 ## Diagnostic Tools
 
