@@ -15201,6 +15201,16 @@
       "source_path": "support/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/dcs-cannot-be-located-high-rate-outbound-sessions",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/virtualization/cant-use-kdump-kexec-linux-virtual-machines-hyper-v.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cant-use-kdump-kexec-linux-virtual-machines-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/virtualization/supported-guest-operating-systems-virtual-pc.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/supported-guest-operating-systems-virtual-pc",
+      "redirect_document_id": false
     }
   ]
 }

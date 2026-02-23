@@ -1121,14 +1121,6 @@ items:
     items:
     - name: Can't create a Hyper-V virtual switch
       href: ./virtualization/cannot-create-hyper-v-virtual-switch.md
-  - name: Installation and configuration of Hyper-V
-    items:
-    - name: Can't use kdump or kexec for Linux virtual machines
-      href: ./virtualization/cant-use-kdump-kexec-linux-virtual-machines-hyper-v.md
-  - name: Virtual machine creation
-    items:
-    - name: Supported Guest Operating Systems in Virtual PC
-      href: ./virtualization/supported-guest-operating-systems-virtual-pc.md
   - name: Virtual machine performance
     items:
     - name: Hyper-V can't start VM after upgrade
