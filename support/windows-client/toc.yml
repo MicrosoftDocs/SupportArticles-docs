@@ -705,10 +705,6 @@ items:
       href: ./setup-upgrade-and-drivers/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md
     - name: Loss of functionality for Intel SMBus Controller devices
       href: ./setup-upgrade-and-drivers/functionality-loss-for-intel-smbus-controller-device.md
-    - name: Media device isn't available
-      href: ./setup-upgrade-and-drivers/media-device-isnt-available.md
-    - name: Msinfo32.exe reports wrong values for Adapter RAM
-      href: ./setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram.md
     - name: Non-compliant USB 3.0 devices doesn't function
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
@@ -725,8 +721,6 @@ items:
       href: ./setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
     - name: Windows 10 doesn't install specific drivers for USB audio device
       href: ./setup-upgrade-and-drivers/windows-10-not-install-specific-drivers-usb-audio-devices.md
-    - name: WSD devices icons show incorrectly
-      href: ./setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers.md
   - name: Installing or upgrading Windows
     items:
     - name: An upgrade to Windows Server 2016 fails
@@ -759,8 +753,6 @@ items:
       href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Event ID 10 is logged in Application log
       href: ./setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md
-    - name: F5 doesn't refresh Explorer
-      href: ./setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md
     - name: Fail to perform an in-place upgrade
       href: ./setup-upgrade-and-drivers/windows-not-parse-process-unattend-answer-file.md
     - name: Fail to start an operating system on a 64-bit UEFI-based computer
@@ -769,16 +761,12 @@ items:
       href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
     - name: HAL_INITIALIZATION_FAILED error on VMWare VM
       href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
-    - name: How to customize the default local user profile when creating an image
-      href: ./setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md
     - name: How to edit the Boot.ini file in Windows 2000
       href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
     - name: In-place upgrade to Windows 10 problem
       href: ./setup-upgrade-and-drivers/in-place-upgrade-to-windows-10-problems.md
     - name: Installation File Location not behave on the Explain tab
       href: ./setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave.md
-    - name: Language features aren't displayed in Windows 10
-      href: ./setup-upgrade-and-drivers/language-features-not-displayed.md
     - name: Language packs no longer available
       href: ./setup-upgrade-and-drivers/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
@@ -789,8 +777,6 @@ items:
       href: ./setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation.md
-    - name: Remote Server Admin Tools uninstalled during in-place upgrade
-      href: ./setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade.md
     - name: Running Sysprep /generalize returns error
       href: ./setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize.md
     - name: Sysprep and capture task sequence fails
@@ -811,8 +797,6 @@ items:
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
     - name: Windows 10 upgrade resolution procedures
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
-      href: ./setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md
     - name: Windows optional component setup tool
       href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
     - name: Windows setup log file locations
@@ -847,8 +831,6 @@ items:
       href: ./setup-upgrade-and-drivers/updates-not-install-with-fast-startup.md
   - name: User state migration tool
     items:
-    - name: Error "Invalid store path" during the LoadState process
-      href: setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool.md
     - name: USMT common issues
       href: ./setup-upgrade-and-drivers/usmt-common-issues.md
     - name: USMT return codes

@@ -14991,6 +14991,51 @@
       "source_path": "support/windows-server/performance/windows-server-stops-responding-signing-custom-account.md",
       "redirect_url": "/previous-versions/windows-server/windows-server-stops-responding-signing-custom-account",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/customize-default-local-user-profile-prepare-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/error-invalid-store-path-loadstate-user-state-migration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/f5-not-refresh-explorer-windows-pe-windows-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/icons-wsd-devices-incorrectly-devices-printers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/language-features-not-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/language-features-not-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/media-device-isnt-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/media-device-isnt-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/msinfo32-report-wrong-display-adapter-ram",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/remote-server-admin-tools-uninstalled-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/upgrade-advisor-tool-failed-to-run",
+      "redirect_document_id": false
     }
   ]
 }
