@@ -2,7 +2,7 @@
 title: Resolve Exchange Table ID and Exchange Rate Errors in Dynamics GP
 description: Resolve missing exchange rate errors in Dynamics GP. This guide helps you fix "The Exchange Table ID is missing" and post transactions successfully.
 ms.reviewer: theley, v-shaywood
-ms.date: 02/10/2026
+ms.date: 02/23/2026
 ms.custom: sap:Financial - General Ledger
 ---
 # "The Exchange Table ID is missing. The Exchange Rate is missing." error message when you print an edit list in General Ledger
@@ -14,9 +14,10 @@ _Original KB number:_ &nbsp; 922872
 
 ## Symptoms
 
-When you print an edit list for a purchase order return transaction that uses the originating currency, you receive the following error message:
+When you print an edit list for a purchase order return transaction that uses the originating currency, you receive one of the following error message:
 
-> The Exchange Table ID is missing  
+> The Exchange Table ID is missing
+
 > The Exchange Rate is missing
 
 Additionally, you can't post the associated journal because the `RATETPID` and `XCHGRATE` values are blank in the `GL10000` table.
@@ -26,7 +27,7 @@ Additionally, you can't post the associated journal because the `RATETPID` and `
 This problem occurs under the following conditions:
 
 - More than one multicurrency rate type is selected for an exchange table identifier.
-- You post a purchase order return and the `RATETPID`, `XCHGRATE`, and `EXGTBLID` properties are missing from the transaction's `POP10300`.
+- You post a purchase order return and the transaction's `RATETPID`, `XCHGRATE`, and `EXGTBLID` properties are missing from the `POP10300` table.
 
 > [!NOTE]
 > You can find the multicurrency setup by going to **Tools** > **Setup** > **Financial** > **Multicurrency**.
