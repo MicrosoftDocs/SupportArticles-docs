@@ -1,7 +1,7 @@
 ---
 title: Unable to Find an Entry Point Error When Updating SQL Server
 description: This article describes an issue where the command line generates an error message when applying a SQL Server Cumulative Update (CU).
-ms.date: 02/10/2026
+ms.date: 02/24/2026
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: jopilov, v-sidong
 ---
