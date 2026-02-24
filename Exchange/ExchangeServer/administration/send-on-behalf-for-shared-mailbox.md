@@ -42,3 +42,6 @@ For example, to assign the **Send on Behalf** permission for Sean Chai's mailbox
 ```powershell
 Set-Mailbox -Identity seanc@contoso.com -GrantSendOnBehalfTo hollyh
 ```
+
+[!NOTE]
+If you use Microsoft 365, you can use the Microsoft 365 admin center to assign the Send on Behalf permission to shared mailboxes.
