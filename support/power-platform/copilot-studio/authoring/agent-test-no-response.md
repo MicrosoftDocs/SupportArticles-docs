@@ -1,6 +1,6 @@
 ---
 title: Fix agent not responding in Test your agent panel
-description: Resolve an issue that makes Microsoft Copilot Studio agents unresponsive in the Test your agent panel, and learn how to fix WebSocket connection problems.
+description: Resolve an issue that makes Microsoft Copilot Studio agents unresponsive in the Test your agent panel, and learn how to fix connection problems.
 ms.date: 02/24/2026
 ms.reviewer: erickinser, v-shaywood
 ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
@@ -10,7 +10,7 @@ ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
 
 ## Summary
 
-This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) in which an agent stops responding after the first interaction in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel. This issue typically occurs when a corporate firewall or proxy interferes with real-time message delivery by blocking or delaying the WebSocket connection that Copilot Studio relies on.
+This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) in which an agent stops responding after the first interaction in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel. This issue typically occurs when a corporate firewall or proxy interferes with real-time message delivery by blocking or delaying the connection that Copilot Studio relies on.
 
 ## Symptoms
 
