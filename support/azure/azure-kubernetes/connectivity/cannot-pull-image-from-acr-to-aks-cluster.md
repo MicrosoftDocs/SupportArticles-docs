@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
+ms.custom: sap:Connectivity
 ---
 # Troubleshoot failures when pulling images from Azure Container Registry to Azure Kubernetes Service cluster 
 
@@ -416,6 +416,32 @@ spec:
         image: myacr.azurecr.io/my-image:latest
         imagePullPolicy: IfNotPresent
 ```
+
+## Cause 7: TLS handshake timeout error happens when pulling images from ACR
+
+The following events and messages might occur when pulling images from ACR to AKS:
+
+```text
+ Type     Reason     Age                From               Message
+
+ ----     ------     ----               ----               -------
+
+ Normal   Scheduled  59s                default-scheduler  Successfully assigned api/testapi-worker-51235 to aks-api-573618vmss00000
+
+ Normal   BackOff    39s                kubelet            Back-off pulling image "test.azurecr.io/test-api:v1.1.3"
+
+ Warning  Failed     39s                kubelet            Error: ImagePullBackOff
+
+ Normal   Pulling    25s (x2 over 59s)  kubelet            Pulling image "test.azurecr.io/test-api:v1.1.3"
+
+ Warning  Failed     5s (x2 over 39s)   kubelet            Failed to pull image "test.azurecr.io/test-api:v1.1.3": failed to pull and unpack image "test.azurecr.io/test-api:v1.1.3": failed to resolve reference "test.azurecr.io/test-api:v1.1.3": failed to do request: Head "https://test.azurecr.io/v2/test-api/manifests/v1.1.3": net/http: TLS handshake timeout
+
+ Warning  Failed     5s (x2 over 39s)   kubelet            Error: ErrImagePull
+```
+
+### Solution: Update Azure Virtual Network Appliance (NVAs) with validated routes
+ 
+when you get this `net/http: TLS handshake` timeout, we recommend checking your network configuration, including firewall, proxy, and network connectivity settings. 
 
 ## Other considerations
 

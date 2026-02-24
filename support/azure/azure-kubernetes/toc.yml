@@ -103,6 +103,8 @@ items:
       href: connectivity/get-and-analyze-http-response-codes.md
     - name: Intermittent timeouts or server issues
       href: connectivity/intermittent-timeouts-or-server-issue.md
+    - name: Can't pull images from container registry to cluster
+      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
   - name: Can't connect to AKS cluster through API server
     items:
     - name: Basic troubleshooting
@@ -247,8 +249,6 @@ items:
     items:
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
-    - name: Can't pull images from container registry to cluster
-      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
     - name: Troubleshoot AI toolchain operator add-on errors
       href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
     - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
