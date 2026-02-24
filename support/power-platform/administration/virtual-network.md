@@ -4,7 +4,7 @@ description: Learn how to troubleshoot common scenarios for virtual networks in 
 author: faix
 ms.component: pa-admin
 ms.topic: troubleshooting-general
-ms.date: 09/15/2025
+ms.date: 02/24/2026
 ms.author: osfaixat
 ms.reviewer: sericks
 search.audienceType: 
@@ -47,8 +47,8 @@ The module includes several functions to diagnose and troubleshoot issues that a
 - [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity): Tests the network connectivity between the Power Platform environment and the destination resource.
 - [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake): Tests that a TLS handshake is able to be established between the Power Platform environment and the destination resource.
 
-For a full list of available functions within the EnterprisePolicies module see: [Microsoft.PowerPlatform.EnterprisePolicies Module
-](/powershell/module/microsoft.powerplatform.enterprisepolicies)
+For a full list of available functions within the EnterprisePolicies module, see [Microsoft.PowerPlatform.EnterprisePolicies Module
+](/powershell/module/microsoft.powerplatform.enterprisepolicies).
 
 ### Report issues in the diagnostics module
 
@@ -66,13 +66,13 @@ If everything is correctly configured, but you still experience issues, use the 
 Get-EnvironmentRegion -EnvironmentId "<EnvironmentId>"
 ```
 
-If the regions of the two environments are different, then one of your virtual networks has not been correctly setup. When running the diagnostic commands it is highly encouraged to run the commands against both regions to ensure your full setup is configured correctly. You can invoke a test against a specific region (as long as its a region supported by your enterprise policy) by specifying it when invoking the command, for example:
+If the regions of the two environments are different, then one of your virtual networks has not been correctly setup. When running the diagnostic commands it's highly encouraged to run the commands against both regions to ensure your full setup is configured correctly. You can invoke a test against a specific region (as long as it's a region supported by your enterprise policy) by specifying it when invoking the command, for example:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>" -Region "<AzureRegion>"
 ```
 
-Your environment belongs to a specific PowerPlatform geography. However, a PowerPlatform region can span two Azure regions. Your environment can be located in either region, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, configure your virtual networks in both Azure regions that are associated with your PowerPlatform region. To learn how PowerPlatform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
+Your environment belongs to a specific Power Platform geography. However, a Power Platform region can span two Azure regions. Your environment can be located in either region, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, configure your virtual networks in both Azure regions that're associated with your Power Platform region. To learn how Power Platform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
 
 ### Hostname not found
 
@@ -129,18 +129,19 @@ This command tries to establish a TCP connection to the specified destination an
 
 > [!NOTE]
 > This command tests only whether a TCP connection can be established to the specified destination and port. It doesn't test whether the resource is available or whether any application-level issues might be preventing access to the resource.
+> 
 > Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates network connectivity, that status doesn't guarantee that the resource is fully accessible. See []
 
 
 ### Can't establish a TLS handshake
 
-Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) to diagnose why a handshake can't be established run the following command:
+Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) to diagnose why a handshake can't be established. Run the following command:
 
 ```powershell
 Test-TLSHandshake -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
 ```
 
-The command will return information that can help you debug why the handshake failed. The output will contain information about certificate that was presented by the server, as well as information regarding the cipher suite, protocol and any SSL error if any.
+The command returns information that can help you debug why the handshake failed. The output contains information about the certificate that was presented by the server, as well as information regarding the cipher suite, protocol, and any SSL error, if any.
 
 > [!IMPORTANT]
 > Only publicly trusted certificates are supported. [My on-premises endpoint TLS certificates aren't signed by well-known root certification authorities (CA). Do you support unknown certificates?
