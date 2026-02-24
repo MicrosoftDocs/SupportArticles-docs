@@ -32,7 +32,7 @@ To identify and resolve the issue, follow these steps:
 1. Start a new conversation in the **Test your agent** panel.
 1. Look for a `/subscribe` request, and check that it's healthy. The request path should resemble the following URL:
 
-   `https://pvaruntime.{geo}-il{island}.gateway.prod.island.powerapps.com/environment/{EnvironmentId}/{BotId}/test/conversations/{ConversationId}/subscribe`
+   `https://pvaruntime.<Geo>-il<Island>.gateway.prod.island.powerapps.com/environment/<EnvironmentId>/<BotId>/test/conversations/<ConversationId>/subscribe`
 
 1. If the `/subscribe` request is missing, blocked, or stuck in a pending state, set up a firewall allow list, bypass, or exempt rule for the Copilot Studio request path.
 
