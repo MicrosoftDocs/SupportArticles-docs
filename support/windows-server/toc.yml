@@ -2576,18 +2576,12 @@ items:
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
       href: ./virtualization/hyper-v-limits-maximum-number-processors-host-os.md
-  - name: Container
-    items:
-    - name: API call of performance counters is delayed
-      href: ./virtualization/api-call-performance-counters-delay-container.md
   - name: GPU passthrough
     items:
     - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
       href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
-    - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
-      href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
     - name: Unresponsive VMs after cluster failover failure
@@ -2622,16 +2616,10 @@ items:
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Troubleshoot Hyper-V installation, configuration, and operational failures
       href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
-    - name: Upgrade computers with Hyper-V role installed
-      href: ./virtualization/upgrade-computers-hyper-v-role.md
-    - name: Windows Server 2019 Hyper-V host minroot behavior
-      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
     - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
       href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
-    - name: Degraded integration services message for non-Windows guests
-      href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Hyper-V virtual machine input, migration, and device integration issues
@@ -2640,12 +2628,8 @@ items:
       href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
-    - name: Uptime value of Hyper-V Management console changes to the resume time
-      href: ./virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
-    - name: VM Integration Services status reports protocol version mismatch
-      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
     - name: 'Troubleshooting guidance: Live Migration'
@@ -2668,16 +2652,10 @@ items:
       href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
-    - name: Troubleshoot a guarded fabric
-      href: ./virtualization/troubleshoot-guarded-fabric-overview.md
     - name: Troubleshoot Guarded Hosts
       href: ./virtualization/troubleshoot-guarded-hosts.md
-    - name: Troubleshoot shielded VMs
-      href: ./virtualization/troubleshoot-shielded-vms.md
     - name: Troubleshoot the Host Guardian Service
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
-    - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
-      href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
     - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
       href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
@@ -2690,16 +2668,8 @@ items:
       href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
   - name: Storage configuration
     items:
-    - name: Can't add a second Fibre Channel adapter
-      href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
     - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
       href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
-    - name: Error message after you put the page file on another drive other than the drive C
-      href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
-    - name: FCoE IO failures on Hyper-V guests
-      href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
-    - name: Virtual machine LUNs disappear after you configure them as MPIO devices
-      href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
     - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"

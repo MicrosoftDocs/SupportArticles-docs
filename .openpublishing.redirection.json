@@ -15211,6 +15211,76 @@
       "source_path": "support/windows-client/virtualization/supported-guest-operating-systems-virtual-pc.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/supported-guest-operating-systems-virtual-pc",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/api-call-performance-counters-delay-container.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/api-call-performance-counters-delay-container",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-second-fibre-channel-adapter-hyperv",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-change-configstorerootpath-value-hyperv-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/degraded-integration-services-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/degraded-integration-services-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-message-page-file-another-drive-guest-operating-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-message-page-file-another-drive-guest-operating-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/fcoe-io-failures-hyper-v-guests.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fcoe-io-failures-hyper-v-guests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-guarded-fabric-overview.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-shielded-vms.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/upgrade-computers-hyper-v-role.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/upgrade-computers-hyper-v-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/uptime-value-hyper-v-management-console-change-to-resume-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-dda-luns-disappear-after-mpio-config.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-dda-luns-disappear-after-mpio-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-integration-services-status-protocol-version-mismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-integration-services-status-protocol-version-mismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/windows-server-hyper-v-host-minroot-behaviors.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-hyper-v-host-minroot-behaviors",
+      "redirect_document_id": false
     }
   ]
 }
