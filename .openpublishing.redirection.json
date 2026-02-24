@@ -15299,6 +15299,81 @@
       "source_path": "support/windows-client/windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-enable-diagnostic-logging-for-windows-security-center",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/authorizaiton-issue-device-not-support-resource-sid-compression.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/authorizaiton-issue-device-not-support-resource-sid-compression",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/bak-log-files-deleted-lost.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/bak-log-files-deleted-lost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-add-trusted-domain-user-guest-account-turn-on.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-trusted-domain-user-guest-account-turn-on",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-copy-files-from-mapped-drive-to-local-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/computer-record-rejected-in-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/computer-record-rejected-in-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-support-suite-b-cryptographic-ipsec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-mbam-take-ownership-tpm.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-mbam-take-ownership-tpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-when-opening-reports-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-opening-reports-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fingerprint-registration-wizard-not-run-install-fingerprint-reader",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/mbam-enterprise-report-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mbam-enterprise-report-not-updated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/mbam-setup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mbam-setup-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/overlapping-forest-names-problem-forest-trust-established.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/overlapping-forest-names-problem-forest-trust-established",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/server-error-click-reports-tab-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/server-error-click-reports-tab-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/troubleshoot-kerberos-rbcd-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-kerberos-rbcd-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/trusted-domains-dont-appear.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/trusted-domains-dont-appear",
+      "redirect_document_id": false
     }
   ]
 }
