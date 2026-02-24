@@ -3,7 +3,7 @@ title: Fix agent not responding in Test your agent panel
 description: Resolve an issue that makes Microsoft Copilot Studio agents unresponsive in the Test your agent panel, and learn how to fix connection problems.
 ms.date: 02/24/2026
 ms.reviewer: erickinser, v-shaywood
-ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
+ms.custom: sap:Authoring
 ---
 
 # Agent doesn't respond in the Test your agent panel
