@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
-# You can't add an Internet calendar in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365
+# You can't add an Internet calendar in Outlook 2019, Outlook 2016, Outlook for Microsoft 365, and new Outlook
 
 _Original KB number:_ &nbsp; 4025591
 
@@ -50,7 +50,7 @@ When you use this method for some Internet servers, the calendar isn't added suc
 
 ## Cause
 
-By default, Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 use a new modern authentication stack. Even if the Internet calendar file that you try to open doesn't require authentication, Outlook broadcasts its ability to do modern authentication on the server that contains the calendar. Most server software responds to this broadcast by supporting modern authentication. However, some servers consider the broadcast to be an invalid client request. Therefore, they return a response that causes Outlook to cancel the attempt to add the calendar.
+By default, Outlook 2016, Outlook 2019, Outlook for Microsoft 365, and new Outlook use a new modern authentication stack. Even if the Internet calendar file that you try to open doesn't require authentication, Outlook broadcasts its ability to do modern authentication on the server that contains the calendar. Most server software responds to this broadcast by supporting modern authentication. However, some servers consider the broadcast to be an invalid client request. Therefore, they return a response that causes Outlook to cancel the attempt to add the calendar.
 
 For example, server software that's running on Amazon Web Services (AWS) may consider the authentication broadcast to be invalid and refuse the connection.
 
