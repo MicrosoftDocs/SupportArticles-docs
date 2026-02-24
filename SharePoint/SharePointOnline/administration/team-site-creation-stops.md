@@ -20,6 +20,9 @@ appliesto:
 ---
 
 # Creating a team site from SharePoint Home doesn’t finish
+> [!NOTE]
+> By summer 2026, SharePoint Home will be replaced with a new Discover experience. Learn more about what Discover offers here.
+> 
 
 ## Symptoms
 
