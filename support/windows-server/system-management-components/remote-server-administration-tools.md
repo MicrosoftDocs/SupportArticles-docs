@@ -1,7 +1,7 @@
 ---
 title: Remote Server Administration Tools
 description: This article describes the tools that are available in Remote Server Administration Tools for Windows.
-ms.date: 02/12/2026
+ms.date: 02/24/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -80,7 +80,9 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 ## RSAT for Windows 10, version 1809 or later versions
 
 > [!NOTE]
-> You can't use the Turn Windows features on and off dialog from the Control Panel
+> You can't use the Turn Windows features on and off dialog from the Control Panel.
+> For Windows 11, version 25H2 on Arm64-based devices, access some of the RSAT tools by going to **Control Panel** > **Programs** > **Programs and Features** > **Turn Windows features on or off**.
+> Currently available RSAT snapins in Arm64 are RSAT: Active Directory Domain Services and Lightweight Directory Services Tools, RSAT: Active Directory Certificate Services Tools, RSAT: Server Manager, RSAT: Group Policy Management Tools, RSAT: DNS Server Tools, and RSAT: DHCP Server Tools.
 
 Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System and can be added via **Optional Features**.
 
