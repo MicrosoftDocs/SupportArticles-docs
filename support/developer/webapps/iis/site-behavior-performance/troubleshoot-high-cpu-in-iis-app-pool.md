@@ -208,6 +208,12 @@ htmlTable += "</table>";
 
 This kind of code causes high CPU.
 
+### Analyze ETW traces that PerfView collects
+
+ETW traces that you collect by using PerfView are primarily useful when you contact Microsoft Support for further assistance. Have the ETW trace file ready when you open a support case to help Microsoft support engineers analyze CPU consumption patterns over time and identify the root cause more quickly.
+
+To learn more about analyzing ETW traces on your own, see [PerfView tutorial: Simple CPU performance investigation](https://learn.microsoft.com/shows/perfview-tutorial/2-simple-cpu-performance-investigation).
+
 ## Conclusion
 
 By using Perfmon, DebugDiag, and PerfView, you can easily collect data to determine the cause of high CPU usage in application pools. If you can't find the root cause by using these techniques, contact Microsoft Support for further assistance.  By having the Perfmon data and dump files ready when you open a case, you can dramatically reduce the time that's required for Microsoft support engineers to assist you.
