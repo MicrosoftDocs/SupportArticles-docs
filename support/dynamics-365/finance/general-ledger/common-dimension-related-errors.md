@@ -201,7 +201,7 @@ This error appears when an incorrect dimension value was entered that doesn't fo
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
-### Dimension values were validated with this advanced rule structure...
+### Dimension values were validated with this advanced rule structure / account structure ...
 This error occurs when an account doesn't follow the account structure or advanced rules configured for the ledger.
 
 - **Review account structure and advanced rule setup**:
