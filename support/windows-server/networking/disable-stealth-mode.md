@@ -1,7 +1,7 @@
 ---
 title: How to disable stealth mode
 description: Discusses how to disable stealth mode (a Windows filtering platform feature) for a given profile.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

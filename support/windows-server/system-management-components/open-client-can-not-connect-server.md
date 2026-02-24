@@ -1,7 +1,7 @@
 ---
 title: OpenSSH Client Can't Connect To a Server via SSH
 description: Addresses multiple common causes and solutions when encountering OpenSSH connection errors related to host key algorithm mismatches on Windows systems.
-ms.date: 09/16/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

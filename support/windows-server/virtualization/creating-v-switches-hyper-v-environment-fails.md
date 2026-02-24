@@ -1,7 +1,7 @@
 ---
 title: Creating V-switches within the hyper-V environment fails
 description: Provides workarounds for an issue where creating V-switches within the hyper-V environment fails.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

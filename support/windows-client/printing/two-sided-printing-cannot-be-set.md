@@ -1,7 +1,7 @@
 ---
 title: Duplex printing options can't be set
 description: Resolves an issue that prevents the settings for duplex printing options from being changed through applications.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

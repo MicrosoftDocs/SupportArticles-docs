@@ -1,7 +1,7 @@
 ---
 title: Additional gateways appear in persistent routes
 description: Describes an issue in which using LBFO causes additional gateways to appear in persistent routes.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer
 description: Provides a resolution for the error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

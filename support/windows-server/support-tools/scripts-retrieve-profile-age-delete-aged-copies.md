@@ -1,7 +1,7 @@
 ---
 title: Scripts to retrieve profile age and optionally delete aged copies
 description: Provides a script to retrieve profile age and optionally delete aged copies.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

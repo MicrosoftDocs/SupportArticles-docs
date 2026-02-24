@@ -1,7 +1,7 @@
 ---
 title: VM cannot add Fibre Channel adapter
 description: Provides the information that Windows Server 2019 allows only one Fibre Channel adapter per virtual machine.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

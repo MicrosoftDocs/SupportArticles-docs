@@ -1,7 +1,7 @@
 ---
 title: Credential limit per app
 description: Troubleshoot an issue where only 20 credentials can be used per app.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

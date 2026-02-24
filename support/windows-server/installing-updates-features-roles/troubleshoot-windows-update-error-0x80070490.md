@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error 0x80070490
 description: Learn how to resolve Windows Update error 0x80070490, which occurs due to driver failures during update installations.
-ms.date: 04/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

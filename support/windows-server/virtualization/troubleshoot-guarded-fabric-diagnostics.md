@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot using the Guarded Fabric Diagnostic Tool
 description: Provides information about troubleshooting using the Guarded Fabric Diagnostic Tool.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

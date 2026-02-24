@@ -28,7 +28,7 @@ The issue occurs because Azure isn't notified of the ingestion key rotation. The
 
 To work around the issue, manually update the ingestion key by using the following API call:
 
-1. Find the **Resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them. The following is an example of a Resource ID: `/subscriptions/0493ccca-0000-0000-0000-f9bca5fc5dc9/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource`.
+1. Find the **Resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them. The following is an example of a Resource ID: `/subscriptions/aaaabbbb-0000-cccc-1111-dddd2222eeee/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource`.
   It includes the subscription ID, the resource group name, and the Azure New Relic resource name.
 
 2. Make the API call to update the ingestion key. Use an API client to make a **POST** request to the following endpoint. You must replace the placeholders with your actual values:
@@ -38,7 +38,7 @@ To work around the issue, manually update the ingestion key by using the followi
      ```
      In this example, the full API endpoint is:
      ```HTTP
-     https://management.azure.com/subscriptions/0493ccca-0000-0000-0000-f9bca5fc5dc9/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource/refreshIngestionKey
+     https://management.azure.com/subscriptions/aaaabbbb-0000-cccc-1111-dddd2222eeee/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource/refreshIngestionKey
      ```
 
      **Query parameter**: `api-version`: `2024-10-01`

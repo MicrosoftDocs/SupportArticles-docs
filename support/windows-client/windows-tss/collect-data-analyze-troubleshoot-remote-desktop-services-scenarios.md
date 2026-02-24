@@ -1,7 +1,7 @@
 ---
 title: Collect Data to Analyze and Troubleshoot Remote Desktop Services Scenarios
 description: Helps gather information about your issue by using the TroubleShootingScript (TSS) toolset and learn what data to collect based on Remote Desktop Services scenarios.
-ms.date: 07/22/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

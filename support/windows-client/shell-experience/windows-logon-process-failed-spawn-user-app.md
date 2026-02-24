@@ -1,7 +1,7 @@
 ---
 title: Blank desktop after you log on
 description: Discusses an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

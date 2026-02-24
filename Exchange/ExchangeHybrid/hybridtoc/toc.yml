@@ -140,6 +140,8 @@ items:
           href: ../hybrid-configuration-wizard-errors/the-domains-already-exist-in-another-organization-error.md
         - name: Edge Transport servers can't be specified
           href: ../hybrid-configuration-wizard-errors/hcw8043-edge-transport-servers-not-specified.md
+        - name: Error 429 in Hybrid Configuration Wizard
+          href: ../hybrid-configuration-wizard-errors/error-429-in-hcw.md          
         - name: Error running the Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/run-hybrid-configuration-wizard-error.md
         - name: Exception error when running the Hybrid Configuration Wizard

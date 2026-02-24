@@ -2,7 +2,7 @@
 title: Troubleshoot issues with the Windows 365 app
 description: Provides solutions, tips, or best practices to resolve the issues with the Windows 365 app.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: chbrinkhoff, erikje
 ms.custom:

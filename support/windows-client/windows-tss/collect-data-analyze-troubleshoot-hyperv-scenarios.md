@@ -1,7 +1,7 @@
 ---
 title: Collect data to analyze and troubleshoot Hyper-V scenarios
 description: This article describes how to gather information by using the Microsoft Troubleshooting Support Script (TSS) for Hyper-V related issues.
-ms.date: 10/16/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

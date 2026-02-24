@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Netlogon Service Startup Failures
 description: Describes the symptoms, causes, and solutions for the scenarios that lead to Netlogon service startup failures.
-ms.date: 05/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

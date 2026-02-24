@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Virtual TPM, Shielded VM, and Host Guardian Service Issues
 description: Helps troubleshoot virtual TPM (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) issues in Hyper-V clusters.
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

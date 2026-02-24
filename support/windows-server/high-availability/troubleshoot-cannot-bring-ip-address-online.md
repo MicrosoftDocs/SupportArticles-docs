@@ -1,7 +1,7 @@
 ---
 title: Can't bring an IP Address online in a cluster
 description: Provides guidance for when an IP address fails to come online in a Windows-based failover cluster
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Overlapping Forest Names cause problems once Forest Trusts are established
 description: Describe how to solve the problem of overlapping Forest Names causes when Forest Trusts are established
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

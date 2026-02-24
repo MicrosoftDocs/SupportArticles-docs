@@ -24,3 +24,5 @@ landingContent:
         links:
           - text: ApplicationGatewaySkuNotSpecified error
             url: error-codes/applicationgatewayskunotspecified.md
+          - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
+            url: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md

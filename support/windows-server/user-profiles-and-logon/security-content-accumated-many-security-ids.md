@@ -1,7 +1,7 @@
 ---
 title: Error 1384 when you log on to a domain
 description: Discusses an issue where you get a 1384 error when you log on to a domain or connect to a network share on a server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

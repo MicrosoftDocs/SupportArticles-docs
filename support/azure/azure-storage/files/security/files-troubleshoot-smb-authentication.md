@@ -197,7 +197,7 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 1. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
 1. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 1. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](/troubleshoot/windows-server/networking/disable-http-proxy-auth-features#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
+1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
 1. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
 1. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
 1. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
@@ -401,18 +401,16 @@ If this is the case, ask your Microsoft Entra admin to grant admin consent to th
 
 <a name='error---the-request-to-aad-graph-failed-with-code-badrequest'></a>
 
-### Error - "The request to Azure AD Graph failed with code BadRequest"
+### Error - "The request to Microsoft Graph failed with code BadRequest"
 
 #### Cause 1: An application management policy is preventing credentials from being created
 
-When enabling Microsoft Entra Kerberos authentication, you might encounter this error if the following conditions are met:
+When enabling Microsoft Entra Kerberos authentication, you might encounter this error if you (or your administrator) has set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) or an [application management policy](/graph/api/resources/appmanagementpolicy) that:
 
-1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
-2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
-    - Has no start date or has a start date before January 1, 2019.
-    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of fewer than 365.5 days.
+- Applies to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
+- Sets a restriction on service principal passwords, which either blocks password addition or restricts maximum password lifetime to fewer than 365.5 days.
 
-There is currently no workaround for this error.
+To resolve this error, you should configure the offending policy to [grant an exception](/entra/identity/enterprise-apps/configure-app-management-policies#grant-an-exception-to-a-user-or-service) to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
 
 #### Cause 2: An application already exists for the storage account
 
@@ -591,5 +589,3 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
-
- 

@@ -19,11 +19,14 @@ SQL Server Express editions don't offer a way to schedule either jobs or mainten
 
 Currently SQL Server Express users can back up their databases by using one of the following methods:
 
-Use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). For more information on how to use these tools to Back up a database review the following links:
+- [sqlcmd utility](/sql/tools/sqlcmd/sqlcmd-utility)
+- [SQL Server Management Studio](/ssms/sql-server-management-studio-ssms)
+- [MSSQL extension for Visual Studio Code](/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code)
 
-- [Create a Full Database Backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+For more information on how to use these tools to back up a database, review the following links:
 
-- [Tutorial: Back up and restore databases using Azure Data Studio](/sql/azure-data-studio/tutorial-backup-restore-sql-server)
+- [Create a full database backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+- [Restore a Database Backup Using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
 - Use a Transact-SQL script that uses the BACKUP DATABASE family of commands. For more information, see [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).
 

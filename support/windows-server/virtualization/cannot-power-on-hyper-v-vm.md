@@ -1,7 +1,7 @@
 ---
 title: Can't Power on Hyper-V VM and Merges Fail
 description: Resolves issues that prevent you from powering on Hyper-V VM because of insufficient free disk space.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
