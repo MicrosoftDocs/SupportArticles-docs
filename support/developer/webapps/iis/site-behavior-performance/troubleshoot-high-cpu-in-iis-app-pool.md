@@ -212,7 +212,7 @@ This kind of code causes high CPU.
 
 ETW traces that you collect by using PerfView are primarily useful when you contact Microsoft Support for further assistance. Have the ETW trace file ready when you open a support case to help Microsoft support engineers analyze CPU consumption patterns over time and identify the root cause more quickly.
 
-To learn more about analyzing ETW traces on your own, see [PerfView tutorial: Simple CPU performance investigation](https://learn.microsoft.com/shows/perfview-tutorial/2-simple-cpu-performance-investigation).
+To learn more about analyzing ETW traces on your own, see [PerfView tutorial: Simple CPU performance investigation](/shows/perfview-tutorial/2-simple-cpu-performance-investigation).
 
 ## Conclusion
 
