@@ -27,10 +27,24 @@ _Original KB number:_ &nbsp; 4025591
 You try to add an Internet calendar in Microsoft Outlook 2016, Outlook 2019, or Outlook for Microsoft 365 by following these steps:
 
 1. Switch to the calendar module.
-2. In the **Manage Calendars** group on the toolbar, select **Open Calendar**.
-3. Select the **From Internet** option.
-4. Provide the path of your Internet calendar file.
-5. Select **OK**.
+1. In the **Manage Calendars** group on the toolbar, select **Open Calendar**.
+1. Select the **From Internet** option.
+1. Provide the path of your Internet calendar file.
+1. Select **OK**.
+
+__Or;__
+
+__You try to add an Internet calendar in new Outlook by following these steps:__
+
+__1.      Switch to the Calendar module.__
+
+__2.      Select _Add Calendar_ from the left navigation pane.__
+
+__3.      Select _Subscribe from web_ in the left navigation pane in the Add Calendar window.__
+
+__4.      Provide the path of your internet calendar file.__
+
+__5.      Select _Import_.__
 
 When you use this method for some Internet servers, the calendar isn't added successfully. After a progress window opens briefly, you're returned to the calendar module without a new calendar added. Additionally, you don't receive any error message.
 
