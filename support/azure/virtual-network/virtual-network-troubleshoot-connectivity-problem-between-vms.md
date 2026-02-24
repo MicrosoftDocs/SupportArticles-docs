@@ -18,8 +18,7 @@ ms.custom: = sap:Connectivity
 
 You might experience connectivity problems between Azure virtual machines (VMs). This article provides troubleshooting steps to help you resolve this problem. 
 
-> [!NOTE]
-> We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az?view=azps-15.3.0).
+If your Azure issue is not addressed in this article, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post your issue in these forums, or post to [@AzureSupport](https://twitter.com/AzureSupport) on Twitter. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
 
 ## Symptom
 
