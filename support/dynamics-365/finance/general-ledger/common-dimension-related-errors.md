@@ -27,20 +27,19 @@ This article describes common financial dimension-related errors that users enco
 
 You might encounter one of the following error messages when working with financial dimensions in Dynamics 365 Finance:
 
-- "Unable to return DimensionAttributeValue record for ..."
-- "Unable to return DimensionAttributeValue record for ... with value ... as no record exists in table ... through view ...."
-- "The financial dimension name ... contains invalid characters"
-- "The value ... does not exist for ...."
-- "... is suspended."
-- "... is not active."
-- "The combination was not validated beyond the ... financial dimension."
-- "Cannot edit/add financial dimension due to security related error"
-- "You must select a value in the ... field in combination with the following dimensions values that are valid"
-- "Blank is not allowed for ... for the combination."
-- "... is not an allowed value in combination with the following dimensions values that are valid"
-- "Dimension values were validated with this advanced rule structure..."
-- "... is not a valid dimension value in account structure"
-- "Derived dimension error with Prevent changes enabled"
+- ["Unable to return DimensionAttributeValue record for ..."](#unable-to-return-dimensionattributevalue-record-for-dimension--with-value--as-no-record-exists-in-table--through-view-)
+- ["Unable to return DimensionAttributeValue record for ... with value ... as no record exists in table ... through view ...."](#unable-to-return-dimensionattributevalue-record-for-dimension--with-value--as-no-record-exists-in-table--through-view-)
+- ["The financial dimension name ... contains invalid characters"](#the-financial-dimension-name--contains-invalid-characters)
+- ["The value ... does not exist for ...."](#the-value--does-not-exist-for-)
+- ["... is suspended."](#-is-suspended)
+- ["... is not active."](#-is-not-active)
+- ["The combination was not validated beyond the ... financial dimension."](#the-combination-was-not-validated-beyond-the--financial-dimension)
+- ["You must select a value in the ... field in combination with the following dimensions values that are valid"](#you-must-select-a-value-in-the--field-in-combination-with-the-following-dimensions-values-that-are-valid)
+- ["Blank is not allowed for ... for the combination."](#blank-is-not-allowed-for--for-the-combination)
+- ["... is not an allowed value in combination with the following dimensions values that are valid"](#-is-not-an-allowed-value-in-combination-with-the-following-dimensions-values-that-are-valid)
+- ["Dimension values were validated with this advanced rule structure..."](#dimension-values-were-validated-with-this-advanced-rule-structure)
+- ["... is not a valid dimension value in account structure"](#-is-not-a-valid-dimension-value-in-account-structure)
+- ["Derived dimension error with Prevent changes enabled"](#derived-dimension-error-with-prevent-changes-enabled)
 
 ## Resolution
 
@@ -53,7 +52,15 @@ This error means that the dimension value entered was not found in the system.
   3. Ensure the value exists on this page.
   4. If the value doesn't exist, add it accordingly.
 
-- **XDS security is enabled on the backing table**: Extensible Data Security (XDS) policies might be preventing access to the dimension value. Review and configure XDS security policies. For more information, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies).
+- **XDS security is enabled on the backing table**: Extensible Data Security (XDS) policies might be preventing access to the dimension value. When XDS filters are applied to the backing entity, and the user doesn't have permission to view it, the dimension value might appear blank or missing. For more information, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies).
+
+- **The user lacks the necessary security role**: If your security role doesn't include access to the company or entity where the dimension value resides, it might appear blank or missing. This situation is especially common when XDS filters are applied to the backing entity.
+
+  To assign the appropriate security role:
+  1. Go to **System administration** > **Users** > **Users**.
+  2. Select the affected user.
+  3. Select **Roles** > **Assign organizations**.
+  4. Review the access scope and grant access to the required organizations. To test, select **Grant access to all organizations** and check whether the dimension value appears.
 
 ### The financial dimension name ... contains invalid characters
 Financial dimension names must follow specific naming conventions. The allowed characters for dimension attributes are:
@@ -214,6 +221,11 @@ This error occurs when an account doesn't follow the account structure or advanc
 ### ... is not a valid dimension value in account structure
 This error occurs when the main account or another entity isn't recognized as valid within the assigned account structure.
 
+- **Use a dimension value that doesn't violate your account structure**:
+  1. Review the account structure to identify which values are allowed for the dimension.
+  2. Go to the transaction where the error occurs.
+  3. Replace the invalid dimension value with one that's permitted by your account structure configuration.
+
 - **Activate the account structure**:
   1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**.
   2. Select the account structure.
@@ -225,7 +237,7 @@ This error occurs when the main account or another entity isn't recognized as va
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
-### Derived dimension error with Prevent changes enabled
+### The ... dimension with value ... is not allowed due to derived dimension rules. The allowed value should be ....
 This error occurs when a derived dimension rule has **Prevent changes** enabled for the segment that's causing the error. When this option is enabled, the derived dimension automatically populates the segment and prevents manual changes.
 
 **To resolve this issue:**
