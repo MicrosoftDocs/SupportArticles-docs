@@ -104,7 +104,7 @@ items:
     - name: Intermittent timeouts or server issues
       href: connectivity/intermittent-timeouts-or-server-issue.md
     - name: Can't pull images from container registry to cluster
-      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
+      href: connectivity/cannot-pull-image-from-acr-to-aks-cluster.md
   - name: Can't connect to AKS cluster through API server
     items:
     - name: Basic troubleshooting

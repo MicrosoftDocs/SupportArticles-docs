@@ -315,7 +315,7 @@ If the AKS cluster connects publicly to the container registry (**not** through 
       > [!NOTE]
       > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
 
-      :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to address range" lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
+      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot on how to add AKS Load Balancer's public IP address to address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
 
 ## Cause 4: `i/o timeout` error
 
