@@ -32,6 +32,8 @@ When you try to send a response to a meeting request in Microsoft Outlook, the o
 
 Because you can't send a response, the meeting organizer doesn't receive one from you, and the meeting tracking feature is not updated as expected.
 
+__NOTE:__ The ability to respond to a meeting request with Edit the response before sending, Send the response now, and Do not send a response is __not supported__ in new Outlook.
+
 ## Cause
 
 This issue occurs if the meeting organizer added you as a resource to the meeting and you are external to the meeting organizers domain.
