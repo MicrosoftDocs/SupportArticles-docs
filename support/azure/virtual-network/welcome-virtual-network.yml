@@ -24,3 +24,5 @@ landingContent:
         links:
           - text: Virtual Network troubleshooter
             url: connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+          - text: Troubleshooting connectivity problems between Azure VMs
+            url: virtual-network-troubleshoot-connectivity-problem-between-vms.md 
