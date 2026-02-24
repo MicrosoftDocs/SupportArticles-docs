@@ -1980,8 +1980,6 @@ items:
       href: ./remote/windows-server-2016-rds-updates.md
     - name: Set up logon script only for Terminal Server users
       href: ./remote/set-up-logon-script-terminal-server-users.md
-    - name: 'Terminal Server Commands: CHANGE'
-      href: ./remote/terminal-server-commands-change.md
     - name: Terminal Server errors 2200 to 2299
       href: ./remote/terminal-server-error-messages-2200-to-2299.md
     - name: Terminal Server startup, connection and application
@@ -2018,8 +2016,6 @@ items:
       href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
-    - name: Error 0xc0000005 when you log on to Terminal Server client
-      href: ./remote/0xc0000005-terminal-server-client.md
     - name: Error "Remote Desktop cannot verify the identity of the remote computer"
       href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md
     - name: Event ID 10000 when Terminal Server is enabled
@@ -2056,16 +2052,12 @@ items:
       href: ./remote/communication-issues.md
     - name: RDS role cannot coexist with AD DS role
       href: ./remote/remote-desktop-services-role-cannot-coexist-adds.md
-    - name: Remote Desktop Server farm is unavailable over DirectAccess
-      href: ./remote/remote-desktop-server-farm-not-available.md
   - name: Performance (audio and video) and RemoteFX
     items:
     - name: Frame rate is limited to 30 FPS in remote sessions
       href: ./remote/frame-rate-limited-to-30-fps.md
     - name: New and existing RemoteFX-enabled VMs do not start
       href: ./remote/remotefx-enabled-vms-dont-start.md
-    - name: Physical GPU settings is unavailable post domain join
-      href: ./remote/physical-gpu-settings-unavailable-post-domain-join.md
     - name: Remote Desktop can't connect to VDI-based computer
       href: ./remote/cannot-connect-to-vdi-remote-computer.md
   - name: Printing (includes redirection)
@@ -2080,8 +2072,6 @@ items:
       href: ./remote/cannot-connect-to-remote-computer.md
     - name: Can't sign in to a published application with SSO through RD Web
       href: ./remote/cannot-sign-in-published-application-sso-rd-web.md
-    - name: No Connected icon in notification area
-      href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
       href: ./remote/edge-not-work-run-rdweb-require-activex-controls.md
     - name: Remote Desktop Web Access troubleshooting
@@ -2092,8 +2082,6 @@ items:
       href: ./remote/caps-lock-key-status-not-synced-to-client.md
     - name: Copying files exceeding 2 GB fails
       href: ./remote/copying-2-gb-file-by-clipboard-redirection-fails.md
-    - name: RemoteFX USB redirected scanner doesn't start
-      href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: RemoteApp applications
     items:
     - name: Application doesn't start in TS RemoteApp session
@@ -2130,8 +2118,6 @@ items:
       href: ./remote/remote-desktop-licensing-mode-not-configured-warning.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
-    - name: Remote session disconnected when using non-persistent VDI with per-user licensing
-      href: ./remote/remote-desktop-services-per-user-licensing.md
     - name: Remove Terminal Server licenses from RDP client
       href: ./remote/remove-terminal-server-licenses-from-rdp.md
     - name: Set up RD licensing across domains forests or workgroups
@@ -2152,8 +2138,6 @@ items:
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: Applications crash if another user logs off
       href: ./remote/applications-crash-if-another-user-logs-off-session.md
-    - name: Available updates for Terminal Services (Remote Desktop Services)
-      href: ./remote/available-updates-terminal-services.md
     - name: Cannot remove an RD Host from an RDS deployment
       href: ./remote/cannot-remove-rd-host-from-rds-deployment.md
     - name: Can't establish a Remote Desktop session
@@ -2166,14 +2150,8 @@ items:
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Clients can't connect and get the "Class not registered" error
       href: ./remote/rdp-error-class-not-registered.md
-    - name: Connection Broker can't be mixed
-      href: ./remote/connection-broker-cant-be-mixed.md
-    - name: Credential limit per app
-      href: ./remote/credential-limit-per-app.md
     - name: How to disable warning message for idle remote desktop sessions
       href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
-    - name: Input method editor issue in RemoteApp scenarios
-      href: ./remote/input-method-editor-issue-remoteapp.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
@@ -2218,8 +2196,6 @@ items:
     items:
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
-    - name: VDI collection requires two-way trust
-      href: ./remote/vdi-collection-requires-two-way-trust.md
 - name: Resources
   items:
   - name: Virtual Agent
@@ -2264,8 +2240,6 @@ items:
       href: ./setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values.md
     - name: '"Stop 0x0000007B" error'
       href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
-    - name: Support policy for third-party, kernel-level software
-      href: ./setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation.md
     - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
       href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
     - name: VMware driver installation fails in Windows Server 2008 R2 SP1
@@ -2294,10 +2268,6 @@ items:
       href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
     - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
       href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
-    - name: Error 0x800f0906 when you convert Server Core to GUI
-      href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
-    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
-      href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md
     - name: Error when you configure a server with Server Manager
       href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
     - name: Event ID 307 and 304 logged for deploying Windows
@@ -2306,20 +2276,14 @@ items:
       href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
     - name: In-place upgrade hangs at black screen
       href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
-    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
-      href: ./setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager.md
     - name: Known issues that affect AppX cleanup maintenance task
       href: ./setup-upgrade-and-drivers/issues-appx-cleanup-maintenance-task.md
     - name: Long paths with spaces require quotation marks
       href: ./setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark.md
     - name: Manually edit Boot.ini file
       href: ./setup-upgrade-and-drivers/manually-edit-boot-file.md
-    - name: MDT Media Deployment USB isn't bootable
-      href: ./setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
-    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
-      href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: PCR7 configuration "Binding not possible" error
       href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
     - name: Post-Deployment Configuration task fails
@@ -2332,8 +2296,6 @@ items:
       href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
     - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
-    - name: Upgrade fails with error 0x000000C4
-      href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
     - name: Upgrade fails and generates error code 0xC1900101-0x20017
       href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
@@ -2344,10 +2306,6 @@ items:
       href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
-  - name: Windows ADK installation
-    items:
-    - name: Multicast deployment fails from WDS
-      href: ./setup-upgrade-and-drivers/multicast-deployment-fails-from-wds.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -2368,10 +2326,6 @@ items:
       href: ./shell-experience/access-denied-runas-command-run-as-administrator.md
     - name: Enable and use the Run As feature
       href: ./shell-experience/use-run-as-feature.md
-    - name: Multipoint Manager error during startup
-      href: ./shell-experience/multipoint-manager-error-during-startup.md
-    - name: Task manager displays incorrect value for L2/L3 cache
-      href: ./shell-experience/task-manager-displays-incorrect-value.md
     - name: Use Run as to start an app as an administrator
       href: ./shell-experience/use-run-as-start-app-admin.md
   - name: DPI and Display Issues
@@ -2386,10 +2340,6 @@ items:
       href: ./shell-experience/default-date-format-changed.md
   - name: File Explorer/Windows Explorer
     items:
-    - name: High-speed network adapters show inaccurate link speeds
-      href: ./shell-experience/network-adapters-inaccurate-link-speed.md
-    - name: Increased CPU usage when accessing a FileTable share
-      href: ./shell-experience/increased-cpu-usage.md
     - name: TEMP folder with logon session ID is deleted
       href: ./shell-experience/temp-folder-with-logon-session-id-deleted.md
   - name: Lock Screen or Screensaver
@@ -2400,10 +2350,6 @@ items:
     items:
     - name: Remote Assistance connection doesn't work with FIPS encryption
       href: ./shell-experience/fips-encryption-not-allow-remote-assistance-connection.md
-  - name: Start Menu
-    items:
-    - name: Start menu shortcuts aren't immediately accessible
-      href: ./shell-experience/start-menu-shortcuts-arent-immediately-accessible.md
   - name: Windows Media Player
     items:
     - name: How to enable the user experience features
@@ -2414,12 +2360,6 @@ items:
     href: ./software-defined-networking/software-defined-networking-overview.md
   - name: 'Troubleshooting guidance: SDN'
     href: ./software-defined-networking/troubleshoot-sdn-guidance.md
-  - name: Internal DNS Server for SDN
-    items:
-    - name: Software Defined Data Center and Software Defined Networking
-      href: ./software-defined-networking/software-defined-data-center-and-networking.md
-  - name: Troubleshoot SDN
-    href: ./software-defined-networking/troubleshoot-software-defined-networking.md
   - name: Troubleshoot the Windows Server Software Defined Networking Stack
     href: ./software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack.md
 - name: System Management Components
@@ -2474,8 +2414,6 @@ items:
     items:
     - name: CJK characters are garbled in PowerShell
       href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
-    - name: Enter-PSSession cmdlet fails
-      href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
   - name: Server Manager
     items:
     - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
@@ -2492,8 +2430,6 @@ items:
       href: ./system-management-components/task-manager-disabled-by-administrator.md
   - name: Task Scheduler
     items:
-    - name: Error 0x8007000d when you run an old scheduled task
-      href: ./system-management-components/error-0x8007000d-data-invalid.md
     - name: Failed to schedule Software Protection service for restart
       href: ./system-management-components/failed-schedule-software-protection.md
     - name: How To Schedule a Server Process
@@ -2504,8 +2440,6 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks fail with "Task schedular service is not available"
       href: ../windows-client/system-management-components/task-schedular-service-is-not-available.md?context=/troubleshoot/windows-server/context/context
-    - name: Scheduled tasks reference incorrect user profile paths
-      href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
     - name: Troubleshoot issues with the Task Scheduler service not starting
@@ -2520,8 +2454,6 @@ items:
     items:
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
-    - name: Event 5605 when querying MSCluster namespace by WMI
-      href: ./system-management-components/event-5605-query-mscluster-namespace.md
     - name: Identify the cause of unexpected WMI shutdown
       href: ./system-management-components/identify-cause-of-wmi-shutdown.md
     - name: Microsoft-Windows-RPC-Events Event 11 after reboot
@@ -2620,18 +2552,12 @@ items:
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
       href: ./virtualization/hyper-v-limits-maximum-number-processors-host-os.md
-  - name: Container
-    items:
-    - name: API call of performance counters is delayed
-      href: ./virtualization/api-call-performance-counters-delay-container.md
   - name: GPU passthrough
     items:
     - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
       href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
-    - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
-      href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
     - name: Unresponsive VMs after cluster failover failure
@@ -2666,16 +2592,10 @@ items:
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Troubleshoot Hyper-V installation, configuration, and operational failures
       href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
-    - name: Upgrade computers with Hyper-V role installed
-      href: ./virtualization/upgrade-computers-hyper-v-role.md
-    - name: Windows Server 2019 Hyper-V host minroot behavior
-      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
     - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
       href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
-    - name: Degraded integration services message for non-Windows guests
-      href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Hyper-V virtual machine input, migration, and device integration issues
@@ -2684,12 +2604,8 @@ items:
       href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
-    - name: Uptime value of Hyper-V Management console changes to the resume time
-      href: ./virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
-    - name: VM Integration Services status reports protocol version mismatch
-      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
     - name: 'Troubleshooting guidance: Live Migration'
@@ -2712,16 +2628,10 @@ items:
       href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
-    - name: Troubleshoot a guarded fabric
-      href: ./virtualization/troubleshoot-guarded-fabric-overview.md
     - name: Troubleshoot Guarded Hosts
       href: ./virtualization/troubleshoot-guarded-hosts.md
-    - name: Troubleshoot shielded VMs
-      href: ./virtualization/troubleshoot-shielded-vms.md
     - name: Troubleshoot the Host Guardian Service
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
-    - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
-      href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
     - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
       href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
@@ -2734,16 +2644,8 @@ items:
       href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
   - name: Storage configuration
     items:
-    - name: Can't add a second Fibre Channel adapter
-      href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
     - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
       href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
-    - name: Error message after you put the page file on another drive other than the drive C
-      href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
-    - name: FCoE IO failures on Hyper-V guests
-      href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
-    - name: Virtual machine LUNs disappear after you configure them as MPIO devices
-      href: ./virtualization/vm-dda-luns-disappear-after-mpio-config.md
   - name: Virtual machine creation
     items:
     - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
@@ -2820,22 +2722,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: MBAM'
       href: ./windows-security/troubleshoot-mbam-guidance.md
-    - name: Computer Record is Rejected in MBAM
-      href: ./windows-security/computer-record-rejected-in-mbam.md
-    - name: Error when opening reports in MBAM
-      href: ./windows-security/error-when-opening-reports-mbam.md
-    - name: Error when viewing reports in MBAM
-      href: ./windows-security/server-error-click-reports-tab-mbam.md
     - name: How to configure MBAM with Secure Network Communication
       href: ./windows-security/mbam-secure-network-communication.md
     - name: How to use BitLocker Recovery Password Viewer
       href: ./windows-security/bitlocker-recovery-password-viewer-tool.md
-    - name: MBAM Enterprise Reports aren't updated
-      href: ./windows-security/mbam-enterprise-report-not-updated.md
-    - name: MBAM fails to take ownership of the TPM
-      href: ./windows-security/error-mbam-take-ownership-tpm.md
-    - name: MBAM setup fails if SSRS is not configured properly
-      href: ./windows-security/mbam-setup-fails.md
   - name: Domain and forest trusts
     items:
     - name: Can't set up a trust between a Windows-based domain and an AD-based domain
@@ -2844,20 +2734,10 @@ items:
       href: ./windows-security/recover-from-golden-gmsa-attack.md
     - name: How to remove orphaned domains
       href: windows-security/remove-orphaned-domains.md
-    - name: Overlapping Forest Names cause problems
-      href: ./windows-security/overlapping-forest-names-problem-forest-trust-established.md
     - name: Security identifier could not be resolved
       href: ./windows-security/security-identifier-could-not-be-resolved.md
-    - name: '"The server is not operational" error when adding a trusted domain user'
-      href: ./windows-security/cannot-add-trusted-domain-user-guest-account-turn-on.md
-    - name: Trusted Domains don't appear
-      href: ./windows-security/trusted-domains-dont-appear.md
     - name: Users and groups can't be added to trusted forest
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
-  - name: Internet Protocol security (IPSec)
-    items:
-    - name: Support for Suite B cryptographic algorithms
-      href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
     - name: Event ID 7 on a domain controller running Windows Server 2025
@@ -2896,20 +2776,14 @@ items:
       href: ./windows-security/logging-on-user-account-fails.md
     - name: Registry keys about Kerberos protocol and KDC
       href: ./windows-security/kerberos-protocol-registry-kdc-configuration-keys.md
-    - name: Resource SID compression causes authorization problems
-      href: ./windows-security/authorizaiton-issue-device-not-support-resource-sid-compression.md
     - name: SSO with pre-logon fails during user logon
       href: ./windows-security/sso-pre-logon-fails-during-user-logon.md
     - name: TGS requests for krbtgt account fail
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
-    - name: The Fingerprint Registration Wizard doesn't run
-      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
     - name: Troubleshoot constrained delegation issues
       href: ./windows-security/troubleshoot-kerberos-constrained-delegation-issues.md
     - name: Troubleshoot Kerberos using a log analysis test scenario
       href: ./windows-security/kerberos-authentication-log-analysis-test-scenario.md
-    - name: Troubleshoot resource-based constrained delegation issues
-      href: ./windows-security/troubleshoot-kerberos-rbcd-issues.md
     - name: Troubleshoot SSO issues
       href: ./windows-security/troubleshoot-kerberos-sso-issues.md
   - name: Legacy authentication (NTLM)
@@ -2944,8 +2818,6 @@ items:
       href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
     - name: Client has a newer password than Active Directory
       href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
-    - name: DCs can't be located and high-rate outbound sessions
-      href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
       href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
     - name: Gather information for secure channel issues
@@ -2956,10 +2828,6 @@ items:
       href: windows-security/troubleshoot-netlogon-service-startup-failures.md
   - name: Permissions, access control, and auditing
     items:
-    - name: .bak log files are deleted and lost
-      href: ./windows-security/bak-log-files-deleted-lost.md
-    - name: Can't copy files from mapped drive to local directory
-      href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
       href: ./windows-security/default-permissions-machinekeys-folders.md
     - name: Don't have permission to access folder
@@ -3154,16 +3022,12 @@ items:
       href: ./support-tools/support-tools-xperf-wpa-wpr.md
   - name: Scripts
     items:
-    - name: Scripts to check and clean up the AGPM archive
-      href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
     - name: Scripts to clean up profile folder information
       href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to compile all registered MOF files
       href: ./support-tools/scripts-compile-registered-mof-files.md
     - name: Scripts to extract .msu and .cab files
       href: ./support-tools/scripts-extract-msu-cab-files.md
-    - name: Scripts to inspect the content of the WMI repository
-      href: ./support-tools/script-inspect-the-content-of-the-wmi-repository.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age
