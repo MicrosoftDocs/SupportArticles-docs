@@ -15281,6 +15281,11 @@
       "source_path": "support/windows-server/virtualization/windows-server-hyper-v-host-minroot-behaviors.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-hyper-v-host-minroot-behaviors",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/windows-7-esu-offers-e5-customers-faq",
+      "redirect_document_id": false
     }
   ]
 }
