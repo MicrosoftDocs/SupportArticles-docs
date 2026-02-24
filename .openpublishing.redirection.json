@@ -15374,6 +15374,66 @@
       "source_path": "support/windows-server/windows-security/trusted-domains-dont-appear.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/trusted-domains-dont-appear",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/0xc0000005-terminal-server-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/0xc0000005-terminal-server-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/available-updates-terminal-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/available-updates-terminal-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/connection-broker-cant-be-mixed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-broker-cant-be-mixed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/credential-limit-per-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/credential-limit-per-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/input-method-editor-issue-remoteapp.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/input-method-editor-issue-remoteapp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/no-connected-icon-in-notification-area.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/no-connected-icon-in-notification-area",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/physical-gpu-settings-unavailable-post-domain-join.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/physical-gpu-settings-unavailable-post-domain-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-server-farm-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remote-desktop-server-farm-not-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-services-per-user-licensing.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remote-desktop-services-per-user-licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remotefx-usb-redirected-scanner-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remotefx-usb-redirected-scanner-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/terminal-server-commands-change.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/terminal-server-commands-change",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/vdi-collection-requires-two-way-trust.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vdi-collection-requires-two-way-trust",
+      "redirect_document_id": false
     }
   ]
 }

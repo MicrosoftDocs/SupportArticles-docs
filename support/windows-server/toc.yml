@@ -1980,8 +1980,6 @@ items:
       href: ./remote/windows-server-2016-rds-updates.md
     - name: Set up logon script only for Terminal Server users
       href: ./remote/set-up-logon-script-terminal-server-users.md
-    - name: 'Terminal Server Commands: CHANGE'
-      href: ./remote/terminal-server-commands-change.md
     - name: Terminal Server errors 2200 to 2299
       href: ./remote/terminal-server-error-messages-2200-to-2299.md
     - name: Terminal Server startup, connection and application
@@ -2018,8 +2016,6 @@ items:
       href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
-    - name: Error 0xc0000005 when you log on to Terminal Server client
-      href: ./remote/0xc0000005-terminal-server-client.md
     - name: Error "Remote Desktop cannot verify the identity of the remote computer"
       href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md
     - name: Event ID 10000 when Terminal Server is enabled
@@ -2056,16 +2052,12 @@ items:
       href: ./remote/communication-issues.md
     - name: RDS role cannot coexist with AD DS role
       href: ./remote/remote-desktop-services-role-cannot-coexist-adds.md
-    - name: Remote Desktop Server farm is unavailable over DirectAccess
-      href: ./remote/remote-desktop-server-farm-not-available.md
   - name: Performance (audio and video) and RemoteFX
     items:
     - name: Frame rate is limited to 30 FPS in remote sessions
       href: ./remote/frame-rate-limited-to-30-fps.md
     - name: New and existing RemoteFX-enabled VMs do not start
       href: ./remote/remotefx-enabled-vms-dont-start.md
-    - name: Physical GPU settings is unavailable post domain join
-      href: ./remote/physical-gpu-settings-unavailable-post-domain-join.md
     - name: Remote Desktop can't connect to VDI-based computer
       href: ./remote/cannot-connect-to-vdi-remote-computer.md
   - name: Printing (includes redirection)
@@ -2080,8 +2072,6 @@ items:
       href: ./remote/cannot-connect-to-remote-computer.md
     - name: Can't sign in to a published application with SSO through RD Web
       href: ./remote/cannot-sign-in-published-application-sso-rd-web.md
-    - name: No Connected icon in notification area
-      href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
       href: ./remote/edge-not-work-run-rdweb-require-activex-controls.md
     - name: Remote Desktop Web Access troubleshooting
@@ -2092,8 +2082,6 @@ items:
       href: ./remote/caps-lock-key-status-not-synced-to-client.md
     - name: Copying files exceeding 2 GB fails
       href: ./remote/copying-2-gb-file-by-clipboard-redirection-fails.md
-    - name: RemoteFX USB redirected scanner doesn't start
-      href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: RemoteApp applications
     items:
     - name: Application doesn't start in TS RemoteApp session
@@ -2130,8 +2118,6 @@ items:
       href: ./remote/remote-desktop-licensing-mode-not-configured-warning.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
-    - name: Remote session disconnected when using non-persistent VDI with per-user licensing
-      href: ./remote/remote-desktop-services-per-user-licensing.md
     - name: Remove Terminal Server licenses from RDP client
       href: ./remote/remove-terminal-server-licenses-from-rdp.md
     - name: Set up RD licensing across domains forests or workgroups
@@ -2152,8 +2138,6 @@ items:
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: Applications crash if another user logs off
       href: ./remote/applications-crash-if-another-user-logs-off-session.md
-    - name: Available updates for Terminal Services (Remote Desktop Services)
-      href: ./remote/available-updates-terminal-services.md
     - name: Cannot remove an RD Host from an RDS deployment
       href: ./remote/cannot-remove-rd-host-from-rds-deployment.md
     - name: Can't establish a Remote Desktop session
@@ -2166,14 +2150,8 @@ items:
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Clients can't connect and get the "Class not registered" error
       href: ./remote/rdp-error-class-not-registered.md
-    - name: Connection Broker can't be mixed
-      href: ./remote/connection-broker-cant-be-mixed.md
-    - name: Credential limit per app
-      href: ./remote/credential-limit-per-app.md
     - name: How to disable warning message for idle remote desktop sessions
       href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
-    - name: Input method editor issue in RemoteApp scenarios
-      href: ./remote/input-method-editor-issue-remoteapp.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
@@ -2218,8 +2196,6 @@ items:
     items:
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
-    - name: VDI collection requires two-way trust
-      href: ./remote/vdi-collection-requires-two-way-trust.md
 - name: Resources
   items:
   - name: Virtual Agent
