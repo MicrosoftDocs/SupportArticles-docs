@@ -1,6 +1,6 @@
 ---
-title: Fix Agent Not Responding in Test Your Agent Panel
-description: Resolve issues with Microsoft Copilot Studio agents not responding after the first interaction in the Test your agent panel. Learn how to fix WebSocket connection problems.
+title: Fix agent not responding in Test your agent panel
+description: Resolve an issue that makes Microsoft Copilot Studio agents unresponsive in the Test your agent panel, and learn how to fix WebSocket connection problems.
 ms.date: 02/24/2026
 ms.reviewer: erickinser, v-shaywood
 ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
@@ -10,14 +10,14 @@ ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
 
 ## Summary
 
-This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) where an agent stops responding after the first interaction in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel. This problem typically occurs when a corporate firewall or proxy interferes with real-time message delivery by blocking or delaying the WebSocket connection that Copilot Studio relies on.
+This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) in which an agent stops responding after the first interaction in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel. This issue typically occurs when a corporate firewall or proxy interferes with real-time message delivery by blocking or delaying the WebSocket connection that Copilot Studio relies on.
 
 ## Symptoms
 
-After you add an [existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](/microsoft-copilot-studio/add-agent-fabric-data-agent) and interact with the agent in the **Test your agent** panel, you experience the following behavior:
+After you add an [existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](/microsoft-copilot-studio/add-agent-fabric-data-agent), and you interact with the agent in the **Test your agent** panel, you experience the following behavior:
 
 - The agent doesn't respond after the first interaction.
-- Messages appear in the conversation transcript but don't display in the test chat.
+- Messages appear in the conversation transcript but don't appear in the test chat.
 
 ## Cause
 
@@ -30,7 +30,7 @@ To identify and resolve the issue, follow these steps:
 1. Open your browser's developer tools (select <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>).
 1. Select the **Network** tab.
 1. Start a new conversation in the **Test your agent** panel.
-1. Look for a `/subscribe` request and check that it's healthy. The request path should resemble the following URL:
+1. Look for a `/subscribe` request, and check that it's healthy. The request path should resemble the following URL:
 
    `https://pvaruntime.{geo}-il{island}.gateway.prod.island.powerapps.com/environment/{EnvironmentId}/{BotId}/test/conversations/{ConversationId}/subscribe`
 
