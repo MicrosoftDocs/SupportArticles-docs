@@ -15286,6 +15286,16 @@
       "source_path": "support/windows-client/windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/windows-7-esu-offers-e5-customers-faq",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/earlier-versions-not-start-use-pre-provision-bitlocker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-enable-diagnostic-logging-for-windows-security-center",
+      "redirect_document_id": false
     }
   ]
 }

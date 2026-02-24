@@ -1169,8 +1169,6 @@ items:
       href: ./windows-security/decode-measured-boot-logs-to-track-pcr-changes.md
     - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
       href: ./windows-security/disk-partition-requirement-use-windows-re-tool.md
-    - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"
-      href: ./windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md
     - name: 'Enforcing BitLocker policies by using Intune: known issues'
       href: ./windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues.md
     - name: Error after you enter BitLocker PIN at startup
@@ -1233,8 +1231,6 @@ items:
       href: ./windows-security/tpm-device-driver-error-log.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Enable diagnostic logging for the Windows Security app
-      href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
     - name: Operations on confidential attributes produce unexpected results when using Windows Server 2025 DCs
       href: ../windows-server/windows-security/confidential-attributes-unexpected-behavior-using-windows-server-2025-dc.md?context=/troubleshoot/windows-client/context/context
   - name: Zero Trust DNS
