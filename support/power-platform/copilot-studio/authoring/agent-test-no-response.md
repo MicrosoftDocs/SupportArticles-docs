@@ -1,26 +1,43 @@
 ---
-title: Agent doesn't show responses in Test your agent
-description: Learn how to identify, troubleshoot, and resolve a lack of responses in the Microsoft Copilot Studio Test your agent panel.
-ms.date: 02/20/2026
-ms.reviewer: 
-  - erickinser
+title: Fix Agent Not Responding in Test Your Agent Panel
+description: Resolve issues with Microsoft Copilot Studio agents not responding after the first interaction in the Test your agent panel. Learn how to fix WebSocket connection problems.
+ms.date: 02/24/2026
+ms.reviewer: erickinser, v-shaywood
 ms.custom: sap:Authoring\Agent doesn't show responses in Test your agent
 ---
 
-# Agent doesn't show responses in Test your agent
+# Agent doesn't respond in the Test your agent panel
 
-This article helps you diagnose and provide a workaround in scenarios where an agent only displays an initial response in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel.
+## Summary
 
-## Symptom
+This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) where an agent stops responding after the first interaction in the [Test your agent](/microsoft-copilot-studio/authoring-test-bot) panel. The problem typically occurs when a corporate firewall or proxy interferes with real-time message delivery by blocking or delaying the WebSocket connection that Copilot Studio relies on.
 
-After you add an [existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](/microsoft-copilot-studio/add-agent-fabric-data-agent), and you interact with the agent in the **Test your agent** panel, the agent shows no further responses after your first interaction. However, you can view messages in the transcript.
+## Symptoms
+
+After you add an [existing Copilot Studio agent](/microsoft-copilot-studio/add-agent-copilot-studio-agent) or a [Microsoft Fabric Data agent](/microsoft-copilot-studio/add-agent-fabric-data-agent) and interact with the agent in the **Test your agent** panel, you experience the following behavior:
+
+- The agent doesn't respond after the first interaction.
+- Messages appear in the conversation transcript but don't display in the test chat.
 
 ## Cause
 
-A corporate firewall or other proxy that performs traffic inspection and filtering might cause the problem. The firewall or proxy might cache the response until the request ends, so it prevents message delivery in real-time.
+A corporate firewall or proxy that performs traffic inspection and filtering can cause this issue. The firewall or proxy caches the response until the request finishes, which prevents real-time message delivery through the `/subscribe` connection that Copilot Studio uses.
 
 ## Solution
 
-To identify the problem, inspect the Copilot Studio traffic by using the browser's developer tools. Make sure that a `/subscribe` request exists and that it's healthy. In the network tab, you should see a `/subscribe` request triggered after starting a new conversation in the **Test your agent** panel. The `/subscribe` request path should look like the following URL: `https://pvaruntime.{geo}-il{island}.gateway.prod.island.powerapps.com/environment/{EnvironmentId}/{BotId}/test/conversations/{ConversationId}/subscribe`
+To identify and resolve the issue, follow these steps:
 
-Set up a firewall allow list or a bypass or exempt rule for the Copilot Studio request path.
+1. Open your browser's developer tools (select <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>).
+1. Select the **Network** tab.
+1. Start a new conversation in the **Test your agent** panel.
+1. Look for a `/subscribe` request and verify that it's healthy. The request path should resemble the following URL:
+
+   `https://pvaruntime.{geo}-il{island}.gateway.prod.island.powerapps.com/environment/{EnvironmentId}/{BotId}/test/conversations/{ConversationId}/subscribe`
+
+1. If the `/subscribe` request is missing, blocked, or stuck in a pending state, set up a firewall allow list, bypass, or exempt rule for the Copilot Studio request path.
+
+For a full list of domains and services that Copilot Studio requires, see [Required services](/microsoft-copilot-studio/requirements-quotas#required-services).
+
+## Related content
+
+- [Understand error codes](error-codes.md)

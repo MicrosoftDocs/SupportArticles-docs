@@ -26,7 +26,7 @@ As an agent maker, if a problem occurs when you use the test pane to [test your 
 | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [AIModelActionBadRequest](#aimodelactionbadrequest)                                 | There's a mismatch between the prompt action types.                                                                                                                                      |
 | [AIModelActionRequestTimeout](#aimodelactionrequesttimeout)                         | There's a timeout error that's related to a call to an AI Builder model.                                                                                                                 |
-| [AIPluginOperationNotFound](#aipluginoperationnotfound)                             | There's an error attempting to connect to a connected agent.        |
+| [AIPluginOperationNotFound](#aipluginoperationnotfound)                             | There's an error when attempting to access a connected agent.                                                                                                                             |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)                       | There's an error that's related to the output of a connector.                                                                                                                            |
 | [AuthenticationNotConfigured](#authenticationnotconfigured)                         | Authentication is required but wasn't configured.                                                                                                                                        |
 | [BindingKeyNotFoundError](#bindingkeynotfounderror)                                 | One or more inputs have changed on the agent flow (added, removed, or renamed). The agent flow needs to be removed and re-added to ensure Copilot Studio has the correct list of inputs. |
@@ -96,7 +96,7 @@ For more information, see [Create a prompt action](/ai-builder/use-a-custom-prom
 
 **Error message**: Sorry, the bot can't talk for a while. It's something the bot's owner needs to address.
 
-**Resolution**: The agent encountered an error during publishing, and the maker needs to republish the agent. This might happen when an agent was published by either importing or a solution deployment.
+**Resolution**: Republish the agent. This error can occur when an agent is published through an import or a solution deployment.
 
 #### AsyncResponsePayloadTooLarge
 
