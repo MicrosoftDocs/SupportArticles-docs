@@ -21,7 +21,7 @@ Troubleshooting outbound SMTP connectivity in Azure can be challenging when emai
 > [!IMPORTANT]
 > For the following examples, the process applies mainly to Azure Virtual Machines & Azure Virtual Machine Scale Sets resources (`Microsoft.Compute/virtualMachines` & `Microsoft.Compute/virtualMachineScaleSets`). 
 >
-> It's possible to use port 25 for outbound communication on **[Azure App Service](https://azure.microsoft.com/services/app-service)** and **[Azure Functions](https://azure.microsoft.com/services/functions)** through the **[virtual network integration feature](/azure/app-service/overview-vnet-integration#application-routing)** or when **[App Service Environment v3](/azure/app-service/environment/networking.md#network-routing)** is used. 
+> It's possible to use port 25 for outbound communication on **[Azure App Service](https://azure.microsoft.com/services/app-service)** and **[Azure Functions](https://azure.microsoft.com/services/functions)** through the **[virtual network integration feature](/azure/app-service/overview-vnet-integration#application-routing)** or when **[App Service Environment v3](/azure/app-service/environment/networking#network-routing)** is used. 
 >
 > It's also possible to send port 25 outbound communication through Azure Firewall. However, the following subscription limitations described still apply. Sending email on Port 25 is unsupported for all other Azure Platform-as-a-Service (PaaS) resources. 
 

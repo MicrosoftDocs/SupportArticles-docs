@@ -7,7 +7,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-virtual-network
-ms.topic: troubleshoot-general
+ms.topic: troubleshooting
 ms.custom: = sap:Connectivity
 ms.tgt_pltfrm: virtual-network
 ms.date: 10/31/2018

@@ -123,7 +123,7 @@ Resolving routing problems typically consists of the following procedures:
 
 - Ensure that the route table that contains any custom routes defined is associated to the subnet the network interface is in. Learn how to [associate a route table to a subnet](/azure/virtual-network/manage-route-table#associate-a-route-table-to-a-subnet).
 
-- Ensure that devices such as Azure VPN gateway or network virtual appliances deployed are operable. Use the [VPN diagnostics](../network-watcher/diagnose-communication-problem-between-networks.md?toc=%2fazure%2fvirtual-network%2ftoc.json) capability of Network Watcher to determine any problems with an Azure VPN gateway.
+- Ensure that devices such as Azure VPN gateway or network virtual appliances deployed are operable. Use the [VPN diagnostics](/azure/network-watcher/diagnose-communication-problem-between-networks) capability of Network Watcher to determine any problems with an Azure VPN gateway.
 
 If you're still having communication problems, see [Considerations](#considerations) and more diagnoses.
 
@@ -137,8 +137,8 @@ Consider the following points when troubleshooting communication problems:
 
 - If a route to 0.0.0.0/0 is created, all outbound internet traffic is routed to the next hop you specified, such as to an NVA or VPN gateway. Creating such a route is often referred to as forced tunneling. Remote connections using the RDP or SSH protocols from the internet to your VM might not work with this route, depending on how the next hop handles the traffic. Forced-tunneling can be enabled:
 
-    - When using site-to-site VPN, by creating a route with a next hop type of *VPN Gateway*. Learn more about [configuring forced tunneling](/azure/virtual-network/vpn-gateway-forced-tunneling-rm.md?toc=%2fazure%2fvirtual-network%2ftoc.json).
-    - If a 0.0.0.0/0 (default route) is advertised over BGP through a virtual network gateway when using a site-to-site VPN, or ExpressRoute circuit. Learn more about using BGP with a [site-to-site VPN](/azure/virtual-network/vpn-gateway-bgp-overview.md?toc=%2fazure%2fvirtual-network%2ftoc.json) or [ExpressRoute](/azure/expressroute/expressroute-routing.md?toc=%2fazure%2fvirtual-network%2ftoc.json#ip-addresses-used-for-azure-private-peering).
+    - When using site-to-site VPN, by creating a route with a next hop type of *VPN Gateway*. Learn more about [configuring forced tunneling](/azure/vpn-gateway/about-site-to-site-tunneling).
+    - If a 0.0.0.0/0 (default route) is advertised over BGP through a virtual network gateway when using a site-to-site VPN, or ExpressRoute circuit. Learn more about using BGP with a [site-to-site VPN](/azure/vpn-gateway/vpn-gateway-bgp-overview) or [ExpressRoute](/azure/expressroute/expressroute-routing).
 
 - For virtual network peering traffic to work correctly, a system route with a next hop type of *VNet Peering* must exist for the peered virtual network's prefix range. If such a route doesn't exist, and the virtual network peering link is **Connected**:
 
@@ -150,13 +150,13 @@ Consider the following points when troubleshooting communication problems:
 
 ## More diagnoses
 
-* To run a quick test to determine the next hop type for traffic destined to a location, use the [Next hop](/azure/network-watcher/diagnose-vm-network-routing-problem.md?toc=%2fazure%2fvirtual-network%2ftoc.json) capability of Azure Network Watcher. Next hop tells you what the next hop type is for traffic destined to a specified location.
+* To run a quick test to determine the next hop type for traffic destined to a location, use the [Next hop](/azure/network-watcher/diagnose-vm-network-routing-problem) capability of Azure Network Watcher. Next hop tells you what the next hop type is for traffic destined to a specified location.
 
 * If there are no routes causing a VM network communication to fail, the problem might be due to firewall software running within the VM's operating system
 
-* If you're [force tunneling](/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm.md?toc=%2fazure%2fvirtual-network%2ftoc.json) traffic to an on-premises device through a VPN gateway, or NVA, you might not be able to connect to a VM from the internet, depending on how routing is configured for the devices. Confirm that the routing configured for the device routes traffic to either a public or private IP address for the VM.
+* If you're [force tunneling](/azure/vpn-gateway/about-site-to-site-tunneling) traffic to an on-premises device through a VPN gateway, or NVA, you might not be able to connect to a VM from the internet, depending on how routing is configured for the devices. Confirm that the routing configured for the device routes traffic to either a public or private IP address for the VM.
 
-* Use the [connection troubleshoot](/azure/network-watcher/network-watcher-connectivity-portal.md?toc=%2fazure%2fvirtual-network%2ftoc.json) capability of Network Watcher to determine routing, filtering, and in-OS causes of outbound communication problems.
+* Use the [connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage) capability of Network Watcher to determine routing, filtering, and in-OS causes of outbound communication problems.
 
 ## Next steps
 

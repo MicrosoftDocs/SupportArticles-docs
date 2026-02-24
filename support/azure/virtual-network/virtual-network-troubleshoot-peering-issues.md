@@ -21,7 +21,8 @@ ms.custom:
 
 This troubleshooting guide provides steps to help you resolve most [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) issues.
 
-![Diagram of virtual network peering](./media/virtual-network-troubleshoot-peering-issues/4489538_en_1.png)
+:::image type="content" source="media/virtual-network-troubleshoot-peering-issues/4489538-en-1.png" alt-text="Diagram of virtual network peering" lightbox="media/virtual-network-troubleshoot-peering-issues/4489538-en-1.png":::
+
 
 ## Configure virtual network peering between two virtual networks
 
@@ -58,23 +59,22 @@ To configure virtual network peering for virtual networks in different subscript
 
 ## Configure virtual network peering with hub-spoke topology that uses on-premises resources
 
-![Diagram of virtual network peering with on-premises spoke](./media/virtual-network-troubleshoot-peering-issues/4488712_en_1a.png)
+:::image type="content" source="media/virtual-network-troubleshoot-peering-issues/4488712-en-1a.png" alt-text="Diagram of virtual network peering with on-premises spoke" lightbox="media/virtual-network-troubleshoot-peering-issues/4488712-en-1a.png":::
 
 ### For a site-to-site connection or an ExpressRoute connection
 
-Follow the steps in: [Configure VPN gateway transit for virtual network peering](/azure/virtual-network/vpn-gateway/vpn-gateway-peering-gateway-transit.md?toc=%2fazure%2fvirtual-network%2ftoc.json).
+Follow the steps in: [Configure VPN gateway transit for virtual network peering](/azure/vpn-gateway/vpn-gateway-peering-gateway-transit).
 
 ### For point-to-site connections
 
-1. Follow the steps in: [Configure VPN gateway transit for virtual network peering](/azure/virtual-network/vpn-gateway/vpn-gateway-peering-gateway-transit.md?toc=%2fazure%2fvirtual-network%2ftoc.json).
+1. Follow the steps in: [Configure VPN gateway transit for virtual network peering](/azure/vpn-gateway/vpn-gateway-peering-gateway-transit).
 2. After virtual network peering is established or changed, download and reinstall the point-to-site package so that the point-to-site clients get the updated routes to the spoke virtual network.
 
 ## Configure virtual network peering with hub-spoke topology virtual network
 
-![Diagram of virtual network peering with a virtual network spoke](./media/virtual-network-troubleshoot-peering-issues/4488712_en_1b.png)
+:::image type="content" source="media/virtual-network-troubleshoot-peering-issues/4488712-en-1b.png" alt-text="Diagram of virtual network peering with a virtual network spoke" lightbox="media/virtual-network-troubleshoot-peering-issues/4488712-en-1b.png":::
 
 ### The virtual networks are in the same region
-
 
 1. In the hub virtual network, configure a network virtual appliance (NVA).
 1. In the spoke virtual networks, have user-defined routes with the next hop type "network virtual appliance" applied.
@@ -84,7 +84,7 @@ For more information, see [Service chaining](/azure/virtual-network/virtual-netw
 > [!Note]
 > If you require help to set up an NVA, [contact the NVA vendor](https://mskb.pkisolutions.com/kb/2984655).
 
-For help with troubleshooting the NVA device setup and routing, see [Network virtual appliance issues in Azure](/azure/virtual-network/virtual-network-troubleshoot-nva.md).
+For help with troubleshooting the NVA device setup and routing, see [Network virtual appliance issues in Azure](/azure/virtual-network/virtual-network-troubleshoot-nva).
 
 ### The virtual networks are in different regions
 
@@ -100,7 +100,7 @@ Transit over global virtual network peering is now supported. Connectivity does 
 * API Management (uses Basic ILB SKU)
 * Microsoft Entra Domain Services (uses Basic ILB SKU)
 
-To learn more about global peering requirements and restraints, see [Virtual network peering](./virtual-network-peering-overview.md#requirements-and-constraints).
+To learn more about global peering requirements and restraints, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ## Troubleshoot a connectivity issue between two peered virtual networks
 
@@ -112,12 +112,11 @@ To troubleshoot this issue:
 
 1. Check the network traffic flows:
 
-   Use [Connection Troubleshoot](/azure/network-watcher/network-watcher-connectivity-overview.md) and [IP flow verify](/azure/network-watcher/network-watcher-ip-flow-verify-overview.md) from the source VM to the destination VM to determine whether there is an NSG or UDR that is causing interference in traffic flows.
+   Use [Connection Troubleshoot](/azure/network-watcher/network-watcher-connectivity-overview) and [IP flow verify](/azure/network-watcher/network-watcher-ip-flow-verify-overview) from the source VM to the destination VM to determine whether there is an NSG or UDR that is causing interference in traffic flows.
 
    If you're using a firewall or NVA: 
    1. Document the UDR parameters so that you can restore them after this step is complete.
-   2. Remove the UDR from the source VM subnet or NIC that points to the NVA as the next hop. Verify connectivity from the source VM directly to the destination that is bypassing the NVA. If this step doesn't work, see the [NVA troubleshooter](/azure/virtual-network/virtual-network-troubleshoot-nva.md).
-
+   2. Remove the UDR from the source VM subnet or NIC that points to the NVA as the next hop. Verify connectivity from the source VM directly to the destination that is bypassing the NVA. If this step doesn't work, see the [NVA troubleshooter](/azure/virtual-network/virtual-network-troubleshoot-nva).
 2. Take a network trace: 
    1. Start a network trace on the destination VM. For Windows, you can use **Netsh**. For Linux, use **TCPDump**.
    2. Run **TcpPing** or **PsPing** from the source to the destination IP.
@@ -154,7 +153,7 @@ Does your network use a third-party NVA or VPN gateway?
 
 To troubleshoot connectivity issues that affect a third-party NVA or VPN gateway, see the following articles:
 
-* [NVA troubleshooter](/azure/virtual-network/virtual-network-troubleshoot-nva.md)
+* [NVA troubleshooter](/azure/virtual-network/virtual-network-troubleshoot-nva)
 * [Service chaining](/azure/virtual-network/virtual-network-peering-overview#service-chaining)
 
 ### My network does not use a third-party NVA or VPN gateway

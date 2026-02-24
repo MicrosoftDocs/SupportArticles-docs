@@ -62,7 +62,7 @@ You can use the [Azure portal](#azure-portal), [Azure PowerShell](#azure-powersh
 ### Azure PowerShell
 
 > [!NOTE]
-> We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-azurerm-to-az).
+> We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az?view=azps-15.3.0).
 
 You can run the commands that are available in this section in [Azure Cloud Shell](https://shell.azure.com/powershell). You can also run PowerShell from your computer. Cloud Shell is a free interactive shell. It has common Azure tools preinstalled and configured to use with your account.
 
