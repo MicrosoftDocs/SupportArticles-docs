@@ -15434,6 +15434,11 @@
       "source_path": "support/windows-server/remote/vdi-collection-requires-two-way-trust.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/vdi-collection-requires-two-way-trust",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cannot-boot-windows-on-primary-hard-disk-uefi",
+      "redirect_document_id": false
     }
   ]
 }
