@@ -15,7 +15,7 @@ ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 
 ## Summary
 
-When you try to create a Cloud Management Gateway (CMG) in a particular region, you receive a message that the requested virtual machine (VM) size is not available in that region. Therefore, the operation to create the CMG fails. This occurs because a CMG requires one of a specific subset of VM SKUs, and these SKUs are not available in all regions.
+When you try to create a Cloud Management Gateway (CMG) in a particular region, you receive a message that the requested virtual machine (VM) size isn't available in that region. Therefore, the operation to create the CMG fails. This issue occurs because a CMG requires one of a specific subset of VM SKUs, and these SKUs aren't available in all regions.
 
 This article helps you to work around this issue by creating the CMG in a different region, or by creating a Microsoft support request.
 
