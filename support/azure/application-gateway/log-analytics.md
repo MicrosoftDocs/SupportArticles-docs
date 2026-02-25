@@ -44,7 +44,7 @@ This looks similar to the following query:
 
 :::image type="content" source="media/log-analytics/log-query.png" alt-text="Screenshot of Log Analytics query." lightbox="media/log-analytics/log-query.png":::
 
-When using **Resource-specific** table, you can view the raw data in the firewall log by running the following query. To know about the resource-specific tables, visit [Monitoring data reference](monitor-application-gateway-reference.md#supported-resource-log-categories-for-microsoftnetworkapplicationgateways).
+When using **Resource-specific** table, you can view the raw data in the firewall log by running the following query. To know about the resource-specific tables, visit [Monitoring data reference](/azure/application-gateway/monitor-application-gateway-reference#supported-resource-log-categories-for-microsoftnetworkapplicationgateways).
 
 ```
 AGWFirewallLogs

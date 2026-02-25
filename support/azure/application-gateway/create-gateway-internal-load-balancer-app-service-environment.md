@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot an Application Gateway in Azure – ILB ASE | Microsoft Docs
+title: Troubleshoot an Application Gateway in Azure – ILB ASE
 description: Learn how to troubleshoot an application gateway by using an Internal Load Balancer with an App Service Environment in Azure
 services: vpn-gateway
 author: JarrettRenshaw

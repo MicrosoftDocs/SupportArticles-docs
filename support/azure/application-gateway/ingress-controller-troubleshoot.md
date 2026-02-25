@@ -84,21 +84,21 @@ EOF
 
 Copy and paste all lines at once from the previous script into a [Azure Cloud Shell](https://shell.azure.com/). Verify that the entire command is copied - starting with `cat` and including the last `EOF`.
 
-![apply](./media/application-gateway-ingress-controller-troubleshooting/tsg--apply-config.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--apply-config.png" alt-text="Screenshot of the apply configuration flow." lightbox="media/ingress-controller-troubleshoot/tsg--apply-config.png":::
 
 After a successful deployment of the app your AKS cluster has a new Pod, Service, and Ingress.
 
 Get the list of pods with [Cloud Shell](https://shell.azure.com/): `kubectl get pods -o wide`. We expect for a pod named **test-agic-app-pod** to have been created with an IP address. This address must be within the VNET of the Application Gateway, which is used with AKS.
 
-![Screenshot of the Bash window in Azure Cloud Shell showing a list of pods that includes test-agic-app-pod in the list.](./media/application-gateway-ingress-controller-troubleshooting/tsg--get-pods.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--get-pods.png" alt-text="Screenshot of the Bash window in Azure Cloud Shell showing a list of pods that includes test-agic-app-pod in the list." lightbox="media/ingress-controller-troubleshoot/tsg--get-pods.png":::
 
 Get the list of services: `kubectl get services -o wide`. We expect to see a service named **test-agic-app-service**.
 
-![Screenshot of the Bash window in Azure Cloud Shell showing a list of services that includes test-agic-app-pod in the list.](./media/application-gateway-ingress-controller-troubleshooting/tsg--get-services.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--get-services.png" alt-text="Screenshot of the Bash window in Azure Cloud Shell showing a list of services that includes test-agic-app-service in the list." lightbox="media/ingress-controller-troubleshoot/tsg--get-services.png":::
 
 Get the list of the ingresses: `kubectl get ingress`. We expect an Ingress resource named **test-agic-app-ingress** to have been created. The resource has a host name **test.agic.contoso.com**.
 
-![Screenshot of the Bash window in Azure Cloud Shell showing a list of ingresses that includes test-agic-app-ingress in the list.](./media/application-gateway-ingress-controller-troubleshooting/tsg--get-ingress.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--get-ingress.png" alt-text="Screenshot of the Bash window in Azure Cloud Shell showing a list of ingresses that includes test-agic-app-ingress in the list." lightbox="media/ingress-controller-troubleshoot/tsg--get-ingress.png":::
 
 One of the pods is AGIC. `kubectl get pods` shows a list of pods, one of which begins with 'ingress-azure.' Get all logs of that pod with `kubectl logs <name-of-ingress-controller-pod>` to verify that we've had a successful deployment. A successful deployment would have added the following lines to the log:
 ```
@@ -112,14 +112,14 @@ Alternatively, from [Cloud Shell](https://shell.azure.com/) we can retrieve only
 Application Gateway has the following configuration applied:
 
 - Listener:
-![listener](./media/application-gateway-ingress-controller-troubleshooting/tsg--listeners.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--listeners.png" alt-text="Listener screenshot." lightbox="media/ingress-controller-troubleshoot/tsg--listeners.png":::
 
 - Routing Rule:
-![routing_rule](./media/application-gateway-ingress-controller-troubleshooting/tsg--rule.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--rule.png" alt-text="Routing rule screenshot." lightbox="media/ingress-controller-troubleshoot/tsg--rule.png":::
 
 - Backend Pool:
   - There's one IP address in the backend address pool and it matches the IP address of the Pod we observed earlier with `kubectl get pods -o wide`
-![backend_pool](./media/application-gateway-ingress-controller-troubleshooting/tsg--backendpools.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--backendpools.png" alt-text="Backend pool screenshot." lightbox="media/ingress-controller-troubleshoot/tsg--backendpools.png":::
 
 
 Finally we can use the `cURL` command from within [Cloud Shell](https://shell.azure.com/) to establish an HTTP connection to the newly deployed app:
@@ -127,10 +127,9 @@ Finally we can use the `cURL` command from within [Cloud Shell](https://shell.az
 1. Use `kubectl get ingress` to get the Public IP address of Application Gateway
 2. Use `curl -I -H 'test.agic.contoso.com' <public-ip-address-from-previous-command>`
 
-![Screenshot of the Bash window in Azure Cloud Shell showing a cURL command successfully establishing an HTTP connection to the test app.](./media/application-gateway-ingress-controller-troubleshooting/tsg--curl.png)
+:::image type="content" source="media/ingress-controller-troubleshoot/tsg--curl.png" alt-text="Screenshot of the Bash window in Azure Cloud Shell showing a cURL command successfully establishing an HTTP connection to the test app." lightbox="media/ingress-controller-troubleshoot/tsg--curl.png":::
 
 A result of `HTTP/1.1 200 OK` indicates that the Application Gateway + AKS + AGIC system is working as expected.
-
 
 ## Inspect Kubernetes Installation
 
