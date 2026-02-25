@@ -213,7 +213,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Cause 1b: `401 Unauthorized` error due to incompatible architecture
 
-You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause-1a-401-unauthorized-error-due-to-incorrect-authorization) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
+You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause-1a-401-unauthorized-error-due-to-incorrect-authorization) section). This issue can occur if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node that's running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
 
 The error message appears as follows:
 
@@ -315,7 +315,7 @@ If the AKS cluster connects publicly to the container registry (**not** through 
       > [!NOTE]
       > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
 
-      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot on how to add AKS Load Balancer's public IP address to address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
+      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot showing how to add AKS Load Balancer's public IP address to address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
 
 ## Cause 4: `i/o timeout` error
 
@@ -417,7 +417,7 @@ spec:
         imagePullPolicy: IfNotPresent
 ```
 
-## Cause 7: TLS handshake timeout error happens when pulling images from ACR
+## Cause 7: TLS handshake timeout error occurs when pulling images from ACR
 
 The following events and messages might occur when pulling images from ACR to AKS:
 
@@ -439,17 +439,17 @@ The following events and messages might occur when pulling images from ACR to AK
  Warning  Failed     5s (x2 over 39s)   kubelet            Error: ErrImagePull
 ```
 
-### Solution: Update Azure Virtual Network Appliance (NVAs) with validated routes
+### Solution: Update Azure Virtual Network Appliance (NVAs) by using validated routes
  
-when you get this `net/http: TLS handshake` timeout, we recommend checking your network configuration, including firewall, proxy, and network connectivity settings. 
+If you receive this `net/http: TLS handshake` time-out, we recommend that you check your network configuration, including firewall, proxy, and network connectivity settings. 
 
 ## Other considerations
 
 If the troubleshooting guidance in this article doesn't help you resolve the issue, here are some other things to consider:
 
-- Check the network security groups and route tables associated with subnets (if you have any of these items).
+- Check the network security groups and route tables that are associated with subnets (if you have any of these items).
 
-- If a virtual appliance like a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
+- If a virtual appliance such as a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
