@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
+ms.custom: sap:Connectivity
 ---
 # Troubleshoot failures when pulling images from Azure Container Registry to Azure Kubernetes Service cluster 
 
@@ -213,7 +213,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Cause 1b: `401 Unauthorized` error due to incompatible architecture
 
-You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause-1a-401-unauthorized-error-due-to-incorrect-authorization) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
+You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause-1a-401-unauthorized-error-due-to-incorrect-authorization) section). This issue can occur if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node that's running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
 
 The error message appears as follows:
 
@@ -315,7 +315,7 @@ If the AKS cluster connects publicly to the container registry (**not** through 
       > [!NOTE]
       > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
 
-      :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to address range" lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
+      :::image type="content" source="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot showing how to add AKS Load Balancer's public IP address to address range." lightbox="media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png":::
 
 ## Cause 4: `i/o timeout` error
 
@@ -417,13 +417,39 @@ spec:
         imagePullPolicy: IfNotPresent
 ```
 
+## Cause 7: TLS handshake timeout error occurs when pulling images from ACR
+
+The following events and messages might occur when pulling images from ACR to AKS:
+
+```text
+ Type     Reason     Age                From               Message
+
+ ----     ------     ----               ----               -------
+
+ Normal   Scheduled  59s                default-scheduler  Successfully assigned api/testapi-worker-51235 to aks-api-573618vmss00000
+
+ Normal   BackOff    39s                kubelet            Back-off pulling image "test.azurecr.io/test-api:v1.1.3"
+
+ Warning  Failed     39s                kubelet            Error: ImagePullBackOff
+
+ Normal   Pulling    25s (x2 over 59s)  kubelet            Pulling image "test.azurecr.io/test-api:v1.1.3"
+
+ Warning  Failed     5s (x2 over 39s)   kubelet            Failed to pull image "test.azurecr.io/test-api:v1.1.3": failed to pull and unpack image "test.azurecr.io/test-api:v1.1.3": failed to resolve reference "test.azurecr.io/test-api:v1.1.3": failed to do request: Head "https://test.azurecr.io/v2/test-api/manifests/v1.1.3": net/http: TLS handshake timeout
+
+ Warning  Failed     5s (x2 over 39s)   kubelet            Error: ErrImagePull
+```
+
+### Solution: Update Azure Virtual Network Appliance (NVAs) by using validated routes
+ 
+If you receive this `net/http: TLS handshake` time-out, we recommend that you check your network configuration, including firewall, proxy, and network connectivity settings. 
+
 ## Other considerations
 
 If the troubleshooting guidance in this article doesn't help you resolve the issue, here are some other things to consider:
 
-- Check the network security groups and route tables associated with subnets (if you have any of these items).
+- Check the network security groups and route tables that are associated with subnets (if you have any of these items).
 
-- If a virtual appliance like a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
+- If a virtual appliance such as a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
