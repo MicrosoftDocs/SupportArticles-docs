@@ -14394,6 +14394,1051 @@
     {
       "source_path": "support/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/gp/fail-to-integrate-sales-transaction-in-integration-manager"
+    },
+    {
+      "source_path": "support/windows-client/active-directory/error-when-checking-domain-object-property.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/troubleshoot/windows-client/error-when-checking-domain-object-property",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/active-directory/lsalookupsids-function-not-return-new-user-name.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/troubleshoot/windows-client/lsalookupsids-function-not-return-new-user-name",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/active-directory/uac-blocks-elevation-executable-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/troubleshoot/windows-client/uac-blocks-elevation-executable-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/active-directory-replication-error-8545.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/active-directory-replication-error-8545",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adamsync-error-obj-class-violation.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/adamsync-error-obj-class-violation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adfs-error-180-endpoints-missing.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/adfs-error-180-endpoints-missing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ad-replication-fails-error-8409.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/ad-replication-fails-error-8409",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/adws-service-crashes-after-you-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/adws-service-crashes-after-you-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/all-members-group-may-not-be-returned.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/all-members-group-may-not-be-returned",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-add-domain-controller-node-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-domain-controller-node-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/change-integrated-dns-zone-replication-scope.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/change-integrated-dns-zone-replication-scope",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/changes-arent-replicated-controllers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/changes-arent-replicated-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcpromo-replication-phase-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcpromo-replication-phase-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/delays-domain-members-dc-remote-domains.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/delays-domain-members-dc-remote-domains",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/directory-datatype-cannot-converted-to-from-native-ds-datatype-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/error-when-you-run-ad-installation-wizard.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-you-run-ad-installation-wizard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/event-id-84-occurs-ad-rms-windows-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-84-occurs-ad-rms-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/extranet-smart-lockout-feature.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/extranet-smart-lockout-feature",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/fail-to-access-data-from-source-control-explorer.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fail-to-access-data-from-source-control-explorer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/group-policy-preparation-isnt-performed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/group-policy-preparation-isnt-performed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/hide-display-inetorgperson-object-class.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hide-display-inetorgperson-object-class",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/info-devices-configured-rodcs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/info-devices-configured-rodcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/netuser-netgroup-fails-with-access-denied.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/netuser-netgroup-fails-with-access-denied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ntds-replication-warning-event-id-1093.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/ntds-replication-warning-event-id-1093",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/poor-performance-calling-lookup-functions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/poor-performance-calling-lookup-functions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/rename-item-replication-collision.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/rename-item-replication-collision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/rsop-not-supported-across-multiple-forests.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/rsop-not-supported-across-multiple-forests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/status-code-0x3a-server-not-perform-operation.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/status-code-0x3a-server-not-perform-operation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/status-code-0x6bf-0xc002001c.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/status-code-0x6bf-0xc002001c",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/support-for-leap-second.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-for-leap-second",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/windows-app-cant-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-app-cant-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/cannot-link-textservice-eudcedit.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cannot-link-textservice-eudcedit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/printer-vbscript-error-0x1a8-object-required.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/printer-vbscript-error-0x1a8-object-required",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/http-listener-fails-initialize.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/http-listener-fails-initialize",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/low-amount-display-adapter-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/low-amount-display-adapter-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/application-management/operating-system-performance-degrades.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/operating-system-performance-degrades",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/app-v/adding-package-version-error-0x8007012f.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/adding-package-version-error-0x8007012f",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/app-v/current-list-app-v-5-dot-x-file-versions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/current-list-app-v-5-dot-x-file-versions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/app-v/remove-cached-copy-unpublished-package-app-v-v5.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/remove-cached-copy-unpublished-package-app-v-v5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/app-v/troubleshoot-publishing-server-refresh-failures-app-v-v5.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/troubleshoot-publishing-server-refresh-failures-app-v-v5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/backup-and-storage/e2e-event-ids-volsnap.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/e2e-event-ids-volsnap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/disk-defragmenter-limitations.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/disk-defragmenter-limitations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/new-vds-logging-mechanism.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/new-vds-logging-mechanism",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/redundant-subnets-are-incorrectly-created.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/redundant-subnets-are-incorrectly-created",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/replicated-csvs-offline-azure-stack-hci-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/replicated-csvs-offline-azure-stack-hci-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/third-party-backup-warnings-install-servicing-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/third-party-backup-warnings-install-servicing-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cant-share-files-multiple-efs-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/expand-maximum-extension-size-limit-ad-cs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/group-policy/save-documents-to-onedrive-by-default.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/save-documents-to-onedrive-by-default",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/changes-to-gpo-permissions-ignored.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/changes-to-gpo-permissions-ignored",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/creating-dsn-with-gpp-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/creating-dsn-with-gpp-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/directory-is-not-empty.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/directory-is-not-empty",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/error-0x8007000d-backup-gpo-cmdlet.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8007000d-backup-gpo-cmdlet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/folder-redirection-group-policy-not-applied.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/folder-redirection-group-policy-not-applied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/settings-applied-group-policy.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/settings-applied-group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/system-cant-find-file-specified.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-cant-find-file-specified",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/user-based-gpo-settings-not-work-shadow-principals.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/user-based-gpo-settings-not-work-shadow-principals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/3rd-party-storage-software-solutions-support.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/3rd-party-storage-software-solutions-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-ip-resources-fail-2-node-2-site-fsw-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/event-id-1222-create-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-1222-create-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/netbios-wins-dont-bind-cluster-ip-address-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/nodes-failover-cluster-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/nodes-failover-cluster-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/smb-features-dont-work-non-default-cluster-network-name-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/unable-to-get-computer-object-using-guid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/unable-to-get-computer-object-using-guid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/package-manager-cannot-manage-two-more-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/previously-released-updates-reoffered.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/previously-released-updates-reoffered",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-data-transmission.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/wubr-troubleshooting-data-transmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wubr-troubleshooting-guidance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/wubr-troubleshooting-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/printing/print-modern-app-creates-large-file.md",
+      "redirect_url": "/previous-versions/windows-client/print-modern-app-creates-large-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/licensing-and-activation/item-with-same-key-has-been-added.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/item-with-same-key-has-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-12321-warning-token-based-activation-failed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/directaccess-clients-teredo-tunneling-not-connect-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/enterprise-apn-lost-after-sim-change-mbn-adapter-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/error-directaccess-clients-connect-over-ip-https.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/error-directaccess-clients-connect-over-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/errors-work-large-folder-redirection-policy-settings-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/errors-work-large-folder-redirection-policy-settings-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/opengl-application-not-run-miracast-wireless-display.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/opengl-application-not-run-miracast-wireless-display",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/current-hotfixes-have-folder-redirection.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/current-hotfixes-have-folder-redirection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/0x2afc-0x274d-error-directaccess-clients-connect-ip-https",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/backlog-for-dfsr-read-only-member.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/backlog-for-dfsr-read-only-member",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-unable-connect-static-proxy-configured.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/directaccess-clients-unable-connect-static-proxy-configured",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/dns-server-geo-location-policy-doesnt-work-as-expected.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dns-server-geo-location-policy-doesnt-work-as-expected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/error-request-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-request-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-id-236-sr-iov-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-236-sr-iov-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/faulted-not-found-status-nic-team-restart-iscsi-boot-disk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/faulted-not-found-status-nic-team-restart-iscsi-boot-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-replication-service-event-13552-13555",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/hotfixes-for-file-services-technologies.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-for-file-services-technologies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/move-frs-staging-folder-to-different-drive.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/move-frs-staging-folder-to-different-drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/security-setting-changes-not-appear-dfsr-replication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/security-setting-changes-not-appear-dfsr-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/system-compatibility-with-dnssec-enabled-root-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-compatibility-with-dnssec-enabled-root-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/tcp-connection-abort-validate-negotiate.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/tcp-connection-abort-validate-negotiate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-adding-entry-points.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-6to4.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-directaccess-server-console-6to4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-dns.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-directaccess-server-console-dns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-directaccess-server-console-networking.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-directaccess-server-console-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-enabling-multisite.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-general-issues-related-remote-access.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-multisite-deployment.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-1-identify-computers-that-have-mca-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/maxconcurrentapi-1-identify-computers-that-have-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-2-calculate-and-change-mca.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/maxconcurrentapi-2-calculate-and-change-mca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/maxconcurrentapi-3-troubleshoot-causes-of-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/maxconcurrentapi-overview-identify-and-remediate-mca-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/maxconcurrentapi-overview-identify-and-remediate-mca-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/bug-check-0x124-windows-upgrade-boot-camp-apple-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/check-point-centrify-apps-stop-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/check-point-centrify-apps-stop-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/issues-when-calls-createwindowex-32-bit-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/issues-when-calls-createwindowex-32-bit-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/stop-code-initialize-pmem-nvdimm.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/stop-code-initialize-pmem-nvdimm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/tablet-device-creates-minidump-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/tablet-device-creates-minidump-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/performance/windows-experience-index-shows-1-dot-0.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/windows-experience-index-shows-1-dot-0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-boot-from-second-media-uefi-computers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-boot-from-second-media-uefi-computers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-restart-20tb-ram-credential-guard-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/known-ui-limitation-cpu-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/known-ui-limitation-cpu-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/log-files-are-deleted.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/log-files-are-deleted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/programs-queryperformancecounter-function-perform-poorly.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/programs-queryperformancecounter-function-perform-poorly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/reliability-monitor-shows-no-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/reliability-monitor-shows-no-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/report-generation-process-stops-responding.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/report-generation-process-stops-responding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-7e-nfs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-7e-nfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/task-manager-displays-incorrect-processor-affinity.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/task-manager-displays-incorrect-processor-affinity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/performance/windows-server-stops-responding-signing-custom-account.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-stops-responding-signing-custom-account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/customize-default-local-user-profile-prepare-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/error-invalid-store-path-loadstate-user-state-migration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/f5-not-refresh-explorer-windows-pe-windows-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/icons-wsd-devices-incorrectly-devices-printers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/language-features-not-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/language-features-not-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/media-device-isnt-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/media-device-isnt-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/msinfo32-report-wrong-display-adapter-ram",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/remote-server-admin-tools-uninstalled-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/upgrade-advisor-tool-failed-to-run",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dism-fails-with-error-0x800f0906",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-path-not-found-upgrading-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mdt-media-deployment-isnt-bootable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/multicast-deployment-fails-from-wds.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/multicast-deployment-fails-from-wds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-policy-third-party-kernel-level-attestation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/update-available-integrates-wsus-into-server-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/upgrade-fail-with-error-0x000000c4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/pre-installed-microsoft-store-app-removed-logon.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/pre-installed-microsoft-store-app-removed-logon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/upx-displayed-in-UI-on-managed-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/upx-displayed-in-UI-on-managed-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/increased-cpu-usage.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/increased-cpu-usage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/multipoint-manager-error-during-startup.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/multipoint-manager-error-during-startup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/network-adapters-inaccurate-link-speed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/network-adapters-inaccurate-link-speed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/start-menu-shortcuts-arent-immediately-accessible.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/start-menu-shortcuts-arent-immediately-accessible",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/shell-experience/task-manager-displays-incorrect-value.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/task-manager-displays-incorrect-value",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/configure-standalone-wmi-providers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/configure-standalone-wmi-providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/event-id-10-logged-application-log-after-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-10-logged-application-log-after-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/system-management-components/grant-dfsnaccess-not-change-inheritance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/grant-dfsnaccess-not-change-inheritance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/software-defined-networking/software-defined-data-center-and-networking.md",
+      "redirect_url": "/previous-versions/troublehoot/windows-server/software-defined-data-center-and-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/software-defined-networking/troubleshoot-software-defined-networking.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/support-tools/script-inspect-the-content-of-the-wmi-repository.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/script-inspect-the-content-of-the-wmi-repository",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/support-tools/scripts-check-and-cleanup-the-agpm-archive.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scripts-check-and-cleanup-the-agpm-archive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enter-pssession-cmdlet-fails-psmodulepath-variable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/error-0x8007000d-data-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x8007000d-data-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/event-5605-query-mscluster-namespace.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-5605-query-mscluster-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/scheduled-tasks-reference-incorrect-user-profile.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scheduled-tasks-reference-incorrect-user-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/enable-debug-logging.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/enable-debug-logging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/outlook-takes-one-minute-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/outlook-takes-one-minute-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/percent-username-percent-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/percent-username-percent-unavailable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/ue-v-registry-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/ue-v-registry-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/ue-v/ue-v-replication-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/ue-v-replication-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/custom-credential-providers-dont-load-first-logon.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/custom-credential-providers-dont-load-first-logon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dcs-cannot-be-located-high-rate-outbound-sessions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/virtualization/cant-use-kdump-kexec-linux-virtual-machines-hyper-v.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cant-use-kdump-kexec-linux-virtual-machines-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/virtualization/supported-guest-operating-systems-virtual-pc.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/supported-guest-operating-systems-virtual-pc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/api-call-performance-counters-delay-container.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/api-call-performance-counters-delay-container",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-second-fibre-channel-adapter-hyperv",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-change-configstorerootpath-value-hyperv-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/degraded-integration-services-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/degraded-integration-services-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-message-page-file-another-drive-guest-operating-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-message-page-file-another-drive-guest-operating-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/fcoe-io-failures-hyper-v-guests.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fcoe-io-failures-hyper-v-guests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-guarded-fabric-overview.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/troubleshoot-shielded-vms.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/upgrade-computers-hyper-v-role.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/upgrade-computers-hyper-v-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/uptime-value-hyper-v-management-console-change-to-resume-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-dda-luns-disappear-after-mpio-config.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-dda-luns-disappear-after-mpio-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-integration-services-status-protocol-version-mismatch.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-integration-services-status-protocol-version-mismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/windows-server-hyper-v-host-minroot-behaviors.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-hyper-v-host-minroot-behaviors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/windows-7-esu-offers-e5-customers-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/earlier-versions-not-start-use-pre-provision-bitlocker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/how-to-enable-diagnostic-logging-for-windows-security-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/authorizaiton-issue-device-not-support-resource-sid-compression.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/authorizaiton-issue-device-not-support-resource-sid-compression",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/bak-log-files-deleted-lost.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/bak-log-files-deleted-lost",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-add-trusted-domain-user-guest-account-turn-on.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-add-trusted-domain-user-guest-account-turn-on",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-copy-files-from-mapped-drive-to-local-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/computer-record-rejected-in-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/computer-record-rejected-in-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-support-suite-b-cryptographic-ipsec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-mbam-take-ownership-tpm.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-mbam-take-ownership-tpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-when-opening-reports-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-opening-reports-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fingerprint-registration-wizard-not-run-install-fingerprint-reader",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/mbam-enterprise-report-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mbam-enterprise-report-not-updated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/mbam-setup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mbam-setup-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/overlapping-forest-names-problem-forest-trust-established.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/overlapping-forest-names-problem-forest-trust-established",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/server-error-click-reports-tab-mbam.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/server-error-click-reports-tab-mbam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/troubleshoot-kerberos-rbcd-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-kerberos-rbcd-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/windows-security/trusted-domains-dont-appear.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/trusted-domains-dont-appear",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/0xc0000005-terminal-server-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/0xc0000005-terminal-server-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/available-updates-terminal-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/available-updates-terminal-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/connection-broker-cant-be-mixed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-broker-cant-be-mixed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/credential-limit-per-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/credential-limit-per-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/input-method-editor-issue-remoteapp.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/input-method-editor-issue-remoteapp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/no-connected-icon-in-notification-area.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/no-connected-icon-in-notification-area",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/physical-gpu-settings-unavailable-post-domain-join.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/physical-gpu-settings-unavailable-post-domain-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-server-farm-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remote-desktop-server-farm-not-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-services-per-user-licensing.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remote-desktop-services-per-user-licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/remotefx-usb-redirected-scanner-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/remotefx-usb-redirected-scanner-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/terminal-server-commands-change.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/terminal-server-commands-change",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/remote/vdi-collection-requires-two-way-trust.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vdi-collection-requires-two-way-trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cannot-boot-windows-on-primary-hard-disk-uefi",
+      "redirect_document_id": false
     }
   ]
 }

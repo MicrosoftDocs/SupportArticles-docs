@@ -1,7 +1,7 @@
 ---
 title: Use "MaxStartups" and "MaxSessions" to Troubleshoot OpenSSH Connection Issues
 description: This article explains how to troubleshoot OpenSSH connection issues by using the `MaxStartups` and `MaxSessions` parameters to limit client connections to the OpenSSH Server service.
-ms.date: 10/13/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

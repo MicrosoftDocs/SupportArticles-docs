@@ -1,7 +1,7 @@
 ---
 title: How to Block Users from Running Hyper-V and VMware Virtual Machines on Workstation-class Computers
 description: Describes how to block users from installing Hyper-V or other virtualization software on specific computers.
-ms.date: 08/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

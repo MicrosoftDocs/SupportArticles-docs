@@ -1,7 +1,7 @@
 ---
 title: Collect Data to Analyze and Troubleshoot Windows Update for Business Reports Scenarios
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Windows Update for Business reports-related issues.
-ms.date: 12/1/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -19,7 +19,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ## Prerequisites
 
-Refer to [Introduction to TroubleShootingScript toolset (TSS)](/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ## Gather key information before contacting Microsoft support
 

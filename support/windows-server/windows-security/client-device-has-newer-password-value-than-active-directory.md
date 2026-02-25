@@ -1,7 +1,7 @@
 ---
 title: Client device has a newer password value than Active Directory
 description: Introduces a resolution for the scenario in which the client device has a newer password value than Active Directory.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
