@@ -1011,6 +1011,8 @@ items:
     items:
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
+    - name: Kiosk mode logon issues troubleshooting
+      href: ./shell-experience/kiosk-mode-logon-issues-troubleshooting.md  
   - name: Lock Screen or Screensaver
     items:
     - name: Lock screen isn't displayed
