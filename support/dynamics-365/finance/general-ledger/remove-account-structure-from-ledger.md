@@ -1,40 +1,46 @@
 ---
 # required metadata
-title: Unable to remove account structure from ledger
+title: Unable to remove an account structure from the general ledger
 description: Troubleshooting steps for removing account structures that are in use
 author: ethanrimes
 ms.date: 02/10/2026
 ---
 
-# Unable to remove account structure from ledger
+# Unable to remove an account structure from the general ledger
 
 This article helps troubleshoot problems removing an account structure from your general ledger.
 
 ## Symptoms
 
-Customer is trying to remove an Accounts Structure from Ledger Setup. However, they receive the error *"Account structure [Account structure being removed] cannot be deleted because it is in use by the general journal in [Company]. You must first update the general journal."*
+Customer is trying to remove an Account structure from the Ledger setup. However, they receive the error "Account structure [Account structure being removed] can't be deleted because it is in use by the general journal in [Company]. You must first update the general journal."*
 
 ## Resolution
 
 **Blocking unposted transactions**
 
-An unposted transaction is *blocking* if it references an account structure you are trying to modify or delete, and the modification would make that transaction invalid. The system prevents the change until these transactions are resolved.
+An unposted transaction is blocking if it references an account structure you are trying to modify or delete, and the modification would make that transaction invalid. The system prevents the change until these transactions are resolved.
 
-To find blocking transactions, go to **General ledger > Journal entries > General journals** and filter by **Show > Not posted**. Select a journal and click **Lines** in the action pane to view its transactions. Transactions that reference the account structure can be removed with the **Delete** button or updated to reference a different ledger account or offset account.
+To find blocking transactions, follow these steps:
+1. Go to **General ledger > Journal entries > General journals**.
+2. Filter by **Show > Not posted**.
+3. Select a journal and click **Lines** in the action pane to view its transactions.
+4. Transactions that reference the account structure can be removed with the **Delete** button or updated to reference a different ledger account or offset account.
 
-**Resolution 1: Reusing existing account structure**
+### Reuse an existing account structure
 
-First, address blocking unposted transactions via the instructions above. Specifically, unposted transactions that reference an account and would be invalidated by this modification are considered blocking.
+First, address blocking unposted transactions using the instructions above. Specifically, unposted transactions that reference an account and would be invalidated by this modification are considered blocking.
 
-Subsequently, navigate to **General ledger > Structures > Configure account structures** and select the desired account. Click **Edit** in the action pane, replace the outdated account structure's criteria with relevant criteria for your business scenario and then validate your changes with the **Validate** button. Finally, save your changes with the **Activate** button and wait for successful activation.
+1. Go to **General ledger > Structures > Configure account structures** and select the desired account.
+2. Click **Edit** in the action pane, replace the outdated account structure's criteria with relevant criteria for your business scenario.
+3. Click **Validate** to validate your changes.
+4. Click **Activate** to save your changes and wait for successful activation.
 
 Modification of an account structure is suitable for:
-- Broadening an account structure's range (e.g. changing from 1000-2000 to 1000-3000)
-- Restricting an account structure's range (e.g. specifying **Department** segment range 012-014)
+- Broadening an account structure's range. For example, changing from 1000-2000 to 1000-3000.
+- Restricting an account structure's range. For example, specifying **Department** segment range 012-014.
 - Subdividing a main account. For example, a user may modify **BalanceSheet** structure with range 1000-3000 into **BalanceSheet_Small** with range 1000-2000 and then create **BalanceSheet_Large** with range 2000-3000. For performance reasons, this is preferable to deleting **BalanceSheet** outright and creating two new main accounts. 
 
-**Resolution 2: True deletion of account structure**
+### Delete the account structure
 
 If the account structure is no longer needed, address any blocking unposted transactions using the instructions above before attempting deletion.
-
-If you cannot find the blocking unposted transactions, contact support.
+If you can't find the blocking unposted transactions, contact support.
