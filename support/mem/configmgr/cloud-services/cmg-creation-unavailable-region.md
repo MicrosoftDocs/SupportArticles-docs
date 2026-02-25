@@ -1,6 +1,6 @@
 ---
 title: Can't create a CMG in a particular region
-description: Discusses how to work around an issue in which you can't create a Cloud Management Gateway in the selected region because that region doesn't support the VM SKUS that you can use to create a CMG.
+description: Discusses how to work around an issue in which you can't create a Cloud Management Gateway in a selected region.
 ms.service: configuration-manager
 ms.topic: troubleshooting
 ms.manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 
 ## Summary
 
-When you try to create a Cloud Management Gateway (CMG) in a particular region, you receive a message that the requested virtual machine (VM) size isn't available in that region. Therefore, the operation to create the CMG fails. This issue occurs because a CMG requires one of a specific subset of VM SKUs, and these SKUs aren't available in all regions.
+When you try to create a Cloud Management Gateway (CMG) in a particular region, you receive a message that states that the requested virtual machine (VM) size isn't available in that region. Therefore, the operation to create the CMG fails. This issue occurs because a CMG requires one of a specific subset of VM SKUs, and these SKUs aren't available in all regions.
 
 This article helps you to work around this issue by creating the CMG in a different region, or by creating a Microsoft support request.
 
@@ -27,7 +27,7 @@ After you try to create a CMG in a particular Azure region, you receive an error
 ---------------------------
 Settings
 ---------------------------
-The VM size Standard_A2_V2 is currently not available in the region West US 3 for this subscription.  Please deploy the service in other regions or choose a different VM size. 
+The VM size Standard_A2_V2 is currently not available in the region West US 3 for this subscription. Please deploy the service in other regions or choose a different VM size. 
 ---------------------------
 OK   
 ---------------------------
@@ -37,13 +37,13 @@ OK
 
 ## Cause
 
-Configuration Manager supports only the following Azure Virtual Machine (VM) SKUs for creating CMGs:
+Configuration Manager supports only the following Microsoft Azure Virtual Machine (VM) SKUs for creating CMGs:
 
 - Standard_B2S
 - Standard_A2_V2
 - Standard_A4_V2
 
-These SKUs aren't available in all Azure regions. If you attempt to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
+These SKUs aren't available in all Azure regions. If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
 
 ## Workaround
 
@@ -93,7 +93,7 @@ if (-not $results) {
 
 ### Create a support request
 
-To check the availability of a given SKU and (if needed) request an exception, create a Microsoft support request.
+To check the availability of a given SKU and request an exception (if it's necessary), contact [Microsoft Support](https://support.microsoft.com/contactus).
 
 ## More information
 
