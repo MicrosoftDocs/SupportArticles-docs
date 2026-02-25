@@ -37,9 +37,9 @@ You might encounter one of the following error messages when working with financ
 - [You must select a value in the ... field in combination with the following dimensions values that are valid.](#you-must-select-a-value-in-the--field-in-combination-with-the-following-dimensions-values-that-are-valid)
 - [Blank isn't allowed for ... for the combination.](#blank-isnt-allowed-for--for-the-combination)
 - [... isn't an allowed value in combination with the following dimensions values that are valid.](#-is-not-an-allowed-value-in-combination-with-the-following-dimensions-values-that-are-valid)
-- [Dimension values were validated with this advanced rule structure...](#dimension-values-were-validated-with-this-advanced-rule-structure)
+- [Dimension values were validated with this advanced rule structure...](#dimension-values-were-validated-with-this-advanced-rule-structure-account-structure)
 - [... isn't a valid dimension value in account structure.](#-isnt-a-valid-dimension-value-in-account-structure)
-- [Derived dimension error with Prevent changes enabled.](#he--dimension-with-value--isnt-allowed-due-to-derived-dimension-rules-the-allowed-value-should-be)
+- [Derived dimension error with Prevent changes enabled.](#he-dimension-with-value-isnt-allowed-due-to-derived-dimension-rules-the-allowed-value-should-be)
 
 ## Resolution
 
