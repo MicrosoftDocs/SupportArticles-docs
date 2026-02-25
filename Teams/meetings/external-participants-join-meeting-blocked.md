@@ -23,6 +23,12 @@ External participants who are invited to a Teams meeting that's scheduled by use
 
 ## Error 1: Sign in to join this meeting
 
+Example: 
+
+"Sign in to join this meeting  
+
+You need to be signed in to Teams to access this meeting. Sign in with a work or school account and try joining again. Learn more."
+
 :::image type="content" source="media/external-participants-join-meeting-blocked/sign-in-to-join-meeting.png" alt-text="Screenshot of the Sign in to join this meeting message when external participants try to join a Teams meeting.":::
 
 ### Cause for error 1
@@ -35,6 +41,10 @@ If an external participant isn't signed in with a Teams work or school account a
 - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Anonymous users can join a meeting](/microsoftteams/settings-policies-reference#meeting-join--lobby) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
 
 ## Error 2: Sign in with a different account to join this meeting
+
+Example: "Sign in with a different account to join this meeting
+
+The account you're using doesn't have access to this meeting. Sign in with the account the invite was sent to and try again. Learn more."
 
 :::image type="content" source="media/external-participants-join-meeting-blocked/sign-in-with-different-account.png" alt-text="Screenshot of the Sign in with a different account to join this meeting message when external participants try to join a Teams meeting.":::
 
