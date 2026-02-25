@@ -36,10 +36,10 @@ You might encounter one of the following error messages when working with financ
 - [The combination wasn't validated beyond the ... financial dimension.](#the-combination-wasnt-validated-beyond-the--financial-dimension)
 - [You must select a value in the ... field in combination with the following dimensions values that are valid.](#you-must-select-a-value-in-the--field-in-combination-with-the-following-dimensions-values-that-are-valid)
 - [Blank isn't allowed for ... for the combination.](#blank-isnt-allowed-for--for-the-combination)
-- [... isn't an allowed value in combination with the following dimensions values that are valid.](#-isnt-an-allowed-value-in-combination-with-the-following-dimensions-values-that-are-valid)
+- [... isn't an allowed value in combination with the following dimensions values that are valid.](#-is-not-an-allowed-value-in-combination-with-the-following-dimensions-values-that-are-valid)
 - [Dimension values were validated with this advanced rule structure...](#dimension-values-were-validated-with-this-advanced-rule-structure)
 - [... isn't a valid dimension value in account structure.](#-isnt-a-valid-dimension-value-in-account-structure)
-- [Derived dimension error with Prevent changes enabled.](#derived-dimension-error-with-prevent-changes-enabled)
+- [Derived dimension error with Prevent changes enabled.](#he--dimension-with-value--isnt-allowed-due-to-derived-dimension-rules-the-allowed-value-should-be)
 
 ## Resolution
 
@@ -204,7 +204,7 @@ This error appears when an incorrect dimension value was entered that doesn't fo
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
-### Dimension values were validated with this advanced rule structure / account structure ...
+### Dimension values were validated with this advanced rule structure or account structure ...
 This error occurs when an account doesn't follow the account structure or advanced rules configured for the ledger.
 
 - Review account structure and advanced rule setup:
