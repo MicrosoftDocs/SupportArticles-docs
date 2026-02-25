@@ -1,36 +1,39 @@
 ---
 # required metadata
-title: I cannot find the dimension value I'm looking for
+title: Can't find the dimension value I'm looking for
 description: Troubleshooting steps for locating missing or unavailable financial dimension values
 author: ethanrimes
 ms.date: 02/10/2026
 ---
 
-# I cannot find the dimension value I'm looking for
+# I can't find the dimension value I'm looking for
 
-This guide provides troubleshooting steps for locating missing or unavailable financial dimension values.
+This article provides troubleshooting steps for locating missing or unavailable financial dimension values.
 
-**Potential Cause 1:** You're working in the incorrect legal entity (company). If the dimension value is scoped to a specific legal entity (company) different from the one which you're working in, it may not be visible. This problem does not exist for "shared" values across entities. 
+## You're working in the incorrect legal entity (company). 
+If the dimension value is scoped to a specific legal entity (company) different from the one which you're working in, it may not be visible. This problem doesn't exist for shared values across entities. 
 
-  - **Resolution:** Verify you're working in the correct legal entity where the dimension value was created.
+Resolution - Verify you're working in the correct legal entity where the dimension value was created.
 
-**Potential Cause 2:** The user lacks the necessary security role. If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when XDS filters are applied to the backing entity, and the user doesn’t have permission to view it.
+## The user lacks the necessary security role. 
+If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when XDS filters are applied to the backing entity, and the user doesn’t have permission to view it.
 
-  - **Resolution 1:** Assign the appropriate security role.
-
+Resolution - Assign the appropriate security role.
     1. Go to **System administration** > **Users** > **Users**.
     2. Select the affected user.
     3. Select **Roles** > **Assign organizations**.
     4. Review the access scope and grant access to the required organizations. To test, select **Grant access to all organizations** and check whether the dimension value appears.
 
-  - **Resolution 2:** To check whether the issue is XDS-related, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility.
+Resolution - Check if the issue is XDS-related, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility.
 
-**Potential Cause 3:** The dimension value is backed by a system entity and has not been used yet. Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
+### The dimension value is backed by a system entity and hasn't been used yet. 
+Values for entity-backed dimensions aren't available in the dimension framework until used in an account or journal.
 
-  - **Resolution:** Ensure the dimension value has been used in at least one account or journal entry.
+Resolution - Ensure the dimension value has been used in at least one account or journal entry.
 
-**Potential Cause 4:** The dimension value exists but isn't synced properly with the dimension framework.
+### The dimension value exists but isn't synced properly with the dimension framework.
 
-  - **Resolution:** Rename the dimension value to a temporary name, then rename it back to the original name. This triggers a sync with the dimension framework.
+Resolution - Rename the dimension value to a temporary name, then rename it back to the original name. This triggers a sync with the dimension framework.
 
-  - The rename process is handled by a background process in the Data Maintenance portal. Monitor progress by going to **System administration** > **Periodic tasks** > **Data maintenance** and checking the status of the "Dimension value rename and modify chart of accounts delimiter process" job.
+The rename process is handled by a background process in the Data Maintenance portal. To monitor progress, go to **System administration** > **Periodic tasks** > **Data maintenance**.
+Check the status of the "Dimension value rename and modify chart of accounts delimiter process" job.
