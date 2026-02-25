@@ -25,13 +25,13 @@ This problem is fixed on Windows builds 26100.7705, 26200.7705, and newer. Admin
 
 ## Kiosk policy deployment fails with error code 0x86000005
 
-Kiosk policy deployment fails with error code `0x86000005` when using certain MDM providers for deployment. You first observed this problem on build 26100.4484.
+Kiosk policy deployment fails with error code `0x86000005` when using certain MDM providers for deployment starting with build 26100.4484.
 
 This problem is fixed on Windows builds 26100.7705, 26200.7705, and newer.
 
 ## File Explorer shows a blocked location dialog box
 
-Opening File Explorer displays a dialog box with the message: *We can't open This PC. To help you keep your data safe, the location is blocked.* This problem occurs on a kiosk that uses [File Explorer restrictions](configuration-file.md#file-explorer-restrictions) and has the [Shared PC mode](/windows/configuration/shared-pc/set-up-shared-or-guest-pc) feature configured.
+Opening File Explorer displays a dialog box with the message: *We can't open This PC. To help you keep your data safe, the location is blocked.* This problem occurs on a kiosk that uses [File Explorer restrictions](/windows/configuration/assigned-access/configuration-file/configuration-file?pivots=windows-11#file-explorer-restrictions) and has the [Shared PC mode](/windows/configuration/shared-pc/set-up-shared-or-guest-pc) feature configured.
 
 To work around this problem, configure the [SetAllowedFolderLocations](/windows/client-management/mdm/policy-csp-fileexplorer#setallowedfolderlocations) policy with a value that doesn't include **This PC**.
 
@@ -39,4 +39,4 @@ To work around this problem, configure the [SetAllowedFolderLocations](/windows/
 
 On kiosks that have Microsoft Edge as an allowed app, packaged apps (apps installed from an MSIX or APPX package) fail to launch.
 
-To work around this problem, find the name of the `.exe` file that the packaged app launches and add it to the allowed apps list in your [Assigned Access configuration file](configuration-file.md#allapplist), specifying it with the `DesktopAppPath` attribute. To find the `.exe` file name, open the `AppxManifest.xml` file in the app's installation folder and look for the `Executable` attribute of the `Application` element.
+To work around this problem, find the name of the `.exe` file that the packaged app launches and add it to the allowed apps list in your [Assigned Access configuration file](/windows/configuration/assigned-access/configuration-file/configuration-file?pivots=windows-11#allapplist), specifying it with the `DesktopAppPath` attribute. To find the `.exe` file name, open the `AppxManifest.xml` file in the app's installation folder and look for the `Executable` attribute of the `Application` element.
