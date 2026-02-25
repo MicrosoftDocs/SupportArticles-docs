@@ -96,6 +96,10 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
   On certain devices and in certain scenarios, you might experience sign-in failures when you use an authenticator. This problem happens because of a limitation that the OEM imposes. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
+- **Apps cannot save null/blank values to data sources**
+
+  If your app is unable to save null or blank values to data sources, this issue may occur when the Formula-level error management feature is disabled. To resolve this problem, go to **Settings** > **Updates** > **Retired** and ensure that the Formula-level error management feature is not disabled.
+
 ## Power Automate integration
 
 - **Power Automate flows are orphaned in Power Apps.**
