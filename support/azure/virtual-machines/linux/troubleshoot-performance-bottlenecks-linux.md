@@ -62,7 +62,7 @@ Different tools are used to collect performance data depending on the resource u
 |Network|`ip`, `vnstat`, `iperf3`|
 |Memory|`free`, `top`, `vmstat`|
 
-The followng sections discuss performance data and tools that can be used for the investigation.
+The following sections discuss performance data and tools that can be used for the investigation.
 
 ## CPU resource
 
@@ -508,7 +508,7 @@ When PerfInsights is [installed through the Azure portal](../windows/performance
 
 #### Azure portal option 1
 
-Browse to the VM blade and select **Performance diagnostics**. Then install it on the target VM (uses extensions)..
+Browse to the VM blade and select **Performance diagnostics**. Then install it on the target VM (uses extensions).
 
 :::image type="content" source="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="Screenshot that shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics." border="false" lightbox="media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png":::
 
