@@ -17,13 +17,13 @@ appliesto:
 
 This article describes known problems for devices that run in single-app kiosk mode or restricted user experience (multi-app kiosk) mode. You can often resolve these issues by making configuration changes or installing cumulative updates. Future releases should automatically resolve some of these issues.
 
-## Restrictions dialog box on sign-in when Edge is an allowed app
+## Restrictions dialog box on sign-in when Microsoft Edge is an allowed app
 
 On kiosks that have Microsoft Edge as an allowed app, a **Restrictions** dialog box appears on sign-in that displays the following message:
 
 > This operation is canceled due to restrictions in effect on this computer. Please contact your system administrator.
 
-This issue is fixed on Windows builds 26100.7705, 26200.7705, and later builds. To put these fixes into effect, re-deploy the kiosk configuration.
+This issue is fixed on Windows builds 26100.7705, 26200.7705, and later builds. To put these fixes into effect, redeploy the kiosk configuration.
 
 ## Kiosk policies don't deploy and generate error code 0x86000005
 
@@ -39,7 +39,7 @@ You have a kiosk that uses [File Explorer restrictions](/windows/configuration/a
 
 To work around this issue, configure the [SetAllowedFolderLocations](/windows/client-management/mdm/policy-csp-fileexplorer#setallowedfolderlocations) policy to use a value that doesn't include **This PC**.
 
-## Packaged apps don't launch when Edge is an allowed app
+## Packaged apps don't launch when Microsoft Edge is an allowed app
 
 On kiosks that have Microsoft Edge as an allowed app, packaged apps (apps installed from an MSIX or APPX package) don't launch.
 
