@@ -25,7 +25,7 @@ On kiosks that have Microsoft Edge as an allowed app, a **Restrictions** dialog 
 
 This issue is fixed in Windows builds 26100.7705, 26200.7705, and later builds. To put these fixes into effect, redeploy the kiosk configuration.
 
-## Kiosk policies that don't deploy generate error code 0x86000005
+## Kiosk policies don't deploy, and you receive error code 0x86000005
 
 When you use certain mobile device management (MDM) providers, kiosk policies don't deploy, and you receive error code `0x86000005`. This issue occurs on builds between build 26100.4484 and build 26100.7705.
 
