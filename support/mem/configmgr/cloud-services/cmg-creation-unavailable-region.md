@@ -66,20 +66,25 @@ You can use the following sample script to identify which SKUs are available in 
 ```powershell
 Connect-AzAccount
 
-#Listing supported SKUs and fetching region display names
-$supportedSkus=@('Standard_B2s','Standard_A2_v2','Standard_A4_v2')
-$locationMap=@{};$displayMap=@{};Get-AzLocation|ForEach-Object{$locationMap[$_.DisplayName]=$_.Location;$displayMap[$_.Location]=$_.DisplayName}
+# Define the supported SKUs and fetch region display names.
+$supportedSkus = @('Standard_B2s', 'Standard_A2_v2', 'Standard_A4_v2')
+$locationMap = @{}; $displayMap = @{}
+Get-AzLocation | ForEach-Object { $locationMap[$_.DisplayName] = $_.Location; $displayMap[$_.Location] = $_.DisplayName }
 
-# Listing only regions that have VMSS available
-$vmssRegions=(Get-AzResourceProvider -ProviderNamespace Microsoft.Compute).ResourceTypes|Where-Object{$_.ResourceTypeName -eq 'virtualMachineScaleSets'}|Select-Object -ExpandProperty Locations|ForEach-Object{if($locationMap.ContainsKey($_)){$locationMap[$_]}else{$_}}|Select-Object -Unique
+# Get only the regions that have VMSS available.
+$vmssRegions = (Get-AzResourceProvider -ProviderNamespace Microsoft.Compute).ResourceTypes |
+    Where-Object { $_.ResourceTypeName -eq 'virtualMachineScaleSets' } |
+    Select-Object -ExpandProperty Locations |
+    ForEach-Object { if ($locationMap.ContainsKey($_)) { $locationMap[$_] } else { $_ } } |
+    Select-Object -Unique
 
-# Looking for SKU availability in the VMSS-enabled regions
-$results=Get-AzComputeResourceSku | 
-Where-Object{ $_.ResourceType -eq 'virtualMachines' -and $supportedSkus -contains $_.Name -and $_.Restrictions.Count -eq 0 }|
-ForEach-Object{ foreach($loc in $_.Locations){ if($vmssRegions -contains $loc){ if($displayMap.ContainsKey($loc)){ $regionName=$displayMap[$loc] } else { $regionName=$loc }; [PSCustomObject]@{ Sku=$_.Name; Region=$regionName } } } }|
-Sort-Object Sku,Region|Select-Object -Unique Sku,Region
+# Check SKU availability in the VMSS-enabled regions.
+$results = Get-AzComputeResourceSku |
+    Where-Object { $_.ResourceType -eq 'virtualMachines' -and $supportedSkus -contains $_.Name -and $_.Restrictions.Count -eq 0 } |
+    ForEach-Object { foreach ($loc in $_.Locations) { if ($vmssRegions -contains $loc) { if ($displayMap.ContainsKey($loc)) { $regionName = $displayMap[$loc] } else { $regionName = $loc }; [PSCustomObject]@{ Sku = $_.Name; Region = $regionName } } } } |
+    Sort-Object Sku, Region | Select-Object -Unique Sku, Region
 
-if(-not $results -or $results.Count -eq 0){ Write-Host 'No available regions found for the supported CMG SKUs.' } else { $results|Out-GridView -Title 'Available regions for supported CMG SKUs' }
+if (-not $results -or $results.Count -eq 0) { Write-Host 'No available regions found for the supported CMG SKUs.' } else { $results | Out-GridView -Title 'Available regions for supported CMG SKUs' }
 ```
 
 ### Method 2: Create a support request
