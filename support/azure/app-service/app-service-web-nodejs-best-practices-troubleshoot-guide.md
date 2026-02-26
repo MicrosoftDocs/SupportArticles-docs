@@ -4,7 +4,7 @@ description: Learn the best practices and troubleshooting steps for Node.js appl
 ms.assetid: 387ea217-7910-4468-8987-9a1022a99bef
 manager: dcscontentpm
 ms.topic: best-practice
-ms.date: 10/13/2025
+ms.date: 02/25/2026
 author: msangapu-msft
 ms.author: msangapu
 ms.reviewer: v-ryanberg
@@ -28,7 +28,9 @@ This [schema file](https://github.com/Azure/iisnode/blob/master/src/config/iisno
 
 ### nodeProcessCountPerApplication
 
-This setting controls the number of node processes that are launched per IIS application. The default value is 1. You can launch as many node.exes as your VM vCPU count by changing the value to 0. The recommended value is 0 for most applications so you can use all of the vCPUs on your machine. Node.exe is single-threaded so one node.exe consumes a maximum of 1 vCPU. To get maximum performance out of your node application, you want to use all vCPUs.
+This setting controls the number of node processes that are launched per IIS application. The default value is *1*. You can launch as many node.exe processes as your virtual machine vCPU count by changing the value to *0*. The recommended value is *0* for many applications so that you can use all available vCPUs.
+
+Although the Node.js event loop runs on a single thread, a single Node.js process can still use multiple CPU cores when the app uses worker threads, the cluster module, native add-ons, or other libraries that run work in parallel. For CPU-bound workloads, you might still get higher throughput by running multiple Node.js processes (up to the VM vCPU count) so IIS can distribute requests across processes.
 
 ### nodeProcessCommandLine
 
