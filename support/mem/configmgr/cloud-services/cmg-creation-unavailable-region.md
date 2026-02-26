@@ -37,13 +37,13 @@ OK
 
 ## Cause
 
-Configuration Manager supports only the following Microsoft Azure Virtual Machine (VM) SKUs for creating CMGs:
+As per February 2026, Configuration Manager supports only the following Microsoft Azure Virtual Machine (VM) SKUs for creating CMGs:
 
 - Standard_B2S
 - Standard_A2_V2
 - Standard_A4_V2
 
-These SKUs aren't available in all Azure regions. If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
+These SKUs aren't available in all Azure regions that allow creation of Virtual Machine Scale Sets (VMSS). If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
 
 ## Workaround
 
@@ -58,40 +58,31 @@ You can use the following sample script to identify which SKUs are available in 
 > [!IMPORTANT]  
 > Before you run this script, verify that you meet the following requirements:
 >
-> - You used your Azure account to authenticate.
 > - You installed the [Azure PowerShell module](/powershell/azure/install-azps-windows).
+> - You used your Azure account to authenticate.
 
 [!INCLUDE [Script disclaimer](../../../includes/script-disclaimer.md)]
 
 ```powershell
 Connect-AzAccount
 
-$supportedSkus = @('Standard_B2s','Standard_A2_v2','Standard_A4_V2')
+#Listing supported SKUs and fetching region display names
+$supportedSkus=@('Standard_B2s','Standard_A2_v2','Standard_A4_v2')
+$locationMap=@{};$displayMap=@{};Get-AzLocation|ForEach-Object{$locationMap[$_.DisplayName]=$_.Location;$displayMap[$_.Location]=$_.DisplayName}
 
-$results = Get-AzComputeResourceSku |
-   Where-Object {
-      $_.ResourceType -eq 'virtualMachines' -and
-      $supportedSkus -contains $_.Name -and
-      ($_.Restrictions.ReasonCode -notcontains 'NotAvailableForSubscription')
-   } |
-   ForEach-Object {
-      foreach ($location in $_.Locations) {
-         [PSCustomObject]@{
-            Sku      = $_.Name
-            Region = $location
-         }
-      }
-   } |
-   Sort-Object Sku, Region
+# Listing only regions that have VMSS available
+$vmssRegions=(Get-AzResourceProvider -ProviderNamespace Microsoft.Compute).ResourceTypes|Where-Object{$_.ResourceTypeName -eq 'virtualMachineScaleSets'}|Select-Object -ExpandProperty Locations|ForEach-Object{if($locationMap.ContainsKey($_)){$locationMap[$_]}else{$_}}|Select-Object -Unique
 
-if (-not $results) {
-   Write-Host 'No available regions found for the supported CMG SKUs.'
-} else {
-   $results | Out-GridView -Title 'Available regions for supported CMG SKUs'
-}
+# Looking for SKU availability in the VMSS-enabled regions
+$results=Get-AzComputeResourceSku | 
+Where-Object{ $_.ResourceType -eq 'virtualMachines' -and $supportedSkus -contains $_.Name -and $_.Restrictions.Count -eq 0 }|
+ForEach-Object{ foreach($loc in $_.Locations){ if($vmssRegions -contains $loc){ if($displayMap.ContainsKey($loc)){ $regionName=$displayMap[$loc] } else { $regionName=$loc }; [PSCustomObject]@{ Sku=$_.Name; Region=$regionName } } } }|
+Sort-Object Sku,Region|Select-Object -Unique Sku,Region
+
+if(-not $results -or $results.Count -eq 0){ Write-Host 'No available regions found for the supported CMG SKUs.' } else { $results|Out-GridView -Title 'Available regions for supported CMG SKUs' }
 ```
 
-### Create a support request
+### Method 2: Create a support request
 
 To check the availability of a given SKU and request an exception (if it's necessary), contact [Microsoft Support](https://support.microsoft.com/contactus).
 
