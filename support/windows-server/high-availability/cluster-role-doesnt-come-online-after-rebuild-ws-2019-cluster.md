@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2019 cluster role doesn't come online after you rebuild the cluster
-description: Discusses how to resolve an issue in which a Windwos Server 2019 cluster role doesn't come online on a specific node after you rebuild the cluster.
+description: Discusses how to resolve an issue in which a Windows Server 2019 cluster role doesn't come online on a specific node after you rebuild the cluster.
 ms.date: 02/27/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Use this article to resolve a Windows Server 2019 failover cluster in which a cluster role doesn't come online on a specific node after you rebuild the cluster. The problem is caused by insufficient permissions for the Cluster Name Object (CNO) to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
+Use this article to resolve a Windows Server 2019 failover cluster in which a cluster role doesn't come online on a specific node after you rebuild the cluster. Typically, this issue indicates that the Cluster Name Object (CNO) doesn't have the correct permissions to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
 
 ## Symptoms
 
@@ -38,7 +38,7 @@ The issue persists even if you destroy the cluster and then rebuild it again.
 
 ## Cause
 
-This issue occurs when the cluster network name resource cannot register its DNS names because the CNO does not have the required permissions to update the secure DNS zone. Without these permissions, DNS registration fails. Therefore, the cluster role on the affected node can't come online.
+This issue occurs when the cluster network name resource can't register its DNS names because the CNO doesn't have the required permissions to update the secure DNS zone. Without these permissions, DNS registration fails. Therefore, the cluster role on the affected node can't come online.
 
 ## Resolution
 
