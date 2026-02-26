@@ -19,33 +19,33 @@ appliesto:
 
 ## Summary
 
-Use this article to resolve a Windows Server 2019 failover cluster in which a cluster role doesn't come online on a specific node after you rebuild the cluster. Typically, this issue indicates that the Cluster Name Object (CNO) doesn't have the correct permissions to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
+Use this article to resolve a Windows Server 2019 failover cluster issue in which a cluster role doesn't come online on a specific node after you rebuild the cluster. Typically, this issue indicates that the Cluster Name Object (CNO) doesn't have the correct permissions to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
 
 ## Symptoms
 
-You rebuild a Windows Server 2019 failover cluster, and then you experience one or more of the following symptoms:
+You rebuild a Windows Server 2019 failover cluster, and then you encounter one or more of the following symptoms:
 
 - On one particular node, cluster roles don't run.
-- On that node, the event log displays the following error message, which indicates a permissions issue:
+- On that node, the event log displays the following error message that indicates a permissions issue:
 
   ```output
   Cluster network name resource failed registration of one or more associated DNS name(s) because the access to update the secure DNS was denied.
   ```
 
-- A generic role can't fail over to another node. In fact, unless you involve your cluster vendor, no roles fail over successfully.
+- A generic role doesn't fail over to another node. In fact, unless you involve your cluster vendor, no roles fail over successfully.
 
-The issue persists even if you destroy the cluster and then rebuild it again.
+The issue persists even if you destroy the cluster and then rebuild it.
 
 ## Cause
 
-This issue occurs when the cluster network name resource can't register its DNS names because the CNO doesn't have the required permissions to update the secure DNS zone. Without these permissions, DNS registration fails. Therefore, the cluster role on the affected node can't come online.
+This issue occurs if the cluster network name resource can't register its DNS names because the CNO doesn't have the required permissions to update the secure DNS zone. Without these permissions, DNS registration fails. Therefore, the cluster role on the affected node can't come online.
 
 ## Resolution
 
 To resolve this issue in Windows Server 2019 failover clusters:
 
-1. Verify that the CNO exists in Active Directory, and isn't disabled.
-1. Confirm that the CNO has sufficient permissions to update records in the secure DNS zone. Follow these steps:
+1. Verify that the CNO exists in Active Directory, and that it isn't disabled.
+1. Verify that the CNO has sufficient permissions to update records in the secure DNS zone. Follow these steps:
    1. In the DNS Manager console, locate the forward lookup zone for your cluster domain.
    1. Right-click the zone, select **Properties**, and then select **Security**.
    1. Verify that the CNO has the **Create all child objects** and **Write all properties** permissions.
@@ -58,7 +58,7 @@ After you grant the correct permissions to the CNO, failover between nodes shoul
 
 ## Data collection
 
-If the issue persists after you finish the resolution steps, collect the following data and then contact Microsoft Support:
+If the issue persists after you finish the resolution steps, collect the following data, and then contact [Microsoft Support](https://support.microsoft.com/contactus):
 
 - Cluster logs from all nodes. To collect logs, run the following command on one of the cluster nodes:
 
