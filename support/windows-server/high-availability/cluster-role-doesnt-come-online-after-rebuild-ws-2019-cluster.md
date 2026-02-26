@@ -73,4 +73,4 @@ This information helps support engineers quickly identify permission or configur
 
 ## References
 
-- [Prestage cluster computer objects in Active Directory Domain Services](windows-server/failover-clustering/prestage-cluster-adds)
+- [Prestage cluster computer objects in Active Directory Domain Services](/windows-server/failover-clustering/prestage-cluster-adds)
