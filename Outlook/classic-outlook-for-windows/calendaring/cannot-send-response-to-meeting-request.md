@@ -26,18 +26,18 @@ _Original KB number:_ &nbsp; 3185258
 
 ## Symptoms
 
-When you try to send a response to a meeting request in Microsoft Outlook, the standard response options are not available. The **Accept**, **Tentative**, and **Decline** buttons do not trigger the expected dropdown menu options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**. Therefore, you can't send the response.
+When you try to send a response to a meeting request in Microsoft Outlook, the standard response options aren't available. The **Accept**, **Tentative**, and **Decline** buttons don't trigger the expected dropdown menu options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**. Therefore, you can't send the response.
 
 :::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Screenshot of the Accept, Tentative, and Decline buttons on the Meeting ribbon in Outlook." border="false":::
 
 Because the meeting organizer doesn't receive a response from you, the meeting tracking feature is not updated as expected.
 
 > [!NOTE]
-> The ability to respond to a meeting request by selecting one of the options that are mentioned in the "Symptoms" section is not supported in new Outlook.
+> The ability to respond to a meeting request by selecting one of the options that are mentioned in the "Symptoms" section isn't supported in new Outlook.
 
 ## Cause
 
-This issue occurs if the meeting organizer adds you as a resource to the meeting, and you are external to the meeting organizer's domain.
+This issue occurs if the meeting organizer adds you as a resource to the meeting, and you're external to the meeting organizer's domain.
 
 ## Resolution
 
