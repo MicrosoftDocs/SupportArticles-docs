@@ -63,7 +63,7 @@ If everything is correctly configured, but you still encounter issues, use the [
 Get-EnvironmentRegion -EnvironmentId "<EnvironmentId>"
 ```
 
-If the environments are in different regions, and one works but the other doesn't, the issue is in the virtual network setup for the failing region. Run any further diagnostic commands against both regions to make sure that your full setup is configured correctly. To specify a region, include the `-Region` parameter. For example:
+If the environments are in different regions, and one works but the other doesn't, the issue is in the virtual network setup for the failing region. To make sure that your full setup is configured correctly, run any further diagnostic commands against both regions. To specify a region, include the `-Region` parameter. For example:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>" -Region "<AzureRegion>"
@@ -150,4 +150,4 @@ If the connectivity tests are successful, but you're still experiencing issues i
 1. Verify that the certificate that the resource presents is publicly trusted.
 1. Make sure that no authentication or authorization issues prevent access to the resource.
 
-You might not be able to diagnose or resolve the issue by using the diagnostics PowerShell module. In this case, create a subnet without delegation in your virtual network, and deploy a virtual machine (VM) in that subnet. The, you could use the VM to perform further diagnostics and troubleshooting steps, such as checking network traffic, analyzing logs, and testing application-level connectivity.
+You might not be able to diagnose or resolve the issue by using the diagnostics PowerShell module. In this case, create a subnet without delegation in your virtual network, and deploy a virtual machine (VM) in that subnet. Then, you could use the VM to perform further diagnostics and troubleshooting steps, such as checking network traffic, analyzing logs, and testing application-level connectivity.
