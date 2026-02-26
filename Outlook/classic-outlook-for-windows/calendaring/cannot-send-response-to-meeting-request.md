@@ -1,6 +1,6 @@
 ---
-title: Cannot send a response to a meeting request
-description: Describes an issue that prevents you from responding to a meeting request in Microsoft Outlook. A workaround is provided.
+title: Can't send a response to a meeting request
+description: Describes an issue that prevents you from responding to a meeting request in Microsoft Outlook. Provides a workaround.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -26,17 +26,18 @@ _Original KB number:_ &nbsp; 3185258
 
 ## Symptoms
 
-When you try to send a response to a meeting request in Microsoft Outlook, the option is not available. The **Accept**, **Tentative**, and **Decline** buttons do not triggers the expected drop-down options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**.
+When you try to send a response to a meeting request in Microsoft Outlook, the standard response options are not available. The **Accept**, **Tentative**, and **Decline** buttons do not trigger the expected drop-down menu options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**. Therefore, you can't send the response.
 
 :::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Screenshot of the Accept, Tentative, and Decline buttons on the Meeting ribbon in Outlook." border="false":::
 
-Because you can't send a response, the meeting organizer doesn't receive one from you, and the meeting tracking feature is not updated as expected.
+Because the meeting organizer doesn't receive a response from you, the meeting tracking feature is not updated as expected.
 
-__NOTE:__ The ability to respond to a meeting request with Edit the response before sending, Send the response now, and Do not send a response is __not supported__ in new Outlook.
+> [!NOTE]
+> The ability to respond to a meeting request by selecting one of the options that are mentioned in the "Symptoms" section is not supported in new Outlook.
 
 ## Cause
 
-This issue occurs if the meeting organizer added you as a resource to the meeting and you are external to the meeting organizers domain.
+This issue occurs if the meeting organizer adds you as a resource to the meeting, and you are external to the meeting organizer's domain.
 
 ## Resolution
 
