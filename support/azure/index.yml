@@ -99,7 +99,7 @@ productDirectory:
   - title: Hybrid connectivity
     imageSrc: "https://learn.microsoft.com/azure/networking/media/index/hybrid-connectivity.svg"
     links:
-    - url: vpn-gateway/welcome-azure-vpn-gateway.yml
+    - url: vpn-gateway/welcome-vpn-gateway.yml
       text: Troubleshooting articles for Azure VPN Gateway
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
