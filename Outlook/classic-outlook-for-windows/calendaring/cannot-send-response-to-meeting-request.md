@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 3185258
 
 ## Symptoms
 
-When you try to send a response to a meeting request in Microsoft Outlook, the standard response options are not available. The **Accept**, **Tentative**, and **Decline** buttons do not trigger the expected drop-down menu options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**. Therefore, you can't send the response.
+When you try to send a response to a meeting request in Microsoft Outlook, the standard response options are not available. The **Accept**, **Tentative**, and **Decline** buttons do not trigger the expected dropdown menu options of **Edit the response before sending**, **Send the response now**, and **Do not send a response**. Therefore, you can't send the response.
 
 :::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Screenshot of the Accept, Tentative, and Decline buttons on the Meeting ribbon in Outlook." border="false":::
 
