@@ -230,7 +230,7 @@ This problem might occur if the root certificate public key that you uploaded co
 
 Make sure that the data in the certificate doesn't contain invalid characters, such as line breaks (carriage returns). The entire value should be one long line. The following example shows the area to copy within the certificate:
 
-   :::image type="content" source="./media/vpn-gateway-howto-point-to-site-resource-manager-portal/certificate.png" alt-text="Screenshot of data in the certificate." lightbox="./media/vpn-gateway-howto-point-to-site-resource-manager-portal/certificate-expand.png":::
+:::image type="content" source="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png" alt-text="Screenshot of certificate flow." lightbox="media/vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems/certificate.png":::
 
 ## Azure portal error: Failed to save the VPN gateway, and the resource name is invalid
 

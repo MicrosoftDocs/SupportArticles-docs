@@ -1,6 +1,6 @@
 items:
 - name: Azure VPN Gateway troubleshooting documentation
-  href: vpn-gateway/welcome-vpn-gateway.yml
+  href: welcome-vpn-gateway.yml
 - name: Troubleshoot Azure VPN Gateway
   href: vpn-gateway-troubleshoot.md   
 - name: Troubleshoot Azure VPN Gateway using diagnostic logs
