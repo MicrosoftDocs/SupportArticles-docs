@@ -13,7 +13,7 @@ This troubleshooter helps you identify the cause of sustained high CPU in an Int
 
 ## Scenario
 
-An application pool in IIS experiences a prolonged period of high CPU that exceeds 80 percent usage. When you test the application, you don't encounter any problems. Then, the application experiences actual user load, and CPU climbs to a high percentage and remains there. To recover, you must restart the application pool. However, after you the restart, CPU again climbs to a high level.
+An application pool in IIS experiences a prolonged period of high CPU that exceeds 80 percent usage. When you test the application, you don't encounter any problems. Then, the application experiences actual user load, and CPU climbs to a high percentage and remains there. To recover, you must restart the application pool. However, CPU again climbs to a high level after the restart.
 
 ## Diagnostic Tools
 
@@ -23,7 +23,7 @@ An application pool in IIS experiences a prolonged period of high CPU that excee
 
 ## Data collection
 
-When you encounter high CPU usage issues, first determine the process that consumes the most CPU. Use the **Processes** tab in Task Manager to find this information. Make sure that you select the **Show processes from all users** checkbox. The following screenshot shows this box checked and shows the `w3wp.exe` process (the process that hosts an IIS application pool) consuming a high level of CPU.
+When you encounter high CPU usage issues, first determine the process that consumes the most CPU. Use the **Processes** tab in Task Manager to find this information. Make sure that you select the **Show processes from all users** checkbox. The following screenshot shows this box selected, and shows that the `w3wp.exe` process (the process that hosts an IIS application pool) consumes a high level of CPU.
 
 :::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/windows-task-manager-w3wp.png" alt-text="Windows Task Manager showing the C P U column in which 85 is highlighted on the w 3 w p executable row. The show processes from all users option is selected.":::
 
@@ -108,13 +108,13 @@ The easiest way to collect user-mode process dump files when a high CPU conditio
 1. Select **Add** > **OK**.
 1. Select the newly added trigger, and then select **Edit Thresholds**.
     :::image type="content" source="media/troubleshoot-high-cpu-in-iis-app-pool/select-performance-counters-dialog.png" alt-text="The Select Performance Counters dialog box.":::  
-1. On the drop-down list, select **Above**.
+1. On the dropdown list, select **Above**.
 1. Change the threshold to **80**.
 1. Enter **20** for the number of seconds. (You can adjust this value if it's necessary. But to prevent false triggers, be careful not to specify a small number of seconds.)
 1. Select **OK**.
 1. Select **Next**.
 1. Select **Add Dump Target**.
-1. On the drop-down list, select **Web Application Pool**.
+1. On the dropdown list, select **Web Application Pool**.
 1. In the list of application pools, select your application pool.
 1. Select **OK**.
 1. Select **Next** two times.
