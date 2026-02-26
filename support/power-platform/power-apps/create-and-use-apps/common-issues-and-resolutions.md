@@ -3,8 +3,8 @@ title: Common Issues and Resolutions for Power Apps
 description: Resolve common Power Apps issues with step-by-step solutions and troubleshooting tips for connectors, integration, Power Apps Studio, and more. 
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
-ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 04/15/2025
+ms.reviewer: tapanm, lanced, tahoon, v-shaywood
+ms.date: 02/26/2026
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -98,7 +98,7 @@ For a description of how to monitor the data being sent and returned, see [Debug
 
 - **Apps cannot save null/blank values to data sources**
 
-  If your app is unable to save null or blank values to data sources, this issue may occur when the Formula-level error management feature is disabled. To resolve this problem, go to **Settings** > **Updates** > **Retired** and ensure that the Formula-level error management feature is not disabled.
+  If your app can't save null or blank values to data sources, the **Formula-level error management** feature might be disabled. To fix this problem, go to **Settings** > **Updates** > **Retired** and make sure the **Formula-level error management** feature is enabled.
 
 ## Power Automate integration
 
