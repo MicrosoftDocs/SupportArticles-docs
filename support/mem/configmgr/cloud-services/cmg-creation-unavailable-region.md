@@ -43,7 +43,7 @@ As per February 2026, Configuration Manager supports only the following Microsof
 - Standard_A2_V2
 - Standard_A4_V2
 
-These SKUs aren't available in all Azure regions that allow creation of Virtual Machine Scale Sets (VMSS). If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
+These SKUs aren't available in all Azure regions that support Virtual Machine Scale Sets (VMSS). If you try to create a CMG in a region that doesn't have the selected SKU, you receive the error message.
 
 ## Workaround
 
