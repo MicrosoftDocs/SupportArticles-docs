@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot virtual network issues
 description: Learn how to troubleshoot common scenarios for virtual networks in Microsoft Power Platform.
-author: faix
 ms.component: pa-admin
-ms.topic: troubleshooting-general
 ms.date: 02/26/2026
-ms.author: osfaixat, sericks, v-shaywood
+ms.author: faix, sericks, v-shaywood
 search.audienceType: 
   - admin
 ms.custom: sap:Environment - Administration
