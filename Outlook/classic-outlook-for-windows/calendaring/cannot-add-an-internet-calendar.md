@@ -10,7 +10,7 @@ ms.custom:
   - sap:Calendar\SharePoint or Internet-based calendars
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: tasitae
+ms.reviewer: tasitae, tylewis
 appliesto: 
   - Outlook 2019
   - Outlook 2016
