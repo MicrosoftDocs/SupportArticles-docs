@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2019 cluster role doesn't come online after you rebuild the cluster
-description: Provides guidance for when a cluster service fails to start in a Windows-based failover cluster.
+description: Discusses how to resolve an issue in which a Windwos Server 2019 cluster role doesn't come online on a specific node after you rebuild the cluster.
 ms.date: 02/27/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -17,7 +17,9 @@ appliesto:
 
 # Windows Server 2019 cluster role doesn't come online after you rebuild the cluster
 
-This article applies to Windows Server 2019 failover cluster environments. It describes an issue where cluster roles fail to run on a specific node after a cluster rebuild. The problem is caused by insufficient permissions for the Cluster Name Object (CNO) to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
+## Summary
+
+Use this article to resolve a Windows Server 2019 failover cluster in which a cluster role doesn't come online on a specific node after you rebuild the cluster. The problem is caused by insufficient permissions for the Cluster Name Object (CNO) to update the secure Domain Name System (DNS) zone. This article explains the symptoms, root cause, and recommended resolution steps.
 
 ## Symptoms
 
