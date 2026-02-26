@@ -10,7 +10,7 @@ ms.author: jopilov
 
 # Troubleshoot query performance difference between database application and SSMS
 
-When you execute a query in a database application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS), Azure Data Studio, or SQLCMD.
+When you execute a query in a database application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS), **sqlcmd**, or the MSSQL extension for Visual Studio Code.
 
 This issue may occur for the following reasons:
 

@@ -1,3 +1,5 @@
 items:
+- name: Agent doesn't respond in the Test your agent panel
+  href: agent-test-no-response.md
 - name: Understand error codes
   href: error-codes.md

@@ -6355,6 +6355,14 @@
         "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
         "redirect_document_id": true
       },
+            {
+        "source_path": "app-service/create-delete-resources-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq-new",
+      },
+      {
+        "source_path": "app-service/scaling-web-app-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/scaling-web-app-faq-new",
+      },
       {
         "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/change/change-analysis",
@@ -6504,6 +6512,14 @@
         "source_path": "information-protection/welcome-information-protection.yml",
         "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client",
         "redirect_document_id": false
+      },
+        {
+        "source_path": "app-service/faqs-app-service-linux.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux-new"
+      },
+        {
+        "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
       }
   ]
 }

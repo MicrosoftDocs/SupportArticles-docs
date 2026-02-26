@@ -1,7 +1,7 @@
 ---
 title: Access is denied when joining computers
 description: Provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

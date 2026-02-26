@@ -1,7 +1,7 @@
 ---
 title: 'WUBr: Use the configuration script to troubleshoot device configuration'
 description: Describes how to use the WUfBr configuration script to troubleshoot the WUfBr configuration.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

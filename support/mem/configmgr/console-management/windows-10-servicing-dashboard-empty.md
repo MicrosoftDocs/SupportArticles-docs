@@ -5,7 +5,7 @@ author: Cloud-Writer
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
 ms.date: 02/11/2025
-ms.custom: sap:Software Update Management (SUM)\Feature Updates
+ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 # The Windows 10 servicing dashboard shows no data
 
@@ -35,8 +35,25 @@ If the service connection point is running in Online mode, review DmpDownloader.
 
      `<Configuration Manager installation path>\inboxes\hman.box\CFD`
 
-   For example, copy the file to `C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD`.
+   For example, copy the file to `E:\ConfigMgr\inboxes\hman.box\CFD\`.
 5. In Hman.log, you should see entries that resemble the following example:
 
-    :::image type="content" source="media/windows-10-servicing-dashboard-empty/hman-log.png" alt-text="Screenshot of the example entries in Hman.log.":::
+```output
+File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.AdminUIContent.auc' is signed and trusted.
+File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.AdminUIContent.auc' is signed with MS root cert.
+Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.AdminUIContent.auc to E:\ConfigMgr\AdminUIContentStaging\~
+Extracted E:\ConfigMgr\AdminUIContentStaging\CAMPServicingStates.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\DriverUpdates.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\LifecycleProducts.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\NotificationBannerData.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\UUPPSFXProductsAndOSVersions.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingBusinessReadyUpdates.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingLocalizedNames.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingProductCategoryNames.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingStates.xml~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingTimeline.html~
+Extracted E:\ConfigMgr\AdminUIContentStaging\WindowsServicingXtBusinessReadyUpdates.xml~
+Successfully updated AdminUI content.
+```
+
 6. Try again to open the Windows 10 servicing dashboard.

@@ -1,7 +1,7 @@
 ---
 title: Computer crashes with error code 0x113
 description: Resolves an issue in which the computer crashes with error code 0x113. This issue occurs if the computer has hybrid graphic cards installed.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

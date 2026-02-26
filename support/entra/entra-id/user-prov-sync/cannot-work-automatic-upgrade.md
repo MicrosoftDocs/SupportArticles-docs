@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect is not working correctly after an automatic upgrade
 
+## Summary
+
 This article discusses an issue in which Microsoft Entra Connect is only partially upgraded or the password synchronization and the password writeback features are disabled.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

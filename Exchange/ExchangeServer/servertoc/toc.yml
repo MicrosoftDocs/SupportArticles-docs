@@ -32,6 +32,8 @@ items:
           href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
         - name: Can't manage Exchange 2019 databases in EAC
           href: ../administration/can't-manage-ex19-database-eac.md
+        - name: Can't manage Send on Behalf permissions
+          href: ../administration/send-on-behalf-for-shared-mailbox.md          
         - name: Can't mount databases that are larger than 1024 GB
           href: ../administration/exchange-cannot-mount-database-larger-than-1024-gb.md
         - name: Can't open a mailbox with Receive-As permissions
@@ -54,6 +56,8 @@ items:
           href: ../administration/cannot-eac-add-remote-shared-mailbox-distribution-group.md
         - name: Certificate status couldn't be determined error
           href: ../administration/cannot-import-third-party-certificate.md
+        - name: Certificate assignment fails with error 0xe434352
+          href: ../administration/certificate-assignment-fails-invalid-characters.md
         - name: Cmdlet/parameter combinations not working
           href: ../administration/cmdlet-parameter-combinations-not-working.md
         - name: Connecting to the remote server failed
@@ -174,8 +178,6 @@ items:
           href: ../administration/requestor-changed-server-component.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
-        - name: SetupVersionInformationCorruptException if opening EMS
-          href: ../administration/setupversioninformationcorruptexception-when-opening-ems.md
         - name: Some cmdlets fail to run with Add-PSSnapin
           href: ../administration/cmdlets-fail-powershell-ise.md
         - name: Test cmdlets fail with error
@@ -274,8 +276,6 @@ items:
           href: ../client-connectivity/outlook-cannot-access-legacy-public-folders.md
         - name: Outlook Can't connect via firewall or proxy server
           href: ../client-connectivity/outlook-not-connect-firewall-proxy-server.md
-        - name: Outlook connection issues caused by the RPC encryption requirement
-          href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
         - name: OWA doesn't redirect to ADFS login
           href: ../client-connectivity/owa-not-redirect-adfs-login.md
         - name: OWA or ECP stop working after installing Exchange Server security update
@@ -490,6 +490,8 @@ items:
           href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell
           href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
+        - name: Exchange Server Setup fails and returns “Database is mandatory on UserMailbox” error 
+          href: ../setup/database-mandatory-on-usermailbox.md
         - name: Instal PST Capture tool fails
           href: ../setup/pst-capture-setup-wizard-ended-prematurely.md
         - name: Install Exchange Server 2010 SP2 fails
@@ -498,8 +500,6 @@ items:
           href: ../setup/error-occurred-while-configuring-search-foundation.md
         - name: Installation in RecoverServer mode fails
           href: ../setup/language-pack-bundle-not-found.md
-        - name: Installation of Edge Transport role fails
-          href: ../setup/process-execution-failed-with-exit-code-3.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
         - name: Run Update cmdlet fails

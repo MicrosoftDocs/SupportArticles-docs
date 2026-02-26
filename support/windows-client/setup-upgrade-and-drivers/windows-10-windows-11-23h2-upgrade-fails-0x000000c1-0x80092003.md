@@ -1,7 +1,7 @@
 ---
 title: Error 0x000000c1 or 0x80092003 CRYPT_E_FILE_ERROR Stops In-place Upgrade from Windows 10 to Windows 11
 description: Discusses an issue in which an in-place upgrade to Windows 11, version 23H2 fails and rolls back on a Windows 10 device that has the UEFI CA 2023 signed bootloader installed.
-ms.date: 12/18/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ai-usage: ai-assisted

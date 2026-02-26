@@ -1,7 +1,7 @@
 ---
 title: Configuring Witness Resource Troubleshooting Guide
 description: Resolves issues that affect Witness resources for Windows Server and Azure Stack HCI clusters.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

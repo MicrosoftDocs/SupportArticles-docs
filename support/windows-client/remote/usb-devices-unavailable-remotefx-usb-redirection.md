@@ -1,7 +1,7 @@
 ---
 title: Some USB devices aren't available
 description: This article describes why specific USB devices may not be available for RemoteFX USB redirection, and how to make them available.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

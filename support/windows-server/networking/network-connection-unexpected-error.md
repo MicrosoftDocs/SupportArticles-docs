@@ -1,7 +1,7 @@
 ---
 title: An Unexpected Error Occurred When You Open the Properties of a Network Connection
 description: Provides a workaround to an issue in which an unexpected error occurred when you open the properties of a network connection.
-ms.date: 08/06/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

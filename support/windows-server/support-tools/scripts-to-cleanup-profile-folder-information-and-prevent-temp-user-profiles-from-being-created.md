@@ -1,7 +1,7 @@
 ---
 title: Scripts to clean profile folder and prevent TEMP user profile creation
 description: Provides a script to clean up profile folder information and prevent TEMP user profiles from being created.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

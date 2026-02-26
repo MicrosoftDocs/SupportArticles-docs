@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Separate passwords required for the computer and work or school account when using password synchronization and the Azure Active Directory Sync tool
 
+## Summary
+
+This article provides guidance on resolving when separate passwords are required for the computer and work or school account when using password synchronization and the Azure Active Directory Sync tool.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2853316
 

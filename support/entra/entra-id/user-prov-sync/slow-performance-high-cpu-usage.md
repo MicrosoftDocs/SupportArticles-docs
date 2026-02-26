@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework
 
+## Summary
+
 This article describes an issue that causes slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework 4.7.2 or the July 2018 updates for .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, or 4.7.2.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

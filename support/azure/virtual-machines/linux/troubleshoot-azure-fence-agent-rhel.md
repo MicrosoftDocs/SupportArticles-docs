@@ -154,8 +154,8 @@ If you check the */var/log/messages* log file, you'll see an output that resembl
 2020-04-06T10:06:51.045519+00:00 VM1 pacemaker-execd[29306]: notice: executing - rsc:rsc_st_azure action:start call_id:52
 2020-04-06T10:06:52.826702+00:00 VM1 /fence_azure_arm: Failed: AdalError: Get Token request returned http error: 400 and server response: {"error":"unauthorized_client","error_description":"AADSTS700016: Application with identifier '<application ID>'
 was not found in the directory '<directory name>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant.
-You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 9d86f824-52c1-45a8-b24f-c81473122d00\r\nCorrelation ID: 7dd6de5d-1d6a-4950-be8b-9a2cb2df8553\r\nTimestamp:2020-04-06 10:06:52Z","error_codes":[700016],"timestamp":"2020-04-06 10:06:52Z","trace_id":"9d86f824-52c1-45a8-b24f-c81473122d00",
-"correlation_id":"7dd6de5d-1d6a-4950-be8b-9a2cb2df8553","error_uri":"https://login.microsoftonline.com/error?code=700016 "}
+You may have sent your authentication request to the wrong tenant.\r\nTrace ID: 0000aaaa-11bb-cccc-dd22-eeeeee333333\r\nCorrelation ID: aaaa0000-bb11-2222-33cc-444444dddddd\r\nTimestamp:2020-04-06 10:06:52Z","error_codes":[700016],"timestamp":"2020-04-06 10:06:52Z","trace_id":"0000aaaa-11bb-cccc-dd22-eeeeee333333",
+"correlation_id":"aaaa0000-bb11-2222-33cc-444444dddddd","error_uri":"https://login.microsoftonline.com/error?code=700016 "}
 ```
 
 To troubleshoot the authentication failures, follow these steps:

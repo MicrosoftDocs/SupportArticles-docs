@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you run DirSyncConfigShell.psc1 in Windows Server 2008 R2: Could not load file or assembly
 
+## Summary
+
 This article describes a scenario in which you receive an error when you run `DirSyncConfigShell.psc1` after you install version 6765.0006 of the Directory Sync tool on a Windows Server 2008 R2-based computer.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 Identity Management  

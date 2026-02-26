@@ -26,7 +26,7 @@ The following article also introduces how to view and change settings for a NIC,
 
 [Create, change, or delete a network interface](/azure/virtual-network/virtual-network-network-interface)
 
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
+ 
 
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 

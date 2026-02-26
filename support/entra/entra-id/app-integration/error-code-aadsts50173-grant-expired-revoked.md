@@ -13,6 +13,10 @@ ms.custom: sap:Issues signing in to applications
 
 # Error AADSTS50173 - The provided grant has expired due to it being revoked
 
+## Summary
+
+This article provides guidance on resolving error code AADSTS50173 when trying to sign in to an application.
+
 ## Symptoms
 
 When users try to sign in to an application that uses Microsoft Entra ID authentication, they receive the following error message:

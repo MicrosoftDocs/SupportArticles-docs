@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remote desktop disconnected errors
 description: Provides troubleshooting information for Remote desktop disconnected errors.
-ms.date: 03/26/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

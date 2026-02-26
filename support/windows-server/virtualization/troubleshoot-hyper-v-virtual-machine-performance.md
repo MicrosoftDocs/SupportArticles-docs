@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Performance
 description: Resolves issues in the Hyper-V virtualization component in Windows Server environments.
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

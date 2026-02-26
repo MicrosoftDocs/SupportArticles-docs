@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect Health shows old information about on-premises Microsoft Entra Connect server
 
+## Summary
+
 This article discusses an issue in which Microsoft Entra Connect Health shows outdated information about the on-premises Microsoft Entra Connect server.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

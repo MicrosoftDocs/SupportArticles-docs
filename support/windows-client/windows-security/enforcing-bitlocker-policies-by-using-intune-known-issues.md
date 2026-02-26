@@ -1,7 +1,7 @@
 ---
 title: 'Enforcing BitLocker policies by using Intune: known issues'
 description: provides assistance for issues that you may see if you use Microsoft Intune policy to manage silent BitLocker encryption on devices.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.reviewer: kaushika, v-tappelgate
 manager: dcscontentpm
 ms.collection:
@@ -243,7 +243,7 @@ The policy deployment fails and the failure generates the following events in Ev
 > Event:
 > Failed to backup BitLocker Drive Encryption recovery information for volume C: to your Microsoft Entra ID.
 >
-> TraceId: {cbac2b6f-1434-4faa-a9c3-597b17c1dfa3}
+> TraceId: {0000aaaa-11bb-cccc-dd22-eeeeee333333}
 > Error: Unknown HResult Error code: 0x80072f9a
 
 > Event ID:778

@@ -12,6 +12,8 @@ ms.custom: sap:auto-renewal
 ---
 # Troubleshoot Azure App Service certificates 
 
+## Summary
+
 Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and admins systematically diagnose and fix issues that affect App Service certificates. See the following sections:
 
 - [Step-by-step troubleshooting flow](#step-by-step-troubleshooting-flow): A sequence of checks and actions to resolve certificate problems, including portal and command-line steps.

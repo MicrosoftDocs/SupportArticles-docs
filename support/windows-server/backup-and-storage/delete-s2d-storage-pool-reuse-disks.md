@@ -1,7 +1,7 @@
 ---
 title: Delete a Storage Spaces Direct Storage Pool and Reset the Physical Disks
 description: Explains how to gracefully delete an S2D storage pool so that you can reuse the disks elsewhere.
-ms.date: 01/07/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,18 @@ appliesto:
 ---
 # Delete a Storage Spaces Direct storage pool and reset the physical disks
 
-This article uses an example Storage Spaces Direct (S2D) deployment to explain how to gracefully delete an S2D storage pool. This process cleans S2D information from the disks that the storage pool aggregates so that you can reuse the disks elsewhere. If you use a different approach to remove disks from a storage pool, both the disks and the storage pool might enter an unusable state. For more information about these issues and related events, see [More information](#more-information).
+## Summary
+
+This article describes how to safely remove a Storage Spaces Direct (S2D) storage pool and prepare the physical disks for reuse. Follow these steps to avoid rendering the disks or storage pool unusable.
+
+When you remove disks from a storage pool incorrectly, both the disks and the storage pool can enter an unusable state. This article provides a step-by-step procedure to gracefully delete an S2D storage pool and clean the disks so that you can reuse them in a different configuration. For more information about these issues and related events, see [More information](#more-information).
+
+> [!CAUTION]  
+> Make sure that you back up any data that's in the storage pool. The steps in this article delete all data from the disks.
+
+The steps in this article don't affect the  current Windows Server Failover Cluster (WSFC) configuration. These steps modify only the S2D configuration.
+
+## Introduction to the example
 
 This example uses the following steps to completely remove the S2D configuration and prepare the disks for reuse:
 
@@ -24,8 +35,6 @@ This example uses the following steps to completely remove the S2D configuration
 1. [Disable S2D](#step-4-disable-s2d).
 1. [Verify that everything is removed](#step-5-verify-that-everything-is-removed).
 1. [Clean up the physical disks](#step-6-clean-up-the-physical-disks).
-
-The current Windows Server Failover Cluster (WSFC) configuration isn't changed. These steps modify only the S2D configuration.
 
 The example in this section uses the following configuration:
 
@@ -286,7 +295,7 @@ Keywords:
 User:          SYSTEM
 Computer:      S2D-1.contoso.com
 Description:
-Windows lost communication with physical disk {81ea06c7-7433-bdd5-6a02-b267b5702b0b}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
+Windows lost communication with physical disk {aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 This disk may be located using the following information:
 Drive Manufacturer: Msft
 Drive Model Number: Virtual Disk
@@ -297,9 +306,9 @@ Enclosure Model Number: NULL
 Enclosure Serial Number: NULL
 Enclosure Slot: -1
 More information can be obtained using this PowerShell command:
-Get-PhysicalDisk | ?{ $_.ObjectId -Match "{81ea06c7-7433-bdd5-6a02-b267b5702b0b}" }
+Get-PhysicalDisk | ?{ $_.ObjectId -Match "{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}" }
 To view the virtual disks affected, run this command in PowerShell:
-Get-PhysicalDisk | ?{ $_.ObjectId -Match "{81ea06c7-7433-bdd5-6a02-b267b5702b0b}" } | Get-VirtualDisk
+Get-PhysicalDisk | ?{ $_.ObjectId -Match "{aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb}" } | Get-VirtualDisk
 ```
 
 When you run the `Get-StoragePool` command, you see output that resembles the following example:

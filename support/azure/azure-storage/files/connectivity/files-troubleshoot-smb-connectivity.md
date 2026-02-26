@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 01/07/2026
+ms.date: 01/26/2026
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -134,6 +134,14 @@ For more information, see the [LmCompatibilityLevel](/previous-versions/windows/
 Revert the `LmCompatibilityLevel` value to the default value of 3 in the following registry subkey:
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
+
+#### Cause 3: The file share name doesn't exist or there is a typo in the share name
+
+Error 67 can occur when the storage account exists and the SMB endpoint is reachable, but the SMB namespace or share path can't be resolved. This isn't a DNS issue, an authentication issue, or a permissions issue.
+
+##### Solution for cause 3
+
+Double check the file share name. Azure file share names must be exact. Check for an extra character, missing characters, or an incorrect share name copied from the Azure portal. Retry mounting the share.
 
 ### <a id="error-64"></a> Error 64 when you mount an Azure file share
 

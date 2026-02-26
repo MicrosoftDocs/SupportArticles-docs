@@ -12,6 +12,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # "Error 403 - This web app is stopped" message 
 
+## Summary
+
 This article provides guidance on addressing the "Error 403 - This web app is stopped" message in Azure App Service.
 
 ## Symptom

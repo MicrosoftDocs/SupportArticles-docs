@@ -1,7 +1,7 @@
 ---
 title: Diagnose Packet Loss
 description: Learn how to troubleshoot TCP/IP packet loss.
-ms.date: 04/30/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
@@ -119,4 +119,3 @@ In another scenario, a previously sent TCP segment isn't acknowledged by the rem
 - [How to capture a NetLog dump](https://www.chromium.org/for-testers/providing-network-details)
 - [How to collect a network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace)
 - [Inspect network activity](/microsoft-edge/devtools-guide-chromium/network/)
-- [Trouble Shooting Guide](https://microsoft.github.io/msquic/msquicdocs/docs/TSG.html)

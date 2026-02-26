@@ -1,7 +1,7 @@
 ---
 title: User Has Not Been Granted the Requested Logon Type at This Computer
 description: Helps resolve the error code 0x569 that occurs during a domain join operation.
-ms.date: 03/26/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

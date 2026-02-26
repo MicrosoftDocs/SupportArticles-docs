@@ -11,6 +11,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Troubleshoot Microsoft Entra Connect upgrade issues
 
+## Summary
+
 This article describes how to troubleshoot problems that can occur when you upgrade to the latest version of Microsoft Entra Connect from previous installations of Microsoft Entra Connect, Azure AD Sync, or DirSync.
 
 > [!WARNING]

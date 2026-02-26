@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # IDX10501 Signature Validation Errors in Microsoft Entra ID applications
 
+## Summary
+
 If a client application obtains an access token from Microsoft Entra ID and sends it to a resource (API) application, the resource application must validate the token. It validates by using the public key from the certificate that was used to sign the token. If the application can't find the correct key identifier (kid), it might generate an error message that resembles the following message:
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
@@ -48,7 +50,7 @@ For SAML, Microsoft Entra ID uses the app-specific certificate to sign tokens. T
 3. If your app uses custom signing keys that use a [claims-mapping policy](/entra/identity-platform/saml-claims-customization), you must append an `appid` query parameter that contains the app client ID. This step is necessary to retrieve a `jwks_uri` that points to the app’s specific signing key information. For example:
 
     ```http
-   https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=6731de76-14a6-49ae-97bc-6eba6914391e
+   https://login.microsoftonline.com/{tenant}/v2.0/.well-known/openid-configuration?appid=00001111-aaaa-2222-bbbb-3333cccc4444
     ```
     
 ### Middleware configuration examples

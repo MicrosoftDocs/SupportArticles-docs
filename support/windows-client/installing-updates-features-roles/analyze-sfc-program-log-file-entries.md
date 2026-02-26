@@ -1,7 +1,7 @@
 ---
 title: Analyze log file entries that SFC.exe generates
 description: Describes how to use the SFC.exe program to help diagnose problems that are caused by missing or damaged operating system files.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/25/2025
+ms.date: 02/17/2026
 ---
 
 # Resolve issues that affect the Teams Meeting add-in for classic Outlook
@@ -28,6 +28,17 @@ If you're a Microsoft Teams administrator, and your users can't install the Team
 ## Teams Meeting add-in is missing or its installation fails
 
 If you've configured the add-in for all users but it's missing for some users, try the following steps to troubleshoot and resolve the issue.
+
+### Check the status of the add-in in Outlook
+
+Make sure that the Teams Meeting add-in is enabled in Outlook.
+
+1. In Outlook, select **File** > **Options**.
+1. In the **Outlook Options** dialog box, select the **Add-ins** tab.
+1. Check whether **Microsoft Teams Meeting Add-in for Microsoft Office** is in the **Active Application Add-ins** list.
+1. If the add-in isn't in the list of active applications, and you see the Teams Meeting add-in in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins**, and then select **Go.**
+1. Select the checkbox that's next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
+1. Select **OK** on every open dialog box, and then restart Outlook.
 
 ### Run a self-help diagnostic
 
@@ -47,34 +58,9 @@ Use the following steps:
 
 After the diagnostic is finished, select the provided links to resolve the issues that are found.
 
-### Run the classic Teams add-in for classic Outlook troubleshooter
+### Reregister the Teams Addin Loader
 
-If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, run the [classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome) in Get Help.
-
-> [!NOTE]
-> To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
-
-To run the troubleshooter, follow these steps:
-
-1. Select the following button to start the troubleshooter.
-
-   > [!div class="nextstepaction"]
-   > [Classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome)
-
-   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
-1. Follow the instructions in the Get Help app to run the troubleshooter.
-
-After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
-
-### Use the Enterprise version of Microsoft Support and Recovery Assistant
-
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
-
-If you have multiple users who are affected by the issues, you can use the [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches). This is a command-line version of the Assistant that can be scripted to detect and fix most issues automatically without requiring user interaction.
-
-### Fix issues manually
-
-If you want to run checks and make fixes manually, follow these steps:
+Use the following steps:
 
 1. Verify that users have the Teams desktop client installed. The meeting add-in can't be installed if you use only the Teams web client.
 1. Verify that users are running Outlook 2016 or a later version.
@@ -102,17 +88,6 @@ If you want to run checks and make fixes manually, follow these steps:
 1. Restart the Teams desktop client.
 1. Sign out and then sign in to the Teams desktop client.
 1. Restart the Outlook desktop client. Make sure that Outlook isn't running in Administrator mode.
-
-### Check the status of the add-in in Outlook
-
-If you still don't see the Teams Meeting add-in, make sure that it's enabled in Outlook.
-
-1. In Outlook, select **File** > **Options**.
-1. In the **Outlook Options** dialog box, select the **Add-ins** tab.
-1. Check whether **Microsoft Teams Meeting Add-in for Microsoft Office** is in the **Active Application Add-ins** list.
-1. If the add-in isn't in the list of active applications, and you see the Teams Meeting add-in in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins**, and then select **Go.**
-1. Select the checkbox that's next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
-1. Select **OK** on every open dialog box, and then restart Outlook.
 
 ### Verify registry settings
 

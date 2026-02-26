@@ -1,7 +1,7 @@
 ---
 title: Configure the SNMP Service
 description: Describes how to configure the Simple Network Management Protocol (SNMP) Service in Windows Server 2003.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting guidance for Hyper-V GPU assignment, partitioning, and passthrough
 description: Troubleshoot issues that occur when configuring GPU passthrough for virtual machines by using either Discrete Device Assignment (DDA) or GPU partitioning (GPU-P).
-ms.date: 08/11/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

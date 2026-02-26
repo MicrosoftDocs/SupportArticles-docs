@@ -9,6 +9,8 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # Enable MSAL4J logging in a Spring Boot web application
 
+## Summary
+
 This article provides step-by-step instructions to enable [Microsoft Authentication Library for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) (MSAL4J) logging by using the [Logback framework](https://logback.qos.ch/) in a Spring Boot web application.
 
 ## Code sample

@@ -39,6 +39,8 @@ items:
       href: astro/single-sign-on.md
 - name: Datadog
   items: 
+    - name: Datadaog agent installation fails, or default API key is incorrect
+      href: datadog/installation-fails.md
     - name: Diagnostic settings manual update
       href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
@@ -47,6 +49,8 @@ items:
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
+    - name: Metrics not being emitted
+      href: datadog/metrics-not-emitted.md
 - name: Dynatrace
   items: 
     - name: AKS agent installation/uninstallation unavailable

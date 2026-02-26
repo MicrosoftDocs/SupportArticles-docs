@@ -57,6 +57,8 @@
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
       href: ../data-loss-prevention/data-loss-prevention-not-work.md
+    - name: Diagnose DLP policy tip display issues
+      href: ../data-loss-prevention/diagnose-dlp-policy-tip-display-issues.md
   - name: Diagnostics
     items:
     - name: Self-help diagnostics for issues in Microsoft Purview

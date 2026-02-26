@@ -1,7 +1,7 @@
 ---
 title: Failed logon event when running remote WMI
 description: Describes an issue where a failed logon event is generated when you run remote WMI command.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

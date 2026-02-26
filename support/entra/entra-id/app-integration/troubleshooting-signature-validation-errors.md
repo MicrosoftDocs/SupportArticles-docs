@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot access token signature validation errors
 
+## Summary
+
 When a resource provider validates an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article helps you troubleshoot such errors and provides solutions in some scenarios.
 
 ## Step 1: Decode the access token

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot sIDHistory migration with ADMTv2
 description: Describes how to troubleshoot inter-forest sIDHistory migration by using Active Directory Migration Tool version 2 (ADMTv2).
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

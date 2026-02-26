@@ -1,14 +1,14 @@
 ---
 title: C++ Runtime packages for Desktop Bridge
 description: Describes how Windows desktop applications that have a dependency on the C++ Runtime libraries can't redistribute the version of the libraries that's included with Visual Studio or via the Visual C++ redistributable (VCRedist) packages. Explains how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
-ms.date: 06/12/2024
+ms.date: 12/10/2025
 ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.reviewer: ericmitt, sherifm, msaleh
 ms.topic: how-to
 ---
 # C++ Runtime framework packages for Desktop Bridge
 
-This article describes how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
+This article describes how to create a Desktop Bridge application that references the required C++ Runtime libraries.
 
 _Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 3176696
@@ -19,21 +19,13 @@ Windows desktop applications that have a dependency on the C++ Runtime libraries
 
 ## How to install and update Desktop framework packages
 
-Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Windows Store. These packages are distributed and updated through the Windows Store and are handled similarly to C++ UWP framework packages.
+Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Microsoft Store. These packages are distributed and updated through the Microsoft Store and are handled similarly to C++ UWP framework packages.
 
-For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2022 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v143) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
-
-> [!NOTE]
-> The following package download links are now deprecated, and may no longer work in the future. Make sure to use the method described above to obtain the framework packages.
->
-> - [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
-> - [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
-> - [Microsoft.VCLibs.x64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx)
-> - [Microsoft.VCLibs.x86.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x86.14.00.Desktop.appx)
+For development and testing purposes, the current version (v14) of both debug and retail appx packages are included with Visual Studio 2026 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v145) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
 ## Legacy Desktop framework packages
 
-Older C++ Runtime framework packages for desktop applications, v11.0 and v12.0, can be downloaded and installed from these locations:
+Older C++ Runtime framework packages for desktop applications, such as v11.0 and v12.0, are no longer supported. However, they can be downloaded and installed from these locations:
 
 - [C++ Runtime v11.0 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53340)
 - [C++ Runtime v12 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53176)
@@ -44,14 +36,14 @@ The C++ Runtime framework packages will be copied to a subfolder under `%Program
 
 In your application's *AppxManifest.xml* file, specify a `PackageDependency` value that corresponds to the appropriate framework package:
 
-- Version 11.0:
+- Version 14.0:
 
     ```xml
     <Dependencies>
-        <PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.61135.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"/>
+        <PackageDependency Name="Microsoft.VCLibs.140.00.UWPDesktop" MinVersion="14.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     </Dependencies>
     ```
-
+    
 - Version 12.0:
 
     ```xml
@@ -61,11 +53,11 @@ In your application's *AppxManifest.xml* file, specify a `PackageDependency` val
     </Dependencies>
     ```
 
-- Version 14.0:
+- Version 11.0:
 
     ```xml
     <Dependencies>
-        <PackageDependency Name="Microsoft.VCLibs.140.00.UWPDesktop" MinVersion="14.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+        <PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.61135.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"/>
     </Dependencies>
     ```
 

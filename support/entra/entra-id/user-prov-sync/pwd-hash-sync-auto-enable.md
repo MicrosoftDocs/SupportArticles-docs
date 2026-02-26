@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Password Hash Sync is automatically enabled during Microsoft Entra Connect Pass-through Authentication
 
+## Summary
+
 This article can help you fix a problem in which Password Hash Synchronization is automatically enabled in Microsoft Entra connector.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

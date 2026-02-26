@@ -1,7 +1,7 @@
 ---
 title: Error 0x40 The Specified Network Name Is No Longer Available
 description: Addresses the error The specified network name is no longer available encountered during domain join operations.
-ms.date: 03/28/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

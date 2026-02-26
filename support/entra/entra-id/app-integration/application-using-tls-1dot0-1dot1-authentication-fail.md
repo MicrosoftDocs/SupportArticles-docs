@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Microsoft Entra applications using TLS 1.0/1.1 fail to authenticate
 
+## Summary
+
 This article provides solutions to authentication errors that occur with Microsoft Entra-integrated applications targeting versions earlier than Microsoft .NET Framework 4.7.
 
 ## Symptoms

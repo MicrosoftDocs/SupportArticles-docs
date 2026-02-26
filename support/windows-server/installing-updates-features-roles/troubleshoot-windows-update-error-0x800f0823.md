@@ -2,7 +2,7 @@
 title: Troubleshoot Windows Update Error Code 0x800f0823
 description: Discusses how to resolve an issue that prevents Windows updates from installing.
 ai-usage: ai-assisted
-ms.date: 12/03/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

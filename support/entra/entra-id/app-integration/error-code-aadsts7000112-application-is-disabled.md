@@ -12,6 +12,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS7000112 - Application is disabled
 
+## Summary
+
 This article discusses how to resolve the `AADSTS7000112` error that occurs when you try to sign in to an application that can be used together with Microsoft Entra ID.
 
 ## Symptoms
@@ -30,7 +32,7 @@ Work together with the resource tenant owners to determine why the service princ
 
 | Scenario | Action |
 |--|--|
-| The service principal is supposed to be disabled. | Don't do anything. Access is intentionally blocked. We don't expect or recommend that resource tenant administrators of first-party applications disable the respective service principal. Microsoft Services automatically provisions and manages the service principals. |
+| The service principal is supposed to be disabled. | Don't do anything. Access is intentionally blocked. We don't expect or recommend that resource tenant admins of first-party applications disable the respective service principal. Microsoft Services automatically provisions and manages the service principals. It's possible that the backing application associated with this service principal was intentionally disabled globally by the home tenant admin, the app owner, or by Microsoft. For more information, see [Deactivate an enterprise application](/entra/identity/enterprise-apps/deactivate-application-portal). |
 | The service principal isn't supposed to be disabled, or it was disabled mistakenly. | Ask the resource tenant owners to re-enable the service principal. One method to re-enable the service principal is to use PowerShell to set the `-AccountEnabled` parameter to `$true`. For more information, see the [Set-AzureADServicePrincipal](/powershell/module/azuread/set-azureadserviceprincipal#example-1-disable-the-account-of-a-service-principal) cmdlet reference. |
 
 ## More information

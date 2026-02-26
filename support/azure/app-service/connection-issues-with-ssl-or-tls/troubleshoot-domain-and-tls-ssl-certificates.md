@@ -13,6 +13,8 @@ ms.custom: sap:SSL Certificates and Domains
 ---
 # Troubleshoot domain and TLS/SSL certificate problems in Azure App Service
 
+## Summary
+
 When you set up a domain or TLS/SSL certificate for your web apps in Azure App Service, you might encounter the following common problems. This article explores the possible causes and solutions for these problems.
 
 In addition to the information in this article, you can get more help by contacting Azure experts on the [Microsoft Q & A and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident on the [Azure Support site](https://azure.microsoft.com/support/options/). Select **Get Support**.

@@ -18,6 +18,10 @@
   items:
     - name: Common issues and resolutions
       href: create-and-use-apps/common-issues-and-resolutions.md
+    - name: Debug Canvas apps by using Live monitor and Trace
+      href: create-and-use-apps/monitor-debugging-canvas-apps.md
+    - name: Debug canvas apps without Live monitor
+      href: create-and-use-apps/monitor-alternatives-canvas-apps.md
     - name: General Power Apps debugging strategies
       href: create-and-use-apps/isolate-common-issues.md
     - name: How to create a minimal repro canvas app

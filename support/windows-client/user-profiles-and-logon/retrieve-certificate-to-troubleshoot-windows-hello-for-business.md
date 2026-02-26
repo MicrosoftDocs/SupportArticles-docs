@@ -1,7 +1,7 @@
 ---
 title: Retrieve Certificate to Troubleshoot Windows Hello for Business Logon Failures
 description: This article introduces a solution to retrieve certificate information from Active Directory.
-ms.date: 02/13/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

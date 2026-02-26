@@ -1,7 +1,7 @@
 ---
 title: Host's A record is registered in DNS
 description: The IP address registers an A record for the host name in its primary DNS suffix zone. It occurs after you clear the "Register this connection's address in DNS" check box.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

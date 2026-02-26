@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 
+## Summary
+
 This article provides information about troubleshooting an issue in which users can no longer access Office 365, Azure, or Microsoft Intune after running the `Convert-MSOLDomaintoFederated` command to convert an existing domain from standard authentication to federated authentication.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  

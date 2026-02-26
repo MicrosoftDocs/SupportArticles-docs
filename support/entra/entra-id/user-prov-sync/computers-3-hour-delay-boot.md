@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra joined computers experience a three hours delay during boot
 
+## Summary
+
+This article describes the three hours delay during boot if the workgroup name is the same as the on-premises Active Directory domain NetBIOS name and how to resolve it.
+
 _Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 4565997
 

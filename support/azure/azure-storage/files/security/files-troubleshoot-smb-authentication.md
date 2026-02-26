@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 12/05/2025
+ms.date: 02/05/2026
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -192,15 +192,15 @@ Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 
 1. `CheckPort445Connectivity`: Check if port 445 is opened for SMB connection. If port 445 isn't open, use the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-2. `CheckAADConnectivity`: Check for Entra connectivity. SMB mounts with Kerberos authentication can fail if the client can't reach out to Entra. If this check fails, it indicates that there is a networking error (perhaps a firewall or VPN issue).
-3. `CheckEntraObject`: Confirm that there is an object in the Entra that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, disable and re-enable Entra Kerberos authentication on the storage account.
-4. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
-5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
-6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-8. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-9. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
-10. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
+1. `CheckAADConnectivity`: Check for Entra connectivity. SMB mounts with Kerberos authentication can fail if the client can't reach out to Entra. If this check fails, it indicates that there is a networking error (perhaps a firewall or VPN issue).
+1. `CheckEntraObject`: Confirm that there is an object in the Entra that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, disable and re-enable Entra Kerberos authentication on the storage account.
+1. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
+1. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
+1. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
+1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
+1. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+1. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
+1. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
@@ -401,18 +401,16 @@ If this is the case, ask your Microsoft Entra admin to grant admin consent to th
 
 <a name='error---the-request-to-aad-graph-failed-with-code-badrequest'></a>
 
-### Error - "The request to Azure AD Graph failed with code BadRequest"
+### Error - "The request to Microsoft Graph failed with code BadRequest"
 
 #### Cause 1: An application management policy is preventing credentials from being created
 
-When enabling Microsoft Entra Kerberos authentication, you might encounter this error if the following conditions are met:
+When enabling Microsoft Entra Kerberos authentication, you might encounter this error if you (or your administrator) has set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) or an [application management policy](/graph/api/resources/appmanagementpolicy) that:
 
-1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
-2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
-    - Has no start date or has a start date before January 1, 2019.
-    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of fewer than 365.5 days.
+- Applies to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
+- Sets a restriction on service principal passwords, which either blocks password addition or restricts maximum password lifetime to fewer than 365.5 days.
 
-There is currently no workaround for this error.
+To resolve this error, you should configure the offending policy to [grant an exception](/entra/identity/enterprise-apps/configure-app-management-policies#grant-an-exception-to-a-user-or-service) to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
 
 #### Cause 2: An application already exists for the storage account
 
@@ -524,26 +522,20 @@ This is a Windows client limitation and is not caused by Azure Files or Microsof
 **Option one**: Signing out and signing back in to Windows restores access by fetching a new PRT, which includes a refreshed Ticket Granting Ticket (TGT) and KDC proxy configuration. However, this results in a poor user experience.
 
 **Option two**: Configure a Group Policy setting to persist the KDC proxy configuration on the client, reducing authentication interruptions caused by network changes.
-1. Configure KDC proxy settings using Group Policy
-2. Open Group Policy Management and edit the applicable policy
-3.  Navigate to:
-**Administrative Templates** > **System** > **Kerberos** > **Specify KDC proxy servers for Kerberos clients**
-4. Select **Enabled**
-5.  Under Options, select Show to open the Show Contents dialog box.
-6.  Add the following mapping, replacing your_Azure_AD_tenant_id with your Microsoft Entra tenant ID
+1. Configure KDC proxy settings using Group Policy.
+2. Open Group Policy Management and edit the applicable policy.
+3. Navigate to: **Administrative Templates** > **System** > **Kerberos** > **Specify KDC proxy servers for Kerberos clients**
+4. Select **Enabled**.
+5. Under **Options**, select **Show** to open the Show Contents dialog box.
+6. Add the following mapping, replacing `Microsoft_Entra_tenant_id` with your Microsoft Entra tenant ID. Include the space after https and before the closing /.
 
 |Value name |Value |
 |-----------|--------------|
-| KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Azure_AD_tenant_id/kerberos /> |
-
-> [!NOTE]
-> Include the space after https and before the closing /.
+| KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Microsoft_Entra_tenant_id/kerberos /> |
 
 7. Select **OK**, then select **Apply**.
 
 After this policy is applied, Windows clients retain the KDC proxy configuration across network changes, reducing authentication disruptions.
-
-
 
 ## Authentication stops after approximately 10 hours when using Microsoft Entra Kerberos
 
@@ -569,7 +561,7 @@ With cloud trust configured, Windows clients obtain their TGT from AD DS instead
 This mitigation applies only to clients that are:
 - AD DS domain joined, or
 - Hybrid Microsoft Entra joined
-- Cloud-native (Microsoft Entra–only) clients cannot use this workaround.
+- Cloud-native (Microsoft Entra–only) clients can't use this workaround.
 
 To apply this mitigation, configure a cloud trust between on-premises AD DS and Microsoft Entra ID for accessing Azure Files. For step-by-step guidance, see [Configure a cloud trust for Azure Files authentication](/azure/storage/files/storage-files-identity-auth-hybrid-cloud-trust).
 
@@ -597,5 +589,3 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
-
- 

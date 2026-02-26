@@ -1,10 +1,8 @@
 ---
 title: Field Service Mobile App Can't Start Due to Missing Privileges
 description: Resolves Dynamics 365 Field Service mobile app launch issues caused by missing privileges.
-author: JonBaker007
-ms.author: jobaker
-ms.reviewer: mhart
-ms.date: 12/12/2024
+ms.reviewer: jobaker, v-wendysmith, v-shaywood
+ms.date: 01/29/2026
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
 # The Field Service mobile app fails to start due to permission or privilege issues

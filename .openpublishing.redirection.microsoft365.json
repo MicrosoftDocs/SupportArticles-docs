@@ -531,6 +531,10 @@
     {
       "source_path": "Microsoft365/purview/microsoft-purview-welcome.yml",
       "redirect_url": "/troubleshoot/microsoft-365/purview/microsoft-purview-welcome"
-    }
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/active-directory/single-sign-on-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },    
   ]
 }

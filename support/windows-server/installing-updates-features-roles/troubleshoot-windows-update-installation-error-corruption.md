@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Installation Error 0x800f0831 CBS E STORE CORRUPTION_Windows
 description: Learn how to resolve Windows Update installation error 0x800f0831 CBS E STORE CORRUPTION_Windows.
-ms.date: 10/21/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Use TRACERT to Troubleshoot TCP/IP Problems
 description: Provides information about how to use TRACERT to troubleshoot TCP/IP problems in Windows.
-ms.date: 08/06/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

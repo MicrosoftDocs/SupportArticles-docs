@@ -1,8 +1,9 @@
 ---
 title: Slow Azure Virtual Machine Start Operations Caused by Extensions in failed state
-description: Troubleshooting guide for slow Azure Virtual Machine Start operations that are caused by the extensions being in a failed state.
+description: Troubleshooting guide for slow Azure Virtual Machine Start operations that occur because extensions are in a failed state.
 ms.date: 09/02/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.reviewer: v-ryanberg
+ms.editor: v-gsitser
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot start or stop my VM
@@ -21,9 +22,9 @@ Although the Azure VM guest OS is active and working, and the VM can connect suc
 
 ## Cause
 
-VM extensions are software components that run inside the VM to enable configuration management, security, monitoring, and other features. VM extensions have a 90-minute provisioning timeout. They must complete their installation or update within that time limit. If an extension doesn't provision within the timeout period, it's marked as failed. The extension isn't retried until the next VM operation that triggers it, such as **Start** or **Redeploy**.
+VM extensions are software components that run inside the VM to enable configuration management, security, monitoring, and other features. VM extensions have a 90-minute provisioning timeout. They must complete their installation or update within that time limit. Typically, Azure doesn't continuously retry the failed extension immediately. Instead, the retry process is triggered the next time that a VM operation occurs that re-engages extension provisioning (such as **Start** or **Redeploy**). This retry behavior can delay completion of the operation until the extension either succeeds or times out again.
 
-If a VM has one or more extensions in a **Failed** state, delays can occur in other VM operations, such as **Start** or **Redeploy**. This issue occurs because the Azure platform tries to provision the failed extensions again before it completes the operation. Therefore, the VMs show a **Starting** status for an extended period.
+If an Azure VM has one or more VM extensions stuck in a **Failed** state, you might notice that management operations (for example, **Start** or **Redeploy**) take much longer than expected. This delay occurs because the Azure platform treats extension provisioning as part of the overall VM operation workflow. Before the operation can be marked as completed, Azure tries to reprovision any extensions that previously failed. Therefore, the VM can remain in a **Starting** or **Updating** state for an extended period even if the guest OS is already running and you could still connect to it.
 
 ## More information
 

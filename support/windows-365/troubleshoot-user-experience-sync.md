@@ -2,7 +2,7 @@
 title: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
 description: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
 manager: dcscontentpm
-ms.date: 10/29/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:

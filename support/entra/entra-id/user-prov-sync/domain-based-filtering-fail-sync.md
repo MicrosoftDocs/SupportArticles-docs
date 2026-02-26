@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Changes to domain-based filtering in Synchronization Service Manager fail to sync
 
+## Summary
+
 This article describes an issue in which changes to domain-based filtering in the Active Directory management agent or the Active Directory Connector fail to sync.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 Identity Management  

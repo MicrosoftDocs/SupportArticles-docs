@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Package Inspector for MSAL Android Native
 
+## Summary
+
 The Microsoft Authentication Library (MSAL) for Android Native includes a tool called Package Inspector. This tool lists the packages installed on an Android device and allows users to view, copy, and paste the signature hash used to sign an application's package. Package Inspector is invaluable for troubleshooting and verifying the signature hash of applications installed on an Android device. This article covers installation, usage, and common issues of the Package Inspector.
 
 ## Scenarios for using Package Inspector

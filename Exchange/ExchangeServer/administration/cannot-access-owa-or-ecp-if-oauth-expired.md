@@ -58,7 +58,7 @@ If the command returns an error, or the certificate has expired, use the followi
 2. Set the new certificate for server authentication. To do this, run the following commands:
 
     ```powershell
-    Set-AuthConfig -NewCertificateThumbprint <ThumbprintFromStep1> -NewCertificateEffectiveDate (Get-Date)
+    Set-AuthConfig -NewCertificateThumbprint <ThumbprintFromStep1> -NewCertificateEffectiveDate (Get-Date).ToUniversalTime()
     Set-AuthConfig -PublishCertificate
     Set-AuthConfig -ClearPreviousCertificate
     ```

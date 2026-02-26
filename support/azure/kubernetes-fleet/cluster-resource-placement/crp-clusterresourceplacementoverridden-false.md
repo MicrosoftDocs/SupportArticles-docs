@@ -1,27 +1,61 @@
 ---
-title: ClusterResourcePlacementOverridden is false when you use the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager
-description: Helps you resolve clusterResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
-ms.date: 08/05/2024
+title: PlacementOverridden failure when using placement APIs in Azure Kubernetes Fleet Manager
+description: Helps you resolve ClusterResourcePlacementOverridden or ResourcePlacementOverridden failure when you propagate resources by using the ClusterResourcePlacement or ResourcePlacement API object in Azure Kubernetes Fleet Manager APIs.
+ms.date: 12/09/2025
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 
-# Resource propagation failure: ClusterResourcePlacementOverridden is False
+# Resource propagation failure: PlacementOverridden is False
 
-This article discusses how to troubleshoot `ClusterResourcePlacementOverridden` issues when you propagate resources by using the `ClusterResourcePlacement` object API in Microsoft Azure Kubernetes Fleet Manager.
+## Summary
+
+This article discusses how to troubleshoot override failures when you propagate resources by using placement APIs in Microsoft Azure Kubernetes Fleet Manager. This issue applies to both `ClusterResourcePlacement` and `ResourcePlacement`, each with their own dedicated custom resource condition types:
+
+- `ClusterResourcePlacementOverridden` for ClusterResourcePlacement
+- `ResourcePlacementOverridden` for ResourcePlacement
+
+Sample error messages:
+
+# [ClusterResourcePlacement](#tab/clusterresourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to override resources for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: OverrideFailed
+    status: "False"
+    type: ClusterResourcePlacementOverridden
+```
+
+# [ResourcePlacement](#tab/resourceplacement)
+
+```yaml
+  - lastTransitionTime: "2024-05-07T23:32:40Z"
+    message: Failed to override resources for 1 clusters, please check the `failedPlacements` status
+    observedGeneration: 1
+    reason: OverrideFailed
+    status: "False"
+    type: ResourcePlacementOverridden
+```
+
+---
 
 ## Symptoms
 
-When you use the `ClusterResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `clusterResourcePlacementOverridden` status shows as `False`.
+When you use the `ClusterResourcePlacement` or `ResourcePlacement` API object in Azure Kubernetes Fleet Manager to propagate resources, the deployment fails. The `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) status shows as `False`.
+
+> [!NOTE]
+> To get more information, look into the overrider controller logs (includes controller for ClusterResourceOverride and ResourceOverride). For more information about viewing Fleet agent logs, see [View agent logs in Azure Kubernetes Fleet Manager](/azure/kubernetes-fleet/view-fleet-agent-logs).
 
 ## Cause
 
 This issue might occur because the `ClusterResourceOverride` or `ResourceOverride` is created by using an invalid field path for the resource.
 
-## Case study
+## Case study: ClusterResourcePlacement
 
-In the following example, an attempt is made to override the cluster role `secret-reader` that is propagated by the `ClusterResourcePlacement` to the selected clusters.
+In the following example, an attempt is made to override the cluster role `secret-reader` that the `ClusterResourcePlacement` propagates to the selected clusters.
 However, the `ClusterResourceOverride` is created by using an invalid path for the resource.
 
 ### ClusterRole
@@ -47,7 +81,7 @@ rules:
   - watch
   - list
 ```
-The `ClusterRole` `secret-reader` that is propagated to the member clusters by the `ClusterResourcePlacement`.
+The `ClusterRole` `secret-reader` that the `ClusterResourcePlacement` propagates to the member clusters.
 
 ### ClusterResourceOverride specifications
 ```YAML
@@ -153,10 +187,10 @@ status:
     version: v1
 ```
 
-If the `ClusterResourcePlacementOverridden` condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
+If the `ClusterResourcePlacementOverridden` (for ClusterResourcePlacement) or `ResourcePlacementOverridden` (for ResourcePlacement) condition is `False`, check the `placementStatuses` section to get the exact cause of the failure.
 
-In this situation, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
-Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. This means that `labels` doesn't exist.
+In the example, the message indicates that the override failed because the path `/metadata/labels/new-label` and its corresponding value are missing.
+Based on the previous example of the cluster role `secret-reader`, you can see that the path `/metadata/labels/` doesn't exist. The `labels` field doesn't exist.
 Therefore, a new label can't be added.
 
 ### Resolution
@@ -171,7 +205,11 @@ jsonPatchOverrides:
       newlabel: new-value
 ```
 
-This adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
+The code adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
+
+## General notes
+
+For ResourcePlacement, the override flow is identical except that all the resources reside in the same namespace. Use `ResourceOverride` instead of `ClusterResourceOverride` and expect `ResourcePlacementOverridden` in conditions.
 
  
 

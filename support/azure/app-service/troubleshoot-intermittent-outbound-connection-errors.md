@@ -3,15 +3,17 @@ title: Troubleshoot Intermittent Outbound Connection Errors
 description: Learn how to troubleshoot intermittent connection errors and related performance issues in Azure App Service.
 ms.topic: troubleshooting-general
 ms.date: 10/14/2025
-ms.custom: sap:security-recommendations,fasttrack-edit,Networking
-ms.author: msangapu
-author: msangapu-msft
+ms.custom: sap:Networking,security-recommendations
+ms.author: jarrettr
+author: JarrettRenshaw
 manager: dcscontentpm
-ms.reviewer: v-ryanberg
+ms.reviewer: msangapu
 ms.service: azure-app-service
 ---
 
 # Troubleshoot intermittent outbound connection errors in Azure App Service
+
+## Summary
 
 This article helps you troubleshoot intermittent connection errors and related performance issues in [Azure App Service](/azure/app-service/overview). It provides more information on, and troubleshooting methodologies for, exhaustion of source network address translation (SNAT) ports. If you require more help at any point in this article, contact the Azure experts at [Azure Community Support](https://azure.microsoft.com/support/community/). Alternatively, you can file an Azure support incident. Go to [Azure support](https://azure.microsoft.com/support/options/) and select **Submit a support ticket**.
 

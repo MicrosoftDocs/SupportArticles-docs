@@ -24,7 +24,7 @@ This issue occurs due to the active layer formed on the `Name` attribute of the 
 
 To solve this issue, make an API call, as shown below, to remove the active layer on the `Name` attribute of the `slaitem` entity.
 
-`https://[orgURL]/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='Attribute',ComponentId=6FE93FC3-E9FB-4298-A3FF-4D7EDF8BAFE8)`
+`https://[orgURL]/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='Attribute',ComponentId=aaaabbbb-0000-cccc-1111-dddd2222eeee)`
 
 > [!NOTE]
 > Replace [orgURL] with the actual organization URL.

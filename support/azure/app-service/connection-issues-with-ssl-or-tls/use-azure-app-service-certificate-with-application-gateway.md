@@ -11,6 +11,8 @@ ms.custom: sap:Connection issues with SSL or TLS, SSL Certificates and Domains
 
 # Use Azure App Service Certificate with Application Gateway
 
+## Summary
+
 Microsoft Azure provides various tools and services to secure your web applications by using SSL/TLS certificates. One such offering, the **Azure App Service Certificate**, is tightly integrated with Azure App Services. However, many organizations use **Azure Application Gateway** as a reverse proxy, load balancer, and Web Application Firewall (WAF). Understandably, such organizations want to use the same certificate across all services.
 
 This article provides a comprehensive guide for using App Service Certificates in Application Gateway, including usage steps, restrictions, and best practices. By understanding the limitations and using the Azure Key Vault service effectively, you can build a robust certificate management workflow across both App Services and Application Gateway.
@@ -128,7 +130,7 @@ Set-AzApplicationGateway -ApplicationGateway $AppGw
 - Regularly audit access policies in Key Vault.
 - Keep secure backup copies of your exported `.pfx` files.
 
-## Summary
+### Summary
 
 | Feature | App Service | Application Gateway
 | --- | --- | ---

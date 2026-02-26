@@ -1,7 +1,7 @@
 ---
 title: Identify the cause of unexpected WMI shutdowns
 description: Introduces how to identify the source of a Windows Management Instrumentation (WMI) request that shuts down a computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -150,7 +150,7 @@ After the reboot, follow these steps to conclude the investigation:
    User:          SYSTEM
    Computer:      <FQDN>
    Description:
-   CorrelationId = {6BE1F66D-CD17-0003-6718-E26B17CDDA01}; GroupOperationId = 11687; OperationId = 11698; Operation = Start IWbemServices::ExecMethod - root\cimv2 : Win32_OperatingSystem=@::Win32Shutdown; ClientMachine = <computer name>; User = <user>; ClientProcessId = 2712; NamespaceName = 133644697772514501
+   CorrelationId = {aaaa0000-bb11-2222-33cc-444444dddddd}; GroupOperationId = 11687; OperationId = 11698; Operation = Start IWbemServices::ExecMethod - root\cimv2 : Win32_OperatingSystem=@::Win32Shutdown; ClientMachine = <computer name>; User = <user>; ClientProcessId = 2712; NamespaceName = 133644697772514501
    ```
 
    Note the **ClientProcessId**.
