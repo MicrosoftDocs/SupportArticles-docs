@@ -126,12 +126,12 @@ This command tries to establish a TCP connection to the specified destination an
 
 > [!NOTE]
 > This command tests only whether a TCP connection can be established to the specified destination and port. It doesn't test whether the resource is available or whether any application-level issues might be preventing access to the resource.
->
-> Some firewalls might allow TCP connections to be established, but then block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates network connectivity, that status doesn't guarantee that the resource is fully accessible. For more information, see [Can't establish a TLS handshake](#cant-establish-a-tls-handshake).
 
 ### Can't establish a TLS handshake
 
-Some firewalls might allow TCP connections to be established, but then block actual traffic to the resource (for example, HTTPS). Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) function to diagnose why a handshake can't be established. Run the following command:
+Some firewalls might allow TCP connections to be established, but then block actual traffic to the resource (for example, HTTPS). Therefore, even if the [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity) function indicates network connectivity, that status doesn't guarantee that the resource is fully accessible.
+
+Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) function to diagnose why a handshake can't be established. Run the following command:
 
 ```powershell
 Test-TLSHandshake -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
