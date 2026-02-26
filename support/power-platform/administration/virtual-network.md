@@ -63,7 +63,7 @@ If everything is correctly configured, but you still encounter problems, use the
 Get-EnvironmentRegion -EnvironmentId "<EnvironmentId>"
 ```
 
-If the regions are different, one of your virtual networks is set up incorrectly. Run any additional diagnostic commands against both regions to make sure your full setup is configured correctly. To specify a region, include the `-Region` parameter. For example:
+If the environments are in different regions and one works but the other doesn't, the problem is in the virtual network setup for the failing region. Run any further diagnostic commands against both regions to make sure your full setup is configured correctly. To specify a region, include the `-Region` parameter. For example:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>" -Region "<AzureRegion>"
