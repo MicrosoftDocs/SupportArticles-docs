@@ -2,7 +2,7 @@
 title: Azure network connection health checks in Windows 365
 description: Learn about the health checks that are automatically run on Azure network connections.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje
 ms.custom:

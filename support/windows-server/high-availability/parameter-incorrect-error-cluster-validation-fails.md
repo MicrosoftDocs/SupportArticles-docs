@@ -1,7 +1,7 @@
 ---
 title: '"The parameter is incorrect" error and cluster validation fails against Validate Resource status'
 description: Helps to resolve an error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

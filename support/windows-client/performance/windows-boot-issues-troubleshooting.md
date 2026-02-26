@@ -1,7 +1,7 @@
 ---
 title: Windows startup issues troubleshooting
 description: Learn to troubleshoot issues that prevent Windows from starting. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
-ms.date: 01/27/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri

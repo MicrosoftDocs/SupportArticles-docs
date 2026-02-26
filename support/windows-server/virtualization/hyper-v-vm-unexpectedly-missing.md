@@ -1,7 +1,7 @@
 ---
 title: Hyper-V VM Unexpectedly Missing in Windows Server 2016
 description: Resolves issues that cause a virtual machine to disappear from a standalone Windows Server 2016 Hyper-V environment.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

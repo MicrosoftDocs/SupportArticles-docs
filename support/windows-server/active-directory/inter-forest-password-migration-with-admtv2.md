@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot intra-forest password migrations
 description: Discusses how to troubleshoot common problems associated with the inter-forest password migration operation.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

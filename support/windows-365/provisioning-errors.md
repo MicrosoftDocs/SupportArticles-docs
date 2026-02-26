@@ -2,7 +2,7 @@
 title: Troubleshoot provisioning errors
 description: Troubleshoot provisioning errors in Windows 365.
 manager: dcscontentpm
-ms.date: 01/23/2026
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje, mmoyaaceves
 ms.custom:

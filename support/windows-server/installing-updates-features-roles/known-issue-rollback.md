@@ -2,7 +2,7 @@
 title: Known Issue Rollback
 description: Learn how Known Issue Rollback technology improves the Windows update experience and makes it even more reliable for organizations.
 ms.topic: troubleshooting
-ms.date: 09/22/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.reviewer: kaushika, dstrome, v-appelgatet

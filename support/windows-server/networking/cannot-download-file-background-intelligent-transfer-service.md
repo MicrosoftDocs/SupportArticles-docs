@@ -1,7 +1,7 @@
 ---
 title: Fail to download a file by using BITS
 description: Describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: How to Set Up Hyper-V Replica Between Windows Server 2016 and Windows Server 2022
 description: Provides guidance to set up Hyper-V Replica if the source VM is on Windows Server 2016 and the destination VM is on Windows Server 2022.
-ms.date: 08/28/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

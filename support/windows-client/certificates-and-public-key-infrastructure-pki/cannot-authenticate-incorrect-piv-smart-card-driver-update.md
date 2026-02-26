@@ -1,7 +1,7 @@
 ---
 title: Can't authenticate because of incorrect PIV
 description: Describes how to resolve a problem that is caused by an incorrect driver update. The user can't sign in to Windows until the incorrect driver is removed.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

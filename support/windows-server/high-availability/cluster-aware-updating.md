@@ -1,7 +1,7 @@
 ---
 title: Cluster-Aware Updating (CAU) Troubleshooting Guide
 description: Resolves issues that affect Cluster-Aware Updating (CAU) in Windows Failover Clusters.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

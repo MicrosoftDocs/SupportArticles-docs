@@ -1,7 +1,7 @@
 ---
 title: Kerberos Generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE Error
 description: Guidance for troubleshooting missing, incorrect, or duplicate SPNs that cause Kerberos authentication issues.
-ms.date: 06/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

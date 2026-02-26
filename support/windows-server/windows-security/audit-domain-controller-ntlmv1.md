@@ -1,7 +1,7 @@
 ---
 title: Audit use of NTLMv1 on a domain controller
 description: Discusses how to use event logs to audit the usage of NTLMv1 on a Windows Server-based domain controller.
-ms.date: 02/3/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

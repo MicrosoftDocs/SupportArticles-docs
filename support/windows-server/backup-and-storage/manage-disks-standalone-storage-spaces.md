@@ -1,7 +1,7 @@
 ---
 title: Manage Disks in Standalone Storage Spaces
 description: Provides a detailed guide on how to identify the Logical Unit Number (LUN) of a physical disk presented from Azure for Storage Spaces on Windows Server.
-ms.date: 06/12/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

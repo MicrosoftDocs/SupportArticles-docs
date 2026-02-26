@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting cluster node quarantine issues
 description: Discusses how to isolate and fix issues that cause a cluster node quarantine to temporarily isolate an unstable or problematic node.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

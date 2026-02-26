@@ -1,7 +1,7 @@
 ---
 title: 0x80070003 Error and Windows Upgrade Fails During Process Drivers for Migration Operation
 description: Discusses how to resolve the "0x80070003" error during the "Process Drivers for Migration" operation of an in-place upgrade of Windows or Windows Server.
-ms.date: 09/26/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

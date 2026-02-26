@@ -500,8 +500,6 @@
           href: ../office-suite-issues/enable-collaboration.md
         - name: Increase the size of diagnostic logs
           href: ../office-suite-issues/collect-office-diagnostic-logs.md
-        - name: Install Microsoft Support and Recovery Assistant from network share
-          href: ../office-suite-issues/install-sara-from-network-share.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app

@@ -1,7 +1,7 @@
 ---
 title: 'BitLocker Network Unlock: known issues'
 description: Describes several known issues that you may encounter while using network unlock, and provided guidance for addressing those issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 ms.reviewer: kaushika, v-tappelgate
 ms.collection: Windows Security Technologies\BitLocker

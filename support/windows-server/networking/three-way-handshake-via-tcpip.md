@@ -1,7 +1,7 @@
 ---
 title: The three-way handshake via TCP/IP
 description: Discusses the process of the Transmission Control Protocol (TCP) three-way handshake between a client and server when starting or ending a TCP connection.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error 0x8024002E
 description: Learn how to resolve Windows Update error 0x8024002E, indicating that access to an unmanaged server isn't allowed.
-ms.date: 04/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

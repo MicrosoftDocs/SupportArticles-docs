@@ -1,7 +1,7 @@
 ---
 title: Some context menu items don't appear
 description: Fixes an issue where the Open, Print, and Edit items are missing from the context menu when you select multiple items in Windows Explorer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

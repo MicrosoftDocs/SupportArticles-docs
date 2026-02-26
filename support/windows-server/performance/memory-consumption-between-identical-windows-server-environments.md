@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot memory consumption between identical Windows Server environments
 description: Describes how to use Performance Monitor to measure and compare memory consumption between identical server environments.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

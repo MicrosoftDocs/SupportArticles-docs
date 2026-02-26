@@ -1,7 +1,7 @@
 ---
 title: Operations on Confidential Attributes Produce Unexpected Results When Using Windows Server 2025 DCs
 description: Discusses new requirements for using LDAP clients to access confidential attributes while connected to Windows Server 2025-based domain controllers (DCs).
-ms.date: 12/05/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

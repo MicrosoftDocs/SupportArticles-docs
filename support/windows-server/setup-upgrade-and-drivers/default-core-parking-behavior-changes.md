@@ -1,7 +1,7 @@
 ---
 title: Default Core Parking behavior changes
 description: Describes the changes of the default behavior for Core Parking.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -3,10 +3,14 @@
     {
       "source_path": "Office/Client/excel/long-numbers-incorrectly-in-excel.md",
       "redirect_url": "https://support.microsoft.com/topic/1bf7b935-36e1-4985-842f-5dfa51f85fe7"
-     },
+    },
     {
       "source_path": "Office/Client/excel/last-digits-changed-to-zeros.md",
       "redirect_url": "https://support.microsoft.com/topic/1bf7b935-36e1-4985-842f-5dfa51f85fe7"
-     }                 
+    },
+    {
+      "source_path": "Office/Client/office-suite-issues/install-sara-from-network-share.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    }                      
   ]
 }

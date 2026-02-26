@@ -1,7 +1,7 @@
 ---
 title: CSV Goes Offline after a Node or Storage Component Goes Offline During Active I/O
 description: Discusses a change in Cluster Shared Volume behavior that sends the CSV offline and could cause it to fail.
-ms.date: 11/05/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

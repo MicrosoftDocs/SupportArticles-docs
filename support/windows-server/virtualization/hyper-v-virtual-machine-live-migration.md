@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Virtual Machine Live Migration Troubleshooting Guide
 description: Provides a comprehensive troubleshooting process, detailed solutions for common migration issues, structured data collection procedures, and quick reference resources.
-ms.date: 09/05/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

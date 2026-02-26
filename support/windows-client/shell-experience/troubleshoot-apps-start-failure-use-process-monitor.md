@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Apps failing to start using Process Monitor
 description: Provides guidance to troubleshoot when Modern, Inbox, and Microsoft Store Apps fail to start.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

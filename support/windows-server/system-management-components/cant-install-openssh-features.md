@@ -1,7 +1,7 @@
 ---
 title: Can't install OpenSSH Features
 description: Resolves various issues that occur when you try to install OpenSSH Server and OpenSSH Client on different versions of Windows Server and Windows Client.
-ms.date: 09/21/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
