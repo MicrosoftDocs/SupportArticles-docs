@@ -18,7 +18,7 @@ Use the lists and tables below to find details about known issues and limitation
 
 ## Other digital signing and encryption solutions
 
-Microsoft Purview Information Protection can't protect or decrypt files\emails that are digitally signed or encrypted with other solutions, such as removing protection from mails that are signed or encrypted with S/MIME.
+Microsoft Purview Information Protection can't label, protect or decrypt files\emails that are digitally signed or encrypted with other solutions, such as removing protection from mails that are signed or encrypted with S/MIME.
 
 ## Client support for container files, such as .zip files
 
