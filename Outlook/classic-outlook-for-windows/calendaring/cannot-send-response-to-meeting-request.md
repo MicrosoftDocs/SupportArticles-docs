@@ -30,7 +30,7 @@ When you try to send a response to a meeting request in Microsoft Outlook, the s
 
 :::image type="content" source="media/cannot-send-response-to-meeting-request/options-of-meeting-tab.png" alt-text="Screenshot of the Accept, Tentative, and Decline buttons on the Meeting ribbon in Outlook." border="false":::
 
-Because the meeting organizer doesn't receive a response from you, the meeting tracking feature is not updated as expected.
+Because the meeting organizer doesn't receive a response from you, the meeting tracking feature isn't updated as expected.
 
 > [!NOTE]
 > The ability to respond to a meeting request by selecting one of the options that are mentioned in the "Symptoms" section isn't supported in new Outlook.
