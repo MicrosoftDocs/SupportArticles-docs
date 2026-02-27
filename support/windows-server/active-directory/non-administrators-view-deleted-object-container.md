@@ -20,16 +20,16 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-When the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled (the default configuration), Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
+If the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled (the default configuration), Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
 
- This article describes how to modify the permissions on the deleted objects container. You might have to modify the permissions on the deleted objects container under the following conditions:
+This article discusses how to modify the permissions on the deleted objects container. You might have to modify the permissions on the deleted objects container under the following conditions:
 
 - You have enterprise applications or services that use non-System accounts or non-Administrator accounts to bind to Active Directory.
 - These enterprise applications or services poll for directory changes.
 
 ## More information
 
-When the AD Recycle Bin is enabled and an Active Directory object is deleted, by default the object is moved to the deleted objects container. The object remains there for a specified period (`tombstonelifetime` plus `msds-deletedobjectlifetime`). The purpose is to allow time for the deletion to replicate to other domain controllers (DCs). You can access the object in the deleted objects container, and then undelete or fully restore it.
+By default, if the AD Recycle Bin is enabled, an Active Directory object that's deleted is moved to the deleted objects container. The object remains in the container for a specified period (`tombstonelifetime` plus `msds-deletedobjectlifetime`). This action is taken to allow time for the deletion to replicate to other domain controllers (DCs). You can access the object in the deleted objects container, and then undelete or fully restore it.
 
 For example, a member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
 
@@ -37,7 +37,7 @@ For example, a member of the Administrators group can use the following Windows 
 Get-ADObject -Filter {Deleted -eq $True} -IncludeDeletedObjects
 ```
 
-This command lists the current objects in the container.
+This command lists the objects that are currently in the container:
 
 ```output
 Deleted           : True
@@ -65,7 +65,7 @@ ObjectGUID        : 8daacf6e-12ab-4f5d-b95c-ec834d490580
 To modify the permissions on the deleted objects container so that nonadministrators can view this information, use the [DSACLS.exe](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)) tool. Follow these steps:
 
 1. Sign in to a DC by using a user account that is a member of the **Domain Admins** group.
-1. Open an administrative Windows Command Prompt window, and then run a command that resembles the following command:
+1. Open an administrative Command Prompt window, and then run a command that resembles the following example:
 
    ```console
    dsacls "CN=Deleted Objects,DC=contoso,DC=com" /takeownership
@@ -105,7 +105,7 @@ To modify the permissions on the deleted objects container so that nonadministra
    ```
 
    > [!NOTE]  
-   > In this command, `CONTOSO\EricLang` represents the security principal to be modified, and `LCRP` represents the permissions to grant (List Children and Read Property).
+   > In this command, `CONTOSO\EricLang` represents the security principal that you want to modify, and `LCRP` represents the permissions that you want to grant (List Children and Read Property).
 
    This command generates output that resembles the following example:
 
@@ -134,7 +134,7 @@ To modify the permissions on the deleted objects container so that nonadministra
    The command completed successfully
    ```
 
-This example grants the user "CONTOSO\EricLang" List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain. Therefore, this user can view the contents of the deleted objects container, but can't make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group.
+This example grants List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain to the user, "CONTOSO\EricLang". Therefore, this user can view the contents of the deleted objects container, but can't make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group.
 
 By default, only the System account has permission to modify objects in the deleted objects container.
 
