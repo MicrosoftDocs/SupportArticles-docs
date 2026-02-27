@@ -21,6 +21,10 @@ appliesto:
 
 # Creating a team site from SharePoint Home doesn’t finish
 
+> [!NOTE]
+> A new [Discover experience](https://support.microsoft.com/office/getting-started-with-discover-in-sharepoint-0b6cfbb0-5523-41d9-bc89-4f719f05fd51) will replace SharePoint Home in the future.
+> 
+
 ## Symptoms
 
 When you try to [create a team site](/sharepoint/create-site-collection) from SharePoint Home, the site creation process stops or never finishes. This might occur if the Limited-access user permission lockdown mode for the SharePoint [root site](/sharepoint/modern-root-site) is activated.
