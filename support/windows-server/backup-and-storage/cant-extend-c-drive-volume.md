@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-This article discusses how to fix an issue in which you can't extend drive C in Windows because the **Extend Volume** command isn't available in the Disk Management tool. This issue usually occurs because unallocated space isn't immediately adjacent to the partition that you want to expand. This article also explains how to verify the layout of the partitions, make the required unallocated space contiguous, and then safely extend drive C.
+This article discusses how to fix an issue in which you can't extend drive C in Windows because the **Extend Volume** command isn't available in the Disk Management tool. This issue usually occurs because unallocated space isn't immediately next to the partition that you want to expand. This article also explains how to verify the layout of the partitions, make the required unallocated space contiguous, and then safely extend drive C.
 
 ## Symptoms
 
@@ -28,11 +28,11 @@ In the Disk Management tool, you right-click drive C to try to extend the drive.
 
 ## Cause
 
-This issue occurs if the unallocated space on the disk isn't directly adjacent to the drive C partition. In the Disk Management tool, you can extend a volume into only unallocated space that's immediately adjacent to the volume. If the unallocated space is on another part of the disk, or if it isn't correctly assigned, the extension command is disabled.
+This issue occurs if the unallocated space on the disk isn't directly next to the drive C partition. In the Disk Management tool, you can extend a volume into only unallocated space that's immediately next to the volume. If the unallocated space is on another part of the disk, or if it isn't correctly assigned, the extension command is disabled.
 
 ## Resolution
 
-To resolve this issue, make sure that the unallocated space is directly adjacent to drive C. Then, extend drive C.
+To resolve this issue, make sure that the unallocated space is directly next to drive C. Then, extend drive C.
 
 > [!IMPORTANT]  
 > Always back up your data before making changes to disk partitions.
