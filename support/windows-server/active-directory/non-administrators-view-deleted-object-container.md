@@ -12,7 +12,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# How to let non-administrators view the contents of the Active Directory deleted objects container
+# Let non-administrators view the contents of the Active Directory deleted objects container
 
 This article explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
 
