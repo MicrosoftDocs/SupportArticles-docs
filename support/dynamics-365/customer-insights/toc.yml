@@ -19,9 +19,9 @@
   - name: Data unification
     items:
       - name: Backstamping job skipped
-        href: data//profile-unification/backstamping-job-skipped.md
+        href: data/profile-unification/backstamping-job-skipped.md
       - name: Can't delete a data source or table
-        href: data//profile-unification/cant-delete-data-table.
+        href: data/profile-unification/cant-delete-data-table.
       - name: Can't save data unification rules
         href: data/profile-unification/cant-save-unification.md
       - name: Match failed error
