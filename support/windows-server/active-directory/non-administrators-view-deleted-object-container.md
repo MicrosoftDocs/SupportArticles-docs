@@ -105,7 +105,7 @@ To modify the permissions on the deleted objects container so that nonadministra
    ```
 
    > [!NOTE]  
-   > In this command, `CONTOSO\EricLang` represents the security principal that you want to modify, and `LCRP` represents the permissions that you want to grant (List Children and Read Property).
+   > In this command, `CONTOSO\EricLang` represents the security principal to which you want to grant access, and `LCRP` represents the permissions that you want to grant (List Children and Read Property).
 
    This command generates output that resembles the following example:
 
