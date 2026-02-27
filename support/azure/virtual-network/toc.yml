@@ -9,22 +9,24 @@ items:
   href: diagnose-network-routing-problem.md
 - name: Diagnose a virtual machine network traffic filter problem
   href: diagnose-network-traffic-filter-problem.md
-- name: Troubleshoot outbound SMTP connectivity problems in Azure
-  href: troubleshoot-outbound-smtp-connectivity.md
-- name: Troubleshoot Azure VM connectivity problems
-  href: troubleshoot-vm-connectivity.md  
-- name: Test virtual machine network throughput by using NTTTCP
-  href: virtual-network-bandwidth-testing.md
+- name: Troubleshoot network virtual appliance issues in Azure
+  href: virtual-network-troubleshoot-nva.md
 - name: Diagnostic resource logging for a network security group
   href: virtual-network-nsg-manage-log.md
 - name: Test network latency between Azure VMs
-  href: virtual-network-test-latency.md
-- name: Can't delete a virtual network in Azure
-  href: virtual-network-troubleshoot-cannot-delete-vnet.md
-- name: Troubleshooting connectivity problems between Azure VMs
-  href: virtual-network-troubleshoot-connectivity-problem-between-vms.md
-- name: Troubleshooting network virtual appliance issues in Azure
-  href: virtual-network-troubleshoot-nva.md
+  href: virtual-network-test-latency.md 
+- name: Test virtual machine network throughput by using NTTTCP
+  href: virtual-network-bandwidth-testing.md  
+- name: Troubleshoot Azure VM connectivity problems
+  href: troubleshoot-vm-connectivity.md    
+- name: Troubleshoot outbound SMTP connectivity problems in Azure
+  href: troubleshoot-outbound-smtp-connectivity.md
 - name: Troubleshoot virtual network peering issues
   href: virtual-network-troubleshoot-peering-issues.md        
+- name: Troubleshoot connectivity problems between Azure VMs
+  href: virtual-network-troubleshoot-connectivity-problem-between-vms.md
+- name: Can't delete a virtual network in Azure
+  href: virtual-network-troubleshoot-cannot-delete-vnet.md
+
+
 
