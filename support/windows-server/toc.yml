@@ -595,7 +595,7 @@ items:
     - name: Can't delete files on NTFS file system
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
     - name: "Can't extend the C: drive because the Extend option isn't available"
-      href: ./backup-and-storage/cant-extend-c-drive.md
+      href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
