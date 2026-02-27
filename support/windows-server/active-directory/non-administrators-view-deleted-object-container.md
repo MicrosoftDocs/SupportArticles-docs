@@ -1,39 +1,37 @@
 ---
-title: Let non-administrators view deleted objects
-description: Explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
-ms.date: 02/12/2026
+title: Let nonadministrators view deleted objects
+description: Explains how to change permissions so that nonadministrators can view the contents of the Active Directory deleted objects container.
+ms.date: 03/02/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm, v-appelgatet
 ms.custom:
 - sap:active directory\user, computer, group, and object management
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Let non-administrators view the contents of the Active Directory deleted objects container
+# Let nonadministrators view the contents of the Active Directory deleted objects container
 
-This article explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
+This article explains how to change permissions so that nonadministrators can view the Active Directory deleted objects container.
 
 _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
+When the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled, (the default configuration) Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
 
-
-By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
-
- This article describes how to modify the permissions on the deleted objects container. You may have to modify the permissions on the deleted objects container under the following conditions:
+ This article describes how to modify the permissions on the deleted objects container. You might have to modify the permissions on the deleted objects container under the following conditions:
 
 - You have enterprise applications or services that use non-System accounts or non-Administrator accounts to bind to Active Directory.
 - These enterprise applications or services poll for directory changes.
 
 ## More information
 
-When an Active Directory object is deleted, by default the object is moved to the deleted objects container. The object remains there for a specified period (`tombstonelifetime`, plus `msds-deletedobjectlifetime` when the [AD Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled). The purpose is to allow time for the deletion to replicate to other domain controllers (DCs). If the AD Recycle bin is enabled, you can access the object in the deleted objects container, and then undelete or fully restore it.
+When the AD Recycle Bin is enabled and an Active Directory object is deleted, by default the object is moved to the deleted objects container. The object remains there for a specified period (`tombstonelifetime` plus `msds-deletedobjectlifetime`). The purpose is to allow time for the deletion to replicate to other domain controllers (DCs). You can access the object in the deleted objects container, and then undelete or fully restore it.
 
-A member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
+For example, a member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
 
 ```powershell
 Get-ADObject -Filter {Deleted -eq $True} -IncludeDeletedObjects

@@ -420,7 +420,7 @@ items:
       href: ./active-directory/reset-directory-services-restore-mode-admin-pwd.md
     - name: How to use phantoms
       href: ./active-directory/phantoms-tombstones-infrastructure-master.md
-    - name: Let non-administrators view the contents of the deleted objects container
+    - name: Let nonadministrators view the contents of the deleted objects container
       href: ./active-directory/non-administrators-view-deleted-object-container.md
     - name: Linux accounts can't get AES encrypted tickes in AD DS
       href: ./active-directory/linux-accounts-cannot-get-aes-tickets.md
