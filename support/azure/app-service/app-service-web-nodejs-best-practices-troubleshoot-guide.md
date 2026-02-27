@@ -28,9 +28,9 @@ This [schema file](https://github.com/Azure/iisnode/blob/master/src/config/iisno
 
 ### nodeProcessCountPerApplication
 
-This setting controls the number of node processes that are launched per IIS application. The default value is *1*. You can launch as many node.exe processes as your virtual machine vCPU count by changing the value to *0*. The recommended value is *0* for many applications so that you can use all available vCPUs.
+This setting controls the number of node processes that are launched per IIS application. The default value is `1`. You can launch as many node.exe processes as your virtual machine vCPU count by changing the value to `0`. The recommended value is `0` for many applications so that you can use all available vCPUs.
 
-Although the Node.js event loop runs on a single thread, a single Node.js process can still use multiple CPU cores when the app uses worker threads, the cluster module, native add-ons, or other libraries that run work in parallel. For CPU-bound workloads, you might still get higher throughput by running multiple Node.js processes (up to the VM vCPU count) so IIS can distribute requests across processes.
+Although the Node.js event loop runs on a single thread, a single Node.js process can still use multiple CPU cores when the app uses worker threads, the cluster module, native add-ons, or other libraries that run work in parallel. For CPU-bound workloads, you might get higher throughput by running multiple Node.js processes (up to the VM vCPU count) so IIS can distribute requests across processes.
 
 ### nodeProcessCommandLine
 
@@ -279,6 +279,5 @@ Follow these links to learn more about Node.js applications on Azure App Service
 * [Azure App Service Web Apps: Node.js](/archive/blogs/silverlining/windows-azure-websites-node-js)
 * [Node.js Developer Center](/azure/nodejs-use-node-modules-azure-apps)
 * [Exploring the Super Secret Kudu Debug Console](https://www.youtube.com/watch?v=-VjqyvA2XjM)
-
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
