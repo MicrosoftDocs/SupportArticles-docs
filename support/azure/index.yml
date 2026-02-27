@@ -101,6 +101,8 @@ productDirectory:
     links:
     - url: vpn-gateway/welcome-vpn-gateway.yml
       text: Troubleshooting articles for Azure VPN Gateway
+    - url: expressroute/welcome-expressroute.yml
+      text: Troubleshooting articles for Azure ExpressRoute  
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:

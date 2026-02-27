@@ -1,0 +1,16 @@
+items:
+- name: Azure ExpressRoute troubleshooting documentation
+  href: expressroute/welcome-expressroute.yml
+  items:
+- name: Troubleshoot gateway migration 
+  href: gateway-migration-error-messaging.md 
+- name: Get operation correlation ID from Activity Log
+  href: get-correlation-id.md
+- name: Verify ExpressRoute connectivity
+  href: expressroute-troubleshooting-expressroute-overview.md
+- name: Troubleshoot network link performance
+  href: expressroute-troubleshooting-network-performance.md
+- name: Reset a failed circuit
+  href: reset-circuit.md
+- name: Getting ARP tables in the Resource Manager deployment model
+  href: expressroute-troubleshooting-arp-resource-manager.md
