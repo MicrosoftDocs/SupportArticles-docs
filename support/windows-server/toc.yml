@@ -594,6 +594,8 @@ items:
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
+    - name: No Extend Volume command for drive C in Disk Management
+      href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
