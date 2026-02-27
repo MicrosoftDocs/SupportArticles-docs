@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:active directory\user,computer,group,and object management
+- sap:active directory\user, computer, group, and object management
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-When an Active Directory object is deleted, by default the object is moved to the deleted objects container. You can undelete or reactivate it from there when AD Recycle is enabled. It is there for a specified time (tombstonelifetime, plus msds-deletedobjectlifetime when AD recycle bin is enabled). The purpose it that other domain controllers that are replicating changes will become aware of the deletion.
+When an Active Directory object is deleted, by default the object is moved to the deleted objects container. You can undelete or reactivate it from there when AD Recycle is enabled. It is there for a specified time (`tombstonelifetime`, plus `msds-deletedobjectlifetime` when AD recycle bin is enabled). The purpose it that other domain controllers that are replicating changes will become aware of the deletion.
 
 By default, only the System account and members of the Administrators group can view the contents of this container. This article describes how to modify the permissions on the deleted objects container. Administrators can see it for example when they ask LDAP to return deleted objects.
 
@@ -34,41 +34,44 @@ You may have to modify the permissions on the deleted objects container if the f
 To modify the permissions on the deleted objects container so that non-administrators can view this container, use the DSACLS.exe program. Follow these steps:
 
 1. Log on with a user account that is a member of the **Domain Admins** group.
-2. Click **Start**, type **Command Prompt**, and open it in elevated mode when you run this task in an interactive session on a Domain Controller.
-3. At the command prompt, type a command that is similar to the following example: dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /takeownership.
+1. Click **Start**, type **Command Prompt**, and open it in elevated mode when you run this task in an interactive session on a Domain Controller.
+1. At the command prompt, type a command that is similar to the following example: `dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /takeownership`.
 
-    - When you type this command, use the name of the deleted objects container for your domain.
-    - Each domain in the forest will have its own deleted objects container. Output that is similar to the following example should be displayed:
+   - When you type this command, use the name of the deleted objects container for your domain.
+   - Each domain in the forest will have its own deleted objects container. Output that is similar to the following example should be displayed:
 
-        > Owner: Contoso\Domain Admins  
-          Group: NT AUTHORITY\SYSTEM  
-            Access list:  
-            {This object is protected from inheriting permissions from the parent}  
-            Allow BUILTIN\Administrators SPECIAL ACCESS  
-             LIST CONTENTS  
-             READ PROPERTY  
-            Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
-             DELETE  
-             READ PERMISSONS  
-             WRITE PERMISSIONS  
-             CHANGE OWNERSHIP  
-             CREATE CHILD  
-             DELETE CHILD  
-             LIST CONTENTS  
-             WRITE SELF  
-             WRITE PROPERTY  
-             READ PROPERTY  
-            The command completed successfully
+     ```output
+     Owner: Contoso\Domain Admins  
+     Group: NT AUTHORITY\SYSTEM  
+     Access list:  
+     {This object is protected from inheriting permissions from the parent}  
+     Allow BUILTIN\Administrators SPECIAL ACCESS  
+        LIST CONTENTS  
+        READ PROPERTY  
+     Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
+        DELETE  
+        READ PERMISSONS  
+        WRITE PERMISSIONS  
+        CHANGE OWNERSHIP  
+        CREATE CHILD  
+        DELETE CHILD  
+        LIST CONTENTS  
+        WRITE SELF  
+        WRITE PROPERTY  
+        READ PROPERTY  
+     The command completed successfully
+     ```
 
-4. To grant a security principal permission to view the objects in the deleted objects container, type a command that is similar to the following example: dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /g CONTOSO\EricLang:LCRP
+1. To grant a security principal permission to view the objects in the deleted objects container, type a command that is similar to the following example: `dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /g CONTOSO\EricLang:LCRP`
 
-    Output that is similar to the following example should be displayed:
+   Output that is similar to the following example should be displayed:
 
-    > Owner: CONTOSO\Domain Admins  
-    Group: NT AUTHORITY\SYSTEM  
-    Access list:  
-    {This object is protected from inheriting permissions from the parent}  
-    Allow BUILTIN\Administrators SPECIAL ACCESS  
+   ```output
+   > Owner: CONTOSO\Domain Admins  
+   Group: NT AUTHORITY\SYSTEM  
+   Access list:  
+   {This object is protected from inheriting permissions from the parent}  
+   Allow BUILTIN\Administrators SPECIAL ACCESS  
      LIST CONTENTS  
      READ PROPERTY  
      Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
@@ -82,15 +85,17 @@ To modify the permissions on the deleted objects container so that non-administr
      WRITE SELF  
      WRITE PROPERTY  
      READ PROPERTY  
-**     Allow CONTOSO\EricLang SPECIAL ACCESS  
+     Allow CONTOSO\EricLang SPECIAL ACCESS  
      LIST CONTENTS  
-     READ PROPERTY  **
-    The command completed successfully
+     READ PROPERTY  
+   The command completed successfully
+   ```
 
 In this example, the user "CONTOSO\EricLang" has been granted List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain. These permissions let this user view the contents of the deleted objects container, but do not let this user make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group. By default, only the System account has permission to modify objects in the deleted objects container.
 
 ## References
-[Enable and use Active Directory Recycle Bin]([url](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin?tabs=adac))
-[Restore-ADObject]([url](https://learn.microsoft.com/en-us/powershell/module/activedirectory/restore-adobject?view=windowsserver2025-ps))
-[Deleted Object Lifetime]([url](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180))#
-[Show deleted objects LDAP Control]([url](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/ldap-server-show-deleted-oid))
+
+- [Enable and use Active Directory Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin)
+[Restore-ADObject](/powershell/module/activedirectory/restore-adobject)
+[3.1.1.1.5.1 Tombstone Lifetime and Deleted-Object Lifetime](/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180)
+[LDAP_SERVER_SHOW_DELETED_OID control code](/previous-versions/windows/desktop/ldap/ldap-server-show-deleted-oid)
