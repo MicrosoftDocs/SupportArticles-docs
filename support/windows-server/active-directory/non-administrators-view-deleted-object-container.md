@@ -65,7 +65,11 @@ To modify the permissions on the deleted objects container so that non-administr
      The command completed successfully
      ```
 
-1. To grant a security principal permission to view the objects in the deleted objects container, type a command that is similar to the following example: `dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /g CONTOSO\EricLang:LCRP`
+1. To grant a security principal permission to view the objects in the deleted objects container, at the command prompt, run a command that resembles the following command:
+
+   ```console
+   dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /g CONTOSO\EricLang:LCRP
+   ```
 
    Output that is similar to the following example should be displayed:
 
