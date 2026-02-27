@@ -1050,6 +1050,8 @@ items:
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot cluster issue with Event ID 1135
       href: ./high-availability/troubleshoot-cluster-event-id-1135.md
+    - name: Windows Server 2019 cluster role doesn't come online after you rebuild the cluster
+      href: ./high-availability/cluster-role-doesnt-come-online-after-rebuild-ws-2019-cluster.md
   - name: Cluster Shared Volume (CSV)
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
