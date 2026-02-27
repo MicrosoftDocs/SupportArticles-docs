@@ -1,5 +1,5 @@
 ---
-title: Let non-administrators view deleted objects container
+title: Let non-administrators view deleted objects
 description: Explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
 ms.date: 02/12/2026
 manager: dcscontentpm
@@ -12,7 +12,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# How to let non-administrators view the Active Directory deleted objects container
+# How to let non-administrators view the contents of the Active Directory deleted objects container
 
 This article explains how to change permissions so that non-administrators can view the Active Directory deleted objects container.
 
@@ -20,9 +20,9 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-When an Active Directory object is deleted, by default the object is moved to the deleted objects container. The object remains there for a specified period (`tombstonelifetime`, plus `msds-deletedobjectlifetime` when the AD Recycle Bin is enabled). The purpose is to allow time for the deletion to replicate to other domain controllers (DCs). If the AD Recycle bin is enabled, you can access the object in the deleted objects container, and then undelete or fully restore it.
 
-By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command.
+
+By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
 
  This article describes how to modify the permissions on the deleted objects container. You may have to modify the permissions on the deleted objects container under the following conditions:
 
@@ -31,47 +31,85 @@ By default, only the System account and members of the Administrators group can 
 
 ## More information
 
-To modify the permissions on the deleted objects container so that non-administrators can view this container, use the DSACLS.exe program. Follow these steps:
+When an Active Directory object is deleted, by default the object is moved to the deleted objects container. The object remains there for a specified period (`tombstonelifetime`, plus `msds-deletedobjectlifetime` when the [AD Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled). The purpose is to allow time for the deletion to replicate to other domain controllers (DCs). If the AD Recycle bin is enabled, you can access the object in the deleted objects container, and then undelete or fully restore it.
+
+A member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
+
+```powershell
+Get-ADObject -Filter {Deleted -eq $True} -IncludeDeletedObjects
+```
+
+This command lists the current objects in the container.
+
+```output
+Deleted           : True
+DistinguishedName : CN=Deleted Objects,DC=contoso,DC=com
+Name              : Deleted Objects
+ObjectClass       : container
+ObjectGUID        : 280e5943-08cf-498d-b3f1-19a812d07efd
+
+Deleted           : True
+DistinguishedName : DC=..Deleted-_msdcs.contoso.com\0ADEL:f6eb3fb7-597a-458b-8b74-2a46066be220,CN=Deleted
+                    Objects,DC=contoso,DC=com
+Name              : ..Deleted-_msdcs.contoso.com
+                    DEL:f6eb3fb7-597a-458b-8b74-2a46066be220
+ObjectClass       : dnsZone
+ObjectGUID        : f6eb3fb7-597a-458b-8b74-2a46066be220
+
+Deleted           : True
+DistinguishedName : DC=@\0ADEL:8daacf6e-12ab-4f5d-b95c-ec834d490580,CN=Deleted Objects,DC=contoso,DC=com
+Name              : @
+                    DEL:8daacf6e-12ab-4f5d-b95c-ec834d490580
+ObjectClass       : dnsNode
+ObjectGUID        : 8daacf6e-12ab-4f5d-b95c-ec834d490580
+```
+
+To modify the permissions on the deleted objects container so that non-administrators can view this information, use the [DSACLS.exe](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)) tool. Follow these steps:
 
 1. Sign in to a DC by using a user account that is a member of the **Domain Admins** group.
 1. Open an administrative Windows Command Prompt window, and then run a command that resembles the following command:
 
    ```console
-   dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /takeownership
+   dsacls "CN=Deleted Objects,DC=contoso,DC=com" /takeownership
    ```
 
-   - When you type this command, use the name of the deleted objects container for your domain.
-   - Each domain in the forest will have its own deleted objects container. Output that is similar to the following example should be displayed:
+   > [!NOTE]  
+   > In this command, `CN=Deleted Objects,DC=Contoso,DC=com` is the fully qualified domain name (FQDN) of the deleted objects container for the contoso.com domain. Each domain in the forest will have its own deleted objects container.
 
-     ```output
-     Owner: Contoso\Domain Admins  
-     Group: NT AUTHORITY\SYSTEM  
-     Access list:  
-     {This object is protected from inheriting permissions from the parent}  
-     Allow BUILTIN\Administrators SPECIAL ACCESS  
-        LIST CONTENTS  
-        READ PROPERTY  
-     Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
-        DELETE  
-        READ PERMISSIONS  
-        WRITE PERMISSIONS  
-        CHANGE OWNERSHIP  
-        CREATE CHILD  
-        DELETE CHILD  
-        LIST CONTENTS  
-        WRITE SELF  
-        WRITE PROPERTY  
-        READ PROPERTY  
-     The command completed successfully
-     ```
+   This command generates output that resembles the following example:
 
-1. To grant a security principal permission to view the objects in the deleted objects container, at the command prompt, run a command that resembles the following command:
+   ```output
+   Owner: Contoso\Domain Admins  
+   Group: NT AUTHORITY\SYSTEM  
+   Access list:  
+   {This object is protected from inheriting permissions from the parent}  
+   Allow BUILTIN\Administrators SPECIAL ACCESS  
+      LIST CONTENTS  
+      READ PROPERTY  
+   Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
+      DELETE  
+      READ PERMISSIONS  
+      WRITE PERMISSIONS  
+      CHANGE OWNERSHIP  
+      CREATE CHILD  
+      DELETE CHILD  
+      LIST CONTENTS  
+      WRITE SELF  
+      WRITE PROPERTY  
+      READ PROPERTY  
+   The command completed successfully
+   ```
+
+1. To grant a security principal permission to view the objects in the deleted objects container, run a command that resembles the following command:
 
    ```console
    dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /g CONTOSO\EricLang:LCRP
    ```
 
-   Output that is similar to the following example should be displayed:
+   > [!NOTE]  
+   > In this command, `CONTOSO\EricLang` represents the security principal to be modified, and `LCRP` represents the additional permissions (List Children and Read Property).
+
+   This command generates output that resembles the following example:
 
    ```output
    Owner: CONTOSO\Domain Admins  
@@ -98,11 +136,15 @@ To modify the permissions on the deleted objects container so that non-administr
    The command completed successfully
    ```
 
-In this example, the user "CONTOSO\EricLang" has been granted List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain. These permissions let this user view the contents of the deleted objects container, but do not let this user make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group. By default, only the System account has permission to modify objects in the deleted objects container.
+This example grants the user "CONTOSO\EricLang" List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain. Therefore, this user can view the contents of the deleted objects container, but can't make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group.
+
+By default, only the System account has permission to modify objects in the deleted objects container.
 
 ## References
 
 - [Enable and use Active Directory Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin)
 - [Restore-ADObject](/powershell/module/activedirectory/restore-adobject)
-- [3.1.1.1.5.1 Tombstone Lifetime and Deleted-Object Lifetime](/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180)
+- [Tombstone Lifetime and Deleted-Object Lifetime](/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180)
 - [LDAP_SERVER_SHOW_DELETED_OID control code](/previous-versions/windows/desktop/ldap/ldap-server-show-deleted-oid)
+- [Dsacls](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11))
+- [Get-ADObject](/powershell/module/activedirectory/get-adobject)
