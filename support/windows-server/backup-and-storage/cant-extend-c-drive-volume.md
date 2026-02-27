@@ -18,7 +18,9 @@ appliesto:
 
 # Can't extend the C: drive because the "Extend" option isn't available in Disk Management
 
-This article describes an issue where you cannot extend the C: drive in Windows because the **Extend Volume** option isn't available in the Disk Management tool. It explains the symptoms, cause, and steps to resolve the problem.
+## Summary
+
+This article describes how to fix an issue in which you cannot extend the C: drive in Windows because the **Extend Volume** command isn't available in the Disk Management tool. This issue usually occurs because unallocated space is not immediately adjacent to the partition that you want to expand. The steps explain how to verify the layout of the partitions, make the required unallocated space contiguous, and then safely extend C:.
 
 ## Symptoms
 
