@@ -1,10 +1,8 @@
 ---
 title: Match failed error in Dynamics 365 Customer Insights - Data
 description: Provides a resolution for an issue where match failures occur in Microsoft Dynamics 365 Customer Insights - Data.
-author: Scott-Stabbert
-ms.author: sstabbert
-ms.date: 12/21/2023
-ms.reviewer: v-wendysmith, mhart
+ms.date: 02/27/2026
+ms.reviewer: sstabbert, v-wendysmith
 ms.custom: sap:Data Unification\Match
 ---
 # "Match failed" error occurs on the "Deduplication rules" or "Matching rules" page 
@@ -61,7 +59,15 @@ To solve the issue, take the following steps:
 
 1. Rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).
 
-## Cause 4: Transient issue
+## Cause 4: Match canceled after running for hours
+
+If the match job failed because it was canceled, the dataset might be too large for the allocated resources.
+
+### Resolution
+
+Reduce the complexity of your match rules or [contact support](/power-platform/admin/get-help-support) for scaling. Learn more in [data unification best practices](/dynamics365/customer-insights/data/data-unification-best-practices).
+
+## Cause 5: Transient issue
 
 Occasionally, a transient issue might cause a processing failure.
 
