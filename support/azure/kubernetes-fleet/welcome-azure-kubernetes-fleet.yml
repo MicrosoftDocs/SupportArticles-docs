@@ -17,7 +17,7 @@ metadata:
 landingContent:
 
 # Card
-  - title:  Troubleshooting Resource Placement
+  - title:  Troubleshooting resource placement
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -25,7 +25,13 @@ landingContent:
             url: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
           - text: Troubleshooting ResourcePlacement
             url: cluster-resource-placement/troubleshoot-resource-placement-issues.md
-
+# Card
+  - title:  Troubleshooting staged update run
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun API object-related errors for Azure Kubernetes Fleet Manager (preview)
+            url: staged-update-run/troubleshoot-staged-update-run-api-issues.md
  # Card 
   - title: Troubleshoot multi-cluster networking
     linkLists:
