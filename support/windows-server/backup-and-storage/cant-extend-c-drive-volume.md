@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-This article describes how to fix an issue in which you cannot extend the C: drive in Windows because the **Extend Volume** command isn't available in the Disk Management tool. This issue usually occurs because unallocated space is not immediately adjacent to the partition that you want to expand. The steps explain how to verify the layout of the partitions, make the required unallocated space contiguous, and then safely extend C:.
+This article describes how to fix an issue in which you can't extend the C: drive in Windows because the **Extend Volume** command isn't available in the Disk Management tool. This issue usually occurs because unallocated space isn't immediately next to the partition that you want to expand. The steps explain how to verify the layout of the partitions, make the required unallocated space contiguous, and then safely extend C:.
 
 ## Symptoms
 
@@ -28,11 +28,11 @@ In the Disk Management tool, you right-click the C: drive to try to extend it. H
 
 ## Cause
 
-This issue occurs when the unallocated space on the disk is not located directly next to the C: drive partition. In the Disk Management tool, you can only extend a volume into unallocated space that's immediately adjacent to the volume. If the unallocated space is on another part of the disk or if it isn't properly assigned, the extension command is disabled.
+This issue occurs when the unallocated space on the disk isn't located directly next to the C: drive partition. In the Disk Management tool, you can only extend a volume into unallocated space that's immediately next to the volume. If the unallocated space is on another part of the disk or if it isn't properly assigned, the extension command is disabled.
 
 ## Resolution
 
-To resolve this issue, make sure that the unallocated space is directly adjacent to the C: drive. Then extend the C: drive.
+To resolve this issue, make sure that the unallocated space is directly next to the C: drive. Then extend the C: drive.
 
 > [IMPORTANT]  
 > Always back up your data before making changes to disk partitions.
@@ -41,7 +41,7 @@ To resolve this issue, make sure that the unallocated space is directly adjacent
 
 1. Notice any partitions that appear between the C: drive and the unallocated space on the drive.
 
-1. Move or remove the partitions that you noticed in the previous step. You can use a third-party partition management tool, or you can simply back up the partitions and then delete them. You can restore them later, after you extend the C: drive.
+1. Move or remove the partitions that you noticed in the previous step. You can use a third-party partition management tool, or you can back up the partitions and then delete them. You can restore them later, after you extend the C: drive.
 
 1. In Disk Management, right-click the C: drive, and then select **Extend Volume**. Follow the instructions in the wizard.
 
@@ -50,5 +50,5 @@ To resolve this issue, make sure that the unallocated space is directly adjacent
 If you need assistance from Microsoft Support, first gather the following information before you create a support request.
 
 - A screenshot of the Disk Management tool that shows all the partitions and unallocated space.
-- The version of Windows you are using. To find this, go to **Settings** > **System** > **About**.
+- The version of Windows you're using. To find this information, go to **Settings** > **System** > **About**.
 - Any error messages you encountered when you tried to extend the C: drive.
