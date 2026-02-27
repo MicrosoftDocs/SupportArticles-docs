@@ -1,6 +1,6 @@
 ---
-title: Can't extend the C: drive because the "Extend" option isn't available
-description: Discusses an issue where you cannot extend the C: drive in Windows because the **Extend Volume** option isn't available in the Disk Management tool.
+title: Can't extend the C drive because Extend Volume isn't available
+description: Discusses an issue where you cannot extend the C drive in Windows because the Extend Volume command isn't available in the Disk Management tool.
 ms.date: 02/27/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -16,7 +16,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Can't extend the C: drive because the "Extend" option isn't available in Disk Management
+# Can't extend the C: drive because the "Extend Volume" command isn't available in Disk Management
 
 ## Summary
 
