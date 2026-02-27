@@ -1,6 +1,6 @@
 items:
 - name: Azure ExpressRoute troubleshooting documentation
-  href: expressroute/welcome-expressroute.yml
+  href: welcome-expressroute.yml
   items:
 - name: Troubleshoot gateway migration 
   href: gateway-migration-error-messaging.md 

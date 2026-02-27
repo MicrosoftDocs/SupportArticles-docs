@@ -4,8 +4,8 @@ description: Learn how to address Azure ExpressRoute gateway migration errors an
 services: expressroute
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.service: troubleshooting
-ms.topic: concept-article
+ms.service: azure-expressroute
+ms.topic: troubleshooting
 ms.date: 05/01/2025
 # Customer intent: "As a network administrator, I want to troubleshoot Azure ExpressRoute gateway migration errors, so that I can ensure a smooth and successful migration process while minimizing disruptions to our network services."
 ---
