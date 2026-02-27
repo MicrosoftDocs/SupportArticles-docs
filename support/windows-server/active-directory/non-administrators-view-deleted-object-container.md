@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-When the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled, (the default configuration) Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
+When the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled (the default configuration), Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
 
  This article describes how to modify the permissions on the deleted objects container. You might have to modify the permissions on the deleted objects container under the following conditions:
 
@@ -62,7 +62,7 @@ ObjectClass       : dnsNode
 ObjectGUID        : 8daacf6e-12ab-4f5d-b95c-ec834d490580
 ```
 
-To modify the permissions on the deleted objects container so that non-administrators can view this information, use the [DSACLS.exe](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)) tool. Follow these steps:
+To modify the permissions on the deleted objects container so that nonadministrators can view this information, use the [DSACLS.exe](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)) tool. Follow these steps:
 
 1. Sign in to a DC by using a user account that is a member of the **Domain Admins** group.
 1. Open an administrative Windows Command Prompt window, and then run a command that resembles the following command:
@@ -72,7 +72,7 @@ To modify the permissions on the deleted objects container so that non-administr
    ```
 
    > [!NOTE]  
-   > In this command, `CN=Deleted Objects,DC=Contoso,DC=com` is the fully qualified domain name (FQDN) of the deleted objects container for the contoso.com domain. Each domain in the forest will have its own deleted objects container.
+   > In this command, `CN=Deleted Objects,DC=Contoso,DC=com` is the fully qualified domain name (FQDN) of the deleted objects container for the contoso.com domain. Each domain in the forest has its own deleted objects container.
 
    This command generates output that resembles the following example:
 
@@ -105,7 +105,7 @@ To modify the permissions on the deleted objects container so that non-administr
    ```
 
    > [!NOTE]  
-   > In this command, `CONTOSO\EricLang` represents the security principal to be modified, and `LCRP` represents the additional permissions (List Children and Read Property).
+   > In this command, `CONTOSO\EricLang` represents the security principal to be modified, and `LCRP` represents the permissions to grant (List Children and Read Property).
 
    This command generates output that resembles the following example:
 
