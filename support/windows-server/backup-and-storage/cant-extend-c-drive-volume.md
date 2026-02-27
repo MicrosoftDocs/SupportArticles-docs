@@ -34,7 +34,7 @@ This issue occurs when the unallocated space on the disk isn't located directly 
 
 To resolve this issue, make sure that the unallocated space is directly next to the C: drive. Then extend the C: drive.
 
-> [IMPORTANT]  
+> [!IMPORTANT]  
 > Always back up your data before making changes to disk partitions.
 
 1. Use Disk Management (in the Search bar, type *disk management* and then in the search results, select **Disk Management**) to review the partition map of the disk that hosts the C: drive volume.
