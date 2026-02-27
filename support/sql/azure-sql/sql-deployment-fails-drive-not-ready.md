@@ -32,6 +32,15 @@ When you try to deploy a SQL Server on Azure VM image from Azure Marketplace, th
 
 For example, if you're deploying an image from the Azure portal, you might see the following error for the deployment in **Activity log**: 
 
+```json
+{
+    "status": "Failed",
+    "error": {
+        "code": "Ext_StorageConfigurationSettings_ApplyNewTempDbSettingsError",
+        "message": "Error: 'System Drive returned status not ready for use '"
+}
+```
+
 :::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the deployment error in the Azure portal." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
 
 > [!WARNING]
