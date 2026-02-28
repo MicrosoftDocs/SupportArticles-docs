@@ -127,10 +127,6 @@ items:
       href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
     - name: Support policy and known issues for ADMT
       href: ./active-directory/support-policy-and-known-issues-for-admt.md
-    - name: Troubleshoot intra-forest password migrations
-      href: ./active-directory/inter-forest-password-migration-with-admtv2.md
-    - name: Troubleshoot sIDHistory migration with ADMTv2
-      href: ./active-directory/inter-forest-sidhistory-migration-with-admt.md
   - name: Active Directory replication
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
