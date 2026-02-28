@@ -127,10 +127,6 @@ items:
       href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
     - name: Support policy and known issues for ADMT
       href: ./active-directory/support-policy-and-known-issues-for-admt.md
-    - name: Troubleshoot intra-forest password migrations
-      href: ./active-directory/inter-forest-password-migration-with-admtv2.md
-    - name: Troubleshoot sIDHistory migration with ADMTv2
-      href: ./active-directory/inter-forest-sidhistory-migration-with-admt.md
   - name: Active Directory replication
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
@@ -594,6 +590,8 @@ items:
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
+    - name: No Extend Volume command for drive C in Disk Management
+      href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
     - name: Disk Event ID 154
@@ -1048,6 +1046,8 @@ items:
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot cluster issue with Event ID 1135
       href: ./high-availability/troubleshoot-cluster-event-id-1135.md
+    - name: Windows Server 2019 cluster role doesn't come online after you rebuild the cluster
+      href: ./high-availability/cluster-role-doesnt-come-online-after-rebuild-ws-2019-cluster.md
   - name: Cluster Shared Volume (CSV)
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'

@@ -15439,6 +15439,16 @@
       "source_path": "support/windows-client/windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/cannot-boot-windows-on-primary-hard-disk-uefi",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/inter-forest-password-migration-with-admtv2.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/inter-forest-password-migration-with-admtv2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/inter-forest-sidhistory-migration-with-admt.md",
+      "redirect_url": "/windows/win32/ad/using-dsaddsidhistory",
+      "redirect_document_id": false
     }
   ]
 }
