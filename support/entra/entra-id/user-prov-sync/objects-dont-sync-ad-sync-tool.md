@@ -4,7 +4,7 @@ description: Describes an issue in which one or more AD DS object attributes don
 ms.date: 03/12/2024
 ms.reviewer: 
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
@@ -110,7 +110,7 @@ To determine attribute conflicts caused by user objects that were created by usi
         > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Microsoft Entra ID by using the Azure Active Directory module for Windows PowerShell. For more info, go to [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+2. Connect to Microsoft Entra ID by using the Microsoft Entra PowerShell. For more info, go to [Introducing Microsoft Entra PowerShell](/powershell/entra-powershell/overview?view=entra-powershell).
 
     Leave the console window open. You'll need to use it in the next step.
 3. Check for the duplicate userPrincipalName attributes.
@@ -125,12 +125,11 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search UPN>" represents the UserPrincipalName attribute that you recorded in step 1f.
 
     ```powershell
-    Get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
+    Connect-Entra -Scopes 'User.ReadWrite.All'
+    Get-EntraUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
     ```
 
-    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-    Leave the console window open. You'll use it again in the next step.
+        Leave the console window open. You'll use it again in the next step.
 4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, run the following command:
 
     ```powershell
@@ -147,7 +146,7 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search proxyAddress>" represents the value of a proxyAddresses attribute that you recorded in step 1f.
 
     ```powershell
-    Get-EXOMailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MSOLUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
+    Get-EXOMailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {Get-EntraUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
     ```
 
 Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that isn't syncing correctly.
@@ -196,7 +195,7 @@ For more information, see [How to use SMTP matching to match on-premises user ac
 
 To update a user account UPN that was licensed after initial directory synchronization has occurred, follow these steps:
 
-1. Install Azure Active Directory v2 PowerShell Module. For more information, see [Azure Active Directory v2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.0.71).
+1. Install Microsoft Entra PowerShell Module. For more information, see [What's Microsoft Entra PowerShell](/powershell/entra-powershell/overview?view=entra-powershell).
 2. Run the following cmdlets at the Azure Active Directory v2 PowerShell prompt:
 
     ```powershell
@@ -207,11 +206,11 @@ To update a user account UPN that was licensed after initial directory synchroni
     > When you're prompted, enter your admin credentials.
 
     ```powershell
-    Connect-AzureAD
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     ```
 
     ```powershell
-    Set-AzureADUser -ObjectId [CurrentUPN] -UserPrincipalName [NewUPN]
+    Set-EntraUser -ObjectId [CurrentUPN] -UserPrincipalName [NewUPN]
     ```
 
 ### Update user SMTP addresses by using on-premises Active Directory attributes
