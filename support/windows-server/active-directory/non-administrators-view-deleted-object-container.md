@@ -20,7 +20,9 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-When an Active Directory object is deleted, a small part of the object stays in the deleted objects container for a specified time. It stays there so that other domain controllers that are replicating changes will become aware of the deletion. By default, only the System account and members of the Administrators group can view the contents of this container. This article describes how to modify the permissions on the deleted objects container.
+When an Active Directory object is deleted, by default the object is moved to the deleted objects container. You can undelete or reactivate it from there when AD Recycle is enabled. It is there for a specified time (tombstonelifetime, plus msds-deletedobjectlifetime when AD recycle bin is enabled). The purpose it that other domain controllers that are replicating changes will become aware of the deletion.
+
+By default, only the System account and members of the Administrators group can view the contents of this container. This article describes how to modify the permissions on the deleted objects container. Administrators can see it for example when they ask LDAP to return deleted objects.
 
 You may have to modify the permissions on the deleted objects container if the following conditions are true:
 
@@ -29,33 +31,10 @@ You may have to modify the permissions on the deleted objects container if the f
 
 ## More information
 
-To modify the permissions on the deleted objects container so that non-administrators can view this container, use the DSACLS.exe program. The DSACLS.exe program is included with the Active Directory Application Mode (ADAM) Administration Tools.
-
-For Windows Server 2008 and newer the tool is included in the operating system.
-
-For Windows 2000 and Server 2003 you can get this done by obtaining and installing the ADAM Administration Tools, follow these steps:
-
-1. Download the ADAM retail package.
-
-    For more information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:  
-    [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services
-    Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
-
-    > [!NOTE]
-    > This version of the ADAM Administration Tools is an upgrade from the version in the Windows Server 2003 Support Tools. This version of the ADAM Administration Tools is supported by Microsoft Windows Server 2003, Standard Edition; Microsoft Windows Server 2003, Enterprise Edition; Microsoft Windows Server 2003, Datacenter Edition; and Microsoft Windows XP Professional.
-
-2. To extract the contents of the file that you downloaded in step 1, double-click the file, and then specify a directory when you are prompted.
-3. In the directory that you extracted the file to in step 2, double-click the `Adamsetup.exe` program to start the Active Directory Application Mode Setup Wizard, and then click **Next**.
-4. Review and accept the license terms, and then click **Next**.
-5. Select **ADAM administration tools only**, and then click **Next**.
-6. Review your selections, and then click **Next**.
-7. When Setup has concluded, click **Finish**.
-
-After you have installed the ADAM Administration Tools, you can modify the permissions on the deleted objects container. To do this, follow these steps:
+To modify the permissions on the deleted objects container so that non-administrators can view this container, use the DSACLS.exe program. Follow these steps:
 
 1. Log on with a user account that is a member of the **Domain Admins** group.
-2. Click **Start**, point to **All Programs**, point to ADAM, and then click
- **ADAM Tools Command Prompt**.
+2. Click **Start**, type **Command Prompt**, and open it in elevated mode when you run this task in an interactive session on a Domain Controller.
 3. At the command prompt, type a command that is similar to the following example: dsacls "CN=Deleted Objects,DC=Contoso,DC=com" /takeownership.
 
     - When you type this command, use the name of the deleted objects container for your domain.
@@ -103,9 +82,15 @@ After you have installed the ADAM Administration Tools, you can modify the permi
      WRITE SELF  
      WRITE PROPERTY  
      READ PROPERTY  
-     Allow CONTOSO\EricLang SPECIAL ACCESS  
+**     Allow CONTOSO\EricLang SPECIAL ACCESS  
      LIST CONTENTS  
-     READ PROPERTY  
+     READ PROPERTY  **
     The command completed successfully
 
 In this example, the user "CONTOSO\EricLang" has been granted List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain. These permissions let this user view the contents of the deleted objects container, but do not let this user make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group. By default, only the System account has permission to modify objects in the deleted objects container.
+
+## References
+[Enable and use Active Directory Recycle Bin]([url](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin?tabs=adac))
+[Restore-ADObject]([url](https://learn.microsoft.com/en-us/powershell/module/activedirectory/restore-adobject?view=windowsserver2025-ps))
+[Deleted Object Lifetime]([url](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180))#
+[Show deleted objects LDAP Control]([url](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/ldap-server-show-deleted-oid))
