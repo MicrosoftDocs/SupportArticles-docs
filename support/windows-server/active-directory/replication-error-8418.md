@@ -145,6 +145,7 @@ Other Blocking Issues
 |Disabled Replication<br/><br/>|[2028495](https://support.microsoft.com/help/2028495)<br/><br/>|Status 8457|
 |DNS (Name Resolution)|[2021446](https://support.microsoft.com/help/2021446)|Event ID 2023 with Status code 8524|
 |RPC|1722:<br/><br/> [2102154](https://support.microsoft.com/help/2102154) <br/><br/>1753:<br/><br/>[2089874](https://support.microsoft.com/help/2089874)|Status Code 1722<br/><br/>Status Code 1753|
+|nTSecurityDescriptor Size ||Event ID 1450 with Error value 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built. <br/><br/>This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.|
   
 ## Resolution
 
@@ -153,6 +154,7 @@ In order to resolve an issue where schema mismatch is cited, it is critical to u
 - Recent Schema Update
 - DC Promotion
 - Normal Replication
+- nTSecurityDescriptor Size
 
 As stated previously, in the case of a recent schema update it is common for some DC's to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
 
@@ -299,6 +301,114 @@ Look for correlating events including the ones noted above which point to known 
 
 Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist.  
 
+Security Descriptor Size
+
+If the Size of the nTSecurityDescriptor is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
+
+```console
+#This sample script is not supported under any Microsoft standard support 
+#program or service. This sample script is provided AS IS without warranty of 
+#any kind. Microsoft further disclaims all implied warranties including,
+#without limitation, any implied warranties of merchantability or of fitness
+#for a particular purpose. The entire risk arising out of the use or 
+#performance of the sample scripts and documentation remains with you. In no 
+#event shall Microsoft, its authors, or anyone else involved in the creation,
+#production, or delivery of the scripts be liable for any damages whatsoever 
+#(including, without limitation, damages for loss of business profits, business
+#interruption, loss of business information, or other pecuniary loss) arising 
+#out of the use of or inability to use this sample script or documentation, 
+#even if Microsoft has been advised of the possibility of such damages.
+
+<#
+
+.SYNOPSIS
+    Calculates the size (in bytes) of the ntSecurityDescriptor on AD objects under a given base DN,
+    and writes results to a CSV file.
+
+.PARAMETER Base
+    The LDAP base DN or container to search (e.g., "OU=Users,DC=contoso,DC=com")
+
+.PARAMETER OutputPath
+    Path to the CSV file where results will be written.
+
+.PARAMETER MinimumSize
+    Optional. Only include objects whose ntSecurityDescriptor size is greater than this threshold (in bytes).
+
+.EXAMPLE
+    .\Get-ACLByteSize.ps1 -Base "OU=Users,DC=contoso,DC=com" -OutputPath "C:\Temp\NTSD_Sizes.csv"
+
+.EXAMPLE
+    .\Get-ACLByteSize.ps1 -Base "DC=contoso,DC=com" -OutputPath "C:\Temp\NTSD_Sizes.csv" -MinimumSize 60000
+#>
+
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$Base,
+
+    [Parameter(Mandatory = $true)]
+    [string]$OutputPath,
+
+    [Parameter(Mandatory = $false)]
+    [int]$MinimumSize = 0
+)
+
+Import-Module ActiveDirectory -ErrorAction Stop
+
+$results = @()
+
+Write-Host "Enumerating AD objects under $Base ..."
+
+$Objects = Get-ADObject -Filter * -SearchBase $Base -Properties distinguishedName
+
+foreach ($object in $Objects) {
+    try {
+        # Bind and request SD
+        $searcher = [adsisearcher]"(distinguishedName=$($object.DistinguishedName))"
+        $searcher.PropertiesToLoad.Add("ntSecurityDescriptor") | Out-Null
+        $searcher.SecurityMasks = "Dacl,Owner,Group,sacl"
+        $result = $searcher.FindOne()
+
+        if ($null -ne $result -and $result.Properties["ntsecuritydescriptor"].Count -gt 0) {
+            $sdBytes = $result.Properties["ntsecuritydescriptor"][0]
+
+            if ($sdBytes -is [byte[]]) {
+                $size = $sdBytes.Length
+            }
+            elseif ($sdBytes -is [System.DirectoryServices.ActiveDirectorySecurity]) {
+                $size = ($sdBytes.GetSecurityDescriptorBinaryForm()).Length
+            }
+            else {
+                Write-Warning "Unexpected SD type on $($object.DistinguishedName): $($sdBytes.GetType().FullName)"
+                continue
+            }
+
+            if ($size -ge $MinimumSize) {
+                $results += [pscustomobject]@{
+                    DistinguishedName = $object.DistinguishedName
+                    ObjectClass       = $object.ObjectClass
+                    NTSD_Size_Bytes   = $size
+                }
+            }
+        }
+        else {
+            Write-Verbose "No ntSecurityDescriptor found for $($object.DistinguishedName)"
+        }
+    }
+    catch {
+        Write-Warning "Error processing $($object.DistinguishedName): $_"
+    }
+}
+
+if ($results.Count -gt 0) {
+    $results | Sort-Object NTSD_Size_Bytes -Descending | Export-Csv -Path $OutputPath -NoTypeInformation -Encoding UTF8
+    Write-Host "`nExported $($results.Count) results to $OutputPath"
+}
+else {
+    Write-Warning "No results matched your criteria (MinimumSize=$MinimumSize)."
+}
+
+````
+
 Examples of other causes include but are not limited to:
 
 - Database Corruption
@@ -310,8 +420,6 @@ Examples of other causes include but are not limited to:
 - Strict Replication Consistency
 
 - Disabled Replication
-
-- Objects with Security Descriptors in excess of 64 Kb
 
 - DNS (Name Resolution) etc.
 
