@@ -6516,6 +6516,10 @@
         {
         "source_path": "app-service/faqs-app-service-linux.yml",
         "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux-new"
+      },
+        {
+        "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
       }
   ]
 }

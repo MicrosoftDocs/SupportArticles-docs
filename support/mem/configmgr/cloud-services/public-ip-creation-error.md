@@ -1,5 +1,5 @@
 ---
-title: CMG Maintenance Task Fails to Update After Installaing KB32851084
+title: CMG Maintenance Task Fails to Update After Installing KB32851084
 description: Troubleshoot the CMG Maintenance Task failure caused by Availability Zone conflicts in Public IP Resource updates for Configuration Manager version 2503.
 ms.service: configuration-manager
 ms.topic: troubleshooting
