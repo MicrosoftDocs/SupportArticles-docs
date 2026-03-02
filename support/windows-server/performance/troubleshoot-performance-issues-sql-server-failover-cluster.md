@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance issues on a SQL Server failover cluster
-description: Provides a scenario guide for troubleshooting performance problems in Windows.
+description: Helps you identify and fix severe performance issues on a Windows Server failover cluster that hosts a SQL Server instance.
 ms.date: 03/04/2026
 manager: dcscontentpm
 audience: itpro
@@ -16,7 +16,7 @@ appliesto:
 
 ## Summary
 
-This article describes how to identify and fix severe performance issues during startup and after sign-in on a failover cluster environment that hosts a SQL Server failover instance. The guidance is intended for IT administrators and support engineers who manage Windows Server failover clusters and high-availability configurations of Microsoft SQL Server.
+This article helps you identify and fix severe performance issues on a Windows Server failover cluster that hosts a SQL Server instance. You might experience these issues during server startup or after signing in. Use this article to diagnose the root cause, apply a resolution, and collect diagnostic data if you need to escalate to your storage vendor or Microsoft Support.
 
 ## Symptoms
 
