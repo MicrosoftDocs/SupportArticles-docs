@@ -45,7 +45,7 @@ These performance issues typically indicate a storage subsystem issue, such as o
   - Storage firmware isn't compatible with either the hardware or the storage controllers
 - Configuration or processing issues
   - The storage cache is saturated. This condition increases latency in storage operations.
-  - The logging level is too verbose. This condition floods floods the event log and increases the processing load.
+  - The logging level is too verbose. This condition floods the event log and increases the processing load.
   - A bottleneck restricts storage operations. This condition slows the storage system response time.
 
 ## Resolution
@@ -55,7 +55,7 @@ To resolve this issue, follow these steps:
 1. Update firmware and drivers to the latest versions that your hardware and operating system support.
 1. Engage the storage vendor to conduct a full diagnostic review of the storage system.
 1. If any diagnostics detect issues such as faulty storage hardware, replace the affected hardware.
-1. Inspect the storage controllers and cache to identify failures, health issues or degradation.
+1. Inspect the storage controllers and cache to identify failures, health issues, or degradation.
 1. Review Windows Server and SQL Server storage best practices, and reconfigure storage settings to optimize performance.
 1. Track disk errors and confirm performance improvements by monitoring system and event logs.
 1. If issues persist, eliminate hardware-related failures by replacing storage components.
