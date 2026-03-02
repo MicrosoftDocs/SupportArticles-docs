@@ -1,9 +1,9 @@
 ---
-title: FAQ about Scaling Web Apps in Azure App Service
+title: FAQ about scaling web apps in Azure App Service
 description: Get answers to common questions about scaling web apps in Azure App Service, including scale up, autoscale, instance limits, and Premium tier upgrades.
 services: app-service
 author: auolivei
-ms.reviewer:  jarrettr
+ms.reviewer: jarrettr
 ms.topic: faq
 ms.date: 02/19/2026
 ms.author: auolivei
