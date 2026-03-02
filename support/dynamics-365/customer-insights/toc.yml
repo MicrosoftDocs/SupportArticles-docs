@@ -19,7 +19,7 @@
   - name: Data unification
     items:
       - name: Detected Dataverse dependencies error
-        href: data/profile-unification/remove-dependencies.md
+        href: data/profile-unification/remove-dataverse-dependencies.md
       - name: Match failed error
         href: data/profile-unification/match-failed.md
       - name: Merge failed error

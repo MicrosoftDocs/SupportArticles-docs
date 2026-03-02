@@ -39,7 +39,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Detected Dataverse dependencies error
-            url: data/profile-unification/remove-dependencies.md
+            url: data/profile-unification/remove-dataverse-dependencies.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md
           - text: Merge failed error
