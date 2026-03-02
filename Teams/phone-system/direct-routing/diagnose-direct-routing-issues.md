@@ -18,16 +18,43 @@ ms.reviewer:
 
 # Diagnose issues that affect Direct Routing
 
-To troubleshoot issues that affect Direct Routing, administrators can run a diagnostic tool in the Microsoft 365 admin center to verify that a user is correctly configured for Direct Routing in Microsoft Teams. Follow these steps:
+To troubleshoot issues that affect Direct Routing, administrators can create relevant test suites, populate them with tests and run them in a diagnostic tool in the Microsoft 365 admin center (Voice - Direct Routing - SBC test cases tab) to verify that a user is correctly configured for Direct Routing in Microsoft Teams. 
+
+To create a test suite follow these steps:
+
+1. Under **SBC test cases** tab select the **Add** button to create a new test suite.
+
+1. Name the test suite, select the SBC to run the tests on and choose which tests to add to the test suite.
+
+1. Following test scenarios are supported:
+
+   - Outbound-Inbound 
+   
+   - Simultaneous ring 
+   
+   - Media escalation 
+   
+   - Consultative transfer 
+   
+1. For each test add a test users' accounts data.
+
+1. Setup call duration and media validation interval in minutes.
+
+To run tests follow these steps:
+
+1. Select the test suite by clicking on the appropriate row in the table.
 
 1. Select the **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center.
 
-   > [!div class="nextstepaction"]
-   > [Run Tests: Direct Routing](https://aka.ms/TeamsDirectRoutingDiag)
+To check test results follow these steps:
 
-2. In the **Run diagnostic** section, enter the email address of the user that you want to test in the **Username or Email** field, and then select **Run Tests**.
+1. Select the test suite by clicking on the appropriate row in the table.
+
+1. Select the **View results** button
 
 The test results indicate whether the user is configured correctly for Direct Routing. If the user isn't configured correctly, the diagnostic provides information about the next steps that you can use to resolve issues that affect the tenant, user, or policy configurations.
+
+In the context of tests internal user means user within the same tenant, and external user is the user outside the tenant.
 
 For more information about the most common Direct Routing errors and recommended actions for further troubleshooting, see [Microsoft and SIP response codes](./microsoft-sip-response-codes.md).
 
