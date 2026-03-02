@@ -16,18 +16,18 @@ appliesto:
 
 ## Summary
 
-This article helps you identify and fix severe performance issues on a Windows Server failover cluster that hosts a SQL Server instance. You might experience these issues during server startup or after signing in. Use this article to diagnose the root cause, apply a resolution, and collect diagnostic data if you need to escalate to your storage vendor or Microsoft Support.
+This article helps you identify and fix severe performance issues on a Windows Server failover cluster that hosts a SQL Server instance. You might experience these issues during server startup or after signing in. Use this article to diagnose the root cause, apply a resolution, and collect diagnostic data if you have to escalate your issue to your storage vendor or Microsoft Support.
 
 ## Symptoms
 
-In a failover cluster environment that runs SQL Server, you see the following symptoms:
+In a failover cluster environment that runs microsoft SQL Server, you excounter the following symptoms:
 
-- After a restart, the servers start slowly
-- The Windows desktop and applications load slowly or experience delays
-- Windows File Explorer and Windows PowerShell perform sluggishly
-- The servers crash or shut down unexpectedly
-- When you open a system utility such as Task Manager, you experience a long delay before the utility starts.
-- User productivity decreases significantly
+- After a restart, the servers start slowly.
+- The Windows desktop and applications load slowly or experience delays.
+- Windows File Explorer and Windows PowerShell perform sluggishly.
+- The servers fail or shut down unexpectedly.
+- When you open a system tool such as Task Manager, you experience a long delay before the tool starts.
+- User productivity decreases significantly.
 
 Additionally, the event log contains a large number of disk error warnings and disk timeout events, such as the following examples:
 
@@ -39,11 +39,11 @@ Additionally, the event log contains a large number of disk error warnings and d
 
 These performance issues typically indicate a storage subsystem issue, such as one or more of the following issues:
 
-- Disk hardware, firmware, or controller issues
-  - A disk is corrupt, or hardware failed
-  - A storage controller isn't functioning correctly
-  - Storage firmware isn't compatible with either the hardware or the storage controllers
-- Configuration or processing issues
+- Disk hardware, firmware, or controller issues:
+  - A disk is corrupted, or hardware fails.
+  - A storage controller isn't functioning correctly.
+  - Storage firmware isn't compatible with either the hardware or the storage controllers.
+- Configuration or processing issues:
   - The storage cache is saturated. This condition increases latency in storage operations.
   - The logging level is too verbose. This condition floods the event log and increases the processing load.
   - A bottleneck restricts storage operations. This condition slows the storage system response time.
@@ -57,18 +57,19 @@ To resolve this issue, follow these steps:
 1. If any diagnostics detect issues such as faulty storage hardware, replace the affected hardware.
 1. Inspect the storage controllers and cache to identify failures, health issues, or degradation.
 1. Review Windows Server and SQL Server storage best practices, and reconfigure storage settings to optimize performance.
-1. Track disk errors and confirm performance improvements by monitoring system and event logs.
-1. If issues persist, eliminate hardware-related failures by replacing storage components.
+1. Track disk errors and verify performance improvements by monitoring system and event logs.
+1. If the issues persist, eliminate hardware-related failures by replacing storage components.
 
 ## Data collection
 
-Before you engage your storage vendor (or Microsoft Support), collect the following information:
+Before you engage your storage vendor or Microsoft Support, collect the following information:
 
 - Event data that covers the period when the issue occurred. You can export this information from Event Viewer.
 - Hardware diagnostic reports from the storage vendor's tools.
 - Version information for the storage controller firmware and drivers.
 - Error and cluster logs from SQL Server.
-- Performance data that focuses on disk I/O and latency. You can use tools such as Performance Monitor ([PerfMon](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749115(v=ws.11))) to collect this information.
+- Performance data that focuses on disk I/O and latency. To collect this information, use tools such as Performance Monitor ([PerfMon](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749115(v=ws.11)).
 - Details of recent configuration changes in the failover cluster or storage environment.
+
 
 
