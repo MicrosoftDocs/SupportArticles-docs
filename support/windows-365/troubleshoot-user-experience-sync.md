@@ -19,18 +19,18 @@ This article provides troubleshooting steps for the most common issues related t
 
 ## Users receive a warning about a temporary user experience
 
-When a user signs in, Windows might notify them that they've signed in by using a temporary profile instead of the user's regular profile. Windows also displays another notification that states "We can't sign into your account." As a result, the user has a temporary user experience.
+When a user signs in, Windows might notify them that they signed in by using a temporary profile instead of the user's regular profile. Windows also displays another notification that states "We can't sign into your account." As a result, the user has a temporary user experience.
 
 > [!NOTE]  
-> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they've signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
+> A temporary profile is a non-persistent Windows user profile that Windows creates when the system can't load or create the user's regular profile. The temporary profile provides basic functionality, but any changes made during the session (such as changes to settings, changes to files, or customizations) are discarded when the user signs out. Users see a notification that they signed in by using a temporary profile, and their desktop and Start menu use default Windows settings instead of their personalized configuration.
 
 To start troubleshooting this issue, check the status of the user's individual user storage as described in the following sections.
 
 ### Policies prevent access to individual user storage
 
-User Experience Sync doesn't support policies that affect write access to fixed or removable drives. When policies prevent or change access permissions to individual user storage, the drive attaches but when the user signs in Windows creates a temporary profile (temporary user experience).
+User Experience Sync doesn't support policies that affect write access to fixed or removable drives. When policies prevent or change access permissions to individual user storage, the drive attaches. However, when the user signs in, Windows creates a temporary profile (temporary user experience).
 
-Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Frontline shared Cloud PCs to verify that the following two settings are not enabled:
+Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Frontline shared Cloud PCs to verify that the following two settings aren't enabled:
 
 | Policy | Setting |
 | --- | --- |
