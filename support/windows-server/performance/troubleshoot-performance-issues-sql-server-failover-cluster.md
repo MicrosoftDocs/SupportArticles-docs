@@ -1,0 +1,74 @@
+---
+title: Troubleshoot performance issues on a SQL Server failover cluster
+description: Provides a scenario guide for troubleshooting performance problems in Windows.
+ms.date: 03/04/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, simonw, v-appelgatet
+ms.custom:
+- sap:system performance\system performance (slow, unresponsive, high cpu, resource leak)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
+# Troubleshoot slow startup and performance issues on a failover cluster that runs SQL Server
+
+## Summary
+
+This article describes how to identify and fix severe performance issues during startup and after sign-in on a failover cluster environment that hosts a SQL Server failover instance. The guidance is intended for IT administrators and support engineers who manage Windows Server failover clusters and high-availability configurations of Microsoft SQL Server.
+
+## Symptoms
+
+In a failover cluster environment that runs SQL Server, you see the following symptoms:
+
+- After a restart, the servers start slowly
+- The Windows desktop and applications load slowly or experience delays
+- Windows File Explorer and Windows PowerShell perform sluggishly
+- The servers crash or shut down unexpectedly
+- When you open a system utility such as Task Manager, you experience a long delay before the utility starts.
+- User productivity decreases significantly
+
+Additionally, the event log contains a large number of disk error warnings and disk timeout events, such as the following examples:
+
+- Event ID 153: `The IO operation at logical block address 123456 for Disk 2 was retried`
+- Event ID 154: `The IO Operation failed due to a hardware error`
+- Status code `0xC0000185`: `The Boot Configuration Data for your PC is missing or contains errors.`
+
+## Cause
+
+These performance issues typically indicate a storage subsystem issue, such as one or more of the following issues:
+
+- Disk hardware, firmware, or controller issues
+  - A disk is corrupt, or hardware failed
+  - A storage controller isn't functioning correctly
+  - Storage firmware isn't compatible with either the hardware or the storage controllers
+- Configuration or processing issues
+  - The storage cache is saturated. This condition increases latency in storage operations.
+  - The logging level is too verbose. This condition floods floods the event log and increases the processing load.
+  - A bottleneck restricts storage operations. This condition slows the storage system response time.
+
+## Resolution
+
+To resolve this issue, follow these steps:
+
+1. Update firmware and drivers to the latest versions that your hardware and operating system support.
+1. Engage the storage vendor to conduct a full diagnostic review of the storage system.
+1. If any diagnostics detect issues such as faulty storage hardware, replace the affected hardware.
+1. Inspect the storage controllers and cache to identify failures, health issues or degradation.
+1. Review Windows Server and SQL Server storage best practices, and reconfigure storage settings to optimize performance.
+1. Track disk errors and confirm performance improvements by monitoring system and event logs.
+1. If issues persist, eliminate hardware-related failures by replacing storage components.
+
+## Data collection
+
+Before you engage your storage vendor (or Microsoft Support), collect the following information:
+
+- Event data that covers the period when the issue occurred. You can export this information from Event Viewer.
+- Hardware diagnostic reports from the storage vendor's tools.
+- Version information for the storage controller firmware and drivers.
+- Error and cluster logs from SQL Server.
+- Performance data that focuses on disk I/O and latency. You can use tools such as Performance Monitor ([PerfMon](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749115(v=ws.11))) to collect this information.
+- Details of recent configuration changes in the failover cluster or storage environment.
+
+
