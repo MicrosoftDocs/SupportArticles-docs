@@ -74,7 +74,7 @@ To identify a remote table reference, check the SQL syntax of a query or command
 
 | **Local table** | SELECT \* FROM \`Orders Query\` |
 |----|----|
-| **Remote table** | SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` |
+| **Remote table** | SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` |
 
 ## Solutions
 
@@ -105,7 +105,7 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 | **Original command text** | **Updated command text** |
 |----|----|
-| SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
+| SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
 
 >[!NOTE]
 
@@ -116,3 +116,8 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 1. Locate the **AllowQueryRemoteTables** registry key for your installation scenario by using the information in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544).
 1. Set the value for the key to **1** to allow remote table references during query execution.
+
+>[!NOTE]
+
+>- Setting the registry key to 1 is intended as a temporary measure to give you time to update your application. We recommend using one of the other solutions listed above as a permanent fix.
+>- Important: The AllowQueryRemoteTables registry value may be removed when Office installs an update. If you set this value, you may need to reapply it after updates.
