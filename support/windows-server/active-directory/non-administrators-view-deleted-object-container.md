@@ -134,9 +134,7 @@ To modify the permissions on the deleted objects container so that nonadministra
    The command completed successfully
    ```
 
-This example grants List Contents and Read Property permissions on the deleted objects container in the "CONTOSO" domain to the user ("CONTOSO\EricLang"). Therefore, this user can view the contents of the deleted objects container, but can't make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group.
-
-By default, only the System account has permission to modify objects in the deleted objects container.
+In this example, the user ("CONTOSO\EricLang") can view the contents of the deleted objects container, but can't make any changes to objects in the container. These permissions are equivalent to the default permissions that are granted to the Administrators group.
 
 ## References
 
