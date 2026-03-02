@@ -2,7 +2,7 @@
 title: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
 description: Troubleshoot User Experience Sync for Windows 365 Frontline in shared mode
 manager: dcscontentpm
-ms.date: 02/12/2026
+ms.date: 03/03/2026
 ms.topic: troubleshooting
 ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:
@@ -32,10 +32,10 @@ Policies that affect write access to fixed or removable drives are not supported
 
 Windows 365 already applies data encryption to the individual user storage using Microsoft managed keys (MMK) and doesn't support using BitLocker or other products to protect the individual user storage. Review your organization policies that target the Frontline shared Cloud PCs to ensure these two settings are not enabled.
 
-  - **Windows Component\BitLocker Drive Encryption\Fixed Data Drives**
-    - Deny write access to fixed data drives not protected by BitLocker
-  - **Windows Component\BitLocker Drive Encryption\Removable Data Drives**
-    - Deny write access to removable drives not protected by BitLocker
+- **Windows Component\BitLocker Drive Encryption\Fixed Data Drives**
+  - Deny write access to fixed data drives not protected by BitLocker
+- **Windows Component\BitLocker Drive Encryption\Removable Data Drives**
+  - Deny write access to removable drives not protected by BitLocker
 
 ### Individual user storage failed to attach to their session
 
@@ -58,7 +58,7 @@ Each provisioning policy defines a pooled user storage limit calculated using th
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-user-storage-example.png" alt-text="Figure 1: Storage calculation of pooled user storage based on Cloud PC size and count":::
 
-<sup>**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count</sup>
+**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count
 
 ##### Normal storage consumption
 
@@ -70,7 +70,7 @@ Under normal conditions, the pooled user storage is consumed as users create ind
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-full-storage-limit.png" alt-text="Figure 2: Pooled user storage that is at the policy limit":::
 
-<sup>**Figure 2:** Pooled user storage that is at the policy limit</sup>
+**Figure 2:** Pooled user storage that is at the policy limit
 
 ##### Exceeded storage conditions
 
@@ -82,7 +82,7 @@ When pooled user storage is *near* capacity and multiple users sign in simultane
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-exceeded-storage-limit.png" alt-text="Figure 3: Pooled user storage that has exceeded the policy limit":::
 
-<sup>**Figure 3:** Pooled user storage that has exceeded the policy limit</sup>
+**Figure 3:** Pooled user storage that has exceeded the policy limit
 
 ##### Exceeded tolerance period
 
