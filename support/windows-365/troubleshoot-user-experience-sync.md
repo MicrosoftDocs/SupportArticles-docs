@@ -28,14 +28,14 @@ To start troubleshooting this issue, check the status of the user's individual u
 
 ### Policies prevent access to individual user storage
 
-Policies that affect write access to fixed or removable drives are not supported with User Experience Sync. The individual user storage will attach, but some policies may prevent access or changes to it and result in a temporary user experience (temporary profile).
+User Experience Sync doesn't support policies that affect write access to fixed or removable drives. When policies prevent or change access permissions to individual user storage, the drive attaches but when the user signs in Windows creates a temporary profile (temporary user experience).
 
-Windows 365 already applies data encryption to the individual user storage using Microsoft managed keys (MMK) and doesn't support using BitLocker or other products to protect the individual user storage. Review your organization policies that target the Frontline shared Cloud PCs to ensure these two settings are not enabled.
+Windows 365 uses Microsoft managed keys (MMK) to encrypt individual user storage instead of using BitLocker or other products. Review your organization policies that target the Frontline shared Cloud PCs to verify that the following two settings are not enabled:
 
-- **Windows Component\BitLocker Drive Encryption\Fixed Data Drives**
-  - Deny write access to fixed data drives not protected by BitLocker
-- **Windows Component\BitLocker Drive Encryption\Removable Data Drives**
-  - Deny write access to removable drives not protected by BitLocker
+| Policy | Setting |
+| --- | --- |
+| **Windows Component\BitLocker Drive Encryption\Fixed Data Drives** | Deny write access to fixed data drives not protected by BitLocker |
+| **Windows Component\BitLocker Drive Encryption\Removable Data Drives** | Deny write access to removable drives not protected by BitLocker |
 
 ### Individual user storage failed to attach to their session
 
@@ -54,7 +54,7 @@ User Experience Sync provides a limited amount pooled user storage based on a st
 
 Each provisioning policy defines a pooled user storage limit calculated using the following formula:
 
-**Total pooled storage** = OS disk size × Number of provisioned Cloud PCs
+> **Total pooled storage** = OS disk size × Number of provisioned Cloud PCs
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-user-storage-example.png" alt-text="Figure 1: Storage calculation of pooled user storage based on Cloud PC size and count":::
 
