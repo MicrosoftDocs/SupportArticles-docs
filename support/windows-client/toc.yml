@@ -937,6 +937,8 @@ items:
     items:
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
+    - name: Kiosk mode known issues
+      href: ./shell-experience/kiosk-mode-known-issues.md
   - name: Lock Screen or Screensaver
     items:
     - name: Lock screen isn't displayed
@@ -1217,8 +1219,6 @@ items:
       href: ./windows-security/permissions-on-copying-moving-files.md
   - name: Secure Boot and UEFI
     items:
-    - name: Can't boot if more than one EFI system partition is present
-      href: ./windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md
     - name: Error 0x80290300 when clearing the TPM
       href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
     - name: TPM isn't recognized as a compatible device
