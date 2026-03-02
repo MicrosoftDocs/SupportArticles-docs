@@ -199,6 +199,9 @@ items:
       - name: Azure Native Integrations
         tocHref: /troubleshoot/azure/partner-solutions/
         topicHref: /troubleshoot/azure/partner-solutions
+      - name: Azure Front Door
+        tocHref: /troubleshoot/azure/virtual-network/front-door/
+        topicHref: /troubleshoot/azure/virtual-network/front-door/welcome-front-door
 
     - name: Entra
       tocHref: /troubleshoot/entra/

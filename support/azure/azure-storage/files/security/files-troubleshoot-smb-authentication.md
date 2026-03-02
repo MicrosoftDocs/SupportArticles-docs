@@ -270,7 +270,7 @@ You might experience one of the symptoms described below when trying to configur
 
 ### Solution
 
-We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
+We recommend that you [configure directory/file level permissions by using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-by-using-icacls) instead of using Windows File Explorer.
 
 ## Unable to view UserPrincipalName (UPN) of a file/directory owner in File Explorer 
 
@@ -433,13 +433,13 @@ if ($null -ne $application) {
 
 ## Error - Service principal password has expired in Microsoft Entra ID
 
-If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users won't be able to get Kerberos tickets to the file share.
+If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users can't get Kerberos tickets to access the file share.
 
 To mitigate this, you have two options: either rotate the service principal password in Microsoft Entra every six months, or follow these steps to disable Microsoft Entra Kerberos, delete the existing application, and reconfigure Microsoft Entra Kerberos.
 
 <a name='option-2-disable-azure-ad-kerberos-delete-the-existing-application-and-reconfigure'></a>
 
-Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) as a workaround.
+Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions by using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-by-using-icacls) as a workaround.
 
 1. [Disable Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#disable-azure-ad-authentication-on-your-storage-account)
 1. [Delete the existing application](#cause-2-an-application-already-exists-for-the-storage-account)
@@ -453,7 +453,7 @@ If you're connecting to a storage account via a private endpoint/private link us
 
 #### Cause 
 
-This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Microsoft Entra application.
+This is because the SMB client tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Microsoft Entra application.
 
 #### Solution
 
