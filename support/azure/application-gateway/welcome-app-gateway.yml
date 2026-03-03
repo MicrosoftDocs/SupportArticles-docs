@@ -26,3 +26,9 @@ landingContent:
             url: error-codes/applicationgatewayskunotspecified.md
           - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
             url: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+          - text: Azure Application Gateway Resource Health overview  
+            url: resource-health-overview.md
+          - text: Use Log Analytics to examine Application Gateway Logs 
+            url: log-analytics.md
+          - text: Troubleshoot backend health issues in Application Gateway 
+            url: application-gateway-backend-health-troubleshooting.md
