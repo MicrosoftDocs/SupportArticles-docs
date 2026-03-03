@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
-# Windows Server doesn't start after updates cause disk corruption
+# After updates, disk corruption prevents Windows Server from starting
 
 ## Summary
 
@@ -25,7 +25,7 @@ After you install updates and restart your computer, you experience the followin
 
 - The computer doesn't start. However, it tries repeatedly to restart.
 - The startup process reports particular error codes that indicate disk read errors.
-- A disk health check (for example, by running `chkdsk`) indicate that the disk has bad clusters or other corruption.
+- A disk health check (for example, by running `chkdsk`) indicates that the disk has bad clusters or other corruption.
 - If you run standard disk repair commands, the commands don't restore the computer to a point at which it can start.
 
 ## Cause
