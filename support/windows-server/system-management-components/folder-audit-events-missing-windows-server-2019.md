@@ -1,7 +1,7 @@
 ---
 title: Folder audit events missing from Event Viewer in Windows Server 2019
-description: 
-ms.date: 03/05/2026
+description: Discusses how to fix an issue in which you enable folder auditing, but you don't see folder auditing events in Event Viewer.
+ms.date: 03/04/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,9 @@ appliesto:
 ---
 # Folder audit events missing from Event Viewer in Windows Server 2019
 
-This article explains how to troubleshoot and fix issues that relate to folder auditing in Windows Server 2019. It is intended for IT administrators who need to track access and changes to specific folders on a file server. If you have enabled auditing but are not seeing the expected logs in Event Viewer, this guide can help you identify and fix the configuration.
+## Summary
+
+When you enable folder auditing on a Windows Server 2019 file server, audit events might not appear in Event Viewer. This article helps you identify and fix common configuration issues that prevent folder audit events from being recorded.
 
 ## Symptoms
 
