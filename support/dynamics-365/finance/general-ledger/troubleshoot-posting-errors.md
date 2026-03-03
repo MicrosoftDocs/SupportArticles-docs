@@ -42,7 +42,7 @@ To resolve this issue, check the main account type and either correct the transa
    - If the account type is incorrect, update the **Main account type** field.
 
 > [!NOTE]
-> **Total** and **Reporting** accounts are typically used in row definitions for financial reports. They aggregate balances from other accounts and shouldn't receive direct postings. Changing the account type might affect financial reporting, so review your [chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts) design before you make changes.
+> _Total_ and _Reporting_ accounts are typically used in row definitions for financial reports. They aggregate balances from other accounts and shouldn't receive direct postings. Changing the account type might affect financial reporting, so review your [chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts) design before you make changes.
 
 ## Related content
 
