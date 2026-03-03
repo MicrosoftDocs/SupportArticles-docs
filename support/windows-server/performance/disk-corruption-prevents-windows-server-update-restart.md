@@ -15,7 +15,9 @@ appliesto:
 ---
 # After updates, disk corruption prevents Windows Server from starting
 
-If your Windows Server Operating System fails to boot after installing updates and becomes stuck in a boot loop, the issue might be caused by disk corruption or disk read errors. This article describes the symptoms, explains the cause, and provides steps to fix the problem.
+## Summary
+
+After you install updates and restart your Windows Server computer, the computer might fail to start and enter a continuous restart loop. This issue can occur when disk corruption or bad clusters on the operating system (OS) disk prevent Windows Server from completing its startup processes. Use this article to identify the cause and fix the issue.
 
 ## Symptoms
 
