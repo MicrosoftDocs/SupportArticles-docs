@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-After you install updates and restart your Windows Server computer, the computer doesn't start. Intead, it enters a continuous restart loop. This issue might occur if disk corruption or bad clusters on the operating system (OS) disk prevent Windows Server from completing its startup processes. Use this article to identify the cause and fix the issue.
+After you install updates and restart your Windows Server computer, the computer doesn't start. Instead, it enters a continuous restart loop. This issue might occur if disk corruption or bad clusters on the operating system (OS) disk prevent Windows Server from completing its startup processes. Use this article to identify the cause and fix the issue.
 
 ## Symptoms
 
