@@ -1,20 +1,12 @@
 ---
 title: Troubleshoot common dimension-related errors in Dynamics 365 Finance
 description: Describes common financial dimension errors and provides solutions to resolve these issues in Microsoft Dynamics 365 Finance.
-author: anaborges
-ms.date: 02/25/2026
-
-# optional metadata
-
+ms.date: 03/03/2026
 ms.search.form: DimensionDetails, DimensionAttributeValue, LedgerParameters, Dimensions
 audience: Application User
-# ms.devlang: 
-ms.reviewer: twheeloc
-# ms.tgt_pltfrm: 
-ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions
-ms.search.region: Global 
-# ms.search.industry: 
-ms.author: anaborges
+ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
+ms.custom: sap:General ledger - Setup, transactions and reporting/Issues with financial dimensions and financial tags
+ms.search.region: Global
 ms.search.validFrom: 2026-02-02
 ms.dyn365.ops.version: 10.0.00
 ---
