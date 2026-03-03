@@ -1,5 +1,5 @@
 ---
-title: Open-Source Technologies FAQs
+title: Open-source technologies FAQs
 description: Get answers to frequently asked questions about open-source technologies in Azure App Service.
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -36,7 +36,7 @@ To turn on PHP logging, follow these steps:
    //Suppress errors and warnings to screendefine('WP_DEBUG_DISPLAY', false);//Suppress PHP errors to screenini_set('display_errors', 0);
    ```
 
-1. In the Azure portal, in the web app menu, restart your web app.
+1. In the [Azure portal](https://portal.azure.com), in the web app menu, restart your web app.
 
 For more information, see [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
 
@@ -59,9 +59,9 @@ To capture Python application errors, follow these steps:
 
 You should now see errors in the *logs.txt* file in the *wwwroot* folder.
 
-## How do I change the version of the Node.js application that is hosted in App Service?
+## How do I change the version of the Node.js application that's hosted in App Service?
 
-To change the version of the Node.js application, you can use one of the following options:
+To change the version of the Node.js application, use one of the following options:
 
 - In the Azure portal, use **App settings**.
 
@@ -193,7 +193,7 @@ For portal App Setting deployments, the log file is in *D:\\home\\LogFiles*. Loo
 
 ## Can I send email from my Azure web app?
 
-App Service doesn't have a built-in email feature. For some good alternatives for sending email from your app, see this [Stack Overflow discussion](https://stackoverflow.com/questions/17666161/sending-email-from-azure).
+App Service doesn't have a built-in email feature. For some alternatives for sending email from your app, see this [Stack Overflow discussion](https://stackoverflow.com/questions/17666161/sending-email-from-azure).
 
 ## Why does my WordPress site redirect to another URL?
 
