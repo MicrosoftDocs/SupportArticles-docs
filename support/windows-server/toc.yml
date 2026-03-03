@@ -1732,6 +1732,8 @@ items:
       href: ./performance/troubleshoot-startup-problems.md
   - name: No Boot (not BugChecks)
     items:
+    - name: After updates, disk corruption prevents Windows Server from starting
+      href: ./performance/disk-corruption-prevents-windows-server-update-restart.md
     - name: Black screen on boot
       href: ./performance/black-screen-on-boot.md
     - name: Can't format or use a disk partition properly
