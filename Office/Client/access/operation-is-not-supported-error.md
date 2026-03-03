@@ -17,7 +17,7 @@ appliesto:
   - Access for Microsoft 365
   - Access 2024
   - Access 2021
-ms.date: 02/09/2026
+ms.date: 03/02/2026
 ---
 
 # Operation is not supported error in Access and Excel
@@ -74,7 +74,7 @@ To identify a remote table reference, check the SQL syntax of a query or command
 
 | **Local table** | SELECT \* FROM \`Orders Query\` |
 |----|----|
-| **Remote table** | SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` |
+| **Remote table** | SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` |
 
 ## Solutions
 
@@ -105,7 +105,7 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 | **Original command text** | **Updated command text** |
 |----|----|
-| SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
+| SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
 
 >[!NOTE]
 
@@ -113,6 +113,11 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 >- Beginning in version 2601 of Microsoft 365 Apps, a remote table reference is treated as a local table reference during query execution if the database or workbook that’s supplied in the connection string matches the file that’s used in the remote table reference within the command text. Therefore, this error won’t occur.
 
 ### Solution that applies to all apps
+
+>[!NOTE]
+
+>- Use this solution only as a temporary fix while you update your application.
+>- The **AllowQueryRemoteTables** registry value might be removed when you install an Office update. If you set this value, you might need to set it again after you finish installing the update.
 
 1. Locate the **AllowQueryRemoteTables** registry key for your installation scenario by using the information in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544).
 1. Set the value for the key to **1** to allow remote table references during query execution.
