@@ -30,7 +30,7 @@ You install updates, and then restart your computer. You experience the followin
 
 ## Cause
 
-This problem is caused by disk corruption and the presence of bad clusters on the operating system (OS) disk. The following factors contribute to the issue:
+This issue occurs when the operating system (OS) disk is corrupted or has bad clusters. The following factors contribute to the issue:
 
 - The OS disk doesn't have enough free space for the system files to function.
 - Windows encountered disk read errors while it installed the updates.
@@ -56,7 +56,7 @@ To resolve the issue, follow these steps:
    chkdsk /r /x
    ```
 
-1. After `chkdsk` finishes, check the health of the disk. You can do this by using the Disk Management tool, the PowerShell `Get-PhysicalDisk` command, by running `chkdsk` without flags (read-only check), or Azure Portal diagnostics.
+1. After `chkdsk` finishes, check the health of the disk. To check health, you can use the Disk Management tool, the PowerShell `Get-PhysicalDisk` command, by running `chkdsk` without flags (read-only check), or Azure portal diagnostics.
 
 1. Try to start the computer.
 1. If the computer still doesn't start, try the following approaches:
@@ -72,7 +72,7 @@ The following types of data can help you troubleshoot this issue. Additionally, 
 - Output from the `chkdsk` operation, including the details of any repairs.
 - Disk health reports from monitoring or troubleshooting tools (for VMs, include reports from Azure monitoring tools).
 - Screenshots or logs that show startup errors and error codes.
-- A description of the steps that you have already tried to fix the problem.
+- A description of the steps that you already used to try to fix the problem.
 
 ## References
 
