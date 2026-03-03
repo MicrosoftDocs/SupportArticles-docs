@@ -13,37 +13,37 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
-# After updates, disk corruption prevents Windows Server from starting
+# Windows Server doesn't start after updates cause disk corruption
 
 ## Summary
 
-After you install updates and restart your Windows Server computer, the computer might fail to start and enter a continuous restart loop. This issue can occur when disk corruption or bad clusters on the operating system (OS) disk prevent Windows Server from completing its startup processes. Use this article to identify the cause and fix the issue.
+After you install updates and restart your Windows Server computer, the computer doesn't start. Intead, it enters a continuous restart loop. This issue might occur if disk corruption or bad clusters on the operating system (OS) disk prevent Windows Server from completing its startup processes. Use this article to identify the cause and fix the issue.
 
 ## Symptoms
 
-You install updates, and then restart your computer. You experience the following symptoms:
+After you install updates and restart your computer, you experience the following symptoms:
 
 - The computer doesn't start. However, it tries repeatedly to restart.
 - The startup process reports particular error codes that indicate disk read errors.
-- If you run a disk health check (for example, by running `chkdsk`), the health checks indicate that the disk has bad clusters or other corruption.
-- When you run standard disk repair commands, they don't restore the computer to a point at which it can start.
+- A disk health check (for example, by running `chkdsk`) indicate that the disk has bad clusters or other corruption.
+- If you run standard disk repair commands, the commands don't restore the computer to a point at which it can start.
 
 ## Cause
 
-This issue occurs when the operating system (OS) disk is corrupted or has bad clusters. The following factors contribute to the issue:
+This issue occurs if the operating system (OS) disk is corrupted or has bad clusters. The following factors contribute to the issue:
 
-- The OS disk doesn't have enough free space for the system files to function.
-- Windows encountered disk read errors while it installed the updates.
+- The OS disk doesn't have enough free space to allow the system files to function.
+- Windows experienced disk read errors while it installed the updates.
 - The system files that the computer requires for startup are corrupted.
 - The disk has health issues that affect successful logging and normal startup operations.
 
-When the OS disk is damaged or has bad sectors, Windows Server can't start. It tries to start again, and enters a continuous loop of startup attempts.
+If the OS disk is damaged or has bad sectors, Windows Server can't start. Although the system tries to restart, it enters a continuous loop of startup attempts.
 
 ## Resolution
 
 > [!IMPORTANT]  
 >
-> - If the affected computer is a Windows virtual machine (VM), that can't restart correctly or that you can't access by using RDP or SSH, make sure that you can use the [Azure Serial Console](/troubleshoot/azure/virtual-machines/windows/serial-console-windows) to access the VM.
+> - If the affected computer is a Windows virtual machine (VM) that can't restart correctly or that you can't access by using RDP or SSH, make sure that you can use the [Azure Serial Console](/troubleshoot/azure/virtual-machines/windows/serial-console-windows) to access the VM.
 > - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 To resolve the issue, follow these steps:
@@ -56,10 +56,14 @@ To resolve the issue, follow these steps:
    chkdsk /r /x
    ```
 
-1. After `chkdsk` finishes, check the health of the disk. To check health, you can use the Disk Management tool, the PowerShell `Get-PhysicalDisk` command, by running `chkdsk` without flags (read-only check), or Azure portal diagnostics.
+1. After `chkdsk` finishes, check the health of the disk. To check health, use any of the following methods:
+   - The Disk Management tool
+   - The PowerShell `Get-PhysicalDisk` command
+   - The `chkdsk` command without flags (read-only check)
+   - Azure portal diagnostics
 
 1. Try to start the computer.
-1. If the computer still doesn't start, try the following approaches:
+1. If the computer still doesn't start, try the following methods:
 
    - If the affected computer is a VM, detach the OS disk, and then attach it to a test VM. Verify that the disk mounts and functions correctly.
    - Contact your storage vendor (or your storage and system administration teams) for assistance in more in-depth troubleshooting. You might have to replace the disk hardware.
@@ -72,7 +76,7 @@ The following types of data can help you troubleshoot this issue. Additionally, 
 - Output from the `chkdsk` operation, including the details of any repairs.
 - Disk health reports from monitoring or troubleshooting tools (for VMs, include reports from Azure monitoring tools).
 - Screenshots or logs that show startup errors and error codes.
-- A description of the steps that you already used to try to fix the problem.
+- A description of the steps that you already used to try to fix the issue.
 
 ## References
 
