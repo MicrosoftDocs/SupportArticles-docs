@@ -33,11 +33,15 @@ When you select **Solutions** > **New** > **Agent**, you go to Copilot Studio. I
 
 Copilot Studio supports *solution‑aware authoring* through preferred solutions.
 
-1. Open **Copilot Studio**.
+To go to the solution explorer in Copilot Studio:
 
-1. Select **Solution manager**.
+1. Select the three dots (…) on the side bar.
 
-1. Set your solution as the **Preferred solution**.
+1. Select **Solutions**.
+
+1. Select **Set preferred solution** on the top menu bar, above the list of solutions.
+
+1. Choose the solution in which you want agents to be created, by default.
 
 1. Create or edit agents and components.
 
