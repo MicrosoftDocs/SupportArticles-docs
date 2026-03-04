@@ -1,7 +1,7 @@
 ---
-title: "The account type for main account... is not valid" error when posting in General ledger
-description: Provides a resolution for an "account type for main account is not valid" error that occurs when you try to post a transaction in General ledger in Microsoft Dynamics 365 Finance.
-ms.date: 03/03/2026
+title: "General Ledger Posting Error: Invalid Main Account Type"
+description: Resolve the account type for main account is not valid error in Dynamics 365 Finance. Learn how to fix posting issues in General ledger transactions.
+ms.date: 03/04/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting/Issues with financial dimensions and financial tags
 audience: Application User
@@ -18,7 +18,7 @@ ms.dyn365.ops.version: 8.0.2
 This article provides a solution for an error that occurs when you try to post a transaction to a main account in General ledger in Microsoft Dynamics 365 Finance. The error states that the account type for the main account isn't valid and must be of type _Financial_. This problem typically involves a main account that has an account type of _Total_ or _Reporting_.
 
 > [!NOTE]
-> If you experience a dimension-related posting error, see [Troubleshoot common dimension-related errors in Dynamics 365 Finance](common-dimension-related-errors.md).
+> If you experience a dimension-related posting error, see [Common dimension-related errors](common-dimension-related-errors.md).
 
 ## Symptoms
 
@@ -46,6 +46,6 @@ To resolve this issue, check the main account type and either correct the transa
 
 ## Related content
 
-- [Troubleshoot common dimension-related errors in Dynamics 365 Finance](common-dimension-related-errors.md)
 - [Can't post a journal due to imbalance](posting-fail-imbalance.md)
-- [Plan your chart of accounts in Dynamics 365 Finance](/dynamics365/finance/general-ledger/plan-chart-of-accounts)
+- [Main account types](/dynamics365/finance/general-ledger/main-account-types)
+- [Create a main account](/dynamics365/finance/general-ledger/tasks/create-main-account)
