@@ -18,7 +18,7 @@ ms.search.validFrom: 2019-05-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# Financial dimension view errors occur after restoring a database to another environment
+# Financial dimension view errors occur after restoring a database to another environment (e.g. UAT to PROD)
 
 This article explains why financial dimension errors occur after restoring a database backup from one environment to another in Microsoft Dynamics 365 Finance, and how to resolve the issue.
 
