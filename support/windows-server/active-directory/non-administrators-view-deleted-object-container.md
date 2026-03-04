@@ -1,7 +1,7 @@
 ---
 title: Let nonadministrators view deleted objects
 description: Explains how to change permissions so that nonadministrators can view the contents of the Active Directory deleted objects container.
-ms.date: 03/04/2026
+ms.date: 03/05/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 892806
 
 ## Summary
 
-Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden "Deleted Objects" container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command. If the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled, the users who have this access can restore the deleted objects.
+Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden "Deleted Objects" container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command.
 
 This article discusses how to add read permissions on the deleted objects container. You might have to add read permissions on the deleted objects container under the following conditions:
 
@@ -29,12 +29,7 @@ This article discusses how to add read permissions on the deleted objects contai
 
 ## More information
 
-When you delete an AD DS object, Active Directory moves the object to the deleted objects container. The object remains in the container for a specified period (`tombstonelifetime` if AD Recycle bin isn't enabled;`tombstonelifetime` plus `msds-deletedobjectlifetime` if AD Recycle Bin is enabled). This action allows time for the deletion to replicate to other domain controllers (DCs). It's possible to [undelete](/openspecs/windows_protocols/ms-adts/4302a2eb-55c8-426c-b310-6791c6ae8307) a deleted object when AD Recycle Bin is enabled, but the object loses some attribute values.
-
-If the AD Recycle Bin feature is enabled, an Administrator-level or System-level account can access the object in the deleted objects container, and then undelete or fully restore it.
-
-> [!IMPORTANT]  
-> When you undelete or restore an object, AD DS checks the permissions on the object and on its new parent object to determine whether to allow the change. Granting read access to the deleted objects container doesn't grant permissions to restore or undelete objects.
+When you delete an AD DS object, Active Directory moves the object to the deleted objects container. The object remains in the container for a specified period (`tombstonelifetime` if AD Recycle bin isn't enabled;`tombstonelifetime` plus `msds-deletedobjectlifetime` if AD Recycle Bin is enabled). This action allows time for the deletion to replicate to other domain controllers (DCs).
 
 ### Example: View deleted objects
 
@@ -70,9 +65,6 @@ ObjectGUID        : 8daacf6e-12ab-4f5d-b95c-ec834d490580
 ```
 
 ### Grant read permissions to the deleted objects container
-
-> [!IMPORTANT]  
-> Before you follow these steps, make sure that you enable the AD Recycle Bin feature. For more information, see [Enable and use Active Directory Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin).
 
 To modify the permissions on the deleted objects container so that nonadministrators can view this information, use the [DSACLS.exe](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)) tool. Follow these steps:
 
@@ -152,8 +144,6 @@ In this example, the user ("CONTOSO\EricLang") can view the contents of the dele
 
 - [Enable and use Active Directory Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin)
 - [Get-ADObject](/powershell/module/activedirectory/get-adobject)
-- [Restore-ADObject](/powershell/module/activedirectory/restore-adobject)
-- [Undelete Operation](/openspecs/windows_protocols/ms-adts/4302a2eb-55c8-426c-b310-6791c6ae8307)
 - [Tombstone Lifetime and Deleted-Object Lifetime](/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180)
 - [LDAP_SERVER_SHOW_DELETED_OID control code](/previous-versions/windows/desktop/ldap/ldap-server-show-deleted-oid)
 - [Dsacls](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11))
