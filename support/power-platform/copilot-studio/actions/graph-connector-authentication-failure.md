@@ -10,7 +10,7 @@ ms.custom: sap:Actions\Connector actions
 
 # Authentication failures during Microsoft Graph connector agent setup
 
-The [Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent) is a Windows desktop app used to connect on-premises data to Microsoft Graph.The **invalid application credentials** error usually occurs when the connector agent can’t authenticate using the app registration in Microsoft Entra ID.
+The [Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent) is a Windows desktop app used to connect on-premises data to Microsoft Graph.The `invalid application credentials` error usually occurs when the connector agent can’t authenticate using the app registration in Microsoft Entra ID.
 
 To resolve this issue, verify the following:
 
