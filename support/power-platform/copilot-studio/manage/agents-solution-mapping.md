@@ -11,7 +11,7 @@ ms.collection: CEnSKM-ai-copilot
 
 When you create a Copilot Studio agent and add it to a solution, if you modify the agent after adding it to the solution, those changes don't appear automatically. For example, if you create an agent and add it to a solution, and afterward you add new components, such as topics, tools, actions, connectors, child agents, MCPs, and so on, those new components don't automatically appear in the solution. You only see them after you manually select **Add required objects** in the solution explorer in Copilot Studio.
 
-In this scenario, some of the following problems include:
+In this scenario, you might encounter some of the following problems:
 
 - Missing topics in the target environment after deployment
 
@@ -27,11 +27,7 @@ Always use **Add required objects** on the agent before exporting. For more info
 
 ### Create agents in the solution context
 
-When you select **Solutions** > **New** > **Agent**, you're redirected to Copilot Studio.
-
-If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue with the edit to persist the solution context.
-
-This scenario automatically updates the changes.
+When you select **Solutions** > **New** > **Agent**, you're redirected to Copilot Studio. If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue with the edit to persist the solution context. This method automatically updates the changes.
 
 ### Use Preferred solution in Copilot Studio
 
@@ -57,6 +53,6 @@ You can verify solution mapping directly inside Copilot Studio.
 
 1. Open the **Agent**.
 
-1. Go to **Settings** > **Agent details**.
+1. Select **Settings** > **Agent details**.
 
 1. Select **View solution**.
