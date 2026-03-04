@@ -5,3 +5,5 @@ items:
   href: computer-use-screenshot-error.md
 - name: "\"This feature has been disabled\" error for AI prompts"
   href: prompt-feature-disabled.md
+- name: Authentication failures during Microsoft Graph connector agent setup
+  href: graph-connector-authentication-failure.md
