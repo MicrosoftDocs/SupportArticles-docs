@@ -289,3 +289,7 @@ items:
       tocHref: /troubleshoot/devices/
       topicHref: /troubleshoot/devices/
 
+    - name: Microsoft Edge
+      tocHref: /troubleshoot/microsoft-edge
+      topicHref: /troubleshoot/microsoft-edge/welcome-edge
+
