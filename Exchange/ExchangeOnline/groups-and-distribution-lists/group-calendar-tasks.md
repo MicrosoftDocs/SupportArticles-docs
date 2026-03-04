@@ -51,7 +51,7 @@ Set-UnifiedGroup -Identity \<*group name*\> -HiddenFromExchangeClientsEnabled:\$
 
 Secondly, to use Microsoft 365 Groups in classic Outlook on Windows you must use [Outlook in Cached Exchange Mode](https://support.microsoft.com/office/get-started-with-microsoft-365-groups-in-outlook-b86c141b-39cf-49d9-a4db-124c3d786204). For more information, see [Turn on Cached Exchange Mode](https://support.microsoft.com/office/turn-on-cached-exchange-mode-7885af08-9a60-4ec3-850a-e221c1ed0c1c).
 
-Users from outside the organization and guests that are members of a group can receive emails and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
+Users from outside the organization and guests that are members of a group can receive email messages and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
 
 ## Share a Microsoft 365 Group calendar
 
