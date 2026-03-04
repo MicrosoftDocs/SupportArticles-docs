@@ -1,67 +1,62 @@
 ---
 title: Agents missing components in a solution
-description: 
+description: Learn how to resolve missing components in Copilot Studio agents when added to a solution. Follow best practices to ensure all components sync correctly.
 ms.date: 03/04/2026
 ms.reviewer: erickinser, v-shaywood
 ms.custom: sap:Manage
+ms.collection: CEnSKM-ai-copilot
 ---
 
 # Agents missing components in a solution
 
-When you create a Copilot Studio agent, add it to a Solution, and later add new components (topics, tools, actions, connectors, child agents, MCPs, etc.), those new components do **not** automatically appear in the solution. You only see them after manually doing Add required objects on the Agent in solution.
+When you create a Copilot Studio agent and add it to a solution, if you modify the agent after adding it to the solution, those changes don't appear automatically. For example, if you create an agent and add it to a solution, and afterward you add new components, such as topics, tools, actions, connectors, child agents, MCPs, and so on, those new components don't automatically appear in the solution. You only see them after you manually select **Add required objects** in the solution explorer in Copilot Studio.
 
-Usual issues reported:
+In this scenario, some of the following problems include:
 
-- Missing topics in my target environment post deployment
+- Missing topics in the target environment after deployment
 
-- Missing Knowledge source in my target environment post alm
+- Missing knowledge sources in the target environment after Application Lifecycle Management (ALM)
 
-- Missing environment variable
+- Missing environment variables
 
-- Missing any components or tools that are linked to agent in the higher environment can be due to below scenario.
+- Missing any components or tools that are linked to the agent in the higher environment
 
-Mitigation:
+Always use **Add required objects** on the agent before exporting. For more information, see [Add components to an agent in a custom solution](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution).
 
-Always use **Add required Objects on the Agent before exporting**. For more information, see [Add components to an agent in a custom solution](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution).
+## Approaches to edit an agent and maintain changes
 
-## Recommended Approaches when editing Agent in source to hold solution context
+### Create agents in the solution context
 
-1. Agents are created in the solution context
+When you select **Solutions** > **New** > **Agent**, you're redirected to Copilot Studio.
 
-    - When start from **Solutions → New → Agent**, the UI redirects you to Copilot Studio.
+If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue with the edit to persist the solution context.
 
-    - Open Agent from the Solution (Solutions → *Your solution* → Agent → Open) if already added and continue with the edit to persist the solution context
+This scenario automatically updates the changes.
 
-    - The above scenario will get the changes updated automatically.
+### Use Preferred solution in Copilot Studio
 
-1. Use “Preferred Solution” in Copilot Studio (Best Practice)
+Copilot Studio supports *solution‑aware authoring* through preferred solutions.
 
-    - Copilot Studio supports **solution‑aware authoring** via Preferred Solutions.
+1. Open **Copilot Studio**.
 
-    - **Steps:**
+1. Select **Solution manager**.
 
-    - Open **Copilot Studio**
+1. Set your solution as the **Preferred solution**.
 
-    - Go to **Solution manager**
+1. Create or edit agents and components.
 
-    - Set your solution as the **Preferred solution**
+1. Create new components directly under the selected solution.
 
-    - Create or edit agents/components
+This method reduces, but doesn't completely eliminate, manual re‑sync work. For more information, see [Solution management in Copilot Studio](/microsoft-copilot-studio/authoring-solutions-overview#set-your-preferred-solution).
 
-    - New components are created directly under the selected solution
+## Verify the solution context of the agent in Copilot Studio
 
-    - Reduces (but does not completely eliminate) manual re‑sync work
+You can verify solution mapping directly inside Copilot Studio.
 
-    - [Microsoft documentation: Solution management in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-overview#set-your-preferred-solution)
+1. Open **Copilot Studio**.
 
-## Where to Check Which Solution context Agent has in Copilot Studio
+1. Open the **Agent**.
 
-You can verify solution mapping directly inside Copilot Studio:
+1. Go to **Settings** > **Agent details**.
 
-1. Open **Copilot Studio**
-
-1. Open the **Agent**
-
-1. Go to **Settings → Agent details**
-
-1. Select **View solution**
+1. Select **View solution**.
