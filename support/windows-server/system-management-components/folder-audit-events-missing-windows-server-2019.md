@@ -34,7 +34,7 @@ To configure folder auditing, follow these steps.
 
 1. If you use Group Policy objects (GPOs) to manage your configuration, follow these steps to find the correct settings:
 
-   1. On a domain controller (DC), open Server Manager, open the **Tools** menu, and then select the Group Policy Management Console (GPMC).
+   1. On a domain controller (DC), open Server Manager, and then select **Tools** > **Group Policy Management**.
    1. Open or create a Group Policy object (GPO) that links to the affected computer. To open the Group Policy Management Editor, right-click the GPO, and then select **Edit**.
    1. In the editor, select **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Advanced Audit Policy Configuration** > **Audit Policies** > **Object Access**.
 
