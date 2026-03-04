@@ -1,5 +1,5 @@
 ---
-title: After updates, disk corruption prevents Windows Server from starting
+title: Windows Server doesn't start after updates because of disk corruption
 description: Discusses how to diagnose and fix disk corruption issues that prevent Windows Server from starting after you install updates.
 ms.date: 03/04/2026
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
 ---
-# After updates, disk corruption prevents Windows Server from starting
+# Windows Server doesn't start after updates because of disk corruption
 
 ## Summary
 
