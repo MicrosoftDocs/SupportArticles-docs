@@ -38,6 +38,7 @@ For example, if you're deploying an image from the Azure portal, you might see t
     "error": {
         "code": "Ext_StorageConfigurationSettings_ApplyNewTempDbSettingsError",
         "message": "Error: 'System Drive returned status not ready for use '"
+    }
 }
 ```
 
