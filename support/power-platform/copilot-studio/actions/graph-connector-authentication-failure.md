@@ -1,11 +1,10 @@
 ---
 title: "Authentication failures during Microsoft Graph connector agent setup"
 description: "Troubleshoot authentication failures during Microsoft Graph connector agent setup."
-ms.date: 10/16/2024
+ms.date: 03/04/2026
 ms.reviewer:
   - peterswimm
   - erickinser
-  - v-shaywood
 ms.custom: sap:Actions\Connector actions
 ---
 
