@@ -3,7 +3,7 @@ title: Troubleshoot Windows Update Error 0x8000FFFF
 description: Learn how to resolve Windows Update installation error 0x8000FFFF on Windows.
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/6/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:

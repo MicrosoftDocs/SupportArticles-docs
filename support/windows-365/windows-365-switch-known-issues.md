@@ -2,7 +2,7 @@
 title: Windows 365 Switch known issues
 description: Learn about known issues with Windows 365 Switch, including workarounds and updated fixes.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:

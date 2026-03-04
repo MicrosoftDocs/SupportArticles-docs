@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting TCP/IP communication
 description: Provides step-by-step guidance for testing network components and troubleshooting any resulting issues, helps you fix common TCP/IP-related issues, and helps you improve network performance.
-ms.date: 01/27/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -68,15 +68,15 @@ The following list outlines the most common errors that might occur when you use
   ```output
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:20 PM] Decrypting private configuration
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:20 PM] Retrying after 30 seconds. Retry attempt 1
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:50 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:50 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:50 PM] Retrying after 30 seconds. Retry attempt 2
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:33:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:33:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:33:20 PM] Retrying after 30 seconds. Retry attempt 3
   

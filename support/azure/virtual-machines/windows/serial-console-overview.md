@@ -48,6 +48,7 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - China North 3
 - Denmark East
 - East Asia
+- East US
 - East US 2 EUAP
 - East US 2
 - France Central

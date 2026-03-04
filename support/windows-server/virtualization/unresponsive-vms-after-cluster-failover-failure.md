@@ -1,7 +1,7 @@
 ---
 title: Unresponsive VMs After Cluster Failover Failure
 description: Resolves issues that occur if virtual machines become unresponsive after cluster failover failure.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

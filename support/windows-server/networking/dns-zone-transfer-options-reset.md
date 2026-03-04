@@ -1,7 +1,7 @@
 ---
 title: DNS zone transfer options are unexpectedly reset
 description: Address an issue in which DNS zone transfer options are reset after you change the zone replication scope.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

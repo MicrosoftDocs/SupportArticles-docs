@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to the domain
 description: Provides a solution to an issue where users can't sign in to the domain after password changes on a Remote Domain Controller.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

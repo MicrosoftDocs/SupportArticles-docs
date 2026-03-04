@@ -1,7 +1,7 @@
 ---
 title: Terminal Server startup, connection, and application
 description: Describes the initialization process of a Terminal Server and describes what occurs when a user connects to the server and runs an application.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

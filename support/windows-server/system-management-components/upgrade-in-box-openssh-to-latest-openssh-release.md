@@ -1,7 +1,7 @@
 ---
 title: Upgrade in-box OpenSSH to the Latest OpenSSH Release
 description: Discusses the difference between the in-box and GitHub versions of OpenSSH, how to back up your existing configuration, and how to upgrade safely while keeping your service settings intact.
-ms.date: 12/19/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

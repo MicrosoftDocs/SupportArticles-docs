@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Replica Troubleshooting Guide
 description: Helps consolidate real-world failure scenarios, symptoms, root causes, and step-by-step resolutions to assist administrators in diagnosing and resolving Hyper-V Replica issues in both standalone and clustered deployments.
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

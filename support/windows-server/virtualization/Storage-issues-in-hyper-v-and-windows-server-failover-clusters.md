@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Storage Issues in Hyper-V and Windows Server Failover Clusters
 description: Resolves issues in storage configuration for Windows Server and Hyper-V clustered environments. 
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,7 +2,7 @@
 title: Troubleshoot Windows 365 Boot
 description: Troubleshoot issues that occur when you set up or manage Windows 365 Boot devices.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:

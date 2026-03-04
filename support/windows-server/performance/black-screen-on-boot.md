@@ -1,7 +1,7 @@
 ---
 title: Black screen on boot
 description: Provides a solution to an issue where restarting a Windows x86-based computer fails with black screen.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

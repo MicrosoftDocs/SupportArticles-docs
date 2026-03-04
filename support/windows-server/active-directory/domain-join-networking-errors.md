@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Networking Errors When Joining Windows-based Computers to a Domain
 description: Troubleshooting guide for networking related error messages that occur when you join Windows-based computers to a domain.
-ms.date: 05/09/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

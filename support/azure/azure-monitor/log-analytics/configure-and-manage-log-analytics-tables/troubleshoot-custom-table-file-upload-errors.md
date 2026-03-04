@@ -47,4 +47,4 @@ Monitor for any error messages and address them as per the guidance provided in 
 ## References
 
 - [Azure Monitor Logs overview](/azure/azure-monitor/logs/data-platform-logs)
-- [Azure Monitor troubleshooting documentation](/troubleshoot/azure/azure-monitor/welcome-azure-monitor)
+- [Azure Monitor troubleshooting documentation](../../welcome-azure-monitor.yml)

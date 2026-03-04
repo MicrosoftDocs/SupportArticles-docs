@@ -1,7 +1,7 @@
 ---
 title: Use Dumpchk.exe to check memory dump file
 description: Describes how to check a memory dump file by using Dumpchk.
-ms.date: 03/10/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

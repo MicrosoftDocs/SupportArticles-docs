@@ -1,7 +1,7 @@
 ---
 title: ADFS SSO troubleshooting
 description: Introduce how to troubleshoot ADFS SSO issues.
-ms.date: 04/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

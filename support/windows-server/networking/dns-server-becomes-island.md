@@ -1,7 +1,7 @@
 ---
 title: DNS Server becomes an island
 description: Describes an issue where a domain controller points to itself for the _msdcs.ForestDnsName domain.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

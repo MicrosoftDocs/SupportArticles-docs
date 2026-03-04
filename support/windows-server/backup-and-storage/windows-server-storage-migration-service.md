@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Server Storage Migration service
 description: Resolves issues in Windows Storage Migration (Robocopy, Storage Migration Service [SMS], and other tools) and Hyper-V Storage Migration. 
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
