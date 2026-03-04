@@ -1,7 +1,7 @@
 ---
 title: Let nonadministrators view deleted objects
 description: Explains how to change permissions so that nonadministrators can view the contents of the Active Directory deleted objects container.
-ms.date: 03/02/2026
+ms.date: 03/04/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 892806
 
 Active Directory Domain Services (AD DS) temporarily stores deleted objects in a hidden "Deleted Objects" container. By default, only the System account and members of the Administrators group can view the contents of this container. For example, Administrators can view the contents of the deleted objects container by using the `LDAP_SERVER_SHOW_DELETED_OID` LDAP command or the Windows PowerShell `Get-ADObject` command. If the [AD Recycle Bin feature](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) is enabled, the users who have this access can restore the deleted objects.
 
-This article discusses how to modify the permissions on the deleted objects container. You might have to modify the permissions on the deleted objects container under the following conditions:
+This article discusses how to add read permissions on the deleted objects container. You might have to add read permissions on the deleted objects container under the following conditions:
 
 - You have enterprise applications or services that use non-System accounts or non-Administrator accounts to bind to Active Directory.
 - These enterprise applications or services poll for directory changes.
@@ -33,7 +33,12 @@ When you delete an AD DS object, Active Directory moves the object to the delete
 
 If the AD Recycle Bin feature is enabled, an Administrator-level or System-level account can access the object in the deleted objects container, and then undelete or fully restore it.
 
-For example, a member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
+> [!IMPORTANT]  
+> When you undelete or restore an object, AD DS checks the permissions on the object and on its new parent object to determine whether to allow the change. Granting read access to the deleted objects container doesn't grant permissions to restore or undelete objects.
+
+### Example: View deleted objects
+
+A member of the Administrators group can use the following Windows PowerShell command to view the contents of the deleted objects container:
 
 ```powershell
 Get-ADObject -Filter {Deleted -eq $True} -IncludeDeletedObjects
@@ -64,7 +69,7 @@ ObjectClass       : dnsNode
 ObjectGUID        : 8daacf6e-12ab-4f5d-b95c-ec834d490580
 ```
 
-### Grant permissions to the deleted objects container
+### Grant read permissions to the deleted objects container
 
 > [!IMPORTANT]  
 > Before you follow these steps, make sure that you enable the AD Recycle Bin feature. For more information, see [Enable and use Active Directory Recycle Bin](/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin).
