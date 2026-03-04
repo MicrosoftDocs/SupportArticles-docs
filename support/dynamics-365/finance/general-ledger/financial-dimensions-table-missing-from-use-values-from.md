@@ -18,9 +18,9 @@ ms.search.validFrom: 2016-05-18
 ms.dyn365.ops.version: AX 7.0.0
 ---
 
-# Can't find a table in the Use values from list on the Financial dimensions page
+# Can't find a source entity in the 'Use values from' dropdown on the 'Financial dimensions' page
 
-This article explains why a table might not appear in the **Use values from** dropdown on the **Financial dimensions** page in Microsoft Dynamics 365 Finance, and how to resolve each scenario.
+This article explains why a table might not appear in the **Use values from** dropdown on the **Financial dimension details** page in Microsoft Dynamics 365 Finance, and how to resolve each scenario.
 
 ## Symptoms
 
