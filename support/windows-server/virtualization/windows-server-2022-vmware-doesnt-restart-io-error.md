@@ -54,7 +54,7 @@ To resolve this issue, you have to first identify the component that's triggerin
 
 ### Step 2: Collect data while you reproduce the issue
 
-1. Set up a monitoring tool such as Performance Monitor ([PerfMon](../../support-tools/troubleshoot-issues-performance-monitor.md)). Focus on the following data on the VM:
+1. Set up a monitoring tool such as Performance Monitor ([PerfMon](../support-tools/troubleshoot-issues-performance-monitor.md)). Focus on the following data on the VM:
    - CPU usage
    - Memory usage
    - Disk usage
@@ -85,5 +85,5 @@ If you contact Microsoft Support, you can attach this data to your support reque
 
 ## References
 
-- [Troubleshoot issues using Performance Monitor](../../support-tools/troubleshoot-issues-performance-monitor.md)
+- [Troubleshoot issues using Performance Monitor](../support-tools/troubleshoot-issues-performance-monitor.md)
 - [VMware documentation](https://support.broadcom.com/)
