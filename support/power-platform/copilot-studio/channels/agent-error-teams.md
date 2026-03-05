@@ -38,13 +38,13 @@ The most common cause is that the flow no longer matches the schema expected by 
 
 ### Check for any null input values
 
-If the error persists after refreshing the flow, verify if the input parameters being passed from Copilot Studio agent to the Power Automate flow are valid.
+If the error persists after refreshing the flow, verify that the input parameters being passed from the Copilot Studio agent to the Power Automate flow are valid.
 
 1. Compare input values in Copilot Studio and in Power Automate to identify discrepancies:
 
 :::image type="content" source="media/power-automate-inputs.png" alt-text="Screenshot of a Power Automate flow, highlighting the inputs.":::
 
-:::image type="content" source="media/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent peforms when the flow is called.":::
+:::image type="content" source="media/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent performs when the flow is called.":::
 
 1. If any input value is null, add a **Message** action in the flow to capture and return the input values so you can debug and validate what is returned to Teams.
 
