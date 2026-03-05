@@ -27,7 +27,7 @@ Always use **Add required objects** on the agent before exporting. For more info
 
 ### Create agents in the solution context
 
-To create a new agent in the solution context, peform the following steps:
+To create a new agent in the solution context, perform the following steps:
 
 1. From the **Home** page, select the gear icon in the description box.
 
