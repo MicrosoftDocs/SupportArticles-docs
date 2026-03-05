@@ -286,6 +286,8 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 
 **Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type.
 
+For more information, see [Troubleshoot agent error in Microsoft Teams](/support/power-platform/copilot-studio/channels/agent-error-teams.md)
+
 #### FlowActionException
 
 **Error messages**:
