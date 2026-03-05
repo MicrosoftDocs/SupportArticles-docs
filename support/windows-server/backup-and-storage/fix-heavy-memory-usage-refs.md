@@ -63,8 +63,8 @@ Value Type: **REG_DWORD**
 
 ReFS has a lazy MM unmap logic. So when ReFS cycles the entire namespace to complete an MM unmap, it unmaps at a certain granularity. The amount of virtual address space that is unmapped is determined by the following formula:
 
-RefsNumberOfChunksToTrim *128 MB (for volume of size > 10 TB)
-RefsNumberOfChunksToTrim* 64 MB (for volume of size < 10 TB)
+* `RefsNumberOfChunksToTrim * 128 MB` (for volume of size > 10 TB)
+* `RefsNumberOfChunksToTrim * 64 MB` (for volume of size < 10 TB)
 
 This option works if the VA range that's being unmapped doesn't have any active references (that is, mapped metadata pages).
 
