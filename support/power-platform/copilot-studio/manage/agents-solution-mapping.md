@@ -45,9 +45,9 @@ To go to the solution explorer in Copilot Studio:
 
 1. Create or edit agents and components.
 
-1. Create new components directly under the selected solution.
+1. New edits are created directly under the selected solution.
 
-This method reduces, but doesn't completely eliminate, manual re‑sync work. For more information, see [Solution management in Copilot Studio](/microsoft-copilot-studio/authoring-solutions-overview#set-your-preferred-solution).
+For more information, see [Solution management in Copilot Studio](/microsoft-copilot-studio/authoring-solutions-overview#set-your-preferred-solution).
 
 ## Verify the solution context of the agent in Copilot Studio
 
