@@ -58,6 +58,10 @@
       href: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
     - name: '"Unable to Connect to the Financial reporting server" error'
       href: financial-reporting/unable-to-connect-financial-reporting-server.md
+- name: Process automation
+  items:
+    - name: Scheduled occurrences aren't processed on time
+      href: process-automation/process-automation-batch-job-misconfigured.md
 - name: General ledger
   items:
     - name: A custom Excel template for financial journals isn't available on the menu
