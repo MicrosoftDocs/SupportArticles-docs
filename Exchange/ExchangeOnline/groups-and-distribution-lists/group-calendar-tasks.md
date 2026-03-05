@@ -9,7 +9,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 9487
-ms.reviewer: batre
+ms.reviewer: batre, v-kccross
 appliesto:
   - Exchange Online
 ms.date: 03/04/2026
@@ -55,13 +55,13 @@ Set-UnifiedGroup -Identity "<group name>" -HiddenFromExchangeClientsEnabled:\$fa
 
 To use Microsoft 365 Groups in classic Outlook on Windows, you must use [Outlook in Cached Exchange Mode](https://support.microsoft.com/office/get-started-with-microsoft-365-groups-in-outlook-b86c141b-39cf-49d9-a4db-124c3d786204). For more information, see [Turn on Cached Exchange Mode](https://support.microsoft.com/office/turn-on-cached-exchange-mode-7885af08-9a60-4ec3-850a-e221c1ed0c1c).
 
-Group members that are either guests or external users can receive email messages and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
+Group members that are either guests or users from outside the organization can receive email messages and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
 
 ## Share a Microsoft 365 Groups calendar
 
 You must [add a user as a member](/microsoft-365/admin/create-groups/add-or-remove-members-from-groups) of the Microsoft 365 Group for them to access group resources like Calendar.
 
-External users and guests can receive and respond to group calendar events but can't access the group calendar.
+Users from outside the organization and guests can receive and respond to group calendar events but can't access the group calendar.
 
 ## Disable Microsoft 365 Groups calendar notifications
 
