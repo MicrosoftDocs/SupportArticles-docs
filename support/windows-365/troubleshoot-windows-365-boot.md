@@ -101,7 +101,7 @@ After the user signs in by using the captive portal, the network state might not
 
 Cancel the connection to return to the connection lounge. To reconnect, select **Connect** for the Cloud PC that you want to connect to.
 
-## Data collection
+## Contact Microsoft Support
 
 If the issue persists, collect the following log and ID information, and then contact Microsoft Support.
 
@@ -112,7 +112,7 @@ Collect Windows 365 and Microsoft Entra ID log information from the following lo
 - C:\\Users\\\*username*\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs  
 - C:\\Users\\\*username*\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace
 
-Put these logs in a zip file and provide it to the Microsoft support team for further investigation.
+Put these logs in a zip file and provide it to the Microsoft Support team for further investigation.
 
 ### Windows 365 error and session IDs
 
