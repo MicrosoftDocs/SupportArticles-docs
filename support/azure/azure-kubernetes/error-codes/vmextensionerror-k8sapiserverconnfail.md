@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code 
-description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerConnFail error (51) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerConnFail message when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (51)
+# Troubleshoot the VMExtensionError_K8SAPIServerConnFail message
 
-This article discusses how to identify and resolve the `VMExtensionError_K8SAPIServerConnFail` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `VMExtensionError_K8SAPIServerConnFail` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -25,11 +25,8 @@ When you try to start or create an AKS cluster, you receive the following error 
 >
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=51**\n[stdout]\n{
+> Error message: "**CSE failed with 'VMExtensionError_K8SAPIServerConnFail'. Agents are unable to establish connection to Kubernetes API server, please see https://aka.ms/aks/vmextensionerror_k8sapiserverconnfail and https://aka.ms/aks-required-ports-and-addresses for more information**.
 >
-> "ExitCode": "51",
->
-> "Output": "Thu Oct 14 18:07:37 UTC 2021,aks-nodepool1-18315663-vmss000000\\nConnection to
 
 ## Cause
 
