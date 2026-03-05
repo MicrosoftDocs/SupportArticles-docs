@@ -16,7 +16,6 @@ appliesto:
 
 This article provides a solution to memory pressure and performance issues that occur in the Resilient File System (ReFS) in Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4016173
 
 ## Symptoms
