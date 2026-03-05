@@ -5,9 +5,9 @@ services: vpn-gateway
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
-ms.service: azure-vpn-gateway
+ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 06/10/2022
+ms.date: 03/04/2026
 # Customer intent: As a cloud administrator, I want to troubleshoot backend server certificate issues with an internal load balancer and application gateway, so that I can ensure the health of my application services and maintain secure connections in Azure.
 ---
 

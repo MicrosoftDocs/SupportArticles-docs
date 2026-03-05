@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 05/26/2025
+ms.date: 03/05/2026
 # Customer intent: "As an IT administrator managing Azure Application Gateway, I want to understand HTTP response codes and their causes, so that I can effectively troubleshoot client and server errors to ensure high availability and optimal performance of my applications."
 ---
 
@@ -15,6 +15,9 @@ ms.date: 05/26/2025
 ## Summary
 
 This article gives reasons on why Azure Application Gateway returns specific HTTP response codes. Common causes and troubleshooting steps are provided to help you determine the root cause of error HTTP Response code. HTTP response codes can be returned to a client request whether or not a connection was initiated to a backend target.
+
+> [!NOTE]
+> If a client connection fails before any HTTP response is returned, the issue is likely a TLS handshake failure. Common causes include TLS version mismatches (for example, the client uses TLS 1.0 or 1.1 while the gateway requires TLS 1.2 or higher) and unsupported cipher suites. Starting August 31, 2025, Azure Application Gateway discontinued support for TLS 1.0 and 1.1. For more information, see [Application Gateway TLS policy overview](/azure/application-gateway/application-gateway-ssl-policy-overview) and [Configure TLS policy versions and cipher suites](/azure/application-gateway/application-gateway-configure-ssl-policy-powershell).
 
 ## 3XX response codes (redirection)
 
@@ -30,7 +33,7 @@ HTTP 302 responses are presented when a redirection rule is specified with the *
 
 #### 303 See Other
 
-HTTP 302 responses are presented when a redirection rule is specified with the **See Other** value.
+HTTP 303 responses are presented when a redirection rule is specified with the **See Other** value.
 
 #### 307 Temporary Redirect
 
@@ -94,10 +97,18 @@ An HTTP 401 unauthorized response can be returned to AppGW probe request if the 
 
 HTTP 403 Forbidden is presented when customers are utilizing WAF (Web Application Firewall) skus and have WAF configured in Prevention mode.  If enabled WAF rulesets or custom deny WAF rules match the characteristics of an inbound request, the client is presented a 403 forbidden response.
 
+To troubleshoot WAF false positives (legitimate requests blocked by WAF rules):
+
+1. Enable [WAF diagnostic logs](/azure/application-gateway/application-gateway-diagnostics#firewall-log) and review the `ruleId_s` field to identify which rule is blocking the request.
+2. Temporarily switch the WAF to **Detection mode** to log matching rules without blocking traffic. This helps confirm false positives before making rule changes. For more information, see [WAF policy settings](/azure/web-application-firewall/ag/create-waf-policy-ag#configure-waf-rules-optional).
+3. Create [WAF exclusions](/azure/web-application-firewall/ag/application-gateway-waf-configuration) for specific request attributes (headers, cookies, or arguments) that trigger false positives.
+4. If a managed rule consistently causes false positives and exclusions aren't sufficient, [disable the individual rule](/azure/web-application-firewall/ag/application-gateway-customize-waf-rules-portal) in the WAF policy.
+5. For detailed guidance, see [Troubleshoot WAF for Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot) and [WAF best practices](/azure/web-application-firewall/ag/best-practices).
+
 Other reasons for clients receiving 403 responses include:
 - **h2c protocol upgrade attempts**: Application Gateway returns 403 errors when clients attempt to upgrade from HTTP/1.1 to HTTP/2.0 using the h2c protocol (HTTP/2 Cleartext). Application Gateway only supports HTTP/2 over TLS (HTTPS listeners); h2c protocol upgrades over HTTP listeners are not supported. This behavior occurs regardless of WAF mode. Clients should use native HTTP/2 connections over HTTPS or remain on HTTP/1.1 without upgrade attempts.
 - You're using App Service as backend and it's configured to allow access only from Application Gateway. This can return a 403 error by App Services. This typically happens due to redirects/href links that point directly to App Services instead of pointing at the Application Gateway's IP address. 
-- If you're accessing a storage blog and the Application Gateway and storage endpoint is in different region, then a 403 error is returned if the Application Gateway's public IP address isn't allow-listed. See [Grant access from an internet IP range](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
+- If you're accessing a storage blob and the Application Gateway and storage endpoint are in a different region, a 403 error is returned if the Application Gateway's public IP address isn't allow-listed. See [Grant access from an internet IP range](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
 
 #### 404 – Page not found
 
@@ -135,6 +146,25 @@ HTTP 502 errors can have several root causes, for example:
 - [Request time-out or connectivity issues](/azure/application-gateway/application-gateway-troubleshooting-502#request-time-out) with user requests-Azure application Gateway V1 SKU sent HTTP 502 errors if the backend response time exceeds the time-out value that is configured in the Backend Setting.
 
 For information about scenarios where 502 errors occur, and how to troubleshoot them, see [Troubleshoot Bad Gateway errors](/azure/application-gateway/application-gateway-troubleshooting-502).
+
+#### 503 – Service Unavailable
+
+HTTP 503 responses indicate that Application Gateway or a backend server is temporarily unable to handle the request. Common causes include:
+
+- All backend pool members are unhealthy as determined by health probes and no healthy server is available to process requests.
+- The backend server is overloaded or undergoing maintenance and returning 503 directly to Application Gateway.
+- Application Gateway V2 autoscaling is in progress and new instances aren't yet ready to serve traffic.
+- Connection limits have been reached on Application Gateway or the backend server.
+
+To troubleshoot 503 errors:
+
+1. Check the **Backend health** pane in the Azure portal to verify the backend pool member status.
+2. Review health probe configuration to ensure probes aren't incorrectly marking healthy backends as unhealthy. For more information, see [Health probe overview](/azure/application-gateway/application-gateway-probe-overview).
+3. Verify that the backend application is operational by accessing it directly, bypassing Application Gateway.
+4. Check Application Gateway metrics for connection count and capacity unit utilization in Azure Monitor.
+5. For V2 SKUs, review autoscale settings to ensure sufficient minimum instance counts during traffic spikes.
+
+For more information, see [Troubleshoot backend health issues](application-gateway-backend-health-troubleshooting.md).
 
 #### 504 – Gateway time-out
 
