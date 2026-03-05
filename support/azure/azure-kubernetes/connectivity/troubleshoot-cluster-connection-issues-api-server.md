@@ -62,6 +62,9 @@ You can take these common troubleshooting steps to check the connectivity to the
     timeout 5 telnet $CLUSTER_FQDN 443 || echo "Connection test completed"
     ```
 
+    > [!NOTE]
+    > When you stop and start an AKS cluster, the API server's IP address can change. If you experience connection issues after a stop/start operation, flush your DNS cache, and verify that the IP address resolves correctly. For more information, see [Stop and start an Azure Kubernetes Service (AKS) cluster](/azure/aks/start-stop-cluster#about-the-cluster-stopstart-feature).
+
 3. If the AKS cluster is private, make sure you run the command from a virtual machine (VM) that can access the AKS cluster's Azure Virtual Network. See [Options for connecting to the private cluster](/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster).
 
 4. If necessary, follow the steps in the troubleshooting article [Client IP address can't access the API server](client-ip-address-cannot-access-api-server.md), so the API server adds your client IP address to the IP ranges it authorizes.

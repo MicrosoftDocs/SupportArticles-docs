@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Installation, Configuration, and Operational Failures
 description: Provides a comprehensive guide for diagnosing and resolving common installation, configuration, and operational issues related to Microsoft Hyper-V in both Windows Server and Windows client environments.
-ms.date: 09/04/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

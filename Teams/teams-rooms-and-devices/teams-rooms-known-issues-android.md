@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/07/2026
+ms.date: 01/27/2026
 ---
 # Known issues with Teams on Android devices
 
@@ -36,6 +36,7 @@ ms.date: 01/07/2026
 |Unable to join E2EE meeting using Teams Rooms on Android device.|You're not able use a Teams Rooms on Android device that is paired with a console to join a Teams meeting that is set up with end-to-end encryption (E2EE).|No workaround is available at this time.|
 |Mute/unmute controls don't work.|On Cisco's Teams Rooms on Android devices, the Mute and Unmute functionality doesn't work reliably during a Teams meeting. This issue occurs after you install the 1449/1.0.96.2025328903 version of the Teams Rooms on Android app.|Upgrade to the 1449/1.0.96.2025341701 version of the Teams Rooms app to resolve the issue.|
 |Unable to download software updates on Teams Rooms on Android devices.| Your device is running one of the following versions of the Teams Rooms on Android app and you're unable to install software updates on the device:<br/><ul><li>1449/1.0.96.2025328903</li><li>1449/1.0.96.2025325609</li></ul><br/>This issue occurs because the available space on the device is not enough to download software updates to install.|Use the Microsoft Teams admin center to sign out of the device and then sign in again. This action will clear enough space on the device to download software updates.|
+|Screen shared from laptop looks blurry on Teams Rooms display.|When you start a full screen share from a laptop that has its resolution set to 1920x1200, the display connected to a Teams Room on Windows device is blurry.|To work around the issue, set the display resolution on the laptop to 1920x1080.|
 
 ## Issues affecting multiple devices
 

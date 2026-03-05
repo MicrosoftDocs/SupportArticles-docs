@@ -1,7 +1,7 @@
 ---
 title: Windows Updates Don't Install on VM Cluster Hosts
 description: Discusses how to resolve issues that you might experience when you apply Windows updates to the hosts of a virtual machine (VM) cluster.
-ms.date: 12/04/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

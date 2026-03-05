@@ -1,7 +1,7 @@
 ---
 title: Cluster Service Stops Responding
 description: Provides a resolution for the issue that Cluster Service stops responding on a Cluster Node when you restart the Active Node.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

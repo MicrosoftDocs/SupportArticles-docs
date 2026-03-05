@@ -1,7 +1,7 @@
 ---
 title: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
 description: Describes how to troubleshoot and fix the 0x6 ERROR_INVALID_HANDLE error, which occurs when a multithreaded application accesses a smart card.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -65,7 +65,7 @@ For detailed registry description, see [Base CSP and Smart Card KSP registry key
 For example, reducing **TransactionTimeoutMilliseconds** from its default value 1500 ms to 100 ms could reduce the frequency of the problem.
 
 > [!IMPORTANT]
-> This change is only a recommendation that’s based on limited test results. There is no guarantee that reducing the **TransactionTimeoutMilliseconds** value will help to control this problem. Additionally, changing the default value of **TransactionTimeoutMilliseconds** might cause some other problems to affect BaseCSP cards. Make sure that you thoroughly test your card for the relevant application and load before you deploy this change.
+> This change is only a recommendation that's based on limited test results. There is no guarantee that reducing the **TransactionTimeoutMilliseconds** value will help to control this problem. Additionally, changing the default value of **TransactionTimeoutMilliseconds** might cause some other problems to affect BaseCSP cards. Make sure that you thoroughly test your card for the relevant application and load before you deploy this change.
 
 ## References
 

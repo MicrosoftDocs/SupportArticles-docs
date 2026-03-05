@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot L2TP/IPSec VPN client connection
 description: Describes how to troubleshoot L2TP/IPSec virtual private network (VPN) connection issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

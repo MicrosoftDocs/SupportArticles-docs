@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
 description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
-ms.date: 12/03/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Deployment Toolkit support lifecycle
 description: Discusses the support lifecycle for Microsoft Deployment Toolkits.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -31,7 +31,7 @@ Microsoft Deployment Toolkits use the following support lifecycle:
 
 - MDT releases will support only scenarios that use underpinning technologies that are still under their mainstream support policy.
 - MDT releases will be supported for one (1) year after the next version is released, whichever date is last.
-Currently supported version: [Microsoft Deployment Toolkit (latest released build)](https://www.microsoft.com/download/details.aspx?id=54259)
+Currently supported version: [Microsoft Deployment Toolkit](https://www.microsoft.com/download/details.aspx?id=57917), or search the Download Center for a later version.
 These earlier product versions are not available for download and are no longer supported:
 - Microsoft Deployment Toolkit 2013  (8443)
 - Microsoft Deployment Toolkit 2013 Update 2

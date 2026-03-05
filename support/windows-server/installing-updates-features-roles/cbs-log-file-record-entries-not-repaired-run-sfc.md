@@ -1,7 +1,7 @@
 ---
 title: CBS.log file contains entries that some files aren't repaired after you successfully run the SFC utility
 description: Describes the issue in which the CBS.log file records entries when a static file changes. Because the static file isn't protected by the Windows Resource Protection feature, the feature reports the change in the CBS.log file.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

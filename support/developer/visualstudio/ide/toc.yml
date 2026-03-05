@@ -1,21 +1,9 @@
-- name: Visual Studio crashes at startup
-  href: ./visual-studio-2013-startup-crashes.md
-- name: Can't dismiss developer license notifications
-  href: ./developer-license-notification-not-dismiss.md
 - name: Can't find resources in XAML or WPF designer
   href: ./cannot-find-resource-named-error.md
-- name: Can't sign in when JavaScript is disabled
-  href: ./cannot-sign-in-javascript-disabled.md
-- name: Can't start Windows Simulator
-  href: ./cannot-start-windows-simulator.md
 - name: Issues when creating and deploying Azure resource groups
   href: ./troubleshoot-create-deploy-resource-group.md
 - name: Performance and crashes issues
   href: ./performance-crash-issue.md
-- name: Release Management Client crashes 
-  href: ./release-management-client-crash.md
-- name: Screen readers can't read tool windows
-  href: ./screen-readers-not-read-tool-windows.md
 - name: Troubleshoot Class Designer errors
   href: ./troubleshoot-class-designer-errors.md
 - name: Troubleshoot Docker client errors on Windows
@@ -28,11 +16,7 @@
   href: ./troubleshooting-service-references.md
 - name: Troubleshoot XAML Hot Reload
   href: ./xaml-hot-reload-troubleshooting.md
-- name: Visual Studio 2012 crashes with StarDict-3
-  href: ./crash-with-stardict-3.md
 - name: Unrecoverable process error
   href: ./visual-studio-unrecoverable-process-error.md
-- name: Help Viewer 2.0 crashes
-  href: ./help-viewer-2-crashes.md
 - name: Application unresponsive due to low system memory
   href: ./visual-studio-unresponsive-resources-consuming-memory.md

@@ -1,0 +1,32 @@
+items:
+
+- name: Welcome
+  href: welcome-app-gateway.yml
+- name: ApplicationGatewaySkuNotSpecified error
+  href: error-codes/applicationgatewayskunotspecified.md
+- name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
+  href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+- name: Troubleshoot an Application Gateway in Azure (ILB ASE)
+  href: create-gateway-internal-load-balancer-app-service-environment.md 
+- name: Troubleshoot redirection to App Service URL
+  href: troubleshoot-app-service-redirection-app-service-url.md
+- name: Troubleshoot session affinity issues
+  href: how-to-troubleshoot-application-gateway-session-affinity-issues.md
+- name: Troubleshoot Bad Gateway errors - Azure Application Gateway
+  href: application-gateway-troubleshooting-502.md
+- name: HTTP response codes - Azure Application Gateway
+  href: http-response-codes.md
+- name: Troubleshoot mutual authentication on Azure Application Gateway 
+  href: mutual-authentication-troubleshooting.md
+- name: Application Gateway Ingress Controller troubleshooting
+  href: ingress-controller-troubleshoot.md
+- name: Azure Application Gateway Resource Health overview 
+  href: resource-health-overview.md
+- name: Examining logs using Azure Log Analytics
+  href: log-analytics.md
+- name: Troubleshoot backend health issues in Azure Application Gateway
+  href: application-gateway-backend-health-troubleshooting.md
+- name: Common key vault errors in Application Gateway
+  href: application-gateway-key-vault-common-errors.md
+- name: Understanding disabled listeners
+  href: disabled-listeners.md

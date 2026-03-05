@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when Microsoft Entra Connect cannot authenticate to Microsoft Entra ID: Unable to communicate with the Windows Azure Active Directory service
 
+## Summary
+
 This article provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Entra ID if there is an unauthenticated proxy server.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

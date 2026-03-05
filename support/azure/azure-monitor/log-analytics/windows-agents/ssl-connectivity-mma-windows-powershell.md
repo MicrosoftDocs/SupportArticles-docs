@@ -203,7 +203,7 @@ Issuer       : CN=Microsoft RSA TLS CA 01, O=Microsoft Corporation, C=US
 FriendlyName : 
 NotBefore    : 9/26/2021 2:30:43 PM
 NotAfter     : 9/26/2022 2:30:43 PM
-Thumbprint   : F84E9C8A41CF8C7E62A594F1E95961107C33A30D
+Thumbprint   : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 
 Subject Alternative Name
 DNS Name=ODS-SSL201712EUS.azure.com

@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 
+## Summary
+
 This article describes a problem in which you receive the error message, "Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef," when you try to sign in to a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]

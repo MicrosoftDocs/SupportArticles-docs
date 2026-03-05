@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # "ValidationContext.Nonce is null" errors in ASP.NET MVC apps
 
+## Summary
+
 This article provides solutions to the common nonce validation errors that you might encounter in ASP.NET MVC apps by using OpenID Connect (OIDC)  middleware.
 
 ## Common error messages

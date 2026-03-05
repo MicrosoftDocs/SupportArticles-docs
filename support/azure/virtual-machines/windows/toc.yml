@@ -454,7 +454,7 @@ items:
   items:
   - name: Understanding VM lifecycle and states
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
+  - name: Azure Automation VM Start/Stop Issues
     href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Start VM with last known good configuration
     href: start-vm-last-known-good.md
@@ -462,7 +462,7 @@ items:
     href: restart-resize-error-troubleshooting.md
   - name: Restarting, shutting down, or stopping services
     href: boot-error-troubleshoot-windows.md
-  - name: Slow VM start caused by extensions troubleshooting
+  - name: Slow VM start caused by extensions
     href: slow-vm-start-extensions-troubleshooting.md
 
 - name: VM restarts or stops unexpectedly
@@ -535,6 +535,8 @@ items:
     href: support-agent-extensions.md
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Slow VM start caused by extensions
+    href: slow-vm-start-extensions-troubleshooting.md   
 
 - name: Cannot activate Windows
   items:

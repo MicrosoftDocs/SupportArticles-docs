@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
+## Summary
+
 This article resolves an issue that one or more Active Directory Domain Services (AD DS) object attributes don't sync to Microsoft Entra ID through the Azure Active Directory Sync tool.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  

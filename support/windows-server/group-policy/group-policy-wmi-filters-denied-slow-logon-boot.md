@@ -1,7 +1,7 @@
 ---
 title: Group policy with WMI filters can be denied or cause slow logon/boot
 description: Provides the resolution for the issue that Group policy with WMI filters can be denied or cause slow logon/boot
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

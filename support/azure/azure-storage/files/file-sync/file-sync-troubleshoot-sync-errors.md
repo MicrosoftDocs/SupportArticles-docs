@@ -103,7 +103,7 @@ Look at the most recent 9302 event in the telemetry log on the server (in the Ev
 ```output
 Replica Sync Progress. 
 ServerEndpointName: <CI>sename</CI>, SyncGroupName: <CI>sgname</CI>, ReplicaName: <CI>rname</CI>, 
-SyncDirection: Upload, CorrelationId: {AB4BA07D-5B5C-461D-AAE6-4ED724762B65}. 
+SyncDirection: Upload, CorrelationId: {aaaa0000-bb11-2222-33cc-444444dddddd}. 
 AppliedItemCount: 172473, TotalItemCount: 624196. AppliedBytes: 51473711577, 
 TotalBytes: 293363829906. 
 AreTotalCountsFinal: true. 

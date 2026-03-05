@@ -9,6 +9,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 
 # How the proxyAddresses attribute is populated in Microsoft Entra ID
 
+## Summary
+
 This article describes how the proxyAddresses attribute is populated in Microsoft Entra ID and discusses common scenarios to help you understand how the proxyAddresses attribute is populated in Microsoft Entra ID.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  

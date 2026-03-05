@@ -10,6 +10,8 @@ ms.custom: sap:Issues signing into application
 
 # "Your browser is not supported or up-to-date" error in MSAL app
 
+## Summary
+
 This article discusses how to resolve the "Your browser is not supported or up-to-date" error that occurs in a Microsoft Authentication Library (MSAL)-based app.
 
 ## Symptoms

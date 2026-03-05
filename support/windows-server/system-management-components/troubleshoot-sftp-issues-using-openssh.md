@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Common SFTP Issues
 description: Explains how to resolve common SFTP issues when you use OpenSSH for Windows.
-ms.date: 11/05/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

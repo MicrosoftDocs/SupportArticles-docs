@@ -1,7 +1,7 @@
 ---
 title: Information about Network Monitor 3
 description: Discusses Network Monitor 3. Contains download and support information, installation notes, and general usage information.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

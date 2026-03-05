@@ -8,9 +8,9 @@ manager: dcscontentpm
 ms.topic: troubleshooting-general
 ms.service: azure-app-service
 ms.date: 10/14/2025
-ms.author: msangapu
-author: msangapu-msft
-ms.reviewer: v-ryanberg
+ms.author: jarrettr
+author: JarrettRenshaw
+ms.reviewer: msangapu
 ms.custom: sap:Networking
 #customer intent: As an app developer, I need to troubleshoot common errors if they occur using tools provided by Azure App Service.
 ---

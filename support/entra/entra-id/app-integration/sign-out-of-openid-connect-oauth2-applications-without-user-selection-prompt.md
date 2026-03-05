@@ -9,6 +9,8 @@ ms.topic: how-to
 ---
 # How to sign out of OpenID Connect/OAuth2 applications without a user selection prompt
 
+## Summary
+
 By default, when you sign out of an OpenID Connect/OAuth2 application registered in Microsoft Entra ID, you're prompted to select a user account to sign out of, even if only one account is available. This article provides a step-by-step guide to bypass this behavior.
 
 ## Step 1: Add an optional claim for login\_hint

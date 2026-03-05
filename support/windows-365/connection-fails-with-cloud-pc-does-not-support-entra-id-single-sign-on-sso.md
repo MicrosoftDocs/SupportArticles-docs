@@ -3,7 +3,7 @@ title: Connection fails with error Cloud PC does not support Entra ID single Sig
 description: Introduces how to resolve the connection failure with the "Cloud PC does not support Entra ID single sign-on" error.
 audience: itpro
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ms.custom:

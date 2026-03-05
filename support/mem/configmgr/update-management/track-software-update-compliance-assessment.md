@@ -282,7 +282,7 @@ WUAHandler then parses the results, which include the applicability state for ea
 > Pruning: update id (70f4f236-0248-4e84-b472-292913576fa1) is superseded by (726b7201-862a-4fde-9b12-f36b38323a6f).   WUAHandler  
 > \...  
 > Update (Installed): Security Update for Windows 7 for x64-based Systems (KB2584146) (4ae85c00-0eaa-4be0-b81b-dbd7053d5fae, 104)     WUAHandler  
-> Update (Missing): Security Update for Windows 7 for x64-based Systems (KB2862152) (505fda07-b4f3-45fb-83d9-8642554e2773, 200)     WUAHandler  
+> Update (Missing): Security Update for Windows 7 for x64-based Systems (KB2862152) (00001111-aaaa-2222-bbbb-3333cccc4444, 200)     WUAHandler  
 > \...  
 > Successfully completed scan.         WUAHandler
 
@@ -292,15 +292,15 @@ Once the scan results are available, these results are stored in the updates sto
 
 UpdatesStore.log showing state for missing update (KB2862152) being recorded and a state message being raised:
 
-> Processing update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) with ProductID = 0fa1201d-4330-4fa8-8ae9- b877473b6441    UpdatesStore  
-> Update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) hasn't been reported before, creating new instance.    UpdatesStore  
-> Successfully raised state message for update (505fda07-b4f3-45fb-83d9-8642554e2773) with state (Missing).      UpdatesStore  
-Successfully added WMI instance of update status (505fda07-b4f3-45fb-83d9-8642554e2773).      UpdatesStore
+> Processing update status from update (00001111-aaaa-2222-bbbb-3333cccc4444) with ProductID = 0fa1201d-4330-4fa8-8ae9- b877473b6441    UpdatesStore  
+> Update status from update (00001111-aaaa-2222-bbbb-3333cccc4444) hasn't been reported before, creating new instance.    UpdatesStore  
+> Successfully raised state message for update (00001111-aaaa-2222-bbbb-3333cccc4444) with state (Missing).      UpdatesStore  
+Successfully added WMI instance of update status (00001111-aaaa-2222-bbbb-3333cccc4444).      UpdatesStore
 
 StateMessage.log showing state message being recorded with **State ID 2** (missing):
 
-> Adding message with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 to WMI    StateMessage  
-> State message(State ID : 2) with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 has been recorded for SYSTEM   StateMessage
+> Adding message with TopicType 500 and TopicId 00001111-aaaa-2222-bbbb-3333cccc4444 to WMI    StateMessage  
+> State message(State ID : 2) with TopicType 500 and TopicId 00001111-aaaa-2222-bbbb-3333cccc4444 has been recorded for SYSTEM   StateMessage
 
 For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and this stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
 
@@ -322,7 +322,7 @@ In StateMessage.log:
 The following is how the state message body looks like for our update. Normally this XML body is too large for the log and is truncated in CMTrace. However, you can see the whole XML body in Notepad.
 
 > StateMessage body: \<?xml version="1.0" encoding="UTF-16"?>  
-> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="505fda07-b4f3-45fb-83d9-8642554e2773" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>     StateMessage  
+> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="00001111-aaaa-2222-bbbb-3333cccc4444" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>     StateMessage  
 > Successfully forwarded State Messages to the MP       StateMessage
 
 ## State message processing flow
@@ -336,7 +336,7 @@ Although StateMessage.log reports **Successfully forwarded State Messages to the
 In StateMessage.log:
 
 > StateMessage body: \<?xml version="1.0" encoding="UTF-16"?>
-\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="505fda07-b4f3-45fb-83d9-8642554e2773" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>    StateMessage  
+\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="00001111-aaaa-2222-bbbb-3333cccc4444" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>    StateMessage  
 Successfully forwarded State Messages to the MP       StateMessage
 
 ### Step 2: CCM Messaging sends a message containing the state message XML body to the management point
@@ -380,7 +380,7 @@ In MP_Relay.log on a remote management point:
 > Mp Message Handler: FileType=SMX    MP_RelayEndpoint  
 > Message Body :  
 > \<?xml version="1.0" encoding="UTF-16"?>  
-> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="505fda07-b4f3-45fb-83d9-8642554e2773" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>     MP_RelayEndpoint  
+> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="00001111-aaaa-2222-bbbb-3333cccc4444" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>     MP_RelayEndpoint  
 > Inv-Relay Task: Processing message body      MP_RelayEndpoint  
 > Relay: Outbox dir: C:\SMS\mp\outboxes\StateMsg.box        MP_RelayEndpoint  
 > Priority in the message = 5      MP_RelayEndpoint  
@@ -432,7 +432,7 @@ The SMX file that's moved to the StateSys.box folder contains the message body X
 In SQL Server Profiler trace:
 
 > exec dbo.spProcessStateReport N'\<?xml version="1.0" encoding="UTF-16"?>  
-\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120220131.071000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="239">\<Topic ID="505fda07-b4f3-45fb-83d9-8642554e2773" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>'
+\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: 00001111-aaaa-2222-bbbb-3333cccc4444\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120220131.071000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="239">\<Topic ID="00001111-aaaa-2222-bbbb-3333cccc4444" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>'
 
 `spProcessStateReport` is a CLR stored procedure, and the CLR definition has the logic to determine the type of state message being processed. Depending on the type of state message, it processes the state message appropriately and inserts the data in the database.
 

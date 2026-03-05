@@ -1,7 +1,7 @@
 ---
 title: Upgrade Fails and Generates Error Code 0xC1900101-0x20017
 description: Provides steps to resolve Windows upgrade failures that generate error code 0xC1900101-0x20017.
-ms.date: 10/16/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

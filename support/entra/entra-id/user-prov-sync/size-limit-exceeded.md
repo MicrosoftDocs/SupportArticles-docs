@@ -11,6 +11,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # "Size Limit Exceeded - Error Code 0x4" error message during delta import in Microsoft Entra Connect
 
+## Summary
+
 This article discusses how to troubleshoot the "Size Limit Exceeded - Error Code 0x4" error message that occurs during the delta import step from an on-premises Active Directory in Microsoft Entra Connect.
 
 ## Symptoms

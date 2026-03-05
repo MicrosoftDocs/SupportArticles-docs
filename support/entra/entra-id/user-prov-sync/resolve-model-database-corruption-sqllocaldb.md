@@ -11,6 +11,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Resolve Model database corruption in SQLLocalDB
 
+## Summary
+
 This article describes a known issue in the [SQLLocalDB utility](/sql/tools/sqllocaldb-utility) that can prevent the ADSync service from starting because of a corrupted `Model` database. This issue mainly affects Microsoft Entra Connect&nbsp;2._x_ servers that run on a Microsoft SQL Server 2019 LocalDB.
 
 The issue is caused by a bug in the SQL Server backup logic that creates an inconsistent state in the SQL Server `Model` database start page. After a backup occurs, the `Model` database is set to `FULL` recovery mode (`dbi_status` == 0x40010000), and the `dbi_dbbackupLSN` (the log sequence number (LSN) for the database backup) is set to a value that points to a log file. However, the actual recovery mode that is governed by the `Master` database is `SIMPLE`.

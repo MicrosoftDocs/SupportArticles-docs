@@ -11,6 +11,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS500571 - Guest user account is disabled
 
+## Summary
+
 This article discusses how to resolve an `AADSTS500571` error that occurs when a user tries to sign in to an application that can be used together with Microsoft Entra ID.
 
 ## Symptoms

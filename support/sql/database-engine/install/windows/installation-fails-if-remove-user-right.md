@@ -123,7 +123,7 @@ Starting in SQL Server 2012, Microsoft provides support for data and log files o
 
 - To check the list of privileges that are currently associated with the setup account, use the _AccessChk.exe_ tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
-  **Usage**: `accesschk.exe- a \<setup account> *`
+  **Usage**: `accesschk.exe -a \<setup account> *`
 
     For example:
     `c:\tools\accesschk.exe -a testdc\setupaccount *`

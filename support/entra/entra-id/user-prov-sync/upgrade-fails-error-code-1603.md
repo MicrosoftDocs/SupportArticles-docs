@@ -11,6 +11,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 _Original product version:_ &nbsp; Office 365 Identity Management, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 4054462
 
+## Summary
+
+This article provides guidance on resolving error code 1603 and the `Unable to install the synchronization service` error in the event log when trying to upgrade Microsoft Entra Connect.
+
 ## Symptoms
 
 When you try to upgrade Microsoft Entra Connect, you receive the following error message:

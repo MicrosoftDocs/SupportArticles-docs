@@ -1,7 +1,7 @@
 ---
 title: Resolve Task Scheduler Access Denied Error
 description: Introduce how to resolve the Access Denied error that occurs when you use Task Scheduler.
-ms.date: 03/19/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

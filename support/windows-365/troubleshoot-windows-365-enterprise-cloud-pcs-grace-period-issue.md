@@ -2,7 +2,7 @@
 title: Troubleshoot Windows 365 Enterprise Cloud PC Grace Period Issues
 description: Introduces how to troubleshoot Windows 365 Enterprise Cloud PCs that are in the grace period.
 manager: dcscontentpm
-ms.date: 02/18/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: anwill
 ms.custom:
