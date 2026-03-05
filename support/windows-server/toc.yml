@@ -1762,6 +1762,8 @@ items:
       href: ./performance/troubleshoot-ntldr-is-missing-error.md
     - name: Use WinRE to troubleshoot startup issues
       href: ./performance/use-winre-to-troubleshoot-startup-issue.md
+    - name: Windows Server doesn't start after updates because of disk corruption
+      href: ./performance/disk-corruption-prevents-windows-server-update-restart.md
   - name: Performance monitoring tools
     items:
     - name: CPU frequencies shown in System property page don't match
