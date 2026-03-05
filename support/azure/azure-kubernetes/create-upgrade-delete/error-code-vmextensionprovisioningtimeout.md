@@ -27,7 +27,7 @@ SubCode: VMExtensionProvisioningTimeout;
 Dependency: Microsoft.Compute/VirtualMachineScaleSet;
 OrginalError:
 Code="VMExtensionProvisioningTimeout"
-Message="Provisioning of VM extension vmssCSE has timed out. Extension provisioning has taken too long to complete. The extension last reported \"Plugin enabled\".\r\n\r\nMore information on troubleshooting is available at <https://aka.ms/VMExtensionCSELinuxTroubleshoot>";
+Message="Provisioning of VM extension <extension name> has timed out. Extension provisioning has taken too long to complete. The extension did not report a message. More information on troubleshooting is available at https://aka.ms/vmextensionlinuxtroubleshoot".
 AKSTeam: NodeProvisioning,
 Retriable: true
 ```
