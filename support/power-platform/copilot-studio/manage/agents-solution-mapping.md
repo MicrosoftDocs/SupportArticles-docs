@@ -27,7 +27,13 @@ Always use **Add required objects** on the agent before exporting. For more info
 
 ### Create agents in the solution context
 
-When you select **Solutions** > **New** > **Agent**, you go to Copilot Studio. If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue with the edit to persist the solution context. This method automatically updates the changes.
+To create a new agent in the solution context, peform the following steps:
+
+1. From the **Home** page, select the gear icon in the description box.
+
+1. In **Agent settings**, under **Advanced settings**, select the desired [solution](/microsoft-copilot-studio/authoring-solutions-overview).
+
+If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue with the edit to persist the solution context. This method automatically updates the changes.
 
 ### Use Preferred solution in Copilot Studio
 
