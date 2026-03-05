@@ -2,7 +2,7 @@
 title: Troubleshoot Windows 365 Boot
 description: Troubleshoot issues that occur when you set up or manage Windows 365 Boot devices.
 manager: dcscontentpm
-ms.date: 02/12/2026
+ms.date: 03/06/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:
@@ -11,6 +11,8 @@ ms.custom:
 ms.collection:
 - M365-identity-device-management
 - tier2
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
 ---
 
 # Troubleshoot Windows 365 Boot
@@ -56,15 +58,15 @@ Windows 365 Boot requires that the physical device runs specific versions of bot
 Get-AppxPackage -AllUsers -name *MicrosoftCorporationII*
 ```
 
-This cmdlet shows all the Microsoft-maintained apps (like QuickAssist and Microsoft Family) on the physical device. To make sure Windows 365 Boot works correctly, confirm the following versions:
+This cmdlet shows all the Microsoft-maintained apps (such as QuickAssist and Microsoft Family) on the physical device. To make sure that Windows 365 Boot works correctly, verify that the app versions meet the following requirements:
 
-- Windows App version 2.0.285 or later.
-- Azure Virtual Desktop (HostApp) app version 1.2.4159 or later.
+- Windows App version 2.0.285 or a later version.
+- Azure Virtual Desktop (HostApp) app version 1.2.4159 or a later version.
 - The latest version of Windows 11.
 
 ## Remove and add Windows 365 Boot to the physical device again
 
-If you can't identify the source of the issue, try removing and adding Windows 365 Boot to the physical device again.
+If you can't identify the source of the issue, try removing Windows 365 Boot from the device and then adding it again.
 
 ### Remove Windows 365 Boot from the physical device
 
@@ -87,42 +89,34 @@ The physical device is now set up for Windows 365 Boot. Retest it to see if it w
 
 ## Issues connecting to a captive portal
 
-**Common issues & troubleshooting steps** 
+### Network connection does not update after the device connects to the captive portal
 
-**1. Network connection does not update after captive portal connection** 
+This issue indicates that the device didn't fully authenticate on the network.
 
-**Root cause:** The device is not fully authenticated on the network. 
+To fix this issue, disconnect the device from the Wi-Fi network that requires Captive portal sign-in, and then reconnect and complete the sign-in steps again.
 
-**Action:** Disconnect from the Wi-Fi network that requires Captive portal sign in and complete the sign steps again.
+### User can't reconnect to their Cloud PC after signing in to a captive portal
 
-**2. Cloud PC reconnect fails after portal authentication** 
+After the user signs in by using the captive portal, the network state might not propagate correctly.
 
-**Root cause:** There may be a delay or error in network state propagation after portal authentication. 
-
-**Action:** Press the cancel button to bring you back to the connection lounge, press connect on the Cloud PC you want to connect to.
-
-**3. Logs and diagnostics** 
-
-- Collect logs as documented above.
+Cancel the connection to return to the connection lounge. To reconnect, select **Connect** for the Cloud PC that you want to connect to.
 
 ## Data collection
 
-If the issue persists, contact Microsoft support. To help expedite a solution, collect logs and session IDs beforehand.
+If the issue persists, collect the following log and ID information, and then contact Microsoft Support.
 
 ### Local logs
 
 Collect Windows 365 and Microsoft Entra ID log information from the following locations:
 
-- C:\\Users\\\{username}\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs  
-- C:\\Users\\\{username}\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace
+- C:\\Users\\\<username>\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs  
+- C:\\Users\\\<username>\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace
 
 Put these logs in a zip file and provide it to the Microsoft support team for further investigation.
 
 ### Windows 365 error and session IDs
 
-When contacting Microsoft support about Windows 365 Boot issues, collect relevant IDs to help in the investigation.
-
-On the physical device, get the CorrelationId, SessionID, or ActivityID.
+To help in the investigation, collect the physical device's CorrelationId, SessionID, or ActivityID.
 
 #### Session ID
 
