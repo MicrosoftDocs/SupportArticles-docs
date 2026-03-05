@@ -32,7 +32,7 @@ To make a group calendar read-only for all members, follow these steps:
 1. Run the [Set-UnifiedGroup](/powershell/module/exchangepowershell/set-unifiedgroup) PowerShell cmdlet by using the following parameters:
 
 ```powershell
-   Set-UnifiedGroup \<*group name*\> -CalendarMemberReadOnly:\$true
+   Set-UnifiedGroup "<group name>" -CalendarMemberReadOnly:\$true
 ```
 
    Ignore the warning message that appears after the command runs that states that the setting wasn't modified.
@@ -40,7 +40,7 @@ To make a group calendar read-only for all members, follow these steps:
 1. Optionally, to verify the read-only status of the group calendar, run the [Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup) cmdlet by using the following parameters:
 
 ```powershell
-   Get-UnifiedGroup \<*group name*\> -IncludeAllProperties \| fl CalendarMemberReadOnly 
+   Get-UnifiedGroup "<group name>" -IncludeAllProperties \| fl CalendarMemberReadOnly 
 ```
 
 ## Make a group calendar visible in Outlook or Outlook on the web
@@ -48,14 +48,14 @@ To make a group calendar read-only for all members, follow these steps:
 Make sure that the Microsoft 365 group isn't hidden from Exchange clients and the address list. In order for the group calendar of a Microsoft 365 group to be visible, the group itself must be visible. If the group is hidden, run the following Exchange Online PowerShell commands to unhide the group:
 
 ```powershell
-Set-UnifiedGroup -Identity \<*group name*\> -HiddenFromAddressListsEnabled:\$false
+Set-UnifiedGroup -Identity "<group name>" -HiddenFromAddressListsEnabled:\$false
 
-Set-UnifiedGroup -Identity \<*group name*\> -HiddenFromExchangeClientsEnabled:\$false
+Set-UnifiedGroup -Identity "<group name>" -HiddenFromExchangeClientsEnabled:\$false
 ```
 
 To use Microsoft 365 Groups in classic Outlook on Windows, you must use [Outlook in Cached Exchange Mode](https://support.microsoft.com/office/get-started-with-microsoft-365-groups-in-outlook-b86c141b-39cf-49d9-a4db-124c3d786204). For more information, see [Turn on Cached Exchange Mode](https://support.microsoft.com/office/turn-on-cached-exchange-mode-7885af08-9a60-4ec3-850a-e221c1ed0c1c).
 
-Group members that are either guests or users from outside the organization can receive email messages and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
+Group members that are either guests or external users can receive email messages and calendar events but can’t see or browse the group in Outlook or Outlook on the web.
 
 ## Share a Microsoft 365 Groups calendar
 
@@ -72,7 +72,7 @@ To disable calendar notifications for events in a Microsoft 365 group, follow th
 1. Run the [Set-UnifiedGroup](/powershell/module/exchangepowershell/set-unifiedgroup) PowerShell cmdlet by having the `AlwaysSubscribeMembersToCalendarEvents` parameter set to **false**. This parameter controls the default subscription settings for new members that are added to a Microsoft 365 group. You can make changes to this setting without affecting existing group members.
 
 ```powershell
-   Set-UnifiedGroup \<*group name*\> -AlwaysSubscribeMembersToCalendarEvents:\$false
+   Set-UnifiedGroup "<group name>" -AlwaysSubscribeMembersToCalendarEvents:\$false
 ```
 
 ## Identify who added an event on the calendar
