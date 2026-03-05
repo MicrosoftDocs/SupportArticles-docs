@@ -2568,6 +2568,8 @@ items:
       href: ./virtualization/unresponsive-vms-after-cluster-failover-failure.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
+    - name: Windows Server 2022 on VMware doesn't restart because of unrecoverable I/O operation error
+      href: ./virtualization/windows-server-2022-vmware-doesn't-restart-io-error.md
     - name: Windows updates don't install on VM cluster hosts
       href: ./virtualization/windows-updates-dont-install-on-vm-cluster-hosts.md
   - name: Hyper-V Replica
