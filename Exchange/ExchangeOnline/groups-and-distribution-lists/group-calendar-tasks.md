@@ -9,7 +9,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 9487
-ms.reviewer: batre, meerak, v-shorestris
+ms.reviewer: batre
 appliesto:
   - Exchange Online
 ms.date: 03/04/2026
