@@ -35,7 +35,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
    1. In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
    1. Select **Save**.
 
-1. If the user can sign in to the Cloud PC from the app or web, and a default Cloud PC has been set, then check the Windows 365 Boot physical device for issues. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
+1. If the user can sign in to the Cloud PC from the app or web, and a default Cloud PC is set, then check the Windows 365 Boot physical device for issues. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
 1. To deliver policies more quickly to the device, administrators can try to manually select **Device sync**. After this change, the user can try to restart the device.
 
@@ -89,7 +89,7 @@ The physical device is now set up for Windows 365 Boot. Retest it to see if it w
 
 ## Issues connecting to a captive portal
 
-### Network connection does not update after the device connects to the captive portal
+### Network connection doesn't update after the device connects to the captive portal
 
 This issue indicates that the device didn't fully authenticate on the network.
 
@@ -109,8 +109,8 @@ If the issue persists, collect the following log and ID information, and then co
 
 Collect Windows 365 and Microsoft Entra ID log information from the following locations:
 
-- C:\\Users\\\<username>\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs  
-- C:\\Users\\\<username>\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace
+- C:\\Users\\\*username*\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs  
+- C:\\Users\\\*username*\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace
 
 Put these logs in a zip file and provide it to the Microsoft support team for further investigation.
 
@@ -126,7 +126,7 @@ You can find the Windows 365 Session ID in an error dialog box, such as a **Some
 
 #### Correlation ID
 
-You can find the Correlation ID in the interstitial screen that displays during a five-minute time-out.
+You can find the Correlation ID in the interstitial screen that displays during a five-minute timeout.
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 
