@@ -41,7 +41,7 @@ For more information, see [March 14, 2017—KB4013429 (OS Build 14393.953)](http
 
 ### How to set the tunable registry entries
 
-registry
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 You can use Registry Editor or command-line commands (such as `reg add`) to set the registry entries. The scopes of these parameters don't overlap, so you can use them in any combination. The registry entries are all under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem` subkey.
 
