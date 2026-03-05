@@ -296,11 +296,11 @@ items:
     items:
     - name: Overview
       href: performance-diagnostics.md
-    - name: How to use
+    - name: Install and run reports
       href: how-to-use-perfinsights.md
-    - name: More info about the Extension
+    - name: Analyze data
       href: performance-diagnostics-vm-extension.md
-    - name: Azure Scale Set VM instances
+    - name: Extension
       href: perfinsights-and-scale-set-vm-instances.md
   - name: Troubleshoot VM Performance Bottlenecks
     href: ../linux/troubleshoot-performance-bottlenecks-linux.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
