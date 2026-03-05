@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2022 on VMware doesn't restart because of unrecoverable I/O operation error
-description: Discusses how to fix an issue in which you restart a Windows Server 2022 virtual machine (VM) that runs on VMware, and the VM fails to restart and displays an unrecoverable input/output (I/O) operation error.
+description: Discusses how to fix an issue in which a Windows Server 2022 VM that runs on VMware won't restart and displays an unrecoverable I/O error.
 ms.date: 03/06/2026
 manager: dcscontentpm
 audience: itpro
@@ -12,17 +12,17 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Windows Server 2022 on VMware doesn't restart because of unrecoverable I/O operation error
+# Windows Server 2022 on VMware won't restart because of unrecoverable I/O error
 
 ## Summary
 
-When you restart a Windows Server 2022 virtual machine (VM) that runs on VMware, the VM might not restart and instead displays an unrecoverable input/output (I/O) operation error. This error occurs when the operating system can't flush a registry hive to disk, which can affect system stability or data integrity.
+When you try to restart a Windows Server 2022 virtual machine (VM) that runs on VMware, the VM doesn't restart. Instead, the VM displays an unrecoverable input/output (I/O) operation error. This error occurs if the operating system can't flush a registry hive to disk. This condition can affect system stability or data integrity.
 
 This article helps you identify the component that's causing the failure and resolve the issue.
 
 ## Symptoms
 
-You restart a Windows Server 2022 VM that runs in a VMware environment. During the restart process, you see an error message that indicates that an I/O operation failed during a registry hive flush. You might also see Event ID 6 in the System event log. The event details look similar to the following example:
+You restart a Windows Server 2022 VM that runs in a VMware environment. During the restart process, you receive an error message that indicates that an I/O operation failed during a registry hive flush. You might also see Event ID 6 logged in the System event log. The event details resemble the following example:
 
 ```output
 Source: Kernel-General
@@ -34,7 +34,7 @@ The issue doesn't recur consistently.
 
 ## Cause
 
-This issue occurs when Windows Server 2022 doesn't flush a registry hive to disk, which can affect system stability or data integrity. Several factors can cause this behavior, including the following circumstances:
+This issue occurs if Windows Server 2022 doesn't flush a registry hive to disk. This behavior can affect system stability or data integrity. Several factors can cause this behavior, including:
 
 - Resource constraints, such as memory exhaustion
 - Interference from file system filter drivers
@@ -44,15 +44,15 @@ Because the error is isolated to the registry flush process and doesn't recur co
 
 ## Resolution
 
-To resolve this issue, you have to first identify the component that's triggering the failure, identify the underlying issue in that component, and fix that issue.
+To resolve this issue, you have to identify the component that triggered the failure, identify the underlying issue in that component, and then fix that issue.
 
 ### Step 1: Update your configuration
 
-1. Verify that the VM has the latest Windows Server 2022 updates and the latest VMware drivers.
+1. Verify that the VM has the latest Windows Server 2022 updates and the latest VMware drivers installed.
 2. Verify that you're using the latest version of VMware Tools and any related drivers.
 3. Verify that all third-party filter drivers, such as antivirus or backup software drivers, are up to date.
 4. Apply any missing updates.
-5. To see if the updates fixed the issue, restart the VM.
+5. To determine whether the updates fixed the issue, restart the VM.
 
 ### Step 2: Collect data while you reproduce the issue
 
@@ -66,21 +66,19 @@ To resolve this issue, you have to first identify the component that's triggerin
 ### Step 3: Analyze the data and update or adjust your configuration
 
 1. Review the performance data. In particular, look for spikes in resource usage.
-1. In Event Viewer, review the System and Application logs.
-   Look for warnings or errors that occur before the registry hive flush operation fails.
-1. Use the performance and event data to identify which components might be causing issues. In particular, watch for log entries that occur at the same time as spikes in resource usage.
-   This information can help pinpoint which component, such as a specific driver or process, is at the root of the I/O failure.
-1. Resolve any underlying issues that you find during your analysis.
-1. To see if the updates fixed the issue, restart the VM.
+1. In Event Viewer, review the System and Application logs. Look for warnings or errors that occur before the registry hive flush operation fails.
+1. Use the performance and event data to identify which components might be causing issues. In particular, watch for log entries that occur at the same time as spikes in resource usage. This information can help pinpoint which component, such as a specific driver or process, is at the root of the I/O failure.
+1. Resolve any underlying issues that you discover during your analysis.
+1. To determine whether the updates fixed the issue, restart the VM.
 
 ## Data collection
 
 If you contact Microsoft Support, you can attach this data to your support request.
 
-- Exact error message text and screenshots of the relevant events in Event Viewer
+- Exact error message text and screenshots of the relevant events in Event Viewer.
 - Complete System and Application event data that covers the period when the issue occurred. You can export this information from Event Viewer.
 - The performance data that you collected during Step 2.
-- Windows Server 2022 version and build details
+- Windows Server 2022 version and build details.
 
    **Note:** To see the exact version and build number, run `winver` at a command prompt on the affected computer.
 - VMware configuration details, including virtual hardware settings and VMware Tools version
