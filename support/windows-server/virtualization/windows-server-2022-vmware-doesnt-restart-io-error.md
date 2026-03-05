@@ -69,7 +69,7 @@ To resolve this issue, you have to first identify the component that's triggerin
 1. In Event Viewer, review the System and Application logs.
    Look for warnings or errors that occur before the registry hive flush operation fails.
 1. Use the performance and event data to identify which components might be causing issues. In particular, watch for log entries that occur at the same time as spikes in resource usage.
-   This information can help pinpoint which component--such as a specific driver or process--is at the root of the I/O failure.
+   This information can help pinpoint which component, such as a specific driver or process, is at the root of the I/O failure.
 1. Resolve any underlying issues that you find during your analysis.
 1. To see if the updates fixed the issue, restart the VM.
 
