@@ -2374,6 +2374,8 @@ items:
     items:
     - name: Event Tracing for Windows is simplified
       href: ./system-management-components/event-tracing-for-windows-simplified.md
+    - name: Folder audit events missing from Event Viewer in Windows Server 2019
+      href: ./system-management-components/folder-audit-events-missing-windows-server-2019.md
     - name: Security event log forwarding fails with Error 0x138C and 5004
       href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
   - name: Microsoft Management Console (MMC)
