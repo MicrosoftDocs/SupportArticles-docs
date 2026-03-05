@@ -1,7 +1,7 @@
 ---
 title: SQL VM Fails to Deploy or SQL Server Instance Can't Come Online
 description: Addresses a failure when you deploy a SQL Server on Azure VM image in Azure Marketplace or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
-ms.date: 01/26/2026
+ms.date: 03/04/2026
 ms.reviewer: mathoma, pamela, v-sidong, v-shaywood
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
@@ -31,6 +31,16 @@ When you try to deploy a SQL Server on Azure VM image from Azure Marketplace, th
 > System Drive returned status not ready for use.
 
 For example, if you're deploying an image from the Azure portal, you might see the following error for the deployment in **Activity log**: 
+
+```json
+{
+    "status": "Failed",
+    "error": {
+        "code": "Ext_StorageConfigurationSettings_ApplyNewTempDbSettingsError",
+        "message": "Error: 'System Drive returned status not ready for use '"
+    }
+}
+```
 
 :::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the deployment error in the Azure portal." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
 
