@@ -23,6 +23,8 @@ This troubleshooting guide provides steps to help you resolve most [virtual netw
 
 :::image type="content" source="media/virtual-network-troubleshoot-peering-issues/4489538-en-1.png" alt-text="Diagram of virtual network peering" lightbox="media/virtual-network-troubleshoot-peering-issues/4489538-en-1.png":::
 
+> [!IMPORTANT]
+> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ## Configure virtual network peering between two virtual networks
 
@@ -34,9 +36,6 @@ To configure virtual network peering for the virtual networks that are in the sa
 
 * If the virtual networks are in the *same region*, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering).
 * If the virtual networks are in the *different regions*, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview). 
-
-> [!IMPORTANT]
-> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ### The virtual networks are in different subscriptions or Active Directory tenants
 
@@ -78,9 +77,6 @@ For help with troubleshooting the NVA device setup and routing, see [Network vir
 
 Transit over global virtual network peering is now supported.
 
-> [!IMPORTANT]
-> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
-
 ## Troubleshoot a connectivity issue between two peered virtual networks
 
 Sign in to the [Azure portal](https://portal.azure.com) with an account that has the necessary [roles and permissions](/azure/virtual-network/virtual-network-manage-peering#permissions). Select the virtual network, select **Peering**, and then check the **Status** field. What is the status?
@@ -104,9 +100,6 @@ To troubleshoot this issue:
 
    3. After the **TcpPing** is complete, stop the network trace on the destination.
    4. If packets arrive from the source, there is no networking issue. Examine both the VM firewall and the application listening on that port to locate the configuration issue.
-
-   > [!IMPORTANT]
-   > Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ### The peering status is "Disconnected"
 
@@ -328,9 +321,6 @@ For more information, see [Service chaining](/azure/virtual-network/virtual-netw
 ## Troubleshoot a hub-spoke network connectivity issue between spoke virtual networks in different regions
 
 Transit over global virtual network peering is now supported.
-
-> [!IMPORTANT]
-> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 For more information, see [Different VPN Topologies](/archive/blogs/igorpag/hubspoke-daisy-chain-and-full-mesh-vnet-topologies-in-azure-arm-v2).
 
