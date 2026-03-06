@@ -290,6 +290,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/how-to-use-perfinsights.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics-vm-extension.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-extension?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/linux/how-to-use-perfinsights-linux.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run",
+      "redirect_document_id": false
+    },
+       {
+      "source_path": "support/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
       "redirect_url": "https://learn.microsoft.com/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions"
     },
