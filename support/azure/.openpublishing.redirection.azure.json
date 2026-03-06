@@ -6656,6 +6656,26 @@
         {
         "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
+      },
+        {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
+    },
+        {
+      "source_path": "support/azure/virtual-machines/windows/how-to-use-perfinsights.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run?tabs=windows",
+    },
+        {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics-vm-extension.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-extension?tabs=windows",
+    },
+        {
+      "source_path": "support/azure/virtual-machines/linux/how-to-use-perfinsights-linux.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run",
+    },
+       {
+      "source_path": "support/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics",
       }
   ]
 }
