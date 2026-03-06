@@ -63,13 +63,17 @@ You can use Registry Editor or command-line commands (such as `reg add`) to set 
 If you see poor performance because of a large active working set, follow these steps to tune ReFS behavior.
 
 1. Verify that the volume is idle and doesn't have any mapped pages, and then set `RefsEnableLargeWorkingSetTrim` to `1`. Then monitor the system to see if performance improves.
+
 1. If performance doesn't improve sufficiently, verify that the VA range that's being unmapped doesn't have any active references (that is, mapped metadata pages).
+
 1. Change the value of `RefsNumberOfChunksToTrim`. Try different values, such as `8`, `16`, `32`, and so forth.
+
    > [!NOTE]  
    > The following formulas determine the granularity at which ReFS unmaps virtual address space:
    >
    > - `RefsNumberOfChunksToTrim` \* 128 MB (for volume of size > 10 TB)
    > - `RefsNumberOfChunksToTrim` \* 64 MB (for volume of size < 10 TB)
+
 1. If performance still doesn't improve, set `RefsEnableInlineTrim` to `1`.
 
 ## More information
