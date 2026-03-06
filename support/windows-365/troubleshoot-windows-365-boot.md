@@ -77,7 +77,7 @@ If you can't identify the source of the issue, remove Windows 365 Boot from the 
 
 It takes up to eight hours for Intune to remove the policies. After the removal, the physical device is no longer set up for Windows 365 Boot.
 
-### Add Windows 365 Boot to the physical device
+### Add Windows 365 Boot back to the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
 1. Select the group for your Windows 365 Boot device, and then select **Members**.
