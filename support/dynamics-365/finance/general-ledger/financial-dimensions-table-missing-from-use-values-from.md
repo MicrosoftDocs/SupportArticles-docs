@@ -34,7 +34,7 @@ The product ships with approximately 50 predefined dimension-enabled views. Only
 
 A developer must create a `DimAttribute[TableName]` view and deploy it to the environment. For instructions, see [Make backing tables consumable as financial dimensions](/dynamics365/fin-ops-core/dev-itpro/financial/dimensionable-entities).
 
-After the view is deployed and the database is synchronized, navigate to `/?mi=DimensionClearCacheScopes` in the application to clear dimension caches. This forces the framework to detect the new view immediately without requiring a server restart.
+After the view is deployed and the database is synchronized, clear the dimension caches by navigating to the **DimensionClearCacheScopes** menu item. To do this, take your current Dynamics 365 Finance URL, keep only the host (for example, `https://contoso.operations.dynamics.com`), and replace everything after the domain with `/?mi=DimensionClearCacheScopes` (for example, `https://contoso.operations.dynamics.com/?mi=DimensionClearCacheScopes`). Paste the resulting URL into your browser's address bar and press Enter. This forces the framework to detect the new view immediately without requiring a server restart.
 
 ## Potential cause 2: The table is part of the FleetManagement demo model
 
@@ -62,4 +62,4 @@ Common reasons include:
 
 Verify that the code package containing the view has been fully deployed and that the database has been synchronized. Then compare the view's structure against the step-by-step requirements in [Make backing tables consumable as financial dimensions](/dynamics365/fin-ops-core/dev-itpro/financial/dimensionable-entities).
 
-After correcting and redeploying, navigate to `/?mi=DimensionClearCacheScopes` in the application to clear the dimension caches and force immediate detection.
+After correcting and redeploying, clear the dimension caches using the same **DimensionClearCacheScopes** menu item described in the resolution for Cause 1.
