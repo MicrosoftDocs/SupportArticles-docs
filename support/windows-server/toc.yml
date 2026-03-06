@@ -648,7 +648,7 @@ items:
       href: ./backup-and-storage/extend-shrink-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
       href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
-    - name: Fix heavy memory usage in ReFS
+    - name: Tuning memory usage in ReFS
       href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
     - name: Hot-swap disks are not recognized
       href: ./backup-and-storage/hot-swap-disks-not-recognized.md
