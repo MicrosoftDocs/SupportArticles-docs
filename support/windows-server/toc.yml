@@ -416,7 +416,7 @@ items:
       href: ./active-directory/reset-directory-services-restore-mode-admin-pwd.md
     - name: How to use phantoms
       href: ./active-directory/phantoms-tombstones-infrastructure-master.md
-    - name: Let non-administrators view deleted objects container
+    - name: Let nonadministrators view the contents of the deleted objects container
       href: ./active-directory/non-administrators-view-deleted-object-container.md
     - name: Linux accounts can't get AES encrypted tickes in AD DS
       href: ./active-directory/linux-accounts-cannot-get-aes-tickets.md
@@ -2374,6 +2374,8 @@ items:
     items:
     - name: Event Tracing for Windows is simplified
       href: ./system-management-components/event-tracing-for-windows-simplified.md
+    - name: Folder audit events missing from Event Viewer in Windows Server 2019
+      href: ./system-management-components/folder-audit-events-missing-windows-server-2019.md
     - name: Security event log forwarding fails with Error 0x138C and 5004
       href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
   - name: Microsoft Management Console (MMC)
