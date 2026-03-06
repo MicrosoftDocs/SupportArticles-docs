@@ -1,25 +1,25 @@
 ---
-title: Cumulative Update 2 for SQL Server 2025 (KB5075211)
-description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 2 (KB5075211).
-ms.date: 02/12/2026
+title: Cumulative Update 3 for SQL Server 2025 (KB5077896)
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2025 Cumulative Update 3 (KB5077896).
+ms.date: 03/12/2026
 ms.update-cycle: 1095-days
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5075211
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5077896
 ms.reviewer: v-shaywood
 appliesto:
 - SQL Server 2025 on Windows
 - SQL Server 2025 on Linux
 ---
 
-# KB5075211 - Cumulative Update 2 for SQL Server 2025
+# KB5077896 - Cumulative Update 3 for SQL Server 2025
 
-_Release Date:_ &nbsp; February 12, 2026  
-_Version:_ &nbsp; 17.0.4015.4  
+_Release Date:_ &nbsp; March 12, 2026  
+_Version:_ &nbsp; 17.0.4025.3  
 
 ## Summary
 
-This article describes Cumulative Update (CU2) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 1. It updates components in the following builds:
+This article describes Cumulative Update (CU3) for Microsoft SQL Server 2025. This update package contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 2. It updates components in the following builds:
 
-- SQL Server - Product version: **17.0.4015.4**, file version: **2025.170.4015.4**
+- SQL Server - Product version: **17.0.4025.3**, file version: **2025.170.4025.3**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 ## Known issues in this update
@@ -37,14 +37,7 @@ A downloadable Microsoft Excel workbook that contains a summary list of builds, 
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following table.
 
-| Bug reference                         | Description                                                                                                                                                                                                                | Fix area                | Component                               | Platform |
-| :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------- | :-------------------------------------- | :------- |
-<a id=4838699>[4838699](#4838699)</a> | Fixes an issue that causes `StripedVdi` tests to fail if the `Sqlvdi.dll` file isn't registered on running instances.     | SQL Server Engine       | Backup Restore                         | Windows      |
-| <a id=4860948>[4860948](#4860948)</a> | For `cluster_type = NONE or EXTERNAL`, availability group (AG) properties exist on only the local replica. This update writes the properties to the AG configuration so that all AG replicas receive the same properties.                                                                                                                               | SQL Server Engine        | High Availability and Disaster Recovery                        | All  |
-| <a id=4869015>[4869015](#4869015)</a> | Fixes a potential inaccuracy in resource governor accounting for the `tempdb` space if accelerated database recovery is enabled for `tempdb`.                                                                                                                                   | SQL Server Engine       | Resource Governor                                   | All    |
-| <a id=4924793>[4924793](#4924793)</a> | Fixes an issue in which an assertion and a dump file are generated around midnight on New Year’s Day during an operation that accesses Azure Blob Storage.                                                         | SQL Server Engine       | Storage Management                                   | All    |
-| <a id=4925942>[4925942](#4925942)</a> | Fixes an issue that triggers nonyielding scheduler dump files in `PmmLogAcceptBlock` on the availability group (AG) secondary replica. The issue occurs if the persistent log buffer is enabled, and the database log cache contains primarily tiny log records.                                                                                                       | SQL Server Engine | Log Management        | All  |
-| <a id=4931611>[4931611](#4931611)</a> | Fixes an issue in which the distributor is part of an availability group (AG) and uses case-sensitive (_CS) collation. The distribution agent incorrectly uses the AG primary replica name instead of AG listener name.                                                                                                                | SQL Server Engine       | Replication        | All  |  
+<!-- TODO: Add the bug fix table here -->
 
 ## How to obtain or download this CU or the latest CU package
 
@@ -67,7 +60,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU2 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5075211)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2025 CU3 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5077896)
 
 > [!NOTE]
 >
@@ -91,20 +84,20 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the _SQLServer2025-KB5075211-x64.exe_ file through the following command:
+You can verify the download by computing the hash of the _SQLServer2025-KB5077896-x64.exe_ file through the following command:
 
-`certutil -hashfile SQLServer2025-KB5075211-x64.exe SHA256`
+`certutil -hashfile SQLServer2025-KB5077896-x64.exe SHA256`
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5075211-x64.exe | 96ECDF19BBAA193D3689F22DE20E122656F9AD9357B851A3D0FA3FCBEECC9525 |
+| SQLServer2025-KB5077896-x64.exe | 13575286CC307A4E52A056477FD8A17E79309680C6A216463F365D4ED919428D |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5075211](https://download.microsoft.com/download/0d286e28-0ed5-4303-b01f-b9179448065a/KB5075211.csv).
+Download [the list of files that are included in KB5077896](https://download.microsoft.com/download/2572f1d4-482a-4d3c-8e5d-39f3ebf18c20/KB5077896.csv).
 
 </details>
 
