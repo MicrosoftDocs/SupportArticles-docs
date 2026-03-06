@@ -10,48 +10,48 @@ ms.custom: sap:Actions\Connector actions
 
 ## Summary
 
-This article helps you resolve an HTTP 400 Bad Request error that occurs when a [connector](/connectors/) action returns too much data in Microsoft Copilot Studio. Connector responses are limited to 500 KB, and exceeding this limit causes the request to fail. This problem can occur whether you configure the connector as an agent-wide action or a topic-specific action. To fix this error, configure the connector action inputs to filter the data that the service returns.
+This article helps you resolve an HTTP 400 Bad Request error that occurs when a [connector](/connectors/) action returns too much data in Microsoft Copilot Studio. Connector responses are limited to 500 KB. A response that exceeds this limit causes the request to fail. This problem can occur whether you configure the connector as an agent-wide action or a topic-specific action. To fix this error, configure the connector action inputs to filter the data that the service returns.
 
 ## Symptoms
 
-When you use connector tools with custom agents in Copilot Studio, you get an HTTP error code 400 with the following message:
+When you use connector tools together with custom agents in Copilot Studio, you encounter HTTP error code 400 and receive the following message:
 
 > Error Code: 400, Error Message: Bad Request
 
 ## Cause
 
-The connector request to the service returns more than 500 KB of data, which exceeds the Copilot Studio connector response limit.
+The connector request to the service returns more than 500 KB of data. This amount exceeds the Copilot Studio connector response limit.
 
 ## Solution
 
 Filter the connector response data by configuring the inputs to the connector action. Most connectors include input parameters that limit the data that the service returns. The available parameters vary by connector. For connector-specific details, see the [connectors documentation](/connectors/).
 
-For example, the ServiceNow connector's [Get Knowledge Articles](/connectors/service-now/#get-knowledge-articles) action provides these filtering options:
+For example, the ServiceNow connector [Get Knowledge Articles](/connectors/service-now/#get-knowledge-articles) action provides these filtering options:
 
-- The `Filter` input parameter accepts a filter query to limit results.
-- The `Limit` input parameter restricts the number of records that are returned.
+- `Filter` input parameter - accepts a filter query to limit results
+- `Limit` input parameter - restricts the number of records that are returned
 
 Configure these inputs in Copilot Studio by using the steps for either an agent-wide tool or a topic-specific connector tool.
 
 ### Agent-wide tool
 
-1. Under **Agents**, select the agent that has the connector you want to configure.
+1. Under **Agents**, select the agent that has the connector that you want to configure.
 
 1. Select **Tools** to see the list of actions that are associated with the agent.
 
-1. Select the tool you want to configure.
+1. Select the tool that you want to configure.
 
-1. Select **Inputs**, and then edit the input field you want to configure.
+1. Select **Inputs**, and then edit the input field that you want to configure.
 
 ### Topic-specific connector tool
 
-1. Under **Agents**, select the agent that has the connector you want to configure.
+1. Under **Agents**, select the agent that has the connector that you want to configure.
 
 1. Select **Topics** to see the list of topics for the agent.
 
-1. Select the topic you want to configure to open the canvas for the topic flow.
+1. Select the topic that you want to configure to open the canvas for the topic flow.
 
-1. On the canvas, select the connector node for the connector you want to configure. The typical inputs that are identified from user input are displayed under **Inputs**.
+1. On the canvas, select the connector node for the connector that you want to configure. The typical inputs that are identified from user input are displayed under **Inputs**.
 
 1. Select **Advanced inputs** to access configurations for more input parameters.
 
