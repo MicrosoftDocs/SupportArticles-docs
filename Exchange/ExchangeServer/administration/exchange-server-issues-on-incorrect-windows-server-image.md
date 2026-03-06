@@ -1,6 +1,6 @@
 ---
-title: Resolve issues in Exchange Server installed on a non-generalized Windows Server 2025 image
-description: Describes an issue which impacts the Exchange Server installation in a Windows Server environment that didn't follow the recommended deployment procedure.
+title: Resolve issues in Exchange Server installed on a nongeneralized Windows Server 2025 image
+description: Describes an issue that impacts the Exchange Server installation in a Windows Server environment that didn't follow the recommended deployment procedure.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2016 
 ms.date: 03/05/2026
 ---
-# Resolve issues in Exchange Server installed on a non-generalized Windows Server 2025 image
+# Resolve issues in Exchange Server installed on a nongeneralized Windows Server 2025 image
 
 ## Summary
 
@@ -46,13 +46,13 @@ Also, the system logs of the affected Windows Server computer list multiple entr
 
 These issues occur if the security identifier (SID) of the affected computer is the same as the SID of another computer in the organization. Duplicate computer SIDs can occur if you:
 
-- Install Windows Server from a non-generalized image that was created without running Sysprep.
+- Install Windows Server from an image that was created without running Sysprep.
 - Clone an existing instance of Windows Server.
 - Incorrectly reuse a virtual machine (VM) snapshot or image.
 
 The duplicate SIDs might be unnoticed for a time. However, update KB5065426 introduces strict checks for duplicate SIDs. Therefore, you unexpectedly encounter issues that affect Exchange Server functionality after you install the update.
 
-To verify whether the issue is caused by duplicate computer SIDs, use the [PsGetSid](https://learn.microsoft.com/sysinternals/downloads/psgetsid) command to get the SID for each Windows Server instance in your organization.  
+To verify whether the cause of the issue is the presence of duplicate computer SIDs, use the [PsGetSid](https://learn.microsoft.com/sysinternals/downloads/psgetsid) command to get the SID for each Windows Server instance in your organization.  
   
 - To check the SID for the local computer, run the `psgetsid` command without parameters.  
 - To query the SID of a remote computer, run the `psgetsid \\<computer_name\>` command.
