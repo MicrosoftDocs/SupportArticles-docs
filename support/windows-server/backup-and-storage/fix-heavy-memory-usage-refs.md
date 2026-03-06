@@ -1,23 +1,27 @@
 ---
-title: Fix heavy memory usage in ReFS
-description: Discusses memory pressure and performance issues that occur in the Resilient File System (ReFS) in Windows. Provides a resolution and workarounds.
+title: Tuning memory usage in ReFS
+description: Discusses how to apply a cumulative update and configure registry entries to reduce ReFS memory usage.
 ms.date: 03/09/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:backup,recovery,disk,and storage\partition and volume management
+- sap:backup, recovery, disk, and storage\partition and volume management
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# FIX: Heavy memory usage in ReFS on Windows
-
-This article provides a solution to memory pressure and performance issues that occur in the Resilient File System (ReFS) in Windows.
+# Tuning memory usage in ReFS on Windows
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4016173
+
+## Summary
+
+Resilient File System (ReFS) can consume large amounts of memory because of its allocate-on-write metadata semantics and block caching logic. On systems that run Windows Server 2016, Windows Server 2019, or related versions, this behavior can cause memory pressure that degrades server performance.
+
+This article describes the cause of the issue and explains how to apply a cumulative update and configure registry entries to reduce ReFS memory usage.
 
 ## Symptoms
 
@@ -46,7 +50,7 @@ For more information, see [March 14, 2017—KB4013429 (OS Build 14393.953)](http
 You can use Registry Editor or command-line commands (such as `reg add`) to set the registry entries. The scopes of these parameters don't overlap, so you can use them in any combination. The registry entries are all under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem` subkey.
 
 | Value name | Type | Default value | Effects |
-| --- | --- | --- | ---|
+| --- | --- | --- | --- |
 | `RefsEnableLargeWorkingSetTrim` | REG_DWORD | | When set to 1, ReFS tries to a complete an MM unmap of all metadata streams at every checkpoint. |
 | `RefsNumberOfChunksToTrim` | REG_DWORD | 4 | Affects the granularity at which ReFS unmaps when it cycles the entire namespace. Setting `RefsNumberOfChunksToTrim` to higher values causes ReFS to trim more aggressively. It reduces the amount of memory that's being used. |
 | `RefsEnableInlineTrim` | REG_DWORD | | |
