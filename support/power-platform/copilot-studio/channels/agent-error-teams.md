@@ -42,9 +42,9 @@ If the error persists after refreshing the flow, verify that the input parameter
 
 1. Compare input values in Copilot Studio and in Power Automate to identify discrepancies:
 
-:::image type="content" source="media/power-automate-inputs.png" alt-text="Screenshot of a Power Automate flow, highlighting the inputs.":::
+   :::image type="content" source="media/power-automate-inputs.png" alt-text="Screenshot of a Copilot Studio Action node, highlighting the Power Automate inputs.":::
 
-:::image type="content" source="media/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent performs when the flow is called.":::
+   :::image type="content" source="media/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent performs when the flow is called.":::
 
 1. If any input value is null, add a **Message** action in the flow to capture and return the input values so you can debug and validate what is returned to Teams.
 
