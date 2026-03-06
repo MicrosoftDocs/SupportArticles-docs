@@ -8,7 +8,7 @@ manager: dcscontentpm
 ms.assetid: 1a3d1e84-f793-41b4-aa04-774a7e8f7719
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 08/28/2019
+ms.date: 03/05/2026
 ms.custom: 
   - sfi-image-nochange
   - = sap:Connectivity
@@ -35,20 +35,8 @@ To configure virtual network peering for the virtual networks that are in the sa
 * If the virtual networks are in the *same region*, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering).
 * If the virtual networks are in the *different regions*, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview). 
 
-> [!Note]
-> Connectivity doesn't work over global virtual network peering for the following resources: 
->
-> * Virtual machines (VMs) behind Basic internal load balancer (ILB) SKU
-> * Redis cache (uses Basic ILB SKU)
-> * Application gateway v1 (uses Basic ILB SKU)
-> * Virtual machine scale sets (uses Basic ILB SKU)
-> * Azure Service Fabric clusters (uses Basic ILB SKU)
-> * SQL Server Always On (uses Basic ILB SKU)
-> * Azure App Service Environment for Power Apps (uses Basic ILB SKU)
-> * Azure API Management (uses Basic ILB SKU)
-> * Microsoft Entra Domain Services (uses Basic ILB SKU)
-
-For more information, see the [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints) of global peering.
+> [!IMPORTANT]
+> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ### The virtual networks are in different subscriptions or Active Directory tenants
 
@@ -88,19 +76,10 @@ For help with troubleshooting the NVA device setup and routing, see [Network vir
 
 ### The virtual networks are in different regions
 
-Transit over global virtual network peering is now supported. Connectivity does not work over global virtual network peering for the following resources:
+Transit over global virtual network peering is now supported.
 
-* VMs behind Basic ILB SKU
-* Redis cache (uses Basic ILB SKU)
-* Application gateway (uses Basic ILB SKU)
-* Scale sets (uses Basic ILB SKU)
-* Service Fabric clusters (uses Basic ILB SKU)
-* SQL Server Always On (uses Basic ILB SKU)
-* App Service Environment (uses Basic ILB SKU)
-* API Management (uses Basic ILB SKU)
-* Microsoft Entra Domain Services (uses Basic ILB SKU)
-
-To learn more about global peering requirements and restraints, see [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
+> [!IMPORTANT]
+> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ## Troubleshoot a connectivity issue between two peered virtual networks
 
@@ -126,24 +105,56 @@ To troubleshoot this issue:
    3. After the **TcpPing** is complete, stop the network trace on the destination.
    4. If packets arrive from the source, there is no networking issue. Examine both the VM firewall and the application listening on that port to locate the configuration issue.
 
-   > [!Note]
-   > You can't connect to the following resource types over global virtual network peering (virtual networks in different regions):
-   >
-   > * VMs behind Basic ILB SKU
-   > * Redis cache (uses Basic ILB SKU)
-   > * Application gateway (uses Basic ILB SKU)
-   > * Scale sets (uses Basic ILB SKU)
-   > * Service Fabric clusters (uses Basic ILB SKU)
-   > * SQL Server Always On (uses Basic ILB SKU)
-   > * App Service Environment (uses Basic ILB SKU)
-   > * API Management (uses Basic ILB SKU)
-   > * Microsoft Entra Domain Services (uses Basic ILB SKU)
-
-For more information, see the [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints) of global peering.
+   > [!IMPORTANT]
+   > Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
 ### The peering status is "Disconnected"
 
-To resolve this issue, delete the peering from both virtual networks, and then re-create them.
+A **Disconnected** peering status means that one of the two peering links was deleted. Traffic can't flow between the virtual networks until peering is reestablished.
+
+#### Common causes
+
+- **Manual deletion**: A peering link was deleted from one side but not the other. When one link is removed, the remaining link transitions to **Disconnected**.
+- **Address space changes**: If the address space of a peered virtual network was modified and the peering wasn't synced, the peering can enter a **Disconnected** state. For information about syncing after address space changes, see [Update the address space for a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space).
+- **Subscription or tenant changes**: Moving a virtual network to a different subscription or tenant can break existing peering connections.
+- **Azure Policy enforcement**: An Azure Policy that restricts peering or network configurations might cause a peering to be removed or blocked.
+
+#### Diagnose asymmetric peering states
+
+The peering status can become asymmetric between the two virtual networks. For example, one side shows **Connected** while the other shows **Initiated** or **Disconnected**. To check the peering state on both sides:
+
+1. In the [Azure portal](https://portal.azure.com), go to each virtual network and select **Peering**.
+2. Compare the **Status** field for the peering on both sides.
+3. To check via Azure CLI, run the following command for each virtual network:
+
+   ```azurecli
+   az network vnet peering show --resource-group <resource-group> --vnet-name <vnet-name> --name <peering-name> --query peeringState
+   ```
+
+The possible peering states are:
+
+| State | Description |
+|---|---|
+| **Initiated** | Only the first peering link was created. Create the peering from the second virtual network to complete the connection. |
+| **Connected** | Both peering links exist and traffic can flow. |
+| **Disconnected** | One peering link was deleted. Both links must be deleted and re-created. |
+
+#### Resolution
+
+1. Delete the remaining peering link from both virtual networks. In the Azure portal, go to each virtual network, select **Peering**, and delete the peering entry.
+
+   To delete via Azure CLI:
+
+   ```azurecli
+   az network vnet peering delete --resource-group <resource-group> --vnet-name <vnet-name> --name <peering-name>
+   ```
+
+2. Re-create the peering from both virtual networks. Ensure that the correct settings for **Allow forwarded traffic**, **Allow gateway transit**, and **Use remote gateways** are configured on each side.
+
+3. Verify that the peering status shows **Connected** on both sides after re-creation.
+
+> [!NOTE]
+> You can't re-create a peering while one side is in a **Disconnected** state. You must delete the peering from both virtual networks first, and then create new peering links.
 
 ## Troubleshoot a connectivity issue between a hub-spoke virtual network and an on-premises resource
 
@@ -180,6 +191,134 @@ For point-to-site connections:
 * On the virtual network that doesn't have a gateway, verify that the **Use remote gateway** check box is selected.
 * Download and reinstall the point-to-site client package. Virtual network routes that are newly peered don't automatically add routes to point-to-site clients.
 
+## Troubleshoot peering sync failures
+
+When you modify the address space of a peered virtual network, you must sync the peering for each remote peered virtual network to pick up the changes. If the sync isn't performed, traffic might not route correctly between the peered virtual networks.
+
+### Verify peering state on both sides
+
+1. In the [Azure portal](https://portal.azure.com), go to each virtual network and select **Peering**. Verify that the **Status** shows **Connected** for both sides.
+
+2. To check the peering state and address prefixes via Azure CLI:
+
+   ```azurecli
+   az network vnet peering show \
+     --resource-group <resource-group> \
+     --vnet-name <vnet-name> \
+     --name <peering-name> \
+     --query "{state:peeringState, remoteAddressSpace:remoteAddressSpace.addressPrefixes}"
+   ```
+
+3. To check via Azure PowerShell:
+
+   ```azurepowershell
+   Get-AzVirtualNetworkPeering -ResourceGroupName <resource-group> -VirtualNetworkName <vnet-name> | Select-Object Name, PeeringState, RemoteVirtualNetworkAddressSpace
+   ```
+
+### Common sync issues
+
+| Issue | Symptom | Resolution |
+|---|---|---|
+| Address space not updated after resize | Peered virtual network doesn't reflect modified address ranges. Routes for the new address space are missing. | In the Azure portal, go to the virtual network, select **Peering**, select the peering, and then select **Sync**. Repeat for each remote peer. For more information, see [Update the address space for a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space). |
+| Peering state stuck on "Initiated" | Only one peering link was created. The second virtual network doesn't have a corresponding peering. | Create the peering from the second virtual network to the first. Both links are required for the status to change to **Connected**. |
+| Routes not propagating after new peering | The effective routes on VMs in the virtual network don't show the peered virtual network's address space. | Wait a few minutes for Azure to propagate the routes. Then check the effective routes on a network interface. See [Diagnose a virtual machine routing problem](/azure/virtual-network/diagnose-network-routing-problem). |
+| Peering sync fails across tenants | Sync operation fails or address changes aren't visible to the remote peer in a different tenant. | Ensure that the account performing the sync has the required permissions in both tenants. For cross-tenant peering, see [Create a virtual network peering between different subscriptions](/azure/virtual-network/create-peering-different-subscriptions). |
+
+### Sync the peering after address space changes
+
+After you add, modify, or delete address ranges in a peered virtual network, sync the peering:
+
+1. In the Azure portal, go to the virtual network where the address space was changed.
+2. Select **Peering**, and then select the checkbox for the peering connection.
+3. Select **Sync**.
+4. Repeat for each remote peered virtual network.
+
+To sync via Azure CLI:
+
+```azurecli
+az network vnet peering sync --resource-group <resource-group> --vnet-name <vnet-name> --name <peering-name>
+```
+
+> [!IMPORTANT]
+> Run the sync operation after every resize address space change, rather than batching multiple resize operations before syncing. Address space sync isn't supported when the virtual network is peered with a classic virtual network.
+
+## Troubleshoot route table conflicts across peered virtual networks
+
+User-defined routes (UDRs) can override the default system routes that Azure creates for peered virtual networks. This override can cause asymmetric routing or dropped traffic in hub-spoke topologies.
+
+### How UDRs interact with peering routes
+
+When you create a virtual network peering, Azure automatically adds system routes with the next hop type **VNet peering** for each address space in the peered virtual network. If a UDR in a route table has the same address prefix as a peering route, the UDR takes precedence and overrides the peering system route. This behavior can cause traffic to be routed to an NVA or dropped instead of flowing directly to the peered virtual network.
+
+For more information about route selection priority, see [How Azure selects a route](/azure/virtual-network/virtual-networks-udr-overview#how-azure-selects-a-route).
+
+### Diagnose asymmetric routing in hub-spoke topologies
+
+In hub-spoke topologies where an NVA in the hub inspects traffic, UDRs in the spoke subnets typically route traffic through the NVA. If the return path from the destination doesn't follow the same route through the NVA, this creates asymmetric routing that can cause connection failures.
+
+To diagnose asymmetric routing:
+
+1. Check the effective routes on the network interface of a VM in the spoke subnet:
+   - In the Azure portal, go to the VM, select **Networking**, select the network interface, and then select **Effective routes**.
+   - Look for routes with the next hop type **VNet peering** and compare them with any UDR entries that might override them.
+
+2. To view effective routes via Azure CLI:
+
+   ```azurecli
+   az network nic show-effective-route-table --resource-group <resource-group> --name <nic-name> --output table
+   ```
+
+3. Verify that UDRs in both the source and destination subnets create a symmetric path through the NVA. If the NVA only sees traffic in one direction, the stateful firewall might drop the return traffic.
+
+### Common route table conflict scenarios
+
+| Scenario | Symptom | Resolution |
+|---|---|---|
+| UDR overrides peering route | Traffic to a peered virtual network is sent to an NVA or dropped instead of flowing directly to the peer. | Review the route table associated with the subnet. Remove or adjust the UDR that conflicts with the peering address space. |
+| Missing UDR for return traffic | Traffic flows to the destination through an NVA, but the return traffic bypasses the NVA, causing the connection to fail. | Add a UDR to the destination subnet that routes return traffic back through the same NVA. |
+| BGP route overrides peering route | A BGP route advertised from an on-premises network overlaps with a peered virtual network address space. | Check the BGP routes learned by the virtual network gateway. Adjust the on-premises advertisement or use a more specific UDR to direct traffic correctly. |
+
+> [!TIP]
+> Use Network Watcher [next hop](/azure/network-watcher/network-watcher-next-hop-overview) to verify the next hop for a specific traffic flow between VMs in peered virtual networks. This helps you confirm whether a UDR is overriding the expected peering route.
+
+## Troubleshoot overlapping address spaces in peered virtual networks
+
+Azure doesn't allow virtual network peering between two virtual networks that have overlapping address spaces. If you attempt to create a peering with overlapping CIDR ranges, the operation fails.
+
+### Common error messages
+
+When you try to create a peering with overlapping address spaces, you might see errors such as:
+
+- *"Virtual network address space \<address-space\> overlaps with the address space of the already peered virtual network."*
+- *"Cannot create or update peering because address space of virtual networks overlap."*
+
+### Identify overlapping CIDR ranges
+
+To identify overlapping address spaces:
+
+1. In the Azure portal, go to each virtual network and select **Address space** under **Settings**.
+2. Compare the address ranges between the two virtual networks to find any CIDR ranges that overlap.
+3. To list address spaces via Azure CLI:
+
+   ```azurecli
+   az network vnet show --resource-group <resource-group> --name <vnet-name> --query "addressSpace.addressPrefixes"
+   ```
+
+Two CIDR ranges overlap if any portion of the IP address ranges intersects. For example, `10.0.0.0/16` and `10.0.1.0/24` overlap because `10.0.1.0/24` is a subset of `10.0.0.0/16`.
+
+### Resolution
+
+To resolve overlapping address spaces, choose one of the following approaches:
+
+- **Resize one of the virtual networks**: Remove or modify the overlapping address range so that the two virtual networks don't share any CIDR ranges. For more information, see [Update the address space for a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space).
+
+  > [!IMPORTANT]
+  > Before removing an address range, ensure that no subnets or resources are deployed within that range.
+
+- **Use Azure Virtual Network Manager**: If you manage multiple peered virtual networks, use [Azure Virtual Network Manager](/azure/virtual-network-manager/overview) with the `ConnectedGroupAddressOverlap` property set to **Disallowed** to prevent overlapping address spaces in mesh topologies.
+
+- **Plan address spaces before peering**: Review the address allocation of all virtual networks involved before establishing peering. Use a centralized IP address management (IPAM) solution to avoid future conflicts.
+
 ## Troubleshoot a hub-spoke network connectivity issue between spoke virtual networks in the same region
 
 A hub network must include an NVA. Configure UDRs in spokes that have an NVA set as the next hop, and enable **Allow forwarded traffic** in the hub virtual network.
@@ -188,19 +327,12 @@ For more information, see [Service chaining](/azure/virtual-network/virtual-netw
 
 ## Troubleshoot a hub-spoke network connectivity issue between spoke virtual networks in different regions
 
-Transit over global virtual network peering is now supported. Connectivity doesn't work over global virtual network peering for the following resources:
+Transit over global virtual network peering is now supported.
 
-* VMs behind Basic ILB SKU
-* Redis cache (uses Basic ILB SKU)
-* Application gateway (uses Basic ILB SKU)
-* Scale sets (uses Basic ILB SKU)
-* Service Fabric clusters (uses Basic ILB SKU)
-* SQL Server Always On (uses Basic ILB SKU)
-* App Service Environment (uses Basic ILB SKU)
-* API Management (uses Basic ILB SKU)
-* Microsoft Entra Domain Services (uses Basic ILB SKU)
+> [!IMPORTANT]
+> Azure Basic Load Balancer was [retired on September 30, 2025](/azure/load-balancer/load-balancer-basic-upgrade-guidance). Resources that used Basic internal load balancer SKUs don't work over global virtual network peering. If you haven't migrated yet, [upgrade to Standard Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance). For more information about global peering constraints, see [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints).
 
-For more information, see the [requirements and constraints](/azure/virtual-network/virtual-network-peering-overview#requirements-and-constraints) of global peering and [Different VPN Topologies](/archive/blogs/igorpag/hubspoke-daisy-chain-and-full-mesh-vnet-topologies-in-azure-arm-v2).
+For more information, see [Different VPN Topologies](/archive/blogs/igorpag/hubspoke-daisy-chain-and-full-mesh-vnet-topologies-in-azure-arm-v2).
 
 ## Troubleshoot a hub-spoke network connectivity issue between a web app and the spoke virtual network
 
@@ -241,3 +373,4 @@ There are two ways to resolve the issue:
 ## Next steps
 
 * [Troubleshooting connectivity problems between Azure VMs](/azure/virtual-network/virtual-network-troubleshoot-connectivity-problem-between-vms)
+* [Network Watcher overview](/azure/network-watcher/network-watcher-monitoring-overview) - Use Connection Troubleshoot, IP flow verify, next hop, and effective routes to diagnose peering connectivity issues.
