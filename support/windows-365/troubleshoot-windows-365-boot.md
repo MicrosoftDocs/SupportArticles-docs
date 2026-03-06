@@ -2,7 +2,7 @@
 title: Troubleshoot Windows 365 Boot
 description: Troubleshoot issues that occur when you set up or manage Windows 365 Boot devices.
 manager: dcscontentpm
-ms.date: 03/06/2026
+ms.date: 03/09/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:
@@ -31,7 +31,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 1. If a user has more than one Cloud PC, make sure that they select a default Cloud PC to use each time that they sign in. To set this default, follow these steps:
 
    1. Go to [Windows 365](https://windows365.microsoft.com).
-   1. On the card for the Cloud PC that you that want to set as default, select the **Settings** button (**...**).
+   1. On the card for the Cloud PC that you that want to set as default, select the **More options** ellipsis (**...**), and then select **Settings**.
    1. On the **Integrated experiences** tab, locate the **Boot to this Cloud PC** section, and then select **Connect while signed into device**.
    1. Select **Save**.
 
@@ -41,7 +41,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 
 ## Physical device registry key configuration
 
-Check the following registry keys to verify that the physical device is correctly configured to run Windows 365 Boot. 
+Check the following registry entries to verify that the physical device is correctly configured to run Windows 365 Boot. If needed, create or update the registry entries.
 
 | Registry key name | Registry value name | Registry value |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ This cmdlet shows all the Microsoft-maintained apps (such as QuickAssist and Mic
 
 ## Remove and add Windows 365 Boot to the physical device again
 
-If you can't identify the source of the issue, remove Windows 365 Boot from the device, and then restore it.
+If you can't identify the source of the issue, remove Windows 365 Boot from the device, and then add it again.
 
 ### Remove Windows 365 Boot from the physical device
 
@@ -77,7 +77,7 @@ If you can't identify the source of the issue, remove Windows 365 Boot from the 
 
 It takes up to eight hours for Intune to remove the policies. After the removal, the physical device is no longer set up for Windows 365 Boot.
 
-### Restore Windows 365 Boot to the physical device
+### Add Windows 365 Boot to the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
 1. Select the group for your Windows 365 Boot device, and then select **Members**.
@@ -116,17 +116,17 @@ Put these logs into a zip file, and provide it to the Microsoft Support team for
 
 ### Windows 365 error and session IDs
 
-To help the investigation, collect the CorrelationId, SessionID, or ActivityID of the physical device.
+To help the investigation, collect any CorrelationId or SessionID value that Windows 365 provides, or ActivityID of the physical device.
 
 #### Session ID
 
-The Windows 365 Session ID is provided in an error dialog box that displays an error message such as **Something went wrong**.
+The Windows 365 Session ID appears in error messages such as **Something went wrong**.
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/something-went-wrong.png" alt-text="Screenshot that shows the error that contains the Windows 365 session ID." border="false":::
 
 #### Correlation ID
 
-The Correlation ID is displayed in the interstitial screen that appears during a five-minute timeout.
+The Correlation ID appears on the interstitial screen that appears during a five-minute timeout.
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 
