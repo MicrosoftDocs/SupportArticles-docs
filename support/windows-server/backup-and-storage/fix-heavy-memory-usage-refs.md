@@ -19,27 +19,27 @@ _Original KB number:_ &nbsp; 4016173
 
 ## Summary
 
-Resilient File System (ReFS) can consume large amounts of memory because of its allocate-on-write metadata semantics and block caching logic. On systems that run Windows Server 2016, Windows Server 2019, or related versions, this behavior can cause memory pressure that degrades server performance.
+Resilient File System (ReFS) can consume large amounts of memory because of its allocate-on-write metadata semantics and block caching logic. On systems that run Windows Server 2019, Windows Server 2016, or related versions, this behavior can cause memory pressure that degrades server performance.
 
 This article describes the cause of the issue and explains how to apply a cumulative update and configure registry entries to reduce ReFS memory usage.
 
 ## Symptoms
 
-You notice heavy memory usage on a computer that's running Windows 10, Windows Server 2016, Windows Server 2019, Windows Server, 1903 or Windows Server, version 1909.
+You notice heavy memory usage on a computer that's running Windows 10, Windows Server 2019, Windows Server 2016, Windows Server, version 1909, or Windows Server, version 1903.
 
 ## Cause
 
-To provide greater resiliency for its metadata, the Resilient File System (ReFS) in Windows Server 2016 uses *allocate-on-write* semantics for all metadata updates. This approach means that ReFS never makes in-place updates to metadata. Instead, it makes all writes to newly allocated regions.
+To provide greater resiliency for its metadata, Resilient File System (ReFS) in Windows Server 2016 uses *allocate-on-write* semantics for all metadata updates. This approach means that ReFS never makes in-place updates to metadata. Instead, it makes all writes to newly allocated regions.
 
-However, allocating-on-write causes ReFS to issue more metadata I/O to new regions of the volume than write-in-place file systems do. Additionally, ReFS uses block caching logic to cache its metadata in RAM. It isn't as resource-efficient as file caching logic.
+However, using allocate-on-write causes ReFS to issue more metadata I/O to new regions of the volume than write-in-place file systems do. Additionally, ReFS uses block caching logic to cache its metadata in RAM. It isn't as resource efficient as file caching logic.
 
 Because of the ReFS block caching logic and allocate-on-write semantics, ReFS uses large metadata streams. ReFS uses the cache manager to create the metadata streams, and the cache manager unmaps inactive views in a lazy manner. In some situations, this lazy unmapping causes the active working set on the server to grow. This growth creates memory pressure that can, in turn, cause poor performance.
 
 ## Resolution
 
-This issue is addressed in cumulative update 4013429, which was released on March 14, 2017. The update introduces three tunable registry entries that you can use to adjust large ReFS metadata streams.
+This issue is addressed in cumulative update (CU) 4013429 that was released on March 14, 2017. The update introduces three tunable registry entries that you can use to adjust large ReFS metadata streams.
 
-Cumulative update 4013429 is available through Windows Update. You can also download it directly from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=4013429).
+CU 4013429 is available through Windows Update. You can also download it directly from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=4013429).
 
 For more information, see [March 14, 2017—KB4013429 (OS Build 14393.953)](https://support.microsoft.com/help/4013429/)
 
@@ -58,11 +58,11 @@ You can use Registry Editor or command-line commands (such as `reg add`) to set 
 > [!IMPORTANT]  
 >
 > - After you change these parameters, you have to restart the computer.
-> - On a failover cluster, you have to set these parameters the same way on every cluster node.
+> - On a failover cluster, you have to set these parameters in the same manner on every cluster node.
 
-If you see poor performance because of a large active working set, follow these steps to tune ReFS behavior.
+If you see poor performance because of a large active working set, follow these steps to tune ReFS behavior:
 
-1. Verify that the volume is idle and doesn't have any mapped pages, and then set `RefsEnableLargeWorkingSetTrim` to `1`. Then monitor the system to see if performance improves.
+1. Verify that the volume is idle and doesn't have any mapped pages. Then, set `RefsEnableLargeWorkingSetTrim` to `1`, and monitor the system to see whether performance improves.
 
 1. If performance doesn't improve sufficiently, verify that the VA range that's being unmapped doesn't have any active references (that is, mapped metadata pages).
 
@@ -78,7 +78,7 @@ If you see poor performance because of a large active working set, follow these 
 
 ## More information
 
-To improve its resiliency to corruption, ReFS uses allocate-on-write instead of writing-in-place to update its metadata. A power failure or an unexpected dismount can cause "torn writes" (writes that are only partially completed) in a system that uses writing-in-place. However, under the same circumstances, a system that uses allocate-on-write can still reference the previous, consistent metadata copy. In this manner, ReFS reliably maintains metadata consistency.
+To improve its resiliency to corruption, ReFS uses allocate-on-write instead of write-in-place to update its metadata. A power failure or an unexpected dismount can cause "torn writes" (writes that are only partially completed) in a system that uses write-in-place. However, under the same circumstances, a system that uses allocate-on-write can still reference the previous, consistent metadata copy. In this manner, ReFS reliably maintains metadata consistency.
 
 ## References
 
