@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: java
 ms.reviewer: mmcc, lechen, aaronmax
-ms.custom: sap:Missing or incorrect telemetry and performance issues(
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 
 # Troubleshoot OpenTelemetry issues in Java
