@@ -55,7 +55,7 @@ You can use Registry Editor or command-line commands (such as `reg add`) to set 
 | `RefsNumberOfChunksToTrim` | REG_DWORD | 4 | Affects the granularity at which ReFS unmaps when it cycles the entire namespace. Setting `RefsNumberOfChunksToTrim` to higher values causes ReFS to trim more aggressively. It reduces the amount of memory that's being used. |
 | `RefsEnableInlineTrim` | REG_DWORD | | |
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 >
 > - After you change these parameters, you have to restart the computer.
 > - On a failover cluster, you have to set these parameters the same way on every cluster node.
