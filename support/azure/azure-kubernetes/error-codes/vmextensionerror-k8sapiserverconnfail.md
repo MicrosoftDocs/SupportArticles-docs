@@ -26,7 +26,8 @@ When you try to start or create an AKS cluster, you receive the following error 
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
 > Error message: "**CSE failed with 'VMExtensionError_K8SAPIServerConnFail'. Agents are unable to establish connection to Kubernetes API server, please see https://aka.ms/aks/vmextensionerror_k8sapiserverconnfail and https://aka.ms/aks-required-ports-and-addresses for more information**.
->
+
+> “In some logs, this may also appear as exit status=51 / ExitCode: 51"
 
 ## Cause
 
