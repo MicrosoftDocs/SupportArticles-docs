@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot agent error in Microsoft Teams
+title: FlowActionBadRequest agent error in Microsoft Teams
 description: Learn how to fix the `FlowActionBadRequest` error in Microsoft Teams by updating the agent correctly in Microsoft Copilot Studio.
 ms.date: 03/05/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Channels
 ---
 
-# Troubleshoot agent error in Microsoft Teams
+# FlowActionBadRequest agent error in Microsoft Teams
 
 This article addresses the `FlowActionBadRequest` error you might encounter in Microsoft Teams when using Copilot Studio. It provides actionable steps to diagnose and resolve the issue related to input/output schema mismatches in flow actions, helping you restore proper agent functionality.
 
