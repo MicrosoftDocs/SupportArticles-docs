@@ -106,10 +106,12 @@ items:
           href: ../administration/insufficient-access-rights-perform-operation.md
         - name: EWS App pool crashes
           href: ../administration/ews-app-pool-crashes.md
-        - name: Exchange Server 2019 and 2016 end of support roadmap
-          href: ../administration/exchange-2019-2016-end-of-support.md
         - name: Exchange CU installation fails
           href: ../administration/cannot-install-exchange-cu-localized-windows.md
+        - name: Exchange Server 2019 and 2016 end of support roadmap
+          href: ../administration/exchange-2019-2016-end-of-support.md
+        - name: Issues in Exchange Server on a non-generalized Windows Server 2025 image
+          href: ../administration/exchange-server-issues-on-incorrect-windows-server-image.md          
         - name: Fail to add mailbox database copy
           href: ../administration/add-database-copy-seeding-operation-failed.md
         - name: Fail to change the ownership of a distribution group
