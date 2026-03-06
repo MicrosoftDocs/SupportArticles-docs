@@ -16,8 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server SE
-  - Exchange Server 2019 
-  - Exchange Server 2016 
+  - Exchange Server 2019  
 ms.date: 03/05/2026
 ---
 # Resolve issues in Exchange Server installed on a nongeneralized Windows Server 2025 image
