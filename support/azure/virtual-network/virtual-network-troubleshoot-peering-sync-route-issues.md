@@ -63,7 +63,7 @@ After you create or modify a virtual network peering, Azure automatically adds s
    - Verify that the address spaces on both virtual networks are correct and don't overlap.
    - Check that no [Azure Policy](/azure/governance/policy/overview) is blocking the route propagation.
 
-4. If the routes appear but connectivity still fails, check for user-defined routes (UDRs) or network security groups (NSGs) that might be overriding or blocking the peering traffic. For more information, see [Troubleshoot route table conflicts across peered virtual networks](virtual-network-troubleshoot-peering-issues.md#troubleshoot-route-table-conflicts-across-peered-virtual-networks).
+4. If the routes appear but connectivity still fails, check for user-defined routes (UDRs) or network security groups (NSGs) that might be overriding or blocking the peering traffic. For more information, see [Troubleshoot virtual network peering problems](virtual-network-troubleshoot-peering-issues.md).
 
 ## Cause 2: Peering sync required after address space changes
 
