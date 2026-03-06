@@ -23,6 +23,8 @@ items:
   href: troubleshoot-outbound-smtp-connectivity.md
 - name: Troubleshoot virtual network peering issues
   href: virtual-network-troubleshoot-peering-issues.md        
+- name: Troubleshoot virtual network peering route propagation and sync issues
+  href: virtual-network-troubleshoot-peering-sync-route-issues.md
 - name: Troubleshoot connectivity problems between Azure VMs
   href: virtual-network-troubleshoot-connectivity-problem-between-vms.md
 - name: Can't delete a virtual network in Azure
