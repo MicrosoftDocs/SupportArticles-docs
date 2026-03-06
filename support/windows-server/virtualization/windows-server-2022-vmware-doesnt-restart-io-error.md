@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, simonw, v-appelgatet
+ai-usage: ai-assisted
 ms.custom:
 - sap:virtualization and hyper-v\high availability virtual machines
 - pcy:WinComm Storage High Avail
