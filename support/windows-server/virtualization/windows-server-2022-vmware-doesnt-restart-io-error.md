@@ -16,7 +16,7 @@ appliesto:
 
 ## Summary
 
-When you try to restart a Windows Server 2022 virtual machine (VM) that runs on VMware, the VM doesn't restart. Instead, the VM displays an unrecoverable input/output (I/O) operation error. This error occurs if the operating system can't flush a registry hive to disk. This condition can affect system stability or data integrity.
+When you try to restart a Windows Server 2022 virtual machine (VM) that runs on VMware, the VM doesn't restart. Instead, the VM displays an "unrecoverable input/output (I/O) operation" error. This error occurs if the operating system can't flush a registry hive to disk. This condition can affect system stability or data integrity.
 
 This article helps you identify the component that's causing the failure and resolve the issue.
 
