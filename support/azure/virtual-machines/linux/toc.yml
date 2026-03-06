@@ -93,7 +93,7 @@ items:
       href: how-to-use-perfinsights-linux.md
     - name: Analyze data
       href: ../windows/performance-diagnostics-vm-extension.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Extension
+    - name: Extension 
       href: ../windows/perfinsights-and-scale-set-vm-instances.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Troubleshoot VM Performance Bottlenecks
     href: troubleshoot-performance-bottlenecks-linux.md
