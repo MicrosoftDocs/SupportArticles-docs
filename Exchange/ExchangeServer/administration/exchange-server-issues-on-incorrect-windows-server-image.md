@@ -52,7 +52,7 @@ These issues occur if the security identifier (SID) of the affected computer is 
 
 The duplicate SIDs might be unnoticed for a time. However, update KB5065426 introduces strict checks for duplicate SIDs. Therefore, you unexpectedly encounter issues that affect Exchange Server functionality after you install the update.
 
-To verify whether the cause of the issue is the presence of duplicate computer SIDs, use the [PsGetSid](https://learn.microsoft.com/sysinternals/downloads/psgetsid) command to get the SID for each Windows Server instance in your organization.  
+To verify whether the cause of the issue is the presence of duplicate computer SIDs, use the [PsGetSid](/sysinternals/downloads/psgetsid) command to get the SID for each Windows Server instance in your organization.  
   
 - To check the SID for the local computer, run the `psgetsid` command without parameters.  
 - To query the SID of a remote computer, run the `psgetsid \\<computer_name\>` command.
@@ -63,6 +63,6 @@ If the SIDs of two or more computers match, then the issue is caused by a duplic
 
 To resolve the issues, follow these steps:
 
-1. Rebuild the operating system (OS). If you deploy the OS from an image, make sure that the image was correctly generalized by using [SysPrep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11).
+1. Rebuild the operating system (OS). If you deploy the OS from an image, make sure that the image was correctly generalized by using [SysPrep](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11&preserve-view=true).
 
 2. Restore the Exchange Server instance by using the [/Mode:RecoverServer](/exchange/high-availability/disaster-recovery/recover-exchange-servers) method.
