@@ -66,7 +66,7 @@ If you see poor performance because of a large active working set, follow these 
 1. If performance doesn't improve sufficiently, verify that the VA range that's being unmapped doesn't have any active references (that is, mapped metadata pages).
 1. Change the value of `RefsNumberOfChunksToTrim`. Try different values, such as `8`, `16`, `32`, and so forth.
    > [!NOTE]  
-   > The amount of virtual address space that is unmapped is determined by the following formulas:
+   > The following formulas determine the granularity at which ReFS unmaps virtual address space:
    >
    > - `RefsNumberOfChunksToTrim` \* 128 MB (for volume of size > 10 TB)
    > - `RefsNumberOfChunksToTrim` \* 64 MB (for volume of size < 10 TB)
