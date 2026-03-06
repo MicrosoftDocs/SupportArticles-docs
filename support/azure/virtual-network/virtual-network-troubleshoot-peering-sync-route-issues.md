@@ -11,9 +11,9 @@ ms.custom:
 # Customer intent: As a network engineer, I want to troubleshoot route propagation and sync issues with virtual network peering, so that I can restore connectivity between peered virtual networks.
 ---
 
-# Troubleshoot virtual network peering route propagation and sync issues
+# Troubleshoot virtual network peering route propagation and sync problems
 
-This article helps you diagnose and resolve common route propagation, peering synchronization, DNS resolution, and monitoring issues with Azure [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). For general peering troubleshooting including configuration, connectivity, and error messages, see [Troubleshoot virtual network peering issues](virtual-network-troubleshoot-peering-issues.md).
+This article helps you diagnose and resolve common route propagation, peering synchronization, DNS resolution, and monitoring problems with Azure [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). For general peering troubleshooting including configuration, connectivity, and error messages, see [Troubleshoot virtual network peering problems](virtual-network-troubleshoot-peering-issues.md).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ This article helps you diagnose and resolve common route propagation, peering sy
 
 ## Cause 1: Route propagation delays after peering creation or modification
 
-After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **VNet peering** for each address range in the peered virtual network. These route updates don't take effect instantly — propagation can take a few minutes to complete.
+After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **VNet peering** for each address range in the peered virtual network. These route updates don't take effect instantly - propagation can take a few minutes to complete.
 
 ### Symptoms
 
@@ -67,7 +67,7 @@ After you create or modify a virtual network peering, Azure automatically adds s
 
 ## Cause 2: Peering sync required after address space changes
 
-When you add, modify, or remove address ranges in a peered virtual network, the peering must be synced to update the remote peer's routing information. If you skip or delay the sync, the remote peered virtual network continues to use the old address space, which can cause routing failures.
+When you add, modify, or remove address ranges in a peered virtual network, the peering must sync to update the remote peer's routing information. If you skip or delay the sync, the remote peered virtual network continues to use the old address space, which can cause routing failures.
 
 ### Symptoms
 
@@ -97,7 +97,7 @@ When you add, modify, or remove address ranges in a peered virtual network, the 
 2. If the values don't match, sync the peering:
 
    **Azure portal:**
-   1. Go to the virtual network where the address space was changed.
+   1. Go to the virtual network where you changed the address space.
    2. Select **Peering**, and then select the checkbox next to the peering.
    3. Select **Sync**.
    4. Repeat for each remote peered virtual network.
@@ -128,7 +128,7 @@ When you add, modify, or remove address ranges in a peered virtual network, the 
 
 ## Cause 3: DNS resolution failures across peered virtual networks
 
-Virtual network peering provides network-layer connectivity between peered virtual networks, but it doesn't automatically enable DNS name resolution across peers. VMs in one virtual network can't resolve the private DNS names of VMs in a peered virtual network using only the default Azure-provided DNS.
+Virtual network peering provides network-layer connectivity between peered virtual networks, but it doesn't automatically enable DNS name resolution across peers. VMs in one virtual network can't resolve the private DNS names of VMs in a peered virtual network by using only the default Azure-provided DNS.
 
 ### Symptoms
 
@@ -162,7 +162,7 @@ Virtual network peering provides network-layer connectivity between peered virtu
      --registration-enabled true
    ```
 
-3. After both links are created, VMs in either virtual network can resolve each other's names using the `<hostname>.contoso.internal` format.
+3. After you create both links, VMs in either virtual network can resolve each other's names by using the `<hostname>.contoso.internal` format.
 
 ### Solution 2: Configure custom DNS forwarding
 
@@ -172,20 +172,20 @@ If you already use a custom DNS server, configure conditional forwarding for the
 
 2. Configure each virtual network's DNS settings to point to the custom DNS server. Go to the virtual network, select **DNS servers**, and enter the private IP address of your DNS server.
 
-3. Restart the VMs (or renew their DHCP lease) to pick up the DNS changes.
+3. Restart the VMs or renew their DHCP lease to pick up the DNS changes.
 
 > [!NOTE]
-> The Azure-provided DNS at **168.63.129.16** only resolves names for VMs within the same virtual network (or linked private DNS zones). A custom DNS server or Azure Private DNS zones is required for cross-VNet name resolution.
+> The Azure-provided DNS at **168.63.129.16** only resolves names for VMs within the same virtual network or linked private DNS zones. A custom DNS server or Azure Private DNS zones is required for cross-VNet name resolution.
 
 ## Cause 4: BGP route conflicts with peering routes
 
-In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes advertised from on-premises can conflict with virtual network peering routes. Because BGP-learned routes have a lower priority than system routes for peered virtual networks, this conflict typically occurs when a UDR or a more specific BGP route overrides the peering route.
+In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes advertised from on-premises can conflict with virtual network peering routes. Because BGP-learned routes have lower priority than system routes for peered virtual networks, this conflict typically occurs when a UDR or a more specific BGP route overrides the peering route.
 
 ### Symptoms
 
-- Traffic to a peered virtual network is routed to the VPN gateway or ExpressRoute circuit instead of directly through the peering.
+- Traffic to a peered virtual network routes to the VPN gateway or ExpressRoute circuit instead of directly through the peering.
 - The effective routes on a VM's network interface show a BGP route with the same or more specific prefix than the peered virtual network's address space.
-- Connectivity to the peered virtual network works intermittently or has higher latency than expected (traffic is going through the on-premises path).
+- Connectivity to the peered virtual network works intermittently or has higher latency than expected. Traffic goes through the on-premises path.
 
 ### Solution: Identify and resolve BGP route conflicts
 
@@ -221,7 +221,7 @@ In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes ad
 
 ## Cause 5: Peering state desynchronization in multi-peering topologies
 
-In complex topologies with multiple peered virtual networks (such as hub-spoke with multiple spokes, or mesh topologies), individual peering connections can become desynchronized. This scenario is common when address space changes are applied to the hub but not synced to all spoke peerings.
+In complex topologies with multiple peered virtual networks (such as hub-spoke with multiple spokes, or mesh topologies), individual peering connections can become desynchronized. This scenario is common when you apply address space changes to the hub but don't sync them to all spoke peerings.
 
 ### Symptoms
 
@@ -241,7 +241,7 @@ In complex topologies with multiple peered virtual networks (such as hub-spoke w
      --output table
    ```
 
-2. Identify peerings where the `PeeringSyncLevel` is not **FullyInSync** or where the remote address space doesn't match the expected values.
+2. Identify peerings where the `PeeringSyncLevel` isn't **FullyInSync** or where the remote address space doesn't match the expected values.
 
 3. Sync each out-of-sync peering:
 
@@ -265,9 +265,9 @@ In complex topologies with multiple peered virtual networks (such as hub-spoke w
      --output table
    ```
 
-## Monitor peering health with Azure Monitor
+## Monitor peering health by using Azure Monitor
 
-Proactive monitoring helps you detect peering issues before they affect connectivity. Azure Monitor provides metrics and alerts for virtual network peering.
+Proactive monitoring helps you detect peering problems before they affect connectivity. Azure Monitor provides metrics and alerts for virtual network peering.
 
 ### Available peering metrics
 
@@ -277,7 +277,7 @@ Proactive monitoring helps you detect peering issues before they affect connecti
 | **Bytes out peering** | Total bytes that left the virtual network through a peering connection. |
 | **Peering status** | The status of the peering (Connected, Disconnected, Initiated). |
 
-### Set up alerts for peering issues
+### Set up alerts for peering problems
 
 1. In the [Azure portal](https://portal.azure.com), go to your virtual network.
 2. Select **Metrics** under **Monitoring**.
@@ -291,14 +291,14 @@ Proactive monitoring helps you detect peering issues before they affect connecti
 
 [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview) provides tools to diagnose peering connectivity:
 
-- **[Connection Troubleshoot](/azure/network-watcher/network-watcher-connectivity-overview)**: Test connectivity between VMs in peered virtual networks and identify where the connection fails (NSG, UDR, or routing issue).
-- **[Next hop](/azure/network-watcher/network-watcher-next-hop-overview)**: Verify the next hop for traffic between VMs in peered virtual networks. This confirms whether traffic uses the peering route or is redirected by a UDR.
+- **[Connection Troubleshoot](/azure/network-watcher/network-watcher-connectivity-overview)**: Test connectivity between VMs in peered virtual networks and identify where the connection fails (NSG, UDR, or routing problem).
+- **[Next hop](/azure/network-watcher/network-watcher-next-hop-overview)**: Verify the next hop for traffic between VMs in peered virtual networks. This check confirms whether traffic uses the peering route or is redirected by a UDR.
 - **[Effective routes](/azure/network-watcher/network-watcher-check-ip-flow-verify-portal)**: View the effective routes on a network interface to verify that peering routes are present and not overridden.
 - **[IP flow verify](/azure/network-watcher/network-watcher-ip-flow-verify-overview)**: Check whether NSG rules are blocking traffic between peered virtual networks.
 
 ## Next steps
 
-- [Troubleshoot virtual network peering issues](virtual-network-troubleshoot-peering-issues.md)
+- [Troubleshoot virtual network peering problems](virtual-network-troubleshoot-peering-issues.md)
 - [Virtual network peering overview](/azure/virtual-network/virtual-network-peering-overview)
 - [Update the address space for a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
 - [Diagnose a virtual machine routing problem](/azure/virtual-network/diagnose-network-routing-problem)
