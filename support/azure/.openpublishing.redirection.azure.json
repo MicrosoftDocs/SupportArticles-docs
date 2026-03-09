@@ -6501,7 +6501,7 @@
       },
       {
         "source_path": "devops/antivirus-scanning-exclusions.md",
-        "redirect_url": "/azure/devops/pipelines/security/misc"
+        "redirect_url": "/azure/devops/pipelines/troubleshooting/anti-virus-exclusion"
       },
       {
         "source_path": "devops/overview-of-azure-resource-manager-service-connections.md",
