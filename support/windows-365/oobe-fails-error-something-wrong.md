@@ -2,7 +2,7 @@
 title: OOBE Fails with Something Went Wrong Error
 description: Helps resolve the Something went wrong error during the Windows Out of Box Experience (OOBE).
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:

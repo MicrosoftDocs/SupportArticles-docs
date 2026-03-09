@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Users in a federated domain see a yellow exclamation mark in Office 2013 applications
 
+## Summary
+
 This article describes an issue in which users in a federated domain who aren't synced to Microsoft Entra ID see a yellow exclamation mark in Office 2013 applications.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Office Professional 2013, Office Standard 2013  

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the Host Guardian Service
 description: Provides resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

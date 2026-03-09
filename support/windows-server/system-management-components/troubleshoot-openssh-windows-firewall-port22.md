@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenSSH Communication Through Windows Firewall
 description: Discusses how to troubleshoot issues that affect OpenSSH commands that pass through Windows Firewall.
-ms.date: 12/17/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

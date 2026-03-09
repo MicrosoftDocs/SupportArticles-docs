@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop IP Virtualization in Windows Server
 description: Introduce the Remote Desktop IP Virtualization feature in Windows Server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

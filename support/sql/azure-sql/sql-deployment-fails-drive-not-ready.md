@@ -1,7 +1,7 @@
 ---
 title: SQL VM Fails to Deploy or SQL Server Instance Can't Come Online
 description: Addresses a failure when you deploy a SQL Server on Azure VM image in Azure Marketplace or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
-ms.date: 10/07/2025
+ms.date: 03/04/2026
 ms.reviewer: mathoma, pamela, v-sidong, v-shaywood
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
@@ -31,6 +31,16 @@ When you try to deploy a SQL Server on Azure VM image from Azure Marketplace, th
 > System Drive returned status not ready for use.
 
 For example, if you're deploying an image from the Azure portal, you might see the following error for the deployment in **Activity log**: 
+
+```json
+{
+    "status": "Failed",
+    "error": {
+        "code": "Ext_StorageConfigurationSettings_ApplyNewTempDbSettingsError",
+        "message": "Error: 'System Drive returned status not ready for use '"
+    }
+}
+```
 
 :::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the deployment error in the Azure portal." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
 
@@ -103,11 +113,14 @@ This issue occurs with VMs that deploy an uninitialized temporary drive, such as
 
 |Intel Gen 10.2|AMD Gen 9.1|
 |-|-|
-|[Dldsv6](/azure/virtual-machines/sizes/general-purpose/dldsv6-series#sizes-in-series)|[Daldsv6](/azure/virtual-machines/sizes/general-purpose/daldsv6-series#sizes-in-series)|
-|[Ddsv6](/azure/virtual-machines/sizes/general-purpose/ddsv6-series#sizes-in-series)|[Dadsv6](/azure/virtual-machines/sizes/general-purpose/dadsv6-series#sizes-in-series)|
-|[Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)|[Eadsv6](/azure/virtual-machines/sizes/memory-optimized/eadsv6-series#sizes-in-series)|
-|[Lsv3](/azure/virtual-machines/sizes/storage-optimized/lsv3-series#sizes-in-series) - All Azure VMs||
-|[Fxmdsv2](/azure/virtual-machines/sizes/compute-optimized/fxmdsv2-series#sizes-in-series)||
+|[Ddsv6 series](/azure/virtual-machines/sizes/general-purpose/ddsv6-series#sizes-in-series)|[Dadsv6 series](/azure/virtual-machines/sizes/general-purpose/dadsv6-series#sizes-in-series)|
+|[Dndsv6 series](/azure/virtual-machines/sizes/memory-optimized/dndsv6-series#sizes-in-series)|[Dadsv7 series](/azure/virtual-machines/sizes/general-purpose/dadsv7-series#sizes-in-series)|
+|[Ebdsv6 series](/azure/virtual-machines/sizes/memory-optimized/ebdsv6-series#sizes-in-series)|[DCadsv6 series](/azure/virtual-machines/sizes/general-purpose/dcadsv6-series#sizes-in-series)|
+|[Edsv6 series](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)|[Eadsv6 series](/azure/virtual-machines/sizes/memory-optimized/eadsv6-series#sizes-in-series)|
+|[Endsv6 series](/azure/virtual-machines/sizes/memory-optimized/endsv6-series#sizes-in-series)|[Eadsv7 series](/azure/virtual-machines/sizes/memory-optimized/eadsv7-series#sizes-in-series)|
+|[FXmdsv2 series](/azure/virtual-machines/sizes/compute-optimized/fxmdsv2-series#sizes-in-series)|[ECadsv6 series](/azure/virtual-machines/sizes/memory-optimized/ecadsv6-series#sizes-in-series)|
+||[Fadsv7 series](/azure/virtual-machines/sizes/compute-optimized/fadsv7-series#sizes-in-series)|
+||[Famdsv7 series](/azure/virtual-machines/sizes/compute-optimized/famdsv7-series#sizes-in-series)|
 
 > [!NOTE]
 > Make sure the VM isn't configured using a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#resolution) before installing SQL Server. 

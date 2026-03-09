@@ -1,7 +1,7 @@
 ---
 title: Remote Assistance connection doesn't work
 description: Provides workarounds for an issue where Remote Assistance connection to a Windows Server-based server that has FIPS encryption doesn't work.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

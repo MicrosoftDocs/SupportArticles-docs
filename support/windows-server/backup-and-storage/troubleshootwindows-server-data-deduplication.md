@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Server Data Deduplication
 description:  Provides troubleshooting methods for issues that affect Windows Server data deduplication.
-ms.date: 10/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

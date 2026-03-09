@@ -1,7 +1,7 @@
 ---
 title: Stop error 7B or Inaccessible_Boot_Device troubleshooting
 description: Learn how to troubleshoot Stop error 7B or Inaccessible_Boot_Device. This error might occur after some changes are made to the computer.
-ms.date: 07/24/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom:

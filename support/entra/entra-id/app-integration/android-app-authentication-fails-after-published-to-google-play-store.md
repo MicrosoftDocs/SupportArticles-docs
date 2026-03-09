@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # Authentication fails after an Android app is published to the Google Play Store
 
+## Summary
+
 This article provides a solution to an authentication failure that occurs during signing in after users install an Android app published to the Google Play Store.
 
 ## Symptoms

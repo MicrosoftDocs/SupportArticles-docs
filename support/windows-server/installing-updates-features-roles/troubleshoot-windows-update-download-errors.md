@@ -3,7 +3,7 @@ title: Troubleshoot Windows Update download errors
 description: Learn how to troubleshoot Windows Update download error codes 0x80D02002, 0x80072EFD, and 0x80072EFE in Windows.
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/10/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:

@@ -1,7 +1,7 @@
 ---
 title: Configure Wi-Fi Sense and Paid Wi-Fi Services
 description: Discusses the methods to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 Version 1607 computers that are deployed in an enterprise.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

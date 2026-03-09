@@ -1,7 +1,7 @@
 ---
 title: VSS Warnings in Application Event log
 description: Works around an issue where you get VSS warnings in the Application Event log of Windows Small Business Server 2011 Standard.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

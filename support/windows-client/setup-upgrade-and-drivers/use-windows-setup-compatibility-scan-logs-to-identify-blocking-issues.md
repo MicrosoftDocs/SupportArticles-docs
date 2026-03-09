@@ -1,7 +1,7 @@
 ---
 title: Use the Windows Setup Compatibility Scan Logs to Identify Blocking Issues
 description: Discusses how to locate and interpret Windows Setup compatibility scans to resolve compatibility issues.
-ms.date: 11/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

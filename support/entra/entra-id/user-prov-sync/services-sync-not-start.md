@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # One or more Microsoft Entra Connect services don't start
 
+## Summary
+
 This article describes an issue that prevents Microsoft Entra Connect services from starting.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Office 365 Identity Management  

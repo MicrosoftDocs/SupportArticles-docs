@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you run the Azure Active Directory Sync Tool Configuration Wizard: Unknown error (0x80005000)
 
+## Summary
+
 This article provides a resolution to resolve an issue where you receive an error message when you run the Azure Active Directory Sync Tool Configuration Wizard.
 
 _Original product version:_ &nbsp; Office 365 Identity Management, Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup  

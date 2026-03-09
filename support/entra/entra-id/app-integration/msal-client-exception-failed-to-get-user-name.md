@@ -9,6 +9,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # Microsoft.Identity.Client.MsalClientException: Failed to get user name
 
+## Summary
+
 This article provides a solution to the "Failed to get user name" error that occurs when an application uses Integrated Windows Authentication (IWA) together with Microsoft Authentication Library (MSAL).
 
 ## Symptoms

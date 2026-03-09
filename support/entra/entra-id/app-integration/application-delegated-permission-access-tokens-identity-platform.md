@@ -8,6 +8,8 @@ ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in the Microsoft identity platform
 
+## Summary
+
 This article introduces the differences between application and delegated permissions for access tokens in the Microsoft identity platform to help diagnose issues when applications call web APIs.
 
 ## Overview

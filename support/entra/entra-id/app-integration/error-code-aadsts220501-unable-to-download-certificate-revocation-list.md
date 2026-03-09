@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS220501 - Unable to download Certificate Revocation List
 
+## Summary
+
 This article provides a solution to the Microsoft Entra authentication error AADSTS220501 that occurs when you use certificate-based authentication.
 
 ## Symptoms

@@ -1,7 +1,7 @@
 ---
 title: Can't boot into normal mode and machine keeps booting into safe mode
 description: Fixes an issue in which machines can't boot into the normal mode and keep on restarting into the safe mode.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

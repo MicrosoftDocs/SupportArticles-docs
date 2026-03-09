@@ -11,7 +11,9 @@ content_well_notification: AI-contribution
 ai-usage: ai-assisted
 ms.custom: sap:Enterprise Applications
 ---
-# Application does not appear after clicking the add button
+# Application doesn't appear after clicking the add button
+
+## Summary
 
 The process of adding an application to Microsoft Entra ID may sometimes fail due to transient issues, networking problems, or a known issue. If you encounter an error when clicking the Add button, you’ll see a Notification in an Error state, which indicates that there was an error when creating the application. To learn more about the error or share it with a support engineer, you can follow the steps in [How to see the details of a portal notification](./send-notification-details.md).
 

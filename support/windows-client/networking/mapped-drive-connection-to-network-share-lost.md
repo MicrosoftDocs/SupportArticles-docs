@@ -1,7 +1,7 @@
 ---
 title: Mapped drive is disconnected
 description: This article provides solutions to an issue where the mapped drive may be disconnected if you map a drive to a network share.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

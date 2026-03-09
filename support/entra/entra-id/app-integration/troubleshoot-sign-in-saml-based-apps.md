@@ -1,22 +1,28 @@
 ---
-title: Problems signing in to SAML-based Single Sign-On configured apps
-description: Guidance for the specific errors when signing into an application you have configured for SAML-based federated Single Sign-On with Microsoft Entra ID.
+title: Problems signing in to SAML-based single sign-on configured apps
+description: Guidance for the specific errors when signing into an application you have configured for SAML-based federated single sign-on with Microsoft Entra ID.
 ms.date: 07/18/2023
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.custom: sap:Issues Signing In to Applications
 ---
 
-# Problems signing in to SAML-based Single Sign-On configured apps
+# Problems signing in to SAML-based single sign-on configured apps
 
-To troubleshoot the sign-in issues below, we recommend the following to better diagnosis and automate the resolution steps:
+## Summary
+
+This article provides guidance on resolving problems signing in to SAML-based single sign-on configured apps.
+
+## Resolution
+
+To troubleshoot these sign-in issues, we recommend the following to better diagnosis and automate the resolution steps:
 
 - Install the [My Apps Secure Browser Extension](/azure/active-directory/manage-apps/my-apps-deployment-plan) to help Microsoft Entra ID to provide better diagnosis and resolutions when using the testing experience in the Azure portal.
-- Reproduce the error using the testing experience in the app configuration page in the Azure portal. Learn more on [Debug SAML-based Single Sign-On applications](/azure/active-directory/manage-apps/debug-saml-sso-issues)
+- Reproduce the error using the testing experience in the app configuration page in the Azure portal. Learn more on [Debug SAML-based single sign-on applications](/azure/active-directory/manage-apps/debug-saml-sso-issues)
 
-If you use the [testing experience](/azure/active-directory/manage-apps/debug-saml-sso-issues) in the Azure portal with the My Apps Secure Browser Extension, you don't need to manually follow the steps below to open the SAML-based Single Sign-On configuration page.
+If you use the [testing experience](/azure/active-directory/manage-apps/debug-saml-sso-issues) in the Azure portal with the My Apps Secure Browser Extension, you don't need to manually follow these steps to open the SAML-based single sign-on configuration page.
 
-To open the SAML-based Single Sign-On configuration page:
+To open the SAML-based single sign-on configuration page:
 
 1. Open the [**Azure portal**](https://portal.azure.com/) and sign in as a **Global Administrator** or **Coadmin**.
 1. Open the **Microsoft Entra Extension** by selecting **All services** at the top of the main left-hand navigation menu.
@@ -24,9 +30,9 @@ To open the SAML-based Single Sign-On configuration page:
 1. Select **Enterprise Applications** from the Microsoft Entra left-hand navigation menu.
 1. Select **All Applications** to view a list of all your applications.
 
-    If you do not see the application you want show up here, use the **Filter** control at the top of the **All Applications List** and set the **Show** option to **All Applications**.
+    If you don't see the application you want to show up here, use the **Filter** control at the top of the **All Applications List** and set the **Show** option to **All Applications**.
 
-1. Select the application you want to configure for Single Sign-On.
+1. Select the application you want to configure for single sign-on.
 1. Once the application loads, select **Single Sign-On** from the application’s left-hand navigation menu.
 1. Select SAML-based SSO.
 

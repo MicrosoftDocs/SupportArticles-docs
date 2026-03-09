@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot FRS and DFS
 description: Describes how to troubleshoot the File Replication Service and the Distributed File System
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

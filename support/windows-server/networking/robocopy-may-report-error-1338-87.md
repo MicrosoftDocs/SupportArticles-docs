@@ -1,7 +1,7 @@
 ---
 title: Robocopy may report error 1338 or 87
 description: Provides a solution to error 1338 or error 87 that occurs when copying files and their associated file security from a CIFS file server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

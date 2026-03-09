@@ -1,7 +1,7 @@
 ---
 title: AGPM and GPRESULT are not working
 description: Describes scenarios in which AGPM and GPRESULT do not work on a Windows Server Core installation.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS530004 - AcceptCompliantDevice setting isn't configured for this organization
 
+## Summary
+
 This article discusses scenarios where the AADSTS530004 error occurs when a guest user accesses an application or resource in a resource tenant and provides solutions.
 
 ## Symptoms

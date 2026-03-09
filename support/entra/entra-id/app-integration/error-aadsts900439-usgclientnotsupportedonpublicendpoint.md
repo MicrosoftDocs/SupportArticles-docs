@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
 
+## Summary
+
 This article provides a solution to the error AADSTS900439 (USGClientNotSupportedOnPublicEndpoint) that occurs when you try to sign in to an application registered in the Azure Government cloud using a public cloud endpoint.
 
 ## Symptoms

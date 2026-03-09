@@ -1,7 +1,7 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri

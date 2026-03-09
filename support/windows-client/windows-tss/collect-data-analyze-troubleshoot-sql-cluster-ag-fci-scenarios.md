@@ -1,7 +1,7 @@
 ---
 title: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) scenario
 description: Learn how to gather information by using TSS for SQL cluster (AG/FCI) related issues.
-ms.date: 01/17/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

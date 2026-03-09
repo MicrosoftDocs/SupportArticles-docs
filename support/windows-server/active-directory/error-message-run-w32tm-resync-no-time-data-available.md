@@ -1,7 +1,7 @@
 ---
 title: w32tm /resync command fails with "The computer didn't resync because no time data was available."
 description: Describes a resync failure that can be due to multiple different causes.
-ms.date: 03/20/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

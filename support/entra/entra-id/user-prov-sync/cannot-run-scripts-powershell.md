@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Can't run scripts in Azure Active Directory module for Windows PowerShell
 
+## Summary
+
 This article describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory module for Windows PowerShell.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  

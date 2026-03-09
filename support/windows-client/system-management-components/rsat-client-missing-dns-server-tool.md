@@ -1,7 +1,7 @@
 ---
 title: DNS server tool is missing for RSAT client
 description: This article addresses an issue in which DNS server tools are missing for RSAT client in Windows 10.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

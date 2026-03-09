@@ -1,7 +1,7 @@
 ---
 title: Error 0x8007000d at Startup After You Install a Windows Update
 description: Discusses how to fix the 0x8007000d (ERROR_INVALID_DATA) error when the system restarts after you install Windows updates.
-ms.date: 12/31/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ai.usage: ai-assisted

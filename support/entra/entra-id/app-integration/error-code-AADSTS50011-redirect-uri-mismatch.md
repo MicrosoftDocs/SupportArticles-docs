@@ -9,6 +9,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50011 with OpenID authentication: The redirect URI specified in the request does not match
 
+## Summary
+
 This article describes a problem in which an `AADSTS50011` error message is returned when you try to sign in to an application that uses OpenID Connect (OIDC)-based authentication with Microsoft Entra ID.
 
 ## Symptoms

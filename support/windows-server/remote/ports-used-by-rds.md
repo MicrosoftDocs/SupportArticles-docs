@@ -1,7 +1,7 @@
 ---
 title: Ports That Are Used by RDS
 description: Introduces the ports that are required to open on firewalls to configure Remote Desktop Services (RDS) correctly.
-ms.date: 02/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

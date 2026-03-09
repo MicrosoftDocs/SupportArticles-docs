@@ -1,7 +1,7 @@
 ---
 title: Can't establish a PowerShell remote session using WinRM
 description: Helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Microsoft Entra-only.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

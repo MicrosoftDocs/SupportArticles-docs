@@ -11,7 +11,9 @@ ms.custom: sap:Microsoft Entra Connect Sync
 
 # Table-valued parameter errors after Microsoft Entra Connect is installed on Windows Server 2019
 
-This article describes a problem in which synchronization errors appear   after Microsoft Entra Connect is installed on Windows Server 2019-based servers.
+## Summary
+
+This article describes a problem in which synchronization errors appear after Microsoft Entra Connect is installed on Windows Server 2019-based servers.
 
 _Original product version:_&nbsp; Microsoft Entra ID, Windows Server 2019
 

@@ -22,3 +22,12 @@ groups:
     title: Google Identity
   - id: keycloak-self-hosted
     title: Keycloak (self-hosted)
+#Owner: britaniar
+- id: cluster-namespace-scope
+  title: Fleet resource scope
+  prompt: Select your Fleet custom resource scope type
+  pivots:
+  - id: cluster-scope
+    title: Cluster-scoped
+  - id: namespace-scope
+    title: Namespace-scoped

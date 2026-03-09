@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you try to install the Azure Active Directory Sync Tool: The computer must be joined to a domain
 
+## Summary
+
+This article provides guidance on resolving the "The computer must be joined to a domain." error when you try to install the Azure Active Directory Sync Tool.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2419250
 

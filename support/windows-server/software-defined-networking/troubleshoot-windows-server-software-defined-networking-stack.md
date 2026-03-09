@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the Windows Server software defined networking stack
 description: Examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that uses the available diagnostic tools.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

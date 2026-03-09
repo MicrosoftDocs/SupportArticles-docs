@@ -1,7 +1,7 @@
 ---
 title: Extend partition of a cluster shared disk
 description: Describes how to add additional storage capacity to a server cluster if the underlying hardware RAID supports.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

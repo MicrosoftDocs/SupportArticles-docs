@@ -1,7 +1,7 @@
 ---
 title: Shared Volumes Don't Respond During Planned Cluster Node Drain
 description: Resolves issues that occur during a planned cluster node drain operation if Cluster Shared Volumes stop responding. 
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

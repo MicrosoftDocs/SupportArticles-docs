@@ -1,7 +1,7 @@
 ---
 title: Large WMI repository causes slow logon
 description: Provides help to solve slow logon process that occurs when users log on to the Remote Desktop servers.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: TCP/IP underlying network performance issues
 description: Provides the troubleshooting process for TCP/IP performance issues about underlying network. The ctsTraffic tool is used to analyze the network trace.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error 0x8024001E
 description: Learn how to fix Windows Update error 0x8024001E on Windows Client computers or Azure Windows VMs.
-ms.date: 12/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 ai-usage: ai-generated
 audience: itpro
