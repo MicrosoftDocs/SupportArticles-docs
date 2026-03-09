@@ -17,7 +17,7 @@ appliesto:
   - Access for Microsoft 365
   - Access 2024
   - Access 2021
-ms.date: 03/02/2026
+ms.date: 03/09/2026
 ---
 
 # Operation is not supported error in Access and Excel
@@ -51,8 +51,6 @@ Error message: `Invalid use of Null`
 When you:
 
 - Add a control or a command button to an Access form or report.
-
-- Create a query, form, or report by using a wizard in Access.
 
 ## Cause
 
@@ -117,7 +115,15 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 >[!NOTE]
 
 >- Use this solution only as a temporary fix while you update your application.
->- The **AllowQueryRemoteTables** registry value might be removed when you install an Office update. If you set this value, you might need to set it again after you finish installing the update.
+>- Using the **AllowQueryRemoteTables** registry key path for C2R installation types provided in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544), might result in the registry key being removed after installing an Office update. Using the registry key paths provided below will preserve this setting after an Office update is installed. 
 
-1. Locate the **AllowQueryRemoteTables** registry key for your installation scenario by using the information in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544).
-1. Set the value for the key to **1** to allow remote table references during query execution.
+To allow the Access Connectivity Engine (ACE) to access a remote table reference, add the following DWord and value to the registry as indicated in the following table:
+
+**DWORD name:** AllowQueryRemoteTables
+**Value data:** 1
+
+| **Office Version** | **OS Bitness** | **Office Bitness** | **Registry Path** |
+|------------------------|----------------|--------------------|---------------------------------------------------------------------------------------------------------|
+| All supported versions | x64 | x64 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |
+| All supported versions | x86 | x86 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |
+| All supported versions | x64 | x86 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |
