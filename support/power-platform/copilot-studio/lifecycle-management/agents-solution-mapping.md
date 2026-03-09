@@ -45,7 +45,7 @@ To create a new agent in the solution context, follow these steps:
 1. From the **Home** page, select the gear icon in the description box.
 1. In **Agent settings**, under **Advanced settings**, select the desired [solution](/microsoft-copilot-studio/authoring-solutions-overview).
 
-If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue editing to keep the solution context. This method automatically updates changes in the solution.
+If you already added the agent, open the agent from the solution (**Solutions** > *Your solution* > **Agent** > **Open**). Continue editing to keep the solution context. This method automatically updates agents changes in the solution.
 
 ### Use a preferred solution in Copilot Studio
 
