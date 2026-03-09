@@ -37,6 +37,6 @@ To work around this problem, use the **Default** style within the view for the a
 
 This problem occurs when you use a view for the document library if the view style is configured to any setting other than **Default**.
 
-For more information about how to create, change, or delete a view of a list or library, go to [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9?ocmsassetID=HA102774516&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd).
+For more information about how to create, change, or delete a view of a list or library, go to [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
