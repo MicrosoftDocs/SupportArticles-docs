@@ -31,9 +31,9 @@ For example, the ServiceNow connector [Get Knowledge Articles](/connectors/servi
 - `Filter` input parameter - accepts a filter query to limit results
 - `Limit` input parameter - restricts the number of records that are returned
 
-Configure these inputs in Copilot Studio by using the steps for either an agent-wide tool or a topic-specific connector tool.
+Configure these inputs in Copilot Studio by using the steps for either an agent-wide or a topic-specific connector tool.
 
-### Agent-wide tool
+### Agent-wide connector tool
 
 1. Under **Agents**, select the agent that has the connector that you want to configure.
 
