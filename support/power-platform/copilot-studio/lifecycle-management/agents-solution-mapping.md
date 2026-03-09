@@ -11,7 +11,7 @@ ms.collection: CEnSKM-ai-copilot
 
 ## Summary
 
-This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) where components you add to an agent aren't automatically included in the [solution](/microsoft-copilot-studio/authoring-solutions-overview). After you add an agent to a solution, new components such as topics, tools, actions, connectors, child agents, and Model Context Protocol (MCP) servers don't sync automatically to the solution. This article describes how to add the missing components and methods to prevent the issue.
+This article helps you resolve an issue in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) where components you add to an agent aren't automatically added to a [solution](/microsoft-copilot-studio/authoring-solutions-overview). After you add an agent to a solution, new components such as topics, tools, actions, connectors, child agents, and Model Context Protocol (MCP) servers don't sync automatically to the solution. This article describes how to add the missing components and methods to prevent the issue.
 
 ## Symptoms
 
@@ -24,7 +24,7 @@ After you add new components to a Copilot Studio agent that's already part of a 
 
 ## Cause
 
-When you add an agent to a solution and later modify the agent, the new components aren't automatically added to the solution. The solution only reflects the agent's state at the time you added it.
+When you add an agent to a solution and later modify the agent, any new components added to the agent aren't automatically added to the solution. The solution only reflects the agent's state at the time you added it.
 
 ## Solution
 
