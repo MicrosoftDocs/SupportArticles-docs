@@ -1,6 +1,6 @@
 ---
 title: USB device doesn't have lock software, but Windows marks it as locked
-description: Helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have dedicated lock or encryption software installed.
+description: Helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have specific lock or encryption software installed.
 ms.date: 03/10/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-This article helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have dedicated lock or encryption software installed. The most common cause in a domain environment is a domain-level Group Policy Object (GPO) that enforces write protection on removable storage devices.
+This article helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have specific lock or encryption software installed. The most common cause in a domain environment is a domain-level Group Policy Object (GPO) that enforces write protection on removable storage devices.
 
 ## Symptoms
 
@@ -33,7 +33,7 @@ If you try to use the Windows registry or local Group Policy to disable write pr
 This issue can have the following causes:
 
 - **Physical write-protect switch**: Some USB drives have a physical write-protect switch on the side of the device. Check whether the switch is in the locked position before proceeding.
-- **Domain-level Group Policy settings**: In a domain environment, a Group Policy Object (GPO) can enforce write protection on USB storage devices. These settings override local registry modifications or local Group Policy changes. As a result, any changes you make locally revert the next time the Windows device refreshes its domain policies. If you have already tried modifying registry keys or applying local policy changes without success, a domain GPO is the most likely cause.
+- **Domain-level Group Policy settings**: In a domain environment, a Group Policy Object (GPO) can enforce write protection on USB storage devices. These settings override local registry modifications or local Group Policy changes. As a result, any changes you make locally revert the next time the Windows device refreshes its domain policies. If modifying registry entries or applying local policy changes doesn't fix the issue, a domain GPO is the most likely cause.
 
 ## Resolution
 
@@ -67,6 +67,6 @@ To resolve this issue:
 If the problem persists after following the resolution steps, gather the following information before contacting Microsoft Support or your IT administrator:
 
 - The version of Windows that you're using. To find this information, go to **Settings** > **System** > **About**.
-- A detailed description of the behavior that occurrs when you try to write to the USB device. Include screenshots of any error messages.
+- A detailed description of the behavior that occurs when you try to write to the USB device. Include screenshots of any error messages.
 - The report.html file that the `gpresult /h gp-report.html` command generated, and a list of any USB-related Group Policy settings that apply at the domain level.
 - Details of any recent changes to domain policies, security software, or device drivers.
