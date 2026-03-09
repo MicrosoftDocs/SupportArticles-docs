@@ -43,6 +43,6 @@ This must be performed by an administrator or by the user who created the file.
 
 This issue occurs because the document that you're trying to share is checked out to a user.
 
-For more information about sharing sites or documents in SharePoint Online, go to [Share SharePoint files or folders](https://support.office.com/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c?ocmsassetID=HA102894713&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd).
+For more information about sharing sites or documents in SharePoint Online, go to [Share SharePoint files or folders](https://support.office.com/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
