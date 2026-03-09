@@ -43,7 +43,7 @@ To work around this behavior, use one of the following options:
 
 ## More Information
 
-For more information about Microsoft 365 F plans, see [Microsoft 365 F1](https://products.office.com/business/office-365-f1?legRedir=true&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd).
+For more information about Microsoft 365 F plans, see [Microsoft 365 F1](https://products.office.com/business/).
 
 If Microsoft 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
 
