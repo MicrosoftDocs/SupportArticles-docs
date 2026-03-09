@@ -34,7 +34,7 @@ This problem occurs because Outlook doesn't support connections to a server that
 
 ## Resolution
 
-To resolve this problem, connect to Exchange by using the standard Exchange connection settings. For more information about how to configure Outlook to connect to Exchange, see [Add an email account to Outlook](https://support.office.com/article/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b?ocmsassetID=HA102823161&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd).
+To resolve this problem, connect to Exchange by using the standard Exchange connection settings. For more information about how to configure Outlook to connect to Exchange, see [Add an email account to Outlook](https://support.office.com/article/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b).
 
 ## More information
 
