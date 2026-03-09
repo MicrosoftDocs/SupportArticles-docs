@@ -80,4 +80,4 @@ To delete the duplicate items, follow these steps:
 
        _Outlook.exe /resetfolders_
 
-       For more information about command-line switches in Outlook, see [Command-line switches for Microsoft Office products](https://support.microsoft.com/office/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6?ocmsassetid=hp001218589&ctt=1&correlationid=aaaa0000-bb11-2222-33cc-444444dddddd)
+       For more information about command-line switches in Outlook, see [Command-line switches for Microsoft Office products](https://support.microsoft.com/office/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6)
