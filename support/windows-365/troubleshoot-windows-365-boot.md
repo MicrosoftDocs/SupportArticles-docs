@@ -35,13 +35,13 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
    1. On the **Integrated experiences** tab, locate the **Boot to this Cloud PC** section, and then select **Connect while signed into device**.
    1. Select **Save**.
 
-1. If the user can sign in to the Cloud PC from the app or web, and a default Cloud PC is set, check the Windows 365 Boot physical device for issues. In this case, verify that the physical device is correctly configured and has the required software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
+1. If the user can sign in to the Cloud PC from the app or web, and a default Cloud PC is set, check the Windows 365 Boot physical device for issues. In this case, verify that the physical device is configured correctly and has the required software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
 1. To deliver policies more quickly to the device, administrators can try to manually select **Device sync**. After this change, the user can try to restart the device.
 
 ## Physical device registry key configuration
 
-Check the following registry entries to verify that the physical device is correctly configured to run Windows 365 Boot. If needed, create or update the registry entries.
+Check the following registry entries to verify that the physical device is configured correctly to run Windows 365 Boot. If it's necessary, create or update the registry entries.
 
 | Registry key name | Registry value name | Registry value |
 | --- | --- | --- |
@@ -60,9 +60,9 @@ Get-AppxPackage -AllUsers -name *MicrosoftCorporationII*
 
 This cmdlet shows all the Microsoft-maintained apps (such as QuickAssist and Microsoft Family) on the physical device. To make sure that Windows 365 Boot works correctly, verify that the app versions meet the following requirements:
 
-- Windows App version 2.0.285 or a later version.
-- Azure Virtual Desktop (HostApp) app version 1.2.4159 or a later version.
-- The latest version of Windows 11.
+- Windows App version 2.0.285 or a later version
+- Azure Virtual Desktop (HostApp) app version 1.2.4159 or a later version
+- The latest version of Windows 11
 
 ## Remove and add Windows 365 Boot to the physical device again
 
@@ -77,7 +77,7 @@ If you can't identify the source of the issue, remove Windows 365 Boot from the 
 
 It takes up to eight hours for Intune to remove the policies. After the removal, the physical device is no longer set up for Windows 365 Boot.
 
-### Add Windows 365 Boot to the physical device
+### Add Windows 365 Boot back to the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
 1. Select the group for your Windows 365 Boot device, and then select **Members**.
@@ -116,7 +116,7 @@ Put these logs into a zip file, and provide it to the Microsoft Support team for
 
 ### Windows 365 error and session IDs
 
-To help the investigation, collect any CorrelationId or SessionID value that Windows 365 provides, or ActivityID of the physical device.
+To help the investigation, collect any CorrelationId or SessionID value that Windows 365 provides, or the ActivityID of the physical device.
 
 #### Session ID
 
