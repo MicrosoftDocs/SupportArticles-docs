@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-This article discusses an issue in which a disk that's attached to a Windows Server 2019 virtual machine (VM) becomes corrupted after operating at high utilization levels. The issue can cause the disk to become missing or inaccessible, and can trigger an unexpected conversion from a basic disk to a dynamic disk. This conversion may affect backup coverage and raise concerns about data loss. This article discusses how to fix this issue and how to configure disk volumes to avoid this issue in the future.
+This article discusses an issue in which a disk that's attached to a Windows Server 2019 virtual machine (VM) becomes corrupted after operating at high utilization levels. The issue can cause the disk to become missing or inaccessible, and can trigger an unexpected conversion from a basic disk to a dynamic disk. This conversion might affect backup coverage and raise concerns about data loss. This article discusses how to fix this issue and how to configure disk volumes to avoid this issue in the future.
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ You run a disk that's attached to a Windows Server 2019 VM at 95% utilization. T
   - You can't reactivate or restore the missing disk.
 - The volume configuration changes without a clear cause.
 - If the disk is a basic disk, a data volume unexpectedly converts to a dynamic disk.
-  - Backups of the VM do not include the dynamic disk, which raises concerns about potential data loss.
+  - Backups of the VM don't include the dynamic disk, which raises concerns about potential data loss.
   - The affected volume spans multiple disks.
 
 ## Cause
@@ -50,13 +50,13 @@ To fix this issue and prevent it from recurring, follow these steps:
    - If the volume requires space from more than one disk, consider using Storage Spaces or other supported configuration that pools storage resources from multiple disks. Using such an abstracted storage pool, you can create volumes that meet your performance and backup requirements.
 
    > [!NOTE]  
-   > If you're working with a corrupted disk and you have a backup of that disk that was made before the corruption or dynamic conversion occurred, make sure that the disk volume is configured as described in this step before you restore the data. You can restore the data in a later step of this procedure.
+   > If you're working with a corrupted disk and you have a backup of uncorrupted data, make sure that the disk volume is configured as described in this step before you restore the data. You can restore the data in a later step of this procedure.
 
 1. If you use dynamic disks or if there's a risk that your basic disks might automatically convert to dynamic disks, make sure that your VM backup solution is configured to support dynamic disks.
 
    For example, Azure Backup can back up dynamic disks if the disks are online and accessible during the backup operation.
 
-1. Restore the backed up data to the reconfigured volume.
+1. If a backup is available, restore the data to the reconfigured volume.
 
 1. Use performance monitoring tools to monitor disk utilization. Avoid sustained periods of high disk utilization (above 95%). If your system frequently reaches such high utilization rates, consider adding storage resources.
 
