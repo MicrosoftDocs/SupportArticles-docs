@@ -11,11 +11,11 @@ ms.search.form: LedgerJournalSetup, LedgerParameters, DimensionConfigureAccountS
 ms.dyn365.ops.version: 8.0.2
 ---
 
-# "The account type for main account... is not valid" error when posting in General ledger
+# "The account type for main account ... is not valid" error when posting in General ledger
 
 ## Summary
 
-This article provides a solution for an error that occurs when you try to post a transaction to a main account in General ledger in Microsoft Dynamics 365 Finance. The error states that the account type for the main account isn't valid and must be of type _Financial_. This problem typically involves a main account that has an account type of _Total_ or _Reporting_.
+This article provides a solution for an error that occurs when you try to post a transaction to a main account in General ledger in Microsoft Dynamics 365 Finance. The error states that the account type for the main account isn't valid and must be the account type of _Financial_. This problem typically involves a main account that has an account type of _Total_ or _Reporting_.
 
 > [!NOTE]
 > If you experience a dimension-related posting error, see [Common dimension-related errors](common-dimension-related-errors.md).
@@ -28,11 +28,11 @@ When you try to post a transaction in General ledger, you receive the following 
 
 ## Cause
 
-This error occurs when a transaction references a main account that has an account type set to _Total_ or _Reporting_. These account types are for summarization and [financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started) purposes only and don't permit direct transaction entry.
+This error occurs if a transaction references a main account that has an account type set to _Total_ or _Reporting_. These account types are for summarization and [financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started) only. They don't permit direct transaction entry.
 
 ## Solution
 
-To resolve this issue, check the main account type and either correct the transaction or update the account type:
+To resolve this issue, check the main account type. Either correct the transaction or update the account type, as appropriate:
 
 1. Go to **General ledger** > **Chart of accounts** > **Accounts** > **Main accounts**.
 1. Select the main account that's referenced in the error message.
@@ -42,7 +42,7 @@ To resolve this issue, check the main account type and either correct the transa
    - If the account type is incorrect, update the **Main account type** field.
 
 > [!NOTE]
-> _Total_ and _Reporting_ accounts are typically used in row definitions for financial reports. They aggregate balances from other accounts and shouldn't receive direct postings. Changing the account type might affect financial reporting, so review your [chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts) design before you make changes.
+> _Total_ and _Reporting_ accounts are typically used in row definitions for financial reports. They aggregate balances from other accounts and shouldn't receive direct postings. Changing the account type might affect financial reporting. Therefore, review your [chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts) design before you make changes.
 
 ## Related content
 
