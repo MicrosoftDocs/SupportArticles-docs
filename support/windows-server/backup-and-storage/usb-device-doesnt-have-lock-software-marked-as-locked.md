@@ -1,6 +1,6 @@
 ---
 title: USB device doesn't have lock software, but Windows marks it as locked
-description: 
+description: Helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have dedicated lock or encryption software installed.
 ms.date: 03/10/2026
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,9 @@ appliesto:
 ---
 # USB device doesn't have lock software, but Windows marks it as locked
 
-This article helps you troubleshoot an issue where a Windows device indicates that an attach USB storage device, even though the USB device doesn't have dedicated lock or encryption software installed.
+## Summary
+
+This article helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have dedicated lock or encryption software installed. The most common cause in a domain environment is a domain-level Group Policy Object (GPO) that enforces write protection on removable storage devices.
 
 ## Symptoms
 
