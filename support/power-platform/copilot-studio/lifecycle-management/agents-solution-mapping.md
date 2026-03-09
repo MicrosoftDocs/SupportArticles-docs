@@ -28,7 +28,13 @@ When you add an agent to a solution and later modify the agent, the new componen
 
 ## Solution
 
-Before you export the solution, select **Add required objects** on the agent in the solution explorer. This step ensures that you include all current components. For more information, see [Add components to an agent in a custom solution](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution).
+Before you export the solution, add the required objects to ensure all current components are included:
+
+1. Open the solution in the solution explorer.
+1. In the **Objects** pane, locate your agent under **Agents**.
+1. Select the three dots (**⋮**), select **Advanced**, and then select **Add required objects**.
+
+For more information, see [Add components to an agent in a custom solution](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution).
 
 To prevent this problem going forward, use one of the following approaches to keep agent changes in sync with the solution.
 
@@ -64,5 +70,5 @@ To verify the solution mapping in Copilot Studio:
 
 ## Related content
 
-- [Export and import agents using solutions in Copilot Studio](/microsoft-copilot-studio/authoring-solutions-import-export)
-- [Solution management in Copilot Studio](/microsoft-copilot-studio/authoring-solutions-overview)
+- [Solution concepts in Power Platform ALM](/power-platform/alm/solution-concepts-alm)
+- [Work with environments in Copilot Studio](/microsoft-copilot-studio/environments-first-run-experience)
