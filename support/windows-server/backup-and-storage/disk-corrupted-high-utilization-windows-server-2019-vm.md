@@ -1,6 +1,6 @@
 ---
 title: Disk corrupted after high utilization when attached to Windows Server 2019 VM
-description: 
+description: This article discusses an issue in which a disk that's attached to a Windows Server 2019 virtual machine (VM) becomes corrupted after operating at high utilization levels.
 ms.date: 03/10/2026
 author: kaushika-msft
 ms.author: kaushika
@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-This article describes an issue in which a disk that's attached to a Windows Server 2019 virtual machine (VM) becomes corrupted after operating at high utilization levels. The issue can cause the disk to become missing or inaccessible, and can trigger an unexpected conversion from a basic disk to a dynamic disk. This conversion may affect backup coverage and raise concerns about data loss. This article describes how to fix this issue and how to configure disk volumes to avoid this issue in the future.
+This article discusses an issue in which a disk that's attached to a Windows Server 2019 virtual machine (VM) becomes corrupted after operating at high utilization levels. The issue can cause the disk to become missing or inaccessible, and can trigger an unexpected conversion from a basic disk to a dynamic disk. This conversion may affect backup coverage and raise concerns about data loss. This article discusses how to fix this issue and how to configure disk volumes to avoid this issue in the future.
 
 ## Symptoms
 
