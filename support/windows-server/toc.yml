@@ -682,6 +682,8 @@ items:
       href: ./backup-and-storage/event-id-51-information.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
+    - name: USB device doesn't have lock software, but Windows marks it as locked
+      href: ./backup-and-storage/usb-device-doesnt-have-lock-software-marked-as-locked.md
   - name: Storage Migration
     items:
     - name: Troubleshoot Windows Server Storage Migration service

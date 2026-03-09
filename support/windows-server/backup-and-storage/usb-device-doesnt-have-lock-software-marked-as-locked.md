@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, simonw, v-tappelgate
+ai-usage: ai-assisted
 ms.custom:
 - sap:backup,recovery,disk,and storage\storage hardware
 - pcy:WinComm Storage High Avail
