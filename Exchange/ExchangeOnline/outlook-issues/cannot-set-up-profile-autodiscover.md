@@ -78,7 +78,7 @@ If you're using Outlook 2010 or an earlier version, upgrade to the latest versio
 
 For more information about how to set up Outlook for Microsoft 365, see the following resources:
 
-- [Set up email in Outlook (for Windows)](https://support.office.com/article/set-up-email-in-outlook-for-windows-6e27792a-9267-4aa4-8bb6-c84ef146101b?correlationid=aaaa0000-bb11-2222-33cc-444444dddddd)
+- [Set up email in Outlook (for Windows)](https://support.office.com/article/set-up-email-in-outlook-for-windows-6e27792a-9267-4aa4-8bb6-c84ef146101b)
 - [Set up an email account in Outlook 2016 for Mac](https://support.office.com/article/set-up-an-email-account-in-outlook-2016-for-mac-86bd232e-0422-49b5-9b60-d1c5f1109f40)
 
 If this method doesn't resolve the problem, go to Method 3.
