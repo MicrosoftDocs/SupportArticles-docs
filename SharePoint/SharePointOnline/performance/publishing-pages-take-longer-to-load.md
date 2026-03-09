@@ -45,7 +45,7 @@ Browse to the affected SharePoint Online site collection.
     :::image type="content" source="media/publishing-pages-take-longer-to-load/select-visibility-in-menus-option.png" alt-text="Screenshot of the Navigation tab. The Show in Global Navigation Menu and Show in Current Navigation Menu boxes are unchecked.":::
 
 > [!NOTE]
-> You may also use the EDIT LINKS feature on the page to remove the navigation links. For more information, go to [Customize the navigation on your team site](https://support.office.com/article/customize-the-navigation-on-your-sharepoint-site-3cd61ae7-a9ed-4e1e-bf6d-4655f0bf25ca?ocmsassetID=HA103532378&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd).
+> You may also use the EDIT LINKS feature on the page to remove the navigation links. For more information, go to [Customize the navigation on your team site](https://support.office.com/article/customize-the-navigation-on-your-sharepoint-site-3cd61ae7-a9ed-4e1e-bf6d-4655f0bf25ca).
 
 You can also clear the setting to add new pages to navigation automatically from the Navigation Settings page. This prevents the issue from recurring in the future. To do this, follow these steps:
 
