@@ -284,9 +284,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 - The parameter with name {KeyName} on flow {FlowName} ({FlowId}) evaluated to type {ResolveType}, expected type {ExpectedType}.
 - The flow {FlowName} ({FlowId}) failed to run with response code {ResponseCode}, error code: {FlowErrorCode}.
 
-**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type.
-
-For more information, see [Troubleshoot agent error in Microsoft Teams](../channels/agent-error-teams.md)
+**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type. For more information, see [FlowActionBadRequest agent error in Microsoft Teams](../channels/agent-error-teams.md)
 
 #### FlowActionException
 
