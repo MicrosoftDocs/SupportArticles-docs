@@ -96,8 +96,8 @@ To set up email forwarding rules and an Out of Office notification at the same t
 ## More information
 
 - For more information about mail contacts, see [Manage mail contacts](/exchange/recipients-in-exchange-online/manage-mail-contacts).
-- For more information about how to use the Out of Office functionality in Exchange Online, see [Send automatic replies when you're out of the office](https://support.microsoft.com/office/video-set-up-automatic-replies-and-inbox-rules-b7b63910-c402-48a3-a313-50d5bd5f80c3?ocmsassetid=rz104151618&correlationid=aaaa0000-bb11-2222-33cc-444444dddddd).
-- For more information about how to create rules to forward mail, see [Use rules to automatically forward messages](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746?ocmsassetid=ha102908356&correlationid=bbbb1111-cc22-3333-44dd-555555eeeeee).
-- For more information about how to set up automatic replies, see [Automatic replies (formerly Out of Office assistant)](https://support.microsoft.com/office/automatic-replies-formerly-out-of-office-assistant-48d40166-0129-4653-98f1-eb85f9bd8c20?ocmsassetid=ha102844491&correlationid=cccc2222-dd33-4444-55ee-666666ffffff).
+- For more information about how to use the Out of Office functionality in Exchange Online, see [Send automatic replies when you're out of the office](https://support.microsoft.com/office/video-set-up-automatic-replies-and-inbox-rules-b7b63910-c402-48a3-a313-50d5bd5f80c3).
+- For more information about how to create rules to forward mail, see [Use rules to automatically forward messages](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746).
+- For more information about how to set up automatic replies, see [Automatic replies (formerly Out of Office assistant)](https://support.microsoft.com/office/automatic-replies-formerly-out-of-office-assistant-48d40166-0129-4653-98f1-eb85f9bd8c20).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
