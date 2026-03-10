@@ -10,11 +10,11 @@ ms.custom: "sap:Experiences and Services\AI Experiences: Copilot and Sidebar"
 
 ## Summary
 
-This article helps you troubleshoot the issue where the Copilot icon doesn't appear in the Microsoft Edge sidebar. The icon might be missing because the sidebar is disabled, Copilot is turned off in sidebar settings, Group Policy blocks Copilot or the sidebar, the Edge version is outdated, or Copilot isn't available for your region or account. Follow the steps in this article to identify and resolve the issue.
+This article helps you troubleshoot the issue where the Copilot icon doesn't appear in the Microsoft Edge sidebar. The icon might be missing because the sidebar is disabled, Copilot is turned off in sidebar settings, Group Policy blocks Copilot or the sidebar, the Edge version is outdated, or Copilot isn't available for your region or account. Follow the steps in this article to identify and resolve the problem.
 
 ## Symptoms
 
-You experience one or more of the following issues:
+You experience one or more of the following problems:
 
 - The Edge sidebar isn't visible.
 - The Edge sidebar is visible, but there's no Copilot entry in it.
@@ -56,7 +56,7 @@ Your IT administrator might have configured policies that disable the sidebar, b
 #### Check the ExtensionInstallBlocklist policy
 
 1. In `edge://policy`, search for **ExtensionInstallBlocklist** and check whether:
-   - A wildcard (`*`) entry blocks all extensions
+   - A wildcard (`*`) entry blocks all extensions.
    - The Copilot extension ID `ofefcgjbeghpigppfmkologfjadafddi` is explicitly listed.
 1. If the Copilot extension ID `ofefcgjbeghpigppfmkologfjadafddi` is in the block list, contact your IT administrator to remove it.
 1. If a wildcard (`*`) is used, make sure the Copilot extension ID (`ofefcgjbeghpigppfmkologfjadafddi`) is added to the [ExtensionInstallAllowlist](/deployedge/microsoft-edge-policies#extensioninstallallowlist) policy.
