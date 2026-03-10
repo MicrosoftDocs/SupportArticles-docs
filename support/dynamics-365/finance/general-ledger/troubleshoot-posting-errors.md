@@ -11,7 +11,7 @@ ms.search.form: LedgerJournalSetup, LedgerParameters, DimensionConfigureAccountS
 ms.dyn365.ops.version: 8.0.2
 ---
 
-# "The account type for main account ... is not valid" error when posting in General ledger
+# "The account type for main account \<AccountName> is not valid" error when posting in General ledger
 
 ## Summary
 

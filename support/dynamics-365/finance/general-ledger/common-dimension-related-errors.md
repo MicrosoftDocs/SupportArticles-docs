@@ -37,14 +37,14 @@ You receive the following error message:
 
 This error message means the system can't find the dimension value. Several conditions can cause this issue.
 
-### The dimension value doesn't exist
+### Add the missing dimension value
 
 1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
 1. On the **Action Pane**, select **Financial dimension values**.
 1. Check whether the dimension value exists.
 1. If the value doesn't exist, add it.
 
-### XDS and security role restrictions block access
+### Check XDS and security role restrictions
 
 [Extensible data security (XDS)](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) policies that are combined with an insufficient security role might prevent you from viewing the dimension value. If XDS filters are applied to the backing entity, and your role doesn't include access to the company or entity where the value resides, the dimension value might appear blank or missing.
 
@@ -123,7 +123,7 @@ If you didn't directly enter the suspended segment into the ledger account, defa
 1. Review the main account for fixed dimensions that are suspended.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ## Inactive dimension value
 
@@ -146,7 +146,7 @@ If you didn't directly enter the inactive segment into the ledger account, defau
 1. Review the main account for fixed dimensions that are inactive.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ## Dimension combination not fully validated
 
@@ -178,7 +178,7 @@ If you didn't directly enter the violating segment into the ledger account, defa
 1. Review the main account for fixed dimensions that conflict with your entry.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ## Blank dimension value not allowed
 
@@ -203,7 +203,7 @@ If you didn't directly leave the field blank, default dimensions or [derived dim
 1. Review the main account for fixed dimensions that should populate automatically.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ### Modify the account structure or advanced rules to allow blanks
 
@@ -252,7 +252,7 @@ If you didn't directly enter the violating value, default dimensions or [derived
 1. Review the main account for fixed dimensions that conflict with your entry.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ## Account structure or advanced rule violation
 
@@ -277,7 +277,7 @@ If you didn't manually enter the segment that caused the error, default or [deri
 1. Review the main account for fixed dimension values that conflict with the account structure.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
-1. Update your defaulting setup accordingly.
+1. Update your default dimension setup accordingly.
 
 ## Invalid dimension value in account structure
 
