@@ -115,7 +115,7 @@ landingContent:
             url: work-order/work-order-creation-errors.md
           - text: Work orders aren't generated from agreement booking setup
             url: work-order/agreement-work-orders-not-generated.md
-          - text: Work order is stuck in a specific status and cannot be updated
+          - text: Work order is stuck in a specific status and can't be updated
             url: work-order/work-order-status-stuck.md
 
   # Card
