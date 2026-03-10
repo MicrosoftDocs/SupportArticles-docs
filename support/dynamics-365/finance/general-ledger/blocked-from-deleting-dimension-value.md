@@ -34,7 +34,7 @@ Later, when a new dimension value is needed, you can rename and reuse the old di
 
 **Potential Cause:** The record you're trying to delete is referenced as a financial dimension value. This is by design. Financial dimensions are read-only once they've been entered into the dimension framework, meaning the backing entity record can't be deleted as long as the dimension value exists in the system.
 
-You may see an error such as:
+You may see an error formatted as:
 
 > The *[Entity type]* '*[Entity identifier]*' is used in one or more transactions of the following types: *[Transaction usage category]* and cannot be deleted.
 
