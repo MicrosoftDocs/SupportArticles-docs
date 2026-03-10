@@ -107,6 +107,18 @@ landingContent:
             url: scheduling/missing-form-context-bookable-resource.md
 
   # Card
+  - title: Work order
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Errors when creating or saving a work order
+            url: work-order/work-order-creation-errors.md
+          - text: Work orders are not generated from agreement booking setup
+            url: work-order/agreement-work-orders-not-generated.md
+          - text: Work order is stuck in a specific status and cannot be updated
+            url: work-order/work-order-status-stuck.md
+
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
