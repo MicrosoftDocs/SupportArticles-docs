@@ -29,5 +29,7 @@ landingContent:
       links:
         - text: Failure to deploy self-hosted extension via group policy
           url: development/self-host-extension-deploy.md
+        - text: Self-hosted extension doesn't update automatically
+          url: development/self-host-extension-update.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
