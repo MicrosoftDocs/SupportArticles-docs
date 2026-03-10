@@ -594,6 +594,8 @@ items:
       href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Correct disk space problems on NTFS volumes
       href: ./backup-and-storage/disk-space-problems-on-ntfs-volumes.md
+    - name: Disk corrupted after high utilization when attached to Windows Server 2019 VM
+      href: ./backup-and-storage/disk-corrupted-high-utilization-windows-server-2019-vm.md
     - name: Disk Event ID 154
       href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
@@ -682,6 +684,8 @@ items:
       href: ./backup-and-storage/event-id-51-information.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
+    - name: Windows marks as locked a USB device that has no lock software
+      href: ./backup-and-storage/usb-device-doesnt-have-lock-software-marked-as-locked.md
   - name: Storage Migration
     items:
     - name: Troubleshoot Windows Server Storage Migration service
