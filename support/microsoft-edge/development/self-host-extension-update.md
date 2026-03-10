@@ -52,10 +52,10 @@ When you publish a new extension version, the version number in `manifest.json` 
 When you publish a new version, follow these steps:
 
 1. `manifest.json`: Update the `"version"` field to the new version number.
-1. `update.xml`: Update the version number and the `.crx` codebase path to match the new version.
+1. `update.xml`: Update the version number and the `.crx` codebase path to the new version number.
 1. `.crx` package: Repack the extension by using the updated `manifest.json` and the same `.pem` key file that you used to create the original `.crx` package.
 
-## Cause: Edge update check hasn't occurred yet
+## Cause: Edge update check didn't occur
 
 Edge checks for extension updates periodically. After you publish a new version on your server, the browser might not detect it for several hours or longer. This delay is by design and is expected behavior.
 
