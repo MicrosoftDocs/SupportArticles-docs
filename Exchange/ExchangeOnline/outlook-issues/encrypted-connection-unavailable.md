@@ -46,6 +46,6 @@ To work around this behavior, use one of the following options:
 
 If Microsoft 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
 
-> [2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
+[2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

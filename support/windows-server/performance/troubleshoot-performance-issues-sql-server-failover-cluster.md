@@ -20,7 +20,7 @@ This article helps you identify and fix severe performance issues on a Windows S
 
 ## Symptoms
 
-In a failover cluster environment that runs microsoft SQL Server, you excounter the following symptoms:
+In a failover cluster environment that runs Microsoft SQL Server, you encounter the following symptoms:
 
 - After a restart, the servers start slowly.
 - The Windows desktop and applications load slowly or experience delays.
@@ -68,8 +68,5 @@ Before you engage your storage vendor or Microsoft Support, collect the followin
 - Hardware diagnostic reports from the storage vendor's tools.
 - Version information for the storage controller firmware and drivers.
 - Error and cluster logs from SQL Server.
-- Performance data that focuses on disk I/O and latency. To collect this information, use tools such as Performance Monitor ([PerfMon](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749115(v=ws.11)).
+- Performance data that focuses on disk I/O and latency. To collect this information, use tools such as Performance Monitor ([PerfMon](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749115(v=ws.11))).
 - Details of recent configuration changes in the failover cluster or storage environment.
-
-
-
