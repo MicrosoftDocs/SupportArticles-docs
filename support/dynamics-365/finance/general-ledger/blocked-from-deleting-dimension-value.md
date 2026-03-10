@@ -58,6 +58,6 @@ If the scan completes and finds a reference, the following UI is shown, and the 
 
 - **Resolution 1:** (Recommended) For dimension types that support it (Bank, Project, Vendor, Customer, and similar), allow the delete scan to run to completion. If no references are found, the backing record and its associated dimension value are allowed to be deleted. If references are found, they're displayed so that you can take any necessary action before retrying.
 
-- **Resolution 2:** If the scan finds that the record is referenced as a dimension value and deletion is blocked, rename the backing entity record to indicate it shouldn't be used, such as a **___DONOTUSE_** prefix. As is mentioned above, this value may be reused.
+- **Resolution 2:** If the scan finds that the record is referenced as a dimension value and deletion is blocked, rename the backing entity record to indicate it shouldn't be used. For example, you may add a **___DONOTUSE_** prefix. As is mentioned above, this value may be reused.
 
 Later, when a new dimension value is needed, you can rename and reuse the old record and its dimension value. Rather than deleting old values and creating new ones, this practice of reusing existing dimension values is a best practice and should improve application performance.
