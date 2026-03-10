@@ -1,5 +1,5 @@
 ---
-title: USB device doesn't have lock software, but Windows marks it as locked
+title: Windows marks as locked a USB device that has no lock software
 description: Helps you fix an issue in which Windows marks a USB storage device as write-protected or locked, even though the device doesn't have specific lock or encryption software installed.
 ms.date: 03/10/2026
 manager: dcscontentpm
