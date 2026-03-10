@@ -13,9 +13,9 @@ This article helps you resolve errors that occur when you create a new financial
 
 When you create a new dimension or rename an existing one, you receive one of the following error messages:
 
-- `%1 is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
-- `Dimension %1 exists as an extension column on %2 (%3) and %4 (%5). You cannot change the name until this extension is removed.`
-- `The financial dimension name exists on another financial dimension.`
+- `... is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
+- `Dimension ... exists as an extension column on ... (...) and ... (...). You cannot change the name until this extension is removed.`
+- `The financial dimension name ... exists as a translated name on financial dimension ....`
 
 **Cause:** The name you're trying to use already exists as a column in the dimension tables from a previous dimension that was deleted or renamed but not yet activated. The system blocks reuse until those pending changes are activated.
 
