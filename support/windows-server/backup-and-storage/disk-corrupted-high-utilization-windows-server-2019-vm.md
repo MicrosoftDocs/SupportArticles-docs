@@ -47,7 +47,7 @@ To fix this issue and prevent it from reoccurring, follow these steps:
 1. Extend disk volumes in a manner that avoids the automatic conversion behavior. Use one of the following methods:
 
    - Make sure that all of the space that the volume needs resides on a single disk.
-   - If the volume requires space from more than one disk, consider using Storage Spaces or other supported configuration that pools storage resources from multiple disks. You can use such an abstracted storage pool to create volumes that meet your performance and backup requirements.
+   - If the volume requires space from more than one disk, consider using Storage Spaces or other supported configuration that pools storage resources from multiple disks. You can use this abstracted storage pool to create volumes that meet your performance and backup requirements.
 
    > [!NOTE]  
    > If you're working with a corrupted disk, and you have a backup of uncorrupted data, make sure that the disk volume is configured as described in this step before you restore the data. You can restore the data in a later step of this procedure.
