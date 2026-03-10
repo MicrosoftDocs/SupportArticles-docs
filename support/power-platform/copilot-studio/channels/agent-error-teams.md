@@ -1,21 +1,21 @@
 ---
-title: FlowActionBadRequest Error Fix for Teams Agents
-description: Resolve the FlowActionBadRequest error in Microsoft Teams by fixing schema mismatches in Power Automate flows and republishing your Copilot Studio agent.
+title: FlowActionBadRequest Error Fix for Agents
+description: Resolve the FlowActionBadRequest error in channels, such as Microsoft Teams, by fixing schema mismatches in Power Automate flows and republishing your Copilot Studio agent.
 ms.date: 03/09/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Channels\Microsoft Teams
 ms.collection: CEnSKM-ai-copilot
 ---
 
-# FlowActionBadRequest agent error in Microsoft Teams
+# FlowActionBadRequest agent error in channels
 
 ## Summary
 
-This article helps you resolve the `FlowActionBadRequest` error that occurs in Microsoft Teams when a [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) agent calls a [Power Automate flow](/microsoft-copilot-studio/advanced-flow). The error typically results from input or output schema mismatches in flow actions.
+This article helps you resolve the `FlowActionBadRequest` error that occurs in channels, such as Microsoft Teams, when a [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) agent calls a [Power Automate flow](/microsoft-copilot-studio/advanced-flow). The error typically results from input or output schema mismatches in flow actions.
 
 ## Symptoms
 
-When you interact with a Copilot Studio agent that's integrated with Power Automate flows in Microsoft Teams, you see the following error message:
+When you interact with a Copilot Studio agent that's integrated with Power Automate flows in channels such as Microsoft Teams, you see the following error message:
 
 `FlowActionBadRequest Conversation Id: xxxxxx_rYcg4Z9DFNp_rP-RkQraV5IPMFu-KRlt4UE Time (UTC): 2024-12-02T00:44:24.873Z.`
 
