@@ -967,7 +967,7 @@ Go back to the [release history](#release-history).
 
 ## GDR (November 2019)
 
-This is the General Distribution Release (GDR) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2070.41. For information about the fixes and improvements in this release, see [KB 4517790](https://support.microsoft.com/help/4517790).
+This is the General Distribution Release (GDR) of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. This is a security update that only includes fixes for GDR releases. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.2070.41. For information about the fixes and improvements in this release, see [KB 4517790](../sqlserver-2019/service-update-rtm.md).
 
 ### Package details
 
