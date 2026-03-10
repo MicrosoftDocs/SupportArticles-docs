@@ -42,7 +42,7 @@ In a high-utilization scenario, the risk of such a disk volume becoming unstable
 
 ## Resolution
 
-To fix this issue and prevent it from reocurring, follow these steps:
+To fix this issue and prevent it from reoccurring, follow these steps:
 
 1. Extend disk volumes in a manner that avoids the automatic conversion behavior. Use one of the following methods:
 
