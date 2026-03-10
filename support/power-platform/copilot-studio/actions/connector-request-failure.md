@@ -1,7 +1,7 @@
 ---
 title: Fix Connector Request Failure in Copilot Studio
 description: Resolve HTTP 400 Bad Request errors in Microsoft Copilot Studio caused by connector responses exceeding the 500 KB limit. Learn how to filter data effectively.
-ms.date: 03/06/2026
+ms.date: 03/10/2026
 ms.reviewer: ankmak, erickinser, v-shaywood
 ms.custom: sap:Actions\Connector actions
 ---
