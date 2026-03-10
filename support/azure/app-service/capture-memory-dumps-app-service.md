@@ -1,5 +1,5 @@
 ---
-title: Capture Memory Dumps on the Azure App Service Platform
+title: Capture memory dumps on the Azure App Service platform
 description: There are many features for capturing memory dumps on Azure App Service Web Apps. This article makes recommendations about which feature to use based on the scenario.
 ms.date: 02/18/2026
 author: benperk
@@ -231,7 +231,7 @@ The **Auto-Heal** feature is shown in the following screenshot.
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/auto-heal-memory-limit.png" alt-text="Azure portal screenshot of the 'Auto-Heal' page (containing the Memory Limit tile) in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/auto-heal-memory-limit.png":::
 
-When you select the **Memory Limit** tile, you caN enter a memory value that triggers the capture of a memory dump when that memory limit is breached. For example, if you enter *6291456* as the value, a memory dump of the W3WP process is taken when 6 GB of memory is consumed.
+When you select the **Memory Limit** tile, you can enter a memory value that triggers the capture of a memory dump when that memory limit is breached. For example, if you enter *6291456* as the value, a memory dump of the W3WP process is taken when 6 GB of memory is consumed.
 
 The Collect a Memory dump feature is useful in this scenario if the issue is currently occurring or reproducible. This feature quickly collects a memory dump on manual demand. For more information, see the ["Collect a memory dump"](#collect-a-memory-dump-feature) section.
 
