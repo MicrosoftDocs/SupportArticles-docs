@@ -1,7 +1,7 @@
 ---
 title: "General Ledger Posting Error: Invalid Main Account Type"
 description: Resolve the account type for main account is not valid error in Dynamics 365 Finance. Learn how to fix posting issues in General ledger transactions.
-ms.date: 03/04/2026
+ms.date: 03/10/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting/Issues with financial dimensions and financial tags
 audience: Application User

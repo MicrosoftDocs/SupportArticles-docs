@@ -1,7 +1,7 @@
 ---
 title: Fix Financial Dimension Errors in Dynamics 365 Finance
 description: Troubleshoot and fix financial dimension issues, such as inactive dimensions, suspended values, and derived dimension rule conflicts, in Dynamics 365 Finance.
-ms.date: 03/04/2026
+ms.date: 03/10/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting/Issues with financial dimensions and financial tags
 ---
@@ -16,20 +16,20 @@ This article helps you resolve common [financial dimension](/dynamics365/finance
 
 You might receive one of the following error messages when you work with financial dimensions in Dynamics 365 Finance:
 
-- [Unable to return DimensionAttributeValue record for \<DimensionName>](#missing-dimension-value-record)
-- [The financial dimension name \<DimensionName> contains invalid characters.](#invalid-characters-in-dimension-name)
-- [The value \<Value> doesn't exist for \<DimensionName>.](#dimension-value-doesnt-exist)
-- [\<DimensionName> is suspended.](#suspended-dimension-value)
-- [\<DimensionName> isn't active.](#inactive-dimension-value)
-- [The combination wasn't validated beyond the \<DimensionName> financial dimension.](#dimension-combination-not-fully-validated)
-- [You must select a value in the \<DimensionName> field in combination with the following dimensions values that are valid.](#blank-dimension-value-not-allowed)
-- [Blank isn't allowed for \<DimensionName> for the combination.](#blank-dimension-value-not-allowed)
-- [\<DimensionName> is not an allowed value in combination with the following dimensions values that are valid.](#disallowed-dimension-value-in-combination)
-- [Dimension values were validated with this advanced rule structure or account structure \<RuleOrAccountStructureName>](#account-structure-or-advanced-rule-violation)
-- [\<DimensionValue> isn't a valid dimension value in account structure.](#invalid-dimension-value-in-account-structure)
-- [The \<DimensionName> dimension with value \<Value> isn't allowed due to derived dimension rules. The allowed value should be \<AllowedValue>.](#derived-dimension-rule-prevents-value-changes)
+- [Unable to return DimensionAttributeValue record for \<DimensionName>](#unable-to-return-dimensionattributevalue-record)
+- [The financial dimension name \<DimensionName> contains invalid characters.](#financial-dimension-name-contains-invalid-characters)
+- [The value \<Value> doesn't exist for \<DimensionName>.](#value-doesnt-exist-for-financial-dimension)
+- [\<DimensionName> is suspended.](#dimension-value-is-suspended)
+- [\<DimensionName> isn't active.](#dimension-value-isnt-active)
+- [The combination wasn't validated beyond the \<DimensionName> financial dimension.](#combination-not-validated-beyond-financial-dimension)
+- [You must select a value in the \<DimensionName> field in combination with the following dimensions values that are valid.](#blank-isnt-allowed-for-dimension-in-combination)
+- [Blank isn't allowed for \<DimensionName> for the combination.](#blank-isnt-allowed-for-dimension-in-combination)
+- [\<DimensionName> is not an allowed value in combination with the following dimensions values that are valid.](#dimension-value-not-allowed-in-combination)
+- [Dimension values were validated with this advanced rule structure or account structure \<RuleOrAccountStructureName>](#dimension-values-validated-with-account-structure-or-advanced-rule)
+- [\<DimensionValue> isn't a valid dimension value in account structure.](#not-a-valid-dimension-value-in-account-structure)
+- [The \<DimensionName> dimension with value \<Value> isn't allowed due to derived dimension rules. The allowed value should be \<AllowedValue>.](#value-isnt-allowed-due-to-derived-dimension-rules)
 
-## Missing dimension value record
+## Unable to return DimensionAttributeValue record
 
 You receive the following error message:
 
@@ -57,7 +57,7 @@ To check and assign the appropriate security role, follow these steps:
    1. Select **Grant access to all organizations**, and check whether the dimension value appears.
    1. If the dimension value appears, clear **Grant access to all organizations**, and then grant access to only the required organizations.
 
-## Invalid characters in dimension name
+## Financial dimension name contains invalid characters
 
 You receive the following error message:
 
@@ -75,7 +75,7 @@ To fix this issue, follow these steps:
 1. Review the dimension name to make sure that it follows the naming conventions.
 1. Rename the dimension, if it's necessary. Don't use system field names or invalid characters.
 
-## Dimension value doesn't exist
+## Value doesn't exist for financial dimension
 
 You receive the following error message:
 
@@ -102,7 +102,7 @@ If the dimension value exists but you still receive this error message, try the 
 > 1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
 > 1. Check the *Dimension value rename and modify chart of accounts delimiter process* job.
 
-## Suspended dimension value
+## Dimension value is suspended
 
 You receive the following error message:
 
@@ -125,7 +125,7 @@ If you didn't directly enter the suspended segment into the ledger account, defa
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
-## Inactive dimension value
+## Dimension value isn't active
 
 You receive the following error message:
 
@@ -148,7 +148,7 @@ If you didn't directly enter the inactive segment into the ledger account, defau
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
-## Dimension combination not fully validated
+## Combination not validated beyond financial dimension
 
 You receive the following error message:
 
@@ -180,7 +180,7 @@ If you didn't directly enter the violating segment into the ledger account, defa
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
-## Blank dimension value not allowed
+## Blank isn't allowed for dimension in combination
 
 You receive one of the following error messages:
 
@@ -216,7 +216,7 @@ As an alternative solution, modify the account structure or advanced rules to al
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
-## Disallowed dimension value in combination
+## Dimension value not allowed in combination
 
 You receive the following error message:
 
@@ -254,7 +254,7 @@ If you didn't directly enter the violating value, default dimensions or [derived
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
-## Account structure or advanced rule violation
+## Dimension values validated with account structure or advanced rule
 
 You receive the following error message:
 
@@ -279,7 +279,7 @@ If you didn't manually enter the segment that caused the error, default or [deri
 1. Review the derived dimensions setup against each segment in the ledger account.
 1. Update your default dimension setup accordingly.
 
-## Invalid dimension value in account structure
+## Not a valid dimension value in account structure
 
 You receive the following error message:
 
@@ -306,7 +306,7 @@ For more information, see [Configure account structures](/dynamics365/finance/ge
 1. Go to **General ledger** > **Ledger setup** > **Ledger**.
 1. Verify that the account structure appears in the list.
 
-## Derived dimension rule prevents value changes
+## Value isn't allowed due to derived dimension rules
 
 You receive the following error message:
 
