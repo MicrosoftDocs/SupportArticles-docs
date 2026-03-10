@@ -3,7 +3,7 @@ title: Troubleshoot Live Metrics Issues
 description: Provides general recommendations and specific suggestions for live metrics issues.
 ms.date: 10/09/2025
 ms.service: azure-monitor
-ms.custom: Application Insights portal experiences
+ms.custom: sap:Application Insights portal experiences
 ---
 # Troubleshoot Live Metrics issues
 

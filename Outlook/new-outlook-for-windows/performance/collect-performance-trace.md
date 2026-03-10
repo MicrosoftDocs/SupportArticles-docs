@@ -40,4 +40,4 @@ To collect and access a trace, follow these steps:
 
    For example: **WebviewTrace_Performance_1_20250324_215740833.json**
 
-If you're on the phone with Microsoft Support, and you're asked to share the trace files, navigate to **Help** > **Get Diagnostics**, and then select the **Send diagnostics** button. Provide the displayed Support ID so that the Support agent can access the trace information that you collected.
+If you're on the phone with Microsoft Support, and you're asked to share the trace files, follow instructions from the Support agent to share the trace information that you collected.
