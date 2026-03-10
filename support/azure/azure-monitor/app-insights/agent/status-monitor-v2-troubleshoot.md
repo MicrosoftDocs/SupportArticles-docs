@@ -182,4 +182,4 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 
 - Review the [API reference](/azure/azure-monitor/app/status-monitor-v2-overview#powershell-api-reference) to learn about parameters that you might have missed.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

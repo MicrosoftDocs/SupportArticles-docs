@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: java
 ms.reviewer: mmcc, lechen, aaronmax
-ms.custom: sap:Missing or incorrect telemetry and performance issues(
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 
 # Troubleshoot OpenTelemetry issues in Java
@@ -40,4 +40,4 @@ Application Insights SDKs and agents send telemetry to get ingested as REST call
   > [!NOTE]  
   > The example command calls apply to Application Insights for Java version 3.4.11. To find the version number and URL address of the current release of Application Insights for Java, see <https://github.com/microsoft/ApplicationInsights-Java/releases>.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

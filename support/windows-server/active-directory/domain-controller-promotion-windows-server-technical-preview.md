@@ -1,7 +1,7 @@
 ---
 title: Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list
 description: Provides a resolution for the issue Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

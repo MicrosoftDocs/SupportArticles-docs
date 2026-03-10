@@ -33,4 +33,4 @@ If you have concerns about security, consider reviewing other aspects of your cl
 
 - [Pod priority and preemption](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

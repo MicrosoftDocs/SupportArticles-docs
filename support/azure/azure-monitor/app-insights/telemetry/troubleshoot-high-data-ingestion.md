@@ -5,8 +5,8 @@ ms.date: 10/14/2025
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-monitor
-ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu, matthofa, v-nawrothkai
-ms.custom: sap:Missing or incorrect telemetry and performance issue
+ms.reviewer: jeanbisutti, toddfous, aaronmax, matthofa
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 # Troubleshoot high data ingestion in Application Insights
 
@@ -350,4 +350,4 @@ In some scenarios, updating the application code directly might help reduce the 
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

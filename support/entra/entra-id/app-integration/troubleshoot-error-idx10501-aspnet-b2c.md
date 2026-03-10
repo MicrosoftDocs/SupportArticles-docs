@@ -9,9 +9,12 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # IDX10501 error in ASP.NET Core app with Azure B2C custom policy
 
+## Summary
+
 This guide discusses the cause of the "IDX10501" error, and provides a step-by-step solution to resolve it.
 
 ## Symptoms
+
 When you [implement a custom policy](/azure/active-directory-b2c/enable-authentication-web-application-options#pass-the-azure-ad-b2c-policy-id) in an ASP.NET Core application that integrates with Azure Active Directory B2C (Azure AD B2C), you might encounter the following IDX10501 error:
 
 > IDX10501: Signature validation failed. Unable to match key: kid: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '0'. Number of keys in Configuration: '1'. Exceptions caught: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
@@ -88,7 +91,7 @@ Example of `Appsettings.json`
 {
   "AzureADB2C": {
     "Instance": "https://markstestorganization1.b2clogin.com",
-    "ClientId": "09717d12-ca7f-4388-8393-dafe42c0c3a5",
+    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444",
     "CallbackPath": "/signin-oidc",
     "SignedOutCallbackPath": "/signout/B2C_1_signupsignin1",
     "Domain": "markstestorganization1.onmicrosoft.com",
@@ -98,7 +101,7 @@ Example of `Appsettings.json`
   },
   "AzureADB2CEditEmail": {
     "Instance": "https://markstestorganization1.b2clogin.com",
-    "ClientId": "09717d12-ca7f-4388-8393-dafe42c0c3a5",
+    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444",
     "CallbackPath": "/signin-oidc-editemail",
     "SignedOutCallbackPath": "/signout/B2C_1_signupsignin1",
     "Domain": "markstestorganization1.onmicrosoft.com",
@@ -191,4 +194,4 @@ If you have an existing app that doesn’t use the partial layout, and you want 
 <a asp-area="" asp-controller="Home" asp-action="replace-with-your-controller-action">Replace with text that describes the action</a>
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

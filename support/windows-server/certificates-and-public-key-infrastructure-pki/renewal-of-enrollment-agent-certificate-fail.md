@@ -1,7 +1,7 @@
 ---
 title: Renewal of Enrollment Agent certificate fails
 description: Provides a solution to fix an issue where renewing Exchange Enrollment Agent (Offline request) certificate by using NDES fails.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -63,4 +63,4 @@ echo $PATH | tr ":" "\n"
 
 If you're unsable to find a solution to your issue in this article, provide feedback or report bugs at the [azure/data-api-builder](https://github.com/azure/data-api-builder/discussions) GitHub repository.
 
-[!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
+ 

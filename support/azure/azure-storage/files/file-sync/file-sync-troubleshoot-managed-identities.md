@@ -220,7 +220,7 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 
 This issue occurs when the **Allow Azure services on the trusted services list to access this storage account** exception isn't enabled on a storage account. To resolve this issue, enable this exception by following instructions in [Grant access to trusted Azure services and restrict access to the storage account public endpoint to specific virtual networks](/azure/storage/file-sync/file-sync-networking-endpoints#grant-access-to-trusted-azure-services-and-restrict-access-to-the-storage-account-public-endpoint-to-specific-virtual-networks).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 
 ## Unsupported cross-tenant configurations 

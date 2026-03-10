@@ -207,4 +207,4 @@ Guidance for configuring custom DNS on **RHEL 10** is currently being developed 
    :::image type="content" source="./media/custom-dns-config-images/sles-dns-3.png" alt-text="Screenshot of Resolv.conf after final changes":::
 ---
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

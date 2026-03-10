@@ -184,4 +184,4 @@ Verify that the Remote Desktop endpoint for the Azure VM is also using TCP port 
 
 [Troubleshoot access to an application running on an Azure virtual machine](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

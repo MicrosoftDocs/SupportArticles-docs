@@ -257,4 +257,4 @@ When ADE is used in the OS disk, the header is stored in a file named `oslukshea
 - [Azure Disk Encryption for Linux VMs troubleshooting guide](/azure/virtual-machines/linux/disk-encryption-troubleshooting)
 - [Azure Disk Encryption for Linux virtual machines FAQ](/azure/virtual-machines/linux/disk-encryption-faq)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

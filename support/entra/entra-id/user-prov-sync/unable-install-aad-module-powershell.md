@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you try to install Azure Active Directory module for Windows PowerShell: You must have Windows PowerShell 2.0 or greater installed
 
+## Summary
+
 This article describes an issue in which you can't install Azure Active Directory module for Windows PowerShell. It provides a resolution.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Office 365 User and Domain Management, Office 365 Identity Management  
@@ -36,4 +38,4 @@ To resolve this issue, try one of the following methods. If one doesn't work for
 4. In the Windows Feature window, make sure that the **Windows PowerShell 2.0** checkbox is selected, and then select **OK**.
 5. Install [Azure Active Directory module for PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

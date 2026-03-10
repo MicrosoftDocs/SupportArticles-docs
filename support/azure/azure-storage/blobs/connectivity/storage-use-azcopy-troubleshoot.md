@@ -171,4 +171,4 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 - [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure)
 - [Troubleshoot 403 errors](../authentication/storage-troubleshoot-403-errors.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -174,4 +174,4 @@ By configuring appropriate memory limits and requests in Kubernetes or the speci
 
 [!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

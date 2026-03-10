@@ -38,4 +38,4 @@ Microsoft ended extended support for Windows Server 2008 and 2008 R2 on January 
 
 Microsoft ended extended support for Windows Server 2003 on July 14, 2015. Running Windows Server 2003 might put your applications and business at risk because there might be no security or software updates for the OS. You can still move a Windows Server 2003 VM to Azure and receive assistance in troubleshooting issues that concern running Windows Server 2003 on Azure. However, this support is limited to issues that don't require OS-level troubleshooting or updates.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

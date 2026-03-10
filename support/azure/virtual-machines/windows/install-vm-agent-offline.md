@@ -98,4 +98,4 @@ If you created the VM by using the Resource Manager deployment model, you're don
 - [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows)
 - [Virtual machine extensions and features for Windows](/azure/virtual-machines/extensions/features-windows)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

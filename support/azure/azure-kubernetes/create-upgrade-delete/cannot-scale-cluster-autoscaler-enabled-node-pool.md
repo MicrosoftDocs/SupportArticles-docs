@@ -95,4 +95,4 @@ export AKS_CLUSTER_NAME="MyAksCluster$RANDOM_SUFFIX"
 az aks update --resource-group $AKS_RG_NAME --name $AKS_CLUSTER_NAME --no-wait
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -81,6 +81,6 @@ If **Intelligent view** doesn't load, set the configured time frame to six days 
 
 If **Intelligent view** takes longer to load than expected, don't select the **Update map components** option. Enable **Intelligent view** only for a single Application Insights resource.
 
-[!INCLUDE [Azure Help Support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

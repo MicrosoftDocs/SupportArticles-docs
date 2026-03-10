@@ -144,4 +144,4 @@ ACR has a built-in firewall, which is a mechanism to restrict public access. It 
 
 Alternatively, you can consider [using Azure Private Link to connect privately to the Azure container registry](/azure/container-registry/container-registry-private-link).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

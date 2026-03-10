@@ -107,4 +107,4 @@ kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap ca
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

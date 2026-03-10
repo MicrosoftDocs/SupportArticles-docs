@@ -31,4 +31,4 @@ The following items are known issues for the Azure Monitor OpenTelemetry Exporte
 
 - The device model is missing from request and dependency telemetry. The missing device model adversely affects device cohort analysis.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -27,4 +27,4 @@ To resolve this issue, retry the request at a later time. If the new VM can be p
 1. Create a new VM in a different availability set (in the same region).
 2. Add the new VM to the same virtual network.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

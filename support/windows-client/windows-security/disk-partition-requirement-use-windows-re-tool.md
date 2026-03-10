@@ -1,7 +1,7 @@
 ---
 title: Disk partition requirement for using Windows RE tools on a UEFI-based computer
 description: Introduces the disk partition requirement for using Windows RE tools on a UEFI-based computer.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

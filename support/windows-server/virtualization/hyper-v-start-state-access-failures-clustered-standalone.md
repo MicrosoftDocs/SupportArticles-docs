@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Inaccessible or Unresponsive Hyper-V Virtual Machines in Clustered or Standalone Environments
 description: Troubleshoot Hyper-V virtual machines (VMs) that don't start, become stuck in transitional states, or become inaccessible in either clustered or standalone environments.
-ms.date: 12/30/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

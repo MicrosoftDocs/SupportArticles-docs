@@ -33,4 +33,4 @@ This issue occurs when your tenant is an [Azure Active Directory (AD) B2C](/azur
 
 Run a delta query in a regular Microsoft Entra tenant.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

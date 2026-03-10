@@ -2,7 +2,9 @@
 title: Error when editing an equation in Office
 description: Microsoft Equation is not available when you edit an equation that was inserted using Equation Editor 3.0 in an Office application.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
@@ -11,7 +13,6 @@ ms.custom:
   - Editing\Functions
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
 appliesto: 
   - Microsoft Office
 ms.date: 06/06/2024
@@ -30,8 +31,6 @@ When you try to edit an equation that was inserted using Equation Editor 3.0 in 
 ## Cause
 
 Equation Editor 3.0 was a third-party component built by Design Science that was included in many versions of Office, but due to security issues with its implementation has been removed. Office now includes a newer equation editor.
-
-For more information about the security issue, see [CVE-2017-11882 | Microsoft Office Memory Corruption Vulnerability](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2017-11882).
 
 ## Resolution
 

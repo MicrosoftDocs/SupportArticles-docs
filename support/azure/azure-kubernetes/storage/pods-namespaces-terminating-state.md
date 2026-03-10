@@ -106,4 +106,4 @@ kubectl delete namespace <namespace-name>  --grace-period=0 --force --wait=false
 >
 > This action enables you to delete the namespace successfully when you run the `kubectl delete` command again.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

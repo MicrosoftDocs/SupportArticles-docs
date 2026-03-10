@@ -33,4 +33,4 @@ For more information, see the following articles:
 
 If your file is too large, you must split it into chunks. For more information, see [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

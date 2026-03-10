@@ -10,9 +10,11 @@ ms.custom: sap:Application Code Deployment
 ---
 # Deployment FAQs for Web Apps in Azure
 
+## Summary
+
 This article has answers to frequently asked questions (FAQs) about deployment issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+ 
 
 ## I'm just getting started with App Service web apps. How do I publish my code?
 
@@ -88,4 +90,4 @@ Continuous code deployment for both these options depends on existing developer 
 
 For information about using FTP or FTPS to deploy your web app to App Service, see [Deploy your app to App Service by using FTP/S](/azure/app-service/deploy-ftp).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

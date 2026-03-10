@@ -11,6 +11,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # WIF10201: No valid key mapping found for securityToken error in ASP.NET application
 
+## Summary
+
 This article provides guidance for troubleshooting an authentication issue that occurs in an ASP.NET MVC application that uses both [WS-Federation](https://github.com/Azure-Samples/active-directory-dotnet-webapp-wsfederation) OWIN middleware and [Windows Identity Foundation](../../../windows-server/user-profiles-and-logon/windows-identity-foundation.md) (WIF) to authenticate to Microsoft Entra ID.
 
 ## Symptoms
@@ -55,5 +57,5 @@ The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/si
 
 You can either manually update the certificate thumbprints that are in the **Web.config** file or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
+  
 

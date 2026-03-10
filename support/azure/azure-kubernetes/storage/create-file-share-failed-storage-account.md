@@ -35,4 +35,4 @@ The Kubernetes `persistentvolume-controller` isn't on the network that was chose
 
 Create a file share and set up your AKS cluster to use [static provisioning with Azure Files](/azure/aks/azure-files-volume).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

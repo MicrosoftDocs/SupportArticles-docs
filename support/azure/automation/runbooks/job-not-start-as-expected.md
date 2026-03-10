@@ -31,4 +31,4 @@ The *SLA for the Automation Service - Process Automation* defines the following 
 - [Start a runbook in Azure Automation](/azure/automation/start-runbooks)
 - [Azure Automation runbook types](/azure/automation/automation-runbook-types)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

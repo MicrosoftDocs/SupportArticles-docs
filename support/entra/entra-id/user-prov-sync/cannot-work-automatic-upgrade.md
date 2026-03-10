@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect is not working correctly after an automatic upgrade
 
+## Summary
+
 This article discusses an issue in which Microsoft Entra Connect is only partially upgraded or the password synchronization and the password writeback features are disabled.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -80,4 +82,4 @@ To work around this issue, follow these steps:
 3. If you have previously enabled the password synchronization feature or the password writeback feature, verify that the feature remains enabled after the upgrade is complete.
 4. If any of the features is disabled after the upgrade, select **Customize synchronization options** in the Microsoft Entra Connect wizard, and then manually enable the feature.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

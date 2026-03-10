@@ -29,4 +29,4 @@ Further troubleshooting guidance can be found at:
 * [Azure VM extensions and features for Windows](/azure/virtual-machines/extensions/features-windows#troubleshoot-vm-extensions)
 * [Azure VM extensions and features for Linux](/azure/virtual-machines/extensions/features-linux#troubleshoot-vm-extensions)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

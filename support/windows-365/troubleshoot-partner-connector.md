@@ -2,7 +2,7 @@
 title: Troubleshoot partner connectors in Windows 365
 description: Provides troubleshooting information to the issues related to partner connectors in Windows 365.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: aradinger, erikje
 ms.custom:

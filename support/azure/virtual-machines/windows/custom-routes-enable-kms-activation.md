@@ -91,4 +91,4 @@ To add the custom route, follow these steps:
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
 - [Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134256(v=ws.11))
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

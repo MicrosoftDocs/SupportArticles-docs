@@ -4,7 +4,7 @@ description: Resolve problems with single sign-on (SSO) for the Confluent Cloud 
 author: praveenrajap
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
-ms.custom: support topic
+ms.custom: sap:Confluent on Azure
 ms.service: partner-services  
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/24/2025

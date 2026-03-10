@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot access token signature validation errors
 
+## Summary
+
 When a resource provider validates an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article helps you troubleshoot such errors and provides solutions in some scenarios.
 
 ## Step 1: Decode the access token
@@ -234,7 +236,7 @@ Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-di
 
 [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 
 

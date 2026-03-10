@@ -10,6 +10,8 @@ ms.custom: sap:Connections\Creating or updating connections
 *Applies to:* Power Apps  
 *Original KB number:* 4477072
 
+## Summary
+
 When integrating Power Automate flows with Power Apps, you might encounter connection reference errors, authorization errors, or triggers that don't fire, causing the flow to fail. This article helps you troubleshoot these issues and provides best practices for managing flow updates.
 
 Flow integration errors typically occur when:

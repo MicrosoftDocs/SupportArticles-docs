@@ -77,4 +77,4 @@ Here are some possible scenarios and explanations of the provisioning timeout er
 
 For more information about how to capture a Linux image to prepare for upload, see [How to capture a Linux image for upload preparation](capture-linux-image-for-upload.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Kerberos Constrained Delegation Issues
 description: Provides guidance to troubleshoot Kerberos constrained delegation issues.
-ms.date: 06/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

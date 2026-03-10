@@ -103,4 +103,4 @@ For more information, see the [AKS validation rules for upgrade](/azure/aks/use-
         --no-wait
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

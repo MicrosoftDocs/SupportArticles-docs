@@ -47,7 +47,7 @@ For Saved Query the managed component can be found with a Web API query and then
 
     Example:
 
-    `https://MyOrganization.crm11.dynamics.com/api/data/v9.1/savedqueries?$filter=savedqueryid eq '1d0f4d57-6d49-e911-a98d-00224800ce20'`
+    `https://MyOrganization.crm11.dynamics.com/api/data/v9.1/savedqueries?$filter=savedqueryid eq 'aaaabbbb-0000-cccc-1111-dddd2222eeee'`
 
     This is the output:
 
@@ -59,7 +59,7 @@ For Saved Query the managed component can be found with a Web API query and then
     "layoutxml": "<grid name=\"resultset\" icon=\"1\" preview=\"1\" select=\"1\" jump=\"css_name\" 
     object=\"10224\"><row id=\"css_testsqparentid\" name=\"result\"><cell name=\"css_name\" width=\"150\" />
     <cell name=\"css_testsqfield\" width=\"100\" /></row></grid>",
-    "savedqueryid": "1d0f4d57-6d49-e911-a98d-00224800ce20",
+    "savedqueryid": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "description": "View to trigger 8004F016 named ",
     "createdon": "DateTime",
     "savedqueryidunique": "bdab33b7-18d0-45d6-9db9-6111afc1e444",

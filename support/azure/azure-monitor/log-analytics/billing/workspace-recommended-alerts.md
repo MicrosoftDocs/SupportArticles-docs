@@ -37,4 +37,4 @@ When the daily cap is reached in a Log Analytics workspace, a banner appears in 
 > [!div class="nextstepaction"]
 > [Identify why daily cap exceeded](./why-daily-cap-exceeded.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -482,4 +482,4 @@ Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

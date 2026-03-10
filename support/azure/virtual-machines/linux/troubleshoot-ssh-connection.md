@@ -285,4 +285,4 @@ az vm redeploy --resource-group myResourceGroup --name myVM
 * For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](../windows/troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json)
 * For more information about troubleshooting virtual machines that were created by using the classic deployment model, see [How to reset a password or SSH for Linux-based virtual machines](/previous-versions/azure/virtual-machines/linux/classic/reset-access-classic).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

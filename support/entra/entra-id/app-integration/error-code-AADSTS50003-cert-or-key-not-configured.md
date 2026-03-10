@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50003 - No signing key configured
 
+## Summary
+
 This article describes a problem in which you receive the error message "Error AADSTS50003 - No signing key configured." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
 
 ## Symptoms
@@ -31,4 +33,4 @@ To delete and create a new certificate, follow the steps below:
 
 For a full list of Active Directory Authentication and authorization error codes see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

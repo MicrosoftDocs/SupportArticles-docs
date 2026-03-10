@@ -9,6 +9,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS700003 - Device object was not found in the tenant '\<TenantName\>' directory
 
+## Summary
+
 This article discusses how to resolve the "AADSTS700003" error that occurs when you try to sign in to an application that's integrated into Microsoft Entra ID.
 
 ## Symptoms
@@ -44,4 +46,4 @@ For a full list of authentication and authorization error codes, see [Microsoft 
 
 To investigate individual errors, go to [https://login.microsoftonline.com/error](https://login.microsoftonline.com/error).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

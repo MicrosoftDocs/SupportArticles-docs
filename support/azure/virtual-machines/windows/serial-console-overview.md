@@ -8,7 +8,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 10/16/2025
+ms.date: 01/27/2026
 ms.author: jarrettr
 ms.reviewer: mbifeld
 ms.custom: sap:Cannot connect to my VM
@@ -46,7 +46,9 @@ Serial Console is available for virtual machines and virtual machine scale sets 
 - China East 3
 - China North 2
 - China North 3
+- Denmark East
 - East Asia
+- East US
 - East US 2 EUAP
 - East US 2
 - France Central
@@ -167,4 +169,4 @@ Additional Serial Console documentation is available in the sidebar.
 - More information is available for [Serial Console for Linux VMs](../linux/serial-console-linux.md).
 - More information is available for [Serial Console for Windows VMs](serial-console-windows.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

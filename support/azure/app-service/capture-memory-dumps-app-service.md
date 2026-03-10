@@ -12,6 +12,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # Capture memory dumps on the Azure App Service platform
 
+## Summary
+
 This article provides guidance about Microsoft Azure App Service debugging features for capturing memory dumps. The capture method that you use is dictated by the scenario in which you capture a memory dump for troubleshooting a performance or availability issue. For example, capturing a memory dump is different for a process that's experiencing excessive memory consumption than for a process that's throwing exceptions or responding slowly. The process in this context is the Internet Information Services (IIS) worker process (W3WP, which runs as *w3wp.exe*).
 
 ## Mapping memory dump scenarios to Azure App Service debugging features

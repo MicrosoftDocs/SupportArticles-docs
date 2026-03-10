@@ -11,7 +11,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 05/05/2025
 ---
@@ -50,7 +50,7 @@ To work around this issue, force Outlook 2013 to download the updated DLP polici
       `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Outlook\PolicyNudges`
 
    1. Delete the LastDownloadTimesPerAccount registry entry.
-   1. . Exit Registry Editor.
+   1. Exit Registry Editor.
 
 2. Start Outlook 2013, create a new message, and then type some text. When you do this, you force Outlook 2013 to download DLP policies.
 
@@ -62,8 +62,8 @@ Did this fix the problem?
 
 ## More information
 
-For more information about DLP features in Exchange Online Protection, go to the following Microsoft TechNet website:
+For more information about DLP features in Microsoft 365, go to the following article:
 
-> [Data Loss Prevention](/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention)
+> [Learn about data loss prevention](/purview/dlp-learn-about-dlp)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

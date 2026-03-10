@@ -134,7 +134,7 @@ Look for "connection refused" error messages that indicate failures in traffic r
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [istio-deploy-addon]: /azure/aks/istio-deploy-addon
 [istio-cni-addon]: /azure/aks/istio-cni

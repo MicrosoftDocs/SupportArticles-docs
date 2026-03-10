@@ -3,7 +3,7 @@ title: Error 0x80070003 at Startup after You Install a Windows Update
 description: Discusses how to fix Windows Update error 0x80070003. When this issue occurs, the update can't install correctly. After the computer restarts, the installation rolls back.
 manager: dcscontentpm
 audience: itpro
-ms.date: 12/30/2025
+ms.date: 02/12/2026
 ai.usage: ai-assisted
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dougking, v-appelgatet

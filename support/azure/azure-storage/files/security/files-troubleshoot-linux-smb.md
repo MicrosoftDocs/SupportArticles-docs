@@ -349,4 +349,4 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

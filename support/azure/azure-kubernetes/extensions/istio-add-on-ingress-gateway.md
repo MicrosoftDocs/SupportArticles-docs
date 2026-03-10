@@ -129,4 +129,4 @@ The add-on also supports [customizing the Kubernetes service for the Istio ingre
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

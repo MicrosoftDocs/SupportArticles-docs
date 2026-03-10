@@ -1,7 +1,7 @@
 ---
 title: Start an application as an administrator account
 description: Describes how to start an application as an administrator account.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

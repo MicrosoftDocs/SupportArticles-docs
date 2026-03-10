@@ -217,4 +217,4 @@ If both the serial console and `az vm repair` approach don't apply to you or fai
 
 Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use az vm repair](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

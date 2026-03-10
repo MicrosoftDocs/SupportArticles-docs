@@ -1,7 +1,7 @@
 ---
 title: An Attempt to Resolve the DNS Name of a DC in the Domain Being Joined Has Failed
 description: Provides troubleshooting steps for resolving the Domain Name System (DNS) error code 0xa8b when you join a workgroup computer to a domain.
-ms.date: 03/26/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

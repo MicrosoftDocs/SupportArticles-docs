@@ -67,4 +67,4 @@ The `wids` claim in the token contains the Microsoft Entra role. It can be used 
 > [!NOTE]
 > If the token is obtained via the [implicit grant flow](/entra/identity-platform/v2-oauth2-implicit-grant-flow), the `wids` claim might not exist. For more information, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens). In this case, use a different OAuth 2 grant flow, such as the [authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow), to obtain the access token.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

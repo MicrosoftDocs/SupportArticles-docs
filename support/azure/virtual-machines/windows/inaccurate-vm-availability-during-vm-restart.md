@@ -42,4 +42,4 @@ If you see that the VM has a status of **Available**, make sure that the status 
 
 - [Reference: Monitoring Azure virtual machine data](/azure/virtual-machines/monitor-vm-reference)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

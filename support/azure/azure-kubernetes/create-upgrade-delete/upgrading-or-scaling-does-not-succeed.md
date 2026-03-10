@@ -78,4 +78,4 @@ To resolve this issue, follow these steps:
     | Failed        | Follow the solutions that are outlined in [Cause 1](#cause-1-cluster-is-in-a-failed-state). |
     | Succeeded     | Retry the scale or other previously failed operation.                                   |
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

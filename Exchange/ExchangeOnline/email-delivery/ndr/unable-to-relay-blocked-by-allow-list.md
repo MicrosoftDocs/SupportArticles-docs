@@ -14,7 +14,7 @@ ms.custom:
 ms.reviewer: romccart, v-six
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
@@ -24,17 +24,17 @@ _Original KB number:_ &nbsp; 3013740
 
 ## Problem
 
-An external email server can't connect to Microsoft Exchange Online Protection because its IP address was added to a blocklist. When a sender tries to send mail through that server, the sender receives a non-delivery report (NDR) that contains the following error message. (The message doesn't include the name of the specific blocklist.)
+An external email server can't connect to Microsoft 365 because its IP address was added to a blocklist. When a sender tries to send mail through that server, the sender receives a non-delivery report (NDR) that contains the following error message. (The message doesn't include the name of the specific blocklist.)
 
 > 5.7.1. Unable To Relay: Blocked by Customer Allow list
 
 ## Cause
 
-This issue occurs if the IP address is added to both the incoming connector and the **IP Allow list** on the Connection Filtering page of the Exchange admin center. In this scenario, the NDR doesn't include the name of the specific blocklist if the IP address is added to a real-time blocklist (RBL) that's used in Exchange Online Protection.
+This issue occurs if the IP address is added to both the incoming connector and the **IP Allow list** on the Connection Filtering page of the Exchange admin center. In this scenario, the NDR doesn't include the name of the specific blocklist if the IP address is added to a real-time blocklist (RBL) that's used in Microsoft 365.
 
 ## Solution
 
-To determine the name of the specific blocklist that's preventing the IP address from connecting to Exchange Online Protection, remove the IP address of the external email server from the **IP Allow list**. After you do it, the NDR will include the name of the specific blocklist.
+To determine the name of the specific blocklist that's preventing the IP address from connecting to Microsoft 365, remove the IP address of the external email server from the **IP Allow list**. After you do it, the NDR will include the name of the specific blocklist.
 
 ## More information
 

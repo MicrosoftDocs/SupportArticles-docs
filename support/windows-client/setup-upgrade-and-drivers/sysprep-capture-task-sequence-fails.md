@@ -1,7 +1,7 @@
 ---
 title: Sysprep and capture task sequence fails
 description: Provides a workaround for an issue where the Sysprep and Capture task sequence fails when it tries to capture Windows images.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

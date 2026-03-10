@@ -57,4 +57,4 @@ To resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error, follow 
 
 [Use Source Network Address Translation (SNAT) for outbound connections](/azure/load-balancer/load-balancer-outbound-connections)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

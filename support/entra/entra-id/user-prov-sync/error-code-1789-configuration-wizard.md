@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error (LogonUser() Failed with error code: 1789) after you enter enterprise administrator credentials in the Azure Active Directory Sync tool Configuration Wizard
 
+## Summary 
+
+This article provides guidance on resolving the "LogonUser() Failed with error code: 1789" error after you enter enterprise administrator credentials in the Azure Active Directory Sync tool configuration wizard.
+
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2508225
 
@@ -36,4 +40,4 @@ To resolve this issue, use one or more of the following methods:
   7. Select the **Domain** option, and then type the domain name in the **Domain** dialog box to add the computer back to the domain.
   8. Restart the computer.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

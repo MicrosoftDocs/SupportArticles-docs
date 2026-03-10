@@ -44,7 +44,7 @@ Use the following self-service diagnostic tools to troubleshoot issues in the Gl
 
 If the diagnostic tools can't fix the issues, [collect troubleshooting logs](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics?branch=main#advanced-log-collection-tab), and then submit a support ticket by including the logs.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 
 
 [limitations]: /entra/global-secure-access/how-to-install-windows-client#known-limitations
 [meac]: https://entra.microsoft.com

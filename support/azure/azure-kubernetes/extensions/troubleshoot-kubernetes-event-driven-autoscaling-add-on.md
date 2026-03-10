@@ -127,7 +127,7 @@ If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overv
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
 [keda-troubleshooting]: https://keda.sh/docs/latest/troubleshooting/

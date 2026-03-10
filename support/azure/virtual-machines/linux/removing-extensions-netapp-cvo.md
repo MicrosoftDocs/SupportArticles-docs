@@ -43,19 +43,34 @@ Cloud Volumes ONTAP doesn't support Azure VM extensions because extensions affec
 > Starting in BlueXP 3.9.54, NetApp enforces this pre-existing limitation as a notification in BlueXP. 
 
 ## Resolution
-To resolve this issue, run the following script against any affected NetApp CVO VMs in PowerShell:
+To resolve this issue, run the following script against any affected NetApp CVO VMs.
+
+### [PowerShell](#tab/powershell)
 
 ```powershell
-    $subscriptionId = (Get-AzContext).Subscription.Id 
-    $resourceGroup = "RGname" 
-    $vmName = "VMName" 
-    $apiVersion = "2025-04-01" 
-    $uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
-    $response = Invoke-AzRestMethod -Method GET -Uri $uri 
-    $vmModel = $response.Content | ConvertFrom-Json 
-    $vmModel.resources = @() 
-    $body = $vmModel | ConvertTo-Json -Depth 10 -Compress 
-    Invoke-AzRestMethod -Method PUT -Uri $uri -Payload $body
+$subscriptionId = (Get-AzContext).Subscription.Id 
+$resourceGroup = "RGname" 
+$vmName = "VMName" 
+$apiVersion = "2025-04-01" 
+$uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
+$response = Invoke-AzRestMethod -Method GET -Uri $uri 
+$vmModel = $response.Content | ConvertFrom-Json 
+$vmModel.resources = @() 
+$body = $vmModel | ConvertTo-Json -Depth 10 -Compress 
+Invoke-AzRestMethod -Method PUT -Uri $uri -Payload $body
+```
+
+### [CLI](#tab/cli)
+
+```cmd
+subscriptionId=$(az account show --query id -o tsv)
+resourceGroup="RGName"
+vmName="VMName"
+apiVersion="2025-04-01"
+uri="https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
+response=$(az rest --method get --uri "$uri")
+vmModel=$(echo "$response" | jq '.resources = []')
+az rest --method put --uri "$uri" --body "$vmModel"
 ```
 
 > [!NOTE]
@@ -95,7 +110,7 @@ $vm | Update-AzVM
 
 [Installing Azure VM management extensions into Cloud Volume ONTAP](https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Can_Azure_VM_Management_Extensions_be_installed_into_Cloud_Volume_ONTAP)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 

@@ -70,4 +70,4 @@ The DCRs are now published and available in the Azure portal.
 > [!div class="nextstepaction"]
 > [Step 4: Test data collections in Azure Monitor Agent](step-4-test-data-collections-azure-monitor-agent.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

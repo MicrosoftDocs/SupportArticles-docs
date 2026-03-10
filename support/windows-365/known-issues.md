@@ -2,7 +2,7 @@
 title: Known issues for Windows 365 Business Cloud PC
 description: Learn about known issues for Windows 365 Business.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje
 ms.custom:

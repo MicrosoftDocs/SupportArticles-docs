@@ -1,7 +1,7 @@
 ---
 title: Resolve Campaign Rejection Errors for SMS in Microsoft Teams
 description: Provides a list of potential campaign rejection errors when setting up SMS in Teams, and guidance to resolve them.
-ms.date: 09/03/2025
+ms.date: 01/12/2026
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ The following sections provide a comprehensive list of potential rejection error
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
-|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (for example, account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
+|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (e.g., account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
 |CallToActionContainsDisallowedContent | The Call to Action contains disallowed content. | Remove any prohibited content from the Call to Action. |
 |CallToActionCourtOrderedOptIn | Opt-in information implies that consent is acquired through a court order. This statement is disallowed. | Remove any language that suggests that opt-in is obtained through a legal mandate or court order. Consent must be voluntary and user-initiated.|
 | CallToActionDoesNotContainRobustAgeGate | The Call to Action doesn't contain a robust age gate for age-restricted content. | Add a clear age verification step for age-restricted campaigns. |
@@ -41,6 +41,9 @@ The following sections provide a comprehensive list of potential rejection error
 | CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect to receive. | Specify the kinds of messages that users might receive. |
 | CallToActionOptInIssues | The opt-in URL is inaccessible or returns a certificate error. | Make sure that the opt-in URL is valid and secure. |
 | CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, and privacy policy. |
+| CallToActionMissingOptInForm | The Call to Action page does not include an opt-in form for users to provide consent. | Add a visible and functional opt-in form to the CTA page. Make sure that it collects explicit consent, and complies with the Cellular Telecommunications Industry Association [CTIA guidelines](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf). |
+| CallToActionConsentNotOptional | SMS consent is mandatory on a multipurpose form. This status means that users cannot opt out of SMS while they complete other actions. | Update the form so that SMS consent is presented as an optional checkbox (not pre-selected), and is independent of other actions.|
+| CallToActionVerificationIssues | The opt-in process cannot be verified because of missing confirmation steps, timestamps, or verification records. | Implement a confirmation step (e.g., "Thank you for opting in" message), and make sure that timestamps are logged for compliance audits.| 
 
 ## Terms and conditions 
 
@@ -102,6 +105,8 @@ The following sections provide a comprehensive list of potential rejection error
 | SampleMessageMissingBrandName | The sample messages don't contain the brand name. | Add the registered (DBA) brand name to all samples. |
 | SampleMessageMissingOptOutInstructions | The sample messages don't contain opt-out instructions. | Add STOP instructions to each sample message. |
 | SampleMessageUseCaseMismatch | The sample messages don't match the declared use cases. | Make sure that sample messages reflect the declared use case accurately. |
+| SampleMessageMissingMessageFrequencyDisclosure | Sample messages do not include disclosure of message frequency (e.g., "You will receive X messages per month"). | Update sample messages to include frequency disclosure (e.g., "You will receive up to four (4) messages per month").|
+| SampleMessageMissingDataRatesDisclosure | Sample messages do not include disclosure of potential data rates (e.g., "Msg & Data rates may apply").	| Add "Msg & Data rates may apply" to all sample messages that are provided during campaign registration.|
 
 ## Campaign (use case, description, and attributes)
 
@@ -109,7 +114,7 @@ The following sections provide a comprehensive list of potential rejection error
 |-------|-------------|--------------------|
 | CampaignAttributesMissingOrInvalid | The campaign attributes are missing or invalid or not configured correctly. | Review the campaign attributes and make sure that all required fields are filled correctly. |
 | CampaignAttributesNotMatchingCampaignDescription | The campaign attributes phone number or link is set to False, but the campaign description indicates a phone number or link. | Update the campaign attributes to match the description, especially regarding phone numbers and links. |
-| CampaignContainsDisallowedContent | The campaign description includes disallowed content such as gambling, high-risk financial services, illegal substances, or SHAFT content. | Remove any SHAFT content or other prohibited categories. Review CTA guidelines for compliance. |
+| CampaignContainsDisallowedContent | The campaign description includes disallowed content such as gambling, high-risk financial services, illegal substances, or SHAFT content. | Remove any SHAFT content or other prohibited categories. Review the [CTIA guidelines](https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) for compliance. |
 | CampaignDescriptionNotMatchingBrandName | The submitted legal company name doesn't match the provided tax ID. | Make sure that the brand name matches the legal entity and tax ID records. |
 | CampaignDescriptionNotMatchingUseCase | The campaign description doesn't sufficiently describe the service or doesn't match the declared use cases. | Update the campaign description to clearly describe the service and align the description with the declared use cases. |
 | CampaignDescriptionNotUnique | The campaign description isn't unique or is a duplicate. | Modify the campaign description to be unique and specific to the brand's use case. |

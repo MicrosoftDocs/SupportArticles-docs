@@ -14,4 +14,4 @@ The server side must be able to accept connections that have certain headers. De
 
 `Access-Control-Allow-Headers: Request-Id, traceparent, Request-Context, <your header>`.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

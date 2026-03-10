@@ -51,4 +51,4 @@ To resolve the issue, check whether the `konnectivity-agent` in the `kube-system
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

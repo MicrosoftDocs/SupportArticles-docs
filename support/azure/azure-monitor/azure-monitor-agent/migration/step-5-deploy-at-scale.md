@@ -28,4 +28,4 @@ By using Azure Policy to associate VMs with a DCR, you can simplify and automate
 > [!div class="nextstepaction"]
 > [Step 6: Configure other services](step-6-configure-other-services.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

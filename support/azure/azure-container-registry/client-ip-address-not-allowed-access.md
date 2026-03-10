@@ -37,4 +37,4 @@ To fix this issue, make sure that the container registry's built-in firewall all
 
 Alternatively, if you disabled public network access, you can [configure connectivity by using a private endpoint](/azure/container-registry/container-registry-private-link).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

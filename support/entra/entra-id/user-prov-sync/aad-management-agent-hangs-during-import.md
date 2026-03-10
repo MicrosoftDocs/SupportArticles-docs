@@ -10,6 +10,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException
 
+## Summary
+
 This article provides a resolution to an issue in which the Microsoft Entra Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
 
 _Original product version:_ &nbsp; Active Directory  
@@ -68,4 +70,4 @@ To resolve this problem, select the missing object type (**device**). To do this
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -261,4 +261,4 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 - [Creating Dynamic Membership Rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
 - [Troubleshooting groups](/azure/active-directory/users-groups-roles/groups-troubleshooting).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -163,6 +163,8 @@ items:
         href: desktop-flows/machine-not-joined-error.md
       - name: Desktop flows don't show in console if license expired or unassigned
         href: desktop-flows/desktop-flows-not-show-console-license-expired-unassigned.md
+      - name: Desktop flows fail because of binary caching problems
+        href: desktop-flows/binary-caching-issues.md
       - name: Desktop flow runs are missing from the list
         href: desktop-flows/desktop-flow-runs-missing-from-list.md
       - name: Desktop flow runs list isn't updated

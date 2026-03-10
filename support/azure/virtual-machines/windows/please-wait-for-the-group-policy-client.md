@@ -33,4 +33,4 @@ For this scenario, Azure Support requires a memory dump file in order to be able
 
 To collect a memory dump file, follow the steps in [this article](./collect-os-memory-dump-file.md). Then, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

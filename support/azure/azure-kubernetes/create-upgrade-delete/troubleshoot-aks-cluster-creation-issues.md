@@ -199,4 +199,4 @@ Events:
 
 In the command output, you can see that the pod can't deploy to a node because no nodes are available.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

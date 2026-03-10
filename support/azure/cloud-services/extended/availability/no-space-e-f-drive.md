@@ -31,4 +31,4 @@ If the location of the local data store is needed, make sure that the applicatio
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -4,6 +4,11 @@ description: "Learn how to identify and resolve issues with log emission and dia
 author: ProfessorKendrick
 ms.author: kkendrick
 ms.service: partner-services
+ms.custom:
+  - sap:Datadog on Azure
+  - sap:Dynatrace on Azure
+  - sap:Native New Relic Service
+  - sap:Elastic on Azure
 ms.topic: troubleshooting-general
 ms.date: 08/04/2025
 ai.usage: ai-assisted

@@ -47,4 +47,4 @@ To resolve family quota errors, [increase VM-family vCPU quotas](/azure/quotas/p
 
 To resolve regional quota errors, select a different region or [increase a regional vCPU quota](/azure/azure-portal/supportability/regional-quota-requests#increase-a-regional-vcpu-quota).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

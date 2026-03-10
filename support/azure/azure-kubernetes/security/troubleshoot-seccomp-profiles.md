@@ -229,4 +229,4 @@ Testing and refining seccomp profiles helps maintain performance and security fo
 
 [!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

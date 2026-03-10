@@ -468,4 +468,4 @@ To mount it properly in AKS, you have to enable the **NTLM v2** authentication m
 
 If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

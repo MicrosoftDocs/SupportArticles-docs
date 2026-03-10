@@ -57,4 +57,4 @@ For more guidance on best practices when using Microsoft Graph, see the followin
 - [Use the Microsoft Graph API](/graph/use-the-api)
 - [Microsoft Graph throttling guidance](/graph/throttling)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

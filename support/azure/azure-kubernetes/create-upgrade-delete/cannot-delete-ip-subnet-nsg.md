@@ -61,4 +61,4 @@ The AKS cluster is associated with a subnet, network security group (NSG), or sp
 
 - If you're using an App Service plan with a subnet connected to the AKS cluster's VNET, you have to remove the associated App Service plan and its internal resources (such as Function App and SQL Azure database) and then retry deleting the AKS cluster.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

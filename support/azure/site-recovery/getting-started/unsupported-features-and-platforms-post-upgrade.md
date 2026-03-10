@@ -62,4 +62,4 @@ Maximum supported retention size is up to 15 days
 
 Appliances using InMage Scout products are no longer supported
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

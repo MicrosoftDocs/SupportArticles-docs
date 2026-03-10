@@ -91,7 +91,7 @@ To resolve the issue, follow these steps:
 1. Select the **Certificate** tab and follow the relevant step:
     - If a certificate is displayed, select **View** to examine the Thumbprint algorithm to confirm whether it's using a weak-hash algorithm. Then, select **Clear** and go to step 4.
     - If a certificate isn't displayed, review the SQL Server error log for an entry that resembles the following and note down the hash or thumbprint value:  
-    `2017-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption`
+    `2017-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"] was successfully loaded for encryption`
 1. Use the following steps to remove server authentication:
     1. Select **Start** > **Run**, and type *MMC*. (MMC also known as the Microsoft Management Console.)
     1. In MMC, open the certificates and select **Computer Account** in the **Certificates** snap-in screen.

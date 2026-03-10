@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error: 80070005 when you run the Azure Active Directory Sync Services config wizard
 
+## Summary
+
+This article provides guidance on resolving error 80070005 when you run the Azure Active Directory Sync Services configuration wizard.
+
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2988408
 
@@ -31,4 +35,4 @@ To resolve this issue, sign out and then sign in to the computer. If the issue p
 4. Add yourself to the **ADSyncAdmins** group.
 5. Sign out, and then sign in to the computer again.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

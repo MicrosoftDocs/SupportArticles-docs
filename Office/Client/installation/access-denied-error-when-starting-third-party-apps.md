@@ -46,7 +46,7 @@ If the Centennial Office package files are not removed from the affected compute
 
 ## Resolution
 
-Users should run the [Online Repair tool](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b) on the affected device. The Online Repair Tool will remove the Centennial Office packages and reestablish the permissions on the affected PIA files.
+Users should run the [Online Repair tool](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b) on the affected device. The Online Repair Tool will remove the Centennial Office packages and reestablish the permissions on the affected PIA files.
 
 ## More information
 

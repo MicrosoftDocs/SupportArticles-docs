@@ -291,4 +291,4 @@ mcr.microsoft.com/oss/v2/inspektor-gadget/inspektor-gadget:vX.Y.Z
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

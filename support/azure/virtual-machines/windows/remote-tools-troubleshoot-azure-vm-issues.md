@@ -221,4 +221,4 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 * PsExec is part of the [PSTools Suite](https://download.sysinternals.com/files/PSTools.zip).
 * For more information about the PSTools Suite, see [PSTools](/sysinternals/downloads/pstools).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

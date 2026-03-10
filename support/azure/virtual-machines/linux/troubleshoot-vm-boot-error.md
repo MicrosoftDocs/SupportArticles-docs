@@ -487,4 +487,4 @@ If the specific boot error isn't a GRUB rescue issue, refer to [Troubleshoot Azu
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

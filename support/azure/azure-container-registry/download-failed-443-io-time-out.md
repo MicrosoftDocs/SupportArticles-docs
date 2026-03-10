@@ -113,4 +113,4 @@ Make changes at the NSG level so that connectivity is allowed on port 443 betwee
 | The route table doesn't drop traffic toward the storage (data) endpoint. The traffic is dropped if the next hop is set to **None** for a route that's associated with the storage (data) endpoint. | [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview) |
 | If the route table sends the traffic toward a virtual appliance, such as a firewall that's associated with the Azure VM subnet, make sure that the firewall doesn't block traffic to the storage (data) endpoint on port 443. | [Configure rules to access an Azure container registry behind a firewall](/azure/container-registry/container-registry-firewall-access-rules) |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

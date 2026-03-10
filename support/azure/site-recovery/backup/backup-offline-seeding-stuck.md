@@ -36,4 +36,4 @@ To fix this issue, remove the backup policy by using the **Stop protection and d
 For detailed information about how to do this, see the following article:
 [Offline Backup workflow in Azure Backup](/azure/backup/backup-azure-backup-import-export).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

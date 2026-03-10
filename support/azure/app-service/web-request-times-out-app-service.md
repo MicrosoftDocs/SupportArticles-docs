@@ -12,6 +12,8 @@ ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # Web request times out in App Service
 
+## Summary
+
 This article provides guidance on addressing when a web request times out after 230 seconds in Azure App Service. 
 
 ## Symptom

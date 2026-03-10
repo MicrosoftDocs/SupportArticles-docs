@@ -31,4 +31,4 @@ For more information about the end of standard support for Ubuntu 18.04 LTS, see
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

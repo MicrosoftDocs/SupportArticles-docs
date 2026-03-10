@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Can't Connect to the Remote Computer
 description: Helps resolve the Remote Desktop can't connect to the remote computer related errors.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

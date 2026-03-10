@@ -87,4 +87,4 @@ This article helps you learn how to understand the costs that are associated wit
 > [!div class="nextstepaction"]
 > [Investigate unexpected cost increase](./identify-service-cause-unexpected-costs.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

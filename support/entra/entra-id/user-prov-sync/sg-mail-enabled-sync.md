@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Security group is still mail-enabled after it is disabled through a sync in on-premises AD
 
+## Summary
+
 This article provides information about resolving an issue in which a security group remains mail-enabled after it is disabled through a sync in on-premises AD.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -42,4 +44,4 @@ To work around this issue, use one of the following methods:
 
 - Move the security group to another organizational unit (OU) that has not been synchronized (filtered out). When you do this, the group is removed from the cloud. Then, move the group back to the original OU.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

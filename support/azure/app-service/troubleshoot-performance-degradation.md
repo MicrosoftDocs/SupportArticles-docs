@@ -15,6 +15,8 @@ ms.custom: sap:Availability, Performance, and Application Issues, build-2025
 ---
 # Troubleshoot slow app performance issues in Azure App Service
 
+## Summary
+
 This article helps you troubleshoot slow app performance issues in [Azure App Service](/azure/app-service/overview).
 
 If you require more help at any point in this article, contact the Azure experts at [Azure Community Support](https://azure.microsoft.com/support/community/). Alternatively, you can file an Azure support incident. Go to [Azure support](https://azure.microsoft.com/support/options/) and select **Submit a support ticket**.

@@ -9,6 +9,8 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # Troubleshoot infinite redirection between OIDC app and Entra ID
 
+## Summary
+
 This article describes an infinite redirection issue that exists between an OpenID Connect (OIDC) application and Microsoft Entra ID.
 
 ## Symptoms
@@ -53,4 +55,4 @@ public void ConfigureAuth(IAppBuilder app)
 
 This issue is discussed also in [this ASP.NET Security Blog article (Issue #219)](https://github.com/aspnet/Security/issues/219).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

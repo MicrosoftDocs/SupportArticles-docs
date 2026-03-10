@@ -12,6 +12,8 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS7000110: Request is ambiguous, multiple application identifiers found
 
+## Summary
+
 This article discusses how to resolve the `AADSTS7000110` error that occurs when an application tries to obtain or refresh a token from Microsoft Entra ID.
 
 ## Symptoms
@@ -38,4 +40,4 @@ For a full list of authentication and authorization error codes, see [Microsoft 
 
 To investigate individual errors, go to <https://login.microsoftonline.com/error>.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
+  

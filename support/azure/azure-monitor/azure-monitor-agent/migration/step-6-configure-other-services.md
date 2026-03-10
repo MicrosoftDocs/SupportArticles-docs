@@ -18,4 +18,4 @@ After you deploy Azure Monitor Agent at scale, you can configure other services 
 | Microsoft Defender for Cloud | [Azure Monitor Agent in Defender for Cloud](/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent) |
 | Microsoft Sentinel | [Azure Monitor Agent migration for Microsoft Sentinel](/azure/sentinel/ama-migrate) |
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

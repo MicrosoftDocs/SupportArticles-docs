@@ -190,4 +190,4 @@ In addition to the previous list of VM products, you can use the [PC Health Chec
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

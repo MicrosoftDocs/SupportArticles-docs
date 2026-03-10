@@ -1,7 +1,7 @@
 ---
 title: Can't Restore VM From Checkpoint in Hyper-V on Windows Server 2016
 description: Discusses how to fix an issue in which you can't restore a virtual machine from a checkpoint in a Hyper-V environment that runs on Windows Server 2016.
-ms.date: 10/06/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

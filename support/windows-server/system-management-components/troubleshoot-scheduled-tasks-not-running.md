@@ -1,7 +1,7 @@
 ---
 title: Scheduled Tasks Not Running
 description: Troubleshoot issues where a scheduled task doesn't run as expected in Task Scheduler.
-ms.date: 03/06/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

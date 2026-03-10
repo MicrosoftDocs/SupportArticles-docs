@@ -3,7 +3,7 @@ title: USB-connected Audio or Video Devices Malfunction when Connected to Specif
 description: Describes how to apply an update and a registry fix to resolve USB audio and video issues on Intel 500/600/700 PCH systems that use discrete TPM chips.
 ms.service: windows-client
 ms.topic: troubleshooting-general
-ms.date: 10/02/2025
+ms.date: 02/12/2026
 ai-usage: ai-assisted
 ms.reviewer: kaushika, v-tappelgate, chadbee
 ms.custom: 

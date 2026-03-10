@@ -1,7 +1,7 @@
 ---
 title: Configure DFS to use domain names
 description: Describes how to configure a DFSN server to operate in a DNS-only environment.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

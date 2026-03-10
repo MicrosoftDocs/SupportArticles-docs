@@ -136,4 +136,4 @@ In rare circumstances, a widespread issue can affect multiple servers in an Azur
 
 You can use the **Diagnose and Solve** blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any guest OS issue, collect a memory dump and contact support.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -1,23 +1,39 @@
+items:
 - name: Welcome
   href: welcome-azure-kubernetes-fleet.yml
+- name: Unable to connect to Azure Kubernetes Fleet Manager
+  href: unable-connect-azure-fleet-manager.md
 
-- name: Cluster Resource Placement
+- name: Resource Placement
   items:
     - name: Troubleshooting Cluster Resource Placement 
       href: cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues.md
-    - name: ClusterResourcePlacementScheduled is false
+    - name: Troubleshooting Resource Placement
+      href: cluster-resource-placement/troubleshoot-resource-placement-issues.md
+    - name: PlacementScheduled is false
       href: cluster-resource-placement/crp-clusterresourceplacementscheduled-false.md
-    - name: ClusterResourcePlacementRolloutStarted is false
+    - name: PlacementRolloutStarted is false
       href: cluster-resource-placement/crp-clusterresourceplacementrolloutstarted-false.md
-    - name: ClusterResourcePlacementOverridden is false
+    - name: PlacementOverridden is false
       href: cluster-resource-placement/crp-clusterresourceplacementoverridden-false.md
-    - name: ClusterResourcePlacementWorkSynchronized is false 
+    - name: WorkSynchronized is false
       href: cluster-resource-placement/crp-clusterresourceplacementworksynchronized-false.md
-    - name: ClusterResourcePlacementApplied is false 
+    - name: PlacementApplied is false
       href: cluster-resource-placement/crp-clusterresourceplacementapplied-false.md
-    - name: ClusterResourcePlacementAvailable is false 
+    - name: PlacementAvailable is false
       href: cluster-resource-placement/crp-clusterresourceplacementavailable-false.md
 
+- name: Staged Update Run
+  items:
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun API object-related errors for Azure Kubernetes Fleet Manager (preview)
+      href: staged-update-run/troubleshoot-staged-update-run-api-issues.md
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun initialization errors
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-initialization-failures.md
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun stuck errors
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-stuck.md
+    - name: Troubleshoot ClusterStagedUpdateRun and StagedUpdateRun errors
+      href: staged-update-run/troubleshoot-cluster-staged-update-run-execution-failures.md
+   
 - name: Multi-cluster networking
   items:
     - name: Troubleshoot DNS load balancing

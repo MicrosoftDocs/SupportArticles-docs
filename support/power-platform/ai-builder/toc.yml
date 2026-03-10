@@ -10,8 +10,6 @@
       href: power-automate/all-ai-builder-credits-have-been-consumed.md
     - name: Current environment doesn't meet the minimum requirements
       href: power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message.md
-    - name: Prevent users from creating AI Builder custom models
-      href: power-automate/prevent-users-from-creating-ai-builder-custom-models.md
 - name: Use in Power Automate
   items:
     - name: AI models fail to be imported in a new environment

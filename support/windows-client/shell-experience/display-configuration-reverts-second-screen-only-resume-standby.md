@@ -1,7 +1,7 @@
 ---
 title: Display configuration reverts to
 description: Describes an issue in which Windows defaults to a different display configuration than expected when you plug an external monitor into a laptop. Provides a workaround.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

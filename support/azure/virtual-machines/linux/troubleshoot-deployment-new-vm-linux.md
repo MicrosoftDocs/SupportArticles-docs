@@ -14,7 +14,7 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
+ 
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
@@ -30,7 +30,7 @@ Also, make sure the image has been properly prepared (generalized). * Instructio
 ```
 
 ```toutputext
-Deployment failed. Correlation ID: f9dcb33a-4e6e-45c5-9c9d-b29dd73da2e0. {
+Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
   "status": "Failed",
   "error": {
     "code": "ResourceDeploymentFailure",
@@ -248,4 +248,4 @@ Support Topic: <COMPLETE>
 Support Subtopic: <COMPLETE>
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

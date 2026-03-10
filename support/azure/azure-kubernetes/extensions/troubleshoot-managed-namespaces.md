@@ -106,4 +106,4 @@ Modifications to namespaces must be made through the ARM API to maintain consist
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

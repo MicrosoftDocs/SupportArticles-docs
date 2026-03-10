@@ -106,6 +106,8 @@ items:
           href: entra-id/app-integration/send-notification-details.md
     - name: Troubleshoot sign-in to apps
       items:
+        - name: Error AADSTS76021 - Request sent by client is not signed
+          href: entra-id/app-integration/error-code-aadsts76021-request-not-signed.md
         - name: AADSTS7500514 - A supported type of SAML response was not found
           href: entra-id/app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
         - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked

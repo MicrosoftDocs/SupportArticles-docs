@@ -2,7 +2,7 @@
 title: Troubleshoot Application Insights Integration with Azure App Service
 description: Helps you troubleshoot Application Insights problems in Azure App Service.
 ms.service: azure-monitor
-ms.custom:
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ms.date: 10/21/2025
 ---
 # Troubleshoot Application Insights integration with Azure App Service
@@ -320,7 +320,7 @@ For the latest updates and bug fixes, [consult the release notes](/azure/azure-m
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 <!--
 
@@ -604,6 +604,6 @@ For the latest updates and bug fixes, [consult the release notes](/azure/azure-m
 
 ---
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 -->

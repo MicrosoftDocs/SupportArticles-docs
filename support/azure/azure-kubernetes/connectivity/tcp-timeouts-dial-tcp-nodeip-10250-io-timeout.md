@@ -44,4 +44,4 @@ Error from server: Get "https://aks-agentpool-xxxxxxxxx-vmssxxxxxxxxx:10250/cont
 
 To resolve this issue, allow traffic on port 10250 as described in this [article](tunnel-connectivity-issues.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

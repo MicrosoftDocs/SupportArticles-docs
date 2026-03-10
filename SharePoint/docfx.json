@@ -146,7 +146,7 @@
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
       },
       "author": {
-        "**/*.md": "Cloud-Writer"
+        "**/*.md": "cloud-writer"
       },
       "ms.author": {
         "**/*.md": "meerak"

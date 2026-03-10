@@ -36,4 +36,4 @@ To fix runtime issues after the content deployment, try one or more of the follo
 - If you've enabled Application Insights for your function, see [Application Insights logs](/azure/azure-functions/functions-monitoring) to learn more about the full exception trace or error message that's causing errors.
 - Review the function runtime [migration guides](/azure/azure-functions/migrate-version-3-version-4) if your deployment is updating the function app runtime or language version.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -90,4 +90,4 @@ To make sure that the file specification is updated, follow these steps:
 
 10. Go back to the MARS Agent console and start a System State Backup by clicking **Back Up Now**.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

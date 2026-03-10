@@ -62,22 +62,33 @@ landingContent:
 # Card
   - title: Astro 
     linkLists:
-    - linkListType: how-to-guide
-      links:
-        - text: Can't create Astro resources in Azure  
-          url: astro/resource-creation.md
-        - text: Can't install Astro using a personal email
-          url: astro/personal-email.md
-        - text: Unable to use single sign-on in Astronomer portal
-          url: astro/single-sign-on.md
+      - linkListType: how-to-guide
+        links:
+          - text: Can't create Astro resources in Azure  
+            url: astro/resource-creation.md
+          - text: Can't install Astro using a personal email
+            url: astro/personal-email.md
+          - text: Unable to use single sign-on in Astronomer portal
+            url: astro/single-sign-on.md
 
 # Card
-  - title: Informatica
+  - title: Datadog
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Issues creating Informatica resources in Azure
-            url: informatica/resource-creation.md 
+          - text: Datadaog agent installation fails, or default API key is incorrect
+            url: datadog/installation-fails.md
+          - text: Metrics not being emitted
+            url: datadog/metrics-not-emitted.md
+
+# Card
+  - title:  Informatica
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Issues creating Informatica resources in Azure
+          url: informatica/resource-creation.md
+ 
 
 # Card        
   - title: Observability partners

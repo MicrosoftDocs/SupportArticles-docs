@@ -221,4 +221,4 @@ This message indicates that the driver registration process has started. If no f
 - [Create and upload a generic Linux Virtual Machine to Azure](/azure/virtual-machines/linux/create-upload-generic)
 - [A Linux VM doesn't start correctly with kernel 3.10.0-514.16 after an LIS upgrade](linux-vm-not-start-kernel-lis.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

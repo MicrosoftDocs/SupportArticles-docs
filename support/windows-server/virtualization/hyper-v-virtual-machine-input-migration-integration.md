@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Input, Migration, and Device Integration Issues
 description: Provides a comprehensive guide to troubleshoot common issues with Hyper-V virtual machines (VMs).
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

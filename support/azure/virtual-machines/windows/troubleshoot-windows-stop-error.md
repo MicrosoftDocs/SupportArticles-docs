@@ -160,4 +160,4 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

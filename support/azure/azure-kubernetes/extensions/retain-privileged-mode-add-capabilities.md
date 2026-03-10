@@ -21,4 +21,4 @@ Node access always requires a certain level of privilege. Default policies flag 
 
 Although it's possible to specify individual capabilities in the pod's security context without marking the pod as privileged, other policies still apply. You can find a list of these policies in [Azure Kubernetes built-in policy definitions](/azure/governance/policy/samples/built-in-policies#kubernetes). Even if the daemonset's container doesn't trigger the "privileged" policy, the container still requires access to the host's file system in order to copy agent files and scripts and so on. Consider the requirements of your container, and review the policy requirements accordingly.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

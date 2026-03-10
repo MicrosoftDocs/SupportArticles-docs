@@ -35,4 +35,4 @@ Use the Azure Disk plug-in instead, and [use the subPath property](https://kuber
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

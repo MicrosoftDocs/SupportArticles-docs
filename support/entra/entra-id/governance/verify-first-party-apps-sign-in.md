@@ -108,4 +108,4 @@ The following table lists some, but not all, Microsoft tenant-owned applications
 
 For more information, see [Sign-in activity reports in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

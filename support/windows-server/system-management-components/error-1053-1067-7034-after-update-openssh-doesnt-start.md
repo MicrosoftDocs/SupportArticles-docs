@@ -1,7 +1,7 @@
 ---
 title: Error 1053, Error 1067, or Event ID 7034 and OpenSSH Server Service Doesn't Start After You Install a Windows Update
 description: Explains how to resolve an issue that prevents the OpenSSH Server service from starting after you install specific Windows updates.
-ms.date: 11/24/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

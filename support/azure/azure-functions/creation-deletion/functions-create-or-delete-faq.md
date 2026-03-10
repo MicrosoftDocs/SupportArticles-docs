@@ -110,4 +110,4 @@ If the function app creation or deletion fails, collect and share the following 
   1. Select **Resource Group** > **Deployments**.
   1. Share the failed task correlation ID.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

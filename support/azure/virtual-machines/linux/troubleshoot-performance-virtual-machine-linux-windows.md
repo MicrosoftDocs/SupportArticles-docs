@@ -212,4 +212,4 @@ These articles discuss the specific scenarios:
 
 * [Use Azure Premium Storage with SQL Server](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-server-premium-storage)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

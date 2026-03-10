@@ -13,6 +13,8 @@ ms.custom: sap:SSL Certificates and Domains
 ---
 # Troubleshoot domain and TLS/SSL certificate problems in Azure App Service
 
+## Summary
+
 When you set up a domain or TLS/SSL certificate for your web apps in Azure App Service, you might encounter the following common problems. This article explores the possible causes and solutions for these problems.
 
 In addition to the information in this article, you can get more help by contacting Azure experts on the [Microsoft Q & A and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident on the [Azure Support site](https://azure.microsoft.com/support/options/). Select **Get Support**.
@@ -385,4 +387,4 @@ Also, if your CA gives you multiple certificates in the certificate chain, you h
 For an App Service certificate, you purchase through the Azure portal or by using a Powershell/CLI command. A certificate-signing request isn't needed. However, Azure Key Vault supports storing digital certificates issued by any CA. It supports creating a certificate-signing request with a private/public key pair. The certificate-signing request can be signed by any CA (an internal enterprise CA or an external public CA). For more information, see [Create a certificate-signing request](/azure/key-vault/certificates/create-certificate-signing-request).
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -128,4 +128,4 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 - [Kubernetes Documentation: Assign and Schedule Pods with Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

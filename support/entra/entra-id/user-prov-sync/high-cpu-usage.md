@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # High CPU usage in Microsoft Entra Connect Health for Sync
 
+## Summary
+
 This article provides information about resolving an issue in which high CPU usage occurs in Microsoft Entra Connect Health for Sync.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -46,4 +48,4 @@ To resolve this issue for Active Directory Domain Services (AD DS) and Active 
 
 To resolve this issue for Microsoft Entra Connect, install the [latest version of Microsoft Entra Connect](https://go.microsoft.com/fwlink/?LinkId=615771).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

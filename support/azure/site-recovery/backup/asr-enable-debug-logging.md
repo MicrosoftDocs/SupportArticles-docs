@@ -83,5 +83,5 @@ To enable debug logging for the ASR Provider, use the following steps:
 
 For additional troubleshooting steps and help in interpreting error messages, see [this article](/azure/site-recovery/site-recovery-monitor-and-troubleshoot#reaching-out-for-microsoft-support).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

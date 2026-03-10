@@ -12,6 +12,8 @@ ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
 # Missing dependencies error during solution import
 
+## Summary
+
 When you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) into a target environment in Microsoft Power Apps, you might encounter errors about missing dependencies. This article helps you identify the cause of missing dependency errors and provides workarounds to resolve them. It also includes best practices to help you prevent these errors in future solution imports.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
@@ -118,9 +120,6 @@ Don't make changes directly to components that are part of a managed solution. S
 Always apply changes within an unmanaged solution or extend functionality by using solution layering. For more information about solution layering, see [Solution layers](/power-platform/alm/solution-layers-alm).
 
 ### Avoid dependencies on deprecated applications
-
-> [!IMPORTANT]
-> This experience might not be available yet in the environments of all regions.
 
 Avoid taking dependencies on deprecated applications. Deprecated applications are no longer available for installation or update. You can find these dependencies in the **Deprecated Applications** section of the **Missing dependencies** page. Expanding the section provides additional details.
 

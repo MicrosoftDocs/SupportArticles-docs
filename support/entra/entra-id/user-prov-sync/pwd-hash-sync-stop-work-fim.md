@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Password hash synchronization stops working after updating Microsoft Entra credentials in FIM
 
+## Summary
+
 This article describes an issue in which password hash synchronization stops working in an Azure environment. This occurs after you update your global administrator credentials in Microsoft Forefront Identity Manager (FIM).
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 Identity Management  
@@ -36,4 +38,4 @@ Alternatively, you can restart the Forefront Identity Manager Synchronization Se
 2. In the list of services, right-click **Forefront Identity Manager Synchronization Service**, and then click **Stop**.
 3. Right-click **Forefront Identity Manager Synchronization Service**, and then click **Start**.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

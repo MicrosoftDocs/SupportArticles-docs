@@ -218,7 +218,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
                 <ClientInstalled>0</ClientInstalled>
                 <ClientType>1</ClientType>
                 <Unknown>0</Unknown>
-                <ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87</ClientID>
+                <ClientID IDType="0" IDFlag="1">00001111-aaaa-2222-bbbb-3333cccc4444</ClientID>
                 <ClientVersion>5.00.0000.0000</ClientVersion>
                 <NetBIOSName>P01PDP1.CONTOSO.COM</NetBIOSName>
                 <CodePage>437</CodePage>

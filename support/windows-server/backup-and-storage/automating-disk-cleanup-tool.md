@@ -1,7 +1,7 @@
 ---
 title: Automating Disk Cleanup tool
 description: Introduces how to run the Disk Cleanup tool (cleanmgr.exe) by using command-line switches.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -70,4 +70,4 @@ For more information, see [Creating a Disk Cleanup Handler](/windows/win32/lwef/
 For a Microsoft Windows XP version of this article, see [How to Automate the Disk Cleanup Tool in Windows XP](https://support.microsoft.com/help/315246).
 
 > [!NOTE]
-> Disk Cleanup option on drive's general properties and *cleanmgr.exe* is not present in  Windows Server 2008 R2 by default. For more information on how to have **Disk Cleanup** button or *cleanmgr.exe* on Windows Server 2008 R2, see [Disk Cleanup option on drive’s general properties and *cleanmgr.exe* is not present in Windows Server 2008 R2 by default](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff630161(v=ws.10)).
+> Disk Cleanup option on drive's general properties and *cleanmgr.exe* is not present in  Windows Server 2008 R2 by default. For more information on how to have **Disk Cleanup** button or *cleanmgr.exe* on Windows Server 2008 R2, see [Disk Cleanup option on drive's general properties and *cleanmgr.exe* is not present in Windows Server 2008 R2 by default](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff630161(v=ws.10)).

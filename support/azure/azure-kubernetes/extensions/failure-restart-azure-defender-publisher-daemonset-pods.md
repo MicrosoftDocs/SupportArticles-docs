@@ -102,4 +102,4 @@ Disable the Azure Defender profile by following these steps:
 
 After you disable the Azure Defender profile, check whether the `azure-defender-publisher` DaemonSet pods continue their previous cycle of failing and restarting.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

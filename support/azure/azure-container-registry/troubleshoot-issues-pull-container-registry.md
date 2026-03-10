@@ -53,4 +53,4 @@ If an issue is detected, the report displays an error code and a description. Fo
 
 - ["Request canceled while waiting for connection" error](./request-canceled-waiting-connection-timeout-exceeded.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

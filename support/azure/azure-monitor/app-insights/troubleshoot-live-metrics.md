@@ -3,7 +3,7 @@ title: Troubleshoot Live Metrics Issues
 description: Provides general recommendations and specific suggestions for live metrics issues.
 ms.date: 10/09/2025
 ms.service: azure-monitor
-ms.custom: Application Insights portal experiences
+ms.custom: sap:Application Insights portal experiences
 ---
 # Troubleshoot Live Metrics issues
 
@@ -70,4 +70,4 @@ If you open live metrics, the SDKs switch to a higher frequency mode and send ne
 > [!NOTE]
 > The REST API calls made by the SDKs to QuickPulse endpoints aren't tracked by Application Insights and don't affect your dependency calls or other metrics. However, you may see them in other network monitoring tools.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

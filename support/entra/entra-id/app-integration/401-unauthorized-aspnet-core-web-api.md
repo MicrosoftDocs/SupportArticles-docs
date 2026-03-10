@@ -9,7 +9,9 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # 401 Unauthorized errors in ASP.NET Core Web API with Microsoft Entra ID 
 
-When you call an ASP.NET Core Web API that's secured by using Microsoft Entra ID authentication, you might encounter a "401 Unauthorized" error. This article provides guidance for using `JwtBearerEvents` to capture detailed logs to troubleshoot these errors.
+## Summary
+
+This article provides guidance for using JwtBearerEvents to capture detailed logs to troubleshoot a "401 Unauthorized" error when you call an ASP.NET Core Web API that's secured by using Microsoft Entra ID authentication.
 
 ## Symptoms
 
@@ -180,4 +182,4 @@ If you use the API development tool to debug the request, you should receive err
 
 :::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of error details in the API development tool." lightbox="media/401-unauthorized-aspnet-core-web-api/wrong-token.png":::
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

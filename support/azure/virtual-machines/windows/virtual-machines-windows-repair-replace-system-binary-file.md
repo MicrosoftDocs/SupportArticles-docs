@@ -19,4 +19,4 @@ Repair or replace the corrupted or missing binary (*.sys*) file by following the
 
 [!INCLUDE [Repair or replace corrupted or missing binary files](../../../includes/azure/virtual-machines-windows-repair-replace-system-binary-file.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

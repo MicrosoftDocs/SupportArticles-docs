@@ -30,4 +30,4 @@ Make sure that when you run the [az aks create](/cli/azure/aks#az-aks-create) or
 
 - [How to find my IP to include in --api-server-authorized-ip-ranges?](/azure/aks/api-server-authorized-ip-ranges#how-to-find-my-ip-to-include-in---api-server-authorized-ip-ranges)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
