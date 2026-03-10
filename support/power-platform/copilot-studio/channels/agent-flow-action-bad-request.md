@@ -1,6 +1,6 @@
 ---
 title: FlowActionBadRequest Error Fix for Agents
-description: Resolve the FlowActionBadRequest error in channels, such as Microsoft Teams, by fixing schema mismatches in Power Automate flows and republishing your Copilot Studio agent.
+description: Troubleshoot the FlowActionBadRequest error in channels like Microsoft Teams. Fix schema issues in Power Automate flows and refresh your agent for seamless operation.
 ms.date: 03/09/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Channels\Microsoft Teams
@@ -33,7 +33,7 @@ The most common fix is to refresh the flow in Copilot Studio so the input and ou
 
 1. Select the ellipsis (**...**) on the **Action** node, and then select **Refresh**.
 
-   :::image type="content" source="media/agent-error-teams/action-node-refresh.png" alt-text="Screenshot of a topic focusing on an Action node and highlighting the node's Refresh option.":::
+   :::image type="content" source="media/agent-flow-action-bad-request/action-node-refresh.png" alt-text="Screenshot of a topic focusing on an Action node and highlighting the node's Refresh option.":::
 
 1. Verify that the input and output parameters in Copilot Studio match the parameters in Power Automate.
 
@@ -45,9 +45,9 @@ If the error persists after you refresh the flow, verify that the input paramete
 
 1. Compare input values in Copilot Studio and in Power Automate to identify discrepancies:
 
-   :::image type="content" source="media/agent-error-teams/power-automate-inputs.png" alt-text="Screenshot of a Copilot Studio Action node, highlighting the Power Automate inputs.":::
+   :::image type="content" source="media/agent-flow-action-bad-request/power-automate-inputs.png" alt-text="Screenshot of a Copilot Studio Action node, highlighting the Power Automate inputs.":::
 
-   :::image type="content" source="media/agent-error-teams/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent performs when the flow is called.":::
+   :::image type="content" source="media/agent-flow-action-bad-request/flow-actions.png" alt-text="Screenshot of the Power Automate flow, highlighting what the agent performs when the flow is called.":::
 
 1. If any input value is null, add a **Message** action in the flow to capture and return the input values. This step helps you debug and validate what's returned to Teams.
 
