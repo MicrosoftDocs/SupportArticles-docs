@@ -33,9 +33,7 @@ Values for entity-backed dimensions aren't available in the dimension framework 
 
 ### Potencial cause 4: The dimension value exists but isn't synced properly with the dimension framework.
 
-**Resolution** - Navigate to **System administration** > **Periodic tasks** > **Data maintenance** and run the **Dimension value rename and modify chart of accounts delimiter process** job. Check to see if any errors pop up in the **Data maintenance portal**. If none occurred, see if this synchronication job has made your dimension value appear in the desired location. 
-
-If this workaround fails, you can rename the dimension value to a temporary name, then rename it back to the original name. With each rename, run the **Dimension value rename and modify chart of accounts delimiter process** job.
+**Resolution** - Navigate to **System administration** > **Periodic tasks** > **Data maintenance** and check the status of the **Dimension value rename and modify chart of accounts delimiter process** job under the **Misc** tab. If no errors are present, and the problem persists, re-run this job by selecting the blue **Run now** button.
 
 ### Potencial cause 5: A customization or extension changed the structure of a dimension's underlying view.
 
