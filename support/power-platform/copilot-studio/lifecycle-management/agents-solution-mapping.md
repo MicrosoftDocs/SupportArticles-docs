@@ -2,7 +2,7 @@
 title: Fix Missing Agent Components in Copilot Studio Solutions
 description: Resolve missing agent components in Microsoft Copilot Studio solutions. Learn how to add topics, tools, and connectors that aren't syncing automatically.
 ms.date: 03/09/2026
-ms.reviewer: erickinser, v-shaywood
+ms.reviewer: erickinser, marcelbf, liprakash, v-shaywood
 ms.custom: sap:Lifecycle Management\Export or import copilots through solutions
 ms.collection: CEnSKM-ai-copilot
 ---
