@@ -64,7 +64,7 @@ To resolve this issue:
 
 ## Data collection
 
-If the problem persists after you follow the steps in the "Resolution" section, gather the following information before you contact Microsoft Support or your IT administrator:
+If the problem persists after you follow the resolution steps, gather the following information before you contact Microsoft Support or your IT administrator:
 
 - The version of Windows that you're using. To find this information, go to **Settings** > **System** > **About**.
 - A detailed description of the behavior that occurs when you try to write to the USB device. Include screenshots of any error messages.
