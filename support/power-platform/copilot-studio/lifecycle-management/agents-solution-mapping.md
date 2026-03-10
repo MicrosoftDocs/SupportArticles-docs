@@ -11,7 +11,7 @@ ms.collection: CEnSKM-ai-copilot
 
 ## Summary
 
-This article helps you resolve an problem in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) in which an agent is missing components in a target environment. After you import an agent's [solution](/microsoft-copilot-studio/authoring-solutions-overview) into a target environment, new components that you add to the agent's source solution don't automatically appear in the imported version of the agent. Such new components could include [topics](/microsoft-copilot-studio/authoring-create-edit-topics), tools, actions, [connectors](/microsoft-copilot-studio/advanced-connectors), child agents, or Model Context Protocol (MCP) servers. This article describes how to add the missing components and how to avoid the problem.
+This article helps you resolve a problem in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) in which an agent is missing components in a target environment. After you import an agent's [solution](/microsoft-copilot-studio/authoring-solutions-overview) into a target environment, new components that you add to the agent's source solution don't automatically appear in the imported version of the agent. Such new components could include [topics](/microsoft-copilot-studio/authoring-create-edit-topics), tools, actions, [connectors](/microsoft-copilot-studio/advanced-connectors), child agents, or Model Context Protocol (MCP) servers. This article describes how to add the missing components and how to avoid the problem.
 
 ## Symptoms
 
