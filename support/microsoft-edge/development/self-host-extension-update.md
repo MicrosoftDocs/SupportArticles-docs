@@ -23,7 +23,7 @@ You experience one or more of the following symptoms:
 
 ## Cause: The override_update_url setting is missing from ExtensionSettings
 
-If you don't set `"override_update_url": true` in the **ExtensionSettings** policy, Edge might ignore the custom `update_url` that's specified in the extension's `manifest.json` file and not check your server for updates.
+If you don't set `"override_update_url": true` in the **ExtensionSettings** policy, Edge might ignore the custom `update_url` specified in the extension's `manifest.json` file and not check your server for updates.
 
 ### Solution: Add override_update_url to the ExtensionSettings policy
 
@@ -69,7 +69,7 @@ To manually trigger an update check for testing purposes:
 
 For production environments, the automatic update check occurs within a few hours. You don't need to take any action.
 
-## Additional troubleshooting steps
+## More troubleshooting steps
 
 If the extension still doesn't update after you apply the preceding solutions, use the following steps to diagnose the issue.
 
