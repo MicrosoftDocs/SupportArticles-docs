@@ -1,7 +1,7 @@
 ---
 title: Understand Error Codes
 description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
-ms.date: 01/28/2026
+ms.date: 03/10/2026
 ms.reviewer:
   - jameslew
   - erickinser
