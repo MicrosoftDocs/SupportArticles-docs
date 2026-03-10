@@ -80,11 +80,12 @@
       href: scheduling/cascade-crew-changes-booking.md
     - name: Form context is missing on bookable resource forms
       href: scheduling/missing-form-context-bookable-resource.md
+
 - name: Work order
   items:
     - name: Errors when creating or saving a work order
       href: work-order/work-order-creation-errors.md
-    - name: Work orders are not generated from agreement booking setup
+    - name: Work orders aren't generated from agreement booking setup
       href: work-order/agreement-work-orders-not-generated.md
     - name: Work order is stuck in a specific status and cannot be updated
       href: work-order/work-order-status-stuck.md

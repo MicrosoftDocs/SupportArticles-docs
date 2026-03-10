@@ -32,7 +32,7 @@ A required field error appears even though the field appears to be populated:
 
 ### Symptom 3: Incident type products and services don't populate
 
-After selecting an **Incident Type** on the work order, the expected work order products, services, and service tasks aren't automatically added.
+After selecting an **Incident Type** on the work order, the expected work order products, services, and service tasks don't automatically add.
 
 ## Cause and resolution
 

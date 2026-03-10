@@ -10,7 +10,7 @@ ms.custom: sap:Work Order Management
 
 # Work order is stuck in a specific status and can't be updated
 
-This article helps resolve issues where a work order can't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
+This article helps you resolve issues where a work order can't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
