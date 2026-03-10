@@ -12,7 +12,7 @@ This article helps troubleshoot problems removing an account structure from your
 
 ## Symptoms
 
-Customer is trying to remove an Account structure from the Ledger setup. However, they receive the error "Account structure [Account structure being removed] can't be deleted because it is in use by the general journal in [Company]. You must first update the general journal."*
+User is trying to remove an Account structure from the Ledger setup. However, they receive the error "Account structure [Account structure being removed] can't be deleted because it is in use by the general journal in [Company]. You must first update the general journal."*
 
 ## Resolution
 
