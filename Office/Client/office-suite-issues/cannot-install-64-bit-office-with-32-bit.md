@@ -43,7 +43,7 @@ Additionally, you cannot install 64-bit versions of Office 2010 products and 32-
 
 To install the 64-bit version of Office 2010, you must uninstall the products that are listed in the error message. Note the products that are listed in the error message, and then follow these steps for your version of Windows. (The product names that appear in the error message are the same product names that appear in the Programs Control Panel that you will use to uninstall them.)
 
-To remove Office, see [Uninstall Office from a PC](https://support.office.com/article/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8?redirectSourcePath=%252fen-us%252farticle%252fhow-to-uninstall-or-remove-microsoft-office-2010-suites-90635a1d-aec8-4653-b358-67e1b766fc4d).
+To remove Office, see [Uninstall Office from a PC](https://support.office.com/article/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
 
 You can also use the following instructions to remove a single component.
 
@@ -67,13 +67,7 @@ You may receive a message to restart your computer, depending on the product tha
 
 We strongly recommend that customers use the 32-bit version of Office 2010 even on 64-bit versions of Windows because of application compatibility. If you have add-ins on your computer, especially if you sync your mobile phone together with Microsoft Outlook, check with the add-in manufacturer to see whether a 64-bit version of the add-in is available before you install the 64-bit version of Office 2010.
 
-For more information about the differences between the 32-bit and 64-bit versions of Office, visit the following websites:
-
-[Choose between the 64-bit or 32-bit version of Office](https://support.office.com/article/choose-between-the-64-bit-or-32-bit-version-of-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261?ocmsassetID=HA010369476&CorrelationId=aaaa0000-bb11-2222-33cc-444444dddddd)
-
-[64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx)
-
-[Compatibility Between the 32-bit and 64-bit Versions of Office 2010](https://msdn.microsoft.com/library/ee691831%28office.14%29.aspx)
+For more information about the differences between the 32-bit and 64-bit versions of Office, see [choose between the 64-bit or 32-bit version of Office](https://support.office.com/article/choose-between-the-64-bit-or-32-bit-version-of-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261)
 
 Microsoft does provide 32-bit and 64-bit versions of the following components for Office 2010. You can install the 64-bit versions of these components to work with the 64-bit version of Office 2010.
 
