@@ -102,6 +102,6 @@ During testing, Edge blocks manual installs when you deploy the extension throug
 
 ## Related content
 
-- [Publish updates to an extension](/deployedge/microsoft-edge-manage-extensions-webstore#publish-updates-to-an-extension)
+- [Self-host Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions-webstore)
 - [Update URL](/microsoft-edge/extensions-chromium/publish/auto-update#update-url)
-- [Microsoft Edge—Policies](/deployedge/microsoft-edge-policies)
+- [Alternative ways to distribute an extension](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)
