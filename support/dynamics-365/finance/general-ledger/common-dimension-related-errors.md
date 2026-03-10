@@ -53,8 +53,8 @@ To check and assign the appropriate security role, follow these steps:
 1. Go to **System administration** > **Users** > **Users**.
 1. Select the affected user.
 1. Select **Roles** > **Assign organizations**.
-1. Review the access scope, and grant access to the required organizations.
-   1. To test, select **Grant access to all organizations**, and check whether the dimension value appears.
+1. Review the access scope, and grant access to the required organizations. To test whether access restrictions cause the problem:
+   1. Select **Grant access to all organizations**, and check whether the dimension value appears.
    1. If the dimension value appears, clear **Grant access to all organizations**, and then grant access to only the required organizations.
 
 ## Invalid characters in dimension name
