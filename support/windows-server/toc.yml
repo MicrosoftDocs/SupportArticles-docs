@@ -604,7 +604,7 @@ items:
       href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
-    - name: "Windows Server 2022 Standard: Local disk volume becomes inaccessible after BSOD and ReFS.sys errors"
+    - name: "Windows Server 2022 Standard: Local disk volume becomes inaccessible after ReFS.sys errors"
       href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
   - name: Deduplication
     items:
