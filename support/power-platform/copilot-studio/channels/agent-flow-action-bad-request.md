@@ -3,7 +3,7 @@ title: FlowActionBadRequest Error Fix for Agents
 description: Troubleshoot the FlowActionBadRequest error in channels such as Microsoft Teams. Fix schema issues in Power Automate flows and refresh your agent for seamless operation.
 ms.date: 03/10/2026
 ms.reviewer: camogas, erickinser, v-shaywood
-ms.custom: sap:Channels\Microsoft Teams
+ms.custom: sap:Channels
 ms.collection: CEnSKM-ai-copilot
 ---
 
