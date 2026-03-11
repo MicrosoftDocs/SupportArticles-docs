@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-This article describes how to troubleshoot a corrupted or unmountable local disk on a standalone Windows Server 2022 Standard system that uses the Resilient File System (ReFS). The server experiences a series of Blue Screen of Death (BSOD) errors, and then the local disk volume becomes inaccessible. The issue is caused by driver conflicts between Windows Server storage drivers and third-party security or backup software.
+This article describes how to troubleshoot a corrupted or unmountable local disk on a standalone Windows Server 2022 Standard system that uses the Resilient File System (ReFS). The server experiences a series of Blue Screen of Death (BSOD) errors, and then the local disk volume becomes inaccessible. The issue results from driver conflicts between Windows Server storage drivers and third-party security or backup software.
 
 ## Symptoms
 
@@ -27,7 +27,7 @@ While running a standalone Windows Server 2022 Standard system that uses ReFS, y
 - After you restart the computer, the local drive (for example, drive D:) doesn't mount.
 - You can't manually access or mount the local drive.
 - The Disk Management tool displays the local drive as RAW.
-- Uninstalling antivirus software does not resolve the instability.
+- Uninstalling antivirus software doesn't resolve the instability.
 - The local drive appears to be corrupted or damaged.
 - Backup operations fail because the backup engine can't access the local drive.
 
