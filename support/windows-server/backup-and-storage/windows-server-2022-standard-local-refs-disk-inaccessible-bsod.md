@@ -56,7 +56,7 @@ To restore access to the affected drive and recover data, follow these steps:
 
 1. Review and correct the [driver altitude settings](/windows-hardware/drivers/ifs/load-order-groups-and-altitudes-for-minifilter-drivers#minifilter-altitudes) of any installed security or backup software to make sure that they don't conflict with storage drivers.
 1. If you can't resolve the conflicts, uninstall any conflicting security or backup tools.
-1. Use the [ReFS salvage utility (`refs-util`)](/windows-server/storage/refs/refs-salvage) to recover data from the volume, and then try to restore the volume to a healthy state.
+1. Use the [ReFS salvage tool](/windows-server/administration/windows-commands/refsutil-salvage) (`refs-util`) to recover data from the volume, and then try to restore the volume to a healthy state.
 1. Remount the volume.
 1. Run `chkdsk` or `refs-util` to verify the integrity of the data on the volume.
 1. To prevent future failures, verify that backup operations run correctly.
