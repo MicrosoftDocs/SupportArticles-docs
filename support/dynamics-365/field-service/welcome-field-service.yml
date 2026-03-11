@@ -55,6 +55,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot common issues with the Field Service mobile app
+            url: mobile-app/mobile-app-common-issues.md
           - text: Booking timestamp is created with an incorrect time
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
