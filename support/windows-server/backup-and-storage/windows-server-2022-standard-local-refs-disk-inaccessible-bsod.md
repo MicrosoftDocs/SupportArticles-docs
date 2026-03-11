@@ -41,7 +41,7 @@ These conflicts can lead to corruption of the ReFS file system. At that point, t
 
 To restore access to the affected drive and recover data, follow these steps:
 
-1. Use the DiskPart tool to put the affected volume in read-only mode:
+1. To put the affected volume in read-only mode, open a Command Prompt window and run the following commands, in sequence:
 
    ```console
    diskpart
