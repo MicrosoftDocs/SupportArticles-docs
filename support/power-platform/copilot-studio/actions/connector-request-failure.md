@@ -1,57 +1,63 @@
 ---
-title: "Troubleshoot connector request failure"
-description: "Troubleshoot connector request failure due to too much returned data using filtering."
-ms.date: 10/16/2024
-ms.reviewer:
-  - peterswimm
-  - erickinser
-  - v-shaywood
+title: Fix Connector Request Failure in Copilot Studio
+description: Resolve HTTP 400 Bad Request errors in Microsoft Copilot Studio caused by connector responses exceeding the 500 KB limit. Learn how to filter data effectively.
+ms.date: 03/10/2026
+ms.reviewer: ankmak, erickinser, v-shaywood
 ms.custom: sap:Actions\Connector actions
 ---
 
 # Connector request failure
 
-When using connector actions with custom agents, you may encounter an HTTP error code 400 with the message _Error Code: 400, Error Message: Bad Request_. This error occurs when the request from the connector to the service returns too much data. Copilot Studio limits connector responses to 500 KB. This may happen whether the connector is configured for a specific topic or as an agent-wide action.
+## Summary
 
-If you experience this issue, you need to take steps to filter the responses returned to the connector. You can do this by configuring the inputs to the connector action so that the service returns only the data the agent really needs to respond to the user's request.
+This article helps you resolve an HTTP 400 Bad Request error that occurs when a [connector](/connectors/) action returns too much data in Microsoft Copilot Studio. Connector responses are limited to 500 KB. A response that exceeds this limit causes the request to fail. This problem can occur whether you configure the connector as an agent-wide action or a topic-specific action. To fix this error, configure the connector action inputs to filter the data that the service returns.
 
-## How to resolve
+## Symptoms
 
-Each connector action has a set of inputs and outputs. Most connectors include inputs that can be used to filter the data request.
-The details of this will vary from connector to connector. You can view information for specific connectors in the [connectors documentation](/connectors/).
+When you use connector tools together with custom agents in Copilot Studio, you encounter HTTP error code 400 and receive the following message:
 
-For example, suppose you are using a connector to ServiceNow with the [getKnowledgeArticles](/connectors/service-now/#get-knowledge-articles) action enabled.
+> Error Code: 400, Error Message: Bad Request
 
-This action has a `Filter` input parameter that you can use to enter a filter query to limit the data returned by the service. You can also use the `Limit` input parameter to limit the number of records returned to the top few results.
+## Cause
 
-These inputs can be configured in Copilot Studio. The configuration details depend on whether the connector action is configured as an agent-wide action or as a topic-specific connector action.
+The connector request to the service returns more than 500 KB of data. This amount exceeds the Copilot Studio connector response limit.
 
-### Agent-wide action
+## Solution
 
-To configure for an agent-wide action, follow these steps:
+Filter the connector response data by configuring the inputs to the connector action. Most connectors include input parameters that limit the data that the service returns. The available parameters vary by connector. For connector-specific details, see the [connectors documentation](/connectors/).
 
-1. Under **Agents**, select the agent with the connector you want to configure.
+For example, the ServiceNow connector [Get Knowledge Articles](/connectors/service-now/#get-knowledge-articles) action provides these filtering options:
 
-1. Select **Actions** to see the list of actions associated with the agent.
+- `Filter` input parameter - accepts a filter query to limit results
+- `Limit` input parameter - restricts the number of records that are returned
 
-1. Select the action you want to configure from the list of actions.
+Configure these inputs in Copilot Studio by using the steps for either an agent-wide or a topic-specific connector tool.
 
-1. Select **Inputs** and edit the information for the input field you want to configure.
+### Agent-wide connector tool
 
-### Topic-specific connector action
+1. Under **Agents**, select the agent that has the connector that you want to configure.
 
-To configure for a topic-specific connector action, follow these steps:
+1. Select **Tools** to see the list of actions that are associated with the agent.
 
-1. Under **Agents**, select the agent with the connector you want to configure.
+1. Select the tool that you want to configure.
+
+1. Select **Inputs**, and then edit the input field that you want to configure.
+
+### Topic-specific connector tool
+
+1. Under **Agents**, select the agent that has the connector that you want to configure.
 
 1. Select **Topics** to see the list of topics for the agent.
 
-1. Select the topic you want to configure. You can see the canvas for the topic flow.
+1. Select the topic that you want to configure to open the canvas for the topic flow.
 
-1. On the canvas select the connector node for the connector you want to configure.
+1. On the canvas, select the connector node for the connector that you want to configure. The typical inputs that are identified from user input are displayed under **Inputs**.
 
-    The typical inputs that are identified from the user input are displayed under **Inputs**.
+1. Select **Advanced inputs** to access configurations for more input parameters.
 
-1. Select **Advanced inputs** to access configurations for additional inputs.
+1. Configure the inputs to filter responses.
 
-1. Configure the inputs as needed to filter your responses.
+## Related content
+
+- [Use Power Platform connectors as tools](/microsoft-copilot-studio/advanced-connectors)
+- [Quotas and limits for Copilot Studio](/microsoft-copilot-studio/requirements-quotas)

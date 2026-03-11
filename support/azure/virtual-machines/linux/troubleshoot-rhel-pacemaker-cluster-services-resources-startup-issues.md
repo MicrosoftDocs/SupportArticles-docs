@@ -299,6 +299,9 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
         + hana_XXX_roles                    : 4:S:master1:master:worker:slave
     ```
 
+> [!NOTE]
+> **Terminology notice**: Certain legacy terms like *master*, *worker*, and *slave* are referenced in this article solely as they appear in existing software artifacts and command output. Their inclusion is necessary for technical correctness and doesn't convey any implied meaning beyond their functional use.
+
 3. When you run `sudo pcs status`, the cluster status is shown as follows:
 
     ```bash
@@ -368,9 +371,9 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 2. Put the cluster into maintenance mode:
 
-    ```bash
+```bash
     sudo pcs property set maintenance-mode=true
-    ```
+```
     
 3. Check the SAP HANA DB and processes state: 
 
@@ -378,7 +381,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
   b. Switch to `<SID>adm` and run `HDB info` on each node to check the SAP-related processes that are running in the node. The SAP administrator should be able to confirm that the required process are running on both of the nodes.
       
-      ```bash
+```bash
       HDB info
       ```
       ```output
@@ -399,29 +402,32 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
       hn1adm       5047     4297   2.8    4401136    1263592      \_ hdbxsengine -port 30007
       hn1adm       5689     4297   1.2    2237896     436604      \_ hdbwebdispatcher
       hn1adm       1482        1   0.0     500636      58040 /usr/sap/HN1/HDB00/exe/sapstartsrv pf=/usr/sap/HN1/SYS/profile/HN1_HDB00_vm-mce-hana01
-      ```
+  ```
     
   c. If the SAP DB and services aren't active on the node, we recommend that you contact your SAP administrator to review and stop the SAP DB services, first in the secondary node and then in the primary node:
 
-      ```bash
+```bash
       sudo HDB stop
-      ```
-      or:
+```
 
-      ```bash
+   or:
+
+```bash
       sudo sapcontrol -nr <SAPInstanceNo> -function Stop
-      ```
+```
     
   d. After the stop operation finishes, start HANA DB in the primary node and then in the secondary node. Modify `<SAPInstanceNo>` as appropriate.
 
-      ```bash
+```bash
       sudo HDB start
-      ```
-      or:
+```
+
+   or:
     
-      ```bash
+```bash
       sudo sapcontrol -nr <SAPInstanceNo> -function Start
-      ```
+```
+
 4. If the database nodes are still not synchronized, the SAP administrator should troubleshoot the issue by reviewing the SAP logs to make sure that the database nodes are correctly synchronized.
 
     > [!NOTE]
@@ -433,10 +439,10 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
    If the database nodes are still not synchronized, the SAP administrator should troubleshoot the issue by reviewing the SAP logs to make sure that the database nodes are correctly synchronized:
 
-   ```bash
+```bash
    sudo su - hn1adm -c "python /usr/sap/HN1/HDB00/exe/python_support/systemReplicationStatus.py"
-   ```
-   ```output
+```
+```output
     |Database |Host          |Port  |Service Name |Volume ID |Site ID |Site Name |Secondary     |Secondary |Secondary |Secondary |Secondary     |Replication |Replication |Replication    |Secondary    |
     |         |              |      |             |          |        |          |Host          |Port      |Site ID   |Site Name |Active Status |Mode        |Status      |Status Details |Fully Synced |
     |-------- |------------- |----- |------------ |--------- |------- |--------- |------------- |--------- |--------- |--------- |------------- |----------- |----------- |-------------- |------------ |
@@ -453,12 +459,12 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
     mode: PRIMARY
     site id: 1
     site name: Site1
-   ```
+```
 6. Exit the SAP Admin account, and then remove the cluster from maintenance mode:
 
-   ```bash
+```bash
    sudo pcs property set maintenance-mode=false
-   ```
+```
 
 7. Make sure that the Pacemaker cluster resources are running successfully.
 
@@ -468,10 +474,10 @@ The SAP HANA resource experiences startup failures, and its `hana_xxx_roles` att
 
 When you run the `sudo pcs status --full` command, the `node attributes` status is shown as follows:
 
-  ```bash
+```bash
   sudo pcs status --full
-  ```
-  ```output
+```
+```output
     Node Attributes:
     * Node: vm-mce-hana01 (1):
       * azName                            : vm-mce-hana01
@@ -501,14 +507,14 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * hana_XXX_version                  : 2.00.083.00
       * hana_XXX_vhost                    : vm-mce-hana02
       * lpa_XXX_lpt                       : 30  
-  ```
+```
 
 This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (vm-mce-hana01 and vm-mce-hana02). The fail count is set to 1000000 (infinity). 
 
-  ```bash
+```bash
   sudo pcs status
-  ```
-  ```output
+```
+```output
   Migration Summary:
     * Node: vm-mce-hana01 (1):
       * SAPHana_HN1_00: migration-threshold=5000 fail-count=1 last-failure='Thu Jan  8 07:56:30 2026'
@@ -518,7 +524,7 @@ This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) fai
   Failed Resource Actions:
     * SAPHana_HN1_00_monitor_59000 on vm-mce-hana01 'promoted (failed)' (9): call=41, status='complete', last-rc-change='Thu Jan  8 07:56:30 2026', queued=0ms, exec=0ms
     * SAPHana_HN1_00_start_0 on vm-mce-hana02 'not running' (7): call=38, status='complete', last-rc-change='Thu Jan  8 07:48:34 2026', queued=0ms, exec=745ms
-  ```
+```
 
 ### Cause for scenario 3, symptom 2
 
