@@ -371,9 +371,9 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 2. Put the cluster into maintenance mode:
 
-    ```bash
+```bash
     sudo pcs property set maintenance-mode=true
-    ```
+```
     
 3. Check the SAP HANA DB and processes state: 
 
@@ -381,7 +381,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
   b. Switch to `<SID>adm` and run `HDB info` on each node to check the SAP-related processes that are running in the node. The SAP administrator should be able to confirm that the required process are running on both of the nodes.
       
-      ```bash
+```bash
       HDB info
       ```
       ```output
@@ -402,29 +402,30 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
       hn1adm       5047     4297   2.8    4401136    1263592      \_ hdbxsengine -port 30007
       hn1adm       5689     4297   1.2    2237896     436604      \_ hdbwebdispatcher
       hn1adm       1482        1   0.0     500636      58040 /usr/sap/HN1/HDB00/exe/sapstartsrv pf=/usr/sap/HN1/SYS/profile/HN1_HDB00_vm-mce-hana01
-      ```
+  ```
     
   c. If the SAP DB and services aren't active on the node, we recommend that you contact your SAP administrator to review and stop the SAP DB services, first in the secondary node and then in the primary node:
 
-      ```bash
+```bash
       sudo HDB stop
-      ```
+```
       or:
 
-      ```bash
+```bash
       sudo sapcontrol -nr <SAPInstanceNo> -function Stop
-      ```
+```
     
   d. After the stop operation finishes, start HANA DB in the primary node and then in the secondary node. Modify `<SAPInstanceNo>` as appropriate.
 
-      ```bash
+```bash
       sudo HDB start
-      ```
+```
       or:
     
-      ```bash
+```bash
       sudo sapcontrol -nr <SAPInstanceNo> -function Start
-      ```
+```
+
 4. If the database nodes are still not synchronized, the SAP administrator should troubleshoot the issue by reviewing the SAP logs to make sure that the database nodes are correctly synchronized.
 
     > [!NOTE]
