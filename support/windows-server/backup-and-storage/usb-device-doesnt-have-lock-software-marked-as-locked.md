@@ -46,9 +46,9 @@ To resolve this issue:
 
    ```console
    gpresult /h gp-report.html
-   ``
+   ```
 
-   The report.html file lists all the policy settings that apply to the device. 
+   The report.html file lists all the policy settings that apply to the device.
 
 1. Review the settings under **Computer Configuration** > **Administrative Templates** > **System** > **Removable Storage Access**. In particular, examine the **Removable Disks: Deny write access** setting.
 
