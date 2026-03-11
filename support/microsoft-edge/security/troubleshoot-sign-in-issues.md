@@ -6,7 +6,7 @@ ms.reviewer: v-shaywood
 ms.custom: 'sap:Security and Privacy\Authentication and Sign In'
 ---
 
-# Troubleshoot common sign-in problems in Microsoft Edge
+# Troubleshoot common sign-in problems
 
 ## Summary
 
