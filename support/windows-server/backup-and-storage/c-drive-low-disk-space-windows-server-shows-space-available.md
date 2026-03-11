@@ -1,6 +1,6 @@
 ---
 title: "C: drive warns for low disk space but Windows Server shows space available"
-description: 
+description: Discusses how to resolve an issue in which the C:\ drive on a Windows Server system displays a low disk space warning even when File Explorer shows available disk space.
 ms.date: 03/12/2026
 manager: dcscontentpm
 audience: itpro
