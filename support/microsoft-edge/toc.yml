@@ -14,4 +14,8 @@ items:
         href: development/self-host-extension-deploy.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
+  - name: Security and Privacy
+    items:
+      - name: Saved site icons change unexpectedly on the new tab page
+        href: security/site-icons-change-new-tab-page.md
 
