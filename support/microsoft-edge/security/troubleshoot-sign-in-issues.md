@@ -2,7 +2,7 @@
 title: Troubleshoot Microsoft Edge Sign-In Issues
 description: Resolve common Microsoft Edge sign-in issues, including repeated prompts, authentication errors, and sync failures for personal, work, or school accounts.
 ms.date: 03/11/2026
-ms.reviewer: v-shaywood
+ms.reviewer: Johnny.Xu, dili, v-shaywood
 ms.custom: 'sap:Security and Privacy\Authentication and Sign In'
 ---
 
