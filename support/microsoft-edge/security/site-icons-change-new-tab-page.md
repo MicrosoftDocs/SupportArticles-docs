@@ -74,5 +74,4 @@ To clear the favicon database manually, follow these steps:
 
 ## Related content
 
-- [Customize the new tab page in Microsoft Edge](/deployedge/microsoft-edge-configure-start-pages-new-tab-page)
 - [Microsoft Edge browser policies](/deployedge/microsoft-edge-policies)
