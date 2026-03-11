@@ -27,7 +27,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot common sign-in issues in Microsoft Edge
+          - text: Troubleshoot common sign-in issues
             url: security/troubleshoot-sign-in-issues.md
   
   - title: Web Platform and Development
