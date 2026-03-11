@@ -76,5 +76,5 @@ To verify that the agent is correctly mapped to your solution so that new compon
 
 ## Related content
 
-- [Application lifecycle management for Copilot Studio](/microsoft-copilot-studio/admin-alm)
+- [Overview of application lifecycle management with Microsoft Power Platform](/power-platform/alm/overview-alm)
 - [Work with environments in Copilot Studio](/microsoft-copilot-studio/environments-first-run-experience)
