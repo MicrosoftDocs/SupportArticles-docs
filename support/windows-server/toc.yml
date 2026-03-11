@@ -588,6 +588,8 @@ items:
       href: ./backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
+    - name: "C: drive warns for low disk space but Windows Server shows space available"
+      href: ./backup-and-storage/c-drive-low-disk-space-windows-server-shows-space-available.md
     - name: Can't delete files on NTFS file system
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
     - name: No Extend Volume command for drive C in Disk Management
