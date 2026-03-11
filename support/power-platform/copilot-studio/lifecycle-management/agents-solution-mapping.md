@@ -32,7 +32,7 @@ To sync new components from the agent's source solution to the imported agent in
 
 1. In Copilot Studio, go to **Solutions**, and then open the agent's source solution.
 1. In the **Objects** pane, locate your agent under **Agents**.
-1. Open the overflow menu (**⋮**), select **Advanced**, and then select **Add required objects**.
+1. Open the commands menu (**⋮**), select **Advanced**, and then select **Add required objects**.
 1. [Export the source solution](/microsoft-copilot-studio/authoring-solutions-import-export#export-the-solution-with-your-agent).
 1. [Import the updated solution](/microsoft-copilot-studio/authoring-solutions-import-export#import-the-solution-with-your-agent) into your target environment.
 
