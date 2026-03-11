@@ -163,4 +163,40 @@ To prevent this issue from recurring:
 - Avoid setting `minAvailable` equal to the total replica count, as this prevents any eviction.
 - Use `maxUnavailable` instead of `minAvailable` when possible, as it's easier to reason about during upgrades.
 
+### Automatic PDB creation with the Eviction Autoscaler extension
+
+The [Eviction Autoscaler](https://github.com/Azure/eviction-autoscaler) extension can automatically create and manage PDBs for your deployments, helping avoid misconfigured or conflicting PDBs.
+
+When installed with `controllerConfig.pdb.create=true`, the extension automatically creates PDBs for deployments that don't already have one. You can control this behavior per deployment using the `eviction-autoscaler.azure.com/pdb-create` annotation:
+
+- To **prevent** automatic PDB creation for a specific deployment, set the annotation to `"false"`:
+
+  ```yaml
+  metadata:
+    annotations:
+      eviction-autoscaler.azure.com/pdb-create: "false"
+  ```
+
+- By default, deployments without this annotation (or with it set to `"true"`) get an automatically created PDB when `pdb.create=true` is enabled.
+
+You can also control which namespaces the extension operates in using the `eviction-autoscaler.azure.com/enable` annotation on the namespace:
+
+- In **opt-in mode** (`enabledByDefault=false`, the default), add the annotation to enable a namespace:
+
+  ```yaml
+  metadata:
+    annotations:
+      eviction-autoscaler.azure.com/enable: "true"
+  ```
+
+- In **opt-out mode** (`enabledByDefault=true`), add the annotation to disable a namespace:
+
+  ```yaml
+  metadata:
+    annotations:
+      eviction-autoscaler.azure.com/enable: "false"
+  ```
+
+For more information, see the [Eviction Autoscaler README](https://github.com/Azure/eviction-autoscaler).
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
