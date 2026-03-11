@@ -167,5 +167,5 @@ If you need to contact Microsoft Support for more help, collect the following di
 ## Related content
 
 - [Microsoft Edge sign-in and identity](/deployedge/microsoft-edge-security-identity)
-- [Troubleshoot Microsoft Entra sign-in issues](/troubleshoot/azure/entra/entra-id/sign-in/troubleshoot-sign-in-issues)
+- [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors)
 - [Diagnose and fix Microsoft Edge sync issues](/deployedge/microsoft-edge-troubleshoot-enterprise-sync)
