@@ -1,0 +1,56 @@
+# Windows Server 2022 Standard: Local disk volume becomes inaccessible after BSOD and ReFS.sys errors
+
+This article applies to Windows Server 2022 Standard and describes an issue in which a local drive becomes inaccessible after a series of Blue Screen of Death (BSOD) errors. The issue involves third-party security or backup agents (such as the Veeam Agent for Windows) and the ReFS.sys driver, and can lead to the drive appearing as RAW or unmounted. This article explains the symptoms, possible causes, and recommended resolutions.
+
+## Symptoms
+
+While running a standalone Windows Server 2022 Standard system that uses ReFS, you experience one or more of the following symptoms:
+
+- BSOD errors occurring during normal operation.
+- After you restart the computer, the local drive (for example, drive D:) doesn't mount.
+- You can't manually access or mount the local drive.
+- The Disk Management tool displays the local drive as RAW.
+- Uninstalling antivirus software does not resolve the instability.
+- The local drive appears to be corrupted or damaged.
+- Backup operations fail because the backup engine can't access the local drive.
+
+## Cause
+
+This issue occurs because of conflicts between Windows Server drivers for third-party security or backup software such as Veeam, ESET, or CrowdStrike. Typically, the driver or [driver altitude](/windows-hardware/drivers/ifs/load-order-groups-and-altitudes-for-minifilter-drivers#minifilter-altitudes) settings of the software are incorrect.
+
+These conflicts can lead to corruption of the ReFS file system. At that point, the volume dismounts or enters a RAW state.
+
+## Resolution
+
+To restore access to the affected drive and recover data, follow these steps:
+
+1. Use the DiskPart tool to put the affected volume in read-only mode:
+
+   ```console
+   diskpart
+   list volume
+   select volume <VolumeID>
+   attributes volume set readonly
+   exit
+   ```
+
+   > [!NOTE]  
+   > In these commands, \<VolumeID> represents the number or drive letter that identifies the volume.
+
+1. Review and correct the [driver altitude settings](/windows-hardware/drivers/ifs/load-order-groups-and-altitudes-for-minifilter-drivers#minifilter-altitudes) of any installed security or backup software to make sure that they don't conflict with storage drivers.
+1. If you can't resolve the conflicts, uninstall any conflicting security or backup tools.
+1. Use the [ReFS salvage utility (`refs-util`)](/windows-server/storage/refs/refs-salvage) to recover data from the volume, and then try to restore the volume to a healthy state.
+1. Remount the volume.
+1. Run `chkdsk` or `refs-util` to verify the integrity of the data on the volume.
+1. To prevent future failures, verify that backup operations run correctly.
+
+## Data collection
+
+If the issue persists after you finish the resolution steps, collect the following data, and then contact [Microsoft Support](https://support.microsoft.com/contactus):
+
+- The exact Windows Server 2022 Standard build version. To find this information, run `winver` in a Command Prompt window.
+- Details of installed security or backup software and driver versions.
+- A list of recent changes or updates applied to the system.
+- Event data that covers the period when the BSOD incidents occurred. You can export this information from Event Viewer.
+- Output from the DiskPart tool that shows the current state of the affected volume.
+- Results from ReFS salvage tool (`refs-util`) operations.
