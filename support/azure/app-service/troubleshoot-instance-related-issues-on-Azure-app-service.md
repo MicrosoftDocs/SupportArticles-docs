@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Instance-Related Issues on Azure App Service
-description: Watch a video that shows you how to troubleshoot instance-related issues on Microsoft Azure App Service.
+title: Troubleshoot instance-related issues on Azure App Service
+description: Watch this video to troubleshoot instance-related issues on Azure App Service, restore availability, and optimize load distribution. Start resolving issues now.
 ms.date: 02/13/2026
 ms.service: azure-app-service
 ms.author: shwagarwal
@@ -13,7 +13,7 @@ ms.custom: sap:Availability, Performance, and Application Issues
 
 ## Summary
 
-App services are hosted on Azure App Service plans that define the compute resources that you need to be able to run a web app. The compute resources, also known as instances, can occasionally become unavailable. This video helps you to identify such issues, and explains how to resolve them. From improving load balancing to moving to an entirely new set of instances, this video leaves you well equipped to resolve instance-related issues by applying these techniques.
+Use this video to troubleshoot instance-related issues on Azure App Service. Learn how to identify unavailable instances, improve load balancing, and move workloads to healthy instances to maintain availability.
 
 > [!VIDEO https://www.youtube.com/embed/Cg_muggc2m0]
 
