@@ -57,6 +57,9 @@ Financial dimension values are merged from multiple sources during document and 
 - **Ledger / legal entity defaults** – Default dimensions configured at the ledger level apply as a baseline across all transactions in that company.
 - **Derived dimensions** – Rules that automatically populate one dimension value based on the value of another dimension (for example, selecting a specific department might automatically fill in a cost center).
 
+[!NOTE]
+If derived dimensions appear to be populating values even though **Replace existing dimension values with derived values** is disabled, this is by design. That setting only prevents derived values from overwriting fields that already have a value. Blank dimension fields are always populated with derived values regardless of how the setting is configured. **Replace existing dimension values with derived values** (available when configuring derived dimensions on the **General ledger** \> **Chart of accounts** \> **Financial dimensions** page) enables the overwriting of non-blank values with derived dimensions.
+
 **Resolution:** Work through each source to identify which one is supplying the unexpected value, then correct it.
 
 1. **Check journal header defaults.** Open the journal and select **Financial dimensions** on the journal header. If a value is set there that conflicts with what you expected on a line, clear or update it on the header, then retest.
