@@ -1,6 +1,6 @@
 ---
 title: "Windows Server 2022 Standard: Local disk volume becomes inaccessible after BSOD and ReFS.sys errors"
-description: Discusses an issue in which 
+description: Discusses an issue in which a local disk volume becomes inaccessible on Windows Server 2022 Standard due to driver conflicts between ReFS storage drivers and third-party security or backup software.
 ms.date: 03/12/2026
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,9 @@ appliesto:
 ---
 # Windows Server 2022 Standard: Local disk volume becomes inaccessible after BSOD and ReFS.sys errors
 
-This article applies to Windows Server 2022 Standard and describes an issue in which a local drive becomes inaccessible after a series of Blue Screen of Death (BSOD) errors. The issue involves third-party security or backup agents (such as the Veeam Agent for Windows) and the ReFS.sys driver, and can lead to the drive appearing as RAW or unmounted. This article explains the symptoms, possible causes, and recommended resolutions.
+## Summary
+
+This article describes how to troubleshoot a corrupted or unmountable local disk on a standalone Windows Server 2022 Standard system that uses the Resilient File System (ReFS). The server experiences a series of Blue Screen of Death (BSOD) errors, and then the local disk volume becomes inaccessible. The issue is caused by driver conflicts between Windows Server storage drivers and third-party security or backup software.
 
 ## Symptoms
 
