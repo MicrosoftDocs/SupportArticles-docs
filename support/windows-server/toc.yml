@@ -600,12 +600,12 @@ items:
       href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
       href: ./backup-and-storage/extending-csv-isnt-blocked.md
+    - name: Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard
+      href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
     - name: Stop error when Windows tries to repair a drive while restarting
       href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
-    - name: "Windows Server 2022 Standard: Local disk volume becomes inaccessible after ReFS.sys errors"
-      href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
   - name: Deduplication
     items:
     - name: Troubleshoot Windows Server data deduplication
