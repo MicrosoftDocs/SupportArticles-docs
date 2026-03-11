@@ -10,7 +10,15 @@ ms.custom: "sap:Experiences and Services\AI Experiences: Copilot and Sidebar"
 
 ## Summary
 
-This article helps you troubleshoot an issue in which the Copilot icon doesn't appear in the Microsoft Edge sidebar. The icon might be missing because the sidebar is disabled, Copilot is turned off in sidebar settings, Group Policy blocks Copilot or sidebar, the Edge version is outdated, or Copilot isn't available for your region or account. Follow the steps in this article to identify and resolve the issue.
+This article helps you troubleshoot an issue in which the Copilot icon doesn't appear in the Microsoft Edge sidebar. The icon might be missing for any of the following reasons:
+
+- The sidebar is disabled
+- Copilot is turned off in sidebar settings
+- Group Policy blocks Copilot or the sidebar
+- The Edge version is outdated
+- Copilot isn't available for your region or account
+
+Follow the steps in this article to identify and resolve the issue.
 
 ## Symptoms
 
