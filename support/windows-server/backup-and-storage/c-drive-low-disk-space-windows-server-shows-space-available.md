@@ -16,7 +16,11 @@ appliesto:
 
 # C: drive warns for low disk space but Windows Server shows space available
 
-This article applies to Windows Server environments where the system (C:) drive appears full even though actual usage should be lower. The issue has been reported in scenarios where normal troubleshooting steps, such as checking folder sizes, have not revealed the cause. This guidance will help you identify and resolve this problem.
+## Summary
+
+The C:\ drive on a Windows Server system can display a low disk space warning even when File Explorer shows available disk space. Reviewing folder sizes in File Explorer doesn't reveal any unusually large folders. This situation typically occurs when one or more applications generate large temporary files in hidden or system-protected directories that standard folder size tools don't report accurately.
+
+This article describes the symptoms, explains the most common cause, and provides steps to identify and remove the files that are consuming disk space.
 
 ## Symptoms
 
