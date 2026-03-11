@@ -299,6 +299,9 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
         + hana_XXX_roles                    : 4:S:master1:master:worker:slave
     ```
 
+> [!NOTE]
+> **Terminology notice**: Certain legacy terms like *master*, *worker*, and *slave* are referenced in this article solely as they appear in existing software artifacts and command output. Their inclusion is necessary for technical correctness and doesn't convey any implied meaning beyond their functional use.
+
 3. When you run `sudo pcs status`, the cluster status is shown as follows:
 
     ```bash
