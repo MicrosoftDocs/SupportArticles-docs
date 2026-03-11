@@ -18,7 +18,7 @@ appliesto:
 
 ## Summary
 
-On a Windows Server system, drive C can display a low disk space warning even if File Explorer shows available disk space and no unusually large folders. This situation typically occurs when one or more applications generate large temporary files in hidden or system-protected directories that aren't reported accurately by standard file management or monitoring tools.
+On a Windows Server system, drive C can display a low disk space warning even if File Explorer shows available disk space and no unusually large folders. This situation typically occurs when one or more applications generate large temporary files in hidden or system-protected folders. These folders aren't reported accurately by standard file management or monitoring tools.
 
 This article explains the most common cause of this issue, and provides steps to identify and remove the files that are consuming excessive disk space.
 
@@ -28,7 +28,7 @@ You experience the following symptoms:
 
 - Drive C displays a low disk space warning in Windows Server.
 - A review of folder sizes in File Explorer doesn't indicate any unusually large folders.
-- No recent configuration changes, installations, or updates (including Windows updates) have occurred that could explain the sudden loss of free space.
+- No recent configuration changes, installations, or updates (including Windows updates) occurred that could explain the sudden loss of free space.
 - The issue persists for multiple days.
 
 ## Cause
