@@ -10,7 +10,7 @@ items:
         href: manageability/update-install-rollback-failures.md
   - name: Security and Privacy
     items:
-      - name: Troubleshoot common sign-in issues in Microsoft Edge
+      - name: Troubleshoot common sign-in issues
         href: security/troubleshoot-sign-in-issues.md
   - name: Web Platform and Development
     items:
