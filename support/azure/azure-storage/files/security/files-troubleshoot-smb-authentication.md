@@ -1,22 +1,16 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
+description: Troubleshoot problems with using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 02/05/2026
+ms.date: 03/06/2026
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
+**Applies to:** :heavy_check_mark: SMB Azure file shares
+
 This article lists common problems when using SMB Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for NFS Azure file shares.
-
-## Applies to
-
-| File share type | SMB | NFS |
-|-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
 ## Error when running the AzFilesHybrid module
 
@@ -59,7 +53,7 @@ Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain
 
 ### Solution
 
-Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance).
+Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
 
 
 ## Error: All newly added URIs must contain a tenant verified domain, tenant ID, or app ID
@@ -75,12 +69,12 @@ Microsoft Entra ID enforces restrictions on application identifier URIs and redi
 
 If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that is not associated with the tenant, the request is blocked by default tenant policy.
 
-This behavior is enforced by Microsoft Entra ID and is not specific to the Azure Files service.
+This behavior is enforced by Microsoft Entra ID and isn't specific to the Azure Files service.
 
 For more information, see:
-[Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
-[Redirect URI (reply URL) outline and restrictions](/entra/identity-platform/reply-url)
-[Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
+- [Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
+- [Redirect URI (reply URL) outline and restrictions](/entra/identity-platform/reply-url)
+- [Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
 
 ### Solution
 When configuring application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
@@ -100,7 +94,7 @@ First, make sure that you've followed the steps to [enable Azure Files AD DS Aut
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
-Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFilesHybrid).
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+](https://www.powershellgallery.com/packages/AzFilesHybrid/).
 
 1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
@@ -172,7 +166,7 @@ Debug-AzStorageAccountAuth `
 
 First, make sure that you've followed the steps to [enable Microsoft Entra Kerberos authentication](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable).
 
-Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFilesHybrid).
+Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+](https://www.powershellgallery.com/packages/AzFilesHybrid/).
 
 1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
@@ -298,11 +292,11 @@ This error might occur if a domain controller that holds the RID Master FSMO rol
 
 ### Error: "Cannot bind positional parameters because no names were given"
 
-This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the **AzFilesHybrid** module (https://github.com/Azure-Samples/azure-files-samples/releases) is installed.
+This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) module is installed.
 
 ## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
 
-Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
+Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://www.powershellgallery.com/packages/AzFilesHybrid/) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
 
 > [!IMPORTANT]
 > If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
@@ -313,7 +307,8 @@ $StorageAccountName = "<storage-account-name-here>"
 
 Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
 ```
-As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
+
+As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. You don't need to rotate back unless you want to regenerate both passwords.
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blobs, tables, and queues. It also provides limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles might continue to have access to the storage account through saved storage account keys.
@@ -331,7 +326,7 @@ Navigate to the desired storage account in the Azure portal. In the table of con
 
 ### [PowerShell](#tab/azure-powershell)
 
-The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you want to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```powershell
 $resourceGroupName = "<resource-group>"
@@ -352,7 +347,7 @@ New-AzStorageAccountKey `
 
 ### [Azure CLI](#tab/azure-cli)
 
-The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you want to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```bash
 RESOURCE_GROUP_NAME="<resource-group>"
@@ -478,7 +473,7 @@ The solution is to add the privateLink FQDN to the storage account's Microsoft E
    ],
    ```
 
-   Then you should edit the `identifierUris` field to the following:
+   Then edit the `identifierUris` field to the following:
 
    ```json
    "identifierUris": [
@@ -507,7 +502,7 @@ The solution is to add the privateLink FQDN to the storage account's Microsoft E
 
 ### Symptom
 
-Windows clients that use Microsoft Entra Kerberos authentication to access Azure Files intermittently lose access after a network change (for example, VPN reconnect, Wi-Fi change, sleep or resume). Access may fail until the user signs out and signs back in to Windows.
+Windows clients that use Microsoft Entra Kerberos authentication to access Azure Files intermittently lose access after a network change (for example, VPN reconnect, Wi-Fi change, sleep, or resume). Access might fail until the user signs out and signs back in to Windows.
 
 ### Cause
 
@@ -529,9 +524,9 @@ This is a Windows client limitation and is not caused by Azure Files or Microsof
 5. Under **Options**, select **Show** to open the Show Contents dialog box.
 6. Add the following mapping, replacing `Microsoft_Entra_tenant_id` with your Microsoft Entra tenant ID. Include the space after https and before the closing /.
 
-|Value name |Value |
-|-----------|--------------|
-| KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Microsoft_Entra_tenant_id/kerberos /> |
+   |Value name |Value |
+   |-----------|--------------|
+   | KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Microsoft_Entra_tenant_id/kerberos /> |
 
 7. Select **OK**, then select **Apply**.
 

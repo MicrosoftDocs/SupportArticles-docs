@@ -57,7 +57,7 @@ System.Net.WebException: The request failed with HTTP status 403: Forbidden.
 On the destination server, the following entry is logged in the Internet Information Service (IIS) log, under the W3SVC1 directory:
 
 ```console
-IIS Logs:  2015-06-08 04:19:25 <IP Address> POST /EWS/Exchange.asmx &CorrelationID=<empty>;&ClientId=JQJLGECZ0MGEHVVWEBZG&cafeReqId=9f422915-0721-48ce-b2c6-4406d2c1b49d; 443 domain\serviceaccount <IP Address> ASProxy/CrossForest/EmailDomain/EXCH/08.03.0083.000 - 403 0 0 718
+IIS Logs:  2015-06-08 04:19:25 <IP Address> POST /EWS/Exchange.asmx &CorrelationID=<empty>;&ClientId=JQJLGECZ0MGEHVVWEBZG&cafeReqId=00001111-aaaa-2222-bbbb-3333cccc4444; 443 domain\serviceaccount <IP Address> ASProxy/CrossForest/EmailDomain/EXCH/08.03.0083.000 - 403 0 0 718
 ```
 
 On the server that is running Exchange Server 2013, the following entry is logged in the HTTPProxy log:
