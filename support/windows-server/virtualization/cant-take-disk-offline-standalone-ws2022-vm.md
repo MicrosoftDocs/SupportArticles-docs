@@ -1,6 +1,6 @@
 ---
 title: Can't take a disk offline in a standalone Windows Server 2022 VM
-description: 
+description: Discusses an issue in which a disk remains online in a standalone Windows Server 2022 virtual machine (VM) despite repeated attempts to take it offline manually
 ms.date: 03/13/2026
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,9 @@ appliesto:
 ---
 # Can't take a disk offline in a standalone Windows Server 2022 VM
 
-This article describes an issue where you cannot take a disk offline in a standalone virtual machine (VM) that runs Windows Server 2022. The issue can cause the system to hang during the process, which affects critical workloads. Use this information to identify the symptoms, understand the possible causes, and follow the recommended steps to resolve the issue.
+## Summary
+
+This article helps you troubleshoot an issue in which a disk remains online in a standalone Windows Server 2022 virtual machine (VM) despite repeated attempts to take it offline manually. The VM may become unresponsive or hang when you use Disk Management or DiskPart to perform this action.  Use this information to understand the possible causes of this issue, and follow the recommended steps to resolve the issue.
 
 ## Symptoms
 
