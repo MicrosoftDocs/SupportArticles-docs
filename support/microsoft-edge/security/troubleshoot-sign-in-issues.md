@@ -154,11 +154,11 @@ On Windows, Microsoft Edge relies on the operating system's account infrastructu
 
 ## Data collection
 
-If you have to contact [Microsoft Support](https://support.microsoft.com/contactus) for more help, collect the following diagnostic information:
+If you have to contact Microsoft Support for more help, collect the following diagnostic information and include it with your support request.
 
 - **Microsoft Edge version**: Go to `edge://settings/help`, and note the full version number.
 - **Active policies**: Go to `edge://policy`, and export the policy list.
-- **Sidebar settings**: Go to `edge://settings/sidebar`, and take a screenshot of the current settings.
+- **Network diagnostics**: Take a screenshot of the error message, and capture a network trace while you reproduce the sign-in issue. To capture the trace, go to `edge://net-export/`.
 - **Account type**: Note whether you're using a personal, work, or school account.
 - **Operating system version**: In Windows, go to **Settings** > **System** > **About**, and note the OS version.
 - **Edge diagnostic data**: Go to `edge://identity-internals/`, and capture the identity status information.
