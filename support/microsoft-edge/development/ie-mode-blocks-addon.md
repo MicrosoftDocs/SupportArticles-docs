@@ -122,7 +122,7 @@ Windows security features like [User Account Control (UAC)](/windows/security/ap
 
 ## Data collection
 
-If you need to contact Microsoft Support for more help, collect the following diagnostic information:
+If you have to contact Microsoft Support for more help, collect the following diagnostic information and include it with your support request.
 
 - **Microsoft Edge version**: Go to `edge://settings/help`, and note the full version number.
 - **IE mode configuration**: Go to `edge://compat/enterprise`, and take a screenshot of the site list and mode settings.
