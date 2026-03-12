@@ -52,7 +52,7 @@ Stale or corrupted cached credentials, cookies, or authentication tokens can pre
 
 ### Check your account credentials and MFA
 
-The sign-in failure might be caused by an expired password, a locked account, or a [multi-factor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) problem. Follow these steps:
+The sign-in failure might be caused by an expired password, a locked account, or a [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) problem. Follow these steps:
 
 1. Try to sign in to your Microsoft account in a web browser:
    - For personal accounts: Go to [https://account.microsoft.com](https://account.microsoft.com).
@@ -132,7 +132,7 @@ An outdated version of Microsoft Edge might have known sign-in bugs or lack supp
 On Windows, Microsoft Edge relies on the operating system's account infrastructure, including Web Account Manager (WAM), for authentication. Problems in your Windows account, token broker service, or OS-level settings can affect Edge sign-in. To troubleshoot, follow these steps:
 
 1. Make sure that your Windows account is connected:
-   - Go to **Settings** > **Accounts** > **Your info**, and vefify that your account is connected.
+   - Go to **Settings** > **Accounts** > **Your info**, and verify that your account is connected.
    - For work or school accounts, go to **Settings** > **Accounts** > **Access work or school**, and make sure that your organization account is connected.
 1. Try re-registering the device by using your work or school account:
    - Go to **Settings** > **Accounts** > **Access work or school**.
