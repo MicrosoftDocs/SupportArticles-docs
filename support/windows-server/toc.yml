@@ -608,6 +608,8 @@ items:
       href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: System logs multiple events that specify Event ID 640
       href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
+    - name: Troubleshoot data corruption and storage replication failures in Windows Server 2025
+      href: ./backup-and-storage/troubleshoot-data-corruption-storage-replication-failures-ws2025.md
   - name: Deduplication
     items:
     - name: Troubleshoot Windows Server data deduplication
