@@ -42,7 +42,7 @@ The underlying cause of this issue is likely to be one or more of the following 
 To fix this issue, follow these steps:
 
 1. Check for Windows Server 2022 updates, and install any pending updates. Notice if any of the updates address disk management or storage subsystem issues.
-1. To assess the disk health and fix underlying issues, see the [Troubleshooting checklist](troubleshoot-data-corruption-and-disk-errors.md#troubleshooting-checklist) section of "Data corruption and disk errors troubleshooting guidance." In particular, follow the steps in the following checklist sections:
+1. To assess the disk health and fix underlying issues, see the [Troubleshooting checklist](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md#troubleshooting-checklist) section of "Data corruption and disk errors troubleshooting guidance." In particular, follow the steps in the following checklist sections:
 
    1. **Scan the health of the storage system**. Scan for issues without making any changes.
    1. **Review the event log for relevant events**. Review event log entries that cover the period when the issue occurred. This section provides a list of events that correspond to specific issues that the troubleshooting guide addresses.
