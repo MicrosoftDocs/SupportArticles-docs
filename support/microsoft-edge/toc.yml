@@ -2,6 +2,10 @@ items:
   - name: Welcome
     href: welcome-edge.yml
 
+  - name: Experiences and Services
+    items:
+      - name: Copilot icon doesn't appear in Microsoft Edge sidebar
+        href: experience/copilot-icon-missing-sidebar.md
   - name: Manage and Deploy
     items:
       - name: Can't enable extensions for InPrivate browsing by using Group Policy

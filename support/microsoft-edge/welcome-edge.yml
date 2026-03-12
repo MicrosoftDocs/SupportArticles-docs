@@ -14,6 +14,13 @@ metadata:
 
 landingContent:
 
+  - title: Experiences and Services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Copilot icon doesn't appear in Microsoft Edge sidebar
+            url: experience/copilot-icon-missing-sidebar.md
+
   - title: Manage and Deploy
     linkLists:
       - linkListType: how-to-guide
