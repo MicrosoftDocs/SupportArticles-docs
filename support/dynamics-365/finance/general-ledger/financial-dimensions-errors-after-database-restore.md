@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Financial dimension view errors occur after restoring a database to another environment
-description: Explains why financial dimension view errors occur after restoring a database backup from one environment to another in Microsoft Dynamics 365 Finance, and how to resolve the issue.
+title: Financial dimension errors occur after restoring a database to another environment
+description: Explains why financial dimension errors occur after restoring a database backup from one environment to another in Microsoft Dynamics 365 Finance, and how to resolve the issue.
 author: ethanrimes
 ms.date: 03/03/2026
 
@@ -18,7 +18,7 @@ ms.search.validFrom: 2019-05-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# Financial dimension view errors occur after restoring a database to another environment (e.g. PROD to UAT)
+# Financial dimension errors occur after restoring a database to another environment (e.g. PROD to UAT)
 
 This article explains why financial dimension errors occur after restoring a database backup from one environment to another in Microsoft Dynamics 365 Finance, and how to resolve the issue.
 
@@ -36,21 +36,21 @@ The error message identifies a specific financial dimension by name.
 
 ## Cause
 
-When you restore a database from one environment to another, the database records move but code packages don't. If any financial dimension is backed by a custom `DimAttribute[TableName]` view — one created by a developer, partner, or ISV rather than shipped with the product — and that view hasn't been deployed to the target environment, the system can't locate the view when dimension operations are performed.
+When you restore a database from one environment to another, the data moves but code packages don't. If any financial dimension relies on a customization created by a developer, partner, or ISV rather than shipped with the product, and that customization hasn't been deployed to the target environment, the system can't find the required components when dimension operations are performed.
 
-The database still contains the `DimensionAttribute` record referencing the view name, but the view itself doesn't exist in the target environment's application objects.
+The restored database still references the custom financial dimension, but the supporting customization doesn't exist in the target environment.
 
 > [!NOTE]
-> If this issue is detected during database synchronization (dbSync) rather than at runtime, the error message reads: "The backing view ... for the financial dimension ... does not exist." The underlying cause and resolution are the same.
+> If this issue is detected during database synchronization rather than at runtime, the error message reads: "The backing view ... for the financial dimension ... does not exist." The underlying cause and resolution are the same.
 
 ## Resolution
 
 Deploy the same customization packages that are installed in the source environment to the target environment. These packages must include:
 
-- The custom `DimAttribute[TableName]` view for each affected financial dimension.
-- The backing table that the view references, if it's also a custom table.
+- The customization for each affected financial dimension.
+- Any custom entities that the financial dimension references.
 
-After deploying and synchronizing, verify that the dimension works correctly in the target environment by navigating to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions** and selecting the affected dimension.
+After deploying and synchronizing, verify that the affected financial dimension works correctly in the target environment.
 
 > [!IMPORTANT]
 > The code packages in all environments must match the data that those environments contain. Whenever a database is copied between environments, confirm that the target environment has all customization packages that the source environment has before or immediately after the restore.
