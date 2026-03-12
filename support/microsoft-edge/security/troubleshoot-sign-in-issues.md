@@ -62,7 +62,7 @@ The sign-in failure might be caused by an expired password, a locked account, or
    - For personal accounts: Reset your password at [https://account.live.com/password/reset](https://account.live.com/password/reset).
    - For work or school accounts: Ask your IT administrator to reset your password or unlock your account.
    - Make sure that MFA is set up correctly. If you changed your phone number or authentication device, update it at [https://mysignins.microsoft.com](https://mysignins.microsoft.com).
-   - Check with your IT administrator if the account is locked or disabled.
+   - Ask your IT administrator to check whether the account is locked or disabled.
 
 ### Check Group Policy sign-in settings
 
