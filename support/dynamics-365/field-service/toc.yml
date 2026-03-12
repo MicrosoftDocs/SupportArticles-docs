@@ -80,4 +80,11 @@
       href: scheduling/cascade-crew-changes-booking.md
     - name: Form context is missing on bookable resource forms
       href: scheduling/missing-form-context-bookable-resource.md
-
+    - name: Resources aren't displayed on the schedule board
+      href: scheduling/schedule-board-missing-resources.md
+    - name: Incorrect date and time on the schedule board
+      href: scheduling/schedule-board-nan-datetime.md
+    - name: Schedule board shows a blank page or fails to load
+      href: scheduling/schedule-board-not-loading.md
+    - name: Schedule board is slow to load or experiences extreme latency
+      href: scheduling/schedule-board-performance.md

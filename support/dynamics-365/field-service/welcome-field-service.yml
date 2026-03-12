@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Dynamics 365 Field Service troubleshooting articles.
   ms.topic: landing-page
   ms.service: dynamics-365-field-service
-  author: m-hartmann
-  ms.author: mhart
-  ms.date: 04/30/2025
+  author: puneetsingh
+  ms.author: puneet-singh1
+  ms.date: 03/12/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -105,6 +105,14 @@ landingContent:
             url: scheduling/cascade-crew-changes-booking.md
           - text: Missing form context on bookable resource forms
             url: scheduling/missing-form-context-bookable-resource.md
+          - text: Resources aren't displayed on the schedule board
+            url: scheduling/schedule-board-missing-resources.md
+          - text: Incorrect date and time on the schedule board
+            url: scheduling/schedule-board-nan-datetime.md
+          - text: Schedule board shows a blank page or fails to load
+            url: scheduling/schedule-board-not-loading.md
+          - text: Schedule board is slow to load or experiences extreme latency
+            url: scheduling/schedule-board-performance.md
 
   # Card
   - title: Documentation and training
