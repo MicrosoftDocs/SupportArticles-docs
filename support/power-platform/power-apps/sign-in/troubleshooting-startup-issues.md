@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot startup or sign-in issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
-author: amchern
-ms.author: amchern
-ms.reviewer: tapanm, mkaur, alaug
+ms.reviewer: amchern, tapanm, mkaur, alaug, ansjain, jordanchodak, v-shaywood
 ms.custom: sap:Sign-in Issues\Maker Portal Sign-in issues
-ms.date: 03/19/2024
+ms.date: 03/12/2026
 search.audienceType: 
   - maker
 search.app: 
