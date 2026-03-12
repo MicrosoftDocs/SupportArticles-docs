@@ -106,11 +106,11 @@ A corrupted browser profile or conflicting settings from other extensions might 
 
 ## Data collection
 
-If you have to contact Microsoft Support for more help, collect the following diagnostic information:
+If you have to contact Microsoft Support for more help, collect the following diagnostic information and include it with your support request.
 
 - **Microsoft Edge version**: Go to `edge://settings/help`, and note the full version number.
 - **Active policies**: Go to `edge://policy`, and export the policy list.
-- **Sidebar settings**: Go to `edge://settings/sidebar`, and take a screenshot of the current settings.
+- **Sidebar settings**: Go to `edge://settings/appearance/copilotAndSidebar`, and take a screenshot of the current settings.
 - **Account type**: Note whether you're using a personal, work, or school account.
 - **Operating system version**: In Windows, go to **Settings** > **System** > **About**, and note the OS version.
 
