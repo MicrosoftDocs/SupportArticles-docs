@@ -295,13 +295,13 @@ items:
   - name: Azure Performance diagnostics
     items:
     - name: Overview
-      href: ../azure/azure-monitor/vm/performance-diagnostics
+      href: ../azure/azure-monitor/vm/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Install and run reports
-      href: ../azure/azure-monitor/vm/performance-diagnostics-run
+      href: ../azure/azure-monitor/vm/performance-diagnostics-run.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Analyze data 
-      href: ../azure/azure-monitor/vm/performance-diagnostics-analyze
+      href: ../azure/azure-monitor/vm/performance-diagnostics-analyze.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Extension 
-      href: ../azure/azure-monitor/vm/performance-diagnostics-extension
+      href: ../azure/azure-monitor/vm/performance-diagnostics-extension.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshoot VM Performance Bottlenecks
     href: ../linux/troubleshoot-performance-bottlenecks-linux.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     items:
