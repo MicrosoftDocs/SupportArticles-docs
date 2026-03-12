@@ -295,13 +295,13 @@ items:
   - name: Azure Performance diagnostics
     items:
     - name: Overview
-      href: performance-diagnostics.md
+      href: https://learn.microsoft.com/azure/azure-monitor/vm/performance-diagnostics
     - name: Install and run reports
-      href: how-to-use-perfinsights.md
+      href: https://learn.microsoft.com/azure/azure-monitor/vm/performance-diagnostics-run
     - name: Analyze data 
-      href: perfinsights-and-scale-set-vm-instances.md
+      href: https://learn.microsoft.com/azure/azure-monitor/vm/performance-diagnostics-analyze
     - name: Extension 
-      href: performance-diagnostics-vm-extension.md
+      href: https://learn.microsoft.com/azure/azure-monitor/vm/performance-diagnostics-extension
   - name: Troubleshoot VM Performance Bottlenecks
     href: ../linux/troubleshoot-performance-bottlenecks-linux.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     items:
