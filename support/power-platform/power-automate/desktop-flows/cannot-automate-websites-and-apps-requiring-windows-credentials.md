@@ -44,5 +44,5 @@ After the release of the above updates, Power Automate for desktop is not able t
 
 The current workarounds for this issue until a fix is available are the following:
 
-1. For web automation issues, you can use an alternative browser. Currently only Microsoft Edge is affected, so Firefox or Chrome should be used when possible.
+1. For web automation issues, you can use an alternative browser. Currently, only Microsoft Edge is affected, so Firefox or Chrome should be used when possible.
 2. You can run Power Automate for desktop as administrator for local attended (console) runs. This is not available for unattended/attended cloud runs.
