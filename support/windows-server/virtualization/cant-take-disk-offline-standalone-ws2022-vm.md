@@ -17,11 +17,11 @@ appliesto:
 
 ## Summary
 
-This article helps you troubleshoot an issue in which a disk remains online in a standalone Windows Server 2022 virtual machine (VM) despite repeated attempts to take it offline manually. The VM may become unresponsive or hang when you use Disk Management or DiskPart to perform this action.  Use this information to understand the possible causes of this issue, and follow the recommended steps to resolve the issue.
+This article helps you troubleshoot an issue in which a disk remains online in a standalone Windows Server 2022 virtual machine (VM) despite repeated attempts to take it offline manually. The VM might become unresponsive or hang when you use Disk Management or DiskPart to perform this action. Use this information to understand the possible causes of this issue, and follow the recommended steps to resolve the issue.
 
 ## Symptoms
 
-You're running a standalone (non-clustered) Windows Server 2022 VM, and you haven't made any recent changes to the VM or its hypervisor platform. You repeatedly try to manually take a disk offline. However, the disk remains online. Additionally, you experience the following symptoms:
+You're running a standalone (not clustered) Windows Server 2022 VM, and you didn't make any recent changes to the VM or its hypervisor platform. You repeatedly try to manually take a disk offline. However, the disk remains online. Additionally, you experience the following symptoms:
 
 - If you try to use the Disk Management or DiskPart tools to take the disk offline, the VM becomes unresponsive or hangs.
 - The issue persists over multiple days.
@@ -37,7 +37,7 @@ The underlying cause of this issue is likely to be one or more of the following 
 ## Resolution
 
 > [!IMPORTANT]  
-> Before you troubleshoot this issue, back up the affected disk. For information about backup options, see the documentation for your VM platform. For example, if you are using Azure VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> Before you troubleshoot this issue, back up the affected disk. For information about backup options, see the documentation for your VM platform. For example, if you're using Azure VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 To fix this issue, follow these steps:
 
@@ -49,7 +49,7 @@ To fix this issue, follow these steps:
    1. **Scan and repair NTFS volumes**. Perform a more intensive investigation of the disk, and run repair tools.
 
 1. If you still can't isolate the issue, create an identical VM and disk configuration in a test environment, and try to reproduce the symptoms.
-1. If the disk is not the system disk and can be safely detached, remove it from the VM and attach it to a different VM. Check the health of the disk again in the new configuration.
+1. If the disk isn't the system disk and can be safely detached, remove it from the VM and attach it to a different VM. Check the health of the disk again in the new configuration.
 1. After you make changes, continue to monitor the disk. If the issue persists or reoccurs, [collect data for further troubleshooting](#data-collection) and then contact Microsoft Support.
 
 ## Data collection
