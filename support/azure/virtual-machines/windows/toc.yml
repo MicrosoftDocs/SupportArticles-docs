@@ -295,7 +295,7 @@ items:
   - name: Azure Performance diagnostics
     items:
     - name: Overview
-      href: ../azure/azure-monitor/vm/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      href: ../azure/azure-monitor/vm/performance-diagnostics?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Install and run reports
       href: ../azure/azure-monitor/vm/performance-diagnostics-run.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Analyze data 
