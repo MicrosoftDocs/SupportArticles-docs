@@ -88,11 +88,11 @@ items:
   - name: Azure Performance diagnostics (PerfInsights)
     items:
     - name: Overview
-      href: /azure/azure-monitor/vm/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: /azure/azure-monitor/vm/performance-diagnostics?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Install and run reports
-      href: /azure/azure-monitor/vm/performance-diagnostics-run.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: /azure/azure-monitor/vm/performance-diagnostics-run?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Analyze data
-      href: /azure/azure-monitor/vm/performance-diagnostics-analyze.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: /azure/azure-monitor/vm/performance-diagnostics-analyze?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Troubleshoot VM Performance Bottlenecks
     href: troubleshoot-performance-bottlenecks-linux.md
     items:
