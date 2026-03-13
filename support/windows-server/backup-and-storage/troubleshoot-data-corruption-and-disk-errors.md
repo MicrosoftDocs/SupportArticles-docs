@@ -49,8 +49,8 @@ Make sure that the storage-related drivers and firmware are up to date. Consult 
 
 Run `chkdsk` in scan mode to look for potential storage system issues without making changes. Open a Windows Command Prompt window as an administrator, and then run the following command:
 
-```
-console chkdsk /scan
+```console
+chkdsk /scan
 ```
 
 **Review the event log for relevant events**
