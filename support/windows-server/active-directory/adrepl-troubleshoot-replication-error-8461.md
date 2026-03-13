@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 8461
 description: This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 8461.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

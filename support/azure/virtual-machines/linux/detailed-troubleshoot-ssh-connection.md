@@ -119,4 +119,4 @@ Try connecting from your computer again. If it still fails, the following are so
 
 For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](../windows/troubleshoot-app-connection.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

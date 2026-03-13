@@ -271,7 +271,7 @@ To fix this issue, add the `data-parentid` or `data-<customPrefix>-parentid` att
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 
 
 [app-insights-web-pages]: /azure/azure-monitor/app/javascript
 [github-issue]: https://github.com/Microsoft/ApplicationInsights-JS/issues

@@ -195,7 +195,7 @@ Based on the results from these gadgets, you can take the following actions:
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 [!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 
 

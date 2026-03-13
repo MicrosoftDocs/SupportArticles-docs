@@ -38,4 +38,4 @@ To resolve both these errors, use [Add-AzVhd to upload the original VHD](/powers
 
 To resolve both these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/windows/create-vm-specialized) with the same setting as that for the OS (generalized/specialized).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

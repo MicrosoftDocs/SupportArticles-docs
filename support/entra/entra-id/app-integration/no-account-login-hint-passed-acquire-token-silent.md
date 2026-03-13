@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Error "No account or login hint was passed to the AcquireTokenSilent" in web applications without persistent token cache
 
+## Summary
+
 This article offers solutions for the "No account or login hint was passed to the AcquireTokenSilent" error that occurs in a web application using Microsoft Authentication Library (MSAL) or Microsoft Identity Web.
 
 ## Symptoms
@@ -182,4 +184,4 @@ Microsoft Identity Web provides built-in mechanisms to manage token caches. For 
     Services.Configure<CookieAuthenticationOptions>(cookieScheme, options=>options.Events=new RejectSessionCookieWhenAccountNotInCacheEvents());
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

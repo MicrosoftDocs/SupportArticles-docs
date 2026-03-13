@@ -47,4 +47,4 @@ For more information, see [the depends_on Meta-Argument](https://developer.hashi
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

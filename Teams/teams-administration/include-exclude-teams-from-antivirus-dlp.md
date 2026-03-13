@@ -1,7 +1,7 @@
 ---
 title: Prevent Antivirus and DLP Tools from Blocking or Crashing Microsoft Teams
 manager: dcscontentpm
-ms.date: 06/06/2025
+ms.date: 01/05/2026
 audience: Admin
 ms.topic: troubleshooting
 search.appverid:
@@ -114,6 +114,9 @@ The following table lists applications and their associated DLLs that are known 
 | Zscaler||
 | Ztsment Data Protection| `injumon64.dll`|
 | Forcepoint DLP||
+| TenxGuard64 | |
+| Action1| `k1agentdeploycse_<architecture>.dll` |
+| Lenovo ThinkVantage Active Protection System - Shock Sensor Module | `Sensor64.dll` |
 
 ## Other DLLs that might affect Teams desktop client and Edge WebView2
 

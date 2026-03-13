@@ -58,4 +58,4 @@ To resolve this issue, ensure that container CPU and memory limits are enforced 
 
 3. After updating the container specification, trigger a rescan or on-demand scan to evaluate the compliance status. You can use the Azure CLI to perform an on-demand evaluation scan. For more information about starting an on-demand scan, see [On-demand evaluation scan - Azure CLI](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan---azure-cli). 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

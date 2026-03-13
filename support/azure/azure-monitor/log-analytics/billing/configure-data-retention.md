@@ -59,4 +59,4 @@ You can apply a different setting to specific tables by [configuring the retenti
     
     :::image type="content" source="media/configure-data-retention/table-retention-2.png" alt-text="Screenshot of Data retention settings."lightbox="media/configure-data-retention/table-retention-2.png":::
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

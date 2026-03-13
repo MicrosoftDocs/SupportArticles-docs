@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop service (RDS) Connection Broker or Remote Desktop Management service (RDMS) fails
 description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable Transport Layer Security (TLS) 1.0 in Windows Server.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -52,4 +52,4 @@ To fix this issue, use one of the following methods:
 - Upgrade the computers that run the RDS services to Windows Server 2019.
 
 > [!NOTE]
-> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.
+> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](../../sql/database-engine/connect/tls-1-2-support-microsoft-sql-server.md) to enable SQL Server communication to use TLS 1.2.

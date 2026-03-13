@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS530004 - AcceptCompliantDevice setting isn't configured for this organization
 
+## Summary
+
 This article discusses scenarios where the AADSTS530004 error occurs when a guest user accesses an application or resource in a resource tenant and provides solutions.
 
 ## Symptoms
@@ -82,4 +84,4 @@ To verify whether the device claim is sent, review the sign-in logs for the fail
 
 For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes). To investigate individual errors, search at https://login.microsoftonline.com/error.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

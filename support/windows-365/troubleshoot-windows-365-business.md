@@ -2,7 +2,7 @@
 title: Troubleshoot Windows 365 Business Cloud PC setup issues
 description: Troubleshoot the Setup failed error or the Cloud PC setup takes longer than 90 minutes after you assign the user a license in Windows 365 Business.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje
 ms.custom:

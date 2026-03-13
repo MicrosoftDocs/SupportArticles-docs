@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 
 # RPC errors affecting Microsoft Entra Connect
 
+## Summary
+
 Customers may experience issues where they cannot configure Microsoft Entra Connect and or enable features due to Remote Procedure Call (RPC) related errors.
 
 Customers may also experience features previously enabled stop working due to these types of errors.  
@@ -213,4 +215,4 @@ There may be various reasons to raise an access denied error. Hardening group po
 
 System Error codes can be found through [Error Codes](/windows/win32/debug/system-error-codes).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -236,4 +236,4 @@ When an allocation has a large number of restrictions, there's a higher chance o
 
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png" alt-text="Screenshot of Diagram 2 showing allocation failed with no free resource available and Diagram 3 showing allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png":::
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

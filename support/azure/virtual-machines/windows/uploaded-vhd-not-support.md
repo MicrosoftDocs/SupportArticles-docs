@@ -51,4 +51,4 @@ If the problem continues to occur, this may indicate a corrupted VHD. In this si
 - [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
 - [Bringing and creating Linux images in Azure](/azure/virtual-machines/linux/imaging)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

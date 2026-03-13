@@ -121,7 +121,7 @@ Typically, if a message can't be delivered, the recipient's email system will us
 
 Check your recent messages in the **Sent Items** folder for strange or unknown messages (messages that you didn't send). If you don't see any suspicious messages, it's likely that the NDR you received is backscatter. If you've already changed your password and run an anti-malware scan, you can ignore these backscatter NDRs.
 
-To learn more, see [Backscatter in EOP](/microsoft-365/security/office-365-security/backscatter-messages-and-eop).
+To learn more, see [Backscatter in cloud organizations](/defender-office-365/anti-spam-backscatter-about).
 
 ## I'm an email admin. What can I do to fix this?
 

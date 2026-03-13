@@ -8,6 +8,8 @@ ms.custom: sap:User Sign-in or password Problems
 ---
 # Error when you run the Microsoft Entra Connect wizard: Unable to configure password writeback
 
+## Summary
+
 This article describes an issue in which an error message appears when you run the Microsoft Entra Connect wizard to set up password writeback.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -58,4 +60,4 @@ Password writeback service is not in a healthy state. No serviceHost for service
 running state. Please refer aka.ms/ssprtroubleshoot, Details: Version: 5.0.0.686
 ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

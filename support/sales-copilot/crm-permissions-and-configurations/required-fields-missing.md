@@ -1,29 +1,29 @@
 ---
-title: Required fields are missing error in Copilot for Sales
-description: Resolves the Required ields are missing error that occurs when creating a contact or record in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 02/05/2025
+title: Required fields are missing error in Sales app
+description: Resolves the Required fields are missing error that occurs when creating a contact or record in the Sales app in Outlook.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# "Required fields are missing" error when creating a contact or record from Copilot for Sales in Outlook
+# "Required fields are missing" error when creating a contact or record from Sales app in Outlook
 
-This article provides a resolution for the “Required fields are missing” error that occurs in the Microsoft Copilot for Sales panel in Outlook.
+This article provides a resolution for the “Required fields are missing” error that occurs in the Sales app in Outlook.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users who don't have permission to view fields added in a Copilot for Sales form can't save, edit, or view the form  |
+|**Users**     | Users who don't have permission to view fields added in a Sales app form can't save, edit, or view the form  |
 
 ## Symptoms
 
-When a user tries to [create a contact or record from the Copilot for Sales pane in Outlook](/microsoft-sales-copilot/create-contact-crm-sales-copilot), the following error message is displayed: 
+When a user tries to [create a contact or record from the Sales pane in Outlook](/microsoft-sales-copilot/create-contact-crm-sales-copilot), the following error message is displayed: 
 
 > Required fields are missing
 
@@ -33,7 +33,7 @@ When you copy error details, you see the error code "SFRequiredFieldMissing".
 
 ## Cause
 
-The Salesforce object configuration was updated with a required field, but it wasn't added to the Copilot for Sales form through the admin settings in Microsoft Teams. Therefore, the required field is missing from the form, and the user can't save the record. When the user tries to save the record, the "Required field are missing" error is displayed.
+The Salesforce object configuration was updated with a required field, but it wasn't added to the Sales app form through the admin settings in Microsoft Teams. Therefore, the required field is missing from the form, and the user can't save the record. When the user tries to save the record, the "Required field are missing" error is displayed.
 
 ## Resolution 1: Update administrator settings in Microsoft Teams
 
@@ -64,6 +64,6 @@ The Salesforce object configuration was updated with a required field, but it wa
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

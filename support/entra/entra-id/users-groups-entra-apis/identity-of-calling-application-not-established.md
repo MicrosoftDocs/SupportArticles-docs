@@ -41,4 +41,4 @@ Then, sign in with a Global Administrator account of the tenant where you are tr
 - [Retire Service Principal-Less Authentication](/entra/identity-platform/retire-service-principal-less-authentication)
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

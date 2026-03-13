@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 
+## Summary
+
 This article describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard issues.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
@@ -164,4 +166,4 @@ All directory synchronization logging is viewable in Event Viewer. To view all e
 |InternetSetOptionError|Internet Explorer proxy settings were not set. Initial configuration using setup wizard may not be able to access online help. WinInet Error {0}|Event Viewer|The installation wizard couldn't read or change proxy settings in Internet Explorer. Verify that the proxy settings that are set in Internet Explorer are formatted correctly.|
 |RichCoexistenceNotAllowed|Current local directory does not have Exchange 2010 installed. Rich coexistence is not allowed.|Event Viewer|Install all the prerequisites for a hybrid deployment before you try to install the Directory Sync tool.|
   
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

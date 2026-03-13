@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50011 with SAML authentication - The reply URL specified in the request does not match
 
+## Summary
+
 This article provides a resolution to the AADSTS50011 error that occurs during federated authentication with Microsoft Entra ID.
 
 ## Symptoms
@@ -40,4 +42,4 @@ After you update the Reply URL value in Microsoft Entra ID and it matches the va
 
 For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

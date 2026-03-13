@@ -1,7 +1,7 @@
 ---
 title: Wireless network connectivity issues troubleshooting
 description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom:

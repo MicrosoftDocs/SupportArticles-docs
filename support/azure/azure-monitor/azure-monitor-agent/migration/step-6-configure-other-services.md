@@ -4,7 +4,7 @@ description: Learn how to configure other services to use Azure Monitor Agent as
 ms.date: 07/15/2024
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
 ms.service: azure-monitor
-ms.custom: 
+ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 #Customer intent: As an Azure Monitor user, I want to learn how to configure other services to use Azure Monitor Agent so that I can migrate from the legacy Log Analytics agent.
 ---
 # Step 6: Configure other services
@@ -18,4 +18,4 @@ After you deploy Azure Monitor Agent at scale, you can configure other services 
 | Microsoft Defender for Cloud | [Azure Monitor Agent in Defender for Cloud](/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent) |
 | Microsoft Sentinel | [Azure Monitor Agent migration for Microsoft Sentinel](/azure/sentinel/ama-migrate) |
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

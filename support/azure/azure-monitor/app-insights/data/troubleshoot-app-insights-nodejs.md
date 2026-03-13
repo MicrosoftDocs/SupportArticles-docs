@@ -63,4 +63,4 @@ process.env.APPLICATIONINSIGHTS_LOGDIR = "C:\\applicationinsights\\logs"
 
 [!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

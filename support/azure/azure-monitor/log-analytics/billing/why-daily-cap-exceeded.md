@@ -54,4 +54,4 @@ Learning to manage data volume is crucial to maintain the health and performance
 > [!div class="nextstepaction"]
 > [Configure data retention](./configure-data-retention.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

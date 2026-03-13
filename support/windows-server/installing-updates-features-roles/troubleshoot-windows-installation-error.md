@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Installation Error 0x800f0831
 description: Learn how to resolve Windows Update installation error 0x800f0831.
-ms.date: 07/31/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

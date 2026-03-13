@@ -1,11 +1,11 @@
 ---
 title: Application Insights SDK support guidance 
 description: Support guidance for Application Insights legacy and preview SDKs.
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.date: 06/18/2025
 ms.service: azure-monitor
-ms.reviewer: vgorbenko, aaronmax, v-weizhu
-ms.custom: sap:Application Insights
+ms.reviewer: vgorbenko, aaronmax
+ms.custom: sap:Application Insights setup and customization
 ---
 
 # Application Insights SDK support guidance
@@ -53,4 +53,5 @@ Reference the release notes to see the current version of Application Insights S
 
 Our [Service Updates](https://azure.microsoft.com/updates/?service=application-insights) also summarize major Application Insights improvements.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+
+ 

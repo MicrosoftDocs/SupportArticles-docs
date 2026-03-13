@@ -28,7 +28,7 @@ Based on the issue you're experiencing, review the appropriate troubleshooting d
 If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
 
 > [!TIP]
-> You can use Microsoft Copilot in Azure to help diagnose and fix your Azure File Sync environment. For more information, see [Manage and troubleshoot storage accounts using Microsoft Copilot in Azure](/azure/copilot/improve-storage-accounts#troubleshoot-and-resolve-azure-file-sync-issues).
+> You can use Azure Copilot to help diagnose and fix your Azure File Sync environment. For more information, see [Manage and troubleshoot storage accounts using Azure Copilot](/azure/copilot/improve-storage-accounts#troubleshoot-and-resolve-azure-file-sync-issues).
 
 ## General troubleshooting first steps
 
@@ -164,4 +164,4 @@ Once the `MaxESEDbCachePercent` registry setting is created, restart the Storage
 - [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
 - [Troubleshoot Azure Files performance issues](../performance/files-troubleshoot-performance.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

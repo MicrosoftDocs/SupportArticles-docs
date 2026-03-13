@@ -2,7 +2,7 @@
 title: Connection Fails with an Interactive Window Could Not Be Shown Error
 description: Helps resolve the connection error - an interactive window could not be shown.
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:
@@ -11,8 +11,9 @@ ms.custom:
 ---
 # Windows 365 Link connection fails with error "an interactive window could not be shown"
 
+
 >[!NOTE]
->With the release of Windows 365 Link October Quality Update version 26100.6899, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.6899 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
+>With the release of Windows 365 Link December Quality Update version 26100.7462, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.7462 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
 
 This article helps resolve the connection error "an interactive window could not be shown."
 

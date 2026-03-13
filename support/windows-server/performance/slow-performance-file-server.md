@@ -1,7 +1,7 @@
 ---
 title: Performance issues when working with files located on a file server
 description: Provides a solution to performance issues that occur when you work with files that are located on a file server
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

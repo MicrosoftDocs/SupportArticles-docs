@@ -72,4 +72,4 @@ If you apply a data collection rule (DCR) in Azure Monitor, the DCR can reduce t
 
 Change or delete the DCR so that the Log Analytics workspace can receive a larger volume of telemetry data. For more information about how to edit or delete a DCR, see [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

@@ -1,7 +1,7 @@
 ---
 title: FSRM Troubleshooting Guidance
 description: Provides troubleshooting methods for issues that affect File Server Resource Manager (FSRM) and Windows file storage components.
-ms.date: 10/07/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

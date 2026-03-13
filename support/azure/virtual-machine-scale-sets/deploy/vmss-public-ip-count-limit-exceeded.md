@@ -26,4 +26,4 @@ To raise the limit or quota for your subscription, go to the [Azure portal]( htt
 
 For more information, see [How to file a support ticket for a quota increase](/azure/azure-resource-manager/templates/error-resource-quota#solution).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

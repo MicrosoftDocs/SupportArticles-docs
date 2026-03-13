@@ -47,4 +47,4 @@ To resolve this problem, gather a memory dump file for the incident and send the
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine boot errors](./boot-error-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -3,6 +3,7 @@ title: Teams doesn't load
 description: Provides a fix for when the Teams client doesn't load.
 author: Cloud-Writer
 manager: dcscontentpm
+ms.reviewer: mastank
 search.appverid: 
   - MET150
 audience: ITPro
@@ -13,7 +14,7 @@ ms.custom:
 ms.author: meerak
 appliesto: 
   - Microsoft Teams
-ms.date: 05/15/2025
+ms.date: 03/02/2026
 adobe-target: true
 ---
 
@@ -40,6 +41,7 @@ To resolve this issue, update your browser settings by using the steps in the ap
    Under **Allow**, select **Add** to add the following sites:
 
     - [*.]microsoft.com
+    - [*.]cloud.microsoft
     - [*.]microsoftonline.com
     - [*.]teams.skype.com
     - [*.]teams.microsoft.com
@@ -67,6 +69,7 @@ For more information about how to configure Microsoft Edge Group Policy settings
 3. Add the following sites:
 
     - [*.]microsoft.com
+    - [*.]cloud.microsoft
     - [*.]microsoftonline.com
     - [*.]teams.skype.com
     - [*.]teams.microsoft.com
@@ -101,6 +104,7 @@ You can also download the templates separately and view common policy documentat
 3. In the **Address of website** text box, enter the following URLs, and then select **Allow**:
 
     - `https://microsoft.com`
+    - `https://cloud.microsoft`
     - `https://microsoftonline.com`
     - `https://teams.skype.com`
     - `https://teams.microsoft.com`

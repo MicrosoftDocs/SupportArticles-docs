@@ -670,4 +670,4 @@ The third-party products that this article discusses are manufactured by compani
 
 Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -218,5 +218,5 @@ Additionally, make sure that the number of disks per node does not exceed the [K
 
 For more Azure Disk known issues, see [Azure disk plugin known issues](https://github.com/andyzhangx/demo/blob/master/issues/azuredisk-issues.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
  

@@ -1,13 +1,14 @@
 ---
 title: Error 1935 when you try to install Microsoft Office
 description: Provides steps to fix 1935 setup errors you may see when you install Office 2010 or 2007 suites or stand-alone products.
-author: Cloud-Writer
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\SxS\SxSOrPerpetual
@@ -91,7 +92,7 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
     :::image type="content" source="media/error-1935-when-install-office-2010/client-profile-maintenance.png" alt-text="Screenshot to select the Next option after selecting the Repair .NET Framework 4 Client Profile to its original state option." border="false":::
 6. When the repair is complete, select **Finish**, and then select **Restart Now** to restart the computer.
 
-If you can't find Microsoft .NET Framework 4 Client Profile, download and install [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851) to update the computer.
+If you can't find Microsoft .NET Framework 4 Client Profile, download and install [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/details.aspx?id=17851) to update the computer.
 
 > [!NOTE]
 > You can use the [Microsoft .NET Framework Repair Tool](https://support.microsoft.com/topic/microsoft-net-framework-repair-tool-is-available-942a01e3-5b8b-7abb-c166-c34a2f4b612a) to repair Microsoft .NET Framework components. For more information, see [.NET Framework Cleanup Tool User's Guide](/archive/blogs/astebner/net-framework-cleanup-tool-users-guide).

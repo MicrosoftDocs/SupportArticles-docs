@@ -1,7 +1,10 @@
 ---
 title: You cannot use videos as slide backgrounds in PowerPoint
 description: Describes a problem in which you cannot use videos as slide backgrounds in PowerPoint. A workaround is provided.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -13,11 +16,9 @@ appliesto:
 - PowerPoint 2010
 - PowerPoint Home and Student 2010
 search.appverid: MET150
-ms.reviewer: 
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # You cannot use videos as slide backgrounds in PowerPoint
 
 ## Symptoms

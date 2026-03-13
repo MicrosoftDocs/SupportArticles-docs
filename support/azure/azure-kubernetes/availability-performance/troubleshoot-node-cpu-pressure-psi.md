@@ -151,4 +151,4 @@ AKS uses PSI metrics as an indicator for CPU pressure instead of load average fo
 - [Quality of Service in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
 - [Linux Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

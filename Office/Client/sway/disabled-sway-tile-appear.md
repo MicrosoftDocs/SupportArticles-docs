@@ -40,14 +40,10 @@ To enable or disable Sway for a specific user in an organization, follow these s
 2. On the **Active Users** list, select a user.    
 3. Under **Assign licenses**, click **Edit**.    
 4. Expand the appropriate license that contains the Sway service plan.
-
-    > [!NOTE]
-    > To view the list of supported licenses for Microsoft 365 Sway, see [Available licenses for Microsoft 365 Sway](https://support.microsoft.com/help/3080969).
 5. Disable the Sway service plan by unchecking the check box that's associated with Sway. Or, enable the Sway service plan by selecting the check box that's associated with Sway.
 
     :::image type="content" source="media/disabled-sway-tile-appear/sway-service.png" alt-text="Screenshot of the Assign License page in Microsoft 365.":::
  
-
 To enable or disable Sway for one or more users in an organization or for all users in the whole organization, use the necessary Windows PowerShell scripts that are described in [Disable access to services with Microsoft 365 PowerShell](/microsoft-365/enterprise/disable-access-to-services-with-microsoft-365-powershell).
 
 ## Workaround

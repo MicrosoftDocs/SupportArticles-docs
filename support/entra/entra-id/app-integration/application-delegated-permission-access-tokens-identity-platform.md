@@ -8,6 +8,8 @@ ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in the Microsoft identity platform
 
+## Summary
+
 This article introduces the differences between application and delegated permissions for access tokens in the Microsoft identity platform to help diagnose issues when applications call web APIs.
 
 ## Overview
@@ -86,4 +88,4 @@ Users often encounter issues when their applications call Microsoft Graph REST e
 * Verify if the endpoint supports delegated permissions, application permissions, or both.
 * Verify that the access token has the correct permissions to call the endpoint.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

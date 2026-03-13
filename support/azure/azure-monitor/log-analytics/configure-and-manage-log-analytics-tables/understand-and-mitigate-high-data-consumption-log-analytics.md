@@ -44,6 +44,6 @@ This article discusses high data consumption that occurs in Log Analytics worksp
 - [Best Practices for Cost Management](/azure/azure-monitor/fundamentals/best-practices-cost)
 - [Cost Management for Logs](/azure/azure-monitor/logs/cost-logs)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

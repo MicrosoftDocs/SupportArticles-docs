@@ -20,9 +20,9 @@ ms.reviewer: msaenzbo, divargas, v-six
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 This article provides three methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Reset the password by using Azure Linux Agent
 
@@ -160,4 +160,4 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
 
 * [Azure CLI: How to delete and redeploy a VM from VHD](/archive/blogs/linuxonazure/azure-cli-how-to-delete-and-re-deploy-a-vm-from-vhd)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

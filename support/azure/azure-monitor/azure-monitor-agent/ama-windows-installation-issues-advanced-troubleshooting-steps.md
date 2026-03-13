@@ -44,4 +44,4 @@ If the connection is successful and there are no errors in the related logs, mov
 If the issues can't be mitigated, search for known issues or ask for assistance in the [Microsoft Q&A forum](/answers/tags/133/azure). Before seeking further help, ensure that you have collected the necessary logs.
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

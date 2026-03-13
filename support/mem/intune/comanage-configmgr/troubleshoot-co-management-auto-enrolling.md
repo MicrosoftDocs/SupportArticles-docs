@@ -134,7 +134,7 @@ To fix the issue, use one of the following methods:
 - If MFA is **Enabled** or **Enforced**:
     - Set MFA to **Disabled**. For more information, see [Turn off legacy per-user MFA](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication#turn-off-legacy-per-user-mfa).
     - Bypass MFA by using [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips).
-- If Microsoft Entra Conditional Access policies are used, exclude the Microsoft Intune app from the policies that require MFA to allow device sync by using the user credentials.
+- If Microsoft Entra Conditional Access policies are used, exclude the Microsoft Intune app (AppID 0000000a-0000-0000-c000-000000000000) from the policies that require MFA to allow device sync by using the user credentials.
 
 <a name='a-hybrid-azure-ad-joined-windows-10-device-fails-to-enroll-in-intune-with-error-0x800706d9-or-0x80180023'></a>
 

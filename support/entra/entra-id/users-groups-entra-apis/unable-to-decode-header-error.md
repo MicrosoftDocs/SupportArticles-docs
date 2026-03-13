@@ -40,4 +40,4 @@ Here are two solutions for resolving this issue:
     Connect-MgGraph -AccessToken (ConvertFrom-SecureString -SecureString $microsoftGraphToken.Token -AsPlainText)
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
-ms.custom: New Relic troubleshooting
+ms.custom: sap:Native New Relic Service
 ms.date: 09/18/2025
 ai-usage: ai-assisted
 
@@ -60,6 +60,6 @@ If your selection includes VMs in different states (some that have the agent and
 - [Troubleshoot VM Agent issues](../../virtual-machines/windows/windows-azure-guest-agent.md)
 - [Introduction to the Azure Native New Relic Service](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/get-started/azure-native/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

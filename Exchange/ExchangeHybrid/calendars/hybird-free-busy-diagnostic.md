@@ -4,18 +4,19 @@ description: Describes the data that's collected by the Exchange Online Free/Bus
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: farshadt, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Calendaring
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: farshadt, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
 ms.date: 08/13/2024
 ---
+
 # Exchange Online Hybrid Free/Busy Diagnostic
 
 <!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
@@ -81,7 +82,3 @@ _Original KB number:_ &nbsp; 2957394
 |Get-mailbox -arbitration cmdlet output|\<HYBRIDSERVERNAME>_Arbitration Mailbox_FL.TXT|
 |Get-PublicFolderClientPermission cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE_BUSY_FIRST ORGANIZATION_EXTERNAL_FYDIBOHF25SPDLT.log_FL.TXT|
 |Get-PublicFolder cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE BUSY.log_FL|
-
-## References
-
-For more information about Microsoft Automated Troubleshooting Services and about the Support Diagnostics Platform, see [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970).

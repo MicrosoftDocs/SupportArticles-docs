@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Service Is Currently Busy Message on Connecting
 description: Troubleshoot the Remote Desktop Service is currently busy error when users start a remote desktop connection.
-ms.date: 02/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

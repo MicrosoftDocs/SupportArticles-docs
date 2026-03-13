@@ -38,11 +38,6 @@ productDirectory:
     links:
     - url: cosmos-db/index.yml
       text: Troubleshooting articles for Azure Cosmos DB
-  - title: Azure DevOps
-    imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"
-    links:
-    - url: devops/welcome-azure-devops.yml
-      text: Troubleshooting articles for Azure DevOps
   - title: Azure Function App
     imageSrc: "https://static.docs.com/ui/media/product/azure/functions.svg"
     links:
@@ -67,7 +62,15 @@ productDirectory:
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
     - url: azure-monitor/welcome-azure-monitor.yml
-      text: Troubleshooting articles for Azure Monitor
+      text: Troubleshooting articles for Azure Monitor Activity Logs
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Application Insights
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Log Analytics
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Agent (Linux and Windows)
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Event Hubs
   - title: Azure Service Fabric
     imageSrc: "https://static.docs.com/ui/media/product/azure/service-fabric-clusters.svg"
     links:
@@ -84,11 +87,25 @@ productDirectory:
       text: Troubleshooting articles for Azure Synapse Analytics Serverless SQL Pool
     - url: synapse-analytics/workspace/welcome-synapse-analytics-workspace.yml
       text: Troubleshooting articles for Azure Synapse Analytics Workspace
-  - title: Azure Virtual Network
-    imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-networks.svg"
+  - title: Networking foundation
+    imageSrc: "https://learn.microsoft.com/en-us/azure/networking/media/index/networking-foundations.svg"
     links:
     - url: virtual-network/welcome-virtual-network.yml
       text: Troubleshooting articles for Azure Virtual Network
+  - title: Load balancing and content delivery
+    imageSrc: "https://learn.microsoft.com/azure/networking/media/index/load-balancing-and-content-delivery.svg"
+    links:
+    - url: application-gateway/welcome-app-gateway.yml
+      text: Troubleshooting articles for Azure Application Gateway
+    - url: front-door/welcome-front-door.yml
+      text: Troubleshooting articles for Azure Front Door 
+  - title: Hybrid connectivity
+    imageSrc: "https://learn.microsoft.com/azure/networking/media/index/hybrid-connectivity.svg"
+    links:
+    - url: vpn-gateway/welcome-vpn-gateway.yml
+      text: Troubleshooting articles for Azure VPN Gateway
+    - url: expressroute/welcome-expressroute.yml
+      text: Troubleshooting articles for Azure ExpressRoute  
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:

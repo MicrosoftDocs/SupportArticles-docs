@@ -50,4 +50,4 @@ For other boot errors you may encounter, see the "Specific boot errors – Windo
 - [Detailed troubleshooting across network components](detailed-troubleshoot-rdp.md)
 - [Address Remote Desktop License Server error](troubleshoot-specific-rdp-errors.md#rdplicense)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

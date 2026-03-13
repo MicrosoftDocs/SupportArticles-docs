@@ -14,7 +14,7 @@ ms.custom:
 ms.reviewer: sathyana, shrshet, jovind, meerak
 appliesto: 
   - Exchange Online
-  - Exchange Online Protection
+  - Built-in security features for all cloud mailboxes
   - Microsoft Purview
 search.appverid: MET150
 ms.date: 05/05/2025

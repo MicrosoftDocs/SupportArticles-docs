@@ -2,7 +2,7 @@
 title: OOBE Fails with an Error Has Occurred Error
 description: Helps resolve the error (An error has occurred) during the Windows Out of Box Experience (OOBE).
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom:

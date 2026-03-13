@@ -57,4 +57,4 @@ Azure dependencies will be available in the following primary countries/regions:
 > [!NOTE]
 > Check posts in the Microsoft Message Center to get the most accurate timeline of region enablement for the various solutions.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

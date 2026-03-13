@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
+## Summary
+
 This article describes an issue that you can't manage or remove objects that were created through directory synchronization from Microsoft Entra ID. It provides two resolutions for this issue according to different reasons.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
@@ -87,4 +89,4 @@ Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
 
 It's important to plan carefully when you re-enable directory synchronization. If you used the cloud service portal or Windows PowerShell to make any changes directly to the objects that were originally synchronized from on-premises AD DS, the changes will be overwritten by on-premises attributes and settings the first time that synchronization occurs after directory synchronization is re-enabled.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

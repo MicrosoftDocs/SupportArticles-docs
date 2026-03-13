@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref, azure-ad-ref-l
 ---
 # Password isn't synced from Microsoft Entra ID to on-premises after the password is changed or reset
 
+## Summary
+
 This article describes an issue in which password isn't synced from Microsoft Entra ID to on-premises directory after the password is changed or reset.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -47,4 +49,4 @@ Before troubleshooting this issue, it's important to know which scenarios allow 
 
 To resolve this issue, see the **Troubleshoot Password Writeback** section of [How to troubleshoot Password Management](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#troubleshoot-password-writeback).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

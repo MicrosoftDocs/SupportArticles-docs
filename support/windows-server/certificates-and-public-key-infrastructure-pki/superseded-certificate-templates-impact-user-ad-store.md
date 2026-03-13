@@ -1,7 +1,7 @@
 ---
 title: Superseded Certificate Templates and impact on user's AD store
 description: Provides a resolution for the issue superseded Certificate Templates and impact on user's AD store
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

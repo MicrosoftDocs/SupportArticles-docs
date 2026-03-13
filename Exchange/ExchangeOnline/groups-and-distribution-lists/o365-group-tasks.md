@@ -16,7 +16,7 @@ ms.reviewer: batre, meerak, v-shorestris
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 05/09/2025
+ms.date: 02/19/2026
 ---
 
 # Common management tasks for Microsoft 365 Groups
@@ -83,9 +83,13 @@ You can also use the following tools to control Microsoft 365 Groups creation:
 
 ### Display a Microsoft 365 group associated with a team
 
-All new teams have an associated Microsoft 365 group. By default, this Microsoft 365 group is hidden from Exchange clients (Outlook and Outlook on the web) and is also hidden from the global address list (GAL). To unhide the group, use Exchange Online PowerShell.
+All new teams have an associated Microsoft 365 group. By default, this Microsoft 365 group is hidden from Exchange clients (Outlook and Outlook on the web) and is also hidden from the global address list (GAL).
 
-#### Unhide the Microsoft 365 group from the Outlook or Outlook on the web address list
+If you're using classic Outlook for Windows, you must [turn on Cached exchange mode](https://support.microsoft.com/office/turn-on-cached-exchange-mode-7885af08-9a60-4ec3-850a-e221c1ed0c1c) to display this Microsoft 365 group.
+
+To unhide the Microsoft 365 Group from the GAL and Exchange clients, use Exchange Online PowerShell.
+
+#### Unhide the Microsoft 365 group from the GAL
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 
@@ -98,7 +102,7 @@ All new teams have an associated Microsoft 365 group. By default, this Microsoft
    > [!NOTE]
    > The value `$false` unhides the group from the address list, and `$true` hides it.
 
-#### Unhide the Microsoft 365 group from an Exchange client
+#### Unhide the Microsoft 365 group from all Exchange clients
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 

@@ -71,4 +71,4 @@ After you identify the specific services that are causing the cost spike, you mi
 > [!div class="nextstepaction"]
 > [Set daily cap limit to protect against unexpected cost increase](./set-up-a-daily-cap.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

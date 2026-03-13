@@ -31,7 +31,7 @@ This error also occurs when you try to view a source code dictionary that is bas
 
 To resolve this problem, we recommend that you obtain a new dictionary that is based on the current build of the Dynamics.dic file. For third-party dictionaries, you can update the code that is in the current build of the Dynamics.dic file by using the Dexterity Source Code Control Service.
 
-For more information about how to upgrade a Dexterity-based application by using the Dexterity Source Code Control Service, see [How to upgrade a Dexterity-based application in Microsoft Dynamics GP by using the Dexterity Source Code Control Service](https://support.microsoft.com/topic/how-to-upgrade-a-dexterity-based-application-in-microsoft-dynamics-gp-by-using-the-dexterity-source-code-control-service-9a592921-430d-e33b-9ab5-b7072dd9d026).
+For more information about how to upgrade a Dexterity-based application by using the Dexterity Source Code Control Service, see [How to upgrade a Dexterity-based application in Microsoft Dynamics GP by using the Dexterity Source Code Control Service](./upgrade-a-dexterity-based-application.md).
 
 For dictionaries that you want to access but that you do not plan to change, follow these steps to enable the dictionaries to run in Test Mode:
 
@@ -50,4 +50,4 @@ Alternatively, you can take the following actions:
 
 ## References
 
-For more information about index files and Great Plains Dexterity source code control functionality, see [How to use an index file and the Microsoft Dynamics GP Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code](https://support.microsoft.com/topic/how-to-use-an-index-file-and-the-microsoft-dynamics-gp-dexterity-source-code-control-functionality-to-make-sure-that-the-resources-that-you-create-maintain-the-same-resource-id-in-different-builds-and-versions-of-your-code-02402cc4-d884-afcf-d910-1d47722c18cc).
+For more information about index files and Great Plains Dexterity source code control functionality, see [How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions](./how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions.md).

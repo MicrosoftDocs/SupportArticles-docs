@@ -8,6 +8,8 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot CORS issues with Microsoft Entra ID
 
+## Summary
+
 This article provides guidance on troubleshooting and resolving Cross-Origin Resource Sharing (CORS) errors encountered when using Microsoft Entra ID.
 
 ## Understanding CORS
@@ -194,7 +196,7 @@ function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       authority: 'https://contoso.b2clogin.com/tfp/655e51e9-be5e-xxxx-xxxx-38aa6558xxxx/b2c_1_susi/v2.0/',
-      clientId: 'fb2ad7b7-2032-4a66-8723-e993eb4b9004',
+      clientId: '00001111-aaaa-2222-bbbb-3333cccc4444',
       redirectUri: 'http://localhost:4200',
       knownAuthorities: ['contoso.b2clogin.com'],
       protocolMode: ProtocolMode.OIDC
@@ -231,4 +233,4 @@ If your app uses Microsoft Entra Application Proxy, see [Understand complex appl
 - [Azure App Service REST API tutorial](/azure/app-service/app-service-web-tutorial-rest-api)
 - [Azure API Management CORS policy](/azure/api-management/cors-policy)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

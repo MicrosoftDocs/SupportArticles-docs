@@ -10,6 +10,8 @@ ms.custom: sap:Issues signing into application
 
 # "Your browser is not supported or up-to-date" error in MSAL app
 
+## Summary
+
 This article discusses how to resolve the "Your browser is not supported or up-to-date" error that occurs in a Microsoft Authentication Library (MSAL)-based app.
 
 ## Symptoms
@@ -45,4 +47,4 @@ var pca = PublicClientApplicationBuilder.Create("client_id").WithBroker(new Brok
 
 If Web Account Manager is unavailable (such as on Windows Server 2012), consider using the [default system browser for authentication](/entra/msal/dotnet/acquiring-tokens/using-web-browsers#how-to-use-the-default-system-browser).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

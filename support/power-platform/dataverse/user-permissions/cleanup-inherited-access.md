@@ -154,7 +154,7 @@ public static void OutputResetInheritedAccess(IOrganizationService service, stri
 **Request**:
 
 ```http
-GET [Organization URI]/api/data/v9.0/ResetInheritedAccess(FetchXml=@fetchXml)?@fetchXml=%3Cfetch%3E%3Centity%20name%3D%22principalobjectaccess%22%3E%3Cattribute%20name%3D%22principalobjectaccessid%22%2F%3E%3Cfilter%20type%3D%22and%22%3E%3Ccondition%20attribute%3D%22principalid%22%20operator%3D%22eq%22%20value%3D%229b5f621b-584e-423f-99fd-4620bb00bf1f%22%20%2F%3E%3Ccondition%20attribute%3D%22objectid%22%20operator%3D%22eq%22%20value%3D%22B52B7A48-EAFB-ED11-884B-00224809B6C7%22%20%2F%3E%3C%2Ffilter%3E%3C%2Fentity%3E%3C%2Ffetch%3E
+GET [Organization URI]/api/data/v9.0/ResetInheritedAccess(FetchXml=@fetchXml)?@fetchXml=%3Cfetch%3E%3Centity%20name%3D%22principalobjectaccess%22%3E%3Cattribute%20name%3D%22principalobjectaccessid%22%2F%3E%3Cfilter%20type%3D%22and%22%3E%3Ccondition%20attribute%3D%22principalid%22%20operator%3D%22eq%22%20value%3D%22aaaaaaaa-bbbb-cccc-1111-222222222222%22%20%2F%3E%3Ccondition%20attribute%3D%22objectid%22%20operator%3D%22eq%22%20value%3D%22aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb%22%20%2F%3E%3C%2Ffilter%3E%3C%2Fentity%3E%3C%2Ffetch%3E
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -229,8 +229,8 @@ This section includes some examples of FetchXml queries you might use with the `
     <entity name="principalobjectaccess">
         <attribute name="principalobjectaccessid"/>
         <filter type="and">
-            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
-            <condition attribute="objectid" operator="eq" value="B52B7A48-EAFB-ED11-884B-00224809B6C7" />
+            <condition attribute="principalid" operator="eq" value="aaaaaaaa-bbbb-cccc-1111-222222222222" />
+            <condition attribute="objectid" operator="eq" value="aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" />
         </filter>
     </entity>
 </fetch>
@@ -256,7 +256,7 @@ This section includes some examples of FetchXml queries you might use with the `
     <entity name="principalobjectaccess">
         <attribute name="principalobjectaccessid"/>
         <filter type="and">
-            <condition attribute="principalid" operator="eq" value="9b5f621b-584e-423f-99fd-4620bb00bf1f" />
+            <condition attribute="principalid" operator="eq" value="aaaaaaaa-bbbb-cccc-1111-222222222222" />
         </filter>
     </entity>
 </fetch>

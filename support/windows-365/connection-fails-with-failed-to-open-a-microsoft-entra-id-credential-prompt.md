@@ -3,7 +3,7 @@ title: Connection fails with error Failed to Open a Microsoft Entra ID Credentia
 description: Introduces how to resolve the connection failure with the "Failed to open a Microsoft Entra ID credential prompt" error.
 audience: itpro
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ms.custom:
@@ -12,8 +12,9 @@ ms.custom:
 ---
 # Windows 365 Link connection fails with "Failed to open a Microsoft Entra ID credential prompt"
 
+
 >[!NOTE]
->With the release of Windows 365 Link October Quality Update version 26100.6899, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.6899 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
+>With the release of Windows 365 Link December Quality Update version 26100.7462, users should no longer encounter this error message for the reasons stated below.  If such an error is encountered first check that Windows 365 Link is on version 26100.7462 or greater. For more information on updating the device, see [Windows 365 Link update behavior and control](/windows-365/link/update-behavior-control). 
 
 After a user authenticates on the sign-in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 

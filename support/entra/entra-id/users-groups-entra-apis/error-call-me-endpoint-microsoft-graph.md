@@ -64,4 +64,4 @@ For example, if you want to call `GET https://graph.microsoft.com/v1.0/me/member
     GET https://graph.microsoft.com/v1.0/users/{upn or userID}/memberOf
     ```
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

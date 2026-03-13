@@ -1,7 +1,7 @@
 ---
 title: UDP communication is blocked by the Windows Firewall rule in WSFC
 description: Discusses that UDP communication is blocked by the Windows Firewall rule in WSFC when the network connection is interrupted and then restored. Provides a resolution.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

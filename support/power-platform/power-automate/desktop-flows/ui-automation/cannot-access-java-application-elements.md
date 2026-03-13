@@ -1,13 +1,13 @@
 ---
-title: Can't access elements of a Java application
+title: Can't Access Elements of a Java Application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
-ms.reviewer: pefelesk
-ms.date: 04/29/2025
+ms.reviewer: pefelesk, mitsirak, nimoutzo, iomimtso, v-shaywood
+ms.date: 11/26/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
 
-If you encounter issues while [automating Java applications](/power-automate/desktop-flows/how-to/java) with Power Automate for desktop, follow the steps in this article to troubleshoot the issue.
+When [you automate Java applications](/power-automate/desktop-flows/how-to/java) by using Power Automate for desktop, you experience an issue in which Power Automate can't access the UI elements of the Java application. This article helps you troubleshoot this issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
@@ -16,71 +16,96 @@ _Original KB number:_ &nbsp; 5014922
 
 Power Automate for desktop can't access the UI elements of a Java desktop application when you use either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
 
-## Troubleshooting steps
+## Diagnose using the troubleshooter
 
-To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/troubleshooter) first.
+To resolve this problem, first try the [troubleshooter](/power-automate/desktop-flows/troubleshooter):
 
-1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
+1. In Power Automate for desktop, go to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
-2. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
+1. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
 
-3. If an issue is found for **Java Automation**, expand the panel to see the details.
+1. If the troubleshooter finds an issue for **Java Automation**, expand the panel to see the details.
 
-4. If a **Fix** button is available, select it to apply the fix. Ensure all running **Java** applications are closed before applying the fix.
+1. If a **Fix** button is available, select it to apply the fix. Make sure that you close all running **Java** applications before you apply the fix.
 
-If the issue persists after using the troubleshooter, follow these steps to manually troubleshoot the issue:
+If the problem persists after you use the troubleshooter, follow the steps in [Manual troubleshooting](#manual-troubleshooting) to further troubleshoot the issue.
 
-1. Ensure that you have Java installed on your machine:
+## Manual troubleshooting
 
-   - Open the Command Line tool (cmd) and run the following command:
+> [!NOTE]
+> Use these steps only if the troubleshooter finds no Java installations or can't configure the environment.
 
-     ```cmd
-     java –version
-     ```
+### Configure Java (for Java 8 and 7)
 
-   - If Java isn't installed, you receive an error message:
+Use these steps to troubleshoot Java 8 and 7. If you're using Java 9 or a later version, see [Configure Java (for Java 9 and later)](#configure-java-for-java-9-and-later).
 
-     > 'java' is not recognized as an internal or external command, operable program or batch file.
+#### Locate the Java installation folder
 
-2. Ensure that the **Enable Java Access Bridge** option is disabled in the Control Panel.
+1. Check common paths such as `C:\Program Files\Java\jre7` or `C:\Program Files\Java\jre8`.
+1. Some apps use an embedded Java runtime that isn't registered system-wide. To identify the location of an embedded Java runtime:
 
-   Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable the **Enable Java Access Bridge** option.
+   1. Start the Java application.
 
-   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel." lightbox="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png":::
+   1. Open Task Manager.
 
-3. Ensure that specific files exist in one or more Java folders of the machine after the Power Automate for desktop installation.
+   1. Locate and right-click the `java.exe` process, and then select **Open file location**.
+  
+   1. Use the selected folder as `<JRE_HOME>\bin`.
+  
+To avoid this issue in the future, install Java under `Program Files` or enable the option to register Java in the system registry during installation.
 
-   To check the installed Java version and installation path on your machine:
+#### Copy required files (administrator rights required)
 
-    1. Type _Configure Java_ in the Windows search bar.
-    1. Open Java Control Panel and go to the **Java** tab.
-    1. Select **View**.
+Copy the following files from the Power Automate for desktop installation folder (`C:\Program Files (x86)\Power Automate Desktop\dotnet\java-support`):
 
-       :::image type="content" source="media/cannot-access-java-application-elements/java-control-panel.png" alt-text="Screenshot of the Java Control Panel.":::
+- `PAD.JavaBridge.jar` to `<JRE_HOME>\lib\ext\`
+- `Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll` to `<JRE_HOME>\bin\` (x86 or x64 depending on the Java architecture) 
 
-    1. Check the values in the **Path** column. The **Architecture** row with value x86 refers to 32-bit Java installation, while the row with value x64 refers to 64-bit Java installation.
+#### Update accessibility configuration
 
-       :::image type="content" source="media/cannot-access-java-application-elements/java-runtime-environments-settings.png" alt-text="Screnshot of the Java Runtime Environment Settings.":::
+1. Open `<JRE_HOME>\lib\accessibility.properties` in a text editor. If the file doesn't exist, create it.
+1. Add or update the following line:
 
-   Check that the following files exist:
+   `assistive_technologies=microsoft.flows.rpa.desktop.uiautomation.JavaBridge`
 
-   - For 64-bit Java installation:
+   If the line starts with the number sign (`#`), remove the `#` character to uncomment it. If other assistive technologies are listed, append the Microsoft value at the end, separated by a comma.
 
-     - File _Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\bin_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)
-     - File _accessibility.properties_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\lib_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)  
-       - If you open the file with Notepad, you should see the following value:  
-  `assistive_technologies=com.sun.java.accessibility.AccessBridge, microsoft.flows.rpa.desktop.uiautomation.JavaBridge`
-     - File _PAD.JavaBridge.jar_ is inserted in folder _C:\Program Files\Java\jre1.8.0_271\lib\ext_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)
+> [!NOTE]
+> Manual file placement works for only Java 8 and 7. Java 9 and later versions don't support using this method to load assistive technologies.
 
-   - For 32-bit Java installation:
+### Configure Java (for Java 9 and later)
 
-     - Check the same files but in folder _C:\Program Files (x86) \Java…_.
+For Java 9 and later versions, you can't modify the Java installation in the same manner. Instead, use one of the following methods.
 
-4. Check _.accessibility.properties_ file:
+#### Set environment variable (recommended)
 
-    - Ensure there isn't an _.accessibility.properties_ file in your _C:\Users\user_ folder. (replace _user_ with your user name.)
-    - If the file exists, rename it.
+Set a system or user environment variable that's named `JDK_JAVA_OPTIONS` and has the following value (64-bit example):
 
-5. Ensure that _VC_redist.x64.exe_, _VC_redist.x86.exe_, or both are run.
+`-javaagent:"C:\Program Files (x86)\Power Automate Desktop\dotnet\java-support\PAD.JavaBridge.jar" -Djava.library.path="%PATH%;C:\Program Files (x86)\Power Automate Desktop\dotnet\java-support\x64"`
 
-   :::image type="content" source="media/cannot-access-java-application-elements/installed-microsoft-visual-c-plus-plus-redistributable-versions.png" alt-text="Screenshot of the installed Microsoft Visual C++ Redistributable versions.":::
+For 32-bit Java, use the `x86` folder instead of the `x64` folder.
+
+#### Add JVM arguments to the Java application start command
+
+Append the following arguments to the app's Java startup command:
+
+- `-javaagent:"<PAD install path>\dotnet\java-support\PAD.JavaBridge.jar"`
+- `-Djava.library.path="<PAD install path>\dotnet\java-support\x64"` (for 32-bit Java, use the `x86` folder instead of the `x64` folder)
+
+## Key clarifications and troubleshooting tips
+
+- Always try the Power Automate for desktop troubleshooter first. It's the safest and fastest method to configure Java automation.
+- Manual file placement applies only to Java 8 and 7. Use the environment-variable method or JVM-argument method for Java 9 and later.
+- Java versions earlier than 7 aren't supported.
+- The attach mechanism might not work reliably for Java 10 or Java 9.
+- If an application uses an embedded runtime, use Task Manager to find the Java executable path.
+- To be able to insert files into Java installation folders, you must have administrator rights.
+- If you insert the files manually, the files aren't updated automatically when Power Automate for desktop is updated. To use the latest Java automation files, repeat the manual file placement after each Power Automate for desktop update.
+- After you make the changes, close all running Java applications, and then restart the computer.
+
+## Related content
+
+- [Automate Java applications](/power-automate/desktop-flows/how-to/java)
+- [Power Automate troubleshooting](../../welcome-power-automate.yml)
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

@@ -10,8 +10,6 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 ## Overview
 
 When you upload or capture a generalized virtual machine (VM) image as a specialized VM image, a [provisioning timeout error](#provisioning-timeout-error-during-an-upload-process) will occur.
@@ -24,6 +22,8 @@ This article covers the possible combinations of generalized and specialized ima
 
 > [!NOTE]
 > For descriptions and comparison of generalized and specialized images, see [Generalized and specialized](/azure/virtual-machines/linux/imaging#generalized-and-specialized).
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Upload combinations of generalized and specialized images
 
@@ -77,4 +77,4 @@ Here are some possible scenarios and explanations of the provisioning timeout er
 
 For more information about how to capture a Linux image to prepare for upload, see [How to capture a Linux image for upload preparation](capture-linux-image-for-upload.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

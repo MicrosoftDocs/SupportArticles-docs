@@ -90,4 +90,4 @@ If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recomm
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

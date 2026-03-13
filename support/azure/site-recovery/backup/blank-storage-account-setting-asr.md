@@ -34,4 +34,4 @@ To fix this issue, follow these steps:
 3. Click Save to commit the change.
 4. Restart the Create Protection Group wizard.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

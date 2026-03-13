@@ -1,7 +1,7 @@
 ---
 title: Determine Whether WSUS Configuration Causes WU Installation Failures
 description: Helps you isolate whether the cause of a WU issue is with the WSUS configuration or the WU service.
-ms.date: 07/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

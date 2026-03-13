@@ -8,11 +8,9 @@ ms.custom: sap:VM Extensions not operating correctly
 ---
 # Support for VM agent extensions in Microsoft Azure
 
-**Applies to:** :heavy_check_mark: Windows VMs
+**Applies to:** :heavy_check_mark: Windows VMs :heavy_check_mark: Linux VMs
 
 _Original KB number:_ &nbsp; 2965986
-
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 This article discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on infrastructure as a service (IaaS) for Microsoft Azure.
 
@@ -20,6 +18,8 @@ Microsoft Support for VM agent extensions is limited to first-party extensions t
 Support is available to customers who purchased a valid [Azure support plan.](https://azure.microsoft.com/support/plans/)
 
 Support for third-party VM agent extensions is provided directly by the vendor.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Agents support matrix
 
@@ -79,7 +79,7 @@ An example of an error in starting the VMAccess extension is as follows:
 
 Use the table that is mentioned before to request support for the extension that is failing.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 

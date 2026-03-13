@@ -24,4 +24,4 @@ The `platformFaultDomainCount` parameter is invalid for the region or zone that'
 
 You must select a valid `platformFaultDomainCount` value. For zonal deployments, the maximum `platformFaultDomainCount` value is **1**. For regional deployments for which no zone is specified, the maximum `platformFaultDomainCount` value varies depending on the region. To determine the maximum fault domain count per region, see [Choosing the right number of fault domains for Virtual Machine Scale Set](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-manage-fault-domains).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

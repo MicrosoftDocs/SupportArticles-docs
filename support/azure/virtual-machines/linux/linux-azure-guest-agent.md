@@ -19,12 +19,12 @@ ms.author: axelg
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 The [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) enables a virtual machine (VM) to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16.
 
 >[!NOTE]
 >This IP address is a virtual public IP address that facilitates communication and should not be blocked. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Before you begin
 
@@ -91,4 +91,4 @@ To resolve this issue:
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
 * Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

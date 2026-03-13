@@ -106,6 +106,6 @@ This article describes common AKS errors and how to resolve them.
 
 ## References
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

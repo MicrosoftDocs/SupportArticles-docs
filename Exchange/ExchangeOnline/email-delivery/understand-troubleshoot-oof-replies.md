@@ -33,7 +33,7 @@ Automatic replies can be configured as follows:
 
 - By using the automatic reply feature from within Outlook [as explained here](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67)
 - By using other clients, such as Outlook on the web (OWA)
-- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](/powershell/module/exchange/set-mailboxautoreplyconfiguration))
+- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](/powershell/module/exchangepowershell/set-mailboxautoreplyconfiguration))
 
 Admins can set up OOF replies from the Microsoft 365 Admin Portal on behalf of users.
 
@@ -41,7 +41,7 @@ If automatic replies are enabled, only one reply is sent to each sender even if 
 
 In addition to using the built-in OOF functionality in their client, people sometimes [use rules to create an Out of Office message](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403) while they are away.
 
-By design, Exchange Online Protection uses the [high risk delivery pool](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages) (HRDP) to send OOF replies, because OOF replies are lower-priority messages.
+By design, Microsoft 365 uses the [high risk delivery pool](/defender-office-365/outbound-spam-high-risk-delivery-pool-about) (HRDP) to send OOF replies, because OOF replies are lower-priority messages.
 
 ## Types of OOF rules
 

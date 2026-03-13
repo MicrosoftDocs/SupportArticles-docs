@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # An error displays in a directory synchronization report: This company has exceeded the number of objects that can be synchronized
 
+## Summary
+
 This article describes how to increase the Active Directory directory service quota for directory synchronization in an Office 365, Azure, or Microsoft Intune environment.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management  
@@ -77,4 +79,4 @@ In this scenario, the online company that's performing the evaluation of the clo
 
 **Answer 3**: No. You're granted a directory quota of 300,000 objects if you have one or more verified domains. You're not granted a quota of 300,000 objects for _each_ verified domain that you register.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

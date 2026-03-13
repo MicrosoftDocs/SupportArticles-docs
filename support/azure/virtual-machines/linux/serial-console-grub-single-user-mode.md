@@ -261,4 +261,4 @@ To learn more about Serial Console, see:
 * [Serial Console for Windows VMs](../windows/serial-console-windows.md)
 * [Boot diagnostics](../windows/boot-diagnostics.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

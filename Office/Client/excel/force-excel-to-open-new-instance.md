@@ -2,10 +2,11 @@
 title: Force Excel to open in a new instance by default
 description: Describes how to set a registry key to force Excel to open in a new instance when launched. This is a common request for large workbooks when using 32-bit Excel.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: v-kccross
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
 ms.custom: 
   - Open
   - CSSTroubleshoot
@@ -36,7 +37,7 @@ This article explains how to do so by configuring a registry key.
 > - You select a file when you use the Excel taskbar icon to open the application.
 > - You double-click an Excel workbook in Windows Explorer.
 
-For more information about Excel instances, and how to start a new instance in other ways, see [What are Excel instances](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_win10-mso_2016/what-are-excel-instances-and-why-is-this-important/20c39a6f-0857-4033-b713-18bf72e91d8b).
+For more information about Excel instances, and how to start a new instance in other ways, see [Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 
 ## Cause
 

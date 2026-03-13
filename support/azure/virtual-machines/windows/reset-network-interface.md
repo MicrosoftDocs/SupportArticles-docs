@@ -26,7 +26,7 @@ The following article also introduces how to view and change settings for a NIC,
 
 [Create, change, or delete a network interface](/azure/virtual-network/virtual-network-network-interface)
 
-[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
+ 
 
 ## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
@@ -136,4 +136,4 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
 6. Now all unavailable adapters should be cleared of your system.
 
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

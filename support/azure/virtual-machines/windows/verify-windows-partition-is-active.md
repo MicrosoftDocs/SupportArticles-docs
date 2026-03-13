@@ -16,4 +16,4 @@ This article shows how to verify that the Windows partition is active.
 
 [!INCLUDE [Verify that Windows partition is active](../../../includes/azure/windows-vm-verify-set-active-partition.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

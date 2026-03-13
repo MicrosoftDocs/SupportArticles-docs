@@ -503,4 +503,4 @@ See the [Microsoft Q&A page for Application Insights](/answers/tags/20/azure-mon
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

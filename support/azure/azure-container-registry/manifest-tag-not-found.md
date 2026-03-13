@@ -52,4 +52,4 @@ To find the tags within the associated repository and registry, use one of the f
 > [!NOTE]
 > Checking the repositories from the [Azure portal](https://portal.azure.com) or running the `az acr repository show-tags` command works successfully only if the Azure Container Registry network rules allows these actions.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+ 

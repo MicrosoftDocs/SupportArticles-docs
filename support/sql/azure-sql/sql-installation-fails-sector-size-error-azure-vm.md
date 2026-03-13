@@ -7,7 +7,7 @@ author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
-# SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine
+# SQL Server installation fails with sector size error on a Windows Server Azure virtual machine
 
 This article helps you resolve a problem that occurs when you try to manually install a SQL Server instance on a Microsoft Azure virtual machine (VM) running Windows.
 

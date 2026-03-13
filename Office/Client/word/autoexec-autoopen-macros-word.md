@@ -1,7 +1,10 @@
 ---
 title: Auto-Exec and Auto-Open macros in Word
 description: This article describes the behaviors of Auto-Exec and Auto-Open macros in Word.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -11,11 +14,9 @@ ms.custom:
 appliesto:
 - Office Products
 search.appverid: MET150
-ms.reviewer:
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # Description of behaviors of Auto-Exec and Auto-Open macros in Word
 
 You can use the Auto-Exec and Auto-Open macros in Word to establish default paths, styles, links, environment conditions, and so on, at the time Word opens a new document or opens an existing document. This article discusses how these macros work and how they behave in various situations.

@@ -383,6 +383,6 @@ Troubleshoot error code "429" by reviewing the ["HTTP 429: Too Many Requests"](/
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [error-codes]: /azure/key-vault/general/rest-error-codes

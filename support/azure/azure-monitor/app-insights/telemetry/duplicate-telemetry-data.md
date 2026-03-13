@@ -12,4 +12,4 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 
 If the SDK reports correlation recursively, enable the configuration setting of `excludeRequestFromAutoTrackingPatterns` to exclude the duplicate data. This scenario can occur when you use connection strings. The syntax for the configuration setting is `excludeRequestFromAutoTrackingPatterns: [<endpointUrl>]`.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

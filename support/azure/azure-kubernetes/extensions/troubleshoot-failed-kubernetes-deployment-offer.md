@@ -142,7 +142,7 @@ To accept the legal terms through PowerShell, run the cmdlets that are described
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [azure-portal]: https://portal.azure.com
 

@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # User object is missing or filtered from the Microsoft Entra connector in Azure Active Directory Sync
 
+## Summary
+
 This article describes an issue that blocks synchronization for a user object from on-premises to Azure. A workaround is provided.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -61,4 +63,4 @@ Therefore, with the `msExchRecipientTypeDetails` set to 2  the object is not fil
 
 In the scenario that you do not have an account-resource forest topology, and a user has `msExchRecipientTypeDetails` value is 2, changing the value to a value that is similar to a usual object will sync the user object.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

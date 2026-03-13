@@ -42,4 +42,4 @@ When users try to download activity logs from Microsoft Azure, they might receiv
 - [Azure Monitor documentation](/azure/azure-monitor/)
 - [Azure portal guide](/azure/azure-portal/)
 
-[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
+ 

@@ -75,4 +75,4 @@ Upgrade the cluster, and then create a new Windows Server node pool that support
 >    - To check the current version: `az aks nodepool show --resource-group <resource-group> --cluster-name <cluster-name> --name <nodepool-name> --query nodeImageVersion`
 >    - To check the latest available version: `az aks nodepool get-upgrades --resource-group <resource-group> --cluster-name <cluster-name> --nodepool-name <nodepool-name> --query latestNodeImageVersion`
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

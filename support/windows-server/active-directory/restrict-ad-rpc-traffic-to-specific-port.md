@@ -1,7 +1,7 @@
 ---
 title: Restrict Active Directory RPC traffic to a specific port
 description: This article introduces how to configure Active Directory replication remote procedure calls traffic to a specific port.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -62,9 +62,9 @@ Restart the computer for the new setting to become effective.
 Restart the Netlogon service for the new setting to become effective.
 
 > [!NOTE]
-> When you use the `DCTcpipPort` registry entry, and you set it to the same port as the `TCP/IP Port` registry entry, you receive Netlogon error event 5809 under `NTDS\Parameters`. This indicates that the port configured is in use, and you should choose a different port.
+> When you use the `DCTcpipPort` registry entry, and you set it to the same port as the `TCP/IP Port` registry entry, Netlogon error event 5809 is logged in the system log. This error indicates that the configured port is in use, and you should choose a different port.
 
-You'll receive the same event when you have a unique port, and you restart the Netlogon service on the domain controller. This behavior is by design. It occurs because of the way the RPC runtime manages its server ports. The port will be used after the restart, and the event can be ignored.
+You'll receive the same event when you have a unique port, and you restart the Netlogon service on the domain controller. This behavior is by design. It occurs because of the way the RPC runtime manages its server ports. The port will be used after the restart, and the event can be safely ignored.
 
 Administrators should confirm that the communication over the specified port is enabled if any intermediate network devices or software is used to filter packets between the domain controllers.
 

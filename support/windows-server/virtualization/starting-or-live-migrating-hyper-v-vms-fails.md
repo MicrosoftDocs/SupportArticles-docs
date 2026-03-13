@@ -1,7 +1,7 @@
 ---
 title: Starting or live migrating Hyper-V VMs fails
 description: Error 0x80070569 occurs when you try to start or do a live migration for a Hyper-V virtual machine.
-ms.date: 11/4/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -41,7 +41,7 @@ This issue occurs because the NT Virtual Machine\Virtual Machines special identi
 
 ## Potential Fix
 
-One potential way to resolve this issue is to enable service log on. For more information, see [How to Enable Service Logon](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025#enable-service-logon-as-log-on-type).
+One potential way to resolve this issue is to enable service log on. For more information, see [How to Enable Service Logon](/system-center/scsm/enable-service-log-on-sm#enable-service-logon-as-log-on-type).
 
 ## Workaround
 

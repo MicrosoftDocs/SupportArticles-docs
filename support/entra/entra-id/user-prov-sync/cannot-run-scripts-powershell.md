@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Can't run scripts in Azure Active Directory module for Windows PowerShell
 
+## Summary
+
 This article describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory module for Windows PowerShell.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
@@ -60,4 +62,4 @@ The four execution policies are as follows:
 - RemoteSigned policy runs scripts. All scripts and configuration files downloaded from communication applications must be signed by a publisher that you trust. These communication applications include Microsoft Outlook, Windows Internet Explorer, Outlook Express, and Windows Messenger. This policy opens you to the risk of running malicious scripts that aren't downloaded from these applications. And you aren't prompted in this situation.
 - Unrestricted policy runs scripts. All scripts and configuration files downloaded from communication applications run after you confirm that you understand that the file originated from the Internet. These communication applications include Outlook, Internet Explorer, Outlook Express, and Windows Messenger. No digital signature is required. This policy opens you to the risk of running unsigned, malicious scripts that are downloaded from these applications.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

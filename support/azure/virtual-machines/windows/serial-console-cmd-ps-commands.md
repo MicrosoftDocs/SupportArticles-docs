@@ -708,4 +708,4 @@ For more information, see [Azure Instance Metadata service](/azure/virtual-machi
 * Learn about the [Serial Console for Linux VMs](../linux/serial-console-linux.md).
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

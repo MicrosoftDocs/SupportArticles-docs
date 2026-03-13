@@ -10,7 +10,7 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Health set unhealthy
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: jaburn, ninob, marcn, v-six
+ms.reviewer: jaburn, ninob, marcn, v-six, v-kccross
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp;4043629
 The Microsoft Exchange Frontend Transport service crashes when you do one of the following things:
 
 - Run the `Set-ServerComponentState` cmdlet against the `ServerWideOffline` component.
-- Run [Exchange 2013 DAG Maintenance scripts](https://gallery.technet.microsoft.com/office/Exchange-2013-DAG-3ac89826).
+- Run the Exchange 2013 DAG Maintenance scripts.
 
 This problem occurs in the following products:
 
@@ -52,7 +52,7 @@ The Microsoft Exchange Frontend Transport service terminated unexpectedly. It ha
 
 - `Set-ServerComponentState -Identity <ServerName> -Component ServerWideOffline -State Inactive -Requester Functional`
 
-The first two commands are included in the [Exchange 2013 DAG Maintenance scripts](https://gallery.technet.microsoft.com/office/Exchange-2013-DAG-3ac89826). So you meet this problem when you run the scripts.
+The first two commands are included in the Exchange 2013 DAG Maintenance scripts. So you meet this problem when you run the scripts.
 
 ## Resolution
 

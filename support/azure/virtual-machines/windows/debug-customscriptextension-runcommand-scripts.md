@@ -15,7 +15,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
 
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Prerequisites
 
@@ -436,7 +436,7 @@ Set-AzVMExtension @commandSettings
 - [Audit success process creation event](https://github.com/timip/splunk/blob/master/powershell_logging.ps1)
 - [Windows configuration - Set up a victim system](https://github.com/TonyPhipps/SIEM/blob/master/Lab/WindowsVictim.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 

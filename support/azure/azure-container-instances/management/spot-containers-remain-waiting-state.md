@@ -4,8 +4,8 @@ description: Learn how to resolve a scenario in Azure Container Instances in whi
 ms.date: 05/13/2024
 author: mosbahmajed
 ms.author: momajed
-editor: v-jsitser
-ms.reviewer: alaljase, v-rekhanain, v-leedennis
+editor: v-jsitser 
+ms.reviewer: alaljase, v-rekhanain, v-leedennis, kennethgp
 ms.service: azure-container-instances
 ms.custom: sap:Management
 ms.topic: troubleshooting-problem-resolution
@@ -13,7 +13,7 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Spot containers remain in the Waiting state
 
-This article discusses how to resolve a scenario in which Spot containers remain stuck in the `Waiting` state in Microsoft Azure Container Instances.
+This article discusses how to resolve a scenario in which Spot containers remain stuck in the `Waiting` state in Microsoft Azure Container Instances (ACI)
 
 ## Symptoms
 
@@ -61,8 +61,9 @@ Follow these steps to gather troubleshooting information and apply possible solu
 
 By following these steps, you can identify the cause of the `Waiting` state problem for your Azure Spot containers and take the appropriate action to resolve the problem. Remember to monitor your containers and adjust your deployment strategy as necessary to reduce disruptions.
 
+> [!NOTE]
+> Spot containers with ACI is in preview and not recommended for production scenarios.
+
 ## Resources
 
 - [Azure Spot Virtual Machines for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/use-spot)
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

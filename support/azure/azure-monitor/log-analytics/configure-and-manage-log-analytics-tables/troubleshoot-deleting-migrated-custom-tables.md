@@ -31,6 +31,6 @@ To delete a migrated custom table, follow these steps by using the Azure Log Ana
 
 - [Azure Log Analytics API documentation](/rest/api/loganalytics/)
 
-[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+ 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

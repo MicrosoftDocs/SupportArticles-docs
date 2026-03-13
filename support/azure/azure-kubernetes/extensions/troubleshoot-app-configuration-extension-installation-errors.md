@@ -63,4 +63,4 @@ Run the installation in a [region](/azure/aks/cluster-extensions#cluster-extensi
 
 If you still experience installation issues, explore the [AKS troubleshooting guide](/azure/aks/troubleshooting).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

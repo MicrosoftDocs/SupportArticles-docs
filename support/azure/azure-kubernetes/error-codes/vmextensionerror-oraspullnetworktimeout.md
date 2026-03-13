@@ -49,5 +49,5 @@ To resolve this issue, follow these steps:
 
 - [Container registry private link](/azure/container-registry/container-registry-private-link)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 

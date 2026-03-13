@@ -11,7 +11,7 @@ ms.custom: sap:VM Extensions not operating correctly
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 This article discusses how to identify and fix issues that involve certificates on a Windows virtual machine (VM) that uses an extension. Usually, these issues are related to cryptographic operations or the certificate itself.
 
@@ -68,15 +68,15 @@ The following list outlines the most common errors that might occur when you use
   ```output
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:20 PM] Decrypting private configuration
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:20 PM] Retrying after 30 seconds. Retry attempt 1
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:50 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:32:50 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:32:50 PM] Retrying after 30 seconds. Retry attempt 2
   
-  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:33:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:34C8CDC747693E0E33A9648703E3990EC4F2C484
+  DiagnosticsPluginLauncher.exe Warning: 0 : [6/29/2020 1:33:20 PM] No certficate with given thumbprint found in the certificate store. Thumbprint:AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
   
   DiagnosticsPluginLauncher.exe Information: 0 : [6/29/2020 1:33:20 PM] Retrying after 30 seconds. Retry attempt 3
   
@@ -163,4 +163,4 @@ If this procedure doesn't work, you can try to run the `icacls` commands again (
 
 - [Multiple certificates on an Azure IaaS VM that uses extensions](./multiple-certificates-iaas-vm-extensions.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -14,6 +14,8 @@ ms.custom: sap:Enterprise Applications
 ---
 # Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 
+## Summary 
+
 This series of articles provide guidance on how to troubleshoot issues that may arise when adding or removing an application in Microsoft Entra ID.
 
 ## Application takes a long time to appear
@@ -38,4 +40,4 @@ If you need help with learning about applications, the [List of Tutorials on How
 
 In addition to this, the [Microsoft Entra Applications Document Library](/azure/active-directory/manage-apps/what-is-application-management) can help you learn more about single sign-on with Microsoft Entra ID and how it works.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

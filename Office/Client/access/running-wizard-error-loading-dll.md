@@ -115,7 +115,7 @@ One of the following registry keys may not exist.
 
 ## Resolution
 
-To resolve the issue for MSI installations by setting the correct values for these dlls in the registry , go to the [Let me fix it myself](#let-me-fix-it-myself) section. To resolve the issue for Click-to-Run installations of Office, perform an online repair to the Office installation. For more information about how to repair, see [Repair an Office application](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
+To resolve the issue for MSI installations by setting the correct values for these dlls in the registry , go to the [Let me fix it myself](#let-me-fix-it-myself) section. To resolve the issue for Click-to-Run installations of Office, perform an online repair to the Office installation. For more information about how to repair, see [Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 
 ### Let me fix it myself
 

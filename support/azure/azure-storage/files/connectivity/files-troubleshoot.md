@@ -256,4 +256,4 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 
 - [Monitor Azure Files](/azure/storage/files/storage-files-monitoring)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

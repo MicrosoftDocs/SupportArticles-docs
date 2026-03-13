@@ -185,4 +185,4 @@ These errors occur because the registry hive is corrupted. A registry hive can b
 
 [!INCLUDE [Fix corrupted registry hive](../../../includes/azure/virtual-machines-windows-fix-corrupted-hive.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

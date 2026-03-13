@@ -122,6 +122,8 @@
           href: ../access/error-opening-sql-linked-table.md
         - name: OLE DB Provider for Jet and ODBC driver
           href: ../access/jet-odbc-driver-available-32-bit-version.md
+        - name: Operation is not supported error 
+          href: ../access/operation-is-not-supported-error.md          
         - name: Optimize Access when using ODBC data sources
           href: ../access/optimize-odbc-data-sources.md
         - name: Query must have at least one destination field
@@ -336,12 +338,8 @@
           href: ../excel/update-external-links.md
         - name: Large Address Aware capability change
           href: ../excel/laa-capability-change.md
-        - name: Last digits are changed to zeros
-          href: ../excel/last-digits-changed-to-zeros.md
         - name: Link a Visio drawing to a specific region
           href: ../excel/link-visio-drawing-to-a-specific-region.md
-        - name: Long numbers are displayed incorrectly
-          href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
         - name: Memory usage in the 32-bit edition of Excel
@@ -490,6 +488,8 @@
           href: ../office-suite-issues/enable-disable-hyperlink-warning.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
+        - name: Errors when Office add-ins start
+          href: ../office-suite-issues/errors-when-office-add-ins-start.md          
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
         - name: Error when you open files from SharePoint in Office client
@@ -500,8 +500,6 @@
           href: ../office-suite-issues/enable-collaboration.md
         - name: Increase the size of diagnostic logs
           href: ../office-suite-issues/collect-office-diagnostic-logs.md
-        - name: Install Microsoft Support and Recovery Assistant from network share
-          href: ../office-suite-issues/install-sara-from-network-share.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app

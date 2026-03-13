@@ -43,9 +43,9 @@ In the following screenshot, two bindings exist. The second entry for HTTPS 8090
 
 Debug logging may show errors that resemble the following:
 
-> 2 [0]0D2C.0754::‎2015‎-‎03‎-‎27 15:09:21.042 [ActivityEventSource]Started activity [HttpRequestActivity, id {8ab952bd-c43f-4ded-b173-50d4055f9341}] parent activity [WebAuthentication Call, id {4659b10b-cf3a-4bcc-9769-f6e1b8663fe5}] Elapsed: 0ms Context: {c477a2fb-8864-4d89-96c7-24bdccee5b94} Properties: RequestUrl=[https://wapserver.contoso.local:8090/provider/subscriptions] & x-ms-client-request-id=[e8dbc04c-5381-40ba-8909-69b83a4f3f13] & x-ms-client-session-id=[99459df3-bb71-4f30-9315-1b0c6c916a58]
+> 2 [0]0D2C.0754::‎2015‎-‎03‎-‎27 15:09:21.042 [ActivityEventSource]Started activity [HttpRequestActivity, id {8ab952bd-c43f-4ded-b173-50d4055f9341}] parent activity [WebAuthentication Call, id {4659b10b-cf3a-4bcc-9769-f6e1b8663fe5}] Elapsed: 0ms Context: {c477a2fb-8864-4d89-96c7-24bdccee5b94} Properties: RequestUrl=[https://wapserver.contoso.local:8090/provider/subscriptions] & x-ms-client-request-id=[aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e] & x-ms-client-session-id=[bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f]
 
-> 3 [0]0D2C.0754::‎2015‎-‎03‎-‎27 15:09:21.058 [ActivityEventSource]Successfully completed activity [HttpRequestActivity, id {8ab952bd-c43f-4ded-b173-50d4055f9341}] parent activity [WebAuthentication Call, id {4659b10b-cf3a-4bcc-9769-f6e1b8663fe5}] Elapsed: 0ms Context: {c477a2fb-8864-4d89-96c7-24bdccee5b94} Duration: 124ms Properties: OriginalPath=[/provider/subscriptions] & RequestUrl=[https://wapserver.contoso.local:8090/provider/subscriptions] & SubscriptionId=[] & x-ms-client-request-id=[e8dbc04c-5381-40ba-8909-69b83a4f3f13] & x-ms-client-session-id=[99459df3-bb71-4f30-9315-1b0c6c916a58]
+> 3 [0]0D2C.0754::‎2015‎-‎03‎-‎27 15:09:21.058 [ActivityEventSource]Successfully completed activity [HttpRequestActivity, id {8ab952bd-c43f-4ded-b173-50d4055f9341}] parent activity [WebAuthentication Call, id {4659b10b-cf3a-4bcc-9769-f6e1b8663fe5}] Elapsed: 0ms Context: {c477a2fb-8864-4d89-96c7-24bdccee5b94} Duration: 124ms Properties: OriginalPath=[/provider/subscriptions] & RequestUrl=[https://wapserver.contoso.local:8090/provider/subscriptions] & SubscriptionId=[] & x-ms-client-request-id=[aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e] & x-ms-client-session-id=[bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f]
 
 > 4 [1]0D2C.0754::‎2015‎-‎03‎-‎27 15:09:24.406 [Microsoft-ServiceProviderFoundation]Component: Provider Activity [WebAuthentication Call, id {4659b10b-cf3a-4bcc-9769-f6e1b8663fe5}] Parent activity [none, id {00000000-0000-0000-0000-000000000000}] Elapsed: 0ms Context: {c477a2fb-8864-4d89-96c7-24bdccee5b94} Creating Tenant and linking to stamp TenantName: user.name@contoso.com_a7c63b17-c0fb-48bf-bdc4-5f7db1c2610b
 
@@ -59,5 +59,5 @@ Debug logging may show errors that resemble the following:
 
 For more information about debug logging, see the following articles:
 
-- [Debug Logging in System Center Service Provider Foundation (SPF)](https://support.microsoft.com/help/2850280)
-- [How to enable debug logging in Virtual Machine Manager](https://support.microsoft.com/help/2913445)
+- [Debug logging in System Center Service Provider Foundation (SPF)](../orchestrator/enable-spf-debug-logging.md)
+- [How to enable debug logging in Virtual Machine Manager](enable-debug-logging.md)

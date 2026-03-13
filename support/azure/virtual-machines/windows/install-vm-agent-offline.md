@@ -17,9 +17,9 @@ ms.reviewer: kageorge, v-weizhu
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 The Azure Virtual Machine Agent (VM Agent) provides useful features, such as local administrator password reset and script pushing. This article shows you how to install the VM Agent for an offline Windows virtual machine (VM).
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## When to use the VM Agent in offline mode
 
@@ -98,4 +98,4 @@ If you created the VM by using the Resource Manager deployment model, you're don
 - [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows)
 - [Virtual machine extensions and features for Windows](/azure/virtual-machines/extensions/features-windows)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

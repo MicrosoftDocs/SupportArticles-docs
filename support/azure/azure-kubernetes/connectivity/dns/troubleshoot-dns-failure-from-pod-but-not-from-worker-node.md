@@ -263,4 +263,4 @@ For more information, see [Name resolution that uses your own DNS server](/azure
 
 [!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

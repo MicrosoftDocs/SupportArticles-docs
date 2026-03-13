@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding
 
+## Summary
+
 This article describes a problem in which you receive the error message "Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
 
 ## Symptoms
@@ -46,4 +48,4 @@ The Microsoft Entra admin center can help you troubleshoot SAML configuration er
 
 For a full list of Active Directory Authentication and authorization error codes see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

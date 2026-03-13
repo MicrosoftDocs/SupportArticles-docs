@@ -43,10 +43,10 @@ This section describes error types and related information.
   |Error message  |More information  |
   |---------|---------|
   |"A transport-level error has occurred when sending the request to the server."|Check whether the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
-  |"Cannot generate SSPI context" | <ul><li>The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended), missing, or misplaced.</li><li>Check whether the [SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).</li></ul> |
+  |"Cannot generate SSPI context" | <ul><li>The explicit SPN account might be [wrong](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager), missing, or misplaced.</li><li>Check whether the [SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).</li></ul> |
   |"Cannot open database \<test\> requested by the login. The login failed."|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).<br/> Also, check whether the database name in the connection string is correct.|
   |"Login failed for user \<username\>." | This error can occur if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't correctly authenticated.    |
-  |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).|
+  |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).|
   |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check whether an [the connection string contains an incorrect server name](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername). Also, check whether the user belongs to a local group that's used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).    |
   |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if an incorrect password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).|
   |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log in to Windows.     |
@@ -64,7 +64,7 @@ This section lists the issues that are related to configuration settings that ar
 
 - **Explicit SPN is missing** - This issue occurs if the SPN isn't configured or registered correctly.
 
-  **Solution:** To resolve this issue, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+  **Solution:** To resolve this issue, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
 - **Explicit misplaced SPN** - Refers to an SPN that was incorrectly associated with a particular service or account.
 
@@ -72,7 +72,7 @@ This section lists the issues that are related to configuration settings that ar
 
 - **Explicit SPN is duplicated** - This issue occurs if an SPN is duplicated because it's registered more than one time.
 
-  **Solution:** To resolve this issue, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+  **Solution:** To resolve this issue, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
 - **Incorrect server name in connection string** - This issue occurs if the specified server name is incorrect or can't be found.
 
@@ -189,7 +189,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **Duplicate SPN** - Refers to a situation in which two or more SPNs are identical within a domain. SPNs are used to uniquely identify services that are running on servers in a Windows domain. Duplicate SPNs can cause authentication issues.
 
-  **Solution:** To resolve this issue, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+  **Solution:** To resolve this issue, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
 - **Enable HTTP ports on SPNs** - Typically, HTTP SPNs don't use port numbers (for example, `http/web01.contoso.com`).
 
@@ -220,7 +220,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
 - **Missing SPN** - This issue might occur if an SPN that's related to a SQL Sever instance is absent.
 
-  **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+  **Solution:** For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
 - **Not a constrained target** - If constrained delegation is enabled for a particular service account, Kerberos will fail if the target server's SPN isn't on the list of targets of constrained delegation.
   
@@ -238,7 +238,7 @@ This section lists the issues that are related to the Kerberos authentication:
 
   **Solution:** Use a TCP connection to allow Kerberos authentication. You can also use a newer driver, example, MSOLEDBSQL or ODBC Driver 17. But TCP is still preferred over Named Pipes, regardless of version of the driver.
 
-- **SPN is associated with a wrong account** - This issue might occur if an SPN is associated with the wrong account in AD DS. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+- **SPN is associated with a wrong account** - This issue might occur if an SPN is associated with the wrong account in AD DS. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager).
 
    You might receive an error message if your SPN is configured on the wrong account in AD DS.
 

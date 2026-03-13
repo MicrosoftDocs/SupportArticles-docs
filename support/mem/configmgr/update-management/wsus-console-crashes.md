@@ -37,6 +37,6 @@ This can occur if the application cache is corrupted.
 
 To resolve this issue, delete the WSUS application cache from the location below:
 
-`C:\Documents and Settings\<user profile>\application data\microsoft\mmc`
+`C:\Users\<user profile>\AppData\Roaming\Microsoft\MMC`
 
 where \<user profile> is the currently logged in user profile.

@@ -8,6 +8,8 @@ ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
 
+## Summary
+
 This article provides a solution to the error AADSTS900439 (USGClientNotSupportedOnPublicEndpoint) that occurs when you try to sign in to an application registered in the Azure Government cloud using a public cloud endpoint.
 
 ## Symptoms
@@ -42,4 +44,4 @@ For more information about acquiring tokens in a national cloud, see [Microsoft 
 
 For more information about the different Microsoft Graph national cloud deployments and the capabilities that are available to developers within each cloud, see [Microsoft Graph national cloud deployments](/graph/deployments). Here's a sample implementation: [Configure a .NET application to call Microsoft Graph in a national cloud tenant](https://blogs.aaddevsup.xyz/2020/06/configure-net-application-to-call-microsoft-graph-in-a-national-cloud-tenant).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -25,4 +25,4 @@ For more information about this behavior, see [My cluster is below minimum / abo
 
 Your cluster will eventually enter and remain in the desired range until you stop the cluster.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -1,7 +1,7 @@
 ---
 title: Windows Server shows PCR7 configuration as "Binding not possible"
 description: Introduces the PCR7 configuration "Binding not possible" issue and its cause.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -63,4 +63,4 @@ For more information, see the following article:
 
 - [About VHD](/azure/virtual-machines/managed-disks-overview)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

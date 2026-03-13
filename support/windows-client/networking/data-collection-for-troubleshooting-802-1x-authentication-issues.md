@@ -1,7 +1,7 @@
 ---
 title: Data collection for troubleshooting 802.1X authentication issues
 description: Use the steps in this article to collect data that can be used to troubleshoot 802.1X authentication issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom:

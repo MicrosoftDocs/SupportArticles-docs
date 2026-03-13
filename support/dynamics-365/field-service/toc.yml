@@ -10,8 +10,6 @@
       href: administration/cant-identify-user.md
     - name: Date Window Start/End fields don't exist
       href: administration/date-window-fields-missing.md
-    - name: Error with AttributeMap when upgrading
-      href: administration/attibutemap-error-upgrade.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
     - name: Inspection flows aren't triggered 

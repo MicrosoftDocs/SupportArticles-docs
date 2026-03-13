@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows 365 GPU Drivers
 description: Provides a solution to a known issue with graphic card drivers on Windows 365 GPU-enabled Cloud PCs.
-ms.date: 05/06/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

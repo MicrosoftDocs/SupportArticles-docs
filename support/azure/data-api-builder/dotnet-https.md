@@ -79,4 +79,4 @@ setx ASPNETCORE_URLS "http://localhost:5000;https://localhost:5001"
 
 If your issue isn't resolved, provide feedback or report it in the [data-api-builder Discussions](https://github.com/azure/data-api-builder/discussions).
 
-[!INCLUDE[Azure Help Support](../../includes/azure-help-support.md)]
+ 

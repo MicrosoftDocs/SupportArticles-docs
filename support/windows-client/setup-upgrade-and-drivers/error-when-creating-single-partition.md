@@ -1,7 +1,7 @@
 ---
 title: Error when creating a single partition
 description: Provides a solution to an error that occurs when you install Windows to a drive greater than 2.2 TB.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

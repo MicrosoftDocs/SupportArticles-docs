@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Troubleshoot Microsoft Entra Certificate-Based Authentication issues
 
+## Summary
+
 The Certificate-Based Authentication feature in Microsoft Entra ID for iOS or Android devices allows Single Sign-On (SSO) by using X.509 certificates. By enabling this feature, you can log in to accounts or services without having to enter a user name and password when you connect to your Exchange Online account or Office mobile applications.
 
 This article provides information to help you troubleshoot Certificate-Based Authentication issues.
@@ -226,4 +228,4 @@ _Original KB number:_ &nbsp; 4032987
 - [Get started with certificate based authentication on iOS - Public Preview](/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
 - [ADFS: Certificate Authentication with Microsoft Entra ID & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

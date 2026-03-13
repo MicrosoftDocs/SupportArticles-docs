@@ -2,15 +2,15 @@
 title: Use Office 2013 on a computer that's running another version of Office
 description: Describes how to run multiple versions of Office on a computer that has Office 2013 suites and programs installed.
 author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: doakm, offspms, tomol, Jenl, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
-ms.reviewer: doakm, offspms, tomol, Jenl
 search.appverid: 
   - MET150
 appliesto: 
@@ -165,7 +165,7 @@ When you double-click an Office file in Windows Explorer to open the file, the f
 
 > [!NOTE]
 > You cannot use this method to register file associations in Word or in Access.
-> If you install a software update for a version of Office, the software update repairs that version of Office. You may have to repair some or all Office products after you install a software update to restore the file associations. For more information about how to repair Office 2013 features, see [Repair an Office application](https://office2010.microsoft.com/access-help/repair-or-remove-your-office-programs-ha010357402.aspx?ctt=1).
+> If you install a software update for a version of Office, the software update repairs that version of Office. You may have to repair some or all Office products after you install a software update to restore the file associations. For more information about how to repair Office 2013 features, see [Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 
 Windows 8 steps to repair or remove Office 2013:
 

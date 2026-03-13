@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # One or more Microsoft Entra Connect services don't start
 
+## Summary
+
 This article describes an issue that prevents Microsoft Entra Connect services from starting.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Office 365 Identity Management  
@@ -62,4 +64,4 @@ If solutions 1 and 2 don't resolve the issue, verify the status of your custom A
 
 For more information about other types of Windows service accounts, see [ADSync service account](/entra/identity/hybrid/connect/concept-adsync-service-account).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

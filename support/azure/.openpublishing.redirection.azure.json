@@ -5513,7 +5513,7 @@
       {
         "source_path": "entra/entra-id/welcome-entra-id.yml",
         "redirect_url": "/troubleshoot/entra/entra-id/welcome-entra-id",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "entra/entra-id/user-prov-sync/use-upn-matching-identity-sync.md",
@@ -6355,6 +6355,14 @@
         "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
         "redirect_document_id": true
       },
+            {
+        "source_path": "app-service/create-delete-resources-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq-new",
+      },
+      {
+        "source_path": "app-service/scaling-web-app-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/scaling-web-app-faq-new",
+      },
       {
         "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/change/change-analysis",
@@ -6411,6 +6419,142 @@
         "source_path": "azure-monitor/app-insights/debug/snapshot-debugger-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot"
       },
+      {
+        "source_path": "devops/error-add-link-work-item.md",
+        "redirect_url": "/azure/devops/boards/backlogs/add-link"
+      },
+      {
+        "source_path": "devops/explorer-work-item-form-doesnt-display-image.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/office-add-in-not-run.md",
+        "redirect_url": "/azure/devops/cross-service/cross-service-overview"
+      },
+      {
+        "source_path": "devops/rename-service-url.md",
+        "redirect_url": "/azure/devops/organizations/accounts/rename-organization"
+      },
+      {
+        "source_path": "devops/server-specified-could-not-be-reached-error-occurs.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/administration-console-shows-projects-deleting-state.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/disable-sql-data-compression.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/performance-decreases-tfs-2013-update-2.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/verification-check-fails.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/http-502-error-use-git-client.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/push-large-files-git-hangs.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/version-control-incorrect-files.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/cannot-create-cmmi-team-project-chinese-Italian.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/incorrect-default-project-administrator-permission.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/deployment-agents-rely-shadow-accounts-not-work.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/error-view-tfs-report.md",
+        "redirect_url": "/azure/devops/report/dashboards/overview"
+      },
+      {
+        "source_path": "devops/team-foundation-server-2015-known-issues.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/client-support-select-distinct-users-identity-fields.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/test-agent-configuration-fails.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/welcome-azure-devops.yml",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/antivirus-scanning-exclusions.md",
+        "redirect_url": "/azure/devops/pipelines/troubleshooting/anti-virus-exclusion"
+      },
+      {
+        "source_path": "devops/overview-of-azure-resource-manager-service-connections.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/troubleshoot-subscription-related-scenarios.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/create-azure-rm-service-principal-manual.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/failed-to-get-azure-devops-service-access-token.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/azure-rm-service-connection-not-listed-for-a-task.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/fail-to-delete-existing-service-connection.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/troubleshoot-azure-web-apps-tasks-deployments.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/azure-web-app-services-related-issues.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/issues-service-connection-task.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/resource-not-exist-error-services-deployment.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/failure-scenarios-related-azure-web-app-tasks.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/access-denied-error-when-connect-source-control.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      },
+      {
+        "source_path": "devops/git-clone-push-operation-failing-devops-repo.md",
+        "redirect_url": "/azure/devops/troubleshoot"
+      }, 
       {
         "source_path": "azure-kubernetes/error-codes/vhdfilenotfound.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/vmextensionerror-vhdfilenotfound"
@@ -6491,6 +6635,27 @@
         {
         "source_path": "virtual-machines/windows/run-win-server-2003.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ms-azure-windows-eos"
+      },        
+        {
+        "source_path": "virtual-machines/windows/vm-stops-at-please-wait-for-group-policy-client.md",
+        "redirect_url": "/troubleshoot/virtual-machines/windows/please-wait-for-the-group-policy-client"
+      },
+        {
+        "source_path": "information-protection/troubleshoot-aip-issues.md",
+        "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client"
+      },
+        {
+        "source_path": "information-protection/welcome-information-protection.yml",
+        "redirect_url": "/troubleshoot/microsoft-365/purview/sensitivity-labels/known-issues-ip-client",
+        "redirect_document_id": false
+      },
+        {
+        "source_path": "app-service/faqs-app-service-linux.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux-new"
+      },
+        {
+        "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
       }
   ]
 }

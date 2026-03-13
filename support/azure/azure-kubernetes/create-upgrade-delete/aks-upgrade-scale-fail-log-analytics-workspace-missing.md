@@ -76,4 +76,4 @@ az aks disable-addons -a monitoring -g <clusterRG> -n <clusterName>
 
 If the same error occurs while disabling the monitoring add-on, recreate the missing Log Analytics workspace and then run the upgrade or scale operation again.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

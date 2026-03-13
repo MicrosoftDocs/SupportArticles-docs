@@ -44,4 +44,4 @@ Azure Resource Health monitors the health of Azure resources and provides insigh
    > [!Note]
    > If more information is available about the root cause of the VM unavailability, the **Resource Health** tab may post additional details up to 72 hours after the VM is impacted. This type of RCA is only available for Azure VMs.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

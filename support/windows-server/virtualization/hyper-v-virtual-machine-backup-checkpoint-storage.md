@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Backup, Checkpoint, and Storage Failures
 description: Provides a comprehensive guide to troubleshooting common issues with Hyper-V VM backup, checkpoint management, and storage failures in Windows Server environments.
-ms.date: 09/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

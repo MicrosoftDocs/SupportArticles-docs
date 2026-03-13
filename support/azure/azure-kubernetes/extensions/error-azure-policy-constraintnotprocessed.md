@@ -22,4 +22,4 @@ The issue could be related to the version or compatibility of your Azure Kuberne
 
 To resolve the issue, upgrade the AKS cluster to a newer or supported version that offers additional features, security enhancements, and updates to prevent issues such as this one.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

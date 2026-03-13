@@ -5,6 +5,7 @@ metadata:
   ms.date: 04/20/2020
   ms.reviewer: JIANGES
   ms.topic: faq
+  ms.service: visual-cpp
   ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 
 title: Frequently asked questions about the Standard C++ library

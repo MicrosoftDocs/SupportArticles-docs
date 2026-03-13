@@ -1,7 +1,10 @@
 ---
 title: Send to OneNote and Meeting Notes buttons in Outlook not working
 description: Discusses that the Send to OneNote and Meeting Notes buttons in Outlook do not work. Provides a resolution.
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, rlindgre, tasitae, jarrettr, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
@@ -14,11 +17,9 @@ appliesto:
 - Outlook 2013
 - OneNote 2013
 search.appverid: MET150
-ms.reviewer: rlindgre, tasitae, jarrettr
-author: simonxjx
-ms.author: 
 ms.date: 06/06/2024
 ---
+
 # Send to OneNote and Meeting Notes buttons in Outlook do not work
 
 Nothing happens when you select the **Send to OneNote** button or the **Meeting Notes** button in Microsoft Outlook 2013 or Microsoft Outlook 2010.

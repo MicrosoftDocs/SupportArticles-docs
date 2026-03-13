@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to email
 author: sbmjais
 ms.author: shjais
 ms.reviewer: lavanyakr, aam, veparim
-ms.date: 03/12/2024
+ms.date: 11/20/2025
 ms.custom: sap:Sales Insights
 
 ---
@@ -76,4 +76,4 @@ If a user can't see untracked emails and meetings, perform the following steps t
 
 ### Workaround
 
-There's no resolution available for this issue as it's the expected behavior. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities, or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
+There's no resolution available for this issue as it's the expected behavior. As an alternative, users can use the [Sales app in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities, or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.

@@ -40,4 +40,4 @@ When you open an Access 97 database in Access 2010 or Access 2007, the Database 
 
 By design, recent versions of Access cannot convert Access 97 files.
 
-Find [more tips, tricks, and learning opportunities for small business](https://smallbusiness.support.microsoft.com/en-us).
+Find [more tips, tricks, and learning opportunities for small business](https://support.microsoft.com/smallbusiness).

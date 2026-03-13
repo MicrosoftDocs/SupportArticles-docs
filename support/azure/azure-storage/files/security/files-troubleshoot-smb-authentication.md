@@ -1,22 +1,16 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
+description: Troubleshoot problems with using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 02/11/2025
+ms.date: 03/06/2026
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
+**Applies to:** :heavy_check_mark: SMB Azure file shares
+
 This article lists common problems when using SMB Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for NFS Azure file shares.
-
-## Applies to
-
-| File share type | SMB | NFS |
-|-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
 ## Error when running the AzFilesHybrid module
 
@@ -59,8 +53,39 @@ Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain
 
 ### Solution
 
-Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/tutorial-create-instance).
+Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
 
+
+## Error: All newly added URIs must contain a tenant verified domain, tenant ID, or app ID
+
+### Cause
+
+This error occurs during configuration of identity-based authentication for Azure Files when adding a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
+
+Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following:
+- A tenant-verified custom domain
+- The Microsoft Entra tenant ID
+- The application (client) ID
+
+If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that is not associated with the tenant, the request is blocked by default tenant policy.
+
+This behavior is enforced by Microsoft Entra ID and isn't specific to the Azure Files service.
+
+For more information, see:
+- [Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
+- [Redirect URI (reply URL) outline and restrictions](/entra/identity-platform/reply-url)
+- [Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
+
+### Solution
+When configuring application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
+- Use a tenant-verified custom domain
+- Use the Microsoft Entra tenant ID
+- Use the application (client) ID
+
+Do not use unverified domains, `.local` hostnames, or arbitrary URLs, as these will be rejected by Microsoft Entra ID tenant policy.
+If you are unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
+
+  
 ## Unable to mount Azure file shares with AD credentials
 
 ### Self diagnostics steps
@@ -69,7 +94,7 @@ First, make sure that you've followed the steps to [enable Azure Files AD DS Aut
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
-Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFilesHybrid).
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+](https://www.powershellgallery.com/packages/AzFilesHybrid/).
 
 1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
@@ -141,7 +166,7 @@ Debug-AzStorageAccountAuth `
 
 First, make sure that you've followed the steps to [enable Microsoft Entra Kerberos authentication](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable).
 
-Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFilesHybrid).
+Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+](https://www.powershellgallery.com/packages/AzFilesHybrid/).
 
 1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
@@ -161,30 +186,85 @@ Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 
 1. `CheckPort445Connectivity`: Check if port 445 is opened for SMB connection. If port 445 isn't open, use the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
-2. `CheckAADConnectivity`: Check for Entra connectivity. SMB mounts with Kerberos authentication can fail if the client can't reach out to Entra. If this check fails, it indicates that there is a networking error (perhaps a firewall or VPN issue).
-3. `CheckEntraObject`: Confirm that there is an object in the Entra that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, disable and re-enable Entra Kerberos authentication on the storage account.
-4. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
-5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
-6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-8. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-9. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
-10. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
+1. `CheckAADConnectivity`: Check for Entra connectivity. SMB mounts with Kerberos authentication can fail if the client can't reach out to Entra. If this check fails, it indicates that there is a networking error (perhaps a firewall or VPN issue).
+1. `CheckEntraObject`: Confirm that there is an object in the Entra that represents the storage account and has the correct service principal name (SPN). If the SPN isn't correctly set up, disable and re-enable Entra Kerberos authentication on the storage account.
+1. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
+1. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
+1. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
+1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
+1. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+1. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
+1. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
+
+## Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types
+
+When mounting an Azure file share using Entra Kerberos authentication, the mount operation fails. Log collection might show that the Kerberos service ticket can't be decrypted.
+You might also find that the following registry key is configured: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes`
+
+### Cause
+
+If the `SupportedEncryptionTypes` registry key is configured with a value that does **not include AES**, Windows will only allow the encryption types specified in the bitmask. For example, the value `0x7` indicates that the client supports only the following Kerberos encryption types:
+
+- DES_CBC_CRC  
+- DES_CBC_MD5  
+- RC4_HMAC  
+
+Because Entra Kerberos always encrypts service tickets with **AES-256 (AES256-CTS-HMAC-SHA1-96)**, mounts will fail if AES isn't included in the supported encryption types for the account or machine.
+
+> [!NOTE]  
+> AES encryption is enabled by default on modern Windows operating systems. If the `SupportedEncryptionTypes` registry key isn't configured, Windows will automatically negotiate AES when available.
+
+### Solution
+
+To successfully mount Azure file shares using Entra Kerberos, AES-256 must be included in the supported encryption types.
+
+Use one of the following options:
+
+#### Option 1: Remove the registry key (recommended if not intentionally configured)
+
+If the encryption types weren't deliberately restricted:
+
+1. Delete the registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes`
+1. Reboot the computer.
+
+After rebooting, retry mounting the file share.
+
+> [!TIP]  
+> Removing the key restores Windows default behavior, allowing Active Directory to automatically negotiate AES for Kerberos tickets.
+
+#### Option 2: Explicitly enable AES-256 using Group Policy
+
+If your organization requires explicitly configured Kerberos encryption types:
+
+1. Press **Win + R**, type `gpedit.msc`, and select **Enter**.
+1. Navigate to:  **Local Computer Policy > Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options**
+1. Open **Network Security: Configure encryption types allowed for Kerberos**.
+1. Enable the following encryption types:
+   - **AES256_HMAC_SHA1**  
+   - **AES128_HMAC_SHA1** (optional)  
+1. Apply the change and reboot the computer.
+
+After rebooting, retry mounting the file share.
+
+> [!IMPORTANT]  
+> Entra Kerberos requires **AES256_HMAC_SHA1** to successfully mount Azure file shares. RC4 or DES-only configurations will fail.
+> To understand more about registry keys, see [Decrypting the Selection of Supported Kerberos Encryption Types](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/decrypting-the-selection-of-supported-kerberos-encryption-types/1628797).
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
 ### Symptom
 
-You may experience one of the symptoms described below when trying to configure Windows ACLs with File Explorer on a mounted file share:
-- After you click on **Edit permission** under the Security tab, the Permission wizard doesn't load. 
+You might experience one of the symptoms described below when trying to configure Windows ACLs with Windows File Explorer on a mounted file share:
+
+- After you click on **Edit permission** under the **Security** tab, the Permission wizard doesn't load. 
 - When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
 
 ### Solution
 
-We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
+We recommend that you [configure directory/file level permissions by using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-by-using-icacls) instead of using Windows File Explorer.
 
 ## Unable to view UserPrincipalName (UPN) of a file/directory owner in File Explorer 
 
@@ -212,11 +292,11 @@ This error might occur if a domain controller that holds the RID Master FSMO rol
 
 ### Error: "Cannot bind positional parameters because no names were given"
 
-This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the **AzFilesHybrid** module (https://github.com/Azure-Samples/azure-files-samples/releases) is installed.
+This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) module is installed.
 
 ## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
 
-Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
+Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://www.powershellgallery.com/packages/AzFilesHybrid/) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
 
 > [!IMPORTANT]
 > If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
@@ -227,7 +307,8 @@ $StorageAccountName = "<storage-account-name-here>"
 
 Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
 ```
-As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
+
+As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. You don't need to rotate back unless you want to regenerate both passwords.
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blobs, tables, and queues. It also provides limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles might continue to have access to the storage account through saved storage account keys.
@@ -245,7 +326,7 @@ Navigate to the desired storage account in the Azure portal. In the table of con
 
 ### [PowerShell](#tab/azure-powershell)
 
-The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you want to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```powershell
 $resourceGroupName = "<resource-group>"
@@ -266,7 +347,7 @@ New-AzStorageAccountKey `
 
 ### [Azure CLI](#tab/azure-cli)
 
-The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you want to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```bash
 RESOURCE_GROUP_NAME="<resource-group>"
@@ -301,9 +382,9 @@ After enabling Microsoft Entra Kerberos authentication, you must explicitly gran
 
 <a name='potential-errors-when-enabling-azure-ad-kerberos-authentication-for-hybrid-users'></a>
 
-## Potential errors when enabling Microsoft Entra Kerberos authentication for hybrid users
+## Potential errors when enabling Microsoft Entra Kerberos authentication
 
-You might encounter the following errors when enabling Microsoft Entra Kerberos authentication for hybrid user accounts.
+You might encounter the following errors when enabling Microsoft Entra Kerberos authentication.
 
 ### Error - Grant admin consent disabled
 
@@ -315,18 +396,16 @@ If this is the case, ask your Microsoft Entra admin to grant admin consent to th
 
 <a name='error---the-request-to-aad-graph-failed-with-code-badrequest'></a>
 
-### Error - "The request to Azure AD Graph failed with code BadRequest"
+### Error - "The request to Microsoft Graph failed with code BadRequest"
 
 #### Cause 1: An application management policy is preventing credentials from being created
 
-When enabling Microsoft Entra Kerberos authentication, you might encounter this error if the following conditions are met:
+When enabling Microsoft Entra Kerberos authentication, you might encounter this error if you (or your administrator) has set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) or an [application management policy](/graph/api/resources/appmanagementpolicy) that:
 
-1. You're using the beta/preview feature of [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy).
-2. You (or your administrator) have set a [tenant-wide policy](/graph/api/resources/tenantappmanagementpolicy) that:
-    - Has no start date or has a start date before January 1, 2019.
-    - Sets a restriction on service principal passwords, which either disallows custom passwords or sets a maximum password lifetime of fewer than 365.5 days.
+- Applies to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
+- Sets a restriction on service principal passwords, which either blocks password addition or restricts maximum password lifetime to fewer than 365.5 days.
 
-There is currently no workaround for this error.
+To resolve this error, you should configure the offending policy to [grant an exception](/entra/identity/enterprise-apps/configure-app-management-policies#grant-an-exception-to-a-user-or-service) to the "Storage Resource Provider" Enterprise Application (app ID `a6aa9161-5291-40bb-8c5c-923b567bee3b`).
 
 #### Cause 2: An application already exists for the storage account
 
@@ -347,15 +426,15 @@ if ($null -ne $application) {
 
 <a name='error---service-principal-password-has-expired-in-azure-ad'></a>
 
-### Error - Service principal password has expired in Microsoft Entra ID
+## Error - Service principal password has expired in Microsoft Entra ID
 
-If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users won't be able to get Kerberos tickets to the file share.
+If you've previously enabled Microsoft Entra Kerberos authentication through manual limited preview steps, the password for the storage account's service principal is set to expire every six months. Once the password expires, users can't get Kerberos tickets to access the file share.
 
 To mitigate this, you have two options: either rotate the service principal password in Microsoft Entra every six months, or follow these steps to disable Microsoft Entra Kerberos, delete the existing application, and reconfigure Microsoft Entra Kerberos.
 
 <a name='option-2-disable-azure-ad-kerberos-delete-the-existing-application-and-reconfigure'></a>
 
-Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) as a workaround.
+Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions by using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-by-using-icacls) as a workaround.
 
 1. [Disable Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#disable-azure-ad-authentication-on-your-storage-account)
 1. [Delete the existing application](#cause-2-an-application-already-exists-for-the-storage-account)
@@ -363,13 +442,13 @@ Be sure to save domain properties (domainName and domainGUID) before disabling M
 
 Once you've reconfigured Microsoft Entra Kerberos, the new experience will auto-create and manage the newly created application.
 
-### Error 1326 - The username or password is incorrect when using private link
+## Error 1326 - The username or password is incorrect when using private link
 
 If you're connecting to a storage account via a private endpoint/private link using Microsoft Entra Kerberos authentication, when attempting to mount a file share via `net use` or other method, the client is prompted for credentials. The user will likely type their credentials in, but the credentials are rejected.
 
 #### Cause 
 
-This is because the SMB client has tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Microsoft Entra application.
+This is because the SMB client tried to use Kerberos but failed, so it falls back to using NTLM authentication, and Azure Files doesn't support using NTLM authentication for domain credentials. The client can't get a Kerberos ticket to the storage account because the private link FQDN isn't registered to any existing Microsoft Entra application.
 
 #### Solution
 
@@ -394,7 +473,7 @@ The solution is to add the privateLink FQDN to the storage account's Microsoft E
    ],
    ```
 
-   Then you should edit the `identifierUris` field to the following:
+   Then edit the `identifierUris` field to the following:
 
    ```json
    "identifierUris": [
@@ -418,17 +497,82 @@ The solution is to add the privateLink FQDN to the storage account's Microsoft E
 1. Update any internal DNS references to point to the private link.
 1. Retry mounting the share.
 
-### Error AADSTS50105
+
+## Intermittent authentication failures after network changes when using Microsoft Entra Kerberos
+
+### Symptom
+
+Windows clients that use Microsoft Entra Kerberos authentication to access Azure Files intermittently lose access after a network change (for example, VPN reconnect, Wi-Fi change, sleep, or resume). Access might fail until the user signs out and signs back in to Windows.
+
+### Cause
+
+This issue is caused by a known Windows behavior where certain network changes clear the cached KDC proxy configuration on the client. When the KDC proxy configuration is removed, the client is unable to refresh Kerberos service tickets from Microsoft Entra ID.
+
+Although the user’s Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
+
+This is a Windows client limitation and is not caused by Azure Files or Microsoft Entra ID configuration.
+
+### Solution
+
+**Option one**: Signing out and signing back in to Windows restores access by fetching a new PRT, which includes a refreshed Ticket Granting Ticket (TGT) and KDC proxy configuration. However, this results in a poor user experience.
+
+**Option two**: Configure a Group Policy setting to persist the KDC proxy configuration on the client, reducing authentication interruptions caused by network changes.
+1. Configure KDC proxy settings using Group Policy.
+2. Open Group Policy Management and edit the applicable policy.
+3. Navigate to: **Administrative Templates** > **System** > **Kerberos** > **Specify KDC proxy servers for Kerberos clients**
+4. Select **Enabled**.
+5. Under **Options**, select **Show** to open the Show Contents dialog box.
+6. Add the following mapping, replacing `Microsoft_Entra_tenant_id` with your Microsoft Entra tenant ID. Include the space after https and before the closing /.
+
+   |Value name |Value |
+   |-----------|--------------|
+   | KERBEROS.MICROSOFTONLINE.COM| <https login.microsoftonline.com:443:your_Microsoft_Entra_tenant_id/kerberos /> |
+
+7. Select **OK**, then select **Apply**.
+
+After this policy is applied, Windows clients retain the KDC proxy configuration across network changes, reducing authentication disruptions.
+
+## Authentication stops after approximately 10 hours when using Microsoft Entra Kerberos
+
+### Symptom
+
+Windows clients using Microsoft Entra Kerberos authentication to access Azure Files lose access after approximately 10 hours of continuous use. Access is restored only after the user signs out and signs back in to Windows.
+
+### Cause
+
+This issue is caused by a known limitation in Microsoft Entra Kerberos authentication. Microsoft Entra ID does not currently support renewal of Ticket Granting Tickets (TGTs).
+
+In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user’s Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
+
+Signing out and signing back in to Windows resolves the issue by obtaining a new PRT, which includes a new TGT.
+This is a known limitation of Microsoft Entra Kerberos and is not caused by Azure Files configuration.
+
+### Solution
+
+As a mitigation, customers can use cloud trust between on-premises Active Directory Domain Services (AD DS) and Microsoft Entra ID when accessing Azure Files.
+
+With cloud trust configured, Windows clients obtain their TGT from AD DS instead of Microsoft Entra ID. AD DS-issued TGTs support renewal, avoiding the expiration behavior seen with Microsoft Entra Kerberos. The AD DS-issued TGT is then exchanged for an Entra referral TGT, which is used to obtain service tickets for Azure Files.
+
+This mitigation applies only to clients that are:
+- AD DS domain joined, or
+- Hybrid Microsoft Entra joined
+- Cloud-native (Microsoft Entra–only) clients can't use this workaround.
+
+To apply this mitigation, configure a cloud trust between on-premises AD DS and Microsoft Entra ID for accessing Azure Files. For step-by-step guidance, see [Configure a cloud trust for Azure Files authentication](/azure/storage/files/storage-files-identity-auth-hybrid-cloud-trust).
+
+## Error AADSTS50105
+
+### Symptom
 
 The request was interrupted by the following error AADSTS50105:
 
 > Your administrator has configured the application "Enterprise application name" to block users unless they are specifically granted (assigned) access to the application. The signed in user '{EmailHidden}' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.
 
-#### Cause
+### Cause
 
 If you set up "assignment required" for the corresponding enterprise application, you won't be able to get a Kerberos ticket, and Microsoft Entra sign-in logs will show an error even though users or groups are assigned to the application.
 
-#### Solution
+### Solution
 
 Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../../entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md).
 
@@ -440,5 +584,3 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
-
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

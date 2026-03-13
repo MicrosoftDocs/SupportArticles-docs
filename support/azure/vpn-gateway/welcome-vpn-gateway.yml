@@ -1,0 +1,34 @@
+### YamlMime:Landing
+
+title: Azure VPN Gateway troubleshooting documentation
+summary: Welcome to Azure VPN Gateway troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use x. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure VPN Gateway
+  description: Documentation for troubleshooting common issues with Azure VPN Gateway. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-vpn-gateway
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/26/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure VPN Gateway
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure VPN Gateway
+            url: vpn-gateway-troubleshoot.md 
+          - text: Troubleshoot Azure VPN Gateway using diagnostic logs
+            url: troubleshoot-vpn-with-azure-diagnostics.md
+          - text: Troubleshoot site-to-site connections with digital certificate authentication
+            url: troubleshoot-digital-certificate-authentication.md
+          - text: Troubleshoot Azure point-to-site connection problems
+            url: vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems.md
+          - text: Troubleshoot an Azure site-to-site VPN connection that can't connect
+            url: vpn-gateway-troubleshoot-site-to-site-cannot-connect.md

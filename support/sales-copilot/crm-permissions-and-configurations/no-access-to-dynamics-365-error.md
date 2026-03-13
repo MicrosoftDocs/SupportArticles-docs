@@ -1,33 +1,30 @@
 ---
-title: No access to Dynamics 365 error in Copilot for Sales
-description: Resolves an issue where users can't access Dynamics 365 through the Copilot for Sales add-in for Outlook.
-ms.date: 02/05/2025
+title: No access to Dynamics 365 error in Sales app
+description: Resolves an issue where users can't access Dynamics 365 through the Sales app in Outlook.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
 ---
-# "No access to Dynamics 365" error in Copilot for Sales
+# "No access to Dynamics 365" error in Sales app
 
-This article helps you troubleshoot and resolve issues when users can't access Microsoft Dynamics 365 through the [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook).
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
+This article helps you troubleshoot and resolve issues when users can't access Microsoft Dynamics 365 through the [Sales app in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook).
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365      |
-|**Users**     | Users trying to sign in to the Dynamics 365 environment from Copilot for Sales |
+|**Users**     | Users trying to sign in to the Dynamics 365 environment from Sales app |
 
 ## Symptoms
 
-After a user signs in to Dynamics 365 through the Copilot for Sales add-in for Outlook, the following error message is displayed:
+After a user signs in to Dynamics 365 through the Sales app in Outlook, the following error message is displayed:
 
 > You don't seem to have access to Dynamics 365. Please contact your admin, or sign in with a different Microsoft account.
 
@@ -37,11 +34,11 @@ After a user signs in to Dynamics 365 through the Copilot for Sales add-in for O
 
 The user doesn't have the required security roles assigned.
 
-To use Copilot for Sales, users must have a valid Dynamics 365 license and be assigned the appropriate security roles. These roles have the required permissions for Copilot for Sales to work properly.
+To use Sales app, users must have a valid Dynamics 365 license and be assigned the appropriate security roles. These roles have the required permissions for Sales app to work properly.
 
 ## Resolution
 
-The following security roles must be assigned to each user using Copilot for Sales:
+The following security roles must be assigned to each user using Sales app:
 
 - **Salesperson**
 - **Basic User**
@@ -51,4 +48,4 @@ For information about how to assign security roles to users, see [Assign a secur
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

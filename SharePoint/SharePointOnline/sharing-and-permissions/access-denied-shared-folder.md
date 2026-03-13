@@ -4,7 +4,7 @@ description: Describes issues that occur when users try to access a shared folde
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 12/02/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -18,7 +18,7 @@ ms.assetid:
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
-ms.reviewer: prbalusu, salarson
+ms.reviewer: prbalusu, salarson, nirupme
 ---
 
 # "Access Denied" error when trying to access a shared folder
@@ -35,7 +35,9 @@ Consider the following scenario:
 In this scanario, the other user receives one of the following error messages:
 
 - Access Denied
-- You need permission to access this resource
+- You need permission to access this resource.
+- You can't access this item.
+- You don't have permission to access this item.
 
 ## Cause
 
@@ -47,6 +49,6 @@ To work around this issue, use one of the following options, as appropriate for 
 
 - Share individual files but not folders.
 - Share a whole site collection or subsite.
-- If your site doesn't require **Limited-access user permission lockdown mode**, [disable this site collection feature](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04).
+- If your site doesn't require **Limited-access user permission lockdown mode**, [disable the site collection feature](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04).
 
   **Note:** Other features, such as publishing, might require this feature to work correctly.

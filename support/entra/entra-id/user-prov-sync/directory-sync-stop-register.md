@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Directory synchronization to Microsoft Entra ID stops or you're warned that sync hasn't registered in more than a day
 
+## Summary
+
 This article describes a performance problem in Azure Active Directory Sync Tool. The tool either stops syncing, or reports that sync hasn't run in more than 24 hours.
 
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
@@ -103,4 +105,4 @@ This issue may occur if one or more of the following conditions are true:
 
     3. Start the service or services for which you set the new password.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

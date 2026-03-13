@@ -261,6 +261,6 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
 
 - [Troubleshoot Azure Windows virtual machine activation problems](./troubleshoot-activation-problems.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [route-command]: /windows-server/administration/windows-commands/route_ws2008

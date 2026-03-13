@@ -69,4 +69,4 @@ Trying to update a subnet's CIDR address space in an existing node pool isn't cu
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

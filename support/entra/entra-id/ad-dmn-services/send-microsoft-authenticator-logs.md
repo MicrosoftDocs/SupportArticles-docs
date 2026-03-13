@@ -16,7 +16,7 @@ Follow these steps to send logs to customer support and get the incident ID.
 1. Open Microsoft Authenticator.
 1. Tap **Send feedback** in the app's top menu.
 1. Select **Having trouble?**.
-1. Fill out the form, and then select **Send** to send the feedback and/or logs (**Send** is on the top left on iOS, and on the top right on Android).
+1. Fill out the form, and then select **Send** to send the feedback and logs.
 1. Note the incident ID. You or your administrator will need this ID if you contact Microsoft Support.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -68,4 +68,4 @@ The **BAD_SYSTEM_CONFIG_INFO** stop code occurs if the **SYSTEM** registry hive 
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

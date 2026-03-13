@@ -8,11 +8,12 @@ ms.reviewer: kyrachurney, lindabr, meerak
 ms.custom: 
   - sap:Retention
   - CI 171536
+  - CI 8323
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 05/05/2025
+ms.date: 12/03/2025
 ---
 
 # Identify errors in Microsoft 365 retention and retention label policies
@@ -79,15 +80,15 @@ Use the following steps to check for errors in policies that target:
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
-2. Get policy information by using the [Get-AppRetentionCompliancePolicy cmdlet](/powershell/module/exchange/get-appretentioncompliancepolicy). Run the following commands:
+1. Get policy information by using the [Get-AppRetentionCompliancePolicy cmdlet](/powershell/module/exchange/get-appretentioncompliancepolicy). Run the following commands:
 
    ```powershell
    Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | FL DistributionStatus
    Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
-   If there are policy errors, the value returned by the `DistributionResults` property contains more information about the errors.
-
+   If there are policy errors, the value returned by the `DistributionResults` property contains more information about the errors. Check for the value returned by the `DistributionResults` property only when the `DistributionStatus` property returns error messages as its value. You must resolve the errors. However, if the `DistributionStatus` property returns warning messages, you can ignore them. 
+   
 ## Recommended practices
 
 To minimize retention policy errors, follow these practices:

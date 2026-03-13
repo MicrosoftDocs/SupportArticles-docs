@@ -13,9 +13,9 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 This article provides solutions to an issue in which connecting to a Linux virtual machine (VM) via Secure Shell (SSH) fails because the _/var/empty/sshd_ directory in RHEL, the _/var/lib/empty_ directory in SUSE, or the _/var/run/sshd_ directory in Ubuntu, doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptoms
 
@@ -217,4 +217,4 @@ If both the serial console and `az vm repair` approach don't apply to you or fai
 
 Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use az vm repair](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

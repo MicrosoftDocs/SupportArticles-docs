@@ -1,34 +1,34 @@
 ---
 title: Missing privileges in Dynamics 365
-description: Resolves the missing privileges error that occurs when signing in to Microsoft Copilot for Sales.
-ms.date: 02/05/2025
+description: Resolves the missing privileges error that occurs when signing in to Sales app.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
 ---
-# Missing privileges in Dynamics 365 when signing in to Copilot for Sales
+# Missing privileges in Dynamics 365 when signing in to Sales app
 
-This article helps you troubleshoot and resolve an error message related to missing privileges that occurs when a Microsoft Dynamics 365 user tries to sign in to Microsoft Copilot for Sales.
+This article helps you troubleshoot and resolve an error message related to missing privileges that occurs when a Microsoft Dynamics 365 user tries to sign in to Sales app.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365        |
-|**Users**     | Users who don't have Copilot for Sales privileges in Dynamics 365   |
+|**Users**     | Users who don't have Sales app privileges in Dynamics 365   |
 
 ## Symptoms
 
-When a Dynamics 365 user tries to sign in to Copilot for Sales, an error message is displayed indicating that certain privileges are missing.
+When a Dynamics 365 user tries to sign in to Sales app, an error message is displayed indicating that certain privileges are missing.
 
 ## Cause
 
-The user doesn't have Copilot for Sales privileges granted by the **Sales Copilot User** role in Dynamics 365.
+The user doesn't have Sales app privileges granted by the **Sales Copilot User** role in Dynamics 365.
 
 ## Resolution
 
@@ -36,4 +36,4 @@ To solve this issue, assign the user the [additional privileges required for Dyn
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

@@ -73,4 +73,4 @@ POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/
 
 If `reapply` doesn't clear the VM **Failed** state, try [redeploying to a new host node](../linux/redeploy-to-new-node-linux.md).
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -78,4 +78,4 @@ If the extension is customizable, such as Custom Script Extension (CSE) or Desir
 1. On the **Extensions** blade, click **Add**.
 1. Select and re-install the same extension.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

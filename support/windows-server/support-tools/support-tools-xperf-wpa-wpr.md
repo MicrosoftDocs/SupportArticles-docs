@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot processes and threads by using WPR and WPA
 description: Discusses Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) and how to apply them when you troubleshoot.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

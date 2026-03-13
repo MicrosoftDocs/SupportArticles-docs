@@ -144,4 +144,4 @@ For more information, see [Troubleshoot Azure Application Insights in a Java web
 
 You can collect diagnostics logs for Application Insights Java 3.x by using the "self-diagnostics" functionality. To do this, see [Self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

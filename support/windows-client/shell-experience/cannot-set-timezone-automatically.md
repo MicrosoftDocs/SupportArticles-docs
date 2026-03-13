@@ -1,7 +1,7 @@
 ---
 title: Can't set time zone automatically
 description: Provides several methods to resolve the issue in which you cannot set the time zone automatically.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -336,7 +336,7 @@ To verify in Windows that a managed identity that's assigned an Azure Batch node
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
 
 [azure-portal]: https://portal.azure.com
 [manage-user-assigned-managed-identities]: /azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities

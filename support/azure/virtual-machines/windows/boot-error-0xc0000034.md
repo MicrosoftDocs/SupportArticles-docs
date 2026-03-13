@@ -78,4 +78,4 @@ We strongly recommend creating a nested virtualization environment in Microsoft 
 
 3. Detach the repaired OS disk from the Repair/Rescue VM. Then, create a new VM from the OS disk.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

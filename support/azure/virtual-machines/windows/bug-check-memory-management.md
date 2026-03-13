@@ -28,4 +28,4 @@ The bug check indicates that a server memory management error occurred.  A detai
 
 If you experience this issue, [collect an OS memory dump file](./collect-os-memory-dump-file.md) and then [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for Azure support to troubleshoot and diagnose the issue.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

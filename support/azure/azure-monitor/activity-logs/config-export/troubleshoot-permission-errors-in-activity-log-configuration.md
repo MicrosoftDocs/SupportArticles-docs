@@ -38,4 +38,4 @@ Users might experience permission errors when they configure the Azure Activity 
 - [Log Analytics Contributor Role](/azure/role-based-access-control/built-in-roles/analytics#log-analytics-contributor)
 - [Azure Monitor Activity Log](/azure/azure-monitor/platform/activity-log?tabs=powershell)
 
-[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
+ 

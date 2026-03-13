@@ -1,7 +1,7 @@
 ---
 title: Errors When Accessing Salesforce with Server-to-Server Flow
-description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Microsoft Copilot for Sales.
-ms.date: 05/29/2025
+description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Sales app.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
@@ -9,13 +9,13 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when accessing Salesforce with server-to-server flow
 
-This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
+This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Sales app.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -46,9 +46,9 @@ To resolve this issue, update the connected app configuration in Salesforce:
 
 1. Go to **Setup** > **Platform Tools** > **Apps** > **Connected Apps** > **Managed Connected Apps**.
 
-1. On the **Connected Apps** page, select **Copilot for Sales Connected App**.
+1. On the **Connected Apps** page, select **Sales Connected App**.
 
-1. Under **Custom Connected App Handler**, ensure that the value of **Run As** is set to **Copilot for Sales Integration User**.
+1. Under **Custom Connected App Handler**, ensure that the value of **Run As** is set to **Sales Integration User**.
 
 1. Go to **Administration** > **Users** > **Users** and confirm that the profile of the integration user is **CopilotForSalesIntegrationProfile**.
 
@@ -79,20 +79,20 @@ To resolve this issue, ensure that the connected app and integration user config
 
 1. Go to **Setup** > **Platform Tools** > **Apps** > **App Manager**.
 
-1. On **Copilot for Sales Connected App** row, select the down arrow, and then select **Edit**.
+1. On **Sales Connected App** row, select the down arrow, and then select **Edit**.
 
 1. Under **API (Enable OAuth Settings)**, ensure that **Enable Client Credentials Flow** is selected.
 
 1. Go to **Apps** > **Connected Apps** > **Managed Connected Apps**.
 
-1. On the **Connected Apps** page, select **Copilot for Sales Connected App**.
+1. On the **Connected Apps** page, select **Sales Connected App**.
 
-1. Under **Custom Connected App Handler**, ensure that the value of **Run As** is set to **Copilot for Sales Integration User**.
+1. Under **Custom Connected App Handler**, ensure that the value of **Run As** is set to **Sales Integration User**.
 
-1. Open user details for the **Copilot for Sales Integration User** user and confirm the following:
+1. Open user details for the **Sales Integration User** user and confirm the following:
 
     1. The profile of the integration user is **CopilotForSalesIntegrationProfile**.
-    1. The user is associated with the **Copilot for Sales connected app permission set**.
+    1. The user is associated with the **Sales Connected App permission set**.
     1. The user is associated with the **Salesforce API Integration** permission set license assignments.
 
 In addition, check if any unintended changes are made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
@@ -117,7 +117,7 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" connected app is updated accidentally.
+- Whether the "Sales Connected App" connected app is updated accidentally.
 - If the connected app is still available, provide its ID.
 
 #### Error 2: Session ID isn't allowed for use REST API access at Salesforce
@@ -134,7 +134,7 @@ To resolve this issue, contact your administrator to set the appropriate OAuth s
 
 1. Go to **Setup** > **Platform Tools** > **Apps** > **App Manager**.
 
-1. On **Copilot for Sales Connected App** row, select the down arrow, and then select **Edit**.
+1. On **Sales Connected App** row, select the down arrow, and then select **Edit**.
 
 1. Under **API (Enable OAuth Settings)**, ensure the **Manage user data via APIs (api)** is selected in the **Selected OAuth Scopes** list. If it's not selected, check if the setting is changed manually by mistake. If yes, revert the changes.
 
@@ -161,7 +161,7 @@ This error occurs when the client ID of the Salesforce connected app is invalid.
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" connected app is deleted accidentally.
+- Whether the "Sales Connected App" connected app is deleted accidentally.
 - If the connected app is still available, provide its ID.
 
 ## Try again
@@ -203,6 +203,6 @@ To resolve this issue, try again after 10 to 15 minutes. If this issue persists,
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -34,4 +34,4 @@ Inspect the response, and look for headers that might be violating this HTTP spe
 
 * Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

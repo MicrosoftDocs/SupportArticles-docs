@@ -1,7 +1,7 @@
 ---
 title: Error Code 0x8024402C When You Try to Install a Windows Update or a Feature on Demand
 description: Provides methods to resolve error code 0x8024402C when you install a Windows update or a Feature on Demand.
-ms.date: 10/07/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

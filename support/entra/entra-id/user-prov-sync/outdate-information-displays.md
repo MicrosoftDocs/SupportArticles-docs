@@ -8,6 +8,8 @@ ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect Health shows old information about on-premises Microsoft Entra Connect server
 
+## Summary
+
 This article discusses an issue in which Microsoft Entra Connect Health shows outdated information about the on-premises Microsoft Entra Connect server.
 
 _Original product version:_ &nbsp; Microsoft Entra ID  
@@ -92,4 +94,4 @@ To reinstall Health Agent for Sync:
    5. When you are prompted for credentials, provide your Microsoft Entra Global Admin credentials.
    6. Wait about two hours, and then verify that the Health panel is showing up-to-date information about Sync.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

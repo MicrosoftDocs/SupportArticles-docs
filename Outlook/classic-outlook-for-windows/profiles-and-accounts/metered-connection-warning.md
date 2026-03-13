@@ -142,7 +142,7 @@ In some cases, the issues are related to a permissions issue in the registry. To
 
 Follow the steps in the following article to repair your Office installation. This method is most appropriate for MSI-based installations of Office. To determine whether your Office installation is Click-to-Run or MSI-based, see the "More information" section.
 
-[Repair an Office application](https://support.office.com/article/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b)
+[Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b)
 
 ## More information
 

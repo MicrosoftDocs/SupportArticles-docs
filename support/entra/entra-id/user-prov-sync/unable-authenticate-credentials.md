@@ -8,6 +8,10 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # "Unable to authenticate your credentials" error when you try to connect to Microsoft Entra ID
 
+## Summary
+
+This article provides guidance on resolving an "Unable to authenticate your credentials" error when you try to connect to Microsoft Entra ID.
+
 _Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2929554
 
@@ -61,4 +65,4 @@ To perform administrative tasks by using the Azure Active Directory module for W
 - Disable Microsoft Entra multifactor authentication for the user account.
 - Use a different admin account that isn't enabled for Microsoft Entra multifactor authentication.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -4,9 +4,9 @@ description: Provides information about this error and various steps you can tak
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: jenl, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: jenl
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
@@ -35,7 +35,7 @@ The error occurs when you:
 
 ## Resolution
 
-**Note:** Before continuing on to the Resolution methods, ensure you have the latest Office updates installed: [Keep Windows up to date with the latest Updates](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx).
+**Note:** Before continuing on to the Resolution methods, ensure you have the latest Windows updates installed: [Install Windows Updates](https://support.microsoft.com/windows/3c5ae7fc-9fb6-9af1-1984-b5e0412c556a).
 
 After you have installed the available updates, check to see if you still have the issue. Continue to the Resolution Methods if you're still having problems.
 

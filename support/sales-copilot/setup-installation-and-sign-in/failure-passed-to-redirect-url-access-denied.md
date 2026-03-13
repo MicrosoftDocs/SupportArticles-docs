@@ -1,7 +1,7 @@
 ---
 title: Authentication issues when connecting to Salesforce CRM
-description: Resolves authentication issues when connecting to Salesforce CRM from Microsoft Copilot for Sales.
-ms.date: 02/05/2025
+description: Resolves authentication issues when connecting to Salesforce CRM from Sales app.
+ms.date: 11/20/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -9,13 +9,13 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # Authentication issues when connecting to Salesforce CRM
 
-This article helps you troubleshoot and resolve authentication issues when connecting to Salesforce CRM from the [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
+This article helps you troubleshoot and resolve authentication issues when connecting to Salesforce CRM from the [Sales app in Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in and Teams app   |
+|**Client app**     |  Sales app in Outlook and Teams app   |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -24,7 +24,7 @@ This article helps you troubleshoot and resolve authentication issues when conne
 
 ## Symptoms
 
-When you try to sign in to Salesforce CRM from the Copilot for Sales add-in for Outlook, the following error message is displayed:
+When you try to sign in to Salesforce CRM from the Sales app in Outlook, the following error message is displayed:
 
 > Failure passed to redirect url. error=OAUTH_APP_ACCESS_DENIED error_description=user is not admin approved to access this app
 
@@ -34,11 +34,11 @@ When you try to sign in to Salesforce CRM from the Copilot for Sales add-in for 
 
 Policies of the Microsoft Power Platform connected app block users from connecting to Salesforce CRM.
 
-Copilot for Sales connects to Salesforce CRM through the Microsoft Power Platform connected app. To sign in to Salesforce CRM from Copilot for Sales, users must provide their consent to the Microsoft Power Platform app to contact Salesforce CRM on their behalf. When consent can't be provided, the sign-in process fails.
+Sales app connects to Salesforce CRM through the Microsoft Power Platform connected app. To sign in to Salesforce CRM from Sales app, users must provide their consent to the Microsoft Power Platform app to contact Salesforce CRM on their behalf. When consent can't be provided, the sign-in process fails.
 
 ## Resolution
 
-Copilot for Sales uses the Microsoft Power Platform connected app to connect to Salesforce CRM. Ensure that the policies of the Microsoft Power Platform app are configured to allow users to connect to Salesforce CRM.
+Sales app uses the Microsoft Power Platform connected app to connect to Salesforce CRM. Ensure that the policies of the Microsoft Power Platform app are configured to allow users to connect to Salesforce CRM.
 
 1. Sign in to Salesforce CRM as an administrator.
 
@@ -54,7 +54,7 @@ Copilot for Sales uses the Microsoft Power Platform connected app to connect to 
 
     :::image type="content" source="media/failure-passed-to-redirect-url-access-denied/permitted-users.png" alt-text="Screenshot that shows the values for permitted users.":::
 
-    1. **All users may self-authorize**: This option allows any authenticated Salesforce user to connect to the Salesforce instance through the Microsoft Power Platform connector used by Microsoft Copilot for Sales, Microsoft Power Automate, and potentially other apps to gain access to Salesforce, thus resolving the issue.
+    1. **All users may self-authorize**: This option allows any authenticated Salesforce user to connect to the Salesforce instance through the Microsoft Power Platform connector used by Sales app, Microsoft Power Automate, and potentially other apps to gain access to Salesforce, thus resolving the issue.
 
     1. **Admin approved users are pre-authorized**: This option enables administrators to explicitly grant permissions to individual users through **Profiles** and **Permission Sets**. For more information, see [Connected Apps](https://help.salesforce.com/s/articleView?id=sf.connected_app_overview.htm&type=5) and [Manage Access to a Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_manage.htm&type=5).
 
@@ -64,6 +64,6 @@ Copilot for Sales uses the Microsoft Power Platform connected app to connect to 
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -1,7 +1,7 @@
 ---
 title: Can't bring a clustered resource online troubleshooting guidance
 description: Provides guidance for when a clustered resource fails to come online in a Windows-based failover cluster
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

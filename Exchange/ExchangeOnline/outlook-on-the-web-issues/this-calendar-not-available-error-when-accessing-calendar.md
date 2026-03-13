@@ -4,18 +4,19 @@ description: Describes an issue in which a user receives a This calendar isn't a
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: alinastr, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Outlook on the web / OWA
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: alinastr, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # This calendar isn't available error when a user tries to access the Calendar in Outlook on the web
 
 _Original KB number:_ &nbsp; 3152066
@@ -72,8 +73,6 @@ To resolve this problem, follow these steps.
 3. Start Outlook on the web, and then try to access the Calendar again.
 
 ## More information
-
-For more information about how to install and run CalCheck, see [Information about the Calendar Checking Tool for Outlook (CalCheck)](https://support.microsoft.com/help/2678030).
 
 For more information about command-line switches for Outlook, see [Command-line switches for Outlook for Windows](https://support.microsoft.com/office/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6).
 

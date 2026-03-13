@@ -1,13 +1,14 @@
 ---
 title: Troubleshooting issues with Microsoft Skype for Business for Android
 description: This article describes how to troubleshoot some common issues that you may encounter when you use the Skype for Business (formerly Lync 2013) for Android.
-author: simonxjx
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: simonxjx, v-kccross
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: 
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

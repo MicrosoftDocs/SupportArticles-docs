@@ -2,9 +2,9 @@
 title: Step 3 - Configure data collections for Azure Monitor Agent
 description: Learn how to configure data collections for Azure Monitor Agent so that you can migrate from the legacy Log Analytics agent.
 ms.date: 10/14/2025
-ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu, jarrettr
+ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, jarrettr
 ms.service: azure-monitor
-ms.custom: sap:Migrate to Azure Monitor Agent(AMA)
+ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 #Customer intent: As an Azure Monitor user, I want to configure data collections for Azure Monitor Agent so that I can migrate from the legacy Log Analytics agent.
 ---
 # Step 3: Configure data collections
@@ -70,4 +70,4 @@ The DCRs are now published and available in the Azure portal.
 > [!div class="nextstepaction"]
 > [Step 4: Test data collections in Azure Monitor Agent](step-4-test-data-collections-azure-monitor-agent.md)
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+ 

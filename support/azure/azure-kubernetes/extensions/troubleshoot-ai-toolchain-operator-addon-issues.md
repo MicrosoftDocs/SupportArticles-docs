@@ -62,4 +62,4 @@ If the image access mode is set to private, the model inference image might not 
 
 Inference images are typically large (30 GB -100 GB), so a longer image pull time is expected. Depending on your AKS cluster's networking setup, the pull process might take up to tens of minutes.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

@@ -11,10 +11,9 @@ ms.custom: sap:VM Extensions not operating correctly
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-
-[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
-
 This article discusses how to handle an issue in which multiple certificates are generated on a Microsoft Azure infrastructure as a service (IaaS) virtual machine (VM) that uses extensions.
+
+[!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
 ## Symptoms
 
@@ -33,14 +32,14 @@ In Windows, if you view the *C:\\WindowsAzure\\logs\\WaAppAgent.log* log file, y
 
 ```output
 [01/16/2017 21:42:25.50] [INFO]  Imported Certificate: DC=Windows Azure CRP Certificate Generator.
-[01/16/2017 21:42:25.50] [INFO]  Certificate thumbprint: 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9
-[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 and hash 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9.
-[01/16/2017 21:42:25.50] [INFO]  Certificate 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 is found.
-[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 and hash FC2FFCDEE6A8C6033EE4986B4D5080E3E2083CC9.
+[01/16/2017 21:42:25.50] [INFO]  Certificate thumbprint: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
+[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 and hash AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00.
+[01/16/2017 21:42:25.50] [INFO]  Certificate AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 is found.
+[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 and hash BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11.
 ...
-[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 and hash 1E1A0BF89A1FDD0722F4F94083A6CCDF94EFC78A.
-[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 and hash 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9.
-[01/16/2017 21:42:25.50] [INFO]  Certificate 1D59A4E7F60F6D978124ED7D3E177B0D6A6806C9 is found.
+[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 and hash CC33DD44EE55FF66AA77BB88CC99DD00EE11FF22.
+[01/16/2017 21:42:25.50] [INFO]  Comparing normalizedHash: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 and hash AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00.
+[01/16/2017 21:42:25.50] [INFO]  Certificate AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 is found.
 [01/16/2017 21:42:25.50] [INFO]  Certificate with the subject: DC=Windows Azure CRP Certificate Generator will not be added because it already exists in the store.
 [01/16/2017 21:42:25.50] [INFO]  Successfully imported cert TenantEncryptionCert into the store My
 ```
@@ -80,4 +79,4 @@ You can update to a more recent version of the VM agent so that the old certific
 
 - [Troubleshoot extension certificate issues on a Windows VM in Azure](./troubleshoot-extension-certificates-issues-windows-vm.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

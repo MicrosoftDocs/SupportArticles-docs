@@ -4,19 +4,20 @@ description: Describes the Full Access, Send As, Send on Behalf of, and Folder p
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: kellybos, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: kellybos, v-six
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Online
 ms.date: 01/24/2024
 ---
+
 # Overview of delegation in a Microsoft 365 hybrid environment
 
 ## Symptoms
@@ -124,7 +125,7 @@ This article describes the necessary configuration, administration details, and 
   - Misconfigured delegates may result in a non-delivery report. For more information, see [Users receive NDR 5.2.0 when they send meeting invites in Microsoft 365 hybrid environment](../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md).
   - The `LegacyExchangeDN` attribute of objects from Exchange Online and on-premises should be synching as x500 addresses between forests to avoid resolution issues that require enabling Exchange hybrid deployment settings in AD Connect. For more information, see [Exchange hybrid writeback](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback).
 
-  - If the Exchange hybrid deployment setting isn't enabled, delegates may see a non-delivery report when they update meetings. For more information, see ["550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment](https://support.microsoft.com/help/4039597).
+  - If the Exchange hybrid deployment setting isn't enabled, delegates may see a non-delivery report when they update meetings.
 
 > [!NOTE]
 > Be aware that delegation also affects external calendar sharing. For more information, see [Unable to accept an external sharing invitation by using Outlook in a hybrid environment](../calendars/cannot-accept-external-sharing-invitation-in-outlook.md).

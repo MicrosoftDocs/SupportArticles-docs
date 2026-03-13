@@ -193,8 +193,6 @@
           href: ../email-management/emails-that-you-forward-not-saved-in-sent-items.md
         - name: Inbox rule doesn't appear in Outlook client
           href: ../email-management/inbox-rule-does-not-appear-in-outlook-client.md
-        - name: Issues with OOF reply
-          href: /troubleshoot/exchange/send-emails/understand-troubleshoot-oof-replies
         - name: Messages in an e-mail thread are automatically moved to the Deleted Items folder
           href: ../email-management/message-automatically-moved-deleted-items-folder.md
         - name: Messages move from the Inbox to a renamed folder
@@ -335,6 +333,8 @@
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
+        - name: The Exchange administrator made a change that requires users to restart Outlook
+          href: ../profiles-and-accounts/change-requires-restart.md
         - name: Event 1098 and can't create new profiles
           href: ../profiles-and-accounts/event-1098-and-cannot-create-new-profiles.md
         - name: Focused Inbox disappears

@@ -52,7 +52,7 @@ To resolve these errors, follow these steps:
 
    - If no certificate exists, examine the SQL Server error log file to get the hash code. You might see one of the following entries:
 
-     `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
+     `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"] was successfully loaded for encryption.`
       or
      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
       If the certificate is self-generated, skip to step 2.

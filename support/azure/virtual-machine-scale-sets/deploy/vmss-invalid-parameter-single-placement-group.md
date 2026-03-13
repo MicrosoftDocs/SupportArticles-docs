@@ -24,4 +24,4 @@ The `singlePlacementGroup` parameter is set to `True`.
 
 Set the `singlePlacementGroup` parameter to `False`.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 

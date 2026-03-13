@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot PowerShell, Hyper-V, Storage, and Cluster Management Issues
 description: Provides a comprehensive guide to troubleshooting common issues in managing Hyper-V, Storage Spaces Direct (S2D), Failover Clustering, and PowerShell tasks in Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows 10 Enterprise/Education.
-ms.date: 09/08/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

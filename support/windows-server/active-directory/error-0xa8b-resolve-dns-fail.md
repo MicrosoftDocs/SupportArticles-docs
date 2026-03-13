@@ -1,7 +1,7 @@
 ---
 title: An Attempt to Resolve the DNS Name of a DC in the Domain Being Joined Has Failed
 description: Provides troubleshooting steps for resolving the Domain Name System (DNS) error code 0xa8b when you join a workgroup computer to a domain.
-ms.date: 03/26/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -66,7 +66,7 @@ To resolve this error, follow these steps:
 
 3. Check for special names in the target Active Directory domain that require other configuration:
 
-    - Single-label DNS name. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md#how-to-enable-windows-based-clients-to-do-queries-and-dynamic-updates-with-single-label-dns-zones).
+    - Single-label DNS name. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md#how-to-enable-windows-based-clients-to-send-queries-and-dynamic-updates-when-using-single-label-dns-zones).  
     - Disjoint namespace. For more information, see [Event IDs 5788 and 5789 occur on a Windows-based computer](event-ids-5788-5789.md).
     - All numeric top-level domains (TLDs) or TLDs containing numeric characters.
 

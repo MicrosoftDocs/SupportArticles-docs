@@ -4,13 +4,13 @@ description: Discusses an issue that prevents users from looking up free/busy in
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
+ms.reviewer: timothyh, v-six, v-kccross
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Calendaring
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2016 Enterprise Edition
@@ -20,6 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
+
 # Free/busy lookups stop working in a cross-premises environment or an Exchange Server hybrid deployment
 
 > [!NOTE]
