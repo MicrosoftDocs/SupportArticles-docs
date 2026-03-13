@@ -66,7 +66,7 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
-    - name: Common dimension-related errors
+    - name: Common financial dimension-related errors
       href: general-ledger/common-dimension-related-errors.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md

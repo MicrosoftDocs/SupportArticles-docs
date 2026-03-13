@@ -3,7 +3,7 @@ title: Fix Financial Dimension Errors in Dynamics 365 Finance
 description: Troubleshoot and fix financial dimension issues, such as inactive dimensions, suspended values, and derived dimension rule conflicts, in Dynamics 365 Finance.
 ms.date: 03/10/2026
 ms.reviewer: anaborges, setharvila, ethankallett, twheeloc, v-shaywood
-ms.custom: sap:General ledger - Setup, transactions and reporting/Issues with financial dimensions and financial tags
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
 
 # Common dimension-related errors
