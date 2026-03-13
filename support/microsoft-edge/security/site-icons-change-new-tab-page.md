@@ -52,7 +52,7 @@ Open the saved site URL (for example, `https://yourdomain/home.aspx`) directly i
 
 ### Clear the favicon cache
 
-If you clear cached images and files forces, this action forces Edge to re-fetch favicons:
+If you clear cached images and files forces, this action forces Edge to refetch favicons:
 
 1. Go to `edge://settings/privacy`.
 1. Under **Clear browsing data**, select **Choose what to clear**.
