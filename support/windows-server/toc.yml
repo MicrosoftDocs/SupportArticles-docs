@@ -2664,6 +2664,8 @@ items:
     items:
     - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
       href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
+    - name: Can't take a disk offline in a standalone Windows Server 2022 VM
+      href: ./virtualization/cant-take-disk-offline-standalone-ws2022-vm.md
   - name: Virtual machine creation
     items:
     - name: "Troubleshooting guidance: Creating Hyper-V virtual machines"
