@@ -33,6 +33,9 @@ This problem occurs because a client makes an HTTP request by sending the `POST`
 ## Cause 3
 WebDAV Publishing interferes with HTTP PUT.
 
+## Cause 4
+
+Application returning 405 regardless of HTTP method used 
 
 ## Resolution for cause 1
 
@@ -58,3 +61,7 @@ Remove WebDAV modules and handlers from the *Web.config* file. Also remove the W
 1. Select **Start**, type *Turn Windows features on or off* in the **Start Search** box, and then select **Turn Windows features on or off**.
 1. In the Windows Features window, expand **Internet Information Services** -> **World Wide Web Services** -> **Common HTTP Features**.
 1. Uncheck the **WebDAV Publishing** feature.
+
+## Resolution for cause 4
+
+Your application code is likely to be returning the HTTP 405 status code as a means to signify an error. It is best to use a custom HTTP status other than the ones defined or, in the event of a client error, use the HTTP 400 status code with a custom description outlining the error in question.
