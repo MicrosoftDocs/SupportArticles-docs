@@ -590,6 +590,8 @@ items:
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
+    - name: Drive C warns about low disk space but Windows Server shows available space
+      href: ./backup-and-storage/c-drive-low-disk-space-windows-server-shows-space-available.md
     - name: No Extend Volume command for drive C in Disk Management
       href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Correct disk space problems on NTFS volumes
@@ -600,6 +602,8 @@ items:
       href: ./backup-and-storage/disk-event-id-154.md
     - name: Extending a CSV isn't blocked
       href: ./backup-and-storage/extending-csv-isnt-blocked.md
+    - name: Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard
+      href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
     - name: Stop error when Windows tries to repair a drive while restarting
       href: ./backup-and-storage/stop-error-from-drive-repair-restart.md
     - name: System logs multiple events that specify Event ID 640
