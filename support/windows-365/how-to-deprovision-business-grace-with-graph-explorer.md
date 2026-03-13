@@ -13,7 +13,7 @@ ms.custom:
 
 ## Summary
 
-When you remove a license from a user, Windows 365 Business Cloud PCs enter a grace period before permanent removal. In some cases, you might want to remove these Cloud PCs from grace manually, such as to reassign the license to another user.
+When you remove a license from a user, Windows 365 Business Cloud PCs enter a 7 day grace period before permanent removal. In some cases, you might want to remove these Cloud PCs from grace manually, such as to reassign the license to another user and ensure provisioning isn't blocked.
 
 This article provides step-by-step instructions for using Microsoft Graph Explorer and the Microsoft Graph API to perform this deprovision.
 
@@ -39,37 +39,43 @@ This article provides step-by-step instructions for using Microsoft Graph Explor
 
 1.  In the query box, set the following **GET** request:
 
-> https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?\$filter=status eq 'inGracePeriod'
+```
+https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$filter=status eq 'inGracePeriod'
+```
 
-1.  In Graph Explorer, select **Modify Permissions**.
+2.  In Graph Explorer, select **Modify Permissions**.
 
-1.  Consent to the following permissions for your session:
+3.  Consent to the following permissions for your session:
 
 - CloudPC.Read.All
 
 - CloudPC.ReadWrite.All
 
-1.  If not already granted, select **Consent** to add these permissions.
+4.  If not already granted, select **Consent** to add these permissions.
 
-1.  Select **Run Query**.
+5.  Select **Run Query**.
 
-1.  Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
+6.  Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
 
 ## Step 3: Remove a Cloud PC from grace
 
 1.  For each Cloud PC, send a **POST** request to remove it from grace. In the query box, select **POST** and use the following request:
 
-> https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{cloudPCId}/endGracePeriod
+```
+https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{cloudPCId}/endGracePeriod
+```
 
-1.  Replace `{cloudPCId}` with the actual ID of the Cloud PC. For example:
+2.  Replace `{cloudPCId}` with the actual ID of the Cloud PC. For example:
 
-> https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18de4b-ab05-4059-8c61-0323a7df4ced/endGracePeriod
+```
+https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18de4b-ab05-4059-8c61-0323a7df4ced/endGracePeriod
+```
 
-1.  Leave the request body empty.
+3.  Leave the request body empty.
 
-1.  Select **Run Query**.
+4.  Select **Run Query**.
 
-1.  If successful, you receive a **No Content - 204** response.
+6.  If successful, you receive a **No Content - 204** response.
 
 ## Step 4: Verify removal
 
