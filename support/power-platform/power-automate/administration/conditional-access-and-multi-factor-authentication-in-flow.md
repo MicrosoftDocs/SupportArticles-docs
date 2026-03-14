@@ -14,6 +14,7 @@ _Original KB number:_ &nbsp; 4467879
 
 ## Recommendations
 
+- To avoid token exchange failures between Microsoft 365 apps and Power Automate, ensure that your Conditional Access policies apply consistent MFA requirements to both the embedding app (such as SharePoint or Teams) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`). The simplest approach is to target the **Office 365** app suite or **All cloud apps** in your policy. See [Effect 5](#effect-5---using-power-automate-features-embedded-in-other-microsoft-services) for details.
 - Don't use [remember multifactor authentication for trusted devices](/entra/identity/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
 - To avoid policy conflict errors, ensure that users who sign in to Power Automate use criteria that match the policies for the connections a flow uses.
 
@@ -89,7 +90,26 @@ If Exchange Online or SharePoint access is controlled by a conditional access po
 
 ### Effect 5 - Using Power Automate features embedded in other Microsoft services
 
-When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Excel, and Teams, the Power Automate users are also subject to conditional access and multi-factor policies based on how they authenticated to the host service. For example, if a user signs in to SharePoint by using single-factor authentication, but tries to create or use a flow that requires multi-factor access to Microsoft Graph, the user receives an error message.
+When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Excel, and Teams, Power Automate performs a token exchange with the embedding app to authenticate API calls. For this exchange to succeed, the Conditional Access and MFA requirements must be consistent between the embedding app and Power Automate.
+
+If the requirements differ—for example, if MFA is required for Power Automate but not for SharePoint, or vice versa—the token exchange fails and users see an authentication error (typically AADSTS50076) when they try to view or run flows from the embedded surface.
+
+> [!IMPORTANT]
+> **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`) is not currently included in the **Office 365** app target in Conditional Access. If your CA policy targets only the Office 365 app suite, you must also explicitly add Microsoft Flow Service to ensure consistent MFA requirements for embedded flow experiences.
+
+Common scenarios that cause this issue:
+
+- Admin creates a CA policy requiring MFA for the Office 365 app suite (covers SharePoint, Teams, Excel) but doesn't add Microsoft Flow Service separately.
+- Admin creates a CA policy requiring MFA for Power Automate only, without matching policies for SharePoint or Teams.
+- Admin migrates from per-app policies to the Office 365 app target, assuming Power Automate is included.
+
+To resolve this issue:
+
+1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
+2. For each policy requiring MFA, check that **Microsoft Flow Service** is included in the target resources alongside the embedding apps.
+3. Alternatively, target **All cloud apps** to ensure consistent MFA requirements.
+
+After updating policies, affected users must sign out and sign back in for the changes to take effect.
 
 ### Effect 6 - Sharing flows by using SharePoint lists and libraries
 

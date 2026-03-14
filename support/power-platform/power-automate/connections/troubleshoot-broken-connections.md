@@ -142,6 +142,34 @@ You might also receive the following error message:
 
 To resolve this issue, the tenant administrator needs to reenable the application or create a new service principal connection.
 
+## Conditional Access policy mismatch for embedded flows
+
+Connections can appear broken when a flow is accessed from an embedded surface (such as a SharePoint list, Microsoft Teams channel, or Excel workbook) if the Conditional Access (CA) policies for the host application and Power Automate have different MFA requirements.
+
+You might see an authentication error similar to:
+
+> AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '\<resource\>'.
+
+### Cause
+
+When a user accesses a flow from SharePoint, Teams, or Excel, the host application exchanges its token for a **Microsoft Flow Service** token. If the CA policies require MFA for one application but not the other, this exchange fails.
+
+Common scenarios:
+
+- Your CA policy targets the **Office 365** app suite (which includes SharePoint and Teams) but doesn't explicitly include **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`). Microsoft Flow Service is not part of the Office 365 application target.
+- Your CA policy requires MFA for Power Automate but not for the host application, or the reverse.
+
+### Troubleshooting steps
+
+1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
+2. Identify all policies that require MFA for SharePoint, Teams, or the Office 365 app suite.
+3. Verify that the same policies also include **Microsoft Flow Service**, or that a separate policy applies equivalent MFA requirements to it.
+4. If you want consistent MFA enforcement for all cloud applications, consider targeting **All cloud apps** instead of individual applications.
+5. After updating policies, ask affected users to sign out and sign back in.
+
+For detailed guidance, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
+
+
 ## More information
 
 - [Manage connections in Power Automate](/power-automate/add-manage-connections)
