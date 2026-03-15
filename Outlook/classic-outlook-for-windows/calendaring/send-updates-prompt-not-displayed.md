@@ -20,14 +20,20 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 07/02/2025
+ms.date: 03/14/2026
 ---
 
 # "Send update to attendees" prompt not displayed when updating meetings
 
 When a meeting organizer updates a meeting, Microsoft Outlook sometimes displays the following **Send Update to Attendees** prompt.
 
-:::image type="content" source="media/send-updates-prompt-not-displayed/send-update-prompt.png" border="false" alt-text="Screenshot of the Send Update to Attendees prompt.":::
+In classic Outlook for Windows:
+
+:::image type="content" source="media/send-updates-prompt-not-displayed/send-update-prompt.png" border="false" alt-text="Screenshot of the Send Update to Attendees prompt in classic Outlook.":::
+
+In new Outlook for Windows:
+
+:::image type="content" source="media/send-updates-prompt-not-displayed/new-outlook-send-update-prompt.png" border="false" alt-text="Screenshot of the Send Update to Attendees prompt in new Outlook.":::
 
 However, if the organizer updates a meeting in any of the following scenarios, Outlook doesn't display the prompt.
 
@@ -39,8 +45,6 @@ However, if the organizer updates a meeting in any of the following scenarios, O
 Outlook doesn't display the **Send Update to Attendees** prompt if all the following conditions apply. Instead, the Exchange server automatically sends a meeting update request to the Inbox of the attendees.
 
 - The meeting organizer has version 2305 (current channel build 16501.20000) or a later version of Outlook.
-
-- The organizer adds or removes attendees.
 
 - Any of the following are true:
 
@@ -81,8 +85,6 @@ Outlook doesn't display the **Send Update to Attendees** prompt or send a notifi
 Outlook doesn't display the **Send Update to Attendees** prompt if all the following conditions apply. Instead, the Exchange server automatically sends a meeting update request to the Inbox of only the added or deleted attendees.
 
 - The meeting organizer has a version of Outlook that is earlier than version 2305 (current channel build 16501.20000).
-
-- The organizer only adds or removes attendees.
 
 - The organizer's Outlook client has [shared calendar improvements](https://support.microsoft.com/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26) enabled.
 
