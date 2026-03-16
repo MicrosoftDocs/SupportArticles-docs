@@ -21,6 +21,8 @@ items:
   items:    
   - name: Troubleshoot an Azure site-to-site VPN connection that can't connect
     href: vpn-gateway-troubleshoot-site-to-site-cannot-connect.md
+  - name: Troubleshoot BGP issues
+    href: vpn-gateway-troubleshoot-bgp.md
   - name: Troubleshoot Azure site-to-site VPN error codes
     href: vpn-gateway-troubleshoot-site-to-site-error-codes.md
   - name: Troubleshoot Azure site-to-site VPN when it disconnects intermittently
