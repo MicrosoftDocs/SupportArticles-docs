@@ -37,6 +37,13 @@ landingContent:
           - text: Troubleshoot common sign-in problems
             url: security/troubleshoot-sign-in-issues.md
   
+  - title: Security and Privacy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Saved site icons change unexpectedly on the new tab page
+            url: security/site-icons-change-new-tab-page.md
+
   - title: Web Platform and Development
     linkLists:
     - linkListType: how-to-guide
