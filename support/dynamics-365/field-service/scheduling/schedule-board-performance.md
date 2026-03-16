@@ -3,7 +3,7 @@ title: Troubleshoot Schedule Board Latency in Dynamics 365
 description: Resolve slow loading and high latency issues on the Dynamics 365 Field Service schedule board with these troubleshooting steps for improved performance.
 ms.date: 03/16/2026
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
-ms.custom: sap:Schedule Board
+ms.custom: sap:Schedule Board\Issues with usability
 ---
 
 # Schedule board is slow to load or experiences extreme latency

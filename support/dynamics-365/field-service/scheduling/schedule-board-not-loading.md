@@ -3,7 +3,7 @@ title: Schedule Board Not Loading in Dynamics 365 Field Service
 description: Resolve issues with the Dynamics 365 Field Service schedule board displaying a blank page or failing to load. Learn troubleshooting steps to fix it.
 ms.date: 03/16/2026
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
-ms.custom: sap:Schedule Board
+ms.custom: sap:Schedule Board\Issues with usability
 ---
 
 # Schedule board shows a blank page or fails to load

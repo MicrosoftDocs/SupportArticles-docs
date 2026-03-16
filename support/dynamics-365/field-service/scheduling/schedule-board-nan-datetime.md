@@ -3,7 +3,7 @@ title: Booking Card Date Errors in Dynamics 365 Field Service
 description: Troubleshoot and fix NaN or incorrect date/time values on booking cards in Dynamics 365 Field Service. Follow step-by-step solutions for common causes.
 ms.date: 03/16/2026
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
-ms.custom: sap:Schedule Board
+ms.custom: sap:Schedule Board\Issues with usability
 ---
 
 # Booking card shows NaN or incorrect date and time on the schedule board

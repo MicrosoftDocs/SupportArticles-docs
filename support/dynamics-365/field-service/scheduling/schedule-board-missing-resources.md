@@ -3,7 +3,7 @@ title: Resolve Missing Resources on Dynamics 365 Schedule Board
 description: Resolve missing bookable resources on the Dynamics 365 Field Service schedule board. Learn how to fix scheduling methods, filters, work hours, and permissions.
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
 ms.date: 03/16/2026
-ms.custom: sap:Schedule Board
+ms.custom: sap:Schedule Board\Issues with usability
 ---
 
 # Resources don't display on the schedule board
