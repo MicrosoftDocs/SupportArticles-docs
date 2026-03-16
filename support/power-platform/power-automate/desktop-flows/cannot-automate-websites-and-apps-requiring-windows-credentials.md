@@ -38,7 +38,7 @@ KB [5073723](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073723
 
 KB [5075999](https://support.microsoft.com/en-us/topic/february-10-2026-kb5075999-os-build-14393-8868-640ac4ff-7447-4805-b0f6-ce3049375fcb): February 10, 2026—KB5075999 (OS Build 14393.8868) <- The 1B.26 Windows Update for Windows Server 2016
 
-After the release of the above updates, Power Automate for desktop is not able to automate these windows properly.
+After the release of the above updates, Power Automate for desktop is not able to automate these windows properly. You can find more information about this issue [here](https://support.microsoft.com/topic/new-behavior-restricting-certain-applications-to-autofill-credentials-introduced-by-the-windows-january-2026-security-update-29c0bc94-2588-41f9-8534-f058aa5214d5).
 
 ## Workarounds
 
