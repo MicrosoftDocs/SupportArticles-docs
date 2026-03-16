@@ -2562,6 +2562,8 @@ items:
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: "Troubleshooting guidance: VM settings"
+      href: ./virtualization/virtual-machine-settings-troubleshooting-guidance.md
     - name: Can't access Hyper-V virtual machines via VMConnect
       href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
