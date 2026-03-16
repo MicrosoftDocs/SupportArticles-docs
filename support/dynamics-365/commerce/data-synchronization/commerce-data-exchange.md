@@ -59,14 +59,14 @@ After you add multiple POS terminals, download sessions take a long time, or you
 
 ### Cause
 
-When you create a new Store Commerce app offline database and add it to the relevant channel database group, the database inherits all existing download sessions since the last full database synchronization. The resulting data generation can be too large and affect performance, especially during peak usage times.
+When you create a new [Store Commerce app offline database](/dynamics365/commerce/dev-itpro/implementation-considerations-offline) and add it to the relevant channel database group, the database inherits all existing download sessions since the last full database synchronization. The resulting data generation can be too large and affect performance, especially during peak usage times.
 
 ### Solution
 
 Use one of the following options:
 
 - Assign a "dummy" channel database group (a group that isn't associated with any distribution schedule job) to the newly generated terminals.
-- Use a special offline profile where the **Pause offline synchronization** option is set to **Yes**. This option lets data generation occur when the system is most available. However, the system might pause data generation multiple times if resources are needed for other tasks. If this approach isn't feasible, create a Microsoft Support request by using the [Power Platform admin center](/power-platform/admin/support-overview).
+- Use a special [offline profile](/dynamics365/commerce/dev-itpro/implementation-considerations-offline#advanced-offline-feature) where the **Pause offline synchronization** option is set to **Yes**. This option lets data generation occur when the system is most available. However, the system might pause data generation multiple times if resources are needed for other tasks. If this approach isn't feasible, create a Microsoft Support request by using the [Power Platform admin center](/power-platform/admin/support-overview).
 
 ## Incremental (delta) data synchronization takes too long
 
@@ -110,7 +110,7 @@ The cause depends on the type of scale unit:
 
 - **Cloud Scale Unit (CSU)**: The CSU deployment in Power Platform admin center might have failed, and the CSU was unregistered from the data synchronization cloud service.
 - **On-premises scale unit**: The Async Client Service on the Windows machine might not be running correctly.
-- **Store Commerce app**: The app might not be running, or offline mode isn't configured.
+- **Store Commerce app**: The app might not be running, or [offline mode](/dynamics365/commerce/dev-itpro/implementation-considerations-offline) isn't configured.
 
 > [!NOTE]
 > For all cases, you can check when a data sync event last occurred by going to **Channel database** > **Data synchronization** > **Last connection**.
@@ -127,12 +127,6 @@ If the issue persists, create a Microsoft Support request by using the [Power Pl
 
 ## Related content
 
+- [Troubleshoot Commerce offline implementation](commerce-offline-implementation.md)
 - [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices)
 - [Commerce Data Exchange implementation guidance](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx)
-- [Commerce offline implementation considerations](/dynamics365/commerce/dev-itpro/implementation-considerations-offline)
-- [Commerce Data Exchange troubleshooting](/dynamics365/commerce/dev-itpro/cdx-troubleshooting)
-- [Dynamics 365 Commerce architecture overview](/dynamics365/commerce/commerce-architecture)
-- [Select an in-store topology](/dynamics365/commerce/dev-itpro/retail-in-store-topology)
-- [Device management implementation guidance](/dynamics365/commerce/implementation-considerations-devices)
-- [Configure, install, and activate Modern POS (MPOS)](/dynamics365/commerce/retail-modern-pos-device-activation)
-- [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)

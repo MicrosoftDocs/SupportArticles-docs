@@ -10,7 +10,7 @@ ms.date: 03/16/2026
 
 ## Summary
 
-This article helps you resolve common offline mode errors in Microsoft Dynamics 365 Commerce, including sign-in failures, employee configuration problems, channel errors, and database problems. In an offline implementation, the Store Commerce app for Windows automatically switches from the channel database to the offline database when the Commerce Scale Unit becomes unavailable.
+This article helps you resolve common offline mode errors in Microsoft Dynamics 365 Commerce, including sign-in failures, employee configuration problems, channel errors, and database problems. In an offline implementation, the Store Commerce app for Windows automatically switches from the [channel database](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx#important-commerce-headquarters-pages) to the offline database when the [Commerce Scale Unit](/dynamics365/commerce/commerce-architecture#commerce-scale-unit) becomes unavailable.
 
 During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. Configure the timeout and reconnection attempt intervals in the [offline profile](/dynamics365/commerce/dev-itpro/implementation-considerations-offline).
 
@@ -153,7 +153,7 @@ You receive the following error message:
 
 ### Solution
 
-Use the offline dashboard to check the status of the offline database permissions, size, and disk space.
+Use the [offline dashboard](/dynamics365/commerce/dev-itpro/implementation-considerations-offline#important-offline-features) to check the status of the offline database permissions, size, and disk space.
 
 ## Error when the same user tries to perform a manager override
 
@@ -223,12 +223,6 @@ Create a Microsoft Support request by using the [Power Platform admin center](/p
 
 ## Related content
 
-- [Commerce offline implementation considerations](/dynamics365/commerce/dev-itpro/implementation-considerations-offline)
-- [Commerce Data Exchange implementation guidance](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx)
+- [Troubleshoot Commerce Data Exchange (CDX)](commerce-data-exchange.md)
 - [Commerce Data Exchange troubleshooting](/dynamics365/commerce/dev-itpro/cdx-troubleshooting)
-- [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices)
 - [Online and offline point of sale (POS) operations](/dynamics365/commerce/pos-operations)
-- [Dynamics 365 Commerce architecture overview](/dynamics365/commerce/commerce-architecture)
-- [Select an in-store topology](/dynamics365/commerce/dev-itpro/retail-in-store-topology)
-- [Device management implementation guidance](/dynamics365/commerce/implementation-considerations-devices)
-- [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
