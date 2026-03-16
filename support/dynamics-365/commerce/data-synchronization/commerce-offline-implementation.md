@@ -6,7 +6,7 @@ ms.custom: sap:Data synchronization
 ms.date: 03/16/2026
 ---
 
-# Troubleshoot Commerce offline implementation
+# Troubleshoot Commerce offline implementation errors
 
 ## Summary
 
