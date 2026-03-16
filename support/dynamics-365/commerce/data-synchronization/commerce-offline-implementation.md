@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Commerce Offline Mode Errors in Dynamics 365
-description: Learn how to troubleshoot common offline implementation issues in Dynamics 365 Commerce, from employee configuration to database storage errors.
+title: Troubleshoot commerce offline mode errors in Dynamics 365
+description: Learn how to troubleshoot common offline implementation problems in Dynamics 365 Commerce, from employee configuration to database storage errors.
 ms.reviewer: johnmichalak, Luke.Graham, v-shaywood
 ms.custom: sap:Data synchronization
 ms.date: 03/16/2026
@@ -10,15 +10,15 @@ ms.date: 03/16/2026
 
 ## Summary
 
-This article helps you resolve common offline mode errors in Microsoft Dynamics 365 Commerce, including sign-in failures, employee configuration problems, channel errors, and database problems. In an offline implementation, the Store Commerce app for Windows automatically switches from the [channel database](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx#important-commerce-headquarters-pages) to the offline database when the [Commerce Scale Unit](/dynamics365/commerce/commerce-architecture#commerce-scale-unit) becomes unavailable.
+This article helps you resolve common offline mode errors in Microsoft Dynamics 365 Commerce, including sign-in failures, employee configuration problems, channel errors, and database problems. In an offline implementation, the Store Commerce app for Windows automatically switches from the [channel database](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx#important-commerce-headquarters-pages) to the offline database if the [Commerce Scale Unit](/dynamics365/commerce/commerce-architecture#commerce-scale-unit) becomes unavailable.
 
-During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. Configure the timeout and reconnection attempt intervals in the [offline profile](/dynamics365/commerce/dev-itpro/implementation-considerations-offline).
+During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. You can configure the timeout and reconnection attempt intervals in the [offline profile](/dynamics365/commerce/dev-itpro/implementation-considerations-offline).
 
-## Errors due to sign-in problems
+## Sign-in problem errors
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_AuthenticationFailed`
 - `Microsoft_Dynamics_Commerce_Runtime_AuthorizationFailed`
@@ -28,26 +28,26 @@ You receive one of the following errors:
 
 ### Cause
 
-A sign-in-related error occurs because data isn't found or is incorrectly configured in the offline database.
+A sign-in error occurs because data isn't found or is incorrectly configured in the offline database.
 
 ### Solution
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## Errors due to employee address book not found, or employee not mapped to store in offline database
+## Employee address book not found, or employee not mapped to store in offline database
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_ChannelEmployeeAddressBookNotFound`
 - `Microsoft_Dynamics_Commerce_Runtime_EmployeeNotOnStore`
 
 ### Cause
 
-This issue can be caused by one of the following problems:
+This problem can have either of the following causes:
 
 - The system can't find the store's employee address books.
 - The worker isn't correctly mapped to the store in the offline database.
@@ -56,13 +56,13 @@ This issue can be caused by one of the following problems:
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## Errors due to employee position detail not found or invalid
+## Employee position detail not found or invalid
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_EmployeePositionAssignmentNotFound`
 - `Microsoft_Dynamics_Commerce_Runtime_EmployeePositionDetailNotFound`
@@ -75,9 +75,9 @@ This problem occurs because the worker's position detail or assignment isn't fou
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## Error due to employee POS permission settings not found or configured incorrectly
+## Employee POS permission settings not found or configured incorrectly
 
 ### Symptoms
 
@@ -93,13 +93,13 @@ This problem occurs because the worker's POS permission settings aren't found or
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## Channel errors due to inability to switch to offline mode
+## Channel errors beause of inability to switch to offline mode
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_AuthenticationMethodDisabled`
 - `Microsoft_Dynamics_Commerce_Runtime_ChannelConfigurationNotFound`
@@ -119,13 +119,13 @@ The device can't switch to offline mode. The channel information is either unava
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## User errors due to inability to switch to offline mode
+## Can't switch to offline mode
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_CredentialsNotConfigured`
 - `Microsoft_Dynamics_Commerce_Runtime_CredentialsNotFound`
@@ -135,13 +135,13 @@ You receive one of the following errors:
 
 ### Cause
 
-The device can't switch to offline mode. The user information is either unavailable or incorrectly configured.
+The device can't switch to offline mode. The user information is either unavailable or configured incorrectly.
 
 ### Solution
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
 ## Error due to offline database storage problem
 
@@ -155,7 +155,7 @@ You receive the following error message:
 
 Use the [offline dashboard](/dynamics365/commerce/dev-itpro/implementation-considerations-offline#important-offline-features) to check the status of the offline database permissions, size, and disk space.
 
-## Error when the same user tries to perform a manager override
+## The same user tries to perform a manager override
 
 ### Symptoms
 
@@ -165,34 +165,35 @@ You receive the following error message:
 
 ### Cause
 
-This error occurs when the same user tries to perform a manager override.
+This error occurs if the same user tries to perform a manager override.
 
 ### Solution
 
-A different user must perform the manager override.
+Only a different user can perform the manager override.
 
 ## Database errors when the device can't switch to offline mode
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_RealtimeServiceNotSupported`
 - `Microsoft_Dynamics_Commerce_Runtime_TransientStorageError`
 
 ### Cause
 
-The device can't switch to offline mode. The offline database is either incorrectly installed or incorrectly configured.
+The device can't switch to offline mode. The offline database is either installed incorrectly or configured incorrectly.
 
 ### Solution
 
-Verify that the offline database is correctly installed and configured. Contact your system administrator if the issue persists.
-
-## Errors due to terminal or device configuration not found
+1. Verify that the offline database is installed and configured correctly.
+1. If the problem persists, contact your system administrator.
+ 
+## Terminal or device configuration not found
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Microsoft_Dynamics_Commerce_Runtime_TerminalNotFound`
 - `Microsoft_Dynamics_Commerce_Runtime_DeviceConfigurationNotFound`
@@ -201,13 +202,13 @@ You receive one of the following errors:
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
 1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
-1. Contact your system administrator if the problem persists.
+1. If the problem persists, contact your system administrator.
 
-## Errors due to internal server, timeout, or runtime invalid format issues
+## Internal server, timeout, or runtime invalid format
 
 ### Symptoms
 
-You receive one of the following errors:
+You receive one of the following error messages:
 
 - `Internal_Server_Error`
 - `Request_Timeout_Error`
