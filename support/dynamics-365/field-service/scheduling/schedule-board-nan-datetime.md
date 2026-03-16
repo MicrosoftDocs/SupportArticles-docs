@@ -21,7 +21,7 @@ When you view bookings on the [schedule board](/dynamics365/field-service/work-w
 - Bookings appear shifted by several hours on the schedule board timeline, particularly during daylight saving time (DST) transitions.
 - The booking tooltip shows different times than the booking card.
 
-## Cause: Regional date/time format mismatch
+## Cause: Regional date or time format mismatch
 
 The user's personal date/time format settings in Dynamics 365 don't match the format expected by the schedule board control. This mismatch commonly occurs when the browser locale differs from the Dynamics 365 user settings.
 
