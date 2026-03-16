@@ -101,13 +101,13 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Incorrect date and time on the schedule board
+          - text: Booking card shows NaN or incorrect date and time on the schedule board
             url: scheduling/schedule-board-nan-datetime.md
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
           - text: Missing form context on bookable resource forms
             url: scheduling/missing-form-context-bookable-resource.md
-          - text: Resources aren't displayed on the schedule board
+          - text: Resources don't display on the schedule board
             url: scheduling/schedule-board-missing-resources.md
           - text: Schedule board is slow to load or experiences extreme latency
             url: scheduling/schedule-board-performance.md

@@ -77,13 +77,13 @@ items:
 
 - name: Scheduling
   items: 
+    - name: Booking card shows NaN or incorrect date and time on the schedule board
+      href: scheduling/schedule-board-nan-datetime.md
     - name: Form context is missing on bookable resource forms
       href: scheduling/missing-form-context-bookable-resource.md
-    - name: Incorrect date and time on the schedule board
-      href: scheduling/schedule-board-nan-datetime.md
     - name: Issue with cascading crew changes when assigning a booking
       href: scheduling/cascade-crew-changes-booking.md
-    - name: Resources aren't displayed on the schedule board
+    - name: Resources don't display on the schedule board
       href: scheduling/schedule-board-missing-resources.md
     - name: Schedule board is slow to load or experiences extreme latency
       href: scheduling/schedule-board-performance.md
