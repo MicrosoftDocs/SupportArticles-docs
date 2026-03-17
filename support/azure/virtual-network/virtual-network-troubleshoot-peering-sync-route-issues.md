@@ -24,7 +24,7 @@ This article helps you diagnose and resolve common route propagation, peering sy
 
 ## Cause 1: Route propagation delays after peering creation or modification
 
-After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **Virtual network peering** for each address range in the peered virtual network. These route updates don't take effect instantly - propagation can take a few minutes to complete.
+After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **Virtual network peering** for each address range in the peered virtual network. These route updates don't take effect instantly - propagation can take a few minutes.
 
 ### Symptoms
 
@@ -203,10 +203,10 @@ In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes ad
    - **VirtualNetworkGateway** routes are learned from BGP.
    - **User** routes are UDRs from an associated route table.
 
-3. If traffic is being routed incorrectly, consider the following approaches:
-   - **Remove conflicting UDRs**: If a user-defined route is overriding the peering route, remove or modify the UDR. System peering routes already take precedence over BGP routes, so a UDR shouldn't be needed to maintain peering connectivity. Review the route table associated with the subnet and remove any UDR that inadvertently directs peering traffic to a gateway or virtual appliance. You can't specify **Virtual network peering** as the next hop type in a UDR.
+3. If traffic is routed incorrectly, consider the following approaches:
+   - **Remove conflicting UDRs**: If a user-defined route overrides the peering route, remove or modify the UDR. System peering routes already take precedence over BGP routes, so you don't need a UDR to maintain peering connectivity. Review the route table associated with the subnet and remove any UDR that inadvertently directs peering traffic to a gateway or virtual appliance. You can't specify **Virtual network peering** as the next hop type in a UDR.
    - **Filter the BGP advertisement**: On the on-premises router, stop advertising the address range that overlaps with the peered virtual network's address space. Although system peering routes take precedence over BGP, removing unnecessary overlapping advertisements simplifies routing and troubleshooting.
-   - **Redesign the address space**: If the overlap exists because on-premises and a peered virtual network share the same address range, plan an address space migration to eliminate the conflict.
+   - **Redesign the address space**: Plan an address space migration to eliminate the conflict if the overlap exists because on-premises and a peered virtual network share the same address range.
 
 4. Verify the routes learned by the virtual network gateway:
 
@@ -273,8 +273,8 @@ Proactive monitoring helps you detect peering problems before they affect connec
 
 | Metric | Description |
 |---|---|
-| **Round trip time for Pings to a VM** (`PingMeshAverageRoundtripMs`) | Average round trip time for pings sent between VMs, including VMs in peered virtual networks. A sudden increase can indicate peering connectivity problems. |
-| **Failed Pings to a VM** (`PingMeshProbesFailedPercent`) | Percentage of failed pings to a destination VM. A spike can indicate that peering routes are missing or that traffic is being blocked. |
+| **Round trip time for pings to a VM** (`PingMeshAverageRoundtripMs`) | Average round trip time for pings sent between VMs, including VMs in peered virtual networks. A sudden increase can indicate peering connectivity problems. |
+| **Failed pings to a VM** (`PingMeshProbesFailedPercent`) | Percentage of failed pings to a destination VM. A spike can indicate that peering routes are missing or that traffic is being blocked. |
 
 > [!NOTE]
 > The peering state (Connected, Disconnected, Initiated) is a resource property, not an Azure Monitor metric. To check the peering state, use `az network vnet peering show` or view the peering details in the Azure portal under **Settings** > **Peerings**.
