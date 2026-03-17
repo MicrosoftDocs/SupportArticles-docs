@@ -3,6 +3,10 @@
     {
       "source_path": "Teams/teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
-     }    
+     },
+     {
+      "source_path": "Teams/meetings/teams-meeting-add-in-missing.md",
+      "redirect_url": "/troubleshoot/teams/resolve-teams-meeting-add-in-issues" 
+     }         
   ]
 }
