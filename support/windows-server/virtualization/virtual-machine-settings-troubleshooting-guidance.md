@@ -100,7 +100,7 @@ This section addresses the following common issues that involve VM settings:
 
 - [VM settings window opens slowly or freezes](#vm-settings-window-opens-slowly-or-freezes)
 - [VMs don't migrate or quick-migrate](#vms-dont-migrate-or-quick-migrate)
-- [Can't expand or edit virtual disks (VHD or VHDX format)](#cant-expand-or-edit-virtual-disks-vhd-or-vhdx-format)
+- [Can't expand or edit virtual disks (.vhd or .vhdx format)](#cant-expand-or-edit-virtual-disks-vhd-or-vhdx-format)
 - [Can't connect to VM console (0x80004005 or other connection errors)](#cant-connect-to-vm-console-0x80004005-or-other-connection-errors)
 - [High usage of host CPU or memory, or resource contention](#high-usage-of-host-cpu-or-memory-or-resource-contention)
 - [Can't save, change, or locate a VM configuration file](#cant-save-change-or-locate-a-vm-configuration-file)
@@ -158,9 +158,9 @@ Missing or corrupted VM configuration files can interfere with migrations.
 To fix this issue, follow these steps:
 
 1. Check the health of the affected VMs. Identify any VMs that have issues related to their configuration files.
-1. For each affected VM, recreate the VM configuration file and reattach the VHD or VHDX file.
+1. For each affected VM, recreate the VM configuration file and reattach the .vhd or .vhdx file.
 
-### Can't expand or edit virtual disks (VHD or VHDX format)
+### Can't expand or edit virtual disks (.vhd or .vhdx format)
 
 #### Symptoms
 
