@@ -1346,11 +1346,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/how-to-use-perfInsights-linux.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/how-to-use-perfInsights-linux",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/how-to-videos-windows-virtual-desktop.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/how-to-videos-windows-virtual-desktop",
         "redirect_document_id": true
@@ -1641,18 +1636,8 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/perfinsights-and-scale-set-vm-instances.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/performance-diagnostics.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "virtual-machines/performance-diagnostics-vm-extension.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics-vm-extension",
         "redirect_document_id": true
       },
       {

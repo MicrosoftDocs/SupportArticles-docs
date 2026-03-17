@@ -2,18 +2,32 @@ items:
   - name: Welcome
     href: welcome-edge.yml
 
+  - name: Experiences and Services
+    items:
+      - name: Copilot icon doesn't appear in Microsoft Edge sidebar
+        href: experience/copilot-icon-missing-sidebar.md
   - name: Manage and Deploy
     items:
       - name: Can't enable extensions for InPrivate browsing by using Group Policy
         href: manageability/enable-extension-inprivate-policy.md
       - name: Install, update, or roll back failures for Edge and Edge WebView2
         href: manageability/update-install-rollback-failures.md
+  - name: Security and Privacy
+    items:
+      - name: Troubleshoot common sign-in problems
+        href: security/troubleshoot-sign-in-issues.md
   - name: Web Platform and Development
     items:
       - name: Failure to deploy self-hosted extension via group policy
         href: development/self-host-extension-deploy.md
+      - name: IE mode blocks add-on installation because of unverified publisher
+        href: development/ie-mode-blocks-addon.md
       - name: Self-hosted extension doesn't update automatically
         href: development/self-host-extension-update.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
+  - name: Security and Privacy
+    items:
+      - name: Saved site icons change unexpectedly on the new tab page
+        href: security/site-icons-change-new-tab-page.md
 

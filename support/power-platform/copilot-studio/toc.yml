@@ -13,3 +13,5 @@ items:
   href: knowledge/toc.yml
 - name: Licensing
   href: licensing/toc.yml
+- name: Lifecycle Management
+  href: lifecycle-management/toc.yml  

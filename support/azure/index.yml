@@ -62,7 +62,15 @@ productDirectory:
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
     - url: azure-monitor/welcome-azure-monitor.yml
-      text: Troubleshooting articles for Azure Monitor
+      text: Troubleshooting articles for Azure Monitor Activity Logs
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Application Insights
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Log Analytics
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Agent (Linux and Windows)
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor Event Hubs
   - title: Azure Service Fabric
     imageSrc: "https://static.docs.com/ui/media/product/azure/service-fabric-clusters.svg"
     links:
