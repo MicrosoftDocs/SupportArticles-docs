@@ -23,32 +23,103 @@ You have a web site that is hosted on Internet Information Services (IIS). When 
 
 ## Cause
 
-Each client has a unique IP address. If the server defines a list of IP addresses that are not allowed to access the site and the IP address you are using is on this list, you will receive the error message.
+IIS provides the **IP Address and Domain Restrictions** feature that allows administrators to control which clients can access a website or application.
 
-This is a feature that grants or denies specific users access to a Web site, directory, or file.
+If a client IP address is:
+
+- Explicitly listed in the **deny rules**, or  
+- Not included in the allow list when the server is configured to deny unspecified clients  
+
+IIS returns the **HTTP 403.6** response.
+
+Restrictions can be configured at multiple levels in IIS:
+
+- Server level  
+- Website level  
+- Application level  
+- Directory or file level  
+
+If a restriction exists at any level in the configuration hierarchy, the request may be rejected.
+
 
 ## Resolution
 
-To resolve this problem, follow these steps.
+### Method 1: Review IP address restrictions in IIS Manager
 
-1. Using the **Internet Service Manager** (Microsoft Management Console), open the Internet Information Server (IIS) snap-in and select the Web site reporting the 403.6 error. Right-click the Web site, virtual directory, or file where the error is occurring. Click **Properties** to display the property sheet for that item.
+1. Open **Internet Information Services (IIS) Manager**.
+2. In the **Connections** pane, select the server, site, or application where the issue occurs.
+3. In **Features View**, double-click **IP Address and Domain Restrictions**.
+4. Review the configured rules.
 
-2. Select the appropriate **Directory Security** or **File Security** property page. Under **IP Address** and **Domain Name Restrictions**, click **Edit**.
+#### To allow the client IP address
 
-3. In the **IP Address** and **Domain Name Restrictions** dialog box, if the **Denied Access** option is selected, then add the IP address, network ID, or domain of the computer that requires access to the exceptions list.
+1. Select **Add Allow Entry** in the **Actions** pane.
+2. Enter the IP address or subnet mask.
+3. Select **OK**.
 
-In the **IP Address** and **Domain Name Restrictions** dialog box, if the **Granted Access** option is selected, then remove the IP address, network ID, or domain of the computer that requires access to the exceptions list.
+#### To remove a blocking rule
 
-> [!IMPORTANT]
->
-> - When you set security properties for a specific Web site, you automatically set the same security properties for directories and files belonging to that site, unless the security properties of the individual directories and files have been previously set.
-> - Your Web server will prompt you for permission to reset the properties of individual directories and files when you attempt to set security properties for your Web site. If you choose to reset these properties, your previous security settings will be replaced by the new settings. The same condition applies when you set security properties for a directory containing subdirectories or files with previously set security properties.
+1. Locate the rule that blocks the IP address.
+2. Select the rule.
+3. Choose **Remove** from the **Actions** pane.
 
-> [!NOTE]
->
-> - By default, some sites are only granted access from the IP address 127.0.0.1, which corresponds to the computer name *localhost* and is considered a different address/name than the NetBIOS or fully qualified domain name (FQDN) of the Web server. To access a site restricted to localhost, you must be at the console of the computer with the localhost restriction.
-> - Computers accessing your server across proxy servers will appear to have the IP address of the proxy server.
-> - Restricting by domain name is not recommended because it decreases the performance of your Web server by forcing the Web server to perform a reverse DNS lookup for each connection to that site. In addition to increasing the load on the Web server, reverse lookups can also result in unexpected denials.
+---
+
+### Method 2: Verify the default restriction policy
+
+In **IP Address and Domain Restrictions**, select **Edit Feature Settings**.
+
+Two policies are available:
+
+| Policy | Behavior |
+|------|------|
+| Allow unspecified clients | All clients are allowed except those explicitly denied |
+| Deny unspecified clients | Only explicitly allowed IPs can access |
+
+If **Deny unspecified clients** is configured, the client IP address must be explicitly added as an **allow rule**.
+
+---
+
+### Method 3: Check configuration files
+
+IP restrictions can also be configured in **web.config** or **applicationHost.config**.
+
+Example configuration:
+
+```xml
+<ipSecurity allowUnlisted="false">
+    <add ipAddress="127.0.0.1" allowed="true" />
+</ipSecurity>
+```
+
+If allowUnlisted="false" is specified, only IP addresses that are explicitly listed as allowed can access the application.
+
+### Method 4: Check for proxy or load balancer scenarios
+
+If the website is behind a proxy, gateway, or load balancer, IIS might receive requests from the intermediate device instead of the original client.
+
+In this case:
+
+1. Review IIS logs to determine the IP address recorded for the request.
+
+2. Verify whether the proxy or load balancer IP address needs to be allowed.
+
+3. Check whether headers such as X-Forwarded-For are used to pass the original client IP.
+
+## Additional Considerations
+
+Additional considerations
+### Domain name restrictions
+
+Restricting access by domain name requires reverse DNS lookups, which can introduce latency and may cause unexpected access issues if DNS resolution fails.
+
+### Proxy servers
+
+If a client connects through a proxy server, IIS will see the proxy server’s IP address instead of the original client IP address.
+
+### Localhost-only configurations
+
+Some sites are configured to allow access only from 127.0.0.1, which restricts access to requests originating from the server itself.
 
 ## References
 
