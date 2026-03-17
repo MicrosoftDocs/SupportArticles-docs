@@ -24,10 +24,6 @@ This article applies to the following scenarios:
 
 If you're experiencing a VM settings issue, start by following the [Troubleshooting checklist](#troubleshooting-checklist). The checklist helps you isolate the cause of the issue and resolve the most common problems before you try more advanced troubleshooting steps.
 
-## Known issue: Confidential VMs running on Hyper-V on Windows Server 2022 might intermittently stop responding or restart unexpectedly
-
-To fix this issue, install the latest Windows update. The [May 23, 2025—KB5061906 (OS Build 20348.3695) Out-of-band](https://support.microsoft.com/topic/may-23-2025-kb5061906-os-build-20348-3695-out-of-band-4ad7e163-1b8d-4774-bb98-d376cae6ea81) update and later updates include the fix for this issue.
-
 ## Troubleshooting checklist
 
 Before you start deep-dive troubleshooting, follow this checklist to help isolate what's causing the issue. The steps in this checklist might also help you fix the most common underlying issues.
@@ -98,7 +94,8 @@ Try using different methods to access VM settings, and compare the results. Use 
 
 This section addresses the following common issues that involve VM settings:
 
-- [VM settings window opens slowly or freezes](#vm-settings-window-opens-slowly-or-freezes)
+- [Confidential Hyper-V VMs that run on Windows Server 2022 might intermittently stop responding or restart unexpectedly](#confidential-hyper-v-vms-that-run-on-windows-server-2022-might-intermittently-stop-responding-or-restart-unexpectedly)
+- [VM settings window opens slowly or freezes](#vm-settings-window-opens-slowly-or-stops-responding)
 - [VMs don't migrate or quick-migrate](#vms-dont-migrate-or-quick-migrate)
 - [Can't expand or edit virtual disks (.vhd or .vhdx format)](#cant-expand-or-edit-virtual-disks-vhd-or-vhdx-format)
 - [Can't connect to VM console (0x80004005 or other connection errors)](#cant-connect-to-vm-console-0x80004005-or-other-connection-errors)
@@ -107,6 +104,10 @@ This section addresses the following common issues that involve VM settings:
 - [Cluster resource doesn't come online](#cluster-resource-doesnt-come-online)
 
 For more information about each of these issues, see the following sections.
+
+### Confidential Hyper-V VMs that run on Windows Server 2022 might intermittently stop responding or restart unexpectedly
+
+To fix this issue, install the latest Windows update. The [May 23, 2025—KB5061906 (OS Build 20348.3695) Out-of-band](https://support.microsoft.com/topic/may-23-2025-kb5061906-os-build-20348-3695-out-of-band-4ad7e163-1b8d-4774-bb98-d376cae6ea81) update and later updates include the fix for this issue.
 
 ### VM settings window opens slowly or stops responding
 
