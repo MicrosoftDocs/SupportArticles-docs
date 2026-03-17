@@ -1,6 +1,6 @@
 ---
 title: Guidance for troubleshooting virtual machine settings issues
-description: 
+description: Discusses how to troubleshoot issues that affect virtual machine (VM) settings in Hyper-V environments.
 ms.reviewer: kaushika, jeffhugh
 ms.service: azure-virtual-machines
 ms.topic: faq
@@ -13,17 +13,15 @@ ms.custom:
 
 ## Summary
 
-This article provides a thorough troubleshooting approach for Hyper-V virtual machine settings issues, including:
+Use this guide to troubleshoot issues that affect virtual machine (VM) settings in Hyper-V environments. VM settings affect not only how VMs function, but also how effectively you can manage them. This article includes a structured troubleshooting checklist, solutions for common issues, and data collection guidance to help you resolve VM settings problems efficiently.
 
-- Slow settings use
-- Migration failures
-- Disk editing errors
-- Configuration issues
-- Console connection issues.
+This article applies to the following scenarios:
 
-Regularly review logs, keep your environment updated, and make sure storage and network configurations follow Microsoft best practices. If these steps don't fix your issue, consult Microsoft Support for specialized assistance, referencing relevant logs and error details to accelerate root cause analysis.
+- Hyper-V hosts that run on Windows Server
+- Standalone and clustered Hyper-V deployments
+- Management tools that include Hyper-V Manager, Failover Cluster Manager, System Center Virtual Machine Manager (SCVMM), or Windows PowerShell
 
-Hyper-V is Microsoft's virtualization platform, used to run virtual machines (VMs) on Windows Server and Windows desktop operating systems. Although robust, Hyper-V environments can encounter a variety of issues particularly with VM settings, configuration changes, live migration, resource allocation, storage, and networking. This guide offers a comprehensive troubleshooting approach to rapidly diagnose, resolve, and prevent recurring problems with Hyper-V virtual machine settings, ensuring minimal downtime and optimal VM performance for administrators and end-users.
+If you're experiencing a VM settings issue, start by following the [Troubleshooting checklist](#troubleshooting-checklist). The checklist helps you isolate the cause of the issue and resolve the most common problems before you attempt more advanced troubleshooting steps.
 
 ## Known issue: Confidential VMs running on Hyper-V on Windows Server 2022 might intermittently stop responding or restart unexpectedly
 
