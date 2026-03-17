@@ -22,11 +22,11 @@ This article applies to the following scenarios:
 - Standalone and clustered Hyper-V deployments
 - Management tools that include Hyper-V Manager, Failover Cluster Manager, System Center Virtual Machine Manager (SCVMM), or Windows PowerShell
 
-If you're experiencing a VM settings issue, start by following the [Troubleshooting checklist](#troubleshooting-checklist). The checklist helps you isolate the cause of the issue and resolve the most common problems before you attempt more advanced troubleshooting steps.
+If you're experiencing a VM settings issue, start by following the [Troubleshooting checklist](#troubleshooting-checklist). The checklist helps you isolate the cause of the issue and resolve the most common problems before you try more advanced troubleshooting steps.
 
 ## Known issue: Confidential VMs running on Hyper-V on Windows Server 2022 might intermittently stop responding or restart unexpectedly
 
-To fix this issue, install the latest Windows Update. The [May 23, 2025—KB5061906 (OS Build 20348.3695) Out-of-band](https://support.microsoft.com/topic/may-23-2025-kb5061906-os-build-20348-3695-out-of-band-4ad7e163-1b8d-4774-bb98-d376cae6ea81) update and later updates has the fix for this issue.
+To fix this issue, install the latest Windows update. The [May 23, 2025—KB5061906 (OS Build 20348.3695) Out-of-band](https://support.microsoft.com/topic/may-23-2025-kb5061906-os-build-20348-3695-out-of-band-4ad7e163-1b8d-4774-bb98-d376cae6ea81) update and later updates include the fix for this issue.
 
 ## Troubleshooting checklist
 
@@ -50,7 +50,7 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
 
 - **Gather and review log data**. Review log entries for relevant events or messages. For recommendations about which data to collect, see [Data collection](#data-collection). As a starting point, review the following information:
   - System event log
-  - Hyper-V event log (In Event Viewer, go to **Applications and Services Logs > Microsoft > Windows > Hyper-V**)
+  - Hyper-V event log (In Event Viewer, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Hyper-V**)
   - Any process dump files that you collected
   - Any network trace data that you collected
 
@@ -62,11 +62,11 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
   - Storage hardware, firmware, and drivers
   - Host firmware
 
-- To check the health of the VMs, use Hyper-V Manager. If any of the VMs are "stuck" or unresponsive, finish this checklist, and then if you need further troubleshooting assistance, see [Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments](hyper-v-start-state-access-failures-clustered-standalone.md).
+- To check the health of the VMs, use Hyper-V Manager. If any of the VMs are "stuck" or unresponsive, finish this checklist. Then, if you need further troubleshooting assistance, see [Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments](hyper-v-start-state-access-failures-clustered-standalone.md).
 
-- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager. If you find issues in the cluster infrastructure, finish this checklist, and then see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md) to identify appropriate troubleshooting assistance.
+- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager. If you find issues in the cluster infrastructure, finish this checklist. Then, see [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md) to identify appropriate troubleshooting assistance.
 
-- To check the health of the storage subsystem, run `chkdsk` in scan mode. Open a Windows Command Prompt window as an admin, and then run the following command:
+- To check the health of the storage subsystem, run `chkdsk` in scan mode. Open a Windows Command Prompt window as an administrator, and then run the following command:
 
   ```console
   chkdsk /scan
@@ -108,20 +108,20 @@ This section addresses the following common issues that involve VM settings:
 
 For more information about each of these issues, see the following sections.
 
-### VM settings window opens slowly or freezes
+### VM settings window opens slowly or stops responding
 
 #### Symptoms
 
-- The VM settings console takes several minutes to open, or freezes entirely.
-- Other management tasks, like live migration or host refresh, run slowly or stop.
+- The VM settings console takes several minutes to open, or stops responding (freezes) entirely.
+- Other management tasks, such as live migration or host refresh, run slowly or stop.
 
 #### Possible causes
 
 - The storage subsystem has an excessive number of attached disks or logical unit numbers (LUNs).
 - One or more disks or LUNs failed.
 - Storage drivers or firmware are outdated.
-- Disks aren't correctly set up (for example, VMware-based disks on Windows-based hosts).
-- Bottleneck of I/O tasks in the storage subsystem.
+- Disks aren't set up correctly (for example, VMware-based disks on Windows-based hosts).
+- A bottleneck of I/O tasks exists in the storage subsystem.
 
 #### Resolution
 
@@ -136,36 +136,36 @@ For more information about each of these issues, see the following sections.
 If the issue persists, collect the data that's described in [Data collection](#data-collection), and then contact Microsoft Support.
 
 > [!NOTE]  
-> Restarting the affected host might temporarily mitigate a persistent issue of this type.
+> You might be able to temporarily mitigate a persistent issue of this kind by restarting the affected host.
 
 ### VMs don't migrate or quick-migrate
 
 #### Symptoms
 
-- The migration doesn't finish. In some cases, the migration stops at 66% complete.
-- After migrating to its destination host, the VM doesn't come online.
-- The Event logs record error messages that indicate that a cluster disk or resource isn't available, or a processor isn't compatible.
+- The migration doesn't finish. In some cases, the migration stops at 66 percent complete.
+- After the VM migrates to its destination host, it doesn't come online.
+- Error entries in the event logs indicate that a cluster disk or resource is unavailable, or a processor is incompatible.
 
 #### Possible cause
 
 Missing or corrupted VM configuration files can interfere with migrations.
 
 > [!IMPORTANT]  
-> A number of factors can cause migration issues. For more detailed information about troubleshooting live migration, see [Troubleshoot live migration issues](troubleshoot-live-migration-issues.md). In particular, the article has detailed solutions for common resource and compatibility issues.
+> Several factors can cause migration issues. For more detailed information about troubleshooting live migration, see [Troubleshoot live migration issues](troubleshoot-live-migration-issues.md). That article includes detailed solutions for common resource and compatibility issues.
 
 #### Resolution
 
 To fix this issue, follow these steps:
 
-1. Check the health of the affected VMs. Identify any VMs that have issues related to their configuration files.
-1. For each affected VM, recreate the VM configuration file and reattach the .vhd or .vhdx file.
+1. Check the health of the affected VMs. Identify any VMs that have issues that are related to their configuration files.
+1. For each affected VM, re-create the VM configuration file, and reattach the .vhd or .vhdx file.
 
 ### Can't expand or edit virtual disks (.vhd or .vhdx format)
 
 #### Symptoms
 
-- In Hyper-V Manager, the **Disk expansion** option for the affected disk isn't available (grayed out).
-- You see the following error message:
+- In Hyper-V Manager, the **Disk expansion** option for the affected disk is unavailable (grayed out).
+- You receive the following error message:
   - `Edit is not available because checkpoints exist for this virtual machine.`
 - After you merge checkpoints, .avhd or .avhdx files for the affected disk persist.
 
@@ -182,7 +182,7 @@ To fix this issue, follow these steps:
 
 - Merge all the pending checkpoints. You might have to power off and then power on the affected VM to force the checkpoints to merge.  
 
-  If merge tasks are "stuck," see [Can't create, merge, or delete checkpoints](hyper-v-snapshots-checkpoints-differencing-disks.md#cant-create-merge-or-delete-checkpoints). That article provides detailed instructions for dealing with checkpoint issues.
+  If merge tasks are "stuck," see [Can't create, merge, or delete checkpoints](hyper-v-snapshots-checkpoints-differencing-disks.md#cant-create-merge-or-delete-checkpoints). That article provides detailed instructions for how to deal with checkpoint issues.
 
 ### Can't connect to VM console (0x80004005 or other connection errors)
 
@@ -204,13 +204,13 @@ To fix this issue, follow these steps:
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-1. Make sure that the management client (like Hyper-V Virtual Machine Connection, vmconnect.exe) is healthy and is set up correctly.
-1. Make sure that the required protocols and protocol versions (like TLS 1.2) are enabled and that they match on the host and the client.
+1. Make sure that the management client (such as Hyper-V Virtual Machine Connection, vmconnect.exe) is healthy and set up correctly.
+1. Make sure that the required protocols and protocol versions (such as TLS 1.2) are enabled and that they match on the host and the client.
 
 1. Use Registry Editor to review the registry entries under the `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\Schannel` subkey. For more information about the registry settings that support TLS, see [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings).
    If the settings aren't correct, import the correct Schannel registry entries from a host that's working correctly.
 1. Review your Group Policy settings, and make sure that the **Restrict delegation of credentials to remote servers** Group Policy object (GPO) setting is set to **Disabled**.
-1. If the issue persists, collect traces by using tools like [Process Monitor](/sysinternals/downloads/procmon) or Wireshark, and export relevant events from the event logs. If you have to contact Microsoft Support, review [Data collection](#data-collection) for more details.
+1. If the issue persists, collect traces by using tools such as [Process Monitor](/sysinternals/downloads/procmon) or Wireshark, and export relevant events from the event logs. If you have to contact Microsoft Support, review [Data collection](#data-collection) for more details.
 
 ### High usage of host CPU or memory, or resource contention
 
@@ -218,7 +218,7 @@ To fix this issue, follow these steps:
 
 - VM performance is slow.
 - VMs have high latency.
-- VMs can't start and generate insufficient memory error messages.
+- VMs can't start, and they generate insufficient memory error messages.
 - After you make changes or install updates, resource usage remains consistently high on Hyper-V hosts.
 - Integration services generate protocol mismatch error messages.
 
@@ -227,7 +227,7 @@ To fix this issue, follow these steps:
 - Memory or CPU resources are overcommitted.
 - Dynamic memory or Non-Uniform Memory Access (NUMA) aren't set up correctly.
 - The integration services are out of date.
-- Background processes like third-party backup or antivirus agents consume more resources than expected.
+- Background processes such as third-party backup or antivirus agents consume more resources than expected.
 
 #### Resolutions
 
@@ -235,18 +235,18 @@ To fix this issue, follow these steps:
 1. Review and optimize the Hyper-V dynamic memory and buffer configuration. For more information, see the following articles:
    - [Hyper-V Dynamic Memory Overview](/windows-server/virtualization/hyper-v/dynamic-memory)
    - [Hyper-V Virtual NUMA Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn282282(v=ws.11))
-1. To avoid overcommitting resources, review the available host resources and optimize the allocations for VMs. For more information, see [Virtual Machine Resource Controls](/windows-server/virtualization/hyper-v/manage/manage-hyper-v-cpugroups).
+1. To avoid overcommitting resources, review the available host resources, and optimize the allocations for VMs. For more information, see [Virtual Machine Resource Controls](/windows-server/virtualization/hyper-v/manage/manage-hyper-v-cpugroups).
 1. Restart the host.
-1. After making changes, monitor resource usage. If issues persist, you might have to continue to tune allocations. Use tools like Task Manager, Process Monitor, or Performance Monitor (Perfmon).
+1. After you make changes, monitor resource usage. If issues persist, you might have to continue to tune allocations. Use tools such as Task Manager, Process Monitor, or Performance Monitor (Perfmon).
 
 ### Can't save, change, or locate a VM configuration file
 
 #### Symptoms
 
-- In the VM management console, you can't edit CPU, memory, network, or disk settings. The VM settings aren't available (grayed out).
-- VM doesn't start, and you see the following error message: "No boot entries are configured for this VM."
+- In the VM management console, you can't edit CPU, memory, network, or disk settings. The VM settings are unavailable (grayed out).
+- The VM doesn't start, and you receive the following error message: "No boot entries are configured for this VM."
 - The information about the VM on the GUI management console doesn't match the information that PowerShell cmdlets generate.
-- On the host, in File Explorer, you can't find the VM configuration file, or the configuration file references the wrong path.
+- In File Explorer on the host, you can't find the VM configuration file, or the configuration file references the wrong path.
 
 #### Possible causes
 
@@ -269,7 +269,7 @@ To fix this issue, follow these steps:
 #### Symptoms
 
 - In a clustered Hyper-V environment, you restart the cluster hosts. Afterwards, one or more cluster resources don't come online.
-- The event logs have events that indicate issues that relate to cluster resources or state transitions.
+- Error entries in the event logs indicate issues that relate to cluster resources or state transitions.
 
 #### Possible causes and resolutions
 
@@ -288,7 +288,7 @@ If you need additional assistance, collect the following data, and then contact 
   - Storage devices, firmware, and drivers
 
 - Screenshots of unexpected behavior or error messages.
-- Trace or dump data, including data files from ProcDump, ProcMon, PerfMon, or `livekd`.
+- Trace or dump file data, including data files from ProcDump, ProcMon, PerfMon, or `livekd`.
 
 ### Data for Hyper-V related issues
 
@@ -302,7 +302,7 @@ Additionally, gather the following information:
 
 ### Data for cluster-related issues
 
-Use Microsoft's troubleshooting scripts (TSS) to automatically gather information for troubleshooting. For instructions, see [Collect data to analyze and troubleshoot clustering and high availability scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=/troubleshoot/windows-server/context/context).
+Use Microsoft troubleshooting scripts (TSS) to automatically gather information for troubleshooting. For instructions, see [Collect data to analyze and troubleshoot clustering and high availability scenarios](../../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=/troubleshoot/windows-server/context/context).
 
 Additionally, gather the following information:
 
