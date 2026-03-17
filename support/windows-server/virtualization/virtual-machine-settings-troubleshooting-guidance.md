@@ -50,9 +50,9 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
 
 - **Gather and review log data**. Review log entries for relevant events or messages. For recommendations about which data to collect, see [Data collection](#data-collection). As a starting point, review the following information:
   - System event log
-  - Hyper-V application event log (In Event Viewer, go to **Applications and Services Logs > Microsoft > Windows > Hyper-V**)
-  - Any process dump files that you've collected
-  - Any network trace data that you've collected
+  - Hyper-V event log (In Event Viewer, go to **Applications and Services Logs > Microsoft > Windows > Hyper-V**)
+  - Any process dump files that you collected
+  - Any network trace data that you collected
 
 ### Step 2: Check the health of the VMs and the underlying infrastructure
 
@@ -118,7 +118,7 @@ For more information about each of these issues, see the following sections.
 #### Possible causes
 
 - The storage subsystem has an excessive number of attached disks or logical unit numbers (LUNs).
-- One or more disks or LUNs has failed.
+- One or more disks or LUNs failed.
 - Storage drivers or firmware are outdated.
 - Disks aren't correctly set up (for example, VMware-based disks on Windows-based hosts).
 - Bottleneck of I/O tasks in the storage subsystem.
@@ -164,7 +164,7 @@ To fix this issue, follow these steps:
 
 #### Symptoms
 
-- In Hyper-V Manager, the **Disk expansion** option for the affected disk is not available (grayed out).
+- In Hyper-V Manager, the **Disk expansion** option for the affected disk isn't available (grayed out).
 - You see the following error message:
   - `Edit is not available because checkpoints exist for this virtual machine.`
 - After you merge checkpoints, .avhd or .avhdx files for the affected disk persist.
@@ -296,7 +296,7 @@ Use Microsoft's troubleshooting scripts (TSS) to automatically gather informatio
 
 Additionally, gather the following information:
 
-- Relevant event logs from the System and Application logs, as well as from the Hyper-V log. The Hyper-V log is available in Event Viewer at **Applications and Services** > **Microsoft** > **Windows** > **Hyper-V**. You can export this information from Event Viewer.
+- Relevant events from the System and Application logs, and events from the Hyper-V log. The Hyper-V log is available in Event Viewer at **Applications and Services** > **Microsoft** > **Windows** > **Hyper-V**. You can export this information from Event Viewer.
 
 - VM configuration information. Use Hyper-V Manager or PowerShell to export this information.
 
