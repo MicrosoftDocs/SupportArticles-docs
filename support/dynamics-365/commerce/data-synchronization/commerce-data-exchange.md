@@ -109,7 +109,7 @@ No download sessions are applied, and no upload sessions are created.
 The cause depends on the type of scale unit:
 
 - **Cloud Scale Unit (CSU)**: The CSU deployment in the Power Platform admin center might have fail, and the CSU becomes unregistered from the data synchronization cloud service.
-- **On-premises scale unit**: The Async Client Service on the Windows machine might not run correctly.
+- **On-premises scale unit**: The Async Client Service on the Windows server might not run correctly.
 - **Store Commerce app**: The app might not be running, or [offline mode](/dynamics365/commerce/dev-itpro/implementation-considerations-offline) might not be configured.
 
 > [!NOTE]
@@ -120,7 +120,7 @@ The cause depends on the type of scale unit:
 Follow these steps based on the type of scale unit:
 
 - **Cloud Scale Unit**: Redeploy the CSU by using the [Power Platform admin center](/power-platform/admin/support-overview).
-- **On-premises scale unit**: Check the status and events for the Async Client Service on the Windows machine.
+- **On-premises scale unit**: Check the status and events for the Async Client Service on the Windows server.
 - **Store Commerce app**: Verify that the app is running and that offline mode is configured in the **Database Connection Status** view.
 
 If the problem persists, create a Microsoft Support request by using the [Power Platform admin center](/power-platform/admin/support-overview).
