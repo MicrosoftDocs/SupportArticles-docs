@@ -237,6 +237,10 @@ Resolution
 - Verify that the *Web.config* path exists and has correct permissions set.
 - Collect Process Monitor logs to get more information about the error.
 
+## ASP .NET Core related
+
+Should you be having this error for an ASP .NET Core application, this error is due to the fact that you've not installed the ASP .NET Hosting Bundle for the .NET version targeted by your application.
+
 ## Fix break IIS configuration file issue when you update windows
 
 As a general safety rule, all configuration files (not limited to IIS) should be backup before installing any update. If you use Virtual Machines, take a snapshot of the Virtual Machine before you update it. This advice isn’t limited to Windows updates.

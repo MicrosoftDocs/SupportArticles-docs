@@ -55,6 +55,8 @@ IIS Static Content: A 404.3 entry in the W3C Extended Log file is recorded when 
 
 For more information about other, less common causes of this error message, see [IIS hidden static files return HTTP 404 or Access Denied errors](hidden-static-files-http-404-access-denied.md).
 
+Additional 404 statuses may be connected with the Request Filtering Module. For the full list, see [Request Filtering](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/security/requestfiltering/).
+
 ## More information
 
 - For more information about virtual directories, see [Virtual Directory \<virtualDirectory>](/iis/configuration/system.applicationhost/sites/site/application/virtualdirectory).
