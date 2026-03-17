@@ -31,7 +31,7 @@
 
 - name: Mobile app
   items:
-    - name: Troubleshoot common issues with the Field Service mobile app
+    - name: Common issues with the Field Service mobile app
       href: mobile-app/mobile-app-common-issues.md 
     - name: Booking timestamp is created with an incorrect time
       href: mobile-app/booking-timestamp-incorrect-time.md
