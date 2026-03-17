@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 03/05/2026
+ms.date: 03/17/2026
 ms.author: allensu
 ms.custom: sap:Cannot connect to my VM
 ---
@@ -268,7 +268,7 @@ Use one of the following alternatives for secure remote access:
 | Method | Description |
 |--------|-------------|
 | [Azure Bastion](/azure/bastion/bastion-overview) | Provides secure RDP/SSH access through the Azure portal over TLS. No public IP required on the VM. |
-| [Just-in-time (JIT) VM access](/azure/defender-for-cloud/just-in-time-access-usage) | Opens RDP port only when needed and for a limited time. Requires Microsoft Defender for Cloud. |
+| [Just-in-time (JIT) VM access](/azure/defender-for-cloud/enable-just-in-time-access) | Opens RDP port only when needed and for a limited time. Requires Microsoft Defender for Cloud. |
 | [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) | Connects through a site-to-site or point-to-site VPN tunnel. RDP traffic stays on a private connection. |
 | [Azure Private Link](/azure/private-link/private-link-overview) | Access VMs through private endpoints without exposing them to the public internet. |
 
