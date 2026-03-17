@@ -18,7 +18,7 @@ ms.custom: sap:Connectivity
 
 You might experience connectivity problems between Azure virtual machines (VMs). This article provides troubleshooting steps to help you resolve this problem. 
 
-If your Azure issue is not addressed in this article, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post your issue in these forums, or post to [@AzureSupport](https://twitter.com/AzureSupport) on Twitter. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
+If this article doesn't address your Azure issue, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post your issue in these forums, or post to [@AzureSupport](https://twitter.com/AzureSupport) on Twitter. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
 
 ## Symptom
 
@@ -37,7 +37,7 @@ One Azure VM can't connect to another Azure VM.
 9. [Check Inter-VNet connectivity](#step-9-check-inter-vnet-connectivity)
 
 > [!NOTE]  
-> You can also use Test-NetConnection module in PowerShell to diagnose information for a connection.
+> You can also use the `Test-NetConnection` module in PowerShell to diagnose information for a connection.
 > 
 ## Troubleshooting steps
 
@@ -63,7 +63,7 @@ For more information, see [Add network interfaces to or remove from virtual mach
 
 ### Step 2: Check whether network traffic is blocked by NSG or UDR
 
-Network Security Groups (NSGs) and User-Defined Routes (UDRs) can interfere with traffic flow between VMs. NSGs can be applied at both the subnet level and the network interface (NIC) level, and traffic must pass through both. Use the following substeps to diagnose NSG or UDR-related blocking.
+Network Security Groups (NSGs) and User-Defined Routes (UDRs) can interfere with traffic flow between VMs. Apply NSGs at both the subnet level and the network interface (NIC) level. Traffic must pass through both. Use the following substeps to diagnose NSG or UDR-related blocking.
 
 #### Use Network Watcher IP Flow Verify
 
@@ -141,12 +141,12 @@ Traffic between VMs must pass through both the subnet-level NSG and the NIC-leve
 #### Common NSG misconfigurations
 
 - **Priority conflicts**: A higher-priority deny rule (lower number) overrides a lower-priority allow rule. Verify rule priorities to ensure allow rules aren't being shadowed.
-- **Missing inbound rules on both NSGs**: Inbound allow rules may be needed on both the subnet-level NSG and the NIC-level NSG.
-- **Source IP restrictions**: Rules that restrict source IP addresses may inadvertently block traffic from VMs in different subnets or virtual networks. Verify the source IP or use appropriate service tags.
+- **Missing inbound rules on both NSGs**: You might need inbound allow rules on both the subnet-level NSG and the NIC-level NSG.
+- **Source IP restrictions**: Rules that restrict source IP addresses might inadvertently block traffic from VMs in different subnets or virtual networks. Verify the source IP or use appropriate service tags.
 - **Default deny rules**: The default `DenyAllInbound` rule (priority 65500) blocks all inbound traffic not explicitly allowed. Add explicit allow rules with a lower priority number.
-- **Service tag misunderstandings**: Service tags like `VirtualNetwork` include the virtual network address space, peered networks, and on-premises networks connected via gateways. Verify that the service tag in your rules matches the expected traffic source.
+- **Service tag misunderstandings**: Service tags like `VirtualNetwork` include the virtual network address space, peered networks, and on-premises networks connected through gateways. Verify that the service tag in your rules matches the expected traffic source.
 
-#### Analyze traffic with flow logs
+#### Analyze traffic by using flow logs
 
 If the issue is intermittent or difficult to reproduce, use flow logs to analyze traffic patterns:
 
@@ -154,29 +154,29 @@ If the issue is intermittent or difficult to reproduce, use flow logs to analyze
 - **NSG flow logs**: NSG flow logs capture information about IP traffic flowing through an NSG. For more information, see [NSG flow logs overview](/azure/network-watcher/nsg-flow-logs-overview).
 
   > [!IMPORTANT]
-  > NSG flow logs will be retired on September 30, 2027. As part of this retirement, you'll no longer be able to create new NSG flow logs after June 30, 2025. We recommend [migrating](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
+  > NSG flow logs retire on September 30, 2027. As part of this retirement, you can't create new NSG flow logs after June 30, 2025. [Migrate](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
 
 Use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to visualize flow log data and identify blocked traffic patterns.
 
-#### Check User-Defined Routes (UDRs)
+#### Check user-defined routes (UDRs)
 
-If NSG rules appear correct, check whether a UDR is redirecting traffic to an unexpected next hop (such as a network virtual appliance) that may be dropping or filtering the traffic.
+If NSG rules appear correct, check whether a UDR is redirecting traffic to an unexpected next hop (such as a network virtual appliance) that might be dropping or filtering the traffic.
 
 1. In the Azure portal, go to the VM's **Networking** settings.
-2. Select the network interface, then select **Effective routes**.
-3. Look for routes that may be sending traffic to a network virtual appliance (NVA) or unexpected next hop.
+2. Select the network interface, and then select **Effective routes**.
+3. Look for routes that send traffic to a network virtual appliance (NVA) or unexpected next hop.
 
 For more information, see [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview).
 
-### Step 3: Check whether network traffic is blocked by VM firewall
+### Step 3: Check whether VM firewall blocks network traffic
 
 Disable the firewall, and then test the result. If the problem is resolved, verify the firewall settings, and then re-enable the firewall.
 
-### Step 4: Check whether VM app or service is listening on the port
+### Step 4: Check whether VM app or service listens on the port
 
-You can use one of the following methods to check whether the VM app or service is listening on the port.
+Use one of the following methods to check whether the VM app or service listens on the port.
 
-- Run the following commands to check whether the server is listening on that port.
+- Run the following commands to check whether the server listens on that port.
 
 **Windows VM**
 
@@ -192,9 +192,9 @@ netstat -l
 
 - Run the **telnet** command on the virtual machine itself to test the port. If the test fails, the application or service isn't configured to listen on that port.
 
-### Step 5: Check whether the problem is caused by SNAT
+### Step 5: Check whether SNAT causes the problem
 
-In some scenarios, the VM is placed behind a load balance solution that has a dependency on resources outside of Azure. In these scenarios, if you experience intermittent connection problems, the problem may be caused by [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections). To resolve the issue, use one of the following approaches:
+In some scenarios, you place the VM behind a load balancer solution that depends on resources outside of Azure. In these scenarios, if you experience intermittent connection problems, [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections) might cause the problem. To resolve the issue, use one of the following approaches:
 
    - Associate a [NAT gateway](/azure/virtual-network/nat-gateway/nat-overview) with the subnet (recommended).
    - Assign a [public IP address](/azure/virtual-network/ip-services/virtual-network-public-ip-address) directly to the VM.
@@ -212,7 +212,7 @@ All VMs that you create in Azure by using the classic deployment model can autom
 
 ### Step 8: Try to connect to a VM network share
 
-If you can't connect to a VM network share, the problem may be caused by unavailable NICs in the VM. To delete the unavailable NICs, see [How to delete the unavailable NICs](/troubleshoot/azure/virtual-machines/reset-network-interface#delete-the-unavailable-nics)
+If you can't connect to a VM network share, the problem might be caused by unavailable NICs in the VM. To delete the unavailable NICs, see [How to delete the unavailable NICs](/troubleshoot/azure/virtual-machines/reset-network-interface#delete-the-unavailable-nics).
 
 ### Step 9: Check Inter-VNet connectivity
 
