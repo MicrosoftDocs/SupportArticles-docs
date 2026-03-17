@@ -4,7 +4,7 @@ description: Learn how to diagnose and resolve SSH connection failures caused by
 author: asudbring
 ms.author: allensu
 ms.service: azure-virtual-network
-ms.date: 03/05/2026
+ms.date: 03/17/2026
 ms.topic: troubleshooting
 ms.custom: sap:Connectivity
 ---
@@ -47,10 +47,11 @@ Every NSG includes default rules. Default rules can't be deleted, but they can b
 
 | Priority | Name | Direction | Action | Description |
 |----------|------|-----------|--------|-------------|
-| 65000 | AllowVnetInBound | Inbound | Allow | Allows all inbound traffic within the virtual network |
+| 65000 | AllowVNetInBound | Inbound | Allow | Allows all inbound traffic within the virtual network |
 | 65001 | AllowAzureLoadBalancerInBound | Inbound | Allow | Allows traffic from Azure Load Balancer |
 | 65500 | DenyAllInBound | Inbound | Deny | Denies all other inbound traffic |
 | 65000 | AllowVnetOutBound | Outbound | Allow | Allows all outbound traffic within the virtual network |
+| 65001 | AllowInternetOutBound | Outbound | Allow | Allows outbound traffic to the internet |
 | 65500 | DenyAllOutBound | Outbound | Deny | Denies all other outbound traffic |
 
 The `DenyAllInBound` rule at priority 65500 blocks all inbound SSH traffic from the internet unless a higher-priority allow rule exists.
@@ -200,9 +201,12 @@ Network Watcher Connection Troubleshoot checks connectivity from the VM and iden
     - **Protocol**: Select **TCP**.
 4. Select **Check**. The results show the connectivity status and any blocking NSG rules.
 
-### Check NSG flow logs
+### Check flow logs
 
-NSG flow logs and VNet flow logs record information about IP traffic flowing through NSGs. Use flow logs to identify blocked SSH traffic patterns.
+> [!IMPORTANT]
+> NSG flow logs will be retired on September 30, 2027. You can no longer create new NSG flow logs. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs.
+
+Virtual network (VNet) flow logs record information about IP traffic flowing through your virtual network. Use flow logs to identify blocked SSH traffic patterns.
 
 #### Azure CLI
 
@@ -317,7 +321,7 @@ Instead of exposing port 22 to the internet, use more secure connection methods 
 
 ## Related content
 
-- [Troubleshoot NSG misconfigurations blocking traffic in Azure Virtual Network](virtual-network-troubleshoot-nsg-blocking-traffic.md)
+- [How network security groups filter network traffic](/azure/virtual-network/network-security-group-how-it-works)
 - [Troubleshoot connectivity problems between Azure VMs](virtual-network-troubleshoot-connectivity-problem-between-vms.md)
 - [Diagnose a virtual machine network traffic filter problem](diagnose-network-traffic-filter-problem.md)
 - [Network security groups overview](/azure/virtual-network/network-security-groups-overview)
