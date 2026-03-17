@@ -5,7 +5,7 @@ author: asudbring
 ms.author: allensu
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/05/2026
+ms.date: 03/17/2026
 ms.custom:
   - sap:Connectivity
 # Customer intent: As a network engineer, I want to troubleshoot route propagation and sync issues with virtual network peering, so that I can restore connectivity between peered virtual networks.
@@ -24,7 +24,7 @@ This article helps you diagnose and resolve common route propagation, peering sy
 
 ## Cause 1: Route propagation delays after peering creation or modification
 
-After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **VNet peering** for each address range in the peered virtual network. These route updates don't take effect instantly - propagation can take a few minutes to complete.
+After you create or modify a virtual network peering, Azure automatically adds system routes with the next hop type **Virtual network peering** for each address range in the peered virtual network. These route updates don't take effect instantly - propagation can take a few minutes to complete.
 
 ### Symptoms
 
@@ -41,7 +41,7 @@ After you create or modify a virtual network peering, Azure automatically adds s
    **Azure portal:**
    1. Go to the virtual machine, and select **Networking**.
    2. Select the network interface.
-   3. Select **Effective routes** and look for entries with the source **VNet peering** and the address prefix of the peered virtual network.
+   3. Select **Effective routes** and look for entries with the next hop type **Virtual network peering** and the address prefix of the peered virtual network.
 
    **Azure CLI:**
 
@@ -179,7 +179,7 @@ If you already use a custom DNS server, configure conditional forwarding for the
 
 ## Cause 4: BGP route conflicts with peering routes
 
-In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes advertised from on-premises can conflict with virtual network peering routes. Because BGP-learned routes have lower priority than system routes for peered virtual networks, this conflict typically occurs when a UDR or a more specific BGP route overrides the peering route.
+In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes advertised from on-premises can appear to conflict with virtual network peering routes. System routes for peered virtual networks take precedence over BGP-learned routes, even when BGP advertises a more specific prefix. However, a user-defined route (UDR) can override both peering and BGP system routes, which can inadvertently redirect peering traffic through a gateway or virtual appliance.
 
 ### Symptoms
 
@@ -198,14 +198,14 @@ In hybrid environments that use VPN gateways or ExpressRoute with BGP, routes ad
      --output table
    ```
 
-2. Look for routes where the address prefix overlaps with the peered virtual network's address space. Compare the source column:
-   - **VNet peering** routes are system routes added by the peering.
+2. Look for routes where the address prefix overlaps with the peered virtual network's address space. Compare the next hop type column:
+   - **Virtual network peering** routes are system routes added by the peering.
    - **VirtualNetworkGateway** routes are learned from BGP.
    - **User** routes are UDRs from an associated route table.
 
-3. If a BGP route overlaps with a peering route, consider the following approaches:
-   - **Filter the BGP advertisement**: On the on-premises router, stop advertising the address range that overlaps with the peered virtual network's address space.
-   - **Add a UDR**: Create a more specific UDR that directs traffic for the peered virtual network's address space with the next hop type **VNet peering** to override the BGP route.
+3. If traffic is being routed incorrectly, consider the following approaches:
+   - **Remove conflicting UDRs**: If a user-defined route is overriding the peering route, remove or modify the UDR. System peering routes already take precedence over BGP routes, so a UDR shouldn't be needed to maintain peering connectivity. Review the route table associated with the subnet and remove any UDR that inadvertently directs peering traffic to a gateway or virtual appliance. You can't specify **Virtual network peering** as the next hop type in a UDR.
+   - **Filter the BGP advertisement**: On the on-premises router, stop advertising the address range that overlaps with the peered virtual network's address space. Although system peering routes take precedence over BGP, removing unnecessary overlapping advertisements simplifies routing and troubleshooting.
    - **Redesign the address space**: If the overlap exists because on-premises and a peered virtual network share the same address range, plan an address space migration to eliminate the conflict.
 
 4. Verify the routes learned by the virtual network gateway:
@@ -273,18 +273,20 @@ Proactive monitoring helps you detect peering problems before they affect connec
 
 | Metric | Description |
 |---|---|
-| **Bytes in peering** | Total bytes that entered the virtual network through a peering connection. |
-| **Bytes out peering** | Total bytes that left the virtual network through a peering connection. |
-| **Peering status** | The status of the peering (Connected, Disconnected, Initiated). |
+| **Round trip time for Pings to a VM** (`PingMeshAverageRoundtripMs`) | Average round trip time for pings sent between VMs, including VMs in peered virtual networks. A sudden increase can indicate peering connectivity problems. |
+| **Failed Pings to a VM** (`PingMeshProbesFailedPercent`) | Percentage of failed pings to a destination VM. A spike can indicate that peering routes are missing or that traffic is being blocked. |
+
+> [!NOTE]
+> The peering state (Connected, Disconnected, Initiated) is a resource property, not an Azure Monitor metric. To check the peering state, use `az network vnet peering show` or view the peering details in the Azure portal under **Settings** > **Peerings**.
 
 ### Set up alerts for peering problems
 
 1. In the [Azure portal](https://portal.azure.com), go to your virtual network.
 2. Select **Metrics** under **Monitoring**.
-3. Select the **Bytes in peering** or **Bytes out peering** metric and review the traffic pattern.
+3. Select the **Failed Pings to a VM** or **Round trip time for Pings to a VM** metric and review the traffic pattern.
 4. To create an alert for sudden traffic drops:
    1. Select **New alert rule**.
-   2. Set the condition to trigger when **Bytes in peering** drops below a threshold that indicates a connectivity failure.
+   2. Set the condition to trigger when **Failed Pings to a VM** (`PingMeshProbesFailedPercent`) exceeds a threshold that indicates a connectivity failure, or when **Round trip time for Pings to a VM** (`PingMeshAverageRoundtripMs`) exceeds an acceptable latency.
    3. Configure the action group to notify your operations team.
 
 ### Use Network Watcher for peering diagnostics
@@ -293,7 +295,7 @@ Proactive monitoring helps you detect peering problems before they affect connec
 
 - **[Connection Troubleshoot](/azure/network-watcher/network-watcher-connectivity-overview)**: Test connectivity between VMs in peered virtual networks and identify where the connection fails (NSG, UDR, or routing problem).
 - **[Next hop](/azure/network-watcher/network-watcher-next-hop-overview)**: Verify the next hop for traffic between VMs in peered virtual networks. This check confirms whether traffic uses the peering route or is redirected by a UDR.
-- **[Effective routes](/azure/network-watcher/network-watcher-check-ip-flow-verify-portal)**: View the effective routes on a network interface to verify that peering routes are present and not overridden.
+- **[Effective routes](/azure/virtual-network/diagnose-network-routing-problem)**: View the effective routes on a network interface to verify that peering routes are present and not overridden.
 - **[IP flow verify](/azure/network-watcher/network-watcher-ip-flow-verify-overview)**: Check whether NSG rules are blocking traffic between peered virtual networks.
 
 ## Next steps
