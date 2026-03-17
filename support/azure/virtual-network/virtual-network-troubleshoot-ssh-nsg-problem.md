@@ -31,19 +31,19 @@ You experience one or more of the following symptoms when you connect to an Azur
 
 ## How NSG rules affect SSH traffic
 
-NSG rules are evaluated by priority within each direction (inbound and outbound). Lower priority numbers are evaluated first. When a rule matches the traffic, evaluation stops. This evaluation process means that a deny rule with a higher priority (lower number) blocks SSH traffic even when an allow rule exists at a lower priority (higher number).
+Evaluate NSG rules by priority within each direction (inbound and outbound). Lower priority numbers are evaluated first. When a rule matches the traffic, stop evaluation. This evaluation process means that a deny rule with a higher priority (lower number) blocks SSH traffic even when an allow rule exists at a lower priority (higher number).
 
-When NSGs are applied at both the subnet and the network interface (NIC) levels:
+When you apply NSGs at both the subnet and the network interface (NIC) levels, evaluation happens as follows:
 
-1. **Inbound traffic**: The subnet NSG is evaluated first. Traffic that the subnet NSG allows is then evaluated by the NIC NSG.
+1. **Inbound traffic**: Evaluate the subnet NSG first. If the subnet NSG allows the traffic, evaluate the NIC NSG.
 
-2. **Outbound traffic**: The NIC NSG is evaluated first. Traffic that the NIC NSG allows is then evaluated by the subnet NSG.
+2. **Outbound traffic**: Evaluate the NIC NSG first. If the NIC NSG allows the traffic, evaluate the subnet NSG.
 
-SSH traffic must be allowed by both NSGs to reach the VM. A deny at either level blocks the connection.
+To reach the VM, both NSGs must allow SSH traffic. A deny at either level blocks the connection.
 
 ### Default NSG rules that affect SSH
 
-Every NSG includes default rules. Default rules can't be deleted, but they can be overridden by higher-priority rules. The following default rules affect SSH connectivity:
+Every NSG includes default rules. You can't delete default rules, but you can override them by using higher-priority rules. The following default rules affect SSH connectivity:
 
 | Priority | Name | Direction | Action | Description |
 |----------|------|-----------|--------|-------------|
@@ -71,7 +71,7 @@ An NSG deny rule with a lower priority number (higher priority) can override an 
 | Priority | Name | Port | Action | Result |
 |----------|------|------|--------|--------|
 | 100 | DenyAll | * | Deny | Blocks all traffic, including SSH |
-| 200 | AllowSSH | 22 | Allow | Never evaluated—blocked by priority 100 |
+| 200 | AllowSSH | 22 | Allow | Never evaluated - blocked by priority 100 |
 
 **Verify**: Review all rules with a lower priority number than your SSH allow rule to check for conflicting deny rules.
 
@@ -91,7 +91,7 @@ An NSG rule might allow SSH only from specific IP addresses. If your current IP 
 
 ### Subnet-level and NIC-level NSG conflict
 
-When NSGs are applied at both levels, both must allow the traffic. A common misconfiguration is an allow rule at one level and a missing or conflicting rule at the other.
+When you apply NSGs at both levels, both must allow the traffic. A common misconfiguration is an allow rule at one level and a missing or conflicting rule at the other.
 
 **Example:**
 
@@ -102,11 +102,11 @@ When NSGs are applied at both levels, both must allow the traffic. A common misc
 
 ### Custom SSH port not accounted for
 
-If the Linux VM's SSH daemon (`sshd`) is configured to listen on a nonstandard port (for example, 2222 instead of 22), the NSG rule must allow traffic on that custom port, not port 22.
+If the Linux VM's SSH daemon (`sshd`) listens on a nonstandard port (for example, 2222 instead of 22), the NSG rule must allow traffic on that custom port, not port 22.
 
 **Verify**: Check the VM's `/etc/ssh/sshd_config` file for the `Port` directive and ensure the NSG allows traffic on that port.
 
-## Diagnose NSG issues blocking SSH
+## Diagnose NSG problems blocking SSH
 
 ### Use IP Flow Verify in the Azure portal
 
@@ -204,7 +204,7 @@ Network Watcher Connection Troubleshoot checks connectivity from the VM and iden
 ### Check flow logs
 
 > [!IMPORTANT]
-> NSG flow logs will be retired on September 30, 2027. You can no longer create new NSG flow logs. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs.
+> NSG flow logs retire on September 30, 2027. You can't create new NSG flow logs. [Migrate to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs.
 
 Virtual network (VNet) flow logs record information about IP traffic flowing through your virtual network. Use flow logs to identify blocked SSH traffic patterns.
 
@@ -218,7 +218,7 @@ az monitor log-analytics query \
     --output table
 ```
 
-## Resolve SSH NSG issues
+## Resolve SSH NSG problems
 
 ### Allow SSH traffic on port 22
 
