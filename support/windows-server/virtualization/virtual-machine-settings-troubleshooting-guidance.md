@@ -1,11 +1,12 @@
 ---
 title: Guidance for troubleshooting virtual machine settings issues
 description: Discusses how to troubleshoot issues that affect virtual machine (VM) settings in Hyper-V environments.
-ms.reviewer: kaushika, jeffhugh
-ms.service: azure-virtual-machines
-ms.topic: faq
+ms.reviewer: kaushika, jeffhugh, v-appelgatet
 ms.date: 03/23/2026
 ai-usage: ai-assisted
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
 ms.custom: 
  - sap:Virtualization and Hyper-V\Configuration of virtual machine settings
 ---
