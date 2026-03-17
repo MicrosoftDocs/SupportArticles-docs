@@ -7,11 +7,11 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/05/2026
+ms.date: 03/17/2026
 ms.custom:
   - fasttrack-edit
   - sfi-image-nochange
-  - = sap:Connectivity
+  - sap:Connectivity
 # Customer intent: As a cloud administrator, I want to troubleshoot problems that prevent the deletion or modification of a virtual network or subnet, so I can resolve blocking resource dependencies and maintain my cloud resources.
 ---
 
@@ -30,7 +30,7 @@ If your Azure problem isn't addressed in this article, visit the Azure forums on
 1. [Check whether a virtual network gateway is running in the virtual network](#check-whether-a-virtual-network-gateway-is-running-in-the-virtual-network).
 2. [Check whether an application gateway is running in the virtual network](#check-whether-an-application-gateway-is-running-in-the-virtual-network).
 3. [Check whether Azure container instances still exist in the virtual network](#check-whether-azure-container-instances-still-exist-in-the-virtual-network).
-4. [Check whether Microsoft Entra Domain Service is enabled in the virtual network](#check-whether-azure-active-directory-domain-service-is-enabled-in-the-virtual-network).
+4. [Check whether Microsoft Entra Domain Services is enabled in the virtual network](#check-whether-azure-active-directory-domain-service-is-enabled-in-the-virtual-network).
 5. [Check whether the virtual network is connected to other resources](#check-whether-the-virtual-network-is-connected-to-other-resources).
 6. [Check whether a virtual machine is still running in the virtual network](#check-whether-a-virtual-machine-is-still-running-in-the-virtual-network).
 7. [Check whether the virtual network is stuck in migration](#check-whether-the-virtual-network-is-stuck-in-migration).
@@ -77,6 +77,9 @@ If there's an application gateway, you must remove it before you can delete the 
 
 ### Check whether Azure container instances still exist in the virtual network
 
+> [!NOTE]
+> Network profiles have been retired as of the Azure Container Instances API version `2021-07-01`. If you're using this or a more recent API version, network profiles are no longer created. The following guidance applies only to legacy deployments that used an older API version.
+
 1. In the Azure portal, go to the resource group's **Overview** page.
 1. In the header for the list of the resource group's resources, select **Show hidden types**. The network profile type is hidden in the Azure portal by default.
 1. Select the network profile related to the container groups.
@@ -90,11 +93,11 @@ If these steps don't resolve the issue, use these [Azure CLI commands](/azure/co
 
 <a name='check-whether-azure-active-directory-domain-service-is-enabled-in-the-virtual-network'></a>
 
-### Check whether Microsoft Entra Domain Service is enabled in the virtual network
+### Check whether Microsoft Entra Domain Services is enabled in the virtual network
 
-If the Active Directory Domain Service is enabled and connected to the virtual network, you can't delete this virtual network. 
+If Microsoft Entra Domain Services is enabled and connected to the virtual network, you can't delete this virtual network.
 
-To disable the service, see [Disable Microsoft Entra Domain Services using the Azure portal](/entra/identity/domain-services/delete).
+To delete the managed domain, see [Delete a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/delete).
 
 ### Check whether the virtual network is connected to other resources
 
@@ -155,7 +158,9 @@ az network private-endpoint delete \
 
 ### Check whether service endpoints are configured on the subnet
 
-Service endpoints configured on a subnet can prevent deletion. Remove all service endpoints before you delete the subnet.
+Service endpoints are subnet-level configurations and don't block subnet deletion by themselves. As stated in the [Azure Virtual Network FAQ](/azure/virtual-network/virtual-networks-faq), subnet deletion is supported even when service endpoints are turned on.
+
+However, if you need to remove service endpoints as part of a broader cleanup or modification, use the following steps:
 
 1. In the Azure portal, go to the virtual network and select **Subnets**.
 2. Select the subnet and check the **Service endpoints** section.
@@ -386,7 +391,7 @@ az network vnet subnet update \
 |---|---|---|
 | `Subnet <name> is in use and cannot be deleted.` | Resources (NICs, private endpoints, or service deployments) are still in the subnet. | Use the [diagnostic commands](#diagnostic-commands) to identify blocking resources and remove them. |
 | `InUseSubnetCannotBeDeleted` | The subnet contains IP configurations from VMs, load balancers, or other resources. | Remove or move the resources to another subnet, then retry the deletion. |
-| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Remove service endpoints in the Azure portal or by using Azure CLI, then delete the subnet. |
+| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Service endpoints alone don't block subnet deletion. If this error occurs with other blocking resources, resolve those resources first. To remove service endpoints, see [Check whether service endpoints are configured on the subnet](#check-whether-service-endpoints-are-configured-on-the-subnet). |
 | `SubnetHasDelegations` | The subnet is delegated to a service and resources from that service are deployed. | Remove the service resources that use the delegation, then remove the delegation. |
 | `SubnetWithExternalResourcesCannotBeUsedByOtherResources` | Another Azure service has deployed resources in the subnet. | Identify the service by using service association links and remove the deployed resources. |
 | `InUseNetworkInterfaceCannotBeAssociatedWithSubnet` | An orphaned NIC has an IP configuration that conflicts with subnet operations. | Delete the orphaned NIC, then retry the operation. |
