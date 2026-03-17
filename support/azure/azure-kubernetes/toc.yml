@@ -267,6 +267,8 @@ items:
       href: extensions/troubleshoot-network-isolated-cluster.md
     - name: Troubleshoot node auto provisioning
       href: extensions/troubleshoot-node-auto-provision.md
+    - name: Troubleshoot upgrade failure due to conflicting PodDisruptionBudgets
+      href: extensions/troubleshoot-eviction-autoscaler.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
