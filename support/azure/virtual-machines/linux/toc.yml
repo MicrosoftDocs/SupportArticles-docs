@@ -83,18 +83,16 @@ items:
   - name: Redeploy Linux virtual machine to new Azure node
     href: redeploy-to-new-node-linux.md
 
-- name: VM Performance
+- name: VM performance
   items:
   - name: Azure Performance diagnostics (PerfInsights)
     items:
     - name: Overview
-      href: ../windows/performance-diagnostics.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: /azure/azure-monitor/vm/performance-diagnostics?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Install and run reports
-      href: how-to-use-perfinsights-linux.md
+      href: /azure/azure-monitor/vm/performance-diagnostics-run?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Analyze data
-      href: ../windows/performance-diagnostics-vm-extension.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Extension 
-      href: ../windows/perfinsights-and-scale-set-vm-instances.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: /azure/azure-monitor/vm/performance-diagnostics-analyze?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Troubleshoot VM Performance Bottlenecks
     href: troubleshoot-performance-bottlenecks-linux.md
     items:
