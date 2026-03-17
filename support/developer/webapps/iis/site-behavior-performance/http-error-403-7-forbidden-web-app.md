@@ -9,7 +9,7 @@ ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, incl
 
 This article helps you resolve the problem where **HTTP Error 403.7** may be thrown when you run a web application that is hosted on a server that is running Microsoft Internet Information Services (IIS) 7.0 or later.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0 or later
+_Original product version:_ &nbsp; Internet Information Services 7.0 or later  
 _Original KB number:_ &nbsp; 942067
 
 ## Symptoms
