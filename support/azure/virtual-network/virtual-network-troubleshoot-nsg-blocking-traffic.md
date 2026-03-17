@@ -23,21 +23,21 @@ This article helps you diagnose and resolve common Network Security Group (NSG) 
 
 ## How NSG rule evaluation works
 
-Understanding how Azure evaluates NSG rules is critical to diagnosing blocking issues.
+Understanding how Azure evaluates NSG rules is critical to diagnosing blocking problems.
 
 ### Rule processing order
 
-NSG rules are evaluated by **priority**, from lowest number (highest priority) to highest number (lowest priority):
+Azure evaluates NSG rules by **priority**, from lowest number (highest priority) to highest number (lowest priority):
 
 1. Azure evaluates inbound and outbound rules separately.
 2. For inbound traffic, Azure first evaluates the **subnet-level NSG**, then the **NIC-level NSG**.
 3. For outbound traffic, Azure first evaluates the **NIC-level NSG**, then the **subnet-level NSG**.
-4. Within each NSG, rules are evaluated in priority order (lowest number first).
-5. When a matching rule is found, evaluation stops. No further rules are processed.
+4. Within each NSG, Azure evaluates rules in priority order (lowest number first).
+5. When Azure finds a matching rule, evaluation stops. Azure doesn't process any further rules.
 
 ### Subnet-level and NIC-level NSG interaction
 
-When NSGs are applied at both the subnet and NIC levels, traffic must be allowed by **both** NSGs to flow successfully. If either NSG has a deny rule that matches the traffic, the traffic is blocked.
+When you apply NSGs at both the subnet and NIC levels, **both** NSGs must allow the traffic for it to flow successfully. If either NSG has a deny rule that matches the traffic, the traffic is blocked.
 
 **Example**: An inbound RDP connection to a VM:
 
@@ -48,7 +48,7 @@ When NSGs are applied at both the subnet and NIC levels, traffic must be allowed
 
 ### Default security rules
 
-Every NSG includes the following default rules that can't be deleted:
+Every NSG includes the following default rules that you can't delete:
 
 | Priority | Name | Direction | Action | Description |
 |----------|------|-----------|--------|-------------|
@@ -78,7 +78,7 @@ A higher-priority deny rule (lower priority number) overrides a lower-priority a
 
 ### NSG applied at both subnet and NIC with conflicting rules
 
-**Symptom**: Traffic is allowed by one NSG but blocked by the other. The effective result is that traffic is denied.
+**Symptom**: One NSG allows traffic but the other NSG blocks it. The effective result is that traffic is denied.
 
 **Example**: The subnet-level NSG allows SSH (port 22), but the NIC-level NSG has the default `DenyAllInBound` rule and no explicit allow rule for SSH.
 
@@ -89,7 +89,7 @@ A higher-priority deny rule (lower priority number) overrides a lower-priority a
 
 ### Source IP address restrictions
 
-**Symptom**: Traffic from certain sources is blocked, while traffic from others in the same virtual network works.
+**Symptom**: Traffic from certain sources is blocked, while traffic from other sources in the same virtual network works.
 
 **Example**: An NSG rule allows RDP from source `10.0.1.0/24`, but the connecting VM is in subnet `10.0.2.0/24`. The source IP doesn't match the rule, so traffic falls through to the default deny.
 
@@ -112,13 +112,13 @@ Service tags represent groups of IP address prefixes. Understanding what each ta
 **Common issues**:
 
 - Using `Internet` as the source when you intended to allow traffic from other Azure resources. Use `VirtualNetwork` or a specific service tag instead.
-- Assuming `VirtualNetwork` only includes the local VNet — it also includes peered networks and on-premises connections through gateways.
+- Assuming `VirtualNetwork` only includes the local VNet. It also includes peered networks and on-premises connections through gateways.
 
 For the full list of service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
-### Application Security Group (ASG) misconfigurations
+### Application security group (ASG) misconfigurations
 
-**Symptom**: NSG rules referencing ASGs don't work as expected.
+**Symptom**: NSG rules that reference ASGs don't work as expected.
 
 **Common issues**:
 
@@ -129,7 +129,7 @@ For the full list of service tags, see [Virtual network service tags](/azure/vir
 **Resolution**:
 
 1. Verify VM membership in the ASG. In the Azure portal, go to the VM's **Networking** settings and check the **Application Security Groups** section.
-- Verify the ASG and NSG are in the same virtual network.
+2. Verify the ASG and NSG are in the same virtual network.
 3. If you need to combine ASG and IP-based rules, use separate rules.
 
 ### Default deny rules blocking expected traffic
@@ -141,15 +141,15 @@ For the full list of service tags, see [Virtual network service tags](/azure/vir
 **Resolution**:
 
 1. Add an explicit allow rule for the required protocol and port with a priority number lower than 65500.
-2. For common scenarios:
+2. For common scenarios, use the following rules:
 
-   - **RDP**: Allow TCP port 3389
-   - **SSH**: Allow TCP port 22
-   - **HTTP**: Allow TCP port 80
-   - **HTTPS**: Allow TCP port 443
-   - **Custom application**: Allow the specific protocol and port used by your application
+   - **RDP**: Allow TCP port 3389.
+   - **SSH**: Allow TCP port 22.
+   - **HTTP**: Allow TCP port 80.
+   - **HTTPS**: Allow TCP port 443.
+   - **Custom application**: Allow the specific protocol and port used by your application.
 
-## Diagnose NSG blocking issues
+## Diagnose NSG blocking problems
 
 ### Use Network Watcher IP Flow Verify
 
@@ -237,22 +237,22 @@ Connection Troubleshoot tests the full connection path between a source and dest
 
 For more information, see [Connection troubleshoot overview](/azure/network-watcher/connection-troubleshoot-overview).
 
-### Analyze traffic with flow logs
+### Analyze traffic by using flow logs
 
-Use flow logs to analyze traffic patterns and identify blocked flows, especially for intermittent issues.
+Use flow logs to analyze traffic patterns and identify blocked flows, especially for intermittent problems.
 
 #### VNet flow logs (recommended)
 
-VNet flow logs provide per-flow state and throughput data at the virtual network level, capturing traffic for all workloads within the virtual network. VNet flow logs are the recommended option for new deployments.
+VNet flow logs provide per-flow state and throughput data at the virtual network level. They capture traffic for all workloads within the virtual network. VNet flow logs are the recommended option for new deployments.
 
 For more information, see [VNet flow logs overview](/azure/network-watcher/vnet-flow-logs-overview).
 
 #### NSG flow logs
 
 > [!IMPORTANT]
-> NSG flow logs will be retired on September 30, 2027. As part of this retirement, you'll no longer be able to create new NSG flow logs after June 30, 2025. We recommend [migrating](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
+> Azure retires NSG flow logs on September 30, 2027. As part of this retirement, you can't create new NSG flow logs after June 30, 2025. [Migrate](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
 
-NSG flow logs capture information about IP traffic flowing through an NSG. NSG flow logs are useful when you need to analyze traffic at the NSG level.
+NSG flow logs capture information about IP traffic flowing through an NSG. Use NSG flow logs when you need to analyze traffic at the NSG level.
 
 For more information, see [NSG flow logs overview](/azure/network-watcher/nsg-flow-logs-overview).
 
@@ -260,33 +260,33 @@ For more information, see [NSG flow logs overview](/azure/network-watcher/nsg-fl
 
 Use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to visualize flow log data in a dashboard. Traffic Analytics helps you identify:
 
-- Top blocked flows and the NSG rules responsible
+- Top blocked flows and the NSG rules responsible for them
 - Traffic patterns between virtual networks and subnets
-- Unusual traffic volumes that may indicate misconfigurations
+- Unusual traffic volumes that might indicate misconfigurations
 
 ## Resolution patterns
 
 ### Allow specific port traffic
 
-To allow inbound traffic on a specific port (for example, RDP on port 3389):
+To allow inbound traffic on a specific port, such as RDP on port 3389:
 
-1. Identify which NSGs are applied to the VM (both subnet-level and NIC-level).
-2. In **each** NSG, add an inbound allow rule:
-   - **Source**: The appropriate source (specific IP, CIDR range, or service tag)
+1. Identify which NSGs are applied to the VM, including both subnet-level and NIC-level NSGs.
+2. In **each** NSG, add an inbound allow rule with the following settings:
+   - **Source**: The appropriate source, such as a specific IP address, CIDR range, or service tag.
    - **Source port ranges**: `*`
-   - **Destination**: The VM's IP address or `VirtualNetwork`
-   - **Destination port ranges**: The required port (for example, `3389`)
-   - **Protocol**: TCP (or as required)
-   - **Action**: Allow
-   - **Priority**: A number lower than any deny rule that might match
-3. Verify the change with IP Flow Verify.
+   - **Destination**: The VM's IP address or `VirtualNetwork`.
+   - **Destination port ranges**: The required port, such as `3389`.
+   - **Protocol**: TCP or as required.
+   - **Action**: Allow.
+   - **Priority**: A number lower than any deny rule that might match.
+3. Verify the change by using IP Flow Verify.
 
 ### Resolve priority conflicts
 
 1. List all rules in the NSG sorted by priority.
 2. Identify deny rules with a lower priority number (higher priority) than your allow rule.
-3. Either:
-   - Change the allow rule's priority to a lower number than the deny rule.
+3. Choose one of the following options:
+   - Change the allow rule's priority to a lower number than the conflicting deny rule.
    - Remove or modify the conflicting deny rule.
    - Narrow the scope of the deny rule so it doesn't match your desired traffic.
 
@@ -294,7 +294,7 @@ To allow inbound traffic on a specific port (for example, RDP on port 3389):
 
 1. Use the effective security rules view to identify which NSG is blocking the traffic.
 2. Add a matching allow rule to the blocking NSG.
-3. Alternatively, remove the NSG from either the subnet or the NIC to simplify the configuration if dual NSGs aren't required.
+3. To simplify the configuration, remove the NSG from either the subnet or the NIC if you don't need dual NSGs.
 
 ## Best practices for NSG rule management
 
