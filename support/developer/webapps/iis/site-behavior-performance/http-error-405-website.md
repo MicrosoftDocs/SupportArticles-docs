@@ -1,20 +1,22 @@
 ---
-title: HTTP Error 405.0 when you visit Internet Information Services (IIS) websites
-description: Describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications, or because a client uses the POST methods to send a request to a static HTML page.
-ms.date: 04/16/2020
+title: Resolve HTTP 405.0 Errors in IIS 7.0 and Later
+description: Troubleshoot HTTP 405.0 errors on IIS websites. Discover solutions for invalid HTTP methods, WebDAV interference, and POST requests to static file handlers.
+ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: mlaing
+ms.reviewer: mlaing, v-shaywood
 ---
-# HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
-
-This article helps you resolve **HTTP Error 405.0**. This error occurs when you visit a website that's hosted on a server running Internet Information Services (IIS).
+# "HTTP 405.0 - Method not allowed" error message
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942051
 
+## Summary
+
+This article helps you resolve the `HTTP 405.0` error that occurs when you visit a website hosted on a server that runs Internet Information Services (IIS) 7.0 or later. This error can be caused by invalid HTTP methods, POST requests to static file handlers, WebDAV Publishing conflicts, or application code that returns an `HTTP 405.0` response.
+
 ## Symptoms
 
-Consider the following scenario. You have a website that is hosted on a server that is running Internet Information Services (IIS) 7.0 or a later version. When a user goes to this website, the user receives an error message that resembles the following example:
+When you visit the website, you receive an error message that resembles the following example:
 
 > Server Error in Application "**application name**"  
 > HTTP Error 405.0 - Method not allowed  
@@ -22,46 +24,50 @@ Consider the following scenario. You have a website that is hosted on a server t
 > Description of HRESULT  
 > The page you are looking for cannot be displayed because an invalid method (HTTP verb) is being used.
 
-## Cause 1
+## Cause: Invalid HTTP method
 
-This problem occurs because the client makes a Hypertext Transfer Protocol (HTTP) request by using an HTTP method that doesn't comply with the HTTP specifications.
+A client makes an HTTP request by using an HTTP method that doesn't comply with the HTTP specifications.
 
-## Cause 2
+### Solution
 
-This problem occurs because a client makes an HTTP request by sending the `POST` method to a page that is configured to be handled by the `StaticFile` handler. For example, a client sends the `POST` method to a static HTML page. However, pages that are configured for the `StaticFile` handler don't support the `POST` method.
+Make sure that the client sends a request that contains a valid HTTP method:
 
-## Cause 3
-WebDAV Publishing interferes with HTTP PUT.
+1. Open **Notepad** as an administrator.
+1. On the **File** menu, select **Open**.
+1. In the **File name** field, type `%windir%\system32\inetsrv\config\applicationhost.config`, and then select **Open**.
+1. In the `applicationhost.config` file, locate the [`<handlers>`](/iis/configuration/system.webserver/handlers/) tag.
+1. Make sure that all the handlers use valid HTTP methods.
+1. Save the `applicationhost.config` file.
 
-## Cause 4
+## Cause 2: POST request sent to a static file handler
 
-Application returning 405 regardless of HTTP method used 
+A client sends an HTTP request specifying the `POST` method to a page that's configured to be handled by the `StaticFile` handler. For example, a client sends the `POST` method to a static HTML page. Pages that are configured to use the `StaticFile` handler don't support the `POST` method.
 
-## Resolution for cause 1
+### Solution
 
-Make sure that the client sends a request that contains a valid HTTP method. To do so, follow these steps:
+Send the `POST` request to a page that's configured to be handled by a handler other than the `StaticFile` handler (for example, the `ASPClassic` handler). Or, change the request so that it uses the `GET` method instead of `POST`.
 
-1. Select **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then select **Run as administrator**.
+## Cause 3: WebDAV Publishing interferes with HTTP PUT
 
-    > [!NOTE]
-    >  If you are prompted for an administrator password or for a confirmation, type the password, or provide confirmation.
-2. On the **File** menu, select **Open**. In the **File name** box, type `%windir%\system32\inetsrv\config\applicationhost.config`, and then select **Open**.
-3. In the *ApplicationHost.config* file, locate the `<handlers>` tag.
-4. Make sure that all the handlers use valid HTTP methods.
-5. Save the *ApplicationHost.config* file.
+[WebDAV Publishing](/iis/install/installing-publishing-technologies/installing-and-configuring-webdav-on-iis) might interfere with HTTP `PUT` requests and cause `HTTP 405.0` errors.
 
-## Resolution for cause 2
+### Solution
 
-Send the POST request to a page that's configured to be handled by a handler other than the `StaticFile` handler. For example, the `ASPClassic` handler. Or, change the request that is being handled by the `StaticFile` handler so that it's a GET request instead of a POST request.
+Remove WebDAV modules and handlers from the `web.config` file. If you don't use WebDAV Publishing, remove the feature from the IIS server:
 
-## Resolution for cause 3
+1. Select **Start**, type `Turn Windows features on or off` in the search box, and then select **Turn Windows features on or off**.
+1. In the **Windows Features** window, expand **Internet Information Services** > **World Wide Web Services** > **Common HTTP Features**.
+1. Clear the **WebDAV Publishing** checkbox.
 
-Remove WebDAV modules and handlers from the *Web.config* file. Also remove the WebDAV Publishing feature from your computer if it's not being used. To do so, follow these steps:
+## Cause 4: Application code returns an HTTP 405.0 response
 
-1. Select **Start**, type *Turn Windows features on or off* in the **Start Search** box, and then select **Turn Windows features on or off**.
-1. In the Windows Features window, expand **Internet Information Services** -> **World Wide Web Services** -> **Common HTTP Features**.
-1. Uncheck the **WebDAV Publishing** feature.
+Application code returns an `HTTP 405.0` response to signify an error.
 
-## Resolution for cause 4
+### Solution: Use a different HTTP status code
 
-Your application code is likely to be returning the HTTP 405 status code as a means to signify an error. It is best to use a custom HTTP status other than the ones defined or, in the event of a client error, use the HTTP 400 status code with a custom description outlining the error in question.
+Use a custom status code instead of the predefined `HTTP 405.0`. For client errors, use the [`HTTP 400`](../health-diagnostic-performance/http-status-code.md#400---bad-request) status code with a custom description that outlines the specific error.
+
+## Related content
+
+- [Troubleshoot Web API2 apps that work in Visual Studio and fail on a production IIS server](/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- [Troubleshoot 4xx and 5xx HTTP errors](troubleshoot-http-error-code.md)

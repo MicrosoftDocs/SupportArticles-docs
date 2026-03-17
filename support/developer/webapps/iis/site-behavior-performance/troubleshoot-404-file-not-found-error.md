@@ -1,64 +1,81 @@
 ---
-title: HTTP error 404 file not found on a server
-description: This article provides resolutions for the problem where HTTP error 404 file not found on a server that is running IIS.
-ms.date: 12/29/2020
+title: Troubleshoot HTTP 404 File Not Found in IIS
+description: Resolve "HTTP 404 - File not found" errors in IIS servers. Identify causes like missing files, disabled extensions, or MIME type issues, and fix them effectively.
+ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
+ms.reviewer: v-shaywood
 ---
-# How system administrators can troubleshoot an HTTP error 404 - File not found error message on a server that is running IIS
-
-This article helps you resolve the problem where HTTP error 404 file not found on a server that is running Internet Information Services (IIS).
-
-> [!NOTE]
-> This article is intended for Web site administrators. End users that experience these errors should notify the Web site administrator of the problem.
+# "HTTP 404 - File not found" error message
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 248033
 
+> [!NOTE]
+> This article is intended for website administrators. If you're an end user, contact your website administrator to report this error.
+
+## Summary
+
+This article helps you troubleshoot and resolve the "HTTP 404 - File not found" error on a server that runs Internet Information Services (IIS). Common causes include renamed, moved, or deleted files, disabled web service extensions, and unmapped MIME types. Resolution steps cover dynamic and static content scenarios, including virtual directory configuration and request filtering.
+
 ## Symptoms
 
-When a Web page is requested, you receive the following error message at the top of the Web browser:
+When you request a webpage, you receive the following error message at the top of the web browser:
 
 > The page cannot be found  
-The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+> The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
 
-You receive the following error message further down on the Web page:
+The following error message also appears further down on the webpage:
 
 > HTTP 404 - File not found  
-Internet Information Services
+> Internet Information Services
 
 ## Cause
 
-The Web server returns the **HTTP 404 - File not found** error message when it cannot retrieve the page that was requested.
+The web server returns the "HTTP 404 - File not found" error message when it can't retrieve the requested page.
 
-The following are some common causes of this error message:
+Common causes include:
 
-- The requested file has been renamed.
-- The requested file has been moved to another location and/or deleted.
-- The requested file is temporarily unavailable due to maintenance, upgrades, or other unknown causes.
-- The requested file does not exist.
-- IIS 6.0: The appropriate Web service extension or MIME type is not enabled.
+- The requested file was renamed.
+- The requested file was moved or deleted.
+- The requested file is temporarily unavailable because of maintenance, upgrades, or other unknown causes.
+- The requested file doesn't exist.
+- IIS 6.0: The appropriate web service extension or MIME type isn't enabled.
 - A virtual directory is mapped to the root of a drive on another server.
 
-## Resolution
+## Solution
 
-To resolve this problem, verify that the file requested in the browser's URL exists on the IIS computer and that it is in the correct location.
+Check that the file in the browser's URL exists on the IIS server and is in the correct location. Use the IIS Microsoft Management Console (MMC) snap-in to find where the requested file should exist in the IIS server's file system.
 
-Use the IIS Microsoft Management Console (MMC) snap-in to determine where the file requested must exist in the IIS computer's file system.
+If the website uses a [virtual directory](/iis/configuration/system.applicationhost/sites/site/application/virtualdirectory) (VDIR), a directory that isn't in the home directory of the website but appears to client browsers as though it is, check that the virtual directory is mapped to a subfolder on a drive or references the files by name.
 
-This is important if the Web site uses a virtual directory (VDIR). A VDIR is a directory that is not contained in the home directory of the Web site, but appears to client browser as though it does. This virtual directory must be mapped to a subfolder on a drive or reference the files by name.
+For example, assume that the URL that caused the 404 error is `http://Microsoft.com/Test/File1.htm`, and the IIS snap-in shows that for the Microsoft.com website, the `/Test/` directory is a virtual directory that maps to `C:\Information` on the IIS server. Check that the `File1.htm` file is in the `C:\Information` directory and that the file name is spelled correctly.
 
-For example, assume that the URL that caused the 404 error is `http://Microsoft.Com/Test/File1.htm`, and the IIS snap-in shows that for Microsoft.Com Web site, the /Test/ directory is actually a virtual directory that maps to the location of c:\Information on the IIS computer. This means that you must verify that the File1.htm file is located in the c:\Information directory (and that the file name is spelled correctly).
+### IIS dynamic content
 
-IIS Dynamic Content: A 404.2 entry in the W3C Extended Log file is recorded when a Web Extension is not enabled. Use the IIS Microsoft Management Console (MMC) snap-in to enable the appropriate Web extension. Default Web Extensions include: ASP, ASP.NET, Server-Side Includes, WebDAV publishing, FrontPage Server Extensions, Common Gateway Interface (CGI). Custom extensions must be added and explicitly enabled. See the IIS Help File for more information.
+The server records a 404.2 entry in the W3C Extended Log file when a web extension isn't enabled. Use the IIS MMC snap-in to enable the appropriate web extension. Default web extensions include:
 
-IIS Static Content: A 404.3 entry in the W3C Extended Log file is recorded when an extension is not mapped to a known extension in the MIME Map property. Use the IIS Microsoft Management Console (MMC) snap-in to configure the appropriate extension in the MIME Map. See the IIS Help file for more information.
+- ASP
+- ASP.NET
+- Server-Side Includes
+- WebDAV publishing
+- FrontPage Server Extensions
+- Common Gateway Interface (CGI)
 
-For more information about other, less common causes of this error message, see [IIS hidden static files return HTTP 404 or Access Denied errors](hidden-static-files-http-404-access-denied.md).
+You must add and explicitly enable custom extensions.
 
-Additional 404 statuses may be connected with the Request Filtering Module. For the full list, see [Request Filtering](https://learn.microsoft.com/en-us/iis/configuration/system.webserver/security/requestfiltering/).
+### IIS static content
 
-## More information
+The server records a 404.3 entry in the W3C Extended Log file when a file extension isn't mapped to a known extension in the [MIME Map](/iis/configuration/system.webserver/staticcontent/mimemap) property. Use the IIS MMC snap-in to configure the appropriate extension in the MIME Map.
 
-- For more information about virtual directories, see [Virtual Directory \<virtualDirectory>](/iis/configuration/system.applicationhost/sites/site/application/virtualdirectory).
+### Request filtering
 
-- For more information about IIS, see [IIS](https://www.iis.net/).
+A 404 response might be related to the Request Filtering module. For more information, see [Request Filtering](/iis/configuration/system.webserver/security/requestfiltering).
+
+### Hidden static files
+
+A 404 response might also be caused by hidden static files. For more information, see [HTTP 404 or Access Denied errors when requesting hidden static files](hidden-static-files-http-404-access-denied.md).
+
+## Related content
+
+- [HTTP status codes in IIS](../health-diagnostic-performance/http-status-code.md)
+- [Troubleshoot 4xx and 5xx HTTP errors](troubleshoot-http-error-code.md)

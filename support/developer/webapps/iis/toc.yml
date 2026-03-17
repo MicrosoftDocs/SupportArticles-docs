@@ -141,7 +141,7 @@ items:
       href: site-behavior-performance/http-403-14-forbidden-webpage.md
     - name: HTTP error 403.16
       href: site-behavior-performance/http-403-forbidden-access-website.md
-    - name: HTTP error 404 file not found on a server
+    - name: '"HTTP 404 - File not found" error message'
       href: site-behavior-performance/troubleshoot-404-file-not-found-error.md
     - name: HTTP error 404 from IIS hidden static files
       href: site-behavior-performance/hidden-static-files-http-404-access-denied.md
@@ -153,13 +153,13 @@ items:
       href: site-behavior-performance/internet-printing-fails.md
     - name: HTTP error 404.17 when you visit a Web site
       href: site-behavior-performance/error-message-you-visit-web-site.md
-    - name: HTTP error 405.0
+    - name: '"HTTP 405.0 - Method not allowed" error message'
       href: site-behavior-performance/http-error-405-website.md
     - name: HTTP error 500 when you use Response.BinaryWrite
       href: site-behavior-performance/http-500-response-binarywrite.md
     - name: HTTP error 500.0 when you visit a web site
       href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
-    - name: HTTP error 500.19
+    - name: '"HTTP 500.19 - Internal Server Error" error message'
       href: site-behavior-performance/http-error-500-19-webpage.md
     - name: HTTP error 501 - Not Implemented
       href: site-behavior-performance/http-error-501-not-implemented.md
