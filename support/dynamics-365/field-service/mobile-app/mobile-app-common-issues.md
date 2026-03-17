@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common issues with the Field Service mobile app
+title: Common issues with the Field Service mobile app
 description: Resolve common issues with the Dynamics 365 Field Service mobile app, including blank screens, offline sync errors, access errors, and WebView resets.
 ms.date: 03/11/2026
 ms.topic: troubleshooting
@@ -10,7 +10,9 @@ ms.reviewer: puneetsingh
 ms.custom: bap-template
 ---
 
-# Troubleshoot common issues with the Field Service mobile app
+# Common issues with the Field Service mobile app
+
+## Summary
 
 This article helps you resolve common issues that occur in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview).
 
@@ -61,7 +63,7 @@ A secondary cause is an offline filter that references a related entity that isn
 
 When a user opens the Field Service mobile app, the user sees the following error message instead of the home screen:
 
-> Contact your administrator for access to your organisation's mobile apps.
+> Contact your administrator for access to your organization's mobile apps.
 
 The user can't proceed past this screen.
 
@@ -105,7 +107,7 @@ When a user opens a PDF or file attachment in the Field Service mobile app, one 
 
 ### Cause
 
-A WebView reset occurs when the mobile operating system terminates the WebView process because it exceeded its memory limit. Field Service, like all model-driven Power Apps, runs as a web application inside a WebView on the mobile client. When a memory-intensive operation—such as opening a large file—causes the WebView process to exceed the operating system's memory threshold, the process is terminated and the app resets.
+A WebView reset occurs when the mobile operating system terminates the WebView process because it exceeded its memory limit. Field Service, like all model-driven Power Apps, runs as a web application inside a WebView on the mobile client. When a memory-intensive operation - such as opening a large file - causes the WebView process to exceed the operating system's memory threshold, the process is terminated and the app resets.
 
 The behavior differs by platform:
 
@@ -139,11 +141,11 @@ When a user tries to sync the Field Service mobile app for offline use, the sync
 
 > The view has related entities that are not available offline.
 
-The offline sync doesn't complete and data isn't available to the user.
+The offline sync doesn't complete and the user can't access the data.
 
 ### Cause
 
-This error occurs when a table filter in the mobile offline profile uses a lookup field that references a related table that isn't included in the profile. When you publish the profile, the sync process validates all filters against the offline-enabled tables and fails if it finds a reference to a table that isn't available offline.
+This error occurs when a table filter in the mobile offline profile uses a lookup field that references a related table that the profile doesn't include. When you publish the profile, the sync process validates all filters against the offline-enabled tables. The sync process fails if it finds a reference to a table that isn't available offline.
 
 ### Resolution
 
@@ -173,7 +175,7 @@ This error occurs when a table filter in the mobile offline profile uses a looku
 
 ### Symptoms
 
-A user with an external or guest Azure Active Directory account can't sign in to the Field Service mobile app. One or more of the following symptoms occur:
+A user with an external or guest Microsoft Entra ID account can't sign in to the Field Service mobile app. One or more of the following symptoms occur:
 
 - The sign-in process completes but the app shows no data or an access error.
 - The user receives an error indicating they don't have the correct permissions.
@@ -181,17 +183,17 @@ A user with an external or guest Azure Active Directory account can't sign in to
 
 ### Cause
 
-The Field Service mobile app doesn't support external guest Azure Active Directory accounts. Guest accounts are user accounts from an external Azure AD tenant that you invite to access your organization's tenant. These accounts have limitations that prevent full access to the mobile app experience, including offline sync and security role enforcement.
+The Field Service mobile app doesn't support external guest Microsoft Entra ID accounts. Guest accounts are user accounts from an external Microsoft Entra ID tenant that you invite to access your organization's tenant. These accounts have limitations that prevent full access to the mobile app experience, including offline sync and security role enforcement.
 
 ### Resolution
 
 **If the user requires full Field Service mobile access:**
 
-The guest user account must be converted to an internal member account in your organization's Azure Active Directory tenant. Contact your Azure AD administrator to create an internal user account and assign a Dynamics 365 Field Service license to it.
+The guest account must be converted to an internal member account in your organization's Microsoft Entra ID tenant. Contact your Azure AD administrator to create an internal user account and assign a Dynamics 365 Field Service license to it.
 
 **If the user only needs to view or update their own service appointments:**
 
-Use the [Field Service customer portal](/dynamics365/field-service/customer-portal-overview) instead of the mobile app. The customer portal supports external users and doesn't require a Field Service license.
+Use the [Field Service customer portal](/dynamics365/field-service/customer-portal-overview) instead of the mobile app. The customer portal supports guests and doesn't require a Field Service license.
 
 > [!NOTE]
 > For a full list of supported user types and platform requirements, see the [Field Service mobile app FAQ](/dynamics365/field-service/mobile/mobile-power-app-faq).
@@ -228,7 +230,7 @@ If users see data from the wrong environment, the app might have cached credenti
 
 1. Select the correct environment.
 
-1. If the environment picker isn't accessible, sign out of the app, sign back in, and select the correct environment during the sign-in flow.
+1. If you can't access the environment picker, sign out of the app, sign back in, and select the correct environment during the sign-in flow.
 
 > [!NOTE]
 > If your organization has multiple environments and users frequently select the wrong one, consider setting a default environment. For more information, see [Set up the Field Service mobile app](/dynamics365/field-service/mobile/set-up-field-service-mobile).
