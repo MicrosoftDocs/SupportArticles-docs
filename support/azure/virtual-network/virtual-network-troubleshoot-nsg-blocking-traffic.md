@@ -7,7 +7,7 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/05/2026
+ms.date: 03/17/2026
 ms.custom: sap:Connectivity
 # Customer intent: "As a network administrator, I want to identify and fix NSG misconfigurations that are blocking expected traffic, so that my Azure virtual network resources can communicate correctly."
 ---
@@ -123,13 +123,13 @@ For the full list of service tags, see [Virtual network service tags](/azure/vir
 **Common issues**:
 
 - The source or destination VM isn't a member of the referenced ASG.
-- The ASG and the NSG are in different regions. ASGs and the NSG that references them must be in the same region.
+- The ASG and the NSG are in different virtual networks. Network interfaces in an ASG and the NSG that references them must exist in the same virtual network.
 - Rules mixing ASGs with IP address ranges in the same rule. A single rule can't combine ASG references with IP address ranges for the same source or destination.
 
 **Resolution**:
 
 1. Verify VM membership in the ASG. In the Azure portal, go to the VM's **Networking** settings and check the **Application Security Groups** section.
-2. Verify the ASG and NSG are in the same region.
+- Verify the ASG and NSG are in the same virtual network.
 3. If you need to combine ASG and IP-based rules, use separate rules.
 
 ### Default deny rules blocking expected traffic
@@ -249,6 +249,9 @@ For more information, see [VNet flow logs overview](/azure/network-watcher/vnet-
 
 #### NSG flow logs
 
+> [!IMPORTANT]
+> NSG flow logs will be retired on September 30, 2027. As part of this retirement, you'll no longer be able to create new NSG flow logs after June 30, 2025. We recommend [migrating](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
+
 NSG flow logs capture information about IP traffic flowing through an NSG. NSG flow logs are useful when you need to analyze traffic at the NSG level.
 
 For more information, see [NSG flow logs overview](/azure/network-watcher/nsg-flow-logs-overview).
@@ -298,7 +301,7 @@ To allow inbound traffic on a specific port (for example, RDP on port 3389):
 - **Use descriptive rule names**: Name rules to reflect their purpose (for example, `Allow-RDP-from-Management-Subnet`).
 - **Use service tags**: Use service tags instead of hard-coded IP addresses where possible for easier maintenance.
 - **Document your rules**: Maintain documentation of NSG rules and their business justification.
-- **Use Azure Bastion or JIT access**: Instead of opening RDP/SSH ports permanently, use [Azure Bastion](/azure/bastion/bastion-overview) or [just-in-time (JIT) VM access](/azure/defender-for-cloud/just-in-time-access-usage) for secure management access.
+- **Use Azure Bastion or JIT access**: Instead of opening RDP/SSH ports permanently, use [Azure Bastion](/azure/bastion/bastion-overview) or [just-in-time (JIT) VM access](/azure/defender-for-cloud/enable-just-in-time-access) for secure management access.
 - **Minimize the number of NSGs**: Apply NSGs at the subnet level when possible to reduce complexity. Use NIC-level NSGs only when VMs in the same subnet require different security policies.
 - **Review rules regularly**: Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) recommendations to identify overly permissive rules.
 - **Enable flow logs**: Enable VNet flow logs or NSG flow logs with Traffic Analytics for ongoing visibility into traffic patterns.
