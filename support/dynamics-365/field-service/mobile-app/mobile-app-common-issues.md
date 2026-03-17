@@ -7,12 +7,10 @@ ms.subservice: field-service-mobile
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: puneetsingh
-ms.custom: bap-template
+ms.custom: sap:Mobile Application\Application is throwing errors, bap-template
 ---
 
-# Common issues with the Field Service mobile app
-
-## Summary
+# Common issues with the Dynamics 365 Field Service mobile app
 
 This article helps you resolve common issues that occur in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview).
 
@@ -189,7 +187,7 @@ The Field Service mobile app doesn't support external guest Microsoft Entra ID a
 
 **If the user requires full Field Service mobile access:**
 
-The guest account must be converted to an internal member account in your organization's Microsoft Entra ID tenant. Contact your Azure AD administrator to create an internal user account and assign a Dynamics 365 Field Service license to it.
+The guest account must be converted to an internal member account in your organization's Microsoft Entra ID tenant. Contact your Microsoft Entra ID administrator to create an internal user account and assign a Dynamics 365 Field Service license to it.
 
 **If the user only needs to view or update their own service appointments:**
 
@@ -235,7 +233,7 @@ If users see data from the wrong environment, the app might have cached credenti
 > [!NOTE]
 > If your organization has multiple environments and users frequently select the wrong one, consider setting a default environment. For more information, see [Set up the Field Service mobile app](/dynamics365/field-service/mobile/set-up-field-service-mobile).
 
-## Related content
+## More information
 
 - [Field Service mobile app overview](/dynamics365/field-service/mobile/overview)
 - [Set up the mobile app](/dynamics365/field-service/mobile/set-up-field-service-mobile)
