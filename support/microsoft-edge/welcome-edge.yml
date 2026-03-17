@@ -52,5 +52,7 @@ landingContent:
           url: development/self-host-extension-deploy.md
         - text: IE mode blocks add-on installation because of unverified publisher
           url: development/ie-mode-blocks-addon.md
+        - text: Self-hosted extension doesn't update automatically
+          url: development/self-host-extension-update.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
