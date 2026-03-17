@@ -120,7 +120,7 @@ Verify that all pods are healthy and only one PDB covers each pod. Then, use one
 
 #### Option 1: Retry using Azure CLI
 
-Re-issue the upgrade command:
+Reissue the upgrade command:
 
 ```bash
 az aks upgrade -g <resource-group> -n <cluster-name> --kubernetes-version <version>
@@ -168,15 +168,15 @@ az aks nodepool scale -g <resource-group> --cluster-name <cluster-name> -n <node
 
 ## More information
 
-To prevent this issue from reoccuring:
+To prevent this issue from reoccurring:
 
 - Make sure that each pod is matched by no more than one PDB. Avoid overlapping label selectors across multiple PDBs in the same namespace.
-- Avoid setting `minAvailable` equal to the total replica count. This practice prevents any evictions from occuring.
+- Avoid setting `minAvailable` equal to the total replica count. This practice prevents any evictions from occurring.
 - Use `maxUnavailable` instead of `minAvailable` when possible as it's easier to reason about during upgrades.
 
 ### Automatic PDB creation with the Eviction Autoscaler extension
 
-The [Eviction Autoscaler](https://github.com/Azure/eviction-autoscaler) extension can automatically create and manage PDBs for your deployments. Ths setup helps you to avoid misconfigured or conflicting PDBs.
+The [Eviction Autoscaler](https://github.com/Azure/eviction-autoscaler) extension can automatically create and manage PDBs for your deployments. This setup helps you to avoid misconfigured or conflicting PDBs.
 
 When installed together with `controllerConfig.pdb.create=true`, the extension automatically creates PDBs for deployments that don't already have one. You can control this behavior per deployment by using the `eviction-autoscaler.azure.com/pdb-create` annotation.
 
@@ -192,7 +192,7 @@ When installed together with `controllerConfig.pdb.create=true`, the extension a
 
 You can also control which namespaces the extension operates in by using the `eviction-autoscaler.azure.com/enable` annotation on the namespace.
 
-- In opt-in mode (`enabledByDefault=false` which is the default), add the annotation to enable a namespace:
+- In opt-in mode (`enabledByDefault=false`: the default setting), add the annotation to enable a namespace:
 
   ```yaml
   metadata:
