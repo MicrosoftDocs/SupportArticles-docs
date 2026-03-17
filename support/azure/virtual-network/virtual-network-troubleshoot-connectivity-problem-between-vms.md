@@ -7,8 +7,8 @@ ms.author: allensu
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.date: 03/05/2026
-ms.custom: = sap:Connectivity
+ms.date: 03/17/2026
+ms.custom: sap:Connectivity
 # Customer intent: "As a cloud administrator, I want to troubleshoot connectivity issues between Azure virtual machines, so that I can ensure optimal communication and functionality within my cloud infrastructure."
 ---
 
@@ -153,6 +153,9 @@ If the issue is intermittent or difficult to reproduce, use flow logs to analyze
 - **VNet flow logs** (recommended): VNet flow logs provide per-flow state and throughput data at the virtual network level, capturing traffic for all workloads. For more information, see [VNet flow logs overview](/azure/network-watcher/vnet-flow-logs-overview).
 - **NSG flow logs**: NSG flow logs capture information about IP traffic flowing through an NSG. For more information, see [NSG flow logs overview](/azure/network-watcher/nsg-flow-logs-overview).
 
+  > [!IMPORTANT]
+  > NSG flow logs will be retired on September 30, 2027. As part of this retirement, you'll no longer be able to create new NSG flow logs after June 30, 2025. We recommend [migrating](/azure/network-watcher/nsg-flow-logs-migrate) to [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview), which overcome the limitations of NSG flow logs.
+
 Use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to visualize flow log data and identify blocked traffic patterns.
 
 #### Check User-Defined Routes (UDRs)
@@ -191,7 +194,13 @@ netstat -l
 
 ### Step 5: Check whether the problem is caused by SNAT
 
-In some scenarios, the VM is placed behind a load balance solution that has a dependency on resources outside of Azure. In these scenarios, if you experience intermittent connection problems, the problem may be caused by [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections). To resolve the issue, create a VIP (or ILPIP for classic) for each VM that is behind the load balancer and secure with NSG or ACL. 
+In some scenarios, the VM is placed behind a load balance solution that has a dependency on resources outside of Azure. In these scenarios, if you experience intermittent connection problems, the problem may be caused by [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections). To resolve the issue, use one of the following approaches:
+
+   - Associate a [NAT gateway](/azure/virtual-network/nat-gateway/nat-overview) with the subnet (recommended).
+   - Assign a [public IP address](/azure/virtual-network/ip-services/virtual-network-public-ip-address) directly to the VM.
+   - Configure [outbound rules](/azure/load-balancer/outbound-rules) on a standard load balancer.
+
+   Secure public-facing VMs with NSG rules to restrict inbound access. 
 
 ### Step 6: Check whether traffic is blocked by ACLs for the classic VM
 
@@ -207,7 +216,7 @@ If you can't connect to a VM network share, the problem may be caused by unavail
 
 ### Step 9: Check Inter-VNet connectivity
 
-Use [Network Watcher IP Flow Verify](/azure/network-watcher/ip-flow-verify-overview) to determine whether an NSG or UDR is interfering with traffic flow. Use [VNet flow logs](/azure/network-watcher/vnet-flow-logs-overview) (recommended) or [NSG flow logs](/azure/network-watcher/nsg-flow-logs-overview) to analyze traffic patterns between virtual networks. You can also verify your Inter-VNet configuration [here](https://support.microsoft.com/en-us/help/4032151/configuring-and-validating-vnet-or-vpn-connections).
+Use [Network Watcher IP Flow Verify](/azure/network-watcher/ip-flow-verify-overview) to determine whether an NSG or UDR is interfering with traffic flow. Use [VNet flow logs](/azure/network-watcher/vnet-flow-logs-overview) (recommended) or [NSG flow logs](/azure/network-watcher/nsg-flow-logs-overview) to analyze traffic patterns between virtual networks. You can also verify your VNet or VPN connections by reviewing the [VPN Gateway topology and design](/azure/vpn-gateway/design) documentation.
 
 ### Need help? Contact support
 
