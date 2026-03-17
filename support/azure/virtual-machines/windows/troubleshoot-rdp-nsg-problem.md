@@ -18,17 +18,17 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article explains how to troubleshoot Remote Desktop Protocol (RDP) connectivity issues caused by network security group (NSG) misconfigurations on Azure Windows virtual machines (VMs). Common causes include missing allow rules, rule priority conflicts, and conflicting rules between subnet-level and NIC-level NSGs.
+This article explains how to troubleshoot Remote Desktop Protocol (RDP) connectivity problems caused by network security group (NSG) misconfigurations on Azure Windows virtual machines (VMs). Common causes include missing allow rules, rule priority conflicts, and conflicting rules between subnet-level and NIC-level NSGs.
 
 ## Symptoms
 
-You experience one or more of the following symptoms when connecting to an Azure Windows VM via RDP:
+You experience one or more of the following symptoms when connecting to an Azure Windows VM through RDP:
 
 - RDP connection times out or is refused.
 - You receive "Remote Desktop can't connect to the remote computer" errors.
 - RDP works from one source IP but not another.
 - RDP stops working after NSG rule changes.
-- A new VM is unreachable via RDP immediately after deployment.
+- A new VM is unreachable through RDP immediately after deployment.
 
 ## Prerequisites
 
@@ -38,12 +38,12 @@ You experience one or more of the following symptoms when connecting to an Azure
 
 ## How NSG rule evaluation works
 
-Before troubleshooting, it's important to understand how Azure evaluates NSG rules:
+Before troubleshooting, understand how Azure evaluates NSG rules:
 
-- **Rules are evaluated by priority.** Azure processes rules in priority order (lowest number = highest priority). Once a matching rule is found, evaluation stops.
-- **Inbound and outbound rules are evaluated separately.** RDP connectivity requires an inbound allow rule on port 3389.
-- **NSGs can be applied at two levels:** the subnet and the network interface (NIC). When NSGs exist at both levels, inbound traffic must be allowed by **both** NSGs to reach the VM.
-- **Default rules exist in every NSG.** Every NSG contains default rules that can't be deleted. The default `DenyAllInBound` rule (priority 65500) blocks all inbound traffic not matched by a higher-priority rule.
+- **Azure evaluates rules by priority.** Azure processes rules in priority order, with the lowest number representing the highest priority. Evaluation stops when Azure finds a matching rule.
+- **Azure evaluates inbound and outbound rules separately.** RDP connectivity requires an inbound allow rule on port 3389.
+- **You can apply NSGs at the subnet level and the network interface (NIC) level.** When NSGs exist at both levels, inbound traffic must be allowed by **both** NSGs to reach the VM.
+- **Every NSG contains default rules that you can't delete.** The default `DenyAllInBound` rule (priority 65500) blocks all inbound traffic that isn't matched by a higher-priority rule.
 
 For more information, see [How network security groups filter network traffic](/azure/virtual-network/network-security-groups-overview#how-network-security-groups-filter-network-traffic).
 
@@ -51,7 +51,7 @@ For more information, see [How network security groups filter network traffic](/
 
 ### Use Network Watcher IP flow verify
 
-IP flow verify is the fastest way to determine which NSG rule is blocking RDP traffic.
+IP flow verify is the fastest way to determine which NSG rule blocks RDP traffic.
 
 1. In the Azure portal, search for and select **Network Watcher**.
 2. Under **Network diagnostic tools**, select **IP flow verify**.
@@ -96,16 +96,16 @@ Test-AzNetworkWatcherIPFlow `
 
 ### View effective security rules
 
-View the effective (combined) security rules applied to the VM's network interface to see how subnet-level and NIC-level NSG rules are merged:
+View the effective (combined) security rules applied to the VM's network interface to see how subnet-level and NIC-level NSG rules merge:
 
-1. In the Azure portal, go to **Virtual Machines** > select your VM.
+1. In the Azure portal, go to **Virtual Machines** and select your VM.
 2. Expand **Networking** and select **Network settings**.
 3. Select the network interface name.
 4. Under **Help**, select **Effective security rules**.
 
-Look for rules affecting port 3389 TCP inbound. Verify that an **Allow** rule exists with a higher priority (lower number) than any **Deny** rule matching the same traffic.
+Look for rules that affect port 3389 TCP inbound. Verify that an **Allow** rule exists with a higher priority (lower number) than any **Deny** rule that matches the same traffic.
 
-Using Azure CLI:
+Use Azure CLI:
 
 ```azurecli
 az network nic list-effective-nsg \
@@ -113,7 +113,7 @@ az network nic list-effective-nsg \
     --name myVMNic
 ```
 
-Using Azure PowerShell:
+Use Azure PowerShell:
 
 ```azurepowershell
 Get-AzEffectiveNetworkSecurityGroup `
@@ -125,11 +125,11 @@ Get-AzEffectiveNetworkSecurityGroup `
 
 ### RDP port 3389 not allowed in NSG
 
-When you create a new VM, all inbound traffic from the Internet is blocked by default unless you select to open RDP during deployment.
+When you create a new VM, the default setting blocks all inbound traffic from the Internet unless you select to open RDP during deployment.
 
 To add a rule to allow RDP:
 
-1. In the Azure portal, go to **Virtual Machines** > select the VM.
+1. In the Azure portal, go to **Virtual Machines** and select the VM.
 2. Expand **Networking** and select **Network settings**.
 3. Select **Create port rule** > **Inbound port rule**.
 4. Configure the rule:
@@ -149,7 +149,7 @@ To add a rule to allow RDP:
 
 ### Rule priority conflict
 
-A higher-priority deny rule can block RDP even when an allow rule exists. For example:
+A higher-priority deny rule blocks RDP even when an allow rule exists. For example:
 
 | Priority | Name | Port | Action | Result |
 |----------|------|------|--------|--------|
@@ -160,7 +160,7 @@ A higher-priority deny rule can block RDP even when an allow rule exists. For ex
 
 ### Subnet-level and NIC-level NSG conflict
 
-When NSGs are applied at both levels, traffic must pass through both. A common misconfiguration:
+When you apply NSGs at both levels, traffic must pass through both. A common misconfiguration is:
 
 - **Subnet NSG**: Allows RDP (port 3389).
 - **NIC NSG**: Has no allow rule for port 3389 (default `DenyAllInBound` blocks it).
@@ -170,7 +170,7 @@ Or the reverse:
 - **NIC NSG**: Allows RDP (port 3389).
 - **Subnet NSG**: Has a deny rule blocking port 3389.
 
-**Resolution**: Ensure an allow rule for port 3389 TCP exists in **both** NSGs. Verify using the [effective security rules](#view-effective-security-rules) to see the combined result.
+**Resolution**: Ensure an allow rule for port 3389 TCP exists in **both** NSGs. Verify by using the [effective security rules](#view-effective-security-rules) to see the combined result.
 
 ### Source IP address restriction
 
