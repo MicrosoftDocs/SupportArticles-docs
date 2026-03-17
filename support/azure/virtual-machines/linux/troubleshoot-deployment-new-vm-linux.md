@@ -3,9 +3,12 @@ title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
-ms.date: 08/01/2024
+ms.date: 03/17/2026
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
+
+
+
 # Troubleshoot issues when deploying Linux virtual machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
@@ -18,18 +21,42 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
+## Purpose of this guide
+This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine in Azure by identifying the stage at which the deployment failed (deployment, provisioning, or OS boot) and guiding you to the appropriate diagnostic tools and remediation steps.
+
+## Start here: Identify the failure stage
+
+Before troubleshooting, determine where the deployment failed:
+
+- **Deployment failed** → Azure portal shows *Deployment failed*
+- **Deployment succeeded but VM won’t start** → VM shows *Stopped* or *Failed*
+- **VM running but inaccessible** → SSH fails, boot hangs, or extensions fail
+
+
+| Symptom | Likely area |
+|-------|------------|
+| ARM deployment fails | Template, quota, region, image |
+| VM stuck in provisioning | Cloud-init, extension, OS config |
+| VM running but no SSH | Network, NSG, SSH config |
+
+
+
 ## Symptoms
 
-A typical provisioning failure scenario occurs after you create a custom image and then deploy a virtual machine (VM) from that image. When this failure occurs, the VM status is shown as `creating` for up to 40 minutes, and you receive one of the following error messages:
+
+A common provisioning failure occurs when you deploy a virtual machine from a custom Linux image. In this scenario:
+
+- The VM remains in the **Creating** state for up to 40 minutes.
+- Provisioning eventually fails.
+- Azure reports an OS provisioning error.
+
+The following error messages are typical:
+
+> [!NOTE]
+> Make sure your [Windows](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/) or [Linux](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/) image is properly prepared (generalized).
+
 
 ```output
-Provisioning state Provisioning failed. 
-OS Provisioning for VM 'sentilo' did not finish in the allotted time. 
-The VM may still finish provisioning successfully. Please check provisioning state later. 
-Also, make sure the image has been properly prepared (generalized). * Instructions for Windows: https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/ * Instructions for Linux: https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/.
-```
-
-```toutputext
 Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
   "status": "Failed",
   "error": {
@@ -90,13 +117,20 @@ az vm create \
     --boot-diagnostics-storage $storageacct
 ```
 
-To view the serial log, go to the Azure portal, or run the following command to download the *serialConsoleLogBlobUri* log:
+## Check the serial console
+
+To determine why provisioning failed, examine the **serial console log**, which captures early boot and provisioning events.
+
+Boot diagnostics must be enabled at VM creation time. If your image consistently fails to provision, deploy a **new VM using the same image** with boot diagnostics enabled, and then download the serial log using the Azure portal or Azure CLI.
+
+
 
 ```azurecli
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
 ```
 
 ## Understanding the serial log for system events and provisioning events
+
 
 When the VM is created, cloud-init starts up and tries to take the following actions:
 
@@ -105,6 +139,13 @@ When the VM is created, cloud-init starts up and tries to take the following act
 - Set the properties that are passed during VM creation
 - Mount the ephemeral disk (on supported VM sizes)
 - Notify the Azure platform that the initial OS config is completed
+
+The serial log captures early system boot, networking initialization, cloud-init execution, and Azure Linux Agent activity.
+
+Use the table below as a **reference**, not a checklist. You do not need to identify every entry. Instead, focus on the section that corresponds to where provisioning appears to stop (for example, networking, cloud-init, SSH startup, or the Azure Linux Agent).
+
+
+
 
 | System events and key information | Serial log | Notes |
 |---|---|---|
@@ -150,13 +191,17 @@ When the VM is created, cloud-init starts up and tries to take the following act
 "UDF driver Blocklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
 ```
 
-**Cause**: The UDF driver is not loaded in the kernel. Loading is required for the VM to provision. See [image requirements](/azure/virtual-machines/linux/create-upload-generic).
+ **Cause**
+ 
+The UDF driver is not loaded in the kernel. Loading is required for the VM to provision. See [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
 When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 
 Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic). For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
-**Solution**: Make sure that the UDF driver is configured to be loaded in the kernel.
+**Solution**
+
+Make sure that the UDF driver is configured to be loaded in the kernel.
 
 A common method for UDF drivers to be blocked is through configurations within `/etc/modprobe.d/`. Work with the image owner to make sure that Linux UDF drivers are present and not blocked. Refer to [this article about blocking and unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
 
@@ -170,9 +215,13 @@ A common method for UDF drivers to be blocked is through configurations within `
 AttributeError: 'module' object has no attribute 'JSONDecodeError'
 ```
 
-**Cause**: This problem occurs because VM tags have non-ASCII characters, and the version of cloud-init is earlier than 20.3.
+**Cause**
 
-**Solution**: Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ASCII characters from the VM tags.
+This problem occurs because VM tags have non-ASCII characters, and the version of cloud-init is earlier than 20.3.
+
+**Solution**
+
+Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ASCII characters from the VM tags.
 
 ### Password with unicode characters
 
@@ -186,9 +235,13 @@ File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", li
 UnicodeEncodeError: 'ascii' codec can't encode characters in position 10-11: ordinal not in range(128)
 ```
 
-**Cause**: This problem occurs because the provided password includes unsupported (non-ASCII) characters.
+**Cause**
 
-**Solution**: Provide a password that includes only ASCII characters.
+This problem occurs because the provided password includes unsupported (non-ASCII) characters.
+
+**Solution**
+
+Provide a password that includes only ASCII characters.
 
 ### Dhclient permission
 
@@ -200,7 +253,9 @@ Exit code: -
 Reason: [Errno 13] Permission denied: b'/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient'
 ```
 
-**Cause**: Older versions of cloud-init (earlier than version 20.3) perform DHCP by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP will fail because `dhclient` doesn't have permissions to run within `/var/tmp`.
+**Cause** 
+
+Older versions of cloud-init (earlier than version 20.3) perform DHCP by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP will fail because `dhclient` doesn't have permissions to run within `/var/tmp`.
 
 Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` "as-is" (by not copying and running it in `/var/tmp` if there are permissions issues).
 
