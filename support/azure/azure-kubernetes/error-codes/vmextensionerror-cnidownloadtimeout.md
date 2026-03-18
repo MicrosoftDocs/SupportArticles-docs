@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionError_CniDownloadTimeout message
-description: Learn how to troubleshoot the VMExtensionError_CniDownloadTimeout message when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot the VMExtensionError_CniDownloadTimeout message when you try to create and deploy an Azure Kubernetes Service (AKS) cluster and use these steps to deploy successfully.
 ms.date: 05/03/2023
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis
