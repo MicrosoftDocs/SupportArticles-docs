@@ -33,8 +33,8 @@ Resources might not appear on the schedule board for several reasons:
 1. Check that the **Scheduling Method** field is set to **Allow** or your organization's expected value.
 1. Go to **Scheduling** > **Schedule Board**.
 1. On the active board tab, select **Settings** (gear symbol).
-1. Review all active filters. Clear filters temporarily to see if the resource appears.
-1. Return to the resource record and select **Show Work Hours** on the command bar.
+1. Review all active filters. Clear filters temporarily to check whether the resource appears.
+1. Return to the resource record, and select **Show Work Hours** on the command bar.
 1. Check that work hours are defined for the date range you're viewing on the board.
 1. On the resource record, check that the **Status** field is set to **Active**.
 1. If you use custom security roles:
@@ -44,7 +44,7 @@ Resources might not appear on the schedule board for several reasons:
     1. Check that the dispatcher's role has **Read** access on the **Bookable Resource** table for the affected resource's business unit.
 
 > [!NOTE]
-> Facility-type resources and equipment-type resources follow the same rules. If you schedule a non-user resource (such as a room or vehicle), ensure it has work hours, and the board tab isn't filtered to show only **User** resource types.
+> Facility-type resources and equipment-type resources follow the same rules. If you schedule a non-user resource (such as a room or vehicle), make sure that it has work hours, and that the board tab isn't filtered to show only **User** resource types.
 
 ## Related content
 
