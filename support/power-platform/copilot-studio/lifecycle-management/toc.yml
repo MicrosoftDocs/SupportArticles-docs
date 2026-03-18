@@ -1,3 +1,7 @@
 items:
 - name: Agents missing components in a solution
   href: agents-solution-mapping.md
+- name: Fix solution upgrade or solution uninstall errors
+  href: solution-upgrade-uninstall-errors.md  
+- name: Expression errors when publishing an agent
+  href: agent-publish-missing-dependencies.md
