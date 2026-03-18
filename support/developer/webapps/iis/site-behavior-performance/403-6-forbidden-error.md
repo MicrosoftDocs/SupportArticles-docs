@@ -69,7 +69,7 @@ If a restriction exists at any level in the configuration hierarchy, IIS might r
 1. In **Features View**, double-click **IP Address and Domain Restrictions**.
 1. On the **Actions** pane, select **Edit Feature Settings**.
 1. Review the configured policy. Two policies are available:
-   - **Allow unspecified clients**: All clients are allowed except those explicitly denied.
+   - **Allow unspecified clients**: All clients are allowed except clients that are explicitly denied.
    - **Deny unspecified clients**: Only explicitly allowed IPs have access.
 1. If **Deny unspecified clients** is configured, add the client IP address as an _allow rule_.
 
