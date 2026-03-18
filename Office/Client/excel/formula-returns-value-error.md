@@ -10,16 +10,15 @@ ms.custom:
   - Editing\Formulae
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: meerak, lisalozano, akeeler
 appliesto: 
   - Excel for Microsoft 365
+  - Microsoft Excel SE
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
   - Microsoft Excel 2016
-  - Microsoft Excel 2013
-  - Microsoft Excel 2010
-  - Microsoft Office Excel 2007
-  - Microsoft Excel 2002 Standard Edition
-  - Microsoft Excel 2000 Standard Edition
-ms.date: 05/26/2025
+
+ms.date: 03/17/2026
 ---
 
 # SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" Error

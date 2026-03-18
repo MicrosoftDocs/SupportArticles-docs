@@ -486,6 +486,8 @@
           href: ../office-suite-issues/document-information-panel-deprecate.md
         - name: Enable or disable hyperlink warning messages
           href: ../office-suite-issues/enable-disable-hyperlink-warning.md
+        - name: Error 0xc0000715 when starting Microsoft 365 apps 
+          href: ..office-suite-issues\error-when-starting-apps.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Errors when Office add-ins start
