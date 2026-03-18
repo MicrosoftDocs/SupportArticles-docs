@@ -631,6 +631,10 @@ items:
       href: move-resources-4-hour-timeout.md
     - name: Move fails due to invalid or deleted storage account
       href: move-resources-invalid-storage-account.md
+    - name: Move fails with IncompleteRequest - hidden resources not included
+      href: move-resources-incomplete-request-hidden-resources.md
+    - name: Move fails because a private endpoint is not in Succeeded state
+      href: move-resources-private-endpoint-failed-state.md
   - name: FAQ
     href: move-vm-resources-faq.md
   - name: How-to guides

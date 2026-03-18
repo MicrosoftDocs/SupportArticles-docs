@@ -268,6 +268,10 @@ items:
       href: ../windows/move-resources-4-hour-timeout.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Move fails due to invalid or deleted storage account
       href: ../windows/move-resources-invalid-storage-account.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails with IncompleteRequest - hidden resources not included
+      href: ../windows/move-resources-incomplete-request-hidden-resources.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails because a private endpoint is not in Succeeded state
+      href: ../windows/move-resources-private-endpoint-failed-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: FAQ
     href: ../windows/move-vm-resources-faq.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: How-to guides
