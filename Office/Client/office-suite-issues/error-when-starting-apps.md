@@ -36,7 +36,7 @@ You also see the following event logged in the system log or added as an entry i
 
 ## Cause
 
-This error occurs because symbolic link evaluation is disabled on your computer. The [Office Click-to-Run service](https://learn.microsoft.com/deployoffice/overview-office-click-to-run) uses symbolic links when it deploys updates and enables streamed application delivery. If symbolic link evaluation is blocked by Group Policy settings or by settings for the [`fsutil` command](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior), Office can't load the required components.
+This error occurs because symbolic link evaluation is disabled on your computer. The [Office Click-to-Run service](/deployoffice/overview-office-click-to-run) uses symbolic links when it deploys updates and enables streamed application delivery. If symbolic link evaluation is blocked by Group Policy settings or by settings for the [`fsutil` command](/windows-server/administration/windows-commands/fsutil-behavior), Office can't load the required components.
 
 To verify that symbolic link evaluation is disabled, run the following command in Windows PowerShell on your computer:
 
