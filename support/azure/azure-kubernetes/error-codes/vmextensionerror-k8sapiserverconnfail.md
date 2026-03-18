@@ -15,7 +15,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 ## Prerequisites
 
-- The [Netcat](https://linuxcommandlibrary.com/man/netcat) (nc) command-line tool.
+- The [Netcat](https://linuxcommandlibrary.com/man/netcat) command-line tool.
 
 ## Symptoms
 
@@ -45,7 +45,7 @@ nc -vz <cluster-fqdn> 443
 
 If you're using egress filtering through a firewall, make sure that traffic is allowed to your cluster FQDN.
 
-In rare cases, the firewall's outbound IP address can be blocked if you've authorized IP addresses that are enabled on your cluster. In this scenario, you must add the outbound IP address of your firewall to the list of authorized IP ranges for the cluster. For more information, see [Secure access to the API server using authorized IP address ranges in AKS](/azure/aks/api-server-authorized-ip-ranges).
+In rare cases, the firewall's outbound IP address can be blocked if you authorized IP addresses that are enabled on your cluster. In this scenario, you must add the outbound IP address of your firewall to the list of authorized IP ranges for the cluster. For more information, see [Secure access to the API server using authorized IP address ranges in AKS](/azure/aks/api-server-authorized-ip-ranges).
 
 ## More information
 
