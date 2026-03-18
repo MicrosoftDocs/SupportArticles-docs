@@ -154,18 +154,14 @@ You might see an authentication error similar to:
 
 When a user accesses a flow from SharePoint, Teams, or Excel, the host application exchanges its token for a **Microsoft Flow Service** token. If the CA policies require MFA for one application but not the other, this exchange fails.
 
-Common scenarios:
-
-- Your CA policy targets the **Office 365** app suite (which includes SharePoint and Teams) but doesn't explicitly include **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`). Microsoft Flow Service is not part of the Office 365 application target.
-- Your CA policy requires MFA for Power Automate but not for the host application, or the reverse.
+This typically happens when CA policies target individual applications with different MFA requirements, rather than using the **Office 365** app or **All cloud apps** target that covers both the host application and Power Automate consistently.
 
 ### Troubleshooting steps
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
-2. Identify all policies that require MFA for SharePoint, Teams, or the Office 365 app suite.
-3. Verify that the same policies also include **Microsoft Flow Service**, or that a separate policy applies equivalent MFA requirements to it.
-4. If you want consistent MFA enforcement for all cloud applications, consider targeting **All cloud apps** instead of individual applications.
-5. After updating policies, ask affected users to sign out and sign back in.
+2. Switch your policy to target the **Office 365** app or **All cloud apps** for consistent MFA enforcement across Power Automate and the apps that embed it.
+3. If you must target individual applications, verify that MFA requirements are consistent between the host applications (SharePoint, Teams, Excel) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`).
+4. After updating policies, ask affected users to sign out and sign back in.
 
 For detailed guidance, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
 

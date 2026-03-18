@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4467879
 
 ## Recommendations
 
-- To avoid token exchange failures between Microsoft 365 apps and Power Automate, ensure that your Conditional Access policies apply consistent MFA requirements to both the embedding app (such as SharePoint or Teams) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`). The simplest approach is to target the **Office 365** app suite or **All cloud apps** in your policy. See [Effect 5](#effect-5---using-power-automate-features-embedded-in-other-microsoft-services) for details.
+- To avoid authentication failures when users access Power Automate from SharePoint, Teams, or Excel, target the **Office 365** app or **All cloud apps** in your Conditional Access policy. This ensures consistent MFA requirements across Power Automate and the apps that embed it. If you target individual applications instead, you must ensure MFA requirements match across all of them. See [Effect 5](#effect-5---using-power-automate-features-embedded-in-other-microsoft-services) for details.
 - Don't use [remember multifactor authentication for trusted devices](/entra/identity/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
 - To avoid policy conflict errors, ensure that users who sign in to Power Automate use criteria that match the policies for the connections a flow uses.
 
@@ -94,20 +94,23 @@ When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Ex
 
 If the requirements differ—for example, if MFA is required for Power Automate but not for SharePoint, or vice versa—the token exchange fails and users see an authentication error (typically AADSTS50076) when they try to view or run flows from the embedded surface.
 
-> [!IMPORTANT]
-> **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`) is not currently included in the **Office 365** app target in Conditional Access. If your CA policy targets only the Office 365 app suite, you must also explicitly add Microsoft Flow Service to ensure consistent MFA requirements for embedded flow experiences.
+> [!TIP]
+> The simplest way to avoid this issue is to target the **Office 365** app or **All cloud apps** in your Conditional Access policy. This ensures that Power Automate and the apps that embed it (SharePoint, Teams, Excel) all have consistent MFA requirements.
 
-Common scenarios that cause this issue:
+If you target individual applications instead of the Office 365 app, you must ensure MFA requirements match across all of them. Common scenarios that cause a mismatch:
 
-- Admin creates a CA policy requiring MFA for the Office 365 app suite (covers SharePoint, Teams, Excel) but doesn't add Microsoft Flow Service separately.
 - Admin creates a CA policy requiring MFA for Power Automate only, without matching policies for SharePoint or Teams.
-- Admin migrates from per-app policies to the Office 365 app target, assuming Power Automate is included.
+- Admin creates a CA policy requiring MFA for SharePoint but not for Power Automate.
+- Admin targets specific apps inconsistently when migrating between CA policies.
+
+> [!NOTE]
+> **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`) is the resource app that host applications call when users access flows from embedded surfaces. If you target individual apps in your CA policy, ensure this app is included alongside the host applications.
 
 To resolve this issue:
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
-2. For each policy requiring MFA, check that **Microsoft Flow Service** is included in the target resources alongside the embedding apps.
-3. Alternatively, target **All cloud apps** to ensure consistent MFA requirements.
+2. Switch your policy to target the **Office 365** app or **All cloud apps** for consistent enforcement.
+3. If you must target individual apps, verify that **Microsoft Flow Service** is included alongside the host applications (SharePoint, Teams, Excel).
 
 After updating policies, affected users must sign out and sign back in for the changes to take effect.
 
