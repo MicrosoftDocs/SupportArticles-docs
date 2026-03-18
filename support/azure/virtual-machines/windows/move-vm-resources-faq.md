@@ -1,0 +1,129 @@
+---
+title: Azure VM move and migration FAQ
+description: Frequently asked questions about moving Azure virtual machine resources between resource groups, subscriptions, regions, and tenants.
+services: virtual-machines
+author: scotro
+manager: dcscontentpm
+ms.service: azure-virtual-machines
+ms.topic: troubleshooting
+ms.date: 03/18/2026
+ms.author: scotro
+ms.reviewer: jarrettr
+ms.custom: sap:Cannot create a VM
+---
+
+# Azure VM move and migration FAQ
+
+**Applies to:** :heavy_check_mark: Windows VMs :heavy_check_mark: Linux VMs
+
+## General move questions
+
+### What can I move using the Azure resource move operation?
+
+You can move virtual machines and their associated resources (managed disks, NICs, public IPs, NSGs, virtual networks) between resource groups within the same subscription, or between subscriptions within the same Azure AD tenant.
+
+For a definitive list of which resource types support move, see [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources).
+
+### What resources must I include when moving a VM?
+
+When moving a VM, you must include all dependent resources in the same move request (or they must already exist in the destination):
+
+- Managed OS disk and all data disks
+- Network interface cards (NICs)
+- Virtual network the NICs are attached to
+- All other NICs attached to that virtual network (and their VMs and disks)
+- Public IP addresses associated with the NICs
+- Network security groups (NSGs) associated with the NICs or subnets
+
+If any dependent resource is missing, the move fails with `MissingMoveDependentResources`. See [Move fails with MissingMoveDependentResources](move-resources-missing-dependencies.md).
+
+### Can I move a VM without stopping it?
+
+Yes. The Azure resource move operation does not require the VM to be stopped or deallocated. However, both the source and destination resource groups are locked for write and delete operations during the move. The VM continues to run and serve traffic normally.
+
+### How long does a move operation take?
+
+Most moves complete within 30 minutes. Azure Resource Manager enforces a maximum of four hours. If the move does not complete within four hours, it times out and rolls back. See [Move operation times out after four hours](move-resources-4-hour-timeout.md).
+
+### Are there limits on how many resources I can move at once?
+
+- **800 resources per move request** — this is the ARM API limit.
+- **100 resources via the Azure portal** — the portal UI enforces a lower limit. For more than 100 resources, use PowerShell, Azure CLI, or the REST API.
+
+See [800 resource limit per move operation](move-resources-800-limit.md) and [Cannot move more than 100 resources via portal](move-resources-100-limit-portal.md).
+
+### Can I move a VM to a different virtual network?
+
+Not directly — the Azure move API does not support changing a VM's virtual network attachment. To move a VM to a different virtual network, you must recreate the VM:
+
+1. Create a backup or snapshot of the VM's OS disk.
+2. Create a new VM in the target virtual network using the OS disk copy.
+
+### Can I move resources to a different Azure region?
+
+Not via the standard resource move API. Cross-region moves require [Azure Resource Mover](/azure/resource-mover/overview), which is managed by the Azure Backup and Recovery Services (ABRS) team.
+
+### Can I move resources to a subscription in a different Azure AD tenant?
+
+Not directly. The source and destination subscriptions must be in the same tenant. Two workarounds exist:
+
+1. Transfer the subscription itself to the destination tenant.
+2. Copy the VM disks using Azure Storage Explorer and recreate the VM in the destination tenant.
+
+See [Move Azure VM resources to a different tenant](move-vm-to-different-tenant.md).
+
+---
+
+## Pre-move checklist
+
+Before initiating a move, verify the following:
+
+| Check | Details |
+|---|---|
+| All dependent resources identified | Run `Move-AzResource` with `-WhatIf` or use the portal's dependency check |
+| All resources in Succeeded state | Resources in Failed, Updating, or Creating state block the move |
+| No active locks on resource groups | Delete or move any `CanNotDelete` or `ReadOnly` locks temporarily |
+| Resource types support move | Check [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources) |
+| Destination subscription limits not exceeded | Check core quota and resource count limits in the destination |
+| No Marketplace plan restrictions | Third-party images with plan info may have cross-subscription restrictions |
+| Boot diagnostics storage account exists | A deleted or invalid boot diagnostics storage account blocks the move |
+
+---
+
+## Common errors quick reference
+
+| Error code | Article |
+|---|---|
+| `MoveCannotProceedWithResourcesNotInSucceededState` | [Resource is not in a Succeeded state](move-resources-not-in-succeeded-state.md) |
+| `MissingMoveDependentResources` | [Move fails with MissingMoveDependentResources](move-resources-missing-dependencies.md) |
+| `ResourceMoveTimedOut` | [Move operation times out after four hours](move-resources-4-hour-timeout.md) |
+| `MoveResourcesHaveInvalidState` | [Move fails due to invalid or deleted storage account](move-resources-invalid-storage-account.md) |
+| `ResourceTypeMoveNotSupported` | [Resource type not supported for move](move-resources-resource-type-not-supported.md) |
+| `MoveResourcesHavePendingOperations` | [Operation not allowed - system upgrade in progress](move-resources-operation-not-allowed-system-upgrade.md) |
+
+---
+
+## After the move
+
+### My resources disappeared after the move — where are they?
+
+Check both the source and destination resource groups. Resources may appear in only one location if the move partially succeeded. If resources are missing from both, contact [Azure Support](https://azure.microsoft.com/support/create-ticket/).
+
+### The move succeeded but now my VM won't start
+
+VM connectivity or boot issues after a move are typically unrelated to the move operation itself. Check:
+- NSG rules in the destination resource group
+- Route tables and virtual network configuration in the destination
+- VM-level diagnostics via Boot Diagnostics in the Azure portal
+
+### Do I need to update anything after a successful move?
+
+- **Role assignments** are not moved. Reassign RBAC roles in the destination resource group.
+- **Resource locks** do not carry over. Reapply any locks you had on the source.
+- **Managed identities** continue to work — system-assigned identities follow the resource automatically.
+
+## Next steps
+
+- [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
+- [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources)
+- [Azure Resource Mover — cross-region moves](/azure/resource-mover/overview)

@@ -240,6 +240,43 @@ items:
     - name: Cloud-init-enabled VM takes a long time to start up
       href: cloud-init-deployment-delay.md
 
+- name: Move and migrate VM resources
+  items:
+  - name: Top error scenarios
+    items:
+    - name: Resource is not in a Succeeded state
+      href: ../windows/move-resources-not-in-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Resource type not supported for move
+      href: ../windows/move-resources-resource-type-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move not supported - resource has plan for different subscription
+      href: ../windows/move-resources-plan-different-subscription.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Tenant not authorized to access linked subscription
+      href: ../windows/move-resources-tenant-not-authorized.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: 800 resource limit per move operation
+      href: ../windows/move-resources-800-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Cannot move more than 100 resources via portal
+      href: ../windows/move-resources-100-limit-portal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Moving VM to another resource group fails - resource not found
+      href: ../windows/move-vm-resource-not-found.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Backup error during resource move
+      href: ../windows/move-resources-backup-error.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Operation not allowed - system upgrade in progress
+      href: ../windows/move-resources-operation-not-allowed-system-upgrade.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails with MissingMoveDependentResources
+      href: ../windows/move-resources-missing-dependencies.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move operation times out after four hours
+      href: ../windows/move-resources-4-hour-timeout.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Move fails due to invalid or deleted storage account
+      href: ../windows/move-resources-invalid-storage-account.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: FAQ
+    href: ../windows/move-vm-resources-faq.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: How-to guides
+    items:
+    - name: Move resources to a different tenant
+      href: ../windows/move-vm-to-different-tenant.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Convert unmanaged disks to managed disks
+      href: ../windows/migrate-vm-unmanaged-to-managed-disks.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+
 - name: Disk management
   items:
   - name: Overview
