@@ -1,48 +1,62 @@
 ---
-title: Cannot automate websites and apps requiring Windows credentials
-description: Provides workarounds for automating the Windows credentials popup dialog.
-ms.reviewer: iomavrid
-ms.date: 03/12/2026
-ms.custom: sap:Desktop flows
+title: '"Fix: Power Automate Desktop Windows Credential Dialog Issues"'
+description: '"Power Automate for desktop: fix broken Windows credential dialog automation caused by January 2026 security updates with these step-by-step workarounds."'
+ms.date: 03/18/2026
+ms.reviewer: iomavrid, v-shaywood
+ms.custom: sap:Desktop flows\UI or browser automation
 ---
 
-# Can't automate websites and apps requiring Windows credentials
+# Can't automate websites and apps that require Windows credentials
 
-_Applies to:_ &nbsp; Power Automate  
+_Applies to:_ &nbsp; Power Automate
+
+## Summary
+
+After you install Windows security updates released on or after January 13, 2026, [Power Automate for desktop](/power-automate/desktop-flows/introduction) can't interact properly with dialogs that prompt for Windows credentials. This article describes the cause of the issue and provides workarounds to restore automated authentication workflows in Power Automate for desktop.
 
 ## Symptoms
 
-Power Automate for desktop has stopped interacting properly with dialogs that prompt for Windows credentials. Examples of these windows are the following: 
+Power Automate for desktop stops interacting properly with the Windows security popup window. This limitation includes both capturing [UI elements](/power-automate/desktop-flows/ui-elements) and interacting with them (for example, selecting a button). Examples of these dialogs include:
 
-:::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-website.png" alt-text="Screenshot that shows a web page requesting for Windows credentials.":::
+- A web page requesting Windows credentials:
 
-:::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-app.png" alt-text="Screenshot that shows a desktop application requesting for Windows credentials.":::
+  :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-website.png" alt-text="Screenshot that shows a web page requesting Windows credentials.":::
+
+- A desktop application requesting Windows credentials:
+
+  :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-app.png" alt-text="Screenshot that shows a desktop application requesting Windows credentials.":::
 
 ## Cause
 
-A security fix for the CredentialUIBroker.exe, introduced by Windows Updates released on and after January 13, 2026, is causing automated authentication workflows to fail. This exe is used by browsers and UI applications, like Remote Desktop Connection, so that users can log in with their Windows credentials. The "1B.26" Windows Updates that introduced this change include:
+A security fix for _CredentialUIBroker.exe_, initially released on January 13, 2026, causes automated authentication workflows to fail. Browsers and UI applications like Remote Desktop Connection use this executable so that users can sign in by using their Windows credentials. Because Windows enforces this change, Power Automate for desktop can't bypass the restriction.
 
-KB [5074109](https://support.microsoft.com/en-us/topic/january-13-2026-kb5074109-os-builds-26200-7623-and-26100-7623-3ec427dd-6fc4-4c32-a471-83504dd081cb): January 13, 2026—KB5074109 (OS Builds 26200.7623 and 26100.7623) <- The 1B.26 Windows Update Windows 11 25H2 and 24H2
+The following table lists the Windows security updates that introduced this change:
 
-KB [5073455](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073455-os-build-22631-6491-2b25841a-1d56-4e3d-9331-6f79872efea4): January 13, 2026—KB5073455 (OS Build 22631.6491) <- The 1B.26 Windows Update for Windows 11 23H2
+| KB article                                              | Release date      | Target OS                                                                               |
+| ------------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------- |
+| [KB5074109](https://support.microsoft.com/help/5074109) | January 13, 2026  | Windows 11, version 25H2 and 24H2 (OS Builds 26200.7623 and 26100.7623)                 |
+| [KB5073455](https://support.microsoft.com/help/5073455) | January 13, 2026  | Windows 11, version 23H2 (OS Build 22631.6491)                                          |
+| [KB5073724](https://support.microsoft.com/help/5073724) | January 13, 2026  | Windows 10, version 22H2 and Enterprise LTSC 2021 (OS Builds 19045.6809 and 19044.6809) |
+| [KB5073723](https://support.microsoft.com/help/5073723) | January 13, 2026  | Windows 10 Enterprise LTSC 2019 and Windows Server 2019 (OS Build 17763.8276)           |
+| [KB5073379](https://support.microsoft.com/help/5073379) | January 13, 2026  | Windows Server 2025 (OS Build 26100.32230)                                              |
+| [KB5073457](https://support.microsoft.com/help/5073457) | January 13, 2026  | Windows Server 2022 (OS Build 20348.4648)                                               |
+| [KB5075999](https://support.microsoft.com/help/5075999) | February 10, 2026 | Windows Server 2016 (OS Build 14393.8868)                                               |
 
-KB 5073724: January 13, 2026—KB5073724 (OS Builds 19045.6809 and 19044.6809) <- The 1B.26 Windows Update for Windows 10 ESU + Enterprise LTSC 2021
-
-KB [5073723](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073723-os-build-17763-8276-cc521cb1-c774-41da-b7fa-6906c9450230): January 13, 2026—KB5073723 (OS Build 17763.8276) <- The 1B.26 Windows Update for Windows 10 Ent LTSC 2019
-
-KB [5073379](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073379-os-build-26100-32230-a6021fd2-b3b7-45a7-b68e-35c28a2a77da): January 13, 2026—KB5073379 (OS Build 26100.32230) <- The 1B.26 Windows Update for Windows Server 2025
-
-KB [5073457](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073457-os-build-20348-4648-d4d057c8-29c3-48a5-8d98-ce86b77ee570): January 13, 2026—KB5073457 (OS Build 20348.4648) <- The 1B.26 Windows Update for Windows Server 2022
-
-KB [5073723](https://support.microsoft.com/en-us/topic/january-13-2026-kb5073723-os-build-17763-8276-cc521cb1-c774-41da-b7fa-6906c9450230): January 13, 2026—KB5073723 (OS Build 17763.8276) <- The 1B.26 Windows Update for Windows Server 2019
-
-KB [5075999](https://support.microsoft.com/en-us/topic/february-10-2026-kb5075999-os-build-14393-8868-640ac4ff-7447-4805-b0f6-ce3049375fcb): February 10, 2026—KB5075999 (OS Build 14393.8868) <- The 1B.26 Windows Update for Windows Server 2016
-
-After the release of the above updates, Power Automate for desktop is not able to automate these windows properly. You can find more information about this issue [here](https://support.microsoft.com/topic/new-behavior-restricting-certain-applications-to-autofill-credentials-introduced-by-the-windows-january-2026-security-update-29c0bc94-2588-41f9-8534-f058aa5214d5).
+After you install any of these updates, Power Automate for desktop can't automate Windows credential dialogs properly. For more information, see [New behavior restricting certain applications to autofill credentials introduced by the Windows January 2026 security update](https://support.microsoft.com/en-us/help/5080542).
 
 ## Workarounds
 
-The current workarounds for this issue until a fix is available are the following:
+Until a fix is available, use the following workarounds:
 
-1. For web automation issues, you can use an alternative browser. Currently, only Microsoft Edge is affected, so Firefox or Chrome should be used when possible.
-2. You can run Power Automate for desktop as administrator for local attended (console) runs. This is not available for unattended/attended cloud runs.
+1. For web automation problems, use an alternative browser. Currently, only Microsoft Edge is affected, so use Firefox or Chrome when possible.
+
+   > [!NOTE]
+   > When you use Chrome, you might need to use the UI element inspector tool with Microsoft Active Accessibility (MSAA) mode enabled.
+
+1. [Run Power Automate for desktop as an administrator](/power-automate/desktop-flows/setup#run-power-automate-with-elevated-rights) for local attended (console) runs. This option isn't available for unattended or attended cloud runs.
+
+## Related content
+
+- [Automate desktop applications](/power-automate/desktop-flows/desktop-automation)
+- [UI automation actions](/power-automate/desktop-flows/actions-reference/uiautomation)
+- [Troubleshoot desktop flows runtime](/power-automate/desktop-flows/troubleshoot)
