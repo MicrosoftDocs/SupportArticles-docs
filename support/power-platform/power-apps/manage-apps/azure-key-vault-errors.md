@@ -5,7 +5,7 @@ ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
 ms.date: 08/04/2025
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
+ms.custom: no-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Azure key vault errors in wrap for Power Apps
 
@@ -35,8 +35,8 @@ Error message: Default subscription not found, or missing access permissions.
 2. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
    ```powershell
-   Connect-AzureAD -TenantId <your tenant ID>
-   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   Connect-Entra -TenantId <your tenant ID>
+   New-EntraServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
    ```
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
@@ -72,8 +72,8 @@ Error message: Key vault doesn't exist or is missing access privileges.
 3. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
    ```powershell
-   Connect-AzureAD -TenantId <your tenant ID>
-   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   Connect-Entra -TenantId <your tenant ID>
+   New-EntraServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
    ```
 
 4. In the [Azure portal](https://portal.azure.com), assign the **Reader** role as shown in the previous error code section.
@@ -192,8 +192,8 @@ Error message: No tags or missing access permission for the specified Azure Key 
    1. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
       ```powershell
-      Connect-AzureAD -TenantId <your tenant ID>
-      New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+      Connect-Entra -TenantId <your tenant ID>
+      New-EntraServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
       ```
 
    1. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
@@ -236,3 +236,5 @@ If your issue isn't covered here, or if the preceding steps don't resolve your p
 
 - ["Something went wrong" error that occurs when using the wrap feature](something-went-wrong-error-codes.md)
 - [Troubleshoot common issues when using the wrap feature](wrap-issues.md)
+
+
