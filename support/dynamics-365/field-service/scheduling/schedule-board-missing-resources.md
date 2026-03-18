@@ -10,7 +10,13 @@ ms.custom: sap:Schedule Board\Issues with usability
 
 ## Summary
 
-This article helps you resolve issues where one or more [bookable resources](/dynamics365/field-service/set-up-bookable-resources) don't appear on the Dynamics 365 Field Service [schedule board](/dynamics365/field-service/work-with-schedule-board). Common causes include incorrect scheduling method settings, board tab filter configurations, missing work hours, inactive resource status, or insufficient security role permissions.
+This article helps you resolve issues where one or more [bookable resources](/dynamics365/field-service/set-up-bookable-resources) don't appear on the Dynamics 365 Field Service [schedule board](/dynamics365/field-service/work-with-schedule-board). Common causes include:
+
+- Incorrect scheduling method settings
+- Board tab filter configurations
+- Missing work hours
+- Inactive resource status
+- Insufficient security role permissions
 
 ## Symptoms
 
