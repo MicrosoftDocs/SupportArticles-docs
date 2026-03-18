@@ -10,7 +10,19 @@ ms.custom: sap:Schedule Board\Issues with usability
 
 ## Summary
 
-This article helps dispatchers and administrators resolve problems in which the [schedule board](/dynamics365/field-service/work-with-schedule-board) in [Microsoft Dynamics 365 Field Service](/dynamics365/field-service/overview) displays a blank page, doesn't load, or shows incomplete content. Common causes include corrupted browser cache or cookies, an unsupported or outdated browser, missing [security role](/dynamics365/field-service/security-permissions) privileges, and third-party browser extensions that block JavaScript resources. The troubleshooting steps in this article cover clearing cached data, verifying browser compatibility, checking user security roles in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), and isolating extension conflicts.
+This article helps dispatchers and administrators resolve problems in which the [schedule board](/dynamics365/field-service/work-with-schedule-board) in [Microsoft Dynamics 365 Field Service](/dynamics365/field-service/overview) displays a blank page, doesn't load, or shows incomplete content. Common causes include:
+
+- Corrupted browser cache or cookies
+- An unsupported or outdated browser
+- Missing [security role](/dynamics365/field-service/security-permissions) privileges
+- Third-party browser extensions that block JavaScript resources
+
+The troubleshooting steps in this article cover how to:
+
+- Clear cached data
+- Verify browser compatibility
+- Check user security roles in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/)
+- Isolate extension conflicts
 
 ## Symptoms
 
