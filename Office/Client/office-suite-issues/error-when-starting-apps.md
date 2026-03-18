@@ -44,17 +44,17 @@ To verify that symbolic link evaluation is disabled, run the following command i
 
 You'll see an output that resembles the following example:
 
-`NOTE: SymlinkEvaluation is currently controlled by group policy.
+`NOTE: SymlinkEvaluation is currently controlled by group policy.`
 
-Showing current group policy state:
+`Showing current group policy state:`
 
-Local-to-local symbolic link evaluation is: DISABLED  
+`Local-to-local symbolic link evaluation is: DISABLED`
 
-Local-to-remote symbolic link evaluation is: DISABLED  
+`Local-to-remote symbolic link evaluation is: DISABLED`  
 
-Remote-to-local symbolic link evaluation is: DISABLED  
+`Remote-to-local symbolic link evaluation is: DISABLED`
 
-Remote-to-remote symbolic link evaluation is: ENABLED`
+`Remote-to-remote symbolic link evaluation is: ENABLED`
 
 This output indicates that symbolic link evaluation is blocked by Group Policy settings. If you don't see the message about Group Policy, then the settings for the `fsutil` command might be set to disable symbolic link evaluation.
 
