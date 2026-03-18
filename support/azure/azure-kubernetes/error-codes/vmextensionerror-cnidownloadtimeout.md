@@ -1,16 +1,18 @@
 ---
-title: Troubleshoot the VMExtensionError_CniDownloadTimeout error code
-description: Learn how to troubleshoot the VMExtensionError_CniDownloadTimeout error (41) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the VMExtensionError_CniDownloadTimeout message
+description: Learn how to troubleshoot the VMExtensionError_CniDownloadTimeout message when you try to create and deploy an Azure Kubernetes Service (AKS) cluster and use these steps to deploy successfully.
 ms.date: 05/03/2023
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_CniDownloadTimeout error code (error number 41) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_CniDownloadTimeout message so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_CniDownloadTimeout error code (41)
+# Troubleshoot the VMExtensionError_CniDownloadTimeout message
 
-This article discusses how to identify and resolve the `VMExtensionError_CniDownloadTimeout` error (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article discusses how to identify and resolve the `VMExtensionError_CniDownloadTimeout` message (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`) that occurs when you try to create and deploy a  Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -26,9 +28,7 @@ When you try to create a Linux-based AKS cluster, you receive the following erro
 >
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=41**\n[stdout]\n{
->
-> "ExitCode": "41",
+> Error message: "CSE failed with 'VMExtensionError_CniDownloadTimeout', which means agents are unable to connect to the endpoint that's used to download the container network interface libraries. It's likely that a network virtual appliance is blocking SSL communication or an SSL certificate, please see https://aka.ms/aks/vmextensionerror_cnidownloadtimeout for more information.
 
 ## Cause
 
