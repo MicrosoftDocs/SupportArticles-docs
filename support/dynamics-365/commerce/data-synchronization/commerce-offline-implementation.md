@@ -47,7 +47,7 @@ You receive one of the following error messages:
 
 ### Cause
 
-This problem can have either of the following causes:
+This problem can occur for either of the following reasons:
 
 - The system can't find the store's employee address books.
 - The worker isn't correctly mapped to the store in the offline database.
@@ -95,7 +95,7 @@ This problem occurs because the worker's POS permission settings aren't found or
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. If the problem persists, contact your system administrator.
 
-## Channel errors beause of inability to switch to offline mode
+## Channel errors because of inability to switch to offline mode
 
 ### Symptoms
 
@@ -186,9 +186,9 @@ The device can't switch to offline mode. The offline database is either installe
 
 ### Solution
 
-1. Verify that the offline database is installed and configured correctly.
+1. Verify that the offline database is installed and configured correctly. For more information, see [Health check view for offline readiness](/dynamics365/commerce/health-check-view-offline).
 1. If the problem persists, contact your system administrator.
- 
+
 ## Terminal or device configuration not found
 
 ### Symptoms
@@ -198,10 +198,18 @@ You receive one of the following error messages:
 - `Microsoft_Dynamics_Commerce_Runtime_TerminalNotFound`
 - `Microsoft_Dynamics_Commerce_Runtime_DeviceConfigurationNotFound`
 
+### Cause
+
+The most common cause is when there's still pending data to synchronize to the offline database.
+
+> [!NOTE]
+> To check for pending data, in Commerce headquarters, open the **Download sessions** form, filter by the affected offline database, and verify whether there are still sessions in an **Available** state.
+
 ### Solution
 
 1. In Commerce headquarters, go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**.
-1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
+1. Run the **Channel configuration** scheduler job (by default, the **1070** scheduler job).
+1. Run the **Register configuration** scheduler job (by default, the **1090** scheduler job).
 1. If the problem persists, contact your system administrator.
 
 ## Internal server, timeout, or runtime invalid format
@@ -214,13 +222,10 @@ You receive one of the following error messages:
 - `Request_Timeout_Error`
 - `Microsoft_Dynamics_Commerce_Runtime_InvalidFormat`
 
-### Cause
-
-These errors can have various underlying causes.
-
 ### Solution
 
-Create a Microsoft Support request by using the [Power Platform admin center](/power-platform/admin/support-overview).
+1. To gather preliminary diagnostics, see [Network health checks](/dynamics365/commerce/pos-healthcheck#network-health-checks).
+1. Create a support request by using the [Power Platform admin center](/power-platform/admin/support-overview).
 
 ## Related content
 
