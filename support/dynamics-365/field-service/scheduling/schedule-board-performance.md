@@ -35,7 +35,7 @@ When you use the schedule board, you experience one or more of the following pro
 
 ## Cause: Too many resources displayed
 
-The schedule board tab is configured to display too many resources at one time. Rendering time and API call volume are significantly increased if you load hundreds of resources together with their bookings.
+The schedule board tab is configured to display too many resources at one time. Rendering time and API call volume are increased significantly if you load hundreds of resources together with their bookings.
 
 ### Solution
 
