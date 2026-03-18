@@ -46,32 +46,32 @@ If a restriction exists at any level in the configuration hierarchy, IIS might r
 ### Review IP address restrictions in IIS Manager
 
 1. Open **Internet Information Services (IIS) Manager**.
-2. In the **Connections** pane, select the server, site, or application where the issue occurs.
-3. In **Features View**, double-click **IP Address and Domain Restrictions**.
-4. Review the configured rules.
+1. In the **Connections** pane, select the server, site, or application where the issue occurs.
+1. In **Features View**, double-click **IP Address and Domain Restrictions**.
+1. Review the configured rules.
 
 #### To allow a client IP address
 
 1. Select **Add Allow Entry** in the **Actions** pane.
-2. Enter the IP address or subnet mask.
-3. Select **OK**.
+1. Enter the IP address or subnet mask.
+1. Select **OK**.
 
 #### To remove a blocking rule
 
 1. Locate the rule that blocks the IP address.
-2. Select the rule.
-3. Select **Remove** from the **Actions** pane.
+1. Select the rule.
+1. Select **Remove** from the **Actions** pane.
 
 ### Verify the default restriction policy
 
 1. Open **Internet Information Services (IIS) Manager**.
-2. In the **Connections** pane, select the server, site, or application where the issue occurs.
-3. In **Features View**, double-click **IP Address and Domain Restrictions**.
-4. Select **Edit Feature Settings** in the **Actions** pane.
-5. Review the configured policy. Two policies are available:
+1. In the **Connections** pane, select the server, site, or application where the issue occurs.
+1. In **Features View**, double-click **IP Address and Domain Restrictions**.
+1. Select **Edit Feature Settings** in the **Actions** pane.
+1. Review the configured policy. Two policies are available:
    - **Allow unspecified clients**: All clients are allowed except those explicitly denied.
    - **Deny unspecified clients**: Only explicitly allowed IPs have access.
-6. If **Deny unspecified clients** is configured, add the client IP address as an _allow rule_.
+1. If **Deny unspecified clients** is configured, add the client IP address as an _allow rule_.
 
 ### Check configuration files
 
@@ -94,8 +94,8 @@ If the website is behind a proxy, gateway, or load balancer, IIS might receive r
 In this case:
 
 1. Review IIS logs to determine the IP address recorded for the request.
-2. Verify whether you need to allow the proxy or load balancer IP address.
-3. Check whether headers such as `X-Forwarded-For` are used to pass the original client IP.
+1. Verify whether you need to allow the proxy or load balancer IP address.
+1. Check whether headers such as `X-Forwarded-For` are used to pass the original client IP.
 
 ## Additional considerations
 
