@@ -11,6 +11,10 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # "TLS: client offered only unsupported versions" error on client when connecting to the AKS API server
 
+## Summary
+
+This article provides a solution to a "tls: client offered only unsupported versions" error that occurs on the client computer or virtual machine when connecting to the Microsoft Azure Kubernetes Service (AKS) API server.
+
 ## Symptoms
 
 When you try to connect to the Microsoft Azure Kubernetes Service (AKS) API server, you receive the following error message from your client computer or virtual machine:

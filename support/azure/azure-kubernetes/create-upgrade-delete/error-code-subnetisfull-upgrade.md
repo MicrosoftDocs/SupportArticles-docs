@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot the "SubnetIsFull" error code during an AKS cluster upgrade
 
+## Summary
+
 This article discusses how to identify and resolve the "SubnetIsFull" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 
 Here's an example of the error message:

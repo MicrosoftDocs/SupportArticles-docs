@@ -8,7 +8,10 @@ ms.service: azure-kubernetes-service
 ms.reviewer: kthakar1990, v-weizhu, axelg, josebl, aritraghosh, v-leedennis, v-liuamson
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
+
 # Troubleshoot API server and etcd problems in AKS
+
+## Summary
 
 This article helps you identify and resolve problems that you might encounter within the API server in large Microsoft Azure Kubernetes Services (AKS) deployments.
 

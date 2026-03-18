@@ -12,6 +12,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot common issues for Azure Linux Container Host for AKS
 
+## Summary
+
 This article provides troubleshooting steps for some of the commonly reported issues that you might experience when you use Azure Linux container hosts in Azure Kubernetes Service (AKS). For more information about how to get started using Azure Linux container hosts in AKS, see [Use Azure Linux with AKS](/azure/aks/use-azure-linux).
 
 ## Before you begin

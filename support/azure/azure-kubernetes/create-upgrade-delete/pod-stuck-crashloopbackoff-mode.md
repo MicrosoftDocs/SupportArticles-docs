@@ -11,6 +11,12 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Pod is stuck in CrashLoopBackOff mode
 
+## Summary
+
+This article discusses how to troubleshoot a scenario in which a pod is stuck in `CrashLoopBackOff` mode on an Azure Kubernetes Service (AKS) cluster.
+
+## Cause
+
 If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited unexpectedly, and the log contains an exit code that isn't zero. Here are several possible reasons why your pod is stuck in `CrashLoopBackOff` mode:
 
 1. **Application failure**: The application inside the container crashes shortly after starting, often due to misconfigurations, missing dependencies, or incorrect environment variables.
@@ -24,6 +30,8 @@ If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited
 9. **Invalid commands or arguments**: The container might be started with an invalid `ENTRYPOINT`, command, or argument, leading to a crash.
 
 For more information about the container status, see [Pod Lifecycle - Container states](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-states).
+
+## Solution
 
 Consider the following options and their associated [kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) commands.
 
