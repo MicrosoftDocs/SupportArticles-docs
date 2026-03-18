@@ -19,7 +19,7 @@ This article helps you troubleshoot the `HTTP 403.6` error in Internet Informati
 
 ## Symptoms
 
-When you visit a website that's hosted on IIS in a web browser, you might receive an `HTTP 403.6` error with a message that resembles the following example:
+When you visit a website that's hosted on IIS in a web browser, you might receive an `HTTP 403.6` error message that resembles the following example:
 
 > HTTP 403.6 - Forbidden: IP address rejected
 
@@ -32,7 +32,7 @@ IIS returns the `HTTP 403.6` response if a client IP address is:
 - Explicitly listed in the **deny rules**
 - Not included in the allow list when the server is configured to deny unspecified clients
 
-You can configure restrictions at multiple levels in IIS:
+You can configure restrictions at multiple levels in IIS, as follows:
 
 - Server level
 - Website level
@@ -52,7 +52,7 @@ If a restriction exists at any level in the configuration hierarchy, IIS might r
 
 #### To allow a client IP address
 
-1. Select **Add Allow Entry** in the **Actions** pane.
+1. On the **Actions** pane, select **Add Allow Entry**.
 1. Enter the IP address or subnet mask.
 1. Select **OK**.
 
@@ -60,14 +60,14 @@ If a restriction exists at any level in the configuration hierarchy, IIS might r
 
 1. Locate the rule that blocks the IP address.
 1. Select the rule.
-1. Select **Remove** from the **Actions** pane.
+1. On the **Actions** pane, select **Remove**.
 
 ### Verify the default restriction policy
 
 1. Open **Internet Information Services (IIS) Manager**.
-1. In the **Connections** pane, select the server, site, or application where the issue occurs.
+1. On the **Connections** pane, select the server, site, or application where the issue occurs.
 1. In **Features View**, double-click **IP Address and Domain Restrictions**.
-1. Select **Edit Feature Settings** in the **Actions** pane.
+1. On the **Actions** pane, select **Edit Feature Settings**.
 1. Review the configured policy. Two policies are available:
    - **Allow unspecified clients**: All clients are allowed except those explicitly denied.
    - **Deny unspecified clients**: Only explicitly allowed IPs have access.
@@ -75,7 +75,7 @@ If a restriction exists at any level in the configuration hierarchy, IIS might r
 
 ### Check configuration files
 
-You can also configure IP restrictions in `web.config` or `applicationHost.config`.
+You can also configure IP restrictions in `Web.config` or `ApplicationHost.config`.
 
 Example configuration:
 
@@ -89,12 +89,12 @@ If `allowUnlisted="false"` is set, add the client IP address as an allowed entry
 
 ### Check for proxy or load balancer scenarios
 
-If the website is behind a proxy, gateway, or load balancer, IIS might receive requests from the intermediate device instead of the original client.
+If the website is behind a proxy, gateway, or load balancer, IIS might receive requests from the intermediate device instead of from the original client.
 
 In this case:
 
-1. Review IIS logs to determine the IP address recorded for the request.
-1. Verify whether you need to allow the proxy or load balancer IP address.
+1. Review IIS logs to determine the IP address that's recorded for the request.
+1. Determine whether you have to allow the proxy or load balancer IP address.
 1. Check whether headers such as `X-Forwarded-For` are used to pass the original client IP.
 
 ## Additional considerations
@@ -109,7 +109,7 @@ If a client connects through a proxy server, IIS sees the proxy server's IP addr
 
 ### Localhost-only configurations
 
-You can configure some sites to allow access only from the localhost (127.0.0.1). This configuration restricts access to requests originating from the server itself.
+You can configure some sites to allow access from only the localhost (127.0.0.1). This configuration restricts access to requests that originate from the server itself.
 
 ## Related content
 
