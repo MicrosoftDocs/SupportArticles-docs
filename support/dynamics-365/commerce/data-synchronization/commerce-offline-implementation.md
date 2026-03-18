@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot commerce offline mode errors in Dynamics 365
-description: Learn how to troubleshoot common offline implementation problems in Dynamics 365 Commerce, from employee configuration to database storage errors.
+title: Troubleshoot Offline Mode Errors in Dynamics 365 Commerce
+description: Resolve common offline mode errors in Dynamics 365 Commerce, including sign-in issues, database problems, and channel configuration errors. Learn troubleshooting steps.
 ms.reviewer: johnmichalak, Luke.Graham, v-shaywood
 ms.custom: sap:Data synchronization
 ms.date: 03/16/2026

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Commerce Data Exchange problems in Dynamics 365
-description: Troubleshoot common Commerce Data Exchange (CDX) errors in Dynamics 365 Commerce. Learn how to resolve batch job failures, download session errors, and perform other tasks.
+title: Troubleshoot Commerce Data Exchange Errors in Dynamics 365
+description: Learn how to troubleshoot Commerce Data Exchange (CDX) errors in Dynamics 365 Commerce. Resolve batch job failures, session errors, and improve data synchronization.
 ms.reviewer: johnmichalak, dlandi, v-shaywood
 ms.custom: sap:Data synchronization
 ms.date: 03/16/2026
