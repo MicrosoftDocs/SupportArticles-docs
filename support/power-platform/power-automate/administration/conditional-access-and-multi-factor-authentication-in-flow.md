@@ -14,7 +14,8 @@ _Original KB number:_ &nbsp; 4467879
 
 ## Recommendations
 
-- To avoid authentication failures when users access Power Automate from SharePoint, Teams, or Excel, target the **Office 365** app or **All cloud apps** in your Conditional Access policy. This ensures consistent MFA requirements across Power Automate and the apps that embed it. If you target individual applications instead, you must ensure MFA requirements match across all of them. See [Effect 5](#effect-5---using-power-automate-features-embedded-in-other-microsoft-services) for details.
+- To avoid authentication failures when users access Power Automate from SharePoint, Teams, or Excel, target the **Office 365** app or **All cloud apps** in your Conditional Access policy. This ensures consistent requirements across Power Automate and the apps that embed it. If you target individual applications instead, you must ensure all Conditional Access requirements (MFA, Terms of Use, device compliance) match across all of them. See [Effect 5](#effect-5---using-power-automate-features-embedded-in-other-microsoft-services) for details.
+- If your Conditional Access policies include [Terms of Use](/entra/identity/conditional-access/terms-of-use) grant controls, exclude service accounts and dedicated flow connection owners from those policies. Power Automate connections refresh tokens silently in the background and cannot present the Terms of Use acceptance UI. See [Effect 8](#effect-8---terms-of-use-policies-break-existing-flow-connections) for details.
 - Don't use [remember multifactor authentication for trusted devices](/entra/identity/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
 - To avoid policy conflict errors, ensure that users who sign in to Power Automate use criteria that match the policies for the connections a flow uses.
 
@@ -131,3 +132,37 @@ Related to Effect 6, the creation and execution of SharePoint out-of-box flows, 
 This scenario applies both to the network location and to conditional access policies (such as Disallow Unmanaged Devices). Support for the creation of SharePoint out-of-box flows is currently in development. We'll post more information in this article when this support becomes available.
 
 In the interim, we advise users to create similar flows themselves, and manually share these flows with the desired users, or to disable conditional access policies if this functionality is required.
+
+### Effect 8 - Terms of Use policies break existing flow connections
+
+When an administrator adds a [Terms of Use](/entra/identity/conditional-access/terms-of-use) requirement to a Conditional Access policy after flows are already running, existing connections break. Power Automate connections refresh tokens silently in the background, and the silent token refresh cannot present the Terms of Use acceptance page to the user. The connection enters an error state and all flows that use it stop working.
+
+#### Symptoms
+
+- Flows that were previously working stop with connection errors.
+- The connection shows a status of "Failed to refresh access token for service" in the Power Automate portal.
+- The flow was created and working before the Terms of Use policy was added.
+- Entra sign-in logs show `AADSTS50158` (external security challenge not satisfied) or `AADSTS53003` (access blocked by Conditional Access policies) for the **Microsoft Flow Service** resource.
+
+> [!NOTE]
+> Unlike MFA errors, Terms of Use failures don't produce a specific AADSTS error code. The `AADSTS50158` and `AADSTS53003` codes are generic Conditional Access errors. To confirm that Terms of Use is the cause, check the Entra sign-in logs > **Conditional Access** tab and look for a Terms of Use grant control with a status of "Not Satisfied."
+
+#### Common scenarios
+
+- **Retroactive policy**: Admin adds a Terms of Use requirement to a service (such as SharePoint or Exchange) that existing flow connections already use. Connections break on the next token refresh.
+- **Consent expiry**: Admin configures Terms of Use with **Expire consents** on a schedule (monthly, quarterly) or a rolling re-acceptance window (for example, every 30 days). Connections break each time consent expires and the user must interactively re-accept.
+- **Per-device Terms of Use**: Admin enables "Require users to consent on every device." Flow execution occurs on Microsoft cloud infrastructure, not on a user's registered device, so the device-level consent can never be satisfied.
+
+#### Resolution
+
+1. The flow owner must sign in interactively to the [Power Automate portal](https://make.powerautomate.com) (which triggers the Terms of Use acceptance prompt).
+2. Repair or re-create the affected connection.
+3. If Terms of Use has a recurring expiry schedule, this process must be repeated each time consent expires.
+
+#### Prevention
+
+- **Exclude service accounts and dedicated flow connection owners** from Conditional Access policies that include Terms of Use grant controls. Microsoft recommends this approach in the [Terms of Use documentation](/entra/identity/conditional-access/terms-of-use).
+- If Terms of Use must apply to flow users, use **All cloud apps** targeting so that acceptance during any interactive sign-in (such as Outlook or Teams) covers Power Automate as well.
+- Avoid configuring **Expire consents** with short durations if Power Automate flows are in scope — each expiry breaks all connections for affected users.
+- Never use **per-device Terms of Use** for applications that Power Automate connects to, because flow execution runs on Microsoft infrastructure, not on user-registered devices.
+- Communicate planned Terms of Use policy changes to flow owners in advance so they can proactively repair connections.

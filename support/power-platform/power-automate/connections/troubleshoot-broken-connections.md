@@ -144,7 +144,7 @@ To resolve this issue, the tenant administrator needs to reenable the applicatio
 
 ## Conditional Access policy mismatch for embedded flows
 
-Connections can appear broken when a flow is accessed from an embedded surface (such as a SharePoint list, Microsoft Teams channel, or Excel workbook) if the Conditional Access (CA) policies for the host application and Power Automate have different MFA requirements.
+Connections can appear broken when a flow is accessed from an embedded surface (such as a SharePoint list, Microsoft Teams channel, or Excel workbook) if the Conditional Access (CA) policies for the host application and Power Automate have different requirements.
 
 You might see an authentication error similar to:
 
@@ -152,16 +152,35 @@ You might see an authentication error similar to:
 
 ### Cause
 
-When a user accesses a flow from SharePoint, Teams, or Excel, the host application exchanges its token for a **Microsoft Flow Service** token. If the CA policies require MFA for one application but not the other, this exchange fails.
+When a user accesses a flow from SharePoint, Teams, or Excel, the host application exchanges its token for a **Microsoft Flow Service** token. If the CA policies have different requirements (MFA, Terms of Use, or device compliance) for one application but not the other, this exchange fails.
 
-This typically happens when CA policies target individual applications with different MFA requirements, rather than using the **Office 365** app or **All cloud apps** target that covers both the host application and Power Automate consistently.
+This typically happens when CA policies target individual applications with different requirements, rather than using the **Office 365** app or **All cloud apps** target that covers both the host application and Power Automate consistently.
 
 ### Troubleshooting steps
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
-2. Switch your policy to target the **Office 365** app or **All cloud apps** for consistent MFA enforcement across Power Automate and the apps that embed it.
-3. If you must target individual applications, verify that MFA requirements are consistent between the host applications (SharePoint, Teams, Excel) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`).
+2. Switch your policy to target the **Office 365** app or **All cloud apps** for consistent enforcement across Power Automate and the apps that embed it.
+3. If you must target individual applications, verify that all Conditional Access requirements (MFA, Terms of Use, device compliance) are consistent between the host applications (SharePoint, Teams, Excel) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`).
 4. After updating policies, ask affected users to sign out and sign back in.
+
+For detailed guidance, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
+
+## Terms of Use policy breaks flow connections
+
+Connections can break when an administrator adds a [Terms of Use](/entra/identity/conditional-access/terms-of-use) requirement to a Conditional Access policy after flows are already running, or when a Terms of Use consent expires on a recurring schedule.
+
+You might see a connection status of "Failed to refresh access token for service" without a specific error message indicating Terms of Use.
+
+### Cause
+
+Power Automate connections refresh tokens silently in the background. When a Terms of Use grant control is in scope, the silent token refresh fails because the Terms of Use acceptance page can't be presented without an interactive session. This breaks connections retroactively — even for flows that were working before the Terms of Use policy existed.
+
+### Troubleshooting steps
+
+1. Check Entra sign-in logs for `AADSTS50158` or `AADSTS53003` errors targeting the **Microsoft Flow Service** resource. In the **Conditional Access** tab, look for a Terms of Use grant control with a status of "Not Satisfied."
+2. The flow owner must sign in interactively to the [Power Automate portal](https://make.powerautomate.com) to trigger the Terms of Use acceptance prompt.
+3. Repair or re-create the affected connection.
+4. To prevent recurrence, [exclude service accounts and dedicated flow connection owners](/entra/identity/conditional-access/terms-of-use) from Conditional Access policies that include Terms of Use grant controls.
 
 For detailed guidance, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
 
