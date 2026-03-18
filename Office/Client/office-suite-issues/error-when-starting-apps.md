@@ -26,7 +26,7 @@ This article discusses an error message that appears when you try to open Micros
 
 ## Symptoms
 
-You're running Office version 16.0.14827.20220 on your computer, or you've installed Microsoft 365 apps by using an Office Click-to-Run build that uses App-V subsystems. When you open any Microsoft 365 app, the app doesn't start, and you see the following error message:  
+You're running Office version 16.0.14827.20220 on your computer, or you installed Microsoft 365 apps by using an Office Click-to-Run build that uses App-V subsystems. When you open any Microsoft 365 app, the app doesn't start, and you see the following error message:  
 
 "The application was unable to start correctly (0xc0000715)."
 
@@ -74,7 +74,7 @@ If symbolic link evaluation is disabled by Group Policy, enable it by following 
 
 1. Select **Selectively allow the evaluation of a symbolic link**, and then select **Edit policy setting**.
 
-1. Select **Enabled**, and then select the checkboxes for the options that are not enabled:
+1. Select **Enabled**, and then select the checkboxes for the options that aren't enabled:
 
    - **Local Link to Local Target**
    - **Local Link to a Remote Target**
