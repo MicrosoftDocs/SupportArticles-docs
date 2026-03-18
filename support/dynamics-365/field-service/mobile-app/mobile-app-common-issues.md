@@ -1,7 +1,7 @@
 ---
 title: Common issues with the Field Service mobile app
 description: Resolve common issues with the Dynamics 365 Field Service mobile app, including blank screens, offline sync errors, access errors, and WebView resets.
-ms.date: 03/11/2026
+ms.date: 03/18/2026
 ms.topic: troubleshooting
 ms.subservice: field-service-mobile
 author: JonBaker007
