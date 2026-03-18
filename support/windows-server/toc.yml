@@ -1066,7 +1066,7 @@ items:
       href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
-  - name: Cluster witness
+  - name: Cluster Witness and quorum
     items:
     - name: 'Troubleshooting guidance: Configuring Witness resource'
       href: ./high-availability/configuring-witness-resource.md
