@@ -19,11 +19,11 @@ The following errors can occur:
 
 ### SQL constraint errors
 
-Sql error: Statement conflicted with a constraint. The DELETE statement conflicted with the REFERENCE constraint "botcomponent_parent_bot"
+"Sql error: Statement conflicted with a constraint. The DELETE statement conflicted with the REFERENCE constraint `"botcomponent_parent_bot"`"
 
 ### Managed property evaluation errors
 
-The evaluation of the current component(name=bot, id="botid") in the current operation (Update) failed during managed property evaluation of condition: Managed Property Name: iscustomizableanddeletable; Component Name: bot; Attribute Name: iscustomizable
+"The evaluation of the current component `(name=bot, id="botid")` in the current operation (Update) failed during managed property evaluation of condition: `Managed Property Name: iscustomizableanddeletable; Component Name: bot; Attribute Name: iscustomizable`"
 
 ### Unexpected component deletion errors
 
@@ -74,7 +74,7 @@ When creating a support case, make sure to include the following information:
   - Solution layers view.
   - Agent Dependencies.
   - Customize column showing conflicts (if applicable).
-- Details of the mitigation steps you've attempted.
+- Details of the mitigation steps you attempted.
 - If possible, include the solution ZIP file.
 
 ## Related content

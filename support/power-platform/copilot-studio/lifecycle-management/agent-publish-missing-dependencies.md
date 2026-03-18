@@ -67,4 +67,4 @@ When creating a support case, make sure to include the following information:
 
 - [Solution layers in Power Platform](/power-apps/maker/data-platform/solution-layers)
 - [Create and manage custom solutions](/microsoft-copilot-studio/authoring-solutions-overview)
-- [Export and import agents using solutions](/microsoft-cilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution)
+- [Export and import agents using solutions](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution)
