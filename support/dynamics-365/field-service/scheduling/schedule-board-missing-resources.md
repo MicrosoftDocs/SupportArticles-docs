@@ -1,6 +1,6 @@
 ---
-title: Resolve Missing Resources on Dynamics 365 Schedule Board
-description: Resolve missing bookable resources on the Dynamics 365 Field Service schedule board. Learn how to fix scheduling methods, filters, work hours, and permissions.
+title: Resolve missing resources on Dynamics 365 Schedule Board
+description: Resolve the missing bookable resources issue on the Dynamics 365 Field Service schedule board. Learn how to fix scheduling methods, filters, work hours, and permissions.
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
 ms.date: 03/16/2026
 ms.custom: sap:Schedule Board\Issues with usability
@@ -50,7 +50,7 @@ Resources might not appear on the schedule board for several reasons:
     1. Check that the dispatcher's role has **Read** access on the **Bookable Resource** table for the affected resource's business unit.
 
 > [!NOTE]
-> Facility-type resources and equipment-type resources follow the same rules. If you schedule a non-user resource (such as a room or vehicle), make sure that it has work hours, and that the board tab isn't filtered to show only **User** resource types.
+> Facility-type resources and equipment-type resources follow the same rules. If you schedule a nonuser resource (such as a room or vehicle), make sure that it has work hours, and that the board tab isn't filtered to show only **User** resource types.
 
 ## Related content
 
