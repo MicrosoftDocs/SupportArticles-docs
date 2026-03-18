@@ -483,7 +483,7 @@ Storage Explorer comes packaged with all dependencies it needs to run on Windows
 
 ## [macOS](#tab/macOS)
 
-Storage Explorer comes packaged with all dependencies it needs to run on macOS.
+Starting with Storage Explorer 1.42.0, the .NET runtime is no longer bundled with the macOS distribution. You must install the [.NET 10 runtime](/dotnet/core/install/macos) on your system to run Storage Explorer. The ASP.NET runtime isn't required.
 
 ## [Ubuntu](#tab/linux-ubuntu)
 
@@ -501,7 +501,7 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
@@ -541,7 +541,7 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
@@ -581,7 +581,7 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
