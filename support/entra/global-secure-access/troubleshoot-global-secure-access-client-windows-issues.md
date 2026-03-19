@@ -11,6 +11,8 @@ ms.custom: sap:Private Access
 ---
 # Troubleshoot issues in the Global Secure Access client for Windows
 
+## Summary
+
 The [Global Secure Access client](/entra/global-secure-access/how-to-install-windows-client) is deployed on a managed Microsoft Windows device (that is, a Microsoft Entra hybrid join device or a Microsoft Entra joined device). It enables an organization to control network traffic between these devices and various websites, applications, and resources that are available on the internet or an intranet (on-premises corporate network). If you use this method to route traffic, you can enforce and apply more checks and controls, such as continuous access evaluation (CAE), device compliance, and multi-factor authentication, for resource access.
 
 :::image type="content" source="./media/troubleshoot-global-secure-access-client-windows-issues/global-secure-access-architecture.png" alt-text="Diagram of traffic routing from the Global Secure Access client to internet or intranet access over Microsoft Entra." border="false" lightbox="./media/troubleshoot-global-secure-access-client-windows-issues/global-secure-access-architecture.png":::
