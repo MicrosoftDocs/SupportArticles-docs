@@ -10,6 +10,8 @@ ms.custom: sap:Agreements, SLA's, and Entitlements
 
 # Work orders aren't generated from agreement booking setup
 
+## Summary
+
 This article helps you resolve issues where Microsoft Dynamics 365 Field Service doesn't automatically generate work orders from agreement booking setup records.
 
 ## Symptoms
@@ -38,16 +40,16 @@ Field Service won't generate work orders for agreement booking dates that alread
 
 The agreement processing runs in the context of the user who activated the agreement. If that user account is disabled or lost required privileges, generation fails silently.
 
-## Resolution
+## Solution
 
-### Resolution for Cause 1: Verify agreement status
+### Solution for Cause 1: Verify agreement status
 
 1. In the Dynamics 365 Field Service app, navigate to **Service** area, then go to **Service Delivery** > **Agreements** and open the **Agreement** record.
 2. Verify the **System Status** is **Active** (not Draft or Canceled).
 3. Verify the **Sub-Status** is also set to an active value.
 4. If the agreement is in **Draft**, select **Activate** from the command bar.
 
-### Resolution for Cause 2: Check system jobs
+### Solution for Cause 2: Check system jobs
 
 1. In the Dynamics 365 Field Service app, select **Settings** (gear icon) > **Advanced Settings**. In the advanced settings area, go to **System** > **System Jobs**.
 2. Filter by "Agreement" or look for the system job named **Field Service - Process Agreement Booking Dates**.
@@ -55,21 +57,21 @@ The agreement processing runs in the context of the user who activated the agree
 4. If the job shows as **Waiting**, verify the async service is running in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 5. You can manually trigger work order generation by updating the Agreement Booking Date record status or by reactivating the agreement.
 
-### Resolution for Cause 3: Adjust generation window
+### Solution for Cause 3: Adjust generation window
 
 1. In the Dynamics 365 Field Service app, select the **Settings** area from the bottom-left corner (change area selector).
 2. Under **General**, select **Field Service Settings**, and then select the **Agreement** tab.
 3. Check the **Generate Work Order X Days in Advance** setting. This setting determines how many days before the booking date the system generates the work order.
 3. If the booking date has passed the generation window, manually create the work order or adjust the next booking date.
 
-### Resolution for Cause 4: Reactivate with an active user
+### Solution for Cause 4: Reactivate with an active user
 
 1. In the Dynamics 365 Field Service app, open the agreement record. Select **Related** > **Audit History** to identify the user who activated the agreement. It takes a few seconds to load the screen.
 2. To check if that user is disabled, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), go to **Manage** and select your environment. Then, go to **Settings** (gear icon at top) > **Users + permissions** > **Users**, and search for the user.
 3. If the user is disabled, re-enable the user temporarily, or deactivate the agreement and reactivate it by using an active administrator user.
 4. Verify the activating user has the **Field Service - Administrator** or **Field Service - Dispatcher** security role assigned.
 
-## More information
+## Related content
 
 - [Set up customer agreements](/dynamics365/field-service/set-up-customer-agreements)
 - [Agreement sub-statuses](/dynamics365/field-service/set-up-agreement-sub-statuses)
