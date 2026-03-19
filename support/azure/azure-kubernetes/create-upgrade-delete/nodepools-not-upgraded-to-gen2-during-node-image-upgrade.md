@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or node poo
 
 # Windows Server node pools not upgraded to Gen2 during cluster node image upgrade
 
+## Summary
+
 This article discusses how to troubleshoot a scenario in which Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
 
 > [!NOTE]  

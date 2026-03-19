@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (65)
 
+## Summary
+
 This article discusses how to identify and resolve the `ERR_VHD_FILE_NOT_FOUND` error code (error code number 65) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms

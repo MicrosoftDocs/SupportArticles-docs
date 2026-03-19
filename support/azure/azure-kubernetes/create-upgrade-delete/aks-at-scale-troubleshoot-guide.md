@@ -12,6 +12,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Common issues when you run or scale large AKS clusters FAQ
 
+## Summary
+
 This article answers frequently asked questions about common issues that might occur when you run or scale large clusters in Microsoft Azure Kubernetes Service (AKS). A large cluster is any cluster that runs at more than a 500-node scale.
 
 ## I get a "quota exceeded" error during creation, scale up, or upgrade
