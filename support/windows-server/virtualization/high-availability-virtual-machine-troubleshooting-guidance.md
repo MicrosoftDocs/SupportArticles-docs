@@ -63,7 +63,7 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
 - To check the health of the failover clusters and cluster resources, use Failover Cluster Manager.
   - Identify any error messages in Failover Cluster Manager.
   - Identify which nodes are online and which, if any, are offline.
-  - Identify any cluster resources that're stuck in Locked, Paused, or Not responding states.
+  - Identify any cluster resources that are stuck in Locked, Paused, or Not responding states.
   - Check the status of the CSV.
   - Make sure that the nodes can connect to the shared storage.
 
@@ -83,7 +83,7 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
   For more information, see [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations).
 
   > [!IMPORTANT]  
-  > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology has been deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?view=azloc-2603&context=%2Fwindows-server%2Fcontext%2Fwindows-server-virtualization#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
+  > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology is deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?view=azloc-2603&context=%2Fwindows-server%2Fcontext%2Fwindows-server-virtualization#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
 
 - Make sure any network device drivers support clustering, and are up-to-date.
 
@@ -113,7 +113,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
    - Make sure that the files reside on the shared storage that the cluster nodes use.
    - Make sure that your VM management client (such as Hyper-V Manager) uses the correct paths for these files.
 
-1. Check the VMs for checkpoints (also known as snapshots). Consider merging any existing checkpoints. If any checkpoints won't merge, see [Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance](hyper-v-snapshots-checkpoints-differencing-disks.md).
+1. Check the VMs for checkpoints (also known as snapshots). Consider merging any existing checkpoints. If any checkpoints don't merge, see [Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance](hyper-v-snapshots-checkpoints-differencing-disks.md).
 
 1. Make sure that the VM configurations are up to date, and that all host nodes support the VM configuration version.
 
@@ -130,7 +130,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
 
 The most common reasons that VMs can't migrate from one cluster node to another involve differences in the node configurations, and VM configurations that aren't supported in the same manner on all nodes. The following list links to detailed descriptions and resolution steps for specific symptoms.
 
-- Event ID 21502. This event typically has an error code that indicates the type of issue that occurred. The following list includes these error codes, as well as a few other messages that this event might contain.
+- Event ID 21502. This event typically has an error code that indicates the type of issue that occurred. The following list includes these error codes, and a few other messages that this event might contain.
 
   - [`0x000013AB`](troubleshoot-live-migration-issues.md#failed-to-get-the-network-address-for-the-destination-node-host2-a-cluster-network-isnt-available-for-this-operation-0x000013ab)
   - [`0x80042001` and `0x8007000D`](troubleshoot-live-migration-issues.md#failed-live-migration-of-virtual-machine-vm1-at-migration-source-clu8n1-with-error-codes-80042001-and-8007000d)
@@ -217,7 +217,7 @@ To isolate the type of issue that you have and address the most common issues, c
 
 - If you received Event ID 5120, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
 
-- If you have locked resources that're associated with a single cluster node, schedule downtime for the cluster and then restart the affected node.
+- If you notice locked resources that are associated with a single cluster node, schedule downtime for the cluster and then restart the affected node.
 
 - For other issues that involve cluster resources, see the following articles:
 
@@ -328,7 +328,7 @@ To isolate the type of issue that you have and address the most common issues, c
 
 #### Possible causes
 
-- VM configuration files are stored on local (non-shared) storage.
+- VM configuration files are stored on local (nonshared) storage.
 - Disk files or checkpoints are missing or orphaned, or the checkpoint merge process didn't complete correctly.
 - Configuration versions don't match.
 
@@ -340,7 +340,7 @@ To isolate the type of issue that you have and address the most common issues, c
 
 - If you found orphaned disks or snapshot issues, see [Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance](hyper-v-snapshots-checkpoints-differencing-disks.md).
 
-- Make sure that all virtual disk files and configuration files reside in the cluster's shared storage. You might have to re-add the VM to the cluster after you move the files.
+- Make sure that all virtual disk files and configuration files reside in the cluster's shared storage. You might have to readd the VM to the cluster after you move the files.
 
 - Upgrade the VM configuration version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
 
