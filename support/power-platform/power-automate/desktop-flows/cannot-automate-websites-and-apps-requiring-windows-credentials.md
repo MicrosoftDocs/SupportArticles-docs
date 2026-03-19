@@ -1,6 +1,6 @@
 ---
-title: '"Fix: Power Automate desktop Windows credential dialog issues"'
-description: '"Power Automate for desktop: fix broken Windows credential dialog automation caused by January 2026 security updates by using these step-by-step workarounds."'
+title: 'Fix: Power Automate desktop Windows credential dialog issues'
+description: 'Power Automate for desktop: fix broken Windows credential dialog automation caused by January 2026 security updates by using these step-by-step workarounds.'
 ms.date: 03/18/2026
 ms.reviewer: iomavrid, v-shaywood
 ms.custom: sap:Desktop flows\UI or browser automation
