@@ -1,10 +1,10 @@
 ---
-title: Work order is stuck in a specific status and cannot be updated
+title: Work order is stuck in a specific status and can't be updated
 description: Resolves issues where work orders cannot transition to the next status in Dynamics 365 Field Service.
 author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
-ms.date: 03/04/2026
+ms.date: 03/19/2026
 ms.custom: sap:Work Order Management
 ---
 
@@ -52,7 +52,7 @@ A synchronous plug-in on the work order **Update** message reverts the status ch
 
 1. In the Dynamics 365 Field Service app, open the work order record and select the **Bookings** tab.
 2. Verify all associated bookings have a **Completed** booking status.
-3. On the same work order, navigate to the **Products and Services** tab and verify all items are in a **Used** or **Estimated** status (not **Open**).
+3. On the same work order, go to the **Products and Services** tab and verify all items are in a **Used** or **Estimated** status (not **Open**).
 4. Once all sub-records are in a terminal state, change the work order status to **Completed**.
 
 > [!NOTE]
@@ -60,12 +60,12 @@ A synchronous plug-in on the work order **Update** message reverts the status ch
 
 ### Solution for Cause 3: Identify and fix custom plug-ins
 
-1. To check plug-in registrations, go to [make.powerapps.com](https://make.powerapps.com), select your environment, navigate to **Tables** > **Work Order** > **Plug-in steps**, and look for plug-ins registered on the **Pre-Operation** or **Post-Operation** step of the **Update** message.
+1. To check plug-in registrations, go to [make.powerapps.com](https://make.powerapps.com), select your environment, go to **Tables** > **Work Order** > **Plug-in steps**, and look for plug-ins registered on the **Pre-Operation** or **Post-Operation** step of the **Update** message.
 2. Enable Plug-in Trace Log to capture execution details: in the Dynamics 365 Field Service app, select the **Settings** (gear icon) > **Advanced Settings**. In the advanced settings area, go to **System** > **Administration** tab and select **Customization**, and then set **Enable logging to plug-in trace log** to **All**.
 3. Reproduce the issue and review the trace log for any plug-in that modifies the `msdyn_systemstatus` field.
 4. Update the plug-in logic to allow the intended status transition.
 
-## Related Content
+## Related content
 
 - [Work order lifecycle and system statuses](/dynamics365/field-service/work-order-status-booking-status)
 - [Set up booking statuses](/dynamics365/field-service/set-up-booking-statuses)

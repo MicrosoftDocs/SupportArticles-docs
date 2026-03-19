@@ -4,7 +4,7 @@ description: Resolves common errors that occur when creating or saving work orde
 author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
-ms.date: 03/04/2026
+ms.date: 03/19/2026
 ms.custom: sap:Work Order Management
 ---
 
@@ -95,7 +95,7 @@ The incident type's associated products, services, and service tasks are either 
          - Work Order Service Task (`msdyn_workorderservicetask`)
 1. If you're using custom business rules that hide or lock the **Incident Type** field, verify they allow the system to trigger the auto-population logic.
 
-## Related Content
+## Related content
 
 - [Create a work order](/dynamics365/field-service/create-work-order)
 - [Work order architecture](/dynamics365/field-service/field-service-architecture)
