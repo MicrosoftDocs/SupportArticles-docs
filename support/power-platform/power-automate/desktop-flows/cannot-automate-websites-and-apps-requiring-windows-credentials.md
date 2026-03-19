@@ -51,7 +51,7 @@ Until a fix is available, use the following workarounds, as appropriate:
 - For web automation problems, use an alternative browser. Currently, only Microsoft Edge is affected. Therefore, use Firefox or Chrome instead, if possible.
 
    > [!NOTE]
-   > When you use Chrome, you might have to use the UI element inspector tool by having Microsoft Active Accessibility (MSAA) mode enabled.
+   > When you use Chrome, you might have to use the UI element inspector tool and enable [Microsoft Active Accessibility (MSAA)](/windows/win32/winauto/microsoft-active-accessibility) mode.
 
 - [Run Power Automate for desktop as an administrator](/power-automate/desktop-flows/setup#run-power-automate-with-elevated-rights) for local attended (console) runs. This option isn't available for cloud runs (unattended or attended).
 
