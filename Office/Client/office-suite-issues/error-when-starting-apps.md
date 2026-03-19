@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto:
   - Microsoft 365 apps
-ms.date: 03/19/2026
+ms.date: 03/18/2026
 ---
 
 # "Application was unable to start correctly" error when accessing Microsoft 365 apps
@@ -28,11 +28,11 @@ This article discusses an error message that appears when you try to open Micros
 
 You're running Office version 16.0.14827.20220 or later on your computer, or you installed Microsoft 365 apps by using an Office Click-to-Run build that uses App-V subsystems. When you open any Microsoft 365 app, the app doesn't start, and you see the following error message:  
 
-"The application was unable to start correctly (0xc0000715)."
+> The application was unable to start correctly (0xc0000715).
 
 You also see the following event logged in the system log or added as an entry in the Click-to-Run log:
 
-"directory_entry::status: The symbolic link cannot be followed because its type is disabled."
+> directory_entry::status: The symbolic link cannot be followed because its type is disabled.
 
 ## Cause
 
@@ -44,17 +44,16 @@ To verify that symbolic link evaluation is disabled, run the following command i
 
 You'll see an output that resembles the following example:
 
-`NOTE: SymlinkEvaluation is currently controlled by group policy.`
-
-`Showing current group policy state:`
-
-`Local-to-local symbolic link evaluation is: DISABLED`
-
-`Local-to-remote symbolic link evaluation is: DISABLED`  
-
-`Remote-to-local symbolic link evaluation is: DISABLED`
-
-`Remote-to-remote symbolic link evaluation is: ENABLED`
+> NOTE: SymlinkEvaluation is currently controlled by group policy.
+>       Showing current group policy state:
+> 
+> Local-to-local symbolic link evaluation is: DISABLED
+> 
+> Local-to-remote symbolic link evaluation is: DISABLED
+> 
+> Remote-to-local symbolic link evaluation is: DISABLED
+> 
+> Remote-to-remote symbolic link evaluation is: ENABLED
 
 This output indicates that symbolic link evaluation is blocked by Group Policy settings. If you don't see the message about Group Policy, then the settings for the `fsutil` command might be set to disable symbolic link evaluation.
 
@@ -62,23 +61,22 @@ This output indicates that symbolic link evaluation is blocked by Group Policy s
 
 Depending on how symbolic link evaluation is controlled, use one of the following options to enable all types of symbolic link evaluation for the file paths on your local computer. Then, restart the Office Click-to-Run service.  
 
-Also, make sure that the antivirus and endpoint protection tools on your computer don't override symbolic link settings.
+Also, make sure that the antivirus and endpoint protection tools on your computer don't override symbolic link evaluation settings.
 
 ### Option 1: Update the Group Policy settings
 
 If symbolic link evaluation is disabled by Group Policy, enable it by following these steps:
 
-1. In the Windows Search bar, enter `gpedit.msc` to open the Local Group Policy Editor.
+1. In the Windows Search bar, enter `gpedit.msc` and press Enter to open the Local Group Policy Editor.
 
 1. Select **Computer Configuration** > **Administrative Templates** > **System** > **Filesystem**.
 
 1. Select **Selectively allow the evaluation of a symbolic link**, and then select **Edit policy setting**.
 
-1. Select **Enabled**, and then select the checkboxes for the options that aren't enabled:
+1. Select **Enabled**, and then select the checkboxes for the options that aren't enabled. For the example in the Cause section, select the following options:
 
    - **Local Link to Local Target**
    - **Local Link to a Remote Target**
-   - **Remote Link to Remote Target**
    - **Remote Link to Local Target**
 
 1. Select **Apply**, and then select **OK**.
