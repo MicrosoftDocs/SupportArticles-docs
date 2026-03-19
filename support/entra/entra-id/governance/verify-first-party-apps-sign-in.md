@@ -8,7 +8,7 @@ ms.custom: sap:Sign-In Activity Reports, no-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
-[!INCLUDE [Feedback](../../../includes/feedback.md)]
+## Summary
 
 When you review your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify. You also might wonder how you signed in to that app, if you don't remember accessing the app.
 
