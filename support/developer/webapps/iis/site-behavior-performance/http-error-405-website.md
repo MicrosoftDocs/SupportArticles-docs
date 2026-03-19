@@ -71,3 +71,5 @@ Use a custom status code instead of the predefined `HTTP 405.0`. For client erro
 
 - [Troubleshoot Web API2 apps that work in Visual Studio and fail on a production IIS server](/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
 - [Troubleshoot 4xx and 5xx HTTP errors](troubleshoot-http-error-code.md)
+
+[!INCLUDE [Third-party disclaimer](~/includes/third-party-disclaimer.md)]

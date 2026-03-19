@@ -65,7 +65,7 @@ You must add and explicitly enable custom extensions.
 
 ### IIS static content
 
-If a file extension isn't mapped to a known extension in the [MIME Map](/iis/configuration/system.webserver/staticcontent/mimemap) property, the server records a "404.3" entry in the W3C Extended Log file. Use the IIS MMC snap-in to configure the appropriate extension in the MIME Map.
+If a file extension isn't mapped to a known extension in the [MIME mappings](/iis/configuration/system.webserver/staticcontent/mimemap), the server records a "404.3" entry in the W3C Extended Log file. Use the IIS MMC snap-in to configure the appropriate extension in the MIME Map.
 
 ### Request filtering
 
@@ -79,3 +79,5 @@ A "404" response might also be caused by hidden static files. For more informati
 
 - [HTTP status codes in IIS](../health-diagnostic-performance/http-status-code.md)
 - [Troubleshoot 4xx and 5xx HTTP errors](troubleshoot-http-error-code.md)
+
+[!INCLUDE [Third-party disclaimer](~/includes/third-party-disclaimer.md)]
