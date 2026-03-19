@@ -180,7 +180,7 @@ Or the reverse:
 
 If the allow rule specifies a source IP address or range, RDP connections from IP addresses outside that range are blocked.
 
-**Resolution**: Verify that the source IP address of your RDP client is included in the rule's source. Use a service like [checkip.azure.com](https://checkip.azure.com) to confirm your public IP.
+**Resolution**: Verify that the source IP address of your RDP client is included in the rule's source. Use a service like [What's My IP](https://whatsmyip.com/) to confirm your public IP.
 
 ### Service tag misconfiguration
 
