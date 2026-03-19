@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot RDP blocked by NSG rules on Azure VMs
-description: Learn how to troubleshoot Remote Desktop Protocol (RDP) connectivity issues caused by network security group (NSG) misconfigurations on Azure Windows VMs, including rule priority conflicts and subnet vs. NIC-level NSG interactions.
+description: Troubleshoot Remote Desktop Protocol (RDP) connectivity issues caused by network security group (NSG) misconfigurations on Azure Windows VMs. Identify rule conflicts and restore access with these steps.
 services: virtual-machines
 documentationCenter: ''
 author: asudbring
@@ -12,13 +12,17 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 03/17/2026
 ms.author: allensu
-ms.custom: sap:Cannot connect to my VM
+ms.custom: 
+  - sap:Cannot connect to my VM
+  - sap:Connectivity
 ---
 # Troubleshoot RDP blocked by NSG rules on Azure Windows VMs
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article explains how to troubleshoot Remote Desktop Protocol (RDP) connectivity problems caused by network security group (NSG) misconfigurations on Azure Windows virtual machines (VMs). Common causes include missing allow rules, rule priority conflicts, and conflicting rules between subnet-level and NIC-level NSGs.
+## Summary
+
+This article explains how to troubleshoot Remote Desktop Protocol (RDP) connectivity problems caused by network security group (NSG) misconfigurations on Azure Windows virtual machines (VMs). Common causes include missing allow rules, rule priority conflicts, and conflicting rules between subnet-level and network interface (NIC)-level NSGs.
 
 ## Symptoms
 
@@ -38,11 +42,11 @@ You experience one or more of the following symptoms when connecting to an Azure
 
 ## How NSG rule evaluation works
 
-Before troubleshooting, understand how Azure evaluates NSG rules:
+Before you start troubleshooting, it's important to understand how Azure evaluates NSG rules:
 
 - **Azure evaluates rules by priority.** Azure processes rules in priority order, with the lowest number representing the highest priority. Evaluation stops when Azure finds a matching rule.
 - **Azure evaluates inbound and outbound rules separately.** RDP connectivity requires an inbound allow rule on port 3389.
-- **You can apply NSGs at the subnet level and the network interface (NIC) level.** When NSGs exist at both levels, inbound traffic must be allowed by **both** NSGs to reach the VM.
+- **You can apply NSGs at the subnet level and the network interface (NIC) level.** When NSGs exist at both levels, inbound traffic must be allowed by both NSGs to reach the VM.
 - **Every NSG contains default rules that you can't delete.** The default `DenyAllInBound` rule (priority 65500) blocks all inbound traffic that isn't matched by a higher-priority rule.
 
 For more information, see [How network security groups filter network traffic](/azure/virtual-network/network-security-groups-overview#how-network-security-groups-filter-network-traffic).
@@ -58,9 +62,9 @@ IP flow verify is the fastest way to determine which NSG rule blocks RDP traffic
 3. Configure the test:
     - **Virtual machine**: Select the affected VM.
     - **Network interface**: Select the VM's primary NIC.
-    - **Protocol**: TCP
-    - **Direction**: Inbound
-    - **Local port**: 3389
+    - **Protocol**: TCP.
+    - **Direction**: Inbound.
+    - **Local port**: 3389.
     - **Local IP address**: The VM's private IP.
     - **Remote IP address**: The IP address you're connecting from.
     - **Remote port**: Any available port (for example, 60000).
@@ -194,6 +198,8 @@ For more information about service tags, see [Virtual network service tags](/azu
 
 ### List NSG rules applied to a NIC
 
+Use Azure CLI:
+
 ```azurecli
 az network nic show \
     --resource-group myResourceGroup \
@@ -211,6 +217,8 @@ az network nsg rule list \
 
 ### List NSG rules applied to a subnet
 
+Use Azure CLI:
+
 ```azurecli
 az network vnet subnet show \
     --resource-group myResourceGroup \
@@ -221,6 +229,8 @@ az network vnet subnet show \
 ```
 
 ### Add an RDP allow rule using CLI
+
+Use Azure CLI:
 
 ```azurecli
 az network nsg rule create \
@@ -237,6 +247,8 @@ az network nsg rule create \
 ```
 
 ### Add an RDP allow rule using PowerShell
+
+Use Azure PowerShell:
 
 ```azurepowershell
 $nsg = Get-AzNetworkSecurityGroup `
@@ -267,12 +279,12 @@ Use one of the following alternatives for secure remote access:
 
 | Method | Description |
 |--------|-------------|
-| [Azure Bastion](/azure/bastion/bastion-overview) | Provides secure RDP/SSH access through the Azure portal over TLS. No public IP required on the VM. |
+| [Azure Bastion](/azure/bastion/bastion-overview) | Provides secure RDP or Secure Shell (SSH) access through the Azure portal over Transport Layer Security (TLS). No public IP is required on the VM. |
 | [Just-in-time (JIT) VM access](/azure/defender-for-cloud/enable-just-in-time-access) | Opens RDP port only when needed and for a limited time. Requires Microsoft Defender for Cloud. |
 | [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) | Connects through a site-to-site or point-to-site VPN tunnel. RDP traffic stays on a private connection. |
 | [Azure Private Link](/azure/private-link/private-link-overview) | Access VMs through private endpoints without exposing them to the public internet. |
 
-## Related content
+## Further resources
 
 - [Diagnose a VM network traffic filter problem](/troubleshoot/azure/virtual-network/diagnose-network-traffic-filter-problem)
 - [Troubleshoot connectivity problems between Azure VMs](/troubleshoot/azure/virtual-network/virtual-network-troubleshoot-connectivity-problem-between-vms)
