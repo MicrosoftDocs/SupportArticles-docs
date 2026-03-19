@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2626670
 
 ## When to use this procedure
 
-Use this procedure only when a product connector is no longer required in the management group and must be removed from the environment. Because connector removal affects connector-related configuration and data associations, this procedure should be treated as a maintenance operation.
+Use this procedure only if a product connector is no longer required in the management group and must be removed from the environment. Because connector removal affects connector-related configuration and data associations, this procedure should be treated as a maintenance operation.
 
 ## What this procedure does
 
@@ -28,7 +28,7 @@ Before running this procedure:
 - Verify that the specified connector isn't an internal Operations Manager connector.
 - Back up both the operational and data warehouse databases before making any changes.
 - Run the procedure only from a management server or PowerShell session that has the required Operations Manager components available.
-- Verify the exact connector name before removal. If possible, first validate the target connector in a non-production or low-risk scenario before running the deletion in production.
+- Verify the exact connector name before removal. If possible, first validate the target connector in a non-production or low-risk scenario before you run the deletion in production.
 - Don't modify or improvise the script to work around startup or runtime errors. Use only the published, validated version of the script.
 
 ## PowerShell script
@@ -197,20 +197,20 @@ Preview wildcard matching:
 .\DeleteConnector.ps1 -ConnectorName 'OldConnector*' -ManagementServerName 'SCOMMS01' -AllowWildcard -WhatIf
 ```
 
-## Validate the result
+## Verify the result
 
 After the script completes, verify the following:
 
 - The connector no longer appears in the connector list.
-- Any connector subscriptions associated with the connector have been removed.
+- Any connector subscriptions associated with the connector were removed.
 - No alerts remain associated with the removed connector.
 - The Operations Manager console opens the connector view normally after the change.
 
 ## Troubleshooting
 
-- If no connector is found, verify that the connector name is correct and rerun the script by using the exact connector name.
+- If no connector is found, verify that the connector name is correct, and then rerun the script by using the exact connector name.
 
-- If you use wildcard matching, always run the script first with `-WhatIf` to confirm that only the intended connector is matched.
+- If you use wildcard matching, always run the script first by using `-WhatIf` to verify that only the intended connector is matched.
 
 - Don't use this procedure to remove internal Operations Manager connectors.
 
