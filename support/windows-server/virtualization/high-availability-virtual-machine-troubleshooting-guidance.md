@@ -1,6 +1,6 @@
 ---
 title: Guidance for troubleshooting high-availability virtual machines
-description: 
+description: Helps you troubleshoot issues that affect high-availability (HA) virtual machines (VMs) in a Windows Server failover cluster environment.
 ms.date: 03/23/2026
 manager: dcscontentpm
 audience: itpro
@@ -15,11 +15,17 @@ appliesto:
 
 # High availability virtual machine troubleshooting guidance
 
-## Introduction
+## Summary
 
-High Availability (HA) for virtual machines ensures minimal downtime by providing redundancy and failover processes within a clustered environment, typically leveraging Hyper-V clusters in Windows Server. Despite design intent, various hardware, software, and configuration issues can interrupt HA, causing virtual machine downtime or migration failures. This guide offers a structured approach to diagnosing and remediating common HA virtual machine issues in Hyper-V environments, serving support engineers, administrators, and IT professionals.
+This article helps you troubleshoot issues that affect high-availability (HA) virtual machines (VMs) in a Windows Server failover cluster environment. Use this guidance if you experience issues such as VMs that fail to migrate, cluster resources that become unresponsive, or storage and communication errors that affect VM availability.
 
-High availability virtual machine environments are susceptible to a range of configuration, compatibility, and hardware issues that can severely impact uptime. Using a systematic troubleshooting approach that verifies storage, network, cluster configuration, and VM compatibility ensures rapid identification and resolution of the most common failure modes. When in doubt, collect detailed logs, validate configurations, and consult up-to-date documentation for specific error scenarios. Document known issues, solutions, and maintain a proactive upgrade and monitoring plan for both infrastructure and software components to maintain the health of your HA virtual machine environment.
+The article is organized into the following sections:
+
+- Troubleshooting checklist: Guidance to help you isolate the issue and fix the most common underlying issues before you begin deeper investigation.
+- Common issues and solutions: Targeted guidance for specific symptoms, including migration failures, stuck VMs, quorum issues, storage errors, and configuration issues.
+- Data collection: Instructions for gathering diagnostic data if you need to contact Microsoft Support.
+
+Before you begin, make sure that you have administrative access to the cluster resources, Hyper-V hosts, and management tools such as Failover Cluster Manager and Hyper-V Manager.
 
 ## Troubleshooting checklist
 
