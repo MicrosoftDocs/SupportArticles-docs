@@ -1,6 +1,6 @@
 ---
 title: Application was unable to start correctly error when accessing Microsoft 365 apps
-description: Describes an error message that appears when you try to open Microsoft 365 apps, and provides a resolution.
+description: Discusses the error message with the error code 0xc0000715 that appears when you try to open Microsoft 365 apps, and provides a resolution.
 author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
