@@ -399,6 +399,14 @@
     {
       "source_path": "SkypeForBusiness/SkypeServer/server-conferencing/cannot-upload-presentation.md",
       "redirect_url": "/previous-versions/troubleshoot/skypeforbusiness/skypeserver/server-conferencing/cannot-upload-presentation"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-conferencing/enable-conferencing-add-in-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/skypeforbusiness/skypeserver/server-conferencing/enable-conferencing-add-in-for-outlook"
+    },
+    {
+      "source_path": "SkypeForBusiness/SkypeServer/server-conferencing/sfb-play-dial-tone-teams-call.md",
+      "redirect_url": "/previous-versions/troubleshoot/skypeforbusiness/skypeserver/server-conferencing/sfb-play-dial-tone-teams-call"
     }
   ]
 }
