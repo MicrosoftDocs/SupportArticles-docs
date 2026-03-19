@@ -83,7 +83,7 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
   For more information, see [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations).
 
   > [!IMPORTANT]  
-  > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology is deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?view=azloc-2603&context=%2Fwindows-server%2Fcontext%2Fwindows-server-virtualization#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
+  > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology is deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
 
 - Make sure any network device drivers support clustering, and are up-to-date.
 
@@ -392,9 +392,38 @@ Additionally, gather the following information:
 
 ## References
 
-- [Failover Clustering in Windows Server and Azure Local](/windows-server/failover-clustering/failover-clustering-overview)
-- [Virtual machine live migration troubleshooting guidance](troubleshoot-live-migration-guidance.md)
+### Failover clusters
+
+- [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
+- [Cluster service fails to start troubleshooting guidance](../high-availability/troubleshoot-cluster-service-fails-to-start.md)
+- [Configuring Witness resource troubleshooting guide](../high-availability/configuring-witness-resource.md)
 - [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md)
 - [Failover clustering hardware requirements and storage options](/windows-server/failover-clustering/clustering-requirements)
+- [Failover Clustering in Windows Server and Azure Local](/windows-server/failover-clustering/failover-clustering-overview)
+
+### Hyper-V and virtual machines
+
+- [Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance](hyper-v-snapshots-checkpoints-differencing-disks.md)
+- [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations)
+- [Performance Tuning Hyper-V Servers](/windows-server/administration/performance-tuning/role/hyper-v-server/)
+- [Replicate a virtual machine](/windows-server/virtualization/hyper-v/replication-virtual-machines?tabs=hyper-v-manager#replicate-a-virtual-machine)
+- [Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments](hyper-v-start-state-access-failures-clustered-standalone.md)
+- [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server)
+- [Virtual machine live migration troubleshooting guidance](troubleshoot-live-migration-guidance.md)
+
+### PowerShell cmdlets
+
 - [Get-ClusterLog](/powershell/module/failoverclusters/get-clusterlog)
+- [Get-ClusterResource](/powershell/module/failoverclusters/get-clusterresource)
+
+### Storage
+
+- [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md)
+- [iSCSI storage connectivity troubleshooting guidance](../backup-and-storage/iscsi-storage-connectivity-troubleshooting.md)
+- [Multipath I/O (MPIO) troubleshooting guidance](../backup-and-storage/windows-server-mpio-troubleshooting.md)
+
+### Windows Server
+
 - [High Availability troubleshooting documentation for Windows Server](../high-availability/high-availability-overview.md)
+- [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)
+
