@@ -26,7 +26,7 @@ This article discusses an error message that appears when you try to open Micros
 
 ## Symptoms
 
-You're running Office version 16.0.14827.20220 on your computer, or you installed Microsoft 365 apps by using an Office Click-to-Run build that uses App-V subsystems. When you open any Microsoft 365 app, the app doesn't start, and you see the following error message:  
+You're running Office version 16.0.14827.20220 or later on your computer, or you installed Microsoft 365 apps by using an Office Click-to-Run build that uses App-V subsystems. When you open any Microsoft 365 app, the app doesn't start, and you see the following error message:  
 
 "The application was unable to start correctly (0xc0000715)."
 
