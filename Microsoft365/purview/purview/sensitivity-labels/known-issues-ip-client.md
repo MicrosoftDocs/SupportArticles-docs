@@ -34,10 +34,6 @@ The Microsoft Purview Information Protection viewer can't open attachments in a 
 
 For more information, see [Admin Guide: File types supported by the Microsoft Purview Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-file-types).
 
-## Known issues for watermarks
-
-When you're adding a watermark to a label, keep in mind that if you use font size one, it automatically adjusts to fit the page. However, if you use any other font size, it uses the size you specified in the font settings.
-
 ## PowerShell support for the Microsoft Purview Information Protection client
 
 The current release of the **Microsoft Purview Information Protection** PowerShell module that's installed with the Microsoft Purview Information Protection client has the following known issues:
@@ -50,17 +46,31 @@ The current release of the **Microsoft Purview Information Protection** PowerShe
 
 For more information, see [Admin Guide: Using PowerShell with the Microsoft Purview Information Protection client](/previous-versions/azure/information-protection/rms-client/client-admin-guide-powershell).
 
-## Known issues Microsoft Purview Information Protection Scanner
+## Sharing external doc types across tenants
 
-- Scanning of .msg files with signed PDF files is currently not supported.
+When users share external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
 
-- Sensitive Information Types (SIT) that are Trainable Classifiers and EDM (Exact Data Match) classifiers.
+:::image type="content" source="media/known-issues-ip-client/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
+
+Depending on your application, you might see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
+
+## Known issue for watermarks
+
+If you use font size one when you add a watermark to a label, it automatically adjusts to fit the page. However, if you use any other font size, the watermark's size is what you specify in the font settings.
+
+## Known issues for Microsoft Purview Information Protection Scanner
+
+You can't scan:
+
+- .msg files that contain signed PDF files.
+
+- Sensitive Information Types (SITs) that are Trainable Classifiers and EDM (Exact Data Match) classifiers.
 
 - Password protected files.
 
 ## Known issues for Information Protection File Labeler
 
-When using the new Outlook, the Address Book button within the Microsoft Information Protection labeler (People Picker) is not supported for launching the Outlook address book. Email addresses must be entered manually.
+If you use new Outlook, the Address Book button in the **Select _users, groups, or organizations" field in the Information Protection File Labeler app doesn't open the Outlook address book. You must email addresses manually.
 
 ### Known issues for coauthoring
 
@@ -78,7 +88,6 @@ Known issues for coauthoring in Microsoft Purview Information Protection include
 > Coauthoring and sensitivity labels can't be deployed to some users only, as any new labels won't be visible to users with an older version of the Office client.
 >
 > For more information about coauthoring support, see the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring), especially [documented limitations](/microsoft-365/compliance/sensitivity-labels-coauthoring).
->
 
 #### Supported versions for coauthoring and sensitivity labels
 
@@ -115,17 +124,10 @@ The following features aren't supported or are partially supported when [coautho
 - Features listed in the [Microsoft 365 documentation](/microsoft-365/compliance/sensitivity-labels-coauthoring#limitations) as coauthoring limitations.
 - Labelbycustomproperties for mapping other labeling solutions won't work with co-auth enabled.
 
-## Sharing external doc types across tenants
-
-When users share external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
-
-:::image type="content" source="media/known-issues-ip-client/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
-
-Depending on your application, you might see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
-
 ## Known issues in policies
 
 Publishing policies might take up to 24 hours.
+
 ## Known issues for the Microsoft Purview Information Protection viewer
 
 - [External users](#external-users-and-the-microsoft-purview-information-protection-viewer)
