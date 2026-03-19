@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Missing or invalid service principal when creating an AKS cluster
 
+## Summary
+
 This article discusses how to troubleshoot a service principal that isn't found or is invalid when you try to create a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites

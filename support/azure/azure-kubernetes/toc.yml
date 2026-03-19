@@ -419,8 +419,6 @@ items:
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error

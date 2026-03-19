@@ -1,14 +1,16 @@
 ---
 title: Troubleshoot the VMExtensionError_OutboundConnFail error code
-description: Learn how to troubleshoot the VMExtensionError_OutboundConnFail error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot the VMExtensionError_OutboundConnFail message when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 12/30/2024
 ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_OutboundConnFail error code (50)
+# Troubleshoot the VMExtensionError_OutboundConnFail message
 
-This article describes how to identify and resolve the `VMExtensionError_OutboundConnFail` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article describes how to identify and resolve the `VMExtensionError_OutboundConnFail` error (also known as the `ERR_OUTBOUND_CONN_FAIL` message, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -28,9 +30,7 @@ When you try to start or create an AKS cluster, you receive the following error 
 >
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=50**\n[stdout]\n\n[stderr]\nnc: connect to mcr.microsoft.com port 443 (tcp) failed: Connection timed out\nCommand exited with non-zero status
->
-> Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
+> Error message: "**CSE failed with 'VMExtensionError_OutboundConnFail'. AKS Node provisioning failed due to inability to establish outbound connectivity to obtain packages with exit status 50.** Please refer to https://aka.ms/aks/outbound-rules-control-egress  and https://aka.ms/aks/vmextensionerror_outboundconnfail for troubleshooting.
 
 ## Cause
 

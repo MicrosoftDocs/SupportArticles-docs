@@ -3,8 +3,8 @@ title: Release history for SQL Server 2017 on Linux
 description: This article contains the release history for SQL Server 2017 running on Linux. Information includes all Cumulative Updates and GDRs.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: amitkh, vanto
-ms.date: 01/16/2026
+ms.reviewer: amitkh, atsingh
+ms.date: 03/10/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2017
@@ -16,6 +16,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
+| [CU 31 GDR (Mar 2026)](#14-0-3520) | 14.0.3520.4 | 2026-03-10 |
 | [CU 31 GDR (Nov 2025)](#14-0-3515) | 14.0.3515.1 | 2025-11-11 |
 | [CU 31 GDR (Sep 2025)](#14-0-3505) | 14.0.3505.1 | 2025-09-09 |
 | [CU 31 GDR (Aug 2025)](#14-0-3500) | 14.0.3500.1 | 2025-08-12 |
@@ -84,13 +85,34 @@ For release history on other editions, see the following articles:
 
 - Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
 
+<a id="14-0-3520"></a>
+
+## CU 31 GDR (March 2026)
+
+This is the Cumulative Update 31-GDR (CU 31 GDR) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3520.4. For information about the fixes and improvements in this release, see [KB 5077471](https://support.microsoft.com/help/5077471).
+
+The latest GDR release includes the Azure Connect Pack for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
+
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages** | 14.0.3520.4-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3520.4-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3520.4-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3520.4-1.x86_64.rpm) |
+| **SLES 12 RPM packages** | 14.0.3520.4-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3520.4-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3520.4-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3520.4-1.x86_64.rpm) |
+| **Ubuntu 18.04 Debian packages** | 14.0.3520.4-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3520.4-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3520.4-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3520.4-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
 <a id="14-0-3515"></a>
 
 ## CU 31 GDR (November 2025)
 
 This is the Cumulative Update 31-GDR (CU 31 GDR) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3515.1. For information about the fixes and improvements in this release, see [KB 5068402](https://support.microsoft.com/help/5068402).
-
-The latest GDR release includes the Azure Connect Pack for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].

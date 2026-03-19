@@ -54,6 +54,8 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------|------------------|------------|----------------|---------------------------------------------------------|-------------------|
+| CU32 + GDR              | 15.0.4460.4  | 2019.150.4460.4  | 15.0.35.56 | 2018.150.35.56 | [KB5077469](https://support.microsoft.com/help/5077469) | March 10, 2026  |
+| GDR                     | 15.0.2160.4  | 2019.150.2160.4  | 15.0.32.69 | 2018.150.32.69 | [KB5077470](https://support.microsoft.com/help/5077470) | March 10, 2026  |
 | CU32 + GDR              | 15.0.4455.2  | 2019.150.4455.2  | 15.0.35.56 | 2018.150.35.56 | [KB5068404](https://support.microsoft.com/help/5068404) | November 11, 2025  |
 | GDR                     | 15.0.2155.2  | 2019.150.2155.2  | 15.0.32.69 | 2018.150.32.69 | [KB5068405](https://support.microsoft.com/help/5068405) | November 11, 2025  |
 | CU32 + GDR              | 15.0.4445.1  | 2019.150.4445.1  | 15.0.35.51 | 2018.150.35.51 | [KB5065222](https://support.microsoft.com/help/5065222) | September 09, 2025  |
