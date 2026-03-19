@@ -1,6 +1,6 @@
 ---
 title: Azure Storage Explorer troubleshooting guide
-description: Provides debugging techniques for Azure Storage Explorer.
+description: Troubleshoot Azure Storage Explorer sign-in, proxy, certificate, and connection errors with step-by-step fixes to restore access quickly. Start now.
 services: storage
 author: jinglouMSFT
 ms.author: jinglou
