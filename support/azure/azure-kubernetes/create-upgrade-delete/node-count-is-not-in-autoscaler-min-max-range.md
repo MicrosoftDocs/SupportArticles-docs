@@ -11,6 +11,10 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Current node count is outside the autoscaler min and max range
 
+## Summary
+
+This article discusses why the current node count might not fall within the autoscaler minimum and maximum range when you resume a Microsoft Azure Kubernetes Service (AKS) cluster after a stop operation.
+
 ## Symptoms
 
 You're using the autoscaler for a Microsoft Azure Kubernetes Service (AKS) cluster. When you restart your cluster, your current node count doesn't fall within the minimum and maximum range of values that you set.

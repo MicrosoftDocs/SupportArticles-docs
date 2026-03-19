@@ -12,6 +12,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot cluster upgrading and scaling errors
 
+## Summary
+
 This article discusses how to troubleshoot errors that occur when you try to upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 Some causes of failure when you try to upgrade or scale an AKS cluster are as follows.

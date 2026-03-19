@@ -1,55 +1,117 @@
 ---
-title: HTTP error 403.6 when you open a webpage
-description: This article helps to fix the HTTP error 403.6 when you visit a web site that is hosted on Microsoft Internet Information Services (IIS).
-ms.date: 07/17/2020
+title: Troubleshoot HTTP 403.6 Forbidden in IIS
+description: Learn how to fix the HTTP 403.6 Forbidden error in IIS by managing IP address rules, verifying policies, and addressing proxy scenarios.
+ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: clinth
+ms.reviewer: clinth, jaws, v-shaywood
 ---
-# HTTP error 403.6 when you open an IIS Webpage
-
-This article helps to fix the HTTP error 403.6 that occurs when you visit a web site that is hosted on Microsoft Internet Information Services (IIS).
+# HTTP error 403.6 when you open an IIS webpage
 
 _Original product version:_ &nbsp; Internet Information Services (IIS)  
 _Original KB number:_ &nbsp; 248043
 
 > [!NOTE]
-> The target audience for this article is Website administrator. If you are an end-user, you have to contact the Website administrators in order to let them know that this error has occurred for this URL address.
+> This article is intended for website administrators. If you're a customer, contact your website administrator to report this error.
+
+## Summary
+
+This article helps you troubleshoot the `HTTP 403.6` error in Internet Information Services (IIS). This error occurs when IIS IP address and domain restrictions block a client from accessing a website or application. The article covers how to review and update IP address restriction rules, verify the default restriction policy, check configuration files, and resolve proxy or load balancer scenarios.
 
 ## Symptoms
 
-You have a web site that is hosted on Internet Information Services (IIS). When you visit the Web site in a Web browser, you may receive an error message that resembles the follow:
+When you visit a website that's hosted on IIS in a web browser, you might receive an `HTTP 403.6` error message that resembles the following example:
 
 > HTTP 403.6 - Forbidden: IP address rejected
 
 ## Cause
 
-Each client has a unique IP address. If the server defines a list of IP addresses that are not allowed to access the site and the IP address you are using is on this list, you will receive the error message.
+IIS provides the **IP Address and Domain Restrictions** feature that administrators can use to control which clients can access a website or application.
 
-This is a feature that grants or denies specific users access to a Web site, directory, or file.
+IIS returns the `HTTP 403.6` response if a client IP address is:
 
-## Resolution
+- Explicitly listed in the **deny rules**
+- Not included in the allow list when the server is configured to deny unspecified clients
 
-To resolve this problem, follow these steps.
+You can configure restrictions at multiple levels in IIS, as follows:
 
-1. Using the **Internet Service Manager** (Microsoft Management Console), open the Internet Information Server (IIS) snap-in and select the Web site reporting the 403.6 error. Right-click the Web site, virtual directory, or file where the error is occurring. Click **Properties** to display the property sheet for that item.
+- Server level
+- Website level
+- Application level
+- Directory or file level
 
-2. Select the appropriate **Directory Security** or **File Security** property page. Under **IP Address** and **Domain Name Restrictions**, click **Edit**.
+If a restriction exists at any level in the configuration hierarchy, IIS might reject the request.
 
-3. In the **IP Address** and **Domain Name Restrictions** dialog box, if the **Denied Access** option is selected, then add the IP address, network ID, or domain of the computer that requires access to the exceptions list.
+## Solution
 
-In the **IP Address** and **Domain Name Restrictions** dialog box, if the **Granted Access** option is selected, then remove the IP address, network ID, or domain of the computer that requires access to the exceptions list.
+### Review IP address restrictions in IIS Manager
 
-> [!IMPORTANT]
->
-> - When you set security properties for a specific Web site, you automatically set the same security properties for directories and files belonging to that site, unless the security properties of the individual directories and files have been previously set.
-> - Your Web server will prompt you for permission to reset the properties of individual directories and files when you attempt to set security properties for your Web site. If you choose to reset these properties, your previous security settings will be replaced by the new settings. The same condition applies when you set security properties for a directory containing subdirectories or files with previously set security properties.
+1. Open **Internet Information Services (IIS) Manager**.
+1. In the **Connections** pane, select the server, site, or application where the issue occurs.
+1. In **Features View**, double-click **IP Address and Domain Restrictions**.
+1. Review the configured rules.
 
-> [!NOTE]
->
-> - By default, some sites are only granted access from the IP address 127.0.0.1, which corresponds to the computer name *localhost* and is considered a different address/name than the NetBIOS or fully qualified domain name (FQDN) of the Web server. To access a site restricted to localhost, you must be at the console of the computer with the localhost restriction.
-> - Computers accessing your server across proxy servers will appear to have the IP address of the proxy server.
-> - Restricting by domain name is not recommended because it decreases the performance of your Web server by forcing the Web server to perform a reverse DNS lookup for each connection to that site. In addition to increasing the load on the Web server, reverse lookups can also result in unexpected denials.
+#### To allow a client IP address
 
-## References
+1. On the **Actions** pane, select **Add Allow Entry**.
+1. Enter the IP address or subnet mask.
+1. Select **OK**.
 
-[Microsoft TCP/IP host name resolution order](https://support.microsoft.com/help/172218)
+#### To remove a blocking rule
+
+1. Locate the rule that blocks the IP address.
+1. Select the rule.
+1. On the **Actions** pane, select **Remove**.
+
+### Verify the default restriction policy
+
+1. Open **Internet Information Services (IIS) Manager**.
+1. On the **Connections** pane, select the server, site, or application where the issue occurs.
+1. In **Features View**, double-click **IP Address and Domain Restrictions**.
+1. On the **Actions** pane, select **Edit Feature Settings**.
+1. Review the configured policy. Two policies are available:
+   - **Allow unspecified clients**: All clients are allowed except clients that are explicitly denied.
+   - **Deny unspecified clients**: Only explicitly allowed IPs have access.
+1. If **Deny unspecified clients** is configured, add the client IP address as an _allow rule_.
+
+### Check configuration files
+
+You can also configure IP restrictions in `Web.config` or `ApplicationHost.config`.
+
+Example configuration:
+
+```xml
+<ipSecurity allowUnlisted="false">
+    <add ipAddress="127.0.0.1" allowed="true" />
+</ipSecurity>
+```
+
+If `allowUnlisted="false"` is set, add the client IP address as an allowed entry to grant access.
+
+### Check for proxy or load balancer scenarios
+
+If the website is behind a proxy, gateway, or load balancer, IIS might receive requests from the intermediate device instead of from the original client.
+
+In this case:
+
+1. Review IIS logs to determine the IP address that's recorded for the request.
+1. Determine whether you have to allow the proxy or load balancer IP address.
+
+## Additional considerations
+
+### Domain name restrictions
+
+If you restrict access by domain name, IIS performs reverse DNS lookups. This process can introduce latency and might cause unexpected access problems if DNS resolution fails.
+
+### Proxy servers
+
+If a client connects through a proxy server, IIS sees the proxy server's IP address instead of the original client IP address. Check whether headers like `X-Forwarded-For` are used to pass the original client IP.
+
+### Localhost-only configurations
+
+You can configure some sites to allow access from only the localhost (127.0.0.1). This configuration restricts access to requests that originate from the server itself.
+
+## Related content
+
+- [Microsoft TCP/IP host name resolution order](https://support.microsoft.com/help/172218)
+- [Troubleshoot 4xx and 5xx HTTP errors](troubleshoot-http-error-code.md)
+- [HTTP error 403.7 when you open an IIS webpage](http-403-forbidden-open-webpage.md)
