@@ -1,6 +1,6 @@
 ---
-title: '"Fix: Power Automate Desktop Windows Credential Dialog Issues"'
-description: '"Power Automate for desktop: fix broken Windows credential dialog automation caused by January 2026 security updates with these step-by-step workarounds."'
+title: '"Fix: Power Automate desktop Windows credential dialog issues"'
+description: '"Power Automate for desktop: fix broken Windows credential dialog automation caused by January 2026 security updates by using these step-by-step workarounds."'
 ms.date: 03/18/2026
 ms.reviewer: iomavrid, v-shaywood
 ms.custom: sap:Desktop flows\UI or browser automation
@@ -12,25 +12,25 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Summary
 
-After you install Windows security updates released on or after January 13, 2026, [Power Automate for desktop](/power-automate/desktop-flows/introduction) can't interact properly with dialogs that prompt for Windows credentials. This article describes the cause of the issue and provides workarounds to restore automated authentication workflows in Power Automate for desktop.
+After you install Windows security updates that were released on or after January 13, 2026, [Power Automate for desktop](/power-automate/desktop-flows/introduction) can't interact correctly with dialogs that prompt for Windows credentials. This article describes the cause of the issue, and provides workarounds to restore automated authentication workflows in Power Automate for desktop.
 
 ## Symptoms
 
-Power Automate for desktop stops interacting properly with the Windows security popup window. This limitation includes both capturing [UI elements](/power-automate/desktop-flows/ui-elements) and interacting with them (for example, selecting a button). Examples of these dialogs include:
+Power Automate for desktop stops interacting correctly with the Windows security dialog. This limitation includes both capturing [UI elements](/power-automate/desktop-flows/ui-elements) and interacting with the windows (for example, by selecting a button). Examples of these dialogs include:
 
-- A web page requesting Windows credentials:
+- A web page that requests Windows credentials
 
   :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-website.png" alt-text="Screenshot that shows a web page requesting Windows credentials.":::
 
-- A desktop application requesting Windows credentials:
+- A desktop application that requests Windows credentials
 
   :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-app.png" alt-text="Screenshot that shows a desktop application requesting Windows credentials.":::
 
 ## Cause
 
-A security fix for _CredentialUIBroker.exe_, initially released on January 13, 2026, causes automated authentication workflows to fail. Browsers and UI applications like Remote Desktop Connection use this executable so that users can sign in by using their Windows credentials. Because Windows enforces this change, Power Automate for desktop can't bypass the restriction.
+A security fix for _CredentialUIBroker.exe_ that was initially released on January 13, 2026, and causes automated authentication workflows to fail. Browsers and UI applications such as Remote Desktop Connection use this executable so that users can sign in by using their Windows credentials. Because Windows enforces this change, Power Automate for desktop can't bypass the restriction.
 
-The following table lists the Windows security updates that introduced this change:
+The following table lists the Windows security updates that introduced this change.
 
 | KB article                                              | Release date      | Target OS                                                                               |
 | ------------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------- |
@@ -42,18 +42,18 @@ The following table lists the Windows security updates that introduced this chan
 | [KB5073457](https://support.microsoft.com/help/5073457) | January 13, 2026  | Windows Server 2022 (OS Build 20348.4648)                                               |
 | [KB5075999](https://support.microsoft.com/help/5075999) | February 10, 2026 | Windows Server 2016 (OS Build 14393.8868)                                               |
 
-After you install any of these updates, Power Automate for desktop can't automate Windows credential dialogs properly. For more information, see [New behavior restricting certain applications to autofill credentials introduced by the Windows January 2026 security update](https://support.microsoft.com/en-us/help/5080542).
+After you install any of these updates, Power Automate for desktop can't automate Windows credential dialogs correctly. For more information, see [New behavior restricting certain applications to autofill credentials introduced by the Windows January 2026 security update](https://support.microsoft.com/en-us/help/5080542).
 
 ## Workarounds
 
-Until a fix is available, use the following workarounds:
+Until a fix is available, use the following workarounds, as appropriate:
 
-1. For web automation problems, use an alternative browser. Currently, only Microsoft Edge is affected, so use Firefox or Chrome when possible.
+- For web automation problems, use an alternative browser. Currently, only Microsoft Edge is affected. Therefore, use Firefox or Chrome instead, if possible.
 
    > [!NOTE]
-   > When you use Chrome, you might need to use the UI element inspector tool with Microsoft Active Accessibility (MSAA) mode enabled.
+   > When you use Chrome, you might have to use the UI element inspector tool by having Microsoft Active Accessibility (MSAA) mode enabled.
 
-1. [Run Power Automate for desktop as an administrator](/power-automate/desktop-flows/setup#run-power-automate-with-elevated-rights) for local attended (console) runs. This option isn't available for unattended or attended cloud runs.
+- [Run Power Automate for desktop as an administrator](/power-automate/desktop-flows/setup#run-power-automate-with-elevated-rights) for local attended (console) runs. This option isn't available for cloud runs (unattended or attended).
 
 ## Related content
 
