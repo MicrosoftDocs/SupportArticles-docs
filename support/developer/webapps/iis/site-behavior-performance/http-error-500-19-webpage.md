@@ -3,7 +3,7 @@ title: Fix HTTP Error 500.19 on IIS webpages
 description: Learn how to resolve the HTTP Error 500.19 on IIS 7.0 and later versions. Fix configuration issues that cause internal server errors.
 ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: mlaing, v-shaywood
+ms.reviewer: mlaing, hugo.durana, v-shaywood
 ---
 # "HTTP 500.19 - Internal Server Error" error
 

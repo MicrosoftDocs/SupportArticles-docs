@@ -3,7 +3,7 @@ title: Troubleshoot HTTP 404 File Not Found in IIS
 description: Resolve "HTTP 404 - File not found" errors on IIS servers. Identify and fix causes such as missing files, disabled extensions, and MIME type issues.
 ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: v-shaywood
+ms.reviewer: hugo.durana, v-shaywood
 ---
 # "HTTP 404 - File not found" error
 

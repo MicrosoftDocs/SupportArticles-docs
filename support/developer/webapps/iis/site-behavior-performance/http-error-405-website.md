@@ -3,7 +3,7 @@ title: Resolve HTTP 405.0 errors in IIS 7.0 and later
 description: Troubleshoot HTTP 405.0 errors on IIS websites. Discover solutions for invalid HTTP methods, WebDAV interference, and POST requests to static file handlers.
 ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: mlaing, v-shaywood
+ms.reviewer: mlaing, hugo.durana, v-shaywood
 ---
 # "HTTP 405.0 - Method not allowed" error
 
