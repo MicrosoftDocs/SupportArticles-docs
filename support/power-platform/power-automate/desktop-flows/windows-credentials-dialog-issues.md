@@ -20,11 +20,11 @@ Power Automate for desktop stops interacting correctly with the Windows security
 
 - A web page that requests Windows credentials
 
-  :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-website.png" alt-text="Screenshot that shows a web page requesting Windows credentials.":::
+  :::image type="content" source="media/windows-credentials-dialog-issues/windows-credentials-dialog-website.png" alt-text="Screenshot that shows a web page requesting Windows credentials.":::
 
 - A desktop application that requests Windows credentials
 
-  :::image type="content" source="media/cannot-automate-websites-and-apps-requiring-windows-credentials/windows-credentials-dialog-app.png" alt-text="Screenshot that shows a desktop application requesting Windows credentials.":::
+  :::image type="content" source="media/windows-credentials-dialog-issues/windows-credentials-dialog-app.png" alt-text="Screenshot that shows a desktop application requesting Windows credentials.":::
 
 ## Cause
 
