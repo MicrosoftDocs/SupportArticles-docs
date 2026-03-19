@@ -8,6 +8,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot errors when creating or switching to an AKS Automatic cluster 
 
+## Summary
+
 This article provides guidance for resolving errors that occur when you create or switch to an Azure Kubernetes Service (AKS) Automatic cluster. 
 
 ## Error 1: AKS Automatic could not find a suitable VM size.

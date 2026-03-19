@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot InvalidParameter error
 
+## Summary
+
 This article discusses how to identify and resolve the `InvalidParameter` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
