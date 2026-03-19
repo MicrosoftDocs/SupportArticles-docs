@@ -58,6 +58,10 @@ For more information, see [Admin Guide: Using PowerShell with the Microsoft Purv
 
 - Password protected files.
 
+## Known issues for Information Protection File Labeler
+
+When using the new Outlook, the Address Book button within the Microsoft Information Protection labeler (People Picker) is not supported for launching the Outlook address book. Email addresses must be entered manually.
+
 ### Known issues for coauthoring
 
 Known issues for coauthoring are relevant only when coauthoring is [enabled in your tenant](/microsoft-365/compliance/sensitivity-labels-coauthoring).
