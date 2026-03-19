@@ -1,20 +1,20 @@
 ---
-title: Fix HTTP Error 500.19 on IIS Webpages
-description: Learn how to resolve the HTTP Error 500.19 on IIS 7.0 and later versions. Fix configuration issues causing internal server errors with step-by-step guidance.
+title: Fix HTTP Error 500.19 on IIS webpages
+description: Learn how to resolve the HTTP Error 500.19 on IIS 7.0 and later versions. Fix configuration issues that cause internal server errors.
 ms.date: 03/17/2026
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing, v-shaywood
 ---
-# "HTTP 500.19 - Internal Server Error" error message
+# "HTTP 500.19 - Internal Server Error" error
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942055
 
 ## Summary
 
-This article helps you resolve the "HTTP 500.19 - Internal Server Error" that occurs on a web application in Internet Information Services (IIS) 7.0 and later. This error indicates that the related configuration data for the requested page is invalid. Common causes include malformed XML in configuration files, locked configuration sections, insufficient file permissions, duplicate configuration entries, and missing modules.
+This article helps you resolve the "HTTP 500.19 - Internal Server Error" that occurs on a web application in Internet Information Services (IIS) 7.0 and later versions. This error indicates that the related configuration data for the requested page is invalid. Common causes include malformed XML in configuration files, locked configuration sections, insufficient file permissions, duplicate configuration entries, and missing modules.
 
-To resolve this error, find the HRESULT code in the error message and check the matching section. For ASP.NET Core applications, see [Missing hosting bundle for ASP.NET Core](#missing-hosting-bundle-for-aspnet-core).
+To resolve this error, find the HRESULT code in the error message, and check the matching section. For ASP.NET Core applications, see [Missing hosting bundle for ASP.NET Core](#missing-hosting-bundle-for-aspnet-core).
 
 ## HRESULT code 0x8007000d
 
@@ -74,10 +74,10 @@ Use one of the following methods:
 
 - Grant the Read permission to the IIS_IUSRS group for the `ApplicationHost.config` or `Web.config` file:
 
-    1. In Windows Explorer, locate the folder that contains the `ApplicationHost.config` file associated with the website, or locate the virtual directories or application directories that contain the `Web.config` file associated with the website.
+    1. In Windows Explorer, locate the folder that contains the `ApplicationHost.config` file that's associated with the website, or locate the virtual directories or application directories that contain the `Web.config` file that's associated with the website.
 
        > [!NOTE]
-       > The `Web.config` file might not be in the virtual directories or application directories in IIS. Even in this situation, follow these steps.
+       > The `Web.config` file might not be in the virtual directories or application directories in IIS. Even in this situation, follow these steps:
 
     1. Right-click the folder that contains the `ApplicationHost.config` file, or right-click the virtual or application directories that might contain the `Web.config` file.
 
@@ -91,7 +91,7 @@ Use one of the following methods:
 
     1. Select the **Read** checkbox, and then select **OK**.
 
-    1. In the **Properties** dialog box for the folder, select **OK**.
+    1. In the **Properties** dialog for the folder, select **OK**.
 
         > [!NOTE]
         > Make sure that the folder properties are inherited by the `ApplicationHost.config` and `Web.config` files so that IIS_IUSRS has the _Read_ permission for those files.
@@ -120,7 +120,7 @@ To resolve this problem, delete the duplicate entry in the `ApplicationHost.conf
 
 1. Open **Notepad** as an administrator.
 
-1. On the **File** menu, select **Open**, type `%windir%\System32\inetsrv\config\ApplicationHost.config` in the **File name** field, and then select **Open**.
+1. On the **File** menu, select **Open**, enter `%windir%\System32\inetsrv\config\ApplicationHost.config` in the **File name** field, and then select **Open**.
 
 1. In the `ApplicationHost.config` file, delete the duplicate entry that resembles the following code:
 
@@ -154,7 +154,7 @@ In the `ApplicationHost.config` or `Web.config` file, locate the invalid module 
 
 ### Cause
 
-The bitness of the specified module differs from the application pool that hosts the application. For example, you're trying to load a 32-bit component into a 64-bit application pool. This problem might also occur if the specified module is corrupted.
+The bitness of the specified module differs from the application pool that hosts the application. For example, you try to load a 32-bit component into a 64-bit application pool. This problem might also occur if the specified module is corrupted.
 
 ### Solution: Match module and application pool bitness
 
@@ -220,7 +220,7 @@ If this error occurs for an ASP.NET Core application, the ASP.NET Core Hosting B
 
 ## Prevent configuration file issues during Windows updates
 
-As a general safety measure, back up all configuration files (not just IIS) before installing any update. If you use virtual machines, take a snapshot before you update. This guidance applies to all updates, not just Windows updates.
+As a general safety measure, back up all configuration files (not only IIS) before you install any update. If you use virtual machines, take a snapshot before you update. This guidance applies to all updates, not only Windows updates.
 
 ## Related content
 
