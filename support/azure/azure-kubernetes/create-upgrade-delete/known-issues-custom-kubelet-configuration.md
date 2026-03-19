@@ -9,6 +9,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Known issues: Custom kubelet configuration on Windows nodes in AKS
 
+## Summary
+
 This article discusses known issues that affect custom kubelet configurations on Microsoft Windows nodes in the Azure Kubernetes Service (AKS). For more information about this feature, see [Customize node configuration for AKS node pools](/azure/aks/custom-node-configuration).
 
 ## Log sizes exceed the specified maximum during aggressive log writing

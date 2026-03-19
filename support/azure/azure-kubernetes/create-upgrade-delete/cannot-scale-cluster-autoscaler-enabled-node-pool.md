@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Cluster autoscaler fails to scale with "cannot scale cluster autoscaler enabled node pool" error
 
+## Summary
+
 This article discusses how to resolve the "cannot scale cluster autoscaler enabled node pool" error that appears when scaling a cluster with an autoscaler enabled node pool.
 
 ## Symptoms
