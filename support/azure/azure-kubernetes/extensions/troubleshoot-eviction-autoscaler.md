@@ -168,11 +168,7 @@ az aks nodepool scale -g <resource-group> --cluster-name <cluster-name> -n <node
 
 ## More information
 
-To prevent this issue from reoccurring:
-
-- Make sure that each pod is matched by no more than one PDB. Avoid overlapping label selectors across multiple PDBs in the same namespace.
-- Avoid setting `minAvailable` equal to the total replica count. This practice prevents any evictions from occurring.
-- Use `maxUnavailable` instead of `minAvailable` when possible as it's easier to reason about during upgrades.
+To prevent this issue from reoccurring, make sure that each pod is matched by no more than one PDB. Avoid overlapping label selectors across multiple PDBs in the same namespace.
 
 ### Automatic PDB creation with the Eviction Autoscaler extension
 
