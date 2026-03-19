@@ -11,7 +11,7 @@ _Original product version:_ &nbsp; Internet Information Services (IIS)
 _Original KB number:_ &nbsp; 248043
 
 > [!NOTE]
-> This article is intended for website administrators. If you're an end user, contact your website administrator to report this error.
+> This article is intended for website administrators. If you're a customer, contact your website administrator to report this error.
 
 ## Summary
 
