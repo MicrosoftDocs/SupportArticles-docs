@@ -95,7 +95,6 @@ In this case:
 
 1. Review IIS logs to determine the IP address that's recorded for the request.
 1. Determine whether you have to allow the proxy or load balancer IP address.
-1. Check whether headers such as `X-Forwarded-For` are used to pass the original client IP.
 
 ## Additional considerations
 
@@ -105,7 +104,7 @@ If you restrict access by domain name, IIS performs reverse DNS lookups. This pr
 
 ### Proxy servers
 
-If a client connects through a proxy server, IIS sees the proxy server's IP address instead of the original client IP address.
+If a client connects through a proxy server, IIS sees the proxy server's IP address instead of the original client IP address. Check whether headers like `X-Forwarded-For` are used to pass the original client IP.
 
 ### Localhost-only configurations
 
