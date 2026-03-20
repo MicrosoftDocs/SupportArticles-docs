@@ -14,21 +14,29 @@ appliesto:
 ---
 # A Group Policy setting isn't available in the security policy settings list
 
-This article describes a problem in which the "System objects: Default owner for objects created by members of the Administrators group" Group Policy setting isn't available in the security policy settings list. 
+This article describes a problem in which the "System objects: Default owner for objects created by members of the Administrators group" Group Policy setting isn't available in the security policy settings list.
 
 _Original KB number:_ &nbsp; 947721
+
+## Summary
+
+In previous versions of Windows, the "System objects: Default owner for objects created by members of the Administrators group" setting modified how User Account Control (UAC) would determine the initial Owner for objects created locally by administrative users.
+
+By default, and currently in Windows, objects created locally by a user acting in the context of the Administrators group are owned by the "Administrators" group. When the "System objects: Default owner for objects created by members of the Administrators group" was enabled, UAC would instead assign the administrative user's own User identity as owner for all locally created objects.
+
+Note that the prior security policy setting had no effect on the remote access case, which matches the default and current behavior. Since there's no restricted token for network sessions, ownership is always given to the Administrators group.
 
 ## Symptoms
 
 When you try to access the "System objects: Default owner for objects created by members of the Administrators group" Group Policy setting on a computer that is running Windows Vista or newer, this setting isn't available in the security policy settings list.
 
-When the setting is present in your security group policy, it will be ignored by Windows Vista and newer domain members.
+Regardless of whether the setting is present in your security group policy, in Windows Vista and later it will be ignored.
 
 ## Cause
 
-Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 don't support this setting any longer. When enabled, User Account Control (UAC) will ensure the user account is being used as owner for all objects created locally. For remote access, the administrators' group will be used there's no restricted token for network sessions.
+Windows Vista, Windows Server 2008, Windows Server 2008 R2, and Windows 7 (and later) no longer support this setting.
 
-Since the support for the setting was removed, the system security policy "System objects: Default owner for objects created by members of the Administrators group" setting isn't available in the Security Templates user interface anymore.
+Since the support for the setting was removed, the system security policy "System objects: Default owner for objects created by members of the Administrators group" setting is not available in the Security Templates user interface.
 
 ## Resolution
 
