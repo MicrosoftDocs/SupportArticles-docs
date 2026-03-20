@@ -1,17 +1,21 @@
 ---
-title: Troubleshoot SSH connectivity blocked by network security group in Azure
-description: Learn how to diagnose and resolve SSH connection failures caused by network security group (NSG) misconfigurations on Azure Linux virtual machines.
+title: Troubleshoot SSH connectivity blocked by network security group misconfiguration in Azure
+description: "Diagnose and fix SSH connection failures caused by NSG misconfigurations on Azure Linux VMs. Follow step-by-step guidance to restore SSH access."
 author: asudbring
 ms.author: allensu
 ms.service: azure-virtual-network
 ms.date: 03/17/2026
 ms.topic: troubleshooting
-ms.custom: sap:Connectivity
+ms.custom: 
+  - sap:Connectivity
+  - sap:Creating and troubleshooting Network Security Groups
 ---
 
-# Troubleshoot SSH connectivity blocked by NSG in Azure
+# Troubleshoot SSH connectivity blocked by network security group misconfiguration in Azure
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article helps you diagnose and resolve Secure Shell (SSH) connection failures to Azure Linux virtual machines (VMs) caused by network security group (NSG) misconfigurations.
 
@@ -27,7 +31,7 @@ You experience one or more of the following symptoms when you connect to an Azur
 
 - SSH works from some source IP addresses but not others.
 
-- SSH stopped working after NSG rule changes were applied.
+- SSH stops working after NSG rule changes are applied.
 
 ## How NSG rules affect SSH traffic
 
@@ -41,22 +45,22 @@ When you apply NSGs at both the subnet and the network interface (NIC) levels, e
 
 To reach the VM, both NSGs must allow SSH traffic. A deny at either level blocks the connection.
 
-### Default NSG rules that affect SSH
+### Default NSG rules that affect SSH connectivity
 
 Every NSG includes default rules. You can't delete default rules, but you can override them by using higher-priority rules. The following default rules affect SSH connectivity:
 
 | Priority | Name | Direction | Action | Description |
 |----------|------|-----------|--------|-------------|
-| 65000 | AllowVNetInBound | Inbound | Allow | Allows all inbound traffic within the virtual network |
-| 65001 | AllowAzureLoadBalancerInBound | Inbound | Allow | Allows traffic from Azure Load Balancer |
-| 65500 | DenyAllInBound | Inbound | Deny | Denies all other inbound traffic |
-| 65000 | AllowVnetOutBound | Outbound | Allow | Allows all outbound traffic within the virtual network |
-| 65001 | AllowInternetOutBound | Outbound | Allow | Allows outbound traffic to the internet |
-| 65500 | DenyAllOutBound | Outbound | Deny | Denies all other outbound traffic |
+| 65000 | AllowVNetInBound | Inbound | Allow | Allows all inbound traffic within the virtual network. |
+| 65001 | AllowAzureLoadBalancerInBound | Inbound | Allow | Allows traffic from Azure Load Balancer. |
+| 65500 | DenyAllInBound | Inbound | Deny | Denies all other inbound traffic. |
+| 65000 | AllowVnetOutBound | Outbound | Allow | Allows all outbound traffic within the virtual network. |
+| 65001 | AllowInternetOutBound | Outbound | Allow | Allows outbound traffic to the internet. |
+| 65500 | DenyAllOutBound | Outbound | Deny | Denies all other outbound traffic. |
 
 The `DenyAllInBound` rule at priority 65500 blocks all inbound SSH traffic from the internet unless a higher-priority allow rule exists.
 
-## Common NSG misconfigurations that block SSH
+## Common NSG misconfigurations that block SSH connections
 
 ### Missing allow rule for port 22
 
@@ -70,8 +74,8 @@ An NSG deny rule with a lower priority number (higher priority) can override an 
 
 | Priority | Name | Port | Action | Result |
 |----------|------|------|--------|--------|
-| 100 | DenyAll | * | Deny | Blocks all traffic, including SSH |
-| 200 | AllowSSH | 22 | Allow | Never evaluated - blocked by priority 100 |
+| 100 | DenyAll | * | Deny | Blocks all traffic, including SSH .|
+| 200 | AllowSSH | 22 | Allow | Never evaluated - blocked by priority 100. |
 
 **Verify**: Review all rules with a lower priority number than your SSH allow rule to check for conflicting deny rules.
 
@@ -79,7 +83,7 @@ An NSG deny rule with a lower priority number (higher priority) can override an 
 
 An NSG rule might allow SSH only from specific IP addresses. If your current IP address doesn't match the configured source, the connection is blocked.
 
-**Common causes:**
+**Common causes**
 
 - The allow rule uses a specific IP address or range that doesn't include your current IP.
 
@@ -91,9 +95,7 @@ An NSG rule might allow SSH only from specific IP addresses. If your current IP 
 
 ### Subnet-level and NIC-level NSG conflict
 
-When you apply NSGs at both levels, both must allow the traffic. A common misconfiguration is an allow rule at one level and a missing or conflicting rule at the other.
-
-**Example:**
+When you apply NSGs at both levels, both must allow the traffic. A common misconfiguration is an allow rule at one level and a missing or conflicting rule at the other level. For example:
 
 - **Subnet NSG**: Allows TCP port 22 from any source.
 - **NIC NSG**: Has no allow rule for port 22, so the `DenyAllInBound` default blocks SSH.
@@ -106,13 +108,13 @@ If the Linux VM's SSH daemon (`sshd`) listens on a nonstandard port (for example
 
 **Verify**: Check the VM's `/etc/ssh/sshd_config` file for the `Port` directive and ensure the NSG allows traffic on that port.
 
-## Diagnose NSG problems blocking SSH
+## Diagnose NSG problems that block SSH connectivity
 
-### Use IP Flow Verify in the Azure portal
+### Use IP flow verify in the Azure portal
 
-Network Watcher IP Flow Verify tests whether traffic is allowed or denied to or from a VM and reports which security rule caused the decision.
+Azure Network Watcher feature IP flow verify tests whether traffic is allowed or denied to or from a VM and reports which security rule caused the decision. To do this task, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com) and open **Network Watcher**.
+1. Go to the [Azure portal](https://portal.azure.com) and select **Network Watcher**.
 
 2. Select **IP flow verify** under **Network diagnostic tools**.
 
@@ -127,7 +129,9 @@ Network Watcher IP Flow Verify tests whether traffic is allowed or denied to or 
 
 4. Select **Check**. The result shows **Access allowed** or **Access denied** and the name of the security rule.
 
-### Use IP Flow Verify with Azure CLI
+### Use IP flow verify with Azure CLI
+
+Run the following command:
 
 ```azurecli
 az network watcher test-ip-flow \
@@ -140,7 +144,9 @@ az network watcher test-ip-flow \
     --out table
 ```
 
-### Use IP Flow Verify with Azure PowerShell
+### Use IP flow verify with Azure PowerShell
+
+Run the following command:
 
 ```azurepowershell
 $vm = Get-AzVM -ResourceGroupName "<resource-group>" -Name "<vm-name>"
@@ -163,15 +169,18 @@ Effective security rules show the combined view of all NSG rules applied to a ne
 
 #### Azure portal
 
-1. Go to the [Azure portal](https://portal.azure.com).
-2. Search for and select **Virtual machines**.
-3. Select the affected VM.
-4. Select **Networking** > **Network settings**.
-5. Select the network interface.
-6. Select **Effective security rules**.
-7. Look for rules that affect TCP port 22 traffic from your source IP.
+To use the Azure portal to view effective security rules, run the following command:
+
+1. Go to the [Azure portal](https://portal.azure.com) and select **Virtual machines**.
+2. Select the affected VM.
+3. Select **Networking** > **Network settings**.
+4. Select the network interface.
+5. Select **Effective security rules**.
+6. Look for rules that affect TCP port 22 traffic from your source IP.
 
 #### Azure CLI
+
+To use Azure CLI to view effective security rules, run the following command:
 
 ```azurecli
 az network nic list-effective-nsg \
@@ -182,6 +191,8 @@ az network nic list-effective-nsg \
 
 #### Azure PowerShell
 
+To use Azure PowerShell to view effective security rules, run the following command:
+
 ```azurepowershell
 Get-AzEffectiveNetworkSecurityGroup `
     -NetworkInterfaceName "<nic-name>" `
@@ -190,7 +201,9 @@ Get-AzEffectiveNetworkSecurityGroup `
 
 ### Use Connection Troubleshoot
 
-Network Watcher Connection Troubleshoot checks connectivity from the VM and identifies the blocking component.
+Network Watcher connection troubleshoot checks connectivity from the VM and identifies the blocking component.
+
+To do so:
 
 1. Open **Network Watcher** in the Azure portal.
 2. Select **Connection troubleshoot** under **Network diagnostic tools**.
@@ -204,11 +217,13 @@ Network Watcher Connection Troubleshoot checks connectivity from the VM and iden
 ### Check flow logs
 
 > [!IMPORTANT]
-> NSG flow logs retire on September 30, 2027. You can't create new NSG flow logs. [Migrate to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs.
+> NSG flow logs retire on September 30, 2027. You can't create new NSG flow logs. [Migrate to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate) which overcome the limitations of NSG flow logs.
 
 Virtual network (VNet) flow logs record information about IP traffic flowing through your virtual network. Use flow logs to identify blocked SSH traffic patterns.
 
 #### Azure CLI
+
+To use Azure CLI to check VNet flow logs, run the following command:
 
 ```azurecli
 # Query VNet flow logs from Log Analytics workspace
@@ -218,7 +233,7 @@ az monitor log-analytics query \
     --output table
 ```
 
-## Resolve SSH NSG problems
+## Resolve SSH connection failures caused by NSG rules
 
 ### Allow SSH traffic on port 22
 
@@ -226,8 +241,10 @@ Create or modify an inbound NSG rule to allow TCP port 22 from the desired sourc
 
 #### Azure portal
 
-1. Go to the [Azure portal](https://portal.azure.com).
-2. In **Virtual Machines**, select the affected VM.
+To use Azure portal to create an NSG rule that allows SSH traffic, follow these steps:
+
+1. Go to the [Azure portal](https://portal.azure.com) and select **Virtual machines**.
+2. Select the affected VM.
 3. Select **Networking** > **Network settings**.
 4. Select **Create port rule** > **Inbound port rule**.
 5. Configure the rule:
@@ -247,6 +264,8 @@ Create or modify an inbound NSG rule to allow TCP port 22 from the desired sourc
 
 #### Azure CLI
 
+To use Azure CLI to create an NSG rule that allows SSH traffic, run the following command:
+
 ```azurecli
 az network nsg rule create \
     --resource-group <resource-group> \
@@ -263,6 +282,8 @@ az network nsg rule create \
 ```
 
 #### Azure PowerShell
+
+To use Azure PowerShell to create an NSG rule that allows SSH traffic, run the following command:
 
 ```azurepowershell
 $nsg = Get-AzNetworkSecurityGroup `
@@ -285,19 +306,20 @@ $nsg | Set-AzNetworkSecurityGroup
 
 ### Fix priority conflicts
 
-If a deny rule blocks SSH before the allow rule is evaluated, adjust rule priorities so the allow rule has a lower priority number.
+If a deny rule blocks SSH before the allow rule is evaluated, adjust rule priorities so the allow rule has a lower priority number. To do so:
 
 1. Identify the blocking deny rule and its priority number.
 2. Change the SSH allow rule priority to a lower number than the deny rule.
-3. Alternatively, change the deny rule to a higher priority number or modify it to exclude port 22.
+
+You can also change the deny rule to a higher priority number or modify it to exclude port 22.
 
 ### Fix subnet and NIC NSG conflicts
 
-Ensure both subnet-level and NIC-level NSGs allow SSH:
+Ensure both subnet-level and NIC-level NSGs allow SSH. To do so:
 
 1. View effective security rules to identify which NSG blocks the traffic.
 2. Add an allow rule for TCP port 22 in the blocking NSG.
-3. Verify with IP Flow Verify that traffic is allowed after the change.
+3. Verify by using IP flow verify that traffic is allowed after the change.
 
 ### Allow a custom SSH port
 
@@ -307,7 +329,7 @@ If `sshd` uses a nonstandard port:
 2. Update the NSG rule destination port to match the configured SSH port.
 3. Update any automation scripts or connection strings to use the custom port.
 
-## Use secure alternatives to public SSH access
+## Secure alternatives to exposing SSH port 22 publicly
 
 Instead of exposing port 22 to the internet, use more secure connection methods for production environments:
 
@@ -315,7 +337,7 @@ Instead of exposing port 22 to the internet, use more secure connection methods 
 
 - **Just-in-time (JIT) VM access**: Allows temporary NSG rules that open SSH access for a limited time period from approved IP addresses. For more information, see [Understanding just-in-time (JIT) VM access](/azure/defender-for-cloud/just-in-time-access-overview).
 
-- **Azure VPN Gateway or ExpressRoute**: Connects to VMs over private IP addresses through a VPN or private connection, which eliminates the need to expose SSH to the internet.
+- **Azure VPN Gateway or Azure ExpressRoute**: Connects to VMs over private IP addresses through a VPN or private connection, which eliminates the need to expose SSH to the internet.
 
 - **Azure Private Link**: Enables access to Azure services over a private endpoint in your virtual network.
 
