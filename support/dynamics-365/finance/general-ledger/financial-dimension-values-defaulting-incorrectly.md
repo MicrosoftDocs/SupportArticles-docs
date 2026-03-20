@@ -30,21 +30,7 @@ After completing a process such as posting a journal or source document, you not
 
 Fixed dimensions are a setting on a main account that forces specific dimension values to be used on any transaction that posts to that account—regardless of what was entered on the document or journal line. This override happens at the moment of posting and can be surprising if you aren't aware the setting is enabled.
 
-**Resolution:** Check whether fixed dimensions are set up on the main account involved in the transaction.
-
-1. Go to **General ledger** > **Chart of accounts** > **Accounts** > **Main accounts**.
-2. Open the main account used in the transaction.
-3. Expand the **Legal entity overrides** FastTab.
-4. Select the legal entity (company).
-5. Select **Default dimension**.
-6. In the **Default dimension** dialog, each financial dimension has a **Fixed** / **Not fixed** column. If a dimension is set to **Fixed**, its value is enforced at posting time and overrides values entered on documents, journals, and master data.
-
-
-![](media/default-dimension-fixed-toggle.png)
-
-7. Select **Save** and close the dialog.
-
-If the fixed dimension is intentional but causing confusion, consider updating user guidance or training so team members are aware. If it was set unintentionally, an administrator can remove or update the value.
+**Resolution:** Check whether fixed dimensions are set up on the main account involved in the transaction. For detailed information about how fixed dimensions work and the order in which default dimensions are applied during posting, see [Financial dimensions and posting](/dynamics365/finance/general-ledger/default-dimensions).
 
 ---
 
@@ -57,17 +43,7 @@ Financial dimension values are merged from multiple sources during document and 
 - **Ledger / legal entity defaults** – Default dimensions configured at the ledger level apply as a baseline across all transactions in that company.
 - **Derived dimensions** – Rules that automatically populate one dimension value based on the value of another dimension (for example, selecting a specific department might automatically fill in a cost center).
 
-[!NOTE]
-If derived dimensions appear to be populating values even though **Replace existing dimension values with derived values** is disabled, this is by design. That setting only prevents derived values from overwriting fields that already have a value. Blank dimension fields are always populated with derived values regardless of how the setting is configured. **Replace existing dimension values with derived values** (available when configuring derived dimensions on the **General ledger** \> **Chart of accounts** \> **Financial dimensions** page) enables the overwriting of non-blank values with derived dimensions.
-
-**Resolution:** Work through each source to identify which one is supplying the unexpected value, then correct it.
-
-1. **Check journal header defaults.** Open the journal and select **Financial dimensions** on the journal header. If a value is set there that conflicts with what you expected on a line, clear or update it on the header, then retest.
-2. **Check master data defaults.** If the journal line or document references a customer, vendor, worker, or similar record, open that record and navigate to its **Financial dimensions** tab. Verify that the defaults configured there are correct and update them if needed.
-3. **Check ledger defaults.** Go to **General ledger** > **Ledger setup** > **Ledger**. Select **Default dimensions** and review what's configured. Because these defaults apply broadly across the company, an incorrect value here can affect many transactions.
-4. **Check derived dimensions.** Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimension value links**. Review any derived dimension rules that apply to the dimensions involved. If a rule is producing an unintended override, update or remove the rule.
-
-After identifying the source of the unexpected value, update the configuration and retest the transaction to confirm the correct dimensions are applied.
+**Resolution:** Work through each source to identify which one is supplying the unexpected value, then correct it. For a comprehensive explanation of how default dimensions are applied and the order of priority, see [Financial dimensions and posting](/dynamics365/finance/general-ledger/default-dimensions).
 
 ---
 
@@ -83,7 +59,7 @@ This is expected behavior. If the system re-applied current dimension defaults o
 2. If it is, the dimension values shown are pulled from the original posted transaction—this is by design and ensures proper accounting integrity.
 3. If you need different dimension values on the reversal, consider whether the correct approach is to post a new, separate adjusting entry rather than using the automatic reversal function.
 
-If you believe the reversal is pulling incorrect original values, contact Microsoft Support, as this may indicate a data issue with the original transaction.
+For guidance on common issues with reversing transactions, including reasons a reversal might be blocked, see [Can't reverse a transaction](/troubleshoot/dynamics-365/finance/general-ledger/cant-reverse-transactions).
 
 ---
 
@@ -93,8 +69,8 @@ If your Dynamics 365 Finance environment has custom code or extensions, those cu
 
 **Resolution:** If you have ruled out fixed dimensions and the behavior doesn't occur in a standard demo environment, a customization is likely involved.
 
-1. Test the same scenario in a standard demo data environment (such as **USMF**) without customizations. If the issue doesn't appear there, a customization in your environment is most likely the cause.
+1. Test the same scenario in a standard demo data environment (such as **USMF**) without customizations. If the issue doesn't appear there, a customization in your environment is most likely the cause. For details on setting up a demo environment, see [Fleet Management sample application](/dynamics365/fin-ops-core/dev-itpro/dev-tools/fleet-management-sample).
 2. Contact your system administrator or the partner responsible for your Dynamics 365 customizations and ask them to review any custom code that touches financial dimensions during the affected process.
 3. Ask whether any recent updates, deployments, or code changes were made before the issue started.
 
-Your system administrator or partner will need to review the customization to determine whether the behavior is intentional or a defect.
+For guidance on best practices related to financial dimension customizations, see [Ledger account combinations](/dynamics365/fin-ops-core/dev-itpro/financial/LedgerAccountCombinations) and [Financial dimension customization best practices](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
