@@ -30,6 +30,7 @@ This document covers the following error codes along with their causes and mitig
 - [0x80040265/0x80048d0b](#error-code-0x80040265-or-0x80048d0b-on-power-automate-flow-run)
 - [MissingConnectionReference](#error-code-missingconnectionreference-on-power-automate-flow-run)
 - [NotAllowedConnectionReference](#error-code-notallowedconnectionreference-on-power-automate-flow-run)
+- [0x80048306](#error-code-0x80048306-on-power-automate-flow-run)
 
 ## Error code "InvokerConnectionOverrideFailed" on Power Automate flow run
 
@@ -235,6 +236,48 @@ Change the connection from **Embedded** to **Invoker**:
 2. On the flow details page, in the **Run-only user** section, select **Edit**.
 3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
 4. Verify by triggering the flow.
+
+## Error code "0x80048306" on Power Automate flow run
+
+```output
+    {
+        "code": " 0x80048306", 
+        "message": "user with id <systemuserid> does not have ReadAccess right(s) for record with id <processid> of entity Process."
+    }
+```
+
+Example error:
+
+> user with id \<systemuserid> does not have ReadAccess right(s) for record with id \<processid> of entity Process.
+
+### Cause
+This error occurs when a user account does not have the necessary **ReadAccess** priviliges to the **Process** table in Dataverse. The Process table typically represents workflows, business process flows, or system processes. If the security role assigned to the user does not grant read permissions to these records, the flow execution fails with this error.
+
+ ### Mitigation steps
+
+> [!NOTE]
+> Always apply changes in the source or development environment first. After updating security roles or permissions, export and import the solution into target or production environments to ensure consistency.
+
+#### Mitigation option 1
+
+Update user security roles:
+
+1. Navigate to the **Power Platform admin center** or Dynamics 365 environment.
+2. Open the user record associated with the error (\<systemuserid>).
+3. Review the assigned security roles.
+4. Ensure that the role includes **Read** privileges with adequate scope for the **Process** table.
+5. Save changes and reassign the role if necessary.
+6. Retry the flow execution
+
+#### Mitigation option 2
+
+Assign appropriate system roles:
+
+1. If the user is missing required system-level permissions, assign them a role such as:
+    - System Administrator (full access, recommended only for troubleshooting).
+    - Environment Maker (includes permissions to create and read processes).
+2. Test the flow again to confirm that the error no longer occurs.
+3. Once validated, adjust the role to the least privilege principle — grant only the minimum rights needed.
 
 ## Failures caused by Power Automate flow updates
 
