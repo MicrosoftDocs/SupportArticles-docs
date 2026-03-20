@@ -50,7 +50,7 @@ This issue requires investigation into the customization or integration that is 
 
 ## Cause 2: Extensible Data Security (XDS) policies are blocking access
 
-Extensible Data Security (XDS) policies are enabled on the table or view that stores the financial dimension source records. XDS security policies restrict which records a user can see, and these restrictions can prevent the financial dimension framework from finding the source record it needs.
+[Extensible Data Security (XDS)](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) policies are enabled on the table or view that stores the financial dimension source records. XDS security policies restrict which records a user can see, and these restrictions can prevent the financial dimension framework from finding the source record it needs.
 
 > [!IMPORTANT]
 > XDS security policies are not compatible with financial dimensions. Many system processes run under the current user's security context rather than a system administrator context, which means XDS restrictions can block dimension operations even when the underlying data exists.
@@ -60,7 +60,7 @@ On version 10.0.41 and later, the error message may specifically indicate that X
 ### Resolution
 
 1. Check whether XDS security policies are enabled on the table mentioned in the error message (for example, **VendTable**, **CustTable**) or its corresponding dimension view (for example, **DimAttributeVendTable**, **DimAttributeCustTable**).
-2. If XDS policies are found on these tables or views, remove or adjust them so that the financial dimension framework can access the required records.
+2. If XDS policies are found on these tables or views, remove or adjust them so that the financial dimension framework can access the required records. For more information on bypassing XDS policies, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy).
 3. After removing the XDS policies, retry the operation that produced the error.
 
 ## Cause 3: Hidden or special characters in the dimension value
@@ -78,7 +78,7 @@ On version 10.0.42 and later, the error message may specifically indicate that a
 ### Resolution
 
 1. Navigate to the source record mentioned in the error message (for example, open the customer or vendor record).
-2. Select the key field (such as the account number), clear the entire contents of the field, and manually retype the value. This removes any hidden characters.
+2. Select the key field (such as the account number), clear the entire contents of the field, and manually retype the value. This removes any hidden characters. For guidance on renaming dimension values, see [Renaming financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions#renaming-financial-dimensions).
 3. If the system doesn't allow you to change the value to the same text, temporarily change it to a different value, save, and then change it back to the intended value.
 4. After correcting the value, retry the operation that produced the error.
 5. If your data comes from an external integration, review the integration to make sure data is validated and cleaned before it's imported into Dynamics 365 Finance to prevent this issue from recurring.

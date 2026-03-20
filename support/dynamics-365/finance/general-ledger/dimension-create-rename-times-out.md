@@ -14,15 +14,7 @@ ms.date: 03/10/2026
 
 **Resolution:**
 
-1. Go to **System administration** > **Setup** > **Process automations** and select the **Background processes** tab.
-2. Select **Data maintenance job to find opportunities** and select **Edit**. Set a sleep period to prevent it from running during activation.
-
-   ![Process automation sleep configuration for data maintenance job](./media/dimension-activation-process-automation.png)
-
-3. Repeat for **Data maintenance job to run fixes**.
-4. Go to **System administration** > **Inquiries** > **Batch jobs** and cancel any currently running data maintenance jobs.
-5. Retry activation or upgrade.
-6. After activation completes, remove the sleep period so data maintenance resumes normally.
+Pause the data maintenance jobs before retrying activation. For steps on accessing and managing data maintenance jobs, see [Data maintenance portal](/dynamics365/fin-ops-core/dev-itpro/sysadmin/datamaintenanceportal). Specifically, set a sleep period on both **Data maintenance job to find opportunities** and **Data maintenance job to run fixes** through **System administration** > **Setup** > **Process automations** > **Background processes**, and cancel any currently running data maintenance batch jobs. After activation completes, remove the sleep period so data maintenance resumes normally.
 
 ## Potential Cause 2: Change tracking is enabled on dimension tables
 

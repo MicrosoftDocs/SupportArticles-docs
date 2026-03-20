@@ -13,41 +13,23 @@ This article helps you resolve errors that occur when you create a new financial
 
 When you create a new dimension or rename an existing one, you receive one of the following error messages:
 
-> `... is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
-> `Dimension ... exists as an extension column on ... (...) and ... (...). You cannot change the name until this extension is removed.`
-> `The financial dimension name ... exists as a translated name on financial dimension ....`
+> `[DIMENSION NAME] is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
+> `Dimension [DIMENSION NAME] exists as an extension column on [ENTITY NAME] ([ENTITY TABLE NAME]) and [ENTITY NAME] ([ENTITY TABLE NAME]). You cannot change the name until this extension is removed.`
+> `The financial dimension name [DIMENSION NAME] exists as a translated name on financial dimension [EXISTING DIMENSION NAME].`
 
 **Cause:** The name you're trying to use already exists as a column in the dimension tables from a previous dimension that was deleted or renamed but not yet activated. The system blocks reuse until those pending changes are activated.
 
 **Resolution:**
 
-1. Enter maintenance mode.
-2. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-3. Select **Activate all** to process all pending dimension changes.
-4. After activation completes, retry creating or renaming the dimension.
-
-If activation fails or the conflict persists, choose a different dimension name. See [financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions#create-financial-dimensions) to learn more about naming constraints. Refrain from using the chart of accounts delimiter in a dimension name.
-
-> [!NOTE]
-> Dimension names can't contain special characters or reserved system field names such as **RecId**. If the error mentions an extension column conflict, the package containing that extension must be removed before the rename can proceed.
+Activate all pending dimension changes to clear the conflict. For steps, see [Activating dimensions](/dynamics365/finance/general-ledger/financial-dimensions#activating-dimensions). If the error mentions an extension column conflict, the package containing that extension must be removed before the rename can proceed. If activation fails or the conflict persists, choose a different dimension name. See [Financial dimension naming requirements](/dynamics365/finance/general-ledger/financial-dimensions#financial-dimension-naming-requirements) for naming constraints.
 
 ## Invalid characters in dimension name
 
 You receive the following error message:
 
-> The financial dimension name... contains invalid characters.
+> The financial dimension name [DIMENSION NAME] contains invalid characters.
 
-[Financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) names must follow specific naming conventions:
-
-- Must start with an underscore or a letter (either lowercase or uppercase).
-- Can contain only underscores, letters, or digits after the first character.
-- Can't contain system field names such as `RecId`.
-
-To fix this problem, follow these steps:
-
-1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
-1. Review the dimension name and make sure it follows the naming conventions.
-1. Rename the dimension if necessary, avoiding system field names and invalid characters.
+**Resolution:** Review the dimension name and correct it to comply with the [Financial dimension naming requirements](/dynamics365/finance/general-ledger/financial-dimensions#financial-dimension-naming-requirements).
 
 
 ## Stuck in maintenance mode due to entity extensions
@@ -58,7 +40,7 @@ To fix this problem, follow these steps:
 
 **Resolution:**
 
-This resolution has a two-part solution: first escape the deadlock, then fix the actual problem.
+This resolution has a two-part solution: first escape the deadlock, then fix the actual problem. For general information about entering and exiting maintenance mode, see [Maintenance mode](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode).
 
 1. If you're stuck in maintenance mode, restore the deleted or renamed dimensions to their previous names so activation can succeed, then exit maintenance mode.
 2. Remove the package containing the hardcoded column references.
@@ -73,7 +55,7 @@ This resolution has a two-part solution: first escape the deadlock, then fix the
 **Symptom:** Activation fails with one of the following errors:
 
 - `Cannot drop the procedure 'cdc.sp_batchinsert_{number}' because it's being used for Change Data Capture`
-- `Column name 'SYSTEMGENERATEDATTRIBUTE...' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
+- `Column name 'SYSTEMGENERATEDATTRIBUTE[DIMENSION ATTRIBUTE]' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
 
 ![Screenshot of the CDC sp_batchinsert error during dimension activation](./media/dimension-activation-cdc-error.png)
 
