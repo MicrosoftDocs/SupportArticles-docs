@@ -26,11 +26,11 @@ This article explains why financial dimension errors occur after restoring a dat
 
 After you restore a database backup from one environment to another — for example, from production to UAT — users receive one of the following errors when working with a financial dimension that didn't cause errors in the source environment:
 
-> There's a problem with one of the views for financial dimension ... Contact your system admin to ensure the customization package containing this view is deployed in this environment.
+> There's a problem with one of the views for financial dimension [DIMENSION ATTRIBUTE]. Contact your system admin to ensure the customization package containing this view is deployed in this environment.
 
 Or, in some builds:
 
-> There's a problem with one of the views for financial dimension ... Please try again later. If the problem persists, contact your system admin.
+> There's a problem with one of the views for financial dimension [DIMENSION ATTRIBUTE] Please try again later. If the problem persists, contact your system admin.
 
 The error message identifies a specific financial dimension by name.
 
@@ -41,7 +41,7 @@ When you restore a database from one environment to another, the data moves but 
 The restored database still references the custom financial dimension, but the supporting customization doesn't exist in the target environment.
 
 > [!NOTE]
-> If this issue is detected during database synchronization rather than at runtime, the error message reads: "The backing view ... for the financial dimension ... does not exist." The underlying cause and resolution are the same.
+> If this issue is detected during database synchronization rather than at runtime, the error message reads: "The backing view [VIEW] for the financial dimension [DIMENSION ATTRIBUTE] does not exist." The underlying cause and resolution are the same.
 
 ## Resolution
 
