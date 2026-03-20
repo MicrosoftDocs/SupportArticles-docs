@@ -11,7 +11,7 @@ ms.collection: CEnSKM-ai-copilot
 
 ## Summary
 
-When you run application lifecycle management (ALM) actions for a managed agent [solutions](/power-apps/maker/data-platform/solutions-overview) in Microsoft Copilot Studio, you might experience expression errors or invalid reference errors. These error typically occur in a situation in which component dependencies are missing. This situation can affect [managed solution layers](/power-apps/maker/data-platform/solution-layers). This article provides steps to diagnose and resolve these component errors so that you can successfully publish your agent.
+When you run application lifecycle management (ALM) actions for a managed agent [solutions](/power-apps/maker/data-platform/solutions-overview) in Microsoft Copilot Studio, you might experience expression errors or invalid reference errors. These errors typically occur in a situation in which component dependencies are missing. This situation can affect [managed solution layers](/power-apps/maker/data-platform/solution-layers). This article provides steps to diagnose and resolve these component errors so that you can successfully publish your agent.
 
 ## Symptoms
 
