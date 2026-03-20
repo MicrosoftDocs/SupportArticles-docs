@@ -38,7 +38,7 @@ After the customization is deployed and the database is synchronized, the new so
 
 ## Potential cause 2: The source is only available in a demo model
 
-Some dimension-enabled sources ship with demo models (such as the Fleet Management demo model) that are deployed only to development environments. These entries intentionally don't appear in UAT or production environments because the demo model isn't deployed there. This behavior is by design.
+Some dimension-enabled sources ship with demo models (such as the Fleet Management demo model) that are deployed only to development environments. These entries intentionally don't appear in User Acceptance Testing (UAT) or production environments because the demo model isn't deployed there. This behavior is by design.
 
 ### Resolution
 
