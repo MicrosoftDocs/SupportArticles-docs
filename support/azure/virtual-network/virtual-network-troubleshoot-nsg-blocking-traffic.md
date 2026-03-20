@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot NSG misconfigurations blocking traffic in Azure Virtual Network
+title: Troubleshoot NSG misconfigurations that block traffic in Azure Virtual Network
 description: Learn how to diagnose and resolve common Network Security Group (NSG) misconfigurations that block expected traffic in Azure virtual networks.
 services: virtual-network
 author: asudbring
@@ -18,37 +18,37 @@ This article helps you diagnose and resolve common Network Security Group (NSG) 
 
 ## Prerequisites
 
-- An Azure account with an active subscription.
-- [Network Watcher](/azure/network-watcher/network-watcher-create) enabled in the region of your virtual network.
+- An Azure account that has an active subscription
+- [Network Watcher](/azure/network-watcher/network-watcher-create) enabled in the region of your virtual network
 
 ## How NSG rule evaluation works
 
-Understanding how Azure evaluates NSG rules is critical to diagnosing blocking problems.
+To diagnose blocking problems, it's important to understand how Azure evaluates NSG rules.
 
 ### Rule processing order
 
 Azure evaluates NSG rules by **priority**, from lowest number (highest priority) to highest number (lowest priority):
 
-1. Azure evaluates inbound and outbound rules separately.
-2. For inbound traffic, Azure first evaluates the **subnet-level NSG**, then the **NIC-level NSG**.
-3. For outbound traffic, Azure first evaluates the **NIC-level NSG**, then the **subnet-level NSG**.
-4. Within each NSG, Azure evaluates rules in priority order (lowest number first).
-5. When Azure finds a matching rule, evaluation stops. Azure doesn't process any further rules.
+- Azure evaluates inbound and outbound rules separately.
+- For inbound traffic, Azure first evaluates the **subnet-level NSG**, then the **NIC-level NSG**.
+- For outbound traffic, Azure first evaluates the **NIC-level NSG**, then the **subnet-level NSG**.
+- Within each NSG, Azure evaluates rules in priority order (lowest number first).
+- When Azure finds a matching rule, evaluation stops. Azure doesn't process any additional rules.
 
 ### Subnet-level and NIC-level NSG interaction
 
-When you apply NSGs at both the subnet and NIC levels, **both** NSGs must allow the traffic for it to flow successfully. If either NSG has a deny rule that matches the traffic, the traffic is blocked.
+When you apply NSGs at both the subnet and NIC (network adapter) levels, *both* NSGs must allow the traffic in order for the traffic to flow successfully. If either NSG has a deny rule that matches the traffic, the traffic is blocked.
 
 **Example**: An inbound RDP connection to a VM:
 
-1. Traffic arrives at the subnet. The subnet-level NSG is evaluated first.
-2. If the subnet-level NSG allows the traffic, the NIC-level NSG is evaluated next.
-3. If the NIC-level NSG also allows the traffic, the traffic reaches the VM.
-4. If **either** NSG denies the traffic, the connection fails.
+- Traffic arrives at the subnet. The subnet-level NSG is evaluated first.
+- If the subnet-level NSG allows the traffic, the NIC-level NSG is evaluated next.
+- If the NIC-level NSG also allows the traffic, the traffic reaches the VM.
+- If either NSG denies the traffic, the connection fails.
 
 ### Default security rules
 
-Every NSG includes the following default rules that you can't delete:
+Every NSG includes the following default rules that you can't delete.
 
 | Priority | Name | Direction | Action | Description |
 |----------|------|-----------|--------|-------------|
@@ -59,7 +59,7 @@ Every NSG includes the following default rules that you can't delete:
 | 65001 | AllowInternetOutBound | Outbound | Allow | Allow outbound traffic to the internet |
 | 65500 | DenyAllOutBound | Outbound | Deny | Deny all other outbound traffic |
 
-The `DenyAllInBound` rule (priority 65500) blocks all inbound traffic that isn't explicitly allowed by a higher-priority rule. You must add explicit allow rules with a priority number lower than 65500 for any traffic you want to permit.
+The `DenyAllInBound` rule (priority 65500) blocks all inbound traffic that isn't explicitly allowed by a higher-priority rule. You must add explicit allow rules that have a priority number that's less than 65500 for any traffic that you want to permit.
 
 ## Common NSG misconfigurations
 
@@ -69,12 +69,12 @@ A higher-priority deny rule (lower priority number) overrides a lower-priority a
 
 **Symptom**: Traffic is blocked even though an allow rule exists for the port and protocol.
 
-**Example**: You create an allow rule for RDP (port 3389) with priority 1000, but a deny rule for all traffic exists at priority 500. The deny rule at priority 500 is evaluated first and blocks the traffic before the allow rule at priority 1000 is reached.
+**Example**: You create an allow rule for RDP (port 3389) that has priority 1000, but a deny rule for all traffic exists at priority 500. The deny rule at priority 500 is evaluated first, and it blocks the traffic before the allow rule at priority 1000 is reached.
 
 **Resolution**:
 
-1. Review all rules in the NSG to identify deny rules with a lower priority number than your allow rule.
-2. Either remove the conflicting deny rule or change the priority of the allow rule to a lower number than the deny rule.
+1. Review all rules in the NSG to identify deny rules that have a lower priority number than your allow rule has.
+2. Either remove the conflicting deny rule or change the priority of the allow rule to a lower number than the deny rule has.
 
 ### NSG applied at both subnet and NIC with conflicting rules
 
@@ -84,14 +84,14 @@ A higher-priority deny rule (lower priority number) overrides a lower-priority a
 
 **Resolution**:
 
-1. Use the **Effective security rules** view to see the combined rules from both NSGs. In the Azure portal, go to the VM's **Networking** settings and select the network interface to view effective security rules.
+1. Use the **Effective security rules** view to see the combined rules from both NSGs. In the Azure portal, go to the VM's **Networking** settings, and select the network interface to view effective security rules.
 2. Add matching allow rules in both the subnet-level and NIC-level NSGs.
 
 ### Source IP address restrictions
 
-**Symptom**: Traffic from certain sources is blocked, while traffic from other sources in the same virtual network works.
+**Symptom**: Traffic from certain sources is blocked, while traffic from other sources in the same virtual network flows successfully.
 
-**Example**: An NSG rule allows RDP from source `10.0.1.0/24`, but the connecting VM is in subnet `10.0.2.0/24`. The source IP doesn't match the rule, so traffic falls through to the default deny.
+**Example**: An NSG rule allows RDP from source `10.0.1.0/24`, but the connecting VM is in subnet `10.0.2.0/24`. The source IP doesn't match the rule. Therefore, traffic falls through to the default deny.
 
 **Resolution**:
 
@@ -100,19 +100,19 @@ A higher-priority deny rule (lower priority number) overrides a lower-priority a
 
 ### Service tag misunderstandings
 
-Service tags represent groups of IP address prefixes. Understanding what each tag includes is important:
+Service tags represent groups of IP address prefixes. Understanding what each tag includes is important.
 
 | Service tag | Includes |
 |-------------|----------|
-| `VirtualNetwork` | Virtual network address space, all connected on-premises address spaces, peered virtual networks, virtual networks connected to a virtual network gateway, the virtual IP address of the host, and address prefixes used on user-defined routes |
+| `VirtualNetwork` | Virtual network address space, all connected on-premises address spaces, peered virtual networks, virtual networks connected to a virtual network gateway, the virtual IP address of the host, and address prefixes that are used on user-defined routes |
 | `Internet` | All IP addresses outside the virtual network address space that are reachable by the public internet, including Azure public-facing services |
 | `AzureLoadBalancer` | The Azure infrastructure load balancer IP |
 | `AzureCloud` | All Azure datacenter public IP addresses |
 
 **Common issues**:
 
-- Using `Internet` as the source when you intended to allow traffic from other Azure resources. Use `VirtualNetwork` or a specific service tag instead.
-- Assuming `VirtualNetwork` only includes the local VNet. It also includes peered networks and on-premises connections through gateways.
+- Incorrectly using `Internet` as the source when you intend to allow traffic from other Azure resources. Instead, use `VirtualNetwork` or a specific service tag.
+- Assuming that `VirtualNetwork` includes only the local VNet. Actually, it also includes peered networks and on-premises connections through gateways.
 
 For the full list of service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
