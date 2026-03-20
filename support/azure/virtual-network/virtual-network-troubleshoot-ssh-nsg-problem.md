@@ -257,7 +257,7 @@ To use Azure portal to create an NSG rule that allows SSH traffic, follow these 
     | **Destination port ranges** | 22 |
     | **Protocol** | TCP |
     | **Action** | Allow |
-    | **Priority** | A value lesser than any conflicting deny rule (for example, 300) |
+    | **Priority** | A value less than any conflicting deny rule (for example, 300) |
     | **Name** | AllowSSH |
 
 6. Select **Add**.
