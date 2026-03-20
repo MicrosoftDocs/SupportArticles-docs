@@ -16,7 +16,7 @@ This guide provides troubleshooting steps for errors that prevent you from delet
 
 - **Resolution:** Delete the dimension value from the corresponding entity page. For example, to delete a Department dimension, go to the **Operating units** page.
 
-**Potential Cause 2:** The user lacks sufficient roles or privileges to manage dimension values.
+**Potential Cause 2:** The user lacks sufficient roles or privileges to manage dimension values. This can happen when [Extensible Data Security (XDS) policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) restrict access to the backing entity.
 
 - **Resolution:** Verify that an administrator with full privileges can delete the dimension value. Contact your system administrator to request the necessary permissions.
 
@@ -24,11 +24,7 @@ This guide provides troubleshooting steps for errors that prevent you from delet
 
 **Potential Cause:** The dimension value was saved to the dimension framework, indicating it was entered in a ledger account or used in a transaction. Financial dimensions are insert-only and immutable for data integrity and auditing purposes. The system blocks deletion even if transactions were never posted or have been deleted.
 
-- **Resolution 1:** (Recommended) Rename the dimension value to indicate it shouldn't be used, such as **___DONOTUSE_DIMNAME** or **_DONOTUSE_** prefix.
-
-- **Resolution 2:** Suspend the dimension value. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**. Select the dimension, select **Dimension values**, select the value to suspend, select **Edit**, and mark it as suspended. This hides the value from view.
-
-Later, when a new dimension value is needed, you can rename and reuse the old dimension to the new desired value. Rather than deleting old values and creating new ones, this practice of reusing existing dimensions values is a best practice and should improve application performance.
+- **Resolution:** Because financial dimensions are insert-only and immutable, deletion is typically not possible once a value has been used. Instead, rename or suspend the value. For detailed steps and best practices, see [Deleting financial dimension values](/dynamics365/finance/general-ledger/financial-dimensions#deleting-financial-dimension-values).
 
 ## I can't delete a record from the underlying entity
 
@@ -58,6 +54,4 @@ If the scan completes and finds a reference, the following UI is shown, and the 
 
 - **Resolution 1:** (Recommended) For dimension types that support it (Bank, Project, Vendor, Customer, and similar), allow the delete scan to run to completion. If no references are found, the backing record and its associated dimension value are allowed to be deleted. If references are found, they're displayed so that you can take any necessary action before retrying.
 
-- **Resolution 2:** If the scan finds that the record is referenced as a dimension value and deletion is blocked, rename the backing entity record to indicate it shouldn't be used. For example, you may add a **___DONOTUSE_** prefix. As is mentioned above, this value may be reused.
-
-Later, when a new dimension value is needed, you can rename and reuse the old record and its dimension value. Rather than deleting old values and creating new ones, this practice of reusing existing dimension values is a best practice and should improve application performance.
+- **Resolution 2:** If the scan finds that the record is referenced as a dimension value and deletion is blocked, consider renaming or suspending the value instead. For detailed steps and best practices, see [Deleting financial dimension values](/dynamics365/finance/general-ledger/financial-dimensions#deleting-financial-dimension-values).

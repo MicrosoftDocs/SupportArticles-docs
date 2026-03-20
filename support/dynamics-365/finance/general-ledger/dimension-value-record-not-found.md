@@ -32,4 +32,4 @@ For guidance on reviewing and correcting customizations, refer to [Best practice
 
 If dimensions were set up using the FleetManagement demo project (for example, Branch, Region, or RentalLocation) in a development environment, those dimensions don't work in production because the FleetManagement demo model is only available in dev environments. This leaves behind dimension data that the system can't resolve.
 
-**Resolution** - Remove the orphaned dimension data left behind by the demo model. Contact your system administrator or partner to clean up the FleetManagement-related dimension configuration.
+**Resolution** - Remove the orphaned dimension data left behind by the demo model. The [Fleet Management sample application](/dynamics365/fin-ops-core/dev-itpro/dev-tools/introduction-fleet-management-sample) is only available in development environments and shouldn't be used as a basis for production dimension configuration. Contact your system administrator or partner to clean up the FleetManagement-related dimension configuration.
