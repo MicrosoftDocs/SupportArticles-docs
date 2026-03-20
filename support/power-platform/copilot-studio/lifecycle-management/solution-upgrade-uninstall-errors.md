@@ -1,6 +1,6 @@
 ---
-title: Fix Solution Upgrade or Uninstall Issues in Copilot Studio
-description: How to resolve upgrade and uninstall errors in Copilot Studio managed solutions. Fix SQL constraint and managed property conflicts. Learn the solutions now.
+title: Fix solution upgrade or uninstall problems in Copilot Studio
+description: Fix upgrade and uninstall errors in Copilot Studio managed solutions. Fix SQL constraint and managed property conflicts.
 ms.date: 03/20/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Lifecycle Management
@@ -11,11 +11,11 @@ ms.collection: CEnSKM-ai-copilot
 
 ## Summary
 
-When you upgrade or uninstall a managed [solution](/power-apps/maker/data-platform/solutions-overview) in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), you might get errors related to SQL constraints, managed property evaluation, or unexpected component deletion. Active customizations in the target environment or managed property conflicts typically cause these errors. This article helps you identify the cause and resolve the error.
+When you upgrade or uninstall a managed [solution](/power-apps/maker/data-platform/solutions-overview) in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), you receive error messages that are related to SQL constraints, managed property evaluation, or unexpected component deletion. These errors typically occur because of active customizations in the target environment or managed property conflicts. This article helps you identify the cause and resolve the error.
 
 ## Symptoms
 
-When you upgrade or uninstall a managed solution, or when you update, remove, or delete a managed component like an agent or agent component, you might get one of the following errors:
+When you upgrade or uninstall a managed solution, or when you update, remove, or delete a managed component such as an agent or agent component, you receive one of the following error messages:
 
 - SQL constraint error:
 
@@ -31,7 +31,7 @@ When you upgrade or uninstall a managed solution, or when you update, remove, or
 
 ## Determine the cause of the problem
 
-Match the error message you get to one of the following causes:
+Match the error message to the appropriate cause:
 
 - For a **SQL constraint error**, see [Cause: Active customizations in the target environment](#cause-active-customizations-in-the-target-environment).
 - For a **managed property evaluation error**, see [Cause: Managed property conflicts](#cause-managed-property-conflicts).
@@ -39,35 +39,35 @@ Match the error message you get to one of the following causes:
 
 ## Cause: Active customizations in the target environment
 
-SQL constraint errors occur when the target managed environment has active customizations on the agent or component shown in the constraint (for example, an agent component, workflow, or environment variable).
+SQL constraint errors occur if the target-managed environment has active customizations on the agent or component that's shown in the constraint (for example, an agent component, workflow, or environment variable).
 
 ### Solution: Remove active customizations
 
 To view and remove customized components:
 
 1. In Copilot Studio, go to **Solutions**, and then open the agent's source solution.
-1. In the **Objects** pane, select **All**.
-1. Sort the **Managed** column alphabetically to find all managed agents (**Yes**).
-1. Sort the **Customized** column alphabetically to find all customized agents (**Yes**).
+1. On the **Objects** pane, select **All**.
+1. To find all managed agents (**Yes**), sort the **Managed** column alphabetically.
+1. To find all customized agents (**Yes**), sort the **Customized** column alphabetically.
 1. For each agent that's managed and customized:
-   1. Open the commands menu (**⋮**).
+   1. Open the command menu (**⋮**).
    1. Select **Advanced**.
    1. Select **Remove active customizations**.
-1. Retry the upgrade or uninstall.
+1. Retry the upgrade or uninstallation.
 
 ## Cause: Managed property conflicts
 
-Managed property evaluation errors occur when you initially set solution components as customizable and apply customizations but later disable this option in an upgrade. Conflicts or deletions within [managed solution layers](/power-apps/maker/data-platform/solution-layers) can also cause components to malfunction or become inaccessible, which prevents you from removing active customizations.
+Managed property evaluation errors occur if you initially set solution components as customizable, and you then apply customizations but later disable this option in an upgrade. Conflicts or deletions within [managed solution layers](/power-apps/maker/data-platform/solution-layers) can also cause components to malfunction or become inaccessible. This situation prevents you from being able to remove active customizations.
 
 ### Solution: Update the managed property settings
 
 1. Set the component as customizable in the source solution. For more information, see [View and edit managed properties in solutions](/power-platform/alm/managed-properties-alm#view-and-edit-table-managed-properties).
-1. Reimport the solution in the target environment.
-1. Retry the removal of the active customization.
+1. Import the solution in the target environment again.
+1. Try again to remove the active customization.
 
-## Raise a support case with Microsoft Support
+## Create a support case
 
-If you still get the same errors after following the previous steps, raise a support case with Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
+If you still receive the same errors after you apply the solution, contact Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
 
 When you create a support case, include the following information:
 
@@ -75,10 +75,10 @@ When you create a support case, include the following information:
 - The complete error details (download the full error shown during the upgrade or uninstall)
 - Screenshots of the following views:
   - Solution layers view
-  - Agent Dependencies
+  - Agent dependencies
   - Customize column showing conflicts (if applicable)
 - A description of the steps you already tried
-- The solution ZIP file, if possible
+- The solution .zip file, if possible
 
 ## Related content
 
