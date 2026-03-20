@@ -112,7 +112,7 @@ If the Linux VM's SSH daemon (`sshd`) listens on a nonstandard port (for example
 
 ### Use IP flow verify in the Azure portal
 
-The Azure Network Watcher feature, IP flow verify, tests whether traffic is allowed or denied to or from a VM, and reports which security rule caused the decision. To perform this task, follow these steps:
+The Azure Network Watcher feature, IP flow verify, tests whether traffic is allowed or denied to or from a VM. IP flow verify also reports which security rule caused the decision. To perform this task, follow these steps:
 
 1. Go to the [Azure portal](https://portal.azure.com), and select **Network Watcher**.
 
@@ -165,7 +165,7 @@ Test-AzNetworkWatcherIPFlow `
 
 ### View effective security rules
 
-Effective security rules show the combined view of all NSG rules that are applied to a network interface, including subnet-level and NIC-level NSGs that are combined by using default rules.
+Effective security rules show the combined view of all NSG rules that are applied to a network interface. The view includes subnet-level and NIC-level NSGs that are combined by using default rules.
 
 #### Azure portal
 
@@ -237,7 +237,7 @@ az monitor log-analytics query \
 
 ### Allow SSH traffic on port 22
 
-Create or modify an inbound NSG rule to allow TCP port 22 traffic from the desired source.
+Create or modify an inbound NSG rule that allows TCP port 22 traffic from the desired source.
 
 #### Azure portal
 
@@ -327,7 +327,7 @@ If `sshd` uses a nonstandard port:
 
 1. Check the SSH port on the VM: `grep -i port /etc/ssh/sshd_config`.
 2. Update the NSG rule destination port to match the configured SSH port.
-3. Update any automation scripts or connection strings to use the custom port.
+3. Update any automation scripts or connection strings so that they use the custom port.
 
 ## Secure alternatives to exposing SSH port 22 publicly
 
