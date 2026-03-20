@@ -62,7 +62,7 @@ When you create a support case, include the following information:
 - The complete error details (download the full error that's shown during the upgrade or uninstall)
 - Screenshots of the following views:
   - Solution layers view
-  - Agent Dependencies
+  - Agent dependencies
   - Customize column showing conflicts (if applicable)
 - A description of the steps that you already tried
 - The solution .zip file, if possible
