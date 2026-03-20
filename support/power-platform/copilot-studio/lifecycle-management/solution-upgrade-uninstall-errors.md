@@ -35,11 +35,11 @@ Match the error message to the appropriate cause:
 
 - For a **SQL constraint error**, see [Cause: Active customizations in the target environment](#cause-active-customizations-in-the-target-environment).
 - For a **managed property evaluation error**, see [Cause: Managed property conflicts](#cause-managed-property-conflicts).
-- For a **Not Found** error, or if the other solutions in this article don't resolve your issue, see [Raise a support case with Microsoft Support](#raise-a-support-case-with-microsoft-support).
+- For a **Not Found** error, or if the other solutions in this article don't resolve your issue, see [Create a support case](#create-a-support-case).
 
 ## Cause: Active customizations in the target environment
 
-SQL constraint errors occur if the target-managed environment has active customizations on the agent or component that's shown in the constraint (for example, an agent component, workflow, or environment variable).
+SQL constraint errors occur if the target-managed environment has active customizations on the agent or component that's shown in the constraint. For example, customizations are set on an agent component, workflow, or environment variable.
 
 ### Solution: Remove active customizations
 
