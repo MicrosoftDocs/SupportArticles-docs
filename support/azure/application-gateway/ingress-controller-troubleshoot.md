@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 01/31/2024
+ms.date: 03/04/2026
 ms.custom: sfi-image-nochange
 # Customer intent: As a Kubernetes administrator, I want to troubleshoot the Application Gateway Ingress Controller installation, so that I can ensure it is configured correctly and resolve any issues affecting application accessibility.
 ---
@@ -76,9 +76,10 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-              name: test-agic-app-service
-              port:
-                number: 80
+              service:
+                name: test-agic-app-service
+                port:
+                  number: 80
 EOF
 ```
 
@@ -177,9 +178,11 @@ The following conditions must be in place for AGIC to function as expected:
          kubernetes.io/ingress.class: azure/application-gateway
        name: aspnetapp
      spec:
-       backend:
-         serviceName: aspnetapp
-         servicePort: 80
+       defaultBackend:
+         service:
+           name: aspnetapp
+           port:
+             number: 80
      ```
 
      The ingress resource must be annotated with `kubernetes.io/ingress.class: azure/application-gateway`.
