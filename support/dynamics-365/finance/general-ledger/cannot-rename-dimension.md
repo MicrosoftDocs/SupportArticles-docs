@@ -21,7 +21,7 @@ When you create a new dimension or rename an existing one, you receive one of th
 
 **Resolution:**
 
-Activate all pending dimension changes to clear the conflict. For steps, see [Activating dimensions](/dynamics365/finance/general-ledger/financial-dimensions#activating-dimensions). If the error mentions an extension column conflict, the package containing that extension must be removed before the rename can proceed. If activation fails or the conflict persists, choose a different dimension name. See [Financial dimension naming requirements](/dynamics365/finance/general-ledger/financial-dimensions#financial-dimension-naming-requirements) for naming constraints.
+Activate all pending dimension changes to clear the conflict. For steps, see [Activating dimensions](/dynamics365/finance/general-ledger/financial-dimensions#activating-dimensions). If the error mentions an extension column conflict, the package containing that extension must be removed before the rename can proceed. If activation fails or the conflict persists, choose a different dimension name. See [Financial dimension naming requirements](/dynamics365/finance/general-ledger/tasks/define-financial-dimensions#naming-requirements) for naming constraints.
 
 ## Invalid characters in dimension name
 
@@ -29,7 +29,7 @@ You receive the following error message:
 
 > The financial dimension name [DIMENSION NAME] contains invalid characters.
 
-**Resolution:** Review the dimension name and correct it to comply with the [Financial dimension naming requirements](/dynamics365/finance/general-ledger/financial-dimensions#financial-dimension-naming-requirements).
+**Resolution:** Review the dimension name and correct it to comply with the [Financial dimension naming requirements](/dynamics365/finance/general-ledger/tasks/define-financial-dimensions#naming-requirements).
 
 
 ## Stuck in maintenance mode due to entity extensions
