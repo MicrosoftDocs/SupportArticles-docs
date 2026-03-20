@@ -77,7 +77,7 @@ This problem occurs because the worker's position detail or assignment isn't fou
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. If the problem persists, contact your system administrator.
 
-## Employee POS permission settings not found or configured incorrectly
+## Employee permission group not found or configured incorrectly
 
 ### Symptoms
 
@@ -121,7 +121,7 @@ The device can't switch to offline mode. The channel information is either unava
 1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
 1. If the problem persists, contact your system administrator.
 
-## Can't switch to offline mode
+## Credentials or authentication errors
 
 ### Symptoms
 
@@ -143,7 +143,7 @@ The device can't switch to offline mode. The user information is either unavaila
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. If the problem persists, contact your system administrator.
 
-## Error due to offline database storage problem
+## Storage error due to offline database permissions or size
 
 ### Symptoms
 
