@@ -1,6 +1,6 @@
 ---
-title: Expression errors when publishing an agent in Copilot Studio
-description: Learn how to fix expression errors like incompatible type comparisons, IdentifierNotRecognized, and invalid references when publishing managed agents in Microsoft Copilot Studio.
+title: Troubleshoot Expression Errors in Copilot Studio Agent Publishing
+description: Fix expression errors and invalid reference errors when publishing a managed agent in Copilot Studio. Learn how to resolve missing dependencies in solution layers and publish successfully.
 ms.date: 03/20/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Lifecycle Management
@@ -11,7 +11,7 @@ ms.collection: CEnSKM-ai-copilot
 
 ## Summary
 
-When you run application lifecycle management (ALM) actions for managed agent [solutions](/power-apps/maker/data-platform/solutions-overview) in Microsoft Copilot Studio, you might get expression errors or invalid reference errors. These errors are typically caused by missing component dependencies that affect [managed solution layers](/power-apps/maker/data-platform/solution-layers). This article provides steps to diagnose and resolve these component errors so you can successfully publish your agent.
+When you run application lifecycle management (ALM) actions for managed agent [solutions](/power-apps/maker/data-platform/solutions-overview) in Microsoft Copilot Studio, you might get expression errors or invalid reference errors. Missing component dependencies that affect [managed solution layers](/power-apps/maker/data-platform/solution-layers) typically cause these errors. This article provides steps to diagnose and resolve these component errors so you can successfully publish your agent.
 
 ## Symptoms
 
@@ -54,7 +54,7 @@ To resolve these errors, add the required dependencies to your solution:
 
 ### Raise a support case with Microsoft Support
 
-If you still get the same errors after you follow the preceding steps, raise a support case with Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
+If you still get the same errors after following the previous steps, raise a support case with Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
 
 When you create a support case, include the following information:
 
