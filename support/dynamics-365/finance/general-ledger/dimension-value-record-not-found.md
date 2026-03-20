@@ -22,7 +22,7 @@ You might experience one or more of the following:
 
 ## Potential cause 1: A customization or extension changed the structure of a dimension's underlying view
 
-Financial dimensions rely on underlying database views that must have an exact number of fields. If a partner solution, ISV, or customization added extra fields to one of these views, the system silently rejects the dimension when the server starts. This may cause some of the symptoms mentioned above.
+Financial dimensions rely on underlying database views that must have an exact number of fields. If a partner solution, Independent Software Vendor (ISV), or customization added extra fields to one of these views, the system silently rejects the dimension when the server starts. This may cause some of the symptoms mentioned above.
 
 **Resolution** - The extra fields must be removed from the affected view through a code deployment so the view structure matches what the system expects. After the corrected code is deployed and the environment restarts, the dimension reappears automatically.
 
