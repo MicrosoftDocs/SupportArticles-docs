@@ -2,7 +2,7 @@
 title: Resolve IIS HTTP 404 errors for hidden static files
 description: Discover how to resolve HTTP 404 or Access Denied errors in IIS caused by hidden static files. Follow our guide for quick and easy fixes.
 ms.date: 03/17/2026
-ms.reviewer: robmcm; martinsm, sainathreddy.gnv, v-shaywood
+ms.reviewer: robmcm; martinsm, sainathreddy.gnv, khgupta, v-shaywood
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
 # "HTTP 404" or "Access Denied" errors when requesting hidden static files
