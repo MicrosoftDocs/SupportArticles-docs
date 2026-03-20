@@ -45,10 +45,7 @@ This resolution has a two-part solution: first escape the deadlock, then fix the
 1. If you're stuck in maintenance mode, restore the deleted or renamed dimensions to their previous names so activation can succeed, then exit maintenance mode.
 2. Remove the package containing the hardcoded column references.
 3. Re-enter maintenance mode and activate dimensions again.
-4. Create a replacement extension using the correct approach. For more information, see [Dimensions overview for developers](/dynamics365/fin-ops-core/dev-itpro/financial/dimensions-overview).
-
-> [!NOTE]
-> Using a hardcoded dimension name in an entity extension is a legacy pattern. The current approach looks up the dimension by name dynamically, so it remains valid even after renames.
+4. Create a replacement extension using the correct approach.
 
 ## Activation fails with a change data capture (CDC) error
 
