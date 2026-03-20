@@ -1,7 +1,7 @@
 ---
-title: Expression errors when publishing an agent
-description: Learn how to fix expression errors like incompatible type comparisons and invalid references when publishing managed agents in Copilot Studio.
-ms.date: 03/18/2026
+title: Expression errors when publishing an agent in Copilot Studio
+description: Learn how to fix expression errors like incompatible type comparisons, IdentifierNotRecognized, and invalid references when publishing managed agents in Microsoft Copilot Studio.
+ms.date: 03/20/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Lifecycle Management
 ms.collection: CEnSKM-ai-copilot
@@ -9,62 +9,66 @@ ms.collection: CEnSKM-ai-copilot
 
 # Expression errors when publishing an agent
 
-This article addresses common component errors encountered when executing application lifecycle management actions for managed agent solutions. It provides actionable steps to diagnose and resolve these errors affecting managed solution layers.
+## Summary
+
+When you run application lifecycle management (ALM) actions for managed agent [solutions](/power-apps/maker/data-platform/solutions-overview) in Microsoft Copilot Studio, you might get expression errors or invalid reference errors. These errors are typically caused by missing component dependencies that affect [managed solution layers](/power-apps/maker/data-platform/solution-layers). This article provides steps to diagnose and resolve these component errors so you can successfully publish your agent.
 
 ## Symptoms
 
-You might experience the following errors when publishing a managed agent in Copilot Studio.
+When you publish a managed agent in Copilot Studio, you might see one or more of the following errors.
 
-Expression errors such as:
+Expression errors like:
 
-- IdentifierNotRecognized
+- `IdentifierNotRecognized`
 - Incompatible type comparison
 - Unexpected characters
 - Power Fx errors
 
-Invalid reference errors such as:
+Invalid reference errors like:
 
 - Element not found or disabled
 
-The following image shows an example of an error condition:
+The following screenshot shows an example of the `IdentifierNotRecognized` error:
 
-:::image type="content" source="media/missing-dependencies-during-agent-publishing/expression-errors.png" alt-text="Screenshot of an ExpressionError displaying the IdentifierNotRecognized error code.":::
+:::image type="content" source="media/agent-publish-missing-dependencies/expression-errors.png" alt-text="Screenshot of an ExpressionError displaying the IdentifierNotRecognized error code.":::
 
 ## Cause
 
-If you encounter expression errors during agent publishing, the issue is likely due to missing component dependencies in your solution.
+Missing component dependencies in your solution cause these expression and reference errors during agent publishing.
 
 ## Solution
 
-To resolve these errors and successfully publish your agent, follow these steps:
+To resolve these errors, add the required dependencies to your solution:
 
-1. In Power Apps, access the solution where you store the agent. Go to **Objects** and verify that the following components are part of your solution (if applicable):
+1. In [Power Apps](https://make.powerapps.com), open the solution that contains the agent.
+1. Go to **Objects** and check that the following components are included in your solution (if applicable):
    - Workflows
    - Environment variables
    - Connection references
-1. For each component with a **Not Recognized** error message, open the commands menu (**⋮**), select **Advanced**, and select **Add required objects**.
-    :::image type="content" source="media/missing-dependencies-during-agent-publishing/add-required-objects.png" alt-text="Screenshot of the Power Apps Maker portal, highlighting the Add required objects setting.":::
-1. Ensure you include all dependent components before exporting the solution.
-1. To automatically include all dependencies when exporting your solution, perform the same action for the main **Agent** component.
-1. Export the solution again with all the included dependencies.
+1. For each component that shows a **Not Recognized** error, open the commands menu (**⋮**), select **Advanced**, and then select **Add required objects**.
 
-## Raise a support case with Microsoft Support
+    :::image type="content" source="media/agent-publish-missing-dependencies/add-required-objects.png" alt-text="Screenshot of the Power Apps Maker portal that highlights the Add required objects option.":::
 
-If you continue facing the same issue after following the preceding steps, [raise a support case with Microsoft Support in the Power Platform Admin Center](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
+1. To automatically include all dependencies, repeat the previous step for the main **Agent** component.
+1. [Export the solution](/power-apps/maker/data-platform/export-solutions) again with the included dependencies.
 
-When creating a support case, make sure to include the following information:
+### Raise a support case with Microsoft Support
 
-- A network trace that captures the error you're facing.
-- The complete error details. Download the complete error shown during the upgrade or uninstall.
+If you still get the same errors after you follow the preceding steps, raise a support case with Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
+
+When you create a support case, include the following information:
+
+- A network trace that captures the error
+- The complete error details (download the full error shown during the upgrade or uninstall)
 - Screenshots of the following views:
-  - Solution layers view.
-  - Agent Dependencies.
-  - Customize column showing conflicts (if applicable).
-- Details of the mitigation steps you attempted.
-- If possible, include the solution ZIP file.
+  - Solution layers view
+  - Agent Dependencies
+  - Customize column showing conflicts (if applicable)
+- A description of the steps you already tried
+- The solution ZIP file, if possible
 
 ## Related content
 
-- [Solution layers in Power Platform](/power-apps/maker/data-platform/solution-layers)
+- [Upgrade or update a solution](/power-apps/maker/data-platform/update-solutions)
 - [Create and manage custom solutions](/microsoft-copilot-studio/authoring-solutions-overview)
 - [Export and import agents using solutions](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution)
