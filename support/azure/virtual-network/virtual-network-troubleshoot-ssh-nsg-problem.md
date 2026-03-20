@@ -35,7 +35,7 @@ You experience one or more of the following symptoms when you connect to an Azur
 
 ## How NSG rules affect SSH traffic
 
-Evaluate NSG rules by priority within each direction (inbound and outbound). Lower priority numbers are evaluated first. When a rule matches the traffic, stop evaluation. This evaluation process means that a deny rule that has a higher priority (lower number) blocks SSH traffic even if an allow rule exists at a lower priority (higher number).
+Evaluate NSG rules by priority within each direction (inbound and outbound). Lower priority numbers are evaluated first. When a rule matches the traffic, the evaluation stops. This evaluation process means that a deny rule that has a higher priority (lower number) blocks SSH traffic even if an allow rule exists at a lower priority (higher number).
 
 When you apply NSGs at both the subnet and the network interface (NIC) levels, evaluation occurs as follows:
 
