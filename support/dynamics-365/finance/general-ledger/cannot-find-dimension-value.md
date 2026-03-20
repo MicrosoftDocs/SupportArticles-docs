@@ -18,13 +18,13 @@ If the dimension value is scoped to a specific legal entity (company) different 
 ## Potencial cause 2: The user lacks the necessary security role.
 If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when [Extensible Data Security (XDS) policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) are applied to the backing entity, and the user doesn’t have permission to view it.
 
-**Resolution 1** - Assign the appropriate security role.
+**Resolution 1** - The user’s role may not grant access to the correct legal entity or organization. Assign the appropriate security role:
     1. Go to **System administration** > **Users** > **Users**.
     2. Select the affected user.
     3. Select **Roles** > **Assign organizations**.
     4. Review the access scope and grant access to the required organizations. To test, select **Grant access to all organizations** and check whether the dimension value appears.
 
-**Resolution 2** - Check if the issue is XDS-related. Temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy).
+**Resolution 2** - Even with the correct organization access, an XDS policy on the backing entity (such as Customers or Operating units) may be filtering out records. To check, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy).
 
 ### Potencial cause 3: The dimension value is backed by a system entity and hasn't been used yet. 
 Values for entity-backed dimensions aren't available in the dimension framework until used in places like posting profiles or journals.
