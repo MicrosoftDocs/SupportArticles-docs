@@ -136,8 +136,6 @@ items:
       href: diagnostics/long-line-causes-log-truncated.md
     - name: Configuration Manager diagnostics
       href: diagnostics/diagnostics-sdp.md
-    - name: How to turn on debug logging for SMS 
-      href: diagnostics/turn-on-debuglogging-key.md
 - name: Discovery
   items:
     - name: Delta AD Group Discovery doesn't detect group membership changes in nested OUs

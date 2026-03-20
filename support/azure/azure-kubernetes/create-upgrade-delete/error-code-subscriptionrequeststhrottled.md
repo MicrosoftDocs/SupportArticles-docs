@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot SubscriptionRequestsThrottled error code (429)
 
+## Summary
+
 This article discusses how to identify and resolve the `SubscriptionRequestsThrottled` error (status 429) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms

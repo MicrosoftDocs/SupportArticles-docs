@@ -9,6 +9,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Basic troubleshooting of AKS cluster startup issues
 
+## Summary
+
 This article outlines the basic troubleshooting methods to use if you can't start a Microsoft Azure Kubernetes Service (AKS) cluster successfully.
 
 ## Prerequisites

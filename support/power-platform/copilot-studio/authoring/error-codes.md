@@ -1,7 +1,7 @@
 ---
 title: Understand Error Codes
 description: Understand error codes so that you can troubleshoot issues in your agent design by using Microsoft Copilot Studio.
-ms.date: 01/28/2026
+ms.date: 03/10/2026
 ms.reviewer:
   - jameslew
   - erickinser
@@ -284,7 +284,7 @@ For more information, see [Copilot Studio quotas and limits](/microsoft-copilot-
 - The parameter with name {KeyName} on flow {FlowName} ({FlowId}) evaluated to type {ResolveType}, expected type {ExpectedType}.
 - The flow {FlowName} ({FlowId}) failed to run with response code {ResponseCode}, error code: {FlowErrorCode}.
 
-**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type.
+**Resolution**: Verify that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables that you pass to the flow matches the parameter type. For more information, see [FlowActionBadRequest agent error in channels](../channels/agent-flow-action-bad-request.md)
 
 #### FlowActionException
 
