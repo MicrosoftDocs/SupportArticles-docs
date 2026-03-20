@@ -1,84 +1,87 @@
 ---
-title: Fix solution upgrade or solution uninstall errors
-description: Learn how to fix solution upgrade or uninstall errors in Copilot Studio. Resolve SQL constraint issues, managed property conflicts, and unexpected deletion errors.
-ms.date: 03/18/2026
+title: Fix Solution Upgrade or Uninstall Issues in Copilot Studio
+description: How to resolve upgrade and uninstall errors in Copilot Studio managed solutions. Fix SQL constraint and managed property conflicts. Learn the solutions now.
+ms.date: 03/20/2026
 ms.reviewer: camogas, erickinser, v-shaywood
 ms.custom: sap:Lifecycle Management
 ms.collection: CEnSKM-ai-copilot
 ---
 
-# Fix solution upgrade or solution uninstall errors
+# Solution upgrade or uninstall errors in Copilot Studio
 
-This article addresses common errors you encounter when upgrading or uninstalling managed solutions in Copilot Studio.
+## Summary
+
+When you upgrade or uninstall a managed [solution](/power-apps/maker/data-platform/solutions-overview) in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), you might get errors related to SQL constraints, managed property evaluation, or unexpected component deletion. Active customizations in the target environment or managed property conflicts typically cause these errors. This article helps you identify the cause and resolve the error.
 
 ## Symptoms
 
-You might see errors when upgrading or uninstalling your managed solution. These errors can also occur when you try to update, remove, or delete a managed component, such as a bot or bot component.
+When you upgrade or uninstall a managed solution, or when you update, remove, or delete a managed component like an agent or agent component, you might get one of the following errors:
 
-The following errors can occur:
+- SQL constraint error:
 
-### SQL constraint errors
+  > Sql error: Statement conflicted with a constraint. The DELETE statement conflicted with the REFERENCE constraint "botcomponent_parent_bot"
 
-"Sql error: Statement conflicted with a constraint. The DELETE statement conflicted with the REFERENCE constraint `"botcomponent_parent_bot"`"
+- Managed property evaluation error:
 
-### Managed property evaluation errors
+  > The evaluation of the current component (name=bot, id="botid") in the current operation (Update) failed during managed property evaluation of condition: Managed Property Name: iscustomizableanddeletable; Component Name: bot; Attribute Name: iscustomizable
 
-"The evaluation of the current component `(name=bot, id="botid")` in the current operation (Update) failed during managed property evaluation of condition: `Managed Property Name: iscustomizableanddeletable; Component Name: bot; Attribute Name: iscustomizable`"
+- Unexpected component deletion error:
 
-### Unexpected component deletion errors
+  > Not Found
 
-`Not Found` errors
+## Determine the cause of the problem
 
-## Cause for SQL constraint errors
+Match the error message you get to one of the following causes:
 
-The target managed environment contains active customizations. Remove active customizations in the target environment in the agent and the component shown in the constraint. For example, agent component, workflow, or environment variable.
+- For a **SQL constraint error**, see [Cause: Active customizations in the target environment](#cause-active-customizations-in-the-target-environment).
+- For a **managed property evaluation error**, see [Cause: Managed property conflicts](#cause-managed-property-conflicts).
+- For a **Not Found** error, or if the other solutions in this article don't resolve your issue, see [Raise a support case with Microsoft Support](#raise-a-support-case-with-microsoft-support).
 
-To view all the customized components, refer to the following steps:
+## Cause: Active customizations in the target environment
+
+SQL constraint errors occur when the target managed environment has active customizations on the agent or component shown in the constraint (for example, an agent component, workflow, or environment variable).
+
+### Solution: Remove active customizations
+
+To view and remove customized components:
 
 1. In Copilot Studio, go to **Solutions**, and then open the agent's source solution.
 1. In the **Objects** pane, select **All**.
-1. Sort the **Managed** column alphabetically to view all of the managed agents (**Yes**).
-1. Sort the **Customized** column alphabetically to view all of the customized agents (**Yes**).
-1. For each agent that is managed and customized, open the commands menu (**⋮**), select **Advanced**, and then select **Remove active customizations**.
+1. Sort the **Managed** column alphabetically to find all managed agents (**Yes**).
+1. Sort the **Customized** column alphabetically to find all customized agents (**Yes**).
+1. For each agent that's managed and customized:
+   1. Open the commands menu (**⋮**).
+   1. Select **Advanced**.
+   1. Select **Remove active customizations**.
+1. Retry the upgrade or uninstall.
 
-## Solution for SQL constraint errors
+## Cause: Managed property conflicts
 
-For SQL constraint errors either during solution upgrade or uninstallation, follow these steps:
+Managed property evaluation errors occur when you initially set solution components as customizable and apply customizations but later disable this option in an upgrade. Conflicts or deletions within [managed solution layers](/power-apps/maker/data-platform/solution-layers) can also cause components to malfunction or become inaccessible, which prevents you from removing active customizations.
 
-1. Remove active customizations in the target environment.
-1. Perform the upgrade or uninstall action again.
+### Solution: Update the managed property settings
 
-## Cause for managed property evaluation errors
-
-This problem occurs when you initially configure solution components as customizable and apply customizations. If you later disable this option in upgrades, or if there are conflicts or deletions within managed layers, components might malfunction or become inaccessible. You can't remove active customizations on these components.
-
-## Solution for managed property evaluation errors
-
-For managed property evaluation errors during removal of active customizations, follow these steps:
-
-1. Set the component as customizable in the source solution.
+1. Set the component as customizable in the source solution. For more information, see [View and edit managed properties in solutions](/power-platform/alm/managed-properties-alm#view-and-edit-table-managed-properties).
 1. Reimport the solution in the target environment.
 1. Retry the removal of the active customization.
 
-Learn more at [View and edit managed properties in solutions](/power-platform/alm/managed-properties-alm#view-and-edit-table-managed-properties).
-
 ## Raise a support case with Microsoft Support
 
-If you continue facing the same issue after following the preceding steps, [raise a support case with Microsoft Support in the Power Platform Admin Center](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
+If you still get the same errors after following the previous steps, raise a support case with Microsoft Support. For more information, see [Find support and give feedback for Copilot Studio](/microsoft-copilot-studio/fundamentals-support#microsoft-support).
 
-When creating a support case, make sure to include the following information:
+When you create a support case, include the following information:
 
-- A network trace that captures the error you're facing.
-- The complete error details. Download the complete error shown during the upgrade or uninstall.
+- A network trace that captures the error
+- The complete error details (download the full error shown during the upgrade or uninstall)
 - Screenshots of the following views:
-  - Solution layers view.
-  - Agent Dependencies.
-  - Customize column showing conflicts (if applicable).
-- Details of the mitigation steps you attempted.
-- If possible, include the solution ZIP file.
+  - Solution layers view
+  - Agent Dependencies
+  - Customize column showing conflicts (if applicable)
+- A description of the steps you already tried
+- The solution ZIP file, if possible
 
 ## Related content
 
-- [Solution layers in Power Platform](/power-apps/maker/data-platform/solution-layers)
+- [Remove dependencies from solution components](/power-platform/alm/removing-dependencies)
 - [Create and manage custom solutions](/microsoft-copilot-studio/authoring-solutions-overview)
 - [Export and import agents using solutions](/microsoft-copilot-studio/authoring-solutions-import-export#add-components-to-an-agent-in-a-custom-solution)

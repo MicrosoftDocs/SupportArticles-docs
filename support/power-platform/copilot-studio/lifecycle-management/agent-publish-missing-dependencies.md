@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Expression Errors in Copilot Studio Agent Publishing
+title: Troubleshoot Expression and Reference Errors in Copilot Studio Agent Publishing
 description: Fix expression errors and invalid reference errors when publishing a managed agent in Copilot Studio. Learn how to resolve missing dependencies in solution layers and publish successfully.
 ms.date: 03/20/2026
 ms.reviewer: camogas, erickinser, v-shaywood
@@ -7,7 +7,7 @@ ms.custom: sap:Lifecycle Management
 ms.collection: CEnSKM-ai-copilot
 ---
 
-# Expression errors when publishing an agent
+# Expression or Reference errors when publishing an agent
 
 ## Summary
 

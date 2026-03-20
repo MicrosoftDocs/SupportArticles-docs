@@ -3,5 +3,5 @@ items:
   href: agents-solution-mapping.md
 - name: Expression errors when publishing an agent
   href: agent-publish-missing-dependencies.md
-- name: Fix solution upgrade or solution uninstall errors
+- name: Solution upgrade or uninstall errors in Copilot Studio
   href: solution-upgrade-uninstall-errors.md
