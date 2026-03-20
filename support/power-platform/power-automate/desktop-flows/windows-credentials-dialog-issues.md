@@ -28,7 +28,7 @@ Power Automate for desktop stops interacting correctly with the Windows security
 
 ## Cause
 
-A security fix for _CredentialUIBroker.exe_ that was initially released on January 13, 2026, and causes automated authentication workflows to fail. Browsers and UI applications such as Remote Desktop Connection use this executable so that users can sign in by using their Windows credentials. Because Windows enforces this change, Power Automate for desktop can't bypass the restriction.
+A security fix for _CredentialUIBroker.exe_ that was initially released on January 13, 2026 causes automated authentication workflows to fail. Browsers and UI applications such as Remote Desktop Connection use this executable so that users can sign in by using their Windows credentials. Because Windows enforces this change, Power Automate for desktop can't bypass the restriction.
 
 The following table lists the Windows security updates that introduced this change.
 
