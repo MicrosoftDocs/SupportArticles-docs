@@ -14,8 +14,16 @@ This article helps you resolve errors that occur when you create a new financial
 When you create a new dimension or rename an existing one, you receive one of the following error messages:
 
 - `[DIMENSION NAME] is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
+
+  For example: `Department is currently being used as a Dimension or has some other conflict...`
+
 - `Dimension [DIMENSION NAME] exists as an extension column on [ENTITY NAME] ([ENTITY TABLE NAME]) and [ENTITY NAME] ([ENTITY TABLE NAME]). You cannot change the name until this extension is removed.`
+
+  For example: `Dimension CostCenter exists as an extension column on General journal account entry (GeneralJournalAccountEntry) and Budget register entry (BudgetTransactionLine). You cannot change the name until this extension is removed.`
+
 - `The financial dimension name [DIMENSION NAME] exists as a translated name on financial dimension [EXISTING DIMENSION NAME].`
+
+  For example: `The financial dimension name Department exists as a translated name on financial dimension BusinessUnit.`
 
 **Cause:** The name you're trying to use already exists as a column in the dimension tables from a previous dimension that was deleted or renamed but not yet activated. The system blocks reuse until those pending changes are activated.
 
@@ -28,6 +36,8 @@ Activate all pending dimension changes to clear the conflict. For steps, see [Ac
 You receive the following error message:
 
 > The financial dimension name [DIMENSION NAME] contains invalid characters.
+
+For example: `The financial dimension name Cost-Center contains invalid characters.`
 
 **Resolution:** Review the dimension name and correct it to comply with the [Financial dimension naming requirements](/dynamics365/finance/general-ledger/tasks/define-financial-dimensions#naming-requirements).
 
@@ -52,7 +62,12 @@ This resolution has a two-part solution: first escape the deadlock, then fix the
 **Symptom:** Activation fails with one of the following errors:
 
 - `Cannot drop the procedure 'cdc.sp_batchinsert_{number}' because it's being used for Change Data Capture`
+
+  For example: `Cannot drop the procedure 'cdc.sp_batchinsert_1' because it's being used for Change Data Capture`
+
 - `Column name 'SYSTEMGENERATEDATTRIBUTE[DIMENSION ATTRIBUTE]' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
+
+  For example: `Column name 'SYSTEMGENERATEDATTRIBUTEDepartment' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
 
 ![Screenshot of the CDC sp_batchinsert error during dimension activation](./media/dimension-activation-cdc-error.png)
 
