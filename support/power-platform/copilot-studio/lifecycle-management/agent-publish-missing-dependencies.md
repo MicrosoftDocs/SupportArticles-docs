@@ -15,18 +15,18 @@ When you run application lifecycle management (ALM) actions for a managed agent 
 
 ## Symptoms
 
-When you publish a managed agent in Copilot Studio, you might experience either or both of the following errors.
+When you publish a managed agent in Copilot Studio, you might experience either or both of the following errors:
 
-**Expression errors**
+- Expression errors:
 
-- `IdentifierNotRecognized`
-- Incompatible type comparison
-- Unexpected characters
-- Power Fx errors
+   - `IdentifierNotRecognized`
+   - Incompatible type comparison
+   - Unexpected characters
+   - Power Fx errors
 
-**Invalid reference errors**
+- Invalid reference errors:
 
-- Element disabled or not found
+   - Element disabled or not found
 
 The following screenshot shows an example of the `IdentifierNotRecognized` error.
 
