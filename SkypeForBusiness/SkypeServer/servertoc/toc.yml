@@ -1,13 +1,8 @@
-﻿items:
+﻿﻿items:
 - name: Skype for Business Server Troubleshooting
   href: ../skype-server-welcome.yml
   items:
-  - name: Conferencing
-    items:
-    - name: Enable the Conferencing Add-in for Outlook
-      href: ../server-conferencing/enable-conferencing-add-in-for-outlook.md
-    - name: Skype for Business broadcasts a dial tone
-      href: ../server-conferencing/sfb-play-dial-tone-teams-call.md
+
   - name: Configuration
     items:
     - name: '"Set Your Location" field is unavailable'
