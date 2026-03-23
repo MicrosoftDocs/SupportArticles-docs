@@ -12,7 +12,7 @@ ms.custom: sap:Work Order Management
 
 ## Summary
 
-This article helps administrators and dispatchers resolve common errors that occur when creating or saving work orders in Microsoft Dynamics 365 Field Service.
+This article guides administrators and dispatchers through troubleshooting common issues that might occur when creating or saving work orders in Microsoft Dynamics 365 Field Service
 
 ## Symptoms
 
