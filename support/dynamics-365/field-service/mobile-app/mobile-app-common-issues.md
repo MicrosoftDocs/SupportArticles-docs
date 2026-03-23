@@ -35,7 +35,7 @@ Users most frequently report these symptoms on Android devices.
 
 ### Cause
 
-This problem occurs when the mobile offline profile doesn't completed its initial synchronization, or when a previous sync is interrupted. Without a successful sync, the app has no local data to display, and it shows a blank screen.
+This problem occurs if the mobile offline profile doesn' finish its initial synchronization, or if a previous sync is interrupted. Without a successful sync, the app has no local data to display, and it shows a blank screen.
 
 This problem also occurs if an offline filter references a related entity that isn't included in the mobile offline profile. When you publish the profile by having an invalid filter, the sync fails silently and data doesn't appear.
 
@@ -54,7 +54,7 @@ This problem also occurs if an offline filter references a related entity that i
    1. Go to **Select offline mode and profile**, select the ellipsis (**...**) after the selected offline profile.
    1. To open the assigned profile, select **Edit selected profile**.
    1. Verify that the **Bookable Resource Booking** (`bookableresourcebooking`) table is included in the profile.
-   1. Check each table filter for lookup fields that reference tables that are not included in the profile. Remove or update any filters that cause validation errors.
+   1. Check each table filter for lookup fields that reference tables that aren't included in the profile. Remove or update any filters that cause validation errors.
    1. Save and publish the profile. Then, ask the user to sync again.
 
 1. On Android, if the issue continues, clear the app cache:
@@ -107,7 +107,7 @@ You can also use the [Field Service solution health checker](/dynamics365/field-
 
 When a user tries to sync the Field Service mobile app for offline use, the sync fails and the following error message appears:
 
-> The view has related entities that are not available offline.
+> The view has related entities that aren't available offline.
 
 The offline sync doesn't complete, and the user can't use the data offline.
 
@@ -175,7 +175,7 @@ When a user opens the Field Service mobile app, one or more of the following sym
 
 The environment picker in the Field Service mobile app shows only environments in which you have at least one Dynamics 365 security role assigned, and the Field Service solution is installed.
 
-If an environment doesn't appear, this typically means that you don't have a security role assigned in that environment, or that Field Service isn't installed in it.
+If an environment doesn't appear, it's likely that you don't have a security role assigned in that environment, or that Field Service isn't installed in it.
 
 If you see data from the wrong environment, the app might have cached credentials or a previous environment selection.
 
