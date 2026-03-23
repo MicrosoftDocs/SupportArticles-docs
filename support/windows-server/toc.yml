@@ -952,8 +952,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
-    - name: A Group Policy setting isn't available in the security policy settings list
-      href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Can't apply user Group Policy settings
