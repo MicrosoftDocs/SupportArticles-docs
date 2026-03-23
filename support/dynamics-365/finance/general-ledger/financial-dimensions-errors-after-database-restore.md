@@ -38,14 +38,17 @@ For example: `There's a problem with one of the views for financial dimension De
 
 The error message identifies a specific financial dimension by name.
 
+If this issue is detected during database synchronization rather than at runtime, the error message reads:
+
+> The backing view [VIEW] for the financial dimension [DIMENSION ATTRIBUTE] does not exist.
+
+For example: `The backing view DimAttributeDepartment for the financial dimension Department does not exist.`
+
 ## Cause
 
 When you restore a database from one environment to another, the data moves but code packages don't. If any financial dimension relies on a customization created by a developer, partner, or Independent Software Vendor (ISV) rather than shipped with the product, and that customization hasn't been deployed to the target environment, the system can't find the required components when dimension operations are performed.
 
 The restored database still references the custom financial dimension, but the supporting customization doesn't exist in the target environment.
-
-> [!NOTE]
-> If this issue is detected during database synchronization rather than at runtime, the error message reads: "The backing view [VIEW] for the financial dimension [DIMENSION ATTRIBUTE] does not exist." For example: `The backing view DimAttributeDepartment for the financial dimension Department does not exist.` The underlying cause and resolution are the same.
 
 ## Resolution
 
