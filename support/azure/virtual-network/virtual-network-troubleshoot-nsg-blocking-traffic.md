@@ -107,7 +107,7 @@ Traffic from certain sources is blocked, while traffic from other sources in the
 
 **Example**
 
-An NSG rule allows RDP from source `10.0.1.0/24`, but the connecting VM is in subnet `10.0.2.0/24`. The source IP doesn't match the rule, so traffic falls through to the default deny.
+An NSG rule allows RDP from source `10.0.1.0/24`, but the connecting VM is in subnet `10.0.2.0/24`. The source IP doesn't match the rule, so traffic is subject to the default deny rule.
 
 #### Resolution
 
