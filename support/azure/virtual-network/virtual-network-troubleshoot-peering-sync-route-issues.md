@@ -184,7 +184,7 @@ If you already use a custom DNS server, configure conditional forwarding for the
 
 ## Cause 4: Border Gateway Protocol route conflicts with peering routes
 
-In hybrid environments that use VPN gateways or ExpressRoute with Border Gateway Protocol (BGP), routes advertised from on-premises can appear to conflict with virtual network peering routes. System routes for peered virtual networks take precedence over BGP-learned routes, even when BGP advertises a more specific prefix. However, a user-defined route (UDR) might override both peering and BGP system routes. This behavior can inadvertently redirect peering traffic through a gateway or virtual appliance.
+In hybrid environments that use VPN gateways or ExpressRoute with Border Gateway Protocol (BGP), routes that are advertised from on-premises can appear to conflict with virtual network peering routes. System routes for peered virtual networks take precedence over BGP-learned routes, even when BGP advertises a more specific prefix. However, a user-defined route (UDR) might override both peering and BGP system routes. This behavior can inadvertently redirect peering traffic through a gateway or virtual appliance.
 
 ### Symptoms
 
@@ -259,7 +259,7 @@ In complex topologies that include multiple peered virtual networks (such as hub
      --name <peering-name>
    ```
 
-4. Repeat the check on each spoke virtual network to verify that the peering to the hub also shows the correct address space.
+4. To verify that the peering to the hub also shows the correct address space, repeat the check on each spoke virtual network.
 
 5. For large environments that have many peerings, use a script in Azure CLI to automate the audit:
 
