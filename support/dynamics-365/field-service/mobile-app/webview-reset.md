@@ -1,5 +1,5 @@
 ---
-title: Fix WebView Reset Errors in the Dynamics 365 Field Service Mobile App
+title: Fix WebView reset errors in the Dynamics 365 Field Service mobile app
 description: Resolve WebView reset errors in the Dynamics 365 Field Service mobile app. Fix memory spikes from large files, PCF controls, and JavaScript leaks on iOS and Android.
 ms.date: 03/20/2026
 ms.reviewer: jobaker, puneet-singh1, v-shaywood
@@ -10,11 +10,17 @@ ms.custom: sap:Mobile Application\Application is throwing errors
 
 ## Summary
 
-This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset happens when the mobile operating system stops an app process that uses too much memory. These problems can cause the home screen to appear unexpectedly, file or PDF attachments to close right after opening, or the app to crash on Android devices. Memory spikes from large files or custom controls, or memory leaks from improperly managed JavaScript in [model-driven apps](/power-apps/maker/model-driven-apps/model-driven-app-overview) usually cause the problem.
+This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occur if the mobile operating system stops an app process that uses too much memory. These problems include:
+
+- The home screen appears unexpectedly
+- File or PDF attachments close immediately after they open
+- The app steps responding (crashes) on Android devices
+
+The problem is usually caused by memory spikes from large files or custom controls, or memory leaks from incorrectly managed JavaScript in [model-driven apps](/power-apps/maker/model-driven-apps/model-driven-app-overview).
 
 ## Symptoms
 
-When you use the Field Service mobile app, you might see one or more of the following symptoms:
+When you use the Field Service mobile app, you experience one or more of the following symptoms:
 
 - The app unexpectedly returns to the home screen without warning.
 - A file or PDF attachment opens briefly and immediately closes.
@@ -22,9 +28,9 @@ When you use the Field Service mobile app, you might see one or more of the foll
 
   > WebView reset.
 
-- On Android, the app crashes instead of showing an error message.
+- On Android, the app stops responding instead of showing an error message.
 
-These symptoms might happen when you open large files, go to forms with complex customizations, or use the app for a long time.
+These symptoms might occur when you open large files, go to forms with complex customizations, or use the app for a long time.
 
 ## Cause
 
