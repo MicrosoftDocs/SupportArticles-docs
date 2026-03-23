@@ -504,7 +504,7 @@ PerfInsights is available for both the [Windows](../windows/how-to-use-perfinsig
 
 ### Run and analyze reports through the Azure portal
 
-When PerfInsights is [installed through the Azure portal](https://learn.microsoft.com/azure/azure-monitor/vm/performance-diagnostics?tabs=linux), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](../windows/performance-diagnostics-vm-extension.md), and then selecting a performance diagnostics option.
+When PerfInsights is [installed through the Azure portal](../vm/performance-diagnostics?tabs=linux), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](../windows/performance-diagnostics-vm-extension.md), and then selecting a performance diagnostics option.
 
 #### Azure portal option 1
 
