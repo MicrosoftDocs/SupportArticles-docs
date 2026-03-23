@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Application failures caused by the "argument list too long" error message
 
+## Summary
+
 This article discusses troubleshooting strategies for resolving application failures that are caused by the "argument list too long" error message in Microsoft Azure Kubernetes Service (AKS).
 
 ## Symptoms

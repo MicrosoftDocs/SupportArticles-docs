@@ -88,7 +88,7 @@ To delete a junk email rule, follow these steps:
 
 ## References
 
-- [Overview of the Junk Email Filter](https://support.office.com/article/overview-of-the-junk-email-filter-5ae3ea8e-cf41-4fa0-b02a-3b96e21de089?ocmsassetID=HP010355048&CorrelationId=1ce926e6-2a2d-4cb4-96a9-e3363adcf3cd)
+- [Overview of the Junk Email Filter](https://support.office.com/article/overview-of-the-junk-email-filter-5ae3ea8e-cf41-4fa0-b02a-3b96e21de089)
 
 - [Outlook Junk Email settings ignored after you move a mailbox to Exchange Server 2010](https://support.microsoft.com/help/2655142)
 

@@ -1346,11 +1346,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/how-to-use-perfInsights-linux.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/how-to-use-perfInsights-linux",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/how-to-videos-windows-virtual-desktop.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/how-to-videos-windows-virtual-desktop",
         "redirect_document_id": true
@@ -1641,18 +1636,8 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/perfinsights-and-scale-set-vm-instances.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/performance-diagnostics.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "virtual-machines/performance-diagnostics-vm-extension.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics-vm-extension",
         "redirect_document_id": true
       },
       {
@@ -6656,6 +6641,10 @@
         {
         "source_path": "azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-pull-image-from-acr-to-aks-cluster"
+      },
+        {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/vmextensionerror-provisioningtimeout"
       }
   ]
 }

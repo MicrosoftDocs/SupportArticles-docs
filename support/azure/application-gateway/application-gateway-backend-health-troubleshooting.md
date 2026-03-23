@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 12/09/2025
+ms.date: 03/02/2026
 ms.custom: sfi-image-nochange
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
@@ -88,7 +88,7 @@ The message displayed in the **Details** column provides more detailed insights 
 
 **Message:** Time taken by the backend to respond to application gateway's health probe is more than the timeout threshold in the probe setting.
 
-**Cause:** After Application Gateway sends an HTTP(S) probe request to the backend server, it waits for a response from the backend server for a configured period. If the backend server doesn’t respond within this period (the timeout value), it is marked as Unhealthy until it responds within the configured timeout period again.
+**Cause:** After Application Gateway sends an HTTP(S) probe request to the backend server, it waits for a response from the backend server for a configured period. If the backend server doesn't respond within this period (the timeout value), it's marked as Unhealthy until it responds within the configured timeout period again.
 
 **Resolution:** Check why the backend server or application isn't responding within the configured timeout period, and also check the application dependencies. For example, check whether the database has any issues that might trigger a delay in response. If you're aware of the application's behavior and it should respond only after the timeout value, increase the timeout value from the custom probe settings. You must have a custom probe to change the timeout value. For information about how to configure a custom probe, see [Create a custom probe for Application Gateway by using the portal](/azure/application-gateway/application-gateway-create-probe-portal).
 
@@ -203,24 +203,24 @@ Learn more about [Application Gateway probe matching](/azure/application-gateway
 
 **Message:**
 (For V2) The Common Name of the leaf certificate presented by the backend server does not match the Probe or Backend Setting hostname of the application gateway.</br>
-(For V1) The Common Name (CN) of the backend certificate doesn’t match.
+(For V1) The Common Name (CN) of the backend certificate doesn't match.
 
 **Cause:**
-(For V2) This occurs when you select HTTPS protocol in the backend setting, and neither the Custom Probe’s nor Backend Setting’s hostname (in that order) matches the Common Name (CN) of the backend server’s certificate.</br>
-(For V1) The FQDN of the backend pool target doesn’t match the Common Name (CN) of the backend server’s certificate.
+(For V2) This occurs when you select HTTPS protocol in the backend setting, and neither the Custom Probe's nor Backend Setting's hostname (in that order) matches the Common Name (CN) of the backend server's certificate.</br>
+(For V1) The FQDN of the backend pool target doesn't match the Common Name (CN) of the backend server's certificate.
 
-**Solution:** The hostname information is critical for backend HTTPS connection since that value is used to set the Server Name Indication (SNI) during TLS handshake. You can fix this problem in the following ways based on your gateway’s configuration.
+**Solution:** The hostname information is critical for backend HTTPS connection since that value is used to set the Server Name Indication (SNI) during TLS handshake. You can fix this problem in the following ways based on your gateway's configuration.
 
 For V2,
-* If you’re using a Default Probe – You can specify a hostname in the associated Backend setting of your application gateway. You can select “Override with specific hostname” or “Pick hostname from backend target” in the backend setting.
-* If you’re using a Custom Probe – For Custom Probe, you can use the “host” field to specify the Common Name of the backend server certificate. Alternatively, if the Backend Setting is already configured with the same hostname, you can choose “Pick hostname from backend setting” in the probe settings.
+* If you're using a Default Probe – You can specify a hostname in the associated Backend setting of your application gateway. You can select "Override with specific hostname" or "Pick hostname from backend target" in the backend setting.
+* If you're using a Custom Probe – For Custom Probe, you can use the "host" field to specify the Common Name of the backend server certificate. Alternatively, if the Backend Setting is already configured with the same hostname, you can choose "Pick hostname from backend setting" in the probe settings.
 
 For V1, verify the backend pool target's FQDN is same the Common Name (CN).
 
 **Tips:** To determine the Common Name (CN) of the backend server certificate, you can use any of these methods. Also note, as per [**RFC 6125**](https://www.rfc-editor.org/rfc/rfc6125#section-6.4.4) if a SAN exists the SNI verification is done only against that field. The common name field is matched if there's no SAN in the certificate.
 
 * By using browser or any client:
-Access the backend server directly (not through Application Gateway) and click on the certificate padlock in the address bar to view the certificate details. You can find it under the “Issued To” section.
+Access the backend server directly (not through Application Gateway) and click on the certificate padlock in the address bar to view the certificate details. You can find it under the "Issued To" section.
 :::image type="content" source="./media/application-gateway-backend-health-troubleshooting/browser-cert.png" alt-text="Screenshot of certificate details in a browser." lightbox="./media/application-gateway-backend-health-troubleshooting/browser-cert.png":::
 
 * By logging into the backend server (Windows):
@@ -301,7 +301,7 @@ These images show the difference between the self-signed certificates.
 
 **Message:** The root certificate of the server certificate used by the backend doesn't match the trusted root certificate added to the application gateway. Ensure that you add the correct root certificate to allowlist the backend.
 
-**Cause:** This error occurs when none of the Root certificates uploaded to your application gateway’s backend setting matches the Root certificate present on the backend server. 
+**Cause:** This error occurs when none of the Root certificates uploaded to your application gateway's backend setting matches the Root certificate present on the backend server. 
 
 **Solution:** This applies to a backend server certificate issued by a Private Certificate Authority (CA) or is a self-signed one. Identify and upload the right Root CA certificate to the associated backend setting. 
 
@@ -315,7 +315,7 @@ These images show the difference between the self-signed certificates.
    1.	Select "Base-64 encoded X.509 (.CER) and click Next,
    1.	Give a new file name and click Next,
    1.	Click Finish to get a .CER file. 
-   1.	Upload this Root certificate (.CER) of your private CA to the application gateway’s backend setting.
+   1.	Upload this Root certificate (.CER) of your private CA to the application gateway's backend setting.
 
 * By logging into the backend server (Windows)
    1.	Sign into the machine where your application is hosted.
@@ -328,7 +328,7 @@ These images show the difference between the self-signed certificates.
    1.	Select "Base-64 encoded X.509 (.CER) and click Next,
    1.	Give a new file name and click Next,
    1.	Click Finish to get a .CER file. 
-   1.	Upload this Root certificate (.CER) of your private CA to the application gateway’s backend setting.
+   1.	Upload this Root certificate (.CER) of your private CA to the application gateway's backend setting.
 
 ### Leaf must be topmost in chain.
 
@@ -338,7 +338,7 @@ These images show the difference between the self-signed certificates.
 
 **Solution:** The certificate installation on the backend server must include an ordered list of certificates comprising the leaf certificate and all its signing certificates (Intermediate and Root CA certificates). This chain must start with the leaf certificate, then the Intermediate certificate(s), and finally, the Root CA certificate. We recommend installing the complete chain on the backend server, including the Root CA certificate. 
 
-Given is an example of a Server certificate installation along with its Intermediate and Root CA certificates, denoted as depths (0, 1, 2, and so on) in OpenSSL. You can verify the same for your backend server’s certificate using the following OpenSSL commands.</br>
+Given is an example of a Server certificate installation along with its Intermediate and Root CA certificates, denoted as depths (0, 1, 2, and so on) in OpenSSL. You can verify the same for your backend server's certificate using the following OpenSSL commands.</br>
 `s_client -connect <FQDN>:443 -showcerts`</br> 
 OR </br>
 `s_client -connect <IPaddress>:443 -servername <TLS SNI hostname> -showcerts`
@@ -410,7 +410,7 @@ This behavior can occur for one or more of the following reasons:
    b.	Choose the destination manually as any internet-routable IP address like 1.1.1.1. Set the destination port as anything, and verify the connectivity.
    c.	If the next hop is virtual network gateway, there might be a default route advertised over ExpressRoute or VPN.
 
-1. If there's a custom DNS server configured on the virtual network, verify that the servers can resolve public domains. Public domain name resolution might be required in scenarios where Application Gateway must reach out to external domains like OCSP (Online Certificate Status Protocol) servers or to check the certificate’s revocation status.
+1. If there's a custom DNS server configured on the virtual network, verify that the servers can resolve public domains. Public domain name resolution might be required in scenarios where Application Gateway must reach out to external domains like OCSP (Online Certificate Status Protocol) servers or to check the certificate's revocation status.
 
 1. To verify that Application Gateway is healthy and running, go to the **Resource Health** option in the portal, and verify that the state is **Healthy**. If you see an **Unhealthy** or **Degraded** state, [contact support](https://azure.microsoft.com/support/options/).
 
