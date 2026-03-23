@@ -11,7 +11,7 @@ This article provides a resolution for an issue where you can't remove a data so
 
 ## Symptoms
 
-The following error message appears when you attempt to update a unification configuration that removes an attribute containing dependencies.
+The following error message appears when you attempt to [update a unification configuration](/dynamics365/customer-insights/data/data-unification-update) that removes an attribute containing dependencies.
 
 > Detected DataVerse dependencies in msdynci_customerprofile entity on these attribute(s): \<attribute names\>. Please delete these dependencies and merge again.
 
