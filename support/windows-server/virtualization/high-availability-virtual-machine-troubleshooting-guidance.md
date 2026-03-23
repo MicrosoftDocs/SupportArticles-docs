@@ -17,28 +17,30 @@ appliesto:
 
 ## Summary
 
-This article helps you troubleshoot issues that affect high-availability (HA) virtual machines (VMs) in a Windows Server failover cluster environment. Use this guidance if you experience issues such as VMs that fail to migrate, cluster resources that become unresponsive, or storage and communication errors that affect VM availability.
+This article helps you troubleshoot issues that affect high-availability (HA) virtual machines (VMs) in a Windows Server failover cluster environment. Use this guidance if you experience issues such as VMs that don't migrate, cluster resources that become unresponsive, or storage and communication errors that affect VM availability.
 
 The article is organized into the following sections:
 
 - Troubleshooting checklist: Guidance to help you isolate the issue and fix the most common underlying issues before you begin deeper investigation.
 - Common issues and solutions: Targeted guidance for specific symptoms, including migration failures, stuck VMs, quorum issues, storage errors, and configuration issues.
-- Data collection: Instructions for gathering diagnostic data if you need to contact Microsoft Support.
+- Data collection: Instructions for gathering diagnostic data if you have to contact Microsoft Support.
 
 Before you begin, make sure that you have administrative access to the cluster resources, Hyper-V hosts, and management tools such as Failover Cluster Manager and Hyper-V Manager.
 
 ## Troubleshooting checklist
 
-Before you start deep-dive troubleshooting, follow this checklist to help isolate what's causing the issue. The steps in this checklist might also help you fix the most common underlying issues.
+Before you start to troubleshoot the issue, follow this checklist to help isolate the cause. The steps in this checklist might also help you fix the most common underlying issues.
 
 ### Step 1: Gather information and review the symptoms
 
 - **Gather and review log data**. Review log entries for relevant events or messages that occurred near the time of your issue. As a starting point, review the following information:
   - System and Administration event log
-  - Hyper-V event log (In Event Viewer, go to **Applications and Services Logs > Microsoft > Windows > Hyper-V**)
+  - Hyper-V event log (in Event Viewer, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Hyper-V**)
   - Any process dump files that you collected
   - Any network trace data that you collected
-  - Cluster logs from all nodes. To collect logs, run the following command on one of the cluster nodes:
+  - Cluster logs from all nodes
+  
+    To collect logs, run the following command on one of the cluster nodes:
 
     ```powershell
      Get-ClusterLog -UseLocalTime -Destination <FolderPath>
@@ -53,21 +55,21 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
   - Cluster failover tasks
   - Storage migrations that affect VMs
 
-- **Check host and VM versions:** Make sure that the following components are up to date, and the versions are compatible with one another:
+- **Check host and VM versions:** Make sure that the following components are up to date, and that the versions are compatible with one another:
   - Operating system of the Hyper-V host
   - VM configuration
   - Integration services
 
 ### Step 2: Check the health of the cluster and the underlying infrastructure
 
-- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager.
+- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager:
   - Identify any error messages in Failover Cluster Manager.
   - Identify which nodes are online and which, if any, are offline.
   - Identify any cluster resources that are stuck in Locked, Paused, or Not responding states.
   - Check the status of the CSV.
   - Make sure that the nodes can connect to the shared storage.
 
-- To check the health of the storage subsystem, run `chkdsk` in scan mode. Open a Windows Command Prompt window as an admin, and then run the following command:
+- To check the health of the storage subsystem, run `chkdsk` in scan mode. Open a Windows Command Prompt window as an administrator, and then run the following command:
 
   ```console
   chkdsk /scan
@@ -85,7 +87,7 @@ Before you start deep-dive troubleshooting, follow this checklist to help isolat
   > [!IMPORTANT]  
   > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology is deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
 
-- Make sure any network device drivers support clustering, and are up-to-date.
+- Make sure that any network device drivers support clustering, and that they are up to date.
 
 ### Step 3: Check resource availability
 
@@ -107,7 +109,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
    Get-ClusterResource | Where-Object { $_.ResourceType -eq "Virtual Machine" }
    ```
 
-   For more information about configuring VMs for replication in different types of topologies, see [Replicate a virtual machine](/windows-server/virtualization/hyper-v/replication-virtual-machines?tabs=hyper-v-manager#replicate-a-virtual-machine).
+   For more information about how to configure VMs for replication in different types of topologies, see [Replicate a virtual machine](/windows-server/virtualization/hyper-v/replication-virtual-machines?tabs=hyper-v-manager#replicate-a-virtual-machine).
 
 1. Check the locations of the VM configuration files (.vmcx) and disk files (.vhd or .vhdx).
    - Make sure that the files reside on the shared storage that the cluster nodes use.
@@ -128,9 +130,9 @@ Make sure that each cluster node has the same hardware and configuration, includ
 
 ### VMs don't migrate
 
-The most common reasons that VMs can't migrate from one cluster node to another involve differences in the node configurations, and VM configurations that aren't supported in the same manner on all nodes. The following list links to detailed descriptions and resolution steps for specific symptoms.
+The most common reasons that VMs can't migrate from one cluster node to another involve differences in the node configurations, and VM configurations that aren't supported in the same manner on all nodes. The following list links to detailed descriptions and resolution steps for specific symptoms:
 
-- Event ID 21502. This event typically has an error code that indicates the type of issue that occurred. The following list includes these error codes, and a few other messages that this event might contain.
+- Event ID 21502. This event typically has an error code that indicates the kind of issue that occurred. The following list includes these error codes, and a few other messages that this event might contain:
 
   - [`0x000013AB`](troubleshoot-live-migration-issues.md#failed-to-get-the-network-address-for-the-destination-node-host2-a-cluster-network-isnt-available-for-this-operation-0x000013ab)
   - [`0x80042001` and `0x8007000D`](troubleshoot-live-migration-issues.md#failed-live-migration-of-virtual-machine-vm1-at-migration-source-clu8n1-with-error-codes-80042001-and-8007000d)
@@ -195,29 +197,29 @@ The most common reasons that VMs can't migrate from one cluster node to another 
 
 #### Possible causes
 
-This type of issue can result from different types of causes. Typically, the messages and events you observe indicate which cause is involved. Possibilities include the following causes:
+This kind of issue can have several different causes. Typically, the messages and events that you observe indicate which cause is involved. Possibilities include the following causes:
 
-- A resource such as a storage device disconnected from the network.
-- A resource lock wasn't released properly because an operation failed.
+- A resource, such as a storage device, disconnected from the network.
+- A resource lock wasn't released correctly because an operation failed.
 - Hardware failed and reduced available resources (CPU, memory, storage IO), or resources are otherwise exhausted.
 - Drivers or firmware are out of date.
 
 #### Resolution
 
-To isolate the type of issue that you have and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the type of issue that you have).
+To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the kind of issue):
 
-- If you received Event ID 1069, see [Event ID 1069 (Cluster VM failed to start/can't bring a resource online)](hyper-v-start-state-access-failures-clustered-standalone.md#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online) in "Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments."
+- If you receive Event ID 1069, see [Event ID 1069 (Cluster VM failed to start/can't bring a resource online)](hyper-v-start-state-access-failures-clustered-standalone.md#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online) in "Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments."
 
-- If you received any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
+- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
 
   - Event ID 55 and Event ID 98
   - Event ID 129
   - Event ID 153
   - Event ID 157
 
-- If you received Event ID 5120, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
+- If you receive Event ID 5120, see [Event ID 5120 Cluster Shared Volume troubleshooting guidance](../high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md).
 
-- If you notice locked resources that are associated with a single cluster node, schedule downtime for the cluster and then restart the affected node.
+- If you notice locked resources that are associated with a single cluster node, schedule downtime for the cluster, and then restart the affected node.
 
 - For other issues that involve cluster resources, see the following articles:
 
@@ -237,19 +239,19 @@ To isolate the type of issue that you have and address the most common issues, c
 
 #### Possible causes
 
-- A failed operation corrupted the cluster database. Such operations include adding or removing a node, or shutting down the cluster.
+- A failed operation corrupted the cluster database. Such operations include adding or removing a node, and shutting down the cluster.
 - The quorum disk or cluster witness is lost or inaccessible.
 - Firewall rules block communication between the cluster nodes.
 
 #### Resolution
 
-To isolate the type of issue that you have and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). For detailed checklists and troubleshooting information, see the following articles:
+To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). For detailed checklists and troubleshooting information, see the following articles:
 
 - [Configuring Witness resource troubleshooting guide](../high-availability/configuring-witness-resource.md)
 - [Cluster service fails to start troubleshooting guidance](../high-availability/troubleshoot-cluster-service-fails-to-start.md)
 - [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
 
-If you can't resolve the issue, as a last resort, back up the cluster, validate the backup, and then rebuild the cluster.
+If you can't resolve the issue, you can, as a last resort, back up the cluster, validate the backup, and then rebuild the cluster.
 
 ### Storage alerts, errors, or timeouts
 
@@ -261,20 +263,20 @@ If you can't resolve the issue, as a last resort, back up the cluster, validate 
   - Event ID 5120
 - You receive error messages or alerts about storage hardware (such as RAID or SAN devices)
 - Management tools label volumes as read-only, offline, missing, disconnected, or inaccessible
-- VMs unexpectedly restart, become unresponsive, or fail to migrate
+- VMs unexpectedly restart, become unresponsive, or don't migrate
 
 #### Possible causes
 
 - Storage drivers or firmware are faulty or outdated.
-- Disks were removed improperly.
+- Disks were removed incorrectly.
 - A SAN failed over, or storage hardware malfunctioned
 - Storage paths or partitions aren't configured correctly.
 
 #### Resolution
 
-To isolate the type of issue that you have and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the type of issue that you have).
+To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the kind of issue):
 
-- If you received any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
+- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
 
   - Event ID 55 and Event ID 98
   - Event ID 129
@@ -291,7 +293,7 @@ To isolate the type of issue that you have and address the most common issues, c
 
 #### Symptoms
 
-- Nodes drop from the cluster or enter quarantine, heartbeats are missed or dropped.
+- Nodes drop from the cluster or enter quarantine, or heartbeats are missed or dropped.
 - RDP/discovery fails.
 - VMs migrate unexpectedly or don't migrate, particularly after nodes are moved or maintained.
 
@@ -306,7 +308,7 @@ To isolate the type of issue that you have and address the most common issues, c
 
 #### Resolution
 
-To isolate the type of issue that you have and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the type of issue that you have).
+To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the kind of issue):
 
 - Use Failover Cluster Manager to make sure that the different types of cluster network traffic (management, cluster, and client) follow the correct routing.
 
@@ -334,13 +336,13 @@ To isolate the type of issue that you have and address the most common issues, c
 
 #### Resolution
 
-To isolate the type of issue that you have and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, try the following methods:
+To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, try the following methods:
 
-- If you received Event ID 1069 or `Incomplete VM configuration` error messages, see [Event ID 1069 (Cluster VM failed to start/can't bring a resource online)](hyper-v-start-state-access-failures-clustered-standalone.md#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online) in "Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments."
+- If you receive Event ID 1069 or `Incomplete VM configuration` error messages, see [Event ID 1069 (Cluster VM failed to start/can't bring a resource online)](hyper-v-start-state-access-failures-clustered-standalone.md#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online) in "Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments."
 
 - If you found orphaned disks or snapshot issues, see [Hyper-V snapshots, checkpoints, and differencing disks (AVHDX) troubleshooting guidance](hyper-v-snapshots-checkpoints-differencing-disks.md).
 
-- Make sure that all virtual disk files and configuration files reside in the cluster's shared storage. You might have to readd the VM to the cluster after you move the files.
+- Make sure that all virtual disk files and configuration files reside in the cluster's shared storage. You might have to re-add the VM to the cluster after you move the files.
 
 - Upgrade the VM configuration version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
 
@@ -359,11 +361,11 @@ If you need additional assistance, collect the following data, and then contact 
   - Integration services
   - Storage devices, firmware, and drivers
 
-- Screenshots of unexpected behavior or error messages.
-- Trace or dump file data, including data files from ProcDump, ProcMon, PerfMon, or `livekd`.
-- RAID and SAN logs.
-- Documentation of recent changes and maintenance for each cluster node.
-- Output of PowerShell queries that documents the state of the cluster, network, and storage systems.
+- Screenshots of unexpected behavior or error messages
+- Trace or dump file data, including data files from ProcDump, ProcMon, PerfMon, or `livekd`
+- RAID and SAN logs
+- Documentation of recent changes and maintenance for each cluster node
+- Output of PowerShell queries that documents the state of the cluster, network, and storage systems
 
 ### Data for Hyper-V related issues
 
@@ -381,14 +383,16 @@ Use Microsoft troubleshooting scripts (TSS) to automatically gather information 
 
 Additionally, gather the following information:
 
-- Cluster logs from all nodes. To collect logs, run the following command on one of the cluster nodes:
+- Cluster logs from all nodes
+    
+    To collect logs, run the following command on one of the cluster nodes:
 
-  ```powershell
-  Get-ClusterLog -UseLocalTime -Destination <folder path>
-  ```
+    ```powershell
+    Get-ClusterLog -UseLocalTime -Destination <folder path>
+    ```
 
-- Relevant event logs from the FailoverClustering and DNS Server event log channels.
-- Details of the CNO object in Active Directory, including security permissions.
+- Relevant event logs from the FailoverClustering and DNS Server event log channels
+- Details of the CNO object in Active Directory, including security permissions
 
 ## References
 
