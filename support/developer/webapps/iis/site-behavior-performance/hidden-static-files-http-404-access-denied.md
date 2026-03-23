@@ -1,26 +1,26 @@
 ---
-title: Resolve IIS HTTP 404 errors for hidden static files
-description: Discover how to resolve HTTP 404 or Access Denied errors in IIS caused by hidden static files. Follow our guide for quick and easy fixes.
+title: Resolve IIS HTTP 404.9 errors for hidden static files
+description: Discover how to resolve HTTP 404.9 or Access Denied errors in IIS caused by hidden static files. Follow our guide for quick and easy fixes.
 ms.date: 03/17/2026
 ms.reviewer: robmcm; martinsm, sainathreddy.gnv, khgupta, v-shaywood
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
-# "HTTP 404" or "Access Denied" errors when requesting hidden static files
+# "HTTP 404.9" or "Access Denied" errors when requesting hidden static files
 
 _Original product version:_ &nbsp; Internet Information Services 10.0 and later versions  
 _Original KB number:_ &nbsp; 216803
 
 ## Summary
 
-This article helps you resolve "HTTP 404" or "Access Denied" errors that occur when Internet Information Services (IIS) tries to serve static files that have the Windows `hidden` attribute set. It covers the cause of this behavior, and provides two methods to fix the issue.
+This article helps you resolve "HTTP 404.9 - Not Found" or "Access Denied" errors that occur when Internet Information Services (IIS) tries to serve static files that have the Windows `hidden` attribute set. It covers the cause of this behavior, and provides two methods to fix the issue.
 
 ## Symptoms
 
-Static files that have the `hidden` attribute set return an "HTTP 404" or "Access Denied" error message when you request them. However, dynamic files are still served successfully.
+Static files that have the `hidden` attribute set return an "HTTP 404.9 - Not Found" or "Access Denied" error message when you request them. However, dynamic files are still served successfully.
 
 ## Cause
 
-This behavior is by design. IIS doesn't serve static files (such as `.html`, `.css`, `.js`, or image files) that have the Windows `hidden` attribute set. When a client requests a hidden static file, IIS returns an "HTTP 404 - File Not Found" or "Access Denied" error message.
+This behavior is by design. IIS doesn't serve static files (such as `.html`, `.css`, `.js`, or image files) that have the Windows `hidden` attribute set. When a client requests a hidden static file, IIS returns an "HTTP 404.9 - Not Found" or "Access Denied" error message.
 
 Dynamic content isn't affected by this behavior because IIS modules or handler mappings process this content instead of serving it directly. For example:
 
