@@ -296,10 +296,37 @@ This error is most likely triggered by a syntax error in the `Join-AzStorageAcco
 
 ## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
 
-Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://www.powershellgallery.com/packages/AzFilesHybrid/) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
+Azure Files uses Kerberos authentication for identity-based access when using Active Directory Domain Services (AD DS) on-premises. AES-256 Kerberos encryption has been supported since AzFilesHybrid module v0.2.2, and it's been the default encryption method since module v0.2.5. Historically, RC4 was the only supported encryption option until AES-256 support was added.
 
 > [!IMPORTANT]
-> If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
+> An upcoming Windows change (**July 2026 Windows Server Update**) will change the default Kerberos encryption type from RC4 to AES-256. Storage accounts that haven't yet been upgraded to AES-256 may experience mount errors when this change rolls out. You should take action before applying this update to ensure uninterrupted access to your Azure file shares. Customers who have already upgraded to AES-256 won't be impacted.
+>
+> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storagaccount.domain.com` instead of `<storageaccount>.file.core.windows.net`) might be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, we recommend upgrading to AES-256 before applying the April update.
+>
+> For more information about this Windows change, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc).
+
+### Step 1: Check if you're impacted
+
+Run the following PowerShell command on a domain-joined machine to identify storage accounts that use Azure Files with AD DS authentication but haven't been upgraded to AES-256:
+
+```PowerShell
+Get-ADObject `
+    -LDAPFilter "(&(servicePrincipalName=*.file.core.windows.net)(!(msDS-SupportedEncryptionTypes=*)))" -Properties servicePrincipalName, msDS-SupportedEncryptionTypes |
+    Select-Object Name, ObjectClass, servicePrincipalName, msDS-SupportedEncryptionTypes
+```
+
+If no results are returned, your accounts already support AES-256 and no action is needed. If any accounts are returned, you need to upgrade those accounts to support AES-256 using one of the two options below.
+
+> [!NOTE]
+> If you're using storage accounts outside of the Azure public cloud, adjust `*.file.core.windows.net` in the LDAP filter to match the endpoint for your environment.
+
+### Step 2: Upgrade to AES-256
+
+There are two options to upgrade your storage account to AES-256. We strongly recommend **Option 1** using the AzFilesHybrid PowerShell module, as it handles all the necessary steps automatically with a single command. Option 2 provides manual steps if you're unable to use the module.
+
+#### Option 1: Use the AzFilesHybrid cmdlet (recommended)
+
+[Download the latest AzFilesHybrid module](https://www.powershellgallery.com/packages/AzFilesHybrid/) and run the following PowerShell script.
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -309,6 +336,124 @@ Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -Stor
 ```
 
 As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. You don't need to rotate back unless you want to regenerate both passwords.
+
+#### Option 2: Manual steps
+
+If you can't use the AzFilesHybrid module, you can manually upgrade to AES-256 by following these steps.
+
+**Check domain properties**
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+$sa = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageAccountName
+$sa.AzureFilesIdentityBasedAuth.ActiveDirectoryProperties | Select-Object DomainName, SamAccountName, AccountType
+```
+
+If `DomainName`, `SamAccountName`, and `AccountType` all return values, your domain properties are correctly set and you can skip ahead to **Enable AES-256 on the domain object**.
+
+> [!NOTE]
+> Only run the following script if the previous command returned empty, incorrect, or missing values. This script populates the required domain properties on the storage account.
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+$domainInformation = Get-ADDomain
+$domainGuid = $domainInformation.ObjectGUID.ToString()
+$domainName = $domainInformation.DnsRoot
+$domainSid = $domainInformation.DomainSID.Value
+$forestName = $domainInformation.Forest
+$netBiosDomainName = $domainInformation.DnsRoot
+
+$saAdObject = Get-ADObject ` 
+    -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
+    -Properties *
+
+$saADObjectSid = $saAdObject.objectSid.Value
+$samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+    elseif ($saAdObject.objectClass -contains "user") { "User" }
+
+Set-AzStorageAccount `
+    -ResourceGroupName $ResourceGroupName `
+    -Name $StorageAccountName `
+    -EnableActiveDirectoryDomainServicesForFile $true `
+    -ActiveDirectoryDomainName $domainName `
+    -ActiveDirectoryNetBiosDomainName $netBiosDomainName `
+    -ActiveDirectoryForestName $forestName  `
+    -ActiveDirectoryDomainGuid $domainGuid `
+    -ActiveDirectoryDomainSid $domainSid `
+    -ActiveDirectoryAzureStorageSid $saADObjectSid `
+    -ActiveDirectorySamAccountName $samAccountName `
+    -ActiveDirectoryAccountType $type
+```
+
+For more information, see [Enable AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
+
+**Enable AES-256 on the domain object**
+
+> [!NOTE]
+> If you already ran the domain properties script above and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
+
+```PowerShell
+$saAdObject = Get-ADObject ` 
+    -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
+    -Properties *
+
+$identity = $saAdObject.DistinguishedName
+```
+
+To determine your account type, check the `AccountType` value from the domain properties check above, or run `$saAdObject.objectClass`. If the object class is `computer`, use `Set-ADComputer`. If it's `user`, use `Set-ADUser`.
+
+To enable AES-256 encryption on a **computer account**, run the following command.
+
+```PowerShell
+Set-ADComputer -Identity $identity -KerberosEncryptionType "AES256"
+```
+
+To enable AES-256 encryption on a **service logon account**, run the following command instead.
+
+```PowerShell
+Set-ADUser -Identity $identity -KerberosEncryptionType "AES256"
+```
+
+**Refresh the domain object password**
+
+After you run the preceding cmdlet, run the following script to refresh your domain object password. This step is critical to generating the appropriate authentication metadata on the service side.
+
+```PowerShell
+$KeyName = "kerb1" # Could be either the first or second kerberos key, this script assumes we're refreshing the first
+$KerbKeys = New-AzStorageAccountKey -ResourceGroupName $ResourceGroupName -Name $StorageAccountName -KeyName $KeyName
+$KerbKey = $KerbKeys.keys | Where-Object {$_.KeyName -eq $KeyName} | Select-Object -ExpandProperty Value
+$NewPassword = ConvertTo-SecureString -String $KerbKey -AsPlainText -Force
+
+Set-ADAccountPassword -Identity $identity -Reset -NewPassword $NewPassword
+```
+
+### Step 3: Confirm the AES-256 upgrade
+
+After completing either Option 1 or Option 2, purge cached Kerberos tickets on the client and verify the upgrade by remounting the file share.
+
+1. Run `klist purge` from an elevated command prompt to clear any cached Kerberos tickets that still use RC4.
+2. Remount the Azure file share.
+3. Run `klist get cifs/<storage-account-name>.file.core.windows.net` to verify that the new Kerberos ticket uses AES-256 encryption.
+
+The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encryption Type** and **Session Key Type**, similar to the following:
+
+```
+#1>     Client: user @ DOMAIN.CONTOSO.COM
+        Server: cifs/<storage-account-name>.file.core.windows.net @ DOMAIN.CONTOSO.COM
+        KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+        Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
+        Start Time: 3/20/2026 23:16:32 (local)
+        End Time:   3/21/2026 9:16:32 (local)
+        Renew Time: 3/27/2026 23:16:32 (local)
+        Session Key Type: AES-256-CTS-HMAC-SHA1-96
+        Cache Flags: 0
+        Kdc Called: <domain-controller-name>
+```
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
 The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blobs, tables, and queues. It also provides limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles might continue to have access to the storage account through saved storage account keys.
