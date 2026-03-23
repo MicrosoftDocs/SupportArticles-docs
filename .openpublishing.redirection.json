@@ -15451,6 +15451,11 @@
       "source_path": "support/windows-server/active-directory/inter-forest-sidhistory-migration-with-admt.md",
       "redirect_url": "/windows/win32/ad/using-dsaddsidhistory",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/diagnostics/turn-on-debuglogging-key.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/hierarchy/about-log-files#client-and-management-point-logging-options",
+      "redirect_document_id": false
     }
   ]
 }
