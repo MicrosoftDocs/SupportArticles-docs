@@ -250,26 +250,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
-      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/virtual-machines/windows/how-to-use-perfinsights.md",
-      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run?tabs=windows",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics-vm-extension.md",
-      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-analyze?tabs=windows",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances.md",
-      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-extension",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios",
       "redirect_document_id": false
@@ -308,6 +288,28 @@
       "source_path": "support/windows-client/setup-upgrade-and-drivers/prevent-users-connect-usb.md",
       "redirect_url": "https://gpsearch.azurewebsites.net/#173",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/how-to-use-perfinsights.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics-vm-extension.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-extension?tabs=windows",
+    },
+    {
+      "source_path": "support/azure/virtual-machines/linux/how-to-use-perfinsights-linux.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run",
+    },
+       {
+      "source_path": "support/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics",
     },
     {
       "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
@@ -15448,6 +15450,11 @@
     {
       "source_path": "support/windows-server/active-directory/inter-forest-sidhistory-migration-with-admt.md",
       "redirect_url": "/windows/win32/ad/using-dsaddsidhistory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/diagnostics/turn-on-debuglogging-key.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/hierarchy/about-log-files#client-and-management-point-logging-options",
       "redirect_document_id": false
     }
   ]

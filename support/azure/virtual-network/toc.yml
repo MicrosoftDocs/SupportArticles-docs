@@ -15,6 +15,8 @@ items:
   href: virtual-network-nsg-manage-log.md
 - name: Troubleshoot NSG misconfigurations blocking traffic
   href: virtual-network-troubleshoot-nsg-blocking-traffic.md
+- name: Troubleshoot SSH connectivity blocked by NSG
+  href: virtual-network-troubleshoot-ssh-nsg-problem.md
 - name: Test network latency between Azure VMs
   href: virtual-network-test-latency.md 
 - name: Test virtual machine network throughput by using NTTTCP
