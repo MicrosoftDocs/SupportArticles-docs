@@ -46,7 +46,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
     Get-ClusterLog -UseLocalTime -Destination <FolderPath>
     ```
 
-- **Check the change and maintenance history**. Check for any recent changes or operational events, including the following events:
+- **Check the change and maintenance history**. Check for any recent changes or operational events, including the following events:  
 
   - Operating system updates
   - Driver or firmware changes
@@ -56,7 +56,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
   - Cluster failover tasks
   - Storage migrations that affect VMs
 
-- **Check host and VM versions:** Make sure that the following components are up to date, and that the versions are compatible with one another:
+- **Check host and VM versions:** Make sure that the following components are up to date, and that the versions are compatible with one another:  
 
   - Operating system of the Hyper-V host
   - VM configuration
@@ -64,7 +64,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
 
 ### Step 2: Check the health of the cluster and the underlying infrastructure
 
-- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager:
+- To check the health of the failover clusters and cluster resources, use Failover Cluster Manager:  
 
   - Identify any error messages in Failover Cluster Manager.
   - Identify which nodes are online and which, if any, are offline.
@@ -80,7 +80,8 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
 
   If `chkdsk` identifies issues, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md).
 
-- Review the node network connections. Make sure that the following configurations are consistent on all nodes:
+- Review the node network connections. Make sure that the following configurations are consistent on all nodes:  
+
   - IP addresses
   - Network adapters
   - Teaming
@@ -114,7 +115,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
 
    For more information about how to configure VMs for replication in different types of topologies, see [Replicate a virtual machine](/windows-server/virtualization/hyper-v/replication-virtual-machines?tabs=hyper-v-manager#replicate-a-virtual-machine).
 
-1. Check the locations of the VM configuration files (.vmcx) and disk files (.vhd or .vhdx).
+1. Check the locations of the VM configuration files (.vmcx) and disk files (.vhd or .vhdx).  
 
    - Make sure that the files reside on the shared storage that the cluster nodes use.
    - Make sure that your VM management client (such as Hyper-V Manager) uses the correct paths for these files.
@@ -136,7 +137,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
 
 The most common reasons that VMs can't migrate from one cluster node to another involve differences in the node configurations, and VM configurations that aren't supported in the same manner on all nodes. The following list links to detailed descriptions and resolution steps for specific symptoms:
 
-- Event ID 21502. This event typically has an error code that indicates the kind of issue that occurred. The following list includes these error codes, and a few other messages that this event might contain:
+- Event ID 21502. This event typically has an error code that indicates the kind of issue that occurred. The following list includes these error codes, and a few other messages that this event might contain:  
 
   - [`0x000013AB`](troubleshoot-live-migration-issues.md#failed-to-get-the-network-address-for-the-destination-node-host2-a-cluster-network-isnt-available-for-this-operation-0x000013ab)
   - [`0x80042001` and `0x8007000D`](troubleshoot-live-migration-issues.md#failed-live-migration-of-virtual-machine-vm1-at-migration-source-clu8n1-with-error-codes-80042001-and-8007000d)
@@ -154,18 +155,20 @@ The most common reasons that VMs can't migrate from one cluster node to another 
   - [`0x80090322`](troubleshoot-live-migration-issues.md#fail-to-live-migrate-because-the-target-principal-name-is-incorrect-0x80090322)
   - [`0xC03A0014`](troubleshoot-live-migration-issues.md#failed-to-restore-with-error--a-virtual-disk-support-provider-for-the-specified-file-was-not-found-0xc03a0014)
 
-  Other Event 21502 messages - virtual switch issues
+  Other Event 21502 messages - virtual switch issues  
 
   - [Virtual switch used by the VM doesn't exist on the destination node *DestinationNode*](troubleshoot-live-migration-issues.md#live-migration-failed-because-a-virtual-switch-used-by-the-vm-doesnt-exist-on-the-destination-node-host2)
   - [Destination has disconnected VM switch(s)](troubleshoot-live-migration-issues.md#failed-to-live-migrate-a-vm-across-nodes-in-a-cluster-when-connected-to-an-internal-or-private-virtual-switch)
 
-  Other Event 21502 messages - hardware compatibility issues
+  Other Event 21502 messages - hardware compatibility issues  
 
   - [Hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine](troubleshoot-live-migration-issues.md#live-migration-failed-because-the-hardware-on-the-destination-computer-isnt-compatible-with-the-hardware-requirements-of-this-virtual-machine)
+
   - [Hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine when the destination node has an older microcode (uCode) version than the source node](troubleshoot-live-migration-issues.md#failed-to-live-migrate-a-vm-between-nodes-with-different-microcode-ucode-revisions)
+
   - [Virtual machine *VMName* is using processor-specific features not supported on host *DestinationNode*.](troubleshoot-live-migration-issues.md#failed-live-migrate-because-virtual-machine-name-is-using-processor-specific-features-not-supported-on-host-node-1)
 
-  Other Event 21502 messages - host connection issue
+  Other Event 21502 messages - host connection issue  
 
   - [Virtual machine migration operation for *VMName* failed at migration source *SourceNode*)](troubleshoot-live-migration-issues.md#live-migration-failed-because-virtual-machine-name-failed-at-migration-source-source-host-name)
 
@@ -184,20 +187,20 @@ The most common reasons that VMs can't migrate from one cluster node to another 
 #### Symptoms
 
 - A VM becomes stuck in a transitional state (Starting or Stopping) or in the Offline state.
-- A VM or host enters one of the following states:
+- A VM or host enters one of the following states:  
 
   - Paused
   - Critical
   - Not responding
   - Resource-locked
 
-- You might receive error messages that resemble the following examples:
+- You might receive error messages that resemble the following examples:  
 
   - `Resource lock`
   - `Service unable to pause`
   - `Storage inaccessible`
 
-- The event logs contain events that indicate service issues or timeouts, such as the following examples:
+- The event logs contain events that indicate service issues or timeouts, such as the following examples:  
 
   - Event ID 153
   - Event ID 5120
@@ -217,7 +220,7 @@ To isolate the kind of issue that you're experiencing and address the most commo
 
 - If you receive Event ID 1069, see [Event ID 1069 (Cluster VM failed to start/can't bring a resource online)](hyper-v-start-state-access-failures-clustered-standalone.md#event-id-1069-cluster-vm-failed-to-startcant-bring-a-resource-online) in "Troubleshoot inaccessible or unresponsive Hyper-V VMs in clustered or standalone environments."
 
-- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
+- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):  
 
   - Event ID 55 and Event ID 98
   - Event ID 129
@@ -228,7 +231,7 @@ To isolate the kind of issue that you're experiencing and address the most commo
 
 - If you notice locked resources that are associated with a single cluster node, schedule downtime for the cluster, and then restart the affected node.
 
-- For other issues that involve cluster resources, see the following articles:
+- For other issues that involve cluster resources, see the following articles:  
 
   - [Cluster service fails to start troubleshooting guidance](../high-availability/troubleshoot-cluster-service-fails-to-start.md)
   - [Can't bring a clustered resource online troubleshooting guidance](../high-availability/troubleshoot-cannot-bring-resource-online-guidance.md)
@@ -240,7 +243,7 @@ To isolate the kind of issue that you're experiencing and address the most commo
 - Cluster services don't start, and cluster doesn't come online.
 - Cluster goes offline intermittently.
 - CSV or VMs are offline or inaccessible.
-- You receive error messages or events that refer to either of the following issues:
+- You receive error messages or events that refer to either of the following issues:  
 
   - Corrupted cluster database (CLUSDB)
   - Lost quorum
@@ -265,7 +268,7 @@ If you can't resolve the issue, you can, as a last resort, back up the cluster, 
 
 #### Symptoms
 
-- The event logs contain events that indicate service issues or timeouts, such as the following examples:
+- The event logs contain events that indicate service issues or timeouts, such as the following examples:  
 
   - Event ID 153
   - Event ID 157
@@ -286,7 +289,7 @@ If you can't resolve the issue, you can, as a last resort, back up the cluster, 
 
 To isolate the kind of issue that you're experiencing and address the most common issues, complete the [Troubleshooting checklist](#troubleshooting-checklist). If the issue persists, use one of the following methods (depending on the kind of issue):
 
-- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):
+- If you receive any of the following storage subsystem events, see [Data corruption and disk errors troubleshooting guidance](../backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md):  
 
   - Event ID 55 and Event ID 98
   - Event ID 129
