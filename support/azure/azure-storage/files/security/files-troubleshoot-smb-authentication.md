@@ -301,7 +301,7 @@ Azure Files uses Kerberos authentication for identity-based access when using Ac
 > [!IMPORTANT]
 > An upcoming Windows change (**July 2026 Windows Server Update**) will change the default Kerberos encryption type from RC4 to AES-256. Storage accounts that haven't yet been upgraded to AES-256 may experience mount errors when this change rolls out. You should take action before applying this update to ensure uninterrupted access to your Azure file shares. Customers who have already upgraded to AES-256 won't be impacted.
 >
-> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storagaccount.domain.com` instead of `storageaccount>.file.core.windows.net`) may be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, we recommend upgrading to AES-256 before applying the April update.
+> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storagaccount.domain.com` instead of `<storageaccount>.file.core.windows.net`) might be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, we recommend upgrading to AES-256 before applying the April update.
 >
 > For more information about this Windows change, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc).
 
