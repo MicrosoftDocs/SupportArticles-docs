@@ -10,6 +10,8 @@ ms.custom: sap:Work Order Management
 
 # Work order is stuck in a specific status and can't be updated
 
+## Summary
+
 This article helps you troubleshoot and resolve scenarios where a work order can't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
@@ -28,7 +30,7 @@ When you try to change the work order system status or sub-status, you notice on
 
 Custom status reason transitions are configured on the Work Order table, and the transition you need isn't allowed by the current rules.
 
-### Resolution: Review status transition rules
+### Solution: Review status transition rules
 
 1. Go to [make.powerapps.com](https://make.powerapps.com), sign in, and select your environment from the environment picker in the top-right corner.
 1. In the left navigation, select **Tables**, search for and open the **Work Order** table, and then select **Columns**.
@@ -40,7 +42,7 @@ Custom status reason transitions are configured on the Work Order table, and the
 
 Dynamics 365 Field Service prevents you from completing a work order when associated bookings, work order products, or work order services are still in an open or in-progress state.
 
-### Resolution: Close open sub-records
+### Solution: Close open sub-records
 
 1. In the Dynamics 365 Field Service app, open the work order record and select the **Bookings** tab.
 1. Verify that all associated bookings have a **Completed** booking status.
@@ -54,7 +56,7 @@ Dynamics 365 Field Service prevents you from completing a work order when associ
 
 A synchronous plug-in registered on the work order **Update** message might revert the status change based on custom business logic.
 
-### Resolution: Identify and fix the custom plug-in
+### Solution: Identify and fix the custom plug-in
 
 1. To check plug-in registrations, go to [make.powerapps.com](https://make.powerapps.com), select your environment, and then go to **Tables** > **Work Order** > **Plug-in steps**. Look for plug-ins registered on the **Pre-Operation** or **Post-Operation** step of the **Update** message.
 1. Enable the Plug-in Trace Log to capture execution details:
