@@ -34,19 +34,20 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
 ### Step 1: Gather information and review the symptoms
 
 - **Gather and review log data**. Review log entries for relevant events or messages that occurred near the time of your issue. As a starting point, review the following information:
+
   - System and Administration event log
   - Hyper-V event log (in Event Viewer, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Hyper-V**)
   - Any process dump files that you collected
   - Any network trace data that you collected
-  - Cluster logs from all nodes
-  
+  - Cluster logs from all nodes  
     To collect logs, run the following command on one of the cluster nodes:
 
     ```powershell
-     Get-ClusterLog -UseLocalTime -Destination <FolderPath>
+    Get-ClusterLog -UseLocalTime -Destination <FolderPath>
     ```
 
 - **Check the change and maintenance history**. Check for any recent changes or operational events, including the following events:
+
   - Operating system updates
   - Driver or firmware changes
   - Configuration changes
@@ -56,6 +57,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
   - Storage migrations that affect VMs
 
 - **Check host and VM versions:** Make sure that the following components are up to date, and that the versions are compatible with one another:
+
   - Operating system of the Hyper-V host
   - VM configuration
   - Integration services
@@ -63,6 +65,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
 ### Step 2: Check the health of the cluster and the underlying infrastructure
 
 - To check the health of the failover clusters and cluster resources, use Failover Cluster Manager:
+
   - Identify any error messages in Failover Cluster Manager.
   - Identify which nodes are online and which, if any, are offline.
   - Identify any cluster resources that are stuck in Locked, Paused, or Not responding states.
@@ -112,6 +115,7 @@ Make sure that each cluster node has the same hardware and configuration, includ
    For more information about how to configure VMs for replication in different types of topologies, see [Replicate a virtual machine](/windows-server/virtualization/hyper-v/replication-virtual-machines?tabs=hyper-v-manager#replicate-a-virtual-machine).
 
 1. Check the locations of the VM configuration files (.vmcx) and disk files (.vhd or .vhdx).
+
    - Make sure that the files reside on the shared storage that the cluster nodes use.
    - Make sure that your VM management client (such as Hyper-V Manager) uses the correct paths for these files.
 
@@ -181,17 +185,20 @@ The most common reasons that VMs can't migrate from one cluster node to another 
 
 - A VM becomes stuck in a transitional state (Starting or Stopping) or in the Offline state.
 - A VM or host enters one of the following states:
+
   - Paused
   - Critical
   - Not responding
   - Resource-locked
 
 - You might receive error messages that resemble the following examples:
+
   - `Resource lock`
   - `Service unable to pause`
   - `Storage inaccessible`
 
 - The event logs contain events that indicate service issues or timeouts, such as the following examples:
+
   - Event ID 153
   - Event ID 5120
 
@@ -234,6 +241,7 @@ To isolate the kind of issue that you're experiencing and address the most commo
 - Cluster goes offline intermittently.
 - CSV or VMs are offline or inaccessible.
 - You receive error messages or events that refer to either of the following issues:
+
   - Corrupted cluster database (CLUSDB)
   - Lost quorum
 
@@ -258,9 +266,11 @@ If you can't resolve the issue, you can, as a last resort, back up the cluster, 
 #### Symptoms
 
 - The event logs contain events that indicate service issues or timeouts, such as the following examples:
+
   - Event ID 153
   - Event ID 157
   - Event ID 5120
+
 - You receive error messages or alerts about storage hardware (such as RAID or SAN devices)
 - Management tools label volumes as read-only, offline, missing, disconnected, or inaccessible
 - VMs unexpectedly restart, become unresponsive, or don't migrate
@@ -355,7 +365,8 @@ If you need additional assistance, collect the following data, and then contact 
 
 ### General data
 
-- Version information (and build information, if applicable) for your infrastructure, including the following components: 
+- Version information (and build information, if applicable) for your infrastructure, including the following components:
+
   - Windows Server
   - Hyper-V
   - Integration services
@@ -384,12 +395,11 @@ Use Microsoft troubleshooting scripts (TSS) to automatically gather information 
 Additionally, gather the following information:
 
 - Cluster logs from all nodes
-    
-    To collect logs, run the following command on one of the cluster nodes:
+  To collect logs, run the following command on one of the cluster nodes:
 
-    ```powershell
-    Get-ClusterLog -UseLocalTime -Destination <folder path>
-    ```
+  ```powershell
+  Get-ClusterLog -UseLocalTime -Destination <folder path>
+  ```
 
 - Relevant event logs from the FailoverClustering and DNS Server event log channels
 - Details of the CNO object in Active Directory, including security permissions
