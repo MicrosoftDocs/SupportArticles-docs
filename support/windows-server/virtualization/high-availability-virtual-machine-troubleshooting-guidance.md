@@ -87,7 +87,7 @@ Before you start to troubleshoot the issue, follow this checklist to help isolat
   > [!IMPORTANT]  
   > [Network recommendations for Hyper-V in a failover cluster](/windows-server/virtualization/hyper-v/failover-cluster-network-recommendations) mentions load balancing and failover (LBFO) NIC Teaming. However, this technology is deprecated in favor of [Switch-Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set). Whenever possible, use SET instead of NIC Teaming.
 
-- Make sure that any network device drivers support clustering, and that they are up to date.
+- Make sure that any network device drivers support clustering, and that they're up to date.
 
 ### Step 3: Check resource availability
 
@@ -294,7 +294,7 @@ To isolate the kind of issue that you're experiencing and address the most commo
 #### Symptoms
 
 - Nodes drop from the cluster or enter quarantine, or heartbeats are missed or dropped.
-- RDP/discovery fails.
+- RDP or discovery fails.
 - VMs migrate unexpectedly or don't migrate, particularly after nodes are moved or maintained.
 
 #### Possible causes
@@ -415,7 +415,7 @@ Additionally, gather the following information:
 - [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server)
 - [Virtual machine live migration troubleshooting guidance](troubleshoot-live-migration-guidance.md)
 
-### PowerShell cmdlets
+### PowerShell cmdlets 
 
 - [Get-ClusterLog](/powershell/module/failoverclusters/get-clusterlog)
 - [Get-ClusterResource](/powershell/module/failoverclusters/get-clusterresource)
