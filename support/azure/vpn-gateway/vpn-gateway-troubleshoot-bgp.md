@@ -5,7 +5,7 @@ description: Learn how to diagnose and resolve common BGP (Border Gateway Protoc
 author: cherylmc
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
-ms.date: 03/16/2026
+ms.date: 03/23/2026
 ms.author: cherylmc
 # Customer intent: As a network administrator, I want to troubleshoot BGP issues with my Azure VPN Gateway so that I can restore dynamic routing between my on-premises networks and Azure.
 ---
@@ -69,6 +69,7 @@ A common error is configuring the on-premises device to peer with the gateway's 
 If your on-premises VPN device uses APIPA addresses (169.254.x.x) for BGP:
 
 - You must configure matching APIPA BGP IP addresses on the Azure VPN gateway. See [Configure BGP](/azure/vpn-gateway/bgp-howto).
+- The exact range for APIPA addresses for use with VPN Gateway is 169/254.21.0 -169.254.22.255. This range can't be expanded.
 - You must configure the on-premises BGP speaker to initiate connections. Although Azure VPN Gateway initiates BGP sessions regardless of whether the peer uses APIPA, the on-premises device must also be configured to initiate.
 - APIPA BGP addresses must not overlap between the on-premises device and the Azure gateway.
 
@@ -172,7 +173,7 @@ If the BGP session repeatedly connects and disconnects:
 Azure VPN Gateway uses the default BGP keepalive interval of 60 seconds and a hold timer of 180 seconds. If network latency or packet loss causes three consecutive keepalives to be missed, the hold timer expires and the session drops.
 
 - BFD (Bidirectional Forwarding Detection) isn't supported on VPN Gateway for S2S connections. You can't use BFD for faster failure detection.
-- You can configure shorter timers on the on-premises device, but timers below the 60-second keepalive or 180-second hold aren't reliable over internet connections and may cause further instability.
+- VPN gateways support only fixed keepalive and hold timers. Ths values are: Keepalive: 60 seconds, Hold timer: 180 seconds.
 
 ### Check for prefix limit violations
 
