@@ -72,7 +72,7 @@ If you still receive the same errors after you apply the solution, contact Micro
 When you create a support case, include the following information:
 
 - A network trace that captures the error
-- The complete error details (download the full error shown during the upgrade or uninstall)
+- The complete error details (download the full error log shown during the upgrade or uninstall)
 - Screenshots of the following views:
   - Solution layers view
   - Agent dependencies
