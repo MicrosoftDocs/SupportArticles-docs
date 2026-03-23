@@ -10,7 +10,7 @@ ms.custom: sap:Mobile Application\Application is throwing errors
 
 ## Summary
 
-This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occur if the mobile operating system stops an app process that uses too much memory. These problems include:
+This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occurs if the mobile operating system stops an app process that uses too much memory. These problems include:
 
 - The home screen appears unexpectedly
 - File or PDF attachments close immediately after they open
@@ -57,27 +57,27 @@ If you can reliably reproduce a WebView reset by performing a specific action li
 
 A memory leak occurs when allocated memory isn't released because of lingering references, such as event listeners or objects that aren't properly cleaned up. This problem prevents the garbage collector from reclaiming the memory, so usage gradually increases over time.
 
-For example, adding event listeners to the JavaScript `window` object without removing them when you navigate away from a page can cause a leak. If WebView resets occur randomly and aren't tied to a specific action, a memory leak is the likely cause.
+For example, a leak can occur if you add event listeners to the JavaScript `window` object without removing them when you navigate away from a page. If WebView resets occur randomly and aren't tied to a specific action, a memory leak is the likely cause.
 
 ## Solution
 
-### For end users
+### For users
 
 If the WebView reset occurs when you open a PDF or file attachment on a work order, try the following steps:
 
-1. Reduce the file size. Attachments larger than 10 MB are more likely to trigger a WebView reset. Ask the sender to compress or resave the file at a lower resolution before reattaching it to the work order.
-1. If the issue happens consistently with the same file, try opening it on a different device or in a desktop browser to check whether the file is corrupted.
-1. Close other apps running on the device to free up memory, then restart the Field Service app and try opening the attachment again.
+1. Reduce the file size. Attachments tha are larger than 10 MB are more likely to trigger a WebView reset. Ask the sender to compress or resave the file at a lower resolution before they reattach it to the work order.
+1. If the issue occurs consistently by using the same file, try to open the file on a different device or in a desktop browser to check whether the file is corrupted.
+1. Free up memory by closing other apps that are running on the device. Then, restart the Field Service app, and try again to open the attachment.
 
 ### For administrators
 
-1. Review any [custom controls or web resources](/dynamics365/guidance/resources/field-service-mobile-improve-performance) added to the mobile app. Custom controls that store Base64-encoded images or import large JavaScript libraries can cause memory pressure and more frequent WebView resets.
+1. Review any [custom controls or web resources](/dynamics365/guidance/resources/field-service-mobile-improve-performance) that were added to the mobile app. Custom controls that store Base64-encoded images or import large JavaScript libraries can cause memory pressure and more frequent WebView resets.
 
 1. For iOS, use Safari memory analysis tools to check the memory performance of your iOS app. For more information, see [the Timelines tab in Web Inspector](https://webkit.org/web-inspector/timelines-tab/).
 
-1. Use browser developer tools like Microsoft Edge DevTools to track memory usage and find issues. Code that causes memory pressure on mobile also causes memory pressure on desktop browsers. For more information, see [Fix memory problems in Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/memory-problems/).
+1. Use browser developer tools such as Microsoft Edge DevTools to track memory usage and find issues. Code that causes memory pressure on mobile apps also causes memory pressure on desktop browsers. For more information, see [Fix memory problems in Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/memory-problems/).
 
-1. [Debug JavaScript code for model-driven apps](/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code) to find problematic scripts or customizations.
+1. To find problematic scripts or customizations, [debug JavaScript code for model-driven apps](/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code).
 
 ## Related content
 
