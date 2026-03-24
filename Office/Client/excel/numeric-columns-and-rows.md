@@ -8,12 +8,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot
+  - CI 10745
 appliesto: 
-  - Excel 2000
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/23/2026
 ---
 
 # Columns and rows are labeled numerically in Excel
