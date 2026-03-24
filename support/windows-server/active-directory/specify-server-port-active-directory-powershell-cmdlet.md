@@ -21,7 +21,7 @@ Many cmdlets in the Windows PowerShell Active Directory module include a `-Serve
 
 ## Introduction
 
-Many of the cmdlets in the Windows PowerShell Active Directory module support a `-Server` parameter. If you use these cmdlets to manage Active Directory Domain Services (AD DS), you can use the parameter together with a service or server name and port number. In this manner, you can target operations to a particular service on a particular domain controller (DC). For example, in the following cmdlet, the `-Server` option uses a fully qualified domain name (FQDN) and the global catalog service port (port 3268) to target a specific global catalog server (GC):
+Many of the cmdlets in the Windows PowerShell Active Directory module support a `-Server` parameter. If you use these cmdlets to manage Active Directory Domain Services (AD DS), you can use the parameter together with a service or server name and port number. In this manner, you can target operations to a particular service on a particular DC. For example, in the following cmdlet, the `-Server` option uses a fully qualified domain name (FQDN) and the global catalog service port (port 3268) to target a specific global catalog server (GC):
 
 ```powershell
 Get-ADCentralAccessRule -Filter * -Server dc01.contoso.com:3268
@@ -59,7 +59,7 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Add-ADCentralAccessPolicyMember](/powershell/module/activedirectory/add-adcentralaccesspolicymember) | Adds central access rules to a central access policy in Active Directory. |
 | [Add-ADComputerServiceAccount](/powershell/module/activedirectory/add-adcomputerserviceaccount) | Adds one or more service accounts to an Active Directory computer. |
 | [Add-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/add-addomaincontrollerpasswordreplicationpolicy) | Adds users, computers, and groups to the allowed or denied list of a read-only DC password replication policy. |
-| [Add-ADFineGrainedPasswordPolicySubject](/powershell/module/activedirectory/add-adfinegrainedpasswordpolicysubject) | Applies a fine-grained password policy to one more users and groups. |
+| [Add-ADFineGrainedPasswordPolicySubject](/powershell/module/activedirectory/add-adfinegrainedpasswordpolicysubject) | Applies a fine-grained password policy to one or more users and groups. |
 | [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) | Adds one or more members to an Active Directory group. |
 | [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership) | Adds a member to one or more Active Directory groups. |
 | [Add-ADResourcePropertyListMember](/powershell/module/activedirectory/add-adresourcepropertylistmember) | Adds one or more resource properties to a resource property list in Active Directory. |
@@ -82,7 +82,7 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Get-ADComputerServiceAccount](/powershell/module/activedirectory/get-adcomputerserviceaccount) | Gets the service accounts that are hosted by a computer. |
 | [Get-ADDefaultDomainPasswordPolicy](/powershell/module/activedirectory/get-addefaultdomainpasswordpolicy) | Gets the default password policy for an Active Directory domain. |
 | [Get-ADDomain](/powershell/module/activedirectory/get-addomain) | Gets an Active Directory domain. |
-| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs based on discoverable services criteria, search parameters, or by providing a DC identifier, such as the NetBIOS name. |
+| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs that are based on discoverable services criteria, search parameters, or by providing a DC identifier, such as the NetBIOS name. |
 | [Get-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicy) | Gets the members of the allowed list or denied list of a read-only DC password replication policy. |
 | [Get-ADDomainControllerPasswordReplicationPolicyUsage](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicyusage) | Gets the Active Directory accounts that are authenticated by a read-only DC or that are in the revealed list of the DC. |
 | [Get-ADFineGrainedPasswordPolicy](/powershell/module/activedirectory/get-adfinegrainedpasswordpolicy) | Gets one or more Active Directory fine-grained password policies. |
