@@ -17,13 +17,15 @@ appliesto:
 
 ## Summary
 
-When you use Windows PowerShell cmdlets to manage Active Directory Domain Services (AD DS), you can often specify a `-server` option. This option specifies the domain controller (DC) on which the command runs. To be more precise, you can specify a port number as well as a DC name.
+
+
+## Introduction
+
+Many of the cmdlets in the Windows PowerShell Active Directory module support a `-server` option. When you use these cmdlets to manage Active Directory Domain Services (AD DS), you can use this option together with a service or server name and port number to target operations to a particular service on a particular domain controller (DC). For example, in the following cmdlet, the `-server` option uses a fully qualified domain name (FQDN) and the global catalog service port (port 3268) to target a specific global catalog server (GC).
 
 ```powershell
 Get-ADCentralAccessRule -Filter * -server dc01.contoso.com:3268
 ```
-
-This article explains how a port number affects the way that the command runs.
 
 ## More Information
 
@@ -157,7 +159,7 @@ The following table provides an index of the AD module cmdlets that support the 
 | [Remove-ADServiceAccount](powershell/module/activedirectory/remove-adserviceaccount) | Removes an Active Directory managed service account or group managed service account object. |
 | [Remove-ADUser](powershell/module/activedirectory/remove-aduser) | Removes an Active Directory user. |
 | [Rename-ADObject](powershell/module/activedirectory/rename-adobject) | Changes the name of an Active Directory object. |
-| [Reset-ADServiceAccountMigration](powershell/module/activedirectory/reset-adserviceaccountmigration) | Resets the state of a migration to an delegated managed service account and unlinks the delegated managed service account from the user account. |
+| [Reset-ADServiceAccountMigration](powershell/module/activedirectory/reset-adserviceaccountmigration) | Resets the state of a migration to a delegated managed service account and unlinks the delegated managed service account from the user account. |
 | [Restore-ADObject](powershell/module/activedirectory/restore-adobject) | Restores an Active Directory object. |
 | [Revoke-ADAuthenticationPolicySiloAccess](powershell/module/activedirectory/revoke-adauthenticationpolicysiloaccess) | Revokes membership in an authentication policy silo for the specified account. |
 | [Search-ADAccount](powershell/module/activedirectory/search-adaccount) | Gets Active Directory user, computer, or service accounts. |
@@ -193,5 +195,5 @@ The following table provides an index of the AD module cmdlets that support the 
 | [Set-ADUser](powershell/module/activedirectory/set-aduser) | Modifies an Active Directory user. |
 | [Show-ADAuthenticationPolicyExpression](powershell/module/activedirectory/show-adauthenticationpolicyexpression) | Displays the Edit Access Control Conditions window update or create security descriptor definition language (SDDL) security descriptors. |
 | [Start-ADServiceAccountMigration](powershell/module/activedirectory/start-adserviceaccountmigration) | Starts the migration process by linking a normal user account to a delegated managed service account. |
-| [Undo-ADServiceAccountMigration](powershell/module/activedirectory/undo-adserviceaccountmigration) | Reverts the previous migration phase of a migration to an delegated managed service account. If the migration process is currently in the start phase, the accounts will be unlinked from each other. If the migration is in the completed phase, it'll return back to the state in the start phase. |
+| [Undo-ADServiceAccountMigration](powershell/module/activedirectory/undo-adserviceaccountmigration) | Reverts the previous migration phase of a migration to a delegated managed service account. If the migration process is currently in the start phase, the accounts are unlinked from each other. If the migration is in the completed phase, it returns back to the state in the start phase. |
 | [Unlock-ADAccount](powershell/module/activedirectory/unlock-adaccount) | Unlocks an Active Directory account. |
