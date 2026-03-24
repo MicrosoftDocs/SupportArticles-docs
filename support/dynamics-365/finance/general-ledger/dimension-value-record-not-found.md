@@ -78,7 +78,6 @@ On version 10.0.42 and later, the error message may specifically indicate that a
 ### Resolution
 
 1. Navigate to the source record mentioned in the error message (for example, open the customer or vendor record).
-2. Select the key field (such as the account number), clear the entire contents of the field, and manually retype the value. This removes any hidden characters. For guidance on renaming dimension values, see [Renaming financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions#renaming-financial-dimensions).
-3. If the system doesn't allow you to change the value to the same text, temporarily change it to a different value, save, and then change it back to the intended value.
-4. After correcting the value, retry the operation that produced the error.
-5. If your data comes from an external integration, review the integration to make sure data is validated and cleaned before it's imported into Dynamics 365 Finance to prevent this issue from recurring.
+2. Select the key field (such as the account number) and temporarily change it to a different value, then save. Change it back to the intended value and save again. This removes any hidden characters. For guidance on renaming dimension values, see [Renaming financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions#renaming-financial-dimensions).
+3. After correcting the value, retry the operation that produced the error.
+4. If your data comes from an external integration, review the integration to make sure data is validated and cleaned before it's imported into Dynamics 365 Finance to prevent this issue from recurring.
