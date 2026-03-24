@@ -15464,7 +15464,12 @@
     },
     {
       "source_path": "support/mem/configmgr/app-management/contributor-role-not-assigned-for-web-app.md",
-      "redirect_url": "/troubleshoot/mem/configmgr/cloud-services//contributor-role-not-assigned-for-web-app",
+      "redirect_url": "/troubleshoot/mem/configmgr/cloud-services/contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/troubleshoot-application-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot/troubleshoot-application-deployment",
       "redirect_document_id": false
     }
   ]
