@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 01/23/2025
+ms.date: 03/24/2026
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
@@ -60,6 +60,6 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Email threat policies diagnostics for a recipient|List threat policies in [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) and in [Microsoft Defender for Office 365](/defender-office-365/mdo-about), and the inbound connector used for a received message.|[Run Tests: Email Threat Policies](https://aka.ms/diagmdopolicy)|[Order and precedence of email protection](/defender-office-365/how-policies-and-protections-are-combined)|
 |Proxy address conflict diagnostics|Find the Exchange recipient that uses an email address. Helpful if you receive an "Email/proxy address is in use" or similar error message when you try to create an Exchange Online mailbox. | [Run Tests: Proxy address in use](https://aka.ms/PillarProxyInUse) | [Proxy address conflict when adding an email address in Exchange Online](/exchange/troubleshoot/email-alias/proxy-address-being-used) |
 |Mailbox safe/blocked sender list diagnostics|Check and identify issues with the mailbox's safe senders and domains, blocked sender and domains in junk email settings.|[Run Tests: Mailbox Safe Blocked Sender List](https://aka.ms/safeblockdiag)| [Configure junk email settings on Exchange Online mailboxes](/defender-office-365/configure-junk-email-settings-on-exo-mailboxes)|
-|Tenant threat policies health check|Check for coverage gaps related to Safe Links, Safe Attachments, ZAP, and Enhanced Filtering configuration.|[Run Tests: Tenant Health Check](https://aka.ms/thc)| [Tune Microsoft Defender for Office 365](defender-office-365/step-by-step-guides/tune-microsoft-defender-for-office-365)|
+|Tenant threat policies health check|Check for coverage gaps related to Safe Links, Safe Attachments, Zero-hour auto purge (ZAP), and Enhanced Filtering configuration.|[Run Tests: Tenant Health Check](https://aka.ms/thc)| [Tune Microsoft Defender for Office 365](defender-office-365/step-by-step-guides/tune-microsoft-defender-for-office-365)|
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
