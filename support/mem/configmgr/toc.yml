@@ -22,7 +22,7 @@ items:
     - name: Deployment Type changes are deployed unexpectedly
       href: app-management/deployment-type-changes-deployed-unexpectedly.md
     - name: Troubleshoot Microsoft Store for Business and Education integration
-      href: app-management/troubleshoot-microsoft-store-for-business-integration.md
+      href: app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration.md
     - name: Troubleshooting tips for application deployments
       href: app-management/troubleshoot/troubleshoot-application-deployment.md
 - name: Client installation and assignment

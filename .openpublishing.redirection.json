@@ -15471,6 +15471,11 @@
       "source_path": "support/mem/configmgr/app-management/troubleshoot-application-deployment.md",
       "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot/troubleshoot-application-deployment",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/troubleshoot-microsoft-store-for-business-integration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration",
+      "redirect_document_id": false
     }
   ]
 }
