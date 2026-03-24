@@ -129,7 +129,7 @@ items:
     - name: DRS performance issues after installing hotfix 3125525
       href: data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md
     - name: Troubleshoot database replication service issues
-      href: data-transfer-sites/troubleshoot-database-replication-service-issues.md
+      href: data-transfer-sites/troubleshoot/troubleshoot-database-replication-service-issues.md
 - name: Diagnostic
   items:
     - name: A log with a long line is truncated in CMTrace

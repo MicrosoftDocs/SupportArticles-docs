@@ -15476,6 +15476,11 @@
       "source_path": "support/mem/configmgr/app-management/troubleshoot-microsoft-store-for-business-integration.md",
       "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/data-transfer-sites/troubleshoot-database-replication-service-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/troubleshoot-database-replication-service-issues",
+      "redirect_document_id": false
     }
   ]
 }
