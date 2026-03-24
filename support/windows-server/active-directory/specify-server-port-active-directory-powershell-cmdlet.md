@@ -82,7 +82,7 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Get-ADComputerServiceAccount](/powershell/module/activedirectory/get-adcomputerserviceaccount) | Gets the service accounts that are hosted by a computer. |
 | [Get-ADDefaultDomainPasswordPolicy](/powershell/module/activedirectory/get-addefaultdomainpasswordpolicy) | Gets the default password policy for an Active Directory domain. |
 | [Get-ADDomain](/powershell/module/activedirectory/get-addomain) | Gets an Active Directory domain. |
-| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs by using discoverable services criteria, search parameters, or by providing a DC identifier, such as the NetBIOS name. |
+| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs by using discoverable services criteria or search parameters, or by providing a DC identifier, such as the NetBIOS name. |
 | [Get-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicy) | Gets the members of the allowed list or denied list of a read-only domain controller's password replication policy. |
 | [Get-ADDomainControllerPasswordReplicationPolicyUsage](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicyusage) | Gets the Active Directory accounts that are authenticated by a read-only DC or that are in the revealed list of the DC. |
 | [Get-ADFineGrainedPasswordPolicy](/powershell/module/activedirectory/get-adfinegrainedpasswordpolicy) | Gets one or more Active Directory fine-grained password policies. |
