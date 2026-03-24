@@ -1,4 +1,19 @@
-# Specify a server name and port number for cmdlets in the PowerShell Active Directory module
+---
+title: Specify a server name and port number for an Active Directory cmdlet
+description: 
+ms.date: 03/25/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, herbertm, v-appelgatet
+ms.custom:
+- sap:Active Directory\Object attribute management, RID issues, and Group Scope
+- pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
+
+# Specify a server name and port number for an Active Directory cmdlet
 
 ## Summary
 
