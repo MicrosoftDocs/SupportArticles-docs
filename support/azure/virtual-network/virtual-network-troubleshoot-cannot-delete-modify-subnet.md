@@ -42,8 +42,8 @@ Review the output to determine which resources or configurations are blocking yo
 - **delegations**: Services the subnet is delegated to
 - **serviceEndpoints**: Configured service endpoints
 - **ipConfigurations**: NICs, load balancers, and other resources that have IP addresses in the subnet
-- **privateEndpoints**: Private endpoint resources tht are associated with the subnet
-- **serviceAssociationLinks**: Services that deploye resources into the subnet
+- **privateEndpoints**: Private endpoint resources that are associated with the subnet
+- **serviceAssociationLinks**: Services that deploy resources into the subnet
 
 Use the corresponding sections in this article to resolve each type of blocking resource.
 
@@ -203,7 +203,7 @@ For Azure Container Instances specifically, see [Clean up resources](/azure/cont
 ### Network profiles (Azure Container Instances)
 
 > [!NOTE]
-> Starting in Azure Container Instances API version `2021-07-01`, Microsoft retired network profiles. If you use this or a later API version, you can't create network profiles. The following guidance applies to only legacy deployments that use an older API version.
+> Microsoft retired network profiles starting in Azure Container Instances API version `2021-07-01`. If you use this or a later API version, you can't create network profiles. The following guidance applies to only legacy deployments that use an older API version.
 
 You create network profiles when you deploy Azure Container Instances into a virtual network. These profiles can remain after you delete container groups and block subnet deletion.
 
@@ -453,9 +453,9 @@ az network vnet subnet update \
 |---|---|---|
 | `Subnet <name> is in use and cannot be deleted.` | Resources such as network adapters, private endpoints, and service deployments are still in the subnet. | Use the [diagnostic command](#diagnose-blocking-resources) to identify and remove blocking resources. |
 | `InUseSubnetCannotBeDeleted` | The subnet contains IP configurations from VMs, load balancers, or other resources. | Remove or move the resources to another subnet, then retry the deletion. |
-| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Service endpoints alone don't block subnet deletion. If this error occurs in conjunction with other blocking resources, resolve those resources first. To remove service endpoints, see [Service endpoints](#service-endpoints). |
+| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Service endpoints alone don't block subnet deletion. If this error is related to other blocking resources, resolve those resources first. To remove service endpoints, see [Service endpoints](#service-endpoints). |
 | `SubnetHasDelegations` | The subnet is delegated to a service and resources from that service are deployed. | [Remove delegated resources and the delegation](#subnet-delegations). |
-| `SubnetWithExternalResourcesCannotBeUsedByOtherResources` | Another Azure service has deployed resources in the subnet. | Identify the service by using [service association links](#service-association-links), and remove the deployed resources. |
+| `SubnetWithExternalResourcesCannotBeUsedByOtherResources` | Another Azure service deployed resources in the subnet. | Identify the service by using [service association links](#service-association-links), and remove the deployed resources. |
 | `InUseNetworkInterfaceCannotBeAssociatedWithSubnet` | An orphaned NIC has an IP configuration that conflicts with subnet operations. | [Delete the orphaned network adapter](#nics-and-ip-configurations), and retry the operation. |
 | `SubnetIsDelegatedAndCannotBeUsed` | The subnet is already delegated to another service. | [Change or remove the delegation](#change-or-remove-a-subnet-delegation) before deploying a new service. |
 | `NetworkProfileCannotBeDeleted` | A network profile (that's used by Azure Container Instances) still references the subnet. | See [Network profiles](#network-profiles-azure-container-instances). |
