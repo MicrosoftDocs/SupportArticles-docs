@@ -1,6 +1,6 @@
 ---
 title: Specify a server name and port number for an Active Directory cmdlet
-description: 
+description: Discusses the common ports you can use with Active Directory cmdlets and provides a reference list of all cmdlets that support the `-Server` parameter.
 ms.date: 03/25/2026
 manager: dcscontentpm
 audience: itpro
@@ -35,7 +35,7 @@ Get-ADCentralAccessRule -Filter * -Server dc01.contoso.com:3268
 | --- | --- |
 | Port 389 | The default port that the Active Directory cmdlets use to connect to specific servers. |
 | Port 3268 | The global catalog (GC) port. Use this port to optimize searches, to search all domains in a forest, and to search the whole forest. The GC is read-only. |
-| Ports 636 and 3269 | The ports for secure LDAP connections to DCs and GCs. Use the Simple Authentication and Security Layer (SASL) protocol when you use these ports to connect. Don't use Transport Layer Security (TLS).<br /><br />**Important** Active Directory Web Services (ADWS), a service that most of the AD module cmdlets use<sup>\*</sup>, doesn't recognize TLS. |
+| Ports 636 and 3269 | The ports for secure Lightweight Directory Access Protocol (LDAP) connections to DCs and GCs. Use the Simple Authentication and Security Layer (SASL) protocol when you use these ports to connect. Don't use Transport Layer Security (TLS).<br /><br />**Important** Active Directory Web Services (ADWS), a service that most of the AD module cmdlets use<sup>\*</sup>, doesn't recognize TLS. |
 | Custom port for Lightweight Directory Service (LDS) instances | Use the port number to identify the instance to connect to. Each instance can have a different schema and has a different set of naming contexts. These LDS instances are writable. |
 | Custom port for mounted AD DS snapshots | Use the port number to specify which mounted snapshot instance to connect to. Each mounted snapshot instance can have a different schema and has a different set of naming contexts. Mounted snapshots are read-only. |
 
