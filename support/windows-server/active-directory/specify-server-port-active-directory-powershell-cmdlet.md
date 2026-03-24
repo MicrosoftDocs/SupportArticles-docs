@@ -17,19 +17,19 @@ appliesto:
 
 ## Summary
 
-
+Many cmdlets in the Windows PowerShell Active Directory module include a `-Server` parameter that lets you target operations to a specific domain controller (DC) and port. This article describes the common ports you can use with Active Directory cmdlets and provides a reference list of all cmdlets that support the `-Server` parameter.
 
 ## Introduction
 
-Many of the cmdlets in the Windows PowerShell Active Directory module support a `-server` option. When you use these cmdlets to manage Active Directory Domain Services (AD DS), you can use this option together with a service or server name and port number to target operations to a particular service on a particular domain controller (DC). For example, in the following cmdlet, the `-server` option uses a fully qualified domain name (FQDN) and the global catalog service port (port 3268) to target a specific global catalog server (GC).
+Many of the cmdlets in the Windows PowerShell Active Directory module support a `-Server` parameter. When you use these cmdlets to manage Active Directory Domain Services (AD DS), you can use this parameter together with a service or server name and port number to target operations to a particular service on a particular domain controller (DC). For example, in the following cmdlet, the `-Server` option uses a fully qualified domain name (FQDN) and the global catalog service port (port 3268) to target a specific global catalog server (GC).
 
 ```powershell
-Get-ADCentralAccessRule -Filter * -server dc01.contoso.com:3268
+Get-ADCentralAccessRule -Filter * -Server dc01.contoso.com:3268
 ```
 
 ## More Information
 
- The following table lists the most common ports that you can use to connect to particular servers, and how to use them.
+ The following table lists the most common ports that you can use to connect to particular services, and how to use them.
 
 | Port | Comments |
 | --- | --- |
@@ -47,15 +47,15 @@ Get-ADCentralAccessRule -Filter * -server dc01.contoso.com:3268
 - [AD DS: Database Mounting Tool (Snapshot Viewer or Snapshot Browser)](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753246(v=ws.10))
 - [Active Directory Snapshot](/archive/technet-wiki/28644.active-directory-snapshot)
 
-The following table provides an index of the AD module cmdlets that support the `-server` option.
+The following table provides an index of the Active Directory module cmdlets that support the `-Server` parameter.
 
 > [!NOTE]  
 >
-> - Some of these cmdlets can connect to a server without using a particular port number.
+> - Some of these cmdlets use the default port, so the `-Server` parameter doesn't have to include the port number.
 > - Some of these cmdlets might not use ADWS. To be certain, you can check the "Notes" section of the cmdlet's reference article. "Notes" lists whether the cmdlet requires ADWS.
 
 | **Cmdlet** | **Description** |
-|----|----|
+| --- | --- |
 | [Add-ADCentralAccessPolicyMember](/powershell/module/activedirectory/add-adcentralaccesspolicymember) | Adds central access rules to a central access policy in Active Directory. |
 | [Add-ADComputerServiceAccount](/powershell/module/activedirectory/add-adcomputerserviceaccount) | Adds one or more service accounts to an Active Directory computer. |
 | [Add-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/add-addomaincontrollerpasswordreplicationpolicy) | Adds users, computers, and groups to the allowed or denied list of a read-only domain controller password replication policy. |
