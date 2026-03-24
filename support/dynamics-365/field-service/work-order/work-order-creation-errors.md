@@ -1,6 +1,6 @@
 ---
-title: Errors when creating or saving a work order
-description: Resolve common errors that occur when you create or save work orders in Dynamics 365 Field Service.
+title: Troubleshoot errors when creating or saving a work order
+description: Troubleshoot common errors that occur when you create or save work orders in Dynamics 365 Field Service.
 author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
@@ -8,7 +8,7 @@ ms.date: 03/19/2026
 ms.custom: sap:Work Order Management
 ---
 
-# Errors when creating or saving a work order
+# Troubleshoot errors when creating or saving a work order
 
 ## Summary
 
@@ -28,9 +28,9 @@ When you try to create or save a work order, you notice one of the following iss
 
 - After you select an **Incident Type** on the work order, the expected work order products, services, and service tasks don't automatically populate.
 
-## Cause 1: A plug-in or business rule fails on the first save
+## Cause 1: A plug-in or business rule encounters an issue on the first save
 
-A synchronous plug-in or business rule on the work order table throws an error during the save operation. If the error only happens on the first attempt, it typically indicates a timing issue where the plug-in depends on related records that don't exist yet.
+A synchronous plug-in or business rule on the work order table might encounter an error during the save operation. If the error only happens on the first attempt, it typically indicates a timing issue where the plug-in depends on related records that don't exist yet.
 
 ### Solution: Identify and fix the failing plug-in or business rule
 
@@ -42,9 +42,9 @@ A synchronous plug-in or business rule on the work order table throws an error d
     1. If a plug-in references related records (like service tasks or products), it might run before those records exist. Move the plug-in to an asynchronous step or add a null check.
 1. If a business rule causes the error, go to [make.powerapps.com](https://make.powerapps.com), select your environment, and then go to **Tables** > **Work Order** > **Business rules**. Temporarily disable custom rules to isolate the issue.
 
-## Cause 2: A custom script or business rule overrides a required field
+## Cause 2: A custom script or business rule might override a required field
 
-A custom form script or business rule clears or overrides a field value after the form populates it, or a mapped field from the incident type doesn't transfer the value correctly.
+A custom form script or business rule might clear or override a field value after the form populates it, or a mapped field from the incident type might not transfer the value correctly.
 
 ### Solution: Check form scripts and field mappings
 
@@ -54,9 +54,9 @@ A custom form script or business rule clears or overrides a field value after th
 1. If the required field is a lookup, open the referenced record in the Dynamics 365 Field Service app and verify that it still exists and is in an **Active** state.
 1. Test on a clean environment without customizations to confirm whether the issue is caused by custom logic.
 
-## Cause 3: Incident type records are missing, inactive, or the user lacks privileges
+## Cause 3: Incident type configuration or user privileges need to be verified
 
-The incident type's associated products, services, or service tasks might not be configured, might be inactive, or the user might not have the **Create** privilege on the child entities.
+The incident type's associated products, services, or service tasks might not be configured or might be inactive. The user also might not have the **Create** privilege on the child entities.
 
 ### Solution: Verify incident type configuration and user privileges
 

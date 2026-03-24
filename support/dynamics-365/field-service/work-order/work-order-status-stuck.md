@@ -1,6 +1,6 @@
 ---
-title: Work order is stuck in a specific status and can't be updated
-description: Resolve issues where a work order can't transition to the next status in Dynamics 365 Field Service.
+title: Troubleshoot a work order that doesn't transition to the next status
+description: Troubleshoot issues where a work order can't transition to the next status in Dynamics 365 Field Service.
 author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
@@ -8,11 +8,11 @@ ms.date: 03/19/2026
 ms.custom: sap:Work Order Management
 ---
 
-# Work order is stuck in a specific status and can't be updated
+# Troubleshoot a work order that doesn't transition to the next status
 
 ## Summary
 
-This article helps you troubleshoot and resolve scenarios where a work order can't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
+This article helps you troubleshoot scenarios where a work order doesn't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
@@ -26,9 +26,9 @@ When you try to change the work order system status or sub-status, you notice on
 
 - The work order shows as **Completed**, but associated bookings remain in an **In Progress** status.
 
-## Cause 1: Status transition rules restrict the change
+## Cause 1: Status transition rules might limit available options
 
-Custom status reason transitions are configured on the Work Order table, and the transition you need isn't allowed by the current rules.
+Custom status reason transitions are configured on the Work Order table, and the transition you need might not be allowed by the current rules.
 
 ### Solution: Review status transition rules
 
@@ -38,9 +38,9 @@ Custom status reason transitions are configured on the Work Order table, and the
 1. Check whether **Status reason transitions** are enabled. If they are, review the allowed transitions.
 1. Add the missing transition, or disable status transitions if your business process doesn't require them.
 
-## Cause 2: Open bookings or sub-records block completion
+## Cause 2: Open bookings or sub-records might need to be completed first
 
-Dynamics 365 Field Service prevents you from completing a work order when associated bookings, work order products, or work order services are still in an open or in-progress state.
+Dynamics 365 Field Service might require you to complete associated bookings, work order products, or work order services before you can complete the work order.
 
 ### Solution: Close open sub-records
 
@@ -52,7 +52,7 @@ Dynamics 365 Field Service prevents you from completing a work order when associ
 > [!NOTE]
 > If you need to complete a work order without completing all sub-records, consider using a Power Automate flow that first updates sub-record statuses and then updates the work order status.
 
-## Cause 3: A custom plug-in reverts the status
+## Cause 3: A custom plug-in might be reverting the status
 
 A synchronous plug-in registered on the work order **Update** message might revert the status change based on custom business logic.
 

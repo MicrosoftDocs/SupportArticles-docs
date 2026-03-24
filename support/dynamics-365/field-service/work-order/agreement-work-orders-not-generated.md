@@ -1,6 +1,6 @@
 ---
-title: Work orders aren't generated from an agreement booking setup
-description: Resolve issues where work orders aren't automatically generated from agreement booking dates in Dynamics 365 Field Service.
+title: When agreement booking setup doesn't create work orders
+description: Troubleshoot issues where work orders aren't automatically generated from agreement booking dates in Dynamics 365 Field Service.
 author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
@@ -8,11 +8,11 @@ ms.date: 03/19/2026
 ms.custom: sap:Agreements, SLA's, and Entitlements
 ---
 
-# Work orders aren't generated from an agreement booking setup
+# When agreement booking setup doesn't create work orders
 
 ## Summary
 
-This article helps you troubleshoot and resolve scenarios where expected work orders aren't automatically generated from agreement booking dates in Microsoft Dynamics 365 Field Service.
+This article helps you troubleshoot scenarios where expected work orders aren't automatically created from agreement booking dates in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
@@ -22,9 +22,9 @@ You set up an agreement with an Agreement Booking Setup and a recurrence pattern
 - Work orders are generated for some agreement booking dates but not others.
 - The agreement booking date record exists but its status remains **Not Generated**.
 
-## Cause 1: The agreement isn't active
+## Cause 1: The agreement status isn't set to Active
 
-Work orders are only generated when the agreement has an **Active** system status and an **Active** sub-status. If the agreement is still in **Draft** or has been **Canceled**, the system skips work order generation.
+For work orders to generate, the agreement needs an **Active** system status and an **Active** sub-status. If the agreement is still in **Draft** or **Canceled**, work order generation doesn't occur.
 
 ### Solution: Verify agreement status
 
@@ -33,9 +33,9 @@ Work orders are only generated when the agreement has an **Active** system statu
 1. Confirm that the **System Status** is **Active** and the **Sub-Status** is set to an active value.
 1. If the agreement is in **Draft**, select **Activate** from the command bar.
 
-## Cause 2: The background system job failed or isn't running
+## Cause 2: The background system job needs attention
 
-Work order generation relies on a background system job. If the asynchronous service is paused or the job fails, work orders aren't created.
+Work order generation relies on a background system job. If the asynchronous service is paused or the job encountered an error, work orders might not be created.
 
 ### Solution: Check system jobs
 
@@ -44,7 +44,7 @@ Work order generation relies on a background system job. If the asynchronous ser
 1. Search for the system job named **Field Service - Process Agreement Booking Dates**.
     - If the job shows as **Failed**, open it to review the error details.
     - If the job shows as **Waiting**, verify the asynchronous service is running in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-1. To manually trigger generation, update the Agreement Booking Date record status or reactivate the agreement.
+1. You can manually trigger generation by updating the Agreement Booking Date record status or by reactivating the agreement.
 
 ## Cause 3: The booking date passed the generation window
 
@@ -57,9 +57,9 @@ Dynamics 365 Field Service generates work orders a configurable number of days b
 1. Review the **Generate Work Order X Days in Advance** value. This value controls how many days before the booking date the system creates the work order.
 1. If the booking date already passed the generation window, manually create the work order or adjust the next booking date to a future date within the window.
 
-## Cause 4: The user who activated the agreement is disabled
+## Cause 4: The user who activated the agreement might not have access
 
-The system processes agreements in the security context of the user who activated the agreement. If that user account is disabled or no longer has the required security roles, work order generation fails silently.
+The system processes agreements in the security context of the user who activated the agreement. If that user account is disabled or no longer has the required security roles, work orders might not generate as expected.
 
 ### Solution: Reactivate with an active user
 
