@@ -191,7 +191,7 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 1. `CheckRegKey`: Check if the `CloudKerberosTicketRetrieval` registry key is enabled. This registry key is required for Entra Kerberos authentication.
 1. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 1. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
-1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
+1. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`. For security reasons, you may optionally [disable Web Proxy Auto-Discovery (WPAD)](../../../../windows-server/networking/disable-http-proxy-auth-features.md#how-to-disable-wpad) via registry keys. However, you shouldn't disable the entire `WinHttpAutoProxySvc` service, as it is responsible for a host of other functionalities, including Kerberos Key Distribution Center Proxy (KDC Proxy) requests.
 1. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
 1. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
 1. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
@@ -294,14 +294,14 @@ This error might occur if a domain controller that holds the RID Master FSMO rol
 
 This error is most likely triggered by a syntax error in the `Join-AzStorageAccountforAuth` command.Check the command for misspellings or syntax errors and verify that the latest version of the [AzFilesHybrid](https://www.powershellgallery.com/packages/AzFilesHybrid/) module is installed.
 
-## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
+## Azure Files on-premises AD DS authentication support for AES-256 Kerberos encryption
 
 Azure Files uses Kerberos authentication for identity-based access when using Active Directory Domain Services (AD DS) on-premises. AES-256 Kerberos encryption has been supported since AzFilesHybrid module v0.2.2, and it's been the default encryption method since module v0.2.5. Historically, RC4 was the only supported encryption option until AES-256 support was added.
 
 > [!IMPORTANT]
-> An upcoming Windows change (**July 2026 Windows Server Update**) will change the default Kerberos encryption type from RC4 to AES-256. Storage accounts that haven't yet been upgraded to AES-256 may experience mount errors when this change rolls out. You should take action before applying this update to ensure uninterrupted access to your Azure file shares. Customers who have already upgraded to AES-256 won't be impacted.
+> An upcoming Windows change (**July 2026 Windows Server Update**) will change the default Kerberos encryption type from RC4 to AES-256. Storage accounts that haven't yet been upgraded to AES-256 might experience mount errors when this change rolls out. You should take action before applying this update to ensure uninterrupted access to your Azure file shares. Customers who have already upgraded to AES-256 won't be impacted.
 >
-> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storagaccount.domain.com` instead of `<storageaccount>.file.core.windows.net`) might be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, we recommend upgrading to AES-256 before applying the April update.
+> Storage accounts configured with custom DNS suffixes or custom Kerberos service principal names (for example, `storageaccount.domain.com` instead of `<storageaccount>.file.core.windows.net`) might be impacted earlier, beginning with the **April 2026 Windows Update**. If you use custom SPNs, upgrade to AES-256 before applying the April update.
 >
 > For more information about this Windows change, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc).
 
@@ -315,7 +315,7 @@ Get-ADObject `
     Select-Object Name, ObjectClass, servicePrincipalName, msDS-SupportedEncryptionTypes
 ```
 
-If no results are returned, your accounts already support AES-256 and no action is needed. If any accounts are returned, you need to upgrade those accounts to support AES-256 using one of the two options below.
+If no results are returned, your accounts already support AES-256, and you don't need to take any action. If any accounts are returned, you need to upgrade those accounts to support AES-256 using one of the two options described in Step 2.
 
 > [!NOTE]
 > If you're using storage accounts outside of the Azure public cloud, adjust `*.file.core.windows.net` in the LDAP filter to match the endpoint for your environment.
@@ -341,7 +341,7 @@ As part of the update, the cmdlet rotates the Kerberos keys, which is necessary 
 
 If you can't use the AzFilesHybrid module, you can manually upgrade to AES-256 by following these steps.
 
-**Check domain properties**
+First, check the domain properties:
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -351,7 +351,7 @@ $sa = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageA
 $sa.AzureFilesIdentityBasedAuth.ActiveDirectoryProperties | Select-Object DomainName, SamAccountName, AccountType
 ```
 
-If `DomainName`, `SamAccountName`, and `AccountType` all return values, your domain properties are correctly set and you can skip ahead to **Enable AES-256 on the domain object**.
+If `DomainName`, `SamAccountName`, and `AccountType` all return values, your domain properties are correctly set and you can skip ahead to [Enable AES-256 on the domain object](#enable-aes-256-on-the-domain-object).
 
 > [!NOTE]
 > Only run the following script if the previous command returned empty, incorrect, or missing values. This script populates the required domain properties on the storage account.
@@ -392,10 +392,10 @@ Set-AzStorageAccount `
 
 For more information, see [Enable AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 
-**Enable AES-256 on the domain object**
+##### Enable AES-256 on the domain object
 
 > [!NOTE]
-> If you already ran the domain properties script above and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
+> If you already ran the preceding domain properties script and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
 
 ```PowerShell
 $saAdObject = Get-ADObject ` 
@@ -405,7 +405,7 @@ $saAdObject = Get-ADObject `
 $identity = $saAdObject.DistinguishedName
 ```
 
-To determine your account type, check the `AccountType` value from the domain properties check above, or run `$saAdObject.objectClass`. If the object class is `computer`, use `Set-ADComputer`. If it's `user`, use `Set-ADUser`.
+To determine your account type, check the `AccountType` value from the domain properties check, or run `$saAdObject.objectClass`. If the object class is `computer`, use `Set-ADComputer`. If it's `user`, use `Set-ADUser`.
 
 To enable AES-256 encryption on a **computer account**, run the following command.
 
@@ -419,7 +419,7 @@ To enable AES-256 encryption on a **service logon account**, run the following c
 Set-ADUser -Identity $identity -KerberosEncryptionType "AES256"
 ```
 
-**Refresh the domain object password**
+##### Refresh the domain object password
 
 After you run the preceding cmdlet, run the following script to refresh your domain object password. This step is critical to generating the appropriate authentication metadata on the service side.
 
@@ -437,8 +437,8 @@ Set-ADAccountPassword -Identity $identity -Reset -NewPassword $NewPassword
 After completing either Option 1 or Option 2, purge cached Kerberos tickets on the client and verify the upgrade by remounting the file share.
 
 1. Run `klist purge` from an elevated command prompt to clear any cached Kerberos tickets that still use RC4.
-2. Remount the Azure file share.
-3. Run `klist get cifs/<storage-account-name>.file.core.windows.net` to verify that the new Kerberos ticket uses AES-256 encryption.
+1. Remount the Azure file share.
+1. Run `klist get cifs/<storage-account-name>.file.core.windows.net` to verify that the new Kerberos ticket uses AES-256 encryption.
 
 The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encryption Type** and **Session Key Type**, similar to the following:
 

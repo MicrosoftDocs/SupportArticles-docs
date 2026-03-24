@@ -15456,6 +15456,11 @@
       "source_path": "support/mem/configmgr/diagnostics/turn-on-debuglogging-key.md",
       "redirect_url": "/intune/configmgr/core/plan-design/hierarchy/about-log-files#client-and-management-point-logging-options",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/default-owner-objects-created-members-administrators-group-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/default-owner-objects-created-members-administrators-group-not-available",
+      "redirect_document_id": false
     }
   ]
 }
