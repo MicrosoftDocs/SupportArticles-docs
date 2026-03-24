@@ -88,7 +88,7 @@ For more information, see [Azure role-based access control in Key Vault](/azure/
 
 On the other hand, if a certificate object is permanently deleted, you'll need to create a new certificate and update Application Gateway with the new certificate details. When you're configuring through the Azure CLI or Azure PowerShell, use a secret identifier URI without a version. This choice allows instances to retrieve a renewed version of the certificate, if it exists.
 
-:::image type="content" source="./media/application-gateway-key-vault-common-errors/" alt-text="Screenshot that shows how to recover a deleted certificate in Key Vault." lightbox="media/application-gateway-key-vault-common-errors/secret-deleted.png":::
+:::image type="content" source="./media/application-gateway-key-vault-common-errors/secret-deleted.png" alt-text="Screenshot that shows how to recover a deleted certificate in Key Vault." lightbox="media/application-gateway-key-vault-common-errors/secret-deleted.png":::
 
 [comment]: # (Error Code 4)
 ### Error code: UserAssignedManagedIdentityNotFound 
