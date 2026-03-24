@@ -9,9 +9,8 @@ ms.assetid: 1a3d1e84-f793-41b4-aa04-774a7e8f7719
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 03/05/2026
-ms.custom: 
-  - sfi-image-nochange
-  - sap:Connectivity
+ms.custom: sap:Issues configuring Azure Virtual Network (VNet) Peering, sfi-image-nochange
+
 # Customer intent: As a network engineer, I want to troubleshoot virtual network peering issues, so that I can ensure proper connectivity between Azure virtual networks in both the same and different subscriptions or regions.
 ---
 
