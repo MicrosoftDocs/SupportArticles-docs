@@ -25,7 +25,7 @@ ms.date: 03/23/2026
 
 ## Symptoms
 
-A formula that contains the **SUMIF**, **SUMIFS**, **COUNTIF**, **COUNTIFS**, or **COUNTBLANK** functions may return the "#VALUE!" error in Microsoft Excel.
+A formula that contains the **SUMIF**, **SUMIFS**, **COUNTIF**, **COUNTIFS**, or **COUNTBLANK** functions might return the "#VALUE!" error in Microsoft Excel.
 
 > [!NOTE]
 > This behavior also applies to the Dfunctions, such as **DAVERAGE**, **DCOUNT**, **DCOUNTA**, **DGET**, **DMAX**, **DMIN**, **DPRODUCT**, **DSTDEV**, **DSTDEVP**, **DSUM**, **DVAR**, and **DVARP**. **OFFSET** and **INDIRECT** functions also have this behavior.
@@ -62,7 +62,7 @@ Instead of using a formula that is similar to the following:
 
 > =COUNTIF([Source]Sheet1!$A$1:$A$8,"a")
 
-use the following formula:
+Use the following formula:
 
 > =SUM(IF([Source]Sheet1!$A$1:$A$8="a",1,0))
 
@@ -72,7 +72,7 @@ Instead of using a formula that is similar to the following:
 
 > =COUNTBLANK([Source]Sheet1!$A$1:$A$8)
 
-use the following formula:
+Use the following formula:
 
 > =SUM(IF([Source]Sheet1!$A$1:$A$8="",1,0))
 
