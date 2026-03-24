@@ -15461,6 +15461,11 @@
       "source_path": "support/windows-server/group-policy/default-owner-objects-created-members-administrators-group-not-available.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/default-owner-objects-created-members-administrators-group-not-available",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/contributor-role-not-assigned-for-web-app.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/cloud-services//contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": false
     }
   ]
 }

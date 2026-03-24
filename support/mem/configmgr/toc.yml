@@ -16,7 +16,7 @@ items:
     - name: Applications not deployed to users logged on to domain controllers
       href: app-management/applications-not-deployed-to-users.md
     - name: Contributor role is no longer assigned at the subscription level
-      href: app-management/contributor-role-not-assigned-for-web-app.md
+      href: cloud-services/contributor-role-not-assigned-for-web-app.md
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
     - name: Deployment Type changes are deployed unexpectedly
