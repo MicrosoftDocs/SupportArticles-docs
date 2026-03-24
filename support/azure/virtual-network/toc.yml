@@ -33,6 +33,8 @@ items:
   href: virtual-network-troubleshoot-connectivity-problem-between-vms.md
 - name: Can't delete a virtual network in Azure
   href: virtual-network-troubleshoot-cannot-delete-vnet.md
+- name: Troubleshoot subnet deletion and modification failures
+  href: virtual-network-troubleshoot-cannot-delete-modify-subnet.md
 
 
 
