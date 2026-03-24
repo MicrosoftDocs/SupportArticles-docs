@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot subnet deletion and modification failures in Azure Virtual Network
-description: Troubleshoot subnet deletion and modification failures in Azure Virtual Network, identify blocking dependencies, and follow the steps to fix issues now.
+description: Troubleshoot subnet deletion and modification failures in Azure Virtual Network, identify blocking dependencies, and follow the steps to fix problems.
 services: virtual-network
 author: asudbring
 ms.author: allensu
@@ -17,16 +17,16 @@ ms.custom:
 
 ## Summary
 
-Subnet deletion and modification failures in Azure Virtual Network can prevent you from deleting, modifying, or resizing subnets. Various Azure services deploy resources into subnets and create dependencies that block these operations. This article helps you identify blocking resources and resolve each scenario step by step.
+Subnet deletion and modification failures in Azure Virtual Network can prevent you from deleting, modifying, or resizing subnets. Various Azure services deploy resources into subnets and create dependencies that block these operations. This article helps you identify blocking resources and resolve each scenario.
 
-If this article doesn't address your Azure problem, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post in these forums, or post to [@AzureSupport](https://x.com/AzureSupport) on X. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
+If this article doesn't address your specific Azure problem, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post in these forums, or post to [@AzureSupport](https://x.com/AzureSupport) on X. You also can submit an Azure support request. To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support), and select **Get support**.
 
 > [!TIP]
-> For problems deleting a virtual network, see [Can't delete a virtual network or subnet in Azure](virtual-network-troubleshoot-cannot-delete-vnet.md).
+> For questions about how to delete a virtual network, see [Can't delete a virtual network or subnet in Azure](virtual-network-troubleshoot-cannot-delete-vnet.md).
 
 ## Diagnose blocking resources
 
-Before you start troubleshooting, use the following Azure CLI command to get a comprehensive view of all resources and configurations blocking subnet deletion or modification:
+Before you start troubleshooting, use the following Azure CLI command to get a comprehensive view of all resources and configurations that are blocking subnet deletion or modification:
 
 ```azurecli
 az network vnet subnet show \
@@ -39,11 +39,11 @@ az network vnet subnet show \
 
 Review the output to determine which resources or configurations are blocking your operation:
 
-- **delegations**: Services the subnet is delegated to.
-- **serviceEndpoints**: Configured service endpoints.
-- **ipConfigurations**: NICs, load balancers, and other resources with IP addresses in the subnet.
-- **privateEndpoints**: Private endpoint resources associated with the subnet.
-- **serviceAssociationLinks**: Services that deployed resources into the subnet.
+- **delegations**: Services the subnet is delegated to
+- **serviceEndpoints**: Configured service endpoints
+- **ipConfigurations**: NICs, load balancers, and other resources that have IP addresses in the subnet
+- **privateEndpoints**: Private endpoint resources tht are associated with the subnet
+- **serviceAssociationLinks**: Services that deploye resources into the subnet
 
 Use the corresponding sections in this article to resolve each type of blocking resource.
 
@@ -80,19 +80,19 @@ az network private-endpoint delete \
 
 In the [Azure portal](https://portal.azure.com):
 
-1. Go to the virtual network and select **Subnets**.
-2. Select the subnet and check the **Private endpoints** column.
-3. Go to each private endpoint resource and delete it.
+1. Go to the virtual network, and select **Subnets**.
+2. Select the subnet, and examine the **Private endpoints** column.
+3. Go to each private endpoint resource, and delete it.
 
 ### Service endpoints
 
-Service endpoints are subnet-level configurations and don't block subnet deletion by themselves. As stated in the [Azure Virtual Network FAQ](/azure/virtual-network/virtual-networks-faq), you can delete a subnet even when service endpoints are turned on.
+Service endpoints are subnet-level configurations that don't block subnet deletion by themselves. As stated in the [Azure Virtual Network FAQ](/azure/virtual-network/virtual-networks-faq), you can delete a subnet even if service endpoints are turned on.
 
-However, if you need to remove service endpoints before modifying a subnet or as part of a broader cleanup, use the following steps.
+However, if you have to remove service endpoints before you modify a subnet, or as part of a broader cleanup, use the following steps.
 
 **Identify service endpoints**
 
-Use Azure CLI to list service endpoints configured on the subnet. 
+Use Azure CLI to list service endpoints that are configured on the subnet. 
 
 ```azurecli
 az network vnet subnet show \
@@ -119,16 +119,16 @@ az network vnet subnet update \
 
 In the Azure portal:
 
-1. Go to the virtual network and select **Subnets**.
-2. Select the subnet and check the **Service endpoints** section.
-3. Remove any configured service endpoints and select **Save**.
+1. Go to the virtual network, and select **Subnets**.
+2. Select the subnet, and locate the **Service endpoints** section.
+3. Remove any configured service endpoints, and select **Save**.
 
 > [!WARNING]
-> Removing a service endpoint while resources depend on it can cause connectivity loss. Verify that no active resources rely on the endpoint before you remove it.
+> If you remove a service endpoint while resources depend on it, connectivity loss might occur. Verify that no active resources rely on the endpoint before you remove it.
 
 ### Subnet delegations
 
-A subnet delegation assigns the subnet to a specific Azure service. You can't delete a delegated subnet until you remove all resources that use the delegation and then remove the delegation itself.
+A subnet delegation assigns the subnet to a specific Azure service. You can't delete a delegated subnet until you remove all resources that use the delegation, and then you remove the delegation itself.
 
 **Common delegations and the services that create them:**
 
@@ -174,7 +174,7 @@ az network vnet subnet show \
 
 ### Service association links
 
-Azure services, like Azure Container Instances, Azure App Service, and Azure SQL Managed Instance, create service association links when they deploy resources into a subnet. These links prevent deletion of the subnet even after you remove the deployed resources.
+Azure services, such as Azure Container Instances, Azure App Service, and Azure SQL Managed Instance, create service association links when they deploy resources into a subnet. These links prevent deletion of the subnet even after you remove the deployed resources.
 
 **Identify service association links**
 
@@ -196,28 +196,28 @@ If service association links remain after you delete the resources:
 1. Verify that no resources from the linked service are still deployed in the subnet.
 2. Wait 10-15 minutes for the platform to clean up the links.
 3. Retry the subnet deletion.
-4. If the links still persist, open an Azure support request referencing the specific `linkedResourceType`.
+4. If the links persist, open an Azure support request that references the specific `linkedResourceType`.
 
 For Azure Container Instances specifically, see [Clean up resources](/azure/container-instances/container-instances-vnet#clean-up-resources) for CLI commands to remove container groups and network profiles.
 
 ### Network profiles (Azure Container Instances)
 
 > [!NOTE]
-> As of the Azure Container Instances API version `2021-07-01`, Microsoft retired network profiles. If you use this or a later API version, you can't create network profiles. The following guidance applies only to legacy deployments that use an older API version.
+> Starting in Azure Container Instances API version `2021-07-01`, Microsoft retired network profiles. If you use this or a later API version, you can't create network profiles. The following guidance applies to only legacy deployments that use an older API version.
 
 You create network profiles when you deploy Azure Container Instances into a virtual network. These profiles can remain after you delete container groups and block subnet deletion.
 
 **Identify network profiles**
 
-Use the Azure portal to find network profiles in the resource group. 
+Use the Azure portal to find network profiles in the resource group:
 
 1. In the Azure portal, go to the resource group's **Overview** page.
 2. In the header for the list of the resource group's resources, select **Show hidden types**.
-3. Look for network profile resources related to container groups.
+3. Look for network profile resources that are related to container groups.
 
 ### Solution
 
-Use Azure CLI to delete the network profile, and then retry the subnet deletion.
+Use Azure CLI to delete the network profile, and then retry the subnet deletion:
 
 ```azurecli
 az network profile delete \
@@ -229,7 +229,7 @@ If you can't delete the network profile, use these [Azure CLI commands](/azure/c
 
 ### NICs and IP configurations
 
-If you delete a virtual machine or other resource but keep the network interfaces (NICs), you can't delete the subnet. You need to remove each NIC that has an IP configuration in the subnet.
+If you delete a virtual machine (VM) or other resource but keep the network adapters (NICs), you can't delete the subnet. You have to remove each NIC that has an IP configuration in the subnet.
 
 **Identify NICs in the subnet**
 
@@ -264,11 +264,11 @@ The `AzureBastionSubnet` and `AzureFirewallSubnet` are reserved subnets for thei
 
 **Azure Bastion**
 
-Use the Azure portal to delete the Azure Bastion resource, then delete the `AzureBastionSubnet`.
+Use the Azure portal to delete the Azure Bastion resource, then delete the `AzureBastionSubnet`:
 
-1. In the Azure portal, search for **Bastions** and find the Bastion resource in the same virtual network.
+1. In the Azure portal, search for **Bastions**, and then locate the Bastion resource in the same virtual network.
 2. Delete the Azure Bastion resource.
-3. After the deletion finishes, delete the `AzureBastionSubnet`.
+3. After the deletion finishes, delete `AzureBastionSubnet`.
 
 Use Azure CLI to delete the Bastion resource:
 
@@ -280,11 +280,11 @@ az network bastion delete \
 
 **Azure Firewall**
 
-Use the Azure portal to delete the Azure Firewall resource, then delete the `AzureFirewallSubnet`.
+Use the Azure portal to delete the Azure Firewall resource, and then delete the `AzureFirewallSubnet`L
 
-1. In the Azure portal, search for **Firewalls** and find the Firewall resource.
+1. In the Azure portal, search for **Firewalls**, and then locate the Firewall resource.
 2. Deallocate or delete the Azure Firewall resource.
-3. After the deallocation or deletion finishes, delete the `AzureFirewallSubnet`.
+3. After the deallocation or deletion process finishes, delete `AzureFirewallSubnet`.
 
 Use Azure CLI to delete the Firewall resource:
 
@@ -296,10 +296,10 @@ az network firewall delete \
 
 ### SQL Managed Instance
 
-Azure SQL Managed Instance uses a dedicated subnet with a delegation of `Microsoft.Sql/managedInstances`. The managed instance deployment creates service association links and network intent policies that block subnet deletion.
+Azure SQL Managed Instance uses a dedicated subnet that has a delegation of `Microsoft.Sql/managedInstances`. The managed instance deployment creates service association links and network intent policies that block subnet deletion.
 
 > [!IMPORTANT]
-> Deleting a SQL Managed Instance can take several hours. Wait for the deletion to fully complete before you attempt to delete the subnet.
+> The process to delete a SQL Managed Instance can take several hours. Wait for the deletion to finish fully before you try to delete the subnet.
 
 **Identify SQL Managed Instance in the subnet**
 
@@ -319,13 +319,12 @@ Look for `Microsoft.Sql/managedInstances` in the delegations and service associa
 ### Solution
 
 1. Delete the SQL Managed Instance from the Azure portal or by using Azure CLI.
-2. Wait for the deletion to fully complete (check the resource group for status).
-3. After the instance is deleted, the service association links and network intent policies clear automatically.
-4. Remove the delegation and then delete the subnet.
+2. Wait for the deletion to fully finish (check the resource group for status). After the instance is deleted, the service association links and network intent policies clear automatically.
+4. Remove the delegation, and then delete the subnet.
 
 ### Azure Virtual Network Gateway subnets
 
-The `GatewaySubnet` is a reserved subnet used by Azure VPN Gateway and Azure ExpressRoute gateway. You can't delete this subnet while a virtual network gateway exists.
+The `GatewaySubnet` is a reserved subnet that's used by Azure VPN Gateway and Azure ExpressRoute gateway. You can't delete this subnet while a virtual network gateway exists.
 
 **Identify the gateway**
 
@@ -340,7 +339,7 @@ az network vnet-gateway list \
 
 ### Solution
 
-1. Use Azure CLI to delete any **connections** associated with the gateway first:
+1. Use Azure CLI to delete any **connections** that are associated with the gateway:
 
     ```azurecli
     az network vpn-connection delete \
@@ -356,17 +355,17 @@ az network vnet-gateway list \
         --name <gateway-name>
     ```
 
-3. After the gateway is deleted, delete the `GatewaySubnet`.
+3. After the gateway is deleted, delete `GatewaySubnet`.
 
 ## Troubleshoot subnet modification failures
 
-### Resize a subnet with active resources
+### Resize a subnet that has active resources
 
 You can resize a subnet that has active resources if the new address range still includes all existing IP addresses. If the new range excludes an IP address in use, the resize operation fails.
 
 **Before you resize**
 
-1. Use Azure CLI to check the number of used IP addresses in the subnet.
+1. Use Azure CLI to check the number of used IP addresses in the subnet:
 
     ```azurecli
     az network vnet subnet show \
@@ -376,7 +375,7 @@ You can resize a subnet that has active resources if the new address range still
         --query "ipConfigurations | length(@)"
     ```
 
-2. Verify the new address prefix accommodates all assigned addresses.
+2. Verify that the new address prefix accommodates all assigned addresses.
 3. Update the subnet.
 
     ```azurecli
@@ -388,7 +387,7 @@ You can resize a subnet that has active resources if the new address range still
     ```
 
 > [!NOTE]
-> Azure reserves five IP addresses within each subnet. The first four addresses and the last address are reserved. When you resize a subnet, account for these reserved addresses and your current allocations.
+> Azure reserves five IP addresses within each subnet. This group includes the first four addresses and the last address. When you resize a subnet, account for these reserved addresses and your current allocations.
 
 ### Change or remove a subnet delegation
 
@@ -417,7 +416,7 @@ You can't change a subnet delegation while resources from the current delegation
 
 ### Add or remove service endpoints on an active subnet
 
-Changing service endpoints on an active subnet can cause a brief connectivity disruption to the target service. Plan endpoint changes during a maintenance window.
+If you change service endpoints on an active subnet, this activity can cause a brief connectivity disruption to the target service. Plan endpoint changes to occur during a maintenance window.
 
 **Add a service endpoint**
 
@@ -433,7 +432,7 @@ az network vnet subnet update \
 
 **Remove a specific service endpoint**
 
-To remove a specific service endpoint, specify only the endpoints you want to keep.
+To remove a specific service endpoint, specify only the endpoints that you want to keep.
 
 Use Azure CLI to remove a specific service endpoint from the subnet:
 
@@ -446,26 +445,26 @@ az network vnet subnet update \
 ```
 
 > [!WARNING]
-> Removing a service endpoint while resources depend on it can cause connectivity loss. Verify no active resources rely on the endpoint before you remove it.
+> If you remove a service endpoint while resources depend on it, this change can cause connectivity loss. Verify that no active resources rely on the endpoint before you remove that endpoint.
 
 ## Common error messages
 
 | Error message | Cause | Resolution |
 |---|---|---|
-| `Subnet <name> is in use and cannot be deleted.` | Resources such as NICs, private endpoints, or service deployments are still in the subnet. | Use the [diagnostic command](#diagnose-blocking-resources) to identify blocking resources and remove them. |
+| `Subnet <name> is in use and cannot be deleted.` | Resources such as network adapters, private endpoints, and service deployments are still in the subnet. | Use the [diagnostic command](#diagnose-blocking-resources) to identify and remove blocking resources. |
 | `InUseSubnetCannotBeDeleted` | The subnet contains IP configurations from VMs, load balancers, or other resources. | Remove or move the resources to another subnet, then retry the deletion. |
-| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Service endpoints alone don't block subnet deletion. If this error occurs with other blocking resources, resolve those resources first. To remove service endpoints, see [Service endpoints](#service-endpoints). |
+| `SubnetHasServiceEndpoints` | Service endpoints are configured on the subnet. | Service endpoints alone don't block subnet deletion. If this error occurs in conjunction with other blocking resources, resolve those resources first. To remove service endpoints, see [Service endpoints](#service-endpoints). |
 | `SubnetHasDelegations` | The subnet is delegated to a service and resources from that service are deployed. | [Remove delegated resources and the delegation](#subnet-delegations). |
-| `SubnetWithExternalResourcesCannotBeUsedByOtherResources` | Another Azure service has deployed resources in the subnet. | Identify the service by using [service association links](#service-association-links) and remove the deployed resources. |
-| `InUseNetworkInterfaceCannotBeAssociatedWithSubnet` | An orphaned NIC has an IP configuration that conflicts with subnet operations. | [Delete the orphaned NIC](#nics-and-ip-configurations), then retry the operation. |
+| `SubnetWithExternalResourcesCannotBeUsedByOtherResources` | Another Azure service has deployed resources in the subnet. | Identify the service by using [service association links](#service-association-links), and remove the deployed resources. |
+| `InUseNetworkInterfaceCannotBeAssociatedWithSubnet` | An orphaned NIC has an IP configuration that conflicts with subnet operations. | [Delete the orphaned network adapter](#nics-and-ip-configurations), and retry the operation. |
 | `SubnetIsDelegatedAndCannotBeUsed` | The subnet is already delegated to another service. | [Change or remove the delegation](#change-or-remove-a-subnet-delegation) before deploying a new service. |
-| `NetworkProfileCannotBeDeleted` | A network profile (used by Azure Container Instances) still references the subnet. | See [Network profiles](#network-profiles-azure-container-instances). |
+| `NetworkProfileCannotBeDeleted` | A network profile (that's used by Azure Container Instances) still references the subnet. | See [Network profiles](#network-profiles-azure-container-instances). |
 
 ## Recommended deletion order
 
-When you clean up a subnet that has multiple blocking resources, follow this order:
+When you clean up a subnet that has multiple blocking resources, delete the resources in the following order:
 
-1. Virtual machines and their NICs
+1. Virtual machines and their network adapters
 2. Private endpoints
 3. Service deployments (Container Instances, App Service, flexible servers)
 4. Service association links (wait for cleanup)
