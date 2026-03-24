@@ -70,7 +70,7 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Disable-ADOptionalFeature](/powershell/module/activedirectory/disable-adoptionalfeature) | Disables an Active Directory optional feature. |
 | [Enable-ADAccount](/powershell/module/activedirectory/enable-adaccount) | Enables an Active Directory account. |
 | [Enable-ADOptionalFeature](/powershell/module/activedirectory/enable-adoptionalfeature) | Enables an Active Directory optional feature. |
-| [Get-ADAccountAuthorizationGroup](/powershell/module/activedirectory/get-adaccountauthorizationgroup) | Gets the account token group information. |
+| [Get-ADAccountAuthorizationGroup](/powershell/module/activedirectory/get-adaccountauthorizationgroup) | Gets the account's token group information. |
 | [Get-ADAccountResultantPasswordReplicationPolicy](/powershell/module/activedirectory/get-adaccountresultantpasswordreplicationpolicy) | Gets the resultant password replication policy for an Active Directory account. |
 | [Get-ADAuthenticationPolicy](/powershell/module/activedirectory/get-adauthenticationpolicy) | Gets one or more Active Directory Domain Services authentication policies. |
 | [Get-ADAuthenticationPolicySilo](/powershell/module/activedirectory/get-adauthenticationpolicysilo) | Gets one or more Active Directory Domain Services authentication policy silos. |
@@ -82,8 +82,8 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Get-ADComputerServiceAccount](/powershell/module/activedirectory/get-adcomputerserviceaccount) | Gets the service accounts that are hosted by a computer. |
 | [Get-ADDefaultDomainPasswordPolicy](/powershell/module/activedirectory/get-addefaultdomainpasswordpolicy) | Gets the default password policy for an Active Directory domain. |
 | [Get-ADDomain](/powershell/module/activedirectory/get-addomain) | Gets an Active Directory domain. |
-| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs that are based on discoverable services criteria, search parameters, or by providing a DC identifier, such as the NetBIOS name. |
-| [Get-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicy) | Gets the members of the allowed list or denied list of a read-only DC password replication policy. |
+| [Get-ADDomainController](/powershell/module/activedirectory/get-addomaincontroller) | Gets one or more Active Directory DCs by using discoverable services criteria, search parameters, or by providing a DC identifier, such as the NetBIOS name. |
+| [Get-ADDomainControllerPasswordReplicationPolicy](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicy) | Gets the members of the allowed list or denied list of a read-only domain controller's password replication policy. |
 | [Get-ADDomainControllerPasswordReplicationPolicyUsage](/powershell/module/activedirectory/get-addomaincontrollerpasswordreplicationpolicyusage) | Gets the Active Directory accounts that are authenticated by a read-only DC or that are in the revealed list of the DC. |
 | [Get-ADFineGrainedPasswordPolicy](/powershell/module/activedirectory/get-adfinegrainedpasswordpolicy) | Gets one or more Active Directory fine-grained password policies. |
 | [Get-ADFineGrainedPasswordPolicySubject](/powershell/module/activedirectory/get-adfinegrainedpasswordpolicysubject) | Gets the users and groups to which a fine-grained password policy is applied. |
@@ -105,7 +105,7 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Get-ADResourcePropertyList](/powershell/module/activedirectory/get-adresourcepropertylist) | Gets resource property lists from Active Directory. |
 | [Get-ADResourcePropertyValueType](/powershell/module/activedirectory/get-adresourcepropertyvaluetype) | Gets a resource property value type from Active Directory. |
 | [Get-ADRootDSE](/powershell/module/activedirectory/get-adrootdse) | Gets the root of a directory server information tree. |
-| [Get-ADServiceAccount](/powershell/module/activedirectory/get-adserviceaccount) | Gets one or more Active Directory-managed service accounts or group-managed service accounts. |
+| [Get-ADServiceAccount](/powershell/module/activedirectory/get-adserviceaccount) | Gets one or more Active Directory managed service accounts or group managed service accounts. |
 | [Get-ADTrust](/powershell/module/activedirectory/get-adtrust) | Gets all trusted domain objects in the directory. |
 | [Get-ADUser](/powershell/module/activedirectory/get-aduser) | Gets one or more Active Directory users. |
 | [Get-ADUserResultantPasswordPolicy](/powershell/module/activedirectory/get-aduserresultantpasswordpolicy) | Gets the resultant password policy for a user. |
@@ -130,9 +130,9 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [New-ADReplicationSubnet](/powershell/module/activedirectory/new-adreplicationsubnet) | Creates an Active Directory replication subnet object. |
 | [New-ADResourceProperty](/powershell/module/activedirectory/new-adresourceproperty) | Creates a resource property in Active Directory. |
 | [New-ADResourcePropertyList](/powershell/module/activedirectory/new-adresourcepropertylist) | Creates a resource property list in Active Directory. |
-| [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount) | Creates a new Active Directory-managed service account or group-managed service account object. |
+| [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount) | Creates a new Active Directory managed service account or group managed service account object. |
 | [New-ADUser](/powershell/module/activedirectory/new-aduser) | Creates an Active Directory user. |
-| [Remove-ADAuthenticationPolicy](/powershell/module/activedirectory/remove-adauthenticationpolicy) | Removes an Ad DS authentication policy object. |
+| [Remove-ADAuthenticationPolicy](/powershell/module/activedirectory/remove-adauthenticationpolicy) | Removes an AD DS authentication policy object. |
 | [Remove-ADAuthenticationPolicySilo](/powershell/module/activedirectory/remove-adauthenticationpolicysilo) | Removes an AD DS authentication policy silo object. |
 | [Remove-ADCentralAccessPolicy](/powershell/module/activedirectory/remove-adcentralaccesspolicy) | Removes a central access policy from Active Directory. |
 | [Remove-ADCentralAccessPolicyMember](/powershell/module/activedirectory/remove-adcentralaccesspolicymember) | Removes central access rules from a central access policy in Active Directory. |
@@ -191,9 +191,9 @@ The following table provides an index of the Active Directory module cmdlets tha
 | [Set-ADReplicationSubnet](/powershell/module/activedirectory/set-adreplicationsubnet) | Sets the properties of an Active Directory replication subnet object. |
 | [Set-ADResourceProperty](/powershell/module/activedirectory/set-adresourceproperty) | Modifies a resource property in Active Directory. |
 | [Set-ADResourcePropertyList](/powershell/module/activedirectory/set-adresourcepropertylist) | Modifies a resource property list in Active Directory. |
-| [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount) | Modifies an Active Directory-managed service account or group-managed service account object. |
+| [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount) | Modifies an Active Directory managed service account or group managed service account object. |
 | [Set-ADUser](/powershell/module/activedirectory/set-aduser) | Modifies an Active Directory user. |
-| [Show-ADAuthenticationPolicyExpression](/powershell/module/activedirectory/show-adauthenticationpolicyexpression) | Displays the Edit Access Control Conditions window update or creates security descriptor definition language (SDDL) security descriptors. |
+| [Show-ADAuthenticationPolicyExpression](/powershell/module/activedirectory/show-adauthenticationpolicyexpression) | Creates or modifies an security descriptor definition language (SDDL) security descriptor by using the Edit Access Control Conditions window. |
 | [Start-ADServiceAccountMigration](/powershell/module/activedirectory/start-adserviceaccountmigration) | Starts the migration process by linking a normal user account to a delegated managed service account. |
 | [Undo-ADServiceAccountMigration](/powershell/module/activedirectory/undo-adserviceaccountmigration) | Reverts the previous migration phase of a migration to a delegated managed service account. If the migration process is currently in the start phase, the accounts are unlinked from each other. If the migration is in the completed phase, it reverts to the state in the start phase. |
 | [Unlock-ADAccount](/powershell/module/activedirectory/unlock-adaccount) | Unlocks an Active Directory account. |
