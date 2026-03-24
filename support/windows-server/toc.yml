@@ -446,6 +446,8 @@ items:
       href: ./active-directory/set-user-password-with-ldifde.md
     - name: Some applications and APIs require access to authorization information
       href: ./active-directory/apps-apis-require-access.md
+    - name: Specify a server name and port number for an Active Directory cmdlet
+      href: ./active-directory/specify-server-port-active-directory-powershell-cmdlet.md
     - name: The Lingering Object Liquidator (LoL) tool
       href: ./active-directory/lingering-object-liquidator-tool.md
     - name: '"This property is limited to 64 values" error'
