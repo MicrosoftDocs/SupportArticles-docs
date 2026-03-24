@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.reviewer: v-kccross, rewood
 appliesto: 
   - Microsoft 365
-ms.date: 02/12/2026
+ms.date: 03/24/2026
 ---
 
 # Resolve errors during orchestrated migration (preview)
@@ -44,10 +44,10 @@ This article provides lists of errors that you might experience during user data
 | **CTM-001** | User migration validation failed. User is already a part of same batch. | User migration validation failed. User is already a part of another batch {0}. | No action required. User is already a part of the batch. |
 | **CTM-002** | User migration validation failed. User is already a part of another batch {0} | The user was submitted in another batch that's currently running. | No action required required. User is already a part of a batch. |
 | **CTM-100** | User migration validation failed. User identity mapping not found. | Identity mapping not found for the user. | Rerun identity mapping for the user. |
-| **CTM-101** | User migration validation failed. User identity mapping not in completed state. Mapping state is <state from IM>. Refer to identity mapping documentation to complete the process or fix the errors. | Identity mapping is found, but isn't in a completed state. It could be in mapped state. | Either wait for identity mapping to finish, or run the complete identity mapping steps. |
+| **CTM-101** | User migration validation failed. User identity mapping not in completed state. Mapping state is \<state from IM>. Refer to identity mapping documentation to complete the process or fix the errors. | Identity mapping is found, but isn't in a completed state. It could be in a mapped state. | Either wait for identity mapping to finish, or run the complete identity mapping steps. |
 | **CTM-102** | Service is experiencing a high volume of requests and we are unable to validate the user at this time. Please resubmit the user as part of a different batch after some time. | The service is experiencing a high volume of requests and can't validate the user at this time. Resubmit the user as part of a different batch after some time. | Retry the migration. |
 | **CTM-103** | An internal server error occurred during the validation of the user. Please resubmit the user as part of a different batch or contact support if the issue persists. | An internal server error occurred during user validation. | Retry the migration. |
-| **CTM-104** | User migration failed.  The CTMS and/or CTIM Apps are either not provisioned, not enabled, or not fully configured. Please refer to tenant configuration documentation and retry migration. | Either the CTMS app or CTIM app is not set up correctly, or both are not. | Refer to the documentation for tenant configuration, and set up the CTMS app correctly by rerunning the CTMS set-up script. Then, retry the migration. |
+| **CTM-104** | User migration failed.  The CTMS and/or CTIM Apps are either not provisioned, not enabled, or not fully configured. Please refer to tenant configuration documentation and retry migration. | Either the CTMS app or CTIM app is not set up correctly, or both are not. | Refer to the documentation for tenant configuration, and set up the CTMS app correctly by rerunning the CTMS setup script. Then, retry the migration. |
 
 ## Exchange mailbox migration errors
 
