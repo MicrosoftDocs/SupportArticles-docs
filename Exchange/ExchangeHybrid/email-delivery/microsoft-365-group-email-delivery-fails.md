@@ -58,24 +58,24 @@ You use centralized mail transport. In this scenario, the email messages that ar
 
 ## Resolution
 
-Determine whether the Exchange Online service recognizes the sender of an email message to the group as an authenticated user. If it does, then the value of the X-MS-Exchange-Organization-AuthAs header in a message from the sender is set to `internal`. If the service doesn’t recognize the sender as an authenticated user, then the value of the header is set to `anonymous`.
+Determine whether the Exchange Online service recognizes the sender of an email message to the group as an authenticated user. If it does, then the value of the `X-MS-Exchange-Organization-AuthAs` header in a message from the sender is set to `internal`. If the service doesn’t recognize the sender as an authenticated user, then the value of the header is set to `anonymous`.
 
-To check the value of the X-MS-Exchange-Organization-AuthAs header, follow these steps:
+To check the value of the `X-MS-Exchange-Organization-AuthAs` header, follow these steps:
 
 1. Send an email message from an On-Premises mailbox to a mailbox that’s hosted in your Exchange Online tenant.
-2. Locate the [X-MS-Exchange-Organization-AuthAs header,](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c) and check its value:
+2. Locate the [`X-MS-Exchange-Organization-AuthAs header`,](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c) and check its value:
 
-- If the value is anonymous, see Solution for scenario 1.
+- If the value is `anonymous`, see Solution for scenario 1.
 
-- If the value is internal, see Solution for scenario 2.
+- If the value is `internal`, see Solution for scenario 2.
 
 ### Solution for scenario 1
 
 The commands that are listed in this solution use "groups.contoso.com" as the email address of the affected Microsoft 365 group. In the commands, replace this address with the email address that’s associated with your Microsoft 365 group.
 
-If the value of the X-MS-Exchange-Organization-AuthAs header is `anonymous`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
+If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
 
-1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).  
+1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be \`Outbound to Office 365\`. This connector is created by the Hybrid Configuration wizard (HCW).  
 
     To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](https://learn.microsoft.com/en-us/exchange/mail-flow/connectors/protocol-logging) is not enabled by default. If it's not enabled, follow these steps to enable protocol logging, and then check the protocol log.
 
@@ -110,15 +110,15 @@ If the value of the X-MS-Exchange-Organization-AuthAs header is `anonymous`, che
           
         **Note**: When you run the HCW the next time, the groups.contoso.com domain is removed from the address space. Therefore, you will need to add it again.
 
-3. **TLSCertificateName parameter**: Check the values that are set for the TLSCertificateName parameter in the Outbound to Office 365 Send connector. The `Issuer` and `SubjectName` attributes for the parameter must match the corresponding values in the trusted third-party certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
+3. **TLSCertificateName parameter**: Check the values that are set for the \`TLSCertificateName\` parameter in the Outbound to Office 365 Send connector. The \`Issuer\` and \`SubjectName\` attributes for the parameter must match the corresponding values in the trusted third-party certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
 
-    a. To find the Issuer and SubjectName attributes of the trusted third-party certificate, run the following command:
+    a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted third-party certificate, run the following command:
 
        ```powershell
        Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \| fl issuer, subject,services
        ```
 
-    b. To check the values that are set for the TLSCertificateName parameter in the Send connector, run the following command:
+    b. To check the values that are set for the \`TLSCertificateName\` parameter in the Send connector, run the following command:
   
        ```powershell
        Get-SendConnector -Identity "Outbound to Office 365\*" \| fl name, TLSCertificateName
@@ -139,7 +139,7 @@ If the value of the X-MS-Exchange-Organization-AuthAs header is `anonymous`, che
 
             3.  Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
 
-4. **CloudServicesMailEnabled parameter**: Check the value of the CloudServicesMailEnabled parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
+4. **CloudServicesMailEnabled parameter**: Check the value of the \`CloudServicesMailEnabled\` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to \`true\`. Follow these steps:
 
     a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
 
@@ -147,15 +147,15 @@ If the value of the X-MS-Exchange-Organization-AuthAs header is `anonymous`, che
         Get-InboundConnector -Identity "Inbound connector name" \| fl CloudServicesMailEnabled
         ```
 
-    b.  If the output displays the value as `false`, run the following command:  
+    b.  If the output displays the value as \`false\`, run the following command:  
 
         ```powershell     
         Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
         ```
 
-5. **TLSSenderCertificateName parameter**: Check the value of the TLSSenderCertificateName parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
+5. **TLSSenderCertificateName parameter**: Check the value of the \`TLSSenderCertificateName\` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
 
-    a. To check the value that's set for the TLSSenderCertificateName parameter, run the following command:  
+    a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
 
        ```powershell
        Get-InboundConnector -Identity "Inbound connector name" \| fl "TLSSenderCertificateName"
@@ -169,6 +169,6 @@ If the value of the X-MS-Exchange-Organization-AuthAs header is `anonymous`, che
 
 ### Solution for scenario 2
 
-If the value of the X-MS-Exchange-Organization-AuthAs header is `internal`, then it's likely that you implemented centralized mail transport. In this scenario, the value of the msExchRequireAuthToSendTo attribute of the Microsoft 365 Group object that’s synchronized to Exchange On-Premises is always set to `True`. This value is set to `True` even if the value of the msExchRequireAuthToSendTo attribute in the corresponding Microsoft 365 group in Exchange Online is set to `False`.  
+If the value of the X-MS-Exchange-Organization-AuthAs header is \`internal\`, then it's likely that you implemented centralized mail transport. In this scenario, the value of the msExchRequireAuthToSendTo attribute of the Microsoft 365 Group object that’s synchronized to Exchange On-Premises is always set to \`True\`. This value is set to \`True\` even if the value of the msExchRequireAuthToSendTo attribute in the corresponding Microsoft 365 group in Exchange Online is set to \`False\`.  
   
 Also, in centralized mail transport, email messages are routed from Exchange Online to On-Premises and then back to Exchange Online. Because the email messages from external users are unauthenticated, and the Microsoft 365 Group object is configured to accept email messages from authenticated users only, the email messages are rejected by the On-Premises server. For this reason, centralized mail transport is not supported for Microsoft 365 groups in a hybrid Exchange environment.
