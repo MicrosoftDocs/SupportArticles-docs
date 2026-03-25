@@ -3,8 +3,8 @@ title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
-ms.date: 03/17/2026
-ms.reviewer: srijangupta, scotro, jarrettr
+ms.date: 03/25/2026
+ms.reviewer: divargas, jarrettr
 ---
 
 
