@@ -11,7 +11,7 @@ ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli,
 
 ## Summary
 
-The health probe mode feature enables you to configure how Azure Load Balancer checks the health of the nodes in your Azure Kubernetes Service (AKS) cluster. You can choose between two modes: Shared and ServiceNodePort. The Shared mode uses a single health probe for all external traffic policy cluster services that use the same load balancer. In contrast, the ServiceNodePort mode uses a separate health probe for each service. The Shared mode can reduce the number of health probes and improve the performance of the load balancer, but it requires some extra components to work properly. To enable this feature, see [How to enable the health probe mode feature using the Azure CLI](#how-to-enable-the-health-probe-mode-feature-using-the-azure-cli).
+The health probe mode feature enables you to configure how Azure Load Balancer checks the health of the nodes in your Azure Kubernetes Service (AKS) cluster. You can choose between two modes: Shared and ServiceNodePort. The Shared mode uses a single health probe for all external traffic policy cluster services that use the same load balancer. In contrast, the ServiceNodePort mode uses a separate health probe for each service. The Shared mode can reduce the number of health probes and improve the performance of the load balancer, but it requires some extra components to work properly. To enable this feature, see [How to enable the health probe mode feature by using Azure CLI](#how-to-enable-the-health-probe-mode-feature-by-using-azure-cli).
 
 This article describes some common problems with using the health probe mode feature in an AKS cluster and helps you troubleshoot and resolve these problems.
 
