@@ -69,9 +69,11 @@ The following sections discuss performance data and tools that can be used for t
 CPU usage represents the percentage of time the processor actively executes work versus remaining idle. Similarly, processes either spend time in CPU (such as 80 percent `usr` usage) or do not (such as 80 percent idle). The main tool to confirm CPU usage is `top`.
 
 The `top` tool runs in interactive mode by default. It refreshes every second and shows processes as sorted by CPU usage:
+```bash
+top
+```
 
 ```output
-$ top
 top - 19:02:00 up  2:07,  2 users,  load average: 1.04, 0.97, 0.96
 Tasks: 191 total,   3 running, 188 sleeping,   0 stopped,   0 zombie
 %Cpu(s): 29.2 us, 22.0 sy,  0.0 ni, 48.5 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
@@ -201,8 +203,10 @@ The `iostat` utility can be run using a simple command. The basic syntax is show
 
 The parameters dictate what information `iostat` provides. Without having any command parameter, `iostat` displays basic details:
 
+```bash
+iostat
+```
 ```output
-$ iostat
 Linux 3.10.0-957.21.3.el7.x86_64 (rhel76)       08/05/2019      _x86_64_        (1 CPU)
 avg-cpu:  %user   %nice %system %iowait  %steal   %idle
           41.06    0.00   30.47   21.00    0.00    7.47
@@ -219,7 +223,7 @@ By default, `iostat` displays data for all existing block devices, although mini
 Run `iostat` by specifying triggers:
 
 ```bash
-sudo iostat -dxctm 1
+iostat -dxctm 1
 ```
 
 To further expand the `iostat` results, use the following parameters.
@@ -235,10 +239,11 @@ To further expand the `iostat` results, use the following parameters.
 The numeral `1` in the command tells `iostat` to refresh every second. To stop the refresh, select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 If you include the extra parameters, the output resembles the following text:
-
+```bash
+iostat -dxctm 1
+```
 ```output
-    $ iostat -dxctm 1
-    Linux 3.10.0-957.21.3.el7.x86_64 (rhel76)       08/05/2019      _x86_64_        (1 CPU)
+        Linux 3.10.0-957.21.3.el7.x86_64 (rhel76)       08/05/2019      _x86_64_        (1 CPU)
         08/05/2019 07:03:36 PM
     avg-cpu:  %user   %nice %system %iowait  %steal   %idle
                3.09    0.00    2.28    1.50    0.00   93.14
@@ -280,14 +285,15 @@ The data presented by `iostat` is informational, but the presence of certain dat
 
 Networks can experience two main bottlenecks: low bandwidth and high latency.
 
-You can use `vnstat` to live-capture bandwidth details. However, `vnstat` isn't available in all distributions. The widely available `iptraf-ng` tool is another option to view real-time interface traffic.
+You can use `vmstat` to live-capture bandwidth details. However, `vnstat` isn't available in all distributions. The widely available `iptraf-ng` tool is another option to view real-time interface traffic.
 
 ### Network latency
 
 Network latency in two different systems can be determined by using a simple `ping` command in Internet Control Message Protocol (ICMP):
-
+```bash
+ping 1.1.1.1
+```
 ```output
-# ping 1.1.1.1
 PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 64 bytes from 1.1.1.1: icmp_seq=1 ttl=53 time=5.33 ms
 64 bytes from 1.1.1.1: icmp_seq=2 ttl=53 time=5.29 ms
@@ -307,17 +313,20 @@ To stop the ping activity, select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 - **Server**
 
-  ```output
+  ```bash
   # iperf3 -s
+  ```
+  ```output
   -----------------------------------------------------------
   Server listening on 5201
   -----------------------------------------------------------
   ```
   
 - **Client**
-  
+```bash
+iperf3 -c 10.1.0.4
+```  
   ```output
-  # iperf3 -c 10.1.0.4
   Connecting to host 10.1.0.4, port 5201
   [  5] local 10.1.0.4 port 60134 connected to 10.1.0.4 port 5201
   [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
@@ -355,9 +364,10 @@ Some common `iperf3` parameters for the client are shown in the following table.
 ## Memory resource
 
 Memory is another troubleshooting resource to check because applications might or might not use a portion of memory. You can use tools such as `free` and `top` to review overall memory utilization and determine how much memory various processes are consuming:
-
+```bash
+free -m
+```
 ```output
-# free -m
               total        used        free      shared  buff/cache   available
 Mem:           7802         435        5250           9        2117        7051
 Swap:             0           0           0
@@ -369,8 +379,11 @@ In the `free` output, the *available* column indicates how much memory is availa
 
 The `top` command and be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select <kbd>Shift</kbd>+<kbd>M</kbd> when you run `top`. The following text shows output from the `top` command:
 
+```bash
+top
+```
+
 ```output
-# top
 top - 22:40:15 up  5:45,  2 users,  load average: 0.08, 0.08, 0.06
 Tasks: 194 total,   2 running, 192 sleeping,   0 stopped,   0 zombie
 %Cpu(s): 12.3 us, 41.8 sy,  0.0 ni, 45.4 id,  0.0 wa,  0.0 hi,  0.5 si,  0.0 st
@@ -396,8 +409,10 @@ ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
 
 The following text shows example output from the command:
 
+```bash
+ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
+```
 ```output
-# ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head
    PID COMMAND         USER     COMMAND                     %CPU %MEM
  45922 tail            root     tail -f /dev/zero           82.7 61.6
 [...]
@@ -500,7 +515,7 @@ PerfInsights is the recommended tool from Azure support for VM performance issue
 
 ### Run PerfInsights
 
-PerfInsights is available for both the [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify the Linux distribution is in the list of [supported distributions](../windows/performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
+PerfInsights is available for [Linux](how-to-use-perfinsights-linux.md) OS. Verify the Linux distribution is in the list of [supported distributions](../windows/performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
 
 ### Run and analyze reports through the Azure portal
 
