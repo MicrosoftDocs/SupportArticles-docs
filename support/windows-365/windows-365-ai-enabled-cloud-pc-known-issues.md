@@ -32,12 +32,6 @@ After you install a Windows update, AI features might not be available.
 
 To restore all AI-enabled features, restart your Cloud PC.
 
-## "Click to Do" mouse cursor appears to lag
-
-While you use Click to Do, or after you dismiss the Click to Do feature, your Cloud PC cursor might appear to lag.
-
-To restore the cursor's responsiveness, restart your Cloud PC.
-
 ## Semantic Search results don't appear in the Windows search "All" tab
 
 Search results might take time to load in the **All** tab of the Windows search box.
@@ -68,9 +62,14 @@ To check this setting, and disable it if it's necessary, follow these steps:
 
 1. To apply the changes, select **OK**, and then restart your Cloud PC.
 
-## Click to Do doesn't work when Cloud PC is in windowed mode
+## Click‑to‑Do keyboard shortcut may not work in certain scenarios
 
-Click to Do might not work if your Cloud PC isn't in full-screen mode. Try maximizing your Cloud PC window (to full screen) before you use Click to Do.
+In some environments, the Click‑to‑Do keyboard shortcut may not launch the Click‑to‑Do experience as expected. This can occur when:
+   
+   Using a Cloud PC in windowed mode
+   
+   Accessing a Cloud PC from the Mac client
+You can still use Click‑to‑Do by manually launching it from the Start menu. Select Start, search for Click‑to‑Do, and open the app from the search results.
 
 ## Additional help for AI-enabled Cloud PC issues
 
