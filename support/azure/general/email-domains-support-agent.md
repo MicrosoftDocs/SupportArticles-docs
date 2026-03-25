@@ -15,11 +15,14 @@ Microsoft support may contact you by email for various reasons, such as providin
 
 ## How do I know if an email from Microsoft support is genuine?
 
-One of the ways to identify whether an email is from Microsoft support is to check the sender's email address. Microsoft support uses the following domains to send emails:
+One of the ways to identify whether an email is from Microsoft support is to check the sender's email address.
+
+Microsoft support uses the following domains to send emails:
 
 - microsoft.com
 - microsoftsupport.com
 - mail.support.microsoft.com
+- office365support.com
 - techsupport.microsoft.com
 
 If the email is being sent from a different domain, it's likely a phishing scam. For example, an email from microsoft-support@outlook.com or support@microsoft.net is not from Microsoft support.
