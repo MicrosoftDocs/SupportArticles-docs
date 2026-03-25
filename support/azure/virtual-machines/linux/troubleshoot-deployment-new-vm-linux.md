@@ -194,7 +194,7 @@ Use the table below as a **reference**, not a checklist. You do not need to iden
 "UDF driver Blocklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
 ```
 
- ####Cause
+ #### Cause
  
 The UDF driver is not loaded in the kernel. Loading is required for the VM to provision. See [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
@@ -202,7 +202,7 @@ When a VM is first provisioned on Azure, the Azure host presents a 'provisioning
 
 Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic). For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
-####Solution
+#### Solution
 
 Make sure that the UDF driver is configured to be loaded in the kernel.
 
@@ -218,11 +218,11 @@ A common method for UDF drivers to be blocked is through configurations within `
 AttributeError: 'module' object has no attribute 'JSONDecodeError'
 ```
 
-####Cause
+#### Cause
 
 This problem occurs because VM tags have non-ASCII characters, and the version of cloud-init is earlier than 20.3.
 
-####Solution
+#### Solution
 
 Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ASCII characters from the VM tags.
 
@@ -238,11 +238,11 @@ File "/usr/lib/python2.7/site-packages/cloudinit/sources/DataSourceAzure.py", li
 UnicodeEncodeError: 'ascii' codec can't encode characters in position 10-11: ordinal not in range(128)
 ```
 
-####Cause
+#### Cause
 
 This problem occurs because the provided password includes unsupported (non-ASCII) characters.
 
-####Solution
+#### Solution
 
 Provide a password that includes only ASCII characters.
 
@@ -256,13 +256,13 @@ Exit code: -
 Reason: [Errno 13] Permission denied: b'/var/tmp/cloud-init/cloud-init-dhcp-yd8mvxud/dhclient'
 ```
 
-####Cause 
+#### Cause 
 
 Older versions of cloud-init (earlier than version 20.3) perform DHCP by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP will fail because `dhclient` doesn't have permissions to run within `/var/tmp`.
 
 Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` "as-is" (by not copying and running it in `/var/tmp` if there are permissions issues).
 
-####Solution
+#### Solution
 
 For VMs that run cloud-init earlier than version 20.3, configure the VM so that `/var/tmp` is not mounted as `noexec`. Alternatively, upgrade the VM's cloud-init package to version 20.3 or a later version.
 
