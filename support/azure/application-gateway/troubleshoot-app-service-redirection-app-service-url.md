@@ -7,11 +7,12 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 04/15/2021
+ms.date: 03/27/2026
+ms.custom: sap:Configuration and Setup
 # Customer intent: "As a network engineer, I want to troubleshoot redirection issues between Azure Application Gateway and App Service, so that I can ensure proper URL handling and session affinity in my web applications."
 ---
 
-# Troubleshoot App Service issues in Application Gateway
+# Troubleshoot App Service redirection issues in Application Gateway
 
 ## Summary
 
