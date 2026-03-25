@@ -39,11 +39,9 @@ Get-ADCentralAccessRule -Filter * -Server dc01.contoso.com:3268
 | Custom port for Lightweight Directory Service (LDS) instances | Use the port number to identify the instance to connect to. Each instance can have a different schema and has a different set of naming contexts. These LDS instances are writable.<br /><br />**Important**: If LDS uses a custom service account, you have to use NTLM authentication to run cmdlets on the LDS instance.<sup>2</sup> |
 | Custom port for mounted AD DS snapshots | Use the port number to specify which mounted snapshot instance to connect to. Each mounted snapshot instance can have a different schema and has a different set of naming contexts. Mounted snapshots are set as read-only. |
 
-<sup>1</sup> The cmdlets in the Active Directory PowerShell module don't connect directly to a particular server and port. Instead, they connect to Active Directory Web Services (ADWS) on port 9389. ADWS connects to the local Active Directory instance on behalf of the cmdlet.
+<sup>1</sup> The cmdlets in the Active Directory PowerShell module don't connect directly to a particular server and port. Instead, they connect to ADWS on port 9389. ADWS connects to the local Active Directory instance on behalf of the cmdlet.
 
 <sup>2</sup> If LDS runs in the context of a custom service account, ADWS uses NTLM to authenticate requests instead of Kerberos. The Active Directory PowerShell provider uses the service principle name (SPN) that's registered to the custom service account (in this case, the LDAP service SPN). However, the ADWS endpoint runs in the context of the computer account.
-
-This happens as the AD powershell provider uses the LDAP service SPN which is registered on the LDS service account. But the ADWS endpoint AD powershell provider talks to runs in the computer identity. In this situation you require NTLM to authenticate.
 
 ## References
 
