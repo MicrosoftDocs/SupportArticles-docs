@@ -13,18 +13,38 @@ items:
       href: alerts-reports-queries/rsprocessingaborted-error-run-reports.md
 - name: Application management and software distribution
   items:
+  - name: Issues
+    items:
     - name: Applications not deployed to users logged on to domain controllers
       href: app-management/applications-not-deployed-to-users.md
-    - name: Contributor role is no longer assigned at the subscription level
-      href: cloud-services/contributor-role-not-assigned-for-web-app.md
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
     - name: Deployment Type changes are deployed unexpectedly
       href: app-management/deployment-type-changes-deployed-unexpectedly.md
-    - name: Troubleshoot Microsoft Store for Business and Education integration
-      href: app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration.md
+  - name: Understand application management
+    items:
+    - name: Before you begin
+      href: app-management/understand/app-deployment-technical-reference.md
+    - name: Application deployment policy
+      href: app-management/understand/deployment-policy-technical-reference.md
+    - name: Application deployment to device collections
+      href: app-management/understand/device-deployment-technical-reference.md
+    - name: Application deployment to user collections
+      href: app-management/understand/user-deployment-technical-reference.md
+    - name: Application deployment client components
+      href: app-management/understand/client-components-technical-reference.md
+    - name: Application evaluation
+      href: app-management/understand/deployment-evaluation-technical-reference.md
+    - name: Application download
+      href: app-management/understand/deployment-download-technical-reference.md
+    - name: Application installation
+      href: app-management/understand/deployment-install-technical-reference.md
+  - name: Troubleshoot application management
+    items:
     - name: Troubleshooting tips for application deployments
       href: app-management/troubleshoot/troubleshoot-application-deployment.md
+    - name: Troubleshoot Microsoft Store for Business and Education integration
+      href: app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration.md
 - name: Client installation and assignment
   items:
     - name: Conversion failed when upgrading to version 1810
@@ -64,6 +84,8 @@ items:
       href: cloud-services/cmg-creation-unavailable-region.md
     - name: CMG maintenance task fails to update public IP resource
       href: cloud-services/public-ip-creation-error.md
+    - name: Contributor role is no longer assigned at the subscription level
+      href: cloud-services/contributor-role-not-assigned-for-web-app.md
 - name: Collections
   items:
     - name: Multiple instances of the Unknown computers collection
