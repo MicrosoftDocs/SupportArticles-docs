@@ -6,12 +6,12 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 04/29/2025
-ms.custom: devx-track-azurepowershell
+ms.date: 03/27/2026
+ms.custom: sap:Facing 5xx errors,devx-track-azurepowershell
 # Customer intent: As an IT administrator troubleshooting application performance, I want to identify and fix 502 Bad Gateway errors in the application gateway, so that I can ensure reliable access and functionality of web applications for users.
 ---
 
-# Troubleshooting bad gateway errors in Application Gateway
+# Troubleshooting Bad Gateway (502) errors in Application Gateway
 
 ## Summary
 
