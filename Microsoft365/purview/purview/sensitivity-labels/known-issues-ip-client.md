@@ -70,7 +70,7 @@ You can't scan:
 
 ## Known issues for Information Protection File Labeler
 
-If you use new Outlook, the Address Book button in the **Select _users, groups, or organizations" field in the Information Protection File Labeler app doesn't open the Outlook address book. You must email addresses manually.
+If you use new Outlook, the Address Book button in the **Select _users, groups, or organizations" field in the Information Protection File Labeler app doesn't open the Outlook address book. You must add email addresses manually.
 
 ### Known issues for coauthoring
 
