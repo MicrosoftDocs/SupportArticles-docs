@@ -7,11 +7,13 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/04/2026
+ms.date: 03/27/2026
+ms.custom: sap:Configuration and Setup
+
 # Customer intent: As a cloud administrator, I want to troubleshoot backend server certificate issues with an internal load balancer and application gateway, so that I can ensure the health of my application services and maintain secure connections in Azure.
 ---
 
-# Backend server certificate isn't allow-listed for an application gateway that uses an internal load balancer with an App Service Environment
+# Backend server certificate isn't allow-listed with Application Gateway
 
 ## Summary
 
