@@ -1,7 +1,9 @@
 ---
 title: Configuration Manager Clients Can't Communicate with CMG
 description: Provides details about log files and solutions to common issues when Configuration Manager clients can't communicate with CMG.
-ms.date: 02/28/2025
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ms.reviewer: kaushika, bmoran
 ---
