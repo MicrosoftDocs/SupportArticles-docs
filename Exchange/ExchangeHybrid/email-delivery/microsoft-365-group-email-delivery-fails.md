@@ -13,6 +13,9 @@ ms.custom:
 ms.reviewer: v-six
 appliesto: 
   - Exchange Online
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
 search.appverid: MET150
 ms.date: 03/25/2026
 ---
