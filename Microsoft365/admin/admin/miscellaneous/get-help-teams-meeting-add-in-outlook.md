@@ -1,6 +1,6 @@
 ---
 title: Fix Teams meeting add-in for Outlook issues with the command line version of Get Help
-description: Describes available switches and conditions when using the commnad line version of Get Help to fix Teams meeting add-in issues in Outlook.
+description: Describes available switches and conditions when using the command line version of Get Help to fix Teams meeting add-in issues in Outlook.
 author: Cloud-Writer    
 ms.author: meerak
 manager: dcscontentpm
@@ -22,7 +22,7 @@ The Teams Meeting Add-in for Outlook scenario automates all the check and recove
 
 **Note:** This scenario doesn't require that you use an elevated Command Prompt window.
 
-## Download the commnad line version of Get Help
+## Download the command line version of Get Help
 
 Select the following button:
 
@@ -45,7 +45,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 
 Here's a sample combination of switches to run this scenario:
 
-- To resolve issues that affect the Teams meeting add-in for Outlook, run the following command in a non-elevated Command Prompt window:
+- To resolve issues that affect the Teams meeting add-in for Outlook, run the following command in a nonelevated Command Prompt window:
 
   ```console
   GetHelpCmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
@@ -53,7 +53,7 @@ Here's a sample combination of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run the Teams Meeting Add-in for Outlook scenario by using the commnad line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the commnad line version of Get Help takes for each condition that's encountered in this scenario, and the corresponding output that is displayed.
+When you run the Teams Meeting Add-in for Outlook scenario by using the command line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the command line version of Get Help takes for each condition that is encountered in this scenario, and the corresponding output that is displayed.
 
 |Condition|Action taken by the command line version|Output shown in the Command Prompt window|
 |---|---|---|

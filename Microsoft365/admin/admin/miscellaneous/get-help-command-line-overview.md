@@ -19,7 +19,7 @@ ms.date: 03/24/2026
 # Command line version of Get Help
 
 > [!NOTE]  
-> Microsoft Support and Recovery Assistant is deprecated. You can use the command line version of Get Help for all the tasks that you previously completed by using the Assistant.
+> Microsoft and Recovery Assistant is deprecated. You can use the command line version of Get Help for all the tasks that you previously completed by using the Assistant.
 > This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Microsoft Office, Microsoft 365, or Microsoft Outlook on your computer, you can [run troubleshooters in the full version of Get Help](https://support.microsoft.com/windows/running-troubleshooters-in-get-help-23bddffd-5495-47f6-a419-7efe166bf1a8).
 
 The command line version of Get Help is a self-contained, enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues that affect Microsoft 365 apps, such as Microsoft Teams and Outlook. This version of Get Help can run both at a command line and through a script such as PowerShell. It is particularly useful to run remotely on computers in your organization.

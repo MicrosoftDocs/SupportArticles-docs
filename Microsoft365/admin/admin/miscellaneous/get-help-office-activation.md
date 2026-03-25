@@ -1,6 +1,6 @@
 ---
 title: Office activation with the command line version of Get Help
-description: Describes available switches and conditions when using the commnad line version of Get Help to activate Office.
+description: Describes available switches and conditions when using the command line version of Get Help to activate Office.
 author: Cloud-Writer    
 ms.author: meerak
 manager: dcscontentpm
@@ -64,7 +64,7 @@ Here are some sample combinations of switches to run the Office Activation scena
 
 ## Detected conditions and results
 
-When you run the Office Activation scenario by using the command line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the commnad line version of Get Help takes for each condition that's encountered in this scenario, and the corresponding output that is displayed.
+When you run the Office Activation scenario by using the command line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the command line version of Get Help takes for each condition that's encountered in this scenario, and the corresponding output that is displayed.
 
 |Condition|Action taken by the command line version|Output shown in the Command Prompt window|
 |---|---|---|

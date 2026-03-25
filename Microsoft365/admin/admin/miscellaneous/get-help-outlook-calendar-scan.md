@@ -19,7 +19,7 @@ ms.date: 03/24/2026
 # Scenario: Outlook Calendar Scan
 
 > [!NOTE]
-> The Outlook Calendar Scan scenario in the command line version of Get Help is not available for new Outlook for Windows.
+> The Outlook Calendar Scan scenario in the command line version of Get Help isn't available for new Outlook for Windows.
 
 The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identify and report issues that involve general settings such as permissions, free/busy publishing, delegate configuration, and Direct Booking settings.
 
@@ -43,7 +43,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |`-S <scenarioname>`|Specify this switch and `OutlookCalendarCheckTask` as the value for the `scenarioname` parameter to run this scenario.|Required|
 |`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and to run this scenario.|Required|
 |`-P <Profile Name>`|Specify this switch and use the `<Profile Name>` parameter to identify the Outlook profile that the scenario has to scan.|Optional|
-|`-LogFolder <Output Path>`|Specify this switch to force *GetHelpCmd.exe* to output scenario-specific logs to the folder that's specified by the `<Output Path>` parameter.|Optional|
+|`-LogFolder <Output Path>`|Specify this switch to force *GetHelpCmd.exe* to output scenario-specific logs to the folder that is specified by the `<Output Path>` parameter.|Optional|
 |`-HideProgress`|Specify this switch to hide the progress display for this scenario. By default, Command line Get Help always displays the progress of tasks in the console.|Optional|
 
 ## Sample commands
@@ -52,9 +52,9 @@ Here are some sample combinations of switches to run this scenario.
 
 - Sample 1
 
-  To scan a calendar for the active profile in the instance of Outlook that's running, run the following command in a non-elevated Command Prompt window.
+  To scan a calendar for the active profile in the instance of Outlook that's running, run the following command in a nonelevated Command Prompt window.
   
-  **Note:** If Outlook isn't running, the calendar for the default Outlook profile will be scanned.
+  **Note:** If Outlook isn't running, the calendar for the default Outlook profile is scanned.
 
   ```console
   GetHelpCmd.exe -S OutlookCalendarCheckTask -AcceptEula
@@ -62,12 +62,12 @@ Here are some sample combinations of switches to run this scenario.
 
 - Sample 2
 
-  To scan a calendar for the profile named *MyProfile* in the instance of Outlook that's running, run the following command in a non-elevated Command Prompt window.
+  To scan a calendar for the profile named *MyProfile* in the instance of Outlook that's running, run the following command in a nonelevated Command Prompt window.
 
   **Note:**
 
-  - If Outlook is running, and the active profile isn't named *MyProfile*, the scenario will return an error result.
-  - If Outlook isn't running, the profile that's named *MyProfile* must exist.
+  - If Outlook is running, and the active profile isn't named *MyProfile*, the scenario displays an error result.
+  - If Outlook isn't running, the profile that is named *MyProfile* must exist.
 
   ```console
   GetHelpCmd.exe -S OutlookCalendarCheckTask -AcceptEula -P MyProfile
@@ -77,7 +77,7 @@ Here are some sample combinations of switches to run this scenario.
 
   To scan a calendar for the active profile in the instance of Outlook that's running, and output log files to the *C:\temp* folder, run the following command in a non-elevated Command Prompt window.
 
-  **Note:** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
+  **Note:** The folder that is specified with the `-LogFolder` switch must exist and be writeable.
 
   ```console
   GetHelpCmd.exe -S OutlookCalendarCheckTask -AcceptEula -LogFolder C:\temp
@@ -85,7 +85,7 @@ Here are some sample combinations of switches to run this scenario.
 
 - Sample 4
 
-  To scan a calendar for the profile that's named *MyProfile* in the instance of Outlook that's running, and hide the progress display in the console, run the following command in a non-elevated Command Prompt window:
+  To scan a calendar for the profile that is named *MyProfile* in the instance of Outlook that's running, and hide the progress display in the console, run the following command in a nonelevated Command Prompt window:
 
   ```console
   GetHelpCmd.exe -S OutlookCalendarCheckTask -AcceptEula -P MyProfile -HideProgress
@@ -93,7 +93,7 @@ Here are some sample combinations of switches to run this scenario.
 
 ## Detected conditions and results
 
-When you run the Outlook Calendar Scan scenario by using the command line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the command line version of Get Help takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
+When you run the Outlook Calendar Scan scenario by using the command line version of Get Help, you don't receive any prompts. This is a different experience from the full version of Get Help. The following table describes the actions that the command line version of Get Help takes for each condition that is encountered by this scenario, and the corresponding output that is displayed.
 
 |Condition|Action taken by the command line version|Output shown in the Command Prompt window|
 |---|---|---|
