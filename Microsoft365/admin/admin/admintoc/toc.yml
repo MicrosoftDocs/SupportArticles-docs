@@ -108,24 +108,24 @@
       href: ../installation/something-went-wrong-30016-4-error.md      
   - name: Miscellaneous
     items:
-    - name: Enterprise version of Microsoft Support and Recovery Assistant
+    - name: Command line version of Get Help
       items:
       - name: Overview
-        href: ../miscellaneous/sara-command-line-version.md
-      - name: 'Scenario: Outlook Scan'
-        href: ../miscellaneous/assistant-outlook-scan.md
-      - name: 'Scenario: Office Uninstall'
-        href: ../miscellaneous/assistant-office-uninstall.md
+        href: ../miscellaneous/get-help-command-line-overview.md
       - name: 'Scenario: Office Activation'
-        href: ../miscellaneous/assistant-office-activation.md
+        href: ../miscellaneous/get-help-office-activation.md
       - name: 'Scenario: Office Shared Computer Activation'
-        href: ../miscellaneous/assistant-office-shared-computer-activation.md
+        href: ../miscellaneous/get-help-office-shared-computer-activation.md
+      - name: 'Scenario: Office Uninstall'
+        href: ../miscellaneous/get-help-office-uninstall.md
       - name: 'Scenario: Outlook Calendar Scan'
-        href: ../miscellaneous/assistant-outlook-calendar-scan.md
-      - name: 'Scenario: Teams Meeting Add-in for Outlook'
-        href: ../miscellaneous/assistant-teams-meeting-add-in-outlook.md
+        href: ../miscellaneous/get-help-outlook-calendar-scan.md
+      - name: 'Scenario: Outlook Scan'
+        href: ../miscellaneous/get-help-outlook-scan.md
       - name: 'Scenario: Reset Office Activation'
-        href: ../miscellaneous/assistant-reset-office-activation.md
+        href: ../miscellaneous/get-help-reset-office-activation.md
+      - name: 'Scenario: Teams Meeting Add-in for Outlook'
+        href: ../miscellaneous/get-help-teams-meeting-add-in-outlook.md
     - name: Chrome cookie behavior effect on applications
       href: ../miscellaneous/chrome-behavior-affects-applications.md
     - name: New Startup Boost tasks in Windows Task Scheduler
