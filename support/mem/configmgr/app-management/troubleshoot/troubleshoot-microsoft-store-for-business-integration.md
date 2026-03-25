@@ -6,6 +6,7 @@ ms.manager: dcscontentpm
 audience: itpro
 ms.date: 03/25/2026
 ms.reviewer: kaushika
+ms.custom: sap:Application Management\Application Deployment (Devices)
 ---
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
 

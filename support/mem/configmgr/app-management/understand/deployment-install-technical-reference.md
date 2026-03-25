@@ -1,9 +1,11 @@
 ---
 title: Application installation technical reference
 description: Troubleshooting application installations technical reference for Configuration Manager.
-ms.date: 11/04/2019
-ms.subservice: core-infra
 ms.topic: troubleshooting
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
+ms.subservice: core-infra
 ms.collection: tier3
 ---
 
