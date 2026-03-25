@@ -6,8 +6,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/02/2026
-ms.custom: sfi-image-nochange
+ms.date: 03/24/2026
+ms.custom: sap:backend health,sfi-image-nochange
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
 
