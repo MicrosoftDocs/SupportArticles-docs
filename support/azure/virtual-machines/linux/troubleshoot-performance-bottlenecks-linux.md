@@ -72,7 +72,6 @@ The `top` tool runs in interactive mode by default. It refreshes every second an
 ```bash
 top
 ```
-
 ```output
 top - 19:02:00 up  2:07,  2 users,  load average: 1.04, 0.97, 0.96
 Tasks: 191 total,   3 running, 188 sleeping,   0 stopped,   0 zombie
@@ -314,7 +313,7 @@ To stop the ping activity, select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 - **Server**
 
   ```bash
-  # iperf3 -s
+  iperf3 -s
   ```
   ```output
   -----------------------------------------------------------
