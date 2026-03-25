@@ -10,13 +10,7 @@ ms.custom: sap:Mobile Application\Application is throwing errors
 
 ## Summary
 
-This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occurs if the mobile operating system stops an app process that uses too much memory. These problems include:
-
-- The home screen appears unexpectedly
-- File or PDF attachments close immediately after they open
-- The app steps responding (crashes) on Android devices
-
-The problem is usually caused by memory spikes from large files or custom controls, or memory leaks from incorrectly managed JavaScript in [model-driven apps](/power-apps/maker/model-driven-apps/model-driven-app-overview).
+This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occurs if the mobile operating system stops an app process that uses too much memory. Common symptoms include the home screen appearing unexpectedly, file or PDF attachments closing immediately after they open, and the app crashing on Android devices. The problem is usually caused by memory spikes from large files or custom controls, or memory leaks from incorrectly managed JavaScript in [model-driven apps](/power-apps/maker/model-driven-apps/model-driven-app-overview).
 
 ## Symptoms
 
@@ -30,7 +24,7 @@ When you use the Field Service mobile app, you experience one or more of the fol
 
 - On Android, the app stops responding instead of showing an error message.
 
-These symptoms might occur when you open large files, go to forms with complex customizations, or use the app for a long time.
+These symptoms might occur when you open large files, go to forms that have complex customizations, or use the app for a long time.
 
 ## Cause
 
