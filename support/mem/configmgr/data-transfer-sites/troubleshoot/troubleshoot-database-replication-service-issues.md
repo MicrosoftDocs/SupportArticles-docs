@@ -158,7 +158,6 @@ Also if you have a rate limit set to **Limited to specified maximum transfer rat
 For more information about DRS, see the following articles:
 
 - [DRS Initialization In Configuration Manager 2012](/archive/blogs/sudheesn/drs-initialization-in-configuration-manager-2012)
-- [Planning for Communications in Configuration Manage](/previous-versions/system-center/system-center-2012-R2/gg712701(v=technet.10))
-- [Database replication](/mem/configmgr/core/plan-design/hierarchy/database-replication)
+- [Data transfers between sites](/intune/configmgr/core/plan-design/hierarchy/data-transfers-between-sites)
+- [Database replication](/intune/configmgr/core/plan-design/hierarchy/database-replication)
 
-You can also post a question in our Configuration Manager support [forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=configmanagergeneral&filter=alltypes&sort=lastpostdesc).
