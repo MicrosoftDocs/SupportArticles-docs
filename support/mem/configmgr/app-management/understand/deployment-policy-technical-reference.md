@@ -1,10 +1,13 @@
 ---
 title: Application deployment policy technical reference
 description: Troubleshooting application deployment policies technical reference for Configuration Manager.
-ms.date: 11/04/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Deployment (Users)
 ---
 
 # Application Deployment Policy

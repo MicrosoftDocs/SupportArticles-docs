@@ -7,6 +7,7 @@ audience: itpro
 ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Deployment (Users)
 ---
 
 # Application Installation

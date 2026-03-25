@@ -1,10 +1,13 @@
 ---
 title: Troubleshooting application deployment technical reference
 description: Technical reference for troubleshooting application deployment in Configuration Manager.
-ms.date: 11/04/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Deployment (Devices)
 ---
 
 # Technical Reference for Application Deployment in Configuration Manager

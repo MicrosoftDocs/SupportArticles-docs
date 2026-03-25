@@ -1,10 +1,13 @@
 ---
 title: App deployment to device collections technical reference
 description: Troubleshooting application deployments to device collections technical reference for Configuration Manager.
-ms.date: 11/04/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Deployment (Devices)
 ---
 
 # Application Deployment for Device Collections

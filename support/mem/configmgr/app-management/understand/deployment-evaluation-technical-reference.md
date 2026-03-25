@@ -7,6 +7,7 @@ ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Evaluation
 ---
 
 # Application Deployment Evaluation

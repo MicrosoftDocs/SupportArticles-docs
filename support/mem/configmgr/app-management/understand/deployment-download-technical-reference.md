@@ -1,10 +1,13 @@
 ---
 title: Application download technical reference
 description: Troubleshooting application download technical reference for Configuration Manager.
-ms.date: 08/23/2021
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Download
 ---
 
 # Application download in Configuration Manager

@@ -1,10 +1,13 @@
 ---
 title: Application deployment client components technical reference
 description: Client components used for troubleshooting application deployment in Configuration Manager.
-ms.date: 11/04/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.custom: sap:Application Management\Application Evaluation
 ---
 
 # Understanding Application Deployment Client Components
