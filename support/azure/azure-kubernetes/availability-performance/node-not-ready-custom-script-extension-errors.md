@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot custom script extension errors causing Node Not Ready
-description: "Learn how to troubleshoot custom script extension (CSE) errors causing Node Not Ready states in AKS. Fix DNS, API time-outs, and more."
+title: Troubleshoot custom script extension errors causing Node Not Ready
+description: Learn how to troubleshoot custom script extension (CSE) errors causing Node Not Ready states in AKS. Fix DNS, API time-outs, and more.
 ms.date: 10/08/2022
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service

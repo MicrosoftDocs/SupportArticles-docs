@@ -43,7 +43,7 @@ NAME                            CPU(cores)   MEMORY(bytes)
 my-deployment-fc94b7f98-m9z2l   1m           344Mi
 ```
 
-For detailed steps about how to identify which pod is consuming excessive memory, see [Troubleshoot memory saturation in AKS clusters](identify-memory-saturation-aks.md#step-1-identify-nodes-that-have-memory-saturation).
+For detailed steps about how to identify which pod is consuming excessive memory, see [Troubleshoot memory saturation in AKS clusters](./troubleshoot-memory-saturation-aks.md).
 
 ### Step 2: Inspect pod memory statistics
 
