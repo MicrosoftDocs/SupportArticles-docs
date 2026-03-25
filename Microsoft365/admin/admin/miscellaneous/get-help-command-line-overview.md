@@ -35,13 +35,13 @@ You can use the command line version of Get Help to resolve issues for the follo
 
 |Scenario|Description|\<Scenarioname\>|
 |---|---|---|
-|[Outlook Scan](assistant-outlook-scan.md)|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. You can run either a full or an offline scan.|`ExpertExperienceAdminTask`|
-|[Office Uninstall](assistant-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
-|[Office Activation](assistant-office-activation.md)|Automates checks and recoveries to reset activation-related settings so that you can successfully activate a subscription version of Office.|`OfficeActivationScenario`|
-|[Office Shared Computer Activation](assistant-office-shared-computer-activation.md)|Automates checks and recoveries to either enable or disable Office Shared Computer Activation.|`OfficeSharedComputerScenario`|
-|[Outlook Calendar Scan](assistant-outlook-calendar-scan.md)|Scans your Outlook calendar by using the Calendar Checking tool (CalCheck) for many known issues.|`OutlookCalendarCheckTask`|
-|[Teams Meeting Add-in for Outlook](assistant-teams-meeting-add-in-outlook.md)|Automates checks and recoveries to help you get the Teams Meeting add-in for Outlook running.|`TeamsAddinScenario`|
-|[Reset Office Activation](assistant-reset-office-activation.md)|Clears previous activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This action resets Office applications to a clean state. Then, you can activate the applications by using a different Office account or change to a different license mode.|`ResetOfficeActivation`|
+|[Outlook Scan](get-help-outlook-scan.md)|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. You can run either a full or an offline scan.|`ExpertExperienceAdminTask`|
+|[Office Uninstall](get-help-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
+|[Office Activation](get-help-office-activation.md)|Automates checks and recoveries to reset activation-related settings so that you can successfully activate a subscription version of Office.|`OfficeActivationScenario`|
+|[Office Shared Computer Activation](get-help-office-shared-computer-activation.md)|Automates checks and recoveries to either enable or disable Office Shared Computer Activation.|`OfficeSharedComputerScenario`|
+|[Outlook Calendar Scan](get-help-outlook-calendar-scan.md)|Scans your Outlook calendar by using the Calendar Checking tool (CalCheck) for many known issues.|`OutlookCalendarCheckTask`|
+|[Teams Meeting Add-in for Outlook](get-help-teams-meeting-add-in-outlook.md)|Automates checks and recoveries to help you get the Teams Meeting add-in for Outlook running.|`TeamsAddinScenario`|
+|[Reset Office Activation](get-help-reset-office-activation.md)|Clears previous activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This action resets Office applications to a clean state. Then, you can activate the applications by using a different Office account or change to a different license mode.|`ResetOfficeActivation`|
 
 ## Download and run the command line version of Get Help
 
