@@ -1,6 +1,6 @@
 ---
-title: Email delivery to Microsoft 365 groups fails in hybrid configuration
-description: Discusses an issue in which Microsoft 365 groups in a hybrid Exchange environment don't get email messages sent from On-Premises mailboxes, and provides a resolution.
+title: Email delivery to Microsoft 365 Groups fails in hybrid configuration
+description: Discusses an issue in which Microsoft 365 Groups in a hybrid Exchange environment don't get email messages sent from on-premises mailboxes, and provides a resolution.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -20,15 +20,15 @@ search.appverid: MET150
 ms.date: 03/25/2026
 ---
 
-# Email delivery to Microsoft 365 groups fails in hybrid configuration
+# Email delivery to Microsoft 365 Groups fails in hybrid configuration
 
 ## Summary
 
-This article discusses the reasons why a Microsoft 365 group configured in a hybrid Exchange environment might not receive email messages that are sent from On-Premises mailboxes. Also, it provides a resolution to fix the issue.
+This article discusses the reasons why a Microsoft 365 Group configured in a hybrid Exchange environment might not receive email messages that are sent from on-premises mailboxes. Also, it provides a resolution to fix the issue.
 
 ## Symptoms
 
-You configure a Microsoft 365 group in a hybrid Exchange environment. Email messages that are sent from On-Premises mailboxes to the group are not delivered to the recipients, and the senders receive an error message. For example, if the name of the Microsoft 365 group is MyGroup, and it's hosted in the tenant that’s named Contoso, then you receive the following error message:
+You configure a Microsoft 365 Group in a hybrid Exchange environment. Email messages that are sent from on-premises mailboxes to the group aren't delivered to the recipients, and the senders receive an error message. For example, if the name of the Microsoft 365 Group is MyGroup, and it is hosted in the tenant that is named Contoso, then you receive the following error message:
 
 >**Delivery has failed to these recipients or groups:**
 >
@@ -50,11 +50,11 @@ The issue might occur in the following scenarios:
 
 **Scenario 1**
 
-None of the senders of email messages from On-Premises mailboxes to the group are recognized as authenticated users by the Exchange Online service.
+None of the senders of email messages from on-premises mailboxes to the group are recognized as authenticated users by the Exchange Online service.
 
 **Scenario 2**
 
-You use centralized mail transport. In this scenario, the email messages that are sent by external users are rejected, even if the group is configured to accept email messages from external users.
+You use centralized mail transport. In this scenario, the email messages from external users are rejected, even if the group is configured to accept email messages from external users.
 
 ## Resolution
 
@@ -62,7 +62,7 @@ Determine whether the Exchange Online service recognizes the sender of an email 
 
 To check the value of the `X-MS-Exchange-Organization-AuthAs` header, follow these steps:
 
-1. Send an email message from an On-Premises mailbox to a mailbox that’s hosted in your Exchange Online tenant.
+1. Send an email message from an on-premises mailbox to a mailbox that’s hosted in your Exchange Online tenant.
 2. Locate the [`X-MS-Exchange-Organization-AuthAs header`,](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c) and check its value:
 
 - If the value is `anonymous`, see Solution for scenario 1.
@@ -71,31 +71,31 @@ To check the value of the `X-MS-Exchange-Organization-AuthAs` header, follow the
 
 ### Solution for scenario 1
 
-The commands that are listed in this solution use "groups.contoso.com" as the email address of the affected Microsoft 365 group. In the commands, replace this address with the email address that’s associated with your Microsoft 365 group.
+The commands that are listed in this solution use "groups.contoso.com" as the email address of the affected Microsoft 365 Group. In the commands, replace this address with the email address that’s associated with your Microsoft 365 Group.
 
-If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
+If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
 
-1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be \`Outbound to Office 365\`. This connector is created by the Hybrid Configuration wizard (HCW).  
+1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).  
 
-    To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](https://learn.microsoft.com/en-us/exchange/mail-flow/connectors/protocol-logging) is not enabled by default. If it's not enabled, follow these steps to enable protocol logging, and then check the protocol log.
+    To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](/exchange/mail-flow/connectors/protocol-logging) isn't enabled by default. If it is not enabled, follow these steps to enable protocol logging, and then check the protocol log.
 
-    a.  On your Exchange On-Premises server, open the Exchange Management Shell.
-    b.  To enable protocol logging for the Send connector, run the following command:  
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    b. To enable protocol logging for the Send connector, run the following command:  
 
         ```powershell               
         Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
         ```
 
-    c.  Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
-    d.  Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
+    c. Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
+    d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
 
         :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
 
-   If the Send connector in the protocol log is not listed as Outbound to Office 365, go to step 2. If the listed Send connector is the expected one, go to step 3.
+   If the Send connector in the protocol log isn't listed as Outbound to Office 365, go to step 2. If the listed Send connector is the expected one, go to step 3.
 
 2. **Address space**: Check whether groups.contoso.com is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
-    a. On your Exchange On-Premises server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.
     b. Run the Get-SendConnector command by using the AddressSpaces parameter:  
 
         ```powershell          
@@ -110,9 +110,9 @@ If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\
           
         **Note**: When you run the HCW the next time, the groups.contoso.com domain is removed from the address space. Therefore, you will need to add it again.
 
-3. **TLSCertificateName parameter**: Check the values that are set for the \`TLSCertificateName\` parameter in the Outbound to Office 365 Send connector. The \`Issuer\` and \`SubjectName\` attributes for the parameter must match the corresponding values in the trusted third-party certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
+3. **TLSCertificateName parameter**: Check the values that are set for the \`TLSCertificateName\` parameter in the Outbound to Office 365 Send connector. The \`Issuer\` and \`SubjectName\` attributes for the parameter must match the corresponding values in the trusted non-Microsoft certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
 
-    a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted third-party certificate, run the following command:
+    a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted non-Microsoft certificate, run the following command:
 
        ```powershell
        Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \| fl issuer, subject,services
@@ -130,16 +130,16 @@ If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\
 
     c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
 
-       i. On your Exchange On-Premises server, open the Exchange Management Shell.
+       i. On your on-premises Exchange Server, open the Exchange Management Shell.
       ii. Run the following commands:
 
-            1.  Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
+          ```powershell             
+          Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
+          \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
+          Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
+          ```
 
-            2.  \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
-
-            3.  Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
-
-4. **CloudServicesMailEnabled parameter**: Check the value of the \`CloudServicesMailEnabled\` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to \`true\`. Follow these steps:
+4. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
 
     a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
 
@@ -147,13 +147,13 @@ If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\
         Get-InboundConnector -Identity "Inbound connector name" \| fl CloudServicesMailEnabled
         ```
 
-    b.  If the output displays the value as \`false\`, run the following command:  
+    b.  If the output displays the value as `false`, run the following command:  
 
         ```powershell     
         Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
         ```
 
-5. **TLSSenderCertificateName parameter**: Check the value of the \`TLSSenderCertificateName\` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
+5. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
 
     a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
 
@@ -169,6 +169,6 @@ If the value of the \`X-MS-Exchange-Organization-AuthAs\` header is \`anonymous\
 
 ### Solution for scenario 2
 
-If the value of the X-MS-Exchange-Organization-AuthAs header is \`internal\`, then it's likely that you implemented centralized mail transport. In this scenario, the value of the msExchRequireAuthToSendTo attribute of the Microsoft 365 Group object that’s synchronized to Exchange On-Premises is always set to \`True\`. This value is set to \`True\` even if the value of the msExchRequireAuthToSendTo attribute in the corresponding Microsoft 365 group in Exchange Online is set to \`False\`.  
+If the value of the X-MS-Exchange-Organization-AuthAs header is `internal`, then it's likely that you implemented centralized mail transport. In this scenario, the value of the msExchRequireAuthToSendTo attribute of the Microsoft 365 Group object that’s synchronized to on-premises Exchange Server is always set to `True`. This value is set to `True` even if the value of the msExchRequireAuthToSendTo attribute in the corresponding Microsoft 365 Group in Exchange Online is set to `False`.  
   
-Also, in centralized mail transport, email messages are routed from Exchange Online to On-Premises and then back to Exchange Online. Because the email messages from external users are unauthenticated, and the Microsoft 365 Group object is configured to accept email messages from authenticated users only, the email messages are rejected by the On-Premises server. For this reason, centralized mail transport is not supported for Microsoft 365 groups in a hybrid Exchange environment.
+Also, in centralized mail transport, email messages are routed from Exchange Online to on-premises and then back to Exchange Online. Because the email messages from external users are unauthenticated, and the Microsoft 365 Group object is configured to accept email messages from authenticated users only, the email messages are rejected by the on-premises server. For this reason, centralized mail transport is not supported for Microsoft 365 Groups in a hybrid Exchange environment.
