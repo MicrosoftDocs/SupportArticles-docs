@@ -115,6 +115,9 @@ az vm create \
     --ssh-key-value $sshPubkeyPath \
     --boot-diagnostics-storage $storageacct
 ```
+> [!NOTE] 
+> Replace $resourceGroup, $location, $storageacct, $vmName, $brokenImageName, $sshPubkeyPath and accordingly
+
 
 ## Check the serial console
 
@@ -123,10 +126,11 @@ To determine why provisioning failed, examine the **serial console log**, which 
 Boot diagnostics must be enabled at VM creation time. If your image consistently fails to provision, deploy a **new VM using the same image** with boot diagnostics enabled, and then download the serial log using the Azure portal or Azure CLI.
 
 
-
 ```azurecli-interactive 
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
 ```
+> [!NOTE]
+> Replace $resourceGroup, $vmName accordingly
 
 ## Understanding the serial log for system events and provisioning events
 
@@ -274,10 +278,13 @@ az vm repair create  \
     --resource-group $resourceGroup \
     --name $vmName \
     --repair-username repairadm \
-    --repair-password AnotherPassword123! \
+    --repair-password $password \
     --repair-vm-name repairVM \
     --verbose
 ```
+
+> [!NOTE]
+> Replace $resourceGroup, $vmName, $password accordingly
 
 ## Understanding the cloud-init.log
 
@@ -299,7 +306,7 @@ Selecting the case product:
 
 ```bash
 Product Family: Azure
-Product: Virtual Machine Running (Window\Linux)
+Product: Virtual Machine Running Linux
 Support Topic: <COMPLETE>
 Support Subtopic: <COMPLETE>
 ```
