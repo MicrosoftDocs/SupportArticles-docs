@@ -29,13 +29,12 @@ two distinct types of events: **OOMKilled** and **Evictions**. While
 both are triggered by resource pressure, they differ in cause, scope,
 and behavior.
 
-OOMKilled will only be reported for containers that have been terminated
-by the kernel OOM killer. It\'s important to note that it\'s the
+OOMKilled is only reported for containers that have been terminated. It's important to note that it's the
 container that exceeds its memory limit that gets terminated, and by
 default restarted, as opposed to the whole pod. Evictions on the other
 hand happen at the pod level and are triggered by Kubernetes,
 specifically by the **Kubelet** running on every node, when the node is
-running low on memory. Pods that have been evicted will report a status
+running low on memory. Pods that are evicted report a status
 of **Failed** and a reason of **Evicted**.
 
 ### OOMKilled: container-level termination
@@ -43,25 +42,25 @@ of **Failed** and a reason of **Evicted**.
 **OOMKilled** occurs when a **container** exceeds its memory limit and
 is terminated by the **Linux kernel's Out-Of-Memory (OOM) killer**.
 
-This is a container-specific event. Only the container that breaches its memory limit is affected. The pod may continue running if it contains other healthy containers. The terminated container is typically restarted automatically.
+This is a container-specific event. Only the container that breaches its memory limit is affected. The pod might continue running if it contains other healthy containers. The terminated container is typically restarted automatically.
 
 Common indicators include **exit code 137** and the reason **OOMKilled**
 in `kubectl describe pod`.
 
 ### Evictions: pod-level removal by Kubelet
 
-While this guide focuses on **OOMKilled**, it is useful to understand
+While this guide focuses on **OOMKilled**, it's useful to understand
 that **Evictions** are a separate mechanism in Kubernetes. They occur at
 the **pod level**, for instance when the [node is under memory
 pressure](./identify-memory-saturation-aks.md).
 
 > [!NOTE]
-> This guide does not cover all probable causes of pod eviction, as its scope is
+> This guide doesn't cover all probable causes of pod eviction, as its scope is
 > limited to memory-related OOMKilled events.
 
-- The **Kubelet** may evict pods to free up memory and maintain node stability.
+- The **Kubelet** might evict pods to free up memory and maintain node stability.
 
-- Evicted pods will show a status of **Failed** and a reason of **Evicted**.
+- Evicted pods show a status of **Failed** and a reason of **Evicted**.
 
 - Unlike OOMKilled, which targets individual containers, evictions affect the entire pod.
 
@@ -77,7 +76,7 @@ Several conditions can cause OOMKilled events. The most common causes include th
 
 - **Insufficient node resources**: The node doesn't have enough memory to support the running pods, which leads to OOM kills.
 
-- **Inefficient resource management**: Lack of resource quotas and limits leads to uncontrolled resource consumption.
+- **Inefficient resource management**: Lack of resource quotas and limits lead to uncontrolled resource consumption.
 
 ## Identifying OOM killed pods
 
@@ -143,7 +142,7 @@ Alternatively, [SSH into the node](/azure/aks/node-access) where the pod was run
 > [!NOTE]
 > System pods are those located in the `kube-system` namespace and created by AKS.
 
-### metrics-server
+### Metrics-server
 
 **Issue:**
 
@@ -173,14 +172,14 @@ pods. Also, confirm that the system node pool has at least three nodes.
 
 User pods might be OOMKilled due to insufficient memory limits or excessive memory consumption. Solutions include setting appropriate resource requests and limits, and engaging application vendors to investigate memory usage.
 
-### Cause 1: User workloads may be running in a system node pools
+### Cause 1: User workloads may be running in a system node pool
 
-It is recommended to create user node pools for user workloads. For more information, see: [Manage system node pools in Azure Kubernetes Service (AKS)](/azure/aks/use-system-pools).
+It's recommended to create user node pools for user workloads. For more information, see: [Manage system node pools in Azure Kubernetes Service (AKS)](/azure/aks/use-system-pools).
 
 ### Cause 2: Application pod keeps restarting due to OOMkilled
 
 This behavior might be due to the pod not having enough memory assigned
-to it and it requires more, which will cause the pod to constantly
+to it and it requires more, which causes the pod to constantly
 restart.
 
 To solve, review request and limits documentation to understand how to modify
@@ -219,9 +218,9 @@ memory limits.
 `kubectl get events --sort-by='.lastTimestamp' -n <namespace>`
 
 To resolve, engage the application vendor. If the app is from a third party, check
-if they have known issues or memory tuning guides. Also, depending on the application framework, ask the vendor to verify whether they are using the latest version of Java or .Net as recommended in [Memory saturation occurs in pods after cluster upgrade to Kubernetes 1.25](../create-upgrade-delete/aks-memory-saturation-after-upgrade.md).
+if they have known issues or memory tuning guides. Also, depending on the application framework, ask the vendor to verify whether they're using the latest version of Java or .NET as recommended in [Memory saturation occurs in pods after cluster upgrade to Kubernetes 1.25](../create-upgrade-delete/aks-memory-saturation-after-upgrade.md).
 
-The application vendor or team can investigate the application to determine why it is using so much memory, such as checking for a memory leak or assessing if the app needs higher memory resource limits in the pod configuration. In the meantime, to temporarily mitigate the problem increase the memory limit for the containers experiencing OOMKill events.
+The application vendor or team can investigate the application to determine why it's using so much memory, such as checking for a memory leak or assessing if the app needs higher memory resource limits in the pod configuration. In the meantime, to temporarily mitigate the problem increase the memory limit for the containers experiencing OOMKill events.
 
 ## Avoid OOMKill in the future
 
