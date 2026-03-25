@@ -1,10 +1,13 @@
 ---
 title: DRS global data reinitialization
 description: Use this diagram to start troubleshooting DRS reinitialization for global data in a Configuration Manager hierarchy
-ms.date: 08/09/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sap:Configuration Manager Database\Database Replication Links
 ---
 
 # Troubleshoot global data reinitialization

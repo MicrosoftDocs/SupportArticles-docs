@@ -1,10 +1,13 @@
 ---
 title: SQL Server instance configuration
 description: Use this diagram to start troubleshooting SQL Server instance configuration for Configuration Manager
-ms.date: 08/09/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sap:Configuration Manager Database\SQL Settings and Configuration
 ---
 
 # SQL Server instance configuration

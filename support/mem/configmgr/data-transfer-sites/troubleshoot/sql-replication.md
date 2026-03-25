@@ -1,10 +1,13 @@
 ---
 title: Start Troubleshooting Database Replication
 description: Use this diagram to start troubleshooting DRS between Configuration Manager sites
-ms.date: 08/09/2019
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sap:Configuration Manager Database\Database Replication Links
 ---
 
 # Troubleshoot Database Replication Service links
