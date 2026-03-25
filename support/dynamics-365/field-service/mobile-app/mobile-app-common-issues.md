@@ -51,7 +51,7 @@ This problem also occurs if an offline filter references a related entity that i
 
    1. In [Power Apps](https://make.powerapps.com), go to **Apps**, and select the **Field Service Mobile** app.
    1. Select **Settings**.
-   1. Go to **Select offline mode and profile**, select the ellipsis (**...**) after the selected offline profile.
+   1. Go to **Select offline mode and profile**, select the ellipsis (**...**) that's located next to the selected offline profile.
    1. To open the assigned profile, select **Edit selected profile**.
    1. Verify that the **Bookable Resource Booking** (`bookableresourcebooking`) table is included in the profile.
    1. Check each table filter for lookup fields that reference tables that aren't included in the profile. Remove or update any filters that cause validation errors.
@@ -121,7 +121,7 @@ This error occurs when a table filter in the mobile offline profile uses a looku
 
 1. Select **Settings** (gear symbol).
 
-1. In the **General** tab, go to **Select offline mode and profile**, and select the ellipsis (**...**) after the offline profile.
+1. In the **General** tab, go to **Select offline mode and profile**, and select the ellipsis (**...**) that's located next to the selected offline profile.
 
 1. Select **Edit selected profile** to open the offline profile that's assigned to the app.
 
