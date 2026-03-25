@@ -1,7 +1,10 @@
 ---
 title: Deploy a Windows language pack as an application
 description: This article describes how to deploy a language pack as an application in Configuration Manager, including logs that you can use to track the deployment.
-ms.date: 02/11/2025
+ms.date: 03/25/2026
+ms.topic: troubleshooting
+ms.manager: dcscontentpm
+audience: itpro
 ms.reviewer: kaushika
 ms.custom: sap:Application Management\Application Deployment (Devices)
 ---
