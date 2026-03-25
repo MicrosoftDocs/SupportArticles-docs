@@ -143,7 +143,7 @@ items:
       href: site-behavior-performance/http-403-forbidden-access-website.md
     - name: '"HTTP 404 - File not found" error message'
       href: site-behavior-performance/troubleshoot-404-file-not-found-error.md
-    - name: HTTP error 404 from IIS hidden static files
+    - name: HTTP error 404 or Access Denied errors when requesting hidden static files
       href: site-behavior-performance/hidden-static-files-http-404-access-denied.md
     - name: HTTP error 404.2
       href: site-behavior-performance/http-error-402-webpage.md
