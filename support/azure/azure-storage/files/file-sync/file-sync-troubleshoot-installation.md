@@ -280,7 +280,7 @@ During Azure File Sync server registration, the `ServerRegistration.exe` tool fa
 
 ### Resolution
 
-#### Step 1 — Identify your cloud environment
+#### Step 1: Identify your cloud environment
 
 | Cloud | Management Endpoint | Login Endpoint |
 |---|---|---|
