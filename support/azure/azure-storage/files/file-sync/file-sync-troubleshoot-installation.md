@@ -262,7 +262,7 @@ If a server isn't listed under **Registered servers** for a Storage Sync Service
 1. Open File Explorer, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
 1. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
 
-## Server Registration Fails to Detect Cloud Environment
+## Server registration fails to detect cloud environment
 
 **Applies to:** Azure File Sync server registration in sovereign or non-public cloud environments (Mooncake, Fairfax)
 
