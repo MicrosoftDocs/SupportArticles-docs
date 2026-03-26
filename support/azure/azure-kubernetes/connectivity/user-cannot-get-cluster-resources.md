@@ -50,9 +50,9 @@ Results:
 false
 ```
 
-- If the result is **null** or empty, the cluster doesn't have Azure AD integration enabled. See [Solving permission issues in local Kubernetes RBAC clusters](#solving-permissions-issues-in-local-kubernetes-rbac-clusters).
-- If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permissions-issues-in-kubernetes-rbac-based-aks-clusters).
-- If the result is **true**, the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permissions-issues-in-azure-rbac-based-aks-clusters).
+- If the result is **null** or empty, the cluster doesn't have Azure AD integration enabled. See [Solve permissions issues in local Kubernetes RBAC clusters](#solve-permissions-issues-in-local-kubernetes-rbac-clusters).
+- If the result is **false**, the cluster uses Kubernetes RBAC. See [Solve permissions issues in Kubernetes RBAC-based AKS clusters](#solve-permissions-issues-in-kubernetes-rbac-based-aks-clusters).
+- If the result is **true**, the cluster uses Azure RBAC. See [Solve permissions issues in Azure RBAC-based AKS clusters](#solve-permissions-issues-in-azure-rbac-based-aks-clusters).
 
 ### Solve permissions issues in local Kubernetes RBAC clusters
 

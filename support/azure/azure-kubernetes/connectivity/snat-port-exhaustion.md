@@ -143,7 +143,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 ### [For a Linux pod](#tab/for-a-linux-pod)
 
-1. Execute into the pod that's identified as having high outbound connections in [Step 2](#step-2-locate-the-linux-pod-that-has-high-outbound-connections) by using one of the following commands:
+1. Execute into the pod that's identified as having high outbound connections in [Step 2: Locate the Linux pod with high outbound connections](#step-2-locate-the-linux-pod-with-high-outbound-connections) by using one of the following commands:
 
     - ```bash
       kubectl exec -it <pod name> -n <namespace> /bin/bash
