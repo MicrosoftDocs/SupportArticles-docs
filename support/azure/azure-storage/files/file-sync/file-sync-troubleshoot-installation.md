@@ -314,7 +314,7 @@ Using `setx` sets the variable permanently for the user. A machine reboot might 
 
 #### Step 3: Prerequisites
 
-Azure PowerShell (`Az` module) must be installed on the server before proceeding. If not installed, run:
+Azure PowerShell (`Az` module) must be installed on the server before proceeding. If it's not already installed, run the following command to install it:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
