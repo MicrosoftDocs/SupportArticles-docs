@@ -288,7 +288,7 @@ During Azure File Sync server registration, the `ServerRegistration.exe` tool fa
 | Azure China (Mooncake) | `management.chinacloudapi.cn` | `login.chinacloudapi.cn` |
 | Azure US Government (Fairfax) | `management.usgovcloudapi.net` | `login.microsoftonline.us` |
 
-#### Step 2 — Set the `ARM_CLOUD_METADATA_URL` environment variable
+#### Step 2: Set the `ARM_CLOUD_METADATA_URL` environment variable
 
 Replace `<domain>` with the domain value for your cloud:
 
