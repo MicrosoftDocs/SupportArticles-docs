@@ -271,7 +271,7 @@ If a server isn't listed under **Registered servers** for a Storage Sync Service
 During Azure File Sync server registration, the `ServerRegistration.exe` tool fails or is unable to resolve the correct cloud environment endpoint. This typically presents as:
 
 - Registration silently fails or times out
-- Error indicating the management endpoint could not be reached
+- Error indicating the management endpoint couldn't be reached
 - Tool defaults to Azure Public Cloud endpoints when the server is in a sovereign cloud
 
 ### Root Cause
