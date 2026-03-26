@@ -79,17 +79,17 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
 
 To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](/exchange/mail-flow/connectors/protocol-logging) isn't enabled by default. If it is not enabled, follow these steps to enable protocol logging, and then check the protocol log.
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
-    b. To enable protocol logging for the Send connector, run the following command:  
+   a. On your on-premises Exchange Server, open the Exchange Management Shell.
+   b. To enable protocol logging for the Send connector, run the following command:  
 
-    ```powershell               
-    Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
-    ```
+   ```powershell               
+   Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
+   ```
 
-    c. Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
-    d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
+   c. Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
+   d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
 
-    :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
+   :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
 
    If the Send connector in the protocol log isn't listed as Outbound to Office 365, go to step 2. If the listed Send connector is the expected one, go to step 3.
 
@@ -107,65 +107,65 @@ To check the Send connector that's configured for email delivery, use the protoc
     ```powershell    
     Set-SendConnector -Identity "Outbound to Office 365\*" -AddressSpaces "contoso.mail.onmicrosoft.com","groups.contoso.com"
     ```  
-          
-        **Note**: When you run the HCW the next time, the groups.contoso.com domain is removed from the address space. Therefore, you will need to add it again.
+
+    **Note**: When you run the HCW the next time, the groups.contoso.com domain is removed from the address space. Therefore, you will need to add it again.
 
 1. **TLSCertificateName parameter**: Check the values that are set for the \`TLSCertificateName\` parameter in the Outbound to Office 365 Send connector. The \`Issuer\` and \`SubjectName\` attributes for the parameter must match the corresponding values in the trusted non-Microsoft certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
 
-    a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted non-Microsoft certificate, run the following command:
+   a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted non-Microsoft certificate, run the following command:
 
-    ```powershell
-    Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \| fl issuer, subject,services
-    ```
+   ```powershell
+   Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \| fl issuer, subject,services
+   ```
 
-    b. To check the values that are set for the \`TLSCertificateName\` parameter in the Send connector, run the following command:
+   b. To check the values that are set for the \`TLSCertificateName\` parameter in the Send connector, run the following command:
   
-    ```powershell
-    Get-SendConnector -Identity "Outbound to Office 365\*" \| fl name, TLSCertificateName
-    ```  
+   ```powershell
+   Get-SendConnector -Identity "Outbound to Office 365\*" \| fl name, TLSCertificateName
+   ```  
 
-    The output displays the values in the following format:  
-    \<I\>CN=\<value of the Issuer attribute\>  
-    \<S\>CN=\<value of the SubjectName attribute\>
+   The output displays the values in the following format:  
+   \<I\>CN=\<value of the Issuer attribute\>  
+   \<S\>CN=\<value of the SubjectName attribute\>
 
-    c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
+   c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
 
-       i. On your on-premises Exchange Server, open the Exchange Management Shell.
-      ii. Run the following commands:
+      i. On your on-premises Exchange Server, open the Exchange Management Shell.
+     ii. Run the following commands:
 
-    ```powershell             
-    Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
-    \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
-    Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
-    ```
+   ```powershell             
+   Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
+   \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
+   Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
+   ```
 
 4. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
 
-    a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
+   a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
 
-    ```powershell
-    Get-InboundConnector -Identity "Inbound connector name" \| fl CloudServicesMailEnabled
-    ```
+   ```powershell
+   Get-InboundConnector -Identity "Inbound connector name" \| fl CloudServicesMailEnabled
+   ```
 
-    b.  If the output displays the value as `false`, run the following command:  
+   b.  If the output displays the value as `false`, run the following command:  
 
-    ```powershell     
-    Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
-    ```
+   ```powershell     
+   Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
+   ```
 
 5. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
 
-    a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
+   a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
 
-    ```powershell
-    Get-InboundConnector -Identity "Inbound connector name" \| fl "TLSSenderCertificateName"
-    ```
+   ```powershell
+   Get-InboundConnector -Identity "Inbound connector name" \| fl "TLSSenderCertificateName"
+   ```
 
-    b. If the output doesn’t match the accepted domain of your tenant, run the following command to update the value of the parameter:  
+   b. If the output doesn’t match the accepted domain of your tenant, run the following command to update the value of the parameter:  
 
-    ```powershell
-    Set-InboundConnector -Identity "Inbound connector name" -TLSSenderCertificateName \<\*.AcceptedDomain\>"
-    ```
+   ```powershell
+   Set-InboundConnector -Identity "Inbound connector name" -TLSSenderCertificateName \<\*.AcceptedDomain\>"
+   ```
 
 ### Solution for scenario 2
 
