@@ -95,7 +95,7 @@ To disable Hyper-V by using DISM, follow these steps:
 
 ---
 
-### Disable Memory Integrity and Credential Guard
+### How to disable Memory Integrity and Credential Guard
 
 You can disable Memory Integrity and Credential Guard by using Microsoft Intune, Group Policy, or registry entries. For more information, see the following articles:
 
