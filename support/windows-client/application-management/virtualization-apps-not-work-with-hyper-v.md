@@ -1,5 +1,5 @@
 ---
-title: Disable Hyper-V and dependent features to run virtualization software
+title: Virtualization applications can't run alongside Hyper-V and its dependent features
 description: Learn why virtualization applications don't work alongside Hyper-V, Device Guard, and Credential Guard, and how to resolve the issue.
 ms.date: 03/27/2026
 manager: dcscontentpm
@@ -27,7 +27,7 @@ Third-party virtualization applications, such as VMware and VirtualBox, can't ru
 
 ## Symptoms
 
-When Hyper-V is running, the third-party virtualization applications might not start virtual machines, or they may fall back to a slower, emulated mode.
+When Hyper-V is running, the third-party virtualization applications might not start virtual machines, or they might fall back to a slower, emulated mode.
 
 ## Cause
 
