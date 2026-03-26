@@ -18,7 +18,9 @@ If your Cloud PC isn't working correctly, first make sure that you've satisfied 
 
 ## AI-enabled status activation time
 
-After you AI-enable your Cloud PC, background processes might run for up to 48 hours before the supported AI features are ready to use.
+After you AI-enable your Cloud PC, background processes might run for 24-48 hours before the supported AI features are ready to use.
+
+If AI-enabled features aren't available after this time, restart your Cloud PC and check for Windows updates.
 
 ## Sparkles missing from Windows search box after you install a Windows update
 
@@ -31,12 +33,6 @@ To restore the icon, select the Windows search box. If the sparkles are still mi
 After you install a Windows update, AI features might not be available.
 
 To restore all AI-enabled features, restart your Cloud PC.
-
-## "Click to Do" mouse cursor appears to lag
-
-While you use Click to Do, or after you dismiss the Click to Do feature, your Cloud PC cursor might appear to lag.
-
-To restore the cursor's responsiveness, restart your Cloud PC.
 
 ## Semantic Search results don't appear in the Windows search "All" tab
 
@@ -68,10 +64,30 @@ To check this setting, and disable it if it's necessary, follow these steps:
 
 1. To apply the changes, select **OK**, and then restart your Cloud PC.
 
-## Click to Do doesn't work when Cloud PC is in windowed mode
+## Click‑to‑Do keyboard shortcut may not work in certain scenarios
 
-Click to Do might not work if your Cloud PC isn't in full-screen mode. Try maximizing your Cloud PC window (to full screen) before you use Click to Do.
+In some environments, the Click‑to‑Do keyboard shortcut may not launch the Click‑to‑Do experience as expected. 
+
+This can occur when:
+- Using a Cloud PC in Windowed mode
+- Accessing a Cloud PC from the Mac Client
+
+You can still use Click‑to‑Do by manually launching it from the Start menu. Select Start, search for Click‑to‑Do, and open the app from search results.
+
+## Thumbnail previews may not appear in search result
+
+In some cases, thumbnail previews may not appear for files returned in AI‑enabled search experiences on Cloud PCs. This issue may occur when system performance settings are configured to display icons instead of thumbnails.
+
+**Workaround: **
+To restore thumbnail previews:
+1. Select **Start** and Open **Settings.**
+
+1. Go to **System > Performance.** 
+1. Select **Visual Effects**. 
+
+1. Turn on **Show thumbnails instead of icons**.
+1. Restart your Cloud PC.
 
 ## Additional help for AI-enabled Cloud PC issues
 
-For issues that aren't covered by this article, Windows Insider Program members can go to [Get more help](/windows-insider/troubleshooting#get-more-help) in the Windows Insider Program "Troubleshooting" article.
+If you're experiencing issues that aren't covered in this article, you can contact Microsoft Support by submitting a support request through the Microsoft 365 admin center. [Get support – Microsoft 365 admin](/microsoft-365/admin/get-help-support?view=o365-worldwide)
