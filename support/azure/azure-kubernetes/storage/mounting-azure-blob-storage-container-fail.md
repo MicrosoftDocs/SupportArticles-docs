@@ -1,6 +1,6 @@
 ---
-title: Fails to mount an Azure Blob storage container
-description: Provides causes and solutions for errors that cause the mounting of an Azure Blob storage container to fail.
+title: Troubleshoot Azure Blob storage container mount errors
+description: Learn how to troubleshoot Azure Blob storage container mount errors in AKS, identify common causes, and apply fixes to get pods running again.
 author: AndreiBarbu95
 ms.author: andbar
 ms.service: azure-kubernetes-service
@@ -10,6 +10,8 @@ ms.reviewer: cssakscic, chiragpa
 ms.custom: sap:Storage
 ---
 # Errors when mounting an Azure Blob storage container
+
+## Summary
 
 This article provides possible causes and solutions for errors that cause the mounting of an Azure Blob storage container to fail.
 
@@ -47,11 +49,11 @@ To check if the Blob container exists, follow these steps:
 
 1. Search for Storage accounts in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot of the Azure portal page used to locate a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
 
 1. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), check the Persistent Volume Claim (PVC) associated with the pod in the YAML file, and then check which PV is associated with that PVC.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim in Containers." lightbox="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot of the Containers pane showing the Persistent Volume Claim mapping." lightbox="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png":::
 
 ### Solution: Ensure the container exists
 
@@ -86,15 +88,15 @@ To verify the mismatch, follow these steps:
 
 1. Search for and access the storage account in the Azure portal. Select **Access keys** > **Show keys** in the storage account. You'll see the storage account name and associated keys.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot that shows the storage account name and associated keys.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot of the Access keys pane showing the storage account name and keys.":::
 
 2. Go to the AKS cluster, select **Configuration** > **Secrets**, and then search for and access the associated secret.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-secret.png" alt-text="Screenshot that shows the associated secret." lightbox="media/mounting-azure-blob-storage-container-fail/access-secret.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-secret.png" alt-text="Screenshot of the AKS Secrets pane showing the associated Kubernetes secret." lightbox="media/mounting-azure-blob-storage-container-fail/access-secret.png":::
 
 3. Select **Show** (the eye icon) and compare the values of the storage account name and associated key with the values in step 1.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png" alt-text="Screenshot that shows the values of the storage account name and associated key." lightbox="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png" alt-text="Screenshot of decoded secret values for the storage account name and key." lightbox="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png":::
 
     Before you select **Show**, the values of the storage account name and associated key are encoded into base64 strings. After you select **Show**, the values are decoded.
 
@@ -154,7 +156,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the virtual machine scale set (VMSS) associated with the node, and then check the **Virtual network/subnet** to identify the VNET and subnet.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of AKS node network settings showing the VNET and subnet.":::
 
 3. Access the storage account in the Azure portal, and then select **Networking**. If **Public network access** is set to **Enabled from selected virtual networks** or **Disabled**, and the connectivity isn't through a private endpoint, check if the VNET and subnet of the AKS cluster are allowed under **Firewalls and virtual networks**.
 
@@ -166,7 +168,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/pod-status-running.png" alt-text="Screenshot shows that the pod status is 'Running'." lightbox="media/mounting-azure-blob-storage-container-fail/pod-status-running.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/pod-status-running.png" alt-text="Screenshot of pod status changing to Running after network updates." lightbox="media/mounting-azure-blob-storage-container-fail/pod-status-running.png":::
 
 ## <a id="blobfuse-error3"></a>BlobFuse error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists
 
@@ -252,11 +254,11 @@ To check if the Blob container exists, follow these steps:
 
 1. Search for **Storage accounts** in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to search a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot of Azure portal search results for a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
 
 2. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), check the Persistent Volume Claim (PVC) associated with the pod in the YAML file, and then check which PV is associated with that PVC.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim (PVC)." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png" alt-text="Screenshot of the YAML showing the Persistent Volume Claim (PVC) for NFS." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png":::
 
 ### Solution: Ensure the Blob container exists
 
@@ -278,7 +280,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     Check the node in the command output:
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png" alt-text="Screenshot that shows the 'kubectl get pod' command output." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png" alt-text="Screenshot of the kubectl get pod command output with node details." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png":::
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the VMSS associated with the node, and then check the **Virtual network/subnet** to identify the VNET and subnet.
 
@@ -294,7 +296,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png" alt-text="Screenshot of the pod status." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png" alt-text="Screenshot of pod status in AKS after allowing storage account network access." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png":::
 
 ## <a id="nfs-error3"></a>NFS 3.0 error 3: context deadline exceeded / An operation with the given Volume ID <…> already exists
 
