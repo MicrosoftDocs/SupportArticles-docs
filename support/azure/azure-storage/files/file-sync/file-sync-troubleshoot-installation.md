@@ -322,7 +322,7 @@ Install-Module -Name Az -AllowClobber -Scope CurrentUser
 
 A reboot might be required to complete installation.
 
-#### Step 4 — Run server registration
+#### Step 4: Run server registration
 
 After setting the environment variable and confirming prerequisites, reboot then re-run `ServerRegistration.exe` to complete registration.
 
