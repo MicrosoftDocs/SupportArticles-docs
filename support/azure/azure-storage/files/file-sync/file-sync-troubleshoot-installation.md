@@ -310,7 +310,7 @@ setx ARM_CLOUD_METADATA_URL "https://management.<domain>/metadata/endpoints?api-
 $env:ARM_CLOUD_METADATA_URL = "https://management.<domain>/metadata/endpoints?api-version=2019-05-01"
 ```
 
-> **Note:** Using `setx` sets the variable permanently for the user. A **machine reboot** may be required for the change to take effect system-wide before running `ServerRegistration.exe`.
+Using `setx` sets the variable permanently for the user. A machine reboot might be required for the change to take effect system-wide before you run `ServerRegistration.exe`.
 
 #### Step 3 — Prerequisites
 
