@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
-description: Troubleshoot "Error from server (Forbidden)" RBAC-related errors that occur when you try to view Kubernetes resources in an AKS cluster.
+description: Fix "Error from server (Forbidden)" RBAC errors in AKS so users can access Kubernetes resources again. Follow these steps to restore access quickly.
 ms.date: 08/26/2024
 ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -9,6 +9,8 @@ ms.custom: sap:Connectivity,innovation-engine
 ---
 
 # Troubleshoot "Forbidden" error when trying to access AKS cluster resources
+
+## Summary
 
 This article explains how to troubleshoot and resolve "Error from server (Forbidden)" errors that are related to Role-Based Access Control (RBAC) when you try to view Kubernetes resources in an Azure Kubernetes Service (AKS) cluster.
 
@@ -30,7 +32,7 @@ Error from server (Forbidden): nodes is forbidden: User "aaaa11111-11aa-aa11-a1a
 
 ## Cause
 
-This error indicates that you're trying to access Kubernetes resources by using a Microsoft Entra ID account that doesn’t have the required role-based access control (RBAC) permissions.
+This error indicates that you're trying to access Kubernetes resources by using a Microsoft Entra ID account that doesn't have the required role-based access control (RBAC) permissions.
 
 ## Solution
 
@@ -52,7 +54,7 @@ false
 - If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permissions-issues-in-kubernetes-rbac-based-aks-clusters).
 - If the result is **true**, the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permissions-issues-in-azure-rbac-based-aks-clusters).
 
-### Solving permissions issues in local Kubernetes RBAC clusters
+### Solve permissions issues in local Kubernetes RBAC clusters
 
 If your cluster doesn't have Azure AD integration (result was null), it uses cluster admin credentials:
 
@@ -66,7 +68,7 @@ kubectl get nodes
 
 **Warning**: Admin credentials provide full cluster access. Use carefully and consider enabling Azure AD integration for better security.
 
-### Solving permissions issues in Kubernetes RBAC-based AKS clusters
+### Solve permissions issues in Kubernetes RBAC-based AKS clusters
 
 If the cluster uses Kubernetes RBAC, permissions for the user account are configured through the creation of RoleBinding or ClusterRoleBinding Kubernetes resources. For more information, see [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
@@ -96,7 +98,7 @@ You can create a custom RoleBinding or ClusterRoleBinding resource to grant the 
 
 2. Add the user to the pre-designated Microsoft Entra ID admin group by using the group ID that you retrieved in the previous step. For more detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
 
-### Solving permissions issues in Azure RBAC-based AKS clusters
+### Solve permissions issues in Azure RBAC-based AKS clusters
 
 If the cluster uses Azure RBAC, permissions for users are configured through the creation of [Azure role assignments](/azure/role-based-access-control/role-assignments).
 
