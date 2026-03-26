@@ -4,17 +4,29 @@ description: "Fix Microsoft 365 relay errors: Learn how to resolve NDR 5.7.367 c
 #customer intent: As an IT admin, I want to understand why forwarded or relayed emails through Microsoft 365 are rejected by non-Microsoft gateways so that I can resolve delivery failures.
 author: cloudwriter
 ms.author: meerak
+manager: dcscontentpm
 ms.reviewer: arindamt, v-kccross
+audience: ITPro
 ms.date: 03/25/2026
-ms.topic: troubleshooting-error-codes
+ms.topic: troubleshooting
+ms.custom: 
+  - sap:Mail Flow
+  - Exchange Online
+  - CSSTroubleshoot
+  - CI 10417
+appliesto: Exchange Online
+search.appverid: MET150
 ---
-#  Forwarded or relayed email messages from Microsoft 365 are rejected with error 5.7.367
+
+# Forwarded or relayed email messages from Microsoft 365 are rejected with error 5.7.367
 
 ## Summary
 
 When non-Microsoft gateways forward or relay email messages that you send through Microsoft 365, you receive an NDR with error code 5.7.367. Downstream mail gateways reject some forwarded email messages.
 
 This problem occurs more frequently in mail flows that include non-Microsoft gateways.
+
+[!INCLUDE [third-party-information-disclaimer](../../../../includes/third-party-information-disclaimer.md)]
 
 ## Symptoms
 
@@ -30,7 +42,7 @@ The following symptoms are also present:
 
   - "550 5.7.367 Remote server returned not permitted to relay"
 
-  - The value of the `[OutboundIpPoolName](/defender-office-365/outbound-spam-high-risk-delivery-pool-about#find-out-which-outbound-pool-was-used)` property is `RegularRelayOutboundPool` for failed messages.
+  - The value of the [`OutboundIpPoolName`](/defender-office-365/outbound-spam-high-risk-delivery-pool-about#find-out-which-outbound-pool-was-used) property is `RegularRelayOutboundPool` for failed messages.
 
 - Non-Microsoft gateway logs show "relay denied" errors.
 
@@ -56,12 +68,12 @@ The following symptoms are also present:
 
 When Microsoft 365 forwards or relays a message on behalf of an external sender, Exchange Online must decide which [**outbound delivery pool**](/defender-office-365/outbound-spam-high-risk-delivery-pool-about) to use.
 
-To prevent abuse, such as spoofing, phishing, and other email attacks, Microsoft 365 might send forwarded or relayed messages by using a relay pool IP address instead of an IP address from the standard outbound IP address range. Exchange Online is more likely to send a message from a relay pool when [email authentication](/defender-office-365/email-authentication-about) fails at the time the message enters the Microsoft 365 environment.
+To prevent abuse, such as spoofing, phishing, and other email attacks, Microsoft 365 might send forwarded or relayed messages from a relay pool IP address instead of an IP address from the standard outbound IP address range. Exchange Online is more likely to send a message from a relay pool when [email authentication](/defender-office-365/email-authentication-about) fails at the time the message enters the Microsoft 365 environment.
 
 > [!NOTE]
 > The relay pool isn't published because it can change often, and it's not part of the published SPF record for Microsoft 365. The relay pool isn't part of the Microsoft 365 outbound IP address ranges.
 
-Destinations don't consider Microsoft 365 as the sender of email messages sent by using the relay pool. Downstream mail gateways often block or restrict these messages, resulting in relay-denied errors.
+Destinations don't consider Microsoft 365 as the sender of email messages sent from the relay pool. Downstream mail gateways often block or restrict these messages, resulting in relay-denied errors.
 
 ### Authentication requirements to avoid relay pool
 
