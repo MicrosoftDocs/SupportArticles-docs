@@ -1,6 +1,6 @@
 ---
-title: "Error from server: error dialing backend: dial tcp" message
-description: "Fix 'error dialing backend: dial tcp' in AKS to restore kubectl logs, exec, and top access. Use this guide to quickly find and resolve the network block."
+title: Error from server - error dialing backend - dial tcp message
+description: Fix Error from server - error dialing backend - dial tcp message in AKS to restore kubectl logs, exec, and top access. Use this guide to quickly find and resolve the network block.
 ms.date: 03/05/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis, pihe, mariusbutuc
 ms.service: azure-kubernetes-service
