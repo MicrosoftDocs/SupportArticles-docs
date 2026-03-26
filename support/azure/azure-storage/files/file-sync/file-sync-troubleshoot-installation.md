@@ -262,6 +262,71 @@ If a server isn't listed under **Registered servers** for a Storage Sync Service
 1. Open File Explorer, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
 1. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
 
+## Server registration fails to detect cloud environment
+
+**Applies to:** Azure File Sync server registration in sovereign or non-public cloud environments (Mooncake, Fairfax)
+
+### Symptom
+
+During Azure File Sync server registration, the `ServerRegistration.exe` tool fails or is unable to resolve the correct cloud environment endpoint. This typically presents as:
+
+- Registration silently fails or times out
+- Error indicating the management endpoint couldn't be reached
+- Tool defaults to Azure Public Cloud endpoints when the server is in a sovereign cloud
+
+### Root Cause
+
+`ServerRegistration.exe` uses the `ARM_CLOUD_METADATA_URL` environment variable to discover the correct cloud environment metadata. If this variable isn't set, the tool defaults to Azure Public Cloud (`management.azure.com`) and fails to register servers in sovereign clouds.
+
+### Resolution
+
+#### Step 1: Identify your cloud environment
+
+| Cloud | Management Endpoint | Login Endpoint |
+|---|---|---|
+| Azure Public (Prod) | `management.azure.com` | `login.microsoftonline.com` |
+| Azure China (Mooncake) | `management.chinacloudapi.cn` | `login.chinacloudapi.cn` |
+| Azure US Government (Fairfax) | `management.usgovcloudapi.net` | `login.microsoftonline.us` |
+
+#### Step 2: Set the `ARM_CLOUD_METADATA_URL` environment variable
+
+Replace `<domain>` with the domain value for your cloud:
+
+| Cloud | Domain Value |
+|---|---|
+| Prod | `azure.com` |
+| Mooncake | `chinacloudapi.cn` |
+| Fairfax | `usgovcloudapi.net` |
+
+**Command Prompt (persistent):**
+
+```cmd
+setx ARM_CLOUD_METADATA_URL "https://management.<domain>/metadata/endpoints?api-version=2019-05-01"
+```
+
+**PowerShell (current session):**
+
+```powershell
+$env:ARM_CLOUD_METADATA_URL = "https://management.<domain>/metadata/endpoints?api-version=2019-05-01"
+```
+
+Using `setx` sets the variable permanently for the user. A machine reboot might be required for the change to take effect system-wide before you run `ServerRegistration.exe`.
+
+#### Step 3: Prerequisites
+
+Azure PowerShell (`Az` module) must be installed on the server before proceeding. If it's not already installed, run the following command to install it:
+
+```powershell
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+A reboot might be required to complete installation.
+
+#### Step 4: Run server registration
+
+After setting the environment variable and confirming prerequisites, reboot then re-run `ServerRegistration.exe` to complete registration.
+
+
 ## See also
 
 - [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
