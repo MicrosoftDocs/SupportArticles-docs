@@ -1,11 +1,12 @@
 ---
-title: Disable Hyper-V to run virtualization software
-description: Discusses an issue in which virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard. Provides a resolution.
+title: Disable Hyper-V and dependent features to run virtualization software
+description: Learn why virtualization applications don't work alongside Hyper-V, Device Guard, and Credential Guard, and how to resolve the issue.
 ms.date: 03/27/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
+ai.usage: ai-assisted
 ms.custom:
 - sap:system performance\app,process,service reliability (crash,errors)
 - pcy:WinComm Performance
@@ -22,7 +23,7 @@ _Original KB number:_ &nbsp; 3204980
 
 ## Summary
 
-Many third-party virtualization applications don't work together with Hyper-V. Affected applications include VMware Workstation and VirtualBox.
+Third-party virtualization applications, such as VMware and VirtualBox, can't run alongside Hyper-V, Memory Integrity, or Credential Guard. This article explains why this issue occurs and how to disable Hyper-V and its dependent security features so that your third-party virtualization software can work correctly.
 
 ## Symptoms
 
