@@ -90,4 +90,4 @@ To restore thumbnail previews:
 
 ## Additional help for AI-enabled Cloud PC issues
 
-If you're experiencing issues that aren't covered in this article, you can contact Microsoft Support by submitting a support request through the Microsoft 365 admin center. [Get support – Microsoft 365 admin](/microsoft-365/admin/get-help-support?view=o365-worldwide)
+If you're experiencing issues that aren't covered in this article, you can contact Microsoft Support by submitting a support request through the Microsoft 365 admin center. [Get support – Microsoft 365 admin](/microsoft-365/admin/get-help-support?view=o365-worldwide&preserve-view=true)
