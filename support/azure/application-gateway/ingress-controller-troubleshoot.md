@@ -6,8 +6,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/04/2026
-ms.custom: sfi-image-nochange
+ms.date: 03/27/2026
+ms.custom: sap:Configuration and Setup,sfi-image-nochange
 # Customer intent: As a Kubernetes administrator, I want to troubleshoot the Application Gateway Ingress Controller installation, so that I can ensure it is configured correctly and resolve any issues affecting application accessibility.
 ---
 

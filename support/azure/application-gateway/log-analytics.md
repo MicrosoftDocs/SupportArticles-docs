@@ -7,8 +7,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/04/2026
-ms.custom: sfi-image-nochange
+ms.date: 03/27/2026
+ms.custom: sap:Monitoring and Logging,sfi-image-nochange
 # Customer intent: As a security analyst, I want to analyze Web Application Firewall logs using Log Analytics, so that I can gain insights into traffic patterns and security events for the Application Gateway.
 ---
 
