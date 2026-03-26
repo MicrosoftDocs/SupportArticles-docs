@@ -92,9 +92,9 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
 1. In the **Edit Site Binding** dialog, select the certificate accordingly:
 
-    - Enhanced HTTP: **SMS Role SSL certificate**
+   - Enhanced HTTP: **SMS Role SSL certificate**
 
-    - HTTPS: A valid public key infrastructure (PKI) server authentication certificate
+   - HTTPS: A valid public key infrastructure (PKI) server authentication certificate
 
 ## Error code 0x2f8f (ERROR_WINHTTP_SECURE_FAILURE)
 
@@ -119,7 +119,7 @@ Before the error message, other events might also be logged:
 [CCMHTTP] : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
 ```
 
-> [!NOTE]
+> [!NOTE]  
 >
 > - `WINHTTP_CALLBACK_STATUS_FLAG_CERT_REV_FAILED` indicates that the `/NoCRLCheck` parameter is missing from the `CCMSetup` command, and the certificate revocation list (CRL) isn't published on the Internet.
 >
@@ -141,28 +141,28 @@ If you're using a PKI server authentication certificate, follow these steps:
 
 1. Make sure that the certificate presented to the client has the expected CMG name. If you're using non-Microsoft services that use certificate pinning and modify the presented certificate, the clients can't validate the server certificate.
 
-    To verify which certificate is presented, open the following URL in a web browser:
+   To verify which certificate is presented, open the following URL in a web browser:
 
-    `https://<CMGFQDN>/CCM_Proxy_MutualAuth/ServiceMetadata`
+   `https://<CMGFQDN>/CCM_Proxy_MutualAuth/ServiceMetadata`
 
-    Replace the `<CMGFQDN>` placeholder with your CMG public fully qualified domain name (FQDN).
+   Replace the `<CMGFQDN>` placeholder by using your CMG public fully qualified domain name (FQDN).
 
-2. Make sure that the client has the certificate in the local Trusted Root Certification Authorities certificate store. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the server authentication but not for the responses sent from the CMG to the client. When you use a non-Microsoft certificate for authentication, the client can typically validate the public Root CA over the Internet.
+1. Make sure that the client has the certificate in the local Trusted Root Certification Authorities certificate store. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the server authentication but not for the responses sent from the CMG to the client. When you use a non-Microsoft certificate for authentication, the client can typically validate the public Root CA over the Internet.
 
-3. If the CRL isn't published on the Internet, make sure that the site doesn't force clients to validate the CRL and disable CRL checking for clients:
+1. If the CRL isn't published on the Internet, make sure that the site doesn't force clients to validate the CRL and disable CRL checking for clients:
 
-    1. In the Configuration Manager console, navigate to the **Administration** workspace.
+   1. In the Configuration Manager console, navigate to the **Administration** workspace.
 
-    1. Expand **Site Configuration**, and then select the **Sites** node.
+   1. Expand **Site Configuration**, and then select the **Sites** node.
 
-    1. Select the primary site to configure.
+   1. Select the primary site to configure.
 
-    1. In the ribbon, select **Properties**.
+   1. In the ribbon, select **Properties**.
 
-    1. On the **Communication Security** tab, clear the **Clients check the certificate revocation list (CRL) for site systems** checkbox.
+   1. On the **Communication Security** tab, clear the **Clients check the certificate revocation list (CRL) for site systems** checkbox.
 
-    > [!NOTE]
-    > When installing clients from the Internet, make sure that the `/NoCRLCheck` parameter is included in the `CCMSetup` command.
+   > [!NOTE]  
+   > When installing clients from the Internet, make sure that the `/NoCRLCheck` parameter is included in the `CCMSetup` command.
 
 ## Error code 401 (CMGService_Invalid_Token)
 
@@ -195,14 +195,18 @@ To renew the expired token, connect the client to the internal MP directly or re
 
 ## More information
 
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
 For further troubleshooting, do the following actions:
 
 - Check the IIS logs on the management point.
 
-    In the following sample log, the `403 7` response indicates that the server certificate can't be found:
+  In the following sample log, the `403 7` response indicates that the server certificate can't be found:
 
-    > \<Date> \<Time> \<IP_address_of_MP> GET /SMS_MP/.sms_aut SITESIGNCERT 443 - \<IP_address_of_CMG_connectionpoint> SMS+CCM+5.0 - **403 7** 0 5573 11
+  ```output
+  <Date> <Time> <IP_address_of_MP> GET /SMS_MP/.sms_aut SITESIGNCERT 443 - <IP_address_of_CMG_connectionpoint> SMS+CCM+5.0 - **403 7** 0 5573 11
+  ```
 
-- Enable verbose logging for the **SMS_Cloud_ProxyConnector.log** file by setting the `VerboseLogging` registry entry value to `1` under the following registry key, and then restart the SMS_EXECUTIVE service.
+- Enable verbose logging for the SMS_Cloud_ProxyConnector.log file by setting the `VerboseLogging` registry entry value to `1` under the following registry subkey, and then restart the SMS_EXECUTIVE service.
 
-    `HKLM\SOFTWARE\MICROSOFT\SMS\SMS_CLOUD_PROXYCONNECTOR`
+  `HKLM\SOFTWARE\MICROSOFT\SMS\SMS_CLOUD_PROXYCONNECTOR`
