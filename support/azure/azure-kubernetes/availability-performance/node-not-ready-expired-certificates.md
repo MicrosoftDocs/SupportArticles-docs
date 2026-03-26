@@ -1,15 +1,17 @@
 ---
 title: Troubleshoot Node Not Ready state when certificates have expired
-description: Troubleshoot scenarios in which Node Not Ready failures occur in an Azure Kubernetes Service (AKS) cluster node if there are expired certificates.
+description: "Learn how to fix expired certificates causing Node Not Ready failures in AKS. Follow steps to rotate certificates and restore your cluster nodes."
 ms.date: 04/10/2025
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis, addobres, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix expired certificates so that they don't cause Node Not Ready failures within an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Node/node pool availability and performance
 ---
-# Troubleshoot Node Not Ready failures if there are expired certificates
+# Troubleshoot Node Not Ready failures caused by expired certificates in AKS
 
-This article helps you troubleshoot Node Not Ready scenarios within a Microsoft Azure Kubernetes Service (AKS) cluster if there are expired certificates.
+## Summary
+
+This article helps you troubleshoot Node Not Ready failures in an Azure Kubernetes Service (AKS) cluster caused by expired certificates. Learn how to identify expired certificates and rotate them to restore node availability.
 
 ## Prerequisites
 
@@ -22,7 +24,7 @@ You discover that an AKS cluster node is in the Node Not Ready state.
 
 ## Cause
 
-There are one or more expired certificates.
+One or more certificates are expired.
 
 ## Prevention: Run OpenSSL to sign the certificates
 
@@ -59,7 +61,7 @@ You might receive certain error codes after you invoke these commands. For infor
 - [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](../create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md)
 - [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](../create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md)
 
-If you receive error code 99, this indicates that the [apt-get update](https://linux.die.net/man/8/apt-get) command is being blocked from accessing one or more of the following domains:
+If you receive error code 99, this error indicates that the [apt-get update](https://linux.die.net/man/8/apt-get) command is blocked from accessing one or more of the following domains:
 
 - security.ubuntu.com
 - azure.archive.ubuntu.com
@@ -74,7 +76,7 @@ You can apply [certificate auto rotation](/azure/aks/certificate-rotation#certif
 If you can accommodate cluster downtime, you can [manually rotate the certificates](/azure/aks/certificate-rotation#rotate-your-cluster-certificates) instead.
 
 > [!NOTE]
-> Starting in the [July 15, 2021, release of AKS](https://github.com/Azure/AKS/releases/tag/2021-07-15), an AKS cluster upgrade automatically helps to rotate the cluster certificates. However, this behavioral change doesn't take effect for an expired cluster certificate. If an upgrade takes only the following actions, the expired certificates won't be renewed:
+> Starting in the [July 15, 2021, release of AKS](https://github.com/Azure/AKS/releases/tag/2021-07-15), an AKS cluster upgrade automatically helps to rotate the cluster certificates. However, this behavioral change doesn't take effect for an expired cluster certificate. If an upgrade takes only the following actions, the expired certificates aren't renewed:
 >
 > - Upgrade a node image.
 > - Upgrade a node pool to the same version.
