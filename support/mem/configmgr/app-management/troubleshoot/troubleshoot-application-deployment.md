@@ -46,9 +46,9 @@ If the client can't download the application content, make sure it's distributed
 
 When the application's deployment compliance is 0%, check the deployment status for the application in the **Monitoring** workspace under the **Deployments** node.
 
-- **In Progress**: The client could be stuck [downloading content](#download-failures)
+- **In Progress**: The client could be stuck [downloading content](#download-failures).
 
-- **Error**: For more information on how to troubleshoot this problem, see the following blog post: [Tips and Tricks: How to Take Action on Assets That Report a Failed Deployment](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Tips-and-Tricks-How-to-Take-Action-on-Assets-That-Report-a/ba-p/273019)
+- **Error**: For more information on how to troubleshoot this problem, see the following blog post: [Tips and Tricks: How to Take Action on Assets That Report a Failed Deployment](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Tips-and-Tricks-How-to-Take-Action-on-Assets-That-Report-a/ba-p/273019).
 
 - **Unknown**: This status usually means that the client hasn't received policy. Manually refresh client policy to see if the client receives it. For more information, see [Initiate policy retrieval for a Configuration Manager client](/mem/configmgr/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).
   
