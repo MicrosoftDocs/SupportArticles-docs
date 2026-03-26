@@ -1,56 +1,79 @@
 ---
-title: Home Page Unexpectedly Shown and WebView Reset in Dynamics 365 Field Service Mobile App
-description: Helps resolve WebView reset issues in the Dynamics 365 Field Service mobile app.
-author: JonBaker007
-ms.author: jobaker
-ms.reviewer: puneet-singh1
-ms.date: 07/11/2025
+title: Fix WebView reset errors in the Dynamics 365 Field Service mobile app
+description: Resolve WebView reset errors in the Dynamics 365 Field Service mobile app. Fix memory spikes from large files, PCF controls, and JavaScript leaks on iOS and Android.
+ms.date: 03/20/2026
+ms.reviewer: jobaker, puneet-singh1, v-shaywood
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
-# Troubleshoot WebView reset in Dynamics 365 Field Service mobile app
 
-This article helps you troubleshoot and resolve issues in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview), where the home page is unexpectedly displayed, and a WebView reset occurs.
+# WebView reset error in the Dynamics 365 Field Service mobile app
 
-## What is a WebView reset?
+## Summary
 
-A WebView reset in the Dynamics 365 Field Service mobile app typically indicates that the app module consumes too much memory. It's often triggered by activities that cause memory pressure on the WebView process. [Model-driven applications in Power Apps](/power-apps/maker/model-driven-apps/model-driven-app-overview), such as Dynamics 365 Field Service, run as web applications inside a WebView on the mobile client. As a result, they're subject to the memory management policies of the mobile operating system.
+This article helps you resolve WebView reset problems in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview). A WebView reset occurs if the mobile operating system stops an app process that uses too much memory. Common symptoms include the home screen appearing unexpectedly, file or PDF attachments closing immediately after they open, or the app crashing on Android devices. The problem is usually caused by memory spikes from large files or custom controls, or memory leaks from incorrectly managed JavaScript in [model-driven apps](/power-apps/maker/model-driven-apps/model-driven-app-overview).
 
-## Root cause
+## Symptoms
 
-A WebView reset occurs when the mobile operating system terminates an application process that exceeds its memory limits. The threshold for "too much memory" varies by device and operating system, so the issue might not always be reproducible.
+When you use the Field Service mobile app, you experience one or more of the following symptoms:
 
-- **iOS:** The WebView reset error occurs only on iOS because WebViews run in separate processes that can be terminated independently from the main app. If the WebView process exceeds the operating system memory threshold, it's terminated. The app detects this issue, restarts the WebView, and displays a reset message to the user.
-- **Android:** The WebView runs within the main application process. If memory limits are exceeded, the entire app process is terminated, resulting in a crash.
-- **Desktop browsers:** WebView resets don't occur, but memory pressure can still be investigated using browser tools.
+- The app unexpectedly returns to the home screen without warning.
+- A file or PDF attachment opens briefly and immediately closes.
+- The following error message appears:
 
-> [!IMPORTANT]
-> Poor memory management in customizations can negatively impact the app experience.
+  > WebView reset.
 
-## Understanding memory pressure
+- On Android, the app stops responding instead of showing an error message.
 
-There are two main causes of memory pressure:
+These symptoms might occur when you open large files, go to forms that have complex customizations, or use the app for a long time.
 
-1. Memory spike
+## Cause
 
-    A memory spike occurs when a large object is allocated in the WebView process, causing a sudden increase in memory usage. Common causes include:
+A WebView reset occurs when the mobile operating system ends an app process that exceeds its memory limits. The Field Service mobile app runs as a web application inside a WebView on the mobile client and is subject to the operating system's memory management policies. The memory threshold varies by device and operating system, so you might not always be able to reproduce the issue.
 
-    - Storing Base64-encoded images or videos in variables within [Power Apps component framework](/power-apps/developer/component-framework/overview) controls or web resources.
-    - Using JavaScript libraries that import large resource files (for example, font libraries.)
+The behavior differs by platform:
 
-    If you can reliably reproduce a WebView reset by performing a specific action (like opening a form or control), a memory spike is likely the cause.
+- **iOS**: WebViews run in separate processes that the operating system can terminate independently from the main app. If the WebView process exceeds the memory threshold, the operating system ends it. The app detects this condition, restarts the WebView, and shows the "WebView reset" error.
+- **Android**: The WebView runs within the main app process. If memory limits are exceeded, the entire app crashes.
+- **Desktop browsers**: WebView resets don't occur, but you can still investigate memory pressure by using browser tools.
 
-2. Memory leaks
+Two types of memory problems typically cause WebView resets:
 
-    A memory leak occurs when memory allocated within the WebView process isn't released because of lingering references, such as event listeners or objects that aren't properly cleaned up. This issue prevents the garbage collector from reclaiming the memory, causing memory usage to gradually increase over time. For example, adding event listeners to the window object in JavaScript without removing them when navigating away can lead to leaks. If WebView resets occur randomly and aren't tied to a specific action, it's likely due to a memory leak from previous activities.
+### Memory spike
 
-## Troubleshooting memory pressure
+A memory spike is a sudden increase in memory usage caused by allocating a large object. Common causes include:
 
-To diagnose and resolve memory pressure issues:
+- Storing Base64-encoded images or videos in variables within [Power Apps component framework (PCF)](/power-apps/developer/component-framework/overview) controls or web resources.
+- Using JavaScript libraries that import large resource files, like font libraries.
 
-- For iOS, use Safari memory analysis tools to check the memory performance of your iOS app module. For more information, see [the Timelines Tab in Web Inspector](https://webkit.org/web-inspector/timelines-tab/).
-- The WebView reset error is specific to iOS applications running WebViews and can only be reproduced within that context. However, code that causes memory pressure on mobile also causes memory pressure buildup on desktop browsers. You can investigate the root cause of a WebView reset by using browser developer tools (such as Microsoft Edge DevTools) to track memory usage and identify issues. For more information, see [Fix memory problems in Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/memory-problems/).
-- [Debug JavaScript code for model-driven apps](/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code) to identify problematic scripts or customizations.
+If you can reliably reproduce a WebView reset by performing a specific action like opening a form or control, a memory spike is likely the cause.
 
-## More information
+### Memory leak
 
-[Performance considerations when customizing the Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/improve-mobile-performance)
+A memory leak occurs when allocated memory isn't released because of lingering references, such as event listeners or objects that aren't properly cleaned up. This problem prevents the garbage collector from reclaiming the memory, so usage gradually increases over time.
+
+For example, a leak can occur if you add event listeners to the JavaScript `window` object without removing them when you navigate away from a page. If WebView resets occur randomly and aren't tied to a specific action, a memory leak is the likely cause.
+
+## Solution
+
+### For users
+
+If the WebView reset occurs when you open a PDF or file attachment on a work order, try the following steps:
+
+1. Reduce the file size. Attachments tha are larger than 10 MB are more likely to trigger a WebView reset. Ask the sender to compress or resave the file at a lower resolution before they reattach it to the work order.
+1. If the issue occurs consistently by using the same file, try to open the file on a different device or in a desktop browser to check whether the file is corrupted.
+1. Free up memory by closing other apps that are running on the device. Then, restart the Field Service app, and try again to open the attachment.
+
+### For administrators
+
+1. Review any [custom controls or web resources](/dynamics365/guidance/resources/field-service-mobile-improve-performance) that were added to the mobile app. Custom controls that store Base64-encoded images or import large JavaScript libraries can cause memory pressure and more frequent WebView resets.
+
+1. For iOS, use Safari memory analysis tools to check the memory performance of your iOS app. For more information, see [the Timelines tab in Web Inspector](https://webkit.org/web-inspector/timelines-tab/).
+
+1. Use browser developer tools such as Microsoft Edge DevTools to track memory usage and find issues. Code that causes memory pressure on mobile apps also causes memory pressure on desktop browsers. For more information, see [Fix memory problems in Microsoft Edge DevTools](/microsoft-edge/devtools-guide-chromium/memory-problems/).
+
+1. To find problematic scripts or customizations, [debug JavaScript code for model-driven apps](/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code).
+
+## Related content
+
+- [Troubleshoot common issues with the Field Service mobile app](mobile-app-common-issues.md)
+- ["Validations have been restarted in the background" error](validation-restarted-background.md)
