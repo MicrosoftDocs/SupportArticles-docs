@@ -16,7 +16,9 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS reinitialization (reinit) for global data in a Configuration Manager hierarchy:
 
-![Diagram to troubleshoot global data reinit](media/global-data-reinit/global-data-reinit.svg)
+<!--Note: Lightbox would be useful for these diagrams, but would have to convert to .png first. Lightbox doesn't support .svg -->
+
+:::image type="content" source="media/global-data-reinit/global-data-reinit.svg" alt-text="Diagram of a decision tree to troubleshoot global data reinitialization.":::
 
 ## Queries
 

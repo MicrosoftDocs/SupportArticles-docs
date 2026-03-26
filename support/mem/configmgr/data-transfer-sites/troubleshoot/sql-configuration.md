@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS configuration related to SQL Server Service Broker:
 
-![Diagram to troubleshoot SQL Server configuration](media/sql-configuration/sql-configuration.svg)
+:::image type="content" source="media/sql-configuration/sql-configuration.svg" alt-text="Diagram to troubleshoot SQL Server configuration.":::
 
 ## Queries
 

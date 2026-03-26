@@ -22,7 +22,7 @@ After you install hotfix [3125525](https://support.microsoft.com/help/3125525), 
 - If it takes more than 30 minutes (by default) to process a message, the replication link may become degraded.
 - The average CPU time for SQL Server change tracking is 2.7 to 4 seconds.
 
-> [!NOTE]
+> [!NOTE]  
 > Hotfix 3125525 is included in the following SQL Server cumulative updates:
 >
 > - [Cumulative Update 13 for SQL Server 2014](https://support.microsoft.com/help/3144517)
@@ -33,13 +33,13 @@ After you install hotfix [3125525](https://support.microsoft.com/help/3125525), 
 
 To fix the issue, install the latest Cumulative Update for your SQL Server version:
 
-|SQL Server version|The latest Cumulative Update|
-|---|---|
-|SQL Server 2012 Service Pack 3| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=50733)|
-|SQL Server 2014 RTM| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51187)|
-|SQL Server 2014 Service Pack 1| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51186)|
-|SQL Server 2014 Service Pack 2| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53592)|
-|SQL Server 2016 RTM| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53338) or [Install SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)|
+| SQL Server version | The latest Cumulative Update |
+| --- | --- |
+| SQL Server 2012 Service Pack 3 | [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=50733) |
+| SQL Server 2014 RTM | [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51187) |
+| SQL Server 2014 Service Pack 1 | [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51186) |
+| SQL Server 2014 Service Pack 2 | [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53592) |
+| SQL Server 2016 RTM | [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53338) or [Install SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) |
   
 ## More information
 

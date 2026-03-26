@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS reinitialization (reinit) for site data in a Configuration Manager hierarchy:
 
-![Diagram to troubleshoot site data reinit](media/site-data-reinit/site-data-reinit.svg)
+:::image type="content" source="media/site-data-reinit/site-data-reinit.svg" alt-text="Diagram of a decision tree to troubleshoot site data reinitialization.":::
 
 ## Queries
 

@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS performance that can impact replication status:
 
-![Diagram to troubleshoot SQL Server performance](media/sql-performance/sql-performance.png)
+:::image type="content" source="media/sql-performance/sql-performance.png" alt-text="Diagram of a decision tree to troubleshoot SQL Server performance." lightbox="media/sql-performance/sql-performance.png":::
 
 <!-- PNG used instead of SVG because the SQL statements wrap weird in the SVG. The SVG file exists in the same location. -->
 

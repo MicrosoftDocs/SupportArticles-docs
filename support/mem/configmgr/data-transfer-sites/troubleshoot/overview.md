@@ -26,7 +26,7 @@ To better understand and help troubleshoot issues with Database Replication Serv
 
 These troubleshooting diagrams are interconnected. Use the following diagram to understand their relationships:
 
-![Overview diagram of process for troubleshooting SQL Server replication](media/overview/overview.png)
+:::image type="content" source="media/overview/overview.png" alt-text="Diagram of an overview process to troubleshoot SQL Server replication.":::
 
 <!-- PNG used instead of SVG because of weird blankspace in the SVG. The SVG file exists in the same location. -->
 

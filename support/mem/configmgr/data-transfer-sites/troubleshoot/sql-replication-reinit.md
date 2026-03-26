@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS reinitialization (reinit):
 
-![Diagram to troubleshoot DRS reinitialization](media/sql-replication-reinit/sql-replication-reinit.svg)
+:::image type="content" source="media/sql-replication-reinit/sql-replication-reinit.svg" alt-text="Diagram of a decision tree to troubleshoot DRS reinitialization.":::
 
 ## Queries
 

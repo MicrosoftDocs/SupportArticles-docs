@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting DRS replication when a link fails:
 
-![Diagram to troubleshoot SQL Server replication](media/sql-replication/sql-replication.svg)
+:::image type="content" source="media/sql-replication/sql-replication.svg" alt-text="Diagram of a decision tree to troubleshoot SQL Server replication.":::
 
 ## Queries
 

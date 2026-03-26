@@ -16,7 +16,7 @@ In a multi-site hierarchy, Configuration Manager uses Database Replication Servi
 
 Use the following diagram to start troubleshooting a missing message with DRS reinitialization (reinit):
 
-![Diagram to troubleshoot reinit missing message](media/reinit-missing-message/reinit-missing-message.svg)
+:::image type="content" source="media/reinit-missing-message/reinit-missing-message.svg" alt-text="Diagram of a decision tree to troubleshoot a missing message.":::
 
 ## Queries
 
