@@ -73,6 +73,17 @@ To disable Hyper-V by using Windows PowerShell, follow these steps:
     Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
     ```
 
+### Disable Hyper-V using DISM
+
+To disable Hyper-V using DISM, follow these steps:
+
+1. Open an elevated Command Prompt window.
+2. Run the following command:
+
+    ```batch
+    DISM /Online /Disable-Feature /FeatureName:Microsoft-Hyper-V-Hypervisor
+    ```
+
 ## Disable Device Guard and Credential Guard
 
 You can disable Device Guard and Credential Guard by using registry keys or group policy. To do it, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
