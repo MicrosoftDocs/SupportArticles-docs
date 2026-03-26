@@ -13,6 +13,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot pods that remain in the Pending state
 
+## Summary
+
 This article helps you troubleshoot a scenario in which pods remain in the **Pending** state.
 
 ## Symptoms

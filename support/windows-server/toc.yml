@@ -952,8 +952,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
-    - name: A Group Policy setting isn't available in the security policy settings list
-      href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Can't apply user Group Policy settings
@@ -2566,6 +2564,8 @@ items:
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: "Troubleshooting guidance: VM settings"
+      href: ./virtualization/virtual-machine-settings-troubleshooting-guidance.md
     - name: Can't access Hyper-V virtual machines via VMConnect
       href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
@@ -2578,6 +2578,8 @@ items:
       href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
+    - name: "Troubleshooting guidance: High availability virtual machines"
+      href: ./virtualization/high-availability-virtual-machine-troubleshooting-guidance.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
     - name: Unresponsive VMs after cluster failover failure

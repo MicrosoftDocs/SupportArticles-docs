@@ -1,6 +1,6 @@
 ---
 title: Azure Storage Explorer troubleshooting guide
-description: "Learn debugging techniques and solutions for Azure Storage Explorer issues. Troubleshoot permissions, sign-in, certificates, and connection problems."
+description: Troubleshoot Azure Storage Explorer sign-in, proxy, certificate, and connection errors with step-by-step fixes to restore access quickly. Start now.
 services: storage
 author: jinglouMSFT
 ms.author: jinglou
@@ -721,21 +721,64 @@ For some problems, you need to provide logs of the network calls that Storage Ex
 1. Save the trace again with a new name.
 1. (Optional) Delete the original trace.
 
-## Storage Explorer can't find Azurite Docker containers
+## Storage Explorer can't find Azurite containers
 
-If Storage Explorer can't find your Azurite Docker containers, follow these steps to troubleshoot the issue:
+If Storage Explorer can't find your Azurite Docker or Podman containers, follow these steps to troubleshoot the issue:
 
-### Verify Docker is installed
+1. **Verify you have the latest version of Storage Explorer installed**
 
-Ensure that Docker is installed and running on your machine. You can verify the Docker installation by running the following command in your terminal or command prompt:
+Make sure you're using the [latest version of Storage Explorer](https://github.com/microsoft/AzureStorageExplorer/releases/latest). You can check for updates by going to **Help** > **Check for Updates**.
+
+2. **Verify container engine is installed**
+
+Ensure that the container engine is installed and running on your machine.
 
 ```bash
+# If using Docker
 docker --version
+
+# If using Podman
+podman --version
 ```
 
-If Docker isn't running, restart Docker services and try again.
+If the engine isn't running, restart container engine services and try again.
 
-For Linux users, you might need to join the `docker` group. To join the group, run the following commands:
+3. **Verify communication channel locations**
+
+As of version 1.41.0, Storage Explorer needs to communicate with the container engine via designated named pipes (Windows) or Unix domain sockets (Linux and macOS).
+
+By default, Storage Explorer looks in the following locations for these communication channels:
+
+| Platform | Locations                                                      |
+|----------|:---------------------------------------------------------------|
+| Windows  | \\\\.pipe\docker_engine <br/> \\\\.pipe\podman-machine-default |
+| macOS    | /var/run/docker.sock                                           |
+| Linux    | /var/run/docker.sock <br/> ~/.docker/run/docker.sock           |
+
+Verify the location of the container engines you plan to use. If they aren't located in the default locations, modify the Azurite Communication Channels setting (`services.storageAccounts.containerSocketPaths`) to include the absolute paths to the correct locations.
+
+4. **Set up for Linux snap**
+
+The snap sandbox environment prevents Storage Explorer from accessing system files. You can work around snap limitations by opening a socket that forwards communications to the container engine using `socat`:
+
+  1. Verify the location of the container engine socket (for example, `/var/run/docker.sock`).
+  1.  Create a forwarding socket within an accessible location, like your home directory:
+
+   ```bash
+   socat UNIX-LISTEN:$HOME/docker.sock,fork UNIX-CONNECT:/var/run/docker.sock &
+   ```
+  
+  1. Launch Storage Explorer.
+  1. Modify the Azurite Communication Channels setting to include the absolute path to the forwarding socket (in this case, `/home/<username>/docker.sock​`).
+  1. Refresh the `Emulators & Attached` node.
+
+> [!NOTE]
+> - The forwarding socket must be opened in a location that Storage Explorer can access, like your home directory.
+> - The forwarding socket must not be a hidden file (for example, its name can't start with a dot).
+> - You must enter an absolute path to the forwarding socket for the Azurite Communication Channels setting. You can't use expanding shell characters, like the "~" character
+> - If you terminate the background process launched by `socat`, Storage Explorer won't be able to communicate with the container engines to find Azurite instances.
+ 
+If you're using Docker, you might also need to join the `docker` group.
 
 ```bash
 sudo groupadd docker
@@ -744,27 +787,26 @@ sudo usermod -aG docker $USER
 
 Once added to the `docker` group, restart your machine. For more information, see [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/).
 
-### Verify the Docker context
+5. **Verify the container engine context**
 
-Make sure you're using the correct Docker context that's managing your containers. You can check your current context by running:
+Make sure you're using the correct context that's managing your containers.
 
 ```bash
+# If using Docker
 docker context ls
-```
-To change your active context, use:
-
-```bash
 docker context use <context name>
+
+# If using Podman
+podman context ls
+podman context use <context name>
 ```
 
-> [!NOTE]
-> For Linux snap users, Storage Explorer works only with the `default` context. Other contexts, such as `desktop-linux`, aren't visible to Storage Explorer.
+6. **Check Azurite container status**
 
-### Check Azurite container status
-
-Verify that your Azurite containers are running. You can check the status of your Docker containers by running:
+Verify that your Azurite containers are running. Ensure that your Azurite containers are listed and their status is `Up`. Start any containers that aren't running.
 
 ```bash
+# If using Docker
 docker container list --all
 ```
 
@@ -772,14 +814,22 @@ Ensure that your Azurite containers are listed and their status is **Up**. If a 
 
 ```bash
 docker start <container name>
+
+# If using Podman
+podman container list --all
+podman start <container name>
 ```
 
-### Verify Azurite ports
+7. **Verify Azurite ports**
 
-Ensure that your Azurite containers port configurations are correct. You can check the ports by running:
+Ensure that your Azurite containers port configurations are correct.
 
 ```bash
+# If using Docker
 docker inspect <container name>
+
+# If using Podman
+podman inspect <container name>
 ```
 
 Look for the `NetworkSettings.Ports` section in the output to verify the port mappings. For example, assuming an Azurite container's blob endpoint is configured to listen on port 10000, and that container port is mapped to the host machine's port 10010, you see an entry like this:
@@ -793,35 +843,32 @@ Look for the `NetworkSettings.Ports` section in the output to verify the port ma
 ]
 ```
 
-### Verify you have the latest version of Storage Explorer installed
+8. **Verify custom accounts are valid**
 
-Make sure you're using the [latest version of Storage Explorer](https://github.com/microsoft/AzureStorageExplorer/releases/latest). You can check for updates by going to **Help** > **Check for Updates**.
-
-For Linux snap users, make sure the snap has the required connections to the Docker snap. To make the needed connections, run the following commands:
+If you're using custom accounts, make sure the account names and keys are valid and correctly configured in Storage Explorer.
 
 ```bash
-snap connect storage-explorer:docker docker:docker-daemon
-snap connect storage-explorer:docker-executables docker:docker-executables
-```
-
-### Verify custom accounts are valid
-
-If you're using custom accounts, make sure the account names and keys are valid and correctly configured in Storage Explorer. You can verify the custom accounts in use by running:
-
-```bash
+# If using Docker
 docker exec <container name> printenv AZURITE_ACCOUNTS
+
+# If using Podman
+podman exec <container name> printenv AZURITE_ACCOUNTS
 ```
 
-### Check network settings
+9. **Check network settings**
 
 Ensure that no network issues prevent Storage Explorer from connecting to the Azurite container. Verify that your firewall or antivirus software isn't blocking the connection.
 
 ### Restart Azurite container
 
-If the issue persists, try restarting the Azurite container:
+If the issue persists, try restarting the Azurite container.
 
 ```bash
+# If using Docker
 docker restart <container name>
+
+# If using Podman
+podman restart <container name>
 ```
 
 ### Recreate Azurite container
@@ -829,9 +876,21 @@ docker restart <container name>
 If none of the preceding steps resolve the issue, try recreating the Azurite container. For example:
 
 ```bash
+# If using Docker
 docker stop <container name>
 docker rm <container name>
-docker run \
+docker run -d \
+  --name <container-name> \
+  -e AZURITE_ACCOUNTS="<custom account name>:<custom key>" \
+  -p <blob-host-port>:10000 \
+  -p <queue-host-port>:10001 \
+  -p <table-host-port>:10002 \
+  mcr.microsoft.com/azure-storage/azurite
+
+# If using Podman
+podman stop <container name>
+podman rm <container name>
+podman run -d \
   --name <container-name> \
   -e AZURITE_ACCOUNTS="<custom account name>:<custom key>" \
   -p <blob-host-port>:10000 \
@@ -875,8 +934,6 @@ If none of these solutions work for you, use one of the following methods:
 - [Create a support ticket](https://aka.ms/storageexplorer/servicerequest).
 - [Open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues) by selecting the **Report issue to GitHub** button in the lower-left corner.
 
-    :::image type="content" source="media/storage-explorer-troubleshooting/feedback-button.png" alt-text="Screenshot that shows the feedback button.":::
+    :::image type="content" source="media/storage-explorer-troubleshooting/feedback-button.png" alt-text="Screenshot that shows the feedback button." lightbox="media/storage-explorer-troubleshooting/feedback-button.png":::
 
 [!INCLUDE [Third-party information disclaimer](../../../../includes/third-party-disclaimer.md)]
-
- 
