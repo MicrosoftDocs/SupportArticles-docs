@@ -1,6 +1,6 @@
 ---
 title: Fix intermittent time-outs or server issues during app access
-description: Troubleshoot intermittent time-outs or server issues that occur when you try to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
+description: Fix intermittent AKS app access time-outs and server errors. Follow troubleshooting steps now to quickly restore reliable application connectivity.
 ms.date: 09/19/2024
 ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -8,6 +8,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
 # Intermittent time-outs or server issues when accessing the application on AKS
+
+## Summary
 
 This article describes how to troubleshoot intermittent connectivity issues that affect your applications that are hosted on an Azure Kubernetes Service (AKS) cluster.
 

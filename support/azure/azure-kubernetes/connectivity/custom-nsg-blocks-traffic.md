@@ -1,6 +1,6 @@
 ---
-title: Fix time-out errors caused by a custom NSG that blocks traffic
-description: Troubleshoot time-out errors that occur because a custom network security group (NSG) blocks traffic to an app hosted on an Azure Kubernetes Service cluster.
+title: Fix AKS time-out errors from custom NSG blocks
+description: Fix AKS time-out errors caused by a custom NSG blocking app traffic. Use this guide to identify the cause and restore access quickly.
 ms.date: 09/16/2024
 ms.reviewer: chiragpa, v-leedennis
 editor: v-jsitser
@@ -9,6 +9,8 @@ ms.custom: sap:Connectivity, linux-related-content
 #Customer intent: As an Azure Kubernetes user, I want to fix custom network security group (NSG) configuration issues so that I don't get time-out errors when trying to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
 # A custom network security group blocks traffic
+
+## Summary
 
 When you access an application that's hosted on an Azure Kubernetes Service (AKS) cluster, you receive a "Timed out" error message. This error can occur even if the application is running and the rest of the configuration appears to be correct.
 

@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/14/2026
+ms.date: 03/25/2026
 ---
 # Errors when external participants try to join a Teams meeting
 
@@ -79,13 +79,13 @@ Here are some example situations.
 
   > [!NOTE]
   > If the meeting organizer's domain is blocked or not allowed in the external access setting of the external participants' organizations, the external participants can join meetings only as anonymous users.
-- Turn on [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **On**. 
+- Turn on [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Settings and policies** > **Guest access**, and then set **Allow guest access in Teams** to **On**. 
 
 ### Block all external participants from joining meetings
 
 - Disable anonymous join in the [organization meeting settings](/microsoftteams/meeting-settings-in-teams).
 - [Block external access](/microsoftteams/manage-external-access).
-- Turn off [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **Off**. 
+- Turn off [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Settings and policies** > **Guest access**, and then set **Allow guest access in Teams** to **Off**. 
 
 ### Allow only external participants to join meetings as authenticated users that you trust
 
