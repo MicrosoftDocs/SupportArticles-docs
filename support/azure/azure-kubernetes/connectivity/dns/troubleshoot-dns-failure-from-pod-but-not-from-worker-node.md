@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot DNS resolution failures from inside the pod
-description: Troubleshoot DNS resolution failures from inside the pod but not from the worker node within an Azure Kubernetes Service (AKS) cluster.
+description: DNS resolution fails in AKS pods while nodes resolve correctly? Troubleshoot DNS resolution failures in Azure Kubernetes Service and restore outbound connectivity now.
 ms.date: 08/25/2024
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
@@ -9,6 +9,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
 # Troubleshoot DNS resolution failures from inside the pod but not from the worker node
+
+## Summary
 
 This article discusses how to troubleshoot Domain Name System (DNS) resolution failures that occur from inside the pod, but not from the worker node, when you try to establish an outbound connection from a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -34,9 +36,9 @@ The upstream DNS servers are obtained based on the *resolv.conf* file of the wor
 
 To troubleshoot DNS issues from within the pod, use the instructions in the following sections.
 
-### Step 1: Troubleshoot DNS issues from within the pod
+### Step 1: Troubleshoot DNS problems from within the pod
 
-You can use kubectl commands to troubleshoot DNS issues from within the pod, as shown in the following steps:
+Use `kubectl` commands to troubleshoot DNS problems from within the pod, as shown in the following steps:
 
 1. Verify that the CoreDNS pods are running:
 
@@ -76,7 +78,7 @@ You can use kubectl commands to troubleshoot DNS issues from within the pod, as 
 
 ### Step 2: Create a test pod to run commands
 
-If DNS resolution is failing, follow these steps:
+If DNS resolution fails, follow these steps:
 
 1. [Run a test pod in the same namespace as the problematic pod](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/#create-a-simple-pod-to-use-as-a-test-environment).
 
@@ -86,7 +88,7 @@ If DNS resolution is failing, follow these steps:
    kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable
    ```
 
-   When the test pod is running, you'll gain access to the pod.
+   When the test pod is running, you gain access to the pod.
 
 1. Run the following commands to install the required packages:
 
@@ -104,7 +106,7 @@ If DNS resolution is failing, follow these steps:
    options ndots:5
    ```
   
-1. Use the `host` command to determine whether the DNS requests are being routed to the upstream server:
+1. Use the `host` command to determine whether the DNS requests are routed to the upstream server:
 
    ```console
    $ host -a microsoft.com
@@ -140,9 +142,9 @@ If DNS resolution is failing, follow these steps:
    Address: 20.81.111.85
    ```
 
-### Step 3: Check whether DNS requests work when the upstream DNS server is explicitly specified
+### Step 3: Check whether DNS requests work when you explicitly specify the upstream DNS server
 
-If the DNS requests from pods are working when you specify the upstream DNS server explicitly, verify the following conditions:
+If DNS requests from pods work when you explicitly specify the upstream DNS server, verify the following conditions:
 
 1. Check for a custom ConfigMap for CoreDNS:
 
@@ -150,24 +152,24 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
    kubectl describe cm coredns-custom -n kube-system
    ```
 
-   If a custom ConfigMap is present, verify that the configuration is correct. For more information, see [Customize CoreDNS with Azure Kubernetes Service](/azure/aks/coredns-custom).
+   If a custom ConfigMap exists, verify that the configuration is correct. For more information, see [Customize CoreDNS with Azure Kubernetes Service](/azure/aks/coredns-custom).
 
 1. Check whether a network policy is blocking traffic on User Datagram Protocol (UDP) port 53 to the CoreDNS pods in the `kube-system` namespace.
 
-1. Check whether the CoreDNS pods are on a different node pool (System node pool). If they are, check whether a network security group (NSG) is associated with the System node pool that's blocking traffic on UDP port 53.
+1. Check whether the CoreDNS pods are on a different node pool (System node pool). If they are, check whether a network security group (NSG) associated with the System node pool is blocking traffic on UDP port 53.
 
 1. Check whether the virtual network was updated recently to add the new DNS servers.
 
-   If a virtual network update occurred, check whether one of the following events has also occurred:
+   If a virtual network update occurred, check whether one of the following events also occurred:
 
    - The nodes were restarted.
    - The network service in the node was restarted.
 
-   For the update in DNS settings to take effect, the network service on the node and the CoreDNS pods have to be restarted. To restart the network service or the pods, use one of the following methods:
+   For the update in DNS settings to take effect, the network service on the node and the CoreDNS pods must restart. To restart the network service or the pods, use one of the following methods:
 
    - Restart the node.
 
-   - Scale new nodes. (New nodes will have the updated configuration.)
+   - Scale new nodes. (New nodes have the updated configuration.)
 
    - Restart the network service in the nodes, and then restart the CoreDNS pods. Follow these steps:
 
@@ -185,7 +187,7 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
         cat /run/systemd/resolve/resolv.conf
         ```
 
-     1. After the network service is restarted, use kubectl to restart the CoreDNS pods:
+     1. After the network service restarts, use kubectl to restart the CoreDNS pods:
 
         ```bash
         kubectl delete pods -l k8s-app=kube-dns -n kube-system
@@ -195,13 +197,13 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
 
    If multiple DNS servers are specified in the AKS virtual network, one of the following sequences occurs:
 
-   - The AKS node sends a request to the upstream DNS server as part of a series. In this sequence, the request is sent to the first DNS server that's configured in the virtual network (if the DNS servers are reachable and running). If the first DNS server isn't reachable and isn't responding, the request is sent to the next DNS server.
+   - The AKS node sends a request to the upstream DNS server as part of a series. In this sequence, the request goes to the first DNS server that's configured in the virtual network (if the DNS servers are reachable and running). If the first DNS server isn't reachable and isn't responding, the request goes to the next DNS server.
 
      AKS nodes use the [resolver](https://man7.org/linux/man-pages/man5/resolv.conf.5.html) command to send requests to the DNS servers. The configuration file for this resolver can be found at */run/systemd/resolve/resolv.conf* in the AKS nodes.
 
-     Are there multiple servers? In this case, the resolver library queries them in the order that's listed. (The strategy used is to try a name server first. If the query times out, try the next name server, and continue until the list of name servers is exhausted. Then, the query continues to try to connect to the name servers until the maximum number of retries are made.)
+     Are there multiple servers? In this case, the resolver library queries them in the order that's listed. The strategy it uses is to try a name server first. If the query times out, it tries the next name server, and continues until the list of name servers is exhausted. Then, the query continues to try to connect to the name servers until the maximum number of retries are made.
 
-   - CoreDNS uses the [forward](https://coredns.io/plugins/forward/) plug-in to send requests to upstream DNS servers. This plug-in uses a random algorithm to select the upstream DNS server. In this sequence, the request could go to any of the DNS servers that are mentioned in the virtual network. For example, you might receive the following output:
+   - CoreDNS uses the [forward](https://coredns.io/plugins/forward/) plug-in to send requests to upstream DNS servers. This plug-in uses a random algorithm to select the upstream DNS server. In this sequence, the request can go to any of the DNS servers that are mentioned in the virtual network. For example, you might receive the following output:
 
      ```console
      $ kubectl describe cm coredns -n kube-system
@@ -241,7 +243,7 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
      Events:  <none>
      ```
 
-   In the CoreDNS `forward` plugin, `policy` specifies the policy to use for selecting upstream servers. The policies are defined in the following table.
+   In the CoreDNS `forward` plugin, `policy` specifies the policy to use for selecting upstream servers. The following table describes each policy.
 
    | Policy name   | Description                                                                            |
    |---------------|----------------------------------------------------------------------------------------|
@@ -253,11 +255,11 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
 
 ## Cause: Multiple destinations for DNS requests
 
-If two custom DNS servers are specified, and the third DNS server is specified as Azure DNS (168.63.129.16), the node will send requests to the first custom DNS server if it's running and reachable. In this setup, the node can resolve the custom domain. However, some of the DNS requests from the pod might be directed to Azure DNS. This is because CoreDNS can select the upstream server at random. In this scenario, the custom domain can't be resolved. Therefore, the DNS request fails.
+If you specify two custom DNS servers and set the third DNS server as Azure DNS (168.63.129.16), the node sends requests to the first custom DNS server if it's running and reachable. In this setup, the node can resolve the custom domain. However, some of the DNS requests from the pod might go to Azure DNS. This situation happens because CoreDNS can select the upstream server at random. In this scenario, the custom domain can't be resolved. Therefore, the DNS request fails.
 
 ## Solution: Remove Azure DNS from virtual network settings
 
-We recommend that you don't combine Azure DNS with custom DNS servers in the virtual network settings. If you want to use the custom DNS servers, add only the custom DNS servers in the virtual network settings. Then, configure Azure DNS in the forwarder settings of your custom DNS servers.
+Don't combine Azure DNS with custom DNS servers in the virtual network settings. If you want to use custom DNS servers, add only the custom DNS servers in the virtual network settings. Then, configure Azure DNS in the forwarder settings of your custom DNS servers.
 
 For more information, see [Name resolution that uses your own DNS server](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 

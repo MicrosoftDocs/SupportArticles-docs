@@ -1,6 +1,6 @@
 ---
-title: Can't pull images from Azure Container Registry to Kubernetes
-description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
+title: Troubleshoot AKS image pull errors from Azure Container Registry
+description: Fix AKS image pull errors from Azure Container Registry with steps for 401, 403, timeout, and platform issues. Start troubleshooting now.
 ms.date: 06/05/2025
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -8,9 +8,11 @@ ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
-# Troubleshoot failures when pulling images from Azure Container Registry to Azure Kubernetes Service cluster 
+# Troubleshoot image pull failures from Azure Container Registry to AKS
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
+
+## Summary
 
 When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns either the [Container Registry Repository Reader role](/azure/role-based-access-control/built-in-roles#container-registry-repository-reader) (for attribute-based access control (ABAC)-enabled registries) or the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) (for non-ABAC-enabled registries) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry. See [Microsoft Entra attribute-based access control (ABAC) for repository permissions](/azure/container-registry/container-registry-rbac-abac-repository-permissions?tabs=azure-portal) for more information on the necessary ACR role to assign based on whether your ACR registry is ABAC-enabled.
 

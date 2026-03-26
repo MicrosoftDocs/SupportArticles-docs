@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common Bring Your Own Key (BYOK) issues
+title: Troubleshoot common bring your own key (BYOK) issues
 description: Learn how to troubleshoot common Bring Your Own Key (BYOK) issues, including key vault and ephemeral OS disk problems, on Azure Kubernetes Service (AKS).
 ms.date: 07/28/2023
 author: andyzhangx
@@ -9,9 +9,11 @@ ms.reviewer: meolsen, chiragpa, joharder, pram, vijayrod, jamote, ramankum, xiny
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
-# Troubleshoot common Bring Your Own Key (BYOK) issues
+# Troubleshoot common bring your own key (BYOK) issues
 
-This article discusses troubleshooting methods for the most common Bring Your Own Key (BYOK) issues on Microsoft Azure Kubernetes Service (AKS).
+## Summary
+
+This article discusses troubleshooting methods for the most common bring your own key (BYOK) issues on Microsoft Azure Kubernetes Service (AKS).
 
 ## Prerequisites
 
