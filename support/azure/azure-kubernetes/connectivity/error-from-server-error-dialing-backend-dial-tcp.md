@@ -1,5 +1,5 @@
 ---
-title: 'Error from server: error dialing backend: dial tcp'
+title: "Error from server: error dialing backend: dial tcp" message
 description: "Fix 'error dialing backend: dial tcp' in AKS to restore kubectl logs, exec, and top access. Use this guide to quickly find and resolve the network block."
 ms.date: 03/05/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis, pihe, mariusbutuc
@@ -23,11 +23,11 @@ You receive an "Error from server: error dialing backend: dial tcp" error messag
 
 ### Why the error occurs
 
-The Kubernetes API server has to forward API requests to an upstream component for several use cases. This error occurs if the API server can't establish a TCP connection to the upstream component. Example of such upstream components include kubernetes services that are inside the cluster and kubelet.
+The Kubernetes API server has to forward API requests to an upstream component for several use cases. This error occurs if the API server can't establish a Transmission Control Protocol (TCP) connection to the upstream component. Example of such upstream components includes kubernetes services that are inside the cluster and kubelet.
 
 If the issue persists, a network blockage is likely the cause. To identify the responsible network configuration, first determine the scope of the problem.
 
-### Narrowing down: Are all `kubectl` sub-commands failing?
+### Narrowing down: Are all `kubectl` subcommands failing?
 
 Try to run at least the `kubectl exec`, `kubectl logs <podname>`, and `kubectl top pods` commands.
 
@@ -37,19 +37,19 @@ If only `kubectl top pods` fails, check whether the issue occurs for pods on all
 
 ## Cause 1: kubelet port (node:10250) blocked
 
-Pod-specific access issues, such as those that are experienced by running `kubectl logs` and `kubectl exec`, occur if the API server cannot reach the node on port 10250 to access the Kubelet API. These issues can be caused by a connection that's blocked by a Network Security Group (NSG) or firewall.
+Pod-specific access issues, such as those that are experienced by running `kubectl logs` and `kubectl exec`, occur if the API server can't reach the node on port 10250 to access the Kubelet API. These issues can be caused by a connection that's blocked by a Network Security Group (NSG) or firewall.
 
 To resolve the issue, check whether the NSG on the node subnet includes an inbound rule that might block TCP port 10250.
 
 ## Cause 2: specific service failure
 
-Kubernetes accesses `svc/metrics-server` under the `kube-system` namespace for running kubectl top commands. There are other scenarios, such as [admission webhooks](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), in which the API server can also reach other services. It is important to note that, depending on the service failure pattern, the error message may vary.
+Kubernetes accesses `svc/metrics-server` under the `kube-system` namespace for running kubectl top commands. There are other scenarios, such as [admission webhooks](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), in which the API server can also reach other services. It's important to note that, depending on the service failure pattern, the error message can vary.
 
 To troubleshoot the issue, check the error message to identify which service is affected and review the status of the related pods, services, and endpoints.
 
 ## Cause 3: Konnectivity or tunnel failure
 
-When [API Server VNet Integration](/azure/aks/api-server-vnet-integration) is not enabled, AKS deploys a tunnel solution that proxies API server requests to in-cluster networking locations. Most AKS clusters use the Konnectivity solution. Konnectivity does not require that you open special ports on the API server. For more information, see [AKS required network rules](/azure/aks/outbound-rules-control-egress#azure-global-required-network-rules).
+When [API Server VNet Integration](/azure/aks/api-server-vnet-integration) isn't enabled, AKS deploys a tunnel solution that proxies API server requests to in-cluster networking locations. Most AKS clusters use the Konnectivity solution. Konnectivity doesn't require that you open special ports on the API server. For more information, see [AKS required network rules](/azure/aks/outbound-rules-control-egress#azure-global-required-network-rules).
 
 To resolve the issue, check whether the `konnectivity-agent` in the `kube-system` namespace is running and its containers are in a ready state. Try to delete the pods to see whether the connection recovers after the new pods are ready.
 
