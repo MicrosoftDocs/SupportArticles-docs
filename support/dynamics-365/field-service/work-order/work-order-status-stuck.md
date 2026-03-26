@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot a work order that doesn't transition to the next status
+title: When a work order status doesn't change as expected
 description: Troubleshoot issues where a work order can't transition to the next status in Dynamics 365 Field Service.
 author: vhorvathms
 ms.author: vhorvath
@@ -8,11 +8,11 @@ ms.date: 03/19/2026
 ms.custom: sap:Work Order Management
 ---
 
-# Troubleshoot a work order that doesn't transition to the next status
+# When a work order status doesn't change as expected
 
 ## Summary
 
-This article helps you troubleshoot scenarios where a work order doesn't transition to the next status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
+This article helps you troubleshoot scenarios where a work order doesn't change to the expected status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
