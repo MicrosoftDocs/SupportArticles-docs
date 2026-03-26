@@ -6,7 +6,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/05/2026
+ms.date: 03/27/2026
+ms.custom: sap:Connectivity
 # Customer intent: "As an IT administrator managing Azure Application Gateway, I want to understand HTTP response codes and their causes, so that I can effectively troubleshoot client and server errors to ensure high availability and optimal performance of my applications."
 ---
 
