@@ -320,7 +320,7 @@ Azure PowerShell (`Az` module) must be installed on the server before proceeding
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
 
-> A reboot may be required to complete installation.
+A reboot might be required to complete installation.
 
 #### Step 4 — Run server registration
 
