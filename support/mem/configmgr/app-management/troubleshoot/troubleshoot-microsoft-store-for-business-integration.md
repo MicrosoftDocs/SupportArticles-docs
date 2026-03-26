@@ -37,7 +37,7 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 This log file is located on the service connection point, under \Logs in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
-[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../../includes/registry-important-alert.md)]
 
 To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOFTWARE\Microsoft\SMS\Tracing\SMS_CLOUDCONNECTION` registry subkey. For more information, see [Configure logging options](/mem/configmgr/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
@@ -271,7 +271,7 @@ Restart the **SMS_EXECUTIVE** service.
 
 If you're not able to restart that main service, stop both components with MSfB workers, and then start both.
 
-[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../../includes/registry-important-alert.md)]
 
 1. Open the Windows registry on the server that runs the service connection point
 
