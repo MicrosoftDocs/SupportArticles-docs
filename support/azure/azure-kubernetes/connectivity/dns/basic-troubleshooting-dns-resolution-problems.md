@@ -23,7 +23,7 @@ This article explains how to troubleshoot DNS resolution problems in Azure Kuber
 
    **Note:** To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
-- The [dig](https://downloads.isc.org/isc/bind9/cur/9.19/doc/arm/html/manpages.html#dig-dns-lookup-utility) command-line tool for DNS lookup
+- The [BIND 9](https://www.isc.org/bind/) command-line tool for DNS lookup
 
 - The [grep](https://linux.die.net/man/1/grep) command-line tool for text search
 
