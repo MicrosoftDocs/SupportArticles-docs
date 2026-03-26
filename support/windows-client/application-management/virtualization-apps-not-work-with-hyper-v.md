@@ -60,7 +60,7 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
 ### How to disable Hyper-V
 
-#### [Control Panel](#tab/security)
+#### [Control Panel](#tab/controlpanel)
 
 To disable Hyper-V in Control Panel, follow these steps:
 
@@ -70,7 +70,7 @@ To disable Hyper-V in Control Panel, follow these steps:
 
    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.svg" alt-text="screenshot of the Hyper-V hypervisor check box." border="false":::
 
-#### [PowerShell](#tab/security)
+#### [PowerShell](#tab/powershell)
 
 To disable Hyper-V by using Windows PowerShell, follow these steps:
 
@@ -81,7 +81,7 @@ To disable Hyper-V by using Windows PowerShell, follow these steps:
     Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
     ```
 
-#### [DISM](#tab/security)
+#### [DISM](#tab/dism)
 
 To disable Hyper-V by using DISM, follow these steps:
 
@@ -94,11 +94,12 @@ To disable Hyper-V by using DISM, follow these steps:
 
 ---
 
-### Disable Device Guard and Credential Guard
+### Disable Memory Integrity and Credential Guard
 
-You can disable Device Guard and Credential Guard by using registry keys or group policy. To do it, 
+You can disable Memory Integrity and Credential Guard by using Microsoft Intune, Group Policy, or registry entries. For more information, see the following articles:
 
-see [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure).
+- [Configure Credential Guard](/windows/security/identity-protection/credential-guard/configure)
+- [Enable virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
 
 ## More information
 
