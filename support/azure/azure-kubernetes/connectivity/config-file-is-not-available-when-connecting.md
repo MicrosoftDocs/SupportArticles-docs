@@ -1,6 +1,6 @@
 ---
-title: Config file isn't available when connecting
-description: Troubleshoot issues caused by a missing config file when you attempt to connect to an Azure Kubernetes Service (AKS) cluster.
+title: AKS config file missing when connecting to cluster
+description: Fix AKS connection errors caused by a missing or invalid config file and restore cluster access quickly. Follow the steps to reconnect now.
 ms.date: 09/16/2024
 ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -8,6 +8,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ---
 # Config file isn't available when connecting
+
+## Summary
 
 This article describes how to fix issues that occur when you can't connect to an Azure Kubernetes Service (AKS) cluster because of a missing or invalid *config* file.
 

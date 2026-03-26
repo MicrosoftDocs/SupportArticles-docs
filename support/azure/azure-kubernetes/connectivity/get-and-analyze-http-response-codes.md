@@ -1,13 +1,15 @@
 ---
-title: Get and analyze HTTP response codes to determine app behavior
-description: Learn how to get HTTP response codes using cURL or a browser to analyze the behavior of an app that's hosted on an Azure Kubernetes Service (AKS) cluster.
+title: Determine app behavior with HTTP response codes
+description: Use cURL or a browser to get HTTP response codes and analyze app behavior in AKS. Start troubleshooting faster with clear response insights.
 ms.date: 09/26/2024
 ms.reviewer: chiragpa, jopalhei, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client ULR (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Connectivity
 ---
-# Get and analyze HTTP response codes
+# Get and analyze HTTP response codes for app behavior
+
+## Summary
 
 If an application responds to HTTP or HTTPS requests, you can check the HTTP response codes to determine the behavior of the application.
 
