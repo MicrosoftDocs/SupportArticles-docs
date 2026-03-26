@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot DNS resolution problems in AKS"
-description: "Learn how to troubleshoot DNS resolution problems in AKS by building a structured workflow. Follow this guide to diagnose and fix DNS failures in Azure Kubernetes Service."
+description: "Learn how to troubleshoot DNS resolution problems in AKS with a structured workflow to diagnose and fix DNS failures in Azure Kubernetes Service. Start here."
 author: sturrent
 ms.author: seturren
 ms.date: 05/29/2025
@@ -15,7 +15,7 @@ ms.topic: troubleshooting-general
 
 ## Summary
 
-This article explains how to troubleshoot DNS resolution problems in Azure Kubernetes Service (AKS) by building a structured workflow to diagnose, isolate, and fix Domain Name System (DNS) failures.
+This article explains how to troubleshoot DNS resolution problems in Azure Kubernetes Service (AKS) by building a structured workflow to diagnose, isolate, and fix Domain Name System (DNS) failures. Follow this guide to learn how to identify root causes and resolve DNS issues in your AKS cluster.
 
 ## Prerequisites
 

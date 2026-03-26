@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot DNS resolution failures from inside the pod
-description: DNS resolution fails in AKS pods while nodes resolve correctly? Use these steps to troubleshoot DNS resolution failures and restore outbound connectivity now.
+description: DNS resolution fails in AKS pods while nodes resolve correctly? Troubleshoot DNS resolution failures in Azure Kubernetes Service and restore outbound connectivity now.
 ms.date: 08/25/2024
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
