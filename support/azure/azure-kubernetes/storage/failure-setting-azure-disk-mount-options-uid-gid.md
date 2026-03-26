@@ -9,6 +9,8 @@ ms.custom: sap:Storage
 ---
 # Can't set the uid and gid mounting options on an Azure disk
 
+## Summary
+
 This article discusses how to fix issues that occur on a Microsoft Azure Kubernetes Service (AKS) cluster when you try to set the mounting options for user identifier (`uid`) and group identifier (`gid`) on an Azure disk.
 
 ## Symptoms

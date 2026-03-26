@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: aartig13 
   ms.author: aartigoyle
-  ms.date: 03/12/2026
+  ms.date: 03/20/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -55,6 +55,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Common issues with the Field Service mobile app
+            url: mobile-app/mobile-app-common-issues.md
           - text: Booking timestamp is created with an incorrect time
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
