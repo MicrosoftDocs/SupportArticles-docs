@@ -24,7 +24,7 @@ description: Administrators can learn about SMTP errors and nondelivery reports 
 
 # Email nondelivery reports and SMTP errors in Exchange Online
 
-If an email message that you send can't be delivered to the intended recipient, Microsoft 365 or Office 365 typically generates an error code and sends you a delivery status notification (DSN). This notice is also known as a "bounce message" or "bounce-back message." The most common type of DSN is a nondelivery report (NDR) that informs you that the message wasn't delivered. The cause can be something as simple as a typo in an email address. NDRs also include an error code that indicates why your message wasn't delivered, solutions to help you get your email delivered, a link to more help on the web, and technical details for administrators. To learn more, see [What's included in an NDR?](#whats-included-in-an-ndr).
+If an email message that you send can't be delivered to the intended recipient, Microsoft 365 or Office 365 typically generates an error code and sends you a delivery status notification (DSN). This notice is also known as a "bounce message" or "bounce-back message." The most common type of DSN is a nondelivery report (NDR) that informs you that the message wasn't delivered. The cause can be something as simple as a typo in an email address. NDRs also include an error code that indicates why your message wasn't delivered, solutions to help you get your email delivered, a link to more help on the web, and technical details for administrators. To learn more, see [What an NDR contains](#what-an-ndr-contains).
 
 ## Find your error code and get help to deliver your email messages
 
