@@ -20,34 +20,35 @@ Application evaluation is performed by the DCM Agent and CI Agent components whe
 
 ## Application Detection and Evaluation
 
-Application evaluation is performed during the **InvokingSdmMethod** phase of a CI Agent job. This phase is where the client evaluates the detection method defined for the application to determine if the application is installed on the device. This activity can be tracked in **AppDiscovery.log** using the Deployment Type Unique ID or Deployment Type Name.
+Application evaluation is performed during the **InvokingSdmMethod** phase of a CI Agent job. This phase is where the client evaluates the detection method defined for the application to determine if the application is installed on the device. This activity can be tracked in AppDiscovery.log using the Deployment Type Unique ID or Deployment Type Name.
 
-```text
+```output
 Performing detection of app deployment type ConfigMgr Toolkit - Windows Installer (*.msi file)(ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, revision 2) for system.
 +++ Did not detect app deployment type ConfigMgr Toolkit - Windows Installer (*.msi file)(ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, revision 2) for system.
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > Above example shows detection for an MSI application where the detection is done by checking if the MSI Product Code is installed on the device. For applications using alternate detection methods, the appropriate detection method is used to check if the application is installed.
 
-Next, the client evaluates the desired state of the application based on the Deployment Purpose. This step also involves detecting whether the application has any dependencies or supersedence rules that should be honored for the application. This activity can be tracked in **AppIntentEval.log** using the Application and Deployment Type Unique ID.
+Next, the client evaluates the desired state of the application based on the Deployment Purpose. This step also involves detecting whether the application has any dependencies or supersedence rules that should be honored for the application. This activity can be tracked in AppIntentEval.log by using the Application and Deployment Type Unique ID.
 
-<pre><code class="lang-text"># Available Application Deployment
+```output
+# Available Application Deployment
 
-[Application or DT Unique ID] :- <b>Current State = NotInstalled, Applicability = Applicable, ResolvedState = Available</b>, ConfigureState = NotNeeded, Title = [Application or DT Name]
+[Application or DT Unique ID] :- Current State = NotInstalled, Applicability = Applicable, ResolvedState = Available, ConfigureState = NotNeeded, Title = [Application or DT Name]
 
 # Required Application Deployment
 
-[Application or DT Unique ID] :- <b>Current State = NotInstalled, Applicability = Applicable, ResolvedState = Installed</b>, ConfigureState = NotNeeded, Title = [Application or DT Name]
+[Application or DT Unique ID] :- Current State = NotInstalled, Applicability = Applicable, ResolvedState = Installed, ConfigureState = NotNeeded, Title = [Application or DT Name]
 
 # Requirement Rules Not Met
 
-[Application or DT Unique ID] :- <b>Current State = NotInstalled, Applicability = NotApplicable, ResolvedState = None</b>, ConfigureState = NotNeeded, Title = [Application or DT Name]
-</code></pre>
+[Application or DT Unique ID] :- Current State = NotInstalled, Applicability = NotApplicable, ResolvedState = None, ConfigureState = NotNeeded, Title = [Application or DT Name]
+```
 
-In the log entry above, **Current State** indicates whether the application is currently installed on the device. **Applicability** indicates whether the application is applicable based on defined requirement rules. **ResolvedState** indicates the desired state of the application based on the deployment purpose.
+In the log entry above, `Current State` indicates whether the application is currently installed on the device. `Applicability` indicates whether the application is applicable based on defined requirement rules. `ResolvedState` indicates the desired state of the application based on the deployment purpose.
 
-> [!TIP]
+> [!TIP]  
 > Use the [Deployment Monitoring Tool](/intune/configmgr/core/support/deployment-monitoring-tool) to view the application state, applicability state and requirement violations.
 
 ## Next Steps

@@ -25,17 +25,18 @@ Application installation is initiated by the CI Agent component on the client du
 - For **Available** deployments, the application is installed when the user initiates the application installation from Software Center.
 - For **Required** deployments, the application is installed at deployment deadline. However, the user can initiate the installation from Software Center before the deadline.
 
-When CI Agent initiates the application installation, it creates a task that is handled by the CI Task Manager component. CI Task Manager then initiates the installation. This activity can be tracked in the **CITaskMgr.log** by using the Deployment Type Unique ID.
+When CI Agent initiates the application installation, it creates a task that is handled by the CI Task Manager component. CI Task Manager then initiates the installation. This activity can be tracked in the CITaskMgr.log file by using the Deployment Type Unique ID.
 
-<pre><code class="lang-text"><b>Initiating task Enforce</b> for CI ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44.2 (ConfigMgr Toolkit - Windows Installer (*.msi file)) for target: , consumer: {9BC3154A-98F1-4595-A967-173D536A3F94}
+```output
+Initiating task Enforce for CI ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44.2 (ConfigMgr Toolkit - Windows Installer (*.msi file)) for target: , consumer: {9BC3154A-98F1-4595-A967-173D536A3F94}
 Initiated application enforcement. : CITask(ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44.2..Install.Enforce)
-</code></pre>
+```
 
 ## Application Enforcement
 
-After the application enforcement is initiated, the client performs the application detection again to ensure the application isn't already installed. Once it's determined that the application isn't installed, the application installation is initiated. This activity can be tracked in the **AppEnforce.log** on the client using the Deployment Type Unique ID.
+After the application enforcement is initiated, the client performs the application detection again to ensure the application isn't already installed. Once it's determined that the application isn't installed, the application installation is initiated. This activity can be tracked in the AppEnforce.log file on the client by using the Deployment Type Unique ID.
 
-```text
+```output
 +++ Starting Install enforcement for App DT "ConfigMgr Toolkit - Windows Installer (*.msi file)" ApplicationDeliveryType - ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, Revision - 2, ContentPath - C:\WINDOWS\ccmcache\2, Execution Context - System
     Executing Command line: "C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /qn with user context
     Process 7292 terminated with exitcode: 0
@@ -46,19 +47,20 @@ Status is switching to Success
 
 After the application is installed, the application detection method is used again to ensure that the application was detected as installed.
 
-<pre><code class="lang-text">Performing detection of app deployment type ConfigMgr Toolkit - Windows Installer (*.msi file)(ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, revision 2) for system.
-+++ <b>Discovered MSI application</b> [AppDT Id: ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, Revision: 2, MSI Product code: {4FFF7ECC-CCF7-4530-B938-E7812BB91186}, MSI Product version: ]
-++++++ <b>App enforcement completed</b> (3 seconds) for App DT "ConfigMgr Toolkit - Windows Installer (*.msi file)" [ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44], Revision: 2, User SID: ] ++++++
-</code></pre>
+```output
+Performing detection of app deployment type ConfigMgr Toolkit - Windows Installer (*.msi file)(ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, revision 2) for system.
++++ Discovered MSI application [AppDT Id: ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44, Revision: 2, MSI Product code: {4FFF7ECC-CCF7-4530-B938-E7812BB91186}, MSI Product version: ]
+++++++ App enforcement completed (3 seconds) for App DT "ConfigMgr Toolkit - Windows Installer (*.msi file)" [ScopeId_B63CEBE7-8A69-4FBE-994F-5AD0A8488D27/DeploymentType_1d49ef88-cf3b-42fa-b198-388d220ccb44], Revision: 2, User SID: ] ++++++
+```
 
 Finally, after enforcement is complete, CI Agent receives the task complete notification and the CI Agent job moves to the next phase.
 
-<pre><code class="lang-text">CIAgentJob({2BF84225-C9E8-49A6-A308-A160C4B799D3}): CAgentJob::HandleEvent(<b>Event=CITaskComplete, CurrentState=StateEnforcingCIs</b>)
-</code></pre>
+```output
+CIAgentJob({2BF84225-C9E8-49A6-A308-A160C4B799D3}): CAgentJob::HandleEvent(Event=CITaskComplete, CurrentState=StateEnforcingCIs)
+```
 
 ## Next Steps
 
 - [Troubleshoot application deployments](../troubleshoot/troubleshoot-application-deployment.md)
 
-- [Common error codes for app installation](/troubleshoot/mem/intune/app-management/app-install-error-codes) 
-
+- [Common error codes for app installation](/troubleshoot/mem/intune/app-management/app-install-error-codes)

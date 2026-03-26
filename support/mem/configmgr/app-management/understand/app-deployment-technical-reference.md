@@ -29,7 +29,7 @@ When troubleshooting application deployments, there are multiple items that can 
 - Collection ID and Name
 - Collection Type
 
-To simplify troubleshooting, you can run a SQL query similar to below against the Configuration Manager database to obtain the information listed above.
+To simplify troubleshooting, you can run a SQL query similar to the following query against the Configuration Manager database to obtain the information listed previously.
 
 ```sql
 SELECT APP.CI_ID [App CI ID], APP.CI_UniqueID [App Unique ID], APP.DisplayName [App Name],
