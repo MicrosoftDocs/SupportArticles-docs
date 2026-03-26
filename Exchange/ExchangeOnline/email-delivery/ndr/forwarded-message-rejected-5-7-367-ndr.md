@@ -22,9 +22,7 @@ search.appverid: MET150
 
 ## Summary
 
-When non-Microsoft gateways forward or relay email messages that you send through Microsoft 365, you receive an NDR with error code 5.7.367. Downstream mail gateways reject some forwarded email messages.
-
-This problem occurs more frequently in mail flows that include non-Microsoft gateways.
+When Exchange Online forwards or relays email messages, you receive an NDR with error code "5.7.367 Remote server returned not permitted to relay." This problem occurs more frequently in mail flows that include non-Microsoft gateways.
 
 [!INCLUDE [third-party-information-disclaimer](../../../../includes/third-party-information-disclaimer.md)]
 
