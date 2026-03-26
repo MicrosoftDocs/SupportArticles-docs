@@ -78,7 +78,7 @@ You can still use Click‑to‑Do by manually launching it from the Start menu. 
 
 In some cases, thumbnail previews may not appear for files returned in AI‑enabled search experiences on Cloud PCs. This issue may occur when system performance settings are configured to display icons instead of thumbnails.
 
-**Workaround: **
+**Workaround:**
 To restore thumbnail previews:
 1. Select **Start** and Open **Settings.**
 
