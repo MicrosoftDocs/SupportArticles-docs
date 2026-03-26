@@ -312,7 +312,7 @@ $env:ARM_CLOUD_METADATA_URL = "https://management.<domain>/metadata/endpoints?ap
 
 Using `setx` sets the variable permanently for the user. A machine reboot might be required for the change to take effect system-wide before you run `ServerRegistration.exe`.
 
-#### Step 3 — Prerequisites
+#### Step 3: Prerequisites
 
 Azure PowerShell (`Az` module) must be installed on the server before proceeding. If not installed, run:
 
