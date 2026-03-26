@@ -276,7 +276,7 @@ During Azure File Sync server registration, the `ServerRegistration.exe` tool fa
 
 ### Root Cause
 
-`ServerRegistration.exe` uses the `ARM_CLOUD_METADATA_URL` environment variable to discover the correct cloud environment metadata. If this variable is not set, the tool defaults to Azure Public Cloud (`management.azure.com`) and will fail to register servers in sovereign clouds.
+`ServerRegistration.exe` uses the `ARM_CLOUD_METADATA_URL` environment variable to discover the correct cloud environment metadata. If this variable isn't set, the tool defaults to Azure Public Cloud (`management.azure.com`) and fails to register servers in sovereign clouds.
 
 ### Resolution
 
