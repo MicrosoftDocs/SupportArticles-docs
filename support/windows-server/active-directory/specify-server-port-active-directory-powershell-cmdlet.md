@@ -36,12 +36,12 @@ Get-ADCentralAccessRule -Filter * -Server dc01.contoso.com:3268
 | Port 389 | The default port that the Active Directory cmdlets use to connect to specific servers. |
 | Port 3268 | The global catalog (GC) port. Use this port to optimize searches, to search all domains in a forest, and to search the whole forest. The GC is read-only. |
 | Ports 636 and 3269 | The ports for secure Lightweight Directory Access Protocol (LDAP) connections to DCs and GCs. Use the Simple Authentication and Security Layer (SASL) protocol when you use these ports to connect. Don't use Transport Layer Security (TLS).<br /><br />**Important** Active Directory Web Services (ADWS) doesn't recognize TLS. ADWS is a service that most of the AD module cmdlets use.<sup>1</sup> |
-| Custom port for Lightweight Directory Service (LDS) instances | Use the port number to identify the instance to connect to. Each instance can have a different schema and has a different set of naming contexts. These LDS instances are writable.<br /><br />**Important**: If LDS uses a custom service account, you have to use NTLM authentication to run cmdlets on the LDS instance.<sup>2</sup> |
+| Custom port for Lightweight Directory Service (LDS) instances | Use the port number to identify the instance to connect to. Each instance can have a different schema and has a different set of naming contexts. These LDS instances are writable.<br /><br />**Important**: If LDS uses a custom service account, ADWS uses NTLM to authenticate any cmdlets that access the LDS instance.<sup>2</sup> |
 | Custom port for mounted AD DS snapshots | Use the port number to specify which mounted snapshot instance to connect to. Each mounted snapshot instance can have a different schema and has a different set of naming contexts. Mounted snapshots are set as read-only. |
 
 <sup>1</sup> The cmdlets in the Active Directory PowerShell module don't connect directly to a particular server and port. Instead, they connect to ADWS on port 9389. ADWS connects to the local Active Directory instance on behalf of the cmdlet.
 
-<sup>2</sup> If LDS runs in the context of a custom service account, ADWS uses NTLM to authenticate requests instead of Kerberos. The Active Directory PowerShell provider uses the service principle name (SPN) that's registered to the custom service account (in this case, the LDAP service SPN). However, the ADWS endpoint runs in the context of the computer account.
+<sup>2</sup> If LDS runs in the context of a custom service account, ADWS uses NTLM to authenticate requests instead of Kerberos. The Active Directory PowerShell provider uses the service principal name (SPN) that's registered to the custom service account (in this case, the LDAP service SPN). However, the ADWS endpoint runs in the context of the computer account.
 
 ## References
 
