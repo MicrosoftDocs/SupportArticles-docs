@@ -1,8 +1,12 @@
 ---
 title: Troubleshoot MSfB integration
 description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
-ms.date: 02/11/2025
+ms.topic: troubleshooting
+ms.manager: dcscontentpm
+audience: itpro
+ms.date: 03/25/2026
 ms.reviewer: kaushika
+ms.custom: sap:Application Management\Application Deployment (Devices)
 ---
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
 
@@ -31,27 +35,29 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 ### WSfBSyncWorker.log
 
-This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
+This log file is located on the service connection point, under \Logs in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
-To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOFTWARE\Microsoft\SMS\Tracing\SMS_CLOUDCONNECTION` registry key. For more information, see [Configure logging options](/mem/configmgr/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+[!INCLUDE [Registry important alert](../../../../includes/registry-important-alert.md)]
+
+To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOFTWARE\Microsoft\SMS\Tracing\SMS_CLOUDCONNECTION` registry subkey. For more information, see [Configure logging options](/mem/configmgr/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
 
 ### SMS_CLOUDCONNECTION.log
 
-This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. If the WSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
+This log file is located on the service connection point, under \Logs in the Configuration Manager installation directory. If the WSfBSyncWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
 
-> [!NOTE]
+> [!NOTE]  
 > This log file is shared with other features.
 
 ### BusinessAppProcessWorker.log
 
-This log file is located on the site server for the top-level site in the hierarchy. It's under `\Logs` in the Configuration Manager installation directory. It records information about the following processes:
+This log file is located on the site server for the top-level site in the hierarchy. It's under \Logs in the Configuration Manager installation directory. It records information about the following processes:
 
 - Insert the metadata information synced by the BusinessAppProcessWorker component into the database
-- Process files in `\InstallDir\inboxes\businessappprocess.box`
+- Process files in \InstallDir\inboxes\businessappprocess.box
 
 ### SMS_BUSINESS_APP_PROCESS_MANAGER.log
 
-This log file is located on the site server for the top-level site in the hierarchy. It's under `\Logs` in the Configuration Manager installation directory. If the BusinessAppProcessWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
+This log file is located on the site server for the top-level site in the hierarchy. It's under \Logs in the Configuration Manager installation directory. If the BusinessAppProcessWorker service isn't started, or repeatedly starts and stops, review the entries in this log file.
 
 ## Last sync failed
 
@@ -84,8 +90,8 @@ This issue can occur if the configured Microsoft Entra application doesn't have 
 1. If the status doesn't show **Active**, then select **Activate** in the **Action** section.
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Store for Business** node. Synchronize with the store, or wait for the next sync interval to occur.
 
-> [!Tip]
-> To find the ClientID in Configuration Manager:
+> [!TIP]  
+> To find the ClientID in Configuration Manager, follow these steps:
 >
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Entra Tennts** node.
 > 1. Select the tenant that you use for the Microsoft Store for Business and Education integration.
@@ -126,7 +132,7 @@ Then recreate the connection. For more information, see the following articles:
 
 When you set up the Microsoft Store for Business and Education connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions. The computer account for the service connection point should be the owner of this directory and any sub-directories.<!-- memdocs#146 --> If it isn't, you'll see an error similar to the following error:
 
-```
+```output
 Failed to download package d788cc1b-ab00-bb5f-1548-f2dfe717583b-X86-Arm for product 9WZDNCRFJ3PS\0015.  
 System.IO.IOException: This security ID may not be assigned as the owner of this object.
 ```
@@ -178,34 +184,36 @@ This issue can occur if the application's package is larger than 500 MB. Configu
 
 You can't automatically sync these apps, but you can download the content, and manually create the application:
 
-1. Get the failing application ID from the following line in **WSfbSynWorker.log**:
+1. Get the failing application ID from the following line in WSfbSynWorker.log:
 
-    `Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.`
+   ```output
+   Error(s) syncing or downloading application <ApplicationID> from the Microsoft Store for Business.
+   ```
 
 1. Sign in as an administrator to the Microsoft Store for Business or Education portal. Find the page for this application.
 
-    > [!Tip]
-    > The URL for the page is similar to: `https://businessstore.microsoft.com/en-us/store/p/app/ApplicationID`
+   > [!TIP]  
+   > The URL for the page is similar to: `https://businessstore.microsoft.com/en-us/store/p/app/ApplicationID`.
 
-    1. Select **Offline**, if it isn't already selected. Then select **Manage**.
+   1. Select **Offline**, if it isn't already selected. Then select **Manage**.
 
-    1. Create a separate folder on your application content share for all supported platforms.
+   1. Create a separate folder on your application content share for all supported platforms.
 
-    1. Download the package to the package folder.
+   1. Download the package to the package folder.
 
-    1. Download the encoded license file as a `.bin` file to the package folder.
+   1. Download the encoded license file as a `.bin` file to the package folder.
 
-    1. Download all required frameworks to the package folder.
+   1. Download all required frameworks to the package folder.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 
 1. [Create an application](/mem/configmgr/apps/deploy-use/create-applications), manually specifying the application information.
 
-    1. Create a deployment type for each supported platform that you previously downloaded.
+   1. Create a deployment type for each supported platform that you previously downloaded.
 
-    1. Type: **Windows app package (\*.appx, \*.appxbundle)**
+   1. Type: **Windows app package (\*.appx, \*.appxbundle)**
 
-    1. Specify the appx/appxbundle for the actual app package, not a required dependency package.
+   1. Specify the appx/appxbundle for the actual app package, not a required dependency package.
 
 Confirm the following details on the final **Import Information** page:
 
@@ -216,7 +224,7 @@ Confirm the following details on the final **Import Information** page:
 
 #### Cause
 
-An 0x8024500c error during download is typically caused by the **Do not connect to any Windows Update Internet locations** group policy that blocks Windows Update access.
+An `0x8024500c` error during download is typically caused by the **Do not connect to any Windows Update Internet locations** group policy that blocks Windows Update access.
 
 #### Workaround
 
@@ -261,25 +269,27 @@ This issue can occur if the SMS_BUSINESS_APP_PROCESS_MANAGER component stops the
 
 Restart the **SMS_EXECUTIVE** service.
 
-If you're not able to restart that main service, stop both components with MSfB workers, and then start both:
+If you're not able to restart that main service, stop both components with MSfB workers, and then start both.
+
+[!INCLUDE [Registry important alert](../../../../includes/registry-important-alert.md)]
 
 1. Open the Windows registry on the server that runs the service connection point
 
 1. Go to `HKLM\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_EXECUTIVE\Threads\SMS_CLOUDCONNECTION`
 
-    1. Set Requested Operation to **Stop**.
+    1. Set `Requested Operation` to `Stop`.
 
-    1. Refresh to verify Current State = **Stopped**.
+    1. Refresh to verify `Current State` = `Stopped`.
 
 1. Go to `HKLM\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_EXECUTIVE\Threads\SMS_BUSINESS_APP_PROCESS_MANAGER`
 
-    1. Set Requested Operation to **Stop**.
+    1. Set `Requested Operation` to `Stop`.
 
-    1. Refresh to verify Current State = **Stopped**.
+    1. Refresh to verify `Current State` = `Stopped`.
 
-1. In **SMS_CLOUDCONNECTION**, set Requested Operation to **Start**.
+1. In `SMS_CLOUDCONNECTION`, set `Requested Operation` to `Start`.
 
-1. In **SMS_BUSINESS_APP_PROCESS_MANAGER**, set Requested Operation to **Start**.
+1. In `SMS_BUSINESS_APP_PROCESS_MANAGER`, set `Requested Operation` to `Start`.
 
 ## Language-related issues
 
