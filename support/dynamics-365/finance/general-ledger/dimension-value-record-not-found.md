@@ -48,7 +48,17 @@ This issue requires investigation into the customization or integration that is 
 3. If a customization is the cause, work with your development team to correct it. For guidance, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
 4. If no customization is involved, open a support request with Microsoft and include the full error message details.
 
-## Cause 2: Extensible Data Security (XDS) policies are blocking access
+## Cause 2: The current legal entity doesn't contain the record
+
+The source record exists but belongs to a different legal entity (company) than the one the process is running in. Company-specific dimension values are only visible within their associated legal entity.
+
+### Resolution
+
+1. Check the **data area** value in the error message to confirm which company the system searched.
+2. Switch to the legal entity where the record exists and retry the operation.
+3. If the record should be available across companies, review whether the source entity and its dimension are configured as shared. For more information, see [Legal entity overrides](/dynamics365/finance/general-ledger/financial-dimensions#legal-entity-overrides).
+
+## Cause 3: Extensible Data Security (XDS) policies are blocking access
 
 [Extensible Data Security (XDS)](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) policies are enabled on the table or view that stores the financial dimension source records. XDS security policies restrict which records a user can see, and these restrictions can prevent the financial dimension framework from finding the source record it needs.
 
@@ -63,7 +73,7 @@ On version 10.0.41 and later, the error message may specifically indicate that X
 2. If XDS policies are found on these tables or views, remove or adjust them so that the financial dimension framework can access the required records. For more information on bypassing XDS policies, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy).
 3. After removing the XDS policies, retry the operation that produced the error.
 
-## Cause 3: Hidden or special characters in the dimension value
+## Cause 4: Hidden or special characters in the dimension value
 
 The source record's key field (for example, a customer account number or vendor account number) contains hidden or invisible characters that prevent the financial dimension framework from finding an exact match. These characters may not be visible in the user interface or in standard database views, but they cause the lookup to fail because the values don't match exactly.
 
