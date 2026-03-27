@@ -74,6 +74,14 @@
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
+    - name: Financial dimensions
+      items:
+        - name: Blocked from deleting a dimension value
+          href: general-ledger/blocked-from-deleting-dimension-value.md
+        - name: Can't find a dimension value
+          href: general-ledger/cannot-find-dimension-value.md
+        - name: Dimension has disappeared or shows as custom dimension
+          href: general-ledger/dimension-value-record-not-found.md
 - name: Tax
   items:
     - name: Tax Calculation

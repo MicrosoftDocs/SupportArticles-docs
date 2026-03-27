@@ -107,6 +107,18 @@ landingContent:
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
 
+# Card
+  - title: Financial dimensions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Blocked from deleting a dimension value
+            url: general-ledger/blocked-from-deleting-dimension-value.md
+          - text: Can't find a dimension value
+            url: general-ledger/cannot-find-dimension-value.md
+          - text: Dimension has disappeared or shows as custom dimension
+            url: general-ledger/dimension-value-record-not-found.md
+
   # Card
   - title: Tax
     linkLists:
