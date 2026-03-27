@@ -1,6 +1,6 @@
 ---
-title: Deployment Safeguards in Azure Kubernetes (AKS)
-description: Provides a solution to issues related to deployment safeguards in Azure Kubernetes Service (AKS).
+title: Deployment Safeguards in AKS - Troubleshoot issues
+description: Learn how to troubleshoot Deployment Safeguards in Azure Kubernetes Service (AKS). Fix blocked workloads, configuration errors, and enforcement issues. Get started now.
 ms.date: 07/18/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-kubernetes-service
@@ -8,6 +8,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Deployment Safeguards in Azure Kubernetes Service (AKS)
+
+## Summary
 
 Deployment Safeguards in Azure Kubernetes Service (AKS) help enforce Kubernetes best practices by using Azure Policy and Gatekeeper. While they offer valuable protection, a misconfiguration or misunderstanding of their behavior can cause blocked or mutated workloads. This guide helps you troubleshoot common issues when you use Deployment Safeguards in **Warn** or **Enforce** mode.
 

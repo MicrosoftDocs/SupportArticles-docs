@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot session affinity issues
 titleSuffix: Azure Application Gateway
-description: This article provides information on how to troubleshoot session affinity issues in Azure Application Gateway
+description: Troubleshoot session affinity issues in Azure Application Gateway to keep user requests on the same backend server and improve app reliability. Follow the steps now.
 services: application-gateway
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -16,7 +16,7 @@ ms.custom: sap:Routing,sfi-image-nochange
 
 ## Summary
 
-Learn how to diagnose and resolve session affinity issues with Azure Application Gateway.
+Learn how to diagnose and resolve session affinity issues with Azure Application Gateway so you can keep users on the same backend server and improve application performance.
 
 
 > [!NOTE]
@@ -33,13 +33,13 @@ The cookie-based session affinity feature is useful to keep a user session on th
 
 The problem in maintaining cookie-based session affinity can happen due to the following main reasons:
 
-- “Cookie-based Affinity” setting isn't enabled
+- "Cookie-based Affinity" setting isn't enabled
 - Your application can't handle cookie-based affinity
 - Application is using cookie-based affinity but requests still bouncing between backend servers
 
-### Check whether the "Cookie-based Affinity” setting is enabled
+### Check whether the "Cookie-based Affinity" setting is enabled
 
-Sometimes the session affinity issues might occur when you forget to enable “Cookie based affinity” setting. To determine whether you enabled the “Cookie based affinity” setting on the Backend Settings tab in the Azure portal, follow the instructions:
+Sometimes the session affinity issues might occur when you forget to enable "Cookie based affinity" setting. To determine whether you enabled the "Cookie based affinity" setting on the Backend Settings tab in the Azure portal, follow the instructions:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -47,15 +47,15 @@ Sometimes the session affinity issues might occur when you forget to enable “C
 
 3. Select **Backend settings** tab under **SETTINGS**.
 
-   ![Screenshot shows SETTINGS with Backend settings selected.](./media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-1.png)
+   :::image type="content" source="./media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-1.png" alt-text="Screenshot of the Azure portal with Settings and Backend settings selected for an Application Gateway." lightbox="media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-1.png":::
 
 4. Select the backend setting, and on the **Add Backend setting** page, check if **Cookie based affinity** is enabled.
 
-   ![Screenshot shows the gateway settings for an app gateway, including whether Cookie based affinity is selected.](./media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-2.png)
+   :::image type="content" source="./media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-2.png" alt-text="Screenshot of backend settings showing Cookie based affinity selected in Application Gateway." lightbox="media/how-to-troubleshoot-application-gateway-session-affinity-issues/troubleshoot-session-affinity-issues-2.png":::
 
 
 
-You can also check the value of the “**CookieBasedAffinity**” is set to *Enabled* under "**backendHttpSettingsCollection**" by using one of the following methods:
+You can also check the value of the "**CookieBasedAffinity**" is set to *Enabled* under "**backendHttpSettingsCollection**" by using one of the following methods:
 
 - Run [Get-AzApplicationGatewayBackendHttpSetting](/powershell/module/az.network/get-azapplicationgatewaybackendhttpsetting) in PowerShell
 - Look through the JSON file by using the Azure Resource Manager template
@@ -82,7 +82,7 @@ You enabled the Cookie-based Affinity setting, when you access the Application G
 
 To identify this issue, follow the instructions:
 
-1. Take a web debugger trace on the “Client” which is connecting to the application behind the Application Gateway(We're using Fiddler in this example).
+1. Take a web debugger trace on the "Client" which is connecting to the application behind the Application Gateway(We're using Fiddler in this example).
     **Tip** If you don't know how to use the Fiddler, check the option "**I want to collect network traffic and analyze it using web debugger**" at the bottom.
 
 2. Check and analyze the session logs, to determine whether the cookies provided by the client have the ApplicationGatewayAffinity details. If you don't find the ApplicationGatewayAffinity details, such as "**ApplicationGatewayAffinity=** *ApplicationGatewayAffinityValue*" within the cookie set, that means the client isn't replying with the ApplicationGatewayAffinity cookie, which is provided by the Application Gateway.
@@ -164,7 +164,7 @@ Use the web debugger of your choice. In this sample we'll use Fiddler to capture
 
     For examples:
 
-- **Example A:** You find a session log that the request is sent from the client, and it goes to the public IP address of the Application Gateway, select this log to view the details.  On the right side, data in the bottom box is what the Application Gateway is returning to the client. Select the “RAW” tab and determine whether the client is receiving a "**Set-Cookie: ApplicationGatewayAffinity=** *ApplicationGatewayAffinityValue*." If there's no cookie, session affinity isn't set, or the Application Gateway isn't applying cookie back to the client.
+- **Example A:** You find a session log that the request is sent from the client, and it goes to the public IP address of the Application Gateway, select this log to view the details.  On the right side, data in the bottom box is what the Application Gateway is returning to the client. Select the "RAW" tab and determine whether the client is receiving a "**Set-Cookie: ApplicationGatewayAffinity=** *ApplicationGatewayAffinityValue*." If there's no cookie, session affinity isn't set, or the Application Gateway isn't applying cookie back to the client.
 
    > [!NOTE]
    > This ApplicationGatewayAffinity value is the cookie-id, that the Application Gateway sets for the client to be sent to a particular backend server.
@@ -177,7 +177,3 @@ Use the web debugger of your choice. In this sample we'll use Fiddler to capture
 
 > [!NOTE]
 > For the same communication session, the cookie shouldn't change. Check the top box on the right side, select "Cookies" tab to see whether the client is using the cookie and sending it back to the Application Gateway. If not, the client browser isn't keeping and using the cookie for conversations. Sometimes, the client might lie.
-
-## Next steps
-
-If the preceding steps don't resolve the issue, open a [support ticket](https://azure.microsoft.com/support/options/).
