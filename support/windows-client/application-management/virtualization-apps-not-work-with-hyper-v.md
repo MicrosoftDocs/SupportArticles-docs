@@ -17,7 +17,7 @@ appliesto:
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
 --->
 
-# Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
+# Virtualization applications don't work together with Hyper-V and Hyper-V-based features
 
 _Original KB number:_ &nbsp; 3204980
 
