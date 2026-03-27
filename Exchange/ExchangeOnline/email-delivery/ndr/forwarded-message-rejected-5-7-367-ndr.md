@@ -48,17 +48,17 @@ Additionally, you experience the following symptoms:
 
 > Authentication-Results: spf=softfail (sender IP is \<*IP address*\>)
 >
-> smtp.mailfrom=contoso.com; dkim=none (message not signed)
+>  smtp.mailfrom=contoso.com; dkim=none (message not signed)
 >
-> header.d=none;dmarc=fail action=none header.from=contoso.com;
+>  header.d=none;dmarc=fail action=none header.from=contoso.com;
 
 ### Example 2 – SPF Softfail, DKIM Fail
 
 > Authentication-Results: spf=softfail (sender IP is \<*IP address*\>)
 >
-> smtp.mailfrom=proseware.com ; dkim=fail (body hash did not verify)
+>  smtp.mailfrom=proseware.com ; dkim=fail (body hash did not verify)
 >
-> header.d=proseware.com ;dmarc=fail action=none header.from=proseware.com;
+>  header.d=proseware.com ;dmarc=fail action=none header.from=proseware.com;
 
 ## Cause
 
