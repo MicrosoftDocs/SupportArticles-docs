@@ -33,7 +33,7 @@ OK
 ---------------------------
 ```
 
-:::image type="content" source="media/cloud-management-gateway-creation-sku-unavailable.png" alt-text="The VM Size is currently not available in the region":::
+:::image type="content" source="media/cmg-creation-unavailable-region/cloud-management-gateway-creation-sku-unavailable.png" alt-text="The VM Size is currently not available in the region":::
 
 ## Cause
 

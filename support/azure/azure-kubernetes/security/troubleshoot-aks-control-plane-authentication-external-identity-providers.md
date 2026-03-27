@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot AKS control plane authentication using external identity providers
-description: Helps you troubleshoot authentication issues when accessing the Azure Kubernetes Service control plane by using external identity providers
+description: Troubleshoot AKS control plane authentication with external identity providers and restore secure access quickly. Follow steps to diagnose and fix issues now.
 ms.reviewer: shasb
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
@@ -15,6 +15,8 @@ zone_pivot_groups: aks-external-identity-provider
 ::: zone-pivot-group zone="aks-external-identity-provider"
 :::
 -->
+
+## Summary
 
 This article helps you troubleshoot authentication issues when you access the Azure Kubernetes Service (AKS) control plane by using external identity providers.
 
@@ -379,7 +381,7 @@ For GitHub Actions OIDC, create a file that's named `jwt-config.json` that has t
 
 ::: zone pivot="google-identity"
 
-### Google OAuth 2.0 Configuration
+### Google OAuth 2.0 configuration
 
 1. Create a file that's named `jwt-config.json` that has the following configuration:
 

@@ -1,6 +1,6 @@
 ---
 title: Istio service mesh add-on MeshConfig troubleshooting
-description: Learn how to do MeshConfig troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+description: Learn MeshConfig troubleshooting for the Istio service mesh add-on in Azure Kubernetes Service (AKS) to fix configuration issues and restore traffic. Start now.
 ms.date: 06/19/2024
 author: nshankar13
 ms.author: nshankar
@@ -12,6 +12,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the global mesh configuration (MeshConfig) of the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 # Istio service mesh add-on MeshConfig troubleshooting
+
+## Summary
 
 This article discusses how to troubleshoot issues that occur when you [use MeshConfig to configure the Istio service mesh add-on](/azure/aks/istio-meshconfig) for Microsoft Azure Kubernetes Service (AKS).
 

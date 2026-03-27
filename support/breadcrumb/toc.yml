@@ -163,6 +163,9 @@ items:
       - name: Virtual Desktop
         tocHref: /troubleshoot/azure/virtual-desktop/
         topicHref: /troubleshoot/azure/virtual-desktop/welcome-virtual-desktop
+      - name: Application Gateway
+        tocHref: /troubleshoot/azure/application-gateway/
+        topicHref: /troubleshoot/azure/application-gateway/welcome-app-gateway
       - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network  

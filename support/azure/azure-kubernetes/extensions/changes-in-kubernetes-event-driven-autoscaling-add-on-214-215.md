@@ -1,6 +1,6 @@
 ---
 title: Guide to prepare AKS clusters for KEDA 2.15 and 2.14 breaking changes
-description: Explores the key breaking changes that are introduced in KEDA 2.15 and 2.14 and provides a guide to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
+description: Learn about KEDA 2.15 and 2.14 breaking changes in AKS and how to prepare your clusters. Follow this guide to avoid disruptions and stay up to date.
 ms.service: azure-kubernetes-service
 ms.date: 03/03/2025
 ms.reviewer: albarqaw, v-weizhu
@@ -8,11 +8,13 @@ ms.reviewer: albarqaw, v-weizhu
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
-# Breaking changes in Event-driven Autoscaling add-ons 2.15 and 2.14
+# KEDA 2.15 and 2.14 breaking changes in AKS
+
+## Summary
 
 This article explores the key breaking changes that are introduced in Event-driven Autoscaling (KEDA) add-ons 2.15 and 2.14. It also provides information about how to prepare your Azure Kubernetes Service (AKS) clusters for these updates.
 
-## Breaking changes in KEDA 2.15 and 2.14
+## KEDA 2.15 and 2.14 breaking changes
 
 Your AKS cluster Kubernetes version determines which KEDA version will be installed on your AKS cluster. For AKS clusters that are running Kubernetes version 1.30, KEDA add-on version 2.14 is installed. The upcoming release of Kubernetes 1.32 on Azure will ship together with KEDA add-on version 2.15.
 
