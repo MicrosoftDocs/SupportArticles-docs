@@ -24,7 +24,7 @@ You set up an agreement with an Agreement Booking Setup and a recurrence pattern
 
 ## Cause 1: The agreement status isn't set to Active
 
-For work orders to generate, the agreement needs an **Active** system status and an **Active** sub-status. If the agreement is still in **Draft** or **Canceled**, work order generation doesn't occur.
+For work orders to generate, the agreement needs an **Active** system status and an **Active** substatus. If the agreement is still in **Draft** or **Canceled**, work order generation doesn't occur.
 
 ### Solution: Verify agreement status
 
@@ -76,4 +76,4 @@ The system processes agreements in the security context of the user who activate
 ## Related content
 
 - [Set up customer agreements](/dynamics365/field-service/set-up-customer-agreements)
-- [Agreement sub-statuses](/dynamics365/field-service/set-up-agreement-sub-statuses)
+- [Agreement substatuses](/dynamics365/field-service/set-up-agreement-sub-statuses)

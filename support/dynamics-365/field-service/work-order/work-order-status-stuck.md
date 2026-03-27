@@ -16,7 +16,7 @@ This article helps you troubleshoot scenarios where a work order doesn't change 
 
 ## Symptoms
 
-When you try to change the work order system status or sub-status, you notice one or more of the following issues:
+When you try to change the work order system status or substatus, you notice one or more of the following issues:
 
 - The status field dropdown doesn't show the expected status options.
 - After you change the status and save, the status reverts to its previous value.
