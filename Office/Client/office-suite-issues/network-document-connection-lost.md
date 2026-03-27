@@ -87,8 +87,7 @@ The log file has the following file name format:
 For these registry entries, type the value that’s listed in the Data (Decimal) column from the following table in the **Value data** box.
 
 | Name | Type | Data (Decimal) |
-| ---------------------- | --------- | -------------- |
-
+| ---| --- | --- |
 | MsoEtwTracingEnabled | REG_DWORD | 32 |
 | DefaultMinimumSeverity | REG_DWORD | 100 |
 
@@ -119,8 +118,7 @@ You have to configure the **ResumeErrorCodes** registry key to adapt it to netwo
 #### Common network errors
 
 | Error name | Decimal | Hexadecimal | ResumeErrorCodes value |
-| -------------------------- | ----------- | ----------- | ---------------------- |
-
+| --- | --- | --- | ---|
 | ERROR_FILE_NOT_FOUND | -2147024894 | 0x80070002 | 02 00 07 80 |
 | ERROR_PATH_NOT_FOUND | -2147024893 | 0x80070003 | 03 00 07 80 |
 | ERROR_SHARING_VIOLATION | -2147024864 | 0x80070020 | 20 00 07 80 |
