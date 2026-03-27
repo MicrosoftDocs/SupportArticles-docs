@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+title: Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error 5
 description: Fix the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) in AKS when adding Windows node pools. Follow these steps to restore API server connectivity.
 ms.date: 10/31/2023
 ms.reviewer: shtao, abelch, junjiezhang, v-weizhu
