@@ -18,7 +18,7 @@ appliesto: Exchange Online
 search.appverid: MET150
 ---
 
-# Error "5.7.367" causes Microsoft 365 to reject forwarded or relayed email messages
+# Forwarded or relayed email messages from Microsoft 365 are rejected with error 5.7.367
 
 ## Summary
 
