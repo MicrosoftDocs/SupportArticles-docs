@@ -23,17 +23,17 @@ _Original KB number:_ &nbsp; 3204980
 
 ## Summary
 
-Third-party virtualization applications, such as VMware and VirtualBox, can't run alongside Hyper-V, Memory Integrity, or Credential Guard. This article explains why this issue occurs and how to disable Hyper-V and its dependent security features so that your third-party virtualization software can work correctly.
+Third-party virtualization applications, such as VMware and VirtualBox, can't run alongside Hyper-V, Memory Integrity, or Credential Guard. This article explains why this issue occurs, and how to disable Hyper-V and its dependent security features so that your third-party virtualization software can work correctly.
 
 ## Symptoms
 
-When Hyper-V is running, the third-party virtualization applications might not start virtual machines, or they might fall back to a slower, emulated mode.
+When Hyper-V is running, the third-party virtualization applications might not start virtual machines (VMs), or they might fall back to a slower, emulated mode.
 
 ## Cause
 
-This behavior occurs by design.
+This behavior is by design.
 
-Many virtualization applications depend on hardware virtualization extensions. Most modern processors, such as Intel VT-x and AMD-V, provide these extensions. However, only one software component can use this hardware at a time. Virtualization applications can't share the hardware.
+Many virtualization applications depend on hardware virtualization extensions. Most modern processors, such as Intel VT-x and AMD-V, provide these extensions. However, only one software component at a time can use this hardware. Virtualization applications can't share the hardware.
 
 ## Workaround
 
@@ -45,19 +45,19 @@ To use third-party virtualization applications, disable  Hyper-V.
 > - [Memory Integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity) (originally released as part of Device Guard)
 > - [Credential Guard](/windows/security/identity-protection/credential-guard/how-it-works)
 >
-> When you disable Hyper-V, disable these dependent features as well.
+> When you disable Hyper-V, also disable these dependent features.
 
 ### How to determine whether the Hyper-V hypervisor is running
 
 To determine whether the Hyper-V hypervisor is running, follow these steps:
 
-1. In the search box, type *msinfo32.exe*.
+1. In the search box, enter *msinfo32.exe*.
 1. Select **System Information**.
-1. In the Details pane, locate the following entry:
+1. On the **Details** pane, locate the following entry:
 
    > A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
-   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="screenshot of the detail window of System Information.":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="Screenshot of the detail window of System Information.":::
 
 ### How to disable Hyper-V
 
@@ -65,11 +65,11 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
 To disable Hyper-V in Control Panel, follow these steps:
 
-1. In Control Panel, select **Programs and Features**.
+1. In Control Panel, select the **Programs and Features** item.
 1. Select **Turn Windows features on or off**.
-1. Expand **Hyper-V**, expand **Hyper-V Platform**, and then clear the **Hyper-V Hypervisor** check box.
+1. Expand **Hyper-V**, expand **Hyper-V Platform**, and then clear the **Hyper-V Hypervisor** checkbox.
 
-   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.svg" alt-text="screenshot of the Hyper-V hypervisor check box." border="false":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.svg" alt-text="Screenshot of the Hyper-V hypervisor checkbox." border="false":::
 
 #### [PowerShell](#tab/powershell)
 
