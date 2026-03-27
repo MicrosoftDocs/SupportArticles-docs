@@ -1,6 +1,6 @@
 ---
 title: Assigned Access kiosk users can't access printers that use a domain print server
-description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
+description: Discusses an issue in which Assigned Access kiosk users can't access printers that use domain-joined print server, because the print server requires domain authenitication. 
 ms.date: 03/30/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -13,6 +13,10 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Assigned Access kiosk users can't access printers that use a domain print server
+
+## Summary
+
+Assigned Access kiosk users can't access printers that use domain-joined print server. This issue occurs because kiosk users typically run under a local account, which can't authenticate against a domain print server. To resolve this issue, configure the kiosk device to connect directly to the printer by using the printer's hostname or IP address.
 
 ## Symptom
 
