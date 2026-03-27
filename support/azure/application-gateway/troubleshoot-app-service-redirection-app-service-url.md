@@ -20,7 +20,7 @@ Learn how to diagnose and resolve App Service redirection problems when Azure Ap
 
 ## Overview
 
-In this article, you'll learn how to troubleshoot the following problems, as described in more detail in Architecture Center: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation#potential-issues).
+In this article, you learn how to troubleshoot the following problems, as described in more detail in Architecture Center: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation#potential-issues).
 
 * [Incorrect absolute URLs](/azure/architecture/best-practices/host-name-preservation#incorrect-absolute-urls).
 * [Incorrect redirect URLs](/azure/architecture/best-practices/host-name-preservation#incorrect-redirect-urls).  
@@ -30,13 +30,13 @@ In this article, you'll learn how to troubleshoot the following problems, as des
   * Cookies aren't propagated between the browser and the App Service.
   * An example of this: the app service ARRAffinity cookie domain is set to the app service host name and is tied to "example.azurewebsites.net", instead of the original host. As a result, session affinity is broken.
 
-The root-cause for the above symptoms is a setup that overrides the hostname as used by Application Gateway towards App Service into a different hostname as is seen by the browser.  Often the hostname is overridden to the default App Service "azurewebsites.net" domain.
+The root-cause for the above symptoms is a setup that overrides the hostname as used by Application Gateway towards App Service into a different hostname as is seen by the browser. Often the hostname is overridden to the default App Service "azurewebsites.net" domain.
 
 :::image type="content" source="media/troubleshoot-app-service-redirection-app-service-url/root-cause-application-gateway-to-azure-app-service-default-domain.png" alt-text="Screenshot of Application Gateway overriding the host name to the azurewebsites.net App Service domain.":::
 
 ## Sample configuration
 
-In case your configuration matches one of below two situations, your setup is subject to the instructions in this article:
+In case your configuration matches one of following two situations, your setup is subject to the instructions in this article:
 - **Pick Hostname from Backend Address** is enabled in HTTP Settings.
 - **Override with specific domain name** is set to a value different from what the browser request has.
 
@@ -46,14 +46,14 @@ App Service is a multitenant service, so it uses the host header in the request 
 
 ## Solution
 
-The production-recommended solution is to configure Application Gateway and App Service to not override the hostname.  Follow the instructions for **"Custom Domain (recommended)"** in [Configure App Service with Application Gateway](/azure/application-gateway/configure-web-app).
+The production-recommended solution is to configure Application Gateway and App Service to not override the hostname. Follow the instructions for **"Custom Domain (recommended)"** in [Configure App Service with Application Gateway](/azure/application-gateway/configure-web-app).
 
-Only consider applying another workaround (like a rewrite of the Location header as described below) after assessing the implications as described in the article: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation). These implications include the potential for domain-bound cookies and for absolute URL's outside of the location header, to remain broken.
+Only consider applying another workaround (like a rewrite of the Location header as described in this article) after assessing the implications as described in the article: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation). These implications include the potential for domain-bound cookies and for absolute URLs outside of the location header, to remain broken.
 
 ## Workaround: rewrite the location header
 
 > [!WARNING]
-> This configuration comes with limitations. We recommend to review the implications of using different host names between the client and Application Gateway and between Application and App Service in the backend. For more information, review the article in Architecture Center: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation).
+> This configuration comes with limitations. We recommend reviewing the implications of using different host names between the client and Application Gateway and between Application and App Service in the backend. For more information, review the article in Architecture Center: [Preserve the original HTTP host name between a reverse proxy and its backend web application](/azure/architecture/best-practices/host-name-preservation).
 
 Set the host name in the location header to the application gateway's domain name. To do this, create a [rewrite rule](/azure/application-gateway/rewrite-http-headers-url) with a condition that evaluates if the location header in the response contains azurewebsites.net. It must also perform an action to rewrite the location header to have the application gateway's host name. For more information, see instructions on [how to rewrite the location header](/azure/application-gateway/rewrite-http-headers-url#modify-a-redirection-url).
 
