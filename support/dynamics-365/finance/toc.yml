@@ -74,6 +74,10 @@
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
+    - name: Financial dimensions
+      items:
+        - name: Dimension values are defaulting incorrectly
+          href: general-ledger/financial-dimension-values-defaulting-incorrectly.md
 - name: Tax
   items:
     - name: Tax Calculation
