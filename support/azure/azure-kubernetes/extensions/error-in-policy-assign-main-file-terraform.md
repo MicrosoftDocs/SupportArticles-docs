@@ -1,12 +1,14 @@
 ---
 title: Error in policy assignments Main.tf file of Terraform
-description: This article provides a solution to an error that you encounter during policy assignments.
+description: Resolve the Terraform Policy definition not found error in policy assignments by adding the correct depends_on order in Main.tf. Use this fix now.
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-terraform
 ---
 # "Policy definition not found" during policy assignments in Terraform
+
+## Summary
 
 This article provides a solution to the "Policy definition not found" error that you encounter during policy assignments when you use the Terraform tool.
 
