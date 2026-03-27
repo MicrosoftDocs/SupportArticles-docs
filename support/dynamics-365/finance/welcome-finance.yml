@@ -106,6 +106,12 @@ landingContent:
             url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
+
+# Card
+  - title: Financial dimensions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: Dimension values are defaulting incorrectly
             url: general-ledger/financial-dimension-values-defaulting-incorrectly.md
 
