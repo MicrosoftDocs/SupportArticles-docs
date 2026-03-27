@@ -74,6 +74,12 @@
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
+    - name: Financial dimensions
+      items:
+        - name: Dimension errors after restoring a database to another environment
+          href: general-ledger/financial-dimensions-errors-after-database-restore.md
+        - name: Source entity missing from 'Use values from' dropdown
+          href: general-ledger/financial-dimensions-table-missing-from-use-values-from.md
 - name: Tax
   items:
     - name: Tax Calculation
