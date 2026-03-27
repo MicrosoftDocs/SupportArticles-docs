@@ -16,7 +16,7 @@ appliesto:
 
 ## Summary
 
-Assigned Access kiosk users can't access printers that use domain-joined print server. This issue occurs because kiosk users typically run under a local account that can't authenticate against a domain print server. To resolve this issue, configure the kiosk device to connect directly to the printer by using the printer's hostname or IP address.
+Assigned Access kiosk users can't access printers that use domain-joined print server. This issue occurs because kiosk users typically run under a local account, and a local account can't authenticate against a domain print server. To resolve this issue, configure the kiosk device to connect directly to the printer by using the printer's hostname or IP address.
 
 ## Symptoms
 
@@ -35,6 +35,6 @@ In Assigned Access scenarios, kiosk users typically run under the context of a l
 > [!IMPORTANT]  
 > To change a device's printer setup, you must have the **Manage Printer** permission. Typical kiosk users can't install or configure printers.
 
-To make a printer available to Assigned Access kiosk users, configure the device that supports kiosk users to connect directly to the printer. For example, add the printer to the device by specifying the printer's hostname or IP address by using a Standard TCP/IP port. Make sure that you install the correct printer driver.
+To make a printer available to Assigned Access kiosk users, configure the device that supports kiosk users to connect directly to the printer. For example, add the printer to the device by specifying the printer's hostname or IP address, and a Standard TCP/IP port. Make sure that you install the correct printer driver.
 
 In this configuration, the printer is available to all the users on the device, and doesn't require domain authentication.
