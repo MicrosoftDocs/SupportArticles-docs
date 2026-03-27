@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot upgrade failure because of conflicting PodDisruptionBudgets
-description: Learn how to troubleshoot an Azure Kubernetes Service (AKS) cluster or node pool upgrade failure caused by conflicting PodDisruptionBudgets (PDBs) that block node drain in AKS.
+description: Learn how to troubleshoot AKS upgrade failures caused by conflicting PodDisruptionBudgets that block node drain. Use this guide to fix the issue fast.
 ms.date: 03/11/2026
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -16,7 +16,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 ## Summary
 
-This article discusses how to troubleshoot an upgrade failure in Microsoft Azure Kubernetes Service (AKS) that occurs if a pod is covered by more than one `PodDisruptionBudget` (PDB). This conflict can block node drain during the upgrade.
+This article explains how to troubleshoot AKS upgrade failures caused by conflicting `PodDisruptionBudgets` (PDBs). Use these steps to unblock node drain and complete your cluster or node pool upgrade.
 
 ## Prerequisites
 

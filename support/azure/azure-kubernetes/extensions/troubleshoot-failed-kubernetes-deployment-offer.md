@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the failed deployment of a Kubernetes application offer
-description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
+title: Troubleshoot Kubernetes application offer deployment failures
+description: Troubleshoot failed deployment of a Kubernetes application offer in Azure Marketplace, identify common errors, and apply fixes quickly. Start resolving issues now.
 ms.date: 04/22/2025
 ms.reviewer: chiragpa, atchub, v-leedennis, mnasser
 editor: v-jsitser
@@ -11,11 +11,13 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 # Troubleshoot the failed deployment of a Kubernetes application offer
 
+## Summary
+
 This article discusses how to troubleshoot a failed deployment of a Kubernetes application offer that was accepted on the Microsoft Azure Marketplace. When you initiate the purchase of a Kubernetes offer, Azure deploys an Azure Resource Manager template (ARM template) that tries to install the required resources to fulfill the offer. However, the ARM template deployment might fail for various reasons.
 
 ## Troubleshooting checklist
 
-#### Examine the deployment operation logs
+### Examine the deployment operation logs
 
 To determine the cause of the deployment failure, you have to examine the [deployment operation logs][deployment-operations]. If you're still viewing the **Your deployment failed** page in the Azure portal, begin at step 5 of the following procedure. If, instead, you exited the Azure portal or navigated to another portal page, follow all these steps:
 
@@ -48,7 +50,7 @@ To determine the cause of the deployment failure, you have to examine the [deplo
 
 The following sections discuss the cause and solution for some common failure scenarios.
 
-## Cause 1: The application didn't install on the selected AKS cluster
+## Cause 1: the application didn't install on the selected AKS cluster
 
 If the Kubernetes application didn't install on the selected Azure Kubernetes Service (AKS) cluster, you receive an error message that resembles the following text:
 
@@ -62,65 +64,65 @@ If the Kubernetes application didn't install on the selected Azure Kubernetes Se
 > } 
 > ```
 
-#### Solution 1a: Register the Microsoft.KubernetesConfiguration resource provider
+### Solution 1a: register the Microsoft.KubernetesConfiguration resource provider
 
 Register the Microsoft.KubernetesConfiguration resource provider. In this case, the installation failed because the Microsoft.KubernetesConfiguration resource provider is required for you to deploy the Kubernetes application. For registration instructions, see the "[Register resource providers][register-resource-providers]" section in the *Deploy a container offer from Azure Marketplace* article.
 
-#### Solution 1b: Maintain the health of the AKS cluster
+### Solution 1b: maintain the health of the AKS cluster
 
 In general, you should [check the health of the AKS cluster][aks-cluster-health] to prevent other issues from occurring during the installation period. To make sure that the cluster is healthy, resolve issues that are identified on the cluster.
 
-#### Solution 1c: Examine the Azure Monitor activity log
+### Solution 1c: examine the Azure Monitor activity log
 
 What if the cluster is healthy, but the installation still fails? In that case, examine the [Azure Monitor activity log][azure-monitor-activity-log] within the AKS cluster to find the cause of the failure at that stage of the installation.
 
-## Cause 2: The subscription has resource constraints
+## Cause 2: the subscription has resource constraints
 
 Because your Azure subscription has resource constraints, you experience a failure that produces an error message that's similar to the following text:
 
 > The 'unknown' payment instrument(s) is not supported for offer with OfferId: '\<offer-name>', PlanId '\<subscription-plan-name>'.
 
-#### Solution 2: Make sure your subscription meets the necessary billing configuration
+### Solution 2: make sure your subscription meets the necessary billing configuration
 
 Verify the subscription's billing configuration to make sure that it meets the resource requirements of the Kubernetes application. For more information, see [Purchase validation checks][purchase-validation-checks].
 
-## Cause 3: The offer wasn't available in your region
+## Cause 3: the offer wasn't available in your region
 
 You receive an error message that states that the offer can't be sold in a certain geographical region. The error message might resemble the following text:
 
 > The Offer: '\<offer-name>' cannot be purchased by subscription: '\<subscription-guid>' as it is not to be sold in market: '\<two-letter-region-code'.
 
-#### Solution 3: Recheck whether and where the offer is still available
+### Solution 3: recheck whether and where the offer is still available
 
 Verify that the offer is still available, and double-check the regions that the offer applies to.
 
-## Cause 4: An internal server error occurred
+## Cause 4: an internal server error occurred
 
 The Kubernetes application didn't install because an extension resource didn't install. This failure generates the following error message:
 
 > Extension failed to deploy with Internal server error
 
-#### Solution 4: Delete and reinstall the extension
+### Solution 4: delete and reinstall the extension
 
 First, delete the extension resource that's a part of the offer purchase. Then, reinstall the extension.
 
-## Cause 5: The Helm chart didn't install
+## Cause 5: the Helm chart didn't install
 
 Errors in the Helm chart generate the following error message:
 
 > Failed to install chart from path [] for release
 
-#### Solution 5: Recheck the entries that you made in the ARM template
+### Solution 5: recheck the entries that you made in the ARM template
 
 Make sure that the values and selections that you entered on the Azure portal for the ARM template deployment are acceptable in the Kubernetes application.
 
-## Cause 6: You haven't accepted the legal terms on the subscription for this plan
+## Cause 6: you haven't accepted the legal terms on the subscription for this plan
 
 Before the subscription can be used, you need to accept the legal terms of the image. Otherwise, you get the following error message:
 
 > You have not accepted the legal terms on this subscription: '\<subscription-guid>' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. 
 
-#### Solution 6: Accept the legal terms
+### Solution 6: accept the legal terms
 
 #### [Portal](#tab/azure-portal)
 

@@ -1,6 +1,6 @@
 ---
 title: VMExtensionError_VHDFileNotFound when creating AKS clusters
-description: Learn how to troubleshoot the VMExtensionError_VHDFileNotFound message when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Troubleshoot VMExtensionError_VHDFileNotFound in AKS clusters. Learn the causes and step-by-step solutions to fix this error and deploy successfully.
 ms.date: 10/14/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, v-leedennis
@@ -8,11 +8,11 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_VHDFileNotFound message (or message OutboundConnFailVMExtensionError, or message K8SAPIServerConnFailVMExtensionError, or message K8SAPIServerDNSLookupFailVMExtensionError) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# VMExtensionError_VHDFileNotFound message when deploying an AKS cluster
+# VMExtensionError_VHDFileNotFound error when deploying an AKS cluster
 
 ## Summary
 
-This article discusses how to identify and resolve the `VMExtensionError_VHDFileNotFound` message that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article explains how to identify and resolve the `VMExtensionError_VHDFileNotFound` error in Azure Kubernetes Service (AKS) when you try to create and deploy a cluster, helping you restore connectivity and complete deployment successfully.
 
 ## Symptoms
 
