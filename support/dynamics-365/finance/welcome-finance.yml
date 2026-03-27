@@ -107,6 +107,16 @@ landingContent:
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
 
+# Card
+  - title: Financial dimensions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot financial dimension activation errors
+            url: general-ledger/dimension-activation-errors.md
+          - text: Dimension value record not found
+            url: general-ledger/dimension-value-record-not-found.md
+
   # Card
   - title: Tax
     linkLists:
