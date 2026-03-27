@@ -935,6 +935,8 @@ items:
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
     items:
+    - name: Can't configure Microsoft Teams to run in a multi-app kiosk
+      href: ./shell-experience/cant-configure-teams-multi-app-kiosk.md
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
     - name: Kiosk mode known issues
