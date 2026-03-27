@@ -1,6 +1,6 @@
 ---
 title: Assigned Access kiosk users can't access printers that use a domain print server
-description: Discusses an issue in which Assigned Access kiosk users can't access printers that use domain-joined print server, because the print server requires domain authenitication. 
+description: Discusses an issue in which Assigned Access kiosk users can't access printers that use domain-joined print server, because the print server requires domain authentication. 
 ms.date: 03/30/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -33,7 +33,7 @@ This behavior is by design. It reflects the intended function of domain-level Gr
 ## Resolution
 
 > [!IMPORTANT]  
-> tTo change a device's printer setup, you need the **Manage Printer** permission. Typical kiosk users can't install or configure printers.
+> To change a device's printer setup, you need the **Manage Printer** permission. Typical kiosk users can't install or configure printers.
 
 To make a printer available to Assigned Access kiosk users, configure the device that supports kiosk users to connect directly to the printer. For example, add the printer to the device by specifying the printer's hostname or IP address, using a Standard TCP/IP port. Make sure to install the correct printer driver.
 
