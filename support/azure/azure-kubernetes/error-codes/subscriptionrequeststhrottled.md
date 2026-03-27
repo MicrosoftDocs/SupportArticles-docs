@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the SubscriptionRequestsThrottled error code (429)
-description: Learn how to troubleshoot the SubscriptionRequestsThrottled error (status 429) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Fix the SubscriptionRequestsThrottled error (429) in AKS. Discover what causes Azure request throttling and how to resolve it to successfully create and deploy your cluster.
 ms.date: 09/10/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
@@ -9,6 +9,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the SubscriptionRequestsThrottled error code (429)
+
+## Summary
 
 This article discusses how to identify and resolve the `SubscriptionRequestsThrottled` error (status 429) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
