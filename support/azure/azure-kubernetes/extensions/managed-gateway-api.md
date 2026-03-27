@@ -1,6 +1,6 @@
 ---
 title: Managed Gateway API Installation Troubleshooting
-description: Learn how to do Managed Gateway API CRD installation troubleshooting for Azure Kubernetes Service (AKS).
+description: Use this guide for Managed Gateway API installation troubleshooting in AKS to validate CRD channels, annotations, and upgrades, then fix issues quickly.
 ms.date: 08/26/2025
 author: nshankar13
 ms.author: nshankar
@@ -12,6 +12,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Managed Gateway API installation troubleshooting
+
+## Summary
 
 The [Managed Gateway API installation](/azure/aks/managed-gateway-api) for Azure Kubernetes Service (AKS) allows users to opt into a managed installation of the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) Custom Resource Definitions (CRDs). You must have at least one AKS add-on installed, such as the [Istio add-on](/azure/aks/istio-about), to use the Managed Gateway API CRDs in a fully supported mode.
 
