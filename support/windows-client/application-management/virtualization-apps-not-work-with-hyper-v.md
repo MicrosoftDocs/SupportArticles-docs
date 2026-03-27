@@ -57,7 +57,7 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
    > A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
-   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="Screenshot of the detail window of System Information.":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="Screenshot of the Details pane of System Information.":::
 
 ### How to disable Hyper-V
 
