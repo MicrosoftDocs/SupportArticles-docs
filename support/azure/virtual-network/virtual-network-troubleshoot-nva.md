@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot network virtual appliance issues in Azure
-description: Troubleshoot Network Virtual Appliance (NVA) issues in Azure and validate basic Azure Platform requirements for NVA configurations.
+description: Troubleshoot Network Virtual Appliance (NVA) issues in Azure, validate core platform requirements, and use these steps to restore reliable connectivity.
 services: virtual-network
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -19,14 +19,12 @@ ms.date: 04/03/2025
 
 ## Summary
 
-You might experience VM or VPN connectivity issues and errors when using a partner Network Virtual Appliance (NVA) in Microsoft Azure. This article provides basic steps to help you validate basic Azure Platform requirements for NVA configurations.
+You might experience VM or VPN connectivity errors when using a partner Network Virtual Appliance (NVA) in Azure. This article helps you troubleshoot network virtual appliance issues in Azure by validating core platform requirements for reliable routing and connectivity.
 
 Technical support for partner NVAs and their integration with the Azure platform is provided by the NVA vendor.
 
 > [!NOTE]
 > If you have a connectivity or routing problem that involves an NVA, you should [contact the vendor of the NVA](https://mskb.pkisolutions.com/kb/2984655) directly.
-
-If your Azure issue is not addressed in this article, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post your issue in these forums, or post to [@AzureSupport](https://twitter.com/AzureSupport) on Twitter. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
 
 ## Checklist for troubleshooting with NVA vendor
 
