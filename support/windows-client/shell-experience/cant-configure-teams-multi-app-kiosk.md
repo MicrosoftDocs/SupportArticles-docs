@@ -18,7 +18,7 @@ appliesto:
 
 When you try to configure Microsoft Teams to run in a [multi-app kiosk](/windows/configuration/kiosk/), you experience multiple issues. Kiosk mode doesn't support Teams.
 
-## Symptom
+## Symptoms
 
 When you try to configure Microsoft Teams to run in a multi-app kiosk, you might experience various kinds of unexpected behavior. When you configure Teams as one of the multiple apps on the kiosk, you might experience one or more of the following symptoms:
 
