@@ -22,7 +22,7 @@ When you try to configure Microsoft Teams to run in a [multi-app kiosk](/windows
 
 When you try to configure Microsoft Teams to run in a multi-app kiosk, you might experience various kinds of unexpected behavior. Such behavior includes the following issues:
 
-- You configure Teams together with other applications. The Teams icon is visible. However, no applications (including Teams) start when you select the icon.
+- You configure Teams together with other applications. The Teams icon is visible. However, when you select the icon, nothing occurs.
 - Although Teams starts successfully, it closes automatically within a few seconds.
 - After Teams starts successfully, other applications can't run.
 
