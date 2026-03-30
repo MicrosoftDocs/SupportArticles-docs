@@ -67,7 +67,7 @@ If the match job was canceled after running for an extended period, the dataset 
 
 To resolve the issue, reduce the complexity of your match rules or [contact support](/power-platform/admin/get-help-support) for scaling options. For more information, see [Data unification best practices](/dynamics365/customer-insights/data/data-unification-best-practices).
 
-## Transient issue
+## Transient issues
 
 Occasionally, a transient issue causes a processing failure.
 
