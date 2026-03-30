@@ -935,6 +935,8 @@ items:
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
     items:
+    - name: Assigned Access kiosk users can't access printers that use a domain print server
+      href: ./shell-experience/assigned-access-kiosk-users-cant-access-printers-domain-print-server.md
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
     - name: Kiosk mode known issues
