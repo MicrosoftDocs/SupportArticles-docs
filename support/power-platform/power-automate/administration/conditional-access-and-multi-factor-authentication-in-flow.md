@@ -163,6 +163,6 @@ This problem can be caused by one of the following scenarios:
 
 - Exclude service accounts and dedicated flow connection owners from Conditional Access policies that include Terms of Use grant controls. For more information, see [Terms of Use](/entra/identity/conditional-access/terms-of-use).
 - If Terms of Use must apply to flow users, target **All cloud apps** so that acceptance during any interactive sign-in (such as Outlook or Teams) also covers Power Automate.
-- Avoid configuring **Expire consents** by settng short durations if Power Automate flows are in scope. Every expiry breaks all connections for affected users.
+- Avoid configuring **Expire consents** by setting short durations if Power Automate flows are in scope. Every expiry breaks all connections for affected users.
 - Never use **per-device Terms of Use** for applications that Power Automate connects to. Flow execution runs on Microsoft infrastructure, not on user-registered devices.
 - Communicate planned Terms of Use policy changes to flow owners in advance so that they can proactively repair connections.
