@@ -4,20 +4,20 @@ description: External links in a workbook from an earlier version of Excel are c
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonxjx, v-kccross
+ms.reviewer: simonxjx, v-kccross, akeeler, lisalozano
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Open\Links
   - CSSTroubleshoot
+  - CI 10882
 appliesto:
-- Office Products
-- Excel 2013
-- Excel 2016
-- Excel 2019
-- Excel 2021
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021  
+  - Microsoft Excel 2016 
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 03/30/2026
 ---
 
 # External links may be calculated when you open a workbook that was last saved in an earlier version of Excel
