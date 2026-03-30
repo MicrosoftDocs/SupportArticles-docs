@@ -1,12 +1,10 @@
 ---
 title: Troubleshoot User Access Issues in Power Platform Environments
 description: Learn how to troubleshoot user access issues in Dataverse environments. Use diagnostics to identify and resolve permissions, license, and role assignment issues.
-author: sericks007
-ms.author: sericks
-ms.reviewer: paulliew, sericks
+ms.reviewer: paulliew, sericks, v-shaywood
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ms.component: pa-admin
-ms.date: 02/20/2025
+ms.date: 03/30/2026
 search.audienceType: 
   - admin
 ---
@@ -68,29 +66,27 @@ If a user has trouble accessing a record in Dataverse, check if they have the ne
 
 ## Troubleshoot permission issues
 
-If the user doesn't have sufficient permissions to access customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), a system administrator should complete the following steps:  
-  
+If the user doesn't have sufficient permissions to access customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), a system administrator should complete the following steps:
+
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select an environment.
 
-1. Select **Settings** > **Users + permissions** > **Users**.  
-  
-1. Open the user record.  
-  
-1. Select **More Commands** (![More commands button.](../admin/media/not-available.png "More commands button")) > **Manage Roles**.  
-  
-1. Make note of the role assigned to the user. If appropriate, select a different security role. Close the **Manage Roles** dialog box.
-  
-1. Select **Security** > **Security Roles**.  
-  
-1. Select the security role from step 5.  
-  
-1. Select **Core Records**.  
-  
-1. Confirm that the **Read** permission for **User Entity UI Settings** is set to the User level (a yellow circle with a wedge-shaped segment).  
-  
-     If the security role is missing this permission, the system administrator needs to change this setting by selecting it.  
-  
-   ![User Entity UI settings.](../admin/media/user-entity.png "User Entity UI settings")  
+1. Select **Settings** > **Users + permissions** > **Users**.
+
+1. Open the user record.
+
+1. Select **Manage Roles**.
+
+1. Make note of the role assigned to the user. If appropriate, select a different security role.
+
+1. Close the **Manage Roles** dialog box.
+
+1. Select **Settings** > **Security Roles**.
+
+1. Select the security role that you noted in the previous step.
+
+1. Under **Core Records**, confirm that the **Read** permission for **User Entity UI Settings** is set to **User**. If the security role is missing this permission, the system administrator needs to change this setting.
+
+   :::image type="content" source="media/troubleshooting-user-needs-read-write-access-organization/user-entity-ui-settings.png" alt-text="Screenshot of the Power Platform admin center security role settings showing the User Entity UI Settings row under Core Records with the Read permission set to User.":::  
 
 ## Troubleshoot unaccounted user issues
 
