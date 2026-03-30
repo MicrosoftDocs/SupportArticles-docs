@@ -110,7 +110,7 @@ Every Cloud PC provisioning process uses one of the IP addresses provided in the
 
 If provisioning fails, it's retried a total of three times. Each time, a new vNic and IP address are allocated. These IP addresses are released in hours, but this allocation can cause issues if the address space is too narrow.
 
-**Suggested solution:** Ensure your subnet has enough available private IP addresses for the number of Cloud PCs you plan to provision and include a recommended two times the capacity for potential reprovisioning and disaster recovery scenarios.  If you are unsure of current capacity, navigate to the Azure network connections page in Intune. Here you can view IP availability for the ANC.
+**Suggested solution:** Check the virtual network for available private IP addresses, and make sure that there are more than enough private IPs available in your ANCs subnet for the retry process to succeed. If you are unsure of current capacity, navigate to the Azure network connections page in Intune to view IP availability for the ANC. To update your subnet, see [Add, change, or delete a virtual network subnet](articles/virtual-network/virtual-network-manage-subnet.md).
 
 ## Provisioning policy not found
 
