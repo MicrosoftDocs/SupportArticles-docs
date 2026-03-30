@@ -1,6 +1,6 @@
 ---
 title:         Capture real-time system insights from an AKS cluster
-description:   Learn how to use Inspektor Gadget to capture useful information for debugging issues in an Azure Kubernetes Service (AKS) cluster.
+description:   Use Inspektor Gadget to capture real-time AKS diagnostics, trace DNS and file activity, and speed troubleshooting in your cluster—start monitoring now.
 author:        blanquicet
 ms.author:     josebl
 editor:        v-jsitser
@@ -11,13 +11,15 @@ ms.date:       07/02/2025
 ms.custom: sap:Monitoring and Logging
 ---
 
-# Capture real-time system insights from an AKS cluster
+# Capture real-time system insights from an AKS cluster with Inspektor Gadget
 
-This article discusses the process of gathering real-time system insights from your Microsoft Azure Kubernetes Service (AKS) cluster by using Inspektor Gadget. The article contains step-by-step instructions for installing this tool on your AKS environment. It also explores practical examples that show how Inspektor Gadget helps you gather valuable information to do effective debugging of real-world issues.
+## Summary
+
+Use Inspektor Gadget to capture real-time system insights from your Azure Kubernetes Service (AKS) cluster. This article shows you how to install it and use practical examples to troubleshoot issues faster.
 
 ## Demo: Real-time DNS troubleshooting and critical file-access alerting
 
-To begin, consider the following quick demo. Suppose that you have to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can run the [trace_dns gadget](https://go.microsoft.com/fwlink/?linkid=2260317) to capture the DNS traffic in the Kubernetes namespace in which your application is running:
+To begin, consider the following quick demo. Suppose that you need to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can run the [trace_dns gadget](https://go.microsoft.com/fwlink/?linkid=2260317) to capture the DNS traffic in the Kubernetes namespace in which your application is running:
 
 ```bash
 kubectl gadget run trace_dns \
@@ -31,7 +33,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.
 aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.2.3.4
 ```
 
-From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (as indicated in the `NAMESERVER` column), but we only see the queries (`Q` in the `QR` column) and no responses (`R` in the `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
+From this information, you can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (as indicated in the `NAMESERVER` column), but you only see the queries (`Q` in the `QR` column) and no responses (`R` in the `QR` column). This condition means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
 
 Now, suppose that `1.2.3.4` isn't the default name server configuration, and you suspect that a malicious process is modifying the configuration at runtime. In these kinds of cases, Inspektor Gadget goes beyond DNS diagnostics. It also enables you to monitor processes that access critical files (such as */etc/resolv.conf*) and have the intention of modifying those files. To do that, run the [trace_open gadget](https://go.microsoft.com/fwlink/?linkid=2260318) in the same namespace and filter the results by the file name and the flags that indicate [the intention to write to the file](https://linux.die.net/man/3/open) (`O_WRONLY` to open for writing only, or `O_RDWR` to open for reading and writing):
 
@@ -49,29 +51,29 @@ aks-nodepool-41788306-vmss000002  demo-pod     malicious-proc  /etc/resolv.conf 
 
 ## What is Inspektor Gadget?
 
-[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes it easy to monitor, troubleshoot, and secure workloads running on Linux and Kubernetes. It consists of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
+[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes it easy to monitor, troubleshoot, and secure workloads running on Linux and Kubernetes. It consists of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration ensures that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
 
 ## Gadgets
 
-Inspektor Gadget provides a set of built-in tools that are designed to debug and observe common situations on a system. For example, by using such gadgets, you can trace the following events in your cluster:
+Inspektor Gadget provides a set of built-in tools that are designed to debug and observe common situations on a system. For example, by using these gadgets, you can trace the following events in your cluster:
 
 - Process creation
 - File access
 - Network activity, such as TCP connections or DNS resolution
 
-The gadgets present the information that they collected by using different mechanisms. For instance, some gadgets can inform you about the system status at specific times. Other gadgets can report every time a given event occurs, or they can provide periodic updates.
+The gadgets present the information they collect by using different mechanisms. For instance, some gadgets can inform you about the system status at specific times. Other gadgets can report every time a given event occurs, or they can provide periodic updates.
 
 These are just a few examples. The [official documentation](https://go.microsoft.com/fwlink/?linkid=2260507) provides detailed descriptions and examples of each gadget so that you can determine the most suitable gadget for your specific use case. However, if you find a use case that the existing gadgets don't currently cover, Inspektor Gadget allows you to run your own eBPF programs by using the [run command](https://go.microsoft.com/fwlink/?linkid=2259865). Because the Inspektor Gadget framework handles the building, packaging, and deployment of your custom programs, it streamlines the process for your unique requirements. Also, it gathers high-level metadata to enrich the data that you collect in your program.
 
 ## Use cases
 
-To complement the demo that's presented at the beginning of this article, we compiled a list of issues and practical scenarios that show how Inspektor Gadget helps you tackle debugging challenges. The following examples showcase the potential of Inspektor Gadget. But the capabilities of this tool extend beyond these scenarios. This makes Inspektor Gadget an invaluable asset for navigating the complexities of Kubernetes debugging and observability.
+To complement the demo that's presented at the beginning of this article, the following list shows how Inspektor Gadget helps you tackle debugging challenges. The following examples showcase the potential of Inspektor Gadget. But the capabilities of this tool extend beyond these scenarios. This capability makes Inspektor Gadget an invaluable asset for navigating the complexities of Kubernetes debugging and observability.
 
 | Problem area | Symptoms | Troubleshooting |
 |--|--|--|
 | **Disk-intensive applications** | High memory or CPU usage, or inconsistent node readiness | An application might consistently engage in disk read/write operations, such as extensive logging. By using Inspektor Gadget, you can identify in real time which containers generate more [block I/O](https://go.microsoft.com/fwlink/?linkid=2260070). Or, more specifically, you can find the container that causes more reads and writes into a ⁠[file](https://go.microsoft.com/fwlink/?linkid=2260071). |
 | **"It's always DNS"** | High application latency, timeouts, or poor end-user experience | <p>By using Inspektor Gadget, you can [trace all the DNS](https://go.microsoft.com/fwlink/?linkid=2260317) queries and responses in the cluster. In particular, Inspektor Gadget provides the following information that helps you to determine whether the DNS is affecting your application's performance:</p> <ul> <li>Query success</li> <li>Whether the response contains an error</li> <li>The name server that's used for the lookup</li> <li>The query-response latency</li> </ul> |
-| **File system access** | Application misbehaves or can't function correctly | <p>The application might be unable to access specific configurations, logs, or other vital files in the file system. In such scenarios, Inspektor Gadget enables you to [trace all the opened files](https://go.microsoft.com/fwlink/?linkid=2260318) inside pods to diagnose access issues. Whenever your application tries to open a file, you can discover the following information:</p> <ul> <li>The flags that are used to open the file (for example, [O_RDONLY, O_WRONLY, O_RDWR](https://linux.die.net/man/3/open), and so on)</li> <li>Whether the file opening attempt succeeds</li> <li>The returned error (if the file opening attempt fails)</li> </ul> <p>For instance, if the attempt to open the file fails because of error 2 ([ENOENT](https://man7.org/linux/man-pages/man3/errno.3.html)), the application is probably trying to open a file that doesn’t exist. This means that you might have a typo in the code, or the file is available in a different path.</p> |
+| **File system access** | Application misbehaves or can't function correctly | <p>The application might be unable to access specific configurations, logs, or other vital files in the file system. In such scenarios, Inspektor Gadget enables you to [trace all the opened files](https://go.microsoft.com/fwlink/?linkid=2260318) inside pods to diagnose access issues. Whenever your application tries to open a file, you can discover the following information:</p> <ul> <li>The flags that are used to open the file (for example, [O_RDONLY, O_WRONLY, O_RDWR](https://linux.die.net/man/3/open), and so on)</li> <li>Whether the file opening attempt succeeds</li> <li>The returned error (if the file opening attempt fails)</li> </ul> <p>For instance, if the attempt to open the file fails because of error 2 ([ENOENT](https://man7.org/linux/man-pages/man3/errno.3.html)), the application is probably trying to open a file that doesn't exist. This means that you might have a typo in the code, or the file is available in a different path.</p> |
 | **Remote code execution (RCE)** | Unauthorized code execution such as [cryptojacking](https://en.wikipedia.org/wiki/Cryptojacking) that's evident in high CPU usage during application idle periods | When attackers try to make this kind of attack on a system, they usually have to run the code by using `bash`. Inspektor Gadget enables you to [trace the creation of new processes](https://go.microsoft.com/fwlink/?linkid=2260319), particularly processes that involve critical commands such as `bash`. |
 
 ## How to install Inspektor Gadget in an AKS cluster
@@ -84,10 +86,10 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
 
 1. Installing the `kubectl gadget` plug-in on your workstation
 
-2. Running the `kubectl gadget` plug-in to deploy Inspektor Gadget in the cluster
+1. Running the `kubectl gadget` plug-in to deploy Inspektor Gadget in the cluster
 
   > [!WARNING]
-  > Many mechanisms are available to deploy and use Inspektor Gadget. Each of these mechanisms is tailored to specific use cases and requirements. You can use the kubectl gadget plug-in to apply several of these mechanisms, but not all of them. For instance, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can’t depend on such a component because its availability might be occasionally compromised, we recommend that you avoid using the `kubectl gadget` deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://go.microsoft.com/fwlink/?linkid=2326106).
+  > Many mechanisms are available to deploy and use Inspektor Gadget. Each mechanism is tailored to specific use cases and requirements. You can use the `kubectl gadget` plug-in to apply several of these mechanisms, but not all of them. For example, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can't depend on this component because its availability might be occasionally compromised, avoid using the `kubectl gadget` deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://go.microsoft.com/fwlink/?linkid=2326106).
 
 #### Prerequisites
 
@@ -122,7 +124,7 @@ Use the instructions for your OS:
     " > /etc/yum.repos.d/azurelinux-cloud-native.repo
     ```
 
-2. Install the `kubectl gadget` plug-in:
+1. Install the `kubectl gadget` plug-in:
 
     ```bash
     tdnf install --refresh -y kubectl-gadget
@@ -136,25 +138,25 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download the Microsoft GNU Privacy Guard (GPG) public key:
+1. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
     ```
 
-3. Add the Microsoft Cloud-Native repository to your system:
+1. Add the Microsoft Cloud-Native repository to your system:
 
     ```bash
     echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft.asc] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" | tee /etc/apt/sources.list.d/packages-microsoft-prod.list
     ```
 
-4. Update the package index:
+1. Update the package index:
 
     ```bash
     apt update
     ```
 
-5. Install the `kubectl gadget` plug-in:
+1. Install the `kubectl gadget` plug-in:
 
     ```bash
     apt install -y kubectl-gadget
@@ -168,25 +170,25 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download the Microsoft GNU Privacy Guard (GPG) public key:
+1. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
     ```
 
-3. Add the Microsoft Cloud-Native repository to your system:
+1. Add the Microsoft Cloud-Native repository to your system:
 
     ```bash
     echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft.asc] https://packages.microsoft.com/ubuntu/20.04/prod focal main" | tee /etc/apt/sources.list.d/packages-microsoft-prod.list
     ```
 
-4. Update the package index:
+1. Update the package index:
 
     ```bash
     apt update
     ```
 
-5. Install the `kubectl gadget` plug-in:
+1. Install the `kubectl gadget` plug-in:
 
     ```bash
     apt install -y kubectl-gadget
@@ -200,25 +202,25 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download the Microsoft GNU Privacy Guard (GPG) public key:
+1. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
     ```
 
-3. Add the Microsoft Cloud-Native repository to your system:
+1. Add the Microsoft Cloud-Native repository to your system:
 
     ```bash
     echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft.asc] https://packages.microsoft.com/ubuntu/18.04/prod bionic main" | tee /etc/apt/sources.list.d/packages-microsoft-prod.list
     ```
 
-4. Update the package index:
+1. Update the package index:
 
     ```bash
     apt update
     ```
 
-5. Install the `kubectl gadget` plug-in:
+1. Install the `kubectl gadget` plug-in:
 
     ```bash
     apt install -y kubectl-gadget
