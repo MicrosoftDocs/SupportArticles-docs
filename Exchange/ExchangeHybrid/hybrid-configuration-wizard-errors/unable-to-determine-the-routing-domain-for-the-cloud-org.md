@@ -1,5 +1,5 @@
 ---
-title: "HCW8001 - Unable to determine the Tenant Routing Domain" error when running the Hybrid Configuration Wizard
+title: HCW8001 error when the Hybrid Configuration Wizard runs
 description: Resolves an issue in which you receive the HCW8001 error message when you run Hybrid Configuration Wizard.
 author: cloud-writer
 ms.author: meerak
@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 3945
+  - CI 10752
   - no-azure-ad-ps-ref
 ms.reviewer: haembab, meerak, v-shorestris
 appliesto:
