@@ -23,8 +23,6 @@ items:
     items:
       - name: Add images to email messages
         href: /power-automate/desktop-flows/how-to/add-images-email-messages?context=/troubleshoot/power-platform/power-automate/context/context
-      - name: Authentication failed when signing in to Microsoft Flow
-        href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
       - name: Can't sign into OneDrive connector
         href: authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
   - name: Connections
