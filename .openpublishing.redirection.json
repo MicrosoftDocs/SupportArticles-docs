@@ -15483,6 +15483,14 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/flow-creation/flow-editor-issues-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
       "source_path": "support/power-platform/power-automate/flow-creation/flow-management-errors-recommendations.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
     }
