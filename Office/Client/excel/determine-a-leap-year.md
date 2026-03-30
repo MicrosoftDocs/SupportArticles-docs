@@ -6,27 +6,28 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: akeeler
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
+  - CI 10764
+
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2016
-  - Excel 2016 for Mac
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
-  - Excel 2003
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+  - Microsoft Excel 2016 for Mac
+ms.date: 03/25/2026
 ---
 
 # Method to determine whether a year is a leap year
 
 ## Summary
 
-This article describes how to determine whether the year in a date that is used in a Microsoft Excel document is a leap year. 
+This article describes how to determine whether the year in a date that is used in a Microsoft Excel document is a leap year.
 
 ## More Information
 
