@@ -7,6 +7,7 @@ ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 03/23/2026
 ms.author: cherylmc
+ms.custom: sap:Configuration and Setup
 # Customer intent: As a network administrator, I want to troubleshoot BGP issues with my Azure VPN Gateway so that I can restore dynamic routing between my on-premises networks and Azure.
 ---
 
