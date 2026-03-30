@@ -10,18 +10,18 @@ ms.date: 03/30/2026
 
 ## Summary
 
-[Connections](/power-automate/add-manage-connections) in Microsoft Power Platform can break for many reasons, including expired tokens, Data Loss Prevention (DLP) blocks, password changes, Conditional Access policy mismatches, and disabled accounts. This article helps you identify the cause and fix broken connections in Power Automate.
+[Connections](/power-automate/add-manage-connections) in Microsoft Power Platform can break for several reasons. These causes include expired tokens, Data Loss Prevention (DLP) blocks, password changes, Conditional Access policy mismatches, and disabled accounts. This article helps you identify the cause and fix broken connections in Power Automate.
 
 - [Connection times out](#connection-times-out)
-- [A DLP block occurs](#a-dlp-block-occurs)
-- [Invalid authenticated devices](#invalid-authenticated-devices)
-- [Inactivity for a long time](#inactivity-for-a-long-time)
-- [Connection issue related to attended mode](#connection-issue-related-to-attended-mode)
-- [Password modification by a user](#password-modification-by-a-user)
+- [DLP block occurs](#dlp-block-occurs)
+- [Invalid authenticated devices are used](#invalid-authenticated-devices-are-used)
+- [Inactivity persists for a long time](#inactivity-persists-for-a-long-time)
+- [Connection issue related to attended mode occurs](#connection-issue-related-to-attended-mode-occurs)
+- [Password modification is made by a user](#password-modification-is-made-by-a-user)
 - [Microsoft Entra ID configuration is changed](#microsoft-entra-id-configuration-is-changed)
 - [Connection owner account is deleted or disabled](#connection-owner-account-is-deleted-or-disabled)
 - [Tenant administrator disables the application](#tenant-administrator-disables-the-application)
-- [Conditional Access policy mismatch for embedded flows](#conditional-access-policy-mismatch-for-embedded-flows)
+- [Conditional Access policy mismatch for embedded flows occurs](#conditional-access-policy-mismatch-for-embedded-flows-occurs)
 - [Terms of Use policy breaks flow connections](#terms-of-use-policy-breaks-flow-connections)
 
 ## Connection times out
@@ -38,7 +38,7 @@ You might also receive the following error message:
 1. Check the server status: Verify if the server you're trying to connect to is online and not experiencing any downtime.
 1. Try increasing the timeout limit: Sometimes, increasing the timeout limit can help establish a connection with the server.
 
-## A DLP block occurs
+## DLP block occurs
 
 [Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) is a security measure that prevents sensitive information from being shared or transferred inappropriately. A DLP block occurs when a DLP policy detects that an action, such as sending an email or sharing a file, violates the organization's data protection rules. The DLP system then blocks the action to prevent potential data breaches or unauthorized access to sensitive information.
 
@@ -52,7 +52,7 @@ When a DLP block occurs, you might also receive one of the following error messa
 1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are blocked and why.
 1. Consult with your administrator: If they blocked the connector or connection, consult with them about unblocking it.
 
-## Invalid authenticated devices
+## Invalid authenticated devices are used
 
 This situation occurs when a user tries to authenticate by using a device for multifactor authentication (MFA), but the device is disabled. This issue isn't related to Power Automate but to the tenant's configuration at the administrative level.
 
@@ -69,7 +69,7 @@ In this situation, you might also receive one of the following error messages:
 1. Contact the tenant administrator to understand why the device was disabled.
 1. Try re-authorizing the connection.
 
-## Inactivity for a long time
+## Inactivity persists for a long time
 
 This situation occurs when a connection becomes invalid because it isn't used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If you don't use the connection within this period, it expires.
 
@@ -84,7 +84,7 @@ In this situation, you might also receive one of the following error messages:
 
 Create a new connection or re-authorize the existing one.
 
-## Connection issue related to attended mode
+## Connection issue related to attended mode occurs
 
 This situation refers to problems that occur when a user tries to use features that require a license for unattended mode but doesn't have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection fails.
 
@@ -94,7 +94,7 @@ This situation refers to problems that occur when a user tries to use features t
 
 Ensure the user has the correct license to interact with the system as required in unattended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
 
-## Password modification by a user
+## Password modification is made by a user
 
 This problem happens when you delete, change, or let the account password expire for the account you use to create the connection. Since account verification is a crucial part of authentication whenever you trigger a connection, the connection breaks if you don't update the new password.
 
@@ -144,7 +144,7 @@ You might also receive the following error message:
 
 To resolve this issue, the tenant administrator needs to reenable the application or create a new service principal connection.
 
-## Conditional Access policy mismatch for embedded flows
+## Conditional Access policy mismatch for embedded flows occurs
 
 Connections can appear broken when you access a flow from an embedded surface (such as a SharePoint list, Microsoft Teams channel, or Excel workbook) if the Conditional Access (CA) policies for the host application and Power Automate have different requirements.
 
