@@ -106,7 +106,7 @@ To fix this problem, access the Application Gateway by using a fully qualified d
 You can collect and analyze extra logs to troubleshoot problems related to cookie-based session affinity.
 
 - [Analyze Application Gateway logs](#analyze-application-gateway-logs)
-- [Use web debugger to capture and analyze the HTTP or HTTPS traffics](#use-web-debugger-to-capture-and-analyze-the-http-or-https-traffics)
+- [Use a web debugger to capture and analyze the HTTP or HTTPS traffic](#use-a-web-debugger-to-capture-and-analyze-the-http-or-https-traffic)
 
 ### Analyze Application Gateway logs
 
