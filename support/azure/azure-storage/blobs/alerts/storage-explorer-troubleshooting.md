@@ -10,7 +10,7 @@ ms.date: 06/13/2025
 ms.reviewer: cralvord, richardgao
 ---
 
-# Azure Storage Explorer troubleshooting guide
+# Troubleshoot Azure Storage Explorer
 
 [!INCLUDE [Feedback](../../../../includes/feedback.md)]
 
@@ -26,7 +26,7 @@ This guide summarizes solutions for issues that are commonly seen in Storage Exp
 
 ### How do I access my resources in Storage Explorer?
 
-If you're having problems accessing storage resources through Azure RBAC, you might not have the appropriate roles assigned to you. The following sections describe the permissions Storage Explorer currently requires for access to your storage resources. Contact your Azure account admin if you're not sure you have the appropriate roles or permissions.
+If you can't access storage resources through Azure RBAC, you might not have the right roles assigned. The following sections describe the permissions Storage Explorer currently requires for access to your storage resources. Contact your Azure account admin if you're not sure you have the right roles or permissions.
 
 #### "Read: List/Get Storage Accounts" permissions issue
 
@@ -37,7 +37,7 @@ You must have permission to list storage accounts. To get this permission, you m
 Storage Explorer can also use account keys to authenticate requests. You can get access to account keys through more powerful roles, such as the Contributor role.
 
 > [!NOTE]
-> Access keys grant unrestricted permissions to anyone who holds them. As a result, we don't recommend that you hand out these keys to account users. If you need to revoke access keys, you can regenerate them from the [Azure portal](https://portal.azure.com/).
+> Access keys grant unrestricted permissions to anyone who holds them. As a result, don't hand out these keys to account users. If you need to revoke access keys, you can regenerate them from the [Azure portal](https://portal.azure.com/).
 
 #### Data roles
 
@@ -45,7 +45,7 @@ You must be assigned at least one role that grants access to read data from reso
 
 ### Why do I need a management layer role to see my resources in Storage Explorer?
 
-Azure Storage has two layers of access: management and data. Subscriptions and storage accounts are accessed through the management layer. Containers, blobs, and other data resources are accessed through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of blob containers in an account, you send a request to the appropriate service endpoint.
+Azure Storage has two layers of access: management and data. You access subscriptions and storage accounts through the management layer. You access containers, blobs, and other data resources through the data layer. For example, if you want to get a list of your storage accounts from Azure, you send a request to the management endpoint. If you want a list of blob containers in an account, you send a request to the appropriate service endpoint.
 
 Azure roles can grant you permissions for management or data layer access. The Reader role, for example, grants read-only access to management layer resources.
 
@@ -65,18 +65,18 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
 1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** > **Connect**.
 
-Currently, there isn't an Azure RBAC-related solution for other resource types. As a workaround, you can request a shared access signature URL and then attach it to your resource:
+Currently, there's no Azure RBAC-related solution for other resource types. As a workaround, you can request a shared access signature URL and then attach it to your resource:
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
 1. Select **Shared access signature (SAS)** > **Next**.
 1. Type the shared access signature URL you received and enter a unique display name for the connection. Select **Next** > **Connect**.
 
-For more information on how to attach to resources, see [Attach to an individual resource](/azure/vs-azure-tools-storage-manage-with-storage-explorer#attach-to-an-individual-resource).
+For more information about how to attach to resources, see [Attach to an individual resource](/azure/vs-azure-tools-storage-manage-with-storage-explorer#attach-to-an-individual-resource).
 
 ### Recommended Azure built-in roles
 
-Several Azure built-in roles can provide the permissions needed to use Storage Explorer. Some of those roles are:
+Several Azure built-in roles provide the permissions needed to use Storage Explorer. Some of those roles include:
 
 - [Owner](/azure/role-based-access-control/built-in-roles#owner): Manage everything, including access to resources.
 - [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources.
@@ -99,7 +99,7 @@ Make sure you understand the [TLS/SSL certificates section](/azure/storage/commo
 
 ### Use system proxy
 
-If you're only using features that support the **use system proxy** setting, try using that setting. To read more about the **system proxy** setting, see [Network connections in Storage Explorer](/azure/storage/common/storage-explorer-network#use-system-proxy-preview).
+If you're only using features that support the **use system proxy** setting, try using that setting. To learn more about the **system proxy** setting, see [Network connections in Storage Explorer](/azure/storage/common/storage-explorer-network#use-system-proxy-preview).
 
 ### Import TLS/SSL certificates
 
@@ -108,23 +108,23 @@ If you have a copy of the self-signed certificates, you can instruct Storage Exp
 1. Obtain a Base-64 encoded X.509 (.cer) copy of the certificate.
 1. Go to **Edit** > **SSL Certificates** > **Import Certificates**. Then use the file picker to find, select, and open the .cer file.
 
-This issue might also occur if there are multiple certificates (root and intermediate). To fix this error, you must import all certificates.
+This error might also occur if there are multiple certificates (root and intermediate). To fix this error, you must import all certificates.
 
 ### Find TLS/SSL certificates
 
 If you don't have a copy of the self-signed certificates, ask your IT admin for help.
 
-To find certificates, you can follow these steps:
+To find certificates, follow these steps:
 
 1. Install OpenSSL:
 
-    - [Windows](https://slproweb.com/products/Win32OpenSSL.html): Any of the light versions should be sufficient.
-    - Mac: OpenSSL should be included with your operating system.
-    - Linux: OpenSSL should be included with your operating system.
+    - [Windows](https://slproweb.com/products/Win32OpenSSL.html): Any of the light versions is sufficient.
+    - Mac: OpenSSL is included with your operating system.
+    - Linux: OpenSSL is included with your operating system.
 
 1. Run OpenSSL:
 
-    - Windows: Open the installation directory, select */bin/*, and then double-click openssl.exe.
+    - Windows: Open the installation directory, select */bin/*, and then double-click `openssl.exe`.
     - Mac: Run `openssl` from a terminal.
     - Linux: Run `openssl` from a terminal.
 
@@ -153,7 +153,7 @@ Make sure you understand the [Sign in to Storage Explorer](/azure/storage/common
 
 ### Frequently having to reenter credentials
 
-Having to reenter credentials is most likely the result of Conditional Access policies set by your Microsoft Entra admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
+Having to reenter credentials is most likely the result of Conditional Access policies set by your Microsoft Entra admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these errors:
 
 > The refresh token has expired.
 
@@ -165,15 +165,15 @@ To reduce the frequency of having to reenter credentials because of errors like 
 
 ### Other conditional access policy issues
 
-If you have other conditional access policies that need to be satisfied for your account, try using either the **Authentication Broker** or **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
+If other conditional access policies need to be satisfied for your account, try using either the **Authentication Broker** or **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
 
 ### Issues with authentication broker on Windows
 
-The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. If you're using the **Authentication Broker** sign-in method on Windows and experience issues, see [this guide](/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps to resolve common errors.
+The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. If you're using the **Authentication Broker** sign-in method on Windows and experience problems, see [this guide](/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps to resolve common errors.
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
-When Storage Explorer performs sign-in in your web browser, a redirect to localhost is done at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these issues happens, depending on your browser, you have options:
+When Storage Explorer performs sign-in in your web browser, it redirects to localhost at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these problems happens, depending on your browser, you have options:
 
 - Ignore the warning.
 - Add an exception for localhost.
@@ -183,11 +183,11 @@ If you can't do any of those options, you can also [change where sign-in happens
 
 ### Unable to acquire token, tenant is filtered out
 
-Sometimes you might see an error message that says a token can't be acquired because a tenant is filtered out. This means you're trying to access a resource that's in a tenant you filtered out. To include the tenant, go to the **Account Panel**. Make sure the checkbox for the tenant specified in the error is selected. For more information on filtering tenants in Storage Explorer, see [Managing accounts](/azure/storage/common/storage-explorer-sign-in#managing-accounts).
+Sometimes you see an error message that says a token can't be acquired because a tenant is filtered out. This error means you're trying to access a resource that's in a tenant you filtered out. To include the tenant, go to the **Account Panel**. Make sure the check box for the tenant specified in the error is selected. For more information on filtering tenants in Storage Explorer, see [Managing accounts](/azure/storage/common/storage-explorer-sign-in#managing-accounts).
 
-### Authentication library failed to start properly
+### Authentication library didn't start properly
 
-If, on startup, you see an error message that says Storage Explorer's authentication library failed to start properly, make sure your installation environment meets all [prerequisites](/azure/vs-azure-tools-storage-manage-with-storage-explorer#prerequisites). Not meeting prerequisites is the most likely cause of this error message.
+If, on startup, you see an error message that says Storage Explorer's authentication library didn't start properly, make sure your installation environment meets all [prerequisites](/azure/vs-azure-tools-storage-manage-with-storage-explorer#prerequisites). Not meeting prerequisites is the most likely cause of this error message.
 
 If you believe that your installation environment meets all prerequisites, [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues/new). When you open your issue, make sure to include:
 
@@ -211,22 +211,22 @@ If you're in a reauthentication loop or changed the UPN of one of your accounts,
 1. Select **Reset**.
 1. Restart Storage Explorer and try to sign in again.
 
-If you continue to have issues after you do a reset, try these steps:
+If you continue to have problems after you reset, try these steps:
 
 1. Open Storage Explorer.
 1. Remove all accounts and then close Storage Explorer.
-1. Delete the `.IdentityService` folder from your machine. On Windows, the folder is located at `C:\Users\<username>\AppData\Local`. For Mac and Linux, you can find the folder at the root of your user directory.
-1. If you're running Mac or Linux, you also need to delete the `Microsoft.Developer.IdentityService` entry from your operating system's keystore. On the Mac, the keystore is the Gnome Keychain application. In Linux, the application is typically called *Keyring*, but the name might differ depending on your distribution.
+1. Delete the `.IdentityService` folder from your machine. On Windows, find the folder at `C:\Users\<username>\AppData\Local`. For macOS and Linux, find the folder at the root of your user directory.
+1. If you're running macOS or Linux, also delete the `Microsoft.Developer.IdentityService` entry from your operating system's keystore. On the macOS, the keystore is the Gnome Keychain application. In Linux, the application is typically called *Keyring*, but the name might differ depending on your distribution.
 1. Restart Storage Explorer and try to sign in again.
 
 ### macOS: Keychain errors or no sign-in window
 
-macOS Keychain can sometimes enter a state that causes issues for the Storage Explorer authentication library. To get Keychain out of this state, follow these steps:
+macOS Keychain can sometimes enter a state that causes problems for the Storage Explorer authentication library. To get Keychain out of this state, follow these steps:
 
 1. Close Storage Explorer.
 1. Open Keychain by selecting <kbd>Command</kbd> + <kbd>Space</kbd>, type "keychain" in the search box, and select <kbd>Enter</kbd>.
 1. Select the **login** keychain.
-1. Select the **padlock** to lock the keychain. After the process is finished, the **padlock** appears locked. It might take a few seconds, depending on what apps you have open.
+1. Select the **padlock** to lock the keychain. After the process finishes, the **padlock** appears locked. It might take a few seconds, depending on what apps you have open.
 
     :::image type="content" source="media/storage-explorer-troubleshooting/unlockingkeychain.png" alt-text="Screenshot that shows the padlock.":::
 
@@ -236,21 +236,21 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 
 ### Linux: No application window or password manager errors at startup
 
-If you start Storage Explorer on a Linux system, you might encounter one of the following issues:
+If you start Storage Explorer on a Linux system, you might encounter one of the following problems:
 
 - No application window appears.
 - Errors about the system's password manager occur.
 
-Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If no compatible credential manager application is detected, Storage Explorer can't start. If your system doesn't have a local credential management tool installed, you can install a tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
+Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If it doesn't detect a compatible credential manager application, Storage Explorer can't start. If your system doesn't have a local credential management tool installed, you can install a tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
 
-Storage Explorer usually creates a default keyring if it doesn't exist at startup. However, in some cases, a default keyring might not be created, resulting in no application window or password manager service errors. To resolve the issues, manually set a default keyring.
+Storage Explorer usually creates a default keyring if it doesn't exist at startup. However, in some cases, a default keyring isn't created, resulting in no application window or password manager service errors. To resolve the problems, manually set a default keyring.
 
 If you're using Seahorse and there are no existing keyrings, or you want to create a new one, follow these steps to create a default keyring:
 
 1. Start the "Passwords and Keys" application.
-2. Select the "+" button, and then select **Password keyring**.
-3. Set a name and a password for the new keyring.
-4. Right-click the new keyring and select **Set as default**.
+1. Select the **+** button, and then select **Password keyring**.
+1. Set a name and a password for the new keyring.
+1. Right-click the new keyring and select **Set as default**.
 
 If you use the Storage Explorer snap, you must also make sure Storage Explorer is connected to your system's password manager. To connect the password manager, run the following command:
 
@@ -266,9 +266,9 @@ If your default browser doesn't open when you try to sign in, try all of the fol
 - Open your browser manually before you start to sign in.
 - Try using **Integrated Sign-In**. For instructions, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
 
-### Other sign-in issues
+### Other sign-in problems
 
-If none of the preceding instructions apply to your sign-in issue or if they fail to resolve your sign-in issue, [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
+If none of the preceding instructions apply to your sign-in problem or if they don't resolve your sign-in problem, [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
 
 ### Missing subscriptions and broken tenants
 
@@ -278,7 +278,7 @@ If you can't retrieve your subscriptions after you successfully sign in, try the
 - Make sure you sign in to the correct Azure environment (Azure, Azure China 21Vianet, Azure US Government, or Custom Environment).
 - Make sure you configured the Storage Explorer proxy correctly if you're behind a proxy server.
 - Remove and add back the account.
-- Check which error messages are being reported for the tenants that are failing if there's a "More information" or "Error details" link. If you aren't sure how to respond to the error messages, [open an issue in GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
+- Check which error messages are reported for the tenants that are failing if there's a **More information** or **Error details** link. If you're not sure how to respond to the error messages, [open an issue in GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
 
 ## Problem interacting with your OS credential store during an AzCopy transfer
 
@@ -289,7 +289,7 @@ If you see this message on Windows, the Windows Credential Manager is most likel
 1. Go to **Windows Credentials**.
 1. Under **Generic Credentials**, look for entries associated with programs you no longer use and delete them. You can also look for entries like `azcopy/aadtoken/<some number>` and delete those entries.
 
-If the message continues to appear after completing the above steps, or if you encounter this message on platforms other than Windows, you can [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
+If the message continues to appear after completing the preceding steps, or if you encounter this message on platforms other than Windows, you can [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
 
 ## Can't remove an attached storage account or resource
 
@@ -319,7 +319,7 @@ Storage Explorer only supports basic authentication with proxy servers. Other au
 
 The **Application** > **Proxy** > **Proxy configuration** setting determines which source Storage Explorer gets the proxy configuration from.
 
-If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer won't use a proxy. Restart Storage Explorer after you modify any environment variables.
+If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer doesn't use a proxy. Restart Storage Explorer after you modify any environment variables.
 
 If you select **Use app proxy settings**, make sure the in-app proxy settings are correct.
 
@@ -333,15 +333,15 @@ If you're still experiencing issues, try these troubleshooting methods:
 1. Verify that you can receive responses from your service endpoints. Enter one of your endpoint URLs into your browser. If you can connect, you should receive an `InvalidQueryParameterValue` or a similar XML response.
 1. Check whether someone else using Storage Explorer with the same proxy server can connect. If they can, you might have to contact your proxy server admin.
 
-### Tools for diagnosing issues
+### Tools for diagnosing problems
 
 A networking tool, such as Fiddler, can help you diagnose problems.
 
-1. Configure your networking tool as a proxy server running on the local host. If you have to continue working behind an actual proxy, you might have to configure your networking tool to connect through the proxy.
+1. Configure your networking tool as a proxy server running on the local host. If you need to continue working behind an actual proxy, you might need to configure your networking tool to connect through the proxy.
 1. Check the port number used by your networking tool.
 1. Configure Storage Explorer proxy settings to use the local host and the networking tool's port number, such as `localhost:8888`.
 
-When set correctly, your networking tool logs network requests made by Storage Explorer to management and service endpoints.
+When set correctly, your networking tool logs network requests that Storage Explorer makes to management and service endpoints.
 
 If your networking tool doesn't appear to be logging Storage Explorer traffic, try testing your tool with a different application. For example, enter the endpoint URL for one of your storage resources, such as `https://contoso.blob.core.windows.net/` in a web browser. You should receive a response similar to this code sample：
 
@@ -363,7 +363,7 @@ If your networking tool only shows traffic from other applications, you might ne
 
 ### Contact proxy server admin
 
-If your proxy settings are correct, you might have to contact your proxy server admin to:
+If your proxy settings are correct, you might need to contact your proxy server admin to:
 
 - Make sure your proxy doesn't block traffic to Azure management or resource endpoints.
 - Verify the authentication protocol used by your proxy server. Storage Explorer only supports basic authentication protocols. Storage Explorer doesn't support NTLM proxies.
@@ -376,17 +376,17 @@ If the owner of a subscription or account granted you access to a resource, veri
 
 ## Connection string doesn't have complete configuration settings
 
-If you receive this error message, it's possible that you don't have the necessary permissions to obtain the keys for your storage account. To confirm, go to the portal and locate your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permission to view keys, you might see a "You don't have access" message. To work around this issue, you can obtain either an account name and key or an account shared access signature and use it to attach the storage account.
+If you receive this error message, you might not have the necessary permissions to get the keys for your storage account. To check, go to the portal and find your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permission to view keys, you might see a "You don't have access" message. To work around this problem, get either an account name and key or an account shared access signature and use it to attach the storage account.
 
-If you do see the account keys, file an issue in GitHub so we can help you resolve the issue.
+If you do see the account keys, file an issue in GitHub so we can help you resolve the problem.
 
 ## Adding custom connections results in a `TypeError`
 
-The connection data that are stored in the local credential manager might be corrupted if you receive the following error message when you try to add a custom connection:
+The local credential manager might store corrupted connection data if you receive the following error message when you try to add a custom connection:
 
 > Error occurred while adding new connection: TypeError: Cannot read property 'version' of undefined
 
-To work around this issue, try deleting and adding back your corrupted local connections:
+To work around this problem, try deleting and adding back your corrupted local connections:
 
 1. Start Storage Explorer. From the menu, go to **Help** > **Toggle Developer Tools**.
 1. In the opened window, on the **Application** tab, go to **Local Storage** > **file://** on the left side.
@@ -446,7 +446,7 @@ Local credential management varies depending on your system configuration. If yo
 ## [SUSE Linux Enterprise Server (SLES)](#tab/linux-sles)
 
 > [!NOTE]
-> Storage Explorer isn't tested for SLES. You can try using Storage Explorer on your system, but we can't guarantee that Storage Explorer works as expected.
+> Storage Explorer isn't tested for SLES. You can try using Storage Explorer on your system, but Microsoft can't guarantee that Storage Explorer works as expected.
 
 Local credential management varies depending on your system configuration. If your system doesn't have a tool for local credential management installed, you can install a tool compatible with `libsecret` to manage your local credentials. For example, on systems using GNOME, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
 
@@ -460,18 +460,18 @@ If you still encounter this error after you run these steps, or if you want to s
 
 ## Issues with a shared access signature URL
 
-If you connect to a service through a shared access signature URL and experience an error, verify:
+If you connect to a service through a shared access signature URL and experience an error, verify the following conditions:
 
 - The URL provides the necessary permissions to read or list resources.
 - The URL isn't expired.
 - The access policy isn't revoked if the shared access signature URL is based on an access policy.
 
-If you accidentally attached by using an invalid shared access signature URL and now can't detach, follow these steps:
+If you accidentally attach by using an invalid shared access signature URL and now can't detach, follow these steps:
 
 1. When you're running Storage Explorer, select <kbd> F12 </kbd> to open the **Developer Tools** window.
 1. On the **Application** tab, select **Local Storage** > **file://** on the left side.
 1. Find the key associated with the service type of the shared access signature URI. For example, if the bad shared access signature URI is for a blob container, look for the key named `StorageExplorer_AddStorageServiceSAS_v1_blob`.
-1. The value of the key should be a JSON array. Find the object associated with the bad URI, and delete it.
+1. The value of the key is a JSON array. Find the object associated with the bad URI, and delete it.
 1. Select <kbd>Ctrl</kbd> +<kbd>R</kbd> to reload Storage Explorer.
 
 ## Storage Explorer dependencies
@@ -485,15 +485,15 @@ Storage Explorer comes packaged with all dependencies it needs to run on Windows
 
 ## [macOS](#tab/macOS)
 
-Storage Explorer comes packaged with all dependencies it needs to run on macOS.
+Starting with Storage Explorer 1.42.0, the .NET runtime is no longer bundled with the macOS distribution. You must install the [.NET 10 runtime](/dotnet/core/install/macos) on your system to run Storage Explorer. The ASP.NET runtime isn't required.
 
 ## [Ubuntu](#tab/linux-ubuntu)
 
 ### Snap
 
-Storage Explorer 1.10.0 and later is available as a snap from the Snap Store. The Storage Explorer snap installs all its dependencies automatically. The snap updates when a new version of the snap is available. Installing the Storage Explorer snap is the recommended method of installation.
+Starting with version 1.10.0, you can get Storage Explorer as a snap from the [Snap Store](https://snapcraft.io/). The Storage Explorer snap automatically installs all its dependencies and updates when a new version is available. Use the Storage Explorer snap for the best installation experience.
 
-Storage Explorer requires a password manager, which you might need to connect manually before Storage Explorer works correctly. You can connect Storage Explorer to your system's password manager by running the following command:
+Storage Explorer needs a password manager. You might need to connect it manually before Storage Explorer works correctly. To connect Storage Explorer to your system's password manager, run the following command:
 
 ```bash
 snap connect storage-explorer:password-manager-service :password-manager-service
@@ -501,14 +501,14 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 ### .tar.gz file
 
-You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
+You can also download the application as a *.tar.gz* file, but you need to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
 
-Many libraries needed by Storage Explorer come preinstalled with Canonical's standard installations of Ubuntu. Custom environments might be missing some of these libraries. If you have issues launching Storage Explorer, make sure the following packages are installed on your system:
+Many libraries needed by Storage Explorer come preinstalled with Canonical's standard installations of Ubuntu. Custom environments might be missing some of these libraries. If you have problems launching Storage Explorer, make sure the following packages are installed on your system:
 
 - `iproute2`
 - `libasound2`
@@ -528,9 +528,9 @@ Many libraries needed by Storage Explorer come preinstalled with Canonical's sta
 
 ### Snap
 
-Storage Explorer 1.10.0 and later is available as a snap from the Snap Store. The Storage Explorer snap installs all its dependencies automatically. The snap updates when a new version of the snap is available. Installing the Storage Explorer snap is the recommended method of installation.
+Starting with version 1.10.0, you can get Storage Explorer as a snap from the [Snap Store](https://snapcraft.io/). The Storage Explorer snap automatically installs all its dependencies and updates when a new version is available. Use the Storage Explorer snap for the best installation experience.
 
-Storage Explorer requires a password manager, which you might need to connect manually before Storage Explorer works correctly. You can connect Storage Explorer to your system's password manager by running the following command:
+Storage Explorer needs a password manager. You might need to connect it manually before Storage Explorer works correctly. To connect Storage Explorer to your system's password manager, run the following command:
 
 ```bash
 snap connect storage-explorer:password-manager-service :password-manager-service
@@ -539,16 +539,16 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 ### .tar.gz file
 
 > [!NOTE]
-> Storage Explorer, as provided in the *.tar.gz* download, is supported for Ubuntu only. Storage Explorer might work on RHEL, but it isn't officially supported.
+> Storage Explorer, as provided in the *.tar.gz* download, supports only Ubuntu. Storage Explorer might work on RHEL, but it isn't officially supported.
 
-You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
+You can also download the application as a *.tar.gz* file, but you need to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime isn't required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
 
-Many libraries needed by Storage Explorer might be missing in RHEL environments. If you have issues launching Storage Explorer, make sure the following packages (or their RHEL equivalents) are installed on your system:
+RHEL environments might be missing many libraries that Storage Explorer needs. If you have problems launching Storage Explorer, make sure your system has the following packages or their RHEL equivalents:
 
 - `iproute2`
 - `libasound2`
@@ -567,13 +567,13 @@ Many libraries needed by Storage Explorer might be missing in RHEL environments.
 ## [SUSE Linux Enterprise Server](#tab/linux-sles)
 
 > [!NOTE]
-> Storage Explorer isn't tested for SLES. You can try using Storage Explorer on your system, but we can't guarantee that Storage Explorer works as expected.
+> Storage Explorer isn't tested for SLES. You can try using Storage Explorer on your system, but Microsoft can't guarantee that Storage Explorer works as expected.
 
 ### Snap
 
 Storage Explorer 1.10.0 and later is available as a snap from the Snap Store. The Storage Explorer snap installs all its dependencies automatically. The snap is updated when a new version of the snap is available. Installing the Storage Explorer snap is the recommended method of installation.
 
-Storage Explorer requires a password manager, which you might need to connect manually before Storage Explorer works correctly. You can connect Storage Explorer to your system's password manager by running the following command:
+Storage Explorer needs a password manager. You might need to connect it manually before Storage Explorer works correctly. To connect Storage Explorer to your system's password manager, run the following command:
 
 ```bash
 snap connect storage-explorer:password-manager-service :password-manager-service
@@ -581,14 +581,14 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 ### .tar.gz file
 
-You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
+You can also download the application as a *.tar.gz* file, but you need to install dependencies manually.
 
-Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime *isn't* required.
+Storage Explorer requires the [.NET 10 runtime](/dotnet/core/install/linux) or later to be installed on your system. The ASP.NET runtime isn't required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
 
-Many libraries needed by Storage Explorer might be missing in SLES environments. If you have issues launching Storage Explorer, make sure the following packages (or their SLES equivalents) are installed on your system:
+Many libraries needed by Storage Explorer might be missing in SLES environments. If you have problems launching Storage Explorer, make sure the following packages (or their SLES equivalents) are installed on your system:
 
 - `iproute2`
 - `libasound2`
@@ -608,7 +608,7 @@ Many libraries needed by Storage Explorer might be missing in SLES environments.
 
 ### Patch Storage Explorer for newer versions of .NET Core
 
-For Storage Explorer 1.7.0 or earlier versions, you might have to patch the version of .NET Core used by Storage Explorer:
+For Storage Explorer 1.7.0 or earlier versions, you might need to patch the version of .NET Core that Storage Explorer uses:
 
 1. Go to the [NuGet](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43 of StreamJsonRpc from the **Download package** link on the right side.
 1. After you download the package, change its file extension from `.nupkg` to `.zip`.
@@ -621,7 +621,7 @@ For Storage Explorer 1.7.0 or earlier versions, you might have to patch the vers
 
 ## "Open In Explorer" button in the Azure portal doesn't work
 
-If the **Open In Explorer** button in the Azure portal doesn't work, make sure you're using a compatible browser. The following browsers were tested for compatibility:
+If the **Open In Explorer** button in the Azure portal doesn't work, make sure you're using a compatible browser. The following browsers are tested for compatibility:
 
 - Microsoft Edge
 - Mozilla Firefox
@@ -634,15 +634,15 @@ When you report an issue to GitHub, you might be asked to gather certain logs to
 
 ### Storage Explorer logs
 
-Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. The **Trace** log level is recommended when troubleshooting as it's the most verbose level.
+Storage Explorer logs various events to its own application logs. You can easily access these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. Use the **Trace** log level when troubleshooting, as it's the most verbose level.
 
-To change the verbosity level, go to **Settings** (the **gear** symbol in the vertical toolbar) > **Application** > **Logging** > **Log Level** and select the desired log level. Restart Storage Explorer, then reproduce the issue you're having.
+To change the verbosity level, go to **Settings** (the **gear** symbol in the vertical toolbar) > **Application** > **Logging** > **Log Level** and select the desired log level. Restart Storage Explorer, and then reproduce the issue.
 
-Logs are split into folders for each session of Storage Explorer that you run. For whatever log files you need to share, place them in a zip archive, with files from different sessions in different folders.
+Logs are split into folders for each session of Storage Explorer that you run. To share log files, place them in a zip archive. Use different folders for files from different sessions.
 
 ### Authentication logs
 
-For issues related to sign-in or Storage Explorer's authentication library, you most likely need to gather authentication logs. Authentication logs are stored at:
+For issues related to sign-in or Storage Explorer's authentication library, you most likely need to gather authentication logs. Storage Explorer stores authentication logs at the following locations:
 
 Platform | Folder path
 ---------|------------
@@ -650,11 +650,11 @@ Windows  | `C:\Users\<username>\AppData\Local\Temp\servicehub\logs`
 macOS    | `~/.ServiceHub/logs`
 Linux    | `~/.ServiceHub/logs`
 
-Generally, you can follow these steps to gather the logs:
+Generally, follow these steps to gather the logs:
 
 1. Go to **Settings** (the **gear** symbol in the vertical toolbar) > **Application** > **Sign-in**. Select **Verbose Authentication Logging**. If Storage Explorer fails to start because of an issue with its authentication library, this step is done for you.
 1. Close Storage Explorer.
-1. Optional/recommended: Clear out existing logs from the `logs` folder. This step reduces the amount of information you have to send us.
+1. (Optional) Clear out existing logs from the `logs` folder. This step reduces the amount of information you have to send.
 1. Open Storage Explorer and reproduce your issue.
 1. Close Storage Explorer.
 1. Zip the contents of the `logs` folder.
@@ -665,7 +665,7 @@ If you're having trouble transferring data, you might need to get the AzCopy log
 
 To change the verbosity level, go to **Settings** (the **gear** symbol in the vertical toolbar) > **Transfers** > **AzCopy** > **Log Level** and set the desired log level. Restart Storage Explorer, then reproduce the issue you're having.
 
-AzCopy logs can be found easily via two different methods:
+You can find AzCopy logs through two different methods:
 
 - For failed transfers still in the Activity Log, select **Go to AzCopy Log File**.
 - For transfers that failed in the past, go to the AzCopy logs folder. This folder can be found at:
@@ -678,7 +678,7 @@ AzCopy logs can be found easily via two different methods:
 
 ### Network logs
 
-For some issues, you need to provide logs of the network calls made by Storage Explorer. On Windows, you can get network logs by using Fiddler.
+For some problems, you need to provide logs of the network calls that Storage Explorer makes. On Windows, you can get network logs by using Fiddler.
 
 > [!NOTE]
 > Fiddler traces might contain passwords you entered or sent in your browser during the gathering of the trace. Make sure to read the instructions on how to sanitize a Fiddler trace. Don't upload Fiddler traces to GitHub. Wait for instructions on how to securely send your Fiddler trace.
@@ -698,13 +698,13 @@ For some issues, you need to provide logs of the network calls made by Storage E
 1. Restart Storage Explorer.
 1. You should start seeing network calls from a `storageexplorer:` process show up in Fiddler.
 
-#### Part 2: Reproduce the issue
+#### Part 2: Reproduce the problem
 
 1. Close all apps other than Fiddler.
 1. Clear the Fiddler log by using the **X** in the top left corner, near the **View** menu.
-1. Optional/recommended: Let Fiddler set for a few minutes. If you see network calls appear that aren't related to Storage Explorer, right-click them and select **Filter Now** > **Hide \<process name\>**.
-1. Start/restart Storage Explorer.
-1. Reproduce the issue.
+1. (Optional) Let Fiddler run for a few minutes. If you see network calls that aren't related to Storage Explorer, right-click them and select **Filter Now** > **Hide \<process name\>**.
+1. Start or restart Storage Explorer.
+1. Reproduce the problem.
 1. Select **File** > **Save** > **All Sessions**. Save it in an easy-to-remember location.
 1. Close Fiddler and Storage Explorer.
 
@@ -714,12 +714,12 @@ For some issues, you need to provide logs of the network calls made by Storage E
 1. Select <kbd>Ctrl</kbd> + <kbd>F</kbd>.
 1. In the dialog box that appears, make sure the following options are set: **Search** = **Requests and responses** and **Examine** = **Headers and bodies**.
 1. Search for any passwords you used while you collected the Fiddler trace and any entries that are highlighted. Right-click and select **Remove** > **Selected sessions**.
-1. You can skip sending us the .saz file if any of the following are true:
+1. You can skip sending the .saz file if any of the following conditions are true:
    - You definitely entered passwords into your browser while you collected the trace, but you don't find any entries when you use <kbd>Ctrl</kbd> + <kbd>F</kbd>.
    - You don't want to change your passwords.
    - The passwords you used are for other accounts.
 1. Save the trace again with a new name.
-1. Optional: Delete the original trace.
+1. (Optional) Delete the original trace.
 
 ## Storage Explorer can't find Azurite containers
 
@@ -808,6 +808,11 @@ Verify that your Azurite containers are running. Ensure that your Azurite contai
 ```bash
 # If using Docker
 docker container list --all
+```
+
+Ensure that your Azurite containers are listed and their status is **Up**. If a container isn't running, you can start it by using:
+
+```bash
 docker start <container name>
 
 # If using Podman
@@ -827,7 +832,7 @@ docker inspect <container name>
 podman inspect <container name>
 ```
 
-Look for the `NetworkSettings.Ports` section in the output to verify the port mappings. For example, assuming an Azurite container's blob endpoint is configured to listen on port 10000 and that container port is mapped to the host machine's port 10010, you should see an entry like the following example:
+Look for the `NetworkSettings.Ports` section in the output to verify the port mappings. For example, assuming an Azurite container's blob endpoint is configured to listen on port 10000, and that container port is mapped to the host machine's port 10010, you see an entry like this:
 
 ```json
 "10000/tcp": [
@@ -852,7 +857,7 @@ podman exec <container name> printenv AZURITE_ACCOUNTS
 
 9. **Check network settings**
 
-Ensure that there are no network issues preventing Storage Explorer from connecting to the Azurite container. Verify that your firewall or antivirus software isn't blocking the connection.
+Ensure that no network issues prevent Storage Explorer from connecting to the Azurite container. Verify that your firewall or antivirus software isn't blocking the connection.
 
 ### Restart Azurite container
 
@@ -868,7 +873,7 @@ podman restart <container name>
 
 ### Recreate Azurite container
 
-If none of the above steps resolve the issue, try recreating the Azurite container.
+If none of the preceding steps resolve the issue, try recreating the Azurite container. For example:
 
 ```bash
 # If using Docker
@@ -900,11 +905,11 @@ If FSLogix manages your user profile, Storage Explorer might be unable to run du
 
 1. Open the Group Policy Management Console (gpmc.msc).
 
-2. Create or edit a Group Policy Object (GPO) that targets your AVD session hosts.
+1. Create or edit a Group Policy Object (GPO) that targets your AVD session hosts.
 
-3. Navigate to: Computer Configuration > Preferences > Windows Settings > Registry.
+1. Go to **Computer Configuration** > **Preferences** > **Windows Settings** > **Registry**.
 
-4. Add a new Registry Item with the following settings:
+1. Add a new Registry Item with the following settings:
 
    | Action     | Update                                     |
    |------------|--------------------------------------------|
@@ -914,7 +919,7 @@ If FSLogix manages your user profile, Storage Explorer might be unable to run du
    | Value Type | REG_DWORD                                  |
    | Value Data | 11 (0xB)                                   |
 
-5. Apply the GPO and reboot the session hosts.
+1. Apply the GPO and reboot the session hosts.
 
 > [!TIP]
 > You can also add registry items to the following key paths:
