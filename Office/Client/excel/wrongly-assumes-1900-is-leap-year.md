@@ -10,17 +10,16 @@ ms.reviewer: bradthor
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
+  - CI 10882
+
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft Excel for Mac 2011
-  - Excel for Microsoft 365 for Mac 
-  - Microsoft Office Excel 2003
-  - Microsoft Office Excel 2007
-  - Excel 2010
-  - Excel 2013
-  - Excel 2016
-ms.date: 05/26/2025
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016
+ms.date: 03/31/2026
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year

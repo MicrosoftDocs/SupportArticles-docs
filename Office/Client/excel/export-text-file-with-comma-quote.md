@@ -9,13 +9,16 @@ audience: ITPro
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10882
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, lisalozano
 appliesto: 
-  - Office Excel 2007
-  - Office Excel 2003
-  - Excel 2002
-ms.date: 05/26/2025
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 03/31/2026
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel
