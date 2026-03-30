@@ -935,6 +935,8 @@ items:
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
     items:
+    - name: Assigned Access kiosk users can't access printers that use a domain print server
+      href: ./shell-experience/assigned-access-kiosk-users-cant-access-printers-domain-print-server.md
     - name: Can't configure Microsoft Teams to run in a multi-app kiosk
       href: ./shell-experience/cant-configure-teams-multi-app-kiosk.md
     - name: Kiosk mode issues troubleshooting
