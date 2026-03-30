@@ -1,20 +1,20 @@
 ---
 # required metadata
-title: A financial dimension has disappeared or doesn't appear in the Financial Dimensions details form
-description: Troubleshooting steps when a financial dimension is missing from the Financial Dimensions details form or shows as a custom dimension unexpectedly
+title: A financial dimension has disappeared or doesn't appear in the Financial Dimensions details page
+description: Troubleshooting steps when a financial dimension is missing from the Financial Dimensions details page or shows as a custom dimension unexpectedly
 author: ethanrimes
 ms.date: 03/12/2026
 ---
 
-# A financial dimension has disappeared or doesn't appear in the Financial Dimensions details form
+# A financial dimension has disappeared or doesn't appear in the Financial Dimensions details page
 
-This article provides troubleshooting steps when a financial dimension is missing from the **Financial Dimensions** details form, shows incorrectly as a custom dimension, or can't be added to account structures or integration formats.
+This article provides troubleshooting steps when a financial dimension is missing from the **Financial Dimensions** details page, shows incorrectly as a custom dimension, or can't be added to account structures or integration formats.
 
 ## Symptoms
 
 You might experience one or more of the following:
 
-- A dimension no longer appears in the **Financial Dimensions** details form.
+- A dimension no longer appears in the **Financial Dimensions** details page.
 - A dimension that was previously available has disappeared.
 - A dimension that should be backed by a system entity (such as Department or Project) shows as **\<Custom dimension\>** instead.
 - A dimension can't be added to an account structure or integration format, even though other dimensions can.
