@@ -38,12 +38,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Backstamping job skipped
-            url: data/profile-unification/backstamping-job-skipped.md
-          - text: Can't delete a data source or table
-            url: data/profile-unification/cant-delete-data-table.md
-          - text: Can't save data unification rules
-            url: data/profile-unification/cant-save-unification.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md
           - text: Merge failed error
