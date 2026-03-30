@@ -22,7 +22,7 @@ ms.date: 03/26/2026
 
 ## Summary
 
-This article discusses errors that you might see in Microsoft Word, Microsoft Excel, or Microsoft PowerPoint. Also, it provides resolution options to fix the issue.
+This article discusses errors that you might see in Microsoft Word, Microsoft Excel, or Microsoft PowerPoint about not being able to save a file that's on a network location. Also, it provides resolution options to fix the issue.
 
 ## Symptoms
 
