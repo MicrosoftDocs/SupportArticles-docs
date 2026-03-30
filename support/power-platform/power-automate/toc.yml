@@ -261,8 +261,6 @@ items:
         href: flow-creation/fail-to-list-excel-online-tables-retrieving-values.md
       - name: Failed to fetch when creating a flow
         href: flow-creation/failed-fetch-error-when-creating-flow.md
-      - name: Flow Editor issues and recommendations
-        href: flow-creation/flow-editor-issues-recommendations.md
       - name: Flow Management errors and recommendations
         href: flow-creation/flow-management-errors-recommendations.md
       - name: How to use Power Automate's JavaScript Software Developer Kit
