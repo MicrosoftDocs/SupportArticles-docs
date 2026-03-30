@@ -15,7 +15,7 @@ ms.custom:
   - CI 10882
 appliesto: 
   - Microsoft Excel
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel

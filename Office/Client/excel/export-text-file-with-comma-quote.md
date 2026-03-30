@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016 
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel

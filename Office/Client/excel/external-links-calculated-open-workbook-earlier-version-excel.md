@@ -14,10 +14,10 @@ ms.custom:
 appliesto:
   - Microsoft 365 
   - Microsoft Excel 2024 
-  - Microsoft Excel 2021 
+  - Microsoft Excel 2021  
   - Microsoft Excel 2016 
 search.appverid: MET150
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # External links may be calculated when you open a workbook that was last saved in an earlier version of Excel

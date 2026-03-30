@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Excel 2021 
   - Microsoft Excel 2016
 search.appverid: MET150
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # The first worksheet name in a new Excel workbook displays in a language other than the Office display language

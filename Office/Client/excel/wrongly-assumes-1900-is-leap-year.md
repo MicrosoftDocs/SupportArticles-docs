@@ -6,20 +6,20 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: bradthor
+ms.reviewer: bradthor, akeeler, lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
   - CI 10882
-
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft 365 
+  - Microsoft 365
+  - Microsoft 365 for Mac
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # Formula errors in Excel when list separator isn't set correctly

@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: emmersp, akeeler, lisalozano
+ms.reviewer: emmersp, akeeler, lisalozano 
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # How to control and understand settings in the Format Cells dialog box in Excel

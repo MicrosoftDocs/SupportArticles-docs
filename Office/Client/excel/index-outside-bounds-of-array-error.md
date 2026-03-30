@@ -14,11 +14,12 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2013
-  - SQL Server 2012 Enterprise
-  - SQL Server 2012 Standard
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
   - Power BI for Microsoft 365
-ms.date: 03/31/2026
+ms.date: 03/30/2026
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook
