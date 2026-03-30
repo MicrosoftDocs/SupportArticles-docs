@@ -11,7 +11,7 @@ ms.custom: sap:Data Unification\Match
 
 ## Summary
 
-When you run data unification in Microsoft Dynamics 365 Customer Insights - Data, the process might fail with a "Match failed" error on the **Deduplication rules** or **Matching rules** page. This error can occur for several reasons, including a failed data refresh, source table changes that aren't reflected in Customer Insights - Data, missing data files or partition paths, resource limitations, or transient issues. This article walks through each cause and provides steps to resolve the match failure and successfully complete the unification process.
+When you run [data unification](/dynamics365/customer-insights/data/data-unification) in Microsoft Dynamics 365 Customer Insights - Data, the process might fail with a "Match failed" error on the **Deduplication rules** or **Matching rules** page. This error can occur for several reasons, including a failed data refresh, source table changes that aren't reflected in Customer Insights - Data, missing data files or partition paths, resource limitations, or transient issues. This article walks through each cause and provides steps to resolve the match failure and successfully complete the unification process.
 
 ## Symptoms
 
