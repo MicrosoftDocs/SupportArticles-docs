@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Linux virtual machine deployment issues
-description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
+description: Troubleshoot Linux virtual machine deployment issues in Azure by identifying failure stages, analyzing logs, and applying fixes to restore provisioning. Start now.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.date: 03/25/2026
@@ -19,7 +19,7 @@ ms.reviewer: divargas, jarrettr
 
 ## Summary
 
-This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine (VM) in Azure by identifying the stage at which the deployment failed (deployment, provisioning, or OS boot) and guiding you to the appropriate diagnostic tools and remediation steps.
+This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine (VM) in Azure. It helps you identify the stage at which the deployment failed (deployment, provisioning, or OS boot) and guides you to the appropriate diagnostic tools and remediation steps.
 
 ## Identify the failure stage
 
@@ -40,11 +40,11 @@ Before troubleshooting, determine where the deployment failed:
 
 A common provisioning failure occurs when you deploy a virtual machine from a custom Linux image. In this scenario:
 
-- The VM remains in the **Creating** state for up to 40 minutes.
+- The VM stays in the **Creating** state for up to 40 minutes.
 - Provisioning eventually fails.
 - Azure reports an OS provisioning error.
 
-The following is an example of this kind of error message:
+The following example shows this kind of error message:
 
 > [!NOTE]
 > Make sure your [Linux](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/) image is properly prepared (generalized).
@@ -69,7 +69,7 @@ When this problem occurs, the VM state shows as `failed`.
 
 ### Why provisioning failures occur
 
-Commonly, provisioning failures occur for multiple reasons, including:
+Provisioning failures commonly occur for multiple reasons, including:
 
 - Missing provisioning or incorrectly configured agent.
 
@@ -83,7 +83,7 @@ Commonly, provisioning failures occur for multiple reasons, including:
 
 To identify the reason for failed provisioning, start by examining the serial log. This log is made available by deploying the VM to use Azure boot diagnostics.
 
-You must deploy a new VM to have [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) in order for the VM that has the failing image to access provisioning events in the serial log.
+You must deploy a new VM with [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) so the VM that uses the failing image can access provisioning events in the serial log.
 
 ```azurecli-interactive
 # create resource group
@@ -115,9 +115,9 @@ az vm create \
 
 ### Check the serial console
 
-To determine why provisioning failed, examine the serial console log, which captures early boot and provisioning events.
+To determine why provisioning failed, examine the serial console log. This log captures early boot and provisioning events.
 
-Boot diagnostics must be enabled at VM creation time. If your image consistently fails to provision, deploy a new VM using the same image with boot diagnostics enabled, and then download the serial log using the Azure portal or Azure CLI.
+You must enable boot diagnostics when you create the VM. If your image consistently fails to provision, deploy a new VM by using the same image with boot diagnostics enabled. Then, download the serial log by using the Azure portal or Azure CLI.
 
 ```azurecli-interactive 
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
@@ -126,13 +126,13 @@ az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resour
 > [!NOTE]
 > Replace the following values as they map to your situation: `$resourceGroup` and `$vmName`.
 
-### Understanding the serial log for system events and provisioning events
+### Understand the serial log for system events and provisioning events
 
-When the VM is created, cloud-init starts up and tries to take the following actions:
+When you create the VM, cloud-init starts up and tries to take the following actions:
 
 - Mount an ISO file.
 - Establish network connectivity.
-- Set the properties that are passed during VM creation.
+- Set the properties that you pass during VM creation.
 - Mount the ephemeral disk (on supported VM sizes).
 - Notify the Azure platform that the initial OS config is completed.
 
@@ -186,17 +186,17 @@ Use the following table for reference, not as a checklist. You don't need to ide
 
  #### Cause
  
-The UDF driver isn't loaded in the kernel. Loading is required for the VM to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
+The kernel doesn't load the UDF driver. The VM needs this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
 When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 
-Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic). For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
+Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
 #### Solution
 
 Make sure that the UDF driver is configured to be loaded in the kernel.
 
-A common method for UDF drivers to be blocked is through configurations within `/etc/modprobe.d/`. Work with the image owner to make sure that Linux UDF drivers are present and not blocked. Refer to [this article about blocking and unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
+A common way to block UDF drivers is through configurations within `/etc/modprobe.d/`. Work with the image owner to make sure that Linux UDF drivers are present and not blocked. For more information, see [this article about blocking and unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
 
 ### Unicode characters in VM tags issue
 
@@ -248,20 +248,20 @@ Reason: [Errno 13] Permission denied: b'/var/tmp/cloud-init/cloud-init-dhcp-yd8m
 
 #### Cause 
 
-Older versions of cloud-init (earlier than version 20.3) use Dynamic Host Configuration Protocol (DHCP) by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP fails because `dhclient` doesn't have permissions to run within `/var/tmp`.
+Older versions of cloud-init (earlier than version 20.3) use Dynamic Host Configuration Protocol (DHCP) by copying and running `dhclient` within `/var/tmp`. If the VM mounts `/var/tmp` as `noexec` (no execution), DHCP fails because `dhclient` doesn't have permissions to run within `/var/tmp`.
 
-Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` *as-is* (by not copying and running it in `/var/tmp` if there are permissions issues).
+Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` *as-is* (by not copying and running it in `/var/tmp` if there are permissions problems).
 
 #### Solution
 
 For VMs that run cloud-init earlier than version 20.3, configure the VM so that `/var/tmp` isn't mounted as `noexec`. Alternatively, upgrade the VM cloud-init package to version 20.3 or a later version.
 
 > [!NOTE]
-> The `dhclient` permission issue was resolved in cloud-init 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
+> The `dhclient` permission problem was resolved in cloud-init 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
 
-## Getting more logs
+## Get more logs
 
-If you find that you need more logs from the VM in order to understand the issues, SSH into the VM by using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) by using a user that's baked into the image. If you don't have a user baked in, you can either re-create the image to include a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
+If you need more logs from the VM to understand the problems, SSH into the VM by using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) by using a user that's baked into the image. If you don't have a user baked in, you can either re-create the image to include a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
 
 ```azurecli-interactive 
 az vm repair create  \
@@ -276,7 +276,7 @@ az vm repair create  \
 > [!NOTE]
 > Replace the following values as they map to your situation: `$resourceGroup`, `$vmName`, and `$password`.
 
-## Understanding the cloud-init.log
+## Understand the cloud-init.log
 
 When you have access to the cloud-init logs, review the [cloud-init troubleshooting documentation](/azure/virtual-machines/linux/cloud-init-troubleshooting).
 
@@ -288,7 +288,7 @@ To start troubleshooting, collect the activity logs to identify the error that's
 
 [View activity logs to manage Azure resources](/azure/azure-resource-manager/management/view-activity-logs)
 
-## Getting Support
+## Get support
 
 If you referred to the guidance but still can't troubleshoot the problem, contact Microsoft Support. Select the appropriate product and support topic to engage the correct support team.
 

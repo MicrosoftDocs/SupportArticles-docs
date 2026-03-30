@@ -12,11 +12,15 @@ ms.author: esflores
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary 
+
+Troubleshoot CPU, memory, and disk input and output performance issues and isolate bottlenecks on Linux virtual machines (VMs) in Azure.
+
 ## Performance issues and bottlenecks
 
-Performance issues can occur across different operating systems and applications, and each scenario requires a targeted troubleshooting approach. In Linux virtual machines, performance problems typically surface in one or more core resource areas: CPU, memory, networking, and input/output (I/O). Each resource presents distinct symptoms—often overlapping—and requires different diagnostic methods and remediation strategies.
+Performance issues can occur across different operating systems and applications, and each scenario requires a targeted troubleshooting approach. In Linux VMs, performance problems typically surface in one or more core resource areas: CPU, memory, networking, and input/output (I/O). Each resource presents distinct symptoms (often overlapping) and requires different diagnostic methods and remediation strategies.
 
-In many cases, performance degradation is caused not by the platform itself but by application or configuration issues. For example, a web application with a misconfigured caching layer may route excessive requests to the origin server instead of serving them from cache, increasing CPU load and response times. Similarly, database workloads can be affected by storage placement. If the redo log for a MySQL or MariaDB database resides on the operating system disk or on storage that does not meet the database’s performance requirements, the system may experience increased latency and reduced transactions per second (TPS) due to I/O contention.
+In many cases, performance degradation is caused not by the platform itself but by application or configuration issues. For example, a web application with a misconfigured caching layer may route excessive requests to the origin server instead of serving them from cache, increasing CPU load and response times. Similarly, database workloads can be affected by storage placement. If the redo log for a MySQL or MariaDB database resides on the operating system disk or on storage that does not meet the database's performance requirements, the system may experience increased latency and reduced transactions per second (TPS) due to I/O contention.
 
 Effective troubleshooting begins with understanding the problem and identifying where the bottleneck exists in the stack—whether CPU, memory, networking, or I/O. Establishing a performance baseline is critical, as it allows you to compare metrics before and after changes and determine whether those changes result in measurable improvement.
 
