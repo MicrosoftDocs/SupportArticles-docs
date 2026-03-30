@@ -2,19 +2,20 @@
 title: Resolve file upload errors related to attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to attributes.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 01/19/2025
+ms.reviewer: amywheater, aweixelman
+ms.date: 03/30/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
-  - CI190687
+  - CI 190687
+  - CI 10767
 ---
 
 # Resolve file upload errors related to attributes
 
-When you upload employee attribute data to Microsoft Viva Glint, you may receive one of the following error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following error messages. Select the error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the error.
 
 ## DUPLICATE_COLUMN
 
@@ -23,6 +24,12 @@ When you upload employee attribute data to Microsoft Viva Glint, you may receive
 > DUPLICATE_COLUMN: Column \<Attribute Name\> appears 2 times. Column \<Attribute Name\> can only appear once.
 
 **Issue type:** File-level error
+
+The duplicate information can occur in any of the following scenarios:
+
+- **Column names use different casing**: Attribute names in Viva Glint are case-insensitive. Column names such as Department, department, and DEPARTMENT are considered duplicates, even if they appear as different entries in a file.
+- **Conflicts between flat and hierarchy attributes**: Attribute names must be unique across all attribute types. A flat attribute and a hierarchy attribute can't share the same name, even if the casing differs.
+- **System-generated (derived) attributes in the file**: Viva Glint generates attributes such as **Tenure** and **Age Grouping** automatically. When these attributes are included as columns in files, they create duplicate or conflicting attribute definitions.  
 
 ### Resolution
 
