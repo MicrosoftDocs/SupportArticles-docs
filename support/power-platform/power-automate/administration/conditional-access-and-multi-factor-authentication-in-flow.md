@@ -7,10 +7,12 @@ ms.custom: has-azure-ad-ps-ref, sap:Administration\Power Automate management for
 ---
 # Recommendations for conditional access and multifactor authentication in Microsoft Power Automate (Flow)
 
-[Conditional Access](/azure/active-directory/conditional-access/overview) is a feature of Microsoft Entra ID that you can use to control how and when users access applications and services. Despite its usefulness, be aware that using conditional access might have an adverse or unexpected effect on users in your organization who use Microsoft Power Automate (Flow) to connect to Microsoft services that are relevant to conditional access policies.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4467879
+
+## Summary
+
+[Conditional Access](/azure/active-directory/conditional-access/overview) and [multifactor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) policies in Microsoft Entra ID can cause authentication errors, broken connections, and failed flow runs in Microsoft Power Automate. These problems commonly occur when Conditional Access requirements don't match across Power Automate and the services it connects to, like SharePoint, Teams, and Excel. This article provides recommendations for configuring Conditional Access policies, explains common problems such as `AADSTS50076` errors and [Terms of Use](/entra/identity/conditional-access/terms-of-use) conflicts, and describes how to fix broken connections in embedded experiences.
 
 ## Recommendations
 

@@ -8,7 +8,9 @@ ms.date: 03/30/2026
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
 
-Various reasons can cause [connection](/power-automate/add-manage-connections) problems in Microsoft Power Platform. This article describes some common reasons and helps you troubleshoot and solve these problems.
+## Summary
+
+[Connections](/power-automate/add-manage-connections) in Microsoft Power Platform can break for many reasons, including expired tokens, Data Loss Prevention (DLP) blocks, password changes, Conditional Access policy mismatches, and disabled accounts. This article helps you identify the cause and fix broken connections in Power Automate.
 
 - [Connection times out](#connection-times-out)
 - [A DLP block occurs](#a-dlp-block-occurs)
