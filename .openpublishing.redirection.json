@@ -15493,6 +15493,10 @@
     {
       "source_path": "support/power-platform/power-automate/flow-run-issues/flow-runtime-errors-recommendations.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-creation/flow-management-errors-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
     }
   ]
 }
