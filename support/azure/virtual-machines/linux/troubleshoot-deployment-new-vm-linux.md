@@ -7,8 +7,6 @@ ms.date: 03/25/2026
 ms.reviewer: divargas, jarrettr
 ---
 
-
-
 # Troubleshoot issues when deploying Linux virtual machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
@@ -17,32 +15,28 @@ ms.reviewer: divargas, jarrettr
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
- 
-
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
-## Purpose of this guide
-This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine in Azure by identifying the stage at which the deployment failed (deployment, provisioning, or OS boot) and guiding you to the appropriate diagnostic tools and remediation steps.
+## Summary
 
-## Start here: Identify the failure stage
+This article helps you troubleshoot issues that occur when deploying a new Linux virtual machine (VM) in Azure by identifying the stage at which the deployment failed (deployment, provisioning, or OS boot) and guiding you to the appropriate diagnostic tools and remediation steps.
+
+## Identify the failure stage
 
 Before troubleshooting, determine where the deployment failed:
 
-- **Deployment failed** → Azure portal shows *Deployment failed*
-- **Deployment succeeded but VM won’t start** → VM shows *Stopped* or *Failed*
-- **VM running but inaccessible** → SSH fails, boot hangs, or extensions fail
+- **Deployment failed**: Azure portal shows *Deployment failed*.
+- **Deployment succeeded but VM won't start**: VM shows *Stopped* or *Failed*.
+- **VM running but inaccessible**: Secure Shell (SSH) fails, boot hangs, or extensions fail.
 
 
 | Symptom | Likely area |
 |-------|------------|
 | ARM deployment fails | Template, quota, region, image |
 | VM stuck in provisioning | Cloud-init, extension, OS config |
-| VM running but no SSH | Network, NSG, SSH config |
-
-
+| VM running but no SSH | Network, Network security group (NSG), SSH config |
 
 ## Symptoms
-
 
 A common provisioning failure occurs when you deploy a virtual machine from a custom Linux image. In this scenario:
 
@@ -50,7 +44,7 @@ A common provisioning failure occurs when you deploy a virtual machine from a cu
 - Provisioning eventually fails.
 - Azure reports an OS provisioning error.
 
-The following error messages are typical:
+The following is an example of this kind of error message:
 
 > [!NOTE]
 > Make sure your [Linux](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/) image is properly prepared (generalized).
@@ -71,23 +65,23 @@ Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
 }
 ```
 
-When this problem occurs, the VM state is shown as `failed`.
+When this problem occurs, the VM state shows as `failed`.
 
-## Why provisioning failures occur
+### Why provisioning failures occur
 
-Commonly, provisioning failures occur for multiple reasons, such as:
+Commonly, provisioning failures occur for multiple reasons, including:
 
-- Missing provisioning or incorrectly configured agent
+- Missing provisioning or incorrectly configured agent.
 
   Verify that an agent exists and is working correctly by using [cloud-init](/azure/virtual-machines/linux/using-cloud-init). If your image doesn't support this configuration, review [these steps](/azure/virtual-machines/linux/no-agent).
 
-- Incorrect image configuration
+- Incorrect image configuration.
 
    For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
-## Troubleshoot provisioning failures
+### Troubleshoot provisioning failures
 
-To identify the reason for failed provisioning, start by examining the serial log. This log is made available by deploying the VM to use Azure Boot diagnostics.
+To identify the reason for failed provisioning, start by examining the serial log. This log is made available by deploying the VM to use Azure boot diagnostics.
 
 You must deploy a new VM to have [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) in order for the VM that has the failing image to access provisioning events in the serial log.
 
@@ -115,40 +109,36 @@ az vm create \
     --ssh-key-value $sshPubkeyPath \
     --boot-diagnostics-storage $storageacct
 ```
+
 > [!NOTE] 
-> Replace $resourceGroup, $location, $storageacct, $vmName, $brokenImageName, $sshPubkeyPath and accordingly
+> Replace the following values as they map to your situation: `1$resourceGroup`, `$location`, `$storageacct`, `$vmName`, `$brokenImageName`, and `$sshPubkeyPath`.
 
+### Check the serial console
 
-## Check the serial console
+To determine why provisioning failed, examine the serial console log, which captures early boot and provisioning events.
 
-To determine why provisioning failed, examine the **serial console log**, which captures early boot and provisioning events.
-
-Boot diagnostics must be enabled at VM creation time. If your image consistently fails to provision, deploy a **new VM using the same image** with boot diagnostics enabled, and then download the serial log using the Azure portal or Azure CLI.
-
+Boot diagnostics must be enabled at VM creation time. If your image consistently fails to provision, deploy a new VM using the same image with boot diagnostics enabled, and then download the serial log using the Azure portal or Azure CLI.
 
 ```azurecli-interactive 
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
 ```
+
 > [!NOTE]
-> Replace $resourceGroup, $vmName accordingly
+> Replace the following values as they map to your situation: `$resourceGroup` and `$vmName`.
 
-## Understanding the serial log for system events and provisioning events
-
+### Understanding the serial log for system events and provisioning events
 
 When the VM is created, cloud-init starts up and tries to take the following actions:
 
-- Mount an ISO
-- Establish network connectivity
-- Set the properties that are passed during VM creation
-- Mount the ephemeral disk (on supported VM sizes)
-- Notify the Azure platform that the initial OS config is completed
+- Mount an ISO file.
+- Establish network connectivity.
+- Set the properties that are passed during VM creation.
+- Mount the ephemeral disk (on supported VM sizes).
+- Notify the Azure platform that the initial OS config is completed.
 
-The serial log captures early system boot, networking initialization, cloud-init execution, and Azure Linux Agent activity.
+The serial log captures early system boot, networking initialization, cloud-init execution, and Azure Linux VM Agent activity.
 
-Use the table below as a **reference**, not a checklist. You do not need to identify every entry. Instead, focus on the section that corresponds to where provisioning appears to stop (for example, networking, cloud-init, SSH startup, or the Azure Linux Agent).
-
-
-
+Use the following table for reference, not as a checklist. You don't need to identify every entry. Instead, focus on the section that corresponds to where provisioning appears to stop (for example, networking, cloud-init, SSH startup, or the Azure Linux VM Agent).
 
 | System events and key information | Serial log | Notes |
 |---|---|---|
@@ -176,7 +166,7 @@ Use the table below as a **reference**, not a checklist. You do not need to iden
 
 ## Common errors
 
-### Disabled UDF module
+### Disabled Universal Disk Format (UDF) module
 
 **Error** In the serial log:
 
@@ -196,7 +186,7 @@ Use the table below as a **reference**, not a checklist. You do not need to iden
 
  #### Cause
  
-The UDF driver is not loaded in the kernel. Loading is required for the VM to provision. See [image requirements](/azure/virtual-machines/linux/create-upload-generic).
+The UDF driver isn't loaded in the kernel. Loading is required for the VM to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
 When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 
@@ -220,13 +210,13 @@ AttributeError: 'module' object has no attribute 'JSONDecodeError'
 
 #### Cause
 
-This problem occurs because VM tags have non-ASCII characters, and the version of cloud-init is earlier than 20.3.
+This problem occurs because VM tags have non-ASCII characters and the version of cloud-init is earlier than 20.3.
 
 #### Solution
 
-Either use or ensure your image supports cloud-init 20.3 or newer, or remove non-ASCII characters from the VM tags.
+Either use or ensure your image supports cloud-init 20.3 or newer or remove non-ASCII characters from the VM tags.
 
-### Password with unicode characters
+### Password with Unicode characters
 
 **Error** in *cloud-init.log*:
 
@@ -258,13 +248,13 @@ Reason: [Errno 13] Permission denied: b'/var/tmp/cloud-init/cloud-init-dhcp-yd8m
 
 #### Cause 
 
-Older versions of cloud-init (earlier than version 20.3) perform DHCP by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP will fail because `dhclient` doesn't have permissions to run within `/var/tmp`.
+Older versions of cloud-init (earlier than version 20.3) use Dynamic Host Configuration Protocol (DHCP) by copying and running `dhclient` within `/var/tmp`. If `/var/tmp` is mounted as `noexec` (no execution) by the VM, then DHCP fails because `dhclient` doesn't have permissions to run within `/var/tmp`.
 
-Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` "as-is" (by not copying and running it in `/var/tmp` if there are permissions issues).
+Cloud-init version 20.3 and later versions contain a fix that falls back and runs `dhclient` *as-is* (by not copying and running it in `/var/tmp` if there are permissions issues).
 
 #### Solution
 
-For VMs that run cloud-init earlier than version 20.3, configure the VM so that `/var/tmp` is not mounted as `noexec`. Alternatively, upgrade the VM's cloud-init package to version 20.3 or a later version.
+For VMs that run cloud-init earlier than version 20.3, configure the VM so that `/var/tmp` isn't mounted as `noexec`. Alternatively, upgrade the VM cloud-init package to version 20.3 or a later version.
 
 > [!NOTE]
 > The `dhclient` permission issue was resolved in cloud-init 22.4 and later versions. For more information, see [cloud-init issues 3956](https://github.com/canonical/cloud-init/issues/3956).
@@ -284,7 +274,7 @@ az vm repair create  \
 ```
 
 > [!NOTE]
-> Replace $resourceGroup, $vmName, $password accordingly
+> Replace the following values as they map to your situation: `$resourceGroup`, `$vmName`, and `$password`.
 
 ## Understanding the cloud-init.log
 
@@ -310,5 +300,3 @@ Product: Virtual Machine Running Linux
 Support Topic: <COMPLETE>
 Support Subtopic: <COMPLETE>
 ```
-
- 
