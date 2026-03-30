@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot connectivity problems between Azure virtual machines
-description: Troubleshoot connectivity problems between Azure virtual machines (VMs) with step-by-step checks for Network Security Groups (NSGs), routes, and firewalls. Start now.
+description: Troubleshoot connectivity problems between Azure virtual machines with step-by-step checks for NSGs, routes, and firewalls. Resolve issues faster—start now.
 services: virtual-network
 author: asudbring
 ms.author: allensu
@@ -17,8 +17,6 @@ ms.custom: sap:Connectivity
 ## Summary
 
 You might experience connectivity problems between Azure virtual machines (VMs). This article provides troubleshooting steps to help you resolve this problem. 
-
-If this article doesn't address your Azure issue, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post your issue in these forums, or post to [@AzureSupport](https://twitter.com/AzureSupport) on Twitter. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
 
 ## Symptom
 
@@ -217,7 +215,3 @@ If you can't connect to a VM network share, the problem might be caused by unava
 ### Step 9: Check Inter-VNet connectivity
 
 Use [Network Watcher IP Flow Verify](/azure/network-watcher/ip-flow-verify-overview) to determine whether an NSG or UDR is interfering with traffic flow. Use [VNet flow logs](/azure/network-watcher/vnet-flow-logs-overview) (recommended) or [NSG flow logs](/azure/network-watcher/nsg-flow-logs-overview) to analyze traffic patterns between virtual networks. You can also verify your VNet or VPN connections by reviewing the [VPN Gateway topology and design](/azure/vpn-gateway/design) documentation.
-
-### Need help? Contact support
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.

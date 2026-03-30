@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot subnet deletion and modification failures in Azure Virtual Network
-description: Troubleshoot subnet deletion and modification failures in Azure Virtual Network, identify blocking dependencies, and follow the steps to fix problems.
+description: Troubleshoot subnet deletion and modification failures in Azure Virtual Network, identify blocking dependencies, and use this guide to resolve issues quickly.
 services: virtual-network
 author: asudbring
 ms.author: allensu
@@ -18,8 +18,6 @@ ms.custom:
 ## Summary
 
 Subnet deletion and modification failures in Azure Virtual Network can prevent you from deleting, modifying, or resizing subnets. Various Azure services deploy resources into subnets and create dependencies that block these operations. This article helps you identify blocking resources and resolve each scenario.
-
-If this article doesn't address your specific Azure problem, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post in these forums, or post to [@AzureSupport](https://x.com/AzureSupport) on X. You also can submit an Azure support request. To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support), and select **Get support**.
 
 > [!TIP]
 > For questions about how to delete a virtual network, see [Can't delete a virtual network or subnet in Azure](virtual-network-troubleshoot-cannot-delete-vnet.md).
