@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot BGP problems for Azure VPN Gateway
+title: Troubleshoot BGP issues for Azure VPN Gateway
 titleSuffix: Azure VPN Gateway
 description: Troubleshoot BGP issues in Azure VPN Gateway by resolving peer connectivity, route learning, and session stability to restore routing.
 author: cherylmc
@@ -240,9 +240,9 @@ The following table summarizes the tools that are available for BGP diagnostics.
 | **BGP Routes Advertised metric** | Count of routes that are advertised per peer | Monitor route count trends |
 | **BGP Routes Learned metric** | Count of routes that are learned per peer | Monitor route count trends |
 
-## Set up alerts for BGP problems
+## Set up alerts for BGP issues
 
-You can configure Azure Monitor alerts to notify you when BGP problems occur:
+You can configure Azure Monitor alerts to notify you when BGP issues occur:
 
 1. In the Azure portal, go to your virtual network gateway.
 1. Select **Alerts** > **Create alert rule**.
