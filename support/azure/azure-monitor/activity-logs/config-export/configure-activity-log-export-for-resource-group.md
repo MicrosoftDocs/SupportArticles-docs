@@ -1,6 +1,6 @@
 ---
 title: Configure activity log export for a specific resource group
-description: Learn how to configure the export of Azure activity logs for a specific resource group to monitor changes and ensure compliance.
+description: "Export Azure activity logs for your resource group to monitor changes and ensure compliance. Learn the steps to filter and export logs effectively."
 ms.date: 03/31/2026
 ms.author: jarrettr
 ms.editor: v-gsitser
@@ -13,13 +13,13 @@ ms.custom: I can't configure export of Activity Logs
 
 ## Summary
 
-This article provides guidance on configuring the export of activity logs for a specific resource group in Azure. This is useful for monitoring changes and ensuring compliance within your Azure environment.
+This article provides guidance on configuring the export of activity logs for a resource group in Azure. Exporting activity logs helps you monitor changes and ensure compliance within your Azure environment.
 
-Users often need to export activity logs for specific resource groups to monitor changes and detect unauthorized modifications. However, Azure doesn't support exporting logs for individual resources or groups directly. Instead, users can filter logs using the **Resource** column in the AzureActivity table.
+To monitor changes and detect unauthorized modifications, you often need to export activity logs for specific resource groups. However, Azure doesn't support exporting logs for individual resources or groups directly. Instead, filter logs by using the **Resource** column in the AzureActivity table.
 
-### Common Issues and Solutions
+### Common problems and solutions
 
-- **Issue**: Unable to export logs for a specific resource group.
+- **Problem**: Can't export logs for a specific resource group.
 - **Solution**: Use the **Resource** column in the AzureActivity table to filter logs by resource group.
 
 ### Configure activity log export
@@ -45,7 +45,7 @@ Users often need to export activity logs for specific resource groups to monitor
 1. **Verify export**
 
     1. Ensure that the exported logs contain the necessary information by reviewing the file.
-    1. Check for any missing entries or discrepancies
+    1. Check for any missing entries or discrepancies.
 
 ### References
 

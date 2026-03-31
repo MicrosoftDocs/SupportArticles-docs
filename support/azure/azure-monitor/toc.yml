@@ -25,6 +25,8 @@ items:
         href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
       - name: Configure long-term storage for Azure Activity Logs
         href: activity-logs/config-export/configure-long-term-storage-activity-logs.md 
+      - name: Configure activity log export for a specific resource group
+        href: activity-logs/config-export/configure-activity-log-export-for-resource-group.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
