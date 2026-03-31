@@ -5,7 +5,7 @@ author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
 ms.date: 03/19/2026
-ms.custom: sap:Work Order Management
+ms.custom: sap:Work Order Management\Issues setting up system records such as incident types or work order types
 ---
 
 # When a work order doesn't save or create successfully
