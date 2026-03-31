@@ -3,20 +3,23 @@ title: Index outside bounds of array error
 description: Describes and provides a workaround for an issue in which you receive an error message in SQL Server 2012 when you try to import data from multiple tables of a database to an Excel 2013 workbook.
 author: Cloud-Writer
 ms.author: meerak
+ms.reviewer: akeeler, lisalozano
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Editing\Data\ImportExport
   - CSSTroubleshoot
+  - CI 10882
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2013
-  - SQL Server 2012 Enterprise
-  - SQL Server 2012 Standard
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
   - Power BI for Microsoft 365
-ms.date: 05/26/2025
+ms.date: 03/30/2026
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook

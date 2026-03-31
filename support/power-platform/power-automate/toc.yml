@@ -261,8 +261,6 @@ items:
         href: flow-creation/fail-to-list-excel-online-tables-retrieving-values.md
       - name: Failed to fetch when creating a flow
         href: flow-creation/failed-fetch-error-when-creating-flow.md
-      - name: Flow Management errors and recommendations
-        href: flow-creation/flow-management-errors-recommendations.md
       - name: How to use Power Automate's JavaScript Software Developer Kit
         href: flow-creation/flow-embed-sdk.md
       - name: How to use Flow to copy items between two data sources
@@ -279,8 +277,6 @@ items:
     items:
       - name: Errors with null fields
         href: flow-run-issues/getting-errors-null-fields.md
-      - name: Flow Runtime errors and recommendations
-        href: flow-run-issues/flow-runtime-errors-recommendations.md
       - name: Issues triggering emails with attachments from shared mailbox
         href: flow-run-issues/issues-triggering-emails-with-attachments-from-shared-mailbox.md
       - name: Missing runs or triggers history for a flow
