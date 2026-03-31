@@ -1,7 +1,7 @@
 ---
 title: Conditional Access and MFA in Power Automate Flows
 description: Conditional access and MFA settings can disrupt Power Automate flows across SharePoint, Teams, and Excel. Learn how to align policies and fix authentication errors.
-ms.reviewer: sranjan, hamenon, cgarty, v-shaywood
+ms.reviewer: sranjan, hamenon, cgarty, matow, v-shaywood
 ms.date: 03/30/2026
 ms.custom: has-azure-ad-ps-ref, sap:Administration\Power Automate management for admins
 ---

@@ -3,7 +3,7 @@ title: Resolve Power Automate Broken Connections
 description: Troubleshoot broken connections in Microsoft Power Platform. Learn how to resolve timeouts, DLP blocks, expired tokens, and more. Fix your flows today.
 ms.custom: sap:Connections
 ms.workload: connectors
-ms.reviewer: nravindra, angieandrews, rehodger, v-shaywood
+ms.reviewer: nravindra, angieandrews, rehodger, matow, v-shaywood
 ms.date: 03/30/2026
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
