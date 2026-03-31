@@ -17,29 +17,39 @@ This article provides guidance on configuring the export of activity logs for a 
 
 Users often need to export activity logs for specific resource groups to monitor changes and detect unauthorized modifications. However, Azure doesn't support exporting logs for individual resources or groups directly. Instead, users can filter logs using the **Resource** column in the AzureActivity table.
 
-### Configure activity log export
-
-1. **Go to Azure Monitor** In the [Azure portal](https://portal.azure.com), search for and select **Azure Monitor**.
-
-1. **Select activity logs** Select **Activity Logs** to view the logs for your subscription.
-
-1. **Filter logs by resource group**
-
-  1. Use **Filter** to narrow down the logs.
-  1. Select the **Resource** column and specify the resource group you're looking for.
-
-1. **Export Logs**:
-    a. Click on **Export** to save the filtered logs.
-    b. Choose the desired format and destination for the export.
-
-1. **Verify Export**:
-    a. Ensure that the exported logs contain the necessary information by reviewing the file.
-    b. Check for any missing entries or discrepancies.
-
 ### Common Issues and Solutions
 
 - **Issue**: Unable to export logs for a specific resource group.
-  - **Solution**: Use the **Resource** column in the AzureActivity table to filter logs by resource group.
+- **Solution**: Use the **Resource** column in the AzureActivity table to filter logs by resource group.
+
+### Configure activity log export
+
+1. **Go to Azure Monitor** 
+
+    1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Monitor**.
+
+1. **Select activity logs** 
+
+    1. Select **Activity Logs** to view the logs for your subscription.
+
+1. **Filter logs by resource group**
+
+    1. Use **Filter** to narrow down the logs.
+    1. Select the **Resource** column and specify the resource group you're looking for.
+
+1. **Export logs**
+
+    1. Select **Export** to save the filtered logs.
+    1. Choose the desired format and destination for the export.
+
+1. **Verify export**
+
+    1. Ensure that the exported logs contain the necessary information by reviewing the file.
+    1. Check for any missing entries or discrepancies
+
+    .
+
+
 
 Reference
 
