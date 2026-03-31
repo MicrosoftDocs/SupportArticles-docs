@@ -9,15 +9,16 @@ audience: ITPro
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot
+  - CI 10882
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, lisalozano
 appliesto: 
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-ms.date: 05/26/2025
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016
+ms.date: 03/30/2026
 ---
 
 # Formula errors in Excel when list separator isn't set correctly
