@@ -47,11 +47,7 @@ Users often need to export activity logs for specific resource groups to monitor
     1. Ensure that the exported logs contain the necessary information by reviewing the file.
     1. Check for any missing entries or discrepancies
 
-    .
-
-
-
-Reference
+### References
 
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
 - [Azure Activity Logs Overview](https://learn.microsoft.com/azure/azure-monitor/insights/activity-logs)
