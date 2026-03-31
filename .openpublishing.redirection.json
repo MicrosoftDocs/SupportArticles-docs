@@ -15495,6 +15495,10 @@
       "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
     },
     {
+      "source_path": "support/power-platform/power-automate/flow-creation/flow-management-errors-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
       "source_path": "support/developer/visualstudio/cpp/libraries/mark-mfc-activex-controls-as-safe.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
     }

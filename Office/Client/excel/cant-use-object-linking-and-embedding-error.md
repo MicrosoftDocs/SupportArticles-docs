@@ -3,17 +3,19 @@ title: Cannot use object linking and embedding error in Excel 2016 for Mac
 description: Describes an issue that triggers a Cannot use object linking and embedding error in Excel 2016 for Mac. A workaround is provided.
 author: Cloud-Writer
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Open\OLEError
   - CSSTroubleshoot
+  - CI 10745
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft Excel 2016 for Mac
-ms.date: 05/26/2025
+ms.date: 03/23/2026
 ---
 
 # "Cannot use object linking and embedding" error in Excel 2016 for Mac
