@@ -5,7 +5,7 @@ author: vhorvathms
 ms.author: vhorvath
 ms.reviewer: puneetsingh
 ms.date: 03/19/2026
-ms.custom: sap:Agreements, SLA's, and Entitlements
+ms.custom: sap:Work Order Management\Issues creating work orders
 ---
 
 # When agreement booking setup doesn't create work orders
