@@ -54,7 +54,7 @@ landingContent:
           url: development/ie-mode-blocks-addon.md
         - text: Self-hosted extension doesn't update automatically
           url: development/self-host-extension-update.md
-        - text: Troubleshoot video playback issues in Microsoft Edge
+        - text: Troubleshoot video playback problems in Microsoft Edge
           url: development/video-playback-issues.md
         - text: Unexpected SmartScreen block or warning on website
           url: development/unexpected-block-warning.md
