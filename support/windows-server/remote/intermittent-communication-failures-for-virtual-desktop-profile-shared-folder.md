@@ -41,9 +41,6 @@ To resolve this issue, follow these steps:
 - Make sure that you have administrative permissions on the affected devices.
 - Familiarize yourself with storage subsystem architecture and event log monitoring.
 
-> [!NOTE]
-> This article discusses commands that you have to run at an administrative Windows command prompt or an administrative Windows PowerShell command prompt.
-
 ### Step 1: Check drivers and firmware
 
 Make sure that the storage-related drivers and firmware are up to date. Consult your hardware vendor for the latest drivers. This step includes drivers for components such as:
