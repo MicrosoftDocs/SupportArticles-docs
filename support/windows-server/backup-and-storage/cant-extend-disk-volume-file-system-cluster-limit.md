@@ -1,6 +1,6 @@
 ---
 title: Can't extend a disk volume because of the file system cluster limit
-description: Discusses how to fix an error that occurs when you try to extend a disk volume and the requested size requires more clusters (also called allocation units) than the file system supports.
+description: Discusses how to fix an error that occurs when you can't extend a disk volume because the file system won't support the requested size.
 ms.date: 04/01/2026
 manager: dcscontentpm
 audience: itpro
@@ -18,29 +18,29 @@ appliesto:
 
 ## Summary
 
-This article helps you fix an error that occurs when you try to extend a disk volume and the requested size requires more clusters (also called allocation units) than the file system supports. The article includes steps for fixing the issue by adjusting the target volume size, creating an additional volume, or reformatting the volume.
+This article helps you fix an error that occurs when you can't extend a disk volume because the requested size requires more clusters (also known as allocation units) than the file system supports. The article includes steps to fix the issue by adjusting the target volume size, creating an additional volume, or reformatting the volume.
 
 ## Symptoms
 
-When you attempt to extend an existing disk volume, you receive an error message that resembles the following example:  
+When you try to extend an existing disk volume, you receive an error message that resembles the following example:  
 
 > The volume cannot be extended because the number of clusters will exceed the maximum number supported by the file system.
 
-Before you tried to extend the volume, there weren't any recent configuration changes, system updates, or troubleshooting steps.  
+In this scenario, there are no recent configuration changes or system updates, and no necessary troubleshooting.  
 
 ## Cause
 
-This issue occurs when the requested disk volume size exceeds the maximum number of clusters per volume that the current file system supports.
+This issue occurs if the requested disk volume size exceeds the maximum number of clusters per volume that the current file system supports.
 
 The number of clusters in a volume depends on the size of the volume and the size of the clusters. The maximum number of clusters per volume depends on the file system, such as NTFS (New Technology File System) or FAT32 (File Allocation Table 32), and the version of Windows. For more information, see the [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) section of "NTFS overview."
 
-If the volume extended beyond this limit, the file system wouldn't be able to use all the space. Therefore, Windows doesn't allow the extension.  
+If the requested volume size exceeds the supported limit, the file system wouldn't be able to use all the available space. Therefore, Windows doesn't allow the extension.  
 
 ## Resolution
 
 To resolve this issue, use one of the following methods:  
 
-- **Adjust the target volume size**. Reduce the amount by which you want to extend the disk, so that the number of clusters stays within the supported limit of your current file system.
+- **Adjust the target volume size**. Reduce the amount by which you want to extend the disk so that the number of clusters stays within the supported limit of your current file system.
 
   > [!NOTE]  
   > If you aren't sure about the cluster limits for your file system, see the following resources:
@@ -55,7 +55,7 @@ To resolve this issue, use one of the following methods:
   > [!IMPORTANT]  
   >
   > - Before you reformat the volume, back up any data in the volume. Reformatting deletes all data in the volume.
-  > - As the volume size increases, the default cluster size also increases and the number of clusters per volume decreases. If you're using NTFS or the Resilient File System (ReFS), you can change the cluster size when you reformat the volume. However, doing so might introduce performance issues and might not help resolve the cluster-per-volume limit issue. For more information, see the following resources:
+  > - As the volume size increases, the default cluster size also increases while the number of clusters per volume decreases. If you're using NTFS or the Resilient File System (ReFS), you can change the cluster size when you reformat the volume. However, this change might introduce performance issues and might not help resolve the cluster-per-volume limit issue. For more information, see the following resources:
   >
   >   - [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) in "NTFS overview."
   >   - [Cluster size is too large](disk-space-problems-on-ntfs-volumes.md#cluster-size-is-too-large) in "Locate and correct disk space problems on NTFS volumes."
@@ -63,12 +63,12 @@ To resolve this issue, use one of the following methods:
 
 ## Data collection
 
-If you need to contact Microsoft Support for assistance, gather the following information:  
+If you have to contact Microsoft Support for assistance, gather the following information:  
 
 - A screenshot of the Disk Management tool that shows all the partitions and unallocated space.
 - The version of Windows that you're using. To find this information, go to **Settings** > **System** > **About**.
 - The file system type of the affected volume (for example, NTFS, FAT32, exFAT).
-- The current size of the volume and the size you attempted to extend it to.
+- The current size of the volume, and the size that you tried to extend it to.
 - The exact error message that you received when the extension failed.
 - Any recent changes to the storage configuration or hardware.
 
