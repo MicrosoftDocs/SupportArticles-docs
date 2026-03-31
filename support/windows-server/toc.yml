@@ -2212,7 +2212,7 @@ items:
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
-    - name: Shared folder for virtual desktop profiles experiences intermittent communication failures 
+    - name: Shared folder for virtual desktop profiles experiences intermittent communication failures inWindows Server 2019
       href: ./remote/intermittent-communication-failures-for-virtual-desktop-profile-shared-folder.md
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
