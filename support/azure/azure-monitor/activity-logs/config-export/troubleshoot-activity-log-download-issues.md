@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Activity Log Download Issues
-description: Troubleshooting guide for Azure activity log download issues
+title: Troubleshoot activity log download problems
+description: Troubleshooting guide for Azure activity log download problems
 ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can't configure export of Activity Logs
 ---
 
-# Troubleshoot Activity Log download issues
+# Troubleshoot activity log download problems
 
 ## Summary
 
