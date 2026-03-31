@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2019: Intermittent communication failures affect a shared folder for virtual desktop profiles
+title: Shared folder for virtual desktop profiles experiences intermittent communication failures
 description: 
 ms.date: 04/01/2026
 manager: dcscontentpm
@@ -13,7 +13,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Windows Server 2019: Intermittent communication failures affect a shared folder for virtual desktop profiles
+# Windows Server 2019: Shared folder for virtual desktop profiles experiences intermittent communication failures
 
 This article describes an issue in Windows Server 2019 where a shared folder used to store virtual desktop profiles experiences intermittent communication failures. These failures cause temporary disconnections that last a few minutes, even when the server is idle. The article explains the symptoms, possible causes, and recommended troubleshooting steps.
 
