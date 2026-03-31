@@ -1,5 +1,5 @@
 ---
-title: Can't extend disk volume because of the file system cluster limit
+title: Can't extend a disk volume because of the file system cluster limit
 description: 
 ms.date: 04/01/2026
 manager: dcscontentpm
@@ -14,7 +14,7 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Can't extend disk volume because of the file system cluster limit
+# Can't extend a disk volume because of the file system cluster limit
 
 When you try to extend a disk volume in Windows, the operation might fail because the number of clusters (also called allocation units) would exceed the maximum supported by the file system. This article explains the symptoms, cause, and possible resolutions for this issue, as well as guidance on collecting the necessary data if you need further assistance.  
 
