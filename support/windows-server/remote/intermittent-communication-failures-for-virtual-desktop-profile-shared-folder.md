@@ -33,13 +33,13 @@ These symptoms indicate a failure in the storage subsystem. For example, a stora
 
 ## Resolution
 
+To resolve this issue, follow the prerequisites and steps in this section.
+
 ### Prerequisites
 
 - Before you perform any repairs or modify any disks, back up all critical data.
 - Make sure that you have administrative permissions on the affected devices.
 - Familiarize yourself with storage subsystem architecture and event log monitoring.
-
-To resolve this issue, follow these steps.
 
 ### Step 1: Check drivers and firmware
 
@@ -51,7 +51,7 @@ Make sure that the storage-related drivers and firmware are up to date. Consult 
 - Device-specific module (DSM)
 - Multipath I/O (MPIO)
 
-### Step 2: Review the system and application logs for relevant events
+### Step 2: Review the System and Application event logs for relevant events
 
 For example, the following event IDs indicate an issue in the storage subsystem:
 
@@ -83,7 +83,7 @@ For example, the following event IDs indicate an issue in the storage subsystem:
 
 If you have to contact Microsoft Support, gather the following information to expedite troubleshooting:
 
-- Exported data from the system log, application log, and storage-related event logs
+- Exported data from the System log, Application log, and storage-related event logs
 - Disk health reports from monitoring or troubleshooting tools
 - Screenshots or logs that show error messages and error codes
 - Storage controller logs and firmware versions.
