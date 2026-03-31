@@ -51,7 +51,7 @@ Make sure that the storage-related drivers and firmware are up to date. Consult 
 - Device-specific module (DSM)
 - Multipath I/O (MPIO)
 
-### Step 2: Review the System and Application event logs for relevant events
+### Step 2: Review the system and application event logs for relevant events
 
 For example, the following event IDs indicate an issue in the storage subsystem:
 
@@ -83,7 +83,7 @@ For example, the following event IDs indicate an issue in the storage subsystem:
 
 If you have to contact Microsoft Support, gather the following information to expedite troubleshooting:
 
-- Exported data from the System log, Application log, and storage-related event logs
+- Exported data from the system log, application log, and storage-related event logs
 - Disk health reports from monitoring or troubleshooting tools
 - Screenshots or logs that show error messages and error codes
 - Storage controller logs and firmware versions.
