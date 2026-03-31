@@ -50,5 +50,5 @@ To monitor changes and detect unauthorized modifications, you often need to expo
 ### References
 
 - [Azure Monitor documentation](/azure/azure-monitor/)
-- [Azure activity logs overview](/azure/azure-monitor/insights/activity-logs)
+- [Azure activity logs overview](/azure/azure-monitor/platform/activity-log)
 - [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)
