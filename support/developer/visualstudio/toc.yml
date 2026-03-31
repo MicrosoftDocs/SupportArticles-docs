@@ -24,10 +24,6 @@
     href: ./cpp/language-compilers/toc.yml
   - name: Visual Basic
     href: ./visual-basic/language-compilers/toc.yml
-  - name: JavaScript
-    items:
-    - name: Use JScript or JavaScript to traverse a collection
-      href: ./language-compilers/use-jscript-javascript-traverse-collection.md
 - name: Project/Build System
   href: ./project-build/toc.yml
 - name: Team Explorer/Version control

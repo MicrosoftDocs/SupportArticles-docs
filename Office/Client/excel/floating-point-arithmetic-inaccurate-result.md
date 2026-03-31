@@ -6,19 +6,20 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: clayj
+ms.reviewer: clayj, akeeler, lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
+  - CI 10882
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2010
-  - Excel 2013
-  - Excel for Microsoft 365
-  - Microsoft Excel for Mac 2011
+  - Microsoft 365
   - Excel for Mac for Microsoft 365
-ms.date: 05/26/2025
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 03/30/2026
 ---
 
 # Floating-point arithmetic may give inaccurate results in Excel

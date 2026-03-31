@@ -14355,7 +14355,7 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/update-database-sqldataadapter.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/update-database-sqldataadapter"
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
     },
     {
       "source_path": "support/developer/visualstudio/ide/release-management-client-crash.md",
@@ -15497,6 +15497,122 @@
     {
       "source_path": "support/power-platform/power-automate/flow-creation/flow-management-errors-recommendations.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/mark-mfc-activex-controls-as-safe.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/read-xml-data-from-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/read-xml-data-from-file"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/basic-file-io-operation.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/basic-file-io-operation"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/add-references-managed.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/add-references-managed"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/write-entry-to-event-log.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/write-entry-to-event-log"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/pageheap-detect-memory-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/pageheap-detect-memory-errors"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-rtbreakalloc-debug-memory-allocation.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/use-rtbreakalloc-debug-memory-allocation"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/change-mouse-pointer-window-mfc.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/change-mouse-pointer-window-mfc"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/use-string-arrays.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/use-string-arrays"
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/use-jscript-javascript-traverse-collection.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/use-jscript-javascript-traverse-collection"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/start-internet-browser.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/start-internet-browser"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/create-database-programmatically.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/create-database-programmatically"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/provide-file-drag-drop-functionality.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/provide-file-drag-drop-functionality"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/call-script-control-run-method.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/call-script-control-run-method"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/add-html-code-clipboard.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/add-html-code-clipboard"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/click-check-box-treeview.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/click-check-box-treeview"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-c-run-time.md",
+      "redirect_url": "/cpp/build/run-time-library-behavior"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/catch-exceptions.md",
+      "redirect_url": "/cpp/cpp/try-throw-and-catch-statements-cpp"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/declare-pointers-to-functions.md",
+      "redirect_url": "/cpp/cpp/functions-cpp"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/stack-top-empty-stl-function.md",
+      "redirect_url": "/cpp/dotnet/stack-stl-clr"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-random-shuffle-stl.md",
+      "redirect_url": "/cpp/standard-library/algorithm-functions#random_shuffle"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/vectorerase-vectorempty-vectorpush-back.md",
+      "redirect_url": "/cpp/standard-library/vector-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/trigonometry-stl-functions.md",
+      "redirect_url": "/cpp/c-runtime-library/floating-point-support"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-map-stl-functions.md",
+      "redirect_url": "/cpp/standard-library/map-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-list-list-stl.md",
+      "redirect_url": "/cpp/standard-library/list-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/stl-sqrt-pow-functions.md",
+      "redirect_url": "/cpp/c-runtime-library/floating-point-support"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-list-stl-function.md",
+      "redirect_url": "/cpp/standard-library/list-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-priority-queue-stl-function.md",
+      "redirect_url": "/cpp/standard-library/priority-queue-class"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/stl-queue-member-functions.md",
+      "redirect_url": "/cpp/standard-library/queue-class"
     }
   ]
 }
