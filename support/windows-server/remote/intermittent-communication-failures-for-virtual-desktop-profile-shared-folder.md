@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, simonw, v-appelgatet
+ai.usage: ai-assisted
 ms.custom:
 - sap:remote desktop services and terminal services\virtual desktop infrastructure (vdi)
 - pcy:WinComm User Experience
