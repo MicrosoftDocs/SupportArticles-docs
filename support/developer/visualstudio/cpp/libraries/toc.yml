@@ -14,8 +14,6 @@
   href: ./faq-standard-cpp-library.yml
 - name: Fscanf function doesn't read consecutive lines
   href: ./fscanf-does-not-read-consecutive-line.md
-- name: Mark MFC ActiveX controls safe
-  href: ./mark-mfc-activex-controls-as-safe.md
 - name: OnInitDialog isn't called when using V4 printer drivers
   href: ./oninitdialog-not-called-v4-printer-drivers.md
 - name: Runtime packages for Desktop Bridge

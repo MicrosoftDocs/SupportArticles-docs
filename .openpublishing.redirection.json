@@ -14355,7 +14355,7 @@
     },
     {
       "source_path": "support/developer/visualstudio/cpp/language-compilers/update-database-sqldataadapter.md",
-      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/update-database-sqldataadapter"
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
     },
     {
       "source_path": "support/developer/visualstudio/ide/release-management-client-crash.md",
@@ -15497,6 +15497,10 @@
     {
       "source_path": "support/power-platform/power-automate/flow-creation/flow-management-errors-recommendations.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/welcome-power-automate"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/mark-mfc-activex-controls-as-safe.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
     }
   ]
 }
