@@ -30,7 +30,6 @@ To resolve configuration problems, follow these steps.
 1. **Identify legacy API usage**
     
     1. Run the `Get-AzLogProfile` command to check for any existing log profiles in your Azure subscriptions.
-
     1. If you find a log profile that's named **default** and that isn't enabled, the profile isn't in use.
 
 1. **Update automation scripts**
