@@ -1,6 +1,6 @@
 ---
 title: Can't extend a disk volume because of the file system cluster limit
-description: Discusses how to fix an error that occurs when you can't extend a disk volume because the file system won't support the requested size.
+description: Discusses how to fix an error that occurs when you can't extend a disk volume because the file system doesn't support the requested size.
 ms.date: 04/01/2026
 manager: dcscontentpm
 audience: itpro
@@ -18,7 +18,7 @@ appliesto:
 
 ## Summary
 
-This article helps you fix an error that occurs when you can't extend a disk volume because the requested size requires more clusters (also known as allocation units) than the file system supports. The article includes steps to fix the issue by adjusting the target volume size, creating an additional volume, or reformatting the volume.
+This article helps you fix an error that occurs when you can't extend a disk volume because the requested size requires more clusters (also known as allocation units) than the file system supports. The article includes resolution steps to adjust the target volume size, create an additional volume, or reformat the volume.
 
 ## Symptoms
 
