@@ -4,9 +4,5 @@
   href: ./c2491-define-data-member-dllimport.md
 - name: Redirecting error from Command Prompt
   href: ./redirecting-error-command-prompt.md
-- name: Use try-catch-finally to catch exceptions
-  href: ./catch-exceptions.md
 - name: Warnings when you build managed extensions
   href: ./linker-warning-managed-extension-c-dll-project.md
-- name: Declare an array of points to functions
-  href: ./declare-pointers-to-functions.md
