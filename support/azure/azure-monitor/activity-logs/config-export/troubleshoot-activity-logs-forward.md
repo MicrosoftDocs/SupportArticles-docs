@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot forwarding Azure activity logs to diagnostic settings
-description: Learn why Azure activity logs stop forwarding and scripts fail after moving to diagnostic settings, and follow steps to fix the issue.
+description: Learn why Azure activity logs stop forwarding and scripts fail after moving to diagnostic settings, and how to fix the problem.
 ms.date: 03/31/2026
 ms.author: jarrettr
 ms.editor: v-gsitser
@@ -13,38 +13,40 @@ ms.custom: I can't configure export of Activity Logs
 
 ## Summary
 
-This article addresses the transition from legacy solutions to diagnostic settings for forwarding Azure activity logs. You might encounter problems when configuring these settings, especially if automation relies on outdated APIs. This guide provides steps to identify and resolve these problems.
+This article discusses the transition from legacy solutions to diagnostic settings that you can use to forward Azure activity logs. You might encounter problems when you configure these settings, especially if automation relies on outdated APIs. This guide provides steps to identify and resolve these problems.
 
 ### Common problems and solutions
 
-- **Problem**: Logs don't forward after configuration.
-- **Solution**: Double-check the diagnostic settings and ensure all parameters are correct.
+- **Problem 1**: Logs don't forward after configuration.
+- **Solution 1**: Double-check the diagnostic settings to amke sure that all parameters are correct.
 
-- **Issue**: Automation scripts fail after the transition.
-- **Solution**: Update scripts to align with the new diagnostic settings API.
+- **Problem 2**: Automation scripts fail after the transition.
+- **Solution 2**: Update scripts to align with the new diagnostic settings API.
 
-### Resolve configuration issues
+### Resolve configuration problems
+
+To resolve configuration problems, follow these steps.
 
 1. **Identify legacy API usage**
     
-    a. Use the command `Get-AzLogProfile` to check for any existing log profiles in your Azure subscriptions.
+    1. Run the `Get-AzLogProfile` command to check for any existing log profiles in your Azure subscriptions.
 
-    If you find a log profile named **default** but it's not enabled, it means the profile isn't in use.
+    1. If you find a log profile that's named **default** and that isn't enabled, the profile isn't in use.
 
 1. **Update automation scripts**
 
-    a. Review any automation scripts or tools that interact with Azure activity logs.
-    b. Ensure they're updated to use the new diagnostic settings instead of legacy APIs.
+    1. Review any automation scripts or tools that interact with Azure activity logs.
+    1. Make sure that the scripts are updated to use the new diagnostic settings instead of legacy APIs.
 
 1. **Configure diagnostic settings**
    
-   a. In the [Azure portal](https://portal.azure.com), go to **Activity Logs**.
-   b. Select **Diagnostic settings** and configure the necessary parameters to forward logs as required.
+   1. In the [Azure portal](https://portal.azure.com), go to **Activity Logs**.
+   1. Select **Diagnostic settings**, and configure the necessary parameters to forward logs as necessary.
 
 1. **Verify configuration**
 
-   a. After updating the settings, monitor the logs to ensure they're being forwarded correctly.
-   b. Use Azure Monitor charts to visualize log data and confirm successful configuration.
+   1. After you update the settings, monitor the logs to make sure that they're being forwarded correctly.
+   1. Use Azure Monitor charts to visualize log data and verify a successful configuration.
 
 ### References
 
