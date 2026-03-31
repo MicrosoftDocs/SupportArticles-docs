@@ -91,7 +91,7 @@ detail volume
 
 ## References
 
-- [Disk Management in Windows](https://learn.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management)
+- [Disk Management in Windows](/windows-server/storage/disk-management/overview-of-disk-management)
 - [`diskpart`](/windows-server/administration/windows-commands/diskpart)
 - [NTFS overview](/windows-server/storage/file-server/ntfs-overview)
 - [Locate and correct disk space problems on NTFS volumes](disk-space-problems-on-ntfs-volumes.md)
