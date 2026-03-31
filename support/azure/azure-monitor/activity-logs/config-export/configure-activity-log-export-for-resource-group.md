@@ -49,6 +49,6 @@ Users often need to export activity logs for specific resource groups to monitor
 
 ### References
 
-- [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
-- [Azure Activity Logs Overview](https://learn.microsoft.com/azure/azure-monitor/insights/activity-logs)
-- [Azure Log Analytics](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-overview)
+- [Azure Monitor documentation](/azure/azure-monitor/)
+- [Azure activity logs overview](/azure/azure-monitor/insights/activity-logs)
+- [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview)
