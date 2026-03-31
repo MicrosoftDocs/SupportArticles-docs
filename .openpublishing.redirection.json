@@ -15501,6 +15501,66 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/mark-mfc-activex-controls-as-safe.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/read-xml-data-from-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/read-xml-data-from-file"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/basic-file-io-operation.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/basic-file-io-operation"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/add-references-managed.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/add-references-managed"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/write-entry-to-event-log.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/write-entry-to-event-log"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/pageheap-detect-memory-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/pageheap-detect-memory-errors"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-rtbreakalloc-debug-memory-allocation.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/use-rtbreakalloc-debug-memory-allocation"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/change-mouse-pointer-window-mfc.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/change-mouse-pointer-window-mfc"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/use-string-arrays.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/use-string-arrays"
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/use-jscript-javascript-traverse-collection.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/use-jscript-javascript-traverse-collection"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/start-internet-browser.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/start-internet-browser"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/create-database-programmatically.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/create-database-programmatically"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/provide-file-drag-drop-functionality.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/provide-file-drag-drop-functionality"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/call-script-control-run-method.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/call-script-control-run-method"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/add-html-code-clipboard.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/language-compilers/add-html-code-clipboard"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/click-check-box-treeview.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/click-check-box-treeview"
     }
   ]
 }

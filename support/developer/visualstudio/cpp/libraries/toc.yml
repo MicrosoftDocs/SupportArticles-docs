@@ -4,10 +4,6 @@
   href: ./runtime-installation-fails.md
 - name: C2653 or C2039 error when you reference a STD function
   href: ./c2653-c2039-error-reference-function.md
-- name: Change mouse pointer for a window in MFC
-  href: ./change-mouse-pointer-window-mfc.md
-- name: Click a Check box in a TreeView
-  href: ./click-check-box-treeview.md
 - name: Error at thread exit if FLS callback isn't freed
   href: ./fatal-error-thread-exit-fls-callback.md
 - name: FAQs about Standard C++ library
@@ -20,16 +16,12 @@
   href: ./c-runtime-packages-desktop-bridge.md
 - name: The _CRTDBG_MAP_ALLOC macro doesn't work
   href: ./crtdbg-map-alloc-macro-not-work.md
-- name: Use _crtBreakAlloc to debug a memory allocation
-  href: ./use-rtbreakalloc-debug-memory-allocation.md
 - name: Use list::list STL function
   href: ./use-list-list-stl.md
 - name: Use list::remove STL function
   href: ./use-list-stl-function.md
 - name: Use map STL functions
   href: ./use-map-stl-functions.md
-- name: Use PageHeap to detect memory errors
-  href: ./pageheap-detect-memory-errors.md
 - name: Use priority_queue STL functions
   href: ./use-priority-queue-stl-function.md
 - name: Use queue STL functions

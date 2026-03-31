@@ -2,31 +2,11 @@
   href: ./cs0433-error-when-building-aspnet-project.md
 - name: C2491 error when you define data members as dllimport
   href: ./c2491-define-data-member-dllimport.md
-- name: Call Run() method of a Script control
-  href: ./call-script-control-run-method.md
-- name: Create a Database programmatically by using ADO.NET
-  href: ./create-database-programmatically.md
-- name: Do basic file I/O operations
-  href: ./basic-file-io-operation.md
-- name: Provide file drag and drop functionality
-  href: ./provide-file-drag-drop-functionality.md
-- name: Read XML data from a file
-  href: ./read-xml-data-from-file.md
 - name: Redirecting error from Command Prompt
   href: ./redirecting-error-command-prompt.md
-- name: Use string arrays
-  href: ./use-string-arrays.md
 - name: Use try-catch-finally to catch exceptions
   href: ./catch-exceptions.md
 - name: Warnings when you build managed extensions
   href: ./linker-warning-managed-extension-c-dll-project.md
-- name: Write entries to an event log
-  href: ./write-entry-to-event-log.md
-- name: Add references to managed projects
-  href: ./add-references-managed.md
-- name: Send HTML code to clipboard
-  href: ./add-html-code-clipboard.md
 - name: Declare an array of points to functions
   href: ./declare-pointers-to-functions.md
-- name: Start default browser programmatically
-  href: ./start-internet-browser.md
