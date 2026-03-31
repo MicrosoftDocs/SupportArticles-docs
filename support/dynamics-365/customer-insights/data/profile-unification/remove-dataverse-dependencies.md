@@ -3,7 +3,7 @@ title: Fix Data Unification Failures Due to Dataverse Dependencies
 description: Resolve Dataverse dependency conflicts in msdynci_customerprofile that prevent data unification in Customer Insights - Data. Follow these steps to remove blocking components.
 ms.date: 03/31/2026
 ms.reviewer: sstabbert, v-wendysmith, v-shaywood
-ms.custom: sap:Data Unification\Match
+ms.custom: sap:Data Unification
 ---
 # "Detected DataVerse dependencies in msdynci_customerprofile" error message
 
