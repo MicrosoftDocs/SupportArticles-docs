@@ -38,7 +38,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Detected Dataverse dependencies error
+          - text: '"Detected DataVerse dependencies in msdynci_customerprofile" error'
             url: data/profile-unification/remove-dataverse-dependencies.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md

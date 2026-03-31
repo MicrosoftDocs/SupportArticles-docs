@@ -5,7 +5,7 @@ ms.date: 03/31/2026
 ms.reviewer: sstabbert, v-wendysmith, v-shaywood
 ms.custom: sap:Data Unification\Match
 ---
-# Detected Dataverse dependencies in 'msdynci_customerprofile'
+# "Detected DataVerse dependencies in msdynci_customerprofile" error message
 
 ## Summary
 
