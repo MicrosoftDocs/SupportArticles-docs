@@ -187,13 +187,13 @@ If the site autoplays when you enter the full URL directly into the address bar,
 
 If you have to contact Microsoft Support for more help, collect the following diagnostic information and include it with your support request.
 
-- Microsoft Edge version from `edge://settings/help`
-- Full GPU report from `edge://gpu`
-- Media playback logs from `edge://media-internals` while you reproduce the issue
-- Video format details from a media-inspection tool so you can confirm the codec and container
-- Effective policy values from `edge://policy`
-- HEVC extension status from PowerShell if HEVC playback fails
-- Widevine component status and any Process Monitor evidence if DRM playback fails
+- **Microsoft Edge version**: Go to `edge://settings/help`, and note the full version number.
+- **GPU report**: Go to `edge://gpu`, and save the full report.
+- **Media playback logs**: Go to `edge://media-internals` while you reproduce the issue, and save the player properties.
+- **Video format details**: Use a media-inspection tool to confirm the codec and container of the video file.
+- **Active policies**: Go to `edge://policy`, and export the policy list.
+- **HEVC extension status**: If HEVC playback fails, run `Get-AppxPackage -AllUsers *HEVC*` in PowerShell, and save the output.
+- **Widevine component status**: If DRM playback fails, go to `edge://components`, and note the Widevine module status. Include any Process Monitor evidence if available.
 
 ## Related content
 
