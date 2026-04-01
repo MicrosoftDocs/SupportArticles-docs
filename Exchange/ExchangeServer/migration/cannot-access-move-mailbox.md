@@ -43,6 +43,6 @@ After you add a Microsoft Exchange Server 2019 mailbox server as a node to a dat
 
 These issues occur because the schema version value of the mailbox database is incorrect.
 
-## Solution
+## Resolution
 
-These issues are fixed in Cumulative Update 13 for Exchange Server 2019 (KB5026155). To resolve the issues, [download and install the update](https://www.microsoft.com/download/details.aspx?id=105180&msockid=2586c67be258611c3178d39ee3f36040).
+To resolve the issues, download and install [Cumulative Update 13 for Exchange Server 2019 (KB5026155)](https://www.microsoft.com/download/details.aspx?id=105180&msockid=2586c67be258611c3178d39ee3f36040).
