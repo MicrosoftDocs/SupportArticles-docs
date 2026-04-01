@@ -119,7 +119,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: When a work order doesn't save or create successfully
+          - text: Work order doesn't save or create successfully
             url: work-order/work-order-creation-errors.md
           - text: Agreement booking setup doesn't create work orders
             url: work-order/agreement-work-orders-not-generated.md
