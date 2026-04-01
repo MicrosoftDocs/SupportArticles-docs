@@ -48,5 +48,4 @@ When you try to add a fifth diagnostic setting in Azure, you might encounter a p
 
 ### References
 
-- [Azure Resource Explorer](/azure/resource-explorer/)
-- [Azure API Management](/azure/api-management/)
+- [Azure API Management](/azure/api-management)
