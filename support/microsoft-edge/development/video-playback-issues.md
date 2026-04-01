@@ -52,7 +52,7 @@ The following table lists common codecs and their support status in Edge.
 | H.265 (HEVC)   | Conditionally supported                              | Requires a valid HEVC Video Extension and a working HEVC decoder path. |
 | VP8 / VP9      | Supported                                            | Common on web streaming sites.                                         |
 | AV1            | Supported                                            | Hardware decode support depends on the device and GPU.                 |
-| XAVC / XAVC HS | Not supported by the built-in Windows playback stack | Can cause audio-only playback or full playback failure.              |
+| XAVC / XAVC HS | Not supported by the built-in Windows playback stack | Can cause full or audio-only playback failure.                         |
 
 If the video uses an unsupported or narrowly supported format, convert it to a widely supported format. Convert the file to H.264 video that uses AAC audio in an MP4 container, and then test playback again in Edge.
 
