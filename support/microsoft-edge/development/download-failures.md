@@ -74,7 +74,7 @@ The download might fail if the target folder doesn't exist or is read-only, or t
 Third-party antivirus software or Microsoft Defender might intercept and block the download. Follow these steps:
 
 1. Check your antivirus software's quarantine or activity log for the blocked file.
-1. Temporarily turn off real-time protection in your antivirus softwarem and retry the download.
+1. Temporarily turn off real-time protection in your antivirus software, and retry the download.
 1. If the download succeeds by having antivirus turned off, add an exception for:
    - The download URL or domain.
    - The download folder path.
@@ -105,8 +105,8 @@ Your organization might have policies that restrict or block downloads. Follow t
 
 Network problems can interrupt or prevent downloads, especially for large files. Follow these steps:
 
-1. Try to download the same file from a different website or URL to determine whether the problem is site-specific.
-1. Try to download from a different network (for example, a mobile hotspot) to rule out network-level blocking.
+1. To determine whether the problem is site-specific, try to download the same file from a different website or URL.
+1. To rule out network-level blocking, try to download from a different network (for example, a mobile hotspot).
 1. If your organization uses a proxy server:
    1. Go to `edge://settings/system`, and check the proxy settings.
    1. Verify that the download URL isn't blocked by the proxy.
@@ -139,8 +139,8 @@ Corrupted cache or misconfigured download settings might cause persistent downlo
 Certain file types might be blocked by Edge, Windows, or Group Policy. Follow these steps:
 
 1. Note the file extension of the download that failed (for example, `.exe`, `.msi`, `.zip`, `.dll`).
-1. Try to download a different file type from the same site to determine whether the problem is file type-specific.
-1. If your organization blocks specific file types, check the [ExemptFileTypeDownloadWarnings](/deployedge/microsoft-edge-browser-policies/exemptfiletypedownloadwarnings) policy in `edge://policy` to determine whether an exemption is needed.
+1. To determine whether the problem is file type-specific, try to download a different file type from the same site.
+1. To determine whether an exemption is necessary if your organization blocks specific file types, check the [ExemptFileTypeDownloadWarnings](/deployedge/microsoft-edge-browser-policies/exemptfiletypedownloadwarnings) policy in `edge://policy`.
 1. By design, some high-risk file types (for example, `.exe`, `.bat`, `.cmd`, `.ps1`) trigger extra security warnings. Follow the steps in [Check security and SmartScreen settings](#check-security-and-smartscreen-settings) to proceed to download the file if you trust the source.
 
 ### Test in a new browser profile or InPrivate window
@@ -154,7 +154,7 @@ A corrupted browser profile or conflicting extensions might interfere with downl
    - In the new profile, retry the download.
 1. If the download works in InPrivate or a new profile, turn off extensions one by one in your original profile to identify the conflicting extension:
    - Go to `edge://extensions`.
-   - Turn off each extensionm and retry the download until you find the cause.
+   - Turn off each extension, and retry the download until you find the cause.
 
 ## Data collection
 
