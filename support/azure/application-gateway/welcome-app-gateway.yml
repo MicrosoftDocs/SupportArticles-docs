@@ -26,6 +26,8 @@ landingContent:
             url: error-codes/applicationgatewayskunotspecified.md
           - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
             url: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+          - text: Troubleshoot WAF anomaly scoring behavior and rule 949110
+            url: troubleshoot-anomaly-scoring-and-rule-949110-blocks.md
           - text: Azure Application Gateway Resource Health overview  
             url: resource-health-overview.md
           - text: Use Log Analytics to examine Application Gateway Logs 
