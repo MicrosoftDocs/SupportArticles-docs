@@ -5,9 +5,8 @@ description: In this article, investigate, diagnose, and resolve potential laten
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-frontdoor
-ms.topic: troubleshoot
-ms.date: 04/01/2026
-ms.custom: sap:Performance
+ms.topic: troubleshooting-general
+ms.date: 09/25/2025
 ---
 
 # Troubleshoot general performance problems with Azure Front Door
