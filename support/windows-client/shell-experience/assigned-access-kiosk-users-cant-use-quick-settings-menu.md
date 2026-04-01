@@ -9,6 +9,7 @@ ms.custom:
 - pcy:WinComm User Experience
 ms.reviewer: kaushika, warrenw, v-appelgatet
 audience: itpro
+ai.usage: ai-assisted
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
