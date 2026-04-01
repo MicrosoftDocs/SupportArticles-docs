@@ -5,9 +5,9 @@ description: In this article, you learn how to troubleshoot some of the common p
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-frontdoor
-ms.topic: troubleshooting-general
-ms.date: 09/24/2025
-ms.custom: sfi-image-nochange
+ms.topic: troubleshoot
+ms.date: 04/01/2025
+ms.custom: sap:Connectivity,sfi-image-nochange
 #customer intent: As an Azure Front Door operator, I want to quickly diagnose and resolve common routing and timeout issues so that my applications remain available.
 ---
 
