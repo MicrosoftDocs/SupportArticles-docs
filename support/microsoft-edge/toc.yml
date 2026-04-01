@@ -4,7 +4,9 @@ items:
 
   - name: Experiences and Services
     items:
-      - name: Copilot icon doesn't appear in Microsoft Edge sidebar
+      - name: Copilot Chat loading problems in the Edge sidebar
+        href: experience/copilot-chat-loading-issues.md
+      - name: Copilot icon doesn't appear in the Edge sidebar
         href: experience/copilot-icon-missing-sidebar.md
   - name: Manage and Deploy
     items:
