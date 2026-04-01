@@ -94,7 +94,7 @@ items:
   items:
     - name: When a work order doesn't save or create successfully
       href: work-order/work-order-creation-errors.md
-    - name: When agreement booking setup doesn't create work orders
+    - name: Agreement booking setup doesn't create work orders
       href: work-order/agreement-work-orders-not-generated.md
     - name: When a work order status doesn't change as expected
       href: work-order/work-order-status-stuck.md

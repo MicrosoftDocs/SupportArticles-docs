@@ -121,7 +121,7 @@ landingContent:
         links:
           - text: When a work order doesn't save or create successfully
             url: work-order/work-order-creation-errors.md
-          - text: When agreement booking setup doesn't create work orders
+          - text: Agreement booking setup doesn't create work orders
             url: work-order/agreement-work-orders-not-generated.md
           - text: When a work order status doesn't change as expected
             url: work-order/work-order-status-stuck.md
