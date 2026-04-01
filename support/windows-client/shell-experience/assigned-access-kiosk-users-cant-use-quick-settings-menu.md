@@ -20,7 +20,7 @@ Assigned access users can't use the quick settings feature of Windows. This feat
 
 > [!NOTE]  
 >
-> - The quick settings feature has been referred to as Quick Actions or Control Center in earlier versions of Windows.
+> - In earlier versions of Windows, the quick settings feature was referred to as Quick Actions or Control Center.
 > - The quick settings area is just to the left of the clock display in the taskbar. Typically, the quick settings area displays system icons such as the network, volume, or battery icons.
 
 ## Symptoms
