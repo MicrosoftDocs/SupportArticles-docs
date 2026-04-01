@@ -1,5 +1,5 @@
 ---
-title: Quick settings flyout menu isn't available for assigned access users
+title: Assigned access users can't use the quick settings flyout menu
 description: Kiosk or assigned access users don't have access to the quick settings flyout menu.
 ms.date: 04/02/2026
 manager: dcscontentpm
@@ -12,7 +12,7 @@ audience: itpro
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Quick settings flyout menu isn't available for assigned access users
+# Assigned access users can't use the quick settings flyout menu
 
 ## Summary
 
