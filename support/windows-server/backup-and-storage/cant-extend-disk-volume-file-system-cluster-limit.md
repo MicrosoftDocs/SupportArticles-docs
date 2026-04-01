@@ -18,7 +18,7 @@ appliesto:
 
 ## Summary
 
-This article helps you fix an error that occurs when you can't extend a disk volume because the requested size requires more clusters (also known as allocation units) than the file system supports. The article includes resolution steps to adjust the target volume size, create an additional volume, or reformat the volume.
+This article helps you fix an issue that prevents you from extending a disk volume because the requested size requires more clusters (also known as allocation units) than the file system supports. The article includes resolution steps to adjust the target volume size, create an additional volume, or reformat the volume.
 
 ## Symptoms
 
@@ -26,15 +26,13 @@ When you try to extend an existing disk volume, you receive an error message tha
 
 > The volume cannot be extended because the number of clusters will exceed the maximum number supported by the file system.
 
-In this scenario, there are no recent configuration changes or system updates, and no necessary troubleshooting.  
+In this scenario, there are no recent configuration changes or system updates, and no other issues have occurred that required troubleshooting.  
 
 ## Cause
 
-This issue occurs if the requested disk volume size exceeds the maximum number of clusters per volume that the current file system supports.
+This issue occurs because the file system limits the number  of clusters that a single volume can have. The number of clusters in a volume depends on the size of the volume and the size of the clusters. The maximum number of clusters per volume depends on the file system, such as NTFS (New Technology File System) or FAT32 (File Allocation Table 32), and the version of Windows. For more information, see the [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) section of "NTFS overview."
 
-The number of clusters in a volume depends on the size of the volume and the size of the clusters. The maximum number of clusters per volume depends on the file system, such as NTFS (New Technology File System) or FAT32 (File Allocation Table 32), and the version of Windows. For more information, see the [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) section of "NTFS overview."
-
-If the requested volume size exceeds the supported limit, the file system wouldn't be able to use all the available space. Therefore, Windows doesn't allow the extension.  
+If the requested volume size requires more clusters than the supported limit allows, the file system wouldn't be able to use all the available space. Therefore, Windows doesn't allow the extension.  
 
 ## Resolution
 
