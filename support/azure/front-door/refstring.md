@@ -5,8 +5,8 @@ description: This article provides information about what a Reference String is,
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-frontdoor 
-ms.topic: troubleshooting-general
-ms.date: 12/03/2024
+ms.topic: troubleshoot
+ms.date: 2/01/2026
 
 #CustomerIntent: As a web developer, I want troubleshoot my web application using a Reference String.
 ---
