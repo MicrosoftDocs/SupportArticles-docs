@@ -5,9 +5,8 @@ description: Learn how to troubleshoot issues with file compression in Azure Fro
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-frontdoor
-ms.topic: troubleshoot
+ms.topic: troubleshooting-general
 ms.date: 11/18/2024
-ms.custom: sap:Connectivity
 ---
 
 # Troubleshoot Azure Front Door file compression
