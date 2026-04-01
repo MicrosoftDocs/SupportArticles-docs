@@ -40,7 +40,7 @@ This article addresses common questions about exporting data to Azure Event Hubs
     1. Monitor usage to ensure optimal performance and cost-efficiency.
 
 1. **Review pricing details**
-   - See [Azure Event Hubs Pricing](https://learn.microsoft.com/azure/event-hubs/event-hubs-pricing) for detailed information on costs and billing.
+   - See [Event Hubs pricing](https://azure.microsoft.com/pricing/details/event-hubs) for detailed information on costs and billing.
 
 ### FAQ: Data export and pricing
 
@@ -52,5 +52,5 @@ This article addresses common questions about exporting data to Azure Event Hubs
 
 ### References
 
-- [Azure Event Hubs documentation](/azure/event-hubs/)
+- [Azure Event Hubs documentation](/azure/event-hubs)
 - [Azure Monitor diagnostic settings](/azure/azure-monitor/essentials/diagnostic-settings)
