@@ -5,7 +5,7 @@ ms.date: 04/01/2026
 ms.author: lalbadarneh
 ms.editor: lalbadarneh
 ms.reviewer: lalbadarneh
-ms.service: azure-web-application-firewall (WAF)
+ms.service: azure-web-application-firewall
 ms.custom: sap:Application Gateway
 
 #customer intent: As an Azure Application Gateway administrator, I want to understand why traffic is blocked by rule 949110 so that I can identify and tune the underlying WAF rules correctly.
