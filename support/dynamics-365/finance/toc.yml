@@ -76,12 +76,12 @@
       href: general-ledger/year-end-close-miss-opening-balances.md
     - name: Financial dimensions
       items:
-        - name: Blocked from deleting a dimension value
+        - name: Can't delete a financial dimension value
           href: general-ledger/blocked-from-deleting-dimension-value.md
-        - name: Can't find a dimension value
+        - name: Financial dimension is missing or shows as a custom dimension
+          href: general-ledger/financial-dimension-missing-details.md
+        - name: Financial dimension value is missing or unavailable
           href: general-ledger/cannot-find-dimension-value.md
-        - name: Dimension has disappeared or shows as custom dimension
-          href: general-ledger/dimension-value-record-not-found.md
 - name: Tax
   items:
     - name: Tax Calculation

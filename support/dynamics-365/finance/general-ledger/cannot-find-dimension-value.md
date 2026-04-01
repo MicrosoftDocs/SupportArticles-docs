@@ -1,44 +1,68 @@
 ---
-# required metadata
-title: Can't find the dimension value I'm looking for
-description: Troubleshooting steps for locating missing or unavailable financial dimension values
-author: ethanrimes
-ms.date: 02/10/2026
+title: Financial dimension value is missing or unavailable in Dynamics 365 Finance
+description: Resolve issues where financial dimension values are missing, unavailable, or not visible due to legal entity scope, security roles, sync problems, or customizations in Dynamics 365 Finance.
+ms.date: 04/01/2026
+ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, twheeloc, v-shaywood
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
 
-# I can't find the dimension value I'm looking for
+# Financial dimension value is missing or unavailable
 
-This article provides troubleshooting steps for locating missing or unavailable financial dimension values.
+## Summary
 
-## You're working in the incorrect legal entity 
-If the dimension value is scoped to a specific legal entity different from the one which you're working in, it may not be visible. This problem doesn't exist for shared values across entities. 
+This article provides troubleshooting steps for issues where a financial dimension value is missing, unavailable, or not visible in Microsoft Dynamics 365 Finance.
 
-Resolution - Verify you're working in the correct legal entity where the dimension value was created.
+## Are you in the correct legal entity?
 
-## The user lacks the necessary security role
-If your role doesn’t include access to the company or entity where the dimension value resides, it may appear blank or missing. This is especially common when [Extensible Data Security (XDS) policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) are applied to the backing entity, and the user doesn’t have permission to view it.
+If the dimension value is scoped to a specific legal entity, it's only visible when you work in that legal entity. This issue doesn't apply to values that are shared across entities.
 
-Resolution - The user’s role may not grant access to the correct legal entity or organization. Assign the appropriate security role:
-    1. Go to **System administration** > **Users** > **Users**.
-    2. Select the affected user.
-    3. Select **Roles** > **Assign organizations**.
-    4. Review the access scope and grant access to the required organizations. To test, select **Grant access to all organizations** and check whether the dimension value appears.
+To resolve this issue, verify that you're working in the legal entity where the dimension value was created.
 
-If the above resolution didn't solve the error, try this: Even with the correct organization access, an XDS policy on the backing entity (such as Customers or Operating units) may be filtering out records. To check, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy).
+## Does the user have the necessary security role?
 
-### The dimension value is backed by a system entity and hasn't been used yet
-Values for entity-backed dimensions aren't available in the dimension framework until used in places like posting profiles or journals.
+If your role doesn't include access to the company or entity where the dimension value resides, it might appear blank or missing. This issue is especially common when [Extensible Data Security (XDS) policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) are applied to the backing entity.
 
-Resolution - Ensure the dimension value has been used at least once.
+To resolve this issue, assign the appropriate security role to the user:
 
-### The dimension value exists but isn't synced properly with the dimension framework
+1. Go to **System administration** > **Users** > **Users**.
+1. Select the affected user.
+1. Select **Roles** > **Assign organizations**.
+1. Review the access scope, and grant access to the required organizations. To test, select **Grant access to all organizations**, and then check whether the dimension value appears.
 
-Resolution - Use the [Data Maintenance](/dynamics365/fin-ops-core/dev-itpro/sysadmin/datamaintenanceportal) portal to check the sync status. Navigate to **System administration** > **Periodic tasks** > **Data maintenance** and check the status of the **Dimension value rename and modify chart of accounts delimiter process** job under the **Misc** tab. If no errors are present, and the problem persists, re-run this job by selecting the blue **Run now** button.
+If the dimension value is still missing, an XDS policy on the backing entity (such as Customers or Operating units) might be filtering out records. To check, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy). If the dimension value is visible but you can't delete it, see [Can't delete a financial dimension value](blocked-from-deleting-dimension-value.md).
 
-### A customization or extension changed the structure of a dimension's underlying view
+## Has the dimension value been used at least once?
 
-Financial dimensions rely on underlying views with a specific, fixed structure. If a partner solution or customization added extra fields to one of these views, the system silently rejects the dimension at startup. This can cause a dimension to disappear from the **Dimension details** page, show as **\<Custom dimension\>** instead of its expected backing entity, or become unavailable for selection in account structures.
+Values for entity-backed dimensions aren't available in the dimension framework until they're used in places like posting profiles or journals.
 
-Resolution - The extra fields need to be removed from the affected view so its structure matches what the system expects. After deploying the fix, the dimension reappears automatically when the server restarts.
+To resolve this issue, make sure the dimension value has been used at least once.
 
-For more information on reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
+## Is the dimension value synced with the dimension framework?
+
+The dimension value might exist but not be synced properly with the dimension framework.
+
+To resolve this issue, use the [Data Maintenance](/dynamics365/fin-ops-core/dev-itpro/sysadmin/datamaintenanceportal) portal to check the sync status:
+
+1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
+1. Select the **Misc** tab.
+1. Check the status of the **Dimension value rename and modify chart of accounts delimiter process** job.
+1. If no errors are present and the problem persists, rerun this job by selecting the **Run now** button.
+
+## Did a customization change the dimension's underlying view structure?
+
+Financial dimensions rely on underlying views with a specific, fixed structure. If a partner solution or customization added extra fields to one of these views, the system silently rejects the dimension at startup. This issue can cause a dimension to:
+
+- Disappear from the **Dimension details** page.
+- Show as **\<Custom dimension\>** instead of its expected backing entity.
+- Become unavailable for selection in account structures.
+
+To resolve this issue, remove the extra fields from the affected view so its structure matches what the system expects. After you deploy the fix, the dimension reappears automatically when the server restarts.
+
+For more information about reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors). If the dimension itself is missing from the **Financial Dimensions** details page or shows as **\<Custom dimension\>**, see [Financial dimension is missing or shows as a custom dimension](financial-dimension-missing-details.md) for more detailed troubleshooting.
+
+## Related content
+
+- [Can't delete a financial dimension value](blocked-from-deleting-dimension-value.md)
+- [Financial dimension is missing or shows as a custom dimension](financial-dimension-missing-details.md)
+- [Financial dimensions overview](/dynamics365/finance/general-ledger/financial-dimensions)
+- [Plan your chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts)
