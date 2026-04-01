@@ -29,6 +29,8 @@ items:
         href: activity-logs/config-export/configure-activity-log-export-for-resource-group.md
       - name: Resolve problems when configuring Azure Diagnostic Settings for legacy log profiles
         href: activity-logs/config-export/configure-diagnostic-settings-legacy-log-profiles.md
+      - name: Resolve diagnostic setting limit problems in Azure
+        href: activity-logs/config-export/resolve-diagnostic-setting-limit-problems.md  
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
