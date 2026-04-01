@@ -103,6 +103,9 @@ If no dump is generated, follow [this recommendation](#recommended-dump-configur
 
 This recommendation depends on the size of the system, as the RAM and the hard disk space directly impact our recommendations.
 
+> [!IMPORTANT]
+> For a complete memory dump, Windows still requires a sufficiently large paging file on the boot volume, even if DumpFile is configured on another local disk. During crash processing, memory is first written to the paging file on the OS volume. If that prerequisite isn't met, a complete dump may not be generated.
+
 ### Systems memory up to 32 GB
 
 1. Ensure that the page file is set to RAM + 300 MB.
