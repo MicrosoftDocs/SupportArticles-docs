@@ -50,7 +50,7 @@ Troubleshooting can be divided into three distinct tasks, in sequential order:
 
 ### Track service health
 
-Azure publicizes each service interruption or performance degradation. You can track the health of the service in the [Azure portal](https://portal.azure.com/). For more information, see [View service health notifications by using the Azure portal](/azure/service-health/service-notifications).
+Azure publicizes each service interruption or performance degradation. You can track the health of the service in the [Azure portal](https://portal.azure.com/). For more information, see [View service health notifications from the Azure portal](/azure/service-health/service-notifications-old).
 
 ### Monitor your app
 
