@@ -26,7 +26,7 @@ When you try to extend an existing disk volume, you receive an error message tha
 
 > The volume cannot be extended because the number of clusters will exceed the maximum number supported by the file system.
 
-In this scenario, there are no recent configuration changes or system updates, and no other issues have occurred that required troubleshooting.  
+In this scenario, there are no recent configuration changes or system updates, and no other issues occurred that require troubleshooting.  
 
 ## Cause
 
