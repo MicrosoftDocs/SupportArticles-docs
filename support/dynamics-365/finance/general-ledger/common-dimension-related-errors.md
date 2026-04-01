@@ -285,26 +285,100 @@ You receive the following error message:
 
 > \<DimensionValue> isn't a valid dimension value in account structure.
 
-This error message appears if a value in the ledger account combination doesn't meet the constraints that are defined in the assigned [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
+This error message appears if a value in the ledger account combination doesn't meet the constraints that are defined in the assigned [account structure](/dynamics365/finance/general-ledger/configure-account-structures). There are many possible causes, so work through the following checklist to identify the source of the issue.
 
-### Use a valid dimension value
+### Step 1: Refresh the form and re-enter the value
 
-1. Review the account structure to identify which values are allowed for the dimension.
-1. Go to the transaction where the error occurs.
-1. Replace the invalid dimension value with one that's permitted by the account structure configuration.
+If the error appears as a yellow triangle in a segmented entry control field, or as a yellow or pink info bar at the top of the form, try the following steps first:
 
-### Activate the account structure
+1. Clear the ledger account field and select outside the field so that no error remains.
+1. Close any info bars at the top of the form.
+1. Save the document.
+1. Close and then reopen the document.
+1. Re-enter the account number.
 
-1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**.
-1. Select the account structure.
-1. Select **Activate** on the Action Pane.
+If no error appears after you re-enter the value, the form is now updated to reflect recent configuration changes. If the error persists, continue to the next steps.
 
-For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
+### Step 2: Verify the dimension value exists and is valid
 
-### Verify the account structure is assigned to the ledger
+1. Go to **General ledger** \> **Chart of accounts** \> **Dimensions** \> **Financial dimensions**.
+1. Select the relevant dimension, and then select **Financial dimension values**.
+1. Locate the value from the error message and confirm the following conditions:
+   - The value exists and isn't deleted.
+   - The **Active from** date isn't set to a date that is later than the transaction date.
+   - The **Active to** date isn't set to a date that is earlier than the transaction date.
+   - The **Suspended** option isn't set to **Yes**.
+   - If legal entity overrides are configured, check that none of these three settings (**Active from**, **Active to**, or **Suspended**) are overridden for the legal entity where you enter the transaction.
+   - The **Blocked for manual entry** option isn't enabled.
 
-1. Go to **General ledger** > **Ledger setup** > **Ledger**.
-1. Verify that the account structure appears in the list.
+### Step 3: Review the account structure constraints
+
+1. Go to **General ledger** \> **Chart of accounts** \> **Structures** \> **Configure account structures**.
+1. Select the relevant account structure, and then select **Edit**.
+1. Follow the constraint nodes to determine which path is being validated for the dimension value.
+1. Verify that the value is allowed in the constraint node for that segment.
+
+> [!IMPORTANT]
+> If the dimension value contains only numeric digits, verify that the range defined on the account structure treats it correctly as a string. For example, a range of `1..2000` doesn't include the value `4`, because `4` is sorted after `2000` in string order. If your values are numeric, prefix smaller values with zeros (for example, `0004`) to ensure proper string sorting.
+
+### Step 4: Check advanced rules
+
+1. On the **Configure account structures** page, select **Advanced rules** for the relevant account structure.
+1. Check whether any advanced rules further constrain the valid values. Account structures apply the most restrictive combination of all applicable constraint nodes.
+1. Verify that no advanced rule was saved without a criteria filter, which would cause the rule to always apply.
+
+### Step 5: Check for fixed dimensions
+
+[Fixed dimensions](/dynamics365/finance/general-ledger/dimensions-default-values) that are set on a main account override whatever dimension value is entered, and might replace it with a value that the account structure doesn't allow.
+
+1. Go to **General ledger** \> **Chart of accounts** \> **Accounts** \> **Main accounts**.
+1. Select the main account from the transaction.
+1. On the **Legal entity overrides** FastTab, check whether a fixed dimension value overwrites the entered value or forces a blank value.
+
+### Step 6: Check for derived dimensions
+
+[Derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) might force in a value that you don't expect, based on another value earlier in the combination.
+
+1. Go to **General ledger** \> **Chart of accounts** \> **Dimensions** \> **Financial dimensions**.
+1. Review the derived dimension rules for each dimension that's used in the account structure.
+
+### Step 7: Check interunit dimensions
+
+If interunit dimensions are enabled, the error message might refer to a different main account or dimension value than the one you entered. This situation can occur because of general ledger interunit balancing configuration.
+
+1. Go to **General ledger** \> **Ledger setup** \> **Ledger**.
+1. Review the interunit accounting setup and verify that balancing entries use valid dimension values.
+
+### Clear the dimension validation cache
+
+If none of the previous steps identifies a configuration issue, the error might be caused by stale validation data. The system caches dimension validation results for performance. If the cached data becomes outdated (for example, after an account structure is activated while other processes are running), the system might return incorrect validation results.
+
+To clear the validation cache, use one of the following methods:
+
+**Method 1: Use the dimension cache clearing tools**
+
+Navigate to the following menu items to clear the validation cache:
+
+- **Clear dimension validation status**: Go to `/?mi=DimensionClearValidationStatus`.
+- **Clear dimension cache scopes** (optional, if other dimension issues occur): Go to `/?mi=DimensionClearCacheScopes`.
+
+**Method 2: Use data maintenance**
+
+1. Go to **System administration** \> **Periodic tasks** \> **Data maintenance**.
+1. Run the action to clear all dimension caches. This process typically finishes within five minutes.
+
+**Method 3: Reactivate the account structure**
+
+> [!NOTE]
+> This method should be used only when no active data entry, import, or batch processing is occurring in the system.
+
+1. Go to **General ledger** \> **Chart of accounts** \> **Structures** \> **Configure account structures**.
+1. Select the account structure that's referenced in the error, and then select **Edit**.
+1. Make a minor change (for example, add a constraint value such as `zzzzz` that doesn't match any current values).
+1. Select **Activate** to send the activation to batch processing.
+1. Wait for the batch job to finish, and then retry the business process.
+
+If the error no longer occurs after you clear the cache, the issue was caused by stale validation data. To help prevent this situation in the future, avoid activating account structures while significant system activity (such as batch processing or data entry) is occurring.
 
 ## Value isn't allowed due to derived dimension rules
 
