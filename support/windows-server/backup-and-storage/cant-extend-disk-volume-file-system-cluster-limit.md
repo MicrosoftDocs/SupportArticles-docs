@@ -1,6 +1,6 @@
 ---
 title: Can't extend a disk volume because of the file system cluster limit
-description: Discusses how to fix an error that occurs when you can't extend a disk volume because the file system doesn't support the requested size.
+description: Discusses how to fix an error that prevents you from extending a disk volume because the file system doesn't support the requested size.
 ms.date: 04/01/2026
 manager: dcscontentpm
 audience: itpro
@@ -30,9 +30,9 @@ In this scenario, there are no recent configuration changes or system updates, a
 
 ## Cause
 
-This issue occurs because the file system limits the number  of clusters that a single volume can have. The number of clusters in a volume depends on the size of the volume and the size of the clusters. The maximum number of clusters per volume depends on the file system, such as NTFS (New Technology File System) or FAT32 (File Allocation Table 32), and the version of Windows. For more information, see the [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) section of "NTFS overview."
+This issue occurs because the file system limits the number of clusters that a single volume can have. The number of clusters in a volume depends on the size of the volume and the size of the clusters. The maximum number of clusters per volume depends on the file system, such as NTFS (New Technology File System) or FAT32 (File Allocation Table 32), and the version of Windows. For more information, see the [Support for large volumes](/windows-server/storage/file-server/ntfs-overview#support-for-large-volumes) section of "NTFS overview."
 
-If the requested volume size requires more clusters than the supported limit allows, the file system wouldn't be able to use all the available space. Therefore, Windows doesn't allow the extension.  
+If the requested volume size requires more clusters than the supported limit allows, the file system can't use all the available space. Therefore, Windows doesn't allow the extension.  
 
 ## Resolution
 
