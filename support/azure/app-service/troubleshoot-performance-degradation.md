@@ -68,7 +68,7 @@ Some of the metrics that you might want to monitor for your app include:
 
 For more information, see:
 
-* [Azure App Service quotas and metrics](/azure/app-service/web-sites-monitor)
+* [Azure App Service quotas and metrics](/azure/app-service/monitor-app-service)
 * [Receive alert notifications](/azure/azure-monitor/alerts/alerts-overview)
 
 ### Monitor web endpoint status
@@ -79,16 +79,13 @@ Endpoint monitoring configures web tests from geo-distributed locations that tes
 
 Uptime is monitored using HTTP response codes, and response time is measured in milliseconds. A monitoring test fails if the HTTP response code is greater than or equal to 400 or if the response takes more than 30 seconds. An endpoint is considered available if its monitoring tests succeed from all the specified locations.
 
-To set it up, see [Azure App Service quotas and metrics](/azure/app-service/web-sites-monitor).
+To set it up, see [Azure App Service quotas and metrics](/azure/app-service/monitor-app-service).
 
 ### Application performance monitoring using extensions
 
 You can also monitor your application performance by using a *site extension*.
 
-Each App Service app provides an extensible management endpoint that allows you to use a powerful set of tools deployed as site extensions. Extensions include: 
-
-- Source code editors like [GitHub Codespaces](https://github.com/features/codespaces/).
-- Management tools for connected resources such as a MySQL database connected to an app.
+Each App Service app provides an extensible management endpoint that allows you to use a powerful set of tools deployed as site extensions. 
 
 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) is a performance monitoring site extension that's also available. To use Application Insights, you rebuild your code with an SDK. You can also install an extension that provides access to additional data. The SDK lets you write code to monitor the usage and performance of your app in more detail. For more information, see [Introduction to Application Insights - OpenTelemetry observability](/azure/azure-monitor/app/app-insights-overview).
 
@@ -126,7 +123,7 @@ For detailed instructions on how to configure your application for logging, see 
 
 ### Use the diagnostics tool
 
-App Service provides an intelligent and interactive experience to help you troubleshoot your app with no configuration required. When you do run into issues with your app, the diagnostics tool points out what’s wrong to guide you to the right information to more easily and quickly troubleshoot and resolve the issue.
+App Service provides an intelligent and interactive experience to help you troubleshoot your app with no configuration required. When you do run into issues with your app, the diagnostics tool points out what's wrong to guide you to the right information to more easily and quickly troubleshoot and resolve the issue.
 
 To access App Service diagnostics, navigate to your App Service app or App Service Environment in the [Azure portal](https://portal.azure.com). In the sidebar menu, select **Diagnose and solve problems**.
 
