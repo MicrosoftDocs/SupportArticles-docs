@@ -32,3 +32,5 @@ landingContent:
             url: vpn-gateway-troubleshoot-vpn-point-to-site-connection-problems.md
           - text: Troubleshoot an Azure site-to-site VPN connection that can't connect
             url: vpn-gateway-troubleshoot-site-to-site-cannot-connect.md
+          - text: Troubleshoot BGP issues
+            url: vpn-gateway-troubleshoot-bgp.md
