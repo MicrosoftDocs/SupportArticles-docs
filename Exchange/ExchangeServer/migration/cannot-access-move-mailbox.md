@@ -1,6 +1,6 @@
 ---
 title: Can't access or move a mailbox after mailbox server is added to a DAG
-description: Describes mailbox access or move errors on a newly created database in DAG.
+description: Describes mailbox access or move errors on a newly created database in a database availability group (DAG).
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,19 +10,25 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CI 156012
+  - CI 10026
+  - CI 9823
   - CSSTroubleshoot
-ms.reviewer: dpaul, batre, meerak, v-chazhang
+ms.reviewer: dpaul, batre, meerak, v-chazhang, v-kccross
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 04/01/2026
 ---
 
-# "NoSupportException" error when accessing mailbox on newly created database in DAG
+# "NoSupportException" error when you access a mailbox on a newly created database in a DAG
+
+## Summary
+
+This article describes issues that might occur when you access or move mailboxes in Exchange Server and provides a solution. The issues occur because the schema version value of the mailbox database is incorrect. Administrators can resolve the issues by downloading and installing Cumulative Update 13 for Exchange Server 2019.
 
 ## Symptoms
 
-After you add a Microsoft Exchange Server 2019 mailbox server as a node to a database availability group (DAG), and you create additional mailbox databases, you experience the following issues:
+After you add a Microsoft Exchange Server 2019 mailbox server as a node to a database availability group (DAG), and you create more mailbox databases, you experience the following issues:
 
 - When you try to access a mailbox on the mailbox server by using Outlook on the web, you receive the following error message:
 
@@ -35,33 +41,8 @@ After you add a Microsoft Exchange Server 2019 mailbox server as a node to a dat
 
 ## Cause
 
-These issues occur because the schema version value of the mailbox database is incorrect. Before you create additional mailbox databases, the Information Store service must be restarted on every node after the node is added to the DAG. Otherwise, the cluster database isn't updated for the correct schema version.
+These issues occur because the schema version value of the mailbox database is incorrect.
 
-## Workaround
+## Solution
 
-After you add a node to the cluster, restart the Information Store service on the node.
-
-If you have already created new databases in a cluster, check whether their schema version value is set to **121** before you restart the Information Store service on all nodes in the cluster. To check the database schema version for the mailbox database, run the following cmdlet:
-
-```powershell
-Get-MailboxDatabase DB01 -Status | fl *Schema*
-```
-
-You should get a result that resembles the following:
-
-```output
-IsExcludedFromProvisioningBySchemaVersionMonitoring: False
-CreationSchemaVersion       : 0.121
-CurrentSchemaVersion        : 0.121
-RequestedSchemaVersion      : 0.121
-```
-
-If you have to update the schema version value, update the database schema, and then dismount and remount the database:
-
-```powershell
-Update-DatabaseSchema DB01
-Dismount-Database DB01
-Mount-Database DB01
-```
-
-If the `CurrentSchemaVersion` value still shows **121**, this means that not all the Information Store services across the whole cluster were restarted.
+These issues are fixed in Cumulative Update 13 for Exchange Server 2019 (KB5026155). To resolve the issues, [download and install the update](https://www.microsoft.com/download/details.aspx?id=105180&msockid=2586c67be258611c3178d39ee3f36040).
