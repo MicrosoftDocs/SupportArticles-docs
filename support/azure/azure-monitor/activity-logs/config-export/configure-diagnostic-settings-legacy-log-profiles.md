@@ -52,5 +52,5 @@ Azure is phasing out legacy log profiles in favor of Diagnostic Settings by Sept
 
 ### References
 
-- [Azure Monitor documentation](/azure/monitor/)
-- [Diagnostic Settings guide](/azure/monitor/platform/diagnostic-settings)
+- [Azure Monitor documentation](/azure/azure-monitor/fundamentals/overview)
+- [Diagnostic Settings guide](/azure/azure-monitor/platform/diagnostic-settings)
