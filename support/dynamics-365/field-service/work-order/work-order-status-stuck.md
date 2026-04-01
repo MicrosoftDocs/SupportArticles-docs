@@ -1,18 +1,16 @@
 ---
-title: When a work order status doesn't change as expected
-description: Troubleshoot issues where a work order can't transition to the next status in Dynamics 365 Field Service.
-author: vhorvathms
-ms.author: vhorvath
-ms.reviewer: puneetsingh
-ms.date: 03/19/2026
+title: Troubleshoot Work Order Status Transition Issues
+description: Work order status stuck or reverting in Dynamics 365 Field Service? Learn how to resolve issues with transition rules, incomplete bookings, and plug-in conflicts.
+ms.date: 04/01/2026
+ms.reviewer: vhorvath, puneetsingh, v-shaywood
 ms.custom: sap:Work Order Management
 ---
 
-# When a work order status doesn't change as expected
+# Work order status doesn't change as expected
 
 ## Summary
 
-This article helps you troubleshoot scenarios where a work order doesn't change to the expected status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service.
+This article helps you troubleshoot scenarios where a work order doesn't change to the expected status (for example, from **Open** to **Completed**) in Microsoft Dynamics 365 Field Service. It covers status transition rule restrictions, open sub-records that block completion, and custom plug-ins that revert status changes.
 
 ## Symptoms
 
@@ -20,53 +18,58 @@ When you try to change the work order system status or substatus, you notice one
 
 - The status field dropdown doesn't show the expected status options.
 - After you change the status and save, the status reverts to its previous value.
+- The work order shows as **Completed**, but associated bookings remain in an **In Progress** status.
 - You receive the following error message:
 
   > The status transition is not valid. Please check the entity's status transition rules.
 
-- The work order shows as **Completed**, but associated bookings remain in an **In Progress** status.
+## Check the status transition rules for missing transitions
 
-## Cause 1: Status transition rules might limit available options
+Custom status reason transitions that you configure on the Work Order table might not allow the transition you need. If you don't explicitly permit a transition, the target status doesn't appear in the dropdown.
 
-Custom status reason transitions are configured on the Work Order table, and the transition you need might not be allowed by the current rules.
+To review and update the status transition rules:
 
-### Solution: Review status transition rules
-
-1. Go to [make.powerapps.com](https://make.powerapps.com), sign in, and select your environment from the environment picker in the top-right corner.
-1. In the left navigation, select **Tables**, search for and open the **Work Order** table, and then select **Columns**.
+1. Go to [Power Apps](https://make.powerapps.com) and select your environment.
+1. In the left navigation, select **Tables**.
+1. Search for and open the **Work Order** table.
+1. Select **Columns**.
 1. Open the **System Status** (`msdyn_systemstatus`) column.
 1. Check whether **Status reason transitions** are enabled. If they are, review the allowed transitions.
 1. Add the missing transition, or disable status transitions if your business process doesn't require them.
 
-## Cause 2: Open bookings or sub-records might need to be completed first
+## Verify that all bookings and sub-records are completed
 
-Dynamics 365 Field Service might require you to complete associated bookings, work order products, or work order services before you can complete the work order.
+Dynamics 365 Field Service might require you to complete associated bookings, work order products, or work order services before you can complete the work order. For more information about how [booking statuses](/dynamics365/field-service/set-up-booking-statuses) map to work order statuses, see [Work order lifecycle and system statuses](/dynamics365/field-service/work-order-status-booking-status).
 
-### Solution: Close open sub-records
+To close associated sub-records:
 
-1. In the Dynamics 365 Field Service app, open the work order record and select the **Bookings** tab.
-1. Verify that all associated bookings have a **Completed** booking status.
-1. On the same work order, go to the **Products and Services** tab and verify that all items are in a **Used** or **Estimated** status (not **Open**).
+1. In the Dynamics 365 Field Service app, open the work order record.
+1. Select the **Bookings** tab.
+1. Confirm that all associated bookings have a **Completed** booking status.
+1. On the same work order, go to the **Products and Services** tab.
+1. Confirm that all items are in a **Used** or **Estimated** status (not **Open**).
 1. After all sub-records are in a terminal state, change the work order status to **Completed**.
 
 > [!NOTE]
 > If you need to complete a work order without completing all sub-records, consider using a Power Automate flow that first updates sub-record statuses and then updates the work order status.
 
-## Cause 3: A custom plug-in might be reverting the status
+## Check for a custom plug-in that reverts the status
 
 A synchronous plug-in registered on the work order **Update** message might revert the status change based on custom business logic.
 
-### Solution: Identify and fix the custom plug-in
+To identify and fix the plug-in:
 
-1. To check plug-in registrations, go to [make.powerapps.com](https://make.powerapps.com), select your environment, and then go to **Tables** > **Work Order** > **Plug-in steps**. Look for plug-ins registered on the **Pre-Operation** or **Post-Operation** step of the **Update** message.
+1. Go to [Power Apps](https://make.powerapps.com) and select your environment.
+1. Go to **Tables** > **Work Order** > **Plug-in steps**.
+1. Look for plug-ins registered on the **Pre-Operation** or **Post-Operation** step of the **Update** message.
 1. Enable the Plug-in Trace Log to capture execution details:
-    1. In the Dynamics 365 Field Service app, select **Settings** (gear icon) > **Advanced Settings**.
-    1. In the advanced settings area, go to **System** > **Administration** and select **Customization**.
+    1. In the Dynamics 365 Field Service app, select **Settings** (gear symbol) > **Advanced Settings**.
+    1. Go to **System** > **Administration** and select **Customization**.
     1. Set **Enable logging to plug-in trace log** to **All**.
 1. Reproduce the issue and review the trace log for any plug-in that modifies the `msdyn_systemstatus` field.
 1. Update the plug-in logic to allow the intended status transition.
 
 ## Related content
 
-- [Work order lifecycle and system statuses](/dynamics365/field-service/work-order-status-booking-status)
-- [Set up booking statuses](/dynamics365/field-service/set-up-booking-statuses)
+- [Create a work order](/dynamics365/field-service/create-work-order)
+- [Work order architecture](/dynamics365/field-service/field-service-architecture)
