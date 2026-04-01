@@ -17,7 +17,7 @@ Azure Application Gateway Web Application Firewall (WAF) uses **anomaly scoring*
 
 This article focuses on explaining anomaly scoring behavior and clarifying scenarios where traffic is blocked by **rule ID 949110**, which users commonly attempt to disable but can’t.
 
-For general WAF troubleshooting guidance, see: [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/troubleshoot-waf)
+For general WAF troubleshooting guidance, see: [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot)
 
 ## Prerequisites
 
@@ -74,6 +74,6 @@ Avoid attempting to disable rule 949110 directly, as it’s a mandatory enforcem
 
 ## Related content
 
-- [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/troubleshoot-waf)
+- [Troubleshoot WAF for Azure Application Gateway](/azure/web-application-firewall/ag/web-application-firewall-troubleshoot)
 - [CRS and DRS rule groups and rules](/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules)
 - [Anomaly scoring mode](/azure/web-application-firewall/ag/ag-overview#anomaly-scoring-mode)
