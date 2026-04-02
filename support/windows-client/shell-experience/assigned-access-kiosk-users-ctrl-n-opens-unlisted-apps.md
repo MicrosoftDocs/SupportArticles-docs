@@ -37,3 +37,8 @@ To block the CTRL + N shortcut in a kiosk environment, use the keyboard filter f
 
 > [!IMPORTANT]  
 > Keyboard filter doesn't block CTRL + N in Remote Desktop Services (RDS) environments.
+
+## References
+
+- [Create an Assigned Access configuration XML file](/windows/configuration/assigned-access/configuration-file)
+- [Keyboard Filter](/windows/configuration/keyboard-filter/)
