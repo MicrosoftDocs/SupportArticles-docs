@@ -47,4 +47,4 @@ The following policy settings control quick settings:
 > [!IMPORTANT]  
 > If you change the CSP or GPO setting, you have to restart the device to make the change take effect.
 
-For more information about the settings that apply to assigned access users, see [assigned access Policy Settings](/windows/configuration/assigned-access/policy-settings).
+For more information about the settings that apply to assigned access users, see [Assigned Access Policy Settings](/windows/configuration/assigned-access/policy-settings).
