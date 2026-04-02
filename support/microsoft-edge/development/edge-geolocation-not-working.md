@@ -1,5 +1,5 @@
 ---
-title: Resolve Edge Location service issues on Windows
+title: Resolve Edge Location service problems on Windows
 description: Troubleshoot geolocation failures that occur in Microsoft Edge but not in other browsers. Discover how to resolve the problem by using the Windows lfsvc service, policies, and permissions.
 ms.date: 04/01/2026
 ms.reviewer: Johnny.Xu, dili, v-shaywood
@@ -23,7 +23,7 @@ You experience all the following symptoms:
 
 ## Solution
 
-Work through the following checks in the given order. After each step, test geolocation in Edge (for example, visit a website that requests your location) to check whether the issue is resolved.
+Work through the following checks in the given order. After each step, test geolocation in Edge (for example, visit a website that requests your location) to check whether the problem is resolved.
 
 ### Verify website-level location permissions in Edge
 
