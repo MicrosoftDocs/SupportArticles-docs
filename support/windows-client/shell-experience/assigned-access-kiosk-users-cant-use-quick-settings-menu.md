@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-Assigned access users can't use the quick settings feature of Windows. This feature is disabled by default in assigned access environments (also known as kiosk environments).
+Assigned access users can't use the quick settings feature of Windows. By default, this feature is disabled in assigned access environments (also known as kiosk environments).
 
 > [!NOTE]  
 >
@@ -30,7 +30,7 @@ You apply an assigned access configuration to a set of users to designate them a
 
 ## Cause
 
-This behavior is by design for assigned access users. Quick settings contains configuration and personalization settings that aren't appropriate for a kiosk experience (volume, Wi-Fi connection, Focus Assist, and so forth).
+This behavior is by design for assigned access users. Quick settings contains configuration and personalization settings that aren't appropriate for a kiosk experience (volume, Wi-Fi connection, Focus Assist, and so on).
 
 ## More information
 
