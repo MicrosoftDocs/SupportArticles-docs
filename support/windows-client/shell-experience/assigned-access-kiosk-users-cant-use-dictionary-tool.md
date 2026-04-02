@@ -14,6 +14,10 @@ appliesto:
 ---
 # Assigned access kiosk users can't use the Japanese User Dictionary Tool in a Windows 11 multi-app kiosk
 
+## Summary
+
+When you configure a Windows 11 multi-app kiosk for assigned access users, by default the allowed applications list doesn't include the Japanese User Dictionary Tool. This article describes the issue and explains how to to enable the tool for assigned access users by adding the tool's files to your assigned access configuration XML file.
+
 ## Symptoms
 
 In a Windows 11 multi-app kiosk environment (also referred to as a restricted user experience), an assigned access user tries to open the Japanese User Dictionary Tool. The tool doesn't open, and the user receives the following message:
