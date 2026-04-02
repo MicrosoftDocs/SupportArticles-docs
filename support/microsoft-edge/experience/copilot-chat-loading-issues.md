@@ -35,7 +35,7 @@ Copilot in Edge has account-type, region, and platform prerequisites. If your pr
 
 - **Account type and region**: See [Verify regional availability and account type](copilot-icon-missing-sidebar.md#verify-regional-availability-and-account-type) for details.
 
-- **Platform**: The Copilot sidebar requires a desktop edition of Windows (Home, Pro, or Enterprise). Non-desktop SKUs, such as Xbox, aren't supported. Copilot isn't available in PWA or Web App windows.
+- **Platform**: The Copilot sidebar requires a desktop edition of Windows (Home, Pro, or Enterprise). Nondesktop SKUs, such as Xbox, aren't supported. Copilot isn't available in PWA or Web App windows.
 
 - **Age group**: Verify that the age group of the signed-in account isn't classified as "Child." Child accounts can't use Copilot.
 
@@ -43,7 +43,7 @@ Copilot in Edge has account-type, region, and platform prerequisites. If your pr
 
 If the Copilot icon appears, but the sidebar shows a blank pane, an error message, or a **Refresh** button, the Copilot Chat service endpoint might be unreachable.
 
-1. Verify that the device has an active internet connection. If the device is offline, the Copilot pane displays a "No internet" splash screen, and it auto-recovers when connectivity is restored.
+1. Verify that the device has an active internet connection. If the device is offline, the Copilot pane displays a "No internet" splash screen, and it autorecovers when connectivity is restored.
 
 1. Check that the Copilot Chat service endpoint is reachable. Consumer accounts use `https://edgeservices.bing.com/edgesvc/shell`. Enterprise or commercial profiles use a configurable MetaOS App Service endpoint. To test connectivity, open a browser tab on the affected device, and go to the endpoint URL. If the page doesn't load, a network issue or firewall rule might be blocking access.
 
@@ -75,7 +75,7 @@ To resolve the problem:
 
 1. Open `edge://policy` and check the current values of [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostblocklist) and [EdgeSidebarAppUrlHostAllowList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostallowlist).
 
-1. If you set [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostblocklist) to `*` (block all), [EdgeSidebarAppUrlHostAllowList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostallowlist) must contains all the following entries.
+1. If you set [EdgeSidebarAppUrlHostBlockList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostblocklist) to `*` (block all), [EdgeSidebarAppUrlHostAllowList](/deployedge/microsoft-edge-browser-policies/edgesidebarappurlhostallowlist) must contain all the following entries.
 
    | URL                                          | Notes                      |
    | -------------------------------------------- | -------------------------- |
