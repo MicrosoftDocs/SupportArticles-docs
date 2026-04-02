@@ -1,6 +1,6 @@
 ---
-title: Assigned access kiosk users can't use the quick settings flyout menu
-description: Kiosk or assigned access users don't have access to the quick settings flyout menu.
+title: Assigned access kiosk users can't use the quick settings
+description: Kiosk or assigned access users don't have access to quick settings.
 ms.date: 04/02/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ai.usage: ai-assisted
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Assigned access kiosk users can't use the quick settings flyout menu
+# Assigned access kiosk users can't use quick settings
 
 ## Summary
 
@@ -30,11 +30,11 @@ You apply an assigned access configuration to a set of users to designate them a
 
 ## Cause
 
-This behavior is by design for assigned access users. The quick settings flyout menu contains configuration and personalization settings that aren't appropriate for a kiosk experience (volume, Wi-Fi connection, Focus Assist, and so forth).
+This behavior is by design for assigned access users. Quick settings contains configuration and personalization settings that aren't appropriate for a kiosk experience (volume, Wi-Fi connection, Focus Assist, and so forth).
 
 ## More information
 
-The following policy settings control the quick settings flyout menu:
+The following policy settings control quick settings:
 
 - Configuration Service Provider (CSP) setting:
   - **Name:** [Taskbar: Remove Quick Settings](/windows/client-management/mdm/policy-csp-start#disablecontrolcenter)
