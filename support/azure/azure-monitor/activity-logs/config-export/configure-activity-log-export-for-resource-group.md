@@ -13,7 +13,7 @@ ms.custom: I can't configure export of Activity Logs
 
 ## Summary
 
-This article provides guidance to configure the export of activity logs for a resource group in Microsoft Azure. Exporting activity logs helps you monitor changes and ensure compliance within your Azure environment.
+This article provides guidance to configure the export of activity logs for a resource group in Microsoft Azure. When you export activity logs, you can monitor changes more easily and ensure compliance within your Azure environment.
 
 To monitor changes and detect unauthorized modifications, you often have to export activity logs for specific resource groups. However, Azure doesn't support log export for individual resources or groups directly. Instead, you can filter logs by using the **Resource** column in the AzureActivity table.
 
