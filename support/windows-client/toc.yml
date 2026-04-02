@@ -935,6 +935,8 @@ items:
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
     items:
+    - name: Assigned access kiosk users can use CTRL + N to open File Explorer although it isn't an allowed app
+      href: ./shell-experience/assigned-access-kiosk-users-ctrl-n-opens-unlisted-apps.md
     - name: Assigned Access kiosk users can't access printers that use a domain print server
       href: ./shell-experience/assigned-access-kiosk-users-cant-access-printers-domain-print-server.md
     - name: Can't configure Microsoft Teams to run in a multi-app kiosk
