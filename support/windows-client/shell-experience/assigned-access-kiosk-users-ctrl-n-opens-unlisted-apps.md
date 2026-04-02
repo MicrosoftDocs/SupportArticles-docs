@@ -1,6 +1,6 @@
 ---
 title: Assigned access kiosk users can use CTRL + N to open File Explorer although it isn't an allowed app
-description: 
+description: Assigned access users can press CTRL + N to open a File Explorer window even when File Explorer isn't included in the list of allowed applications.
 ms.date: 04/03/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -14,6 +14,10 @@ appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Assigned access kiosk users can use CTRL + N to open File Explorer although it isn't an allowed app
+
+## Summary
+
+In a kiosk environment, assigned access users can press CTRL + N to open a File Explorer window even when File Explorer isn't included in the list of allowed applications. This article explains why this behavior occurs and how to prevent it by using the keyboard filter feature.
 
 ## Symptom
 
