@@ -197,3 +197,5 @@ items:
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
   - name: Troubleshoot data export and pricing problems in Azure Event Hubs
     href: diagnostic-settings/data-flow/troubleshoot-data-export-pricing-problems.md
+  - name: Export management group activity logs to Event Hub
+    href: diagnostic-settings/data-flow/export-management-group-activity-logs.md
