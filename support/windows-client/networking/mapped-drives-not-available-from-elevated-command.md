@@ -1,7 +1,7 @@
 ---
 title: Mapped drives are not available
 description: Describes an issue in which mapped drives are unavailable from an elevated command prompt.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

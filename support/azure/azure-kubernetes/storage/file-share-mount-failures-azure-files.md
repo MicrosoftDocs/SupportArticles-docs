@@ -1,6 +1,6 @@
 ---
 title: File share mounting failures for Azure Files
-description: Troubleshoot a file share for Azure Files that doesn't mount as storage on your Azure Kubernetes Service (AKS) clusters.
+description: Troubleshoot Azure Files file share mounting failures on Azure Kubernetes Service (AKS) clusters and restore storage access by following these steps.
 ms.date: 10/23/2024
 ms.reviewer: chiragpa, nickoman, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
@@ -9,6 +9,8 @@ keywords:
 ms.custom: sap:Storage
 ---
 # File share mounting failures for Azure Files
+
+## Summary
 
 This article discusses how to troubleshoot file share mounting failures for Azure Files so that you can set up storage successfully on your Microsoft Azure Kubernetes Service (AKS) clusters.
 

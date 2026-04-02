@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS session connectivity
 description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
-ms.date: 01/27/2026
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

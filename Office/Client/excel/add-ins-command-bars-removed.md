@@ -8,15 +8,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\AddIns
   - CSSTroubleshoot
+  - CI 10745
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/23/2026
 ---
 
 # Command bars of add-ins are not displayed or removed in Excel 2013 or later when you load or unload the add-ins

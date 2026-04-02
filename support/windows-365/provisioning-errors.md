@@ -2,7 +2,7 @@
 title: Troubleshoot provisioning errors
 description: Troubleshoot provisioning errors in Windows 365.
 manager: dcscontentpm
-ms.date: 01/23/2026
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje, mmoyaaceves
 ms.custom:
@@ -110,7 +110,7 @@ Every Cloud PC provisioning process uses one of the IP addresses provided in the
 
 If provisioning fails, it's retried a total of three times. Each time, a new vNic and IP address are allocated. These IP addresses are released in hours, but this allocation can cause issues if the address space is too narrow.
 
-**Suggested solution:** Check the virtual network for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
+**Suggested solution:** Check the virtual network for available private IP addresses, and make sure that there are more than enough private IPs available in your ANCs subnet for the retry process to succeed. If you are unsure of current capacity, navigate to the Azure network connections page in Intune to view IP availability for the ANC. To update your subnet, see [Add, change, or delete a virtual network subnet](/azure/virtual-network/virtual-network-manage-subnet).
 
 ## Provisioning policy not found
 

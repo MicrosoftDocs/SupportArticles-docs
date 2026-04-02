@@ -1,7 +1,7 @@
 ---
 title: Recommended values of validity period and renewal period in certificate templates
 description: Describes an issue in which certificate renewals require approvals when certificate autoenrollment is configured. Recommend values of the validity period and renewal period in certificate templates.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

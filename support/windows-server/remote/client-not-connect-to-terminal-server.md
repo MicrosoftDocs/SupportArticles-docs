@@ -1,7 +1,7 @@
 ---
 title: Clients can't connect to Terminal Server
 description: Provides a solution to an issue where Terminal Services clients are repeatedly denied access to the terminal server after upgrade Windows.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

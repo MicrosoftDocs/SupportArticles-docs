@@ -1,6 +1,6 @@
 ---
-title: Basic troubleshooting of DNS resolution problems in AKS
-description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
+title: "Troubleshoot DNS resolution problems in AKS"
+description: "Learn how to troubleshoot DNS resolution problems in AKS with a structured workflow to diagnose and fix DNS failures in Azure Kubernetes Service. Start here."
 author: sturrent
 ms.author: seturren
 ms.date: 05/29/2025
@@ -13,7 +13,9 @@ ms.topic: troubleshooting-general
 ---
 # Troubleshoot DNS resolution problems in AKS
 
-This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Microsoft Azure Kubernetes Service (AKS).
+## Summary
+
+This article explains how to troubleshoot DNS resolution problems in Azure Kubernetes Service (AKS) by building a structured workflow to diagnose, isolate, and fix Domain Name System (DNS) failures. Follow this guide to learn how to identify root causes and resolve DNS issues in your AKS cluster.
 
 ## Prerequisites
 
@@ -21,7 +23,7 @@ This article discusses how to create a troubleshooting workflow to fix Domain Na
 
    **Note:** To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
-- The [dig](https://downloads.isc.org/isc/bind9/cur/9.19/doc/arm/html/manpages.html#dig-dns-lookup-utility) command-line tool for DNS lookup
+- The [BIND 9](https://www.isc.org/bind/) command-line tool for DNS lookup
 
 - The [grep](https://linux.die.net/man/1/grep) command-line tool for text search
 
@@ -41,7 +43,7 @@ Troubleshooting DNS problems in AKS is typically a complex process. You can easi
 
 - Step 5. Repeat as necessary.
 
-### Troubleshooting Step 1: Collect the facts
+### Troubleshooting step 1: Collect the facts
 
 To better understand the context of the problem, gather facts about the specific DNS problem. By using the following baseline questions as a starting point, you can describe the nature of the problem, recognize the symptoms, and identify the scope of the problem.
 
@@ -58,7 +60,7 @@ To better understand the context of the problem, gather facts about the specific
 
 To get better answers to these questions, follow this three-part process.
 
-#### Part 1: Generate tests at different levels that reproduce the problem
+#### Part 1: Generate DNS tests at different levels to reproduce the problem
 
 The DNS resolution process for pods on AKS includes many layers. Review these layers to isolate the problem. The following layers are typical:
 
@@ -167,7 +169,7 @@ Examine the DNS server configuration of the virtual network, and determine wheth
 
 ##### Review the health and performance of CoreDNS pods
 
-You can use `kubectl` commands to check the health and performance of CoreDNS pods. To do so, follow these steps:
+Use `kubectl` commands to check the health and performance of CoreDNS pods. Follow these steps:
 
 1. Verify that the CoreDNS pods are running:
 
@@ -175,7 +177,7 @@ You can use `kubectl` commands to check the health and performance of CoreDNS po
    kubectl get pods -l k8s-app=kube-dns -n kube-system
    ```
 
-2. Check if the CoreDNS pods are overused:
+1. Check if the CoreDNS pods are overused:
 
    ```bash
    kubectl top pods -n kube-system -l k8s-app=kube-dns
@@ -187,26 +189,26 @@ You can use `kubectl` commands to check the health and performance of CoreDNS po
    coredns-dc97c5f55-wbh4q   3m           25Mi
    ```
 
-3. Get the nodes that host the CoreDNS pods:
+1. Get the nodes that host the CoreDNS pods:
 
    ```bash
    kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath='{.items[*].spec.nodeName}'
    ```
 
-4. Verify that the nodes aren't overused:
+1. Verify that the nodes aren't overused:
 
    ```bash
    kubectl top nodes
    ```
 
-5. Verify the logs for the CoreDNS pods:
+1. Verify the logs for the CoreDNS pods:
 
    ```bash
    kubectl logs -l k8s-app=kube-dns -n kube-system
    ```
 
 > [!NOTE]
-> To get more debugging information, enable verbose logs in CoreDNS. To do so, see [Troubleshooting CoreDNS customization in AKS](/azure/aks/coredns-custom#troubleshooting).
+> To get more debugging information, enable verbose logs in CoreDNS. For more information, see [Troubleshooting CoreDNS customization in AKS](/azure/aks/coredns-custom#troubleshooting).
 
 ##### Review the health and performance of nodes
 
@@ -266,14 +268,14 @@ Analyzing DNS traffic can help you understand how your AKS cluster handles the D
 
 There are two main ways to analyze DNS traffic:
 
-- Using real-time DNS analysis tools, such as [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget), to analyze the DNS traffic in real time.
-- Using traffic capture tools, such as [Retina Capture](https://retina.sh/docs/Troubleshooting/capture) and [Dumpy](https://github.com/larryTheSlap/dumpy), to collect the DNS traffic and analyze it with a network packet analyzer tool, such as Wireshark.
+- Use real-time DNS analysis tools, such as [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget), to analyze the DNS traffic in real time.
+- Use traffic capture tools, such as [Retina Capture](https://retina.sh/docs/Troubleshooting/capture) and [Dumpy](https://github.com/larryTheSlap/dumpy), to collect the DNS traffic and analyze it by using a network packet analyzer tool, such as Wireshark.
 
-Both approaches aim to understand the health and performance of DNS responses using DNS response codes, response times, and other metrics. Choose the one that fits your needs best.
+Both approaches aim to understand the health and performance of DNS responses by using DNS response codes, response times, and other metrics. Choose the one that fits your needs best.
 
 ##### Real-time DNS traffic analysis
 
-You can use [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) to analyze the DNS traffic in real time. To install Inspektor Gadget to your cluster, see [How to install Inspektor Gadget in an AKS cluster](../../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
+Use [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) to analyze the DNS traffic in real time. To install Inspektor Gadget to your cluster, see [How to install Inspektor Gadget in an AKS cluster](../../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 
 To trace DNS traffic across all namespaces, use the following command:
 
@@ -476,7 +478,7 @@ The following table is a summary of the capture findings.
 | Difference between DNS queries and responses exceeds two percent | &#x2611; | &#x2610; |
 | DNS latency is more than one second                              | &#x2611; | &#x2610; |
 
-### Troubleshooting Step 2: Develop a hypothesis
+### Troubleshooting step 2: Develop a hypothesis about DNS problems
 
 This section categorizes common problem types to help you narrow down potential problems and identify components that might require adjustments. This approach sets the foundation for creating a targeted action plan to mitigate and resolve these problems effectively.
 
@@ -558,9 +560,9 @@ To develop your first hypothesis, map each of the results from the required inpu
 
 - The presence of custom configurations at the virtual network level or Kubernetes level can contain setups that don't work with AKS and CoreDNS as expected.
 
-### Troubleshooting Step 3: Create and implement an action plan
+### Troubleshooting step 3: Create and implement an action plan
 
-You should now have enough information to create and implement an action plan. The following sections contain extra recommendations to formulate your plan for specific problem types.
+You should now have enough information to create and implement an action plan. The following sections contain extra recommendations to help you formulate your plan for specific problem types.
 
 #### Performance problems
 
@@ -569,14 +571,14 @@ If you're dealing with DNS resolution performance problems, review and implement
 | Best practice | Guidance |
 |--|--|
 | Set up a dedicated system node pool that meets minimum sizing requirements. | [Manage system node pools in Azure Kubernetes Service (AKS)](/azure/aks/use-system-pools) |
-| To avoid disk I/O throttling, use nodes that have Ephemeral OS disks. | [Default OS disk sizing](/azure/aks/cluster-configuration#default-os-disk-sizing) and [GitHub issue 1373 in Azure AKS](https://github.com/Azure/AKS/issues/1373#issuecomment-827782655) |
+| To avoid disk I/O throttling, use nodes that have ephemeral OS disks. | [Default OS disk sizing](/azure/aks/cluster-configuration#default-os-disk-sizing) and [GitHub issue 1373 in Azure AKS](https://github.com/Azure/AKS/issues/1373#issuecomment-827782655) |
 | Follow best resource management practices on workloads within the nodes. | [Best practices for application developers to manage resources in Azure Kubernetes Service (AKS)](/azure/aks/developer-best-practices-resource-management) |
 
 If DNS performance still isn't good enough after you make these changes, consider using [Node Local DNS](https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/).
 
 #### Configuration problems
 
-Depending on the component, you should review and understand the implications of the specific setup. See the following list of component-specific documentation for configuration details:
+Depending on the component, review and understand the implications of the specific setup. See the following list of component-specific documentation for configuration details:
 
 - [Kubernetes DNS configuration options](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 - [AKS CoreDNS custom configuration options](/azure/aks/coredns-custom)
@@ -588,11 +590,11 @@ Depending on the component, you should review and understand the implications of
 
 - Infrastructure problems, such as hardware failures or hypervisor problems, might require collaboration from infrastructure support teams. Alternatively, these problems might have self-healing features.
 
-### Troubleshooting Step 4: Observe results and draw conclusions
+### Troubleshooting step 4: Observe results and draw conclusions
 
-Observe the results of implementing your action plan. At this point, your action plan should be able to fix or mitigate the problem.
+Observe the results of implementing your action plan. At this point, your action plan should fix or mitigate the problem.
 
-### Troubleshooting Step 5: Repeat as necessary
+### Troubleshooting step 5: Repeat as necessary
 
 If these troubleshooting steps don't resolve the problem, repeat the troubleshooting steps as necessary.
 

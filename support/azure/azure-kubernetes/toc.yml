@@ -103,6 +103,8 @@ items:
       href: connectivity/get-and-analyze-http-response-codes.md
     - name: Intermittent timeouts or server issues
       href: connectivity/intermittent-timeouts-or-server-issue.md
+    - name: Can't pull images from container registry to cluster
+      href: connectivity/cannot-pull-image-from-acr-to-aks-cluster.md
   - name: Can't connect to AKS cluster through API server
     items:
     - name: Basic troubleshooting
@@ -247,8 +249,6 @@ items:
     items:
     - name: AKS Cost Analysis add-on issues
       href: extensions/aks-cost-analysis-add-on-issues.md
-    - name: Can't pull images from container registry to cluster
-      href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
     - name: Troubleshoot AI toolchain operator add-on errors
       href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
     - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
@@ -267,6 +267,8 @@ items:
       href: extensions/troubleshoot-network-isolated-cluster.md
     - name: Troubleshoot node auto provisioning
       href: extensions/troubleshoot-node-auto-provision.md
+    - name: Troubleshoot upgrade failure due to conflicting PodDisruptionBudgets
+      href: extensions/troubleshoot-eviction-autoscaler.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
@@ -419,8 +421,6 @@ items:
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error

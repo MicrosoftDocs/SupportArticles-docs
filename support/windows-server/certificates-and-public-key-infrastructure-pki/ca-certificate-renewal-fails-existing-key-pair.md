@@ -1,7 +1,7 @@
 ---
 title: CA certificate renewal fails when using a KSP provider
 description: Helps resolve an issue where the CA certificate renewal with the existing public and private key pair fails when using a KSP provider.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

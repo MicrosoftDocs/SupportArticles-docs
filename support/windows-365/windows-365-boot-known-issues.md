@@ -2,7 +2,7 @@
 title: Windows 365 Boot known issues
 description: Learn about known issues with Windows 365 Boot, including workarounds and updated fixes.
 manager: dcscontentpm
-ms.date: 03/31/2025
+ms.date: 02/12/2026
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom:
@@ -16,12 +16,6 @@ ms.collection:
 # Windows 365 Boot known issues
 
 This article provides solutions to the recent known issues with [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
-
-## Wi-Fi connectivity
-
-Wi-Fi connections that require captive browser-based authentication or consent aren't supported.
-
-User-based Wi-Fi profiles that require the user to sign in to connect to Wi-Fi aren't supported. New users who never signed in before converting the device to a Windows 365 Boot device can't use the device to connect to the network.
 
 ## VPN support
 
@@ -285,6 +279,16 @@ If the user must share a local settings screen, use a different tool like Quick 
 ### Solution
 
 If the user still doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
+
+## User can't get connected after device comes out of sleep in some scenarios
+
+### Solution
+
+IT admin needs to set these two policies on the endpoint:
+
+[RequirePasswordWhenComputerWakesPluggedIn](/windows/client-management/mdm/policy-csp-power)
+
+[RequirePasswordWhenComputerWakesOnBattery](/windows/client-management/mdm/policy-csp-power)
 
 ## Next steps
 

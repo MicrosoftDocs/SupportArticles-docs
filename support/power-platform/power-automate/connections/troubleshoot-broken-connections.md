@@ -1,58 +1,60 @@
 ---
-title: Troubleshoot Broken Connections
-description: Learn how to troubleshoot and resolve connection problems and ensure a smoother experience with your applications and services in Microsoft Power Platform.
+title: Resolve Power Automate Broken Connections
+description: Troubleshoot broken connections in Microsoft Power Platform. Learn how to resolve timeouts, DLP blocks, expired tokens, and more. Fix your flows today.
 ms.custom: sap:Connections
 ms.workload: connectors
-author: nravindra-msft
-ms.author: nravindra
-ms.reviewer: angieandrews, rehodger
-ms.date: 06/04/2025
+ms.reviewer: nravindra, angieandrews, rehodger, matow, v-shaywood
+ms.date: 03/30/2026
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
 
-There are various reasons why [connection](/power-automate/add-manage-connections) problems might occur in Microsoft Power Platform. This article describes some of the common reasons and helps you troubleshoot and solve these issues.
+## Summary
+
+[Connections](/power-automate/add-manage-connections) in Microsoft Power Platform can break for several reasons. These causes include expired tokens, Data Loss Prevention (DLP) blocks, password changes, Conditional Access policy mismatches, and disabled accounts. This article helps you identify the cause and fix broken connections in Power Automate.
 
 - [Connection times out](#connection-times-out)
-- [A DLP block occurs](#a-dlp-block-occurs)
-- [Invalid authenticated devices](#invalid-authenticated-devices)
-- [Inactivity for a long time](#inactivity-for-a-long-time)
-- [Connection issue related to attended mode](#connection-issue-related-to-attended-mode)
-- [Password modification by a user](#password-modification-by-a-user)
+- [DLP block occurs](#dlp-block-occurs)
+- [Invalid authenticated devices are used](#invalid-authenticated-devices-are-used)
+- [Inactivity persists for a long time](#inactivity-persists-for-a-long-time)
+- [Connection problem related to attended mode occurs](#connection-problem-related-to-attended-mode-occurs)
+- [Password modification is made by a user](#password-modification-is-made-by-a-user)
 - [Microsoft Entra ID configuration is changed](#microsoft-entra-id-configuration-is-changed)
 - [Connection owner account is deleted or disabled](#connection-owner-account-is-deleted-or-disabled)
 - [Tenant administrator disables the application](#tenant-administrator-disables-the-application)
+- [Conditional Access policy mismatch for embedded flows occurs](#conditional-access-policy-mismatch-for-embedded-flows-occurs)
+- [Terms of Use policy breaks flow connections](#terms-of-use-policy-breaks-flow-connections)
 
 ## Connection times out
 
-This issue occurs when a client (such as a web browser or an application) tries to establish a connection with a server, but the server doesn't respond within a specified time limit. This can occur for several reasons, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response and terminates the connection attempt.
+This problem occurs if a client (such as a web browser or an application) tries to establish a connection to a server, but the server doesn't respond within a specified time limit. Several conditions can cause this problem, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response, and terminates the connection attempt.
 
 You might also receive the following error message:
 
 > The user could not be authenticated as the grant is expired. The user must sign in again.
 
-### Troubleshooting steps
+### Solution
 
-1. Check your internet connection: Ensure that the internet connection is stable and working properly.
-2. Check the server status: Verify if the server you're trying to connect to is online and not experiencing any downtime.
-3. Try increasing the time-out limit: Sometimes, increasing the time-out limit can help in establishing a connection with the server.
+1. Check your internet connection: Make sure that the internet connection is stable and working correctly.
+1. Check the server status: Verify that the server you're trying to connect to is online and not experiencing any downtime.
+1. Try increasing the timeout limit: Sometimes, increasing the timeout limit can help establish a connection to the server.
 
-## A DLP block occurs
+## DLP block occurs
 
-[Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) is a security measure that prevents sensitive information from being shared or transferred inappropriately. A DLP block occurs when a DLP policy detects that an action, such as sending an email or sharing a file, violates the organization's data protection rules. The DLP system then blocks the action to prevent potential data breaches or unauthorized access to sensitive information.
+[Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) is a security measure that prevents sensitive information from being shared or transferred inappropriately. A DLP block occurs if a DLP policy detects that an action, such as sending an email message or sharing a file, violates the organization's data protection rules. The DLP system then blocks the action to prevent potential data breaches or unauthorized access to sensitive information.
 
 When a DLP block occurs, you might also receive one of the following error messages:
 
 > - Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.
 > - Device is not in required device state: domain_joined. Conditional Access policy requires a domain joined device, and the device is not domain joined.
 
-### Troubleshooting steps
+### Solution
 
-1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
-2. Consult with your administrator: If they've blocked the connector or connection, consult with them about unblocking it.
+1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are blocked and why.
+1. Consult with your administrator: If they blocked the connector or connection, request that they unblock it.
 
-## Invalid authenticated devices
+## Invalid authenticated devices are used
 
-This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device is disabled. This issue isn't related to Power Automate but to the tenant's configuration at the administrative level.
+This situation occurs if a user tries to authenticate by using a device for multifactor authentication (MFA), but the device is disabled. This problem isn't related to Power Automate but to the tenant's configuration at the administrative level.
 
 In this situation, you might also receive one of the following error messages:
 
@@ -62,14 +64,14 @@ In this situation, you might also receive one of the following error messages:
 > - Application needs to enforce Intune protection policies.
 > - Error from token exchange. Permission denied due to missing connection ACL.
 
-### Troubleshooting steps
+### Solution
 
 1. Contact the tenant administrator to understand why the device was disabled.
-2. Try re-authorizing the connection.
+1. Try to reauthorize the connection.
 
-## Inactivity for a long time
+## Inactivity persists for a long time
 
-This refers to a situation where a connection becomes invalid because it hasn't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it expires.
+This situation occurs if a connection becomes invalid because it isn't used for a specified period. For example, the SharePoint connector requires usage at least one time every 90 days to remain active. If you don't use the connection within this period, the connection expires.
 
 For more information, see [Refresh tokens in the Microsoft identity platform](/entra/identity-platform/refresh-tokens).
 
@@ -78,71 +80,117 @@ In this situation, you might also receive one of the following error messages:
 > - The refresh token has expired due to inactivity. The token was issued on \<DateTime> and was inactive for 90.00:00:00.
 > - The provided authorization code or refresh token has expired due to inactivity. Send a new interactive authorization request for this user and resource.
 
-### Troubleshooting steps
+### Solution
 
-Create a new connection or re-authorize the existing one.
+Create a new connection or reauthorize the existing one.
 
-## Connection issue related to attended mode
+## Connection problem related to attended mode occurs
 
-This refers to problems that occur when a user tries to use features that require a license for unattended mode but doesn't have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection fails.
+This situation refers to problems that occur if a user tries to use features that require a license for unattended mode but the user doesn't have the necessary license. In attended mode, the user must be present and interact with the system. However, unattended mode provides fully automated processes without user interaction. If a user without the appropriate license tries to use unattended mode, the connection fails.
 
 [Learn more about attended and unattended scenarios for process automation](/power-automate/guidance/planning/attended-unattended).
 
-### Troubleshooting steps
+### Solution
 
-Ensure the user has the correct license to interact with the system as required in unattended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
+Make sure that the user has the correct license to interact with the system as required in unattended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
 
-## Password modification by a user
+## Password modification is made by a user
 
-This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection breaks if the new password isn't updated.
+This problem occurs if you delete or change a password for the account that you use to create the connection, or you let the password expire. Because account verification is a crucial part of authentication whenever you trigger a connection, the connection breaks if you don't update the new password.
 
 You might also receive the following error message:
 
 > The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '\<DateTime>' and the TokensValidFrom date (before which tokens are not valid) for this user is '\<DateTime>'.
 
-### Troubleshooting steps
+### Solution
 
-Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
+Every time that you update your password, you invalidate the existing connection that uses the old password. You must create a connection for each of those connectors, or edit the existing connection. To avoid this problem, use services such as [Microsoft Entra ID](/entra/fundamentals/whatis).
 
 ## Microsoft Entra ID configuration is changed
 
-This refers to modifications made at the Microsoft Entra ID (formerly Azure Active Directory) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, or updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
+This problem refers to modifications that are made at the Microsoft Entra ID (formerly Azure Active Directory) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, and updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
 
 You might also receive the following error message:
 
 > Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000003-0000-0000-c000-000000000000'.
 
-### Troubleshooting steps
+### Solution
 
-Contact the tenant administrator to understand the specific changes and reauthorize the connection if necessary.
+Contact the tenant administrator to understand the specific changes and reauthorize the connection, if necessary.
 
 ## Connection owner account is deleted or disabled
 
-This refers to a situation where the account that created a connection is either removed or disabled in the directory. As a result, the connection becomes invalid, affecting all users who share it.
+This situation occurs if the account that created a connection is removed or disabled in the directory. In this situation, the connection becomes invalid and affects all users who share it.
 
-In this situation, you might also receive one of the following error messages:
+You might also receive one of the following error messages:
 
-- > The user account {EUII Hidden} has been deleted from the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
-- > The user account is disabled.
-- > The user account {EUII Hidden} does not exist in the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
+> - The user account {EUII Hidden} has been deleted from the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
+> - The user account is disabled.
+> - The user account {EUII Hidden} does not exist in the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
 
-### Troubleshooting steps
+### Solution
 
-To resolve this issue, another user with access can reauthorize the connection, thereby updating the ownership and restoring functionalities for all users.
+To resolve this problem, have another user who has access reauthorize the connection. This action updates the ownership and restores functionalities for all users.
 
 ## Tenant administrator disables the application
 
-This refers to a situation where the tenant administrator has deactivated an application registered in Microsoft Entra ID (formerly Azure Active Directory). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
+This situation occurs if the tenant administrator deactivates an application that's registered in Microsoft Entra ID (formerly Azure Active Directory). This action invalidates any service principal connections associated with the application because it can no longer issue tokens.
 
 You might also receive the following error message:
 
 > The service principal for resource '\<ResourceID>' is disabled. This indicate that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.
 
-### Troubleshooting steps
+### Solution
 
-To resolve this issue, the tenant administrator needs to reenable the application or create a new service principal connection.
+To resolve this problem, the tenant administrator has to reenable the application or create a new service principal connection.
 
-## More information
+## Conditional Access policy mismatch for embedded flows occurs
+
+Connections can appear to be broken when you access a flow from an embedded surface (such as a SharePoint list, Microsoft Teams channel, or Excel workbook) if the Conditional Access (CA) policies for the host application and Power Automate have different requirements.
+
+You might receive an authentication error message that resembles the following example:
+
+> AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '\<Resource\>'.
+
+### Cause
+
+When a user accesses a flow from SharePoint, Teams, or Excel, the host application exchanges its token for a **Microsoft Flow Service** token. If the CA policies have different requirements (MFA, Terms of Use, or device compliance) for one application but not the other, this exchange fails.
+
+This problem typically occurs if CA policies target individual applications that have different requirements, instead of using the **Office 365** app or **All cloud apps** target that covers both the host application and Power Automate consistently.
+
+### Solution
+
+1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **Protection** > **Conditional Access** > **Policies**.
+1. Switch your policy to target the **Office 365** app or **All cloud apps** for consistent enforcement across Power Automate and the apps that embed it.
+1. If you must target individual applications, verify that all Conditional Access requirements (MFA, Terms of Use, device compliance) are consistent between the host applications (SharePoint, Teams, Excel) and **Microsoft Flow Service** (Application ID: `7df0a125-d3be-4c96-aa54-591f83ff541c`).
+1. Ask affected users to sign out and sign back in.
+
+For more information, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
+
+## Terms of Use policy breaks flow connections
+
+Connections can break when an administrator adds a [Terms of Use](/entra/identity/conditional-access/terms-of-use) requirement to a Conditional Access policy after flows are already running, or when a Terms of Use consent expires on a recurring schedule.
+
+You might see the following connection status:
+
+> Failed to refresh access token for service
+
+The accompanying error message doesn't specifically mention Terms of Use as the cause.
+
+### Cause
+
+Power Automate connections refresh tokens silently in the background. When a Terms of Use grant control is in scope, the silent token refresh fails because the Terms of Use acceptance page can't be presented without an interactive session. This failure breaks connections retroactively, even for flows that were working before the Terms of Use policy existed.
+
+### Solution
+
+1. Check Microsoft Entra sign-in logs for `AADSTS50158` or `AADSTS53003` errors that target the **Microsoft Flow Service** resource. On the **Conditional Access** tab, look for a Terms of Use grant control that have a status of **Not Satisfied**.
+1. Ask the flow owner to sign in interactively to the [Power Automate portal](https://make.powerautomate.com) to accept the Terms of Use prompt.
+1. Repair or re-create the affected connection.
+1. To prevent recurrence, exclude service accounts and dedicated flow connection owners from Conditional Access policies that include [Terms of Use](/entra/identity/conditional-access/terms-of-use) grant controls.
+
+For more information, see [Conditional access and multifactor authentication in Power Automate](/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow).
+
+## Related content
 
 - [Manage connections in Power Automate](/power-automate/add-manage-connections)
 - [Create a connection with a service principal](/power-automate/desktop-flows/alm/alm-connection)

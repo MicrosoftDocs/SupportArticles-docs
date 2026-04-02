@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Data Corruption and Storage Replication Failures in Windows Server 2025
 description: Discusses how to identify, troubleshoot, and resolve issues that relate to data corruption, disk errors, and storage replication failures in Windows Server 2025.
-ms.date: 12/19/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

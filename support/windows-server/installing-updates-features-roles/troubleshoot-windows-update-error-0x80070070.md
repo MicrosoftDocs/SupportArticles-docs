@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x80070070
 description: Learn how to fix Windows Update error code 0x80070070, which typically indicates insufficient disk space.
-ms.date: 12/01/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 ai-usage: ai-generated
 audience: itpro

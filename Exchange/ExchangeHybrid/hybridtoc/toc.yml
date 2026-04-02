@@ -94,6 +94,8 @@ items:
           href: ../email-delivery/mail-flow-stops-event-2004.md
         - name: Messages aren't routed through on-premises in hybrid
           href: ../email-delivery/hybrid-messages-not-routed-through-on-premises.md
+        - name: Email delivery to Microsoft 365 Group fails
+          href: ../email-delivery/microsoft-365-group-email-delivery-fails.md          
         - name: NDR 5.2.0 when sending meeting invites
           href: ../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md
         - name: On-premises users not getting emails from Microsoft 365
@@ -140,6 +142,8 @@ items:
           href: ../hybrid-configuration-wizard-errors/the-domains-already-exist-in-another-organization-error.md
         - name: Edge Transport servers can't be specified
           href: ../hybrid-configuration-wizard-errors/hcw8043-edge-transport-servers-not-specified.md
+        - name: Error 429 in Hybrid Configuration Wizard
+          href: ../hybrid-configuration-wizard-errors/error-429-in-hcw.md          
         - name: Error running the Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/run-hybrid-configuration-wizard-error.md
         - name: Exception error when running the Hybrid Configuration Wizard

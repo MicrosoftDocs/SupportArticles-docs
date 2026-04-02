@@ -1,7 +1,7 @@
 ---
 title: Event ID 27 KDC error on domain controllers
 description: Fixes the Event ID 27 KDC error that occurs on Windows Server 2003 domain controllers.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

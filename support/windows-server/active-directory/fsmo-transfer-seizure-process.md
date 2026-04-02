@@ -1,7 +1,7 @@
 ---
 title: Transfer and seize FSMO roles
 description: Describes how to transfer and seize Flexible Single Master Operations (FSMO) roles.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

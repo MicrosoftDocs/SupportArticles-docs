@@ -1,6 +1,6 @@
 ---
-title: Can't access the cluster API server using authorized IP ranges
-description: Troubleshoot problems accessing the cluster API server when you use authorized IP address ranges in Azure Kubernetes Service (AKS).
+title: Troubleshoot AKS API Server Authorized IP Range Access
+description: Can't access the AKS cluster API server with authorized IP ranges? Learn the fix steps and restore kubectl connectivity quickly. Start troubleshooting now.
 ms.date: 03/26/2025
 ms.reviewer: chiragpa, nickoman, wonkilee, v-leedennis
 ms.service: azure-kubernetes-service
@@ -9,6 +9,8 @@ keywords:
 ms.custom: sap:Connectivity
 ---
 # Can't access the cluster API server when using authorized IP ranges
+
+## Summary
 
 This article discusses how to resolve a scenario in which you can't use authorized IP address ranges to access the API server for a Microsoft Azure Kubernetes Service (AKS) cluster.
 

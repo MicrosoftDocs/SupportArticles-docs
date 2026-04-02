@@ -1,7 +1,7 @@
 ---
 title: Collect Data to Analyze and Troubleshoot Windows Servicing, Updates, and Features on Demand Scenarios
 description: Helps gather information about your issue by using the TroubleShootingScript (TSS) toolset before contacting Microsoft support for Windows servicing, Updates, and Features on Demand scenarios.
-ms.date: 07/22/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

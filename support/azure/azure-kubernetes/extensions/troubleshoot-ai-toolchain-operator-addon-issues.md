@@ -8,6 +8,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
 ---
 # Troubleshoot AKS AI toolchain operator add-on errors
 
+## Summary
+
 This article provides guidance on resolving errors that might occur when you enable the Microsoft Azure Kubernetes Service (AKS) AI Toolchain Operator (KAITO) add-on during cluster creation or update.
 
 ## Prerequisites
@@ -27,7 +29,7 @@ The KAITO add-on consists of two controllers: the `gpu-provisioner` controller a
 | GPU node was not created | [Cause 2: GPU quota limitations](#cause-2-gpu-quota-limitations) |
 | Resource ready condition is not `True` | [Cause 3: Long pull time for model inference images](#cause-3-long-pull-time-for-model-inference-images)|
 
-## Cause 1: Incorrect KAITO custom resource configuration
+## Cause 1: incorrect KAITO custom resource configuration
 
 After you enable the add-on and deploy a preset or custom workspace custom resource (CR), the `workspace` controller includes a validation webhook. This webhook blocks common mistakes of setting wrong values in the CR specification.
 
@@ -56,7 +58,7 @@ To resolve this issue, use one of the following methods:
 
     If the required GPU VM size is unavailable in your current region, consider switching to a different region or selecting an alternative GPU VM size.
 
-## Cause 3: Long pull time for model inference images
+## Cause 3: long pull time for model inference images
 
 If the image access mode is set to private, the model inference image might not be pulled. This issue can occur for images with specified URLs and pull secrets.
 

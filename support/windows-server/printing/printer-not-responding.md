@@ -1,7 +1,7 @@
 ---
 title: Printer Not Responding
 description: Provides solutions to an issue where a printer isn't responding.
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

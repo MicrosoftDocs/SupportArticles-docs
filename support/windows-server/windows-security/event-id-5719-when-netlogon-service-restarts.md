@@ -1,7 +1,7 @@
 ---
 title: Event ID 5719 - STATUS_INTERNAL_ERROR Occurs When the NetLogon Service Restarts
 description: Helps you diagnose Event ID 5719 when it includes the STATUS_INTERNAL_ERROR code. Windows might log this event when the NetLogon service restarts on Windows Server 2025.
-ms.date: 11/06/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

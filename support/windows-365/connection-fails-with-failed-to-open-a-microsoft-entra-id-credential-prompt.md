@@ -3,7 +3,7 @@ title: Connection fails with error Failed to Open a Microsoft Entra ID Credentia
 description: Introduces how to resolve the connection failure with the "Failed to open a Microsoft Entra ID credential prompt" error.
 audience: itpro
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 02/12/2026
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ms.custom:

@@ -1,6 +1,6 @@
 ---
 title: Identify containers causing high disk I/O latency in AKS clusters
-description: Learn how to identify which containers and pods are causing high disk I/O latency in your Azure Kubernetes Service clusters to easily troubleshoot issues using the open source project Inspektor Gadget.
+description: Identify containers and pods causing high disk I/O latency in AKS, and troubleshoot faster with Inspektor Gadget. Start diagnosing bottlenecks now.
 ms.date: 07/16/2025
 ms.author: burakok
 ms.reviewer: burakok, mayasingh, blanquicet
@@ -9,40 +9,42 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot high disk I/O latency in AKS clusters
 
-Disk I/O latency can severely impact the performance and reliability of workloads running in Azure Kubernetes Service (AKS) clusters. This article shows how to use the open source project [Inspektor Gadget](https://aka.ms/ig-website) to identify which containers and pods are causing high disk I/O latency in AKS.
+## Summary
 
-Inspektor Gadget provides eBPF-based gadgets that help you observe and troubleshoot disk I/O issues in Kubernetes environments.
+Disk I/O latency can severely affect the performance and reliability of workloads running in Azure Kubernetes Service (AKS) clusters. This article shows how to use the open source project [Inspektor Gadget](https://aka.ms/ig-website) to identify which containers and pods cause high disk I/O latency in AKS.
+
+Inspektor Gadget provides eBPF-based gadgets that help you observe and troubleshoot disk I/O problems in Kubernetes environments.
 
 ## Symptoms
 
-You may suspect disk I/O latency issues when you observe the following behaviors in your AKS cluster:
+You might suspect disk I/O latency problems when you observe the following behaviors in your AKS cluster:
 
-- Applications become unresponsive during file operations
-- [Azure Portal metrics](/azure/aks/monitor-aks-reference#supported-metrics-for-microsoftcomputevirtualmachines)(`Data Disk Bandwidth Consumed Percentage` and `Data Disk IOPS Consumed Percentage`) or other system monitoring shows high disk utilization with low throughput
-- Database operations take significantly longer than expected
-- Pod logs show file system operation errors or timeouts
+- Applications become unresponsive during file operations.
+- [Azure Portal metrics](/azure/aks/monitor-aks-reference#supported-metrics-for-microsoftcomputevirtualmachines)(`Data Disk Bandwidth Consumed Percentage` and `Data Disk IOPS Consumed Percentage`) or other system monitoring shows high disk utilization with low throughput.
+- Database operations take significantly longer than expected.
+- Pod logs show file system operation errors or timeouts.
 
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- Access to your AKS cluster with sufficient permissions to run privileged pods
-- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for eBPF-based observability. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster)
+- Access to your AKS cluster with sufficient permissions to run privileged pods.
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for eBPF-based observability. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 
 > [!NOTE]
 > The `top_blockio` gadget requires kernel version 6.5 or later. You can verify your AKS node kernel version by running `kubectl get nodes -o wide` to see the kernel version in the KERNEL-VERSION column.
 
 ## Troubleshooting checklist
 
-### Step 1: Profile disk I/O latency with `profile_blockio`
+### Step 1: Profile disk I/O latency by using `profile_blockio`
 
-The [`profile_blockio`](https://aka.ms/ig-profile-blockio) gadget gathers information about block device I/O usage and periodically generates a histogram distribution of I/O latency. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
+The [`profile_blockio`](https://aka.ms/ig-profile-blockio) gadget collects information about block device I/O usage and periodically generates a histogram distribution of I/O latency. This data helps you visualize disk I/O performance and identify latency patterns. Use this information to gather evidence that supports or refutes the hypothesis that the symptoms you're seeing are due to disk I/O problems. 
 
 ```console
 kubectl gadget run profile_blockio --node <node-name>
 ```
 
 > [!NOTE]
-> The `profile_blockio` gadget requires specifying a specific node with the `--node` parameter. You can get node names by running `kubectl get nodes`.
+> You must specify a node by using the `--node` parameter when you use the `profile_blockio` gadget. Run `kubectl get nodes` to get node names.
 
 **Baseline example** (empty cluster with minimal activity):
 
@@ -112,15 +114,15 @@ latency
   33554432 -> 67108864   : 0        |                                        |
 ```
 
-**Interpreting the results**: To identify which node has I/O pressure you can compare the baseline vs. stress scenarios:
-- **Baseline**: Most operations (4,211 count) in the 16-32ms range, typical for normal system activity
-- **Under stress**: Significantly more operations in higher latency ranges (9,552 operations in 131-262ms, 6,778 in 262-524ms)
-- **Performance degradation**: The stress test shows operations extending into the 500ms-2s range, indicating disk saturation
-- **Concerning signs**: Look for high counts above 100ms (100,000µs) which may indicate disk performance issues
+**Interpreting the results**: To identify which node has I/O pressure, compare the baseline and stress scenarios:
+- **Baseline**: Most operations (4,211 count) are in the 16-32 ms range, which is typical for normal system activity.
+- **Under stress**: Significantly more operations are in higher latency ranges (9,552 operations in 131-262 ms, 6,778 in 262-524 ms).
+- **Performance degradation**: The stress test shows operations extending into the 500 ms-2 s range, which indicates disk saturation.
+- **Concerning signs**: Look for high counts above 100 ms (100,000 µs) that might indicate disk performance problems.
 
 ### Step 2: Find top disk I/O consumers with `top_blockio`
 
-The [`top_blockio`](https://aka.ms/ig-top-blockio) gadget provides a periodic list of containers with the highest disk I/O operations. Optionally we can limit the tracing to the node we identified in Step 1. This gadget requires kernel version 6.5 or higher (available on [Azure Linux Container Host clusters](/azure/aks/use-azure-linux)).
+The [`top_blockio`](https://aka.ms/ig-top-blockio) gadget provides a periodic list of containers with the highest disk I/O operations. You can optionally limit the tracing to the node you identified in Step 1. This gadget requires kernel version 6.5 or higher (available on [Azure Linux Container Host clusters](/azure/aks/use-azure-linux)).
 
 ```console
 kubectl gadget run top_blockio --namespace <namespace> --sort -bytes [--node <node-name>]
@@ -137,7 +139,7 @@ aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd        
 aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress  324… 324… 8     0     4096       4096       1     write
 ```
 
-From the output, we can identify containers with unusually high number of bytes read/written into the disk (`BYTES` column), time spent on reading/writing operations (`US` column), or number of IO operations (`IO` column) which may indicate high disk activity. In this example, we can see significant write activity (173MB) with considerable time spent (~154 seconds total).
+From the output, you can identify containers with an unusually high number of bytes read or written to the disk (`BYTES` column), time spent on reading or writing operations (`US` column), or number of I/O operations (`IO` column), which might indicate high disk activity. In this example, you see significant write activity (173 MB) with considerable time spent (~154 seconds total).
 
 > [!NOTE]
 > Empty K8S.NAMESPACE, K8S.PODNAME, and K8S.CONTAINERNAME fields can occur during kernel space initiated operations or high-volume I/O. You can still use the `top_file` gadget for detailed process information when these fields are empty.
@@ -161,31 +163,31 @@ aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd        
 ...
 ```
 
-This output shows which files are being accessed most frequently, helping you pinpoint what specific file a given process is reading/writing the most. In this example, the stress-hdd pod is creating multiple temporary files with significant write activity (18-23MB each)
+This output shows which files are being accessed most frequently, helping you pinpoint what specific file a given process is reading or writing the most. In this example, the stress-hdd pod is creating multiple temporary files with significant write activity (18-23 MB each).
 
 ### Root cause analysis workflow
 
-By combining all three gadgets, you can trace disk latency issues from symptoms to root cause:
+By combining all three gadgets, you can trace disk latency problems from symptoms to root cause:
 
-1. **`profile_blockio`** identifies that disk latency exists in a given node (high counts in 100ms+ ranges)
-2. **`top_blockio`** shows which processes are generating the most disk I/O (173MB writes with 154 seconds total time spent)
-3. **`top_file`** reveals the specific files and commands causing the issue (stress command creating /stress.* files)
+1. **`profile_blockio`** identifies that disk latency exists in a given node (high counts in 100 ms+ ranges).
+1. **`top_blockio`** shows which processes generate the most disk I/O (173 MB writes with 154 seconds total time spent).
+1. **`top_file`** reveals the specific files and commands causing the problem (stress command creating `/stress.*` files).
 
 This complete visibility allows you to:
-- **Identify the problematic pod**: `stress-hdd` pod in the `default` namespace
-- **Find the specific process**: `stress` command with PIDs 49258, 49254, etc.
-- **Locate the problematic files**: Multiple `/stress.*` temporary files with 18-23MB each
-- **Understand the I/O pattern**: Heavy write operations creating temporary files
+- **Identify the problematic pod**: `stress-hdd` pod in the `default` namespace.
+- **Find the specific process**: `stress` command with PIDs 49258, 49254, and others.
+- **Locate the problematic files**: Multiple `/stress.*` temporary files with 18-23 MB each.
+- **Understand the I/O pattern**: Heavy write operations creating temporary files.
 
-With this information, you can take targeted action rather than making broad system changes.
+Use this information to take targeted action instead of making broad system changes.
 
 ## Next steps
 
-Based on the results from these gadgets, you can take the following actions:
+Based on the results from these gadgets, take the following actions:
 
-- **High latency in `profile_blockio`**: Investigate the underlying disk performance and if the workload needs better disk performance, consider using [storage optimized nodes](/azure/virtual-machines/sizes/overview#storage-optimized)
-- **High I/O operations in `top_blockio`**: Review application logic to optimize disk access patterns or implement caching
-- **Specific files in `top_file`**: Analyze if files can be moved to faster storage, cached, or if application logic can be optimized
+- **High latency in `profile_blockio`**: Investigate the underlying disk performance. If the workload needs better disk performance, consider using [storage optimized nodes](/azure/virtual-machines/sizes/overview#storage-optimized).
+- **High I/O operations in `top_blockio`**: Review application logic to optimize disk access patterns or implement caching.
+- **Specific files in `top_file`**: Analyze if you can move files to faster storage, cache them, or if application logic can be optimized.
 
 ## Related content
 

@@ -1,7 +1,7 @@
 ---
 title: Guidance for Troubleshooting Data Corruption and Disk Errors
 description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -49,8 +49,8 @@ Make sure that the storage-related drivers and firmware are up to date. Consult 
 
 Run `chkdsk` in scan mode to look for potential storage system issues without making changes. Open a Windows Command Prompt window as an administrator, and then run the following command:
 
-```
-console chkdsk /scan
+```console
+chkdsk /scan
 ```
 
 **Review the event log for relevant events**

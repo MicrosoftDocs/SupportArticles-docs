@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot AvailabilityZoneNotSupported Error Code
-description: Learn how to troubleshoot the AvailabilityZoneNotSupported error when you try to create an Azure Kubernetes Service cluster in a set of zones.
+description: Learn how to troubleshoot the AvailabilityZoneNotSupported error in AKS cluster creation, verify SKU restrictions, and create your cluster successfully.
 ms.date: 06/04/2025
 ms.reviewer: marcha, skuchipudi, v-weizhu
 ms.service: azure-kubernetes-service
@@ -8,6 +8,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster create that failed because of a AvailabilityZoneNotSupported error code so that I can create the cluster successfully.
 ---
 # Troubleshoot the AvailabilityZoneNotSupported error code
+
+## Summary
 
 This article discusses how to identify and resolve the "AvailabilityZoneNotSupported" error that occurs when you try to create an Azure Kubernetes Service (AKS) cluster.
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Error 0x80070002
 description: Learn how to resolve the Windows Update error 0x80070002, which occurs due to missing or corrupt files or incomplete updates.
-ms.date: 04/16/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

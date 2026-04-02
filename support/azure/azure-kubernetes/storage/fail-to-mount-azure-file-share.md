@@ -1,12 +1,14 @@
 ---
 title: Unable to mount Azure file share
-description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
+description: Troubleshoot Azure file share mount errors in AKS by identifying common causes, fixing connectivity and permission issues, and restoring pod startup—start now.
 ms.date: 10/10/2024
 ms.reviewer: chiragpa, akscsscic, shoguo, v-weizhu, v-rekhanain
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
 # Errors when mounting an Azure file share
+
+## Summary
 
 This article provides possible causes and solutions for errors that cause the mounting of an Azure file share to fail.
 
@@ -281,7 +283,7 @@ To verify the mismatch, follow these steps:
 
 3. Select **Show** (the eye icon) and compare the values of the storage account name and associated key with the values in Step 1.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png" alt-text="Screenshot shows storage account name and key in a secret." lightbox="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png" alt-text="Screenshot of a Kubernetes secret showing the storage account name and key values." lightbox="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png":::
 
     Before you select **Show**, the values of the storage account name and associated key are encoded into base64 strings. After you select **Show**, the values are decoded.
 
@@ -375,23 +377,23 @@ nslookup <storage-account-name>.privatelink.file.core.windows.net
 
 If the FQDN is resolved via a public IP address (see the following screenshot), create a virtual network link for the VNET of the AKS cluster at the private DNS zone ("privatelink.file.core.windows.net") level. Note that a virtual network link is already automatically created for the VNET of the storage account's private endpoint.
 
-:::image type="content" source="media/fail-to-mount-azure-file-share/verify-fqdn-resolved.png" alt-text="Screenshot that shows FQDN is resolved by a public IP address.":::
+:::image type="content" source="media/fail-to-mount-azure-file-share/verify-fqdn-resolved.png" alt-text="Screenshot of nslookup output where the storage account FQDN resolves to a public IP address.":::
 
 To create the virtual network link, follow these steps:
 
 1. Access the Private DNS zone and select **Virtual network links** > **Add**.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png" alt-text="Screenshot shows a virtual network link that's added to the storage account." lightbox="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png" alt-text="Screenshot of the private DNS zone showing a virtual network link for the storage account." lightbox="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png":::
 
 2. Fill in the fields and select the VNET of the AKS cluster for **Virtual networks**. For how to identify the VNET of the AKS cluster, see the [Solution: Allow AKS's VNET and subnet for storage account](#solution-allow-akss-vnet-and-subnet-for-storage-account) section.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/add-virtual-network-link.png" alt-text="Screenshot shows how to add virtual network link.":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/add-virtual-network-link.png" alt-text="Screenshot of the Add virtual network link pane used to select an AKS virtual network.":::
 
 3. Select **OK**.
 
 After the virtual network link is added, the FQDN should be resolved via a private IP address, and the mounting operation should succeed. See the following screenshot for an example:
 
-:::image type="content" source="media/fail-to-mount-azure-file-share/private-ip-address-resolved.png" alt-text="Screenshot shows private ip address is resolved.":::
+:::image type="content" source="media/fail-to-mount-azure-file-share/private-ip-address-resolved.png" alt-text="Screenshot of nslookup output where the storage account FQDN resolves to a private IP address.":::
 
 ### <a id="akssmbencryption"></a>Cause 4: Storage account is set to require encryption that the client doesn't support
 

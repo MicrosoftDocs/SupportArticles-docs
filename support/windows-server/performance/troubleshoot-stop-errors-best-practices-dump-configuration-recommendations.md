@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
 description: Introduces what happens during a stop error and best practices for preventing and troubleshooting stop error issues.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -102,6 +102,9 @@ If no dump is generated, follow [this recommendation](#recommended-dump-configur
 ## Recommended dump configuration
 
 This recommendation depends on the size of the system, as the RAM and the hard disk space directly impact our recommendations.
+
+> [!IMPORTANT]
+> For a complete memory dump, Windows needs a paging file of adequate size on the boot volume, even for the DumpFile that is set to another local disk. When a crash occurs, memory is first saved to the paging file on the OS volume. Without this requirement, a full dump might not be produced.
 
 ### Systems memory up to 32 GB
 

@@ -1,7 +1,7 @@
 ---
 title: NBTSTAT -A doesn't resolve computer name with DNS
 description: Works around an issue where the NBTSTAT -A command doesn't resolve computer name with Domain Name System (DNS).
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

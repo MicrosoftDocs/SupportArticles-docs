@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot processes by using Task Manager
 description: Describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
