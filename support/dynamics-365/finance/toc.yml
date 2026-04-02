@@ -76,10 +76,10 @@
       href: general-ledger/year-end-close-miss-opening-balances.md
     - name: Financial dimensions
       items:
-        - name: Dimension errors after restoring a database to another environment
-          href: general-ledger/financial-dimensions-errors-after-database-restore.md
-        - name: Source entity missing from 'Use values from' dropdown
-          href: general-ledger/financial-dimensions-table-missing-from-use-values-from.md
+        - name: Financial dimension errors after restoring a database to another environment
+          href: general-ledger/dimensions-errors-after-database-restore.md
+        - name: Source entity isn't available in the "Use values from" dropdown
+          href: general-ledger/dimensions-missing-use-values-from-source.md
 - name: Tax
   items:
     - name: Tax Calculation

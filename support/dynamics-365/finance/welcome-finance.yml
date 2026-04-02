@@ -112,10 +112,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Dimension errors after restoring a database to another environment
-            url: general-ledger/financial-dimensions-errors-after-database-restore.md
-          - text: Source entity missing from 'Use values from' dropdown
-            url: general-ledger/financial-dimensions-table-missing-from-use-values-from.md
+          - text: Financial dimension errors after restoring a database to another environment
+            url: general-ledger/dimensions-errors-after-database-restore.md
+          - text: Source entity isn't available in the "Use values from" dropdown
+            url: general-ledger/dimensions-missing-use-values-from-source.md
 
   # Card
   - title: Tax
