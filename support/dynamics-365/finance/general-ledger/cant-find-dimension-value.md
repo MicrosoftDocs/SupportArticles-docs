@@ -29,7 +29,7 @@ To resolve this issue, assign the appropriate security role to the user:
 1. Select **Roles** > **Assign organizations**.
 1. Review the access scope, and grant access to the required organizations. To test, select **Grant access to all organizations**, and then check whether the dimension value appears.
 
-If the dimension value is still missing, an XDS policy on the backing entity (such as Customers or Operating units) might be filtering out records. To check, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy). If the dimension value is visible but you can't delete it, see [Can't delete a financial dimension value](blocked-from-deleting-dimension-value.md).
+If the dimension value is still missing, an XDS policy on the backing entity (such as Customers or Operating units) might be filtering out records. To check, temporarily assign the **XDSDataAccessPolicyBypassRole** role to the user. If the dimension value appears, an XDS policy is blocking visibility. For more information about XDS and the bypass role, see [Extensible data security policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies#bypassing-xds-policy). If the dimension value is visible but you can't delete it, see [Can't delete a financial dimension value](blocked-deleting-dimension-value.md).
 
 ## Has the dimension value been used at least once?
 
@@ -58,11 +58,11 @@ Financial dimensions rely on underlying views with a specific, fixed structure. 
 
 To resolve this issue, remove the extra fields from the affected view so its structure matches what the system expects. After you deploy the fix, the dimension reappears automatically when the server restarts.
 
-For more information about reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors). If the dimension itself is missing from the **Financial Dimensions** details page or shows as **\<Custom dimension\>**, see [Financial dimension is missing or shows as a custom dimension](financial-dimension-missing-details.md) for more detailed troubleshooting.
+For more information about reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors). If the dimension itself is missing from the **Financial Dimensions** details page or shows as **\<Custom dimension\>**, see [Financial dimension is missing or shows as a custom dimension](dimension-missing-details-page.md) for more detailed troubleshooting.
 
 ## Related content
 
-- [Can't delete a financial dimension value](blocked-from-deleting-dimension-value.md)
-- [Financial dimension is missing or shows as a custom dimension](financial-dimension-missing-details.md)
+- [Can't delete a financial dimension value](blocked-deleting-dimension-value.md)
+- [Financial dimension is missing or shows as a custom dimension](dimension-missing-details-page.md)
 - [Financial dimensions overview](/dynamics365/finance/general-ledger/financial-dimensions)
 - [Plan your chart of accounts](/dynamics365/finance/general-ledger/plan-chart-of-accounts)

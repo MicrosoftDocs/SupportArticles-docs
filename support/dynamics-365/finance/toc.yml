@@ -77,11 +77,11 @@
     - name: Financial dimensions
       items:
         - name: Can't delete a financial dimension value
-          href: general-ledger/blocked-from-deleting-dimension-value.md
+          href: general-ledger/blocked-deleting-dimension-value.md
         - name: Financial dimension is missing or shows as a custom dimension
-          href: general-ledger/financial-dimension-missing-details.md
+          href: general-ledger/dimension-missing-details-page.md
         - name: Financial dimension value is missing or unavailable
-          href: general-ledger/cannot-find-dimension-value.md
+          href: general-ledger/cant-find-dimension-value.md
 - name: Tax
   items:
     - name: Tax Calculation

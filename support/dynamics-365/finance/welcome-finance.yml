@@ -113,11 +113,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't delete a financial dimension value
-            url: general-ledger/blocked-from-deleting-dimension-value.md
+            url: general-ledger/blocked-deleting-dimension-value.md
           - text: Financial dimension is missing or shows as a custom dimension
-            url: general-ledger/financial-dimension-missing-details.md
+            url: general-ledger/dimension-missing-details-page.md
           - text: Financial dimension value is missing or unavailable
-            url: general-ledger/cannot-find-dimension-value.md
+            url: general-ledger/cant-find-dimension-value.md
 
   # Card
   - title: Tax

@@ -23,7 +23,7 @@ You might experience one or more of the following issues:
 - You receive the error: "DimensionAttributeValue.getValue called with an invalid DimensionAttribute record Id."
 
 > [!NOTE]
-> If a specific dimension *value* is missing rather than the dimension itself, see [Financial dimension value is missing or unavailable](cannot-find-dimension-value.md).
+> If a specific dimension *value* is missing rather than the dimension itself, see [Financial dimension value is missing or unavailable](cant-find-dimension-value.md).
 
 ## Did a customization change the underlying view structure?
 
@@ -33,7 +33,7 @@ Financial dimensions rely on underlying database views that must have an exact n
 
 To resolve this issue, remove the extra fields from the affected view through a code deployment so the view structure matches what the system expects. After you deploy the corrected code and the environment restarts, the dimension reappears automatically.
 
-For guidance on reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors). If the dimension is present but individual values are missing or not selectable, see [Financial dimension value is missing or unavailable](cannot-find-dimension-value.md).
+For guidance on reviewing and correcting customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors). If the dimension is present but individual values are missing or not selectable, see [Financial dimension value is missing or unavailable](cant-find-dimension-value.md).
 
 ## Were dimensions created from a demo model that isn't available in production?
 
@@ -45,7 +45,7 @@ To resolve this issue, remove the orphaned dimension data that the demo model le
 
 ## Related content
 
-- [Can't delete a financial dimension value](blocked-from-deleting-dimension-value.md)
-- [Financial dimension value is missing or unavailable](cannot-find-dimension-value.md)
+- [Can't delete a financial dimension value](blocked-deleting-dimension-value.md)
+- [Financial dimension value is missing or unavailable](cant-find-dimension-value.md)
 - [Financial dimensions overview](/dynamics365/finance/general-ledger/financial-dimensions)
 - [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures)

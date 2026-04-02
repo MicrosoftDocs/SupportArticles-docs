@@ -29,7 +29,7 @@ For example, to delete a Department dimension value, go to the **Operating units
 
 If you don't have the necessary roles or privileges to manage dimension values, the delete option might be disabled. This situation can happen when [Extensible Data Security (XDS) policies](/dynamics365/fin-ops-core/dev-itpro/sysadmin/extensible-data-security-policies) restrict access to the backing entity.
 
-To resolve this issue, verify that an administrator with full privileges can delete the dimension value. Contact your system administrator to request the necessary permissions. If the dimension value isn't visible at all, see [Financial dimension value is missing or unavailable](cannot-find-dimension-value.md) for additional troubleshooting steps related to security roles and XDS.
+To resolve this issue, verify that an administrator with full privileges can delete the dimension value. Contact your system administrator to request the necessary permissions. If the dimension value isn't visible at all, see [Financial dimension value is missing or unavailable](cant-find-dimension-value.md) for additional troubleshooting steps related to security roles and XDS.
 
 ## Was the dimension value used in a transaction?
 
@@ -53,15 +53,15 @@ For example:
 
 You might also see the following popup when you try to delete the record:
 
-:::image type="content" source="media/blocked-from-deleting-dimension-value/initial-popup.png" alt-text="Screenshot of the popup that appears when you try to delete a record used as a financial dimension value.":::
+:::image type="content" source="media/blocked-deleting-dimension-value/initial-popup.png" alt-text="Screenshot of the popup that appears when you try to delete a record used as a financial dimension value.":::
 
 Or a scan warning popup that shows a delete check has been scheduled:
 
-:::image type="content" source="media/blocked-from-deleting-dimension-value/scan-popup.png" alt-text="Screenshot of the scan warning popup that shows a delete check is scheduled.":::
+:::image type="content" source="media/blocked-deleting-dimension-value/scan-popup.png" alt-text="Screenshot of the scan warning popup that shows a delete check is scheduled.":::
 
 If the scan completes and finds a reference, the following results appear and the delete is blocked:
 
-:::image type="content" source="media/blocked-from-deleting-dimension-value/scan-ui-with-record.png" alt-text="Screenshot of the scan results showing a reference that blocks the deletion.":::
+:::image type="content" source="media/blocked-deleting-dimension-value/scan-ui-with-record.png" alt-text="Screenshot of the scan results showing a reference that blocks the deletion.":::
 
 ### Solution
 
@@ -74,6 +74,6 @@ If the scan finds that the record is referenced as a dimension value and deletio
 
 ## Related content
 
-- [Financial dimension value is missing or unavailable](cannot-find-dimension-value.md)
-- [Financial dimension is missing or shows as a custom dimension](financial-dimension-missing-details.md)
+- [Financial dimension value is missing or unavailable](cant-find-dimension-value.md)
+- [Financial dimension is missing or shows as a custom dimension](dimension-missing-details-page.md)
 - [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures)
