@@ -70,14 +70,12 @@
       href: general-ledger/add-change-accounting-reporting-currency.md
     - name: Troubleshoot issues with the General ledger adjustments page
       href: general-ledger/ledger-adjustments-troubleshoot.md
+    - name: Unexpected financial dimension values on transactions
+      href: general-ledger/incorrect-default-dimension-values.md
     - name: Vouchers aren't reversed when posting a journal with reversing entry and date
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
-    - name: Financial dimensions
-      items:
-        - name: Unexpected financial dimension values on transactions
-          href: general-ledger/incorrect-default-dimension-values.md
 - name: Tax
   items:
     - name: Tax Calculation

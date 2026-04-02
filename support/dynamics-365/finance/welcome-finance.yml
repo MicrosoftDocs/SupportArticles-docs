@@ -102,18 +102,12 @@ landingContent:
             url: general-ledger/posting-fail-imbalance.md
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
+          - text: Unexpected financial dimension values on transactions
+            url: general-ledger/incorrect-default-dimension-values.md
           - text: Vouchers aren't reversed when posting a journal with reversing entry and date 
             url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
-
-# Card
-  - title: Financial dimensions
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Unexpected financial dimension values on transactions
-            url: general-ledger/incorrect-default-dimension-values.md
 
   # Card
   - title: Tax
