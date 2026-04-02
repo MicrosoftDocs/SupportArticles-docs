@@ -1,87 +1,105 @@
 ---
-# required metadata
-title: Troubleshoot financial dimension activation errors
-description: Describes resolutions for errors that occur when activating financial dimensions in Dynamics 365 Finance.
-author: ethanrimes
-ms.date: 03/24/2026
+title: Fix Financial Dimension Activation Errors in Dynamics 365
+description: Resolve financial dimension activation errors in Dynamics 365 Finance. This guide covers name conflicts, CDC conflicts, change tracking, and data maintenance job interference.
+ms.date: 04/02/2026
+ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, twheeloc, v-shaywood
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
-# Troubleshoot financial dimension activation errors
+# Financial dimension activation errors
 
-This article helps you resolve errors and timeouts that occur when activating financial dimensions in Microsoft Dynamics 365 Finance.
+## Summary
+
+This article helps you resolve errors and timeouts that occur when you activate financial dimensions in Microsoft Dynamics 365 Finance. Causes include dimension name conflicts, entity extension problems, Change Data Capture (CDC) conflicts, data maintenance job interference, change tracking, and large data volumes.
 
 ## Activation fails
 
-### Potential Cause 1: Name conflict when creating or renaming a dimension
+### Name conflict when creating or renaming a dimension
 
-**Description:** When you create a new dimension or rename an existing one, you receive one of the following error messages:
+When you create a new dimension or rename an existing one, you receive one of the following error messages:
 
-- `[DIMENSION NAME] is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.`
+> \<DimensionName> is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to recreate the same dimension, or choose a different name.
 
-  For example: `Department is currently being used as a Dimension or has some other conflict...`
+> Dimension \<DimensionName> exists as an extension column on \<EntityName> (\<EntityTableName>) and \<EntityName> (\<EntityTableName>). You cannot change the name until this extension is removed.
 
-- `Dimension [DIMENSION NAME] exists as an extension column on [ENTITY NAME] ([ENTITY TABLE NAME]) and [ENTITY NAME] ([ENTITY TABLE NAME]). You cannot change the name until this extension is removed.`
+> The financial dimension name \<DimensionName> exists as a translated name on financial dimension \<ExistingDimensionName>.
 
-  For example: `Dimension CostCenter exists as an extension column on General journal account entry (GeneralJournalAccountEntry) and Budget register entry (BudgetTransactionLine). You cannot change the name until this extension is removed.`
+This error occurs because the name already exists as a column in the dimension tables from a previous dimension that you deleted or renamed but didn't yet activate. The system blocks reuse until you activate those pending changes.
 
-- `The financial dimension name [DIMENSION NAME] exists as a translated name on financial dimension [EXISTING DIMENSION NAME].`
+#### Solution
 
-  For example: `The financial dimension name Department exists as a translated name on financial dimension BusinessUnit.`
+Activate all pending dimension changes to clear the conflict. For steps, see [Activating dimensions](/dynamics365/finance/general-ledger/financial-dimensions#activating-dimensions). If the error mentions an extension column conflict, remove the package that contains the extension before the rename can proceed. If activation fails or the conflict persists, choose a different dimension name. For naming constraints, see [Financial dimension naming requirements](/dynamics365/finance/general-ledger/financial-dimensions#financial-dimension-naming-requirements).
 
-The name you're trying to use already exists as a column in the dimension tables from a previous dimension that was deleted or renamed but not yet activated. The system blocks reuse until those pending changes are activated.
+### Stuck in maintenance mode due to entity extensions
 
-**Resolution:**
+The system is in maintenance mode and returns errors when you try to leave. The error references `DimensionCombinationEntity` or `DimensionSetEntity`, and the system rolls back automatically.
 
-Activate all pending dimension changes to clear the conflict. For steps, see [Activating dimensions](/dynamics365/finance/general-ledger/financial-dimensions#activating-dimensions). If the error mentions an extension column conflict, the package containing that extension must be removed before the rename can proceed. If activation fails or the conflict persists, choose a different dimension name. See [Financial dimension naming requirements](/dynamics365/finance/general-ledger/tasks/define-financial-dimensions#naming-requirements) for naming constraints.
+A custom extension on `DimensionCombinationEntity` or `DimensionSetEntity` contains a hardcoded reference to a dimension name that no longer exists or has been renamed.
 
-### Potential Cause 2: Stuck in maintenance mode due to entity extensions
+#### Solution
 
-**Description:** You're in maintenance mode and receive errors when trying to leave. The error references **DimensionCombinationEntity** or **DimensionSetEntity**, and the system rolls back automatically. A custom extension on **DimensionCombinationEntity** or **DimensionSetEntity** contains a hardcoded reference to a dimension name that no longer exists or has been renamed.
+First escape the deadlock, then fix the underlying problem:
 
-**Resolution:**
+1. Restore the deleted or renamed dimensions to their previous names so activation can succeed, then exit maintenance mode.
+1. Remove the package that contains the hardcoded column references.
+1. Re-enter maintenance mode and activate dimensions again.
+1. Create a replacement extension using the correct approach.
 
-This resolution has a two-part solution: first escape the deadlock, then fix the actual problem. For general information about entering and exiting maintenance mode, see [Maintenance mode](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode).
+For general information about entering and exiting maintenance mode, see [Maintenance mode](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode).
 
-1. If you're stuck in maintenance mode, restore the deleted or renamed dimensions to their previous names so activation can succeed, then exit maintenance mode.
-2. Remove the package containing the hardcoded column references.
-3. Re-enter maintenance mode and activate dimensions again.
-4. Create a replacement extension using the correct approach.
+### Change Data Capture (CDC) error
 
-### Potential Cause 3: Change data capture (CDC) error
+Activation fails with one of the following errors:
 
-**Description:** Activation fails with one of the following errors:
+> Column name 'SYSTEMGENERATEDATTRIBUTE\<DimensionAttribute>' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.
 
-- `Cannot drop the procedure 'cdc.sp_batchinsert_{number}' because it's being used for Change Data Capture`
+<!-- TODO: Ask SME for screenshot of the other error -->
 
-  For example: `Cannot drop the procedure 'cdc.sp_batchinsert_1' because it's being used for Change Data Capture`
+> Cannot drop the procedure 'cdc.sp_batchinsert_\<Number>' because it's being used for Change Data Capture
 
-- `Column name 'SYSTEMGENERATEDATTRIBUTE[DIMENSION ATTRIBUTE]' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
+:::image type="content" source="media/dimension-activation-errors/dimension-activation-cdc-error.png" alt-text="Screenshot of the CDC sp_batchinsert error during dimension activation.":::
 
-  For example: `Column name 'SYSTEMGENERATEDATTRIBUTEDepartment' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.`
+Change Data Capture (CDC) is enabled on the `DimensionAttributeValueCombination` or `DimensionAttributeValueSet` tables, which prevents the schema changes that dimension activation requires.
 
-![Screenshot of the CDC sp_batchinsert error during dimension activation](./media/dimension-activation-cdc-error.png)
+#### Solution
 
-Change Data Capture (CDC) is enabled on the **DimensionAttributeValueCombination** or **DimensionAttributeValueSet** tables. CDC prevents the schema changes that dimension activation requires.
-
-**Resolution:** Disable CDC on the **DimensionAttributeValueCombination** and **DimensionAttributeValueSet** tables before activating dimensions. After activation completes, you can re-enable CDC if needed.
+Disable CDC on the `DimensionAttributeValueCombination` and `DimensionAttributeValueSet` tables before activating dimensions. After activation completes, re-enable CDC if needed.
 
 ## Activation times out
 
-### Potential Cause 1: Data maintenance jobs are interfering
+### Data maintenance jobs interfere with activation
 
-**Description:** The data maintenance batch jobs can start prematurely during activation or upgrade, blocking dimension tables before the system is ready.
+Data maintenance batch jobs can start prematurely during activation or upgrade, blocking dimension tables before the system is ready.
 
-**Resolution:**
+#### Solution
 
-Pause the data maintenance jobs before retrying activation. For steps on accessing and managing data maintenance jobs, see [Data maintenance portal](/dynamics365/fin-ops-core/dev-itpro/sysadmin/datamaintenanceportal). Specifically, set a sleep period on both **Data maintenance job to find opportunities** and **Data maintenance job to run fixes** through **System administration** > **Setup** > **Process automations** > **Background processes**, and cancel any currently running data maintenance batch jobs. After activation completes, remove the sleep period so data maintenance resumes normally.
+Pause data maintenance jobs before retrying activation:
 
-### Potential Cause 2: Change tracking is enabled on dimension tables
+1. Go to **System administration** > **Setup** > **Process automations** > **Background processes**.
+1. Set a sleep period on both **Data maintenance job to find opportunities** and **Data maintenance job to run fixes**.
+1. Cancel any currently running data maintenance batch jobs.
+1. Retry the dimension activation.
+1. After activation completes, remove the sleep period so data maintenance resumes normally.
 
-**Description:** Change tracking enabled on dimension tables can cause performance issues and timeouts during activation.
+For more information on accessing and managing data maintenance jobs, see [Data maintenance portal](/dynamics365/fin-ops-core/dev-itpro/sysadmin/datamaintenanceportal).
 
-**Resolution:** Disable change tracking for Dimension tables. For more information, see [Enable change tracking for entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/entity-change-track).
+### Change tracking on dimension tables
 
-### Potential Cause 3: Highly variable dimensions with large data volumes
+Change tracking on dimension tables can cause performance problems and timeouts during activation.
 
-**Description:** If your environment uses dimensions with a very large number of unique values spread across many transactions, activation may time out due to data volume.
+#### Solution
 
-**Resolution:** Review and address highly variable dimensions before retrying activation. For guidance, see [highly variable dimensions](/dynamics365/finance/cost-accounting/high-var-dimensions).
+Disable change tracking for dimension tables. For more information, see [Enable change tracking for entities](/dynamics365/fin-ops-core/dev-itpro/data-entities/entity-change-track).
+
+### Highly variable dimensions with large data volumes
+
+Dimensions with a very large number of unique values spread across many transactions can cause activation to time out.
+
+#### Solution
+
+Review and address highly variable dimensions before retrying activation. For guidance, see [Highly variable dimensions](/dynamics365/finance/cost-accounting/high-var-dimensions).
+
+## Related content
+
+- [Source record not found for a financial dimension value](source-record-not-found.md)
+- [Define financial dimensions](/dynamics365/finance/general-ledger/tasks/define-financial-dimensions)
+- [Make backing tables consumable as financial dimensions](/dynamics365/fin-ops-core/dev-itpro/financial/dimensionable-entities)

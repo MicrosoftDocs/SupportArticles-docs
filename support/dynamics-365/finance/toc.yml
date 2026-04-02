@@ -76,10 +76,10 @@
       href: general-ledger/year-end-close-miss-opening-balances.md
     - name: Financial dimensions
       items:
-        - name: Troubleshoot financial dimension activation errors
+        - name: Source record not found for a financial dimension value
+          href: general-ledger/source-record-not-found.md
+        - name: Financial dimension activation errors
           href: general-ledger/dimension-activation-errors.md
-        - name: Dimension value record not found
-          href: general-ledger/dimension-value-record-not-found.md
 - name: Tax
   items:
     - name: Tax Calculation

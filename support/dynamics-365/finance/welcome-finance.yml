@@ -112,10 +112,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot financial dimension activation errors
+          - text: Source record not found for a financial dimension value
+            url: general-ledger/source-record-not-found.md
+          - text: Financial dimension activation errors
             url: general-ledger/dimension-activation-errors.md
-          - text: Dimension value record not found
-            url: general-ledger/dimension-value-record-not-found.md
 
   # Card
   - title: Tax
