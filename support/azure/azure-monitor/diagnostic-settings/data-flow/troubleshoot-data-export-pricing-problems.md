@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot data export and pricing problems in Azure Event Hubs
-description: Learn how to troubleshoot problems related to data export and pricing in Azure Event Hubs, including common causes and solutions.
+title: Troubleshoot data export and pricing problems in Event Hubs
+description: Learn how to troubleshoot problems related to data export and pricing in Event Hubs, including common causes and solutions.
 ms.author: neghuman
 ms.date: 04/01/2026
 ms.reviewer: v-ryanberg
