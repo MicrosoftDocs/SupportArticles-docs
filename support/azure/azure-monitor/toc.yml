@@ -133,6 +133,8 @@ items:
       href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
     - name: Workspace data export FAQ
       href: log-analytics/workspaces/workspace-data-export-faq.yml
+    - name: Resolve role definition fetch problems in Log Analytics
+      href: log-analytics/workspaces/resolve-role-definition-fetch-problems.md
   - name: Cost management 
     items:
     - name: Understand cost and analyze usage report
