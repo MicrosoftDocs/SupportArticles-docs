@@ -62,10 +62,16 @@
   items:
     - name: A custom Excel template for financial journals isn't available on the menu
       href: general-ledger/custom-excel-template-financial-journals-not-available.md
-    - name: Can't reverse a transaction
-      href: general-ledger/cant-reverse-transactions.md
+    - name: Can't delete a financial dimension value
+      href: general-ledger/blocked-deleting-dimension-value.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
+    - name: Can't reverse a transaction
+      href: general-ledger/cant-reverse-transactions.md
+    - name: Financial dimension missing or shows as custom dimension in details page
+      href: general-ledger/dimension-missing-details-page.md
+    - name: Financial dimension value is missing or unavailable
+      href: general-ledger/cant-find-dimension-value.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
     - name: Troubleshoot issues with the General ledger adjustments page
@@ -74,14 +80,6 @@
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
-    - name: Financial dimensions
-      items:
-        - name: Can't delete a financial dimension value
-          href: general-ledger/blocked-deleting-dimension-value.md
-        - name: Financial dimension is missing or shows as a custom dimension
-          href: general-ledger/dimension-missing-details-page.md
-        - name: Financial dimension value is missing or unavailable
-          href: general-ledger/cant-find-dimension-value.md
 - name: Tax
   items:
     - name: Tax Calculation
