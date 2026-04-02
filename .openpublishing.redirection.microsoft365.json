@@ -531,6 +531,42 @@
     {
       "source_path": "Microsoft365/purview/microsoft-purview-welcome.yml",
       "redirect_url": "/troubleshoot/microsoft-365/purview/microsoft-purview-welcome"
-    }
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/active-directory/single-sign-on-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/sara-command-line-version.md",
+      "redirect_url": "../miscellaneous/get-help-command-line-overview"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-office-activation.md",
+      "redirect_url": "../miscellaneous/get-help-office-activation"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-office-shared-computer-activation.md",
+      "redirect_url": "../miscellaneous/get-help-office-shared-computer-activation"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-office-uninstall.md",
+      "redirect_url": "../miscellaneous/get-help-office-uninstall"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-outlook-calendar-scan.md",
+      "redirect_url": "../miscellaneous/get-help-outlook-calendar-scan"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-outlook-scan.md",
+      "redirect_url": "../miscellaneous/get-help-outlook-scan"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-reset-office-activation.md",
+      "redirect_url": "../miscellaneous/get-help-reset-office-activation"
+    },
+    {
+      "source_path": "Microsoft365/admin/admin/miscellaneous/assistant-teams-meeting-add-in-outlook.md",
+      "redirect_url": "../miscellaneous/get-help-teams-meeting-add-in-outlook"
+    }                                         
   ]
 }

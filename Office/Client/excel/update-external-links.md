@@ -10,13 +10,15 @@ ms.topic: troubleshooting
 ms.custom: 
   - Open\Links
   - CSSTroubleshoot
+  - CI 10891
 ms.author: meerak
+ms.reviewer: akeeler, lisalozano
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 03/31/2026
 ---
 
 # Error message when you update external links that contain a three-dimensional reference

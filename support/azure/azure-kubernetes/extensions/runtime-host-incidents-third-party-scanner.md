@@ -13,6 +13,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Third-party scanner detects run-time host incident
 
+## Summary
+
 This article helps you troubleshoot a scenario in which a third-party scanner detects a run-time host incident in Microsoft Azure Kubernetes Service (AKS).
 
 ## Symptoms

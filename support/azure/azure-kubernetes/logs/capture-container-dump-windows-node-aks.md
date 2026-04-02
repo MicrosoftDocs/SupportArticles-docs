@@ -1,6 +1,6 @@
 ---
 title: Capture a Windows container dump file from a Windows node in an AKS cluster
-description: Understand how to capture a Windows container dump file from a Windows node within an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to capture a Windows container dump file from an AKS Windows node and download it for analysis. Follow the steps to troubleshoot faster.
 ms.date: 04/17/2024
 ms.author: abelch
 ms.reviewer: jarrettr
@@ -9,16 +9,18 @@ ms.custom: sap:Monitoring and Logging
 ---
 # Capture a Windows container dump file from a Windows node in an AKS cluster
 
-If a Windows container fails on a Microsoft Azure Kubernetes Service (AKS) cluster, you might have to examine the Windows container dump file to investigate the root cause. This article provides steps to capture a Windows container dump file from a Windows node in an AKS cluster. It also includes instructions to download the dump file to your local computer for further analysis.
+## Summary
+
+If a Windows container fails on a Microsoft Azure Kubernetes Service (AKS) cluster, you might need to examine the Windows container dump file to investigate the root cause. This article provides steps to capture a Windows container dump file from a Windows node in an AKS cluster. It also includes instructions to download the dump file to your local computer for further analysis.
 
 ## Prerequisites
 
 - An AKS cluster. If you don't have an AKS cluster, [create one by using Azure CLI](/azure/aks/kubernetes-walkthrough) or [through the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
-- Windows agent pools that are created after `3/13/2024` or a node image that was upgraded to AKS Windows image version `20240316` or a later version. Alternatively, verify whether the WindowsCSEScriptsPackage version is v0.0.39 or newer, which can be located in `C:\AzureData\CustomDataSetupScript.log` on the Windows nodes.
+- Windows agent pools that are created after `3/13/2024` or a node image that is upgraded to AKS Windows image version `20240316` or a later version. Alternatively, verify whether the WindowsCSEScriptsPackage version is v0.0.39 or newer, which you can find in `C:\AzureData\CustomDataSetupScript.log` on the Windows nodes.
 ## Step 1: Add annotations metadata to your deployment
 
-Mount a host folder in the container, and add the annotations metadata in order to request that the Windows container store the dump file in a designated folder:
+Mount a host folder in the container, and add the annotations metadata to request that the Windows container store the dump file in a designated folder:
 
 ```yaml
 metadata:
@@ -45,11 +47,11 @@ spec:
 
 ## Step 2: Reproduce the issue
 
-Redeploy your deployment, and wait for the Windows container to fail. You can use `kubectl describe pod -n [POD-NAMESPACE] [POD-NAME]` to learn which AKS Windows node is hosting the pod.
+Redeploy your deployment, and wait for the Windows container to fail. Use `kubectl describe pod -n [POD-NAMESPACE] [POD-NAME]` to learn which AKS Windows node is hosting the pod.
 
 ## Step 3: Connect to the Windows node
 
-Establish a connection to the AKS cluster node. You authenticate either by using a Secure Shell (SSH) key or the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require that you create an intermediate connection. This is because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you have to specify the user name for the AKS nodes. By default, this user name is `azureuser`.
+Connect to the AKS cluster node. Authenticate by using either a Secure Shell (SSH) key or the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require that you create an intermediate connection. This requirement exists because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you must specify the user name for the AKS nodes. By default, this user name is `azureuser`.
 
 ### [SSH](#tab/ssh)
 
@@ -74,9 +76,9 @@ Use your Windows admin password to [connect to the node by using RDP](/azure/aks
 
 ### Redirect a data drive to the RDP connection
 
-To transfer the capture files to your computer, you have to redirect a hard drive from your computer onto both the created VM and the RDP connection to the AKS Windows node. This redirection lets you copy the capture files you generate later to your computer.
+To transfer the capture files to your computer, you need to redirect a hard drive from your computer to both the created VM and the RDP connection to the AKS Windows node. This redirection process lets you copy the capture files you generate later to your computer.
 
-1. On your computer, select Start, and then search for and select **Remote Desktop Connection**.
+1. On your computer, select **Start**, search for **Remote Desktop Connection**, and select it.
 
 1. In the **Remote Desktop Connection** dialog box, select **Show Options**.
 
@@ -84,7 +86,7 @@ To transfer the capture files to your computer, you have to redirect a hard driv
 1. In the **Local Resources** tab, select **More**.
 
     :::image type="content" source="./media/capture-tcp-dump-windows-node-aks/remote-desktop-connection-local-resources-more.png" alt-text="Screenshot of the Remote Desktop Connection dialog box that has the Local Resources tab selected and the More button highlighted." border="false":::
-1. In a new **Remote Desktop Connection** dialog box, select **Drives** to expand the list of drives that are on your computer, and then select the drive that you want to redirect.
+1. In a new **Remote Desktop Connection** dialog box, select **Drives** to expand the list of drives on your computer, and then select the drive that you want to redirect.
 
     :::image type="content" source="./media/capture-tcp-dump-windows-node-aks/remote-desktop-connection-local-devices-and-resources.png" alt-text="Screenshot of a new Remote Desktop Connection dialog box that shows the full expanded list of drives that you can select to use in the remote session." border="false":::
 
@@ -119,7 +121,7 @@ You can list the `C:\k\containerdumps` folder to find the full path of the dump 
 To transfer the TCP dump files from the AKS Windows node to the jump VM, follow these steps:
 
 1. Connect to the AKS Windows node.
-1. Run the following [net use](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/gg651155(v=ws.11)) command to map the shared resource of the jump VM to a drive that's named **Z**. If the shared resource is something other than drive C, adjust the command.
+1. Run the following [net use](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/gg651155(v=ws.11)) command to map the shared resource of the jump VM to a drive named **Z**. If the shared resource is something other than drive C, adjust the command.
 
     ```output
     C:\Users\bookbinder>net use z: \\tsclient\c

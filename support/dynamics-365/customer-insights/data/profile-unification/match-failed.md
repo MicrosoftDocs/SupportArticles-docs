@@ -1,17 +1,17 @@
 ---
-title: Match failed error in Dynamics 365 Customer Insights - Data
-description: Provides a resolution for an issue where match failures occur in Microsoft Dynamics 365 Customer Insights - Data.
-author: Scott-Stabbert
-ms.author: sstabbert
-ms.date: 12/21/2023
-ms.reviewer: v-wendysmith, mhart
+title: Resolve Data Unification Match Failures
+description: Resolve the Match failed error in Dynamics 365 Customer Insights - Data caused by refresh failures, source table changes, or missing data files. Fix your unification process today.
+ms.date: 03/30/2026
+ms.reviewer: sstabbert, v-wendysmith, v-shaywood
 ms.custom: sap:Data Unification\Match
 ---
-# "Match failed" error occurs on the "Deduplication rules" or "Matching rules" page 
+# "Match failed" error occurs on the "Deduplication rules" or "Matching rules" page
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article provides a resolution for an issue where data unification fails due to a deduplication or matching rule failure.
+## Summary
+
+When you run [data unification](/dynamics365/customer-insights/data/data-unification) in Microsoft Dynamics 365 Customer Insights - Data, the process might fail with a "Match failed" error on the **Deduplication rules** or **Matching rules** page. This error can occur for several reasons, including a failed data refresh, source table changes that aren't reflected in Customer Insights - Data, missing data files or partition paths, resource limitations, or transient issues. This article walks through each cause and provides steps to resolve the match failure and successfully complete the unification process.
 
 ## Symptoms
 
@@ -19,11 +19,11 @@ The following error message appears on the **Deduplication rules** or **Matching
 
 > Match failed.
 
-## Cause 1: Failed data refresh
+## Failed data refresh
 
 If a data refresh fails, the data might be partially updated, causing inconsistencies in the dataset. The inconsistencies can lead to discrepancies in downstream operations.
 
-### Resolution
+### Solution
 
 To solve the issue, take the following steps:
 
@@ -33,15 +33,15 @@ To solve the issue, take the following steps:
 
 1. Rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).
 
-## Cause 2: Source table changes aren't reflected in Customer Insights - Data
+## Source table changes aren't reflected in Customer Insights - Data
 
-If changes are made to a source table that isn't ingested into Customer Insights - Data, the data is out of synchronization.
+If you make changes to a source table that you don't ingest into Customer Insights - Data, the data is out of synchronization.
 
-### Resolution
+### Solution
 
 To solve the issue, take the following steps:
 
-1. View your source tables for any recent changes.
+1. Check your source tables for any recent changes.
 
 1. Go to **Data** > **Data sources** and view the data sources and the data reflected in Customer Insights - Data.
 
@@ -49,11 +49,11 @@ To solve the issue, take the following steps:
 
 1. Rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).
 
-## Cause 3: Missing data files or partition paths
+## Missing data files or partition paths
 
 If you encounter error messages indicating data files or partition paths for specific tables are missing, investigate the cause.
 
-### Resolution
+### Solution
 
 To solve the issue, take the following steps:
 
@@ -61,10 +61,18 @@ To solve the issue, take the following steps:
 
 1. Rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).
 
-## Cause 4: Transient issue
+## Match canceled after running for hours
 
-Occasionally, a transient issue might cause a processing failure.
+If the match job was canceled after running for an extended period, the dataset might be too large for the allocated resources.
 
-### Resolution
+### Solution
 
-To solve the issue, rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).
+To resolve the issue, reduce the complexity of your match rules or [contact support](/power-platform/admin/get-help-support) for scaling options. For more information, see [Data unification best practices](/dynamics365/customer-insights/data/data-unification-best-practices).
+
+## Transient issues
+
+Occasionally, a transient issue causes a processing failure.
+
+### Solution
+
+To resolve the issue, rerun the [unification process](/dynamics365/customer-insights/data/data-unification-review).

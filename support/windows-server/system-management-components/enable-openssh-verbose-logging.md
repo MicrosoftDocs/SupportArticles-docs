@@ -1,7 +1,7 @@
 ---
 title: How to Enable OpenSSH Verbose Logging
 description: Explains how to enable verbose logging for the OpenSSH service.
-ms.date: 10/07/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

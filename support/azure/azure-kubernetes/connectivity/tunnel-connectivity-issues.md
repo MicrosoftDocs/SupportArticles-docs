@@ -1,6 +1,6 @@
 ---
-title: Tunnel Connectivity Issues
-description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
+title: Tunnel connectivity issues
+description: Resolve tunnel connectivity issues in your Azure Kubernetes Service (AKS) cluster to restore logs, exec, and port-forward access. Follow the troubleshooting steps.
 ms.date: 03/23/2025
 ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw
 ms.service: azure-kubernetes-service
@@ -10,9 +10,11 @@ ms.custom: sap:Connectivity
 ---
 # Tunnel connectivity issues
 
-Microsoft Azure Kubernetes Service (AKS) uses a specific component for tunneled, secure communication between the nodes and the control plane. The tunnel consists of a server on the control plane side and a client on the cluster nodes side. This article discusses how to troubleshoot and resolve issues that relate to tunnel connectivity in AKS.
+## Summary
 
-:::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Diagram of the Azure-managed AKS underlay, customer-managed Azure virtual network and subnet, and the tunnel from the API to the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
+Tunnel connectivity issues in Azure Kubernetes Service (AKS) can disrupt secure communication between cluster nodes and the control plane. This article explains how to troubleshoot and resolve these issues to restore expected cluster operations.
+
+:::image type="content" source="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png" alt-text="Screenshot of AKS tunnel architecture showing node-to-control-plane communication through the tunnel pod." border="false" lightbox="./media/tunnel-connectivity-issues/kubernetes-tunnel-architecture.png":::
 
 > [!NOTE]
 > Previously, the AKS tunnel component was `tunnel-front`. It has now been migrated to the [Konnectivity service](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service), an upstream Kubernetes component. For more information about this migration, see the [AKS release notes and changelog](https://github.com/Azure/AKS/blob/master/CHANGELOG.md).
@@ -82,7 +84,7 @@ If you want to be more restrictive, you can allow access to port 10250 at the su
 
 [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (UFW) is a command-line program for managing a [netfilter](https://www.netfilter.org/) firewall. AKS nodes use Ubuntu. Therefore, UFW is installed on AKS nodes by default, but UFW is disabled.
 
-By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/lunar/en/man8/ufw.8.html) that checks whether UFW is enabled:
+By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/trusty/en/man8/ufw.8.html) that checks whether UFW is enabled:
 
 ```azurecli
 az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \
@@ -251,7 +253,7 @@ If everything is OK within the application, you'll have to adjust the allocated 
 
 You can set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
 
-## Cause 6: Konnectivity Agents performance issues with Cluster growth
+## Cause 6: Konnectivity agents performance issues with cluster growth
 
 As the cluster grows, the performance of Konnectivity Agents might degrade because of increased network traffic, more requests, or resource constraints.
 

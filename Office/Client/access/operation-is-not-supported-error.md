@@ -17,7 +17,7 @@ appliesto:
   - Access for Microsoft 365
   - Access 2024
   - Access 2021
-ms.date: 02/09/2026
+ms.date: 03/14/2026
 ---
 
 # Operation is not supported error in Access and Excel
@@ -48,11 +48,9 @@ When:
 
 Error message: `Invalid use of Null`
 
-When you:
+When:
 
-- Add a control or a command button to an Access form or report.
-
-- Create a query, form, or report by using a wizard in Access.
+- You add a control or a command button to an Access form or report.
 
 ## Cause
 
@@ -74,7 +72,7 @@ To identify a remote table reference, check the SQL syntax of a query or command
 
 | **Local table** | SELECT \* FROM \`Orders Query\` |
 |----|----|
-| **Remote table** | SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` |
+| **Remote table** | SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` |
 
 ## Solutions
 
@@ -84,14 +82,10 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 - Add a trusted folder location that includes the database location by using either the Trust Center in Access or via group policy.
 
-- Don’t use wizards in Access. To avoid wizards, take the following actions instead:
+- Disable Control wizards that you use for tasks such as adding a command button.
 
-  - When you use the **Create** tab, select an option such as **Table Design**, **Query Design**, **Form Design**, or **Report Design** that doesn't use a wizard.
-
-  - Disable Control wizards that you use for tasks such as adding a command button.  
-    Expand the **Controls** group, and clear the **Use Control Wizards** checkbox.
-
-  > :::image type="content" source="media/operation-is-not-supported-error/controls-group.png" alt-text="Screenshot of the Controls group in Access.":::
+  Expand the **Controls** group, and clear the **Use Control Wizards** checkbox.
+> :::image type="content" source="media/operation-is-not-supported-error/controls-group.png" alt-text="Screenshot of the Controls group in Access.":::  
 
 ### Solutions when you work with apps other than Access
 
@@ -105,7 +99,7 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 | **Original command text** | **Updated command text** |
 |----|----|
-| SELECT \* FROM \`C:\temp\Database.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
+| SELECT \* FROM \`C:\temp\Database1.accdb\`.\`Orders Query\` \`Orders Query\` | SELECT \* FROM \`Orders Query\` |
 
 >[!NOTE]
 
@@ -114,5 +108,22 @@ This issue has multiple solutions. Select the solution that’s appropriate for 
 
 ### Solution that applies to all apps
 
-1. Locate the **AllowQueryRemoteTables** registry key for your installation scenario by using the information in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544).
-1. Set the value for the key to **1** to allow remote table references during query execution.
+>[!NOTE]
+
+> Use this solution only as a temporary fix while you update your application.
+
+Set the value of the **AllowQueryRemoteTables** registry key to 1 to allow remote table references in all databases. 
+
+If you configure the **AllowQueryRemoteTables** registry key by using any of the registry paths for the Click-to-Run (C2R) installation type that are provided in [KB 5002984](https://support.microsoft.com/topic/kb5002984-configuring-jet-red-database-engine-and-access-connectivity-engine-to-block-access-to-remote-databases-56406821-30f3-475c-a492-208b9bd30544), the registry key might be removed after installing an Office update. 
+
+To ensure that the registry key configuration is preserved after an Office update is installed, make sure to add the following DWORD name and value to the registry paths listed in the table:
+
+**DWORD name**: AllowQueryRemoteTables
+
+**Value data**: 1
+
+| **Office Version** | **OS Bitness** | **Office Bitness** | **Registry Path** |
+|------------------------|----------------|--------------------|----------------------------------------------------------------------------------------------|
+| All supported versions | x64 | x64 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |
+| All supported versions | x86 | x86 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |
+| All supported versions | x64 | x86 | HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\16.0\\Access Connectivity Engine\\Engines |

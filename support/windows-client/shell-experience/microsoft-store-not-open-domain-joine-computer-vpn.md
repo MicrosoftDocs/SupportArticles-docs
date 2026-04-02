@@ -1,7 +1,7 @@
 ---
 title: Microsoft Store doesn't open after a domain-joined computer makes a VPN connection
 description: Discusses an issue in which Microsoft Store doesn't open after a domain-joined computer connects to a VPN connection. The VPN connection has force tunneling enabled.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

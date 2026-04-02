@@ -1,7 +1,7 @@
 ---
 title: Taskbar Calendar Doesn't Open in Windows 11
 description: Provides information on the behavior of the taskbar calendar in Windows 11.
-ms.date: 01/22/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

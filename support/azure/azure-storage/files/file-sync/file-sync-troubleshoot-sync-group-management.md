@@ -70,6 +70,10 @@ If you see this message and the Azure file share currently isn't in use by a clo
 2. Right-click the Azure file share, and then select **Edit metadata**.
 3. Right-click **SyncService**, and then select **Delete**.
 
+If the Azure file share is associated with multiple cloud endpoints, this configuration results in an unsupported and unhealthy sync topology. In this scenario, server endpoint creation is blocked until the topology is corrected.
+
+Azure File Sync supports a one-to-one relationship between an Azure file share and a cloud endpoint. To resolve this issue, identify all cloud endpoints associated with the Azure file share and remove all but one. After the configuration is updated, retry the operation.
+
 ## Server endpoint creation and deletion errors
 
 <a id="server-endpoint-provisioningcanceled"></a>**Server endpoint has a health status of "Provisioning canceled"**

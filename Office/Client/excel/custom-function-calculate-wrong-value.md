@@ -8,12 +8,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10764
 appliesto: 
   - Microsoft Excel
-ms.date: 05/26/2025
+ms.date: 03/25/2026
 ---
 
 # Custom function may not calculate expected value in Excel

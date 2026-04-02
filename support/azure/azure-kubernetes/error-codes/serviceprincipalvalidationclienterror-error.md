@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the ServicePrincipalValidationClientError error code
-description: Learn how to troubleshoot the ServicePrincipalValidationClientError error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Troubleshoot the ServicePrincipalValidationClientError error in AKS. Learn how to reset or replace a service principal to successfully deploy your cluster.
 ms.date: 10/23/2024
 ms.reviewer: rissing, chiragpa, erbookbi, momajed, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -8,6 +8,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the ServicePrincipalValidationClientError error code
+
+## Summary
 
 This article discusses how to identify and resolve the `ServicePrincipalValidationClientError` error that might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -49,7 +51,7 @@ When you try to deploy an AKS cluster, you receive the following error message:
 
 The secret that's provided for the highlighted service principal isn't valid.
 
-## Solution 1: Reset the service principal secret
+## Solution 1: Reset the service principal secret in AKS
 
 To resolve this issue, reset the service principal secret by using one of the following methods:
 
@@ -73,7 +75,7 @@ For failed operations in an existing cluster, ensure that you update your AKS cl
 az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --reset-service-principal --client-secret <new-client-secret>
 ```
 
-## Solution 2: Create a new service principal
+## Solution 2: Create a new service principal for AKS
 
 You can create a new service principal and get the secret that's associated with it by running the [az ad sp create-for-rbac](/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command:
 

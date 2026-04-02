@@ -1,6 +1,6 @@
 ---
-title: Basic troubleshooting of outbound connections from an AKS cluster
-description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot AKS outbound connections
+description: Learn how to troubleshoot outbound connections from an AKS cluster, isolate network blockers, and restore egress connectivity quickly. Start now.
 ms.date: 07/23/2025
 ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu, juliayin, v-liuamson
 editor: v-jsitser
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity
 ---
 # Basic troubleshooting of outbound connections from an AKS cluster
 
-This article discusses how to do basic troubleshooting of outbound connections from a Microsoft Azure Kubernetes Service (AKS) cluster and identify faulty components.
+## Summary
+
+This article explains basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so you can identify faulty components and restore connectivity faster.
 
 ## Prerequisites
 
@@ -42,19 +44,19 @@ The outbound traffic from an AKS cluster can be classified into the following ca
 
 A basic request flow for internal traffic from an AKS cluster resembles the flow shown in the following diagram.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Screenshot of the internal outbound traffic flow between pods and services in an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
 
 #### Public outbound traffic through Azure Load Balancer
 
 If the traffic is for a destination on the internet, the default method is to send the traffic through the Azure Load Balancer.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Load Balancer from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Screenshot of outbound internet traffic from an AKS cluster through Azure Load Balancer." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
 
 #### Public outbound traffic through Azure Firewall or a proxy server
 
 In some cases, the egress traffic has to be filtered, and it might require Azure Firewall.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Firewall from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Screenshot of outbound internet traffic from an AKS cluster through Azure Firewall." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
 
 A user might want to add a proxy server instead of a firewall, or set up a NAT gateway for egress traffic. The basic flow remains the same as shown in the diagram.
 
@@ -75,10 +77,10 @@ When you troubleshoot outbound traffic in AKS, it's important to know what netwo
 
 The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the external network resources and only uses the cluster networking. For public outbound traffic, determine which network resources are implemented for your cluster.
 
-#### Check outbound connectivity path and blockers with Azure Virtual Network Verifier (Preview)
+#### Check the outbound connectivity path and blockers with Azure Virtual Network Verifier (Preview)
 To check where traffic is blocked within your network resources to specific endpoints (for example, `mcr.microsoft.com`), you can use the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier) tool. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic network configuration. For more instructions, [check if Azure network resources are blocking traffic to the endpoint using Azure Virtual Network Verifier (Preview)](#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint).
 
-#### Manual troubleshooting
+#### Manual troubleshooting steps for outbound connections
 For manual troubleshooting, we recommend you check the following items:
 
 - The source and the destination for the request.

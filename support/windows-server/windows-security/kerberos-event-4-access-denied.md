@@ -1,7 +1,7 @@
 ---
 title: Kerberos SPN is on wrong account
 description: Fixes an issue where users fail to access a resource and a System event log shows Kerberos event 4.
-ms.date: 01/03/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

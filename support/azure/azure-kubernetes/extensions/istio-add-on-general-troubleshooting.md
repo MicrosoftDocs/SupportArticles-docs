@@ -1,6 +1,6 @@
 ---
 title: General Istio Service Mesh Add-on Troubleshooting
-description: Learn how to do general troubleshooting of the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+description: Troubleshoot the Istio service mesh add-on in Azure Kubernetes Service (AKS) with proven steps, common errors, and fixes to restore mesh health quickly.
 ms.date: 03/18/2025
 author: nshankar13
 ms.author: nshankar
@@ -12,6 +12,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to do general troubleshooting on the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 # General troubleshooting of the Istio service mesh add-on
+
+## Summary
 
 This article discusses general strategies (that use `kubectl`, `istioctl`, and other tools) to troubleshoot issues that are related to the Istio service mesh add-on for Microsoft Azure Kubernetes Service (AKS). This article also provides a list of possible error messages, reasons for error occurrences, and recommendations to resolve these errors.
 
@@ -27,7 +29,7 @@ This article discusses general strategies (that use `kubectl`, `istioctl`, and o
 
 - The Client URL ([cURL](https://curl.se)) tool
 
-## Troubleshooting checklist: Using kubectl
+## Troubleshooting checklist: using kubectl
 
 The following troubleshooting steps use various `kubectl` commands to help you debug stuck pods or failures in the Istio daemon (Istiod).
 
@@ -110,7 +112,7 @@ Retrieve the sidecar logs for the source and destination sidecars by running the
 kubectl logs <pod-name> --namespace <pod-namespace> --container istio-proxy
 ```
 
-## Troubleshooting checklist: Using istioctl
+## Troubleshooting checklist: using istioctl
 
 The following troubleshooting steps discuss how to collect information and debug your mesh environment by running various `istioctl` commands.
 
@@ -198,7 +200,7 @@ istioctl bug-report --istioNamespace aks-istio-system \
     [--include <namespace-1>[, <namespace-2>[, ...]]]
 ```
 
-## Troubleshooting checklist: Miscellaneous issues
+## Troubleshooting checklist: miscellaneous issues
 
 ### Step 1: Fix resource usage issues
 

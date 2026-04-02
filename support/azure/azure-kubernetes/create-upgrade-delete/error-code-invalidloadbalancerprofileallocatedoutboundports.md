@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # "InvalidLoadBalancerProfileAllocatedOutboundPorts" error when creating or updating an AKS cluster
 
+## Summary
+
 This article discusses how to identify and resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error code that occurs when you try to create or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites

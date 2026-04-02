@@ -1,6 +1,6 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
-description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to capture a TCP dump from a Linux node in an AKS cluster to troubleshoot network issues quickly. Follow the steps and start diagnosing now.
 ms.date: 09/26/2024
 ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, kuzhao, v-rekhanain, v-leedennis, v-weizhu
@@ -9,7 +9,9 @@ ms.custom: sap:Monitoring and Logging, linux-related-content
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster
 
-Networking issues may occur when you're using a Microsoft Azure Kubernetes Service (AKS) cluster. To help investigate these issues, this article explains how to capture a TCP dump from a Linux node in an AKS cluster, and then download the capture to your local machine.
+## Summary
+
+Networking problems can occur when you use a Microsoft Azure Kubernetes Service (AKS) cluster. To help you investigate these problems, this article explains how to capture a TCP dump from a Linux node in an AKS cluster, and then download the capture to your local machine.
 
 ## Prerequisites
 
@@ -22,7 +24,7 @@ Networking issues may occur when you're using a Microsoft Azure Kubernetes Servi
 
 ## Step 1: Find the nodes to troubleshoot
 
-How do you determine which node to pull the TCP dump from? You first get the list of nodes in the AKS cluster using the Kubernetes command-line client, [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/). Follow the instructions to connect to the cluster and run the `kubectl get nodes --output wide` command [using the Azure portal](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) or [Azure CLI](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster). A node list that's similar to the following output appears:
+How do you determine which node to pull the TCP dump from? First, get the list of nodes in the AKS cluster by using the Kubernetes command-line client, [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/). Follow the instructions to connect to the cluster and run the `kubectl get nodes --output wide` command [using the Azure portal](/azure/aks/kubernetes-walkthrough-portal#connect-to-the-cluster) or [Azure CLI](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster). A node list that's similar to the following output appears:
 
 ```console
 $ kubectl get nodes --output wide
@@ -37,7 +39,7 @@ The next step is to establish a connection to the AKS cluster node that you want
 
 ## Step 3: Make sure tcpdump is installed
 
-After you've established a connection to the AKS Linux node, verify the tcpdump tool has been previously installed on a node by running `tcpdump --version`. If tcpdump hasn't been installed, the following error text appears:
+After you connect to the AKS Linux node, verify that the tcpdump tool is installed on the node by running `tcpdump --version`. If tcpdump isn't installed, you see the following error text:
 
 ```console
 # tcpdump --version
@@ -50,7 +52,7 @@ Then install tcpdump on your pod by running the Advanced Package Tool's package 
 apt-get update && apt-get install tcpdump
 ```
 
-If tcpdump is installed, something similar to the following text appears:
+If tcpdump is installed, you see output similar to the following text:
 
 ```console
 # tcpdump --version
@@ -69,13 +71,13 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 byt
 Got 6
 ```
 > [!NOTE]
-> Running tcpdump without using filtering parameters can significantly increase the size of the Packet Capture (PCAP) file, especially for long runs. Therefore, we recommend that you add filters, such as source, destination, and port. For example:
+> Running tcpdump without filtering parameters can significantly increase the size of the Packet Capture (PCAP) file, especially for long runs. Therefore, add filters like source, destination, and port. For example:
 >
 > - `tcpdump dst 192.168.1.100`
 > - `tcpdump dst host.mydomain.com`
 > - `tcpdump port http or port ftp or port smtp or port imap or port pop3 or port telnet`
 
-While the trace is running, replicate your issue many times. This action make sure that the issue is captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C: 
+While the trace is running, replicate your issue many times. This action ensures that the issue is captured within the TCP dump. Note the time stamp while you replicate the issue. To stop the packet capture when you're done, press Ctrl+C: 
 
 ```console
 # tcpdump -s 0 -vvv -w /capture.cap
@@ -87,7 +89,7 @@ tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 byt
 
 ## Step 5: Transfer the capture locally
 
-After you complete the packet capture, identify the helper pod so you can copy the dump locally. Open a second console, and then get a list of pods by running `kubectl get pods`, as shown below.
+After you complete the packet capture, identify the helper pod so you can copy the dump locally. Open a second console, and then get a list of pods by running `kubectl get pods`, as shown in the following example.
 
 ```console
 $ kubectl get pods
@@ -103,7 +105,7 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
 > [!NOTE]
-> If the `chroot /host` command was used when entering the debug pod, add `/host` before `/capture.cap` for the source file.
+> If you use the `chroot /host` command when entering the debug pod, add `/host` before `/capture.cap` for the source file.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

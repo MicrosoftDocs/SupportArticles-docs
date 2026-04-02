@@ -1,7 +1,7 @@
 ---
 title: TPM is in reduced functionality mode after successful deployment of Windows 10
 description: Describes an issue in which TPM is in reduced functionality mode after a successful deployment of Windows 10. Provides a workaround.
-ms.date: 01/15/2025
+ms.date: 02/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

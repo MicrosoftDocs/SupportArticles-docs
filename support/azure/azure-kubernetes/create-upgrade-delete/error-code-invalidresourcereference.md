@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the InvalidResourceReference error
 
+## Summary
+
 This article discusses how to identify and resolve the `InvalidResourceReference` error that may occur when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
 
 ## Symptom 1
