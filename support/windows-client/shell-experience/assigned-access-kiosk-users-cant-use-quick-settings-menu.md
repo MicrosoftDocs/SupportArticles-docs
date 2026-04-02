@@ -47,4 +47,10 @@ The following policy settings control quick settings:
 > [!IMPORTANT]  
 > If you change the CSP or GPO setting, you have to restart the device to make the change take effect.
 
-For more information about the settings that apply to assigned access users, see [Assigned Access Policy Settings](/windows/configuration/assigned-access/policy-settings).
+For more information about the settings that apply to assigned access users, see [Assigned Access policy settings](/windows/configuration/assigned-access/policy-settings).
+
+## References
+
+- [Assigned Access policy settings](/windows/configuration/assigned-access/policy-settings)
+- [Remove quick settings](https://gpsearch.azurewebsites.net/#16262)
+- [Policy CSP - Start](/windows/client-management/mdm/policy-csp-start#disablecontrolcenter)
