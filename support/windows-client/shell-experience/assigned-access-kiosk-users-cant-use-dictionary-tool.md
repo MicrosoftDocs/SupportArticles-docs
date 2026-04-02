@@ -1,6 +1,6 @@
 ---
 title: Assigned access kiosk users can't use the Japanese User Dictionary Tool
-description: Discusses an issue in which assigned access kiosk users can't use the Japanese User Dictionary Tool because the tool is not on the list of allowed applications. 
+description: Discusses an issue in which assigned access kiosk users can't use the Japanese User Dictionary Tool because the tool isn't on the list of allowed applications. 
 ms.date: 04/03/2026
 manager: dcscontentpm
 ms.topic: troubleshooting
@@ -26,7 +26,7 @@ In a Windows 11 multi-app kiosk environment (also referred to as a restricted us
 
 ## Cause
 
-AppLocker generates this message because the Japanese User Dictionary Tool is not one of the allowed applications for the multi-app kiosk.
+AppLocker generates this message because the Japanese User Dictionary Tool isn't one of the allowed applications for the multi-app kiosk.
 
 ## Resolution
 
