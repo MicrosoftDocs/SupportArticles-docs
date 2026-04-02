@@ -66,20 +66,18 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
+    - name: Financial dimension activation errors
+      href: general-ledger/dimension-activation-errors.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
+    - name: Source record not found for a financial dimension value
+      href: general-ledger/source-record-not-found.md
     - name: Troubleshoot issues with the General ledger adjustments page
       href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Vouchers aren't reversed when posting a journal with reversing entry and date
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
-    - name: Financial dimensions
-      items:
-        - name: Source record not found for a financial dimension value
-          href: general-ledger/source-record-not-found.md
-        - name: Financial dimension activation errors
-          href: general-ledger/dimension-activation-errors.md
 - name: Tax
   items:
     - name: Tax Calculation
