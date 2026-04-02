@@ -9,16 +9,16 @@ audience: ITPro
 ms.custom: 
   - Editing\CopyOrPaste
   - CSSTroubleshoot
+  - CI 10745
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Microsoft Office Excel 2007
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/23/2026
 ---
 
 # You cannot paste any attributes into a workbook in another instance of Excel
@@ -27,10 +27,11 @@ ms.date: 05/26/2025
 
 Consider the following scenario:
 
-- You run two instances of Microsoft Excel. 
+- You run two instances of Microsoft Excel.
 
 > [!NOTE]
 > To force Excel to open in a second instance, press Alt, and then click the Excel icon.
+
 - You open a workbook in each instance of Excel.
 - Then, you intend to use the following **Paste Special** menu command to paste attributes from a cell in one workbook to a cell in the other workbook:
 

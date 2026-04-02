@@ -13,6 +13,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot the ServiceCidrOverlapExistingSubnetsCidr error during an AKS cluster upgrade
 
+## Summary
+
 This article discusses how to identify and resolve the "ServiceCidrOverlapExistingSubnetsCidr" error that might occur when you try to [upgrade a Microsoft Azure Kubernetes Service (AKS) cluster](/azure/aks/upgrade-aks-cluster).
 
 ## Symptoms

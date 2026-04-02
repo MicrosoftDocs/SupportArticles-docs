@@ -8,12 +8,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Save\VersionHistory
   - CSSTroubleshoot
+  - CI 11012
 appliesto: 
   - Microsoft Excel
-ms.date: 05/26/2025
+ms.date: 04/01/2026
 ---
 
 # Use Saved property to determine if a workbook has changed
@@ -23,13 +25,13 @@ ms.date: 05/26/2025
 You can determine if changes have been made to a workbook by checking the Saved property of the workbook. The Saved property returns a True or False value depending on whether changes have been made to the workbook.
 
 > [!NOTE]
-> It is possible to set the Saved property to True or False. The "More Information" section of this article contains sample macros that demonstrate the use of the Saved property.
+> It's possible to set the Saved property to True or False. The "More Information" section of this article contains sample macros that demonstrate the use of the Saved property.
 
-Various conditions in your worksheet, such as the presence of volatile functions, may affect the Saved property.
+Various conditions in your worksheet, such as the presence of volatile functions, might affect the Saved property.
 
 ## More information
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that's being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
 ### Example 1: Macro to Display Message If Active Workbook Has Unsaved Changes
 

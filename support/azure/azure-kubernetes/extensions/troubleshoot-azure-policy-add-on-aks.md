@@ -13,6 +13,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Troubleshoot the Azure Policy Add-on for Azure Kubernetes Service (AKS)
 
+## Summary
+
 This article contains a list of resources that can help you recover from issues that occur when you use the Microsoft Azure Policy Add-on in conjunction with an Azure Kubernetes Service (AKS) cluster.
 
 ## Before you begin

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot connections to pods and services within an AKS cluster
-description: Troubleshoot connections to pods and services (internal traffic) from within an Azure Kubernetes Service (AKS) cluster.
+description: Troubleshoot connections to pods and services in an AKS cluster to find internal traffic failures fast and restore app communication. Start now.
 ms.date: 08/28/2024
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot connection issues to pods or services within an AKS cluster (internal traffic)
 
-This article discusses how to troubleshoot connection issues to pods or services as internal traffic from within the same Microsoft Azure Kubernetes Services (AKS) cluster.
+## Summary
+
+This article helps you troubleshoot connections to pods and services for internal traffic within the same AKS cluster so you can quickly identify and fix connectivity issues.
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SNAT port exhaustion on AKS nodes
-description: Provides guidance to troubleshoot Source Network Address Translation (SNAT) port exhaustion on Azure Kubernetes Service (AKS) nodes.
+description: Learn how to troubleshoot SNAT port exhaustion on AKS nodes, identify high-connection pods, and take action to reduce outbound connectivity issues.
 ms.date: 10/12/2024
 ms.reviewer: v-rekhanain, v-weizhu
 ms.service: azure-kubernetes-service
@@ -8,23 +8,25 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot SNAT port exhaustion on Azure Kubernetes Service nodes
 
+## Summary
+
 This article helps you find and troubleshoot Azure Kubernetes Service (AKS) nodes that experience Source Network Address Translation (SNAT) port exhaustion.
 
 > [!NOTE]
 > - To troubleshoot SNAT port exhaustion on AKS nodes in an AKS cluster running [Kubernetes jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/), perform the following steps only when the jobs are actively running on the AKS nodes.
 > - To learn more about SNAT ports and their allocation per virtual machine, see [What SNAT ports are](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports).
 
-## Step 1: Locate the node that experiences SNAT port exhaustion
+## Step 1: Locate the node with SNAT port exhaustion
 
 1. Get the IP address of the AKS node that experiences active SNAT port exhaustion from the Azure portal.
 
     1. Locate the default Kubernetes load balancer by navigating to your AKS cluster's resource group.
 
-        :::image type="content" source="media/snat-port-exhaustion/aks-cluster-load-balancer.png" alt-text="Screenshot that shows how to find the default Kubernetes load balancer."  lightbox="media/snat-port-exhaustion/aks-cluster-load-balancer.png":::
+        :::image type="content" source="media/snat-port-exhaustion/aks-cluster-load-balancer.png" alt-text="Screenshot of the default Kubernetes load balancer in the AKS resource group used to check SNAT port metrics."  lightbox="media/snat-port-exhaustion/aks-cluster-load-balancer.png":::
     
     2. Locate the AKS node that's experiencing SNAT port exhaustion by [checking SNAT port usage and allocation](/azure/load-balancer/load-balancer-standard-diagnostics#how-do-i-check-my-snat-port-usage-and-allocation) on the load balancer metrics page. The **Values** drop-down list shows node IP addresses.
 
-        :::image type="content" source="media/snat-port-exhaustion/aks-node-ip-address.png" alt-text="Screenshot that shows how to find an AKS node's IP address." lightbox="media/snat-port-exhaustion/aks-node-ip-address.png":::
+        :::image type="content" source="media/snat-port-exhaustion/aks-node-ip-address.png" alt-text="Screenshot of load balancer metrics showing an AKS node IP address to identify SNAT port exhaustion." lightbox="media/snat-port-exhaustion/aks-node-ip-address.png":::
 
 2. Connect to your AKS cluster and use the node IP address to get the node name by running the following `kubectl` command:
 
@@ -32,7 +34,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
     kubectl get nodes -o wide | grep <node IP>
     ```
 
-## Step 2: Locate the Linux pod that has high outbound connections
+## Step 2: Locate the Linux pod with high outbound connections
 
 > [!NOTE]
 > - [Tcptracer](https://github.com/iovisor/bcc/blob/master/tools/tcptracer.py) is one of the [BPF Compiler Collection (BCC) tools](https://github.com/iovisor/bcc#contents) that are pre-installed on Linux nodes. It allows you to trace TCP established connections (`connect()`, `accept()`, and `close()`). You can use it to find high outbound connections from the source IP address and network namespace (netns) of a pod.
@@ -141,7 +143,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
 ### [For a Linux pod](#tab/for-a-linux-pod)
 
-1. Execute into the pod that's identified as having high outbound connections in [Step 2](#step-2-locate-the-linux-pod-that-has-high-outbound-connections) by using one of the following commands:
+1. Execute into the pod that's identified as having high outbound connections in [Step 2: Locate the Linux pod with high outbound connections](#step-2-locate-the-linux-pod-with-high-outbound-connections) by using one of the following commands:
 
     - ```bash
       kubectl exec -it <pod name> -n <namespace> /bin/bash

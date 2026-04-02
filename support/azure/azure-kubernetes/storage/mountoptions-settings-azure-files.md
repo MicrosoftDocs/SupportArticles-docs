@@ -1,6 +1,6 @@
 ---
 title: Recommended and useful mountOptions settings on Azure Files
-description: Learn about the useful and recommended mountOptions settings when you configure the storage class object on Azure Files.
+description: Learn recommended mountOptions settings for Azure Files storage classes in AKS to improve performance and reliability, and use them to optimize your deployments.
 ms.date: 04/27/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
@@ -9,7 +9,9 @@ ms.custom: sap:Storage
 ---
 # Use mountOptions settings in Azure Files
 
-This article discusses recommended mount options when you configure the storage class object on Azure Files. These mounting options help you to provision storage on your Kubernetes cluster.
+## Summary
+
+This article explains recommended mountOptions settings for Azure Files storage classes. Use these settings to provision Kubernetes storage with better performance and reliability.
 
 ## Recommended settings
 

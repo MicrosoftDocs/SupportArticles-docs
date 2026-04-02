@@ -1,15 +1,17 @@
 ---
-title: Troubleshoot the Throttled Error Code (429)
-description: Learn how to resolve the Throttled error (status 429) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the throttled error code (429) in AKS
+description: Learn how to identify and resolve the throttled error (status 429) in AKS. Follow these steps to fix request throttling and successfully create and deploy your AKS cluster.
 ms.date: 03/05/2025
 ms.reviewer: jovieir, chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the Throttled error code (status 429) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the Throttled error code (429)
+# Troubleshoot the throttled error code (429)
 
-This article discusses how to identify and resolve the `Throttled` error (status 429) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article explains how to identify and resolve the throttled error (status 429) in Azure Kubernetes Service (AKS). Follow the steps below to fix AKS request throttling and successfully create and deploy your AKS cluster.
 
 ## Symptoms
 

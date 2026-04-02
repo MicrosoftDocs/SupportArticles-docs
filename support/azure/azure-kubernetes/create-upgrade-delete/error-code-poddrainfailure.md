@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 
+## Summary
+
 This article discusses how to identify and resolve UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets (PDBs) that occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites

@@ -6,15 +6,19 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: xl15beta, anitao, jenl, anatolyg
+ms.reviewer: xl15beta, anitao, jenl, anatolyg, akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10982
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016 
+ms.date: 04/01/2026
 ---
 
 # Parts of Excel turn white or gray when you run VBA code in Excel 2013

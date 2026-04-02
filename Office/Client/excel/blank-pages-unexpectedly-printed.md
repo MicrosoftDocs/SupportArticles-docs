@@ -9,15 +9,16 @@ ms.author: meerak
 ms.custom: 
   - Printing
   - CSSTroubleshoot
-ms.reviewer: V-RHOWAR
+  - CI 10745
+ms.reviewer: akeeler, v-lisalozano
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft Office Excel 2003
-  - Microsoft Office Excel 2007
-  - Excel 2010
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/23/2026
 ---
 
 # Blank pages are unexpectedly printed in Excel

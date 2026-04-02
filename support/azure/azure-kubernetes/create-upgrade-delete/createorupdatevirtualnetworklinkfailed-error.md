@@ -8,6 +8,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # "CreateOrUpdateVirtualNetworkLinkFailed" error when updating or upgrading an AKS cluster
 
+## Summary
+
 This article provides a solution to the "CreateOrUpdateVirtualNetworkLinkFailed" error code that occurs when you try to update or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
