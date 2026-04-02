@@ -10,14 +10,15 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot
+  - CI 10982
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
-  - Excel 2003
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 04/01/2026
 ---
 
 # Recalculation of a worksheet that contains a SUMIF formula takes longer than expected to finish
