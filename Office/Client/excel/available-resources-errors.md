@@ -9,16 +9,17 @@ audience: ITPro
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
+  - CI 11012
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
-ms.date: 05/26/2025
+  - Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2019
+  - Microsoft Excel 2016 
+ms.date: 04/01/2026
 ---
 
 # How to troubleshoot "available resources" errors in Excel
