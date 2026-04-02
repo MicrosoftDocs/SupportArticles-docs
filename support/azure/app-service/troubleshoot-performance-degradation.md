@@ -19,22 +19,22 @@ ms.custom: sap:Availability, Performance, and Application Issues, build-2025
 
 This article explains how to troubleshoot slow app performance issues in [Azure App Service](/azure/app-service/overview) by monitoring app behavior, collecting diagnostic data, and mitigating the issue.
 
-## Symptom
+## Symptoms
 
 When you browse the app, the pages load slowly and sometimes time out.
 
 ## Cause
 
-This problem often happens because of application-level problems, like the following:
+This problem often occurs because of application-level problems, such as the following:
 
 - Network requests taking a long time
-- Application code or database queries being inefficient
-- Application using high memory or CPU
-- Application crashing due to an exception
+- Application code or database queries are inefficient
+- An application uses high memory or CPU
+- An application fails because of an exception
 
 ## Troubleshooting steps
 
-Troubleshooting involves three distinct tasks, performed in sequential order:
+Troubleshooting involves three distinct tasks, performed in sequence:
 
 1. [Observe and monitor application behavior](#observe)
 1. [Collect data](#collect)
@@ -52,7 +52,7 @@ Azure publicizes each service interruption or performance degradation. You can t
 
 ### Monitor your app
 
-Use the monitoring tools in the Azure portal to find out if your application has any problems. Under **Monitoring** in the sidebar menu, select **Metrics**. The **Metric** dropdown menu shows you all the metrics you can add.
+Use the monitoring tools in the Azure portal to determine whether your application has any problems. Under **Monitoring** in the sidebar menu, select **Metrics**. The **Metric** menu shows you all the metrics that you can add.
 
 Some of the metrics that you might want to monitor for your app include:
 
