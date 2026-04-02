@@ -76,8 +76,8 @@
       href: general-ledger/year-end-close-miss-opening-balances.md
     - name: Financial dimensions
       items:
-        - name: Dimension values are defaulting incorrectly
-          href: general-ledger/financial-dimension-values-defaulting-incorrectly.md
+        - name: Unexpected financial dimension values on transactions
+          href: general-ledger/incorrect-default-dimension-values.md
 - name: Tax
   items:
     - name: Tax Calculation
