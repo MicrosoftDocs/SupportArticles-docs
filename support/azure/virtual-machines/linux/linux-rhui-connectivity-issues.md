@@ -8,7 +8,7 @@ ms.reviewer: azurevmlnxcic, divargas, v-leedennis
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.date: 07/10/2025

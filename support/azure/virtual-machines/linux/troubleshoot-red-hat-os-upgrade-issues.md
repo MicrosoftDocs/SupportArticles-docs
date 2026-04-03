@@ -7,7 +7,7 @@ ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.date: 02/26/2025

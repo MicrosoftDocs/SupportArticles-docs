@@ -4,7 +4,7 @@ description: Find solutions to the common problems that you might encounter when
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/22/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg

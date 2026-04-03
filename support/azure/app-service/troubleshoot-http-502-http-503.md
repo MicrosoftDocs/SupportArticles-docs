@@ -5,7 +5,7 @@ tags: top-support-issue
 keywords: 502 bad gateway, 503 service unavailable, error 503, error 502
 ms.assetid: 51cd331a-a3fa-438f-90ef-385e755e50d5
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.service: azure-app-service
 ms.date: 10/14/2025
 ms.author: jarrettr

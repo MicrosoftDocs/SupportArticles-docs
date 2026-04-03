@@ -3,7 +3,7 @@ title: Error 403 - This web app is stopped message
 description: This article provides guidance on addressing the "Error 403 - This web app is stopped" message. 
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 12/17/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg

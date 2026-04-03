@@ -4,7 +4,7 @@ description: Learn how to troubleshoot slow app performance issues in Azure App 
 tags: top-support-issue
 keywords: web app performance, slow app, app slow
 ms.assetid: b8783c10-3a4a-4dd6-af8c-856baafbdde5
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 10/14/2025
 ms.author: msangapu
 author: msangapu-msft
