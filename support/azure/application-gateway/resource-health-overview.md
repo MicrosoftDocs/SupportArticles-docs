@@ -5,9 +5,10 @@ services: application-gateway
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
-ms.topic: overview
-ms.date: 07/09/2019
-ms.custom: sap:Performance and Scaling
+ms.topic: troubleshooting
+ms.date: 04/03/2026
+ms.custom: sap:Monitoring and logging
+
 # Customer intent: "As an IT administrator managing Azure Application Gateway, I want to monitor the resource health of my application gateways, so that I can quickly diagnose issues and ensure optimal performance and reliability of my services."
 ---
 
