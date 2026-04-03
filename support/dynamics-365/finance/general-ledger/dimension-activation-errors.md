@@ -9,13 +9,13 @@ ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with fi
 
 ## Summary
 
-This article helps you resolve errors and timeouts that occur when you activate financial dimensions in Microsoft Dynamics 365 Finance. Typical causes include dimension name conflicts, entity extension problems, Change Data Capture (CDC) conflicts, data maintenance job interference, change tracking, and large data volumes.
+This article helps you resolve errors and timeouts that occur when you activate financial dimensions in Microsoft Dynamics 365 Finance. Common causes include dimension name conflicts, entity extension problems, Change Data Capture (CDC) conflicts, data maintenance job interference, change tracking, and large data volumes.
 
 ## Activation fails
 
 ### Name conflict when creating or renaming a dimension
 
-When you create a new dimension or rename an existing one, you receive one of the following error messages:
+When you create a dimension or rename an existing one, you receive one of the following error messages:
 
 > \<DimensionName> is currently being used as a Dimension or has some other conflict that prevents it from being used as a name. If a dimension was previously deleted or renamed, but those changes are not yet activated, please activate now before attempting to re-create the same dimension, or choose a different name.
 
