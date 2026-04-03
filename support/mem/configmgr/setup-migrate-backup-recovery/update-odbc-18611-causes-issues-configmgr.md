@@ -58,7 +58,7 @@ ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stri
 
 ## Solution
 
-To resolve this issue, upgrade the driver to [version 18.6.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186).
+To resolve this issue, upgrade the ODBC Driver for SQL Server to [version 18.6.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186).
 
 Alternatively, downgrade the driver to [version 18.4.1.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#184). Configuration Manager version 2503 and later versions include this version of the driver as redistributable content.
 
