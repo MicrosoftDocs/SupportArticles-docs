@@ -2,6 +2,8 @@ items:
 
 - name: Welcome
   href: welcome-app-gateway.yml
+- name: Troubleshoot TCP connection timeout issues in Application Gateway
+  href: troubleshoot-tcp-connection-timeout-issues.md
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
