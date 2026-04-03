@@ -22,6 +22,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot TCP connection timeout issues in Application Gateway
+            url: troubleshoot-tcp-connection-timeout-issues.md
           - text: ApplicationGatewaySkuNotSpecified error
             url: error-codes/applicationgatewayskunotspecified.md
           - text: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
