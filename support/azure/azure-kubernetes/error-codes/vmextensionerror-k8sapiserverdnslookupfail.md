@@ -132,7 +132,7 @@ This error occurs when cluster nodes can't resolve the API server FQDN via DNS. 
    > [!NOTE]
    > Create the forwarder for the full `privatelink.<region>.azmk8s.io` zone, not for individual cluster FQDNs. Conditional forwarding doesn't support subdomains.
 
-3. **For public clusters** — ensure your custom DNS server can reach public DNS resolvers (for example, `8.8.8.8` or `168.63.129.16`). Check that your DNS server doesn't have a conflicting override for the `azmk8s.io` domain.
+3. **For public clusters** — public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable. Ensure your custom DNS server can reach public DNS resolvers (for example, `8.8.8.8` or `1.1.1.1`). Check that your DNS server doesn't have a conflicting override for the `azmk8s.io` domain.
 
 4. **Verify the Azure Private DNS zone link** (private clusters only):
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
