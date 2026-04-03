@@ -126,7 +126,7 @@ If the connection fails, the DNS server is unreachable (firewall, NSG, or server
 nslookup <cluster-fqdn> 168.63.129.16
 ```
 
-If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Azure DNS correctly.
+If this test succeeds but Step 1 fails, your custom DNS server isn't forwarding to Azure DNS correctly.
 
 ## Cause and Resolution by Error Type
 
@@ -187,7 +187,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 ### SERVFAIL—Server Failure
 
-**What it means:** The DNS server encountered an internal failure while processing the query. This can indicate an unhealthy DNS server or a broken forwarding chain.
+**What it means:** The DNS server encountered an internal failure while processing the query. This failure can indicate an unhealthy DNS server or a broken forwarding chain.
 
 **Root causes:**
 
@@ -211,7 +211,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 ### REFUSED—Query Refused
 
-**What it means:** The DNS server actively refused to answer the query. This typically indicates an access control policy issue.
+**What it means:** The DNS server actively refused to answer the query. This response typically indicates an access control policy issue.
 
 **Root causes:**
 
