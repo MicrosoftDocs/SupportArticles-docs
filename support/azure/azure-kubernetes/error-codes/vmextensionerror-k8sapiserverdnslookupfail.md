@@ -133,18 +133,22 @@ This error occurs when cluster nodes can't resolve the API server FQDN via DNS. 
 
    If it fails, your DNS server needs a forwarding rule for the cluster's FQDN zone.
 
-2. **For private clusters with custom DNS** — create a conditional forwarder on your DNS server for the zone `privatelink.<region>.azmk8s.io` pointing to Azure DNS (`168.63.129.16`):
+2. **Ensure your custom DNS server forwards queries it can't resolve.** Your DNS server must be able to resolve the cluster FQDN, either directly or by forwarding to an upstream resolver:
 
-   > [!NOTE]
-   > Create the forwarder for the full `privatelink.<region>.azmk8s.io` zone, not for individual cluster FQDNs. Conditional forwarding doesn't support subdomains.
+   - For **private clusters** — create a conditional forwarder for the zone `privatelink.<region>.azmk8s.io` pointing to Azure DNS (`168.63.129.16`). Azure DNS resolves the Private DNS zone records for your cluster.
 
-3. **For public clusters** — public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable. Ensure your custom DNS server can reach public DNS resolvers (for example, `8.8.8.8` or `1.1.1.1`). Check that your DNS server doesn't have a conflicting override for the `azmk8s.io` domain.
+     > [!NOTE]
+     > Create the forwarder for the full `privatelink.<region>.azmk8s.io` zone, not for individual cluster FQDNs. Conditional forwarding doesn't support subdomains.
 
-4. **Verify the Azure Private DNS zone link** (private clusters only):
+   - For **public clusters** — ensure your DNS server forwards unresolved queries to a public DNS resolver (for example, `8.8.8.8` or `1.1.1.1`). Public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable.
+
+   - For **both cluster types** — check that your DNS server doesn't have a conflicting override or stub zone for the `azmk8s.io` domain that could intercept resolution.
+
+3. **Verify the Azure Private DNS zone link** (private clusters only):
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
    - Confirm the cluster's VNet (or the VNet where DNS resolution is needed) is listed
 
-5. **If this is a first-time cluster creation** and it failed, the Private DNS zone link may not have completed. Reconcile the cluster:
+4. **If this is a first-time cluster creation** and it failed, the Private DNS zone link may not have completed. Reconcile the cluster:
 
    ```azurecli-interactive
    az resource update --resource-group <resource-group-name> \
@@ -166,10 +170,14 @@ This error occurs when cluster nodes can't resolve the API server FQDN via DNS. 
 **Resolution:**
 
 1. **Check DNS server health** — verify the DNS service is running and responsive
-2. **Verify upstream forwarders** — ensure the DNS server can reach its configured forwarders (for example, `168.63.129.16`)
+2. **Verify upstream forwarders** — ensure the DNS server can reach its configured upstream resolvers (for example, `168.63.129.16` for private clusters, or `8.8.8.8`/`1.1.1.1` for public clusters)
 3. **Test from a different DNS server** to isolate whether the issue is server-specific:
 
    ```bash
+   # Test with a public resolver (public clusters)
+   nslookup <cluster-fqdn> 8.8.8.8
+
+   # Test with Azure DNS (private clusters)
    nslookup <cluster-fqdn> 168.63.129.16
    ```
 
@@ -231,7 +239,7 @@ If your VNet is configured with multiple DNS servers, you may see a combination 
    nslookup <cluster-fqdn> <dns-server-ip-2>
    ```
 
-2. **Ensure all configured DNS servers** have the conditional forwarder for `privatelink.<region>.azmk8s.io`
+2. **Ensure all configured DNS servers** can resolve the cluster FQDN (via correct forwarders for private clusters or upstream public resolvers for public clusters)
 3. **Ensure all DNS servers are reachable** from the AKS node subnet
 
 ## Reference links
