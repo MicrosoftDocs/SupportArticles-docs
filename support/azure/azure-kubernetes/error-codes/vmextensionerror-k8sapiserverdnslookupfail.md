@@ -38,11 +38,20 @@ Use these details to identify your scenario in the sections below.
 
 ## Identify your cluster FQDN
 
-Before troubleshooting, find your cluster's FQDN:
+Before troubleshooting, find your cluster's FQDN using one of the following methods:
+
+**Azure CLI:**
 
 ```azurecli-interactive
 az aks show --resource-group <resource-group-name> --name <cluster-name> --query "fqdn || privateFqdn" -o tsv
 ```
+
+**Azure portal:**
+
+1. Navigate to **Kubernetes services** > select your cluster
+2. On the **Overview** page, find the **API server address** field — this is your cluster FQDN
+
+**Cluster FQDN formats:**
 
 - **Private clusters** have an FQDN like `<name>.<id>.privatelink.<region>.azmk8s.io`
 - **Public clusters** have an FQDN like `<name>-<id>.hcp.<region>.azmk8s.io`
@@ -57,11 +66,24 @@ From any machine on the cluster's virtual network (or a peered VNet), run the fo
 nslookup <cluster-fqdn> <dns-server-ip>
 ```
 
-If you don't know the DNS server IP, check the VNet's DNS settings in the Azure portal, or run:
+If you don't know the DNS server IP, check the VNet's DNS settings in the Azure portal or query it from a VM in the VNet:
+
+**Azure portal:**
+
+1. Navigate to **Virtual networks** > select the cluster's VNet
+2. Under **Settings**, select **DNS servers**
+3. Note the configured DNS server IP addresses (if set to **Custom**) or **Default (Azure-provided)** if using Azure DNS
+
+**From a VM in the VNet:**
 
 ```bash
-# From a Linux VM in the VNet
+# Linux
 cat /etc/resolv.conf
+```
+
+```powershell
+# Windows (PowerShell)
+Get-DnsClientServerAddress -AddressFamily IPv4
 ```
 
 **Step 2: Verify DNS server reachability**
@@ -82,30 +104,41 @@ If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Az
 
 ## Cause and resolution
 
-Based on the DNS error type, follow the appropriate section below.
+This error occurs when cluster nodes can't resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
 ### NXDOMAIN — Domain not found
 
 **What it means:** The DNS server responded that the domain doesn't exist. This is the most common cause (approximately 98% of cases).
 
-**Root causes:**
+**Common root causes:**
 
-- Missing conditional forwarder from your custom DNS server to Azure DNS (`168.63.129.16`)
-- Azure Private DNS zone not linked to the cluster's virtual network
-- Private DNS zone missing the A record for the cluster
+- Custom DNS server doesn't have a forwarder configured for the cluster's FQDN zone
+- (Private clusters) Azure Private DNS zone not linked to the cluster's virtual network
+- (Private clusters) Private DNS zone missing the A record for the cluster
+- (Public clusters) Custom DNS server can't reach public DNS resolvers
 
-**Resolution for private clusters with custom DNS:**
+**Resolution:**
 
-1. **Create a conditional forwarder** on your DNS server for the zone `privatelink.<region>.azmk8s.io` pointing to `168.63.129.16`.
+1. **Verify your DNS server can resolve the cluster FQDN.** Test from a VM in the VNet:
+
+   ```bash
+   nslookup <cluster-fqdn> <dns-server-ip>
+   ```
+
+   If it fails, your DNS server needs a forwarding rule for the cluster's FQDN zone.
+
+2. **For private clusters with custom DNS** — create a conditional forwarder on your DNS server for the zone `privatelink.<region>.azmk8s.io` pointing to Azure DNS (`168.63.129.16`):
 
    > [!NOTE]
    > Create the forwarder for the full `privatelink.<region>.azmk8s.io` zone, not for individual cluster FQDNs. Conditional forwarding doesn't support subdomains.
 
-2. **Verify the Azure Private DNS zone** is linked to the VNet:
+3. **For public clusters** — ensure your custom DNS server can reach public DNS resolvers (for example, `8.8.8.8` or `168.63.129.16`). Check that your DNS server doesn't have a conflicting override for the `azmk8s.io` domain.
+
+4. **Verify the Azure Private DNS zone link** (private clusters only):
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
    - Confirm the cluster's VNet (or the VNet where DNS resolution is needed) is listed
 
-3. **If this is a first-time cluster creation** and it failed, the Private DNS zone link may not have completed. Reconcile the cluster:
+5. **If this is a first-time cluster creation** and it failed, the Private DNS zone link may not have completed. Reconcile the cluster:
 
    ```azurecli-interactive
    az resource update --resource-group <resource-group-name> \
@@ -113,13 +146,6 @@ Based on the DNS error type, follow the appropriate section below.
        --namespace Microsoft.ContainerService \
        --resource-type ManagedClusters
    ```
-
-**Resolution for public clusters:**
-
-Public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable. If you get NXDOMAIN:
-
-1. Verify your custom DNS server can reach public DNS resolvers (for example, `8.8.8.8` or `168.63.129.16`)
-2. Check that your DNS server doesn't have a conflicting override for the `azmk8s.io` domain
 
 ### SERVFAIL — Server failure
 
