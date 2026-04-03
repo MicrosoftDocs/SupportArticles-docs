@@ -33,7 +33,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 - The [nslookup](/windows-server/administration/windows-commands/nslookup) or [dig](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/) DNS resolution tool.
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version.
+- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59, or a later version.
 
 ## Symptoms
 
