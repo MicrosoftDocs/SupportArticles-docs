@@ -1,6 +1,6 @@
 ---
 title: Configure activity log export for a specific resource group
-description: "Export Azure activity logs for your resource group to monitor changes and ensure compliance. Learn the steps to filter and export logs effectively."
+description: Export Azure activity logs for your resource group to monitor changes and ensure compliance. Learn the steps to filter and export logs effectively.
 ms.date: 03/31/2026
 ms.author: jarrettr
 ms.editor: v-gsitser
