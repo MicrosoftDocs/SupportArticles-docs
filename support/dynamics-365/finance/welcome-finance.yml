@@ -106,12 +106,6 @@ landingContent:
             url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
-
-# Card
-  - title: Financial dimensions
-    linkLists:
-      - linkListType: how-to-guide
-        links:
           - text: Financial dimension errors after restoring a database to another environment
             url: general-ledger/dimensions-errors-after-database-restore.md
           - text: Source entity isn't available in the "Use values from" dropdown

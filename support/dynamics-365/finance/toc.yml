@@ -66,20 +66,18 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
+    - name: Financial dimension errors after restoring a database to another environment
+      href: general-ledger/dimensions-errors-after-database-restore.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
+    - name: Source entity isn't available in the "Use values from" dropdown
+      href: general-ledger/dimensions-missing-use-values-from-source.md
     - name: Troubleshoot issues with the General ledger adjustments page
       href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Vouchers aren't reversed when posting a journal with reversing entry and date
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
       href: general-ledger/year-end-close-miss-opening-balances.md
-    - name: Financial dimensions
-      items:
-        - name: Financial dimension errors after restoring a database to another environment
-          href: general-ledger/dimensions-errors-after-database-restore.md
-        - name: Source entity isn't available in the "Use values from" dropdown
-          href: general-ledger/dimensions-missing-use-values-from-source.md
 - name: Tax
   items:
     - name: Tax Calculation
