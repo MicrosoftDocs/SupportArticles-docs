@@ -12,7 +12,7 @@ ms.tgt_pltfrm: vm-windows
 ms.date: 08/01/2024
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:My VM is not booting
 ---
 

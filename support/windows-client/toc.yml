@@ -939,7 +939,7 @@ items:
       href: ./shell-experience/assigned-access-kiosk-users-ctrl-n-opens-unlisted-apps.md
     - name: Assigned Access kiosk users can't access printers that use a domain print server
       href: ./shell-experience/assigned-access-kiosk-users-cant-access-printers-domain-print-server.md
-    - name: Assigned access kiosk users can't use the quick settings
+    - name: Assigned access kiosk users can't use quick settings
       href: ./shell-experience/assigned-access-kiosk-users-cant-use-quick-settings-menu.md
     - name: Can't configure Microsoft Teams to run in a multi-app kiosk
       href: ./shell-experience/cant-configure-teams-multi-app-kiosk.md

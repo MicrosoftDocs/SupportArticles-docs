@@ -4,7 +4,7 @@ description: Learn how to troubleshoot an App Service app by using remote debugg
 ms.assetid: def8e481-7803-4371-aa55-64025d116c97
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 10/13/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
