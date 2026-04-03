@@ -2,7 +2,7 @@
 title: Troubleshoot TCP connection timeout issues in Azure Application Gateway
 description: Learn how to diagnose and resolve TCP connection timeout issues that occur before HTTP processing in Azure Application Gateway.
 ms.date: 04/02/2026
-ms.author: lalbadarneh, giverm
+ms.author: lalbadarneh
 ms.editor: lalbadarneh
 ms.reviewer: lalbadarneh
 ms.service: azure-application-gateway
