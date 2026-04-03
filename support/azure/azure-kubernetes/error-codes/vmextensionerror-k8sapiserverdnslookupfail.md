@@ -112,6 +112,14 @@ If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Az
 
 This error occurs when cluster nodes can't resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
+On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help configuring your custom DNS server, review the following articles:
+
+- [Create a private AKS cluster](/azure/aks/private-clusters)
+- [Private Azure Kubernetes Service cluster with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
+- [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
+
+When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomain--domain-not-found) section below).
+
 ### NXDOMAIN — Domain not found
 
 **What it means:** The DNS server responded that the domain doesn't exist. This is the most common cause (approximately 98% of cases).
