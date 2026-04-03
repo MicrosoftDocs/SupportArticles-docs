@@ -16,11 +16,6 @@ ms.dyn365.ops.version: AX 7.0.0
 
 This article helps you resolve an issue where [process automation](/dynamics365/fin-ops-core/fin-ops/sysadmin/process-automation) background processes or scheduled series don't run in Microsoft Dynamics 365 Finance. When the process automation system batch job is unhealthy, dependent batch operations like subledger journal transfers, vendor invoice posting, ledger settlements, and data maintenance jobs stall. Reinitializing process automation restores the system batch job and resumes affected processes.
 
-## Prerequisites
-
-- Security role: System Administrator or equivalent.
-- Access to the System administration module.
-
 ## Symptoms
 
 Process automation background processes or scheduled series don't run as expected. This issue can affect multiple operations, including:
