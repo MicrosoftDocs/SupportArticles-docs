@@ -108,7 +108,7 @@ nslookup <cluster-fqdn> 168.63.129.16
 
 If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Azure DNS correctly.
 
-## Cause and resolution
+## Cause and resolution by error type
 
 This error occurs when cluster nodes can't resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
