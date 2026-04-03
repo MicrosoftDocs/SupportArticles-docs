@@ -1,22 +1,24 @@
 ---
 title: Troubleshoot common node auto-repair errors
-description: Provides potential causes and solutions to common node auto-repair errors that occur when you repair a node with a NotReady status.
+description: Learn common node auto-repair errors in AKS, find causes and fixes for NotReady nodes, and troubleshoot issues faster with actionable guidance.
 ms.date: 10/25/2024
 ms.reviewer: juliayin, aritraghosh, shmalfat, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
-# Troubleshoot common node auto-repair errors
+# Troubleshoot common node auto-repair errors in AKS
 
-When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for more than five minutes, it attempts to automatically repair the node. Node auto-repair is a best-effort service. It doesn't guarantee that the node can be restored to a healthy state. For more information, see [node auto-repair process](/azure/aks/node-auto-repair).
+## Summary
 
-During the node auto-repair process, AKS initiates `reboot`, `reimage`, and `redeploy` actions on your unhealthy node. Errors can occur due to various reasons and error codes are discovered through [Kubernetes events](/azure/aks/events). You can use Kubernetes events to monitor the status of your node and the auto-repair actions.
+When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for more than five minutes, it tries to automatically repair the node. Node auto-repair is a best-effort service. It doesn't guarantee that the node can be restored to a healthy state. For more information, see [node auto-repair process](/azure/aks/node-auto-repair).
 
-This article provides potential causes and solutions to common node auto-repair errors, and outlines best practices for monitoring the node auto-repair process.
+During the node auto-repair process, AKS initiates `reboot`, `reimage`, and `redeploy` actions on your unhealthy node. Errors can occur for various reasons. You can discover error codes through [Kubernetes events](/azure/aks/events). Use Kubernetes events to monitor the status of your node and the auto-repair actions.
+
+This article provides potential causes and solutions to common node auto-repair errors. It also outlines best practices for monitoring the node auto-repair process.
 
 ## Prerequisites
 
-Check the following Kubernetes events to identify the type of a node auto-repair error:
+Check the following Kubernetes events to identify the type of node auto-repair error:
  
 | Reason | Event message | Description |
 | --- | --- | --- |
@@ -25,7 +27,7 @@ Check the following Kubernetes events to identify the type of a node auto-repair
 | NodeRedeployError | Node auto-repair redeploy action failed due to an operation failure: [error code here] | Emitted when there's an error with the `redeploy` action. |
 
 > [!NOTE]
-> Because your node is already in an unhealthy state prior to the auto-repair process, in most cases, node auto-repair errors don't impact your cluster or applications. When you encounter node auto-repair errors, we recommend that you try to repair the node by following the instructions in [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). If you can't restore it to a `Succeeded` status and see persistent errors reported by node auto-repair, contact [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for assistance.
+> Because your node is already in an unhealthy state before the auto-repair process, in most cases, node auto-repair errors don't impact your cluster or applications. When you encounter node auto-repair errors, try to repair the node by following the instructions in [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). If you can't restore it to a `Succeeded` status and see persistent errors reported by node auto-repair, contact [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for assistance.
 
 ## Common error codes
 
@@ -41,8 +43,8 @@ Check the following Kubernetes events to identify the type of a node auto-repair
 
 ## Best practices for monitoring node auto-repair
 
-- AKS stores Kubernetes events from the past hour by default. We recommend enabling [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-container-insights) so that you can store events for up to 90 days. You can also [query events and configure alerts](/azure/aks/events#automating-event-notifications) to quickly detect node auto-repair errors.
+- AKS stores Kubernetes events from the past hour by default. Enable [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-container-insights) so that you can store events for up to 90 days. You can also [query events and configure alerts](/azure/aks/events#automating-event-notifications) to quickly detect node auto-repair errors.
 
-- Node auto-repair is a best-effort service. It doesn't guarantee that your node can be restored to a `Ready` status. We recommend that you actively monitor on and set alerts for Node Not Ready issues, and troubleshoot and resolve these issues yourself. For more information, see [basic troubleshooting of Node Not Ready issues](./node-not-ready-basic-troubleshooting.md).
+- Node auto-repair is a best-effort service. It doesn't guarantee that your node can be restored to a `Ready` status. Actively monitor and set alerts for Node Not Ready issues, and troubleshoot and resolve these issues yourself. For more information, see [basic troubleshooting of Node Not Ready issues](./node-not-ready-basic-troubleshooting.md).
 
  

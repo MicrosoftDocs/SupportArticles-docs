@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Managed Namespaces Errors
-description: Learn how to resolve errors that occur when you try to enable managed namespaces on AKS.
+description: Troubleshoot managed namespace errors in AKS when enabling ManagedNamespacePreview. Follow these fixes to restore namespace operations quickly.
 ms.date: 08/05/2025
 ms.reviewer: jackjiang
 ms.service: azure-kubernetes-service
@@ -8,7 +8,9 @@ ms.custom: sap:Extensions, references_regions
 ---
 # Troubleshoot managed namespace errors
 
-This article provides guidance for resolving errors that occur in Microsoft Azure Kubernetes Service (AKS) when you use the `ManagedNamespacePreview` flag.
+## Summary
+
+Use this guide to troubleshoot managed namespace errors in Microsoft Azure Kubernetes Service (AKS) when using the `ManagedNamespacePreview` flag and restore expected namespace behavior.
 
 ## Prerequisites
 

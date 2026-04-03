@@ -9,6 +9,8 @@ ms.custom: sap:Connectivity
 ---
 # Traffic between node pools is blocked by a custom network security group
 
+## Summary
+
 This article discusses how to resolve a scenario in which a custom network security group (NSG) blocks traffic between node pools in a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
@@ -21,23 +23,23 @@ In scenarios that involve multiple node pools, the pods in the `kube-system` nam
 
 AKS lets customers have [node pools in different subnets](/azure/aks/use-multiple-node-pools#add-a-node-pool-with-a-unique-subnet). This feature means that customers can also associate different NSGs with each node pool's subnet.
 
-## Cause 1: The NSG of a node pool blocks inbound traffic
+## Cause 1: the NSG of a node pool blocks inbound traffic
 
 Inbound access on the NSG of a node pool blocks traffic. For example, a custom NSG on the System node pool (that hosts the core DNS pods) blocks inbound traffic on User Datagram Protocol (UDP) port 53 from the subnet of the User node pool.
 
-:::image type="content" source="./media/traffic-between-node-pools-is-blocked/inbound-traffic-blocked.svg" alt-text="Diagram of a custom network security group that blocks inbound traffic on UDP port 53 in the User node pool of an Azure Kubernetes Service cluster." lightbox="./media/traffic-between-node-pools-is-blocked/inbound-traffic-blocked.svg" border="false":::
+:::image type="content" source="./media/traffic-between-node-pools-is-blocked/inbound-traffic-blocked.svg" alt-text="Screenshot of a custom NSG blocking inbound UDP 53 traffic between AKS user and system node pools." lightbox="./media/traffic-between-node-pools-is-blocked/inbound-traffic-blocked.svg" border="false":::
 
-### Solution 1: Configure the custom NSG to allow traffic between the node pools
+### Solution 1: configure the custom NSG to allow traffic between the node pools
 
 Make sure that your custom NSG allows the required traffic between the node pools, specifically on UDP port 53. AKS won't update the custom NSG that's associated with subnets.
 
-## Cause 2: Outbound access on the NSG of a node pool blocks traffic
+## Cause 2: outbound access on the NSG of a node pool blocks traffic
 
 The NSG on another node pool blocks outbound access to the pod. For example, a custom NSG on the User node pool blocks outbound traffic on UDP port 53 to the System node pool.
 
-:::image type="content" source="./media/traffic-between-node-pools-is-blocked/outbound-traffic-blocked.svg" alt-text="Diagram of a custom network security group that blocks outbound traffic on UDP port 53 in the System node pool of an Azure Kubernetes Service cluster." lightbox="./media/traffic-between-node-pools-is-blocked/outbound-traffic-blocked.svg" border="false":::
+:::image type="content" source="./media/traffic-between-node-pools-is-blocked/outbound-traffic-blocked.svg" alt-text="Screenshot of a custom NSG blocking outbound UDP 53 traffic from an AKS user node pool to a system node pool." lightbox="./media/traffic-between-node-pools-is-blocked/outbound-traffic-blocked.svg" border="false":::
 
-### Solution 2: Configure the custom NSG to allow traffic between the node pools
+### Solution 2: configure the custom NSG to allow traffic between the node pools
 
 See [Solution 1: Configure the custom NSG to allow traffic between the node pools](#solution-1-configure-the-custom-nsg-to-allow-traffic-between-the-node-pools).
 
@@ -54,7 +56,7 @@ Error from server: Get https://<node>:10250/containerLogs/default/nginx-57cdfd6d
 
 If the communication on TCP port 10250 is blocked, the connection to the Kubelet will be affected, and the logs won't be fetched.
 
-### Solution 3: Check for NSG rules that block TCP port 10250
+### Solution 3: check for NSG rules that block TCP port 10250
 
 Check whether any NSG rules block node-to-node communication on TCP port 10250.
 

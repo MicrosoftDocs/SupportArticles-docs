@@ -3,8 +3,8 @@ title: Deployment FAQs for Web Apps
 description: Get answers to frequently asked questions about deployment for the Web Apps feature of Azure App Service.
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.service: azure-cloud-services-classic
-ms.date: 03/09/2022
+ms.service: azure-app-service
+ms.date: 03/09/2026
 ms.reviewer: toan, shrahman
 ms.custom: sap:Application Code Deployment   
 ---

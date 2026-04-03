@@ -24,3 +24,13 @@ landingContent:
         links:
           - text: Virtual Network troubleshooter
             url: connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+          - text: Troubleshoot connectivity problems between Azure VMs
+            url: virtual-network-troubleshoot-connectivity-problem-between-vms.md 
+          - text: Troubleshoot network virtual appliance issues in Azure
+            url: virtual-network-troubleshoot-nva.md 
+          - text: Troubleshoot Azure VM connectivity problems
+            url: troubleshoot-vm-connectivity.md  
+          - text: Troubleshoot outbound SMTP connectivity problems in Azure
+            url: troubleshoot-outbound-smtp-connectivity.md
+          - text: Troubleshoot virtual network peering issues
+            url: virtual-network-troubleshoot-peering-issues.md  

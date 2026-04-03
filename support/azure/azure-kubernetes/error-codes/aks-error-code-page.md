@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes Service (AKS) Common Error Codes
-description: List of common AKS error codes
+description: Find common AKS error codes, understand causes, and follow mitigation links to fix cluster create, upgrade, and networking issues quickly. Start troubleshooting now.
 ms.date: 10/23/2025
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -12,7 +12,9 @@ ms.custom: sap:AKS error codes, AKS errors
 ---
 # Azure Kubernetes Service (AKS) common error codes
 
-This article describes common AKS errors and how to resolve them.
+## Summary
+
+This article lists common AKS error codes and provides mitigation links to help you troubleshoot cluster issues faster.
 
 ## A-K error codes
 
@@ -71,7 +73,7 @@ This article describes common AKS errors and how to resolve them.
 | RequestDisallowedByPolicy | Azure policy blocks the request. | The request violates assigned Azure policy definitions. For more information, see [RequestDisallowedByPolicy error when deploying an AKS cluster](requestdisallowedbypolicy-error.md). |
 | ServiceCidrOverlapExistingSubnetsCidr | Service Classless Inter-Domain Routing (CIDR) overlaps with subnet CIDR | The Kubernetes service CIDR conflicts with the existing subnet address space. For more information, see [Troubleshoot the ServiceCidrOverlapExistingSubnetsCidr error during an AKS cluster upgrade](servicecidroverlapexistingsubnetscidr-error.md). |
 | ServicePrincipalValidationClientError | Service principal validation fails. | There's a client-side error when validating service principal credentials. For more information, see [Troubleshoot the ServicePrincipalValidationClientError error code](serviceprincipalvalidationclienterror-error.md). |
-| SubnetIsDelegated | 	Subnet is delegated to another service. | The subnet has a delegation that conflicts with AKS requirements. For more information, see [Troubleshoot the SubnetIsDelegated error code](subnetisdelegated-error.md). |
+| SubnetIsDelegated |     Subnet is delegated to another service. | The subnet has a delegation that conflicts with AKS requirements. For more information, see [Troubleshoot the SubnetIsDelegated error code](subnetisdelegated-error.md). |
 | SubnetIsFull | No available IP addresses in subnet. | All IP addresses in the subnet are allocated. For more information, see [Troubleshoot the SubnetIsFull error code during an AKS cluster upgrade](subnetisfull-error.md). |
 | SubnetIsFull (upgrade) | Insufficient IPs for upgrade operation. | There aren't enough free IP addresses to perform the node pool upgrade. For more information, see [Troubleshoot the "SubnetIsFull" error code during an AKS cluster upgrade](../create-upgrade-delete/error-code-subnetisfull-upgrade.md). |
 | SubnetWithExternalResourcesCannotBeUsedByOtherResources | Subnet contains external resources. | The subnet has resources from other services preventing AKS usage. For more information, see [Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code](subnetwithexternalresourcescannotbeusedbyotherresources-error.md). |
@@ -85,7 +87,7 @@ This article describes common AKS errors and how to resolve them.
 | --- | ---------- | ----------------- |
 | TCP time-outs such as 10250 I/O | TCP connection timeouts on kubelet port. | There are network connectivity issues or a firewall is blocking port 10250. For more information, see [10250 I/O timeouts error when running kubectl log command](../connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md). |
 | Throttled | API requests are being throttled. | The request rate exceeds Azure Resource Manager limits. For more information, see [Troubleshoot the Throttled error code (429)](throttled-error.md). |
-| Throttled (429) | HTTP 429 rate limiting in effect | 	Too many requests causes Azure API throttling. For more information, see [Troubleshoot Throttled error code (429)
+| Throttled (429) | HTTP 429 rate limiting in effect |     Too many requests causes Azure API throttling. For more information, see [Troubleshoot Throttled error code (429)
 ](../create-upgrade-delete/error-code-aksrequeststhrottled.md). |
 | tls - client offered only unsupported versions | Transport Layer Security (TLS) version mismatch | The client attempts connection with unsupported TLS versions. For more information, see ["TLS: client offered only unsupported versions" error on client when connecting to the AKS API server](../create-upgrade-delete/tls-client-offered-unsupported-versions.md). |
 | TooManyRequestsReceived or SubscriptionRequestsThrottled | Request throttling active. | An excessive request volume triggers rate limiting. For more information, see [Troubleshoot TooManyRequestsReceived or SubscriptionRequestsThrottled error code](toomanyrequestsreceived-error.md). |

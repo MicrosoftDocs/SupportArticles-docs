@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot SubnetIsFull Error Code During AKS Cluster Upgrade
-description: Learn how to resolve the SubnetIsFull error when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot SubnetIsFull error during AKS cluster upgrade
+description: Resolve the SubnetIsFull error during an AKS cluster upgrade. Follow these steps to fix IP address capacity issues and upgrade successfully.
 ms.date: 10/10/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, albarqaw, v-leedennis
@@ -11,7 +11,9 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot the SubnetIsFull error code during an AKS cluster upgrade
 
-This article discusses how to identify and resolve the "SubnetIsFull" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article explains how to identify and resolve the SubnetIsFull error that occurs when you upgrade an Azure Kubernetes Service (AKS) cluster, helping you complete the upgrade successfully.
 
 Here's an example of the error message:
 

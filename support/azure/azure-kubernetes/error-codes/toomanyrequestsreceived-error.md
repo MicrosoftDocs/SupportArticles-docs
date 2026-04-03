@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot TooManyRequestsReceived or SubscriptionRequestsThrottled Error Code
-description: Learn how to resolve the TooManyRequestsReceived or SubscriptionRequestsThrottled error when you try to delete an Azure Kubernetes Service (AKS) cluster.
+description: Resolve the TooManyRequestsReceived or SubscriptionRequestsThrottled error (HTTP 429) when deleting an AKS cluster. Follow these steps to fix it.
 ms.date: 04/03/2025
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis, dorinalecu
@@ -10,7 +10,9 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot TooManyRequestsReceived or SubscriptionRequestsThrottled error code
 
-This article discusses how to identify and resolve the `TooManyRequestsReceived` or `SubscriptionRequestsThrottled` error that occurs when you try to delete a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article explains how to identify and resolve the `TooManyRequestsReceived` or `SubscriptionRequestsThrottled` error (HTTP 429) that occurs when you try to delete an Azure Kubernetes Service (AKS) cluster. Follow the steps in this article to restore successful cluster deletion.
 
 ## Symptoms
 

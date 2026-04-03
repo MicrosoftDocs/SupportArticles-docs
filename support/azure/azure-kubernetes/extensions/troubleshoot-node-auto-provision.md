@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Node Auto-Provisioning Managed Add-on
-description: Learn how to troubleshoot node auto-provisioning (NAP) in Azure Kubernetes Service (AKS).
+description: Troubleshoot node auto-provisioning (NAP) issues in Azure Kubernetes Service (AKS) and fix scaling, networking, and quota errors to restore reliability. Start now.
 ms.service: azure-kubernetes-service
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -14,6 +14,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot node auto-provisioning (NAP) in Azure Kubernetes Service (AKS)
+
+## Summary
 
 This article discusses how to troubleshoot node auto-provisioning (NAP). NAP is a managed add-on that's based on the open source [Karpenter](https://karpenter.sh) project. NAP automatically provisions and manages nodes in response to pending pod pressure, and manages scaling events at the virtual machine (VM) or node level.
 
