@@ -58,7 +58,7 @@ For guidance regarding common issues that involve reversing transactions, includ
 
 ## Test in a standard environment to rule out customizations
 
-If your Dynamics 365 Finance environment has custom code or extensions, those customizations might intentionally or unintentionally change dimension values during document processing. The change can occur at any step in the workflow (entry, approval, or posting). Therefore, it can be diffcult to trace the change.
+If your Dynamics 365 Finance environment has custom code or extensions, those customizations might intentionally or unintentionally change dimension values during document processing. The change can occur at any step in the workflow (entry, approval, or posting). Therefore, it can be difficult to trace the change.
 
 If you rule out fixed dimensions, and the behavior doesn't occur in a standard demo environment, a customization is likely involved.
 
