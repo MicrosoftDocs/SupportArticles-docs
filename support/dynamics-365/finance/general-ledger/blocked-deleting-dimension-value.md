@@ -17,7 +17,7 @@ This article provides troubleshooting steps for issues that prevent you from del
 You experience one or more of the following issues:
 
 - The delete option is disabled on the **Financial dimension values** page.
-- You receive an error mesage when you try to delete a financial dimension value or a record from the entity that backs a financial dimension.
+- You receive an error message when you try to delete a financial dimension value or a record from the entity that backs a financial dimension.
 
 ## Delete entity-backed dimensions from the source entity page
 
