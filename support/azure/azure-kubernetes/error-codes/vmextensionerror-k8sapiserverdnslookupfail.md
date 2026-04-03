@@ -17,15 +17,15 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 - [Prerequisites](#prerequisites)
 - [Symptoms](#symptoms)
-- [Identify your cluster FQDN](#identify-your-cluster-fqdn)
-- [Diagnose the DNS failure](#diagnose-the-dns-failure)
-- [Cause and resolution by error type](#cause-and-resolution-by-error-type)
-  - [NXDOMAIN — Domain not found](#nxdomain--domain-not-found)
-  - [SERVFAIL — Server failure](#servfail--server-failure)
-  - [REFUSED — Query refused](#refused--query-refused)
-  - [Timeout — DNS server unreachable](#timeout--dns-server-unreachable)
-  - [Mixed errors — Multiple DNS servers with different failures](#mixed-errors--multiple-dns-servers-with-different-failures)
-- [Reference links](#reference-links)
+- [Identify Your Cluster FQDN](#identify-your-cluster-fqdn)
+- [Diagnose the DNS Failure](#diagnose-the-dns-failure)
+- [Cause and Resolution by Error Type](#cause-and-resolution-by-error-type)
+  - [NXDOMAIN — Domain Not Found](#nxdomain--domain-not-found)
+  - [SERVFAIL — Server Failure](#servfail--server-failure)
+  - [REFUSED — Query Refused](#refused--query-refused)
+  - [Timeout — DNS Server Unreachable](#timeout--dns-server-unreachable)
+  - [Mixed Errors — Multiple DNS Servers with Different Failures](#mixed-errors--multiple-dns-servers-with-different-failures)
+- [Reference Links](#reference-links)
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ The diagnostic details can include:
 
 Use these details to identify your scenario in the sections below.
 
-## Identify your cluster FQDN
+## Identify Your Cluster FQDN
 
 Before troubleshooting, find your cluster's FQDN using one of the following methods:
 
@@ -68,7 +68,7 @@ az aks show --resource-group <resource-group-name> --name <cluster-name> --query
 - **Private clusters** have an FQDN like `<name>.<id>.privatelink.<region>.azmk8s.io`
 - **Public clusters** have an FQDN like `<name>-<id>.hcp.<region>.azmk8s.io`
 
-## Diagnose the DNS failure
+## Diagnose the DNS Failure
 
 From any machine on the cluster's virtual network (or a peered VNet), run the following commands. You don't need SSH access to the cluster nodes.
 
@@ -126,7 +126,7 @@ nslookup <cluster-fqdn> 168.63.129.16
 
 If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Azure DNS correctly.
 
-## Cause and resolution by error type
+## Cause and Resolution by Error Type
 
 This error occurs when cluster nodes can't resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
@@ -138,7 +138,7 @@ On your DNS servers and firewall, make sure that nothing blocks the resolution t
 
 When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomain--domain-not-found) section below).
 
-### NXDOMAIN — Domain not found
+### NXDOMAIN — Domain Not Found
 
 **What it means:** The DNS server responded that the domain doesn't exist. This is the most common cause (approximately 98% of cases).
 
@@ -183,7 +183,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
        --resource-type ManagedClusters
    ```
 
-### SERVFAIL — Server failure
+### SERVFAIL — Server Failure
 
 **What it means:** The DNS server encountered an internal failure while processing the query. This can indicate an unhealthy DNS server or a broken forwarding chain.
 
@@ -207,7 +207,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 4. **Review DNS server logs** for errors related to the queried domain
 
-### REFUSED — Query refused
+### REFUSED — Query Refused
 
 **What it means:** The DNS server actively refused to answer the query. This typically indicates an access control policy issue.
 
@@ -223,7 +223,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 2. **Verify recursion settings** — confirm that recursive queries are enabled for the AKS node IP range
 3. **Review DNS server security policies** for any rules that might block the `azmk8s.io` domain or `privatelink` subdomain
 
-### Timeout — DNS server unreachable
+### Timeout — DNS Server Unreachable
 
 **What it means:** The DNS server didn't respond within the timeout period. The node couldn't communicate with the DNS server at all.
 
@@ -252,7 +252,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 3. **Check firewall rules** — verify no firewall (Azure Firewall, NVA, or host firewall) is blocking DNS traffic
 4. **Verify DNS server is running** — confirm the DNS service is active and listening on port 53
 
-### Mixed errors — Multiple DNS servers with different failures
+### Mixed Errors — Multiple DNS Servers with Different Failures
 
 If your VNet is configured with multiple DNS servers, you may see a combination of errors (for example, NXDOMAIN from one server and timeout from another). In this case:
 
@@ -266,7 +266,7 @@ If your VNet is configured with multiple DNS servers, you may see a combination 
 2. **Ensure all configured DNS servers** can resolve the cluster FQDN (via correct forwarders for private clusters or upstream public resolvers for public clusters)
 3. **Ensure all DNS servers are reachable** from the AKS node subnet
 
-## Reference links
+## Reference Links
 
 - [Create a private AKS cluster](/azure/aks/private-clusters)
 - [Private cluster with custom DNS — hub-and-spoke](/azure/aks/private-clusters#hub-and-spoke-with-custom-dns)
