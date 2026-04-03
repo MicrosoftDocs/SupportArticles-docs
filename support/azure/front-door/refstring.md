@@ -61,19 +61,19 @@ Azure Front Door uses a Reference String to manage 4xx and 5xx errors. The follo
 
 1.    Select the **Diagnose and solve problems** menu.
  
-    :::image type="content" source="media/refstring/refstring-step-one-portal.png" alt-text="Screenshot showing the first step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-one-portal.png":::
+:::image type="content" source="media/refstring/refstring-step-one-portal.png" alt-text="Screenshot showing the first step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-one-portal.png":::
 
 1.    Scroll down and select **Connectivity** under the **Common problems** section.
 
-    :::image type="content" source="media/refstring/refstring-step-two-portal.png" alt-text="Screenshot showing the second step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-two-portal.png":::
+:::image type="content" source="media/refstring/refstring-step-two-portal.png" alt-text="Screenshot showing the second step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-two-portal.png":::
 
 1.    In the box **What issue are you having?** select **Select a problem subtype** and choose **4xx and 5xx errors** on the drop down-menu, then select the **Next**.
 
-    :::image type="content" source="./media/refstring/refstring-step-three-portal.png" alt-text="Screenshot showing the third step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-three-portal.png":::
+:::image type="content" source="./media/refstring/refstring-step-three-portal.png" alt-text="Screenshot showing the third step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-three-portal.png":::
  
 1.    Enter your Reference String in the box within the **4xx and 5xx errors** section. You input the Reference String given to you from your request under the **Tracking Reference – RefString** field.
 
-    :::image type="content" source="media/refstring/refstring-step-four-portal.png" alt-text="Screenshot showing the fourth step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-four-portal.png":::
+:::image type="content" source="media/refstring/refstring-step-four-portal.png" alt-text="Screenshot showing the fourth step in diagnosing problems using a Reference String." lightbox="media/refstring/refstring-step-four-portal.png":::
 
 1. Finally, select **Run Diagnostics** to identify the cause of the issue, which explains the failure if it's a known problem.
 

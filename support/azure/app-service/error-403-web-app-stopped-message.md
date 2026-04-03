@@ -36,7 +36,7 @@ This can occur when your Azure subscription has a spending limit. When the limit
 
 To verify this, browse to the [Azure Account Portal](https://account.windowsazure.com/Home/Index) and select **Account Center**. 
 
-If this is the issue, see [What do I do if my Azure subscription becomes disabled?](https://azure.microsoft.com/documentation/articles/billing-subscription-become-disable/) for information on how to resolve subscription limits.
+If this is the issue, see [Reactivate a disabled Azure subscription](/azure/cost-management-billing/manage/subscription-disabled) for information on how to resolve subscription limits.
 
 ### Website stopped in the portal
 
