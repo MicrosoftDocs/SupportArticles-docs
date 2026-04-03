@@ -48,7 +48,7 @@ The diagnostic details can include:
 - **Cluster FQDN**—the fully qualified domain name that failed to resolve
 - **Error type**—the specific resolution failure (NXDOMAIN, SERVFAIL, REFUSED, or timeout)
 
-Use these details to identify your scenario in the sections below.
+Use these details to identify your scenario in the following sections.
 
 ## Identify Your Cluster FQDN
 
@@ -63,7 +63,7 @@ az aks show --resource-group <resource-group-name> --name <cluster-name> --query
 **Azure portal:**
 
 1. Navigate to **Kubernetes services** > select your cluster
-2. On the **Overview** page, find the **API server address** field—this is your cluster FQDN
+2. On the **Overview** page, find the **API server address** field, which shows your cluster FQDN
 
 **Cluster FQDN formats:**
 
@@ -130,7 +130,7 @@ If this test succeeds but Step 1 fails, your custom DNS server isn't forwarding 
 
 ## Cause and Resolution by Error Type
 
-This error occurs when cluster nodes are unable to resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
+This error occurs when cluster nodes are unable to resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section.
 
 On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help with configuring your custom DNS server, review the following articles:
 
@@ -138,11 +138,11 @@ On your DNS servers and firewall, make sure that nothing blocks the resolution t
 - [Private Azure Kubernetes Service cluster with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
 - [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
-When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomaindomain-not-found) section below).
+When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomaindomain-not-found) section).
 
 ### NXDOMAIN—Domain Not Found
 
-**What it means:** The DNS server responded that the domain doesn't exist. This is the most common cause (approximately 98% of cases).
+**What it means:** The DNS server responded that the domain doesn't exist. This error is the most common cause (approximately 98% of cases).
 
 **Common root causes:**
 
@@ -176,7 +176,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
    - Confirm the cluster's VNet (or the VNet where DNS resolution is needed) is listed
 
-4. **If this is a first-time cluster creation** and it failed, the Private DNS zone link may not have completed. Reconcile the cluster:
+4. **If the cluster was created for the first time** and the creation failed, the Private DNS zone link may not be complete. Reconcile the cluster:
 
    ```azurecli-interactive
    az resource update --resource-group <resource-group-name> \
