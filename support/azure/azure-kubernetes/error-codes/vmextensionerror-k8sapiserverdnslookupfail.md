@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error message 
-description: Fix the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS. Learn how to diagnose and resolve DNS lookup failures when creating, starting, upgrading, or scaling your AKS cluster.
+description: Fix the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS. Learn how to diagnose and resolve API server name resolution failures when creating, starting, upgrading, or scaling your AKS cluster.
 ms.date: 04/03/2026
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc, marcha
 ms.service: azure-kubernetes-service
@@ -11,14 +11,14 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 ## Summary
 
-This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) in Azure Kubernetes Service (AKS). This error occurs when cluster nodes can't resolve the Kubernetes API server's fully qualified domain name (FQDN) during cluster create, start, upgrade, or scale operations.
+This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) in Azure Kubernetes Service (AKS). This error occurs when cluster nodes are unable to resolve the Kubernetes API server name during cluster create, start, upgrade, or scale operations.
 
 **In this article:**
 
 - [Prerequisites](#prerequisites)
 - [Symptoms](#symptoms)
 - [Identify Your Cluster FQDN](#identify-your-cluster-fqdn)
-- [Diagnose the DNS Failure](#diagnose-the-dns-failure)
+- [Diagnose the Resolution Failure](#diagnose-the-resolution-failure)
 - [Cause and Resolution by Error Type](#cause-and-resolution-by-error-type)
   - [NXDOMAIN — Domain Not Found](#nxdomain--domain-not-found)
   - [SERVFAIL — Server Failure](#servfail--server-failure)
@@ -31,7 +31,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 - (Private clusters only) A machine with network access to the cluster's virtual network (a VM in the same VNet or a peered VNet) to test DNS resolution. You don't need SSH access to the cluster nodes.
 
-- The [nslookup](/windows-server/administration/windows-commands/nslookup) or [dig](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/) DNS lookup tool.
+- The [nslookup](/windows-server/administration/windows-commands/nslookup) or [dig](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/) DNS resolution tool.
 
 - [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version.
 
@@ -44,7 +44,7 @@ The diagnostic details can include:
 
 - **DNS server IP address** — the DNS server that the node queried
 - **Cluster FQDN** — the fully qualified domain name that failed to resolve
-- **Error type** — the specific DNS failure (NXDOMAIN, SERVFAIL, REFUSED, or timeout)
+- **Error type** — the specific resolution failure (NXDOMAIN, SERVFAIL, REFUSED, or timeout)
 
 Use these details to identify your scenario in the sections below.
 
@@ -68,7 +68,7 @@ az aks show --resource-group <resource-group-name> --name <cluster-name> --query
 - **Private clusters** have an FQDN like `<name>.<id>.privatelink.<region>.azmk8s.io`
 - **Public clusters** have an FQDN like `<name>-<id>.hcp.<region>.azmk8s.io`
 
-## Diagnose the DNS Failure
+## Diagnose the Resolution Failure
 
 From any machine on the cluster's virtual network (or a peered VNet), run the following commands. You don't need SSH access to the cluster nodes.
 
@@ -128,7 +128,7 @@ If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Az
 
 ## Cause and Resolution by Error Type
 
-This error occurs when cluster nodes can't resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
+This error occurs when cluster nodes are unable to resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
 On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help configuring your custom DNS server, review the following articles:
 
