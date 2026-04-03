@@ -132,7 +132,7 @@ If this succeeds but Step 1 fails, your custom DNS server isn't forwarding to Az
 
 This error occurs when cluster nodes are unable to resolve the API server FQDN via DNS. The root cause depends on your cluster type (public or private) and DNS configuration. Based on the DNS error type from the diagnostic details or your `nslookup` test, follow the appropriate section below.
 
-On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help configuring your custom DNS server, review the following articles:
+On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help with configuring your custom DNS server, review the following articles:
 
 - [Create a private AKS cluster](/azure/aks/private-clusters)
 - [Private Azure Kubernetes Service cluster with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
@@ -170,7 +170,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
    - For **public clusters**—ensure your DNS server forwards unresolved queries to a public DNS resolver (for example, `8.8.8.8` or `1.1.1.1`). Public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable.
 
-   - For **both cluster types**—check that your DNS server doesn't have a conflicting override or stub zone for the `azmk8s.io` domain that could intercept resolution.
+   - For **both cluster types**—check that your DNS server doesn't have a conflicting override or stub zone for the `azmk8s.io` domain that could intercept the resolution.
 
 3. **Verify the Azure Private DNS zone link** (private clusters only):
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
