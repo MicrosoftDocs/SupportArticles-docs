@@ -1,76 +1,79 @@
 ---
-title: Manage orphan flow when owner leaves org
-description: Describes how to manage orphan flows when the owner leaves the organization.
+title: Manage orphaned flows when owner leaves organization
+description: Manage orphan flows in Power Automate when an owner leaves your organization. Learn how to assign new co-owners and maintain automation continuity.
 ms.reviewer: tomche
 ms.topic: how-to
-ms.date: 09/25/2023
+ms.date: 04/03/2026
 ms.custom: has-azure-ad-ps-ref, sap:Flow management\Flow owner leaves organization
 ---
-# How to manage orphan flows when the owner leaves the organization
-
-This article describes how to manage orphan flows when the owner leaves the organization.
+# Manage orphan flows when the owner leaves the organization
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4556130
 
-## What are orphaned flows?
+## Summary
 
-A flow turns into an orphaned flow when it doesn't have a valid owner anymore. It often happens when the creator or owner of the flow has left the organization and there's no co-owner. If the flow uses connections that require authentication, then it might start failing because the user identity isn't valid anymore.
+This article helps you manage orphaned flows in Power Automate after a flow owner leaves your organization. An orphaned flow is a flow that no longer has a valid owner. They can fail if they use connections tied to that user account. This article explains how admins can identify orphaned flows, assign new co-owners in the Power Platform admin center, and use PowerShell to update ownership for one flow or multiple flows. These steps help maintain business continuity and reduce failures caused by lost or invalid connections.
 
-Admins can maintain continuity on the business process automated by the flow by adding one or more co-owners to it. Co-owners basically have full control over the flow just like the original owner, and can fix authentication for connections if any and enable the flow if it has been disabled.
-
-## How to check if there are orphaned flows
+## Check for orphaned flows
 
 > [!NOTE]
-> Only privileged users can view flows that don't have any valid owners.
+> Only users with appropriate privileges can view flows that don't have any valid owners.
 
-On the [environment page from Power Platform Admin Center](https://admin.powerplatform.microsoft.com/environments), go to **Resources** tab and then open the **Flow** list. Orphaned flows don't have an owner displayed in the **Owners** column.
+On the [environment page from Power Platform Admin Center](https://admin.powerplatform.microsoft.com/environments), go to the **Resources** tab and select **Flows**. Look for flows that don't have an owner listed in the **Owners** column.
 
-Select **Load more** to load the next set of flows so as to ensure you've looked through all flows that might be orphaned.
+If there are a large number of flows, select **Load more** to load the next set of flows so you can ensure you look through all flows that might be orphaned.
 
-## Assign new co-owner(s) to an orphaned flow
+## Assign new co-owners to an orphaned flow
 
-1. From the flow list, select the orphaned flow to open the flow details page.
-2. Select **Manage sharing** at the bottom of the Owners list.
-3. Type in a new owner name and select the new owner account.
-4. Select **Save** to save the changes.
+1. From the flow list, select the orphaned flow.
+1. Select **Share** at the top of the page.
+1. Enter a new owner name and select the new owner account.
+1. Select **Save** to save your changes.
 
 > [!NOTE]
-> It may be hard to find the orphaned flows if there are a large amount of flows in your organization. In that case, you can also manage orphaned flows through PowerShell cmdlets.
+> If there are a large number of flows in your organization, you can also manage orphaned flows through PowerShell cmdlets.
 
 ## Manage orphaned flows through Power Automate cmdlets for administrators
 
-As an Admin, you can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you've followed the instructions to complete the installation if you haven't done it before.
+As an admin, you can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you [install](/power-platform/admin/powershell-getting-started) the PowerShell module if you haven't done so previously.  
 
-### Fixing permissions for one flow
+### Fix permissions for one flow
 
-You'll need the environment name and flow name (a GUID).
-Run the `Get-AdminFlowOwnerRole` cmdlet with environment name and flow name to get the list of users and their roles. Which will enable you to verify the current permissions set for the flow.
+1. Run the `Get-AdminFlowOwnerRole` cmdlet with the environment name and flow name (GUID) to get the list of users and their roles. This list shows you the current permissions set for the flow.
 
-To assign a co-owner to a flow, run the `Set-AdminFlowOwnerRole` cmdlet with the Microsoft Entra principal object ID of the new owner.
+    ```powershell
+    Get-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name>
+    ```
 
-```powershell
-Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -PrincipalType User -RoleName CanEdit -PrincipalObjectId <new owner object id>
-```
+1. To assign a co-owner to a flow, run the `Set-AdminFlowOwnerRole` cmdlet with the Microsoft Entra principal object ID of the new owner.
 
-> [!NOTE]
-> You can get the Microsoft Entra principal object ID of a user by running the [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call the `Connect-AzureAD` cmdlet before running the `Get-AzureADUser` cmdlet.
+    ```powershell
+    Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -PrincipalType User -RoleName CanEdit -PrincipalObjectId <new owner object id>
+    ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+    > [!NOTE]
+    > To get the Microsoft Entra principal object ID of a user, run the [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from the AzureAD module). You need to call the `Connect-AzureAD` cmdlet before running the `Get-AzureADUser` cmdlet.
 
-Run the `Get-AdminFlowOwnerRole` cmdlet again to verify the new owner is in the list.
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
-### Fixing permissions for flows created by a particular user
+1. Run the `Get-AdminFlowOwnerRole` cmdlet again to verify the new owner is in the list.
 
-Get a list of flows created by a given user by running the following cmdlet, and then apply the above section to fix every flow on the list.
+For more information on these cmdlets, see [Set-AdminFlowOwnerRole](/powershell/module/microsoft.powerapps.administration.powershell/set-adminflowownerrole) and [Get-AdminFlowOwnerRole](/powershell/module/microsoft.powerapps.administration.powershell/get-adminflowownerrole).
 
-```powershell
-Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
-```
+### Fix permissions for flows created by a particular user
 
-### Listing all orphaned flows in an environment
+1. To get the list of flows created by a given user, run the following cmdlet:
 
-To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in Microsoft Entra ID. The following script provides an example:
+    ```powershell
+     Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
+     ```
+
+1. Then apply the preceding section to fix every flow on the list.
+
+### List all orphaned flows in an environment
+
+To get all flows that don't have valid users, loop through all flows in the environment, and verify there's at least one owner or co-owner that exists in Microsoft Entra ID. The following script provides an example:
 
 ```powershell
 Connect-AzureAD
@@ -104,4 +107,9 @@ foreach ($flow in $flows)
 }
 ```
 
-You can also inject the `Set-AdminFlowOwnerRole` cmdlet to assign a co-owner for each flow that doesn't have a valid owner.
+You can also inject the `Set-AdminFlowOwnerRole` cmdlet into the script to assign a co-owner for each flow that doesn't have a valid owner.
+
+## Related content
+
+- [Change the owner of a cloud flow](/power-automate/change-cloud-flow-owner)
+- [Guide to cloud sharing and permissions](/power-automate/guide-to-cloud-flow-sharing-permissions)
