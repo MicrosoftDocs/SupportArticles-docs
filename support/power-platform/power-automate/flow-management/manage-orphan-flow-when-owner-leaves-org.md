@@ -36,7 +36,7 @@ If there are a large number of flows, select **Load more** to load the next set 
 
 ## Manage orphaned flows through Power Automate cmdlets for administrators
 
-As an admin, you can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you [install](/power-platform/admin/powershell-getting-started) the PowerShell module if you haven't done so previously.  
+Administrators can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you [install](/power-platform/admin/powershell-getting-started) the PowerShell module if you haven't done so previously.  
 
 ### Fix permissions for one flow
 
@@ -68,8 +68,8 @@ For more information on these cmdlets, see [Set-AdminFlowOwnerRole](/powershell/
     ```powershell
      Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
      ```
-
-1. Then apply the preceding section to fix every flow on the list.
+     
+1. Then apply the steps in the preceding section to assign co-owners to every flow on the list.
 
 ### List all orphaned flows in an environment
 
