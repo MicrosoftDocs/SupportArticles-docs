@@ -46,7 +46,7 @@ UserPrincipalName : <mailbox alias>@<your domain>
 SamAccountName : <mailbox alias>
 ```
 
-Instead, you see following output similar to the following:
+You see results similar to the following output instead:
 
 ```output
 UserPrincipalName : <GUID>@<your domain>
