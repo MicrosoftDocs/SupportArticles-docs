@@ -29,7 +29,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 ## Prerequisites
 
-- A machine with network access to the cluster's virtual network (a VM in the same VNet or a peered VNet). You don't need SSH access to the cluster nodes.
+- (Private clusters only) A machine with network access to the cluster's virtual network (a VM in the same VNet or a peered VNet) to test DNS resolution. You don't need SSH access to the cluster nodes.
 
 - The [nslookup](/windows-server/administration/windows-commands/nslookup) or [dig](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/) DNS lookup tool.
 
