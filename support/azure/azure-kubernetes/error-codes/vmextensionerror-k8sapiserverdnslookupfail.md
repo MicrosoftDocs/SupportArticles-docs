@@ -171,15 +171,13 @@ This error occurs when cluster nodes can't resolve the API server FQDN via DNS. 
 
 1. **Check DNS server health** — verify the DNS service is running and responsive
 2. **Verify upstream forwarders** — ensure the DNS server can reach its configured upstream resolvers (for example, `168.63.129.16` for private clusters, or `8.8.8.8`/`1.1.1.1` for public clusters)
-3. **Test from a different DNS server** to isolate whether the issue is server-specific:
+3. **Test from another DNS server** to isolate whether the issue is specific to one server. If your VNet has multiple DNS servers configured, try querying a different one:
 
    ```bash
-   # Test with a public resolver (public clusters)
-   nslookup <cluster-fqdn> 8.8.8.8
-
-   # Test with Azure DNS (private clusters)
-   nslookup <cluster-fqdn> 168.63.129.16
+   nslookup <cluster-fqdn> <other-dns-server-ip>
    ```
+
+   If the other server resolves successfully, the issue is with the failing DNS server — check its configuration and logs.
 
 4. **Review DNS server logs** for errors related to the queried domain
 
