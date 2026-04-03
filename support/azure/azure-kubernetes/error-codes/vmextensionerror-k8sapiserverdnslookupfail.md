@@ -75,6 +75,12 @@ From any machine on the cluster's virtual network (or a peered VNet), run the fo
 **Step 1: Test DNS resolution of the cluster FQDN**
 
 ```bash
+nslookup <cluster-fqdn>
+```
+
+If resolution fails, test against a specific DNS server to narrow down the issue:
+
+```bash
 nslookup <cluster-fqdn> <dns-server-ip>
 ```
 
