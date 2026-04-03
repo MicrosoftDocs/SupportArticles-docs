@@ -89,7 +89,13 @@ Get-DnsClientServerAddress -AddressFamily IPv4
 **Step 2: Verify DNS server reachability**
 
 ```bash
+# Linux
 nc -zv <dns-server-ip> 53
+```
+
+```powershell
+# Windows (PowerShell)
+Test-NetConnection -ComputerName <dns-server-ip> -Port 53
 ```
 
 If the connection fails, the DNS server is unreachable (firewall, NSG, or server down).
@@ -201,7 +207,13 @@ This error occurs when cluster nodes can't resolve the API server FQDN via DNS. 
 1. **Verify DNS server reachability:**
 
    ```bash
+   # Linux
    nc -zv <dns-server-ip> 53
+   ```
+
+   ```powershell
+   # Windows (PowerShell)
+   Test-NetConnection -ComputerName <dns-server-ip> -Port 53
    ```
 
 2. **Check NSG rules** on both the AKS subnet and the DNS server subnet — ensure UDP and TCP port 53 are allowed inbound and outbound
