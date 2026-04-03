@@ -10,7 +10,7 @@ ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with fi
 
 ## Summary
 
-This article provides troubleshooting steps for issues that prevent you from deleting financial dimension values in Microsoft Dynamics 365 Finance. You might find that the delete option is disabled, or you receive an error message when you try to delete a dimension value or its backing entity record. Common causes include entity-backed dimensions that require deletion from a different page, insufficient permissions, dimension values that are used in transactions, and records that the dimension framework still references.
+This article provides troubleshooting steps for issues that prevent you from deleting financial dimension values in Microsoft Dynamics 365 Finance. You might find that the delete option is disabled, or you receive an error message when you try to delete a dimension value or its backing entity record. Common causes include entity-backed dimensions that require deletion from a different page, insufficient permissions, dimension values that are used in transactions, and backing entity records that are still referenced as dimension values.
 
 ## Symptoms
 
