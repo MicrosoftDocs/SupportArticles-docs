@@ -3,7 +3,7 @@ title: Troubleshoot AKS control plane authentication using external identity pro
 description: Troubleshoot AKS control plane authentication with external identity providers and restore secure access quickly. Follow steps to diagnose and fix issues now.
 ms.reviewer: shasb
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 11/09/2025
 ms.custom: sap:Identity and Security Management
 zone_pivot_groups: aks-external-identity-provider

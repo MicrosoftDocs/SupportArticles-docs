@@ -5,7 +5,7 @@ description: In this article, investigate, diagnose, and resolve potential laten
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-frontdoor
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/25/2025
 ---
 
