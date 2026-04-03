@@ -20,7 +20,7 @@ When you try to save or create a work order, you notice one of the following iss
 
   > Business Process Error: An error has occurred. Please contact your system administrator.
 
-    In this situation, you can save succesfully on the second attempt.
+    In this situation, you can save successfully on the second attempt.
 
 - You receive the following "required field" error message even though the field appears to be populated:
 
@@ -70,8 +70,8 @@ To check the incident type configuration and user privileges:
 1. In the Dynamics 365 Field Service app, go to **Settings**.
 1. Select **Work Orders** > **Incident Types**.
 1. Open the incident type record and verify that **Products**, **Services**, and **Service Tasks** appear under the related tabs.
-1. Verify that each product or service that's referenced in the incident type is **Active** in the product catalog. To do this, go to **Settings** > **General** > **Products** to check the product status.
-1. On the work order form, verify that the **Price List** field is populated by using a valid price list that contains the products. To do this, go to **Settings** > **General** > **Price Lists** to check the price list.
+1. Verify that each product or service that's referenced in the incident type is **Active** in the product catalog. Go to **Settings** > **General** > **Products** to check the product status.
+1. On the work order form, verify that the **Price List** field is populated by using a valid price list that contains the products. Go to **Settings** > **General** > **Price Lists** to check the price list.
 1. Verify the user has the required [security roles and privileges](/dynamics365/field-service/security-permissions):
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
     1. Select **Manage**, and then select your environment.
