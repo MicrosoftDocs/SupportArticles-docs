@@ -9,7 +9,7 @@ ms.custom:
   - sap:Dynatrace on Azure
   - sap:Native New Relic Service
   - sap:Elastic on Azure
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 08/04/2025
 ai.usage: ai-assisted
 
