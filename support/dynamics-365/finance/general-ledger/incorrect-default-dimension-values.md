@@ -2,7 +2,7 @@
 title: Incorrect dimension values after document posting in Dynamics 365 Finance
 description: If your financial dimension values aren't matching expected results after you post in Dynamics 365 Finance, discover how to troubleshoot and resolve this issue step by step.
 ms.date: 04/02/2026
-ms.reviewer: ethankallett, kfend, anaborges, jowalker, twheeloc, v-shaywood
+ms.reviewer: ethankallett, anaborges, jowalker, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 audience: Application User
 ms.search.region: Global
