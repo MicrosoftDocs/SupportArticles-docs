@@ -24,6 +24,10 @@ ms.date: 4/03/2026
 
 # Shared or resource mailbox UPN and SamAccountName contain a GUID
 
+## Summary
+
+When you create a shared or resource mailbox in Exchange Server without specifying the UserPrincipalName (UPN) and SamAccountName property values, Exchange Server might automatically assign values that contain a GUID. This issue happens when the mailbox alias doesn't meet certain character requirements. To avoid this issue, manually specify the `UserPrincipalName` and `SamAccountName` values when you create the mailbox, or update the values for an existing mailbox.
+
 ## Symptoms
 
 You create a [shared mailbox](/microsoft-365/admin/email/about-shared-mailboxes) or a [resource mailbox](/exchange/recipients-in-exchange-online/manage-resource-mailboxes#create-a-resource-mailbox-room-or-equipment-mailbox) in the Exchange admin center (EAC) or by using the [New-Mailbox](/powershell/module/exchange/new-mailbox) PowerShell cmdlet. When you create the mailbox, you don't specify the [UPN](/powershell/module/exchange/new-mailbox#-userprincipalname) and [`SamAccountName`](/powershell/module/exchange/new-mailbox#-samaccountname) property values. When you check the default `UserPrincipalName` and `SamAccountName` values that Microsoft Exchange Server assigns to the new mailbox, you see that they each contain a GUID.
@@ -42,7 +46,7 @@ UserPrincipalName : <mailbox alias>@<your domain>
 SamAccountName : <mailbox alias>
 ```
 
-Instead, you see the following output:
+Instead, you see following output similar to the following:
 
 ```output
 UserPrincipalName : <GUID>@<your domain>
@@ -51,7 +55,7 @@ SamAccountName : <GUID>
 
 ## Cause
 
-The issue occurs if the mailbox alias meets any of the following criteria:
+This issue occurs if the mailbox alias meets any of the following criteria:
 
 - Contains characters that aren't letters, numerals, periods, hyphens, or underscores
 
