@@ -13,6 +13,20 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) in Azure Kubernetes Service (AKS). This error occurs when cluster nodes can't resolve the Kubernetes API server's fully qualified domain name (FQDN) during cluster create, start, upgrade, or scale operations.
 
+**In this article:**
+
+- [Prerequisites](#prerequisites)
+- [Symptoms](#symptoms)
+- [Identify your cluster FQDN](#identify-your-cluster-fqdn)
+- [Diagnose the DNS failure](#diagnose-the-dns-failure)
+- [Cause and resolution by error type](#cause-and-resolution-by-error-type)
+  - [NXDOMAIN — Domain not found](#nxdomain--domain-not-found)
+  - [SERVFAIL — Server failure](#servfail--server-failure)
+  - [REFUSED — Query refused](#refused--query-refused)
+  - [Timeout — DNS server unreachable](#timeout--dns-server-unreachable)
+  - [Mixed errors — Multiple DNS servers with different failures](#mixed-errors--multiple-dns-servers-with-different-failures)
+- [Reference links](#reference-links)
+
 ## Prerequisites
 
 - A machine with network access to the cluster's virtual network (a VM in the same VNet or a peered VNet). You don't need SSH access to the cluster nodes.
@@ -24,9 +38,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 ## Symptoms
 
 When you try to create, start, upgrade, or scale an AKS cluster, you receive an error message similar to:
-> Code="VMExtensionProvisioningError"
-> 
-> Message="CSE failed with 'VMExtensionError_K8SAPIServerDNSLookupFail'. Agents are unable to resolve Kubernetes API server name. <Diagnostic details>. Please see https://aka.ms/aks/vmextensionerror_k8sapiserverdnslookupfail and https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns for more information."
+> Message="CSE failed with 'VMExtensionError_K8SAPIServerDNSLookupFail'. Agents are unable to resolve Kubernetes API server name. \<Diagnostic Details\>. Please see https://aka.ms/aks/vmextensionerror_k8sapiserverdnslookupfail and https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns for more information."
 
 The diagnostic details can include:
 
