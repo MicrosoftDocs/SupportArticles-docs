@@ -26,7 +26,7 @@ You might also see the following error in diagnostic logs:
 
 The following screenshot shows how this error appears in the Power Apps maker portal when creating or saving an environment variable:
 
-:::image type="content" source="media/ev-keyvault-auth-error/ev-keyvault-error-ui.png" alt-text="Screenshot of the Power Apps New environment variable dialog showing the authorization error banner. The Data Type is set to Secret and Secret Store is set to Azure Key Vault.":::
+:::image type="content" source="media/environment-variable-key-vault-auth-error/ev-keyvault-error-ui.png" alt-text="Screenshot of the Power Apps New environment variable dialog showing the authorization error banner. The Data Type is set to Secret and Secret Store is set to Azure Key Vault.":::
 
 This error can occur in the following scenarios:
 
