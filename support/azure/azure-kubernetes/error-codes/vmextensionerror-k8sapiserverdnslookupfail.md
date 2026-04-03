@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error message 
-description: Fix the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS. Learn how to resolve DNS lookup failures for NXDOMAIN, SERVFAIL, REFUSED, and timeout scenarios when creating or deploying your AKS cluster.
+description: Fix the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS. Learn how to diagnose and resolve DNS lookup failures when creating, starting, upgrading, or scaling your AKS cluster.
 ms.date: 04/03/2026
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc, marcha
 ms.service: azure-kubernetes-service
