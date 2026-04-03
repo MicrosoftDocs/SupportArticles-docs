@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot connections to endpoints outside the virtual network
-description: Troubleshoot connections to endpoints outside the virtual network (through the public internet) from an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot connections to endpoints outside the virtual network from an AKS cluster over the public internet, and fix issues fast.
 ms.date: 10/18/2024
 ms.reviewer: chiragpa, rissing, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot connections to endpoints outside the virtual network
 
-This article discusses how to troubleshoot connections to endpoints outside the virtual network (that is, through the public internet) from a Microsoft Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+This article helps you troubleshoot connections to endpoints outside the virtual network (that is, through the public internet) from an AKS cluster. Use these steps to identify root causes and restore connectivity quickly.
 
 ## Prerequisites
 

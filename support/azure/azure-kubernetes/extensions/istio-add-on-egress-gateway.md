@@ -1,6 +1,6 @@
 ---
 title: Istio Service Mesh Add-on Egress Gateway Troubleshooting
-description: Learn how to do egress gateway troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+description: Learn Istio egress gateway troubleshooting for the AKS add-on to fix outbound routing issues faster. Follow these steps to resolve problems.
 ms.date: 05/29/2025
 ms.reviewer: nshankar, kochhars, v-weizhu
 ms.service: azure-kubernetes-service
@@ -10,7 +10,9 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Istio service mesh add-on egress gateway troubleshooting
 
-This article discusses how to troubleshoot egress gateway issues on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+## Summary
+
+This article covers Istio service mesh add-on egress gateway troubleshooting in Azure Kubernetes Service (AKS) so you can resolve outbound traffic routing problems quickly.
 
 ## Overview
 

@@ -12,6 +12,8 @@ ms.service: azure-kubernetes-service
 ---
 # Istio service mesh add-on minor revision upgrade troubleshooting
 
+## Summary
+
 This article discusses troubleshooting scenarios and restrictions in the minor revision upgrade and rollback processes for the Istio service mesh add-on in Microsoft Azure Kubernetes Service (AKS).
 
 > [!NOTE]

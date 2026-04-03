@@ -1,6 +1,6 @@
 ---
 title: Could not change permissions using Azure Files
-description: Troubleshoot an error in which you could not change permissions when you use Azure Files in Azure Kubernetes Service (AKS).
+description: Troubleshoot the "could not change permissions" Azure Files error in Azure Kubernetes Service (AKS), then apply the workaround to get PostgreSQL running.
 ms.date: 02/28/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
@@ -10,7 +10,9 @@ ms.custom: sap:Storage
 ---
 # "Could not change permissions" error while using Azure Files
 
-This article discusses how to troubleshoot a "could not change permissions" error when you use Microsoft Azure Files with your Azure Kubernetes Service (AKS) cluster.
+## Summary
+
+Use this article to troubleshoot the "could not change permissions" error in Azure Files and restore PostgreSQL startup in your Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 

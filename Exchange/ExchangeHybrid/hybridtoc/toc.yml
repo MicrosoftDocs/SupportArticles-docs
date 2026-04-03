@@ -94,6 +94,8 @@ items:
           href: ../email-delivery/mail-flow-stops-event-2004.md
         - name: Messages aren't routed through on-premises in hybrid
           href: ../email-delivery/hybrid-messages-not-routed-through-on-premises.md
+        - name: Email delivery to Microsoft 365 Group fails
+          href: ../email-delivery/microsoft-365-group-email-delivery-fails.md          
         - name: NDR 5.2.0 when sending meeting invites
           href: ../email-delivery/ndr-5-2-0-when-sending-meeting-invites.md
         - name: On-premises users not getting emails from Microsoft 365

@@ -1,0 +1,7 @@
+items:
+- name: Agents missing components in a solution
+  href: agents-solution-mapping.md
+- name: Expression errors when publishing an agent
+  href: agent-publish-missing-dependencies.md
+- name: Solution upgrade or uninstall errors in Copilot Studio
+  href: solution-upgrade-uninstall-errors.md

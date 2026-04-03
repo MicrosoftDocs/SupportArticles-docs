@@ -1,16 +1,18 @@
 ---
 title: Troubleshoot Application Gateway Ingress Controller Connectivity Issues
-description: Provides troubleshooting guidance for connectivity issues related to the Application Gateway Ingress Controller in Azure Kubernetes Service. 
+description: "Troubleshoot Application Gateway Ingress Controller connectivity issues in AKS with step-by-step checks and fixes to restore ingress traffic quickly. Start now." 
 ms.reviewer: claudiogodoy
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
 ms.date: 05/24/2025
 ---
-# Troubleshoot Application Gateway Ingress Controller connectivity issues
+# Troubleshoot Application Gateway Ingress Controller connectivity problems
 
-The [Application Gateway Ingress Controller (AGIC)](/azure/application-gateway/ingress-controller-overview) is a Kubernetes application that enables [Azure Kubernetes Service (AKS)](/azure/aks/what-is-aks) users to use Azure's native Application Gateway L7 load-balancer to expose cloud software to the internet.
+## Summary
 
-This article provides step-by-step guidance to troubleshoot AGIC connectivity issues effectively.
+The [Application Gateway Ingress Controller (AGIC)](/azure/application-gateway/ingress-controller-overview) is a Kubernetes application that Azure Kubernetes Service (AKS) users can use to expose cloud software to the internet by using Azure's native Application Gateway L7 load balancer.
+
+This article provides step-by-step guidance to troubleshoot AGIC connectivity problems effectively.
 
 ## Prerequisites
 
@@ -23,12 +25,12 @@ Before you start, make sure that you have the following tools installed:
 ## Common symptoms
 
 > [!NOTE]
-> This article focuses on Application Gateway Ingress Controller issues. Other underlying problems might cause similar symptoms. For more information, see [Troubleshoot connection issues to an app hosted in an AKS cluster](../connectivity/connection-issues-application-hosted-aks-cluster.md).
+> This article focuses on Application Gateway Ingress Controller problems. Other underlying problems might cause similar symptoms. For more information, see [Troubleshoot connection problems to an app hosted in an AKS cluster](../connectivity/connection-issues-application-hosted-aks-cluster.md).
 
 | Symptom | Description |
 | --- | --- |
 | **Ingress without IP address** | Errors in assigning an `IP address` to the `Ingress` indicate that AGIC isn't functioning correctly. |
-| **HTTP Timeout** | If `DNS`, `Ingress`, and `Application` are working, AGIC is the likely cause of the issue. |
+| **HTTP Timeout** | If `DNS`, `Ingress`, and `Application` are working, AGIC is the likely cause of the problem. |
 
 ## Step 1: Verify application functionality
 
@@ -102,7 +104,7 @@ Make sure that your application is functioning correctly before you troubleshoot
 
 ## Step 2: Inspect Ingress settings
 
-Verify that the `Ingress` was created correctly:
+Verify that you created the `Ingress` correctly:
 
 1. **Describe the specific Ingress**:
 
@@ -132,7 +134,7 @@ Verify that the `Ingress` was created correctly:
     Normal  ResetIngressStatus  13m (x5 over 13m)    azure/application-gateway  Reset IP for Ingress default/dummy-web. Application Gateway <APPLICATION_GATEWAY_ID> is in stopped state
     ```
 
-If the `Ingress` lacks an address or displays events that indicate issues, investigate further.
+If the `Ingress` lacks an address or displays events that indicate problems, investigate further.
 
 ## Step 3: Inspect Ingress pod logs
 
@@ -147,7 +149,7 @@ If the `Ingress` lacks an address or displays events that indicate issues, inves
      ```console
     kubectl logs <INGRESS_POD_NAME> -n <YOUR_NAMESPACE>
     ```
-   For the AGIC that is deployed by using the add-on, run the following command:
+   For the AGIC that you deploy by using the add-on, run the following command:
     
     ```console
    kubectl logs -n kube-system -l=app=ingress-appgw
@@ -155,9 +157,9 @@ If the `Ingress` lacks an address or displays events that indicate issues, inves
 
 Look for any errors or warnings that might indicate what's going wrong.
 
-## Step 4: Check Application Gateway operational State
+## Step 4: Check Application Gateway operational state
 
-It focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) if it's used as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
+This section focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) when you use it as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
 
 ### [Add-on](#tab/Add-on)
 
@@ -198,7 +200,7 @@ It focuses on understanding the operational state of the [Application Gateway](/
     ```
 
     > [!NOTE]
-    > If you see any unexpected error on this step, you might have misconfigured `AGIC`, see [Install AGIC by using a new Application Gateway deployment](/azure/application-gateway/ingress-controller-install-new).
+    > If you see any unexpected error in this step, you might have misconfigured `AGIC`. For more information, see [Install AGIC by using a new Application Gateway deployment](/azure/application-gateway/ingress-controller-install-new).
 
 2. Validate the Application Gateway operational state:
 
@@ -206,10 +208,10 @@ It focuses on understanding the operational state of the [Application Gateway](/
     az network application-gateway show --name <YOUR_APPLICATION_GATEWAY_NAME> --resource-group <YOUR_RG_NAME> --query operationalState
     ```
   
-The expected `operationalState` value is `Running`. If it's something different, you might have to restart the Application Gateway.
+The expected `operationalState` value is `Running`. If it's something different, you might need to restart the Application Gateway.
 
 ---
-## Step 5 (Optional): Inspect Mapped Kubernetes and Application Gateway IPs
+## Step 5 (Optional): Inspect mapped Kubernetes and Application Gateway IPs
 
 The [AGIC](/azure/application-gateway/ingress-controller-overview) monitors the pod IPs and maps them to `backendAddressPools` in the `Application Gateway` instance. This step verifies that integration.
 

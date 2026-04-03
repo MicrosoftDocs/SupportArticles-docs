@@ -195,7 +195,7 @@ When you run the Set-Authentication cmdlet, make sure you use the token paramete
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
-Set-Authentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+Set-Authentication -AppId "00001111-aaaa-2222-bbbb-3333cccc4444" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -OnBehalfOf $pscreds
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
 

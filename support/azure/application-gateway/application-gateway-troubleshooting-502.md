@@ -1,21 +1,21 @@
 ---
 title: Troubleshoot Bad Gateway errors - Azure Application Gateway
-description: 'Learn how to troubleshoot Application Gateway Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server.'
+description: Troubleshoot Azure Application Gateway 502 Bad Gateway errors and restore backend connectivity quickly. Follow this guide to identify and fix root causes.
 services: application-gateway
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 04/29/2025
-ms.custom: devx-track-azurepowershell
+ms.date: 03/27/2026
+ms.custom: sap:Facing 5xx errors,devx-track-azurepowershell
 # Customer intent: As an IT administrator troubleshooting application performance, I want to identify and fix 502 Bad Gateway errors in the application gateway, so that I can ensure reliable access and functionality of web applications for users.
 ---
 
-# Troubleshooting bad gateway errors in Application Gateway
+# Troubleshoot bad gateway (502) errors in Azure Application Gateway
 
 ## Summary
 
-Learn how to troubleshoot bad gateway (502) errors received when using Azure Application Gateway.
+Learn how to troubleshoot bad gateway (502) errors in Azure Application Gateway so you can quickly restore reliable access to your web apps.
 
 > [!NOTE]
 > We recommend that you use the Azure Az PowerShell module to interact with Azure. To get started, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn how to migrate to the Az PowerShell module, see [Migrate Azure PowerShell from AzureRM to Az](/powershell/azure/migrate-from-azurerm-to-az).
@@ -31,7 +31,7 @@ After you configure an application gateway, one of the errors that you may see i
 * None of the VMs or instances in [virtual machine scale set are healthy](#unhealthy-instances-in-backendaddresspool).
 * [Request time-out or connectivity issues](#request-time-out) with user requests.
 
-## Network Security Group, User Defined Route, or Custom DNS issue
+## Network security group, user-defined route, or custom DNS issue
 
 ### Cause
 
@@ -226,7 +226,3 @@ www.contoso.com --> APP GW front end IP --> Listener with a rule that configures
 
 It's required that the DNS NAME of the TLS certificate installed on the backend server, matches the host name configured in the HTTP backend settings, otherwise the second part of the End-to-end communication that happens between the instances of the Application Gateway and the backend, fails with "Upstream SSL certificate doesn't match", and throws back a **Server Error: 502 - Web server received an invalid response while acting as a gateway or proxy server**
 
-
-## Next steps
-
-If the preceding steps don't resolve the issue, open a [support ticket](https://azure.microsoft.com/support/options/).

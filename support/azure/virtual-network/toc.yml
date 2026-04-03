@@ -13,6 +13,10 @@ items:
   href: virtual-network-troubleshoot-nva.md
 - name: Diagnostic resource logging for a network security group
   href: virtual-network-nsg-manage-log.md
+- name: Troubleshoot NSG misconfigurations blocking traffic
+  href: virtual-network-troubleshoot-nsg-blocking-traffic.md
+- name: Troubleshoot SSH connectivity blocked by NSG
+  href: virtual-network-troubleshoot-ssh-nsg-problem.md
 - name: Test network latency between Azure VMs
   href: virtual-network-test-latency.md 
 - name: Test virtual machine network throughput by using NTTTCP
@@ -23,10 +27,14 @@ items:
   href: troubleshoot-outbound-smtp-connectivity.md
 - name: Troubleshoot virtual network peering issues
   href: virtual-network-troubleshoot-peering-issues.md        
+- name: Troubleshoot virtual network peering route propagation and sync issues
+  href: virtual-network-troubleshoot-peering-sync-route-issues.md
 - name: Troubleshoot connectivity problems between Azure VMs
   href: virtual-network-troubleshoot-connectivity-problem-between-vms.md
 - name: Can't delete a virtual network in Azure
   href: virtual-network-troubleshoot-cannot-delete-vnet.md
+- name: Troubleshoot subnet deletion and modification failures
+  href: virtual-network-troubleshoot-cannot-delete-modify-subnet.md
 
 
 

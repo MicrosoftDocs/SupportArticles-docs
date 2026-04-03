@@ -1,6 +1,6 @@
 ---
 title: Resolve az aks command invoke failures
-description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
+description: Resolve az aks command invoke failures in Azure CLI for private AKS clusters. Learn fixes and apply steps now to restore secure access quickly.
 ms.date: 05/13/2025
 ms.reviewer: chiragpa, andbar, haitch, momajed, albarqaw, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -9,7 +9,9 @@ ms.custom: sap:Connectivity, devx-track-azurecli
 ---
 # Resolve "az aks command invoke" failures
 
-This article describes how to resolve [az aks command invoke](/cli/azure/aks/command#az-aks-command-invoke) failures in Microsoft Azure CLI so that you can successfully connect to any Azure Kubernetes Service (AKS) cluster, especially to a [private AKS cluster](/azure/aks/command-invoke).
+## Summary
+
+This article explains how to resolve [az aks command invoke](/cli/azure/aks/command#az-aks-command-invoke) failures in Azure CLI so you can restore access to your AKS cluster, especially a [private AKS cluster](/azure/aks/command-invoke).
 
 Other connection methods need to use extra configuration components, as shown in the following table.
 

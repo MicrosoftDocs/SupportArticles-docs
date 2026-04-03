@@ -8,18 +8,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Save
   - CSSTroubleshoot
+  - CI 10764
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/25/2026
 ---
 
 # Troubleshoot why Excel doesn't save changes

@@ -10,6 +10,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the DnsServiceIpOutOfServiceCidr error
 
+## Summary
+
 This article discusses how to identify and resolve the `DnsServiceIpOutOfServiceCidr` error that occurs when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites

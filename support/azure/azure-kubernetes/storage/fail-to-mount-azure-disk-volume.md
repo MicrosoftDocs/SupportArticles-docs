@@ -1,6 +1,6 @@
 ---
 title: Unable to Mount Azure Disk Volumes
-description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
+description: Troubleshoot Azure disk volume mount errors in AKS, identify common causes, and apply fixes to restore pod startup. Start resolving issues now.
 ms.date: 03/22/2025
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -9,6 +9,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
 # Errors when mounting Azure disk volumes
+
+## Summary
 
 This article provides solutions for errors that cause the mounting of Azure disk volumes to fail.
 
@@ -46,13 +48,13 @@ RawError:
 }
 ```
 
-### Cause: Disk and node hosting pod are in different zones
+### Cause: disk and node hosting pod are in different zones
 
 In AKS, the default and other built-in storage classes for Azure disks use [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage). These disks are deployed in [availability zones](/azure/aks/availability-zones). If you use the node pool in AKS together with availability zones, and the pod is scheduled on a node that's in another availability zone that's different from the disk, you might experience this error.
 
 To resolve this error, use one of the following solutions.
 
-### Solution 1: Ensure disk and node hosting the pod are in the same zone
+### Solution 1: ensure disk and node hosting the pod are in the same zone
 
 To make sure that the disk and node that host the pod are in the same availability zone, use [node affinity](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/).
 
@@ -72,7 +74,7 @@ affinity:
 
 \<region> is the region of the AKS cluster. `Y` represents the availability zone of the disk (for example, westeurope-3).
 
-### Solution 2: Use zone-redundant storage (ZRS) disks
+### Solution 2: use zone-redundant storage (ZRS) disks
 
 [ZRS](/azure/storage/common/storage-redundancy#zone-redundant-storage) disk volumes can be scheduled on all zone and non-zone agent nodes. For more information, see [Azure disk availability zone support](/azure/aks/availability-zones#azure-disk-availability-zone-support).
 
@@ -80,7 +82,7 @@ To use a ZRS disk, create a storage class by using `Premium_ZRS` or `StandardSSD
 
 For more information about parameters, see [Driver Parameters](/azure/aks/azure-csi-files-storage-provision#storage-class-parameters-for-dynamic-persistentvolumes)
 
-### Solution 3: Use Azure Files
+### Solution 3: use Azure Files
 
 [Azure Files](/azure/storage/files/storage-files-introduction) is mounted by using NFS or SMB throughout network. It's not associated with availability zones.
 
@@ -110,7 +112,7 @@ RawError:
 
 AKS cluster's identity doesn't have the required authorization over the Azure disk. This issue occurs if the disk is created in a resource group other than the infrastructure resource group of the AKS cluster.
 
-### Solution: Create role assignment that includes required authorization
+### Solution: create role assignment that includes required authorization
 
 Create a role assignment that includes the authorization required per the error. We recommend that you use a [Contributor](/azure/role-based-access-control/built-in-roles/general#contributor) role. If you want to use another built-in role, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
@@ -134,11 +136,11 @@ Here are details of this error:
 
 > Multi-Attach error for volume "\<PV/disk-name>" Volume is already used by pod(s) \<pod-name>
 
-### Cause: Disk is mounted to multiple pods hosted on different nodes
+### Cause: disk is mounted to multiple pods hosted on different nodes
 
 An Azure disk can be mounted only as [ReadWriteOnce](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes). This makes it available to one node in AKS. That means that it can be attached to only one node and mounted to only a pod that's hosted by that node. If you mount the same disk to a pod on another node, you experience this error because the disk is already attached to a node.
 
-### Solution: Make sure disk isn't mounted by multiple pods hosted on different nodes
+### Solution: make sure disk isn't mounted by multiple pods hosted on different nodes
 
 To resolve this error, refer to [Multi-Attach error](https://github.com/andyzhangx/demo/blob/master/issues/azuredisk-issues.md#25-multi-attach-error).
 
@@ -162,11 +164,11 @@ desc = Attach volume "/subscriptions/<subscription-ID>/resourceGroups/<disk-reso
 }
 ```
 
-### Cause: Ultra disk is attached to node pool with ultra disks disabled
+### Cause: ultra disk is attached to node pool with ultra disks disabled
 
 This error indicates that an [ultra disk](/azure/virtual-machines/disks-enable-ultra-ssd) is trying to be attached to a node pool by having ultra disks disabled. By default, an ultra disk is disabled on AKS node pools.
 
-### Solution: Create a node pool that can use ultra disks
+### Solution: create a node pool that can use ultra disks
 
 To use ultra disks on AKS, create a node pool that has ultra disks support by using the `--enable-ultra-ssd` flag. For more information, see [Use Azure ultra disks on Azure Kubernetes Service](/azure/aks/use-ultra-disks).
 

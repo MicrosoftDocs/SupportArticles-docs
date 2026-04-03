@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # AADSTS7000222 - BadRequest or InvalidClientSecret error
 
+## Summary
+
 This article discusses how to identify and resolve the `AADSTS7000222` error (`BadRequest` or `InvalidClientSecret`) that occurs when you try to create or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites

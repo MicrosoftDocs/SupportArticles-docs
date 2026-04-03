@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
-description: Helps troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
+description: Learn how to troubleshoot an AKS cluster or node in a failed state and restore operations quickly. Use these steps to identify and fix common errors.
 ms.date: 03/10/2025
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
@@ -10,11 +10,13 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state
 
-This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster or node that enters a failed state.
+## Summary
+
+Use this article to troubleshoot an Azure Kubernetes Service (AKS) cluster or node in a failed state and restore cluster operations.
 
 ## Common causes
 
-Here are the common causes of a failed cluster or node pool:
+Here are common causes of a failed cluster or node pool:
 
 |Cause|Reference|
 |---|---|
@@ -61,7 +63,7 @@ This table describes other possible issues that can cause a cluster or node to e
 
 To check the cluster status, select **Provisioning State Check**. Then, the provisioning state of the cluster and agent pool is shown.
 
-:::image type="content" source="media/cluster-node-virtual-machine-failed-state/provisioning-state-check.png" alt-text="Screenshot that shows the 'Provisioning State Check' option.":::
+:::image type="content" source="media/cluster-node-virtual-machine-failed-state/provisioning-state-check.png" alt-text="Screenshot of the Provisioning State Check option in an AKS cluster page.":::
 
 ## Scenario 1: Cluster is in a failed state
 
@@ -92,7 +94,7 @@ To view the activity logs for a failed cluster from the Azure portal, follow the
 3. On the cluster page, select **Activity log** from the left menu.
 4. On the **Activity log** page, you can filter events by **Status**, **Timespan**, **Event initiated by**, and **Event category**. For example, you can select **Failed** from the **Status** drop-down list to see only failed events.
 
-    :::image type="content" source="media/cluster-node-virtual-machine-failed-state/filter-events.png" alt-text="Screenshot that shows how to filter events on the 'Activity log' page.":::
+    :::image type="content" source="media/cluster-node-virtual-machine-failed-state/filter-events.png" alt-text="Screenshot of filters for failed events on the Activity log page for a cluster.":::
 
 5. To check the details of an event, select the event name from the list. A new pane opens with the event summary, properties, and JSON data. You can also download the JSON data as a file.
 6. To check the error code and message associated with the event, scroll down to the **Status** section in the event summary. You can also find the error information in the properties and JSON data sections.
@@ -108,7 +110,7 @@ If you prefer to use Azure CLI to view the activity log for a failed cluster, fo
 5. Show the details of a specific event using the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the output format.
 6. To see the error code and message associated with the event, look for the `statusMessage` field in the command output. You can also find the error information in the properties and JSON data sections.
 
-      :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot that shows JSON data." lightbox="media/cluster-node-virtual-machine-failed-state/json-data.png":::
+      :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot of Activity log JSON data with status message details for a failed operation." lightbox="media/cluster-node-virtual-machine-failed-state/json-data.png":::
 
 ### Use the AKS Diagnose and Solve Problems feature for a failed cluster 
 
@@ -118,7 +120,7 @@ In the Azure CLI, use the `az aks kollect` command with the `--name` and `--reso
 
 In the **Diagnose and Solve Problems** blade, you can select **Cluster Issues** as the category. If any issues are detected, you'll see a list of possible solutions that you can follow to fix them.
 
- :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot that shows possible solutions in the 'Diagnose and Solve Problems' portal." lightbox="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png":::
+ :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot of possible solutions in the Diagnose and Solve Problems portal for cluster issues." lightbox="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png":::
 
 ## Scenario 2: Node is in a failed state
 

@@ -10,10 +10,12 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
+  - CI 10891
 ms.author: meerak
+ms.reviewer: akeeler, lisalozano
 appliesto: 
   - Microsoft Excel
-ms.date: 05/26/2025
+ms.date: 03/31/2026
 ---
 
 # How Excel works with two-digit year numbers

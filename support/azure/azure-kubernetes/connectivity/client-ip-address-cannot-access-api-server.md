@@ -1,6 +1,6 @@
 ---
 title: Client IP address can't access the API server
-description: Troubleshoot issues caused when the client IP address can't access the API server on an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot when a client IP address can't access the AKS API server and restore cluster connectivity quickly. Try these steps now.
 ms.date: 10/08/2024
 ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity, innovation-engine
 
 # Client IP address can't access the API server
 
-This article describes how to fix issues that occur when you can't connect to an Azure Kubernetes Service (AKS) cluster because your client IP address can't access the AKS API server.
+## Summary
+
+This article explains how to troubleshoot when a client IP address can't access the AKS API server so you can reconnect to your Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -27,7 +29,7 @@ When you try to access Kubernetes resources such as mamespaces and workloads fro
 >
 > Unable to reach the api server 'https://\<API-server-FQDN>' or api server is too busy to respond. Check your network settings and refresh to try again.
 
-:::image type="content" source="media/client-ip-address-cannot-access-api-server/network-error.png" alt-text="Screenshot of mamespaces in the AKS resource." lightbox="media/client-ip-address-cannot-access-api-server/network-error.png":::
+:::image type="content" source="media/client-ip-address-cannot-access-api-server/network-error.png" alt-text="Screenshot of the AKS portal view showing a network error when connecting to the API server from namespaces and workloads." lightbox="media/client-ip-address-cannot-access-api-server/network-error.png":::
 
 ### [Azure CLI](#tab/azure-cli)
 
