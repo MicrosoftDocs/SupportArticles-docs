@@ -283,6 +283,8 @@ items:
       href: working-with-solutions/an-error-calculating-dependencies.md
     - name: This solution package can't be imported
       href: working-with-solutions/this-solution-package-cannot-be-imported.md
+    - name: '"User is not authorized to read secrets" error when saving environment variables'
+      href: working-with-solutions/environment-variable-key-vault-authorization-error.md
 - name: Support resources
   items:
     - name: Microsoft Dataverse forum
