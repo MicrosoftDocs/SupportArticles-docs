@@ -20,11 +20,11 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 - [Identify Your Cluster FQDN](#identify-your-cluster-fqdn)
 - [Diagnose the Resolution Failure](#diagnose-the-resolution-failure)
 - [Cause and Resolution by Error Type](#cause-and-resolution-by-error-type)
-  - [NXDOMAIN — Domain Not Found](#nxdomain--domain-not-found)
-  - [SERVFAIL — Server Failure](#servfail--server-failure)
-  - [REFUSED — Query Refused](#refused--query-refused)
-  - [Timeout — DNS Server Unreachable](#timeout--dns-server-unreachable)
-  - [Mixed Errors — Multiple DNS Servers with Different Failures](#mixed-errors--multiple-dns-servers-with-different-failures)
+  - [NXDOMAIN—Domain Not Found](#nxdomaindomain-not-found)
+  - [SERVFAIL—Server Failure](#servfailserver-failure)
+  - [REFUSED—Query Refused](#refusedquery-refused)
+  - [Timeout—DNS Server Unreachable](#timeoutdns-server-unreachable)
+  - [Mixed Errors—Multiple DNS Servers with Different Failures](#mixed-errorsmultiple-dns-servers-with-different-failures)
 - [Reference Links](#reference-links)
 
 ## Prerequisites
@@ -44,9 +44,9 @@ When you try to create, start, upgrade, or scale an AKS cluster, you receive an 
 
 The diagnostic details can include:
 
-- **DNS server IP address** — the DNS server that the node queried
-- **Cluster FQDN** — the fully qualified domain name that failed to resolve
-- **Error type** — the specific resolution failure (NXDOMAIN, SERVFAIL, REFUSED, or timeout)
+- **DNS server IP address**—the DNS server that the node queried
+- **Cluster FQDN**—the fully qualified domain name that failed to resolve
+- **Error type**—the specific resolution failure (NXDOMAIN, SERVFAIL, REFUSED, or timeout)
 
 Use these details to identify your scenario in the sections below.
 
@@ -63,7 +63,7 @@ az aks show --resource-group <resource-group-name> --name <cluster-name> --query
 **Azure portal:**
 
 1. Navigate to **Kubernetes services** > select your cluster
-2. On the **Overview** page, find the **API server address** field — this is your cluster FQDN
+2. On the **Overview** page, find the **API server address** field—this is your cluster FQDN
 
 **Cluster FQDN formats:**
 
@@ -138,9 +138,9 @@ On your DNS servers and firewall, make sure that nothing blocks the resolution t
 - [Private Azure Kubernetes Service cluster with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
 - [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
-When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomain--domain-not-found) section below).
+When you use a private cluster that has a custom DNS, an Azure Private DNS zone is created for the cluster. The DNS zone must be linked to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS may fail during initial creation. You can restore the creation process to a "success" state by reconciling the cluster (see the [NXDOMAIN](#nxdomaindomain-not-found) section below).
 
-### NXDOMAIN — Domain Not Found
+### NXDOMAIN—Domain Not Found
 
 **What it means:** The DNS server responded that the domain doesn't exist. This is the most common cause (approximately 98% of cases).
 
@@ -163,14 +163,14 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 2. **Ensure your custom DNS server forwards queries it can't resolve.** Your DNS server must be able to resolve the cluster FQDN, either directly or by forwarding to an upstream resolver:
 
-   - For **private clusters** — create a conditional forwarder for the zone `privatelink.<region>.azmk8s.io` pointing to Azure DNS (`168.63.129.16`). Azure DNS resolves the Private DNS zone records for your cluster.
+   - For **private clusters**—create a conditional forwarder for the zone `privatelink.<region>.azmk8s.io` pointing to Azure DNS (`168.63.129.16`). Azure DNS resolves the Private DNS zone records for your cluster.
 
      > [!NOTE]
      > Create the forwarder for the full `privatelink.<region>.azmk8s.io` zone, not for individual cluster FQDNs. Conditional forwarding doesn't support subdomains.
 
-   - For **public clusters** — ensure your DNS server forwards unresolved queries to a public DNS resolver (for example, `8.8.8.8` or `1.1.1.1`). Public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable.
+   - For **public clusters**—ensure your DNS server forwards unresolved queries to a public DNS resolver (for example, `8.8.8.8` or `1.1.1.1`). Public cluster FQDNs (`*.hcp.<region>.azmk8s.io`) are publicly resolvable.
 
-   - For **both cluster types** — check that your DNS server doesn't have a conflicting override or stub zone for the `azmk8s.io` domain that could intercept resolution.
+   - For **both cluster types**—check that your DNS server doesn't have a conflicting override or stub zone for the `azmk8s.io` domain that could intercept resolution.
 
 3. **Verify the Azure Private DNS zone link** (private clusters only):
    - In the Azure portal, navigate to **Private DNS zones** > find the zone matching `privatelink.<region>.azmk8s.io` > **Virtual network links**
@@ -185,7 +185,7 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
        --resource-type ManagedClusters
    ```
 
-### SERVFAIL — Server Failure
+### SERVFAIL—Server Failure
 
 **What it means:** The DNS server encountered an internal failure while processing the query. This can indicate an unhealthy DNS server or a broken forwarding chain.
 
@@ -197,19 +197,19 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 **Resolution:**
 
-1. **Check DNS server health** — verify the DNS service is running and responsive
-2. **Verify upstream forwarders** — ensure the DNS server can reach its configured upstream resolvers (for example, `168.63.129.16` for private clusters, or `8.8.8.8`/`1.1.1.1` for public clusters)
+1. **Check DNS server health**—verify the DNS service is running and responsive
+2. **Verify upstream forwarders**—ensure the DNS server can reach its configured upstream resolvers (for example, `168.63.129.16` for private clusters, or `8.8.8.8`/`1.1.1.1` for public clusters)
 3. **Test from another DNS server** to isolate whether the issue is specific to one server. If your VNet has multiple DNS servers configured, try querying a different one:
 
    ```bash
    nslookup <cluster-fqdn> <other-dns-server-ip>
    ```
 
-   If the other server resolves successfully, the issue is with the failing DNS server — check its configuration and logs.
+   If the other server resolves successfully, the issue is with the failing DNS server—check its configuration and logs.
 
 4. **Review DNS server logs** for errors related to the queried domain
 
-### REFUSED — Query Refused
+### REFUSED—Query Refused
 
 **What it means:** The DNS server actively refused to answer the query. This typically indicates an access control policy issue.
 
@@ -221,11 +221,11 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
 
 **Resolution:**
 
-1. **Check DNS ACL/policy** — ensure the AKS node subnet is allowed to query the DNS server
-2. **Verify recursion settings** — confirm that recursive queries are enabled for the AKS node IP range
+1. **Check DNS ACL/policy**—ensure the AKS node subnet is allowed to query the DNS server
+2. **Verify recursion settings**—confirm that recursive queries are enabled for the AKS node IP range
 3. **Review DNS server security policies** for any rules that might block the `azmk8s.io` domain or `privatelink` subdomain
 
-### Timeout — DNS Server Unreachable
+### Timeout—DNS Server Unreachable
 
 **What it means:** The DNS server didn't respond within the timeout period. The node couldn't communicate with the DNS server at all.
 
@@ -250,11 +250,11 @@ When you use a private cluster that has a custom DNS, an Azure Private DNS zone 
    Test-NetConnection -ComputerName <dns-server-ip> -Port 53
    ```
 
-2. **Check NSG rules** on both the AKS subnet and the DNS server subnet — ensure UDP and TCP port 53 are allowed inbound and outbound
-3. **Check firewall rules** — verify no firewall (Azure Firewall, NVA, or host firewall) is blocking DNS traffic
-4. **Verify DNS server is running** — confirm the DNS service is active and listening on port 53
+2. **Check NSG rules** on both the AKS subnet and the DNS server subnet—ensure UDP and TCP port 53 are allowed inbound and outbound
+3. **Check firewall rules**—verify no firewall (Azure Firewall, NVA, or host firewall) is blocking DNS traffic
+4. **Verify DNS server is running**—confirm the DNS service is active and listening on port 53
 
-### Mixed Errors — Multiple DNS Servers with Different Failures
+### Mixed Errors—Multiple DNS Servers with Different Failures
 
 If your VNet is configured with multiple DNS servers, you may see a combination of errors (for example, NXDOMAIN from one server and timeout from another). In this case:
 
@@ -271,7 +271,7 @@ If your VNet is configured with multiple DNS servers, you may see a combination 
 ## Reference Links
 
 - [Create a private AKS cluster](/azure/aks/private-clusters)
-- [Private cluster with custom DNS — hub-and-spoke](/azure/aks/private-clusters#hub-and-spoke-with-custom-dns)
+- [Private cluster with custom DNS—hub-and-spoke](/azure/aks/private-clusters#hub-and-spoke-with-custom-dns)
 - [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 - [Private Azure Kubernetes service with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
 - [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
