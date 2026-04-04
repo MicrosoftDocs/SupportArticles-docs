@@ -6,7 +6,7 @@ ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, tw
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
 
-# Financial dimension is missing or appears as a custom dimension on the Financial Dimensions details page
+# Financial dimension is missing or incorrectly appears as a custom dimension on the Financial Dimensions details page
 
 ## Summary
 
@@ -19,12 +19,10 @@ You experience one or more of the following symptoms:
 - A dimension no longer appears on the **Financial Dimensions** details page.
 - A dimension that was previously available is missing.
 - A dimension that should be backed by a system entity (such as Department or Project) shows as a **\<Custom dimension>** instead.
-- A dimension can't be added to an account structure or integration format, even though other dimensions can.
-- You receive the following error message:
+- A dimension can't be added to an account structure even though other ones already use it.
+- A dimension is missing from certain reports.  
 
-  > DimensionAttributeValue.getValue called with an invalid DimensionAttribute record Id."
-
-## Review customizations to the underlying view structure
+## Review the DimAttribute view structure of customizations
 
 Financial dimensions rely on underlying database views that must have an exact number of fields. If a partner solution, independent software vendor (ISV), or customization adds extra fields to one of these views, the system silently rejects the dimension when the server starts.
 
@@ -32,7 +30,7 @@ To fix the view structure, remove the extra fields from the affected view throug
 
 For guidance to review and correct customizations, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
 
-## Remove dimensions created from an unsupported demo model
+## Remove dimensions created from an demo model
 
 If you set up dimensions by using the [FleetManagement demo project](/dynamics365/fin-ops-core/dev-itpro/dev-tools/introduction-fleet-management-sample) (for example, Branch, Region, or RentalLocation) in a development environment, those dimensions don't work in production. The FleetManagement demo model is available only in development environments. Therefore, it leaves behind dimension data that the system can't resolve.
 
