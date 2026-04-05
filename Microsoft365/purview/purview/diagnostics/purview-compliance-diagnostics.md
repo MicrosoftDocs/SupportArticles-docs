@@ -10,12 +10,12 @@ ms.custom:
   - sap:Microsoft Purview Compliance
   - Microsoft Purview
   - CSSTroubleshoot
-  - CI 2772, 1283, 5607, 8191, 8567
+  - CI 2772, 1283, 5607, 8191, 8567, 11066
 ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/29/2026
+ms.date: 04/05/2026
 ---
 
 # Self-help diagnostics for Microsoft Purview
@@ -54,10 +54,10 @@ You can find these diagnostics on the following portal pages:
 The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the fourth column. When you're prompted, sign in to the Microsoft Purview portal.
 
 > [!NOTE]
-> To run these diagnostics, you must have one of the following roles assigned:
+> To run these diagnostics, the minimum roles you need are:
+> 
 > - Compliance Administrator
 > - Security Administrator
-> - Global Administrator (Organization Configuration)
 
 When you select a diagnostic on a Solutions page, the diagnostic runs the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then, the diagnostic calls the appropriate cmdlet that's listed in the following table to perform checks that are specific to your issue. 
 
@@ -71,8 +71,8 @@ When you select a diagnostic on a Solutions page, the diagnostic runs the [Check
 |Alerts aren't working for a DLP rule. Are there any issues that affect the DLP rule configuration? | Check for alerts, and determine whether any issues affect the DLP rule configuration.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 |Can't find an alert for an activity or an audit event. |Check for the alert related to an activity or audit event, and investigate why the alert could be missing. | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-DlpComplianceRule](/powershell/module/exchangepowershell/get-dlpcompliancerule) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 | A DLP rule isn’t triggering for a file stored in SharePoint or OneDrive. Is the file evaluated by DLP, and is it in scope for the policy? |Check a file's properties and classification to review whether a DLP rule matched or didn't match. When entering the file path, make sure that you provide the full file path, not a sharing link. <br> <br> Tips for finding the correct path: <br> - In SharePoint or OneDrive, select the file, open Details, and copy the Path (if available). <br> - If **Path** isn’t shown, open the file, go to File > Info, then select **Copy path**. | [Test-DlpPolices](/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-|Policy tips don't appear in Outlook on the web. Are there issues that affect the DLP policy tips configuration? | [Analyzes the HTTP Archive (HAR) file](../data-loss-prevention/diagnose-dlp-policy-tip-display-issues.md) to investigate why policy tips don't appear in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web, and press F12 to open Developer Tools. <br> - Select the **Network** tab, select **Preserve log**, reproduce the issue, and export the HAR file. | [Test-DlpPolices](/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
-|A DLP rule did not apply or applied unexpectedly to an email message in Exchange Online.Why wasn’t the expected DLP behavior observed? |Upload the message trace log (.csv) to review how DLP rules were applied to email messages | [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-label](/powershell/module/exchangepowershell/get-label) <br> [Get-DlpSensitiveInformationType](/powershell/module/exchangepowershell/get-dlpsensitiveinformationtype?view=exchange-ps) <br> [Get-AutoSensitivityLabelPolicy](/powershell/module/exchangepowershell/get-autosensitivitylabelpolicy?view=exchange-ps) <br> [Get-AutoSensitivityLabelRule](/powershell/module/exchangepowershell/get-autosensitivitylabelrule?view=exchange-ps) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+|Policy tips don't appear in Outlook on the web. Are there issues that affect the DLP policy tips configuration? | [Analyze the HTTP Archive (HAR) file](../data-loss-prevention/diagnose-dlp-policy-tip-display-issues.md) to investigate why policy tips don't appear in Outlook on the web. <br> <br> Steps for finding and exporting the HAR file: <br> - Open Outlook on the web, and press F12 to open Developer Tools. <br> - Select the **Network** tab, select **Preserve log**, reproduce the issue, and export the HAR file. | [Test-DlpPolices](/purview/dlp-test-dlp-policies) | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+|A DLP rule didn't apply or it was applied unexpectedly to an email message in Exchange Online.|Upload the message trace log (.csv) to review the DLP rules applied to email messages.| [Get-DlpCompliancePolicy](/powershell/module/exchangepowershell/get-dlpcompliancepolicy) <br> [Get-label](/powershell/module/exchangepowershell/get-label) <br> [Get-DlpSensitiveInformationType](/powershell/module/exchangepowershell/get-dlpsensitiveinformationtype) <br> [Get-AutoSensitivityLabelPolicy](/powershell/module/exchangepowershell/get-autosensitivitylabelpolicy) <br> [Get-AutoSensitivityLabelRule](/powershell/module/exchangepowershell/get-autosensitivitylabelrule)| [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics)|
 
 ## Diagnostics on the Help pane
 
