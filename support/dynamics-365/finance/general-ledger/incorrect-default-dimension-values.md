@@ -1,6 +1,6 @@
 ---
-title: Incorrect dimension values after document posting in Dynamics 365 Finance
-description: If your financial dimension values aren't matching expected results after you post in Dynamics 365 Finance, discover how to troubleshoot and resolve this issue step by step.
+title: Default financial dimension values are incorrect in Dynamics 365 Finance
+description: If your default financial dimension values aren't matching expected results when you merge, save, or post documents in Dynamics 365 Finance, discover how to troubleshoot and resolve this issue step by step.
 ms.date: 04/02/2026
 ms.reviewer: ethankallett, anaborges, jowalker, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
@@ -9,11 +9,11 @@ ms.search.region: Global
 ms.dyn365.ops.version: 10.0.0
 ---
 
-# Unexpected financial dimension values on transactions
+# Default financial dimension values are incorrect
 
 ## Summary
 
-This article helps you troubleshoot financial dimension values that are incorrect after you merge, save, or post documents in Microsoft Dynamics 365 Finance. During transaction processing, the system assembles dimension values from multiple sources, including the journal header, master data records, ledger-level settings, and derived dimension rules. The system applies these sources in a specific priority order. Therefore, a higher-priority source can overwrite values from a lower-priority source. Additionally, any of the following changes might occur:
+This article helps you troubleshoot default financial dimension values that are incorrect when you merge, save, or post documents in Microsoft Dynamics 365 Finance. During document and transaction processing, the system assembles dimension values from multiple sources, including the journal header, master data records, ledger-level settings, and derived dimension rules. The system applies these sources in a specific priority order. Therefore, a higher-priority source can overwrite values from a lower-priority source. Additionally, any of the following changes might occur:
 
 - Fixed dimensions on a main account override entered values at posting time.
 - Reversal or correction logic reuses dimension values from a previous transaction.
@@ -23,7 +23,8 @@ You might not notice the issue until you review the original document or transac
 
 ## Symptoms
 
-After you complete a process such as posting a journal or source document, the financial dimension values on the resulting transaction don't match what you expected. The values might appear correct earlier in the process but then change by the time the transaction is finalized.
+- Default financial dimension values on a document or transaction are incorrect or unexpected.
+- After you merge, save, or post a journal or source document, the financial dimension values don't match what you expected. The values might appear correct earlier in the process but then change by the time the transaction is finalized.
 
 ## Check for fixed dimensions on the main account
 
