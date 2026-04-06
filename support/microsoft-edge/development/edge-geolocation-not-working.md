@@ -80,7 +80,8 @@ A Group Policy setting might disable the Windows Geolocation service. This situa
    gpresult /h gpresult.html
    ```
 
-1. Open the generated *gpresult.html* file in a browser, and search for **lfsvc** or **Geolocation**. Then, check the **System Services** section to verify that the Geolocation service is configured.
+1. Open the generated *gpresult.html* file in a browser, and search for **lfsvc**, **Geolocation**, and the **System Services** section. Check each search result to confirm that no entry disables the Geolocation service.
+1. If the search returns no results, no Group Policy is applied to this service, and you can skip to the next section.
 1. If a Group Policy setting disables the Geolocation service:
    - If you don't have administrative access, contact your IT administrator to update the policy.
    - If you have administrative access, update the policy yourself:
@@ -100,7 +101,7 @@ Edge policies might restrict geolocation or block it entirely. Verify the polici
      - **2**: Don't allow sites to track your location.
      - **3**: Ask whenever a site wants to track your location.
    - [GeolocationBlockedForUrls](/deployedge/microsoft-edge-browser-policies/geolocationblockedforurls). This policy blocks geolocation on specific URLs.
-   - [GeolocationAllowedForUrls](/deployedge/microsoft-edge-browser-policies/geolocationallowedforurls), This policy allows geolocation on specific URLs.
+   - [PreciseGeolocationAllowedForUrls](/deployedge/microsoft-edge-browser-policies/precisegeolocationallowedforurls), This policy allows geolocation on specific URLs.
 1. If **DefaultGeolocationSetting** is set to **2**, geolocation is disabled for all sites. Contact your IT administrator to change it to **1** or **3**.
 
 ### Test in a new profile by having extensions disabled
