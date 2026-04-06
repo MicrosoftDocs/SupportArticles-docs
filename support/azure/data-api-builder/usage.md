@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: sidandrews
 ms.service: data-api-builder
 ms.date: 06/19/2024
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Tools and Connectors
 ---
 

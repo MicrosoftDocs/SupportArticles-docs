@@ -3,7 +3,7 @@ title: Web Request Times Out In App Service
 description: This article provides guidance on addressing when a web request times out after 230 seconds in Azure App Service. 
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 12/16/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg

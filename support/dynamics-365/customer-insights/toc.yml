@@ -18,6 +18,8 @@
         href: data/data-ingestion/common-data-ingestion-errors.md
   - name: Data unification
     items:
+      - name: '"Detected DataVerse dependencies in msdynci_customerprofile" error'
+        href: data/profile-unification/remove-dataverse-dependencies.md
       - name: Match failed error
         href: data/profile-unification/match-failed.md
       - name: Merge failed error

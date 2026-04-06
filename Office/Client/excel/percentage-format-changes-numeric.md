@@ -4,15 +4,16 @@ description: Fix a problem where percentage (%) format in chart data table and a
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonxjx, v-kccross
+ms.reviewer: simonxjx, v-kccross, akeeler, v-lisalozano 
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
+  - CI 10982
 appliesto:
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 04/01/2026
 ---
 
 # Percentage format in pasted chart data table and axis will change to Numeric when source workbook is closed

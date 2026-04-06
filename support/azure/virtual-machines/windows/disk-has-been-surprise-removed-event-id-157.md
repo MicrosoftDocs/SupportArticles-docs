@@ -7,7 +7,7 @@ ms.reviewer: cssakscic, ruedward, clfuseli, scotro, v-leedennis
 ms.date: 06/19/2024
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # "Disk \<number> has been surprise removed" (event ID 157)

@@ -4,7 +4,9 @@ items:
 
   - name: Experiences and Services
     items:
-      - name: Copilot icon doesn't appear in Microsoft Edge sidebar
+      - name: Copilot Chat loading problems in the Edge sidebar
+        href: experience/copilot-chat-loading-issues.md
+      - name: Copilot icon doesn't appear in the Edge sidebar
         href: experience/copilot-icon-missing-sidebar.md
   - name: Manage and Deploy
     items:
@@ -26,6 +28,8 @@ items:
         href: development/self-host-extension-update.md
       - name: Troubleshoot download failures
         href: development/download-failures.md
+      - name: Troubleshoot video playback problems in Microsoft Edge
+        href: development/video-playback-issues.md
       - name: Unexpected SmartScreen block or warning on website
         href: development/unexpected-block-warning.md
   - name: Security and Privacy
