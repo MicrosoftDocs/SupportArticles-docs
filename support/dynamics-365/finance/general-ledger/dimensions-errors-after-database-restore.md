@@ -1,6 +1,6 @@
 ---
 title: Resolve financial dimension errors after database restore
-description: Fix financial dimension errors in Dynamics 365 Finance that are caused by restoring a database backup. Deploy missing customization packages to your target environment to resolve the issue.
+description: Fix financial dimension errors in Dynamics 365 Finance that are caused by restoring a database backup. To resolve the issue, deploy missing customization packages to your target environment.
 ms.date: 04/02/2026
 ms.reviewer: ethankallett, nedavis, anaborges, jowalker, twheeloc, v-shaywood
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
@@ -15,7 +15,7 @@ ms.dyn365.ops.version: 10.0.1
 
 ## Summary
 
-After you [restore a database backup](/dynamics365/fin-ops-core/dev-itpro/database/database-refresh) from one environment to another (for example, from production to User Acceptance Testing) in Microsoft Dynamics 365 Finance, you might encounter [financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) errors. These errors occur if custom financial dimensions in the restored database rely on customization packages that aren't deployed in the target environment. To fix the issue, deploy the same customization packages to the target environment.
+After you [restore a database backup](/dynamics365/fin-ops-core/dev-itpro/database/database-refresh) from one environment to another (for example, from production to User Acceptance Testing) in Microsoft Dynamics 365 Finance, you might encounter [financial dimension](/dynamics365/finance/general-ledger/financial-dimensions) errors. These errors occur if custom financial dimensions in the restored database rely on customization packages that aren't deployed in the target environment. To resolve the issue, deploy the same customization packages to the target environment.
 
 ## Symptoms
 
@@ -33,11 +33,11 @@ If this issue is detected during database synchronization instead of at runtime,
 
 ## Cause
 
-When you restore a database from one environment to another, the data moves but code packages don't. Some financial dimensions rely on customizations that are created by a developer, partner, or independent software vendor (ISV) instead of being shipped together with the product. After it's restored, the database still references those custom financial dimensions, but the supporting customizations don't exist in the target environment. Therefore, the system can't find the required components when dimension operations run.
+When you restore a database from one environment to another, the data moves but code packages don't. Some financial dimensions rely on customizations that are created by a developer, partner, or independent software vendor (ISV) instead of being shipped together with the product. After the database is restored, it still references those custom financial dimensions, but the supporting customizations don't exist in the target environment. Therefore, the system can't find the required components when dimension operations run.
 
 ## Solution
 
- In the target environment, deploy the same customization packages that you installed in the source environment. These packages must include:
+In the target environment, deploy the same customization packages that you installed in the source environment. These packages must include:
 
 - The customization for each affected financial dimension
 - Any custom entities that the financial dimension references
