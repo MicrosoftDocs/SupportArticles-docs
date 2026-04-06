@@ -34,6 +34,7 @@ ALAR covers the following repair scenarios:
   - Last installed kernel isn't bootable
   - GRUB/EFI installation or configuration damaged
   - Disk space/auditd forced shutdowns
+  - Light disk corruption on OS volumes
 - Configuration issues
   - Serial console and GRUB serial are incorrectly configured or are missing
   - Sudo misconfiguration
@@ -129,6 +130,10 @@ This action corrects an incorrect or malformed serial console configuration for 
 ### sudo
 
 The `sudo` action resets the permissions on the `/etc/sudoers` file and all files in `/etc/sudoers.d` to the required 0440 modes and check other best practices. A basic check is run to detect and report on duplicate user entries and move only the `/etc/sudoers.d/waagent` file if it's found to conflict with other files.
+
+### corrupt
+
+This action will attempt basic, non-destructive fixes to filesystem corruption in the volumes residing on the OS disk.  The output of the action will be a listing of filesystem data for verification of a complete execution.  It is important to remember the potential for data loss any time disk corruption has occurred, so if this action is needed, more intensive data validation should be performed once access to the Virtual Machine is restored.
 
 ### auditd
 
