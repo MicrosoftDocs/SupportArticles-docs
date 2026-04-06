@@ -22,10 +22,10 @@ The **Windows Mellanox Driver Validation** script detects:
 
 - Whether a Mellanox/NVIDIA ConnectX network adapter is present in the VM
 - The installed Mellanox mlx5 driver version and date
-- Any recent `DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)` bugcheck events in the Windows Event Log
+- Any recent `DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)` bug check events in the Windows Event Log
 - Current adapter link status
 
-The script is **detection only**. It doesn't make changes to the system.
+The script is **detection only**. It does not make changes to the system.
 
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 
@@ -46,7 +46,7 @@ For more information, see:
 
 You can run the tool in any of the following ways:
 
-### Use Azure RunCommand (recommended)
+### Use Azure Run Command (recommended)
 
 1. Navigate to your VM in the **Azure portal**.
 2. Select **Operations** > **Run Command** > **RunPowerShellScript**.
@@ -70,7 +70,7 @@ You can run the tool in any of the following ways:
 
 ### Use prepackaged Run Command scripts
 
-For more information on how to use RunCommand, see [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command).
+For more information about Run Command, see [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command).
 
 ## Recommended workflow
 

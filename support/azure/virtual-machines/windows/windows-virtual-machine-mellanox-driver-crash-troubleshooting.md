@@ -12,9 +12,9 @@ ms.reviewer: jdickson, scotro, azurevmcptcic
 
 ## Symptom
 
-A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or become unstable. Common symptoms include:
+A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or become unstable. Common signs include:
 
-- VM crashes with a **blue screen (BSOD)** and the bugcheck **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**
+- VM crashes with a **blue screen (BSOD)** and bug check **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**
 - VM becomes unresponsive and requires a forced restart
 - VM crashes continue after restart, with no clear OS-level cause
 - Crash dump analysis references the `mlx5.sys` driver module
@@ -23,7 +23,7 @@ A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or becom
 
 This issue is caused by an **outdated Mellanox mlx5 network adapter driver** in the guest VM. The `mlx5.sys` driver is used on VM SKUs with **Accelerated Networking** that rely on Mellanox/NVIDIA ConnectX adapters.
 
-If the installed driver version is no longer compatible with host firmware or platform updates, it can trigger a kernel memory access violation. In Windows, this usually appears as bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
+If the installed driver version is no longer compatible with host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this usually appears as bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
 
 > [!NOTE]
 > This issue is **not** caused by the Azure platform or host hardware failure. It is a guest OS driver compatibility issue and requires a driver update inside the VM.
@@ -34,7 +34,7 @@ If the installed driver version is no longer compatible with host firmware or pl
 - VM SKUs that use Mellanox/NVIDIA ConnectX hardware (including HB, HC, ND, NDv2, HBv3, and performance-optimized N-series VMs)
 - Mellanox mlx5 driver versions that have not been updated in more than 12 months
 
-### Bugcheck signature
+### Bug check signature
 
 The following bug check commonly indicates this issue:
 
@@ -48,7 +48,7 @@ When you analyze a crash dump, look for `mlx5.sys` in the faulting module field.
 
 ### Step 1: Check the VM for Mellanox adapter presence
 
-Run the following from an elevated PowerShell session inside the VM:
+Run the following command from an elevated PowerShell session in the VM:
 
 ```powershell
 Get-PnpDevice -Class Net | Where-Object { $_.FriendlyName -match 'Mellanox|ConnectX|mlx5' }
@@ -75,7 +75,7 @@ Get-WinEvent -FilterHashtable @{ LogName = 'Application'; Id = 1001; StartTime =
 
 If events are returned and the timestamps match the crash incidents, this confirms the pattern.
 
-### Step 4: Use the automated validation RunCommand
+### Step 4: Use the automated validation Run Command
 
 Use the **Azure VM - Windows Mellanox Driver Validation** script to run all checks in one pass by using Azure portal Run Command:
 
@@ -95,15 +95,15 @@ To resolve this issue, update the Mellanox mlx5 driver to a supported version in
 #### Option A: Update via Windows Update (recommended)
 
 1. Connect to the VM via RDP or Azure Bastion.
-2. Open **Windows Update** → **Check for updates**.
+2. Open **Windows Update** > **Check for updates**.
 3. If a Mellanox/NVIDIA driver update is available as an optional update, install it.
 4. Restart the VM.
 
 #### Option B: Manual update via Device Manager
 
 1. Connect to the VM via RDP or Azure Bastion.
-2. Open **Device Manager** → expand **Network adapters**.
-3. Right-click the **Mellanox** adapter → **Update driver** → **Search automatically for drivers**.
+2. Open **Device Manager**, and then expand **Network adapters**.
+3. Right-click the **Mellanox** adapter, select **Update driver**, and then select **Search automatically for drivers**.
 4. If Windows finds an updated driver, install it and restart.
 
 #### Option C: Direct download from Mellanox / NVIDIA
