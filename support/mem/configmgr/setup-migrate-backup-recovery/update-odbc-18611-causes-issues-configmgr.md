@@ -56,7 +56,7 @@ Begin to move file from E:\Microsoft Configuration Manager\inboxes\bgb.box\Bgbtd
 
 ODBC Driver for SQL Server version 18.6.1.1 includes a change that enforces stricter handling of NULL values for non-nullable columns. This change can cause failures in Configuration Manager operations that try to insert NULL values into such columns. Such failures generate errors during Site Installation and "Currently Logged on User" reporting.
 
-## Solution
+## Resolution
 
 To resolve this issue, upgrade the ODBC Driver for SQL Server to [version 18.6.2.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#186).
 
