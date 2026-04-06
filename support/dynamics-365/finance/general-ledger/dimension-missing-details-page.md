@@ -19,8 +19,8 @@ You experience one or more of the following symptoms:
 - A dimension no longer appears on the **Financial Dimensions** details page.
 - A dimension that was previously available is missing.
 - A dimension that should be backed by a system entity (such as Department or Project) shows as a **\<Custom dimension>** instead.
-- A dimension can't be added to an account structure even though other ones already use it.
-- A dimension is missing from certain reports.  
+- A dimension can't be added to an account structure even though other structures already use it.
+- A dimension is missing from certain reports.
 
 ## Review the DimAttribute view structure of customizations
 

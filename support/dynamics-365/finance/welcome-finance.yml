@@ -100,7 +100,7 @@ landingContent:
             url: general-ledger/cant-reverse-transactions.md
           - text: Change the accounting or reporting currency 
             url: general-ledger/add-change-accounting-reporting-currency.md
-          - text: Financial dimension missing or shows as custom dimension in details page
+          - text: Financial dimension missing or incorrectly shows as custom dimension in details page
             url: general-ledger/dimension-missing-details-page.md
           - text: Financial dimension value is missing or unavailable
             url: general-ledger/cant-find-dimension-value.md

@@ -70,7 +70,7 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Common financial dimension-related errors
       href: general-ledger/common-dimension-related-errors.md
-    - name: Financial dimension missing or shows as custom dimension in details page
+    - name: Financial dimension missing or incorrectly shows as custom dimension in details page
       href: general-ledger/dimension-missing-details-page.md
     - name: Financial dimension value is missing or unavailable
       href: general-ledger/cant-find-dimension-value.md
