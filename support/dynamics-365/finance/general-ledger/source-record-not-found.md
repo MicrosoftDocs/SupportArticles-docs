@@ -28,7 +28,7 @@ These errors can occur during operations such as transferring lines to a journal
 
 ## A customization or integration references a record that doesn't exist
 
-A customization or integration tries to assign a financial dimension value by using a record that doesn't exist in the system, that exists in a different legal entity than expected, or that references the wrong record type.
+A customization or integration tries to assign a financial dimension value by using a record that doesn't exist in the system or that exists in a different legal entity than expected. Or, the customization or integration references the wrong record type.
 
 This problem can occur in any of several scenarios:
 
