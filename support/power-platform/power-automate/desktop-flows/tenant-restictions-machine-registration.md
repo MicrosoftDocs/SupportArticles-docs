@@ -1,16 +1,18 @@
 ---
 title: Tenant restrictions for Power Automate desktop machine registration
 description: Provides a resolution for an error that occurs when you register a machine to a tenant in Power Automate for desktop.
-ms.reviewer: guco, johndund, aartigoyle
-ms.date: 10/18/2024
+ms.reviewer: kdeepika, sbemag, v-shaywood
+ms.date: 04/03/2026
 ms.custom: sap:Desktop flows\Administration issues
 ---
 # Tenant restrictions for Power Automate desktop machine registration
 
-This article provides guidelines for resolving tenant restrictions when you [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant in Power Automate for desktop.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5017807
+
+## Summary
+
+When you try to [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant in Power Automate for desktop, the registration might fail with an `UnauthorizedTenantSwitching`, `UnauthorizedRegistrationToUnjoinedTenant`, or `UnauthorizedRegistrationToNonAllowListedTenant` error. These errors occur because the machine is being registered to an unauthorized tenant or you don't have the required administrator privileges. This article provides recommended steps to configure allowed tenant lists through Windows registry settings, and alternative solutions for specific tenant registration scenarios.
 
 ## Symptoms
 
@@ -26,11 +28,11 @@ When you try to [register a machine](/power-automate/desktop-flows/manage-machin
 These registration errors occur when you try to register your machine to an unauthorized tenant or don't have the administrator privileges required to perform the action. Administrator privileges are required to:
 
 - Change the tenant that a machine is registered to.
-- Register a Microsoft Entra-joined machine to a tenant that's different from its Microsoft Entra ID tenant.
+- Register a [Microsoft Entra-joined](/entra/identity/devices/concept-directory-join) machine to a tenant that's different from its Microsoft Entra ID tenant.
 
 These tenant restrictions prevent malicious actors from using Power Automate for desktop to control a machine over the network. To allow non-administrators to perform these actions, you can configure Windows registry settings as described in the following section.
 
-## Resolution
+## Recommended solution
 
 An administrator can use Windows registry settings to control which tenants can run Power Automate desktop scripts on the machine. In addition, running the registration app as an administrator overrides the tenant restrictions.
 
@@ -61,7 +63,9 @@ To define the allowlist:
    > - To find your tenant ID from the [Power Automate portal](https://make.powerautomate.com/), see [Allowlist tenants for registration and connect with sign-in connections](/power-automate/desktop-flows/how-to/allowlist-tenant-for-connect-with-sign-in-and-registration).
    > - To find your tenant ID from the [Power Apps portal](https://make.powerapps.com/), go to **Settings** and select **Session details**.
 
-If setting up the tenant allowlist isn't possible for some reasons, see the following sections on how to [allow registration to a tenant other than the machine joined Microsoft Entra tenant](#allow-machine-registration-to-a-tenant-other-than-the-machine-joined-microsoft-entra-tenant) or [allow switching to another tenant](#allow-switching-machine-registration-to-another-tenant).
+If setting up the tenant allowlist isn't possible for some reasons, see the following alternative solutions on how to [allow registration to a tenant other than the machine joined Microsoft Entra tenant](#allow-machine-registration-to-a-tenant-other-than-the-machine-joined-microsoft-entra-tenant) or [allow switching to another tenant](#allow-switching-machine-registration-to-another-tenant).
+
+## Alternative solution
 
 ### Validate machine registration when the service starts
 
@@ -102,3 +106,9 @@ An administrator can override tenant restrictions and register machines regardle
 
 > [!IMPORTANT]
 > If you define the allowlist using **AllowedRegistrationTenants** registry setting (recommended method), that setting will override the **AllowTenantSwitching** setting.
+
+## Related content
+
+- [Machine registration failure in Power Automate](desktop-flow-machine-registration-troubleshooting.md)
+- [Direct connectivity issues in Power Automate for desktop](troubleshoot-direct-connectivity-issues.md)
+- ["UnallowedTenantForConnectWithSignIn" error when using "connect with sign-in"](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md)
