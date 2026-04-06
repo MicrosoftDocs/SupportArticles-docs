@@ -39,7 +39,7 @@ The script is **detection only**. It does not make changes to the system.
 
 For more information, see:
 
-- [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-driver-crash-troubleshooting.md)
+- [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-network-driver-crash-troubleshooting.md)
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 
 ## How to run the tool
@@ -76,12 +76,12 @@ For more information about Run Command, see [Run scripts in your Windows VM by u
 
 1. Run **[Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)** to check adapter presence, driver version, and recent crash events.
 2. Review the output. If the driver is flagged as outdated or `0xD1` events are found, follow the resolution steps in the troubleshooting article.
-3. Update the driver following the guidance in [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-driver-crash-troubleshooting.md).
+3. Update the driver following the guidance in [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-network-driver-crash-troubleshooting.md).
 4. Rerun the script after the driver update to confirm the issue is resolved.
 
 ## Additional resources
 
-- [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-driver-crash-troubleshooting.md)
+- [Troubleshooting: Mellanox mlx5 Driver Crash on Azure Windows VMs](./windows-virtual-machine-mellanox-network-driver-crash-troubleshooting.md)
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 - [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 - [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command)
