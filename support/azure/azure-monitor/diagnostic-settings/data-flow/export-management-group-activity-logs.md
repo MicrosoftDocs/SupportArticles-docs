@@ -12,7 +12,7 @@ ms.custom: Send, Receive, or Capture events
 
 ## Summary
 
-This article explains how to export Azure management group activity logs from multiple Azure subscriptions within a management group to an Azure Event Hub. You might encounter challenges when trying to configure log exports for more than one subscription at a time. This guide provides a solution that uses the Azure Management Diagnostic Settings API to streamline the process.
+This article explains how to export Microsoft Azure management group activity logs from multiple Azure subscriptions within a management group to an Azure Event Hub. You might encounter challenges when you try to configure log exports for more than one subscription at a time. This guide provides a solution that uses the Azure Management Diagnostic Settings API to streamline the process.
 
 ### Common problems and solutions
 
@@ -20,28 +20,28 @@ This article explains how to export Azure management group activity logs from mu
 - **Solution**: Configure the diagnostic setting at the highest-level management group.
 
 - **Problem**: Logs don't appear in Event Hub.
-- **Solution**: Verify the API configuration and check for any errors in the setup process.
+- **Solution**: Verify the API configuration, and check for any errors in the setup process.
 
 ### Resolve export issues
 
 > [!NOTE]
 > Currently, log export configuration is limited to one subscription at a time within a management group.
 
-1. **Use the Management Diagnostic Settings API**
+**Step 1: Use the Management Diagnostic Settings API**
 
-    1. Access and use the Management Diagnostic Settings API to create or update settings. This API exports logs from all subscriptions within a management group to a Log Analytics workspace and an Event Hub. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
+    Access and use the Management Diagnostic Settings API to create or update settings. This API exports logs from all subscriptions within a management group to a Log Analytics workspace and an event hub. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
 
-1. **Retrieve the management group ID**
+**Step 2: Retrieve the management group ID**
 
-    1. Use the commands provided in the Azure Governance documentation to get the management group ID. For more information, see [Manage your Azure subscriptions at scale with management groups](/azure/governance/management-groups/manage).
+    Use the commands that are provided in the Azure Governance documentation to get the management group ID. For more information, see [Manage your Azure subscriptions at scale with management groups](/azure/governance/management-groups/manage).
 
-1. **Configure diagnostic settings**
+**Step 3: Configure diagnostic settings**
 
-    1. Set up the diagnostic settings at the highest-level management group. This setup ensures you capture and export logs from nested groups. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
+    Set up the diagnostic settings at the highest-level management group. This setup ensures that you capture and export logs from nested groups. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
 
-1. **Verify export configuration**
+**Step 4: Verify export configuration**
 
-    1. Make sure the exported events include the `Hierarchy` field, which shows the originating management group for each log entry.
+    Make sure that the exported events include the `Hierarchy` field. This field shows the originating management group for each log entry.
 
 ### References
 
