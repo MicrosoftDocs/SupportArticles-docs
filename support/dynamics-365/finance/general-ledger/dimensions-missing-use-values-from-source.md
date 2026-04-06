@@ -37,7 +37,7 @@ Some dimension-enabled sources ship together with demo models, such as the [Flee
 
 ### Solution
 
-No user action is needed. If these values appear in a development environment but not in UAT or production, the environments are behaving as expected. We recommend that you don't deploy demo models to non-development environments.
+No user action is needed. If these values appear in a development environment but not in UAT or production, the environments are behaving as expected. We recommend that you don't deploy demo models to nondevelopment environments.
 
 ## A customization doesn't follow the required pattern
 
