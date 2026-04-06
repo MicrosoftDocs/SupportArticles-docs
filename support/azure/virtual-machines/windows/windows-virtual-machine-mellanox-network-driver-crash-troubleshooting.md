@@ -12,7 +12,8 @@ ms.reviewer: jdickson, scotro, azurevmcptcic
 
 ## Symptom
 
-A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or become unstable. Common signs include:
+A Windows Azure Virtual Machine (VM) can crash, restart unexpectedly, or become unstable.
+Common signs include:
 
 - VM crashes with a **blue screen (BSOD)** and bug check **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**
 - VM becomes unresponsive and requires a forced restart
@@ -21,12 +22,21 @@ A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or becom
 
 ## Cause
 
-This issue is caused by an **outdated Mellanox mlx5 network adapter driver** in the guest VM. The `mlx5.sys` driver is used on VM SKUs with **Accelerated Networking** that rely on Mellanox/NVIDIA ConnectX adapters.
+The usual cause is an **outdated Mellanox mlx5 network adapter driver** in the guest VM.
+
+The `mlx5.sys` driver is used on VM SKUs with **Accelerated Networking** that rely on Mellanox/NVIDIA ConnectX adapters.
 
 If the installed driver version is no longer compatible with host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this usually appears as bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
 
 > [!NOTE]
 > This issue is **not** caused by the Azure platform or host hardware failure. It is a guest OS driver compatibility issue and requires a driver update inside the VM.
+
+## Quick check
+
+If both of the following are true, this article likely applies:
+
+- The crash shows **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**.
+- Crash data references `mlx5.sys`.
 
 ### Affected configurations
 
@@ -46,7 +56,7 @@ When you analyze a crash dump, look for `mlx5.sys` in the faulting module field.
 
 ## Diagnosis
 
-### Step 1: Check the VM for Mellanox adapter presence
+### Step 1: Check for a Mellanox adapter
 
 Run the following command from an elevated PowerShell session in the VM:
 
@@ -54,7 +64,7 @@ Run the following command from an elevated PowerShell session in the VM:
 Get-PnpDevice -Class Net | Where-Object { $_.FriendlyName -match 'Mellanox|ConnectX|mlx5' }
 ```
 
-If the command returns output, a Mellanox adapter is present and this article applies.
+If the command returns output, the VM has a Mellanox adapter.
 
 ### Step 2: Check the installed driver version
 
@@ -64,30 +74,32 @@ Get-WmiObject Win32_PnPSignedDriver |
     Select-Object DeviceName, DriverVersion, DriverDate
 ```
 
-Record the **DriverVersion** and **DriverDate** values. Compare them with the minimum supported version listed in the internal TSG.
+Record **DriverVersion** and **DriverDate**.
 
-### Step 3: Check for recent 0x000000D1 bugcheck events
+Compare those values with the minimum supported version in the internal TSG.
+
+### Step 3: Check for recent 0x000000D1 bug check events
 
 ```powershell
 Get-WinEvent -FilterHashtable @{ LogName = 'Application'; Id = 1001; StartTime = (Get-Date).AddDays(-30) } |
     Where-Object { $_.Message -match '0x000000d1|DRIVER_IRQL_NOT_LESS_OR_EQUAL' }
 ```
 
-If events are returned and the timestamps match the crash incidents, this confirms the pattern.
+If events are returned and the timestamps match your incidents, this confirms the pattern.
 
-### Step 4: Use the automated validation Run Command
+### Step 4: Run the automated validation script
 
-Use the **Azure VM - Windows Mellanox Driver Validation** script to run all checks in one pass by using Azure portal Run Command:
+Use **Azure VM - Windows Mellanox Driver Validation** to run all checks in one pass by using Azure portal Run Command:
 
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 
-For instructions on running the tool, see [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-network-driver-validation-tool.md).
+For run steps, see [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-network-driver-validation-tool.md).
 
 ## Resolution
 
 ### Update the Mellanox mlx5 driver
 
-To resolve this issue, update the Mellanox mlx5 driver to a supported version in the VM.
+Update the Mellanox mlx5 driver in the VM to a supported version.
 
 > [!IMPORTANT]
 > Before you update the driver, take a snapshot of the OS disk.
@@ -115,9 +127,11 @@ To resolve this issue, update the Mellanox mlx5 driver to a supported version in
 > [!NOTE]
 > Always compare the downloaded driver with the minimum supported version listed in the internal TSG before you install it.
 
-### Verify resolution
+### Verify the fix
 
-After you update the driver and restart the VM, run the validation script again to confirm:
+After you update the driver and restart the VM, run the validation script again.
+
+Confirm that:
 
 - Driver version is updated
 - No new 0x000000D1 bugcheck events occur after the restart
