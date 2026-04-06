@@ -3,7 +3,7 @@ title: Troubleshoot Custom Domain Issues in Azure App Service for Web Apps on Wi
 description: This article helps developers and IT admins troubleshoot custom domain issues in Azure App Service for web apps on Windows and Linux. 
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 12/15/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg, v-gsitser

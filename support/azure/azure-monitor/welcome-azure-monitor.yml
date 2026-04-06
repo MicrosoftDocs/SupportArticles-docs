@@ -39,11 +39,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Basic troubleshooting of Microsoft Monitoring Agent
-            url: ./log-analytics/windows-agents/mma-troubleshoot-basics.md
+            url: ./azure-monitor-agent/windows-agents/mma-troubleshoot-basics.md
           - text: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
             url:  ./log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
           - text: Microsoft Monitoring Agent couldn't start
-            url:  ./log-analytics/windows-agents/windows-could-not-start-mma.md
+            url:  ./azure-monitor-agent/windows-agents/windows-could-not-start-mma.md
 
   - title: Troubleshoot Azure Monitor Agent migration
     linkLists:

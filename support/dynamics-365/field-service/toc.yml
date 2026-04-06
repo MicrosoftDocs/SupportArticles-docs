@@ -90,4 +90,14 @@ items:
     - name: Schedule board is slow to load or experiences extreme latency
       href: scheduling/schedule-board-performance.md
     - name: Schedule board shows a blank page or fails to load
-      href: scheduling/schedule-board-not-loading.md
+      href: scheduling/schedule-board-not-loading.md  
+
+- name: Work order
+  items:
+    - name: Agreement booking setup doesn't create work orders
+      href: work-order/agreement-work-orders-not-generated.md
+    - name: Work order doesn't save or create successfully
+      href: work-order/work-order-creation-errors.md
+    - name: Work order status doesn't change as expected
+      href: work-order/work-order-status-stuck.md
+

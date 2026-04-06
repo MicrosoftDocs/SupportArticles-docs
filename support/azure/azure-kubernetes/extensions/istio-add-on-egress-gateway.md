@@ -4,7 +4,7 @@ description: Learn Istio egress gateway troubleshooting for the AKS add-on to fi
 ms.date: 05/29/2025
 ms.reviewer: nshankar, kochhars, v-weizhu
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the egress gateway of the Istio add-on so that I can use the Istio service mesh successfully.
 ---
