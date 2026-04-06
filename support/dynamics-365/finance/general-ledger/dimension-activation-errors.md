@@ -42,7 +42,7 @@ To resolve this issue, escape the deadlock, and then fix the underlying problem:
 1. Restore the previous names of the deleted or renamed dimensions so that activation can succeed. Then, exit maintenance mode.
 1. Remove the package that contains the hardcoded column references.
 1. Re-enter maintenance mode, and activate dimensions again.
-1. Create a replacement extension by using the correct method.
+1. Create a replacement extension that uses name-based lookups instead of hardcoded dimension values. For the documented approach, see [Dimensions overview for developers](/dynamics365/fin-ops-core/dev-itpro/financial/dimensions-overview).
 
 For general information about how to enter and exit maintenance mode, see [Maintenance mode](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode).
 
