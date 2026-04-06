@@ -19,7 +19,7 @@ After you [restore a database backup](/dynamics365/fin-ops-core/dev-itpro/databa
 
 ## Symptoms
 
-After you restore a database backup from one environment to another (for example, from production to User Acceptance Testing), users receive one of the following error messages if they work with a financial dimension that didn't cause errors in the source environment:
+After you restore a database backup from one environment to another (for example, from production to User Acceptance Testing), users receive one of the following error messages when they use a financial dimension that didn't cause errors in the source environment:
 
 > There's a problem with one of the views for financial dimension \<DimensionAttribute>. Contact your system admin to ensure the customization package containing this view is deployed in this environment.
 
