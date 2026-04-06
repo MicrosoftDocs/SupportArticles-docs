@@ -186,6 +186,8 @@ This problem occurs because the new tab page is a special navigation type, and t
 If the site autoplays when you enter the full URL directly into the address bar, but doesn't autoplay when the same site is configured as the new tab page, check the effective [AutoplayAllowed](/deployedge/microsoft-edge-browser-policies/autoplayallowed) and [AutoplayAllowList](/deployedge/microsoft-edge-browser-policies/autoplayallowlist) policies.
 
 1. Open Microsoft Edge and go to `edge://policy`.
+1. Search for `AutoplayAllowed`.
+1. Verify that the `AutoplayAllowed` policy is enabled.
 1. Search for `AutoplayAllowList`.
 1. If the problem occurs only on the new tab page, add `edge://newtab` to the allowlist.
 1. Restart Microsoft Edge, and test the new tab page again.
