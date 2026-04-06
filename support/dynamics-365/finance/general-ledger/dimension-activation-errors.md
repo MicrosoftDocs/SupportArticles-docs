@@ -52,8 +52,6 @@ Activation fails and returns one of the following error messages:
 
 > Column name 'SYSTEMGENERATEDATTRIBUTE\<DimensionAttribute>' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.
 
-<!-- TODO: Ask SME for screenshot of the other error -->
-
 > Cannot drop the procedure 'cdc.sp_batchinsert_\<Number>' because it's being used for Change Data Capture
 
 :::image type="content" source="media/dimension-activation-errors/dimension-activation-cdc-error.png" alt-text="Screenshot of the CDC sp_batchinsert error during dimension activation.":::
