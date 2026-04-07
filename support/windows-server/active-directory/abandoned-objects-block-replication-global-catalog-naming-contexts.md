@@ -1,6 +1,6 @@
 ---
 title: Abandoned objects block replication for Global Catalog naming contexts
-description: 
+description: Discusses how to determine if your Active Directory forest has abandoned objects, how abandoned objects might occur, and how to remove them to resolve replication issues.
 ms.date: 04/08/2026
 manager: dcscontentpm
 audience: itpro
@@ -9,6 +9,7 @@ ms.reviewer: kaushika, herbertm, v-appelgatet
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+ai.usage: ai-assisted
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
@@ -16,9 +17,14 @@ appliesto:
 
 ## Summary
 
-Abandoned objects in Active Directory Domain Services are objects that exist on some DCs in the forest, but have never replicated to other DCs. The DCs that hold these objects are typically global catalog servers (GCs) or read-only domain controllers (RODCs).
+In Active Directory Domain Services (AD DS), *abandoned objects* are objects that exist on some domain controllers (DCs) in the forest but never replicated to all DCs. Abandoned objects typically appear on global catalog servers (GCs) or read-only domain controllers (RODCs). Because standard lingering object removal tools can't remove abandoned objects, they can cause persistent replication errors and confusing search results that are difficult to diagnose.
 
-Abandoned objects resemble lingering objects. However, lingering objects are objects that at some point existed in all Active Directory replicas. Abandoned objects never existed in all replicas. This difference is one reason that lingering object removal tools might identify abandoned objects, but can't remove them. For more information about how abandoned objects and lingering objects occur and how they differ, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
+This article describes how to identify and remove abandoned objects. It covers the following topics:
+
+- How to recognize symptoms of abandoned objects, including replication errors and transient or phantom objects.
+- How abandoned objects differ from lingering objects.
+- How to remove abandoned objects by using scripts and manual steps.
+- How to use replication metadata, up-to-dateness vectors, and DC identifiers to investigate the root cause of the abandoned objects.
 
 ### Prerequisites
 
@@ -122,9 +128,9 @@ The basic scenario is that an object is created on a hub DC that has RODCs or GC
 
 Before this replication issue is fixed, the hub DC is forcefully removed from the forest. Because the writeable DCs don't use GCs or RODCs as inbound replication partners, the object can't get to writeable DCs. The object is considered an *abandoned object* on the RODCs or GCs.
 
-A similar situation occurs if an object is deleted and then restored on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. Again, the restoration only replicates to read-only replicas before the hub DC is forcibly removed. On the writeable DCs, the object remains in its tombstone state until its tombstone lifetime expires. Then the garbage collection process removes the object completely. Again, the object is considered an abandoned object on the RODCs or GCs. 
+A similar situation occurs if an object is deleted and then restored on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. Again, the restoration only replicates to read-only replicas before the hub DC is forcibly removed. On the writeable DCs, the object remains in its tombstone state until its tombstone lifetime expires. Then the garbage collection process removes the object completely. Again, the object is considered an abandoned object on the RODCs or GCs.
 
-For more information, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
+Abandoned objects resemble lingering objects. However, lingering objects are objects that at some point existed in all Active Directory replicas. Abandoned objects never existed in all replicas. This difference is one reason that lingering object removal tools might identify abandoned objects, but can't remove them. For more information about how abandoned objects and lingering objects occur and how they differ, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
 
 ## Resolution
 
