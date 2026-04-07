@@ -3,8 +3,8 @@ items:
   href: welcome-nat-gateway.yml
   items:
   - name: Troubleshoot Azure NAT Gateway
-    href: nat-gateway/troubleshoot-nat.md   
+    href: troubleshoot-nat.md   
   - name: Troubleshoot outbound connectivity with NAT Gateway and Azure services
-    href: nat-gateway/troubleshoot-nat-and-azure-services.md
+    href: troubleshoot-nat-and-azure-services.md
   - name: Troubleshoot Azure NAT Gateway connectivity
-    href: nat-gateway/troubleshoot-nat-connectivity.md
+    href: troubleshoot-nat-connectivity.md

@@ -3,4 +3,4 @@ items:
   href: welcome-azure-dns.yml
   items:
   - name: Troubleshoot Azure DNS
-    href: dns/troubleshoot-dns.md   
+    href: troubleshoot-dns.md   

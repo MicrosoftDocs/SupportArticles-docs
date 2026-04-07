@@ -23,8 +23,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Azure NAT Gateway
-            url: nat-gateway/troubleshoot-nat.md
+            url: troubleshoot-nat.md
           - text: Troubleshoot outbound connectivity with NAT Gateway and Azure services
-            url: nat-gateway/troubleshoot-nat-and-azure-services.md
+            url: troubleshoot-nat-and-azure-services.md
           - text: Troubleshoot Azure NAT Gateway connectivity
-            url: nat-gateway/troubleshoot-nat-connectivity.md
+            url: troubleshoot-nat-connectivity.md

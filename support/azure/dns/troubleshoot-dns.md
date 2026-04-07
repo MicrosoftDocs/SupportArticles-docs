@@ -8,7 +8,6 @@ manager: dcscontentpm
 ms.service: azure-dns
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.author: jarrettr
 # Customer intent: As a DNS administrator, I want to troubleshoot common Azure DNS issues, so that I can ensure proper DNS zone and record configurations for seamless name resolution.
 ---
 # Troubleshoot Azure DNS

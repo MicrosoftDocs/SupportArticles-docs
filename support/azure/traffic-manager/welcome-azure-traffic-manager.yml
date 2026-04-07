@@ -23,5 +23,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Azure Traffic Manager degraded status
-            url: traffic-manager/troubleshoot-traffic-manager-degraded-status.md
+            url: troubleshoot-traffic-manager-degraded-status.md
 

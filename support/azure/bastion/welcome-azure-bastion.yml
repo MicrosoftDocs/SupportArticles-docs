@@ -23,4 +23,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Azure Bastion
-            url: bastion/troubleshoot-bastion.md
+            url: troubleshoot-bastion.md
