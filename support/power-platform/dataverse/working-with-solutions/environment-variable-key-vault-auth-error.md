@@ -39,7 +39,7 @@ This error might occur in the following scenarios:
 The Dataverse service principal requires the **Key Vault Secrets User** role on your Azure Key Vault. Without this role, Dataverse can't retrieve the secret value on behalf of users.
 
 > [!IMPORTANT]
-> If you previously configured your service principal to have only the **Key Vault Reader** role, be aware that this role isn't sufficient. You must also add the **Key Vault Secrets User** role.
+> If you previously configured your service principal to have only the **Key Vault Reader** role, you must also add the **Key Vault Secrets User** role because the **Key Vault Reader** role alone isn't sufficient.
 
 To add this role assignment:
 
