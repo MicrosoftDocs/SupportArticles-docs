@@ -109,13 +109,13 @@ To create the initrd or initramfs correctly, add the `hv_vmbus`, `hv_netvsc`, an
 
 Initrd-related startup problems can appear as the following logged symptoms.
 
-:::image type="content" source="media/repair-linux-vm-using-ALAR/not-syncing-VFS.png" alt-text="Screenshot of the serial console showing the \"not syncing: VFS\" Linux VM boot error." lightbox="media/repair-linux-vm-using-ALAR/not-syncing-VFS.png":::
+:::image type="content" source="media/repair-linux-vm-using-alar/not-syncing-VFS.png" alt-text="Screenshot of the serial console showing the \"not syncing: VFS\" Linux VM boot error." lightbox="media/repair-linux-vm-using-alar/not-syncing-VFS.png":::
 
-:::image type="content" source="media/repair-linux-vm-using-ALAR/no-working-init-found.png" alt-text="Screenshot of the serial console showing the \"No working init found\" Linux VM boot error." lightbox="media/repair-linux-vm-using-ALAR/no-working-init-found.png":::
+:::image type="content" source="media/repair-linux-vm-using-alar/no-working-init-found.png" alt-text="Screenshot of the serial console showing the \"No working init found\" Linux VM boot error." lightbox="media/repair-linux-vm-using-alar/no-working-init-found.png":::
 
 In both cases, the following information is logged before the error entries.
 
-:::image type="content" source="media/repair-linux-vm-using-ALAR/unpacking-failed.png" alt-text="Screenshot of the serial console showing the \"Unpacking failed\" message before the Linux VM boot error." lightbox="media/repair-linux-vm-using-ALAR/unpacking-failed.png":::
+:::image type="content" source="media/repair-linux-vm-using-alar/unpacking-failed.png" alt-text="Screenshot of the serial console showing the \"Unpacking failed\" message before the Linux VM boot error." lightbox="media/repair-linux-vm-using-alar/unpacking-failed.png":::
 
 ### `kernel`
 
