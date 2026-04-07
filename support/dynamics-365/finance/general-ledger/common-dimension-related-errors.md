@@ -289,7 +289,7 @@ This error message appears if a value in the ledger account combination doesn't 
 
 ### Step 1: Refresh the form and re-enter the value
 
-If the error appears as a yellow triangle in a segmented entry control field, or as a yellow or pink info bar at the top of the form, try the following steps first:
+If the error appears as a yellow triangle in an account field, or as a yellow or pink info bar at the top of the form, try the following steps first:
 
 1. Clear the ledger account field and select outside the field so that no error remains.
 1. Close any info bars at the top of the form.
