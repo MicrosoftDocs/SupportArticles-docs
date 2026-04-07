@@ -97,7 +97,7 @@ Use **Azure VM - Windows Mellanox Driver Validation** to run all checks in one p
 
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 
-For run steps, see [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-network-driver-validation-tool.md).
+For run steps, see [Use Azure VM Mellanox Driver Validation Tool](windows-vm-mellanox-network-driver-validation-tool.md).
 
 ## Resolution
 
@@ -142,7 +142,7 @@ Confirm that:
 
 ## Additional resources
 
-- [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-network-driver-validation-tool.md)
+- [Use Azure VM Mellanox Driver Validation tool](windows-vm-mellanox-network-driver-validation-tool.md)
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 - [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 - [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command)
