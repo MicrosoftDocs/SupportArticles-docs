@@ -1,0 +1,6 @@
+items:
+- name: Azure Traffic Manager troubleshooting documentation
+  href: welcome-azure-traffic-manager.yml
+  items:
+  - name: Troubleshoot Azure Traffic Manager degraded status
+    href: traffic-manager/troubleshoot-traffic-manager-degraded-status.md

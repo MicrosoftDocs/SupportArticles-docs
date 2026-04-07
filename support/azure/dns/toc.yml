@@ -1,0 +1,6 @@
+items:
+- name: Azure DNS troubleshooting documentation
+  href: welcome-azure-dns.yml
+  items:
+  - name: Troubleshoot Azure DNS
+    href: dns/troubleshoot-dns.md   

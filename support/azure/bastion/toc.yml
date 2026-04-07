@@ -1,0 +1,6 @@
+items:
+- name: Troubleshoot Azure Bastion
+  href: welcome-azure-bastion.yml
+  items:
+  - name: Troubleshoot Azure Bastion
+    href: bastion/troubleshoot-bastion.md   
