@@ -87,24 +87,6 @@ landingContent:
           - text: Troubleshoot the Office integration
             url: /dynamics365/fin-ops-core/dev-itpro/office-integration/office-integration-troubleshooting?context=/dynamics365/context/finance
 
-  # Card
-  - title: Financial dimensions
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Blocked from deleting a dimension value
-            url: general-ledger/blocked-deleting-dimension-value.md
-          - text: Can't find a dimension value
-            url: general-ledger/cant-find-dimension-value.md
-          - text: Common dimension-related errors
-            url: general-ledger/common-dimension-related-errors.md
-          - text: Dimension errors after restoring a database to another environment
-            url: general-ledger/dimensions-errors-after-database-restore.md
-          - text: Dimension missing from a details page
-            url: general-ledger/dimension-missing-details-page.md
-          - text: Source entity missing from 'Use values from' dropdown
-            url: general-ledger/dimensions-missing-use-values-from-source.md
-
 # Card
   - title: General ledger
     linkLists:
@@ -124,6 +106,24 @@ landingContent:
             url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
+
+  # Card
+  - title: Financial dimensions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Blocked from deleting a dimension value
+            url: general-ledger/blocked-deleting-dimension-value.md
+          - text: Can't find a dimension value
+            url: general-ledger/cant-find-dimension-value.md
+          - text: Common dimension-related errors
+            url: general-ledger/common-dimension-related-errors.md
+          - text: Dimension errors after restoring a database to another environment
+            url: general-ledger/dimensions-errors-after-database-restore.md
+          - text: Dimension missing from a details page
+            url: general-ledger/dimension-missing-details-page.md
+          - text: Source entity missing from 'Use values from' dropdown
+            url: general-ledger/dimensions-missing-use-values-from-source.md
 
   # Card
   - title: Tax
