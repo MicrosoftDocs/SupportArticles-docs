@@ -14,7 +14,7 @@ ms.reviewer: jdickson, scotro, azurevmcptcic
 
 Use the Windows Mellanox Driver Validation tool to determine whether an outdated NVIDIA Mellanox mlx5 driver is causing failures or instability in Azure Windows VMs that use Accelerated Networking and NVIDIA Mellanox ConnectX adapters. The tool helps you identify "DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)" events so that you can verify the root cause.
 
-Microsoft provides a script-based diagnostic tool that helps you veirfy whether an outdated Mellanox mlx5 driver is the root cause of the problem.
+Microsoft provides a script-based diagnostic tool that helps you verify whether an outdated Mellanox mlx5 driver is the root cause of the problem.
 
 ## Purpose
 
