@@ -6,7 +6,7 @@ ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, tw
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
 
-# Source record not found for a financial dimension value
+# Source record not found error for a financial dimension value
 
 ## Summary
 

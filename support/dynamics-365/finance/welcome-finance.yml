@@ -88,27 +88,45 @@ landingContent:
             url: /dynamics365/fin-ops-core/dev-itpro/office-integration/office-integration-troubleshooting?context=/dynamics365/context/finance
 
 # Card
+  - title: Financial dimensions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete a financial dimension value
+            url: general-ledger/blocked-deleting-dimension-value.md
+          - text: Can't select a financial dimension value in transactions, journals, or account structures
+            url: general-ledger/cant-find-dimension-value.md
+          - text: Common financial dimension-related errors
+            url: general-ledger/common-dimension-related-errors.md
+          - text: Default financial dimension values are incorrect
+            url: general-ledger/incorrect-default-dimension-values.md
+          - text: Financial dimension activation errors
+            url: general-ledger/dimension-activation-errors.md
+          - text: Financial dimension errors after restoring a database to another environment
+            url: general-ledger/dimensions-errors-after-database-restore.md
+          - text: Financial dimension missing or incorrectly shows as custom dimension in details page
+            url: general-ledger/dimension-missing-details-page.md
+          - text: Source entity isn't available in the "Use values from" list
+            url: general-ledger/dimensions-missing-use-values-from-source.md
+          - text: Source record not found for a financial dimension value
+            url: general-ledger/source-record-not-found.md
+
+# Card
   - title: General ledger
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: A custom Excel template for financial journals isn't available on the menu
             url: general-ledger/custom-excel-template-financial-journals-not-available.md
-          - text: Can't delete a financial dimension value
-            url: general-ledger/blocked-deleting-dimension-value.md
           - text: Can't reverse a transaction
             url: general-ledger/cant-reverse-transactions.md
           - text: Change the accounting or reporting currency
             url: general-ledger/add-change-accounting-reporting-currency.md
-          - text: Financial dimension missing or incorrectly shows as custom dimension in details page
-            url: general-ledger/dimension-missing-details-page.md
-          - text: Financial dimension value is missing or unavailable
-            url: general-ledger/cant-find-dimension-value.md
           - text: Journal posting failure due to imbalance
             url: general-ledger/posting-fail-imbalance.md
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
-          - text: Vouchers aren't reversed when posting a journal with reversing entry and date 
+          - text: Vouchers aren't reversed when posting a journal with reversing entry and date
             url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
             url: general-ledger/year-end-close-miss-opening-balances.md
