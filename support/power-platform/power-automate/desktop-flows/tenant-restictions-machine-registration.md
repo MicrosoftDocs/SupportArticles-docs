@@ -65,8 +65,6 @@ To define the allowlist:
 
 If setting up the tenant allowlist isn't possible for some reasons, see the following alternative solutions on how to [allow registration to a tenant other than the machine joined Microsoft Entra tenant](#allow-machine-registration-to-a-tenant-other-than-the-machine-joined-microsoft-entra-tenant) or [allow switching to another tenant](#allow-switching-machine-registration-to-another-tenant).
 
-## Alternative solution
-
 ### Validate machine registration when the service starts
 
 The registration restrictions are only applied when you try to register the machine. Starting with version 2.31, you can configure Power Automate for desktop to check if the current machine registration is allowed when the Power Automate service (UIFlowService) starts. If the registration isn't allowed, the machine can't connect to Power Automate cloud services.
@@ -86,6 +84,10 @@ An administrator can override tenant restrictions and register machines regardle
 2. Navigate to this key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration`.
 3. Create a new DWORD value (**Edit** > **new** > **DWORD (32 bit) value**) named **DisableTenantChangeRegistrationAdminOverride**.
 4. Double-click the new value and set its data field to **1**.
+
+## Alternative solution
+
+If setting up the tenant allowlist isn't possible for some reason, you can allow registration to a tenant other than the machine joined Microsoft Entra tenant or allow switching to another tenant.
 
 ### Allow machine registration to a tenant other than the machine joined Microsoft Entra tenant
 
