@@ -55,27 +55,27 @@ To solve this issue, ensure that the selector of the UI element is valid. To do 
 
 4. If the repair feature can't fix the selector automatically, you need to manually edit the selector to create a more robust selector. You can edit the attributes, their values, and operands used in the selector of the UI element. 
 
-   To achieve that, capture the element again after the failure, and compare the new selector with the old one to identify the differences. There may be one or more different elements or attributes. Edit the selector to make sure that it contains only static elements or attributes that won't change. For example, if the window name has a dynamic part at the end, it can be modified to "Name – Starts with - MyWindowName" instead of "Name – Equal to – MyWindowName (2)". In general, you should remove any dynamic values like numbers and modify the relevant operators  (**Starts with**, **Ends with**, **Contains**, and so on) accordingly. Or you should remove the entire element from the selector path if necessary. For more information, see [Build a custom selector](/power-automate/desktop-flows/build-custom-selectors).
+   To achieve this goal, capture the element again after the failure, and compare the new selector with the old one to identify the differences. There may be one or more different elements or attributes. Edit the selector to make sure that it contains only static elements or attributes that won't change. For example, if the window name has a dynamic part at the end, you can modify it to "Name – Starts with - MyWindowName" instead of "Name – Equal to – MyWindowName (2)". In general, remove any dynamic values like numbers and modify the relevant operators  (**Starts with**, **Ends with**, **Contains**, and so on) accordingly. Or remove the entire element from the selector path if necessary. For more information, see [Build a custom selector](/power-automate/desktop-flows/build-custom-selectors).
 
-5. If the UI element isn't available at the execution time, consider adding a "Wait for window content" or "Wait for web page content" action respectively.
+5. If the UI element isn't available at the execution time, consider adding a [Wait for window content](/power-automate/desktop-flows/actions-reference/uiautomation#waitforwindowcontentaction) or [Wait for web page content](/power-automate/desktop-flows/actions-reference/webautomation#waitforwebpagecontentaction) action respectively.
 
 6. Note that something may have changed in the application (for example, a version upgrade) or on the web page underline code, and the selector of the UI element might be different. In this case, you must recapture the UI element.
 
 #### Alternative solution
 
-Surface automation can be used as an alternative way to automate the application. For best practices, see [Automate with mouse, keyboard, and OCR actions (recommended for automation in VDI)](/power-automate/desktop-flows/how-to/automate-using-mouse-keyboard-ocr).
+You can use surface automation as an alternative way to automate the application. For best practices, see [Automate with mouse, keyboard, and OCR actions (recommended for automation in VDI)](/power-automate/desktop-flows/how-to/automate-using-mouse-keyboard-ocr).
 
 ## Application to interact with runs with elevated rights
 
-The application runs with more elevated rights than Power Automate for desktop.
+The application you're interacting with runs with more elevated rights than Power Automate for desktop.
 
 #### Solution
 
-Both the application and Power Automate for desktop should run with the same rights.
+Both the application and Power Automate for desktop should run with the same rights. To achieve this, use one of these options:
 
-By default, Power Automate for desktop doesn't run with elevated rights. You can set Power Automate for desktop to run as administrator as well. For more information, see [Run Power Automate with elevated rights](/power-automate/desktop-flows/how-to/run-power-automate-elevated-rights).
+- [Run Power Automate with elevated rights](/power-automate/desktop-flows/how-to/run-power-automate-elevated-rights).
 
-Another option is to clear the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
+- Clear the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
 
 ## Related content
 
