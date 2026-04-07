@@ -41,7 +41,7 @@ Description:   Loading the private key for the client authentication certificate
 
 The server was cloned from a golden image (also known as a master image) that already had the Windows Log Analytics agent installed and configured. The connection fails because the certificates include the name of the original server that was cloned instead of the name that's currently used by Windows. 
 
-**Note:** Cloning a computer that has the Log Analytics agent already configured is not supported.
+**Note:** Cloning a computer that has the Log Analytics agent already configured isn't supported.
 
 ## Solution
 
@@ -57,7 +57,7 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
 1. To view the existing MMA certificates in MMC, navigate to **Certificates** > **Microsoft Monitoring Agent** > **Certificates**.
 
-1. We recommend that you export each certificate so that you have a backup copy for security and auditing. To do this, follow these steps:
+1. We recommend that you export each certificate so that you have a backup copy for security and auditing. Follow these steps:
 
      1. Select and right-click each listed certificate individually, and then select **All Tasks** > **Export** > **Next** > **No, do not export the private key**.
 
