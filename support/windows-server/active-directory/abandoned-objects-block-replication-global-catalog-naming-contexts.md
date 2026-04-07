@@ -1,6 +1,6 @@
 ---
 title: Abandoned objects block replication for Global Catalog naming contexts
-description: Discusses how to determine if your Active Directory forest has abandoned objects, how abandoned objects might occur, and how to remove them to resolve replication issues.
+description: Discusses how to determine if abandoned objects exist in your Active Directory forest, how abandoned objects might occur, and how to remove them to resolve replication issues.
 ms.date: 04/08/2026
 manager: dcscontentpm
 audience: itpro
@@ -40,7 +40,7 @@ This article describes how to identify and remove abandoned objects. It covers t
 
 ## Symptoms
 
-You are running a Windows Active Directory forest that has multiple domains and/or Read-Only Domain Controllers (RODCs). You encounter behavior, events or error messages that resemble any of the following examples.
+You're running a Windows Active Directory forest that has multiple domains and/or Read-Only Domain Controllers (RODCs). You encounter behavior, events, or error messages that resemble any of the following examples.
 
 ### Example 1: Transient or phantom objects
 
@@ -49,9 +49,9 @@ An application or user searches for an Active Directory object, but the search r
 - The user or application might find the object while connected to an RODC or a GC, but if they connect to a writable DC, the object doesn't appear to exist.
 - If the user or application searches at the forest level, they find the object. If they search at the domain level, the object doesn't appear to exist in any domain.
 
-Similarly, a user or application tries to create an object, but receives an error message that indicates that the distinguished name (DN), UPN ,or SPN is already in use. However, a search can't find an object that has that DN.
+Similarly, a user or application tries to create an object, but receives an error message that indicates that the distinguished name (DN), user principal name (UPN), or service principal name (SPN) is already in use. However, a search can't find an object that has that DN.
 
-### Example 2: GC replication errors :"Couldn't update an object" and "There is no such object on the server"
+### Example 2: GC replication errors: "Couldn't update an object" and "There is no such object on the server"
 
 > [!NOTE]  
 > Unlike GCs, RODCs might not generate events or errors when they contain abandoned objects. GCs can replicate to one another, but RODCs don't replicate to any other DCs.
@@ -118,38 +118,36 @@ To distinguish whether you have lingering objects or abandoned objects, open a C
 repadmin /removelingeringobjects
 ```
 
-After the command finishes, run it a second time. If the objects are still present, they are likely to be abandoned objects instead of lingering objects. The details of this behavior depend on the Windows Server version that you're using.
+After the command finishes, run it a second time. If the objects are still present, they're likely to be abandoned objects instead of lingering objects. The details of this behavior depend on the Windows Server version that you're using.
 
-When you check the objects by name or GUID, you will not find them on writable DCs.
+When you check the objects by name or GUID, you don't find them on writable DCs.
 
 ## Cause
 
 The basic scenario is that an object is created on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. A condition on the DC or in the infrastructure allows the object to replicate to a read-only replica, but not to a writeable replica. A firewall configuration issue or a networking issue could cause this behavior.
 
-Before this replication issue is fixed, the hub DC is forcefully removed from the forest. Because the writeable DCs don't use GCs or RODCs as inbound replication partners, the object can't get to writeable DCs. The object is considered an *abandoned object* on the RODCs or GCs.
+Before this replication issue is fixed, the hub DC is forcefully removed from the forest. Because the writeable DCs don't use GCs or RODCs as inbound replication partners, the object can't get to writeable DCs. The object is considered to be an abandoned object on the RODCs or GCs.
 
-A similar situation occurs if an object is deleted and then restored on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. Again, the restoration only replicates to read-only replicas before the hub DC is forcibly removed. On the writeable DCs, the object remains in its tombstone state until its tombstone lifetime expires. Then the garbage collection process removes the object completely. Again, the object is considered an abandoned object on the RODCs or GCs.
+A similar situation occurs if an object is deleted and then restored on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. Again, the restoration only replicates to read-only replicas before the hub DC is forcibly removed. On the writeable DCs, the object remains in its tombstone state until its tombstone lifetime expires. Then the garbage collection process removes the object completely. Again, the object is considered to be an abandoned object on the RODCs or GCs.
 
 Abandoned objects resemble lingering objects. However, lingering objects are objects that at some point existed in all Active Directory replicas. Abandoned objects never existed in all replicas. This difference is one reason that lingering object removal tools might identify abandoned objects, but can't remove them. For more information about how abandoned objects and lingering objects occur and how they differ, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
 
 ## Resolution
 
-You might need assistance to follow the proper course of action for the your particular issue. You can request Microsoft Technical Support to assist you with resolving this problem.
+You might need assistance to follow the proper course of action for your particular issue. You can request Microsoft Technical Support to assist you with resolving this problem.
 
 > [!IMPORTANT]  
 > These methods focus on removing the abandoned objects, instead of creating or restoring the objects on the DCs that they didn't replicate to. For reference information that might help you to identify the replication issues that generated the abandoned objects in the first place, see [More information](#more-information).
 
-The algorithm that `repadmin /removelingeringobjects` uses checks the scope of the up-to-dateness vector. It does not remove objects outside the up-to-dateness vector. Abandoned objects, by definition, don't exist in the up-to-dateness vectors of the writeable DCs. Therefore, you have to use tools other than `repadmin` to remove abandoned objects.
+The algorithm that `repadmin /removelingeringobjects` uses checks the scope of the up-to-dateness vector. It doesn't remove objects outside the up-to-dateness vector. Abandoned objects, by definition, don't exist in the up-to-dateness vectors of the writeable DCs. Therefore, you have to use tools other than `repadmin` to remove abandoned objects.
 
-This article describes processes that uses manual steps and scripts to remove abandoned objects. The precise details of the steps that you follow depend on the details of your forest and the type of abandoned objects that you have.
+This article describes processes that use manual steps and scripts to remove abandoned objects. The precise details of the steps that you follow depend on the details of your forest and the type of abandoned objects that you have.
 
 ### Step 1: Collect the GUIDs of the abandoned objects and the DCs that host them
 
 To remove abandoned objects, you have to identify each object by its `objectGUID` value. You can get this information from events and error messages, and from log files that record operations such as searches that produced inconsistent results. You can also use scripts to identify objects that exist in some Active Directory replicas and not others.
 
-The following example Powershell script detects abandoned objects. It creates a list of the objects in the GC naming context, and then it checks to see if each object is present in the child domain. If an object is not present, the script exports the object information to a .csv file and to a .ldf file. The script doesn't change any of the objects or object attributes.
-
-You will need to customize the server and domain names.
+The following example PowerShell script detects abandoned objects. It creates a list of the objects in the GC naming context, and then it checks to see if each object is present in the child domain. If an object isn't present, the script exports the object information to a .csv file and to a .ldf file. The script doesn't change any of the objects or object attributes.
 
 > [!NOTE]  
 > In this script, change the value of `$GCdomain` to the DN of the affected domain, and change `$rwdomain` to the DN of the reference DC.
@@ -186,7 +184,7 @@ Foreach($objectin$objects)
 #### Use the tombstones to reset the replication metadata for the objects across the replication topology
 
 > [!IMPORTANT]  
-> This method isn't appropriate for all kinds of objects. For example, using this approach on a Domain Controller Computer object and a child Rid Set object would cause additional issues.
+> This method isn't appropriate for all kinds of objects. For example, using this approach on a Domain Controller Computer object and a child Rid Set object would cause further issues.
 
 You can use this method under the following conditions:
 
@@ -223,7 +221,7 @@ To more quickly clean out the tombstones or deleted objects from the reference D
 
 ### Step 3: Remove abandoned objects that don't have tombstones
 
-You can use this method when the abandoned object doesn't exist in any form (such as a tombstone object or an object in the Recycle bin)on the writable DC that you use as a reference DC. Verify that the `objectGUID` of the abandoned object doesn't exist anywhere in the replica on the reference DC.
+You can use this method when the abandoned object doesn't exist in any form (such as a tombstone object or an object in the Recycle bin) on the writable DC that you use as a reference DC. Verify that the `objectGUID` of the abandoned object doesn't exist anywhere in the replica on the reference DC.
 
 To remove abandoned objects, follow the process in [Manually Remove Lingering Objects on Outdated Replication Partners](/troubleshoot/windows-server/active-directory/manually-remove-lingering-objects). If you used a script to create a list of abandoned objects, you can use that list as input to the scripts that this process uses.
 
@@ -235,7 +233,7 @@ After you complete this process, run the following command to make sure that the
 repadmin /showobjmeta \* "\<guid=orphaned objectGUID\>"
 ```
 
-This command checks the existence of the abandoned object on all DCs in the forest. When the object has been successfully removed, the command generates output that resembles the following example:
+This command checks the existence of the abandoned object on all DCs in the forest. If the object was successfully removed, the command generates output that resembles the following example:
 
 ```output
 DsReplicaGetInfo() failed with status 8439 (0x20f7):  
@@ -251,7 +249,7 @@ This section provides detailed information that can help you diagnose how your f
 The following table provides a simplified view of how lingering objects and the two types of abandoned objects occur. It highlights the similarities and differences between the three types of objects.
 
 > [!IMPORTANT]  
-> The following table describes sequences of events. These sequences are not troubleshooting instructions.
+> The following table describes sequences of events. These sequences aren't troubleshooting instructions.
 
 | Abandoned object type 1 | Abandoned object type 2 | Lingering object |
 | - | - | - |
@@ -259,18 +257,19 @@ The following table provides a simplified view of how lingering objects and the 
 |   |  | 2. One DC (DC-1) disconnects from the network. |
 |   | 2. Delete the object. That change replicates to all DCs. | 3. Delete the object. That change replicates to all remaining DCs. |
 | 2. Connect to a DC (DC-2), and then create the object. | 3. Before the tombstone lifetime expires, connect to one DC (DC-3), and then restore (undelete) the object. | |
-| 3. The "create object" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-2 disconnects from the network. | 4. The "restore" change replicates to GCs or RODCs. Before the replicates to regular DCs, DC-3 disconnects from the newtork. | |
+| 3. The "create object" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-2 disconnects from the network. | 4. The "restore" change replicates to GCs or RODCs. Before the replicates to regular DCs, DC-3 disconnects from the network. | |
 | | 5. The tombstone lifetime expires. | 4. The tombstone lifetime expires. |
 | | | 5. DC-1 reconnects to the network. |
 | **Result**: Some GCs or RODCs have the object, and the "create" USN. Regular DCs don't have the object or the "create" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Some GCs or RODCs have the object, and the "restore" USN. Regular DCs don't have the object or the "restore" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Only DC-1 has the object. DC-1 doesn't have the "delete" USN. The other DCs don't have any reference to the object beyond the historical USNs. |
 
 ### Investigating abandoned objects: How to interpret information from replication partners and up-to-dateness vectors
 
-Finding replication issues can be a complicated effort for a number of reasons. One of these reasons is that replication reports and records typically use multiple identifiers to track a single DC, and those identifiers change over time. Each DC tracks inbound replication in the following terms:
+Finding replication issues can be a complicated effort for many reasons. One of these reasons is that replication reports and records typically use multiple identifiers to track a single DC, and those identifiers change over time. Each DC tracks inbound replication in the following terms:
 
 - The identity of the replication partner.
-- The state of the Active Directory replica on that replication partner, including whether (and when) it has been restored from backup.
-- Whether the replication partner has changes ready to send.
+- The state of the Active Directory replica on that replication partner, including whether (and when) it was restored from backup at any point.
+
+- Whether the replication partner has changes that haven't yet replicated.
 - All changes that the replication partner has sent previously, both before and after each restoration.
 
 #### Identifying replication partners
@@ -280,7 +279,10 @@ To trace abandoned objects, you need two globally unique identifiers (GUIDs) for
 | GUID type | Also referred to as | Description |
 | - | - | - |
 | DSA object GUID | DSA GUID | This GUID is the DC's permanent identifier. Windows creates this GUID when you promote a Windows-based server to a DC. This GUID doesn't change. |
-| DSA invocationID | invocationID | This GUID identifies the current copy of Active Directory on the DC. Windows configures this GUID when you add the DC to a new or existing domain. This GUID changes to track particular directory service events. |
+| DSA invocationID | invocationID | This GUID identifies the current copy of Active Directory on the DC. Windows configures this GUID when you add the DC to a new or existing domain, and changes it when the DC is restored from a backup. When you promote a DC and create a new forest, that DC uses its DSA GUID as its invocation ID until the first time the DC is restored from a backup. |
+
+> [!NOTE]  
+> After you stop and deallocate a virtual DC, the next time the DC starts, Windows behaves as if Active Directory was restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC.
 
 Event ID 1084 and event ID 1988 both identify a *source server*. This server is typically a GC that acts as an inbound replication partner to the DC that generated the events (the *destination server*, typically also a GC). The abandoned object exists on the source server, but not the destination server.
 
@@ -293,7 +295,7 @@ repadmin /showrepl *
 > [!NOTE]  
 > For large topologies, you can constrain the command to run on a particular DC. For more information, see [Repadmin](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc770963(v=ws.11)).
 
-In the case of a forest that has two GCs, this command generates output that resembles the following example:
+For a forest that has two GCs, this command generates output that resembles the following example:
 
 ```output
 Repadmin: running command /showrepl against full DC GC-1.contosotest.com
@@ -342,7 +344,7 @@ Each DC maintains an up-to-dateness vector as a record of its own state and the 
 repadmin /showutdvec GC-1 dc=contosotest,dc=com
 ```
 
-In the case of a forest that has two GCs, this command generates output that resembles the following example:
+For a forest that has two GCs, this command generates output that resembles the following example:
 
 ```output
 Caching GUIDs.
@@ -353,7 +355,7 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:03:1
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-This output is GC-1's up-to-dateness vector, which records both changes made on GC-1 and changes replicated in from GC-2. Each GC uses it's own independent USN series. GC-1 and GC-2 each have two entries in the up-to-dateness vector, which indicates that both GCs have been restored from a backup. This output provides enough data to derive the following information:
+This output is GC-1's up-to-dateness vector, which records both changes made on GC-1 and changes replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector, which indicates that both GCs have been restored from a backup. This output provides enough data to derive the following information:
 
 - GC-1 was restored from backup some time between 15:07:21 and 17:03:15. The changes that were recorded at 15:07:21 were the last changes to be recorded before the restoration.
 - When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that were made on GC-1 occurred at 17:03:15.
@@ -417,7 +419,7 @@ This table shows that each GC's view of the other is slightly out of date. GC-1 
 When the naming context you're investigating has abandoned objects, you might see the following discrepancies (in addition to the error messages that the Symptoms section describes).
 
 - The invocation ID (or DSA GUID) of the source GC never appears in the up-to-dateness vector. This result indicates that the source GC never successfully replicated this naming context to the destination GC.
-- The invocation ID (or DSA GUID) of the source GC exists in the up-to-dateness vector, but its timestamp of the most recent entry is not current. This result indicates that the source GC has stopped replicating or was removed from the replication topology.
+- The invocation ID (or DSA GUID) of the source GC exists in the up-to-dateness vector, but its timestamp of the most recent entry isn't current. This result indicates that the source GC stopped replicating or was removed from the replication topology.
 
 To help determine what caused the issue, you can retrieve up-to-dateness information from other DCs or GCs that use the affected GC as a replication source. For example, identifying which servers didn't information from the affected source GC and which did can help isolate a network infrastructure issue.
 
