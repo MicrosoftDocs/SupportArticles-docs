@@ -98,7 +98,7 @@ landingContent:
             url: general-ledger/blocked-deleting-dimension-value.md
           - text: Can't reverse a transaction
             url: general-ledger/cant-reverse-transactions.md
-          - text: Change the accounting or reporting currency 
+          - text: Change the accounting or reporting currency
             url: general-ledger/add-change-accounting-reporting-currency.md
           - text: Financial dimension missing or incorrectly shows as custom dimension in details page
             url: general-ledger/dimension-missing-details-page.md
