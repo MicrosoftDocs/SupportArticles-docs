@@ -12,9 +12,6 @@ This article presents several solutions to missing-MSI errors that occur when in
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 969052
 
-> [!NOTE]
-> The process that's described in this article provides emergency relief only and not a permanent fix. Customers who use this emergency process should validate their Windows Installer Cache using the Windows Installer Cache Verifier Package, as directed in the KB article [Missing Windows Installer cache requires a computer rebuild](https://support.microsoft.com/help/2667628).
-
 ## Symptoms
 
 When you install a SQL Server service pack or cumulative update, you may encounter various error messages or unexpected behaviors that indicate Windows Installer Cache problems. The Windows Installer Cache, located in the _c:\windows\installer_ folder, stores critical files for applications installed through the Windows Installer technology. If the installer cache has been compromised by deleting files, you may not immediately encounter problems until you uninstall, repair, or update SQL Server.
