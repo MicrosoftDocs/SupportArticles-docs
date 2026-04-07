@@ -181,7 +181,12 @@ Foreach($objectin$objects)
 
 ### Step 2: Address abandoned objects that were restored on the read-only replica, but are still tombstones on the writeable replicas
 
-#### Use the tombstones to reset the replication metadata for the objects across the replication topology
+You can use one or both of the following methods for this step, depending on the details of the abandoned objects. 
+
+- If you use method 1, it's likely that you don't need to use step 3. However, method 1 is feasible under limited circumstances and might not address all of the abandoned objects.
+- You can use method 2 in most cases, but you have to continue to step 3 to complete the removal process.
+
+#### Method 1: Use the tombstones to reset the replication metadata for the objects across the replication topology
 
 > [!IMPORTANT]  
 > This method isn't appropriate for all kinds of objects. For example, using this approach on a Domain Controller Computer object and a child Rid Set object would cause further issues.
@@ -194,7 +199,7 @@ You can use this method under the following conditions:
 
 In this scenario, you can connect to one of the writeable replicas, undelete the object, and then delete it again. The changes replicate to the other DCs and to the original GC or RODC, and the object's state becomes consistent through the forest. The up-to-dateness vectors also synchronize.
 
-#### Clear the tombstones from the replication topology
+#### Method 2: Clear the tombstones from the replication topology
 
 In many cases, the reference DC has tombstones (or objects in the Recycle Bin) for the abandoned objects that you want to remove, and the previous method to remove the abandoned objects isn't feasible. In such cases, it might not be practical to wait for the tombstones to expire naturally. For example, if you have Recycle Bin enabled, objects remain in the Recycle Bin for `msDS-deletedObjectLifetime` (180 days by default). At that point, they become recycled objects. Active Directory treats recycled objects as tombstones, so the objects remain in this state for `tombstoneLifetime` (180 days by default).
 
@@ -242,7 +247,7 @@ The distinguished name specified for this replication operation is invalid.
 
 ## More information
 
-This section provides detailed information that can help you diagnose how your forest generated abandoned objects.
+This section provides detailed background information that can help you diagnose how your forest generated abandoned objects.
 
 ### How abandoned objects and lingering objects occur
 
