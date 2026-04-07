@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure NAT Gateway
 titleSuffix: Azure NAT Gateway
-description: Get started using this article to learn how to troubleshoot issues and errors with Azure NAT Gateway.
+description: Troubleshoot Azure NAT Gateway configuration, deployment, and connectivity issues. Learn how to fix common errors and restore outbound internet access.
 services: virtual-network
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -18,7 +18,6 @@ ms.customs: references_regions
 ## Summary
 
 This article provides guidance on how to correctly configure your NAT gateway and troubleshoot common configuration and deployment related issues.  
-
 
 - [Add or remove NAT gateway](#add-or-remove-nat-gateway) 
 
@@ -62,7 +61,7 @@ StandardV2 NAT Gateway isn't available in the following Azure regions:
 - West Central US
 - West India
 
-### How to validate connectivity
+### Validate NAT gateway connectivity
 
 [NAT gateway](/azure/nat-gateway/nat-overview#azure-nat-gateway-basics) supports User Datagram Protocol (UDP) and Transmission Control Protocol (TCP) protocols. 
 
@@ -84,7 +83,7 @@ Refer to the following table for tools to use to validate NAT gateway connectivi
 | Linux | `nc` (generic connection test) | `curl` (TCP application layer test) | application specific |
 | Windows | [PsPing](/sysinternals/downloads/psping) | PowerShell [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest) | application specific |
 
-### How to analyze outbound connectivity
+### Analyze outbound connectivity with NAT gateway
 
 To analyze outbound traffic from Standard NAT gateway, use virtual network (VNet) flow logs. VNet flow logs provide connection information for your virtual machines. The connection information contains the source IP and port and the destination IP and port and the state of the connection. The traffic flow direction and the size of the traffic in number of packets and bytes sent is also logged. The source IP and port specified in the VNet flow log is for the virtual machine and not the NAT gateway.
 

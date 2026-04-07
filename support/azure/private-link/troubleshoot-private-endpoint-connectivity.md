@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Private Endpoint connectivity problems
-description: Step-by-step guidance to diagnose private endpoint connectivity
+description: Diagnose and fix Azure Private Endpoint connectivity problems with step-by-step guidance. Validate your setup and restore secure access today.
 ms.service: azure-private-link
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -29,7 +29,7 @@ Here are the connectivity scenarios that are available with Private Endpoint:
 
 - Customer on-premises over VPN or Azure ExpressRoute circuits
 
-## Diagnose connectivity problems 
+## Diagnose Azure Private Endpoint connectivity problems 
 
 Review these steps to make sure all the usual configurations are as expected to resolve connectivity problems with your private endpoint setup.
 

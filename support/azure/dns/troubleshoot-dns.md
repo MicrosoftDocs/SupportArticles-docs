@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure DNS
-description: In this learning path, get started troubleshooting common issues with Azure DNS
+description: Learn how to troubleshoot Azure DNS zone delegation, record creation, and name resolution issues so you can restore reliable DNS quickly-start now.
 services: dns
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -14,7 +14,7 @@ ms.date: 04/06/2026
 
 ## Summary
 
-This article provides troubleshooting information for common Azure DNS questions.
+This article helps DNS admins troubleshoot common Azure DNS issues with zones, records, and name resolution so they can restore reliable DNS service.
 
 ## I can't create a DNS zone
 

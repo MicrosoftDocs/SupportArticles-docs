@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot outbound connectivity with Azure services
 titleSuffix: Azure NAT Gateway
-description: Get started learning how to troubleshoot issues with Azure NAT Gateway and Azure resources and services.
+description: Troubleshoot outbound connectivity issues with Azure NAT Gateway and Azure services including AKS, App Services, and Azure Firewall. Resolve common NAT gateway problems now.
 services: virtual-network
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -77,7 +77,7 @@ To validate that web applications are using the NAT gateway public IP, ping a vi
 
 ## Azure Kubernetes Service
 
-### How to deploy NAT gateway with Azure Kubernetes Service (AKS) clusters 
+### Deploy NAT gateway with Azure Kubernetes Service (AKS) clusters 
 
 NAT gateway can be deployed with AKS clusters in order to allow for explicit outbound connectivity. There are two different ways to deploy NAT gateway with AKS clusters: 
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Traffic Manager degraded status
-description: How to troubleshoot Traffic Manager profiles when it shows as degraded status.
+description: Learn how to troubleshoot Azure Traffic Manager degraded status by enabling logging and resolving endpoint probe failures. Fix your profile today.
 services: traffic-manager
 ms.service: azure-traffic-manager
 author: JarrettRenshaw
@@ -16,15 +16,15 @@ ms.custom: sfi-image-nochange
 
 ## Summary
 
-This article describes how to troubleshoot an Azure Traffic Manager profile that is showing a degraded status. As a first step in troubleshooting an Azure Traffic Manager degraded status is to enable logging.  Refer to [Enable resource logs](/azure/traffic-manager/traffic-manager-diagnostic-logs) for more information. For this scenario, consider that you configure a Traffic Manager profile pointing to some of your cloudapp.net hosted services. If the health of your Traffic Manager displays a **Degraded** status, then the status of one or more endpoints may be **Degraded**:
+This article describes how to troubleshoot an Azure Traffic Manager degraded status. Learn how to enable logging, diagnose endpoint probe failures, and restore your Traffic Manager profile to a healthy state. As a first step in troubleshooting an Azure Traffic Manager degraded status is to enable logging.  Refer to [Enable resource logs](/azure/traffic-manager/traffic-manager-diagnostic-logs) for more information. For this scenario, consider that you configure a Traffic Manager profile pointing to some of your cloudapp.net hosted services. If the health of your Traffic Manager displays a **Degraded** status, then the status of one or more endpoints may be **Degraded**:
 
-:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png" alt-text="Screenshot of Traffic Manager degraded endpoint status." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png":::
+:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png" alt-text="Screenshot of Traffic Manager profile showing a Degraded status with one or more endpoints marked as Degraded in the Azure portal." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png":::
 
 If the health of your Traffic Manager displays an **Inactive** status, then both end points may be **Disabled**:
 
-:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png" alt-text="Screenshot of Traffic Manager inactive endpoint status." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png":::
+:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png" alt-text="Screenshot of Traffic Manager profile showing an Inactive status with both endpoints marked as Disabled in the Azure portal." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png":::
 
-## Understanding Traffic Manager probes
+## How Traffic Manager probes work
 
 * Traffic Manager considers an endpoint to be ONLINE only when the probe receives an HTTP 200 response back from the probe path. If your application returns any other HTTP response code you should add that response code to [Expected status code ranges](/azure/traffic-manager/traffic-manager-monitoring#configure-endpoint-monitoring) of your Traffic Manager profile.
 * A 30x redirect response is treated as failure unless you specify this as a valid response code in [Expected status code ranges](/azure/traffic-manager/traffic-manager-monitoring#configure-endpoint-monitoring) of your Traffic Manager profile. Traffic Manager doesn't probe the redirection target.
@@ -76,7 +76,7 @@ public class TrustAllCertsPolicy : ICertificatePolicy {
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
 ```
 
-## Next Steps
+## Next steps
 
 [About Traffic Manager traffic routing methods](/azure/traffic-manager/traffic-manager-routing-methods)
 

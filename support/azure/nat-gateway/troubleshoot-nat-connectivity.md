@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Azure NAT Gateway connectivity
+title: Troubleshoot Azure NAT Gateway connectivity problems
 titleSuffix: Azure NAT Gateway
-description: Learn how to troubleshoot connectivity issues and possible causes and solutions for Azure NAT Gateway.
+description: Troubleshoot Azure NAT Gateway connectivity problems, including SNAT port exhaustion, connection failures, and outbound connectivity errors. Find solutions now.
 services: virtual-network
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -9,15 +9,15 @@ manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-#Customer intent: For customers to troubleshoot and resolve common outbound connectivity issues with your NAT gateway. This article also provides best practices on how to design applications to use outbound connections efficiently.
-# Customer intent: As a network engineer, I want to troubleshoot connectivity issues with the NAT gateway, so that I can ensure reliable outbound connections for my applications and improve overall network performance.
+#Customer intent: For customers to troubleshoot and resolve common outbound connectivity problems with your NAT gateway. This article also provides best practices on how to design applications to use outbound connections efficiently.
+# Customer intent: As a network engineer, I want to troubleshoot connectivity problems with the NAT gateway, so that I can ensure reliable outbound connections for my applications and improve overall network performance.
 ---
 
-# Troubleshoot Azure NAT Gateway connectivity
+# Troubleshoot Azure NAT Gateway connectivity problems
 
 ## Summary
 
-This article provides guidance on how to troubleshoot and resolve common outbound connectivity issues with your NAT gateway. This article also provides best practices on how to design applications to use outbound connections efficiently.
+This article provides guidance on how to troubleshoot and resolve common outbound connectivity problems with your NAT gateway. This article also provides best practices on how to design applications to use outbound connections efficiently.
 
 ## Datapath availability drop on NAT gateway with connection failures
 
@@ -49,7 +49,7 @@ You observe a drop in the datapath availability of NAT gateway, which coincides 
   
 * Check NAT Gateway public IP and subnet configurations and if any public IPs or subnets have been removed from the NAT Gateway recently.
 
-### Possible solutions for SNAT port exhaustion or hitting simultaneous connection limits
+### Possible solutions for SNAT port exhaustion or simultaneous connection limits
 
 * Add public IP addresses to your NAT gateway up to a total of 16 to scale your outbound connectivity. Each public IP provides 64,512 SNAT ports and supports up to 50,000 simultaneous connections per unique destination endpoint for NAT gateway.
 
@@ -283,7 +283,7 @@ To prevent possible passive FTP connection failures, do the following steps:
 >Reducing the number of public IP addresses on your NAT gateway reduces the SNAT port inventory available for making outbound connections and may increase the risk of SNAT port exhaustion. Consider your SNAT connectivity needs before removing public IP addresses from NAT gateway.
 >It is not recommended to change the FTP server settings to accept control and data plane traffic from different source IP addresses.
 
-## Outbound connections on port 25 are blocked
+## Outbound SMTP connections on port 25 are blocked
 
 **Scenario**
 
@@ -297,7 +297,7 @@ The Azure platform blocks outbound SMTP connections on TCP port 25 for deployed 
 
 Use an authenticated SMTP relay service to send email from Azure VMs or from Azure App Service. For more information, see [troubleshoot outbound SMTP connectivity problems](/azure/virtual-network/troubleshoot-outbound-smtp-connectivity).
 
-## More troubleshooting guidance
+## More NAT gateway troubleshooting guidance
 
 ### Extra network captures
 
@@ -307,7 +307,7 @@ If your investigation is inconclusive, open a support case for further troublesh
 
 * If no response is received in these ping tests, run a simultaneous `netsh` trace on the backend virtual machine, and the virtual network test virtual machine while you run PsPing then stop the `netsh` trace.
 
-## Outbound connectivity best practices
+## Outbound connectivity best practices for NAT gateway
 
 Azure monitors and operates its infrastructure with great care. However, transient failures can still occur from deployed applications, and there's no guarantee of lossless transmissions. NAT gateway is the preferred option for establishing highly reliable and resilient outbound connectivity from Azure deployments. For optimizing application connection efficiency, refer to the guidance later in the article.
 

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure Private Link Service connectivity problems
-description: Step-by-step guidance to diagnose private link connectivity
+title: Troubleshoot Azure Private Link connectivity problems
+description: Diagnose and resolve Azure Private Link connectivity problems with this step-by-step troubleshooting guide. Follow these steps to fix your setup today.
 ms.service: azure-private-link
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -10,7 +10,7 @@ ms.date: 04/06/2026
 # Customer intent: "As a network administrator, I want to diagnose Azure Private Link connectivity issues, so that I can ensure secure, private access to services and troubleshoot any problems effectively."
 ---
 
-# Troubleshoot Azure Private Link Service connectivity problems
+# Troubleshoot Azure Private Link service connectivity problems
 
 ## Summary
 
@@ -30,7 +30,7 @@ Here are the connectivity scenarios that are available with Private Link:
 
 - Customer on-premises over VPN or Azure ExpressRoute circuits
 
-## Deployment troubleshooting
+## Deployment troubleshooting for Private Link service
 
 For more information on troubleshooting when you're unable to select the source IP address from the subnet of your choice for your private link service, see [Disabling network policies on the private link service](/azure/private-link/disable-private-link-service-network-policy).
 
