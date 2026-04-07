@@ -12,13 +12,17 @@ ms.custom: sap:Administration
 
 This article helps administrators resolve problems when trying to install [Microsoft Dynamics 365 Field Service](/dynamics365/field-service/overview) and see a message stating CDS instance isn't supported or can't find the Field Service app in the app list.
 
-## Symptom
+## Symptoms
 
-When you try to install the Dynamics 365 Field Service application in your environment, you see the following error message:
+When you try to install the Dynamics 365 Field Service application in your environment, you experience one or more of the following problems:
 
-> Installing Field Service on a CDS instance is not supported
+- The following error message appears:
 
-### Cause
+  > Installing Field Service on a CDS instance is not supported
+
+- You can't find Field Service in the app list.
+
+## Cause: CDS instance isn't supported
 
 You attempted to install Dynamics 365 Field Service on a bare Common Data Service (CDS) environment that doesn't have a Dataverse organization provisioned or doesn't have **Enable Dynamics 365 apps** turned on.
 
@@ -32,17 +36,11 @@ You attempted to install Dynamics 365 Field Service on a bare Common Data Servic
 
 1. If these settings aren't correct, [create a new environment with the correct configuration](/power-platform/admin/create-environment) and retry the installation.
 
-## Symptom
+## Cause: Can't find Field Service in the list of apps
 
-When you try to install the Dynamics 365 Field Service application in your environment, you can't find Field Service in the app list.
-
-### Cause
-
-One or more requirements aren't met.
+You can't find Field Service in the list of apps to install because one or more requirements aren't met.
 
 ### Solution
-
-Confirm the following requirements:
 
 - Verify you have a **System Administrator** or **Dynamics 365 admin** role.
 
