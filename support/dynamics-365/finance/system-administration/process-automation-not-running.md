@@ -1,6 +1,6 @@
 ---
 title: Restore process automation in Dynamics 365 Finance
-description: If process automation scheduled series or background processes are not running in Dynamics 365 Finance, follow this step-by-step guide to restore your system batch job and resume the affected operations.
+description: If process automation scheduled series or background processes aren't running in Dynamics 365 Finance, follow this step-by-step guide to restore your system batch job and resume the affected operations.
 ms.date: 04/03/2026
 audience: IT Pro
 ms.reviewer: setharvila, anaborges, twheeloc, v-shaywood
@@ -14,7 +14,7 @@ ms.dyn365.ops.version: AX 7.0.0
 
 ## Summary
 
-This article helps you resolve an issue in which [process automation](/dynamics365/fin-ops-core/fin-ops/sysadmin/process-automation) background processes or scheduled series don't run in Microsoft Dynamics 365 Finance. if the process automation system batch job is unhealthy, dependent batch operations such as subledger journal transfers, vendor invoice posting, ledger settlements, and data maintenance jobs might stall. By reinitializing process automation, you can restore the system batch job and resume the affected processes.
+This article helps you resolve an issue in which [process automation](/dynamics365/fin-ops-core/fin-ops/sysadmin/process-automation) background processes or scheduled series don't run in Microsoft Dynamics 365 Finance. If the process automation system batch job is unhealthy, dependent batch operations and data maintenance jobs might stall. Such operations include subledger journal transfers, vendor invoice posting, and ledger settlements. By reinitializing process automation, you can restore the system batch job and resume the affected processes.
 
 ## Symptoms
 
