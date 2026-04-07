@@ -114,24 +114,6 @@ landingContent:
             url: general-ledger/year-end-close-miss-opening-balances.md
 
   # Card
-  - title: Financial dimensions
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Blocked from deleting a dimension value
-            url: general-ledger/blocked-deleting-dimension-value.md
-          - text: Can't find a dimension value
-            url: general-ledger/cant-find-dimension-value.md
-          - text: Common dimension-related errors
-            url: general-ledger/common-dimension-related-errors.md
-          - text: Dimension missing from a details page
-            url: general-ledger/dimension-missing-details-page.md
-          - text: Financial dimension activation errors
-            url: general-ledger/dimension-activation-errors.md
-          - text: Source record not found for a financial dimension value
-            url: general-ledger/source-record-not-found.md
-
-  # Card
   - title: Tax
     linkLists:
       - linkListType: how-to-guide

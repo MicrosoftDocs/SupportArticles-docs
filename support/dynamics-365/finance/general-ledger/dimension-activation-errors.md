@@ -42,7 +42,7 @@ To resolve this issue, escape the deadlock, and then fix the underlying problem:
 1. Restore the previous names of the deleted or renamed dimensions so that activation can succeed. Then, exit maintenance mode.
 1. Remove the package that contains the hardcoded column references.
 1. Re-enter maintenance mode, and activate dimensions again.
-1. Create a replacement extension that uses name-based lookups instead of hardcoded dimension values. For the documented approach, see [Dimensions overview for developers](/dynamics365/fin-ops-core/dev-itpro/financial/dimensions-overview).
+1. Create a replacement extension that uses name-based lookups instead of hardcoded dimension values. For more information, see [Add dimensions to Excel templates](/dynamics365/fin-ops-core/dev-itpro/financial/dimensions-overview).
 
 For general information about how to enter and exit maintenance mode, see [Maintenance mode](/dynamics365/fin-ops-core/dev-itpro/sysadmin/maintenance-mode).
 
@@ -53,8 +53,6 @@ Activation fails and returns one of the following error messages:
 > Column name 'SYSTEMGENERATEDATTRIBUTE\<DimensionAttribute>' in table 'cdc.dbo_DIMENSIONATTRIBUTEVALUECOMBINATION_CT' is specified more than once.
 
 > Cannot drop the procedure 'cdc.sp_batchinsert_\<Number>' because it's being used for Change Data Capture
-
-:::image type="content" source="media/dimension-activation-errors/dimension-activation-cdc-error.png" alt-text="Screenshot of the CDC sp_batchinsert error during dimension activation.":::
 
 Change Data Capture (CDC) is enabled on the `DimensionAttributeValueCombination` or `DimensionAttributeValueSet` tables. This condition prevents the schema changes that dimension activation requires.
 
