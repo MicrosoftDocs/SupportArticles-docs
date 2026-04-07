@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 01/24/2024
+ms.date: 04/03/2026
 ms.custom: sap:Dataverse Web API and SDK\Odata endpoint errors
-ms.reviewer: jdaly
+ms.reviewer: jdaly, sagebree, sbadenkal, abelmilash, v-shaywood
 manager: kvivek
 search.audienceType: 
   - developer
@@ -16,7 +16,9 @@ contributors:
 ---
 # Troubleshoot Dataverse Web API client errors
 
-This article describes common client errors you might encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
+## Summary
+
+This article describes common client errors you might encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them. These errors include resource not found, invalid property names, incorrect HTTP methods, payload errors, and invalid `Prefer` header values. Each section provides the symptoms, cause, and guidance on how to avoid the error.
 
 ## Resource not found for the segment
 

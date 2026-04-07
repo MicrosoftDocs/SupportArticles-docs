@@ -8,7 +8,7 @@ ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 #Customer intent: As an Azure Kubernetes user, I want to learn how to create a troubleshooting workflow so that I can fix DNS resolution problems in Azure Kubernetes Service (AKS).
 ---
 # Troubleshoot DNS resolution problems in AKS

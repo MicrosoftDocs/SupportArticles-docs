@@ -7,7 +7,7 @@ editor: v-jsitser
 ms.reviewer: divargas, adelgadohell
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: linux-related-content

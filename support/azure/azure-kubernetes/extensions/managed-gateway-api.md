@@ -6,7 +6,7 @@ author: nshankar13
 ms.author: nshankar
 ms.reviewer: jkatariya
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the Managed Gateway API installation so that I can use the Kubernetes Gateway API successfully.
 ---

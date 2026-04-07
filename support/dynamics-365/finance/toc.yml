@@ -62,14 +62,20 @@
   items:
     - name: A custom Excel template for financial journals isn't available on the menu
       href: general-ledger/custom-excel-template-financial-journals-not-available.md
-    - name: Can't reverse a transaction
-      href: general-ledger/cant-reverse-transactions.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
+    - name: Can't reverse a transaction
+      href: general-ledger/cant-reverse-transactions.md
     - name: Financial dimensions
       items:
+        - name: Can't delete a financial dimension value
+          href: general-ledger/blocked-deleting-dimension-value.md
         - name: Common financial dimension-related errors
           href: general-ledger/common-dimension-related-errors.md
+        - name: Financial dimension missing or incorrectly shows as custom dimension in details page
+          href: general-ledger/dimension-missing-details-page.md
+        - name: Financial dimension value is missing or unavailable
+          href: general-ledger/cant-find-dimension-value.md
         - name: Unexpected financial dimension values on transactions
           href: general-ledger/incorrect-default-dimension-values.md
     - name: How to change the accounting or reporting currency
