@@ -117,6 +117,18 @@ landingContent:
             url: scheduling/schedule-board-not-loading.md
 
   # Card
+  - title: Work order
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Agreement booking setup doesn't create work orders
+            url: work-order/agreement-work-orders-not-generated.md
+          - text: Work order doesn't save or create successfully
+            url: work-order/work-order-creation-errors.md
+          - text: Work order status doesn't change as expected
+            url: work-order/work-order-status-stuck.md
+
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
