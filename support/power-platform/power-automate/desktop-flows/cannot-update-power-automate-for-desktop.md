@@ -25,11 +25,11 @@ To verify the problem, check if you have an active internet connection and go to
 
 ## Cause
 
-This problem occurs because the **Windows Update** service isn't running or is disabled.
+This problem typically occurs when the **Windows Update** service isn't running or is disabled.
 
 ## Solution
 
-To resolve this problem, try one of the following solutions:
+To resolve this problem, first check that you have an active internet connection, then try one of the following solutions:
 
 ### Enable the Windows Update service
 
