@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs
-description: Learn how to troubleshoot stop error "0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)" that causes Azure Windows virtual machines (VMs) to fail because of an outdated Mellanox mlx5 driver.
+description: Learn how to troubleshoot stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)" that causes Azure Windows virtual machines (VMs) to fail because of an outdated Mellanox mlx5 driver.
 ms.service: azure-virtual-machines
 ms.date: 03/26/2026
 ms.custom: sap:My VM is not booting
@@ -12,7 +12,7 @@ ms.reviewer: jdickson, scotro, azurevmcptcic
 
 ## Summary
 
-This article helps you troubleshoot failures that occur on Azure Windows Virtual Machines (VMs) because of an outdated NVIDIA Mellanox mlx5 network adapter driver. The failures typically generate a blue screen and an error message window. The window displays stop error "0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)" and references the `mlx5.sys` driver module.
+This article helps you troubleshoot failures that occur on Azure Windows Virtual Machines (VMs) because of an outdated NVIDIA Mellanox mlx5 network adapter driver. The failures typically generate a blue screen and an error message window. The window displays stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)" and references the `mlx5.sys` driver module.
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ This problem typically occurs because of an outdated Mellanox mlx5 network adapt
 
 The `mlx5.sys` driver is used on VM SKUs that include the Accelerated Networking fature. This feature relies on Mellanox ConnectX adapters.
 
-If the installed driver version is no longer compatible with the host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this error usually appears as stop error "0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)."
+If the installed driver version is no longer compatible with the host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this error usually appears as stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)."
 
 > [!NOTE]
 > This problem isn't caused by the Azure platform or host hardware failure. The problem occurs because of a guest OS driver compatibility issue. The resolution requires a driver update in the VM.
