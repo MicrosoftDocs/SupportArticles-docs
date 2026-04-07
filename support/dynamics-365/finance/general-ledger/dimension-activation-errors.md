@@ -23,7 +23,10 @@ When you create a dimension or rename an existing one, you receive one of the fo
 
 > The financial dimension name \<DimensionName> exists as a translated name on financial dimension \<ExistingDimensionName>.
 
-This error occurs because the name already exists as a column in the dimension tables from a previous dimension. That dimension is one that you deleted or renamed but didn't yet activate. The system blocks reuse until you activate those pending changes.
+This error occurs for one of the following reasons:
+
+- Another active financial dimension attribute has the same name. You must either choose a different name for the new dimension or rename the existing dimension attribute that conflicts.
+- A dimension was previously deleted or renamed, but the change wasn't yet activated. The old name still exists as a column in the dimension tables, and the system blocks reuse until you activate the pending changes.
 
 #### Solution
 

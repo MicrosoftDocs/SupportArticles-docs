@@ -26,26 +26,6 @@ When you work with financial dimensions, you receive one of the following error 
 
 These errors can occur during operations such as transferring lines to a journal, posting transactions, or any process that assigns financial dimension values.
 
-## A customization or integration references a record that doesn't exist
-
-A customization or integration tries to assign a financial dimension value by using a record that doesn't exist in the system or that exists in a different legal entity than expected. Or, the customization or integration references the wrong record type.
-
-This problem can occur in any of several scenarios:
-
-- **The record doesn't exist.** The process tries to use a value (such as a vendor or customer account number) as a dimension. However, the value either wasn't created in the corresponding master data table or it was deleted.
-- **The record exists in a different legal entity.** The process looks for the record in one company, but the record exists only in a different company. For example, a vendor account exists in company 001, but the system searches in company 002.
-- **The wrong record type is used.** The process looks up a value from one record type (such as a vendor), but tries to use it as a different dimension type (such as a customer dimension).
-- **The record was deleted during an in-progress operation.** In rare cases, a record might be deleted while another part of the same operation tries to use it as a dimension value.
-
-### Solution
-
-Investigate the customization or integration that triggers the error:
-
-1. Review any recent customizations, integrations, or extensions that interact with financial dimensions in the area where the error occurs.
-1. Verify that the master data record that's referenced in the error message (the value and table) exists in the correct legal entity.
-1. If a customization is the cause, work with your development team to correct it. For guidance, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
-1. If no customization is involved, open a support request, and include the full error message details.
-
 ## The current legal entity doesn't contain the record
 
 The source record exists but belongs to a different legal entity (company) than the one where the process runs. Company-specific dimension values are visible only within their associated legal entity.
@@ -89,6 +69,26 @@ In version 10.0.42 and later versions, the error message might indicate that a p
 1. Select the key field (such as the account number), temporarily change the contents to a different value, and then save. Revert the contents to the intended value, and then save again. This process removes any hidden characters. For guidance to rename dimension values, see [Renaming financial dimensions](/dynamics365/finance/general-ledger/financial-dimensions#renaming-financial-dimensions).
 1. After you correct the value, retry the operation that produced the error.
 1. If your data comes from an external integration, review the integration to make sure that it validates and cleans data before it imports the data into Dynamics 365 Finance.
+
+## A customization or integration references a record that doesn't exist
+
+A customization or integration tries to assign a financial dimension value by using a record that doesn't exist in the system or that exists in a different legal entity than expected. Or, the customization or integration references the wrong record type.
+
+This problem can occur in any of several scenarios:
+
+- **The record doesn't exist.** The process tries to use a value (such as a vendor or customer account number) as a dimension. However, the value either wasn't created in the corresponding master data table or it was deleted.
+- **The record exists in a different legal entity.** The process looks for the record in one company, but the record exists only in a different company. For example, a vendor account exists in company 001, but the system searches in company 002.
+- **The wrong record type is used.** The process looks up a value from one record type (such as a vendor), but tries to use it as a different dimension type (such as a customer dimension).
+- **The record was deleted during an in-progress operation.** In rare cases, a record might be deleted while another part of the same operation tries to use it as a dimension value.
+
+### Solution
+
+Investigate the customization or integration that triggers the error:
+
+1. Review any recent customizations, integrations, or extensions that interact with financial dimensions in the area where the error occurs.
+1. Verify that the master data record that's referenced in the error message (the value and table) exists in the correct legal entity.
+1. If a customization is the cause, work with your development team to correct it. For guidance, see [Best practices for financial dimension customizations](/dynamics365/fin-ops-core/dev-itpro/financial/financial-dimension-customization-errors).
+1. If no customization is involved, open a support request, and include the full error message details.
 
 ## Related content
 
