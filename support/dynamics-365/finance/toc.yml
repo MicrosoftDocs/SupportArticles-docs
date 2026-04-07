@@ -74,12 +74,16 @@
       href: general-ledger/incorrect-default-dimension-values.md
     - name: Financial dimension activation errors
       href: general-ledger/dimension-activation-errors.md
+    - name: Financial dimension errors after restoring a database to another environment
+      href: general-ledger/dimensions-errors-after-database-restore.md
     - name: Financial dimension missing or incorrectly shows as custom dimension in details page
       href: general-ledger/dimension-missing-details-page.md
     - name: Financial dimension value is missing or unavailable
       href: general-ledger/cant-find-dimension-value.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
+    - name: Source entity isn't available in the "Use values from" list
+      href: general-ledger/dimensions-missing-use-values-from-source.md
     - name: Source record not found for a financial dimension value
       href: general-ledger/source-record-not-found.md
     - name: '"The account type for main account <AccountName> is not valid" error'
