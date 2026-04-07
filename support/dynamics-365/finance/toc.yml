@@ -70,12 +70,18 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Common financial dimension-related errors
       href: general-ledger/common-dimension-related-errors.md
+    - name: Default financial dimension values are incorrect
+      href: general-ledger/incorrect-default-dimension-values.md
+    - name: Financial dimension errors after restoring a database to another environment
+      href: general-ledger/dimensions-errors-after-database-restore.md
     - name: Financial dimension missing or incorrectly shows as custom dimension in details page
       href: general-ledger/dimension-missing-details-page.md
     - name: Financial dimension value is missing or unavailable
       href: general-ledger/cant-find-dimension-value.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
+    - name: Source entity isn't available in the "Use values from" list
+      href: general-ledger/dimensions-missing-use-values-from-source.md
     - name: '"The account type for main account <AccountName> is not valid" error'
       href: general-ledger/troubleshoot-posting-errors.md
     - name: Troubleshoot issues with the General ledger adjustments page
