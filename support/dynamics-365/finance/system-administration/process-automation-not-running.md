@@ -1,6 +1,6 @@
 ---
-title: Restore Process Automation in Dynamics 365 Finance
-description: Process automation scheduled series or background processes not running in Dynamics 365 Finance? Follow this step-by-step guide to restore your system batch job and resume affected operations.
+title: Restore process automation in Dynamics 365 Finance
+description: If process automation scheduled series or background processes are not running in Dynamics 365 Finance, follow this step-by-step guide to restore your system batch job and resume the affected operations.
 ms.date: 04/03/2026
 audience: IT Pro
 ms.reviewer: setharvila, anaborges, twheeloc, v-shaywood
@@ -14,7 +14,7 @@ ms.dyn365.ops.version: AX 7.0.0
 
 ## Summary
 
-This article helps you resolve an issue where [process automation](/dynamics365/fin-ops-core/fin-ops/sysadmin/process-automation) background processes or scheduled series don't run in Microsoft Dynamics 365 Finance. When the process automation system batch job is unhealthy, dependent batch operations like subledger journal transfers, vendor invoice posting, ledger settlements, and data maintenance jobs stall. Reinitializing process automation restores the system batch job and resumes affected processes.
+This article helps you resolve an issue in which [process automation](/dynamics365/fin-ops-core/fin-ops/sysadmin/process-automation) background processes or scheduled series don't run in Microsoft Dynamics 365 Finance. if the process automation system batch job is unhealthy, dependent batch operations such as subledger journal transfers, vendor invoice posting, ledger settlements, and data maintenance jobs might stall. By reinitializing process automation, you can restore the system batch job and resume the affected processes.
 
 ## Symptoms
 
@@ -33,36 +33,36 @@ Typical symptoms include:
 
 ## Cause
 
-The underlying process automation system batch job might be unhealthy or not running. This job schedules and triggers all process automation tasks. It must:
+The underlying process automation system batch job might be unhealthy or not running. This job schedules and triggers all process automation tasks. To perform as expected, this job must:
 
-- Run continuously without an end date.
-- Run every minute.
-- Never be manually changed or deleted.
+- Run continuously without an end date
+- Run every minute
+- Never be manually changed or deleted
 
 If this job stops, pauses, or becomes corrupted, all dependent automation processes stall.
 
 ## Solution
 
-Follow these steps to restore the process automation system batch job to a healthy state.
+To restore the process automation system batch job to a healthy state, follow these steps.
 
 ### Reinitialize process automation
 
 1. Go to **System administration** > **Setup** > **Process automations**.
-1. Select **Initialize process automation**. This resets the framework-level system job.
+1. Select **Initialize process automation**. This step resets the framework-level system job.
 
 ### Check system batch job status
 
 1. Go to **System administration** > **Inquiries** > **Batch jobs**.
-1. Find the batch job with a description that starts with one of the following values:
+1. Find the batch job that has a description that starts by using one of the following values:
     - **Process automation polling system job**
     - **Process automation background process system job**
-1. Check that the batch job meets these conditions:
+1. Verify that the batch job meets these conditions:
    - Status: **Waiting** or **Executing**
    - Recurrence: Every minute
    - End date: None
 1. If the batch job isn't listed or doesn't resume after reinitialization:
-    1. Check system logs for errors.
-    1. If necessary, restart the Batch service on the Application Object Server (AOS) node.
+    1. Check the system logs for errors.
+    1. If it's necessary, restart the Batch service on the Application Object Server (AOS) node.
 
 ### Validate dependent processes
 
@@ -72,11 +72,11 @@ Wait a few minutes, and then check for the following conditions:
 - Affected batch operations (for example, subledger transfers and invoice postings) resume processing.
 
 > [!NOTE]
-> If the issue persists, check that the batch framework is working correctly by confirming that other batch jobs are processing normally.
+> If the issue persists, check whether the batch framework is working correctly. To make this check, verify that other batch jobs are processing normally.
 
 ## Additional recommendations
 
-- Enable alerts or notifications for critical background jobs so you're informed if a job fails or stops running.
+- Enable alerts or notifications for critical background jobs. This setting keeps you informed if a job fails or stops running.
 - Regularly review batch job status in **System administration** > **Inquiries** > **Batch jobs**, especially after you apply updates or deploy new versions.
 
 ## Related content
