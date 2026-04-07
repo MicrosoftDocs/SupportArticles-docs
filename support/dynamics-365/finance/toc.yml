@@ -78,6 +78,8 @@
       href: general-ledger/add-change-accounting-reporting-currency.md
     - name: '"The account type for main account <AccountName> is not valid" error'
       href: general-ledger/troubleshoot-posting-errors.md
+    - name: Default financial dimension values are incorrect
+      href: general-ledger/incorrect-default-dimension-values.md
     - name: Troubleshoot issues with the General ledger adjustments page
       href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Vouchers aren't reversed when posting a journal with reversing entry and date
