@@ -226,12 +226,12 @@ This error message appears if one or more financial dimension values conflict wi
 
 ### Review the account structure constraints
 
-Account structure constraints or rules might explicitly disallow the specified dimension value for the combination that you entered.
+Account structure constraints or rules might explicitly prohibit the specified dimension value for the combination that you entered.
 
 1. Go to **General ledger** \> **Chart of accounts** \> **Structures** \> **Configure account structures**.
 1. Select the account structure that's referenced in the error message, and then select **Edit**.
 1. Review the allowed values for each segment. Confirm that the dimension value from the error message falls within the allowed ranges or criteria.
-1. If the account structure uses a criteria expression, verify that it uses **semicolons** as delimiters, not commas. Commas in criteria expressions can cause values to be excluded unexpectedly.
+1. If the account structure uses a criteria expression, verify that it uses **semicolons** to separate multiple dimension values rather than commas. Commas in criteria expressions can cause values to be excluded unexpectedly.
 1. If the account structure is in **Draft** status, the latest changes aren't in effect. Select **Activate** on the Action Pane to apply the changes.
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
