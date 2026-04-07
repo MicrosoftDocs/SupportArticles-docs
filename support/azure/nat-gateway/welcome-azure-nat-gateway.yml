@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: Azure NAT Gateway troubleshooting documentation
-summary: Welcome to Azure NAT Gateway troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure NAT Gateway. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+summary: Welcome to Azure NAT Gateway troubleshooting. These articles explain how to determine, diagnose, and fix various problems that you might encounter when you use Azure NAT Gateway. In the navigation pane on the left, browse through the article list or use the search box to find problems and solutions.
 
 metadata:
-  title: Troubleshoot common issues with Azure NAT Gateway
-  description: Documentation for troubleshooting common issues with Azure NAT Gateway. # Required; article description that is displayed in search results. < 160 chars.
+  title: Troubleshoot common problems with Azure NAT Gateway
+  description: Documentation for troubleshooting common problems with Azure NAT Gateway. # Required; article description that is displayed in search results. < 160 chars.
   services: azure
   ms.service: azure-nat-gateway 
   ms.topic: landing-page # Required

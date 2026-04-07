@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: Azure Bastion troubleshooting documentation
-summary: Welcome to Azure Bastion troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Bastion. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+summary: Welcome to Azure Bastion troubleshooting. These articles explain how to determine, diagnose, and fix various problems that you might encounter when you use Azure Bastion. In the navigation pane on the left, browse through the article list or use the search box to find problems and solutions.
 
 metadata:
-  title: Troubleshoot common issues with Azure Bastion
-  description: Documentation for troubleshooting common issues with Azure Bastion. # Required; article description that is displayed in search results. < 160 chars.
+  title: Troubleshoot common problems with Azure Bastion
+  description: Documentation for troubleshooting common problems with Azure Bastion. # Required; article description that is displayed in search results. < 160 chars.
   services: azure
   ms.service: azure-bastion
   ms.topic: landing-page # Required
@@ -22,5 +22,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Azure Bastion problems
+          - text: Troubleshoot Azure Bastion
             url: troubleshoot-bastion.md

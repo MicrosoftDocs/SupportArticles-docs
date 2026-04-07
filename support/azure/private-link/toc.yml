@@ -1,5 +1,5 @@
 items:
-- name: Azure troubleshooting documentation
+- name: Azure Private Linktroubleshooting documentation
   href: welcome-azure-private-link.yml
   items:
   - name: Troubleshoot Azure Private Endpoint connectivity problems
