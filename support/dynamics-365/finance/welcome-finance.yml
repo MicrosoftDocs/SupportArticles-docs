@@ -98,8 +98,10 @@ landingContent:
             url: general-ledger/blocked-deleting-dimension-value.md
           - text: Can't reverse a transaction
             url: general-ledger/cant-reverse-transactions.md
-          - text: Change the accounting or reporting currency 
+          - text: Change the accounting or reporting currency
             url: general-ledger/add-change-accounting-reporting-currency.md
+          - text: Common financial dimension-related errors
+            url: general-ledger/common-dimension-related-errors.md
           - text: Financial dimension missing or incorrectly shows as custom dimension in details page
             url: general-ledger/dimension-missing-details-page.md
           - text: Financial dimension value is missing or unavailable
@@ -108,26 +110,10 @@ landingContent:
             url: general-ledger/posting-fail-imbalance.md
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
-          - text: Vouchers aren't reversed when posting a journal with reversing entry and date 
-            url: general-ledger/vouchers-not-reversed-posting-journal.md
-          - text: Year-end close missing opening balances
-            url: general-ledger/year-end-close-miss-opening-balances.md
-
-  # Card
-  - title: Financial dimensions
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Blocked from deleting a dimension value
-            url: general-ledger/blocked-deleting-dimension-value.md
-          - text: Can't find a dimension value
-            url: general-ledger/cant-find-dimension-value.md
-          - text: Common dimension-related errors
-            url: general-ledger/common-dimension-related-errors.md
-          - text: Dimension missing from a details page
-            url: general-ledger/dimension-missing-details-page.md
           - text: Unexpected financial dimension values on transactions
             url: general-ledger/incorrect-default-dimension-values.md
+          - text: Year-end close missing opening balances
+            url: general-ledger/year-end-close-miss-opening-balances.md
 
   # Card
   - title: Tax
