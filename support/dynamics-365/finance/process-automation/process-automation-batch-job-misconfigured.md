@@ -31,6 +31,7 @@ Follow these steps to verify and correct the batch job configuration.
 
 1. Go to **System administration** > **Inquiries** > **Batch jobs**.
 1. Filter the **Job description** field by using the phrase "process automation" to find the system job.
+1. Select the batch job, and then select **View tasks** on the Action Pane. Confirm that the batch job contains a task that uses the **ProcessAutomationPollingEngine** class. This class identifies the correct system batch job that drives process automation scheduling. Other batch jobs might have similar names but serve different purposes.
 1. Verify the following settings:
 
    - **Recurrence** is set to **1 minute**.
