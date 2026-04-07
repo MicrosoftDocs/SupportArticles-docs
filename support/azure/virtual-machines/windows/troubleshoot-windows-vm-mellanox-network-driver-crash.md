@@ -29,7 +29,7 @@ A Windows Azure VM fails and restarts unexpectedly or becomes unstable. When thi
 
 This problem typically occurs because of an outdated Mellanox mlx5 network adapter driver in the guest VM.
 
-The `mlx5.sys` driver is used on VM SKUs that include the Accelerated Networking fature. This feature relies on Mellanox ConnectX adapters.
+The `mlx5.sys` driver is used on VM SKUs that include the Accelerated Networking feature. This feature relies on Mellanox ConnectX adapters.
 
 If the installed driver version is no longer compatible with the host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this error usually appears as stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)."
 
@@ -141,7 +141,7 @@ After you update the driver and restart the VM, run the validation script again.
 Verify that:
 
 - The driver version is updated.
-- No new 0x000000D1 bugcheck events occur after the restart.
+- No new 0x000000D1 stop error events occur after the restart.
 
 ## Additional resources
 
