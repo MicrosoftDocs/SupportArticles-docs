@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Bastion
+title: Troubleshoot Azure Bastion problems
 description: Use Azure Bastion troubleshooting guidance to quickly diagnose and resolve connectivity, authentication, and configuration issues—start fixing problems now.
 services: bastion
 author: JarrettRenshaw
@@ -11,17 +11,17 @@ ms.date: 04/06/2026
 # Customer intent: As a network administrator, I want to troubleshoot connectivity issues in Azure Bastion so that I can ensure seamless access to my virtual machines and efficiently manage network security settings.
 ---
 
-# Troubleshoot Azure Bastion
+# Troubleshoot Azure Bastion problems
 
 ## Summary
 
-This article helps you diagnose and resolve common issues with [Azure Bastion](/azure/bastion/bastion-overview).
+This article helps you diagnose and resolve common problems with [Azure Bastion](/azure/bastion/bastion-overview).
 
 Review these common problems and solutions before you contact support. We update this information regularly as new solutions become available.
 
-## Deployment and configuration issues
+## Deployment and configuration problems
 
-This section describes common deployment and configuration issues and their resolutions.
+This section describes common deployment and configuration problems and their resolutions.
 
 |Issue  |Description  |Resolution  |
 |---------|---------|---------|
