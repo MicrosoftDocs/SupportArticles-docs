@@ -66,16 +66,18 @@
       href: general-ledger/cant-reverse-transactions.md
     - name: Can't post a journal due to imbalance
       href: general-ledger/posting-fail-imbalance.md
-    - name: Common financial dimension-related errors
-      href: general-ledger/common-dimension-related-errors.md
+    - name: Financial dimensions
+      items:
+        - name: Common financial dimension-related errors
+          href: general-ledger/common-dimension-related-errors.md
+        - name: Unexpected financial dimension values on transactions
+          href: general-ledger/incorrect-default-dimension-values.md
     - name: How to change the accounting or reporting currency
       href: general-ledger/add-change-accounting-reporting-currency.md
     - name: '"The account type for main account <AccountName> is not valid" error'
       href: general-ledger/troubleshoot-posting-errors.md
     - name: Troubleshoot issues with the General ledger adjustments page
       href: general-ledger/ledger-adjustments-troubleshoot.md
-    - name: Unexpected financial dimension values on transactions
-      href: general-ledger/incorrect-default-dimension-values.md
     - name: Vouchers aren't reversed when posting a journal with reversing entry and date
       href: general-ledger/vouchers-not-reversed-posting-journal.md
     - name: Year-end close missing opening balances
