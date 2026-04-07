@@ -18,11 +18,11 @@ ms.custom: sfi-image-nochange
 
 This article describes how to troubleshoot an Azure Traffic Manager profile that is showing a degraded status. As a first step in troubleshooting an Azure Traffic Manager degraded status is to enable logging.  Refer to [Enable resource logs](/azure/traffic-manager/traffic-manager-diagnostic-logs) for more information. For this scenario, consider that you configure a Traffic Manager profile pointing to some of your cloudapp.net hosted services. If the health of your Traffic Manager displays a **Degraded** status, then the status of one or more endpoints may be **Degraded**:
 
-![degraded endpoint status](./media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png)
+:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png" alt-text="Screenshot of Traffic Manager degraded endpoint status." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-degradedifonedegraded.png":::
 
 If the health of your Traffic Manager displays an **Inactive** status, then both end points may be **Disabled**:
 
-![Inactive Traffic Manager status](./media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png)
+:::image type="content" source="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png" alt-text="Screenshot of Traffic Manager inactive endpoint status." lightbox="media/traffic-manager-troubleshooting-degraded/traffic-manager-inactive.png":::
 
 ## Understanding Traffic Manager probes
 
