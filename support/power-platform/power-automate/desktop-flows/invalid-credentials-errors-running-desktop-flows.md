@@ -41,20 +41,20 @@ The error messages occur because the credentials in the connection can't authent
 
 When you create a connection, Power Automate checks to ensure the credentials are valid. If the credentials don't authenticate on the target machine, the connection can't be made, and you receive an error describing the problem.
 
-If you successfully created your connection earlier but now encounter an error when running your flow, it indicates that something has changed in your user account or machine. For example, your password might have expired.
+If you successfully created your connection earlier but now encounter an error when running your flow, it indicates that something has changed or is configured incorrectly in your user account or machine.
+
+Common reasons why a user account is configured incorrectly:
+
+- The administrator changed the account credentials.
+- The domain user account wasn't propagated to the machine.
+- The user account lost privileges or was disabled.
+- The user account password expired.
 
 Other reasons that might prevent you from signing in to the target machine (besides using an incorrect username or password):
 
 - PINs aren't supported. Make sure you use a password instead of a [Windows Hello](/windows/security/identity-protection/hello-for-business/) PIN.
 - The machine can't connect to its domain or Microsoft Entra ID (formerly Azure Active Directory) because it isn't properly joined. To solve this issue, see [Desktop flow invalid credentials error when you use a Microsoft Entra account](troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md).
 - The machine can't call the authentication endpoint due to a network issue. Make sure to check your network connection.
-
-Common reasons why the user account is configured incorrectly:
-
-- The administrator changed the account credentials.
-- The domain user account wasn't propagated to the machine.
-- The user account lost privileges or was disabled.
-- The user account password expired.
 
 ## Troubleshooting steps
 
