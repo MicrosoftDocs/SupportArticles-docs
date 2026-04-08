@@ -87,6 +87,7 @@ There are three options to resove the issue:
 Use one of the following guides to resolve the issue:
 
 [Azurei-CLI](https://go.microsoft.com/fwlink/?linkid=2110637)
+<br>
 [PowerShell](https://go.microsoft.com/fwlink/?linkid=862451)
 
 
