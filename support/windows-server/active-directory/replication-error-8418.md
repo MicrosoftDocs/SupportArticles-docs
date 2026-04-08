@@ -142,11 +142,9 @@ In order to resolve an issue where schema mismatch is cited, it is critical to u
 - Normal replication
 - nTSecurityDescriptor size
 
-### Data: Recent schema update
 
-As stated previously, in the case of a recent schema update it is common for some DC's to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
 
-Initial Data Collection  
+### Initial Data Collection  
 
 The aim of the initial data collection is to try to capture information sufficient to identify if a known issue is being experienced or if other issues are contributing to the failure.
 
@@ -154,9 +152,15 @@ Collecting replication data for all DC's in the forest is advised particularly i
 
 `Repadmin showrepl * /csv > allrepl.csv`
 
-Once all the DC's experiencing replication failures, of ANY form, have been identified from the `repadmin /showrepl` data focus can move to specific DC's.
+Once all the DCs experiencing replication failures, of ANY form, have been identified from the `repadmin /showrepl` data focus can move to specific DCs.
+
+### Data: Recent schema update
+
+As stated previously, in the case of a recent schema update it is common for some DCs to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period. 
 
 ### Data: Promoting a DC
+
+Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
 
 In the case where DCpromo fails with a schema mismatch the following data should be collected:
 
