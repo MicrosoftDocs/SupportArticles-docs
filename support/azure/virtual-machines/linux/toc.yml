@@ -367,7 +367,7 @@ items:
   - name: Azure Virtual Machine repair
     href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
   - name: Azure Linux Auto Repair
-    href: repair-linux-vm-using-ALAR.md
+    href: repair-linux-vm-using-alar.md
   - name: Troubleshoot chroot environment for Linux rescue VM
     href: chroot-environment-linux.md
   - name: Redeploy Linux virtual machine to new Azure node
