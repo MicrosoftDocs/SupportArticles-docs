@@ -6,7 +6,7 @@ ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, tw
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
 ---
 
-# Financial dimension value is missing when entering transactions, journals, or account structures
+# Financial dimension value is missing or unavailable
 
 ## Summary
 
