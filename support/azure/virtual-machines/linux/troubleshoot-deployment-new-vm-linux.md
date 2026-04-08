@@ -84,11 +84,11 @@ There are three options to resove the issue:
 <li> Deploy a machine from the portal, accept the terms and conditions during the deployment process</li>
 </ul>
 
-A particular command to resolve this issue, using the AzureCLI would be:
-```bash
-az vm image terms accept --urn  publisher:offer:sku:version
-```
-
+Use one of the following guides to resolve the issue:
+<ul>
+<li> [Azure CLI](https://go.microsoft.com/fwlink/?linkid=2110637) </li>
+<li> [Azure PowerShell](https://go.microsoft.com/fwlink/?linkid=862451)</li>
+</ul>
 
 ## Why provisioning failures occur
 
