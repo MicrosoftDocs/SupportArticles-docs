@@ -85,10 +85,10 @@ There are three options to resove the issue:
 </ul>
 
 Use one of the following guides to resolve the issue:
-<ul>
-<li> [Azurei-CLI](https://go.microsoft.com/fwlink/?linkid=2110637) </li>
-<li> [PowerShell](https://go.microsoft.com/fwlink/?linkid=862451) </li>
-</ul>
+
+[Azurei-CLI](https://go.microsoft.com/fwlink/?linkid=2110637)
+[PowerShell](https://go.microsoft.com/fwlink/?linkid=862451)
+
 
 ## Why provisioning failures occur
 
