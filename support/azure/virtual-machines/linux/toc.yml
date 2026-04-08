@@ -245,7 +245,7 @@ items:
   - name: Top error scenarios
     items:
     - name: Resource is not in a Succeeded state
-      href: ../windows/move-resources-not-in-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+      href: ../windows/move-resources-not-succeeded-state.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Resource type not supported for move
       href: ../windows/move-resources-resource-type-not-supported.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Move not supported - resource has plan for different subscription

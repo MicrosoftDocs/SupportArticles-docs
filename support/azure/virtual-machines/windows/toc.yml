@@ -608,7 +608,7 @@ items:
   - name: Top error scenarios
     items:
     - name: Resource is not in a Succeeded state
-      href: move-resources-not-in-succeeded-state.md
+      href: move-resources-not-succeeded-state.md
     - name: Resource type not supported for move
       href: move-resources-resource-type-not-supported.md
     - name: Move not supported - resource has plan for different subscription

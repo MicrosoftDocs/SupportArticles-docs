@@ -105,4 +105,4 @@ See [Move operation support for resources](/azure/azure-resource-manager/managem
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Move virtual machines move limitations](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations)
 - [Move resources - 800 resource limit](move-resources-800-limit.md)
-- [Resource is not in a Succeeded state](move-resources-not-in-succeeded-state.md)
+- [Resource is not in a Succeeded state](move-resources-not-succeeded-state.md)

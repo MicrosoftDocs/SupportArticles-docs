@@ -103,7 +103,7 @@ Before initiating a move, verify the following:
 
 | Error code | Article |
 |---|---|
-| `MoveCannotProceedWithResourcesNotInSucceededState` | [Resource is not in a Succeeded state](move-resources-not-in-succeeded-state.md) |
+| `MoveCannotProceedWithResourcesNotInSucceededState` | [Resource is not in a Succeeded state](move-resources-not-succeeded-state.md) |
 | `MissingMoveDependentResources` | [Move fails with MissingMoveDependentResources](move-resources-missing-dependencies.md) |
 | `ResourceMoveTimedOut` | [Move operation times out after four hours](move-resources-4-hour-timeout.md) |
 | `MoveResourcesHaveInvalidState` | [Move fails due to invalid or deleted storage account](move-resources-invalid-storage-account.md) |
