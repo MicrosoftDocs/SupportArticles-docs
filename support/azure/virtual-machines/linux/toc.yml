@@ -256,8 +256,6 @@ items:
       href: ../windows/move-resources-800-limit.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Cannot move more than 100 resources via portal
       href: ../windows/move-resources-100-limit-portal.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
-    - name: Moving VM to another resource group fails - resource not found
-      href: ../windows/move-vm-resource-not-found.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Backup error during resource move
       href: ../windows/move-resources-backup-error.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Operation not allowed - system upgrade in progress
