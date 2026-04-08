@@ -20,7 +20,13 @@ ms.custom: sap:Cannot create a VM
 
 ### What can I move using the Azure resource move operation?
 
-You can move virtual machines and their associated resources (managed disks, NICs, public IPs, NSGs, virtual networks) between resource groups within the same subscription, or between subscriptions within the same Azure AD tenant.
+You can move virtual machines and their associated resources between resource groups within the same subscription, or between subscriptions within the same Azure AD tenant. Associated resources include:
+
+- Managed disks
+- Network interface cards (NICs)
+- Public IP addresses
+- Network security groups (NSGs)
+- Virtual networks
 
 For a definitive list of which resource types support move, see [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources).
 
@@ -39,7 +45,7 @@ If any dependent resource is missing, the move fails with `MissingMoveDependentR
 
 ### Can I move a VM without stopping it?
 
-Yes. The Azure resource move operation does not require the VM to be stopped or deallocated. However, both the source and destination resource groups are locked for write and delete operations during the move. The VM continues to run and serve traffic normally.
+Yes. The Azure resource move operation doesn't require stopping or deallocating the VM. The VM continues to run and serve traffic normally. Both the source and destination resource groups are locked for write and delete operations during the move.
 
 ### How long does a move operation take?
 
@@ -54,7 +60,7 @@ See [800 resource limit per move operation](move-resources-800-limit.md) and [Ca
 
 ### Can I move a VM to a different virtual network?
 
-Not directly — the Azure move API does not support changing a VM's virtual network attachment. To move a VM to a different virtual network, you must recreate the VM:
+Not directly. The Azure move API doesn't support changing a VM's virtual network attachment. To move a VM to a different virtual network, recreate the VM:
 
 1. Create a backup or snapshot of the VM's OS disk.
 2. Create a new VM in the target virtual network using the OS disk copy.
@@ -65,7 +71,7 @@ Not via the standard resource move API. Cross-region moves require [Azure Resour
 
 ### Can I move resources to a subscription in a different Azure AD tenant?
 
-Not directly. The source and destination subscriptions must be in the same tenant. Two workarounds exist:
+No. The source and destination subscriptions must be in the same tenant. Two workarounds exist:
 
 1. Transfer the subscription itself to the destination tenant.
 2. Copy the VM disks using Azure Storage Explorer and recreate the VM in the destination tenant.
@@ -73,6 +79,9 @@ Not directly. The source and destination subscriptions must be in the same tenan
 See [Move Azure VM resources to a different tenant](move-vm-to-different-tenant.md).
 
 ---
+
+> [!NOTE]
+> For additional frequently asked questions about resource moves, see [Frequently asked questions](/azure/azure-resource-manager/management/move-resource-group-and-subscription?tabs=azure-cli#frequently-asked-questions) in the Azure Resource Manager documentation.
 
 ## Pre-move checklist
 

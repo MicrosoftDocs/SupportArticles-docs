@@ -93,6 +93,35 @@ Set-AzVMBootDiagnostic -VM $vm -Disable
 Update-AzVM -ResourceGroupName "<rg-name>" -VM $vm
 ```
 
+**Azure PowerShell — enable with a valid storage account:**
+```powershell
+$vm = Get-AzVM `
+  -ResourceGroupName <rg-name> `
+  -Name <vm-name>
+Set-AzVMBootDiagnostic `
+  -VM $vm `
+  -Enable `
+  -ResourceGroupName <rg-name> `
+  -StorageUri <storage-account-uri>
+```
+
+> [!NOTE]
+> After running `Set-AzVMBootDiagnostic`, you must update the VM for the change to take effect.
+
+**Azure PowerShell — update the VM:**
+```powershell
+Update-AzVM `
+  -ResourceGroupName <rg-name> `
+  -VM $vm
+```
+
+**Azure PowerShell — verify the storage account reference:**
+```powershell
+(Get-AzVM `
+  -ResourceGroupName <rg-name> `
+  -Name <vm-name>).DiagnosticsProfile.BootDiagnostics | ConvertTo-Json -Depth 10
+```
+
 ## Verify the storage account reference
 
 To confirm which storage account is referenced and whether it still exists, run:

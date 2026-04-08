@@ -33,7 +33,7 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-Not all Azure resource types support being moved between resource groups or subscriptions. The error lists the specific resource type that cannot be moved.
+Some Azure resource types don't support being moved between resource groups or subscriptions. The error identifies the specific resource type that can't be moved.
 
 ## Resolution
 
@@ -43,17 +43,17 @@ The error message lists each resource type that cannot be moved. Note the resour
 
 ### Step 2: Check the move support reference
 
-Review the official resource move support table to confirm whether the resource type supports move operations and under what conditions:
+Use the official move support table to confirm whether the resource type supports move operations:
 
 [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources)
 
-Also review scenarios that are specifically not supported for virtual machine moves:
+For VM-specific restrictions, review:
 
 [Scenarios not supported for virtual machine moves](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations?tabs=azure-cli#scenarios-not-supported)
 
 ### Step 3: Remove the unsupported resources and retry
 
-Remove the unsupported resource types from your move selection and retry the move with only the supported resources. You will need to recreate the unsupported resources in the destination resource group or subscription after the move completes.
+Remove the unsupported resource types from your move selection. Retry the move with only supported resources. Recreate the unsupported resources in the destination resource group or subscription after the move completes.
 
 ## More information
 

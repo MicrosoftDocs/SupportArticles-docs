@@ -97,6 +97,9 @@ Not all Azure resource types support the move operation. Before moving, verify t
 
 See [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources) for a complete list.
 
+> [!NOTE]
+> For a detailed explanation of this error code, see [What does the error code "MissingMoveDependentResources" mean?](/azure/azure-resource-manager/management/move-resource-group-and-subscription#what-does-the-error-code-missingmovedependentresources-mean)
+
 ## Next steps
 
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)

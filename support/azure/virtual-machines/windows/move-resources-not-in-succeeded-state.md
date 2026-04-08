@@ -37,20 +37,20 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-When a source or target resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on that virtual network — both directly and indirectly. The move is blocked if **any** dependent resource is not in a `Succeeded` provisioning state, even if:
+When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource is not in a `Succeeded` state. This applies even when:
 
-- The resource in a non-succeeded state is not one of the resources you're moving.
-- The resource is not in the source or destination resource group.
+- The resource isn't one of the resources you're moving.
+- The resource isn't in the source or destination resource group.
 
 ## Resolution
 
-Find the resource that is not in `Succeeded` state and restore it to a healthy state. The most common approach is to perform a successful operation on the resource to reset its state.
+Find the resource that isn't in `Succeeded` state. Restore it to a healthy state by performing a successful operation on it.
 
 ### Step 1: Identify the resource
 
-The error message will typically name a resource or resource type. However, the actual resource in a non-succeeded state may be a dependency of the named resource — check all related resources in both the source and destination resource groups.
+The error message names a resource or resource type. The actual problem resource is often a dependency of the named resource. Check all related resources in both the source and destination resource groups.
 
-In the Azure portal, navigate to each virtual machine or network resource involved in the move and verify that **Provisioning state** shows **Succeeded**.
+In the Azure portal, open each virtual machine or network resource involved in the move. Verify that **Provisioning state** shows **Succeeded**.
 
 ### Step 2: Reapply or update the resource
 

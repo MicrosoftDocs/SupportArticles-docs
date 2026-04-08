@@ -53,7 +53,7 @@ If resources appear in the destination, the move succeeded despite the timeout m
 
 ### Step 2: Check for resources missing from either group
 
-If resources appear in neither the source nor the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully using the Azure portal or the following Azure CLI command:
+If resources appear in neither the source nor the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully using the Azure portal or the following Azure CLI commands:
 
 ```azurecli
 az resource list --resource-group <source-rg> --output table
@@ -61,6 +61,16 @@ az resource list --resource-group <destination-rg> --output table
 ```
 
 If resources are missing from both groups, contact [Azure Support](https://azure.microsoft.com/support/create-ticket/).
+
+You can also check both resource groups using Azure PowerShell:
+
+```powershell
+Get-AzResource -ResourceGroupName <source-rg> | Format-Table
+Get-AzResource -ResourceGroupName <destination-rg> | Format-Table
+```
+
+> [!NOTE]
+> For additional information on long-running move operations, see [My resource move operation has been running for almost an hour. Is there something wrong?](/azure/azure-resource-manager/management/move-resource-group-and-subscription#my-resource-move-operation-which-usually-takes-a-few-minutes-has-been-running-for-almost-an-hour-is-there-something-wrong)
 
 ### Step 3: Retry the move with a smaller batch
 
