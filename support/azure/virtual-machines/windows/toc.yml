@@ -619,8 +619,6 @@ items:
       href: move-resources-800-limit.md
     - name: Cannot move more than 100 resources via portal
       href: move-resources-100-limit-portal.md
-    - name: Moving VM to another resource group fails - resource not found
-      href: move-vm-resource-not-found.md
     - name: Backup error during resource move
       href: move-resources-backup-error.md
     - name: Operation not allowed - system upgrade in progress
