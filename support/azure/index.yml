@@ -109,6 +109,8 @@ productDirectory:
       text: Troubleshooting articles for Azure Application Gateway
     - url: front-door/welcome-front-door.yml
       text: Troubleshooting articles for Azure Front Door 
+    - url: load-balancer/welcome-azure-load-balancer.yml
+      text: Troubleshooting articles for Azure Load Balancer
   - title: Hybrid connectivity services
     imageSrc: "https://learn.microsoft.com/azure/networking/media/index/hybrid-connectivity.svg"
     links:
