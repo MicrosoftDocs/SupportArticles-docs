@@ -1,16 +1,18 @@
 ---
 title: Logon type has not been granted with error code -1073741477
 description: Solves the Logon type hasn't been granted error that occurs when you run a desktop flow or create a connection in Power Automate.
-ms.reviewer: guco, johndund
+ms.reviewer: kdeepika, sbemag, v-shaywood
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 08/20/2024
+ms.date: 04/03/2026
 ---
 # "Logon type has not been granted" error when running a desktop flow or creating a connection
 
-This article provides a resolution for the `-1073741477` error code that occurs when you run a desktop flow or create a desktop flow connection in Microsoft Power Automate.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5021230
+
+## Summary
+
+When you run a desktop flow or create a desktop flow connection in Microsoft Power Automate, you might receive the `-1073741477` error code with the message "A user has requested a type of logon that has not been granted." This error occurs because a local security policy on the machine doesn't allow the logon of the account used in your connection. To resolve the issue, verify that the user account or group has logon permissions in the Local Security Policy settings and isn't on the denied accounts list.
 
 ## Symptoms
 
@@ -32,7 +34,7 @@ On the impacted machine, a local security policy might not allow (or might deny)
 > [!NOTE]
 > "Deny" permissions take precedence over "Allow" permissions unless specific exceptions are configured at the domain controller level.
 
-## Resolution
+## Solution
 
 To resolve the issue, ensure that the user account or group used in the connection has logon permissions, and isn't on the denied accounts list.
 
@@ -58,7 +60,8 @@ To resolve the issue, ensure that the user account or group used in the connecti
     - **Deny log on locally**
     - **Deny log on through Remote Desktop Services**
 
-## More information
+## Related content
 
 - [Desktop flow invalid credentials error when you use a Microsoft Entra account](troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md)
 - [Invalid credentials error when running desktop flows in Power Automate for desktop](invalid-credentials-errors-running-desktop-flows.md)
+- [Desktop flow connections](/power-automate/desktop-flows/desktop-flow-connections)
