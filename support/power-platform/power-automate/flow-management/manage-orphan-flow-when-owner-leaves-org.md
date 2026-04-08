@@ -1,28 +1,28 @@
 ---
 title: Manage orphaned flows when owner leaves organization
 description: Manage orphan flows in Power Automate when an owner leaves your organization. Learn how to assign new co-owners and maintain automation continuity.
-ms.reviewer: tomche
+ms.reviewer: tomche, v-shaywood
 ms.topic: how-to
 ms.date: 04/03/2026
 ms.custom: has-azure-ad-ps-ref, sap:Flow management\Flow owner leaves organization
 ---
-# Manage orphan flows when the owner leaves the organization
+# Manage orphaned flows when the owner leaves the organization
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4556130
 
 ## Summary
 
-This article helps you manage orphaned flows in Power Automate after a flow owner leaves your organization. An orphaned flow is a flow that no longer has a valid owner. They can fail if they use connections tied to that user account. This article explains how admins can identify orphaned flows, assign new co-owners in the Power Platform admin center, and use PowerShell to update ownership for one flow or multiple flows. These steps help maintain business continuity and reduce failures caused by lost or invalid connections.
+This article helps you manage orphaned flows in Power Automate after a flow owner leaves your organization. An orphaned flow is a flow that no longer has a valid owner. These flows can fail if they use connections tied to that user account. This article explains how admins can identify orphaned flows, assign new co-owners in the Power Platform admin center, and use PowerShell to update ownership for one flow or multiple flows. These steps help maintain business continuity and reduce failures caused by lost or invalid connections.
 
 ## Check for orphaned flows
 
 > [!NOTE]
 > Only users with appropriate privileges can view flows that don't have any valid owners.
 
-On the [environment page from Power Platform Admin Center](https://admin.powerplatform.microsoft.com/environments), go to the **Resources** tab and select **Flows**. Look for flows that don't have an owner listed in the **Owners** column.
+On the [environment page from Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), go to the **Resources** tab and select **Flows**. Look for flows that don't have an owner listed in the **Owners** column.
 
-If there are a large number of flows, select **Load more** to load the next set of flows so you can ensure you look through all flows that might be orphaned.
+If there are many flows, select **Load more** to load the next set of flows. This way, you can ensure you look through all flows that might be orphaned.
 
 ## Assign new co-owners to an orphaned flow
 
@@ -32,11 +32,11 @@ If there are a large number of flows, select **Load more** to load the next set 
 1. Select **Save** to save your changes.
 
 > [!NOTE]
-> If there are a large number of flows in your organization, you can also manage orphaned flows through PowerShell cmdlets.
+> If there are many flows in your organization, you can also manage orphaned flows through PowerShell cmdlets.
 
 ## Manage orphaned flows through Power Automate cmdlets for administrators
 
-Administrators can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you [install](/power-platform/admin/powershell-getting-started) the PowerShell module if you haven't done so previously.  
+Administrators can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you [install](/power-platform/admin/powershell-getting-started) the PowerShell module if you haven't done so previously.
 
 ### Fix permissions for one flow
 
@@ -66,9 +66,9 @@ For more information on these cmdlets, see [Set-AdminFlowOwnerRole](/powershell/
 1. To get the list of flows created by a given user, run the following cmdlet:
 
     ```powershell
-     Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
-     ```
-     
+    Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
+    ```
+
 1. Then apply the steps in the preceding section to assign co-owners to every flow on the list.
 
 ### List all orphaned flows in an environment
