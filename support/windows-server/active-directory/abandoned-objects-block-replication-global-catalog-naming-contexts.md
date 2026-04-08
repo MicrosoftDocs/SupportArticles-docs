@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-In Active Directory Domain Services (AD DS), *abandoned objects* are objects that exist on some domain controllers (DCs) in the forest but never replicated to all DCs. Abandoned objects typically appear on global catalog servers (GCs) or read-only domain controllers (RODCs). Because standard lingering object removal tools can't remove abandoned objects, they can cause persistent replication errors and confusing search results that are difficult to diagnose.
+In Active Directory Domain Services (AD DS), *abandoned objects* are objects that exist on some domain controllers (DCs) in the forest but never replicated to all DCs. Abandoned objects typically appear in read-only naming contexts (also referred to as *partitions*) on global catalog servers (GCs) or read-only domain controllers (RODCs). Because standard lingering object removal tools can't remove abandoned objects, they can cause persistent replication errors and confusing search results that are difficult to diagnose.
 
 This article describes how to identify and remove abandoned objects. It covers the following topics:
 
@@ -130,7 +130,7 @@ Before this replication issue is fixed, the hub DC is forcefully removed from th
 
 A similar situation occurs if an object is deleted and then restored on a hub DC that has RODCs or GCs as replication partners, in addition to other read-write replicas. Again, the restoration only replicates to read-only replicas before the hub DC is forcibly removed. On the writeable DCs, the object remains in its tombstone state until its tombstone lifetime expires. Then the garbage collection process removes the object completely. Again, the object is considered to be an abandoned object on the RODCs or GCs.
 
-Abandoned objects resemble lingering objects. However, lingering objects are objects that at some point existed in all Active Directory replicas. Abandoned objects never existed in all replicas. This difference is one reason that lingering object removal tools might identify abandoned objects, but can't remove them. For more information about how abandoned objects and lingering objects occur and how they differ, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
+Abandoned objects resemble lingering objects. However, lingering objects are objects that at some point existed in all Active Directory replicas, and one or more replicas didn't get the "delete" change. Abandoned objects exist on some read-only replicas, but the remaining replicas never got the "create" change. This difference is one reason that lingering object removal tools might identify abandoned objects, but can't remove them. For more information about how abandoned objects and lingering objects occur and how they differ, see [How abandoned objects and lingering objects occur](#how-abandoned-objects-and-lingering-objects-occur).
 
 ## Resolution
 
@@ -147,7 +147,7 @@ This article describes processes that use manual steps and scripts to remove aba
 
 To remove abandoned objects, you have to identify each object by its `objectGUID` value. You can get this information from events and error messages, and from log files that record operations such as searches that produced inconsistent results. You can also use scripts to identify objects that exist in some Active Directory replicas and not others.
 
-The following example PowerShell script detects abandoned objects. It creates a list of the objects in the GC naming context, and then it checks to see if each object is present in the child domain. If an object isn't present, the script exports the object information to a .csv file and to a .ldf file. The script doesn't change any of the objects or object attributes.
+The following example PowerShell script detects abandoned objects. It creates a list of the objects in the affected GC naming context, and then it checks to see if each object is present in the reference child domain. If an object isn't present, the script exports the object information to a .csv file and to a .ldf file. The script doesn't change any of the objects or object attributes.
 
 > [!NOTE]  
 > In this script, change the value of `$GCdomain` to the DN of the affected domain, and change `$rwdomain` to the DN of the reference DC.
@@ -259,12 +259,12 @@ The following table provides a simplified view of how lingering objects and the 
 | Abandoned object type 1 | Abandoned object type 2 | Lingering object |
 | - | - | - |
 | 1. Object doesn't exist. | 1. Object exists on all DCs | 1. Object exists on all DCs. |
-|   |  | 2. One DC (DC-1) disconnects from the network. |
-|   | 2. Delete the object. That change replicates to all DCs. | 3. Delete the object. That change replicates to all remaining DCs. |
-| 2. Connect to a DC (DC-2), and then create the object. | 3. Before the tombstone lifetime expires, connect to one DC (DC-3), and then restore (undelete) the object. | |
-| 3. The "create object" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-2 disconnects from the network. | 4. The "restore" change replicates to GCs or RODCs. Before the replicates to regular DCs, DC-3 disconnects from the network. | |
-| | 5. The tombstone lifetime expires. | 4. The tombstone lifetime expires. |
-| | | 5. DC-1 reconnects to the network. |
+| ~ | ~ | 2. One DC (DC-1) disconnects from the network. |
+| ~ | 2. Delete the object. That change replicates to all DCs. | 3. Delete the object. That change replicates to all remaining DCs. |
+| 2. Connect to a DC (DC-2), and then create the object. | 3. Before the tombstone lifetime expires, connect to one DC (DC-3), and then restore (undelete) the object. | ~ |
+| 3. The "create object" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-2 disconnects from the network. | 4. The "restore" change replicates to GCs or RODCs. Before the replicates to regular DCs, DC-3 disconnects from the network. | ~ |
+| ~ | 5. The tombstone lifetime expires. | 4. The tombstone lifetime expires. |
+| ~ | ~ | 5. DC-1 reconnects to the network. |
 | **Result**: Some GCs or RODCs have the object, and the "create" USN. Regular DCs don't have the object or the "create" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Some GCs or RODCs have the object, and the "restore" USN. Regular DCs don't have the object or the "restore" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Only DC-1 has the object. DC-1 doesn't have the "delete" USN. The other DCs don't have any reference to the object beyond the historical USNs. |
 
 ### Investigating abandoned objects: How to interpret information from replication partners and up-to-dateness vectors
@@ -287,7 +287,11 @@ To trace abandoned objects, you need two globally unique identifiers (GUIDs) for
 | DSA invocationID | invocationID | This GUID identifies the current copy of Active Directory on the DC. Windows configures this GUID when you add the DC to a new or existing domain, and changes it when the DC is restored from a backup. When you promote a DC and create a new forest, that DC uses its DSA GUID as its invocation ID until the first time the DC is restored from a backup. |
 
 > [!NOTE]  
-> After you stop and deallocate a virtual DC, the next time the DC starts, Windows behaves as if Active Directory was restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC.
+> After you stop and deallocate a virtual DC that runs in Azure, the next time the DC starts, Windows behaves as if Active Directory was restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC.
+>
+>When you have to stop an Azure virtual DC, you can avoid this behavior by shutting the VM down from within the guest operating system instead of by using the Azure portal. After the virtual DC has shut itself down, you can deallocated it. For more information, see [Manageability](/azure/architecture/example-scenario/identity/adds-extend-domain#manageability) in "Deploy AD DS in an Azure virtual network."
+>
+> For more general best practices in restoring virtualized DCs, see [Virtualization safeguards](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration#BKMK_VDCSafeRestore) in "Virtualized Domain Controller Deployment and Configuration"
 
 Event ID 1084 and event ID 1988 both identify a *source server*. This server is typically a GC that acts as an inbound replication partner to the DC that generated the events (the *destination server*, typically also a GC). The abandoned object exists on the source server, but not the destination server.
 
@@ -298,7 +302,7 @@ repadmin /showrepl *
 ```
 
 > [!NOTE]  
-> For large topologies, you can constrain the command to run on a particular DC. For more information, see [Repadmin](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc770963(v=ws.11)).
+> For large topologies, you can constrain the command to run on a particular DC. For more information, see [Repadmin](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc770963(v=ws.11)). You can also run `repadmin /?` to view the online help for this command.
 
 For a forest that has two GCs, this command generates output that resembles the following example:
 
@@ -369,7 +373,7 @@ This output is GC-1's up-to-dateness vector, which records both changes made on 
 - The old entry for GC-2 is labeled as "retired" to distinguish it from the entry that records replication that occurred after GC-2 was restored.
 
   > [!NOTE]  
-  > The first entry of the first DC in the forest is never marked as "retired," even if it's no longer active.
+  > The first entry of the first DC in the forest might not be marked as "retired," even if it's no longer active.
 
 To ge a slightly different view of the up-to-dateness vector, run the same `repadmin` command together with the `/nocache` option. This command resembles the following example:
 
@@ -423,18 +427,22 @@ This table shows that each GC's view of the other is slightly out of date. GC-1 
 
 When the naming context you're investigating has abandoned objects, you might see the following discrepancies (in addition to the error messages that the Symptoms section describes).
 
-- The invocation ID (or DSA GUID) of the source GC never appears in the up-to-dateness vector. This result indicates that the source GC never successfully replicated this naming context to the destination GC.
+- The invocation ID (or DSA GUID) of the source GC never appears in the up-to-dateness vector. This result indicates that the source GC never finished the initial full replication cycle of the naming context to the destination GC.
 - The invocation ID (or DSA GUID) of the source GC exists in the up-to-dateness vector, but its timestamp of the most recent entry isn't current. This result indicates that the source GC stopped replicating or was removed from the replication topology.
 
 To help determine what caused the issue, you can retrieve up-to-dateness information from other DCs or GCs that use the affected GC as a replication source. For example, identifying which servers didn't information from the affected source GC and which did can help isolate a network infrastructure issue.
 
 ## References
 
-- [`Remove-ADObject`](/powershell/module/activedirectory/remove-adobject)
 - [Active Directory replication Event ID 1388 or 1988 - A lingering object is detected](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988)
 - [Active Directory replication Event ID 2042 (It has been too long since this machine replicated)](/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-2042)
-- [Troubleshoot replication error 8614](/troubleshoot/windows-server/active-directory/replication-error-8614)
-- [Troubleshoot AD Replication error 8240 There is no such object on the server](/troubleshoot/windows-server/active-directory/active-directory-replication-error-8240)
+- [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](https://techcommunity.microsoft.com/blog/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting/396944)
+- [Deploy AD DS in an Azure virtual network](/azure/architecture/example-scenario/identity/adds-extend-domain)
 - [Lingering objects in an AD DS forest](/troubleshoot/windows-server/active-directory/information-lingering-objects)
 - [\[MS-ADTS\]: Tombstone Lifetime and Deleted-Object Lifetime](/openspecs/windows_protocols/ms-adts/1887de08-2a9e-4694-95e2-898cde411180)  
-- [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](https://techcommunity.microsoft.com/blog/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting/396944)
+- [`Remove-ADObject`](/powershell/module/activedirectory/remove-adobject)
+- [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)
+- [Troubleshoot AD Replication error 8240 There is no such object on the server](/troubleshoot/windows-server/active-directory/active-directory-replication-error-8240)
+- [Troubleshoot replication error 8614](/troubleshoot/windows-server/active-directory/replication-error-8614)
+- [Virtualized Domain Controller Deployment and Configuration](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration)
+- [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](detect-and-recover-from-usn-rollback.md)
