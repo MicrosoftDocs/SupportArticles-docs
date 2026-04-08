@@ -104,7 +104,7 @@ Provisioning failures commonly occur for multiple reasons, including:
 
 - Failed to accept terms & conditions for the particular image.
 
-   For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
+   Terms & conditions can be accepted via PowerShell, AzureCLI or using the Azure Portal.
 
 ### Troubleshoot provisioning failures
 
