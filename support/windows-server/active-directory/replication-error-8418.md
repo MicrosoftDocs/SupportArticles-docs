@@ -19,15 +19,8 @@ appliesto:
 
 _Original KB number:_ &nbsp; 2734946
 
-This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 8418.
-
 This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 8418: The replication operation failed because of a schema mismatch between the servers involved.
 
-This article is part of a series on troubleshooting AD replication errors and events documented on Technet. To find this and related articles, use your favorite Internet search engine to query on:
-Troubleshooting AD replication error \<error number>: \<error string> site:support.microsoft.com
-
-For example:
-Troubleshooting AD replication error 5: Access is denied site:support.microsoft.com  
 
 ## Symptoms
 
@@ -80,7 +73,7 @@ Troubleshooting AD replication error 5: Access is denied site:support.microsoft.
   |NTDS Replication|1203|`The local domain controller could not replicate the following object from the source domain controller at the following network address because of an Active Directory schema mismatch`|
   |NTDS Replication|1791/8418|`Replication of Naming Context <DN path> from source <NTDS Settings object guid> has been aborted. Replication requires consistent schema but last attempt to sync the schema had failed. It is crucial that schema replication functions properly. See previous errors for more diagnostics. If this issue persists, contact Microsoft Product Support Services for assistance. Error 8418: The replication operation failed because of a schema mismatch between the servers involved.`|
 
-- Active Directory Sites and Services fail with the following error:
+- You manually trigger replication by using the **Replicate now** command in the Active Directory Sites and Services console. The operation fails, and generates an error message that resembles the following example:
 
   ```output
    --------------------------- Replicate Now ---------------------------
@@ -88,38 +81,35 @@ Troubleshooting AD replication error 5: Access is denied site:support.microsoft.
   --------------------------- OK ---------------------------
   ```
 
-- When you use the RepAdmin tool, you see messages that resemble the following examples:
+- When you use the RepAdmin tool (`repadmin.exe`), you see messages that resemble the following examples:
 
   | Command | Message |
   | - | - |
-  | `Repadmin /ShowReps` | `Last attempt @ YYYY-MM-DD HH:MM:SS failed, result 8418 (0x20e2): The replication operation failed because of a schema mismatch between the servers involved.` |
-  | `Repadmin /SyncAll` | `repadmin /syncall /AePdq Syncing all NC's held on <DC Name>. Syncing partition: DC=contoso,DC=com SyncAll reported the following errors: Error issuing replication: 8418 (0x20e2): The replication operation failed because of a schema mismatch between the servers involved.` |
-  | `Repadmin /ReplSum` | `repadmin /replsummary Replication Summary Start Time: YYYY-MM-DD HH:MM:SS Beginning data collection for replication summary, this may take a while: ..... Source DSA largest delta fails/total %% error <Source DC> xxh:yym:zzs 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved. Destination DSA largest delta fails/total %% error <dest DC> 04h:02m:16s 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved.` |
+  | `Repadmin /ShowReps` | `Last attempt @ YYYY-MM-DD HH:MM:SS failed, result 8418 (0x20e2):`<br/>`The replication operation failed because of a schema mismatch between the servers involved.` |
+  | `Repadmin /SyncAll` | `repadmin /syncall /AePdq Syncing all NC's held on <DC Name>.`<br/>`Syncing partition: DC=contoso,DC=com SyncAll reported the following errors:`<br/>`Error issuing replication: 8418 (0x20e2):`<br/>`The replication operation failed because of a schema mismatch between the servers involved.` |
+  | `Repadmin /ReplSum` | `repadmin /replsummary Replication Summary Start Time: YYYY-MM-DD HH:MM:SS`<br/>`Beginning data collection for replication summary, this may take a while:`<br/>`.....`<br/>`Source DSA largest delta fails/total %% error <Source DC> xxh:yym:zzs 4 / 5 80 (8418)`<br/>`The replication operation failed because of a schema mismatch between the servers involved.`<br/>`Destination DSA largest delta fails/total %% error <dest DC> 04h:02m:16s 4 / 5 80 (8418)`<br/>`The replication operation failed because of a schema mismatch between the servers involved.` |
 
 ## Cause
 
-Replication of any Active Directory data between domain controllers in a forest relies on all DC's having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes replication of data this in this partition above all others - when any change to a schema definition is detected between partners it must be replicated before data in other partitions can be synchronized.
+Replication of any Active Directory data between DCs in a forest depends on all DC's having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes the Schema partition so that any change to a schema definition replicates before any data that uses the schema definition can replicate.
+
+**
 
 Attempts to replicate AD when schema information is not consistent between the DC partners involved causes a "Schema Mismatch" error.. This symptom manifests in a number of different ways. However, the underlying cause of the error varies.
 
 There are also scenarios in which this error occurs, but there is not a mismatch in the schema information in the strictest sense. In these cases, Active Directory might not conform to the current schema definition for the relevant object or attribute whose value is being synchronized and applied at the destination DC.
 
-<!--
-The duration of schema mismatch errors typically falls into one of two categories: Transient or persistent. Within the persistent category, there are some failures that can be investigated AND resolved safely.
+**
 
 For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
 
-Note: Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
-/!-->
-Schema Update - after an administrative schema update is likely that a schema mismatch will occur on various DC's throughout the forest. This will typically happen in a pattern that matches the AD replication topology and schedule. This behavior is normal so long as the error state is transient*. This class of failure is most likely to be reported by monitoring software and requires no administrative intervention.
+**
 
-The duration for which schema mismatch may be logged by a given destination DC should last no more than one replication cycle for any given partner. DC's with only one partner should only see the error once while bridge head dc's may see the error multiple times, once for each partner.
-
-A reasonable estimate of the acceptable time limit transient failure is forest convergence period* x 1.5.
-
-*The largest amount of time taken for an object update to replicate from one DC to all other DCs in the forest.
+The duration of schema mismatch errors typically falls into one of two categories: Transient or persistent. Within the persistent category, there are some failures that can be investigated AND resolved safely.
 
 ### Transient Symptom Triggers  
+
+Note: Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
 
 Schema Update - after an administrative schema update is likely that a schema mismatch will occur on various DC's throughout the forest. This will typically happen in a pattern that matches the AD replication topology and schedule. This behavior is normal so long as the error state is transient*. This class of failure is most likely to be reported by monitoring software and requires no administrative intervention.
 
@@ -129,24 +119,18 @@ The duration for which schema mismatch may be logged by a given destination DC s
 
 ### Persistent Symptom Triggers  
 
-In some scenarios the schema mismatch error will persist indefinitely and intervention is required to investigate, identify the underlying trigger and resolve. Some scenarios present as known issues while in other the Schema Mismatch is purely a side effect of other blocking issues that prevent it from self-resolving through normal replication.
-
-The following known issue might trigger a persistent schema mismatch:
-
-|KB Article No.|Title|Key Data|
-|---|---|---|
-|2001769|Error While Propagating Permissions: "Unable to save permission ...|Event ID 1450 DSID 3150dbe|
+In some scenarios the schema mismatch error will persist indefinitely and intervention is required to investigate, identify the underlying trigger and resolve. Some scenarios present as known issues while in others the Schema Mismatch is purely a side effect of other blocking issues that prevent it from self-resolving through normal replication.
 
 Issues that might prevent Active Directory from resolving a schema mismatch:
 
 |Topic|KB|Key Data|
 |---|---|---|
-|Replication Quarantine|[2020053](https://support.microsoft.com/help/2020053)|Event ID 2042<br/><br/>Error status 8614|
-|Replication failure caused by Lingering objects when Strict Replication Consistency is enabled|[2028495](https://support.microsoft.com/help/2028495)|Event ID 1988 with status 8606|
+|Replication Quarantine|[self]<br/>[Troubleshoot Active Directory replication error 8614](replication-error-8614.md)<br/>[Active Directory replication Event ID 2042: It has been too long since this machine replicated](active-directory-replication-event-id-2042.md)|Event ID 2042<br/>Error status 8614|
+|[Active Directory Replication Error 8606: Insufficient attributes were given to create an object](replication-error-8606.md)|2028495|Event ID 1988 with status 8606|
 |Replication Topology|||
-|Disabled Replication<br/><br/>|[2028495](https://support.microsoft.com/help/2028495)<br/><br/>|Status 8457|
-|DNS (Name Resolution)|[2021446](https://support.microsoft.com/help/2021446)|Event ID 2023 with Status code 8524|
-|RPC|1722:<br/><br/> [2102154](https://support.microsoft.com/help/2102154) <br/><br/>1753:<br/><br/>[2089874](https://support.microsoft.com/help/2089874)|Status Code 1722<br/><br/>Status Code 1753|
+|[Active Directory replication error 8456 or 8457: The source / destination server is currently rejecting replication requests](replication-error-8456-8457.md)|2023007|Status 8457|
+|[Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](replication-error-8524.md)|2021446|Event ID 2023 with Status code 8524|
+|RPC|1722:<br/><br/> [Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md) <br/><br/>1753:<br/><br/>[Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](replication-error-1753.md)|Status Code 1722<br/><br/>Status Code 1753|
 |nTSecurityDescriptor Size ||Event ID 1450 with Error value 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built. <br/><br/>This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.|
   
 ## Resolution
