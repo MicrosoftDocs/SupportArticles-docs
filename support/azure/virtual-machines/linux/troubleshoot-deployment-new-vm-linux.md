@@ -32,11 +32,13 @@ Before troubleshooting, determine where the deployment failed:
 
 | Symptom | Likely area |
 |-------|------------|
-| ARM deployment fails | Template, quota, region, image |
+| ARM deployment fails | Template, quota, region, image, terms & conditions |
 | VM stuck in provisioning | Cloud-init, extension, OS config |
 | VM running but no SSH | Network, Network security group (NSG), SSH config |
 
 ## Symptoms
+
+### Provisioning failure
 
 A common provisioning failure occurs when you deploy a virtual machine from a custom Linux image. In this scenario:
 
@@ -67,7 +69,28 @@ Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
 
 When this problem occurs, the VM state shows as `failed`.
 
-### Why provisioning failures occur
+### Additional Terms and Conditions required.
+
+Some Marketplace images require the user to accept terms & condigions additonal to the ones required by Microsoft Azure in order to be able to deploy them, here is a typical message error message when using the Azure CLI interface:
+
+```output
+Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. For more information see details. Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd' You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal provides a UI experience for reading and accepting the legal terms. Offer details: publisher='llll' offer = 'xxxxxxx', sku = 'xxxxx-xxx, Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'.[{"You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal provides a UI experience for reading and accepting the legal terms. Offer details: publisher='pppp' offer = 'somelinux-aarch64', sku = 'somelinux-aarch64', Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'.":"StoreApi"}]
+```
+
+There are three options to resove the issue:
+<ul>
+<li> Using the Azure CLI </li>
+<li> Using the Azure Powershell interface</li>
+<li> Deploy a machine from the portal, accept the terms and conditions during the deployment process</li>
+</ul>
+
+A particular command to resolve this issue, using the AzureCLI would be:
+```bash
+az vm image terms accept --urn  publisher:offer:sku:version
+```
+
+
+## Why provisioning failures occur
 
 Provisioning failures commonly occur for multiple reasons, including:
 
@@ -76,6 +99,10 @@ Provisioning failures commonly occur for multiple reasons, including:
   Verify that an agent exists and is working correctly by using [cloud-init](/azure/virtual-machines/linux/using-cloud-init). If your image doesn't support this configuration, review [these steps](/azure/virtual-machines/linux/no-agent).
 
 - Incorrect image configuration.
+
+   For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
+
+- Failed to accept terms & conditions for the particular image.
 
    For guidance to set up images by using cloud-init, see [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
