@@ -1,16 +1,18 @@
 ---
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
-ms.reviewer: guco, madiazor, johndund, qliu, alarnaud
-ms.date: 05/20/2025
+ms.reviewer: kdeepika, sbemag, v-shaywood
+ms.date: 04/03/2026
 ms.custom: sap:Desktop flows
 ---
 # Direct connectivity issues in Power Automate for desktop
 
-This article provides more information about how to resolve the direct connectivity issues in Microsoft Power Automate for desktop.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5016345
+
+## Summary
+
+When you run desktop flows from a cloud flow or manage your desktop flow machines in Microsoft Power Automate for desktop, you might encounter direct connectivity issues like machines appearing offline, runs failing with `ConnectionNotEstablished` or `NoListenerConnected` errors, or machines disconnecting after a user signs out. These issues are typically caused by the machine losing network connectivity, network proxies or firewalls blocking Azure Relay connections, or the Power Automate service account lacking network access. This article provides investigation steps, firewall configuration guidance, and instructions for enabling WCF tracing to diagnose the issue.
 
 ## Symptoms
 
@@ -43,7 +45,7 @@ The most common cause of relay connectivity issues is the machine losing connect
 The Power Automate service runs under its own Windows account (NT Service\UIFlowService by default) which must have access to the network and be able to connect to _*.servicebus.windows.net_. For more information, see [network requirements](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime).
 
 > [!NOTE]
-> If you use an Azure virtual machine (VM) to run Power Automate for desktop, make sure the Microsoft.ServiceBus endpoint is turned off at the subnet level where the Azure VM is located. This is a known limitation. For more information, see [Azure Relay doesn't support network service endpoints](/azure/azure-relay/network-security).
+> If you use an [Azure virtual machine (VM)](/azure/virtual-machines/overview) to run Power Automate for desktop, make sure the Microsoft.ServiceBus endpoint is turned off at the subnet level where the Azure VM is located. This is a known limitation. For more information, see [Azure Relay doesn't support network service endpoints](/azure/azure-relay/network-security).
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 
@@ -116,7 +118,7 @@ If the issue still persists, you can open a support ticket with Microsoft by pro
 - Logs from your network devices showing that the traffic is indeed handed off to the public internet. Include times of the issues and the time zones used by the logs.
 - WCF traces from the impacted machines. For more information, see [Enable WCF tracing](#enable-wcf-tracing).
 - Desktop flow run IDs of impacted runs.
-- Local logs from the impacted machine: they can be extracted using the Power Automate machine runtime app's troubleshooting pane.
+- Local logs from the impacted machine: they can be extracted using the Power Automate machine runtime app's troubleshooting pane. For more information, see [Power Automate for desktop logs](how-to-get-power-automate-desktop-installer-logs.md).
 
 ## Enable WCF tracing
 
@@ -154,3 +156,8 @@ If the issue still persists, you can open a support ticket with Microsoft by pro
    :::image type="content" source="media/direct-connectivity-troubleshooting/restart-power-automate-service.png" alt-text="Screenshot of restarting the Power Automate Service in the Services tool.":::
 
 Traces are saved to the specified file, providing detailed logs to diagnose connectivity issues.
+
+## Related content
+
+- [Machine registration failure in Power Automate](desktop-flow-machine-registration-troubleshooting.md)
+- [Power Automate for desktop logs](how-to-get-power-automate-desktop-installer-logs.md)
