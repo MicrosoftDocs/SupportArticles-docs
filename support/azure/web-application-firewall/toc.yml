@@ -1,0 +1,6 @@
+items:
+- name: Azure Web Application Firewall troubleshooting documentation
+  href: welcome-azure-web-application-firewall.yml
+  items:
+  - name: Troubleshoot WAF for Azure Application Gateway
+    href: web-application-firewall-troubleshoot.md   
