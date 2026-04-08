@@ -1,5 +1,5 @@
 items:
-- name: Azure Front Door troubleshooting documentation
+- name: Welcome
   href: welcome-front-door.yml
 - name: Troubleshoot using Reference String
   href: refstring.md
