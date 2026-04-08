@@ -151,11 +151,11 @@ One benefit of using an exclusion list is that only a specific part of a request
 
 Occasionally, there are cases where specific parameters get passed into the WAF in a manner that may not be intuitive. For example, there's a token that gets passed when authenticating using Microsoft Entra ID. *__RequestVerificationToken* is usually passed in as a request cookie. However, in some cases where cookies are disabled, this token is also passed as a request attribute or `arg`. If this happens, you need to ensure that *__RequestVerificationToken* is added to the exclusion list as a **Request attribute name** as well.
 
-:::image type="content" source="../media/web-application-firewall-troubleshoot/exclusion-list.png" alt-text="Screenshot of the WAF exclusion list settings in the Azure portal." lightbox="../media/web-application-firewall-troubleshoot/exclusion-list.png":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/exclusion-list.png" alt-text="Screenshot of the WAF exclusion list settings in the Azure portal." lightbox="media/web-application-firewall-troubleshoot/exclusion-list.png":::
 
 In this example, you want to exclude the **Request attribute name** that equals *text1*. This is apparent because you can see the attribute name in the firewall logs: **data: Matched Data: 1=1 found within ARGS:text1: 1=1**. The attribute is **text1**. You can also find this attribute name a few other ways, see [Finding request attribute names](#find-request-attribute-names).
 
-:::image type="content" source="../media/web-application-firewall-troubleshoot/waf-config.png" alt-text="Screenshot of WAF configuration options for exclusion lists in Application Gateway." lightbox="../media/web-application-firewall-troubleshoot/waf-config.png":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/waf-config.png" alt-text="Screenshot of WAF configuration options for exclusion lists in Application Gateway." lightbox="media/web-application-firewall-troubleshoot/waf-config.png":::
 
 You can create exclusions for WAF in Application Gateway at different scope levels. For more information, see [Web Application Firewall exclusion lists](/azure/web-application-firewall/ag/application-gateway-waf-configuration#exclusion-scopes).
 
@@ -182,13 +182,13 @@ To record and save a HAR file in Microsoft Edge, follow these steps
 
 1. In the **Console** tab, select **Clear console** or press **Ctrl+L**.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/edge-dev-tools-console.png" alt-text="Screenshot of the Console tab of Microsoft Edge developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/edge-dev-tools-console.png" alt-text="Screenshot of the Console tab of Microsoft Edge developer tools." lightbox="media/web-application-firewall-troubleshoot/edge-dev-tools-console.png":::
 
 1. Select the **Network** tab.
 
 1. Select **Clear network log** or press **Ctrl+L**, and then select the **Record network log** if it's not recording.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/edge-dev-tools-network.png" alt-text="Screenshot of the Network tab of Microsoft Edge developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/edge-dev-tools-network.png" alt-text="Screenshot of the Network tab of Microsoft Edge developer tools." lightbox="media/web-application-firewall-troubleshoot/edge-dev-tools-network.png":::
 
 1. Load the webpage that's protected by your WAF for which you want to troubleshoot.
 
@@ -196,7 +196,7 @@ To record and save a HAR file in Microsoft Edge, follow these steps
 
 1. Select **Export HAR (sanitized)...** and save the HAR file.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/edge-dev-tools-save-file.png" alt-text="Screenshot of the Export HAR (sanitized) option in Microsoft Edge developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/edge-dev-tools-save-file.png" alt-text="Screenshot of the Export HAR (sanitized) option in Microsoft Edge developer tools." lightbox="media/web-application-firewall-troubleshoot/edge-dev-tools-save-file.png":::
 
 # [**Chrome**](#tab/chrome)
 
@@ -206,13 +206,13 @@ To record and save a HAR file in Google Chrome, follow these steps
 
 1. In the **Console** tab, select **Clear console** or press **Ctrl+L**.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/chrome-dev-tools-console.png" alt-text="Screenshot of the Console tab of Google Chrome developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/chrome-dev-tools-console.png" alt-text="Screenshot of the Console tab of Google Chrome developer tools." lightbox="media/web-application-firewall-troubleshoot/chrome-dev-tools-console.png":::
 
 1. Select the **Network** tab.
 
 1. Select **Clear network log** or press **Ctrl+L**, and then select the **Record network log** if it's not recording.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/chrome-dev-tools-network.png" alt-text="Screenshot of the Network tab of Google Chrome developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/chrome-dev-tools-network.png" alt-text="Screenshot of the Network tab of Google Chrome developer tools." lightbox="media/web-application-firewall-troubleshoot/chrome-dev-tools-network.png":::
 
 1. Load the webpage that's protected by your WAF for which you want to troubleshoot.
 
@@ -220,10 +220,9 @@ To record and save a HAR file in Google Chrome, follow these steps
 
 1. Select **Export HAR (sanitized)...** and save the HAR file.
 
-    :::image type="content" source="../media/web-application-firewall-troubleshoot/chrome-dev-tools-save-file.png" alt-text="Screenshot of the Export HAR (sanitized) option in Google Chrome developer tools.":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/chrome-dev-tools-save-file.png" alt-text="Screenshot of the Export HAR (sanitized) option in Google Chrome developer tools." lightbox="media/web-application-firewall-troubleshoot/chrome-dev-tools-save-file.png":::
 
 ---
-
 
 ## Find request attribute names
 
@@ -231,11 +230,11 @@ You can use Fiddler to inspect individual requests and determine what specific f
 
 In this example, you can see that the field where the *1=1* string was entered is called **text1**.
 
-:::image type="content" source="../media/web-application-firewall-troubleshoot/fiddler-1.png" alt-text="Screenshot of Fiddler Web Debugger. In the Raw tab, 1=1 is visible after the name text1." lightbox="../media/web-application-firewall-troubleshoot/fiddler-1.png":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/fiddler-1.png" alt-text="Screenshot of Fiddler Web Debugger. In the Raw tab, 1=1 is visible after the name text1." lightbox="media/web-application-firewall-troubleshoot/fiddler-1.png":::
 
 This is a field you can exclude. To learn more about exclusion lists, See [Web application firewall exclusion lists](/azure/web-application-firewall/ag/application-gateway-waf-configuration). You can exclude the evaluation in this case by configuring the following exclusion:
 
-:::image type="content" source="../media/web-application-firewall-troubleshoot/waf-exclusion-02.png" alt-text="Screenshot of a WAF exclusion configured for a specific request attribute." lightbox="../media/web-application-firewall-troubleshoot/waf-exclusion-02.png":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/waf-exclusion-02.png" alt-text="Screenshot of a WAF exclusion configured for a specific request attribute." lightbox="media/web-application-firewall-troubleshoot/waf-exclusion-02.png":::
 
 You can also examine the firewall logs to get the information to see what you need to add to the exclusion list. To enable logging, see [Back-end health, resource logs, and metrics for Application Gateway](/azure/application-gateway/application-gateway-diagnostics).
 
@@ -356,7 +355,7 @@ The second one (rule 942130) is the interesting one. You can see in the details 
 
 You can use Fiddler to find request header names. In the following screenshot, you can see the headers for this GET request, which include *Content-Type*, *User-Agent*, and so on.
 
-:::image type="content" source="../media/web-application-firewall-troubleshoot/fiddler-2.png" alt-text="Screenshot of Fiddler Web Debugger. The Raw tab lists request header details like the connection, content-type, and user-agent." lightbox="../media/web-application-firewall-troubleshoot/fiddler-2.png":::
+:::image type="content" source="media/web-application-firewall-troubleshoot/fiddler-2.png" alt-text="Screenshot of Fiddler Web Debugger. The Raw tab lists request header details like the connection, content-type, and user-agent." lightbox="media/web-application-firewall-troubleshoot/fiddler-2.png":::
 
 Another way to view request and response headers is to use the developer tools of Microsoft Edge or Google Chrome. For more information, see [Record HAR files](#record-har-files).
 
