@@ -3,7 +3,6 @@ title: Troubleshoot Azure Load Balancer outbound connectivity issues
 description: Troubleshoot Azure Load Balancer outbound connectivity issues, including SNAT port exhaustion and timeouts, and apply fixes to restore reliability today.
 services: load-balancer
 ms.service: azure-load-balancer
-ms.topic: troubleshooting
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm

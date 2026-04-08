@@ -3,7 +3,6 @@ title: Troubleshoot Azure Load Balancer resource health, frontend, and backend a
 description: Troubleshoot Azure Load Balancer resource health, frontend, and backend availability problems with key metrics to restore connectivity—start diagnosing now.
 services: load-balancer
 ms.service: azure-load-balancer
-ms.topic: troubleshooting
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
