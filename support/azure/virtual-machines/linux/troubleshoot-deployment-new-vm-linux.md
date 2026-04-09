@@ -69,9 +69,10 @@ Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
 
 When this problem occurs, the VM state shows as `failed`.
 
-### Additional Terms and Conditions required.
+### Extra Terms and Conditions required.
 
-Some Marketplace images require the user to accept terms & condigions additonal to the ones required by Microsoft Azure in order to be able to deploy them, here is a typical message error message when using the Azure CLI interface:
+Some Marketplace images require the user to accept terms & conditions additional to the ones required by Microsoft Azure in order to be
+able to deploy them, here is a typical error message when using the Azure CLI to deploy one of such images.
 
 ```output
 Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. 
