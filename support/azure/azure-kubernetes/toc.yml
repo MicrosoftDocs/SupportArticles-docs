@@ -75,6 +75,8 @@ items:
     href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
   - name: Troubleshoot pod scheduler errors
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
+  - name: Troubleshoot pod workload restarts in AKS
+    href: availability-performance/troubleshoot-pod-workload-restart.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
