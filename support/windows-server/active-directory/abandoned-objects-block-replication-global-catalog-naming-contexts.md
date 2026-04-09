@@ -33,7 +33,12 @@ This article discusses how to identify and remove abandoned objects. It covers t
   - [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](active-directory-replication-event-id-1388-1988.md)
   - [How to detect and remove lingering objects in a Windows Server Active Directory forest](information-lingering-objects.md)
 
-- Understanding of replication components, including Directory Service Agent IDs (DSA GUIDs or DSAs), invocation IDs, and update sequence numbers (USNs), as described in the following articles:
+- Understanding of replication components, including:
+   - Directory Service Agent IDs that use globally unique identifiers (GUIDs). These agents are also known as DSA GUIDs or DSAs. 
+   - Invocation IDs.
+   - Update sequence numbers (USNs).
+
+   These components are described in the following articles:
 
   - [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)
   - [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](detect-and-recover-from-usn-rollback.md)
@@ -145,9 +150,9 @@ This article describes processes that use manual steps and scripts to remove aba
 
 ### Step 1: Collect the GUIDs of the abandoned objects and the DCs that host them
 
-To remove abandoned objects, you have to identify each object by its `objectGUID` value. You can get this information from events and error messages, and from log files that record operations such as searches that produced inconsistent results. You can also use scripts to identify objects that exist in some Active Directory replicas but not others.
+To remove abandoned objects, you have to identify each object by its `objectGUID` value. You can get this information from events and error messages, and from log files that record operations, such as searches, that produce inconsistent results. You can also use scripts to identify objects that exist in some Active Directory replicas but not in others.
 
-The following example PowerShell script detects abandoned objects. It creates a list of the objects in the affected GC naming context, and then it checks to see whether each object is present in the reference child domain. If an object isn't present, the script exports the object information to a .csv file and to an .ldf file. The script doesn't change any of the objects or object attributes.
+The following example PowerShell script detects abandoned objects. It creates a list of the objects in the affected GC naming context, and then it checks to see whether each object is present in the reference child domain. If an object isn't present, the script exports the object information to a .csv file and an .ldf file. The script doesn't change any of the objects or object attributes.
 
 > [!NOTE]  
 > In this script, change the value of `$GCdomain` to the DN of the affected domain, and change `$rwdomain` to the DN of the reference DC.
@@ -179,11 +184,11 @@ Foreach($objectin$objects)
 }
 ```
 
-### Step 2: Address abandoned objects that were restored on the read-only replica, but are still tombstones on the writeable replicas
+### Step 2: Resolve abandoned objects that were restored on the read-only replica but are still tombstones on the writeable replicas
 
 You can use one or both of the following methods for this step, depending on the details of the abandoned objects. 
 
-- If you use method 1, you probably don't have to use step 3. However, method 1 is feasible only under limited circumstances, and it might not address all the abandoned objects.
+- If you use method 1, you probably don't have to use step 3. However, method 1 is feasible only under limited circumstances, and it might not resolve all the abandoned objects.
 - You can use method 2 in most cases. However, you have to continue to step 3 to complete the removal process.
 
 #### Method 1: Use the tombstones to reset the replication metadata for the objects across the replication topology
@@ -269,33 +274,33 @@ The following table provides a simplified view of how lingering objects and aban
 
 ### Investigating abandoned objects: How to interpret information from replication partners and up-to-dateness vectors
 
-Finding replication issues can be a complicated effort for many reasons. One of these reasons is that replication reports and records typically use multiple identifiers to track a single DC, and those identifiers change over time. Each DC tracks inbound replication in the following terms:
+Finding replication issues can be a complicated effort for many reasons. One reason is that replication reports and records typically use multiple identifiers to track a single DC, and those identifiers change over time. Each DC tracks inbound replication in the following terms:
 
-- The identity of the replication partner.
-- The state of the Active Directory replica on that replication partner, including whether (and when) it was restored from backup at any point.
+- The identity of the replication partner
+- The state of the Active Directory replica on that replication partner, including whether (and when) it was restored from backup at any point
 
-- Whether the replication partner has changes that haven't yet replicated.
-- All changes that the replication partner has sent previously, both before and after each restoration.
+- Whether the replication partner has changes that haven't yet replicated
+- All changes that the replication partner has sent previously, both before and after each restoration
 
 #### Identifying replication partners
 
-To trace abandoned objects, you need two globally unique identifiers (GUIDs) for each of the affected DCs and their inbound replication partners. The following table describes these GUIDs.
+To trace abandoned objects, you need two GUIDs for each of the affected DCs and their inbound replication partners. The following table describes these GUIDs.
 
-| GUID type | Also referred to as | Description |
+| GUID type | Also known as | Description |
 | - | - | - |
 | DSA object GUID | DSA GUID | This GUID is the DC's permanent identifier. Windows creates this GUID when you promote a Windows-based server to a DC. This GUID doesn't change. |
 | DSA invocationID | invocationID | This GUID identifies the current copy of Active Directory on the DC. Windows configures this GUID when you add the DC to a new or existing domain, and changes it when the DC is restored from a backup. When you promote a DC and create a new forest, that DC uses its DSA GUID as its invocation ID until the first time the DC is restored from a backup. |
 
 > [!NOTE]  
-> After you stop and deallocate a virtual DC that runs in Azure, the next time the DC starts, Windows behaves as if Active Directory was restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC.
+> If you stop and deallocate a virtual DC that runs in Azure, the next time that you start the DC, Windows behaves as if Active Directory were restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC does.
 >
->When you have to stop an Azure virtual DC, you can avoid this behavior by shutting down the VM from within the guest operating system instead of by using the Azure portal. After the virtual DC shuts itself down, you can deallocate it. For more information, see [Manageability](/azure/architecture/example-scenario/identity/adds-extend-domain#manageability) in "Deploy AD DS in an Azure virtual network."
+> If you have to stop an Azure virtual DC, you can avoid this behavior by shutting down the VM from within the guest operating system instead of by using the Azure portal. After the virtual DC shuts itself down, you can deallocate it. For more information, see [Manageability](/azure/architecture/example-scenario/identity/adds-extend-domain#manageability) in "Deploy AD DS in an Azure virtual network."
 >
-> For more general best practices in restoring virtualized DCs, see [Virtualization safeguards](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration#BKMK_VDCSafeRestore) in "Virtualized Domain Controller Deployment and Configuration"
+> For more general best practices to follow when you restore virtualized DCs, see [Virtualization safeguards](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration#BKMK_VDCSafeRestore) in "Virtualized Domain Controller Deployment and Configuration."
 
-Event ID 1084 and event ID 1988 both identify a *source server*. This server is typically a GC that acts as an inbound replication partner to the DC that generated the events (the *destination server*, typically also a GC). The abandoned object exists on the source server, but not the destination server.
+Event ID 1084 and event ID 1988 both identify a *source server*. This server is typically a GC that acts as an inbound replication partner to the DC that generated the events (the *destination server*, typically also a GC). The abandoned object exists on the source server, but not on the destination server.
 
-To get a snapshot of the current replication status of your forest, including the current DC identifiers (DSA GUIDS and invocation IDs), open a Command Prompt window on one of the DCs and run a command that resembles the following command:
+To get a snapshot of the current replication status of your forest, including the current DC identifiers (DSA GUIDS and invocation IDs), run a command that resembles the following command at a command prompt on one of the DCs:
 
 ```console
 repadmin /showrepl *
@@ -338,7 +343,7 @@ DC=contosotest,DC=com
         Last attempt @ 2026-02-10 16:07:51 was successful.
 ```
 
-This example identifies the following two DCs:
+This example identifies the following DCs:
 
 | DC name | DSA GUID | Current invocation ID |
 | - | - | - |
@@ -347,7 +352,7 @@ This example identifies the following two DCs:
 
 #### Deriving the replication history from up-to-dateness vectors
 
-Each DC maintains an up-to-dateness vector as a record of its own state and the state of each of its replication partners. To see a DC's up-to-dateness vector, run a command that resembles the following command at a command prompt on the DC.
+Each DC maintains an up-to-dateness vector as a record of its own state and the state of each of its replication partners. To see a DC's up-to-dateness vector, run a command that resembles the following command at a command prompt on the DC:
 
 ```console
 repadmin /showutdvec GC-1 dc=contosotest,dc=com
@@ -364,7 +369,7 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:03:1
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-This output is GC-1's up-to-dateness vector, which records both changes made on GC-1 and changes replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector, which indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
+This output is the up-to-dateness vector of GC-1. This vector records both the changes that are made on GC-1 and the changes that are replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each have two entries in the up-to-dateness vector. This condition indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
 
 - GC-1 was restored from backup some time between 15:07:21 and 17:03:15. The changes that were recorded at 15:07:21 were the last changes to be recorded before the restoration.
 - When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that were made on GC-1 occurred at 17:03:15.
@@ -390,15 +395,15 @@ This time, the vector entries in the output use GUIDs instead of site and server
 ae04509e-574a-4487-914c-7c08df548db9 @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-You can compare these GUIDs to the DSA and invocation ID GUIDs from the output of `repadmin /showrepl`. You can also match USNs and timestamps between this set of entries and the previous example. In this example, replication continued after the first run of `repadmin /showutdvec`, so the second run produced some slight changes in USNs and timestamps. The two examples together provide enough data to derive the following information:
+You can compare these GUIDs to the DSA and invocation ID GUIDs from the output of `repadmin /showrepl`. You can also match USNs and timestamps between this set of entries and the previous example. In this example, replication continued after the first run of `repadmin /showutdvec`. Therefore, the second run produces some slight changes in USNs and timestamps. The two examples together provide enough data to derive the following information:
 
-- Each entry has a unique GUID. In this example, you can compare the GUID version of the output to the site\server name version of the output to associate GUIDs and GCs and identify the two entries for each GC.
+- Each entry has a unique GUID. In this example, you can compare the GUID version of the output to the site or server name version of the output to associate GUIDs and GCs and identify the two entries for each GC.
 - To further identify the GUIDs, compare the GC and GUID combinations to the output of `repadmin /showrepl`. From this data, you can derive the following information:
 
   - The oldest entry for GC-1 contains GC-1's DSA GUID. This entry indicates that GC-1 is the first DC in the forest. The second entry for GC-1 contains its current invocation ID.
-  - None of the entries for GC-2 use its DSA GUID. GC-2 is the second DC in the forest. When you add a DC to an existing forest, Windows immediately assigns it an invocation ID. The oldest entry for GC-2 uses this first invocation ID.
+  - None of the entries for GC-2 use its DSA GUID. GC-2 is the second DC in the forest. When you add a DC to an existing forest, Windows immediately assigns an invocation ID to it. The oldest entry for GC-2 uses this first invocation ID.
 
-In this example, GC-2 also accepts inbound replication from GC-1. Running `repadmin /showutdvec` against GC-2 generates its view of its own changes and the changes that were replicated from GC-1.
+In this example, GC-2 also accepts inbound replication from GC-1. When you run `repadmin /showutdvec` against GC-2, GC-2 generates its view of its own changes and the changes that were replicated from GC-1.
 
 ```output
 Caching GUIDs.
@@ -409,7 +414,7 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:02:3
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-Comparing the historical data for GC-1 and GC-2 shows that the up-to-dateness vectors are consistent:
+You can compare the historical data for GC-1 and GC-2 to show that the up-to-dateness vectors are consistent:
 
 | Entry | Reported by GC-1 | Reported by GC-2 |
 | - | - | - |
@@ -425,12 +430,12 @@ This table shows that each GC's view of the other is slightly out of date. GC-1 
 
 #### Finding indicators of abandoned objects in the replication partner data and the up-to-dateness vectors
 
-When the naming context you're investigating has abandoned objects, you might see the following discrepancies (in addition to the error messages that the Symptoms section describes).
+If the naming context that you're investigating has abandoned objects, you might see the following discrepancies (in addition to the error messages that the "Symptoms" section describes):
 
 - The invocation ID (or DSA GUID) of the source GC never appears in the up-to-dateness vector. This result indicates that the source GC never finished the initial full replication cycle of the naming context to the destination GC.
 - The invocation ID (or DSA GUID) of the source GC exists in the up-to-dateness vector, but its timestamp of the most recent entry isn't current. This result indicates that the source GC stopped replicating or was removed from the replication topology.
 
-To help determine what caused the issue, you can retrieve up-to-dateness information from other DCs or GCs that use the affected GC as a replication source. For example, identifying which servers didn't information from the affected source GC and which did can help isolate a network infrastructure issue.
+To help determine what caused the issue, you can retrieve up-to-dateness information from other DCs or GCs that use the affected GC as a replication source. For example, you can identify which servers didn't get information from the affected source GC and which did to help isolate a network infrastructure issue.
 
 ## References
 
