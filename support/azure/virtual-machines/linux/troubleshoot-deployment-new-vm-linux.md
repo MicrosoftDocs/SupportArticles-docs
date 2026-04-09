@@ -74,7 +74,12 @@ When this problem occurs, the VM state shows as `failed`.
 Some Marketplace images require the user to accept terms & condigions additonal to the ones required by Microsoft Azure in order to be able to deploy them, here is a typical message error message when using the Azure CLI interface:
 
 ```output
-Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. For more information see details. Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd' You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal provides a UI experience for reading and accepting the legal terms. Offer details: publisher='llll' offer = 'xxxxxxx', sku = 'xxxxx-xxx, Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'.[{"You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal provides a UI experience for reading and accepting the legal terms. Offer details: publisher='pppp' offer = 'somelinux-aarch64', sku = 'somelinux-aarch64', Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'.":"StoreApi"}]
+Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. 
+For more information see details. Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd' You have not accepted the legal terms on this subscription: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' 
+for this plan. Before the subscription can be used, you need to accept the legal terms of the image. To read and accept legal terms, use the Azure CLI commands described at 
+https://go.microsoft.com/fwlink/?linkid=2110637 or the PowerShell commands available at https://go.microsoft.com/fwlink/?linkid=862451. Alternatively, deploying via the Azure portal
+provides a UI experience for reading and accepting the legal terms. Offer details: publisher='llll' offer = 'xxxxxxx', sku = 'xxxxx-xxx, 
+Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'...
 ```
 
 There are three options to resove the issue:
