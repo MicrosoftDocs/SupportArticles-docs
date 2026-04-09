@@ -262,9 +262,9 @@ The following table provides a simplified view of how lingering objects and aban
 | - | - | - |
 | 1. The object doesn't exist. | 1. The object exists on all DCs | 1. The object exists on all DCs. |
 | ~ | ~ | 2. One DC (DC-1) disconnects from the network. |
-| ~ | 2. Delete the object. That change replicates to all DCs. | 3. Delete the object. That change replicates to all remaining DCs. |
-| 2. Connect to a DC (DC-2), and then create the object. | 3. Before the tombstone lifetime expires, connect to one DC (DC-3), and then restore (undelete) the object. | ~ |
-| 3. The "create object" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-2 disconnects from the network. | 4. The "restore" change replicates to GCs or RODCs. Before the change replicates to regular DCs, DC-3 disconnects from the network. | ~ |
+| ~ | 2. The object is deleted. The "delete" change replicates to all DCs. | 3. The object is deleted. The "delete" change replicates to all remaining DCs. |
+| 2. The object is created on DC-2. The "create" change replicates to GCs or RODCs. | 3. Before the tombstone lifetime expires, the object is restored (undeleted) on DC-3. The "restore" change replicates to GCs or RODCs. | ~ |
+| 3. Before the "create" change replicates to regular DCs, DC-2 disconnects from the network. | 4. Before the "restore" change replicates to regular DCs, DC-3 disconnects from the network. | ~ |
 | ~ | 5. The tombstone lifetime expires. | 4. The tombstone lifetime expires. |
 | ~ | ~ | 5. DC-1 reconnects to the network. |
 | **Result**: Some GCs or RODCs have the object, and the "create" USN. Regular DCs don't have the object or the "create" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Some GCs or RODCs have the object, and the "restore" USN. Regular DCs don't have the object or the "restore" USN, and don't receive inbound replication from GCs or RODCs. | **Result**: Only DC-1 has the object. DC-1 doesn't have the "delete" USN. The other DCs don't have any reference to the object beyond the historical USNs. |
