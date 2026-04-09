@@ -213,7 +213,7 @@ In many cases, the reference DC has tombstones (or objects in the Recycle Bin) f
 
 To more quickly clean out the tombstones or deleted objects from the reference DC, use the following methods to shorten the amount of time that these objects remain before the garbage collection process removes them.
 
-- **Remove objects from the Recycle Bin.** You can use Windows PowerShell to force deleted objects to become recycled objects before `msDS-deletedObjectLifetime` expires. To do this, open an administrative PowerShell Command Prompt window on the reference DC, and then run a command that resembles the following example:
+- **Remove objects from the Recycle Bin.** You can use Windows PowerShell to force deleted objects to become recycled objects before `msDS-deletedObjectLifetime` expires. To run this process, open an administrative PowerShell Command Prompt window on the reference DC, and then run a command that resembles the following example:
 
   ```powershell
   Get-ADObject -Filter 'isDeleted -eq $True -and -not (isRecycled -eq $true) -and name -ne "Deleted Objects" -and lastKnownParent -eq "<LastKnownParent_DN>"' -IncludeDeletedObjects | Remove-ADObject
@@ -280,7 +280,7 @@ Finding replication issues can be a complicated effort for many reasons. One rea
 - The state of the Active Directory replica on that replication partner, including whether (and when) it was restored from backup at any point
 
 - Whether the replication partner has changes that haven't yet replicated
-- All changes that the replication partner has sent previously, both before and after each restoration
+- All changes that the replication partner sent previously, both before and after each restoration
 
 #### Identifying replication partners
 
@@ -300,7 +300,7 @@ To trace abandoned objects, you need two GUIDs for each of the affected DCs and 
 
 Event ID 1084 and event ID 1988 both identify a *source server*. This server is typically a GC that acts as an inbound replication partner to the DC that generated the events (the *destination server*, typically also a GC). The abandoned object exists on the source server, but not on the destination server.
 
-To get a snapshot of the current replication status of your forest, including the current DC identifiers (DSA GUIDS and invocation IDs), run a command that resembles the following command at a command prompt on one of the DCs:
+Take a snapshot of the current replication status of your forest, including the current DC identifiers (DSA GUIDS and invocation IDs). To get the snapshot, run a command that resembles the following command at a command prompt on one of the DCs:
 
 ```console
 repadmin /showrepl *
