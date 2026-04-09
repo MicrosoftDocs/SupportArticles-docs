@@ -412,6 +412,8 @@ items:
       href: boot-error-0xc0000221.md
     - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
       href: windows-boot-failure.md
+    - name: Windows Server 2012 R2 boot failure after platform update
+      href: windows-server-2012r2-boot-failure-platform-update.md
     - name: Azure VM startup hangs at "Applying Group Policy Environment"
       href: applying-group-policy-environment-policy.md
     - name: Azure VM startup hangs at "Applying Group Policy Scheduled Tasks policy"
