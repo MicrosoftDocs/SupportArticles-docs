@@ -355,17 +355,18 @@ If none of the previous steps identifies a configuration issue, the error might 
 
 To clear the validation cache, use one of the following methods:
 
-**Method 1: Use the dimension cache clearing tools**
+**Method 1: Use data maintenance**
+
+1. Go to **System administration** \> **Periodic tasks** \> **Data maintenance**.
+2. Under the **All** tab, find the **Clear all dimension caches** data maintenance action.
+3. Run the data maintenance action to clear all dimension caches. This process typically finishes within five minutes.
+
+**Method 2: Use the dimension cache clearing tools**
 
 Navigate to the following menu items to clear the validation cache:
 
-- **Clear dimension validation status**: Go to `/?mi=DimensionClearValidationStatus`.
-- **Clear dimension cache scopes** (optional, if other dimension issues occur): Go to `/?mi=DimensionClearCacheScopes`.
-
-**Method 2: Use data maintenance**
-
-1. Go to **System administration** \> **Periodic tasks** \> **Data maintenance**.
-1. Run the action to clear all dimension caches. This process typically finishes within five minutes.
+- **Clear dimension validation status**: Go to `/?mi=DimensionClearValidationStatus`. For example, if the base URL of your environment is "https://[environmentName].com/", then the URL will be "https://[environmentName].com/?mi=DimensionClearValidationStatus".
+- **Clear dimension cache scopes** (optional, if other dimension issues occur): Go to `/?mi=DimensionClearCacheScopes`. For example, if the base URL of your environment is "https://[environmentName].com/", then the URL will be "https://[environmentName].com/?mi=DimensionClearCacheScopes".
 
 **Method 3: Reactivate the account structure**
 
@@ -373,10 +374,10 @@ Navigate to the following menu items to clear the validation cache:
 > This method should be used only when no active data entry, import, or batch processing is occurring in the system.
 
 1. Go to **General ledger** \> **Chart of accounts** \> **Structures** \> **Configure account structures**.
-1. Select the account structure that's referenced in the error, and then select **Edit**.
-1. Make a minor change (for example, add a constraint value such as `zzzzz` that doesn't match any current values).
-1. Select **Activate** to send the activation to batch processing.
-1. Wait for the batch job to finish, and then retry the business process.
+2. Select the account structure that's referenced in the error, and then select **Edit**.
+3. Make a minor change (for example, add a constraint value such as `zzzzz` that doesn't match any current values).
+4. Select **Activate** to send the activation to batch processing.
+5. Wait for the batch job to finish, and then retry the business process.
 
 If the error no longer occurs after you clear the cache, the issue was caused by stale validation data. To help prevent this situation in the future, avoid activating account structures while significant system activity (such as batch processing or data entry) is occurring.
 
