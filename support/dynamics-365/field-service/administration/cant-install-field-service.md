@@ -2,7 +2,7 @@
 title: Dynamics 365 Field Service installation troubleshooting
 description: Follow this step-by-step guide to resolve Dynamics 365 Field Service installation failures that are caused by missing Dataverse stores, disabled Dynamics 365 apps, or unassigned licenses.
 ms.date: 04/08/2026
-ms.reviewer: jshotts, v-wendysmith, v-shaywood
+ms.reviewer: jasonshotts, v-wesmith, v-shaywood
 ms.custom: sap:Administration
 ---
 
