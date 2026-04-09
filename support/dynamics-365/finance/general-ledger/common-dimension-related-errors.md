@@ -365,8 +365,8 @@ To clear the validation cache, use one of the following methods:
 
 Navigate to the following menu items to clear the validation cache:
 
-- **Clear dimension validation status**: Go to `/?mi=DimensionClearValidationStatus`. For example, if the base URL of your environment is "https://[environmentName].com/", then the URL will be "https://[environmentName].com/?mi=DimensionClearValidationStatus".
-- **Clear dimension cache scopes** (optional, if other dimension issues occur): Go to `/?mi=DimensionClearCacheScopes`. For example, if the base URL of your environment is "https://[environmentName].com/", then the URL will be "https://[environmentName].com/?mi=DimensionClearCacheScopes".
+- **Clear dimension validation status**: Go to `/?mi=DimensionClearValidationStatus`. For example, if the base URL of your environment is `https://[environmentName].com/`, then the URL will be `https://[environmentName].com/?mi=DimensionClearValidationStatus`.
+- **Clear dimension cache scopes** (optional, if other dimension issues occur): Go to `/?mi=DimensionClearCacheScopes`. For example, if the base URL of your environment is `https://[environmentName].com/`, then the URL will be `https://[environmentName].com/?mi=DimensionClearCacheScopes`.
 
 **Method 3: Reactivate the account structure**
 
