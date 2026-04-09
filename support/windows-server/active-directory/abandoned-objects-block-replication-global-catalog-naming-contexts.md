@@ -72,9 +72,6 @@ Level:         Error
 
 Description:
 The directory replication agent (DRA) couldn't update object <FQDN> (GUID <ObjectGUID>) on this system with changes which have been received from source server <SourceServerGUID>._msdcs.bc.com. An error occurred during the application of the changes to the directory database on this system.  
-
-You receive the following error message:  
-There is no such object on the server.
 ```
 
 If you run `repadmin /showreps` at a command prompt on the destination GC, the output includes a message that resembles the following example.
