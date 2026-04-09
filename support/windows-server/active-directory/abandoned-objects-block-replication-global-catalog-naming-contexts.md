@@ -369,7 +369,7 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:03:1
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-This output is the up-to-dateness vector of GC-1. This vector records both the changes that are made on GC-1 and the changes that are replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each have two entries in the up-to-dateness vector. This condition indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
+This output is the up-to-dateness vector of GC-1. This vector records both the changes that are made on GC-1 and the changes that are replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector. This condition indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
 
 - GC-1 was restored from backup some time between 15:07:21 and 17:03:15. The changes that were recorded at 15:07:21 were the last changes to be recorded before the restoration.
 - When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that were made on GC-1 occurred at 17:03:15.
