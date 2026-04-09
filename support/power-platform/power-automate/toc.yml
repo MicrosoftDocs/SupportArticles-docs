@@ -271,7 +271,7 @@ items:
         href: flow-creation/widget-cookies-pop-up-error.md
   - name: Flow management
     items:
-      - name: Manage orphan flows when the owner leaves the organization
+      - name: Manage orphaned flows when the owner leaves the organization
         href: flow-management/manage-orphan-flow-when-owner-leaves-org.md
   - name: Flow run issues
     items:
