@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 03/24/2026
+ms.date: 04/08/2026
 ms.custom: sap:backend health,sfi-image-nochange
 # Customer intent: As an IT admin, I want to troubleshoot backend health issues in Application Gateway, so that I can ensure my backend servers are operational and effectively serving requests.
 ---
@@ -15,8 +15,9 @@ ms.custom: sap:backend health,sfi-image-nochange
 
 ## Summary
 
-By default, Azure Application Gateway probes backend servers to check their health status and to check whether they're ready to serve requests. Users can also create custom probes to mention the host name, the path to be probed, and the status codes to be accepted as Healthy. In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding
-successfully, Application Gateway resumes forwarding the requests.
+By default, Azure Application Gateway probes backend servers (associated with a rule) to check their health status and to  In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding successfully, Application Gateway resumes forwarding the requests.
+
+Users can also create [custom probes](/azure/application-gateway/application-gateway-probe-overview#custom-health-probe) to mention the host name, the path to be probed, and the status codes to be accepted as Healthy.
 
 ### How to check backend health
 
@@ -412,7 +413,7 @@ This behavior can occur for one or more of the following reasons:
 
 1. If there's a custom DNS server configured on the virtual network, verify that the servers can resolve public domains. Public domain name resolution might be required in scenarios where Application Gateway must reach out to external domains like OCSP (Online Certificate Status Protocol) servers or to check the certificate's revocation status.
 
-1. To verify that Application Gateway is healthy and running, go to the **Resource Health** option in the portal, and verify that the state is **Healthy**. If you see an **Unhealthy** or **Degraded** state, [contact support](https://azure.microsoft.com/support/options/).
+1. To verify that Application Gateway is healthy and running, go to the **Resource Health** option in the portal, and verify that the state is **Healthy**. If you see an **Unhealthy** or **Degraded** state, contact Azure support.
 
 1. If Internet and private traffic are going through an Azure Firewall hosted in a secured Virtual hub (using Azure Virtual WAN Hub):
 
@@ -429,6 +430,8 @@ This behavior can occur for one or more of the following reasons:
 > [!NOTE]
 > If the application gateway is not able to access the CRL endpoints, it might mark the backend health status as "unknown". To prevent these issues, check that your application gateway subnet is able to access `crl.microsoft.com` and `crl3.digicert.com`. This can be done by configuring your Network Security Groups to send traffic to the CRL endpoints. 
 
-## Next steps
+## Reference
 
-Learn more about [Application Gateway diagnostics and logging](/azure/application-gateway/application-gateway-diagnostics).
+- [Application Gateway backend health diagnostics and logging](/azure/application-gateway/application-gateway-backend-health).
+- Azure Network Watcher's Connection troubleshoot - Visit the [Connection Troubleshoot](/azure/network-watcher/connection-troubleshoot-manage) documentation article to learn how to use this tool.
+
