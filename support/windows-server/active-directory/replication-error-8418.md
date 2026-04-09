@@ -198,10 +198,15 @@ In Active Directory:
 > Object: Cn=Schema,cn=configuration,dc=contoso,dc=com  
 Attribute: ObjectVersion
 
-The schema version in AD can be exported using one of the following commands
+You can use either of the following commands to export the schema version from Active Directory.
 
-`Ldifde -f schemaver.ldf -d Cn=Schema,cn=configuration,dc=contoso,dc=com -l ObjectVersion  
-dsquery * cn=schema,cn=configuration,dc=contoso,dc=com -scope base -attr objectVersion`
+```console
+Ldifde -f schemaver.ldf -d Cn=Schema,cn=configuration,dc=contoso,dc=com -l ObjectVersion
+```
+
+```console
+dsquery * cn=schema,cn=configuration,dc=contoso,dc=com -scope base -attr objectVersion
+```
 
 ### Possible Resolution 1 - recent update
 
@@ -215,7 +220,9 @@ It's possible that a reboot of the source DC will resolve the replication failur
 
 Data Collection Phase 2  
 
-In the event that the resolution above is not applicable or is unsuccessful increase "NTDS Diagnostic" Event Logging on both Source AND Destination DCs under the following registry key
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+In the event that the previous resolution is not applicable or is unsuccessful, increase "NTDS Diagnostic" Event Logging on both Source AND Destination DCs under the following registry subkey
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics`
 
@@ -245,9 +252,10 @@ Event ID's of interest from the Directory Service Event log include:
 
 The following example events show both an internal ID and extended error data
 
-> Log Name: Directory Service  
+```output
+Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: *\<DateTime>*  
+Date: <DateTime>  
 Event ID: 1173  
 Task Category: Internal Processing  
 Level: Warning  
@@ -264,12 +272,14 @@ Error value:
 8364  
 Internal ID:  
 2050078
+```
 
 The following example event identifies a specific object on which replication blocked.
 
-> Log Name: Directory Service  
+```output
+Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: *\<DateTime>*  
+Date: <DateTime>  
 Event ID: 1203  
 Task Category: Replication  
 Level: Warning  
@@ -284,8 +294,9 @@ Active Directory Domain Services will attempt to synchronize the schema before a
 DC=contoso,DC=comiption:  
 The directory service could not replicate the following object from the source directory service at the following network address because of an Active Directory Domain Services schema mismatch. Object:  
 CN=Machine,CN={54EFB8A2-33F1-4E04-B4AD-229ABA513555},CN=Policies,CN=System,DC=contoso,DC=com Network address:  
-*\<GUID>*._msdcs.contoso.com  
+<GUID>._msdcs.contoso.com  
 Active Directory Domain Services will attempt to synchronize the schema before attempting to synchronize the following directory partition. Directory partition: DC=contoso,DC=com
+```
 
 Review the data collected  
 
@@ -401,7 +412,7 @@ else {
 
 ```
 
-<!--
+
 Examples of other causes include but are not limited to:
 
 - Database Corruption
@@ -420,38 +431,43 @@ Examples of other causes include but are not limited to:
 
 - Local firewalls
 
-See Causes Section for details of events and related status codes for some of these issues.
-/!-->
+See [Causes](#cause) for details of events and related status codes for some of these issues.
 
 ### Supplementary Actions  
 
-If the object triggering failure can be identified, then first use `repadmin /showobjmeta` to dump the object replication metadata and on both source and destination DC. This method can be used to identify "candidate" attributes that could be the cause of failure
+If the object triggering failure can be identified, then first use `repadmin /showobjmeta` to dump the object replication metadata and on both source and destination DC. This method can be used to identify "candidate" attributes that could be the cause of failure.
 
-`Repadmin /showobjmeta Target_DC "DN_of Trigger_Object"`
+```console
+Repadmin /showobjmeta Target_DC "<DN_of_Trigger_Object>"
+```
 
 If only the GUID of the object is known use the syntax:
 
-`Repadmin /showobjmeta Target_DC "\<GUID=ObjectGuid_of Trigger_Object>"`
+`Repadmin /showobjmeta Target_DC "<GUID=ObjectGuid_of_Trigger_Object>"`
 
 Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute name
 
 Example  
 
-The two entries fro replication metadata for a problem object as displayed by `Repadmin.exe` shows no ldapdisplayname:
+The two entries for replication metadata for a problem object as displayed by `Repadmin.exe` shows no `ldapdisplayname`:
 
-> USN DSA Org USN Org. Time/Date Version Attribute  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 *\<DateTime>* 2  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 *\<DateTime>* 3
+```output
+USN DSA Org USN Org. Time/Date Version Attribute  
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime> 2  
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime> 3
+```
 
-If any of the metadata fields has no associated name try using ldp.exe  to expose the internal attributeid
+If any of the metadata fields has no associated name, try using ldp.exe  to expose the internal `attributeid`.
 
-The metadata for the same object above as displayed in LDP.exe shows the AttributeID associated with the data
+The metadata for the same object above as displayed in LDP.exe shows the `AttributeID` associated with the data
 
-> AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date  
-250000 2 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 *\<DateTime>*  
-250004 3 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 *\<DateTime>*  
+```output
+AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date  
+250000 2 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime>  
+250004 3 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
+```
 
-The attribute ID can be used to help identify the problem attribute but requires the engagement of Microsoft Support.
+The attribute ID can be used to help identify the problem attribute, but requires the engagement of Microsoft Support.
 
 Version comparison - attributes to be replicated will have higher version numbers on the source.
 
