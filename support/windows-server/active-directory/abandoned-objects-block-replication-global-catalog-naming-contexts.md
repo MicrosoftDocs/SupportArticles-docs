@@ -118,7 +118,7 @@ To distinguish whether you have lingering objects or abandoned objects, open a C
 repadmin /removelingeringobjects
 ```
 
-After the command finishes, run it a second time. If the objects are still present, they're likely to be abandoned objects instead of lingering objects. The details of this behavior depend on the Windows Server version that you're using.
+After the command finishes, run it a second time. If the objects are still present, they're likely to be abandoned objects instead of lingering objects.
 
 When you check the objects by name or GUID, you don't find them on writable DCs.
 
