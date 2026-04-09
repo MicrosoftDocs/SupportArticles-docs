@@ -45,8 +45,8 @@ Windows 8, Windows Server 2012, and later versions of each system negotiate requ
 #### Solution for cause 1
 
 1. Connect from a client that supports SMB encryption (Windows 8/Windows Server 2012 or later).
-2. Connect from a virtual machine (VM) in the same datacenter as the Azure storage account that's used for the Azure file share.
-3. If the client doesn't support SMB encryption, verify that both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting are disabled on the storage account.
+1. Connect from a virtual machine (VM) in the same datacenter as the Azure storage account that's used for the Azure file share.
+1. If the client doesn't support SMB encryption, verify that both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting are disabled on the storage account.
 
 #### Cause 2: Virtual network or firewall rules are enabled on the storage account
 
@@ -266,11 +266,13 @@ Common causes for this problem are:
 - The minimum SMB version, 2.1, isn't available on the client.
 - SMB 3.x encryption isn't supported on the client. The preceding table provides a list of Linux distributions that support mounting from on-premises and cross-region using encryption. Other distributions require kernel 4.11 and later versions.
 - You're trying to connect to an Azure file share from an Azure VM, and the VM isn't in the same region as the storage account.
-- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, Azure Files will allow only connections that use SMB 3.x with encryption.
+- If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting or the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting is enabled on the storage account, Azure Files will allow only connections that use SMB 3.x with encryption.
 
 ### Solution
 
-To resolve the problem, use the [troubleshooting tool for Azure Files mounting errors on Linux](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux). This tool:
+If the client doesn't support SMB encryption, verify that both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for SMB](/azure/storage/files/files-smb-protocol#smb-security-settings) setting are disabled on the storage account.
+
+You can use the [troubleshooting tool for Azure Files mounting errors on Linux](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to resolve the problem. This tool:
 
 - Helps you to validate the client running environment.
 - Detects the incompatible client configuration that would cause access failure for Azure Files.
