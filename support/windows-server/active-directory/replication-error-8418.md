@@ -95,33 +95,121 @@ Replication of any Active Directory data between DCs in a forest depends on all 
 
 **
 
-Attempts to replicate AD when schema information is not consistent between the DC partners involved causes a "Schema Mismatch" error.. This symptom manifests in a number of different ways. However, the underlying cause of the error varies.
+Attempts to replicate AD when schema information is not consistent between the DC partners involved causes a "Schema Mismatch" error. This symptom manifests in a number of different ways. However, the underlying cause of the error varies.
 
 There are also scenarios in which this error occurs, but there is not a mismatch in the schema information in the strictest sense. In these cases, Active Directory might not conform to the current schema definition for the relevant object or attribute whose value is being synchronized and applied at the destination DC.
 
+> [!IMPORTANT]  
+> Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
+
 **
 
+
+
+The duration of schema mismatch errors typically falls into one of two categories: Transient or persistent.
+
+If the reports of schema mismatch errors match the following criteria, you can classify them as *transient* schema mismatch errors.
+
+- The reports appear on different DCs throughout the forest, in a pattern that matches the AD replication topology and schedule. This kind of pattern typically occurs when you install an update to the schema.
+- On any particular DC, the issue disappears after one replication cycle per replication partner. Allow twice the amount of time needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners a DC has, the longer this process takes.
+
+Schema mismatch errors that don't meet these criteria and don't resolve themselves are *persistent* schema mismatch errors. Such errors indicate that there's an underlying issue that's interfering with normal replication. In some cases, you can identify and resolve the underlying issues. In other cases, you might need assistance from Microsoft Support.
+
+**
 For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
 
-**
+## Resolution
 
-The duration of schema mismatch errors typically falls into one of two categories: Transient or persistent. Within the persistent category, there are some failures that can be investigated AND resolved safely.
-
-### Transient Symptom Triggers  
-
-Note: Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
+### Transient issues
 
 Schema Update - after an administrative schema update is likely that a schema mismatch will occur on various DC's throughout the forest. This will typically happen in a pattern that matches the AD replication topology and schedule. This behavior is normal so long as the error state is transient*. This class of failure is most likely to be reported by monitoring software and requires no administrative intervention.
 
-The duration for which schema mismatch may be logged by a given destination DC should last no more than one replication cycle for any given partner. DC's with only one partner should only see the error once while bridge head dc's may see the error multiple times, once for each partner.
 
-*A reasonable estimate of the acceptable time limit transient failure is twice the amount of time taken for an object update to replicate from one DC to all other DCs in the forest.
+### Diagnostics for persistent issues
 
-### Persistent Symptom Triggers  
+In order to resolve an issue where schema mismatch is cited, it is critical to understand the scenario in which the is error is being raised as it may influence the data collected. The common scenarios are:  
+
+- Recent schema update
+- DC promotion
+- Normal replication
+- nTSecurityDescriptor size
+
+
 
 In some scenarios the schema mismatch error will persist indefinitely and intervention is required to investigate, identify the underlying trigger and resolve. Some scenarios present as known issues while in others the Schema Mismatch is purely a side effect of other blocking issues that prevent it from self-resolving through normal replication.
 
-Issues that might prevent Active Directory from resolving a schema mismatch:
+The following events or errors indicate issues that might prevent Active Directory from resolving a schema mismatch:
+
+|Event source|Event ID or <br/>Event ID/Error status| Potential issue|
+|---|---|---|
+|Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication, DCPromo |1203| |
+|Microsoft-Windows-ActiveDirectory_DomainService|1309/8418|`|
+|Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication|1791/8418| |
+|NTDS KCC|1925/8418| |
+| |2042/8614|Replication quarantine (It has been too long since this machine replicated)|
+|NTDS Replication, Repadmin, Active Directory Sites and Services |8606 or 1988/8606|Insufficient attributes to create an object.|
+| |/8456 or /8457|Rejected replication requests|
+| |2023/8524|DNS issue|
+|RepAdmin, DCPromo, DCDiag tools|1722 or 1753|RPC issue|
+| |1450/1340|Security descriptor too large.|
+
+See the following articles to fix related issues:
+
+["Schema mismatch" error message occurs when you try to run the Active Directory Installation Wizard (Dcpromo.exe)](schema-mismatch-error-ad-installation-wizard-dcpromo.md)
+  Context: DCPromo fails
+  Symptoms: event ID 1203
+
+[Troubleshoot Active Directory replication error 8614](replication-error-8614.md)
+  Context: Replication quarantine (It has been too long since this machine replicated)
+  Symptoms: DCDiag/ Repadmin: error 8614. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events, including:
+    NTDS KCC Event ID 1925
+    NTDS Replication Event ID 2042 (also [Active Directory replication Event ID 2042: It has been too long since this machine replicated](active-directory-replication-event-id-2042.md))
+    Active Directory Sites and Services
+
+[Active Directory Replication Error 8606: Insufficient attributes were given to create an object](replication-error-8606.md)
+  Context: DCDiag, Repadmin ADS&S 
+  Symptoms: error message, event
+    NTDS Replication Event ID 1988 (abandoned/lingering object): [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](active-directory-replication-event-id-1388-1988.md)
+
+|[Active Directory replication error 8456 or 8457: The source / destination server is currently rejecting replication requests](replication-error-8456-8457.md)
+  Context: DCPromo, DCDiag, RepAdmin
+  Symptoms error messages, events (multiple possible causes)
+    Incoming or outgoing replication was automatically disabled by the operating system because of multiple root causes.
+
+      Three events that disable inbound or outbound replication include:
+      
+      A USN rollback occurred (NTDS General Event 2103).
+      The hard disk is full (NTDS General Event 1393).
+      A corrupt UTD vector is present (Event 2881).
+
+  Events with this status code: 
+    NTDS KCC   1308
+    NTDS KCC   1925
+    NTDS KCC   1926
+    NTDS Replication   1586
+    NTDS Replication   2023
+    Microsoft-Windows-ActiveDirectory_DomainService   2095
+    Microsoft-Windows-ActiveDirectory_DomainService   2103
+
+[Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](replication-error-8524.md)
+  Context: DCDiag, RepAdmin, 
+  Symptoms: Error messages, events
+
+  Events with this status code: 
+    Microsoft-Windows-ActiveDirectory_DomainService   2023
+    NTDS General   1655
+    NTDS KCC   1308
+    NTDS KCC   1865
+    NTDS KCC   1925
+    NTDS KCC   1926
+
+  Related:
+    NTDS Replication event 2087 and NTDS Replication event 2088 
+
+[Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md)
+
+
+[Active Directory replication error 8304: "The maximum size on an object has been exceeded"](active-directory-replication-error-8304.md)
 
 |Topic|KB|Key Data|
 |---|---|---|
@@ -133,14 +221,6 @@ Issues that might prevent Active Directory from resolving a schema mismatch:
 |RPC|1722:<br/><br/> [Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md) <br/><br/>1753:<br/><br/>[Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](replication-error-1753.md)|Status Code 1722<br/><br/>Status Code 1753|
 |nTSecurityDescriptor Size ||Event ID 1450 with Error value 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built. <br/><br/>This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.|
   
-## Resolution
-
-In order to resolve an issue where schema mismatch is cited, it is critical to understand the scenario in which the is error is being raised as it may influence the data collected. The common scenarios are:  
-
-- Recent schema update
-- DC promotion
-- Normal replication
-- nTSecurityDescriptor size
 
 
 
@@ -308,128 +388,18 @@ Look for events that might indicate other underlying issues on the source or des
 
 If the Size of the nTSecurityDescriptor is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
 
-```console
-#This sample script is not supported under any Microsoft standard support 
-#program or service. This sample script is provided AS IS without warranty of 
-#any kind. Microsoft further disclaims all implied warranties including,
-#without limitation, any implied warranties of merchantability or of fitness
-#for a particular purpose. The entire risk arising out of the use or 
-#performance of the sample scripts and documentation remains with you. In no 
-#event shall Microsoft, its authors, or anyone else involved in the creation,
-#production, or delivery of the scripts be liable for any damages whatsoever 
-#(including, without limitation, damages for loss of business profits, business
-#interruption, loss of business information, or other pecuniary loss) arising 
-#out of the use of or inability to use this sample script or documentation, 
-#even if Microsoft has been advised of the possibility of such damages.
-
-<#
-
-.SYNOPSIS
-    Calculates the size (in bytes) of the ntSecurityDescriptor on AD objects under a given base DN,
-    and writes results to a CSV file.
-
-.PARAMETER Base
-    The LDAP base DN or container to search (e.g., "OU=Users,DC=contoso,DC=com")
-
-.PARAMETER OutputPath
-    Path to the CSV file where results will be written.
-
-.PARAMETER MinimumSize
-    Optional. Only include objects whose ntSecurityDescriptor size is greater than this threshold (in bytes).
-
-.EXAMPLE
-    .\Get-ACLByteSize.ps1 -Base "OU=Users,DC=contoso,DC=com" -OutputPath "C:\Temp\NTSD_Sizes.csv"
-
-.EXAMPLE
-    .\Get-ACLByteSize.ps1 -Base "DC=contoso,DC=com" -OutputPath "C:\Temp\NTSD_Sizes.csv" -MinimumSize 60000
-#>
-
-param(
-    [Parameter(Mandatory = $true)]
-    [string]$Base,
-
-    [Parameter(Mandatory = $true)]
-    [string]$OutputPath,
-
-    [Parameter(Mandatory = $false)]
-    [int]$MinimumSize = 0
-)
-
-Import-Module ActiveDirectory -ErrorAction Stop
-
-$results = @()
-
-Write-Host "Enumerating AD objects under $Base ..."
-
-$Objects = Get-ADObject -Filter * -SearchBase $Base -Properties distinguishedName
-
-foreach ($object in $Objects) {
-    try {
-        # Bind and request SD
-        $searcher = [adsisearcher]"(distinguishedName=$($object.DistinguishedName))"
-        $searcher.PropertiesToLoad.Add("ntSecurityDescriptor") | Out-Null
-        $searcher.SecurityMasks = "Dacl,Owner,Group,sacl"
-        $result = $searcher.FindOne()
-
-        if ($null -ne $result -and $result.Properties["ntsecuritydescriptor"].Count -gt 0) {
-            $sdBytes = $result.Properties["ntsecuritydescriptor"][0]
-
-            if ($sdBytes -is [byte[]]) {
-                $size = $sdBytes.Length
-            }
-            elseif ($sdBytes -is [System.DirectoryServices.ActiveDirectorySecurity]) {
-                $size = ($sdBytes.GetSecurityDescriptorBinaryForm()).Length
-            }
-            else {
-                Write-Warning "Unexpected SD type on $($object.DistinguishedName): $($sdBytes.GetType().FullName)"
-                continue
-            }
-
-            if ($size -ge $MinimumSize) {
-                $results += [pscustomobject]@{
-                    DistinguishedName = $object.DistinguishedName
-                    ObjectClass       = $object.ObjectClass
-                    NTSD_Size_Bytes   = $size
-                }
-            }
-        }
-        else {
-            Write-Verbose "No ntSecurityDescriptor found for $($object.DistinguishedName)"
-        }
-    }
-    catch {
-        Write-Warning "Error processing $($object.DistinguishedName): $_"
-    }
-}
-
-if ($results.Count -gt 0) {
-    $results | Sort-Object NTSD_Size_Bytes -Descending | Export-Csv -Path $OutputPath -NoTypeInformation -Encoding UTF8
-    Write-Host "`nExported $($results.Count) results to $OutputPath"
-}
-else {
-    Write-Warning "No results matched your criteria (MinimumSize=$MinimumSize)."
-}
-
-```
 
 
 Examples of other causes include but are not limited to:
 
-- Database Corruption
-
-- Memory Constraints
-
-- Replication Quarantine
-
-- Strict Replication Consistency
-
-- Disabled Replication
-
-- DNS (Name Resolution) etc.
-
-- RPC Communication Failures
-
-- Local firewalls
+- Database corruption
+- Memory constraints
+- Replication quarantine
+- Strict replication consistency
+- Disabled replication
+- DNS (Domain Name Resolution) issues
+- RPC communication issues
+- Local or network firewalls
 
 See [Causes](#cause) for details of events and related status codes for some of these issues.
 
