@@ -28,4 +28,4 @@ When you configure Teams as one of the apps on a multi-app kiosk, you experience
 
 ## Cause
 
-Kiosk mode doesn't support Teams.
+Teams doesn't support Kiosk mode.
