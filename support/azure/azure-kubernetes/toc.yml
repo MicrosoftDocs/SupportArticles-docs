@@ -173,6 +173,8 @@ items:
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
+  - name: Troubleshoot timeout and latency issues in AKS with Azure Storage
+    href: storage/troubleshoot-timeout-latency-aks-azure-storage.md
   - name: Mount failures
     items:
     - name: Can't set the uid and gid mounting options on an Azure Disk
