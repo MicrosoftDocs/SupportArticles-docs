@@ -204,7 +204,7 @@ In this scenario, you can connect to one of the writeable replicas, undelete the
 In many cases, the reference DC has tombstones (or objects in the Recycle Bin) for the abandoned objects that you want to remove, and the previous method to remove the abandoned objects isn't feasible. In such cases, it might not be practical to wait for the tombstones to expire naturally. For example, if you have Recycle Bin enabled, objects remain in the Recycle Bin for `msDS-deletedObjectLifetime` (180 days by default). At that point, they become recycled objects. Active Directory treats recycled objects as tombstones, so the objects remain in this state for `tombstoneLifetime` (180 days by default).
 
 > [!NOTE]  
-> For GC naming contexts where a GC initially replicates from a writeable DC and then later switches to replicate from a read-only replica on a GC, you might receive the replication errors before `tombstoneLifetime` expires. Therefore, to let these objects age out and still allow other replication to happen, you might have to disable strict replication consistency, and also allow replication with corrupt or divergent partners. For information about how to use these settings, see [Troubleshoot Active Directory replication error 8614](replication-error-8614.md).
+> For GC naming contexts where a GC initially replicates from a writeable DC and then later switches to replicate from a read-only replica on a GC, you might receive the replication errors before `tombstoneLifetime` expires. Therefore, to let these objects expire and still allow other replication to happen, you might have to disable strict replication consistency, and also allow replication with corrupt or divergent partners. For information about how to use these settings, see [Troubleshoot Active Directory replication error 8614](replication-error-8614.md).
 
 To more quickly clean out the tombstones or deleted objects from the reference DC, use the following methods to shorten the amount of time that these objects remain before the garbage collector process removes them.
 
@@ -289,7 +289,7 @@ To trace abandoned objects, you need two globally unique identifiers (GUIDs) for
 > [!NOTE]  
 > After you stop and deallocate a virtual DC that runs in Azure, the next time the DC starts, Windows behaves as if Active Directory was restored from a backup. The DC's invocation ID changes automatically. Because of this behavior, a virtual DC might change its invocation ID at a different rate than a physical DC.
 >
->When you have to stop an Azure virtual DC, you can avoid this behavior by shutting the VM down from within the guest operating system instead of by using the Azure portal. After the virtual DC has shut itself down, you can deallocated it. For more information, see [Manageability](/azure/architecture/example-scenario/identity/adds-extend-domain#manageability) in "Deploy AD DS in an Azure virtual network."
+>When you have to stop an Azure virtual DC, you can avoid this behavior by shutting down the VM from within the guest operating system instead of by using the Azure portal. After the virtual DC shuts itself down, you can deallocate it. For more information, see [Manageability](/azure/architecture/example-scenario/identity/adds-extend-domain#manageability) in "Deploy AD DS in an Azure virtual network."
 >
 > For more general best practices in restoring virtualized DCs, see [Virtualization safeguards](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration#BKMK_VDCSafeRestore) in "Virtualized Domain Controller Deployment and Configuration"
 
@@ -364,7 +364,7 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:03:1
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-This output is GC-1's up-to-dateness vector, which records both changes made on GC-1 and changes replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector, which indicates that both GCs have been restored from a backup. This output provides enough data to derive the following information:
+This output is GC-1's up-to-dateness vector, which records both changes made on GC-1 and changes replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector, which indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
 
 - GC-1 was restored from backup some time between 15:07:21 and 17:03:15. The changes that were recorded at 15:07:21 were the last changes to be recorded before the restoration.
 - When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that were made on GC-1 occurred at 17:03:15.
