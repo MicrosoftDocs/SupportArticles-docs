@@ -377,7 +377,8 @@ Go to the following URLs to clear the validation cache:
 1. Select the account structure that's referenced in the error, and then select **Edit**.
 1. Make a minor change (for example, add a constraint value that doesn't match any current values).
 1. Select **Activate** to send the activation to batch processing.
-1. Wait for the batch job to finish, and then retry the business process.
+1. Wait for the batch job to finish, and then undo the previous change and select **Activate** again.
+1. Wait for the batch job to finish again, and then retry the business process.
 
 If the error no longer occurs after you clear the cache, stale validation data caused the problem. To help prevent this situation in the future, avoid activating account structures while significant system activity (such as batch processing or data entry) is occurring.
 
