@@ -30,7 +30,7 @@ Typical symptoms include:
 - Affected operations remain in **Waiting** status indefinitely.
 - Users report delays in posting or transfer processes.
 - Scheduled process occurrences don't appear in the process automation calendar view.
-- Scheduled occurrences or background processes are processed, but not on time.
+- Scheduled occurrences or background processes run, but not on time.
 
 ## Cause
 
@@ -68,10 +68,14 @@ To restore the process automation system batch job to a healthy state, follow th
 ### Verify batch job recurrence and priority
 
 1. Go to **System administration** > **Inquiries** > **Batch jobs**.
-1. Find the process automation system batch job, select it, and then select **View tasks** on the Action Pane. Confirm that the batch job contains a task that uses the **ProcessAutomationPollingEngine** class.
+1. Select the process automation system batch job, and then select **View tasks** on the Action Pane.
+1. Confirm that the batch job contains a task that uses the `ProcessAutomationPollingEngine` class.
 1. Verify the following settings:
-   - **Recurrence** is set to **1 minute**. If not, set the recurrence to **1 minute**.
-   - **Effective Scheduling Priority** is set to **Critical** or **Reserved Capacity**. If not, enable the **Scheduling priority is overridden** option, and then set **Job scheduling priority** to **Reserved Capacity**. For more information, see [Priority-based batch scheduling](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling).
+   - **Recurrence** is set to **1 minute**. If it isn't, set it to **1 minute**.
+   - **Effective Scheduling Priority** is set to **Critical** or **Reserved Capacity**. If it isn't:
+     1. Set the **Scheduling priority is overridden** option to **Yes**
+     1. Set **Job scheduling priority** to **Reserved Capacity**.
+     1. For more information, see [Priority-based batch scheduling](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling).
 
 ### Validate dependent processes
 
