@@ -28,30 +28,31 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
-### Availability Group Listener Record Error 10013 in SQL Error Log
+### Availability group listener record error 10013 in error log
 
-If you have a SQL Server Availability group configured with a listener, when the SQL Server service starts up or an Availability Group failover occurs, you may observe errors in the SQL ErrorLog indicating an issue with the listener object.
+If you have a SQL Server availability group configured with a listener, when the SQL Server service starts or an availability group failover occurs, you might see errors in the SQL Server error log that indicate a problem with the listener object. The following example shows what these errors look like:
 
 ```output
-<timestamp> Server      The Service Broker endpoint is in disabled or stopped state.
-<timestamp> Server      Error: 26075, Severity: 16, State: 1.
-<timestamp> Server      Failed to start a listener for virtual network name '<YourAGListener>'. Error: 10013.
-<timestamp> Server      The Service Broker endpoint is in disabled or stopped state.
-<timestamp> Server      Stopped listening on listener network name '<YourAGListener>' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required.
-<timestamp> Server      The Service Broker endpoint is in disabled or stopped state.
-<timestamp> Server      Error: 10800, Severity: 16, State: 1.
-<timestamp>Server      The listener for the WSFC resource '<YourWSFCguid>' failed to start, and returned error code 10013, 'An attempt was made to access a socket in a way forbidden by its access permissions. '. For more information about this error code, see "System Error Codes" in the Windows Development Documentation.
-<timestamp> Server      Error: 19452, Severity: 16, State: 1.
-<timestamp> Server      The availability group listener (network name) with Windows Server Failover Clustering resource ID '<YourWSFCguid>', DNS name '<YourAGListener>', port 1433 failed to start with a permanent error: 10013. Verify port numbers, DNS names and other related network configuration, then retry the operation.
+The Service Broker endpoint is in disabled or stopped state.
+Error: 26075, Severity: 16, State: 1.
+Failed to start a listener for virtual network name '<YourAGListener>'. Error: 10013.
+The Service Broker endpoint is in disabled or stopped state.
+Stopped listening on listener network name '<YourAGListener>' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required.
+The Service Broker endpoint is in disabled or stopped state.
+Error: 10800, Severity: 16, State: 1.
+The listener for the WSFC resource '<YourWSFCguid>' failed to start, and returned error code 10013, 'An attempt was made to access a socket in a way forbidden by its access permissions. '. For more information about this error code, see "System Error Codes" in the Windows Development Documentation.
+Error: 19452, Severity: 16, State: 1.
+The availability group listener (network name) with Windows Server Failover Clustering resource ID '<YourWSFCguid>', DNS name '<YourAGListener>', port 1433 failed to start with a permanent error: 10013. Verify port numbers, DNS names and other related network configuration, then retry the operation.
 ```
 
-Additionally after applying this patch, if you create a new listener you may get an exception:
+Additionally, after you apply this update, if you create a new listener, you might see an error that resembles the following example:
+
 ```output
 Msg 19486, Level 16, State 1, Line 3
 The configuration changes to the availability group listener were completed, but the TCP provider of the instance of SQL Server failed to listen on the specified port [<YourAGListener>]. This TCP port is already in use. Reconfigure the availability group listener, specifying an available TCP port. For information about altering an availability group listener, see the "ALTER AVAILABILITY GROUP (Transact-SQL)" topic in SQL Server Books Online.
 ```
 
-When SQL Server starts or a listener is created, there was a change causing an attempt to open a TCP port that is already open causing the error(s) to be logged. This has no known impact other than logging, and listener connections continue to succeed.
+When SQL Server starts or a listener is created, a change in this update causes an attempt to open a TCP port that's already open. This attempt causes the errors to be logged but has no other known effect. Listener connections continue to work.
 
 Microsoft is aware of this issue and is investigating a fix.
 
