@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 03/25/2026
+ms.date: 04/10/2026
 ---
 
 # Email delivery to Microsoft 365 Groups fails in hybrid configuration
@@ -92,22 +92,6 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
     Recipients     : {EXO1@contoso.mail.onmicrosoft.com}
     MessageSubject : On-premises to EXO
     ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
-
-To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](/exchange/mail-flow/connectors/protocol-logging) isn't enabled by default. If it is not enabled, follow these steps to enable protocol logging, and then check the protocol log.
-
-   a. On your on-premises Exchange Server, open the Exchange Management Shell.
-   b. To enable protocol logging for the Send connector, run the following command:  
-
-   ```powershell               
-   Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
-   ```
-
-   c. Open the protocol log for the Send connector from the location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
-   d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
-
-   :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
-
-   If the Send connector in the protocol log isn't listed as Outbound to Office 365, go to step 2. If the listed Send connector is the expected one, go to step 3.
 
 1. **Address space**: Check whether groups.contoso.com is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
