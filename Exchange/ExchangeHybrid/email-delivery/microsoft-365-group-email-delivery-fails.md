@@ -104,9 +104,9 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
     Get-SendConnector -Identity \*Outbound to Office 365\* \| fl name,AddressSpaces
     ```
 
-    c. If the output doesn’t list groups.contoso.com as one of the configured address spaces, run the following Set-SendConnector command:  
+    c. If the output doesn’t list groups.contoso.com as one of the configured address spaces, run the following Set-SendConnector command to add it:  
 
-    ```powershell    
+    ```powershell
     Set-SendConnector -Identity "Outbound to Office 365\*" -AddressSpaces "contoso.mail.onmicrosoft.com","groups.contoso.com"
     ```  
 
@@ -135,7 +135,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
       i. On your on-premises Exchange Server, open the Exchange Management Shell.
      ii. Run the following commands:
 
-   ```powershell             
+   ```powershell
    Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
    \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
    Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
@@ -151,7 +151,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
 
    b.  If the output displays the value as `false`, run the following command:  
 
-   ```powershell     
+   ```powershell
    Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
    ```
 
