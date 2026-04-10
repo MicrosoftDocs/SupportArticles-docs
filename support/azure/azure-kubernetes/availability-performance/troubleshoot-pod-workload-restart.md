@@ -24,7 +24,7 @@ Pod workloads in an AKS cluster restart repeatedly. You might observe one or mor
 - Events from `kubectl describe pod <pod-name>` show `liveness/readiness` probe failures.
 - Application log entries indicate abrupt termination or initialization failures.
  
-The following is an example output:
+The following example shows typical output:
 
 ```bash
 kubectl get pods 
