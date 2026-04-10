@@ -82,7 +82,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'grubfix' --resource-group $RGNAME --name $VMNAME --verbose
     ```
 
 * **Linux VMs with UEFI (Gen2):**
@@ -90,7 +90,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'efifix' --resource-group $RGNAME --name $VMNAME --verbose
     ```
 
 > [!IMPORTANT]
