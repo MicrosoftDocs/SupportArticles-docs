@@ -29,7 +29,7 @@ When this problem occurs, the `kubectl describe` pod shows no Persistent Volume 
  
 ## Solution
 
-To mitigate connectivity timeouts and improve reliability, use the following methods.
+To mitigate connectivity timeouts and improve reliability, use the following methods as applicable.
 
 ### Enable private endpoints for storage
 
