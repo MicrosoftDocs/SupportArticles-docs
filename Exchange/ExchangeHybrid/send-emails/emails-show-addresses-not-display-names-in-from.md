@@ -58,9 +58,9 @@ Check the following settings that are required for mail flow to work, and update
 
     The output of this command will resemble the following example. The value of the \`ConnectorID\` attribute is the name of the Send connector.
 
-    Sender         : user@contoso.com
-    Recipients     : {EXO1@contoso.mail.onmicrosoft.com}
-    MessageSubject : On-premises to EXO
+    Sender         : user@contoso.com <br/>
+    Recipients     : {EXO1@contoso.mail.onmicrosoft.com} <br/>
+    MessageSubject : On-premises to EXO <br/>
     ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
 
    If the name of the Send connector in the output isn't Outbound to Office 365, go to step 2. If the name of the Send connector is the expected one, go to step 3.
