@@ -75,7 +75,23 @@ The commands that are listed in this solution use "groups.contoso.com" as the em
 
 If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
 
-1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).  
+1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).
+
+   To check the Send connector that's configured for email delivery, follow these steps:
+
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    b. Run the following PowerShell command:  
+
+    ```powershell
+    Get-MessageTrackingLog -MessageSubject "on-premises to exo 2" -EventId SENDEXTERNAL | fl sender, recipients,messagesubject,connector* 
+    ```
+
+    The output of this command will resemble the following example. The value of the \`ConnectorID\` attribute is the name of the Send connector.
+
+    Sender         : user@contoso.com
+    Recipients     : {EXO1@contoso.mail.onmicrosoft.com}
+    MessageSubject : On-premises to EXO
+    ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
 
 To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](/exchange/mail-flow/connectors/protocol-logging) isn't enabled by default. If it is not enabled, follow these steps to enable protocol logging, and then check the protocol log.
 
