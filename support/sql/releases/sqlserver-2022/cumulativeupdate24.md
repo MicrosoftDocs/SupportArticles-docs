@@ -28,9 +28,7 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
-### Incorrect behavior of SESSION_CONTEXT in parallel plans
-
-## Availability Group Listener Record Error 10013 in SQL Error Log
+### Availability Group Listener Record Error 10013 in SQL Error Log
 
 If you have a SQL Server Availability group configured with a listener, when the SQL Server service starts up or an Availability Group failover occurs, you may observe errors in the SQL ErrorLog indicating an issue with the listener object.
 
@@ -56,6 +54,8 @@ The configuration changes to the availability group listener were completed, but
 When SQL Server starts or a listener is created, there was a change causing an attempt to open a TCP port that is already open causing the error(s) to be logged. This has no known impact other than logging, and listener connections continue to succeed.
 
 Microsoft is aware of this issue and is investigating a fix.
+
+## Improvements and fixes included in this update
 
 A downloadable Microsoft Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Download this Excel file now](https://aka.ms/sqlserverbuilds).
 
