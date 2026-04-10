@@ -18,7 +18,6 @@ You experience one or more of the following symptoms:
 
 - Financial tag columns are missing from journal entry forms such as general journals, invoice journals, or project expense journals.
 - Financial tags are empty after you import a general journal through the Data Management workspace, even though no error messages appear during the import.
-- Financial tags that were added to a purchase order line or invoice line are missing from the voucher transaction after you post the invoice.
 - Financial tag fields are missing from data management entities such as the project expense journal line data entity or the hour journal data entity.
 - Financial tag values that were previously configured have disappeared from journal views.
 - A financial tag displays values that aren't on the configured tag list.
