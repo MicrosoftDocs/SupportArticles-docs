@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 24 for SQL Server 2022 (KB5080999)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 Cumulative Update 24 (KB5080999).
-ms.date: 03/12/2026
+ms.date: 04/10/2026
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5080999
 ms.reviewer: v-shaywood
@@ -28,7 +28,36 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 [!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
-## Improvements and fixes included in this update
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
+
+## Availability Group Listener Record Error 10013 in SQL Error Log
+
+If you have a SQL Server Availability group configured with a listener, when the SQL Server service starts up or an Availability Group failover occurs, you may observe errors in the SQL ErrorLog indicating an issue with the listener object.
+
+```output
+2026-04-02 15:58:45.43 Server      The Service Broker endpoint is in disabled or stopped state.
+2026-04-02 15:58:45.43 Server      Error: 26075, Severity: 16, State: 1.
+2026-04-02 15:58:45.43 Server      Failed to start a listener for virtual network name '<YourAGListener>'. Error: 10013.
+2026-04-02 15:58:45.43 Server      The Service Broker endpoint is in disabled or stopped state.
+2026-04-02 15:58:45.43 Server      Stopped listening on listener network name '<YourAGListener>' (VNN or DISTRIBUTED_NETWORK_NAME). No user action is required.
+2026-04-02 15:58:45.43 Server      The Service Broker endpoint is in disabled or stopped state.
+2026-04-02 15:58:45.43 Server      Error: 10800, Severity: 16, State: 1.
+2026-04-02 15:58:45.43 Server      The listener for the WSFC resource '<YourWSFCguid>' failed to start, and returned error code 10013, 'An attempt was made to access a socket in a way forbidden by its access permissions. '. For more information about this error code, see "System Error Codes" in the Windows Development Documentation.
+2026-04-02 15:58:45.43 Server      Error: 19452, Severity: 16, State: 1.
+2026-04-02 15:58:45.43 Server      The availability group listener (network name) with Windows Server Failover Clustering resource ID '<YourWSFCguid>', DNS name '<YourAGListener>', port 1433 failed to start with a permanent error: 10013. Verify port numbers, DNS names and other related network configuration, then retry the operation.
+```
+
+Additionally after applying this patch, if you create a listener you will get an exception as well:
+```output
+Msg 19486, Level 16, State 1, Line 3
+The configuration changes to the availability group listener were completed, but the TCP provider of the instance of SQL Server failed to listen on the specified port [<YourAGListener>]. This TCP port is already in use. Reconfigure the availability group listener, specifying an available TCP port. For information about altering an availability group listener, see the "ALTER AVAILABILITY GROUP (Transact-SQL)" topic in SQL Server Books Online.
+```
+
+When SQL Server starts or the listener is created, it may try to open a TCP port that is already being used instead of just checking it. Because the port is already open, this attempt fails and an error is thrown.
+
+This causes no known impact beyond the error being recorded and connections to the listener continue to succeed.
+
+Microsoft is aware of this issue and is investigating a fix.
 
 A downloadable Microsoft Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Download this Excel file now](https://aka.ms/sqlserverbuilds).
 
