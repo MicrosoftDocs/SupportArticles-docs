@@ -73,7 +73,7 @@ To restore the process automation system batch job to a healthy state, follow th
 1. Verify the following settings:
    - **Recurrence** is set to **1 minute**. If it isn't, set it to **1 minute**.
    - **Effective Scheduling Priority** is set to **Critical** or **Reserved Capacity**. If it isn't:
-     1. Set the **Scheduling priority is overridden** option to **Yes**
+     1. Set the **Scheduling priority is overridden** option to **Yes**.
      1. Set **Job scheduling priority** to **Reserved Capacity**.
      1. For more information, see [Priority-based batch scheduling](/dynamics365/fin-ops-core/dev-itpro/sysadmin/priority-based-batch-scheduling).
 
