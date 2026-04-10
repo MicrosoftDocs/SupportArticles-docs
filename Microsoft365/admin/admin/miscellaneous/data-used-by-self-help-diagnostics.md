@@ -13,12 +13,12 @@ ms.reviewer: salarson
 appliesto: 
   - Microsoft 365 admin center
 search.appverid: MET150
-ms.date: 04/09/2026
+ms.date: 04/10/2026
 ---
 
 # Data processed by diagnostics run in the Microsoft 365 admin center
 
-# Summary
+## Summary
 
 When you run a self-help diagnostic in the Microsoft 365 admin center, a consent notice informs you that tenant and user configuration information will be processed and stored temporarily outside the compliance boundary. This article explains what that means and what types of data are involved.
 
@@ -51,7 +51,7 @@ The data that is processed by the support systems is automatically removed after
 
 For a full list of self-help diagnostics by product area, see the following articles:
 
-- [Self-help diagnostics for SharePoint Online and OneDrive administrators](https://learn.microsoft.com/en-us/troubleshoot/sharepoint/diagnostics/sharepoint-and-onedrive-diagnostics)
-- [Self-help diagnostics for issues in Exchange Online and Outlook](https://learn.microsoft.com/en-us/troubleshoot/exchange/administration/self-help-diagnostics)
-- [Self-help diagnostics for Microsoft Teams administrators](https://learn.microsoft.com/en-us/troubleshoot/microsoftteams/teams-administration/admin-self-help-diagnostics)
-- [Self-help diagnostics for Microsoft Purview](https://learn.microsoft.com/en-us/troubleshoot/microsoft-365/purview/diagnostics/purview-compliance-diagnostics)
+- [Self-help diagnostics for SharePoint Online and OneDrive administrators](/troubleshoot/sharepoint/diagnostics/sharepoint-and-onedrive-diagnostics)
+- [Self-help diagnostics for issues in Exchange Online and Outlook](/troubleshoot/exchange/administration/self-help-diagnostics)
+- [Self-help diagnostics for Microsoft Teams administrators](/troubleshoot/microsoftteams/teams-administration/admin-self-help-diagnostics)
+- [Self-help diagnostics for Microsoft Purview](/troubleshoot/microsoft-365/purview/diagnostics/purview-compliance-diagnostics)
