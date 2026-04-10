@@ -27,7 +27,7 @@ After you unassign the Microsoft 365 or Office 365 license for a user whose regu
 
 - The Microsoft 365 admin center displays either of the following error messages on the **Account** tab of the flyout pane that shows the user's details:
 
-   > - Exchange: An unknown error has occurred. Refer to the correlation ID: 12ffde19-5350-4fb6-baec-3359e4042eb8.;  
+   > - Exchange: An unknown error has occurred. Refer to the correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd.;  
 
    > - The execution of cmdlet Disable-Mailbox failed..; Exchange: An unknown error has occurred.  
 

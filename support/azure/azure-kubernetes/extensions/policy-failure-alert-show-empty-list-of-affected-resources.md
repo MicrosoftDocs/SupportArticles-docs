@@ -1,12 +1,14 @@
 ---
 title: Azure policy failure alert shows an empty list of affected resources
-description: Provide a solution to an issue where an Azure policy failure alert shows an empty list of affected resources.
+description: Learn how to troubleshoot an Azure policy failure alert that shows an empty affected resources list in AKS, and take the next step to resolve persistent alerts.
 ms.date: 04/12/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Azure policy failure alert shows an empty list of affected resources
+
+## Summary
 
 This article provides a solution to an issue where a policy failure alert shows an empty list of affected resources when you use the Azure Policy Add-on for Azure Kubernetes Service (AKS).
 

@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting LocalDNS on AKS
-description: Learn how to create a troubleshooting workflow to fix issues seen with LocalDNS in Azure Kubernetes Service (AKS).
+title: Troubleshoot LocalDNS problems in AKS
+description: Learn a step-by-step workflow to troubleshoot LocalDNS issues in AKS, identify DNS failure patterns, and resolve problems faster. Start now.
 author: vaibhavarora
 ms.author: vaibhavarora
 ms.date: 09/17/2025
@@ -8,10 +8,12 @@ ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
 editor: vaibhavarora
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 #Customer intent: As an Azure Kubernetes user, I want to learn how to create a troubleshooting workflow so that I can fix LocalDNS problems in Azure Kubernetes Service (AKS).
 ---
-# Troubleshoot issues with LocalDNS on Azure Kubernetes Service (AKS)
+# Troubleshoot problems with LocalDNS on Azure Kubernetes Service (AKS)
+
+## Summary
 
 This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
 
@@ -25,7 +27,7 @@ This article discusses how to create a troubleshooting workflow to fix Domain Na
 
 - The [journalctl](https://www.man7.org/linux/man-pages/man1/journalctl.1.html) command-line tool.
 
-## Identifying patterns in DNS failures
+## Identify patterns in DNS failures
 Before you begin diagnosing the issues seen with LocalDNS, identify potential patterns with your DNS failures. Some patterns include:
 1. DNS resolution failure - is this happening all the time or intermittently?
 2. Are you seeing the DNS issues from all the nodes, a specific node pool, a subset of nodes or just a single node?
@@ -37,7 +39,7 @@ Before you begin diagnosing the issues seen with LocalDNS, identify potential pa
 
 ## Diagnose LocalDNS with a test DNSUtil pod
 
-### Step 1: Deploy a test dnsutils pod
+### Step 1: deploy a test dnsutils pod
 Option 1 - Deploy a test pod to your cluster using the following command:
    ``` bash
    kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
@@ -96,7 +98,7 @@ Option 3 - If you run both linux and windows nodes in your cluster, you can conf
    EOF
    ```
 
-### Enable Query logging for LocalDNS
+### Enable query logging for LocalDNS
 
 Most use cases require query logging to be turned off in production because of its high memory usage and performance implications. However, for troubleshooting purposes, you should enable query logging in your localDNS configuration to root cause the source of your errors. Once the analysis is complete, you can turn it off.
 

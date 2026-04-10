@@ -1,6 +1,6 @@
 ---
 title: Slow attach and detach operations for an Azure disk
-description: Troubleshoot why attach and detach operations are slow when you use an Azure disk for storage on your Azure Kubernetes Service (AKS) clusters.
+description: Learn how to troubleshoot slow attach and detach operations for Azure disk storage in AKS clusters and migrate to CSI to improve performance.
 ms.date: 03/24/2025
 ms.reviewer: jopalhei, chiragpa, nickoman, v-leedennis, mariusbutuc
 ms.service: azure-kubernetes-service
@@ -9,6 +9,8 @@ keywords:
 ms.custom: sap:Storage
 ---
 # Slow attach and detach operations for an Azure disk
+
+## Summary
 
 This article discusses how to troubleshoot slow attach and detach operations when you use an Azure disk for storage on your Microsoft Azure Kubernetes Service (AKS) clusters.
 

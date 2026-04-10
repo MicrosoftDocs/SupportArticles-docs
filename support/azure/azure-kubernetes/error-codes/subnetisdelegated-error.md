@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the SubnetIsDelegated error code
-description: Learn how to troubleshoot the SubnetIsDelegated error when you try to create a node pool.
+description: Troubleshoot the SubnetIsDelegated error in AKS when creating a node pool. Learn the causes and step-by-step resolution to fix subnet delegation issues.
 ms.date: 08/07/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
@@ -10,7 +10,9 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the SubnetIsDelegated error code
 
-This article discusses how to identify and resolve the SubnetIsDelegated error that occurs when you try to create a node pool.
+## Summary
+
+This article explains how to identify and resolve the SubnetIsDelegated error that occurs in Azure Kubernetes Service (AKS) when you try to create a node pool. Follow the steps below to fix subnet delegation issues and successfully create your node pool.
 
 ## Prerequisites
 

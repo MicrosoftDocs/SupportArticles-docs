@@ -1,13 +1,16 @@
 ---
 title: Common Runbook Creation Problems on Hybrid Runbook Worker
 description: Describes some common issues that might occur when you set up a runbook on Hybrid Runbook Worker.
-ms.date: 06/13/2025
-ms.reviewer: adoyle
+ms.date: 04/01/2026
+ms.reviewer: jarrettr
 ms.service: azure-automation
-ms.custom: sap:Runbook not working as expected
+ms.custom: sap:Problems with Hybrid Runbook Worker
+
 ---
 
 # Common runbook creation problems on Hybrid Runbook Worker
+
+## Summary
 
 This article describes common issues you might experience when you set up runbooks on a hybrid runbook worker.
 

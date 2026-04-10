@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot errors when deploying extensions in an AKS cluster
-description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot AKS cluster extension deployment errors
+description: Troubleshoot errors when deploying AKS cluster extensions. Learn how to diagnose and fix extension creation, Helm, and scheduling errors in AKS.
 ms.date: 03/26/2024
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -11,7 +11,9 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Troubleshoot errors when deploying AKS cluster extensions
 
-This article discusses how to troubleshoot errors that occur when you deploy cluster extensions for Microsoft Azure Kubernetes Service (AKS).
+## Summary
+
+This article explains how to troubleshoot errors that occur when you deploy cluster extensions for Microsoft Azure Kubernetes Service (AKS), including extension creation failures, Helm errors, and scheduling issues.
 
 ## Extension creation errors
 

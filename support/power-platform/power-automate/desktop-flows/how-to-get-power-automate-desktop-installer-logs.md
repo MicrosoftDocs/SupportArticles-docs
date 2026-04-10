@@ -1,16 +1,18 @@
 ---
 title: Power Automate for desktop logs
 description: Introduces the locations that contain Power Automate for desktop logs.
-ms.reviewer: quseleba, guco, madiazor, johndund
-ms.date: 01/22/2025
+ms.reviewer: kdeepika, sbemag, v-shaywood
+ms.date: 04/03/2026
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate for desktop logs
 
-When troubleshooting issues with Power Automate for desktop, you might need to collect logs for customer support to analyze. These logs can be for a failed installation, problems running desktop flows, or issues with Power Automate or the machine runtime application.
-
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555577
+
+## Summary
+
+When troubleshooting issues with Power Automate for desktop, you might need to collect logs for customer support to analyze. These logs can be for a failed installation, problems running desktop flows, or issues with Power Automate or the machine runtime application. Power Automate for desktop provides several types of logs: installer logs for failed installations (found in the `%temp%` folder), on-premises product logs for machine registration and runtime issues (found in `%programdata%\Microsoft\Power Automate\Logs`), and Event Viewer application logs for crashes or service failures. This article describes where to find each log type and how to collect them using the Power Automate machine runtime application.
 
 ## Installer logs
 
@@ -50,3 +52,9 @@ Follow these steps to view and save the logs:
 4. To save the filtered log file, select **Save Filtered Log File As** and save it as an event file.
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/power-automate-event-viewer-logs.png" alt-text="Screenshot of an example error logged in the Event Viewer.":::
+
+## Related content
+
+- [Machine registration failure in Power Automate](desktop-flow-machine-registration-troubleshooting.md)
+- [Direct connectivity issues in Power Automate for desktop](troubleshoot-direct-connectivity-issues.md)
+- [Install Power Automate](/power-automate/desktop-flows/install)

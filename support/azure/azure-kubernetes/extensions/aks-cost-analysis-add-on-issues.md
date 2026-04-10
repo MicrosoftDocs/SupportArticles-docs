@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes Service Cost Analysis add-on issues
-description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) Cost Analysis add-on.
+description: Troubleshoot AKS Cost Analysis add-on errors during cluster creation or updates, and follow fixes to restore functionality quickly. Get started now.
 ms.date: 06/25/2024
 author: kaysieyu
 ms.author: kaysieyu
@@ -11,6 +11,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons, references_regions, innovation-
 ---
 
 # AKS Cost Analysis add-on issues
+
+## Summary
 
 This article discusses how to troubleshoot problems that you might experience when you enable the Microsoft Azure Kubernetes Service (AKS) Cost Analysis add-on during cluster creation or a cluster update.
 

@@ -1,6 +1,6 @@
 ---
-title: Fix connection issues to an app that's hosted in an AKS cluster
-description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot app connection issues in an AKS cluster
+description: Troubleshoot app connection issues in an AKS cluster with basic steps to identify causes and restore connectivity. Start resolving issues now.
 ms.date: 10/08/2024
 ms.reviewer: chiragpa, pkc, rissing, ookour, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -9,7 +9,9 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot connection issues to an app that's hosted in an AKS cluster
 
-In current dynamic cloud environments, ensuring seamless connectivity to applications hosted in Azure Kubernetes Service (AKS) clusters is crucial for maintaining optimal performance and user experience. This article covers how to troubleshoot and resolve connectivity issues caused by various factors, including application-side problems, network policies, Network security group (NSG) rules or others.
+## Summary
+
+If you experience app connection issues in an AKS cluster, this article helps you troubleshoot and resolve them. You'll learn basic checks for application, service, ingress, and network configuration so you can restore connectivity faster.
 
 > [!NOTE]
 > To troubleshoot common issues when you try to connect to the AKS API server, see [Basic troubleshooting of cluster connection issues with the API server](troubleshoot-cluster-connection-issues-api-server.md).
@@ -69,7 +71,7 @@ It's important to understand the request flow for the application.
 
 A basic request flow to applications in an AKS cluster would resemble the flow that's shown in the following diagram.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Screenshot of the basic request flow for app connection issues in an AKS cluster: client, DNS, load balancer IP, AKS nodes, and pods." border="false":::
 
 ## Inside-out troubleshooting
 
@@ -180,7 +182,7 @@ Are the endpoints in the service correct? If so, access the service, and check w
 
 For the `ClusterIP` service, you can start a test pod in the cluster and access the service IP address:
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Diagram of using a test pod in an Azure Kubernetes Service (A K S) cluster to access the cluster I P address." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Screenshot of a test pod in an AKS cluster accessing a ClusterIP service to validate app connectivity from inside the cluster." border="false":::
 
 ```bash
 # Start a test pod in the cluster:
@@ -207,7 +209,7 @@ If the previous command doesn't return an appropriate response, check the servic
 
 For the `LoadBalancer` service, you can access the load balancer IP address from outside the cluster.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Diagram of a test user accessing the load balancer I P address from outside an Azure Kubernetes Service (A K S) cluster." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Screenshot of external client access to a LoadBalancer IP for troubleshooting app connection issues in an AKS cluster." border="false":::
 
 ```bash
 curl -Iv http://<service-ip-address>:<port>
@@ -233,7 +235,7 @@ For scenarios in which the application is exposed by using an `Ingress` resource
 
 > Client >> DNS name >> Load balancer or application gateway IP address >> Ingress controller pods inside the cluster >> Service or pods
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Diagram of the network traffic flow when an app inside an Azure Kubernetes Service (A K S) cluster is exposed by using an ingress resource." border="false":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Screenshot of ingress traffic flow in an AKS cluster from client and DNS to load balancer, ingress controller, and backend services." border="false":::
 
 You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress kubernetes resource and ingress controller details for more information:
 

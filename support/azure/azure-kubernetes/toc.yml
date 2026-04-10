@@ -267,6 +267,8 @@ items:
       href: extensions/troubleshoot-network-isolated-cluster.md
     - name: Troubleshoot node auto provisioning
       href: extensions/troubleshoot-node-auto-provision.md
+    - name: Troubleshoot upgrade failure due to conflicting PodDisruptionBudgets
+      href: extensions/troubleshoot-eviction-autoscaler.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
@@ -419,8 +421,6 @@ items:
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error

@@ -9,6 +9,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Increased memory usage reported in Kubernetes 1.25 or later versions
 
+## Summary
+
 This article discusses how to resolve an *increased reported memory usage* issue in Microsoft Azure Kubernetes 1.25 or a later version.
 
 ## Symptoms

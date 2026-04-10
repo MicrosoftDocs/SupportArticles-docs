@@ -3,7 +3,7 @@ title: Troubleshoot Azure App Service certificates
 description: Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and IT admins systematically diagnose and fix issues with App Service certificates. 
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 10/10/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg, v-gsitser

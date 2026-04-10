@@ -6,25 +6,26 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: PETEREE
+ms.reviewer: PETEREE, akeeler, v-lisalozano
 ms.custom: 
   - Editing\CopyOrPaste
   - CSSTroubleshoot
+  - CI 10764
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2013
-  - Excel 2010
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/25/2026
 ---
 
 # "Not enough memory" when you copy formulas over large area in Excel
 
 ## Symptoms
 
-If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following: 
+If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following:
 
 - Not enough memory.
 - Not enough system resources to display completely.

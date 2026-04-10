@@ -8,11 +8,13 @@ search.appverid:
 audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
+  - CI 10982
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
   - Microsoft Excel
-ms.date: 05/26/2025
+ms.date: 04/01/2026
 ---
 
 # Error "Operation must use an updateable query" When you access Excel through ODBC

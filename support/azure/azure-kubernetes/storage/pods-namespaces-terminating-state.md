@@ -1,17 +1,19 @@
 ---
 title: Troubleshoot pods and namespaces stuck in the Terminating state
-description: Learn troubleshooting strategies for a scenario in which pods and namespaces remain stuck in the Terminating state in Azure Kubernetes Service (AKS).
+description: Pods and namespaces stuck in the Terminating state in AKS? Follow this guide to identify blockers, force deletion, and restore normal cluster cleanup.
 ms.date: 05/10/2024
 ms.author: skatkar
 ms.reviewer: v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 #Customer intent: As an Azure Kubernetes user, I want to fix a scenario in which pods and namespaces remain stuck in the Terminating state (or an unknown state) so that I can successfully use my Azure Kubernetes Service cluster.
 ms.custom: sap:Storage
 ---
 # Troubleshoot pods and namespaces stuck in the Terminating state
 
-This article discusses troubleshooting strategies for a scenario in Microsoft Azure Kubernetes Service (AKS) in which pods and namespaces remain stuck in the `Terminating` state.
+## Summary
+
+Use this article to troubleshoot pods and namespaces stuck in the `Terminating` state in AKS so you can remove blocked resources and delete namespaces successfully.
 
 ## Prerequisites
 
@@ -91,7 +93,7 @@ kubectl delete namespace <namespace-name>  --grace-period=0 --force --wait=false
 > [!WARNING]
 > The `kubectl delete` command might not be successful initially if you [use finalizers to prevent accidental deletion](https://kubernetes.io/blog/2021/05/14/using-finalizers-to-control-deletion/). Finalizers are keys on resources that signal pre-delete operations. Finalizers control the garbage collection on resources, and they're designed to alert controllers about what cleanup operations to do before they remove a resource.
 >
-> However, finalizers don’t necessarily identify code that should be executed. In fact, finalizers resemble annotations in the following manner:
+> However, finalizers don't necessarily identify code that should be executed. In fact, finalizers resemble annotations in the following manner:
 >
 > - They are basically lists of keys.
 > - They can be manipulated.

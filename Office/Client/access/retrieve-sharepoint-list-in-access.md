@@ -56,7 +56,7 @@ To fix the issue, use one of the following methods:
 - Method 1: Reduce the response time by avoiding the conditions that may cause the issues.
 - Method 2: Reduce the amount of data requested from the server by using a view in SharePoint and then linking Access to that view.
 
-  For detailed information on how to create a linked table which uses the SharePoint view, see [ImportSharePointList Macro Action](https://support.office.com/article/importsharepointlist-macro-action-f4e107b1-5513-4868-a2d9-42be1d08e7fd?ocmsassetID=HA001226463&ctt=1&CorrelationId=a428142f-dbd9-4c35-b758-2717d8f57de5).
+  For detailed information on how to create a linked table which uses the SharePoint view, see [ImportSharePointList Macro Action](https://support.office.com/article/importsharepointlist-macro-action-f4e107b1-5513-4868-a2d9-42be1d08e7fd).
 - Method 3: Increase the time-out in Access by adding the DataFetchTimeout registry entry
 
     > [!IMPORTANT]

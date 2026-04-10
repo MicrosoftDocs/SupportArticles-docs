@@ -8,6 +8,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Failed to upgrade or scale Azure Kubernetes Service cluster due to missing Log Analytics workspace
 
+## Summary
+
 This article provides solutions to an "Unable to get log analytics workspace info" error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms

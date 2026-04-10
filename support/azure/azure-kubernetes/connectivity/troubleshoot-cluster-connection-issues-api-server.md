@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot cluster connection issues with the API server
-description: Troubleshoot issues that occur when you attempt to connect to the API server of an Azure Kubernetes Service (AKS) cluster.
+description: Troubleshoot AKS API server connection issues by checking network, authentication, and authorization paths. Follow these steps to restore access fast.
 ms.date: 08/30/2024
 ms.reviewer: rissing chiragpa, beleite, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -10,7 +10,9 @@ ms.custom: sap:Connectivity,innovation-engine
 
 # Basic troubleshooting of cluster connection issues with the API server
 
-This article discusses connection issues to an Azure Kubernetes Service (AKS) cluster when you can't reach the cluster's API server through the Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)) or any other tool, such as using REST API through a programming language.
+## Summary
+
+This article helps you troubleshoot AKS cluster connection issues with the API server when [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) or REST clients can't connect. Use these steps to identify root causes and restore access quickly.
 
 ## Prerequisites
 
