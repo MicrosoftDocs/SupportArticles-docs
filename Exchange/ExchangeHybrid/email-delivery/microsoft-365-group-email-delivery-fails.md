@@ -93,6 +93,8 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
     MessageSubject : On-premises to EXO
     ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
 
+   If the name of the Send connector in the output isn't Outbound to Office 365, go to step 2. If the name of the Send connector is the expected one, go to step 3.
+
 1. **Address space**: Check whether groups.contoso.com is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
     a. On your on-premises Exchange Server, open the Exchange Management Shell.

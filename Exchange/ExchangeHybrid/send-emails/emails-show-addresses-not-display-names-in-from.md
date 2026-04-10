@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 04/10/2026
 ---
 # Emails sent from on-premises to Microsoft 365 show email addresses in From field
 
@@ -23,13 +23,11 @@ _Original KB number:_ &nbsp; 2663556
 
 # Summary
 
-ggh
+This article discusses an issue in which the **From** field in an email message that is sent from an on-premises Exchange Server mailbox to a Microsoft 365 mailbox in a hybrid deployment displays the sender’s email address instead of their display name. The article explains the cause of the issue and provides detailed steps to resolve it.
 
 ## Symptoms
 
 After you migrate mailboxes from your on-premises environment to Microsoft 365 in a hybrid Exchange deployment, the **From** field of email messages that are sent from the on-premises environment to Microsoft 365 doesn't show the display names of the senders. Instead, the **From** field shows their email addresses.
-
-In a hybrid Exchange deployment, when an email message is sent from an on-premises Exchange Server mailbox to a Microsoft 365 mailbox, the **From** field displays the sender’s email address instead of their display name.
 
 When you check the email header of an email message that was sent from the on-premises user account, the value of the `X-MS-Exchange-Organization-AuthAs` header is listed as "Anonymous" instead of "Internal".  
 
