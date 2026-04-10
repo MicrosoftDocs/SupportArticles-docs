@@ -281,7 +281,7 @@ The ALAR scripts use the repair extension `repair-button` to fix the missing ini
 ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'initrd' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'initrd' --verbose --g $RGNAME --name $VMNAME
 ```
 
 > [!IMPORTANT]
