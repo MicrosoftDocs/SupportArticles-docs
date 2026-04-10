@@ -5,7 +5,7 @@ ms.date: 05/10/2024
 ms.author: skatkar
 ms.reviewer: v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 #Customer intent: As an Azure Kubernetes user, I want to fix a scenario in which pods and namespaces remain stuck in the Terminating state (or an unknown state) so that I can successfully use my Azure Kubernetes Service cluster.
 ms.custom: sap:Storage
 ---

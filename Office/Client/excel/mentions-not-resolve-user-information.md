@@ -9,8 +9,9 @@ ms.topic: troubleshooting
 ms.custom: 
   - Sharing\Collab
   - CI 149605
+  - CI 11012
   - CSSTroubleshoot
-ms.reviewer: remcgurk
+ms.reviewer: remcgurk, akeeler, v-lisalozano 
 appliesto: 
   - Word for Microsoft 365
   - Word for Microsoft 365 for Mac 
@@ -26,8 +27,9 @@ appliesto:
   - Outlook on the web
 search.appverid: 
   - MET150
-ms.date: 05/26/2025
+ms.date: 04/01/2026
 ---
+
 # User information in @mentions doesn't resolve
 
 ## Symptoms
