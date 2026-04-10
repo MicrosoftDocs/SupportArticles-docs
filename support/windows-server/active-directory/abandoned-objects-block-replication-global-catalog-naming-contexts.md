@@ -34,11 +34,11 @@ This article discusses how to identify and remove abandoned objects. It covers t
   - [How to detect and remove lingering objects in a Windows Server Active Directory forest](information-lingering-objects.md)
 
 - Understanding of replication components, including:
-   - Directory Service Agent IDs that use globally unique identifiers (GUIDs). These agents are also known as DSA GUIDs or DSAs. 
-   - Invocation IDs.
-   - Update sequence numbers (USNs).
+  - Directory Service Agent globally unique identifiers (DSA GUIDs). These agents are also known as DSAs.
+  - Invocation IDs.
+  - Update sequence numbers (USNs).
 
-   These components are described in the following articles:
+  These components are described in the following articles:
 
   - [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)
   - [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](detect-and-recover-from-usn-rollback.md)
@@ -183,7 +183,7 @@ Foreach($objectin$objects)
 
 ### Step 2: Resolve abandoned objects that were restored on the read-only replica but are still tombstones on the writeable replicas
 
-You can use one or both of the following methods for this step, depending on the details of the abandoned objects. 
+You can use one or both of the following methods for this step, depending on the details of the abandoned objects.
 
 - If you use method 1, you probably don't have to use step 3. However, method 1 is feasible only under limited circumstances, and it might not resolve all the abandoned objects.
 - You can use method 2 in most cases. However, you have to continue to step 3 to complete the removal process.
@@ -191,7 +191,7 @@ You can use one or both of the following methods for this step, depending on the
 #### Method 1: Use the tombstones to reset the replication metadata for the objects across the replication topology
 
 > [!IMPORTANT]  
-> This method isn't appropriate for every type of object. For example, using this approach on a Domain Controller Computer object and a child Rid Set object would cause further issues.
+> This method isn't appropriate for every type of object. For example, using this approach on a Domain Controller Computer object that has a child Rid Set object would cause further issues.
 
 You can use this method under the following conditions:
 
