@@ -1,0 +1,124 @@
+---
+title: Financial tags missing or not populated on journals, postings, or imports
+description: Troubleshoot issues where financial tags are missing, empty, or incorrect on journals, voucher transactions, or data management imports in Dynamics 365 Finance.
+ms.date: 04/10/2026
+ms.reviewer: ethankallett, anaborges, jowalker, setharvila, moaamer, nedavis, twheeloc, v-shaywood
+ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with financial dimensions and financial tags
+---
+
+# Financial tags are missing or not populated on journals, postings, or imports
+
+## Summary
+
+This article provides troubleshooting steps for issues in which [financial tags](/dynamics365/finance/general-ledger/financial-tag) are missing, empty, or display incorrect values in Microsoft Dynamics 365 Finance. Financial tags might not appear on journal forms, might be empty after a data management import, or might be missing from voucher transactions after posting. These issues can be caused by browser or server caching, feature management configuration, data entity field mappings, or known product issues.
+
+## Symptoms
+
+You experience one or more of the following symptoms:
+
+- Financial tag columns are missing from journal entry forms such as general journals, invoice journals, or project expense journals.
+- Financial tags are empty after you import a general journal through the Data Management workspace, even though no error messages appear during the import.
+- Financial tags that were added to a purchase order line or invoice line are missing from the voucher transaction after you post the invoice.
+- Financial tag fields are missing from data management entities such as the project expense journal line data entity or the hour journal data entity.
+- Financial tag values that were previously configured have disappeared from journal views.
+- A financial tag displays values that aren't on the configured tag list.
+
+## Verify that financial tags are configured and activated
+
+Financial tags must be configured and activated in each legal entity where you want to use them. If the tags aren't activated, they don't appear in journal forms or transaction entry. For more information about the initial setup, see [Financial tags](/dynamics365/finance/general-ledger/financial-tag).
+
+To verify the configuration, follow these steps:
+
+1. Go to **General ledger** > **Ledger setup** > **General ledger parameters**, select the **Financial tags** tab, and verify that a **Financial tag segment delimiter** is defined. The delimiter must be set before financial tags can be used.
+1. Go to **General ledger** > **Chart of accounts** > **Financial tags** > **Financial tags**.
+1. Verify that the tags you expect are listed and that the **Status** column shows **Active** for each tag.
+1. If a tag shows **Inactive**, select the tag, and then select **Activate**.
+1. Change to each legal entity where you expect financial tags, and repeat the check. Financial tag configurations are legal entity-specific.
+
+## Clear cached financial tag configuration
+
+Financial tag columns might disappear from journal forms because of incorrect cached values for the financial tag configuration. This issue can affect multiple users in an environment and can occur after an environment update or database refresh.
+
+To clear the cache, follow these steps:
+
+1. Ask all affected users to clear their browser cache, and then sign in again.
+1. If the issue persists, go to **General ledger** > **Chart of accounts** > **Financial tags** > **Financial tags**.
+1. Temporarily rename one of the existing financial tags to a different name. This action triggers an update to the financial tag configuration and clears the cached values.
+1. Open a journal entry form and verify that the financial tag columns are visible.
+1. Rename the financial tag back to its original name.
+1. Verify that the financial tags remain visible after you restore the original name.
+
+If the issue persists after you clear the cache, verify that the correct financial tag features are enabled in Feature management, as described in the next section.
+
+## Check Feature management settings
+
+If you recently migrated, restored, or refreshed an environment, the Feature management settings might differ between environments. For example, a sandbox environment might use the newer financial tags entry experience while the production environment still uses the legacy experience.
+
+To verify the Feature management settings, follow these steps:
+
+1. Go to **System administration** > **Workspaces** > **Feature management**.
+1. Search for features that are related to **financial tags**.
+1. Verify that the same financial tag features are enabled in both the source and target environments.
+1. If a feature is disabled, enable it.
+1. Verify that both environments are on the same Dynamics 365 Finance application version.
+
+## Verify data entity field mappings and redeploy financial tag table triggers
+
+If financial tags are empty after you import a general journal through the Data Management workspace, verify the data entity mapping and import configuration.
+
+To troubleshoot the issue, follow these steps:
+
+1. Go to **System administration** > **Workspaces** > **Data management**.
+1. Open the import project that you used for the general journal import.
+1. Select **View map** to review the field mappings between the source file and the data entity.
+1. Verify that the financial tag columns in your source file are correctly mapped to the corresponding financial tag fields in the data entity. Financial tag fields in the data entity are named **Financial tag**, **Financial tag 2**, **Financial tag 3**, and so on, corresponding to the order in which the tags are configured.
+1. Make sure that the source data file contains the correct financial tag values in the mapped columns.
+1. Reimport the journal and verify that the financial tags are populated.
+
+If the mapping is correct but the tags are still empty after the import, the issue might be related to an environment update. In this case:
+
+1. Go to **System administration** > **Periodic tasks** > **Data maintenance**.
+1. Select the **Misc** tab.
+1. Search for **Deploy financial tag table triggers** and select **Run now**.
+1. After the action completes, reimport the journal and verify that the financial tags are populated.
+
+## Switch to Fixed list or Fixed custom list value types for validation
+
+If a financial tag displays values that aren't on the configured list, the behavior depends on the value type that's assigned to the tag.
+
+By design, financial tags that use the **Custom list** or **List** value type [accept any entered value without validation](/dynamics365/finance/general-ledger/financial-tag-financial-dimension) against the defined list. Users can enter values that don't exist in the predefined list without receiving an error or warning.
+
+To enforce validation, follow these steps:
+
+1. Verify that your environment is running Dynamics 365 Finance version 10.0.44 or later.
+1. Go to **General ledger** > **Chart of accounts** > **Financial tags** > **Financial tags**.
+1. Select the financial tag that needs validation.
+1. Change the **Value type** field to one of the following:
+   - **Fixed list**: for system table-backed lists with validation.
+   - **Fixed custom list**: for custom lists with validation.
+1. Select **Activate** to activate the tag with the new value type.
+
+After you make this change, only values that are defined in the list are accepted during transaction entry.
+
+## Verify data entity support for financial tags
+
+If financial tag fields are missing from specific data management entities such as the project expense journal line data entity or the hour journal data entity, the data entity might not yet support financial tags. Financial tag support is added to additional journals and data entities in each new release. For the current list of supported journals, see [Financial tags](/dynamics365/finance/general-ledger/financial-tag).
+
+To troubleshoot this issue, follow these steps:
+
+1. Go to **System administration** > **Workspaces** > **Data management**.
+1. Select **Data entities**.
+1. Search for the data entity that's missing financial tag fields.
+1. Select the data entity, and then select **Entity structure** to view the available fields.
+1. If the financial tag fields aren't listed, the data entity doesn't currently support financial tags. Check whether a newer version of Dynamics 365 Finance adds support for financial tags on the data entity by reviewing the [What's new or changed](/dynamics365/finance/get-started/whats-new-home-page) documentation.
+1. If you need to import financial tags for a journal type where the data entity doesn't support them, consider using the general journal data entity as an alternative import method.
+
+## Related content
+
+- [Financial tags overview](/dynamics365/finance/general-ledger/financial-tag)
+- [Differences between financial tags and financial dimensions](/dynamics365/finance/general-ledger/financial-tag-financial-dimension)
+- [Financial tag defaulting rules](/dynamics365/finance/general-ledger/financial-tag-defaulting)
+- [Financial tag rule reference](/dynamics365/finance/general-ledger/financial-tag-rule-reference)
+- [Financial tags development guidelines and FAQ](/dynamics365/fin-ops-core/dev-itpro/financial/fin-tag-custom)
+- [Financial dimension value is missing or unavailable](cant-find-dimension-value.md)
+- [Common dimension-related errors](common-dimension-related-errors.md)
