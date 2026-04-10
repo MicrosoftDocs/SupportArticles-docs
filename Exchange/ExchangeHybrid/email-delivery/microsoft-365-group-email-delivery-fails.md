@@ -102,7 +102,7 @@ To check the Send connector that's configured for email delivery, use the protoc
    Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
    ```
 
-   c. Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
+   c. Open the protocol log for the Send connector from the location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
    d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
 
    :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
