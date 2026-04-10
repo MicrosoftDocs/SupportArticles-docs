@@ -56,7 +56,7 @@ If you recently migrated, restored, or refreshed an environment, the Feature man
 To verify the Feature management settings, follow these steps:
 
 1. Go to **System administration** > **Workspaces** > **Feature management**.
-1. Search for features that are related to **financial tags**.
+1. Search for features that are related to **financial tag**.
 1. Verify that the same financial tag features are enabled in both the source and target environments.
 1. If a feature is disabled, enable it.
 1. Verify that both environments are on the same Dynamics 365 Finance application version.
