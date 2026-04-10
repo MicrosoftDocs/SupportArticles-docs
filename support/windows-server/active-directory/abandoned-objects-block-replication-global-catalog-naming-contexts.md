@@ -100,7 +100,7 @@ User: NT AUTHORITY\ANONYMOUS LOGON
 Description:
 Active Directory Replication encountered the existence of objects in the following partition that have been deleted from the local domain controllers (DCs) Active Directory database. Not all direct or transitive replication partners replicated in the deletion before the tombstone lifetime number of days passed. Objects that have been deleted and garbage collected from an Active Directory partition but still exist in the writable partitions of other DCs in the same domain, or read-only partitions of global catalog servers in other domains in the forest are known as "lingering objects".
 
-This event is logged because the source DC contains a lingering object that does not exist on the local DCs Active Directory database. This replication attempt has been blocked.
+This event is being logged because the source DC contains a lingering object which does not exist on the local DCs Active Directory database. This replication attempt has been blocked.
 
 The best solution to this problem is to identify and remove all lingering objects in the forest.
 
@@ -366,12 +366,12 @@ Default-First-Site-Name\GC-1           @ USN     28957 @ Time 2026-02-10 17:03:1
 Default-First-Site-Name\GC-2 (retired) @ USN     24580 @ Time 2026-02-10 15:10:48
 ```
 
-This output is the up-to-dateness vector of GC-1. This vector records both the changes that are made on GC-1 and the changes that are replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector. This condition indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
+This output is the up-to-dateness vector of GC-1. This vector records both the changes that originated on GC-1 and the changes that replicated in from GC-2. Each GC uses its own independent USN series. GC-1 and GC-2 each has two entries in the up-to-dateness vector. This condition indicates that both GCs were restored from a backup. This output provides enough data to derive the following information:
 
 - GC-1 was restored from backup some time between 15:07:21 and 17:03:15. The changes that were recorded at 15:07:21 were the last changes to be recorded before the restoration.
-- When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that were made on GC-1 occurred at 17:03:15.
-- GC-2 was restored from backup some time between 15:10:48 and 16:56:31. The changes that were recorded at 15:10:48 were the last changes to be replicated to GC-1 before GC-2 was restored.
-- When GC-2 started replicating changes after the restoration, GC-1 assigned it a new entry in its up-to-dateness vector. The most recent changes that were made on GC-2 and then replicated to GC-1 occurred at 16:56:31.
+- When GC-1 started recording changes after the restoration, it created a new entry in its up-to-dateness vector. The most recent changes that originated on GC-1 occurred at 17:03:15.
+- GC-2 was restored from backup some time between 15:10:48 and 16:56:31. The changes that were recorded at 15:10:48 were the last changes that replicated to GC-1 before GC-2 was restored.
+- When GC-2 started replicating changes after the restoration, GC-1 assigned it a new entry in its up-to-dateness vector. The most recent changes that originated on GC-2 and then replicated to GC-1 occurred at 16:56:31.
 - The old entry for GC-2 is labeled as "retired" to distinguish it from the entry that records replication that occurred after GC-2 was restored.
 
   > [!NOTE]  
