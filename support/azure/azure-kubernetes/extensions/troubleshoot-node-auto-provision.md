@@ -6,7 +6,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 09/05/2025
+ms.date: 04/09/2026
 editor: bsoghigian
 ms.reviewer: phwilson, v-ryanberg, v-gsitser
 #Customer intent: As an Azure Kubernetes Service user, I want to troubleshoot problems that involve node auto-provisioning managed add-ons so that I can successfully provision, scale, and manage my nodes and workloads on Azure Kubernetes Service (AKS).
@@ -203,6 +203,64 @@ Possible solutions include:
 - Verify the subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation][aksnodeclass-subnet-config].
 - Restart the CNI plugin pods.
 - Check the `CoreDNS` configuration. For more information, see [CoreDNS documentation][coredns-troubleshoot].
+
+### Pod CIDR exhausted when using Azure CNI Overlay
+
+**Symptoms**
+
+When using [Azure CNI Overlay](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlays) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
+
+```yaml
+kubectl get nodeclaim
+```
+
+Output:
+
+```
+NAME            TYPE                CAPACITY    ZONE             NODE                READY     AGE
+default-abcde   Standard_D16as_v5   on-demand   eastus-2         aks-default-abcde   Unknown   3m13s
+```
+
+As shown, the status for the nodeclaim remains as `Unknown`, while the status for a `kubectl get node` command returns a `NotReady` status.
+
+**Cause**
+
+When using an Azure CNI Overlay network, each node always pre-allocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR is not large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these node remain in the "NotReady" state. See [Azure CNI Overlay documentation](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay#pods) on requirements for subnet sizing and IP address planning.
+
+**Debugging steps**
+
+You can confirm this issue is happening by checking Kube events with the below command:
+
+```yaml
+$ kubectl get events --field-selector involvedObject.kind=NodeNetworkConfig -A
+```
+
+You should find the following two responses included in the error codes:
+
+```yaml
+"primaryIP is nil, failed to allocate address for request"
+```
+
+```
+"Subnet is full"
+```
+
+**Solutions**
+
+You can expand the pod CIDR range to allow more nodes to join the subnet. See our documentation to [Expand pod CIDR space in Azure CNI Overlay](https://learn.microsoft.com/azure/aks/azure-cni-overlay-pod-expand).
+
+After updating the CIDR space, new nodes should be able to join and their status will update to "Ready" state.
+
+```yaml
+kubectl get node
+```
+
+Output:
+
+```yaml
+NAME                                STATUS     ROLES    AGE     VERSION
+aks-default-abcde                   Ready      <none>   2m58s   v1.33.7
+```
 
 ### DNS service IP issues
 
