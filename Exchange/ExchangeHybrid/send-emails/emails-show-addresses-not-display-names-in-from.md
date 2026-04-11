@@ -49,7 +49,7 @@ Check the following settings that are required for mail flow to work, and update
 
    To check the Send connector that's configured for email delivery, follow these steps:
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
     b. Run the following PowerShell command:  
 
     ```powershell
@@ -67,7 +67,7 @@ Check the following settings that are required for mail flow to work, and update
 
 1. **Address space**: Check whether the contoso.mail.onmicrosoft.com domain is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
     b. Run the Get-SendConnector command by using the AddressSpaces parameter:  
 
     ```powershell
@@ -100,7 +100,7 @@ Check the following settings that are required for mail flow to work, and update
 
    c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
 
-      i. On your on-premises Exchange Server, open the Exchange Management Shell.
+      i. On your on-premises Exchange Server, open the Exchange Management Shell. <br/>
      ii. Run the following commands:
 
    ```powershell

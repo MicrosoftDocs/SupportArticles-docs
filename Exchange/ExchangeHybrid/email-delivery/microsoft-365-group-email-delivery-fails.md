@@ -79,7 +79,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
 
    To check the Send connector that's configured for email delivery, follow these steps:
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
     b. Run the following PowerShell command:  
 
     ```powershell
@@ -97,7 +97,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
 
 1. **Address space**: Check whether groups.contoso.com is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
     b. Run the Get-SendConnector command by using the AddressSpaces parameter:  
 
     ```powershell
@@ -132,7 +132,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
 
    c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
 
-      i. On your on-premises Exchange Server, open the Exchange Management Shell.
+      i. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
      ii. Run the following commands:
 
    ```powershell
@@ -141,7 +141,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
    Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
    ```
 
-4. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
+1. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
 
    a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
 
@@ -155,7 +155,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
    Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
    ```
 
-5. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
+1. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
 
    a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
 
