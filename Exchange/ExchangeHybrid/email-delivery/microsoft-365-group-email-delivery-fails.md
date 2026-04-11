@@ -86,7 +86,7 @@ If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, c
     Get-MessageTrackingLog -MessageSubject "on-premises to exo 2" -EventId SENDEXTERNAL | fl sender, recipients,messagesubject,connector* 
     ```
 
-    The output of this command will resemble the following example. The value of the \`ConnectorId\` attribute is the name of the Send connector.
+    The output of this command will resemble the following example. The value of the `ConnectorId` attribute is the name of the Send connector.
 
     Sender         : user@contoso.com <br/>
     Recipients     : {EXO1@contoso.mail.onmicrosoft.com} <br/>
