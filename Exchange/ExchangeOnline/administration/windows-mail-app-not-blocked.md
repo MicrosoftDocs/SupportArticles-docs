@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Administrator Tasks
+  - Exchange Online
   - CSSTroubleshoot
   - CI 160116
   - CI 160572

@@ -1,0 +1,20 @@
+items:
+- name: Azure Load Balancer troubleshooting documentation
+  href: welcome-azure-load-balancer.yml
+  items:
+  - name: Troubleshoot common problems with Azure Load Balancer
+    href: load-balancer-troubleshoot.md   
+  - name: Troubleshoot Azure Load Balancer
+    href: load-balancer-troubleshoot-backend-traffic.md
+  - name: Troubleshoot common deployment errors
+    href: load-balancer-common-deployment-errors.md
+  - name: Troubleshoot load balancer health event logs
+    href: load-balancer-troubleshoot-health-event-logs.md
+  - name: Troubleshoot Azure Load Balancer health probe status
+    href: load-balancer-troubleshoot-health-probe-status.md
+  - name: Common error codes for Azure Instance Metadata Service (IMDS)
+    href: troubleshoot-load-balancer-imds.md
+  - name: Troubleshoot Azure Load Balancer resource health, frontend, and backend availability problems
+    href: troubleshoot-rhc.md
+  - name: Troubleshoot Azure Load Balancer outbound connectivity issues
+    href: troubleshoot-outbound-connection.md
