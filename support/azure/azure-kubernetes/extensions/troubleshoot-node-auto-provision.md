@@ -424,7 +424,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 Possible solutions include:
 
 - Request quota increases through the Azure portal.
-- Expand nodepool custom resource definitions (CRDs) to include more VM sizes. For more information, see [NodePool configuration documentation](/aks/node-auto-provisioning-node-pools). For example, nodepool specification A is less likely than nodepool specification B to trigger quota errors that stop VM creation if A includes D-family VMs and B is specific to only one VM size.
+- Expand nodepool custom resource definitions (CRDs) to include more VM sizes. For more information, see [NodePool configuration documentation](/azure/aks/node-auto-provisioning-node-pools). For example, nodepool specification A is less likely than nodepool specification B to trigger quota errors that stop VM creation if A includes D-family VMs and B is specific to only one VM size.
 
 [!INCLUDE [Third-party disclaimer](~/includes/third-party-disclaimer.md)]
 
