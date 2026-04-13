@@ -3,7 +3,7 @@ title: Troubleshoot Seccomp Profiles in Azure Kubernetes Service
 description: Troubleshoot seccomp profiles in Azure Kubernetes Service to identify blocked syscalls, fix workload failures, and harden security. Start now.
 ms.reviewer: mayasingh, josebl, qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general #Don't change.
+ms.topic: troubleshooting
 ms.date: 06/06/2025
 ms.custom: sap:Identity and Security Management
 #customer intent: As a DevOps Engineer, I want to set up an effective Seccomp profile so that I can run my workloads successfully while making them as secure as possible.

@@ -3,7 +3,7 @@ title: ASP.NET Core applications hosted in App Service stop responding
 description: This article provides guidance on addressing ASP.NET Core applications that are hosted in Azure App Service when they stop responding. 
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 12/18/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg

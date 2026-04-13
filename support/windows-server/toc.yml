@@ -644,6 +644,8 @@ items:
       href: ./backup-and-storage/best-practices-using-dynamic-disks.md
     - name: Can't access a CSV volume from a passive node
       href: ./backup-and-storage/event-5120-5142-access-clusterstorage-folder.md
+    - name: Can't extend a disk volume because of the file system cluster limit
+      href: ./backup-and-storage/cant-extend-disk-volume-file-system-cluster-limit.md
     - name: Can't select or format hard disk partition
       href: ./backup-and-storage/cannot-select-format-hard-disk-partition.md
     - name: Can't start a computer from a FAT32 file system USB flash drive
@@ -2212,6 +2214,8 @@ items:
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
+    - name: Shared folder for virtual desktop profiles experiences intermittent communication failures inWindows Server 2019
+      href: ./remote/intermittent-communication-failures-for-virtual-desktop-profile-shared-folder.md
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
 - name: Resources
