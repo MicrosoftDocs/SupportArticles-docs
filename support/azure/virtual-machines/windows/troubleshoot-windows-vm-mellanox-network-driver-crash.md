@@ -20,7 +20,10 @@ A Windows Azure VM fails and restarts unexpectedly or becomes unstable. When thi
 
 - The VM fails and displays a blue screen and the following stop error message:
 
-      DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)
+  ```
+  DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)
+  ```
+
 - The VM becomes unresponsive and requires a forced restart.
 - The VM continues to fail after a restart. No OS-level cause is apparent.
 - A dump file is created that references the `mlx5.sys` driver module.
