@@ -19,10 +19,18 @@ items:
         href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
       - name: Troubleshoot the export of Activity Logs across Azure subscriptions
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
-      - name: Configuring Azure Activity Log Export
+      - name: Troubleshoot forwarding Azure activity logs to diagnostic settings
+        href: activity-logs/config-export/troubleshoot-activity-logs-forward.md
+      - name: Configure Azure Activity Log Export
         href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
       - name: Configure long-term storage for Azure Activity Logs
         href: activity-logs/config-export/configure-long-term-storage-activity-logs.md 
+      - name: Configure activity log export for a specific resource group
+        href: activity-logs/config-export/configure-activity-log-export-for-resource-group.md
+      - name: Resolve problems when configuring Azure Diagnostic Settings for legacy log profiles
+        href: activity-logs/config-export/configure-diagnostic-settings-legacy-log-profiles.md
+      - name: Resolve diagnostic setting limit problems in Azure
+        href: activity-logs/config-export/resolve-diagnostic-setting-limit-problems.md  
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
