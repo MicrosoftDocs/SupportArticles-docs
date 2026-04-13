@@ -4,7 +4,7 @@ description: Discusses that you receive a Too many different cell formats error 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: v-kccross, akeeler, v-lisalozano
 search.appverid: 
   - MET150
 audience: ITPro
@@ -12,35 +12,28 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
+  - CI 11127
 appliesto: 
-  - Excel for Microsoft 365
+  - Microsoft 365
+  - Excel 2024
+  - Excel 2021
   - Excel 2019
   - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-ms.date: 05/26/2025
+ms.date: 04/13/2026
 ---
 
 # You receive a "Too many different cell formats" error message in Excel
 
 ## Symptoms
 
-In Microsoft Office Excel 2003, when you format a cell or a range of cells, you receive the following error messages:
-
-> **Too many different cell formats.**
-
-> **Excel encountered an error and had to remove some formatting to avoid corrupting the workbook.**
-
-In Microsoft Excel 2013, Microsoft Excel 2010, or Microsoft Excel 2007, files may produce the following error message:
+Files may produce the following error message:
 
 > **Excel found unreadable content in the file.**
 
 The following scenarios are also associated with styles:
 
-- When you open a file, all the formatting is missing.   
-- The file size grows after you copy and paste between workbooks.   
+- When you open a file, all the formatting is missing.
+- The file size grows after you copy and paste between workbooks.
 - When you try to paste text, you receive the following error message:
 
    > **Microsoft Excel can't paste data**
@@ -49,14 +42,12 @@ The following scenarios are also associated with styles:
 
 ## Cause
 
-This problem occurs when the workbook contains more than approximately 4,000 different combinations of cell formats in Excel 2003 or 64,000 different combinations in Excel 2007 and later versions. A combination is defined as a unique set of formatting elements that are applied to a cell. A combination includes all font formatting (for example: typeface, font size, italic, bold, and underline), borders (for example: location, weight, and color), cell patterns, number formatting, alignment, and cell protection.
+This problem occurs when the workbook contains more than approximately 64,000 different combinations. A combination is defined as a unique set of formatting elements that are applied to a cell. A combination includes all font formatting (for example: typeface, font size, italic, bold, and underline), borders (for example: location, weight, and color), cell patterns, number formatting, alignment, and cell protection.
 
 > [!NOTE]
 > If two or more cells share the same formatting, they use one formatting combination. If there are any differences in formatting between the cells, each cell uses a different combination.
 
 In Excel, style counts may increase when you copy between workbooks because custom styles are copied.
-
-A workbook that has more than 4,000 styles may open in Excel 2007 and later versions because of the increased limitation for formatting. However, this can cause an error in Excel 2003.
 
 ## Resolution
 
