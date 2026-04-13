@@ -24,7 +24,32 @@ The following table lists the warning messages that appear when your agents have
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the incoming streaming quality is poor.  | `networkReceiveQuality` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the outgoing streaming quality is poor. | `networkSendQuality` |
 | There is a problem connecting to the network. Ensure firewall rules are correctly set up.  | Appears when there are problems with the network. | `networkRelaysNotReachable` |
-| The connection to the telephony system was lost. We're working on re-establishing the connection. | Appears when there are problems with your organization's firewall or VPN. To mitigate the issue, check your firewall configuration and make sure that you have connectivity to the required ports and IP addresses. For more details, see Azure Communication Services [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration). |  |
+| The connection to the telephony system was lost. We're working on re-establishing the connection. | Appears when there are problems with your organization's firewall or VPN. This problem might be due to transient network problems or delays in contacting Azure services. If the problem persists or the message stays on screen for more than a few seconds, see [Fix a lost telephony connection](#fix-a-lost-telephony-connection). |  |
+
+### Fix a lost telephony connection
+
+Persistent telephony connection problems usually happen because of:
+
+- Firewall restrictions that block telephony services.
+- VPN or network problems that interfere with connectivity to the required ports and IP addresses.
+
+To fix this problem:
+
+1. **Check for blocked domains.** Open your browser's developer tools (network tracer) and look for failed connections to one or more of these domains:
+
+   - `*.skype.com`
+   - `*.microsoft.com`
+   - `*.azure.net`
+   - `*.azure.com`
+   - `*.office.com`
+
+   For more information on using your browser's developer tools, see:
+   - [Use the Network tool in Microsoft Edge](/microsoft-edge/devtools-guide-chromium/network/)
+   - [Use the Network tool in Chrome](https://developer.chrome.com/docs/devtools/network/)
+
+1. **Check firewall or VPN settings.** Review your firewall or network configuration to make sure the device and network allow access to the domains listed in the previous step.
+
+    For more information about firewall configuration requirements, see [Firewall configuration for Azure Communication Services](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration).
 
 ## Troubleshoot device issues
 

@@ -22,8 +22,6 @@
       href: cases-or-incidents/dismiss-all-not-working-in-notifications.md
     - name: Workstreams and agents are affected by changes made to other Copilot Studio bots
       href: cases-or-incidents/add-or-manage-bots-issues.md
-    - name: Connection lost error in Customer Service workspace
-      href: cases-or-incidents/connection-lost.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
