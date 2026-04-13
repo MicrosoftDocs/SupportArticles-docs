@@ -1,0 +1,6 @@
+items:
+- name: Azure Firewall troubleshooting documentation
+  href: welcome-azure-firewall.yml
+  items:
+  - name: Azure Firewall known issues and limitations
+    href: firewall-known-issues.md   

@@ -20,10 +20,12 @@ This article addresses the transition from legacy solutions to diagnostic settin
 - **Problem**: Logs don't forward after configuration.
 - **Solution**: Double-check the diagnostic settings, and make sure that all parameters are correct.
 
-- **Issue**: Automation scripts fail after the transition.
-- **Solution**: Update scripts to align with the new diagnostic settings API.
+- **Problem 2**: Automation scripts fail after the transition.
+- **Solution 2**: Update scripts to align with the new diagnostic settings API.
 
-### Resolve configuration issues
+### Resolve configuration problems
+
+To resolve configuration problems, follow these steps.
 
 1. **Identify legacy API usage**
     

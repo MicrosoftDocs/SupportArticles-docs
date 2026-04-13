@@ -4,7 +4,7 @@ description: Troubleshoot Istio CNI add-on issues in Azure Kubernetes Service (A
 ms.date: 10/22/2025
 ms.reviewer: gerobayopaz, kochhars
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the Istio CNI add-on so that I can use the Istio service mesh successfully.
 ---

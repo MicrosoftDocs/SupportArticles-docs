@@ -6,17 +6,19 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: SISHAM
+ms.reviewer: SISHAM, akeeler, v-lisalozano 
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot
+  - CI 11012
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft Office Excel 2003
-  - Microsoft Office Excel 2007
-  - Excel 2010
-ms.date: 05/26/2025
+  - Microsoft 365
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 04/01/2026
 ---
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel

@@ -128,6 +128,8 @@
         href: ../miscellaneous/get-help-teams-meeting-add-in-outlook.md
     - name: Chrome cookie behavior effect on applications
       href: ../miscellaneous/chrome-behavior-affects-applications.md
+    - name: Data used by self-help diagnostics
+      href: ../miscellaneous/data-used-by-self-help-diagnostics.md
     - name: New Startup Boost tasks in Windows Task Scheduler
       href: ../miscellaneous/new-startup-boost-tasks-windows-task-scheduler.md
     - name: Open Support cases for GCC High and DoD

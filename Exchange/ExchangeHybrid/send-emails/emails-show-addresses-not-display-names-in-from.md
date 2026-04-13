@@ -1,5 +1,5 @@
 ---
-title: Email shows addresses instead of names in From
+title: Email shows addresses instead of names in From field
 description: Describes an issue in which email messages that are sent from the on-premises environment to Microsoft 365 show email addresses instead of display names in the From field after you migrate mailboxes to Microsoft 365.
 author: cloud-writer
 ms.author: meerak
@@ -10,74 +10,129 @@ ms.custom:
   - sap:Mail Flow
   - Exchange Hybrid
   - CSSTroubleshoot
-ms.reviewer: v-six
+ms.reviewer: arindamt
 appliesto: 
   - Exchange Online
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
+  - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 04/10/2026
 ---
-# Emails that are sent from on-premises to Microsoft 365 show email addresses not display names in From
+# Emails sent from on-premises to Microsoft 365 show email addresses in From field
 
 _Original KB number:_ &nbsp; 2663556
 
-> [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+## Summary
+
+This article discusses an issue in which the **From** field in an email message that is sent from an on-premises Exchange Server mailbox to a Microsoft 365 mailbox in a hybrid deployment displays the sender’s email address instead of their display name. The article explains the cause of the issue and provides detailed steps to resolve it.
 
 ## Symptoms
 
-After you migrate mailboxes from your on-premises environment to Microsoft 365 in a hybrid deployment, the **From** field of email messages that are sent from the on-premises environment to Microsoft 365 doesn't show display names. Instead, the **From** field shows email addresses.
+After you migrate mailboxes from your on-premises environment to Microsoft 365 in a hybrid Exchange deployment, the **From** field of email messages that are sent from the on-premises environment to Microsoft 365 doesn't show the display names of the senders. Instead, the **From** field shows their email addresses.
+
+When you check the email header of an email message that was sent from the on-premises user account, the value of the `X-MS-Exchange-Organization-AuthAs` header is listed as `anonymous` instead of `internal`.  
+
+This issue occurs only in email messages that are sent from on-premises Exchange to Exchange Online.
 
 ## Cause
 
 This issue occurs if the hybrid deployment is set up incorrectly.
 
-To verify that you're experiencing this issue, examine the email header of an email message that was sent from the on-premises user account. Typically, `X-MS-Exchange-Organization-AuthAs` should be listed as **Internal**. If `X-MS-Exchange-Organization-AuthAs` is listed as **anonymous** or if it's missing, this indicates an incorrect configuration or an incorrect mail route.
-
 ## Resolution
 
-To fix this issue, follow these steps:
+The commands that are listed in this solution use "contoso.mail.onmicrosoft.com" as the domain for the affected mailboxes. In the commands, replace this address with the name of the domain in your environment.
 
-1. Check the mail route.
+To fix the issue, you need to ensure that the email message sent from on-premises Exchange is routed directly to Microsoft 365 by using the hybrid connectors created by the Hybrid Configuration wizard (HCW). There should be no network devices such as an anti-spam gateway device between the on-premises Bridgehead Exchange Server and Microsoft 365. These network devices can remove the header and certificate information that is necessary for mail flow. This type of routing is not supported in hybrid Exchange environments.
 
-    The simplest route is Exchange 2010 mailbox server to Exchange 2010 hub server (hybrid server) to the inbound connector in Microsoft 365. Make sure that there are no unnecessary network devices such as anti-spam gateway devices between the Exchange 2010 hub server (hybrid server) and Microsoft 365. Those devices could remove the necessary header.
+Check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly.
 
-2. Check the remote domain of the on-premises Exchange server. To do this, follow these steps:
+1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).  
 
-   1. In Exchange Management Shell, run the following PowerShell command:
+   To check the Send connector that's configured for email delivery, follow these steps:
 
-        ```powershell
-        Get-RemoteDomain < NameOfService>.< DomainName>.com | FL
-        ```
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
+    b. Run the following PowerShell command:  
 
-        For example:
+    ```powershell
+    Get-MessageTrackingLog -MessageSubject "on-premises to exo 2" -EventId SENDEXTERNAL | fl sender, recipients,messagesubject,connector* 
+    ```
 
-        ```powershell
-        Get-RemoteDomain exchangedelegation.contoso.com | FL
-        ```  
+    The output of this command will resemble the following example. The value of the `ConnectorId` attribute is the name of the Send connector.
 
-   2. In the output, make sure that the `TrustedMailOutboundEnabled`, `TargetDeliveryDomain`, and `IsInternal` attributes are set to **True**.
+    Sender         : user@contoso.com <br/>
+    Recipients     : {EXO1@contoso.mail.onmicrosoft.com} <br/>
+    MessageSubject : On-premises to EXO <br/>
+    ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
 
-   3. If the attributes in step 2b aren't set to **True**, use the `Set-RemoteDomain` command to change the value to **True**.
+   If the name of the Send connector in the output isn't Outbound to Office 365, go to step 2. If the name of the Send connector is the expected one, go to step 3.
 
-3. Check the remote domain in Microsoft 365. To do this, follow these steps:
-   1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-   2. Run the following PowerShell command:
+1. **Address space**: Check whether the contoso.mail.onmicrosoft.com domain is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
-        ```powershell
-        Get-RemoteDomain <FQDNOfOnPremisesEndConnector> | FL
-        ```  
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
+    b. Run the Get-SendConnector command by using the AddressSpaces parameter:  
 
-   3. In the output, make sure that the `TrustedMailnboundEnabled` attribute is set to **True**.
-   4. If the attribute in step 3C isn't set to **True**, use the `Set-RemoteDomain` command to change the value to **True**.
+    ```powershell
+    Get-SendConnector -Identity \*Outbound to Office 365\* \| fl name,AddressSpaces
+    ```
 
-4. Make sure that Transport Layer Security (TLS) is implemented and enabled in both environments and that the fully qualified domain name (FQDN) is set correctly. Check the on-premises send connector and the Microsoft 365 inbound connector by using the Exchange Server Deployment Assistant at [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true).
+    c. If the output doesn’t list contoso.mail.onmicrosoft.com as one of the configured address spaces, run the following Set-SendConnector command to add it:  
 
-5. Check the Exchange certificate of the send connector on the on-premises Exchange servers that are responsible for delivering mail to Microsoft 365. The Exchange certificate should have Simple Mail Transfer Protocol (SMTP) enabled and should match the FQDN of the send connector.
+    ```powershell
+    Set-SendConnector -Identity "Outbound to Office 365\*" -AddressSpaces "contoso.mail.onmicrosoft.com"
+    ```  
 
-If the issue persists after you follow these steps, contact Microsoft 365 Support.
+1. **TLSCertificateName parameter**: Check the values that are set for the \`TLSCertificateName\` parameter in the Outbound to Office 365 Send connector. The \`Issuer\` and \`SubjectName\` attributes for the parameter must match the corresponding values in the trusted non-Microsoft certificate that’s used to configure mail flow for the hybrid Exchange environment. Follow these steps:
 
-## More information
+   a. To find the \`Issuer\` and \`SubjectName\` attributes of the trusted non-Microsoft certificate, run the following command:
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+   ```powershell
+   Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \| fl issuer, subject,services
+   ```
+
+   b. To check the values that are set for the \`TLSCertificateName\` parameter in the Send connector, run the following command:
+  
+   ```powershell
+   Get-SendConnector -Identity "Outbound to Office 365\*" \| fl name, TLSCertificateName
+   ```  
+
+   The output displays the values in the following format:  
+   \<I\>CN=\<value of the Issuer attribute\>  
+   \<S\>CN=\<value of the SubjectName attribute\>
+
+   c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
+
+      i. On your on-premises Exchange Server, open the Exchange Management Shell. <br/>
+     ii. Run the following commands:
+
+   ```powershell
+   Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
+   \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
+   Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
+   ```
+
+1. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
+
+   a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
+
+   ```powershell
+   Get-InboundConnector -Identity "Inbound connector name" \| fl CloudServicesMailEnabled
+   ```
+
+   b.  If the output displays the value as `false`, run the following command:  
+
+   ```powershell
+   Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
+   ```
+
+1. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
+
+   a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
+
+   ```powershell
+   Get-InboundConnector -Identity "Inbound connector name" \| fl "TLSSenderCertificateName"
+   ```
+
+   b. If the output doesn’t match the accepted domain of your tenant, run the following command to update the value of the parameter:  
+
+   ```powershell
+   Set-InboundConnector -Identity "Inbound connector name" -TLSSenderCertificateName \<\*.AcceptedDomain\>"
+   ```
