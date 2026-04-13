@@ -48,7 +48,7 @@ A TCP connection timeout indicates that the client can't establish a TCP connect
 
 Common causes include:
 
-- Client network problems occur. These include firewall or proxy configurations that block or inspect outbound traffic.
+- Client network problems occur. These problems include firewall or proxy configurations that block or inspect outbound traffic.
 - NSG rules are applied to the Application Gateway subnet.
 - UDRs are applied to the subnet, including forced tunneling scenarios.
 - No front-end listener is configured on the destination port.
@@ -77,7 +77,7 @@ Verify the network configuration applied to the Application Gateway subnet.
 
 The validation scope depends on whether traffic reaches Application Gateway through a public or private front-end IP.
 
-### Veriify DNS configuration
+### Verify DNS configuration
 
 DNS problems don't cause a TCP connection timeout. Instead, they prevent the TCP connection from being created because the client can't resolve the destination hostname to an IP address.
 
