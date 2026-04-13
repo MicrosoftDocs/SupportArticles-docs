@@ -45,7 +45,7 @@ Error: 19452, Severity: 16, State: 1.
 The availability group listener (network name) with Windows Server Failover Clustering resource ID '<YourWSFCguid>', DNS name '<YourAGListener>', port 1433 failed to start with a permanent error: 10013. Verify port numbers, DNS names and other related network configuration, then retry the operation.
 ```
 
-Additionally, after you apply this update, if you create a new listener, you might see an error that resembles the following example:
+Additionally, after you apply this update, if you create a new listener, you might see an error similar to this example:
 
 ```output
 Msg 19486, Level 16, State 1, Line 3
