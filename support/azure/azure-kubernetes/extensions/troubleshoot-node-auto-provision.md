@@ -208,7 +208,7 @@ Possible solutions include:
 
 **Symptoms**
 
-When using [Azure CNI Overlay](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
+When using [Azure CNI Overlay](/azure/aks/concepts-network-azure-cni-overlay) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
 
 ```yaml
 kubectl get nodeclaim
@@ -225,7 +225,7 @@ As shown, the status for the nodeclaim remains as `Unknown`, while the status fo
 
 **Cause**
 
-When using an Azure CNI Overlay network, each node always preallocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR isn't large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these nodes remain in the "NotReady" state. See [Azure CNI Overlay documentation](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay#pods) on requirements for subnet sizing and IP address planning.
+When using an Azure CNI Overlay network, each node always preallocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR isn't large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these nodes remain in the "NotReady" state. See [Azure CNI Overlay documentation](/azure/aks/concepts-network-azure-cni-overlay) on requirements for subnet sizing and IP address planning.
 
 **Debugging steps**
 
