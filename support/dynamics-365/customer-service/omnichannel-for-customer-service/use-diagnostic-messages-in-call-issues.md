@@ -1,7 +1,7 @@
 ---
 title: Use diagnostic messages to troubleshoot issues in voice calls
 description: Learn how to interpret the error and warning messages that may appear when you have problems with your voice call.
-ms.reviewer: araghunath, nenellim, gandhamm, ancolucc, v-shaywood
+ms.reviewer: araghunath, nenellim, mgandham, ancolucc, v-shaywood
 ms.date: 04/13/2026
 ms.custom: sap:Voice channel
 ---
