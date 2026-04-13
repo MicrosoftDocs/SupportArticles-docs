@@ -43,11 +43,11 @@ For example:
 
 If a rule that contributes to anomaly scoring is triggered, the rule is identified in the logs as **Action = Matched**.  
 
-If the total anomaly score reaches the blocking threshold, an additional rule is triggered and marked as **Action = Blocked** or **Detected**, depending on the WAF mode.
+If the total anomaly score reaches the blocking threshold, an another rule is triggered and marked as **Action = Blocked** or **Detected**, depending on the WAF mode.
 
 ## Mandatory rule triggered (rule ID: 949110)
 
-When you review WAF logs, you might see that traffic appears as blocked by `mandatory rule ID 949110`. You can't disable a manadatory rule.
+When you review WAF logs, you might see that traffic appears as blocked by `mandatory rule ID 949110`. You can't disable a mandatory rule.
 
 Rule ID 949110 doesn't represent a specific attack signature. Instead, it enforces the final block when the cumulative anomaly score reaches the configured threshold.
 
