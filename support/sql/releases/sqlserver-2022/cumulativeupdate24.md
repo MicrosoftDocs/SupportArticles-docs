@@ -52,7 +52,7 @@ Msg 19486, Level 16, State 1, Line 3
 The configuration changes to the availability group listener were completed, but the TCP provider of the instance of SQL Server failed to listen on the specified port [<YourAGListener>]. This TCP port is already in use. Reconfigure the availability group listener, specifying an available TCP port. For information about altering an availability group listener, see the "ALTER AVAILABILITY GROUP (Transact-SQL)" topic in SQL Server Books Online.
 ```
 
-This update also causes the following behavior: when SQL Server starts or a listener is created, SQL Server may try to open a TCP port that’s already in use. This only results in error messages being logged and doesn’t affect functionality—listener connections continue to work.
+This update also causes SQL Server to try to open a TCP port that's already in use when it starts or when a listener is created. This only results in error messages being logged and doesn't affect functionality. Listener connections continue to work.
 
 Microsoft is aware of this issue and is investigating a fix.
 
