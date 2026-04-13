@@ -90,7 +90,7 @@ If you encounter DNS-related errors (for example, `ERR_NAME_NOT_RESOLVED` or hos
 
 To make sure that Application Gateway is listening on the expected IP address and port, follow these guidelines:
 
-- A frontend listener must exist on the destination port.
+- A front-end listener must exist on the destination port.
 - The listener must be associated with a routing rule that forwards traffic to a back-end pool.
 
 If no listener exists, the TCP connection times out.
