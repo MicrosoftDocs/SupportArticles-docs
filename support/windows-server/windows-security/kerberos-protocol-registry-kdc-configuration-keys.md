@@ -280,7 +280,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default value: 0x27
   - Possible values:
 
-    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x38.
+    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x18.
 
     This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
 
