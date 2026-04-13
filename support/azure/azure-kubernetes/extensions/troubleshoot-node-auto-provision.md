@@ -8,7 +8,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/09/2026
 editor: bsoghigian
-ms.reviewer: phwilson, v-ryanberg, v-gsitser
+ms.reviewer: wilsondarko, phwilson, v-ryanberg, v-gsitser
 #Customer intent: As an Azure Kubernetes Service user, I want to troubleshoot problems that involve node auto-provisioning managed add-ons so that I can successfully provision, scale, and manage my nodes and workloads on Azure Kubernetes Service (AKS).
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
@@ -17,9 +17,9 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 ## Summary
 
-This article discusses how to troubleshoot node auto-provisioning (NAP). NAP is a managed add-on that's based on the open source [Karpenter](https://karpenter.sh) project. NAP automatically provisions and manages nodes in response to pending pod pressure, and manages scaling events at the virtual machine (VM) or node level.
+This article discusses how to troubleshoot [node auto-provisioning (NAP)](/azure/aks/node-auto-provisioning). NAP is a managed add-on that's based on the open source [Karpenter](https://karpenter.sh) project. NAP automatically provisions and manages nodes in response to pending pod pressure, and manages scaling events at the virtual machine (VM) or node level.
 
-When you enable NAP, you might encounter issues that are associated with the configuration of the infrastructure autoscaler. This article helps you troubleshoot errors and resolve common issues that affect NAP but aren't covered in the Karpenter [FAQ][karpenter-faq] or [troubleshooting guide][karpenter-troubleshooting].
+When you enable NAP, you might encounter issues that are associated with the configuration of the infrastructure autoscaler. This article helps you troubleshoot errors and resolve common issues that affect NAP but aren't covered in the open-source [Karpenter FAQ](https://karpenter.sh/docs/faq/) or [troubleshooting guide](https://karpenter.sh/docs/troubleshooting/).
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Make sure that the following tools are installed and configured:
 
 - [Azure Command-Line Interface (CLI)](/cli/azure/install-azure-cli). To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the `[az aks install-cli](/cli/azure/aks#az-aks-install-cli)` command.
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, a Kubernetes command-line client that's available together with Azure CLI.
-- NAP, enabled on your cluster. For more information, see [node auto provisioning documentation][nap-main-docs].
+- NAP, enabled on your cluster. For more information, see [node auto provisioning documentation](/azure/aks/node-auto-provisioning).
 
 ## Common issues
 
@@ -90,8 +90,8 @@ Possible solutions include:
 
 For most networking-related issues, you can use either of the available levels of networking observability:
 
-- [Container network metrics][aks-container-metrics] (default): Enables observation of node-level metrics. 
-- [Advanced container network metrics][advanced-container-network-metrics]: Enables observation of pod-level metrics, including fully qualified domain name (FQDN) metrics for troubleshooting.
+- [Container network metrics](/azure/aks/advanced-container-networking-services-overview#container-network-metrics) (default): Enables observation of node-level metrics. 
+- [Advanced container network metrics](/azure/aks/advanced-container-networking-services-overview): Enables observation of pod-level metrics, including fully qualified domain name (FQDN) metrics for troubleshooting.
 
 ### Pod connectivity issues
 
@@ -199,16 +199,16 @@ Common causes include:
 
 Possible solutions include:
 
-- Review the [Network Security Group][network-security-group-docs] rules for required traffic.
-- Verify the subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation][aksnodeclass-subnet-config].
+- Review the [Network Security Group](/azure/virtual-network/network-security-group-how-it-works) rules for required traffic.
+- Verify the subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation](/azure/aks/node-auto-provisioning-aksnodeclass#virtual-network-vnet-subnet-configuration).
 - Restart the CNI plugin pods.
-- Check the `CoreDNS` configuration. For more information, see [CoreDNS documentation][coredns-troubleshoot].
+- Check the `CoreDNS` configuration. For more information, see [CoreDNS documentation](/azure/aks/coredns-troubleshoot).
 
 ### Pod CIDR exhausted when using Azure CNI Overlay
 
 **Symptoms**
 
-When using [Azure CNI Overlay](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlays) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
+When using [Azure CNI Overlay](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
 
 ```yaml
 kubectl get nodeclaim
@@ -247,7 +247,7 @@ You should find the following two responses included in the error codes:
 
 **Solutions**
 
-You can expand the pod CIDR range to allow more nodes to join the subnet. See our documentation to [Expand pod CIDR space in Azure CNI Overlay](https://learn.microsoft.com/azure/aks/azure-cni-overlay-pod-expand).
+You can expand the pod CIDR range to allow more nodes to join the subnet. See our documentation to [Expand pod CIDR space in Azure CNI Overlay](/azure/aks/azure-cni-overlay-pod-expand).
 
 After updating the CIDR space, new nodes should be able to join and their status will update to "Ready" state.
 
@@ -424,7 +424,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 Possible solutions include:
 
 - Request quota increases through the Azure portal.
-- Expand nodepool custom resource definitions (CRDs) to include more VM sizes. For more information, see [NodePool configuration documentation][nap-nodepool-docs]. For example, nodepool specification A is less likely than nodepool specification B to trigger quota errors that stop VM creation if A includes D-family VMs and B is specific to only one VM size.
+- Expand nodepool custom resource definitions (CRDs) to include more VM sizes. For more information, see [NodePool configuration documentation](/aks/node-auto-provisioning-node-pools). For example, nodepool specification A is less likely than nodepool specification B to trigger quota errors that stop VM creation if A includes D-family VMs and B is specific to only one VM size.
 
 [!INCLUDE [Third-party disclaimer](~/includes/third-party-disclaimer.md)]
 
