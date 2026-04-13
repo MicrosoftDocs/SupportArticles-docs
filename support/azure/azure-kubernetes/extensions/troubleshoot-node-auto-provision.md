@@ -225,7 +225,7 @@ As shown, the status for the nodeclaim remains as `Unknown`, while the status fo
 
 **Cause**
 
-When using an Azure CNI Overlay network, each node always pre-allocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR is not large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these node remain in the "NotReady" state. See [Azure CNI Overlay documentation](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay#pods) on requirements for subnet sizing and IP address planning.
+When using an Azure CNI Overlay network, each node always preallocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR isn't large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these nodes remain in the "NotReady" state. See [Azure CNI Overlay documentation](https://learn.microsoft.com/azure/aks/concepts-network-azure-cni-overlay#pods) on requirements for subnet sizing and IP address planning.
 
 **Debugging steps**
 
@@ -333,7 +333,7 @@ Run the following command:
 ```azurecli-interactive
 # From the Karpenter node, test connectivity to DNS service
 telnet 10.0.0.10 53  # Replace with your actual DNS service IP
-# Or using nc if telnet is not available
+# Or using nc if telnet isn't available
 nc -zv 10.0.0.10 53
 ```
 
