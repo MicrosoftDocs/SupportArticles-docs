@@ -15,59 +15,87 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 This article explains how to troubleshoot errors that occur when you deploy cluster extensions for Microsoft Azure Kubernetes Service (AKS), including extension creation failures, Helm errors, and scheduling issues.
 
+## Addon to Core Extension Migration
+
+### Overview 
+
+Azure Monitor services, including Container Insights, Managed Prometheus, and Application Insights, are transitioning to an extension‑based backend on Azure Kubernetes Service (AKS).
+
+As part of this change, AKS monitoring add-ons are now managed as cluster extensions. This is a backend-only change and does not impact functionality or customer experience.
+
+#### What’s changing 
+
+• Monitoring add-ons are now implemented and managed as AKS cluster extensions 
+
+• Each monitoring service is represented by its own extension
+
+#### What’s not changing 
+
+• No disruption to workloads 
+
+• No impact to data collection or monitoring functionality 
+
+• No customer action required 
+
+• Azure Portal, Azure CLI, and all client experiences continue to work as before
+
+### How to Check if Your AKS Cluster Is Migrated
+
+If your AKS cluster has been migrated to the extension-based backend, monitoring services will appear as extensions.
+
+Steps in Azure Portal:
+
+1. Go to the Azure Portal
+
+1. Navigate to your AKS cluster resource
+
+1. Select “Extensions + applications” under Settings
+
+1. Verify that the monitoring extensions are listed
+
+1. Confirm each extension shows Provisioning State as Succeeded
+
+Each monitoring service is represented and managed by its own extension.
+
+#### Monitoring Add-on to Extension Mapping
+
+| Monitoring Service / Add-on              | Extension Name                          | Extension Type                                  |
+
+|-----------------------------------------|------------------------------------------|------------------------------------------------|
+
+ Logging             | aks-managed-azure-monitor-logs           | microsoft.azuremonitor.containers              |
+
+| Managed Prometheus                      | aks-managed-azure-monitor-metrics        | microsoft.azuremonitor.containers.metrics      |
+
+| Application Insights / Monitoring       | aks-managed-app-monitoring               | microsoft.azuremonitor.appmonitoring           |
+
+### Troubleshooting
+
+**Issue 1: Extension provisioning state shows “Failed”**
+
+A Failed provisioning state indicates that the monitoring service was not enabled successfully.
+
+**How to fix** 
+
+• Verify that all required monitoring configuration values were provided correctly 
+
+• Retry enabling the monitoring add-on by disabling and then re-enabling it on the AKS cluster
+
+Monitoring add-ons are now managed as extensions in the backend, but the customer experience for enabling or disabling monitoring remains unchanged.
+
+**Issue 2: Unable to update or edit a monitoring extension**
+
+Monitoring extensions are managed by the AKS resource provider and are not user-editable.
+
+If you attempt to update an extension directly, you may see an error such as:
+
+“Failed to update ‘aks-managed-azure-monitor-logs’ for the cluster. Access denied: ‘write’ operation is not allowed.”
+
+**How to fix** 
+
+This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
+
 ## Extension creation errors
-
-### Error: Unable to get a response from the agent in time
-
-This error occurs if Azure services don't receive a response from the cluster extension agent. This situation might occur because the AKS cluster can't establish a connection with Azure.
-
-#### Cause 1: The cluster extension agent and manager pods aren't initialized
-
-The cluster extension agent and manager are crucial system components that are responsible for managing the lifecycle of Kubernetes applications. The initialization of the cluster extension agent and manager pods might fail because of the following problems:
-
-- Resource limitations 
-- Policy restrictions
-- Node taints, such as `NoSchedule`
-
-##### Solution 1: Make sure that the cluster extension agent and manager pods work correctly
-
-To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in an unready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that prevent scheduling, insufficient memory, or policy restrictions):
-
-```console
-kubectl describe pod -n kube-system extension-operator-{id}
-```
-Here's a command output sample:
-
-```output
-kube-system         extension-agent-55d4f4795f-sqx7q             2/2     Running   0          2d19h
-kube-system         extension-operator-56c8d5f96c-nvt7x          2/2     Running   0          2d19h
-```
-
-For ARC-connected clusters, run the following command to check the pod description:
-
-```console
-kubectl describe pod -n azure-arc extension-manager-{id}
-```
-
-Here's a command output sample:
-
-```output
-NAMESPACE         NAME                                          READY   STATUS             RESTARTS        AGE
-azure-arc         cluster-metadata-operator-744f8bfbd4-7pssr    0/2     ImagePullBackOff   0               6d19h
-azure-arc         clusterconnect-agent-7557d99d5c-rtgqh         0/3     ImagePullBackOff   0               6d19h
-azure-arc         clusteridentityoperator-9b8b88f97-nr8hf       0/2     ImagePullBackOff   0               6d19h
-azure-arc         config-agent-6d5fd59b8b-khw2d                 0/2     ImagePullBackOff   0               6d19h
-azure-arc         controller-manager-5bc97f7db6-rt2zs           0/2     ImagePullBackOff   0               6d19h
-azure-arc         extension-events-collector-7596688867-sqzv2   0/2     ImagePullBackOff   0               6d19h
-azure-arc         extension-manager-86bbb949-6s59q              0/3     ImagePullBackOff   0               6d19h
-azure-arc         flux-logs-agent-5f55888db9-wnr4c              0/1     ImagePullBackOff   0               6d19h
-azure-arc         kube-aad-proxy-646c475dcc-92b86               0/2     ImagePullBackOff   0               6d19h
-azure-arc         logcollector-5cbc659bfb-9v96d                 0/1     ImagePullBackOff   0               6d19h
-azure-arc         metrics-agent-5794866b46-j9949                0/2     ImagePullBackOff   0               6d19h
-azure-arc         resource-sync-agent-6cf4cf7486-flgwc          0/2     ImagePullBackOff   0               6d19h
-```
-
-When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
 
 #### Cause 2: An issue affects the egress block or firewall
 
