@@ -3747,7 +3747,7 @@
       },
       {
         "source_path": "azure-monitor/log-analytics/linux-agent-missing-heartbeats.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agents/linux-agent-missing-heartbeats",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-missing-heartbeats",
         "redirect_document_id": true
       },
       {
@@ -6645,6 +6645,38 @@
         {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/vmextensionerror-provisioningtimeout"
+            },
+        {
+        "source_path": "azure-monitor/log-analytics/linux-agents/linux-agent-missing-heartbeats.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-missing-heartbeats"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/linux-agents/linux-agent-performance-counter-missing.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/linux-agents/linux-agent-performance-counter-missing"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/mma-troubleshoot-basics.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/mma-troubleshoot-basics"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/ssl-connectivity-mma-windows-powershell"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/windows-could-not-start-mma.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/windows-could-not-start-mma"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/resolve-windows-agent-installation-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/resolve-windows-agent-installation-issues"
+      },
+        {
+        "source_path": "azure-monitor/log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/erased-proxy-settings-microsoft-monitoring-agent"
+            },
+        {
+        "source_path": "virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+        "redirect_url": "/troubleshoot/azure/virtual-network/welcome-virtual-network"
       }
   ]
 }

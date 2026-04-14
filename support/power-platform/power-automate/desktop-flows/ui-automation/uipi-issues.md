@@ -1,13 +1,15 @@
 ---
 title: UIPI Issues with UI and Browser Automation Actions
 description: Solves issues caused by User Interface Privacy Isolation (UIPI) that prevent UI or browser automation actions from executing successfully.
-ms.date: 04/09/2025
+ms.date: 04/03/2026
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: v-shaywood
+ms.reviewer: chtzirtz, iomimtso, adanas, iomavrid, v-shaywood
 ---
 # UIPI issues with UI and browser automation actions
 
-This article provides guidance for resolving issues caused by User Interface Privacy Isolation (UIPI), a security feature in Windows, which might prevent UI or browser automation actions from executing successfully. UIPI blocks certain interactions between processes running at different integrity levels, which can interfere with automation tools or scripts. As these issues might occur due to multiple potential causes, we recommend reviewing each cause listed to ensure your system settings are properly configured for successful automation.
+## Summary
+
+UI or browser automation actions in Power Automate for desktop might fail with a UIPI-related error caused by User Interface Privacy Isolation (UIPI), a Windows security feature that blocks interactions between processes running at different integrity levels. Common causes include a locked desktop, an open UAC dialog, a minimized RDP window, the target application running in elevated mode, an active screen saver, Server Manager starting automatically, or recent Windows updates. This article provides solutions for each of these causes, including adjusting UAC settings, modifying registry entries for RDP sessions, and changing application elevation settings. Because these issues might occur due to multiple potential causes, we recommend reviewing each cause listed to ensure your system settings are properly configured for successful automation.
 
 ## Symptoms
 
@@ -15,11 +17,11 @@ Actions performing UI or browser automation might fail with an error message sim
 
 > System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information.
 
-## Cause 1: The desktop is locked during execution
+## The desktop is locked during execution
 
 **Solution**: Unlock the desktop to allow the automation process to proceed.
 
-## Cause 2: A UAC dialog is open during execution
+## A UAC dialog is open during execution
 
 **Solution**: Ensure that User Account Control (UAC) dialogs don't appear during automation. If necessary, temporarily adjust the UAC settings:
 
@@ -28,7 +30,7 @@ Actions performing UI or browser automation might fail with an error message sim
 1. Adjust the slider to a lower setting temporarily to prevent UAC interruptions during automation.
 1. Restore the original settings after completing the automation process.
 
-## Cause 3: The RDP window is minimized during execution
+## The RDP window is minimized during execution
 
 **Solution**: Modify the system registry to prevent issues with minimized Remote Desktop Protocol (RDP) sessions.
 
@@ -47,7 +49,7 @@ Actions performing UI or browser automation might fail with an error message sim
 1. Set the **Value data** field to **2**.
 1. Select **OK** to save the changes and close the Registry Editor.
 
-## Cause 4: The application being automated is running in elevated mode
+## The application being automated is running in elevated mode
 
 **Solution**: Ensure that the application being automated isn't running with elevated privileges. If the application is set to run as an administrator, adjust its execution settings:
 
@@ -56,7 +58,7 @@ Actions performing UI or browser automation might fail with an error message sim
 1. Clear the **Run this program as an administrator** option.
 1. Select **OK** to save the changes.
 
-## Cause 5: The desktop screen saver is enabled
+## The desktop screen saver is enabled
 
 **Solution**: Disable the screen saver to prevent interruptions during automation:
 
@@ -65,7 +67,7 @@ Actions performing UI or browser automation might fail with an error message sim
 1. Set the **Screen saver** option to **None**.
 1. Select **Apply** > **OK**.
 
-## Cause 6: Windows Server Manager starts automatically at logon, triggering UAC
+## Windows Server Manager starts automatically at logon, triggering UAC
 
 **Solution**: Disable the automatic start feature of Server Manager to prevent UAC prompts:
 
@@ -74,7 +76,7 @@ Actions performing UI or browser automation might fail with an error message sim
 1. Select the **Do not start Server Manager automatically at logon** checkbox.
 1. Select **OK** to save the changes.
 
-## Cause 7: Windows updates or system configuration changes
+## Windows updates or system configuration changes
 
 **Solution**: Review recent Windows updates or system changes and revert them if necessary to resolve the issue.
 
@@ -85,4 +87,10 @@ Actions performing UI or browser automation might fail with an error message sim
   - **Populate text field on web page**: Disable the **Populate text using physical keystrokes** option.
   - **Click link on web page**: Disable the **Send physical click** option.
 
-- For UI automation, enable the [Simulate action](/power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions) parameter for eligible UI Automation actions and UI elements.
+- For UI automation, enable the [Simulate action](/power-automate/desktop-flows/actions-reference/uiautomation) parameter for eligible UI Automation actions and UI elements.
+
+## Related content
+
+- [UI automation action fails with "Failed to get UI element" or "Failed to get window" error](ui-automation-action-fails-errors.md)
+- ["Failed to assume control of Microsoft Edge/Chrome/Firefox" error](../browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error.md)
+- [Run Power Automate with elevated rights](/power-automate/desktop-flows/how-to/run-power-automate-elevated-rights)

@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 09/12/2025
+ms.date: 04/08/2026
 ms.reviewer: kendownie
 ---
 
@@ -243,13 +243,13 @@ If you're unable to mount the file share due to **error: connection timed out**,
 
 [Recover the storage account](/azure/storage/common/storage-account-recover). Then, delete and re-create the private endpoint so it's associated with the new storage account resource ID.
 
-### Cause 5: You're trying to mount the share using the NFS client mount instead of the AZNFS mount helper, and the **Secure transfer required** setting is enabled on the storage account.
+### Cause 5: You're trying to mount the share using the NFS client mount instead of the AZNFS mount helper, and the **Secure transfer required** and/or **Require encryption in transit for NFS** setting is enabled on the storage account.
 
-The **Secure transfer required** setting enforces encryption in transit for all file shares within the storage account. For NFS file shares, using encryption in transit requires mounting the share using the AZNFS Mount Helper, a client utility package that abstracts the complexity of establishing secure tunnels for NFSv4.1 traffic.
+The **Secure transfer required** setting enforces encryption in transit for all file shares within the storage account unless the **Require encryption in transit for NFS** setting is enabled, in which case **Secure transfer required** only applies to REST/HTTPS traffic. For NFS file shares, using encryption in transit requires mounting the share using the AZNFS Mount Helper, a client utility package that abstracts the complexity of establishing secure tunnels for NFSv4.1 traffic.
 
 #### Solution
 
-Either disable the **Secure transfer required** setting on the storage account or use the AZNFS mount helper to mount the share. For more information, see [Encryption in transit for NFS Azure file shares](/azure/storage/files/encryption-in-transit-for-nfs-shares).
+Either disable both the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting and the [Require encryption in transit for NFS](/azure/storage/files/encryption-in-transit-for-nfs-shares#where-to-configure-the-setting) setting on the storage account, or use the AZNFS mount helper to mount the share. For more information, see [Encryption in transit for NFS Azure file shares](/azure/storage/files/encryption-in-transit-for-nfs-shares).
 
 ## ls hangs for large directory enumeration on some kernels
 

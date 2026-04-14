@@ -4,7 +4,7 @@ description: Resolve Datadog agent installation failures caused by a missing def
 author: agrimayadav
 ms.author: jarrettr
 ms.service: partner-services
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/22/2025
 ai-usage: ai-assisted
 
