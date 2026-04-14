@@ -83,10 +83,10 @@ provides a UI experience for reading and accepting the legal terms. Offer detail
 Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'...
 ```
 
-There are three options to resove the issue:
+There are three options to resolve the issue:
 <ul>
 <li> Using the Azure CLI </li>
-<li> Using the Azure Powershell interface</li>
+<li> Using the Azure PowerShell interface</li>
 <li> Deploy a machine from the portal, accept the terms and conditions during the deployment process</li>
 </ul>
 
@@ -111,7 +111,7 @@ Provisioning failures commonly occur for multiple reasons, including:
 
 - Failed to accept terms & conditions for the particular image.
 
-   Terms & conditions can be accepted via PowerShell, AzureCLI or using the Azure Portal.
+   Terms & conditions can be accepted via PowerShell, AzureCLI or using the Azure portal.
 
 ### Troubleshoot provisioning failures
 
@@ -220,13 +220,13 @@ Use the following table for reference, not as a checklist. You don't need to ide
 
  #### Cause
  
-The kernel doesn't load the UDF driver. Virtual Machines(VMs) with cloud-init 21.1 or older need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). VMs with cloud-init 21.2 or newer deploy successfully, however, custom data is not accesible to the machines, preventing passwords and other sesitive information be provided to VMs upon deployment.
+The kernel doesn't load the UDF driver. Virtual Machines(VMs) with cloud-init 21.1 or older need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). VMs with cloud-init 21.2 or newer deploy successfully, however, cutsom data isn't accessible to the machines, preventing passwords and other sensitive information be provided to the VMs upon deployment.
 
 When a VM is first provisioned on Azure,
 <ul>
 <li> The Azure host presents a 'provisioning cdrom iso disk' to the VM.
 <li> This provisioning disk is presented to the VM through /dev/sr0. 
-<li> Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. 
+<li> Within the provisioning disk, there's a provisioning manifest that contains a VM's provisioning information. 
 <li> The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 </ul>
 
@@ -276,7 +276,7 @@ This problem occurs because the provided password includes unsupported (non-ASCI
 
 Provide a password that includes only ASCII characters.
 
-### Dhclient permission
+### DHCLIENT permission
 
 **Error** in cloud-init.log:
 
@@ -301,7 +301,7 @@ For VMs that run cloud-init earlier than version 20.3, configure the VM so that 
 
 ## Get more logs
 
-If you need more logs from the VM to understand the problems, use a pre-provisioned user to login into the serial console [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux). If you don't have a pre-provisioned user, you can either re-create the image to include one, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
+If you need more logs from the VM to understand the problems, use a pre-provisioned user to log in into the serial console [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux). If you don't have a pre-provisioned user, you can either re-create the image to include one, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
 
 ```azurecli-interactive 
 az vm repair create  \
