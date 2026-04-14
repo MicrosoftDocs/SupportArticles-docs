@@ -114,7 +114,7 @@ The dimension value is suspended, either at the header level or as a legal entit
 
 1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
 1. Select the dimension type, and then select **Dimension values**.
-1. Check whether the dimension value is marked as suspended. Reactivate it, if it's necessary.
+1. Check whether the dimension value is marked as suspended. Reactivate it, if necessary.
 
 ### Check for default or derived dimensions that apply suspended values
 
@@ -198,7 +198,7 @@ These errors appear if a ledger combination has a blank value that contradicts t
 
 ### Check for default or derived dimensions that cause blanks
 
-If you didn't directly leave the field blank, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might be causing blank values:
+If you didn't directly leave the field blank, default dimensions or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) in your setup might cause blank values:
 
 1. Review the main account for fixed dimensions that should populate automatically.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -212,7 +212,7 @@ As an alternative solution, modify the account structure or advanced rules to al
 1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Account structures**.
 1. Review the account structure settings, and modify them to allow blank values, as appropriate.
 1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Advanced rule structures**.
-1. Review and modify advanced rule configurations to allow blanks, if it's necessary.
+1. Review and modify advanced rule configurations to allow blanks, if necessary.
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
@@ -222,28 +222,51 @@ You receive the following error message:
 
 > \<DimensionName> is not an allowed value in combination with the following dimensions values that are valid.
 
-This error message appears if a dimension value doesn't follow the [account structure](/dynamics365/finance/general-ledger/configure-account-structures) or [advanced rules](/dynamics365/finance/general-ledger/tasks/create-assign-advanced-rule-structures) that are set up for the ledger.
+This error message appears if one or more financial dimension values conflict with the constraints defined in your [account structures](/dynamics365/finance/general-ledger/configure-account-structures), [advanced rules](/dynamics365/finance/general-ledger/tasks/create-assign-advanced-rule-structures), or dimension configuration.
 
-### Review the account structure and advanced rule setup
+### Review the account structure constraints
 
-1. Identify the violating rule from the error message. Typically, the message identifies the account structure or advanced rule that was violated.
-1. Go to **General ledger** > **Ledger setup** > **Ledger**.
-1. Review the account structure and advanced rule setup.
-1. Verify that the account combination is allowed under the current configuration.
-1. Change the dimension value to one that's allowed by the account structure.
+The account structure might explicitly prohibit the dimension value for the combination you entered.
+
+1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**.
+1. Select the account structure that's referenced in the error message, and then select **Edit**.
+1. Review the allowed values for each segment. Confirm that the dimension value from the error message falls within the allowed ranges or criteria.
+1. If the account structure uses a criteria expression, verify that it uses semicolons (`;`) to separate multiple dimension values rather than commas (`,`). Commas in criteria expressions can cause values to be excluded unexpectedly.
+1. If the account structure is in **Draft** status, the latest changes aren't in effect. Select **Activate** on the Action Pane to apply the changes.
 
 For more information, see [Configure account structures](/dynamics365/finance/general-ledger/configure-account-structures).
 
-### Make sure the account structure is activated
+### Check advanced rules
 
-1. Go to **General ledger** > **Chart of accounts** > **Structures** > **Configure account structures**.
-1. Check the status of the account structure. If it shows **Draft**, the changes don't take effect.
-1. On the **Action Pane**, select **Activate**.
+Advanced rules apply extra constraints on top of the base account structure. When multiple rules apply, the system enforces the most restrictive combination.
+
+1. On the **Configure account structures** page, select **Advanced rules** for the relevant account structure.
+1. Review each rule to check whether it further constrains the valid values beyond what the base account structure allows.
+1. Check that every advanced rule has a criteria filter. A rule without a filter applies to all transactions and might cause unexpected restrictions.
+
+### Verify that the dimension value is active
+
+The main account or dimension value might be suspended, inactive, or outside its valid date range.
+
+1. Go to **General ledger** > **Chart of accounts** > **Dimensions** > **Financial dimensions**.
+1. Select the relevant dimension, and then select **Financial dimension values**.
+1. Locate the value from the error message and confirm the following conditions:
+   - The **Suspended** option isn't set to **Yes** on the **General** tab.
+   - The **Active from** and **Active to** dates include the transaction date.
+   - If [legal entity overrides](/dynamics365/finance/general-ledger/financial-dimensions#legal-entity-overrides) are configured, verify that the value isn't suspended or inactive for the specific legal entity where the transaction is entered.
+
+### Check for fixed dimensions
+
+A [fixed dimension value](/dynamics365/finance/general-ledger/dimensions-default-values) on a main account replaces whatever value is entered on the transaction line, even if that value is blank. If the account structure requires a nonblank value and the fixed dimension is blank, the validation fails.
+
+1. Go to **General ledger** > **Chart of accounts** > **Accounts** > **Main accounts**.
+1. Select the main account that's used in the transaction.
+1. On the **Legal entity overrides** FastTab, check whether a fixed dimension value is set that conflicts with the value you entered or that forces a blank value where one isn't allowed.
 
 ### Verify the account structure is assigned to the ledger
 
 1. Go to **General ledger** > **Ledger setup** > **Ledger**.
-1. Verify that the account structure appears in the list.
+1. Verify that the correct account structure appears in the list.
 
 ### Check for default or derived dimensions that cause incorrect values
 
@@ -252,6 +275,7 @@ If you didn't directly enter the violating value, default dimensions or [derived
 1. Review the main account for fixed dimensions that conflict with your entry.
 1. Check the journal header default dimensions that might be automatically applied.
 1. Review the derived dimensions setup against each segment in the ledger account.
+1. Check whether [interunit dimensions](/dynamics365/finance/general-ledger/example-balanced-journals-interunit-accounting) are enabled. Interunit balancing can cause the system to validate a different main account or dimension value than what you entered.
 1. Update your default dimension setup accordingly.
 
 ## Dimension values validated with account structure or advanced rule
@@ -272,7 +296,7 @@ For more information, see [Configure account structures](/dynamics365/finance/ge
 
 ### Check for default or derived dimensions that cause the violation
 
-If you didn't manually enter the segment that caused the error, default or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) might be providing the value:
+If you didn't manually enter the segment that caused the error, default or [derived dimensions](/dynamics365/finance/general-ledger/financial-dimensions#derived-dimensions) might provide the value:
 
 1. Review the main account for fixed dimension values that conflict with the account structure.
 1. Check the journal header default dimensions that might be automatically applied.
@@ -285,7 +309,7 @@ You receive the following error message:
 
 > \<DimensionValue> isn't a valid dimension value in account structure.
 
-This error message appears if a value in the ledger account combination doesn't meet the constraints that are defined in the assigned [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
+This error message appears if a value in the ledger account combination doesn't meet the constraints that you defined in the assigned [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
 
 ### Refresh the form and re-enter the value
 
