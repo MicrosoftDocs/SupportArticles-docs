@@ -2,7 +2,7 @@
 title: Fix OLE DB Provider Errors for SQL Linked Servers
 description: Resolve OLE DB provider errors 7403 and 7302 for linked servers in SQL Server. Learn how to fix provider registration, bitness mismatches, and connectivity issues.
 ms.date: 04/14/2026
-ms.reviewer: v-shaywood
+ms.reviewer: jopilov, v-shaywood
 ms.custom: sap:Linked Server and distributed queries
 ---
 
