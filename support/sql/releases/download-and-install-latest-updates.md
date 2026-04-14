@@ -59,6 +59,9 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                   | Release date      |
 | ----------------------- | ------------ | --------- | ------------------------------------------------------- | ----------------- |
+| 17.0.4035.5             | None         | CU4       | [KB5081495](sqlserver-2025/cumulativeupdate4.md)        | April 16, 2026    |
+| 17.0.4030.1             | None         | CU3 + GDR | [KB5083245](https://support.microsoft.com/help/5083245) | April 14, 2026    |
+| 17.0.1110.1             | None         | GDR       | [KB5084814](https://support.microsoft.com/help/5084814) | April 14, 2026    |
 | 17.0.4025.3             | None         | CU3       | [KB5077896](sqlserver-2025/cumulativeupdate3.md)        | March 12, 2026    |
 | 17.0.4020.2             | None         | CU2 + GDR | [KB5077466](https://support.microsoft.com/help/5077466) | March 10, 2026    |
 | 17.0.1105.2             | None         | GDR       | [KB5077468](https://support.microsoft.com/help/5077468) | March 10, 2026    |
