@@ -7,6 +7,7 @@ ms.author: jarrettr
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
 ms.date: 11/18/2024
+ms.custom: sap:Traffic Routing
 ---
 
 # Troubleshoot Azure Front Door file compression

@@ -1,7 +1,6 @@
 ---
 title: Excel opens a blank screen when you double-click a file icon or file name
 description: Offers resolutions to an issue where you see a blank screen when you try to open an Excel workbook by double-clicking its icon or file name.
-ms.date: 05/26/2025
 author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
@@ -11,16 +10,18 @@ ms.custom:
   - Open
   - CSSTroubleshoot
   - CI 147067
+  - CI 11127
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Excel for Microsoft 365
-  - Excel LTSC 2021
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
+  - Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel LTSC 2021
+  - Microsoft Excel 2019
+  - Microsoft Excel 2016
+ms.date: 04/13/2026
 ---
 
 # Troubleshoot opening a blank screen when you double-click a file icon or file name in Excel
@@ -38,14 +39,14 @@ To resolve this problem, try the following options, as appropriate, in the given
 
 ## Option 1: Check for hidden sheets
 
-An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
+An Excel sheet may have inadvertently been saved as a hidden document. To check this, follow these steps:
 
 1. Go to the **View** tab.
 1. Select **Unhide**.
 1. Select a workbook from the list.
 1. Select **OK**.
 
-## Option 2: Minimizing and maximizing the window
+## Option 2: Minimize and maximize the window
 
 Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
 
@@ -54,52 +55,11 @@ Minimizing and then maximizing the window can sometimes refresh the Excel page a
 
 After your sheet is maximized, your data may appear.
 
-## Option 3: Disable hardware acceleration
-
-To work around this problem, disable hardware acceleration until a fix is released by your video adapter manufacturer. Make sure to check regularly for updates to your video adapter driver.
-
-To disable hardware acceleration, follow these steps:
-
-1. Start any Office 2013, Office 2016, Office 2019, or Microsoft 365 Apps program.
-1. On the **File** tab, select **Options**.
-1. In the **Options** dialog box, select **Advanced**.
-1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
-
-   The following screenshot shows this option in Excel.
-
-   :::image type="content" source="media/error-when-send-commands-in-excel/disable-hardware-graphics-acceleration.png" alt-text="Select the Disable hardware graphics acceleration option to disable hardware acceleration in Office Options setting." border="false":::
-
-1. Select the **OK** button.
-
-> [!NOTE]
-> For more information about hardware acceleration, see [Display issues in Office 2013 client applications](https://support.microsoft.com/help/2768648).
-
-## Option 4: Ignore DDE
-
-This problem may occur if the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box in Excel options is selected.
-
-When you double-click an Excel workbook in Windows Explorer, a dynamic data exchange (DDE) message is sent to Excel. This message instructs Excel to open the workbook that you double-clicked.
-
-If you select the "Ignore" option, Excel ignores DDE messages that are sent to it by other programs. Therefore, the DDE message that is sent to Excel by Windows Explorer is ignored, and Excel does not open the workbook that you double-clicked.
-
-To correct this setting, follow these steps.
-
-> [!NOTE]
-> This step can be skipped for Excel 2019, Excel LTSC 2021 and Excel O365.
-
-1. In the upper-left corner of the Excel window, select **File** > **Options**.
-1. On the left side of the **Options** window, select **Advanced**.
-1. In the **Advanced** window, scroll down to the **General** section.
-1. Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, and then select the **OK** button at the bottom of the window.
-
-> [!NOTE]
-> For more information about how to turn off DDE, see ["An error occurred when sending commands to the program" in Excel](error-when-send-commands-in-excel.md).
-
-## Option 5: Reset file associations
+## Option 3: Reset file associations
 
 To check whether the file associations in the system are performing correctly, reset the Excel file associations to their default settings. To do this, follow the steps for your operating system.
 
-### For Windows 10 and Windows 8.1
+### For Windows 10 and Windows 11
 
 1. Locate the file that is opening incorrectly, and copy it to your desktop.
 1. Right-click the file, and select **Properties**.
@@ -114,36 +74,19 @@ To open this type of file in a different app:
 1. Select the desired app, then select the **Always use this app** checkbox.
 1. Select the **OK** button.
 
-### For Windows 8
-
-1. On the Start screen, type **Control Panel**.
-1. Select or tap **Control Panel**.
-1. Select **Default Programs**, then select **Set your default programs**.
-1. Select **Excel**, then select **Choose default for this program**.
-1. On the **Set Program Associations** screen, select **Select All**, and then select **Save**.
-
-### For Windows 7
-
-1. Select **Start**, then select **Control Panel**.
-1. Select **Default Programs**.
-1. Select **Associate a file type or protocol with a specific program**.
-1. Select **Microsoft Excel Worksheet**, then select change program.
-1. Under **Recommended Programs**, select **Microsoft Excel**.
-1. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe**, then select **Excel**.
-
-## Option 6: Repair User Experience Virtualization (UE-V)
+## Option 4: Repair User Experience Virtualization (UE-V)
 
 If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do so, see [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0](https://support.microsoft.com/help/2927019).
 
 If you aren't sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
 
-## Option 7: Repair Office
+## Option 5: Repair Office
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
 ### For a Microsoft 365 Apps, Office LTSC 2021, or Office 2019 Click-to-Run installation
 
-#### Windows 10
+#### For Windows 10 and Windows 11
 
 1. On the **Start** screen, type **Settings**.
 1. Select or tap **Settings**.
@@ -152,33 +95,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select or tap the **Modify** button.
 1. In the **How would you like to repair your Office programs** window, select or tap the **Online Repair** radio button, then select or tap the **Repair** button.
 
-#### Windows 8
-
-1. On the Start screen, type **Control Panel**.
-1. Select or tap **Control Panel**.
-1. Under **Programs**, select or tap **Uninstall a program**.
-1. Select or tap **Microsoft 365**, then select or tap **Change**.
-1. Select or tap **Online Repair**, then select or tap **Repair**. You may have to restart your computer after the repair process is finished.
-
-#### Windows 7
-
-1. Select **Start**, then select **Control Panel**.
-1. double-click **Programs and Features**.
-1. Select **Microsoft 365**, then select **Change**.
-1. Select **Online Repair**, then select **Repair**.
-
-   :::image type="content" source="media/error-when-send-commands-in-excel/online-repair-option.png" alt-text="Select the Online Repair option to repair office.":::
-
-> [!NOTE]
-> You may have to restart your computer after the repair process is complete.
-
-### For an Office 2013, Office 2010, or Office 2007 installation
-
-To repair Office 2013, Office 2010, or Office 2007, follow the steps in the following Office website topic:
-
-[Repair an Office application](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx)
-
-## Option 8: Turn off add-ins
+## Option 6: Turn off add-ins
 
 Excel and COM add-in programs can also cause this problem. These two kinds of add-ins are located in different folders. For testing, disable and isolate the conflict by turning off each add-in one at a time. To do this, follow these steps:
 
