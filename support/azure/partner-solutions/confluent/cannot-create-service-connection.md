@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/24/2025
 ai-usage: ai-assisted
 

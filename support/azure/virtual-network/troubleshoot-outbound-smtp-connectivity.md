@@ -7,7 +7,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.custom: = sap:Connectivity
+ms.custom: sap:Connectivity
 ms.date: 07/28/2025
 # Customer intent: As a cloud administrator, I want to troubleshoot outbound SMTP connectivity issues in Azure, so that I can ensure reliable email delivery from my virtual machines without interruptions.
 ---
