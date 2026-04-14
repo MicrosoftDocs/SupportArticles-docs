@@ -341,7 +341,7 @@ As part of the update, the cmdlet rotates the Kerberos keys, which is necessary 
 
 If you can't use the AzFilesHybrid module, you can manually upgrade to AES-256 by following these steps.
 
-First, check the domain properties:
+First, check the domain properties that are configured on the storage account:
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -351,10 +351,22 @@ $sa = Get-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageA
 $sa.AzureFilesIdentityBasedAuth.ActiveDirectoryProperties | Select-Object DomainName, SamAccountName, AccountType
 ```
 
-If `DomainName`, `SamAccountName`, and `AccountType` all return values, your domain properties are correctly set and you can skip ahead to [Enable AES-256 on the domain object](#enable-aes-256-on-the-domain-object).
+You should check that `DomainName`, `SamAccountName`, and `AccountType` all return values, and that they match the values of the AD account. You can check these values on the AD account with the following PowerShell.
 
-> [!NOTE]
-> Only run the following script if the previous command returned empty, incorrect, or missing values. This script populates the required domain properties on the storage account.
+```PowerShell
+$domainInformation = Get-ADDomain
+$domainName = $domainInformation.DnsRoot
+$samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+    elseif ($saAdObject.objectClass -contains "user") { "User" }
+
+Write-Host "DomainName=$domainName, samAccountName=$samAccountName, type=$type"
+```
+
+> [!IMPORTANT]
+> The above properties are used to generate the salt for the AES-256 encryption key. If the values configured on the storage account do not match the values from AD DS, SMB authentication will fail after upgrading to AES-256.
+
+To ensure all domain properties are correctly configured on the storage account, run the following script. It is safe to re-run even if the domain properties are already configured correctly on the storage account.
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -389,6 +401,10 @@ Set-AzStorageAccount `
     -ActiveDirectorySamAccountName $samAccountName `
     -ActiveDirectoryAccountType $type
 ```
+
+If they are 
+
+your domain properties are correctly set and you can skip ahead to [Enable AES-256 on the domain object](#enable-aes-256-on-the-domain-object).
 
 For more information, see [Enable AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 
