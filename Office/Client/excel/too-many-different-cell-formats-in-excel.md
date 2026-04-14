@@ -1,6 +1,6 @@
 ---
-title: You receive a Too many different cell formats error message in Excel
-description: Discusses that you receive a Too many different cell formats error message in Excel. Provides a resolution.
+title: Excel found unreadable content in the file error message in Excel
+description: Discusses an Excel error message that states, Excel found unreadable content in the file. Provides a resolution.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 11127
 appliesto: 
-  - Microsoft 365
+  - Excel for Microsoft 365
   - Excel 2024
   - Excel 2021
   - Excel 2019
@@ -22,7 +22,7 @@ appliesto:
 ms.date: 04/13/2026
 ---
 
-# You receive a "Too many different cell formats" error message in Excel
+# "Excel found unreadable content in the file" error message in Excel
 
 ## Symptoms
 
@@ -59,31 +59,6 @@ To prevent built-in styles from being duplicated when you copy a workbook, make 
 
 ### Method 2
 
-The following Knowledge Base articles discuss how to prevent copying custom styles between workbooks in one instance of Excel when you move or copy a worksheet.
-
-> [!NOTE]
-> These articles require you to install and add a registry key.
-
-- [Unused styles are copied from one workbook to another workbook in Excel 2007](https://support.microsoft.com/help/2553085)
-- [Unused styles are copied from one workbook to another in Excel 2010](https://support.microsoft.com/help/2598127)
-
-### Method 3
-
-To clean up workbooks that already contain several styles, you can use one of the following third-party tools.
-
-- Excel formats (xlsx, xlsm)
-
-  [XLStyles Tool](https://sergeig888.wordpress.com/2011/03/21/net4-0-version-of-the-xlstylestool-is-now-available/)
-
-- Binary Excel formats (xls, xlsb), workbooks protected by a password, and encrypted workbooks  
-
-  [Remove Styles Add-in](https://ro.softpedia-secure-download.com/dl/8cf59470c56d8c59ef33441743129a81/61946f8e/100232879/software/OFFICE%20TOOLS/RemoveStyles.xlam)
-
-> [!NOTE]
-> You can also download a copy of XLStyles Tool for Windows 10 from [the Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfjptg).
-
-### Method 4
-
 Simplify the formatting of your workbooks. For example, follow these guidelines to simplify formatting:
 
 - Use a standard font. By using the same font for all cells, you can reduce the number of formatting combinations.
@@ -100,5 +75,3 @@ Simplify the formatting of your workbooks. For example, follow these guidelines 
 ## More information
 
 In most cases, the current limit of different formatting combinations for a single workbook (4,000 for .xls format and 64,000 for .xlsx format) is sufficient. This problem is likely to occur only when the workbook contains many worksheets that use different formatting, or when many cells are formatted differently.
-
-[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
