@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Linux virtual machine deployment issues
-description: Troubleshoot Linux virtual machine deployment issues in Azure by identifying failure stages, analyzing logs, and applying fixes to restore provisioning. Start now.
+description: Troubleshoot Linux virtual machine deployment issues in Azure by identifying failure stages, analyzing logs, and applying fixes to restore provisioning.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.date: 03/25/2026
@@ -71,8 +71,8 @@ When this problem occurs, the VM state shows as `failed`.
 
 ### Extra Terms and Conditions required
 
-Some Marketplace images require the user to accept terms & conditions additional to the ones required by Microsoft Azure in order to be
-able to deploy them, here is a typical error message during deployment when using the Azure CLI to deploy such images.
+Some Marketplace images require the user to accept terms & conditions, other than the ones required by Microsoft Azure, in order 
+ to deploy them, here is a typical error message during deployment when using the Azure CLI to deploy such images.
 
 ```output
 Message: Offer with PublisherId: 'xxxx', OfferId: 'XXXXlinux-aarch64' cannot be purchased due to validation errors. 
@@ -230,7 +230,7 @@ When a VM is first provisioned on Azure,
 <li> The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 </ul>
 
-Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
+Because the provisioning disk is a `cdrom iso disk`, the Linux Kernel requires the UDF driver to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
 #### Solution
 
@@ -301,7 +301,7 @@ For VMs that run cloud-init earlier than version 20.3, configure the VM so that 
 
 ## Get more logs
 
-If you need more logs from the VM to understand the problems, SSH into the VM by using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) by using a user that's baked into the image. If you don't have a user baked in, you can either re-create the image to include a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
+If you need more logs from the VM to understand the problems, use a pre-provisioned user to login into the serial console [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux). If you don't have a pre-provisioned user, you can either re-create the image to include one, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) to mount the OS disk of the VM that didn't provision to another VM.
 
 ```azurecli-interactive 
 az vm repair create  \
