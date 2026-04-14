@@ -15,19 +15,19 @@ Microsoft Endpoint Configuration Manager (current branch)
 ## Symptoms
 During ConfigMgr update installation, the following errors could be found in the *CMUpdate.log*:
 
-> ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi
-> Failed to find SQLSysClrTypes.msi
-> Failed to install SQLSysClrTypes.msi
-> Failed to install SQL redist
+> ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi  
+> Failed to find SQLSysClrTypes.msi  
+> Failed to install SQLSysClrTypes.msi  
+> Failed to install SQL redist  
 
 Or
 
-> ERROR: File hash check failed: 0x80070002
-> ERROR: VerifyExternalFile failed: 0x80070002
-> ERROR: Failed to find valid source for required external file 
-> ERROR: Failed to find valid source for required file 'MMASetup-AMD64.exe'. Aborting setup.
-> Setup has encountered fatal errors while performing file operations.
-> Failed to install update files.
+> ERROR: File hash check failed: 0x80070002  
+> ERROR: VerifyExternalFile failed: 0x80070002  
+> ERROR: Failed to find valid source for required external file  
+> ERROR: Failed to find valid source for required file 'MMASetup-AMD64.exe'. Aborting setup.  
+> Setup has encountered fatal errors while performing file operations.  
+> Failed to install update files.  
 
 ## Cause
 Required files (`SQLSysClrTypes.msi` or `MMASetup-AMD64.exe` are missing under `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\redist` (or `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\SMSSETUP\BIN\X64` accordingly)
@@ -43,6 +43,6 @@ Run the following Windows PowerShell command on a computer that can access the S
 ```
 
 ## Additional guidance
-For a broader overview of how update packages are downloaded, staged, and installed—and for additional troubleshooting workflows see:
+For a broader overview of how update packages are downloaded, staged, and installed and for additional troubleshooting workflows see:
 Understand and troubleshoot Updates and Servicing in Configuration Manager 
 https://learn.microsoft.com/en-us/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing
