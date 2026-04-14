@@ -93,42 +93,46 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
 Replication of any Active Directory data between DCs in a forest depends on all DC's having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes the Schema partition so that any change to a schema definition replicates before any data that uses the schema definition can replicate.
 
-**
+Schema mismatches can occur under the following circumstances:
 
-Attempts to replicate AD when schema information is not consistent between the DC partners involved causes a "Schema Mismatch" error. This symptom manifests in a number of different ways. However, the underlying cause of the error varies.
-
-There are also scenarios in which this error occurs, but there is not a mismatch in the schema information in the strictest sense. In these cases, Active Directory might not conform to the current schema definition for the relevant object or attribute whose value is being synchronized and applied at the destination DC.
+- DCs replicate the schema partition, and the source DC has different schema information than the destination DC.
+- DCs replicate a non-schema partition, and the data on the source DC uses a different schema than the data on the destination DC.
 
 > [!IMPORTANT]  
 > Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
 
-**
+### Transient issues versus persistent issues
 
+Schema mismatch issues typically fall into one of two categories: *Transient* or *persistent*.
 
+Transient schema mismatch issues meet the following criteria:
 
-The duration of schema mismatch errors typically falls into one of two categories: Transient or persistent.
-
-If the reports of schema mismatch errors match the following criteria, you can classify them as *transient* schema mismatch errors.
-
-- The reports appear on different DCs throughout the forest, in a pattern that matches the AD replication topology and schedule. This kind of pattern typically occurs when you install an update to the schema.
+- The error messages appear on different DCs throughout the forest, in a pattern that matches the Active Directory replication topology and schedule. This kind of pattern typically occurs when you install an update to the schema.
 - On any particular DC, the issue disappears after one replication cycle per replication partner. Allow twice the amount of time needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners a DC has, the longer this process takes.
 
-Schema mismatch errors that don't meet these criteria and don't resolve themselves are *persistent* schema mismatch errors. Such errors indicate that there's an underlying issue that's interfering with normal replication. In some cases, you can identify and resolve the underlying issues. In other cases, you might need assistance from Microsoft Support.
+Persistent schema mismatch issues don't meet these criteria, and don't resolve themselves. Such issues indicate one or more of the following issues:
+
+- There's an underlying issue that's interfering with normal replication. The replication service can't resolve the schema mismatch until the underlying issue is corrected. In some cases, you can identify and resolve the underlying issues. In other cases, you might need assistance from Microsoft Support. For example, any of the following issues can block replication.
+  - Database corruption
+  - Memory constraints
+  - Replication quarantine
+  - Strict replication consistency enforced
+  - Disabled replication
+  - DNS (Domain Name Resolution) issues
+  - RPC communication issues
+  - Local or network firewalls
+
+- The schema partition on one or more DCs has improper attribute definitions.
 
 **
 For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
-Self
-  
-  Symptoms: 
-    Event ID 1309, error 8418 (Microsoft-Windows-ActiveDirectory_DomainService)
-    Event ID 1791, error 8418 (Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication)
-    Event ID 1925, error 8418 (NTDS KCC)
+
 
 ## Resolution
 
-A schema mismatch issue can occur in different situations under multiple circumstances. In order to resolve a schema mismatch issue, you have to understand the scenario in which the is error occurred. Such scenarios include:
+A schema mismatch issue can occur in different situations under multiple circumstances. In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred. Such scenarios include:
 
-- The issue occurred after the Active Directory schema was updated. In many cases, this issues are transient and resolve themselves.
+- The issue occurred after the Active Directory schema was updated. In many cases, this issue is transient and resolves itself.
 - The issue occurred when you tried to promote a member server to a domain controller (DC). The promotion operation failed.
 - The issue occurred during normal replication. Typically, this means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
   - A DC is quarantined, or might have lingering objects
@@ -136,52 +140,54 @@ A schema mismatch issue can occur in different situations under multiple circums
   - A DC has stopped replicating for other reasons
   - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
 
-The aim of the initial data collection is to try to capture information sufficient to identify if a known issue is being experienced or if other issues are contributing to the failure.
+### Review the overall replication status and identify the scenario that applies to your issue
 
-Collecting replication data for all DC's in the forest is advised particularly in the case where a schema mismatch has been noted after a recent Schema Update or during normal replication monitoring. Collecting this data helps identify any pockets of replication failure on which to focus.
+We recommend that you start your investigation by collecting replication data for all the DCs in the forest. Collecting this data helps identify any pockets of replication failure. To collect data and export it to a .csv file for analysis, run a command that resembles the following example at the command prompt:
 
-`Repadmin showrepl * /csv > allrepl.csv`
+```console
+Repadmin showrepl * /csv > allrepl.csv
+```
 
-Once all the DCs experiencing replication failures, of ANY form, have been identified from the `repadmin /showrepl` data focus can move to specific DCs.
+Review this data, identifying all the DCs that experience *any* replication issues.
 
-***
-
-
-
-### Schema update - 
-
-#### Transient issues
-
-Schema Update - after an administrative schema update is likely that a schema mismatch will occur on various DC's throughout the forest. This will typically happen in a pattern that matches the AD replication topology and schedule. This behavior is normal so long as the error state is transient*. This class of failure is most likely to be reported by monitoring software and requires no administrative intervention.
-
-As stated previously, in the case of a recent schema update it is common for some DCs to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period. 
+If you recently applied a schema update to the forest, see [After a recent schema update, issues persist](#after-a-recent-schema-update-issues-persist).
 
 
-#### Verify that the schema version values in Active Diretory and the registry match
 
-The current schema version can be read from two places on any given DC: The registry, and Active Directory itself. During normal operation, the two values should be in sync and should correctly reflect the schema version of the forest as defined by the DC that owns the schema Flexible Single Master Operation (FSMO) role.
+[Can't promote a DC](#cant-promote-a-dc)
+
+[Underlying issues are blocking replication](#underlying-issues-are-blocking-replication)
+
+### After a recent schema update, issues persist
+
+After the Active Directory schema updates, schema mismatch issues typically appear and disappear on various DCs throughout the forest. This behavior typically occurs in a pattern that matches the replication topology and schedule. These transient schema mismatches are the expected behavior. Monitoring software typically reports the issues, but they don't require administrative intervention.
+
+If schema mismatch issues persist for an extended period, such as more than twice the time needed for an update to replicate through the entire topology, then you should investigate the issue. A single DC might need to restart, the update might not have applied correctly, or an underlying issue might be blocking replication.
+
+#### Step 1: Verify that the schema version values in Active Directory and the registry match
+
+Each DC stores the version of the schema that it uses in two locations; The registry, and in its local Active Directory replica. During normal operation, the two values should be in sync and should correctly reflect the schema version of the forest as defined by the DC that owns the schema Flexible Single Master Operation (FSMO) role. If the values don't match for a particular DC, that DC might not have received the schema update yet. Check the status values on DCs that report persistent schema mismatches, and on their replication partners.
 
 > [!NOTE]  
-> To correctly update the `SchemaVersion` number, install only the updates of the Active Directory Schema that Microsoft provides.
+> To make sure that `SchemaVersion` updates correctly, install only the updates of the Active Directory Schema that Microsoft provides.
 
-In the Registry:
+To review the version number in the registry, in Registry Editor, go to the following subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
 
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
+To view the version number in Active Directory, use one of the following methods:
 
-In Active Directory:
+- In ADSIEdit, connect to the Schema naming context for the affected forest, right-click the schema object (for example, `cn=Schema,cn=configuration,dc=contoso,dc=com`), and then select **Properties**. Look for the value of the `ObjectVersion` attribute.
 
-> Object: Cn=Schema,cn=configuration,dc=contoso,dc=com  
-Attribute: ObjectVersion
+- In a Command Prompt window on a DC, run a command that resembles the following example:
 
-You can use either of the following commands to export the schema version from Active Directory.
+  ```console
+  Ldifde -f schemaver.ldf -d Cn=Schema,cn=configuration,dc=contoso,dc=com -l ObjectVersion
+  ```
 
-```console
-Ldifde -f schemaver.ldf -d Cn=Schema,cn=configuration,dc=contoso,dc=com -l ObjectVersion
-```
+- At the DC command prompt, run a command that resembles the following example:
 
-```console
-dsquery * cn=schema,cn=configuration,dc=contoso,dc=com -scope base -attr objectVersion
-```
+  ```console
+  dsquery * cn=schema,cn=configuration,dc=contoso,dc=com -scope base -attr objectVersion
+  ```
 
 For reference, the following table lists the schema versions for different versions of Windows Server.
 
@@ -198,108 +204,24 @@ For reference, the following table lists the schema versions for different versi
 |Windows Server 2019|88|
 |Windows Server 2022|88|
 
-#### Possible Resolution 1 - recent update
+#### Step 2: Restart the source DC that's not replicating the update
 
-In the scenario where the following conditions apply:
+You can use this step when the following conditions apply:
 
-- The AD schema has been recently updated
-- One or more partners of a DC is reporting a schema mismatch for an extended period
-- The registry and AD schema versions on the source DC are in sync and match the expected forest-wide version
+- The AD schema has been recently updated.
+- You identify one or more DCs that report a persistent schema mismatch issue.
+- These DCs use the same source DC for inbound replication.
+- The source DC has the expected schema version information in the registry and in its Active Directory replica. This information matches the updated forest version (the source dC has the correct update installed).
 
-It's possible that a reboot of the source DC will resolve the replication failures. *The underlying cause is thought to be failure to correctly reload the in-memory version of schema after the schema update has been received.*
+Restart the source DC.
 
-Data Collection Phase 2  
+In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restarting the DC should resolve the issue.
 
-[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+If the issue persists, see [Underlying issues are blocking replication](#underlying-issues-are-blocking-replication).
 
-In the event that the previous resolution is not applicable or is unsuccessful, increase "NTDS Diagnostic" Event Logging on both Source AND Destination DCs under the following registry subkey
-
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics`
-
-|Name|Type|Value|
-|---|---|---|
-|5 Replication|DWORD|5|
-|9 Internal Processing|DWORD|5|
-|24 Schema|DWORD|5|
-|7 Internal Configuration|DWORD|5|
-  
-This will log additional information to the Directory Services event log that will assist in diagnosing the issue
-
-Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
-
-- The object on which replication is failing either by its Distinguished Name or ObjectGUID
-
-- The attribute being applied either by its ldapdisplayname or its internal ID
-- Any internal or extended error data.
-
-Event ID's of interest from the Directory Service Event log include:
-
-- Replication Event 1173
-
-- Replication Event 1791
-
-- Replication Event 1203
-
-The following example events show both an internal ID and extended error data
-
-```output
-Log Name: Directory Service  
-Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: <DateTime>  
-Event ID: 1173  
-Task Category: Internal Processing  
-Level: Warning  
-Keywords: Classic  
-User: ANONYMOUS LOGON  
-Computer: `Dc12.Contoso.com`  
-Description:  
-Internal event: Active Directory Domain Services has encountered the following exception and associated parameters.  
-Exception:  
-e0010004  
-Parameter: 0  
-Additional Data  
-Error value:  
-8364  
-Internal ID:  
-2050078
-```
-
-The following example event identifies a specific object on which replication blocked.
-
-```output
-Log Name: Directory Service  
-Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: <DateTime>  
-Event ID: 1203  
-Task Category: Replication  
-Level: Warning  
-Keywords: Classic  
-User: ANONYMOUS LOGON  
-Computer: `GB-JDT-DMV-N55.contoso.com`  
-Description:  
-The directory service could not replicate the following object from the source directory service at the following network address because of an Active Directory Domain Services schema mismatch.  
-Object: CN=Machine,CN={54EFB8A2-33F1-4E04-B4AD-229ABA513555},CN=Policies,CN=System,DC=contoso,DC=com  
-Network address: *\<GUID>*._msdcs.contoso.com  
-Active Directory Domain Services will attempt to synchronize the schema before attempting to synchronize the following directory partition. Directory partition:  
-DC=contoso,DC=comiption:  
-The directory service could not replicate the following object from the source directory service at the following network address because of an Active Directory Domain Services schema mismatch. Object:  
-CN=Machine,CN={54EFB8A2-33F1-4E04-B4AD-229ABA513555},CN=Policies,CN=System,DC=contoso,DC=com Network address:  
-<GUID>._msdcs.contoso.com  
-Active Directory Domain Services will attempt to synchronize the schema before attempting to synchronize the following directory partition. Directory partition: DC=contoso,DC=com
-```
-
-Review the data collected  
-
-Look for correlating events including the ones noted above which point to known trigger scenarios.
-
-Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist.  
-
-[Replication blocked by underlying issues](#replication-blocked-by-underlying-issues)
+### Can't promote a DC
 
 
-### DCPromo fails (Persistent issue)
-
-#### Data: Promoting a DC
 
 Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
 
@@ -314,13 +236,49 @@ In the case where DCpromo fails with a schema mismatch the following data should
   Context: DCPromo fails
   Symptoms: event ID 1203 (Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication)
 
-
-
-### Replication blocked by underlying issues
+### Underlying issues are blocking replication
 
 In some scenarios the schema mismatch error will persist indefinitely and intervention is required to investigate, identify the underlying trigger and resolve. 
 
-Some scenarios present as known issues while in others the Schema Mismatch is purely a side effect of other blocking issues that prevent it from self-resolving through normal replication. The following error codes indicate issues that might prevent Active Directory from resolving a schema mismatch:
+Some scenarios present as known issues while in others the Schema Mismatch is purely a side effect of other blocking issues that prevent it from self-resolving through normal replication. 
+
+#### Step 1: Increase the diagnostic logging level
+
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+If the earlier steps didn't resolve the issue, increase level of event logging on both source and destination DCs. To change the logging level, follow these steps:
+
+1. in Registry Editor, go to the following subkey:
+
+   `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics`
+
+2. Update the values of the registry entries as described in the following table:
+
+   |Name|Type|Value|
+   |---|---|---|
+   |`5 Replication`|DWORD|`5`|
+   |`9 Internal Processing`|DWORD|`5`|
+   |`24 Schema`|DWORD|`5`|
+   |`7 Internal Configuration`|DWORD|`5`|
+  
+
+
+#### Step 2: Review the event logs for any replication issues
+
+Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
+
+- The object on which replication is failing either by its Distinguished Name or ObjectGUID
+
+- The attribute being applied either by its `ldapdisplayname` or its internal ID
+- Any internal or extended error data.
+
+Review the data collected  
+
+Look for correlating events including the ones noted above which point to known trigger scenarios.
+
+Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist.  
+
+The following error codes indicate issues that might prevent Active Directory from resolving a schema mismatch:
 
 | Error code | Event ID and source, if appropriate |
 | - | - |
@@ -336,6 +294,7 @@ Some scenarios present as known issues while in others the Schema Mismatch is pu
 >
 > In addition to appearing in logged events, these error codes can occur when you use command-line tools such as `repadmin`, `dcdiag`, or `dcpromo`.
 > Some events are associated with more than one error code. When you review your event log for these events, make sure you check the error code that's listed in the event so you can interpret the event correctly.
+
 
 
 #### 8614
@@ -380,12 +339,11 @@ Some scenarios present as known issues while in others the Schema Mismatch is pu
 
  
 
-#### RPC:
+#### RPC
+
   Context: RepAdmin, DCPromo, DCDiag tools
   [Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md)
   [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](replication-error-1753.md)
-
-Other codes: [Troubleshoot common Active Directory replication errors](common-active-directory-replication-errors.md)
 
 #### Error code 1340 (Event ID 1450)
 
@@ -400,20 +358,17 @@ Other codes: [Troubleshoot common Active Directory replication errors](common-ac
 
 If the Size of the nTSecurityDescriptor is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
 
+[script xref]
 
 
-Examples of other causes include but are not limited to:
 
-- Database corruption
-- Memory constraints
-- Replication quarantine
-- Strict replication consistency
-- Disabled replication
-- DNS (Domain Name Resolution) issues
-- RPC communication issues
-- Local or network firewalls
 
-See [Causes](#cause) for details of events and related status codes for some of these issues.
+
+
+#### Other codes
+
+[Troubleshoot common Active Directory replication errors](common-active-directory-replication-errors.md)
+
 
 ### Supplementary Actions  
 
