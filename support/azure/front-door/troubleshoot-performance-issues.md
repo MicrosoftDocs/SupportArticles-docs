@@ -7,6 +7,7 @@ ms.author: jarrettr
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
 ms.date: 09/25/2025
+ms.custom: sap:Performance
 ---
 
 # Troubleshoot general performance problems with Azure Front Door

@@ -11,7 +11,8 @@ ms.topic: troubleshooting
 ms.date: 07/11/2025
 ms.custom: 
   - devx-track-azurecli
-  - = sap:Connectivity
+  - sap:Connectivity
+  - sap:Creating and troubleshooting Network Security Groups
 ms.devlang: azurecli
 # Customer intent: "As a network administrator, I want to enable resource logging for a network security group so that I can monitor traffic and analyze the application of security rules within my virtual network."
 ---
