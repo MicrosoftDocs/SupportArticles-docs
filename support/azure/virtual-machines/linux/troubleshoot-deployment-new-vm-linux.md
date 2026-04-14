@@ -69,7 +69,7 @@ Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
 
 When this problem occurs, the VM state shows as `failed`.
 
-### Extra Terms and Conditions required.
+### Extra Terms and Conditions required
 
 Some Marketplace images require the user to accept terms & conditions additional to the ones required by Microsoft Azure in order to be
 able to deploy them, here is a typical error message during deployment when using the Azure CLI to deploy such images.
@@ -220,9 +220,15 @@ Use the following table for reference, not as a checklist. You don't need to ide
 
  #### Cause
  
-The kernel doesn't load the UDF driver. The VM needs this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
+The kernel doesn't load the UDF driver. Virtual Machines(VMs) with cloud-init 21.1 or oder need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). VMs with cloud-init 21.2 or newer deploy successfully, however, custom data is not accesible to the machines, preventing passwords and other sesitive information be provided to VMs upon deployment.
 
-When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
+When a VM is first provisioned on Azure,
+<ul>
+<li> The Azure host presents a 'provisioning cdrom iso disk' to the VM.
+<li> This provisioning disk is presented to the VM through /dev/sr0. 
+<li> Within the provisioning disk, there is a provisioning manifest that contains a VM's provisioning information. 
+<li> The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
+</ul>
 
 Because the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel to mount this disk. Microsoft [documentation for Linux images](/azure/virtual-machines/linux/create-upload-generic) references this requirement. For this VM, logs indicate that the provisioning disk didn't mount and VM provisioning failed. The most likely reason is missing or blocked UDF drivers.
 
