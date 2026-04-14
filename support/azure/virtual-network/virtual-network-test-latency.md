@@ -9,7 +9,8 @@ ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.custom: 
   - linux-related-content
-  - = sap:Connectivity
+  - sap:Connectivity
+  - sap:Performance
 ms.date: 08/02/2024
 # Customer intent: "As a network engineer, I want to measure network latency between Azure virtual machines using specialized tools, so that I can optimize performance and ensure my applications run efficiently over TCP and UDP protocols."
 ---

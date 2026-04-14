@@ -10,6 +10,7 @@ ms.topic: troubleshooting
 ms.date: 03/17/2026
 ms.custom:
   - sap:Connectivity
+  - sap:Cannot delete Azure Virtual Network (VNet)
 # Customer intent: As a cloud administrator, I want to troubleshoot subnet deletion and modification failures so I can identify and remove blocking resource dependencies and maintain my virtual network configuration.
 ---
 

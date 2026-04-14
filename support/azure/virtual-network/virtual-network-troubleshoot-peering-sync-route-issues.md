@@ -6,7 +6,8 @@ ms.author: jarrettr
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 03/17/2026
-ms.custom: sap:issues configuring azure virtual network (vnet) peering
+ms.custom: 
+   - sap:issues configuring azure virtual network (vnet) peering
 # Customer intent: As a network engineer, I want to troubleshoot route propagation and sync problems in virtual network peering so that I can restore connectivity between peered virtual networks.
 ---
 
