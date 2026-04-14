@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 03/25/2026
+ms.date: 04/10/2026
 ---
 
 # Email delivery to Microsoft 365 Groups fails in hybrid configuration
@@ -75,36 +75,38 @@ The commands that are listed in this solution use "groups.contoso.com" as the em
 
 If the value of the `X-MS-Exchange-Organization-AuthAs` header is `anonymous`, check the following settings that are required for mail flow to work, and update the settings that aren’t configured correctly:
 
-1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).  
+1. **Send connector**: Check whether the correct Send connector is used to deliver the sender’s email message. The Send connector that's used should be `Outbound to Office 365`. This connector is created by the Hybrid Configuration wizard (HCW).
 
-To check the Send connector that's configured for email delivery, use the protocol log for the Send connector. [Protocol logging](/exchange/mail-flow/connectors/protocol-logging) isn't enabled by default. If it is not enabled, follow these steps to enable protocol logging, and then check the protocol log.
+   To check the Send connector that's configured for email delivery, follow these steps:
 
-   a. On your on-premises Exchange Server, open the Exchange Management Shell.
-   b. To enable protocol logging for the Send connector, run the following command:  
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
+    b. Run the following PowerShell command:  
 
-   ```powershell               
-   Set-SendConnector "outbound to office 365\*" -ProtocolLoggingLeve Verbose
-   ```
+    ```powershell
+    Get-MessageTrackingLog -MessageSubject "on-premises to exo 2" -EventId SENDEXTERNAL | fl sender, recipients,messagesubject,connector* 
+    ```
 
-   c. Open the protocol log for the Send connector from the following location: %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\ProtocolLog\SmtpSend.
-   d. Search the log file for the email address of your affected group. Then, scroll to the beginning of the row that displays your group’s email address to see the value of the \`connector-id\` attribute. This value is the name of the Send Connector.  
+    The output of this command will resemble the following example. The value of the `ConnectorId` attribute is the name of the Send connector.
 
-   :::image type="content" source="media/microsoft-365-group-email-delivery-fails/protocol-log-for-send-connector.png" alt-text="Screenshot of the protocol log for the Send connector with the name of the Send connector and the affected group's name highlighted.":::
+    Sender         : user@contoso.com <br/>
+    Recipients     : {EXO1@contoso.mail.onmicrosoft.com} <br/>
+    MessageSubject : On-premises to EXO <br/>
+    ConnectorId    : Outbound to Office 365 - b18e4be7-e70c-4fa1-8e8f-415bc7887abb
 
-   If the Send connector in the protocol log isn't listed as Outbound to Office 365, go to step 2. If the listed Send connector is the expected one, go to step 3.
+   If the name of the Send connector in the output isn't Outbound to Office 365, go to step 2. If the name of the Send connector is the expected one, go to step 3.
 
 1. **Address space**: Check whether groups.contoso.com is added as one of the address spaces in the Outbound to Office 365 Send connector. Follow these steps:
 
-    a. On your on-premises Exchange Server, open the Exchange Management Shell.
+    a. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
     b. Run the Get-SendConnector command by using the AddressSpaces parameter:  
 
     ```powershell
     Get-SendConnector -Identity \*Outbound to Office 365\* \| fl name,AddressSpaces
     ```
 
-    c. If the output doesn’t list groups.contoso.com as one of the configured address spaces, run the following Set-SendConnector command:  
+    c. If the output doesn’t list groups.contoso.com as one of the configured address spaces, run the following Set-SendConnector command to add it:  
 
-    ```powershell    
+    ```powershell
     Set-SendConnector -Identity "Outbound to Office 365\*" -AddressSpaces "contoso.mail.onmicrosoft.com","groups.contoso.com"
     ```  
 
@@ -130,16 +132,16 @@ To check the Send connector that's configured for email delivery, use the protoc
 
    c. If the values in the output from step 3b don’t match the values from step 3a, follow these steps to update them:
 
-      i. On your on-premises Exchange Server, open the Exchange Management Shell.
+      i. On your on-premises Exchange Server, open the Exchange Management Shell.<br/>
      ii. Run the following commands:
 
-   ```powershell             
+   ```powershell
    Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT"
    \$TLSCert = Get-ExchangeCertificate -Thumbprint "YOUR_CERTIFICATE_THUMBPRINT" \$TLSCertName = "\<I\>\$(\$TLSCert.Issuer)\<S\>\$(\$TLSCert.Subject)"
    Set-SendConnector -Identity "YourSendConnectorName" -TLSCertificateName \$TLSCertName
    ```
 
-4. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
+1. **CloudServicesMailEnabled parameter**: Check the value of the `CloudServicesMailEnabled` parameter in the inbound connector that HCW creates in Microsoft 365. It should be set to `true`. Follow these steps:
 
    a. To check the value that’s set for the CloudServicesMailEnabled parameter, run the following command:  
 
@@ -149,11 +151,11 @@ To check the Send connector that's configured for email delivery, use the protoc
 
    b.  If the output displays the value as `false`, run the following command:  
 
-   ```powershell     
+   ```powershell
    Set-InboundConnector -Identity "Inbound connector name" -CloudServicesMailEnabled \$true
    ```
 
-5. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
+1. **TLSSenderCertificateName parameter**: Check the value of the `TLSSenderCertificateName` parameter in the inbound connector. It should match the accepted domain of your organization’s tenant. Follow these steps:
 
    a. To check the value that's set for the \`TLSSenderCertificateName\` parameter, run the following command:  
 

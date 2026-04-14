@@ -1,8 +1,6 @@
 items:
 - name: Welcome
   href: welcome-virtual-network.yml
-- name: Virtual Network troubleshooter
-  href: connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
 - name: Configure reverse lookup zones for an SMTP banner check
   href: create-ptr-for-smtp-service.md
 - name: Diagnose an Azure virtual machine routing problem

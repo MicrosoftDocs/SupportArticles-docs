@@ -216,25 +216,12 @@ This error occurs when the app's flow metadata expects a specific connection ref
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
-#### Mitigation option 1
-
-Reset the Power Automate flows in the app:
-
 1. In the source environment, edit the app. [Remove](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) and then [readd](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow) the flows to the app. Save and publish the changes.
 2. In the target environment, [remove all unmanaged solution layers](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer) from the app and flow.
 3. Export the solution and import it into the target environment.
 
    > [!NOTE]
    > Ensure that both the flow and the app have no unmanaged solution layers. Unmanaged solution layers can interfere with connection references and cause integration issues.
-
-#### Mitigation option 2
-
-Change the connection from **Embedded** to **Invoker**:
-
-1. To edit and update the flow settings, navigate to the Power Automate flow portal.
-2. On the flow details page, in the **Run-only user** section, select **Edit**.
-3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-4. Verify by triggering the flow.
 
 ## Failures caused by Power Automate flow updates
 

@@ -58,7 +58,7 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
 1. Count all pending devices:
 
    ```powershell
-   (Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{((-not $_.AlternativeSecurityIds)}).count
+   (Get-MgDevice -All -Filter "TrustType eq 'ServerAd'" | Where-Object{((-not $_.AlternativeSecurityIds))}).count
    ```
     
     You can also save the returned data in a CSV file:

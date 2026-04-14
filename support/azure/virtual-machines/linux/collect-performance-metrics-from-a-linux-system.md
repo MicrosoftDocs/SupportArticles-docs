@@ -7,7 +7,7 @@ editor: divargas-msft
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Performance
