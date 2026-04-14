@@ -83,7 +83,7 @@ If the mapping is correct but the tags are still empty after the import, the iss
 
 ## Enforce validation by using Fixed list or Fixed custom list value types
 
-If a financial tag shows values that aren't in the configured list, this behavior occurs because of the [value type](/dynamics365/finance/general-ledger/financial-tag#creating-financial-tags) that's assigned to the tag.
+If a financial tag shows values that aren't in the configured list, the issue might be the [value type](/dynamics365/finance/general-ledger/financial-tag#creating-financial-tags) that's assigned to the tag.
 
 By design, financial tags that use the **Custom list** or **List** value type [accept any entered value without validation](/dynamics365/finance/general-ledger/financial-tag-financial-dimension) against the defined list. Users can enter values that don't exist in the predefined list without receiving an error or warning.
 
@@ -109,7 +109,7 @@ To check whether a data entity supports financial tags, follow these steps:
 1. Select **Data entities**.
 1. Search for the data entity that's missing financial tag fields.
 1. Select the data entity, and then select **Entity structure** to view the available fields.
-1. If the financial tag fields aren't listed, the data entity doesn't currently support financial tags. Check whether a newer version of Dynamics 365 Finance adds support for financial tags on that data entity by reviewing [What's new or changed in Dynamics 365 Finance](/dynamics365/finance/get-started/whats-new-home-page).
+1. If the financial tag fields aren't listed, the data entity doesn't currently support financial tags. Check whether a newer version of Dynamics 365 Finance adds support for financial tags on that data entity. Review [What's new or changed in Dynamics 365 Finance](/dynamics365/finance/get-started/whats-new-home-page).
 1. If you have to import financial tags for a journal type but the data entity doesn't support them, consider using the general journal data entity as an alternative import method.
 
 ## Related content
