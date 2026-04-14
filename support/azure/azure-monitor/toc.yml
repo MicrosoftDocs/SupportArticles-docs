@@ -205,3 +205,5 @@ items:
   items:
   - name: Deleted event hub is automatically re-created
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
+  - name: Troubleshoot data export and pricing problems in Event Hubs
+    href: diagnostic-settings/data-flow/troubleshoot-data-export-pricing-problems.md
