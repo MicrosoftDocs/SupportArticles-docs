@@ -366,7 +366,7 @@ Write-Host "DomainName=$domainName, samAccountName=$samAccountName, type=$type"
 > [!IMPORTANT]
 > The above properties are used to generate the salt for the AES-256 encryption key. If the values configured on the storage account do not match the values from AD DS, SMB authentication will fail after upgrading to AES-256.
 
-To ensure all domain properties are correctly configured on the storage account, run the following script. It is safe to re-run even if the domain properties are already configured correctly on the storage account.
+To ensure all domain properties are correctly configured on the storage account, run the following script. It is safe to run even if the domain properties are already configured correctly on the storage account.
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -401,10 +401,6 @@ Set-AzStorageAccount `
     -ActiveDirectorySamAccountName $samAccountName `
     -ActiveDirectoryAccountType $type
 ```
-
-If they are 
-
-your domain properties are correctly set and you can skip ahead to [Enable AES-256 on the domain object](#enable-aes-256-on-the-domain-object).
 
 For more information, see [Enable AD DS authentication for Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 
