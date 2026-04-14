@@ -220,7 +220,7 @@ Use the following table for reference, not as a checklist. You don't need to ide
 
  #### Cause
  
-The kernel doesn't load the UDF driver. Virtual Machines(VMs) with cloud-init 21.1 or oder need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). VMs with cloud-init 21.2 or newer deploy successfully, however, custom data is not accesible to the machines, preventing passwords and other sesitive information be provided to VMs upon deployment.
+The kernel doesn't load the UDF driver. Virtual Machines(VMs) with cloud-init 21.1 or older need this driver to provision. For more information, see [image requirements](/azure/virtual-machines/linux/create-upload-generic). VMs with cloud-init 21.2 or newer deploy successfully, however, custom data is not accesible to the machines, preventing passwords and other sesitive information be provided to VMs upon deployment.
 
 When a VM is first provisioned on Azure,
 <ul>
