@@ -1,8 +1,8 @@
 ---
 title: onfiguration Manager in-console update fails with "Failed to find SQLSysClrTypes.msi" during update installation 
 description: Resolves an issue where Configuration Manager in-console updates fail during SQL redistributable installation because required redist files are missing from the CMUStaging folder.
-author: {github-id}        # the author's GitHub ID - will be auto-populated if set in settings.json
-ms.author: {iliaershov}      # the author's Microsoft alias (if applicable) - will be auto-populated if set in settings.json
+author: ErshovIS        # the author's GitHub ID - will be auto-populated if set in settings.json
+ms.author: iliaershov      # the author's Microsoft alias (if applicable) - will be auto-populated if set in settings.json
 ms.date: {@date}           # the date - will be auto-populated when template is first applied
 ms.topic: troubleshooting  # the type of article
 ---
@@ -13,7 +13,7 @@ ms.topic: troubleshooting  # the type of article
 Microsoft Endpoint Configuration Manager (current branch)
 
 ## Symptoms
-During ConfigMgr update installation, the following errors could be found in the CMUpdate.log:
+During ConfigMgr update installation, the following errors could be found in the `CMUpdate.log`:
 
 ```text
 ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi
