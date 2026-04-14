@@ -1,14 +1,16 @@
 ---
-title: Deleted Event Hub Is Automatically Re-created by Diagnostic Settings
-description: Resolves issues with an Azure event hub that is automatically re-created by diagnostic settings after being deleted.
+title: Deleted Event Hub is automatically recreated by Diagnostic Settings
+description: Learn why a deleted Azure event hub is automatically re-created by diagnostic settings, and follow these steps to stop it from being recreated.
 ms.date: 03/19/2025
 ms.reviewer: jfanjoy, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Issues with configuring diagnostic settings
 ---
-# Deleted Azure event hub is automatically re-created by diagnostic settings
+# Deleted Azure Event Hub is automatically re-created by Azure Diagnostic Settings
 
-This article provides a solution to an issue where a deleted Azure event hub is automatically re-created by Azure diagnostic settings or their configuration cache.
+## Summary
+
+This article provides a solution to an issue where a deleted Azure Event Hub is automatically re-created by Azure Diagnostic Settings or their configuration cache.
 
 ## Symptoms
 

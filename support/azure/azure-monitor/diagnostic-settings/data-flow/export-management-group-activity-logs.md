@@ -29,19 +29,19 @@ This article explains how to export Microsoft Azure management group activity lo
 
 **Step 1: Use the Management Diagnostic Settings API**
 
-    Access and use the Management Diagnostic Settings API to create or update settings. This API exports logs from all subscriptions within a management group to a Log Analytics workspace and an event hub. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
+Access and use the Management Diagnostic Settings API to create or update settings. This API exports logs from all subscriptions within a management group to a Log Analytics workspace and an event hub. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
 
 **Step 2: Retrieve the management group ID**
 
-    Use the commands that are provided in the Azure Governance documentation to get the management group ID. For more information, see [Manage your Azure subscriptions at scale with management groups](/azure/governance/management-groups/manage).
+Use the commands that are provided in the Azure Governance documentation to get the management group ID. For more information, see [Manage your Azure subscriptions at scale with management groups](/azure/governance/management-groups/manage).
 
 **Step 3: Configure diagnostic settings**
 
-    Set up the diagnostic settings at the highest-level management group. This setup ensures that you capture and export logs from nested groups. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
+Set up the diagnostic settings at the highest-level management group. This setup ensures that you capture and export logs from nested groups. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings).
 
 **Step 4: Verify export configuration**
 
-    Make sure that the exported events include the `Hierarchy` field. This field shows the originating management group for each log entry.
+Make sure that the exported events include the `Hierarchy` field. This field shows the originating management group for each log entry.
 
 ### References
 
