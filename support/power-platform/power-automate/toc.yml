@@ -245,6 +245,8 @@ items:
         href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
       - name: Version control error when publishing a flow or saving it as a draft
         href: desktop-flows/version-control-update-on-draft.md
+      - name: Security update for sensitive variables
+        href: desktop-flows/sensitive-variables-security-update.md
   - name: Flow creation
     items:
       - name: Can't find Excel Online table in Microsoft Flow
