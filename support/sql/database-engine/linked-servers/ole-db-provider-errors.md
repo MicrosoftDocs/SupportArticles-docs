@@ -8,11 +8,11 @@ ms.custom: sap:Linked Server and distributed queries
 
 # Troubleshoot OLE DB provider errors for linked servers
 
-This article helps you resolve OLE DB provider errors that occur when you run T-SQL queries through [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) or ad hoc queries by using [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) or [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) in Microsoft SQL Server. These errors typically indicate that the OLE DB provider isn't installed, isn't registered, or doesn't match the SQL Server architecture.
+This article helps you resolve OLE DB provider errors that occur when you run T-SQL queries through [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) or improvised queries by using [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) or [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) in Microsoft SQL Server. These errors typically indicate that the OLE DB provider isn't installed, isn't registered, or doesn't match the SQL Server architecture.
 
 ## Symptoms
 
-When you run T-SQL queries that use linked servers or ad hoc queries (by using `OPENROWSET` or `OPENDATASOURCE`), you receive one of the following error messages:
+When you run T-SQL queries that use linked servers or improvised queries (by using `OPENROWSET` or `OPENDATASOURCE`), you receive one of the following error messages:
 
 > The OLE DB provider "\<ProviderName>" has not been registered. (Microsoft SQL Server, Error: 7403)
 
