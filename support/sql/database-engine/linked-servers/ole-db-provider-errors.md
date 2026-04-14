@@ -16,7 +16,7 @@ When you run T-SQL queries that use linked servers or ad hoc queries (by using `
 
 > The OLE DB provider "\<ProviderName>" has not been registered. (Microsoft SQL Server, Error: 7403)
 
-> Cannot create an instance of OLE DB provider "\<provider name>" for linked server "\<linked server name>". (Microsoft SQL Server, Error: 7302)
+> Cannot create an instance of OLE DB provider "\<ProviderName>" for linked server "\<LinkedServerName>". (Microsoft SQL Server, Error: 7302)
 
 These errors can also occur after you:
 
