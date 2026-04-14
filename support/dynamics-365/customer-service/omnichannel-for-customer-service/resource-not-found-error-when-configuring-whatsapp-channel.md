@@ -4,7 +4,7 @@ description: Solves the Resource not found for the segment error when configurin
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/31/2025
+ms.date: 04/14/2026
 ms.reviewer: parkmermel
 ms.custom: sap:WhatsApp via Twilio, DFM
 ---
@@ -24,35 +24,14 @@ This issue occurs when certain required Omnichannel-related plugins are disabled
 
 ## Resolution
 
-To resolve this issue, follow these steps:
+To resolve this issue, do as follows:
 
-### Step 1: Access the Customization Settings
+1. Go to [Power Apps](www.make.powerapps.com), and select your environment.
+1. Select **Solutions** > **Default Solution**.
+1. Select **Objects**, and then search "processes".
+1. In the search box on the top right, search **UpdatePrivacyTerms**.
+1. Select **UpdatePrivacyTerms** and activate it.
 
-1. Open the **Dynamics 365 model-driven app**.
+### Related information
 
-2. Navigate to the following path: **Settings** > **Advanced Settings** > **Customizations** > **Customize the System**.
-
-### Step 2: Locate SDK Message Processing Steps
-
-1. Within the **Customize the System** window, expand the left-hand navigation panel.
-
-2. Select **SDK Message Processing Steps** under the **Components** section.
-
-### Step 3: Activate the Required Plugins
-
-1. In the **SDK Message Processing Steps** list, look in the **Name** column to locate the following plugins:
-
-    - **Microsoft.Dynamics.OmnichannelSharedBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
-    - **Microsoft.Dynamics.OmnichannelBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
-
-2. Verify the **Status** column for each plugin:
-
-    - If the plugin is disabled, select it by selecting the checkbox next to its name.
-
-    - Select the **Activate** button in the toolbar.
-
-### Step 4: Save and Publish Customizations
-
-1. Once the necessary plugins are activated, select **Save** in the toolbar.
-
-2. Then, select **Publish All Customizations** to apply the changes.
+[configure the WhatsApp channel](/dynamics365/customer-service/administer/configure-whatsapp-channel)  
