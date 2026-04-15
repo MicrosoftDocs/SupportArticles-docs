@@ -309,16 +309,19 @@ In some cases, a DC might not correctly reload the in-memory schema version afte
 
 If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), and then contact Microsoft Support for assistance.
 
-## Resolution 2: Object and attribute issues
+## Resolution 2: One or more objects or attributes trigger a persistent issue
 
+Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue has occurred.
+
+Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance. For guidance in troubleshooting these issues, see [Troubleshooting other object or attribute issues](#troubleshooting-other-object-or-attribute-issues).
 
 ### The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
 
-This error indicates that the identified object's security descriptor (the `nTSecurityDescriptor` attribute) is too large. 
+This error indicates that the identified object's security descriptor (the `nTSecurityDescriptor` attribute) is too large.
 
 The security descriptor contains the object's ACL information, which includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
 
-To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, it's efficient to use a script to collect this information. For an example of such a script, see []().
+To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, it's efficient to use a script to collect this information. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
 
 ### Troubleshooting other object or attribute issues
 
