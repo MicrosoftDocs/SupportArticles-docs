@@ -334,6 +334,9 @@ The `/var/log/messages` folder contains the following `SRHOOK=SFAIL` messages:
 2024-06-10T00:31:40.155744+02:00 node-1 SAPHana(rsc_SAPHana_P2H_HDB00)[55890]: INFO: RA: SRHOOK3=SFAIL
 ```
 
+> [!NOTE]
+> **Terminology notice**: Certain legacy terms like *master* and *worker* are referenced in this article solely as they appear in existing software artifacts and command output. Their inclusion is necessary for technical correctness and doesn't convey any implied meaning beyond their functional use.
+
 When you run `sudo SAPHanaSR-showAttr`, the following sync status of the primary and secondary DB nodes is displayed:
 
 ```bash
