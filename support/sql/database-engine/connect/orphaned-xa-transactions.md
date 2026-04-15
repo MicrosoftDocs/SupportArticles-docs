@@ -10,19 +10,19 @@ ms.custom: sap:Database Connectivity and Authentication
 
 ## Summary
 
-When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) with the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you might find orphaned transactions that stay pending on the SQL Server. These orphaned transactions typically occur when the transaction manager crashes or loses connectivity to the SQL Server before the XA transaction completes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
+When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) that includes the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you find orphaned transactions that stay pending on the server that's running Microsoft SQL Server. These orphaned transactions typically occur when the transaction manager stops responding or loses connectivity to the SQL Server-based server before the XA transaction finishes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
 
 ## Symptoms
 
 You might experience one or more of the following issues:
 
-- Transactions stay in a pending state for a long time on SQL Server.
-- Transactions appear with a `NULL` or `-2` session ID in the database.
-- Transactions block other transactions indefinitely, causing lock timeouts and frozen threads.
+- Transactions stay in a pending state for a long time in SQL Server.
+- Transactions appear by having a `NULL` or `-2` session ID in the database.
+- Transactions block other transactions indefinitely, and cause lock timeouts and frozen threads.
 
-### Confirm orphaned XA transactions
+### Verify orphaned XA transactions
 
-To confirm orphaned XA transactions, follow these steps:
+To verify orphaned XA transactions, follow these steps:
 
 1. Query active XA transactions by using the [sys.dm_tran_active_transactions](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql) dynamic management view (DMV):
 
@@ -32,7 +32,7 @@ To confirm orphaned XA transactions, follow these steps:
    WHERE name LIKE '%XA%';
    ```
 
-1. Check for transactions with a session ID of `-2`, which indicates an orphaned distributed transaction:
+1. Check for transactions that have a session ID of `-2`:
 
    ```sql
    SELECT request_session_id, resource_type, resource_database_id
@@ -40,7 +40,9 @@ To confirm orphaned XA transactions, follow these steps:
    WHERE request_session_id = -2;
    ```
 
-1. Verify that the transaction meets all of the following conditions before you attempt resolution:
+   This ID indicates an orphaned distributed transaction
+
+1. Verify that the transaction meets both the following conditions before you try to resolve the issue:
 
    - The transaction isn't in a prepared (in-doubt) state.
    - The transaction isn't completing recovery.
@@ -49,13 +51,13 @@ To confirm orphaned XA transactions, follow these steps:
 
 If connectivity between the transaction manager and SQL Server is lost before the XA transaction is prepared, the JDBC Driver doesn't clean up these transactions. Because of the XA implementation in the JDBC Driver for SQL Server, SQL Server can't detect abnormal disconnections of transaction managers.
 
-As a result, orphaned transactions remain active until one of the following events happens:
+The result is that orphaned transactions remain active until one of the following events occurs:
 
 - The XA transaction timeout occurs. By default, SQL Server sets the timeout to infinity.
 - The database restarts.
 
 > [!NOTE]
-> The XA transaction timeout isn't configurable at the SQL Server level and requires external handling.
+> The XA transaction timeout isn't configurable at the SQL Server level. It requires external handling.
 
 ## Solutions
 
@@ -63,7 +65,7 @@ Use one of the following methods to resolve orphaned XA transactions.
 
 ### Restart SQL Server
 
-Restart SQL Server after any JVM crash or network disruption that results in orphaned transactions. A restart clears in-memory transaction references.
+Restart SQL Server after any JVM failure or network disruption that generates orphaned transactions. A restart clears in-memory transaction references.
 
 ### Manually terminate orphaned transactions
 
@@ -108,7 +110,7 @@ xaRes.setTransactionTimeout(600); // Timeout in seconds
 Follow these guidelines to reduce the risk of orphaned XA transactions:
 
 - Make sure that the MS DTC service is running and configured for XA on all participating nodes.
-- Apply MS DTC security settings and enable XA Transactions in `dcomcnfg`.
+- Apply MS DTC security settings, and enable XA Transactions in `dcomcnfg`.
 - Use [JDBC XA properties](/sql/connect/jdbc/setting-the-connection-properties):
 
   ```properties
