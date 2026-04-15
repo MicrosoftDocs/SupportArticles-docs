@@ -18,9 +18,65 @@ metadata:
 landingContent:
 
 # Card
-  - title: Azure Bastion
+  - title: Deployment and configuration problems
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Azure Bastion
-            url: troubleshoot-bastion.md
+          - text: Troubleshoot Azure Bastion deployment and configuration problems
+            url: troubleshoot-deployment-configuration-problems.md
+
+# Card
+  - title: SKU upgrade problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion SKU upgrade problems
+            url: troubleshoot-sku-upgrade-problems.md
+
+# Card
+  - title: DNS and Private Link problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion DNS and Private Link problems
+            url: troubleshoot-dns-private-link-problems.md
+
+# Card
+  - title: Network security group configuration problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion network security group configuration problems
+            url: troubleshoot-nsg-configuration-problems.md
+
+# Card
+  - title: Authentication problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion authentication problems
+            url: troubleshoot-authentication-problems.md
+
+# Card
+  - title: Connectivity problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion connectivity problems
+            url: troubleshoot-connectivity-problems.md
+
+# Card
+  - title: Shareable link problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion shareable link problems
+            url: troubleshoot-shareable-link-problems.md
+
+# Card
+  - title: Virtual network peering problems
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Bastion virtual network peering problems
+            url: troubleshoot-virtual-network-peering-problems.md

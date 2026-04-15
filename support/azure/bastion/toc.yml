@@ -1,6 +1,20 @@
 items:
-- name: Azure Bastion troubleshooting documentation
+- name: Welcome
   href: welcome-azure-bastion.yml
   items:
-  - name: Troubleshoot Azure Bastion
-    href: troubleshoot-bastion.md   
+  - name: Troubleshoot deployment and configuration problems
+    href: troubleshoot-deployment-configuration-problems.md
+  - name: Troubleshoot SKU upgrade problems
+    href: troubleshoot-sku-upgrade-problems.md
+  - name: Troubleshoot DNS and Private Link problems
+    href: troubleshoot-dns-private-link-problems.md
+  - name: Troubleshoot network security group configuration problems
+    href: troubleshoot-nsg-configuration-problems.md
+  - name: Troubleshoot authentication problems
+    href: troubleshoot-authentication-problems.md
+  - name: Troubleshoot connectivity problems
+    href: troubleshoot-connectivity-problems.md
+  - name: Troubleshoot shareable link problems
+    href: troubleshoot-shareable-link-problems.md
+  - name: Troubleshoot virtual network peering problems
+    href: troubleshoot-virtual-network-peering-problems.md
