@@ -124,4 +124,4 @@ else {
 
 ## Reference
 
-[Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch between the servers involved](../../active-directory/replication-error-8418.md)
+[Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch between the servers involved](../active-directory/replication-error-8418.md)
