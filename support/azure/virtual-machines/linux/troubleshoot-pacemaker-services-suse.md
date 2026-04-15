@@ -335,7 +335,7 @@ The `/var/log/messages` folder contains the following `SRHOOK=SFAIL` messages:
 ```
 
 > [!NOTE]
-> **Terminology notice**: Certain legacy terms like *master* and *worker* are referenced in this article solely as they appear in existing software artifacts and command output. Their inclusion is necessary for technical correctness and doesn't convey any implied meaning beyond their functional use.
+> **Terminology notice**: Certain legacy terms like *master*, *slave*, and *worker* are referenced in this article solely as they appear in existing software artifacts and command output. Their inclusion is necessary for technical correctness and doesn't convey any implied meaning beyond their functional use.
 
 When you run `sudo SAPHanaSR-showAttr`, the following sync status of the primary and secondary DB nodes is displayed:
 
