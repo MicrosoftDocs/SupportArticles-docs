@@ -298,7 +298,7 @@ For reference, the following table lists the schema versions for different versi
 
 You can use this step when the following conditions apply:
 
-- The AD schema has been recently updated.
+- The Active Directory schema was recently updated.
 - You identify one or more DCs that report a persistent schema mismatch issue.
 - These DCs use the same source DC for inbound replication.
 - The source DC has the expected schema version information in the registry and in its Active Directory replica. This information matches the updated forest version (the source dC has the correct update installed).
@@ -307,25 +307,18 @@ Restart the source DC.
 
 In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restarting the DC should resolve the issue.
 
-If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support) and contact Microsoft Support for assistance.
+If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), and then contact Microsoft Support for assistance.
 
 ## Resolution 2: Object and attribute issues
 
 
 ### The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
 
+This error indicates that the identified object's security descriptor (the `nTSecurityDescriptor` attribute) is too large. 
 
+The security descriptor contains the object's ACL information, which includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
 
-    NTDS SDPROP Event ID 1450, error 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built.
-    The security descriptor propagation task could not calculate a new security descriptor for the following object
-    This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.
-  (related: [Active Directory replication error 8304: "The maximum size on an object has been exceeded"](active-directory-replication-error-8304.md))
-
-
-If the size of the `nTSecurityDescriptor` is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
-
-[script xref]
-
+To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, it's efficient to use a script to collect this information. For an example of such a script, see []().
 
 ### Troubleshooting other object or attribute issues
 
