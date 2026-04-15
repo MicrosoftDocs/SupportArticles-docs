@@ -10,7 +10,7 @@ ms.custom:
   - Reliability
   - CSSTroubleshoot
   - CI 10891
-ms.reviewer: lauraho, ammert, akeeler, lisalozano
+ms.reviewer: lauraho, ammert, akeeler, v-lisalozano
 search.appverid: 
   - MET150
 appliesto: 

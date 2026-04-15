@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: clayj, akeeler, lisalozano
+ms.reviewer: clayj, akeeler, v-lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot

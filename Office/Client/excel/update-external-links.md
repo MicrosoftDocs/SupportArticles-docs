@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 10891
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
   - Microsoft 365
   - Microsoft Excel 2024 

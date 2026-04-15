@@ -4,7 +4,7 @@ description: External links in a workbook from an earlier version of Excel are c
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonxjx, v-kccross, akeeler, lisalozano
+ms.reviewer: simonxjx, v-kccross, akeeler, v-lisalozano
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 

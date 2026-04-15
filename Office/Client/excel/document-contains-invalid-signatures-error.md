@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: hgkim，gaberry, akeeler, lisalozano
+ms.reviewer: hgkim，gaberry, akeeler, v-lisalozano
 ms.custom: 
   - Security\Trust
   - CI 114484

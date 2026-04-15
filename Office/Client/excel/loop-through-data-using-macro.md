@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: mikestow, akeeler, lisalozano
+ms.reviewer: mikestow, akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot

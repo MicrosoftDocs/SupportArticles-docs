@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: emmersp, akeeler, lisalozano 
+ms.reviewer: emmersp, akeeler, v-lisalozano 
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
