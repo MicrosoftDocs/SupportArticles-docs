@@ -150,4 +150,4 @@ Entire Procedure Cache Flushed
 ## Related content
 
 - [DBCC DROPCLEANBUFFERS (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)
-- [Troubleshoot high-CPU-usage issues in SQL Server](~/support/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues.md)
+- [Troubleshoot high-CPU-usage issues in SQL Server](/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues.md)
