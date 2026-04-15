@@ -250,10 +250,16 @@ items:
     href: ../windows/azure-iaas-vm-disks-managed-unmanaged.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Downsize a data disk without losing data
     href: ../windows/downsize-data-disk-without-losing-data.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot Azure disk resize failures
+    href: ../windows/troubleshoot-disk-resize.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot disk resize blocked by an active SAS token
+    href: ../windows/troubleshoot-disk-resize-sas-block.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Errors when deleting storage resources
     href: ../windows/storage-resource-deletion-errors.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Can't resize MBR partition for a data disk larger than 2 TB
     href: convert-mbr-partition-to-gpt.md
+  - name: Convert an Azure VM disk from MBR to GPT partition style
+    href: ../windows/convert-mbr-to-gpt-azure-virtual-machine.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: VHD is not supported when you create a VM in Azure
     href: ../windows/vhd-not-supported-vm-azure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Create a SWAP file
