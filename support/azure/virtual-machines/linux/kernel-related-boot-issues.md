@@ -6,7 +6,7 @@ ms.author: divargas
 ms.date: 07/08/2025
 ms.reviewer: jofrance
 ms.service: azure-virtual-machines
-ms.custom: sap:Cannot start or stop my VM, devx-track-azurecli, linux-related-content
+ms.custom: sap:My VM is not booting
 ms.collection: linux
 ms.topic: troubleshooting
 ---
@@ -15,6 +15,8 @@ ms.topic: troubleshooting
 **Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
+
+## Summary
 
 This article provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 
@@ -281,7 +283,7 @@ The ALAR scripts use the repair extension `repair-button` to fix the missing ini
 ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'initrd' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'initrd' --verbose --resource-group $RGNAME --name $VMNAME
 ```
 
 > [!IMPORTANT]
