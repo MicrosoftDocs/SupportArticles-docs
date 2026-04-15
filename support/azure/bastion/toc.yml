@@ -14,7 +14,7 @@ items:
     href: troubleshoot-authentication-problems.md
   - name: Troubleshoot connectivity problems
     href: troubleshoot-connectivity-problems.md
-  - name: Troubleshoot shareable link problems
-    href: troubleshoot-shareable-link-problems.md
+  - name: Troubleshoot shareable links problems
+    href: troubleshoot-shareable-links-problems.md
   - name: Troubleshoot virtual network peering problems
     href: troubleshoot-virtual-network-peering-problems.md

@@ -66,12 +66,12 @@ landingContent:
             url: troubleshoot-connectivity-problems.md
 
 # Card
-  - title: Shareable link problems
+  - title: Shareable links problems
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Azure Bastion shareable link problems
-            url: troubleshoot-shareable-link-problems.md
+          - text: Troubleshoot Azure Bastion shareable links problems
+            url: troubleshoot-shareable-links-problems.md
 
 # Card
   - title: Virtual network peering problems
