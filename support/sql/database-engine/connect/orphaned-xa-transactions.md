@@ -10,7 +10,7 @@ ms.custom: sap:Database Connectivity and Authentication
 
 ## Summary
 
-When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) that include the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you find orphaned transactions that stay pending on the server that's running Microsoft SQL Server. These orphaned transactions typically occur when the transaction manager stops responding or loses connectivity to the SQL Server-based server before the XA transaction finishes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
+When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) that include the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you might see orphaned transactions that stay pending on the server running Microsoft SQL Server. These orphaned transactions typically occur when the transaction manager stops responding or loses connectivity to the SQL Server-based server before the XA transaction finishes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
 
 ## Symptoms
 
@@ -40,7 +40,7 @@ To verify orphaned XA transactions, follow these steps:
    WHERE request_session_id = -2;
    ```
 
-   This ID indicates an orphaned distributed transaction
+   This ID indicates an orphaned distributed transaction.
 
 1. Verify that the transaction meets both the following conditions before you try to resolve the issue:
 
@@ -54,7 +54,7 @@ If connectivity between the transaction manager and SQL Server is lost before th
 The result is that orphaned transactions remain active until one of the following events occurs:
 
 - The XA transaction timeout occurs. By default, SQL Server sets the timeout to infinity.
-- The database restarts.
+- SQL Server restarts.
 
 > [!NOTE]
 > The XA transaction timeout isn't configurable at the SQL Server level. It requires external handling.
@@ -109,7 +109,7 @@ xaRes.setTransactionTimeout(600); // Timeout in seconds
 
 Follow these guidelines to reduce the risk of orphaned XA transactions:
 
-- Make sure that the MS DTC service is running and configured for XA on all participating nodes.
+- Make sure that the MS DTC service is running and configured for XA on all participating nodes. For SQL Server on Linux, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](/sql/linux/sql-server-linux-configure-msdtc).
 - Apply MS DTC security settings, and enable XA Transactions in `dcomcnfg`.
 - Use [JDBC XA properties](/sql/connect/jdbc/setting-the-connection-properties):
 
