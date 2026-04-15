@@ -98,24 +98,8 @@ This option deletes the recovery partition so that the unallocated space becomes
 
 1. Follow the Extend Volume Wizard to expand C: into the unallocated space.
 
-### Option 2: Move the recovery partition by using GParted
-
-If you want to keep the recovery partition, you can move it to the end of the disk instead of deleting it. This option preserves WinRE.
-
-1. Stop (deallocate) the VM.
-
-1. Create a [repair VM](/troubleshoot/azure/virtual-machines/windows/troubleshoot-recovery-disks-portal-windows) and attach the OS disk as a data disk.
-
-1. On the repair VM, download a [GParted Live ISO](https://gparted.org/livecd.php) or install GParted.
-
-1. In GParted, select the attached disk and move the recovery partition to the end of the disk.
-
-1. Apply changes, detach the disk, and reattach it to the original VM as the OS disk.
-
-1. Start the VM and extend the C: volume.
-
-> [!NOTE]
-> Option 2 requires more steps and a temporary repair VM. Use this option only if you must preserve the WinRE partition for compliance or organizational requirements.
+> [!TIP]
+> **Can't connect via RDP?** Use [Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) to attach the OS disk to a repair VM and run the same DiskPart steps from there. After deleting the recovery partition and extending the volume, use `az vm repair restore` to swap the disk back.
 
 ## Verify the fix
 
