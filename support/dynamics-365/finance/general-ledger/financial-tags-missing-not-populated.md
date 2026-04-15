@@ -24,7 +24,7 @@ You experience one or more of the following symptoms:
 
 ## Solution
 
-Use the steps in the following sections to resolve this problem.
+To resolve this issue, use the steps in the following sections.
 
 ### Verify that financial tags are configured and activated
 
