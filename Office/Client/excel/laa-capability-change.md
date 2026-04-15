@@ -14,7 +14,7 @@ ms.reviewer: lauraho, ammert, akeeler, v-lisalozano
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft 365
+  - Excel for Microsoft 365
   - Microsoft Excel 2016
 ms.date: 03/31/2026
 ---
