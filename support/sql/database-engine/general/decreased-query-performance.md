@@ -12,7 +12,7 @@ ms.custom: sap:Queries, stored procedures, views, functions, triggers (T-SQL)\Sl
 
 In Microsoft SQL Server, query performance might suddenly decrease after you perform certain database maintenance operations, regular transaction operations, or server reconfigure operations. This problem occurs because these operations clear the entire [plan cache](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) for the SQL Server instance.
 
-When the plan cache is cleared, all subsequent queries must recompile. The spike in recompilations temporarily increases CPU usage and reduces query throughput until the plan cache is repopulated. This article describes the operations that cause plan cache clearing, how to identify when it occurs, and which Performance Monitor counters and SQL Profiler events to monitor.
+When the plan cache is cleared, all subsequent queries must recompile. The spike in recompilations temporarily increases CPU usage and reduces query throughput until the plan cache is repopulated. This article describes the operations that cause plan cache clearing, how to identify when the problem occurs, and which Performance Monitor counters and SQL Profiler events to monitor.
 
 > [!NOTE]
 > This automatic procedure cache clearing behavior doesn't occur in SQL Server 2008 and later versions for most scenarios.
@@ -36,13 +36,13 @@ SQL Server has encountered <N> occurrence(s) of cachestore flush for the 'Bound 
 
 ## Cause
 
-This behavior is by design. Certain database maintenance or reconfigure operations clear the entire procedure cache. All subsequent queries must then generate new execution plans, which temporarily increases CPU usage and decreases query performance until the cache is repopulated.
+This behavior is by design. Certain database maintenance or reconfigure operations clear the entire procedure cache. All subsequent queries must then generate new execution plans. This action temporarily increases CPU usage and decreases query performance until the cache is repopulated.
 
 ### Database-level operations that clear the plan cache
 
 The entire plan cache is cleared when you perform any of the following database-level operations:
 
-- Set the [AUTO_CLOSE](/sql/t-sql/statements/alter-database-transact-sql-set-options#auto_close--on--off-) database option to `ON`. When no user connection references or uses the database, the background task tries to close and shut down the database automatically.
+- Set the [AUTO_CLOSE](/sql/t-sql/statements/alter-database-transact-sql-set-options#auto_close--on--off-) database option to `ON`. If no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 
 - Run several queries against a database that has default options, and then drop the database.
 
@@ -94,9 +94,9 @@ If you change any of the following server options by using the [sp_configure](/s
 
 ## Solution
 
-### Confirm that plan cache clearing is causing performance problems
+### Verify that plan cache clearing is causing performance problems
 
-Use the following methods to confirm whether a sudden query performance decrease is caused by plan cache clearing.
+Use the following methods to verify that a sudden query performance decrease is caused by plan cache clearing.
 
 #### Check Performance Monitor counters
 
@@ -131,11 +131,11 @@ Entire Procedure Cache Flushed
 
 ### Best practices to minimize performance impact
 
-- **Check error logs for cache flush patterns.** Identify which operations are triggering plan cache clears by reviewing the SQL Server error log for cachestore flush messages.
+- **Check error logs for cache flush patterns.** To identify which operations are triggering plan cache clearings, review the SQL Server error log for cachestore flush messages.
 
 - **Minimize unnecessary database configuration changes.** Avoid frequent cache flushes by reducing the number of `RECONFIGURE` or `ALTER DATABASE` operations that clear the plan cache.
 
-- **Schedule planned operations during maintenance windows.** For operations like database restores or `ALTER DATABASE` changes, schedule them during low-usage periods to reduce the effect on query performance.
+- **Schedule planned operations during maintenance windows.** To reduce the effect on query performance, schedule operations such as database restores or `ALTER DATABASE` changes during low-usage periods.
 
 - **Clear only specific plans instead of the entire cache.** Instead of flushing all cached plans, remove only the problematic plan by specifying its plan handle:
 
