@@ -10,7 +10,7 @@ ms.custom: sap:Database Connectivity and Authentication
 
 ## Summary
 
-When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) that includes the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you find orphaned transactions that stay pending on the server that's running Microsoft SQL Server. These orphaned transactions typically occur when the transaction manager stops responding or loses connectivity to the SQL Server-based server before the XA transaction finishes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
+When you use [XA transactions](/sql/connect/jdbc/understanding-xa-transactions) that include the [Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server), you find orphaned transactions that stay pending on the server that's running Microsoft SQL Server. These orphaned transactions typically occur when the transaction manager stops responding or loses connectivity to the SQL Server-based server before the XA transaction finishes. This article explains the symptoms, causes, diagnostic steps, and resolution strategies for orphaned XA transactions in SQL Server.
 
 ## Symptoms
 
