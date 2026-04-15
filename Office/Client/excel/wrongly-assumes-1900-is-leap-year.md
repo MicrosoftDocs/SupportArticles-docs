@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: bradthor, akeeler, lisalozano
+ms.reviewer: bradthor, akeeler, v-lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
@@ -14,8 +14,8 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft 365
-  - Microsoft 365 for Mac
+  - Excel for Microsoft 365
+  - Excel for Microsoft 365 for Mac
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016
