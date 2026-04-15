@@ -1,7 +1,7 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure (Windows Client)
-description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 05/09/2025
+description: Understand in-place system upgrade support for Azure Windows VMs, including why IPU is not supported for Azure Virtual Desktop (AVD) multi-session hosts and what to do instead.
+ms.date: 04/14/2026
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -51,9 +51,13 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 single-session up to Windows 10 and 11 multi-session (all versions)
+- Windows 10 and 11 multi-session (all versions) — commonly used as Azure Virtual Desktop (AVD) session hosts
+- Windows 10 and 11 single-session up to Windows 10 and 11 multi-session (cross-SKU)
 - Windows 8.1
 - Windows 7 Enterprise
+
+> [!IMPORTANT]
+> **Azure Virtual Desktop (AVD) session hosts:** In-place upgrade is **not supported** for pooled or multi-session AVD session hosts. These VMs use Windows 10/11 Enterprise multi-session, which doesn't support in-place feature updates. Attempting IPU on an AVD session host can result in a broken session host, failed user connections, and loss of session host availability. For AVD environments, use image-based replacement instead. See [AVD session host upgrade guidance](#avd-session-host-upgrade-guidance) later in this article.
 
 ## In-place system upgrade process for a Windows 10 VM
 
@@ -99,6 +103,36 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 > [!NOTE]  
 > When you perform an in-place upgrade on Azure Windows VMs, the VM properties on the Azure portal aren't updated. The changes are reflected only within the OS. This means that the source image information in the VM properties (including the publisher, offer, and plan) remains unchanged. The image that's used to deploy the VM remains the same. Only the OS is upgraded.
+
+## AVD session host upgrade guidance
+
+Azure Virtual Desktop (AVD) session hosts that use Windows 10 or Windows 11 Enterprise multi-session **don't support in-place upgrade (IPU)**. Attempting an in-place upgrade on these VMs can cause:
+
+- Broken session host registration with the AVD host pool
+- User connection failures
+- Loss of FSLogix profile container connectivity
+- Session host unavailability requiring manual recovery
+
+### Recommended approach: Image-based replacement
+
+Instead of upgrading the OS on an existing session host, replace session hosts with new VMs built from an updated image:
+
+1. **Create a new golden image** — Build a new VM image with the target Windows version, install required applications, and configure FSLogix and other AVD components.
+2. **Add new session hosts** — Deploy new session hosts from the updated image into the existing host pool.
+3. **Drain existing session hosts** — Set existing (old-version) session hosts to drain mode so no new user sessions connect to them.
+4. **Remove old session hosts** — After users have moved to the new session hosts, remove the old VMs from the host pool and deallocate them.
+
+For more information, see:
+
+- [Create a golden image in Azure](/azure/virtual-desktop/create-golden-image)
+- [Manage host pools](/azure/virtual-desktop/manage-host-pools)
+
+### AVD personal desktop exception
+
+For AVD **personal desktop** session hosts that use Windows 10 or Windows 11 **single-session** (not multi-session), in-place upgrade follows the same process as standard Azure VMs. See [In-place system upgrade process for a Windows 10 VM](#in-place-system-upgrade-process-for-a-windows-10-vm) earlier in this article.
+
+> [!NOTE]
+> Personal desktops using single-session Windows are eligible for in-place upgrade, but personal desktops using multi-session Windows are not. Verify the Windows SKU before attempting an upgrade. Run `winver` or check `SystemInfo` on the session host to confirm whether it's single-session or multi-session.
 
 ## References
 
