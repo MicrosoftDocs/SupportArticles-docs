@@ -37,10 +37,12 @@ This partition layout is the default for most Azure Marketplace Windows images. 
 
 ## Is it safe to delete the recovery partition in Azure?
 
-Yes. In Azure virtual machines (VMs), WinRE isn't usable because there's no local console or keyboard access during boot. Azure provides alternative recovery mechanisms:
+Yes. WinRE can't be triggered through its [standard entry points](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#entry-points-into-winre) on Azure VMs because Azure doesn't provide local keyboard or console access during the boot process. The standard WinRE triggers (Shift+Restart at the login screen, Settings app, hardware recovery buttons) all require interactive access that isn't available in Azure.
 
-- [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) for console-level troubleshooting.
-- [Repair a Windows VM by using the Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) for offline OS repair.
+Azure provides alternative recovery mechanisms that don't depend on the recovery partition:
+
+- [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) connects to the COM1 serial port for console-level troubleshooting.
+- [Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) attach the OS disk to a repair VM for offline OS repair.
 
 Deleting the recovery partition doesn't affect normal VM operation, startup, or Azure's ability to recover the VM.
 
