@@ -22,7 +22,11 @@ You experience one or more of the following symptoms:
 - Financial tag values that you previously configured disappear from journal views.
 - A financial tag shows values that aren't on the configured tag list.
 
-## Verify that financial tags are configured and activated
+## Solution
+
+Use the steps in the following sections to resolve this problem.
+
+### Verify that financial tags are configured and activated
 
 You must configure and activate financial tags in each legal entity in which you want to use them. If you don't activate the tags, they don't appear in journal forms or during transaction entry. For more information about initial setup, see [Financial tags](/dynamics365/finance/general-ledger/financial-tag).
 
@@ -35,7 +39,7 @@ To verify the configuration, follow these steps:
 1. If a tag shows **Inactive**, select the tag, and then select **Activate**.
 1. Switch to each legal entity where you expect financial tags, and repeat these steps. Financial tag configurations are legal-entity specific.
 
-## Clear cached financial tag configuration
+### Clear cached financial tag configuration
 
 Financial tag columns might disappear from journal forms because of stale cached values for the financial tag configuration. This issue can affect multiple users in an environment, and can occur after an environment update or database refresh.
 
@@ -50,7 +54,7 @@ To clear the cache, follow these steps:
 
 If the issue persists after you clear the cache, verify that the correct financial tag features are enabled in [Feature management](/dynamics365/fin-ops-core/fin-ops/get-started/feature-management/feature-management-overview). For information about how to configure your **Feature management** settings, see [Check Feature management settings](#check-feature-management-settings).
 
-## Check Feature management settings
+### Check Feature management settings
 
 If you recently migrated, restored, or refreshed an environment, the [Feature management](/dynamics365/fin-ops-core/fin-ops/get-started/feature-management/feature-management-overview) settings might differ between environments. For example, a sandbox environment might use the newer financial tags entry experience, while the production environment still uses the legacy experience.
 
@@ -61,7 +65,7 @@ To verify the Feature management settings, follow these steps:
 1. Search for features related to financial tags.
 1. Verify that the same financial tag features are enabled in both the source and target environments.
 
-## Verify data entity field mappings and redeploy financial tag table triggers
+### Verify data entity field mappings and redeploy financial tag table triggers
 
 If financial tags are empty after you import a general journal through the **Data management** workspace, verify the data entity mapping and import configuration.
 
@@ -81,7 +85,7 @@ If the mapping is correct but the tags are still empty after the import, the iss
 1. Search for **Deploy financial tag table triggers**, and then select **Run now**.
 1. After the action finishes, reimport the journal, and verify that the financial tags are populated.
 
-## Enforce validation by using Fixed list or Fixed custom list value types
+### Enforce validation by using Fixed list or Fixed custom list value types
 
 If a financial tag shows values that aren't in the configured list, the issue might be the [value type](/dynamics365/finance/general-ledger/financial-tag#creating-financial-tags) that's assigned to the tag.
 
@@ -99,7 +103,7 @@ To enforce validation, follow these steps:
 
 After you make this change, only values that are defined in the list are accepted during transaction entry.
 
-## Check data entity support for financial tags
+### Check data entity support for financial tags
 
 If financial tag fields are missing from specific data management entities, the data entity might not yet support financial tags. Each new release of Dynamics 365 Finance adds financial tag support to more journals and data entities. For the current list of supported journals, see [Financial tags](/dynamics365/finance/general-ledger/financial-tag).
 
