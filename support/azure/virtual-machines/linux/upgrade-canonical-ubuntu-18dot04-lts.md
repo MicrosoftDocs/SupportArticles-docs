@@ -10,6 +10,10 @@ ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
+This article describes why users need to upgrade Azure Linux virtual machines running Ubuntu 18.04 LTS.
+
 Canonical Ubuntu 18.04 LTS reached the end of standard support on May 31, 2023. Although you can continue to use existing Azure Linux virtual machines (VMs) that are running Ubuntu 18.04 LTS, these VMs could become vulnerable because Canonical no longer provides security, feature, and maintenance updates for the OS. Therefore, we recommend that you either migrate to the next Ubuntu LTS release or upgrade to Ubuntu Pro.
 
 ## Upgrade to Ubuntu 20.04 LTS or Ubuntu 22.04

@@ -21,9 +21,11 @@ ms.author: mbifeld
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-The Serial Console in the Azure portal provides access to a text-based console for Linux virtual machines (VMs) and virtual machine scale set instances. This serial connection connects to the ttys0 serial port of the VM or virtual machine scale set instance, providing access to it independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
+## Summary
 
-Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
+This article describes how to use the Azure Serial Console to access a text-based console for Linux virtual machines (VMs) and virtual machine scale set instances. The serial console connects to the ttys0 serial port of the VM or virtual machine scale set instance, providing access independent of the network or operating system state. The serial console can only be accessed through the Azure portal and is allowed only for users with a Contributor or higher role on the VM or virtual machine scale set.
+
+Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions of VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
 Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
 

@@ -15,6 +15,8 @@ author: rnirek
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article lists the common causes of Pacemaker service startup issues and provides resolutions to fix them.
 
 ## Scenario 1: Pacemaker startup failure because of SysRq-triggered reboot
@@ -265,7 +267,7 @@ To resolve the issue, extend both the start and stop `timeout` parameters for th
    ```bash
     primitive rsc_SAPHANA_DB01 ocf:suse:SAPHana \
         op start interval=0 timeout=3600 \
-        op stop interval=0 timeout= 3600 \	
+        op stop interval=0 timeout= 3600 \    
    ```
 
     After:
@@ -273,7 +275,7 @@ To resolve the issue, extend both the start and stop `timeout` parameters for th
     ```bash
     primitive rsc_SAPHANA_DB01 ocf:suse:SAPHana \
         op start interval=0 timeout=7200 \
-	    op stop interval=0 timeout=7200 \
+        op stop interval=0 timeout=7200 \
     ```
 
 4. Disable cluster maintenance mode:
@@ -303,14 +305,14 @@ The following text shows the `sudo crm status` output when this issue occurs:
     Active resources:
     
      Clone Set: cln_SAPHanaTopology [rsc_SAPHanaTopology]
-         rsc_SAPHanaTopology	(ocf::suse:SAPHanaTopology):	Started node-1 
-         rsc_SAPHanaTopology	(ocf::suse:SAPHanaTopology):	Started node-2 
+         rsc_SAPHanaTopology    (ocf::suse:SAPHanaTopology):    Started node-1 
+         rsc_SAPHanaTopology    (ocf::suse:SAPHanaTopology):    Started node-2 
      Master/Slave Set: msl_SAPHana [rsc_SAPHana]
-         rsc_SAPHana_P40_HDB00	(ocf::suse:SAPHana):	Stopped node-1 (Monitoring)
+         rsc_SAPHana_P40_HDB00    (ocf::suse:SAPHana):    Stopped node-1 (Monitoring)
      Resource Group: g_ip_P40_HDB00
-         rsc_ip_P40_HDB00	(ocf::heartbeat:IPaddr2):	Started node-1 
-         rsc_nc_P40_HDB00	(ocf::heartbeat:azure-lb):	Started node-1 
-     rsc_st_azure	(stonith:fence_azure_arm):	Started node-2 
+         rsc_ip_P40_HDB00    (ocf::heartbeat:IPaddr2):    Started node-1 
+         rsc_nc_P40_HDB00    (ocf::heartbeat:azure-lb):    Started node-1 
+     rsc_st_azure    (stonith:fence_azure_arm):    Started node-2 
     
     Failed Resource Actions:
     * rsc_SAPHana_P40_HDB00_monitor_61000 on node-1 'unknown error' (1): call=32, status=complete, exitreason='',

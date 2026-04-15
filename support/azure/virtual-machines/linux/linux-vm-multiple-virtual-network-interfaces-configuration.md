@@ -16,6 +16,8 @@ ms.collection: linux
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) that run the most common Linux distributions.
 
 ## Summary
