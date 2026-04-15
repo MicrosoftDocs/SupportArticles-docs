@@ -45,7 +45,7 @@ Common root causes on Azure VMs:
 - **Network connectivity**: The VM can't reach the KMS endpoint on port 1688 due to NSG rules, User Defined Routes (UDRs), or firewall policies.
 - **Forced tunneling**: All outbound traffic is routed through an on-premises VPN or ExpressRoute gateway, bypassing the Azure KMS endpoint.
 - **DNS resolution failure**: The VM can't resolve `azkms.core.windows.net`.
-- **Wrong KMS target**: The VM is configured to contact an on-premises KMS server that is unreachable from Azure.
+- **Wrong KMS target**: The VM is configured to contact an on-premises KMS server that's unreachable from Azure.
 
 ## Solution 1: Verify and fix KMS connectivity
 

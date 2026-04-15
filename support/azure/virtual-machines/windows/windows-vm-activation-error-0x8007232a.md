@@ -33,7 +33,7 @@ This error occurs when the VM can't contact a DNS server to resolve the KMS host
 
 On Azure VMs, this error typically occurs in the following scenarios:
 
-- The VM's DNS configuration points to a custom DNS server that is down or unreachable.
+- The VM's DNS configuration points to a custom DNS server that's down or unreachable.
 - Network Security Group (NSG) rules are blocking outbound DNS traffic (UDP/TCP port 53).
 - The VM is in a virtual network with no DNS resolution path to the KMS host.
 - A network virtual appliance (NVA) or firewall is intercepting and dropping DNS traffic.

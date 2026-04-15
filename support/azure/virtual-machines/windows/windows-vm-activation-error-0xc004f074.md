@@ -189,7 +189,7 @@ If a standard internal load balancer blocks traffic, there are two different app
 
 We recommend that you use an Azure Virtual Network NAT configuration for outbound connectivity in production deployments. For more information about Azure NAT Gateway, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
 
-However, if there's a requirement to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you have to activate. Notice that operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
+However, if there's a requirement to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you need to activate. Notice that operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
 
 ## Solution 3: (For standard internal load balancer) Centralized egress via Azure Firewall without forced tunneling
 
