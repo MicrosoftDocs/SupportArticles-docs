@@ -1,6 +1,6 @@
 ---
 title: Can't create a Capacity Reservation
-description: The following article discusses the reasons why you are not able to create Capacity Reservation.
+description: The following article discusses the reasons why you aren't able to create Capacity Reservation.
 ms.date: 12/04/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
@@ -14,16 +14,16 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-The following article discusses the reasons why you are not able to create Capacity Reservation.
+The following article discusses the reasons why you aren't able to create Capacity Reservation.
 
 ## Reasons why Capacity Reservation can't be created
 
-1. There is a lack of capacity in the Region/Availability zone.
+1. There's a lack of capacity in the Region/Availability zone.
 
    Azure doesn't have capacity for the combination of requested VM size, location, and quantity. Either wait and retry later, when new capacity becomes available, or try a different combination of VM size, location, and quantity.
 
    > [!NOTE]
-   > Capacity Reservation creation succeeds or fails in its entirety. For a request to reserve ten instances, success is returned only if all ten instances are allocated. Otherwise, the capacity reservation creation will fail.
+   > Capacity Reservation creation succeeds or fails in its entirety. For a request to reserve 10 instances, success is returned only if all 10 instances are allocated. Otherwise, the capacity reservation creation fails.
 
 1. The VM size is unsupported.
 
@@ -31,7 +31,7 @@ The following article discusses the reasons why you are not able to create Capac
 
 1. The subscription doesn't have the required quota.
 
-   Creating capacity reservations requires quota in the same manner as it does for creating virtual machines. If you get insufficient quota error while creating capacity reservation, visit [Standard quota: Increase limits by VM series](/azure/azure-portal/supportability/per-vm-quota-requests) to request additional quota, or try a different combination of VM size/location/Qty.
+   Creating capacity reservations requires quota in the same manner as it does for creating virtual machines. If you get insufficient quota error while creating capacity reservation, visit [Standard quota: Increase limits by VM series](/azure/azure-portal/supportability/per-vm-quota-requests) to request another quota, or try a different combination of VM size/location/Qty.
 
 1. You don't have access to create reservation.
 

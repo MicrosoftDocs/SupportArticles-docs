@@ -1,5 +1,5 @@
 ---
-title: Azure Virtual Machine - Netlogon service is not starting
+title: Azure Virtual Machine - Netlogon service isn't starting
 description: Troubleshoot Netlogon service not starting
 ms.date: 01/11/2021
 ms.reviewer: 
@@ -8,13 +8,13 @@ ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---
 
-# Azure Virtual Machine - Netlogon service is not starting
+# Azure Virtual Machine - Netlogon service isn't starting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-This article provides troubleshooting steps for when the Netlogon service is not starting on an Azure virtual machine (VM). When this happens, you won't be able to log in to the VM, and the screenshot of the VM will show that the operating system (OS) is fully loaded and waiting for credentials.
+This article provides troubleshooting steps for when the Netlogon service isn't starting on an Azure virtual machine (VM). When this happens, you won't be able to sign in to the VM, and the screenshot of the VM shows that the operating system (OS) is fully loaded and waiting for credentials.
 
 ## Symptoms
 
@@ -22,7 +22,7 @@ This article provides troubleshooting steps for when the Netlogon service is not
 
    :::image type="content" source="media/azure-vm-netlogon-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for the credentials.":::
 
-2. If you view the Guest OS Logs, you'll see that DNS Client service is either not starting, or is failing to start. This could be due to a hang, a crash of this service, or any required service to be run before it.
+2. If you view the Guest OS Logs, you'll see that DNS Client service isn't starting, or is failing to start. This could be due to a hang, a crash of this service, or any required service to be run before it.
 
    ```cmd
       Log Name:      System
@@ -89,15 +89,15 @@ Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=(Get-Date).AddDays(-
 
 ## Cause
 
-The Netlogon service is not running on the Virtual Machine. This issue happens in the following scenarios:
+The Netlogon service isn't running on the Virtual Machine. This issue happens in the following scenarios:
 
 1. The Netlogon service was set to **disabled**.
-2. The Netlogon is not responding, or is crashing.
-3. Another required service is not running.
+2. The Netlogon isn't responding, or is crashing.
+3. Another required service isn't running.
 
 ## Solution
 
-Backup the VM OS disk using your preferred method.
+Back up the VM OS disk using your preferred method.
 
 One method that you can use is to [take a snapshot of the disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 

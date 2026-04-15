@@ -1,5 +1,5 @@
 ---
-title: Cannot RDP into Azure VM because of a brute force attack
+title: Can't RDP into Azure VM because of a brute force attack
 description: Troubleshoot RDP failures because of brute force attack in Microsoft Azure.
 ms.date: 12/14/2020
 ms.reviewer: 
@@ -8,34 +8,34 @@ ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---
 
-# Cannot RDP into Azure VM because of a brute force attack
+# Can't RDP into Azure VM because of a brute force attack
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-Open ports on Internet-facing virtual machines are targets for brute force attacks. This article describes general errors you may experience when your Azure virtual machine (VM) is under attack and best practices for securing your VM.
+Open ports on Internet-facing virtual machines are targets for brute force attacks. This article describes general errors you might experience when your Azure virtual machine (VM) is under attack and best practices for securing your VM.
 
 ## Symptoms
 
-1. When you make a Remote Desktop Protocol (RDP) connection to a Windows VM in Azure, you may receive the following general error messages:
+1. When you make a Remote Desktop Protocol (RDP) connection to a Windows VM in Azure, you might receive the following general error messages:
 
     - An internal error has occurred.
     - Remote Desktop Services session has ended. Your network administrator might have ended the connection. Try connecting again, or contact technical support for assistance.
 
-2. You're unable to RDP using the Public IP address, but you may be able to RDP using the Private IP address. This issue will depend on whether you have a performance spike because of the attack.
+2. You're unable to RDP using the Public IP address, but you might be able to RDP using the Private IP address. This issue depends on whether you have a performance spike because of the attack.
 
-3. There are many failed logon attempts in the Security Event Logs:
+3. There are many failed sign-in attempts in the Security Event Logs:
 
-   - Events 4625 from the logon is logged almost every second, with the failure reason **Bad Username Or Password**.
+   - Events 4625 from the sign in is logged almost every second, with the failure reason **Bad Username Or Password**.
 
-   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/events-log.png" alt-text="Screenshot of failed logon attempts Events 4625 in the Security Event Logs.":::
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/events-log.png" alt-text="Screenshot of failed sign in attempts Events 4625 in the Security Event Logs.":::
 
    :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/event-properties.png" alt-text="Screenshot of the Event Properties - Event 4625 window, which shows the Failure Reason is Unknown users name or bad password." border="false":::
 
 ### Connect to the VM using Serial console
 
-If you are unable to successfully RDP to the VM you can try using PowerShell and [Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
+If you're unable to successfully RDP to the VM you can try using PowerShell and [Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
 
 1. On the command line, launch PowerShell by running `powershell.exe`.
 
@@ -50,11 +50,11 @@ You can alternately use [Remote PowerShell](/azure/virtual-machines/troubleshoot
 
 ## Cause
 
-If there are many recent log entries indicating failed logon attempts the VM may be experiencing a brute force attack and will need to be secured. This activity may be consuming the RDP service resources preventing you from being able to successfully connect via RDP.
+If there are many recent log entries indicating failed sign in attempts the VM might be experiencing a brute force attack and needs to be secured. This activity might be consuming the RDP service resources preventing you from being able to successfully connect via RDP.
 
 ## Solution
 
-In this scenario the RDP TCP Port 3389 is exposed to the internet, please use one or more of the methods listed below to increase security for the VM:
+In this scenario the RDP TCP Port 3389 is exposed to the internet, use one or more of the methods listed below to increase security for the VM:
 
 1. Use [Just-In-Time access](/azure/security-center/just-in-time-explained) to secure the public facing ports of your VM.
 
@@ -66,12 +66,12 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 
    For your inbound RDP (TCP Port 3389) rule, if the Source is set to "Any" or " * " then the rule is considered open. To improve the security of the rule, [restrict the RDP port to a specific user's IP address](/azure/virtual-network/network-security-groups-overview#security-rules), and then test RDP access again.
 
-5. Use [Run Command](/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](/azure/security-center/just-in-time-explained), [Azure Bastion](/azure/bastion/), or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+5. Use [Run Command](/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This isn't suggested as a long-term fix, but might help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](/azure/security-center/just-in-time-explained), [Azure Bastion](/azure/bastion/), or [VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
-   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/setrdpport-command.png" alt-text="Screenshot of the description of the SetRDPPort command in the Run command page of Azure Portal.":::
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/setrdpport-command.png" alt-text="Screenshot of the description of the SetRDPPort command in the Run command page of Azure portal.":::
 
 > [!NOTE]
-> Use [Azure Security Centre](https://azure.microsoft.com/services/security-center/) to assess the security state of your cloud resources. Visualize your security state, and improve your security posture by using [Azure Secure Score](/azure/security-center/secure-score-security-controls) recommendations.
+> Use [Azure Security Center](https://azure.microsoft.com/services/security-center/) to assess the security state of your cloud resources. Visualize your security state, and improve your security posture by using [Azure Secure Score](/azure/security-center/secure-score-security-controls) recommendations.
 
 ## Next Steps
 

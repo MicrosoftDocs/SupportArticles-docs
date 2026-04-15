@@ -22,11 +22,11 @@ This article explains how to use boot diagnostics to troubleshoot virtual machin
 
 There can be many reasons that a virtual machine enters a non-bootable state. To address issues with your virtual machines created using Resource Manager deployment model, you can use the following debugging features: Console Output and Screenshot support for Azure virtual machines.
 
-For Linux virtual machines, you can view the output of your console log from the Portal. For both Windows and Linux virtual machines, Azure enables you to see a screenshot of the VM from the hypervisor. Both features are supported for Azure virtual machines in all regions. Note, screenshots and output can take up to 10 minutes to appear in your storage account.
+For Linux virtual machines, you can view the output of your console log from the Portal. For both Windows and Linux virtual machines, Azure enables you to see a screenshot of the VM from the hypervisor. Both features are supported for Azure virtual machines in all regions. Note, screenshots, and output can take up to 10 minutes to appear in your storage account.
 
 You can select the **Boot diagnostics** option to view the log and the screenshot.
 
-:::image type="content" source="media/virtual-machines-common-boot-diagnostics/screenshot-tab.png" alt-text="Screenshot of the Screenshot tab in the Boot diagnostics page of Azure Portal.":::
+:::image type="content" source="media/virtual-machines-common-boot-diagnostics/screenshot-tab.png" alt-text="Screenshot of the Screenshot tab in the Boot diagnostics page of Azure portal.":::
 
 ## Common boot errors
 
@@ -44,7 +44,7 @@ You can select the **Boot diagnostics** option to view the log and the screensho
 - [An operating system wasn't found](https://support.microsoft.com/help/4010142)
 - [Boot failure or INACCESSIBLE_BOOT_DEVICE](https://support.microsoft.com/help/4010143)
 
-## Enable diagnostics on a virtual machine created using the Azure Portal
+## Enable diagnostics on a virtual machine created using the Azure portal
 
 The following procedure is for a virtual machine created using the Resource Manager deployment model.
 
@@ -53,12 +53,12 @@ On the **Management** tab, in **Monitoring** section, make sure that **Boot diag
   ![Screenshot of the options in the VM creation Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
 
 > [!NOTE]
-> The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
+> The Boot diagnostics feature doesn't support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
 >
 
 ### Deploying from an Azure Resource Manager template
 
-If you are deploying from an Azure Resource Manager template, navigate to your virtual machine resource and append the diagnostics profile section. Set the API version header to "2015-06-15" or later. The latest version is "2018-10-01".
+If you're deploying from an Azure Resource Manager template, navigate to your virtual machine resource and append the diagnostics profile section. Set the API version header to "2015-06-15" or later. The latest version is "2018-10-01".
 
 ```json
 {
@@ -99,7 +99,7 @@ You can use the Azure CLI to enable boot diagnostics on an existing Azure virtua
 
 ### Fix boot diagnostics screenshot not refreshing
 
-If you notice the Boot Diagnostics screenshot for your Azure VM is stale in the Azure portal, first make sure the virtual display timeout is disabled in the guest operating system. For example, you may see the time shown on the logon screen is stale for a Windows VM.
+If you notice the Boot Diagnostics screenshot for your Azure VM is stale in the Azure portal, first make sure the virtual display timeout is disabled in the guest operating system. For example, you might see the time shown on the sign in screen is stale for a Windows VM.
 
 #### For Windows, run the following command from elevated CMD
 
@@ -113,6 +113,6 @@ powercfg /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
 xset s off
 ```
 
-For Windows VMs, the Azure provisioning agent is different than the VM agent. It runs the above command during provisioning for VMs created from a generalized image. You can see this event if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
+For Windows VMs, the Azure provisioning agent is different than the VM agent. It runs the above command during provisioning for VMs created from a generalized image. You can see this event if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent doesn't need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it's possible to have a particularly old Azure VM created from generalized image that might not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
 
  
