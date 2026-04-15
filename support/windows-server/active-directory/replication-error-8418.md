@@ -100,10 +100,30 @@ Schema mismatches can occur under the following circumstances:
 - DCs replicate the schema partition, and the source DC has different schema information than the destination DC.
 - DCs replicate a non-schema partition, and the data on the source DC uses a different schema than the data on the destination DC.
 
-> [!IMPORTANT]  
-> Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
+ In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred. Such scenarios include:
 
-### Transient issues versus persistent schema mismatch issues
+- The issue occurred after the Active Directory schema was updated. In many cases, this issue is transient and resolves itself.
+
+  > [!IMPORTANT]  
+  > Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
+
+- The issue occurred when you tried to promote a member server to a domain controller (DC). The promotion operation failed.
+- The issue occurred during normal replication. Typically, this means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
+  - A DC is quarantined, or might have lingering objects
+  - Communication has stopped because of a DNS or RPC issue
+  - A DC has stopped replicating for other reasons
+  - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
+
+A less common scenario is one in which the schema partition on one or more DCs has improper attribute definitions. Possible schema definition issues that can trigger mismatch include:  
+
+- OID Clash
+- Invalid OM Syntax values
+- Invalid MayContain values
+- Objects with attributes that contain data but the schema definition for the attribute type(s) has been marked as defunct
+
+For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
+
+### Transient issues versus persistent issues
 
 Schema mismatch issues typically fall into one of two categories: *Transient* or *persistent*.
 
@@ -123,31 +143,6 @@ Persistent schema mismatch issues don't meet these criteria, and don't resolve t
   - DNS (Domain Name Resolution) issues
   - RPC communication issues
   - Local or network firewalls
-
-- The schema partition on one or more DCs has improper attribute definitions. *Requires individual trigger objects/attributes*
-
-Possible schema definition issues that can trigger mismatch include:  
-
-- OID Clash
-- Invalid OM Syntax values
-- Invalid MayContain values
-- Objects with attributes that contain data but the schema definition for the attribute type(s) has been marked as defunct
-
-
-For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
-
-
-## Resolution
-
-A schema mismatch issue can occur in different situations under multiple circumstances. In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred. Such scenarios include:
-
-- The issue occurred after the Active Directory schema was updated. In many cases, this issue is transient and resolves itself.
-- The issue occurred when you tried to promote a member server to a domain controller (DC). The promotion operation failed.
-- The issue occurred during normal replication. Typically, this means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
-  - A DC is quarantined, or might have lingering objects
-  - Communication has stopped because of a DNS or RPC issue
-  - A DC has stopped replicating for other reasons
-  - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
 
 ## Collect diagnostic data to help isolate possible causes
 
@@ -186,7 +181,7 @@ Increase level of event logging on both source and destination DCs. To change th
    |`24 Schema`|DWORD|`5`|
    |`7 Internal Configuration`|DWORD|`5`|
 
-##### Review the event logs for any replication issues
+#### Review the errors and event logs for any replication issues
 
 Wait for the issue to occur, or repeat the action that triggers the issue (for example, promote a member server to a domain controller). After the schema mismatch occurs, review the event logs on the affected DCs and their replication partners. Look for any information in the errors or events that identifies the source of the issue or what resource the issue affects.
 
@@ -200,11 +195,12 @@ The following table lists examples of error codes that indicate issues that prev
 > [!NOTE]  
 >
 > - In addition to appearing in logged events, these error codes can occur when you use command-line tools such as `repadmin`, `dcdiag`, or `dcpromo`.
+> - If you receive the schema mismatch error when you try to promote a member server to a DC, collect the DCpromo and DCpromoUI log files. This kind of issue is almost always persistent, and doesn't resolve itself.
 > - Some events are associated with more than one error code. When you review your event log for these events, make sure you check the error code that's listed in the event so you can interpret the event correctly.
 
 | Error code | Event ID and source, if appropriate | More information |
 | - | - |
-| | 1203 Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication | |
+| | 1203 Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication<sup>*</sup> | |
 | [1340](#error-code-1340-event-id-1450) | 1450 NTDS SDProp | |
 | 1722 | | [Active Directory replication error 1722](replication-error-1722-rpc-server-unavailable.md) |
 | 1753 | | [Active Directory Replication Error 1753](replication-error-1753.md) |
@@ -215,16 +211,40 @@ The following table lists examples of error codes that indicate issues that prev
 
 For additional common error codes, see [Troubleshoot common Active Directory replication errors](common-active-directory-replication-errors.md).
 
+If you can isolate object or attribute identifiers from the error or event information, continue to the next section to collect object and attribute metadata.
 
+If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
 
-If you receive the schema mismatch error when you try to promote a member server to a DC, collect the DCpromo and DCpromoUI logs and then continue to [Can't promote a DC](#cant-promote-a-dc).
+### Level 3: Export object metadata
 
+If you can identify an object as the cause of the replication issue, dump the object replication metadata for that object. To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC.
 
-[Underlying issues are blocking replication](#underlying-issues-are-blocking-replication)
+If you have the DN of the object that caused the issue, open an administrative Command Prompt window, and then run the following command:
 
+```console
+Repadmin /showobjmeta <Target_DC> "<DN_of_Trigger_Object>"
+```
 
+If you have the GUID of the object or attribute that caused the issue, run the following command:
 
-## Resolution 1: After a recent schema update, issues persist
+```console
+`Repadmin /showobjmeta <Target_DC> "GUID=<ObjectGuid_of_Trigger_Object>"`
+```
+
+> [!NOTE]  
+>
+> - In these commands, \<Target_DC> represents the DC whose data you're retrieving (the source DC or the destination DC).
+> - If the issue occurred when you promoted a member computer to a DC, the destination DC is the computer that you tried to promote. It might not yet have the object.
+
+This method can be used to identify "candidate" attributes that could be the cause of failure.
+
+If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
+
+```console
+Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
+```
+
+## Resolution 1: Following a schema update, issues persist
 
 After the Active Directory schema updates, schema mismatch issues typically appear and disappear on various DCs throughout the forest. This behavior typically occurs in a pattern that matches the replication topology and schedule. These transient schema mismatches are the expected behavior. Monitoring software typically reports the issues, but they don't require administrative intervention.
 
@@ -283,19 +303,9 @@ Restart the source DC.
 
 In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restarting the DC should resolve the issue.
 
-If the issue persists, see [Underlying issues are blocking replication](#underlying-issues-are-blocking-replication).
+If the issue persists, 
 
-## Resolution 2: Can't promote a DC
-
-If the object triggering failure can be identified, then first use `repadmin /showobjmeta` to dump the object replication metadata and on both source and destination DC. This method can be used to identify "candidate" attributes that could be the cause of failure.
-
-```console
-Repadmin /showobjmeta Target_DC "<DN_of_Trigger_Object>"
-```
-
-If only the GUID of the object is known use the syntax:
-
-`Repadmin /showobjmeta Target_DC "<GUID=ObjectGuid_of_Trigger_Object>"`
+## Resolution 2: Review object and attribute metadata
 
 Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute name
 
@@ -304,35 +314,26 @@ Example
 The two entries for replication metadata for a problem object as displayed by `Repadmin.exe` shows no `ldapdisplayname`:
 
 ```output
-USN DSA Org USN Org. Time/Date Version Attribute  
+USN   DSA Org                              USN Org. Time/Date  Version Attribute  
 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime> 2  
 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime> 3
 ```
 
-If any of the metadata fields has no associated name, try using ldp.exe  to expose the internal `attributeid`.
+If any of the metadata fields has no associated name, try using ldp.exe to expose the internal `attributeid`.
 
 The metadata for the same object above as displayed in LDP.exe shows the `AttributeID` associated with the data
 
 ```output
-AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date  
-250000 2 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime>  
-250004 3 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
+AttID  Ver Loc.USN Originating DSA                      Org.USN  Org.Time/Date  
+250000 2   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime>  
+250004 3   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
 ```
 
 The attribute ID can be used to help identify the problem attribute, but requires the engagement of Microsoft Support.
 
 Version comparison - attributes to be replicated will have higher version numbers on the source.
 
-> [!NOTE]
-> In the DCpromo scenario, the destination object will most likely not yet exist.
 
-If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
-
-```console
-Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
-```
-
-If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
 
 If the attribute triggering failure cannot be identified by the event log data or replication metadata, then it will be necessary to engage Microsoft Product Support to assist with the investigation.
 
@@ -346,15 +347,7 @@ Export of entire schema partition from both source and destination domain contro
 Ldifde -f schema _TargetDC.ldf -d cn=schema,cn=configuration,dc=contoso,dc=com -s Target_DC
 ```
 
-#### Review object and attribute metadata
 
-Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
-
-In the case where DCpromo fails with a schema mismatch the following data should be collected:
-
-- DCpromo and DCpromoUI logs
-- NTDS Diagnostic Event Logging on both the source and destination DC as described below in "Data Collection Phase 2"
-- Ldifde Export of the Schema partition as described below in the "Schema Review"
 
 
 
