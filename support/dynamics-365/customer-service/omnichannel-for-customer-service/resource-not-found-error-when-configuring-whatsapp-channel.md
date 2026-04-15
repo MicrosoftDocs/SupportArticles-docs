@@ -26,7 +26,7 @@ This issue occurs when certain required Omnichannel-related plugins are disabled
 
 To resolve this issue, do as follows:
 
-1. Go to [Power Apps](www.make.powerapps.com), and select your environment.
+1. Go to [Power Apps](https://make.powerapps.com/), and select your environment.
 1. Select **Solutions** > **Default Solution**.
 1. Select **Objects**, and then search "processes".
 1. In the search box on the top right, search **UpdatePrivacyTerms**.
