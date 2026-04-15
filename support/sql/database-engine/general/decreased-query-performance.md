@@ -100,7 +100,7 @@ Use the following methods to verify that a sudden query performance decrease is 
 
 #### Check Performance Monitor counters
 
-Monitor the following SQL Server performance counters to identify the problem:
+To identify the problem, monitor the following SQL Server performance counters:
 
 - **Performance object:** `Process`, **Counter:** `% Processor Time`, **Instance:** `sqlservr`
 
