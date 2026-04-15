@@ -8,11 +8,11 @@ ms.custom: sap:Linked Server and distributed queries
 
 # Troubleshoot OLE DB provider errors for linked servers
 
-This article helps you resolve OLE DB provider errors that occur when you run T-SQL queries through [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) or improvised queries by using [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) or [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) in Microsoft SQL Server. These errors typically indicate that the OLE DB provider isn't installed, isn't registered, or doesn't match the SQL Server architecture.
+This article helps you resolve OLE DB provider errors that occur when you run T-SQL queries through [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine) or ad-hoc queries by using [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) or [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) in Microsoft SQL Server. These errors typically indicate that the OLE DB provider isn't installed, isn't registered, or doesn't match the SQL Server architecture.
 
 ## Symptoms
 
-When you run T-SQL queries that use linked servers or improvised queries (by using `OPENROWSET` or `OPENDATASOURCE`), you receive one of the following error messages:
+When you run T-SQL queries that use linked servers or ad-hoc queries (by using `OPENROWSET` or `OPENDATASOURCE`), you might receive one of the following error messages:
 
 > The OLE DB provider "\<ProviderName>" has not been registered. (Microsoft SQL Server, Error: 7403)
 
@@ -27,7 +27,7 @@ These errors can also occur after you:
 
 SQL Server can't initialize the specified OLE DB provider for one of the following reasons:
 
-- The OLE DB provider isn't installed on the server.
+- The OLE DB provider or driver isn't installed on the server.
 - The installed provider doesn't match the SQL Server bitness (x86 versus x64).
 - The OLE DB provider is installed but not properly registered.
 
@@ -38,12 +38,12 @@ SQL Server can't initialize the specified OLE DB provider for one of the followi
 
 To resolve the issue, follow the steps in each section in the given order.
 
-### Verify the installed OLE DB providers
+### Verify the installed OLE DB providers or drivers
 
-Check which OLE DB providers are registered on your SQL Server instance by using one of the following methods:
+Check which OLE DB providers or drivers are registered on your SQL Server instance by using one of the following methods:
 
-- In **SQL Server Management Studio (SSMS)**, expand **Server Objects** > **Linked Servers** > **Providers** to see the list of registered OLE DB providers.
-- Run the following query to see all defined linked servers and their associated providers:
+- In **SQL Server Management Studio (SSMS)**, expand **Server Objects** > **Linked Servers** > **Providers** to see the list of registered OLE DB providers or drivers.
+- Run the following query to see all defined linked servers and their associated providers or drivers:
 
   ```sql
   SELECT * FROM sys.servers;
@@ -51,15 +51,15 @@ Check which OLE DB providers are registered on your SQL Server instance by using
 
   For more information about the columns that are returned, see [sys.servers (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql).
 
-### Verify the provider installation
+### Verify the provider or driver installation
 
 Verify that the correct OLE DB provider is installed and matches SQL Server's architecture:
 
-1. Check whether the provider that's required by your linked server is present in the provider list from [Verify the installed OLE DB providers](#verify-the-installed-ole-db-providers).
+1. Check whether the provider that's required by your linked server is present in the provider list from [Verify the installed OLE DB providers or drivers](#verify-the-installed-ole-db-providers-or-drivers).
 1. If the provider is missing, install it:
 
    - **For Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL):** Download the latest version from the [Microsoft OLE DB Driver download page](/sql/connect/oledb/download-oledb-driver-for-sql-server).
-   - **For third-party providers:** Contact the vendor to get the correct installer.
+   - **For third-party providers or drivers:** Contact the vendor to get the correct installer.
 
 1. Make sure that the provider version matches the SQL Server architecture. For example, install the 64-bit provider for a 64-bit SQL Server instance.
 
@@ -67,24 +67,7 @@ For more methods to verify the provider, see [OLE DB driver installation check](
 
 ### Register the OLE DB provider
 
-If the provider DLL exists on disk but isn't registered, manually register it:
-
-1. Open an elevated Command Prompt window.
-1. Run the following command to register the DLL:
-
-   ```console
-   regsvr32 <ProviderDLLPath>
-   ```
-
-   For example, to register the SQL Server Native Client provider:
-
-   ```console
-   regsvr32 sqlncli11.dll
-   ```
-
-1. If you need both 32-bit and 64-bit providers, run the command in each respective environment. For example, use a 32-bit command prompt to register a 32-bit DLL.
-
-For more information about how to register OLE DB provider DLLs, see [OLE DB driver installation check](../install/windows/oledb-driver-install-check.md).
+If the provider DLL exists on disk but isn't registered, reinstall the provider or driver by using the steps in [Verify the provider or driver installation](#verify-the-provider-or-driver-installation). Reinstalling ensures that the DLL is properly registered.
 
 ### Verify the provider connectivity
 
