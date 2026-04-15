@@ -1,6 +1,6 @@
 ---
 title: Cannot extend OS volume because a recovery partition blocks the extend
-description: Resolve the issue where Extend Volume is greyed out in Disk Management because a Windows Recovery partition sits between the OS volume and unallocated space on an Azure VM.
+description: Resolve the issue where Extend Volume is unavailable (dimmed) in Disk Management because a Windows Recovery partition sits between the OS volume and unallocated space on an Azure VM.
 ms.reviewer: scotro, v-leedennis
 ms.date: 04/14/2026
 ms.service: azure-virtual-machines
@@ -13,14 +13,14 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article helps you resolve the issue where **Extend Volume** is greyed out in Disk Management after you resize a managed disk in the Azure portal. The cause is a Windows Recovery partition that sits between the OS volume (C:) and the new unallocated space.
+This article helps you resolve the issue where **Extend Volume** is unavailable (dimmed) in Disk Management after you resize a managed disk in the Azure portal. The cause is a Windows Recovery Environment (WinRE) partition that sits between the OS volume (C:) and the new unallocated space.
 
 ## Symptoms
 
 After you expand a managed disk in the Azure portal, you open Disk Management inside the VM and find:
 
 - The new unallocated space is visible at the end of the disk.
-- **Extend Volume** is greyed out when you right-click the C: volume.
+- **Extend Volume** is unavailable (dimmed) when you right-click the C: volume.
 - A **Recovery** partition (typically 450 MB to 1 GB) sits between the C: volume and the unallocated space.
 
 The partition layout looks like this:
@@ -33,16 +33,16 @@ The partition layout looks like this:
 
 NTFS can only extend into physically adjacent unallocated space. The Windows Recovery partition sits between the OS volume and the new space, which prevents the extend operation.
 
-This partition layout is the default for most Azure Marketplace Windows images. The Recovery partition contains Windows Recovery Environment (WinRE) files.
+This partition layout is the default for most Azure Marketplace Windows images. The Recovery partition contains WinRE files.
 
 ## Is it safe to delete the recovery partition in Azure?
 
-Yes. In Azure VMs, the Windows Recovery Environment (WinRE) is not usable because there is no local console or keyboard access during boot. Azure provides alternative recovery mechanisms:
+Yes. In Azure virtual machines (VMs), WinRE isn't usable because there's no local console or keyboard access during boot. Azure provides alternative recovery mechanisms:
 
 - [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) for console-level troubleshooting.
 - [Repair a Windows VM by using the Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) for offline OS repair.
 
-Deleting the recovery partition doesn't affect normal VM operation, boot, or Azure's ability to recover the VM.
+Deleting the recovery partition doesn't affect normal VM operation, startup, or Azure's ability to recover the VM.
 
 ## Resolution
 
@@ -96,24 +96,24 @@ This option deletes the recovery partition so that the unallocated space becomes
 
 1. Follow the Extend Volume Wizard to expand C: into the unallocated space.
 
-### Option 2: Move the recovery partition by using GParted (preserve WinRE)
+### Option 2: Move the recovery partition by using GParted
 
-If you want to keep the recovery partition, you can move it to the end of the disk instead of deleting it.
+If you want to keep the recovery partition, you can move it to the end of the disk instead of deleting it. This option preserves WinRE.
 
 1. Stop (deallocate) the VM.
 
 1. Create a [repair VM](/troubleshoot/azure/virtual-machines/windows/troubleshoot-recovery-disks-portal-windows) and attach the OS disk as a data disk.
 
-1. On the repair VM, download and boot a [GParted Live ISO](https://gparted.org/livecd.php) or install GParted.
+1. On the repair VM, download a [GParted Live ISO](https://gparted.org/livecd.php) or install GParted.
 
 1. In GParted, select the attached disk and move the recovery partition to the end of the disk.
 
-1. Apply changes, detach the disk, and re-attach it to the original VM as the OS disk.
+1. Apply changes, detach the disk, and reattach it to the original VM as the OS disk.
 
 1. Start the VM and extend the C: volume.
 
 > [!NOTE]
-> Option 2 requires additional steps and a temporary repair VM. Use this option only if you need to preserve the WinRE partition for compliance or organizational requirements.
+> Option 2 requires more steps and a temporary repair VM. Use this option only if you must preserve the WinRE partition for compliance or organizational requirements.
 
 ## Verify the fix
 

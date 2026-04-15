@@ -21,7 +21,7 @@ When you try to resize a managed disk in the Azure portal or by using Azure CLI 
 
 > **ChangeDiskSizeWhileActiveSasNotAllowed**: The disk \<disk-name\> has an active SAS URI. Retry after the SAS URI expires or revoke it.
 
-The **Save** or **Resize** button might also be unavailable (greyed out) if the SAS lease is detected before the request is submitted.
+The **Save** or **Resize** button might also be unavailable (dimmed) if the SAS lease is detected before the request is submitted.
 
 ## Cause
 

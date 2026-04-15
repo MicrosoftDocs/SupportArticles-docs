@@ -19,7 +19,7 @@ This article helps you diagnose and resolve common failures when resizing manage
 
 You experience one of the following issues when you try to resize a managed disk:
 
-- The **Save** or **Resize** button is unavailable (greyed out) on the **Size + performance** blade.
+- The **Save** or **Resize** button is unavailable (dimmed) on the **Size + performance** blade.
 - You receive an error message after you select **Save** or **Resize**.
 - The Azure portal shows the new disk size, but the operating system (OS) still reports the old size.
 
@@ -137,7 +137,7 @@ For more information about shared disks, see [Azure shared disks](/azure/virtual
 
 ## Verify the target size is valid
 
-The Disk RP validates the target size against the SKU's minimum, maximum, and increment rules. Shrinking a disk is not supported.
+The Disk RP validates the target size against the SKU's minimum, maximum, and increment rules. Shrinking a disk isn't supported.
 
 ### How to check
 
