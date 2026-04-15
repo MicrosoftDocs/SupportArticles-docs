@@ -31,6 +31,9 @@ If you must do performance benchmark tests and want to determine the I/O through
 
 The SQLIOSim utility replaces the SQLIOStress utility, which was formerly known as the SQL70IOStress utility.
 
+> [!TIP]
+> Run SQLIOSim on every new storage configuration before production deployment. This testing helps ensure that the system honors write-order and flush semantics even when caching layers like controller cache, firmware buffering, or SAN optimizations are present.
+
 ## SQLIOSim location
 
 In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included in the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the *\\Binn* folder of your SQL Server installation. We recommend that you use this updated version of the tool to simulate the IO activity on the disk subsystem.
