@@ -156,7 +156,7 @@ Repadmin showrepl * /csv > allrepl.csv
 
 Review this data, identifying all the DCs that experience *any* replication issues.
 
-If you recently applied a schema update to the forest, see [After a recent schema update, issues persist](#after-a-recent-schema-update-issues-persist).
+If you recently applied a schema update to the forest, see [Resolution 1: Following a schema update, issues persist](#resolution-1-following-a-schema-update-issues-persist).
 
 If you haven't recently updated the schema, continue on to collect diagnostic event logs.
 
@@ -200,12 +200,12 @@ The following table lists examples of error codes that indicate issues that prev
 
 | Error code | Event ID and source, if appropriate | More information |
 | - | - |
-| | 1203 Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication<sup>*</sup> | |
-| [1340](#error-code-1340-event-id-1450) | 1450 NTDS SDProp | |
+| | 1203 Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication | |
+| 1340 | 1450 NTDS SDProp | [Inherited access ACL or ACE couldn't be built](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) |
 | 1722 | | [Active Directory replication error 1722](replication-error-1722-rpc-server-unavailable.md) |
 | 1753 | | [Active Directory Replication Error 1753](replication-error-1753.md) |
 | 8614 | 1925 NTDS KCC<br/>2042 NDTS Replication | [Troubleshoot Active Directory replication error 8614](replication-error-8614.md)<br/>[Active Directory replication Event ID 2042](active-directory-replication-event-id-2042.md) |
-| 8606 | 1988 NTDS Replication | |
+| 8606 | 1988 NTDS Replication | [Active Directory Replication Error 8606](replication-error-8606.md) |
 | 8456 or 8457 | 1308 NTDS KCC<br/>1393 NTDS General<br/>1586 NTDS Replication<br/>1925 NTDS KCC<br/>1926 NTDS KCC<br/>2023 NTDS Replication<br/>2095 Microsoft-Windows-ActiveDirectory_DomainService<br>2103 Microsoft-Windows-ActiveDirectory_DomainService or NTDS General | [Active Directory replication error 8456 or 8457](replication-error-8456-8457.md) |
 | 8524 | 1308 NTDS KCC<br/>1655 NTDS General<br/>1865 NTDS KCC<br/>1925 NTDS KCC<br/>1926 NTDS KCC<br/>2023 Microsoft-Windows-ActiveDirectory_DomainService<br/>2087 NTDS Replication<br/>2088 NTDS Replication | [Active Directory Replication Error 8524](replication-error-8524.md) |
 
@@ -217,7 +217,7 @@ If the replication events citing 8418 yielded any Extended or Internal errors us
 
 ### Level 3: Export object metadata
 
-If you can identify an object as the cause of the replication issue, dump the object replication metadata for that object. To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC.
+If you can identify an object or attribute as the cause of the replication issue, dump the object's replication metadata. To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC, as shown in the following examples:
 
 If you have the DN of the object that caused the issue, open an administrative Command Prompt window, and then run the following command:
 
@@ -234,14 +234,18 @@ If you have the GUID of the object or attribute that caused the issue, run the f
 > [!NOTE]  
 >
 > - In these commands, \<Target_DC> represents the DC whose data you're retrieving (the source DC or the destination DC).
+> - You can use <ObjectGuid_of_Trigger_Object> to represent the GUID of an object or of one of the object's attributes.
 > - If the issue occurred when you promoted a member computer to a DC, the destination DC is the computer that you tried to promote. It might not yet have the object.
 
-This method can be used to identify "candidate" attributes that could be the cause of failure.
+You can use this method to identify "candidate" attributes that might be causing the issue.
 
-If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
+If you only have an identifier for an object, dump all the attribute values of the object by running a set of commands that resembles the following example:
 
 ```console
-Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
+Ldifde -f results.txt -d "<DN_of Trigger_Object>" -s <Target_DC> 
+Ldifde -f results.txt -d "GUID=<ObjectGuid_of Trigger_Object>" -s <Target_DC>
+Repadmin /showattr <Target_DC> "<DN_of Trigger_Object>"
+Repadmin /showattr <Target_DC> "GUID=<ObjectGuid_of Trigger_Object>"
 ```
 
 ## Resolution 1: Following a schema update, issues persist
@@ -303,9 +307,27 @@ Restart the source DC.
 
 In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restarting the DC should resolve the issue.
 
-If the issue persists, 
+If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support) and contact Microsoft Support for assistance.
 
-## Resolution 2: Review object and attribute metadata
+## Resolution 2: Object and attribute issues
+
+
+### The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
+
+
+
+    NTDS SDPROP Event ID 1450, error 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built.
+    The security descriptor propagation task could not calculate a new security descriptor for the following object
+    This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.
+  (related: [Active Directory replication error 8304: "The maximum size on an object has been exceeded"](active-directory-replication-error-8304.md))
+
+
+If the size of the `nTSecurityDescriptor` is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
+
+[script xref]
+
+
+### Troubleshooting other object or attribute issues
 
 Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute name
 
@@ -319,7 +341,7 @@ USN   DSA Org                              USN Org. Time/Date  Version Attribute
 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime> 3
 ```
 
-If any of the metadata fields has no associated name, try using ldp.exe to expose the internal `attributeid`.
+If any of the metadata fields has no associated name, try using `ldp.exe` to expose the internal `attributeid`.
 
 The metadata for the same object above as displayed in LDP.exe shows the `AttributeID` associated with the data
 
@@ -341,11 +363,6 @@ Schema Review
 
 Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis is best performed with the assistance Microsoft Product Support.
 
-Export of entire schema partition from both source and destination domain controllers:
-
-```console
-Ldifde -f schema _TargetDC.ldf -d cn=schema,cn=configuration,dc=contoso,dc=com -s Target_DC
-```
 
 
 
@@ -359,37 +376,23 @@ Ldifde -f schema _TargetDC.ldf -d cn=schema,cn=configuration,dc=contoso,dc=com -
 
 
 
-#### Lingering object--8606
-
-[Active Directory Replication Error 8606: Insufficient attributes were given to create an object](replication-error-8606.md)
-  Context: DCDiag, Repadmin ADS&S 
-  Symptoms: error message, event
-    NTDS Replication Event ID 1988 (abandoned/lingering object): [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](active-directory-replication-event-id-1388-1988.md)
-
-
-#### ntSecuritydescriptor--1340 (Event ID 1450)
-
-    NTDS SDPROP Event ID 1450, error 1340 The inherited access control list (ACL) or access control entry (ACE) could not be built.
-    The security descriptor propagation task could not calculate a new security descriptor for the following object
-    This problem occurs because the Security Descriptor on the problem object has exceeded the maximum size of 65,535 bytes. This is an operating system limitation.
-  (related: [Active Directory replication error 8304: "The maximum size on an object has been exceeded"](active-directory-replication-error-8304.md))
-
-
-If the Size of the nTSecurityDescriptor is greater than 64KB, it can also generate this error.  You must manually check from the object reported in Event ID 1450 to see where ACEs have been applied from.  Below is sample code that you can use as en example of what you can write specifically for your organization.
-
-[script xref]
-
-
 
 ## Data to provide to Microsoft Support  
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+If you need assistance from Microsoft support, we recommend you collect information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
-Be prepared to provide the following information to Microsoft Support staff to assist in diagnosing the causes of the schema mismatch  
+Additionally, gather the following information to help Microsoft Support staff to assist in diagnosing the causes of the schema mismatch (much of this information was gathered in earlier sections of this article).
 
-- Export of schema partition from the source domain controller
 - DCpromo logs from destination DC (if appropriate for the scenario)
-- `Repadmin /showrepl` output from the source and destination domain controller
-- Directory Services Event logs with extended logging from the source and destination domain controller
-- Replication metadata of any problem object identified from the event logs
-- LDIFDE Export of any problem object identified from the event logs
+- `Repadmin /showrepl` output from the source DC and the destination DC
+- Directory Services event logs from the source and destination domain controller
+- Replication metadata of any problem object that the errors or events identified
+- Exported LDIFDE data of any problem object that the errors or events identified
+- Exported schema partition LDIFDE data from both the source DC and the destination DC. To export this information to a file, run the following command at a command prompt:
+
+  ```console
+  Ldifde -f schema <Target_DC>.ldf -d cn=schema,cn=configuration,dc=<Domain>,dc=com -s <Target_DC>
+  ```
+
+  > [!NOTE]  
+  > In this command, \<Target_DC> represents the name of the DC that holds the replica that you want to export, and \<Domain> is the name of the root domain to which the schema belongs.
