@@ -14,6 +14,8 @@ ms.date: 04/02/2025
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides details about the applicable processors for Microsoft Azure virtual machines (VMs) that meet the requirements for Windows 11 support. Many of the VM products that are offered in Azure are supported by more than one configuration of physical hardware. Therefore, the underlying hardware generations can vary. Older VM products (such as D\*v2 and D\*v3 series VMs) can be installed on hosts that run older CPUs (such as Intel Broadwell and Haswell) and don't support Windows 11.
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]

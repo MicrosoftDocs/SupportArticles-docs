@@ -12,6 +12,10 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides troubleshooting steps for an Azure virtual machine (VM) that cannot be accessed through Remote Desktop Protocol (RDP) and is stuck on the "Working on features" screen.
+
 ## Symptoms
 
 1. When you pull the screenshot of the VM, the screenshot shows the message:

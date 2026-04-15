@@ -12,9 +12,13 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides troubleshooting steps for when the Netlogon service is not starting on an Azure virtual machine (VM). When this happens, you won't be able to log in to the VM, and the screenshot of the VM will show that the operating system (OS) is fully loaded and waiting for credentials.
+
 ## Symptoms
 
-1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for the credentials:
+1. The VM screenshot shows the operating system (OS) fully loaded and waiting for the credentials:
 
    :::image type="content" source="media/azure-vm-netlogon-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for the credentials.":::
 

@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps you troubleshoot common boot errors that you may encounter when you start an Azure Windows virtual machine (VM).
 
 ## Troubleshooting steps for VM boot errors

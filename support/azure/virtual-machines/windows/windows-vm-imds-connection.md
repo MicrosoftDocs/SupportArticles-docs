@@ -10,7 +10,9 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Overview
+## Summary
+
+This article provides information about issues related to the Azure Instance Metadata Service (IMDS) connection in Azure virtual machines (VMs). It includes troubleshooting steps to diagnose and resolve connectivity problems between the VM and the IMDS endpoint, which is essential for obtaining activation tokens and other metadata information. The article also offers guidance on how to check the routing table and IP configuration to ensure proper communication with IMDS.
 
 > [!NOTE]
 > The new [Azure Instance Metadata Service Troubleshooting Tool](windows-vm-imds-tool.md) Run Command is now available to make diagnosing this scenario easier.

@@ -13,6 +13,10 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010131
 
+## Summary
+
+This article describes an issue where Azure VM doesn't start with error code 0xc0000605.
+
 ## Symptoms
 
 Windows doesn't start and generates the following error:

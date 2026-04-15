@@ -12,6 +12,8 @@ ms.custom: sap:Cannot create a VM
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 The following article discusses the reasons why you are not able to create Capacity Reservation.
 
 ## Reasons why Capacity Reservation can't be created
@@ -31,7 +33,7 @@ The following article discusses the reasons why you are not able to create Capac
 
    Creating capacity reservations requires quota in the same manner as it does for creating virtual machines. If you get insufficient quota error while creating capacity reservation, visit [Standard quota: Increase limits by VM series](/azure/azure-portal/supportability/per-vm-quota-requests) to request additional quota, or try a different combination of VM size/location/Qty.
 
-1. You don’t have access to create reservation.
+1. You don't have access to create reservation.
 
    Reservations are only available to paid Azure customers. Sponsored accounts such as *Free Trial* and *Azure for Students* aren't eligible to use this feature. To create a new paid Azure subscription, visit [Create an additional Azure subscription](/azure/cost-management-billing/manage/create-subscription).
 

@@ -19,6 +19,8 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes how to resolve the KMS activation problem that you might experience when you enable forced tunneling in site-to-site VPN connection or ExpressRoute scenarios.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
