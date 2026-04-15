@@ -36,7 +36,7 @@ Some Azure resources, such as managed disks attached to a VM, are marked as *hid
 
 **Cause 2: Insufficient RBAC permissions**
 
-If the account performing the move uses a custom role, it may lack the permissions needed to discover hidden resources. When Azure validates the move request, it cannot enumerate the hidden resources and treats the request as incomplete.
+If the account performing the move uses a custom role, it may lack the permissions needed to discover hidden resources. When Azure validates the move request, it can't enumerate the hidden resources and treats the request as incomplete.
 
 The minimum required permissions are:
 - **Source resource group:** `Microsoft.Resources/subscriptions/resourceGroups/moveResources/action`

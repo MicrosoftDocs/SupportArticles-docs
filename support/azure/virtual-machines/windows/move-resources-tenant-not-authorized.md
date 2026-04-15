@@ -28,7 +28,7 @@ The client has permission to perform action 'Microsoft.Compute/virtualMachines/w
 
 ## Cause
 
-This error occurs when the source and destination subscriptions belong to **different Azure AD tenants**. Moving resources between subscriptions that are in different tenants is not supported. The identity (service principal or user) performing the move must have access in the same tenant as both subscriptions.
+This error occurs when the source and destination subscriptions belong to **different Azure AD tenants**. Moving resources between subscriptions that are in different tenants isn't supported. The identity (service principal or user) performing the move must have access in the same tenant as both subscriptions.
 
 This error can affect moves of:
 - Virtual machines
@@ -44,7 +44,7 @@ If you control both subscriptions, transfer them to the same Azure AD tenant bef
 
 ### Option 2: Recreate the resource in the destination subscription
 
-If a cross-tenant move is required and the subscriptions cannot be consolidated, recreate the resource in the destination subscription:
+If a cross-tenant move is required and the subscriptions can't be consolidated, recreate the resource in the destination subscription:
 
 1. **For virtual machines:** Take a managed disk snapshot in the source subscription. Share the snapshot with the destination tenant using [cross-tenant shared access](/azure/virtual-machines/snapshot-copy-managed-disk). Create a new VM from the snapshot in the destination subscription.
 

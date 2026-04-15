@@ -35,7 +35,7 @@ Divide your resources into groups of fewer than 800 and run separate move operat
 
 ### Option 2: Snapshot and recreate
 
-If breaking the move into batches is not practical, take snapshots of the VM disks, move the snapshots to the destination subscription, and recreate the VMs.
+If breaking the move into batches isn't practical, take snapshots of the VM disks, move the snapshots to the destination subscription, and recreate the VMs.
 
 > [!NOTE]
 > Only **Full** snapshots can be moved between resource groups, subscriptions, or regions. **Incremental** snapshots are not supported for cross-subscription or cross-region moves. See [Move operation support for Microsoft.Compute resources](/azure/azure-resource-manager/management/move-support-resources#microsoftcompute).

@@ -58,7 +58,7 @@ This chain can extend to additional resource types depending on your configurati
 | Microsoft.Network | networkInterfaces, publicIPAddresses, networkSecurityGroups, virtualNetworks |
 | Microsoft.Storage | storageAccounts (if using unmanaged disks or boot diagnostics) |
 
-If any dependent resource is not included in the move request, the operation fails before it starts.
+If any dependent resource isn't included in the move request, the operation fails before it starts.
 
 ## Resolution
 
@@ -71,7 +71,7 @@ If any dependent resource is not included in the move request, the operation fai
 
 3. **Add all missing resources to your move request.** In the Azure portal, return to the **Move resources** blade, and add each missing resource to the selection before retrying.
 
-   If you are using PowerShell or Azure CLI, add the missing resource IDs to the `-ResourceId` parameter array.
+   If you're using PowerShell or Azure CLI, add the missing resource IDs to the `-ResourceId` parameter array.
 
    **Azure PowerShell example:**
    ```powershell

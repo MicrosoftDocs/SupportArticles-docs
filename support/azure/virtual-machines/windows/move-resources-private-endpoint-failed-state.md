@@ -32,7 +32,7 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-A private endpoint in the source or destination resource group — either directly included in the move, or referenced as a dependency — is not in `Succeeded` provisioning state. Azure blocks the move until all resources and their dependencies are in a healthy state.
+A private endpoint in the source or destination resource group — either directly included in the move, or referenced as a dependency — isn't in `Succeeded` provisioning state. Azure blocks the move until all resources and their dependencies are in a healthy state.
 
 Common reasons a private endpoint enters a `Failed` state:
 - A prior deployment or update operation failed partway through.
@@ -43,7 +43,7 @@ Common reasons a private endpoint enters a `Failed` state:
 
 ### Step 1: Identify the private endpoint
 
-The error message names the private endpoint that is not in `Succeeded` state. Note the resource group and endpoint name for the next steps.
+The error message names the private endpoint that's not in `Succeeded` state. Note the resource group and endpoint name for the next steps.
 
 ### Step 2: Check the private endpoint status
 
@@ -79,7 +79,7 @@ Once the private endpoint shows a provisioning state of `Succeeded`, retry the m
 
 ## Alternative: Remove the private endpoint from the move scope
 
-If the private endpoint is not essential to the resources being moved and you do not want to wait for remediation, you can remove it from the set of resources selected for the move, complete the move, and then recreate the private endpoint in the destination resource group afterward.
+If the private endpoint isn't essential to the resources being moved and you don't want to wait for remediation, you can remove it from the set of resources selected for the move, complete the move, and then recreate the private endpoint in the destination resource group afterward.
 
 > [!IMPORTANT]
 > Before removing a private endpoint from the move scope, verify that none of the resources you are moving have a hard dependency on it during the move process.

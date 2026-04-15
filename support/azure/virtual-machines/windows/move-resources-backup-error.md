@@ -27,7 +27,7 @@ The move resources request contains resources like /subscriptions/<subscription-
 
 Azure Backup creates **restore point collections** (instant recovery snapshots) that are associated with the VM. These restore point collections are stored in a separate resource group (by default named `AzureBackupRG_<region>_1`) and must be removed before the VM can be moved.
 
-Additionally, if **soft delete** is enabled for the backup vault, you cannot move the VM while soft-deleted restore points exist.
+Additionally, if **soft delete** is enabled for the backup vault, you can't move the VM while soft-deleted restore points exist.
 
 ## Resolution
 
@@ -38,7 +38,7 @@ Additionally, if **soft delete** is enabled for the backup vault, you cannot mov
 1. In the Azure portal, go to the **Recovery Services vault** and temporarily stop the backup for the VM, selecting **Retain backup data**.
 2. Find the resource group that contains the restore point collections. If you used the default naming, it follows the pattern `AzureBackupRG_<location>_1` (for example, `AzureBackupRG_westus2_1`). If you used a custom resource group, search for **Restore Point Collections** in the portal.
 3. Find the restore point collection named `AzureBackup_<vm-name>_##########`.
-4. Delete the restore point collection. This only removes the instant recovery points — it does not delete backed-up data in the vault.
+4. Delete the restore point collection. This only removes the instant recovery points — it doesn't delete backed-up data in the vault.
 5. After deletion completes, proceed with the move.
 
 **Azure CLI**

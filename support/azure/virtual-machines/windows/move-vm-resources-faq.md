@@ -49,7 +49,7 @@ Yes. The Azure resource move operation doesn't require stopping or deallocating 
 
 ### How long does a move operation take?
 
-Most moves complete within 30 minutes. Azure Resource Manager enforces a maximum of four hours. If the move does not complete within four hours, it times out and rolls back. See [Move operation times out after four hours](move-resources-4-hour-timeout.md).
+Most moves complete within 30 minutes. Azure Resource Manager enforces a maximum of four hours. If the move doesn't complete within four hours, it times out and rolls back. See [Move operation times out after four hours](move-resources-4-hour-timeout.md).
 
 ### Are there limits on how many resources I can move at once?
 
@@ -127,8 +127,8 @@ VM connectivity or boot issues after a move are typically unrelated to the move 
 
 ### Do I need to update anything after a successful move?
 
-- **Role assignments** are not moved. Reassign RBAC roles in the destination resource group.
-- **Resource locks** do not carry over. Reapply any locks you had on the source.
+- **Role assignments** aren't moved. Reassign RBAC roles in the destination resource group.
+- **Resource locks** don't carry over. Reapply any locks you had on the source.
 - **Managed identities** continue to work — system-assigned identities follow the resource automatically.
 
 ## Next steps

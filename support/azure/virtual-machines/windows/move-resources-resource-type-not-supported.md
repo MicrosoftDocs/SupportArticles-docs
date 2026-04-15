@@ -39,7 +39,7 @@ Some Azure resource types don't support being moved between resource groups or s
 
 ### Step 1: Identify the unsupported resource type
 
-The error message lists each resource type that cannot be moved. Note the resource provider and type (for example, `Microsoft.Network/publicIPAddresses`).
+The error message lists each resource type that can't be moved. Note the resource provider and type (for example, `Microsoft.Network/publicIPAddresses`).
 
 ### Step 2: Check the move support reference
 

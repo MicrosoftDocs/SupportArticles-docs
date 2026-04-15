@@ -37,7 +37,7 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource is not in a `Succeeded` state. This applies even when:
+When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource isn't in a `Succeeded` state. This applies even when:
 
 - The resource isn't one of the resources you're moving.
 - The resource isn't in the source or destination resource group.

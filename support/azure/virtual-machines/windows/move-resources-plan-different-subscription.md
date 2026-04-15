@@ -32,7 +32,7 @@ When you try to move a virtual machine to a different subscription, the operatio
 
 ## Cause
 
-Virtual machines created from Azure Marketplace images that include a **plan** (a billing agreement specific to a subscription) cannot be moved directly across subscriptions. The plan is tied to the originating subscription.
+Virtual machines created from Azure Marketplace images that include a **plan** (a billing agreement specific to a subscription) can't be moved directly across subscriptions. The plan is tied to the originating subscription.
 
 ## Resolution
 

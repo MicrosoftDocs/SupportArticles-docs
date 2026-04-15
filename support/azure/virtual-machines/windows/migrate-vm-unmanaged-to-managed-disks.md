@@ -22,12 +22,12 @@ This article describes how to convert a virtual machine's unmanaged disks to Azu
 
 Review the following important considerations before converting:
 
-- **The conversion is not reversible.** Once disks are converted to managed disks, they cannot be converted back to unmanaged.
+- **The conversion isn't reversible.** Once disks are converted to managed disks, they can't be converted back to unmanaged.
 - **Test before production.** Migrate a test virtual machine before converting production workloads.
 - **The VM will restart.** The VM is deallocated during the conversion and receives a new IP address when restarted (unless a static IP is configured).
 - **Agent version requirements.** Verify that the Azure VM agent is at the minimum supported version. See [Minimum version support for VM agents in Azure](/azure/virtual-machines/extensions/agent-windows).
 - **Extensions must be in a succeeded state.** All VM extensions must be in the `Provisioning succeeded` state before conversion, or the conversion fails with error code 409.
-- **Original VHDs are not deleted.** The original VHD blobs and the storage account used by the VM before migration are not deleted automatically. They continue to incur charges until you manually delete them after verifying the migration.
+- **Original VHDs aren't deleted.** The original VHD blobs and the storage account used by the VM before migration aren't deleted automatically. They continue to incur charges until you manually delete them after verifying the migration.
 - **Virtual Machine Contributor role.** After conversion, users with the Virtual Machine Contributor role require the `Microsoft.Compute/disks/write` permission to change the VM size, which they may not have had before.
 
 ## Convert using the Azure portal

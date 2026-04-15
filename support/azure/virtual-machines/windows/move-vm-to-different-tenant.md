@@ -18,13 +18,13 @@ ms.custom: sap:Cannot create a VM
 
 ## Overview
 
-Moving Azure resources to a subscription in a **different Azure Active Directory tenant** is not directly supported by the Azure Resource Manager move operation. The source and destination subscriptions must be in the same tenant for a standard resource move to succeed.
+Moving Azure resources to a subscription in a **different Azure Active Directory tenant** isn't directly supported by the Azure Resource Manager move operation. The source and destination subscriptions must be in the same tenant for a standard resource move to succeed.
 
 This article describes two workarounds for customers who need to move virtual machine resources across tenant boundaries.
 
 ## Why direct cross-tenant move is not supported
 
-The Azure Resource Manager move API validates that both the source and destination subscriptions belong to the same Azure AD tenant. If they do not, the move validation fails. This is a platform constraint, not a configuration issue.
+The Azure Resource Manager move API validates that both the source and destination subscriptions belong to the same Azure AD tenant. If they don't, the move validation fails. This is a platform constraint, not a configuration issue.
 
 ## Workaround 1: Move the subscription to the destination tenant
 
