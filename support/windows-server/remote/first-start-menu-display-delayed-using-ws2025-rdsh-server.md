@@ -50,7 +50,7 @@ To change the entry, follow these steps.
    - Type: REG\_DWORD
    - Value data: `1`
 
-   > [!NOTE]  
-   > `PrelaunchOverride` has the following possible values:
-    - `0`: Use the new default behavior. Don't start StartMenuExperienceHost.exe, SearchHost.exe, or similar processes until the user selects **Start**.
-    - `1`: Use the previous behavior. StartMenuExperienceHost.exe SearchHost.exe, and similar processes start as soon as a user signs in.
+     > [!NOTE]  
+     > `PrelaunchOverride` has the following possible values:
+     > - `0`: Use the new default behavior. Don't start StartMenuExperienceHost.exe, SearchHost.exe, or similar processes until the user selects **Start**.
+     > - `1`: Use the previous behavior. StartMenuExperienceHost.exe SearchHost.exe, and similar processes start as soon as a user signs in.
