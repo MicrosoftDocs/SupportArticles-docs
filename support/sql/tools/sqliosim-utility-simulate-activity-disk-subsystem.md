@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: rdorr, bobward, jopilov, v-shaywood
 ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
-# Use the SQLIOSim tool to simulate SQL Server activity on a disk subsystem
+# Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 231619
