@@ -90,7 +90,7 @@ You observe one or more of the following symptoms:
   --------------------------- OK ---------------------------
   ```
 
-- You use one of the following RepAdmin commands (`repadmin.exe`), and you see messages that resemble the following examples:
+- You use one of the following Repadmin commands (`repadmin.exe`), and you see messages that resemble the following examples:
 
   | Command | Message |
   | - | - |
@@ -100,35 +100,35 @@ You observe one or more of the following symptoms:
 
 ## Cause
 
-Replication of any Active Directory data between DCs in a forest depends on all DC's having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes the Schema partition so that any change to a schema definition replicates before any data that uses the schema definition can replicate.
+Replication of any Active Directory data between DCs in a forest depends on all DCs having a consistent view of the definitions of objects and attributes. These definitions are stored in the Schema partition of the Active Directory database. The directory replication engine prioritizes the Schema partition so that any change to a schema definition replicates before any data that uses the schema definition can replicate.
 
 Schema mismatches can occur under the following circumstances:
 
 - DCs replicate the schema partition, and the source DC has different schema information than the destination DC.
-- DCs replicate a non-schema partition, and the data on the source DC uses a different schema than the data on the destination DC.
+- DCs replicate a nonschema partition, and the data on the source DC uses a different schema than the data on the destination DC.
 
  In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred. Such scenarios include:
 
 - The issue occurred after the Active Directory schema was updated. In many cases, this issue is transient and resolves itself.
 
   > [!IMPORTANT]  
-  > Lab testing of schema modification is critical prior to implementing any proposed action plan into your production schema.
+  > Test any schema update thoroughly before you introduce it to your production environment.
 
 - The issue occurred when you tried to promote a member server to a domain controller (DC). The promotion operation failed.
-- The issue occurred during normal replication. Typically, this means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
+- The issue occurred during normal replication. Typically, this behavior means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
   - A DC is quarantined, or might have lingering objects
-  - Communication has stopped because of a DNS or RPC issue
-  - A DC has stopped replicating for other reasons
+  - Communication stopped because of a DNS or RPC issue
+  - A DC stopped replicating for other reasons
   - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
 
-A less common scenario is one in which the schema partition on one or more DCs has improper attribute definitions. Possible schema definition issues that can trigger mismatch include:  
+A less common scenario is one in which the schema partition on one or more DCs has improper attribute definitions. Possible schema definition issues that can trigger a schema mismatch error include the following issues:  
 
-- OID Clash
-- Invalid OM Syntax values
-- Invalid MayContain values
-- Objects with attributes that contain data but the schema definition for the attribute type(s) has been marked as defunct
+- OID clash
+- Invalid OM syntax values
+- Invalid `MayContain` values
+- Object attributes that contain data but whose schema definition is marked as defunct
 
-For issues where schema replication fails due to improper attribute schema definitions, please engage Microsoft Customer Service and Support to work through the issue.  
+For issues where schema replication fails because of improper attribute schema definitions, contact Microsoft Support for assistance.  
 
 ### Transient issues versus persistent issues
 
@@ -222,13 +222,13 @@ For additional common error codes, see [Troubleshoot common Active Directory rep
 
 If you can isolate object or attribute identifiers from the error or event information, continue to the next section to collect object and attribute metadata.
 
-If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
+If the replication events that cite error code 8418 contain any Extended or Internal errors, use compare those values to known issues.
 
 ### Level 3: Export and review object and attribute metadata
 
 If the events or error codes identify a particular object (or set of objects) or a particular object attribute as the trigger of the replication issue, the object or attribute metadata might provide more information about the issue.
 
-Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue has occurred.
+Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue occurred.
 
 Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance.
 
