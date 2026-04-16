@@ -20,7 +20,7 @@ When you try to [configure the WhatsApp channel](/dynamics365/customer-service/a
 
 ## Cause
 
-This issue occurs when certain required Omnichannel-related plugins are disabled.
+This issue occurs when certain required omnichannel-related process is disabled.
 
 ## Resolution
 
