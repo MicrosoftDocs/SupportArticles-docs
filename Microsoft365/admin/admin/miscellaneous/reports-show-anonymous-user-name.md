@@ -12,7 +12,7 @@ ms.custom:
 ms.author: meerak
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 04/16/2026
 ---
 
 # Microsoft 365 reports show anonymous user names instead of actual user names
