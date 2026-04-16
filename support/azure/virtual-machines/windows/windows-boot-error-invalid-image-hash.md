@@ -19,6 +19,8 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where a preview image was used and the trial period has expired, which prevents the booting of an Azure Virtual Machine (VM).
 
 ## Symptom
@@ -64,7 +66,7 @@ You are not able to extend the expiration date of a preview image. Once the prev
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-If your image is a preview image, there is no way to extend the expiration date for the image used, you will need to [deploy a new VM](/azure/virtual-machines/windows/quick-create-portal) using a non-preview image. The steps below will assist you in identifying if you have used a preview image, as well as provide resources to assist you in transferring data from this VM into a new VM. If you have positively identified the image as a preview image, the image isn’t recoverable, as it is now expired.
+If your image is a preview image, there is no way to extend the expiration date for the image used, you will need to [deploy a new VM](/azure/virtual-machines/windows/quick-create-portal) using a non-preview image. The steps below will assist you in identifying if you have used a preview image, as well as provide resources to assist you in transferring data from this VM into a new VM. If you have positively identified the image as a preview image, the image isn't recoverable, as it is now expired.
 
 Depending upon your preference, you can use either Azure PowerShell or Azure CLI to query your image to determine if it is a preview image. You can use these commands to confirm that the image is a preview image.
 
@@ -84,7 +86,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
    Get-AzVMImage -Location $locName -PublisherName $pubName -Offer $offerName -Skus $skuName | Select Version
    ```
 
-- In the previous commands, replace `<LOCATION>`, `<PUBLISHER NAME>`, `<OFFER NAME>`, and `<YEAR WHEN THIS IMAGE WAS RELEASED>` with the information stated. Also remove the “<” and “>” symbols.
+- In the previous commands, replace `<LOCATION>`, `<PUBLISHER NAME>`, `<OFFER NAME>`, and `<YEAR WHEN THIS IMAGE WAS RELEASED>` with the information stated. Also remove the "<" and ">" symbols.
 
   See the following example:
 
@@ -101,7 +103,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
 
 ### Query using the Azure CLI
 
-1. If you haven’t already, you will need to [install the Azure CLI](/cli/azure/install-azure-cli).
+1. If you haven't already, you will need to [install the Azure CLI](/cli/azure/install-azure-cli).
 1. Once downloaded, use either Command Prompt or PowerShell to enter the `az login` command and then sign in with your account credentials.
 1. Once logged in, enter the following commands:
 
@@ -112,7 +114,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
    az vm image list  --location "West US" --publisher "<PUBLISHER NAME>" --offer "<OFFER NAME>" --sku "<YEAR WHEN THIS IMAGE WAS RELEASED>"
    ```
 
-- In the previous commands, replace `<LOCATION>`, `<PUBLISHER NAME>`, `<OFFER NAME>`, and `<YEAR WHEN THIS IMAGE WAS RELEASED>` with the information stated. Also remove the “<” and “>” symbols.
+- In the previous commands, replace `<LOCATION>`, `<PUBLISHER NAME>`, `<OFFER NAME>`, and `<YEAR WHEN THIS IMAGE WAS RELEASED>` with the information stated. Also remove the "<" and ">" symbols.
 
   See the following example:
 

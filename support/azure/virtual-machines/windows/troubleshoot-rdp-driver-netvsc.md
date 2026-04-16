@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article explains how to troubleshoot an issue in which there is no network connection when you connect to a Windows 10 or Windows Server 2016 Datacenter virtual machine (VM) on a Hyper-V Server 2016 host.
 
 ## Symptoms

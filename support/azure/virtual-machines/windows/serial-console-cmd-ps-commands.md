@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides example commands to perform common tasks in scenarios in which you have to use the Special Administration Console (SAC) to access your Windows virtual machine (VM). For example, you might have to use SAC to troubleshoot RDP connection failures.
 
 SAC is included in all versions of Windows since Windows Server 2003. By default, however, it's disabled. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).

@@ -19,7 +19,11 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual machine (VM) can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues.
+## Summary
+
+This article provides troubleshooting steps to help resolve issues that occur when you cannot connect to your Windows virtual machine (VM) in Azure using Remote Desktop Protocol (RDP).
+
+The Remote Desktop Protocol (RDP) connection to your Windows-based Azure VM can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues.
 
 <a id="quickfixrdp"></a>
 

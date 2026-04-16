@@ -13,6 +13,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4018140
 
+## Summary
+
 This article provides information to an issue in which computer names of virtual machines that use specialized disks are missing or blank in Azure.
 
 ## Symptoms

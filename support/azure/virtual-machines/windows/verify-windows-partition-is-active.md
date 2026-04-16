@@ -10,6 +10,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article shows how to verify that the Windows partition is active.
 
 ## Verify that the Windows partition is active

@@ -22,7 +22,11 @@ ms.custom: sap:Cannot connect to my VM
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
-The Serial Console in the Azure portal provides access to a text-based console for Windows virtual machines (VMs) and virtual machine scale set instances. This serial connection connects to the COM1 serial port of the VM or virtual machine scale set instance, providing access to it independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
+## Summary
+
+This article provides an overview of using the Azure Serial Console with Windows virtual machines (VMs) and virtual machine scale set instances. It includes instructions for enabling the serial console on Windows VMs, using the serial console to access a command prompt or PowerShell instance, and using the serial console for non-maskable interrupt (NMI) calls.
+
+The Serial Console in the Azure portal provides access to a text-based console for Windows VMs and virtual machine scale set instances. This serial connection connects to the COM1 serial port of the VM or virtual machine scale set instance, providing access to it independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 

@@ -13,6 +13,10 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4010166
 
+## Summary
+
+This article provides answers to frequently asked questions about Windows Server 2003 End of Support (EOS) in the context of Microsoft Azure virtual machines (VMs). It covers topics such as support status, migration options, and implications for running Windows Server 2003 on Azure after the EOS date.
+
 ## Microsoft Windows Server 2003 End of Support (EOS)
 
 Microsoft ended extended support for Windows Server 2003 on July 14, 2015. If you are running Windows Server 2003, this may put your applications and business at risk, since there may be no security or software updates. You can still move a Windows Server 2003 VM to Azure and receive assistance in troubleshooting issues that concern running Windows Server 2003 on Azure. However, this support is limited to issues that don't require OS-level troubleshooting or patch.

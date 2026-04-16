@@ -16,6 +16,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues in which the guest operating system (guest OS) encounters a problem and tries to restart your Azure virtual machine (VM). Additionally, you receive the following error message:
 
 > A system thread exception wasn't handled.
