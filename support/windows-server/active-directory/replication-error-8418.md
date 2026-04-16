@@ -210,7 +210,7 @@ The following table lists examples of error codes that indicate issues that prev
 | Error code | Event ID and source, if appropriate | More information |
 | - | - |
 | | 1203 Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication | |
-| 1340 | 1450 NTDS SDProp | [Inherited access ACL or ACE couldn't be built](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) |
+| 1340 | 1450 NTDS SDProp | [Inherited access ACL or ACE couldn't be built](#resolution-2-the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) |
 | 1722 | | [Active Directory replication error 1722](replication-error-1722-rpc-server-unavailable.md) |
 | 1753 | | [Active Directory Replication Error 1753](replication-error-1753.md) |
 | 8614 | 1925 NTDS KCC<br/>2042 NDTS Replication | [Troubleshoot Active Directory replication error 8614](replication-error-8614.md)<br/>[Active Directory replication Event ID 2042](active-directory-replication-event-id-2042.md) |
@@ -228,7 +228,7 @@ If the replication events that cite error code 8418 contain any Extended or Inte
 
 If the events or error codes identify a particular object (or set of objects) or a particular object attribute as the trigger of the replication issue, the object or attribute metadata might provide more information about the issue.
 
-Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue occurred.
+Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#resolution-2-the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue occurred.
 
 Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance.
 
