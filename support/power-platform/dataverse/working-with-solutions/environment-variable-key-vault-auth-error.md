@@ -10,7 +10,7 @@ ms.custom: sap:Working with Solutions
 
 ## Summary
 
-This article helps you resolve the "User is not authorized to read secrets" error that occurs when you create, update, or import environment variables that reference [Azure Key Vault](/azure/key-vault/general/overview) secrets in [Microsoft Dataverse](/power-apps/maker/data-platform/) and Power Platform. This error indicates that Power Platform can't access the specified Key Vault secret. Common causes include missing role assignments, incorrect access control settings, and network restrictions.
+This article helps you resolve the "User is not authorized to read secrets" error that occurs when you create, update, or import environment variables that reference [Azure Key Vault](/azure/key-vault/general/overview) secrets in [Microsoft Dataverse](/power-apps/maker/data-platform/) and Power Platform. This error indicates that Power Platform can't access the specified Key Vault secret. Common causes include missing role assignments, incorrect access control settings, and network restrictions. To fix this issue, go through each section in this article to check and verify your settings and configurations.
 
 This article applies to Dataverse and Power Platform solutions. For Azure Key Vault errors that are related to _Wrap for Power Apps_, see [Azure Key Vault errors in Wrap for Power Apps](/troubleshoot/power-platform/power-apps/manage-apps/azure-key-vault-errors).
 
