@@ -4,13 +4,13 @@ description: Learn how to resolve Windows Update errors that require in-place up
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-virtual-machines
-ms.date: 08/08/2025
+ms.date: 04/16/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: scotro, jdickson, v-liuamson, v-gsitser
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Update and OS Upgrades
 - pcy:WinComm Devices Deploy
 ---
 
