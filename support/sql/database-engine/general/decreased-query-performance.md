@@ -14,9 +14,6 @@ In Microsoft SQL Server, query performance might suddenly decrease after you per
 
 When the plan cache is cleared, all subsequent queries must recompile. The spike in recompilations temporarily increases CPU usage and reduces query throughput until the plan cache is repopulated. This article describes the operations that cause plan cache clearing, how to identify when the problem occurs, and which Performance Monitor counters and SQL Profiler events to monitor.
 
-> [!NOTE]
-> This automatic procedure cache clearing behavior doesn't occur in SQL Server 2008 and later versions for most scenarios.
-
 ## Symptoms
 
 You notice a sudden decrease in query performance. The SQL Server error log contains messages that resemble the following example:
@@ -38,9 +35,9 @@ SQL Server has encountered <N> occurrence(s) of cachestore flush for the 'Bound 
 
 This behavior is by design. Certain database maintenance or reconfigure operations clear the entire procedure cache. All subsequent queries must then generate new execution plans. This action temporarily increases CPU usage and decreases query performance until the cache is repopulated.
 
-### Database-level operations that clear the plan cache
+### Operations that clear the plan cache
 
-The entire plan cache is cleared when you perform any of the following database-level operations:
+The system clears the entire plan cache when you perform any of the following database-level operations:
 
 - Set the [AUTO_CLOSE](/sql/t-sql/statements/alter-database-transact-sql-set-options#auto_close--on--off-) database option to `ON`. If no user connection references or uses the database, the background task tries to close and shut down the database automatically.
 
@@ -56,41 +53,39 @@ The entire plan cache is cleared when you perform any of the following database-
 
 - Change the database state to `OFFLINE` or `ONLINE`.
 
-- Specify one of the following options in an [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options#set-options) statement:
+- Specify certain options in an [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options#set-options) statement or change server options by using the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) and `RECONFIGURE` statements, as listed in the following table:
 
-  - `OFFLINE`
-  - `ONLINE`
-  - `MODIFY_NAME`
-  - `COLLATE`
-  - `MODIFY FILEGROUP DEFAULT`
-  - `MODIFY FILEGROUP READ_WRITE`
-  - `MODIFY FILEGROUP READ_ONLY`
-  - `READ_ONLY`
-  - `READ_WRITE`
-
-### Server-level options that clear the plan cache
-
-If you change any of the following server options by using the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) and `RECONFIGURE` statements, you clear the entire procedure cache:
-
-- `access check cache bucket count`
-- `access check cache quota`
-- `clr enabled`
-- `cost threshold for parallelism`
-- `cross db ownership chaining`
-- `index create memory`
-- `max degree of parallelism`
-- `max server memory`
-- `max text repl size`
-- `max worker threads`
-- `min memory per query`
-- `min server memory`
-- `query governor cost limit`
-- `query wait`
-- `remote query timeout`
-- `user options`
+  | Command          | Option                            |
+  | ---------------- | --------------------------------- |
+  | `ALTER DATABASE` | `COLLATE`                         |
+  | `ALTER DATABASE` | `MODIFY FILEGROUP DEFAULT`        |
+  | `ALTER DATABASE` | `MODIFY FILEGROUP READ_ONLY`      |
+  | `ALTER DATABASE` | `MODIFY FILEGROUP READ_WRITE`     |
+  | `ALTER DATABASE` | `MODIFY_NAME`                     |
+  | `ALTER DATABASE` | `OFFLINE`                         |
+  | `ALTER DATABASE` | `ONLINE`                          |
+  | `ALTER DATABASE` | `PAGE_VERIFY`                     |
+  | `ALTER DATABASE` | `READ_ONLY`                       |
+  | `ALTER DATABASE` | `READ_WRITE`                      |
+  | `sp_configure`   | `access check cache bucket count` |
+  | `sp_configure`   | `access check cache quota`        |
+  | `sp_configure`   | `clr enabled`                     |
+  | `sp_configure`   | `cost threshold for parallelism`  |
+  | `sp_configure`   | `cross db ownership chaining`     |
+  | `sp_configure`   | `index create memory`             |
+  | `sp_configure`   | `max degree of parallelism`       |
+  | `sp_configure`   | `max server memory`               |
+  | `sp_configure`   | `max text repl size`              |
+  | `sp_configure`   | `max worker threads`              |
+  | `sp_configure`   | `min memory per query`            |
+  | `sp_configure`   | `min server memory`               |
+  | `sp_configure`   | `query governor cost limit`       |
+  | `sp_configure`   | `query wait`                      |
+  | `sp_configure`   | `remote query timeout`            |
+  | `sp_configure`   | `user options`                    |
 
 > [!NOTE]
-> The procedure cache isn't cleared if the actual value doesn't change or if you set the new value for `max server memory` to `0`.
+> The system doesn't clear the procedure cache if the actual value doesn't change or if you set the new value for `max server memory` to `0`.
 
 ## Solution
 
@@ -121,13 +116,14 @@ To identify the problem, monitor the following SQL Server performance counters:
 > [!NOTE]
 > For a named instance of SQL Server, the performance object is named `MSSQL$<InstanceName>:Plan Cache` and `MSSQL$<InstanceName>:SQL Statistics`.
 
-#### Check a SQL Profiler trace
+#### Check Extended Events trace
 
-If you capture a SQL Profiler trace by using the `SP:CacheRemove` event, this event is generated together with the following `TextData` column value when the plan cache is cleared:
+If you capture an Extended Events (XEvent) trace, enable the following events to check for cache removal:
 
-```output
-Entire Procedure Cache Flushed
-```
+- `sqlserver.sp_cache_remove`
+- `sqlserver.query_cache_removal_statistics` (query level)
+
+Examine the `removal_reason` and `remove_method` columns to identify the cause.
 
 ### Best practices to minimize performance impact
 
