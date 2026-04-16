@@ -47,4 +47,4 @@ To fix this issue, change the following setting in the Microsoft 365 admin cente
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 1. Go to **Settings** > **Org Settings** > **Services**.
 1. Select **Reports**.  
-1. Clear **Display concealed user, group, and site names in all reports**, and then select **Save**. 
+1. Clear **Conceal user, group, and site names in all reports**, and then select **Save**. 
