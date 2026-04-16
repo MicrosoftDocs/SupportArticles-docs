@@ -12,6 +12,10 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 
+## Summary
+
+This article provides solutions to Azure Windows virtual machine (VM) deployment top issues. If you encounter any of the following errors when deploying a Windows VM, use the corresponding solution to resolve the issue.
+
 ## The cluster cannot support the requested VM size
 
 Retry the request using a smaller VM size. If the size of the requested VM cannot be changed, follow these steps:

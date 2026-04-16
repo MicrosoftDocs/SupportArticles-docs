@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues in which the operating system (OS) encounters Stop error code 0xC000021A. This error prevents an Azure virtual machine (VM) from restarting.
 
 ## Symptoms

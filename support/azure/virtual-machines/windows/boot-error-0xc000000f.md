@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010130
 
+## Summary
+
 This article provides solutions to an issue where Windows VM doesn't start and generates errors.
 
 ## Symptom

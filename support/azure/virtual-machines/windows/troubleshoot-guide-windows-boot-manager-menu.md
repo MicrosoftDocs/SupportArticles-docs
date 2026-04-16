@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where Windows Boot Manager prevents the booting of an Azure Virtual Machine (VM).
 
 ## Symptom

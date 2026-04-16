@@ -21,7 +21,9 @@ ms.author: jarrettr
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-Grand Unified Bootloader (GRUB) operates at an early stage in a Linux virtual machine (VM) boot process. It operates before the Linux kernel is loaded and before any system services (such as networking or SSH) are started, so GRUB isn't accessible via SSH. You must use the Serial Console to access GRUB. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
+## Summary
+
+This article describes how to use the Azure Serial Console to access GRUB and single-user mode in Linux virtual machines (VMs). GRUB operates at an early stage in the VM boot process, before the Linux kernel is loaded and before any system services (such as networking or SSH) are started. Therefore, GRUB isn't accessible via SSH, and you must use the Serial Console to access it. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
 
 Single-user mode is a minimal environment with minimal functionality. It can be useful for investigating boot issues, file system issues, or network issues. Fewer services can run in the background and, depending on the runlevel, a file system might not even be automatically mounted.
 

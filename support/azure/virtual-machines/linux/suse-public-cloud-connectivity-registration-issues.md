@@ -15,6 +15,8 @@ keywords:
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses an issue in which a Microsoft Azure Virtual Machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios (such as failures in the Zypper command-line tool for managing packages in SUSE). Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
 It's important to read the output of each command for more clues. We recommend that you save the results and messages for further troubleshooting.

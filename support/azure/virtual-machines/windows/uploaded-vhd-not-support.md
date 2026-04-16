@@ -12,6 +12,8 @@ ms.custom: sap:Cannot create a VM
 
 _Original KB number:_ &nbsp; 4053292
 
+## Summary
+
 This article provides a solution to an issue in which you can't create a virtual machine using an uploaded VHD.
 
 ## Symptoms

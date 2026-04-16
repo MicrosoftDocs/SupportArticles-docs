@@ -21,6 +21,10 @@ ms.author: jarrettr
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
+## Summary
+
+This article shows how to proactively configure GRUB and the Azure Serial Console to ensure you have access to recovery options for your Linux Virtual Machine (VM) in Azure.
+
 Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 
 The reasons to perform a VM recovery are many and can be attributed to scenarios such as:

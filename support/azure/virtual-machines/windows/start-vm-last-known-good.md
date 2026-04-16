@@ -13,6 +13,8 @@ ms.custom: sap:Cannot start or stop my VM
 
 _Original KB number:_ &nbsp; 4016731
 
+## Summary
+
 If you've recently installed new software or changed some Windows settings, and your Azure Windows virtual machine (VM) stops booting correctly, you might have to start the VM by using the Last Known Good Configuration for troubleshooting. This article describes how to do this.
 
 ## Step 1: Attach the OS disk of the VM to another (troubleshooter) VM as a data disk

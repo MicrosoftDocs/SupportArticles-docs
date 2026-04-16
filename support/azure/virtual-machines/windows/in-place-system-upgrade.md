@@ -14,6 +14,8 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 _Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997
 
+## Summary
+
 This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
 
 > [!NOTE]  
