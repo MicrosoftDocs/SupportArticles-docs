@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows virtual machines (DRIVER_IRQL_NOT_LESS_OR_EQUAL)
-description: Learn how to troubleshoot Azure Windows virtual machine (VM) crashes caused by an outdated Mellanox mlx5 driver that triggers bug check 0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL).
+description: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs causing DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1), and restore VM stability now.
 ms.service: azure-virtual-machines
 ms.date: 03/26/2026
 ms.custom: sap:My VM is not booting
@@ -85,7 +85,7 @@ Use the **Azure VM - Windows Mellanox Driver Validation** script to run all chec
 
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 
-For instructions on running the tool, see [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-driver-validation-tool.md).
+For instructions on running the tool, see [Azure VM Mellanox Driver Validation Tool](./windows-vm-mellanox-network-driver-validation-tool.md).
 
 ## Resolution
 
@@ -128,7 +128,7 @@ After you update the driver and restart the VM, run the validation script again 
 
 ## Additional resources
 
-- [Azure VM Mellanox Driver Validation Tool](./windows-virtual-machine-mellanox-driver-validation-tool.md)
+- [Azure VM Mellanox Driver Validation Tool](./windows-vm-mellanox-network-driver-validation-tool.md)
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
 - [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 - [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command)
