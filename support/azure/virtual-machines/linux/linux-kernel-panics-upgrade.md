@@ -15,6 +15,8 @@ _Original KB number:_ &nbsp; 3212236
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article  discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure.
 
 ## Symptoms

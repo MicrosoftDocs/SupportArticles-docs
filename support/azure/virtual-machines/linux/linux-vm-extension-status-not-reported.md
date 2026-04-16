@@ -15,6 +15,8 @@ _Original KB number:_ &nbsp; 4077547
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
+## Summary
+
 This article provides a solution to a problem in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
 
 ## Symptoms

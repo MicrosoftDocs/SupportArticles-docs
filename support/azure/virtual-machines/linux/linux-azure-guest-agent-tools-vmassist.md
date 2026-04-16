@@ -9,11 +9,11 @@ ms.reviewer: v-jsitser, scotro, v-ryanberg
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly
 ---
-#  Troubleshooting Tool for Linux Guest Agent - VM assist
+# Troubleshooting Tool for Linux Guest Agent - VM assist
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-## Overview
+## Summary
 
 The Microsoft Azure Linux VM Agent is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure fabric controller. The Azure Linux VM Agent has a primary role in enabling and running Azure VM extensions. VM extensions enable post-deployment configuration of VMs, such as installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure Linux VM Agent, you can't run VM extensions.
 

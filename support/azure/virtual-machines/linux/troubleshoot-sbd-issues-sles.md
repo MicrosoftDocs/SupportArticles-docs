@@ -15,6 +15,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article outlines common scenarios where the STONITH Block Device (SBD) service doesn't start in a SUSE Enterprise Linux Pacemaker cluster. This article also provides guidance for identifying and resolving this issue.
 
 ## How SBD works
@@ -174,7 +176,7 @@ SBD_WATCHDOG_TIMEOUT=5
 SBD_TIMEOUT_ACTION=flush,reboot
 SBD_MOVE_TO_ROOT_CGROUP=auto
 SBD_OPTS=
-SBD_DEVICE="/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx”
+SBD_DEVICE="/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx"
 ```
 
 ### Resolution 2

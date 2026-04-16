@@ -11,6 +11,8 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article outlines common scenarios where the STONITH Block Device (SBD) service fails to start in a Red Hat Enterprise Server (RHEL) Pacemaker cluster and provides guidance for identifying and resolving this issue.
 
 ## How SBD works
@@ -234,7 +236,7 @@ The SBD service fails to start due to the following issues:
     SBD_TIMEOUT_ACTION=flush,reboot
     SBD_MOVE_TO_ROOT_CGROUP=auto
     SBD_OPTS=
-    SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d77;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb”
+    SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d77;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
     ```
 
 ## Scenario 3: iSCSI devices aren't available on cluster nodes

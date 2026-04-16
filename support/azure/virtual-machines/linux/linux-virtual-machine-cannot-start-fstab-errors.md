@@ -24,6 +24,8 @@ ms.date: 07/08/2025
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 The Linux filesystem table, fstab, is a configuration table that is designed to configure rules where specific file systems are detected and mounted in an orderly manner during the system boot process. 
 
 This article discusses multiple conditions where a wrong fstab configuration can lead to boot issues and provides troubleshooting guidance.

@@ -16,6 +16,8 @@ ms.author: Gabsta
 # Removing extensions from VMs created from NetApp CVO images
 **Applies to:** :heavy_check_mark: NetApp CVO Linux VMs
 
+## Summary
+
 This article discusses how to remove extensions that are installed on Microsoft Azure virtual machines (VMs) that are created from NetApp Cloud Volumes ONTAP (CVO) images. This article also discusses how to prevent extensions from being installed.
 
 ## Prerequisites

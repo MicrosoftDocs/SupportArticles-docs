@@ -15,6 +15,8 @@ ms.custom: sap:Issue with Pacemaker cluster, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article provides guidance for troubleshooting, analysis, and resolution of the most common scenarios for unexpected node restarts in SUSE Pacemaker Clusters.
 
 ## Prerequisites
@@ -84,7 +86,7 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
 
 - Corosync configuration issues:
     - Non-optimized network settings: Incorrect multicast/unicast configurations can cause heartbeat communication failures. Mismatched `ring0` and `ring1` network configurations can cause split-brain scenarios and node fencing.
-    - Token time-out mismatches: Token time-out values that aren't aligned with the environment’s latency can trigger node isolation and restarts.
+    - Token time-out mismatches: Token time-out values that aren't aligned with the environment's latency can trigger node isolation and restarts.
     - To review a Corosync configuration, run the following command:
       ```bash
       sudo cat /etc/corosync/corosync.conf
