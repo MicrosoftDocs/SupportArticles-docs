@@ -16,6 +16,8 @@ ms.topic: troubleshooting
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot after disabling the virtual file allocation table (VFAT) file system type.
 
 VFAT is required in the following scenarios:
@@ -173,7 +175,7 @@ When a VM with the OS encrypted and VFAT disabled fails to boot, the correspondi
 
 - In some old systems, you may see the following error in the Azure serial console:
 
-    > unknown file system type ‘vfat’ error.
+    > unknown file system type 'vfat' error.
 
 All the VMs with this issue will end up stuck at dracut/initramfs and show up at the end of the serial console log:
 

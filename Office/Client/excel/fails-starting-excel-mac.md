@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 10891
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
   - Excel for Mac
 ms.date: 03/31/2026

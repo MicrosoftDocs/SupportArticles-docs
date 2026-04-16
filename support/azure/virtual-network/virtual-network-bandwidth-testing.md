@@ -7,7 +7,8 @@ ms.author: jarrettr
 ms.service: azure-virtual-network
 ms.custom: 
   - linux-related-content
-  - = sap:Connectivity
+  - sap:Connectivity
+  - sap:Performance
 ms.topic: troubleshooting
 ms.date: 04/15/2025
 # Customer intent: As a cloud engineer, I want to test network throughput between virtual machines using NTTTCP, so that I can assess the bandwidth performance of my Azure virtual network configurations.

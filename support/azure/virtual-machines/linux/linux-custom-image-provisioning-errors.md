@@ -10,7 +10,7 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-## Overview
+## Summary
 
 When you upload or capture a generalized virtual machine (VM) image as a specialized VM image, a [provisioning timeout error](#provisioning-timeout-error-during-an-upload-process) will occur.
 

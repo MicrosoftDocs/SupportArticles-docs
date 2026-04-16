@@ -13,6 +13,10 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010141
 
+## Summary
+
+This article provides a solution to an issue where Windows VM doesn't start with error code 0xc000014c.
+
 ## Symptoms
 
 Windows doesn't start. Instead, the system generates the following error:

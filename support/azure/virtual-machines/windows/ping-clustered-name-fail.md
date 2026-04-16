@@ -12,6 +12,10 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
  
 _Original KB number:_ &nbsp; 3190161
 
+## Summary
+
+This article explains why you can't ping a Clustered Name that runs on Azure IaaS virtual machines (VMs) and provides a resolution.
+
 ## Symptoms
 
 Consider the following scenario:

@@ -131,6 +131,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
+    - name: Abandoned objects block replication for Global Catalog naming contexts
+      href: ./active-directory/abandoned-objects-block-replication-global-catalog-naming-contexts.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory installation fails

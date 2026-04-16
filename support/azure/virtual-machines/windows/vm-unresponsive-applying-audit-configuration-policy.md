@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the virtual machine (VM) becomes unresponsive while applying the Audit Policy Configuration policy, which prevents the booting of an Azure VM.
 
 ## Symptom
@@ -36,7 +38,7 @@ There are conflicting locks when the policy attempts to clean up old user profil
 > [!NOTE]
 > This applies only to Windows Server 2012 and Windows Server 2012 R2.
 
-Here’s the problematic policy:
+Here's the problematic policy:
 *Computer Configuration\Policies\Administrative Templates\System/User Profiles\Delete user profiles older than a specified number of days on system restart.*
 
 ## Solution
@@ -157,12 +159,12 @@ Here’s the problematic policy:
 
 1. Test if your VM boots normally to see if the issue has fixed the issue.
 
-   - If the issue hasn’t been fixed, then continue to [collect a dump file and submit a support ticket](#collect-the-memory-dump-file-and-submit-a-support-ticket).
+   - If the issue hasn't been fixed, then continue to [collect a dump file and submit a support ticket](#collect-the-memory-dump-file-and-submit-a-support-ticket).
    - If the issue has been fixed, then no further steps are necessary.
 
 If the issue was fixed, the policy is now disabled locally. For a permanent solution, don't use the CleanupProfiles policy on VMs, as it will automatically delete user profiles. Use a different method to perform profile cleanups, such as a scheduled task or script.
 
-**Don’t use this policy:**
+**Don't use this policy:**
 *Machine\Admin Templates\System\User Profiles\Delete user profiles older than a specified number of days on system restart.*
 
 ### The issue should now be fixed

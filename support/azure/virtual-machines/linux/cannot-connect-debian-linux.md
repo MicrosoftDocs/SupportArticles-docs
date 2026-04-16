@@ -13,9 +13,13 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 4056276
 
+## Summary
+
+This article provides a workaround for an issue in which you can't connect to a specialized Debian Linux virtual machine (VM) that is migrated from VMware to Microsoft Azure.
+
 ## Symptoms
 
-After creating a specialized Debian 9.1 (Stretch) virtual machine (VM) and then migrate that VM from VMware to Microsoft Azure, you can't connect to the VM.
+After creating a specialized Debian 9.1 (Stretch) VM and then migrating that VM from VMware to Microsoft Azure, you can't connect to the VM.
 
 ## Cause
 

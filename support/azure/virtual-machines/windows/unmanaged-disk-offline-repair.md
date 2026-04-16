@@ -12,6 +12,8 @@ title: Attach an unmanaged disk to a VM for offline repair
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 Some troubleshooting scenarios for Windows virtual machines (VMs), such as when a VM doesn't start, require you to repair its OS disk offline. This article describes how you can perform this kind of offline repair when the failed OS disk is unmanaged.
 
 ## Determine if the OS disk is managed or unmanaged

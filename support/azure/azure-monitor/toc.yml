@@ -141,6 +141,8 @@ items:
       href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
     - name: Workspace data export FAQ
       href: log-analytics/workspaces/workspace-data-export-faq.yml
+    - name: Resolve role definition fetch problems in Log Analytics
+      href: log-analytics/workspaces/resolve-role-definition-fetch-problems.md
   - name: Cost management 
     items:
     - name: Understand cost and analyze usage report
@@ -203,3 +205,7 @@ items:
   items:
   - name: Deleted event hub is automatically re-created
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
+  - name: Troubleshoot data export and pricing problems in Event Hubs
+    href: diagnostic-settings/data-flow/troubleshoot-data-export-pricing-problems.md
+  - name: Export management group activity logs to Event Hubs
+    href: diagnostic-settings/data-flow/export-management-group-activity-logs.md

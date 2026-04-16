@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: hgkim，gaberry, akeeler, lisalozano
+ms.reviewer: hgkim，gaberry, akeeler, v-lisalozano
 ms.custom: 
   - Security\Trust
   - CI 114484
@@ -14,7 +14,7 @@ ms.custom:
   - CI 10891
 search.appverid: MET150
 appliesto: 
-  - Microsoft 365 
+  - Excel for Microsoft 365 
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016 

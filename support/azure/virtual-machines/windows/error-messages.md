@@ -16,6 +16,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes some of the most common error codes and messages you might encounter when you create or manage virtual machines (VMs) in Azure.
 
 >[!NOTE]

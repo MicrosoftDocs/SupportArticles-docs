@@ -8,14 +8,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Editing\Functions
   - CSSTroubleshoot
   - CI 10882
 appliesto: 
-  - Microsoft 365 
-  - Microsoft 365 for Mac
+  - Excel for Microsoft 365
+  - Excel for Microsoft 365 for Mac
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016

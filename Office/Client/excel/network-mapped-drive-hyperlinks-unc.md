@@ -3,7 +3,7 @@ title: Network Mapped Drive Hyperlinks resolve as UNC in Office Products
 description: Fixes an issue that occurs after a user inserts a hyperlink to a file residing on a network mapped drive within an Office product.
 author: Cloud-Writer
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,7 +15,7 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto:
-  - Microsoft 365 
+  - Excel for Microsoft 365 
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016 

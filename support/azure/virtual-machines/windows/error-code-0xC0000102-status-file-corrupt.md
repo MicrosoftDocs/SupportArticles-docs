@@ -12,6 +12,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the Windows operating system (OS) encounters the stop error 0xC0000102, which keeps an Azure virtual machine (VM) from booting.
 
 ## Symptoms
