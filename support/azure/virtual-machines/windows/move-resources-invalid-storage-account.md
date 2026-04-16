@@ -1,6 +1,6 @@
 ---
-title: Move fails because VM is associated with an invalid or deleted storage account
-description: Troubleshoot the MoveResourcesHaveInvalidState error when a virtual machine's boot diagnostics storage account no longer exists.
+title: Virtual machine move fails with invalid storage account
+description: Troubleshoot MoveResourcesHaveInvalidState errors when a VM's boot diagnostics storage account is deleted or invalid. Learn how to resolve this issue quickly.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -12,13 +12,17 @@ ms.reviewer: jarrettr
 ms.custom: sap:Cannot create a VM
 ---
 
-# Move fails because VM is associated with an invalid or deleted storage account
+# Virtual machine move fails with invalid storage account
 
 **Applies to:** :heavy_check_mark: Windows VMs :heavy_check_mark: Linux VMs
 
+## Summary
+
+This article helps you troubleshoot the `MoveResourcesHaveInvalidState` error when a virtual machine (VM) move fails due to an invalid or deleted storage account. When moving a virtual machine with boot diagnostics configured to a deleted or invalid storage account, Azure Resource Manager blocks the operation. Reconfigure the VM's boot diagnostics to either disable it or point it to a valid storage account to resolve the issue.
+
 ## Symptoms
 
-When you try to move a virtual machine (and its associated resources) to another resource group or subscription, the operation fails with an error similar to:
+When you try to move a VM and its associated resources to another resource group or subscription, the operation fails with an error similar to:
 
 ```json
 {
@@ -43,10 +47,10 @@ When you try to move a virtual machine (and its associated resources) to another
 
 ## Cause
 
-The virtual machine has a **Boot Diagnostics** storage account configured that either:
+The VM has a boot diagnostics storage account configured that either:
 
-- Has been **deleted** from the subscription
-- Is in an **invalid or failed state**
+- You deleted from the subscription.
+- Is in an **invalid** or **failed** state.
 
 Even though the storage account no longer exists, the VM's configuration still references it. Azure Resource Manager validates all referenced resources before starting the move operation, causing the move to fail at the validation step.
 
@@ -56,29 +60,31 @@ Reconfigure the VM's boot diagnostics to either disable it or point it to a vali
 
 ### Option 1: Disable boot diagnostics (quickest)
 
-1. In the [Azure portal](https://portal.azure.com), navigate to the VM.
-2. Under **Settings**, select **Boot diagnostics**.
-3. Select **Disable**.
-4. Select **Apply**.
-5. Retry the move operation.
+1. In the [Azure portal](https://portal.azure.com), go to the VM.
+1. Under **Settings**, select **Boot diagnostics**.
+1. Select **Disable**.
+1. Select **Apply**.
+1. Retry the move operation.
 
 ### Option 2: Update boot diagnostics to a valid storage account
 
-1. In the [Azure portal](https://portal.azure.com), navigate to the VM.
-2. Under **Settings**, select **Boot diagnostics**.
-3. Select **Enable with custom storage account**.
-4. Select an existing, valid storage account in the same region as the VM.
-5. Select **Apply**.
-6. Retry the move operation.
+1. In the [Azure portal](https://portal.azure.com), go to the VM.
+1. Under **Settings**, select **Boot diagnostics**.
+1. Select **Enable with custom storage account**.
+1. Select an existing, valid storage account in the same region as the VM.
+1. Select **Apply**.
+1. Retry the move operation.
 
-### Option 3: Use Azure CLI or PowerShell
+### Option 3: Use Azure CLI or Azure PowerShell
 
 **Azure CLI — disable boot diagnostics:**
+
 ```azurecli
 az vm boot-diagnostics disable --resource-group <rg-name> --name <vm-name>
 ```
 
 **Azure CLI — enable with a valid storage account:**
+
 ```azurecli
 az vm boot-diagnostics enable \
   --resource-group <rg-name> \
@@ -87,6 +93,7 @@ az vm boot-diagnostics enable \
 ```
 
 **Azure PowerShell — disable boot diagnostics:**
+
 ```powershell
 $vm = Get-AzVM -ResourceGroupName "<rg-name>" -Name "<vm-name>"
 Set-AzVMBootDiagnostic -VM $vm -Disable
@@ -94,6 +101,7 @@ Update-AzVM -ResourceGroupName "<rg-name>" -VM $vm
 ```
 
 **Azure PowerShell — enable with a valid storage account:**
+
 ```powershell
 $vm = Get-AzVM `
   -ResourceGroupName <rg-name> `
@@ -109,6 +117,7 @@ Set-AzVMBootDiagnostic `
 > After running `Set-AzVMBootDiagnostic`, you must update the VM for the change to take effect.
 
 **Azure PowerShell — update the VM:**
+
 ```powershell
 Update-AzVM `
   -ResourceGroupName <rg-name> `
@@ -116,6 +125,7 @@ Update-AzVM `
 ```
 
 **Azure PowerShell — verify the storage account reference:**
+
 ```powershell
 (Get-AzVM `
   -ResourceGroupName <rg-name> `
@@ -132,7 +142,7 @@ az vm show --resource-group <rg-name> --name <vm-name> \
   --output json
 ```
 
-If the `storageUri` field points to a storage account that no longer exists, use one of the resolution options above before retrying the move.
+If the `storageUri` field points to a storage account that no longer exists, use one of the resolution options in this article before retrying the move.
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - resource has a plan with a different subscription
-description: Troubleshoot the error that occurs when moving a VM created from an Azure Marketplace image with a plan attached to it.
+description: Learn how to troubleshoot and resolve the resource move validation error when moving Azure VMs with Marketplace plans between subscriptions.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -14,6 +14,10 @@ ms.custom: sap:Cannot create a VM
 # Azure resource move fails because a resource has a Marketplace plan with a different subscription
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
+## Summary
+
+This article helps you troubleshoot the error that occurs when moving a virtual machine (VM) created from an Azure Marketplace image with a plan attached to it to a different subscription. The error occurs because the Marketplace plan is tied to the original subscription and can't be moved directly to another subscription.
 
 ## Symptoms
 
@@ -32,23 +36,25 @@ When you try to move a virtual machine to a different subscription, the operatio
 
 ## Cause
 
-Virtual machines created from Azure Marketplace images that include a **plan** (a billing agreement specific to a subscription) can't be moved directly across subscriptions. The plan is tied to the originating subscription.
+VMs created from Azure Marketplace images that include a *plan* (a billing agreement specific to a subscription) can't be moved directly across subscriptions. The plan is tied to the originating subscription.
 
 ## Resolution
 
 To move the VM to a new subscription, copy the VM's disks and recreate the VM in the destination subscription with the same Marketplace plan.
 
 > [!IMPORTANT]
-> Verify that the Marketplace offer is still available before deleting the original VM. If the offer has been retired, you will not be able to recreate the VM in either the old or new subscription.
+> Verify that the Marketplace offer is still available before deleting the original VM. If the offer is retired, you can't recreate the VM in either the old or new subscription.
 
 ### Step 1: Get the plan information from the existing VM
 
 **Azure CLI**
+
 ```azurecli
 az vm show --resource-group <resource-group-name> --name <vm-name> --query plan
 ```
 
-**PowerShell**
+**Azure PowerShell**
+
 ```powershell
 $vm = Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name>
 $vm.Plan
@@ -57,27 +63,31 @@ $vm.Plan
 ### Step 2: Confirm the offer is available in the destination subscription
 
 **Azure CLI**
+
 ```azurecli
 az vm image list-skus --publisher <publisher> --offer <offer> --location <location>
 ```
 
-**PowerShell**
+**Azure PowerShell**
+
 ```powershell
 Get-AzVMImageSku -Location <location> -PublisherName <publisher> -Offer <offer>
 ```
 
 ### Step 3: Copy or move the OS disk
 
-Either clone the OS disk to the destination subscription, or move the original disk after deleting the VM from the source subscription.
+Either clone the OS disk to the destination subscription or move the original disk after deleting the VM from the source subscription.
 
 ### Step 4: Accept Marketplace terms in the destination subscription
 
 **Azure CLI**
+
 ```azurecli
 az vm image terms accept --publisher <publisher> --offer <offer> --plan <sku>
 ```
 
-**PowerShell**
+**Azure PowerShell**
+
 ```powershell
 Set-AzMarketplaceTerms -Publisher <publisher> -Product <offer> -Name <sku> -Accept
 ```
@@ -88,7 +98,7 @@ Alternatively, create a temporary VM in the destination subscription using the s
 
 In the destination subscription, create a new VM from the copied OS disk, specifying the original Marketplace plan information to match the plan you've accepted.
 
-See [Create a VM from a specialized disk](/azure/virtual-machines/windows/create-vm-specialized) for detailed steps.
+For more information, see [Create a VM from a specialized disk](/azure/virtual-machines/windows/create-vm-specialized).
 
 ## More information
 

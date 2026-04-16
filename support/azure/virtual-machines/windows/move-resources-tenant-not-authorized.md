@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - tenant not authorized to access linked subscription
-description: Troubleshoot the LinkedAuthorizationFailed error that occurs when moving VM resources between subscriptions in different tenants.
+description: Azure resource move fails with LinkedAuthorizationFailed when subscriptions are in different tenants. Learn the supported fixes to complete your move.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -11,13 +11,17 @@ ms.author: scotro
 ms.reviewer: jarrettr
 ms.custom: sap:Cannot create a VM
 ---
-# Azure resource move fails - current tenant is not authorized to access linked subscription
+# Azure resource move fails - current tenant isn't authorized to access linked subscription
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
+When Azure resource move fails with the `LinkedAuthorizationFailed` error, the source and destination subscriptions are in different Microsoft Entra ID tenants. This article explains why cross-tenant moves aren't supported and shows how to fix the issue by aligning tenants or recreating resources in the destination subscription.
+
 ## Symptoms
 
-When you try to move a virtual machine, image, or disk from one subscription to another, the operation fails with an error similar to the following:
+When you try to move a VM, image, or disk from one subscription to another, the operation fails with an error similar to the following:
 
 ```output
 Resource move policy validation failed.
@@ -28,34 +32,35 @@ The client has permission to perform action 'Microsoft.Compute/virtualMachines/w
 
 ## Cause
 
-This error occurs when the source and destination subscriptions belong to **different Azure AD tenants**. Moving resources between subscriptions that are in different tenants isn't supported. The identity (service principal or user) performing the move must have access in the same tenant as both subscriptions.
+This error occurs when the source and destination subscriptions belong to different Microsoft Entra ID tenants. Moving resources between subscriptions that are in different tenants isn't supported. The identity (service principal or user) performing the move must have access in the same tenant as both subscriptions.
 
-This error can affect moves of:
-- Virtual machines
-- Managed images
-- Managed disks
-- Other compute and network resources
+This error can affect:
+
+- VMs.
+- Managed images.
+- Managed disks.
+- Other Azure Compute Gallery and network resources.
 
 ## Resolution
 
 ### Option 1: Move both subscriptions to the same tenant
 
-If you control both subscriptions, transfer them to the same Azure AD tenant before attempting the move. See [Transfer an Azure subscription to a different Azure AD directory](/azure/role-based-access-control/transfer-subscription).
+If you control both subscriptions, transfer them to the same Microsoft Entra ID tenant before attempting the move. For more information, see [Transfer an Azure subscription to a different Microsoft Entra ID directory](/azure/role-based-access-control/transfer-subscription).
 
 ### Option 2: Recreate the resource in the destination subscription
 
-If a cross-tenant move is required and the subscriptions can't be consolidated, recreate the resource in the destination subscription:
+If you need to perform a cross-tenant move and you can't consolidate the subscriptions, recreate the resource in the destination subscription:
 
-1. **For virtual machines:** Take a managed disk snapshot in the source subscription. Share the snapshot with the destination tenant using [cross-tenant shared access](/azure/virtual-machines/snapshot-copy-managed-disk). Create a new VM from the snapshot in the destination subscription.
+1. **For VMs:** Take a managed disk snapshot in the source subscription. Share the snapshot with the destination tenant by using [cross-tenant shared access](/azure/virtual-machines/snapshot-copy-managed-disk). Create a new VM from the snapshot in the destination subscription.
 
-2. **For managed images:** Export the image to a storage account accessible by the destination tenant and recreate the image.
+1. **For managed images:** Export the image to a storage account that the destination tenant can access. Then, recreate the image.
 
-### Option 3: Use Azure Compute Gallery for cross-tenant image sharing
+### Option 3: Use Compute Gallery for cross-tenant image sharing
 
-For images specifically, use [Azure Compute Gallery with cross-tenant sharing](/azure/virtual-machines/shared-image-galleries) to share the image directly with the destination tenant without moving the original resource.
+For images, use [Compute Gallery with cross-tenant sharing](/azure/virtual-machines/shared-image-galleries) to share the image directly with the destination tenant without moving the original resource.
 
 ## More information
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Virtual machine move limitations](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations)
-- [Transfer an Azure subscription to a different directory](/azure/role-based-access-control/transfer-subscription)
+- [Transfer an Azure subscription to a different Microsoft Entra ID directory](/azure/role-based-access-control/transfer-subscription)

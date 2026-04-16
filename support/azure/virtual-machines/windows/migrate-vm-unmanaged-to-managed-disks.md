@@ -1,6 +1,6 @@
 ---
-title: Convert unmanaged disks to managed disks for an Azure VM
-description: How to convert a virtual machine's unmanaged disks to Azure managed disks using the Azure portal, PowerShell, or Azure CLI.
+title: Convert unmanaged disks to managed disks for an Azure virtual machine
+description: Learn how to convert unmanaged disks to Azure managed disks for a virtual machine by using the Azure portal, PowerShell, or Azure CLI.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -12,42 +12,44 @@ ms.reviewer: jarrettr
 ms.custom: sap:Cannot create a VM
 ---
 
-# Convert unmanaged disks to managed disks for an Azure VM
+# Convert unmanaged disks to managed disks for an Azure virtual machine
 
 **Applies to:** :heavy_check_mark: Windows VMs :heavy_check_mark: Linux VMs
 
-This article describes how to convert a virtual machine's unmanaged disks to Azure managed disks. Managed disks are required for many modern Azure VM operations including certain move and migration scenarios.
+## Summary
+
+This article describes how to convert a virtual machine's unmanaged disks to Azure managed disks. Managed disks are required for many modern Azure virtual machine (VM) operations including certain move and migration scenarios.
 
 ## Before you begin
 
 Review the following important considerations before converting:
 
-- **The conversion isn't reversible.** Once disks are converted to managed disks, they can't be converted back to unmanaged.
+- **The conversion isn't reversible.** After you convert disks to managed disks, you can't convert them back to unmanaged.
 - **Test before production.** Migrate a test virtual machine before converting production workloads.
-- **The VM will restart.** The VM is deallocated during the conversion and receives a new IP address when restarted (unless a static IP is configured).
-- **Agent version requirements.** Verify that the Azure VM agent is at the minimum supported version. See [Minimum version support for VM agents in Azure](/azure/virtual-machines/extensions/agent-windows).
-- **Extensions must be in a succeeded state.** All VM extensions must be in the `Provisioning succeeded` state before conversion, or the conversion fails with error code 409.
-- **Original VHDs aren't deleted.** The original VHD blobs and the storage account used by the VM before migration aren't deleted automatically. They continue to incur charges until you manually delete them after verifying the migration.
-- **Virtual Machine Contributor role.** After conversion, users with the Virtual Machine Contributor role require the `Microsoft.Compute/disks/write` permission to change the VM size, which they may not have had before.
+- **The VM restarts.** The conversion process deallocates the VM. When the VM restarts, it gets a new IP address unless you configure a static IP.
+- **Agent version requirements.** Verify that the Azure VM agent is at the minimum supported version. For more information, see [Minimum version support for VM agents in Azure](/azure/virtual-machines/extensions/agent-windows).
+- **Extensions must be in a succeeded state.** All VM extensions must be in the `Provisioning succeeded` state before conversion. Otherwise, the conversion fails with error code **409**.
+- **Original virtual hard disks (VHDs) aren't deleted.** The original VHD blobs and the storage account that the VM used before migration aren't deleted automatically. You continue to incur charges until you manually delete them after verifying the migration.
+- **Virtual Machine Contributor role.** After conversion, users with the Virtual Machine Contributor role need the `Microsoft.Compute/disks/write` permission to change the VM size.
 
 ## Convert using the Azure portal
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-2. Navigate to the virtual machine you want to convert.
+1. Go to the virtual machine that you want to convert.
 
-3. Under **Settings**, select **Disks**.
+1. Under **Settings**, select **Disks**.
 
-4. At the top of the **Disks** pane, select **Migrate to managed disks**.
+1. At the top of the **Disks** pane, select **Migrate to managed disks**.
 
-   > [!NOTE]
-   > If your VM is in an **availability set**, a warning appears indicating that you must migrate the availability set first. Select the link in the warning to migrate the availability set, then return to migrate the individual VM.
+> [!NOTE]
+> If your VM is in an **availability set**, a warning appears indicating that you must migrate the availability set first. Select the link in the warning to migrate the availability set, and then return to migrate the individual VM.
 
-5. On the **Migrate to managed disks** pane, review the disks to be converted and select **Migrate**.
+1. On **Migrate to managed disks**, review the disks to convert and select **Migrate**.
 
-6. The VM is stopped and restarted after the migration completes.
+1. The VM is stopped and restarted after the migration finishes.
 
-## Convert using Azure PowerShell
+## Convert by using Azure PowerShell
 
 ```powershell
 # Stop and deallocate the VM
@@ -70,7 +72,7 @@ foreach ($vmRef in $avSet.VirtualMachinesReferences) {
 }
 ```
 
-## Convert using Azure CLI
+## Convert by using Azure CLI
 
 ```azurecli
 # Stop and deallocate the VM
@@ -93,9 +95,9 @@ To find unattached unmanaged disks in your subscription, see [Find and delete un
 
 | Error | Cause | Resolution |
 |---|---|---|
-| Extension `'<ext>'` is not in a succeeded state | A VM extension is in a failed or transitioning state | Resolve the extension issue before retrying the conversion |
-| VM in availability set must be stopped | The availability set has not been converted | Convert the availability set first, then retry |
-| Storage account does not exist | Boot diagnostics references a deleted storage account | See [Move fails due to invalid storage account](move-resources-invalid-storage-account.md) — same resolution applies: reconfigure boot diagnostics |
+| Extension `'<ext>'` isn't in a succeeded state. | A VM extension is in a failed or transitioning state. | Resolve the extension issue before retrying the conversion. |
+| VM in availability set must be stopped. | The availability set isn't converted yet. | Convert the availability set first, then retry. |
+| Storage account doesn't exist. | Boot diagnostics references a deleted storage account. | See [Move fails due to invalid storage account](move-resources-invalid-storage-account.md). The same resolution applies: reconfigure the boot diagnostics. |
 
 ## Next steps
 

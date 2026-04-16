@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - resource not in Succeeded state
-description: Troubleshoot the MoveCannotProceedWithResourcesNotInSucceededState error when moving Azure VM resources to a new resource group or subscription.
+description: Troubleshoot the MoveCannotProceedWithResourcesNotInSucceededState error when moving Azure resources. Learn how to identify and fix resources not in Succeeded state to complete your move operation.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -11,9 +11,13 @@ ms.author: scotro
 ms.reviewer: jarrettr
 ms.custom: sap:Cannot create a VM
 ---
-# Azure resource move fails because a resource is not in Succeeded state
+# Azure resource move fails because a resource isn't in Succeeded state
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
+## Summary
+
+This article helps you troubleshoot the `MoveCannotProceedWithResourcesNotInSucceededState` error that occurs when moving Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that one or more resources involved in the move aren't in a `Succeeded` state. To resolve this issue, identify the resource that isn't in a `Succeeded` state and restore it to a healthy state before retrying the move operation.
 
 ## Symptoms
 
@@ -37,7 +41,7 @@ When you try to move Azure resources to a different resource group or subscripti
 
 ## Cause
 
-When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource isn't in a `Succeeded` state. This applies even when:
+When a resource group contains a virtual network, Azure checks the provisioning state of all resources that depend on it. The move fails if any dependent resource isn't in a `Succeeded` state. This condition applies even when:
 
 - The resource isn't one of the resources you're moving.
 - The resource isn't in the source or destination resource group.
@@ -50,24 +54,24 @@ Find the resource that isn't in `Succeeded` state. Restore it to a healthy state
 
 The error message names a resource or resource type. The actual problem resource is often a dependency of the named resource. Check all related resources in both the source and destination resource groups.
 
-In the Azure portal, open each virtual machine or network resource involved in the move. Verify that **Provisioning state** shows **Succeeded**.
+In the [Azure portal](https://portal.azure.com), open each VM or network resource involved in the move. Verify that **Provisioning state** shows **Succeeded**.
 
 ### Step 2: Reapply or update the resource
 
-**Reapply a virtual machine (Azure portal)**
+**Reapply a VM (Azure portal)**
 
-1. In the Azure portal, navigate to the virtual machine.
-2. In the left menu under **Help**, select **Redeploy + reapply**.
-3. Select **Reapply**.
+1. In the Azure portal, go to the VM.
+1. In the left menu under **Help**, select **Redeploy + reapply**.
+1. Select **Reapply**.
 
-**Update a virtual machine (PowerShell)**
+**Update a VM (Azure PowerShell)**
 
 ```powershell
 $vm = Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name>
 Update-AzVM -VM $vm -ResourceGroupName <resource-group-name>
 ```
 
-**Update a virtual machine (Azure CLI)**
+**Update a VM (Azure CLI)**
 
 ```azurecli
 az vm update --resource-group <resource-group-name> --name <vm-name>

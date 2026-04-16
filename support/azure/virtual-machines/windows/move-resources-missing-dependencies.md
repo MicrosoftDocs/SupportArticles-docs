@@ -1,6 +1,6 @@
 ---
 title: Move fails with MissingMoveDependentResources error
-description: Troubleshoot the MissingMoveDependentResources error when moving Azure virtual machine resources to another resource group or subscription.
+description: Troubleshoot the MissingMoveDependentResources error when moving Azure VM resources across resource groups or subscriptions, and fix dependencies before you retry.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -15,6 +15,10 @@ ms.custom: sap:Cannot create a VM
 # Move fails with MissingMoveDependentResources error
 
 **Applies to:** :heavy_check_mark: Windows VMs :heavy_check_mark: Linux VMs
+
+## Summary
+
+This article helps you troubleshoot the `MissingMoveDependentResources` error that occurs when moving Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that the move request doesn't include all dependent resources. To resolve this issue, identify the missing resources listed in the error details and include them in the move operation.
 
 ## Symptoms
 
@@ -35,7 +39,7 @@ When you try to move Azure virtual machine resources to another resource group o
 }
 ```
 
-The `details` array lists the resource IDs that must be included in the move request.
+The `details` array lists the resource IDs that you must include in the move request.
 
 ## Cause
 
@@ -43,37 +47,38 @@ Azure Resource Manager requires that when you move a resource, all dependent (li
 
 Virtual machine resources have a chain of dependencies. For example, to move a VM you must also move:
 
-- The VM's managed disk(s)
-- The VM's network interface card(s) (NICs)
-- The virtual network the NIC is attached to
-- All other NICs attached to the same virtual network
-- Any public IP addresses associated with those NICs
-- Any network security groups (NSGs) associated with the NICs or subnets
+- The VM's managed disks.
+- The VM's network interface cards (NICs).
+- The virtual network the NIC is attached to.
+- All other NICs attached to the same virtual network.
+- Any public IP addresses associated with those NICs.
+- Any network security groups (NSGs) associated with the NICs or subnets.
 
 This chain can extend to additional resource types depending on your configuration:
 
-| Resource provider | Resource types that may be required |
+| Resource provider | Resource types that might be required |
 |---|---|
 | Microsoft.Compute | virtualMachines, disks |
 | Microsoft.Network | networkInterfaces, publicIPAddresses, networkSecurityGroups, virtualNetworks |
 | Microsoft.Storage | storageAccounts (if using unmanaged disks or boot diagnostics) |
 
-If any dependent resource isn't included in the move request, the operation fails before it starts.
+If you don't include any dependent resource in the move request, the operation fails before it starts.
 
 ## Resolution
 
 1. **Collect the full error message.** The `details` array contains the complete list of missing resource IDs. Copy the raw error text to a text editor to review all entries.
 
-2. **Parse the missing resource IDs.** Each entry in `details` contains a full resource ID in the format:
+1. **Parse the missing resource IDs.** Each entry in `details` contains a full resource ID in the format:
    `/subscriptions/<sub>/resourceGroups/<rg>/providers/<type>/<name>`
 
    Extract the resource type and name from each entry to build your list of missing resources.
 
-3. **Add all missing resources to your move request.** In the Azure portal, return to the **Move resources** blade, and add each missing resource to the selection before retrying.
+1. **Add all missing resources to your move request.** In the [Azure portal](https://portal.azure.com), return to the **Move resources** blade, and add each missing resource to the selection before retrying.
 
-   If you're using PowerShell or Azure CLI, add the missing resource IDs to the `-ResourceId` parameter array.
+   If you're using Azure PowerShell or Azure CLI, add the missing resource IDs to the `-ResourceId` parameter array.
 
    **Azure PowerShell example:**
+
    ```powershell
    $resourceIds = @(
      "/subscriptions/<sub>/resourceGroups/<rg>/providers/Microsoft.Compute/virtualMachines/<vm-name>",
@@ -86,10 +91,10 @@ If any dependent resource isn't included in the move request, the operation fail
    Move-AzResource -DestinationResourceGroupName "<destination-rg>" -ResourceId $resourceIds
    ```
 
-4. **Retry the move.** After adding all missing resources, retry the move operation.
+1. **Retry the move.** After adding all missing resources, retry the move operation.
 
 > [!NOTE]
-> If the error lists a resource in a different resource group than expected, it may be because that resource was shared across multiple VMs or resource groups. All resources in the dependency chain must be included regardless of their current location.
+> If the error lists a resource in a different resource group than expected, it might be because that resource is shared across multiple VMs or resource groups. You must include all resources in the dependency chain regardless of their current location.
 
 ## Check which resources support move operations
 
