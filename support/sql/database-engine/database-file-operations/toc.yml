@@ -3,8 +3,6 @@ items:
   href: troubleshoot-bulk-load-causes-unused-space.md
 - name: Considerations for the autogrow and autoshrink
   href: considerations-autogrow-autoshrink.md
-- name: Database Engine Input/Output requirements
-  href: database-engine-input-output-requirements.md
 - name: DBCC CHECK
   items:
     - name: 1450 and 665 errors when running DBCC CHECKDB
@@ -27,6 +25,8 @@ items:
   href: logging-data-storage-algorithms.md
 - name: Space used by a table is not released
   href: space-table-uses-not-released.md
+- name: SQL Server Database Engine disk I/O requirements
+  href: database-engine-input-output-requirements.md
 - name: SQL Server diagnostics detects unreported I/O problems
   href: diagnostics-for-unreported-io-problems.md
 - name: Support for databases on compressed volumes
