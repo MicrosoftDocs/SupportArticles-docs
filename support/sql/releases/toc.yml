@@ -17,6 +17,10 @@ items:
   items:
   - name: SQL Server 2025 build versions
     href: sqlserver-2025/build-versions.md
+  - name: Cumulative Update 4
+    items:
+    - name: Cumulative Update 4 (KB5081495)
+      href: sqlserver-2025/cumulativeupdate4.md
   - name: Cumulative Update 3
     items:
     - name: Cumulative Update 3 (KB5077896)
