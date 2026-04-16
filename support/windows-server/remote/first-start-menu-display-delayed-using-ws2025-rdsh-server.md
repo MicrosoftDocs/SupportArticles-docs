@@ -36,7 +36,7 @@ This behavior is expected. Windows Server 2025 and later versions don't prelaunc
 You can configure Windows Server to use the previous behavior by changing the `PrelaunchOverride` registry entry.
 
 > [!CAUTION]  
-> Use the default setting unless users experience a noticeable delay when they first open the Start menu. The purpose of the default setting is to prevent heavy CPU load during "start of the workday" scenarios. In such scenarios, multiple users are likely to sign in to the same VM at the same time. When `PrelaunchOverride` is set to `1`, these processes start for all these users at the same time, causing longer sign-in times and reduced responsiveness for signed-in users.
+> Use the default setting unless users experience a noticeable delay when they first open the Start menu. The purpose of the default setting is to prevent heavy CPU load during "start of the workday" scenarios. In such scenarios, multiple users are likely to sign in to sessions on the same RDSH server at the same time. When `PrelaunchOverride` is set to `1`, these processes start for all these users at the same time, causing longer sign-in times and reduced responsiveness for signed-in users.
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
