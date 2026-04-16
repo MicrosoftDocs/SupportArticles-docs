@@ -13,6 +13,8 @@ ms.custom: sap:VM Extensions not operating correctly
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
+## Summary
+
 This article discusses how to identify and fix issues that involve certificates on a Windows virtual machine (VM) that uses an extension. Usually, these issues are related to cryptographic operations or the certificate itself.
 
 ## Troubleshooting checklist

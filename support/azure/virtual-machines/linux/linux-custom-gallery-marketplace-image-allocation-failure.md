@@ -10,6 +10,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 An allocation error arises in situations when the new VM request is pinned to a cluster that either cannot support the VM size being requested, or does not have available free space to accommodate the request.
 
 ## Cause 1: The cluster cannot support the requested VM size

@@ -18,6 +18,8 @@ ms.custom: sap:Assistance with disk operations
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps correct VHD errors when running Virtual Machine in Windows or Linux.
 
 ## Symptoms

@@ -10,6 +10,8 @@ ms.custom: sap:Assistance with disk operations, linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article provides a solution to an issue where you fail to resize a Master Boot Record (MBR) partition for a data disk larger than 2 TB in an Azure Linux virtual machine.
 
 > [!IMPORTANT]

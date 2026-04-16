@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after the DHCP Client service is disabled in the VM.
 
 ## Symptoms
@@ -184,7 +186,7 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
     sc stop DHCP
     ```
 
-2. Isolate the service on its own ‘svchost’ container:
+2. Isolate the service on its own 'svchost' container:
 
     ```console
     sc config DHCP type= own

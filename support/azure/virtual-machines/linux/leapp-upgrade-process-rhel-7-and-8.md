@@ -14,6 +14,8 @@ ms.topic: how-to
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 Upgrading your Red Hat Enterprise Linux (RHEL) system is a crucial task to ensure that you benefit from the latest features, security updates, and support. This article introduces how to use the Leapp utility to upgrade Linux virtual machines (VMs) that use RHEL pay-as-you-go (PAYG) images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 
 > [!IMPORTANT]

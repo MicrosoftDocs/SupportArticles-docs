@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the load screen doesn't respond when an Azure virtual machine (VM) applies a policy during startup.
 
 ## Symptoms

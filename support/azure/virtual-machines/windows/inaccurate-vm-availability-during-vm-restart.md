@@ -11,6 +11,8 @@ ms.custom: sap:VM Performance
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article discusses how VM availability might be reported inaccurately during a virtual machine (VM) restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
 
 - Azure Monitor Metrics

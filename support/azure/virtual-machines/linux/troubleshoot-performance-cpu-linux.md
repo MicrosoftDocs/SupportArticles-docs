@@ -14,6 +14,8 @@ ms.date: 09/30/2024
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article explains how to troubleshoot CPU performance issues on Azure Linux virtual machines (VMs) by using performance monitoring tools. You can use the following tools for this task.
 
 |Resource|Tools|
@@ -178,7 +180,7 @@ vmstat [delay] [count]
 
 - `count`: Defines how many times the output refreshes.
 
-If you provide only one of these parameters, it’s treated as the refresh interval, and the output will refresh on an infinite loop.
+If you provide only one of these parameters, it's treated as the refresh interval, and the output will refresh on an infinite loop.
 
 ### Example output during high I/O activity while command dd is running
 

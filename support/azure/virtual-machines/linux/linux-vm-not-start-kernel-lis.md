@@ -15,6 +15,8 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 4022897
 
+## Summary
+
 This article provides a workaround to an issue in which a Linux VM does not start correctly with kernel 3.10.0-514.16 after a Linux Integration Services (LIS) upgrade.
 
 ## Symptoms

@@ -12,6 +12,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article helps you resolve an issue where a Microsoft Azure virtual machine (VM) experiences the **IRQL_NOT_LESS_OR_EQUAL** bug check with the stop code 0x0000001A.
 
 ## Symptoms
@@ -38,6 +40,4 @@ If your VM is already running a supported OS version or is configured with 64 or
 ## Collect a memory dump for troubleshooting
 
 To assist with further diagnosis, [collect an OS memory dump file](./collect-os-memory-dump-file.md) and then [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) so that Azure support can investigate and help resolve the issue.
-
-
  
