@@ -15,9 +15,9 @@ _Original KB number:_ &nbsp; 231619
 
 The SQLIOSim utility runs reliability and integrity stress tests on disk subsystems by simulating SQL Server I/O patterns, including read, write, checkpoint, backup, sort, and read-ahead activities. Use SQLIOSim to validate your I/O subsystem before deploying SQL Server on new hardware. The utility operates independently of the SQL Server engine and doesn't require SQL Server to be running.
 
-## Introduction
+## Introduction to SQLIOSim
 
-SQLIOSim simulates the read and write patterns, user activity, and system activity of a SQL Server system to help identify potential I/O problems. The primary objective of the I/O simulation tests is to verify the reliability of the underlying I/O subsystem before SQL Server starts using it. For more information about SQL Server I/O patterns, see [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+SQLIOSim simulates the read and write patterns, user activity, and system activity of a SQL Server system to help identify potential I/O problems. The primary objective of the I/O simulation tests is to verify the reliability of the underlying I/O subsystem before SQL Server starts using it. For more information about SQL Server I/O fundamentals, see [SQL Server I/O fundamentals](/sql/relational-databases/sql-server-storage-guide).
 
 SQLIOSim doesn't interact with SQL Server and doesn't require SQL Server to be running. In most cases, run SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications. Don't point to or use actual SQL Server database files in your SQLIOSim test because the utility overwrites them with random test patterns.
 
@@ -26,8 +26,6 @@ SQLIOSim doesn't guarantee data security or integrity. The utility provides base
 For more information about logging and data storage, see [Description of logging and data storage algorithms that extend data reliability in SQL Server](~/sql/database-engine/database-file-operations/logging-data-storage-algorithms.md).
 
 If you need to run performance benchmarks and determine I/O throughput capacity, use the [Diskspd](https://aka.ms/diskspd) tool instead.
-
-SQLIOSim replaces the SQLIOStress utility, which was formerly known as the SQL70IOStress utility.
 
 > [!TIP]
 > Run SQLIOSim on every new storage configuration before production deployment. This testing helps ensure that the system honors write-order and flush semantics even when caching layers like controller cache, firmware buffering, or SAN optimizations are present.
