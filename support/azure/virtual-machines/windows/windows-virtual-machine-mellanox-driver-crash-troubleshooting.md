@@ -1,38 +1,42 @@
 ---
-title: Troubleshoot Mellanox mlx5 Driver Crashes on Azure Windows VMs (DRIVER_IRQL_NOT_LESS_OR_EQUAL)
-description: Learn how to troubleshoot Azure Windows VM crashes caused by an outdated Mellanox mlx5 driver that triggers bug check 0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL).
+title: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows virtual machines (DRIVER_IRQL_NOT_LESS_OR_EQUAL)
+description: Learn how to troubleshoot Azure Windows virtual machine (VM) crashes caused by an outdated Mellanox mlx5 driver that triggers bug check 0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL).
 ms.service: azure-virtual-machines
 ms.date: 03/26/2026
 ms.custom: sap:My VM is not booting
 ms.reviewer: jdickson, scotro, azurevmcptcic
 ---
-# Troubleshoot Mellanox mlx5 Driver Crashes on Azure Windows VMs
+# Troubleshoot Mellanox mlx5 driver crashes on Azure Windows virtual machines
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Symptom
+## Summary
 
-A Windows Azure Virtual Machine (VM) might crash, restart unexpectedly, or become unstable. Common signs include:
+This article provides guidance on troubleshooting Azure Windows virtual machine (VM) crashes caused by an outdated Mellanox mlx5 network adapter driver. An outdated driver can trigger the bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
 
-- VM crashes with a **blue screen (BSOD)** and bug check **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**
-- VM becomes unresponsive and requires a forced restart
-- VM crashes continue after restart, with no clear OS-level cause
-- Crash dump analysis references the `mlx5.sys` driver module
+## Symptoms
+
+A Windows Azure VM might crash, restart unexpectedly, or become unstable. Common signs include:
+
+- VM crashes with a **blue screen (BSOD)** and bug check **DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)**.
+- VM becomes unresponsive and requires a forced restart.
+- VM crashes continue after restart, with no clear OS-level cause.
+- Crash dump analysis references the `mlx5.sys` driver module.
 
 ## Cause
 
-This issue is caused by an **outdated Mellanox mlx5 network adapter driver** in the guest VM. The `mlx5.sys` driver is used on VM SKUs with **Accelerated Networking** that rely on Mellanox/NVIDIA ConnectX adapters.
+This problem occurs when the guest VM uses an outdated Mellanox mlx5 network adapter driver. The `mlx5.sys` driver is used on VM versions with **Accelerated Networking** that rely on Mellanox/NVIDIA ConnectX adapters.
 
-If the installed driver version is no longer compatible with host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this usually appears as bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
+If the installed driver version is no longer compatible with host firmware or platform updates, the driver can trigger a kernel memory access violation. In Windows, this error usually appears as bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
 
 > [!NOTE]
-> This issue is **not** caused by the Azure platform or host hardware failure. It is a guest OS driver compatibility issue and requires a driver update inside the VM.
+> This problem isn't caused by the Azure platform or host hardware failure. It's a guest OS driver compatibility problem and requires a driver update inside the VM.
 
 ### Affected configurations
 
-- Windows Server VMs with Accelerated Networking enabled
-- VM SKUs that use Mellanox/NVIDIA ConnectX hardware (including HB, HC, ND, NDv2, HBv3, and performance-optimized N-series VMs)
-- Mellanox mlx5 driver versions that have not been updated in more than 12 months
+- Windows Server VMs with **Accelerated Networking** enabled.
+- VM SKUs that use Mellanox or NVIDIA ConnectX hardware, including HB, HC, ND, NDv2, HBv3, and performance-optimized N-series VMs.
+- Mellanox mlx5 driver versions that aren't updated in more than 12 months.
 
 ### Bug check signature
 
@@ -73,7 +77,7 @@ Get-WinEvent -FilterHashtable @{ LogName = 'Application'; Id = 1001; StartTime =
     Where-Object { $_.Message -match '0x000000d1|DRIVER_IRQL_NOT_LESS_OR_EQUAL' }
 ```
 
-If events are returned and the timestamps match the crash incidents, this confirms the pattern.
+If the command returns events and the timestamps match the crash incidents, you confirm the pattern.
 
 ### Step 4: Use the automated validation Run Command
 
@@ -92,35 +96,35 @@ To resolve this issue, update the Mellanox mlx5 driver to a supported version in
 > [!IMPORTANT]
 > Before you update the driver, take a snapshot of the OS disk.
 
-#### Option A: Update via Windows Update (recommended)
+#### Option A: Update using Windows Update (recommended)
 
-1. Connect to the VM via RDP or Azure Bastion.
-2. Open **Windows Update** > **Check for updates**.
-3. If a Mellanox/NVIDIA driver update is available as an optional update, install it.
-4. Restart the VM.
+1. Connect to the VM by using Remote Desktop Protocol (RDP) or Azure Bastion.
+1. Open **Windows Update** > **Check for updates**.
+1. If a Mellanox/NVIDIA driver update is available as an optional update, install it.
+1. Restart the VM.
 
-#### Option B: Manual update via Device Manager
+#### Option B: Manual update using Device Manager
 
-1. Connect to the VM via RDP or Azure Bastion.
-2. Open **Device Manager**, and then expand **Network adapters**.
-3. Right-click the **Mellanox** adapter, select **Update driver**, and then select **Search automatically for drivers**.
-4. If Windows finds an updated driver, install it and restart.
+1. Connect to the VM by using RDP or Azure Bastion.
+1. Open **Device Manager**, and then expand **Network adapters**.
+1. Right-click the **Mellanox** adapter, select **Update driver**, and then select **Search automatically for drivers**.
+1. If Windows finds an updated driver, install it and restart.
 
 #### Option C: Direct download from Mellanox / NVIDIA
 
 1. Identify the exact adapter model from Device Manager or from the diagnostic script output.
-2. Download the latest Windows driver package from the [NVIDIA / Mellanox driver download portal](https://network.nvidia.com/support/mlnx-ofed-public-repository/).
-3. Install the driver in the VM, and then restart.
+1. Download the latest Windows driver package from the [NVIDIA / Mellanox driver download portal](https://network.nvidia.com/support/mlnx-ofed-public-repository/).
+1. Install the driver in the VM, and then restart.
 
 > [!NOTE]
 > Always compare the downloaded driver with the minimum supported version listed in the internal TSG before you install it.
 
 ### Verify resolution
 
-After you update the driver and restart the VM, run the validation script again to confirm:
+After you update the driver and restart the VM, run the validation script again to confirm that:
 
-- Driver version is updated
-- No new 0x000000D1 bugcheck events occur after the restart
+- The driver version is updated.
+- No new **0x000000D1** bugcheck events occur after the restart.
 
 ## Additional resources
 
