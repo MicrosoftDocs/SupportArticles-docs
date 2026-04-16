@@ -146,6 +146,8 @@ Persistent schema mismatch issues don't meet these criteria, and don't resolve t
 
 ## Collect diagnostic data to help isolate possible causes
 
+Some schema mismatch issues have straightforward resolutions, but in many cases you'll need assistance from Microsoft Support. This section guides you in determining the type of issue that you have and whether a solution is available.
+
 ### Level 1: Review the overall replication status
 
 We recommend that you start your investigation by collecting replication data for all the DCs in the forest. Collecting this data helps identify any pockets of replication failure. To collect data and export it to a .csv file for analysis, run a command that resembles the following example at the command prompt:
@@ -215,9 +217,17 @@ If you can isolate object or attribute identifiers from the error or event infor
 
 If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
 
-### Level 3: Export object metadata
+### Level 3: Export and review object and attribute metadata
 
-If you can identify an object or attribute as the cause of the replication issue, dump the object's replication metadata. To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC, as shown in the following examples:
+If the events or error codes identify a particular object (or set of objects) or a particular object attribute as the trigger of the replication issue, the object or attribute metadata might provide more information about the issue.
+
+Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue has occurred.
+
+Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance.
+
+#### Export the object and attribute metadata
+
+To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC, as shown in the following examples:
 
 If you have the DN of the object that caused the issue, open an administrative Command Prompt window, and then run the following command:
 
@@ -247,6 +257,38 @@ Ldifde -f results.txt -d "GUID=<ObjectGuid_of Trigger_Object>" -s <Target_DC>
 Repadmin /showattr <Target_DC> "<DN_of Trigger_Object>"
 Repadmin /showattr <Target_DC> "GUID=<ObjectGuid_of Trigger_Object>"
 ```
+
+You can also use `ldp` commands to extract replication metadata.
+
+#### Review the object and attribute data
+
+You can compare the metadata for the same object on the source DC and its replication partners to see if the data replicated to each partner.
+
+> [!TIP]  
+> The metadata of objects or attributes that are waiting to be replicated shows a higher version number on the source DC than on the destination DC.
+
+LDIFDE, Repadmin, and LDP all provide slightly different views of object and attribute metadata. You can compare these views to identify discrepancies in the metadata. For example, consider the following `repadmin` output:
+
+```output
+USN   DSA Org                              USN Org. Time/Date  Version Attribute  
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime> 2  
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime> 3
+```
+
+The output should include attribute identifiers, but those values are missing.
+
+The following example shows the same metadata as viewed using the `ldp` tool. This output shows attribute identifiers in the `AttID` column.
+
+```output
+AttID  Ver Loc.USN Originating DSA                      Org.USN  Org.Time/Date  
+250000 2   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime>  
+250004 3   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
+```
+
+Such discrepancies in the metadata might help you determine what's causing the issue. However, in most cases you should contact Microsoft Support for further assistance.
+
+> [!IMPORTANT]  
+> Be sure to have the data that's listed in [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support) on hand, including the exported schema data.
 
 ## Resolution 1: Following a schema update, issues persist
 
@@ -309,69 +351,13 @@ In some cases, a DC might not correctly reload the in-memory schema version afte
 
 If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), and then contact Microsoft Support for assistance.
 
-## Resolution 2: One or more objects or attributes trigger a persistent issue
-
-Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue has occurred.
-
-Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance. For guidance in troubleshooting these issues, see [Troubleshooting other object or attribute issues](#troubleshooting-other-object-or-attribute-issues).
-
-### The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
+## Resolution 2: The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
 
 This error indicates that the identified object's security descriptor (the `nTSecurityDescriptor` attribute) is too large.
 
 The security descriptor contains the object's ACL information, which includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
 
 To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, it's efficient to use a script to collect this information. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
-
-### Troubleshooting other object or attribute issues
-
-Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute name
-
-Example  
-
-The two entries for replication metadata for a problem object as displayed by `Repadmin.exe` shows no `ldapdisplayname`:
-
-```output
-USN   DSA Org                              USN Org. Time/Date  Version Attribute  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime> 2  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime> 3
-```
-
-If any of the metadata fields has no associated name, try using `ldp.exe` to expose the internal `attributeid`.
-
-The metadata for the same object above as displayed in LDP.exe shows the `AttributeID` associated with the data
-
-```output
-AttID  Ver Loc.USN Originating DSA                      Org.USN  Org.Time/Date  
-250000 2   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 <DateTime>  
-250004 3   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
-```
-
-The attribute ID can be used to help identify the problem attribute, but requires the engagement of Microsoft Support.
-
-Version comparison - attributes to be replicated will have higher version numbers on the source.
-
-
-
-If the attribute triggering failure cannot be identified by the event log data or replication metadata, then it will be necessary to engage Microsoft Product Support to assist with the investigation.
-
-Schema Review  
-
-Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis is best performed with the assistance Microsoft Product Support.
-
-
-
-
-
-
-
-["Schema mismatch" error message occurs when you try to run the Active Directory Installation Wizard (Dcpromo.exe)](schema-mismatch-error-ad-installation-wizard-dcpromo.md)
-  Context: DCPromo fails
-  Symptoms: event ID 1203 (Microsoft-Windows-ActiveDirectory_DomainService or NTDS Replication)
-
-
-
-
 
 ## Data to provide to Microsoft Support  
 
