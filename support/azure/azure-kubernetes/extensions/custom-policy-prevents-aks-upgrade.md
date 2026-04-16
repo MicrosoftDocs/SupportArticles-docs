@@ -1,6 +1,6 @@
 ---
 title: AKS upgrade fails when using an Azure custom policy
-description: Learn how to resolve a scenario in which a Kubernetes upgrade fails when you use the Azure Policy Add-on for Azure Kubernetes Service (AKS).
+description: Resolve AKS upgrade failures caused by Azure custom policies blocking upgrades. Learn how to fix this issue with the Azure Policy Add-on for AKS.
 ms.date: 04/23/2024
 author: mosbahmajed
 ms.author: momajed
@@ -13,7 +13,9 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # AKS upgrade fails when using an Azure custom policy
 
-This article discusses how to resolve a scenario in which a Kubernetes upgrade fails when you use the Microsoft Azure Policy Add-on for Azure Kubernetes Service (AKS).
+## Summary
+
+This article explains how to resolve AKS upgrade failures that occur when an Azure custom policy blocks the upgrade. Learn the cause of this issue and how to apply the correct fix using the Azure Policy Add-on for Azure Kubernetes Service (AKS).
 
 ## Symptoms
 

@@ -7,7 +7,7 @@ ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.date: 02/26/2025
@@ -15,6 +15,10 @@ ms.date: 02/26/2025
 # Troubleshooting Red Hat OS upgrade issues
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
+
+This article explains how to resolve common troubleshooting issues that involve the leapp upgrade process on Red Hat operating systems.
 
 Doing a major upgrade on Red Hat Enterprise Linux (RHEL) involves transitioning from one major version to another major version, such as from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9. Major upgrades bring significant changes, including new features, enhancements, and improvements in security and performance. The process can be complex, but Red Hat provides tools and guidance to simplify and streamline the upgrade process. 
 

@@ -9,11 +9,13 @@ audience: ITPro
 ms.custom: 
   - Editing\Data\ImportExport
   - CSSTroubleshoot
+  - CI 10745
 ms.topic: troubleshooting
 ms.author: meerak
-appliesto: 
-  - Excel
-ms.date: 05/26/2025
+ms.reviewer: akeeler, v-lisalozano
+appliesto:
+  - Microsoft Excel
+ms.date: 03/23/2026
 ---
 
 # Unable to export to Excel from SharePoint
@@ -26,7 +28,7 @@ When you use the **Export to Excel** button in Microsoft SharePoint, Excel start
 
 ## Cause
 
-Excel has a 55-second timeout when fetching data from SharePoint.Therefore, you may receive the error message when the timeout of this client is exceeded. 
+Excel has a 55-second timeout when fetching data from SharePoint. Therefore, you may receive the error message when the timeout of this client is exceeded.
 
 ## Resolution
 

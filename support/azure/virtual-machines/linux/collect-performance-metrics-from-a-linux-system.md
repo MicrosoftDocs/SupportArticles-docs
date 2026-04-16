@@ -7,7 +7,7 @@ editor: divargas-msft
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Performance
@@ -20,6 +20,8 @@ ms.date: 02/06/2025
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2303209)
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+## Summary
 
 This article describes how to retrieve performance metrics from a Linux virtual machine (VM) in Microsoft Azure by using the Sysstat utilities (performance monitoring tools). It provides examples of how to use these utilities and read their outputs.
 

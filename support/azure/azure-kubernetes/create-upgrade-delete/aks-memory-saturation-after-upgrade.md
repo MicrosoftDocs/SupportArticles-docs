@@ -9,6 +9,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Memory saturation occurs in pods after cluster upgrade to Kubernetes 1.25
 
+## Summary
+
 This article discusses how to fix pods that stop working because of memory saturation or out-of-memory (OOM) errors that occur after you upgrade a Microsoft Azure Kubernetes Service (AKS) cluster to Kubernetes 1.25.*x*.
 
 ## Symptoms

@@ -8,13 +8,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Editing\Functions
   - CSSTroubleshoot
+  - CI 10982
 appliesto: 
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-ms.date: 05/26/2025
+  - Excel for Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 04/01/2026
 ---
 
 # Excel statistical functions: RSQ

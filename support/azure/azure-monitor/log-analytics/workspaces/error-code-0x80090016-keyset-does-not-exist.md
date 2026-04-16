@@ -6,13 +6,13 @@ ms.reviewer: irfanr, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-monitor
 keywords: 
-#Customer intent: As a Log Analytics user, I want to resolve error code 0x80090016 "Keyset does not exist" so I can connect to my event viewer and agent logs. 
+#Customer intent: As a Log Analytics user, I want to resolve error code 0x80090016 "Keyset does not exist" so that I can connect to my event viewer and agent logs. 
 ms.custom: sap:Create and manage Log Analytics workspaces
 ---
 
-# Error code 0x80090016 - Keyset does not exist in event viewer or agent logs
+# "Keyset does not exist (0x80090016)" error in event viewer and agent logs
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure/log-analytics-agent-end-of-life-note.md)]
+## Summary
 
 This article explains how to resolve error code 0x80090016 - "Keyset does not exist" when you try to connect to your event viewer or agent logs.
 
@@ -39,7 +39,9 @@ Description:   Loading the private key for the client authentication certificate
 
 ## Cause
 
-The server was cloned from a golden image (also known as a master image) that already had the Windows Log Analytics agent installed and configured. The connection fails because the certificates include the name of the original server that was cloned instead of the name that's currently used by Windows. (**Note:** Cloning a computer that has the Log Analytics agent already configured is not supported.)
+The server was cloned from a golden image (also known as a master image) that already had the Windows Log Analytics agent installed and configured. The connection fails because the certificates include the name of the original server that was cloned instead of the name that's currently used by Windows. 
+
+**Note:** Cloning a computer that has the Log Analytics agent already configured isn't supported.
 
 ## Solution
 
@@ -55,7 +57,7 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
 1. To view the existing MMA certificates in MMC, navigate to **Certificates** > **Microsoft Monitoring Agent** > **Certificates**.
 
-1. We recommend that you export each certificate so that you have a backup copy for security and auditing. To do this, follow these steps:
+1. We recommend that you export each certificate so that you have a backup copy for security and auditing. Follow these steps:
 
      1. Select and right-click each listed certificate individually, and then select **All Tasks** > **Export** > **Next** > **No, do not export the private key**.
 
@@ -63,18 +65,16 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
      1. On the **File to Export** page, in the **file name** field, enter the name of the certificate file, and then **Browse** to the location where you want to export the certificate. Then, select **Save** > **Next** > **Finish**.
 
-1. After you export backup copies of the certificates that are listed in the middle pane as described in step 6, delete the certificates from MMC. Keep the console open.
+1. After you export backup copies of the certificates, delete the certificates from MMC. Keep the console open.
 
 1. In the Services snap-in, select **Microsoft Monitoring Agent**, and then select the **Start Service** icon to restart it.  
 
-1. Wait one minute. Then, in MMC, select the Certificates snap-in, and select the **Refresh** icon or F5 to refresh. You should see new certificates.
+1. Wait one minute. Then, in MMC, select the Certificates snap-in, and select the **Refresh** icon or press F5 to refresh. You should see new certificates.
 
-Observe the agent, the event logs, and your Log Analytics workspace to determine whether these steps resolved the issue.
+Examine the agent, the event logs, and your Log Analytics workspace to determine whether these steps resolved the issue.
 
 ## More information
 
 [Microsoft Monitoring Agent setup](/services-hub/health/mma-setup)
 
 [Log Analytics Agent overview: installation options](/azure/azure-monitor/agents/log-analytics-agent#installation-options)
-
- 

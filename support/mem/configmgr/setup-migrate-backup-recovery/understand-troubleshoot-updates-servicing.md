@@ -1386,7 +1386,7 @@ This issue occurs because the files aren't downloaded correctly. To fix this iss
 
 A specific global replication group, **CMUpdates**, replicates the installation completion information one time per minute. If the replication process isn't working correctly, the console continues to display **Installing** even if the update installed successfully on all sites.
 
-In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot-database-replication-service-issues.md) for help.
+In the console, go to **Monitoring** > **Overview** > **Database Replication**. For each link for the **CMUpdates** replication group states, review the **Initialization** and **Replication** tabs. If you find an issue, see [Troubleshoot database replication service issues in Configuration Manager](../data-transfer-sites/troubleshoot/troubleshoot-database-replication-service-issues.md) for help.
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 

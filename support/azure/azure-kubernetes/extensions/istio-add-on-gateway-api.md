@@ -1,19 +1,21 @@
 ---
 title: Istio Service Mesh Add-on Gateway API ingress Troubleshooting
-description: Learn how to do Gateway API ingress troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+description: Learn how to troubleshoot Gateway API ingress on the Istio service mesh add-on for Azure Kubernetes Service (AKS) and resolve routing issues fast.
 ms.date: 08/26/2025
 author: nshankar13
 ms.author: nshankar
 ms.reviewer: jkatariya
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot Gateway-API based ingress gateways of the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 
-# Istio service mesh add-on gateway api ingress troubleshooting
+# Istio service mesh add-on gateway API ingress troubleshooting
 
-This article discusses how to troubleshoot ingress gateways that are configured by using the [Kubernetes Gateway API](https://gateway-api.sigs.k8s.io/) for the Istio service mesh add-on.
+## Summary
+
+This article covers Istio service mesh add-on Gateway API ingress troubleshooting in Azure Kubernetes Service (AKS) so you can resolve ingress traffic routing problems quickly.
 
 ## Overview
 

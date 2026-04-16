@@ -13,6 +13,8 @@ ms.date: 05/06/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses how to troubleshoot memory performance issues that occur on Linux virtual machines (VMs) in Microsoft Azure. 
 
 The first step in working on memory-related issues is to evaluate the following items:
@@ -221,7 +223,7 @@ The available memory (`free`) is 29,500 KB. However, the minimum watermark (`min
 
 ### Monitor gradual memory growth
 
-OOM events are easy to detect because related messages are logged to the console and system logs. However, gradual increases in memory usage that don’t cause an OOM event can be harder to detect.
+OOM events are easy to detect because related messages are logged to the console and system logs. However, gradual increases in memory usage that don't cause an OOM event can be harder to detect.
 
 To monitor memory usage over time, use the `sar` tool from the `sysstat` package. To focus on the memory details, use the "r" option (for example, "sar -r"). 
 
@@ -245,7 +247,7 @@ This output displays all running processes and their statistics. Another approac
 
 #### Why sort by RSS?
 
-Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process reserves, including memory that isn’t committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it’s actively using more than 1.3 GB of memory.
+Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process reserves, including memory that isn't committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it's actively using more than 1.3 GB of memory.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
  

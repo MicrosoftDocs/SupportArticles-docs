@@ -274,6 +274,10 @@ items:
         href: guest-os-firewall-misconfigured.md
       - name: Troubleshoot RDP error caused by netvsc.sys
         href: troubleshoot-rdp-driver-netvsc.md
+      - name: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs
+        href: troubleshoot-windows-vm-mellanox-network-driver-crash.md
+      - name: Use the Azure VM Mellanox Driver Validation tool
+        href: windows-vm-mellanox-network-driver-validation-tool.md
       - name: Maximum allowed connections reached
         href: troubleshoot-rdp-too-many-admin-sessions-open.md
       - name: Can't sign into your account

@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # AKS cluster upgrade fails because of NSG rules
 
+## Summary
+
 This article discusses how to resolve issues if your Azure Kubernetes Service (AKS) cluster upgrade fails because of network security group (NSG) rules.
 
 ## Prerequisites

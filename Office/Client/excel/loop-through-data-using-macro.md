@@ -6,17 +6,19 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: mikestow
+ms.reviewer: mikestow, akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10891
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft Office Excel 2007
-  - Microsoft Office Excel 2003
-  - Excel 2010
-ms.date: 05/26/2025
+  - Excel for Microsoft 365 
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016 
+ms.date: 03/31/2026
 ---
 
 # How to loop through a list of data on a worksheet by using macros in Excel

@@ -6,19 +6,20 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: v-raddis, akeeler
+ms.reviewer: v-raddis, akeeler, v-lisalozano
 ms.custom: 
   - Open\Links
   - CI 116037
+  - CI 11012
   - CSSTroubleshoot
 search.appverid: MET150
 appliesto: 
-  - Excel 2010
-  - Excel 2013
-  - Excel 2016
-  - Excel 2019
   - Excel for Microsoft 365
-ms.date: 05/26/2025
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2019
+  - Microsoft Excel 2016
+ms.date: 04/01/2026
 ---
 # How to control the startup message about updating linked workbooks in Excel
 

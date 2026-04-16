@@ -52,6 +52,8 @@ items:
 
 - name: Queries, stored procedures, views, functions, triggers (T-SQL)
   items:
+  - name: Decreased query performance after database maintenance or reconfigure operations
+    href: general/decreased-query-performance.md
   - name: Detours or similar techniques cause issues
     href: general/issue-detours-similar-techniques.md
   - name: Error 556 insert exec failed

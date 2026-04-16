@@ -18,13 +18,17 @@ ms.custom: sap:Cannot create a VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides troubleshooting steps for the error "AttachDiskWhileBeingDetached" that occurs when you try to update a virtual machine (VM) whose previous data disk detach failed. The error message indicates that the disk is currently being detached or the last detach operation failed, and it suggests waiting until the disk is completely detached or explicitly deleting/detaching the disk again.
+
 ## Symptom
 
 When you're trying to update a virtual machine whose previous data disk detach failed, you might come across this error code.
 
 ```
 Code=\"AttachDiskWhileBeingDetached\" 
-Message=\"Cannot attach data disk '{disk ID}' to virtual machine '{vmName}' because the disk is currently being detached or the last detach operation failed. Please wait until the disk is completely detached, and then try again or delete/detach the disk explicitly again\” 
+Message=\"Cannot attach data disk '{disk ID}' to virtual machine '{vmName}' because the disk is currently being detached or the last detach operation failed. Please wait until the disk is completely detached, and then try again or delete/detach the disk explicitly again\" 
 ```
 
 ## Cause

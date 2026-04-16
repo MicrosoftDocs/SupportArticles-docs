@@ -11,6 +11,8 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Cluster autoscaler fails to scale with "failed to fix node group sizes" error
 
+## Summary
+
 This article discusses how to resolve the "failed to fix node group sizes" error that appears on the cluster autoscaler logs when you're creating or managing AKS clusters.
 
 ## Symptoms

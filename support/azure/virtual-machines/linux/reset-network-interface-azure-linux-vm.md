@@ -18,6 +18,8 @@ ms.date: 09/19/2024
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article shows how to reset the network interface for Azure Linux Virtual Machine (VM) to resolve issues when you can't connect to an Azure Linux VM after:
 
 - You disable the default network interface (NIC).

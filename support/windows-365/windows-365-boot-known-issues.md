@@ -17,12 +17,6 @@ ms.collection:
 
 This article provides solutions to the recent known issues with [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
 
-## Wi-Fi connectivity
-
-Wi-Fi connections that require captive browser-based authentication or consent aren't supported.
-
-User-based Wi-Fi profiles that require the user to sign in to connect to Wi-Fi aren't supported. New users who never signed in before converting the device to a Windows 365 Boot device can't use the device to connect to the network.
-
 ## VPN support
 
 Windows 365 Boot only supports VPN clients that don't require application installation. App-based VPN clients that require users to sign in aren't supported because users can't interact with the VPN client from a Windows 365 Boot device.

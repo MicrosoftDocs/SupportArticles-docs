@@ -1,14 +1,16 @@
 ---
 title: Azure policy reports ConstraintNotProcessed for a running container
-description: This article provides a solution to an issue in which Azure Policy reports a running container as ConstraintNotProcessed.
+description: Learn why Azure Policy reports running containers as ConstraintNotProcessed in AKS, and follow the fix to upgrade your cluster and restore compliance.
 ms.date: 03/27/2024
 ms.reviewer: momajed
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
-# Azure policy reports 'ConstraintNotProcessed' for running container
+# Azure Policy reports ConstraintNotProcessed for a running container
 
-This article provides a solution to the error that you encounter when Azure Policy reports a running container as `ConstraintNotProcessed`.
+## Summary
+
+If Azure Policy reports a running container as `ConstraintNotProcessed`, this article helps you identify the AKS version issue and apply the cluster upgrade fix.
 
 ## Symptoms
 

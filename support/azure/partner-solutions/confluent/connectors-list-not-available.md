@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.custom: sap:Confluent on Azure
 ms.service: partner-services 
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.date: 09/25/2025
 ai-usage: ai-assisted
 # customer intent: As an Azure administrator or user, I can't see the list of Confluent connectors, and I want to troubleshoot the problem. 

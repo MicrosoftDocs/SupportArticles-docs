@@ -1,6 +1,6 @@
 ---
-title: Can't view resources in Kubernetes resource viewer on Azure portal
-description: Troubleshoot why you can't view resources in the Kubernetes resource viewer in the Azure portal for a cluster configured with API server-authorized IP ranges.
+title: Troubleshoot Kubernetes resource viewer access in Azure portal
+description: Can't view resources in Kubernetes resource viewer in Azure portal? Learn fixes for authorized IP ranges and private clusters. Resolve access now.
 ms.date: 04/14/2025
 ms.reviewer: edneto, chiragpa, nickoman, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
@@ -10,6 +10,8 @@ ms.custom: sap:Connectivity
 ---
 # Can't view resources in Kubernetes resource viewer in Azure portal
 
+## Summary
+
 This article discusses how to resolve an issue that prevents you from using the Azure portal to view resources in the Kubernetes resource viewer.
 
 ## Symptoms
@@ -18,9 +20,9 @@ When you try to view resources in the [Kubernetes resource viewer](/azure/aks/ku
 
 > `Unable to reach the API server '<server-url>' or API is too busy to response. Check your network setting`.
 
-:::image type="content" source="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png" alt-text="Screenshot of workloads in the AKS resource." lightbox="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png":::
+:::image type="content" source="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png" alt-text="Screenshot of the Kubernetes resource viewer in Azure portal showing an API server network connectivity error message." lightbox="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png":::
 
-## Cause 1: You configured authorized IP ranges
+## Cause 1: You configured authorized IP address ranges
 
 You configured your Microsoft Azure Kubernetes Service (AKS) cluster to access the cluster API server by using authorized IP address ranges that your computer can't access.
 
@@ -28,7 +30,7 @@ You configured your Microsoft Azure Kubernetes Service (AKS) cluster to access t
 
 When you run the [az aks create](/cli/azure/aks#az-aks-create) or [az aks update](/cli/azure/aks#az-aks-update) command in [Azure CLI](/cli/azure/install-azure-cli), make sure that the `--api-server-authorized-ip-ranges` parameter includes access for the local client computer to the IP addresses or IP address ranges from which the portal is being browsed.
 
-## Cause 2: AKS is a private cluster
+## Cause 2: Your AKS cluster is private
 
 Your AKS is created as a private cluster, and you're accessing the Azure portal from a network that can't communicate with the subnet to which your AKS is connected.
 

@@ -1,6 +1,6 @@
 ---
-title: Azure VM cannot RDP - driver IRQL not less or equal
-description: Troubleshoot Azure VM cannot RDP - driver IRQL not less or equal.
+title: Azure VM can't RDP - driver IRQL not less or equal
+description: Troubleshoot Azure VM can't RDP - driver IRQL not less or equal.
 ms.date: 08/13/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
@@ -8,13 +8,17 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# Azure VM cannot RDP - driver IRQL not less or equal
+# Azure VM can't RDP - driver IRQL not less or equal
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides troubleshooting steps for an Azure virtual machine (VM) that can't be accessed through Remote Desktop Protocol (RDP) and is experiencing a driver IRQL not less or equal error.
+
 ## Symptoms
 
-When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
+When you pull the screenshot of the VM, the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
 
 `Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.`
 `(%% complete)`
@@ -29,11 +33,11 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
 
 ## Cause
 
-1. If any of the following knowledge-bases (KBs) (July 2018) were recently installed, there is a known issue where a race condition can cause this crash.
+1. If any of the following knowledge-bases (KBs) (July 2018) were recently installed, there's a known issue where a race condition can cause this crash.
 
    If the VM is booting, you can install the corresponding KB listed as containing the fix.
 
-   If the VM is not booting, proceed with the offline repair below, and rollback the KB using **DSIM**.
+   If the VM isn't booting, proceed with the offline repair below, and rollback the KB using **DSIM**.
 
    |SKU|Known Issue KB|Resolved in KB|
    |---|---|---|
@@ -50,7 +54,7 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
    |Win7 / W2K8 R2 (Monthly roll-up)|[KB4338818](https://support.microsoft.com/help/4338818)|[KB4338821](https://support.microsoft.com/help/4338821)|
    |Windows Server 2008|-|[KB4345397](https://support.microsoft.com/help/4345397/)|
 
-2. If the cause is not due to one of the above KBs having been recently installed, then a memory dump analysis will be required to determine the cause.
+2. If the cause isn't due to one of the above KBs having been recently installed, then a memory dump analysis is required to determine the cause.
 
 ## Solution
 
@@ -85,11 +89,11 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
       `dism /Image:e:\ /Remove-Package /PackageName:Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.1944.1.3`
 
       > [!NOTE]
-      > DISM is not a fast tool. Every time that you run it, and depending on the size of the package being removed, this operation could last quite some time, up to approximately 16 minutes. As the process continues, you will see a percentage process of the operation.
+      > DISM isn't a fast tool. Every time that you run it, and depending on the size of the package being removed, this operation could last quite some time, up to approximately 16 minutes. As the process continues, you'll see a percentage process of the operation.
 
    Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
-2. If the above fix doesn't apply, then a memory dump analysis will be required.
+2. If the above fix doesn't apply, then a memory dump analysis is required.
 
 #### Collect the memory dump file
 

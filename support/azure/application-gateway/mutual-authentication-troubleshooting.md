@@ -6,7 +6,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-application-gateway
 ms.topic: troubleshooting
-ms.date: 07/09/2025
+ms.date: 03/27/2026
+ms.custom: sap:Configuration and Setup
 # Customer intent: As an application administrator, I want to troubleshoot mutual authentication issues on the Application Gateway, so that I can ensure secure communication and resolve errors efficiently.
 ---
 

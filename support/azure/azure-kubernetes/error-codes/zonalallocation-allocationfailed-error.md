@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
-description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
+description: Troubleshoot ZonalAllocationFailed and AllocationFailed errors in AKS create or update operations. Follow steps to fix capacity constraints quickly.
 ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
@@ -10,6 +10,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+
+## Summary
 
 This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` error that might occur when you try to create, deploy, or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -56,7 +58,7 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 
 ### Solution 3: Upgrade in place using `MaxUnavailable`
 
-If you don’t need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
+If you don't need surge nodes during upgrades, see [Customize unavailable nodes](/azure/aks/upgrade-aks-node-pools-rolling#customize-unavailable-nodes) for information on how to upgrade with the existing capacity. Set `MaxUnavailable` to a value greater than zero (0) and set `MaxSurge` equal to zero (0). Existing nodes are then cordoned and drained one at a time and pods are evicted to remaining nodes. No buffer node is created.
 
 ### Solution 4: Use deployment recommender in portal for new cluster creates
 

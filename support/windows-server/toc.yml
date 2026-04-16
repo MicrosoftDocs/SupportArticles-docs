@@ -131,6 +131,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
+    - name: Abandoned objects block replication for Global Catalog naming contexts
+      href: ./active-directory/abandoned-objects-block-replication-global-catalog-naming-contexts.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory installation fails
@@ -446,6 +448,8 @@ items:
       href: ./active-directory/set-user-password-with-ldifde.md
     - name: Some applications and APIs require access to authorization information
       href: ./active-directory/apps-apis-require-access.md
+    - name: Specify a server name and port number for an Active Directory cmdlet
+      href: ./active-directory/specify-server-port-active-directory-powershell-cmdlet.md
     - name: The Lingering Object Liquidator (LoL) tool
       href: ./active-directory/lingering-object-liquidator-tool.md
     - name: '"This property is limited to 64 values" error'
@@ -642,6 +646,8 @@ items:
       href: ./backup-and-storage/best-practices-using-dynamic-disks.md
     - name: Can't access a CSV volume from a passive node
       href: ./backup-and-storage/event-5120-5142-access-clusterstorage-folder.md
+    - name: Can't extend a disk volume because of the file system cluster limit
+      href: ./backup-and-storage/cant-extend-disk-volume-file-system-cluster-limit.md
     - name: Can't select or format hard disk partition
       href: ./backup-and-storage/cannot-select-format-hard-disk-partition.md
     - name: Can't start a computer from a FAT32 file system USB flash drive
@@ -952,8 +958,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
-    - name: A Group Policy setting isn't available in the security policy settings list
-      href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
       href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Can't apply user Group Policy settings
@@ -1066,6 +1070,10 @@ items:
       href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
+  - name: Cluster Witness and quorum
+    items:
+    - name: 'Troubleshooting guidance: Configuring Witness resource'
+      href: ./high-availability/configuring-witness-resource.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
@@ -2208,6 +2216,8 @@ items:
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
+    - name: Shared folder for virtual desktop profiles experiences intermittent communication failures inWindows Server 2019
+      href: ./remote/intermittent-communication-failures-for-virtual-desktop-profile-shared-folder.md
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
 - name: Resources
@@ -2562,6 +2572,8 @@ items:
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: "Troubleshooting guidance: VM settings"
+      href: ./virtualization/virtual-machine-settings-troubleshooting-guidance.md
     - name: Can't access Hyper-V virtual machines via VMConnect
       href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
@@ -2574,6 +2586,8 @@ items:
       href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
+    - name: "Troubleshooting guidance: High availability virtual machines"
+      href: ./virtualization/high-availability-virtual-machine-troubleshooting-guidance.md
     - name: Cluster Shared Volumes don't respond during a planned cluster node drain
       href: ./virtualization/shared-volumes-do-not-respond.md
     - name: Unresponsive VMs after cluster failover failure

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Dapr extension installation errors 
-description: Troubleshoot errors that occur while installing the Distributed Application Runtime (Dapr) extension for Azure Kubernetes Service (AKS) or Arc for Kubernetes.
+description: Fix common Dapr extension installation errors on Azure Kubernetes Service (AKS) or Arc for Kubernetes, and follow these steps to resolve issues faster.
 editor: v-jsitser
 ms.reviewer: nigreenf, v-leedennis, addobres
 ms.service: azure-kubernetes-service
@@ -10,11 +10,13 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 # Troubleshoot Dapr extension installation errors
 
+## Summary
+
 This article discusses some common error messages that you may receive when you install or update the [Distributed Application Runtime (Dapr)](https://dapr.io/) extension for Microsoft Azure Kubernetes Service (AKS) or Arc for Kubernetes.
 
 [Learn more about the level of support provided for the Dapr extension.](#next-steps)
 
-## Scenario 1: Installation fails but doesn't show an error message
+## Scenario 1: installation fails but doesn't show an error message
 
 If the extension generates an error message when you create or update it, you can inspect where the creation failed by running the [az k8s-extension list](/cli/azure/k8s-extension#az-k8s-extension-list) command:
 
@@ -52,7 +54,7 @@ Here's another example of a JSON error message:
 ]
 ```
 
-### Solution 1: Restart the cluster, register the service provider, or delete and reinstall Dapr
+### Solution 1: restart the cluster, register the service provider, or delete and reinstall Dapr
 
 To fix this issue, try the following methods:
 
@@ -62,7 +64,7 @@ To fix this issue, try the following methods:
 
 - Force delete and [reinstall the Dapr extension](/azure/aks/dapr).
 
-## Scenario 2: Targeted Dapr version doesn't exist
+## Scenario 2: targeted Dapr version doesn't exist
 
 When you try to install the Dapr extension to [target a specific version](/azure/aks/dapr#targeting-a-specific-dapr-version), you receive an error message that states that the Dapr version doesn't exist:
 
@@ -72,11 +74,11 @@ When you try to install the Dapr extension to [target a specific version](/azure
 >
 > Message: The extension operation failed with the following error:  Failed to resolve the extension version from the given values.
 
-### Solution 2: Install again for a supported Dapr version
+### Solution 2: install again for a supported Dapr version
 
 Try again to install the extension. Make sure that you use a [supported version of Dapr](/azure/aks/dapr#dapr-versions).
 
-## Scenario 3: The targeted Dapr version exists but not in the specified region
+## Scenario 3: the targeted Dapr version exists but not in the specified region
 
 Because some versions of Dapr aren't available in all regions, you might receive the following error message:
 
@@ -86,7 +88,7 @@ Because some versions of Dapr aren't available in all regions, you might receive
 >
 > Message: Extension type microsoft.dapr is not registered in region \<regionname>
 
-### Solution 3: Install in a different region
+### Solution 3: install in a different region
 
 Install in a [region in which your Dapr version is supported](/azure/aks/dapr#cloudsregions).
 
@@ -96,11 +98,11 @@ You try to install the Dapr extension for AKS or Arc for Kubernetes, but you rec
 
 > (ExtensionOperationFailed) The extension operation failed with the following error:  Error: {failed to install chart from path [] for release [dapr-ext]: err [rendered manifests contain a resource that already exists. Unable to continue with install: ServiceAccount "dapr-operator" in namespace "dapr-system" exists and cannot be imported into the current release: invalid ownership metadata; annotation validation error: key "meta.helm.sh/release-name" must equal "dapr-ext": current value is "dapr"]} occurred while doing the operation : {Installing the extension} on the config
 
-### Solution 4: Uninstall Dapr OSS first
+### Solution 4: uninstall Dapr OSS first
 
 Uninstall the Dapr OSS before you install the Dapr extension. For more information, see [Migrate from Dapr OSS to the Dapr extension for AKS](/azure/aks/dapr-migration).
 
-## Scenario 5: The placement server pod is in a bad state
+## Scenario 5: the placement server pod is in a bad state
 
 You encounter the following error:
 

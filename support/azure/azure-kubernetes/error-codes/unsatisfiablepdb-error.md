@@ -1,6 +1,6 @@
 ---
 title: AKS cluster upgrade fails with UnsatisfiablePDB error
-description: Provides solutions to the UnsatisfiablePDB error when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+description: Fix the UnsatisfiablePDB error in AKS cluster upgrades by resolving Pod Disruption Budget issues that block node drain. Get your cluster upgraded successfully.
 ms.date: 03/05/2025
 ms.reviewer: chiragpa, v-weizhu, addobres
 ms.service: azure-kubernetes-service
@@ -10,7 +10,9 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Error "UnsatisfiablePDB" when upgrading an AKS cluster
 
-This article discusses how to identify and resolve the "UnsatisfiablePDB" error that might occur when you try to [upgrade an Azure Kubernetes Service (AKS) cluster](/azure/aks/upgrade-aks-cluster).
+## Summary
+
+This article explains how to identify and resolve the "UnsatisfiablePDB" error that occurs when you upgrade an Azure Kubernetes Service (AKS) cluster, so you can complete the upgrade successfully.
 
 ## Prerequisites
 

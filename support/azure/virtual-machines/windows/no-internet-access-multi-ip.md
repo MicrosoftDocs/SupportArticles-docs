@@ -13,6 +13,10 @@ ms.custom: sap:Cannot connect to my VM
 
 _Original KB number:_ &nbsp; 4040882
 
+## Summary
+
+When an Azure Windows virtual machine (VM) is configured with multiple IP addresses, it may lose Internet connectivity or the ability to connect to Azure services. This issue occurs because Windows may select a different primary IP address than the one configured in the Azure portal, leading to connectivity problems.
+
 ## Symptoms
 
 In Microsoft Azure, you set multiple IP addresses in the network interface of an Azure Windows virtual machine. After you make the settings, the virtual machine cannot connect to the Internet or to Azure services, such as Azure Backup.

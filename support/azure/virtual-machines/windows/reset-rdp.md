@@ -22,6 +22,10 @@ ms.reviewer: herensin, v-monicaba
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
+## Summary
+
+This article details how to reset Remote Desktop Services or its admin password on a Windows VM in Azure.
+
 If you can't connect to a Windows virtual machine (VM), you can reset Remote Desktop Services and credentials by using the VMAccess extension. Use either of the following methods to perform this action:
 
 - [Reset by using the Azure portal](#reset-by-using-the-azure-portal)
