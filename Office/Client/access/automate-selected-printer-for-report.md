@@ -11,12 +11,12 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: V-DARMAC
+ms.reviewer: V-DARMAC, denniwil, v-lisalozano 
 appliesto: 
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # How to automate the process of selecting the printer for a report in Microsoft Access

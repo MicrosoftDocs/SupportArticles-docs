@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: suesch
+ms.reviewer: suesch, denniwil, v-lisalozano 
 search.appverid: 
   - MET150
 appliesto: 
@@ -16,7 +16,7 @@ appliesto:
   - Access 2013
   - Access for Microsoft 365
   - Access 2019
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # Access freezes when you open a linked table to a SharePoint list

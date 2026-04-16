@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: SHAYDEN
+ms.reviewer: SHAYDEN, denniwil, v-lisalozano 
 appliesto: 
   - Access 2016
   - Access 2013
@@ -19,7 +19,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table

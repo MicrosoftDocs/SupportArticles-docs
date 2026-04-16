@@ -9,13 +9,13 @@ ms.topic: troubleshooting
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: denniwil, v-lisalozano 
 appliesto: 
   - Access 2010
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 # "Cannot find the input table or query" or "record source doesn't exist" error when using Access
 

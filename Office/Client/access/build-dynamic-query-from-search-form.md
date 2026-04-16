@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: FELIXL
+ms.reviewer: FELIXL, denniwil, v-lisalozano 
 appliesto: 
   - Access for Microsoft 365
   - Access 2019
@@ -21,7 +21,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # How to build a dynamic query with values from a search form in Access

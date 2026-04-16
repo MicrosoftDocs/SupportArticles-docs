@@ -11,11 +11,11 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: robdil
+ms.reviewer: robdil, denniwil, v-lisalozano 
 appliesto: 
   - Access 2007
   - Access 2002
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # You cannot add records or delete records with the ADO AddNew method or with the Delete method

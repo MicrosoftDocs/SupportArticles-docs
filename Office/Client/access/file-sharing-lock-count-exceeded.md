@@ -11,13 +11,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: denniwil, v-lisalozano
 appliesto: 
   - Access for Microsoft 365
   - Access LTSC 2021
   - Access 2019
   - Access 2016
   - Access 2013
-ms.date: 05/26/2025
+ms.date: 04/16/2026
 ---
 
 # "File sharing lock count exceeded…" error during large transaction processing
