@@ -10,11 +10,14 @@ ms.topic: troubleshooting
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 11127
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Office Excel 2007
-  - Office Excel 2003
-ms.date: 05/26/2025
+  - Excel for Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021 
+ms.date: 04/13/2026
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel
@@ -42,23 +45,15 @@ For example, this behavior is known to occur when the Google Desktop search tool
 
 ## Workaround
 
-To work around this behavior, remove the COM add-in in Excel. To do this, follow these steps, as appropriate for the version of Excel that you are running.
+To work around this behavior, remove the COM add-in in Excel.
 
-### Microsoft Office Excel 2007
-
-1. Click the **Microsoft Office Button**, and then click **Excel Options**.
+1. Click the **Microsoft File menu**, and then click **Excel Options**.
 2. Click **Add-Ins**.
 3. Click **Excel Add-ins** in the **Manage** box, and then click **Go**.
 4. In the **Add-Ins** dialog box, click to clear the check box for the add-ins that are known to cause this behavior.
 5. Click **OK**.
 
-### Microsoft Office Excel 2003
-
-1. On the **Tools** menu, click **Add-Ins**.
-2. In the **Add-Ins** dialog box, click to clear the check box for the add-ins that are known to cause this behavior.
-3. Click **OK**.
-
-## More Information
+## More information
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
 

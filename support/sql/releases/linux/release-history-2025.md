@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2025 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, atsingh
-ms.date: 03/12/2026
+ms.date: 04/14/2026
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2025
@@ -16,6 +16,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
+| [CU 3 GDR (Apr 2026)](#17-0-4030) | 17.0.4030.1 | 2026-04-14 |
 | [CU 3](#17-0-4025) | 17.0.4025.3 | 2026-03-12 |
 | [CU 2 GDR (Mar 2026)](#17-0-4020) | 17.0.4020.2 | 2026-03-10 |
 | [CU 2](#17-0-4015) | 17.0.4015.4 | 2026-02-12 |
@@ -38,11 +39,28 @@ For release history on other editions, see the following articles:
 
 - Container tags can vary by release. For a list of available tags, see [RHEL](https://mcr.microsoft.com/product/mssql/rhel/server/tags) and [Ubuntu](https://mcr.microsoft.com/product/mssql/server/tags) in the Microsoft Artifact Registry.
 
+<a id="17-0-4030"></a>
+
+## CU 3 GDR (April 2026)
+
+This is the Cumulative Update 3-GDR (CU 3 GDR) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a security update that also includes the previously released CU (CU 3). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4030.1. For information about the fixes and improvements in this release, see [KB 5083245](https://support.microsoft.com/help/5083245).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 10.x RPM packages**<br /><br />(Get RPM packages for [RHEL 9.x](https://packages.microsoft.com/rhel/9.0/mssql-server-2025/Packages/m/)) | 17.0.4030.1-10 | [Database Engine RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-17.0.4030.1-10.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-extensibility-17.0.4030.1-10.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-fts-17.0.4030.1-10.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-ha-17.0.4030.1-10.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/10/mssql-server-2025/Packages/m/mssql-server-polybase-17.0.4030.1-10.x86_64.rpm) |
+| **Ubuntu 24.04 Debian packages**<br /><br />(Get Debian packages for [Ubuntu 22.04](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2025/pool/main/m/mssql-server/)) | 17.0.4030.1-10 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server/mssql-server_17.0.4030.1-10_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_17.0.4030.1-10_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-fts/mssql-server-fts_17.0.4030.1-10_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-ha/mssql-server-ha_17.0.4030.1-10_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025/pool/main/m/mssql-server-polybase/mssql-server-polybase_17.0.4030.1-10_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
 <a id="17-0-4025"></a>
 
 ## CU 3 (March 2026)
 
-This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4025.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2025/cumulativeupdate3).
+This is the Cumulative Update 3 (CU 3) release of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.4025.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2025/cumulativeupdate3.md).
 
 ### Package details
 

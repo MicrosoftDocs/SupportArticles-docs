@@ -11,6 +11,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: SQL Server VMs
 
+## Summary
+
 This article discusses how to troubleshoot an issue that prevents you from extending the volume on a Microsoft SQL Server-based standalone server virtual machine (VM) that's deployed from Azure Marketplace.
 
 ## Symptoms

@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010143
 
+## Summary
+
 This article provides a solution to an issue where a Windows virtual machine (VM) doesn't start with the error "INACCESSIBLE_BOOT_DEVICE" or "Boot failure".
 
 ## Symptoms

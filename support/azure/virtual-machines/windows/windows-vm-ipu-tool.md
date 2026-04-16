@@ -13,9 +13,9 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-ryanberg
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Overview
+## Summary
 
-This PowerShell script scans **Component-Based Servicing (CBS) logs** for known Windows servicing error codes that indicate issues requiring an **in-place upgrade (IPU)** or repair. It counts occurrences of each error code and provides a summary at the end. If any errors are found, a remediation link to Microsoft documentation is displayed.
+This article provides information about the Azure Virtual Machine (VM) Windows Update Error Detection tool, a PowerShell script that scans **Component-Based Servicing (CBS) logs** for known Windows servicing error codes that indicate issues requiring an **in-place upgrade (IPU)** or repair. The tool counts occurrences of each error code and provides a summary at the end. If any errors are found, a remediation link to Microsoft documentation is displayed.
 
 ## Features
 

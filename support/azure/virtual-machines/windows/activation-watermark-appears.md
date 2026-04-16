@@ -14,6 +14,8 @@ ms.topic: troubleshooting-problem-resolution
 
 **Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2025 Datacenter Azure Edition, Windows VMs running Windows Server 2022 Datacenter Azure Edition
 
+## Summary
+
 This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]

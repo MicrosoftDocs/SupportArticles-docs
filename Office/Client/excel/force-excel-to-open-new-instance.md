@@ -4,26 +4,28 @@ description: Describes how to set a registry key to force Excel to open in a new
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross
+ms.reviewer: v-kccross, akeeler, v-lisalozano
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Open
   - CSSTroubleshoot
+  - CI 11127
 search.appverid: 
   - MET150
 appliesto: 
   - Excel for Microsoft 365
-  - Excel 2016
-  - Excel 2013
-ms.date: 05/26/2025
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016
+ms.date: 04/13/2026
 ---
 
 # How to force Excel to open in a new instance by default
 
 ## Symptoms
 
-In Microsoft Excel 2013 and later versions, when you open multiple workbooks, they all open in the same instance of Excel. However, in some situations, you may want to open each workbook in a new instance, such as:
+In Microsoft Excel, when you open multiple workbooks, they all open in the same instance of Excel. However, in some situations, you may want to open each workbook in a new instance, such as:
 
 - You're working with large Excel workbooks.
 - You want to undo actions in only the active workbook.
@@ -41,36 +43,27 @@ For more information about Excel instances, and how to start a new instance in o
 
 ## Cause
 
-By opening each workbook in its own instance, the workbook has a dedicated 2 gigabytes (GB) of memory to use. It's important if you are experiencing out-of-memory issues in a 32-bit version of Excel. 
+By opening each workbook in its own instance, the workbook has a dedicated 2 gigabytes (GB) of memory to use. It's important if you are experiencing out-of-memory issues in a 32-bit version of Excel.
 
 > [!NOTE]
 > If you're using the [Large Address Aware option](#more-information), this limit may be increased.
 
 ## Resolution
 
-To change the default setting, install the latest version of Office (build numbers referenced in the following table are the minimum builds required for that version), and then add the key to the registry. The versions of Office that have the update include:
-
-|Version|Release date|Build number|
-|----|---|---|
-|Office 2016 (Current Channel Subscribers)|May 3, 2016|Build 16.0.6868.2060|
-|[Office 2013](https://support.microsoft.com/gp/office-2013-365-update)|June 7, 2016|Build 15.0.4833.1001|
-|[Excel 2013 (MSI)](https://support.microsoft.com/help/3115162)|June 7, 2016|Build 15.0.4833.1000|
-|[Excel 2016 (MSI)](https://support.microsoft.com/help/3115139)|June 7, 2016|Build 16.0.4393.1000 |
+To change the default setting, install the latest version of Office, and then add the key to the registry.
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-1. Exit all instances of Excel.   
-2. Start Registry Editor: 
-   - In Windows 10, click **Start**, type *regedit* in the Search box, and then select regedit.exe in the search results.   
-   - In Windows 8 or Windows 8.1, move the pointer to the upper-right corner, select **Search**, enter *regedit* in the search box, and then select regedit.exe in the search results.     
+1. Exit all instances of Excel.
+2. Start Registry Editor. In Windows 10 or 11, click **Start**, and then type *regedit* in the Search box. Then select regedit.exe in the search results.
 3. Locate and select the following registry subkey:
 
-   `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options`   
-4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.   
-5. Enter **DisableMergeInstance**, and then press Enter.   
-6. In the **Details** pane, right-click **DisableMergeInstance**, and then select **Modify**.   
-7. In **Value data**, enter **1**, and then click **OK**.   
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options`
+4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+5. Enter **DisableMergeInstance**, and then press Enter.
+6. In the **Details** pane, right-click **DisableMergeInstance**, and then select **Modify**.
+7. In **Value data**, enter **1**, and then click **OK**.
 
 ## More Information
 

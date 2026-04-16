@@ -1,11 +1,11 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 02/12/2026
+ms.date: 04/14/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, herbertm, jobesanc
+ms.reviewer: kaushika, herbertm, jobesanc, wiaftrin
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
@@ -280,7 +280,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default value: 0x27
   - Possible values:
 
-    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x38.
+    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x18.
 
     This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
 

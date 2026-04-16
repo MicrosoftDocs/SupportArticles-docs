@@ -1,10 +1,10 @@
 ---
 title: Email nondelivery reports (NDRs) and SMTP errors in Exchange Online
-ms.date: 03/25/2026
+ms.date: 04/03/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-kccross, v-six
+ms.reviewer: arindamt, v-kccross
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -16,17 +16,18 @@ ms.custom:
   - CI 167832
   - CI 179631
   - CI 1375
+  - CI 10804
 search.appverid:
 - MET150
 - MOP150
-description: Administrators can learn about SMTP errors and nondelivery reports (also known as NDRs or bounce messages) that are generated in Exchange Online.
+description: Provides information about SMTP errors and nondelivery reports that are generated in Exchange Online for email delivery issues.
 ---
 
 # Email nondelivery reports and SMTP errors in Exchange Online
 
 If an email message that you send can't be delivered to the intended recipient, Microsoft 365 or Office 365 typically generates an error code and sends a delivery status notification (DSN) to you. This notice is also known as a "bounce message" or "bounce-back message." The most common type of DSN is a nondelivery report (NDR) that informs you that the message wasn't delivered. The cause can be something as simple as a typo in an email address. NDRs also include an error code that indicates the reason that your message wasn't delivered, solutions to help you get your email delivered, a link to more help on the web, and technical details for administrators. To learn more, see [What an NDR contains](#what-an-ndr-contains).
 
-## Find error codes and help to deliver email messages
+## Common error codes in nondelivery reports
 
 The following table contains the error codes (also known as enhanced status codes) for the most common bounce messages and errors that you might encounter in Exchange Online.
 
@@ -107,6 +108,29 @@ The following table contains the error codes (also known as enhanced status code
 |5.7.750|`Service unavailable. Client blocked from sending from unregistered domains`|A suspicious number of messages from unprovisioned domains is coming from this tenant.|Add and validate any or all domains that you use to send email from Microsoft 365 or Office 365. <br/><br/> For more information, see [Fix email delivery issues for error codes 5.7.700 through 5.7.750 in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-700-through-5-7-750).|
 |5.7.800|`Access denied, banned sender`|The EHLO, P1, or P2 sender domain of this message was banned because of detected spam activity.|To restore this domain's ability to send mail, contact Microsoft support.|
 |n/a|`The message can't be submitted because the sender's submission quota was exceeded`|The user account exceeded the recipient rate limit (10,000 recipients per day).|The account was likely compromised. For more information, see [Fix email delivery issues for error 'the sender's submission quota was exceeded' in Exchange Online](fix-error-for-submission-quota-exceeded-in-exchange-online.md).|
+
+## Error codes for issues with High Volume Email (HVE)
+
+The following table provides information about the error codes that you might encounter when you use the High Volume Email (HVE) service and how to resolve them.
+
+|Error code|Description|Possible cause|Additional information|
+|---|---|---|---|
+|421 4.3.240|The maximum number of concurrent server connections has exceeded a per authenticated source limit, closing transmission channel.|The sender opened too many simultaneous authenticated connections to the service, and exceeded the allowed limit of 250.||
+|450 4.4.244|The HVE message can't be submitted because the recipient rate limit was exceeded.|The sender tried to send many messages to a small number of recipients within a short time window, and caused this submission to be throttled.||
+|535 5.7.142|XOAUTH2 authentication failed. Token will expire soon.|The OAuth access token that’s used for authentication was close to expiration and was rejected. The client must request a new token, and retry authentication.|Make sure that the session time doesn't exceed the token expiry time. Obtain a new OAuth token, if possible.|
+|535 5.7.143|XOAUTH2 authentication failed. Expired token.|The client tried to authenticate by using an OAuth access token that’s already expired.|Regenerate the user token to make sure that the token is valid.|
+|535 5.7.144|XOAUTH2 authentication failed. Invalid API permissions.|An invalid token that has the wrong permission is set on the app that's registered to use HVE with OAuth.|[Check the permissions](/exchange/mail-flow-best-practices/oauth-high-volume-mails-m365#add-api-permissions) that are configured for the app, and update them as appropriate.|
+|550 5.1.241|The message can't be delivered because the recipient is an HVE account. HVE accounts do not have associated mailboxes and can only send messages.|The recipient address belongs to an HVE account that's designed for sending only, and it can’t receive email messages.|HVE accounts can’t receive messages directly. If you need to have recipients reply to messages that are sent by an HVE account, configure a ReplyTo address for the HVE account so that responses are delivered to a different mailbox.|
+|550 5.2.240|The email account is not set up properly for the HVE service. Contact your administrator.|The sending account isn’t set up correctly for the HVE service. Therefore, the message submission was rejected.|[Check the sending account’s configuration](/exchange/mail-flow-best-practices/high-volume-mails-m365#configure-your-application-or-device-to-send-email-using-hve) to make sure that it's set up correctly to use HVE.|
+|550 5.6.240|One of MIME Headers is not allowed.|The message contains a MIME header that isn’t permitted.||
+|550 5.6.241|Mandatory From Header is missing or invalid.|The message is missing a valid From header, or the From header is incorrectly formatted.||
+|550 5.7.240|The application is not allowed for use with an HVE account. Contact your administrator.|The application that’s used to send the message isn’t authorized for HVE accounts.|[Check the sending account’s configuration](/exchange/mail-flow-best-practices/high-volume-mails-m365#configure-your-application-or-device-to-send-email-using-hve) to make sure that it's set up correctly to use HVE.|
+|550 5.7.241|Trial tenant is not able to use HVE. Contact your administrator.|The sender is using a trial tenant that isn’t supported for HVE.||
+|550 5.7.242|Inactive tenant is not able to use HVE. Contact your administrator.|The sender is using an inactive tenant that isn’t supported for HVE.||
+|550 5.7.243|This tenant is blocked from using HVE. Contact your administrator.|The tenant is blocked from using HVE.|Contact Microsoft support for more information.|
+|550 5.7.244|Message rejected. External sending is not supported for HVE accounts. This message cannot be delivered to external recipients. Please remove any external recipients and try sending again.|HVE accounts can’t send messages to external recipients.|Review the recipient list, remove any external recipients, and then try again to send the message.|
+|550 5.7.245|External sending is not supported for HVE accounts. The message can't be delivered to this recipient.|HVE accounts can’t send messages to external recipients.|Review the recipient list, remove any external recipients, and then try again to send the message.|
+|550 5.7.246|Removed external recipients that were not originally specified on submission.|External recipients that weren’t explicitly specified in the message (for example, through distribution list expansion) were removed because HVE doesn’t support external recipients.||
 
 ## Run nondelivery report diagnostics
 

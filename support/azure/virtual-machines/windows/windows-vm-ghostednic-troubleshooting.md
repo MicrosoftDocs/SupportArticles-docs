@@ -12,6 +12,10 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 > For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
 > Learn more: [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 
+## Summary
+
+This article provides troubleshooting steps for the issue of multiple Mellanox Ethernet Adapters appearing in Device Manager after deallocating an Azure virtual machine (VM) with Accelerated Networking enabled. This issue is caused by ghosted network interface cards (NICs) that occur due to the design of Accelerated Networking when a VM is deallocated and reallocated to new hardware.
+
 ## Symptom
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 
