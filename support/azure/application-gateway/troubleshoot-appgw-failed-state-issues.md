@@ -50,11 +50,11 @@ Select the Change history tab to see configuration changes made up to 30 minutes
 
 If you encounter this error message or "Problem occured while accessing and validating KeyVault Secrets associated with Application Gateway", verify the following configuration prerequisites:  
 1. Ensure the user‑assigned managed identity associated with the Application Gateway has Get permission on secrets in the Key Vault.  
-Refer to: [Delegate user-assigned managed identity to Key Vault](https://learn.microsoft.com/en-us/azure/application-gateway/key-vault-certs#delegate-user-assigned-managed-identity-to-key-vault )
+Refer to: [Delegate user-assigned managed identity to Key Vault](/azure/application-gateway/key-vault-certs#delegate-user-assigned-managed-identity-to-key-vault )
 2. If you are using Service Endpoints on App Gateway to access key vault, the Application Gateway virtual network and subnet must be explicitly allowed in the Key Vault Firewall and virtual network settings.  
-Refer to:[Verify Firewall Permissions to Key Vault](https://learn.microsoft.com/en-us/azure/application-gateway/key-vault-certs#verify-firewall-permissions-to-key-vault)
+Refer to:[Verify Firewall Permissions to Key Vault](/azure/application-gateway/key-vault-certs#verify-firewall-permissions-to-key-vault)
 3. If using Private Endpoints to access key vault, subnet whitelisting is not required in the vault's settings but you must link the privatelink.vaultcore.azure.net private DNS zone, containing the corresponding record to the referenced Key Vault, to the virtual network containing Application Gateway.  
-Refer to: [Understanding DNS resolution in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-dns-resolution)  
+Refer to: [Understanding DNS resolution in Application Gateway](/azure/application-gateway/application-gateway-dns-resolution)  
 
 4. Confirm that the managed identity assigned to the Application Gateway exists and has not been deleted.
 5. The associated Key Vault and the certificate object is not deleted or soft-deleted. 
