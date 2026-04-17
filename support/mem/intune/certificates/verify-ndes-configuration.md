@@ -1,7 +1,7 @@
 ---
 title: Verify NDES configuration to use SCEP certificates
 description: Gives a troubleshooting procedure to help you verify your on-premises NDES configuration for Simple Certificate Enrollment Protocol (SCEP) certificates in Microsoft Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\Trusted Certificates
 ms.reviewer: kaushika, saurkosh, cajenk, intunecic

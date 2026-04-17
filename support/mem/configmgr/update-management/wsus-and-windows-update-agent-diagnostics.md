@@ -1,7 +1,7 @@
 ---
 title: WSUS and Windows Update Agent diagnostics
 description: This diagnostic package is designed to collect information used to troubleshoot most Windows Update issues.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Software Update Management (SUM)\WSUS Installation or Configuration
 ---
@@ -114,4 +114,4 @@ _Original KB number:_ &nbsp; 2793732
   
 ## References
 
-[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
+[Microsoft Support Diagnostic Tool resources](/windows/whats-new/deprecated-features-resources#microsoft-support-diagnostic-tool-resources)

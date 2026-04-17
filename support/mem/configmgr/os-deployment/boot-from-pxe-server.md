@@ -1,7 +1,7 @@
 ---
 title: Boot from a PXE server on a different network
 description: This article describes how to boot from a PXE server on a different network.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ms.reviewer: kaushika
 ---
