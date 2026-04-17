@@ -5,7 +5,7 @@ ms.date: 04/05/2026
 ms.author: lalbadarneh
 ms.editor: lalbadarneh
 ms.reviewer: lalbadarneh
-ms.service: application-gateway.
+ms.service: azure-application-gateway.
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
 #customer intent: As an Azure administrator, I want to troubleshoot DNS resolution issues in Azure Application Gateway so that I can restore certificate, backend, and provisioning functionality.
