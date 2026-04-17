@@ -1,0 +1,77 @@
+---
+title: Troubleshoot timeout and latency issues in AKS with Azure Storage
+description: Troubleshoot AKS timeout and latency issues when you use Azure Storage. Learn diagnostic steps and solutions to improve performance and reliability.
+ms.date: 04/09/2026
+ms.reviewer: chiragpa, meghadubey
+ms.service: azure-kubernetes-service
+ms.custom: sap:Storage
+---
+# Troubleshoot timeout and latency issues in AKS when you use Azure Storage
+
+## Summary
+
+This article helps you troubleshoot timeout and latency issues that occur in Azure Kubernetes Service (AKS) when you use Azure Storage. You'll learn common causes, diagnostic steps, and recommended solutions to improve performance and reliability.
+
+## Symptoms
+
+Applications in AKS experience intermittent timeouts or slow access to Azure Storage accounts. Pod logs contain error entries such as the following examples:
+
+- `Connection timeout`
+- `Connection reset by peer`
+- `503 Service Unavailable`
+
+When this problem occurs, the `kubectl describe` pod shows no Persistent Volume Claim (PVC) errors. This condition indicates that the problem is network-related.
+ 
+## Cause
+
+- **SNAT port exhaustion**: AKS nodes that use outbound connectivity with Azure Load Balancer can run out of Source Network Address Translation (SNAT) ports under heavy traffic.
+- **Public endpoint dependency**: Traffic that's routed over the public internet is susceptible to transient network problems and DDoS protection throttling.
+ 
+## Solution
+
+To mitigate connectivity timeouts and improve reliability, use the following methods as applicable.
+
+### Enable private endpoints for storage
+
+Take the following actions:
+
+- Create a private endpoint for the storage account in the same virtual network (VNet) as the AKS cluster.
+- Make sure that DNS resolves the storage account to the private IP.
+
+This configuration keeps traffic within Azure's backbone network, and avoids public network disruptions.
+
+### Use Azure NAT Gateway for outbound connectivity
+
+Assign a NAT Gateway to the AKS subnet to provide:
+
+- Increased SNAT port capacity
+- Stable, dedicated outbound IP
+
+This setup prevents SNAT exhaustion scenarios that cause intermittent failures.
+
+### Implement application-level connection pooling
+
+Take the following actions:
+
+- Avoid creating excessive short‑lived outbound connections to Azure Storage.
+- Enable persistent or pooled connections in application code or SDK configuration.
+
+### Enable network flow logs and DDoS diagnostic logging
+
+Enable logging to capture connection patterns, drops, and anomalies, including:
+
+- Network security group (NSG) flow logs (or VNet flow logs) that help identify:
+
+    - Dropped packets
+    - Outbound connection failures
+    - Saturated connection patterns
+
+- DDoS diagnostic logs that provide visibility into:
+    
+    - Mitigated attacks
+    - Threshold-triggered throttling events
+    - High-volume spikes potentially impacting outbound calls
+
+## References
+
+[Collect and analyze resource logs from an Azure resource in Azure Monitor](/azure/azure-monitor/platform/tutorial-resource-logs?tabs=DDoSProtectionNotifications)
