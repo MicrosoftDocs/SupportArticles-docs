@@ -178,7 +178,7 @@ Review this data, identifying all the DCs that experience *any* replication issu
 
 If you recently applied a schema update to the forest, see [Resolution 1: Following a schema update, issues persist](#resolution-1-following-a-schema-update-issues-persist).
 
-If you haven't recently updated the schema, continue to the next section to collect diagnostic event logs.
+If you didn't recently update the schema, continue to the next section to collect diagnostic event logs.
 
 ### Level 2: Collect and review diagnostic logs
 
@@ -314,7 +314,7 @@ Such discrepancies in the metadata might help you determine what's causing the i
 
 After the Active Directory schema updates, schema mismatch issues typically appear and disappear on various DCs throughout the forest. This behavior typically occurs in a pattern that matches the replication topology and schedule. These transient schema mismatches are the expected behavior. Monitoring software typically reports the issues but doesn't require administrative intervention.
 
-If schema mismatch issues persist for an extended period, such as more than twice the time that's needed for an update to replicate through the entire topology, then you should investigate the issue. A single DC might have to restart, the update might not have applied correctly, or an underlying issue might be blocking replication.
+If schema mismatch issues persist for an extended period, such as more than twice the time that's needed for an update to replicate through the entire topology, then you should investigate the issue. A single DC might have to restart, the update might not be applied correctly, or an underlying issue might be blocking replication.
 
 #### Step 1: Verify that the schema version values match in Active Directory and the registry
 
@@ -367,7 +367,7 @@ You can use this step if the following conditions apply:
 
 Restart the source DC.
 
-In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restart the DC to resolve the issue.
+In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. In this case, restart the DC to resolve the issue.
 
 If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), and then contact Microsoft Support for assistance.
 
@@ -377,13 +377,13 @@ This error indicates that the identified object's security descriptor (the `nTSe
 
 The security descriptor contains the object's ACL information. This information includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
 
-To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, you can efficiently collect this information by using a script. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
+To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, you can efficiently collect this information by using a script. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
 
 ## Data to provide to Microsoft Support  
 
 If you need assistance from Microsoft support, we recommend that you collect information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
-Additionally, gather the following information to help Microsoft Support staff to assist in diagnosing the causes of the schema mismatch (much of this information was gathered in earlier sections of this article).
+Additionally, gather the following information to enable the Microsoft Support staff to help you diagnose the causes of the schema mismatch. (Much of this information was gathered in earlier sections of this article.)
 
 - DCpromo logs from destination DC (if appropriate for the scenario)
 - `Repadmin /showrepl` output from the source DC and the destination DC
