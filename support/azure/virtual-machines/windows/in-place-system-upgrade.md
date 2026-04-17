@@ -1,11 +1,13 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure (Windows Client)
-description: Understand in-place system upgrade support for Azure Windows VMs, including why IPU is not supported for Azure Virtual Desktop (AVD) multi-session hosts and what to do instead.
+description: Learn how to perform an in-place upgrade for Windows VMs in Azure, which versions are supported, and workarounds for unsupported configurations like Azure Virtual Desktop hosts.
 ms.date: 04/14/2026
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
+ms.custom: 
+   - sap:Windows Update, Guest Patching and OS Upgrades
+   - sap:Windows Update and OS Upgrades
 ---
 # In-place upgrade for supported VMs running Windows in Azure (Windows client)
 
@@ -14,14 +16,16 @@ ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 _Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
+## Summary
+
+This article describes how to do an in-place system upgrade of supported Windows 10-based and Windows-11-based Azure Virtual Machines (VMs). It also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. 
 
 > [!NOTE]  
 > **Looking for Windows Server?**  
 > For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
 
 > [!CAUTION]
-> Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the VM. Azure capabilities like [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.
+> Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the VM. Azure capabilities like [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) aren't available. To use these features, create a new VM by using your preferred operating system instead of performing an in-place upgrade.
 
 
 [!INCLUDE [Azure VM Windows Update / Windows OS Upgrade Diagnostic Tools](~/includes/azure/virtual-machines-runcmd-wu-tools.md)]
@@ -49,32 +53,32 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 ](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
    > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration. The VM must meet the [hardware requirements for Windows 11](/windows/whats-new/windows-11-requirements#virtual-machine-support).
 
-### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
+### Windows versions that don't support in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 multi-session (all versions) — commonly used as Azure Virtual Desktop (AVD) session hosts
-- Windows 10 and 11 single-session up to Windows 10 and 11 multi-session (cross-SKU)
+- Windows 10 and 11 multi-session (all versions) — commonly used as Azure Virtual Desktop session hosts
+- Windows 10 and 11 single-session up to Windows 10 and 11 multisesion (cross-SKU)
 - Windows 8.1
 - Windows 7 Enterprise
 
 > [!IMPORTANT]
-> **Azure Virtual Desktop (AVD) session hosts:** In-place upgrade is **not supported** for pooled or multi-session AVD session hosts. These VMs use Windows 10/11 Enterprise multi-session, which doesn't support in-place feature updates. Attempting IPU on an AVD session host can result in a broken session host, failed user connections, and loss of session host availability. For AVD environments, use image-based replacement instead. See [AVD session host upgrade guidance](#avd-session-host-upgrade-guidance) later in this article.
+> **Azure Virtual Desktop session hosts:** In-place upgrade **isn't supported** for pooled or multisesion Azure Virtual Desktop session hosts. These VMs use Windows 10/11 Enterprise multisesion, which doesn't support in-place feature updates. Attempting an in-place upgrade (IPU) on an Azure Virtual Desktop session host can result in a broken session host, failed user connections, and loss of session host availability. For Azure Virtual Desktop environments, use image-based replacement instead. See [Azure Virtual Desktop session host upgrade guidance](#azure-virtual-desktop-session-host-upgrade-guidance) later in this article.
 
 ## In-place system upgrade process for a Windows 10 VM
 
-This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
+This process takes 45-60 minutes to complete and restarts the VM. To perform the in-place system upgrade, follow these steps:
 
-1. Run [Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool](windows-vm-osupgradeassessment-tool.md) to validate the OS upgrade path and any known issues.
-2. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
-3. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
-4. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). You can also use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
-5. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
+1. Run the [Azure Virtual Machine (VM) Windows OS Upgrade Assessment Tool](windows-vm-osupgradeassessment-tool.md) to validate the OS upgrade path and check for any known issues.
+1. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature isn't currently supported.
+1. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
+1. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). You can also use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+1. To check whether the backup was successful, turn off the original Windows 10 VM and verify that you can restore a new VM from the backup and that all applications are running successfully.
 
    > [!NOTE]  
-   > You can use either the original Windows 10 VM or the restored VM as a source for an in-place system upgrade. The VMs can't run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
+   > You can use either the original Windows 10 VM or the restored VM as a source for an in-place system upgrade. The VMs can't run simultaneously unless you change one VM's system name and IP address to avoid conflicts.
   
-6. Connect to the Windows 10 VM, and then go to **Settings** > **Updates & Security** > **Windows Update**.
-7. In Windows Update, select **Check for updates**.
-8. When the Feature Update item appears, select **Download and install now**.
+1. Connect to the Windows 10 VM, and then go to **Settings** > **Updates & Security** > **Windows Update**.
+1. In Windows Update, select **Check for updates**.
+1. When the Feature Update item appears, select **Download and install now**.
 
 The update downloads and installs. User settings and data are preserved, and the VM restarts automatically.
 
@@ -104,40 +108,38 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 > [!NOTE]  
 > When you perform an in-place upgrade on Azure Windows VMs, the VM properties on the Azure portal aren't updated. The changes are reflected only within the OS. This means that the source image information in the VM properties (including the publisher, offer, and plan) remains unchanged. The image that's used to deploy the VM remains the same. Only the OS is upgraded.
 
-## AVD session host upgrade guidance
+## Azure Virtual Desktop session host upgrade guidance
 
-Azure Virtual Desktop (AVD) session hosts that use Windows 10 or Windows 11 Enterprise multi-session **don't support in-place upgrade (IPU)**. Attempting an in-place upgrade on these VMs can cause:
+Azure Virtual Desktop session hosts that use Windows 10 or Windows 11 Enterprise multi-session don't support IPUs. Attempting an IPU on these VMs can cause:
 
-- Broken session host registration with the AVD host pool
-- User connection failures
-- Loss of FSLogix profile container connectivity
-- Session host unavailability requiring manual recovery
+- Broken session host registration with the Azure Virtual Desktop host pool.
+- User connection failures.
+- Loss of FSLogix profile container connectivity.
+- Session host unavailability requiring manual recovery.
 
 ### Recommended approach: Image-based replacement
 
 Instead of upgrading the OS on an existing session host, replace session hosts with new VMs built from an updated image:
 
-1. **Create a new golden image** — Build a new VM image with the target Windows version, install required applications, and configure FSLogix and other AVD components.
-2. **Add new session hosts** — Deploy new session hosts from the updated image into the existing host pool.
-3. **Drain existing session hosts** — Set existing (old-version) session hosts to drain mode so no new user sessions connect to them.
-4. **Remove old session hosts** — After users have moved to the new session hosts, remove the old VMs from the host pool and deallocate them.
+1. **Create a new golden image** — Build a new VM image with the target Windows version, install required applications, and configure FSLogix and other Azure Virtual Desktop components.
+1. **Add new session hosts** — Deploy new session hosts from the updated image into the existing host pool.
+1. **Drain existing session hosts** — Set existing (old-version) session hosts to drain mode so no new user sessions connect to them.
+1. **Remove old session hosts** — After users move to the new session hosts, remove the old VMs from the host pool and deallocate them.
 
 For more information, see:
 
-- [Create a golden image in Azure](/azure/virtual-desktop/create-golden-image)
-- [Manage host pools](/azure/virtual-desktop/manage-host-pools)
+- [Create a golden image in Azure](/azure/virtual-desktop/set-up-golden-image)
+- [Host pool management approaches for Azure Virtual Desktop](/azure/virtual-desktop/host-pool-management-approaches)
 
-### AVD personal desktop exception
+### Azure Virtual Desktop personal desktop exception
 
-For AVD **personal desktop** session hosts that use Windows 10 or Windows 11 **single-session** (not multi-session), in-place upgrade follows the same process as standard Azure VMs. See [In-place system upgrade process for a Windows 10 VM](#in-place-system-upgrade-process-for-a-windows-10-vm) earlier in this article.
+For Azure Virtual Desktop **personal desktop** session hosts that use Windows 10 or Windows 11 **single-session** (not multisesion), in-place upgrade follows the same process as standard Azure VMs. See [In-place system upgrade process for a Windows 10 VM](#in-place-system-upgrade-process-for-a-windows-10-vm) earlier in this article.
 
 > [!NOTE]
-> Personal desktops using single-session Windows are eligible for in-place upgrade, but personal desktops using multi-session Windows are not. Verify the Windows SKU before attempting an upgrade. Run `winver` or check `SystemInfo` on the session host to confirm whether it's single-session or multi-session.
+> Personal desktops that use single-session Windows are eligible for in-place upgrade, but personal desktops that use multisesion Windows aren't. Verify the Windows SKU before attempting an upgrade. Run `winver` or check `SystemInfo` on the session host to confirm whether it's single-session or multisesion.
 
 ## References
 
 [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672).
-
- 
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
