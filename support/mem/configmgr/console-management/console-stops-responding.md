@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager console stops responding 
 description: Describes an issue in which the Configuration Manager console appears to stop responding while it's loading a list of drivers from the driver catalog.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, jchornbe
 ms.custom: sap:Admin Console, Role-Based Access and Reporting\Console Performance
 ---
