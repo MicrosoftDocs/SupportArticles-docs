@@ -169,7 +169,7 @@ Use these five sample configuration files for automated SQLIOSim runs.
 
 - If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio divided by 0.01. For example, the value of the `CacheHitRatio` parameter is `10 percent`. This value is expressed as `1000` because 10 divided by 0.01 equals `1000`. The maximum value of a percentage parameter is `10000`.
 - If the parameter type is numeric, and you assign a non-numeric value to the parameter, the SQLIOSim utility sets the parameter to `0`.
-- If the parameter type is `Boolean`, the valid values you can assign to the parameter are `true` and `false`. Additionally, the values are case-sensitive. The SQLIOSim utility ignores any invalid values.
+- If the parameter type is boolean, the valid values you can assign to the parameter are `true` and `false`. Additionally, the values are case-sensitive. The SQLIOSim utility ignores any invalid values.
 - If a pair of parameters indicates a minimum value and a maximum value, the minimum value must not exceed the maximum value. For example, the value of the `MinIOChainLength` parameter must not be larger than the value of the `MaxIOChainLength` parameter.
 - If the parameter indicates a number of pages, the SQLIOSim utility checks the value you assign to the parameter against the file that the SQLIOSim utility processes. The SQLIOSim utility performs this check to make sure that the number of pages doesn't exceed the file size.
 
