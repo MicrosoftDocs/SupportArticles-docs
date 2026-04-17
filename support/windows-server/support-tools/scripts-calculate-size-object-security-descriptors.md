@@ -1,6 +1,6 @@
 ---
 title: Script to calculate the size of object security descriptors
-description: This article introduces a script to 
+description: This article introduces a script to calculate the size of object security descriptors.
 ms.date: 04/16/2026
 manager: dcscontentpm
 audience: itpro
@@ -14,7 +14,7 @@ appliesto:
 ---
 # Script: Calculate the sizes of object security descriptors
 
- This script helps you calculate the size (in bytes) of the `ntSecurityDescriptor` attribute on Active Directory objects that reside under a given base distinguished name (DN). The script writes its results to a CSV file.
+This script helps you calculate the size (in bytes) of the `ntSecurityDescriptor` attribute on Active Directory objects that reside under a given base distinguished name (DN). The script writes its results to a CSV file.
 
 ## Script
 
