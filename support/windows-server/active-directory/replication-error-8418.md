@@ -15,7 +15,7 @@ appliesto:
 # Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch
 
 > [!NOTE]
-> **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
+> **Home users:** This article is intended for only technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
 
 _Original KB number:_ &nbsp; 2734946
 
@@ -33,7 +33,7 @@ This article helps you:
 
 You observe one or more of the following symptoms:
 
-- During a regular replication cycle, one or more on-screen errors, logged events, or diagnostics indicates that a schema mismatch occurred. The error text might include any or all of the following information:
+- During a regular replication cycle, one or more on-screen errors, logged events, or diagnostics indicates that a schema mismatch occurred. The error text might include any or all of the following information.
 
   |Decimal|Hex|Symbolic|Error String|
   |---|---|---|---|
@@ -53,7 +53,7 @@ You observe one or more of the following symptoms:
   ---------------------------
   ```
 
-  If the error occurred before the DC promotion process reached the noncritical replication phase, the DCPromo.log file records entries that resemble the following example:
+  If the error occurs before the DC promotion process reaches the noncritical replication phase, the DCPromo.log file records entries that resemble the following example:
 
   ```output
   MM/DD/YYYY HH:MM:SS [INFO] NtdsInstall for <hostname.dns domain name.<top level domain> returned 8418  
@@ -62,7 +62,7 @@ You observe one or more of the following symptoms:
   MM/DD/YYYY HH:MM:SS [INFO] Starting service NETLOGON  
   ```
 
-  If the error occurred during the noncritical replication phase, the new DC restarts. After the restart, DCPromo.log records entries that resemble the following examples:
+  If the error occurs during the noncritical replication phase, the new DC restarts. After the restart, DCPromo.log records entries that resemble the following example:
 
   ```output
   MM/DD HH:MM:SS [WARNING] Non critical replication returned 8418
@@ -71,7 +71,7 @@ You observe one or more of the following symptoms:
   MM/DD HH:MM:SS [INFO] The attempted domain controller operation has completed
   ```
 
-- The directory service event log records one or more events that resemble the following examples:
+- The directory service event log records one or more events that resemble the following examples.
 
   |Event source|Event ID or <br/>Event ID/Error status|Event string|
   |---|---|---|
@@ -90,7 +90,7 @@ You observe one or more of the following symptoms:
   --------------------------- OK ---------------------------
   ```
 
-- You use one of the following Repadmin commands (`repadmin.exe`), and you see messages that resemble the following examples:
+- You run one of the following Repadmin commands (`repadmin.exe`), and you see messages that resemble the following examples.
 
   | Command | Message |
   | - | - |
@@ -107,19 +107,30 @@ Schema mismatches can occur under the following circumstances:
 - DCs replicate the schema partition, and the source DC has different schema information than the destination DC.
 - DCs replicate a nonschema partition, and the data on the source DC uses a different schema than the data on the destination DC.
 
- In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred. Such scenarios include:
+### Scenarios
 
-- The issue occurred after the Active Directory schema was updated. In many cases, this issue is transient and resolves itself.
+In order to resolve a schema mismatch issue, you have to understand the scenario in which the issue occurred.
+
+#### Scenario 1
+
+The issue occurs after the Active Directory schema is updated. In many cases, this issue is transient and resolves itself.
 
   > [!IMPORTANT]  
-  > Test any schema update thoroughly before you introduce it to your production environment.
+  > Test any schema update thoroughly before you introduce it into your production environment.
 
-- The issue occurred when you tried to promote a member server to a domain controller (DC). The promotion operation failed.
-- The issue occurred during normal replication. Typically, this behavior means that an underlying issue is preventing Active Directory from resolving issues that would normally be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
+#### Scenario 2
+
+The issue occurs when you try to promote a member server to a domain controller (DC). The promotion operation fails.
+
+#### Scenario 3
+
+The issue occurs during normal replication. Typically, this behavior means that an underlying issue is preventing Active Directory from resolving issues that would usually be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
   - A DC is quarantined, or might have lingering objects
   - Communication stopped because of a DNS or RPC issue
   - A DC stopped replicating for other reasons
   - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
+
+#### Scenario 4
 
 A less common scenario is one in which the schema partition on one or more DCs has improper attribute definitions. Possible schema definition issues that can trigger a schema mismatch error include the following issues:  
 
@@ -128,20 +139,20 @@ A less common scenario is one in which the schema partition on one or more DCs h
 - Invalid `MayContain` values
 - Object attributes that contain data but whose schema definition is marked as defunct
 
-For issues where schema replication fails because of improper attribute schema definitions, contact Microsoft Support for assistance.  
+For scenarios in which schema replication fails because of improper attribute schema definitions, contact Microsoft Support for assistance.  
 
 ### Transient issues versus persistent issues
 
-Schema mismatch issues typically fall into one of two categories: *Transient* or *persistent*.
+Schema mismatch issues typically fall into one of two categories: *Transient* and *persistent*.
 
 Transient schema mismatch issues meet the following criteria:
 
 - The error messages appear on different DCs throughout the forest, in a pattern that matches the Active Directory replication topology and schedule. This kind of pattern typically occurs when you install an update to the schema.
-- On any particular DC, the issue disappears after one replication cycle per replication partner. Allow twice the amount of time needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners a DC has, the longer this process takes.
+- On any particular DC, the issue disappears after one replication cycle per replication partner. This issue might take twice the amount of time that's needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners that a DC has, the longer this process takes.
 
 Persistent schema mismatch issues don't meet these criteria, and don't resolve themselves. Such issues indicate one or more of the following issues:
 
-- There's an underlying issue that's interfering with normal replication. The replication service can't resolve the schema mismatch until the underlying issue is corrected. In some cases, you can identify and resolve the underlying issues. In other cases, you might need assistance from Microsoft Support. For example, any of the following issues can block replication.
+- An underlying issue is interfering with typical replication. The replication service can't resolve the schema mismatch until the underlying issue is corrected. In some cases, you can identify and resolve the underlying issues. In other cases, you might need assistance from Microsoft Support. For example, any of the following issues can block replication:
   - Database corruption
   - Memory constraints
   - Replication quarantine
@@ -153,7 +164,7 @@ Persistent schema mismatch issues don't meet these criteria, and don't resolve t
 
 ## Collect diagnostic data to help isolate possible causes
 
-Some schema mismatch issues have straightforward resolutions, but in many cases you'll need assistance from Microsoft Support. This section guides you in determining the type of issue that you have and whether a solution is available.
+Some schema mismatch issues have straightforward resolutions. However, in many cases you'll, need assistance from Microsoft Support. This section guides you in determining the type of issue that you have and whether a solution is available.
 
 ### Level 1: Review the overall replication status
 
@@ -167,7 +178,7 @@ Review this data, identifying all the DCs that experience *any* replication issu
 
 If you recently applied a schema update to the forest, see [Resolution 1: Following a schema update, issues persist](#resolution-1-following-a-schema-update-issues-persist).
 
-If you haven't recently updated the schema, continue on to collect diagnostic event logs.
+If you haven't recently updated the schema, continue to the next section to collect diagnostic event logs.
 
 ### Level 2: Collect and review diagnostic logs
 
@@ -175,13 +186,13 @@ If you haven't recently updated the schema, continue on to collect diagnostic ev
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-Increase level of event logging on both source and destination DCs. To change the logging level, follow these steps:
+Increase the level of event logging on both source and destination DCs. To change the logging level, follow these steps:
 
-1. in Registry Editor, go to the following subkey:
+1. In Registry Editor, locate the following subkey:
 
    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics`
 
-1. Update the values of the registry entries as described in the following table:  
+1. Update the values of the registry entries as described in the following table.
 
    |Name|Type|Value|
    |---|---|---|
@@ -192,20 +203,20 @@ Increase level of event logging on both source and destination DCs. To change th
 
 #### Review the errors and event logs for any replication issues
 
-Wait for the issue to occur, or repeat the action that triggers the issue (for example, promote a member server to a domain controller). After the schema mismatch occurs, review the event logs on the affected DCs and their replication partners. Look for any information in the errors or events that identifies the source of the issue or what resource the issue affects.
+Wait for the issue to occur, or repeat the action that triggers the issue (for example, promote a member server to a domain controller). After the schema mismatch occurs, review the event logs on the affected DCs and their replication partners. Look for any information in the errors or events that identifies the source of the issue or which resource the issue affects.
 
 - Look for the Event ID (if applicable) and the error code.
 - Does the error or event refer to one or more computers? Replication errors typically list a source DC and a destination DC. For events, the destination DC typically logs the event. Look for the DN, NetBIOS name, or the directory service agent GUID (DSA GUID) for each DC.
 - Does the error or event identify a particular object or attribute that triggers the issue? Look for the object DN or GUID, or the attribute display name or GUID.
 - Look for any internal or extended error data.
 
-The following table lists examples of error codes that indicate issues that prevent Active Directory from resolving a schema mismatch:
+The following table lists examples of error codes that indicate issues that prevent Active Directory from resolving a schema mismatch.
 
 > [!NOTE]  
 >
 > - In addition to appearing in logged events, these error codes can occur when you use command-line tools such as `repadmin`, `dcdiag`, or `dcpromo`.
 > - If you receive the schema mismatch error when you try to promote a member server to a DC, collect the DCpromo and DCpromoUI log files. This kind of issue is almost always persistent, and doesn't resolve itself.
-> - Some events are associated with more than one error code. When you review your event log for these events, make sure you check the error code that's listed in the event so you can interpret the event correctly.
+> - Some events are associated with more than one error code. When you review your event log for these events, make sure that you check the error code that's listed in the event so that you can interpret the event correctly.
 
 | Error code | Event ID and source, if appropriate | More information |
 | - | - |
@@ -222,19 +233,19 @@ For additional common error codes, see [Troubleshoot common Active Directory rep
 
 If you can isolate object or attribute identifiers from the error or event information, continue to the next section to collect object and attribute metadata.
 
-If the replication events that cite error code 8418 contain any Extended or Internal errors, use compare those values to known issues.
+If the replication events that cite error code 8418 contain any Extended or Internal errors, compare those values to known issues.
 
 ### Level 3: Export and review object and attribute metadata
 
 If the events or error codes identify a particular object (or set of objects) or a particular object attribute as the trigger of the replication issue, the object or attribute metadata might provide more information about the issue.
 
-Objects and attributes can trigger replication issues in several ways, and the causes for such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#resolution-2-the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue occurred.
+Objects and attributes can trigger replication issues in several manners. The causes of such issues might not appear to relate directly to the schema. One such potential issue is the size of an object's security descriptor (the `nTSecurityDescriptor` attribute). If the attribute gets too large, it can block replication. Fortunately, [error code 1340](#resolution-2-the-inherited-access-control-list-acl-or-access-control-entry-ace-could-not-be-built-event-1450-error-code-1340) specifically indicates that this issue occurred.
 
-Other object and attribute issues are more complex, and you might need to contact Microsoft Support for assistance.
+Other object and attribute issues are more complex. In this case, you might have to contact Microsoft Support for assistance.
 
 #### Export the object and attribute metadata
 
-To retrieve this data, run `repadmin /showobjmeta` on both the source dC and the destination DC, as shown in the following examples:
+To retrieve this data, run `repadmin /showobjmeta` on both the source DC and the destination DC, as shown in the following examples:
 
 If you have the DN of the object that caused the issue, open an administrative Command Prompt window, and then run the following command:
 
@@ -269,7 +280,7 @@ You can also use `ldp` commands to extract replication metadata.
 
 #### Review the object and attribute data
 
-You can compare the metadata for the same object on the source DC and its replication partners to see if the data replicated to each partner.
+To determine whether the data replicated to each partner, you can compare the metadata for the same object on the source DC and its replication partners.
 
 > [!TIP]  
 > The metadata of objects or attributes that are waiting to be replicated shows a higher version number on the source DC than on the destination DC.
@@ -284,7 +295,7 @@ USN   DSA Org                              USN Org. Time/Date  Version Attribute
 
 The output should include attribute identifiers, but those values are missing.
 
-The following example shows the same metadata as viewed using the `ldp` tool. This output shows attribute identifiers in the `AttID` column.
+The following example shows the same metadata as viewed by using the `ldp` tool. This output shows attribute identifiers in the `AttID` column.
 
 ```output
 AttID  Ver Loc.USN Originating DSA                      Org.USN  Org.Time/Date  
@@ -292,25 +303,27 @@ AttID  Ver Loc.USN Originating DSA                      Org.USN  Org.Time/Date
 250004 3   24260   f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 <DateTime>  
 ```
 
-Such discrepancies in the metadata might help you determine what's causing the issue. However, in most cases you should contact Microsoft Support for further assistance.
+Such discrepancies in the metadata might help you determine what's causing the issue. In most cases, however, you should contact Microsoft Support for further assistance.
 
 > [!IMPORTANT]  
-> Be sure to have the data that's listed in [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support) on hand, including the exported schema data.
+> Make sure that you have on hand the data that's listed in [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), including the exported schema data.
 
-## Resolution 1: Following a schema update, issues persist
+## Resolution
 
-After the Active Directory schema updates, schema mismatch issues typically appear and disappear on various DCs throughout the forest. This behavior typically occurs in a pattern that matches the replication topology and schedule. These transient schema mismatches are the expected behavior. Monitoring software typically reports the issues, but they don't require administrative intervention.
+### Resolution 1: Following a schema update, issues persist
 
-If schema mismatch issues persist for an extended period, such as more than twice the time needed for an update to replicate through the entire topology, then you should investigate the issue. A single DC might need to restart, the update might not have applied correctly, or an underlying issue might be blocking replication.
+After the Active Directory schema updates, schema mismatch issues typically appear and disappear on various DCs throughout the forest. This behavior typically occurs in a pattern that matches the replication topology and schedule. These transient schema mismatches are the expected behavior. Monitoring software typically reports the issues but doesn't require administrative intervention.
 
-### Step 1: Verify that the schema version values in Active Directory and the registry match
+If schema mismatch issues persist for an extended period, such as more than twice the time that's needed for an update to replicate through the entire topology, then you should investigate the issue. A single DC might have to restart, the update might not have applied correctly, or an underlying issue might be blocking replication.
 
-Each DC stores the version of the schema that it uses in two locations; The registry, and in its local Active Directory replica. During normal operation, the two values should be in sync and should correctly reflect the schema version of the forest as defined by the DC that owns the schema Flexible Single Master Operation (FSMO) role. If the values don't match for a particular DC, that DC might not have received the schema update yet. Check the status values on DCs that report persistent schema mismatches, and on their replication partners.
+#### Step 1: Verify that the schema version values match in Active Directory and the registry
+
+Each DC stores the version of the schema that it uses in two locations: The registry, and in its local Active Directory replica. During normal operation, the two values should be in sync and correctly reflect the schema version of the forest. This schema version is defined by the DC that owns the schema Flexible Single Master Operation (FSMO) role. If the values don't match for a particular DC, that DC might not have received the schema update yet. Check the status values on DCs that report persistent schema mismatches, and on their replication partners.
 
 > [!NOTE]  
 > To make sure that `SchemaVersion` updates correctly, install only the updates of the Active Directory Schema that Microsoft provides.
 
-To review the version number in the registry, in Registry Editor, go to the following subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
+To review the version number in the registry, open Registry Editor, and locate the following subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
 
 To view the version number in Active Directory, use one of the following methods:
 
@@ -343,32 +356,32 @@ For reference, the following table lists the schema versions for different versi
 |Windows Server 2019|88|
 |Windows Server 2022|88|
 
-### Step 2: Restart the source DC that's not replicating the update
+#### Step 2: Restart the source DC that's not replicating the update
 
-You can use this step when the following conditions apply:
+You can use this step if the following conditions apply:
 
 - The Active Directory schema was recently updated.
 - You identify one or more DCs that report a persistent schema mismatch issue.
 - These DCs use the same source DC for inbound replication.
-- The source DC has the expected schema version information in the registry and in its Active Directory replica. This information matches the updated forest version (the source dC has the correct update installed).
+- The source DC has the expected schema version information in the registry and in its Active Directory replica. This information matches the updated forest version (the source DC has the correct update installed).
 
 Restart the source DC.
 
-In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restarting the DC should resolve the issue.
+In some cases, a DC might not correctly reload the in-memory schema version after it receives the schema update. If this is the case, restart the DC to resolve the issue.
 
 If the issue persists, see [Data to provide to Microsoft Support](#data-to-provide-to-microsoft-support), and then contact Microsoft Support for assistance.
 
-## Resolution 2: The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
+### Resolution 2: The inherited access control list (ACL) or access control entry (ACE) could not be built (Event 1450, error code 1340)
 
 This error indicates that the identified object's security descriptor (the `nTSecurityDescriptor` attribute) is too large.
 
-The security descriptor contains the object's ACL information, which includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
+The security descriptor contains the object's ACL information. This information includes ACEs that are set directly on the object and ACEs that are inherited from the parent object. Windows limits the attribute to 65,535 bytes.
 
-To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, it's efficient to use a script to collect this information. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
+To resolve this issue, you have to reduce the size of the object's security descriptor by reducing the number of ACEs. This process involves manually checking the security descriptor to identify the directly-applied ACEs and the inherited ACEs, and the sources of the inherited ACEs. If multiple objects trigger error code 1340, you can efficiently collect this information by using a script. For an example of such a script, see [Scripts to calculate the sizes of object security descriptors](../support-tools/scripts-calculate-size-object-security-descriptors.md).
 
 ## Data to provide to Microsoft Support  
 
-If you need assistance from Microsoft support, we recommend you collect information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+If you need assistance from Microsoft support, we recommend that you collect information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 Additionally, gather the following information to help Microsoft Support staff to assist in diagnosing the causes of the schema mismatch (much of this information was gathered in earlier sections of this article).
 
