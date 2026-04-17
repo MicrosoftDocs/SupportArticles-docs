@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software update management
 description: Helps you troubleshoot the software update management process in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.custom: sap:Software Update Management (SUM)\Software Update Installation
 ms.reviewer: kaushika
 ---
@@ -272,7 +272,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
   For more information about proxy servers, see the following articles:
 
-  - [How the Windows Update client determines which proxy server to use to connect to the Windows Update Web site](https://support.microsoft.com/help/900935)
+  - [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](../../../windows-server/installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md)
   - [DNS and DHCP Support for Web Proxy and Firewall Client Autodiscovery](/previous-versions/tn-archive/cc302584(v=technet.10))
 
 - **HTTP timeout errors**

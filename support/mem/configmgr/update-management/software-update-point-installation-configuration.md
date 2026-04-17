@@ -1,7 +1,7 @@
 ---
 title: Software update point installation and configuration
 description: Describes how to tack the software update point installation and how to configure Software update point. 
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Site Server and Roles\Site System Role Installation (any role)
 ---

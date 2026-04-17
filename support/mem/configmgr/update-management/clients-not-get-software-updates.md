@@ -1,7 +1,7 @@
 ---
 title: Clients don't get software updates
 description: Fixes an issue in which Configuration Manager version 1702 clients can't get updates from the software update point.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Software Update Management (SUM)\Software Update Groups or Deployments
 ---

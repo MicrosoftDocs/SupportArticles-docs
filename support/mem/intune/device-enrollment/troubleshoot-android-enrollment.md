@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Android Enterprise device enrollment in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Android devices in Intune.
-ms.date: 02/27/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, joelste, v-six, esalter, alamparelli
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - Android\Android  Enterprise - FullyManaged
@@ -68,6 +68,6 @@ To avoid this entirely, tell users to enroll in the Company Portal before trying
 
 ### I want to stay updated on any Google service issues that may cause impact
 
-Google releases [service announcements](https://www.androidenterprise.community/t5/service-announcements/tkb-p/Announcements) containing details about issues that may impact Android Enterprise management. Follow the [instructions to subscribe](https://www.androidenterprise.community/t5/news-info/new-community-board-subscribe-to-the-new-service-announcements/ba-p/1044) and receive notifications for new posts.
+Google releases [service announcements](https://www.androidenterprise.community/service-announcements-37) containing details about issues that may impact Android Enterprise management.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

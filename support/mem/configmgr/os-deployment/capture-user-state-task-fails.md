@@ -1,7 +1,7 @@
 ---
 title: Failures with the Capture User State task or task sequence
 description: Fixes an issue where Capture User State task or task sequence fails when you do a hard-link migration in System Center 2012 Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, mansee, erinwi
 ms.custom: sap:Content Management\Content Distribution to Pull Distribution Points
 ---

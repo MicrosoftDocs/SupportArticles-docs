@@ -1,7 +1,7 @@
 ---
 title: Only one Intune app policy applied to Edge or Managed Browser
 description: Fixes an issue in which only one Microsoft Intune app configuration policy is applied to Edge or Managed Browser.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:App Configprofiles - iOS\ManagedApps
 ms.reviewer: kaushika, intunecic, Announ.Diall
