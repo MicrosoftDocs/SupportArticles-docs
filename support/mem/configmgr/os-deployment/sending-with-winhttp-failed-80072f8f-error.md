@@ -1,7 +1,7 @@
 ---
 title: The Task Sequence Wizard returns error 80004005
 description: Discusses an issue in which the Task Sequence Wizard returns error 80004005 and Smsts.log logs the Sending with winhttp failed error during an OS deployment that uses bootable or prestaged media.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Operating Systems Deployment (OSD)\Operating System Image Deployment
 ---

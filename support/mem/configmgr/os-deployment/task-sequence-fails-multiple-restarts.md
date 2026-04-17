@@ -1,7 +1,7 @@
 ---
 title: Task sequence fails if software updates ask restarts
 description: Lists known Windows updates that require dual restarts, and discusses problem mitigation strategies.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, frankroj, mikecure
 ms.custom: sap:Operating Systems Deployment (OSD)\Windows Setup Failures
 ---
