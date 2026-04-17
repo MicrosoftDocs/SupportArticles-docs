@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot auto-enrolling existing Configuration Manager devices in Intune
 description: Helps you understand and troubleshoot issues when you set up co-management by taking Path 1 - Auto-enroll existing Configuration Manager-managed devices into Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Prepare Windows 10 devices for co-management
 ms.reviewer: kaushika, meerak
