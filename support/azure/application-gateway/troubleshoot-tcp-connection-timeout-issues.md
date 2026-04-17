@@ -70,12 +70,46 @@ Make sure that outbound traffic to the Application Gateway front-end IP and port
 
 ### Review NSG and user-defined route (UDR) configuration on the Application Gateway subnet
 
-Verify the network configuration applied to the Application Gateway subnet.
+The validation scope depends on whether traffic reaches Application Gateway through a **public** or **private frontend IP**.
 
-- Verify that NSG rules allow inbound and outbound traffic on the destination port.
-- Check whether a UDR is associated with the subnet.
+Verify the network configuration applied to the Application Gateway subnet:
 
-The validation scope depends on whether traffic reaches Application Gateway through a public or private front-end IP.
+1. Confirm that Network Security Group (NSG) rules allow inbound on the destination port.
+2. Determine whether a user‑defined route (UDR) is associated with the Application Gateway subnet and evaluate the configured route propagation behavior.
+
+####  UDR Validation
+
+If a route table is associated with the Application Gateway subnet, review all user‑defined routes that could affect return traffic from the Application Gateway.
+Pay particular attention to Routes that match the client/source IP address range that forward traffic to a Network Virtual Appliance (NVA) or Azure Firewall.
+
+If such a route exists, determine whether it could redirect return traffic away from the expected path, resulting in asymmetric routing.
+If no matching user-defined route exists for the client/source IP address:
+
+Verify whether gateway route propagation is disabled on the route table.
+If gateway route propagation is disabled, the issue is unlikely to be caused by routing.
+
+*`Note: If no route table is associated with the Application Gateway subnet, gateway route propagation is effectively enabled by default. However, this alone does not rule out routing-related issues.`*
+
+If no route table is associated, or if a route table is associated and gateway route propagation is enabled, perform the following validations:
+
+####  1- Gateway Route Propagation (Same Virtual Network)
+
+Check whether a GatewaySubnet exists in the same virtual network.
+If a GatewaySubnet exists:
+
+Evaluate whether routes propagated from a VPN gateway or ExpressRoute gateway (for example, default routes introduced by forced tunneling) could affect return traffic for the request client IP address.
+Validate the effective return path by using Connection Troubleshoot under the Monitoring section of the Application Gateway.
+
+#### 2- Peered virtual network scenario
+
+Check whether the Application Gateway virtual network is peered with another virtual network.
+If peering exists, verify whether Use remote gateways is enabled on the peering configuration.
+When Use remote gateways is enabled:
+
+Evaluate whether routes propagated from a VPN gateway or ExpressRoute gateway (for example, default routes introduced by forced tunneling) could affect return traffic for the request client IP address.
+Validate the effective return path by using Connection Troubleshoot under the Monitoring section of the Application Gateway.
+
+*`Note: Any scenario where 0.0.0.0/0 needs to be redirected through a virtual appliance, a hub/spoke virtual network, or on-premises (forced tunneling) isn't supported for public frontend v2 Application Gateway`*
 
 ### Verify DNS configuration
 
