@@ -170,4 +170,4 @@ In addition to collecting the information, this diagnostic package can detect on
 
 ## References
 
-[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
+[Microsoft Support Diagnostic Tool resources](/windows/whats-new/deprecated-features-resources#microsoft-support-diagnostic-tool-resources)

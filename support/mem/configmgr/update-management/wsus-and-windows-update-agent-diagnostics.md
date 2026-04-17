@@ -114,4 +114,4 @@ _Original KB number:_ &nbsp; 2793732
   
 ## References
 
-[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
+[Microsoft Support Diagnostic Tool resources](/windows/whats-new/deprecated-features-resources#microsoft-support-diagnostic-tool-resources)
