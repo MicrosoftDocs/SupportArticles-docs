@@ -1,6 +1,6 @@
 ---
 title: First display of the Start menu is delayed in a remote desktop session on a Windows Server 2025-based RDSH server
-description: Describes why, when you use a Windows Server 2025 Remote Desktop Session Host (RDSH) server, remote desktop users might experience a lag in the performance of the Start menu.
+description: Explains why, when you use a Windows Server 2025 Remote Desktop Session Host (RDSH) server, remote desktop users might experience a lag in the performance of the Start menu.
 ms.date: 04/17/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,11 +17,11 @@ appliesto:
 
 ## Summary
 
-This article describes why, when you use a Windows Server 2025 Remote Desktop Session Host (RDSH) server, remote desktop users might experience a lag in the performance of the Start menu. This lag only occurs the first time a user opens the Start menu during a remote desktop session. This article also explains how to configure the RDSH server to prelaunch Start menu processes if the delay is noticeable for users.
+This article explains why, when you use a Windows Server 2025 Remote Desktop Session Host (RDSH) server, remote desktop users might experience a lag in the performance of the Start menu. This lag occurs only the first time that a user opens the Start menu during a remote desktop session. This article also explains how to configure the RDSH server to prelaunch Start menu processes if the delay is noticeable for users.
 
 ## Symptoms
 
-You have a Remote Desktop Service deployment that uses Windows Server 2025-based computers as Remote Desktop Session Host (RDSH) servers. Users report that after they sign in to a remote desktop session, the first time they open the Start menu, it doesn't appear right away. It might take several seconds to display. However, after that the Start menu appears as quickly as expected.
+You have a Remote Desktop Service deployment that uses Windows Server 2025-based computers as Remote Desktop Session Host (RDSH) servers. Users report that the first time that they open the Start menu after they sign in to a remote desktop session, the menu doesn't appear immediately. Instead, the menu might take several seconds to open. After the initial attempt, the Start menu appears quickly, as expected.
 
 ## Cause
 
@@ -40,11 +40,11 @@ You can configure Windows Server to use the previous behavior by changing the `P
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-To change the entry, follow these steps.
+To change the setting, follow these steps:
 
-1. On the RDSH server, in Registry Editor, go to the `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\StartMenu` subkey.
+1. On the RDSH server, open Registry Editor, and locate the `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\StartMenu` subkey.
 
-1. Under this subkey, modify the following entry (if it doesn't exist, create it).
+1. Under this subkey, modify the following entry (if it doesn't exist, create it):
 
    - Name: `PrelaunchOverride`
    - Type: REG\_DWORD
