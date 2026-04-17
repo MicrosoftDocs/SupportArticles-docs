@@ -115,8 +115,8 @@ In order to resolve a schema mismatch issue, you have to understand the scenario
 
 The issue occurs after the Active Directory schema is updated. In many cases, this issue is transient and resolves itself.
 
-  > [!IMPORTANT]  
-  > Test any schema update thoroughly before you introduce it into your production environment.
+> [!IMPORTANT]  
+> Test any schema update thoroughly before you introduce it into your production environment.
 
 #### Scenario 2
 
@@ -125,10 +125,11 @@ The issue occurs when you try to promote a member server to a domain controller 
 #### Scenario 3
 
 The issue occurs during normal replication. Typically, this behavior means that an underlying issue is preventing Active Directory from resolving issues that would usually be transient. This scenario has multiple possible causes, including (but not limited to) the following issues:
-  - A DC is quarantined, or might have lingering objects
-  - Communication stopped because of a DNS or RPC issue
-  - A DC stopped replicating for other reasons
-  - Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
+
+- A DC is quarantined, or might have lingering objects
+- Communication stopped because of a DNS or RPC issue
+- A DC stopped replicating for other reasons
+- Objects can't replicate because their `nTSecurityDescriptor` attributes are too large
 
 #### Scenario 4
 
