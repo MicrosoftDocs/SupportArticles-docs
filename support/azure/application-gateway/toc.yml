@@ -2,10 +2,14 @@ items:
 
 - name: Welcome
   href: welcome-app-gateway.yml
+- name: Troubleshoot TCP connection timeout issues in Application Gateway
+  href: troubleshoot-tcp-connection-timeout-issues.md
 - name: ApplicationGatewaySkuNotSpecified error
   href: error-codes/applicationgatewayskunotspecified.md
 - name: ApplicationGatewayFrontendIpCannotHavePublicIpAndSubnet error
   href: error-codes/application-gateway-frontend-ip-cannot-have-public-ip-subnet-error.md
+- name: Troubleshoot WAF anomaly scoring behavior and rule 949110 blocks
+  href: troubleshoot-waf-anomaly-scoring-rule-949110-blocks.md
 - name: Troubleshoot an Application Gateway in Azure (ILB ASE)
   href: create-gateway-internal-load-balancer-app-service-environment.md 
 - name: Troubleshoot redirection to App Service URL
