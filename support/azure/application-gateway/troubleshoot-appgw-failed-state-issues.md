@@ -5,7 +5,7 @@ ms.date: 04/07/2026
 ms.author: iskau
 ms.editor: iskau
 ms.reviewer: iskau
-ms.service: application-gateway
+ms.service: azure-application-gateway
 ms.topic: troubleshooting-general
 ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
