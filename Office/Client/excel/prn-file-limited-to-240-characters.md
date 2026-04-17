@@ -8,12 +8,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10882
 appliesto: 
   - Microsoft Excel
-ms.date: 05/26/2025
+ms.date: 03/30/2026
 ---
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel

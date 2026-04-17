@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4017697
 
+## Summary
+
 This article describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. It also describes related Citrix support policies.
 
 ## Frequently asked questions

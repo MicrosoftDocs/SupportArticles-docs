@@ -11,6 +11,8 @@ ms.topic: how-to
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article shows how to collect an operating system (OS) memory dump file for Azure support.
 
 ## How to collect an OS memory dump file

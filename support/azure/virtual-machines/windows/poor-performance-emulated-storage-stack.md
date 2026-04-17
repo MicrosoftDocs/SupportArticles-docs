@@ -13,6 +13,10 @@ ms.custom: sap:VM Performance
 
 _Original KB number:_ &nbsp; 4056345
 
+## Summary
+
+This article describes an issue that causes poor performance to occur for VMs that run with an emulated mode storage stack on Windows Server 2012 R2. It also provides a resolution for the issue.
+
 ## Symptoms
 
 Virtual machines (VMs) that are running Windows Server 2012 R2 may experience poor performance if the VM storage stack is in emulated mode. Additionally, you may experience a severe decrease in local resource VHD (temp disk) I/O performance.

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot unapproved repair jobs using Service Fabric Explorer
 description: Learn how to troubleshoot stuck repair jobs in Azure Service Fabric clusters by using Service Fabric Explorer. Analyze repair task states, safety checks, and health checks to resolve approval issues.
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.author: jarrettr
 ms.reviewer: ashukumar, v-ryanberg
 ms.editor: v-gsitser
@@ -90,7 +90,7 @@ To view jobs that Service Fabric receives for approval, select **Infrastructure 
 - **WaitingForAcknowledgement** - The job is still waiting for approval. 
 - **Acknowledged** - Service Fabric approves the job. 
 
-Jobs appear here only if they exist in the received document. In addition to the **Job ID** and **Acknowledgement Status**, the **Impact Types** section displays the nature of the job’s impact. The **Current Repair Task** section shows which repair task is actively running for job approval on the Service Fabric side. By selecting **All Repair Tasks**, you can view the status of every repair task that's associated with the current job.
+Jobs appear here only if they exist in the received document. In addition to the **Job ID** and **Acknowledgement Status**, the **Impact Types** section displays the nature of the job's impact. The **Current Repair Task** section shows which repair task is actively running for job approval on the Service Fabric side. By selecting **All Repair Tasks**, you can view the status of every repair task that's associated with the current job.
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png" alt-text="The Infrastructure Jobs view in Service Fabric Explorer showing job ID, acknowledgment status, and impact types." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-infrastructure-job-view.png":::
 
@@ -116,7 +116,7 @@ For example, in the following screenshot, the repair task is stuck in the **Ensu
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/safety-check-view.png" alt-text="Safety Checks view in Service Fabric Explorer showing the specific check where the task is stuck." lightbox="media/troubleshoot-service-fabric-repair-jobs/safety-check-view.png":::
 
-If **Infrastructure Service** shows no errors that are related to a repair task, and the task is in the Executing state, the job’s acknowledgment status is Acknowledged for Impact Start. Similarly, if the repair task transitions to the Completed state, the job’s acknowledgment status is Acknowledged for Impact End.
+If **Infrastructure Service** shows no errors that are related to a repair task, and the task is in the Executing state, the job's acknowledgment status is Acknowledged for Impact Start. Similarly, if the repair task transitions to the Completed state, the job's acknowledgment status is Acknowledged for Impact End.
 
 :::image type="content" source="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-task-executing.png" alt-text="A repair task in the Executing state by having the job acknowledgment status of Acknowledged for Impact Start." lightbox="media/troubleshoot-service-fabric-repair-jobs/cluster-repair-task-executing.png":::
 

@@ -1,16 +1,18 @@
 ---
 title: Istio Service Mesh Add-on CNI Troubleshooting
-description: Learn how to troubleshoot the Istio CNI add-on for Azure Kubernetes Service (AKS).
+description: Troubleshoot Istio CNI add-on issues in Azure Kubernetes Service (AKS) and restore reliable pod networking and sidecar startup. Follow these steps.
 ms.date: 10/22/2025
 ms.reviewer: gerobayopaz, kochhars
 ms.service: azure-kubernetes-service
-ms.topic: troubleshooting-general
+ms.topic: troubleshooting
 ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the Istio CNI add-on so that I can use the Istio service mesh successfully.
 ---
 # Istio service mesh add-on CNI troubleshooting
 
-This article discusses how to troubleshoot issues that affect the [Istio CNI][istio-cni-addon] feature for the Istio service mesh add-on for Azure Kubernetes Service (AKS).
+## Summary
+
+This article helps you troubleshoot [Istio CNI][istio-cni-addon] issues in Azure Kubernetes Service (AKS) so you can resolve pod startup and traffic redirection problems quickly.
 
 ## Prerequisites
 
@@ -42,7 +44,7 @@ This article discusses how to troubleshoot issues that affect the [Istio CNI][is
 
     The command output should be `CNIChaining`. If the add-on isn't enabled, refer to [this guide to Istio CNI](/azure/aks/istio-cni).
 
-## CNI DaemonSet provisioning issues troubleshooting
+## Troubleshoot CNI DaemonSet provisioning issues
 
 ### Step 1: Verify that the Istio CNI DaemonSet is provisioned and ready
 
@@ -81,7 +83,7 @@ kubectl describe nodes
 
 Look for node taints that might prevent CNI pod scheduling, and make sure that the DaemonSet has appropriate tolerations.
 
-## Init container injection issues troubleshooting
+## Troubleshoot init container injection issues
 ### Step 1: Check whether istio-init containers are still injected
 
 For newly created pods in the mesh, verify that `istio-init` containers are no longer present:
@@ -116,7 +118,7 @@ kubectl logs $POD_NAME -n $NAMESPACE -c istio-proxy
 
 If CNI is working correctly, the sidecar should start normally even without the `istio-init` container.
 
-## Pod startup failure troubleshooting
+## Troubleshoot pod startup failures
 
 If pods don't start, check for `istio-validation` init container errors:
 

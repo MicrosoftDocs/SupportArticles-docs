@@ -1,0 +1,32 @@
+### YamlMime:Landing
+
+title: Azure Load Balancer troubleshooting documentation
+summary: Welcome to Azure Load Balancer troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Load Balancer. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Load Balancer
+  description: Documentation for troubleshooting common issues with Azure Load Balancer. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-load-balancer 
+  ms.topic: landing-page # Required
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/06/2026
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Load Balancer
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common problems with Azure Load Balancer
+            url: load-balancer-troubleshoot.md
+          - text: Troubleshoot common deployment errors
+            url: load-balancer-common-deployment-errors.md
+          - text: Troubleshoot Azure Load Balancer
+            url: load-balancer-troubleshoot.md
+          - text: Troubleshoot load balancer health event logs
+            url: load-balancer-troubleshoot-health-event-logs.md

@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot Outbound SMTP Connectivity in Azure
-description: Learn how to troubleshoot outbound SMTP connectivity issues in Azure Virtual Machines. Discover recommended email delivery methods and resolve port 25 blocking problems.
+description: Resolve outbound SMTP connectivity issues in Azure VMs, choose a reliable email delivery method, and fix port 25 blocks to restore mail flow.
 services: virtual-network
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
-ms.custom: = sap:Connectivity
+ms.custom: sap:Connectivity
 ms.date: 07/28/2025
 # Customer intent: As a cloud administrator, I want to troubleshoot outbound SMTP connectivity issues in Azure, so that I can ensure reliable email delivery from my virtual machines without interruptions.
 ---
@@ -45,10 +45,6 @@ The Azure platform blocks outbound SMTP connections on TCP port 25 for deployed 
 
 If you're using a subscription type that isn't an Enterprise Agreement or MCA-E, we encourage you to use an authenticated SMTP relay service, as outlined earlier in this article.
 
-## Changing subscription type
+## Change subscription type
 
 If you change your subscription type from Enterprise Agreement or MCA-E to another type of subscription, changes to your deployments might result in outbound SMTP being blocked.
-
-## Need help? Contact support
-
-If you're using an Enterprise Agreement or MCA-E subscription and still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly. Use this issue type: **Technical** > **Virtual Network** > **Cannot send email (SMTP/Port 25)**.

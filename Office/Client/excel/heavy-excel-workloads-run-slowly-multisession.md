@@ -6,16 +6,17 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: rtaylor, jefferc
+ms.reviewer: rtaylor, jefferc, akeeler, v-lisalozano
 ms.custom: 
   - Reliability
   - CSSTroubleshoot
   - CI 172461
+  - CI 10891
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel
-ms.date: 05/26/2025
+  - Microsoft Excel
+ms.date: 03/31/2026
 ---
 
 # Heavy Excel workloads run slowly in multi-session environments

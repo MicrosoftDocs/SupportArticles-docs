@@ -1,17 +1,17 @@
 ---
-title: Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail message 
-description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail message when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error message 
+description: Fix the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS. Learn how to resolve DNS lookup failures and successfully create or deploy your AKS cluster.
 ms.date: 03/12/2025
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail message
+# Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error in AKS
 
 ## Summary
 
-This article discusses how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) that occurs when you try to start or create and deploy a Azure Kubernetes Service (AKS) cluster.
+This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL) in Azure Kubernetes Service (AKS) when you try to start, create, or deploy a cluster.
 
 ## Prerequisites
 

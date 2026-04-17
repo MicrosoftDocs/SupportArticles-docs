@@ -1,5 +1,5 @@
 ---
-title: Can’t SSH to Azure Linux VM because permissions are too open
+title: Can't SSH to Azure Linux VM because permissions are too open
 description: Troubleshoot the permissions are too open error when you try to connect to Azure Linux VM
 services: virtual-machines
 author: JarrettRenshaw
@@ -19,6 +19,10 @@ ms.author: jarrettr
 **Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
+## Summary
+
+This article helps you troubleshoot the "permissions are too open" error that occurs when you try to connect to an Azure Linux virtual machine (VM) by using Secure Shell (SSH). The error message in the system log might look like this:
 
 ## Symptoms
 

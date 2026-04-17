@@ -10,15 +10,15 @@ ms.custom:
   - Languages
   - CI 106750
   - CSSTroubleshoot
-ms.reviewer: iuliam
+  - CI 10882
+ms.reviewer: iuliam, akeeler, v-lisalozano
 appliesto: 
   - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 03/30/2026
 ---
 
 # The first worksheet name in a new Excel workbook displays in a language other than the Office display language

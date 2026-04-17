@@ -22,6 +22,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article discusses how to fix the Remote Desktop Portal (RDP) issue that occurs if the guest operating system firewall blocks inbound traffic.
 
 ## Symptoms

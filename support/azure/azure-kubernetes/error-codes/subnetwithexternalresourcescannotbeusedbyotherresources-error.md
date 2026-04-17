@@ -1,6 +1,6 @@
 ---
 title: AKS cluster error code SubnetWithExternalResourcesCannotBeUsedByOtherResources
-description: Provides solutions to an error that occurs when you create, upgrade, or scale a Microsoft Azure Kubernetes Service cluster.
+description: Learn how to fix the SubnetWithExternalResourcesCannotBeUsedByOtherResources error in AKS when creating, upgrading, or scaling a cluster.
 ms.date: 11/18/2024
 author: axelgMS
 ms.author: axelg
@@ -8,7 +8,9 @@ ms.reviewer: chiragpa, eddie
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code
+# Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code in AKS
+
+## Summary
 
 This article provides solutions to the "SubnetWithExternalResourcesCannotBeUsedByOtherResources" error code that occurs when you create, update, or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 

@@ -8,14 +8,20 @@ manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 02/21/2025
+ms.date: 04/16/2026
 ms.author: jarrettr
-ms.reviewer: clmendes
+ms.reviewer: scotro
 ms.custom: sap:Received an Allocation Failure
 ---
 # Troubleshoot allocation failures when you create or resize VMs in Azure
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
+## Summary
+
+This article explains the causes of some of the common allocation failures and suggests possible remedies. Until your preferred VM type is available in your preferred region, we advise customers who encounter deployment issues to consider the guidance as a temporary workaround.
+
+## Symptom
 
 When you create a virtual machine (VM), start any stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you might occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create, start, or resize VMs in a region while the VMs might display an error code and message like the following text:
 

@@ -62,6 +62,8 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|---------------|-------------------|--------------|------------------|---------------------------------------------------------|--------------------|
+| CU31 + GDR | 14.0.3525.1   | 2017.140.3525.1   | 14.0.249.120 | 2017.140.249.120 | [KB5084818](https://support.microsoft.com/help/5084818) | April 14, 2026   |
+| GDR        | 14.0.2105.1  |  2017.140.2105.1   | 14.0.6.482   | 2017.140.6.482   | [KB5084819](https://support.microsoft.com/help/5084819) | April 14, 2026   |
 | CU31 + GDR | 14.0.3520.4   | 2017.140.3520.4   | 14.0.249.120 | 2017.140.249.120 | [KB5077471](https://support.microsoft.com/help/5077471) | March 10, 2026   |
 | GDR        | 14.0.2100.4  |  2017.140.2100.4   | 14.0.6.482   | 2017.140.6.482   | [KB5077472](https://support.microsoft.com/help/5077472) | March 10, 2026   |
 | CU31 + GDR | 14.0.3515.1   | 2017.140.3515.1   | 14.0.249.120 | 2017.140.249.120 | [KB5068402](https://support.microsoft.com/help/5068402) | November 11, 2025   |

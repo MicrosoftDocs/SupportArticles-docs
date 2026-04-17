@@ -14,7 +14,11 @@ ms.custom: sap:Cannot create a VM
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-You may occasionally encounter limitations when you add new virtual machines (VMs) to an existing availability set. Now, you can use the following REST API service to find what VM sizes are supported in your availability set. Select **Try it**, and then sign in with your Azure account to run the REST API.
+## Summary
+
+This article provides a supportability matrix about which virtual machine (VM) series you can mix in the same availability set.
+
+You may occasionally encounter limitations when you add new VMs to an existing availability set. Now, you can use the following REST API service to find what VM sizes are supported in your availability set. Select **Try it**, and then sign in with your Azure account to run the REST API.
 
 [Availability Sets - List Available Sizes - REST API](/rest/api/compute/availability-sets/list-available-sizes)
 

@@ -21,6 +21,8 @@ ms.author: jarrettr
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article describes how to troubleshoot the chroot environment on a rescue virtual machine (VM) in Linux.
 
 ## Ubuntu

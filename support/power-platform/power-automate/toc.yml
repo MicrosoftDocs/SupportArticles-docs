@@ -23,8 +23,6 @@ items:
     items:
       - name: Add images to email messages
         href: /power-automate/desktop-flows/how-to/add-images-email-messages?context=/troubleshoot/power-platform/power-automate/context/context
-      - name: Authentication failed when signing in to Microsoft Flow
-        href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
       - name: Can't sign into OneDrive connector
         href: authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
   - name: Connections
@@ -263,10 +261,6 @@ items:
         href: flow-creation/fail-to-list-excel-online-tables-retrieving-values.md
       - name: Failed to fetch when creating a flow
         href: flow-creation/failed-fetch-error-when-creating-flow.md
-      - name: Flow Editor issues and recommendations
-        href: flow-creation/flow-editor-issues-recommendations.md
-      - name: Flow Management errors and recommendations
-        href: flow-creation/flow-management-errors-recommendations.md
       - name: How to use Power Automate's JavaScript Software Developer Kit
         href: flow-creation/flow-embed-sdk.md
       - name: How to use Flow to copy items between two data sources
@@ -277,14 +271,12 @@ items:
         href: flow-creation/widget-cookies-pop-up-error.md
   - name: Flow management
     items:
-      - name: Manage orphan flows when the owner leaves the organization
+      - name: Manage orphaned flows when the owner leaves the organization
         href: flow-management/manage-orphan-flow-when-owner-leaves-org.md
   - name: Flow run issues
     items:
       - name: Errors with null fields
         href: flow-run-issues/getting-errors-null-fields.md
-      - name: Flow Runtime errors and recommendations
-        href: flow-run-issues/flow-runtime-errors-recommendations.md
       - name: Issues triggering emails with attachments from shared mailbox
         href: flow-run-issues/issues-triggering-emails-with-attachments-from-shared-mailbox.md
       - name: Missing runs or triggers history for a flow

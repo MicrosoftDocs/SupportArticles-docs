@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.date: 04/17/2025
 ms.custom: 
   - sfi-image-nochange
-  - = sap:Connectivity
+  - sap:Connectivity
 # Customer intent: As an IT administrator, I want to diagnose and resolve connectivity issues for Azure virtual machines, so that I can ensure reliable communication between VMs and maintain optimal network performance.
 ---
 
@@ -22,7 +22,7 @@ This article helps administrators diagnose and resolve connectivity problems tha
 
 ## Problems
 
-- [An Azure VM that’s deployed by using Resource Manager can't connect to another Azure VM in same virtual network](/azure/virtual-network/troubleshoot-vm-connectivity#azure-vm-cant-connect-to-another-azure-vm-in-same-virtual-network).
+- [An Azure VM that's deployed by using Resource Manager can't connect to another Azure VM in same virtual network](/azure/virtual-network/troubleshoot-vm-connectivity#azure-vm-cant-connect-to-another-azure-vm-in-same-virtual-network).
 - [An Azure VM can't connect to the second network adapter of an Azure VM in same virtual network](/azure/virtual-network/troubleshoot-vm-connectivity#azure-vm-cant-connect-to-the-second-network-adapter-of-an-azure-vm-in-same-virtual-network).
 - [An Azure VM can't connect to the internet](/azure/virtual-network/troubleshoot-vm-connectivity#azure-vm-cant-connect-to-the-internet).
 
@@ -141,7 +141,7 @@ Hops             : [
     |Issue type  |Value  |Resolution action |
     |---------|---------|---------|
     |NetworkSecurityRule|Name of the blocking NSG|You can [delete the NSG rule](/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal#delete-a-security-rule) or modify the rule as described [here](/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal#change-a-security-rule).|
-    |UserDefinedRoute     |   Name of the blocking UDR      | If you don't require this route, delete the UDR. If you can’t delete the route, update the route by using the appropriate address prefix and next hop. You can also adjust the Network Virtual Appliance to forward traffic appropriately. For more information, see: [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview) and [Route network traffic with a route table using PowerShell](/azure/virtual-network/tutorial-create-route-table-powershell).|
+    |UserDefinedRoute     |   Name of the blocking UDR      | If you don't require this route, delete the UDR. If you can't delete the route, update the route by using the appropriate address prefix and next hop. You can also adjust the Network Virtual Appliance to forward traffic appropriately. For more information, see: [Virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview) and [Route network traffic with a route table using PowerShell](/azure/virtual-network/tutorial-create-route-table-powershell).|
     |CPU    |    Usage     |     Follow these recommendations that describe in [Generic performance troubleshooting for Azure Virtual Machine running Linux or Windows](https://support.microsoft.com/en-in/help/3150851/generic-performance-troubleshooting-for-azure-virtual-machine-running).|
     |Memory    |      Usage   |    Follow the recommendations that are described in [Generic performance troubleshooting for Azure Virtual Machine running Linux or Windows](https://support.microsoft.com/en-in/help/3150851/generic-performance-troubleshooting-for-azure-virtual-machine-running).|
     |Guest Firewall    |      Name of the firewall blocking   |      Follow these steps: [Turn Windows Firewall on or off](https://support.microsoft.com/help/4028544/windows-turn-windows-firewall-on-or-off).|
@@ -252,7 +252,7 @@ Follow these steps to check the state of the NIC:
     ![NIC1](media/troubleshoot-vm-connectivity/nicedit1.png)
 
     > [!NOTE]
-    > After you select the **Edit** option, the “Get” option changes to a **Put** option.
+    > After you select the **Edit** option, the "Get" option changes to a **Put** option.
 
     ![NIC2](media/troubleshoot-vm-connectivity/nicedit2.png)
 

@@ -15,6 +15,10 @@ ms.reviewer: Timothy.Basham, Scott.L.Roberts
 
 _Original KB number:_ &nbsp; 4561944
 
+## Summary 
+
+This article describes an issue in which Cloud-init writes virtual machine's host keys as ec2. It provides a workaround.
+
 ## Symptoms
 
 Cloud-init intermittently writes SSH Host keys to console as 'ec2'. Azure doesn't use ec2 instances.

@@ -6,18 +6,19 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: v-barryb
-ms.custom: 
+ms.reviewer: v-barryb, akeeler, v-lisalozano
+ms.custom:
   - Editing\Formulae
   - CSSTroubleshoot
+  - CI 10764
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
-  - Excel 2003
-ms.date: 05/26/2025
+  - Excel for Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
+ms.date: 03/25/2026
 ---
 
 # How to create a dynamic defined range in an Excel worksheet
