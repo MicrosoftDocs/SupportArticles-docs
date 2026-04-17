@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software update scan failures
 description: Describes how to troubleshoot software update scan failures in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Software Update Management (SUM)\Software Update Scanning
 ---
