@@ -23,11 +23,11 @@ Windows unexpectedly installs updates on Windows Server 2016 and Windows Server 
 
 ## Cause
 
-This issue occurs when an administrator runs the command `GPUPDATE / FORCE`. This command resets all policy settings and reapplies them. During this interval, the automatic update settings are reverted to defaults, and updates might be installed. This issue occurs only on Windows Server 2016 and Windows Server 2019.
+This issue occurs when during a group policy processing event. The event resets all policy settings and reapplies them. During this interval, the automatic update settings are reverted to defaults, and updates might be installed. This issue occurs only on Windows Server 2016 and Windows Server 2019.
 
 ## Resolution
 
-To avoid this issue, don't run `GPUPDATE /FORCE` on Windows Server 2016 and 2019 unless you're prepared for any queued updates to be installed. This issue is rare, but it can occur.
+To avoid this issue, restrict group policy processing to only when group policy object are changed on Windows Server 2016 and 2019 unless you're prepared for any queued updates to be installed. This issue is rare, but it can occur.
 
 ## Workarounds for Windows Server 2016 and Windows Server 2019
 
@@ -37,7 +37,7 @@ For users on Windows Server 2016 and Windows Server 2019, implementing one of th
 
 1. Navigate to **Computer Configuration** > **Administrative Templates** > **System** > **Group Policy** > **Configure registry policy processing** and set it to **Enabled**.
 2. Clear **Do not apply during periodic background processing**.
-3. Select **Process even if the Group policy objects have not changed**.
+3. Uncheck **Process even if the Group policy objects have not changed**.
 
 ### Enable the "Configure registry policy processing" policy by using the registry
 
