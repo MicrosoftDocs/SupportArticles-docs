@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - can't select more than 100 resources in the Azure portal
-description: Fix Azure portal resource move failures when selecting more than 100 resources. Learn workarounds in portal, PowerShell, or CLI to move successfully.
+description: Fix Azure portal resource move failures when you select more than 100 resources. Learn workarounds in portal, PowerShell, or CLI to move successfully.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -17,16 +17,18 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-When you try to move more than 100 resources by using the [Azure portal](https://portal.azure.com), the portal retains only the resources you select on the currently visible page. Navigating between pages clears selections you made on previous pages. This behavior can lead to missing dependency errors if you attempt to move resources across multiple pages without reselecting all required resources on each page.
+When you try to move more than 100 resources by using the [Azure portal](https://portal.azure.com), the portal retains only the resources that you select on the currently visible page. Navigating between pages clears the selections that you made on previous pages. This behavior can cause missing dependency errors if you try to move resources across multiple pages without reselecting all required resources on each page.
 
 ## Symptoms
 
-When you try to move more than 100 resources by using the Azure portal:
+Imagine the following scenario:
 
-1. You select all resources on page 1 of the resource list.
-1. You go to page 2 and select extra resources.
-1. When you return to page 1, the portal no longer shows the resources you selected.
-1. The move fails with an error similar to:
+- You use the Azure portal to move more than 100 resources.
+- You select all the resources on page 1 of the resource list.
+- You go to page 2, and select extra resources.
+- You return to page 1, and see that the portal no longer shows the resources that you selected.
+
+In this scenario, the move fails and returns an error message that resembles the following example:
 
 ```output
 {
@@ -37,25 +39,25 @@ When you try to move more than 100 resources by using the Azure portal:
 
 ## Cause
 
-This limitation is a known limitation of the Azure portal resource move interface. When the resource list spans multiple pages (more than 100 resources per page), navigating between pages clears selections you made on previous pages. The portal retains only resources you select on the currently visible page.
+This issue is a known limitation of the Azure portal resource move interface. If the resource list spans multiple pages (more than 100 resources per page), navigating between pages clears selections that you made on previous pages. The portal retains only resources that you select on the currently visible page.
 
 This behavior is by design as of the current portal experience.
 
-## Resolution
+## Workaround
 
 To move more than 100 resources, use one of the following workarounds.
 
-### Option 1: Move resources in batches by using the portal
+### Workaround 1: Move resources in batches by using the portal
 
-1. Select all resources on page 1 only and complete the move for that batch.
-1. After the first move finishes, select the next batch of resources and repeat.
+1. Select all resources on page 1 only, and complete the move for that batch.
+1. After the first move finishes, select the next batch of resources, and repeat.
 
 > [!NOTE]
-> When you move resources between subscriptions, make sure you include all dependent resources, like a virtual machine (VM), its network interface card (NIC), and its disks, in the same batch. This approach helps you avoid missing dependency errors.
+> When you move resources between subscriptions, make sure that you include all dependent resources, such as a virtual machine (VM), its network interface card (NIC), and its disks, in the same batch. This approach helps you avoid missing dependency errors.
 
-### Option 2: Use Azure PowerShell or Azure CLI
+### Workaround 2: Use Azure PowerShell or Azure CLI
 
-Move resources programmatically to avoid the portal pagination limitation.
+To avoid the portal pagination limitation, move resources programmatically.
 
 **Azure PowerShell**
 
