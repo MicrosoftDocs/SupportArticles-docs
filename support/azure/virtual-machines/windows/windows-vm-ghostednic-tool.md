@@ -10,7 +10,9 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Overview
+## Summary
+
+This article provides information about the Azure VM Ghosted Nic Validation and Cleanup Tools, which are designed to help diagnose and resolve issues related to ghosted network interface cards (NICs) in Azure virtual machines (VMs). The tools can detect and remove ghosted NICs that may cause connectivity, performance, Windows Update, and other issues in Azure VMs.
 
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 

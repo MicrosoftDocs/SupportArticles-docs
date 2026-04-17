@@ -11,6 +11,8 @@ ms.topic: how-to
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article shows how to repair the boot configuration data in an Azure virtual machine (VM) running Windows.
 
 ## How to repair the boot configuration data

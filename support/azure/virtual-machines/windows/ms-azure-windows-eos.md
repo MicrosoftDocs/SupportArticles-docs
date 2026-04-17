@@ -16,6 +16,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4010166
 
+## Summary
+
 This article provides information about Windows Server support. It also answers some of the most common questions about around End of Support (EOS) for Azure Virtual Machines (VMs) that run on Windows Server operating systems.
 
 > [!IMPORTANT]

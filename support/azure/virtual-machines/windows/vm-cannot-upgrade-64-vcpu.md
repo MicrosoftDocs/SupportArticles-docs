@@ -14,6 +14,10 @@ _Original KB number:_ &nbsp; 4131519
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
+This article describes an issue in which you cannot upgrade an Azure virtual machine (VM) to a size that contains more than 64 virtual CPUs (vCPUs).
+
 ## Symptoms
 
 You may experience errors when you try to upgrade your VM to a size that contains more than 64 vCPU's, such as Standard_F72s_v2.
