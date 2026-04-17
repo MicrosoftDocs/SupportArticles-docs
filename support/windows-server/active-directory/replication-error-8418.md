@@ -149,7 +149,7 @@ Schema mismatch issues typically fall into one of two categories: *Transient* an
 Transient schema mismatch issues meet the following criteria:
 
 - The error messages appear on different DCs throughout the forest, in a pattern that matches the Active Directory replication topology and schedule. This kind of pattern typically occurs when you install an update to the schema.
-- On any particular DC, the issue disappears after one replication cycle per replication partner. This issue might take twice the amount of time that's needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners that a DC has, the longer this process takes.
+- On any particular DC, the issue disappears after one replication cycle per replication partner. This process might take twice the amount of time that's needed for an object update to replicate from one DC to all other DCs in the forest. The more replication partners that a DC has, the longer this process takes.
 
 Persistent schema mismatch issues don't meet these criteria, and don't resolve themselves. Such issues indicate one or more of the following issues:
 
