@@ -1,7 +1,7 @@
 ---
 title: Mismatch error if Intune app configuration value has ampersand
 description: Provides the resolution to solve the mismatch between the value type and the configuration value error for a Microsoft Intune app configuration policy.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:App Configprofiles - iOS\ManagedApps
 ms.reviewer: kaushika
