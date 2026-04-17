@@ -49,7 +49,7 @@ Run SQLIOSim for an extended test on a computer before you install SQL Server. U
 You don't need the SQL Server service to run while you run SQLIOSim. In fact, don't run SQL Server while SQLIOSim is running because the applications can compete for I/O resources.
 
 > [!WARNING]  
-> To avoid losing your actual SQL Server data, don't specify actual SQL Server database files for testing. The SQLIOSim tool overwrites the data by using random test patterns. 
+> To avoid losing your actual SQL Server data, don't specify actual SQL Server database files for testing. The SQLIOSim tool overwrites the data by using random test patterns.
 
 The following examples shows how to run SQLIOSim by using the GUI and command line.
 
@@ -57,7 +57,7 @@ The following examples shows how to run SQLIOSim by using the GUI and command li
 
 1. Go to _C:\Program Files\Microsoft SQL Server\MSSQLXX.\<InstanceName>\MSSQL\Binn_.
 1. Start the _SQLIOSIM.EXE_ application.
-2. Look in the **Files and Configuration** window for default settings that you can modify to match your configuration needs.
+1. Look in the **Files and Configuration** window for default settings that you can modify to match your configuration needs.
 
    :::image type="content" source="media/sqliosim/sqliosim-files-and-configuration.png" alt-text="Screenshot that shows the file configuration." lightbox="media/sqliosim/sqliosim-files-and-configuration.png":::
 
@@ -329,5 +329,5 @@ The sum of the `MaxMemoryMB` parameter for each instance must be less than or eq
 
 ## Related content
 
-- [Use the SQLIOSim tool to simulate SQL Server activity on a disk subsystem on Linux](sqliosim-tool-simulate-activity-disk-subsystem-linux.md)
+- [Use the SQLIOSim tool to simulate SQL Server activity on a disk subsystem on Linux](sqliosim-utility-simulate-activity-disk-subsystem-linux.md)
 - [SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes](~/sql/database-engine/database-file-operations/diagnostics-for-unreported-io-problems.md)
