@@ -28,7 +28,7 @@ The Provisioning state of the Application Gateway shows Failed in:
 2. Apply the following filters:  
 Status: Failed
 Time range: Relevant window when the issue occurred  
-![Activity Logs](/media/troubleshoot-appgw-failed-state-issues/activity-log 1.png)
+![Activity Logs](/media/troubleshoot-appgw-failed-state-issues/activitylog.png)
 
 3. Open the most recent failed event.  
 If multiple failures exist, start with the first failed operation, as subsequent failures are often cascading effects.
