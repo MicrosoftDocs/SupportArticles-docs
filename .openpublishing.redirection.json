@@ -15698,6 +15698,11 @@
       "source_path": "support/mem/configmgr/content-management/windows-installer-source-list-update-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-installer-source-list-update-fails",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/drs-performance-issue-after-installing-hotfix-3125525",
+      "redirect_document_id": false
     }
   ]
 }
