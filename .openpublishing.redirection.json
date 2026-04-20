@@ -15703,6 +15703,51 @@
       "source_path": "support/mem/configmgr/data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/drs-performance-issue-after-installing-hotfix-3125525",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/capture-user-state-task-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/capture-user-state-task-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/computer-hangs-task-sequence-debug-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/computer-hangs-task-sequence-debug-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/custom-port-settings-not-added-to-boot-media.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/custom-port-settings-not-added-to-boot-media",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/debug-deployment-not-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/debug-deployment-not-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/get-network-captures-from-task-sequence.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/get-network-captures-from-task-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/insufficient-permissions-to-migrate-driver-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/insufficient-permissions-to-migrate-driver-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/osdresults-not-display-installed-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/osdresults-not-display-installed-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/task-sequence-fails-error-0x87d01004.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/task-sequence-fails-error-0x87d01004",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/task-sequence-stops-after-in-place-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/task-sequence-stops-after-in-place-upgrade",
+      "redirect_document_id": false
     }
   ]
 }

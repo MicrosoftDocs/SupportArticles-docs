@@ -166,16 +166,10 @@ items:
       href: os-deployment/configure-operating-system-deployment.md
     - name: Build and capture reference image
       items:
-        - name: Custom port settings aren't added to boot media
-          href: os-deployment/custom-port-settings-not-added-to-boot-media.md
         - name: Unable to manage boot images
           href: os-deployment/error-managing-boot-images.md
         - name: Errors when capturing Windows 11 image
           href: os-deployment/windows-11-image-capture-fail.md
-    - name: Manage drivers
-      items:
-        - name: Insufficient permissions to migrate a driver package
-          href: os-deployment/insufficient-permissions-to-migrate-driver-package.md
     - name: PXE boot
       items:
         - name: A PXE enabled DP generates many files
@@ -204,20 +198,12 @@ items:
           href: os-deployment/cannot-create-mdt-task-sequence.md
         - name: Can't create bootable media with errors 80004005 and 0x8004101d
           href: os-deployment/cannot-create-bootable-media-error-80004005-0x8004101d.md
-        - name: Computer hangs during an OSD task sequence in debug mode
-          href: os-deployment/computer-hangs-task-sequence-debug-mode.md
         - name: Dynamic Media can't get management point locations
           href: os-deployment/dynamic-media-cannot-get-mp-locations.md
         - name: No option to check online for updates
           href: os-deployment/check-online-updates-unavailable.md
-        - name: The Capture User State task fails
-          href: os-deployment/capture-user-state-task-fails.md
-        - name: Get network captures in Windows PE
-          href: os-deployment/get-network-captures-from-task-sequence.md
         - name: No mouse cursor during an OSD task sequence
           href: os-deployment/no-mouse-cursor-during-osd-task-sequence.md
-        - name: OSDResults doesn't display installed applications
-          href: os-deployment/osdresults-not-display-installed-applications.md
         - name: Sending with winhttp failed 80072f8f
           href: os-deployment/sending-with-winhttp-failed-80072f8f-error.md
         - name: Task sequence fails if software updates require multiple restarts
@@ -225,13 +211,8 @@ items:
         - name: Task sequence fails with error 80070005
           href: os-deployment/osd-task-sequence-fails-error-80070005.md
         - name: Task sequence fails with error 0x87d01004
-          href: os-deployment/task-sequence-fails-error-0x87d01004.md
-        - name: Task sequence stops after an in-place upgrade
-          href: os-deployment/task-sequence-stops-after-in-place-upgrade.md
         - name: Task sequence stops after setup or upgrade
           href: os-deployment/os-deployment-task-sequence-not-continue.md
-        - name: The debug deployment isn't displayed
-          href: os-deployment/debug-deployment-not-displayed.md
         - name: Troubleshoot the Install Application task sequence step
           href: os-deployment/troubleshoot-install-application-step.md
 - name: Setup, migration, backup, and recovery
