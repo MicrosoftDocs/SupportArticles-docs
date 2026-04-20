@@ -15,12 +15,9 @@ items:
   items:
   - name: Issues
     items:
-    - name: Applications not deployed to users logged on to domain controllers
-      href: app-management/applications-not-deployed-to-users.md
+
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
-    - name: Deployment Type changes are deployed unexpectedly
-      href: app-management/deployment-type-changes-deployed-unexpectedly.md
   - name: Understand application management
     items:
     - name: Before you begin

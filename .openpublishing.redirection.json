@@ -15613,6 +15613,16 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/stl-queue-member-functions.md",
       "redirect_url": "/cpp/standard-library/queue-class"
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/applications-not-deployed-to-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/applications-not-deployed-to-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/deployment-type-changes-deployed-unexpectedly.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/deployment-type-changes-deployed-unexpectedly",
+      "redirect_document_id": false
     }
   ]
 }
