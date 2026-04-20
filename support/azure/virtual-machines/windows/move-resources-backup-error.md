@@ -47,7 +47,7 @@ Additionally, if **soft delete** is enabled for the backup vault, you can't move
 
 **Azure CLI**
 
-Run the following code:
+Run the following commands:
 
 ```azurecli
 # Find the restore point collection resource group
@@ -63,7 +63,7 @@ az resource delete --ids $RESTOREPOINTCOL
 
 **Azure PowerShell**
 
-Run the following code:
+Run the following commands:
 
 ```powershell
 # Find the restore point collection resource group
