@@ -58,7 +58,7 @@ If resources appear in the destination, the move succeeded despite the timeout m
 
 ### Step 2: Check for resources missing from either group
 
-If resources appear in neither the source nor the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully by using the Azure portal or the following Azure CLI commands:
+If resources don't appear in either the source or the destination, or if the move status remains in a failed state after the timeout, check both resource groups carefully by using the Azure portal or the following Azure CLI commands:
 
 ```azurecli
 az resource list --resource-group <source-rg> --output table
@@ -79,7 +79,7 @@ Get-AzResource -ResourceGroupName <destination-rg> | Format-Table
 
 ### Step 3: Retry the move with a smaller batch
 
-If the move actually failed, and the resources are still in the source, reduce the number of resources in your move request, and then retry. Moving fewer resources at a time reduces the chance of reaching the four-hour limit.
+If the move failed, and the resources are still in the source, reduce the number of resources in your move request, and then retry. Moving fewer resources at a time reduces the chance of reaching the four-hour limit.
 
 The Azure portal allows a maximum of 800 resources per move request. However, for complex virtual machines (VMs) that have many dependencies, consider batching tasks into smaller groups.
 
