@@ -15773,6 +15773,41 @@
       "source_path": "support/mem/configmgr/update-management/different-software-updates-results-displayed.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/different-software-updates-results-displayed",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/application-could-not-be-wrapped.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/application-could-not-be-wrapped",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/apps-fail-sync-to-intune.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/apps-fail-sync-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/corporate-data-unsaved-in-wip-allowed-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/corporate-data-unsaved-in-wip-allowed-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/creating-message-action-not-allowed.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/creating-message-action-not-allowed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/mismatch-error-configuration-value-ampersand.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/mismatch-error-configuration-value-ampersand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/no-notification-microsoft365-apps-macos-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/no-notification-microsoft365-apps-macos-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/onedrive-attaches-corporate-protected-data-imessage",
+      "redirect_document_id": false
     }
   ]
 }

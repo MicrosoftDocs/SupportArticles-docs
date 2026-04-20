@@ -23,16 +23,10 @@ items:
       href: app-management/apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
       href: app-management/develop-deliver-working-win32-app-via-intune.md
-    - name: Can't save corporate data in WIP-allowed apps
-      href: app-management/corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
     items:
     - name: Can't uninstall apps installed from the Apple App Store
       href: app-management/cannot-uninstall-apple-app-store-apps.md
-    - name: Protected data is attached to an iMessage
-      href: app-management/onedrive-attaches-corporate-protected-data-imessage.md
-    - name: Mismatch between value type and configuration value
-      href: app-management/mismatch-error-configuration-value-ampersand.md
     - name: Saving images locally not restricted
       href: app-management/saving-images-locally-not-restricted.md
   - name: macOS apps
@@ -45,20 +39,14 @@ items:
       href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
     - name: Microsoft 365 apps for macOS close and reinstall without notification
       href: app-management/no-notification-microsoft365-apps-macos-reinstall.md
-    - name: No notification when Microsoft 365 apps deployed with Intune are updated
-      href: app-management/no-notification-microsoft365-apps-macos-update.md
   - name: Android apps
     items:
-    - name: Can't wrap Android LOB app with Intune App Wrapping Tool
-      href: app-management/application-could-not-be-wrapped.md
     - name: Data associated with an app is removed
       href: app-management/removed-data-associated-with-app-error.md
     - name: Personal apps listed in Discovered apps list
       href: app-management/discovered-apps-list-personal-apps.md
     - name: Can't attach photos because of IO error
       href: app-management/android-enterprise-enrolled-devices-fails-attaching-photo.md
-    - name: Can't create messages in Outlook for Android
-      href: app-management/creating-message-action-not-allowed.md
     - name: Troubleshoot Managed Google Play apps
       href: app-management/troubleshoot-google-apps.md
   - name: Managed Edge
@@ -73,8 +61,6 @@ items:
     items:
     - name: Save application failed error
       href: app-management/save-application-failed-error.md
-    - name: Can't sync Microsoft Store for Business apps to Intune
-      href: app-management/apps-fail-sync-to-intune.md
 - name: App protection policies (APP)
   items:   
     - name: Troubleshoot APP deployment
