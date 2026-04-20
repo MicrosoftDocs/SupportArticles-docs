@@ -15633,6 +15633,26 @@
       "source_path": "support/mem/configmgr/client-installation/mac-client-registration-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/mac-client-registration-fails",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/clients-not-receive-policy-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/clients-not-receive-policy-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/invalid-data-error-import-mof-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/invalid-data-error-import-mof-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/multiple-instances-of-unknown-computers-collection.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/multiple-instances-of-unknown-computers-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/remote-control-fails-error-c000012.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/remote-control-fails-error-c000012",
+      "redirect_document_id": false
     }
   ]
 }

@@ -54,19 +54,10 @@ items:
   items:
     - name: Client remains in provisioning mode after upgrade
       href: client-management/configmgr-client-left-in-provisioning-mode.md
-
-    - name: Clients don't receive policy data
-      href: client-management/clients-not-receive-policy-data.md
-
-
     - name: Inventory and asset intelligence
       items:
-        - name: Can't import the Sms_def.mof file
-          href: client-management/invalid-data-error-import-mof-file.md
         - name: Hardware inventory fails
           href: client-management/hardware-inventory-fails.md
-    - name: Remote control fails with error C000012
-      href: client-management/remote-control-fails-error-c000012.md
     - name: SMS Agent Host service doesn't restart when the WMI service resumes
       href: client-management/sms-agent-host-not-automatically-restarted.md
 - name: Cloud services
@@ -79,10 +70,6 @@ items:
       href: cloud-services/public-ip-creation-error.md
     - name: Contributor role is no longer assigned at the subscription level
       href: cloud-services/contributor-role-not-assigned-for-web-app.md
-- name: Collections
-  items:
-    - name: Multiple instances of the Unknown computers collection
-      href: client-management/multiple-instances-of-unknown-computers-collection.md
 - name: Configuration Manager console
   items:
     - name: SQL query times out or slow console performance
