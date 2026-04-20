@@ -356,6 +356,7 @@ For reference, the following table lists the schema versions for different versi
 |Windows Server 2016|87|
 |Windows Server 2019|88|
 |Windows Server 2022|88|
+|Windows Server 2025|91|
 
 #### Step 2: Restart the source DC that's not replicating the update
 
