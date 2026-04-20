@@ -68,8 +68,6 @@ items:
       href: cloud-services/cmg-creation-unavailable-region.md
     - name: CMG maintenance task fails to update public IP resource
       href: cloud-services/public-ip-creation-error.md
-    - name: Contributor role is no longer assigned at the subscription level
-      href: cloud-services/contributor-role-not-assigned-for-web-app.md
 - name: Configuration Manager console
   items:
     - name: SQL query times out or slow console performance

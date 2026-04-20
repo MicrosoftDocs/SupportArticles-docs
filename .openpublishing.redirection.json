@@ -15653,6 +15653,11 @@
       "source_path": "support/mem/configmgr/client-management/remote-control-fails-error-c000012.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/remote-control-fails-error-c000012",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/cloud-services/contributor-role-not-assigned-for-web-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": false
     }
   ]
 }
