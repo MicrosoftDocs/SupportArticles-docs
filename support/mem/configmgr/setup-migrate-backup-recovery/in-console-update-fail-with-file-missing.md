@@ -10,9 +10,11 @@ ms.topic: troubleshooting  # the type of article
 # Configuration Manager in-console update fails at "Install files" step
 
 ## Applies to
+
 Microsoft Endpoint Configuration Manager (current branch)
 
 ## Symptoms
+
 During ConfigMgr update installation, the following errors could be found in the *CMUpdate.log*:
 
 > ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi  
@@ -30,12 +32,36 @@ Or
 > Failed to install update files.  
 
 ## Cause
-Required files `SQLSysClrTypes.msi` or `MMASetup-AMD64.exe` are missing under `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\redist` (or `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\SMSSETUP\BIN\X64` accordingly)
+
+Required files are missing from one of the following locations on the site server:
+- *EasySetupPayload* - the original update payload downloaded from Microsoft (`<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>`)
+- *CMUStaging* - the local staging folder where update files are prepared for installation (`<ConfigMgrInstallationPath>\CMStaging`)
 
 ## Resolution
-Verify whether file is missing under `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\redist` (for `SQLSysClrTypes.msi`) or `<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>\SMSSETUP\BIN\X64` (for `MMASetup-AMD64.exe`)
 
-Retrigger replication of the update package content so that the required files are restored to the `CMUStaging` folder.
+Follow the steps based on where the files are missing.
+
+### Scenario 1: Files missing in *EasySetupPayload*
+
+If the files are missing in *EasySetupPayload*, the update payload must be redownloaded or reimported.
+
+#### Online Service Connection Point (SCP)
+
+The files are downloaded automatically.  
+Retry the download by restarting the update installation after confirming internet connectivity.
+
+#### Offline Service Connection Point (SCP)
+
+Use the *Service Connection Tool* to download the required files on an internet-connected computer and import them into the site.
+
+For detailed steps, see: https://learn.microsoft.com/en-us/intune/configmgr/core/servers/manage/use-the-service-connection-tool
+
+After importing the files, verify that the missing files now exist under the appropriate *EasySetupPayload* subfolders.
+
+### Scenario 2: Files missing in *CMStaging*
+
+If the files exist in *EasySetupPayload* but are missing from *CMStaging*, retrigger content replication for the update package.
+
 Run the following Windows PowerShell command on a computer that can access the SMS Provider (typically the site server). Replace `<SiteCode>` and `<PackageGuid>` as appropriate.
 
 ```powershell
@@ -43,6 +69,7 @@ Run the following Windows PowerShell command on a computer that can access the S
 ```
 
 ## More guidance
+
 For a broader overview of how update packages are downloaded, staged, and installed and for other troubleshooting workflows see:
 Understand and troubleshoot Updates and Servicing in Configuration Manager 
 https://learn.microsoft.com/en-us/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing
