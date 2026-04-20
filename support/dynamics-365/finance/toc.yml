@@ -76,6 +76,8 @@
           href: general-ledger/dimension-missing-details-page.md
         - name: Financial dimension value is missing or unavailable
           href: general-ledger/cant-find-dimension-value.md
+        - name: Financial tags are missing or not populated on journals, postings, or imports
+          href: general-ledger/financial-tags-missing-not-populated.md
         - name: Source entity isn't available in the "Use values from" list
           href: general-ledger/dimensions-missing-use-values-from-source.md
         - name: Source record not found error for a financial dimension value
