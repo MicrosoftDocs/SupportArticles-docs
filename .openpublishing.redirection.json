@@ -15658,6 +15658,11 @@
       "source_path": "support/mem/configmgr/cloud-services/contributor-role-not-assigned-for-web-app.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/contributor-role-not-assigned-for-web-app",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/windows-10-servicing-dashboard-empty.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-10-servicing-dashboard-empty",
+      "redirect_document_id": false
     }
   ]
 }

@@ -76,8 +76,6 @@ items:
       href: console-management/console-stops-responding.md
     - name: Console can't connect after DCOM hardening changes
       href: console-management/dcom-hardening-change-effect.md
-    - name: No data in the Windows 10 servicing dashboard
-      href: console-management/windows-10-servicing-dashboard-empty.md
     - name: Failed devices on client health dashboard
       href: console-management/failed-devices-client-health-dashboard.md
 - name: Content management
