@@ -15748,6 +15748,21 @@
       "source_path": "support/mem/configmgr/os-deployment/task-sequence-stops-after-in-place-upgrade.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/task-sequence-stops-after-in-place-upgrade",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/failed-to-find-folder-or-file-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/maintenance-tasks-default-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/maintenance-tasks-default-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/support-policy-for-manual-database-changes",
+      "redirect_document_id": false
     }
   ]
 }

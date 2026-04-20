@@ -234,10 +234,6 @@ items:
       items:
         - name: Can't create software update packages or applications
           href: setup-migrate-backup-recovery/cannot-create-software-update-package.md
-        - name: Error when you move a site database
-          href: setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md
-        - name: Support policies for manual database changes
-          href: setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md
     - name: Updates and servicing
       items:
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
@@ -248,8 +244,6 @@ items:
           href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Understand and troubleshoot Updates and Servicing
           href: setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing.md
-    - name: Maintenance tasks default settings
-      href: setup-migrate-backup-recovery/maintenance-tasks-default-settings.md
 - name: Software update management
   items:
     - name: Issues
