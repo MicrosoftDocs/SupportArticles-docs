@@ -84,28 +84,14 @@ items:
       href: content-management/configure-peer-cache.md
     - name: Distribution point and content distribution
       items:
-        - name: A deployment property change isn't saved
-          href: content-management/deployment-property-change-not-saved.md
-        - name: App-V applications can't be streamed from a DP
-          href: content-management/app-v-apps-not-streamed-from-dp.md
-        - name: Boot image distribution to a PXE enabled DP fails
-          href: content-management/boot-image-distribution-fails.md
         - name: Can't distribute deployment packages
           href: content-management/deployment-package-distribution-fails.md
         - name: Content distribution fails with error 80070070
           href: content-management/content-distribution-error-80070070.md
-        - name: Content distribution fails with IDispatch error
-          href: content-management/content-distribution-idispatch-error.md
-        - name: DPs in a neighbor boundary group are used
-          href: content-management/use-neighbor-boundary-group-dp.md
-        - name: DP installations or upgrades take a long time
-          href: content-management/slow-dp-installation-upgrade.md
         - name: Hash mismatch error downloading Contentinfo.tar
           href: content-management/hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
           href: content-management/package-distribution-to-remote-dp-fails.md
-        - name: Windows Installer source list update fails
-          href: content-management/windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview

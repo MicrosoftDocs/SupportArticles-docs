@@ -15663,6 +15663,41 @@
       "source_path": "support/mem/configmgr/console-management/windows-10-servicing-dashboard-empty.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-10-servicing-dashboard-empty",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/app-v-apps-not-streamed-from-dp.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/app-v-apps-not-streamed-from-dp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/boot-image-distribution-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/boot-image-distribution-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/content-distribution-idispatch-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/content-distribution-idispatch-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/deployment-property-change-not-saved.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/deployment-property-change-not-saved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/slow-dp-installation-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/slow-dp-installation-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/use-neighbor-boundary-group-dp.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/use-neighbor-boundary-group-dp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/windows-installer-source-list-update-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-installer-source-list-update-fails",
+      "redirect_document_id": false
     }
   ]
 }
