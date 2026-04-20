@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - VM is configured with Azure Backup
-description: Learn how to fix the Azure resource move fails error when a VM uses Azure Backup by removing restore point collections and soft delete blockers. Try the steps now.
+description: Learn how to fix the Azure resource move fails error when a VM uses Azure Backup by removing restore point collections and soft delete blockers. 
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -17,11 +17,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-Azure resource move fails when you try to move a virtual machine (VM) that has Azure Backup configured because restore point collections exist. To resolve this issue, stop backup and delete the restore point collections before moving the VM. If soft delete is enabled on the backup vault, wait for soft-deleted restore points to expire or disable soft delete.
+Azure resource move fails when you try to move a virtual machine (VM) that has Azure Backup configured. This issue occurs because restore point collections exist. To resolve this issue, stop the backup, and delete the restore point collections before you move the VM. If soft delete is enabled on the backup vault, wait for soft-deleted restore points to expire, or disable soft delete.
 
 ## Symptoms
 
-When you try to move a virtual machine or disk to a different resource group or subscription, the operation fails with an error similar to the following:
+When you try to move a VM or disk to a different resource group or subscription, the operation fails and returns an error message that resembles the following message:
 
 ```output
 The move resources request contains resources like /subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Compute/disks/<disk-name> that are being backed up as part of an Azure Backup job.
@@ -29,7 +29,7 @@ The move resources request contains resources like /subscriptions/<subscription-
 
 ## Cause
 
-Azure Backup creates restore point collections (instant recovery snapshots) that are associated with the VM. These restore point collections are stored in a separate resource group (by default named `AzureBackupRG_<region>_1`) and must be removed before the VM can be moved.
+Azure Backup creates restore point collections (instant recovery snapshots) that are associated with the VM. These restore point collections are stored in a separate resource group. By default, the group is named `AzureBackupRG_<region>_1`. It must be removed before the VM can be moved.
 
 Additionally, if **soft delete** is enabled for the backup vault, you can't move the VM while soft-deleted restore points exist.
 
@@ -39,13 +39,15 @@ Additionally, if **soft delete** is enabled for the backup vault, you can't move
 
 **Azure portal**
 
-1. In the [Azure portal](https://portal.azure.com), go to **Recovery Services vault** and temporarily stop the backup for the VM. Select **Retain backup data**.
-1. Find the resource group that contains the restore point collections. If you used the default naming, it follows the pattern `AzureBackupRG_<location>_1` (for example, `AzureBackupRG_westus2_1`). If you used a custom resource group, search for **Restore Point Collections** in the portal.
-1. Find the restore point collection named `AzureBackup_<vm-name>_##########`.
-1. Delete the restore point collection. This action only removes the instant recovery points - it doesn't delete backed-up data in the vault.
-1. After deletion completes, proceed with the move.
+1. In the [Azure portal](https://portal.azure.com), go to **Recovery Services vault**, and temporarily stop the backup for the VM. Select **Retain backup data**.
+1. Find the resource group that contains the restore point collections. If you used the default naming, it follows the pattern, `AzureBackupRG_<location>_1` (for example, `AzureBackupRG_westus2_1`). If you used a custom resource group, search for **Restore Point Collections** in the portal.
+1. Find the restore point collection that's named `AzureBackup_<vm-name>_##########`.
+1. Delete the restore point collection. This action removes only the instant recovery points. It doesn't delete backed-up data in the vault.
+1. After deletion finishes, retry the move operation.
 
 **Azure CLI**
+
+Run the following code:
 
 ```azurecli
 # Find the restore point collection resource group
@@ -60,6 +62,8 @@ az resource delete --ids $RESTOREPOINTCOL
 ```
 
 **Azure PowerShell**
+
+Run the following code:
 
 ```powershell
 # Find the restore point collection resource group
@@ -76,9 +80,9 @@ Remove-AzResource -ResourceId $restorePointCollection.ResourceId -Force
 
 ### Step 2: Handle soft delete (if enabled)
 
-If soft delete is enabled on the backup vault and you recently deleted restore points, you must either:
+If soft delete is enabled on the backup vault, and you recently deleted restore points, you must either:
 
-- **Disable soft delete** on the vault and wait for the points to be purged, OR
+- **Disable soft delete** on the vault, and wait for the points to be purged.
 - **Wait 14 days** for soft-deleted restore points to expire automatically.
 
 For more information, see [Soft delete for virtual machines in Azure Backup](/azure/backup/soft-delete-virtual-machines).
