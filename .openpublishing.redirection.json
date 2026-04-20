@@ -15808,6 +15808,11 @@
       "source_path": "support/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage.md",
       "redirect_url": "/previous-versions/troubleshoot/intune/onedrive-attaches-corporate-protected-data-imessage",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-configuration/sip-address-password-not-saved.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/sip-address-password-not-saved",
+      "redirect_document_id": false
     }
   ]
 }

@@ -175,8 +175,6 @@ items:
     items:
     - name: Factory reset protection emails setting doesn't work
       href: device-configuration/factory-reset-protection-emails-not-enforced.md
-    - name: SIP address and password can't be saved
-      href: device-configuration/sip-address-password-not-saved.md
     - name: Assign device password settings to Android Enterprise fully managed devices
       href: device-configuration/assign-password-setting-android-fully-managed.md
 - name: Device enrollment
