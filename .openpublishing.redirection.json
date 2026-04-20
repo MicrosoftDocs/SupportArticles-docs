@@ -15838,6 +15838,11 @@
       "source_path": "support/mem/intune/device-protection/unable-to-connect-send-inventory-information.md",
       "redirect_url": "/previous-versions/troubleshoot/intune/unable-to-connect-send-inventory-information",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/general/nac-integration-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/nac-integration-errors",
+      "redirect_document_id": false
     }
   ]
 }

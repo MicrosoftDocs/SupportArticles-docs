@@ -301,8 +301,6 @@ items:
     href: general/error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: general/403-error-graph-explorer-query.md
-  - name: Troubleshoot 503 errors for Intune NAC integration
-    href: general/nac-integration-errors.md
 - name: Getting support
   items:
   - name: Things to try before calling Intune support
