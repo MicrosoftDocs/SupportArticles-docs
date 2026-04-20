@@ -4,6 +4,8 @@
   items:
     - name: Frequently asked questions about position budgeting
       href: budgeting/position-budgeting-set-up-issues.md
+    - name: Troubleshoot Budget control issues
+      href: budgeting/budget-control-troubleshooting.md
 - name: Business intelligence, reporting, analytics
   items:
     - name: Business performance analytics self-help
