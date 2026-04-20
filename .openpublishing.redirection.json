@@ -15763,6 +15763,16 @@
       "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/support-policy-for-manual-database-changes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/bad-gateway-error-deploy-software-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/bad-gateway-error-deploy-software-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/different-software-updates-results-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/different-software-updates-results-displayed",
+      "redirect_document_id": false
     }
   ]
 }

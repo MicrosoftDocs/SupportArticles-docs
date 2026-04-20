@@ -248,12 +248,8 @@ items:
   items:
     - name: Issues
       items:
-        - name: Bad gateway error when deploying software updates
-          href: update-management/bad-gateway-error-deploy-software-updates.md
         - name: Clients don't get software updates
           href: update-management/clients-not-get-software-updates.md
-        - name: Different results are shown for software updates
-          href: update-management/different-software-updates-results-displayed.md
     - name: Understand software update management
       items:
         - name: Software updates introduction
