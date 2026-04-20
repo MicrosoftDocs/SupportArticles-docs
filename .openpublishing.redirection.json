@@ -15813,6 +15813,16 @@
       "source_path": "support/mem/intune/device-configuration/sip-address-password-not-saved.md",
       "redirect_url": "/previous-versions/troubleshoot/intune/sip-address-password-not-saved",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-management/help-desk-operator-fails-remote-tasks.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/help-desk-operator-fails-remote-tasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-management/intune-managed-ios-device-backup-encrypted.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/intune-managed-ios-device-backup-encrypted",
+      "redirect_document_id": false
     }
   ]
 }

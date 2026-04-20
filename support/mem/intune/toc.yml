@@ -255,10 +255,6 @@ items:
     href: device-management/remove-duplicate-mobile-device-management.md
   - name: Remove disabled Microsoft Entra user's device from Intune
     href: device-management/orphaned-device-upn-shown-as-none.md
-  - name: Help desk operators can't perform remote tasks
-    href: device-management/help-desk-operator-fails-remote-tasks.md
-  - name: iTunes automatically turns on backup encryption
-    href: device-management/intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to execute
     href: device-management/remotewipe-fails-sending-dowipe-command.md
   - name: Windows 10 devices can't sync with Intune
