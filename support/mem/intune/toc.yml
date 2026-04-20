@@ -23,16 +23,10 @@ items:
       href: app-management/apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
       href: app-management/develop-deliver-working-win32-app-via-intune.md
-    - name: Can't save corporate data in WIP-allowed apps
-      href: app-management/corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
     items:
     - name: Can't uninstall apps installed from the Apple App Store
       href: app-management/cannot-uninstall-apple-app-store-apps.md
-    - name: Protected data is attached to an iMessage
-      href: app-management/onedrive-attaches-corporate-protected-data-imessage.md
-    - name: Mismatch between value type and configuration value
-      href: app-management/mismatch-error-configuration-value-ampersand.md
     - name: Saving images locally not restricted
       href: app-management/saving-images-locally-not-restricted.md
   - name: macOS apps
@@ -45,20 +39,14 @@ items:
       href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
     - name: Microsoft 365 apps for macOS close and reinstall without notification
       href: app-management/no-notification-microsoft365-apps-macos-reinstall.md
-    - name: No notification when Microsoft 365 apps deployed with Intune are updated
-      href: app-management/no-notification-microsoft365-apps-macos-update.md
   - name: Android apps
     items:
-    - name: Can't wrap Android LOB app with Intune App Wrapping Tool
-      href: app-management/application-could-not-be-wrapped.md
     - name: Data associated with an app is removed
       href: app-management/removed-data-associated-with-app-error.md
     - name: Personal apps listed in Discovered apps list
       href: app-management/discovered-apps-list-personal-apps.md
     - name: Can't attach photos because of IO error
       href: app-management/android-enterprise-enrolled-devices-fails-attaching-photo.md
-    - name: Can't create messages in Outlook for Android
-      href: app-management/creating-message-action-not-allowed.md
     - name: Troubleshoot Managed Google Play apps
       href: app-management/troubleshoot-google-apps.md
   - name: Managed Edge
@@ -73,8 +61,6 @@ items:
     items:
     - name: Save application failed error
       href: app-management/save-application-failed-error.md
-    - name: Can't sync Microsoft Store for Business apps to Intune
-      href: app-management/apps-fail-sync-to-intune.md
 - name: App protection policies (APP)
   items:   
     - name: Troubleshoot APP deployment
@@ -189,8 +175,6 @@ items:
     items:
     - name: Factory reset protection emails setting doesn't work
       href: device-configuration/factory-reset-protection-emails-not-enforced.md
-    - name: SIP address and password can't be saved
-      href: device-configuration/sip-address-password-not-saved.md
     - name: Assign device password settings to Android Enterprise fully managed devices
       href: device-configuration/assign-password-setting-android-fully-managed.md
 - name: Device enrollment
@@ -271,10 +255,6 @@ items:
     href: device-management/remove-duplicate-mobile-device-management.md
   - name: Remove disabled Microsoft Entra user's device from Intune
     href: device-management/orphaned-device-upn-shown-as-none.md
-  - name: Help desk operators can't perform remote tasks
-    href: device-management/help-desk-operator-fails-remote-tasks.md
-  - name: iTunes automatically turns on backup encryption
-    href: device-management/intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to execute
     href: device-management/remotewipe-fails-sending-dowipe-command.md
   - name: Windows 10 devices can't sync with Intune
@@ -289,12 +269,8 @@ items:
       href: device-protection/troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
       href: device-protection/troubleshoot-exchange-connector-common-errors.md
-    - name: Could not retrieve access token for Graph API
-      href: device-protection/could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
       href: device-protection/troubleshoot-jamf.md
-    - name: Unable to connect Jamf console to Intune
-      href: device-protection/unable-to-connect-send-inventory-information.md
   - name: Troubleshoot encryption on client side
     href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
@@ -311,8 +287,6 @@ items:
     href: device-protection/cannot-access-company-resources-on-dep.md
   - name: Error 2016281112 deploying a password policy
     href: device-protection/error-deploying-password-policy.md
-  - name: Users are prompted to enroll when accessing Microsoft 365 resources
-    href: device-protection/intune-licensed-users-prompted-to-enroll.md
 - name: Additional guidance
   items:
   - name: Attributes synced from AD DS to Intune
@@ -327,8 +301,6 @@ items:
     href: general/error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: general/403-error-graph-explorer-query.md
-  - name: Troubleshoot 503 errors for Intune NAC integration
-    href: general/nac-integration-errors.md
 - name: Getting support
   items:
   - name: Things to try before calling Intune support
