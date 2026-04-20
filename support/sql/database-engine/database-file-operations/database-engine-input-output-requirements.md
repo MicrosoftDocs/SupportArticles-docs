@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 967576
 
 ## Summary
 
-SQL Server requires that I/O subsystems support guaranteed delivery to stable media. This requirement covers write ordering, caching stability, and data integrity to maintain the atomicity, consistency, isolation, and durability (ACID) properties through the [Write-Ahead Logging (WAL)](/sql/relational-databases/sql-server-storage-guide#write-ahead-logging) protocol. Systems that don't meet these requirements can cause database corruption, backup corruption, unexpected data loss, or missing transactions.
+Microsoft SQL Server requires that I/O subsystems support guaranteed delivery to stable media. This requirement covers write ordering, caching stability, and data integrity to maintain the atomicity, consistency, isolation, and durability (ACID) properties through the [Write-Ahead Logging (WAL)](/sql/relational-databases/sql-server-storage-guide#write-ahead-logging) protocol. Systems that don't meet these requirements can cause database corruption, backup corruption, unexpected data loss, or missing transactions.
 
 This article describes the specific disk I/O requirements, technical support policies for I/O-related issues, and links to resources for various storage configurations.
 
@@ -33,11 +33,11 @@ Systems that meet these requirements support SQL Server database storage. System
 SQL Server maintains the ACID properties by using the WAL protocol.
 
 > [!WARNING]
-> Incorrect use of SQL Server with an improperly tested solution can result in data loss, including total database loss.
+> Incorrect use of SQL Server by using an improperly tested solution can cause data loss, including total database loss.
 
 ## Technical support
 
-Microsoft provides full support for SQL Server and SQL Server-based applications. However, the device manufacturer is responsible for support when the I/O solution causes problems. Symptoms can include, but aren't limited to, the following list:
+Microsoft provides full support for SQL Server and SQL Server-based applications. However, the device manufacturer is responsible for support when the I/O solution causes problems. Symptoms include, but aren't limited to, the following items:
 
 - Database corruption
 - Backup corruption
@@ -47,7 +47,7 @@ Microsoft provides full support for SQL Server and SQL Server-based applications
 
 To determine whether your hardware solution supports "guaranteed delivery to stable media," check with your vendor. Also, contact your vendor to verify that you correctly deployed and configured the solution for transactional database use.
 
-A Microsoft Support professional may ask you to disable nonessential jobs and to disable or remove third-party components, move database files, uninstall drivers, and do similar actions. This troubleshooting practice always tries to reduce the scope of the issue while working to identify it. After an issue is identified as unrelated to the jobs or third-party products, you can reintroduce those jobs or third-party products to production.
+A Microsoft Support professional might ask you to disable nonessential jobs and to disable or remove third-party components, move database files, uninstall drivers, and do similar actions. This troubleshooting practice always tries to reduce the scope of the issue while working to identify it. After an issue is identified as unrelated to the jobs or third-party products, you can reintroduce those jobs or third-party products to production.
 
 For more information, see the following articles:
 
