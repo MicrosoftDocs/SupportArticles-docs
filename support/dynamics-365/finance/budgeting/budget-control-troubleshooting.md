@@ -1,26 +1,18 @@
 ---
-# required metadata
-
-title: Budget control troubleshooting
-description: Provides answers to frequently asked questions related to budget control. 
+title: Troubleshoot budget control issues
+description: Budget control troubleshooting guidance.
 author: music727
-ms.date: 04/20/2026
-
-# optional metadata
-
-ms.search.form: HcmBudgetPurposeType, HcmPositionForecast
-# ROBOTS: 
-audience: Application User
-# ms.devlang: 
-ms.reviewer: twheeloc
-# ms.tgt_pltfrm: 
-ms.custom: sap:Budgeting, 88253
-ms.assetid: c44df01b-8700-4022-b4c6-c4b1cb84d31d
-ms.search.region: Global
-# ms.search.industry: 
 ms.author: mibeinar
-ms.search.validFrom: 2016-02-28
-ms.dyn365.ops.version: AX 7.0.0
+ms.topic: how-to
+ms.date: 04/17/2026
+ms.reviewer: twheeloc
+audience: Application User
+ms.search.region: global
+ms.search.validFrom: 
+ms.search.form: 
+ms.dyn365.ops.version: 
+ms.assetid: 
+---
 
 # Troubleshoot budget control issues
 
