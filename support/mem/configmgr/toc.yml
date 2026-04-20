@@ -210,7 +210,6 @@ items:
           href: os-deployment/task-sequence-fails-multiple-restarts.md
         - name: Task sequence fails with error 80070005
           href: os-deployment/osd-task-sequence-fails-error-80070005.md
-        - name: Task sequence fails with error 0x87d01004
         - name: Task sequence stops after setup or upgrade
           href: os-deployment/os-deployment-task-sequence-not-continue.md
         - name: Troubleshoot the Install Application task sequence step
