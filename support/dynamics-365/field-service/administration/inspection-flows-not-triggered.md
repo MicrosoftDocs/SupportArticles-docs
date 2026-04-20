@@ -23,7 +23,7 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 > [!NOTE]
 > You must have administrator permissions in Dynamics 365 Field Service to perform the following steps.
 
-1. [Enable analysis on inspection responses](/dynamics365/field-service/inspections-reporting#enable-analysis-on-inspection-responses).
+1. In Field Service, [enable analysis on inspection responses](/dynamics365/field-service/inspections-reporting#enable-analysis-on-inspection-responses).
 
 1. If the analysis feature is already enabled,
 

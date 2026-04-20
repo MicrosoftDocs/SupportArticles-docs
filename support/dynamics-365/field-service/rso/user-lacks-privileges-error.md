@@ -30,7 +30,7 @@ Field security:
 
 ### Copy security user roles
 
-1. Sign in to the environment as an administrator.
+1. Sign in to your Field Service environment as an administrator.
 1. Go to **Settings** > **Advanced settings** > **Security** > **Users** and choose the **Application Users** view.
 1. Find the user named "Resource Scheduling Optimization" that the system creates during the deployment.
 1. Edit columns to include the created date to easily see when the Resource Scheduling Optimization user was created. Use **Advanced Find** to find users whose names contain "Resource Scheduling" and create a custom view.
@@ -38,7 +38,7 @@ Field security:
 
 ### Copy column security profiles
 
-1. Sign in to the environment as an administrator.
+1. Sign in to your Field Service environment as an administrator.
 1. Go to **Settings** > **Advanced settings** > **Security** and choose the **Column Security Profiles** view.
 1. Find the user named "Resource Scheduling Optimization." This user is created when Resource Scheduling Optimization is deployed. Use **Advanced Find** to find column security profiles that have users whose names contain "Resource Scheduling."
 1. Add the Resource Scheduling Optimization users to the "Resource Scheduling Optimization - Administrator" and "Resource Scheduling Optimization-Dispatcher" column security profiles.
