@@ -1,7 +1,7 @@
 ---
 title: Support Tip - Understanding the flow behind deployment, delivery, and processing of a Win32 application through Intune
 description: This article highlights and explains the flow that is associated with a Win32 app during its deployment, delivery, and processing through Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, sausarka
 author: Cloud-Writer
 ms.author: sausarka

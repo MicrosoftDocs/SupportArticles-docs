@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common errors for the Intune Exchange connector
 description: Troubleshoot and resolve common error codes for the on-premises Microsoft Intune Exchange Connector.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.reviewer: kaushika
 ms.custom: sap:Configure Devices - Windows\Email

@@ -1,7 +1,7 @@
 ---
 title: SIP address and password not saved on Android Enterprise device
 description: Fixes an issue in which Skype for Business on a Microsoft Intune supported Android Enterprise device doesn't save the SIP address and password.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Android\Device profiles
 ms.reviewer: kaushika, joelste, intunecic, a-eyalhu

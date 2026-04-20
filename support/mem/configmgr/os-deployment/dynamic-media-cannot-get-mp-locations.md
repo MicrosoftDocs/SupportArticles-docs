@@ -1,7 +1,7 @@
 ---
 title: Dynamic Media can't get management point locations
 description: Fixes an issue in which Dynamic Media in Configuration Manager cannot get management point locations when the Task Sequence Wizard runs in Windows PE.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, frankroj
 ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types)
 ---

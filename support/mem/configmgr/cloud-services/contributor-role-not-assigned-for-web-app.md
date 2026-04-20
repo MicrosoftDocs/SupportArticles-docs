@@ -3,7 +3,7 @@ title: Contributor role is no longer assigned for a web app at the subscription 
 description: Introduces a change to Contributor role assignment when you create CMG with ARM deployment in Configuration Manager current branch version 1810 and later versions.
 ms.manager: dcscontentpm
 audience: itpro
-ms.date: 03/25/2026
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ---
