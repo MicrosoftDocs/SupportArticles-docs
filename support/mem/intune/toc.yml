@@ -269,12 +269,8 @@ items:
       href: device-protection/troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
       href: device-protection/troubleshoot-exchange-connector-common-errors.md
-    - name: Could not retrieve access token for Graph API
-      href: device-protection/could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
       href: device-protection/troubleshoot-jamf.md
-    - name: Unable to connect Jamf console to Intune
-      href: device-protection/unable-to-connect-send-inventory-information.md
   - name: Troubleshoot encryption on client side
     href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
@@ -291,8 +287,6 @@ items:
     href: device-protection/cannot-access-company-resources-on-dep.md
   - name: Error 2016281112 deploying a password policy
     href: device-protection/error-deploying-password-policy.md
-  - name: Users are prompted to enroll when accessing Microsoft 365 resources
-    href: device-protection/intune-licensed-users-prompted-to-enroll.md
 - name: Additional guidance
   items:
   - name: Attributes synced from AD DS to Intune

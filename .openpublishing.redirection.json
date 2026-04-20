@@ -15823,6 +15823,21 @@
       "source_path": "support/mem/intune/device-management/intune-managed-ios-device-backup-encrypted.md",
       "redirect_url": "/previous-versions/troubleshoot/intune/intune-managed-ios-device-backup-encrypted",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/could-not-retrieve-access-token.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/could-not-retrieve-access-token",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/intune-licensed-users-prompted-to-enroll.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/intune-licensed-users-prompted-to-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/unable-to-connect-send-inventory-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/unable-to-connect-send-inventory-information",
+      "redirect_document_id": false
     }
   ]
 }
