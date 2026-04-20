@@ -15623,6 +15623,16 @@
       "source_path": "support/mem/configmgr/app-management/deployment-type-changes-deployed-unexpectedly.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/deployment-type-changes-deployed-unexpectedly",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/conversion-failed-upgrade-version-1810.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/conversion-failed-upgrade-version-1810",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/mac-client-registration-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/mac-client-registration-fails",
+      "redirect_document_id": false
     }
   ]
 }
