@@ -1,6 +1,6 @@
 ---
 title: Azure resource move fails - resource has a plan with a different subscription
-description: Learn how to troubleshoot and resolve the resource move validation error when moving Azure VMs with Marketplace plans between subscriptions.
+description: Learn how to troubleshoot and resolve the resource move validation error when you move Azure VMs with Marketplace plans between subscriptions.
 services: virtual-machines
 author: scotro
 manager: dcscontentpm
@@ -17,11 +17,11 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the error that occurs when moving a virtual machine (VM) created from an Azure Marketplace image with a plan attached to it to a different subscription. The error occurs because the Marketplace plan is tied to the original subscription and can't be moved directly to another subscription.
+This article helps you troubleshoot the error that occurs when you move a virtual machine (VM) that's created from an Azure Marketplace image that has am attached plan to a different subscription. The error occurs because the Marketplace plan is tied to the original subscription and can't be moved directly to another subscription.
 
 ## Symptoms
 
-When you try to move a virtual machine to a different subscription, the operation fails with an error similar to the following:
+When you try to move a VM to a different subscription, the operation fails and returns an error message that resembles the following message:
 
 ```output
 {
@@ -36,14 +36,14 @@ When you try to move a virtual machine to a different subscription, the operatio
 
 ## Cause
 
-VMs created from Azure Marketplace images that include a *plan* (a billing agreement specific to a subscription) can't be moved directly across subscriptions. The plan is tied to the originating subscription.
+VMs that are created from Azure Marketplace images that include a *plan* (a billing agreement specific to a subscription) can't be moved directly across subscriptions. The plan is tied to the originating subscription.
 
 ## Resolution
 
-To move the VM to a new subscription, copy the VM's disks and recreate the VM in the destination subscription with the same Marketplace plan.
+To move the VM to a new subscription, copy the VM's disks, and re-create the VM in the destination subscription. Include the the same Marketplace plan as for the original VM.
 
 > [!IMPORTANT]
-> Verify that the Marketplace offer is still available before deleting the original VM. If the offer is retired, you can't recreate the VM in either the old or new subscription.
+> Verify that the Marketplace offer is still available before you delete the original VM. If the offer is retired, you can't re-create the VM in either the old or new subscription.
 
 ### Step 1: Get the plan information from the existing VM
 
@@ -60,7 +60,7 @@ $vm = Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name>
 $vm.Plan
 ```
 
-### Step 2: Confirm the offer is available in the destination subscription
+### Step 2: Verify that the offer is available in the destination subscription
 
 **Azure CLI**
 
@@ -76,7 +76,7 @@ Get-AzVMImageSku -Location <location> -PublisherName <publisher> -Offer <offer>
 
 ### Step 3: Copy or move the OS disk
 
-Either clone the OS disk to the destination subscription or move the original disk after deleting the VM from the source subscription.
+Either clone the OS disk to the destination subscription or move the original disk after you delete the VM from the source subscription.
 
 ### Step 4: Accept Marketplace terms in the destination subscription
 
@@ -92,9 +92,9 @@ az vm image terms accept --publisher <publisher> --offer <offer> --plan <sku>
 Set-AzMarketplaceTerms -Publisher <publisher> -Product <offer> -Name <sku> -Accept
 ```
 
-Alternatively, create a temporary VM in the destination subscription using the same Marketplace plan through the portal. This accepts the terms. You can then delete the temporary VM.
+Alternatively, create a temporary VM in the destination subscription by using the same Marketplace plan through the portal. This accepts the terms. You can then delete the temporary VM.
 
-### Step 5: Recreate the VM from the disk
+### Step 5: Re-create the VM from the disk
 
 In the destination subscription, create a new VM from the copied OS disk, specifying the original Marketplace plan information to match the plan you've accepted.
 
