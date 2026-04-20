@@ -1,7 +1,7 @@
 ---
 title: Windows user is not authorized to enroll in Intune
 description: Troubleshooting guidance for when a user cannot enroll a Windows device in Microsoft Intune
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, joelste
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\Advisory

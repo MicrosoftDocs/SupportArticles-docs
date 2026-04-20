@@ -1,7 +1,7 @@
 ---
 title: DP installations or upgrades take longer than expected
 description: Describes a performance issue when installing or upgrading DPs on Configuration Manager sites that have many standard or pull distribution points.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, brianhun, DAVSTEW, mikecure
 ms.custom: sap:Content Management\Content Distribution to Distribution Points
 ---

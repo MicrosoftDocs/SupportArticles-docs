@@ -1,7 +1,7 @@
 ---
 title: Remote control fails with error C000012
 description: Fixes an issue in which remote control fails with error C0000120 in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, erinwi
 ms.custom: sap:Client Operations\Remote Control
 ---

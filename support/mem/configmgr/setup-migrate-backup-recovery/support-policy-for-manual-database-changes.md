@@ -1,7 +1,7 @@
 ---
 title: Support policies for manual database changes
 description: Describes the support policies for manual database changes that are made to the site database in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, jchornbe, brianhun
 ms.custom: sap:Configuration Manager Database\SQL Settings and Configuration
 ---

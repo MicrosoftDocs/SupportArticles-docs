@@ -1,7 +1,7 @@
 ---
 title: Can't import the Sms_def.mof file with invalid data
 description: Fixes a problem in which the Sms_def.mof file doesn't open when you try to import the file to customize your hardware inventory in System Center 2012 Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, erinwi, prakask, keiththo, brshaw
 ms.custom: sap:Client Operations\Client Settings
 ---
