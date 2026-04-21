@@ -1,4 +1,17 @@
-
+---
+title: Cluster service doesn't start after you apply CIS Windows Server 2025 Benchmark v1.x recommendations
+description: 
+ms.date: 04/22/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, carlosm, v-appelgatet
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
 # Cluster service doesn't start after you apply CIS Windows Server 2025 Benchmark v1.x recommendations
 
 
