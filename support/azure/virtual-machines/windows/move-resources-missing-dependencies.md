@@ -18,7 +18,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the `MissingMoveDependentResources` error code that occurs when you move Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that the move request doesn't include all dependent resources. To resolve this issue, identify the missing resources that are listed in the error details, and include them in the move operation.
+This article helps you troubleshoot the `MissingMoveDependentResources` error code that occurs when you move Microsoft Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that the move request doesn't include all dependent resources. To resolve this issue, identify the missing resources that are listed in the error details, and include them in the move operation.
 
 ## Symptoms
 
@@ -107,7 +107,7 @@ See [Move operation support for resources](/azure/azure-resource-manager/managem
 > [!NOTE]
 > For a detailed explanation of this error code, see [What does the error code "MissingMoveDependentResources" mean?](/azure/azure-resource-manager/management/move-resource-group-and-subscription#what-does-the-error-code-missingmovedependentresources-mean)
 
-## Next steps
+## References
 
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Move virtual machines move limitations](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations)
