@@ -1,75 +1,84 @@
 ---
-title: onfiguration Manager in-console update fails with "Failed to find SQLSysClrTypes.msi" during update installation 
-description: Resolves an issue where Configuration Manager in-console updates fail during SQL redistributable installation because required redist files are missing from the CMUStaging folder.
-author: ErshovIS        # the author's GitHub ID - will be auto-populated if set in settings.json
-ms.author: iliaershov      # the author's Microsoft alias (if applicable) - will be auto-populated if set in settings.json
-ms.date: {@date}           # the date - will be auto-populated when template is first applied
-ms.topic: troubleshooting  # the type of article
+title: Configuration Manager in-console update fails at the Install Files stage
+description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from EasySetupPayload or CMUStaging.
+author: ErshovIS
+ms.author: iliaershov
+ms.date: 04/21/2026
+ms.topic: troubleshooting
 ---
 
-# Configuration Manager in-console update fails at "Install files" step
+# Configuration Manager in-console update fails at the Install Files stage because required files are missing
 
-## Applies to
-
-Microsoft Endpoint Configuration Manager (current branch)
+_Original product version:_ Configuration Manager (current branch)
 
 ## Symptoms
 
-During ConfigMgr update installation, the following errors could be found in the *CMUpdate.log*:
+When you install an in-console update package in Configuration Manager, the update fails at the **Install Files** stage.
 
-> ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi  
-> Failed to find SQLSysClrTypes.msi  
-> Failed to install SQLSysClrTypes.msi  
-> Failed to install SQL redist  
+`CMUpdate.log` contains errors that resemble one of the following examples.
 
-Or
+```output
+ERROR: Failed to find folder that stores msi file SQLSysClrTypes.msi
+Failed to find SQLSysClrTypes.msi
+Failed to install SQLSysClrTypes.msi
+Failed to install SQL redist
+```
 
-> ERROR: File hash check failed: 0x80070002  
-> ERROR: VerifyExternalFile failed: 0x80070002  
-> ERROR: Failed to find valid source for required external file  
-> ERROR: Failed to find valid source for required file 'MMASetup-AMD64.exe'. Aborting setup.  
-> Setup has encountered fatal errors while performing file operations.  
-> Failed to install update files.  
+```output
+ERROR: File hash check failed: 0x80070002
+ERROR: VerifyExternalFile failed: 0x80070002
+ERROR: Failed to find valid source for required external file
+ERROR: Failed to find valid source for required file 'MMASetup-AMD64.exe'. Aborting setup.
+Setup has encountered fatal errors while performing file operations.
+Failed to install update files.
+```
 
 ## Cause
 
-Required files are missing from one of the following locations on the site server:
-- *EasySetupPayload* - the original update payload downloaded from Microsoft (`<ConfigMgrInstallationPath>\EasySetupPayload\<PackageGuid>`)
-- *CMUStaging* - the local staging folder where update files are prepared for installation (`<ConfigMgrInstallationPath>\CMStaging`)
+The update can't find required redistributable files (for example, `SQLSysClrTypes.msi` or `MMASetup-AMD64.exe`) in one or both of these locations:
+
+- Service connection point source content (`EasySetupPayload`):
+  - `\\<ServiceConnectionPoint>\EasySetupPayload\<PackageGuid>\Redists` (online mode)
+  - `\\<ServiceConnectionPoint>\EasySetupPayload\Offline\<PackageGuid>\Redists` (offline mode)
+- Site server staging content (`CMUStaging`):
+  - `<ConfigMgrInstallPath>\CMUStaging\<PackageGuid>\redist`
 
 ## Resolution
 
-Follow the steps based on where the files are missing.
+Use the following workflow.
 
-### Scenario 1: Files missing in *EasySetupPayload*
+### Step 1: Verify where the files are missing
 
-If the files are missing in *EasySetupPayload*, the update payload must be redownloaded or reimported.
+1. Identify the update package GUID.
+1. Check whether the required files exist under `EasySetupPayload`.
+1. Check whether the same files exist under `CMUStaging`.
 
-#### Online Service Connection Point (SCP)
+Then use the scenario that matches your findings.
 
-The files are downloaded automatically.  
-Retry the download by restarting the update installation after confirming internet connectivity.
+### Scenario 1: Files are missing in EasySetupPayload
 
-#### Offline Service Connection Point (SCP)
+If files are missing in `EasySetupPayload`, restore the update payload source first.
 
-Use the *Service Connection Tool* to download the required files on an internet-connected computer and import them into the site.
+- For an online service connection point, retry the download after you verify internet connectivity and endpoint access.
+- For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again.
 
-For detailed steps, see: https://learn.microsoft.com/en-us/intune/configmgr/core/servers/manage/use-the-service-connection-tool
+After you rerun download or import, confirm that the required files exist under the appropriate `EasySetupPayload` `Redists` folder.
 
-After importing the files, verify that the missing files now exist under the appropriate *EasySetupPayload* subfolders.
+> [!NOTE]
+> In Service Connection Tool version 2509 or later, the **Connect** step fails if required redistributable files can't be downloaded.
 
-### Scenario 2: Files missing in *CMStaging*
+### Scenario 2: Files are present in EasySetupPayload but missing in CMUStaging
 
-If the files exist in *EasySetupPayload* but are missing from *CMStaging*, retrigger content replication for the update package.
+If files exist in `EasySetupPayload` but are missing in `CMUStaging`, retrigger update content replication.
 
-Run the following Windows PowerShell command on a computer that can access the SMS Provider (typically the site server). Replace `<SiteCode>` and `<PackageGuid>` as appropriate.
+Run the following command on the server that hosts the SMS Provider role for the top-level site. Replace `<SiteCode>` and `<PackageGuid>`.
 
 ```powershell
-(Get-WmiObject -Namespace "ROOT\SMS\site_<sitecode>" -Query "select * from SMS_CM_UpdatePackages where PackageGuid = '<packageguid>'").RetryContentReplication($true)
+(Get-WmiObject -Namespace "ROOT\SMS\site_<SiteCode>" -Query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PackageGuid>'").RetryContentReplication($true)
 ```
 
-## More guidance
+Then retry the in-console update package installation.
 
-For a broader overview of how update packages are downloaded, staged, and installed and for other troubleshooting workflows see:
-Understand and troubleshoot Updates and Servicing in Configuration Manager 
-https://learn.microsoft.com/en-us/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing
+## More information
+
+For end-to-end update workflow and additional troubleshooting guidance, see [Understand and troubleshoot Updates and Servicing in Configuration Manager](/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing).
