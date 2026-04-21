@@ -18,51 +18,54 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-Azure Resource Manager doesn't support moving Azure resources directly to a subscription in a different Microsoft Entra ID tenant. For a standard resource move to succeed, the source and destination subscriptions must be in the same tenant.
+Azure Resource Manager doesn't support moving Azure resources directly to a subscription in a different Microsoft Entra ID tenant. In order for a standard resource move to succeed, the source and destination subscriptions must be in the same tenant.
 
-This article describes two workarounds for customers who need to move virtual machine (VM) resources across tenant boundaries.
+This article provides workarounds for customers who have to move virtual machine (VM) resources across tenant boundaries.
 
-## Why direct cross-tenant move isn't supported
+## Why a direct cross-tenant move isn't supported
 
 The Azure Resource Manager move API validates that both the source and destination subscriptions belong to the same Microsoft Entra ID tenant. If they don't, the move validation fails. This limitation is a platform constraint, not a configuration issue.
 
 ## Workaround 1: Move the subscription to the destination tenant
 
-If you want to move all resources in a subscription to a different tenant, you can transfer the subscription itself.
+If you want to move all resources in a subscription to a different tenant, you can transfer the subscription itself:
 
-1. In the source tenant, create a new subscription (or use an existing empty one).
+1. In the source tenant, create a subscription (or use an existing empty one).
 1. Move the resources to that new subscription by using the standard resource move operation (within the same tenant).
 1. Transfer the subscription to the destination tenant. The Azure Subscription Management team manages this process.
-1. After the subscription transfer completes, move the resources from the transferred subscription to the target subscription in the destination tenant if needed.
+1. After the subscription transfer finishes, move the resources from the transferred subscription to the target subscription in the destination tenant, if it's necessary.
 
 > [!NOTE]
-> Transferring a subscription to a different tenant requires Azure Subscription Management team assistance. Open a support request with the support topic: **Azure / Subscription Management / Transfer ownership of my subscription / Change subscription Microsoft Entra ID**.
+> Transferring a subscription to a different tenant requires Azure Subscription Management team assistance. Open a support request by using the folloing support topic: 
+> 
+> **Azure / Subscription Management / Transfer ownership of my subscription / Change subscription Microsoft Entra ID**
 
 For more information, see [Transfer an Azure subscription to a different Microsoft Entra ID directory](/azure/role-based-access-control/transfer-subscription).
 
 ## Workaround 2: Copy VM disks by using Azure Storage Explorer (VMs only)
 
-This workaround applies to VMs only. It involves copying the VM's managed disks to the destination tenant and recreating the VM there.
+This workaround applies to VMs only. It involves copying the VM's managed disks to the destination tenant, and re-creating the VM there.
 
 ### Prerequisites
 
-- Access to both the source and destination tenant accounts in Azure Storage Explorer.
-- A destination resource group and virtual network already created in the destination tenant.
+- Access to both the source and destination tenant accounts in Azure Storage Explorer
+- A destination resource group and virtual network that's already created in the destination tenant
 
 ### Steps
 
-1. Stop and deallocate the source VM in the [Azure portal](https://portal.azure.com).
+1. In the [Azure portal](https://portal.azure.com), stop and deallocate the source VM.
 
-2. Open Azure Storage Explorer and sign in with both the source and destination tenant accounts.
+2. Open Azure Storage Explorer, and sign in by using both the source and destination tenant accounts.
 
-3. In the source tenant account, locate the managed OS disk and any data disks attached to the VM.
+3. In the source tenant account, locate the managed OS disk and any data disks that are attached to the VM.
 
-4. Copy each disk to the destination tenant.
-    1. Right-click the disk and select **Copy**.
+4. Copy each disk to the destination tenant:
+
+    1. Right-click the disk, and select **Copy**.
     1. Navigate to the destination tenant account and the destination resource group.
-    1. Select **Paste** in the destination container.
+    1. In the destination container, select **Paste**.
     
-5. Once all disk copies are complete, create a new VM from the copied OS disk in the destination tenant
+5. After all disk copies are made, create a new VM from the copied OS disk in the destination tenant.
 
 **Azure PowerShell**
 
@@ -82,12 +85,12 @@ This workaround applies to VMs only. It involves copying the VM's managed disks 
    New-AzVM -ResourceGroupName "<destination-rg>" -Location "<location>" -VM $vmConfig
    ```
 
-6. Verify the new VM starts and operates correctly in the destination tenant.
+6. Verify that the new VM starts and operates correctly in the destination tenant.
 
-7. Once verified, delete the source VM and its resources in the source tenant if no longer needed.
+7. After verification, delete the source VM and its resources in the source tenant if they're no longer needed.
 
 > [!IMPORTANT]
-> Any VM extensions, managed identities, or Entra ID-integrated services must be reconfigured in the destination tenant after recreation.
+> Any VM extensions, managed identities, or Entra ID-integrated services must be reconfigured in the destination tenant after re-creation.
 
 ## Next steps
 
