@@ -59,7 +59,7 @@ If you have to perform a cross-tenant move, and you can't consolidate the subscr
 
 For images, use [Compute Gallery with cross-tenant sharing](/azure/virtual-machines/shared-image-galleries) to share the image directly with the destination tenant without moving the original resource.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Virtual machine move limitations](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations)
