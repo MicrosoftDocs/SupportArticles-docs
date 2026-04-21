@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot Linux virtual machine deployment issues
-description: Troubleshoot Linux VM deployment issues in Azure: identify failure stages, analyze serial logs, and apply fixes to restore provisioning. Get started now.
+description: Troubleshoot Linux VM deployment issues in Azure. Identify failure stages, analyze serial logs, and apply fixes to restore provisioning. Get started now.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.date: 03/25/2026
+ms.collection: linux
 ms.reviewer: divargas, jarrettr
 ---
 
@@ -49,7 +50,7 @@ A common provisioning failure occurs when you deploy a virtual machine from a cu
 The following example shows this kind of error message:
 
 > [!NOTE]
-> Make sure your [Linux](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/) image is properly prepared (generalized).
+> Make sure your [Linux](/azure/virtual-machines/linux/create-upload-generic) image is properly prepared (generalized).
 
 ```output
 Deployment failed. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd. {
@@ -88,8 +89,8 @@ Correlation Id: 'aaaa0000-bb11-2222-33cc-444444dddddd'...
 
 For resolution, use one of the following options:
 
-- Use [Azure CLI](/cli/azure/vm/image/terms?view=azure-cli-latest).
-- Use [Azure PowerShell](/powershell/module/az.marketplaceordering/set-azmarketplaceterms?view=azps-15.5.0).
+- Use [Azure CLI](/cli/azure/vm/image/terms).
+- Use [Azure PowerShell](/powershell/module/az.marketplaceordering/set-azmarketplaceterms).
 - Deploy a machine from the Azure portal and accept the terms and conditions during the deployment process.
 
 ## Why Linux VM provisioning failures occur
