@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you fix cases in which an Azure resource move fails and geberates an `IncompleteRequest` error because hidden dependent resources weren't included in the move request.
+This article helps you fix cases in which a Microsoft Azure resource move fails and geberates an `IncompleteRequest` error because hidden dependent resources weren't included in the move request.
 
 ## Symptoms
 
@@ -72,7 +72,7 @@ Verify that the account that performs the move has the correct role assignments:
 
 After you include all hidden resources and verify the permissions, retry the move operation.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Required permissions to move Azure resources](/azure/azure-resource-manager/management/move-resource-group-and-subscription#permissions-required-to-move-resources)
