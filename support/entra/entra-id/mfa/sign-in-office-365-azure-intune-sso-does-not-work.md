@@ -59,11 +59,9 @@ Before you continue, ensure the following conditions are true:
 
 - Access problems aren't limited to rich client applications on the client computer. If only rich client authentication (as opposed to browser-based authentication) isn't working, it likely indicates a rich client authentication issue. For example, it might be an issue that's related to the prerequisites or configuration of the rich-client application. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/office/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-microsoft-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1).
 
-- SSO authentication doesn't fail for all SSO-enabled user accounts. If all SSO-enabled users experience the same symptoms, it likely indicates a federation issue. For more information, see [Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure](https://support.microsoft.com/topic/troubleshoot-single-sign-on-setup-issues-in-office-365-intune-or-azure-bfe00060-32cc-53bc-926f-4d3bcaefa8d0)
+- SSO authentication doesn't fail for all SSO-enabled user accounts. If all SSO-enabled users experience the same symptoms, it likely indicates a federation issue. For more information, see [Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure](https://support.microsoft.com/topic/troubleshoot-single-sign-on-setup-issues-in-office-365-intune-or-azure-bfe00060-32cc-53bc-926f-4d3bcaefa8d0).
 
-- SSO authentication for the user account succeeds on other client computers. If the user account can't log on to any cloud services client, see the resolutions later in this article that involve the client computer. There might also be something wrong with the user account and not with the client computer. For more information, see 
-
-[Troubleshoot account issues for federated users in Microsoft 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/authentication/account-issues-for-federated-users).
+- SSO authentication for the user account succeeds on other client computers. If the user account can't log on to any cloud services client, see the resolutions later in this article that involve the client computer. There might also be something wrong with the user account and not with the client computer. For more information, see [Troubleshoot account issues for federated users in Microsoft 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/authentication/account-issues-for-federated-users).
 
 - The keyboard on the client computer is working correctly and the user name and password are entered correctly.
 
@@ -121,7 +119,7 @@ If the IP address that's resolved is incorrect based on the prior steps, and oth
 > [!NOTE]
 > If client devices are only attached to the corporate network, go to the next step.
 
-1. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+3. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
