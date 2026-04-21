@@ -3032,8 +3032,6 @@ items:
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
   - name: Windows Update for Business Reports
     items:
-    - name: Troubleshoot Windows Update error 0x800f0831
-      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
       - name: Missing data or incomplete report data
