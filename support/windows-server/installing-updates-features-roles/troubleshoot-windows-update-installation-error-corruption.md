@@ -59,20 +59,25 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 > [!NOTE]
 > For more information about how to collect more update logs by using the TroubleshootingScript (TSS) tool version 2, see [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md).
 
-## Resolution
+## Resolutions
 
 > [!IMPORTANT]  
 > Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-If the update is installed, remove it and then reinstall it. If the update isn't installed, install it.
+The method you use to fix this issue depends on the type of computer that's affected:
 
-### Method for Azure virtual machines: perform an in-place upgrade
+- If the affected computer is an Azure VM, [perform an in-place upgrade](#resolution-for-azure-virtual-machines-perform-an-in-place-upgrade).
+- If the affected computer is a physical computer (or a VM in a non-Azure environment) [remove and then reinstall the update](#resolutions-for-physical-computers).
+
+### Resolution for Azure virtual machines: Perform an in-place upgrade
 
 If the affected computer is a VM that's running in Azure, we strongly suggest that you perform an in-place upgrade (IPU) to fix the issue. The in-place upgrade reinstalls the operating system while retaining the VMs current configuration.
 
 For additional information, see [In-place upgrade for supported VMs running Windows in Azure](../../azure/virtual-machines/windows/in-place-system-upgrade.md).
 
-### Method for physical computers
+### Resolutions for physical computers
+
+For physical computers or non-Azure VMs, follow these steps to obtain a fresh copy of the update, uninstall the update (if it's partially installed), and then reinstall the update.
 
 #### Step 1: Obtain a fresh copy of the update
 
