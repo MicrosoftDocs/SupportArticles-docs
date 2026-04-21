@@ -78,7 +78,7 @@ az resource move --destination-group <destination-rg> --ids $resourceIds
 > [!TIP]
 > When you use CLI or PowerShell, the 800-resource-per-operation limit still applies. Break large moves into operations of fewer than 800 resources each.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Move resources with PowerShell](/azure/azure-resource-manager/management/move-resource-group-and-subscription#use-azure-powershell)
