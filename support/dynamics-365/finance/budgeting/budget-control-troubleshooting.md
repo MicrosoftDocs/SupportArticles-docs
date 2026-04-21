@@ -18,7 +18,7 @@ ms.assetid:
 
 This article lists common issues that can occur when you use budget control in Microsoft Dynamics 365 Finance. It also explains how to fix these issues. 
 
-## Budget control data maintence tool 
+## Budget control data maintenance tool 
 
 If you experience data inconsistency with a specific budget-controlled document, start with the **Budget control data maintenance** tool. 
 
