@@ -75,7 +75,7 @@ Get-AzResource -ResourceGroupName <destination-rg> | Format-Table
 ```
 
 > [!NOTE]
-> For additional information about long-running move operations, see [My resource move operation has been running for almost an hour. Is there something wrong?](/azure/azure-resource-manager/management/move-resource-group-and-subscription#my-resource-move-operation-which-usually-takes-a-few-minutes-has-been-running-for-almost-an-hour-is-there-something-wrong).
+> For additional information about long-running move operations, see [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
 ### Step 3: Retry the move with a smaller batch
 

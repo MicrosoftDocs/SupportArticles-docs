@@ -52,8 +52,8 @@ The minimum required permissions are:
 ### Step 1: Include hidden resources in your selection (Azure portal)
 
 1. In the Azure portal, go to the source resource group.
-1. To reveal hidden resources, such as managed disks, select **Manage view** > **Show hidden types**.
-1. Reselect all the resources that you want to move, including the hidden ones listed in the error message.
+1. To reveal hidden resources, like managed disks, select **Manage view** > **Show hidden types**.
+1. Reselect all the resources that you want to move, including the hidden resources listed in the error message.
 1. Retry the move operation.
 
 ### Step 2: Verify RBAC permissions
