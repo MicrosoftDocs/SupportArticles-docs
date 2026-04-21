@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, carlosm, v-appelgatet
+ai.usage: ai-assisted
 ms.custom:
 - sap:clustering and high availability\cluster service fails to start
 - pcy:WinComm Storage High Avail
