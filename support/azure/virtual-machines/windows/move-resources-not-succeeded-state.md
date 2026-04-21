@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the `MoveCannotProceedWithResourcesNotInSucceededState` error that occurs when you move Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that one or more resources that are involved in the move aren't in the `Succeeded` state. To resolve this issue, identify the resource that isn't in a `Succeeded` state, and restore it to a healthy state before you retry the move operation.
+This article helps you troubleshoot the `MoveCannotProceedWithResourcesNotInSucceededState` error that occurs when you move Microsoft Azure virtual machine (VM) resources to another resource group or subscription. The error indicates that one or more resources that are involved in the move aren't in the `Succeeded` state. To resolve this issue, identify the resource that isn't in a `Succeeded` state, and restore it to a healthy state before you retry the move operation.
 
 ## Symptoms
 
@@ -81,7 +81,7 @@ az vm update --resource-group <resource-group-name> --name <vm-name>
 
 After the resource returns to the `Succeeded` state, retry the move operation.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Troubleshoot moving Azure resources](/azure/azure-resource-manager/management/troubleshoot-move)
