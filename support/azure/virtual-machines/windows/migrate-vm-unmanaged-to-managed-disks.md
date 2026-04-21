@@ -101,7 +101,7 @@ To find unattached unmanaged disks in your subscription, see [Find and delete un
 | VM in availability set must be stopped. | The availability set isn't converted yet. | Convert the availability set first, then retry. |
 | Storage account doesn't exist. | Boot diagnostics references a deleted storage account. | See [Move fails due to invalid storage account](move-resources-invalid-storage-account.md). The same resolution applies: Reconfigure the boot diagnostics. |
 
-## Next steps
+## References
 
 - [Convert unmanaged to managed disks — full documentation](/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks)
 - [Managed disks FAQ](/azure/virtual-machines/faq-for-disks)
