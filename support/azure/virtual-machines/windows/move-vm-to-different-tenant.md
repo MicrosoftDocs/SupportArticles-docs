@@ -18,7 +18,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-Azure Resource Manager doesn't support moving Azure resources directly to a subscription in a different Microsoft Entra ID tenant. In order for a standard resource move to succeed, the source and destination subscriptions must be in the same tenant.
+Microsoft Azure Resource Manager doesn't support moving Azure resources directly to a subscription in a different Microsoft Entra ID tenant. In order for a standard resource move to succeed, the source and destination subscriptions must be in the same tenant.
 
 This article provides workarounds for customers who have to move virtual machine (VM) resources across tenant boundaries.
 
@@ -92,7 +92,7 @@ This workaround applies to VMs only. It involves copying the VM's managed disks 
 > [!IMPORTANT]
 > Any VM extensions, managed identities, or Entra ID-integrated services must be reconfigured in the destination tenant after re-creation.
 
-## Next steps
+## References
 
 - [Transfer an Azure subscription to a different MicrosoftEntra ID directory](/azure/role-based-access-control/transfer-subscription)
 - [Create a VM from a managed disk](/azure/virtual-machines/windows/create-vm-specialized)
