@@ -18,7 +18,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-The operation to move Azure resources to another resource group or subscription can fail if it exceeds the four-hour time limit that's enforced by Azure Resource Manager. This article explains the symptoms, causes, and resolution steps for the `ResourceMoveTimedOut` error.
+The operation to move Microsoft Azure resources to another resource group or subscription can fail if it exceeds the four-hour time limit that's enforced by Azure Resource Manager. This article explains the symptoms, causes, and resolution steps for the `ResourceMoveTimedOut` error.
 
 ## Symptoms
 
@@ -89,7 +89,7 @@ The Azure portal allows a maximum of 800 resources per move request. However, fo
 - **Avoid moving shared resources.** Virtual networks and other resources that are shared by many VMs increase the notification chain that must complete within the four-hour window.
 - **Use Azure Resource Mover for cross-region moves.** For cross-region scenarios, use [Azure Resource Mover](/azure/resource-mover/overview) instead of the standard move API because it handles the complexity by using more granular progress tracking.
 
-## Next steps
+## References
 
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Move resources - 800 resource limit](move-resources-800-limit.md)
