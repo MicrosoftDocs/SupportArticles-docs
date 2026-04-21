@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the `OperationNotAllowed` error that occurs when you move Azure resources across subscriptions during a rolling upgrade of the Azure Compute Resource Provider. The error indicates that the source and target subscription partitions temporarily run different service versions. To resolve this issue, wait for the upgrade to finish, and then retry the move operation.
+This article helps you troubleshoot the `OperationNotAllowed` error that occurs when you move Microsoft Azure resources across subscriptions during a rolling upgrade of the Azure Compute Resource Provider. The error indicates that the source and target subscription partitions temporarily run different service versions. To resolve this issue, wait for the upgrade to finish, and then retry the move operation.
 
 ## Symptoms
 
@@ -48,7 +48,7 @@ This condition is expected and transient. It's not a permanent failure.
 - Wait 15 to 30 minutes, and retry the move.
 - If the error persists beyond two hours, open a support request. Include the **correlation ID** from the error, the **subscription IDs**, and the **region** where the move was tried.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Troubleshoot moving Azure resources](/azure/azure-resource-manager/management/troubleshoot-move)
