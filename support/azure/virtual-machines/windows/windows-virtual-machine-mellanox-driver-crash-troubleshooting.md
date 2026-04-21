@@ -12,7 +12,7 @@ ms.reviewer: jdickson, scotro, azurevmcptcic
 
 ## Summary
 
-This article provides guidance on troubleshooting Azure Windows virtual machine (VM) crashes caused by an outdated Mellanox mlx5 network adapter driver. An outdated driver can trigger the bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
+This article provides guidance on troubleshooting Microsoft Azure Windows virtual machine (VM) crashes caused by an outdated Mellanox mlx5 network adapter driver. An outdated driver can trigger the bug check **0x000000D1 (DRIVER_IRQL_NOT_LESS_OR_EQUAL)**.
 
 ## Symptoms
 
@@ -126,7 +126,7 @@ After you update the driver and restart the VM, run the validation script again 
 - The driver version is updated.
 - No new **0x000000D1** bugcheck events occur after the restart.
 
-## Additional resources
+## References
 
 - [Azure VM Mellanox Driver Validation Tool](./windows-vm-mellanox-network-driver-validation-tool.md)
 - [Azure VM - Windows Mellanox Driver Validation Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_Mellanox_Driver_Validation)
