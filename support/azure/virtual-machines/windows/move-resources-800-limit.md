@@ -52,7 +52,7 @@ If breaking the move into batches isn't practical, take snapshots of the VM disk
 
 1. Create a VM from the snapshot (Azure CLI). For more information, see [Create a virtual machine from a snapshot with CLI](/azure/virtual-machines/scripts/create-vm-from-snapshot).
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription — FAQ](/azure/azure-resource-manager/management/move-resource-group-and-subscription#frequently-asked-questions)
 - [Subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits)
