@@ -130,7 +130,7 @@ VM connectivity or startup problems that occur after a move typically aren't rel
 - **Resource locks** don't carry over. Reapply any locks that you had on the source.
 - **Managed identities** continue to work. System-assigned identities follow the resource automatically.
 
-## Next steps
+## References
 
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Move operation support for resources](/azure/azure-resource-manager/management/move-support-resources)
