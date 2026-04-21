@@ -2214,6 +2214,10 @@ items:
       href: ./remote/troubleshoot-unexpected-rds-session-locks-or-disconnections.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
+  - name: Slow performance (RDS or session)
+    items:
+    - name: First display of the Start menu is delayed when using a Windows Server 2025-based RDSH server
+      href: ./remote/first-start-menu-display-delayed-using-ws2025-rdsh-server.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
     - name: Shared folder for virtual desktop profiles experiences intermittent communication failures inWindows Server 2019
@@ -3056,6 +3060,8 @@ items:
       href: ./support-tools/support-tools-xperf-wpa-wpr.md
   - name: Scripts
     items:
+    - name: Scripts to calculate the sizes of object security descriptors
+      href: ./support-tools/scripts-calculate-size-object-security-descriptors.md
     - name: Scripts to clean up profile folder information
       href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to compile all registered MOF files
