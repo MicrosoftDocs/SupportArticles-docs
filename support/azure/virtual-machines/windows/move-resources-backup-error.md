@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-Azure resource move fails when you try to move a virtual machine (VM) that has Azure Backup configured. This issue occurs because restore point collections exist. To resolve this issue, stop the backup, and delete the restore point collections before you move the VM. If soft delete is enabled on the backup vault, wait for soft-deleted restore points to expire, or disable soft delete.
+Microsoft Azure resource move fails when you try to move a virtual machine (VM) that has Azure Backup configured. This issue occurs because restore point collections exist. To resolve this issue, stop the backup, and delete the restore point collections before you move the VM. If soft delete is enabled on the backup vault, wait for soft-deleted restore points to expire, or disable soft delete.
 
 ## Symptoms
 
@@ -95,7 +95,7 @@ After you delete the restore point collections and resolve soft delete, retry th
 
 After the move finishes, reconfigure Azure Backup for the VM in its new location.
 
-## More information
+## References
 
 - [Move a Recovery Services vault](/azure/backup/backup-azure-move-recovery-services-vault)
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
