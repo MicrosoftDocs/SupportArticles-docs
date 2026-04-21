@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-This article helps you troubleshoot the error that occurs when you move a virtual machine (VM) that's created from an Azure Marketplace image that has am attached plan to a different subscription. The error occurs because the Marketplace plan is tied to the original subscription and can't be moved directly to another subscription.
+This article helps you troubleshoot the error that occurs when you move a virtual machine (VM) that's created from an Azure Marketplace image to a different subscription, and that image has a plan attached. The error occurs because the Marketplace plan is tied to the original subscription and can't be moved directly to another subscription.
 
 ## Symptoms
 
@@ -40,7 +40,7 @@ VMs that are created from Azure Marketplace images that include a *plan* (a bill
 
 ## Resolution
 
-To move the VM to a new subscription, copy the VM's disks, and re-create the VM in the destination subscription. Include the the same Marketplace plan as for the original VM.
+To move the VM to a new subscription, copy the VM's disks, and re-create the VM in the destination subscription. Include the same Marketplace plan as for the original VM.
 
 > [!IMPORTANT]
 > Verify that the Marketplace offer is still available before you delete the original VM. If the offer is retired, you can't re-create the VM in either the old or new subscription.
@@ -92,11 +92,11 @@ az vm image terms accept --publisher <publisher> --offer <offer> --plan <sku>
 Set-AzMarketplaceTerms -Publisher <publisher> -Product <offer> -Name <sku> -Accept
 ```
 
-Alternatively, create a temporary VM in the destination subscription by using the same Marketplace plan through the portal. This accepts the terms. You can then delete the temporary VM.
+Alternatively, create a temporary VM in the destination subscription by using the same Marketplace plan through the portal. This action accepts the terms. You can then delete the temporary VM.
 
 ### Step 5: Re-create the VM from the disk
 
-In the destination subscription, create a new VM from the copied OS disk, specifying the original Marketplace plan information to match the plan you've accepted.
+In the destination subscription, create a new VM from the copied OS disk, specifying the original Marketplace plan information to match the plan that you've accepted.
 
 For more information, see [Create a VM from a specialized disk](/azure/virtual-machines/windows/create-vm-specialized).
 
