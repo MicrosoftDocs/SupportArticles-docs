@@ -119,7 +119,7 @@ If the IP address that's resolved is incorrect based on the prior steps, and oth
 > [!NOTE]
 > If client devices are only attached to the corporate network, go to the next step.
 
-3. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+4. Add the AD FS FQDN to the proxy bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
@@ -144,7 +144,7 @@ Examine the **Websites** listing for the fully qualified DNS name of the AD FS s
 > [!NOTE]
 > A wildcard value (for example, "*.consoto.com") also works in this configuration.
 
-3. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+3. Add the AD FS FQDN to the proxy bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
 
 ### Resolution 5: Third-party web browser doesn't support Extended Protection for Authentication, and you receive looping authentication prompts
 
