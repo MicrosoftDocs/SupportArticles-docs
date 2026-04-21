@@ -64,18 +64,18 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 ## Resolutions
 
 > [!IMPORTANT]  
-> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 The method you use to fix this issue depends on the type of computer that's affected:
 
 - If the affected computer is an Azure VM, [perform an in-place upgrade](#resolution-for-azure-virtual-machines-perform-an-in-place-upgrade).
-- If the affected computer is a physical computer (or a VM in a non-Azure environment) [remove and then reinstall the update](#resolutions-for-physical-computers).
+- If the affected computer is a physical computer (or a VM in a non-Azure environment), [remove and then reinstall the update](#resolutions-for-physical-computers).
 
 ### Resolution for Azure virtual machines: Perform an in-place upgrade
 
 If the affected computer is a VM that's running in Azure, we strongly suggest that you perform an in-place upgrade (IPU) to fix the issue. The in-place upgrade reinstalls the operating system while retaining the VMs current configuration.
 
-For additional information, see [In-place upgrade for supported VMs running Windows in Azure](../../azure/virtual-machines/windows/in-place-system-upgrade.md).
+For more information, see [In-place upgrade for supported VMs running Windows in Azure](../../azure/virtual-machines/windows/in-place-system-upgrade.md).
 
 ### Resolutions for physical computers
 
@@ -83,8 +83,8 @@ For physical computers or non-Azure VMs, follow these steps to obtain a fresh co
 
 #### Step 1: Obtain a fresh copy of the update
 
-1. To make sure that the CBS log contains the latest data, reproduce the issue by trying to install the affected update or feature.
-1. Review the CBS log to identify the update or feature package by its KB number.
+1. To make sure that CBS.log contains the latest data, reproduce the issue by trying to install the affected update or feature.
+1. Review CBS.log to identify the update or feature package by its KB number.
 1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and search for the KB number that you identified.
 1. For that KB number, select the package that's appropriate for the operating system version and architecture of the affected computer.1. Download the package to a temporary folder ("temp") on drive C of the affected computer.
 1. On the affected computer, open an administrative Command Prompt window, and then run the following commands, in sequence:
