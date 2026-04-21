@@ -247,7 +247,7 @@ items:
       - name: Split-brain DNS configuration
         href: entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso.md
       - name: Single sign-on doesn't work from some devices in Office 365, Azure, or Intune
-        href: entra-id/mfa/sign-in-office-365-azure-intune-sso-doesnt-work.md
+        href: entra-id/mfa/sign-in-office-365-azure-intune-sso-does-not-work.md
     - name: AD FS (Active Directory Federation Services)
       items:
       - name: Can't perform a Workplace Join

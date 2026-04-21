@@ -2,7 +2,7 @@
 title: Single sign-on doesn't work from some devices in Office 365, Azure, or Intune
 description: Fix single sign-on issues when users can't sign in to Office 365, Azure, or Intune from some devices. Follow these troubleshooting steps now.
 ms.date: 04/21/2026
-ms.author: jarretr
+ms.author: jarrettr
 ms.service: entra-id
 ms.custom: sap:AD domain-joined Seamless SSO with PTA or PHS
 ---
@@ -75,7 +75,7 @@ To troubleshoot this issue, use one or more of the following methods depending o
 
 Try to browse to `http://www.msn.com`. If this doesn't work, troubleshoot network connectivity issues. To do this, follow these steps:
 
-1. At a command prompt, use the ipconfig and ping tools to troubleshoot IP connectivity. For more information, see [How to troubleshoot basic TCP/IP problems](http://support.microsoft.com/help/169790).
+1. At a command prompt, use the ipconfig and ping tools to troubleshoot IP connectivity. For more information, see [How to troubleshoot basic TCP/IP problems](https://support.microsoft.com/help/169790).
 
 1. At a command prompt, type `nslookup www.msn.com` to determine whether DNS is resolving internet server names.
 
@@ -96,19 +96,19 @@ To resolve this issue, follow these steps:
 
     1. If the client is attached to the corporate network, make sure that the IP address that's resolved is a private IP address. The IP address should match one of the following patterns:
 
-        - `10.x.x.x`
+        - 10.x.x.x
 
-        - `172.16.x.x`
+        - 172.16.x.x
 
-        - `192.168.x.x`
+        - 192.168.x.x
 
     1. If the client is outside the corporate network, make sure that the IP address that's resolved is a public IP address. Make sure that it doesn't match one of the following patterns:
 
-        - `10.x.x.x`
+        - 10.x.x.x
 
-        - `172.16.x.x`
+        - 172.16.x.x
 
-        - `192.168.x.x`
+        - 192.168.x.x
 
     1. If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
 
@@ -125,7 +125,7 @@ To resolve this issue, follow these steps:
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
-To resolve this issue, troubleshoot Secure Sockets Layer (SSL) certificate issues. For more information, see [You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune](http://support.microsoft.com/help/2523494).
+To resolve this issue, troubleshoot Secure Sockets Layer (SSL) certificate issues. For more information, see [You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2523494).
 
 ### Resolution 4: You receive a single, unexpected credential prompt when you sign in from a client computer that's connected to the corporate network
 
@@ -154,13 +154,13 @@ To resolve this issue, do the following:
 
 - Use Internet Explorer instead of a third-party web browser that doesn't support Extended Protection for Authentication.
 
-If Internet Explorer isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](http://support.microsoft.com/help/2461628).
+If Internet Explorer isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2461628).
 
 
 ### Resolution 6: "Access Denied" error message when you try to connect to login.microsoftonline.com
 
 > [!IMPORTANT]
-> This resolution contains steps that tell you how to modify the registry. Serious problems can occur if you modify the registry incorrectly. Be sure to back up the registry before you modify it. For more information, see [How to back up and restore the registry in Windows](http://support.microsoft.com/help/322756).
+> This resolution contains steps that tell you how to modify the registry. Serious problems can occur if you modify the registry incorrectly. Be sure to back up the registry before you modify it. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 To resolve this issue, use Registry Editor to delete the following registry subkey:
 
@@ -170,4 +170,4 @@ AD FS then falls back to the correct endpoint based on the SSO Relying Party Tru
 
 ### Resolution 7: Reset disabled AD FS service endpoint setting to default configuration
 
-For more information on how to do this, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
+For more information on how to do this, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](https://support.microsoft.com/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
