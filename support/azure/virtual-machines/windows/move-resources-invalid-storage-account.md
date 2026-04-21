@@ -146,7 +146,7 @@ az vm show --resource-group <rg-name> --name <vm-name> \
 
 If the `storageUri` field points to a storage account that no longer exists, use one of the resolution options in this article before you retry the move.
 
-## Next steps
+## References
 
 - [Azure boot diagnostics](/azure/virtual-machines/boot-diagnostics)
 - [Move resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
