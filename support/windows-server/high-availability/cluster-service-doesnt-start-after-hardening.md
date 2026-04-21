@@ -1,6 +1,6 @@
 ---
 title: Cluster service doesn't start after you apply CIS Windows Server 2025 Benchmark v1.x recommendations
-description: 
+description: Describes how to resolve an issue in which the Windows Failover Cluster service fails to start after you apply security hardening recommendations.
 ms.date: 04/22/2026
 manager: dcscontentpm
 audience: itpro
@@ -14,6 +14,9 @@ appliesto:
 ---
 # Cluster service doesn't start after you apply CIS Windows Server 2025 Benchmark v1.x recommendations
 
+## Summary
+
+This article describes how to resolve an issue in which the Windows Failover Cluster service fails to start after you apply security hardening recommendations from the Center for Internet Security (CIS) Microsoft Windows Server 2025 Benchmark version 1.x, or similar hardening tools.
 
 ## Symptoms
 
