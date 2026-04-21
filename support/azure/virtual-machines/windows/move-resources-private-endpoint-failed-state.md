@@ -17,7 +17,7 @@ ms.custom: sap:Cannot create a VM
 
 ## Summary
 
-When you move Azure resources to a different resource group or subscription, the operation might fail because a private endpoint isn't in a `Succeeded` provisioning state. This article helps you troubleshoot this error and resolve the underlying issue.
+When you move Microsoft Azure resources to a different resource group or subscription, the operation might fail because a private endpoint isn't in a `Succeeded` provisioning state. This article helps you troubleshoot this error and resolve the underlying issue.
 
 ## Symptoms
 
@@ -89,7 +89,7 @@ If the private endpoint isn't essential to the resources that you're moving, and
 > [!IMPORTANT]
 > Before you remove a private endpoint from the move scope, verify that none of the resources that you're moving have a hard dependency on it during the move process.
 
-## Additional resources
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [What is Azure Private Endpoint?](/azure/private-link/private-endpoint-overview)
