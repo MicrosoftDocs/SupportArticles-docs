@@ -96,19 +96,19 @@ To resolve this issue, follow these steps:
 
     1. If the client is attached to the corporate network, make sure that the IP address that's resolved is a private IP address. The IP address should match one of the following patterns:
 
-        - 10.x.x.x
+    - 10.x.x.x
 
-        - 172.16.x.x
+    - 172.16.x.x
 
-        - 192.168.x.x
+    - 192.168.x.x
 
     1. If the client is outside the corporate network, make sure that the IP address that's resolved is a public IP address. Make sure that it doesn't match one of the following patterns:
 
-        - 10.x.x.x
+    - 10.x.x.x
 
-        - 172.16.x.x
+    - 172.16.x.x
 
-        - 192.168.x.x
+    - 192.168.x.x
 
     1. If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
 
@@ -125,7 +125,7 @@ To resolve this issue, follow these steps:
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
-To resolve this issue, troubleshoot Secure Sockets Layer (SSL) certificate issues. For more information, see [You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2523494).
+To resolve this issue, troubleshoot Secure Sockets Layer (SSL) certificate issues. For more information, see [You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune](/previous-versions/troubleshoot/microsoft-365/admin/certificate-warning-from-ad-fs).
 
 ### Resolution 4: You receive a single, unexpected credential prompt when you sign in from a client computer that's connected to the corporate network
 
@@ -154,7 +154,7 @@ To resolve this issue, do the following:
 
 - Use Internet Explorer instead of a third-party web browser that doesn't support Extended Protection for Authentication.
 
-If Internet Explorer isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2461628).
+If Internet Explorer isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/sign-in/federated-user-repeatedly-prompted-for-credentials).
 
 
 ### Resolution 6: "Access Denied" error message when you try to connect to login.microsoftonline.com
@@ -170,4 +170,4 @@ AD FS then falls back to the correct endpoint based on the SSO Relying Party Tru
 
 ### Resolution 7: Reset disabled AD FS service endpoint setting to default configuration
 
-For more information on how to do this, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](https://support.microsoft.com/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
+For more information on how to do this, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
