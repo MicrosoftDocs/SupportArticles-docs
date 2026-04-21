@@ -16,7 +16,9 @@ appliesto:
 ---
 # Troubleshoot Windows Update installation error 0x800f0831 (CBS_E_STORE_CORRUPTION)
 
-Windows Update error 0x800f0831 (`CBS_E_STORE_CORRUPTION`) typically occurs if an update doesn't install the required package files correctly. This article helps you understand the root cause of the issue and the necessary steps to resolve it effectively.
+Windows Update error 0x800f0831 (`CBS_E_STORE_CORRUPTION`) indicates that the Windows component store is corrupted, which prevents updates from installing correctly. This error typically occurs when a required package is missing from the store or isn't fully applied to the registry.
+
+Use this article to identify the cause of the error and apply the appropriate fix for your environment.
 
 ## Symptoms
 
