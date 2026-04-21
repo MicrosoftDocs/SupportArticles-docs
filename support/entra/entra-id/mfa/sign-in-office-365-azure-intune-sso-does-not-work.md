@@ -94,29 +94,29 @@ To resolve this issue, follow these steps:
 > [!NOTE]
 > In this command, `<AD FS FQDN>` represents the fully qualified domain name (FQDN) of the AD FS service name. It doesn't represent the Windows host name of the AD FS server.
 
-    1. If the client is attached to the corporate network, make sure that the IP address that's resolved is a private IP address. The IP address should match one of the following patterns:
+If the client is attached to the corporate network, make sure that the IP address that's resolved is a private IP address. The IP address should match one of the following patterns:
 
-    - 10.x.x.x
+- `10.x.x.x`
 
-    - 172.16.x.x
+- `172.16.x.x`
 
-    - 192.168.x.x
+- `192.168.x.x`
 
-    1. If the client is outside the corporate network, make sure that the IP address that's resolved is a public IP address. Make sure that it doesn't match one of the following patterns:
+If the client is outside the corporate network, make sure that the IP address that's resolved is a public IP address. Make sure that it doesn't match one of the following patterns:
 
-    - 10.x.x.x
+- `10.x.x.x`
 
-    - 172.16.x.x
+- `172.16.x.x`
 
-    - 192.168.x.x
+- `192.168.x.x`
 
-    1. If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
+If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
 
-        1. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
+1. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
 
-        1. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
+1. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
 
-        1. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
+1. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
 
 > [!NOTE]
 > If client devices are only attached to the corporate network, go to **Step 3**.
