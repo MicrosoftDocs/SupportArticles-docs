@@ -3020,8 +3020,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0823.md
     - name: Troubleshoot Windows Update error 0x800f0831
       href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
-    - name: Troubleshoot Windows Update error 0x800f0831
-      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Troubleshoot Windows Update error 0x800f0920
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x800f0920.md
     - name: Troubleshoot Windows Update error 0x8024001E
