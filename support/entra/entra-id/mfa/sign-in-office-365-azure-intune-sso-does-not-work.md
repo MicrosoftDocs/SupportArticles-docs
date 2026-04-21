@@ -112,11 +112,11 @@ If the client is outside the corporate network, make sure that the IP address th
 
 If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
 
-    1. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
+    a. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
 
-    1. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
+    b. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
 
-    1. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
+    c. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
 
 > [!NOTE]
 > If client devices are only attached to the corporate network, go to the next step.
