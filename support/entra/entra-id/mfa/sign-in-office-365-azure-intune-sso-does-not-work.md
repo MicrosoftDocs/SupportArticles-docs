@@ -112,16 +112,16 @@ If the client is outside the corporate network, make sure that the IP address th
 
 If the IP address that's resolved is incorrect based on **Step 1** and **Step 2**, and other client computers don't experience the same behavior, do the following:
 
-1. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
+    1. At the command prompt, type `ipconfig /all` and then check that the Primary DNS Server entry is appropriate for the network to which the client is attached.
 
-1. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
+    1. Open the `%windir%\system32\drivers\etc\hosts` file in Notepad and then remove any entries for the AD FS FQDN. Save the file.
 
-1. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
+    1. At the command prompt, type `ipconfig /flushdns` to clear the DNS cache.
 
 > [!NOTE]
-> If client devices are only attached to the corporate network, go to **Step 3**.
+> If client devices are only attached to the corporate network, go to the next step.
 
-1. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+3. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
@@ -137,7 +137,7 @@ To resolve this issue, follow these steps:
 
 If a credential prompt appears, log off and then log back on by using corporate credentials.
 
-1. Add the AD FS FQDN to the local intranet zone.
+2. Add the AD FS FQDN to the local intranet zone.
 
     1. On the **Security** tab, select **Local Intranet** >**Sites** > **Advanced**.
  
@@ -146,7 +146,7 @@ Examine the **Websites** listing for the fully qualified DNS name of the AD FS s
 > [!NOTE]
 > A wildcard value (for example, "*.consoto.com") also works in this configuration.
 
-1. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+3. Add the AD FS FQDN to the Proxy Bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
 
 ### Resolution 5: Third-party web browser doesn't support Extended Protection for Authentication, and you receive looping authentication prompts
 
