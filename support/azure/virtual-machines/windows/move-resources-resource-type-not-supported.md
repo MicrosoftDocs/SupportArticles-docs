@@ -55,7 +55,7 @@ For virtual machine (VM)-specific restrictions, see [Scenarios not supported for
 
 Remove the unsupported resource types from your move selection. Retry the move by using only supported resources. Re-create the unsupported resources in the destination resource group or subscription after the move finishes.
 
-## More information
+## References
 
 - [Move Azure resources to a new resource group or subscription](/azure/azure-resource-manager/management/move-resource-group-and-subscription)
 - [Virtual machine move limitations](/azure/azure-resource-manager/management/move-limitations/virtual-machines-move-limitations)
