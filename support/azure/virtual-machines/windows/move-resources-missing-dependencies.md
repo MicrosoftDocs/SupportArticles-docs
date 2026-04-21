@@ -43,7 +43,10 @@ The `details` array lists the resource IDs that you must include in the move req
 
 ## Cause
 
-Azure Resource Manager requires that when you move a resource, all dependent (linked) resources must either already exist in the destination resource group or subscription, or be included in the same move request.
+When you move a resource, Azure Resource Manager requires that all dependent (linked) resources must satisfy either of the following conditions:
+
+- They already exist in the destination resource group or subscription
+- They're included in the same move request
 
 VM resources have a chain of dependencies. For example, to move a VM, you must also move:
 
@@ -96,7 +99,7 @@ To resolve the issue, follow these steps:
 1. **Retry the move:** After yo add all missing resources, retry the move operation.
 
 > [!NOTE]
-> If the error message lists a resource in a different resource group than you expect, this difference might occur because that resource is shared across multiple VMs or resource groups. You must include all resources in the dependency chain regardless of their current location.
+> The error message might list a resource in a resource group other than the one that you expect. In this case, the difference might occur because that resource is shared across multiple VMs or resource groups. You must include all resources in the dependency chain regardless of their current location.
 
 ## Check which resources support move operations
 
