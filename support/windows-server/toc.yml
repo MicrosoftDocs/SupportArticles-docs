@@ -2320,20 +2320,22 @@ items:
       href: ./setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100.md
     - name: SYSPREP and CAPTURE task sequence fails
       href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
-    - name: The WDS server may not start
-      href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
+
     - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
     - name: Upgrade fails and generates error code 0xC1900101-0x20017
       href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
       href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
+    - name: The WDS server may not start
+      href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
     - name: Windows Deployment Service fails to start
       href: ./setup-upgrade-and-drivers/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
+
 - name: Shell Experience
   items:
   - name: Shell Experience
