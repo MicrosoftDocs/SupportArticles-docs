@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Key Vault Secrets Provider add-on in AKS
-description: Troubleshoot and resolve common issues that occur when you use the Azure Key Vault Secrets Provider add-on in Azure Kubernetes Service (AKS).
+description: Troubleshoot Azure Key Vault Secrets Provider add-on issues in Azure Kubernetes Service (AKS), resolve mount errors faster, and follow the fixes in this guide.
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.date: 12/13/2024
@@ -9,6 +9,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot Azure Key Vault Secrets Provider add-on in AKS
+
+## Summary
 
 This article discusses how to troubleshoot issues that you might experience when using the [Azure Key Vault Secrets Provider add-on](/azure/aks/csi-secrets-store-driver) in Azure Kubernetes Service (AKS).
 
@@ -221,7 +223,7 @@ Fixing the connectivity issue is generally a two-step process:
 
 These steps are described in more detail in the following sections.
 
-##### Step 1: Create the virtual network link
+#### Step 1: Create the virtual network link
 
 [Connect to the AKS cluster nodes](/azure/aks/node-access) to determine whether the fully qualified domain name (FQDN) of the Key Vault is resolved through a public IP address or a private IP address. If you receive the "Public network access is disabled and request is not from a trusted service nor via an approved private link" error message, the Key Vault endpoint is probably resolved through a public IP address. To check for this scenario, run the [nslookup](/windows-server/administration/windows-commands/nslookup) command:
 
@@ -278,7 +280,7 @@ Address: 172.20.0.4
 
 After the virtual network link is added, the FQDN should be resolvable through a private IP address.
 
-##### Step 2: Add virtual network peering between virtual networks
+#### Step 2: Add virtual network peering between virtual networks
 
 If you're using a private endpoint, you've probably disabled public access at the Key Vault level. Therefore, no connectivity exists between AKS and the Key Vault. You can test that configuration by using the following Netcat (nc) command:
 

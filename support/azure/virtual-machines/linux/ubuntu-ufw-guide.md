@@ -13,6 +13,8 @@ ms.service: azure-virtual-machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article describes how to use Uncomplicated Firewall (UFW) to diagnose and resolve connectivity issues on an Azure Ubuntu virtual machine (VM).
 
 UFW is a user-friendly interface for managing a Netfilter firewall in Linux distributions, particularly in Ubuntu. Its primary goal is to make managing a firewall easier for users who might find that directly configuring `iptables` is challenging and complex. UFW is the default firewall configuration tool for Ubuntu.

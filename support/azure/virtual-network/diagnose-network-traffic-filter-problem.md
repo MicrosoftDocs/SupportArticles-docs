@@ -11,6 +11,7 @@ ms.custom:
   - devx-track-azurecli
   - sfi-image-nochange
   - sap:Connectivity
+  - sap:Creating and troubleshooting Network Security Groups
 # Customer intent: "As a network engineer, I want to diagnose network traffic filter issues on a virtual machine, so that I can identify and resolve connectivity problems due to conflicting security rules."
 ---
 

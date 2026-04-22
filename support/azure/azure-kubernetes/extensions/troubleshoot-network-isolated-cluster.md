@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Network Isolated AKS Clusters
-description: Learn how to troubleshoot network isolated cluster issues on Azure Kubernetes Service (AKS).
+description: Troubleshoot network isolated AKS cluster issues, including image pull and ACR connectivity failures, to restore workloads quickly and keep deployments running.
 ms.service: azure-kubernetes-service
 ms.date: 04/15/2025
 ms.reviewer: doveychase, yuewu2, v-weizhu
@@ -9,7 +9,9 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Troubleshoot network isolated Azure Kubernetes Service (AKS) cluster issues
 
-This article discusses how to troubleshoot issues in [network isolated Azure Kubernetes Service (AKS) clusters](/azure/aks/concepts-network-isolated).
+## Summary
+
+Use this article to troubleshoot issues in [network isolated Azure Kubernetes Service (AKS) clusters](/azure/aks/concepts-network-isolated), resolve common image pull and ACR problems, and recover faster.
 
 ## Prerequisites
 

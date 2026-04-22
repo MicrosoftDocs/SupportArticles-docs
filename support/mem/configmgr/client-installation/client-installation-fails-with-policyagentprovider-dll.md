@@ -1,7 +1,7 @@
 ---
 title: There was a problem starting PolicyAgentProvider.dll error installing client 
 description: Fixes an issue where you receive There was a problem starting PolicyAgentProvider.dll error when installing a Configuration Manager client.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---

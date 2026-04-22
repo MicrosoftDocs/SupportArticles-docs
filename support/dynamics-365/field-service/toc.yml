@@ -9,11 +9,13 @@ items:
       href: administration/cannot-find-user-set-up-frontline-workers.md
     - name: Can't identify the user in an error message
       href: administration/cant-identify-user.md
+    - name: Can't install Dynamics 365 Field Service
+      href: administration/cant-install-field-service.md
     - name: Date Window Start/End fields don't exist
       href: administration/date-window-fields-missing.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
-    - name: Inspection flows aren't triggered 
+    - name: Inspection flows don't trigger 
       href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
@@ -90,4 +92,14 @@ items:
     - name: Schedule board is slow to load or experiences extreme latency
       href: scheduling/schedule-board-performance.md
     - name: Schedule board shows a blank page or fails to load
-      href: scheduling/schedule-board-not-loading.md
+      href: scheduling/schedule-board-not-loading.md  
+
+- name: Work order
+  items:
+    - name: Agreement booking setup doesn't create work orders
+      href: work-order/agreement-work-orders-not-generated.md
+    - name: Work order doesn't save or create successfully
+      href: work-order/work-order-creation-errors.md
+    - name: Work order status doesn't change as expected
+      href: work-order/work-order-status-stuck.md
+

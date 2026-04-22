@@ -1,6 +1,6 @@
 ---
 title: An error message when you sort a range that contains merged cells in Excel
-description: Discusses a problem in which you may receive an error message when you sort a range that contains merged cells in Excel.
+description: Discusses a problem in which you might receive an error message when you sort a range that contains merged cells in Excel.
 author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
@@ -8,24 +8,24 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
-appliesto: 
+  - CI 10891
+appliesto:
   - Excel for Microsoft 365
-  - Excel 2019
-  - Excel 2016
-  - Excel 2013
-  - Excel 2010
-  - Excel 2007
-ms.date: 05/26/2025
+  - Microsoft Excel 2024 
+  - Microsoft Excel 2021 
+  - Microsoft Excel 2016
+ms.date: 03/31/2026
 ---
 
-# You may receive an error message when you sort a range that contains merged cells in Excel
+# You might receive an error message when you sort a range that contains merged cells in Excel
 
 ## Symptoms
 
-When you sort a range in a Microsoft Excel worksheet, Excel does not sort the range. Additionally, you may receive the following error message:
+When you sort a range in a Microsoft Excel worksheet, Excel doesn't sort the range. Additionally, you might receive the following error message:
 
 **This operation requires the merged cells to be identically sized.**
 
@@ -72,7 +72,7 @@ To work around this issue, split all the merged cells in the range, or merge all
       3. Select the **Alignment** tab, and then select the **Merge cells** check box.
       4. Select **OK**.
 
-     Do not merge cells in column C.
+     Don't merge cells in column C.
 
 3. Select cells A1:C3, select **Sort & Filter** in the **Editing** group on the **Home** tab, and then click **Custom Sort**.
 
@@ -80,4 +80,4 @@ To work around this issue, split all the merged cells in the range, or merge all
 
 5. To resolve the issue, do one of the following:
    1. Unmerge cells A1:B3 so there are no merged cells in the selection.  
-   2. Merge cells C1 and D1, C2 and D2, and C3 and D3, so that C column is same sized (merged) as the A/B column.  Then select cells A1:D3, and repeat steps 3 and 4 using a uniform range size.
+   2. Merge cells C1 and D1, C2 and D2, and C3 and D3, so that C column is same sized (merged) as the A/B column. Then select cells A1:D3, and repeat steps 3 and 4 using a uniform range size.

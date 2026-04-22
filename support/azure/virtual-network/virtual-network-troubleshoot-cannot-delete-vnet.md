@@ -10,6 +10,7 @@ ms.topic: troubleshooting
 ms.date: 03/17/2026
 ms.custom:
   - sap:Cannot delete Azure Virtual Network (VNet),fasttrack-edit,sfi-image-nochange
+  - sap:Cannot delete Azure Virtual Network (VNet)
 
 # Customer intent: As a cloud administrator, I want to troubleshoot problems that prevent the deletion or modification of a virtual network or subnet, so I can resolve blocking resource dependencies and maintain my cloud resources.
 ---
@@ -20,9 +21,7 @@ ms.custom:
 
 You might receive errors when you try to delete or modify a virtual network or subnet in Microsoft Azure. Resources like gateways, private endpoints, service endpoints, subnet delegations, and orphaned network interfaces can block deletion or modification. This article provides troubleshooting steps to help you resolve these problems.
 
-If this article doesn't address your Azure problem, visit the Azure forums on [Microsoft Q & A](https://azure.microsoft.com/support/forums) and [Stack Overflow](https://stackoverflow.com/questions/tagged/azure). You can post in these forums, or post to [@AzureSupport](https://x.com/AzureSupport) on X. You also can submit an Azure support request. To submit a support request, on the [Azure support page](https://azure.microsoft.com/support), select **Get support**.
-
-## Troubleshooting guidance
+## Troubleshoot virtual network and subnet issues
 
 ### Virtual network deletion
 
@@ -74,7 +73,7 @@ Go to the **Overview** page of the virtual network. Check the **Connected device
 
 If there's an application gateway, you must remove it before you can delete the virtual network.
 
-### Check whether Azure container instances still exist in the virtual network
+### Check whether Azure Container Instances still exist in the virtual network
 
 > [!NOTE]
 > As of the Azure Container Instances API version `2021-07-01`, Azure Container Instances no longer use network profiles. If you use this or a more recent API version, the portal doesn't create network profiles. The following guidance applies only to legacy deployments that use an older API version.

@@ -64,6 +64,3 @@ When you use a fully qualified domain name (FQDN) to access the ILB, the backend
 
 To reduce overhead, upload the ILB certificate in the HTTP settings to make the probe path work. (This step is just for allow listing. It isn't used for TLS communication.) You can retrieve the ILB certificate by accessing the ILB by using its IP address from your browser on HTTPS, then exporting the TLS/SSL certificate in a Base-64 encoded CER format and uploading the certificate on the respective HTTP settings.
 
-## Need help? Contact support
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.

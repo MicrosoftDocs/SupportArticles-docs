@@ -4,7 +4,7 @@ description: Describes common scenarios when WSUS synchronization and import fai
 author: Cloud-Writer
 ms.author: meerak
 ms.reviewer: kaushika, lamosley
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.custom: sap:Software Update Management (SUM)\WSUS Performance or Crashes
 ---
 # Troubleshoot WSUS synchronization and import issues

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VirtualNetworkNotInSucceededState error code
-description: Learn how to troubleshoot the VirtualNetworkNotInSucceededState error when you create, upgrade, or scale an Azure Kubernetes Service (AKS) cluster or node pool.
+description: Troubleshoot the VirtualNetworkNotInSucceededState error in AKS. Learn why your cluster or node pool deployment fails and how to fix it quickly.
 ms.date: 08/07/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
@@ -9,6 +9,8 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the VirtualNetworkNotInSucceededState error code
+
+## Summary
 
 ## Symptoms
 

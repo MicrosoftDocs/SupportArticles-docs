@@ -1,7 +1,7 @@
 ---
 title: Slow performance of the spDeleteUpdate procedure
 description: Resolves the slow performance issue when executing the `spDeleteUpdate` procedure.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 author: Cloud-Writer
 ms.author: meerak
 ms.reviewer: kaushika, lamosley

@@ -1,7 +1,7 @@
 ---
 title: Common issues when using Intune app protection policies to control data transfer
 description: Learn how to diagnose and troubleshoot some common issues and misconfigurations when using Microsoft Intune app protection policies (APP) to control data transfer.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, roblane-msft
 search.appverid: MET150
 ms.custom: sap:Application Protection - Android\Data transfer to other apps

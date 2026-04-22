@@ -10,10 +10,12 @@ ms.topic: troubleshooting
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot
+  - CI 10982
 ms.author: meerak
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Microsoft Excel
-ms.date: 05/26/2025
+  - Excel for Microsoft 365
+ms.date: 04/01/2026
 ---
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel

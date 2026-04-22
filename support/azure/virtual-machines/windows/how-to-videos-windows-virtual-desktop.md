@@ -14,6 +14,8 @@ ms.custom: sap:Issue with Azure Virtual Desktop
 
 _Original KB number:_ &nbsp; 4563049
 
+## Summary
+
 Watch these short videos to get up and running with Azure Virtual Desktop:
 
 **How to Create Managed Image**

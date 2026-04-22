@@ -193,6 +193,3 @@ If the backend server is Nginx or Nginx Ingress Controller, and if it has upstre
 
 **Solution**: Replace the CR LF characters with SP (whitespace) and resend the request to Application Gateway.
 
-## Next steps
-
-If the information in this article doesn't help you resolve the problem, [submit a support ticket](https://azure.microsoft.com/support/options/).

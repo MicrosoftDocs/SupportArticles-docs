@@ -131,6 +131,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
+    - name: Abandoned objects block replication for Global Catalog naming contexts
+      href: ./active-directory/abandoned-objects-block-replication-global-catalog-naming-contexts.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory installation fails
@@ -446,6 +448,8 @@ items:
       href: ./active-directory/set-user-password-with-ldifde.md
     - name: Some applications and APIs require access to authorization information
       href: ./active-directory/apps-apis-require-access.md
+    - name: Specify a server name and port number for an Active Directory cmdlet
+      href: ./active-directory/specify-server-port-active-directory-powershell-cmdlet.md
     - name: The Lingering Object Liquidator (LoL) tool
       href: ./active-directory/lingering-object-liquidator-tool.md
     - name: '"This property is limited to 64 values" error'
@@ -642,6 +646,8 @@ items:
       href: ./backup-and-storage/best-practices-using-dynamic-disks.md
     - name: Can't access a CSV volume from a passive node
       href: ./backup-and-storage/event-5120-5142-access-clusterstorage-folder.md
+    - name: Can't extend a disk volume because of the file system cluster limit
+      href: ./backup-and-storage/cant-extend-disk-volume-file-system-cluster-limit.md
     - name: Can't select or format hard disk partition
       href: ./backup-and-storage/cannot-select-format-hard-disk-partition.md
     - name: Can't start a computer from a FAT32 file system USB flash drive
@@ -2208,8 +2214,14 @@ items:
       href: ./remote/troubleshoot-unexpected-rds-session-locks-or-disconnections.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
+  - name: Slow performance (RDS or session)
+    items:
+    - name: First display of the Start menu is delayed when using a Windows Server 2025-based RDSH server
+      href: ./remote/first-start-menu-display-delayed-using-ws2025-rdsh-server.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
+    - name: Shared folder for virtual desktop profiles experiences intermittent communication failures inWindows Server 2019
+      href: ./remote/intermittent-communication-failures-for-virtual-desktop-profile-shared-folder.md
     - name: '"This computer name is invalid" error when shadowing a remote session'
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
 - name: Resources
@@ -3018,16 +3030,10 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
+  - name: 'Windows Update for Business Reports: Missing data or incomplete report data'
     items:
-    - name: Troubleshoot Windows Update error 0x800f0831
-      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
-    - name: Windows Update for Business Reports
-      items:
-      - name: Missing data or incomplete report data
-        items:
-        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
@@ -3048,6 +3054,8 @@ items:
       href: ./support-tools/support-tools-xperf-wpa-wpr.md
   - name: Scripts
     items:
+    - name: Scripts to calculate the sizes of object security descriptors
+      href: ./support-tools/scripts-calculate-size-object-security-descriptors.md
     - name: Scripts to clean up profile folder information
       href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to compile all registered MOF files

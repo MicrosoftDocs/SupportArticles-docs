@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail message
-description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerConnFail message when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Fix VMExtensionError_K8SAPIServerConnFail in AKS when nodes can't connect to the API server. Follow these steps to resolve the issue and deploy your cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
@@ -29,7 +29,7 @@ When you try to start or create an AKS cluster, you receive the following error 
 >
 > Error message: "CSE failed with 'VMExtensionError_K8SAPIServerConnFail'. Agents are unable to establish connection to Kubernetes API server, please see https://aka.ms/aks/vmextensionerror_k8sapiserverconnfail and https://aka.ms/aks-required-ports-and-addresses for more information.
 >
-> “In some logs, this may also appear as exit status=51 / ExitCode: 51"
+> "In some logs, this may also appear as exit status=51 / ExitCode: 51"
 
 ## Cause
 

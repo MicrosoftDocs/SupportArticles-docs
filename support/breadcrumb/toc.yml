@@ -163,6 +163,9 @@ items:
       - name: Virtual Desktop
         tocHref: /troubleshoot/azure/virtual-desktop/
         topicHref: /troubleshoot/azure/virtual-desktop/welcome-virtual-desktop
+      - name: Application Gateway
+        tocHref: /troubleshoot/azure/application-gateway/
+        topicHref: /troubleshoot/azure/application-gateway/welcome-app-gateway
       - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network  
@@ -203,8 +206,23 @@ items:
         tocHref: /troubleshoot/azure/partner-solutions/
         topicHref: /troubleshoot/azure/partner-solutions
       - name: Azure Front Door
-        tocHref: /troubleshoot/azure/virtual-network/front-door/
-        topicHref: /troubleshoot/azure/virtual-network/front-door/welcome-front-door
+        tocHref: /troubleshoot/azure/front-door/
+        topicHref: /troubleshoot/azure/front-door/welcome-front-door
+      - name: Azure Bastion
+        tocHref: /troubleshoot/azure/bastion
+        topicHref: /troubleshoot/azure/bastion/welcome-azure-bastion
+      - name: Azure DNS
+        tocHref: /troubleshoot/azure/dns
+        topicHref: /troubleshoot/azure/dns/welcome-azure-dns
+      - name: Azure NAT Gateway
+        tocHref: /troubleshoot/azure/nat-gateway
+        topicHref: /troubleshoot/azure/nat-gateway/welcome-azure-nat-gateway
+      - name: Azure Private Link
+        tocHref: /troubleshoot/azure/private-link
+        topicHref: /troubleshoot/azure/private-link/welcome-azure-private-link
+      - name: Azure Traffic Manager
+        tocHref: /troubleshoot/azure/traffic-manager
+        topicHref: /troubleshoot/azure/traffic-manager/welcome-azure-traffic-manager
 
     - name: Entra
       tocHref: /troubleshoot/entra/

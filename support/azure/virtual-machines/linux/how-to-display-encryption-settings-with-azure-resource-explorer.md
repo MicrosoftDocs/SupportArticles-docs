@@ -15,6 +15,8 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 When Azure Disk Encryption (ADE) is enabled on an Azure Linux Virtual Machine (VM), encryption settings are configured at a platform level to either the disk object or the VM object. This guide shows how to visualize these encryption settings after ADE is deployed.
 
 ## Prerequisites

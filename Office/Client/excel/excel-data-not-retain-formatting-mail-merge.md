@@ -4,19 +4,20 @@ description: This article provides two resolutions for the problem where data in
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: simonxjx, v-kccross
+ms.reviewer: simonxjx, v-kccross, akeeler, v-lisalozano
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Editing\MailMerge
   - CSSTroubleshoot
+  - CI 10764
 appliesto:
-- Office Products
-- Microsoft Word
-- Excel 2016
-- Excel 2013
+  - Excel for Microsoft 365
+  - Microsoft Excel 2024
+  - Microsoft Excel 2021
+  - Microsoft Excel 2016
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 03/25/2026
 ---
 
 # Excel data doesn't retain its formatting in mail merge operations in Word

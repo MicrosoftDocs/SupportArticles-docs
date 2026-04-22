@@ -10,6 +10,8 @@ ms.custom: sap:Issue with OS Upgrade
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses issues that occur during SUSE Linux Enterprise server (SLES) migrations and provides solutions to them.
 
 > [!CAUTION]

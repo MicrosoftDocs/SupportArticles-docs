@@ -1,7 +1,7 @@
 ---
 title: Software updates introduction
 description: Introduces software updates in Configuration Manager 2012 and 2012 R2.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, jchornbe
 ms.custom: sap:Application Management\Software Center
 ---
