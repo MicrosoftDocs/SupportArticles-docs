@@ -88,7 +88,7 @@ For these registry entries, type the value that’s listed in the Data (Decimal)
 
 | Name | Type | Data (Decimal) |
 | ---| --- | --- |
-| MsoEtwTracingEnabled | REG_DWORD | 32 |
+| MsoEtwTracingEnabled | REG_DWORD | 1 |
 | DefaultMinimumSeverity | REG_DWORD | 100 |
 
 1. Exit Registry Editor.
@@ -141,7 +141,7 @@ Follow these steps:
 
 1. Convert the error code to its 32-bit hexadecimal form.
 
- - If the error code is already in hexadecimal form (for example, 0x80070002), use it as is.
+- If the error code is already in hexadecimal form (for example, 0x80070002), use it as is.
  - If the error code is in decimal (positive or negative) form, run the following command in Windows PowerShell to convert it to a 32-bit hexadecimal value:  
 
 ```powershell
