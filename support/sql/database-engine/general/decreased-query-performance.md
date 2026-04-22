@@ -8,6 +8,8 @@ ms.custom: sap:Queries, stored procedures, views, functions, triggers (T-SQL)\Sl
 
 # Decreased query performance after database maintenance or reconfigure operations
 
+_Original KB number:_ &nbsp; 917828
+
 ## Summary
 
 In Microsoft SQL Server, query performance might suddenly decrease after you perform certain database maintenance operations, regular transaction operations, or server reconfigure operations. This problem occurs because these operations clear the entire [plan cache](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) for the SQL Server instance.
