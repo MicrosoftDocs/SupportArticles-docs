@@ -1,10 +1,24 @@
+---
+title: Windows servicing operations fail after you move user profile or ProgramData folders
+description: Describes an issue in which upgrade or servicing operations fail after you move the user profile folders or the ProgramData folder to a drive other than the system drive. 
+ms.date: 04/23/2026
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, kimberj, v-appelgatet
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
 # Windows servicing operations fail after you move user profile or ProgramData folders
 
 ## Summary
 
-Moving the user profile folders or the ProgramData folder to a drive other than the system drive can cause servicing issues on older Windows versions. In some cases, updates, hotfixes, service packs, or upgrade paths don't install correctly.
+Moving the user profile folders or the ProgramData folder to a drive other than the system drive can cause servicing issues. In some cases, updates, hotfixes, service packs, or upgrades don't install correctly.
 
-Microsoft recommends that the user profile folders and the ProgramData folder remain in their default locations. Only move the folder if  a supported and validated deployment scenario specifically requires you to move them.
+Microsoft recommends that the user profile folders and the ProgramData folder remain in their default locations. Only move the folder if a supported and validated deployment scenario specifically requires you to move them.
 
 If the folders are moved and you encounter servicing issues, review that configuration as a possible cause.
 
