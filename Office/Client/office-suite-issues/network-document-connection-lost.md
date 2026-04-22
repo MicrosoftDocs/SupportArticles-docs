@@ -141,7 +141,7 @@ Follow these steps:
 
 1. Convert the error code to its 32-bit hexadecimal form.
 
-- If the error code is already in hexadecimal form (for example, 0x80070002), use it as is.
+ - If the error code is already in hexadecimal form (for example, 0x80070002), use it as is.
  - If the error code is in decimal (positive or negative) form, run the following command in Windows PowerShell to convert it to a 32-bit hexadecimal value:  
 
 ```powershell
