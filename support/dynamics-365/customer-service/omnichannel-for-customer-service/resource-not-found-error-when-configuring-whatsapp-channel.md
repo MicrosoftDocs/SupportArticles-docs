@@ -1,6 +1,6 @@
 ---
 title: Resolve WhatsApp Channel Resource Not Found Error
-description: Troubleshoot the msdyn_UpdatePrivacyTerms Resource not found error in Dynamics 365 Customer Service. Follow step-by-step instructions to reactivate the process.
+description: Troubleshoot the msdyn_UpdatePrivacyTerms Resource not found error in Dynamics 365 Customer Service or Dynamics 365 Contact Center. Get step-by-step help now.
 ai-usage: ai-assisted
 ms.date: 04/22/2026
 ms.reviewer: srreddy, parkmermel, nenellim, v-shaywood
@@ -24,8 +24,6 @@ This issue occurs when the required **UpdatePrivacyTerms** omnichannel process i
 
 ## Solution
 
-To resolve this issue, reactivate the **UpdatePrivacyTerms** process:
-
 1. Go to [Power Apps](https://make.powerapps.com/) and select your environment.
 1. Select **Solutions** > **Default Solution**.
 1. Select **Objects** and then search for *processes*.
@@ -35,3 +33,4 @@ To resolve this issue, reactivate the **UpdatePrivacyTerms** process:
 ## Related content
 
 - [Provision channels in Dynamics 365 Contact Center](/dynamics365/contact-center/implement/provision-channels)
+- [Configure a WhatsApp channel through Azure Communication Services](/dynamics365/contact-center/administer/configure-whatsapp-acs)
