@@ -2335,7 +2335,8 @@ items:
       href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
-
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -2514,6 +2515,8 @@ items:
       href: ./user-profiles-and-logon/error-sem-timeout-folder-redirection.md
     - name: Folder Redirection settings aren't applied
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
   - name: User Logon fails
     items:
     - name: Cached domain logon information
