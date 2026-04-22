@@ -17,11 +17,11 @@ appliesto:
 
 ## Summary
 
-This article discusses how to resolve an issue in which the Windows Failover Cluster service doesn't start after you apply CIS security hardening recommendations or similar hardening tools. CIS recommendations are made by the Center for Internet Security (CIS) Microsoft Windows Server 2025 Benchmark version 1._x_.
+This article discusses how to resolve an issue in which the Windows Failover Cluster service doesn't start in a Windows Server 2025 failover cluster after you apply security hardening recommendations from the Center for Internet Security (CIS) or similar security sources. CIS has published updated recommendations that don't cause this issue, and this article includes procedures for reconfiguring the policy setting that caused the issue.
 
 ## Symptoms
 
-To harden your clustering environment, you configure it according to the recommendations of CIS Microsoft Windows Server 2025 Benchmark version 1._x_, or similar hardening tools. Afterward, the Windows Failover Cluster service doesn't start. Cluster nodes might report errors that indicate that the Cluster Authentication Manager (CAM) can't load.
+To harden your clustering environment, you configure it according to the recommendations of "CIS Microsoft Windows Server 2025 Benchmark version 1._x_", or similar hardening tools. Afterward, the Windows Failover Cluster service doesn't start. Cluster nodes might report errors that indicate that the Cluster Authentication Manager (CAM) can't load.
 
 ## Cause
 
@@ -37,9 +37,9 @@ Custom or third-party hardening tools might also include this Group Policy recom
 
 ## Resolution
 
-CIS Microsoft Windows Server 2025 Benchmark v2.0 fixes this issue by scoping the recommendation to domain controllers (DCs) but not member servers. To harden your environment, use the CIS Microsoft Windows Server 2025 Benchmark v2.0 or similarly updated standards or tools.
+"CIS Microsoft Windows Server 2025 Benchmark v2.0" fixes this issue by scoping the recommendation to domain controllers (DCs) but not member servers. To harden your environment, use "CIS Microsoft Windows Server 2025 Benchmark v2.0" or similarly updated standards or tools.
 
-To restore cluster functionality for which the v1._x_ settings are already active, use one of the following methods.
+If you already implemented the v1._x_ recommendations, use one of the following methods to restore cluster functionality.
 
 ### Method 1: Change the policy setting directly on a cluster node
 
