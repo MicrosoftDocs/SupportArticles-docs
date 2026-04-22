@@ -11,51 +11,53 @@ ms.reviewer: v-weizhu, vritikanaik
 ---
 # Troubleshoot Azure File Sync sync health and errors
 
-This article is designed to help you troubleshoot and resolve common sync issues that you might encounter with your Azure File Sync deployment.
+## Summary
+
+This article helps you troubleshoot and resolve common sync problems that you might encounter with your Azure File Sync deployment.
 
 ## Sync health
 
-<a id="afs-change-detection"></a>**If I created a file directly in my Azure file share over SMB or through the portal, how long does it take for the file to sync to servers in the sync group?**
+<a id="afs-change-detection"></a>**If I create a file directly in my Azure file share over SMB or through the portal, how long does it take for the file to sync to servers in the sync group?**
 
-Changes made to the Azure file share by using the Azure portal or SMB aren't immediately detected and replicated like changes to the server endpoint. Azure Files doesn't yet have change notifications or journaling, so there's no way to automatically initiate a sync session when files are changed. On Windows Server, Azure File Sync uses [Windows USN journaling](/windows/win32/fileio/change-journals) to automatically initiate a sync session when files change.
+Changes made to the Azure file share by using the Azure portal or SMB aren't immediately detected and replicated like changes to the server endpoint. Azure Files doesn't yet have change notifications or journaling, so there's no way to automatically initiate a sync session when files change. On Windows Server, Azure File Sync uses [Windows USN journaling](/windows/win32/fileio/change-journals) to automatically initiate a sync session when files change.
 
-To detect changes to the Azure file share, Azure File Sync has a scheduled job called *a change detection job*. A change detection job enumerates every file in the file share, and then compares it to the sync version for that file. When the change detection job determines that files have changed, Azure File Sync initiates a sync session. The change detection job is initiated every 24 hours. Because the change detection job works by enumerating every file in the Azure file share, change detection takes longer in larger namespaces than in smaller namespaces. For large namespaces, it might take longer than once every 24 hours to determine which files have changed.
+To detect changes to the Azure file share, Azure File Sync has a scheduled job called *a change detection job*. A change detection job enumerates every file in the file share, and then compares it to the sync version for that file. When the change detection job determines that files changed, Azure File Sync initiates a sync session. The change detection job runs every 24 hours. Because the change detection job works by enumerating every file in the Azure file share, change detection takes longer in larger namespaces than in smaller namespaces. For large namespaces, it might take longer than 24 hours to determine which files changed.
 
-To immediately sync files that are changed in the Azure file share, the `Invoke-AzStorageSyncChangeDetection` PowerShell cmdlet can be used to manually initiate the detection of changes in the Azure file share. This cmdlet is intended for scenarios where some type of automated process is making changes in the Azure file share or the changes are done by an administrator (like moving files and directories into the share). For end user changes, the recommendation is to install the Azure File Sync agent in an IaaS VM and have end users access the file share through the IaaS VM. This way all changes will quickly sync to other agents without the need to use the `Invoke-AzStorageSyncChangeDetection` cmdlet. To learn more, see the [Invoke-AzStorageSyncChangeDetection](/powershell/module/az.storagesync/invoke-azstoragesyncchangedetection) documentation.
+To immediately sync files that you change in the Azure file share, use the `Invoke-AzStorageSyncChangeDetection` PowerShell cmdlet to manually initiate the detection of changes in the Azure file share. This cmdlet is intended for scenarios where some type of automated process is making changes in the Azure file share or an administrator makes the changes (like moving files and directories into the share). For end user changes, install the Azure File Sync agent in an IaaS VM and have end users access the file share through the IaaS VM. This way all changes quickly sync to other agents without the need to use the `Invoke-AzStorageSyncChangeDetection` cmdlet. To learn more, see the [Invoke-AzStorageSyncChangeDetection](/powershell/module/az.storagesync/invoke-azstoragesyncchangedetection) documentation.
 
-We are exploring adding change detection for an Azure file share similar to USN for volumes on Windows Server. Help us prioritize this feature for future development by voting for it at [Azure Community Feedback](https://feedback.azure.com/d365community/idea/26f8aa9d-3725-ec11-b6e6-000d3a4f0f84).
+Microsoft is exploring adding change detection for an Azure file share similar to USN for volumes on Windows Server. Help prioritize this feature for future development by voting for it at [Azure Community Feedback](https://feedback.azure.com/d365community/idea/26f8aa9d-3725-ec11-b6e6-000d3a4f0f84).
 
 <a id="serverendpoint-pending"></a>**Server endpoint health is in a pending state for several hours**
   
-This issue is expected if you create a cloud endpoint and use an Azure file share that contains data. The cloud change enumeration job that scans for changes in the Azure file share must complete before files can sync between the cloud and server endpoints. The time to complete the job is dependent on the size of the namespace in the Azure file share. The server endpoint health should update once the change enumeration job completes.
+This state is expected if you create a cloud endpoint and use an Azure file share that contains data. The cloud change enumeration job that scans for changes in the Azure file share must complete before files can sync between the cloud and server endpoints. The time to complete the job depends on the size of the namespace in the Azure file share. The server endpoint health updates once the change enumeration job completes.
 
-To check the status of the cloud change enumeration job, go the **Cloud Endpoint** properties in the portal and the status is provided in the **Change Enumeration** section.
+To check the status of the cloud change enumeration job, go the **Cloud Endpoint** properties in the portal. The **Change Enumeration** section provides the status.
 
 ### <a id="broken-sync"></a>How do I monitor sync health?
 
 ### [Portal](#tab/portal1)
 
-To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**.
+To view the health of a **server endpoint** in the portal, go to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**.
 
 :::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" border="false":::
 
-A **Healthy** status and a **Persistent sync errors** count of 0 indicate that sync is working as expected. If **Persistent sync errors** has a count greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
+A **Healthy** status and a **Persistent sync errors** count of 0 indicate that sync is working as expected. If **Persistent sync errors** has a count greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the following table.  
 
 | Health status | Description | Remediation |
 |---------|-------------------|--------------|
 | Healthy | Sync session completed successfully or the in-progress sync session is making progress (files are applied). | N/A |
-| Pending | The Pending status is expected after creating a server endpoint. Once sync telemetry for the server endpoint is sent to the service, the Health status will update. | If the Health status doesn't change for several hours, see [Server endpoint health is in a pending state for several hours](#serverendpoint-pending). |
+| Pending | The Pending status is expected after creating a server endpoint. Once sync telemetry for the server endpoint is sent to the service, the Health status updates. | If the Health status doesn't change for several hours, see [Server endpoint health is in a pending state for several hours](#serverendpoint-pending). |
 | Error | Sync session failed with an error. | To resolve this issue, select the **Error** status in the portal to get the error code and remediation steps. If the remediation steps aren't listed in the portal or don't resolve the issue, search for the error code in this document for more guidance. |
-| No Activity | The Storage Sync Service has not received sync telemetry from this server endpoint in the past two hours. | To resolve this issue, follow the steps in [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md#server-endpoint-noactivity). |
+| No Activity | The Storage Sync Service didn't receive sync telemetry from this server endpoint in the past two hours. | To resolve this issue, follow the steps in [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md#server-endpoint-noactivity). |
 | Low disk mode | The volume where the server endpoint is located is low on disk space. | To resolve this issue, free disk space on the volume. To learn more about low disk space mode, see [Cloud tiering overview](/azure/storage/file-sync/file-sync-cloud-tiering-overview#low-disk-space-mode). |
 | Provisioning canceled | The server endpoint creation failed. Sync isn't operational on this server endpoint.| To resolve this issue, see [Server endpoint creation and deletion errors](file-sync-troubleshoot-sync-group-management.md#server-endpoint-creation-and-deletion-errors). |
 
-> [!Note]  
-> The server endpoint status (health and activity) is refreshed every 15 minutes and is based on the Telemetry events that are sent from the server to the service.
+> [!NOTE]  
+> The server endpoint status (health and activity) refreshes every 15 minutes and is based on the telemetry events that the server sends to the service.
 
 ### [Server](#tab/server)
 
-Look at the most recent 9102 event in the telemetry log on the server (in the Event Viewer, go to *Applications and Services Logs\Microsoft\FileSync\Agent\Telemetry*). This event is logged once a sync session is completed. `SyncDirection` tells you if this session was an upload or download. If the `HResult` is 0, then the sync session was successful. A non-zero `HResult` means that there was an error during sync; see below for a list of common errors. If the `PerItemErrorCount` is greater than 0, then some files or folders didn't sync properly. It's possible to have an `HResult` of 0 but a `PerItemErrorCount` that is greater than 0.
+Look at the most recent 9102 event in the telemetry log on the server (in the Event Viewer, go to *Applications and Services Logs\Microsoft\FileSync\Agent\Telemetry*). This event is logged once a sync session completes. `SyncDirection` tells you if this session was an upload or download. If the `HResult` is 0, the sync session was successful. A non-zero `HResult` means that there was an error during sync. See the following section for a list of common errors. If the `PerItemErrorCount` is greater than 0, some files or folders didn't sync properly. It's possible to have an `HResult` of 0 but a `PerItemErrorCount` that is greater than 0.
 
 Here's an example of a successful upload. For the sake of brevity, only some of the values contained in each 9102 event are listed.
 
@@ -81,7 +83,7 @@ PerItemErrorCount: 0,
 TransferredFiles: 0, TransferredBytes: 0, FailedToTransferFiles: 0, FailedToTransferBytes: 0.
 ```
 
-Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but still make forward progress, with some files syncing successfully. Progress can be determined by looking into the Applied fields (`AppliedFileCount`, `AppliedDirCount`, `AppliedTombstoneCount`, and `AppliedSizeBytes`). These fields describe how much of the session is succeeding. If you see multiple sync sessions in a row that are failing but have an increasing *Applied* count, then you should give sync time to try again before opening a support ticket.
+Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but still make forward progress, with some files syncing successfully. You can determine progress by looking into the Applied fields (`AppliedFileCount`, `AppliedDirCount`, `AppliedTombstoneCount`, and `AppliedSizeBytes`). These fields describe how much of the session is succeeding. If you see multiple sync sessions in a row that are failing but have an increasing *Applied* count, give sync time to try again before opening a support ticket.
 
 ---
 
@@ -89,12 +91,12 @@ Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but 
 
 ### [Portal](#tab/portal1)
 
-Within your sync group, go to the server endpoint properties and look at the **Sync status** section to see the count of files uploaded or downloaded in the current sync session. This status will be delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
+Within your sync group, go to the server endpoint properties and look at the **Sync status** section to see the count of files uploaded or downloaded in the current sync session. This status is delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
 
 :::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-syncstatus.png" alt-text="Screenshot that shows the sync progress in the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-syncstatus.png" border="false":::
 
-> [!Note]  
-> If the **Estimated completion** is blank, this means sync has not finished counting the number of files in the sync session.
+> [!NOTE]  
+> If the **Estimated completion** is blank, sync hasn't finished counting the number of files in the sync session.
 
 ### [Server](#tab/server)
 
@@ -143,7 +145,7 @@ If you made changes directly in your Azure file share, Azure File Sync won't det
 
 If the **Persistent sync errors** and **Transient sync errors** counts in the portal or `PerItemErrorCount` on the server is greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
 
-> [!Note]  
+> [!NOTE]  
 > Once a sync session is completed, the **Persistent sync errors** and **Transient sync errors** counts in the portal are updated. If a sync session is in progress, wait until the sync session is completed and the **Persistent sync errors** and **Transient sync errors** counts are updated before you investigate the remaining errors.
 
 To see the names of files and directories that are failing to sync, run the *FileSyncErrorsReport.ps1* PowerShell script (located in the agent installation directory of the Azure File Sync agent) or use the `Debug-StorageSyncServer` cmdlet. The `ItemPath` field tells you the location of the file in relation to the root sync directory. See the list of [common per-item errors](#troubleshooting-per-filedirectory-sync-errors) for remediation steps.
@@ -161,7 +163,7 @@ Debug-StorageSyncServer -FileSyncErrorsReport
 
 If a file or directory fails to sync due to an error, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
 
-> [!Note]  
+> [!NOTE]  
 > If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. If no changes are detected within the server endpoint location, Azure File Sync initiates a sync session every 30 minutes. To force a sync session, restart the Storage Sync Agent (*FileSyncSvc*) service or make a change to a file or directory within the server endpoint location.
 
 **Common per-item sync errors that are logged in the ItemResults event log**
@@ -317,7 +319,7 @@ This error can occur whenever the Azure File Sync service is inaccessible from t
 
 1. Contact your network administrator for additional assistance troubleshooting network connectivity.
 
-> [!Note]  
+> [!NOTE]  
 > Once network connectivity to the Azure File Sync service is restored, sync might not resume immediately. By default, Azure File Sync will initiate a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
 
 <a id="-2134376372"></a>**The user request was throttled by the service.**  
@@ -451,7 +453,7 @@ This error occurs because the Azure File Sync agent isn't authorized to access t
 2. [Verify the storage account exists.](#troubleshoot-storage-account)
 3. [Verify the firewall and virtual network settings on the storage account are configured properly (if enabled)](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings)
 
-> [!Note]  
+> [!NOTE]  
 > Once network connectivity to the Azure File Sync service is restored, sync might not resume immediately. By default, Azure File Sync will initiate a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
 
 <a id="-2134364022"></a><a id="storage-unknown-error"></a>**An unknown error occurred while accessing the storage account.**  
@@ -755,7 +757,7 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 
 This error might occur due to the following reasons:
 
-- The server’s managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
+- The server's managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
 - The server was recently re-registered or its managed identity configuration changed, but the update hasn't propagated yet.
  
 
@@ -852,7 +854,7 @@ This error occurs because the Cloud Tiering filter driver (StorageSync.sys) vers
 
 This error occurs because the Azure File Sync service is unavailable. This error will auto-resolve when the Azure File Sync service is available again.
 
-> [!Note]  
+> [!NOTE]  
 > Once network connectivity to the Azure File Sync service is restored, sync might not resume immediately. By default, Azure File Sync will initiate a sync session every 30 minutes if no changes are detected within the server endpoint location. To force a sync session, restart the Storage Sync Agent (FileSyncSvc) service or make a change to a file or directory within the server endpoint location.
 
 <a id="-2146233088"></a>**Sync failed due to an exception.**  
