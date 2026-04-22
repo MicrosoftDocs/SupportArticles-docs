@@ -779,6 +779,8 @@ items:
       href: ./setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Running Sysprep /generalize returns error
       href: ./setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ../windows-server//setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
     - name: Sysprep and capture task sequence fails
       href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
@@ -1091,6 +1093,10 @@ items:
   items:
   - name: UserProfiles and Logon
     href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+  - name: Folder redirection
+    items:
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ../windows-server//setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
   - name: Slow logon
     items:
     - name: Slow logon with a blank screen
@@ -1271,6 +1277,8 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ../windows-server//setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md?context=/troubleshoot/windows-client/context/context
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Error message when installing RSAT
