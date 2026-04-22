@@ -16,7 +16,7 @@ appliesto:
 ---
 # Troubleshoot Windows Update installation error 0x800f0831 (CBS_E_STORE_CORRUPTION)
 
-Windows Update error 0x800f0831 (`CBS_E_STORE_CORRUPTION`) indicates that the Windows component store is corrupted, which prevents updates from installing correctly. This error typically occurs when a required package is missing from the store or isn't fully applied to the registry.
+Windows Update error 0x800f0831 (`CBS_E_STORE_CORRUPTION`) indicates that the Windows component store is corrupted. This condition prevents updates from installing correctly. This error typically occurs if a required package is missing from the store or isn't fully applied to the registry.
 
 Use this article to identify the cause of the error and apply the appropriate fix for your environment.
 
@@ -40,13 +40,13 @@ When you try to install any update by using the standalone installer (.msu), or 
 This error can occur for one of the following reasons:
 
 - The update was never installed.
-- The update is installed but some packages aren't applied to the registry.
+- The update is installed, but some packages aren't applied to the registry.
 
 To locate the installation packages in the system, search for the following registry subkey:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages`
 
-To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS). For more information on how to collect the CBS.log file, see [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging). Search for output that resembles the following example:
+To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS). For more information about how to collect the CBS.log file, see [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging). Search for output that resembles the following example:
 
 ```output
 Info CBS Store corruption, manifest missing for package: Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4
@@ -66,7 +66,7 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 > [!IMPORTANT]  
 > Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-The method you use to fix this issue depends on the type of computer that's affected:
+The appropriate method to fix this issue depends on the type of computer that's affected:
 
 - If the affected computer is an Azure VM, [perform an in-place upgrade](#resolution-for-azure-virtual-machines-perform-an-in-place-upgrade).
 - If the affected computer is a physical computer (or a VM in a non-Azure environment), [remove and then reinstall the update](#resolutions-for-physical-computers).
@@ -86,7 +86,8 @@ For physical computers or non-Azure VMs, follow these steps to obtain a fresh co
 1. To make sure that CBS.log contains the latest data, reproduce the issue by trying to install the affected update or feature.
 1. Review CBS.log to identify the update or feature package by its KB number.
 1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and search for the KB number that you identified.
-1. For that KB number, select the package that's appropriate for the operating system version and architecture of the affected computer.1. Download the package to a temporary folder ("temp") on drive C of the affected computer.
+1. For that KB number, select the package that's appropriate for the operating system version and architecture of the affected computer.
+1. Download the package to a temporary folder ("temp") on drive C of the affected computer.
 1. On the affected computer, open an administrative Command Prompt window, and then run the following commands, in sequence:
 
    ```console
@@ -100,7 +101,7 @@ For physical computers or non-Azure VMs, follow these steps to obtain a fresh co
 
 1. Review the expanded contents of the package, and locate the .cab file that matches your operating system version (for example, windows 10.0-KB4462937-x64.cab).
 
-#### Step 2 (if needed): Remove the update
+#### Step 2: Remove the update (if it's necessary)
 
 Follow this step if the update appears to be partly or completely installed on the affected computer.
 
@@ -113,7 +114,7 @@ Follow this step if the update appears to be partly or completely installed on t
    > [!NOTE]  
    > In this command, \<CabFileName> represents the name of the .cab file.
 
-1. If you're prompted to restart the computer, do so.
+1. If you're prompted to, restart the computer.
 
 #### Step 3: Install the update
 
@@ -125,4 +126,3 @@ Follow this step if the update appears to be partly or completely installed on t
 
 1. Restart the computer.
 1. Try again to install the update or feature.
-
