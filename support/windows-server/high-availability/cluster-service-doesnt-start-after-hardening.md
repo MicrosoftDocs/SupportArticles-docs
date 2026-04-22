@@ -1,6 +1,6 @@
 ---
 title: Cluster service doesn't start after you apply CIS Windows Server 2025 Benchmark v1.x recommendations
-description: Describes how to resolve an issue in which the Windows Failover Cluster service fails to start after you apply security hardening recommendations.
+description: Discusses how to resolve an issue in which the Windows Failover Cluster service fails to start after you apply security hardening recommendations.
 ms.date: 04/22/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,29 +17,29 @@ appliesto:
 
 ## Summary
 
-This article describes how to resolve an issue in which the Windows Failover Cluster service fails to start after you apply security hardening recommendations from the Center for Internet Security (CIS) Microsoft Windows Server 2025 Benchmark version 1.x, or similar hardening tools.
+This article discusses how to resolve an issue in which the Windows Failover Cluster service doesn't start after you apply CIS security hardening recommendations or similar hardening tools. CIS recommendations are made by the Center for Internet Security (CIS) Microsoft Windows Server 2025 Benchmark version 1._x_.
 
 ## Symptoms
 
-To harden your clustering environment, you configure it according to the recommendations of CIS Microsoft Windows Server 2025 Benchmark version 1.x, or similar hardening tools. Afterwards, the Windows Failover Cluster service doesn't start. Cluster nodes might report errors that indicate that the Cluster Authentication Manager (CAM) can't load.
+To harden your clustering environment, you configure it according to the recommendations of CIS Microsoft Windows Server 2025 Benchmark version 1._x_, or similar hardening tools. Afterward, the Windows Failover Cluster service doesn't start. Cluster nodes might report errors that indicate that the Cluster Authentication Manager (CAM) can't load.
 
 ## Cause
 
-CIS Microsoft Windows Server 2025 Benchmark v1.x recommends disabling the following Group Policy setting in the LocalSecurityAuthority administrative template:
+CIS Microsoft Windows Server 2025 Benchmark v1._x_ recommends that you disable the following Group Policy setting in the LocalSecurityAuthority administrative template:
 
 - Policy setting: Allow Custom SSPs and APs to be loaded into LSASS
 - Policy location: **Computer Configuration** > **Administrative Templates** > **System** > **Local Security Authority**
 - Registry storage location and entry: `HKLM\SOFTWARE\Policies\Microsoft\Windows\System\AllowCustomSSPsAPs`
 
-When this setting is disabled, Local Security Authority Subsystem Service (LSASS) can't load custom Security Support Providers (SSPs) and Authentication Providers (APs). However, the CAM functions as an SSP. If the CAM can't load into LSASS, Windows clusters can't authenticate and start.
+If this setting is disabled, Local Security Authority Subsystem Service (LSASS) can't load custom Security Support Providers (SSPs) and Authentication Providers (APs). However, the CAM functions as an SSP. If the CAM can't load into LSASS, Windows clusters can't authenticate and start.
 
 Custom or third-party hardening tools might also include this Group Policy recommendation.
 
 ## Resolution
 
-CIS Microsoft Windows Server 2025 Benchmark v2.0 fixes this issue by scoping the recommendation to domain controllers (DCs) but not member servers. To harden your environment, use the CIS Microsoft Windows Server 2025 Benchmark v2.0 or similar updated standards or tools.
+CIS Microsoft Windows Server 2025 Benchmark v2.0 fixes this issue by scoping the recommendation to domain controllers (DCs) but not member servers. To harden your environment, use the CIS Microsoft Windows Server 2025 Benchmark v2.0 or similarly updated standards or tools.
 
-To restore cluster functionality where the v1.x settings are already in place, use one of the following methods.
+To restore cluster functionality for which the v1._x_ settings are already active, use one of the following methods.
 
 ### Method 1: Change the policy setting directly on a cluster node
 
