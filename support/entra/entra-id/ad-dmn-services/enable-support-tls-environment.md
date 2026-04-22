@@ -80,7 +80,7 @@ Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 By default, earlier versions of Windows (such as Windows 8 and Windows Server 2012) don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows:
 
 1. Install [Update 3140245](https://support.microsoft.com/help/3140245).
-1. Enable the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems) section.
+1. Enable the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section.
 
 You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
 
@@ -121,9 +121,9 @@ For more information, see [Handshake Simulation for various clients connecting t
   1. We highly recommend that you run the latest version of the agent, service, or connector.
   2. By default, TLS 1.2 is enabled on Windows Server 2012 R2 and later versions. In rare instances, the default OS configuration might have been modified to disable TLS 1.
 
-      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems) section on servers that are running Windows Server and that communicate with Microsoft Entra ID.
+      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section on servers that are running Windows Server and that communicate with Microsoft Entra ID.
 
-  3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-and-configure-net-framework-to-support-tls-12) section.
+  3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-and-configure-net-framework-to-support-tls-12-) section.
 
   For more information, see the following articles:
   - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Microsoft Entra Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
