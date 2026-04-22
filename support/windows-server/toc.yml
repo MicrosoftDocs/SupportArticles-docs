@@ -2555,8 +2555,6 @@ items:
       href: ./user-profiles-and-logon/manage-profile-service-slow-link-detection.md
     - name: Profile loading fails
       href: ./user-profiles-and-logon/desktop-location-unavailable.md
-    - name: Relocation of Users and ProgramData directories
-      href: ./user-profiles-and-logon/relocation-of-users-and-programdata-directories.md
     - name: Roaming user profiles versioning
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
     - name: '"The filename or extension is too long" error'
