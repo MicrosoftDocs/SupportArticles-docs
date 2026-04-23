@@ -1,6 +1,6 @@
 ---
 title: Windows servicing operations fail after you move user profile or ProgramData folders
-description: Describes an issue in which upgrade or servicing operations fail after you move the user profile folders or the ProgramData folder to a drive other than the system drive. 
+description: Discusses an issue in which upgrade or servicing operations fail after you move the user profile folders or the ProgramData folder to a drive other than the system drive. 
 ms.date: 04/23/2026
 manager: dcscontentpm
 audience: itpro
@@ -17,9 +17,9 @@ appliesto:
 
 ## Summary
 
-In Windows Server and Windows Client, moving the user profile folders or the ProgramData folder to a drive other than the system drive can cause servicing issues. In some cases, updates, hotfixes, service packs, or upgrades don't install correctly.
+In Windows Server and Windows Client, servicing issues can occur if you move the user profile folders or ProgramData folder to a drive other than the system drive. In some cases, updates, hotfixes, service packs, or upgrades don't install correctly.
 
-Microsoft recommends that the user profile folders and the ProgramData folder remain in their default locations. Only move the folder if a supported and validated deployment scenario specifically requires you to move them.
+We recommend that you keep the user profile folders and ProgramData folder in their default locations. Move the folders only if a supported and validated deployment scenario specifically requires you to move them.
 
 If the folders are moved and you encounter servicing issues, review that configuration as a possible cause.
 
@@ -28,14 +28,14 @@ If the folders are moved and you encounter servicing issues, review that configu
 
 ## More information
 
-You might want to move the user profile folders or the ProgramData folder to a drive other than the system drive for reasons such as the following examples:
+You might have specific reasons to want to move the user profile folders or ProgramData folder to a drive other than the system drive. For example, you might want to:
 
-- Simplify backup of user data
+- Simplify the backup of user data
 - Separate user data from the operating system
 - Reduce demand for disk space on the system drive
 - Optimize storage layout
 
-Although these goals are valid, moving these folders can cause servicing issues. Some Windows servicing components expect these folders to remain on the system drive. When these folders reside on a different volume, servicing behavior can become unreliable. This behavior might prevent the following components from installing:
+Although these goals are valid, moving these folders can cause servicing issues. Some Windows servicing components expect these folders to remain on the system drive. If these folders reside on a different volume, servicing behavior can become unreliable. This behavior might prevent the following components from installing:
 
 - Security updates
 - Monthly quality updates
