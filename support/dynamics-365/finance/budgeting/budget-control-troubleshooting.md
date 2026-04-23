@@ -16,7 +16,7 @@ This article covers common [budget control](/dynamics365/finance/budgeting/budge
 
 ## Budget control data maintenance tool
 
-If you experience data inconsistency with a specific budget-controlled document, start with the **Budget control data maintenance** tool. This tool includes a **Budget control dimension values provider** scenario that adjusts the dimension values in budget data. Typically, you use this scenario when you add a new segment to the ledger account structure. It finds all dimension values currently used in budget data and transfers them to match the current [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
+If you experience data inconsistency with a specific budget-controlled document, start with the [Budget control data maintenance tool](/dynamics365/finance/budgeting/budget-control-tool). This tool includes a **Budget control dimension values provider** scenario that adjusts the dimension values in budget data. Typically, you use this scenario when you add a new segment to the ledger account structure. It finds all dimension values currently used in budget data and transfers them to match the current [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
 
 If you want to preserve historical data and keep the previous account structure, adjust the date range so that only data in the specified range is updated.
 
