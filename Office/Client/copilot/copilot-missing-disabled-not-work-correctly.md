@@ -3,7 +3,7 @@ title: Copilot is Missing, Disabled, or Doesn't Work Correctly
 description: Resolves errors and issues, such as no Copilot button on the ribbon, when you use Copilot in Microsoft 365 Apps.
 ms.reviewer: yasgow, gausin
 ms.topic: troubleshooting
-ms.date: 05/27/2025
+ms.date: 04/23/2026
 manager: dcscontentpm
 audience: Admin
 ms.service: microsoft-365-copilot
@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Copilot
 ms.custom: 
   - sap:Copilot for Microsoft 365
-  - CI 5818
+  - CI 5818, CI 11483
 ---
 # Copilot is missing, disabled, or doesn't work correctly
 
