@@ -127,7 +127,7 @@ This command tries to establish a TCP connection to the specified destination an
 
 ### Can't establish a TLS handshake
 
-Some firewalls might allow TCP connections to be established, but then block actual traffic to the resource (for example, HTTPS). Therefore, even if the [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity) function indicates network connectivity, that status doesn't guarantee that the resource is fully accessible.
+Some firewalls might allow TCP connections to be established, but then they block actual traffic to the resource (for example, HTTPS). Therefore, even if the [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity) function indicates network connectivity, that status doesn't guarantee that the resource is fully accessible.
 
 Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake) function to diagnose why a handshake can't be established. Run the following command:
 
@@ -152,7 +152,7 @@ You might not be able to diagnose or resolve the issue by using the diagnostics 
 
 ## Example troubleshooting scenarios
 
-Meet Contoso LLC, a multi-national company that has multiple Power Platform environments throughout Europe, and virtual networks in West Europe and North Europe. Each virtual network has a subnet that's delegated to Power Platform. Each subnet is associated with an enterprise policy that's then linked to the Power Platform environment.
+Meet Contoso LLC, a multi-national company that has multiple Power Platform environments throughout Europe, and virtual networks in West Europe and North Europe. Each virtual network has a subnet that's delegated to Power Platform. Each subnet is associated with an enterprise policy that's linked to the Power Platform environment.
 
 The following scenarios show how Contoso uses the diagnostic cmdlets that are provided in the previous sections to troubleshoot connectivity issues that affect this setup.
 
@@ -182,7 +182,7 @@ If the DNS resolution returns a public IP address instead of a private IP addres
 1. A [private DNS zone](/azure/dns/private-dns-overview) exists for the key vault (for example, `privatelink.vaultcore.azure.net`), and it's linked to the virtual network.
 1. The private DNS zone contains an *A* record that maps the key vault hostname to the private IP address of the private endpoint.
 
-When Contoso runs the DNS resolution test for West Europe, the company discovers that the command returns a public IP address. After investigating, it finds that the private DNS zone for the key vault wasn't linked to the West Europe virtual network. After Contoso links the private DNS zone to the virtual network, and reruns the test, the DNS resolution returns the correct private IP address.
+When Contoso runs the DNS resolution test for West Europe, the company discovers that the command returns a public IP address. After the company investigates, it finds that the private DNS zone for the key vault wasn't linked to the West Europe virtual network. After Contoso links the private DNS zone to the virtual network, and reruns the test, the DNS resolution returns the correct private IP address.
 
 After DNS resolution returns the correct private IP address in both regions, the next step is to test network connectivity to the key vault by using [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity):
 
@@ -211,6 +211,6 @@ Test-TLSHandshake -EnvironmentId "00000000-0000-0000-0000-000000000001" -Destina
 
 If the TLS handshake fails, the output provides details about the certificate, cipher suite, and protocol that were used. Contoso can use this information to identify any certificate or TLS configuration issues. The command does an initial analysis of the returned output and alerts about some basic issues. However, Contoso can analyze the full output to investigate the issue in more detail.
 
-In this case, Contoso discovers that the TLS handshake can't be established because the certificate isn't trusted. After investigating the certificate details in the command output, the company determines that the web server is using a self-signed certificate. Power Platform requires publicly trusted certificates for TLS connections. After Contoso updates the web server to use a certificate that's signed by a [publicly trusted certificate authority](/power-platform/admin/vnet-support-overview#my-on-premises-endpoint-tls-certificates-arent-signed-by-well-known-root-certification-authorities-ca-do-you-support-unknown-certificates), the TLS handshake succeeds and the Power Platform environment can connect to the web server.
+In this case, Contoso discovers that the TLS handshake can't be established because the certificate isn't trusted. After the company investigates the certificate details in the command output, it determines that the web server is using a self-signed certificate. Power Platform requires publicly trusted certificates for TLS connections. After Contoso updates the web server to use a certificate that's signed by a [publicly trusted certificate authority](/power-platform/admin/vnet-support-overview#my-on-premises-endpoint-tls-certificates-arent-signed-by-well-known-root-certification-authorities-ca-do-you-support-unknown-certificates), the TLS handshake succeeds, and the Power Platform environment can connect to the web server.
 
 For more information on certificate authorities trusted by Azure services, see [Azure Certificate Authority details](/azure/security/fundamentals/azure-certificate-authority-details).
