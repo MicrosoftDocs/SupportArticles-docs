@@ -1,6 +1,6 @@
 ---
 title: Convert an Azure VM disk from MBR to GPT partition style
-description: Resolve the 2 TiB size limit on Azure VM disks that use MBR partition style by converting to GPT, including data disk and OS disk paths.
+description: Hit the 2 TiB limit on an Azure VM disk? Learn how to convert MBR to GPT for data and OS disks and restore full usable capacity.
 ms.reviewer: scotro, v-leedennis
 ms.date: 04/14/2026
 ms.service: azure-virtual-machines
@@ -13,11 +13,13 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article helps you resolve the issue where an Azure VM disk that uses Master Boot Record (MBR) partition style can't use more than 2 TiB of space, even after you expand the disk beyond 2 TiB in the Azure portal.
+## Summary
+
+This article helps you resolve the issue where an Azure virtual machine (VM) disk that uses Master Boot Record (MBR) partition style can't use more than two (2) tebibytes (TiB) of space, even after you expand the disk beyond 2 TiB in the Azure portal.
 
 ## Symptoms
 
-After you expand a managed disk beyond 2 TiB in the Azure portal, one or more of the following symptoms occur:
+After you expand a managed disk beyond 2 TiB in the [Azure portal](https://portal.azure.com), one or more of the following symptoms occur:
 
 - Disk Management shows only 2 TiB of the disk's total capacity. The remaining space isn't visible.
 - You can't create partitions larger than 2 TiB.
@@ -25,9 +27,9 @@ After you expand a managed disk beyond 2 TiB in the Azure portal, one or more of
 
 ## Cause
 
-MBR partition tables use 32-bit Logical Block Addressing (LBA), which limits the maximum addressable disk size to 2 TiB (2,199,023,255,552 bytes). Space beyond this limit isn't accessible to the operating system.
+MBR partition tables use 32-bit Logical Block Addressing (LBA), which limits the maximum addressable disk size to 2 TiB (2,199,023,255,552 bytes). The operating system can't access space beyond this limit.
 
-GUID Partition Table (GPT) uses 64-bit LBA and supports disks up to 18 EB (exabytes).
+GUID Partition Table (GPT) uses 64-bit LBA and supports disks up to 18 exabytes (EB).
 
 ## Diagnostic steps
 
@@ -42,6 +44,8 @@ GUID Partition Table (GPT) uses 64-bit LBA and supports disks up to 18 EB (exaby
 
 ### Check using PowerShell
 
+Run the following command to list all disks and their partition styles:
+
 ```powershell
 Get-Disk | Select-Object Number, FriendlyName, PartitionStyle, Size | Format-Table
 ```
@@ -50,7 +54,7 @@ Look for `MBR` in the **PartitionStyle** column for disks larger than 2 TiB.
 
 ## Resolution
 
-The conversion approach depends on whether the disk is a data disk or an OS disk.
+The conversion approach depends on whether the disk is a data disk or an operating system (OS) disk.
 
 ### Convert a data disk (destructive method)
 
@@ -59,7 +63,7 @@ The conversion approach depends on whether the disk is a data disk or an OS disk
 
 1. Back up all data from the data disk.
 
-1. Open **Command Prompt** as Administrator and start DiskPart:
+1. Open **Command Prompt** as administrator and start DiskPart:
 
    ```cmd
    diskpart
@@ -91,18 +95,20 @@ The `mbr2gpt.exe` tool converts an OS disk from MBR to GPT without data loss. Th
 #### Prerequisites
 
 - **Windows Server 2019 or later**, or Windows 10 version 1703 or later. Windows Server 2016 doesn't include `mbr2gpt.exe`.
-- The VM must support UEFI boot. Gen1 VMs need to be [upgraded to Trusted Launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) first.
-- The disk must have at most three primary partitions (MBR supports up to four, but MBR2GPT requires at least one free slot for the EFI System Partition).
+- The VM must support Unified Extensible Firmware Interface (UEFI) boot. Generation 1 (Gen1) VMs need to be [upgraded to Trusted Launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) first.
+- The disk must have at most three primary partitions. MBR supports up to four, but MBR2GPT requires at least one free slot for the Extensible Firmware Interface (EFI) System Partition.
 
-#### Steps
+#### Solution
 
-1. Connect to the VM by using RDP.
+Perform the following steps to convert the OS disk from MBR to GPT:
+
+1. Connect to the VM by using Remote Desktop Protocol (RDP).
 
 1. Take a snapshot of the OS disk in the Azure portal before you proceed.
 
 1. Open **Command Prompt** as Administrator.
 
-1. Validate that the disk is eligible for conversion:
+1. Validate that the disk is eligible for conversion by running the following command:
 
    ```cmd
    mbr2gpt /validate /disk:0 /allowFullOS
@@ -121,7 +127,7 @@ The `mbr2gpt.exe` tool converts an OS disk from MBR to GPT without data loss. Th
 1. Open **Disk Management** and verify:
    - The **Partition style** on the **Volumes** tab now shows **GUID Partition Table (GPT)**.
    - The full disk capacity is visible.
-   - An **EFI System Partition** has been created.
+   - An **EFI System Partition** is created.
 
 > [!IMPORTANT]
 > After converting the OS disk, verify that the VM boots correctly. If the VM doesn't boot, use [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) or a [repair VM](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) to troubleshoot.
@@ -130,9 +136,10 @@ The `mbr2gpt.exe` tool converts an OS disk from MBR to GPT without data loss. Th
 
 For SQL Server VMs deployed from Azure Marketplace that use Storage Spaces:
 
-- **Don't** convert data disks in-place. Storage Spaces pools manage the underlying disks.
+- Don't convert data disks in place. Storage Spaces pools manage the underlying disks.
 - Instead, create new, larger GPT data disks, add them to the Storage Spaces pool, and use the SQL Server configuration blade to extend the volume.
-- For more information, see [Can't extend the volume on a SQL Server VM](cannot-extend-volume-sql-server.md).
+
+For more information, see [Can't extend the volume on a SQL Server VM](cannot-extend-volume-sql-server.md).
 
 ## Verify the fix
 
@@ -148,7 +155,7 @@ For SQL Server VMs deployed from Azure Marketplace that use Storage Spaces:
    wmic logicaldisk get caption,size,freespace
    ```
 
-## Additional resources
+## Resources
 
 - [Troubleshoot Azure disk resize failures](troubleshoot-disk-resize.md)
 - [MBR2GPT.exe documentation](/windows/deployment/mbr-to-gpt)
