@@ -27,15 +27,15 @@ When you try to create, upgrade or scale up a cluster, you receive one of the fo
 
 Code: `ZonalAllocationFailed`
 
-Message: "Allocation failed. We do not have sufficient capacity for the requested VM size in this zone. Read more about improving likelihood of allocation success at `https://aka.ms/allocation-guidance`. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See `https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed` for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure. If the error is due to capacity constrain, consider upgrade with maxUnavailable instead of maxSurge, details: aka.ms/aks/maxUnavailable."
+Message: `Allocation failed. We do not have sufficient capacity for the requested VM size in this zone. Read more about improving likelihood of allocation success at https://aka.ms/allocation-guidance. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure. If the error is due to capacity constrain, consider upgrade with maxUnavailable instead of maxSurge, details: aka.ms/aks/maxUnavailable.`
 
 Code: `AllocationFailed`
 
-Message: "The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See `https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed` for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure."
+Message: `The VM allocation failed due to an internal error. Please retry later or try deploying to a different location. Please note that allocation failures can also arise if a proximity placement group is associated with this VMSS. See https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/error-code-zonalallocationfailed-allocationfailed for more details. This is not AKS controlled behavior, please ask help to VMSS team for allocation failure.`
 
 Code: `OverconstrainedAllocationRequest`
 
-Message: "Create or update VMSS failed. Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive. Please remove some constraints and try again. Constraints applied are: - Differencing (Ephemeral) Disks  - Networking Constraints (such as Accelerated Networking or IPv6)  - VM Size"
+Message: `Create or update VMSS failed. Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive. Please remove some constraints and try again. Constraints applied are: - Differencing (Ephemeral) Disks  - Networking Constraints (such as Accelerated Networking or IPv6)  - VM Size`
 
 ### Cause 1: Limited zone availability in a SKU
 
