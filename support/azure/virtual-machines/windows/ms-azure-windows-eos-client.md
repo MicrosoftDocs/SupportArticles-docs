@@ -16,6 +16,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4010166
 
+## Summary
+
 This article provides information about Windows Client 10 support, and answers some of the most common questions about End of Support (EOS) for Azure virtual machines (VMs) that run on Windows Client operating systems.
 
 > [!IMPORTANT]

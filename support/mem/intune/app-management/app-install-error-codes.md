@@ -1,7 +1,7 @@
 ---
 title: App installation error codes for Microsoft Intune
 description: Use the app installation error codes to help you troubleshoot app installation issues with Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, mghadial, caher
 search.appverid: MET150
 ms.custom: sap:AppDeployment - Android\EnterpriseSystem

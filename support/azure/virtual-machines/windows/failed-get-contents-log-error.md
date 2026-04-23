@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4094480
 
+## Summary
+
 This article provides a solution to an issue in which "Failed to get contents of the log" error occurs when you view a virtual machine screen shot in the Boot Diagnostics blade in the Azure portal.
 
 ## Symptoms

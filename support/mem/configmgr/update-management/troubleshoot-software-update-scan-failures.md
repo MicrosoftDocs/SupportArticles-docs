@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software update scan failures
 description: Describes how to troubleshoot software update scan failures in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika
 ms.custom: sap:Software Update Management (SUM)\Software Update Scanning
 ---
@@ -73,7 +73,7 @@ Proxy settings that are configured in Internet Explorer are part of the WinINET 
 - On Windows XP: `proxycfg.exe -u`
 - On Windows Vista and later versions: `netsh winhttp import proxy source =ie`
 
-For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](https://support.microsoft.com/help/900935).
+For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](../../../windows-server/installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md).
 
 ## Scan failures related to HTTP time-out or authentication
 

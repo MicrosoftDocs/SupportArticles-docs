@@ -13,6 +13,10 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 _Original KB number:_ &nbsp; 4046813
 
+## Summary
+
+This article discusses that updates are included in Windows Server images that are available on Azure Marketplace.
+
 ## Frequently asked questions
 
 **When were Microsoft images updated to include the .NET Framework 4.7?**

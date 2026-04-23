@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes how to troubleshoot issues when you connect to an Azure virtual machine (VM) and Remote Desktop Services, or TermService, isn't starting or fails to start.
 
 ## Symptoms
@@ -197,7 +199,7 @@ To troubleshoot this issue, use the Serial Console. Or else [repair the VM offli
     sc stop TermService
     ```
 
-2. Isolate the service on its own ‘svchost’ container:
+2. Isolate the service on its own 'svchost' container:
 
     ```console
     sc config TermService type= own
@@ -224,7 +226,7 @@ To troubleshoot this issue, use the Serial Console. Or else [repair the VM offli
         
    REM Set default values back on the broken service 
    reg add "HKLM\BROKENSYSTEM\ControlSet001\services\TermService" /v start /t REG_DWORD /d 3 /f
-   reg add "HKLM\BROKENSYSTEM\ControlSet001\services\TermService" /v ObjectName /t REG_SZ /d "NT Authority\NetworkService“ /f
+   reg add "HKLM\BROKENSYSTEM\ControlSet001\services\TermService" /v ObjectName /t REG_SZ /d "NT Authority\NetworkService" /f
    reg add "HKLM\BROKENSYSTEM\ControlSet001\services\TermService" /v type /t REG_DWORD /d 16 /f
    reg add "HKLM\BROKENSYSTEM\ControlSet002\services\TermService" /v start /t REG_DWORD /d 3 /f
    reg add "HKLM\BROKENSYSTEM\ControlSet002\services\TermService" /v ObjectName /t REG_SZ /d "NT Authority\NetworkService" /f

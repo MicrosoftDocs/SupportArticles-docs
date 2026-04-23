@@ -21,7 +21,11 @@ ms.custom: sap:VM Extensions not operating correctly
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 
-Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address `168.63.129.16`. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+## Summary
+
+This article provides an overview of the VM assist tool, which is a script-based diagnostic tool for Azure virtual machines (VMs) that run Windows.
+
+Azure VM Agent is a Windows VM agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address `168.63.129.16`. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 The VM that's migrated to Azure from an on-premises environment or created by using a customized image doesn't have Azure VM Agent installed. In these scenarios, you have to manually install VM Agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows).
 

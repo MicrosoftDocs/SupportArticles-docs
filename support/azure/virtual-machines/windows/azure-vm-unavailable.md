@@ -13,6 +13,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the activity log.
 
 ## Symptoms

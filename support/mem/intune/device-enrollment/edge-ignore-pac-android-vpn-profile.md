@@ -1,7 +1,7 @@
 ---
 title: PAC setting in per-app VPN profile is ignored by Microsoft Edge in Android 13
 description: Provides a workaround for an issue where Microsoft Edge in Android 13 ignores a PAC setting in a per-app VPN profile that's created in Microsoft Intune.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, ochukwunyere, intunecic, v-weizhu
 ms.custom: sap:Configure Devices - Android\VPN settings
 ---

@@ -22,7 +22,9 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article introduce how to fix misconfigured guest operating system firewall on Azure VM.
+## Summary
+
+This article introduces how to fix a misconfigured guest operating system firewall on an Azure VM.
 
 ## Symptoms
 

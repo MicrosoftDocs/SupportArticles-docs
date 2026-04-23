@@ -12,8 +12,9 @@ ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
+## Summary
 
+This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
 
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
 

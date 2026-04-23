@@ -13,6 +13,8 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article provides instructions to configure custom DNS servers and search domains on Microsoft Azure Linux virtual machines (VMs).
 
 > [!NOTE]
@@ -135,7 +137,7 @@ Guidance for configuring custom DNS on **RHEL 10** is currently being developed 
       sudo vi /etc/netplan/custom-dns-01.yaml
       ```
    
-3. Add the following configuration, and then save and exit. If you’re use Nano, press `CTRL + O` to save and `CTRL + X` to exit. If you use Vim, press ESC, type `:wq`, and then press Enter to save and exit. 
+3. Add the following configuration, and then save and exit. If you're use Nano, press `CTRL + O` to save and `CTRL + X` to exit. If you use Vim, press ESC, type `:wq`, and then press Enter to save and exit. 
 
     ```yaml
     network:
@@ -158,7 +160,7 @@ Guidance for configuring custom DNS on **RHEL 10** is currently being developed 
    ```
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-5.png" alt-text="Screenshot of resolvectl after final changes.":::
-  	
+      
 ## [SLES 12._x_/15._x_](#tab/SLES)
 
 ### Configure DNS servers

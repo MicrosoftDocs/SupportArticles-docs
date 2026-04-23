@@ -15,12 +15,9 @@ items:
   items:
   - name: Issues
     items:
-    - name: Applications not deployed to users logged on to domain controllers
-      href: app-management/applications-not-deployed-to-users.md
+
     - name: Deploy Windows language packs
       href: app-management/deploy-language-pack.md
-    - name: Deployment Type changes are deployed unexpectedly
-      href: app-management/deployment-type-changes-deployed-unexpectedly.md
   - name: Understand application management
     items:
     - name: Before you begin
@@ -47,12 +44,8 @@ items:
       href: app-management/troubleshoot/troubleshoot-microsoft-store-for-business-integration.md
 - name: Client installation and assignment
   items:
-    - name: Conversion failed when upgrading to version 1810
-      href: client-installation/conversion-failed-upgrade-version-1810.md
     - name: Error 80041002 when installing client agent
       href: client-installation/client-agent-installation-error-80041002.md
-    - name: Mac client registration fails
-      href: client-installation/mac-client-registration-fails.md
     - name: PolicyAgentInstanceProvider warnings during client installation
       href: client-installation/policyagentinstanceprovider-warning-install-client.md
     - name: There was a problem starting PolicyAgentProvider.dll
@@ -61,19 +54,10 @@ items:
   items:
     - name: Client remains in provisioning mode after upgrade
       href: client-management/configmgr-client-left-in-provisioning-mode.md
-
-    - name: Clients don't receive policy data
-      href: client-management/clients-not-receive-policy-data.md
-
-
     - name: Inventory and asset intelligence
       items:
-        - name: Can't import the Sms_def.mof file
-          href: client-management/invalid-data-error-import-mof-file.md
         - name: Hardware inventory fails
           href: client-management/hardware-inventory-fails.md
-    - name: Remote control fails with error C000012
-      href: client-management/remote-control-fails-error-c000012.md
     - name: SMS Agent Host service doesn't restart when the WMI service resumes
       href: client-management/sms-agent-host-not-automatically-restarted.md
 - name: Cloud services
@@ -84,12 +68,6 @@ items:
       href: cloud-services/cmg-creation-unavailable-region.md
     - name: CMG maintenance task fails to update public IP resource
       href: cloud-services/public-ip-creation-error.md
-    - name: Contributor role is no longer assigned at the subscription level
-      href: cloud-services/contributor-role-not-assigned-for-web-app.md
-- name: Collections
-  items:
-    - name: Multiple instances of the Unknown computers collection
-      href: client-management/multiple-instances-of-unknown-computers-collection.md
 - name: Configuration Manager console
   items:
     - name: SQL query times out or slow console performance
@@ -98,8 +76,6 @@ items:
       href: console-management/console-stops-responding.md
     - name: Console can't connect after DCOM hardening changes
       href: console-management/dcom-hardening-change-effect.md
-    - name: No data in the Windows 10 servicing dashboard
-      href: console-management/windows-10-servicing-dashboard-empty.md
     - name: Failed devices on client health dashboard
       href: console-management/failed-devices-client-health-dashboard.md
 - name: Content management
@@ -108,28 +84,14 @@ items:
       href: content-management/configure-peer-cache.md
     - name: Distribution point and content distribution
       items:
-        - name: A deployment property change isn't saved
-          href: content-management/deployment-property-change-not-saved.md
-        - name: App-V applications can't be streamed from a DP
-          href: content-management/app-v-apps-not-streamed-from-dp.md
-        - name: Boot image distribution to a PXE enabled DP fails
-          href: content-management/boot-image-distribution-fails.md
         - name: Can't distribute deployment packages
           href: content-management/deployment-package-distribution-fails.md
         - name: Content distribution fails with error 80070070
           href: content-management/content-distribution-error-80070070.md
-        - name: Content distribution fails with IDispatch error
-          href: content-management/content-distribution-idispatch-error.md
-        - name: DPs in a neighbor boundary group are used
-          href: content-management/use-neighbor-boundary-group-dp.md
-        - name: DP installations or upgrades take a long time
-          href: content-management/slow-dp-installation-upgrade.md
         - name: Hash mismatch error downloading Contentinfo.tar
           href: content-management/hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
           href: content-management/package-distribution-to-remote-dp-fails.md
-        - name: Windows Installer source list update fails
-          href: content-management/windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview
@@ -148,10 +110,6 @@ items:
           href: content-management/advanced-troubleshooting-tips.md
 - name: Data transfer between sites
   items:
-  - name: Issues
-    items:
-    - name: DRS performance issues after installing hotfix 3125525
-      href: data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md
   - name: Troubleshoot database replication service
     items:
     - name: Troubleshooting overview
@@ -208,16 +166,10 @@ items:
       href: os-deployment/configure-operating-system-deployment.md
     - name: Build and capture reference image
       items:
-        - name: Custom port settings aren't added to boot media
-          href: os-deployment/custom-port-settings-not-added-to-boot-media.md
         - name: Unable to manage boot images
           href: os-deployment/error-managing-boot-images.md
         - name: Errors when capturing Windows 11 image
           href: os-deployment/windows-11-image-capture-fail.md
-    - name: Manage drivers
-      items:
-        - name: Insufficient permissions to migrate a driver package
-          href: os-deployment/insufficient-permissions-to-migrate-driver-package.md
     - name: PXE boot
       items:
         - name: A PXE enabled DP generates many files
@@ -246,34 +198,20 @@ items:
           href: os-deployment/cannot-create-mdt-task-sequence.md
         - name: Can't create bootable media with errors 80004005 and 0x8004101d
           href: os-deployment/cannot-create-bootable-media-error-80004005-0x8004101d.md
-        - name: Computer hangs during an OSD task sequence in debug mode
-          href: os-deployment/computer-hangs-task-sequence-debug-mode.md
         - name: Dynamic Media can't get management point locations
           href: os-deployment/dynamic-media-cannot-get-mp-locations.md
         - name: No option to check online for updates
           href: os-deployment/check-online-updates-unavailable.md
-        - name: The Capture User State task fails
-          href: os-deployment/capture-user-state-task-fails.md
-        - name: Get network captures in Windows PE
-          href: os-deployment/get-network-captures-from-task-sequence.md
         - name: No mouse cursor during an OSD task sequence
           href: os-deployment/no-mouse-cursor-during-osd-task-sequence.md
-        - name: OSDResults doesn't display installed applications
-          href: os-deployment/osdresults-not-display-installed-applications.md
         - name: Sending with winhttp failed 80072f8f
           href: os-deployment/sending-with-winhttp-failed-80072f8f-error.md
         - name: Task sequence fails if software updates require multiple restarts
           href: os-deployment/task-sequence-fails-multiple-restarts.md
         - name: Task sequence fails with error 80070005
           href: os-deployment/osd-task-sequence-fails-error-80070005.md
-        - name: Task sequence fails with error 0x87d01004
-          href: os-deployment/task-sequence-fails-error-0x87d01004.md
-        - name: Task sequence stops after an in-place upgrade
-          href: os-deployment/task-sequence-stops-after-in-place-upgrade.md
         - name: Task sequence stops after setup or upgrade
           href: os-deployment/os-deployment-task-sequence-not-continue.md
-        - name: The debug deployment isn't displayed
-          href: os-deployment/debug-deployment-not-displayed.md
         - name: Troubleshoot the Install Application task sequence step
           href: os-deployment/troubleshoot-install-application-step.md
 - name: Setup, migration, backup, and recovery
@@ -296,10 +234,6 @@ items:
       items:
         - name: Can't create software update packages or applications
           href: setup-migrate-backup-recovery/cannot-create-software-update-package.md
-        - name: Error when you move a site database
-          href: setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md
-        - name: Support policies for manual database changes
-          href: setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md
     - name: Updates and servicing
       items:
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
@@ -310,18 +244,12 @@ items:
           href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Understand and troubleshoot Updates and Servicing
           href: setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing.md
-    - name: Maintenance tasks default settings
-      href: setup-migrate-backup-recovery/maintenance-tasks-default-settings.md
 - name: Software update management
   items:
     - name: Issues
       items:
-        - name: Bad gateway error when deploying software updates
-          href: update-management/bad-gateway-error-deploy-software-updates.md
         - name: Clients don't get software updates
           href: update-management/clients-not-get-software-updates.md
-        - name: Different results are shown for software updates
-          href: update-management/different-software-updates-results-displayed.md
     - name: Understand software update management
       items:
         - name: Software updates introduction

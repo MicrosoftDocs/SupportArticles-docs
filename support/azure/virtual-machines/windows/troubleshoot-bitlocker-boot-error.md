@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting, has-adal-ref, devx-track-azurepowershell
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes BitLocker errors that you may experience when you start a Windows virtual machine (VM) in Microsoft Azure.
 
 ## Symptom
@@ -26,7 +28,7 @@ This article describes BitLocker errors that you may experience when you start a
 
 - Plug in the USB driver that has the BitLocker key
 
-- You’re locked out! Enter the recovery key to get going again (Keyboard Layout: US) The wrong sign-in info has been entered too many times, so your PC was locked to protect your privacy. To retrieve the recovery key, go to <https://windows.microsoft.com/recoverykeyfaq> from another PC or mobile device. In case you need it, the key ID is XXXXXXX. Or, you can reset your PC.
+- You're locked out! Enter the recovery key to get going again (Keyboard Layout: US) The wrong sign-in info has been entered too many times, so your PC was locked to protect your privacy. To retrieve the recovery key, go to <https://windows.microsoft.com/recoverykeyfaq> from another PC or mobile device. In case you need it, the key ID is XXXXXXX. Or, you can reset your PC.
 
 - Enter the password to unlock this drive [ ] Press the Insert Key to see the password as you type.
 - Enter your recovery key Load your recovery key from a USB device.
@@ -45,7 +47,7 @@ To resolve this problem, stop and deallocate the VM, and then start it. This ope
 If this method does not the resolve the problem, follow these steps to restore the BEK file manually:
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). When you attach a managed disk, you might receive a "contains encryption settings and therefore cannot be used as a data disk” error message. In this situation, run the following script to try again to attach the disk:
+2. [Attach the OS disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). When you attach a managed disk, you might receive a "contains encryption settings and therefore cannot be used as a data disk" error message. In this situation, run the following script to try again to attach the disk:
 
     ```Powershell
     $rgName = "myResourceGroup"

@@ -4,7 +4,7 @@ description: Provides tips for troubleshooting Microsoft Entra device registrati
 author: Cloud-Writer
 ms.author: meerak
 ms.reviewer: kaushika, horemaw
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Autopilot\DevicePrep
 ---

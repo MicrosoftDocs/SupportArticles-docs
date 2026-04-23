@@ -11,6 +11,8 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article provides step-by-step instructions for capturing a Linux image to prepare it for upload to Azure.
 
 ## Prerequisites

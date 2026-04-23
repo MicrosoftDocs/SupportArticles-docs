@@ -11,9 +11,9 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article helps you troubleshoot Azure fence agent issues in a Pacemaker cluster that runs on Red Hat Enterprise Linux (RHEL) and that uses the Azure fence agent to implement a Shoot The Other Node in the Head (STONITH) device.
+## Summary
 
-## Overview
+This article helps you troubleshoot Azure fence agent issues in a Pacemaker cluster that runs on Red Hat Enterprise Linux (RHEL) and that uses the Azure fence agent to implement a Shoot The Other Node in the Head (STONITH) device.
 
 The Azure fence agent uses the Python program located at */usr/sbin/fence_azure_arm*. The cluster resource agent (RA) used to implement a STONITH device calls this program with appropriate parameters and uses it to communicate with the Azure platform through API calls.
 

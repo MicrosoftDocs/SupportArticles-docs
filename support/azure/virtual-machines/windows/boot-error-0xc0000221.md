@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010132
 
+## Summary
+
 This article provides a solution to an issue where Windows fails to start and generates error code 0xc0000221.
 
 ## Symptoms
