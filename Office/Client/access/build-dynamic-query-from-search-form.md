@@ -6,6 +6,7 @@ manager: dcscontentpm
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
+  - CI 11297
 search.appverid: 
   - MET150
 audience: ITPro
@@ -21,7 +22,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 04/16/2026
+ms.date: 04/23/2026
 ---
 
 # How to build a dynamic query with values from a search form in Access
@@ -38,7 +39,7 @@ This article shows you how to dynamically build criteria for a query string with
 
 Sometimes, you may want to create a form that serves as a search form. You want to be able to enter values on the form and dynamically build the appropriate SQL string. The following steps show you how to dynamically build a query string that uses the BuildCriteria method.
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.CAUTION: If you follow the steps in this example, you modify the sample database Northwind.mdb. You may want to back up the Northwind.mdb file and follow these steps on a copy of the database.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that's being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements.CAUTION: If you follow the steps in this example, you modify the sample database Northwind.mdb. You may want to back up the Northwind.mdb file and follow these steps on a copy of the database.
 
 ### Step-by-Step Example
 

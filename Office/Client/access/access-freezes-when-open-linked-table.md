@@ -8,15 +8,16 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: suesch, denniwil, v-lisalozano 
+  - CI 11297
+ms.reviewer: suesch, denniwil, v-lisalozano
 search.appverid: 
   - MET150
 appliesto: 
-  - Access 2016
-  - Access 2013
-  - Access for Microsoft 365
+  - Access 2024
+  - Access 2021
   - Access 2019
-ms.date: 04/16/2026
+  - Access 2016
+ms.date: 04/23/2026
 ---
 
 # Access freezes when you open a linked table to a SharePoint list
@@ -33,61 +34,21 @@ The issue occurs when the user who tries to open the existing linked table in Ac
 
 To work around this issue, use one of the following methods.
 
-### Method 1: Add the EnableLegacyListAuth registry entry
+### Method 1: Refresh the list
 
-**Note** For Access 2016, you must have Click-to-Run version 1804 (build 9226.2114) or MSI version (build 16.0.4690.1000) or a later version installed to use this method. 
-To add the **EnableLegacyListAuth** registry entry, follow these steps: 
- 
-1. Open Registry Editor, and then locate and select the following registry subkey:
+To refresh the list, follow these steps:
 
-   **For 32-bit Office on 32-bit Windows or 64-bit Office on 64-bit Windows**
+1. Open Windows Task Manager, select Microsoft Access, and then click **End task**.
+2. Reopen the database.
+3. Right-click the linked table in Access, and then select **More Options** > **Refresh List**.
+4. Log on by using your credentials.
 
-   - For Access 2013
+### Method 2: Programmatically relink the list
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\List    
-   - For Access 2016
+To relink the list, follow these steps:
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\List    
- 
-   **For 32-bit Office on 64-bit Windows**
-
-   - For Access 2013
-
-     HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\List
-   - For Access 2016
-
-     HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\List    
-
-2. On the **Edit** menu, point to **New**, and then click **DWORD Value**.    
-3. Type **EnableLegacyListAuth**, and then press **Enter**.    
-4. Right-click **EnableLegacyListAuth**, and then click **Modify**.    
-5. In the **Value data** box, type **1**, and then click **OK**.    
-6. Locate the following registry key:  
-   - For Access 2013
-
-     HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity    
-   - For Access 2016
-
-     HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity    
-     
-7. Make sure that the value of **EnableADAL** is **0**.    
-8. Exit Registry Editor.
-
-### Method 2: Refresh the list
-
-To refresh the list, follow these steps: 
- 
-1. Open Windows Task Manager, select Microsoft Access, and then click **End task**.    
-2. Reopen the database.    
-3. Right-click the linked table in Access, and then select **More Options** > **Refresh List**.    
-4. Log on by using your credentials.    
- 
-### Method 3: Programmatically relink the list
-
-To relink the list, follow these steps: 
- 
-1. Open Windows Task Manager, select Microsoft Access, and then click **End task**.    
-2. Reopen the database, and create a new module.    
+1. Open Windows Task Manager, select Microsoft Access, and then click **End task**.
+2. Reopen the database, and create a new module.
 3. In VBA code, use the **RefreshLink** method of the TableDefs collection for the linked tables:
 
 ```vb

@@ -6,6 +6,7 @@ manager: dcscontentpm
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
+  - CI 11297
 search.appverid: 
   - MET150
 audience: ITPro
@@ -13,13 +14,11 @@ ms.topic: troubleshooting
 ms.author: meerak
 ms.reviewer: SHAYDEN, denniwil, v-lisalozano 
 appliesto: 
+  - Access 2024
+  - Access 2021
+  - Access 2019
   - Access 2016
-  - Access 2013
-  - Access 2010
-  - Access 2007
-  - Access 2003
-  - Access 2002
-ms.date: 04/16/2026
+ms.date: 04/23/2026
 ---
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table
@@ -52,39 +51,7 @@ MaxLocksPerFilevalue permanently.
 
 ### Method 1: Changing MaxLocksPerFile in the registry
 
-Use Registry Editor to increase the MaxLocksPerFile value under the following key:
-
-For Microsoft Access 2000, in Microsoft Access 2002, and in Microsoft Office Access 2003 that are running on a 32-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0**
-
-For Microsoft Access 2000, in Microsoft Access 2002, and in Microsoft Office Access 2003 that are running on a 64-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Jet\4.0\Engines\Jet 4.0**
-
-For Microsoft Office Access 2007 that is running on a 32-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\ACE**
-
-For Microsoft Office Access 2007 that is running on a 64-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\ACE**
-
-For Microsoft Access 2010 that is running on a 32-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE**
-
-For Microsoft Office Access 2010 that is running on a 64-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE**
-
-For Microsoft Access 2013 that is running on a 32-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE**
-
-For Microsoft Office Access 2013 that is running on a 64-bit Windows operating system:
-
-**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE**
+Use Registry Editor to increase the MaxLocksPerFile value under the appropriate key:
 
 For Microsoft Access 2016 that is running on a 32-bit Windows operating system:
 
@@ -93,8 +60,6 @@ For Microsoft Access 2016 that is running on a 32-bit Windows operating system:
 For Microsoft Office Access 2016 that is running on a 64-bit Windows operating system:
 
 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE**
-
-**Note** that this method changes the registry setting for all applications that use Microsoft Jet database engine version 4.0.
 
 ### Method 2: Using SetOption to change MaxLocksPerFile Temporarily
 

@@ -7,6 +7,7 @@ manager: dcscontentpm
 ms.custom: 
   - CI 152768
   - CSSTroubleshoot
+  - CI 11297
 search.appverid: 
   - MET150
 audience: ITPro
@@ -16,7 +17,7 @@ appliesto:
   - Access for Microsoft 365
   - Access 2019
   - Access 2016
-ms.date: 04/16/2026
+ms.date: 04/23/2026
 ---
 
 # Access error: "String data, right truncation (#0)"

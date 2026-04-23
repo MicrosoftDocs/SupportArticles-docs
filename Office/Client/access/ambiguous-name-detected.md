@@ -9,12 +9,15 @@ ms.topic: troubleshooting
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
+  - CI 11297
 ms.reviewer: denniwil, v-lisalozano 
 appliesto: 
-  - Microsoft Office Access 2007
-  - Microsoft Office Access 2003
+  - Access 2024
+  - Access 2021
+  - Access 2019
+  - Access 2016
 search.appverid: MET150
-ms.date: 04/16/2026
+ms.date: 04/23/2026
 ---
 # "Ambiguous name detected" error when you run a procedure in Access
 
@@ -38,9 +41,7 @@ This error occurs when there are multiple procedures with the same name in a mod
 To work around this problem, delete the unwanted duplicate procedure. To do this, follow these steps:
 
 1. Open the form in Design view.
-2. In Microsoft Office Access 2003, click **Code** on the **View** menu.
-
-   In Microsoft Office Access 2007, click **View Code** in the **Tools** group on the **Design** tab.
+2. In Access, click **View Code** in the **Tools** group on the **Design** tab.
 
 3. On the **Debug** menu, click **Compile Database Name**.
 

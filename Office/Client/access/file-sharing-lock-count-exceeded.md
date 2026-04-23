@@ -6,6 +6,7 @@ manager: dcscontentpm
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
+  - CI 11297
 search.appverid: 
   - MET150
 audience: ITPro
@@ -13,12 +14,11 @@ ms.topic: troubleshooting
 ms.author: meerak
 ms.reviewer: denniwil, v-lisalozano
 appliesto: 
-  - Access for Microsoft 365
-  - Access LTSC 2021
+  - Access 2024
+  - Access 2021
   - Access 2019
   - Access 2016
-  - Access 2013
-ms.date: 04/16/2026
+ms.date: 04/23/2026
 ---
 
 # "File sharing lock count exceeded…" error during large transaction processing
