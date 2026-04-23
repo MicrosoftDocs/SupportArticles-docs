@@ -42,8 +42,6 @@ These issues might occur for any of the following reasons:
 - Device-based licensing is used: Copilot isn't available when you use device-based licensing for Microsoft 365 Apps. To use Copilot, you must have a user-based license assigned.
 - Semi-Annual Enterprise Channel is used as the update channel: To use Copilot, your organization must use the Current Channel or the Monthly Enterprise Channel.
 - Copilot is blocked by your [privacy settings](/copilot/microsoft-365/microsoft-365-copilot-privacy#microsoft-365-copilot-and-privacy-controls-for-connected-experiences).
-- Shared Computer Activation (SCA) is used: Copilot isn't supported in environments that use SCA.
-
 ## Resolution
 
 To resolve the issue, follow the steps in [How to find and enable missing Copilot button in Microsoft 365 apps](https://support.microsoft.com/office/how-to-find-and-enable-missing-copilot-button-in-microsoft-365-apps-c8482b93-4b96-4bb8-8ec9-5148f4d42441).
