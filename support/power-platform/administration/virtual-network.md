@@ -13,11 +13,11 @@ ms.custom: sap:Environment - Administration
 
 # Troubleshoot virtual network issues
 
-This article provides guidance to troubleshoot common scenarios for [virtual networks](/power-platform/admin/vnet-support-overview) in Microsoft Power Platform. It focuses on using the [Microsoft.PowerPlatform.EnterprisePolicies](https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.EnterprisePolicies) PowerShell module to help you identify and resolve issues that are related to virtual network configurations.
+This article provides guidance to troubleshoot common scenarios for [virtual networks](/power-platform/admin/vnet-support-overview) in Microsoft Power Platform. The article focuses on how to use the [Microsoft.PowerPlatform.EnterprisePolicies](https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.EnterprisePolicies) PowerShell module to help you identify and resolve issues that are related to virtual network configurations.
 
 ## Use the diagnostics PowerShell module
 
-The `Microsoft.PowerPlatform.EnterprisePolicies` PowerShell module helps you diagnose and troubleshoot issues that are related to virtual network configurations in Power Platform. You can use the tool to check the connectivity between your Power Platform environment and your virtual network. You can also use it to identify any misconfigurations that might be causing issues. This diagnostics PowerShell module is available from the PowerShell Gallery and its GitHub repository, [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
+The `Microsoft.PowerPlatform.EnterprisePolicies` PowerShell module helps you diagnose and troubleshoot issues that are related to virtual network configurations in Power Platform. You can use the tool to check the connectivity between your Power Platform environment and your virtual network. You can also use it to identify any misconfigurations that might cause issues. The diagnostics PowerShell module is available from the PowerShell Gallery and its GitHub repository, [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
 
 ### Install the module
 
@@ -49,7 +49,7 @@ For a full list of available functions within the diagnostics module, see [Micro
 
 If you encounter issues when you run the diagnostics module, report them through the GitHub repository where the module is hosted. The repository is available at: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
 
-To report an issue, go to the **Issues** section of the repository, and [open a new issue](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/issues/new). Provide detailed information about the issue that you encounter, including any error messages or log entries that might help when you investigate the issue. Don't include any sensitive information in your report.
+To report an issue, go to the **Issues** section of the repository, and [open a new issue](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/issues/new). Provide detailed information about the issue that you encounter. Include any error messages or log entries that might help when you investigate the issue. Don't include any sensitive information in your report.
 
 ## Troubleshoot common issues
 
@@ -135,7 +135,7 @@ Use the [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterpris
 Test-TLSHandshake -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
 ```
 
-The command returns information that can help you debug why the handshake failed. The output includes the certificate that the server presented, the cipher suite, the protocol, and any SSL error descriptions.
+This command returns information that can help you debug why the handshake failed. The output includes the certificate that the server presented, the cipher suite, the protocol, and any SSL error descriptions.
 
 > [!IMPORTANT]
 > Only publicly trusted certificates are supported. For more information, see [Do you support unknown certificates?](/power-platform/admin/vnet-support-overview#my-on-premises-endpoint-tls-certificates-arent-signed-by-well-known-root-certification-authorities-ca-do-you-support-unknown-certificates)
@@ -152,58 +152,58 @@ You might not be able to diagnose or resolve the issue by using the diagnostics 
 
 ## Example troubleshooting scenarios
 
-Contoso has multiple Power Platform environments in Europe and has created virtual networks in West Europe and North Europe. Each virtual network has a subnet that's delegated to Power Platform and associated with an enterprise policy, which is then linked to the Power Platform environment.
+Meet Contoso LLC, a multi-national company that has multiple Power Platform environments throughout Europe, and virtual networks in West Europe and North Europe. Each virtual network has a subnet that's delegated to Power Platform. Each subnet is associated with an enterprise policy that's then linked to the Power Platform environment.
 
-The following scenarios show how Contoso uses the diagnostic cmdlets from the previous sections to troubleshoot connectivity issues with this setup.
+The following scenarios show how Contoso uses the diagnostic cmdlets that are provided in the previous sections to troubleshoot connectivity issues that affect this setup.
 
 ### Connect to an Azure Key Vault through a private endpoint
 
-Contoso wants their Power Platform environments to connect to their key vault through the virtual network and configures the key vault to reject requests from the public internet. When they try to connect to the key vault from their environment, the connection is rejected because requests aren't routed correctly. To diagnose the issue, Contoso follows these troubleshooting steps.
+Contoso wants its Power Platform environments to connect to its key vault through the virtual network, and configures the key vault to reject requests from the public internet. When Contoso tries to connect to the key vault from its environment, the connection is rejected because requests aren't routed correctly. To diagnose the issue, Contoso uses the following troubleshooting steps.
 
-First, they run [Get-EnvironmentRegion](/powershell/module/microsoft.powerplatform.enterprisepolicies/Get-EnvironmentRegion) to check which subnet requests are sent to:
+First, it runs [Get-EnvironmentRegion](/powershell/module/microsoft.powerplatform.enterprisepolicies/Get-EnvironmentRegion) to check which subnet requests are sent to:
 
 ```powershell
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000001"
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000002"
 ```
 
-The returned region identifies which virtual network to investigate. For example, if the command returns West Europe, Contoso needs to focus troubleshooting on the West Europe virtual network.
+The returned region identifies which virtual network to investigate. For example, if the command returns West Europe, Contoso has to focus troubleshooting on the West Europe virtual network.
 
-Next, Contoso verifies that the IP address returned from DNS resolution of the key vault fully qualified domain name (FQDN) is a private IP address. Because they have environments in both regions, they need to test DNS resolution for each region by using [Test-DnsResolution](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-DnsResolution):
+Next, Contoso verifies that the IP address that's returned from DNS resolution of the key vault fully qualified domain name (FQDN) is a private IP address. Because the company has environments in both regions, it has to test DNS resolution for each region by using [Test-DnsResolution](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-DnsResolution):
 
 ```powershell
 Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000001" -HostName "contoso-keyvault.vault.azure.net" -Region "westeurope"
 Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000001" -HostName "contoso-keyvault.vault.azure.net" -Region "northeurope"
 ```
 
-If the DNS resolution returns a public IP address instead of a private IP address, the [private endpoint](/azure/private-link/private-endpoint-overview) for the key vault might not be configured correctly. Contoso needs to verify that:
+If the DNS resolution returns a public IP address instead of a private IP address, the [private endpoint](/azure/private-link/private-endpoint-overview) for the key vault might not be configured correctly. Contoso has to verify that:
 
 1. A private endpoint exists for the key vault, and it's associated with the correct virtual network.
 1. A [private DNS zone](/azure/dns/private-dns-overview) exists for the key vault (for example, `privatelink.vaultcore.azure.net`), and it's linked to the virtual network.
 1. The private DNS zone contains an *A* record that maps the key vault hostname to the private IP address of the private endpoint.
 
-When Contoso runs the DNS resolution test for West Europe, they discover that the command returns a public IP address. After investigating, they find that the private DNS zone for the key vault wasn't linked to the West Europe virtual network. After they link the private DNS zone to the virtual network and rerun the test, the DNS resolution returns the correct private IP address.
+When Contoso runs the DNS resolution test for West Europe, the company discovers that the command returns a public IP address. After investigating, it finds that the private DNS zone for the key vault wasn't linked to the West Europe virtual network. After Contoso links the private DNS zone to the virtual network, and reruns the test, the DNS resolution returns the correct private IP address.
 
-Once DNS resolution returns the correct private IP address in both regions, the next step is to test network connectivity to the key vault by using [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity):
+After DNS resolution returns the correct private IP address in both regions, the next step is to test network connectivity to the key vault by using [Test-NetworkConnectivity](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-NetworkConnectivity):
 
 ```powershell
 Test-NetworkConnectivity -EnvironmentId "00000000-0000-0000-0000-000000000001" -Destination "contoso-keyvault.vault.azure.net" -Port 443 -Region "westeurope"
 Test-NetworkConnectivity -EnvironmentId "00000000-0000-0000-0000-000000000001" -Destination "contoso-keyvault.vault.azure.net" -Port 443 -Region "northeurope"
 ```
 
-If the connection fails, the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview) rules or firewall settings might be blocking traffic from the delegated subnet to the key vault. Contoso needs to check:
+If the connection fails, the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview) rules or firewall settings might be blocking traffic from the delegated subnet to the key vault. Contoso has to check whether:
 
 1. The NSG rules that are associated with the delegated subnet allow outbound traffic on port 443.
 1. The key vault firewall allows incoming connections from the delegated subnet's IP range.
 1. Any [Azure Firewall](/azure/firewall/overview) or network virtual appliance in the traffic path allows the connection.
 
-In this case, Contoso finds that the key vault firewall wasn't configured to allow incoming connections from any private source. After they update the firewall settings to allow connections from the delegated subnet, the network connectivity test succeeds and the Power Platform environment can successfully connect to the key vault through the virtual network.
+In this case, Contoso finds that the key vault firewall wasn't configured to allow incoming connections from any private source. After the firewall settings are updated to allow connections from the delegated subnet, the network connectivity test succeeds, and the Power Platform environment can successfully connect to the key vault through the virtual network.
 
 ### Connect to a web server hosted in an on-premises network
 
-Contoso also wants their Power Platform environment to connect to a web server that's hosted in their on-premises network. The web server is accessible through their virtual network via an [ExpressRoute](/azure/expressroute/expressroute-introduction) connection. When Contoso tries to connect to the web server from their Power Platform environment, the connection fails.
+Contoso also wants its Power Platform environment to connect to a web server that's hosted in its on-premises network. The web server is accessible through the company's virtual network through an [ExpressRoute](/azure/expressroute/expressroute-introduction) connection. When Contoso tries to connect to the web server from its Power Platform environment, the connection fails.
 
-Even though DNS resolution returns the correct IP address and the network connectivity test succeeds, Contoso still can't access the web server. To diagnose this issue, they test the TLS handshake by using [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake):
+Even though DNS resolution returns the correct IP address and the network connectivity test succeeds, Contoso still can't access the web server. To diagnose this issue, the company tests the TLS handshake by using [Test-TLSHandshake](/powershell/module/microsoft.powerplatform.enterprisepolicies/Test-TLSHandshake):
 
 ```powershell
 Test-TLSHandshake -EnvironmentId "00000000-0000-0000-0000-000000000001" -Destination "webserver.contoso.local" -Port 443 -Region "westeurope"
@@ -211,6 +211,6 @@ Test-TLSHandshake -EnvironmentId "00000000-0000-0000-0000-000000000001" -Destina
 
 If the TLS handshake fails, the output provides details about the certificate, cipher suite, and protocol that were used. Contoso can use this information to identify any certificate or TLS configuration issues. The command does an initial analysis of the returned output and alerts about some basic issues. However, Contoso can analyze the full output to investigate the issue in more detail.
 
-In this case, Contoso discovers that the TLS handshake can't be established because the certificate isn't trusted. After investigating the certificate details in the command output, they determine that the web server is using a self-signed certificate. Power Platform requires publicly trusted certificates for TLS connections. After Contoso updates the web server to use a certificate that's signed by a [publicly trusted certificate authority](/power-platform/admin/vnet-support-overview#my-on-premises-endpoint-tls-certificates-arent-signed-by-well-known-root-certification-authorities-ca-do-you-support-unknown-certificates), the TLS handshake succeeds and the Power Platform environment can connect to the web server.
+In this case, Contoso discovers that the TLS handshake can't be established because the certificate isn't trusted. After investigating the certificate details in the command output, the company determines that the web server is using a self-signed certificate. Power Platform requires publicly trusted certificates for TLS connections. After Contoso updates the web server to use a certificate that's signed by a [publicly trusted certificate authority](/power-platform/admin/vnet-support-overview#my-on-premises-endpoint-tls-certificates-arent-signed-by-well-known-root-certification-authorities-ca-do-you-support-unknown-certificates), the TLS handshake succeeds and the Power Platform environment can connect to the web server.
 
 For more information on certificate authorities trusted by Azure services, see [Azure Certificate Authority details](/azure/security/fundamentals/azure-certificate-authority-details).
