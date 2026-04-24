@@ -17,7 +17,7 @@ appliesto:
 
 This article provides a workaround to solve the event 10016 that's logged in Windows when accessing DCOM components.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016 and later 
 _Original KB number:_ &nbsp; 4022522
 
 ## Symptoms
