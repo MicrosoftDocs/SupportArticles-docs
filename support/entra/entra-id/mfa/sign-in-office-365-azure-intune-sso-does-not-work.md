@@ -65,7 +65,7 @@ Before you continue, make sure that the following conditions are true:
 
 - The keyboard on the client computer is working correctly, and the user name and password are entered correctly.
 
-## Solution
+## Resolution
 
 To troubleshoot this problem, use one or more of the following methods, depending on the cause of the problem.
 
