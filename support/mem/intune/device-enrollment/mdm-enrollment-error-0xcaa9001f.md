@@ -1,7 +1,7 @@
 ---
 title: MDM enrollment error 0xcaa9001f for co-managed Windows devices
 description: Describes an issue in which MDM enrollment fails and generates error 0xcaa9001f for co-managed Windows devices that are Microsoft Entra hybrid joined and managed by using Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\HybridJoin
 ms.reviewer: kaushika, meerak

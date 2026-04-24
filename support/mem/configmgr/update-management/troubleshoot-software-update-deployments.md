@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software update deployments
 description: Describes how to troubleshoot software update deployments that don't run successfully. For example, updates fail to download and there are unexpected reboots during update installation.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, andad
 ms.custom: sap:Software Update Management (SUM)\Software Update Groups or Deployments
 ---
