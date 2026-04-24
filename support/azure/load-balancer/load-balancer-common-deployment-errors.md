@@ -36,14 +36,14 @@ Use this article to troubleshoot common Azure Load Balancer deployment errors an
 |VMScaleSetCannotReferenceLoadbalancerWhenLargeScaleOrCrossAZ | Basic Load Balancer isn't supported for multiple-placement group Virtual Machine Scale Sets or cross-availability zone Virtual Machine Scale Set. Use Standard Load Balancer instead. |
 |MarketplacePurchaseEligibilityFailed | Switch to the correct Administrative account to enable purchases due to subscription being an EA Subscription. You can read more [here](/azure/marketplace/marketplace-faq-publisher-guide#what-could-block-a-customer-from-completing-a-purchase-). |
 |ResourceDeploymentFailure| If your load balancer is in a failed state, follow these steps to bring it back from the failed state:
-<p><br>1. Go to https://resources.azure.com, and sign in with your Azure portal credentials.</br>
+<br>1. Go to https://resources.azure.com, and sign in with your Azure portal credentials.</br>
 <br>2. Select **Read/Write**.</br>
 <br>3. On the left, expand **Subscriptions**, and then expand the Subscription with the Load Balancer to update.</br>
 <br>4. Expand **ResourceGroups**, and then expand the resource group with the Load Balancer to update.</br>
 <br>5. Select **Microsoft.Network** > **LoadBalancers**, and then select the Load Balancer to update, **LoadBalancer_1**.</br>
 <br>6. On the display page for **LoadBalancer_1**, select **GET** > **Edit**.</br>
 <br>7. Update the **ProvisioningState** value from **Failed** to **Succeeded**.</br>
-<br>8. Select **PUT**.</br> </p>|
+<br>8. Select **PUT**.</br> |
 |LoadBalancerWithoutFrontendIPCantHaveChildResources | A Load Balancer resource that has no frontend IP configurations, can't have associated child resources or components associated to it. In order to mitigate this error, add a frontend IP configuration and then add the resources you're trying to add. |
 | LoadBalancerRuleCountLimitReachedForNic | A backend pool member's network interface (virtual machine, Virtual Machine Scale Set) can't be associated to more than 300 rules. Reduce the number of rules or use another Load Balancer. This limit is documented on the [Load Balancer limits page](/azure/azure-resource-manager/management/azure-subscription-service-limits#load-balancer).
 | LoadBalancerInUseByVirtualMachineScaleSet | The Load Balancer resource is in use by a Virtual Machine Scale Set and can't be deleted. Use the Azure Resource Manager ID provided in the error message to search for the Virtual Machine Scale Set in order to delete it. | 
