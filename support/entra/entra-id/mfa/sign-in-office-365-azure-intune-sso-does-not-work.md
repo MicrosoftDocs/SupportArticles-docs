@@ -166,4 +166,4 @@ AD FS then falls back to the correct endpoint, based on the SSO Relying Party Tr
 
 ### Resolution 7: Reset disabled AD FS service endpoint setting to default configuration
 
-For more information about how to do this reset, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
+For more information about how to do the reset, see [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/troubleshoot/microsoft-365/admin/active-directory/sign-in-fails-if-federation-endpoint-changes).
