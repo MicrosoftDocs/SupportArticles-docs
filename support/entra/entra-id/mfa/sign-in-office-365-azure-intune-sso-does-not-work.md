@@ -19,11 +19,11 @@ When you try to access a Microsoft cloud service like Office 365, Azure, or Intu
 When you use a web browser to access the cloud service portal from the same computer by using a federated account, you experience one of the following symptoms:
 
 - You connect to the portal endpoint and receive one of the following error messages:
-    - **Internet Explorer cannot display the webpage.**
+    - **Microsoft Edge cannot display the webpage.**
     - **403 Page Not Found**
 
 - You connect to the Active Directory Federation Services (AD FS) endpoint and receive one of the following error messages:
-    - **Internet Explorer cannot display the webpage.**
+    - **Microsoft Edge cannot display the webpage.**
     - **403 Page Not Found**
 
 - You receive a certificate warning when you connect to the AD FS endpoint.
@@ -119,7 +119,7 @@ If the IP address that's resolved is incorrect based on the previous steps, and 
 > [!NOTE]
 > If client devices are attached to only the corporate network, go to the next step.
 
-4. Add the AD FS FQDN to the proxy bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+4. Add the AD FS FQDN to the proxy bypass list. For more information, see [Proxy Support in Microsoft Edge](/deployedge/configure-microsoft-edge-proxy-support).
 
 ### Resolution 3: Certificate warning when you connect to the AD FS endpoint
 
@@ -142,15 +142,15 @@ To resolve this problem, follow these steps:
    > [!NOTE]
    > A wildcard value (for example, "*.consoto.com") also works in this configuration.
 
-1. Add the AD FS FQDN to the proxy bypass list. For more information, see [Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On](/previous-versions/troubleshoot/browsers/connectivity-navigation/internet-explorer-uses-proxy-server-local-ip-address).
+1. Add the AD FS FQDN to the proxy bypass list. For more information, see [Proxy Support in Microsoft Edge](/deployedge/configure-microsoft-edge-proxy-support).
 
 ### Resolution 5: Third-party web browser doesn't support Extended Protection for Authentication, and you receive looping authentication prompts
 
 To resolve this problem, follow these steps:
 
-- Use Internet Explorer instead of a third-party web browser that doesn't support Extended Protection for Authentication.
+- Use Microsoft Edge instead of a third-party web browser that doesn't support Extended Protection for Authentication.
 
-If Internet Explorer isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/sign-in/federated-user-repeatedly-prompted-for-credentials).
+If Microsoft Edge isn't an option, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](/troubleshoot/microsoft-365/admin/sign-in/federated-user-repeatedly-prompted-for-credentials).
 
 
 ### Resolution 6: "Access Denied" error message when you try to connect to login.microsoftonline.com
