@@ -90,19 +90,16 @@ When source and destination accounts are in the same perimeter, traffic between 
 
    To permit this request, ensure that: 
    
-   Outbound access is granted to the destination account from the client. 
-   
-   Inbound access is granted to the client from the destination account. 
+   - Outbound access is granted to the destination account from the client. 
+   - Inbound access is granted to the client from the destination account. 
    
 1. The destination account sends a Get Block request to the source storage account. 
 
    To permit this request, ensure that: 
    
-   Outbound access is granted to the source account from the destination account. 
-   
-   Inbound access is granted to the destination account from the source account. 
-   
-   Inbound access is granted to the client from the source account.  
+   - Outbound access is granted to the source account from the destination account. 
+   - Inbound access is granted to the destination account from the source account. 
+   - Inbound access is granted to the client from the source account.  
    
 You can connect NSPs through a perimeter link to allow intra-perimeter communication between linked NSPs and simplify access rule requirements, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). 
 
