@@ -85,7 +85,7 @@ Try to browse to `http://www.msn.com`. If this attempt doesn't work, troubleshoo
 
 To resolve this problem, follow these steps:
 
-1. Eliminate IP connectivity issues by using [Resolution 1](#resolution-1-cant-connect-to-cloud-service-portal-or-to-ad-fs).
+1. Eliminate IP connectivity issues by using [Resolution 1](#resolution-1-cant-connect-to-cloud-service-portal-or-ad-fs).
 
 1. At the command prompt, enter `nslookup <AD FS 2.0 FQDN>`, and then press Enter to determine whether DNS is resolving the AD FS service name correctly.
 
