@@ -15843,6 +15843,11 @@
       "source_path": "support/mem/intune/general/nac-integration-errors.md",
       "redirect_url": "/previous-versions/troubleshoot/intune/nac-integration-errors",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption",
+      "redirect_document_id": false
     }
   ]
 }
