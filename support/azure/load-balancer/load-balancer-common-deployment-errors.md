@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common deployment errors
+title: Azure Load Balancer error codes
 titleSuffix: Azure Load Balancer
 description: Learn how to troubleshoot common Azure Load Balancer deployment errors, fix issues faster, and restore traffic flow—review the solutions now.
 services: load-balancer
@@ -13,7 +13,7 @@ ms.custom: template-concept, engagement-fy23
 # Customer intent: "As a network engineer, I want to troubleshoot Azure Load Balancer deployment errors, so that I can efficiently resolve issues and ensure optimal load balancing for my applications."
 ---
 
-# Troubleshoot common Azure deployment errors with Azure Load Balancer
+# Troubleshoot Azure Load Balancer error codes
 
 ## Summary
 
