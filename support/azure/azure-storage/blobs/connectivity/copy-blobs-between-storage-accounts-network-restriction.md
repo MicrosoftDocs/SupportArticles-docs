@@ -62,9 +62,49 @@ The following image shows the process of copying blobs between storage accounts 
 Here's the full process of this mechanism for the two scenarios:
 
 1. The client sends a PutBlockfromURL request to the destination storage.
-2. The destination storage receives the requests, and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it receives a "403 Forbidden" error.
-3. After the destination storage receives the "403 Forbidden" error, it sends another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
-4. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
+1. The destination storage receives the requests, and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it receives a "403 Forbidden" error.
+1. After the destination storage receives the "403 Forbidden" error, it sends another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
+1. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
+
+### Scenario 3: The client uses public endpoints, and network security perimeter is enforced on one or both storage accounts
+
+In this scenario, you must configure network security perimeter access rules so the request will succeed for all three paths: client-to-destination, client-to-source, and destination-to-source. If there is no authorized access across even one of the three, the copy operation will not succeed, typically with a 403 Forbidden error.  
+
+**Source and Destination Accounts in the same perimeter** 
+
+When source and destination accounts are in the same perimeter, traffic between them is allowed as intra-perimeter communication. In this scenario, you need to ensure that inbound access is granted to the client from both accounts. 
+
+1. The client sends a Put Block From URL request to the destination storage account.  
+
+   To permit this request, ensure that inbound access is granted to the client from the destination account. 
+   
+1. The destination account sends a Get Block request to the source storage account. 
+
+   The destination storage account receives the request and tries to retrieve blocks from the given source URL. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client. 
+   
+   To permit this request, ensure that inbound access is granted to the client from the source account. 
+   
+**Client, Source Account, and Destination Account in different perimeters** 
+
+1. The client sends a Put Block From URL request to the destination storage account.  
+
+   To permit this request, ensure that: 
+   
+   Outbound access is granted to the destination account from the client. 
+   
+   Inbound access is granted to the client from the destination account. 
+   
+1. The destination account sends a Get Block request to the source storage account. 
+
+   To permit this request, ensure that: 
+   
+   Outbound access is granted to the source account from the destination account. 
+   
+   Inbound access is granted to the destination account from the source account. 
+   
+   Inbound access is granted to the client from the source account.  
+   
+You can connect NSPs through a perimeter link to allow intra-perimeter communication between linked NSPs and simplify access rule requirements, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). 
 
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
 A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke VNets from a VM in a Hub VNet. You can find a "403 This request is not authorized to perform this operation - CannotVerifyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
