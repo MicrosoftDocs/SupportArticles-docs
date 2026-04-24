@@ -71,7 +71,7 @@ To troubleshoot this problem, use one or more of the following methods, dependin
 
 ### Resolution 1: Can't connect to cloud service portal or AD FS 
 
-Try to browse to `http://www.msn.com`. If this doesn't work, troubleshoot network connectivity issues. To do this, follow these steps:
+Try to browse to `http://www.msn.com`. If this attempt doesn't work, troubleshoot network connectivity issues. Follow these steps:
 
 1. At a command prompt, use the ipconfig and ping tools to troubleshoot IP connectivity. For more information, see [How to troubleshoot basic TCP/IP problems](https://support.microsoft.com/help/169790).
 
@@ -108,7 +108,7 @@ If the client is outside the corporate network, make sure that the IP address th
 
 - `192.168.x.x`
 
-If the IP address that's resolved is incorrect based on the previous steps, and other client computers don't experience the same behavior, do the following:
+If the IP address that's resolved is incorrect based on the previous steps, and other client computers don't experience the same behavior, follow these steps:
 
 1. At the command prompt, enter `ipconfig /all`, and then check whether the Primary DNS Server entry is appropriate for the network to which the client is attached.
 
@@ -146,7 +146,7 @@ To resolve this problem, follow these steps:
 
 ### Resolution 5: Third-party web browser doesn't support Extended Protection for Authentication, and you receive looping authentication prompts
 
-To resolve this problem, do the following:
+To resolve this problem, follow these steps:
 
 - Use Internet Explorer instead of a third-party web browser that doesn't support Extended Protection for Authentication.
 
