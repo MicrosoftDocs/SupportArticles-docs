@@ -9,14 +9,17 @@ ms.topic: troubleshooting
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
-ms.reviewer: 
+  - CI 11297
+ms.reviewer: denniwil, v-lisalozano 
 appliesto: 
-  - Access 2010
-  - Microsoft Office Access 2007
-  - Microsoft Office Access 2003
+  - Access 2024
+  - Access 2021
+  - Access 2019
+  - Access 2016
 search.appverid: MET150
-ms.date: 05/26/2025
+ms.date: 04/23/2026
 ---
+
 # "Cannot find the input table or query" or "record source doesn't exist" error when using Access
 
 _Original KB number:_ &nbsp; 287696
@@ -28,23 +31,6 @@ _Original KB number:_ &nbsp; 287696
 
 When you open or make a reference to a linked table in Microsoft Access, you may receive one of the following error messages:
 
-Error message 1
-
-> The Microsoft Jet database engine cannot find the input table or query '\<**name**>'. Make sure it exists and that its name is spelled correctly.
-
-Error message 2
-
-> The record source '\<**name**>' specified on this form or report does not exist.
-
-Error message 3
-
-- In Microsoft Access 2002
-
-  - > Microsoft Access can't find the object '\<**name**>.'
-  - > Run-time error '7874': Microsoft Access can't find the object '\<**name**>.'
-
-- In Microsoft Office Access 2003, Microsoft Office Access 2007, and Microsoft Office Access 2010
-  
   - > Microsoft Office Access can't find the object '\<**name**>.'
   - > Run-time error '7874': Microsoft Office Access can't find the object '\<**name**>.'
 

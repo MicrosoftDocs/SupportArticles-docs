@@ -39,7 +39,6 @@ Examples of tenant-defined or user-defined configuration data that might be retr
 - Meeting subject lines and titles
 
 > [!IMPORTANT]
-
 > Customer content such as email messages, documents, and chat conversations is **never** accessed by the diagnostic service.
 
 ## Time frame for which data is retained

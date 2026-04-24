@@ -1052,6 +1052,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Cluster service fails to start'
       href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
+    - name: Cluster service doesn't start after you apply CIS Benchmark v1.x
+      href: ./high-availability/cluster-service-doesnt-start-after-hardening.md
     - name: Cluster service startup options
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node

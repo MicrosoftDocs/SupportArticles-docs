@@ -1,7 +1,6 @@
 ---
 title: Use managed identities to call Microsoft Graph APIs in VB.Net and C#
 description: Guides to use Managed Identities to call Microsoft Graph APIs in VB.Net and C#.
-ms.author: raheld
 ms.date: 01/09/2025
 ms.service: entra-id
 ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
@@ -58,12 +57,12 @@ foreach($permission in $Permissions)
   $AppRole = $GraphServicePrincipal.AppRoles | Where-Object {$_.Value -eq $permission -and $_.AllowedMemberTypes -contains "Application"}
 
  foreach($AppRoleAssignment in $AppRoleAssignments)
-	{
-		if($AppRole.Id -eq $AppRoleAssignment.Id) {
-			Remove-MgServiceAppRoleAssignment -ObjectId $sp.ObjectId -AppRoleAssignmentId $AppRoleAssignment.objectid
-		}
-		
-	}
+   {
+      if($AppRole.Id -eq $AppRoleAssignment.Id) {
+         Remove-MgServiceAppRoleAssignment -ObjectId $sp.ObjectId -AppRoleAssignmentId $AppRoleAssignment.objectid
+      }
+      
+   }
 }
 #>
 ```
