@@ -49,7 +49,7 @@ Use this article to troubleshoot common Azure Load Balancer deployment errors an
 | LoadBalancerInUseByVirtualMachineScaleSet | The Load Balancer resource is in use by a Virtual Machine Scale Set and can't be deleted. Use the Azure Resource Manager ID provided in the error message to search for the Virtual Machine Scale Set in order to delete it. | 
 | SpecifiedAllocatedOutboundPortsForOutboundRuleIsNotAMultipleOfEight | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports isn't a multiply of 8.
 | SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAllowedPortsPerRule | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than 64000.
-| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAvailablePorts | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than currently available. |
+| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAvailablePorts | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than currently available. 
 
 ## Next steps
 
