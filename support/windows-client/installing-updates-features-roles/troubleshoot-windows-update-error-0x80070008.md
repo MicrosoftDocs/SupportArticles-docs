@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update error 0x80070008
-description: Describes how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY), which occurs when the computer doesn't have enough memory to complete the update installation.
+description: Describes how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) that occurs if the computer doesn't have enough memory to complete the update installation.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/28/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) occurs when the computer doesn't have enough available memory (RAM) to install an update. This error commonly occurs on virtual machines (VMs) that have limited RAM, or when other processes consume most of the available memory during the update process. This article describes how to identify the cause of the error and walks you through several steps to resolve it, including freeing up memory, adjusting virtual memory settings, and resizing Azure VMs.
+Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) occurs when the computer doesn't have enough available memory (RAM) to install an update. This error commonly occurs on virtual machines (VMs) that have limited RAM, or when other processes consume most of the available memory during the update process. This article describes how to identify the cause of the error. The article walks you through several steps to resolve the error, including freeing up memory, adjusting virtual memory settings, and resizing Azure VMs.
 
 ## Symptoms
 
@@ -50,7 +50,7 @@ This error occurs when the computer doesn't have enough available memory (RAM) t
 - During the update, other applications or services consume most of the available memory.
 - The computer can't allocate contiguous memory blocks of sufficient size because of memory fragmentation.
 
-This issue is more likely to occur if the update package is large. Such updates might require more memory than is available for extraction and staging.
+This issue is more likely to occur if the update package is large. Such updates might require more memory than what's available for extraction and staging.
 
 ## Resolution
 
@@ -59,15 +59,15 @@ This issue is more likely to occur if the update package is large. Such updates 
 
 ### Step 1: Free up memory
 
-1. Before you install updates, stop all unnecessary services and applications before.
-1. After you stop services and applications, restart the Windows Update service. For example, open a Command Prompt window and then run the following commands:
+1. Before you install updates, stop all unnecessary services and applications.
+1. After you stop services and applications, restart the Windows Update service. For example, open a Command Prompt window, and then run the following commands:
 
    ```console
    net stop wuauserv
    net start wuauserv
    ```
 
-1. Try again to install the update. If it still doesn't install, continue to step 2 (for virtual machines) or step 3 (for all computers).
+1. Try again to install the update. If the update still doesn't install, go to step 2 (for virtual machines) or step 3 (for all computers).
 
 ### Step 2: Increase VM memory (Azure)
 
@@ -85,21 +85,22 @@ For more information, see [Resize a virtual machine](/azure/virtual-machines/res
 
 If increasing physical memory isn't possible, increase the page file size. This setting allows the computer to use larger sections of the hard disk for memory. Follow these steps:
 
-1. On the affected computer, open Settings, select **System**, and then under **Related links**, select **Advanced system settings**.
-1. On the **Advanced** tab of the System Properties dialog box, under **Performance**, select **Settings**.
-1. Select **Advanced**, and then under **Virtual memory**, select **Change**.
-1. If **Automatically manage paging file size for all drives** is selected, deselect it.
+1. On the affected computer, open **Settings**, and select **System**.
+1. Under **Related links**, select **Advanced system settings**.
+1. On the **Advanced** tab of the **System Properties** dialog box, locate the **Performance** section, and then select **Settings**.
+1. Select **Advanced**, locate the **Virtual memory** section, and then select **Change**.
+1. If the **Automatically manage paging file size for all drives** checkbox is selected, clear it.
 1. Select **Custom size**, and then type new values for the initial and maximum paging file size. The new values should be greater than 1.5 times the physical RAM capacity.
 1. Restart the computer.
 1. Try again to install the update. If it still doesn't install, continue to step 4 (for virtual machines) or step 5 (for all computers).
 
 ### Step 4: Use the Run Command reset tool (Azure)
 
-If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
 
-This tool resets the Windows Update servicing stack, which can clear memory-related lock states in the update agent.
+This tool resets the Windows Update servicing stack. The reset can clear memory-related lock states in the update agent.
 
-After you run the tool, try to install the update again. If it still doesn't install, continue to step 5.
+After you run the tool, try again to install the update. If it still doesn't install, go to step 5.
 
 ### Step 5: Install updates individually
 
