@@ -1,6 +1,6 @@
 ---
 title: Cannot save changes made to an item to store while migrating a mailbox to Exchange Online
-description: This article fixes an issue in which you can't migrate mailboxes from on-premises to Exchange Online with the error "Cannot save changes made to an item to store."
+description: This article explains how to fix an issue in which you can't migrate mailboxes from on-premises to Exchange Online with the error "Cannot save changes made to an item to store."
 author: cloud-writer
 ms.author: meerak
 ms.reviewer: pramods, v-six, v-kccross
@@ -61,4 +61,4 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 1. If the folder that has too many items is accessible from Outlook or through the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) tool, move some items to other folders and resume the migration.
 
-   It's possible that the **Deferred action** folder contains more than 1 million items. You can delete some of the items (HardDelete) using the MFCMAPI tool. This folder is under the root of the mailbox. To learn more about this folder, see [this article](/openspecs/exchange_server_protocols/ms-oxorule/0ae81043-05e6-47e4-aa3f-f546512e96b6).
+   It's possible that the **Deferred action** folder contains more than 1 million items. You can delete some of the items (HardDelete) using the MFCMAPI tool. This folder is under the root of the mailbox. To learn more about this folder, see the [Glossary](/openspecs/exchange_server_protocols/ms-oxorule/0ae81043-05e6-47e4-aa3f-f546512e96b6) for the MS-OXORULE Email Rules Protocol.
