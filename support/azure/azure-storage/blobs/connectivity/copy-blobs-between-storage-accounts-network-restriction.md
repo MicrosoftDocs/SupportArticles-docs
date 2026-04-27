@@ -70,6 +70,10 @@ Here's the full process of this mechanism for the two scenarios:
 
 In this scenario, you must configure network security perimeter access rules so the request will succeed for all three paths: client-to-destination, client-to-source, and destination-to-source. If there is no authorized access across even one of the three, the copy operation will not succeed, typically with a 403 Forbidden error.  
 
+**Client, Source and Destination Accounts in the same perimeter** 
+
+When the client, source account, and destination account are all within the same perimeter, traffic between them is allowed as intra-perimeter communication. This is the recommended configuration, as intra-perimeter communication ensures that all three paths are authorized without requiring additional access rules. 
+
 **Source and Destination Accounts in the same perimeter** 
 
 When source and destination accounts are in the same perimeter, traffic between them is allowed as intra-perimeter communication. In this scenario, you need to ensure that inbound access is granted to the client from both accounts. 
@@ -86,6 +90,8 @@ When source and destination accounts are in the same perimeter, traffic between 
    
 **Client, Source Account, and Destination Account in different perimeters** 
 
+When the client, source account, and destination account are all in different perimeters, you can allow intra-perimeter communication and simplify access rule requirements by using perimeter links, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). If perimeter links are not used, the following access rules must be configured:
+
 1. The client sends a Put Block From URL request to the destination storage account.  
 
    To permit this request, ensure that: 
@@ -101,7 +107,6 @@ When source and destination accounts are in the same perimeter, traffic between 
    - Inbound access is granted to the destination account from the source account. 
    - Inbound access is granted to the client from the source account.  
    
-You can connect NSPs through a perimeter link to allow intra-perimeter communication between linked NSPs and simplify access rule requirements, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). 
 
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
 A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke VNets from a VM in a Hub VNet. You can find a "403 This request is not authorized to perform this operation - CannotVerifyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
