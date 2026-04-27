@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Windows Update Error 0x80070008
-description: Learn how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) that occurs when there's insufficient memory to complete the update installation.
+title: Troubleshoot Windows Update error 0x80070008
+description: Describes how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY), which occurs when the computer doesn't have enough memory to complete the update installation.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/28/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) occurs when the system doesn't have enough available memory (RAM) to install an update. This error commonly occurs on virtual machines (VMs) that have limited RAM, or when other processes consume most of the available memory during the update process. This article describes how to identify the cause of the error and walks you through several steps to resolve it, including freeing up memory, adjusting virtual memory settings, and resizing Azure VMs.
+Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) occurs when the computer doesn't have enough available memory (RAM) to install an update. This error commonly occurs on virtual machines (VMs) that have limited RAM, or when other processes consume most of the available memory during the update process. This article describes how to identify the cause of the error and walks you through several steps to resolve it, including freeing up memory, adjusting virtual memory settings, and resizing Azure VMs.
 
 ## Symptoms
 
@@ -44,11 +44,11 @@ To get more information, review the following resources:
 
 ## Cause
 
-This error occurs when the system doesn't have enough available memory (RAM) to install the update. Common causes include:
+This error occurs when the computer doesn't have enough available memory (RAM) to install the update. Common causes include:
 
-- The system is a VM that has a small memory allocation (for example, 1 GB or less).
+- The computer is a VM that has a small memory allocation (for example, 1 GB or less).
 - During the update, other applications or services consume most of the available memory.
-- The system can't allocate contiguous memory blocks of sufficient size because of memory fragmentation.
+- The computer can't allocate contiguous memory blocks of sufficient size because of memory fragmentation.
 
 This issue is more likely to occur if the update package is large. Such updates might require more memory than is available for extraction and staging.
 
@@ -67,7 +67,7 @@ This issue is more likely to occur if the update package is large. Such updates 
    net start wuauserv
    ```
 
-1. Try again to install the update. If it still doesn't install, continue to step 2 (for virtual machines) or step 3 (for all systems).
+1. Try again to install the update. If it still doesn't install, continue to step 2 (for virtual machines) or step 3 (for all computers).
 
 ### Step 2: Increase VM memory (Azure)
 
@@ -83,7 +83,7 @@ For more information, see [Resize a virtual machine](/azure/virtual-machines/res
 
 ### Step 3: Configure virtual memory
 
-If increasing physical memory isn't possible, increase the page file size. This setting allows the system to use larger sections of the hard disk for memory. Follow these steps:
+If increasing physical memory isn't possible, increase the page file size. This setting allows the computer to use larger sections of the hard disk for memory. Follow these steps:
 
 1. On the affected computer, open Settings, select **System**, and then under **Related links**, select **Advanced system settings**.
 1. On the **Advanced** tab of the System Properties dialog box, under **Performance**, select **Settings**.
@@ -91,7 +91,7 @@ If increasing physical memory isn't possible, increase the page file size. This 
 1. If **Automatically manage paging file size for all drives** is selected, deselect it.
 1. Select **Custom size**, and then type new values for the initial and maximum paging file size. The new values should be greater than 1.5 times the physical RAM capacity.
 1. Restart the computer.
-1. Try again to install the update. If it still doesn't install, continue to step 4 (for virtual machines) or step 5 (for all systems).
+1. Try again to install the update. If it still doesn't install, continue to step 4 (for virtual machines) or step 5 (for all computers).
 
 ### Step 4: Use the Run Command reset tool (Azure)
 
