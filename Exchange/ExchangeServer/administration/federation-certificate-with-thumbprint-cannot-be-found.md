@@ -1,32 +1,33 @@
 ---
-title: Fail to make changes to federation trust
+title: Federation certificate with the thumbprint cannot be found
 description: Provides a workaround to resolve the error (Federation certificate with the thumbprint cannot be found) that occurs when you make changes to federation trust.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: brenle, jmartin, v-six
+ms.reviewer: brenle, jmartin, v-six, v-kccross
 ms.custom: 
   - sap:Plan and Deploy\Need help to deploy Oauth, HMA, ADFS
   - Exchange Server
   - CSSTroubleshoot
+  - CI 9823
+  - CI 11513
 search.appverid: 
   - MET150
 appliesto: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
-  - Exchange Server 2010 Service Pack 3
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
-ms.date: 01/24/2024
+  - Exchange Server SE
+  - Exchange Server 2019
+  - Exchange Server 2016
+ms.date: 04/26/2026
 ---
 # Error when you make changes to federation trust: Federation certificate with the thumbprint cannot be found
 
 _Original KB number:_ &nbsp; 3215261
+
+## Summary
+
+This issue can occur after an Exchange server is recovered by using the Setup /m:RecoverServer option. In this state, Exchange still references a federation trust certificate that is no longer available, which causes federation management tasks to fail. This article describes how to remove the stale federation trust configuration and recreate the trust.
 
 ## Symptoms
 
@@ -39,7 +40,7 @@ Assume that you try to perform the following operations in an Exchange organizat
 
 In this situation, you receive an error message that resembles the following:
 
-> Federation certificate with the thumbprint [**certificate thumbprint**]cannot be found.  
+> Federation certificate with the thumbprint [**certificate thumbprint**] cannot be found.  
 > \+ CategoryInfo: InvalidArgument: (:) [Set-FederationTrust], FederationCertificateInvalidException  
 > \+ FullyQualifiedErrorId: [Server= **Server Name**,RequestId= **RequestId**,TimeStamp= **Date** **Time**] [FailureCategory=Cmdlet-FederationCertificateInvalidException] D02898C6,Microsoft.Exchange.Management.SystemConfigurationTasks.SetFederationTrust  
 > \+ PSComputerName: **ComputerName**
@@ -48,27 +49,27 @@ This issue occurs after you recover the only Exchange server in your environment
 
 ## Cause
 
-This issue occurs because the Exchange federation trust certificate (OrgPrivCertificate) that's referenced by the Microsoft Exchange federation trust object is missing. However, the federation configuration mistakenly recognizes it as still there. Therefore, any cmdlets that edit, manipulate, or use the federation trust to look for this certificate fail.
+This issue occurs because the Exchange federation trust certificate (`OrgPrivCertificate`) that's referenced by the Microsoft Exchange federation trust object is missing. However, the federation configuration mistakenly recognizes the certificate as still there. Therefore, any PowerShell cmdlets that edit, manipulate, or use the federation trust to look for this certificate fail.
 
 ## Workaround
 
 To work around this issue, use the [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) to delete the current federation trust and create a new one.
 
-To do this, follow these steps:
+Follow these steps:
 
-1. Open ADSI Edit. To do this, click **Start**, click **Run**, type *ADSIEdit.msc*, and then click **OK**.
+1. Open ADSI Edit. Select **Start**, select **Run**, enter *ADSIEdit.msc*, and then select **OK**.
 
-2. Locate **CN=Federation,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com**, and do the following:
-    1. Clear the value of the **msExchFedAccountNamespace** attribute.
-    2. Clear the value of the **msExchFedDelegationTrust** attribute.
-    3. Set the value of the msExchFedIsEnabled **attribute** to **False**.
+1. Locate `CN=Federation,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and do the following:
+    1. Clear the value of the `msExchFedAccountNamespace` attribute.
+    1. Clear the value of the `msExchFedDelegationTrust` attribute.
+    1. Set the value of the `msExchFedIsEnabled` attribute to **False**.
 
-3. Locate **CN=Microsoft Federation Gateway,CN=Federation Trusts,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com**, and remove the federation trust. For example, remove Microsoft Federation Gateway.
+1. Locate `CN=Microsoft Federation Gateway,CN=Federation Trusts,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and remove the federation trust. For example, remove Microsoft Federation Gateway.
 
-4. Locate **CN=Accepted Domains,CN=Transport Settings,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com**, and clear the value of the **msExchFedAcceptedDomainLink** attribute for each accepted domain name.
+1. Locate `CN=Accepted Domains,CN=Transport Settings,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Domain,DC=com`, and clear the value of the `msExchFedAcceptedDomainLink` attribute for each accepted domain name.
 
-5. Re-create the federation trust. For more information, see [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).
+1. Recreate the federation trust. For more information, see [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).
 
 ## More information
 
-If you have multiple Exchange servers in your environment, you should be able to export and import the federation certificate from another server.
+If you have multiple Exchange servers in your environment, export and import the federation certificate from another server.
