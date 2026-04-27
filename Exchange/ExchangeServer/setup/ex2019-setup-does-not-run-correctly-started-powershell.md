@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: lusassl, v-six, v-kccross
 manager: dcscontentpm
 ms.custom: 
-  - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
+  - sap:Setup Issues
   - Exchange Server
   - CSSTroubleshoot
   - CI 9823
@@ -19,7 +19,6 @@ appliesto:
   - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
 ms.date: 04/26/2026
 ---
 
@@ -27,7 +26,7 @@ ms.date: 04/26/2026
 
 ## Summary
 
-This article explains a known issue in which Exchange Server setup might not run the expected upgrade when you start Setup.exe from PowerShell or at the command prompt by using only the file name. It also provides the correct syntax to run Setup from the installation source.
+This article explains a known issue in which Exchange Server setup might not run the expected upgrade when you start Setup.exe from PowerShell or at the command prompt by using only the file name. The article also provides the correct syntax to run setup.exe from the installation source.
 
 ## Symptoms
 
