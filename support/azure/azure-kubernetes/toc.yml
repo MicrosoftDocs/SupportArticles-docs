@@ -413,6 +413,8 @@ items:
       href: error-codes/virtualnetworknotinsucceededstate-error.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_K8SDownloadTimeout error
+      href: error-codes/vmextensionerror-k8sdownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
       href: error-codes/vmextensionerror-outboundconnfail.md
     - name: VMExtensionError_K8SAPIServerConnFail error
