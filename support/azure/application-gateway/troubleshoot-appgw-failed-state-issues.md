@@ -38,7 +38,7 @@ To identify the last failed operation that caused the Application Gateway to ent
  - **Status: Failed**
  - **Time range: Relevant window when the issue occurred**  
 
-:::image type="content" source="media/troubleshoot-appgw-failed-state-issues/application-gateway-activity-log-failed-operation.png" alt-text="Screenshot of the Application Gateway activity log details view." lightbox="media/troubleshoot-appgw-failed-state-issues/application-gateway-activity-log-failed-operation.png":::
+:::image type="content" source="media/troubleshoot-appgw-failed-state-issues/activitylog.png" alt-text="Screenshot of activity log filters." lightbox="media/troubleshoot-appgw-failed-state-issues/activitylog.png":::
 
 1. Open the most recent failed event. If multiple failures exist, start with the first failed operation, as subsequent failures often are cascading effects.
 
