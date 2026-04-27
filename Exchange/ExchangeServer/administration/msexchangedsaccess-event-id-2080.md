@@ -1,6 +1,6 @@
 ---
 title: MSExchangeDSAccess Event ID 2080
-description: Describes the columns in Event 2080 and their contents and how to use the information in Event ID 2080 to diagnose DSAccess problems.
+description: Describes Event 2080 and how to use the information to diagnose DSAccess problems.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,13 +10,15 @@ ms.custom:
   - sap:Plan and Deploy\Need help with Active Directory/DNS/Network Exchange pre-requisites
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: sschiem, v-six
+  - CI 9823
+  - CI 11511
+ms.reviewer: sschiem, v-six, v-kccross
 appliesto: 
+  - Exchange Server SE
+  - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
-  - Exchange Server 2010
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 04/24/2026
 ---
 # Event ID 2080 from MSExchangeDSAccess
 
