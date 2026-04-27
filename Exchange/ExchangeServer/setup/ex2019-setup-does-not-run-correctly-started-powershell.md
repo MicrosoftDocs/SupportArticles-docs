@@ -1,6 +1,6 @@
 ---
-title: Exchange Server setup doesn't run as expected if it starts from PowerShell using Setup.exe
-description: Exchange Server setup doesn't run as expected if started from PowerShell using Setup.exe
+title: Exchange Server setup doesn't run as expected if you start it from PowerShell using Setup.exe
+description: Exchange Server setup doesn't run as expected if you start it from PowerShell using Setup.exe
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
