@@ -35,6 +35,9 @@ Common scenarios that lead to version mismatches include:
 ## Solution 1: Verify and align solution versions
 
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select your environment.
+    1. Go to **Manage**.
+    1. Select **Environments**.
+    1. Select your environment that has Field Service in it.
 1. Go to **Resources** > **Dynamics 365 apps**.
 1. Find the installed versions of these solutions:
    - **Dynamics 365 Field Service**
@@ -50,6 +53,9 @@ Common scenarios that lead to version mismatches include:
 If a previous update failed partway through:
 
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), select your environment.
+    1. Go to **Manage**.
+    1. Select **Environments**.
+    1. Select your environment that has Field Service in it.
 1. Go to **Resources** > **Dynamics 365 apps**.
 1. Check for any solutions that show a status of **Install failed** or **Update failed**.
 1. Select **Retry** to reattempt the installation.
