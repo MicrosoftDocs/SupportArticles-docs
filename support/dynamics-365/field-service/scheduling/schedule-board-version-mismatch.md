@@ -1,6 +1,6 @@
 ---
 title: Schedule board errors due to version mismatches in Dynamics 365 Field Service
-description: Resolve ConsiderFirstDayOfWeekSettings and other version mismatch errors on the Dynamics 365 Field Service schedule board.
+description: Resolve version mismatch errors on the Dynamics 365 Field Service schedule board caused by incompatible Field Service and Universal Resource Scheduling components.
 ms.date: 04/27/2026
 ms.reviewer: mkelleher, puneetsingh
 ms.custom: sap:Schedule Board\Issues with usability
@@ -12,13 +12,13 @@ ms.custom: sap:Schedule Board\Issues with usability
 
 This article helps administrators resolve errors on the [schedule board](/dynamics365/field-service/work-with-schedule-board) in [Microsoft Dynamics 365 Field Service](/dynamics365/field-service/overview) that are caused by version mismatches between Field Service and Universal Resource Scheduling (URS) components.
 
-A common example is the `ConsiderFirstDayOfWeekSettings` error, which occurs when the URS solution version doesn't support a setting that the installed Field Service version expects.
+These errors occur when the URS solution version doesn't support a setting or API that the installed Field Service version expects.
 
 ## Symptoms
 
 When you open or interact with the schedule board, you experience one or more of the following issues:
 
-- An error message that references `ConsiderFirstDayOfWeekSettings` or similar unrecognized properties.
+- An error message that references unrecognized properties or unsupported settings.
 - The schedule board fails to load or displays a script error.
 - Schedule board features behave unexpectedly after a partial update of Field Service or URS.
 
