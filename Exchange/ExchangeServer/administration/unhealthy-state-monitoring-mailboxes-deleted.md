@@ -10,12 +10,14 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Health set unhealthy
   - Exchange Server
   - CI 115307
+  - CI 9823
+  - CI 11507
   - CSSTroubleshoot
-ms.reviewer: chris.mcgurk, v-six
+ms.reviewer: chris.mcgurk, v-six, v-kccross
 appliesto: 
+  - Exchange Server SE
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
 search.appverid: 
   - MET150
 ms.date: 01/24/2024
