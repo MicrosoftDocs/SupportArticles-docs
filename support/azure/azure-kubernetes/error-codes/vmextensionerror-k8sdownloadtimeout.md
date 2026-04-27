@@ -15,7 +15,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SDownl
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59, or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
 
 - The Client URL (`curl`) command-line tool.
 
@@ -54,8 +54,8 @@ Use the following table to match the CSE or `curl` error in the error message to
 | --- | --- | --- |
 | `curl: (6) Could not resolve host: <hostname>` | DNS can't resolve the download endpoint. | [Resolve DNS lookup failures](#resolve-dns-lookup-failures). |
 | `curl: (22) The requested URL returned error: 403`, `HTTP/1.0 403 Forbidden`, `Server: BigIP`, or proxy tunnel denial | A firewall, proxy, or NVA is denying HTTPS access. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
-| `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain` | TLS inspection or proxy certificate chain isn't trusted by the node. | [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
-| `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer` | The HTTPS connection is being reset or interrupted. This can be caused by firewall, proxy, NVA, or TLS inspection behavior. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks), and then [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
+| `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain` | The node doesn't trust the TLS inspection or proxy certificate chain. | [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
+| `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer` | The HTTPS connection is being reset or interrupted. Firewall, proxy, NVA, or TLS inspection behavior can cause this issue. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks), and then [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
 | `[ 124 -ne 0 ]`, `curl: (124)`, or `* Trying <IP>:443...` without a completed connection | TCP 443 connectivity to the download endpoint is timing out. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
 | `Error: CSE has been running for <seconds> seconds, exceeding the limit of <seconds> seconds` | The detailed `curl` symptom might be missing or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
 | No recognizable `curl` or CSE detail | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
@@ -111,7 +111,7 @@ If the error includes HTTP 403, `curl` timeout code 124, repeated `Trying <IP>:4
 In **BYO VNet** clusters, start with the network controls that you manage for the node subnet. Confirm that NSGs, UDRs, firewalls, NVAs, and proxies allow the node to reach the required AKS outbound endpoints.
 
 > [!NOTE]
-> Most cases of this error are caused by required AKS endpoints not being allowed correctly. Make sure that outbound HTTPS access is allowed for endpoints such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
+> Not allowing required AKS endpoints correctly causes most cases of this error. Make sure that outbound HTTPS access is allowed for endpoints such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
 
 Run the following commands from a node, from a VMSS instance, or from a test VM that uses the same subnet, route table, DNS, firewall, and proxy path:
 
@@ -163,7 +163,7 @@ If the TLS handshake fails because of certificate trust, use one of the followin
 
 - Bypass TLS inspection for AKS required endpoints.
 - Configure the proxy or TLS inspection device to present a certificate chain that the node trusts.
-- Make sure the required enterprise root or intermediate certificate authority (CA) certificates are trusted by the node image and bootstrap path.
+- Make sure the node image and bootstrap path trust the required enterprise root or intermediate certificate authority (CA) certificates.
 
 If the error includes `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer`, check both TLS inspection logs and firewall, proxy, or NVA logs. These errors can occur when an intermediate device interrupts the TLS handshake or resets the connection.
 
