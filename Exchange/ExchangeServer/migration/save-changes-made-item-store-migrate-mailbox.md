@@ -28,6 +28,8 @@ ms.date: 04/26/2026
 
 ## Summary
 
+Mailbox migrations to Exchange Online can fail with a “Cannot save changes made to an item to store” error when a folder exceeds the per-folder item limit. This article shows how to identify and reduce oversized folders so migration can continue.
+
 ## Symptoms
 
 When you migrate on-premises Exchange mailboxes to Exchange Online, you receive this error message:
