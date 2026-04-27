@@ -3,94 +3,119 @@ title: Troubleshoot Windows Update Error 0x80070008
 description: Learn how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) that occurs when there's insufficient memory to complete the update installation.
 manager: dcscontentpm
 audience: itpro
-ms.date: 04/15/2026
+ms.date: 04/28/2026
 ms.topic: troubleshooting
-ms.reviewer: scotro, jarretr, v-gsitser
+ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-appelgatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\Windows Update - Install errors starting with 0x8007 (Win32)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Troubleshoot Windows Update error 0x80070008
 
-**Applies to:** :heavy_check_mark: Windows VMs
-
 ## Summary
 
-Error code 0x80070008 (`ERROR_NOT_ENOUGH_MEMORY`) indicates that the system doesn't have enough memory to complete the Windows Update installation. This error commonly occurs on virtual machines (VMs) with limited RAM or when other processes consume most of the available memory during the update process.
+Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) occurs when the system doesn't have enough available memory (RAM) to install an update. This error commonly occurs on virtual machines (VMs) that have limited RAM, or when other processes consume most of the available memory during the update process. This article describes how to identify the cause of the error and walks you through several steps to resolve it, including freeing up memory, adjusting virtual memory settings, and resizing Azure VMs.
 
-## Prerequisites
+## Symptoms
 
-For Microsoft Azure virtual machines (VMs) that run Windows, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+You install a Windows update, but the installation fails, and you see error code 0x80070008 reported.
 
-## How to identify the issue
+To get more information, review the following resources:
 
-Check the `WindowsUpdate.log` or `CBS.log` for entries that resemble the following example:
+1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
-```output
-Error 0x80070008: Not enough memory resources are available to process this command.
-```
+   ```output
+   Error 0x80070008: Not enough memory resources are available to process this command.
+   ```
 
-You can also check available memory at the time of failure:
+1. Open Event Viewer, and go to **Windows Logs** > **System**. Look for events from the **Resource-Exhaustion-Detector** source that occurred around the time of the update failure.
+1. Check for low memory conditions. Use one of the following methods:
+   - Open **Task Manager**, select **Performance**, and then select **Memory**.
+   - Open a Windows PowerShell command prompt, and then run the following cmdlets:
 
-1. Open **Event Viewer** > **Windows Logs** > **System**.
-2. Look for events from the **Resource-Exhaustion-Detector** source around the time of the update failure.
-3. Check for low memory conditions in **Task Manager** or by running `Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Name, @{N='MB';E={[math]::Round($_.WorkingSet64/1MB)}}` in PowerShell.
+     ```powershell
+     Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Name, @{N='MB';E={[math]::Round($_.WorkingSet64/1MB)}}
+     ```
 
 ## Cause
 
-This error occurs when the system doesn't have enough available memory (RAM) to complete the update installation. Common causes include:
+This error occurs when the system doesn't have enough available memory (RAM) to install the update. Common causes include:
 
-- The VM has a small memory allocation (for example, 1 GB or less).
-- Other applications or services consume most of the available memory during the update.
-- Memory fragmentation prevents allocation of the required contiguous memory blocks.
-- The update package is large and requires more memory than is available for extraction and staging.
+- The system is a VM that has a small memory allocation (for example, 1 GB or less).
+- During the update, other applications or services consume most of the available memory.
+- The system can't allocate contiguous memory blocks of sufficient size because of memory fragmentation.
+
+This issue is more likely to occur if the update package is large. Such updates might require more memory than is available for extraction and staging.
 
 ## Resolution
 
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+
 ### Step 1: Free up memory
 
-1. Stop unnecessary services and applications before applying updates.
-2. Restart the Windows Update service:
+1. Before you install updates, stop all unnecessary services and applications before.
+1. After you stop services and applications, restart the Windows Update service. For example, open a Command Prompt window and then run the following commands:
 
-   ```cmd
+   ```console
    net stop wuauserv
    net start wuauserv
    ```
 
+1. Try again to install the update. If it still doesn't install, continue to step 2 (for virtual machines) or step 3 (for all systems).
+
 ### Step 2: Increase VM memory (Azure)
 
-For Azure VMs, resize the VM to a size with more memory:
+If the affected computer is an Azure VM, resize the VM by following these steps:
 
 1. In the Azure portal, go to the VM resource.
-2. Select **Size** under **Settings**.
-3. Choose a VM size with more RAM (at minimum 2 GB for update operations).
-4. Select **Resize**.
+1. Under **Availability + scale**, select **Size**.
+1. Select a VM size that uses more RAM. To make sure that updates install smoothly, select a size that uses at least 2 GB of RAM.
+1. Select **Resize**.
+1. Try again to install the update. If it still doesn't install, continue to step 3.
 
 For more information, see [Resize a virtual machine](/azure/virtual-machines/resize-vm).
 
 ### Step 3: Configure virtual memory
 
-If increasing physical memory isn't possible, increase the page file size:
+If increasing physical memory isn't possible, increase the page file size. This setting allows the system to use larger sections of the hard disk for memory. Follow these steps:
 
-1. Open **System Properties** > **Advanced** > **Performance** > **Settings** > **Advanced** > **Virtual Memory**.
-2. Set the page file to at minimum 1.5 times the physical RAM.
-3. Restart the VM and retry the update.
+1. On the affected computer, open Settings, select **System**, and then under **Related links**, select **Advanced system settings**.
+1. On the **Advanced** tab of the System Properties dialog box, under **Performance**, select **Settings**.
+1. Select **Advanced**, and then under **Virtual memory**, select **Change**.
+1. If **Automatically manage paging file size for all drives** is selected, deselect it.
+1. Select **Custom size**, and then type new values for the initial and maximum paging file size. The new values should be greater than 1.5 times the physical RAM capacity.
+1. Restart the computer.
+1. Try again to install the update. If it still doesn't install, continue to step 4 (for virtual machines) or step 5 (for all systems).
 
-### Step 4: For Azure VMs — use the Run Command reset tool
+### Step 4: Use the Run Command reset tool (Azure)
 
-If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the Azure portal via **Run Command** without needing RDP access. This tool resets the Windows Update servicing stack, which can clear memory-related lock states in the update agent.
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack, which can clear memory-related lock states in the update agent.
+
+After you run the tool, try to install the update again. If it still doesn't install, continue to step 5.
 
 ### Step 5: Install updates individually
 
-If the issue persists, install updates one at a time instead of in batches:
+If the issue persists, install updates one at a time instead of in batches.
+
+To get a list of the pending updates, run the following cmdlet at a PowerShell command prompt on the affected computer:
 
 ```powershell
-# List available updates
 Get-WindowsUpdate -MicrosoftUpdate
+```
 
-# Install a specific update by KB number
+To install one of the updates from the list, run the following cmdlet:
+
+```powershell
 Install-WindowsUpdate -KBArticleID "KB5XXXXXX" -AcceptAll
 ```
+
+> [!NOTE]  
+> In this cmdlet, *XXXXXX* represents the identification number of the update.
