@@ -19,13 +19,13 @@ appliesto:
 
 ## Summary
 
-Error code 0x80071A91 (`ERROR_RM_NOT_ACTIVE`) means the transaction resource manager isn't active. 
+
 
 ## Symptoms
 
 You install a Windows update, but the installation fails, and you see error code 0x80071A91 reported.
 
-To get more information, review the following information:
+To get more information, follow these steps:
 
 1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
@@ -38,11 +38,11 @@ Error                 CBS    Perf: Failed to process single phase execution. [HR
 
 ## Cause
 
-While installing updates, Windows Update uses the Kernel Transaction Manager (KTM) and the File System Resource Manager (FSRM) to manage file operations. When these components fail, the update process can't commit its changes. This error occurs when one of the following conditions exists:
+While installing updates, Windows Update uses the Kernel Transaction Manager (KTM) and Transactional NTFS (TxF) to manage file operations. When these components fail, the update process can't commit its changes. This error occurs when one of the following conditions exists:
 
-- The FSRM transaction log file on the system volume is corrupted.
-- The KTM or FSRM can't start or manage file transactions.
-- A previous update didn't install correctly, so the transaction subsystem in an inconsistent or bad state.
+- The TxF transaction log file on the system volume is corrupted.
+- The KTM or TxF can't start or manage file transactions.
+- A previous update didn't install correctly, so the transaction subsystem is in an inconsistent or bad state.
 - Disk errors block access to the transaction log.
 - An antivirus program or file system filter driver blocks transactional file operations.
 - The Windows component store is corrupted.
@@ -74,7 +74,8 @@ To repair the component store, run the following command at the command prompt:
 DISM /Online /Cleanup-Image /RestoreHealth
 ```
 
-This command uses Windows Update as the source for repair information.
+> [!NOTE]  
+> By default, DISM uses Windows Update as a repair source. For information about specifying a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
 After you run this command, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 3.
 
@@ -131,13 +132,13 @@ To check for disk issues, follow these steps:
 
 ### Step 6: Use the Run Command reset tool (Azure)
 
-If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
 
 This tool resets the Windows Update servicing stack, which can clear memory-related lock states in the update agent.
 
 After you run the tool, try to install the update again. If it still doesn't install, continue to step 7.
 
-### Step 7
+### Step 7: Use a repair VM (Azure)
 
 If the reset tool doesn't fix the issue or the VM can't boot:
 
@@ -146,26 +147,27 @@ If the reset tool doesn't fix the issue or the VM can't boot:
 1. Attach the affected operating system disk to the repair VM.
 
 1. To reset the NTFS transaction logs, follow these steps:
-   1. open an administrative Command Prompt window on the repair VM and then run the following command:
+   1. Open an administrative Command Prompt window on the repair VM and then run the following command:
 
       ```console
-      fsutil resource setautoreset true <drive>:\
+      fsutil resource setautoreset true <Drive>:\
       ```
 
       > [!NOTE]  
-      > In this command, \<drive> represents the drive letter of the affected operating system disk.
+      > In this command, \<Drive> represents the drive letter of the affected operating system disk.
 
    1. Restart the computer. When Windows starts, it recreates the transaction logs.
 
 1. Make sure that you have an offline operating system image available, and then run the following command at the command prompt:
 
    ```console
-   DISM /Image:<drive>:\ /Cleanup-Image /RestoreHealth
+   DISM /Image:<Drive>:\ /Cleanup-Image /RestoreHealth
    ```
 
       > [!NOTE]  
-      > In this command, \<drive> represents the drive letter of the offline image.
+      > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
+      > - By default, DISM uses Windows Update as a repair source. For information about specifying a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
 1. Swap the repaired disk back to the original VM.
 
-1. try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
+1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
