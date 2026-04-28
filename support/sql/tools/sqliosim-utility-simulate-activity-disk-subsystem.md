@@ -17,9 +17,12 @@ The SQLIOSim tool runs reliability and integrity stress tests on disk subsystems
 
 ## Introduction to SQLIOSim
 
-SQLIOSim simulates the read and write patterns, user activity, and system activity of a SQL Server system to help identify potential I/O problems. The primary objective of the I/O simulation tests is to verify the reliability of the underlying I/O subsystem before SQL Server starts using it. For more information about SQL Server I/O fundamentals, see [SQL Server I/O fundamentals](/sql/relational-databases/sql-server-storage-guide).
+SQLIOSim simulates the read and write patterns (page reads, checkpoint, backup, sort, read-ahead) of a SQL Server system to help identify potential I/O problems. The primary objective of the I/O simulation tests is to verify the reliability of the underlying I/O subsystem before SQL Server starts using it. For more information about SQL Server I/O fundamentals, see [SQL Server I/O fundamentals](/sql/relational-databases/sql-server-storage-guide).
 
-SQLIOSim doesn't interact with SQL Server, and doesn't require SQL Server to be running. In most cases, run SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications. Don't point to or use actual SQL Server database files in your SQLIOSim test because the tool uses random test patterns to overwrite the files.
+SQLIOSim doesn't interact with SQL Server, and doesn't require SQL Server to be running. In most cases, run SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput between the two applications.
+
+> [!WARNING]
+> Don't point to or use actual SQL Server database files in your SQLIOSim test because the tool uses random test patterns to overwrite the files.
 
 SQLIOSim doesn't guarantee data security or integrity. The tool provides baseline testing of a system environment, and might expose potential data integrity issues.
 
@@ -72,7 +75,7 @@ The following examples shows how to run SQLIOSim by using the GUI and command li
 
    :::image type="content" source="media/sqliosim/sqliosim-modify-log-file.png" alt-text="Screenshot of log file configuration." lightbox="media/sqliosim/sqliosim-modify-log-file.png":::
 
-1. Add more files to the list by selecting the **New File** option in the center of the screen inside the tabular grid. Type the file location, and then set the remaining options. AFter you finish, select **Apply**. Here's an example.
+1. Add more files to the list by selecting the **New File** option in the center of the screen inside the tabular grid. Type the file location, and then set the remaining options. After you finish, select **Apply**. Here's an example.
 
    :::image type="content" source="media/sqliosim/sqliosim-add-new-file.png" alt-text="Screenshot of adding a new test file." lightbox="media/sqliosim/sqliosim-add-new-file.png":::
 
