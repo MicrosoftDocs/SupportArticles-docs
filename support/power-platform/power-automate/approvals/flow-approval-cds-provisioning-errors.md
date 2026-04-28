@@ -12,7 +12,11 @@ _Original KB number:_ &nbsp; 4513672
 
 ## Summary
 
-This article discusses common errors and configurations that can prevent [Power Automate Approvals](/power-automate/get-started-approvals) from creating and assigning approval requests. Most provisioning failures occur the first time that an approval flow runs in an environment, when Power Automate tries to create or link a Dataverse database, install the Approvals solutions, and configure the application user that manages approval data.
+This article discusses common errors and configurations that can prevent [Power Automate Approvals](/power-automate/get-started-approvals) from creating and assigning approval requests. Most provisioning failures occur the first time that an approval flow runs in an environment. This failure can occur, for example when:
+
+- Power Automate tries to create or link a Dataverse database
+- Power Automate installs the Approvals solutions
+- Power Automate configures the application user that manages approval data
 
 Use this article to:
 
