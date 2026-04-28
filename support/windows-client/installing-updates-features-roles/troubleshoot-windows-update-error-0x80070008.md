@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update error 0x80070008
-description: Describes how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY) that occurs if the computer doesn't have enough memory to complete the update installation.
+description: Describes how to resolve Windows Update error 0x80070008 (ERROR_NOT_ENOUGH_MEMORY). This error indicates that the computer doesn't have enough memory to complete the update installation.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/28/2026
