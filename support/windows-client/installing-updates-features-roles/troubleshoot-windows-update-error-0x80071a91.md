@@ -1,43 +1,40 @@
 ---
-title: Troubleshoot Windows Update Error 0x80071a91
+title: Troubleshoot Windows Update error 0x80071A91
 description: Learn how to resolve Windows Update error 0x80071a91 (ERROR_RM_NOT_ACTIVE) that occurs when the transaction resource manager isn't active.
 manager: dcscontentpm
 audience: itpro
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: troubleshooting
-ms.reviewer: scotro, jarretr, v-gsitser
+ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-appelgatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\Windows Update - Install errors starting with 0x8007 (Win32)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Troubleshoot Windows Update error 0x80071a91
-
-**Applies to:** :heavy_check_mark: Windows VMs
+# Troubleshoot Windows Update error 0x80071A91
 
 ## Summary
 
-Error code 0x80071a91 (`ERROR_RM_NOT_ACTIVE`) means the transaction resource manager isn't active. Windows Update uses the Kernel Transaction Manager (KTM) and the transactional NTFS subsystem for file operations during updates. When these components fail, the update process can't commit its changes.
+Error code 0x80071A91 (`ERROR_RM_NOT_ACTIVE`) means the transaction resource manager isn't active. Windows Update uses the Kernel Transaction Manager (KTM) and the transactional NTFS subsystem for file operations during updates. When these components fail, the update process can't commit its changes.
 
-## Prerequisites
+## Symptoms
 
-For Microsoft Azure virtual machines (VMs) that run Windows, back up the OS disk before you begin. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+You install a Windows update, but the installation fails, and you see error code 0x80071A91 reported.
 
-## How to identify the issue
+To get more information, review the following resources:
 
-Check `CBS.log` for entries like the following example:
+1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
 ```output
 Error                 CBS    Exec: Failed to commit CBS transaction. [HRESULT = 0x80071a91 - ERROR_RM_NOT_ACTIVE]
 Error                 CBS    Perf: Failed to process single phase execution. [HRESULT = 0x80071a91]
 ```
 
-You can also check for transaction-related errors in Event Viewer:
-
-1. Open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **KtmRm**.
-2. Look for errors near the time of the update failure.
+1. Open Event Viewer, and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **KtmRm**. Look for events that occurred around the time of the update failure.
 
 ## Cause
 
@@ -48,42 +45,53 @@ This error occurs when one of the following conditions exists:
 - A previous interrupted update left the transaction subsystem in a bad state.
 - Disk errors block the transaction log from being written or read.
 - An antivirus program or file system filter driver blocks transactional file operations.
+- The Windows component store is corrupted.
 
 ## Resolution
 
-### Step 1: Clear the transaction logs
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-Reset the NTFS transaction logs from an elevated command prompt:
+### Step 1: Request a reset of the transaction logs
 
-```cmd
-fsutil resource setautoreset true C:\
-```
+To reset the NTFS transaction logs, follow these steps:
 
-Restart the VM after you run this command. The system recreates the transaction logs on startup.
+1. Open an administrative Command Prompt window and then run the following command:
+
+   ```console
+   fsutil resource setautoreset true C:\
+   ```
+
+1. Restart the computer. When Windows starts, it recreates the transaction logs.
 
 ### Step 2: Repair the component store
 
-Repair the component store with DISM. A corrupted store often causes this error:
+To repair the component store, run the following command at the command prompt:
 
-```cmd
+```console
 DISM /Online /Cleanup-Image /RestoreHealth
 ```
+This command uses Windows Update as the source for repair information.
 
-Restart the VM after the repair finishes.
+After you run this command, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 3.
 
-### Step 3: Run SFC and retry
+### Step 3: Check system file integrity
 
-Verify system file integrity and retry the update:
+To verify the integrity of the system files, run the following command at the command prompt:
 
-```cmd
+```console
 sfc /scannow
 ```
 
+If this command identifies issues, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e).
+
+After you run this command and it completes without errors, restart the computer. Try again to install the update. If it still doesn't install, continue to step 4.
+
 ### Step 4: Reset Windows Update components
 
-If the transaction error persists, reset all Windows Update components:
+If the transaction error persists, reset all Windows Update components. At the command prompt, run the following commands:
 
-```cmd
+```console
 net stop wuauserv
 net stop bits
 net stop cryptSvc
@@ -96,25 +104,42 @@ net start bits
 net start wuauserv
 ```
 
+After you run these command, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 5.
+
 ### Step 5: Check disk health
 
-Verify the system disk doesn't have underlying issues:
 
-```cmd
-chkdsk C: /f
-```
 
-> [!IMPORTANT]
-> This command requires a restart on the system volume. For Azure VMs, you can also check disk health in the Azure portal by opening the disk resource and reviewing **Disk health**.
+To check for disk issues, follow these steps:
 
-### Step 6: For Azure VMs — use the Run Command reset tool
 
-Try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md) before you attempt offline repair. Run it from the Azure portal through **Run Command** — no RDP access needed. It resets the servicing stack, which can fix transaction log conflicts.
+1. On the affected computer, open a Command Prompt window and then run the following command:
+
+   ```console
+   chkdsk C: /f
+   ```
+
+   The tool automatically repairs any problems that it finds.
+
+   > [!IMPORTANT]
+   > If the affected computer is an Azure VM and you use the Azure portal to monitor and remediate disk health, continue to the next step of this procedure. You still have to restart the VM that uses the disk.
+
+1. After the tool finishes, restart the computer and then try again to install the update.
+
+### Step 6: Use the Run Command reset tool (Azure)
+
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack, which can clear memory-related lock states in the update agent.
+
+After you run the tool, try to install the update again. If it still doesn't install, continue to step 7.
+
+### Step 7
 
 If the reset tool doesn't fix the issue or the VM can't boot:
 
 1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
-2. Attach the affected OS disk.
+1. Attach the affected operating system disk to the repair VM.
 3. Run `fsutil resource setautoreset true <drive>:\` on the attached disk.
 4. Run `DISM /Image:<drive>:\ /Cleanup-Image /RestoreHealth` on the offline image.
 5. Swap the repaired disk back to the original VM.
