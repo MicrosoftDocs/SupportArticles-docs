@@ -38,7 +38,7 @@ If a purchase order doesn't appear on the **Purchase order year end** page, it's
 - Budget control statistics for the purchase order are missing or incomplete, even though year-end processing is expected to include the purchase order.
 
 > [!NOTE]
-> If you enable the **Enable non-retrievable purchase orders page for purchase year-end order process** feature, the new page checks why a purchase order might not be visible during the purchase order year-end process for the selected fiscal year.
+> If you enable the **Enable non-retrievable purchase orders page for purchase year-end order process** feature, you can check why a purchase order might not be visible during the purchase order year-end process for the selected fiscal year by going to **Budgeting** > **Periodic** > **Budget control data maintenance**.
 
 Use the following sections to check the budget control configuration, and restore any missing budget data so that the purchase order appears correctly during year-end processing.
 
