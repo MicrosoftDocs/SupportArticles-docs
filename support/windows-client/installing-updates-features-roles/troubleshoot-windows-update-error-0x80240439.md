@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update error 0x80240439
-description: Learn how to resolve Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED) that occurs when the Windows Update agent isn't properly initialized.
+description: Describes how to fix Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED). this error occurs when the Windows Update agent starts but can't complete its startup sequence.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/29/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Error code 0x80240439 (`WU_E_NOT_INITIALIZED`) means the Windows Update agent wasn't properly initialized before an operation ran. This error occurs when the Windows Update service starts but can't finish its startup sequence.
+Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED) occurs when the Windows Update agent starts but can't complete its startup sequence. This article describes the symptoms of this error and provides step-by-step instructions to help you resolve it.
 
 ## Symptoms
 
