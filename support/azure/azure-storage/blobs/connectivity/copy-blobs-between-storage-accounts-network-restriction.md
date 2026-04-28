@@ -104,8 +104,10 @@ When the client, source account, and destination account are all in different pe
    To permit this request, ensure that: 
    
    - Outbound access is granted to the source account from the destination account. 
-    - Example outbound access rule definition.![Screenshot_28-4-2026_131325_ms.portal.azure.com](media/copy-blobs-between-storage-accounts-network-restriction/screenshot-28-4-2026-131325-ms.portal.azure.com.jpeg)
-        
+      Example outbound access rule definition
+      
+      ![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/screenshot-28-4-2026-131325-ms.portal.azure.com.jpeg)
+      
    - Inbound access is granted to the destination account from the source account. 
    - Inbound access is granted to the client from the source account.  
       
@@ -134,7 +136,7 @@ If you're unable to implement the previously mentioned workarounds or are restri
 
 1. Create a temporary storage account in the same region as the source storage account and the destination storage account.
 2. Use AzCopy to copy the data from the source storage account to the temporary storage account.
-3. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNet as the destination storage account before performing the data transfer.
+1. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNet as the destination storage account before performing the data transfer.
 
 ### Workaround 4: Use a VM and download the data to the VM and then upload the data to the destination storage account
 Only use this workaround if other methods aren't feasible. Use a VM to download the data from the source storage account, and then upload it to the destination storage account. This can be done with AzCopy. Make sure that the VM's size and disk capacity are suitable for the data transfer process.
