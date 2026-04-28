@@ -17,48 +17,50 @@ appliesto:
 
 # Troubleshoot Windows Update error 0x80240439
 
-
 ## Summary
 
 Error code 0x80240439 (`WU_E_NOT_INITIALIZED`) means the Windows Update agent wasn't properly initialized before an operation ran. This error occurs when the Windows Update service starts but can't finish its startup sequence.
 
-## Prerequisites
+## Symptoms
 
-For Microsoft Azure virtual machines (VMs) that run Windows, back up the OS disk before you begin. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+You install a Windows update, but the installation fails, and you see error code 0x80240439 reported.
 
-## How to identify the issue
+To get more information, follow these steps:
 
-Check `WindowsUpdate.log` for entries like the following example:
+1. Check the WindowsUpdate.log file for entries that resemble the following example:
 
-```output
-Agent -- WARNING: WU client failed Searching for update with error 0x80240439
-Agent -- WARNING: Exit code = 0x80240439
-```
+   ```output
+   Agent -- WARNING: WU client failed Searching for update with error 0x80240439
+   Agent -- WARNING: Exit code = 0x80240439
+   ```
 
-You can also check the Windows Update service state:
+1. To check the state of the Windows Update service, open a Windows PowerShell command prompt, and then run the following cmdlets:
 
-```powershell
-Get-Service wuauserv | Select-Object Name, Status, StartType
-Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate" -ErrorAction SilentlyContinue
-```
+   ```powershell
+   Get-Service wuauserv | Select-Object Name, Status, StartType
+   Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate" -ErrorAction SilentlyContinue
+   ```
 
 ## Cause
 
-This error occurs when one of the following conditions exists:
+This error occurs when the Windows Update service starts but can't finish its startup sequence. Any of the following conditions can cause this issue:
 
 - The Windows Update agent data store is corrupted.
 - The Windows Update registry configuration is damaged or incomplete.
-- The `%windir%\SoftwareDistribution` folder has corrupted state files.
-- A system policy or Group Policy blocks the agent from starting.
-- A recent Windows Update reset didn't finish re-initialization.
+- The state files in the %windir%\SoftwareDistribution folder are corrupted.
+- A system policy or Group Policy setting blocks the agent from starting.
+- A recent Windows Update reset didn't finish the re-initialization process.
 
 ## Resolution
 
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+
 ### Step 1: Reset the Windows Update agent
 
-Stop the service, clear the data store, and restart:
+To reset the Windows Update agent, open a Command Prompt window and then run the following commands:
 
-```cmd
+```console
 net stop wuauserv
 net stop bits
 net stop cryptSvc
@@ -71,11 +73,15 @@ net start bits
 net start wuauserv
 ```
 
+This sequence of commands stops the Windows Update service, clears the data store, and then restarts the service.
+
+After the commands finish running, try again to install the update. If the update still doesn't install, go to step 2.
+
 ### Step 2: Re-register Windows Update components
 
-Re-register the DLLs that the Windows Update agent needs:
+To re-register the DLLs that the Windows Update agent needs, run the following commands at the command prompt:
 
-```cmd
+```console
 regsvr32 /s atl.dll
 regsvr32 /s urlmon.dll
 regsvr32 /s mshtml.dll
@@ -114,22 +120,42 @@ regsvr32 /s muweb.dll
 regsvr32 /s wuwebv.dll
 ```
 
+After the commands finish running, restart the computer. Then, try again to install the update. If the update still doesn't install, go to step 3.
+
 ### Step 3: Verify Group Policy settings
 
-Check whether Group Policy blocks Windows Update startup:
+To generate a Group Policy report, run the following command at the command prompt:
 
-```cmd
+```console
 gpresult /h gpresult.html
 ```
 
-In the report, review **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Update** for policies that might block initialization.
+In the report, review **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Update** for policies that might block initialization. If you find such policies, reconfigure or disable them.
 
-### Step 4: For Azure VMs
+If you make changes, run the following command:
 
-Try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md) first. Run it from the Azure portal through **Run Command** — no RDP access needed. It performs a full servicing stack reset (the same operations as Steps 1 and 2, but automated).
+```console
+gpupdate /force
+```
 
-If the VM uses Windows Server Update Services (WSUS) or a managed update solution:
+Restart the computer, and then try again to install the update. If the update still doesn't install, take one of the following actions:
 
-1. Verify that the WSUS server URL is reachable from the VM.
-2. Check that NSG rules allow outbound connections to the WSUS server or Windows Update endpoints.
-3. If you use Azure Update Management, verify that the Hybrid Runbook Worker agent is healthy.
+- If the affected computer is a VM, continue to step 4.
+- Continue to [step 5]().
+
+### Step 4: Use the Run command reset tool (Azure)
+
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack. The reset can clear memory-related lock states in the update agent.
+
+After you run the tool, try again to install the update. If it still doesn't install, go to step 5.
+
+### Step 5: Check update service configuration
+
+If you use Windows Server Update Services (WSUS) or a similar service to manage updates, follow these steps:
+
+1. Verify that the VM can connect to the WSUS server URL.
+1. Make sure that firewalls and NSG rules (for VMs) allow outbound connections to the WSUS server or Windows Update endpoints.
+1. If you use Azure Update Management, verify that the Hybrid Runbook Worker agent is healthy.
+1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
