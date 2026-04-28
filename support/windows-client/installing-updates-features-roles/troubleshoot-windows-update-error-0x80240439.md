@@ -54,7 +54,7 @@ This error occurs when the Windows Update service starts but can't finish its st
 ## Resolution
 
 > [!IMPORTANT]  
-> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ### Step 1: Reset the Windows Update agent
 
