@@ -9,7 +9,7 @@ ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 
 ## Summary
 
-A potential security vulnerability is identified in the [sensitive variables](power-automate/desktop-flows/manage-variables#sensitive-variables) feature in Power Automate for desktop versions 2.62 to 2.66.
+A potential security vulnerability is identified in the sensitive variables feature in Power Automate for desktop versions 2.62 to 2.66.
 
 When marking variables as **sensitive** in a Power Automate Desktop flow, these variable's values aren't shown in flow execution logs on the Power Automate portal. However, due to a vulnerability, these values may appear on the execution logs when **global sensitive** variables are used in **local subflows**.
 
