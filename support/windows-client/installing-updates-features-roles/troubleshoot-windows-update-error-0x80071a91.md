@@ -52,7 +52,7 @@ While installing updates, Windows Update uses the Kernel Transaction Manager (KT
 > [!IMPORTANT]  
 >
 > - Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
-> - If the affected computer is a VM that can't start, go to [step 7](#step-7).
+> - If the affected computer is a VM that can't start, go to [step 7](#step-7-use-a-repair-vm-azure).
 
 ### Step 1: Request a reset of the transaction logs
 
