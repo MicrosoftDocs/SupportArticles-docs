@@ -665,8 +665,12 @@ SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The follow
 **Resolution:**
 
 1. Verify the list of modules enabled under directory `/etc/products.d`
-   ```output  
-   sudo ls -l /etc/products.d/
+   
+```bash
+sudo ls -l /etc/products.d/
+```
+
+```output  
    total 24
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod
@@ -674,7 +678,8 @@ SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The follow
    lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
-   ```
+```
+
 2. Disable the LTSS related modules by renaming them.  
    ```bash
    sudo mv SLES-LTSS.prod SLES-LTSS.prod-bkp 
@@ -682,16 +687,19 @@ SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The follow
    ```bash
    sudo mv  SLES-LTSS-Extended-Security.prod SLES-LTSS-Extended-Security.prod-bkp
    ```
-   ```output  
-   sudo ls -l /etc/products.d/
-   total 24
+
+```bash  
+ sudo ls -l /etc/products.d/ 
+```
+ ```output    
+ total 24
    -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod-bkp
    -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod-bkp
    -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
    lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
    -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
    -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
-   ```
+```
 4. Re-register the VM using following commands.
 
    ```bash        
