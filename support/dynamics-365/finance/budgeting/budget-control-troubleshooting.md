@@ -14,35 +14,20 @@ ms.search.region: global
 
 This article covers common [budget control](/dynamics365/finance/budgeting/budget-control-overview-configuration) troubleshooting scenarios in Microsoft Dynamics 365 Finance. If you're experiencing issues with budget control data, budget check failures, or purchase orders that don't appear during year-end processing, the following sections help you identify and fix the problem.
 
-## Budget control data maintenance tool
-
-If you experience data inconsistency with a specific budget-controlled document, start with the [Budget control data maintenance tool](/dynamics365/finance/budgeting/budget-control-tool). This tool includes a **Budget control dimension values provider** scenario that adjusts the dimension values in budget data. Typically, you use this scenario when you add a new segment to the ledger account structure. It finds all dimension values currently used in budget data and transfers them to match the current [account structure](/dynamics365/finance/general-ledger/configure-account-structures).
-
-If you want to preserve historical data and keep the previous account structure, adjust the date range so that only data in the specified range is updated.
-
-To run the **Budget control dimension values provider** scenario, follow these steps:
-
-1. Go to **Budgeting** > **Periodic** > **Budget control data maintenance**.
-1. Enter a date range. You can set the date range to years before go-live or several years in the future.
-1. Select **Select scenarios**, and then select **Budget control dimension values provider**.
-
-   If there are documents to process, the grid is populated with the records that must be updated. The grid shows only the unique combinations of budget control dimension values that must be updated. For each combination, there might be one or many transactions.
-
-1. Select the records to update, and then select **Process documents**. This operation might take some time, depending on the number of records to process.
-
-> [!NOTE]
-> By default, the **Document status** field is set to **Confirmed**. If there's budget data in a draft state, repeat the steps and select **Draft**.
-
 ## Budget control check failure
 
-You might experience issues with budget checks. For example, a budget check might fail because not enough funds are available. Review available funds for a dimension combination on the **Budget control statistics by period** page.
+You might experience issues with budget checks. For example, a budget check might fail because not enough funds are available. To review available funds for a dimension combination, follow these steps:
 
-If reviewing the statistics doesn't fix the issue, or if the results are unexpected, review the following configurations:
+1. Open the **Budget control errors and warnings** page.
+1. Select a budget control dimension combination.
+1. Open the **Budget control statistics by period** page to view the budget availability details and reservations.
 
-- **Budget control threshold**: If budget use exceeds the defined threshold, the system either prevents posting or shows warnings. For example, the budget threshold on the **Budget control configuration** page is set to 80%, and the **Display a message when exceeding budget threshold** option is set to **Yes**. In this case, you receive a warning message if budget use exceeds 80%.
-- **Budget group**: If a dimension combination runs out of budget, it might try to use funds from the budget group. In some scenarios, an overbudget dimension combination can pull budget from the budget group.
-- **Overbudget permissions**: If overbudget permissions exist, an overbudget scenario might occur, but you don't experience a failure on the budget check.
-- **Budget control interval setup on budget control configuration groups**: If the budget control interval on the **Budget control configuration** page is set to **Fiscal year to date**, the end date for funds validation might differ from the date defined on the **Budget control statistics by period** page.
+If reviewing the statistics doesn't fix the issue, or if the results are unexpected, review the following configurations to learn why the budget check failed. You can then adjust the configuration as needed.
+
+- **Budget control threshold**: If budget use exceeds the [defined threshold](/dynamics365/finance/budgeting/budget-control-overview-configuration#define-parameters), the system either prevents posting or shows warnings. For example, the budget threshold on the **Budget control configuration** page is set to 80%, and the **Display a message when exceeding budget threshold** option is set to **Yes**. In this case, you receive a warning message if budget use exceeds 80%.
+- **Budget group**: If a dimension combination runs out of budget, it might try to use funds from the [budget group](/dynamics365/finance/budgeting/budget-control-overview-configuration#define-budget-groups). In some scenarios, an overbudget dimension combination can pull budget from the budget group.
+- **Overbudget permissions**: If [overbudget permissions](/dynamics365/finance/budgeting/budget-control-overview-configuration#over-budget-permissions) exist, an overbudget scenario might occur, but you don't experience a failure on the budget check.
+- **Budget control interval setup on budget control configuration groups**: If the [budget control interval](/dynamics365/finance/budgeting/budget-control-overview-configuration#define-parameters) on the **Budget control configuration** page is set to **Fiscal year to date**, the end date for funds validation might differ from the date defined on the **Budget control statistics by period** page.
 
 ## Purchase order can't be retrieved during the purchase order year-end process
 
@@ -81,7 +66,7 @@ After reprocessing, the purchase order is re-evaluated under the current configu
 
 To confirm that the issue is fixed:
 
-1. Open the **Purchase order year end** page and check that the purchase order now appears.
+1. Open the **Purchase order year-end process** page, and check whether the purchase order now appears.
 1. Review budget control statistics and confirm that encumbrance or budget reservation data exists for the purchase order.
 
 ## Related content
