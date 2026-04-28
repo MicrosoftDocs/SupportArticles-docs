@@ -31,9 +31,9 @@ If a review of the statistics doesn't fix the issue, or if the results are unexp
 
 ## Purchase order can't be retrieved during the purchase order year-end process
 
-If a purchase order doesn't appear on the **Purchase order year end** page, it's typically because the system didn't create budget control data for that purchase order. If you experience one or more of the following problems, use the steps in the following sections to resolve the problems:
+If a purchase order doesn't appear on the **Purchase order year end process** page, it's typically because the system didn't create budget control data for that purchase order. If you experience one or more of the following problems, use the steps in the following sections to resolve the problems:
 
-- A purchase order doesn't appear on the **Purchase order year end** page.
+- A purchase order doesn't appear on the **Purchase order year end process** page.
 - The purchase order doesn't contain budget control or encumbrance data.
 - Budget control statistics for the purchase order are missing or incomplete, even though year-end processing is expected to include the purchase order.
 
