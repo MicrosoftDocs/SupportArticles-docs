@@ -1,21 +1,22 @@
 ---
-title: Troubleshoot Windows Update Error 0x80240439
+title: Troubleshoot Windows Update error 0x80240439
 description: Learn how to resolve Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED) that occurs when the Windows Update agent isn't properly initialized.
 manager: dcscontentpm
 audience: itpro
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: troubleshooting
-ms.reviewer: scotro, jarretr, v-gsitser
+ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-appelgatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\Windows Update - Install errors starting with 0x8024 (WU_E)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8024 (WU E Setup)
 - pcy:WinComm Devices Deploy
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Troubleshoot Windows Update error 0x80240439
 
-**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
