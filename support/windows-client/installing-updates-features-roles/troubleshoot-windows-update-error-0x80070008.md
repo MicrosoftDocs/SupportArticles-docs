@@ -94,9 +94,9 @@ If increasing physical memory isn't possible, increase the page file size. This 
 1. Restart the computer.
 1. Try again to install the update. If it still doesn't install, continue to step 4 (for virtual machines) or step 5 (for all computers).
 
-### Step 4: Use the Run Command reset tool (Azure)
+### Step 4: Use the Run command reset tool (Azure)
 
-If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run Command**. When you use this method, you don't have to sign in to the VM.
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
 
 This tool resets the Windows Update servicing stack. The reset can clear memory-related lock states in the update agent.
 
