@@ -96,6 +96,7 @@ When the client, source account, and destination account are all in different pe
 1. The client sends a Put Block From URL request to the destination storage account.  
 
    To permit this request, ensure that outbound access is granted to the destination account from the client.
+   
      *Example outbound access rule definition*![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
       
 1. The destination account sends a Get Block request to the source storage account. 
