@@ -7,9 +7,8 @@ author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 04/06/2026
+ms.date: 04/20/2026
 ms.custom: sap:Deploy and configure Azure Firewall (Initial Setup)
-
 # Customer intent: "As a network administrator, I want to understand the known issues and limitations of Azure Firewall so I can plan my deployment, avoid common problems, and troubleshoot issues effectively."
 ---
 
