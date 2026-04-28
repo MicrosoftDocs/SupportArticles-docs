@@ -1,0 +1,19 @@
+items:
+  - name: Troubleshoot Azure File Sync
+    href: file-sync-troubleshoot.md   
+  - name: Troubleshoot agent installation and server registration
+    href: file-sync-troubleshoot-installation.md
+  - name: Troubleshoot cloud tiering issues
+    href: file-sync-troubleshoot-cloud-tiering.md
+  - name: Troubleshoot sync group
+    href: file-sync-troubleshoot-sync-group-management.md
+  - name: Troubleshoot sync issues
+    href: file-sync-troubleshoot-sync-issues.md
+  - name: Troubleshoot managed identities
+    href: file-sync-troubleshoot-managed-identities.md
+  - name: Troubleshoot Storage Sync Agent service (FileSyncSvc) fails to start
+    href: file-sync-troubleshoot-service-fails-start.md
+  - name: Troubleshoot Auto Update can't upgrade expired Azure File Sync agent
+    href: file-sync-troubleshoot-auto-update-expired-agent.md
+  - name: Troubleshoot high memory usage
+    href: file-sync-troubleshoot-high-memory-usage.md
