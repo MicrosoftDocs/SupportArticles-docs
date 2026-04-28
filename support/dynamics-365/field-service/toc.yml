@@ -93,7 +93,7 @@ items:
       href: scheduling/schedule-board-performance.md
     - name: Schedule board shows a blank page or fails to load
       href: scheduling/schedule-board-not-loading.md
-    - name: Schedule board errors due to version mismatch
+    - name: Schedule board errors due to version mismatches
       href: scheduling/schedule-board-version-mismatch.md  
 
 - name: Work order

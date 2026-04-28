@@ -117,7 +117,7 @@ landingContent:
             url: scheduling/schedule-board-performance.md
           - text: Schedule board shows a blank page or fails to load
             url: scheduling/schedule-board-not-loading.md
-          - text: Schedule board errors due to version mismatch
+          - text: Schedule board errors due to version mismatches
             url: scheduling/schedule-board-version-mismatch.md
 
   # Card

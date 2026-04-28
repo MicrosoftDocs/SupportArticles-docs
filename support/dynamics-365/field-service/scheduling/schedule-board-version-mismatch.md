@@ -1,12 +1,12 @@
 ---
-title: Schedule board errors due to version mismatches in Dynamics 365 Field Service
-description: Resolve version mismatch errors on the Dynamics 365 Field Service schedule board caused by incompatible Field Service and Universal Resource Scheduling components.
+title: Fix Schedule Board Version Mismatch Errors
+description: Resolve schedule board version mismatch errors in Dynamics 365 Field Service caused by incompatible Field Service and Universal Resource Scheduling versions.
 ms.date: 04/27/2026
-ms.reviewer: mkelleher, puneetsingh
+ms.reviewer: mkelleher, puneetsingh, v-shaywood
 ms.custom: sap:Schedule Board\Issues with usability
 ---
 
-# Schedule board errors caused by version mismatches
+# Schedule board errors due to version mismatches
 
 ## Summary
 
@@ -24,7 +24,7 @@ When you open or interact with the schedule board, you experience one or more of
 
 ## Cause
 
-Dynamics 365 Field Service depends on Universal Resource Scheduling (URS) for its scheduling capabilities. Each Field Service release is designed to work with a specific minimum URS version. When the two components are out of sync—for example, after a partial update or a failed update—the schedule board can reference settings or APIs that the installed URS version doesn't recognize.
+Dynamics 365 Field Service depends on Universal Resource Scheduling (URS) for its scheduling capabilities. Each Field Service release is designed to work with a specific minimum URS version. When the two components are out of sync, for example after a partial update or a failed update, the schedule board can reference settings or APIs that the installed URS version doesn't recognize.
 
 Common scenarios that lead to version mismatches include:
 
@@ -34,7 +34,7 @@ Common scenarios that lead to version mismatches include:
 
 ## Solution
 
-Work through the following sections like a checklist. Try each one in order until the issue is resolved.
+To fix the error, complete the following sections in order, checking the schedule board after each one to see if the error is resolved.
 
 ### Verify and align solution versions
 
@@ -44,7 +44,7 @@ Work through the following sections like a checklist. Try each one in order unti
 1. Go to **Resources** > **Dynamics 365 apps**.
 1. Find the installed versions of these solutions:
    - **Dynamics 365 Field Service**
-   - **Universal Resource Scheduling** (also listed as *msdyn_Scheduling*)
+   - **Universal Resource Scheduling** (also listed as **msdyn_Scheduling**)
 1. Compare the versions against the [Field Service version history](/dynamics365/field-service/version-history) to confirm they're compatible.
 1. If the versions don't match, select **Update** next to the outdated solution to bring it to a compatible version.
 
