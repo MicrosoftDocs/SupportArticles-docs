@@ -45,31 +45,29 @@ The update can't find required redistributable files (for example, `SQLSysClrTyp
 
 ## Resolution
 
-Use the following workflow.
-
-### Step 1: Verify where the files are missing
+Use the following workflow to validate the file locations and determine the appropriate scenario.
 
 1. Identify the update package GUID.
-1. Check whether the required files exist under `EasySetupPayload`.
-1. Check whether the same files exist under `CMUStaging`.
+1. Verify whether the required files exist under `\EasySetupPayload`.
+1. Verify whether the same files exist under `\CMUStaging`.
 
-Then use the scenario that matches your findings.
+After completing these checks, proceed with the scenario that matches your findings.
 
 ### Scenario 1: Files are missing in EasySetupPayload
 
-If files are missing in `EasySetupPayload`, restore the update payload source first.
+If files are missing in `\EasySetupPayload`, restore the update payload source first.
 
-- For an online service connection point, retry the download after you verify internet connectivity and endpoint access.
+- For an online service connection point, retry the download from the console after you verify internet connectivity and endpoint access.
 - For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again.
 
-After you rerun download or import, confirm that the required files exist under the appropriate `EasySetupPayload` `Redists` folder.
+After you rerun download or import, confirm that the required files exist under the appropriate `\EasySetupPayload\<PackageGuid>\Redists` folder.
 
 > [!NOTE]
 > In Service Connection Tool version 2509 or later, the **Connect** step fails if required redistributable files can't be downloaded.
 
 ### Scenario 2: Files are present in EasySetupPayload but missing in CMUStaging
 
-If files exist in `EasySetupPayload` but are missing in `CMUStaging`, retrigger update content replication.
+If files exist in `\EasySetupPayload` but are missing in `\CMUStaging`, retrigger update content replication.
 
 Run the following command on the server that hosts the SMS Provider role for the top-level site. Replace `<SiteCode>` and `<PackageGuid>`.
 
