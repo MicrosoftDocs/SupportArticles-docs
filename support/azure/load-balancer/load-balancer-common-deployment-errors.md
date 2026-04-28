@@ -1,5 +1,6 @@
 ---
-title: Troubleshoot common deployment errors
+
+title: Azure Load Balancer error codes
 titleSuffix: Azure Load Balancer
 description: Learn how to troubleshoot common Azure Load Balancer deployment errors, fix issues faster, and restore traffic flow—review the solutions now.
 services: load-balancer
@@ -13,7 +14,7 @@ ms.custom: template-concept, engagement-fy23
 # Customer intent: "As a network engineer, I want to troubleshoot Azure Load Balancer deployment errors, so that I can efficiently resolve issues and ensure optimal load balancing for my applications."
 ---
 
-# Troubleshoot common Azure deployment errors with Azure Load Balancer
+# Troubleshoot Azure Load Balancer error codes
 
 ## Summary
 
@@ -38,9 +39,9 @@ Use this article to troubleshoot common Azure Load Balancer deployment errors an
 |LoadBalancerWithoutFrontendIPCantHaveChildResources | A Load Balancer resource that has no frontend IP configurations, can't have associated child resources or components associated to it. In order to mitigate this error, add a frontend IP configuration and then add the resources you're trying to add. |
 | LoadBalancerRuleCountLimitReachedForNic | A backend pool member's network interface (virtual machine, Virtual Machine Scale Set) can't be associated to more than 300 rules. Reduce the number of rules or use another Load Balancer. This limit is documented on the [Load Balancer limits page](/azure/azure-resource-manager/management/azure-subscription-service-limits#load-balancer).
 | LoadBalancerInUseByVirtualMachineScaleSet | The Load Balancer resource is in use by a Virtual Machine Scale Set and can't be deleted. Use the Azure Resource Manager ID provided in the error message to search for the Virtual Machine Scale Set in order to delete it. | 
-| SpecifiedAllocatedOutboundPortsForOutboundRuleIsNotAMultipleOfEight | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports isn't a multiply of 8.
-| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAllowedPortsPerRule | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than 64000.
-| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAvailablePorts | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than currently available.
+| SpecifiedAllocatedOutboundPortsForOutboundRuleIsNotAMultipleOfEight | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports isn't a multiply of 8. |
+| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAllowedPortsPerRule | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than 64000. |
+| SpecifiedAllocatedOutboundPortsForOutboundRuleExceedsTotalNumberOfAvailablePorts | The number of specified [SNAT](/azure/load-balancer/outbound-rules) ports is greater than currently available. |
 
 ## Next steps
 
