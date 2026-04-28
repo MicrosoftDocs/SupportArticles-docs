@@ -38,14 +38,14 @@ Verify the following conditions:
   - Microsoft Flow Dataverse Integration Service
   - Dynamics CRM Online / Dataverse
 - [Conditional Access](/entra/identity/conditional-access/overview) policies don't block registration or sign-in for these applications.
-- The user who's starting the provisioning has Environment Admin privileges (for non-default environments).
+- The user who's starting the provisioning has Environment Admin privileges (for nondefault environments).
 
 ### Verify that provisioning succeeded
 
 To verify that provisioning succeeded, follow these steps:
 
-1. Verify that a Dataverse database is created and linked to the environment. Check this in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-1. Verify that the Dataverse database that's linked to the environment is in the **Ready** state. Check this in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Verify that a Dataverse database is created and linked to the environment. Check this status in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Verify that the Dataverse database that's linked to the environment is in the **Ready** state. Check this status in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
    > [!NOTE]
    > Some lifecycle operations, such as backup and restore, can leave the database in a **Disabled** or **Admin-only** state. These states prevent Power Automate Approvals and other Dataverse functionality from working.
@@ -103,7 +103,7 @@ This error occurs in organizations that disable [self-service sign-ups](/microso
 
 These errors occur if the Dynamics CRM Online or Dataverse applications are disabled in the tenant or blocked by Conditional Access for specific users. The exact message varies depending on the state of the Dataverse instance for the Power Apps or Power Automate environment. These states include unprovisioned, provisioned without Approvals installed, and Approvals already installed.
 
-To resolve this issue, a tenant administrator should go to the **Enterprise Applications** tab under **Microsoft Entra ID** in [Microsoft Azure](https://ms.portal.azure.com), andverify that application `00000007-0000-0000-c000-000000000000` (Dataverse or Dynamics CRM Online) is enabled for users to sign in. Also verify that any relevant Conditional Access policies grant the required access to users who use Power Automate Approvals.
+To resolve this issue, a tenant administrator should go to the **Enterprise Applications** tab under **Microsoft Entra ID** in [Microsoft Azure](https://ms.portal.azure.com), and verify that application `00000007-0000-0000-c000-000000000000` (Dataverse or Dynamics CRM Online) is enabled for users to sign in. Also verify that any relevant Conditional Access policies grant the required access to users who use Power Automate Approvals.
 
 :::image type="content" source="media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Screenshot that shows how to set the Enabled for users to sign-in option to Yes.":::
 
