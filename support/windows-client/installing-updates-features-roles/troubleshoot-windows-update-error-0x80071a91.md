@@ -19,13 +19,13 @@ appliesto:
 
 ## Summary
 
-Error code 0x80071A91 (`ERROR_RM_NOT_ACTIVE`) means the transaction resource manager isn't active. Windows Update uses the Kernel Transaction Manager (KTM) and the transactional NTFS subsystem for file operations during updates. When these components fail, the update process can't commit its changes.
+Error code 0x80071A91 (`ERROR_RM_NOT_ACTIVE`) means the transaction resource manager isn't active. 
 
 ## Symptoms
 
 You install a Windows update, but the installation fails, and you see error code 0x80071A91 reported.
 
-To get more information, review the following resources:
+To get more information, review the following information:
 
 1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
@@ -38,12 +38,12 @@ Error                 CBS    Perf: Failed to process single phase execution. [HR
 
 ## Cause
 
-This error occurs when one of the following conditions exists:
+While installing updates, Windows Update uses the Kernel Transaction Manager (KTM) and the File System Resource Manager (FSRM) to manage file operations. When these components fail, the update process can't commit its changes. This error occurs when one of the following conditions exists:
 
-- The NTFS transaction log on the system volume is corrupted.
-- The KTM can't start or manage file transactions.
-- A previous interrupted update left the transaction subsystem in a bad state.
-- Disk errors block the transaction log from being written or read.
+- The FSRM transaction log file on the system volume is corrupted.
+- The KTM or FSRM can't start or manage file transactions.
+- A previous update didn't install correctly, so the transaction subsystem in an inconsistent or bad state.
+- Disk errors block access to the transaction log.
 - An antivirus program or file system filter driver blocks transactional file operations.
 - The Windows component store is corrupted.
 
@@ -51,7 +51,7 @@ This error occurs when one of the following conditions exists:
 
 > [!IMPORTANT]  
 >
-> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 > - If the affected computer is a VM that can't start, go to [step 7](#step-7).
 
 ### Step 1: Request a reset of the transaction logs
@@ -107,7 +107,7 @@ net start bits
 net start wuauserv
 ```
 
-After you run these command, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 5.
+After you run these commands, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 5.
 
 ### Step 5: Check disk health
 
