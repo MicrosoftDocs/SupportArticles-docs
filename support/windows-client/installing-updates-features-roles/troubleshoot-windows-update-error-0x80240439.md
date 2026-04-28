@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update error 0x80240439
-description: Describes how to fix Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED). This error occurs when the Windows Update agent starts but can't complete its startup sequence.
+description: Discusses how to fix Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED). This error occurs if the Windows Update agent starts but can't complete its startup sequence.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/29/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED) occurs when the Windows Update agent starts but can't complete its startup sequence. This article describes the symptoms of this error and provides step-by-step instructions to help you resolve it.
+Windows Update error 0x80240439 (WU_E_NOT_INITIALIZED) occurs if the Windows Update agent starts but can't complete its startup sequence. This article describes the symptoms of this error, and provides step-by-step instructions to help you resolve it.
 
 ## Symptoms
 
@@ -43,13 +43,13 @@ To get more information, follow these steps:
 
 ## Cause
 
-This error occurs when the Windows Update service starts but can't finish its startup sequence. Any of the following conditions can cause this issue:
+This error occurs if the Windows Update service starts but can't finish its startup sequence. Any of the following conditions can cause this issue:
 
 - The Windows Update agent data store is corrupted.
 - The Windows Update registry configuration is damaged or incomplete.
 - The state files in the %windir%\SoftwareDistribution folder are corrupted.
 - A system policy or Group Policy setting blocks the agent from starting.
-- A recent Windows Update reset didn't finish the re-initialization process.
+- A recent Windows Update reset didn't finish the reinitialization process.
 
 ## Resolution
 
@@ -60,7 +60,7 @@ This error occurs when the Windows Update service starts but can't finish its st
 
 To reset the Windows Update agent, follow these steps:
 
-1. Open an administrative Command Prompt window and then run the following commands:
+1. Open an administrative Command Prompt window, and run the following commands:
 
    ```console
    net stop wuauserv
@@ -77,14 +77,14 @@ To reset the Windows Update agent, follow these steps:
 
    > [!NOTE]  
    >
-   > - If you have to run these commands more than once, delete the existing SoftwareDistribution.old and catroot2.old folders before each subsequent run.
+   > - If you have to run these commands more than one time, delete the existing SoftwareDistribution.old and catroot2.old folders before each subsequent run.
    > - This sequence of commands stops the Windows Update service, clears the data store, and then restarts the service.
 
 1. After the commands finish running, try again to install the update. If the update still doesn't install, go to step 2.
 
-### Step 2: Re-register Windows Update components
+### Step 2: Reregister Windows Update components
 
-To re-register the DLLs that the Windows Update agent needs, run the following commands at the command prompt:
+To reregister the DLLs that the Windows Update agent needs, run the following commands at the command prompt:
 
 ```console
 regsvr32 /s atl.dll
@@ -120,7 +120,7 @@ regsvr32 /s wuwebv.dll
 ```
 
 > [!NOTE]  
-> On computers that run Windows versions that are older than Windows 10, you might also have to re-register the following DLLs:
+> On computers that run Windows versions that are older than Windows 10, you might also have to reregister the following DLLs:
 >
 > ```console
 > regsvr32 /s wuaueng.dll
@@ -149,10 +149,10 @@ If you make changes, run the following command:
 gpupdate /force
 ```
 
-Restart the computer, and then try again to install the update. If the update still doesn't install, take one of the following actions:
+Restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-- If the affected computer is a VM, continue to step 4.
-- Continue to [step 5](#step-5-check-update-service-configuration).
+- If the affected computer is a VM, go to step 4.
+- Otherwise, go to [step 5](#step-5-check-update-service-configuration).
 
 ### Step 4: Use the Run command reset tool (Azure)
 
@@ -168,5 +168,5 @@ If you use Windows Server Update Services (WSUS) or a similar service to manage 
 
 1. Verify that the VM can connect to the WSUS server URL.
 1. Make sure that firewalls and NSG rules (for VMs) allow outbound connections to the WSUS server or Windows Update endpoints.
-1. If you use Azure Update Manager, verify that the Azure Monitor Agent (AMA) or the Log Analytics agent (MMA) agent is healthy. The particular agent to check depends on your configuration.
+1. If you use Azure Update Manager, verify that the Azure Monitor Agent (AMA) or the Log Analytics agent (MMA) is healthy. The particular agent to check depends on your configuration.
 1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
