@@ -90,20 +90,17 @@ When source and destination accounts are in the same perimeter, traffic between 
    
 **Client, Source Account, and Destination Account in different perimeters** 
 
-When the client, source account, and destination account are all in different perimeters, you can allow intra-perimeter communication and simplify access rule requirements by using perimeter links, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). A perimeter link is the only supported method for granting inbound access to a client that resides in a
+When the client, source account, and destination account are all in different perimeters, you can allow cross-perimeter communication and simplify access rule requirements by using perimeter links, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). A perimeter link is the only supported method for granting inbound access to a client that resides in a
  different perimeter than the source or destination account. If perimeter links are not used to allow communication between source and destination perimeters, the following access rules must be configured:
 
 1. The client sends a Put Block From URL request to the destination storage account.  
-
-   To permit this request, ensure that outbound access is granted to the destination account from the client.
-   
-     *Example outbound access rule definition*![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
       
 1. The destination account sends a Get Block request to the source storage account. 
 
    To permit this request, ensure that: 
    
-   - Outbound access is granted to the source account from the destination account. 
+   - Outbound access is granted to the source account from the destination account.
+     *Example outbound access rule definition*![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
    - Inbound access is granted to the destination account from the source account.   
       
    For more information about managing inbound/outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest).
