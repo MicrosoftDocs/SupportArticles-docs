@@ -7,7 +7,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.date: 04/06/2026
+ms.date: 04/20/2026
 # Customer intent: "As a network administrator, I want to understand the known issues and limitations of Azure Firewall so I can plan my deployment, avoid common problems, and troubleshoot issues effectively."
 ---
 
@@ -33,7 +33,7 @@ The following zones currently have capacity constraints:
 | **Physical zone 2** in **_Spain Central_** | Basic, Standard, and Premium | - You can't deploy a new Azure Firewall in zone 2. </br></br>Estimated date available: December 31, 2026 | Deploy a new Azure Firewall to the remaining availability zones or use a different region. To configure an existing firewall, see [How can I configure availability zones after deployment?](/azure/firewall/firewall-faq#how-can-i-configure-availability-zones-after-deployment) |
 | **Physical zone 3** in **_US Gov Virginia_** | Basic and Standard | - Zonal deployments are blocked in physical zone 3 in US Gov Virginia. </br></br>- You must manually select available zones for successful deployment, creating a suboptimal deployment experience. | Select zones 1 and 2 for zonal deployments or use a different region. |
 | **Physical zone 2** in **_West US 2_** | Basic, Standard, and Premium | - You can't deploy a new Azure Firewall in zone 2. | Deploy a new Azure Firewall to the remaining availability zones or use a different region. To configure an existing firewall, see [How can I configure availability zones after deployment?](/azure/firewall/firewall-faq#how-can-i-configure-availability-zones-after-deployment) |
-| **Physical zone 1,2,3** in **Qatar Central** | Basic, Standard, and Premium | - New Azure Firewall deployments are blocked.</br></br>Estimated date available: December 31, 2026 | Deploy a new Azure Firewall in a different region.|
+| **Physical zone 1, 2, 3** in **Qatar Central** | Basic, Standard, and Premium | - New Azure Firewall deployments are blocked.</br></br>Estimated date available: December 31, 2026 | Deploy a new Azure Firewall in a different region.|
 
 > [!WARNING]
 > If you stop an existing Azure Firewall deployment in any of these capacity-restricted regions, you might not be able to start it again due to ongoing capacity limitations. Plan accordingly before stopping firewall instances in these regions.
@@ -95,6 +95,8 @@ Azure Firewall Premium has the following known issues:
 |Certificate Propagation|After a CA certificate is applied on the firewall, it might take between 5-10 minutes for the certificate to take effect.|A fix is being investigated.|
 |TLS 1.3 support|TLS 1.3 is partially supported. The TLS tunnel from client to the firewall is based on TLS 1.2, and from the firewall to the external Web server is based on TLS 1.3.|Updates are being investigated.|
 |TLSi intermediate CA certificate expiration|In some unique cases, the intermediate CA certificate can expire two months before the original expiration date.|Renew the intermediate CA certificate two months before the original expiration date. A fix is being investigated.|
+|Self-signed certificates don't support automatic renewal|Auto-renew operations fail when self-signed certificates are used for TLS inspection. This limitation affects certificate rotation scenarios where automatic renewal is configured in the firewall policy.|Use a certificate issued by a trusted Certificate Authority (CA) for automatic renewal support.|
+|Replacing self-signed certificates requires disabling TLS inspection|The Azure portal doesn't allow generating a new self-signed certificate when one is already associated with the firewall policy. This limitation affects scenarios where you need to rotate or update self-signed certificates.|Disable TLS inspection, then re-enable it and generate the new certificate.|
 |Connectivity issues when routing OS‑native IPsec traffic from Azure VMs to on‑premises through Azure Firewall Premium |In some hybrid deployments, Azure virtual machines use OS‑native IPsec tunnels to connect to on‑premises networks. When this traffic is routed through Azure Firewall Standard- especially when a VPN Gateway or Global VNet Peering is involved, IPsec packets may fail to pass through the firewall, resulting in connectivity issues.|Avoid routing OS‑native IPsec traffic from Azure virtual machines through Azure Firewall Premium. A solution for this limitation is currently in development.
 
 ## Next steps
