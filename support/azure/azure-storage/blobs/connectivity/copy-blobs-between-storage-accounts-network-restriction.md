@@ -104,7 +104,7 @@ When the client, source account, and destination account are all in different pe
    To permit this request, ensure that: 
    
    - Outbound access is granted to the source account from the destination account. 
-      **Example outbound access rule definition**![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/screenshot-28-4-2026-131325-ms.portal.azure.com.jpeg)
+      **Example outbound access rule definition**![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
       
    - Inbound access is granted to the destination account from the source account. 
    - Inbound access is granted to the client from the source account.  
