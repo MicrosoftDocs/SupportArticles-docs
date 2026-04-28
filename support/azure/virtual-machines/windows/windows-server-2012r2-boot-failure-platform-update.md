@@ -52,7 +52,7 @@ This problem affects only legacy guest OSs (Windows Server 2012 and Windows Serv
 > If you have a recent backup of the VM, you can try to [restore the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup problem.
 
 > [!IMPORTANT]
-> This workaround is a temporary mitigation. Future Azure host updates might reintroduce the problem. The only permanent resolution is to [upgrade to a supported Windows Server version](#permanent-resolution).
+> This workaround is a temporary mitigation. Future Azure host updates might reintroduce the problem. The only permanent resolution is to [upgrade to a supported Windows Server version](#resolution).
 
 To resolve this problem, use a repair VM to apply an offline registry fix that maps the legacy ACPI device identifiers to the updated ones.
 
