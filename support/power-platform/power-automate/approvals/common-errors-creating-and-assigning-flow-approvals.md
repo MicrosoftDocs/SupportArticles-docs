@@ -155,19 +155,19 @@ Power Automate isn't finished setting up the Approvals solution in this environm
 
 > Failed to create the Common Data Service database in this environment with status code 'ViralServicePlanRequired'.
 
-The Dataverse database can't be provisioned because a required service plan is missing. See [Error with status code "ViralServicePlanRequired"](flow-approval-cds-provisioning-errors.md#error-with-status-code-viralserviceplanrequired) for steps to resolve this issue.
+The Dataverse database can't be provisioned because a required service plan is missing. See [Error with status code "ViralServicePlanRequired"](flow-approval-cds-provisioning-errors.md#error-that-has-status-code-viralserviceplanrequired) for steps to resolve this issue.
 
 #### ResourceDisabledInTenant
 
 > Resource `https://publishers.crm.dynamics.com` has been disabled by your tenant administrator. Contact your tenant administrator and request that they enable `https://publishers.crm.dynamics.com` in the Azure Portal.
 
-A required Dynamics 365 resource is disabled in your Microsoft Entra tenant. See [Error with status code "AADApplicationDisabled"](flow-approval-cds-provisioning-errors.md#error-with-status-code-aadapplicationdisabled) for steps to resolve this issue.
+A required Dynamics 365 resource is disabled in your Microsoft Entra tenant. See [Error with status code "AADApplicationDisabled"](flow-approval-cds-provisioning-errors.md#error-that-has-status-code-aadapplicationdisabled) for steps to resolve this issue.
 
 #### ApplicationDisabledInTenant
 
 > 'The Flow Enterprise Application has been disabled by your tenant administrator. Contact your tenant administrator and request that they enable Microsoft Flow applications 'Microsoft Flow Service' (AppID: '...') and 'Microsoft Flow CDS Integration Service' (AppID: '...') in the Azure Portal.'.
 
-A tenant administrator disabled one or more Microsoft Entra applications that Approvals requires. An administrator must re-enable the applications in the Azure portal. See [Error with status code "AADApplicationDisabled"](flow-approval-cds-provisioning-errors.md#error-with-status-code-aadapplicationdisabled) for steps to resolve this issue.
+A tenant administrator disabled one or more Microsoft Entra applications that Approvals requires. An administrator must re-enable the applications in the Azure portal. See [Error with status code "AADApplicationDisabled"](flow-approval-cds-provisioning-errors.md#error-that-has-status-code-aadapplicationdisabled) for steps to resolve this issue.
 
 ### Miscellaneous
 
