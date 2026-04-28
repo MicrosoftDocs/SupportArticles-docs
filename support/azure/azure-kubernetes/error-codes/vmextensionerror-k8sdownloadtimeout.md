@@ -29,7 +29,9 @@ When you try to start or create an AKS cluster, you receive the following error 
 
 > Code="VMExtensionProvisioningError"
 >
-> Message="CSE failed with 'VMExtensionError_K8SDownloadTimeout'. AKS node provisioning failed due to a timeout downloading Kubernetes binaries from `<hostname>`. `<diagnostic details>`. Please refer to https://aka.ms/aks/vmextensionerror_k8sdownloadtimeout for troubleshooting, https://aka.ms/aks/outbound-rules-control-egress for the complete list of required endpoints, and https://aka.ms/aks-required-ports-and-addresses for required ports and addresses."
+> Message="CSE failed with 'VMExtensionError_K8SDownloadTimeout'. AKS node provisioning failed due to a timeout downloading Kubernetes binaries from `<hostname>`. `<diagnostic details>`. For more detailed troubleshooting, see https://aka.ms/aks/vmextensionerror_k8sdownloadtimeout.
+  For the complete list of required endpoints, ports and addresses,
+  see https://aka.ms/aks/outbound-rules-control-egress and https://aka.ms/aks-required-ports-and-addresses."
 
 In some logs, this error might also appear as exit status 31 or `ExitCode: 31`.
 
@@ -53,12 +55,12 @@ Use the following table to match the CSE or `curl` error in the error message to
 | Message pattern | Likely cause | Next step |
 | --- | --- | --- |
 | `curl: (6) Could not resolve host: <hostname>` | DNS can't resolve the download endpoint. | [Resolve DNS lookup failures](#resolve-dns-lookup-failures). |
-| `curl: (22) The requested URL returned error: 403`, `HTTP/1.0 403 Forbidden`, `Server: BigIP`, or proxy tunnel denial | A firewall, proxy, or NVA is denying HTTPS access. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
-| `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain` | The node doesn't trust the TLS inspection or proxy certificate chain. | [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
+| `curl: (22) The requested URL returned error: 403` | A firewall, proxy, or NVA is denying HTTPS access. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
 | `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer` | The HTTPS connection is being reset or interrupted. Firewall, proxy, NVA, or TLS inspection behavior can cause this issue. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks), and then [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
-| `[ 124 -ne 0 ]`, `curl: (124)`, or `* Trying <IP>:443...` without a completed connection | TCP 443 connectivity to the download endpoint is timing out. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
+| `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain` | The node doesn't trust the TLS inspection or proxy certificate chain. | [Resolve TLS inspection or certificate trust failures](#resolve-tls-inspection-or-certificate-trust-failures). |
+| `curl: (124)` or `curl timed out while connecting to ...` | TCP 443 connectivity to the download endpoint is timing out. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
 | `Error: CSE has been running for <seconds> seconds, exceeding the limit of <seconds> seconds` | The detailed `curl` symptom might be missing or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
-| No recognizable `curl` or CSE detail | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
+| Other errors | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
 
 ## Solution
 
