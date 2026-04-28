@@ -61,7 +61,7 @@ This error occurs if two or more users in Microsoft Graph match the same **Assig
 
 > The content for attachment '''...' is not a valid base64 encoded string.
 
-Specify the attachment content in [base64 format](/azure/logic-apps/expression-functions-reference#base64-encoding-decoding). Most connectors that return file data already do this. For custom data that's passed into the attachment content, use the [base64](/azure/logic-apps/expression-functions-reference#base64) expression.
+Specify the attachment content in [base64 format](/azure/logic-apps/expression-functions-reference#base64-encoding-decoding). Most connectors that return file data already use this format. For custom data that's passed into the attachment content, use the [base64](/azure/logic-apps/expression-functions-reference#base64) expression.
 
 #### AttachmentEmptyContentNotSupported
 
@@ -137,7 +137,7 @@ The database is still provisioning, or provisioning failed. Rerun a flow that us
 
 > The current user does not have permissions to create a Common Data Service database for this environment. Please ask an environment administrator to create the database.
 
-For non-default Power Automate and Power Apps environments, only environment administrators can create a Dataverse database directly (through the Power Platform admin center) or indirectly (through Power Automate Approvals).
+For nondefault Power Automate and Power Apps environments, only environment administrators can create a Dataverse database directly (through the Power Platform admin center) or indirectly (through Power Automate Approvals).
 
 To resolve this issue, an administrator must take one of the following actions:
 
