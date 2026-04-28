@@ -141,7 +141,7 @@ gpupdate /force
 Restart the computer, and then try again to install the update. If the update still doesn't install, take one of the following actions:
 
 - If the affected computer is a VM, continue to step 4.
-- Continue to [step 5]().
+- Continue to [step 5](#step-5-check-update-service-configuration).
 
 ### Step 4: Use the Run command reset tool (Azure)
 
