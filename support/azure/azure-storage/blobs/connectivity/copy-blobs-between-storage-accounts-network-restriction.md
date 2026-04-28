@@ -66,7 +66,7 @@ Here's the full process of this mechanism for the two scenarios:
 1. After the destination storage receives the "403 Forbidden" error, it sends another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
 1. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
-### Scenario 3: The client uses public endpoints, and network security perimeter is enforced on one or both storage accounts
+### Scenario 3: The client uses public endpoints with network security perimeter enforced
 
 In this scenario, you must configure network security perimeter access rules so the request will succeed for all three paths: client-to-destination, client-to-source, and destination-to-source. If there is no authorized access across even one of the three, the copy operation will not succeed, typically with a 403 Forbidden error. For more information about network security perimeters, see [What is a network security perimeter?](https://docs.azure.cn/en-us/private-link/network-security-perimeter-concepts#components-of-a-network-security-perimeter).
 
@@ -84,14 +84,14 @@ When source and destination accounts are in the same perimeter, traffic between 
    
 1. The destination account sends a Get Block request to the source storage account. 
 
-   The destination storage account receives the request and tries to retrieve blocks from the given source URL. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client. 
+   The destination storage account receives the request and tries to retrieve blocks from the given source URL. Because the destination retrieves blocks from the source on behalf of the client, inbound access from the client must be granted on both the source and destination accounts.
    
    To permit this request, ensure that inbound access is granted to the client from the source account. 
    
 **Client, Source Account, and Destination Account in different perimeters** 
 
 When the client, source account, and destination account are all in different perimeters, you can allow cross-perimeter communication and simplify access rule requirements by using perimeter links, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). A perimeter link is the only supported method for granting inbound access to a client that resides in a
- different perimeter than the source or destination account. If perimeter links are not used to allow communication between source and destination perimeters, the following access rules must be configured:
+ different perimeter than the source or destination account. If a perimeter link is not used to allow communication between source and destination account perimeters, the following access rules must be configured:
 
 1. The client sends a Put Block From URL request to the destination storage account.  
       
