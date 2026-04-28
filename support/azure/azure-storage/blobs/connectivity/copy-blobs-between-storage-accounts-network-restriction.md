@@ -68,7 +68,7 @@ Here's the full process of this mechanism for the two scenarios:
 
 ### Scenario 3: The client uses public endpoints, and network security perimeter is enforced on one or both storage accounts
 
-In this scenario, you must configure network security perimeter access rules so the request will succeed for all three paths: client-to-destination, client-to-source, and destination-to-source. If there is no authorized access across even one of the three, the copy operation will not succeed, typically with a 403 Forbidden error.  
+In this scenario, you must configure network security perimeter access rules so the request will succeed for all three paths: client-to-destination, client-to-source, and destination-to-source. If there is no authorized access across even one of the three, the copy operation will not succeed, typically with a 403 Forbidden error. For more information about network security perimeters, see [What is a network security perimeter?](https://docs.azure.cn/en-us/private-link/network-security-perimeter-concepts#components-of-a-network-security-perimeter).
 
 **Client, Source and Destination Accounts in the same perimeter** 
 
@@ -98,7 +98,7 @@ When the client, source account, and destination account are all in different pe
    
    - Outbound access is granted to the destination account from the client. 
    - Inbound access is granted to the client from the destination account. 
-   
+      
 1. The destination account sends a Get Block request to the source storage account. 
 
    To permit this request, ensure that: 
@@ -106,8 +106,10 @@ When the client, source account, and destination account are all in different pe
    - Outbound access is granted to the source account from the destination account. 
    - Inbound access is granted to the destination account from the source account. 
    - Inbound access is granted to the client from the source account.  
+      
+      
+   For more information about managing inbound/outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest).
    
-
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
 A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke VNets from a VM in a Hub VNet. You can find a "403 This request is not authorized to perform this operation - CannotVerifyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
 
