@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update error 0x80071A91
-description: Learn how to resolve Windows Update error 0x80071a91 (ERROR_RM_NOT_ACTIVE) that occurs when the transaction resource manager isn't active.
+description: Discusses how to fix Windows Update error 0x80071A91 (ERROR_RM_NOT_ACTIVE) This error occurs when the transaction resource manager can't process file operations during the update installation process.
 manager: dcscontentpm
 audience: itpro
 ms.date: 04/29/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-
+Windows Update error `0x80071A91 (ERROR_RM_NOT_ACTIVE)` occurs when the transaction resource manager can't process file operations during the update installation process. This article describes the symptoms and causes of this error and provides steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
@@ -30,8 +30,8 @@ To get more information, follow these steps:
 1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
 ```output
-Error                 CBS    Exec: Failed to commit CBS transaction. [HRESULT = 0x80071a91 - ERROR_RM_NOT_ACTIVE]
-Error                 CBS    Perf: Failed to process single phase execution. [HRESULT = 0x80071a91]
+Error     CBS    Exec: Failed to commit CBS transaction. [HRESULT = 0x80071a91 - ERROR_RM_NOT_ACTIVE]
+Error     CBS    Perf: Failed to process single phase execution. [HRESULT = 0x80071a91]
 ```
 
 1. Open Event Viewer, and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **KtmRm**. Look for events that occurred around the time of the update failure.
