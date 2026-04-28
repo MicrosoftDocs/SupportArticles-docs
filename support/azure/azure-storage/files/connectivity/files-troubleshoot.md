@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files
-description: Troubleshoot issues with Azure file shares. See common issues and explore possible resolutions.
+description: Troubleshoot Azure Files issues including connectivity, DNS, and access errors. Learn common causes and step-by-step resolutions to fix Azure file share problems.
 services: storage
 ms.service: azure-file-storage
 ms.date: 10/10/2023
@@ -9,7 +9,9 @@ ms.custom: sap:Connectivity
 ---
 # Troubleshoot Azure Files
 
-This article lists common issues related to Azure Files. It also provides possible causes and resolutions for these issues.
+## Summary
+
+This article lists common issues related to Azure Files, including connectivity, DNS resolution, and access errors. It provides possible causes and resolutions to help you fix Azure file share problems quickly.
 
 [!INCLUDE [Feedback](../../../../includes/feedback.md)]
 
@@ -27,7 +29,7 @@ If you can't find an answer to your question, you can contact us through the fol
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot/no-icon.png" border="false":::|
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot/yes-icon.png" border="false"::: |
 
-## General troubleshooting first steps
+## General troubleshooting steps
 
 If you encounter problems with Azure Files, start with the following steps.
 

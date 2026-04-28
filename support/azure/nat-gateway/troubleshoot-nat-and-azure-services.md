@@ -86,8 +86,6 @@ NAT gateway can be deployed with AKS clusters in order to allow for explicit out
 
 - **User-Assigned NAT gateway**: You deploy a NAT gateway to an existing virtual network for the AKS cluster. 
 
-StandardV2 or Standard SKU NAT Gateway can be deployed with either a Managed NAT gateway or User-Assigned NAT gateway. 
-
 Learn more at [Managed NAT Gateway](/azure/aks/nat-gateway).
 
 ### Connecting from AKS cluster to the AKS API server over the internet

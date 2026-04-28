@@ -15,7 +15,7 @@ ms.date: 04/20/2026
 
 ## Summary
 
-This article helps you understand the current known issues and limitations in [Azure Firewall](/azure/firewall/overview). Microsoft updates this information as issues are resolved, so check back regularly for the latest status.
+This article helps you understand the current known issues and limitations in [Azure Firewall](/azure/firewall/overview). Microsoft updates this information as it resolves issues, so check back regularly for the latest status.
 
 Before you deploy Azure Firewall or troubleshoot existing deployments, review these known issues to avoid common problems and plan appropriate workarounds.
 
@@ -23,7 +23,7 @@ For Azure Firewall service limits, see [Azure subscription and service limits, q
 
 ## Current capacity constraints
 
-The following zones currently experience capacity constraints:
+The following zones currently have capacity constraints:
 
 | Region/Zones | SKU | Restrictions | Recommendation |
 |--|--|--|--|
@@ -75,7 +75,8 @@ Azure Firewall Standard has the following known issues:
 |Can't deploy Firewall with Availability Zones with a newly created Public IP address|When you deploy a Firewall with Availability Zones, you can't use a newly created Public IP address.|First create a new zone redundant Public IP address, then assign this previously created IP address during the Firewall deployment.|
 |Associating a Public IP address with Azure Firewall isn't supported in a cross-tenant scenario.|If you create a Public IP address in tenant A, you can't associate it with a firewall deployed in tenant B.|None.|
 |VMs behind Azure Firewall can't connect to DNAT rule destinations using the firewall's public IP|When VMs route traffic through Azure Firewall and attempt to connect to resources configured with DNAT rules by using the firewall's public IP address, the connection fails. The connection failure occurs because Azure Firewall doesn't support hair pinning traffic from internal VMs to the firewall's own public IP address for DNAT rule destinations.|A solution for this limitation is currently in development.|
-|Connectivity issues when routing OS‑native IPsec traffic from Azure VMs to on‑premises through Azure Firewall Standard |In some hybrid deployments, Azure virtual machines use OS‑native IPsec tunnels to connect to on‑premises networks. When this traffic is routed through Azure Firewall Standard- especially when a VPN Gateway or Global VNet Peering is involved, IPsec packets may fail to pass through the firewall, resulting in connectivity issues.|Avoid routing OS‑native IPsec traffic from Azure virtual machines through Azure Firewall Standard. A solution for this limitation is currently in development.
+|Connectivity issues when routing OS‑native IPsec traffic from Azure VMs to on‑premises through Azure Firewall Standard |In some hybrid deployments, Azure virtual machines use OS‑native IPsec tunnels to connect to on‑premises networks. When this traffic is routed through Azure Firewall Standard- especially when a VPN Gateway or Global VNet Peering is involved, IPsec packets may fail to pass through the firewall, resulting in connectivity issues.|Avoid routing OS‑native IPsec traffic from Azure virtual machines through Azure Firewall Standard. A solution for this limitation is currently in development.|
+|Management operations generate DNS queries visible in logs|Azure Firewall performs internal DNS lookups as part of normal management and platform operations (for example, configuration updates, telemetry, and service connectivity). These DNS queries may appear in customer Azure DNS logs or security monitoring tools, even though they aren't initiated by customer traffic.|This behavior is expected and does not indicate a misconfiguration or security issue. Filter or exclude known Microsoft service domains in DNS monitoring policies if needed.|
 
 ## Azure Firewall Premium known issues
 
