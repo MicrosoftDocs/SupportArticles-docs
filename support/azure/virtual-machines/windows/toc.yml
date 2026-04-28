@@ -124,6 +124,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800719e4 (ERROR_LOG_FULL)
       href: ../../../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Troubleshoot Windows Update error 0x80071A91
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80072f8f
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x800f0823
