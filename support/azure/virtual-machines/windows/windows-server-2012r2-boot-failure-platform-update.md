@@ -61,7 +61,7 @@ To resolve this problem, use a repair VM to apply an offline registry fix that m
 Create a repair VM that you can use to attach the OS disk from the affected VM and make offline registry changes.
 
 1. Use steps 1-3 of the [VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a repair VM.
-1. Take a snapshot of the affected VM's OS disk before you procede.
+1. Take a snapshot of the affected VM's OS disk before you proceed.
 1. Attach the OS disk as a data disk to the repair VM.
 1. Connect to the repair VM by using Remote Desktop.
 1. Note the drive letter that's assigned to the attached OS disk (for example, **F:**).
@@ -85,7 +85,7 @@ If you receive an **"Access is denied"** error message during the registry copy,
 
 The `Enum` registry keys under HKLM\SYSTEM are protected and owned by NT AUTHORITY\SYSTEM. If the direct registry copy returns "Access is denied," use the following method:
 
-1. On the repair VM, create a script file at **C:\acpi_fix.cmd** that uses the following content. In each step , replace **F:** with the drive letter of the attached OS disk.
+1. On the repair VM, create a script file at **C:\acpi_fix.cmd** that uses the following content. In each step, replace **F:** with the drive letter of the attached OS disk.
 
     ```cmd
     @echo off
