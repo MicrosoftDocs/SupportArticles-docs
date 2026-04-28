@@ -50,7 +50,9 @@ This error occurs when one of the following conditions exists:
 ## Resolution
 
 > [!IMPORTANT]  
-> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+>
+> - Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+> - If the affected computer is a VM that can't start, go to [step 7](#step-7).
 
 ### Step 1: Request a reset of the transaction logs
 
@@ -71,6 +73,7 @@ To repair the component store, run the following command at the command prompt:
 ```console
 DISM /Online /Cleanup-Image /RestoreHealth
 ```
+
 This command uses Windows Update as the source for repair information.
 
 After you run this command, restart the computer, and then try again to install the update. If it still doesn't install, continue to step 3.
@@ -108,10 +111,7 @@ After you run these command, restart the computer, and then try again to install
 
 ### Step 5: Check disk health
 
-
-
 To check for disk issues, follow these steps:
-
 
 1. On the affected computer, open a Command Prompt window and then run the following command:
 
@@ -124,7 +124,10 @@ To check for disk issues, follow these steps:
    > [!IMPORTANT]
    > If the affected computer is an Azure VM and you use the Azure portal to monitor and remediate disk health, continue to the next step of this procedure. You still have to restart the VM that uses the disk.
 
-1. After the tool finishes, restart the computer and then try again to install the update.
+1. After the tool finishes, restart the computer and then try again to install the update. If the update still doesn't install, take one of the following actions:
+
+   - If the affected computer is a VM, continue to step 6.
+   - Contact Microsoft Support for assistance.
 
 ### Step 6: Use the Run Command reset tool (Azure)
 
@@ -139,7 +142,30 @@ After you run the tool, try to install the update again. If it still doesn't ins
 If the reset tool doesn't fix the issue or the VM can't boot:
 
 1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
+
 1. Attach the affected operating system disk to the repair VM.
-3. Run `fsutil resource setautoreset true <drive>:\` on the attached disk.
-4. Run `DISM /Image:<drive>:\ /Cleanup-Image /RestoreHealth` on the offline image.
-5. Swap the repaired disk back to the original VM.
+
+1. To reset the NTFS transaction logs, follow these steps:
+   1. open an administrative Command Prompt window on the repair VM and then run the following command:
+
+      ```console
+      fsutil resource setautoreset true <drive>:\
+      ```
+
+      > [!NOTE]  
+      > In this command, \<drive> represents the drive letter of the affected operating system disk.
+
+   1. Restart the computer. When Windows starts, it recreates the transaction logs.
+
+1. Make sure that you have an offline operating system image available, and then run the following command at the command prompt:
+
+   ```console
+   DISM /Image:<drive>:\ /Cleanup-Image /RestoreHealth
+   ```
+
+      > [!NOTE]  
+      > In this command, \<drive> represents the drive letter of the offline image.
+
+1. Swap the repaired disk back to the original VM.
+
+1. try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
