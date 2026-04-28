@@ -104,11 +104,9 @@ When the client, source account, and destination account are all in different pe
    To permit this request, ensure that: 
    
    - Outbound access is granted to the source account from the destination account. 
-      **Example outbound access rule definition**![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
-      
+      *Example outbound access rule definition*![outboundaccessrule](media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.jpeg)
    - Inbound access is granted to the destination account from the source account. 
    - Inbound access is granted to the client from the source account.  
-      
       
    For more information about managing inbound/outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest).
    
