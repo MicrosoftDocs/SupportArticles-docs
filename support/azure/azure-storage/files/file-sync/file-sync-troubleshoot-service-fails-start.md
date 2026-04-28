@@ -8,7 +8,7 @@ ms.date: 07/21/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, copilot-scenario-highlight
 ---
-## Storage Sync Agent service (FileSyncSvc) fails to start
+# Storage Sync Agent service (FileSyncSvc) fails to start
 
 ## Summary
 

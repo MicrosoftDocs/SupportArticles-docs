@@ -8,7 +8,7 @@ items:
   - name: Troubleshoot sync group
     href: file-sync-troubleshoot-sync-group-management.md
   - name: Troubleshoot sync issues
-    href: file-sync-troubleshoot-sync-issues.md
+    href: file-sync-troubleshoot-sync-errors.md
   - name: Troubleshoot managed identities
     href: file-sync-troubleshoot-managed-identities.md
   - name: Troubleshoot Storage Sync Agent service (FileSyncSvc) fails to start
