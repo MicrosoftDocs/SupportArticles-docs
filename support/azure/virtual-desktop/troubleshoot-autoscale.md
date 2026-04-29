@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot autoscale issues in Azure Virtual Desktop
 description: Troubleshoot common autoscale issues for pooled host pools in Azure Virtual Desktop, including session consolidation behavior, scale-down expectations, and session host recovery after hibernate.
-author: <github-alias>
-ms.author: <ms-alias>
+author: azarjindal007
+ms.author: azarj
 ms.service: azure-virtual-desktop
 ms.topic: troubleshooting
 ms.date: 2026-04-14
