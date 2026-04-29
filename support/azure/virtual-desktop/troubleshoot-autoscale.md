@@ -5,7 +5,7 @@ author: azarjindal007
 ms.author: azarj
 ms.service: azure-virtual-desktop
 ms.topic: troubleshooting
-ms.date: 2026-04-14
+ms.date: 04/14/2026
 ---
 
 # Troubleshoot autoscale issues in Azure Virtual Desktop
@@ -204,10 +204,10 @@ Capture this minimum evidence set:
 
 ## Related content
 
-- [Autoscale FAQ](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-faq)
-- [Autoscale scenarios](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-scenarios)
-- [Autoscale glossary](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-glossary)
-- [Create and assign scaling plans](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-create-assign-scaling-plan)
-- [Monitor autoscale operations and insights](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-monitor-operations-insights)
-- [Autoscale diagnostics](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-diagnostics)
+- [Autoscale FAQ](/azure/virtual-desktop/autoscale-faq)
+- [Autoscale scenarios](/azure/virtual-desktop/autoscale-scenarios)
+- [Autoscale glossary](/azure/virtual-desktop/autoscale-glossary)
+- [Create and assign scaling plans](/azure/virtual-desktop/autoscale-create-assign-scaling-plan)
+- [Monitor autoscale operations and insights](/azure/virtual-desktop/autoscale-monitor-operations-insights)
+- [Autoscale diagnostics](/azure/virtual-desktop/autoscale-diagnostics)
 
