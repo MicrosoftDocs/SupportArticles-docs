@@ -72,6 +72,68 @@ In the error message, locate the host name after `downloading Kubernetes binarie
 
 If the host name isn't shown in the AKS operation error, review the failed node virtual machine scale set (VMSS) instance extension status for the CSE output. You can also test against `acs-mirror.azureedge.net` if that endpoint appears in the CSE output or if the error doesn't include a different host name.
 
+### Find the node resource values for the checks
+
+Some checks in this article run against the AKS node resources, not the AKS cluster resource itself. AKS node resources are usually in a managed resource group whose name starts with `MC_`.
+
+Run the following commands to find the values that are used later in this article:
+
+```azurecli
+# Get the AKS managed resource group that contains the node resources.
+az aks show --resource-group <cluster-resource-group-name> \
+   --name <cluster-name> \
+   --query nodeResourceGroup \
+   --output tsv
+
+# List the VM scale sets in the managed resource group.
+az vmss list --resource-group <mc-resource-group-name> \
+   --query "[].name" \
+   --output table
+
+# List instances in the VM scale set.
+az vmss list-instances --resource-group <mc-resource-group-name> \
+   --name <vmss-name> \
+   --query "[].{instanceId:instanceId,name:name,provisioningState:provisioningState}" \
+   --output table
+```
+
+The first command returns the managed resource group name to use as `<mc-resource-group-name>`. The second command returns the node pool VMSS names. The third command returns instance IDs to use as `<vmss-instance-id>`. If you have multiple node pools or VM scale sets, start with the VMSS that contains the failed instance shown in the AKS operation error. If the error doesn't identify an instance, test one instance from the affected node pool.
+
+To find the node network interface ID for Network Watcher and effective NSG or route checks, run the following command:
+
+```azurecli
+az vmss nic list --resource-group <mc-resource-group-name> \
+   --vmss-name <vmss-name> \
+   --instance-id <vmss-instance-id> \
+   --query "[0].id" \
+   --output tsv
+```
+
+The command should return a resource ID for the node network interface. Use that value as `<node-nic-id>` in later commands.
+
+To find the node subnet, run the following command:
+
+```azurecli
+az network nic show --ids <node-nic-id> \
+   --query "ipConfigurations[0].subnet.id" \
+   --output tsv
+```
+
+The command should return the subnet resource ID for the node. Use this subnet when you review NSGs, route tables, firewall source ranges, proxy source ranges, or Network Watcher checks in the Azure portal.
+
+### Review the failed node VM extension status
+
+If the diagnostic message tells you to review the failed node VM extension status, check the VMSS instance view for the failed node. The extension output often contains the exact `curl` error and the endpoint that failed.
+
+```azurecli
+az vmss get-instance-view --resource-group <mc-resource-group-name> \
+   --name <vmss-name> \
+   --instance-id <vmss-instance-id> \
+   --output json
+```
+
+In the output, look for extension status or substatus messages that mention `VMExtensionError_K8SDownloadTimeout`, `CSE`, `curl`, `download`, or the endpoint host name. If you find a specific `curl` error, use the table in the [Cause](#cause) section to choose the matching solution section. If the output is truncated or doesn't show a specific `curl` error, continue with [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
+
 ### Resolve DNS lookup failures
 
 If the error includes `curl: (6) Could not resolve host`, verify that DNS can resolve the download endpoint from the node subnet or from a VM that uses the same DNS and network path.
@@ -253,6 +315,8 @@ Match the timestamp of the failed AKS operation or the failed `curl` test with l
 
 If the error includes `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain`, a proxy or TLS inspection device might be presenting a certificate chain that the node doesn't trust.
 
+If the AKS diagnostic message says to configure TLS inspection or proxy trust, it means that AKS nodes must be able to make trusted HTTPS connections to the required AKS endpoints. To fix this, either exclude the required AKS endpoints from TLS inspection, or configure the proxy or TLS inspection device and the cluster so that the nodes trust the certificate chain that the device presents. After you make the change, verify that `curl -Iv --connect-timeout 10 https://<hostname>/` completes certificate verification and returns an HTTP response.
+
 Run the following command to inspect the TLS handshake:
 
 ```bash
@@ -265,9 +329,9 @@ Review the command output to determine where the TLS handshake fails:
 
 | Output pattern | What it means | Next step |
 | --- | --- | --- |
-| `SSL certificate problem`, `unable to get local issuer certificate`, `self signed certificate in certificate chain`, or `unknown CA` | The node doesn't trust the certificate chain that it received. | Configure the proxy or TLS inspection device to present a trusted certificate chain, or make sure the node trusts the required enterprise CA certificates. |
-| The certificate subject or issuer shows your enterprise proxy, firewall, or TLS inspection device instead of a public Microsoft certificate chain for the endpoint. | TLS inspection is being applied to the connection. | Bypass TLS inspection for AKS required endpoints, or make sure the inspected certificate chain is trusted by the node. |
-| `CONNECT tunnel established` followed by a certificate trust error | The proxy connection succeeded, but the TLS certificate that was presented through the proxy isn't trusted by the node. | Update the proxy certificate chain or node CA trust configuration. |
+| `SSL certificate problem`, `unable to get local issuer certificate`, `self signed certificate in certificate chain`, or `unknown CA` | The node doesn't trust the certificate chain that it received. | Make the presented certificate chain trusted by using a supported AKS cluster configuration, or bypass TLS inspection for AKS required endpoints. |
+| The certificate subject or issuer shows your enterprise proxy, firewall, or TLS inspection device instead of a public Microsoft certificate chain for the endpoint. | TLS inspection is being applied to the connection. | Exclude AKS required endpoints from TLS inspection, or make sure the inspected certificate chain is trusted by the node. |
+| `CONNECT tunnel established` followed by a certificate trust error | The proxy connection succeeded, but the TLS certificate that was presented through the proxy isn't trusted by the node. | Update the proxy certificate chain and cluster CA trust configuration, or bypass TLS inspection for AKS required endpoints. |
 | `OpenSSL SSL_connect: Connection reset by peer`, `unexpected eof while reading`, or `curl: (35)` | An intermediate proxy, firewall, NVA, or TLS inspection device might be interrupting the handshake. | Review the device logs for denied, reset, or inspection-failed events for `<hostname>:443`. |
 | `SSL certificate verify ok` followed by an HTTP response | The TLS handshake succeeded. | Continue with the firewall, proxy, NVA, NSG, or applicable UDR checks if the AKS operation still fails. |
 
