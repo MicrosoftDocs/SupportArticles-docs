@@ -21,7 +21,9 @@ ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
- 
+## Summary
+
+This article provides troubleshooting steps to help resolve issues that occur when deploying a new Windows virtual machine (VM) in Azure.
 
 ## Collect activity logs
 

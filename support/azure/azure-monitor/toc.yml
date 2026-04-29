@@ -19,10 +19,18 @@ items:
         href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
       - name: Troubleshoot the export of Activity Logs across Azure subscriptions
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
-      - name: Configuring Azure Activity Log Export
+      - name: Troubleshoot forwarding Azure activity logs to diagnostic settings
+        href: activity-logs/config-export/troubleshoot-activity-logs-forward.md
+      - name: Configure Azure Activity Log Export
         href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
       - name: Configure long-term storage for Azure Activity Logs
         href: activity-logs/config-export/configure-long-term-storage-activity-logs.md 
+      - name: Configure activity log export for a specific resource group
+        href: activity-logs/config-export/configure-activity-log-export-for-resource-group.md
+      - name: Resolve problems when configuring Azure Diagnostic Settings for legacy log profiles
+        href: activity-logs/config-export/configure-diagnostic-settings-legacy-log-profiles.md
+      - name: Resolve diagnostic setting limit problems in Azure
+        href: activity-logs/config-export/resolve-diagnostic-setting-limit-problems.md  
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -133,6 +141,8 @@ items:
       href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
     - name: Workspace data export FAQ
       href: log-analytics/workspaces/workspace-data-export-faq.yml
+    - name: Resolve role definition fetch problems in Log Analytics
+      href: log-analytics/workspaces/resolve-role-definition-fetch-problems.md
   - name: Cost management 
     items:
     - name: Understand cost and analyze usage report
@@ -195,3 +205,7 @@ items:
   items:
   - name: Deleted event hub is automatically re-created
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
+  - name: Troubleshoot data export and pricing problems in Event Hubs
+    href: diagnostic-settings/data-flow/troubleshoot-data-export-pricing-problems.md
+  - name: Export management group activity logs to Event Hubs
+    href: diagnostic-settings/data-flow/export-management-group-activity-logs.md

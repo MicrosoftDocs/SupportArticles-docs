@@ -10,6 +10,8 @@ ms.custom: sap:My VM is not booting, linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 Incorrect HugePages configuration can cause boot issues in Linux Virtual Machines (VMs), leading to memory allocation problems. This article provides the cause and solution for the boot issues.
 
 ## Prerequisites

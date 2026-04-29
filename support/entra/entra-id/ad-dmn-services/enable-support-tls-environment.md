@@ -1,15 +1,19 @@
 ---
 
 title: Enable TLS 1.2 support as Microsoft Entra TLS 1.0/1.1 is deprecated
-description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Microsoft Entra TLS 1.0/1.1 deprecation.
+description: "Learn how to enable TLS 1.2 support in your environment before Microsoft Entra discontinues TLS 1.0 and 1.1. Get step-by-step guidance to ensure secure connections."
 ms.date: 01/24/2025
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: entra-id
 ms.custom: sap:AD FS (Active Directory Federation Services), has-azure-ad-ps-ref
 ---
-# Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation
+# Enable TLS 1.2 support in your environment for Microsoft Entra
 
-To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Entra ID will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
+## Summary
+
+This article describes how to enable support for Transport Layer Security (TLS) 1.2 in your environment, in preparation for the upcoming deprecation of Microsoft Entra TLS 1.0 and 1.1.
+
+To improve the security posture of your tenant and to remain in compliance with industry standards, Microsoft Entra ID will soon stop supporting the following TLS protocols and ciphers:
 
 - TLS 1.1
 - TLS 1.0
@@ -87,7 +91,7 @@ For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core
 >
 > What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won't succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
 
-### Identify and reduce dependency on clients that don't support TLS 1.2
+### Identify and reduce dependencies on clients that don't support TLS 1.2
 
 Update the following clients to provide uninterrupted access:
 

@@ -88,7 +88,7 @@ For these registry entries, type the value that’s listed in the Data (Decimal)
 
 | Name | Type | Data (Decimal) |
 | ---| --- | --- |
-| MsoEtwTracingEnabled | REG_DWORD | 32 |
+| MsoEtwTracingEnabled | REG_DWORD | 1 |
 | DefaultMinimumSeverity | REG_DWORD | 100 |
 
 1. Exit Registry Editor.

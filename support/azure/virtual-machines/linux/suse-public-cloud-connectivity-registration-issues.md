@@ -15,6 +15,8 @@ keywords:
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article discusses an issue in which a Microsoft Azure Virtual Machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. This article provides some basic troubleshooting steps and actions to take for specific scenarios (such as failures in the Zypper command-line tool for managing packages in SUSE). Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
 It's important to read the output of each command for more clues. We recommend that you save the results and messages for further troubleshooting.
@@ -653,6 +655,78 @@ To work around the issue, set the VM to use the default Python version 3.6:
     ,"status":"Registered"},{"identifier": "sle-module-containers", "version":"15.5","arch":"x86 64","status":"Registered"},{"identifier": "sle-module-de top-applications","version":"15.5","arch":"x86 64","status":"Registered"},{"identifier": "sle-module-development-tools","version":"15.5"," 64","status":"Registered"},{"identifier":"sle-module-public-cloud", "version":"15.5","arch":"x86 64","status":"Registered"},{"identifier": "sle-modu -python3","version":"15.5","arch":"x86 64","status":"Registered"},{"identifier": "sle-module-server-applications","version":"15.5","arch":"x86 64",
     tatus":"Registered"}, {"identifier": "sle-module-web-scripting", "version":"15.5","arch":"x86 64","status":"Registered"}]
     ```
+
+## Scenario 9: SUSE registration fails on LTSS enabled VMs SLES 12 SP5
+SLES 12 SP5 VM with LTSS enabled failed to connect to SMT repository. The following error message is displayed in `/var/log/cloudregister`.
+
+   ```output
+   INFO:Registration: /usr/sbin/SUSEConnect --url [https://smt-azure.susecloud.net](https://smt-azure.susecloud.net) --de-register --product SLES-LTSS/12.5/x86_64
+   INFO:Non free extension SLES-LTSS/12.5/x86_64 failed to be removed
+   ```
+
+**Resolution:**
+
+1. Verify the list of modules enabled under directory `/etc/products.d`
+   
+```bash
+sudo ls -l /etc/products.d/
+```
+
+```output  
+   total 24
+   -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod
+   -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod
+   -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
+   -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
+```
+
+2. Disable the LTSS related modules by renaming them.  
+   ```bash
+   sudo mv SLES-LTSS.prod SLES-LTSS.prod-bkp 
+   ```
+   ```bash
+   sudo mv  SLES-LTSS-Extended-Security.prod SLES-LTSS-Extended-Security.prod-bkp
+   ```
+
+```bash  
+ sudo ls -l /etc/products.d/ 
+```
+ ```output    
+ total 24
+   -rw-r--r-- 1 root root 2746 2024-10-08 07:40 SLES-LTSS-Extended-Security.prod-bkp
+   -rw-r--r-- 1 root root 2621 2024-10-08 05:13 SLES-LTSS.prod-bkp
+   -rw-r--r-- 1 root root 2922 2024-09-25 14:21 SLES.prod
+   lrwxrwxrwx 1 root root    9 2018-01-09 08:47 baseproduct -> SLES.prod
+   -rw-r--r-- 1 root root 2254 2017-11-23 04:48 sle-module-web-scripting.prod
+   -rw-r--r-- 1 root root 2363 2019-10-18 06:58 sle-sdk.prod
+```
+4. Re-register the VM using following commands.
+
+   ```bash        
+   sudo SUSEConnect --cleanup
+   sudo rm -f /etc/SUSEConnect
+   sudo rm -rf /etc/zypp/credentials.d/*
+   sudo rm -rf /etc/zypp/repos.d/*
+   sudo rm -f /etc/zypp/services.d/*
+   sudo rm /var/lib/cloudregister/*
+   sudo rm -rf /var/cache/zypp/*
+   sudo sed -i '/^# Added by SMT reg/,+1d' /etc/hosts
+   sudo /usr/sbin/registercloudguest --force-new
+   ```
+   ```output
+    Registration succeeded
+    ```
+5. Validate the SMT repository connectivity.
+   ```bash
+   sudo zypper refresh
+   ```
+   ```bash
+   sudo SUSEConnect --status
+   ```
+6. Once the registration to SMT repository is successful, the LTSS can be re-enabled as specified in [SUSE article - How to assign Long Term Service Pack Support repositories to installed systems](https://support.scc.suse.com/s/kb/How-to-assign-Long-Term-Service-Pack-Support-repositories-to-installed-systems-1583239391022?language=en_US)  
+
 
 ## Next steps
 

@@ -17,6 +17,8 @@ ms.topic: troubleshooting
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
+## Summary
+
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot because the operating system (OS) file system isn't accessible from the RAMdisk. The VM lands in the dracut emergency shell.
 
 ## Prerequisites

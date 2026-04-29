@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes the reboot loop you may experience on a Windows Virtual Machine (VM) in Microsoft Azure.
 
 ## Symptom

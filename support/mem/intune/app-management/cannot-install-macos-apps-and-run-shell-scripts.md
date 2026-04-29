@@ -1,7 +1,7 @@
 ---
 title: App installation and shell script execution fail in macOS 11.2
 description: Resolves a known issue in which applications don't install and shell scripts don't run on devices that run macOS 11.2.x.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:AppDeployment - MacOS\MacoS(DMG
 ms.reviewer: kaushika, markstan, v-six

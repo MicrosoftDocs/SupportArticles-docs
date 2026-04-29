@@ -1,7 +1,7 @@
 ---
 title: Enable MFA for SMS Provider calls
 description: Describes a new feature that you can enable multi-factor authentication for SMS Provider calls to protect administrative actions.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, preetir, prabagar, yuexia, buzb
 ms.custom: sap:Site Server and Roles\SMS Provider
 ---

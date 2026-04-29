@@ -1,7 +1,7 @@
 ---
 title: SCEP certificate request fails during verification
 description: Fixes an issue in which the SCEP certificate request fails during the verification phase on the certificate registration point.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika, joelste, intunecic, kolldhee

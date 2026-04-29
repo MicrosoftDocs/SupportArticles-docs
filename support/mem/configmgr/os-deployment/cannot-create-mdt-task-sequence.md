@@ -1,7 +1,7 @@
 ---
 title: An error occurred when loading the task sequence 
 description: Fixes an issue where you can't create a Microsoft Deployment Toolkit task sequence in Configuration Manager.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, markstan
 ms.custom: sap:Operating Systems Deployment (OSD)\MDT Integration or User Driven Installation (UDI)
 ---

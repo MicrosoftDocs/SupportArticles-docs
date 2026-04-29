@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]

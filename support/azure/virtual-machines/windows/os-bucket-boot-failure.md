@@ -12,6 +12,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article explains why a Windows VM cannot boot and how to solve the problem.
 
 ## Symptoms

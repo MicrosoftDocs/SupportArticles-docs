@@ -15,7 +15,7 @@ items:
       href: administration/date-window-fields-missing.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
-    - name: Inspection flows aren't triggered 
+    - name: Inspection flows don't trigger 
       href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md

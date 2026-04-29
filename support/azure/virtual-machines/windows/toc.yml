@@ -112,6 +112,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/error-0x80070003-windows-update-fails.md?context=/troubleshoot/azure/context/context
     - name: Error code 0x8007000d
       href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Troubleshoot Windows Update error 0x80070008
+      href: ../../../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8007000e or 0x800705aa
       href: ../../../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070070
@@ -274,6 +276,10 @@ items:
         href: guest-os-firewall-misconfigured.md
       - name: Troubleshoot RDP error caused by netvsc.sys
         href: troubleshoot-rdp-driver-netvsc.md
+      - name: Troubleshoot Mellanox mlx5 driver crashes on Azure Windows VMs
+        href: troubleshoot-windows-vm-mellanox-network-driver-crash.md
+      - name: Use the Azure VM Mellanox Driver Validation tool
+        href: windows-vm-mellanox-network-driver-validation-tool.md
       - name: Maximum allowed connections reached
         href: troubleshoot-rdp-too-many-admin-sessions-open.md
       - name: Can't sign into your account
@@ -602,6 +608,45 @@ items:
     items:
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
+
+- name: Move and migrate VM resources
+  items:
+  - name: Top error scenarios
+    items:
+    - name: Resource is not in a Succeeded state
+      href: move-resources-not-succeeded-state.md
+    - name: Resource type not supported for move
+      href: move-resources-resource-type-not-supported.md
+    - name: Move not supported - resource has plan for different subscription
+      href: move-resources-plan-different-subscription.md
+    - name: Tenant not authorized to access linked subscription
+      href: move-resources-tenant-not-authorized.md
+    - name: 800 resource limit per move operation
+      href: move-resources-800-limit.md
+    - name: Cannot move more than 100 resources via portal
+      href: move-resources-100-limit-portal.md
+    - name: Backup error during resource move
+      href: move-resources-backup-error.md
+    - name: Operation not allowed - system upgrade in progress
+      href: move-resources-operation-not-allowed-system-upgrade.md
+    - name: Move fails with MissingMoveDependentResources
+      href: move-resources-missing-dependencies.md
+    - name: Move operation times out after four hours
+      href: move-resources-4-hour-timeout.md
+    - name: Move fails due to invalid or deleted storage account
+      href: move-resources-invalid-storage-account.md
+    - name: Move fails with IncompleteRequest - hidden resources not included
+      href: move-resources-incomplete-request-hidden-resources.md
+    - name: Move fails because a private endpoint is not in Succeeded state
+      href: move-resources-private-endpoint-failed-state.md
+  - name: FAQ
+    href: move-vm-resources-faq.md
+  - name: How-to guides
+    items:
+    - name: Move resources to a different tenant
+      href: move-vm-to-different-tenant.md
+    - name: Convert unmanaged disks to managed disks
+      href: migrate-vm-unmanaged-to-managed-disks.md
 
 - name: On-demand Capacity Reservation issues
   items:

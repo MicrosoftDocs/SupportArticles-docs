@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 
 _Original KB number:_ &nbsp; 4010129
 
+## Summary
+
 This article provides a solution to an issue where Azure VM doesn't start with error code 0xc000000e.
 
 ## Symptoms

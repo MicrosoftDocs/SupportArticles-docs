@@ -1,13 +1,15 @@
 ---
-title: Inspection Flows Aren't Triggered
-description: Resolves an issue where an inspection flow isn't triggered in a Microsoft Dynamics 365 Field Service environment.
-ms.reviewer: v-wendysmith
-ms.date: 04/23/2025
+title: "Inspection Flows Aren't Triggered in Field Service"
+description: "Learn how to fix inspection flows that aren't triggered in Dynamics 365 Field Service. Follow these steps to resolve deserialization flow issues quickly."
+ms.reviewer: v-wendysmith, v-shaywood
+ms.date: 04/20/2026
 ms.custom: sap:Administration
 ---
-# Inspection flows aren't triggered in Dynamics 365 Field Service
+# Inspection flows don't trigger in Dynamics 365 Field Service
 
-This article helps resolve an issue where the Power Automate **Deserialization of Inspection Definition Flow** or the **Deserialization of Inspection Response Flow** for Dynamics 365 Field Service isn't triggered as expected.
+## Summary
+
+This article helps you resolve an issue where the Power Automate **Deserialization of Inspection Definition Flow** or the **Deserialization of Inspection Response Flow** for Dynamics 365 Field Service doesn't trigger as expected.
 
 ## Symptoms
 
@@ -16,24 +18,24 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 - The **Deserialization of Inspection Definition Flow** doesn't populate inspection questions into the `msfp_question` table.
 - The **Deserialization of Inspection Response Flow** doesn't parse inspection responses, even when the **Analytics frequency** is set to **Immediately**.
 
-## Resolution
+## Solution
 
 > [!NOTE]
-> You must have administrator permissions in Dynamics 365 Field Service to perform the following steps.
+> You need administrator permissions in Dynamics 365 Field Service to perform these steps.
 
-1. [Enable analysis on inspection responses](/dynamics365/field-service/inspections-reporting#enable-analysis-on-inspection-responses).
+1. In Field Service, [enable analysis on inspection responses](/dynamics365/field-service/inspections-reporting#enable-analysis-on-inspection-responses).
 
-1. If the analysis feature is already enabled,
+1. If the analysis feature is already enabled:
 
    1. Turn the setting off and back on.
-   2. Change the **Analytics frequency** to **Immediately**.
-   3. Check if the issue persists. If it does, proceed to the next step.
+   1. Change the **Analytics frequency** to **Immediately**.
+   1. Check whether the issue persists. If it does, go to the next step.
 
-1. If the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" error message occurs when you enable analytics in Dynamics 365 Field Service, it indicates that the related Power Automate flows might not be properly registered. To resolve this issue:
+1. If you see the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" error when you enable analytics, the related Power Automate flows might not be registered correctly. To fix this problem:
 
    1. Sign in to [Power Automate](https://make.powerautomate.com/) for your environment.
-   2. Locate the flows associated with the error.
-   3. Disable the flows listed in the following table, wait a moment, and then re-enable them.
+   1. Locate the flows associated with the error.
+   1. Disable the flows in the following table, wait a moment, and then enable them again.
 
    |Flow with error  |Related flows to disable and enable  |
    |---------|---------|
@@ -42,6 +44,6 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 
    For more information, see [Flow isn't valid for ExecuteWorkflow error](../../customer-service/service-level-agreements/sla-modern-flow-not-valid.md).
 
-## More information
+## Related content
 
-[View the status of the out-of-the-box inspection flows](/dynamics365/field-service/inspections-reporting#view-the-status-of-the-out-of-the-box-inspection-flows)
+- [Inspections overview](/dynamics365/field-service/inspections-overview)

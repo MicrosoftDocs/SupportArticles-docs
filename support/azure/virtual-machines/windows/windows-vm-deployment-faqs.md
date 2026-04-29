@@ -10,6 +10,10 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic, v-weizhu
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article answers frequently asked questions about Windows virtual machine (VM) deployment.
+
 ## How can I use and deploy a windows client image into Azure?
 
 You can use Windows 7, Windows 8, or Windows 10 in Azure for dev/test scenarios if you have an appropriate Visual Studio (formerly MSDN) subscription. This [article](/azure/virtual-machines/windows/client-images) outlines the eligibility requirements for running Windows client in Azure and uses of the Azure Gallery images.

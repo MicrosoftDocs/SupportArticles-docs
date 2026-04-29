@@ -19,6 +19,8 @@ ms.custom: sap:Cannot activate my Windows VM
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
+## Summary
+
 This article helps you troubleshoot an activation issue that occurs when you create a Microsoft Azure Windows virtual machine (VM).
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]

@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot Failures When Provisioning Unified Routing in Dynamics 365
 description: Learn how to troubleshoot failures when you provision unified routing in Dynamics 365 Customer Service.
-author: hbarik
-ms.author: hbarik
 ms.reviewer: nenellim
 ms.topic: troubleshooting-problem-resolution
 ms.collection: 
