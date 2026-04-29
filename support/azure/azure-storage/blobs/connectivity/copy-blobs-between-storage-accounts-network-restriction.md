@@ -92,7 +92,7 @@ When source and destination accounts are in the same perimeter, traffic between 
    
 **Client, source account, and destination account in different perimeters** 
 
-When the client, source account, and destination account are all in different perimeters, you can allow cross-perimeter communication and simplify access rule requirements by using perimeter links. For more information, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest). 
+When the client, source account, and destination account are all in different perimeters, you can allow cross-perimeter communication and simplify access rule requirements by using perimeter links. For more information, see [az network perimeter link](/cli/azure/network/perimeter/link?view=azure-cli-latest&preserve-view=true). 
 
 A perimeter link is the only supported method for granting inbound access to a client that resides in a different perimeter than the source or destination account. If you don't use a perimeter link to allow communication between source and destination account perimeters, you must configure the following access rules:
 
@@ -107,7 +107,7 @@ A perimeter link is the only supported method for granting inbound access to a c
   
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png" alt-text="Screenshot of the access rule definition." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png":::   
       
-For more information about managing inbound and outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest).
+For more information about managing inbound and outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP&preserve-view=true) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest&preserve-view=true).
    
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
 
