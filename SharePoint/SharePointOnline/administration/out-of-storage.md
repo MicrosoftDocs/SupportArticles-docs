@@ -31,11 +31,13 @@ As a Global or SharePoint admin, you receive an email message that contains one 
 
 ## Cause
 
-The amount of Microsoft SharePoint storage for your organization is based on the number of licenses that you have.
+The amount of Microsoft SharePoint storage quota for your organization is based on the number of licenses that you have. Your organization will be considered out of storage space if your total SharePoint standard storage usage exceeds that quota.
 
-Your organization has a total storage allowance of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-ons that you purchase. For more information, see  [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+Your organization has a total storage allowance of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-ons that you purchase. For more information, see [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
 
 ## Resolution
+
+For ways to identify what’s consuming storage and reduce usage, see [SharePoint storage planning](/sharepoint/sharepoint-storage-planning).
 
 If you suspect that you should have more storage than the amount that you see in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. The tool identifies any issues that affect your SharePoint tenant storage quota. It also shows how the quota is allocated.
 
