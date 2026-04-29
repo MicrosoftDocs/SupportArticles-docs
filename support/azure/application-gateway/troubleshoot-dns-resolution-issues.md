@@ -33,10 +33,10 @@ Azure Application Gateway depends on DNS resolution for several fully qualified 
 
 #### Overview
 
-This applies to the following deployment scenario:
+This article applies to the following deployment scenario:
 
-- Application Gateway deployments that has a public IP address
-- Listener certificate stored in Azure Key Vault and referenced by the gateway
+- An Application Gateway deployment that has a public IP address
+- A listener certificate that's stored in Azure Key Vault and is referenced by the gateway
 
 #### Symptoms
 
