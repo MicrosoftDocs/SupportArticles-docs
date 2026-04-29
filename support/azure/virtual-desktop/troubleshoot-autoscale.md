@@ -19,6 +19,17 @@ The guidance applies to both autoscale methods:
 
 For both methods, session consolidation and capacity calculations use the same logic.
 
+## Table of contents
+
+- [Before you troubleshoot](#before-you-troubleshoot)
+- [How autoscale decides minimum running hosts](#how-autoscale-decides-minimum-running-hosts)
+- [Issue 1: Hosts remain running with only disconnected sessions](#issue-1-hosts-remain-running-with-only-disconnected-sessions)
+- [Issue 2: Force sign out users does not immediately deallocate all hosts](#issue-2-force-sign-out-users-does-not-immediately-deallocate-all-hosts)
+- [Issue 3: Session hosts fail to become available after hibernate resume](#issue-3-session-hosts-fail-to-become-available-after-hibernate-resume)
+- [Issue 4: Scale-down behavior differs from expectation across host pools](#issue-4-scale-down-behavior-differs-from-expectation-across-host-pools)
+- [Troubleshooting workflow](#troubleshooting-workflow)
+- [Data to capture before escalation](#data-to-capture-before-escalation)
+
 ## Before you troubleshoot
 
 Confirm the following on your host pool and scaling plan:
