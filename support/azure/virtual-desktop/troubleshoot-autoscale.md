@@ -56,12 +56,12 @@ $$
 
 In this example, autoscale keeps 2 hosts running for possible user reconnections.
 
-The actual minimum host count during ramp-down and off-peak is determined by the higher of two values:
+Autoscale determines the actual minimum host count during ramp-down and off-peak by using the higher of two values:
 
 - The formula result based on current sessions
 - The **Minimum percentage of active hosts** setting in your scaling plan phase
 
-If your minimum percentage setting yields a higher number than the formula result, that setting takes precedence. This is a common reason hosts remain running even when the formula suggests a lower count.
+If your minimum percentage setting yields a higher number than the formula result, that setting takes precedence. This minimum percentage setting is a common reason hosts remain running even when the formula suggests a lower count.
 
 ## Common issues and resolutions
 
@@ -90,7 +90,7 @@ Disconnected sessions are treated as active for capacity protection. Autoscale a
 
 To reach zero hosts after hours:
 
-1. Configure Group Policy to sign out disconnected sessions after a timeout.
+1. Configure Group Policy (GPO) to sign out disconnected sessions after a timeout.
 2. Set minimum active hosts to 0% during off-peak when appropriate.
 3. Ensure disconnected-session timeout completes before ramp-down/off-peak end.
 
@@ -106,11 +106,11 @@ Group Policy path:
 ### Symptoms
 
 - You enabled force sign-out, but scale-down still appears gradual.
-- Hosts remain for part of the ramp-down window.
+- Hosts remain running for part of the ramp-down window.
 
 ### Why this happens
 
-Force sign-out applies after the configured wait time. Before that point, autoscale still performs consolidation calculations and maintains required capacity.
+Force sign-out applies after the configured wait time. Before that point, autoscale still performs consolidation calculations and maintains required capacity. This delay means hosts don't deallocate immediately.
 
 ### How to verify
 
@@ -120,7 +120,7 @@ Force sign-out applies after the configured wait time. Before that point, autosc
 
 ### Recommended fix
 
-- Reduce wait time only if it does not harm user experience.
+- Reduce wait time only if it doesn't harm user experience.
 - Combine force sign-out with disconnected-session timeout policy.
 - Re-test over one full ramp-down cycle.
 
@@ -134,7 +134,7 @@ Force sign-out applies after the configured wait time. Before that point, autosc
 
 ### Known limitation
 
-When a session host resumes from hibernate, the RD Agent can fail to re-register with the AVD control plane. If the **RDAgentBootLoader** and **RDAgent** Windows services do not reach a **Running** state within approximately 5 minutes of the VM resuming, the session host remains unavailable in the host pool.
+When a session host resumes from hibernate, the RD Agent can fail to re-register with the AVD control plane. If the **RDAgentBootLoader** and **RDAgent** Windows services don't reach a **Running** state within approximately 5 minutes of the VM resuming, the session host remains unavailable in the host pool.
 
 ### How to verify
 
