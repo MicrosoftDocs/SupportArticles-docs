@@ -54,6 +54,8 @@ landingContent:
         links:
           - text: Position budgeting troubleshooting
             url: budgeting/position-budgeting-set-up-issues.md
+          - text: Common budget control troubleshooting scenarios
+            url: budgeting/budget-control-troubleshooting.md
  
 # Card
   - title: Cash and bank management
