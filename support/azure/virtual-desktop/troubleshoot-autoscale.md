@@ -21,14 +21,34 @@ For both methods, session consolidation and capacity calculations use the same l
 
 ## Table of contents
 
-- [Before you troubleshoot](#before-you-troubleshoot)
-- [How autoscale decides minimum running hosts](#how-autoscale-decides-minimum-running-hosts)
-- [Issue 1: Hosts remain running with only disconnected sessions](#issue-1-hosts-remain-running-with-only-disconnected-sessions)
-- [Issue 2: Force sign out users does not immediately deallocate all hosts](#issue-2-force-sign-out-users-does-not-immediately-deallocate-all-hosts)
-- [Issue 3: Session hosts fail to become available after hibernate resume](#issue-3-session-hosts-fail-to-become-available-after-hibernate-resume)
-- [Issue 4: Scale-down behavior differs from expectation across host pools](#issue-4-scale-down-behavior-differs-from-expectation-across-host-pools)
-- [Troubleshooting workflow](#troubleshooting-workflow)
-- [Data to capture before escalation](#data-to-capture-before-escalation)
+- [Troubleshoot autoscale issues in Azure Virtual Desktop](#troubleshoot-autoscale-issues-in-azure-virtual-desktop)
+  - [Table of contents](#table-of-contents)
+  - [Before you troubleshoot](#before-you-troubleshoot)
+  - [How autoscale decides minimum running hosts](#how-autoscale-decides-minimum-running-hosts)
+  - [Common issues and resolutions](#common-issues-and-resolutions)
+  - [Issue 1: Hosts remain running with only disconnected sessions](#issue-1-hosts-remain-running-with-only-disconnected-sessions)
+    - [Symptoms](#symptoms)
+    - [Why this happens](#why-this-happens)
+    - [How to verify](#how-to-verify)
+    - [Recommended fix](#recommended-fix)
+  - [Issue 2: "Force sign out users" does not immediately deallocate all hosts](#issue-2-force-sign-out-users-does-not-immediately-deallocate-all-hosts)
+    - [Symptoms](#symptoms-1)
+    - [Why this happens](#why-this-happens-1)
+    - [How to verify](#how-to-verify-1)
+    - [Recommended fix](#recommended-fix-1)
+  - [Issue 3: Session hosts fail to become available after hibernate resume](#issue-3-session-hosts-fail-to-become-available-after-hibernate-resume)
+    - [Symptoms](#symptoms-2)
+    - [Known limitation](#known-limitation)
+    - [How to verify](#how-to-verify-2)
+    - [Immediate mitigation](#immediate-mitigation)
+  - [Issue 4: Scale-down behavior differs from expectation across host pools](#issue-4-scale-down-behavior-differs-from-expectation-across-host-pools)
+    - [Symptoms](#symptoms-3)
+    - [Why this happens](#why-this-happens-2)
+    - [How to verify](#how-to-verify-3)
+    - [Recommended fix](#recommended-fix-2)
+  - [Troubleshooting workflow](#troubleshooting-workflow)
+  - [Data to capture before escalation](#data-to-capture-before-escalation)
+  - [Related content](#related-content)
 
 ## Before you troubleshoot
 
@@ -38,7 +58,7 @@ Confirm the following on your host pool and scaling plan:
 - Ramp-up, peak, ramp-down, and off-peak schedules are configured as intended.
 - **Minimum percentage of active hosts** and **capacity threshold** values are aligned with your expected scale-down behavior.
 - If your goal is zero hosts after hours, your disconnected-session policy is configured (see Issue 1).
-- The **Desktop Virtualization Power On Off Contributor** role is assigned to the Azure Virtual Desktop autoscale service principal at the host pool, resource group, or subscription scope. Without this role, autoscale cannot start, stop, or deallocate session hosts.
+- The **Desktop Virtualization Power On Off Contributor** role is assigned to the Azure Virtual Desktop autoscale service principal at the host pool, resource group, or subscription scope. Without this role, autoscale can't start, stop, or deallocate session hosts.
 
 ## How autoscale decides minimum running hosts
 
@@ -80,7 +100,7 @@ If your minimum percentage setting yields a higher number than the formula resul
 
 ### Symptoms
 
-- Scale-down does not reach zero hosts after hours.
+- Scale-down doesn't reach zero hosts after hours.
 - Hosts remain running even when no users appear actively connected.
 - You enabled **Stop VMs when VMs have no active sessions**, but still see running hosts.
 
@@ -95,7 +115,7 @@ Disconnected sessions are treated as active for capacity protection. Autoscale a
   - Stop behavior during ramp-down.
   - Minimum percentage of active hosts.
   - Capacity threshold.
-- Calculate expected required hosts using the formula above.
+- To calculate expected required hosts, use the formula in the preceding section.
 
 ### Recommended fix
 
@@ -112,7 +132,7 @@ Group Policy path:
 > [!NOTE]
 > In domain-joined environments, apply this setting via a GPO linked to the OU containing your session hosts, not via Local Computer Policy on individual hosts.
 
-## Issue 2: "Force sign out users" does not immediately deallocate all hosts
+## Issue 2: Force sign-out doesn't immediately deallocate all hosts
 
 ### Symptoms
 
@@ -141,11 +161,11 @@ Force sign-out applies after the configured wait time. Before that point, autosc
 
 - Autoscale resume action succeeds at compute layer.
 - Session hosts remain unavailable or unhealthy for user connections.
-- Hosts recover only after reboot/deallocation or agent recovery action.
+- Session hosts don't recover until after reboot/deallocation or agent recovery action.
 
 ### Known limitation
 
-When a session host resumes from hibernate, the RD Agent can fail to re-register with the AVD control plane. If the **RDAgentBootLoader** and **RDAgent** Windows services don't reach a **Running** state within approximately 5 minutes of the VM resuming, the session host remains unavailable in the host pool.
+When a session host resumes from hibernate, the Remote Desktop (RD) Agent can fail to re-register with the AVD control plane. If the **RDAgentBootLoader** and **RDAgent** Windows services don't reach a **Running** state within approximately 5 minutes of the VM resuming, the session host remains unavailable in the host pool.
 
 ### How to verify
 
