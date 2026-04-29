@@ -50,7 +50,7 @@ kubectl describe node <node-name>
 
 You can also use the open-source [AKS Node Viewer](https://github.com/Azure/aks-node-viewer) tool to visualize node usage.
 
-2. **Look for blocking pods**
+1. **Look for blocking pods**
 
 Run the following command:
 
@@ -58,7 +58,7 @@ Run the following command:
 kubectl get pods --all-namespaces --field-selector spec.nodeName=<node-name>
 ```
 
-3. **Check for disruption blocks**
+1. **Check for disruption blocks**
 
 Run the following command:
 
@@ -70,15 +70,15 @@ kubectl get events | grep -i "disruption\|consolidation"
 
 Common causes include:
 
-- Pods that have no proper tolerations
+- Pods that don't have proper tolerations
 - DaemonSets that prevent drain
 - Pod disruption budgets (PDBs) that aren't correctly set
-- Nodes that are marked by a `do-not-disrupt` annotation
+- Nodes that have a `do-not-disrupt` annotation
 - Locks that block changes
 
 **Solution**
 
-Possible solutions include:
+Try the following solutions:
 
 - Add proper tolerations to pods.
 - Review `DaemonSet` configurations.  
@@ -88,12 +88,12 @@ Possible solutions include:
 
 ## Networking issues
 
-For most networking-related issues, you can use either of the available levels of networking observability:
+For most networking-related issues, use either of the available levels of networking observability:
 
 - [Container network metrics](/azure/aks/advanced-container-networking-services-overview#container-network-metrics) (default): Enables observation of node-level metrics. 
 - [Advanced container network metrics](/azure/aks/advanced-container-networking-services-overview): Enables observation of pod-level metrics, including fully qualified domain name (FQDN) metrics for troubleshooting.
 
-### Pod connectivity issues
+### Pod connectivity problems
 
 **Symptoms**
 
@@ -113,7 +113,7 @@ kubectl exec -it <pod-name> -- nslookup kubernetes.default
 
 Another option is to use the open-source [goldpinger](https://github.com/bloomberg/goldpinger) tool. 
 
-2. **Check network plugin status**
+1. **Check network plugin status**
 
 Run the following command:
 
@@ -130,7 +130,7 @@ If you're using Azure Container Networking Interface (CNI) in overlay mode, veri
     kubernetes.azure.com/network-subscription: <redacted>
 ```
 
-4. **Verify the CNI configuration files**
+1. **Verify the CNI configuration files**
 
 The CNI conflist files define network plugin configurations. Check which files are present:
 
@@ -163,16 +163,16 @@ cat /etc/cni/net.d/*.conflist
 # - "ipam": IP address management configuration
 ```
 
-**Common conflist issues**
+**Common conflist problems**
 
-Common conflist issues include: 
+Common conflist problems include: 
 
 - Missing or corrupted configuration files
 - Incorrect network mode for your cluster setup
 - Mismatched IP Address Management (IPAM) configuration
 - Wrong plugin order in the configuration chain
 
-5. **Check CNI-to-Advanced Container Networking Services (ACNS) communication**
+1. **Check CNI-to-Advanced Container Networking Services (ACNS) communication**
 
 Run the following command:
 
@@ -192,12 +192,12 @@ Common causes include:
 
 - Network security group (NSG) rules
 - Incorrect subnet configuration
-- CNI plugin issues
+- CNI plugin problems
 - DNS resolution problems
 
 **Solution**
 
-Possible solutions include:
+Try the following solutions:
 
 - Review the [Network Security Group](/azure/virtual-network/network-security-group-how-it-works) rules for required traffic.
 - Verify the subnet configuration in `AKSNodeClass`. For more information, see [AKSNodeClass documentation](/azure/aks/node-auto-provisioning-aksnodeclass#virtual-network-vnet-subnet-configuration).
@@ -208,7 +208,7 @@ Possible solutions include:
 
 **Symptoms**
 
-When using [Azure CNI Overlay](/azure/aks/concepts-network-azure-cni-overlay) with Node Auto-Provisioning, certain new nodes remain in a "NotReady" state.
+When you use [Azure CNI Overlay](/azure/aks/concepts-network-azure-cni-overlay) with NAP, certain new nodes stay in a `NotReady` state as shown in the following example.
 
 ```yaml
 kubectl get nodeclaim
@@ -221,15 +221,15 @@ NAME            TYPE                CAPACITY    ZONE             NODE           
 default-abcde   Standard_D16as_v5   on-demand   eastus-2         aks-default-abcde   Unknown   3m13s
 ```
 
-As shown, the status for the nodeclaim remains as `Unknown`, while the status for a `kubectl get node` command returns a `NotReady` status.
+The status for the nodeclaim stays `Unknown` while the status for a `kubectl get node` command is `NotReady`.
 
 **Cause**
 
-When using an Azure CNI Overlay network, each node always preallocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR isn't large enough, newly created nodes beyond a certain count are unable to obtain an IP address due to the Pod CIDR being exhausted and these nodes remain in the "NotReady" state. See [Azure CNI Overlay documentation](/azure/aks/concepts-network-azure-cni-overlay) on requirements for subnet sizing and IP address planning.
+When you use an Azure CNI Overlay network, each node always preallocates a /24 block (256 IP addresses) from the Pod CIDR. If the Pod CIDR isn't large enough, newly created nodes beyond a certain count can't get an IP address because the Pod CIDR is exhausted. These nodes stay in the `NotReady` state. For requirements for subnet sizing and IP address planning, see [Azure CNI Overlay documentation](/azure/aks/concepts-network-azure-cni-overlay).
 
 **Debugging steps**
 
-You can confirm this issue is happening by checking Kube events with the below command:
+You can confirm this problem is happening by checking Kube events by running the following command:
 
 ```yaml
 $ kubectl get events --field-selector involvedObject.kind=NodeNetworkConfig -A
@@ -245,11 +245,11 @@ You should find the following two responses included in the error codes:
 "Subnet is full"
 ```
 
-**Solutions**
+**Solution**
 
-You can expand the pod CIDR range to allow more nodes to join the subnet. See our documentation to [Expand pod CIDR space in Azure CNI Overlay](/azure/aks/azure-cni-overlay-pod-expand).
+You can expand the pod CIDR range to allow more nodes to join the subnet. For more information, see [Expand pod CIDR space in Azure CNI Overlay](/azure/aks/azure-cni-overlay-pod-expand).
 
-After updating the CIDR space, new nodes should be able to join and their status will update to "Ready" state.
+After updating the CIDR space, new nodes can join and their status updates to a `Ready` state as shown in the following example.
 
 ```yaml
 kubectl get node
@@ -262,14 +262,14 @@ NAME                                STATUS     ROLES    AGE     VERSION
 aks-default-abcde                   Ready      <none>   2m58s   v1.33.7
 ```
 
-### DNS service IP issues
+### DNS service IP problems
 
 > [!NOTE]
-> The `--dns-service-ip` parameter is supported for only NAP clusters and isn't available for self-hosted Karpenter installations.
+> The `--dns-service-ip` parameter supports only NAP clusters and isn't available for self-hosted Karpenter installations.
 
 **Symptoms**
 
-Pods can't resolve DNS names or kubelet doesn't register together with the API server because of DNS resolution failures.
+Pods can't resolve DNS names, or kubelet doesn't register together with the API server because of DNS resolution failures.
 
 **Debugging steps**
 
@@ -286,7 +286,7 @@ sudo cat /var/lib/kubelet/config.yaml | grep -A 5 clusterDNS
 # - "10.0.0.10"  # This should match your cluster's DNS service IP
 ```
 
-2. **Verify DNS service IP matches cluster configuration**
+1. **Verify DNS service IP matches cluster configuration**
 
 Run the following command:
 
@@ -298,7 +298,7 @@ kubectl get service -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
 az aks show --resource-group <rg> --name <cluster-name> --query "networkProfile.dnsServiceIp" -o tsv
 ```
 
-3. **Test DNS resolution from the node**
+1. **Test DNS resolution from the node**
 
 Run the following command:
 
@@ -314,7 +314,7 @@ nslookup kubernetes.default.svc.cluster.local
 dig azure.com
 ```
 
-4. **Check DNS pods status**
+1. **Check DNS pods status**
 
 Run the following command:
 
@@ -326,7 +326,7 @@ kubectl get pods -n kube-system -l k8s-app=kube-dns
 kubectl logs -n kube-system -l k8s-app=kube-dns --tail=50
 ```
 
-5. **Verify network connectivity to DNS service**
+1. **Verify network connectivity to DNS service**
 
 Run the following command:
 
@@ -343,13 +343,13 @@ Common causes include:
 
 - The `--dns-service-ip` parameter in `AKSNodeClass` is incorrect.
 - The DNS service IP isn't in the service Classless Inter-Domain Routing (CIDR) range.
-- Network connectivity issues exist between the node and DNS service.
+- Network connectivity problems exist between the node and DNS service.
 - `CoreDNS` pods aren't running or are misconfigured.
 - Firewall rules block DNS traffic.
 
 **Solution**
 
-Possible solutions include:
+Try the following solutions:
 
 - Verify that the `--dns-service-ip` value matches the actual DNS service. To verify, run the following command: 
 
@@ -358,7 +358,7 @@ kubectl get svc -n kube-system kube-dns -o jsonpath='{.spec.clusterIP}'
 ```
 
 - Make sure that the DNS service IP is within the service CIDR range specified during cluster creation.
-- Check whether Karpenter nodes can reach the service subnets
+- Check whether Karpenter nodes can reach the service subnets.
 - Restart `CoreDNS pods` if they're in an error state. To restart, run the following command: 
 
 ```azurecli-interactive
@@ -386,7 +386,7 @@ Run the following command:
 kubectl get events | grep -i "spot\|evict"
 ```
 
-2. **Monitor spot VM pricing**
+1. **Monitor spot VM pricing**
 
 Run the following command:
 
@@ -396,7 +396,7 @@ az vm list-sizes --location <region> --query "[?contains(name, 'Standard_D2s_v3'
 
 **Solution**
 
-Possible solutions include:
+Try the following solutions:
 
 - Use diverse instance types for better availability.
 - Implement proper pod disruption budgets.
@@ -421,7 +421,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 
 **Solution**
 
-Possible solutions include:
+Try the following solutions:
 
 - Request quota increases through the Azure portal.
 - Expand nodepool custom resource definitions (CRDs) to include more VM sizes. For more information, see [NodePool configuration documentation](/azure/aks/node-auto-provisioning-node-pools). For example, nodepool specification A is less likely than nodepool specification B to trigger quota errors that stop VM creation if A includes D-family VMs and B is specific to only one VM size.
