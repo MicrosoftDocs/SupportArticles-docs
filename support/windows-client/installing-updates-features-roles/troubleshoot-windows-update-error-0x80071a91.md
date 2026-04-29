@@ -33,6 +33,7 @@ To get more information, follow these steps:
    Error     CBS    Exec: Failed to commit CBS transaction. [HRESULT = 0x80071a91 - ERROR_RM_NOT_ACTIVE]
    Error     CBS    Perf: Failed to process single phase execution. [HRESULT = 0x80071a91]
    ```
+
 1. Open Event Viewer, and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **KtmRm**. Look for events that occurred around the time of the update failure.
 
 ## Cause
