@@ -9,7 +9,7 @@ items:
     - name: Troubleshoot no inbound connectivity to Standard external load balancers
       href: /troubleshoot-common-problems/no-inbound-connectivity-standard-external-load-balancers.md
     - name: Troubleshoot changing the backend port for an existing load-balancing rule
-      href: /troubleshoot-common-problems/change-backend-port-existing-load-balancing-rule-vm-scale-set-deployed-backend-pool.md
+      href: /troubleshoot-common-problems/change-backend-port-existing-rule-vm-scale-set-deployed-backend-pool.md
     - name: Troubleshoot traffic still going through load balancer after removal of virtual machines from the backend pool
       href: /troubleshoot-common-problems/traffic-passing-through-load-balancer-after-vm-removal-from-backend-pool.md
     - name: Troubleshoot Load Balancer in a failed state
