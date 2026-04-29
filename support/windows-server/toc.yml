@@ -2322,20 +2322,23 @@ items:
       href: ./setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100.md
     - name: SYSPREP and CAPTURE task sequence fails
       href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
-    - name: The WDS server may not start
-      href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
+
     - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
     - name: Upgrade fails and generates error code 0xC1900101-0x20017
       href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
       href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
+    - name: The WDS server may not start
+      href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
     - name: Windows Deployment Service fails to start
       href: ./setup-upgrade-and-drivers/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
     - name: Windows Server support and installation instructions for the AMD Rome family of processors
       href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -2500,9 +2503,9 @@ items:
       href: ./system-management-components/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues.md
     - name: Troubleshoot WMI high CPU usage issues
       href: ./system-management-components/troubleshoot-wmi-high-cpu-issues.md
-- name: UserProfiles and Logon
+- name: User Profiles and Logon
   items:
-  - name: UserProfiles and Logon
+  - name: User Profiles and Logon
     href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - name: Folder redirection
     items:
@@ -2514,6 +2517,8 @@ items:
       href: ./user-profiles-and-logon/error-sem-timeout-folder-redirection.md
     - name: Folder Redirection settings aren't applied
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
   - name: User Logon fails
     items:
     - name: Cached domain logon information
@@ -2552,8 +2557,6 @@ items:
       href: ./user-profiles-and-logon/manage-profile-service-slow-link-detection.md
     - name: Profile loading fails
       href: ./user-profiles-and-logon/desktop-location-unavailable.md
-    - name: Relocation of Users and ProgramData directories
-      href: ./user-profiles-and-logon/relocation-of-users-and-programdata-directories.md
     - name: Roaming user profiles versioning
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
     - name: '"The filename or extension is too long" error'
@@ -2938,6 +2941,8 @@ items:
     items:
     - name: How the Windows Update client determines which proxy server to use
       href: ./installing-updates-features-roles/windows-update-client-determines-proxy-server-connect.md
+    - name: Windows servicing operations fail after you move user profile and ProgramData folders
+      href: ./setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders.md
   - name: Issues installing Features on Demand (FoD)
     items:
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -3006,6 +3011,8 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+    - name: Troubleshoot Windows Update error 0x80070008
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error code 0x80070070
