@@ -24,7 +24,7 @@ This article explains how to resolve error 0xC004C003 that occurs when you try t
 
 ## Symptoms
 
-When you try to activate an Azure Windows VM, you see the following error message in Windows Script Host:
+When you try to activate a Microsoft Azure Windows VM, you see the following error message in Windows Script Host:
 
 `**Error: 0xC004C003** The activation server determined the specified product key is blocked.`
 
@@ -37,7 +37,7 @@ The Multiple Activation Key (MAK) that you configured on the VM is blocked on th
 - The product key doesn't match the installed Windows edition.
 - The VM is migrated from an on-premises environment by having a product key that isn't valid for Azure.
 
-## Solution 1: Reconfigure the VM to use Azure KMS activation
+### Solution 1: Reconfigure the VM to use Azure KMS activation
 
 By default, Azure VMs should use Azure Key Management Service (KMS) activation. If the VM uses a Multiple Activation Key (MAK) instead, reconfigure it to use Azure KMS.
 
@@ -61,7 +61,7 @@ By default, Azure VMs should use Azure Key Management Service (KMS) activation. 
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Solution 2: Obtain a new MAK (if MAK activation is required)
+### Solution 2: Obtain a new MAK (if MAK activation is required)
 
 If your licensing model requires MAK activation:
 
