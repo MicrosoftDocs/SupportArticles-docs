@@ -17,7 +17,7 @@ ms.custom: sap:Connection timed out
 
 This article helps you diagnose and resolve TCP connection timeout problems when traffic routes through Microsoft Azure Application Gateway.
 
-A TCP connection timeout occurs when a client can't establish a TCP connection to the Application Gateway front end. These problems occur before HTTP processing. Therefore, the request never reaches the back-end application.
+A TCP connection timeout occurs if a client can't establish a TCP connection to the Application Gateway front end. These problems occur before HTTP processing. Therefore, the request never reaches the back-end application.
 
 > [!NOTE]
 > This article focuses on only TCP connection timeouts.  
@@ -85,7 +85,7 @@ Pay particular attention to routes that match the client or source IP address ra
 
 If such a route exists, determine whether it could redirect return traffic away from the expected path and, therefore, cause asymmetric routing. If no matching user-defined route exists for the client or source IP address, verify whether gateway route propagation is disabled on the route table.
 
-If gateway route propagation is disabled, the issue is unlikely to be caused by routing.
+If gateway route propagation is disabled, routing is unlikely to be the cause of the issue.
 
 > [!NOTE]
 > If no route table is associated with the Application Gateway subnet, gateway route propagation is effectively enabled by default. However, this condition alone doesn't rule out routing-related issues.
@@ -104,7 +104,7 @@ Verify the effective return path by using **Connection Troubleshoot** in the **M
 
 Check whether the Application Gateway virtual network is peered with another virtual network. If peering exists, verify whether **Use remote gateways** is enabled on the peering configuration.
 
-If it's enabled, follow these steps:
+If this option is enabled, follow these steps:
 
 - Evaluate whether routes propagated from a VPN gateway or ExpressRoute gateway (for example, default routes introduced by forced tunneling) could affect return traffic for the request client IP address.
 - Verify the effective return path by using **Connection Troubleshoot** in the **Monitoring** section of the Application Gateway.
