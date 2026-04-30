@@ -114,9 +114,9 @@ The cause of this issue can be one of the following:
     
   1. To expedite creation of a new certificate, you can refresh the validation token using [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) PowerShell cmdlet:
 
-    ```azurepowershell
-    Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
-    ```
+      ```azurepowershell
+      Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
+        ```
 
   1. Once this command completes, update your DNS zone with the new TXT record value to validate the new certificate.
 
@@ -156,5 +156,8 @@ The cause of this issue can be one of the following:
 
     - Validate that the issuing CA isn't an internal CA, nor is a self-signed certificate. Further, validate that the root for the certificate is from the list of [Allowed CAs](https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT).
 
+## Related content
 
+- [Troubleshoot Azure Front Door common issues](troubleshoot-issues.md)
+- [Azure Front Door FAQ](/azure/frontdoor/front-door-faq)
 
