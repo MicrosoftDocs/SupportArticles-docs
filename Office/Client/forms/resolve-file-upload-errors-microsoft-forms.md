@@ -111,6 +111,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 This error might occur for either of the following reasons:
 
 - The [*People in your organization* sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
+- The People in your organization sharing links are expired.
 - An individual form is moved to a group. This situation prevents files from being uploaded to the previous form owner's personal OneDrive site.
 
 ### Resolution
@@ -157,6 +158,25 @@ To fix this error, use the appropriate method.
 
      > [!NOTE]
      > If information barriers are enabled in your SharePoint site, company-wide link sharing is disabled if the [mode](/purview/information-barriers-sharepoint#sharing-sites-for-ib-modes) is set to **Owner Moderated**, **Implicit**, or **Explicit**. In this case, change the information barriers mode to **Open**. To check the information barriers mode of your site, run the `Get-SPOSite <Group SharePoint site URL> | Select InformationBarriersMode` PowerShell command.
+
+- **If the *People in your organization* sharing links are expired**
+  
+  Delete the file upload questions, and then re-create them. The new files will be uploaded to a new folder, and the previously uploaded files will remain in the original folder.
+
+  As long as the expiration policy remains configured, the links will continue to expire after the number of days configured in the policy, and the file upload questions will need to be re-created every time the links expire.  
+
+     To verify the length of time configured in the link sharing expiration policy in OneDrive for individual forms, run the following PowerShell command:
+
+     ```powershell
+     Get-SPOTenant -OneDriveOrganizationSharingLinkMaxExpirationInDays
+     ```
+
+     To verify the length of time configured in the link sharing expiration policy in SharePoint for group forms, run the following PowerShell command:
+
+     ```powershell
+     Get-SPOTenant -CoreOrganizationSharingLinkMaxExpirationInDays
+     ```
+
 - **If an individual form is moved to a Microsoft 365 group**
 
   Delete the file upload questions, and then re-create them. The previously uploaded files remain on the previous form owner's OneDrive site.
