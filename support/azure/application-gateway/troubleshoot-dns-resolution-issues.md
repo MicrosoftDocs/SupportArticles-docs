@@ -18,7 +18,11 @@ ms.custom: sap:Issues with Create, Update and Delete (CRUD)
 
 This article provides guidance for troubleshooting DNS resolution issues that can affect Microsoft Azure Application Gateway functionality. It explains common scenarios in which DNS misconfiguration can cause failures in certificate retrieval, back-end health checks, or other gateway operations. This article also provides steps to identify and resolve these issues.
 
-Azure Application Gateway depends on DNS resolution for several fully qualified domain names (FQDNs) such as back-end pool members, Microsoft Azure Key Vault endpoints for listener certificates, custom error page URLs, and Azure infrastructure endpoints. Incorrect DNS design (especially if it involves private endpoints and custom DNS) can cause certificate retrieval failures, back-end health showing an **Unknown** status, or intermittent data plane and control plane issues.
+Azure Application Gateway depends on DNS resolution for several fully qualified domain names (FQDNs) such as back-end pool members, Microsoft Azure Key Vault endpoints for listener certificates, custom error page URLs, and Azure infrastructure endpoints. Incorrect DNS design (especially if it involves private endpoints and custom DNS) can cause:
+
+- Certificate retrieval failures
+- Back-end health showing an **Unknown** status
+- Intermittent data plane and control plane issues
 
 ## Prerequisites
 
@@ -49,7 +53,7 @@ Application Gateway performs DNS resolution when you try to determine the IP add
 
 For public IP Application Gateway deployments, DNS resolution and Azure infrastructure communication behavior differs from private Application Gateway deployments. Name resolution issues for Azure domains can cause a partial or complete loss of functionality.
 
-In Application Gateway deployments that use a public front-end IP, the gateway uses an Azure-provided DNS IP address (`168.63.129.16`) for control-plane Azure domains (including the Key Vault endpoint that's used for the listener certificates). This behavior occurs even if you configure custom DNS servers on the virtual network.
+In Application Gateway deployments that use a public front-end IP, the gateway uses an Azure-provided DNS IP address (`168.63.129.16`) for control-plane Azure domains. These domains include the Key Vault endpoint that's used for the listener certificates. This behavior occurs even if you configure custom DNS servers on the virtual network.
 
 #### Solution
 
@@ -74,7 +78,7 @@ This behavior applies to all application gateways that are deployed after the fe
 
 Private Endpoint DNS guidance requires that you use the suggested private link-specific DNS zone.
 
-Application Gateway performs DNS resolution not only for customer-provided FQDNs (such as back-ends), but also for Key Vault endpoints that are used for listener certificates and other management and control-plane FQDNs that are required for Azure infrastructure operations.
+Application Gateway performs DNS resolution for customer-provided FQDNs, such as back ends. It performs DNS resolution also for Key Vault endpoints that are used for listener certificates and other management and control-plane FQDNs that are required for Azure infrastructure operations.
 
 You might link a private DNS zone for the top-level Key Vault domain (for example, `vaultcore.azure.net`) to the Application Gateway virtual network. Be aware that this action can override or interfere with the gateway's internal control-plane name resolution. It also breaks the gateway's ability to resolve and reach the Key Vault endpoint that's required for certificate retrieval. These results cause provisioning failures.
 
