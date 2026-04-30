@@ -1,19 +1,19 @@
 ---
-title: How to Remove Windows 365 Business Cloud PCs from Grace Using Graph Explorer and Microsoft Graph API
-description: Learn how to remove Windows 365 Business Cloud PCs from grace period using Microsoft Graph Explorer and API. Step-by-step guide with prerequisites and troubleshooting tips.
+title: Remove Windows 365 Business Cloud PCs from Grace with Graph Explorer and Microsoft Graph API
+description: Learn how to remove Windows 365 Business Cloud PCs from grace period using Microsoft Graph Explorer and API. Follow this step-by-step guide to resolve issues and reassign licenses.
 manager: dcscontentpm
 ms.reviewer: kaushika, anwill
-ms.date: 02/12/2026
+ms.date: 04/30/2026
 ms.topic: troubleshooting
 ms.custom:
 - pcy:Provisioning\Grace Period Issues
 - sap:WinComm User Experience
 ---
-# How to remove Windows 365 Business Cloud PCs from grace period using Graph Explorer and Microsoft Graph API
+# Remove Windows 365 Business Cloud PCs from grace period using Graph Explorer and Microsoft Graph API
 
 ## Summary
 
-When you remove a license from a user, Windows 365 Business Cloud PCs enter a 7 day grace period before permanent removal. In some cases, you might want to remove these Cloud PCs from grace manually, such as to reassign the license to another user and ensure provisioning isn't blocked.
+When a license is removed from a user, Windows 365 Business Cloud PCs enter a seven-day grace period before permanent removal. This article explains how to manually remove Cloud PCs from grace to reassign licenses and avoid provisioning issues.
 
 This article provides step-by-step instructions for using Microsoft Graph Explorer and the Microsoft Graph API to perform this deprovision.
 
@@ -29,7 +29,7 @@ This article provides step-by-step instructions for using Microsoft Graph Explor
 
 ## Step 1: Sign in to Graph Explorer
 
-1.  Go to [Graph Explorer \| Try Microsoft Graph APIs - Microsoft Graph](https://developer.microsoft.com/en-us/graph/graph-explorer)
+1.  Go to [Graph Explorer \| Try Microsoft Graph APIs - Microsoft Graph](https://developer.microsoft.com/en-us/graph/graph-explorer).
 
 1.  Select **Sign in to Graph Explorer** (top right corner).
 
@@ -43,19 +43,19 @@ This article provides step-by-step instructions for using Microsoft Graph Explor
 https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$filter=status eq 'inGracePeriod'
 ```
 
-2.  In Graph Explorer, select **Modify Permissions**.
+1.  In Graph Explorer, select **Modify Permissions**.
 
-3.  Consent to the following permissions for your session:
+1.  Consent to the following permissions for your session:
 
 - CloudPC.Read.All
 
 - CloudPC.ReadWrite.All
 
-4.  If not already granted, select **Consent** to add these permissions.
+1.  If not already granted, select **Consent** to add these permissions.
 
-5.  Select **Run Query**.
+1.  Select **Run Query**.
 
-6.  Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
+1.  Review the results to locate the Cloud PCs you want to remove. Note the **id** value for each relevant Cloud PC.
 
 ## Step 3: Remove a Cloud PC from grace
 
@@ -65,17 +65,17 @@ https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$filt
 https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{cloudPCId}/endGracePeriod
 ```
 
-2.  Replace `{cloudPCId}` with the actual ID of the Cloud PC. For example:
+1.  Replace `{cloudPCId}` with the actual ID of the Cloud PC. For example:
 
 ```
 https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/4b18de4b-ab05-4059-8c61-0323a7df4ced/endGracePeriod
 ```
 
-3.  Leave the request body empty.
+1.  Leave the request body empty.
 
-4.  Select **Run Query**.
+1.  Select **Run Query**.
 
-6.  If successful, you receive a **No Content - 204** response.
+1.  If successful, you receive a **No Content - 204** response.
 
 ## Step 4: Verify removal
 
