@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot traffic still going through load balancer after removal of VMs from the backend pool
+title: Troubleshoot traffic still going through load balancer
 description: Learn why Azure Load Balancer traffic can continue after backend VM removal and use network tracing to confirm infrastructure traffic and resolve issues.
 services: load-balancer
 ms.service: azure-load-balancer
