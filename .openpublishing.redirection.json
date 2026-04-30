@@ -15851,7 +15851,7 @@
     },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md",
-      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
       "redirect_document_id": false
     }
   ]
