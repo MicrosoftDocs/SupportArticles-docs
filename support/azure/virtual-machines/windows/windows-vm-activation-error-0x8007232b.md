@@ -36,7 +36,7 @@ This error occurs if the Key Management Services (KMS) client can't find the KMS
 On Azure VMs, this error typically occurs in the following scenarios:
 
 - The VM is configured to use a custom DNS server that doesn't have KMS SRV records published.
-- The VM was migrated from an on-premises environment in which DNS auto-discovery was used to locate a KMS host, and the Azure DNS environment doesn't have those records.
+- The VM was migrated from an on-premises environment in which DNS autodiscovery was used to locate a KMS host, and the Azure DNS environment doesn't have those records.
 - Network Security Group (NSG) rules or a firewall are blocking DNS resolution.
 - The VM is pointed at the wrong KMS host through `slmgr.vbs /skms`, and the DNS name is invalid.
 
