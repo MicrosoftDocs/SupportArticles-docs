@@ -126,7 +126,7 @@ The cause of this issue can be one of the following:
 
     1. In **Secrets** under **Security**, check the version listed for the certificate:
 
-        :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot that shows the version of the secret as latest.":::
+        :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot that shows the version of the secret as latest." lightbox="media/certificate-issues/secret-version-latest.png":::
 
     1. If it isn't *Latest*, then create a new secret in the Azure Front Door profile using the same Key Vault certificate and select either **Latest** or the most recent specific version.
 
