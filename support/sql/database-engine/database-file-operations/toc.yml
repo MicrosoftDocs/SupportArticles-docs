@@ -3,8 +3,6 @@ items:
   href: troubleshoot-bulk-load-causes-unused-space.md
 - name: Considerations for the autogrow and autoshrink
   href: considerations-autogrow-autoshrink.md
-- name: Database Engine Input/Output requirements
-  href: database-engine-input-output-requirements.md
 - name: DBCC CHECK
   items:
     - name: 1450 and 665 errors when running DBCC CHECKDB
