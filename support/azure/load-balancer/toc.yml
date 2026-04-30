@@ -7,7 +7,7 @@ items:
   - name: Troubleshoot backend traffic responses
     items:
       - name: Troubleshoot virtual machines not responding to traffic on the configured data port
-        href: troubleshoot-backend-traffic-responses/vms-not-responding-traffic.md
+        href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
       - name: Virtual machines receive uneven distribution of traffic 
         href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md
   - name: Troubleshoot common deployment errors

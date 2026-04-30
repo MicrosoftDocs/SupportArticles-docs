@@ -31,4 +31,4 @@ landingContent:
           - text: Troubleshoot load balancer health event logs
             url: load-balancer-troubleshoot-health-event-logs.md
           - text: Troubleshoot virtual machines not responding to traffic on the configured data port
-            url: troubleshoot-backend-traffic-responses/vms-not-responding-traffic.md
+            url: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
