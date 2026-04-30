@@ -43,7 +43,7 @@ To make sure that the rewrite rule set is attached to the correct scope, follow 
 
 ### Cause 2: Rewrite rules aren't supported on redirect configurations
 
-Rewrite rules don't run if the routing rule or path rule is configured to use a redirect action instead of a back-end pool. This is a [known limitation](/azure/application-gateway/rewrite-http-headers-url#limitations).
+Rewrite rules don't run if the routing rule or path rule is configured to use a redirect action instead of a back-end pool. This behavior is a [known limitation](/azure/application-gateway/rewrite-http-headers-url#limitations).
 
 ### Solution
 
@@ -57,8 +57,8 @@ The rewrite rule is correctly attached, but the condition you configured doesn't
 
 A common but hard-to-spot mistake is having extra white space in the regex pattern. For example, consider a condition to match the `Origin` header for Cross-Origin Resource Sharing (CORS), as in the following example:
 
-- ❌ `( ^https://mysite\.com$)` — Leading space before `^` prevents the pattern from matching.
-- ✅ `(^https://mysite\.com$)` — Correct pattern without leading space produces a match.
+- ❌ `( ^https://mysite\.com$)` - Leading space before `^` prevents the pattern from matching.
+- ✅ `(^https://mysite\.com$)` - Correct pattern without leading space produces a match.
 
 The Azure portal input fields might not visually highlight leading or trailing spaces. This condition makes this issue difficult to detect.
 
@@ -77,8 +77,8 @@ When you match dynamic values such as port numbers or IP addresses, make sure th
 
 For example, to match a port number in a URL such as `https://mysite.com:8443/path`:
 
-- ❌ `(https://mysite\.com):dddd(.*)` — `dddd` matches the literal string "dddd", not any four digits.
-- ✅ `(https://mysite\.com):\d{4}(.*)` — `\d{4}` correctly matches any four-digit number.
+- ❌ `(https://mysite\.com):dddd(.*)` - `dddd` matches the literal string "dddd", not any four digits.
+- ✅ `(https://mysite\.com):\d{4}(.*)` - `\d{4}` correctly matches any four-digit number.
 
 > [!NOTE]
 > If you configure rewrite rules through Resource Manager templates or REST API, remember that backslashes in regex must be escaped to work in a `JSON` string. For example, `\d{4}` becomes `\\d{4}` in a JSON string.
@@ -100,8 +100,8 @@ If your rewrite action references a captured value (for example, `{http_resp_Set
 
 For example, to append `SameSite=Strict` to a `Set-Cookie` response header, refer to the following rewrite condition and action:
 
-- ❌ Condition pattern: `.*` — No capture group. Therefore, `{http_resp_Set-Cookie_1}` is empty.
-- ✅ Condition pattern: `(.*)` — Captures the full cookie value into group 1.
+- ❌ Condition pattern: `.*` - No capture group. Therefore, `{http_resp_Set-Cookie_1}` is empty.
+- ✅ Condition pattern: `(.*)` - Captures the full cookie value into group 1.
 
 ### Solution
 
@@ -144,8 +144,8 @@ When you build a URL path by using server variables, be aware that `{var_uri_pat
 
 For example, to prepend `/apim` to the original path, refer to the following action values:
 
-- ❌ Action value: `/apim/{var_uri_path}` — Produces `/apim//original-path` because `{var_uri_path}` is `/original-path`.
-- ✅ Action value: `/apim{var_uri_path}` — Produces `/apim/original-path`.
+- ❌ Action value: `/apim/{var_uri_path}` - Produces `/apim//original-path` because `{var_uri_path}` is `/original-path`.
+- ✅ Action value: `/apim{var_uri_path}` - Produces `/apim/original-path`.
 
 ### Solution
 
@@ -153,7 +153,7 @@ When you concatenate server variables into a URL path, don't add a trailing slas
 
 ## Symptom 4: URL is rewritten correctly but traffic routes to the wrong back-end pool
 
-The URL path is modified as expected, but the request is still sent to the original back-end pool instead of the back-end pool that's associated with the rewritten path.
+The URL path is modified as expected. However, the request is still sent to the original back-end pool instead of the back-end pool that's associated with the rewritten path.
 
 ### Cause 3: Re-evaluate path map isn't enabled
 
@@ -168,13 +168,13 @@ To enable **Re-evaluate path map** for your rewrite rule, follow these steps:
 3. Select **Save**, and wait for the configuration update to finish.
 
 > [!CAUTION]
-> Infinite loop risk: If the rewritten URL matches the same path rule that triggers the rewrite, and **Re-evaluate path map** is enabled, an infinite evaluation loop occurs. Application Gateway detects this and returns a **500** error to the client. To prevent this, do the following:
+> Infinite loop risk: If the rewritten URL matches the same path rule that triggers the rewrite, and **Re-evaluate path map** is enabled, an infinite evaluation loop occurs. Application Gateway detects this condition, and returns a **500** error to the client. To prevent this condition, take the following actions:
 > - Use a conditional rewrite to avoid matching already-rewritten URLs.
 > - Make sure that the rewritten path maps to a different path rule than the one that triggered the rewrite.
 
 ## Symptom 5: Response header rewrite doesn't appear in the response
 
-You've configured a rewrite rule to add or modify a response header, but the header is missing or unchanged when the client receives the response.
+You configured a rewrite rule to add or modify a response header, but the header is missing or unchanged when the client receives the response.
 
 ### Cause 1: Header name contains unsupported characters
 
@@ -224,7 +224,7 @@ If both fields show the same value, the rewrite rule didn't run or didn't match.
 
 ### Step 1: Enable diagnostic logging
 
-If diagnostic settings are not already enabled, configure the settings to send **ApplicationGatewayAccessLog** to a Log Analytics workspace. For more information, see [Application Gateway diagnostics](/azure/application-gateway/application-gateway-diagnostics#diagnostic-logging).
+If diagnostic settings aren't already enabled, configure the settings to send **ApplicationGatewayAccessLog** to a Log Analytics workspace. For more information, see [Application Gateway diagnostics](/azure/application-gateway/application-gateway-diagnostics#diagnostic-logging).
 
 ### Step 2: Query access logs
 
