@@ -1,6 +1,6 @@
 ---
-title: Azure VM cannot RDP - working on features
-description: Troubleshoot Azure VM cannot RDP - working on features.
+title: Azure VM can't RDP - working on features
+description: Troubleshoot Azure VM can't RDP - working on features.
 ms.date: 06/13/2024
 ms.reviewer: trmaier, v-weizhu
 ms.service: azure-virtual-machines
@@ -8,9 +8,13 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# Azure VM cannot RDP - working on features
+# Azure VM can't RDP - working on features
 
 **Applies to:** :heavy_check_mark: Windows VMs
+
+## Summary
+
+This article provides troubleshooting steps for an Azure virtual machine (VM) that can't be accessed through Remote Desktop Protocol (RDP) and is stuck on the "Working on features" screen.
 
 ## Symptoms
 
@@ -57,7 +61,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
    Message: Initiating changes to turn on update EnhancedStorage of package Enhanced Storage. Client id: DISM Package Manager Provider.
    ```
 
-2. From this event, you will get the package name and then using DISM tool, you could remove it:
+2. From this event, you'll get the package name and then using DISM tool, you could remove it:
 
    ```ps
    Dism /Image:<OS Disk letter>:\ /Disable-Feature /FeatureName:<<Feature to remove>>

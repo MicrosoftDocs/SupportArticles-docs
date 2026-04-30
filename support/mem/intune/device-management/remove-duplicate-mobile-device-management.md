@@ -1,7 +1,7 @@
 ---
 title: How to remove duplicate mobile device management objects in Microsoft Entra ID
 description: Describes how to remove duplicate mobile device management objects in Microsoft Entra ID that are not automatically removed.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, anthonge, willfid
 search.appverid: MET150
 ms.custom: sap:Device Actions.Android\Remove devices

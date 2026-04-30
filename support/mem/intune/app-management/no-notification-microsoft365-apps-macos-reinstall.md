@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 apps for macOS close and reinstall without notification
 description: Microsoft 365 apps that are deployed to macOS devices by using Intune close and reinstall without notification.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 search.appverid: MET150
 ms.custom: sap:AppDeployment - MacOS\Advisory
 ms.reviewer: kaushika, markstan

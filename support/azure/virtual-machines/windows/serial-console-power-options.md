@@ -19,6 +19,10 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
+This article provides an overview of the power management options that are available to you from within the Azure Serial Console and guidance on when to use each option. 
+
 The Azure Serial Console provides several powerful tools for power management on your virtual machine (VM) or virtual machine scale set. This article provides an overview of each tool and its intended use case to minimize confusion about these power management options.
 
 Serial Console feature | Description | Use case

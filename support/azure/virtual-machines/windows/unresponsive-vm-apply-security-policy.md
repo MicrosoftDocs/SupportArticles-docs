@@ -18,6 +18,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve issues where the OS hangs and becomes unresponsive while it is applying a security policy in an Azure VM.
 
 ## Symptoms

@@ -11,6 +11,8 @@ ms.topic: how-to
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article shows how to repair or replace corrupted or missing system binary files in an Azure virtual machine (VM) running Windows.
 
 ## How to repair or replace corrupted or missing binary files

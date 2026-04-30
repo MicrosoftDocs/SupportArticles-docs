@@ -14,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 11127
 appliesto: 
-  - Microsoft 365 
+  - Excel for Microsoft 365
   - Microsoft Excel 2024 
   - Microsoft Excel 2021
 ms.date: 04/13/2026

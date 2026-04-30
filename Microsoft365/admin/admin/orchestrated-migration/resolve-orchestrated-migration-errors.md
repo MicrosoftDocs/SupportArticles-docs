@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.reviewer: v-kccross, rewood
 appliesto: 
   - Microsoft 365
-ms.date: 03/24/2026
+ms.date: 04/23/2026
 ---
 
 # Resolve errors during orchestrated migration (preview)
@@ -47,7 +47,7 @@ This article provides lists of errors that you might experience during user data
 | **CTM-101** | User migration validation failed. User identity mapping not in completed state. Mapping state is \<state from IM>. Refer to identity mapping documentation to complete the process or fix the errors. | Identity mapping is found, but isn't in a completed state. It could be in a mapped state. | Either wait for identity mapping to finish, or run the complete identity mapping steps. |
 | **CTM-102** | Service is experiencing a high volume of requests and we are unable to validate the user at this time. Please resubmit the user as part of a different batch after some time. | The service is experiencing a high volume of requests and can't validate the user at this time. Resubmit the user as part of a different batch after some time. | Retry the migration. |
 | **CTM-103** | An internal server error occurred during the validation of the user. Please resubmit the user as part of a different batch or contact support if the issue persists. | An internal server error occurred during user validation. | Retry the migration. |
-| **CTM-104** | User migration failed.  The CTMS and/or CTIM Apps are either not provisioned, not enabled, or not fully configured. Please refer to tenant configuration documentation and retry migration. | Either the CTMS app or CTIM app is not set up correctly, or both are not. | Refer to the documentation for tenant configuration, and set up the CTMS app correctly by rerunning the CTMS setup script. Then, retry the migration. |
+| **CTM-104** | User migration failed.  The CTMS and/or CTIM Apps are either not provisioned, not enabled, or not fully configured. Please refer to tenant configuration documentation and retry migration. | Either the CTMS app or CTIM app isn't set up correctly, or both are not. | Refer to the documentation for tenant configuration, and set up the CTMS app correctly by rerunning the CTMS setup script. Then, retry the migration. |
 
 ## Exchange mailbox migration errors
 
@@ -85,6 +85,8 @@ This article provides lists of errors that you might experience during user data
 | **CTTM-017** | Teams migration for user {0} completed with errors, {1} chat messages couldn't be imported. Correlation Id: {2} | This error code indicates that some messages didn't migrate for the user {0}. The total number of messages that failed is {1}. Some messages don't migrate because the content type is unsupported. For example, Loop messages. | Determine whether you want to retry migration. If you do, you can resubmit migration for the user. |
 | **CTTM-018** | Teams migration failed. The user {0} in tenant {1} does not have a SIP address. Refer to user configuration documentation for instructions on how to assign a SIP address and retry migration. | This error code indicates that the user doesn't have a SIP domain assigned to it. A SIP domain is required for migration. | Assign a SIP address to the user. For more information, see [user license requirements](/microsoft-365/enterprise/migration-orchestrator-4-user-prep#user-license-requirements). Then, retry the migration. |
 | **CTTM-019** | Teams migration failed. The Cross-Tenant Teams Migration app isn't properly configured to allow the service to check for the SIP address for user {0} in tenant {1}. Refer to tenant configuration documentation and retry migration. | The Teams Migration app must have the appropriate app roles and service principals assigned. | Go to the [tenant configuration for Teams](/microsoft-365/enterprise/migration-orchestrator-3-tenant-config#prepare-both-tenants-for-teams-chat-and-meeting-migration) in the source or target. |
+| **CTTM-022** | Teams migration for user {0} failed a quality threshold. {1}/{2} ({3}%) messages imported successfully (< {4}% threshold). {5}/{6} ({7}%) threads imported successfully (< {8}% threshold). Request Id: {9}. Batch Id: {10}. To understand these figures, refer to migration documentation. | Teams chat migration for the user didn't meet one or both thresholds for message and thread migration. | See [Understanding Teams chat migration status](/microsoft-365/enterprise/migration-orchestrator-5-running-migration) for more information. |
+| **CTTM-023** | Teams migration for user {0} completed. {1}/{2} ({3}%) messages imported successfully (>= {4}% threshold). {5}/{6} ({7}%) threads imported successfully (>= {8}% threshold). Request Id: {9}. Batch Id: {10}. To understand these figures, refer to migration documentation. | Teams chat migration for the user met both thresholds for message and thread migration. This is a successfully completed migration. | See [Understanding Teams chat migration status](/microsoft-365/enterprise/migration-orchestrator-5-running-migration) for more information. |
 
 ## Teams meeting migration errors
 

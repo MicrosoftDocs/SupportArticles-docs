@@ -18,6 +18,8 @@ ms.author: divargas
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article consolidates the most common Linux operating system boot errors you may receive when you start a Linux virtual machine (VM) in Microsoft Azure.
 
 ## Boot errors and solutions

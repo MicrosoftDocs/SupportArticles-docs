@@ -12,6 +12,10 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
 
+## Summary
+
+This article provides solutions to Azure Linux virtual machine deployment top issues. 
+
 ## The cluster cannot support the requested VM size
 
 Retry the request using a smaller VM size. If the size of the requested VM cannot be changed, follow these steps:

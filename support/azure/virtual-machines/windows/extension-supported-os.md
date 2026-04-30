@@ -12,8 +12,11 @@ ms.custom: sap:VM Extensions not operating correctly
 
 _Original KB number:_ &nbsp; 4078134
 
-
 [!INCLUDE [VM assist troubleshooting tools](~/includes/azure/vmassist-include.md)]
+
+## Summary
+
+This article provides a list of operating systems that are supported by Azure VM extensions. Extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. Each extension has its own set of supported operating systems, which may include specific versions and editions of Windows and Linux.
 
 VM extensions enable post-deployment configuration of a virtual machine (VM), including installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure VM Agent, VM extensions can't be run.
 

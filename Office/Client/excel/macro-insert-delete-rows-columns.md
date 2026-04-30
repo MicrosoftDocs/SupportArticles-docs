@@ -14,7 +14,7 @@ ms.custom:
 ms.author: meerak
 ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Microsoft Excel
+  - Excel for Microsoft 365
 ms.date: 04/01/2026
 ---
 

@@ -13,7 +13,7 @@ appliesto:
 
 ## Summary
 
-This improvement makes the following enhancements to the SQLIOSim utility and fixes data integrity issues that might be caused by I/O handling. For more information about the SQLIOSim utility, see the [Introduction of the SQLIOSim utility](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md#introduction).
+This improvement makes the following enhancements to the SQLIOSim utility and fixes data integrity issues that might be caused by I/O handling. For more information about the SQLIOSim utility, see the [Introduction of the SQLIOSim utility](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md#introduction-to-sqliosim).
 
 ### Enhanced logging
 

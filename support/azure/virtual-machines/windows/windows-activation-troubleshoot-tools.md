@@ -11,7 +11,11 @@ ms.custom: sap:Cannot activate my Windows VM, troubleshooting tools for Windows 
 ---
 #  Troubleshooting tools for Windows activation issues on Azure virtual machines
 
-Windows activation problems on Azure virtual machines (VMs) can occur because of configuration, certificate, or connectivity issues. Microsoft provides two script-based tools to help diagnose and resolve most activation-related problems.
+## Summary
+
+This article provides an overview of the troubleshooting tools available for diagnosing and resolving Windows activation issues on Azure virtual machines (VMs).
+
+Windows activation problems on Azure VMs can occur because of configuration, certificate, or connectivity issues. Microsoft provides two script-based tools to help diagnose and resolve most activation-related problems.
 
 ## Tools overview
 

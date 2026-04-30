@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article provides steps to resolve an issue in which the Default Domain Controllers Policy prevents an Azure Virtual Machine (VM) from restarting.
 
 ## Symptom

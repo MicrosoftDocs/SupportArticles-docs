@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article answers frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 
 ## Azure Managed Disks

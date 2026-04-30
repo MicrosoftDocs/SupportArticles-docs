@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: Troubleshoot problems with using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
+description: "Troubleshoot identity-based authentication issues with SMB Azure file shares. Find common errors, causes, and step-by-step resolutions."
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 03/06/2026
@@ -10,7 +10,9 @@ ms.reviewer: kendownie, v-surmaini, v-weizhu
 
 **Applies to:** :heavy_check_mark: SMB Azure file shares
 
-This article lists common problems when using SMB Azure file shares with identity-based authentication. It also provides possible causes and resolutions for these problems. Identity-based authentication isn't currently supported for NFS Azure file shares.
+## Summary
+
+This article lists common problems when using identity-based authentication with SMB Azure file shares and provides possible causes and resolutions. Use this guide to diagnose and fix authentication errors, permission issues, and Kerberos configuration problems.
 
 ## Error when running the AzFilesHybrid module
 
@@ -34,10 +36,10 @@ When you try to mount a file share, you might receive the following error:
 
 ### Cause: Share-level permissions are incorrect
 
-If end users are accessing the Azure file share using identity-based authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
+If end users access the Azure file share by using identity-based authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
 
 > [!NOTE]
-> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
+> This error might be caused by problems other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
 
 ### Solution
 
@@ -53,23 +55,23 @@ Error AadDsTenantNotFound happens when you try to [enable Microsoft Entra Domain
 
 ### Solution
 
-Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you aren't the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
+Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subscription that your storage account is deployed to. You need administrator privileges of the Microsoft Entra tenant to create a managed domain. If you're not the administrator of the Microsoft Entra tenant, contact the administrator and follow the step-by-step guidance to [create and configure a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/tutorial-create-instance).
 
 
 ## Error: All newly added URIs must contain a tenant verified domain, tenant ID, or app ID
 
 ### Cause
 
-This error occurs during configuration of identity-based authentication for Azure Files when adding a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
+This error occurs during configuration of identity-based authentication for Azure Files when you add a redirect URI or identifier URI that doesn't meet Microsoft Entra ID application security requirements.
 
-Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following:
+Microsoft Entra ID enforces restrictions on application identifier URIs and redirect URIs. Newly added URIs must reference one of the following values:
 - A tenant-verified custom domain
 - The Microsoft Entra tenant ID
 - The application (client) ID
 
-If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that is not associated with the tenant, the request is blocked by default tenant policy.
+If a URI uses an unverified domain, a `.local` hostname, or an arbitrary URL that isn't associated with the tenant, the default tenant policy blocks the request.
 
-This behavior is enforced by Microsoft Entra ID and isn't specific to the Azure Files service.
+Microsoft Entra ID enforces this behavior and it isn't specific to the Azure Files service.
 
 For more information, see:
 - [Restrictions on identifier URIs of Microsoft Entra applications](/entra/identity-platform/identifier-uri-restrictions)
@@ -77,13 +79,13 @@ For more information, see:
 - [Managing custom domain names in your Microsoft Entra ID](/entra/identity/users/domains-manage)
 
 ### Solution
-When configuring application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
+When you configure application registration or identity-based authentication for Azure Files, ensure that any redirect URI or identifier URI uses one of the supported formats:
 - Use a tenant-verified custom domain
 - Use the Microsoft Entra tenant ID
 - Use the application (client) ID
 
-Do not use unverified domains, `.local` hostnames, or arbitrary URLs, as these will be rejected by Microsoft Entra ID tenant policy.
-If you are unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
+Don't use unverified domains, `.local` hostnames, or arbitrary URLs, as Microsoft Entra ID tenant policy rejects these values.
+If you're unsure which domains are verified in your tenant, review the Custom domain names section in the Microsoft Entra admin center or contact your tenant administrator.
 
   
 ## Unable to mount Azure file shares with AD credentials
@@ -665,7 +667,7 @@ Windows clients that use Microsoft Entra Kerberos authentication to access Azure
 
 This issue is caused by a known Windows behavior where certain network changes clear the cached KDC proxy configuration on the client. When the KDC proxy configuration is removed, the client is unable to refresh Kerberos service tickets from Microsoft Entra ID.
 
-Although the user’s Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
+Although the user's Primary Refresh Token (PRT) remains valid, the missing KDC proxy configuration prevents the client from acquiring a new service ticket, resulting in authentication failures.
 
 This is a Windows client limitation and is not caused by Azure Files or Microsoft Entra ID configuration.
 
@@ -699,7 +701,7 @@ Windows clients using Microsoft Entra Kerberos authentication to access Azure Fi
 
 This issue is caused by a known limitation in Microsoft Entra Kerberos authentication. Microsoft Entra ID does not currently support renewal of Ticket Granting Tickets (TGTs).
 
-In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user’s Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
+In Microsoft Entra Kerberos scenarios, the TGT is obtained as part of the user's Primary Refresh Token (PRT). Because TGT renewal is not supported, the client cannot refresh the TGT once it expires. When the TGT expires, the client is unable to acquire new service tickets, resulting in authentication failures.
 
 Signing out and signing back in to Windows resolves the issue by obtaining a new PRT, which includes a new TGT.
 This is a known limitation of Microsoft Entra Kerberos and is not caused by Azure Files configuration.

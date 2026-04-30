@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: emmersp, akeeler, lisalozano 
+ms.reviewer: emmersp, akeeler, v-lisalozano 
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
@@ -14,7 +14,7 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Microsoft 365 
+  - Excel for Microsoft 365
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016

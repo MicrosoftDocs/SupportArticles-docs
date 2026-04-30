@@ -12,6 +12,8 @@ ms.reviewer: cwhitley, mumustafa, v-naqviadil, v-leedennis
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article discusses how to resolve the 0xC004F074 error that occurs when you try to activate a Windows virtual machine (VM) in Microsoft Azure.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
