@@ -30,11 +30,11 @@ The cause of this issue can be one of these two possibilities:
 
 ### Troubleshooting steps
 
-#### The custom domain was just deployed, and the certificate is still propagating to all the Azure Front Door edge servers
+- The custom domain was just deployed, and the certificate is still propagating to all the Azure Front Door edge servers
 
   - Allow up to an hour for the new certificate to fully propagate.
 
-#### One of the Azure Front Door edge servers doesn't have the expected certificate loaded
+- One of the Azure Front Door edge servers doesn't have the expected certificate loaded
 
   1. Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
 
@@ -78,7 +78,7 @@ The cause of this issue can be one of the following:
 
 ### Troubleshooting Steps
 
-#### The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Azure Front Door endpoint hostname
+- The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Azure Front Door endpoint hostname
 
   1. Test DNS resolution of the custom domain using a DNS lookup tool like `dig` and confirm that your custom domain has no direct CNAME to the Azure Front Door endpoint:
 
@@ -120,7 +120,7 @@ The cause of this issue can be one of the following:
 
   1. Once this command completes, update your DNS zone with the new TXT record value to validate the new certificate.
 
-#### The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate hasn't been rotated in the Key Vault
+- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate hasn't been rotated in the Key Vault
 
   - One reason the certificate might not have rotated is that the version isn't latest when creating the secret in the Azure Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation)
 
