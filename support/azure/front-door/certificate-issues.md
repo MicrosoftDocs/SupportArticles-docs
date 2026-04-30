@@ -48,7 +48,7 @@ The cause of this issue can be one of these two possibilities:
 
   1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
 
-    :::image type="content" source="media/certificate-issues/azure.ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
+    :::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
 
   1. At this point, create a support request if the following conditions are met:
 
