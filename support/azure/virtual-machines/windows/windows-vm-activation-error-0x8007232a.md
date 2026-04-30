@@ -1,6 +1,6 @@
 ---
 title: Error 0x8007232A - DNS server failure when activating Windows
-description: Resolve Error 0x8007232A DNS server failure when activating an Azure Windows VM. Follow guided steps to restore activation and get your VM licensed.
+description: Resolve Error 0x8007232A DNS server failure when you activate an Azure Windows VM. Follow guided steps to restore activation and get your VM licensed.
 ms.date: 04/14/2026
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
@@ -19,9 +19,9 @@ This article explains how to resolve the 0x8007232A error that occurs when you t
 
 ## Prerequisites
 
-- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows).
-- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script.
-- The [PsPing](/sysinternals/downloads/psping) tool.
+- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows)
+- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script
+- The [PsPing](/sysinternals/downloads/psping) tool
 
 ## Symptoms
 
@@ -31,15 +31,15 @@ When you try to activate an Azure Windows VM, you see the following error messag
 
 ## Cause
 
-This error occurs when the VM can't contact a DNS server to resolve the Key Management Services (KMS) host address. Unlike error code 0x8007232B (where the DNS name doesn't exist), this error indicates that the DNS query itself failed - the DNS server is unreachable or not responding.
+This error occurs if the VM can't contact a DNS server to resolve the Key Management Services (KMS) host address. Unlike error code 0x8007232B that's generated if the DNS name doesn't exist, this error code indicates that the DNS query itself failed because the DNS server is unreachable or not responding.
 
 On Azure VMs, this error typically occurs in the following scenarios:
 
 - The VM's DNS configuration points to a custom DNS server that's down or unreachable.
 - Network Security Group (NSG) rules block outbound DNS traffic (User Datagram Protocol (UDP)/Transmission Control Protocol (TCP) port 53).
-- The VM is in a virtual network with no DNS resolution path to the KMS host.
+- The VM is in a virtual network without a DNS resolution path to the KMS host.
 - A network virtual appliance (NVA) or firewall intercepts and drops DNS traffic.
-- The VM's network interface card (NIC) has an incorrect or empty DNS server configuration.
+- The VM's network adapter has an incorrect or empty DNS server configuration.
 
 ## Solution 1: Reconfigure the VM to use the Azure KMS endpoint directly
 
@@ -47,7 +47,7 @@ Bypass DNS discovery entirely by pointing to the Azure KMS endpoint by name.
 
 1. Open an elevated Command Prompt window on the VM.
 
-1. Verify DNS resolution is working for basic names by running the following command:
+1. Verify that DNS resolution is working for basic names. Run the following command:
 
    ```cmd
    nslookup azkms.core.windows.net
@@ -59,7 +59,7 @@ Bypass DNS discovery entirely by pointing to the Azure KMS endpoint by name.
    ipconfig /all
    ```
 
-   Verify the DNS server addresses are correct and reachable.
+   Verify that the DNS server addresses are correct and reachable.
 
 1. Set the KMS server explicitly (bypasses Service Location (SRV) record lookups):
 
@@ -75,19 +75,19 @@ Bypass DNS discovery entirely by pointing to the Azure KMS endpoint by name.
 
 ## Solution 2: Fix DNS connectivity
 
-If the VM needs DNS for other purposes (not just activation), troubleshoot the underlying DNS issue.
+If the VM needs DNS for other purposes (not only activation), troubleshoot the underlying DNS issue.
 
-1. **Check NSG rules**: Ensure outbound traffic on UDP/TCP port 53 is allowed to the DNS server.
+1. **Check NSG rules**: Make sure that outbound traffic on UDP/TCP port 53 is allowed to the DNS server.
 
-1. **Check DNS server health**: If you're using a custom DNS server, verify it's running and reachable by running the following command:
+1. **Check DNS server health**: If you're using a custom DNS server, verify that it's running and reachable. Run the following command:
 
    ```cmd
    psping <dns-server-ip>:53
    ```
 
-1. **Reset DNS to Azure default**: If you're using custom DNS and it's not required, switch back to Azure-provided DNS in the [Azure portal](https://portal.azure.com):
+1. **Reset DNS to Azure default**: If you're using custom DNS, and it's not required, revert to using Azure-provided DNS in the [Azure portal](https://portal.azure.com):
 
-   1. Go to **Virtual network** > **DNS servers** and then select **Default (Azure-provided)**.
+   1. Go to **Virtual network** > **DNS servers**, and then select **Default (Azure-provided)**.
 
 1. **Flush DNS cache** on the VM:
 
