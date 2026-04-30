@@ -46,7 +46,7 @@ Common root causes on Azure VMs include:
 - **DNS resolution failure**: The VM can't resolve `azkms.core.windows.net`.
 - **Wrong KMS target**: The VM is configured to contact an on-premises KMS server that's unreachable from Azure.
 
-## Solution 1: Verify and fix KMS connectivity
+### Solution 1: Verify and fix KMS connectivity
 
 1. Open an elevated Command Prompt window on the VM.
 
@@ -83,7 +83,7 @@ Common root causes on Azure VMs include:
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Solution 2: Fix forced tunneling
+### Solution 2: Fix forced tunneling
 
 If your virtual network routes all internet traffic through an on-premises gateway (forced tunneling), you must exempt KMS traffic:
 
@@ -95,7 +95,7 @@ If your virtual network routes all internet traffic through an on-premises gatew
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Solution 3: Restart the SPP service
+### Solution 3: Restart the SPP service
 
 In some cases, the SPP service itself might be in a stuck state.
 
