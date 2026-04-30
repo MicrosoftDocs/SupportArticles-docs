@@ -40,7 +40,7 @@ The cause of this issue can be one of these two possibilities:
 
     :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
 
-  - In a browser from an impacted user, access the site. View the certificate and confirm it's `*.azureedge.net`.
+  - In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
 
     :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
 
@@ -66,19 +66,19 @@ The cause of this issue can be one of these two possibilities:
 
 - Requests sent to your origin through Azure Front Door get an expired certificate and fail.
 
-- The certificate on the origin is not expired.
+- The certificate on the origin isn't expired.
 
 ### Cause
 
 The cause of this issue can be one of the following:
 
-- The custom domain uses a managed certificate, but there is no CNAME delegating the custom domain to the Azure Front Door endpoint hostname.
+- The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Azure Front Door endpoint hostname.
 
-- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate has not been rotated in the Key Vault.
+- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate hasn't been rotated in the Key Vault.
 
 ### Troubleshooting Steps
 
-- The custom domain uses a managed certificate, but there is no CNAME delegating the custom domain to the Azure Front Door endpoint hostname:
+- The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Azure Front Door endpoint hostname:
 
   - Test DNS resolution of the custom domain using a DNS lookup tool like `dig` and confirm that your custom domain has no direct CNAME to the Azure Front Door endpoint:
 
@@ -120,9 +120,9 @@ The cause of this issue can be one of the following:
 
   - Once this command completes, update your DNS zone with the new TXT record value to validate the new certificate.
 
-- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate has not been rotated in the Key Vault:
+- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate hasn't been rotated in the Key Vault:
 
-  - One reason the certificate might not have rotated is that the version is not latest when creating the secret in the Azure Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation)
+  - One reason the certificate might not have rotated is that the version isn't latest when creating the secret in the Azure Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation)
 
     - In **Secrets** under **Security**, check the version listed for the certificate:
 
@@ -144,17 +144,17 @@ The cause of this issue can be one of the following:
 
   - A reason why a renewed certificate that is updated in Key Vault might not have rotated yet in Azure Front Door would be mismatches between the CN (Common Name) or SAN (Subject Alternate Name) and the custom domain.
 
-    - Just like any system that uses certificates, Azure Front Door requires that the CN (or SAN, if present) matches the custom domain hostname. It's important to understand how certificates determine which domains they are valid for. An X.509 certificate binds a public key to one or more domain names using two fields: the Common Name (CN) and the Subject Alternative Name (SAN). Historically, the CN specified the primary domain, but modern TLS clients and browsers rely on the SAN field instead.  
+    - Just like any system that uses certificates, Azure Front Door requires that the CN (or SAN, if present) matches the custom domain hostname. It's important to understand how certificates determine which domains they're valid for. An X.509 certificate binds a public key to one or more domain names using two fields: the Common Name (CN) and the Subject Alternative Name (SAN). Historically, the CN specified the primary domain, but modern TLS clients and browsers rely on the SAN field instead.  
         
-      Today, if a certificate includes a SAN extension, it becomes the authoritative source for domain validation. Azure Front Door will check whether the hostname (for example, `api.contoso.com`) matches any entry listed in the SAN. Only if the SAN field is absent, Azure Front Door will fall back to evaluating the CN. This means that even if the CN matches the hostname, the rotation will fail if a SAN exists and doesn't include that hostname.  
+      Today, if a certificate includes a SAN extension, it becomes the authoritative source for domain validation. Azure Front Door checks whether the hostname (for example, `api.contoso.com`) matches any entry listed in the SAN. Only if the SAN field is absent, Azure Front Door will fall back to evaluating the CN. This means that even if the CN matches the hostname, the rotation will fail if a SAN exists and doesn't include that hostname.  
         
       Wildcard certificates can simplify domain coverage, but they follow strict rules. A wildcard like `*.contoso.com` will match `api.contoso.com` or `www.contoso.com`, but it doesn't match deeper subdomains such as `sub.api.contoso.com`, nor does it match the root domain `contoso.com`. Wildcards only apply to a single subdomain level, which is a common source of confusion.  
         
-      Most hostname mismatch issues come down to a few common problems: the required domain is not listed in the SAN, a wildcard is being used incorrectly, or the root domain is expected to match a wildcard.
+      Most hostname mismatch issues come down to a few common problems: the required domain isn't listed in the SAN, a wildcard is being used incorrectly, or the root domain is expected to match a wildcard.
 
-  - Another reason why a certificate updated in Key Vault would not have rotated in Azure Front Door would be the new certificate uses a different root, which is not accepted by Azure Front Door.
+  - Another reason why a certificate updated in Key Vault wouldn't have rotated in Azure Front Door would be the new certificate uses a different root, which isn't accepted by Azure Front Door.
 
-    - Validate that the issuing CA is not an internal CA, nor is a self-signed certificate. Further, validate that the root for the certificate is from the list of [Allowed CAs](https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT).
+    - Validate that the issuing CA isn't an internal CA, nor is a self-signed certificate. Further, validate that the root for the certificate is from the list of [Allowed CAs](https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT).
 
 
 
