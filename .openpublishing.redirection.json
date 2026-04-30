@@ -15613,6 +15613,10 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/stl-queue-member-functions.md",
       "redirect_url": "/cpp/standard-library/queue-class"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/database-engine-input-output-requirements.md",
+      "redirect_url": "/sql/relational-databases/sql-server-storage-guide"
     }
   ]
 }
