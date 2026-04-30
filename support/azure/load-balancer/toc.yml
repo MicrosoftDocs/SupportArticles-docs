@@ -5,7 +5,7 @@ items:
   - name: Troubleshoot common problems
     items:
     - name: Troubleshoot no outbound connectivity from Standard internal load balancers
-      href: troubleshoot-common-problems/no-inbound-connectivity-standard-internal-load-balancers.md
+      href: troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md
     - name: Troubleshoot no inbound connectivity to Standard external load balancers
       href: troubleshoot-common-problems/no-inbound-connectivity-standard-external-load-balancers.md
     - name: Troubleshoot changing the backend port for an existing load-balancing rule
