@@ -25,7 +25,7 @@ This article explains how to resolve the 0x8007232B error that occurs when you t
 
 ## Symptoms
 
-When you try to activate an Azure Windows VM, you see the following error message in Windows Script Host:
+When you try to activate a Microsoft Azure Windows VM, you see the following error message in Windows Script Host:
 
 `**Error: 0x8007232B** DNS name does not exist.`
 
@@ -40,7 +40,7 @@ On Azure VMs, this error typically occurs in the following scenarios:
 - Network Security Group (NSG) rules or a firewall are blocking DNS resolution.
 - The VM is pointed at the wrong KMS host through `slmgr.vbs /skms`, and the DNS name is invalid.
 
-## Solution 1: Reconfigure the VM to use the Azure KMS service
+### Solution 1: Reconfigure the VM to use the Azure KMS service
 
 Azure provides a KMS endpoint that doesn't rely on DNS SRV record discovery. Point the VM directly to it.
 
@@ -77,7 +77,7 @@ Azure provides a KMS endpoint that doesn't rely on DNS SRV record discovery. Poi
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Solution 2: Configure DNS SRV records (self-hosted KMS)
+### Solution 2: Configure DNS SRV records (self-hosted KMS)
 
 If you use a self-hosted KMS server, make sure that you publish KMS SRV records in DNS.
 
