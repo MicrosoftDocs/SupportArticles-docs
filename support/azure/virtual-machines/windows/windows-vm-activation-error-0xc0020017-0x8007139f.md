@@ -11,26 +11,26 @@ ms.reviewer: cwhitley, scotro, v-leedennis
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article explains how to resolve the 0xC0020017 or 0x8007139F error that occurs when a Windows virtual machine (VM) in Microsoft Azure can't contact the Key Management Service (KMS) for activation. You typically see this error in the Application Event Log as **Event ID** `8198` from the **Security-SPP** source rather than through the standard `slmgr.vbs` output.
+This article explains how to resolve the 0xC0020017 or 0x8007139F error that occurs if a Windows virtual machine (VM) in Microsoft Azure can't contact the Key Management Service (KMS) for activation. You typically see this error in the Application Event Log as **Event ID** `8198` from the **Security-SPP** source instead of through the standard `slmgr.vbs` output.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
 ## Prerequisites
 
-- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows).
-- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script.
-- The [PsPing](/sysinternals/downloads/psping) tool.
+- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows)
+- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script
+- The [PsPing](/sysinternals/downloads/psping) tool
 
 ## Symptoms
 
-The Windows VM fails to activate. The standard `slmgr.vbs /ato` command returns a generic failure, but the actual error is recorded in the `Application Event Log`:
+The Windows VM doesn't activate. The standard `slmgr.vbs /ato` command returns a generic failure code. However, the actual error is recorded in the `application Log`:
 
 - **Source:** Security-SPP
 - **Event ID:** 8198
 - **Error code:** `0xC0020017` or `0x8007139F`
 - **Description:** License Activation failed. The Software Protection service reported that the computer couldn't be activated.
 
-You can view this event by running:
+To view this event, run the following PowerShell cmdlet:
 
 ```powershell
 Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 5 | Format-List TimeCreated, Message
@@ -38,7 +38,7 @@ Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SP
 
 ## Cause
 
-Error 0xC0020017 indicates that the Software Protection Platform (SPP) service can't contact the KMS server. This error is functionally similar to error [0xC004F074](windows-vm-activation-error-0xc004f074.md) but comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
+Error 0xC0020017 indicates that the Software Protection Platform (SPP) service can't contact the KMS server. This error is functionally similar to error [0xC004F074](windows-vm-activation-error-0xc004f074.md), but comes from a different code path. The SPP event pipeline reports this error instead of the System-Level Cache (SLC) API.
 
 Common root causes on Azure VMs include:
 
@@ -50,13 +50,13 @@ Common root causes on Azure VMs include:
 
 1. Open an elevated Command Prompt window on the VM.
 
-1. Check the current KMS configuration by running the following command:
+1. Check the current KMS configuration. Run the following command:
 
    ```cmd
    cscript c:\windows\system32\slmgr.vbs /dlv
    ```
 
-1. Clear any stale KMS settings and point to Azure KMS:
+1. Clear any stale KMS settings, and point to Azure KMS:
 
    ```cmd
    cscript c:\windows\system32\slmgr.vbs /ckms
@@ -89,7 +89,7 @@ If your virtual network routes all internet traffic through an on-premises gatew
 
 1. Add a user-defined route (UDR) that sends traffic for the Azure KMS IP addresses directly to the internet. For the specific IP addresses and route configuration, see [Custom routes to enable KMS activation](custom-routes-enable-kms-activation.md).
 
-1. After applying the UDR, retry activation by running the following command:
+1. After you apply the UDR, retry activation by running the following command:
 
    ```cmd
    cscript c:\windows\system32\slmgr.vbs /ato
@@ -111,13 +111,13 @@ In some cases, the SPP service itself might be in a stuck state.
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-1. Check **Event ID** `8198` again to confirm the error is resolved:
+1. Check **Event ID** `8198` again to verify that the error is resolved:
 
    ```powershell
    Get-WinEvent -FilterHashtable @{LogName='Application'; ProviderName='Security-SPP'; Id=8198} -MaxEvents 1 | Format-List TimeCreated, Message
    ```
 
-## Resources
+## References
 
 - [Error 0xC004F074 — No KMS could be contacted](windows-vm-activation-error-0xc004f074.md)
 - [Custom routes to enable KMS activation with forced tunneling](custom-routes-enable-kms-activation.md)
