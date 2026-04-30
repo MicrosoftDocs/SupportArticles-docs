@@ -1,6 +1,6 @@
 ---
 title: Error 0xC004C003 - The activation server determined the specified product key is blocked
-description: "Resolve error 0xC004C003 when activating Windows VMs in Azure. Learn how to fix blocked product key issues with step-by-step guidance."
+description: Resolve error 0xC004C003 when you activate Windows VMs in Azure. Follow the step-by-step guidance to fix blocked product key issues.
 ms.date: 04/14/2026
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
@@ -19,8 +19,8 @@ This article explains how to resolve error 0xC004C003 that occurs when you try t
 
 ## Prerequisites
 
-- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows).
-- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script.
+- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows)
+- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script
 
 ## Symptoms
 
@@ -30,16 +30,16 @@ When you try to activate an Azure Windows VM, you see the following error messag
 
 ## Cause
 
-The Multiple Activation Key (MAK) that you configured on the VM is blocked on the Microsoft activation server. This block can occur when:
+The Multiple Activation Key (MAK) that you configured on the VM is blocked on the Microsoft activation server. This block can occur if:
 
 - The product key is reported as stolen or misused.
 - The product key is a trial or evaluation key that expires.
 - The product key doesn't match the installed Windows edition.
-- The VM is migrated from an on-premises environment with a product key that isn't valid for Azure.
+- The VM is migrated from an on-premises environment by having a product key that isn't valid for Azure.
 
 ## Solution 1: Reconfigure the VM to use Azure KMS activation
 
-Azure VMs should use Azure Key Management Service (KMS) activation by default. If the VM uses a Multiple Activation Key (MAK) instead, reconfigure it to use Azure KMS.
+By default, Azure VMs should use Azure Key Management Service (KMS) activation. If the VM uses a Multiple Activation Key (MAK) instead, reconfigure it to use Azure KMS.
 
 1. Open an elevated Command Prompt window on the VM.
 
@@ -79,7 +79,7 @@ If your licensing model requires MAK activation:
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Resources
+## References
 
 - [Troubleshoot Azure Windows virtual machine activation problems](troubleshoot-activation-problems.md)
 - [Troubleshooting tools for Windows activation issues on Azure VMs](windows-activation-troubleshoot-tools.md)
