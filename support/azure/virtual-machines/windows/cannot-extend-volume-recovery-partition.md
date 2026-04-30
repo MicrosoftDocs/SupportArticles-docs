@@ -1,6 +1,6 @@
 ---
-title: Can't extend OS volume because a recovery partition blocks the extend
-description: Fix dimmed Extend Volume in Disk Management when a Recovery partition blocks OS volume expansion on an Azure VM. Follow these steps to resolve it.
+title: Can't extend OS volume because a recovery partition blocks the extension
+description: Fix the unavailable Extend Volume command issue in Disk Management when a Recovery partition blocks OS volume expansion on an Azure VM.
 ms.reviewer: scotro, v-leedennis
 ms.date: 04/14/2026
 ms.service: azure-virtual-machines
@@ -9,23 +9,23 @@ ms.topic: troubleshooting
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
-# Can't extend an OS volume because a recovery partition blocks the extend
+# Can't extend an OS volume because a recovery partition blocks the extension
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 
-This article helps you resolve the issue where **Extend Volume** is unavailable (dimmed) in Disk Management after you resize a managed disk in the Azure portal. The cause is a Windows Recovery Environment (WinRE) partition that sits between the OS volume (C:) and the new unallocated space.
+This article helps you resolve an issue in which the **Extend Volume** command is unavailable (dimmed) in Disk Management after you resize a managed disk in the Azure portal. The issue occurs because a Windows Recovery Environment (WinRE) partition sits between the OS volume (C) and the new unallocated space.
 
 ## Symptoms
 
-After you expand a managed disk in the [Azure portal](https://portal.azure.com), you open Disk Management inside the virtual machine (VM) and find:
+After you expand a managed disk in the [Azure portal](https://portal.azure.com), you open Disk Management inside the virtual machine (VM), and find the following conditions:
 
 - The new unallocated space is visible at the end of the disk.
 - **Extend Volume** is unavailable (dimmed) when you right-click the **C:** volume.
-- A Recovery partition (typically 450 MB to 1 GB) sits between the C: volume and the unallocated space.
+- A Recovery partition (typically 450 MB to 1 GB) sits between the C volume and the unallocated space.
 
-The partition layout looks like this:
+The partition layout appears as follows:
 
 ```text
 | C: (Primary, NTFS) | Recovery (450 MB) | Unallocated |
@@ -33,35 +33,39 @@ The partition layout looks like this:
 
 ## Cause
 
-NTFS can only extend into physically adjacent unallocated space. The Windows Recovery partition sits between the OS volume and the new space, which prevents the extend operation.
+NTFS can extend only into physically adjacent unallocated space. The Windows Recovery partition sits between the OS volume and the new space. This situation prevents the extend operation.
 
 This partition layout is the default for most Azure Marketplace Windows images. The Recovery partition contains WinRE files.
 
-## Is it safe to delete the recovery partition in Azure?
+## Frequently asked questions
 
-Yes. On Azure VMs, you can't trigger WinRE through its [standard entry points](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#entry-points-into-winre) because Azure doesn't provide local keyboard or console access during the boot process. The standard WinRE triggers (Shift+Restart at the sign in screen, Settings app, hardware recovery buttons) all require interactive access that isn't available in Azure.
+**Q1: Is it safe to delete the recovery partition in Azure?**
 
-Azure provides alternative recovery mechanisms that don't depend on the Recovery partition:
+**A1:** Yes. On Azure VMs, you can't trigger WinRE through its [standard entry points](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#entry-points-into-winre) because Azure doesn't provide local keyboard or console access during the startup process. The standard WinRE triggers (Shift+Restart at the sign-in screen, Settings app, and hardware recovery buttons) all require interactive access that isn't available in Azure.
+
+**Q2: Are there alternative recovery methods?**
+
+**A2:** Azure provides alternative recovery mechanisms that don't depend on the Recovery partition:
 
 - [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) connects to the COM1 serial port for console-level troubleshooting.
 - [Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) attach the OS disk to a repair VM for offline OS repair.
 
-Deleting the Recovery partition doesn't affect normal VM operation, startup, or Azure's ability to recover the VM.
+The Recovery partition can be deleted without affecting normal VM operation, VM startup, or Azure's ability to recover the VM.
 
 ## Resolution
 
 > [!IMPORTANT]
-> Before you proceed, take a snapshot of your OS disk in the Azure portal. Go to the disk resource, select **Snapshots**, and select **Create snapshot**.
+> Before you proceed, take a snapshot of your OS disk in the Azure portal. Go to the disk resource, select **Snapshots**, and then select **Create snapshot**.
 
-### Option 1: Delete the Recovery partition by using DiskPart
+### Delete the Recovery partition by using DiskPart
 
-This option deletes the Recovery partition so that the unallocated space becomes adjacent to C:.
+This method deletes the Recovery partition so that the unallocated space becomes adjacent to the C drive.
 
 1. Connect to the VM by using RDP or [Azure Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows).
 
-1. Open **Command Prompt** as Administrator.
+1. Open a Command Prompt window as an administrator.
 
-1. Start DiskPart and identify the partition layout by running the following command:
+1. Start DiskPart, and identify the partition layout by running the following command:
 
    ```cmd
    diskpart
@@ -70,7 +74,7 @@ This option deletes the Recovery partition so that the unallocated space becomes
    list partition
    ```
 
-   You should see output similar to the following example:
+   You should see output that resembles the following example:
 
    ```output
      Partition ###  Type              Size     Offset
@@ -96,28 +100,28 @@ This option deletes the Recovery partition so that the unallocated space becomes
 
 1. Open **Disk Management** (press Windows+R, type `diskmgmt.msc`, and press Enter).
 
-1. Right-click the **C:** volume and select **Extend Volume**.
+1. Right-click the **C:** volume, and select **Extend Volume**.
 
 1. Follow the Extend Volume Wizard to expand C: into the unallocated space.
 
 > [!TIP]
-> **Can't connect via RDP?** Use [Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) to attach the operating system (OS) disk to a repair VM and run the same DiskPart steps from there. After deleting the Recovery partition and extending the volume, use `az vm repair restore` to swap the disk back.
+> If you can't connect through RDP, use [Azure Virtual Machine repair commands](/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands) to attach the operating system (OS) disk to a repair VM, and run the same DiskPart steps from there. After you delete the Recovery partition and extending the volume, use `az vm repair restore` to swap the disk back.
 
-## Verify the fix
+### Verify the fix
 
-After extending the volume:
+After you extend the volume:
 
-1. Open **Disk Management** and verify that C: shows the full disk size.
+1. Open **Disk Management**, and verify that the C drive shows the full disk size.
 
-1. Open **File Explorer** and confirm the free space on C: matches the expanded size.
+1. Open **File Explorer**, and verify that the free space on the C drive matches the expanded size.
 
-1. Optionally, verify from an elevated command prompt:
+1. Optionally, verify the space in an administrative Command Prompt window:
 
    ```cmd
    wmic logicaldisk get size,freespace,caption
    ```
 
-## Resources
+## References
 
 - [Troubleshoot Azure disk resize failures](troubleshoot-disk-resize.md)
 - [Expand the volume in the operating system](/azure/virtual-machines/windows/expand-disks#expand-the-volume-in-the-operating-system)
