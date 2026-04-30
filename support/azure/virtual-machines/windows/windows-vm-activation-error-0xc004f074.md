@@ -14,19 +14,19 @@ ms.reviewer: cwhitley, mumustafa, v-naqviadil, v-leedennis
 
 ## Summary
 
-This article explains how to resolve error 0xC004F074, which occurs when you try to activate a Windows virtual machine (VM) in Microsoft Azure.
+This article explains how to resolve error 0xC004F074 that occurs when you try to activate a Windows virtual machine (VM) in Microsoft Azure.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
 ## Prerequisites
 
-- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows).
-- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script.
-- The [PsPing](/sysinternals/downloads/psping) tool.
+- [PowerShell](/powershell/scripting/install/installing-powershell-on-windows)
+- The [Software License Manager](/previous-versions/ff793433(v=technet.10)) (*slmgr.vbs*) script
+- The [PsPing](/sysinternals/downloads/psping) tool
 
 ## Symptoms
 
-When you try to activate an Azure Windows VM, you see the following error message in Windows Script Host:
+When you try to activate a Microsoft Azure Windows VM, you see the following error message in Windows Script Host:
 
 `**Error: 0xC004F074** The Software Licensing Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.`
 
@@ -40,12 +40,12 @@ The VM can't connect to the KMS service for activation. If you use an Azure KMS 
 
 ## Investigation
 
-To determine the specific cause of the problem, follow this three-part procedure.
+To determine the specific cause of the problem, follow these steps.
 
-### Part 1: Configure the appropriate KMS client setup key
+### Step 1: Configure the appropriate KMS client setup key
 
 > [!NOTE]
-> This part isn't required for VMs that run Windows 10 Enterprise multi-session (also known as Windows 10 Enterprise for Virtual Desktops) in [Azure Virtual Desktop](/azure/virtual-desktop/overview).
+> This step isn't required for VMs that run Windows 10 Enterprise multi-session (also known as Windows 10 Enterprise for Virtual Desktops) in [Azure Virtual Desktop](/azure/virtual-desktop/overview).
 >
 > To determine whether your VM is running the multi-session edition, run the following Software License Manager script command:
 >
@@ -53,10 +53,10 @@ To determine the specific cause of the problem, follow this three-part procedure
 > slmgr.vbs /dlv
 > ```
 >
-> If the output contains the `Name: Windows(R), ServerRdsh edition` string, the VM is running the multi-session edition, and you can skip the rest of this part.
+> If the output contains the `Name: Windows(R), ServerRdsh edition` string, the VM is running the multi-session edition, and you can skip the rest of this step.
 
 > [!NOTE]
-> If you deploy a Windows 10 Enterprise multi-session VM and then update the product key to another edition, you can't revert the VM to Windows 10 Enterprise multi-session. Instead, you have to redeploy the VM. For more information, see [Can I upgrade a Windows VM to Windows Enterprise multi-session?](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
+> If you deploy a Windows 10 Enterprise multi-session VM, and then you update the product key to another edition, you can't revert the VM to Windows 10 Enterprise multi-session. Instead, you have to redeploy the VM. For more information, see [Can I upgrade a Windows VM to Windows Enterprise multi-session?](/azure/virtual-desktop/windows-multisession-faq#can-i-upgrade-a-windows-vm-to-windows-enterprise-multi-session).
 
 For the VM that you create from a custom image, you must configure the appropriate KMS client setup key for the VM.
 
@@ -68,7 +68,7 @@ For the VM that you create from a custom image, you must configure the appropria
 
 1. Check the `Description` value in the output to determine whether the VM was created from retail (`RETAIL` channel) or volume (`VOLUME_KMSCLIENT`) license media.
 
-1. If the previous command output indicates the `RETAIL` channel, run the following Software License Manager script commands. The first command sets the [KMS client setup key](/windows-server/get-started/kms-client-activation-keys) for the version of Windows Server that you use, and the second command forces another activation attempt.
+1. If the previous command output indicates the `RETAIL` channel, run the following Software License Manager script commands. The first command sets the [KMS client setup key](/windows-server/get-started/kms-client-activation-keys) for the version of Windows Server that you use. The second command forces another activation attempt.
 
    ```cmd
    cscript c:\windows\system32\slmgr.vbs /ipk <kms-client-setup-key>
@@ -81,15 +81,15 @@ For the VM that you create from a custom image, you must configure the appropria
    cscript c:\windows\system32\slmgr.vbs /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
    ```
 
-### Part 2: Check whether the VM is behind a Standard SKU internal load balancer
+### Step 2: Check whether the VM is behind a Standard SKU internal load balancer
 
-Follow these steps to check whether the VM is behind a Standard SKU internal load balancer that blocks outbound internet traffic by default.
+To check whether the VM is behind a Standard SKU internal load balancer that blocks outbound internet traffic by default, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Virtual machines**.
 
 1. In the list of virtual machines, select the name of your VM.
 
-1. In the menu pane for your VM, locate the **Networking** heading, and then select **Load balancing**. If you see a message that states **No load balancing resources to display**, then the VM isn't behind any load balancer. In this case, you can proceed to [Part 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service).
+1. In the menu pane for your VM, locate the **Networking** heading, and then select **Load balancing**. If you see a message that states **No load balancing resources to display**, then the VM isn't behind any load balancer. In this case, you can go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service).
 
 1. If you see a load balancer resource, select the name of the load balancer to go to the load balancer's **Overview** page.
 
@@ -99,10 +99,10 @@ Follow these steps to check whether the VM is behind a Standard SKU internal loa
 
    | Values of **SKU** and **Load Balancing Type** | Conclusion |
    |--|--|
-   | The SKU value is **Standard**, and the **Load Balancing Type** value is **Private**. | The VM is behind a Standard SKU internal load balancer that blocks outbound internet traffic by default. To enable outbound connectivity, see [Solution 2 (For standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer](#solution-2-for-standard-internal-load-balancer-use-a-network-address-translation-nat-gateway-or-a-standard-public-load-balancer). |
-   | The SKU value isn't **Standard**, and the **Load Balancing Type** value is **Public**. | The VM isn't behind a Standard SKU internal load balancer, and outbound internet traffic isn't blocked by default. Continue to [Part 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service). |
+   | The SKU value is **Standard**, and the **Load Balancing Type** value is **Private**. | The VM is behind a Standard SKU internal load balancer that blocks outbound internet traffic by default. To enable outbound connectivity, go to [Solution 2 (for standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer](#solution-2-for-standard-internal-load-balancer-use-a-network-address-translation-nat-gateway-or-a-standard-public-load-balancer). |
+   | The SKU value isn't **Standard**, and the **Load Balancing Type** value is **Public**. | The VM isn't behind a Standard SKU internal load balancer, and outbound internet traffic isn't blocked by default. Go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service). |
 
-### Part 3: Verify the connectivity between the VM and Azure KMS service
+### Step 3: Verify the connectivity between the VM and Azure KMS service
 
 1. Clear the existing KMS server configurations, and make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following Software License Manager script command:
 
@@ -135,7 +135,7 @@ In the command output, the second-to-last line resembles the following text:
 
 `Sent = 4, Received = 4, Lost = 0 (0% loss)`
 
-If `Lost` is greater than 0, the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has a custom DNS server specified, make sure that the DNS server can resolve the `azkms.core.windows.net` domain name. If it can't, change the DNS server to one that can resolve `azkms.core.windows.net`.
+If the `Lost` value is greater than 0, the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has a custom DNS server specified, make sure that the DNS server can resolve the `azkms.core.windows.net` domain name. If it can't, change the DNS server to one that can resolve `azkms.core.windows.net`.
 
 > [!NOTE]
 > If you remove all DNS servers from a virtual network, VMs use Azure's internal DNS service. This service can resolve `kms.core.windows.net`.
@@ -162,9 +162,9 @@ If `Lost` is greater than 0, the VM doesn't have connectivity to the KMS server.
 
       - Traffic is blocked somewhere along the path.
 
-      For these scenarios, see [Solution 1: (For forced tunneling) Use the Azure custom route to route activation traffic to the Azure KMS server](#solution-1-for-forced-tunneling-use-the-azure-custom-route-to-route-activation-traffic-to-the-azure-kms-server).
+      For these scenarios, go to [Solution 1: (for forced tunneling) Use the Azure custom route to route activation traffic to the Azure KMS server](#solution-1-for-forced-tunneling-use-the-azure-custom-route-to-route-activation-traffic-to-the-azure-kms-server).
 
-1. After you verify that a connection to `azkms.core.windows.net` is successful, run the following command at that elevated Windows PowerShell prompt. This command tries to activate the Windows VM several times:
+1. After you verify that a connection to `azkms.core.windows.net` is successful, run the following command in the elevated Windows PowerShell window. This command tries to activate the Windows VM several times:
 
 ```powershell
    1..12 | ForEach-Object {
@@ -173,15 +173,17 @@ If `Lost` is greater than 0, the VM doesn't have connectivity to the KMS server.
    }
 ```
 
-If the activation attempt is successful, the command displays a message that resembles the following text:
+If the activation attempt is successful, the command displays a message that resembles the following example:
 
 `Activating Windows(R), Server Datacenter edition (<kms-client-product-key>) ... Product activated successfully.`
 
-## Solution 1 (For forced tunneling): Use the Azure custom route to route activation traffic to the Azure KMS server
+## Solution
+
+### Solution 1 (for forced tunneling): Use the Azure custom route to route activation traffic to the Azure KMS server
 
 If a forced tunneling scenario routes traffic outside Azure, work with your network admin to determine the correct course of action. One possible solution is described in the **Solution** section of [Windows activation fails in forced tunneling scenario](custom-routes-enable-kms-activation.md). Apply this solution if it's consistent with your organization's policies.
 
-## Solution 2 (For standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer
+### Solution 2 (for standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer
 
 If a standard internal load balancer blocks traffic, two different approaches can fix the problem, as described in [Use Source Network Address Translation (SNAT) for outbound connections](/azure/load-balancer/load-balancer-outbound-connections):
 
@@ -189,34 +191,32 @@ If a standard internal load balancer blocks traffic, two different approaches ca
 
 - [Change to a standard public load balancer and define outbound rules](/azure/load-balancer/load-balancer-outbound-connections#outboundrules).
 
-Use an Azure Virtual Network NAT configuration for outbound connectivity in production deployments. For more information about Azure NAT Gateway, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
+In production deployments, use an Azure Virtual Network NAT configuration for outbound connectivity. For more information about Azure NAT Gateway, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
 
-However, if you need to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you need to activate. Operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
+However, if you have to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you have to activate. Operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
 
-## Solution 3  (For standard internal load balancer): Centralized egress through Azure Firewall without forced tunneling
+### Solution 3 (for standard internal load balancer): Centralized egress through Azure Firewall without forced tunneling
 
-As mentioned in [Solution 2 (For standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer](#solution-2-for-standard-internal-load-balancer-use-a-network-address-translation-nat-gateway-or-a-standard-public-load-balancer), to overcome SNAT port limitations for outbound connectivity, use an Azure Virtual Network NAT configuration for scalable and resilient outbound traffic management.
+As mentioned in [Solution 2](#solution-2-for-standard-internal-load-balancer-use-a-network-address-translation-nat-gateway-or-a-standard-public-load-balancer), to overcome SNAT port limitations for outbound connectivity, use an Azure Virtual Network NAT configuration for scalable and resilient outbound traffic management.
 
-If your deployment uses an internal load balancer and routes all outbound traffic through Azure Firewall, this solution is applicable. Use it when:
+If your deployment uses an internal load balancer, and it routes all outbound traffic through Azure Firewall, this solution is applicable. Use it if:
 
 - You need centralized outbound traffic control.
 - Forced tunneling to on-premises isn't required.
 - A NAT Gateway isn't necessary, unless SNAT port exhaustion occurs.
 
-This pattern is common in environments where backend VMs behind an internal load balancer need to access external services (like KMS servers) through Azure Firewall, while maintaining internal routing simplicity. For more information, see [Integrate Azure Firewall with Azure Standard Internal Load Balancer](/azure/firewall/integrate-lb#internal-load-balancer).
+This pattern is common in environments in which back-end VMs behind an internal load balancer have to access external services (such as KMS servers) through Azure Firewall while maintaining internal routing simplicity. For more information, see [Integrate Azure Firewall with Azure Standard Internal Load Balancer](/azure/firewall/integrate-lb#internal-load-balancer).
 
 ### Flow summary for inbound and outbound traffic
 
 - Inbound: Client → Internal load balancer → Backend VM → Client
 - Outbound: Backend VM → User Defined Route (`0.0.0.0/0`) → Azure Firewall → Internet
 
-### Steps to perform Windows Activation via Azure Firewall
+### Steps to perform Windows Activation through Azure Firewall
 
-1. Verify outbound routing configuration.
+1. Verify outbound routing configuration. Make sure that outbound traffic from the VM subnet is routed to Azure Firewall by using a user-defined route (UDR). For example: `0.0.0.0/0` → Azure Firewall.
 
-Ensure that outbound traffic from the VM subnet is routed to Azure Firewall by using a user-defined route (UDR). For example: `0.0.0.0/0` → Azure Firewall.
-
-1. Add a network rule on Azure Firewall to allow outbound traffic to the KMS server:
+1. Add a network rule on Azure Firewall to allow outbound traffic to the KMS server.
 
     | Field | Value |
     |--|--|
@@ -225,8 +225,8 @@ Ensure that outbound traffic from the VM subnet is routed to Azure Firewall by u
     | Protocol | TCP |
     | Action| Allow |
 
-1. Verify that the DNS resolution from the VM completes successfully and returns the correct IP addresses.
-1. Activate Windows by running the following command in an elevated command prompt:
+1. Verify that the DNS resolution from the VM finishes successfully and returns the correct IP addresses.
+1. Activate Windows by running the following command in an elevated Command Prompt window:
 
     ```cmd
     slmgr.vbs /ato
@@ -237,6 +237,3 @@ Ensure that outbound traffic from the VM subnet is routed to Azure Firewall by u
    - Check network rule logs to verify that traffic on port 1688 is allowed.
    - Verify that the rule matches the resolved IP, port, and protocol.
    - Verify that there are no implicit denies or misconfigured rule priorities.
-
-
- 
