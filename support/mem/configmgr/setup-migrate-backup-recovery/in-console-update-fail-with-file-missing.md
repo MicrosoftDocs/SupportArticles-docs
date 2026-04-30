@@ -57,10 +57,38 @@ After completing these checks, proceed with the scenario that matches your findi
 
 If files are missing in `\EasySetupPayload`, restore the update payload source first.
 
-- For an online service connection point, retry the download from the console after you verify internet connectivity and endpoint access.
-- For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again.
+- For an online service connection point, retry the download from the console after you verify internet connectivity and endpoint access. Check `dmpdownloader.log` and look for the following lines during download attempt:
 
-After you rerun download or import, confirm that the required files exist under the appropriate `\EasySetupPayload\<PackageGuid>\Redists` folder.
+```output
+Check if there is redist to download for update, aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+Download redist for update aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+Successfully download redist for aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+```
+
+- For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again. While it runs, review `ServiceConnectionTool.log` and `ConfigMgrSetup.log` to verify the required files download successfully.
+
+ServiceConnectionTool.log
+
+```output
+INFO:ConfigMgr.Update.Manifest.cab (size = 15741046) downloaded successfully
+INFO:Downloading Payload 248DC1EB-4B98-4483-BAF3-08C678C1CD0A version 5.0.9058.1000. More information: https://go.microsoft.com/fwlink/?LinkId=2166085
+INFO:Downloaded Payload 248DC1EB-4B98-4483-BAF3-08C678C1CD0A size = 967280807
+INFO:Downloading Redists for 248DC1EB-4B98-4483-BAF3-08C678C1CD0A
+INFO:Successfully downloaded Redists for 248DC1EB-4B98-4483-BAF3-08C678C1CD0A
+```
+
+ConfigMgrSetup.log
+
+```output
+INFO: Downloading https://go.microsoft.com/fwlink/?LinkId=2115685 as SQLSysClrTypes.msi
+INFO: set additional flag.
+No proxy information is specified. Connect without proxy.
+INFO: WinHttpQueryHeaders() in Download() returned OK (200)
+INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
+4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
+```
+
+After rerunning the download or import, verify that the required files are present in `\EasySetupPayload\<PackageGuid>\Redists`.
 
 > [!NOTE]
 > In Service Connection Tool version 2509 or later, the **Connect** step fails if required redistributable files can't be downloaded.
