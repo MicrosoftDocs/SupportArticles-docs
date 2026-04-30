@@ -36,21 +36,21 @@ The cause of this issue can be one of these two possibilities:
 
 - One of the Azure Front Door edge servers doesn't have the expected certificate loaded:
 
-  - Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
+  1. Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
 
     :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
 
-  - In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
+  1. In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
 
     :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
 
-  - Continue to load the site while capturing the traffic in the browser using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
+  1. Continue to load the site while capturing the traffic in the browser using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
 
-  - Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
+  1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
 
     :::image type="content" source="media/certificate-issues/azure.ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
 
-  - At this point, create a support request if the following conditions are met:
+  1. At this point, create a support request if the following conditions are met:
 
     - The custom domain has been deployed successfully for at least an hour.
 
@@ -58,11 +58,11 @@ The cause of this issue can be one of these two possibilities:
 
     - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Azure Front Door.
 
-  - Be sure to include all your gathered data in the support request, including the geographic area where users are impacted.
+  Be sure to include all your gathered data in the support request, including the geographic area where users are impacted.
 
 ## The certificate returned by Azure Front Door for a custom domain is expired
 
-### Symptom
+### Symptoms
 
 - Requests sent to your origin through Azure Front Door get an expired certificate and fail.
 
@@ -80,7 +80,7 @@ The cause of this issue can be one of the following:
 
 - The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Azure Front Door endpoint hostname:
 
-  - Test DNS resolution of the custom domain using a DNS lookup tool like `dig` and confirm that your custom domain has no direct CNAME to the Azure Front Door endpoint:
+  1. Test DNS resolution of the custom domain using a DNS lookup tool like `dig` and confirm that your custom domain has no direct CNAME to the Azure Front Door endpoint:
 
     ```
     dig contoso.fabrikam.com CNAME
@@ -106,31 +106,31 @@ The cause of this issue can be one of the following:
     ```
       
 
-  - If the CNAME is missing, go to **Domains** under **Settings** in your Azure Front Door profile and select the link under DNS state:
+  1. If the CNAME is missing, go to **Domains** under **Settings** in your Azure Front Door profile and select the link under DNS state:
   
     :::image type="content" source="media/certificate-issues/dns-state.png" alt-text="Screenshot that shows the DNS state in Azure Front Door custom domain.":::
   
-  - Either add the record to the linked Azure DNS zone or make a note of the required values so you can add this record manually with your DNS provider.
+  1. Either add the record to the linked Azure DNS zone or make a note of the required values so you can add this record manually with your DNS provider.
     
-  - To expedite creation of a new certificate, you can refresh the validation token using [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) PowerShell cmdlet:
+  1. To expedite creation of a new certificate, you can refresh the validation token using [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) PowerShell cmdlet:
 
     ```azurepowershell
     Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
     ```
 
-  - Once this command completes, update your DNS zone with the new TXT record value to validate the new certificate.
+  1. Once this command completes, update your DNS zone with the new TXT record value to validate the new certificate.
 
 - The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate hasn't been rotated in the Key Vault:
 
   - One reason the certificate might not have rotated is that the version isn't latest when creating the secret in the Azure Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation)
 
-    - In **Secrets** under **Security**, check the version listed for the certificate:
+    1. In **Secrets** under **Security**, check the version listed for the certificate:
 
         :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot that shows the version of the secret as latest.":::
 
-    - If it isn't *Latest*, then create a new secret in the Azure Front Door profile using the same Key Vault certificate and select either **Latest** or the most recent specific version.
+    1. If it isn't *Latest*, then create a new secret in the Azure Front Door profile using the same Key Vault certificate and select either **Latest** or the most recent specific version.
 
-    - Then, associate the custom domain with the new secret and your certificate will be deployed within 24 hours.
+    1. Associate the custom domain with the new secret and your certificate will be deployed within 24 hours.
 
   - Another reason that a certificate updated in Key Vault might not have rotated yet in Azure Front Door would be changes in Key Vault access permissions. There are two models for Key Vault permissions. Choose the one applicable to your scenario and validate that the permissions are still present on Key Vault:
 
