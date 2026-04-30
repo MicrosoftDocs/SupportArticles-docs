@@ -104,7 +104,7 @@ To check whether the VM is behind a Standard SKU internal load balancer that blo
 
 ### Step 3: Verify the connectivity between the VM and Azure KMS service
 
-1. Clear the existing KMS server configurations, and make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following Software License Manager script command:
+1. Clear the existing KMS server configurations, and make sure that the VM is configured to use the correct Azure KMS server. To make this check, run the following Software License Manager script command:
 
 ```powershell
    slmgr.vbs /ckms
@@ -115,7 +115,7 @@ This command returns the following text:
 
 > Key Management Service machine name set to azkms.core.windows.net:1688 successfully.
 
-1. Make sure that the firewall in the VM doesn't block outbound network traffic to the KMS endpoint on port 1688. To do this, apply one of the following options:
+1. Make sure that the firewall in the VM doesn't block outbound network traffic to the KMS endpoint on port 1688. To check this status, apply one of the following options:
 
 - Check connectivity by running the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) cmdlet in PowerShell:
 
