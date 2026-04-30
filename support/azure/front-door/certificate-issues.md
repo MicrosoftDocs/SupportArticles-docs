@@ -52,11 +52,11 @@ The cause of this issue can be one of these two possibilities:
 
   1. At this point, create a support request if the following conditions are met:
 
-    - The custom domain has been deployed successfully for at least an hour.
-
-    - The impacted users are intermittently getting a `*.azureedge.net` certificate instead of the expected custom domain certificate.
-
-    - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Azure Front Door.
+      - The custom domain has been deployed successfully for at least an hour.
+  
+      - The impacted users are intermittently getting a `*.azureedge.net` certificate instead of the expected custom domain certificate.
+    
+      - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Azure Front Door.
 
   Be sure to include all your gathered data in the support request, including the geographic area where users are impacted.
 
@@ -101,9 +101,9 @@ The cause of this issue can be one of the following:
       
       ;; Query time: 123 msec
       ;; SERVER: 0.0.0.0#53(0.0.0.0) (UDP)
-        ;; WHEN: Fri Mar 06 16:18:53 CST 2026
-        ;; MSG SIZE rcvd: 132
-        ```
+      ;; WHEN: Fri Mar 06 16:18:53 CST 2026
+      ;; MSG SIZE rcvd: 132
+      ```
       
 
   1. If the CNAME is missing, go to **Domains** under **Settings** in your Azure Front Door profile and select the link under DNS state:
