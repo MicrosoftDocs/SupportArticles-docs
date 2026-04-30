@@ -38,17 +38,17 @@ The cause of this issue can be one of these two possibilities:
 
   1. Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
 
-    :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
+      :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
 
   1. In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
 
-    :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
+      :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
 
   1. Continue to load the site while capturing the traffic in the browser using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
 
   1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
 
-    :::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
+      :::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
 
   1. At this point, create a support request if the following conditions are met:
 
@@ -82,33 +82,33 @@ The cause of this issue can be one of the following:
 
   1. Test DNS resolution of the custom domain using a DNS lookup tool like `dig` and confirm that your custom domain has no direct CNAME to the Azure Front Door endpoint:
 
-    ```
-    dig contoso.fabrikam.com CNAME
-    
-    ; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> contoso.fabrikam.com CNAME
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 55070
-    ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
-    ;; OPT PSEUDOSECTION:
-    ; EDNS: version: 0, flags:; udp: 4096
-    
-    ;; QUESTION SECTION:
-    ;contoso.fabrikam.com. IN CNAME
-    
-    ;; AUTHORITY SECTION:
-    fabrikam.com. 300 IN SOA ns1-03.azure-dns.com. azuredns-hostmaster.microsoft.com. 1 3600 300 2419200 300
-    
-    ;; Query time: 123 msec
-    ;; SERVER: 0.0.0.0#53(0.0.0.0) (UDP)
-    ;; WHEN: Fri Mar 06 16:18:53 CST 2026
-    ;; MSG SIZE rcvd: 132
-    ```
+      ```
+      dig contoso.fabrikam.com CNAME
+      
+      ; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> contoso.fabrikam.com CNAME
+      ;; global options: +cmd
+      ;; Got answer:
+      ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 55070
+      ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+      ;; OPT PSEUDOSECTION:
+      ; EDNS: version: 0, flags:; udp: 4096
+      
+      ;; QUESTION SECTION:
+      ;contoso.fabrikam.com. IN CNAME
+      
+      ;; AUTHORITY SECTION:
+      fabrikam.com. 300 IN SOA ns1-03.azure-dns.com. azuredns-hostmaster.microsoft.com. 1 3600 300 2419200 300
+      
+      ;; Query time: 123 msec
+      ;; SERVER: 0.0.0.0#53(0.0.0.0) (UDP)
+        ;; WHEN: Fri Mar 06 16:18:53 CST 2026
+        ;; MSG SIZE rcvd: 132
+        ```
       
 
   1. If the CNAME is missing, go to **Domains** under **Settings** in your Azure Front Door profile and select the link under DNS state:
   
-    :::image type="content" source="media/certificate-issues/dns-state.png" alt-text="Screenshot that shows the DNS state in Azure Front Door custom domain.":::
+      :::image type="content" source="media/certificate-issues/dns-state.png" alt-text="Screenshot that shows the DNS state in Azure Front Door custom domain.":::
   
   1. Either add the record to the linked Azure DNS zone or make a note of the required values so you can add this record manually with your DNS provider.
     
