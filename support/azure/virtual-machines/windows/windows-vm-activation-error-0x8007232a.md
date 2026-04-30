@@ -25,7 +25,7 @@ This article explains how to resolve the 0x8007232A error that occurs when you t
 
 ## Symptoms
 
-When you try to activate an Azure Windows VM, you see the following error message in Windows Script Host:
+When you try to activate a Microsoft Azure Windows VM, you see the following error message in Windows Script Host:
 
 `**Error: 0x8007232A** DNS server failure.`
 
@@ -41,7 +41,7 @@ On Azure VMs, this error typically occurs in the following scenarios:
 - A network virtual appliance (NVA) or firewall intercepts and drops DNS traffic.
 - The VM's network adapter has an incorrect or empty DNS server configuration.
 
-## Solution 1: Reconfigure the VM to use the Azure KMS endpoint directly
+### Solution 1: Reconfigure the VM to use the Azure KMS endpoint directly
 
 Bypass DNS discovery entirely by pointing to the Azure KMS endpoint by name.
 
@@ -73,7 +73,7 @@ Bypass DNS discovery entirely by pointing to the Azure KMS endpoint by name.
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-## Solution 2: Fix DNS connectivity
+### Solution 2: Fix DNS connectivity
 
 If the VM needs DNS for other purposes (not only activation), troubleshoot the underlying DNS issue.
 
