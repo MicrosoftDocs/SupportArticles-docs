@@ -124,23 +124,21 @@ The extension deletion operation requires write/delete permissions on the cluste
 
 #### Common scenarios where locks are applied:
 
-Organization policies that enforce resource locks for production resources
-
-Compliance requirements (e.g., Azure Policy automatically applying locks)
-
-Manual locks applied by administrators to prevent accidental deletion
+- Organization policies that enforce resource locks for production resources
+- Compliance requirements (e.g., Azure Policy automatically applying locks)
+- Manual locks applied by administrators to prevent accidental deletion
 
 #### Solution
 
 #### Step 1: Identify the Lock
 
-Navigate to the Azure Portal
+1. Navigate to the Azure Portal
 
-Go to the AKS cluster resource, resource group, or subscription (depending on the lock scope mentioned in the error)
-
-Select **Settings** > **Locks** from the left menu
-
-Identify the lock(s) that are blocking the operation
+1. Go to the AKS cluster resource, resource group, or subscription (depending on the lock scope mentioned in the error)
+ 
+1. Select **Settings** > **Locks** from the left menu
+ 
+1. Identify the lock(s) that are blocking the operation
 
 **Using Azure CLI:**
 
@@ -173,12 +171,12 @@ az lock list
 
 **Using Azure Portal:**
 
-Navigate to the lock location identified in Step 1
+1. Navigate to the lock location identified in Step 1
 
-Select the lock and click **Delete**
-
-Confirm the deletion
-
+1. Select the lock and click **Delete**
+ 
+1. Confirm the deletion
+ 
 **Using Azure CLI:**
 
 
@@ -257,14 +255,14 @@ Policy identifiers: '[{"policyAssignment":{"name":"Restrict Extensions","id":"/s
 
 Azure Policy is enforcing restrictions that prevent the creation or modification of cluster extensions. This typically occurs when:
 
-**Deny policies** are configured to restrict which extensions can be installed on AKS clusters
+- **Deny policies** are configured to restrict which extensions can be installed on AKS clusters
 
-**Allowed extension types policies** exist that do not include the Azure Monitor extensions in the allowlist
+- **Allowed extension types policies** exist that do not include the Azure Monitor extensions in the allowlist
 
-**Naming convention policies** block resources that don't match specific naming patterns
-
-**Tag enforcement policies** require specific tags that are not present on the extension resource
-
+- **Naming convention policies** block resources that don't match specific naming patterns
+ 
+- **Tag enforcement policies** require specific tags that are not present on the extension resource
+ 
 The policy identifiers in the error message indicate:
 
 **policyAssignment** – The specific policy assignment blocking the operation
@@ -273,11 +271,11 @@ The policy identifiers in the error message indicate:
 
 #### Common scenarios:
 
-Organization security policies that restrict third-party or specific extensions
+- Organization security policies that restrict third-party or specific extensions
 
-Policies intended to control cost or resource sprawl
-
-Compliance policies that inadvertently block Microsoft-managed extensions
+- Policies intended to control cost or resource sprawl
+ 
+- Compliance policies that inadvertently block Microsoft-managed extensions
 
 #### Solution
 
@@ -293,14 +291,14 @@ Extract the policy information from the error message:
 
 **Using Azure Portal:**
 
-Navigate to **Policy** in the Azure Portal
+- Navigate to **Policy** in the Azure Portal
 
-Select **Assignments** from the left menu
-
-Search for the policy assignment name from the error message
-
-Click on the assignment to view its details and scope
-
+- Select **Assignments** from the left menu
+ 
+- Search for the policy assignment name from the error message
+ 
+- Click on the assignment to view its details and scope
+ 
 **Using Azure CLI:**
 
 
@@ -329,19 +327,19 @@ Examine the policy definition to understand what conditions are blocking the ext
 
 **Using Azure Portal:**
 
-Navigate to **Policy** > **Definitions**
+- Navigate to **Policy** > **Definitions**
 
-Search for the policy definition name
-
-Review the **Policy rule** JSON to understand the deny conditions
+- Search for the policy definition name
+ 
+- Review the **Policy rule** JSON to understand the deny conditions
 
 **Common blocking conditions to look for:**
 
-Extension type restrictions (not allowing `microsoft.azuremonitor.containers.metrics`)
+- Extension type restrictions (not allowing `microsoft.azuremonitor.containers.metrics`)
 
-Resource name pattern restrictions
-
-Required tag conditions
+- Resource name pattern restrictions
+ 
+- Required tag conditions
 
 #### Step 3: Create a Policy Exemption (Recommended Approach)
 
@@ -384,11 +382,11 @@ az policy exemption create \
 
 If you have permissions to modify the policy, update it to allow Azure Monitor extensions:
 
-Navigate to **Policy** > **Definitions**
+1. Navigate to **Policy** > **Definitions**
 
-Clone the existing policy definition (if it's a built-in policy)
-
-Modify the policy rule to exclude Azure Monitor extension types:
+1. Clone the existing policy definition (if it's a built-in policy)
+ 
+1. Modify the policy rule to exclude Azure Monitor extension types:
 
 - `microsoft.azuremonitor.containers.metrics`
 
