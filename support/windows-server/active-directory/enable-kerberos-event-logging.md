@@ -20,10 +20,10 @@ _Original KB number:_ &nbsp; 262177
 
 ## Summary
 
-Windows 7 Service Pack 1, Windows Server 2012 R2, and later versions offer the capability of tracing detailed Kerberos events through the event log. You can use this information when troubleshooting Kerberos.
+Windows offers the capability of tracing detailed Kerberos events through the event log. You can use this information when troubleshooting Kerberos.
 
 > [!IMPORTANT]
-> The change in logging level will cause all Kerberos errors to be logged in an event. In the Kerberos protocol, some errors are expected based on the protocol specification. As a result, enabling Kerberos logging may generate events containing expected false-positive errors even when there are no Kerberos operational errors.
+> The change in logging level will cause all Kerberos errors to be logged in the system eventlog. In the Kerberos protocol, some errors are expected based on the protocol specification. As a result, enabling Kerberos logging may generate events containing expected false-positive errors even when there are no Kerberos operational errors.
 
 Examples of false-positive errors include:
 
@@ -38,12 +38,12 @@ Examples of false-positive errors include:
 3. KDC_ERR_S_PRINCIPAL_UNKNOWN may be logged for a wide variety of problems with the application client and server liaison. The cause can be:
 
     - Missing or duplicate SPNs registered in AD.
-    - Incorrect server names or DNS suffixes used by the client, for example, the client is chasing DNS CNAME records and use the resulting A record in SPNs.
+    - Incorrect server names or DNS suffixes used by the client. For example, the client is chasing DNS CNAME records and use the resulting A record in SPNs. The client is not allowed to do this per the RFCs, but some apps still do this.
     - Using non-FQDN server names that need to be resolved across AD forest boundaries.
 
     Recommendation: Investigate the use of server names by the applications. It is most likely a client or server configuration problem.
 
-4. KRB_AP_ERR_MODIFIED is logged when an SPN is set on an incorrect account, not matching the account the server is running with. The second common problem is that the password between the KDC issuing the ticket and the server hosting the service is out of sync.
+4. KRB_AP_ERR_MODIFIED is logged when an SPN is set on an account, not matching the account the server is running with. The second common problem is that the password between the KDC issuing the ticket and the server hosting the service is out of sync.
 
     Recommendation: Similar to KDC_ERR_S_PRINCIPAL_UNKNOWN, check whether the SPN is correctly set.
 
@@ -67,7 +67,7 @@ Other scenarios or errors require the attention of the System or Domain Administ
     > [!NOTE]
     > Remove this registry value when it is no longer needed so that performance is not degraded on the computer. Also, you can remove this registry value to disable Kerberos event logging on a specific computer.
 
-3. Quit Registry Editor. The setting will become effective immediately on Windows Server 2012 R2, Windows 7, and later versions.
+3. Quit Registry Editor. The setting will become effective immediately.
 4. You can find any Kerberos-related events in the system log.
 
 ## More information
@@ -76,4 +76,4 @@ Kerberos event logging is intended only for troubleshooting purpose when you exp
 
 From a general point of view, you may receive additional errors that are correctly handled by the receiving client without user or admin intervention. Restated, some errors captured by Kerberos logging don't reflect a severe problem that must be solved or even can be solved.
 
-For example, an event log 3 about a Kerberos error that has the error code **0x7 KDC_ERR_S_PRINCIPAL_UNKNOWN** for Server Name cifs/<**IP address**> will be logged when a share access is made against a server IP address and no server name. If this error is logged, the Windows client automatically tries to fail back to NTLM authentication for the user account. If this operation works, receive no error.
+For example, an event ID 3 about a Kerberos error that has the error code **0x7 KDC_ERR_S_PRINCIPAL_UNKNOWN** for Server Name cifs/<**IP address**> will be logged when a share access is made against a server IP address and the SPN with the IP address is not registered. If this error is logged, the Windows client automatically tries to fail back to NTLM authentication for the user account. If this operation works, the user does not notice an error.
