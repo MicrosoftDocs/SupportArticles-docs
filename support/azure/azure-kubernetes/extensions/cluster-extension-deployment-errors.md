@@ -91,8 +91,7 @@ If you attempt to update an extension directly, you may see an error such as:
 
 This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
 
-###   
-Issue 3: Resource Lock Prevents Extension Deletion
+### Issue 3: Resource Lock Prevents Extension Deletion
 
 #### Error
 
@@ -123,7 +122,7 @@ Azure Resource Locks prevent accidental deletion or modification of critical res
 
 The extension deletion operation requires write/delete permissions on the cluster resource, which are blocked by the lock.
 
-**Common scenarios where locks are applied:**
+#### Common scenarios where locks are applied:
 
 Organization policies that enforce resource locks for production resources
 
@@ -146,8 +145,26 @@ Identify the lock(s) that are blocking the operation
 **Using Azure CLI:**
 
 
-```
+```azurecli
+# Check locks at cluster level
 
+az lock list --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters
+
+  
+
+# Check locks at resource group level
+
+az lock list --resource-group <resource-group>
+
+  
+
+# Check locks at subscription level
+
+az lock list
 ```
 
 #### Step 2: Remove or Temporarily Disable the Lock
@@ -165,8 +182,22 @@ Confirm the deletion
 **Using Azure CLI:**
 
 
-```
+```azurecli
+# Delete a lock (you need the lock name from Step 1)
 
+az lock delete --name <lock-name> --resource-group <resource-group>
+
+  
+
+# For cluster-level lock
+
+az lock delete --name <lock-name> \
+
+  --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters
 ```
 
 #### Step 3: Retry the Extension Deletion
@@ -176,7 +207,7 @@ After removing the lock, retry the extension deletion operation:
 **Using Azure CLI:**
 
 
-```
+```azurecli
 
 az aks update --resource-group <resource-group> --name <cluster-name> \
 
@@ -189,7 +220,7 @@ az aks update --resource-group <resource-group> --name <cluster-name> \
 If the lock was intentionally applied for protection, re-apply it after the extension operation completes:
 
 
-```
+```azurecli
 
 az lock create --name <lock-name> \
 
@@ -273,7 +304,22 @@ Click on the assignment to view its details and scope
 **Using Azure CLI:**
 
 
-```
+```azurecli
+# Get details of the policy assignment
+
+az policy assignment show --name <assignment-id> --scope /subscriptions/<subscription-id>
+
+  
+
+# List all policy assignments at subscription level
+
+az policy assignment list --scope /subscriptions/<subscription-id>
+
+  
+
+# Get the policy definition details
+
+az policy definition show --name <definition-id>
 
 ```
 
@@ -303,26 +349,35 @@ If the policy is required for compliance but Azure Monitor extensions should be 
 
 **Using Azure Portal:**
 
-Navigate to **Policy** > **Assignments**
+1. Navigate to **Policy** > **Assignments**
 
-Select the blocking policy assignment
+1. Select the blocking policy assignment
 
-Click **Create exemption**
+1. Click **Create exemption**
 
-Set the scope to the AKS cluster resource or resource group
+1. Set the scope to the AKS cluster resource or resource group
 
-Select **Waiver** or **Mitigated** as the exemption category
+1. Select **Waiver** or **Mitigated** as the exemption category
 
-Provide a justification (e.g., "Azure Monitor metrics extension are core cluster extensions managed by AKS")
+1. Provide a justification (e.g., "Azure Monitor metrics extension are core cluster extensions managed by AKS")
 
 **Using Azure CLI:**
 
 
-```
+```azurecli
 
 az policy exemption create \
 
-  --name 
+  --name "Allow-Azure-Monitor-Extensions" \
+
+  --policy-assignment <assignment-id> \
+
+  --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
+
+  --exemption-category Waiver \
+
+  --description "Exemption to allow Azure Monitor core extensions for cluster monitoring"
+
 ```
 
 #### Step 4: Alternative – Modify the Policy (If Appropriate)
@@ -350,6 +405,46 @@ Modify the policy rule to exclude Azure Monitor extension types:
 
 {
 
+  "if": {
+
+    "allOf": [
+
+      {
+
+        "field": "type",
+
+        "equals": "Microsoft.KubernetesConfiguration/extensions"
+
+      },
+
+      {
+
+        "field": "Microsoft.KubernetesConfiguration/extensions/extensionType",
+
+        "notIn": [
+
+          "microsoft.azuremonitor.containers.metrics",
+
+          "microsoft.azuremonitor.containers",
+
+          "microsoft.azuremonitor.appmonitoring"
+
+        ]
+
+      }
+
+    ]
+
+  },
+
+  "then": {
+
+    "effect": "deny"
+
+  }
+
+}
+
   
 ```
 
@@ -360,12 +455,24 @@ After creating an exemption or modifying the policy, retry the extension operati
 **Using Azure CLI:**
 
 
-```
+```azurecli
+# Enable Azure Monitor metrics
+
+az aks update --resource-group <resource-group> --name <cluster-name> \
+
+  --enable-azure-monitor-metrics
+
+  
+
+# Enable Container Insights
+
+az aks enable-addons --resource-group <resource-group> --name <cluster-name> \
+
+  -a monitoring --workspace-resource-id <workspace-id>
 
 ```
-
-###   
-Extension creation errors
+ 
+## Extension creation errors
 
 #### Helm errors
 
