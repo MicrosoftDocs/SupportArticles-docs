@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-Some Windows devices still use Secure Boot certificates issued in 2011, which expire in June 2026. Update to 2023 Secure Boot certificates to maintain boot-level protection.
+Some Windows devices still use Secure Boot certificates issued in 2011, which will expire in June 2026. Learn how to update to 2023 Secure Boot certificates to maintain boot-level protection and ensure device security.
 If you don’t update, devices might still start and continue receiving regular Windows updates. However, they might **not receive future Secure Boot protections** for early boot components.
 
 ## Impact
@@ -28,7 +28,7 @@ If affected devices aren’t updated:
 - Secure Boot may no longer be able to validate or protect future updates to early boot components (for example, boot manager or other pre-OS components).
 - Administrators may see indicators that certificate remediation hasn’t been applied.
 
-## Identify affected devices
+## Identify devices affected by outdated secure boot certificates
 
 ### Common signs of affected devices
 
@@ -49,7 +49,7 @@ In environments with **outdated firmware**, or where certificate updates don’t
 - Startup hangs
 - Devices failing to boot
 
-## Resolution
+## Resolve secure boot certificate issues
 
 ### Review your device estate
 
