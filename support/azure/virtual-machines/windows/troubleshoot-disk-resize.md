@@ -65,7 +65,7 @@ An active SAS URI creates a read lease on the disk's backing page blob. While a 
 
 - If there's an export URL, select **Revoke access**.
 - If Azure Backup is running, wait for the job to finish, or cancel it in the vault's **Backup Jobs** pane.
-- Retry the disk resize after you revokie the SAS or after the backup job finishes.
+- Retry the disk resize after you revoke the SAS or after the backup job finishes.
 
 > [!NOTE]
 > For a detailed troubleshooting flow for SAS-blocked disk resize, see [Troubleshoot disk resize blocked by SAS URI](troubleshoot-disk-resize-sas-block.md).
@@ -101,7 +101,7 @@ For the full list of online resize restrictions, see [Expand without downtime](/
 
 ## Detach the disk before resizing past 4 TiB
 
-Managed disks use different storage back ends for sizes below and above 4 TiB (single versus striped page blobs). To cross this boundary requires a back-end migration that can't occur while the disk is attached.
+Managed disks use different storage back ends for sizes that are less than and greater than 4 TiB (single versus striped page blobs). To cross this boundary requires a back-end migration that can't occur while the disk is attached.
 
 ### Check whether this limitation applies
 
@@ -166,14 +166,14 @@ If you need a smaller disk, see [Decrease the size of an Azure data disk without
 If the Azure portal shows the correct new disk size, but the OS still reports the old size, see the following articles:
 
 - [Expand the volume in the operating system](/azure/virtual-machines/windows/expand-disks#expand-the-volume-in-the-operating-system) — rescan disks and extend the volume.
-- [Cannot extend volume — recovery partition blocks extend](cannot-extend-volume-recovery-partition.md) — a recovery partition is between the OS volume and unallocated space.
+- [Cannot extend volume - recovery partition blocks extend](cannot-extend-volume-recovery-partition.md) — a recovery partition is between the OS volume and unallocated space.
 - [Convert MBR to GPT on an Azure VM](convert-mbr-to-gpt-azure-virtual-machine.md) — the disk uses MBR partition style, limiting usable size to 2 TiB.
 - [Cannot extend an encrypted OS volume](cannot-extend-encrypted-os-volume.md) — Azure Disk Encryption placed a System Reserved partition that blocks the extend.
 - [Can't extend the volume on a SQL Server VM](cannot-extend-volume-sql-server.md) — SQL Marketplace VMs use Storage Spaces pools.
 
 ## References
 
-- [Expand virtual hard disks — Windows](/azure/virtual-machines/windows/expand-disks)
-- [Expand virtual hard disks — Linux](/azure/virtual-machines/linux/expand-disks)
+- [Expand virtual hard disks - Windows](/azure/virtual-machines/windows/expand-disks)
+- [Expand virtual hard disks - Linux](/azure/virtual-machines/linux/expand-disks)
 - [Azure managed disks overview](/azure/virtual-machines/managed-disks-overview)
 - [Azure disk types comparison](/azure/virtual-machines/disks-types)
