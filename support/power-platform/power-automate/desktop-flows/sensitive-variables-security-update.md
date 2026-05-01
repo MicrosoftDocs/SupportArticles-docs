@@ -16,7 +16,7 @@ This article describes a security update for the [sensitive variables](/power-au
 
 ## Symptoms
 
-When you mark variables as *sensitive* in a desktop flow, their values shouldn't appear in flow execution logs on the Power Automate portal. But because of this vulnerability, the values can appear in execution logs when [global sensitive variables](/power-automate/desktop-flows/scoped-variables#variable-scope) are used in [local subflows](/power-automate/desktop-flows/scoped-variables#create-local-subflows-and-variables).
+When you mark a variable as *sensitive* in a desktop flow, its value is normally hidden from flow execution logs on the Power Automate portal. Because of this vulnerability, the value can appear in the logs when a [global sensitive variable](/power-automate/desktop-flows/scoped-variables#variable-scope) is used in a [local subflow](/power-automate/desktop-flows/scoped-variables#create-local-subflows-and-variables).
 
 ## Solution
 
