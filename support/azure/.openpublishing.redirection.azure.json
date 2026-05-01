@@ -6677,6 +6677,10 @@
         {
         "source_path": "virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
         "redirect_url": "/troubleshoot/azure/virtual-network/welcome-virtual-network"
+            },
+        {
+        "source_path": "load-balancer/load-balancer-troubleshoot.md ",
+        "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-common-problems/load-balancer-troubleshoot"
       }
   ]
 }
