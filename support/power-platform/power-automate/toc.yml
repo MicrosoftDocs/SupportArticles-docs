@@ -217,6 +217,8 @@ items:
         href: desktop-flows/session-has-logged-off-troubleshooting.md
       - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
         href: desktop-flows/connect-with-sign-in-security-update.md
+      - name: Security update for sensitive variables
+        href: desktop-flows/sensitive-variables-security-update.md
       - name: Some actions appear to be missing or aren't visible
         href: desktop-flows/actions-not-available.md
       - name: Session creation errors for unattended desktop flow runs
@@ -245,8 +247,6 @@ items:
         href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
       - name: Version control error when publishing a flow or saving it as a draft
         href: desktop-flows/version-control-update-on-draft.md
-      - name: Security update for sensitive variables
-        href: desktop-flows/sensitive-variables-security-update.md
   - name: Flow creation
     items:
       - name: Can't find Excel Online table in Microsoft Flow

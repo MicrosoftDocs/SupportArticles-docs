@@ -1,24 +1,28 @@
 ---
-title: Security update for sensitive variables
-description: Provides security updates for the sensitive variables feature in Microsoft Power Automate for desktop.
-ms.reviewer: nimoutzo, iopanag
-ms.date: 04/14/2026
+title: Resolve Sensitive Variable Vulnerability in Desktop Flows
+description: Power Automate for desktop security update fixes a sensitive variables vulnerability exposing values in flow execution logs. Download the patched version today.
+ms.reviewer: nimoutzo, iopanag, v-shaywood
+ms.date: 05/01/2026
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
-# Security update for sensitive variables in Microsoft Power Automate for desktop
+# Security update for sensitive variables
 
 ## Summary
 
-A potential security vulnerability is identified in the sensitive variables feature in Power Automate for desktop versions 2.62 to 2.66.
-
-When marking variables as **sensitive** in a Power Automate Desktop flow, these variable's values aren't shown in flow execution logs on the Power Automate portal. However, due to a vulnerability, these values may appear on the execution logs when **global sensitive** variables are used in **local subflows**.
+This article describes a security update for the [sensitive variables](/power-automate/desktop-flows/manage-variables#sensitive-variables) feature in Microsoft Power Automate for desktop. A potential vulnerability affects versions *2.62* through *2.66* and can expose sensitive values in flow execution logs.
 
 > [!IMPORTANT]
-> The issue affects only flows that use the **global sensitive variables** in **local subflows**.
+> The issue affects only flows that use *global sensitive variables* in *local subflows*.
 
-## Mitigation
+## Symptoms
 
-To mitigate the issue, update your Power Automate for desktop to the patched version as soon as possible. You can download the latest version of Power Automate for desktop from [this link](https://go.microsoft.com/fwlink/?linkid=2102613). If you need a patched version for a prior version, you can download from the list bellow.
+When you mark variables as *sensitive* in a desktop flow, their values shouldn't appear in flow execution logs on the Power Automate portal. But because of this vulnerability, the values can appear in execution logs when [global sensitive variables](/power-automate/desktop-flows/scoped-variables#variable-scope) are used in [local subflows](/power-automate/desktop-flows/scoped-variables#create-local-subflows-and-variables).
+
+## Solution
+
+To fix the issue, update Power Automate for desktop to a patched version as soon as possible. Install the latest version of [Power Automate for desktop](https://go.microsoft.com/fwlink/?linkid=2102613).
+
+If you need a patch for an earlier release, use one of the following downloads:
 
 - [2.66.166.26105](https://download.microsoft.com/download/dd82ff1c-b050-4c01-a5a5-e85118d3d191/Setup.Microsoft.PowerAutomate.exe)
 - [2.65.152.26105](https://download.microsoft.com/download/50845c1a-5f2d-40d8-8cc8-f9b1e35e6a06/Setup.Microsoft.PowerAutomate.exe)
@@ -27,4 +31,9 @@ To mitigate the issue, update your Power Automate for desktop to the patched ver
 - [2.62.189.26106](https://download.microsoft.com/download/40fe38ea-36ad-4f96-bb73-3a75a7a3ec0d/Setup.Microsoft.PowerAutomate.exe)
 
 > [!NOTE]
-> Starting with release 2.67.143.26090, all future versions will include the security fix.
+> Release 2.67.143.26090 and all later versions include this security fix.
+
+## Related content
+
+- [Variable data types in Power Automate for desktop](/power-automate/desktop-flows/variable-data-types)
+- [Set up subflows in the Power Automate for desktop flow designer](/power-automate/desktop-flows/designer-workspace)
