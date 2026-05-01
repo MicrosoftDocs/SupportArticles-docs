@@ -91,7 +91,7 @@ If you attempt to update an extension directly, you may see an error such as:
 
 This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
 
-####   
+###   
 Issue 3: Resource Lock Prevents Extension Deletion
 
 #### Error
