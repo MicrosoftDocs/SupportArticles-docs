@@ -32,6 +32,102 @@
       "source_path": "Exchange/ExchangeOnline/administration/send-on-behalf-for-shared-mailbox.md",
       "redirect_url": "/troubleshoot/exchange/exchangeserver/administration/send-on-behalf-for-shared-mailbox",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/hop-count-exceeded-possible-mail-loop.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/front-end-microsoft-exchange-transport-service-stops.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/outlook-not-connect-firewall-proxy-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/connection-to-mail-server-timed-out.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-access-archive-mailbox-in-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/queue-viewer-error-when-viewing-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/attendees-meeting-update-without-changes.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-access-calendar-outlook-web-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/performance-issues-connect-to-exchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/owa-password-expiration-notification.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/organization-preparation-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cmdlets-fail-powershell-ise.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/owa-not-redirect-adfs-login.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/sendas-permissions-not-visible-in-wizard.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/outlook-anywhere-clients-not-connect-to-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-change-distribution-group-ownership.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/public-folders/troubleshoot-public-folder-replication.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/test-outlookconnectivity-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-connect-to-re-enabled-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/content-index-state-stuck-crawling-exchange-server-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/color-categories-not-print-outlook-on-the-web.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/test-owaconnectivity-ecpconnectivity-cmdlets-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }
