@@ -6,6 +6,8 @@ items:
     href: load-balancer-troubleshoot.md   
   - name: Troubleshoot backend traffic responses
     items:
+      - name: Troubleshoot Azure Load Balancer backend traffic responses
+        href: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
       - name: Troubleshoot virtual machines not responding to traffic on the configured data port
         href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
       - name: Virtual machines receive uneven distribution of traffic 

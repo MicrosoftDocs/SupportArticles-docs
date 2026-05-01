@@ -30,5 +30,7 @@ landingContent:
             url: load-balancer-troubleshoot.md
           - text: Troubleshoot load balancer health event logs
             url: load-balancer-troubleshoot-health-event-logs.md
+          - text: Troubleshoot Azure Load Balancer backend traffic responses
+            url: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
           - text: Troubleshoot virtual machines not responding to traffic on the configured data port
             url: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
