@@ -1,11 +1,12 @@
 ---
 title: Enable Kerberos event logging
 description: Discusses how to turn on detailed Kerberos logging on a particular computer, and how to use that information for troubleshooting.
-ms.date: 05/05/2026
+ms.date: 05/04/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-appelgatet
+ai.usage: ai-assisted
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
