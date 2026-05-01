@@ -173,18 +173,7 @@ Differences in one or more of the following often explain divergence:
 1. Compare values across host pools and align any settings that should be identical.
 1. Validate the change over at least one complete business cycle.
 
-## Troubleshooting workflow
-
-Use this workflow for repeatable triage:
-
-1. Confirm expected behavior from autoscale formula and settings.
-2. Identify whether disconnected sessions are blocking full scale-down.
-3. Validate force sign-out timing and policy interactions.
-4. Check diagnostics and monitor operation insights for failed evaluations.
-5. Apply mitigation and observe one full ramp-down/off-peak cycle.
-6. Escalate to engineering with evidence when behavior deviates from documented logic.
-
-## Data Collection
+## Data Collection before contacting Microsoft
 
 Capture this minimum evidence set:
 
