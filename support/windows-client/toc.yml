@@ -1241,6 +1241,8 @@ items:
       href: ./windows-security/tpm-is-not-recognized.md
     - name: UEFI mode system cannot boot
       href: ./windows-security/unified-extensible-firmware-interface-not-boot.md
+    - name: Update Secure Boot Certificates
+      href: ./windows-security/update-secure-boot-certificates.md      
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
