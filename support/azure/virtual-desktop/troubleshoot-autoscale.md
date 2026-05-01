@@ -1,36 +1,26 @@
 ---
-title: Troubleshoot autoscale issues in Azure Virtual Desktop
-description: Troubleshoot common autoscale issues for pooled host pools in Azure Virtual Desktop, including session consolidation behavior, scale-down expectations, and session host recovery after hibernate.
-author: azarjindal007
-ms.author: azarj
-ms.service: azure-virtual-desktop
+title: Troubleshoot Autoscale Issues in Azure Virtual Desktop
+description: Diagnose and fix common autoscale issues in Azure Virtual Desktop, including session consolidation, scale-down behavior, and host recovery after hibernate. Learn how to optimize scaling.
 ms.topic: troubleshooting
-ms.date: 04/14/2026
+ms.date: 05/01/2026
+ms.reviewer: kaushika
+ms.custom: pcy:wincomm-user-experience
 ---
 
 # Troubleshoot autoscale issues in Azure Virtual Desktop
 
-This article helps you diagnose and fix common autoscale issues in Azure Virtual Desktop (AVD) pooled host pools.
+## Summary
 
-The guidance applies to both autoscale methods:
+This article helps you diagnose and resolve common autoscale issues in Azure Virtual Desktop (AVD) pooled host pools, improving scaling efficiency.
+
+The guidance applies to the following  autoscale methods:
 
 - Power Management Autoscaling (generally available): powers session hosts on and off.
 - Dynamic Autoscaling (preview): powers on/off and can create/delete session hosts.
 
 For both methods, session consolidation and capacity calculations use the same logic.
 
-## Table of contents
-
-- [Before you troubleshoot](#before-you-troubleshoot)
-- [How autoscale decides minimum running hosts](#how-autoscale-decides-minimum-running-hosts)
-- [Issue 1: Hosts remain running with only disconnected sessions](#issue-1-hosts-remain-running-with-only-disconnected-sessions)
-- [Issue 2: Force sign-out doesn't immediately deallocate all hosts](#issue-2-force-sign-out-doesnt-immediately-deallocate-all-hosts)
-- [Issue 3: Session hosts fail to become available after hibernate resume](#issue-3-session-hosts-fail-to-become-available-after-hibernate-resume)
-- [Issue 4: Scale-down behavior differs from expectation across host pools](#issue-4-scale-down-behavior-differs-from-expectation-across-host-pools)
-- [Troubleshooting workflow](#troubleshooting-workflow)
-- [Data to capture before escalation](#data-to-capture-before-escalation)
-
-## Before you troubleshoot
+## Prerequisite 
 
 Confirm the following on your host pool and scaling plan:
 
@@ -74,21 +64,19 @@ Autoscale determines the actual minimum host count during ramp-down and off-peak
 
 If your minimum percentage setting yields a higher number than the formula result, that setting takes precedence. This minimum percentage setting is a common reason hosts remain running even when the formula suggests a lower count.
 
-## Common issues and resolutions
+## Common autoscale issues and resolutions
 
-## Issue 1: Hosts remain running with only disconnected sessions
-
-### Symptoms
+### Issue 1: Hosts stay running with disconnected sessions
 
 - Scale-down doesn't reach zero hosts after hours.
 - Hosts remain running even when no users appear actively connected.
 - You enabled **Stop VMs when VMs have no active sessions**, but still see running hosts.
 
-### Why this happens
+**Why this happens**
 
 Disconnected sessions are treated as active for capacity protection. Autoscale assumes disconnected users might reconnect quickly and keeps enough host capacity available.
 
-### How to verify
+**How to verify**
 
 - Review session state in the host pool for disconnected users.
 - Check scaling plan settings:
@@ -97,13 +85,13 @@ Disconnected sessions are treated as active for capacity protection. Autoscale a
   - Capacity threshold.
 - To calculate expected required hosts, use the formula in the preceding section.
 
-### Recommended fix
+**Resolution**
 
 To reach zero hosts after hours:
 
 1. Configure Group Policy (GPO) to sign out disconnected sessions after a timeout.
-2. Set minimum active hosts to 0% during off-peak when appropriate.
-3. Ensure disconnected-session timeout completes before ramp-down/off-peak end.
+1. Set minimum active hosts to 0% during off-peak when appropriate.
+1. Ensure disconnected-session timeout completes before ramp-down/off-peak end.
 
 Group Policy path:
 
@@ -112,62 +100,56 @@ Group Policy path:
 > [!NOTE]
 > In domain-joined environments, apply this setting via a GPO linked to the OU containing your session hosts, not via Local Computer Policy on individual hosts.
 
-## Issue 2: Force sign-out doesn't immediately deallocate all hosts
-
-### Symptoms
+## Issue 2: Force sign-out delays host deallocation
 
 - You enabled force sign-out, but scale-down still appears gradual.
 - Hosts remain running for part of the ramp-down window.
 
-### Why this happens
+**Why this happens**
 
 Force sign-out applies after the configured wait time. Before that point, autoscale still performs consolidation calculations and maintains required capacity. This delay means hosts don't deallocate immediately.
 
-### How to verify
+**How to verify**
 
 - Confirm force sign-out wait time in scaling plan.
 - Compare timestamp of ramp-down start vs observed deallocation events.
 - Validate whether users disconnected/signed out before wait-time expiry.
 
-### Recommended fix
+**Resolution**
 
 - Reduce wait time only if it doesn't harm user experience.
 - Combine force sign-out with disconnected-session timeout policy.
 - Re-test over one full ramp-down cycle.
 
-## Issue 3: Session hosts fail to become available after hibernate resume
-
-### Symptoms
+## Issue 3: Session hosts unavailable after hibernate resume
 
 - Autoscale resume action succeeds at compute layer.
 - Session hosts remain unavailable or unhealthy for user connections.
 - Session hosts don't recover until after reboot/deallocation or agent recovery action.
 
-### Known limitation
+**Known limitation**
 
 When a session host resumes from hibernate, the Remote Desktop (RD) Agent can fail to re-register with the AVD control plane. If the **RDAgentBootLoader** and **RDAgent** Windows services don't reach a **Running** state within approximately 5 minutes of the VM resuming, the session host remains unavailable in the host pool.
 
-### How to verify
+**How to verify**
 
 - Confirm VM power state transitions in Activity Log.
 - Check host pool session host status changes around resume time.
 - Collect diagnostics for RD Agent and bootloader/service startup timing.
 - Compare behavior when using deallocate instead of hibernate.
 
-### Immediate mitigation
+**Resolution**
 
 - Prefer Stop (deallocate) behavior if hibernate resume is unstable in your environment.
 - Re-register/restart affected session host agents if needed.
 - Keep this on an engineering investigation track when repeatable patterns are observed.
 
-## Issue 4: Scale-down behavior differs from expectation across host pools
-
-### Symptoms
+## Issue 4: Unexpected scale-down behavior across host pools
 
 - Two host pools with similar schedules produce different scale-down outcomes.
 - One pool reaches lower host counts while another does not.
 
-### Why this happens
+**Why this happens**
 
 Differences in one or more of the following often explain divergence:
 
@@ -177,19 +159,19 @@ Differences in one or more of the following often explain divergence:
 - Minimum active host percentage.
 - User sign-out/disconnect behavior.
 
-### How to verify
+**How to verify**
 
 - Compare host pool properties side-by-side.
 - Compare scaling plan phase settings side-by-side.
 - Calculate required hosts for each pool using current session counts.
 
-### Recommended fix
+**Resolution**
 
 1. Navigate to **Azure Virtual Desktop** → **Scaling plans** → your scaling plan → **Schedules**, then open each schedule phase.
-2. Record the **Capacity threshold** and **Minimum percentage of active hosts** for each phase.
-3. Navigate to each host pool → **Properties** and note the **Max session limit**.
-4. Compare values across host pools and align any settings that should be identical.
-5. Validate the change over at least one complete business cycle.
+1. Record the **Capacity threshold** and **Minimum percentage of active hosts** for each phase.
+1. Navigate to each host pool → **Properties** and note the **Max session limit**.
+1. Compare values across host pools and align any settings that should be identical.
+1. Validate the change over at least one complete business cycle.
 
 ## Troubleshooting workflow
 
@@ -202,7 +184,7 @@ Use this workflow for repeatable triage:
 5. Apply mitigation and observe one full ramp-down/off-peak cycle.
 6. Escalate to engineering with evidence when behavior deviates from documented logic.
 
-## Data to capture before escalation
+## Data Collection
 
 Capture this minimum evidence set:
 
@@ -221,4 +203,3 @@ Capture this minimum evidence set:
 - [Create and assign scaling plans](/azure/virtual-desktop/autoscale-create-assign-scaling-plan)
 - [Monitor autoscale operations and insights](/azure/virtual-desktop/autoscale-monitor-operations-insights)
 - [Autoscale diagnostics](/azure/virtual-desktop/autoscale-diagnostics)
-
