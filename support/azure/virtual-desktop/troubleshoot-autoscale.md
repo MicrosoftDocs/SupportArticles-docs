@@ -36,9 +36,9 @@ During ramp-down/off-peak, autoscale keeps enough hosts running for current user
 
 Required hosts are calculated as:
 
-$$
-\text{Required Hosts} = \left\lceil \frac{\text{Total User Sessions}}{\text{Max Session Limit} \times \text{Capacity Threshold}} \right\rceil
-$$
+```
+Required Hosts = CEILING( Total User Sessions ÷ (Max Session Limit × Capacity Threshold) )
+```
 
 Where:
 
@@ -51,9 +51,9 @@ Example:
 - Max session limit = 5
 - Capacity threshold = 90%
 
-$$
-\text{Required Hosts} = \left\lceil \frac{9}{5 \times 0.9} \right\rceil = \left\lceil 2 \right\rceil = 2
-$$
+```
+Required Hosts = CEILING( 9 ÷ (5 × 0.9) ) = CEILING( 9 ÷ 4.5 ) = CEILING( 2 ) = 2
+```
 
 In this example, autoscale keeps 2 hosts running for possible user reconnections.
 
