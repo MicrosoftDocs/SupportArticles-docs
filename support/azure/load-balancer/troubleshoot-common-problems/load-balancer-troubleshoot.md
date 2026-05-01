@@ -20,8 +20,8 @@ This article provides troubleshooting resources for common questions about Azure
 
 ### Troubleshooting resources 
 
-- [Troubleshoot no outbound connectivity from Standard internal load balancers](troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md)
-- [Troubleshoot no inbound connectivity to Standard external load balancers](troubleshoot-common-problems/no-inbound-connectivity-standard-external-load-balancers.md)
-- [Troubleshoot changing the backend port for an existing load-balancing rule](troubleshoot-common-problems/change-backend-port-existing-rule-vm-scale-set-deployed-backend-pool.md)
-- [Troubleshoot traffic still going through load balancer after VM removal from backend pool](troubleshoot-common-problems/traffic-passing-through-load-balancer-after-vm-removal-from-backend-pool.md)
-- [Troubleshoot Load Balancer in a failed state](troubleshoot-common-problems/load-balancer-failed-state.md)
+- [Troubleshoot no outbound connectivity from Standard internal load balancers](no-outbound-connectivity-standard-internal-load-balancers.md)
+- [Troubleshoot no inbound connectivity to Standard external load balancers](no-inbound-connectivity-standard-external-load-balancers.md)
+- [Troubleshoot changing the backend port for an existing load-balancing rule](change-backend-port-existing-rule-vm-scale-set-deployed-backend-pool.md)
+- [Troubleshoot traffic still going through load balancer after VM removal from backend pool](traffic-passing-through-load-balancer-after-vm-removal-from-backend-pool.md)
+- [Troubleshoot Load Balancer in a failed state](load-balancer-failed-state.md)
