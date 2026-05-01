@@ -51,7 +51,7 @@ In this scenario, you must add the client's public IP address or virtual network
 
 The following image shows the process of copying blobs between storage accounts in this scenario:
 
-:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-with-vnet-in-allowlist.png" alt-text="Screenshot of blob copy between storage accounts in scenario 1 with a VNet in the firewall allowlist.":::
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-with-vnet-in-allowlist.png" alt-text="Screenshot of blob copy between storage accounts in scenario 1 with a VNet in the firewall allowlist." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/firewall-with-vnet-in-allowlist.png":::
 
 ### Scenario 2: The client's VNet has private links configured, and it uses a private endpoint to access storage accounts
 
@@ -59,7 +59,7 @@ In this scenario, you don't need a firewall allowlist.
 
 The following image shows the process of copying blobs between storage accounts in this scenario:
 
-:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-enabled-with-no-rule.png" alt-text="Screenshot of blob copy between storage accounts in scenario 2 by using private endpoints without a firewall allowlist.":::
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-enabled-with-no-rule.png" alt-text="Screenshot of blob copy between storage accounts in scenario 2 by using private endpoints without a firewall allowlist." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/firewall-enabled-with-no-rule.png":::
 
 Here's the full process of this mechanism for the two scenarios:
 
@@ -106,6 +106,9 @@ A perimeter link is the only supported method for granting inbound access to a c
    - Inbound access is granted to the destination account from the source account.
   
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png" alt-text="Screenshot of the access rule definition." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png":::   
+
+> [!NOTE]
+> This image is provided as an examplefor reference and only depicts the portal UI experience. 
       
 For more information about managing inbound and outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP&preserve-view=true) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest&preserve-view=true).
    
@@ -113,19 +116,19 @@ For more information about managing inbound and outbound access, see [Network Se
 
 A 403 error occurs when you use AzCopy to copy blobs between storage accounts connected to private endpoints in different spoke VNets from a VM in a hub VNet. You see a `403 This request is not authorized to perform this operation - CannotVerifyCopySource` error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
 
-:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of copying blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints.":::
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of copying blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png":::
 
 ### Workaround 1: Create a private endpoint for the destination storage account in the source VNet
 
 Create a private endpoint for the destination storage account in the source VNet. This configuration allows the VM to successfully copy the blobs between the storage accounts by using AzCopy. The following architecture diagram shows the process of copying blobs between storage accounts in Workaround 1.
 
-:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png" alt-text="Screenshot of blob copy between storage accounts in workaround 1 with a destination private endpoint in the source VNet.":::
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png" alt-text="Screenshot of blob copy between storage accounts in workaround 1 with a destination private endpoint in the source VNet." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png":::
 
 ### Workaround 2: Place the VM in the same VNet as the source storage account and configure VNet peering between the source and destination VNets
 
 Place the VM within the same VNet as the source storage account and set up [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) between this VNet and the destination VNet. This peering needs to be directly between the two VNets and can't be done through the hub VNet. The following architecture diagram shows the process of copying blobs between storage accounts in Workaround 2.
 
-:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Screenshot of blob copy between storage accounts in workaround 2 with a VM in the source VNet and direct VNet peering.":::
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Screenshot of blob copy between storage accounts in workaround 2 with a VM in the source VNet and direct VNet peering." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png":::
 
 For more information, see [Virtual network peering FAQ](/azure/virtual-network/virtual-networks-faq#virtual-network-peering).
 
