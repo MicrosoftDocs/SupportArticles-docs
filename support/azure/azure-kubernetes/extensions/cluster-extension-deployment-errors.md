@@ -65,6 +65,8 @@ Each Monitoring service is represented and managed by its own extension.
 
 ### Issue 1: Extension provisioning state shows “Failed”
 
+#### Cause
+
 A Failed provisioning state indicates that the monitoring service was not enabled successfully.
 
 #### Solution
@@ -77,6 +79,8 @@ Monitoring add-ons are now managed as extensions in the backend, but the custome
 
 ### Issue 2: Unable to update or edit a monitoring extension
 
+#### Cause
+
 Monitoring extensions are managed by the AKS resource provider and are not user-editable.
 
 If you attempt to update an extension directly, you may see an error such as:
@@ -87,9 +91,280 @@ If you attempt to update an extension directly, you may see an error such as:
 
 This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
 
-##   
-  
-  
+####   
+Issue 3: Resource Lock Prevents Extension Deletion
+
+#### Error
+
+When deploying or managing Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails with an error similar to:
+
+
+```
+
+Delete of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
+
+Please refer https://aka.ms/akscoreextensions-tsg for additional details.
+
+The scope '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>/providers/Microsoft.KubernetesConfiguration/extensions/aks-managed-azure-monitor-metrics' cannot perform delete operation because following scope(s) are locked: '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/microsoft.containerservice/managedClusters/<cluster-name>'.
+
+Please remove the lock and try again.
+
+```
+
+#### Cause
+
+Azure Resource Locks prevent accidental deletion or modification of critical resources. When a **Delete lock** or **ReadOnly lock** is applied at any of the following scopes, extension deletion operations are blocked:
+
+**Subscription level** – Locks all resources in the subscription
+
+**Resource group level** – Locks all resources in the resource group
+
+**Resource level** – Locks the specific AKS cluster resource
+
+The extension deletion operation requires write/delete permissions on the cluster resource, which are blocked by the lock.
+
+**Common scenarios where locks are applied:**
+
+Organization policies that enforce resource locks for production resources
+
+Compliance requirements (e.g., Azure Policy automatically applying locks)
+
+Manual locks applied by administrators to prevent accidental deletion
+
+#### Solution
+
+#### Step 1: Identify the Lock
+
+Navigate to the Azure Portal
+
+Go to the AKS cluster resource, resource group, or subscription (depending on the lock scope mentioned in the error)
+
+Select **Settings** > **Locks** from the left menu
+
+Identify the lock(s) that are blocking the operation
+
+**Using Azure CLI:**
+
+
+```
+
+```
+
+#### Step 2: Remove or Temporarily Disable the Lock
+
+> ⚠️ **Warning:** Ensure you have appropriate permissions and authorization before removing resource locks. Coordinate with your organization's security/compliance team if necessary.
+
+**Using Azure Portal:**
+
+Navigate to the lock location identified in Step 1
+
+Select the lock and click **Delete**
+
+Confirm the deletion
+
+**Using Azure CLI:**
+
+
+```
+
+```
+
+#### Step 3: Retry the Extension Deletion
+
+After removing the lock, retry the extension deletion operation:
+
+**Using Azure CLI:**
+
+
+```
+
+az aks update --resource-group <resource-group> --name <cluster-name> \
+
+  --disable-azure-monitor-metrics
+
+```
+
+#### Step 4: Re-apply the Lock (Recommended)
+
+If the lock was intentionally applied for protection, re-apply it after the extension operation completes:
+
+
+```
+
+az lock create --name <lock-name> \
+
+  --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters \
+
+  --lock-type CanNotDelete
+
+```
+
+### Issue 4: Azure Policy Blocks Extension Creation or Update
+
+#### Error
+
+When deploying or managing Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails with an error similar to:
+
+
+```
+
+Create or update of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
+
+Please refer https://aka.ms/akscoreextensions-tsg for additional details.
+
+Resource 'aks-managed-azure-monitor-metrics' was disallowed by policy.
+
+Policy identifiers: '[{"policyAssignment":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>"},"policyDefinition":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyDefinitions/<definition-id>","version":"1.0.0"}}]'
+
+```
+
+#### Cause
+
+Azure Policy is enforcing restrictions that prevent the creation or modification of cluster extensions. This typically occurs when:
+
+**Deny policies** are configured to restrict which extensions can be installed on AKS clusters
+
+**Allowed extension types policies** exist that do not include the Azure Monitor extensions in the allowlist
+
+**Naming convention policies** block resources that don't match specific naming patterns
+
+**Tag enforcement policies** require specific tags that are not present on the extension resource
+
+The policy identifiers in the error message indicate:
+
+**policyAssignment** – The specific policy assignment blocking the operation
+
+**policyDefinition** – The underlying policy definition being enforced
+
+#### Common scenarios:
+
+Organization security policies that restrict third-party or specific extensions
+
+Policies intended to control cost or resource sprawl
+
+Compliance policies that inadvertently block Microsoft-managed extensions
+
+#### Solution
+
+#### Step 1: Identify the Blocking Policy
+
+Extract the policy information from the error message:
+
+**Policy Assignment Name:** `Restrict Extensions` (example)
+
+**Policy Assignment ID:** `/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>`
+
+**Policy Definition Name:** `Restrict Extensions` (example)
+
+**Using Azure Portal:**
+
+Navigate to **Policy** in the Azure Portal
+
+Select **Assignments** from the left menu
+
+Search for the policy assignment name from the error message
+
+Click on the assignment to view its details and scope
+
+**Using Azure CLI:**
+
+
+```
+
+```
+
+#### Step 2: Review the Policy Rule
+
+Examine the policy definition to understand what conditions are blocking the extension:
+
+**Using Azure Portal:**
+
+Navigate to **Policy** > **Definitions**
+
+Search for the policy definition name
+
+Review the **Policy rule** JSON to understand the deny conditions
+
+**Common blocking conditions to look for:**
+
+Extension type restrictions (not allowing `microsoft.azuremonitor.containers.metrics`)
+
+Resource name pattern restrictions
+
+Required tag conditions
+
+#### Step 3: Create a Policy Exemption (Recommended Approach)
+
+If the policy is required for compliance but Azure Monitor extensions should be allowed, create an exemption:
+
+**Using Azure Portal:**
+
+Navigate to **Policy** > **Assignments**
+
+Select the blocking policy assignment
+
+Click **Create exemption**
+
+Set the scope to the AKS cluster resource or resource group
+
+Select **Waiver** or **Mitigated** as the exemption category
+
+Provide a justification (e.g., "Azure Monitor metrics extension are core cluster extensions managed by AKS")
+
+**Using Azure CLI:**
+
+
+```
+
+az policy exemption create \
+
+  --name 
+```
+
+#### Step 4: Alternative – Modify the Policy (If Appropriate)
+
+If you have permissions to modify the policy, update it to allow Azure Monitor extensions:
+
+Navigate to **Policy** > **Definitions**
+
+Clone the existing policy definition (if it's a built-in policy)
+
+Modify the policy rule to exclude Azure Monitor extension types:
+
+- `microsoft.azuremonitor.containers.metrics`
+
+- `microsoft.azuremonitor.containers`
+
+- `microsoft.azuremonitor.appmonitoring`
+
+1. Update or create a new policy assignment with the modified definition
+
+**Example policy rule modification to allow Azure Monitor extensions:**
+
+
+```
+
+{
+
+  
+```
+
+#### Step 5: Retry the Extension Operation
+
+After creating an exemption or modifying the policy, retry the extension operation:
+
+**Using Azure CLI:**
+
+
+```
+
+```
+
+###   
 Extension creation errors
 
 #### Helm errors
