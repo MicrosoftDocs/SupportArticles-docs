@@ -604,8 +604,6 @@ items:
       href: ./backup-and-storage/c-drive-low-disk-space-windows-server-shows-space-available.md
     - name: Extending a CSV isn't blocked
       href: ./backup-and-storage/extending-csv-isnt-blocked.md
-    - name: Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard
-      href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
     - name: No Extend Volume command for drive C in Disk Management
       href: ./backup-and-storage/cant-extend-c-drive-volume.md
     - name: Stop error when Windows tries to repair a drive while restarting
@@ -662,8 +660,6 @@ items:
       href: ./backup-and-storage/extend-shrink-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
       href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
-    - name: Fix heavy memory usage in ReFS
-      href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
     - name: Hot-swap disks are not recognized
       href: ./backup-and-storage/hot-swap-disks-not-recognized.md
     - name: How NTFS reserves space for MFT
@@ -690,6 +686,14 @@ items:
       href: ./backup-and-storage/support-for-hard-disks-exceeding-2-tb.md
     - name: '"You do not have permission" error'
       href: ./backup-and-storage/you-dont-have-permission-error-mount-iso-image.md
+  - name: ReFS
+    items:
+    - name: Troubleshoot ReFS volumes
+      href: ./backup-and-storage/refs-troubleshooting.md
+    - name: Fix heavy memory usage in ReFS
+      href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
+    - name: Local disk volume is inaccessible after ReFS.sys errors in Windows Server 2022 Standard
+      href: ./backup-and-storage/windows-server-2022-standard-local-refs-disk-inaccessible-bsod.md
   - name: Storage hardware
     items:
     - name: Information about Event ID 51
