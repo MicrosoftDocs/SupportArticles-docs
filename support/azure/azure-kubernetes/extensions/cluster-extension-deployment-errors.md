@@ -17,11 +17,15 @@ This article explains how to troubleshoot errors that occur when you deploy clus
 
 ## Addon to Core Extension Migration
 
-### Overview 
+### Overview
 
-Azure Monitor services, including Container Insights, Managed Prometheus, and Application Insights, are transitioning to an extension‑based backend on Azure Kubernetes Service (AKS).
+[Azure Monitor](/azure/azure-monitor/containers/kubernetes-monitoring-overview) services, including [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), and [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal) are transitioning to a cluster extension based backend model. This change updates AKS monitoring [add-ons](/azure/aks/integrations) to an extension‑based management model, with no change to functionality or user experience.
 
-As part of this change, AKS monitoring add-ons are now managed as cluster extensions. This is a backend-only change and does not impact functionality or customer experience.
+This backend migration is nondisruptive and doesn't change user experience or require customer action.
+
+There's no impact to workloads, data collection, or monitoring functionality.
+
+Azure CLI, Azure portal, and all client experiences continue to work as expected.
 
 #### What’s changing 
 
@@ -29,19 +33,9 @@ As part of this change, AKS monitoring add-ons are now managed as cluster extens
 
 • Each monitoring service is represented by its own extension
 
-#### What’s not changing 
+### How to Check if the Monitoring solution on your AKS Cluster Is Migrated
 
-• No disruption to workloads 
-
-• No impact to data collection or monitoring functionality 
-
-• No customer action required 
-
-• Azure Portal, Azure CLI, and all client experiences continue to work as before
-
-### How to Check if Your AKS Cluster Is Migrated
-
-If your AKS cluster has been migrated to the extension-based backend, monitoring services will appear as extensions.
+If your Monitoring solution has been migrated to the extension-based backend, Monitoring services will appear as extensions.
 
 Steps in Azure Portal:
 
@@ -51,23 +45,21 @@ Steps in Azure Portal:
 
 1. Select “Extensions + applications” under Settings
 
-1. Verify that the monitoring extensions are listed
+1. Verify that the Monitoring extensions are listed
 
-1. Confirm each extension shows Provisioning State as Succeeded
+1. Confirm each extension shows Provisioning State as "Succeeded"
 
-Each monitoring service is represented and managed by its own extension.
+Each Monitoring service is represented and managed by its own extension.
 
 #### Monitoring Add-on to Extension Mapping
 
-| Monitoring Service / Add-on              | Extension Name                          | Extension Type                                  |
 
-|-----------------------------------------|------------------------------------------|------------------------------------------------|
+ Monitoring Capability              | Extension Type                      | Extension Name                                   |
+|----------------------------------|------------------------------------|--------------------------------------------------|
+| Logging                          | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
+| Managed Prometheus (Metrics)     | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
+| Application Insights / Monitoring| aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
 
- Logging             | aks-managed-azure-monitor-logs           | microsoft.azuremonitor.containers              |
-
-| Managed Prometheus                      | aks-managed-azure-monitor-metrics        | microsoft.azuremonitor.containers.metrics      |
-
-| Application Insights / Monitoring       | aks-managed-app-monitoring               | microsoft.azuremonitor.appmonitoring           |
 
 ### Troubleshooting
 
