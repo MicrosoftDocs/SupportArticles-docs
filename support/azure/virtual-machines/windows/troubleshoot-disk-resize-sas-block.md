@@ -130,6 +130,6 @@ After you revoke the SAS or wait for the backup to finish:
 ## Resources
 
 - [Troubleshoot Azure disk resize failures](troubleshoot-disk-resize.md)
-- [Expand virtual hard disks — Windows](/azure/virtual-machines/windows/expand-disks)
-- [Revoke disk access — REST API](/rest/api/compute/disks/revoke-access)
+- [Expand virtual hard disks - Windows](/azure/virtual-machines/windows/expand-disks)
+- [Revoke disk access - REST API](/rest/api/compute/disks/revoke-access)
 - [Azure Backup overview](/azure/backup/backup-overview)
