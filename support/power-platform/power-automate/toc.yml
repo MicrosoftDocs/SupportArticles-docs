@@ -41,6 +41,8 @@ items:
         href: connections/troubleshooting-flow-custom-connectors.md
       - name: User doesn't have service plan adequate for non-Standard connection
         href: connections/user-does-not-have-a-service-plan-error.md
+      - name: Verify OAuth configuration for custom connectors
+        href: connections/verify-oauth-configuration.md
   - name: Desktop flows
     items:
       - name: Browser automation
