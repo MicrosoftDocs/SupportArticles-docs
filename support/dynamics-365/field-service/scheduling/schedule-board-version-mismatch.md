@@ -1,40 +1,40 @@
 ---
-title: Fix Schedule Board Version Mismatch Errors
+title: Fix schedule board version mismatch errors
 description: Resolve schedule board version mismatch errors in Dynamics 365 Field Service caused by incompatible Field Service and Universal Resource Scheduling versions.
 ms.date: 04/27/2026
 ms.reviewer: mkelleher, puneetsingh, v-shaywood
 ms.custom: sap:Schedule Board\Issues with usability
 ---
 
-# Schedule board errors due to version mismatches
+# Schedule board errors because of version mismatches
 
 ## Summary
 
 This article helps administrators resolve errors on the [schedule board](/dynamics365/field-service/work-with-schedule-board) in [Microsoft Dynamics 365 Field Service](/dynamics365/field-service/overview) that are caused by version mismatches between Field Service and [Universal Resource Scheduling (URS)](/dynamics365/field-service/universal-resource-scheduling-for-field-service) components.
 
-These errors occur when the URS solution version doesn't support a setting or API that the installed Field Service version expects.
+These errors occur if the Universal Resource Scheduling (URS) solution version doesn't support a setting or API that the installed Field Service version expects.
 
 ## Symptoms
 
 When you open or interact with the schedule board, you experience one or more of the following issues:
 
-- An error message that references unrecognized properties or unsupported settings.
-- The schedule board fails to load or shows a script error.
+- You receive an error message that references unrecognized properties or unsupported settings.
+- The schedule board doesn't load, or shows a script error.
 - Schedule board features behave unexpectedly after a partial update of Field Service or URS.
 
 ## Cause
 
-Dynamics 365 Field Service depends on Universal Resource Scheduling (URS) for its scheduling capabilities. Each Field Service release is designed to work with a specific minimum URS version. When the two components are out of sync, for example after a partial update or a failed update, the schedule board can reference settings or APIs that the installed URS version doesn't recognize.
+Dynamics 365 Field Service depends on URS for its scheduling capabilities. Each Field Service release is designed to work together with a specific minimum URS version. If the two components are out of sync, for example after a partial update or a failed update, the schedule board might reference settings or APIs that the installed URS version doesn't recognize.
 
-Common scenarios that lead to version mismatches include:
+Common scenarios that cause version mismatches include:
 
-- **Partial solution update**: You updated Field Service but not URS, or vice versa.
-- **Failed update**: An update started but didn't complete successfully, leaving one component at a newer version than the other.
-- **Manual solution import**: You manually imported a solution at a version that's incompatible with the other installed components.
+- **Partial solution update**: You update Field Service but not URS, or vice versa.
+- **Failed update**: An update started but didn't finish successfully. This condition pushes one component to a newer version than the other.
+- **Manual solution import**: You manually import a solution at a version that's incompatible with the other installed components.
 
 ## Solution
 
-To fix the error, complete the following sections in order, checking the schedule board after each one to see if the error is resolved.
+To fix the error, complete the following sections in the given order. Check the schedule board after each section to see whether the error is resolved.
 
 ### Verify and align solution versions
 
@@ -45,7 +45,7 @@ To fix the error, complete the following sections in order, checking the schedul
 1. Find the installed versions of these solutions:
    - **Dynamics 365 Field Service**
    - **Universal Resource Scheduling** (also listed as **msdyn_Scheduling**)
-1. Compare the versions against the [Field Service version history](/dynamics365/field-service/version-history) to confirm they're compatible.
+1. Compare the versions against the [Field Service version history](/dynamics365/field-service/version-history) to verify that they're compatible.
 1. If the versions don't match, select **Update** next to the outdated solution to bring it to a compatible version.
 
 > [!NOTE]
@@ -61,11 +61,11 @@ If a previous update failed partway through:
 1. Go to **Resources** > **Dynamics 365 apps**.
 1. Check for any solutions that show a status of **Install failed** or **Update failed**.
 1. Select **Retry**.
-1. After the update completes, refresh the schedule board and confirm the error no longer appears.
+1. After the update finishes, refresh the schedule board, and check whether the error no longer appears.
 
 ### Clear the browser cache
 
-After updating solutions, cached assets from the previous version can cause errors.
+After you update the solutions, cached assets from the previous version can cause errors. To prevent this issue, follow these steps:
 
 1. Clear the browser cache and cookies for your Dynamics 365 domain.
 1. Close all browser tabs that have Dynamics 365 open.
