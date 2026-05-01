@@ -19,7 +19,7 @@ This article provides guidance to help IT administrators and support personnel i
 
 ## Introduction
 
-The Resilient File System (ReFS) is designed to maximize data availability, scalability, and integrity for modern workloads such as backup repositories, large file servers, virtualization environments, and Storage Spaces. ReFS is engineered for resilience and runs reliably across most deployments. In rare circumstances—such as underlying hardware failures, unexpected power loss, or incompatibilities introduced by OS or firmware changes—an administrator might need to diagnose and recover a volume. This guide helps IT administrators and support personnel investigate and resolve ReFS issues if they arise.
+The Resilient File System (ReFS) is designed to maximize data availability, scalability, and integrity for modern workloads such as backup repositories, large file servers, virtualization environments, and Storage Spaces. In rare circumstances—such as underlying hardware failures, unexpected power loss, or incompatibilities introduced by OS or firmware changes—an administrator might need to diagnose and recover a volume. This guide helps IT administrators and support personnel investigate and resolve ReFS issues if they arise.
 
 ## Troubleshooting checklist
 
