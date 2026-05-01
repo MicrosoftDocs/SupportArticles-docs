@@ -22,6 +22,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot Azure Load Balancer common problems
+            url: troubleshoot-common-problems/load-balancer-troubleshoot.md
           - text: Troubleshoot no outbound connectivity from Standard internal load balancers
             url: troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md
           - text: Troubleshoot no inbound connectivity to Standard external load balancers

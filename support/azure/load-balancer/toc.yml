@@ -4,6 +4,8 @@ items:
   items: 
   - name: Troubleshoot common problems
     items:
+    - name: Troubleshoot Azure Load Balancer common problems
+      href: troubleshoot-common-problems/load-balancer-troubleshoot.md
     - name: Troubleshoot no outbound connectivity from Standard internal load balancers
       href: troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md
     - name: Troubleshoot no inbound connectivity to Standard external load balancers
