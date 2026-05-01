@@ -2,7 +2,7 @@
 title: Verify OAuth 2.0 for Power Automate Custom Connectors
 description: Verify OAuth 2.0 configuration for Power Automate custom connectors. Validate endpoints, scopes, and tokens with Postman today.
 ms.date: 05/01/2026
-ms.reviewer: v-shaywood
+ms.reviewer: nravindra, v-shaywood
 ms.custom: sap:Connections\Custom connectors
 ---
 
