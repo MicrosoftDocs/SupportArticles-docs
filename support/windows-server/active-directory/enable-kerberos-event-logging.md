@@ -1,7 +1,7 @@
 ---
 title: Enable Kerberos event logging
 description: This article provides a solution on how to enable Kerberos event logging on a particular machine.
-ms.date: 02/12/2026
+ms.date: 05/05/2026
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,66 +14,41 @@ appliesto:
 ---
 # How to enable Kerberos event logging
 
-This article describes how to enable Kerberos event logging.
-
 _Original KB number:_ &nbsp; 262177
 
 ## Summary
 
-Windows offers the capability of tracing detailed Kerberos events through the event log. You can use this information when troubleshooting Kerberos.
+When you troubleshoot Kerberos, you can turn on detailed Kerberos logging for the event log. Kerberos logging can affect computer performance and generate a significant amount of log data, so it's turned off by default. Only enable it if you need it for troubleshooting Kerberos issues.
 
 > [!IMPORTANT]
-> The change in logging level will cause all Kerberos errors to be logged in the system eventlog. In the Kerberos protocol, some errors are expected based on the protocol specification. As a result, enabling Kerberos logging may generate events containing expected false-positive errors even when there are no Kerberos operational errors.
+> Detailed Kerberos logging captures events that indicate "expected" errors, such as `KDC_ERR_PREAUTH_REQUIRED`. Expected errors occur during typical operations and don't indicate issues. For more information, see []().
 
-Examples of false-positive errors include:
+## Enable Kerberos event logging on a computer
 
-1. KDC_ERR_PREAUTH_REQUIRED is returned on the initial Kerberos AS request. By default, the Windows Kerberos Client is not including pre-authentication information in this first request. The response contains information about the supported encryption types on the KDC, and in case of AES, the salts to be used to encrypt the password hashes with.
+To enable Kerberos logging, follow these steps on the computer that you want to use for recording log data.
 
-    Recommendation: Always ignore this error code.
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-2. KDC_ERR_S_BADOPTION is used by the Kerberos client to retrieve tickets with particular options set, for example, with certain delegation flags. When the requested type of delegation is not possible, this is the error that is returned. The Kerberos client would then try to get the requested tickets using other flags, which may succeed.
+1. Start Registry Editor, and go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters`. If the `Parameters` entry does not exist, create it.
 
-    Recommendation: Unless you are trouble-shooting a delegation problem, ignore this error.
+1. Add the following registry value:
 
-3. KDC_ERR_S_PRINCIPAL_UNKNOWN may be logged for a wide variety of problems with the application client and server liaison. The cause can be:
+   - Registry value: `LogLevel`  
+   - Value type: REG_DWORD  
+   - Value data: `0x1`
 
-    - Missing or duplicate SPNs registered in AD.
-    - Incorrect server names or DNS suffixes used by the client. For example, the client is chasing DNS CNAME records and use the resulting A record in SPNs. The client is not allowed to do this per the RFCs, but some apps still do this.
-    - Using non-FQDN server names that need to be resolved across AD forest boundaries.
+1. Close Registry Editor. The setting immediately takes effect, and the system log starts recording Kerberos events.
 
-    Recommendation: Investigate the use of server names by the applications. It is most likely a client or server configuration problem.
+> [!NOTE]  
+> Detailed Kerberos logging might affect the computer's performance. When you finish troubleshooting, remove the registry entry from the computer.
 
-4. KRB_AP_ERR_MODIFIED is logged when an SPN is set on an account, not matching the account the server is running with. The second common problem is that the password between the KDC issuing the ticket and the server hosting the service is out of sync.
+## Examples of common Kerberos codes
 
-    Recommendation: Similar to KDC_ERR_S_PRINCIPAL_UNKNOWN, check whether the SPN is correctly set.
+The following table lists common Kerberos codes, when they might occur, and what to do about them. Notice that some of these codes are expected during regular operations and don't indicate that an issue has occurred. If you see codes other than those listed here, contact your system or domain administrator.
 
-Other scenarios or errors require the attention of the System or Domain Administrators.
-
-> [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
-
-## Enable Kerberos event logging on a specific computer
-
-1. Start Registry Editor.
-2. Add the following registry value:
-
-    > HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters  
-    Registry Value: LogLevel  
-    Value Type: REG_DWORD  
-    Value Data: 0x1
-
-    If the **Parameters** subkey does not exist, create it.
-
-    > [!NOTE]
-    > Remove this registry value when it is no longer needed so that performance is not degraded on the computer. Also, you can remove this registry value to disable Kerberos event logging on a specific computer.
-
-3. Quit Registry Editor. The setting will become effective immediately.
-4. You can find any Kerberos-related events in the system log.
-
-## More information
-
-Kerberos event logging is intended only for troubleshooting purpose when you expect additional information for the Kerberos client-side at a defined action timeframe. Restated, kerberos logging should be disabled when not actively troubleshooting.
-
-From a general point of view, you may receive additional errors that are correctly handled by the receiving client without user or admin intervention. Restated, some errors captured by Kerberos logging don't reflect a severe problem that must be solved or even can be solved.
-
-For example, an event ID 3 about a Kerberos error that has the error code **0x7 KDC_ERR_S_PRINCIPAL_UNKNOWN** for Server Name cifs/<**IP address**> will be logged when a share access is made against a server IP address and the SPN with the IP address is not registered. If this error is logged, the Windows client automatically tries to fail back to NTLM authentication for the user account. If this operation works, the user does not notice an error.
+| Error | Context | Recommendation |
+| - | - | - |
+| `KDC_ERR_PREAUTH_REQUIRED` | Code that the server sends as part of its response to the client's first Authenticate Server (AS) request. The first AS request doesn't include all of the information that the server needs. The server's response identifies the information that the server expects, such as supported encryption types. In the case of AES encryption, the response includes the salts to be used to encrypt the password hashes with. | This behavior is by design. Ignore this code. |
+| `KDC_ERR_S_BADOPTION` | Code that the server sends if the client's ticket request included options or delegation flags that the server can't respond to or doesn't support. Typically, the client automatically sends another request that uses different options or flags. | Unless you're troubleshooting a delegation problem, ignore this error. |
+| `KDC_ERR_S_PRINCIPAL_UNKNOWN` | Code that the server sends when it doesn't recognize the service principal name (SPN) that a client requested access to. There are multiple situations in which this issue can occur. Typically, either the client request is incorrect, or the application or service isn't configured correctly. When this issue occurs, the client automatically sends a request to authenticate by using NTLM. If the server is configured to allow NTLM authentication, the client authenticates and the user doesn't notice the issue. | For detailed troubleshooting information, see [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](../windows-security/kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md). |
+| `KRB_AP_ERR_MODIFIED` | Code that indicates that the client couldn't decrypt the service ticket. Because more than one issue can cause this error, check for related events. | For detailed troubleshooting information, see [Kerberos authentication troubleshooting guidance](../windows-security/kerberos-authentication-troubleshooting-guidance.md). |
