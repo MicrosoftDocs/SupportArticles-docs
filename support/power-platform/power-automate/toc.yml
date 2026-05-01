@@ -7,13 +7,13 @@ items:
         href: administration/conditional-access-and-multi-factor-authentication-in-flow.md
   - name: Approvals
     items:
-      - name: Common errors creating and assigning flow approvals
+      - name: Common errors creating and assigning Power Automate Approvals
         href: approvals/common-errors-creating-and-assigning-flow-approvals.md
       - name: Differences between flow approval actions
         href: approvals/differences-between-flow-approval-actions.md
       - name: Issues with flow approval emails in Outlook Desktop and Web
         href: approvals/issues-with-flow-approval-emails-in-outlook.md
-      - name: Power Automate Approval Dataverse Provisioning errors and recommendations
+      - name: Power Automate Approvals Dataverse provisioning errors and recommendations
         href: approvals/flow-approval-cds-provisioning-errors.md
       - name: Power Automate Approval Email delivery information
         href: approvals/power-automate-approval-email-information.md
