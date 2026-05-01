@@ -63,11 +63,11 @@ Each Monitoring service is represented and managed by its own extension.
 
 ### Troubleshooting
 
-**Issue 1: Extension provisioning state shows “Failed”**
+### Issue 1: Extension provisioning state shows “Failed”
 
 A Failed provisioning state indicates that the monitoring service was not enabled successfully.
 
-**How to fix** 
+#### Solution
 
 • Verify that all required monitoring configuration values were provided correctly 
 
@@ -75,7 +75,7 @@ A Failed provisioning state indicates that the monitoring service was not enable
 
 Monitoring add-ons are now managed as extensions in the backend, but the customer experience for enabling or disabling monitoring remains unchanged.
 
-**Issue 2: Unable to update or edit a monitoring extension**
+### Issue 2: Unable to update or edit a monitoring extension
 
 Monitoring extensions are managed by the AKS resource provider and are not user-editable.
 
@@ -83,11 +83,14 @@ If you attempt to update an extension directly, you may see an error such as:
 
 “Failed to update ‘aks-managed-azure-monitor-logs’ for the cluster. Access denied: ‘write’ operation is not allowed.”
 
-**How to fix** 
+#### Solution
 
 This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
 
-## Extension creation errors
+##   
+  
+  
+Extension creation errors
 
 #### Helm errors
 
