@@ -63,7 +63,7 @@ The conversion approach depends on whether the disk is a data disk or an operati
 
 1. Back up all data from the data disk.
 
-1. Open an adminsitrative Command Prompt window, and start DiskPart:
+1. Open an administrative Command Prompt window, and start DiskPart:
 
    ```cmd
    diskpart
@@ -88,7 +88,7 @@ The conversion approach depends on whether the disk is a data disk or an operati
 
 1. Open **Disk Management**, and verify that the full disk capacity is visible.
 
-### Convert an OS disk by using MBR2GPT (non-destructive method)
+### Convert an OS disk by using MBR2GPT (nondestructive method)
 
 The `mbr2gpt.exe` tool converts an OS disk from MBR to GPT without data loss. This tool is built into Windows.
 
@@ -158,4 +158,4 @@ For more information, see [Can't extend the volume on a SQL Server VM](cannot-ex
 - [MBR2GPT.exe documentation](/windows/deployment/mbr-to-gpt)
 - [Upgrade a Gen1 VM to Trusted Launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1)
 - [Windows and GPT FAQ](/windows-hardware/manufacture/desktop/windows-and-gpt-faq)
-- [Expand virtual hard disks — Windows](/azure/virtual-machines/windows/expand-disks)
+- [Expand virtual hard disks - Windows](/azure/virtual-machines/windows/expand-disks)
