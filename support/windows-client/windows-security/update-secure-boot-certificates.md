@@ -79,3 +79,5 @@ Use one of the supported deployment options:
 - **Registry keys**
 - **Windows Configuration Service Provider (CSP) / Windows Configuration system**
 - **Group Policy**
+
+For detailed steps, see [Secure Boot playbook for certificates expiring in 2026](https://techcommunity.microsoft.com/blog/windows-itpro-blog/secure-boot-playbook-for-certificates-expiring-in-2026/4469235).
