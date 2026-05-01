@@ -44,7 +44,7 @@ To enable Kerberos logging, follow these steps on the computer that you want to 
 
 ## Examples of common Kerberos codes
 
-The following table lists common Kerberos codes, when they might occur, and what to do about them. Notice that some of these codes are expected during regular operations and don't indicate that an issue occurred. If you see codes other than those that are listed here, contact your system or domain administrator.
+The following table lists common Kerberos codes, when they might occur, and what to do about them. Notice that some of these codes are expected during regular operations and don't indicate that an issue occurred. If you see codes other than the codes that are listed here, contact your system or domain administrator.
 
 | Code | Context | Recommendation |
 | - | - | - |
