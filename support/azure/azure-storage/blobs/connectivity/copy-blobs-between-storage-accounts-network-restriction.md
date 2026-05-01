@@ -108,7 +108,7 @@ A perimeter link is the only supported method for granting inbound access to a c
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png" alt-text="Screenshot of the access rule definition." lightbox="media/copy-blobs-between-storage-accounts-network-restriction/outboundaccessrule.png":::   
 
 > [!NOTE]
-> This image is provided as an examplefor reference and only depicts the portal UI experience. 
+> This image is provided as an example for reference and only depicts the portal UI experience. 
       
 For more information about managing inbound and outbound access, see [Network Security Perimeter Access Rules](/rest/api/network-security-perimeter/network-security-perimeter-access-rules/create-or-update?view=rest-network-security-perimeter-2025-05-01&tabs=HTTP&preserve-view=true) and [az network perimeter profile access-rule](/cli/azure/network/perimeter/profile/access-rule?view=azure-cli-latest&preserve-view=true).
    
