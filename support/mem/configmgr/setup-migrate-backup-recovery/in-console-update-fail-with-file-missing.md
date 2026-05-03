@@ -94,7 +94,7 @@ INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-448
 
 - For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again. While it runs, review `ServiceConnectionTool.log` and `ConfigMgrSetup.log` to verify the required files download successfully.
 
-ServiceConnectionTool.log
+`ServiceConnectionTool.log`
 
 ```output
 INFO:ConfigMgr.Update.Manifest.cab (size = 15741046) downloaded successfully
@@ -104,7 +104,7 @@ INFO:Downloading Redists for 248DC1EB-4B98-4483-BAF3-08C678C1CD0A
 INFO:Successfully downloaded Redists for 248DC1EB-4B98-4483-BAF3-08C678C1CD0A
 ```
 
-ConfigMgrSetup.log
+`ConfigMgrSetup.log`
 
 ```output
 INFO: Downloading https://go.microsoft.com/fwlink/?LinkId=2115685 as SQLSysClrTypes.msi
