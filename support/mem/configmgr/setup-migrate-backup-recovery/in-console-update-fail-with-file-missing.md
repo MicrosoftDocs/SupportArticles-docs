@@ -57,12 +57,39 @@ After completing these checks, proceed with the scenario that matches your findi
 
 If files are missing in `\EasySetupPayload`, restore the update payload source first.
 
-- For an online service connection point, retry the download from the console after you verify internet connectivity and endpoint access. Check `dmpdownloader.log` and look for the following lines during download attempt:
+- For an online service connection point, verify internet connectivity and required endpoint access, then retry the download from the console. If the update is already in the post-replication phase, you typically can’t use [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove it and restart the download. Instead, change the update state using the [UpdatePrereqAndStateFlags](/intune/configmgr/develop/reference/sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages) WMI method. Run the following PowerShell on a server that hosts the SMS Provider:
+
+```powershell
+$CMUpdateGUID = '<PackageGuid>' # e.g.: 94727833-903B-49EF-9CF7-A43D2BC8826D
+$Flag = 1
+$DesireState = 0x0004FFFF #DOWNLOAD_FAILED
+$CMUpdatePackage = Get-WmiObject -Namespace "root\SMS\site_<SiteCode>" -Class SMS_CM_UpdatePackages -Filter ("PackageGuid = '$($CMUpdateGUID)'")
+If ($null -eq $CMUpdatePackage) {
+    Write-Host "Package $CMUpdateGUID not found" -ForegroundColor Yellow
+    Return
+}
+Invoke-WmiMethod -InputObject $CMUpdatePackage -Name UpdatePrereqAndStateFlags -ArgumentList @($Flag,[convert]::ToInt32('{0:x}' -f $DesiredState, 16)) | Out-Null
+```
+
+The update status should now show Download failed. From here, either run [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove the update and restart the download/installation, or simply re-download the package.
+
+Check `dmpdownloader.log` and look for the following lines during download attempt:
 
 ```output
 Check if there is redist to download for update, aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
 Download redist for update aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
 Successfully download redist for aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+```
+
+Also make sure that file hash was calculated successfully in `ConfigMgrSetup.log`:
+
+```output
+INFO: Downloading https://go.microsoft.com/fwlink/?LinkId=2115685 as SQLSysClrTypes.msi
+INFO: set additional flag.
+No proxy information is specified. Connect without proxy.
+INFO: WinHttpQueryHeaders() in Download() returned OK (200)
+INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
+4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
 ```
 
 - For an offline service connection point, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import the update files again. While it runs, review `ServiceConnectionTool.log` and `ConfigMgrSetup.log` to verify the required files download successfully.
@@ -91,7 +118,7 @@ INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-448
 After rerunning the download or import, verify that the required files are present in `\EasySetupPayload\<PackageGuid>\Redists`.
 
 > [!NOTE]
-> In Service Connection Tool version 2509 or later, the **Connect** step fails if required redistributable files can't be downloaded.
+> In Service Connection Tool version 2509 or later, the **Connect** step fails if necessary redistributable files can't be downloaded.
 
 ### Scenario 2: Files are present in EasySetupPayload but missing in CMUStaging
 
@@ -107,4 +134,4 @@ Then retry the in-console update package installation.
 
 ## More information
 
-For end-to-end update workflow and additional troubleshooting guidance, see [Understand and troubleshoot Updates and Servicing in Configuration Manager](/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing).
+For end-to-end update workflow and extra troubleshooting guidance, see [Understand and troubleshoot Updates and Servicing in Configuration Manager](/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing).
