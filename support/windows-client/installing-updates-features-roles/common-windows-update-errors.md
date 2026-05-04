@@ -148,7 +148,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means an access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log* and search for `, error` and match with the timestamp. After finding the error, scroll up and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine what object needs the right permissions and change the permissions as needed. |
+| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means an access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log* and search for `, error` and match with the timestamp. After finding the error, scroll up and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine what object needs the right permissions and change the permissions as needed. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
 
 ## 0x80070570
 
