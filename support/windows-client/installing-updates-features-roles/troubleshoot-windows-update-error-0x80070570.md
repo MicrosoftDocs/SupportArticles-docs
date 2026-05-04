@@ -3,14 +3,16 @@ title: Troubleshoot Windows Update Error 0x80070570
 description: Learn how to resolve Windows Update error 0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED) that occurs when update files are corrupted or unreadable.
 manager: dcscontentpm
 audience: itpro
-ms.date: 04/15/2026
+ms.date: 05/05/2026
 ms.topic: troubleshooting
-ms.reviewer: scotro, jarretr, v-gsitser
+ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-applegatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\Windows Update - Install errors starting with 0x8007 (Win32)
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
-  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Troubleshoot Windows Update error 0x80070570
