@@ -20,63 +20,73 @@ appliesto:
 
 ## Summary
 
-Error code 0x80070005 (`E_ACCESSDENIED`) means the Windows Update process lacks the permissions it needs to access update-related files, registry keys, or services. This common error has multiple root causes.
 
-## Prerequisites
 
-For Microsoft Azure virtual machines (VMs) that run Windows, back up the OS disk before you begin. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+## Symptoms
 
-## How to identify the issue
+You install a Windows update, but the installation fails, and you see error code 0x80070005 reported.
 
-Check `CBS.log` or `WindowsUpdate.log` for entries like the following example:
+To get more information, review the following resources:
+
+1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
 ```output
 Error                 CBS    Failed to create file. [HRESULT = 0x80070005 - E_ACCESSDENIED]
 Error                 CBS    Failed to internally open package. [HRESULT = 0x80070005 - E_ACCESSDENIED]
 ```
 
-You can also check the Windows Update log:
+1. Review the Windows Update log. To generate a static copy of the log file, open a Windows PowerShell Command Prompt window, and then run the following cmdlet.
 
 ```powershell
 Get-WindowsUpdateLog
 ```
 
-Search the output for `0x80070005` entries.
+Search the output for `0x80070005` entries. For more information about the log file, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ## Cause
 
 This error occurs when one of the following conditions exists:
 
-- The `TrustedInstaller` service account lacks permissions on `%windir%\WinSxS` or `%windir%\SoftwareDistribution`.
-- Registry permissions on the `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing` key are wrong.
+- The TrustedInstaller service account doesn't have permissions on the %windir%\WinSxS folder or the %windir%\SoftwareDistribution folder.
+- The permissions on the registry subkey `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing` aren't correct.
 - A third-party antivirus or security tool locked update-related files or folders.
-- The `SYSTEM` account lacks Full Control on the Windows directory.
-- Group Policy or a management agent restricted write access to system directories.
+- The SYSTEM account doesn't have the Full Control permission on the %windir% folder.
+- A Group Policy setting or a management agent restricted write access to system directories.
+
+> [!NOTE]  
+> %windir% represents the Windows system folder. The default folder name and location is "C:\Windows."
 
 ## Resolution
 
-### Step 1: Reset permissions on the component store
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-Reset the default permissions on the Windows component store:
+### Step 1: Reset the permissions on the component store
 
-```cmd
+To reset the default permissions on the Windows component store, open an administrative Command Prompt window, and then run the following commands:
+
+```console
 icacls "%windir%\WinSxS" /reset /t /c /q
 icacls "%windir%\SoftwareDistribution" /reset /t /c /q
 ```
 
-### Step 2: Verify TrustedInstaller ownership
+After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 2.
 
-Set `TrustedInstaller` as the owner of the `WinSxS` folder:
+### Step 2: Make sure that TrustedInstaller owns the WinSxS folder
 
-```cmd
+To designate that the TrustedInstaller account owns the WinSxS folder, run the following command at the command prompt:
+
+```console
 icacls "%windir%\WinSxS" /setowner "NT SERVICE\TrustedInstaller" /t /c /q
 ```
 
+After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
+
 ### Step 3: Reset Windows Update components
 
-Stop the services, clear the cache, and restart:
+If the error persists, reset all Windows Update components. At the command prompt, run the following commands:
 
-```cmd
+```console
 net stop wuauserv
 net stop bits
 net stop cryptSvc
@@ -89,34 +99,113 @@ net start bits
 net start wuauserv
 ```
 
+After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 5.
+
 ### Step 4: Repair the component store
 
-Repair the component store with DISM. This restores correct permissions on servicing files:
+To repair the component store, run the following command at the command prompt:
 
-```cmd
+```console
 DISM /Online /Cleanup-Image /RestoreHealth
+```
+
+> [!NOTE]  
+> By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
+
+After you run this command, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
+
+### Step 5: Check system file integrity
+
+To verify the integrity of the system files, run the following command at the command prompt:
+
+```console
 sfc /scannow
 ```
 
-### Step 5: Check for third-party interference
+### Step 6: Check for third-party interference
 
-1. Disable antivirus real-time protection temporarily.
-2. List file system filter drivers:
+To make sure that third-party applications or drivers don't interfere in the update process, follow these steps:
 
-   ```cmd
+1. On the affected computer, temporarily disable real-time antivirus protection.
+1. To list the file system filter drivers, run the following command at the command prompt:
+
+   ```console
    fltmc
    ```
 
-3. If a non-Microsoft filter driver appears, unload it temporarily and retry the update.
+1. If the list includes a non-Microsoft filter driver, temporarily unload it by running the following command:
 
-### Step 6: For Azure VMs — use the Run Command reset tool
+   ```console
+   fltmc unload <DriverName>
+   ```
 
-Try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md) before you attempt offline repair. Run it from the Azure portal through **Run Command** — no RDP access needed. It stops services, renames cache folders, and re-registers core DLLs.
+   > [!NOTE]  
+   > In this command, \<DriverName> represents the name of the driver as listed by the `fltmc` command.
 
-If the reset tool doesn't fix the issue or the VM is unresponsive:
+1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
+
+   - If the list includes more than one non-Microsoft filter driver, repeat the earlier step to disable each of these drivers, and then try to install the update again.
+   - If the affected computer is a VM, go to step 7.
+   - Contact Microsoft Support for assistance.
+
+### Step 7: Use the Run Command reset tool (Azure)
+
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack. This action clears memory-related lock states in the update agent.
+
+After you run the tool, try again to install the update. If it still doesn't install, go to step 8.
+
+### Step 8: Use a repair VM (Azure)
+
+If the reset tool doesn't fix the issue, or the VM can't start:
 
 1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
-2. Attach the affected OS disk.
-3. Reset permissions on the offline `WinSxS` and `SoftwareDistribution` folders.
-4. Run `DISM /Image:<drive>:\ /Cleanup-Image /RestoreHealth` against the offline image.
-5. Swap the repaired disk back to the original VM.
+
+1. Attach the affected operating system disk to the repair VM.
+
+1. To reset the default permissions on the Windows component store, open an administrative Command Prompt window, and then run the following commands:
+
+   ```console
+   icacls "%windir%\WinSxS" /reset /t /c /q
+   icacls "%windir%\SoftwareDistribution" /reset /t /c /q
+   ```
+
+1. To designate that the TrustedInstaller account owns the WinSxS folder, run the following command at the command prompt:
+
+   ```console
+   icacls "%windir%\WinSxS" /setowner "NT SERVICE\TrustedInstaller" /t /c /q
+   ```
+
+1. Make sure that you have an offline operating system image available, and then run the following command at the command prompt:
+
+   ```console
+   DISM /Image:<Drive>:\ /Cleanup-Image /RestoreHealth
+   ```
+
+   > [!NOTE]  
+   >
+   > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
+   > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
+
+1. To make sure that third-party applications or drivers don't interfere in the update process, follow these steps:
+
+   1. On the affected computer, temporarily disable real-time antivirus protection.
+   1. To list the file system filter drivers, run the following command at the command prompt:
+
+      ```console
+      fltmc
+      ```
+
+   1. If the list includes non-Microsoft filter drivers, temporarily unload them by running the following command for each non-Microsoft driver in the list:
+
+      ```console
+      fltmc unload <DriverName>
+      ```
+
+      > [!NOTE]  
+      > In this command, \<DriverName> represents the name of the driver as listed by the `fltmc` command.
+
+1. Reattach the repaired disk to the original VM.
+
+1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
