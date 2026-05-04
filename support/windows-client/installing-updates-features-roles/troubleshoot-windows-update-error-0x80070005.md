@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Error 0x80070005
-description: Learn how to resolve Windows Update error 0x80070005 (E_ACCESSDENIED) that occurs when the update process lacks required permissions.
+description: Discusses how to fix Windows Update error 0x80070005 (E_ACCESSDENIED). This error occurs if the update process can't access required files, folders, or registry entries.
 manager: dcscontentpm
 audience: itpro
 ms.date: 05/05/2026
@@ -20,11 +20,13 @@ appliesto:
 
 ## Summary
 
+Windows Update error `0x80070005 (E_ACCESSDENIED)` occurs when the update process can't access required files, folders, or registry entries. This error typically indicates a permissions problem that affects the Windows component store, the Software Distribution folder, or related system resources.
 
+This article provides steps to resolve this issue on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
-You install a Windows update, but the installation fails, and you see error code 0x80070005 reported.
+You install a Windows update, but the installation fails, and you see error code `0x80070005 (E_ACCESSDENIED)` reported.
 
 To get more information, review the following resources:
 
