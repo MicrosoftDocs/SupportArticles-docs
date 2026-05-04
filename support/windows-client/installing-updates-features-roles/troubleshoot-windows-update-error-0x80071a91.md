@@ -164,9 +164,9 @@ If the reset tool doesn't fix the issue, or the VM can't start:
    DISM /Image:<Drive>:\ /Cleanup-Image /RestoreHealth
    ```
 
-      > [!NOTE]  
-      > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
-      > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
+   > [!NOTE]  
+   > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
+   > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
 1. Reattach the repaired disk to the original VM.
 
