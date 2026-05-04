@@ -20,9 +20,9 @@ appliesto:
 
 ## Summary
 
-Windows Update error `0x80070005 (E_ACCESSDENIED)` occurs when the update process can't access required files, folders, or registry entries. This error typically indicates a permissions problem that affects the Windows component store, the Software Distribution folder, or related system resources.
+Windows Update error `0x80070005 (E_ACCESSDENIED)` occurs if the update process can't access required files, folders, or registry entries. This error typically indicates a permissions problem that affects the Windows component store, the Software Distribution folder, or related system resources.
 
-This article provides steps to resolve this issue on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
+This article provides steps to resolve this issue on supported versions of Windows client, Windows Server, and Microsoft Azure Virtual Machines (VMs).
 
 ## Symptoms
 
@@ -37,7 +37,7 @@ Error                 CBS    Failed to create file. [HRESULT = 0x80070005 - E_AC
 Error                 CBS    Failed to internally open package. [HRESULT = 0x80070005 - E_ACCESSDENIED]
 ```
 
-1. Review the Windows Update log. To generate a static copy of the log file, open a Windows PowerShell Command Prompt window, and then run the following cmdlet.
+1. Review the Windows Update log. To generate a static copy of the log file, open a Windows PowerShell Command Prompt window, and then run the following cmdlet:
 
 ```powershell
 Get-WindowsUpdateLog
@@ -47,7 +47,7 @@ Search the output for `0x80070005` entries. For more information about the log f
 
 ## Cause
 
-This error occurs when one of the following conditions exists:
+This error occurs if one of the following conditions exists:
 
 - The TrustedInstaller service account doesn't have permissions on the %windir%\WinSxS folder or the %windir%\SoftwareDistribution folder.
 - The permissions on the registry subkey `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing` aren't correct.
@@ -146,8 +146,8 @@ To make sure that third-party applications or drivers don't interfere in the upd
 
 1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-   - If the list includes more than one non-Microsoft filter driver, repeat the earlier step to disable each of these drivers, and then try to install the update again.
-   - If the affected computer is a VM, go to step 7.
+   - If the list includes more than one non-Microsoft filter driver, repeat the earlier step to disable each of these drivers, and then try again to install the update.
+   - If the affected computer is an Azure virtual machine (VM), go to step 7.
    - Contact Microsoft Support for assistance.
 
 ### Step 7: Use the Run Command reset tool (Azure)
