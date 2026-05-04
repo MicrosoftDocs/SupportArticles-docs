@@ -30,7 +30,7 @@ Most issues occur because of incorrect OAuth 2.0 settings, such as:
 - A mixture of v1.0 and v2.0 endpoints or parameters.
 - An [app registration](/entra/identity-platform/quickstart-register-app) that isn't set up for the intended tenant or multitenant scenario.
 
-## Solution
+## Verify OAuth flow  
 
 Before you set up a custom connector, verify your OAuth 2.0 flow end-to-end outside Power Automate by using a tool such as Postman. This step confirms that your authorization server, resource API, and parameters are correct. For more information about the OAuth 2.0 flow and token behavior, see:
 
