@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot NFtable
-description: #Required; this article description is displayed in search results.
+description: Troubleshooting for nftables configuration in AKS, including steps to verify kube-proxy settings and common issues.
 author: sufuf3
 ms.author: shanjungfu
 ms.topic: troubleshooting 
@@ -19,7 +19,7 @@ Compared to iptables and IPVS, nftables provides improved performance and scalab
 
 Check networkProfile.kubeProxyConfig in the cluster properties and ensure the Kubernetes version is >= 1.33.0.
 
-```json
+```bash
 $ az aks show --resource-group <ResourceGroupName> -n <ClusterName> --query networkProfile.kubeProxyConfig
 "networkProfile": {
     "kubeProxyConfig": {
