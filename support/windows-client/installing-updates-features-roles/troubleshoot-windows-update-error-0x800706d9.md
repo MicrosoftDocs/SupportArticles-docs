@@ -19,45 +19,49 @@ appliesto:
 
 ## Summary
 
-Error code 0x800706D9 (`EPT_S_NOT_REGISTERED`) indicates that the Remote Procedure Call (RPC) endpoint mapper service isn't available or that a required service endpoint isn't registered. This error prevents Windows Update from communicating with the necessary system services to install updates.
+Error code `0x800706D9 (EPT_S_NOT_REGISTERED)` indicates that the Remote Procedure Call (RPC) endpoint mapper service isn't available or that a required service endpoint isn't registered. This error prevents Windows Update from communicating with the necessary system services to install updates.
 
-## Prerequisites
 
-For Microsoft Azure virtual machines (VMs) that run Windows, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+## Symptoms
 
-## How to identify the issue
+You install a Windows update, but the installation fails, and you see error code `0x800706D9 (EPT_S_NOT_REGISTERED)` reported.
 
-Check the `WindowsUpdate.log` for entries that resemble the following example:
+To get more information, review the following resources:
 
-```output
-COMAPI -- RESUMED -- COMAPI: Install [ClientId = AutomaticUpdates]
-Agent -- WARNING: Failed to evaluate Installable rule, Owner = UpdateId, hr = 0x800706D9
-```
+1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
-You can also check the RPC service status:
+   ```output
+   COMAPI -- RESUMED -- COMAPI: Install [ClientId = AutomaticUpdates]
+   Agent -- WARNING: Failed to evaluate Installable rule, Owner = UpdateId, hr = 0x800706D9
+   ```
 
-```cmd
-sc query RpcSs
-sc query RpcEptMapper
-```
+1. To check the status of the RPC service, open a Command Prompt window, and then run the following commands:
+
+   ```console
+   sc query RpcSs
+   sc query RpcEptMapper
+   ```
 
 ## Cause
 
-This error occurs when one of the following conditions exists:
+Any of the following conditions can cause this issue:
 
-- The **RPC Endpoint Mapper** service (`RpcEptMapper`) is stopped or disabled.
-- The **Remote Procedure Call (RPC)** service (`RpcSs`) is stopped or disabled.
-- The **Windows Firewall** service is stopped or disabled (the Windows Update agent depends on the firewall service for network communication).
-- A Group Policy or security configuration has disabled required services.
+- The RPC Endpoint Mapper service (RpcEptMapper) is stopped or disabled.
+- The Remote Procedure Call (RPC) service (RpcSs) is stopped or disabled.
+- The Windows Firewall service is stopped or disabled (the Windows Update agent depends on the firewall service for network communication).
+- A Group Policy setting or security configuration disabled required services.
 - The Windows Firewall registry configuration is corrupted.
 
 ## Resolution
 
-### Step 1: Verify and start required services
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for virtual machines (VMs), see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
-Start the services that Windows Update depends on:
+### Step 1: Start the required services
 
-```cmd
+ To start the services that Windows Update depends on and configure those services to automatically start, run the following commands at the command prompt:
+
+```console
 sc config RpcEptMapper start= auto
 sc start RpcEptMapper
 
@@ -68,28 +72,30 @@ sc config MpsSvc start= auto
 sc start MpsSvc
 ```
 
-> [!NOTE]
-> The Windows Firewall service (`MpsSvc`) is required even if you use Azure Network Security Groups (NSGs) for network filtering. The Windows Update agent depends on the firewall service for internal communication.
+> [!IMPORTANT]  
+> Even if you use Azure Network Security Groups (NSGs) to filter network traffic, you still have to configure and run the Windows Firewall service (MpsSvc). The Windows Update agent depends on the firewall service for internal communication.
 
 ### Step 2: Check the Windows Firewall configuration
 
-If the Windows Firewall service fails to start, the registry configuration might be corrupted. Verify the firewall registry key:
+If the Windows Firewall service fails to start, the registry configuration might be corrupted. To check the registry entry, run the following command at the command prompt of the affected computer:
 
-```cmd
+```console
 reg query "HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy" /s
 ```
 
-If the key is missing or corrupted, reset the firewall to defaults:
+If the key is missing or corrupted, reset the firewall service to its default configuration. At the command prompt on the affected computer, run the following command:
 
-```cmd
+```console
 netsh advfirewall reset
 ```
 
-### Step 3: Re-register Windows Update components
+After the commands finish running, try again to install the update. If the update still doesn't install, go to step 2.
 
-If the issue persists after starting the services, re-register the Windows Update DLLs:
+### Step 2: Reregister Windows Update components
 
-```cmd
+To reregister the DLLs that the Windows Update agent needs, run the following commands at the command prompt:
+
+```console
 net stop wuauserv
 net stop cryptSvc
 net stop bits
@@ -105,12 +111,37 @@ net start cryptSvc
 net start wuauserv
 ```
 
-### Step 4: For Azure VMs
+After the commands finish running, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-First, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the Azure portal via **Run Command** without needing RDP access. This tool resets the Windows Update servicing stack, which often resolves RPC-related registration failures.
+- If the affected computer is a VM, go to step 3.
+- Contact Microsoft Support for assistance.
 
-If the reset tool doesn't resolve the issue or you can't access the VM through RDP, use the Azure Serial Console or run a repair through an attached OS disk:
+### Step 3: Use the Run Command reset tool (Azure)
+
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack. This action clears memory-related lock states in the update agent.
+
+After you run the tool, try again to install the update. If it still doesn't install, go to step 4.
+
+### Step 4: Use a repair VM (Azure)
+
+If the reset tool doesn't fix the issue, or the VM can't start:
+
+1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
+
+1. Attach the affected operating system disk to the repair VM.
+
+
+
+
+
+1. Reattach the repaired disk to the original VM.
+
+1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
+
 
 1. Use [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to create a repair VM.
 2. Attach the affected OS disk to the repair VM.
 3. Start the required services in the offline registry hive.
+
