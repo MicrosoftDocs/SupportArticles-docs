@@ -20,7 +20,7 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806295" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows Update issues.</span>
 
-The following tables provide information about common Windows Update-related errors that you might encounter, and provides steps to help you mitigate the errors.
+The following tables provide information about common Windows Update-related errors that you might encounter, and provide steps to help you mitigate the errors.
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
