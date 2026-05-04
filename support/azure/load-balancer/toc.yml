@@ -11,8 +11,7 @@ items:
       - name: Troubleshoot virtual machines not responding to traffic on the configured data port
         href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
       - name: Virtual machines receive uneven distribution of traffic 
-        href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md
-  items: 
+        href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md 
   - name: Troubleshoot common problems
     items:
     - name: Troubleshoot Azure Load Balancer common problems
