@@ -72,7 +72,7 @@ icacls "%windir%\WinSxS" /reset /t /c /q
 icacls "%windir%\SoftwareDistribution" /reset /t /c /q
 ```
 
-After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 2.
+After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 2.
 
 ### Step 2: Make sure that TrustedInstaller owns the WinSxS folder
 
@@ -82,7 +82,7 @@ To designate that the TrustedInstaller account owns the WinSxS folder, run the f
 icacls "%windir%\WinSxS" /setowner "NT SERVICE\TrustedInstaller" /t /c /q
 ```
 
-After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
+After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 3.
 
 ### Step 3: Reset Windows Update components
 
@@ -101,7 +101,7 @@ net start bits
 net start wuauserv
 ```
 
-After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 5.
+After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 5.
 
 ### Step 4: Repair the component store
 
@@ -114,7 +114,7 @@ DISM /Online /Cleanup-Image /RestoreHealth
 > [!NOTE]  
 > By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
-After you run this command, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
+After you run this command, restart the computer, and try again to install the update. If the update still doesn't install, go to step 3.
 
 ### Step 5: Check system file integrity
 
@@ -146,7 +146,7 @@ To make sure that third-party applications or drivers don't interfere in the upd
 
 1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-   - If the list includes more than one non-Microsoft filter driver, repeat the earlier step to disable each of these drivers, and then try again to install the update.
+   - If the list includes more than one non-Microsoft filter driver, repeat step 6c to unload each of these drivers, and then try again to install the update.
    - If the affected computer is a VM, go to step 7.
    - Contact Microsoft Support for assistance.
 
@@ -156,7 +156,7 @@ If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM 
 
 This tool resets the Windows Update servicing stack. This action clears memory-related lock states in the update agent.
 
-After you run the tool, try again to install the update. If it still doesn't install, go to step 8.
+After you run the tool, try again to install the update. If the update still doesn't install, go to step 8.
 
 ### Step 8: Use a repair VM (Azure)
 
