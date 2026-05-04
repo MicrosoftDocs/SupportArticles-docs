@@ -154,7 +154,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store with `Dism RestoreHealth` or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
+| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store with `Dism RestoreHealth` or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. For more information, see [Troubleshoot Windows Update error 0x80070570](troubleshoot-windows-update-error-0x80070570.md). |
 
 ## 0x80070003
 
