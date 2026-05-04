@@ -57,21 +57,17 @@ After completing these checks, proceed with the scenario that matches your findi
 
 If files are missing in `\EasySetupPayload`, restore the update payload source first.
 
-- For an online service connection point, verify internet connectivity and required endpoint access, then retry the download from the console. If the update is already in the post-replication phase, you typically can’t use [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove it and restart the download. Instead, change the update state using the [UpdatePrereqAndStateFlags](/intune/configmgr/develop/reference/sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages) WMI method. Run the following PowerShell on a server that hosts the SMS Provider:
+- For an online service connection point, verify internet connectivity and required endpoint access, then retry the download from the console. If the update is already in the post-replication phase, you typically can’t use [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove it and restart the download. Instead, change the update state using the [UpdatePrereqAndStateFlags](/intune/configmgr/develop/reference/sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages) WMI method. Run the following PowerShell on a server that hosts the SMS Provider (replace `<SiteCode>` and `<PackageGuid>`):
 
 ```powershell
 $CMUpdateGUID = '<PackageGuid>' # e.g.: 94727833-903B-49EF-9CF7-A43D2BC8826D
 $Flag = 1
 $DesireState = 0x0004FFFF #DOWNLOAD_FAILED
 $CMUpdatePackage = Get-WmiObject -Namespace "root\SMS\site_<SiteCode>" -Class SMS_CM_UpdatePackages -Filter ("PackageGuid = '$($CMUpdateGUID)'")
-If ($null -eq $CMUpdatePackage) {
-    Write-Host "Package $CMUpdateGUID not found" -ForegroundColor Yellow
-    Return
-}
 Invoke-WmiMethod -InputObject $CMUpdatePackage -Name UpdatePrereqAndStateFlags -ArgumentList @($Flag,[convert]::ToInt32('{0:x}' -f $DesiredState, 16)) | Out-Null
 ```
 
-The update status should now show Download failed. From here, either run [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove the update and restart the download/installation, or simply re-download the package.
+The update status should now show Download failed. From here, either run [CMUpdateReset](/intune/configmgr/core/servers/manage/update-reset-tool) to remove the update and restart the download/installation, or redownload the package.
 
 Check `dmpdownloader.log` and look for the following lines during download attempt:
 
