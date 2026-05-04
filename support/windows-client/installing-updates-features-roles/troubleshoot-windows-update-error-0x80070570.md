@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Error 0x80070570
-description: Learn how to resolve Windows Update error 0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED) that occurs when update files are corrupted or unreadable.
+description: Discusses how to fix Windows Update error 0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED). Windows can't read or process the files that are required to install an update.
 manager: dcscontentpm
 audience: itpro
 ms.date: 05/05/2026
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Error code `0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED`) indicates that the file or directory is corrupted and unreadable. This error occurs during Windows Update when downloaded update files, the component store, or disk sectors are corrupted.
+Windows Update error `0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED)` indicates that Windows can't read or process the files that are required to install an update. This error typically occurs because of corrupted update cache files, a damaged Windows component store, disk errors, or interference from security software. This article describes the symptoms and causes of this error, and provides steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
