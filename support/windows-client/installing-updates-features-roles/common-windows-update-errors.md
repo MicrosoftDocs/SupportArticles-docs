@@ -52,7 +52,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| TIME_OUT_ERRORS | The operation timed out | Make sure that there no firewall rules or proxies block Microsoft download URLs. <br>Take a network monitor trace to understand the situation better. \<Refer to Firewall Troubleshooting scenario> |
+| TIME_OUT_ERRORS | The operation timed out | Make sure that no firewall rules or proxies block Microsoft download URLs. <br>Take a network monitor trace to understand the situation better. \<Refer to Firewall Troubleshooting scenario> |
 
 ## 0X8007000D
 
