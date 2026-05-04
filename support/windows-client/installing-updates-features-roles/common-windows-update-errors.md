@@ -136,13 +136,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_SOURCE_MISSING; source for package or file not found, ResolveSource() unsuccessful | Component Store corruption | Repair the component store by running the `Dism RestoreHealth` command, or manually repair by using the payload from the partially installed component. At an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
+| CBS_E_SOURCE_MISSING; source for package or file not found, ResolveSource() unsuccessful | Component Store corruption | Repair the component store by running the `Dism RestoreHealth` command, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x800f0831
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_STORE_CORRUPTION; CBS store is corrupted. | Corruption in the Windows Component Store. | Repair the component store by runnning `Dism RestoreHealth` or manually repair by using the payload from the partially installed component. At an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.  |
+| CBS_E_STORE_CORRUPTION; CBS store is corrupted. | Corruption in the Windows Component Store. | Repair the component store by runnning `Dism RestoreHealth` or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.  |
 
 ## 0x80070005
 
@@ -154,7 +154,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. At an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
+| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
 
 ## 0x80070003
 
@@ -172,13 +172,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_SXS_ASSEMBLY_MISSING; The referenced assembly couldn't be found. | Typically, a component store corruption caused when a component is in a partially installed state. | Repair the component store by running `Dism RestoreHealth command`, or manually repair it by using the payload from the partially installed component. At an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
+| ERROR_SXS_ASSEMBLY_MISSING; The referenced assembly couldn't be found. | Typically, a component store corruption caused when a component is in a partially installed state. | Repair the component store by running `Dism RestoreHealth command`, or manually repair it by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x8007371b
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE; One or more required members of the transaction aren't present. | Component Store corruption. | Repair the component store by running the `Dism RestoreHealth` command, or manually repair it by using the payload from the partially installed component. At an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
+| ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE; One or more required members of the transaction aren't present. | Component Store corruption. | Repair the component store by running the `Dism RestoreHealth` command, or manually repair it by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x80072EFE
 
