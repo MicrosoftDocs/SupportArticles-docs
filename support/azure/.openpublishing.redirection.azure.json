@@ -6673,10 +6673,14 @@
         {
         "source_path": "azure-monitor/log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md",
         "redirect_url": "/troubleshoot/azure/azure-monitor/azure-monitor-agent/windows-agents/erased-proxy-settings-microsoft-monitoring-agent"
-            },
+      },
         {
         "source_path": "virtual-network/connectivity/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
         "redirect_url": "/troubleshoot/azure/virtual-network/welcome-virtual-network"
+      },
+        {
+        "source_path": "load-balancer/load-balancer-troubleshoot-backend-traffic.md ",
+        "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md"
             },
         {
         "source_path": "load-balancer/load-balancer-troubleshoot.md ",

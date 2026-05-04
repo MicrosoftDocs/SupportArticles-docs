@@ -16,8 +16,14 @@ items:
       href: troubleshoot-common-problems/traffic-passing-through-load-balancer-after-vm-removal-from-backend-pool.md
     - name: Troubleshoot Load Balancer in a failed state
       href: troubleshoot-common-problems/load-balancer-failed-state.md
-  - name: Troubleshoot Azure Load Balancer
-    href: load-balancer-troubleshoot-backend-traffic.md
+  - name: Troubleshoot backend traffic responses
+    items:
+    - name: Troubleshoot Azure Load Balancer backend traffic responses
+      href: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
+    - name: Troubleshoot virtual machines not responding to traffic on the configured data port
+      href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
+    - name: Virtual machines receive uneven distribution of traffic 
+      href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md 
   - name: Troubleshoot common deployment errors
     href: load-balancer-common-deployment-errors.md
   - name: Troubleshoot load balancer health event logs
