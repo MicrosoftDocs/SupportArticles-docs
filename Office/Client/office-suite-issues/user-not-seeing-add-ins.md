@@ -17,7 +17,7 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-ms.date: 06/21/2025
+ms.date: 05/04/2026
 ---
 
 # Users don't see add-ins
@@ -65,3 +65,6 @@ If users can't see add-ins, use one of the following methods to troubleshoot the
    - Open the Windows Registry editor and search for the GUID.
    - If the add-in was installed by using AppSource, navigate to the `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` folder and search all subfolders for the add-in's AppSource ID, such as `WA999999999`.
 
+## Releated content
+
+- [Office Add-ins known issues](/office/dev/add-ins/resources/resources-office-add-in-known-issues).
