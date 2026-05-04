@@ -89,7 +89,7 @@ To check whether the VM is behind a Standard SKU internal load balancer that blo
 
 1. In the list of virtual machines, select the name of your VM.
 
-1. In the menu pane for your VM, locate the **Networking** heading, and then select **Load balancing**. If you see a message that states **No load balancing resources to display**, then the VM isn't behind any load balancer. In this case, you can go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service).
+1. In the menu pane for your VM, locate the **Networking** heading, and then select **Load balancing**. If you see a message that states **No load balancing resources to display**, then the VM isn't behind any load balancer. In this case, you can go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#step-3-verify-the-connectivity-between-the-vm-and-azure-kms-service).
 
 1. If you see a load balancer resource, select the name of the load balancer to go to the load balancer's **Overview** page.
 
@@ -100,7 +100,7 @@ To check whether the VM is behind a Standard SKU internal load balancer that blo
    | Values of **SKU** and **Load Balancing Type** | Conclusion |
    |--|--|
    | The SKU value is **Standard**, and the **Load Balancing Type** value is **Private**. | The VM is behind a Standard SKU internal load balancer that blocks outbound internet traffic by default. To enable outbound connectivity, go to [Solution 2 (for standard internal load balancer): Use a network address translation (NAT) gateway or a standard public load balancer](#solution-2-for-standard-internal-load-balancer-use-a-network-address-translation-nat-gateway-or-a-standard-public-load-balancer). |
-   | The SKU value isn't **Standard**, and the **Load Balancing Type** value is **Public**. | The VM isn't behind a Standard SKU internal load balancer, and outbound internet traffic isn't blocked by default. Go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#part-3-verify-the-connectivity-between-the-vm-and-azure-kms-service). |
+   | The SKU value isn't **Standard**, and the **Load Balancing Type** value is **Public**. | The VM isn't behind a Standard SKU internal load balancer, and outbound internet traffic isn't blocked by default. Go to [Step 3: Verify the connectivity between the VM and Azure KMS service](#step-3-verify-the-connectivity-between-the-vm-and-azure-kms-service). |
 
 ### Step 3: Verify the connectivity between the VM and Azure KMS service
 
