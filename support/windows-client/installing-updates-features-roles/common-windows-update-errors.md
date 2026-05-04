@@ -88,7 +88,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_ CALL_CANCELLED | Operation was canceled. | The operation was canceled by the user or service. You might also receive this error message wif we can't filter the results. |
+| WU_E_ CALL_CANCELLED | Operation was canceled. | The operation was canceled by the user or service. You might also receive this error message if we can't filter the results. |
 
 ## 0x8024000E
 
@@ -148,7 +148,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that an access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine what object needs the right permissions, and change the permissions as appropriate. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
+| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine what object needs the right permissions, and change the permissions as appropriate. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
 
 ## 0x80070570
 
@@ -232,7 +232,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-|ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by Group Policy (GPO), which prevented it from starting to complete pending operations.|The TrustedInstaller service changes the startup type from Manual to Automatic if it encounters an update that has to process a transaction after a restart. If the value is set back to Manual before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If thsi change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and remove the PendingXMLIdentifier from COMPONENTS Hive.|
+|ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by Group Policy (GPO), which prevented it from starting to complete pending operations.|The TrustedInstaller service changes the startup type from Manual to Automatic if it encounters an update that has to process a transaction after a restart. If the value is set back to Manual before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If this change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and remove the PendingXMLIdentifier from COMPONENTS Hive.|
 
 ## 0x800706be
 
