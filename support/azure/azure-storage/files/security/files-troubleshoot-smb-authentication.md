@@ -359,7 +359,7 @@ You should check that `DomainName`, `SamAccountName`, and `AccountType` all retu
 $domainInformation = Get-ADDomain
 $domainName = $domainInformation.DnsRoot
 $samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
-$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } `
     elseif ($saAdObject.objectClass -contains "user") { "User" }
 
 Write-Host "DomainName=$domainName, samAccountName=$samAccountName, type=$type"
@@ -381,13 +381,13 @@ $domainSid = $domainInformation.DomainSID.Value
 $forestName = $domainInformation.Forest
 $netBiosDomainName = $domainInformation.DnsRoot
 
-$saAdObject = Get-ADObject ` 
+$saAdObject = Get-ADObject `
     -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
     -Properties *
 
 $saADObjectSid = $saAdObject.objectSid.Value
 $samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
-$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } `
     elseif ($saAdObject.objectClass -contains "user") { "User" }
 
 Set-AzStorageAccount `
@@ -412,7 +412,7 @@ For more information, see [Enable AD DS authentication for Azure Files](/azure/s
 > If you already ran the preceding domain properties script and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
 
 ```PowerShell
-$saAdObject = Get-ADObject ` 
+$saAdObject = Get-ADObject `
     -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
     -Properties *
 

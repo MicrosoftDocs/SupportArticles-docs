@@ -6681,6 +6681,10 @@
         {
         "source_path": "load-balancer/load-balancer-troubleshoot-backend-traffic.md ",
         "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md"
+            },
+        {
+        "source_path": "load-balancer/load-balancer-troubleshoot.md ",
+        "redirect_url": "/troubleshoot/azure/load-balancer/troubleshoot-common-problems/load-balancer-troubleshoot"
       }
   ]
 }

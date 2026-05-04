@@ -3023,6 +3023,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Troubleshoot Windows Update error 0x80070bc9
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
+    - name: Troubleshoot Windows Update error 0x80071A91
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80072f8f
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md
     - name: Troubleshoot Windows Update error 0x800f0823
@@ -3035,6 +3037,8 @@ items:
       href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x8024001e.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80240439
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80240439.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80244007
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED

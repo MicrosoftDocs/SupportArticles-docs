@@ -15846,13 +15846,17 @@
     },
     {
       "source_path": "support/windows-server/user-profiles-and-logon/relocation-of-users-and-programdata-directories.md",
-      "redirect_url": "/troublshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/database-engine-input-output-requirements.md",
+      "redirect_url": "/sql/relational-databases/sql-server-storage-guide"
     }
   ]
 }
