@@ -1,22 +1,25 @@
 ---
-title: Troubleshoot Azure Front Door Certificate Issues
-description: Troubleshoot Azure Front Door certificate common issues quickly. Discover solutions for intermittent *.azureedge.net certificates and expired custom domain certificates.
+title: Troubleshoot Azure Front Door certificate problems
+description: Troubleshoot Azure Front Door certificate common problems quickly. Discover solutions for intermittent *.azureedge.net certificates and expired custom domain certificates.
 author: halkazwini
 ms.author: halkazwini
 ms.service: azure-frontdoor
 ms.topic: troubleshooting
 ms.date: 04/30/2026
+ms.custom: sap:Configuration and setup
 ---
 
-# Troubleshoot Azure Front Door certificate issues
+# Troubleshoot Azure Front Door certificate problems
 
-This article describes how to troubleshoot some common issues you might encounter with certificates on Azure Front Door.
+## Summary
+
+This article describes how to troubleshoot some common problems you might encounter with certificates on Azure Front Door.
 
 ## \*.azureedge.net certificate returned from Azure Front Door intermittently
 
-### Symptom
+### Symptoms
 
-- Requests sent to your origin through Azure Front Door sometimes get a certificate error, with a `*.azureedge.net` certificate instead of the expected one.
+- Requests sent to your custom domain through Azure Front Door sometimes get a certificate error, with a `*.azureedge.net` certificate returned instead of the expected one.
 
 - The failures happen in a specific geographic area.
 
@@ -24,39 +27,41 @@ This article describes how to troubleshoot some common issues you might encounte
 
 The cause of this issue can be one of these two possibilities:
 
-- The custom domain was just deployed, and the certificate is still propagating to all the Azure Front Door edge servers.
+- The custom domain was just deployed and the certificate is still propagating to all the Azure Front Door edge servers.
 
 - One of the Azure Front Door edge servers doesn't have the expected certificate loaded.
 
-### Troubleshooting steps
+#### Troubleshooting steps
 
-- The custom domain was just deployed, and the certificate is still propagating to all the Azure Front Door edge servers:
+**The custom domain was just deployed and the certificate is still propagating to all the Azure Front Door edge servers**
 
-  - Allow up to an hour for the new certificate to fully propagate.
+Allow up to an hour for the new certificate to fully propagate.
 
-- One of the Azure Front Door edge servers doesn't have the expected certificate loaded:
+**One of the Azure Front Door edge servers doesn't have the expected certificate loaded**
 
-  1. Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
+Perform the following steps to confirm that the certificate is deployed correctly to all Azure Front Door edge servers:
 
-      :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
+1. Check the deployment status for the custom domain in the Azure portal to ensure the **Certificate state** is *Deployed*.
 
-  1. In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
+:::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot that shows the certificate state as Deployed." lightbox="media/certificate-issues/certificate-state.png":::
 
-      :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
+1. In a browser from an impacted user, access the site. View the certificate and confirm it is: `*.azureedge.net`.
 
-  1. Continue to load the site while capturing the traffic in the browser using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
+:::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot that shows \*.azureedge.net in the certificate viewer.":::
 
-  1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
+1. Continue to load the site while capturing the traffic in the browser using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
 
-      :::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
+1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Azure Front Door.
 
-  1. At this point, create a support request if the following conditions are met:
+:::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot that shows the x-azure-ref header.":::
 
-      - The custom domain has been deployed successfully for at least an hour.
+1. At this point, create a support request if the following conditions are met:
+
+  - The custom domain has been deployed successfully for at least an hour.
   
-      - The impacted users are intermittently getting a `*.azureedge.net` certificate instead of the expected custom domain certificate.
+  - The impacted users are intermittently getting a `*.azureedge.net` certificate instead of the expected custom domain certificate.
     
-      - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Azure Front Door.
+  - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Azure Front Door.
 
   Be sure to include all your gathered data in the support request, including the geographic area where users are impacted.
 
