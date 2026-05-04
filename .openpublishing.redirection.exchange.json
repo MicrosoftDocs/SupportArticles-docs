@@ -29,11 +29,6 @@
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Exchange/ExchangeOnline/administration/send-on-behalf-for-shared-mailbox.md",
-      "redirect_url": "/troubleshoot/exchange/exchangeserver/administration/send-on-behalf-for-shared-mailbox",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "Exchange/ExchangeServer/mailflow/hop-count-exceeded-possible-mail-loop.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
