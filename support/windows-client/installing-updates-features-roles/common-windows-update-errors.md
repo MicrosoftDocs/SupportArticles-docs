@@ -20,7 +20,7 @@ appliesto:
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806295" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows Update issues.</span>
 
-The following tables provide information about common Windows Update-related errors that you might encounter, and provide steps to help you mitigate the errors.
+The following tables provide information about common Windows Update-related errors that you might encounter, and include steps to help you mitigate the errors.
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
@@ -48,7 +48,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 |---------|-------------|------------|
 | BG_E_VALIDATION_FAILED | NA | Make sure that there are no firewalls that might filter downloads. Such filtering could cause incorrect responses to be received by the Windows Update client.|
 
-## 0x80072EFD or 0x80072EFE or 0x80D02002
+## 0x80072EFD or 0x80072EFE or 0x80D02002
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
@@ -76,7 +76,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_UH_POSTREBOOTSTILLPENDING | The post-restart operation for the update is still in progress. | Some Windows updates require the device to be restarted. Restart the device to complete update installation. |
+| WU_E_UH_POSTREBOOTSTILLPENDING | The post-restart operation for the update is still in progress. | Some Windows updates require the device to be restarted. Restart the device to complete update the installation. |
 
 ## 0x80246017
 
@@ -94,7 +94,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_XML_INVALID | Windows Update Agent found information in the update's XML data that isn't valid. | Certain drivers contain more metadata information in Update.xml. Orchestrator might interpret that as data that isn't valid. Make sure that you have the latest Windows Update Agent installed on the device. |
+| WU_E_XML_INVALID | Windows Update Agent found information in the update's XML data that isn't valid. | Certain drivers contain more metadata information in Update.xml. Orchestrator might interpret that condition as data that isn't valid. Make sure that you have the latest Windows Update Agent installed on the device. |
 
 ## 0x8024D009
 
@@ -124,13 +124,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_CANNOT_UNINSTALL; Package can't be uninstalled. | Typically this error is due component store corruption caused when a component is in a partially installed state. | Repair the component store by using the `Dism RestoreHealth` command, or manually repair by using a payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
+| CBS_E_CANNOT_UNINSTALL; Package can't be uninstalled. | Typically this error occurs because of component store corruption that was caused by a component in a partially installed state. | Repair the component store by using the `Dism RestoreHealth` command, or manually repair by using a payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x800F0920
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_HANG_DETECTED; A failure to respond was detected while processing the operation. | Subsequent error logged after getting 0x800f0821 | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires and assumes that the system has stopped responding. Extending the timeout value mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has update KB4493473 or later installed.|
+| CBS_E_HANG_DETECTED; A failure to respond was detected while processing the operation. | Subsequent error logged after getting 0x800f0821 | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires and assumes that the system stopped responding. Extending the timeout value mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has update KB4493473 or later installed.|
 
 ## 0x800f081f
 
@@ -148,7 +148,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine what object needs the right permissions, and change the permissions as appropriate. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
+| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine which object needs the right permissions, and change the permissions as appropriate. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
 
 ## 0x80070570
 
@@ -160,7 +160,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_PATH_NOT_FOUND; The system can't find the path specified. | The servicing stack can't access a specific path. | Indicates an invalid path to an executable. Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, and search for `, error`. Then, match the results with the timestamp. |
+| ERROR_PATH_NOT_FOUND; The system can't find the path specified. | The servicing stack can't access a specific path. | Indicates an invalid path to an executable. Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, and search for `, error`. Then, match the results to the timestamp. |
 
 ## 0x80070020
 
@@ -184,13 +184,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WININET_E_CONNECTION_ABORTED; The connection with the server was closed abnormally | BITS is unable to transfer the file successfully. | Encountered if BITS is broken or if the file being transferred can't be written to the destination folder on the client. This error is caused by connection errors while checking or downloading updates.<br> From a cmd prompt run: `BITSADMIN /LIST /ALLUSERS /VERBOSE` <br> Search for the 0x80072EFE error code. You should see a reference to an HTTP code with a specific file. Using a browser, try to download it manually, making sure you're using your organization's proxy settings. If the download fails, check with your proxy manager to allow for the communication to be sucesfull. Also check with your network team for this specific URL access. |
+| WININET_E_CONNECTION_ABORTED; The connection with the server was closed abnormally | BITS is unable to transfer the file successfully. | Encountered if BITS is broken or if the file that's being transferred can't be written to the destination folder on the client. This error is caused by connection errors while checking or downloading updates.<br> At a command prompt, run: `BITSADMIN /LIST /ALLUSERS /VERBOSE` <br> Search for the 0x80072EFE error code. You should see a reference to an HTTP code and a specific file. Using a browser, try to download the file manually. Make sure that you use your organization's proxy settings. If the download fails, work with your proxy manager to achive successful communication. Also, check with your network team for this specific URL access. |
 
 ## 0x80072F8F
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WININET_E_DECODING_FAILED; Content decoding has failed | TLS 1.2 isn't configured correctly on the client. | This error generally means that the Windows Update Agent was unable to decode the received content. Install and configure TLS 1.2 by installing the update in [KB3140245](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
+| WININET_E_DECODING_FAILED; Content decoding has failed | TLS 1.2 isn't configured correctly on the client. | This error generally means that the Windows Update Agent can't decode the received content. Install and configure TLS 1.2 by installing the update that's provided in [KB3140245](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
 
 ## 0x80072EE2
 
@@ -208,31 +208,31 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent can't connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Intune, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+| WU_E_PT_HTTP_STATUS_PROXY_AUTH_REQ; Same as HTTP status 407 - proxy authentication is required. | Unable to authenticate through a proxy server. | Either the Winhttp proxy or WinInet proxy settings aren't configured correctly. This error generally means that the Windows Update Agent can't connect to the update servers or your own update source, such as WSUS, Configuration Manager, or Microsoft Intune, due to a proxy error. <br> Verify the proxy settings on the client. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the update source, the proxy settings must be configured correctly on the clients to enable them to communicate by using the source's FQDN. <br> Check with your network and proxy teams to verify that the device can access the update source without the proxy requiring user authentication. |
 
 ## 0x80244022
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting needed to resolve the connectivity issue. Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+| WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting is needed to resolve the connectivity issue. Check with your network and proxy teams to verify that the device can access the update source without the proxy requiring user authentication. |
 
 ## 0x80070490
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-|ERROR_NOT_FOUND|This error occurs during driver installation as part of the update.|This issue occurs because details such as the architecture for a driver that's being updated are missing in the registry. Manually add the missing inf file **Arch** value in the Driver operations registry by following these steps:<br/>1. Open *regedit* and navigate to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ComponentBasedServicing\DriverOperations\0\2(SequenceID)`<br/>2. Review the **Identity** value to determine the value that is missing.<br/>3. Manually add the missing value referring to the information in the **Identity** value. For example, Name: Arch; Type: REG_SZ (String Value); Data: amd64.<br/>4. Proceed with installing the failing update.|
+|ERROR_NOT_FOUND|This error occurs during driver installation as part of the update.|This issue occurs because details such as the architecture for a driver that's being updated are missing in the registry. Manually add the missing inf file **Arch** value in the Driver operations registry by following these steps:<br/>1. Open *regedit*, and navigate to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ComponentBasedServicing\DriverOperations\0\2(SequenceID)`<br/>2. Review the **Identity** value to determine the value that's missing.<br/>3. Manually add the missing value by referring to the information in the **Identity** value. For example, Name: Arch; Type: REG_SZ (String Value); Data: amd64.<br/>4. Proceed with installing the failing update.|
 
 ## 0x800f0922
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-|CBS_E_INSTALLERS_FAILED|The July cumulative update failed to be installed on Windows Server 2016|In the CBS.log, you may find that updates sometimes roll back when License and Product key tokens fail to be updated. This issue can be resolved by adding write permissions for the "User" and "Network Service" accounts to the _C:\\Windows\\System32\\spp\\_ folder.|
+|CBS_E_INSTALLERS_FAILED|The July cumulative update failed to be installed on Windows Server 2016|In the CBS.log, you might find that updates sometimes roll back when License and Product key tokens fail to be updated. This issue can be resolved by adding write permissions for the "User" and "Network Service" accounts to the _C:\\Windows\\System32\\spp\\_ folder.|
 
 ## 0x80070bc9
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-|ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by Group Policy (GPO), which prevented it from starting to complete pending operations.|The TrustedInstaller service changes the startup type from Manual to Automatic if it encounters an update that has to process a transaction after a restart. If the value is set back to Manual before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If this change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and remove the PendingXMLIdentifier from COMPONENTS Hive.|
+* |ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by a Group Policy Object (GPO). Group Policy prevented the startup to complete pending operations.|The TrustedInstaller service changes the startup type from **Manual** to **Automatic** if it encounters an update that has to process a transaction after a restart. If the value is reverted to **Manual** before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If this change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and then remove the PendingXMLIdentifier from COMPONENTS Hive.|
 
 ## 0x800706be
 
