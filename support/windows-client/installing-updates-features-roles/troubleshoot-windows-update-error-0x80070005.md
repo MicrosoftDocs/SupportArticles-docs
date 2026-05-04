@@ -101,7 +101,7 @@ net start bits
 net start wuauserv
 ```
 
-After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 5.
+After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 4.
 
 ### Step 4: Repair the component store
 
@@ -114,7 +114,7 @@ DISM /Online /Cleanup-Image /RestoreHealth
 > [!NOTE]  
 > By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
-After you run this command, restart the computer, and try again to install the update. If the update still doesn't install, go to step 3.
+After you run this command, restart the computer, and try again to install the update. If the update still doesn't install, go to step 5.
 
 ### Step 5: Check system file integrity
 
@@ -123,6 +123,10 @@ To verify the integrity of the system files, run the following command at the co
 ```console
 sfc /scannow
 ```
+
+If this command identifies issues, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e).
+
+After this command finishes without errors, restart the computer. Try again to install the update. If it still doesn't install, go to step 6.
 
 ### Step 6: Check for third-party interference
 
