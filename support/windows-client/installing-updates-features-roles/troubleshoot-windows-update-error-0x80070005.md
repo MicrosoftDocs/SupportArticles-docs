@@ -147,7 +147,7 @@ To make sure that third-party applications or drivers don't interfere in the upd
 1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
    - If the list includes more than one non-Microsoft filter driver, repeat the earlier step to disable each of these drivers, and then try again to install the update.
-   - If the affected computer is an Azure virtual machine (VM), go to step 7.
+   - If the affected computer is a VM, go to step 7.
    - Contact Microsoft Support for assistance.
 
 ### Step 7: Use the Run Command reset tool (Azure)
