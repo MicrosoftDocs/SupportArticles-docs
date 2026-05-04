@@ -6,6 +6,7 @@ audience: itpro
 ms.date: 05/05/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-applegatet
+ai.usage: ai-assisted
 ms.custom:
 - sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
