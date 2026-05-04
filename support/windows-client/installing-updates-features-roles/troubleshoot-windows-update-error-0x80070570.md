@@ -17,48 +17,52 @@ appliesto:
 
 # Troubleshoot Windows Update error 0x80070570
 
-**Applies to:** :heavy_check_mark: Windows VMs
-
 ## Summary
 
-Error code 0x80070570 (`ERROR_FILE_OR_DIRECTORY_CORRUPTED`) indicates that the file or directory is corrupted and unreadable. This error occurs during Windows Update when downloaded update files, the component store, or disk sectors are corrupted.
+Error code `0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED`) indicates that the file or directory is corrupted and unreadable. This error occurs during Windows Update when downloaded update files, the component store, or disk sectors are corrupted.
 
-## Prerequisites
+## Symptoms
 
-For Microsoft Azure virtual machines (VMs) that run Windows, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+You install a Windows update, but the installation fails, and you see error code `0x80070570` reported.
 
-## How to identify the issue
+To get more information, review the following resources:
 
-Check the `CBS.log` for entries that resemble the following example:
+1. Review the WindowsUpdate.log file or the CBS.log file. Look for entries that resemble the following example:
 
-```output
-Error                 CBS    Failed to internally open package. [HRESULT = 0x80070570 - ERROR_FILE_OR_DIRECTORY_CORRUPTED]
-Info                  CBS    Failed to resolve package [Package_for_KB5XXXXXX~31bf3856ad364e35~amd64~~XX.X.X.X] [HRESULT = 0x80070570]
-```
+   ```output
+   Error         CBS    Failed to internally open package. [HRESULT = 0x80070570 - ERROR_FILE_OR_DIRECTORY_CORRUPTED]
+   Info          CBS    Failed to resolve package [Package_for_KB5XXXXXX~31bf3856ad364e35~amd64~~XX.X.X.X] [HRESULT = 0x80070570]
+   ```
 
-You can also run the System File Checker to identify corruption:
+1. To scan the system files for issues, open a Command Prompt window, and then run the following command:
 
-```cmd
-sfc /verifyonly
-```
+   ```console
+   sfc /verifyonly
+   ```
 
 ## Cause
 
 This error occurs when one of the following conditions exists:
 
-- Downloaded update files in the `%windir%\SoftwareDistribution\Download` folder are corrupted.
-- The Windows component store (`%windir%\WinSxS`) contains corrupted manifests or files.
-- Disk corruption affects the system volume (bad sectors, file system errors).
-- An antivirus or security application interferes with update file extraction.
-- The update was interrupted during download (partial or truncated files).
+- Downloaded update files in the %windir%\SoftwareDistribution\Download folder are corrupted.
+- The Windows component store (in the %windir%\WinSxS folder) contains corrupted manifests or files.
+- The system volume is corrupted (for example, the disk might have bad sectors or file system errors).
+- An antivirus or security application interferes when Windows Update extracts files from downloaded update packages.
+- The update files are truncated or partial because the download process was interrupted.
+
+> [!NOTE]  
+> %windir% represents the Windows system folder. The default folder name and location is "C:\Windows."
 
 ## Resolution
 
+> [!IMPORTANT]  
+> Before you troubleshoot this issue, back up the operating system disk. For information about this process for VMs, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+
 ### Step 1: Clear the Windows Update cache
 
-Delete corrupted download files and force Windows Update to re-download:
+To delete corrupted download files and force Windows Update to download new copies, open a Command Prompt window and then run the following commands:
 
-```cmd
+```console
 net stop wuauserv
 net stop bits
 rd /s /q %windir%\SoftwareDistribution\Download
@@ -66,46 +70,97 @@ net start bits
 net start wuauserv
 ```
 
+After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 2.
+
 ### Step 2: Repair the component store
 
-Use DISM to scan and repair the Windows component store:
+To repair the component store, run the following command at the command prompt:
 
-```cmd
-DISM /Online /Cleanup-Image /ScanHealth
+```console
 DISM /Online /Cleanup-Image /RestoreHealth
 ```
 
-> [!NOTE]
-> The `/RestoreHealth` command requires access to Windows Update or a Windows installation source. For Azure VMs without internet access, you might need to specify a source path using the `/Source` parameter.
+> [!NOTE]  
+> By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
-### Step 3: Run the System File Checker
+After you run this command, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
 
-After repairing the component store, verify and repair system files:
+### Step 3: Check system file integrity
 
-```cmd
+To verify the integrity of the system files, run the following command at the command prompt:
+
+```console
 sfc /scannow
 ```
 
-If `sfc` reports that it found and repaired files, restart the VM and retry the update.
+If this command identifies issues, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e).
+
+After this command finishes without errors, restart the computer. Try again to install the update. If it still doesn't install, go to step 4.
 
 ### Step 4: Check disk integrity
 
-Verify the disk doesn't have file system errors:
+To check for disk issues, follow these steps:
 
-```cmd
-chkdsk C: /f /r
-```
+1. On the affected computer, open a Command Prompt window, and run the following command:
 
-> [!IMPORTANT]
-> This command requires a restart to run on the system volume. Schedule the check and restart the VM.
+   ```console
+   chkdsk C: /f /r
+   ```
 
-### Step 5: For Azure VMs
+1. When prompted, confirm that you want to scan the operating system disk when the computer restarts.
+1. Restart the computer.
+   The tool automatically repairs any problems that it finds.
 
-Before attempting offline repair, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run it directly from the Azure portal via **Run Command** without needing RDP access. This tool resets the Windows Update servicing stack by clearing corrupted cache folders and re-registering DLLs.
+   > [!IMPORTANT]
+   > If the affected computer is an Azure VM, and you use the Azure portal to monitor and remediate disk health, go to the next step of this procedure. You still have to restart the VM that uses the disk.
 
-If the reset tool doesn't resolve the issue or the VM is unresponsive, use an offline repair approach:
+1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-1. Use [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to create a repair VM.
-2. Attach the affected OS disk.
-3. Run `chkdsk`, `DISM`, and `sfc` against the offline disk.
-4. Swap the repaired disk back to the original VM.
+   - If the affected computer is a VM, go to step 5.
+   - Contact Microsoft Support for assistance.
+
+
+### Step 5: Use the Run Command reset tool (Azure)
+
+If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
+
+This tool resets the Windows Update servicing stack. This action clears memory-related lock states in the update agent.
+
+After you run the tool, try again to install the update. If it still doesn't install, go to step 6.
+
+### Step 6: Use a repair VM (Azure)
+
+If the reset tool doesn't fix the issue, or the VM can't start:
+
+1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
+
+1. Attach the affected operating system disk to the repair VM.
+
+1. Make sure that you have an offline operating system image available, and then run the following command at the command prompt:
+
+   ```console
+   DISM /Image:<Drive>:\ /Cleanup-Image /RestoreHealth
+   ```
+
+   > [!NOTE]  
+   > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
+   > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
+
+1. Run the following command at the command prompt:
+
+   ```console
+   chkdsk <Drive>: /f /r
+   ```
+
+   > [!NOTE]  
+   > In this command, \<Drive> represents the drive letter of the affected operating system disk.
+
+1. To verify the integrity of the system files, run the following command at the command prompt:
+
+   ```console
+   sfc /scannow /offwindir \<Drive>:%windir%
+
+
+1. Reattach the repaired disk to the original VM.
+
+1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
