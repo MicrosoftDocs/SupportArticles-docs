@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error `0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED)` indicates that Windows can't read or process the files that are required to install an update. This error typically occurs because of corrupted update cache files, a damaged Windows component store, disk errors, or interference from security software. This article describes the symptoms and causes of this error, and provides steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
+Windows Update error `0x80070570 (ERROR_FILE_OR_DIRECTORY_CORRUPTED)` indicates that Windows can't read or process the files that are required to install an update. This error typically occurs because of corrupted update cache files, a damaged Windows component store, disk errors, or interference from security software. This article describes the symptoms and causes of this error, and provides steps to resolve it on supported versions of Windows client, Windows Server, and Microsoft Azure Virtual Machines (VMs).
 
 ## Symptoms
 
@@ -43,7 +43,7 @@ To get more information, review the following resources:
 
 ## Cause
 
-This error occurs when one of the following conditions exists:
+This error occurs if one of the following conditions exists:
 
 - Downloaded update files in the %windir%\SoftwareDistribution\Download folder are corrupted.
 - The Windows component store (in the %windir%\WinSxS folder) contains corrupted manifests or files.
@@ -61,7 +61,7 @@ This error occurs when one of the following conditions exists:
 
 ### Step 1: Clear the Windows Update cache
 
-To delete corrupted download files and force Windows Update to download new copies, open a Command Prompt window and then run the following commands:
+To delete corrupted download files and force Windows Update to download new copies, open a Command Prompt window, and then run the following commands:
 
 ```console
 net stop wuauserv
@@ -71,7 +71,7 @@ net start bits
 net start wuauserv
 ```
 
-After you run these commands, restart the computer, and try again to install the update. If it still doesn't install, go to step 2.
+After you run these commands, restart the computer, and try again to install the update. If the update still doesn't install, go to step 2.
 
 ### Step 2: Repair the component store
 
@@ -84,7 +84,7 @@ DISM /Online /Cleanup-Image /RestoreHealth
 > [!NOTE]  
 > By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
-After you run this command, restart the computer, and try again to install the update. If it still doesn't install, go to step 3.
+After you run this command, restart the computer, and try again to install the update. If the update still doesn't install, go to step 3.
 
 ### Step 3: Check system file integrity
 
@@ -96,7 +96,7 @@ sfc /scannow
 
 If this command identifies issues, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e).
 
-After this command finishes without errors, restart the computer. Try again to install the update. If it still doesn't install, go to step 4.
+After this command finishes without errors, restart the computer. Try again to install the update. If the update still doesn't install, go to step 4.
 
 ### Step 4: Check disk integrity
 
