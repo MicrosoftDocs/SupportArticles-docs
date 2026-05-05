@@ -45,6 +45,8 @@ landingContent:
             url: scheduling/missing-form-context-bookable-resource.md
           - text: Resources don't display on the schedule board
             url: scheduling/schedule-board-missing-resources.md
+          - text: Schedule board errors due to version mismatches
+            url: scheduling/schedule-board-version-mismatch.md
           - text: Schedule board is slow to load or experiences extreme latency
             url: scheduling/schedule-board-performance.md
           - text: Schedule board shows a blank page or fails to load
@@ -67,12 +69,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Common issues with the Field Service mobile app
-            url: mobile-app/mobile-app-common-issues.md
           - text: Booking timestamp is created with an incorrect time
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
             url: mobile-app/camera-picture-not-focused.md
+          - text: Common issues with the Field Service mobile app
+            url: mobile-app/mobile-app-common-issues.md
           - text: Duplicated inspection responses
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
@@ -91,10 +93,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error on start due to permission or privilege issues
-            url: mobile-app/newux-error-on-start-permission.md
           - text: Error on start due to missing files in the solution
             url: mobile-app/newux-error-on-start-missing-files.md
+          - text: Error on start due to permission or privilege issues
+            url: mobile-app/newux-error-on-start-permission.md
   
   # Card
   - title: Customization
@@ -129,6 +131,7 @@ landingContent:
             url: iot/no-device-history-properties.md
           - text: Troubleshoot issues with IoT capabilities
             url: iot/troubleshoot-iot-issues-logic-app.md
+
 
   # Card
   - title: Documentation and training
