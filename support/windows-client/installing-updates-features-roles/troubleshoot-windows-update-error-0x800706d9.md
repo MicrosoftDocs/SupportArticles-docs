@@ -75,6 +75,8 @@ sc start MpsSvc
 > [!IMPORTANT]  
 > Even if you use Azure Network Security Groups (NSGs) to filter network traffic, you still have to configure and run the Windows Firewall service (MpsSvc). The Windows Update agent depends on the firewall service for internal communication.
 
+After the commands finish running, try again to install the update. If the update still doesn't install, go to step 2.
+
 ### Step 2: Check the Windows Firewall configuration
 
 If the Windows Firewall service fails to start, the registry configuration might be corrupted. To check the registry entry, run the following command at the command prompt of the affected computer:
@@ -89,9 +91,9 @@ If the key is missing or corrupted, reset the firewall service to its default co
 netsh advfirewall reset
 ```
 
-After the commands finish running, try again to install the update. If the update still doesn't install, go to step 2.
+After the commands finish running, try again to install the update. If the update still doesn't install, go to step 3.
 
-### Step 2: Reregister Windows Update components
+### Step 3: Reregister Windows Update components
 
 To reregister the DLLs that the Windows Update agent needs, run the following commands at the command prompt:
 
@@ -113,18 +115,18 @@ net start wuauserv
 
 After the commands finish running, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-- If the affected computer is a VM, go to step 3.
+- If the affected computer is a VM, go to step 4.
 - Contact Microsoft Support for assistance.
 
-### Step 3: Use the Run Command reset tool (Azure)
+### Step 4: Use the Run Command reset tool (Azure)
 
 If the previous steps don't resolve the issue on an Azure VM, try the [Azure VM Windows Update Reset Tool](../../azure/virtual-machines/windows/windows-vm-wureset-tool.md). You can run the tool directly from the VM's Azure portal page by using **Operations** > **Run command**. When you use this method, you don't have to sign in to the VM.
 
 This tool resets the Windows Update servicing stack. This action clears memory-related lock states in the update agent.
 
-After you run the tool, try again to install the update. If it still doesn't install, go to step 4.
+After you run the tool, try again to install the update. If it still doesn't install, go to step 5.
 
-### Step 4: Use a repair VM (Azure)
+### Step 5: Use a repair VM (Azure)
 
 If the reset tool doesn't fix the issue, or the VM can't start:
 
@@ -132,16 +134,7 @@ If the reset tool doesn't fix the issue, or the VM can't start:
 
 1. Attach the affected operating system disk to the repair VM.
 
+1. Start the required services in the offline registry hive.
 
-
-
-
-1. Reattach the repaired disk to the original VM.
 
 1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
-
-
-1. Use [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to create a repair VM.
-2. Attach the affected OS disk to the repair VM.
-3. Start the required services in the offline registry hive.
-
