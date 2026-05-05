@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data transfer and Intune app protection policies
 description: General steps to help troubleshoot when Microsoft Intune app protection policies (APP) to not control data transfer as expected.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: kaushika, roblane
 search.appverid: MET150
 ms.custom: sap:Application Protection - Android\Data transfer to other apps

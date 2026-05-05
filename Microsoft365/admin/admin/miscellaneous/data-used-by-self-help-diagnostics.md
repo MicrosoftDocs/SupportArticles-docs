@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.date: 04/10/2026
 ---
 
-# Data processed by diagnostics run in the Microsoft 365 admin center
+# Data processed by diagnostics that run in the Microsoft 365 admin center
 
 ## Summary
 
@@ -24,10 +24,9 @@ When you run a self-help diagnostic in the Microsoft 365 admin center, a consent
 
 ## Types of data processed by diagnostics
 
-To run a diagnostic, administrators provide specific values needed to troubleshoot an issue, such as a user name, URL, or Meeting ID. Microsoft uses this information to gather additional data that is scoped to those values. This data can be tenant, user, or system-defined
-configuration information.
+To run a diagnostic, administrators provide specific values that are needed to troubleshoot an issue, such as a user name, URL, or Meeting ID. Microsoft uses this information to gather additional data that is scoped to those values. This data can be tenant-defined, user-defined, or system-defined configuration information.
 
-Examples of tenant or user-defined configuration data that might be retrieved include, but is not limited to:
+Examples of tenant-defined or user-defined configuration data that might be retrieved include, but aren't limited to:
 
 - User mailbox folder names
 - User aliases
@@ -40,14 +39,13 @@ Examples of tenant or user-defined configuration data that might be retrieved in
 - Meeting subject lines and titles
 
 > [!IMPORTANT]
-
 > Customer content such as email messages, documents, and chat conversations is **never** accessed by the diagnostic service.
 
 ## Time frame for which data is retained
 
-The data that is processed by the support systems is automatically removed after the diagnostic process is complete. This data is not retained for use beyond the scope of the specific diagnostic that you run.
+The data that the support systems process is automatically removed after the diagnostic process is finished. This data isn't retained for use beyond the scope of the specific diagnostic that you run.
 
-## Related diagnostic resources
+## Diagnostics available in the Microsoft 365 admin center
 
 For a full list of self-help diagnostics by product area, see the following articles:
 

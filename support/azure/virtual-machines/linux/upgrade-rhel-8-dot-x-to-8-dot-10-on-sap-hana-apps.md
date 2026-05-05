@@ -12,6 +12,8 @@ ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 While Red Hat Enterprise Linux (RHEL) for SAP 8.*x* (where *x* isn't equal to 10) can be accessed in Extended Update Services for SAP Solutions (E4S) and Extended Update Support (EUS), RHEL for SAP 8.10 follows a different approach. In this case, the related content is available in unversioned repositories. As a result, updating a RHEL 8.*x* system running SAP to RHEL 8.10 requires several manual steps.
 
 This article provides the steps to upgrade Linux virtual machines (VMs) that use RHEL-SAP-HANA or RHEL-SAP-APPS pay-as-you-go (PAYG) images from 8.*x* to 8.10.

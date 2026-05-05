@@ -8,7 +8,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot

@@ -13,6 +13,10 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 4023409
 
+## Summary
+
+This article describes an issue in which the GPU functionality is disabled after you upgrade Azure N-Series VMs that are running Ubuntu 16.04 LTS to 4.4.0-75 version of the Linux kernel. Additionally, an error is logged in the serial output log.
+
 ## Symptoms
 
 After you upgrade Azure N-Series VMs that are running Ubuntu 16.04 LTS to 4.4.0-75 version of the Linux kernel, the GPU functionality is disabled. Additionally, the following error is logged in the serial output log:

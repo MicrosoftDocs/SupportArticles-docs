@@ -15,7 +15,7 @@ items:
       href: administration/date-window-fields-missing.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
-    - name: Inspection flows aren't triggered 
+    - name: Inspection flows don't trigger 
       href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
@@ -92,7 +92,9 @@ items:
     - name: Schedule board is slow to load or experiences extreme latency
       href: scheduling/schedule-board-performance.md
     - name: Schedule board shows a blank page or fails to load
-      href: scheduling/schedule-board-not-loading.md  
+      href: scheduling/schedule-board-not-loading.md
+    - name: Schedule board errors due to version mismatches
+      href: scheduling/schedule-board-version-mismatch.md  
 
 - name: Work order
   items:

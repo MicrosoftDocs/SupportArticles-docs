@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot VPN profile issues
 description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs and see some common issues and resolutions.
-ms.date: 02/11/2025
+ms.date: 03/30/2026
 ms.reviewer: jarrettr, v-six
 ms.custom: sap:Configure Devices - Windows\VPN settings
 ---

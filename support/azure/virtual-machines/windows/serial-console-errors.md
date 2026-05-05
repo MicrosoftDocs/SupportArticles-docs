@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article lists common error messages that you might see within the Azure Serial Console, and provides steps to mitigate the errors.
 
 > [!NOTE]

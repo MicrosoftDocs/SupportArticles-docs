@@ -15613,6 +15613,250 @@
     {
       "source_path": "support/developer/visualstudio/cpp/libraries/stl-queue-member-functions.md",
       "redirect_url": "/cpp/standard-library/queue-class"
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/applications-not-deployed-to-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/applications-not-deployed-to-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/app-management/deployment-type-changes-deployed-unexpectedly.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/deployment-type-changes-deployed-unexpectedly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/conversion-failed-upgrade-version-1810.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/conversion-failed-upgrade-version-1810",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/mac-client-registration-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/mac-client-registration-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/clients-not-receive-policy-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/clients-not-receive-policy-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/invalid-data-error-import-mof-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/invalid-data-error-import-mof-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/multiple-instances-of-unknown-computers-collection.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/multiple-instances-of-unknown-computers-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/remote-control-fails-error-c000012.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/remote-control-fails-error-c000012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/cloud-services/contributor-role-not-assigned-for-web-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/console-management/windows-10-servicing-dashboard-empty.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-10-servicing-dashboard-empty",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/app-v-apps-not-streamed-from-dp.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/app-v-apps-not-streamed-from-dp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/boot-image-distribution-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/boot-image-distribution-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/content-distribution-idispatch-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/content-distribution-idispatch-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/deployment-property-change-not-saved.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/deployment-property-change-not-saved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/slow-dp-installation-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/slow-dp-installation-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/use-neighbor-boundary-group-dp.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/use-neighbor-boundary-group-dp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/windows-installer-source-list-update-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/windows-installer-source-list-update-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/drs-performance-issue-after-installing-hotfix-3125525",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/capture-user-state-task-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/capture-user-state-task-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/computer-hangs-task-sequence-debug-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/computer-hangs-task-sequence-debug-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/custom-port-settings-not-added-to-boot-media.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/custom-port-settings-not-added-to-boot-media",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/debug-deployment-not-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/debug-deployment-not-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/get-network-captures-from-task-sequence.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/get-network-captures-from-task-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/insufficient-permissions-to-migrate-driver-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/insufficient-permissions-to-migrate-driver-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/osdresults-not-display-installed-applications.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/osdresults-not-display-installed-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/task-sequence-fails-error-0x87d01004.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/task-sequence-fails-error-0x87d01004",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment/task-sequence-stops-after-in-place-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/task-sequence-stops-after-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/failed-to-find-folder-or-file-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/maintenance-tasks-default-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/maintenance-tasks-default-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/support-policy-for-manual-database-changes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/bad-gateway-error-deploy-software-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/bad-gateway-error-deploy-software-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/different-software-updates-results-displayed.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/different-software-updates-results-displayed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/application-could-not-be-wrapped.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/application-could-not-be-wrapped",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/apps-fail-sync-to-intune.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/apps-fail-sync-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/corporate-data-unsaved-in-wip-allowed-apps.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/corporate-data-unsaved-in-wip-allowed-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/creating-message-action-not-allowed.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/creating-message-action-not-allowed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/mismatch-error-configuration-value-ampersand.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/mismatch-error-configuration-value-ampersand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/no-notification-microsoft365-apps-macos-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/no-notification-microsoft365-apps-macos-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/onedrive-attaches-corporate-protected-data-imessage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-configuration/sip-address-password-not-saved.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/sip-address-password-not-saved",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-management/help-desk-operator-fails-remote-tasks.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/help-desk-operator-fails-remote-tasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-management/intune-managed-ios-device-backup-encrypted.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/intune-managed-ios-device-backup-encrypted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/could-not-retrieve-access-token.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/could-not-retrieve-access-token",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/intune-licensed-users-prompted-to-enroll.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/intune-licensed-users-prompted-to-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-protection/unable-to-connect-send-inventory-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/unable-to-connect-send-inventory-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/general/nac-integration-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/intune/nac-integration-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/relocation-of-users-and-programdata-directories.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/servicing-fails-moved-user-profile-programdata-folders",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/database-engine-input-output-requirements.md",
+      "redirect_url": "/sql/relational-databases/sql-server-storage-guide"
     }
   ]
 }

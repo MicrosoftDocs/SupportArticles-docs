@@ -11,9 +11,9 @@ ms.custom:
   - CI 106750
   - CSSTroubleshoot
   - CI 10882
-ms.reviewer: iuliam, akeeler, lisalozano
+ms.reviewer: iuliam, akeeler, v-lisalozano
 appliesto: 
-  - Microsoft 365 
+  - Excel for Microsoft 365
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016

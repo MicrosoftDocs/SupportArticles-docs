@@ -20,6 +20,8 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
+## Summary
+
 This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) VMs in Azure.
 
 This article will walk through using monitoring to diagnose Performance bottlenecks.
@@ -79,7 +81,7 @@ Steadily Increasing – A constant increase in consumption is often either ineff
 
 ### High CPU utilization remediation
 
-If your application or process isn’t running optimally and CPU usage stays above 95%, you can perform either of the following tasks:
+If your application or process isn't running optimally and CPU usage stays above 95%, you can perform either of the following tasks:
 
 * For immediate relief - Increase the size of the VM to a size with more cores
 * Understand the issue – locate application/process and troubleshoot accordingly.

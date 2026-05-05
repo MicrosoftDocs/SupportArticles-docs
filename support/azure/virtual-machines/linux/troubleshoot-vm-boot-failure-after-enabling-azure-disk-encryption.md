@@ -10,6 +10,8 @@ ms.reviewer: divargas, elcorral, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 When you deploy Azure Disk Encryption (ADE) for an Azure Linux virtual machine (VM), various essential settings related to the boot process and system components are modified by editing files. If the ADE deployment fails or is interrupted, the VM might be stuck in emergency mode or unusable, especially when the operating system (OS) disk is encrypted.
 
 This article lists common scenarios where a Linux VM fails to boot after an ADE deployment and provides steps to troubleshoot the issue.

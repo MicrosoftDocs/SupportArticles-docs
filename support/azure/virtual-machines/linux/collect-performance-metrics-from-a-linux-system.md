@@ -21,6 +21,8 @@ ms.date: 02/06/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Summary
+
 This article describes how to retrieve performance metrics from a Linux virtual machine (VM) in Microsoft Azure by using the Sysstat utilities (performance monitoring tools). It provides examples of how to use these utilities and read their outputs.
 
 Several commands are available for collecting performance counters on Linux. Commands like `vmstat` and `uptime` provide essential system metrics such as CPU usage, system memory, and system load. Most of these commands are preinstalled by default, while others can be easily accessed from the default repositories.

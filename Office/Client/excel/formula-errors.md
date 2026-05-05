@@ -12,9 +12,9 @@ ms.custom:
   - CI 10882
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: akeeler, lisalozano
+ms.reviewer: akeeler, v-lisalozano
 appliesto: 
-  - Microsoft 365 
+  - Excel for Microsoft 365 
   - Microsoft Excel 2024 
   - Microsoft Excel 2021 
   - Microsoft Excel 2016

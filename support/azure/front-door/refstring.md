@@ -7,6 +7,7 @@ ms.author: jarrettr
 ms.service: azure-frontdoor 
 ms.topic: troubleshooting
 ms.date: 12/03/2024
+ms.custom: sap:Connectivity
 
 #CustomerIntent: As a web developer, I want troubleshoot my web application using a Reference String.
 ---
