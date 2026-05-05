@@ -483,7 +483,7 @@ First, ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE
 
 Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow RC4 Kerberos ticket encryption.
 
-Then, clear get the distinguished name of the AD object representing the storage account, using the following PowerShell commands.
+Then, get the distinguished name of the AD object representing the storage account, using the following PowerShell commands.
 
 ```PowerShell
 $StorageAccountName = "<storage-account-name-here>"
