@@ -148,13 +148,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine which object needs the right permissions, and change the permissions as appropriate. For more information, see [Troubleshoot Windows Update error 0x80070005](troubleshoot-windows-update-error-0x80070005.md). |
+| E_ACCESSDENIED; General access denied error | File system or registry key permissions have been changed and the servicing stack doesn't have the required level of access. | This error generally means that access was denied.<br> Go to *%Windir%\\logs\\CBS*, open the last *CBS.log*, search for `, error`, and match with the timestamp. After you find the error, scroll up, and try to determine what caused the access denial. It could be access denied to a file, registry key. Determine which object needs the right permissions, and change the permissions as appropriate. |
 
 ## 0x80070570
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
+| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. For more information, see [Troubleshoot Windows Update error 0x80070570](troubleshoot-windows-update-error-0x80070570.md). |
 
 ## 0x80070003
 
