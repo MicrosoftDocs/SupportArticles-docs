@@ -1,10 +1,11 @@
 ---
 title: Configuration Manager in-console update fails at the Install Files stage
-description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from EasySetupPayload or CMUStaging.
-author: ErshovIS
-ms.author: iliaershov
-ms.date: 04/21/2026
+description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from the EasySetupPayload or CMUStaging folders.
+
+ms.date: 05/07/2026
 ms.topic: troubleshooting
+ms.reviewer: kaushika, iliaershov
+ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 
 # Configuration Manager in-console update fails at the Install Files stage because required files are missing
