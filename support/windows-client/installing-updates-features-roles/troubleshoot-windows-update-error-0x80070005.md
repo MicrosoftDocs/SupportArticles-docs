@@ -150,7 +150,7 @@ To make sure that third-party applications or drivers don't interfere in the upd
 
 1. After the tool finishes, restart the computer, and try again to install the update. If the update still doesn't install, take one of the following actions:
 
-   - If the list includes more than one non-Microsoft filter driver, repeat step 6c to unload each of these drivers, and then try again to install the update.
+   - If the list includes more than one non-Microsoft filter driver, repeat the `fltmc unload` command to unload each of these drivers, and then try again to install the update.
    - If the affected computer is a VM, go to step 7.
    - Contact Microsoft Support for assistance.
 
