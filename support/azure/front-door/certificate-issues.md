@@ -154,11 +154,11 @@ Key Vault permissions use two models. Choose the model that fits your scenario, 
 
 **Use Managed Identity to grant Front Door access to your Key Vault (recommended)**  
 
-If you initially created your custom domain by using a managed identity model to grant Front Door permissions to get your certificate from your Key Vault, follow the instructions in [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity#configure-key-vault-access) to make sure that the Managed Identity still has access.
+You might initially create your custom domain by using a managed identity model to grant Front Door permissions to get your certificate from your key vault. In this case, follow the instructions in [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity#configure-key-vault-access) to make sure that the Managed Identity still has access.
 
 **Use Service Principal to grant Front Door access to your Key Vault (legacy method)**  
         
-If you used this method to initially create your custom domain and deploy the certificate, follow the instruction in [Grant Azure Front Door access to your key vault](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#grant-azure-front-door-access-to-your-key-vault) to make sure that the permissions are still granted.
+You might use this method to initially create your custom domain and deploy the certificate. In this case, follow the instruction in [Grant Azure Front Door access to your key vault](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#grant-azure-front-door-access-to-your-key-vault) to make sure that the permissions are still granted.
 
 ### Mismatches between the Common Name (CN) or Subject Alternate Name (SAN) and the custom domain
 
