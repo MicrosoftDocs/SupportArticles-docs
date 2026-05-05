@@ -1,7 +1,6 @@
 ---
 title: Configuration Manager in-console update fails at the Install Files stage
 description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from the EasySetupPayload or CMUStaging folders.
-
 ms.date: 05/07/2026
 ms.topic: troubleshooting
 ms.reviewer: kaushika, iliaershov
@@ -11,6 +10,9 @@ ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Rec
 # Configuration Manager in-console update fails at the Install Files stage because required files are missing
 
 _Original product version:_ Configuration Manager (current branch)
+## Summary
+
+This article helps you resolve an issue in which a Configuration Manager in-console update fails at the Install Files stage. This failure occurs when required redistributable files are missing from the EasySetupPayload or CMUStaging folders on the service connection point or site server. Follow the steps in this article to identify which files are missing and restore them so that the update can complete successfully.
 
 ## Symptoms
 
@@ -54,7 +56,7 @@ The steps to resolve this issue depend on which folder is missing files (or if f
 1. Verify whether the required files exist in the EasySetupPayload folder, in either the online mode or offline mode locations.
 1. Verify whether the required files exist in the CMUStaging folder.
 
-After continue to the scenario that matches your findings:
+After you finish these steps, continue to the scenario that matches your findings:
 
 - [Scenario 1: Files are missing in the EasySetupPayload folder](#scenario-1-files-are-missing-in-the-easysetuppayload-folder)
 - [Scenario 2: Files are present in the EasySetupPayload folder but missing in the CMUStaging folder](#scenario-2-files-are-present-in-the-easysetuppayload-folder-but-missing-in-the-cmustaging-folder)
@@ -72,7 +74,7 @@ For an online SCP, follow these steps:
 1. Try again to download the package from the console. You can download the package manually, or follow these steps to use the [Update reset tool (CMUpdateReset.exe)](/intune/configmgr/core/servers/manage/update-reset-tool).
 
    > [!NOTE]  
-   > Because the update already passed the replication phase, you typically have to change the update state before you can use the Update reset tool.
+   > Because the update already passed the replication phase, you typically have to change the update state before you can use the update reset tool.
 
    1. On a server that hosts the SMS Provider, open a Windows PowerShell Command Prompt window and then run the following cmdlets:
 
@@ -89,7 +91,7 @@ For an online SCP, follow these steps:
 
    The update status should now be "Download failed."
 
-   1. Download the update by using the Update reset tool tool.
+   1. Download the update by using the update reset tool.
 
 1. Review the following log files:
 
