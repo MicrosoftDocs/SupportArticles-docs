@@ -39,7 +39,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative update name | Product version | Knowledge Base number                                   | Release date        |
 |------------------------|-----------------|---------------------------------------------------------|--------------------|
-| SP3 + GDR              | 13.0.6490.0     | [KB5089271](https://support.microsoft.com/help/5089271) | May 12, 2026   |
+| SP3 + GDR              | 13.0.6490.1     | [KB5089271](https://support.microsoft.com/help/5089271) | May 12, 2026   |
 | SP3 + GDR              | 13.0.6485.1     | [KB5084821](https://support.microsoft.com/help/5084821) | April 14, 2026   |
 | SP3 + GDR              | 13.0.6480.4     | [KB5077474](https://support.microsoft.com/help/5077474) | March 10, 2026   |
 | SP3 + GDR              | 13.0.6475.1     | [KB5068401](https://support.microsoft.com/help/5068401) | November 11, 2025   |
