@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Front Door certificate problems
-description: Troubleshoot Azure Front Door certificate problems, including intermittent *.azureedge.net certificates and expired custom domain certificates. Fix them now.
+description: Troubleshoot Azure Front Door certificate problems, including intermittent *.azureedge.net certificates and expired custom domain certificates.
 author: halkazwini
 ms.author: halkazwini
 ms.service: azure-frontdoor
@@ -15,79 +15,81 @@ ms.custom: sap:Configuration and setup
 
 This article describes how to troubleshoot some common problems you might encounter with certificates on Azure Front Door.
 
-## \*.azureedge.net certificate intermittently returned 
+## Common problems
 
-### Symptoms
+### \*.azureedge.net certificate intermittently returned 
 
-- Requests sent to your custom domain through Front Door sometimes get a certificate error, with a `*.azureedge.net` certificate returned instead of the expected one.
+#### Symptoms
 
-- The failures happen in a specific geographic area.
+- Requests that are sent to your custom domain through Front Door sometimes generate a certificate error and return a `*.azureedge.net` certificate instead of the expected one.
 
-### Cause
+- This problem occurs in a specific geographic area.
+
+#### Cause
 
 This problem can occur for one of the following reasons:
 
-- You just deployed the custom domain and the certificate is still propagating to all the Front Door edge servers.
+- You just deployed the custom domain, and the certificate is still propagating to all the Front Door edge servers.
 
 - One of the Front Door edge servers doesn't have the expected certificate loaded.
 
-#### Troubleshooting steps
+#### Troubleshooting
 
 **You just deployed the custom domain and the certificate is still propagating to all the Front Door edge servers**
 
-Wait up to an hour for the new certificate to fully propagate.
+Wait up to one hour for the new certificate to fully propagate.
 
 **One of the Front Door edge servers doesn't have the expected certificate loaded**
 
-Follow these steps to confirm that the certificate is deployed correctly to all Front Door edge servers:
+To verify that the certificate is deployed correctly to all Front Door edge servers, follow these steps:
 
-1. In the [Azure portal](https://portal.azure.com), check the deployment status for the custom domain to ensure the **Certificate state** is **Deployed**.
+1. In the [Azure portal](https://portal.azure.com), check the deployment status for the custom domain to make sure that the **Certificate state** is **Deployed**.
 
-:::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot of the Certificate state shown as Deployed in Azure portal." lightbox="media/certificate-issues/certificate-state.png":::
+   :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot of the Certificate state shown as Deployed in Azure portal." lightbox="media/certificate-issues/certificate-state.png":::
 
-1. In a browser from an impacted user, access the site. View the certificate and confirm it's: `*.azureedge.net`.
+1. In a browser from an affected user, access the site. View the certificate, and verify that it's: `*.azureedge.net`.
 
-:::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot of the certificate viewer showing a *.azureedge.net certificate." lightbox="media/certificate-issues/certificate-viewer.png":::
+   :::image type="content" source="media/certificate-issues/certificate-viewer.png" alt-text="Screenshot of the certificate viewer showing a *.azureedge.net certificate." lightbox="media/certificate-issues/certificate-viewer.png":::
 
-1. Continue to load the site while capturing the traffic in the browser by using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting purposes.
+1. Continue to load the site while you capture the traffic in the browser by using your browser's [developer tools](/microsoft-edge/devtools/overview). You might have to temporarily bypass any certificate errors to load the site for troubleshooting.
 
-1. Ensure the response headers contain an `x-azure-ref` header to show that the request went to Front Door.
+1. Make sure that the response headers contain an `x-azure-ref` header to show that the request went to Front Door.
 
-:::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot of browser response headers showing the x-azure-ref value." lightbox="media/certificate-issues/azure-ref.png":::
+   :::image type="content" source="media/certificate-issues/azure-ref.png" alt-text="Screenshot of browser response headers showing the x-azure-ref value." lightbox="media/certificate-issues/azure-ref.png":::
 
 1. Create a support request if the following conditions are true:
 
-  - The custom domain is deployed successfully for at least an hour.
+   - The custom domain is deployed successfully for at least one hour.
   
-  - Impacted users are intermittently getting a `*.azureedge.net` certificate instead of the expected custom domain certificate.
+   - Affected users intermittently receive a `*.azureedge.net` certificate instead of the expected custom domain certificate.
     
-  - The response from the site contains `x-azure-ref` headers showing that the traffic was handled by Front Door.
+   - The response from the site contains `x-azure-ref` headers. This condition indicates that the traffic was handled by Front Door.
 
-Include all your gathered data in the support request, including the geographic area where users are impacted.
+Include all your gathered data in the support request, including the geographic area where users are affected.
 
-## The returned certificate for a custom domain is expired
+### The returned certificate for a custom domain is expired
 
-### Symptoms
+#### Symptoms
 
-- Requests sent to your custom domain through Front Door get an expired certificate and fail.
+- Requests that are sent to your custom domain through Front Door get an expired certificate and fail.
 
 - The certificate for the custom domain isn't expired.
 
-### Cause
+#### Cause
 
-This problem can occur for one of the following reasons:
+This problem might occur for one of the following reasons:
 
-- The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Front Door endpoint hostname.
+- The custom domain uses a managed certificate, but there's no CNAME that delegates the custom domain to the Front Door endpoint hostname.
 
-- The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate isn't rotated in the Key Vault.
+- The custom domain uses a certificate that's deployed from an Azure Key Vault, but the certificate isn't rotated in the Key Vault.
 
-#### Troubleshooting steps
+#### Troubleshooting
 
 **The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Front Door endpoint hostname**
 
-Perform the following steps to confirm that the CNAME for the custom domain is correctly pointing to the Front Door endpoint:
+To verify that the CNAME for the custom domain is correctly pointing to the Front Door endpoint, follow these steps:
 
-1. Test DNS resolution of the custom domain by using a DNS lookup tool like `dig`. Confirm that your custom domain has no direct CNAME to the Front Door endpoint. The following example of a `dig` query shows that the custom domain doesn't currently resolve to a CNAME pointing to the Front Door endpoint:
+1. Test DNS resolution of the custom domain by using a DNS lookup tool such as `dig`. Verify that your custom domain has no direct CNAME to the Front Door endpoint. The following example of a `dig` query shows that the custom domain doesn't currently resolve to a CNAME that points to the Front Door endpoint:
 
 ```
       dig contoso.fabrikam.com CNAME
@@ -111,63 +113,58 @@ Perform the following steps to confirm that the CNAME for the custom domain is c
       ;; WHEN: Fri Mar 06 16:18:53 CST 2026
       ;; MSG SIZE rcvd: 132
 ```
-      
 
-1. If the CNAME is missing, go to **Settings** > **Domains** in your Front Door profile and select the link associated with the DNS state.
+1. If the CNAME is missing, go to **Settings** > **Domains** in your Front Door profile, and then select the link that's associated with the DNS state.
   
    :::image type="content" source="media/certificate-issues/dns-state.png" alt-text="Screenshot of the DNS state for a Front Door custom domain." lightbox="media/certificate-issues/dns-state.png":::
   
-1. Either add the record to the linked Azure DNS zone or make a note of the required values so you can add this record manually with your DNS provider.
+1. Either add the record to the linked Azure DNS zone or note the required values so that you can add this record manually through your DNS provider.
     
-1. To expedite creation of a new certificate, you can refresh the validation token. See the following example of the [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) Azure PowerShell cmdlet for reference:
+1. To expedite creation of a new certificate, refresh the validation token. See the following example of the [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) Azure PowerShell cmdlet for reference:
 
 ```azurepowershell
       Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
 ```
 
-1. When this command finishes, update your DNS zone with the new TXT record value to validate the new certificate.
+1. After this command finishes, update your DNS zone by using the new TXT record value to validate the new certificate.
 
-The custom domain uses a certificate deployed from an Azure Key Vault, but the certificate doesn't rotate automatically in the Key Vault. One reason the certificate might not rotate is that the version isn't the latest when creating the secret in the Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation).
+The custom domain uses a certificate that's deployed from an Azure Key Vault. However, the certificate doesn't rotate automatically in the key vault. One reason that certificate might not rotate is that the certificate version isn't the latest when you create the secret in the Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation).
 
-1. Go to **Security** > **Secrets** and check the version listed for the certificate.
+1. Go to **Security** > **Secrets** to check the version number that's listed for the certificate.
 
    :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot of a Front Door secret configured to use the latest certificate version." lightbox="media/certificate-issues/secret-version-latest.png":::
 
-1. If the certificate version listed isn't the latest, create a new secret in the Front Door profile by using the same Key Vault certificate and select either **Latest** or the most recent specific version.
+1. If the listed certificate version isn't the latest, create a new secret in the Front Door profile by using the same Key Vault certificate, and select either **Latest** or the most recent specific version.
 
-1. Associate the custom domain with the new secret. When you complete this association, your certificate is deployed within 24 hours.
+1. Associate the custom domain with the new secret. After you complete this association, your certificate is deployed within 24 hours.
 
-## Changes in Key Vault access permissions
+### Changes in Key Vault access 
 
-### Cause
+#### Symptoms
 
-Front Door might not rotate a certificate updated in Key Vault due to changes in Key Vault access permissions. 
+You experience changes in Key Vault access permissions.
 
-### Solution
+#### Cause
 
-Key Vault permissions use two models. Choose the model that fits your scenario and check that the permissions are still set on Key Vault.
+Front Door might not rotate a certificate that's updated in Key Vault because of changes in Key Vault access permissions. 
+
+#### Troubleshooting
+
+Key Vault permissions use two models. Choose the model that fits your scenario, and check that the permissions are still set on Key Vault.
 
 **Use Managed Identity to grant Front Door access to your Key Vault (recommended)**  
-        
-If you initially created your custom domain by using a managed identity model to grant Front Door permissions to get your certificate from your Key Vault, follow the instructions in [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity#configure-key-vault-access) to ensure the Managed Identity still has access.
+
+If you initially created your custom domain by using a managed identity model to grant Front Door permissions to get your certificate from your Key Vault, follow the instructions in [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity#configure-key-vault-access) to make sure that the Managed Identity still has access.
 
 **Use Service Principal to grant Front Door access to your Key Vault (legacy method)**  
         
-If you used this method to initially create your custom domain and deploy the certificate, follow the instruction in [Grant Azure Front Door access to your key vault](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#grant-azure-front-door-access-to-your-key-vault) to ensure that the permissions are still granted.
+If you used this method to initially create your custom domain and deploy the certificate, follow the instruction in [Grant Azure Front Door access to your key vault](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#grant-azure-front-door-access-to-your-key-vault) to make sure that the permissions are still granted.
 
-## Mismatches between the Common Name (CN) or Subject Alternate Name (SAN) and the custom domain
+### Mismatches between the Common Name (CN) or Subject Alternate Name (SAN) and the custom domain
 
-### Causes
+#### Symptoms    
 
-Like any system that uses certificates,  Front Door requires that the CN (or SAN, if present) matches the custom domain hostname. It's important to understand how certificates determine which domains they're valid for. An `X.509` certificate binds a public key to one or more domain names using the CN and SAN fields. Historically, the CN specified the primary domain, but modern TLS clients and browsers rely on the SAN field instead.  
-        
-Today, if a certificate includes a SAN extension, it becomes the authoritative source for domain validation. Front Door checks whether the hostname (for example, `api.contoso.com`) matches any entry listed in the SAN. Only if the SAN field is absent, Front Door falls back to evaluating the CN. This condition means that even if the CN matches the hostname, the rotation fails if a SAN exists and doesn't include that hostname.  
-        
-Wildcard certificates can simplify domain coverage, but they follow strict rules. For example, a wildcard like `*.contoso.com` matches `api.contoso.com` or `www.contoso.com`, but it doesn't match deeper subdomains like `sub.api.contoso.com` or the root domain `contoso.com`. Wildcards only apply to a single subdomain level which can be a common source of confusion.  
-    
-### Symptoms    
-
-Most hostname mismatch problems come from a few common issues: 
+Most hostname mismatch problems are caused by a few common conditions: 
 
 - The required domain isn't listed in the SAN. 
 - A wildcard is used incorrectly. 
@@ -175,12 +172,19 @@ Most hostname mismatch problems come from a few common issues:
 
 This problem can also occur if the new certificate uses a different root that Front Door doesn't accept.
 
-### Solution
+#### Cause
 
-Verify that the issuing CA isn't an internal CA or a self-signed certificate. Make sure the root for the certificate is from the list of [Allowed CAs](https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT).
+Similar to any system that uses certificates, Front Door requires that the CN (or SAN, if present) matches the custom domain hostname. It's important to understand how certificates determine which domains they're valid for. An `X.509` certificate binds a public key to one or more domain names that use the CN and SAN fields. Historically, the CN specified the primary domain, but modern TLS clients and browsers rely on the SAN field, instead.  
+        
+Today, if a certificate includes a SAN extension, it becomes the authoritative source for domain validation. Front Door checks whether the hostname (for example, `api.contoso.com`) matches any entry listed in the SAN. Only if the SAN field is absent does Front Door fall back to evaluating the CN. This condition means that even if the CN matches the hostname, the rotation fails if a SAN exists and doesn't include that hostname.  
+        
+Wildcard certificates can simplify domain coverage, but they follow strict rules. For example, a wildcard such as `*.contoso.com` matches `api.contoso.com` or `www.contoso.com`, but it doesn't match deeper subdomains such as `sub.api.contoso.com` or the root domain, `contoso.com`. Wildcards  apply to only a single subdomain level. This limitation can be a common source of confusion.  
+    
+#### Troubleshooting
+
+Verify that the issuing CA isn't an internal CA or a self-signed certificate. Make sure that the root for the certificate is from the list of [Allowed CAs](https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT).
 
 ## References
 
 - [Troubleshoot Azure Front Door common issues](troubleshoot-issues.md)
 - [Azure Front Door FAQ](/azure/frontdoor/front-door-faq)
-
