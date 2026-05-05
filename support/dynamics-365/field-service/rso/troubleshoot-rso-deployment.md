@@ -1,7 +1,7 @@
 ---
 title:  Troubleshoot Resource Scheduling Optimization add-in deployment issues
 description: Resolves issues with deployments of the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.reviewer: anclear, v-wendysmith
+ms.reviewer: anclear, v-wendysmith, v-shaywood
 ms.date: 05/04/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---

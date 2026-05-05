@@ -63,7 +63,7 @@ landingContent:
             url: work-order/work-order-creation-errors.md
           - text: Work order status doesn't change as expected
             url: work-order/work-order-status-stuck.md
- 
+
   # Card
   - title: Mobile app
     linkLists:
@@ -121,7 +121,7 @@ landingContent:
             url: rso/troubleshoot-bookings-in-rso.md
           - text: '"User lacks privileges" error'
             url: rso/user-lacks-privileges-error.md
-           
+
   # Card
   - title: Connected Field Service
     linkLists:
@@ -131,7 +131,6 @@ landingContent:
             url: iot/no-device-history-properties.md
           - text: Troubleshoot issues with IoT capabilities
             url: iot/troubleshoot-iot-issues-logic-app.md
-
 
   # Card
   - title: Documentation and training

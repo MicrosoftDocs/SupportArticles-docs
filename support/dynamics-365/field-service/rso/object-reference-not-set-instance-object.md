@@ -1,7 +1,7 @@
 ---
 title: Object reference not set to an instance of an object error
 description: Resolves issues related to an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.reviewer: anclear, v-wendysmith
+ms.reviewer: anclear, v-wendysmith, v-shaywood
 ms.date: 05/04/2026
 ms.custom: sap:Resource Scheduling Optimization
 ---
@@ -26,7 +26,7 @@ Typically, this issue occurs when a custom plug-in runs into an unhandled null v
 - A booking-related record.
 - A record that the results of an optimization run could impact.
 
-System customizers can use the plug-in trace log capability to identify which plug-in fails and fix the problem.
+System customizers can use the [plug-in trace log](/power-apps/developer/data-platform/debug-plug-in#use-tracing) capability to identify which plug-in fails and fix the problem.
 
 > [!CAUTION]
 > After debugging, disable the plug-in trace logging as soon as possible to avoid overloading the organization's database.
