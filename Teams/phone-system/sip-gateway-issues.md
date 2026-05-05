@@ -20,6 +20,20 @@ ms.reviewer: scapero, chasing
 
 SIP Gateway enables your organization to use any compatible SIP device together with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
+## If my device auto-offboarded
+
+Paired devices are auto-offboarded if not connected for an extended period and can be onboarded again after a factory reset. 
+
+After the reset, the phone may no longer know where to connect.
+
+Open the phone’s **Admin menu or Web interface**
+
+Go to **Auto Provisioning**
+
+1. Enter the **Microsoft Teams SIP provisioning URL** for your region
+
+Save the configuration and **restart the phone**
+
 ## I can't onboard my device
 
 1. Verify that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
