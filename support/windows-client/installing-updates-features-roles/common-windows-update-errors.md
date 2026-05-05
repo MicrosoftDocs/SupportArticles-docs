@@ -64,7 +64,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| USO_E_SERVICE_SHUTTING_DOWN  | Indicates that the Windows Update Service is shutting down. | This error can occur after a long time of inactivity. The system doesn't respond, causing the service to be idle and, eventually, shut down. Make sure that the system remains active, and the connections remain established to complete the installation. |
+| USO_E_SERVICE_SHUTTING_DOWN | Indicates that the Windows Update Service is shutting down. | This error can occur after a long time of inactivity. The system doesn't respond, causing the service to be idle and, eventually, shut down. Make sure that the system remains active, and the connections remain established to complete the installation. |
 
 ## 0x80240020
 
@@ -82,13 +82,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_DM_UNAUTHORIZED_LOCAL_USER | The download failed because the local user was denied authorization to download the content.  | Ensure that the user attempting to download and install updates has been provided with sufficient privileges to install updates (Local Administrator).|
+| WU_E_DM_UNAUTHORIZED_LOCAL_USER | The download failed because the local user was denied authorization to download the content. | Ensure that the user attempting to download and install updates has been provided with sufficient privileges to install updates (Local Administrator). |
 
 ## 0x8024000B
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_ CALL_CANCELLED | Operation was canceled. | The operation was canceled by the user or service. You might also receive this error message if we can't filter the results. |
+| WU_E_CALL_CANCELLED | Operation was canceled. | The operation was canceled by the user or service. You might also receive this error message if we can't filter the results. |
 
 ## 0x8024000E
 
@@ -118,7 +118,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_ABORT; client abort, IDABORT returned by ICbsUIHandler method except Error() | CBS   transaction timeout exceeded. | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires. Extending the timeout mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has installed the update in KB4493473 or later.|
+| CBS_E_ABORT; client abort, IDABORT returned by `ICbsUIHandler` method except Error() | CBS   transaction timeout exceeded. | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires. Extending the timeout mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has installed the update in KB4493473 or later. |
 
 ## 0x800f0825
 
@@ -184,7 +184,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WININET_E_CONNECTION_ABORTED; The connection with the server was closed abnormally | BITS is unable to transfer the file successfully. | Encountered if BITS is broken or if the file that's being transferred can't be written to the destination folder on the client. This error is caused by connection errors while checking or downloading updates.<br> At a command prompt, run: `BITSADMIN /LIST /ALLUSERS /VERBOSE` <br> Search for the 0x80072EFE error code. You should see a reference to an HTTP code and a specific file. Using a browser, try to download the file manually. Make sure that you use your organization's proxy settings. If the download fails, work with your proxy manager to achive successful communication. Also, check with your network team for this specific URL access. |
+| WININET_E_CONNECTION_ABORTED; The connection with the server was closed abnormally | BITS is unable to transfer the file successfully. | Encountered if BITS is broken or if the file that's being transferred can't be written to the destination folder on the client. This error is caused by connection errors while checking or downloading updates.<br> At a command prompt, run: `BITSADMIN /LIST /ALLUSERS /VERBOSE` <br> Search for the 0x80072EFE error code. You should see a reference to an HTTP code and a specific file. Using a browser, try to download the file manually. Make sure that you use your organization's proxy settings. If the download fails, work with your proxy manager to achieve successful communication. Also, check with your network team for this specific URL access. |
 
 ## 0x80072F8F
 
@@ -232,7 +232,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-* |ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by a Group Policy Object (GPO). Group Policy prevented the startup to complete pending operations.|The TrustedInstaller service changes the startup type from **Manual** to **Automatic** if it encounters an update that has to process a transaction after a restart. If the value is reverted to **Manual** before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If this change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and then remove the PendingXMLIdentifier from COMPONENTS Hive.|
+| ERROR_FAIL_REBOOT_REQUIRED | The TrustedInstaller service startup type is set to **Manual** by a Group Policy Object (GPO). Group Policy prevented the startup to complete pending operations. | The TrustedInstaller service changes the startup type from **Manual** to **Automatic** if it encounters an update that has to process a transaction after a restart. If the value is reverted to **Manual** before the restart, the transaction can't be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic**, and restart the computer. If this change doesn't fix the issue, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If this action also has no effect, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and then remove the PendingXMLIdentifier from COMPONENTS Hive. |
 
 ## 0x800706be
 
