@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Windows Update Error 0x800706D9
-description: Learn how to resolve Windows Update error 0x800706D9 (EPT_S_NOT_REGISTERED) that occurs when the RPC endpoint mapper service isn't available.
+description: Discusses how to fix Windows Update error 0x800706D9 (EPT_S_NOT_REGISTERED). This error occurs if required Windows services aren't available.
 manager: dcscontentpm
 audience: itpro
-ms.date: 05/16/2026
+ms.date: 05/07/2026
 ms.topic: troubleshooting
 ms.reviewer: scotro, jarretr, v-gsitser, kaushika, v-appelgatet
 ms.custom:
@@ -19,8 +19,7 @@ appliesto:
 
 ## Summary
 
-Error code `0x800706D9 (EPT_S_NOT_REGISTERED)` indicates that the Remote Procedure Call (RPC) endpoint mapper service isn't available or that a required service endpoint isn't registered. This error prevents Windows Update from communicating with the necessary system services to install updates.
-
+Windows Update error `0x800706D9 (EPT_S_NOT_REGISTERED)` occurs when a required service that Windows Update depends on isn't running or isn't configured correctly. Such services include the the Remote Procedure Call (RPC) service, the RPC Endpoint Mapper service, or the Windows Firewall service. This article describes how to identify the cause of this error and guides you through steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
