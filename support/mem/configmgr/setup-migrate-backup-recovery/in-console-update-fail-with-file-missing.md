@@ -75,11 +75,11 @@ For an online SCP, follow these steps:
 
 1. Try again to download the package from the console. You can download the package manually, or follow these steps to use the [Update reset tool (CMUpdateReset.exe)](/intune/configmgr/core/servers/manage/update-reset-tool).
 
-   1. In the Configuration Manager console, verify that the update package is in the Prerequisite Check or Installation stage.
+   1. In the Configuration Manager console, verify that the update package is in the Prerequisite Check or Installation stage (the two post-replication stages).
    > [!NOTE]  
-   > Because the update already passed the replication phase, you typically have to change the update state before you can use the update reset tool.
+   > Because the update already passed the replication stage, you typically have to change the update state before you can use the update reset tool.
 
-   1. On a server that hosts the SMS Provider, open a Windows PowerShell Command Prompt window, and then run the following cmdlets:
+   1. To change the update state, on a server that hosts the SMS Provider, open a Windows PowerShell Command Prompt window, and then run the following cmdlets:
 
    ```powershell
    $CMUpdateGUID = '<PackageGuid>' # e.g.: 94727833-903B-49EF-9CF7-A43D2BC8826D
