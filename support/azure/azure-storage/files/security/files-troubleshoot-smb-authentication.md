@@ -501,7 +501,7 @@ $saAdObject = Get-ADObject `
 $identity = $saAdObject.DistinguishedName
 ```
 
-a. **If the AD object is a computer account**
+**If the AD object is a computer account**
     
 Run the following command to clear the `msDS-SupportedEncryptionTypes` property.
 
@@ -509,7 +509,7 @@ Run the following command to clear the `msDS-SupportedEncryptionTypes` property.
 Set-ADComputer -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-b. **If the AD object is a service logon account**
+**If the AD object is a service logon account**
     
 Run the following command instead of the prior one.
 
