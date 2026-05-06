@@ -136,7 +136,7 @@ On your DNS servers and firewall, make sure that nothing blocks the resolution t
 - [Private Azure Kubernetes Service cluster with custom DNS server (Terraform example)](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster).
 - [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
-When you use a private cluster that has a custom DNS, you create an Azure Private DNS zone for the cluster. You must link the DNS zone to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS might fail during initial creation. You can restore the creation process to a `success` state by reconciling the cluster (for more information, see the [NXDOMAIN — Domain not found error](#nxdomain-domain-not-found-error) section).
+When you use a private cluster that has a custom DNS, you create an Azure Private DNS zone for the cluster. You must link the DNS zone to the virtual network. This linking occurs after the cluster is created, so creating a private cluster with custom DNS might fail during initial creation. You can restore the creation process to a `success` state by reconciling the cluster. For more information, see the following section.
 
 ### NXDOMAIN — Domain not found error
 
