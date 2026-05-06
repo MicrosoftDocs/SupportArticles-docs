@@ -33,36 +33,48 @@ landingContent:
             url: administration/user-has-no-roles.md
   
   # Card
-  - title: Customization
+  - title: Scheduling
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't delete record because of a restrict-delete relationships
-            url: customization/restrict-delete-relationships.md
-          - text: Forms show an error about being read-only
-            url: customization/forms-record-read-only-error.md
+          - text: Booking card shows NaN or incorrect date and time on the schedule board
+            url: scheduling/schedule-board-nan-datetime.md
+          - text: Issue with cascading crew changes when assigning a booking
+            url: scheduling/cascade-crew-changes-booking.md
+          - text: Missing form context on bookable resource forms
+            url: scheduling/missing-form-context-bookable-resource.md
+          - text: Resources don't display on the schedule board
+            url: scheduling/schedule-board-missing-resources.md
+          - text: Schedule board errors due to version mismatches
+            url: scheduling/schedule-board-version-mismatch.md
+          - text: Schedule board is slow to load or experiences extreme latency
+            url: scheduling/schedule-board-performance.md
+          - text: Schedule board shows a blank page or fails to load
+            url: scheduling/schedule-board-not-loading.md
 
   # Card
-  - title: Connected Field Service
+  - title: Work order
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: No records after pulling IoT device data
-            url: iot/no-device-history-properties.md
-          - text: Troubleshoot issues with IoT capabilities
-            url: iot/troubleshoot-iot-issues-logic-app.md
+          - text: Agreement booking setup doesn't create work orders
+            url: work-order/agreement-work-orders-not-generated.md
+          - text: Work order doesn't save or create successfully
+            url: work-order/work-order-creation-errors.md
+          - text: Work order status doesn't change as expected
+            url: work-order/work-order-status-stuck.md
 
   # Card
   - title: Mobile app
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Common issues with the Field Service mobile app
-            url: mobile-app/mobile-app-common-issues.md
           - text: Booking timestamp is created with an incorrect time
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
             url: mobile-app/camera-picture-not-focused.md
+          - text: Common issues with the Field Service mobile app
+            url: mobile-app/mobile-app-common-issues.md
           - text: Duplicated inspection responses
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
@@ -81,11 +93,21 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error on start due to permission or privilege issues
-            url: mobile-app/newux-error-on-start-permission.md
           - text: Error on start due to missing files in the solution
             url: mobile-app/newux-error-on-start-missing-files.md
+          - text: Error on start due to permission or privilege issues
+            url: mobile-app/newux-error-on-start-permission.md
   
+  # Card
+  - title: Customization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete record because of a restrict-delete relationships
+            url: customization/restrict-delete-relationships.md
+          - text: Forms show an error about being read-only
+            url: customization/forms-record-read-only-error.md
+
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
     linkLists:
@@ -101,36 +123,14 @@ landingContent:
             url: rso/user-lacks-privileges-error.md
 
   # Card
-  - title: Scheduling
+  - title: Connected Field Service
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Booking card shows NaN or incorrect date and time on the schedule board
-            url: scheduling/schedule-board-nan-datetime.md
-          - text: Issue with cascading crew changes when assigning a booking
-            url: scheduling/cascade-crew-changes-booking.md
-          - text: Missing form context on bookable resource forms
-            url: scheduling/missing-form-context-bookable-resource.md
-          - text: Resources don't display on the schedule board
-            url: scheduling/schedule-board-missing-resources.md
-          - text: Schedule board is slow to load or experiences extreme latency
-            url: scheduling/schedule-board-performance.md
-          - text: Schedule board shows a blank page or fails to load
-            url: scheduling/schedule-board-not-loading.md
-          - text: Schedule board errors due to version mismatches
-            url: scheduling/schedule-board-version-mismatch.md
-
-  # Card
-  - title: Work order
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Agreement booking setup doesn't create work orders
-            url: work-order/agreement-work-orders-not-generated.md
-          - text: Work order doesn't save or create successfully
-            url: work-order/work-order-creation-errors.md
-          - text: Work order status doesn't change as expected
-            url: work-order/work-order-status-stuck.md
+          - text: No records after pulling IoT device data
+            url: iot/no-device-history-properties.md
+          - text: Troubleshoot issues with IoT capabilities
+            url: iot/troubleshoot-iot-issues-logic-app.md
 
   # Card
   - title: Documentation and training
