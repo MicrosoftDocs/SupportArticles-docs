@@ -8,13 +8,13 @@ ai.usage: ai-assisted
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 
-# Configuration Manager in-console update fails at the Install Files stage because required files are missing
+# Configuration Manager in-console update fails at Install Files because required files are missing
 
 _Original product version:_ Configuration Manager (current branch)
 
 ## Summary
 
-This article helps you resolve an issue in which a Configuration Manager in-console update fails at the Install Files stage. This failure occurs when required redistributable files are missing from the EasySetupPayload or CMUStaging folders on the service connection point or site server. Follow the steps in this article to identify which files are missing and restore them so that the update can complete successfully.
+This article helps you resolve an issue in which a Configuration Manager in-console update fails at the Install Files stage. This failure occurs if required redistributable files are missing from the EasySetupPayload or CMUStaging folders on the service connection point or site server. Follow the steps in this article to identify which files are missing, and restore them so that the update can complete successfully.
 
 ## Symptoms
 
@@ -42,30 +42,30 @@ When you install an in-console update package in Configuration Manager, the upda
 
 ## Cause
 
-This issue occurs because the update operation can't find required redistributable files (for example, SQLSysClrTypes.msi or MMASetup-AMD64.exe` in one or both of the following locations:
+This issue occurs because the update operation can't find required redistributable files (for example, SQLSysClrTypes.msi or MMASetup-AMD64.exe`) in one or both of the following locations:
 
 - Service connection point source content (EasySetupPayload folder):
-  - Location for online mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\*PackageGuid*\\Redists
-  - Location for offline mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\Offline\\*PackageGuid*\Redists
+   - Location for online mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\*PackageGuid*\\Redists
+   - Location for offline mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\Offline\\*PackageGuid*\Redists
 - Site server staging content (CMUStaging folder):
-  - *ConfigMgrInstallPath*\\CMUStaging\\PackageGuid\\redist
+   - *ConfigMgrInstallPath*\\CMUStaging\\PackageGuid\\redist
 
 ## Resolution
 
-The steps to resolve this issue depend on which folder is missing files (or if files are missing from both folders). To identify the affected folder or folders, follow these steps:
+The steps to resolve this issue depend on which folder is missing files (or whether files are missing from both folders). To identify the affected folders, follow these steps:
 
 1. Identify the update package GUID.
-1. Verify whether the required files exist in the EasySetupPayload folder, in either the online mode or offline mode locations.
-1. Verify whether the required files exist in the CMUStaging folder.
+1. Check whether the required files exist in the EasySetupPayload folder, in either the online mode or offline mode locations.
+1. Check whether the required files exist in the CMUStaging folder.
 
 After you finish these steps, continue to the scenario that matches your findings:
 
-- [Scenario 1: Files are missing in the EasySetupPayload folder](#scenario-1-files-are-missing-in-the-easysetuppayload-folder)
-- [Scenario 2: Files are present in the EasySetupPayload folder but missing in the CMUStaging folder](#scenario-2-files-are-present-in-the-easysetuppayload-folder-but-missing-in-the-cmustaging-folder)
+- [Scenario 1: Files are missing from the EasySetupPayload folder](#scenario-1-files-are-missing-from-the-easysetuppayload-folder)
+- [Scenario 2: Files exist in the EasySetupPayload folder but are missing from the CMUStaging folder](#scenario-2-files-exist-in-the-easysetuppayload-folder-but-are-missing-from-the-cmustaging-folder)
 
-### Scenario 1: Files are missing in the EasySetupPayload folder
+### Scenario 1: Files are missing from the EasySetupPayload folder
 
-If files are missing in the EasySetupPayload folder, restore the update payload source first.
+If files are missing from the EasySetupPayload folder, restore the update payload source first.
 
 #### Restore the update payload for an online service connection point (SCP)
 
@@ -78,7 +78,7 @@ For an online SCP, follow these steps:
    > [!NOTE]  
    > Because the update already passed the replication phase, you typically have to change the update state before you can use the update reset tool.
 
-   1. On a server that hosts the SMS Provider, open a Windows PowerShell Command Prompt window and then run the following cmdlets:
+   1. On a server that hosts the SMS Provider, open a Windows PowerShell Command Prompt window, and then run the following cmdlets:
 
    ```powershell
    $CMUpdateGUID = '<PackageGuid>' # e.g.: 94727833-903B-49EF-9CF7-A43D2BC8826D
@@ -116,7 +116,7 @@ For an online SCP, follow these steps:
    4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
    ```
 
-After the download operation finishes, verify that the required files are present in the EasySetupPayload\\*PackageGuid*\\Redists folder. At this point, try again to install the in-console update package.
+After the download operation finishes, verify that the required files exist in the EasySetupPayload\\*PackageGuid*\\Redists folder. At this point, try again to install the in-console update package.
 
 #### Restore the update payload for an offline SCP
 
@@ -125,7 +125,7 @@ For an offline SCP, use the [service connection tool](/intune/configmgr/core/ser
 > [!NOTE]
 > In service connection tool version 2509 or later, if the tool can't download the required redistributable files, the operation fails at the **Connect** step.
 
-While the tool runs, review the ServiceConnectionTool.log and ConfigMgrSetup.log files to verify the required files download successfully.
+While the tool runs, review the ServiceConnectionTool.log and ConfigMgrSetup.log files to verify that the required files download successfully.
 
 - **ServiceConnectionTool.log**. Look for entries that resemble the following examples:
 
@@ -148,18 +148,18 @@ While the tool runs, review the ServiceConnectionTool.log and ConfigMgrSetup.log
   4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
   ```
 
-After the download operation finishes, verify that the required files are present in the EasySetupPayload\\Offline\\**PackageGuid**\\Redists folder. At this point, try again to install the in-console update package.
+After the download operation finishes, verify that the required files exist in the EasySetupPayload\\Offline\\**PackageGuid**\\Redists folder. At this point, try again to install the in-console update package.
 
-### Scenario 2: Files are present in the EasySetupPayload folder but missing in the CMUStaging folder
+### Scenario 2: Files exist in the EasySetupPayload folder but are missing from the CMUStaging folder
 
-If files exist in the EasySetupPayload folder but are missing in the CMUStaging folder, you have to replicate the update content again. To retrigger the update content replication process, on a server that hosts the SMS Provider role for the top-level site, open a PowerShell command prompt. Then run the following cmdlet:
+If files exist in the EasySetupPayload folder but are missing from the CMUStaging folder, you have to replicate the update content again. To retrigger the update content replication process, open a PowerShell Command Prompt window on a server that hosts the SMS Provider role for the top-level site. Then, run the following cmdlet:
 
 ```powershell
 (Get-WmiObject -Namespace "ROOT\SMS\site_<SiteCode>" -Query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PackageGuid>'").RetryContentReplication($true)
 ```
 
 > [!NOTE]  
-> In these cmdlets, \<PackageGuid> represents the GUID of the update package file, and \<SiteCode> is the identifier of the site to be updated.
+> In this cmdlet, \<PackageGuid> represents the GUID of the update package file, and \<SiteCode> is the identifier of the site to be updated.
 
 After the replication process finishes, try again to install the in-console update package.
 
