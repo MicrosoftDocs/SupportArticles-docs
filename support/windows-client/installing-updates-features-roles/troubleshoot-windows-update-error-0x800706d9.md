@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error `0x800706D9 (EPT_S_NOT_REGISTERED)` occurs when a required service that Windows Update depends on isn't running or isn't configured correctly. Such services include the the Remote Procedure Call (RPC) service, the RPC Endpoint Mapper service, or the Windows Firewall service. This article discusses how to identify the cause of this error, and guides you through steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
+Windows Update error `0x800706D9 (EPT_S_NOT_REGISTERED)` occurs when a required service that Windows Update depends on isn't running or isn't configured correctly. Such services include the Remote Procedure Call (RPC) service, the RPC Endpoint Mapper service, and the Windows Firewall service. This article discusses how to identify the cause of this error, and guides you through steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
