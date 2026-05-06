@@ -33,7 +33,7 @@ Different distributions include SELinux out of the box or provide a straightforw
 * [Debian](https://wiki.debian.org/SELinux)
 * [CentOS](https://wiki.centos.org/HowTos/SELinux)
 
-Red Hat-based images on Azure and Microsoft Azure Linux come with SELinux enabled; other distributions don't. When you use [SELinux in Ubuntu](https://wiki.ubuntu.com/SELinux), there's a warning about its unmaintained state on this distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
+Red Hat-based images on Azure and Linux on Azure come with SELinux enabled; other distributions don't. When you use [SELinux in Ubuntu](https://wiki.ubuntu.com/SELinux), there's a warning about its unmaintained state on this distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
 
 ## Prerequisites
 
