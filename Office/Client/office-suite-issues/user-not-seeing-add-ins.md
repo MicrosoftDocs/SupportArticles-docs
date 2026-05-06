@@ -65,6 +65,6 @@ If users can't see add-ins, use one of the following methods to troubleshoot the
    - Open the Windows Registry editor and search for the GUID.
    - If the add-in was installed by using AppSource, navigate to the `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` folder and search all subfolders for the add-in's AppSource ID, such as `WA999999999`.
 
-## Releated content
+## More information
 
 - [Office Add-ins known issues](/office/dev/add-ins/resources/resources-office-add-in-known-issues).
