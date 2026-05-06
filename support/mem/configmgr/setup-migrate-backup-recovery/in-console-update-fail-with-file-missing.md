@@ -83,7 +83,7 @@ For an online SCP, follow these steps:
    ```powershell
    $CMUpdateGUID = '<PackageGuid>' # e.g.: 94727833-903B-49EF-9CF7-A43D2BC8826D
    $Flag = 1
-   $DesireState = 0x0004FFFF #DOWNLOAD_FAILED
+   $DesiredState = "0x0004FFFF" #DOWNLOAD_FAILED
    $CMUpdatePackage = Get-WmiObject -Namespace "root\SMS\site_<SiteCode>" -Class SMS_CM_UpdatePackages -Filter ("PackageGuid = '$($CMUpdateGUID)'")
    Invoke-WmiMethod -InputObject $CMUpdatePackage -Name UpdatePrereqAndStateFlags -ArgumentList @($Flag,[convert]::ToInt32('{0:x}' -f $DesiredState, 16)) | Out-Null
    ```
