@@ -238,7 +238,7 @@ items:
       items:
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
           href: setup-migrate-backup-recovery/service-connection-tool-not-download-updates.md
-        - name: In-console update fails at Install Files stage because required files are missing
+        - name: In-console update fails at Install Files because required files are missing
           href: setup-migrate-backup-recovery/in-console-update-fail-with-file-missing.md
         - name: Site upgrade gets stuck at database update
           href: setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update.md
