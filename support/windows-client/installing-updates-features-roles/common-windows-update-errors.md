@@ -118,7 +118,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_ABORT; client abort, IDABORT returned by `ICbsUIHandler` method except Error() | CBS   transaction timeout exceeded. | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires. Extending the timeout mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has installed the update in KB4493473 or later.|
+| CBS_E_ABORT; client abort, IDABORT returned by `ICbsUIHandler` method except Error() | CBS   transaction timeout exceeded. | A servicing operation is taking a long time to finish. The servicing stack watchdog timer expires. Extending the timeout mitigates the issue. Increase the resources on the device. If it's a virtual machine, increase virtual CPU and memory to speed up operations. Make sure that the device has installed the update in KB4493473 or later. |
 
 ## 0x800f0825
 
@@ -154,7 +154,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
+| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store by running `Dism RestoreHealth`, or manually repair by using the payload from the partially installed component. In an elevated Command Prompt window, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. For more information, see [Troubleshoot Windows Update error 0x80070570](troubleshoot-windows-update-error-0x80070570.md). |
 
 ## 0x80070003
 
