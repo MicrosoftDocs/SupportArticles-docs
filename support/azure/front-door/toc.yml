@@ -5,7 +5,7 @@ items:
   href: refstring.md
 - name: Troubleshoot common issues
   href: troubleshoot-issues.md   
-- name: Troubleshoot certificate issues
+- name: Troubleshoot certificate problems
   href: certificate-issues.md   
 - name: Troubleshoot general performance problems
   href: troubleshoot-performance-issues.md
