@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: "Troubleshoot identity-based authentication issues with SMB Azure file shares. Find common errors, causes, and step-by-step resolutions."
+description: Troubleshoot identity-based authentication and authorization issues with SMB Azure file shares. Find solutions for common errors, causes, and resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 03/06/2026
@@ -261,7 +261,7 @@ After rebooting, retry mounting the file share.
 You might experience one of the symptoms described below when trying to configure Windows ACLs with Windows File Explorer on a mounted file share:
 
 - After you click on **Edit permission** under the **Security** tab, the Permission wizard doesn't load. 
-- When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
+- When you try to select a new user or group, the domain location doesn't display the right Active Directory Domain Services (AD DS) domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
 
 ### Solution
@@ -475,15 +475,21 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
         Kdc Called: <domain-controller-name>
 ```
 
-### Reverting the AES-256 upgrade in case of issues
+### Reverting the AES-256 upgrade 
 
-If you encounter authentication issues after upgrading to AES-256, you can revert to RC4 using the following steps. While you should still upgrade to AES-256 before the Windows Update changes the default encryption type in AD DS, these steps allow you to temporarily revert to RC4 if needed while troubleshooting AES-256 issues.
+If you encounter authentication problems after upgrading to AES-256, you can revert to RC4 using the following steps. While you should still upgrade to AES-256 before Windows Update changes the default encryption type in AD DS, these steps allow you to temporarily revert to RC4 while troubleshooting AES-256 issues.
 
-First, ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow RC4 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
+1. **Ensure client machines don't have the following registry key value**
 
-Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow RC4 Kerberos ticket encryption.
+Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
 
-Then, get the distinguished name of the AD object representing the storage account, using the following PowerShell commands.
+1. **Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption**
+
+For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+
+1. **Get the distinguished name of the AD object representing the storage account** 
+
+Use the following PowerShell command.
 
 ```PowerShell
 $StorageAccountName = "<storage-account-name-here>"
@@ -495,19 +501,27 @@ $saAdObject = Get-ADObject `
 $identity = $saAdObject.DistinguishedName
 ```
 
-If the AD object is a **computer account**, run the following command to clear the msDS-SupportedEncryptionTypes property.
+    a. **If the AD object is a computer account**
+    
+    Run the following command to clear the `msDS-SupportedEncryptionTypes` property.
 
 ```PowerShell
 Set-ADComputer -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-If the AD object is a **service logon account**, run the following command instead.
+    b. **If the AD object is a service logon account**
+    
+    Run the following command instead of the prior one.
 
 ```PowerShell
 Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-Finally, run `klist purge` from an elevated command prompt on affected client machines, to clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC:
+1. **Run `klist purge` from an elevated command prompt on affected client machines**
+
+Clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC.
+
+Use the following command to verify the Kerberos ticket encryption type:
 
 ```
 #1>     Client: user @ DOMAIN.CONTOSO.COM
