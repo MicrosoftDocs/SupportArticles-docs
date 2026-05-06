@@ -45,10 +45,10 @@ When you install an in-console update package in Configuration Manager, the upda
 This issue occurs because the update operation can't find required redistributable files (for example, SQLSysClrTypes.msi or MMASetup-AMD64.exe`) in one or both of the following locations:
 
 - Service connection point source content (EasySetupPayload folder):
-   - Location for online mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\*PackageGuid*\\Redists
-   - Location for offline mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\Offline\\*PackageGuid*\Redists
+  - Location for online mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\*PackageGuid*\\Redists
+  - Location for offline mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\Offline\\*PackageGuid*\Redists
 - Site server staging content (CMUStaging folder):
-   - *ConfigMgrInstallPath*\\CMUStaging\\PackageGuid\\redist
+  - *ConfigMgrInstallPath*\\CMUStaging\\PackageGuid\\redist
 
 ## Resolution
 
@@ -148,7 +148,7 @@ While the tool runs, review the ServiceConnectionTool.log and ConfigMgrSetup.log
   4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
   ```
 
-After the download operation finishes, verify that the required files exist in the EasySetupPayload\\Offline\\**PackageGuid**\\Redists folder. At this point, try again to install the in-console update package.
+After the download operation finishes, verify that the required files exist in the EasySetupPayload\\Offline\\*PackageGuid*\\Redists folder. At this point, try again to install the in-console update package.
 
 ### Scenario 2: Files exist in the EasySetupPayload folder but are missing from the CMUStaging folder
 
