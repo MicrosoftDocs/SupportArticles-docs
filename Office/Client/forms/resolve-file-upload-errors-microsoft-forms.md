@@ -163,9 +163,9 @@ To fix this error, use the appropriate method.
 
   Delete the file upload questions, and then re-create them. The new files will be uploaded to a new folder, and the previously uploaded files will remain in the original folder.
 
-  The number of days after which organization sharing links in OneDrive expire is configured by using the [OneDriveOrganizationSharingLinkMaxExpirationInDays](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-onedriveorganizationsharinglinkmaxexpirationindays) parameter in the Set-SPOTenant cmdlet.
+  The number of days after which organization sharing links in OneDrive expire is configured by using the [OneDriveOrganizationSharingLinkMaxExpirationInDays](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-onedriveorganizationsharinglinkmaxexpirationindays&preserve-view=true) parameter in the Set-SPOTenant cmdlet.
  
-  The number of days after which organization sharing links in SharePoint expire is configured by using the [CoreOrganizationSharingLinkRecommendedExpirationInDays](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-coreorganizationsharinglinkrecommendedexpirationindays) parameter in the Set-SPOTenant cmdlet. 
+  The number of days after which organization sharing links in SharePoint expire is configured by using the [CoreOrganizationSharingLinkRecommendedExpirationInDays](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-coreorganizationsharinglinkrecommendedexpirationindays&preserve-view=true) parameter in the Set-SPOTenant cmdlet. 
 
   As long as the expiration timeframe remains configured, the links will expire after the number of days specified in the policy, and the file upload questions will need to be re-created.
   
