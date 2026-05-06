@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager in-console update fails at the Installation stage
+title: Configuration Manager in-console update fails at Install Files
 description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from the EasySetupPayload or CMUStaging folders.
 ms.date: 05/07/2026
 ms.topic: troubleshooting
@@ -8,17 +8,17 @@ ai.usage: ai-assisted
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
 
-# Configuration Manager in-console update fails at the Installation stage because required files are missing
+# Configuration Manager in-console update fails at the Install Files stage because required files are missing
 
 _Original product version:_ Configuration Manager (current branch)
 
 ## Summary
 
-This article helps you resolve an issue in which a Configuration Manager in-console update fails at the Installation stage. This failure occurs if required redistributable files are missing from the EasySetupPayload or CMUStaging folders on the service connection point or site server. Follow the steps in this article to identify which files are missing, and restore them so that the update can complete successfully.
+This article helps you resolve an issue in which a Configuration Manager in-console update fails at the Install Files stage. This failure occurs if required redistributable files are missing from the EasySetupPayload or CMUStaging folders on the service connection point or site server. Follow the steps in this article to identify which files are missing, and restore them so that the update can complete successfully.
 
 ## Symptoms
 
-When you install an in-console update package in Configuration Manager, the update fails at the **Installation** stage. The CMUpdate.log file contains entries that resemble one of the following examples.
+When you install an in-console update package in Configuration Manager, the update fails at the **Install Files** stage. The CMUpdate.log file contains entries that resemble one of the following examples.
 
 - Example 1:
 
@@ -48,7 +48,14 @@ This issue occurs because the update operation can't find required redistributab
   - Location for online mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\*PackageGuid*\\Redists
   - Location for offline mode: \\\\*ServiceConnectionPoint*\\EasySetupPayload\\Offline\\*PackageGuid*\Redists
 - Site server staging content (CMUStaging folder):
-  - *ConfigMgrInstallPath*\\CMUStaging\\PackageGuid\\redist
+  - *ConfigMgrInstallPath*\\CMUStaging\\*PackageGuid*\\redist
+
+  > [!NOTE]  
+  > The placeholders in these paths represent the following items:
+  >
+  > - *ServiceConnectionPoint*: The name of the SCP.
+  > - *ConfigMgrInstallPath*: The path to the Site server installation information.
+  > - *PackageGuid*: GUID of the affected update package.
 
 ## Resolution
 
@@ -75,7 +82,7 @@ For an online SCP, follow these steps:
 
 1. Try again to download the package from the console. You can download the package manually, or follow these steps to use the [Update reset tool (CMUpdateReset.exe)](/intune/configmgr/core/servers/manage/update-reset-tool).
 
-   1. In the Configuration Manager console, verify that the update package is in the Prerequisite Check or Installation stage (the two post-replication stages).
+   1. In the Configuration Manager console, verify that the update package is in the Prerequisite Check or Install Files stage (the two post-replication stages).
    > [!NOTE]  
    > Because the update already passed the replication stage, you typically have to change the update state before you can use the update reset tool.
 
@@ -94,7 +101,7 @@ For an online SCP, follow these steps:
 
    The update status should now be "Download failed."
 
-   1. Download the update by using the update reset tool.
+1. Download the update by using the update reset tool.
 
 1. Review the following log files:
 
