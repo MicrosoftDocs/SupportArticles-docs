@@ -134,7 +134,11 @@ If the reset tool doesn't fix the issue, or the VM can't start:
 
 1. Attach the affected operating system disk to the repair VM.
 
-1. Start the required services in the offline registry hive.
+1. Configure the offline registry hive so that the following services start automatically:
+   - RpcEptMapper
+   - RpcSs
+   - MpsSvc
 
+1. Reattach the repaired disk to the original VM.
 
 1. Try again to install the update. If the update still doesn't install, contact Microsoft Support for assistance.
