@@ -20,7 +20,7 @@ appliesto:
 
 ## Summary
 
-Windows Update error `0x800706D9 (EPT_S_NOT_REGISTERED)` occurs when a required service that Windows Update depends on isn't running or isn't configured correctly. Such services include the the Remote Procedure Call (RPC) service, the RPC Endpoint Mapper service, or the Windows Firewall service. This article describes how to identify the cause of this error and guides you through steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
+Windows Update error `0x800706D9 (EPT_S_NOT_REGISTERED)` occurs when a required service that Windows Update depends on isn't running or isn't configured correctly. Such services include the the Remote Procedure Call (RPC) service, the RPC Endpoint Mapper service, or the Windows Firewall service. This article discusses how to identify the cause of this error, and guides you through steps to resolve it on supported versions of Windows client, Windows Server, and Azure Virtual Machines (VMs).
 
 ## Symptoms
 
@@ -79,7 +79,7 @@ After the commands finish running, try again to install the update. If the updat
 
 ### Step 2: Check the Windows Firewall configuration
 
-If the Windows Firewall service fails to start, the registry configuration might be corrupted. To check the registry entry, run the following command at the command prompt of the affected computer:
+If the Windows Firewall service doesn't start, the registry configuration might be corrupted. To check the registry entry, run the following command at the command prompt of the affected computer:
 
 ```console
 reg query "HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy" /s
@@ -128,7 +128,7 @@ After you run the tool, try again to install the update. If it still doesn't ins
 
 ### Step 5: Use a repair VM (Azure)
 
-If the reset tool doesn't fix the issue, or the VM can't start:
+If the reset tool doesn't fix the issue, or the VM doesn't start:
 
 1. Create a repair VM by using [Azure VM repair commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands).
 
