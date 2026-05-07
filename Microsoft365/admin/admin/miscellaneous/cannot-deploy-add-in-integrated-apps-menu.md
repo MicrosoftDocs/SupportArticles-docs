@@ -17,7 +17,7 @@ ms.date: 05/06/2026
 ---
 # Can’t deploy add-ins by using the Integrated apps menu in the Microsoft 365 admin center
 
-# Summary
+## Summary
 
 This article discusses an issue that occurs if you deploy an add-in by using the Integrated apps menu in the Microsoft 365 admin center. The article provides a list of causes of this issue and a resolution for each cause.
 
@@ -63,7 +63,7 @@ If you try to deploy the add-in by using the New-OrganizationAddIn PowerShell cm
 
 The issue occurs because of one of the following reasons:
 
-- You’re using a [PIM-activated](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure) role to deploy the add-in.
+- You’re using a [PIM-activated](/entra/id-governance/privileged-identity-management/pim-configure) role to deploy the add-in.
 
 - You require the [Org Marketplace Apps role](/exchange/org-marketplace-apps-role-exchange-2013-help) to deploy an Office Store add-in, but your role assignment is either missing or delegating, not regular.
 

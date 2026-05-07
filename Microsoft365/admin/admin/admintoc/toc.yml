@@ -109,7 +109,7 @@
   - name: Miscellaneous
     items:
     - name: Can't deploy add-in from Microsoft 365 admin center
-      href: ../miscellaneous/cannot-deploy-addin-integrated-apps-menu.md
+      href: ../miscellaneous/cannot-deploy-add-in-integrated-apps-menu.md
     - name: Command line version of Get Help
       items:
       - name: Overview
