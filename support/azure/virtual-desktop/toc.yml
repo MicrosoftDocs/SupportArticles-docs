@@ -1,6 +1,8 @@
 items:
 - name: Troubleshoot Azure Virtual Desktop
   href: ./welcome-virtual-desktop.yml
+- name: Troubleshoot Autoscale issues
+  href: ./troubleshoot-autoscale.md 
 - name: Connection quality issues
   href: ./troubleshoot-connection-quality.md
 - name: Management issues
