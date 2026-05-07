@@ -479,15 +479,15 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
 
 If you encounter authentication problems after upgrading to AES-256, you can revert to RC4 using the following steps. While you should still upgrade to AES-256 before Windows Update changes the default encryption type in AD DS, these steps allow you to temporarily revert to RC4 while troubleshooting AES-256 issues.
 
-1. **Ensure client machines don't have the following registry key value**
+1. Ensure client machines don't have the following registry key value
 
 Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
 
-2. **Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption**
+2. Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption
 
 For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
-3. **Get the distinguished name of the AD object representing the storage account** 
+3. Get the distinguished name of the AD object representing the storage account 
 
 Use the following PowerShell command.
 
@@ -517,7 +517,7 @@ Run the following command instead of the prior one.
 Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-4. **Run `klist purge` from an elevated command prompt on affected client machines**
+4. Run `klist purge` from an elevated command prompt on affected client machines
 
 Clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC.
 
