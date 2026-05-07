@@ -5,7 +5,8 @@ ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Windows Update and OS Upgrades
+
 ---
 # Retirement: Azure Hybrid Use Benefit images for EA subscriptions
 

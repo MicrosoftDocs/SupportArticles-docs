@@ -1,6 +1,6 @@
 ---
 title: Email nondelivery reports (NDRs) and SMTP errors in Exchange Online
-ms.date: 04/03/2026
+ms.date: 05/04/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -122,6 +122,7 @@ The following table provides information about the error codes that you might en
 |535 5.7.144|XOAUTH2 authentication failed. Invalid API permissions.|An invalid token that has the wrong permission is set on the app that's registered to use HVE with OAuth.|[Check the permissions](/exchange/mail-flow-best-practices/oauth-high-volume-mails-m365#add-api-permissions) that are configured for the app, and update them as appropriate.|
 |550 5.1.241|The message can't be delivered because the recipient is an HVE account. HVE accounts do not have associated mailboxes and can only send messages.|The recipient address belongs to an HVE account that's designed for sending only, and it can’t receive email messages.|HVE accounts can’t receive messages directly. If you need to have recipients reply to messages that are sent by an HVE account, configure a ReplyTo address for the HVE account so that responses are delivered to a different mailbox.|
 |550 5.2.240|The email account is not set up properly for the HVE service. Contact your administrator.|The sending account isn’t set up correctly for the HVE service. Therefore, the message submission was rejected.|[Check the sending account’s configuration](/exchange/mail-flow-best-practices/high-volume-mails-m365#configure-your-application-or-device-to-send-email-using-hve) to make sure that it's set up correctly to use HVE.|
+|550.5.2.241|The HVE account is not properly set up for billing. Contact your administrator.|The HVE account doesn’t have a valid billing configuration.|Check whether a billing policy is set up for the HVE account. If it isn't, use the instructions in [Set up a billing policy](/exchange/mail-flow-best-practices/high-volume-mails-m365#set-up-billing-for-high-volume-email) to do so.|
 |550 5.6.240|One of MIME Headers is not allowed.|The message contains a MIME header that isn’t permitted.||
 |550 5.6.241|Mandatory From Header is missing or invalid.|The message is missing a valid From header, or the From header is incorrectly formatted.||
 |550 5.7.240|The application is not allowed for use with an HVE account. Contact your administrator.|The application that’s used to send the message isn’t authorized for HVE accounts.|[Check the sending account’s configuration](/exchange/mail-flow-best-practices/high-volume-mails-m365#configure-your-application-or-device-to-send-email-using-hve) to make sure that it's set up correctly to use HVE.|
