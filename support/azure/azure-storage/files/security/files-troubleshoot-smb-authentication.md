@@ -481,15 +481,15 @@ If you encounter authentication problems after upgrading to AES-256, you can rev
 
 1. Ensure client machines don't have the following registry key value.
 
-Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
+    Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
 
 2. Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption.
 
-For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+    For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
 3. Get the distinguished name of the AD object representing the storage account. 
 
-Use the following PowerShell command.
+    Use the following PowerShell command.
 
 ```PowerShell
 $StorageAccountName = "<storage-account-name-here>"
@@ -501,17 +501,17 @@ $saAdObject = Get-ADObject `
 $identity = $saAdObject.DistinguishedName
 ```
 
-**If the AD object is a computer account**
+    **If the AD object is a computer account**
     
-Run the following command to clear the `msDS-SupportedEncryptionTypes` property.
+    Run the following command to clear the `msDS-SupportedEncryptionTypes` property.
 
 ```PowerShell
 Set-ADComputer -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-**If the AD object is a service logon account**
+    **If the AD object is a service logon account**
     
-Run the following command instead of the prior one.
+    Run the following command instead of the prior one.
 
 ```PowerShell
 Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
@@ -519,9 +519,9 @@ Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
 
 4. Run `klist purge` from an elevated command prompt on affected client machines.
 
-Clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC.
+    Clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC.
 
-Use the following command to verify the Kerberos ticket encryption type:
+    Use the following command to verify the Kerberos ticket encryption type:
 
 ```
 #1>     Client: user @ DOMAIN.CONTOSO.COM
