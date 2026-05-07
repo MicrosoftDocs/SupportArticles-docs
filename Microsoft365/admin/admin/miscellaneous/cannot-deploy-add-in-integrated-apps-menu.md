@@ -27,7 +27,7 @@ When you try to deploy either an Office Store add-in or a custom add-in by using
 
 > Deployment failed
 
-:::image type="content" source="media/cannot-deploy-addin-integrated-apps-menu/error-deploying-addin.png" alt-text="Screenshot of the error message when you try to deploy an add-in.":::
+:::image type="content" source="media/cannot-deploy-addin-integrated-apps-menu/error-deploying-add-in.png" alt-text="Screenshot of the error message when you try to deploy an add-in.":::
 
 If you capture either a Fiddler trace or an HTTP Archive (HAR) trace, you see an error response that includes a message such as "FailedWriteToExchange" or "UnableToParseManifest".
 
