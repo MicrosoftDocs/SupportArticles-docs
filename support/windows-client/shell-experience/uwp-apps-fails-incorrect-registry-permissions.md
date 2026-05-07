@@ -15,6 +15,8 @@ appliesto:
 
 # Troubleshoot UWP apps failing to open due to incorrect registry permissions
 
+## Summary
+
 Universal Windows Platform (UWP) apps are designed to run on Windows 10 and Windows 11 using a single code base. This article explains how to troubleshoot UWP apps that fail to open or close immediately due to registry permission issues, helping you restore functionality.
 
 ## Symptoms of UWP app failures
