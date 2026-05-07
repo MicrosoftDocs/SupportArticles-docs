@@ -15,14 +15,17 @@ ms.custom: sap:backend health,sfi-image-nochange
 
 ## Summary
 
-By default, Azure Application Gateway probes backend servers (associated with a rule) to check their health status and to  In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding successfully, Application Gateway resumes forwarding the requests.
+By default, Azure Application Gateway probes backend servers (associated with a rule) to check their health status and ensure the incoming traffic is sent only to the servers that are up and running. In each case, if the backend server doesn't respond successfully, Application Gateway marks the server as Unhealthy and stops forwarding requests to the server. After the server starts responding successfully, Application Gateway resumes forwarding the requests.
 
 Users can also create [custom probes](/azure/application-gateway/application-gateway-probe-overview#custom-health-probe) to mention the host name, the path to be probed, and the status codes to be accepted as Healthy.
 
-### How to check backend health
+## Tools to check backend health
 
-To check the health of your backend pool, you can use the
-**Backend Health** page on the Azure portal. Or, you can use [Azure PowerShell](/powershell/module/az.network/get-azapplicationgatewaybackendhealth), [CLI](/cli/azure/network/application-gateway#az-network-application-gateway-show-backend-health), or [REST API](/rest/api/application-gateway/applicationgateways/backendhealth).
+To check the health of your backend pool, you can use:
+- the **Backend Health** page on the [Azure portal](/azure/application-gateway/application-gateway-diagnostics#enable-logging-through-the-azure-portal).
+- [Azure PowerShell](/azure/application-gateway/application-gateway-diagnostics#enable-logging-through-powershell) (Also see [Get-AzApplicationGatewayBackendHealth](/powershell/module/az.network/get-azapplicationgatewaybackendhealth).
+- [CLI](/cli/azure/network/application-gateway#az-network-application-gateway-show-backend-health).
+- [REST API](/rest/api/application-gateway/applicationgateways/backendhealth).
 
 The status retrieved by any of these methods can be any one of the following states:
 
