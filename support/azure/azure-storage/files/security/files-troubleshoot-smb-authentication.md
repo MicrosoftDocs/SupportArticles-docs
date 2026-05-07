@@ -483,11 +483,11 @@ If you encounter authentication problems after upgrading to AES-256, you can rev
 
 Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
 
-1. **Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption**
+2. **Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption**
 
 For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
-1. **Get the distinguished name of the AD object representing the storage account** 
+3. **Get the distinguished name of the AD object representing the storage account** 
 
 Use the following PowerShell command.
 
@@ -517,7 +517,7 @@ Run the following command instead of the prior one.
 Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
 ```
 
-1. **Run `klist purge` from an elevated command prompt on affected client machines**
+4. **Run `klist purge` from an elevated command prompt on affected client machines**
 
 Clear any cached Kerberos tickets that still use AES-256. After the next mount, `klist` should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC.
 
