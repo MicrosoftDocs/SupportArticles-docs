@@ -102,7 +102,7 @@ The output of these commands resembles the following examples.
 
 :::image type="content" source="media/cannot-deploy-addin-integrated-apps-menu/org-custom-apps-users.png" alt-text="Output displaying the delegating and regular role assignments for the Org Custom Apps role.":::
 
-If your user name is not displayed in the command output for the role that’s required to deploy the add-in, or your role assignment is delegating, an admin who has the appropriate, regular role assignment can use one of the following methods to assign the necessary role to you.  
+If your user name isn't displayed in the command output for the role that’s required to deploy the add-in, or your role assignment is delegating, an admin who has the appropriate, regular role assignment can use one of the following methods to assign the necessary role to you.  
   
 **Method 1:** Assign the Org Marketplace Apps role or Org Custom Apps role, as appropriate, explicitly by using the Exchange admin center.
 
