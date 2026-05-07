@@ -554,7 +554,7 @@ items:
 
 - name: Cannot activate Windows
   items:
-  - name: Overview
+  - name: Start troubleshooting here
     href: troubleshoot-activation-problems.md
   - name: Troubleshooting tools
     href: windows-activation-troubleshoot-tools.md
@@ -570,20 +570,40 @@ items:
       href: custom-routes-enable-kms-activation.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
-    - name: Error 0x80070005
-      href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0x800705B4
-      href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0xC004E015
-      href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0xC004FD01 or 0xC004FD02
-      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
-    - name: Error 0xC004F06C
-      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context 
-    - name: Error 0xC004F074
-      href: windows-vm-activation-error-0xc004f074.md
     - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
+  - name: KMS and DNS errors
+    items:
+    - name: Error 0xC004F074 — No KMS could be contacted
+      href: windows-vm-activation-error-0xc004f074.md
+    - name: Error 0xC004F038 — KMS count insufficient
+      href: windows-vm-activation-error-0xc004f038.md
+    - name: Error 0xC004F042 — KMS can't be used
+      href: windows-vm-activation-error-0xc004f042.md
+    - name: Error 0x800705B4 — Timeout
+      href: windows-vm-activation-error-0x800705b4.md
+    - name: Error 0x8007232B — DNS name does not exist
+      href: windows-vm-activation-error-0x8007232b.md
+    - name: Error 0x8007232A — DNS server failure
+      href: windows-vm-activation-error-0x8007232a.md
+    - name: Error 0xC0020017 / 0x8007139F — KMS contact failure (SPP)
+      href: windows-vm-activation-error-0xc0020017-0x8007139f.md
+  - name: Product key and MAK errors
+    items:
+    - name: Error 0xC004C003 — Product key blocked
+      href: windows-vm-activation-error-0xc004c003.md
+    - name: Error 0xC004C008 — Product key exceeded limit
+      href: windows-vm-activation-error-0xc004c008.md
+    - name: Error 0xC004F06C — MAK activation failed
+      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error 0x80070005 — Access denied
+      href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Configuration errors
+    items:
+    - name: Error 0xC004FD01 or 0xC004FD02 — AVMA
+      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
+    - name: Error 0xC004E015 — EULA consumption failed
+      href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Received an allocation failure
   items:
