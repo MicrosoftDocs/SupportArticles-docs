@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
-description: "Troubleshoot identity-based authentication issues with SMB Azure file shares. Find common errors, causes, and step-by-step resolutions."
+description: Troubleshoot identity-based authentication and authorization issues with SMB Azure file shares. Find solutions for common errors, causes, and resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 03/06/2026
@@ -261,7 +261,7 @@ After rebooting, retry mounting the file share.
 You might experience one of the symptoms described below when trying to configure Windows ACLs with Windows File Explorer on a mounted file share:
 
 - After you click on **Edit permission** under the **Security** tab, the Permission wizard doesn't load. 
-- When you try to select a new user or group, the domain location doesn't display the right AD DS domain. 
+- When you try to select a new user or group, the domain location doesn't display the right Active Directory Domain Services (AD DS) domain. 
 - You're using multiple AD forests and get the following error message: "The Active Directory domain controllers required to find the selected objects in the following domains are not available. Ensure the Active Directory domain controllers are available, and try to select the objects again."
 
 ### Solution
@@ -322,7 +322,13 @@ If no results are returned, your accounts already support AES-256, and you don't
 > [!NOTE]
 > If you're using storage accounts outside of the Azure public cloud, adjust `*.file.core.windows.net` in the LDAP filter to match the endpoint for your environment.
 
-### Step 2: Upgrade to AES-256
+### Step 2: Ensure AES-256 is allowed by clients and by the storage account
+
+Ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
+
+Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow AES-256 Kerberos ticket encryption.
+
+### Step 3: Upgrade to AES-256
 
 There are two options to upgrade your storage account to AES-256. We strongly recommend **Option 1** using the AzFilesHybrid PowerShell module, as it handles all the necessary steps automatically with a single command. Option 2 provides manual steps if you're unable to use the module.
 
@@ -359,7 +365,7 @@ You should check that `DomainName`, `SamAccountName`, and `AccountType` all retu
 $domainInformation = Get-ADDomain
 $domainName = $domainInformation.DnsRoot
 $samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
-$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } `
     elseif ($saAdObject.objectClass -contains "user") { "User" }
 
 Write-Host "DomainName=$domainName, samAccountName=$samAccountName, type=$type"
@@ -381,13 +387,13 @@ $domainSid = $domainInformation.DomainSID.Value
 $forestName = $domainInformation.Forest
 $netBiosDomainName = $domainInformation.DnsRoot
 
-$saAdObject = Get-ADObject ` 
+$saAdObject = Get-ADObject `
     -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
     -Properties *
 
 $saADObjectSid = $saAdObject.objectSid.Value
 $samAccountName = $saAdObject.sAMAccountName.TrimEnd('$')
-$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } ` 
+$type = if ($saAdObject.objectClass -contains "computer") { "Computer" } `
     elseif ($saAdObject.objectClass -contains "user") { "User" }
 
 Set-AzStorageAccount `
@@ -412,7 +418,7 @@ For more information, see [Enable AD DS authentication for Azure Files](/azure/s
 > If you already ran the preceding domain properties script and have the `$saAdObject` variable in your session, you can skip the following query and set `$identity = $saAdObject.DistinguishedName` directly.
 
 ```PowerShell
-$saAdObject = Get-ADObject ` 
+$saAdObject = Get-ADObject `
     -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
     -Properties *
 
@@ -446,7 +452,7 @@ $NewPassword = ConvertTo-SecureString -String $KerbKey -AsPlainText -Force
 Set-ADAccountPassword -Identity $identity -Reset -NewPassword $NewPassword
 ```
 
-### Step 3: Confirm the AES-256 upgrade
+### Step 4: Confirm the AES-256 upgrade
 
 After completing either Option 1 or Option 2, purge cached Kerberos tickets on the client and verify the upgrade by remounting the file share.
 
@@ -460,6 +466,56 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
 #1>     Client: user @ DOMAIN.CONTOSO.COM
         Server: cifs/<storage-account-name>.file.core.windows.net @ DOMAIN.CONTOSO.COM
         KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+        Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
+        Start Time: 3/20/2026 23:16:32 (local)
+        End Time:   3/21/2026 9:16:32 (local)
+        Renew Time: 3/27/2026 23:16:32 (local)
+        Session Key Type: AES-256-CTS-HMAC-SHA1-96
+        Cache Flags: 0
+        Kdc Called: <domain-controller-name>
+```
+
+### Reverting the AES-256 upgrade 
+
+If you encounter authentication problems after upgrading to AES-256, you can revert to RC4 using the following steps. While you should still upgrade to AES-256 before Windows Update changes the default encryption type in AD DS, these steps allow you to temporarily revert to RC4 while troubleshooting AES-256 issues.
+
+1. Ensure client machines don't have the following registry key value. Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For more details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
+
+2. Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption. For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+
+3. Get the distinguished name of the AD object representing the storage account. Use the following PowerShell command.
+
+```PowerShell
+$StorageAccountName = "<storage-account-name-here>"
+
+$saAdObject = Get-ADObject `
+    -LDAPFilter "(servicePrincipalName=cifs/$StorageAccountName.file.core.windows.net)" `
+    -Properties *
+
+$identity = $saAdObject.DistinguishedName
+
+```
+
+**If the AD object is a computer account**, run the following command to clear the **msDS-SupportedEncryptionTypes** property.
+
+```PowerShell
+Set-ADComputer -Identity $identity -Clear msDS-SupportedEncryptionTypes
+
+```
+
+**If the AD object is a service logon account**, run the following command instead of the prior one.
+
+```PowerShell
+Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
+
+```
+
+4. Run `klist purge` from an elevated command prompt on affected client machines. Clear any cached Kerberos tickets that still use AES-256. After the next mount, **klist** should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC. Use the following command to verify the Kerberos ticket encryption type:
+
+```
+#1>     Client: user @ DOMAIN.CONTOSO.COM
+        Server: cifs/<storage-account-name>.file.core.windows.net @ DOMAIN.CONTOSO.COM
+        KerbTicket Encryption Type: RSADSI RC4-HMAC(NT)
         Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
         Start Time: 3/20/2026 23:16:32 (local)
         End Time:   3/21/2026 9:16:32 (local)
