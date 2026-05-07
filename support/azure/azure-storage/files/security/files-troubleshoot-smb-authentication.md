@@ -493,18 +493,21 @@ $saAdObject = Get-ADObject `
     -Properties *
 
 $identity = $saAdObject.DistinguishedName
+
 ```
 
     **If the AD object is a computer account**, run the following command to clear the **msDS-SupportedEncryptionTypes** property.
 
 ```PowerShell
 Set-ADComputer -Identity $identity -Clear msDS-SupportedEncryptionTypes
+
 ```
 
     **If the AD object is a service logon account**, run the following command instead of the prior one.
 
 ```PowerShell
 Set-ADUser -Identity $identity -Clear msDS-SupportedEncryptionTypes
+
 ```
 
 4. Run `klist purge` from an elevated command prompt on affected client machines. Clear any cached Kerberos tickets that still use AES-256. After the next mount, **klist** should show a storage account with **KerbTicket Encryption Type** of RC4-HMAC. Use the following command to verify the Kerberos ticket encryption type:
