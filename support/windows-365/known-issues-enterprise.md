@@ -1,10 +1,10 @@
 ---
-title: Windows 365 Enterprise and Frontline Known issues
-description: Learn about known issues for Windows 365 Enterprise and Frontline.
+title: Windows 365 Enterprise and Windows 365 Flex Known issues
+description: Learn about known issues for Windows 365 Enterprise and Windows 365 Flex.
 manager: dcscontentpm
-ms.date: 02/12/2026
+ms.date: 05/05/2026
 ms.topic: troubleshooting
-ms.reviewer: msft-jasonparker, stulimat, scottduf
+ms.reviewer: kaushika, msft-jasonparker, stulimat, scottduf
 ms.custom:
 - pcy:WinComm User Experience
 - sap:Onboarding issues
@@ -13,9 +13,9 @@ ms.collection:
 - tier2
 ---
 
-# Windows 365 Enterprise and Frontline known issues
+# Windows 365 Enterprise and Windows 365 Flex known issues
 
-The following items are known issues for Windows 365 Enterprise and Frontline.
+The following items are known issues for Windows 365 Enterprise and Windows 365 Flex.
 
 ## First-time Cloud PC sign-in triggers an impossible travel location alert
 
@@ -269,13 +269,13 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, see [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
 
-## Windows 365 Frontline issues
+## Windows 365 Flex issues
 
-The following items are known issues for Windows 365 Frontline.
+The following items are known issues for Windows 365 Flex.
 
-### Users can't access Frontline Cloud PCs that are in shared mode
+### Users can't access Windows 365 Flex Cloud PCs that are in shared mode
 
-When Frontline Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
+When Windows 365 Flex Cloud PCs in shared mode are assigned to a Microsoft Entra ID group that has more than 10,000 members, some users might not receive access and don't see the Cloud PC cards in the Windows app client.
 
 #### Solution
 
@@ -297,7 +297,7 @@ Perform a reprovisioning action in the provisioning policy:
 
 ### Scheduled reprovisioning doesn't recover after license changes
 
-When Frontline Cloud PCs are provisioned in shared mode, and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned. After you add back valid licenses, Cloud PCs provision according to the policy configurations. However, both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
+When Windows 365 Flex Cloud PCs are provisioned in shared mode, and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned. After you add back valid licenses, Cloud PCs provision according to the policy configurations. However, both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
 
 #### Solution
 
@@ -315,7 +315,7 @@ To restore full reprovisioning functionality after you restore expired licenses:
 
 ### Can't decrease Cloud PC count due to pooled user storage limits
 
-You can't reduce the number of Cloud PCs for Frontline Cloud PCs in shared mode if the operation would cause the amount of pooled user storage to exceed its limit.
+You can't reduce the number of Cloud PCs for Windows 365 Flex Cloud PCs in shared mode if the operation would cause the amount of pooled user storage to exceed its limit.
 
 #### Solution
 

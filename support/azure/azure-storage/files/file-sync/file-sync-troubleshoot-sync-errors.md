@@ -1581,7 +1581,7 @@ $role = Get-AzRoleAssignment -Scope $storageAccount.Id | Where-Object { $_.Displ
 
 if ($role -eq $null) {
     throw [System.Exception]::new("The storage account does not have the Azure File Sync " + `
-                "service principal authorized to access the data within the " + ` 
+                "service principal authorized to access the data within the " + `
                 "referenced Azure file share.")
 }
 ```
