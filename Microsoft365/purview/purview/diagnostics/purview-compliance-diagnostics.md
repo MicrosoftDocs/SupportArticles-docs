@@ -55,9 +55,23 @@ The following table lists the available diagnostics on **Solutions** pages. You 
 
 > [!NOTE]
 > To run these diagnostics, the minimum roles you need are:
-> 
 > - Compliance Administrator
 > - Security Administrator
+
+Any user who wants to troubleshoot a DLP policy should have the appropriate permissions to view DLP policies.
+
+- Organization Configuration
+- View-Only Configuration
+- Compliance Admin
+- Security Admin
+- Security Reader
+- DLP Compliance Management
+- View-Only DLP Compliance Management
+- Insider Risk Management Admin
+- Information Protection Admin
+- Information Protection Analyst
+- Information Protection Investigator
+- Data Security AI Admin
 
 When you select a diagnostic on a Solutions page, the diagnostic runs the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig) cmdlet to check your organization's configuration settings in Microsoft Purview. Then, the diagnostic calls the appropriate cmdlet that's listed in the following table to perform checks that are specific to your issue. 
 
