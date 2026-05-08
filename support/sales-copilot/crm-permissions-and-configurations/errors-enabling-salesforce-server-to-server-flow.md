@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce in Server-to-Server Flow
 description: Troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales app.
-ms.date: 12/16/2025
+ms.date: 05/08/2026
 ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
@@ -124,13 +124,15 @@ During the Salesforce server-to-server flow setup, the process creates a profile
 
 To resolve this issue, check whether a profile that has the same name already exists in the Salesforce organization. If you created the profile before you enabled the server-to-server flow, rename the existing profile, and then try again. If you didn't create the profile, contact [Microsoft Support](/microsoft-sales-copilot/get-support).
 
-## Required fields are missing
+## Required fields are missing or custom field validations are failing
 
 ### Symptoms
 
 When you try to enable Salesforce with a server-to-server flow, you receive the following error message:
 
 > Required fields are missing: \<FieldNames\>
+
+> Could not provision resource due to custom fields
 
 ### Cause
 
