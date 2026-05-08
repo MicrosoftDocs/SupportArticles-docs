@@ -1,4 +1,4 @@
-- name: Sales in Microsoft 365 Copilot
+- name: Sales agent
   href: welcome-sales-copilot.yml
 - name: CRM permissions and configurations
   items:
