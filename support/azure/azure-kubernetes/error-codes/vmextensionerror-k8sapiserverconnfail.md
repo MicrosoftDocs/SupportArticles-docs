@@ -61,7 +61,7 @@ Use the following table to match the diagnostic message in the error to the like
 | Other errors or no diagnostic details | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
 
 > [!NOTE]
-> The diagnostic sub-categories in the preceding table are available starting with a specific AKS release. If you're on an older version, the error message might only show the generic message without specific diagnostic details. In that case, start with [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
+> The diagnostic sub-categories in the preceding table are available in newer AKS releases. If you're on an older version, the error message might only show the generic message without specific diagnostic details. In that case, start with [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
 
 ## Solution
 
@@ -274,7 +274,7 @@ Verify that DNS resolves to the private endpoint IP, not a public IP (run this f
 nslookup <api-server-fqdn>
 ```
 
-If testing from outside the VNet, use az vmss run-command invoke to run the nslookup from a cluster node:
+If testing from outside the VNet, use `az vmss run-command invoke` to run the `nslookup` from a cluster node:
 
 ```r
 az vmss run-command invoke --resource-group <mc-resource-group> \
@@ -313,8 +313,7 @@ If the error includes `Connection refused`, the node reached the API server IP b
 
 #### Common causes
 
-- **Transient during create or start**: The API server pods aren't ready yet. This is the most common cause and usually resolves on automatic retry.
-- **Cluster is stopped**: The API server is down because the cluster is in a stopped state.
+- **Transient during create or start**: The API server pods aren't ready yet.
 - **Persistent**: Network misconfiguration or API server failure.
 
 #### Troubleshooting steps
@@ -332,7 +331,7 @@ az aks show --resource-group <resource-group> \
 
 - **powerState is `Stopped`**: The cluster is stopped. Start it with `az aks start --resource-group <resource-group> --name <cluster-name>`.
 - **provisioningState is `Succeeded`**: The cluster is healthy. The connection-refused error was transient. No action needed.
-- **provisioningState is `Creating`, `Updating`, or `Upgrading`**: Operation still in progress. Wait for completion (creation typically takes 10-15 minutes).
+- **provisioningState is `Creating`, `Updating`, or `Upgrading`**: Operation still in progress. Wait for completion.
 - **provisioningState is `Failed`**: Proceed to Step 2.
 
 #### Step 2: Retry the operation
@@ -344,12 +343,10 @@ az aks update --resource-group <resource-group> \
   --name <cluster-name>
 ```
 
-This triggers a reconciliation that reattempts the provisioning steps. This operation can take 10-30 minutes to complete.
+**If the error persists after reconciliation**, the issue is likely network misconfiguration. Check:
 
-**If the error persists after retry**, the issue is likely network misconfiguration. Check:
 - For private clusters: Verify the private endpoint provisioned successfully and private DNS zone is linked to the VNet
 - For BYO VNet: Verify NSG, UDR, and firewall rules allow outbound traffic to the API server (see [Resolve connection timeout](#resolve-connection-timeout) for detailed network checks)
-- For clusters with authorized IP ranges: Verify the node subnet CIDR is included in the authorized ranges
 
 If the problem persists after verifying network configuration, collect the error details and contact Azure Support.
 
@@ -426,8 +423,6 @@ az vmss run-command invoke --resource-group <mc-resource-group> \
   --scripts "openssl s_client -connect <api-server-fqdn>:443 -servername <api-server-fqdn> </dev/null 2>&1 | grep -E 'issuer|subject|verify'"
 ```
 
-If the certificate issuer is a corporate CA or proxy instead of the cluster's own CA (typically shown as issuer=CN = ca), it is likely TLS inspection is intercepting the connection.
-
 If the certificate issuer shows a corporate CA or proxy vendor (such as Zscaler, Palo Alto, or Fortinet), TLS inspection is intercepting the connection.
 
 #### Step 2: Add AKS API server FQDNs to the SSL inspection bypass list
@@ -440,8 +435,6 @@ Add the following patterns to your proxy or firewall's SSL inspection bypass lis
 Replace `<region>` with the Azure region of your AKS cluster.
 
 For the complete list of required endpoints, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
-
-#### Step 3: Verify the fix
 
 After updating the bypass list, retest from the node:
 
@@ -456,7 +449,7 @@ az vmss run-command invoke --resource-group <mc-resource-group> \
 
 The output should show a successful TLS handshake with `SSL certificate verify ok`. If the issuer still shows your corporate proxy CA, the bypass rule hasn't taken effect. If the TLS failure persists, check proxy and firewall logs for deny or inspection-failed events for the API server FQDN on port 443.
 
-#### Step 4: If TLS inspection can't be bypassed
+#### Step 3: If TLS inspection can't be bypassed
 
 If TLS inspection can't be bypassed, the node must trust the certificate chain that the inspection device presents. Use one of the following AKS-supported methods to provide the enterprise CA certificate:
 
@@ -513,7 +506,8 @@ az aks rotate-certs --resource-group <resource-group> \
 If the error doesn't include a specific diagnostic sub-category, or if you're on an older AKS version that doesn't include sub-categorization, run the following checks in order. Stop at the first failed check and fix that issue.
 
 > [!NOTE]
-> The commands in checks 1-4 must be run from the node's perspective (inside the VNet). Use `az vmss run-command invoke` to run them remotely:
+> For private clusters, the commands in checks 1-4 must be run from inside the VNet (or from a network with access to the private DNS zone and private endpoint). Use `az vmss run-command invoke` to run them from a cluster node:
+>
 > ```azurecli
 > az vmss run-command invoke --resource-group <mc-resource-group> --name <vmss-name> --instance-id <instance-id> \
 >   --command-id RunShellScript --scripts "<command>"
