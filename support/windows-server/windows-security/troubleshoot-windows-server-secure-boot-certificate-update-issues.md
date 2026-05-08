@@ -18,15 +18,10 @@ appliesto:
 ## Summary
 
 Some Windows Server devices still use Secure Boot certificates issued in 2011, which will expire in June 2026. This article explains how to troubleshoot Secure Boot certificate update issues and ensure continued trust validation during startup.  
+A similar guidance is published for Windows Client and Azure Local.
 
-If servers aren’t updated:
-
-- Secure Boot continues to function but runs with reduced protection  
-- Devices may not validate newer boot components signed with updated certificates  
-
-For Windows Client related guidance, see [Update Secure Boot Certificates for Windows Devices](/troubleshoot/windows-client/windows-security/update-secure-boot-certificates).  
-
-For Azure Local information, see [Security updates for Azure Local](/azure/azure-local/security-update/security-update?view=azloc-2601&tabs=os-build-25398-xxxx#windows-secure-boot-certificate-expiration&preserve-view=true).
+- For Windows Client related guidance, see [Update Secure Boot Certificates for Windows Devices](/troubleshoot/windows-client/windows-security/update-secure-boot-certificates).
+- For Azure Local information, see [Security updates for Azure Local](/azure/azure-local/security-update/security-update?view=azloc-2601&tabs=os-build-25398-xxxx#windows-secure-boot-certificate-expiration&preserve-view=true).
 
 ## Impact
 
