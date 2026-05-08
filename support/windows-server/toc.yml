@@ -3011,6 +3011,8 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-download-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+    - name: Troubleshoot Windows Update error 0x80070005
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80070008
       href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
@@ -3021,6 +3023,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Troubleshoot Windows Update error 0x80070570
+      href: ../windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80070bc9
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md
     - name: Troubleshoot Windows Update error 0x80071A91

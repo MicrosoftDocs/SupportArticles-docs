@@ -114,8 +114,6 @@ items:
           href: ../administration/exchange-server-issues-on-incorrect-windows-server-image.md          
         - name: Fail to add mailbox database copy
           href: ../administration/add-database-copy-seeding-operation-failed.md
-        - name: Fail to change the ownership of a distribution group
-          href: ../administration/cannot-change-distribution-group-ownership.md
         - name: Fail to configure Out of Office messages in OWA
           href: ../administration/cannot-configure-out-of-office-message-owa-ecp.md
         - name: Fail to grant Delegate permissions to a security group
@@ -174,16 +172,10 @@ items:
           href: ../administration/scom-reports-unhealthy-health-sets.md
         - name: Search-MailboxAuditLog returns AQS parser error
           href: ../administration/search-mailboxauditlog-returns-aqs-parser-error.md
-        - name: SendAs permission not shown in Send As Permission
-          href: ../administration/sendas-permissions-not-visible-in-wizard.md
         - name: Server component state remains Inactive after changed to Active
           href: ../administration/requestor-changed-server-component.md
         - name: Set-ServerComponentState ends Exchange Frontend Transport service
           href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
-        - name: Some cmdlets fail to run with Add-PSSnapin
-          href: ../administration/cmdlets-fail-powershell-ise.md
-        - name: Test cmdlets fail with error
-          href: ../administration/test-owaconnectivity-ecpconnectivity-cmdlets-fail.md
         - name: Unable to update the password for Windows in Exchange
           href: ../administration/cannot-update-password-windows.md
         - name: Unexpected Automapping results when adding mailbox permissions
@@ -208,8 +200,6 @@ items:
       items:
         - name: '"Insecure connection" error in Outlook for iOS or Android'
           href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
-        - name: '"The connection to your mail server timed out" error in Outlook for iOS or Outlook for Android'
-          href: ../client-connectivity/connection-to-mail-server-timed-out.md
         - name: '"You''ve exceeded the storage limit for your mailbox" error'
           href: ../client-connectivity/you-have-exceeded-the-storage-limit-for-your-mailbox.md
         - name: 454 4.7.0 Temporary authentication failure
@@ -218,16 +208,8 @@ items:
           href: ../client-connectivity/user-cannot-create-new-rules-outlook-owa.md
         - name: ActiveSync clients can't connect
           href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
-        - name: Add-ins will stop working in OWA
-          href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
-        - name: Attendees get a meeting update without changes
-          href: ../client-connectivity/attendees-meeting-update-without-changes.md
-        - name: Can't access archive mailbox in Outlook
-          href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
         - name: Can't access archive mailboxes with Full Access permission
           href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
-        - name: Can't access calendar in OWA
-          href: ../client-connectivity/cannot-access-calendar-outlook-web-app.md
         - name: Can't access shared mailboxes via POP/IMAP
           href: ../client-connectivity/accessing-shared-mailboxes-fails.md
         - name: Can't connect to POP3 or IMAP4
@@ -248,10 +230,6 @@ items:
           href: ../client-connectivity/cannot-sign-in-or-see-wrong-interface-after-moving-mailbox.md
         - name: Can't use Autodiscover to connect to mailbox
           href: ../client-connectivity/cannot-use-autodiscover-to-connect-to-mailbox.md
-        - name: Can't run Test-OutlookConnectivity
-          href: ../client-connectivity/test-outlookconnectivity-fails.md
-        - name: Color categories aren't print in OWA
-          href: ../client-connectivity/color-categories-not-print-outlook-on-the-web.md
         - name: EAS still sync with a disabled account or an old password
           href: ../client-connectivity/eas-devices-still-sync-with-disabled-account.md
         - name: ECP redirection fails
@@ -268,24 +246,12 @@ items:
           href: ../client-connectivity/http-400-bad-request-open-user-mailbox.md
         - name: Incorrect Sent time stamp
           href: ../client-connectivity/incorrect-sent-time-stamp.md
-        - name: Mailbox that's re-enabled can't be accessed
-          href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
         - name: OST file sync issues
           href: ../client-connectivity/ost-sync-issues.md
-        - name: Outlook Anywhere clients can't connect to server
-          href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
         - name: Outlook Can't access public folders hosted on legacy Exchange servers
           href: ../client-connectivity/outlook-cannot-access-legacy-public-folders.md
-        - name: Outlook Can't connect via firewall or proxy server
-          href: ../client-connectivity/outlook-not-connect-firewall-proxy-server.md
-        - name: OWA doesn't redirect to ADFS login
-          href: ../client-connectivity/owa-not-redirect-adfs-login.md
         - name: OWA or ECP stop working after installing Exchange Server security update
           href: ../client-connectivity/owa-stops-working-after-update.md
-        - name: Password expiration isn't notified
-          href: ../client-connectivity/owa-password-expiration-notification.md
-        - name: Performance issues on Exchange connection
-          href: ../client-connectivity/performance-issues-connect-to-exchange.md
         - name: "Repair failed CU/SU installations"
           href: ../client-connectivity/exchange-security-update-issues.md
         - name: Repair update messages due to TimeZoneMatchCheck failures
@@ -302,10 +268,6 @@ items:
           href: ../client-connectivity/troubleshoot-activesync-with-exchange-server.md
     - name: Compliance
       items:
-        - name: Audit Log searches fail with ErrorInvalidServerVersion
-          href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
-        - name: Content index state is stuck in crawling
-          href: ../compliance/content-index-state-stuck-crawling-exchange-server-2010.md
         - name: eDiscovery search ignores attached mail items
           href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
         - name: eDiscovery search ignores some query keywords
@@ -344,8 +306,6 @@ items:
       items:
         - name: 451 4.4.0 DNS query failed
           href: ../mailflow/dns-query-failed.md
-        - name: 554 5.4.14 Hop count exceeded
-          href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
         - name: Apps for Outlook 2013 can't activate in email
           href: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
         - name: Assertion Failed when editing a transport rule
@@ -406,8 +366,6 @@ items:
           href: ../mailflow/outbound-email-messages-are-not-sent.md
         - name: Read receipt shows incorrect information
           href: ../mailflow/read-receipt-shows-incorrect-information.md
-        - name: The front-end Microsoft Exchange Transport service stops and doesn't start
-          href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
         - name: TLS negotiation failed with error NoCredentials error
           href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
         - name: Unreadable characters in the subject line
@@ -468,12 +426,8 @@ items:
           href: ../public-folders/public-folder-migration-fails.md
         - name: Public folder permissions for Exchange Server
           href: ../public-folders/public-folder-permissions-for-exchange-server.md
-        - name: Troubleshoot public folder replication issues
-          href: ../public-folders/troubleshoot-public-folder-replication.md
     - name: Setup
       items:
-        - name: '"Organization Preparation FAILED" error'
-          href: ../setup/organization-preparation-failed.md
         - name: '"Your request cannot be completed right now" error'
           href: ../setup/owa-your-request-cannot-be-completed.md
         - name: Active Directory wasn't prepared using hosting mode error
@@ -486,8 +440,6 @@ items:
           href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
         - name: Cumulative Update 20 shown instead of CU22
           href: ../setup/cumulative-update-20-is-shown-not-22.md
-        - name: Error when you try to view messages in Queue Viewer
-          href: ../setup/queue-viewer-error-when-viewing-messages.md
         - name: Event ID 6010 logged after installing CU23
           href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell

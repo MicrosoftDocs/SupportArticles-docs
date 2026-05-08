@@ -6,9 +6,7 @@ ms.author: jarrettr
 ms.service: azure-vpn-gateway
 ms.topic: troubleshooting
 ms.date: 07/29/2024
-ms.custom: 
-  - sfi-image-nochange
-  - sap:Connectivity
+ms.custom: sap:Connectivity
 
 # Customer intent: As a network administrator, I want to use diagnostic logs from Azure VPN Gateway to troubleshoot connectivity issues, so that I can quickly identify and resolve potential problems with VPN configurations and connections.
 ---

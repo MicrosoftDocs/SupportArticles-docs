@@ -989,6 +989,8 @@ items:
       href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
     - name: Troubleshoot Microsoft Store app download failures
       href: ./shell-experience/troubleshooting-microsoft-store-apps-download-failure.md
+    - name: UWP apps fail to open due to incorrect registry permissions
+      href: ./shell-experience/uwp-apps-fails-incorrect-registry-permissions.md
   - name: Start menu
     items:
     - name: 'Troubleshooting guidance: Start menu'
@@ -1241,6 +1243,8 @@ items:
       href: ./windows-security/tpm-is-not-recognized.md
     - name: UEFI mode system cannot boot
       href: ./windows-security/unified-extensible-firmware-interface-not-boot.md
+    - name: Update Secure Boot Certificates
+      href: ./windows-security/update-secure-boot-certificates.md      
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
@@ -1333,12 +1337,16 @@ items:
       href: ../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0x800719e4 (ERROR_LOG_FULL) when Windows Update fails
       href: ../windows-server/installing-updates-features-roles/error-0x800719e4-windows-update-fails.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot Windows Update error 0x80070005
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005.md
     - name: Troubleshoot Windows Update error 0x80070008
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070008.md
     - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
       href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
     - name: Troubleshoot Windows Update error code 0x80070070
       href: ../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070070.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot Windows Update error 0x80070570
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80070570.md
     - name: Troubleshoot Windows Update error 0x80071A91
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80071a91.md
     - name: Troubleshoot Windows Update error 0x80072EFE

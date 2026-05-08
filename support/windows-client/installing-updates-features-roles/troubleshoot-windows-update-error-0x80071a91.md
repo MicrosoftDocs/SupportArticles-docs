@@ -42,7 +42,7 @@ When Windows Update installs updates, it uses the Kernel Transaction Manager (KT
 
 - The TxF transaction log file on the system volume is corrupted.
 - The KTM or TxF can't start or manage file transactions.
-- A previous update didn't install correctly, so the transaction subsystem is in an inconsistent or bad state.
+- A previous update didn't install correctly. This failure left the transaction subsystem in an inconsistent or bad state.
 - Disk errors block access to the transaction log.
 - An antivirus program or file system filter driver blocks transactional file operations.
 - The Windows component store is corrupted.
@@ -164,9 +164,9 @@ If the reset tool doesn't fix the issue, or the VM can't start:
    DISM /Image:<Drive>:\ /Cleanup-Image /RestoreHealth
    ```
 
-      > [!NOTE]  
-      > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
-      > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
+   > [!NOTE]  
+   > - In this command, \<Drive> represents the drive letter of the affected operating system disk.
+   > - By default, DISM uses Windows Update as a repair source. For information about how to specify a different repair source, see [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a-windows-image).
 
 1. Reattach the repaired disk to the original VM.
 
