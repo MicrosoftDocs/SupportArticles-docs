@@ -140,7 +140,7 @@ To verify that the CNAME for the custom domain is correctly pointing to the Fron
 
     1. Associate the custom domain with the new secret. After you complete this association, your certificate is deployed within 24 hours.
 
-- Another reason that a certificate might not rotate is changes in Key Vault access permissions. For more information, See next section.
+- Another reason that a certificate might not rotate is changes in Key Vault access permissions. For more information, see next section.
 
 ### Changes in Key Vault access
 
