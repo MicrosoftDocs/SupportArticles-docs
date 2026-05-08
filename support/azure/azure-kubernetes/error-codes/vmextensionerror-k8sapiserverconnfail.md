@@ -2,7 +2,7 @@
 title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error message
 description: Fix the VMExtensionError_K8SAPIServerConnFail error in AKS. Learn how to resolve API server connectivity failures and successfully create, upgrade, or scale your AKS cluster.
 ms.date: 05/01/2026
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc, kovirivong
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
