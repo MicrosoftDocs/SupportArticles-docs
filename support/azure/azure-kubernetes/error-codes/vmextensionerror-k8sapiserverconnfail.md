@@ -273,13 +273,13 @@ nslookup <api-server-fqdn>
 
 If using a private cluster and testing from outside the VNet, use `az vmss run-command invoke` to run the `nslookup` from a cluster node:
 
-```r
+```azurecli
 az vmss run-command invoke --resource-group <mc-resource-group> \
   --name <vmss-name> \
   --command-id RunShellScript \
   --instance-id <instance-id> \
   --output json \
-  --scripts `nslookup <api-server-fqdn>`
+  --scripts "nslookup <api-server-fqdn>"
 ```
 
 The result should include a `privatelink.<region>.azmk8s.io` CNAME that resolves to a private IP address. If it resolves to a public IP, the private DNS zone isn't linked to the node VNet. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters).
@@ -494,7 +494,7 @@ az aks rotate-certs --resource-group <resource-group> \
 ```
 
 > [!IMPORTANT]
-> Certificate rotation causes a brief API server restart. Schedule this operation during a maintenance window and confirm that your workloads can tolerate a short control plane disruption.
+> Certificate rotation causes an API server restart. Schedule this operation during a maintenance window and confirm that your workloads can tolerate a short control plane disruption.
 
 ---
 
