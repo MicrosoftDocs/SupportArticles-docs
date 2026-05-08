@@ -2,14 +2,14 @@
 title: Duplicate entry error during historical imports
 description: Fix the Duplicate entry error when you import historical data in Viva Glint.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 05/06/2026
+ms.reviewer: amywheater
+ms.date: 05/08/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-- CSSTroubleshoot
-- CI184017
+  - CSSTroubleshoot
+  - CI 184017
 ---
 
 # Duplicate entry error during historical imports
