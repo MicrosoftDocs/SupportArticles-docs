@@ -1,7 +1,7 @@
 ---
 title: Event ID 17018 when Microsoft Exchange Transport service stops
 description: Fixes an issue in which the Microsoft Exchange Transport service stops on an Exchange-based server that has a high CPU core count and a high transport load.
-ms.date: 01/24/2024
+ms.date: 05/08/2026
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -10,18 +10,27 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - CI 158355
+  - CI 9823
+  - CI 11514S
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: nasira, lusassl, paulkwo, meerak, v-chazhang
+ms.reviewer: nasira, lusassl, paulkwo, meerak, v-chazhang, v-kccross
 appliesto:
+- Exchange Server SE
 - Exchange Server 2019
 search.appverid: MET150
 ---
+
 # Microsoft Exchange Transport service stops and returns Event ID 17018
+
+## Summary
+
+The Microsoft Exchange Transport service can repeatedly stop and restart on servers that have a high number of CPU cores and handle heavy mail flow. This issue occurs when the system exhausts the available database sessions due to too many simultaneous server-to-server connections. As a result, Event ID 17018 is logged, indicating insufficient resources and an `EsentOutOfSessionsException`.
+To resolve the issue, reduce the number of concurrent inbound connections on Receive connectors and optionally adjust connection limits per source. You can also override server-to-server throttling settings. After you apply these changes, restart the Transport service to restore normal operation.
 
 ## Symptoms
 
-On a server that's running Microsoft Exchange Server and that has a high CPU core count and a high transport load, the Microsoft Exchange Transport service continually stops and restarts. Additionally, the following event is logged in the Application log:
+On a computer running Microsoft Exchange Server that has a high CPU core count and a high transport load, the Microsoft Exchange Transport service continually stops and restarts. Additionally, the following event is logged in the Application log:
 
 > Source: MSExchangeTransport  
 > Event ID: 17018  
@@ -36,14 +45,9 @@ This issue occurs because a high number of server-to-server connections can exha
 
 ## Resolution
 
-> [!NOTE]  
-> This fix applies to only Microsoft Exchange Server 2019. 
+You resolve this issue in the Exchange Management Shell (EMS). For more information about the EMS, see [Connect to Exchange servers using remote PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
 
-To fix this issue, follow these steps:
-
-1. Install the following security update:
-
-   [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: February 14, 2023 (KB5023038)](https://support.microsoft.com/en-us/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-february-14-2023-kb5023038-2e60d338-dda3-46ed-aed1-4a8bbee87d23)
+To resolve this issue, follow these steps:
 
 1. Decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server, as follows.
 
@@ -56,7 +60,7 @@ To fix this issue, follow these steps:
        Get-ReceiveConnector -Server <Server Name> | Format-Table Identity,MaxInboundConnection -Auto
        ```
 
-       **Note:** The default value for this limit is 5,000 concurrent connections.
+       The default value for this limit is 5,000 concurrent connections.
 
     1. To set the limit to a value of 1,000 concurrent connections, run the following cmdlets:
 
@@ -72,7 +76,11 @@ To fix this issue, follow these steps:
 
     1. Restart the Transport service.
 
-1. Override the server-to-server throttle. To set and refresh the override, run the **New-SettingOverride** and **Get-ExchangeDiagnosticInfo** cmdlets in Exchange Management Shell:
+       ```powershell
+       Restart-Service MSExchangeTransport
+       ```
+
+1. Override the server-to-server throttle. To set and refresh the override, run the [New-SettingOverride](/powershell/module/exchange/New-SettingOverride) and [Get-ExchangeDiagnosticInfo](/powershell/module/exchange/Get-ExchangeDiagnosticInfo) cmdlets in Exchange Management Shell:
 
    ```powershell
    New-SettingOverride -Name "Throttle server to server inbound calls" -Component TransportConfiguration -Section ThrottleServerToServerInboundConnections -Parameters ("Enabled=True") -Reason "Any Text String " 
@@ -81,3 +89,7 @@ To fix this issue, follow these steps:
    ```
 
 1. Restart the Transport service.
+
+   ```powershell
+   Restart-Service MSExchangeTransport
+   ```
