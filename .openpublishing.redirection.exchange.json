@@ -123,6 +123,102 @@
     {
       "source_path": "Exchange/ExchangeServer/administration/test-owaconnectivity-ecpconnectivity-cmdlets-fail.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+        {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-grant-delegate-permission-to-security-group",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/mailbox-database-content-index-shows-failed",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/disabled-options-in-resource-scheduling",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/compliance/cannot-perform-multi-mailbox-search",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/http-400-bad-request-open-user-mailbox",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/mailflow/edge-transport-servers-reject-messages",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/high-memory-usage-by-w3wp-process-of-default-app",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/upn-suffix-not-display-eac-ems",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/public-folders/disable-conflict-message",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-configure-out-of-office-message-owa-ecp",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/best-practices-analyzer-returns-no-paging-file-info",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/mapiexceptionpartialcompletion-error-new-moverequest",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/cannot-sign-in-or-see-wrong-interface-after-moving-mailbox",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/cannot-install-exchange-server-from-unattended-installation",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/client-connectivity/ropfasttransfersourcecopyto-operation-fails",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-restore-individual-database-via-backup",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/managing-rbac-roles-display-warnings-or-errors",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/msexchange-migration-workflow-not-start",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/event-id-6010-after-cumulative-update-23",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/migration/cannot-replicate-public-folder-to-exchange-server",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/cannot-restore-lun-drive",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/administration/ova-not-available-for-shared-mailboxes",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/pst-capture-setup-wizard-ended-prematurely",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "Exchange/ExchangeServer/setup/active-directory-wasnt-prepared-using-hosting-mode-error",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
 }
