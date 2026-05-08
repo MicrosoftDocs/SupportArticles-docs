@@ -64,7 +64,7 @@ Use the following table to match the diagnostic message in the error to the like
 
 ### Identify the API server endpoint
 
-The error message may contain a diagnostic message that shows the API server FQDN or IP address. If not, run commands (shown below) to get API server endpoint.
+The error message may contain a diagnostic message that shows the API server FQDN or IP address.
 
 **Example diagnostic messages:**
 
@@ -154,7 +154,7 @@ az aks show --resource-group <resource-group> \
   --output tsv
 ```
 
-If this returns empty, the cluster uses an AKS-managed VNet. Get the subnet from the managed resource group instead:
+If no output is returned, the cluster uses an AKS-managed VNet. Get the subnet from the managed resource group instead:
 
 ```azurecli
 az network vnet list --resource-group <mc-resource-group> \
@@ -244,14 +244,14 @@ If the next hop is a firewall appliance or NVA, verify that the appliance is run
 
 #### Step 4: Verify firewall or NVA rules
 
-If you use Azure Firewall, make sure that your network rules allow outbound TCP port 443 from the node subnet to the API server IP. For application rules, include the API server FQDN patterns:
+If you use a firewall or network virtual appliance (NVA), verify that it allows outbound traffic on TCP port 443 to the API server by checking these rules:
 
-- `*.hcp.<region>.azmk8s.io` (public clusters)
-- `*.privatelink.<region>.azmk8s.io` (private clusters)
+- Network rules: Allow outbound TCP port 443 from the node subnet to the API server IP
+- Application rules: Include the API server FQDN patterns if FQDN filtering is supported:
+  - `*.hcp.<region>.azmk8s.io` (public clusters)
+  - `*.privatelink.<region>.azmk8s.io` (private clusters)
 
-If Azure Firewall diagnostic logs are enabled, search for the node private IP address, the API server IP address, and port 443 around the time of the failed AKS operation. Look for deny, reset, or rule-not-matched entries.
-
-If you use an NVA or third-party firewall, check the vendor logs for denied or reset events from the node private IP address to the API server endpoint on port 443.
+Check firewall logs for denied or reset events from the node private IP address to the API server endpoint on port 443.
 
 #### Step 5: Check private endpoint (private clusters)
 
@@ -265,13 +265,13 @@ az network private-endpoint list --resource-group <mc-resource-group> \
 
 Both `provisioningState` and `connectionStatus` should show `Succeeded` and `Approved`. If not, the private endpoint needs reprovisioning. Try running `az aks update` to reconcile the cluster.
 
-Verify that DNS resolves to the private endpoint IP, not a public IP (run this from a node or a VM in the same VNet):
+Verify that DNS resolves to the private endpoint IP, not a public IP:
 
 ```bash
 nslookup <api-server-fqdn>
 ```
 
-If testing from outside the VNet, use `az vmss run-command invoke` to run the `nslookup` from a cluster node:
+If using a private cluster and testing from outside the VNet, use `az vmss run-command invoke` to run the `nslookup` from a cluster node:
 
 ```r
 az vmss run-command invoke --resource-group <mc-resource-group> \
@@ -351,7 +351,7 @@ If the problem persists after verifying network configuration, collect the error
 
 ### Resolve no route to host
 
-If the error includes `No route to host`, the node cannot reach the API server IP address. No TCP connection was established.
+If the error includes `No route to host`, the node can't reach the API server IP address. No TCP connection was established.
 
 #### Common causes
 
@@ -454,7 +454,7 @@ If TLS inspection can't be bypassed, the node must trust the certificate chain t
 - If [custom certificate authority certificates for Azure Kubernetes Service (AKS)](/azure/aks/custom-certificate-authority) are supported for your cluster configuration, use that feature to provide the enterprise root or intermediate CA certificates.
 
 > [!IMPORTANT]
-> The CA certificate must be installed before node provisioning. Installing the CA certificate after the node is ready (such as by using a DaemonSet or a post-provisioning script) cannot fix this error because the connectivity check runs during provisioning.
+> The CA certificate must be installed before node provisioning. Installing the CA certificate after the node is ready (such as by using a DaemonSet or a post-provisioning script) can't fix this error because the connectivity check runs during provisioning.
 
 ---
 
@@ -500,7 +500,7 @@ az aks rotate-certs --resource-group <resource-group> \
 
 ### Run the baseline connectivity checks
 
-If the error doesn't include a specific diagnostic sub-category, or if you're on an older AKS version that doesn't include sub-categorization, run the following checks in order. Stop at the first failed check and fix that issue.
+If the error doesn't include a specific diagnostic subcategory, or if you're on an older AKS version that doesn't include subcategorization, run the following checks in order. Stop at the first failed check and fix that issue.
 
 > [!NOTE]
 > For private clusters, the commands in checks 1-4 must be run from inside the VNet (or from a network with access to the private DNS zone and private endpoint). Use `az vmss run-command invoke` to run them from a cluster node:
