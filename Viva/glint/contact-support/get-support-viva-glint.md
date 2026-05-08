@@ -2,15 +2,15 @@
 title: Get support for Viva Glint
 description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 05/06/2026
+ms.reviewer: aweixelman, amywheater
+ms.date: 05/08/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-- CSSTroubleshoot
-- CI 195092
-- CI 5250
+  - CSSTroubleshoot
+  - CI 195092
+  - CI 5250
 ---
 
 # Get support for Viva Glint
