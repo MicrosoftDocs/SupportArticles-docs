@@ -60,9 +60,6 @@ Use the following table to match the diagnostic message in the error to the like
 | `Certificate name mismatch` or `Certificate verification failed` | A proxy or TLS inspection device is rewriting the API server certificate. | [Resolve certificate problem](#resolve-certificate-problem). |
 | Other errors or no diagnostic details | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
 
-> [!NOTE]
-> The diagnostic sub-categories in the preceding table are available in newer AKS releases. If you're on an older version, the error message might only show the generic message without specific diagnostic details. In that case, start with [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
-
 ## Solution
 
 ### Identify the API server endpoint
