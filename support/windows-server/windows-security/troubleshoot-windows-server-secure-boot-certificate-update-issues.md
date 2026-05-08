@@ -24,8 +24,9 @@ If servers aren’t updated:
 - Secure Boot continues to function but runs with reduced protection  
 - Devices may not validate newer boot components signed with updated certificates  
 
-For Windows Client related guidance, see [Update Secure Boot Certificates for Windows Devices](/troubleshoot/windows-client/windows-security/update-secure-boot-certificates)
-For Azure Local information, see [Security updates for Azure Local](/azure/azure-local/security-update/security-update?view=azloc-2601&tabs=os-build-25398-xxxx#windows-secure-boot-certificate-expiration).
+For Windows Client related guidance, see [Update Secure Boot Certificates for Windows Devices](/troubleshoot/windows-client/windows-security/update-secure-boot-certificates).  
+
+For Azure Local information, see [Security updates for Azure Local](/azure/azure-local/security-update/security-update?view=azloc-2601&tabs=os-build-25398-xxxx#windows-secure-boot-certificate-expiration&preserve-view=true).
 
 ## Impact
 
@@ -129,4 +130,4 @@ Event Viewer > Windows Logs > System
 - Ensure transition before June 2026  
 - Monitor deployment status  
 
-For further reference refer, [Windows Server Secure Boot playbook for certificates expiring in 2026](https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/windows-server-secure-boot-playbook-for-certificates-expiring-in-2026/4495789).
+For further reference, refer [Windows Server Secure Boot playbook for certificates expiring in 2026](https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/windows-server-secure-boot-playbook-for-certificates-expiring-in-2026/4495789).
