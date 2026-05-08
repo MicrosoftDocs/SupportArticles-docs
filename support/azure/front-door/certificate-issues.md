@@ -156,11 +156,11 @@ Front Door might not rotate a certificate that's updated in Key Vault because of
 
 Key Vault permissions use two models. Choose the model that fits your scenario, and check that the permissions are still set on Key Vault.
 
-**Use Managed Identity to grant Front Door access to your Key Vault (recommended)**  
+**Use Managed Identity to grant Front Door access to your Key Vault (recommended):**  
 
 You might initially create your custom domain by using a managed identity model to grant Front Door permissions to get your certificate from your key vault. In this case, follow the instructions in [Use managed identities to access Azure Key Vault certificates](/azure/frontdoor/managed-identity#configure-key-vault-access) to make sure that the Managed Identity still has access.
 
-**Use Service Principal to grant Front Door access to your Key Vault (legacy method)**  
+**Use Service Principal to grant Front Door access to your Key Vault (legacy method):**  
         
 You might use this method to initially create your custom domain and deploy the certificate. In this case, follow the instruction in [Grant Azure Front Door access to your key vault](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#grant-azure-front-door-access-to-your-key-vault) to make sure that the permissions are still granted.
 
