@@ -8,9 +8,7 @@ manager: dcscontentpm
 ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 03/17/2026
-ms.custom: 
-  - sap:Connectivity
-  - sap:Creating and troubleshooting Network Security Groups
+ms.custom: sap:Creating and troubleshooting Network Security Groups
 # Customer intent: "As a network administrator, I want to identify and fix NSG misconfigurations that are blocking expected traffic, so that my Azure virtual network resources can communicate correctly."
 ---
 
