@@ -6,7 +6,7 @@ ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 05/08/2026
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
-# Troubleshoot Azure Files on-premises AD DS authentication support for AES-256 Kerberos encryption
+# Troubleshoot Azure Files AD DS authentication support for AES-256 Kerberos encryption
 
 **Applies to:** :heavy_check_mark: SMB Azure file shares
 
