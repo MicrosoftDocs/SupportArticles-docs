@@ -17,6 +17,8 @@ When a license is removed from a user, Windows 365 Business Cloud PCs enter a se
 
 This article provides step-by-step instructions for using Microsoft Graph Explorer and the Microsoft Graph API to perform this deprovision.
 
+__Note:__ For most scenarios, administrators can now end the grace period and deprovision Windows 365 Business Cloud PCs directly from the Microsoft 365 admin center or Intune by using the __Deprovision now__ option. This article describes how to perform the same action by using Microsoft Graph and is intended for automation or advanced troubleshooting scenarios.
+
 ## Prerequisites
 
 - Administrator access to your Microsoft 365 tenant
