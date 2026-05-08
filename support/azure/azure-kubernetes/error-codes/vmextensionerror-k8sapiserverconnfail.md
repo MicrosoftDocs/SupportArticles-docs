@@ -11,7 +11,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 ## Summary
 
-This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerConnFail` error in Azure Kubernetes Service (AKS) when you try to start, create, upgrade, or scale a cluster.
+This article explains how to identify and resolve the `VMExtensionError_K8SAPIServerConnFail` error when you try to start, create, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ Use the following table to match the diagnostic message in the error to the like
 
 ### Identify the API server endpoint
 
-The error message may contain a diagnostic message that shows the API server FQDN or IP address. If not, run commands (shown below) to get API server FQDN. 
+The error message may contain a diagnostic message that shows the API server FQDN or IP address. If not, run commands (shown below) to get API server endpoint.
 
 **Example diagnostic messages:**
 
@@ -127,14 +127,6 @@ az vmss list --resource-group <mc-resource-group> --query "[].name" --output tsv
 az vmss list-instances --resource-group <mc-resource-group> --name <vmss-name> --query "[].instanceId" --output tsv
 ```
 
-**Example output:**
-
-```output
-MC_myResourceGroup_myAKSCluster_eastus
-aks-nodepool1-12345678-vmss
-0 
-```
-
 Use the returned values as placeholders in the commands throughout this article.
 
 > [!TIP]
@@ -164,9 +156,7 @@ az aks show --resource-group <resource-group> \
   --output tsv
 ```
 
-If authorized IP ranges are set, verify that the node subnet CIDR is included. If node subnet CIDR is not included, follow these steps:
-
-To find the node subnet CIDR, first get the subnet ID:
+If authorized IP ranges are set, verify that the node subnet CIDR is included. To find the node subnet CIDR, first get the subnet ID:
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -189,7 +179,7 @@ Then get the address prefix for that subnet:
 az network vnet subnet show --ids <subnet-id> --query "addressPrefix" --output tsv
 ```
 
-Add the node subnet CIDR to the authorized IP ranges:
+If the node subnet CIDR isn't included in the authorized IP ranges, add it:
 
 ```azurecli
 az aks update --resource-group <resource-group> \
