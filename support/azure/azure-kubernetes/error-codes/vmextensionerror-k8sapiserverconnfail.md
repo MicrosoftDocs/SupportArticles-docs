@@ -80,37 +80,27 @@ TLS handshake failed. Check for HTTPS-inspecting proxies or firewalls, and ensur
 
 # Connection refused with API server IP:
 API server IP: 98.67.228.23. Connection refused. The API server port is not accepting connections...
-
-# No route to host with IP context:
-Node 10.0.2.10 could not reach API server at 98.67.228.23:443. No route to host. The node has no network path to the API server...
-
-# Certificate mismatch with hostname:
-Certificate name mismatch for 'myaks-cluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io'. Try 'az aks rotate-certs'...
 ```
 
-From these diagnostic messages, extract:
+From these diagnostic messages, take note of:
 
 - **Node IP**: The source IP address (for example, `10.0.2.10`)
 - **API Server IP**: The destination IP address (for example, `98.67.228.23`)
 - **API Server FQDN**: The hostname in format `*.hcp.<region>.azmk8s.io` (for example, `secureaksdns-oxwzkm0h.hcp.uksouth.azmk8s.io` or `myaks-cluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io`)
 
+Use the returned FQDN as `<api-server-fqdn>` in the commands in this article.
+
 If the API server endpoint isn't shown in the error message, run the following command to get it:
 
 ```azurecli
-# For public clusters:
 az aks show --resource-group <resource-group> \
   --name <cluster-name> \
   --query "fqdn" \
   --output tsv
-
-# For private clusters:
-az aks show --resource-group <resource-group> \
-  --name <cluster-name> \
-  --query "privateFqdn" \
-  --output tsv
 ```
 
-Use the returned FQDN as `<api-server-fqdn>` in the commands in this article.
+> [!NOTE]
+> For private clusters, use `--query "privateFqdn"` instead of `--query "fqdn"`.
 
 ### Find the node resource values for the checks
 
@@ -132,6 +122,8 @@ Use the returned values as placeholders in the commands throughout this article.
 > [!TIP]
 > If the error message identifies a specific failed VMSS instance, use that instance ID. For clusters with multiple node pools, use the VMSS from the affected node pool shown in the error message.
 
+---
+
 ### Resolve connection timeout
 
 If the error includes `Connection timed out`, the node tried to reach the API server on port 443 but received no response.
@@ -145,9 +137,9 @@ If the error includes `Connection timed out`, the node tried to reach the API se
 
 #### Troubleshooting steps
 
-##### Step 1: Check API server authorized IP ranges
+#### Step 1: Check API server authorized IP ranges (skip if authorized IP ranges not enabled)
 
-If the cluster has authorized IP ranges enabled (not common for private clusters), the node subnet must be included. Otherwise, the API server silently drops connections from the node.
+If the cluster has authorized IP ranges enabled, the node subnet must be included. Otherwise, the API server silently drops connections from the node.
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -190,7 +182,7 @@ az aks update --resource-group <resource-group> \
 > [!NOTE]
 > If authorized IP ranges are configured and the firewall or NAT gateway outbound IP isn't included, all node traffic to the API server is silently dropped. This is the most common cause of timeout errors for clusters that have authorized IP ranges enabled. For more information, see [Secure access to the API server using authorized IP address ranges in AKS](/azure/aks/api-server-authorized-ip-ranges).
 
-##### Step 2: Verify NSG outbound rules
+#### Step 2: Verify NSG outbound rules
 
 Verify that NSG outbound rules allow TCP port 443 from the node subnet to the API server IP.
 
@@ -222,7 +214,7 @@ Alternatively, use Network Watcher in the Azure portal for a specific flow test:
 2. Select the VMSS instance
 3. Set **Direction** to **Outbound**, **Protocol** to **TCP**, **Local IP** to the node IP, **Remote IP** to the API server IP, **Remote port** to **443**
 
-##### Step 3: Verify UDR configuration
+#### Step 3: Verify UDR configuration
 
 If the cluster uses user-defined routing or the node subnet has a route table associated with it, verify that UDRs send traffic through the expected next hop.
 
@@ -253,7 +245,7 @@ Confirm that traffic to the API server IP is routed to the expected next hop (In
 
 If the next hop is a firewall appliance or NVA, verify that the appliance is running and allows TCP port 443 to the API server FQDN.
 
-##### Step 4: Verify firewall or NVA rules
+#### Step 4: Verify firewall or NVA rules
 
 If you use Azure Firewall, make sure that your network rules allow outbound TCP port 443 from the node subnet to the API server IP. For application rules, include the API server FQDN patterns:
 
@@ -264,7 +256,7 @@ If Azure Firewall diagnostic logs are enabled, search for the node private IP ad
 
 If you use an NVA or third-party firewall, check the vendor logs for denied or reset events from the node private IP address to the API server endpoint on port 443.
 
-##### Step 5: Check private endpoint (private clusters)
+#### Step 5: Check private endpoint (private clusters)
 
 For private clusters, the node reaches the API server through a private endpoint. Verify that the private endpoint is provisioned correctly and that DNS resolves to the private IP.
 
@@ -282,12 +274,20 @@ Verify that DNS resolves to the private endpoint IP, not a public IP (run this f
 nslookup <api-server-fqdn>
 ```
 
+If testing from outside the VNet, use az vmss run-command invoke to run the nslookup from a cluster node:
+
+```r
+az vmss run-command invoke --resource-group <mc-resource-group> \
+  --name <vmss-name> \
+  --command-id RunShellScript \
+  --instance-id <instance-id> \
+  --output json \
+  --scripts `nslookup <api-server-fqdn>`
+```
+
 The result should include a `privatelink.<region>.azmk8s.io` CNAME that resolves to a private IP address. If it resolves to a public IP, the private DNS zone isn't linked to the node VNet. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters).
 
-> [!NOTE]
-> For private clusters, DNS resolution for the API server FQDN only works from within the VNet (or from networks with access to the private DNS zone). If testing from outside the VNet, use `az vmss run-command invoke` to run the nslookup from a cluster node, or expect `NXDOMAIN` which is normal for private endpoints when queried externally.
-
-##### Step 6: Test connectivity from the node
+#### Step 6: Test connectivity from the node
 
 > [!NOTE]
 > This step requires cluster nodes to exist. If cluster creation failed before nodes were provisioned, skip this step and focus on verifying network configuration (NSG, UDR, firewall rules) using the Azure portal or the earlier steps in this section.
@@ -305,6 +305,8 @@ az vmss run-command invoke --resource-group <mc-resource-group> \
 
 Review the output for connection success or failure patterns. If `nc` fails, focus on TCP port 443 routing or firewall controls. If `nc` succeeds but `curl` fails, focus on TLS inspection or proxy behavior.
 
+---
+
 ### Resolve connection refused
 
 If the error includes `Connection refused`, the node reached the API server IP but the port isn't accepting connections.
@@ -317,7 +319,7 @@ If the error includes `Connection refused`, the node reached the API server IP b
 
 #### Troubleshooting steps
 
-##### Step 1: Check cluster power state and provisioning state
+#### Step 1: Check cluster power state and provisioning state
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -333,7 +335,7 @@ az aks show --resource-group <resource-group> \
 - **provisioningState is `Creating`, `Updating`, or `Upgrading`**: Operation still in progress. Wait for completion (creation typically takes 10-15 minutes).
 - **provisioningState is `Failed`**: Proceed to Step 2.
 
-##### Step 2: Retry the operation
+#### Step 2: Retry the operation
 
 If the cluster is in a `Failed` provisioning state, try reconciling:
 
@@ -351,6 +353,8 @@ This triggers a reconciliation that reattempts the provisioning steps. This oper
 
 If the problem persists after verifying network configuration, collect the error details and contact Azure Support.
 
+---
+
 ### Resolve no route to host
 
 If the error includes `No route to host`, the node cannot reach the API server IP address. No TCP connection was established.
@@ -363,7 +367,7 @@ If the error includes `No route to host`, the node cannot reach the API server I
 
 #### Troubleshooting steps
 
-##### Step 1: Check private endpoint health (private clusters)
+#### Step 1: Check private endpoint health (private clusters)
 
 For private clusters, `No route to host` often means the private endpoint's backend (the API server PLS) is unreachable, not a routing table issue.
 
@@ -375,7 +379,7 @@ az network private-endpoint list --resource-group <mc-resource-group> \
 
 Both `provisioningState` and `connectionStatus` should show `Succeeded` and `Approved`. If not, try reconciling the cluster with `az aks update`. If the private endpoint shows `Failed` or `Disconnected` after reconciliation, contact Azure Support.
 
-##### Step 2: Check UDR next-hop health
+#### Step 2: Check UDR next-hop health
 
 For public clusters, or if the private endpoint is healthy, check if a UDR is routing traffic through a firewall or NVA. Get the route table ID from the subnet (use the subnet ID from [Find the node resource values](#find-the-node-resource-values-for-the-checks) and Step 1 of [Resolve connection timeout](#resolve-connection-timeout)):
 
@@ -395,6 +399,8 @@ az network route-table show --ids <route-table-id> \
 
 If `NextHopType` is `VirtualAppliance`, verify the appliance at `NextHopIP` is running and healthy. If `NextHopType` is `None`, traffic to that prefix is dropped. Remove or modify the route.
 
+---
+
 ### Resolve TLS handshake failure
 
 If the error includes `TLS handshake failed`, the TCP connection to the API server succeeded but the TLS negotiation failed.
@@ -407,7 +413,7 @@ If the error includes `TLS handshake failed`, the TCP connection to the API serv
 
 #### Troubleshooting steps
 
-##### Step 1: Determine if TLS inspection is in the network path
+#### Step 1: Determine if TLS inspection is in the network path
 
 Test from the node or a VMSS instance:
 
@@ -424,7 +430,7 @@ If the certificate issuer is a corporate CA or proxy instead of the cluster's ow
 
 If the certificate issuer shows a corporate CA or proxy vendor (such as Zscaler, Palo Alto, or Fortinet), TLS inspection is intercepting the connection.
 
-##### Step 2: Add AKS API server FQDNs to the SSL inspection bypass list
+#### Step 2: Add AKS API server FQDNs to the SSL inspection bypass list
 
 Add the following patterns to your proxy or firewall's SSL inspection bypass list:
 
@@ -435,7 +441,7 @@ Replace `<region>` with the Azure region of your AKS cluster.
 
 For the complete list of required endpoints, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
-##### Step 3: Verify the fix
+#### Step 3: Verify the fix
 
 After updating the bypass list, retest from the node:
 
@@ -450,7 +456,7 @@ az vmss run-command invoke --resource-group <mc-resource-group> \
 
 The output should show a successful TLS handshake with `SSL certificate verify ok`. If the issuer still shows your corporate proxy CA, the bypass rule hasn't taken effect. If the TLS failure persists, check proxy and firewall logs for deny or inspection-failed events for the API server FQDN on port 443.
 
-##### Step 4: If TLS inspection can't be bypassed
+#### Step 4: If TLS inspection can't be bypassed
 
 If TLS inspection can't be bypassed, the node must trust the certificate chain that the inspection device presents. Use one of the following AKS-supported methods to provide the enterprise CA certificate:
 
@@ -459,6 +465,8 @@ If TLS inspection can't be bypassed, the node must trust the certificate chain t
 
 > [!IMPORTANT]
 > The CA certificate must be installed before node provisioning. Installing the CA certificate after the node is ready (such as by using a DaemonSet or a post-provisioning script) cannot fix this error because the connectivity check runs during provisioning.
+
+---
 
 ### Resolve certificate problem
 
@@ -471,7 +479,7 @@ If the error includes `Certificate name mismatch` or `Certificate verification f
 
 #### Troubleshooting steps
 
-##### Step 1: Check for proxy certificate injection
+#### Step 1: Check for proxy certificate injection
 
 Test from the node or a VMSS instance:
 
@@ -486,7 +494,7 @@ az vmss run-command invoke --resource-group <mc-resource-group> \
 
 If the issuer is your corporate CA, a proxy is injecting certificates. Add the API server FQDN to the SSL inspection bypass list. See [Resolve TLS handshake failure](#resolve-tls-handshake-failure) for details.
 
-##### Step 2: Rotate cluster certificates
+#### Step 2: Rotate cluster certificates
 
 If no proxy is involved, the certificates might be stale. Rotate the cluster certificates:
 
@@ -497,6 +505,8 @@ az aks rotate-certs --resource-group <resource-group> \
 
 > [!IMPORTANT]
 > Certificate rotation causes a brief API server restart. Schedule this operation during a maintenance window and confirm that your workloads can tolerate a short control plane disruption.
+
+---
 
 ### Run the baseline connectivity checks
 
