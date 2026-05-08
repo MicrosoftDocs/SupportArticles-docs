@@ -35,15 +35,15 @@ This problem can occur for one of the following reasons:
 
 #### Troubleshooting
 
-**You just deployed the custom domain and the certificate is still propagating to all the Front Door edge servers**
+**You just deployed the custom domain and the certificate is still propagating to all Front Door edge servers:**
 
 Wait up to one hour for the new certificate to fully propagate.
 
-**One of the Front Door edge servers doesn't have the expected certificate loaded**
+**One of the Front Door edge servers doesn't have the expected certificate loaded:**
 
 To verify that the certificate is deployed correctly to all Front Door edge servers, follow these steps:
 
-1. In the [Azure portal](https://portal.azure.com), check the deployment status for the custom domain to make sure that the **Certificate state** is **Deployed**.
+1. In the [Azure portal](https://portal.azure.com), check the deployment status for the custom domain to make sure the **Certificate state** is **Deployed**.
 
    :::image type="content" source="media/certificate-issues/certificate-state.png" alt-text="Screenshot of the Certificate state shown as Deployed in Azure portal." lightbox="media/certificate-issues/certificate-state.png":::
 
@@ -65,7 +65,7 @@ To verify that the certificate is deployed correctly to all Front Door edge serv
     
    - The response from the site contains `x-azure-ref` headers. This condition indicates that the traffic was handled by Front Door.
 
-Include all your gathered data in the support request, including the geographic area where users are affected.
+    Include all your gathered data in the support request, including the geographic area where users are affected.
 
 ### The returned certificate for a custom domain is expired
 
@@ -85,34 +85,34 @@ This problem might occur for one of the following reasons:
 
 #### Troubleshooting
 
-**The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Front Door endpoint hostname**
+**The custom domain uses a managed certificate, but there's no CNAME delegating the custom domain to the Front Door endpoint hostname:**
 
 To verify that the CNAME for the custom domain is correctly pointing to the Front Door endpoint, follow these steps:
 
 1. Test DNS resolution of the custom domain by using a DNS lookup tool such as `dig`. Verify that your custom domain has no direct CNAME to the Front Door endpoint. The following example of a `dig` query shows that the custom domain doesn't currently resolve to a CNAME that points to the Front Door endpoint:
 
-```
-      dig contoso.fabrikam.com CNAME
-      
-      ; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> contoso.fabrikam.com CNAME
-      ;; global options: +cmd
-      ;; Got answer:
-      ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 55070
-      ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
-      ;; OPT PSEUDOSECTION:
-      ; EDNS: version: 0, flags:; udp: 4096
-      
-      ;; QUESTION SECTION:
-      ;contoso.fabrikam.com. IN CNAME
-      
-      ;; AUTHORITY SECTION:
-      fabrikam.com. 300 IN SOA ns1-03.azure-dns.com. azuredns-hostmaster.microsoft.com. 1 3600 300 2419200 300
-      
-      ;; Query time: 123 msec
-      ;; SERVER: 0.0.0.0#53(0.0.0.0) (UDP)
-      ;; WHEN: Fri Mar 06 16:18:53 CST 2026
-      ;; MSG SIZE rcvd: 132
-```
+    ```
+    dig contoso.fabrikam.com CNAME
+    
+    ; <<>> DiG 9.18.39-0ubuntu0.22.04.2-Ubuntu <<>> contoso.fabrikam.com CNAME
+    ;; global options: +cmd
+    ;; Got answer:
+    ;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 55070
+    ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+    ;; OPT PSEUDOSECTION:
+    ; EDNS: version: 0, flags:; udp: 4096
+    
+    ;; QUESTION SECTION:
+    ;contoso.fabrikam.com. IN CNAME
+    
+    ;; AUTHORITY SECTION:
+    fabrikam.com. 300 IN SOA ns1-03.azure-dns.com. azuredns-hostmaster.microsoft.com. 1 3600 300 2419200 300
+    
+    ;; Query time: 123 msec
+    ;; SERVER: 0.0.0.0#53(0.0.0.0) (UDP)
+    ;; WHEN: Fri Mar 06 16:18:53 CST 2026
+    ;; MSG SIZE rcvd: 132
+    ```
 
 1. If the CNAME is missing, go to **Settings** > **Domains** in your Front Door profile, and then select the link that's associated with the DNS state.
   
@@ -122,23 +122,27 @@ To verify that the CNAME for the custom domain is correctly pointing to the Fron
     
 1. To expedite creation of a new certificate, refresh the validation token. See the following example of the [Update-AzFrontDoorCdnCustomDomainValidationToken](/powershell/module/az.cdn/update-azfrontdoorcdncustomdomainvalidationtoken) Azure PowerShell cmdlet for reference:
 
-```azurepowershell
-      Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
-```
+    ```azurepowershell
+    Update-AzFrontDoorCdnCustomDomainValidationToken -ResourceGroupName contosorg -ProfileName myAzureFrontDoor CustomDomainName contoso-fabrikam-com
+    ```
 
 1. After this command finishes, update your DNS zone by using the new TXT record value to validate the new certificate.
 
-The custom domain uses a certificate that's deployed from an Azure Key Vault. However, the certificate doesn't rotate automatically in the key vault. One reason that certificate might not rotate is that the certificate version isn't the latest when you create the secret in the Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation).
+**The custom domain uses a certificate that's deployed from an Azure Key Vault, but the certificate isn't rotated in the Key Vault:**
 
-1. Go to **Security** > **Secrets** to check the version number that's listed for the certificate.
+- One reason that a certificate might not rotate is that the certificate version isn't the latest when you create the secret in the Front Door profile. For more information, see [Certificate autorotation](/azure/frontdoor/end-to-end-tls?pivots=front-door-standard-premium#certificate-autorotation).
 
-   :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot of a Front Door secret configured to use the latest certificate version." lightbox="media/certificate-issues/secret-version-latest.png":::
+    1. Go to **Security** > **Secrets** to check the version number that's listed for the certificate.
 
-1. If the listed certificate version isn't the latest, create a new secret in the Front Door profile by using the same Key Vault certificate, and select either **Latest** or the most recent specific version.
+       :::image type="content" source="media/certificate-issues/secret-version-latest.png" alt-text="Screenshot of a Front Door secret configured to use the latest certificate version." lightbox="media/certificate-issues/secret-version-latest.png":::
 
-1. Associate the custom domain with the new secret. After you complete this association, your certificate is deployed within 24 hours.
+    1. If the listed certificate version isn't the latest, create a new secret in the Front Door profile by using the same Key Vault certificate, and select either **Latest** or the most recent specific version.
 
-### Changes in Key Vault access 
+    1. Associate the custom domain with the new secret. After you complete this association, your certificate is deployed within 24 hours.
+
+- Another reason that a certificate might not rotate is changes in Key Vault access permissions. For more information, See next section.
+
+### Changes in Key Vault access
 
 #### Symptoms
 
