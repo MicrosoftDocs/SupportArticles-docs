@@ -582,6 +582,5 @@ In the output, look for extension status or substatus messages that mention `VME
 - [Create a private AKS cluster](/azure/aks/private-clusters)
 - [HTTP proxy support in Azure Kubernetes Service (AKS)](/azure/aks/http-proxy)
 - [Custom certificate authority certificates for Azure Kubernetes Service (AKS)](/azure/aks/custom-certificate-authority)
-- [Troubleshoot the VMExtensionError_K8SDownloadTimeout error](vmextensionerror-k8sdownloadtimeout.md)
 - [Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error](vmextensionerror-k8sapiserverdnslookupfail.md)
 - [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
