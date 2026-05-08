@@ -9,8 +9,6 @@ ms.custom: sap:Environment management\Environment licensing
 ---
 # Can't access a new Customer Insights - Data environment
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article provides a resolution for an issue where you can't access a new Dynamics 365 Customer Insights - Data environment due to a disabled service principal.
 
 ## Symptoms
