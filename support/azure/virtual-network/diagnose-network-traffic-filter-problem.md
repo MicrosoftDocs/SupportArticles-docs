@@ -7,7 +7,7 @@ ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 04/01/2025
 ms.devlang: azurecli
-ms.custom: sap:Creating and troubleshooting Network Security Groups
+ms.custom: sap:Virtual Network Appliance
 # Customer intent: "As a network engineer, I want to diagnose network traffic filter issues on a virtual machine, so that I can identify and resolve connectivity problems due to conflicting security rules."
 ---
 
