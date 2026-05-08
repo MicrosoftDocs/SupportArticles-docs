@@ -41,7 +41,7 @@ If no results are returned, your storage accounts already support AES-256, and y
 
 ### Step 2: Ensure AES-256 is allowed by clients and by the storage account
 
-Ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
+Ensure that client machines don't have a value in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key that would explicitly disallow AES-256 encryption. See [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](files-troubleshoot-smb-authentication.md#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types) for more details.
 
 Additionally, ensure that the [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings) don't disallow AES-256 Kerberos ticket encryption.
 
@@ -195,7 +195,7 @@ The output should show `AES-256-CTS-HMAC-SHA1-96` for both the **KerbTicket Encr
 
 If you encounter authentication problems after upgrading to AES-256, you can revert to RC4 using the following steps. While you should still upgrade to AES-256 before Windows Update changes the default encryption type in AD DS, these steps allow you to temporarily revert to RC4 while troubleshooting AES-256 issues.
 
-1. Ensure client machines don't have the following registry key value. Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
+1. Ensure client machines don't have the following registry key value. Check for the `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\SupportedEncryptionTypes` registry key. It explicitly disallows RC4 encryption. For details, see [Mount to Azure Files fails when using Entra Kerberos due to unsupported Kerberos encryption types](files-troubleshoot-smb-authentication.md#mount-to-azure-files-fails-when-using-entra-kerberos-due-to-unsupported-kerberos-encryption-types).
 
 2. Ensure the storage account's SMB security settings don't disallow RC4 Kerberos ticket encryption. For more information, see [storage account's SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
