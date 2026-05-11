@@ -114,8 +114,8 @@ For an online SCP, follow these steps:
    INFO: set additional flag.
    No proxy information is specified. Connect without proxy.
    INFO: WinHttpQueryHeaders() in Download() returned OK (200)
-   INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
-   4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
+   INFO: Verifying hash for file 'E:\ConfigMgr\EasySetupPayload\aa928926-5c76-4de0-b51f-0fe4d365dfe2\redist\SQLSysClrTypes.msi'
+   INFO: Verifying signature for file 'E:\ConfigMgr\EasySetupPayload\aa928926-5c76-4de0-b51f-0fe4d365dfe2\redist\SQLSysClrTypes.msi'
    ```
 
 After the download operation finishes, verify that the required files exist in the EasySetupPayload\\*PackageGuid*\\Redists folder. At this point, try again to install the in-console update package.
