@@ -15,208 +15,464 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 This article explains how to troubleshoot errors that occur when you deploy cluster extensions for Microsoft Azure Kubernetes Service (AKS), including extension creation failures, Helm errors, and scheduling issues.
 
-## Extension creation errors
+## Addon to Core Extension Migration
 
-### Error: Unable to get a response from the agent in time
+### Overview
 
-This error occurs if Azure services don't receive a response from the cluster extension agent. This situation might occur because the AKS cluster can't establish a connection with Azure.
+[Azure Monitor](/azure/azure-monitor/containers/kubernetes-monitoring-overview) services, including [Container Insights](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), [Managed Prometheus](/azure/azure-monitor/containers/kubernetes-monitoring-enable?tabs=cli), and [Application Insights](/azure/azure-monitor/containers/kubernetes-codeless?tabs=portal) are transitioning to a cluster extension based backend model. This change updates AKS monitoring [add-ons](/azure/aks/integrations) to an extension‑based management model, with no change to functionality or user experience.
 
-#### Cause 1: The cluster extension agent and manager pods aren't initialized
+This backend migration is nondisruptive and doesn't change user experience or require customer action.
 
-The cluster extension agent and manager are crucial system components that are responsible for managing the lifecycle of Kubernetes applications. The initialization of the cluster extension agent and manager pods might fail because of the following problems:
+There's no impact to workloads, data collection, or monitoring functionality.
 
-- Resource limitations 
-- Policy restrictions
-- Node taints, such as `NoSchedule`
+Azure CLI, Azure portal, and all client experiences continue to work as expected.
 
-##### Solution 1: Make sure that the cluster extension agent and manager pods work correctly
+#### What’s changing 
 
-To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in an unready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that prevent scheduling, insufficient memory, or policy restrictions):
+• Monitoring add-ons are now implemented and managed as AKS cluster extensions 
 
-```console
-kubectl describe pod -n kube-system extension-operator-{id}
-```
-Here's a command output sample:
+• Each monitoring service is represented by its own extension
 
-```output
-kube-system         extension-agent-55d4f4795f-sqx7q             2/2     Running   0          2d19h
-kube-system         extension-operator-56c8d5f96c-nvt7x          2/2     Running   0          2d19h
-```
+### How to Check if the Monitoring solution on your AKS Cluster Is Migrated
 
-For ARC-connected clusters, run the following command to check the pod description:
+If your Monitoring solution has been migrated to the extension-based backend, Monitoring services will appear as extensions.
 
-```console
-kubectl describe pod -n azure-arc extension-manager-{id}
-```
+Steps in Azure Portal:
 
-Here's a command output sample:
+1. Go to the Azure Portal
 
-```output
-NAMESPACE         NAME                                          READY   STATUS             RESTARTS        AGE
-azure-arc         cluster-metadata-operator-744f8bfbd4-7pssr    0/2     ImagePullBackOff   0               6d19h
-azure-arc         clusterconnect-agent-7557d99d5c-rtgqh         0/3     ImagePullBackOff   0               6d19h
-azure-arc         clusteridentityoperator-9b8b88f97-nr8hf       0/2     ImagePullBackOff   0               6d19h
-azure-arc         config-agent-6d5fd59b8b-khw2d                 0/2     ImagePullBackOff   0               6d19h
-azure-arc         controller-manager-5bc97f7db6-rt2zs           0/2     ImagePullBackOff   0               6d19h
-azure-arc         extension-events-collector-7596688867-sqzv2   0/2     ImagePullBackOff   0               6d19h
-azure-arc         extension-manager-86bbb949-6s59q              0/3     ImagePullBackOff   0               6d19h
-azure-arc         flux-logs-agent-5f55888db9-wnr4c              0/1     ImagePullBackOff   0               6d19h
-azure-arc         kube-aad-proxy-646c475dcc-92b86               0/2     ImagePullBackOff   0               6d19h
-azure-arc         logcollector-5cbc659bfb-9v96d                 0/1     ImagePullBackOff   0               6d19h
-azure-arc         metrics-agent-5794866b46-j9949                0/2     ImagePullBackOff   0               6d19h
-azure-arc         resource-sync-agent-6cf4cf7486-flgwc          0/2     ImagePullBackOff   0               6d19h
-```
+1. Navigate to your AKS cluster resource
 
-When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
+1. Select “Extensions + applications” under Settings
 
-#### Cause 2: An issue affects the egress block or firewall
+1. Verify that the Monitoring extensions are listed
 
-If the cluster extension agent and manager pods are healthy, and you still encounter the "Unable to get a response from the agent in time" error, an egress block or firewall issue probably exists. This issue might block the cluster extension agent and manager pods from communicating with Azure.
+1. Confirm each extension shows Provisioning State as "Succeeded"
 
-##### Solution 2: Make sure that networking prerequisites are met
+Each Monitoring service is represented and managed by its own extension.
 
-To resolve this problem, make sure that you follow the networking prerequisites that are outlined in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
+#### Monitoring Add-on to Extension Mapping
 
-#### Cause 3: The traffic is not authorized 
 
-The extension agent unsuccessfully tries calling to `<region>.dp.kubernetesconfiguration.azure.com` data plane service endpoints. This failure generates an "Errorcode: 403, Message This traffic is not authorized" entry in the extension-agent pod logs.
+ Monitoring Capability              | Extension Type                      | Extension Name                                   |
+|----------------------------------|------------------------------------|--------------------------------------------------|
+| Logging                          | aks-managed-azure-monitor-logs     | microsoft.azuremonitor.containers                |
+| Managed Prometheus (Metrics)     | aks-managed-azure-monitor-metrics  | microsoft.azuremonitor.containers.metrics        |
+| Application Insights / Monitoring| aks-managed-app-monitoring         | microsoft.azuremonitor.appmonitoring             |
 
-```console
-kubectl logs -n kube-system extension-agent-<pod-guid>
-{  "Message": "2024/02/07 06:04:43 \"Errorcode: 403, Message This traffic is not authorized., Target /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/provider/managedclusters/clusters/<cluster-name>/configurations/getPendingConfigs\"",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>,  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
-{  "Message": "2024/02/07 06:04:43 Failed to GET configurations with err : {\u003cnil\u003e}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
-```
 
-This error occurs if a preexisting PrivateLinkScope exists in an extension's data plane for Azure Arc-enabled Kubernetes, and the virtual network (or private DNS server) is shared between Azure Arc-enabled Kubernetes and the AKS-managed cluster. This networking configuration causes AKS outbound traffic from the extension data plane to also route through the same private IP address instead of through a public IP address.
+### Troubleshooting
 
-Run the following [nslookup](/windows-server/administration/windows-commands/nslookup) command in your AKS cluster to retrieve the specific private IP address that the data plane endpoint is resolving to:
-
-```console
-PS D:\> kubectl exec -it -n kube-system extension-agent-<pod-guid> -- nslookup  <region>.dp.kubernetesconfiguration.azure.com
-Non-authoritative answer:
-<region>.dp.kubernetesconfiguration.azure.com        canonical name = <region>.privatelink.dp.kubernetesconfiguration.azure.com
-Name:   <region>.privatelink.dp.kubernetesconfiguration.azure.com
-Address: 10.224.1.184
-```
-
-When you search for the private IP address in the Azure portal, the search results point to the exact resource: virtual network, private DNS zone, private DNS server, and so on. This resource has a private endpoint that's configured for the extension data plane for Azure Arc-enabled Kubernetes.
-
-##### Solution 3.1: (Recommended) Create separate virtual networks
-
-To resolve this problem, we recommend that you create separate virtual networks for Azure Arc-enabled Kubernetes and AKS computes.
-
-##### Solution 3.2: Create a CoreDNS override
-
-If the recommended solution isn't possible in your situation, create a CoreDNS override for the extension data plane endpoint to go over the public network. For more information about how to customize CoreDNS, see the ["Hosts plugin"](/azure/aks/coredns-custom#hosts-plugin) section of "Customize CoreDNS with Azure Kubernetes Service."
-
-To create a CoreDNS override, follow these steps:
-
-1. Find the public IP address of the extension data plane endpoint by running the `nslookup` command. Make sure that you change the region (for example, `eastus2euap`) based on the location of your AKS cluster:
-
-   ```console
-   nslookup <region>.dp.kubernetesconfiguration.azure.com
-   Non-authoritative answer:
-   Name:    clusterconfig<region>.<region>.cloudapp.azure.com
-   Address:  20.39.12.229
-   Aliases:  <region>.dp.kubernetesconfiguration.azure.com
-            <region>.privatelink.dp.kubernetesconfiguration.azure.com
-            <region>.dp.kubernetesconfiguration.trafficmanager.net
-   ```
-
-1. Create a backup of the existing coreDNS configuration:
-
-   ```bash
-   kubectl get configmap -n kube-system coredns-custom -o yaml > coredns.backup.yaml
-   ```
-
-1. Override the mapping for the regional (for example, `eastus2euap`) data plane endpoint to the public IP address. To do this, create a YAML file that's named *corednsms.yaml*, and then copy the following example configuration into the new file. (Make sure that you update the address and the host name by using the values for your environment.)
-
-   ```yaml
-   apiVersion: v1
-   kind: ConfigMap
-   metadata:
-     name: coredns-custom      # This is the name of the configuration map that you can overwrite with your changes.
-     namespace: kube-system
-   data:
-     extensionsdp.override: |  # You can select any name here, but it must have the .override file name extension.
-       hosts {
-         20.39.12.229 <region>.dp.kubernetesconfiguration.azure.com
-         fallthrough
-       }
-   ```
-
-1. To create the ConfigMap, run the `kubectl apply` command, specifying the name of your YAML manifest file:
-
-   ```bash
-   kubectl apply -f corednsms.yaml
-   ```
-
-1. To reload the ConfigMap and enable Kubernetes Scheduler to restart CoreDNS without downtime, run the [kubectl rollout restart](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-restart-em-) command:
-
-   ```bash
-   kubectl -n kube-system rollout restart deployment coredns
-   ```
-
-1. Run the `nslookup` command again to make sure that the data plane endpoint resolves to the provided public IP address:
-
-   ```console
-   kubectl exec -it -n kube-system extension-agent-55d4f4795f-nld9q -- nslookup  [region].dp.kubernetesconfiguration.azure.com
-   Name:   <region>.dp.kubernetesconfiguration.azure.com
-   Address: 20.39.12.229
-   ```
-
-The extension agent pod logs should no longer log "Errorcode: 403, Message This traffic is not authorized" error entries. Instead, the logs should contain "200" response codes.
-
-```console
-kubectl logs -n kube-system extension-agent-{id} 
-{  "Message": "GET configurations returned response code {200}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5"  }
-```
-
-### Error: Extension pods can't be scheduled if all the node pools in the cluster are "CriticalAddonsOnly" tainted
-
-When this error occurs, the following entry is logged in the extension agent log:
-
-> Extension Pod error: 0/2 nodes are available: 2 node(s) had untolerated taint {CriticalAddonsOnly: true}. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling.
+### Issue 1: Extension provisioning state shows “Failed”
 
 #### Cause
 
-This error occurs when you try to enable extensions (such as the Distributed Application Runtime (DAPR)) on an AKS cluster that has `CriticalAddonsOnly` tainted node pools. In this situation, the extension pods aren't scheduled on any node because no toleration exists for these taints.
+A Failed provisioning state indicates that the monitoring service was not enabled successfully.
 
-To view the error situation, examine the extension pods to verify that they're stuck in a pending state:
+#### Solution
 
-```console
-kubectl get po -n {namespace-name} -l app.kubernetes.io/name={name}
+• Verify that all required monitoring configuration values were provided correctly 
 
-NAME                                   READY   STATUS    RESTARTS   AGE
-{podname}                              0/2     Pending   0          2d6h
+• Retry enabling the monitoring add-on by disabling and then re-enabling it on the AKS cluster
+
+Monitoring add-ons are now managed as extensions in the backend, but the customer experience for enabling or disabling monitoring remains unchanged.
+
+### Issue 2: Unable to update or edit a monitoring extension
+
+#### Cause
+
+Monitoring extensions are managed by the AKS resource provider and are not user-editable.
+
+If you attempt to update an extension directly, you may see an error such as:
+
+“Failed to update ‘aks-managed-azure-monitor-logs’ for the cluster. Access denied: ‘write’ operation is not allowed.”
+
+#### Solution
+
+This behavior is expected. Customers should enable, disable, or configure monitoring using the AKS monitoring add-on experience (Azure Portal, CLI, or ARM), rather than attempting to modify the extension directly.
+
+### Issue 3: Resource Lock Prevents Extension Deletion
+
+#### Error
+
+When deploying or managing Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails with an error similar to:
+
+
 ```
 
-Describe the pods to see that they can't be scheduled because of an unsupportable taint:
+Delete of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
 
-```console
-kubectl describe po -n {namespace-name} {podname}
+Please refer https://aka.ms/akscoreextensions-tsg for additional details.
 
-Events:
-  Type     Reason            Age   From               Message
-  ----     ------            ----  ----               -------
-  Warning  FailedScheduling  18s   default-scheduler  0/2 nodes are available: 2 node(s) had untolerated taint {CriticalAddonsOnly: true}. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling.
+The scope '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>/providers/Microsoft.KubernetesConfiguration/extensions/aks-managed-azure-monitor-metrics' cannot perform delete operation because following scope(s) are locked: '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/microsoft.containerservice/managedClusters/<cluster-name>'.
+
+Please remove the lock and try again.
+
 ```
 
-> [!NOTE]
->
-> - We recommend that you don't install extensions on `CriticalAddOnsOnly` tainted node pools unless doing this is required for application workloads.
->
-> - We recommend that you don't use a `CriticalAddOnsOnly` taint on single node pool clusters. If you use that taint in a cluster that has just one node pool, you can't schedule application pods in the cluster. Make sure that at least one node pool in the cluster doesn't have this taint. For more information about when the `CriticalAddonsOnly` annotation should be used, see [Manage system node pools in Azure Kubernetes Service (AKS)](/azure/aks/use-system-pools).
+#### Cause
 
-##### Solution 1: Add a node pool to the cluster
+Azure Resource Locks prevent accidental deletion or modification of critical resources. When a **Delete lock** or **ReadOnly lock** is applied at any of the following scopes, extension deletion operations are blocked:
 
-To resolve this problem, add one more node pool that doesn't have a `CriticalAddonsOnly` taint. This action causes the extension pods to be scheduled on the new node pool.
+**Subscription level** – Locks all resources in the subscription
 
-##### Solution 2: Remove the "CriticalAddonsOnly" taint
+**Resource group level** – Locks all resources in the resource group
 
-If it's possible and practical, you can remove the `CriticalAddonsOnly` taint in order to install the extension on the cluster.
+**Resource level** – Locks the specific AKS cluster resource
 
-## Helm errors
+The extension deletion operation requires write/delete permissions on the cluster resource, which are blocked by the lock.
+
+#### Common scenarios where locks are applied:
+
+- Organization policies that enforce resource locks for production resources
+- Compliance requirements (e.g., Azure Policy automatically applying locks)
+- Manual locks applied by administrators to prevent accidental deletion
+
+#### Solution
+
+#### Step 1: Identify the Lock
+
+1. Navigate to the Azure Portal
+
+1. Go to the AKS cluster resource, resource group, or subscription (depending on the lock scope mentioned in the error)
+ 
+1. Select **Settings** > **Locks** from the left menu
+ 
+1. Identify the lock(s) that are blocking the operation
+
+**Using Azure CLI:**
+
+
+```azurecli
+# Check locks at cluster level
+
+az lock list --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters
+
+  
+
+# Check locks at resource group level
+
+az lock list --resource-group <resource-group>
+
+  
+
+# Check locks at subscription level
+
+az lock list
+```
+
+#### Step 2: Remove or Temporarily Disable the Lock
+
+> ⚠️ **Warning:** Ensure you have appropriate permissions and authorization before removing resource locks. Coordinate with your organization's security/compliance team if necessary.
+
+**Using Azure Portal:**
+
+1. Navigate to the lock location identified in Step 1
+
+1. Select the lock and click **Delete**
+ 
+1. Confirm the deletion
+ 
+**Using Azure CLI:**
+
+
+```azurecli
+# Delete a lock (you need the lock name from Step 1)
+
+az lock delete --name <lock-name> --resource-group <resource-group>
+
+  
+
+# For cluster-level lock
+
+az lock delete --name <lock-name> \
+
+  --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters
+```
+
+#### Step 3: Retry the Extension Deletion
+
+After removing the lock, retry the extension deletion operation:
+
+**Using Azure CLI:**
+
+
+```azurecli
+
+az aks update --resource-group <resource-group> --name <cluster-name> \
+
+  --disable-azure-monitor-metrics
+
+```
+
+#### Step 4: Re-apply the Lock (Recommended)
+
+If the lock was intentionally applied for protection, re-apply it after the extension operation completes:
+
+
+```azurecli
+
+az lock create --name <lock-name> \
+
+  --resource-group <resource-group> \
+
+  --resource-name <cluster-name> \
+
+  --resource-type Microsoft.ContainerService/managedClusters \
+
+  --lock-type CanNotDelete
+
+```
+
+### Issue 4: Azure Policy Blocks Extension Creation or Update
+
+#### Error
+
+When deploying or managing Azure Monitor services (Container Insights, Managed Prometheus, and Application Insights) on AKS clusters, the operation fails with an error similar to:
+
+
+```
+
+Create or update of core cluster extension aks-managed-azure-monitor-metrics of type microsoft.azuremonitor.containers.metrics failed.
+
+Please refer https://aka.ms/akscoreextensions-tsg for additional details.
+
+Resource 'aks-managed-azure-monitor-metrics' was disallowed by policy.
+
+Policy identifiers: '[{"policyAssignment":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>"},"policyDefinition":{"name":"Restrict Extensions","id":"/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyDefinitions/<definition-id>","version":"1.0.0"}}]'
+
+```
+
+#### Cause
+
+Azure Policy is enforcing restrictions that prevent the creation or modification of cluster extensions. This typically occurs when:
+
+- **Deny policies** are configured to restrict which extensions can be installed on AKS clusters
+
+- **Allowed extension types policies** exist that do not include the Azure Monitor extensions in the allowlist
+
+- **Naming convention policies** block resources that don't match specific naming patterns
+ 
+- **Tag enforcement policies** require specific tags that are not present on the extension resource
+ 
+The policy identifiers in the error message indicate:
+
+**policyAssignment** – The specific policy assignment blocking the operation
+
+**policyDefinition** – The underlying policy definition being enforced
+
+#### Common scenarios:
+
+- Organization security policies that restrict third-party or specific extensions
+
+- Policies intended to control cost or resource sprawl
+ 
+- Compliance policies that inadvertently block Microsoft-managed extensions
+
+#### Solution
+
+#### Step 1: Identify the Blocking Policy
+
+Extract the policy information from the error message:
+
+**Policy Assignment Name:** `Restrict Extensions` (example)
+
+**Policy Assignment ID:** `/subscriptions/<subscription-id>/providers/Microsoft.Authorization/policyAssignments/<assignment-id>`
+
+**Policy Definition Name:** `Restrict Extensions` (example)
+
+**Using Azure Portal:**
+
+- Navigate to **Policy** in the Azure Portal
+
+- Select **Assignments** from the left menu
+ 
+- Search for the policy assignment name from the error message
+ 
+- Click on the assignment to view its details and scope
+ 
+**Using Azure CLI:**
+
+
+```azurecli
+# Get details of the policy assignment
+
+az policy assignment show --name <assignment-id> --scope /subscriptions/<subscription-id>
+
+  
+
+# List all policy assignments at subscription level
+
+az policy assignment list --scope /subscriptions/<subscription-id>
+
+  
+
+# Get the policy definition details
+
+az policy definition show --name <definition-id>
+
+```
+
+#### Step 2: Review the Policy Rule
+
+Examine the policy definition to understand what conditions are blocking the extension:
+
+**Using Azure Portal:**
+
+- Navigate to **Policy** > **Definitions**
+
+- Search for the policy definition name
+ 
+- Review the **Policy rule** JSON to understand the deny conditions
+
+**Common blocking conditions to look for:**
+
+- Extension type restrictions (not allowing `microsoft.azuremonitor.containers.metrics`)
+
+- Resource name pattern restrictions
+ 
+- Required tag conditions
+
+#### Step 3: Create a Policy Exemption (Recommended Approach)
+
+If the policy is required for compliance but Azure Monitor extensions should be allowed, create an exemption:
+
+**Using Azure Portal:**
+
+1. Navigate to **Policy** > **Assignments**
+
+1. Select the blocking policy assignment
+
+1. Click **Create exemption**
+
+1. Set the scope to the AKS cluster resource or resource group
+
+1. Select **Waiver** or **Mitigated** as the exemption category
+
+1. Provide a justification (e.g., "Azure Monitor metrics extension are core cluster extensions managed by AKS")
+
+**Using Azure CLI:**
+
+
+```azurecli
+
+az policy exemption create \
+
+  --name "Allow-Azure-Monitor-Extensions" \
+
+  --policy-assignment <assignment-id> \
+
+  --scope "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.ContainerService/managedClusters/<cluster-name>" \
+
+  --exemption-category Waiver \
+
+  --description "Exemption to allow Azure Monitor core extensions for cluster monitoring"
+
+```
+
+#### Step 4: Alternative – Modify the Policy (If Appropriate)
+
+If you have permissions to modify the policy, update it to allow Azure Monitor extensions:
+
+1. Navigate to **Policy** > **Definitions**
+
+1. Clone the existing policy definition (if it's a built-in policy)
+ 
+1. Modify the policy rule to exclude Azure Monitor extension types:
+
+- `microsoft.azuremonitor.containers.metrics`
+
+- `microsoft.azuremonitor.containers`
+
+- `microsoft.azuremonitor.appmonitoring`
+
+1. Update or create a new policy assignment with the modified definition
+
+**Example policy rule modification to allow Azure Monitor extensions:**
+
+
+```
+
+{
+
+  "if": {
+
+    "allOf": [
+
+      {
+
+        "field": "type",
+
+        "equals": "Microsoft.KubernetesConfiguration/extensions"
+
+      },
+
+      {
+
+        "field": "Microsoft.KubernetesConfiguration/extensions/extensionType",
+
+        "notIn": [
+
+          "microsoft.azuremonitor.containers.metrics",
+
+          "microsoft.azuremonitor.containers",
+
+          "microsoft.azuremonitor.appmonitoring"
+
+        ]
+
+      }
+
+    ]
+
+  },
+
+  "then": {
+
+    "effect": "deny"
+
+  }
+
+}
+
+  
+```
+
+#### Step 5: Retry the Extension Operation
+
+After creating an exemption or modifying the policy, retry the extension operation:
+
+**Using Azure CLI:**
+
+
+```azurecli
+# Enable Azure Monitor metrics
+
+az aks update --resource-group <resource-group> --name <cluster-name> \
+
+  --enable-azure-monitor-metrics
+
+  
+
+# Enable Container Insights
+
+az aks enable-addons --resource-group <resource-group> --name <cluster-name> \
+
+  -a monitoring --workspace-resource-id <workspace-id>
+
+```
+ 
+## Extension creation errors
+
+#### Helm errors
 
 You might encounter any of the following Helm-related errors:
 
