@@ -11,7 +11,7 @@ ms.custom:
 - Exchange Hybrid
 - CSSTroubleshoot
 - CI 162000
-ms.reviewer: timothyh, v-six
+ms.reviewer: timothyh, batre
 appliesto:
 - Exchange Online
 - Exchange Server SE
