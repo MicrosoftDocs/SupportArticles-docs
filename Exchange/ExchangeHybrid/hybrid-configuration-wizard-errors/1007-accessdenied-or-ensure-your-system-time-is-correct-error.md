@@ -36,4 +36,4 @@ This problem occurs because the local system time is out of sync with a valid ti
 
 ## Resolution
 
-Make sure that your local system time and the server time are in sync. See [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042) for more information.
+Make sure that your local system time and the server time are in sync. See [How to configure an authoritative time server in Windows Server](/troubleshoot/windows-server/active-directory/configure-authoritative-time-server) for more information.
