@@ -1,6 +1,6 @@
 ---
 title: 1007 AccessDenied or Unable to federate your domain error
-description: Describes an issue in which you receive an Access Denied or Ensure your system time is correct error message when you run the Hybrid Configuration wizard. Provides a solution.
+description: Describes an issue in which you receive an Access Denied or Ensure your system time is correct error message when you run the Hybrid Configuration wizard and provides a solution.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -14,12 +14,9 @@ ms.custom:
 ms.reviewer: timothyh, v-six
 appliesto:
 - Exchange Online
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server Subscription Edition
-- Exchange SE
+- Exchange Server SE
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/11/2026
 ---
 # "1007 AccessDenied" or "Ensure your system time is correct" error when you run Hybrid Configuration wizard
 
@@ -35,10 +32,8 @@ When you run the Hybrid Configuration wizard, you receive one of the following e
 
 ## Cause
 
-This problem occurs because the local system time is out of sync with a valid time server. This problem occurs if the system time of your local system and the system time of the server from which you're running the Hybrid Configuration wizard differ by five minutes or more.
+This problem occurs because the local system time is out of sync with a valid time server. The system time of your local system and the system time of the server from which you're running the Hybrid Configuration wizard differ by five minutes or more.
 
 ## Resolution
 
-Make sure that your local system time and the server time are in sync. For more information about how to do this, see [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
+Make sure that your local system time and the server time are in sync. See [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042) for more information.
