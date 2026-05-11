@@ -4,7 +4,7 @@ description: Fix the VMExtensionError_K8SDownloadTimeout error in AKS. Learn how
 ms.date: 04/27/2026
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SDownloadTimeout error code so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SDownloadTimeout error so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the VMExtensionError_K8SDownloadTimeout error in Azure Kubernetes Service
@@ -38,22 +38,22 @@ In some logs, this error might also appear as **exit status 31** or `ExitCode: 3
 
 ## Causes
 
-During node provisioning, the AKS Custom Script Extension (CSE) downloads Kubernetes binaries from a required AKS endpoint. This error occurs when the node can't complete the download before the CSE timeout is reached.
+During node provisioning, the AKS Custom Script Extension (CSE) downloads Kubernetes binaries from a required AKS endpoint. This error occurs if the node can't finish the download before the CSE timeout is reached.
 
-This issue is common in bring-your-own virtual network (BYO VNet) scenarios, where firewall rules, network security groups (NSGs), user-defined routes (UDRs), or proxy settings can block required outbound endpoints. Required endpoints include `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. For the complete list of required endpoints, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
+This issue is common in bring-your-own virtual network (BYO VNet) scenarios. In such scenarios, firewall rules, network security groups (NSGs), user-defined routes (UDRs), or proxy settings can block required outbound endpoints. Required endpoints include `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. For the complete list of required endpoints, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
 
-The endpoint is usually `acs-mirror.azureedge.net`. However, use the host name that appears in your error message because the failing endpoint can vary.
+The endpoint is usually `acs-mirror.azureedge.net`. However, you should use the host name that appears in the error message because the failing endpoint can vary.
 
 Common causes include:
 
-- DNS resolution failures for the download endpoint.
-- Firewall, proxy, network virtual appliance (NVA), NSG, or UDR rules that block outbound HTTPS traffic.
-- TLS inspection or proxy certificate trust issues.
-- A generic CSE timeout after repeated download retries.
+- DNS resolution failures for the download endpoint
+- Firewall, proxy, network virtual appliance (NVA), NSG, or UDR rules that block outbound HTTPS traffic
+- TLS inspection or proxy certificate trust issues
+- A generic CSE timeout after repeated download retries
 
-Use the following table to match the CSE or `curl` error in the error message to the likely cause and the corresponding solution section.
+Use the following table to match the CSE or `curl` error in the error message to the likely cause and corresponding solution.
 
-| Message pattern | Likely cause | Next step |
+| Message pattern | Likely cause | Solution |
 | --- | --- | --- |
 | `curl: (6) Could not resolve host: <hostname>` | DNS can't resolve the download endpoint. | [Resolve DNS lookup failures](#resolve-dns-lookup-failures). |
 | `curl: (22) The requested URL returned error: 403` | A firewall, proxy, or NVA is denying HTTPS access. | [Resolve firewall, proxy, NVA, NSG, or UDR blocks](#resolve-firewall-proxy-nva-nsg-or-udr-blocks). |
@@ -67,15 +67,15 @@ Use the following table to match the CSE or `curl` error in the error message to
 
 ### Identify the download endpoint
 
-In the error message, locate the host name after `downloading Kubernetes binaries from`. Use that value as `<hostname>` in the commands in this article.
+In the error message, locate the host name that follows `downloading Kubernetes binaries from`. Use that value as `<hostname>` in the commands in this article.
 
-If the host name isn't shown in the AKS operation error, review the failed node virtual machine scale set (VMSS) instance extension status for the CSE output. You can also test against `acs-mirror.azureedge.net` if that endpoint appears in the CSE output or if the error doesn't include a different host name.
+If the host name isn't shown in the AKS operation error message, review the failed node virtual machine scale set (VMSS) instance extension status for the CSE output. You can also test against `acs-mirror.azureedge.net` if that endpoint appears in the CSE output or if the error doesn't include a different host name.
 
 ### Find the node resource values for the checks
 
-Some checks in this article run against the AKS node resources, not the AKS cluster resource itself. AKS node resources are usually in a managed resource group whose name starts with `MC_`.
+Some checks in this article run against the AKS node resources, not the AKS cluster resource itself. AKS node resources are usually in a managed resource group whose name starts as `MC_`.
 
-Use Azure CLI to run the following commands to find the values to use later in this article:
+To find the values to use later in this article, use Azure CLI to run the following commands:
 
 ```azurecli
 # Get the AKS managed resource group that contains the node resources.
@@ -96,7 +96,7 @@ az vmss list-instances --resource-group <mc-resource-group-name> \
    --output table
 ```
 
-The first command returns the managed resource group name to use as `<mc-resource-group-name>`. The second command returns the node pool VMSS names. The third command returns instance IDs to use as `<vmss-instance-id>`. If you have multiple node pools or VM scale sets, start with the VMSS that contains the failed instance shown in the AKS operation error. If the error doesn't identify an instance, test one instance from the affected node pool.
+The first command returns the managed resource group name to use as `<mc-resource-group-name>`. The second command returns the node pool VMSS names. The third command returns instance IDs to use as `<vmss-instance-id>`. If you have multiple node pools or VM scale sets, start with the VMSS that contains the failed instance that's shown in the AKS operation error message. If the message doesn't identify an instance, test one instance from the affected node pool.
 
 To find the node network interface ID for Network Watcher and effective NSG or route checks, run the following command:
 
