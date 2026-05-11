@@ -7,15 +7,17 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Hybrid
-  - Exchange Hybrid
-  - CSSTroubleshoot
-  - CI 162000
+- sap:Hybrid
+- Exchange Hybrid
+- CSSTroubleshoot
+- CI 162000
 ms.reviewer: timothyh, v-six
-appliesto: 
-  - Exchange Online
-  - Exchange Server 2013 Enterprise
-  - Exchange Server 2013 Standard Edition
+appliesto:
+- Exchange Online
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+- Exchange Server Subscription Edition
+- Exchange SE
 search.appverid: MET150
 ms.date: 01/24/2024
 ---
