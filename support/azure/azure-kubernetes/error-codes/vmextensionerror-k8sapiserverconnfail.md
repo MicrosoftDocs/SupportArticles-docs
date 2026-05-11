@@ -66,7 +66,9 @@ Use the following table to match the diagnostic message in the error to the like
 
 The error message might contain a diagnostic message that shows the API server FQDN or IP address.
 
-**Example diagnostic messages**
+#### Example diagnostic messages
+
+The following are examples of diagnostic messages that might appear in the error details:
 
 ```text
 # Connection timeout with IP context:
@@ -185,7 +187,7 @@ az aks update --resource-group <resource-group> \
 
 Verify that NSG outbound rules allow TCP port 443 from the node subnet to the API server IP.
 
-First, get the NSG associated with the node subnet. Use the subnet ID from Step 1:
+Get the NSG associated with the node subnet. Run the following command using the subnet ID from [Step 1](#step-1-check-api-server-authorized-ip-ranges-skip-if-authorized-ip-ranges-not-enabled):
 
 ```azurecli
 az network vnet subnet show --ids <subnet-id> \
@@ -193,7 +195,7 @@ az network vnet subnet show --ids <subnet-id> \
   --output tsv
 ```
 
-If this returns an NSG ID (for example, `/subscriptions/.../resourceGroups/myRG/providers/Microsoft.Network/networkSecurityGroups/myNSG`), extract the resource group and NSG name from the path, then list its rules:
+If this returns an NSG ID (for example, `/subscriptions/.../resourceGroups/myRG/providers/Microsoft.Network/networkSecurityGroups/myNSG`), extract the resource group and NSG name from the path. Run the following command to list its rules:
 
 ```azurecli
 az network nsg rule list --resource-group <nsg-resource-group> \
@@ -202,13 +204,15 @@ az network nsg rule list --resource-group <nsg-resource-group> \
   --output table
 ```
 
-Review the rules to confirm that no higher-priority rule denies outbound TCP traffic on port 443 to the API server IP address. Look for:
+Review the rules to confirm that no higher-priority rule denies outbound TCP traffic on port 443 to the API server IP address. Look for the following rule characteristics:
+
 - **Direction**: `Outbound`
 - **Access**: `Deny`
 - **DestPort**: `443` or `*`
 - **DestAddr**: Matches the API server IP or includes it in a range
 
 Alternatively, use Network Watcher in the Azure portal for a specific flow test:
+
 1. Go to **Network Watcher** > **IP flow verify**
 2. Select the VMSS instance
 3. Set **Direction** to **Outbound**, **Protocol** to **TCP**, **Local IP** to the node IP, **Remote IP** to the API server IP, **Remote port** to **443**
@@ -224,7 +228,7 @@ az aks show --resource-group <resource-group> \
   --output tsv
 ```
 
-If the output is `userDefinedRouting`, review the route table. First, get the route table ID from the subnet (use the subnet ID from Step 1):
+If the output is `userDefinedRouting`, review the route table. Get the route table ID from the subnet (use the subnet ID from [Step 1](#step-1-check-api-server-authorized-ip-ranges-skip-if-authorized-ip-ranges-not-enabled)):
 
 ```azurecli
 az network vnet subnet show --ids <subnet-id> \
