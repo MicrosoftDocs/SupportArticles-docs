@@ -17,7 +17,7 @@ _Version:_ &nbsp; 17.0.4045.4
 
 ## Summary
 
-This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. This update package contains 6 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 4. It updates components in the following builds:
+This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 4. It updates components in the following builds:
 
 - SQL Server - Product version: **17.0.4045.4**, file version: **2025.170.4045.4**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
@@ -37,13 +37,13 @@ A downloadable Microsoft Excel workbook that contains a summary list of builds, 
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following table.
 
-| Bug Reference | Description                                                                                                                                                                                                                                                                                                                     | Fix Area             | Component            | Platform |
+| Bug reference | Description                                                                                                                                                                                                                                                                                                                     | Fix area             | Component            | Platform |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------- | :------------------- | :------- |
-| 5090650       | Fixes an issue where an `EntryPointNotFoundException` for `GetNumaNodeProcessorMask2` occurs during SQL Server setup on older Windows OS versions.                                                                                                                                                                              | SQL Setup            | Patching             | Windows  |
+| 5090650       | Fixes an issue in which an `EntryPointNotFoundException` for `GetNumaNodeProcessorMask2` occurs during SQL Server setup on older Windows OS versions.                                                                                                                                                                              | SQL Setup            | Patching             | Windows  |
 | 5131003       | Fixes an XML External Entity (XXE) vulnerability in the Web Service Task by blocking the `file://` protocol in WSDL service endpoints to prevent unauthorized file access and denial-of-service attacks.                                                                                                                        | Integration Services | Integration Services | Windows  |
-| 5157138       | Fixes CPU starvation issues by adding yields at regular intervals during In-memory OLTP garbage collection scan of hash indexes.                                                                                                                                                                                                | SQL Server Engine    | In-Memory OLTP       | All      |
-| 5190195       | Allows the `FulltextIndexVersion2` feature to be enabled by setting  the  database scoped configuration `fulltext_index_version` to `2`. Also fixes an issue where full-text indexing of `.docx` files produced incorrect results when paragraphs began with hyperlinks without trailing whitespace in the preceding paragraph. | SQL Server Engine    | Search               | All      |
-| 5191365       | Fixes a vulnerability that allowed SQL injection through the `sp_help_spatial_geography_index`and  `sp_help_spatial_geometry_index` stored procedures.                                                                                                                                                                          | SQL Server Engine    | SQL System CLR Types | All      |
+| 5157138       | Fixes CPU starvation issues by adding yields at regular intervals during in-memory OLTP garbage collection scan of hash indexes.                                                                                                                                                                                                | SQL Server Engine    | In-Memory OLTP       | All      |
+| 5190195       | Allows the `FulltextIndexVersion2` feature to be enabled by setting the database-scoped configuration `fulltext_index_version` to `2`. Also fixes an issue in which full-text indexing of `.docx` files produces incorrect results when paragraphs begin in hyperlinks without trailing whitespace in the preceding paragraph. | SQL Server Engine    | Search               | All      |
+| 5191365       | Fixes a vulnerability that allows SQL injection through the `sp_help_spatial_geography_index`and  `sp_help_spatial_geometry_index` stored procedures.                                                                                                                                                                          | SQL Server Engine    | SQL System CLR Types | All      |
 | 5198210       | Adds support for configuring change feed parameters by using `mssql.conf`.                                                                                                                                                                                                                                                      | SQL Server Engine    | Replication          | Linux    |
 
 ## How to obtain or download this CU or the latest CU package
@@ -142,7 +142,7 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 
 ### Cumulative updates (CU)
 
-- Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
+- Each new CU contains all the fixes that were included in the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
   - Historical data shows that a significant number of support cases involve an issue that was already addressed in a released CU.
