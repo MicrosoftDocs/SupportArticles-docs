@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error message
-description: Fix the VMExtensionError_K8SAPIServerConnFail error in AKS. Learn how to resolve API server connectivity failures and successfully create, upgrade, or scale your AKS cluster.
+description: Fix the VMExtensionError_K8SAPIServerConnFail error in Azure Kubernetes Service. Learn how to resolve API server connectivity failures and successfully create, upgrade, or scale your AKS cluster.
 ms.date: 05/01/2026
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_K8SAPIServerConnFail error in AKS
+# Troubleshoot the VMExtensionError_K8SAPIServerConnFail error in Azure Kubernetes Service
 
 ## Summary
 
@@ -33,13 +33,13 @@ When you try to start, create, upgrade, or scale an AKS cluster, you receive the
 >
 > Message="CSE failed with 'VMExtensionError_K8SAPIServerConnFail'. Agents are unable to establish connection to Kubernetes API server. `<diagnostic details>`. For more detailed troubleshooting, see https://aka.ms/aks/vmextensionerror_k8sapiserverconnfail and https://aka.ms/aks-required-ports-and-addresses for more information."
 
-This error might also appear as exit status 51 or `ExitCode: 51`.
+This error might also appear as **exit status 51** or `ExitCode: 51`.
 
-## Cause
+## Causes
 
 During node provisioning, the AKS Custom Script Extension (CSE) verifies that the node can reach the Kubernetes API server on port 443. This error occurs when the connectivity check fails before the CSE timeout is reached.
 
-This issue is especially common in bring-your-own virtual network (BYO VNet) scenarios, where firewall rules, Network Security Groups (NSGs), user-defined routes (UDRs), or proxy settings can block the API server endpoint. For private clusters, the node must reach the API server through a private endpoint and resolve the `privatelink.*.azmk8s.io` DNS name correctly.
+This issue is especially common in bring-your-own virtual network (BYO VNet) scenarios, where firewall rules, network security groups (NSGs), user-defined routes (UDRs), or proxy settings can block the API server endpoint. For private clusters, the node must reach the API server through a private endpoint and resolve the `privatelink.*.azmk8s.io` DNS name correctly.
 
 Common causes include:
 
@@ -64,9 +64,9 @@ Use the following table to match the diagnostic message in the error to the like
 
 ### Identify the API server endpoint
 
-The error message may contain a diagnostic message that shows the API server FQDN or IP address.
+The error message might contain a diagnostic message that shows the API server FQDN or IP address.
 
-**Example diagnostic messages:**
+**Example diagnostic messages**
 
 ```text
 # Connection timeout with IP context:
@@ -79,15 +79,15 @@ TLS handshake failed. Check for HTTPS-inspecting proxies or firewalls, and ensur
 API server IP: 98.67.228.23. Connection refused. The API server port is not accepting connections...
 ```
 
-From these diagnostic messages, take note of:
+From these diagnostic messages, take note of the following values:
 
-- **Node IP**: The source IP address (for example, `10.0.2.10`)
-- **API Server IP**: The destination IP address (for example, `98.67.228.23`)
-- **API Server FQDN**: The hostname in format `*.hcp.<region>.azmk8s.io` (for example, `secureaksdns-oxwzkm0h.hcp.uksouth.azmk8s.io` or `myaks-cluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io`)
+- **Node IP**: The source IP address (for example, `10.0.2.10`).
+- **API Server IP**: The destination IP address (for example, `98.67.228.23`).
+- **API Server FQDN**: The hostname in format `*.hcp.<region>.azmk8s.io` (for example, `secureaksdns-oxwzkm0h.hcp.uksouth.azmk8s.io` or `myaks-cluster-dns-a1b2c3d4.hcp.eastus.azmk8s.io`).
 
-Use the returned FQDN as `<api-server-fqdn>` in the commands in this article.
+Use the returned fully qualified domain name (FQDN) as `<api-server-fqdn>` in the commands in this article.
 
-If the API server endpoint isn't shown in the error message, run the following command to get it:
+If the API server endpoint isn't shown in the error message, use Azure CLI to run the following command to get it:
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -101,7 +101,7 @@ az aks show --resource-group <resource-group> \
 
 ### Find the node resource values for the checks
 
-Some troubleshooting steps require node-level information such as the managed resource group name, VMSS name, and instance ID. You can find these values by running the following commands:
+Some troubleshooting steps require node-level information like the managed resource group name, Virtual Machine Scale Set (VMSS) name, and instance ID. You can find these values by running the following commands:
 
 ```azurecli
 # Get the managed resource group (MC_*) for your cluster
@@ -125,18 +125,20 @@ Use the returned values as placeholders in the commands throughout this article.
 
 If the error includes `Connection timed out`, the node tried to reach the API server on port 443 but received no response.
 
-#### Common causes
+#### Causes
 
-- **NSG rule**: Blocking outbound TCP port 443 from the node subnet.
-- **Firewall or UDR**: Dropping packets to the API server IP.
-- **API server authorized IP ranges**: Don't include the node subnet CIDR.
-- **Private clusters**: Private endpoint not provisioned correctly, or DNS not resolving to the private IP.
+- **NSG rules** block outbound TCP port 443 from the node subnet.
+- **Firewall or UDR** drop packets to the API server IP.
+- **API server authorized IP ranges** don't include the node subnet Classless Inter-Domain Routing (CIDR) block.
+- **Private clusters** and private endpoints aren't provisioned correctly, or DNS isn't resolving to the private IP.
 
 #### Troubleshooting steps
 
 #### Step 1: Check API server authorized IP ranges (skip if authorized IP ranges not enabled)
 
 If the cluster has authorized IP ranges enabled, the node subnet must be included. Otherwise, the API server silently drops connections from the node.
+
+Run the following command to check if authorized IP ranges are configured:
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -145,7 +147,7 @@ az aks show --resource-group <resource-group> \
   --output tsv
 ```
 
-If authorized IP ranges are set, verify that the node subnet CIDR is included. To find the node subnet CIDR, first get the subnet ID:
+If authorized IP ranges are set, verify that the node subnet CIDR is included. To find the node subnet CIDR, run the following command to get the subnet ID:
 
 ```azurecli
 az aks show --resource-group <resource-group> \
@@ -154,7 +156,7 @@ az aks show --resource-group <resource-group> \
   --output tsv
 ```
 
-If no output is returned, the cluster uses an AKS-managed VNet. Get the subnet from the managed resource group instead:
+If no output is returned, the cluster uses an AKS-managed VNet. Run the following command to get the subnet from the managed resource group instead:
 
 ```azurecli
 az network vnet list --resource-group <mc-resource-group> \
