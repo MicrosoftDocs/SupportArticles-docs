@@ -27,7 +27,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SDownl
 
 ## Symptoms
 
-When you try to start or create an AKS cluster, you receive the following error message:
+When you try to start, create, or deploy an AKS cluster, you receive the following error message:
 
 > Code="VMExtensionProvisioningError"
 >
