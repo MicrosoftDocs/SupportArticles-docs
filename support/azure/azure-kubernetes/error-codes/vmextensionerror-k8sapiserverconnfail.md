@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error message
-description: Fix the VMExtensionError_K8SAPIServerConnFail error in Azure Kubernetes Service. Learn how to resolve API server connectivity failures and successfully create, upgrade, or scale your AKS cluster.
+description: Fix VMExtensionError_K8SAPIServerConnFail in AKS. Resolve API server connectivity failures to successfully create, upgrade, or scale your AKS cluster.
 ms.date: 05/01/2026
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir, mariusbutuc
 ms.service: azure-kubernetes-service
@@ -15,7 +15,7 @@ This article explains how to identify and resolve the `VMExtensionError_K8SAPISe
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59, or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or later. If Azure CLI is already installed, run `az --version` to find the version number.
 
 - The Client URL (`curl`) command-line tool.
 
@@ -37,27 +37,27 @@ This error might also appear as **exit status 51** or `ExitCode: 51`.
 
 ## Causes
 
-During node provisioning, the AKS Custom Script Extension (CSE) verifies that the node can reach the Kubernetes API server on port 443. This error occurs when the connectivity check fails before the CSE timeout is reached.
+During node provisioning, the AKS Custom Script Extension (CSE) checks that the node can reach the Kubernetes API server on port 443. This error occurs when the connectivity check fails before the CSE timeout.
 
-This issue is especially common in bring-your-own virtual network (BYO VNet) scenarios, where firewall rules, network security groups (NSGs), user-defined routes (UDRs), or proxy settings can block the API server endpoint. For private clusters, the node must reach the API server through a private endpoint and resolve the `privatelink.*.azmk8s.io` DNS name correctly.
+This problem is common in bring-your-own virtual network (BYO VNet) scenarios, where firewall rules, network security groups (NSGs), user-defined routes (UDRs), or proxy settings block the API server endpoint. For private clusters, the node must reach the API server through a private endpoint and resolve the `privatelink.*.azmk8s.io` DNS name correctly.
 
 Common causes include:
 
 - Firewall, proxy, NSG, or UDR rules that block outbound TCP port 443 to the API server.
 - API server authorized IP ranges that don't include the node subnet.
 - Private endpoint provisioning failures or missing DNS configuration.
-- TLS inspection or proxy certificate trust issues that break the HTTPS handshake to the API server.
+- TLS inspection or proxy certificate trust problems that break the HTTPS handshake to the API server.
 - Transient API server unavailability during cluster create or start operations.
 
 Use the following table to match the diagnostic message in the error to the likely cause and the corresponding solution section.
 
 | Message pattern | Likely cause | Next step |
 | --- | --- | --- |
-| `Connection timed out` | A firewall, NSG, UDR, or authorized IP range is silently dropping packets to the API server on port 443. | [Resolve connection timeout](#resolve-connection-timeout). |
-| `Connection refused` | The API server port isn't accepting connections. This issue is usually transient during cluster create or start. | [Resolve connection refused](#resolve-connection-refused). |
+| `Connection timed out` | A firewall, NSG, UDR, or authorized IP range silently drops packets to the API server on port 443. | [Resolve connection timeout](#resolve-connection-timeout). |
+| `Connection refused` | The API server port isn't accepting connections. This problem is usually transient during cluster create or start. | [Resolve connection refused](#resolve-connection-refused). |
 | `No route to host` | The node has no network path to the API server. Routing, peering, or private endpoint configuration is broken. | [Resolve no route to host](#resolve-no-route-to-host). |
-| `TLS handshake failed` | An HTTPS-inspecting proxy or firewall is intercepting the TLS connection to the API server. | [Resolve TLS handshake failure](#resolve-tls-handshake-failure). |
-| `Certificate name mismatch` or `Certificate verification failed` | A proxy or TLS inspection device is rewriting the API server certificate. | [Resolve certificate problem](#resolve-certificate-problem). |
+| `TLS handshake failed` | An HTTPS-inspecting proxy or firewall intercepts the TLS connection to the API server. | [Resolve TLS handshake failure](#resolve-tls-handshake-failure). |
+| `Certificate name mismatch` or `Certificate verification failed` | A proxy or TLS inspection device rewrites the API server certificate. | [Resolve certificate problem](#resolve-certificate-problem). |
 | Other errors or no diagnostic details | The error details are unavailable or truncated. | [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks). |
 
 ## Solution
@@ -189,7 +189,7 @@ az aks update --resource-group <resource-group> \
 ```
 
 > [!NOTE]
-> If authorized IP ranges are configured and the firewall or NAT gateway outbound IP isn't included, all node traffic to the API server is silently dropped. This is the most common cause of timeout errors for clusters that have authorized IP ranges enabled. For more information, see [Secure access to the API server using authorized IP address ranges in AKS](/azure/aks/api-server-authorized-ip-ranges).
+> If authorized IP ranges are configured and the firewall or NAT gateway outbound IP isn't included, all node traffic to the API server is silently dropped. This condition is the most common cause of timeout errors for clusters that have authorized IP ranges enabled. For more information, see [Secure access to the API server using authorized IP address ranges in AKS](/azure/aks/api-server-authorized-ip-ranges).
 
 #### Step 2: Verify NSG outbound rules
 
@@ -205,7 +205,7 @@ az network vnet subnet show --ids <subnet-id> \
   --output tsv
 ```
 
-If this returns an NSG ID (for example, `/subscriptions/.../resourceGroups/myRG/providers/Microsoft.Network/networkSecurityGroups/myNSG`), extract the resource group and NSG name from the path. 
+If this command returns an NSG ID (for example, `/subscriptions/.../resourceGroups/myRG/providers/Microsoft.Network/networkSecurityGroups/myNSG`), extract the resource group and NSG name from the path. 
 
 Run the following command to list its rules:
 
@@ -223,13 +223,13 @@ Review the rules to confirm that no higher-priority rule denies outbound TCP tra
 - **DestPort**: `443` or `*`
 - **DestAddr**: Matches the API server IP or includes it in a range
 
-Alternatively, use Network Watcher in the [Azure portal](https://portal.azure.com) for a specific flow test,
+Alternatively, use Network Watcher in the [Azure portal](https://portal.azure.com) for a specific flow test.
 
 Use the following steps to verify that the node can reach the API server on port 443:
 
 1. Go to **Network Watcher** > **IP flow verify**.
-2. Select the VMSS instance.
-3. Set **Direction** to **Outbound**, **Protocol** to **TCP**, **Local IP** to the node IP, **Remote IP** to the API server IP, and **Remote port** to **443**.
+1. Select the VMSS instance.
+1. Set **Direction** to **Outbound**, **Protocol** to **TCP**, **Local IP** to the node IP, **Remote IP** to the API server IP, and **Remote port** to **443**.
 
 #### Step 3: Verify UDR configuration
 
@@ -315,7 +315,7 @@ The result should include a `privatelink.<region>.azmk8s.io` canonical name (CNA
 #### Step 6: Test connectivity from the node
 
 > [!NOTE]
-> This step requires cluster nodes to exist. If cluster creation failed before nodes were provisioned, skip this step and focus on verifying network configuration (NSG, UDR, and firewall rules) using the Azure portal or the earlier steps in this section.
+> This step requires cluster nodes to exist. If cluster creation failed before nodes were provisioned, skip this step and focus on verifying network configuration (NSG, UDR, and firewall rules) by using the Azure portal or the earlier steps in this section.
 
 If you can't identify the issue from network configuration alone, test connectivity directly from a VMSS instance.
 
@@ -510,8 +510,8 @@ If the error includes `Certificate name mismatch` or `Certificate verification f
 
 Common causes of certificate problems include:
 
-- **HTTPS-intercepting proxy**: A proxy is replacing the API server certificate with its own certificate that doesn't match the API server hostname.
-- **Stale certificates**: Certificates are stale after cluster migration or FQDN change.
+- **HTTPS-intercepting proxy**: A proxy replaces the API server certificate with its own certificate that doesn't match the API server hostname.
+- **Stale certificates**: Certificates become stale after cluster migration or FQDN change.
 
 #### Troubleshooting steps
 
@@ -551,7 +551,7 @@ az aks rotate-certs --resource-group <resource-group> \
 If the error doesn't include a specific diagnostic subcategory, or if you're on an older AKS version that doesn't include subcategorization, run the following checks in order. Stop at the first failed check and fix that issue.
 
 > [!NOTE]
-> For private clusters, the commands in checks 1-4 must be run from inside the VNet (or from a network with access to the private DNS zone and private endpoint). Use `az vmss run-command invoke` to run them from a cluster node:
+> For private clusters, run the commands in checks 1-4 from inside the VNet (or from a network with access to the private DNS zone and private endpoint). Use `az vmss run-command invoke` to run them from a cluster node:
 >
 > ```azurecli
 > az vmss run-command invoke --resource-group <mc-resource-group> --name <vmss-name> --instance-id <instance-id> \
@@ -621,7 +621,7 @@ If the error doesn't include a specific diagnostic subcategory, or if you're on 
      --output table
    ```
 
-   Verify THE provisioning state is `Succeeded` and connection status is `Approved`. Verify that `nslookup <api-server-fqdn>` returns a private IP.
+   Verify the provisioning state is `Succeeded` and connection status is `Approved`. Verify that `nslookup <api-server-fqdn>` returns a private IP.
 
 If all checks pass but the AKS operation still fails, collect the failed node VM extension status by running the following command and then contacting [Azure Support](https://azure.microsoft.com/support/):
 
