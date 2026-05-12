@@ -1,11 +1,11 @@
 ---
 title: Modern apps or application packages are reported as vulnerable
 description: Provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scanning due to multiple versions.
-ms.date: 02/12/2026
+ms.date: 05/12/2026
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, kimberj
+ms.reviewer: kaushika, kimberj, anupamk
 ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
@@ -14,9 +14,14 @@ appliesto:
 ---
 # Modern apps or application packages are reported as vulnerable due to multiple versions
 
-This article provides troubleshooting suggestions when there are multiple versions of a modern app or application package on a computer. The app might be reported as vulnerable by system vulnerability scanning and can't be resolved by updating to the latest version.
-
 *Original KB number:* &nbsp; 5011324
+
+## Summary
+
+Modern apps or application packages are reported as vulnerable when multiple versions of the same AppX or MSIX package exist across different user profiles on a Windows client. This article explains why vulnerability scanners detect these outdated packages even when the app appears fully updated. It applies to supported versions of Windows Client where apps are installed per user and updated at different times. Use this guidance to identify duplicate app versions and either update or remove old packages to resolve false-positive security findings and restore compliance.
+
+> [!NOTE]
+> Removing an Appx package deletes its registration, but files might remain on disk because cleanup is asynchronous and best-effort. These leftover files are inert and low risk.
 
 ## Symptoms
 
