@@ -206,8 +206,8 @@ If the DNS server failure persists, see the following articles for more detailed
 
 ## References
 
-- [Troubleshoot Azure Windows virtual machine activation problems](../../../azure/virtual-machines/windows/troubleshoot-activation-problems.md)
-- [Troubleshooting tools for Windows activation issues on Azure VMs](../../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md)
+- [Troubleshoot Azure Windows virtual machine activation problems](../../azure/virtual-machines/windows/troubleshoot-activation-problems.md)
+- [Troubleshooting tools for Windows activation issues on Azure VMs](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md)
 - [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes)
 - [Configure DNS name resolution for Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances)
 - [Azure IP address 168.63.129.16 overview](/azure/virtual-network/what-is-ip-address-168-63-129-16)
