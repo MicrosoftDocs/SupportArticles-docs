@@ -15,9 +15,10 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ms.reviewer: v-six
 ---
+
 # Test-IRMConfiguration fails: Failed to acquire a use license
 
 _Original KB number:_ &nbsp; 2805976
