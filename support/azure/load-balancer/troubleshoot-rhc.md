@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.custom: Connectivity-Inbound
+ms.custom: sap:Connectivity-Inbound
 # Customer intent: "As a network administrator, I want to diagnose issues impacting the availability of Azure Load Balancer resources, so that I can ensure reliable backend connectivity and optimal performance for my applications."
 ---
 

@@ -9,8 +9,8 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/30/2026
 ms.custom: 
-  - Connectivity-Outbound
-  - Configuration and Setup
+  - sap:Connectivity-Outbound
+  - sap:Configuration and Setup
 # Customer intent: "As a network administrator, I want to troubleshoot connectivity issues with Azure Load Balancer, so that I can ensure reliable traffic distribution and maintain service availability for my virtual machine resources."
 ---
 

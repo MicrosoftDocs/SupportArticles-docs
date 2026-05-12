@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: overview
 ms.date: 04/06/2026
-ms.custom: Configuration and Setup
+ms.custom: sap:Configuration and Setup
 # Customer intent: As a cloud engineer, I want to troubleshoot Azure Load Balancer traffic issues, so that I can ensure proper distribution and connectivity for backend virtual machines in my network.
 ---
 
