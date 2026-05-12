@@ -1,6 +1,6 @@
 ---
 title: Support for Active Directory over NAT
-description: Describes the support boundaries for Active Directory over NAT. Additionally, the scenario is not tested by Active Directory.
+description: Learn about the support boundaries for Active Directory over NAT, including untested scenarios and Microsoft's official recommendations. Read more.
 ms.date: 05/12/2026
 manager: dcscontentpm
 audience: itpro
@@ -20,22 +20,22 @@ _Original KB number:_ &nbsp; 978772
 
 ## Summary
 
-Network Address Translation (NAT) is a selection of network techniques that alter the address information of network traffic while in transit so as to remove details about the originating network. This is most often done by network devices, and is intended to enable the easy use of private network address schemes, and sometimes as a less than ideal security measure.
+Network Address Translation (NAT) is a selection of network techniques that alter the address information of network traffic while in transit to remove details about the originating network. Network devices most often perform this action. NAT is intended to enable the easy use of private network address schemes, and sometimes as a less than ideal security measure.
 
-Microsoft does not support NAT devices, you need to contact the vendor of the device for support.
+Microsoft doesn't support NAT devices. You need to contact the vendor of the device for support.
 
-Domain Controller (DC)-to-DC communication and Client-to-DC communication over a NAT is a scenario that customers may encounter in merger and acquisition scenarios. One required service when connecting the networks of the two companies is the authentication, authorization and directory services offered by Active Directory (AD). AD is only one of the many services you need to handle in such a situation.
+Domain Controller (DC)-to-DC communication and Client-to-DC communication over a NAT are scenarios that customers might encounter in merger and acquisition scenarios. One required service when connecting the networks of the two companies is the authentication, authorization, and directory services offered by Active Directory (AD). AD is only one of the many services you need to handle in such a situation.
 
-Microsoft hasn't tested this scenario with Active Directory, and other technologies that are related with Active Directory. Examples of other technologies include the Kerberos protocol or DFS.
+Microsoft didn't test this scenario with Active Directory, and other technologies that are related to Active Directory. Examples of other technologies include the Kerberos protocol or DFS.
 
 
 ## Microsoft statement regarding Active Directory over NAT
 
-- Active Directory over NAT has not been tested by Microsoft, and is therefore not supported.
-- We do not recommend Active Directory over NAT.
+- Microsoft didn't test Active Directory over NAT, and therefore doesn't support it.
+- Don't use Active Directory over NAT.
 
-If you are tasked with configuring a network with NAT and you plan to run any Microsoft Server solution (including Active Directory) across the NAT, please contact Microsoft customer technical support using your preferred approach. Additionally, you can contact Microsoft Consulting Sevices.
+If you're tasked with configuring a network with NAT and you plan to run any Microsoft Server solution (including Active Directory) across the NAT, contact Microsoft customer technical support by using your preferred approach. Additionally, you can contact Microsoft Consulting Services.
 
-There is no explicit or implied guarantee that following any provided guidance will work in any given scenario because it is untested. The support teams will work on issues that arise from using the provided guidance to the limits of commercially reasonable effort.
+There's no explicit or implied guarantee that following any provided guidance works in any given scenario because it's untested. The support teams work on issues that arise from using the provided guidance to the limits of commercially reasonable effort.
 
-The only configuration with NAT that was tested by Microsoft and is supported is running client on the private side of a NAT and all servers located on the public side of the NAT. In most cases the NAT would also function as a DNS server.
+The only configuration with NAT that Microsoft tested and supports is running client on the private side of a NAT and all servers located on the public side of the NAT. In most cases, the NAT also functions as a DNS server.
