@@ -1,6 +1,6 @@
 ---
 title: Error 0x8007232A "DNS server failure" when you activate Windows
-description: Discusses how to resolve error 0x8007232A ("DNS server failure"). This error occurs when Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation.
+description: Discusses how to resolve error 0x8007232A ("DNS server failure"). This error occurs if Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation.
 ms.date: 05/13/2026
 ms.collection: windows
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
@@ -15,7 +15,7 @@ appliesto:
 
 ## Summary
 
-This article helps you resolve error 0x8007232A ("DNS server failure"). This error occurs when Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation. The article provides resolution steps for both physical computers and Azure Virtual Machines (VMs), including options to activate or troubleshoot that are specific to VMs.
+This article helps you resolve error 0x8007232A ("DNS server failure"). This error occurs if Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation. The article provides resolution steps for both physical computers and Azure Virtual Machines (VMs), including options to activate or troubleshoot that are specific to VMs.
 
 ## Symptoms
 
@@ -39,22 +39,22 @@ On Azure VMs, this error typically occurs in the following scenarios:
 
 ## Resolution
 
-If the affected computer is a physical Windows Server-based or Windows Client-based computer, see detailed troubleshooting instructions at [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns). For more general help in troubleshooting DNS issues, see [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md).
+If the affected computer is a physical Windows Server-based or Windows Client-based computer, see detailed troubleshooting instructions at [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns). For more general help to troubleshoot DNS issues, see [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md).
 
 If the affected computer is an Azure VM, install the [PsPing](/sysinternals/downloads/psping) tool on the VM.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
-For a VM, you have the following troubleshooting options to use before you have to resort to complex DNS troubleshooting:
+For a VM, the following troubleshooting options are available before you have to resort to complex DNS troubleshooting:
 
 - If you want to activate the VM without addressing the DNS issue, see [Azure method 1: Activate the VM without using DNS](#azure-method-1-activate-the-vm-without-using-dns).
 - If you want to troubleshoot the VM's connection to the Azure DNS infrastructure, see [Azure method 2: Troubleshoot the connection to Azure DNS](#azure-method-2-troubleshoot-the-connection-to-azure-dns).
-- If your VM connects to custom DNS servers, but could use Azure DNS instead, see [Azure method 3: Reconfigure the VM to use Azure DNS](#azure-method-3-reconfigure-the-vm-to-use-azure-dns).
+- If your VM connects to custom DNS servers, but it could use Azure DNS instead, see [Azure method 3: Reconfigure the VM to use Azure DNS](#azure-method-3-reconfigure-the-vm-to-use-azure-dns).
 - If your VM connects to custom DNS servers, and you have to maintain that configuration, see [Azure method 4: Troubleshoot a VM that uses custom DNS](#azure-method-4-troubleshoot-a-vm-that-uses-custom-dns).
 
 ### Azure method 1: Activate the VM without using DNS
 
-If you just want to activate the VM, and you don't need to troubleshoot the DNS issue, follow these steps:
+If you want to only activate the VM and not troubleshoot the DNS issue, follow these steps:
 
 Open an administrative Command Prompt window on the affected VM, and then run the following commands:
 
@@ -64,15 +64,15 @@ cscript c:\windows\system32\slmgr.vbs /ato
 ```
 
 > [!NOTE]  
-> If the `20.118.99.224` address doesn't work, try `40.83.235.53`. These are the available IP addresses for the Azure KMS service.
+> If the `20.118.99.224` address doesn't work, try `40.83.235.53`. These IP addresses are the ones that are available for the Azure KMS service.
 
 ### Azure method 2: Troubleshoot the connection to Azure DNS
 
-This method checks that your VM connects correctly to the Azure DNS infrastructure.
+This method checks whether your VM connects correctly to the Azure DNS infrastructure.
 
 1. On the affected VM, open an administrative Command Prompt window.
 
-1. To check the VM's DNS configuration, run the following command.
+1. To check the VM's DNS configuration, run the following command:
 
    ```cmd
    ipconfig /all
@@ -92,7 +92,7 @@ This method checks that your VM connects correctly to the Azure DNS infrastructu
    > [!NOTE]  
    > It's possible to configure a custom DNS server for a particular network interface. If the virtual network already uses the default DNS configuration, check the VM's network interface.
 
-1. If the DNS server isn't already set to **Default (Azure-provided)**, select **Change** and then select **Default (Azure-provided)**.
+1. If the DNS server isn't already set to **Default (Azure-provided)**, select **Change**, and then select **Default (Azure-provided)**.
 
 1. Restart the VM.
 
@@ -102,7 +102,7 @@ This method checks that your VM connects correctly to the Azure DNS infrastructu
    ipconfig /flushdns
    ```
 
-   This command flushes and then rebuilds the DNS cache.
+   This command flushes and rebuilds the DNS cache.
 
 1. To try again to activate Windows, run the following command at the command prompt:
 
@@ -116,7 +116,7 @@ This method checks that your VM connects correctly to the Azure DNS infrastructu
 
 1. In the [Azure portal](https://portal.azure.com), go to **Virtual network** > **DNS servers**.
 
-1. Select **Change** and then select **Default (Azure-provided)**.
+1. Select **Change** > **Default (Azure-provided)**.
 
 1. Restart the VM.
 
@@ -138,11 +138,11 @@ This method checks that your VM connects correctly to the Azure DNS infrastructu
 
 ### Azure method 4: Troubleshoot a VM that uses custom DNS
 
-If your VM uses a custom or hybrid DNS structure, the issue becomes more complicated to resolve. The following steps help you troubleshoot common DNS issues that Azure VMs might encounter, and then refer you to the more advanced troubleshooting for DNS issues that might affect activation.
+If your VM uses a custom or hybrid DNS structure, the issue becomes more complicated to resolve. The following steps help you troubleshoot common DNS issues that Azure VMs might experience. They also refer you to more advanced troubleshooting for DNS issues that might affect activation.
 
 #### Step 1: Make sure that the VM uses the correct IP addresses for the DNS servers
 
-1. To check the VM's DNS configuration, run the following command.
+1. To check the VM's DNS configuration, run the following command:
 
    ```cmd
    ipconfig /all
@@ -169,7 +169,7 @@ If your VM uses a custom or hybrid DNS structure, the issue becomes more complic
 
 #### Step 2: Make sure that DNS traffic can pass between the VM and the DNS servers
 
-1. To verify that DNS traffic can pass from the VM to the DNS server, on the VM, run the following command at the command prompt:
+1. To verify that DNS traffic can pass from the VM to the DNS server, run the following command at the command prompt on the VM:
 
    ```cmd
    psping <dns-server-ip>:53
@@ -197,7 +197,7 @@ If your VM uses a custom or hybrid DNS structure, the issue becomes more complic
 
 #### Step 3: Troubleshoot the general DNS server issue
 
-If the DNS server failure persists, see the following articles for more information about troubleshooting DNS:
+If the DNS server failure persists, see the following articles for more information about how to troubleshoot DNS:
 
 - [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
 - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
