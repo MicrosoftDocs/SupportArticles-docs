@@ -15,8 +15,9 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Active Directory error 0x52 at Exchange Server 2016 Edge role installation
 
 _Original KB number:_ &nbsp; 4093253

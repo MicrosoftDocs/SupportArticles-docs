@@ -17,8 +17,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Empty StorageLimitStatus field when you run the Get-MailboxStatistics cmdlet in Exchange Server 2013 or Exchange Server 2016
 
 _Original KB number:_ &nbsp;2819389

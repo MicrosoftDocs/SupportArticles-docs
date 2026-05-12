@@ -17,8 +17,8 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
   - Exchange Online
-ms.date: 07/17/2024
 ms.reviewer: v-six
+ms.date: 05/12/2026
 ---
 
 # "No active public folder mailboxes were found" error and migration batch fails at Complete-MigrationBatch command
