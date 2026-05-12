@@ -259,6 +259,20 @@ If instances aren't regularly updated, they can become incompatible with our upd
     ```bash
     sudo registercloudguest --force-new
     ```
+8. Zypper may fail running in --non-interactive mode due to additional dependencies requesting to select a solution. If this occurs, run the following and select    a solution:
+
+    ```bash
+    sudo zypper --no-refresh --no-remote install --force *.rpm
+    sudo registercloudguest --force-new
+    ```
+
+    or as a last resort, run:
+
+    ```bash
+    sudo rpm -Uvh *.rpm --force
+    sudo registercloudguest --force-new
+    ```
+    
 For more information, see [Cloud instance repos fail due to outdated packages](https://www.suse.com/support/kb/doc/?id=000021552).
 
 ## Scenario 3: General registration issues
