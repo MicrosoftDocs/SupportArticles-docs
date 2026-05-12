@@ -15,9 +15,10 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 01/24/2024
 ms.reviewer: v-six
+ms.date: 05/12/2026
 ---
+
 # Error when you try to move a mailbox in Exchange Server 2016: The migration mailbox for the organization is either missing or invalid
 
 _Original KB number:_ &nbsp; 2812509
