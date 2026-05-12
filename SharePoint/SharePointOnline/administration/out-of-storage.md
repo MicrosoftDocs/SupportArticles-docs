@@ -37,8 +37,6 @@ Although archived data is also a type of storage that's held within SharePoint, 
 
 ## Resolution
 
-For ways to identify what’s consuming storage and reduce usage, see [SharePoint storage planning](/sharepoint/sharepoint-storage-planning).
-
 If you suspect that you should have more storage than the amount that you see in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. The tool identifies any issues that affect your SharePoint tenant storage quota. It also shows how the quota is allocated.
 
 > [!NOTE]
@@ -48,6 +46,8 @@ If you suspect that you should have more storage than the amount that you see in
 > [Run Tests: Tenant Storage](https://aka.ms/PillarTenantStorage)
 
 To troubleshoot any issues that affect your storage limits, see [Manage site storage limits](/sharepoint/manage-site-collection-storage-limits).
+
+To identify the activities that consume storage space and reduce their usage, see [SharePoint storage planning](/sharepoint/sharepoint-storage-planning).
 
 If the SharePoint storage quota is exceeded, consider the following options: 
 
