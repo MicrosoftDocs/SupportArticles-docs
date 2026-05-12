@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.custom: references_regions
+ms.custom: Management
 # Customer intent: As a cloud administrator, I want to troubleshoot load balancer health event logs so that I can ensure my application remains available and operates efficiently without connectivity issues.
 ---
 

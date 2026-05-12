@@ -8,6 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
+ms.custom: Connectivity-Outbound
 # Customer intent: "As an IT administrator managing Azure Load Balancer, I want to troubleshoot outbound connectivity issues caused by SNAT exhaustion, so that I can ensure reliable network performance and prevent connection timeouts for our applications."
 ---
 
