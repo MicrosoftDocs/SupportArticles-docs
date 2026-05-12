@@ -87,12 +87,12 @@ This method checks that your VM connects correctly to the Azure DNS infrastructu
    > [!NOTE]  
    > In this example, `168.63.129.16` is the IP address that VMs use when they connect to the Azure DNS infrastructure. For more information, see [Azure IP address 168.63.129.16 overview](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
-1. If `168.63.129.16` is not the first DNS server in the list, or if the list is empty, check the DNS configuration of the virtual network. In the [Azure portal](https://portal.azure.com), go to **Virtual network** > **DNS servers**. The selected option should be **Default (Azure-provided)**.
+1. If `168.63.129.16` isn't the first DNS server in the list, or if the list is empty, check the DNS configuration of the virtual network. In the [Azure portal](https://portal.azure.com), go to **Virtual network** > **DNS servers**. The selected option should be **Default (Azure-provided)**.
 
    > [!NOTE]  
    > It's possible to configure a custom DNS server for a particular network interface. If the virtual network already uses the default DNS configuration, check the VM's network interface.
 
-1. If the DNS server is not already set to **Default (Azure-provided)**, select **Change** and then select **Default (Azure-provided)**.
+1. If the DNS server isn't already set to **Default (Azure-provided)**, select **Change** and then select **Default (Azure-provided)**.
 
 1. Restart the VM.
 
@@ -177,7 +177,7 @@ If your VM uses a custom or hybrid DNS structure, the issue becomes more complic
 
 1. If `psping` fails, follow these steps:
 
-   1. Check any network security groups (NSGs) that might affect the VM (such as NSGs that're set at the network interface, subnet, or virtual network level). Make sure that any NSG allows traffic between the VM and the DNS server on UDP/TCP port 53.
+   1. Check any network security groups (NSGs) that might affect the VM (such as NSGs that are set at the network interface, subnet, or virtual network level). Make sure that any NSG allows traffic between the VM and the DNS server on UDP/TCP port 53.
 
    1. Make sure that any firewall (including Windows Firewall on the VM) allows traffic between the VM and the DNS server on UDP/TCP port 53.
 
@@ -195,9 +195,9 @@ If your VM uses a custom or hybrid DNS structure, the issue becomes more complic
    cscript c:\windows\system32\slmgr.vbs /ato
    ```
 
-#### Step 3: Troubleshoot the general DSN server issue
+#### Step 3: Troubleshoot the general DNS server issue
 
-If the DNS server failure persists, see the following articles for more detailed information about troubleshooting DNS:
+If the DNS server failure persists, see the following articles for more information about troubleshooting DNS:
 
 - [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
 - [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md)
