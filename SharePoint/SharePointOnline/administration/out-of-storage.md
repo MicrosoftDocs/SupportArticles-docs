@@ -6,14 +6,14 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: prbalusu
+ms.reviewer: prbalusu, trgreen
 ms.custom: 
   - sap:Storage\Tenant Storage
   - CSSTroubleshoot
   - CI 157728
 appliesto: 
   - SharePoint Online
-ms.date: 05/08/2025
+ms.date: 05/12/2026
 ---
 
 # SharePoint Online out of storage space
@@ -31,11 +31,9 @@ As a Global or SharePoint admin, you receive an email message that contains one 
 
 ## Cause
 
-The amount of Microsoft SharePoint storage quota for your organization is based on the number of licenses that you have. 
+The Microsoft SharePoint storage quota for your organization is based on the number of licenses that you have. The total storage quota for every non-EDU organization is 1 TB plus 10 GB per license for the eligible plan that you purchase, plus any Microsoft 365 Extra File Storage add-ons that you purchase. For more information, see [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
 
-Your organization has a total storage allowance of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-ons that you purchase. For more information, see [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
-
-Your organization is considered out of storage space if your total SharePoint standard storage usage exceeds the quota allowance.
+Although archived data is also a type of storage that's held within SharePoint, it doesn't count toward your organization's active storage quota. Your organization is considered to be out of storage space if your total SharePoint storage usage exceeds the allocated storage quota.
 
 ## Resolution
 
