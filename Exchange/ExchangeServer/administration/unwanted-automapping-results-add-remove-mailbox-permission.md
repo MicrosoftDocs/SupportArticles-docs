@@ -16,8 +16,9 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Unwanted Automapping results occur when you add or remove mailbox permissions in Exchange Admin Center
 
 _Original KB number:_ &nbsp; 4487381

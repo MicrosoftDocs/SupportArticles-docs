@@ -9,8 +9,6 @@ ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # Power Query data source refresh issues for data sources based on Power Platform dataflows
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article can resolve issues if data is stale or you see errors after a data source refresh for Power Query data sources that are based on Power Platform dataflows.
 
 ## Prerequisites

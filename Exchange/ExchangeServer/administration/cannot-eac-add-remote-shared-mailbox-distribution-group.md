@@ -1,7 +1,6 @@
 ---
 title: Can't use EAC to add remote shared mailbox to distribution group
 description: Resolves an issue in which you can't use EAC to add remote shared mailbox to delivery management of distribution group.
-ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -16,7 +15,9 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
+ms.date: 05/12/2026
 ---
+
 # Can't use EAC to add remote shared mailbox to delivery management of distribution group
 
 In a Microsoft Exchange Server 2019 or 2016 hybrid environment, you can use the [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center) (EAC) to add a user mailbox to the [delivery management](/exchange/recipients/distribution-groups#delivery-management) section of a distribution group. However, you can't use the EAC to add a remote shared mailbox instead of a user mailbox. To add a remote shared mailbox as a recipient, you have to run a script in [Exchange Management Shell](/powershell/exchange/exchange-management-shell). By using a script, you can add either one remote shared mailbox or multiple mailboxes.

@@ -2,14 +2,14 @@
 title: User is not in client error during historical imports
 description: Fix the User is not in client error when you import historical data in Viva Glint.
 manager: dcscontentpm
-ms.reviewer: aweixelman
-ms.date: 11/17/2023
+ms.reviewer: aweixelman, amywheater
+ms.date: 05/08/2026
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
-  - CI184016
+  - CI 184016
 ---
 
 # "User is not in client" error during historical imports
