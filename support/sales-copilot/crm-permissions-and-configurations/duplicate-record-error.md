@@ -10,6 +10,8 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 
 This article provides a resolution for an error message that occurs when a user tries to create a record from Sales app.
 
+## Who is affected?
+
 | Requirement type |Description  |
 |---------|---------|
 |**Client app**     |  Sales app in Outlook        |

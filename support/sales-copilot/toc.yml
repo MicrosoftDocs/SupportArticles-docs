@@ -20,6 +20,8 @@
       href: crm-permissions-and-configurations/errors-enabling-salesforce-server-to-server-flow.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
+    - name: '"Invalid CRM record ID" error when saving notes from Sales agent'
+      href: crm-permissions-and-configurations/invalid-crm-record-id-error.md
     - name: Missing privileges error when signing in
       href: crm-permissions-and-configurations/missing-privileges-sign-in.md
     - name: '"No access to Dynamics 365" error'
