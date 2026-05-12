@@ -1,7 +1,7 @@
 ---
 title: Error 0x8007232A "DNS server failure" when you activate Windows
-description: Resolve error 0x8007232A DNS server failure when you activate an Azure Windows VM. Follow guided steps to restore activation and get your VM licensed.
-ms.date: 05/12/2026
+description: Discusses how to resolve error 0x8007232A ("DNS server failure"). This error occurs when Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation.
+ms.date: 05/13/2026
 ms.collection: windows
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
 ms.custom: 
@@ -15,7 +15,7 @@ appliesto:
 
 ## Summary
 
-This article explains how to resolve the 0x8007232A error that occurs when you try to activate a Windows Server-based computer, a Windows Client-based computer, or a Windows virtual machine (VM) in Microsoft Azure.
+This article helps you resolve error 0x8007232A ("DNS server failure"). This error occurs when Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation. The article provides resolution steps for both physical computers and Azure Virtual Machines (VMs), including options to activate or troubleshoot that are specific to VMs.
 
 ## Symptoms
 
