@@ -223,6 +223,9 @@ items:
       - name: Azure Traffic Manager
         tocHref: /troubleshoot/azure/traffic-manager
         topicHref: /troubleshoot/azure/traffic-manager/welcome-azure-traffic-manager
+      - name: Azure Load Balancer
+        tocHref: /troubleshoot/azure/load-balancer
+        topicHref: /troubleshoot/azure/load-balancer/welcome-azure-load-balancer
 
     - name: Entra
       tocHref: /troubleshoot/entra/
