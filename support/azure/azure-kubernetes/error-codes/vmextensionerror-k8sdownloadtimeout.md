@@ -96,7 +96,7 @@ az vmss list-instances --resource-group <mc-resource-group-name> \
    --output table
 ```
 
-The first command returns the managed resource group name to use as `<mc-resource-group-name>`. The second command returns the node pool VMSS names. The third command returns instance IDs to use as `<vmss-instance-id>`. If you have multiple node pools or VM scale sets, start with the VMSS that contains the failed instance that's shown in the AKS operation error message. If the message doesn't identify an instance, test one instance from the affected node pool.
+The first command returns the managed resource group name to use as `<mc-resource-group-name>`. The second command returns the node pool VMSS names. The third command returns instance IDs to use as `<vmss-instance-id>`. If you have multiple node pools or VM scale sets, start by using the VMSS that contains the failed instance that's shown in the AKS operation error message. If the message doesn't identify an instance, test one instance from the affected node pool.
 
 To find the node network interface ID for Network Watcher and effective NSG or route checks, run the following command:
 
@@ -124,7 +124,7 @@ The command should return the subnet resource ID for the node. Use this subnet w
 
 If the diagnostic message tells you to review the failed node VM extension status, check the VMSS instance view for the failed node. The extension output often contains the exact `curl` error and the endpoint that failed.
 
-Run the following command to get the VMSS instance view:
+To get the VMSS instance view, run the following command:
 
 ```azurecli
 az vmss get-instance-view --resource-group <mc-resource-group-name> \
@@ -133,7 +133,7 @@ az vmss get-instance-view --resource-group <mc-resource-group-name> \
    --output json
 ```
 
-In the output, look for extension status or substatus messages that mention `VMExtensionError_K8SDownloadTimeout`, `CSE`, `curl`, `download`, or the endpoint host name. If you find a specific `curl` error, use the table in the [Causes](#causes) section to choose the matching solution section. If the output is truncated or doesn't show a specific `curl` error, continue with [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
+In the output, look for extension status or substatus messages that mention `VMExtensionError_K8SDownloadTimeout`, `CSE`, `curl`, `download`, or the endpoint host name. If you find a specific `curl` error, use the table in the [Causes](#causes) section to choose the matching solution section. If the output is truncated or doesn't show a specific `curl` error, go to [Run the baseline connectivity checks](#run-the-baseline-connectivity-checks).
 
 ### Resolve DNS lookup failures
 
@@ -146,7 +146,7 @@ nslookup <hostname>
 dig <hostname>
 ```
 
-The command should return one or more IP addresses for `<hostname>`. If it returns `NXDOMAIN`, `SERVFAIL`, times out, or doesn't return an address, troubleshoot DNS resolution before you continue with connectivity checks.
+The command should return one or more IP addresses for `<hostname>`. If it returns `NXDOMAIN` or `SERVFAIL`, if it times out, or if it doesn't return an address, troubleshoot DNS resolution before you continue to run connectivity checks.
 
 If you can't access the node through Secure Shell (SSH), test from the VMSS instance by using the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
 
@@ -177,12 +177,12 @@ If DNS resolution fails, verify the following settings:
 
 ### Resolve firewall, proxy, NVA, NSG, or UDR blocks
 
-If the error includes HTTP 403, `curl` timeout code 124, repeated `Trying <IP>:443...` lines, or connection reset messages, verify outbound HTTPS access from the node subnet to the download endpoint.
+If the error includes HTTP 403, `curl` timeout code 124, repeated `Trying <IP>:443...` lines, or connection reset messages, verify the outbound HTTPS access from the node subnet to the download endpoint.
 
-In BYO VNet clusters, start with the network controls that you manage for the node subnet. Confirm that NSGs, UDRs, firewalls, NVAs, and proxies allow the node to reach the required AKS outbound endpoints.
+In BYO VNet clusters, start at the network controls that you manage for the node subnet. Verify that NSGs, UDRs, firewalls, NVAs, and proxies allow the node to reach the required AKS outbound endpoints.
 
 > [!NOTE]
-> Not allowing required AKS endpoints correctly is the likeliest cause of this error. Make sure that outbound HTTPS access is allowed for endpoints like `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
+> The likeliest cause of this error is that the required AKS endpoints are not correctly allowed. Make sure that outbound HTTPS access is allowed for endpoints such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
 
 Run the following command from a node, from a VMSS instance, or from a test VM that uses the same subnet, route table, DNS, firewall, and proxy path:
 
@@ -191,7 +191,7 @@ nc -vz <hostname> 443
 curl -Iv --connect-timeout 10 https://<hostname>/
 ```
 
-For `nc`, a successful test usually shows that the connection to port 443 succeeded or is open. A timeout, refused connection, or no route message indicates that a network control might be blocking the TCP connection. For `curl`, look for a completed TLS handshake and an HTTP response. A `curl` timeout, connection reset, HTTP 403, or certificate error identifies the next area to investigate.
+For `nc`, a successful test usually shows that the connection to port 443 succeeded or is open. A timeout, a refused connection, or no route message indicates that a network control might be blocking the TCP connection. For `curl`, look for a completed TLS handshake and an HTTP response. A `curl` timeout, connection reset, "HTTP 403" status code, or certificate error identifies the next area to investigate.
 
 If you use a proxy, also test the proxy path:
 
@@ -215,7 +215,7 @@ az vmss run-command invoke --resource-group <mc-resource-group-name> \
 
 Review the run-command output for the same `nc` and `curl` success or failure patterns. If `nc` fails, focus on TCP port 443 routing or firewall controls. If `nc` succeeds but `curl` fails, focus on HTTP proxy behavior, TLS inspection, or certificate trust.
 
-If the connectivity test fails, verify the following settings. These checks don't have to be completed in order. Start with the network control that applies to your cluster, and then check the other controls that are in the node subnet's outbound path.
+If the connectivity test fails, verify the settings in the following sections. These checks don't have to be completed in any specific order. Start at the network control that applies to your cluster, and then check the other controls that are in the node subnet's outbound path.
 
 #### Verify NSG outbound rules
 
@@ -237,12 +237,12 @@ az network nic list-effective-nsg --ids <node-nic-id> --output table
 
 The first command should return the network interface ID for the selected node instance. The effective NSG output shows the rules that actually apply after subnet-level and network-interface-level NSGs are combined.
 
-Confirm that no higher-priority rule denies outbound TCP traffic from the node subnet to the destination IP address on port 443. 
+Verify that no higher-priority rule denies outbound TCP traffic from the node subnet to the destination IP address on port 443. 
 
 To check a specific flow in the Azure portal:
 
 1. Go to **Network Watcher** > **IP flow verify**. 
-1. Select the node VMSS instance network interface, 
+1. Select the node VMSS instance network interface.
 1. Set **Direction** to **Outbound**, **Protocol** to **TCP**, and **Remote port** to **443**. 
 1. Use the resolved IP address for `<hostname>` as the remote IP address.
 
@@ -250,7 +250,7 @@ To check a specific flow in the Azure portal:
 
 If the cluster uses user-defined routing, verify that UDRs send traffic through the expected next hop.
 
-This check applies only to clusters that use the AKS `userDefinedRouting` outbound type or clusters whose node subnet has a route table associated with it. These configurations are commonly used when outbound traffic is forced through Azure Firewall, an NVA, or another controlled egress path.
+This check applies to only clusters that use the AKS `userDefinedRouting` outbound type or clusters whose node subnet has a route table that's associated with it. These configurations are commonly used if outbound traffic is forced through Azure Firewall, an NVA, or another controlled egress path.
 
 To check the AKS outbound type, run the following command:
 
@@ -261,29 +261,29 @@ az aks show --resource-group <cluster-resource-group-name> \
    --output tsv
 ```
 
-The output shows the cluster outbound type, like `loadBalancer`, `managedNATGateway`, or `userDefinedRouting`. If the output is `userDefinedRouting`, complete the UDR-specific checks in this section.
+The output shows the cluster outbound type, such as `loadBalancer`, `managedNATGateway`, or `userDefinedRouting`. If the output is `userDefinedRouting`, complete the UDR-specific checks in this section.
 
-If the output isn't `userDefinedRouting` and the node subnet doesn't have a route table associated with it, skip the UDR-specific checks.
+If the output isn't `userDefinedRouting`, and the node subnet doesn't have a route table associated with it, skip the UDR-specific checks.
 
 #### Review the effective route table for the same node network interface
 
-Run the following command to review the effective route table for the node network interface:
+To review the effective route table for the node network interface, run the following command:
 
 ```azurecli
 az network nic show-effective-route-table --ids <node-nic-id> --output table
 ```
 
-The output shows the routes that apply to the node network interface after system routes, Border Gateway Protocol (BGP) routes, and UDRs are evaluated. Look for the route that matches the resolved IP address for `<hostname>` and confirm that the next hop is the one you expect.
+The output shows the routes that apply to the node network interface after system routes, Border Gateway Protocol (BGP) routes, and UDRs are evaluated. Look for the route that matches the resolved IP address for `<hostname>`, and verify that the next hop is the one you expect.
 
-Confirm that traffic to the resolved IP address for `<hostname>` is routed to the expected next hop, like internet, Azure Firewall, or your NVA. In the Azure portal, you can also use **Network Watcher** > **Next hop** to test the route from the node VMSS instance network interface to the resolved IP address for `<hostname>`.
+Verify that traffic to the resolved IP address for `<hostname>` is routed to the expected next hop, such as internet, Azure Firewall, or your NVA. In the Azure portal, you can also use **Network Watcher** > **Next hop** to test the route from the node VMSS instance network interface to the resolved IP address for `<hostname>`.
 
 #### Verify firewall or NVA rules
 
 Verify that firewall or NVA rules allow outbound HTTPS to the required AKS endpoints.
 
-If you use Azure Firewall, make sure that your application rules include the `AzureKubernetesService` fully qualified domain name (FQDN) tag or explicit allow rules for the required FQDNs. In the Azure portal, go to the firewall policy or firewall rules and confirm that the rule collection allows HTTPS traffic from the node subnet to the required AKS endpoints. For more information, see [Azure Firewall](/azure/aks/outbound-rules-control-egress#azure-firewall).
+If you use Azure Firewall, make sure that your application rules include the `AzureKubernetesService` fully qualified domain name (FQDN) tag or explicit allow rules for the required FQDNs. In the Azure portal, go to the firewall policy or firewall rules and verify that the rule collection allows HTTPS traffic from the node subnet to the required AKS endpoints. For more information, see [Azure Firewall](/azure/aks/outbound-rules-control-egress#azure-firewall).
 
-If Azure Firewall diagnostic logs are enabled, review the application rule and network rule logs around the time of the failed AKS operation or failed `curl` test. 
+If Azure Firewall diagnostic logs are enabled, review the application rule and network rule logs around the time of the failed AKS operation or failed `curl` test:
 
 1. In the Azure portal, open the firewall or firewall policy.
 1. Check **Monitoring** > **Logs** or the configured diagnostic destination. 
@@ -318,19 +318,19 @@ az aks show --resource-group <cluster-resource-group-name> \
 
 If the cluster uses the AKS HTTP proxy feature, the output shows values like `httpProxy`, `httpsProxy`, `noProxy`, and `trustedCa`. If the output is empty or `null`, the AKS HTTP proxy feature isn't configured for the cluster.
 
-Confirm that `httpsProxy` points to the expected proxy and that `noProxy` includes addresses that should bypass the proxy, like private cluster endpoints, service Classless Inter-Domain Routing (CIDR) blocks, pod CIDRs, node subnet ranges, and internal domains that are required by your environment. In the Azure portal, go to the AKS cluster, open **Networking**, and review the HTTP proxy configuration if it's configured for the cluster.
+Verify that `httpsProxy` points to the expected proxy, and that `noProxy` includes addresses that should bypass the proxy, such as private cluster endpoints, service Classless Inter-Domain Routing (CIDR) blocks, pod CIDRs, node subnet ranges, and internal domains that are required by your environment. In the Azure portal, go to the AKS cluster, open **Networking**, and review the HTTP proxy configuration if it's configured for the cluster.
 
 #### Review firewall, proxy, or NVA logs
 
 Verify that firewall, proxy, or NVA logs don't show denied or reset connections.
 
-Match the timestamp of the failed AKS operation or the failed `curl` test with logs from the network device. Search by source node private IP address, destination IP address, destination FQDN, and port 443. A **deny**, **reset**, **connection timeout**, **TLS inspection failure**, or **proxy authentication failure** in those logs identifies the control that must be updated.
+Match the timestamp of the failed AKS operation or the failed `curl` test with logs from the network device. Search by source node private IP address, destination IP address, destination FQDN, and port 443. A **deny**, **reset**, **connection timeout**, **TLS inspection failure**, or **proxy authentication failure** entry in those logs identifies the control that must be updated.
 
 ### Resolve TLS inspection or certificate trust failures
 
 If the error includes `curl: (60) SSL certificate problem`, `unknown CA`, or `self signed certificate in certificate chain`, a proxy or TLS inspection device might present a certificate chain that the node doesn't trust.
 
-If the AKS diagnostic message says to configure TLS inspection or proxy trust, it means that AKS nodes must be able to make trusted HTTPS connections to the required AKS endpoints. To fix this problem, either exclude the required AKS endpoints from TLS inspection or configure the proxy or TLS inspection device and the cluster so that the nodes trust the certificate chain that the device presents. After you make the change, verify that `curl -Iv --connect-timeout 10 https://<hostname>/` completes certificate verification and returns an HTTP response.
+If the AKS diagnostic message instructs you to configure TLS inspection or proxy trust, this message means that AKS nodes must be able to make trusted HTTPS connections to the required AKS endpoints. To fix this problem, either exclude the required AKS endpoints from TLS inspection or configure the proxy or TLS inspection device and the cluster so that the nodes trust the certificate chain that the device presents. After you make the change, verify that `curl -Iv --connect-timeout 10 https://<hostname>/` completes certificate verification and returns an HTTP response.
 
 Run the following command to inspect the TLS handshake:
 
@@ -340,7 +340,7 @@ curl -Iv --connect-timeout 10 https://<hostname>/
 
 The output shows whether the TCP connection, proxy tunnel, TLS handshake, and certificate verification succeed. Use the following table to interpret the most common TLS-related patterns.
 
-Review the command output to determine where the TLS handshake fails:
+Review the command output to determine where the TLS handshake fails.
 
 | Output pattern | What it means | Next step |
 | --- | --- | --- |
@@ -348,17 +348,17 @@ Review the command output to determine where the TLS handshake fails:
 | The certificate subject or issuer shows your enterprise proxy, firewall, or TLS inspection device instead of a public Microsoft certificate chain for the endpoint. | TLS inspection is being applied to the connection. | Exclude AKS required endpoints from TLS inspection, or make sure the inspected certificate chain is trusted by the node. |
 | `CONNECT tunnel established` followed by a certificate trust error | The proxy connection succeeded, but the TLS certificate that was presented through the proxy isn't trusted by the node. | Update the proxy certificate chain and cluster certificate authority (CA) trust configuration, or bypass TLS inspection for AKS required endpoints. |
 | `OpenSSL SSL_connect: Connection reset by peer`, `unexpected eof while reading`, or `curl: (35)` | An intermediate proxy, firewall, NVA, or TLS inspection device might be interrupting the handshake. | Review the device logs for **deny**, **reset**, **connection timeout**, **TLS inspection failure**, or **proxy authentication failure** events for `<hostname>:443`. |
-| `SSL certificate verify ok` followed by an HTTP response | The TLS handshake succeeded. | Continue with the firewall, proxy, NVA, NSG, or applicable UDR checks if the AKS operation still fails. |
+| `SSL certificate verify ok` followed by an HTTP response | The TLS handshake succeeded. | If the AKS operation still fails, continue to run the firewall, proxy, NVA, NSG, or applicable UDR checks. |
 
-Use one of the following fixes based on your network design.
+Based on your network design, use the fix from one of the following sections, as appropriate.
 
 #### Bypass TLS inspection for AKS required endpoints
 
-Configure your proxy, firewall, NVA, or TLS inspection device so it doesn't decrypt or re-sign HTTPS traffic for AKS required endpoints. Instead, allow the node to create a direct TLS session to the original endpoint.
+Configure your proxy, firewall, NVA, or TLS inspection device so that it doesn't decrypt or re-sign HTTPS traffic for AKS required endpoints. Instead, allow the node to create a direct TLS session to the original endpoint.
 
-At a minimum, apply the bypass to the endpoint from the error message and to the required AKS endpoints that nodes use during provisioning, like `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. Use the full endpoint list in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress) for your cluster configuration and Azure environment.
+At a minimum, apply the bypass to the endpoint from the error message and to the required AKS endpoints that nodes use during provisioning, such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. Use the full endpoint list in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress) for your cluster configuration and Azure environment.
 
-On the network device, use an HTTPS inspection bypass, SSL decryption exception, or no-decrypt rule for the required FQDNs. Make sure that the allow rule still permits outbound TCP 443 and that the proxy allows `CONNECT <hostname>:443` if a proxy is used.
+On the network device, use an HTTPS inspection bypass, SSL decryption exception, or no-decrypt rule for the required FQDNs. Make sure that the allow rule still permits outbound TCP 443, and that the proxy allows `CONNECT <hostname>:443` if a proxy is used.
 
 After you configure the bypass, rerun the test:
 
@@ -380,7 +380,7 @@ On the proxy or TLS inspection device, verify the following settings:
    openssl s_client -connect <hostname>:443 -servername <hostname> -showcerts -verify_return_error </dev/null
    ```
 
-   In the output, review the `Certificate chain` section. The chain should include the leaf certificate and the required intermediate CA certificates. The command should end with `Verify return code: 0 (ok)`. If it ends with `unable to get local issuer certificate`, `unable to verify the first certificate`, or a similar verification error, the device might not be sending the full chain or the node might not trust the issuing CA.
+   In the output, review the `Certificate chain` section. The chain should include the leaf certificate and the required intermediate CA certificates. The command should end in `Verify return code: 0 (ok)`. If it ends in `unable to get local issuer certificate`, `unable to verify the first certificate`, or a similar verification error, the device might not be sending the full chain, or the node might not trust the issuing CA.
 
 1. Check that the leaf certificate matches the requested host name by using the Subject Alternative Name (SAN) extension:
 
@@ -389,7 +389,7 @@ On the proxy or TLS inspection device, verify the following settings:
      openssl x509 -noout -subject -issuer -ext subjectAltName
    ```
 
-   In the `X509v3 Subject Alternative Name` section, confirm that the certificate contains the requested host name. For example, the SAN should include `DNS:<hostname>` or a valid wildcard entry that covers the host name. Don't rely on the certificate common name (CN) alone.
+   In the `X509v3 Subject Alternative Name` section, verify that the certificate contains the requested host name. For example, the SAN should include `DNS:<hostname>` or a valid wildcard entry that covers the host name. Don't rely on the certificate common name (CN) alone.
 
 1. Check that the signing CA certificates are usable for TLS server authentication and aren't expired:
 
@@ -398,7 +398,7 @@ On the proxy or TLS inspection device, verify the following settings:
      openssl x509 -noout -issuer -subject -dates -ext basicConstraints -ext keyUsage -ext extendedKeyUsage
    ```
 
-   Review the CA certificates that are configured on the proxy or TLS inspection device. The signing CA must be valid for the current date and must be allowed to issue server certificates. If an intermediate CA includes the Extended Key Usage (EKU) extension, it should include TLS server authentication. To check revocation, use the certificate revocation list (CRL) or Online Certificate Status Protocol (OCSP) tools that your enterprise CA publishes, or check the CA status in your certificate management system.
+   Review the CA certificates that are configured on the proxy or TLS inspection device. The signing CA must be valid for the current date, and must be allowed to issue server certificates. If an intermediate CA includes the Extended Key Usage (EKU) extension, it should include TLS server authentication. To check revocation, use the certificate revocation list (CRL) or Online Certificate Status Protocol (OCSP) tools that your enterprise CA publishes, or check the CA status in your certificate management system.
 
 1. Check that the certificate algorithm, key size, and TLS version are accepted by the node operating system image:
 
@@ -408,9 +408,9 @@ On the proxy or TLS inspection device, verify the following settings:
    openssl s_client -connect <hostname>:443 -servername <hostname> -tls1_3 </dev/null
    ```
 
-   In the `curl -Iv` output, review the negotiated TLS version, cipher, certificate signature algorithm, and public key details. In the `openssl s_client` output, confirm that the node can complete the handshake by using the TLS versions that the node image supports. If the handshake fails only for the inspected path, update the proxy or TLS inspection device to use certificate and TLS settings that are compatible with the node image.
+   In the `curl -Iv` output, review the negotiated TLS version, cipher, certificate signature algorithm, and public key details. In the `openssl s_client` output, verify that the node can complete the handshake by using the TLS versions that the node image supports. If the handshake fails for only the inspected path, update the proxy or TLS inspection device to use certificate and TLS settings that are compatible with the node image.
 
-1. Check that the proxy or TLS inspection policy applies consistently to all required AKS endpoints used during node provisioning:
+1. Check that the proxy or TLS inspection policy applies consistently to all required AKS endpoints that are used during node provisioning:
 
    ```bash
    for endpoint in mcr.microsoft.com acs-mirror.azureedge.net packages.aks.azure.com packages.microsoft.com; do
@@ -419,13 +419,13 @@ On the proxy or TLS inspection device, verify the following settings:
    done
    ```
 
-   Replace or extend the endpoint list with the complete set of required FQDNs for your cluster from [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress). The result should be consistent for all required endpoints: either TLS inspection is bypassed for all of them, or the inspected certificate chain is trusted for all of them. Review proxy, firewall, and TLS inspection logs for any endpoint that shows a different issuer, a certificate trust error, or a reset connection.
+   Replace or extend the endpoint list by using the complete set of required FQDNs for your cluster from [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress). The result should be consistent for all required endpoints: Either TLS inspection is bypassed for all of them, or the inspected certificate chain is trusted for all of them. Review proxy, firewall, and TLS inspection logs for any endpoint that shows a different issuer, a certificate trust error, or a reset connection.
 
 After you update the device, rerun `curl -Iv`. The TLS failure should be gone. If `curl` still reports a trust error, compare the issuer and chain that `curl` shows with the CA certificates that are installed on the node.
 
 #### Configure the cluster to trust the enterprise CA certificate
 
-If TLS inspection remains enabled, the node must trust the enterprise root or intermediate CA certificate before AKS node provisioning tries to download Kubernetes binaries. Installing the CA certificate after the node is ready, like using a DaemonSet, a post-provisioning script, or a manual change on the node, won't fix this error because the failure happens during provisioning.
+If TLS inspection remains enabled, the node must trust the enterprise root or intermediate CA certificate before AKS node provisioning tries to download Kubernetes binaries. If you use a DaemonSet, a post-provisioning script, or a manual change on the node to install the CA certificate after the node is ready, this method won't fix this error. The reason is that the failure occurs during provisioning.
 
 Use an AKS-supported method to provide the enterprise CA certificate for your cluster configuration. The supported methods depend on the cluster configuration and the AKS features that are available in your Azure region.
 
@@ -435,13 +435,13 @@ Use an AKS-supported method to provide the enterprise CA certificate for your cl
 
 After you configure the supported CA trust option, rerun `curl -Iv --connect-timeout 10 https://<hostname>/` from a node, a VMSS instance, or a test VM that uses the same network path. The command should complete certificate verification and return an HTTP response.
 
-Don't use `curl -k` or `--insecure` as a fix. Those options only bypass certificate validation for the manual test command and don't change how the AKS node bootstrap process validates certificates.
+Don't use `curl -k` or `--insecure` as a fix. Those options only bypass certificate validation for the manual test command. They don't change how the AKS node bootstrap process validates certificates.
 
-If the error includes `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer`, check both TLS inspection logs and firewall, proxy, or NVA logs. These errors can occur when an intermediate device interrupts the TLS handshake or resets the connection.
+If the error includes `curl: (35)`, `unexpected eof while reading`, or `Connection reset by peer`, check both TLS inspection logs and firewall, proxy, or NVA logs. These errors can occur if an intermediate device interrupts the TLS handshake or resets the connection.
 
 ### Run the baseline connectivity checks
 
-If the error shows only a generic CSE timeout or if the `curl` details are unavailable, run the following checks in order. Stop at the first failed check and fix that issue.
+If the error shows only a generic CSE timeout, or if the `curl` details are unavailable, run the following checks in the given order. Stop at the first failed check, and fix that issue.
 
 1. Verify the DNS resolution:
 
@@ -457,7 +457,7 @@ If the error shows only a generic CSE timeout or if the `curl` details are unava
    nc -vz <hostname> 443
    ```
 
-   The command should show that the connection to port 443 succeeded or is open. If it times out, is refused, or reports no route, check NSGs, UDRs if applicable, firewalls, NVAs, and routing.
+   The command should show that the connection to port 443 succeeded or is open. If it times out, is refused, or reports no route, check NSGs, UDRs (if applicable), firewalls, NVAs, and routing.
 
 1. Verify the HTTPS and TLS handshake:
 
@@ -465,7 +465,7 @@ If the error shows only a generic CSE timeout or if the `curl` details are unava
    curl -Iv --connect-timeout 10 https://<hostname>/
    ```
 
-   The command should complete the TLS handshake and return an HTTP response. If it returns a certificate error, connection reset, HTTP 403, or timeout, use the matching solution section in this article.
+   The command should complete the TLS handshake and return an HTTP response. If it returns a certificate error, connection reset, "HTTP 403" status code, or timeout, use the matching solution section in this article.
 
 1. If a proxy is configured, verify that the proxy allows HTTPS access to the endpoint:
 
@@ -475,7 +475,7 @@ If the error shows only a generic CSE timeout or if the `curl` details are unava
 
    The command should show that the proxy can reach `<hostname>:443` and return an HTTP response. If it returns `403`, `407`, a timeout, or a connection reset, check the proxy allowlist, authentication, and TLS inspection policy.
 
-1. Review NSG, firewall, NVA, proxy, and Azure Firewall FQDN tag configuration. If the cluster uses `userDefinedRouting` or the node subnet has a route table associated with it, also review UDR configuration.
+1. Review NSG, firewall, NVA, proxy, and Azure Firewall FQDN tag configuration. If the cluster uses `userDefinedRouting`, or the node subnet has a route table associated with it, also review the UDR configuration.
 
 If all checks pass but the AKS operation still fails, collect the failed node VM extension status and the CSE output from the VMSS instance, and then contact Azure Support.
 
