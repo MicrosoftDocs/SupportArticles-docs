@@ -1,7 +1,7 @@
 ---
 title: Can't save email to CRM due to invalid mailbox settings
-description: Resolves an error that occurs in Sales app due to invalid mailbox settings in Microsoft Dynamics 365.
-ms.date: 11/20/2025
+description: Resolves an error that occurs in Sales agent due to invalid mailbox settings in Microsoft Dynamics 365.
+ms.date: 05/12/2026
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -9,13 +9,13 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Can't save an email to CRM due to invalid mailbox settings
 
-This article helps you troubleshoot and resolve an error message that occurs in Sales app due to a disabled mailbox in Microsoft Dynamics 365.
+This article helps you troubleshoot and resolve an error message that occurs in Sales agent due to a disabled mailbox in Microsoft Dynamics 365.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -24,7 +24,7 @@ This article helps you troubleshoot and resolve an error message that occurs in 
 
 ## Symptoms
 
-When you open Sales app in Outlook and try to save an email or a meeting to CRM, you see the following error message:
+When you open Sales agent in Outlook and try to save an email or a meeting to CRM, you see the following error message:
 
 > Update settings to save emails
 
@@ -34,7 +34,7 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 ## Resolution
 
-1. Open the CRM instance you connected to Sales app.
+1. Open the CRM instance you connected to Sales agent.
 
     > [!NOTE]
     > To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
@@ -62,4 +62,4 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

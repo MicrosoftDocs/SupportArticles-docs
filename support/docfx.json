@@ -314,7 +314,7 @@
         "power-platform/power-pages/**/*.md": "Power Pages",
         "power-platform/administration/**/*.md": "Power Platform",
         "power-platform/copilot-studio/**/*.md": "Copilot Studio",
-        "sales-copilot/**/*.md": "Sales in Microsoft 365 Copilot",
+        "sales-copilot/**/*.md": "Sales agent",
         "dynamics/gp/**/*.md": "Dynamics GP"
       },
       "searchScope": {

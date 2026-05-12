@@ -1,13 +1,13 @@
 ---
 title: Errors When Enabling Salesforce in Server-to-Server Flow
-description: Troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales app.
-ms.date: 05/08/2026
+description: Troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales agent.
+ms.date: 05/12/2026
 ms.reviewer: marrabi, shjais, v-shaywood
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors occur when enabling Salesforce with a server-to-server flow
 
-This article helps you troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales app.
+This article helps you troubleshoot errors that occur when you try to enable Salesforce with a server-to-server flow in the Sales agent.
 
 ## Who is affected?
 
@@ -143,11 +143,11 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 To resolve this issue:
 
 1. Temporarily disable the custom validation rules for user creation. To make this change, go to **Setup** > **Object Manager** > **User** > **Validation Rules**.
-1. Try again to set up the Salesforce connection in the [Sales app admin settings](/microsoft-sales-copilot/connect-agent-datasource).
+1. Try again to set up the Salesforce connection in the [Sales agent admin settings](/microsoft-sales-copilot/connect-agent-datasource).
 1. After the Salesforce connection is set up and the integration user is created, re-enable your validation rules.
 
 ## More information
 
-If your problem isn't resolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with experts.
+If your problem isn't resolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

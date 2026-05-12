@@ -1,7 +1,7 @@
 ---
 title: Errors When Accessing Salesforce with Server-to-Server Flow
-description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Sales app.
-ms.date: 11/20/2025
+description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Sales agent.
+ms.date: 05/12/2026
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
@@ -9,13 +9,13 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when accessing Salesforce with server-to-server flow
 
-This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Sales app.
+This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Sales agent.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -203,6 +203,6 @@ To resolve this issue, try again after 10 to 15 minutes. If this issue persists,
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

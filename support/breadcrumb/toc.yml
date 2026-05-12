@@ -57,7 +57,7 @@ items:
       tocHref: /troubleshoot/sql/
       topicHref: /troubleshoot/sql/welcome-sql-server
 
-    - name: Sales in Microsoft 365 Copilot
+    - name: Sales agent
       tocHref: /troubleshoot/sales-copilot/
       topicHref: /troubleshoot/sales-copilot/welcome-sales-copilot
 

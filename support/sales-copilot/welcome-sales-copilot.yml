@@ -30,7 +30,7 @@ landingContent:
             url: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
           - text: Missing privileges error when signing in
             url: crm-permissions-and-configurations/missing-privileges-sign-in.md
-          - text: Salesforce CRM users can't see data in Sales app
+          - text: Salesforce CRM users can't see data in Sales agent
             url: crm-permissions-and-configurations/no-column-error.md
             
  # Card
@@ -50,7 +50,7 @@ landingContent:
             url: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
           - text: Can't connect to Dynamics 365 with two-factor authentication enabled
             url: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
-          - text: First Salesforce CRM user can't access Sales app
+          - text: First Salesforce CRM user can't access Sales agent
             url: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
           - text: Incorrect custom domain in Salesforce
             url: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
@@ -72,9 +72,9 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Sales app documentation
+          - text: Sales agent documentation
             url: /microsoft-sales-copilot/
-          - text: Sales app training
+          - text: Sales agent training
             url: /training/modules/boost-sales-performance/
           - text: Dynamics 365 Community
             url: https://techcommunity.microsoft.com/t5/microsoft-sales-copilot/ct-p/MicrosoftViva

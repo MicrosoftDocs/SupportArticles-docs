@@ -1,7 +1,7 @@
 ---
 title: Opportunity summary not displayed in deal rooms
 description: Resolves an issue where the opportunity summary isn't displayed in deal rooms.
-ms.date: 11/20/2025
+ms.date: 05/12/2026
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:Teams Collaboration Spaces\Deal room template for CRM opportunities
@@ -14,30 +14,30 @@ This article helps you troubleshoot and resolve issues when the opportunity summ
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Teams        |
+|**Client app**     |  Sales agent in Teams        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365 and Salesforce      |
-|**Users**     | Users trying to update a CRM record from Sales app |
+|**Users**     | Users trying to update a CRM record from Sales agent |
 
 ## Symptoms
 
-When you create a deal room from Sales app in Outlook, and then open it in the Sales app in Microsoft Teams, the [opportunity summary](/microsoft-sales-copilot/view-opportunity-summary) isn't displayed in the deal room. The following message is displayed instead:
+When you create a deal room from Sales agent in Outlook, and then open it in the Sales agent in Microsoft Teams, the [opportunity summary](/microsoft-sales-copilot/view-opportunity-summary) isn't displayed in the deal room. The following message is displayed instead:
 
-> To unlock AI-powered opportunity summaries, install the Sales app in Teams.
+> To unlock AI-powered opportunity summaries, install the Sales agent in Teams.
 
 :::image type="content" source="media/opportunity-summary-not-displayed/unlock-ai-powered-opportunity-summaries-error.png" alt-text="Screenshot that shows the message instead of the opportunity summary.":::
 
 ## Cause
 
-The Sales app in Teams isn't installed.
+The Sales agent in Teams isn't installed.
 
-When you [set up a deal room](/microsoft-sales-copilot/set-up-team-deal-room-template) from Sales app in Outlook, the Sales app in Teams and bot are automatically installed for the selected team, and the opportunity summary is displayed in the deal room. If the Sales app in Teams isn't installed for the team, a message is displayed instead of the opportunity summary in the deal room.
+When you [set up a deal room](/microsoft-sales-copilot/set-up-team-deal-room-template) from Sales agent in Outlook, the Sales agent in Teams and bot are automatically installed for the selected team, and the opportunity summary is displayed in the deal room. If the Sales agent in Teams isn't installed for the team, a message is displayed instead of the opportunity summary in the deal room.
 
 ## Resolution
 
-To resolve this issue, you must manually install the Sales app in Teams and bot for the team, and then generate the opportunity summary again.
+To resolve this issue, you must manually install the Sales agent in Teams and bot for the team, and then generate the opportunity summary again.
 
 1. In Microsoft Teams, hover over the team name, and then select **More options (...)** > **Manage team**.
 
@@ -53,8 +53,8 @@ To resolve this issue, you must manually install the Sales app in Teams and bot 
 
 6. Open the deal room channel and select **Start a post**.
 
-7. In the message box, type *@Sales app*, select the Sales app, type *show opportunity summary*, and then select **Post** to generate the opportunity summary.
+7. In the message box, type *@Sales agent*, select the Sales agent, type *show opportunity summary*, and then select **Post** to generate the opportunity summary.
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

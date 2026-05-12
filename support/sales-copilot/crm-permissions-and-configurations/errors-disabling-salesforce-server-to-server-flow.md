@@ -1,7 +1,7 @@
 ---
 title: Errors When Disabling Salesforce with Server-to-Server Flow
-description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Sales app.
-ms.date: 11/20/2025
+description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Sales agent.
+ms.date: 05/12/2026
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when disabling Salesforce with server-to-server flow
 
-This article helps you troubleshoot errors that might occur when you try to disable Salesforce with a server-to-server flow in Sales app.
+This article helps you troubleshoot errors that might occur when you try to disable Salesforce with a server-to-server flow in Sales agent.
 
 ## Who is affected?
 
@@ -112,6 +112,6 @@ To resolve this issue, try disabling the connection again. If the issue persists
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

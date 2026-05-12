@@ -1,21 +1,21 @@
 ---
-title: Add-in update error in Sales app for Outlook
-description: Resolves an error message that repeatedly prompts users to update Sales app for Outlook.
-ms.date: 11/20/2025
+title: Add-in update error in Sales agent for Outlook
+description: Resolves an error message that repeatedly prompts users to update Sales agent for Outlook.
+ms.date: 05/12/2026
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Outlook Add-In Installation
 ---
-# Add-in update error in Sales app for Microsoft Outlook
+# Add-in update error in Sales agent for Microsoft Outlook
 
-This article helps you troubleshoot and resolve an error message that repeatedly prompts users to update the Sales app for Outlook.
+This article helps you troubleshoot and resolve an error message that repeatedly prompts users to update the Sales agent for Outlook.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales app in Outlook        |
+|**Client app**     |  Sales agent in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -32,21 +32,21 @@ When you select **UPDATE**, the behavior depends on whether you're using Outlook
 
 :::image type="content" source="media/update-add-in-error/add-in-error.png" alt-text="Screenshot that shows the add-in update error and the UPDATE button.":::
 
-- If you're using Outlook on the web, a new browser window is launched, and you're navigated to the **Sales for Microsoft Outlook** screen on the **Add-Ins for Outlook** pop-up window. The error message is still displayed in the new browser window. However, on the original browser window, you can temporarily use Sales app until the page is refreshed, and you see the original error message.
+- If you're using Outlook on the web, a new browser window is launched, and you're navigated to the **Sales for Microsoft Outlook** screen on the **Add-Ins for Outlook** pop-up window. The error message is still displayed in the new browser window. However, on the original browser window, you can temporarily use Sales agent until the page is refreshed, and you see the original error message.
 
-- If you're using the Outlook desktop app, a subsequent error message is displayed indicating that the add-in is currently upgrading. When you close the **Sales** pane and reopen it, Sales app temporarily works until you close or reopen Outlook, and the error reoccurs.
+- If you're using the Outlook desktop app, a subsequent error message is displayed indicating that the add-in is currently upgrading. When you close the **Sales** pane and reopen it, Sales agent temporarily works until you close or reopen Outlook, and the error reoccurs.
 
   :::image type="content" source="media/update-add-in-error/add-in-warning.png" alt-text="Screenshot that shows the add-in warning in the Outlook desktop app.":::
 
 ## Cause
 
-Permission changes HAVE occurred in the new Sales app in Outlook.
+Permission changes HAVE occurred in the new Sales agent in Outlook.
 
-Certain permission changes require explicit administrator consent or reinstallation of the Sales app in Outlook. These permission changes are always tied to a recent update to the Sales app in Outlook. You can check when the latest update has been applied to the add-in on the corresponding [App Source Details page](https://appsource.microsoft.com/). If you see a recent update to the Sales app in Outlook, the error is likely tied to corresponding permission changes due to the update.
+Certain permission changes require explicit administrator consent or reinstallation of the Sales agent in Outlook. These permission changes are always tied to a recent update to the Sales agent in Outlook. You can check when the latest update has been applied to the add-in on the corresponding [App Source Details page](https://appsource.microsoft.com/). If you see a recent update to the Sales agent in Outlook, the error is likely tied to corresponding permission changes due to the update.
 
 ## Resolution
 
-The first step is to identify if the Sales app in Outlook is admin-managed or user-managed. You can take the resolution steps accordingly.
+The first step is to identify if the Sales agent in Outlook is admin-managed or user-managed. You can take the resolution steps accordingly.
 
 1. Open Outlook (web or desktop).
 
@@ -54,7 +54,7 @@ The first step is to identify if the Sales app in Outlook is admin-managed or us
 
 3. In the **Add-Ins for Outlook** window, check if the **Sales for Microsoft Outlook add-in** is listed under the **Admin-managed** section.
 
-    :::image type="content" source="media/update-add-in-error/add-in-admin-managed.png" alt-text="Screenshot that shows the Admin-managed section where you can check if the Sales app for Microsoft Outlook add-in is listed.":::
+    :::image type="content" source="media/update-add-in-error/add-in-admin-managed.png" alt-text="Screenshot that shows the Admin-managed section where you can check if the Sales agent for Microsoft Outlook add-in is listed.":::
 
 4. If the add-in is listed under the **Admin-managed** section, ask your tenant administrator to perform these steps:
 
@@ -66,7 +66,7 @@ The first step is to identify if the Sales app in Outlook is admin-managed or us
 
     1. If the **Update** button is available, select it and follow the prompts to update the add-in.
 
-    1. If the **Update** button isn't available, go to the **Configuration** tab, select **`Sales for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Sales app in Microsoft Outlook. For more information, see [Install Sales app](/microsoft-sales-copilot/install-viva-sales#admin-deployed-installation).
+    1. If the **Update** button isn't available, go to the **Configuration** tab, select **`Sales for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Sales agent in Microsoft Outlook. For more information, see [Install Sales agent](/microsoft-sales-copilot/install-viva-sales#admin-deployed-installation).
 
 5. If the add-in isn't listed under the **Admin-managed** section, uninstall the add-in from the **My add-ins** section, and reinstall it.
 
@@ -75,4 +75,4 @@ The first step is to identify if the Sales app in Outlook is admin-managed or us
 
 ## More information
 
-If your issue is still unresolved, go to the [Sales in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales agent - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
