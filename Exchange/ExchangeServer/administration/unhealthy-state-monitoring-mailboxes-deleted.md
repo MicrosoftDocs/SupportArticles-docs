@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
 
 # Unhealthy state of Exchange servers when monitoring mailboxes are deleted

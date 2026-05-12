@@ -19,8 +19,9 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error when you install the Edge Transport server role on a domain-joined Exchange server: Cannot get child of ADObjectId
 
 _Original KB number:_ &nbsp; 3205799

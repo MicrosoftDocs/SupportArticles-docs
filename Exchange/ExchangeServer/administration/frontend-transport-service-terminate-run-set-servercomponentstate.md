@@ -17,8 +17,9 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Event 7031 when you run Exchange maintenance scripts or Set-ServerComponentState
 
 _Original KB number:_ &nbsp;4043629
