@@ -182,7 +182,7 @@ If the error includes HTTP 403, `curl` timeout code 124, repeated `Trying <IP>:4
 In BYO VNet clusters, start at the network controls that you manage for the node subnet. Verify that NSGs, UDRs, firewalls, NVAs, and proxies allow the node to reach the required AKS outbound endpoints.
 
 > [!NOTE]
-> The likeliest cause of this error is that the required AKS endpoints are not correctly allowed. Make sure that outbound HTTPS access is allowed for endpoints such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
+> The likeliest cause of this error is that the required AKS endpoints aren't correctly allowed. Make sure that outbound HTTPS access is allowed for endpoints such as `mcr.microsoft.com`, `acs-mirror.azureedge.net`, `packages.aks.azure.com`, and `packages.microsoft.com`. The complete required endpoint list is maintained in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](https://aka.ms/aks/outbound-rules-control-egress).
 
 Run the following command from a node, from a VMSS instance, or from a test VM that uses the same subnet, route table, DNS, firewall, and proxy path:
 
