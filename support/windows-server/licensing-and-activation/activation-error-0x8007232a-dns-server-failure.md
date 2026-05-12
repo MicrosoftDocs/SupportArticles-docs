@@ -41,13 +41,11 @@ On Azure VMs, this error typically occurs in the following scenarios:
 
 If the affected computer is a physical Windows Server-based or Windows Client-based computer, see detailed troubleshooting instructions at [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns). For more general help in troubleshooting DNS issues, see [DNS troubleshooting guidance](../networking/troubleshoot-dns-guidance.md).
 
-If the affected computer is an Azure VM, make sure that you have access to the following resources:
+If the affected computer is an Azure VM, install the [PsPing](/sysinternals/downloads/psping) tool on the VM.
 
 [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
-- The [PsPing](/sysinternals/downloads/psping) tool
-
-For a VM, you have the following additional troubleshooting options:
+For a VM, you have the following troubleshooting options to use before you have to resort to complex DNS troubleshooting:
 
 - If you want to activate the VM without addressing the DNS issue, see [Azure method 1: Activate the VM without using DNS](#azure-method-1-activate-the-vm-without-using-dns).
 - If you want to troubleshoot the VM's connection to the Azure DNS infrastructure, see [Azure method 2: Troubleshoot the connection to Azure DNS](#azure-method-2-troubleshoot-the-connection-to-azure-dns).
