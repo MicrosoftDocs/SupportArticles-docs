@@ -16,6 +16,8 @@ appliesto:
 
 # Troubleshoot failover cluster live migration freeze with TSM role
 
+## Summary
+
 A Windows Failover Cluster might hang and become unresponsive during live migration operations, such as role or VM movement between cluster nodes. This problem can occur intermittently and is often reproducible during scheduled patching cycles when you evacuate nodes. Use this article to resolve cluster hangs that occur during live migration when a third-party backup agent runs as a cluster role.
 
 ## Symptoms
@@ -40,7 +42,7 @@ The cause is the TSM (IBM Tivoli Storage Manager) backup service running as a Fa
 > [!NOTE]
 > Although dump analysis might initially point to Sysmon and PktMon as potential contributors, the actual root cause is the TSM backup service role in the cluster. Disabling this role resolves the problem without any Sysmon or PktMon changes.
 
-## Solution
+## Resolution
 
 Disable the TSM backup service role before performing live migration. You can apply the fix during a patching cycle.
 
