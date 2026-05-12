@@ -18,7 +18,14 @@ appliesto:
 
 ## Summary
 
-Modern apps or application packages are reported as vulnerable when multiple versions of the same AppX or MSIX package exist across different user profiles on a Windows client. This article explains why vulnerability scanners detect these outdated packages even when the app appears fully updated. It applies to supported versions of Windows Client where apps are installed per user and updated at different times. Use this guidance to identify duplicate app versions and either update or remove old packages to resolve false-positive security findings and restore compliance.
+This article provides troubleshooting guidance for issues arising from multiple versions of modern apps or application packages on Windows computers, particularly when these apps are reported as vulnerable by system scans. The guidance helps users ensure that all instances of an app are updated, thereby enhancing system security and resolving vulnerability reports.
+Symptoms include multiple app folders and versions due to user profiles and app updates.
+
+**Methods to resolve issues**:
+- Update the app for all users: Use PowerShell to identify and reconnect user profiles with outdated app versions.
+- Remove old packages: Identify and remove outdated Appx packages using PowerShell commands.
+- Delete user profiles: Remove profiles associated with old app versions to clean up the system.
+- Instructions for verifying updates and checking the WindowsApps folder are included.
 
 > [!NOTE]
 > Removing an Appx package deletes its registration, but files might remain on disk because cleanup is asynchronous and best-effort. These leftover files are inert and low risk.
