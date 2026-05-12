@@ -8,10 +8,7 @@ ms.service: azure-virtual-network
 ms.topic: troubleshooting
 ms.date: 04/02/2025
 ms.devlang: azurecli
-ms.custom:
-  - devx-track-azurecli
-  - sfi-image-nochange
-  - sap:Connectivity
+ms.custom: sap:Connectivity
 # Customer intent: "As a network engineer, I want to diagnose effective routing for a virtual machine's network interface, so that I can identify and resolve communication failures effectively."
 ---
 

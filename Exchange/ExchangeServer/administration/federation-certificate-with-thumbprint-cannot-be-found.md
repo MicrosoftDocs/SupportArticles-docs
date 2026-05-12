@@ -22,8 +22,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error when you make changes to federation trust: Federation certificate with the thumbprint cannot be found
 
 _Original KB number:_ &nbsp; 3215261

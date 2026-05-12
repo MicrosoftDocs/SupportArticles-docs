@@ -16,8 +16,9 @@ appliesto:
   - Exchange Server 2019
   - Outlook on the web
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Can't attach large files after increasing message size limit in Exchange Server 2019
 
 ## Symptoms
