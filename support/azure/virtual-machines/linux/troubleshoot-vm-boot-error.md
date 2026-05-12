@@ -64,6 +64,7 @@ grub rescue>
     3. Check whether the VM can start by taking a look at the Azure serial console or by trying to connect to the VM.
 
 4. If the entire `/boot` partition or other important contents are missing and can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+   
 
 See the following sections for detailed errors, possible causes, and solutions.
 
@@ -84,7 +85,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'grubfix' --resource-group $RGNAME --name $VMNAME --verbose
     ```
 
 * **Linux VMs with UEFI (Gen2):**
@@ -92,7 +93,7 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
     ```azurecli-interactive
     az extension add -n vm-repair
     az extension update -n vm-repair
-    az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
+    az vm repair repair-button --button-command 'efifix' --resource-group $RGNAME --name $VMNAME
     ```
 
 > [!IMPORTANT]
