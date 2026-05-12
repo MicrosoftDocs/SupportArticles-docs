@@ -9,8 +9,6 @@ ms.custom: sap:Segments, measures, insights\Segments
 ---
 # Segments return no or zero members
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article provides a resolution for an issue where a [segment](/dynamics365/customer-insights/segments) doesn't return any members as expected.
 
 ## Prerequisites

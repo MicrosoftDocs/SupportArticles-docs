@@ -15,8 +15,9 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/12/2026
 ---
+
 # Error when you move a mailbox in an Exchange Server 2013 environment: Cannot set folder security descriptor with non-canonical ACL
 
 _Original KB number:_ &nbsp;2764844

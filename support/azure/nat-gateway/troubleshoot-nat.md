@@ -9,7 +9,7 @@ manager: dcscontentpm
 ms.service: azure-nat-gateway
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.customs: references_regions
+ms.customs: sap:Connectivity,references_regions
 # Customer intent: "As a network engineer, I want to troubleshoot configuration and connectivity issues with the NAT gateway, so that I can ensure reliable outbound internet access for my virtual network resources."
 ---
 
