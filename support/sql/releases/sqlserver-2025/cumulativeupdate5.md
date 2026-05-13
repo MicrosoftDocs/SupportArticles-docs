@@ -13,13 +13,13 @@ appliesto:
 # KB5084896 - Cumulative Update 5 for SQL Server 2025
 
 _Release Date:_ &nbsp; May 14, 2026  
-_Version:_ &nbsp; 17.0.4045.4  
+_Version:_ &nbsp; 17.0.4045.5  
 
 ## Summary
 
 This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. This update package contains six [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2025 Cumulative Update 4. It updates components in the following builds:
 
-- SQL Server - Product version: **17.0.4045.4**, file version: **2025.170.4045.4**
+- SQL Server - Product version: **17.0.4045.5**, file version: **2025.170.4045.5**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
 > [!IMPORTANT]
@@ -100,7 +100,7 @@ You can verify the download by computing the hash of the _SQLServer2025-KB508489
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2025-KB5084896-x64.exe | 8DB68E4821910D82D3729980D9F23BC3B40415A51B254DA80F9295D4E6D00444 |
+| SQLServer2025-KB5084896-x64.exe | 1CD6A4CCBCEABFAE58377079ADD3BE96EBD1051B095FD1C02A9C270BC9A718DA |
 
 </details>
 

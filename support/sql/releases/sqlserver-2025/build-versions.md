@@ -16,7 +16,7 @@ This article lists the Microsoft SQL Server 2025 builds that were released after
 
 | Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number             | Release date      |
 | ---------------------- | ------------------------ | -------------------------------------- | ------------------------------- | -------------------------------------------- | --------------------------------- | ----------------- |
-| CU5 (Latest)           | 17.0.4045.4              | 2025.170.4045.4                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5084896](cumulativeupdate5.md) | May 14, 2026      |
+| CU5 (Latest)           | 17.0.4045.5              | 2025.170.4045.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5084896](cumulativeupdate5.md) | May 14, 2026      |
 | CU4                    | 17.0.4035.5              | 2025.170.4035.5                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5081495](cumulativeupdate4.md) | April 16, 2026    |
 | CU3                    | 17.0.4025.3              | 2025.170.4025.3                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5077896](cumulativeupdate3.md) | March 12, 2026    |
 | CU2                    | 17.0.4015.4              | 2025.170.4015.4                        | 17.0.25.223                     | 2025.170.25.223                              | [KB5075211](cumulativeupdate2.md) | February 12, 2026 |
