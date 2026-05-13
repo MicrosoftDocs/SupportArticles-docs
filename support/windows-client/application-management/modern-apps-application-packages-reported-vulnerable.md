@@ -36,6 +36,8 @@ In recent Windows versions, several parts of the shell have been moved to modern
 
 Those modern apps might be **SystemApps** (such as **StartMenuExperienceHost** and **ShellExperienceHost**) introduced within Windows Cumulative Updates or **WindowsApps** updated through Windows Update connecting to Windows Store endpoints.
 
+The **WindowsApps** folder, found at `C:\Program Files\WindowsApps`, is a protected system directory that contains applications. It is secured to avoid system problems and is typically owned by `NT SERVICE\TrustedInstaller` to ensure the applications cannot be exploited as an attack vector.
+
 Because of this inherent design, you might encounter one of the following issues:
 
 ### Multiple app folders in the system
