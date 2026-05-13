@@ -24,7 +24,7 @@ When you try to create an AKS cluster by using the Azure CLI, you receive the "V
 
 > Code: "VMExtensionProvisioningTimeout"
 >
-> Message: "Provisioning of VM extension <extension name> has timed out. Extension provisioning has taken too long to complete. The extension did not report a message. More information on troubleshooting is available at <https://aka.ms/vmextensionlinuxtroubleshoot>". 
+> Message: "Provisioning of VM extension <extension name> has timed out. Extension provisioning has taken too long to complete. The extension did not report a message. More information on troubleshooting is available at <`https://aka.ms/vmextensionlinuxtroubleshoot`>". 
 >
 > You also can [view the error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal).
 
