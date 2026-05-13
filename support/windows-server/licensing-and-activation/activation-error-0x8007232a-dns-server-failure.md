@@ -3,6 +3,7 @@ title: Error 0x8007232A "DNS server failure" when you activate Windows
 description: Discusses how to resolve error 0x8007232A ("DNS server failure"). This error occurs if Windows can't contact a DNS server to resolve the Key Management Services (KMS) host address during activation.
 ms.date: 05/13/2026
 ms.collection: windows
+ai.usage: ai-assisted
 ms.reviewer: cwhitley, scotro, v-leedennis, kaushika, v-appelgatet
 ms.custom: 
   - sap:Cannot activate my Windows VM\My VM is reporting a specific activation error
