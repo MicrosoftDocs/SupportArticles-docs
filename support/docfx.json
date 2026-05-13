@@ -233,7 +233,7 @@
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
-        "sales-copilot/**/*.md": "microsoft-sales-copilot",
+        "sales-copilot/**/*.md": "microsoft-365-copilot-sales",
         "power-platform/ai-builder/**/**.*": "ai-builder",
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
