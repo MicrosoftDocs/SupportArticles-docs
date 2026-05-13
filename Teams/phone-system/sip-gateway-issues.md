@@ -1,7 +1,7 @@
 ---
 title: Common Issues When Using SIP Devices With Teams
 description: Troubleshoots common issues that occur when you use compatible SIP devices together with Microsoft Teams.
-ms.date: 05/21/2025
+ms.date: 05/12/2026
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -13,26 +13,25 @@ appliesto:
 ms.custom: 
   - sap:SIP Gateway
   - CI159602
-ms.reviewer: scapero, chasing
+ms.reviewer: scapero, chasing, cafarric
 ---
 
 # Common issues when you use SIP devices with Teams
 
 SIP Gateway enables your organization to use any compatible SIP device together with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
-## If my device auto-offboarded
+## Teams SIP phone is offboarded
 
-Paired devices are auto-offboarded if not connected for an extended period and can be onboarded again after a factory reset. 
+Paired devices that aren't connected for 30 days are offboarded automatically. You can onboard them again after a factory reset. 
 
-After the reset, the phone may no longer know where to connect.
+After the reset, the phone might not have the information that's required to connect to a SIP gateway. 
 
-Open the phone’s **Admin menu or Web interface**
+To resolve this issue, use the following steps:
 
-Go to **Auto Provisioning**
-
-1. Enter the **Microsoft Teams SIP provisioning URL** for your region
-
-Save the configuration and **restart the phone**
+1. Navigate to the Admin menu or the web interface on the phone.
+1. Navigate to **Auto Provisioning**.
+1. Enter the Teams SIP provisioning URL for your region, and select **Save**.
+1. Restart the phone. 
 
 ## I can't onboard my device
 
