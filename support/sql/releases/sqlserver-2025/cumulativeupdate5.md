@@ -22,9 +22,6 @@ This article describes Cumulative Update (CU5) for Microsoft SQL Server 2025. Th
 - SQL Server - Product version: **17.0.4045.5**, file version: **2025.170.4045.5**
 - Analysis Services - Product version: **17.0.25.223**, file version: **2025.170.25.223**
 
-> [!IMPORTANT]
-> To help secure SQL Server on Windows, [enable encryption with Extended Protection](/sql/relational-databases/security/sql-server-security-best-practices#enable-encryption-with-extended-protection).
-
 ## Known issues in this update
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
