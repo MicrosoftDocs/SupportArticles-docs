@@ -10,6 +10,7 @@ ms.date: 11/18/2024
 ms.custom:
   - devx-track-azurepowershell
   - sfi-image-nochange
+  - sap:Connectivity & Performance Issues
 ---
 
 # Verify ExpressRoute connectivity

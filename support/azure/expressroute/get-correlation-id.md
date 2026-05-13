@@ -7,7 +7,9 @@ ms.author: jarrettr
 ms.topic: troubleshooting
 ms.service: azure-expressroute
 ms.date: 11/18/2024
-ms.custom: sfi-image-nochange
+ms.custom: 
+  - sfi-image-nochange
+  - sap:Monitoring & Metric Issues
 # Customer intent: "As a network administrator, I want to retrieve the correlation ID from the Activity Log for an ExpressRoute operation, so that I can effectively troubleshoot issues across multiple services."
 ---
 

@@ -10,6 +10,7 @@ ms.date: 06/30/2023
 ms.custom:
   - devx-track-azurepowershell
   - sfi-image-nochange
+  - sap:Connectivity & Performance Issues
 # Customer intent: As a network administrator, I want to reset a failed ExpressRoute circuit, so that I can restore connectivity and ensure my application services are running smoothly.
 ---
 

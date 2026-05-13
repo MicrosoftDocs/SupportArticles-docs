@@ -7,6 +7,7 @@ ms.author: jarrettr
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 05/01/2025
+ms.custom: sap:Migration for ExpressRoute-associated virtual networks from the classic deployment model
 # Customer intent: "As a network administrator, I want to troubleshoot Azure ExpressRoute gateway migration errors, so that I can ensure a smooth and successful migration process while minimizing disruptions to our network services."
 ---
 

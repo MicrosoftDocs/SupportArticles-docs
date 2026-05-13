@@ -7,7 +7,9 @@ ms.author: jarrettr
 ms.service: azure-expressroute
 ms.topic: troubleshooting
 ms.date: 01/31/2025
-ms.custom: sfi-image-nochange
+ms.custom: 
+  - sfi-image-nochange
+  - sap:Connectivity & Performance Issues
 ---
 # Troubleshoot network performance
 
