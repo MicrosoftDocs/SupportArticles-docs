@@ -1,6 +1,6 @@
 ---
 title: Azure ExpressRoute gateway migration - Troubleshooting errors and best practices
-description: Learn how to address Azure ExpressRoute gateway migration errors and implement best practices for a seamless migration process. Resolve frequent challenges and prevent common mistakes.
+description: Learn how to troubleshoot Azure ExpressRoute gateway migration errors and apply best practices to avoid failures. Use these steps to migrate with confidence.
 services: expressroute
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -15,20 +15,20 @@ ms.custom: sap:Migration for ExpressRoute-associated virtual networks from the c
 
 ## Summary
 
-This article provides an overview of error codes associated with gateway migration workflows, along with their causes and resolutions. Problems that commonly occur during each stage of the migration process: **Validate**, **Prepare**, **Migrate**, and **Commit or Abort**. 
+This article helps you troubleshoot Azure ExpressRoute gateway migration errors by stage and apply best practices to reduce failures. Use it to resolve issues during **Validate**, **Prepare**, **Migrate**, and **Commit or Abort**. 
 
 ## Best practices for avoiding migration errors
 
 Follow these best practices to minimize errors during the gateway migration process:
 
-* **Maintain resource health**: Ensure all resources remain in a **succeeded** state throughout the migration. Avoid running updates on related resources during the process.
-* **Avoid property updates**: Refrain from updating properties like **FastPath**, **route weight**, or **traffic toggles** for connections and gateways, as these updates can cause resource failures.
+* **Maintain resource health**: Ensure all resources stay in a **succeeded** state throughout the migration. Avoid running updates on related resources during the process.
+* **Avoid property updates**: Don't update properties like **FastPath**, **route weight**, or **traffic toggles** for connections and gateways, as these updates can cause resource failures.
 * **Sequential gateway migration**: Migrate gateways connected to the same circuit one at a time. Parallel migrations on the same circuit aren't supported.
-* **Avoid manual changes**: Refrain from manually creating, deleting, updating, or resetting gateways or their connections while they are actively carrying traffic (admin state enabled) during the migration process.
+* **Avoid manual changes**: Don't manually create, delete, update, or reset gateways or their connections while they're actively carrying traffic (admin state enabled) during the migration process.
 
-* **Check for maintenance**: Avoid creating connections to gateways undergoing maintenance, as this operation fails. Any failed connections must be deleted before retrying.
+* **Check for maintenance**: Don't create connections to gateways undergoing maintenance, as this operation fails. You must delete any failed connections before retrying.
 
-By adhering to these practices, you can reduce the likelihood of encountering errors during migration.
+By following these practices, you can reduce the likelihood of encountering errors during migration.
 
 ## Common issues during migration stages and their resolutions
 
@@ -62,13 +62,13 @@ These scenarios include solutions to prevent failures and ensure a successful mi
 
 ### Unsupported scenarios to avoid
 
-The following table outlines unsupported scenarios that may result in migration failures and don't have available resolutions:
+The following table outlines unsupported scenarios that can cause migration failures and don't have available resolutions:
 
 | Error name | Message | Cause |
 |--|--|--|
 | **Max gateway count in VNet reached** | The operation failed for virtual network `{virtualNetworkName}` because it already contains the maximum number of allowed gateways. | A virtual network can't have more than two ExpressRoute gateways deployed. |
-| **Connection limit exceeded** | The existing gateway has `{connectionCount}` connections, which exceed the limit of `{circuitLimit}` connections for the new gateway size `{gatewaySize}`. | Migrating to a gateway with a lower connection limit than the existing gateway isn't allowed. Downgrading the SKU type is unsupported. |
-| **FastPath restriction** | ExpressRouteGatewayByPass isn't supported for gateway size `{gatewaySize}`. | Gateways connected to FastPath-enabled connections can only migrate to UltraPerf or ERGW3AZ SKUs. Downgrading the SKU type is unsupported. |
+| **Connection limit exceeded** | The existing gateway has `{connectionCount}` connections, which exceed the limit of `{circuitLimit}` connections for the new gateway size `{gatewaySize}`. | You can't migrate to a gateway with a lower connection limit than the existing gateway. Downgrading the SKU type isn't supported. |
+| **FastPath restriction** | ExpressRouteGatewayByPass isn't supported for gateway size `{gatewaySize}`. | Gateways connected to FastPath-enabled connections can only migrate to UltraPerf or ERGW3AZ SKUs. Downgrading the SKU type isn't supported. |
 | **Revoked circuit authorization** | The operation failed for virtual network `{virtualNetworkName}` because it already contains the maximum number of allowed gateways. | Gateways connected to circuits with revoked authorizations can't proceed with migration. |
 
 ## Next steps

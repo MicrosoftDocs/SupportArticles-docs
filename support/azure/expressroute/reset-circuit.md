@@ -18,7 +18,7 @@ ms.custom:
 
 ## Summary
 
-When an operation on an ExpressRoute circuit doesn't complete successfully, the circuit may go into a `failed` state. This article helps you reset a failed Azure ExpressRoute circuit.
+When an operation on an ExpressRoute circuit doesn't complete successfully, the circuit might go into a `failed` state. This article helps you reset a failed Azure ExpressRoute circuit.
 
 ## Azure portal
 
@@ -34,7 +34,7 @@ When an operation on an ExpressRoute circuit doesn't complete successfully, the 
 
 ## Azure PowerShell
 
-The steps and examples in this article use Azure PowerShell Az modules. To install the Az modules locally on your computer, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn more about the new Az module, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az). PowerShell cmdlets are updated frequently. If you are not running the latest version, the values specified in the instructions may fail. To find the installed versions of PowerShell on your system, use the `Get-Module -ListAvailable Az` cmdlet.
+The steps and examples in this article use Azure PowerShell Az modules. To install the Az modules locally on your computer, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell). To learn more about the new Az module, see [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az). PowerShell cmdlets are updated frequently. If you're not running the latest version, the values specified in the instructions might not work. To find the installed versions of PowerShell on your system, use the `Get-Module -ListAvailable Az` cmdlet.
 
 1. Install the latest version of the Azure Resource Manager PowerShell cmdlets. For more information, see [Install and configure Azure PowerShell](/powershell/azure/install-azure-powershell).
 
@@ -53,7 +53,7 @@ The steps and examples in this article use Azure PowerShell Az modules. To insta
    ```azurepowershell-interactive
    Select-AzSubscription -SubscriptionName "Replace_with_your_subscription_name"
    ```
-1. Run the following commands to reset a circuit that is in a failed state:
+1. Run the following commands to reset a circuit that's in a failed state:
 
    ```azurepowershell-interactive
    $ckt = Get-AzExpressRouteCircuit -Name "ExpressRouteARMCircuit" -ResourceGroupName "ExpressRouteResourceGroup"
@@ -61,7 +61,7 @@ The steps and examples in this article use Azure PowerShell Az modules. To insta
    Set-AzExpressRouteCircuit -ExpressRouteCircuit $ckt
    ```
 
-The circuit should now be healthy. Open a support ticket with [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) if the circuit is still in a failed state.
+The circuit is now healthy. Open a support ticket with [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) if the circuit is still in a failed state.
 
 ## Next steps
 
