@@ -1,11 +1,29 @@
 items:
 - name: Azure Load Balancer troubleshooting documentation
   href: welcome-azure-load-balancer.yml
-  items:
-  - name: Troubleshoot common problems with Azure Load Balancer
-    href: load-balancer-troubleshoot.md   
-  - name: Troubleshoot Azure Load Balancer
-    href: load-balancer-troubleshoot-backend-traffic.md
+  items: 
+  - name: Troubleshoot common problems
+    items:
+    - name: Troubleshoot Azure Load Balancer common problems
+      href: troubleshoot-common-problems/load-balancer-troubleshoot.md
+    - name: Troubleshoot no outbound connectivity from Standard internal load balancers
+      href: troubleshoot-common-problems/no-outbound-connectivity-standard-internal-load-balancers.md
+    - name: Troubleshoot no inbound connectivity to Standard external load balancers
+      href: troubleshoot-common-problems/no-inbound-connectivity-standard-external-load-balancers.md
+    - name: Troubleshoot changing the backend port for an existing load-balancing rule
+      href: troubleshoot-common-problems/change-backend-port-existing-rule-vm-scale-set-deployed-backend-pool.md
+    - name: Troubleshoot traffic still going through load balancer 
+      href: troubleshoot-common-problems/traffic-passing-through-load-balancer-after-vm-removal-from-backend-pool.md
+    - name: Troubleshoot Load Balancer in a failed state
+      href: troubleshoot-common-problems/load-balancer-failed-state.md
+  - name: Troubleshoot backend traffic responses
+    items:
+    - name: Troubleshoot Azure Load Balancer backend traffic responses
+      href: troubleshoot-backend-traffic-responses/load-balancer-troubleshoot-backend-traffic.md
+    - name: Troubleshoot virtual machines not responding to traffic on the configured data port
+      href: troubleshoot-backend-traffic-responses/vms-no-response-traffic.md
+    - name: Virtual machines receive uneven distribution of traffic 
+      href: troubleshoot-backend-traffic-responses/vms-receive-uneven-traffic-distribution.md 
   - name: Troubleshoot common deployment errors
     href: load-balancer-common-deployment-errors.md
   - name: Troubleshoot load balancer health event logs

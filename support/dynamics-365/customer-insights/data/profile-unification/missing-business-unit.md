@@ -9,8 +9,6 @@ ms.custom: sap:Data Unification\Business Unit Data Separation
 ---
 # Missing business unit in unification in Dynamics 365 Customer Insights - Data
 
-[!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
-
 This article provides a resolution for an issue where the **Business unit** dropdown list is empty in the **Business unit separator** step in the data unification process.
 
 ## Symptoms
