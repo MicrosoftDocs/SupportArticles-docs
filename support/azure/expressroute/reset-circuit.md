@@ -1,6 +1,6 @@
 ---
 title: Reset a failed circuit - Azure ExpressRoute
-description: This article helps you reset an ExpressRoute circuit that is in a failed state.
+description: Learn how to reset a failed ExpressRoute circuit in Azure to quickly restore connectivity and service availability. Follow the steps to resolve issues now.
 services: expressroute
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -18,7 +18,7 @@ ms.custom:
 
 ## Summary
 
-When an operation on an ExpressRoute circuit doesn't complete successfully, the circuit might go into a `failed` state. This article helps you reset a failed Azure ExpressRoute circuit.
+If an operation on an ExpressRoute circuit fails, the circuit can enter a `failed` state. This article shows how to reset a failed Azure ExpressRoute circuit to restore connectivity quickly.
 
 ## Azure portal
 
