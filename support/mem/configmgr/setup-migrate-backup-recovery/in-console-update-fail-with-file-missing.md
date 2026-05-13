@@ -1,9 +1,9 @@
 ---
 title: Configuration Manager in-console update fails at Install Files
 description: Resolves an issue in which a Configuration Manager in-console update fails because redistributable files are missing from the EasySetupPayload or CMUStaging folders.
-ms.date: 05/07/2026
+ms.date: 05/11/2026
 ms.topic: troubleshooting
-ms.reviewer: kaushika, iliaershov
+ms.reviewer: kaushika, iliaershov, v-appelgatet
 ai.usage: ai-assisted
 ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Updates and Servicing
 ---
@@ -101,22 +101,22 @@ For an online SCP, follow these steps:
 
    - **dmpdownloader.log**. Look for entries that were recorded during the download attempt that resemble the following examples:
 
-   ```output
-   Check if there is redist to download for update, aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
-   Download redist for update aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
-   Successfully download redist for aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
-   ```
+     ```output
+     Check if there is redist to download for update, aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+     Download redist for update aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+     Successfully download redist for aa928926-5c76-4de0-b51f-0fe4d365dfe2~~
+     ```
 
    - **ConfigMgrSetup.log**. Look for entries that indicate that the file hash was calculated successfully, such as the following example:
 
-   ```output
-   INFO: Downloading https://go.microsoft.com/fwlink/?LinkId=2115685 as SQLSysClrTypes.msi
-   INFO: set additional flag.
-   No proxy information is specified. Connect without proxy.
-   INFO: WinHttpQueryHeaders() in Download() returned OK (200)
-   INFO: Verifying hash for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
-   4580 (0x11e4)    INFO: Verifying signature for file 'E:\ServiceConnectionTool\Update\248DC1EB-4B98-4483-BAF3-08C678C1CD0A\Redist\SQLSysClrTypes.msi'
-   ```
+     ```output
+     INFO: Downloading https://go.microsoft.com/fwlink/?LinkId=2115685 as SQLSysClrTypes.msi
+     INFO: set additional flag.
+     No proxy information is specified. Connect without proxy.
+     INFO: WinHttpQueryHeaders() in Download() returned OK (200)
+     INFO: Verifying hash for file 'E:\ConfigMgr\EasySetupPayload\aa928926-5c76-4de0-b51f-0fe4d365dfe2\redist\SQLSysClrTypes.msi'
+     INFO: Verifying signature for file 'E:\ConfigMgr\EasySetupPayload\aa928926-5c76-4de0-b51f-0fe4d365dfe2\redist\SQLSysClrTypes.msi'
+     ```
 
 After the download operation finishes, verify that the required files exist in the EasySetupPayload\\*PackageGuid*\\Redists folder. At this point, try again to install the in-console update package.
 

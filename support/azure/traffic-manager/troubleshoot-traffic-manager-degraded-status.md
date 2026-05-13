@@ -8,7 +8,7 @@ ms.author: jarrettr
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.date: 04/06/2026
-ms.custom: sfi-image-nochange
+ms.custom: sap:Configuration and Setup
 # Customer intent: As a network administrator, I want to troubleshoot degraded statuses in Traffic Manager profiles, so that I can ensure all endpoints are functioning correctly and maintain optimal service availability.
 ---
 
