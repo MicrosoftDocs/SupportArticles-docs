@@ -18,12 +18,12 @@ appliesto:
 
 ## Summary
 
-This article provides troubleshooting guidance for issues arising from multiple versions of modern apps or application packages on Windows computers, particularly when these apps are reported as vulnerable by system scans. The guidance helps users ensure that all instances of an app are updated, thereby enhancing system security and resolving vulnerability reports.
+This article provides troubleshooting guidance for problems that arise from multiple versions of modern apps or application packages on Windows computers, particularly when system scans report these apps as vulnerable. The guidance helps you ensure that all instances of an app are updated, which enhances system security and resolves vulnerability reports.
 Symptoms include multiple app folders and versions due to user profiles and app updates.
 
-**Methods to resolve issues**:
+**Methods to resolve problems**:
 - Update the app for all users: Use PowerShell to identify and reconnect user profiles with outdated app versions.
-- Remove old packages: Identify and remove outdated Appx packages using PowerShell commands.
+- Remove old packages: Use PowerShell commands to identify and remove outdated Appx packages.
 - Delete user profiles: Remove profiles associated with old app versions to clean up the system.
 - Instructions for verifying updates and checking the WindowsApps folder are included.
 
@@ -32,30 +32,30 @@ Symptoms include multiple app folders and versions due to user profiles and app 
 
 ## Symptoms
 
-In recent Windows versions, several parts of the shell have been moved to modern apps. Those apps are introduced as *.msix* or *.appx* files and need to be registered per user each time a user signs in to Windows for the first time or after an app update.
+In recent Windows versions, several parts of the shell are moved to modern apps. You introduce those apps as *.msix* or *.appx* files. You need to register them per user each time a user signs in to Windows for the first time or after an app update.
 
 Those modern apps might be **SystemApps** (such as **StartMenuExperienceHost** and **ShellExperienceHost**) introduced within Windows Cumulative Updates or **WindowsApps** updated through Windows Update connecting to Windows Store endpoints.
 
-The **WindowsApps** folder, found at `C:\Program Files\WindowsApps`, is a protected system directory that contains applications. It is secured to avoid system problems and is typically owned by `NT SERVICE\TrustedInstaller` to ensure the applications cannot be exploited as an attack vector.
+The **WindowsApps** folder, found at `C:\Program Files\WindowsApps`, is a protected system directory that contains applications. It's secured to avoid system problems and is typically owned by `NT SERVICE\TrustedInstaller` to ensure the applications can't be exploited as an attack vector.
 
-Because of this inherent design, you might encounter one of the following issues:
+Because of this inherent design, you might encounter one of the following problems:
 
 ### Multiple app folders in the system
 
-If there are multiple user profiles in the system, apps installed per user might create multiple app folders because of the different versions. The folders are in the *C:\\Program Files\\WindowsApps* hidden folder.
+If the system has multiple user profiles, apps that each user installs might create multiple app folders because of different versions. These folders reside in the *C:\\Program Files\\WindowsApps* hidden folder.
 
 ### Multiple app versions in the system
 
 Consider the following scenarios:
 
-- Several users are signed in at the same time, and Microsoft Store is enabled. One user is using the app during a Microsoft Store background update.
+- Several users sign in at the same time, and Microsoft Store is enabled. One user uses the app during a Microsoft Store background update.
 - Some users don't sign in frequently, and Microsoft Store is disabled. The system administrator updates the app manually.
 
-In these scenarios, there are multiple versions of the app per user in the system, which doesn't affect users. However, the app is reported as vulnerable if the app isn't updated for all users.
+In these scenarios, the system has multiple versions of the app per user, which doesn't affect users. However, the app is reported as vulnerable if the app isn't updated for all users.
 
 ## Update the app for all users or remove the old packages
 
-To resolve this issue, use one or more of the following methods:
+To resolve this problem, use one or more of the following methods:
 
 ### Method 1: Ensure that the app is updated for all users in the system by reconnecting to the machine with user profiles
 
@@ -65,41 +65,41 @@ To resolve this issue, use one or more of the following methods:
    Get-AppxPackage <Application Name> -AllUsers
    ```
 
-2. Reconnect to the machine with the identified user.
+1. Reconnect to the machine by using the identified user.
 
 ### Method 2: Remove the old packages (*.appx*)
 
-1. Identify the user profiles in which the Appx package is installed with the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell prompt:
+1. From an elevated PowerShell prompt, use the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) to identify the user profiles where the Appx package is installed.
 
    ```powershell
    Get-AppxPackage <Application Name> -AllUsers
    ```
 
-2. Identify if the app is provisioned. To get a list of all provisioned apps, use [Get-AppxProvisionedPackage](/powershell/module/dism/get-appxprovisionedpackage):
+1. Use [Get-AppxProvisionedPackage](/powershell/module/dism/get-appxprovisionedpackage) to get a list of all provisioned apps and check if the app is provisioned.
 
    ```powershell
    Get-AppxProvisionedPackage -Online | Format-Table DisplayName, PackageName
    ```
 
-3. Remove the Appx package for all users in the system:
+1. Remove the Appx package for all users in the system:
 
    ```powershell
    Get-AppxPackage <Application Name> -AllUsers | Remove-AppxPackage -AllUsers
    ```
 
    > [!NOTE]
-   > For more information and usage examples regarding the management of Appx packages via PowerShell cmdlets, see the following articles.
+   > For more information and usage examples about managing Appx packages through PowerShell cmdlets, see the following articles.
    >
    > - [Get-AppxPackage](/powershell/module/appx/get-appxpackage)
    > - [Get-AppxProvisionedPackage (DISM)](/powershell/module/dism/get-appxprovisionedpackage)
    > - [Remove-AppxPackage (Appx)](/powershell/module/appx/remove-appxpackage)
    > - [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage)
 
-### Method 3: Delete the user profiles pointing to the old version of the app
+### Method 3: Delete the user profiles that point to the old version of the app
 
-To do so, see the following articles:
+To delete user profiles, see the following articles:
 
 - [Delete a user profile in Windows](../../windows-server/user-profiles-and-logon/delete-user-profile.md)  
 - [Using Group Policy/CSP](/windows/client-management/mdm/policy-csp-admx-userprofiles#cleanupprofiles)
 
-To confirm that the App is updated for all users and the old packages are removed, scan again or check the *C:\\Program Files\\WindowsApps* folder. If you don't have permission to check the folder, create a copy in another location and check inside.
+To confirm that the app is updated for all users and the old packages are removed, scan again or check the *C:\\Program Files\\WindowsApps* folder. If you don't have permission to check the folder, create a copy in another location and check inside.
